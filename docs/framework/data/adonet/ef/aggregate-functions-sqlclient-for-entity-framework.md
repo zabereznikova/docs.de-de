@@ -2,49 +2,230 @@
 title: Aggregatfunktionen (SqlClient für Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 558e9f8480dd69e2277603e9bb1013acfbc29467
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763396"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452898"
 ---
-# <a name="aggregate-functions-sqlclient-for-entity-framework"></a><span data-ttu-id="67390-102">Aggregatfunktionen (SqlClient für Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="67390-102">Aggregate Functions (SqlClient for Entity Framework)</span></span>
-<span data-ttu-id="67390-103">Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Aggregatfunktionen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="67390-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides aggregate functions.</span></span> <span data-ttu-id="67390-104">Aggregatfunktionen führen Berechnungen für eine Reihe von Eingabewerten aus und geben einen einzelnen Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-104">Aggregate functions perform calculations on a set of input values and return a value.</span></span> <span data-ttu-id="67390-105">Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="67390-105">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="67390-106">Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="67390-106">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.</span></span>  
+# <a name="aggregate-functions-sqlclient-for-entity-framework"></a><span data-ttu-id="81c57-102">Aggregatfunktionen (SqlClient für Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="81c57-102">Aggregate Functions (SqlClient for Entity Framework)</span></span>
+<span data-ttu-id="81c57-103">Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Aggregatfunktionen zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="81c57-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides aggregate functions.</span></span> <span data-ttu-id="81c57-104">Aggregatfunktionen führen Berechnungen für eine Reihe von Eingabewerten aus und geben einen einzelnen Wert zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-104">Aggregate functions perform calculations on a set of input values and return a value.</span></span> <span data-ttu-id="81c57-105">Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="81c57-105">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="81c57-106">Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="81c57-106">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.</span></span>  
   
- <span data-ttu-id="67390-107">In der folgenden Tabelle sind die SqlClient-Aggregatfunktionen aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="67390-107">The following table shows the SqlClient aggregate functions.</span></span>  
+ <span data-ttu-id="81c57-107">Im folgenden sind die SqlClient-Aggregatfunktionen.</span><span class="sxs-lookup"><span data-stu-id="81c57-107">The following are the SqlClient aggregate functions.</span></span>  
+
+## <a name="avgexpression"></a><span data-ttu-id="81c57-108">AVG(Expression)</span><span class="sxs-lookup"><span data-stu-id="81c57-108">AVG(expression)</span></span>
+
+<span data-ttu-id="81c57-109">Gibt den Durchschnitt aller Werte in einer Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-109">Returns the average of the values in a collection.</span></span> <span data-ttu-id="81c57-110">NULL-Werte werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="81c57-110">Null values are ignored.</span></span>
+
+<span data-ttu-id="81c57-111">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-111">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-112">Ein `Int32`, `Int64`, `Double`, und `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="81c57-112">An `Int32`, `Int64`, `Double`, and `Decimal`.</span></span>
+
+<span data-ttu-id="81c57-113">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-113">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-114">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="81c57-114">The type of `expression`.</span></span>
+
+<span data-ttu-id="81c57-115">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-115">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
+
+## <a name="checksumaggcollection"></a><span data-ttu-id="81c57-116">CHECKSUM_AGG(Collection)</span><span class="sxs-lookup"><span data-stu-id="81c57-116">CHECKSUM_AGG(collection)</span></span>
+ 
+ <span data-ttu-id="81c57-117">Gibt die Prüfsumme der Werte in einer Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-117">Returns the checksum of the values in a collection.</span></span> <span data-ttu-id="81c57-118">NULL-Werte werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="81c57-118">Null values are ignored.</span></span>
+ 
+ <span data-ttu-id="81c57-119">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-119">**Arguments**</span></span>
+ 
+ <span data-ttu-id="81c57-120">Eine Auflistung (`Int32`).</span><span class="sxs-lookup"><span data-stu-id="81c57-120">A Collection(`Int32`).</span></span>
+ 
+ <span data-ttu-id="81c57-121">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-121">**Return Value**</span></span>
+ 
+ <span data-ttu-id="81c57-122">Eine `Int32`.</span><span class="sxs-lookup"><span data-stu-id="81c57-122">An `Int32`.</span></span>
+ 
+ <span data-ttu-id="81c57-123">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-123">**Example**</span></span>
+ 
+ [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
+   
+## <a name="countexpression"></a><span data-ttu-id="81c57-124">Count(Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="81c57-124">COUNT(expression)</span></span>
+
+<span data-ttu-id="81c57-125">Gibt die Anzahl der Elemente in einer Auflistung als `Int32` zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-125">Returns the number of items in a collection as an `Int32`.</span></span>
+
+<span data-ttu-id="81c57-126">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-126">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-127">Eine Auflistung\<T >, wobei T einer der folgenden Typen ist:</span><span class="sxs-lookup"><span data-stu-id="81c57-127">A Collection\<T>, where T is one of the following types:</span></span>
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|<span data-ttu-id="81c57-128">`Guid` (nicht zurückgegeben in SQL Server 2000)</span><span class="sxs-lookup"><span data-stu-id="81c57-128">`Guid` (not returned in SQL Server 2000)</span></span>|
+
+<span data-ttu-id="81c57-129">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-129">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-130">Eine `Int32`.</span><span class="sxs-lookup"><span data-stu-id="81c57-130">An `Int32`.</span></span>
+
+<span data-ttu-id="81c57-131">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-131">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
+<span data-ttu-id="81c57-132">[! Sql-Code[DP EntityServices Konzepte #SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)</span><span class="sxs-lookup"><span data-stu-id="81c57-132">[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)</span></span>
+ 
+## <a name="countbigexpression"></a><span data-ttu-id="81c57-133">COUNT_BIG(Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="81c57-133">COUNT_BIG(expression)</span></span>
+ 
+ <span data-ttu-id="81c57-134">Gibt die Anzahl der Elemente in einer Auflistung als `bigint` zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-134">Returns the number of items in a collection as a `bigint`.</span></span>
+ 
+ <span data-ttu-id="81c57-135">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-135">**Arguments**</span></span>
+ 
+ <span data-ttu-id="81c57-136">Eine Collection(T), wobei T einer der folgenden Typen ist:</span><span class="sxs-lookup"><span data-stu-id="81c57-136">A Collection(T), where T is one of the following types:</span></span>
+ 
+ |   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|<span data-ttu-id="81c57-137">`Guid` (nicht zurückgegeben in SQL Server 2000)</span><span class="sxs-lookup"><span data-stu-id="81c57-137">`Guid` (not returned in SQL Server 2000)</span></span>|
+
+<span data-ttu-id="81c57-138">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-138">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-139">Eine `Int64`.</span><span class="sxs-lookup"><span data-stu-id="81c57-139">An `Int64`.</span></span>
+
+<span data-ttu-id="81c57-140">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-140">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]
+
+## <a name="maxexpression"></a><span data-ttu-id="81c57-141">Max(Expression)</span><span class="sxs-lookup"><span data-stu-id="81c57-141">MAX(expression)</span></span>
+
+<span data-ttu-id="81c57-142">Gibt den Maximalwert der Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-142">Returns the maximum value the collection.</span></span>
+
+<span data-ttu-id="81c57-143">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-143">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-144">Eine Collection(T), wobei T einer der folgenden Typen ist:</span><span class="sxs-lookup"><span data-stu-id="81c57-144">A Collection(T), where T is one of the following types:</span></span> 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+<span data-ttu-id="81c57-145">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-145">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-146">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="81c57-146">The type of `expression`.</span></span>
+
+<span data-ttu-id="81c57-147">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-147">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]
+
+## <a name="minexpression"></a><span data-ttu-id="81c57-148">Min(Expression)</span><span class="sxs-lookup"><span data-stu-id="81c57-148">MIN(expression)</span></span>
+
+<span data-ttu-id="81c57-149">Gibt den Minimalwert in einer Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-149">Returns the minimum value in a collection.</span></span>
+
+<span data-ttu-id="81c57-150">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-150">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-151">Eine Collection(T), wobei T einer der folgenden Typen ist:</span><span class="sxs-lookup"><span data-stu-id="81c57-151">A Collection(T), where T is one of the following types:</span></span> 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+<span data-ttu-id="81c57-152">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-152">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-153">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="81c57-153">The type of `expression`.</span></span>
+
+<span data-ttu-id="81c57-154">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-154">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]
+
+## <a name="stdevexpression"></a><span data-ttu-id="81c57-155">StDev(Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="81c57-155">STDEV(expression)</span></span>
+
+<span data-ttu-id="81c57-156">Gibt die statistische Standardabweichung aller Werte im angegebenen Ausdruck zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-156">Returns the statistical standard deviation of all values in the specified expression.</span></span>
+
+<span data-ttu-id="81c57-157">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-157">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-158">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="81c57-158">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="81c57-159">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-159">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-160">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="81c57-160">A `Double`.</span></span>
+
+<span data-ttu-id="81c57-161">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-161">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]
+
+## <a name="stdevpexpression"></a><span data-ttu-id="81c57-162">StDevP(Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="81c57-162">STDEVP(expression)</span></span>
+
+<span data-ttu-id="81c57-163">Gibt die statistische Standardabweichung für die Auffüllung für alle Werte des angegebenen Ausdrucks zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-163">Returns the statistical standard deviation for the population for all values in the specified expression.</span></span>
+
+<span data-ttu-id="81c57-164">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-164">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-165">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="81c57-165">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="81c57-166">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-166">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-167">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="81c57-167">A `Double`.</span></span>
+
+<span data-ttu-id="81c57-168">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-168">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]
+
+## <a name="sumexpression"></a><span data-ttu-id="81c57-169">SUM(Expression)</span><span class="sxs-lookup"><span data-stu-id="81c57-169">SUM(expression)</span></span>
+
+<span data-ttu-id="81c57-170">Gibt die Summe aller Werte in der Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-170">Returns the sum of all the values in the collection.</span></span>
+
+<span data-ttu-id="81c57-171">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-171">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-172">Eine Collection(T), wobei T einer der folgenden Typen ist: `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="81c57-172">A Collection(T) where T is one of the following types: `Int32`, `Int64`, `Double`, `Decimal`.</span></span>
+
+<span data-ttu-id="81c57-173">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-173">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-174">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="81c57-174">The type of `expression`.</span></span>
+
+<span data-ttu-id="81c57-175">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-175">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
+
+## <a name="varexpression"></a><span data-ttu-id="81c57-176">Var(Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="81c57-176">VAR(expression)</span></span>
+
+<span data-ttu-id="81c57-177">Gibt die statistische Varianz aller Werte im angegebenen Ausdruck zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-177">Returns the statistical variance of all values in the specified expression.</span></span>
+
+<span data-ttu-id="81c57-178">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-178">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-179">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="81c57-179">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="81c57-180">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-180">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-181">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="81c57-181">A `Double`.</span></span>
+
+<span data-ttu-id="81c57-182">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-182">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]
+
+## <a name="varpexpression"></a><span data-ttu-id="81c57-183">VarP(Ausdruck)</span><span class="sxs-lookup"><span data-stu-id="81c57-183">VARP(expression)</span></span>
+
+<span data-ttu-id="81c57-184">Gibt die statistische Varianz für die Auffüllung aller Werte im angegebenen Ausdruck zurück.</span><span class="sxs-lookup"><span data-stu-id="81c57-184">Returns the statistical variance for the population for all values in the specified expression.</span></span>
+
+<span data-ttu-id="81c57-185">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="81c57-185">**Arguments**</span></span>
+
+<span data-ttu-id="81c57-186">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="81c57-186">A Collection(`Double`).</span></span>
+
+<span data-ttu-id="81c57-187">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="81c57-187">**Return Value**</span></span>
+
+<span data-ttu-id="81c57-188">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="81c57-188">A `Double`.</span></span>
+
+<span data-ttu-id="81c57-189">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="81c57-189">**Example**</span></span>
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
   
-|<span data-ttu-id="67390-108">Funktion</span><span class="sxs-lookup"><span data-stu-id="67390-108">Function</span></span>|<span data-ttu-id="67390-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="67390-109">Description</span></span>|  
-|--------------|-----------------|  
-|<span data-ttu-id="67390-110">`AVG(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-110">`AVG(` `expression` `)`</span></span>|<span data-ttu-id="67390-111">Gibt den Durchschnitt aller Werte in einer Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-111">Returns the average of the values in a collection.</span></span><br /><br /> <span data-ttu-id="67390-112">NULL-Werte werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="67390-112">Null values are ignored.</span></span><br /><br /> <span data-ttu-id="67390-113">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-113">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-114">Ein `Int32`, `Int64`, `Double`, und `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="67390-114">An `Int32`, `Int64`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="67390-115">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-115">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-116">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="67390-116">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="67390-117">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-117">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
-|<span data-ttu-id="67390-118">`CHECKSUM_AGG(` `collection` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-118">`CHECKSUM_AGG(` `collection` `)`</span></span>|<span data-ttu-id="67390-119">Gibt die Prüfsumme der Werte in einer Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-119">Returns the checksum of the values in a collection.</span></span><br /><br /> <span data-ttu-id="67390-120">NULL-Werte werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="67390-120">Null values are ignored.</span></span><br /><br /> <span data-ttu-id="67390-121">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-121">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-122">Eine Auflistung (`Int32`).</span><span class="sxs-lookup"><span data-stu-id="67390-122">A Collection (`Int32`).</span></span><br /><br /> <span data-ttu-id="67390-123">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-123">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-124">Eine `Int32`.</span><span class="sxs-lookup"><span data-stu-id="67390-124">An `Int32`.</span></span><br /><br /> <span data-ttu-id="67390-125">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-125">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]|  
-|<span data-ttu-id="67390-126">`COUNT(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-126">`COUNT(` `expression` `)`</span></span>|<span data-ttu-id="67390-127">Gibt die Anzahl der Elemente in einer Auflistung als `Int32` zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-127">Returns the number of items in a collection as an `Int32`.</span></span><br /><br /> <span data-ttu-id="67390-128">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-128">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-129">Eine Auflistung (T), wobei T einer der folgenden Typen ist:</span><span class="sxs-lookup"><span data-stu-id="67390-129">A Collection (T) where T is one of the following types:</span></span><br /><br /> <span data-ttu-id="67390-130">`Guid` (wird nicht in SQL Server 2000 zurückgegeben),</span><span class="sxs-lookup"><span data-stu-id="67390-130">`Guid` (not returned in SQL Server 2000),</span></span><br /><br /> <span data-ttu-id="67390-131">`Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String` oder `Binary`.</span><span class="sxs-lookup"><span data-stu-id="67390-131">`Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, or `Binary`.</span></span><br /><br /> <span data-ttu-id="67390-132">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-132">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-133">Eine `Int32`.</span><span class="sxs-lookup"><span data-stu-id="67390-133">An `Int32`.</span></span><br /><br /> <span data-ttu-id="67390-134">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-134">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]|  
-|<span data-ttu-id="67390-135">`COUNT_BIG(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-135">`COUNT_BIG(` `expression` `)`</span></span>|<span data-ttu-id="67390-136">Gibt die Anzahl der Elemente in einer Auflistung als `bigint` zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-136">Returns the number of items in a collection as a `bigint`.</span></span><br /><br /> <span data-ttu-id="67390-137">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-137">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-138">Eine Auflistung (T), wobei T einer der folgenden Typen ist:</span><span class="sxs-lookup"><span data-stu-id="67390-138">A Collection (T) where T is one of the following types:</span></span><br /><br /> <span data-ttu-id="67390-139">`Guid` (wird nicht in SQL Server 2000 zurückgegeben), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String` oder `Binary`.</span><span class="sxs-lookup"><span data-stu-id="67390-139">`Guid` (not returned in SQL Server 2000), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String`, or `Binary`.</span></span><br /><br /> <span data-ttu-id="67390-140">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-141">Eine `Int64`.</span><span class="sxs-lookup"><span data-stu-id="67390-141">An `Int64`.</span></span><br /><br /> <span data-ttu-id="67390-142">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-142">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]|  
-|<span data-ttu-id="67390-143">`MAX(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-143">`MAX(` `expression` `)`</span></span>|<span data-ttu-id="67390-144">Gibt den Maximalwert der Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-144">Returns the maximum value the collection.</span></span><br /><br /> <span data-ttu-id="67390-145">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-146">Eine Auflistung (T), wobei T einer der folgenden Typen ist: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span><span class="sxs-lookup"><span data-stu-id="67390-146">A Collection (T) where T is one of the following types: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.</span></span><br /><br /> <span data-ttu-id="67390-147">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-147">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-148">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="67390-148">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="67390-149">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-149">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]|  
-|<span data-ttu-id="67390-150">`MIN(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-150">`MIN(` `expression` `)`</span></span>|<span data-ttu-id="67390-151">Gibt den Minimalwert in einer Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-151">Returns the minimum value in a collection.</span></span><br /><br /> <span data-ttu-id="67390-152">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-152">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-153">Eine Auflistung (T), wobei T einer der folgenden Typen ist: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`,</span><span class="sxs-lookup"><span data-stu-id="67390-153">A Collection (T) where T is one of the following types: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`,</span></span><br /><br /> <span data-ttu-id="67390-154">`Binary`</span><span class="sxs-lookup"><span data-stu-id="67390-154">`Binary`.</span></span><br /><br /> <span data-ttu-id="67390-155">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-155">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-156">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="67390-156">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="67390-157">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-157">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]|  
-|<span data-ttu-id="67390-158">`STDEV(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-158">`STDEV(` `expression` `)`</span></span>|<span data-ttu-id="67390-159">Gibt die statistische Standardabweichung aller Werte im angegebenen Ausdruck zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-159">Returns the statistical standard deviation of all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="67390-160">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-160">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-161">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="67390-161">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="67390-162">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-162">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-163">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="67390-163">A `Double`.</span></span><br /><br /> <span data-ttu-id="67390-164">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-164">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]|  
-|<span data-ttu-id="67390-165">`STDEVP(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-165">`STDEVP(` `expression` `)`</span></span>|<span data-ttu-id="67390-166">Gibt die statistische Standardabweichung für die Auffüllung für alle Werte des angegebenen Ausdrucks zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-166">Returns the statistical standard deviation for the population for all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="67390-167">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-167">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-168">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="67390-168">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="67390-169">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-169">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-170">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="67390-170">A `Double`.</span></span><br /><br /> <span data-ttu-id="67390-171">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-171">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]|  
-|<span data-ttu-id="67390-172">`SUM(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-172">`SUM(` `expression` `)`</span></span>|<span data-ttu-id="67390-173">Gibt die Summe aller Werte in der Auflistung zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-173">Returns the sum of all the values in the collection.</span></span><br /><br /> <span data-ttu-id="67390-174">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-174">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-175">Eine Auflistung (T), wobei T einer der folgenden Typen ist: `Int32`, `Int64`, `Double`, `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="67390-175">A Collection (T) where T is one of the following types: `Int32`, `Int64`, `Double`, `Decimal`.</span></span><br /><br /> <span data-ttu-id="67390-176">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-176">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-177">Der `expression`-Typ.</span><span class="sxs-lookup"><span data-stu-id="67390-177">The type of `expression`.</span></span><br /><br /> <span data-ttu-id="67390-178">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-178">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]|  
-|<span data-ttu-id="67390-179">`VAR(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-179">`VAR(` `expression` `)`</span></span>|<span data-ttu-id="67390-180">Gibt die statistische Varianz aller Werte im angegebenen Ausdruck zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-180">Returns the statistical variance of all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="67390-181">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-181">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-182">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="67390-182">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="67390-183">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-183">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-184">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="67390-184">A `Double`.</span></span><br /><br /> <span data-ttu-id="67390-185">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-185">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]|  
-|<span data-ttu-id="67390-186">`VARP(` `expression` `)`</span><span class="sxs-lookup"><span data-stu-id="67390-186">`VARP(` `expression` `)`</span></span>|<span data-ttu-id="67390-187">Gibt die statistische Varianz für die Auffüllung aller Werte im angegebenen Ausdruck zurück.</span><span class="sxs-lookup"><span data-stu-id="67390-187">Returns the statistical variance for the population for all values in the specified expression.</span></span><br /><br /> <span data-ttu-id="67390-188">**Argumente**</span><span class="sxs-lookup"><span data-stu-id="67390-188">**Arguments**</span></span><br /><br /> <span data-ttu-id="67390-189">Eine Auflistung (`Double`).</span><span class="sxs-lookup"><span data-stu-id="67390-189">A Collection (`Double`).</span></span><br /><br /> <span data-ttu-id="67390-190">**Rückgabewert**</span><span class="sxs-lookup"><span data-stu-id="67390-190">**Return Value**</span></span><br /><br /> <span data-ttu-id="67390-191">Ein `Double`.</span><span class="sxs-lookup"><span data-stu-id="67390-191">A `Double`.</span></span><br /><br /> <span data-ttu-id="67390-192">**Beispiel**</span><span class="sxs-lookup"><span data-stu-id="67390-192">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)]|  
+## <a name="see-also"></a><span data-ttu-id="81c57-190">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="81c57-190">See also</span></span>
+
+<span data-ttu-id="81c57-191">Weitere Informationen zu den von SqlClient unterstützten Aggregatfunktionen finden Sie in der Dokumentation für die SQL Server-Version, die im SqlClient-Anbietermanifest angegeben wurde:</span><span class="sxs-lookup"><span data-stu-id="81c57-191">For more information about the aggregate functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
   
- <span data-ttu-id="67390-193">Weitere Informationen zu den von SqlClient unterstützten Aggregatfunktionen finden Sie in der Dokumentation für die SQL Server-Version, die im SqlClient-Anbietermanifest angegeben wurde:</span><span class="sxs-lookup"><span data-stu-id="67390-193">For more information about the aggregate functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
-  
-|<span data-ttu-id="67390-194">SQL Server 2000</span><span class="sxs-lookup"><span data-stu-id="67390-194">SQL Server 2000</span></span>|<span data-ttu-id="67390-195">SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="67390-195">SQL Server 2005</span></span>|<span data-ttu-id="67390-196">SQL Server 2008</span><span class="sxs-lookup"><span data-stu-id="67390-196">SQL Server 2008</span></span>|  
-|---------------------|---------------------|---------------------|  
-|[<span data-ttu-id="67390-197">Aggregatfunktionen (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="67390-197">Aggregate Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115906)|[<span data-ttu-id="67390-198">Aggregatfunktionen (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="67390-198">Aggregate Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkID=115903)|[<span data-ttu-id="67390-199">Aggregatfunktionen (Transact-SQL)</span><span class="sxs-lookup"><span data-stu-id="67390-199">Aggregate Functions (Transact-SQL)</span></span>](http://go.microsoft.com/fwlink/?LinkId=115907)|  
-  
-## <a name="see-also"></a><span data-ttu-id="67390-200">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67390-200">See Also</span></span>  
- [<span data-ttu-id="67390-201">Entity SQL Language (Entity SQL-Sprache)</span><span class="sxs-lookup"><span data-stu-id="67390-201">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [<span data-ttu-id="67390-202">Aggregieren kanonischer Funktionen</span><span class="sxs-lookup"><span data-stu-id="67390-202">Aggregate Canonical Functions</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+<span data-ttu-id="81c57-192">**SQLServer 2005**: [Aggregatfunktionen (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="81c57-192">**SQL Server 2005**: [Aggregate Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))</span></span>  
+<span data-ttu-id="81c57-193">**SQLServer 2008 und höher**: [Aggregatfunktionen (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)</span><span class="sxs-lookup"><span data-stu-id="81c57-193">**SQL Server 2008 and later**:  [Aggregate Functions (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)</span></span>  
+[<span data-ttu-id="81c57-194">Entity SQL Language (Entity SQL-Sprache)</span><span class="sxs-lookup"><span data-stu-id="81c57-194">Entity SQL Language</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+[<span data-ttu-id="81c57-195">Aggregieren kanonischer Funktionen</span><span class="sxs-lookup"><span data-stu-id="81c57-195">Aggregate Canonical Functions</span></span>](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

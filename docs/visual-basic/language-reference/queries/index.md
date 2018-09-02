@@ -6,58 +6,58 @@ helpviewer_keywords:
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
 ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936617"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424013"
 ---
-# <a name="queries-visual-basic"></a><span data-ttu-id="5e501-102">Abfragen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5e501-102">Queries (Visual Basic)</span></span>
-<span data-ttu-id="5e501-103">Visual Basic ermöglicht Ihnen die Erstellung [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Ausdrücken in Ihrem Code.</span><span class="sxs-lookup"><span data-stu-id="5e501-103">Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
+# <a name="queries-visual-basic"></a><span data-ttu-id="0a8b1-102">Abfragen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a8b1-102">Queries (Visual Basic)</span></span>
+<span data-ttu-id="0a8b1-103">Visual Basic ermöglicht Ihnen die Erstellung [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Ausdrücken in Ihrem Code.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-103">Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5e501-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5e501-104">In This Section</span></span>  
- [<span data-ttu-id="5e501-105">Aggregate-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-105">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- <span data-ttu-id="5e501-106">Beschreibt die `Aggregate` -Klausel, die eine oder mehrere Aggregatfunktionen auf eine Auflistung angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="5e501-106">Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0a8b1-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="0a8b1-104">In This Section</span></span>  
+ [<span data-ttu-id="0a8b1-105">Aggregate-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-105">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ <span data-ttu-id="0a8b1-106">Beschreibt die `Aggregate` -Klausel, die eine oder mehrere Aggregatfunktionen auf eine Auflistung angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-106">Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.</span></span>  
   
- [<span data-ttu-id="5e501-107">Distinct-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-107">Distinct Clause</span></span>](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- <span data-ttu-id="5e501-108">Beschreibt die `Distinct` -Klausel, die einschränkt, die Werte der aktuellen Bereichsvariablen doppelte Werte in den Abfrageergebnissen zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="5e501-108">Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.</span></span>  
+ [<span data-ttu-id="0a8b1-107">Distinct-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-107">Distinct Clause</span></span>](../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ <span data-ttu-id="0a8b1-108">Beschreibt die `Distinct` -Klausel, die einschränkt, die Werte der aktuellen Bereichsvariablen doppelte Werte in den Abfrageergebnissen zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-108">Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.</span></span>  
   
- [<span data-ttu-id="5e501-109">From-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-109">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
- <span data-ttu-id="5e501-110">Beschreibt die `From` -Klausel, die eine Auflistung und eine Bereichsvariable für eine Abfrage angibt.</span><span class="sxs-lookup"><span data-stu-id="5e501-110">Describes the `From` clause, which specifies a collection and a range variable for a query.</span></span>  
+ [<span data-ttu-id="0a8b1-109">From-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-109">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ <span data-ttu-id="0a8b1-110">Beschreibt die `From` -Klausel, die eine Auflistung und eine Bereichsvariable für eine Abfrage angibt.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-110">Describes the `From` clause, which specifies a collection and a range variable for a query.</span></span>  
   
- [<span data-ttu-id="5e501-111">Group By-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-111">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- <span data-ttu-id="5e501-112">Beschreibt die `Group By` -Klausel, die gruppiert die Elemente eines Abfrageergebnisses ein, und kann verwendet werden, um Aggregatfunktionen auf die einzelnen Gruppen anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="5e501-112">Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.</span></span>  
+ [<span data-ttu-id="0a8b1-111">Group By-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-111">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ <span data-ttu-id="0a8b1-112">Beschreibt die `Group By` -Klausel, die gruppiert die Elemente eines Abfrageergebnisses ein, und kann verwendet werden, um Aggregatfunktionen auf die einzelnen Gruppen anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-112">Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.</span></span>  
   
- [<span data-ttu-id="5e501-113">Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-113">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- <span data-ttu-id="5e501-114">Beschreibt die `Group Join` -Klausel, die zwei Auflistungen zu einer einzelnen hierarchischen Auflistung kombiniert.</span><span class="sxs-lookup"><span data-stu-id="5e501-114">Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.</span></span>  
+ [<span data-ttu-id="0a8b1-113">Group Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-113">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ <span data-ttu-id="0a8b1-114">Beschreibt die `Group Join` -Klausel, die zwei Auflistungen zu einer einzelnen hierarchischen Auflistung kombiniert.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-114">Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.</span></span>  
   
- [<span data-ttu-id="5e501-115">Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-115">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
- <span data-ttu-id="5e501-116">Beschreibt die `Join` -Klausel, die beiden Auflistungen in einer einzelnen Sammlung kombiniert.</span><span class="sxs-lookup"><span data-stu-id="5e501-116">Describes the `Join` clause, which combines two collections into a single collection.</span></span>  
+ [<span data-ttu-id="0a8b1-115">Join-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-115">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ <span data-ttu-id="0a8b1-116">Beschreibt die `Join` -Klausel, die beiden Auflistungen in einer einzelnen Sammlung kombiniert.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-116">Describes the `Join` clause, which combines two collections into a single collection.</span></span>  
   
- [<span data-ttu-id="5e501-117">Let-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-117">Let Clause</span></span>](../../../visual-basic/language-reference/queries/let-clause.md)  
- <span data-ttu-id="5e501-118">Beschreibt die `Let` -Klausel, die einen Wert berechnet und weist sie eine neue Variable in der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="5e501-118">Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.</span></span>  
+ [<span data-ttu-id="0a8b1-117">Let-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-117">Let Clause</span></span>](../../../visual-basic/language-reference/queries/let-clause.md)  
+ <span data-ttu-id="0a8b1-118">Beschreibt die `Let` -Klausel, die einen Wert berechnet und weist sie eine neue Variable in der Abfrage.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-118">Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.</span></span>  
   
- [<span data-ttu-id="5e501-119">Order By-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-119">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- <span data-ttu-id="5e501-120">Beschreibt die `Order By` -Klausel, die die Sortierreihenfolge für Spalten in einer Abfrage angibt.</span><span class="sxs-lookup"><span data-stu-id="5e501-120">Describes the `Order By` clause, which specifies the sort order for columns in a query.</span></span>  
+ [<span data-ttu-id="0a8b1-119">Order By-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-119">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ <span data-ttu-id="0a8b1-120">Beschreibt die `Order By` -Klausel, die die Sortierreihenfolge für Spalten in einer Abfrage angibt.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-120">Describes the `Order By` clause, which specifies the sort order for columns in a query.</span></span>  
   
- [<span data-ttu-id="5e501-121">Select-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-121">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
- <span data-ttu-id="5e501-122">Beschreibt die `Select` -Klausel, die einen Satz von Bereichsvariablen für eine Abfrage deklariert.</span><span class="sxs-lookup"><span data-stu-id="5e501-122">Describes the `Select` clause, which declares a set of range variables for a query.</span></span>  
+ [<span data-ttu-id="0a8b1-121">Select-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-121">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ <span data-ttu-id="0a8b1-122">Beschreibt die `Select` -Klausel, die einen Satz von Bereichsvariablen für eine Abfrage deklariert.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-122">Describes the `Select` clause, which declares a set of range variables for a query.</span></span>  
   
- [<span data-ttu-id="5e501-123">Skip-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-123">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)  
- <span data-ttu-id="5e501-124">Beschreibt die `Skip` -Klausel, die umgeht eine festgelegte Anzahl von Elementen in einer Auflistung und gibt dann die übrigen Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="5e501-124">Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
+ [<span data-ttu-id="0a8b1-123">Skip-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-123">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ <span data-ttu-id="0a8b1-124">Beschreibt die `Skip` -Klausel, die umgeht eine festgelegte Anzahl von Elementen in einer Auflistung und gibt dann die übrigen Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-124">Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  
   
- [<span data-ttu-id="5e501-125">Skip While-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-125">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- <span data-ttu-id="5e501-126">Beschreibt die `Skip While` -Klausel, die Elemente in einer Auflistung umgeht, solange eine angegebene Bedingung ist `true` und gibt dann die übrigen Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="5e501-126">Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.</span></span>  
+ [<span data-ttu-id="0a8b1-125">Skip While-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-125">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ <span data-ttu-id="0a8b1-126">Beschreibt die `Skip While` -Klausel, die Elemente in einer Auflistung umgeht, solange eine angegebene Bedingung ist `true` und gibt dann die übrigen Elemente zurück.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-126">Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.</span></span>  
   
- [<span data-ttu-id="5e501-127">Take-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-127">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
- <span data-ttu-id="5e501-128">Beschreibt die `Take` -Klausel, die eine angegebene Anzahl von zusammenhängenden Elementen vom Anfang einer Auflistung zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="5e501-128">Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.</span></span>  
+ [<span data-ttu-id="0a8b1-127">Take-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-127">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
+ <span data-ttu-id="0a8b1-128">Beschreibt die `Take` -Klausel, die eine angegebene Anzahl von zusammenhängenden Elementen vom Anfang einer Auflistung zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-128">Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.</span></span>  
   
- [<span data-ttu-id="5e501-129">Take While-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-129">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- <span data-ttu-id="5e501-130">Beschreibt die `Take While` -Klausel, die in einer Auflistung Elemente enthält, solange eine angegebene Bedingung ist `true` und die verbleibenden Elemente umgeht.</span><span class="sxs-lookup"><span data-stu-id="5e501-130">Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
+ [<span data-ttu-id="0a8b1-129">Take While-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-129">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ <span data-ttu-id="0a8b1-130">Beschreibt die `Take While` -Klausel, die in einer Auflistung Elemente enthält, solange eine angegebene Bedingung ist `true` und die verbleibenden Elemente umgeht.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-130">Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.</span></span>  
   
- [<span data-ttu-id="5e501-131">Where-Klausel</span><span class="sxs-lookup"><span data-stu-id="5e501-131">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
- <span data-ttu-id="5e501-132">Beschreibt die `Where` -Klausel, die eine filterbedingung für eine Abfrage angibt.</span><span class="sxs-lookup"><span data-stu-id="5e501-132">Describes the `Where` clause, which specifies a filtering condition for a query.</span></span>  
+ [<span data-ttu-id="0a8b1-131">Where-Klausel</span><span class="sxs-lookup"><span data-stu-id="0a8b1-131">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ <span data-ttu-id="0a8b1-132">Beschreibt die `Where` -Klausel, die eine filterbedingung für eine Abfrage angibt.</span><span class="sxs-lookup"><span data-stu-id="0a8b1-132">Describes the `Where` clause, which specifies a filtering condition for a query.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5e501-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5e501-133">See Also</span></span>  
- [<span data-ttu-id="5e501-134">LINQ</span><span class="sxs-lookup"><span data-stu-id="5e501-134">LINQ</span></span>](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [<span data-ttu-id="5e501-135">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5e501-135">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a><span data-ttu-id="0a8b1-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0a8b1-133">See Also</span></span>  
+ [<span data-ttu-id="0a8b1-134">LINQ</span><span class="sxs-lookup"><span data-stu-id="0a8b1-134">LINQ</span></span>](../../../visual-basic/programming-guide/language-features/linq/index.md)  
+ [<span data-ttu-id="0a8b1-135">Einführung in LINQ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0a8b1-135">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
