@@ -2,17 +2,17 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await ( Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 535b431fcf8ab5dafa134b8a3c1e2f7eacd6b427
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e00798a5e591ed8621cd0b5dbb4adfd1d41989bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696506"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399677"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await ( Visual Basic)
 Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher und intuitiver schreiben. Sie können asynchronen Code schreiben, der wie synchroner Code aussieht und veranlassen, dass der Compiler die komplizierten Rückruffunktionen und Fortsetzungen verarbeitet, die durch den asynchronen Code für gewöhnlich verursacht werden.  
   
- Weitere Informationen über das Feature Async finden Sie unter [asynchrone Programmierung mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+ Weitere Informationen über die Funktion Async finden Sie unter [asynchrone Programmierung mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Diese exemplarische Vorgehensweise beginnt mit einer synchronen WPF-Anwendung (Windows Presentation Foundation), die die Anzahl der Bytes in einer Liste von Websites summiert. In der exemplarischen Vorgehensweise wird die Anwendung dann mithilfe der neuen Funktionen in eine asynchrone Lösung umgewandelt.  
   
@@ -26,7 +26,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 -   [So fügen Sie einen Verweis hinzu](#AddRef)  
   
--   [So fügen Sie erforderliche Imports-Anweisungen hinzu](#ImportsState)  
+-   [Erforderliche Imports-Anweisungen hinzufügen](#ImportsState)  
   
 -   [So erstellen Sie eine synchrone Anwendung](#synchronous)  
   
@@ -45,7 +45,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
 -   [Beispiel](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Visual Studio 2012 oder höher muss auf dem Computer installiert sein. Weitere Informationen finden Sie auf der [Microsoft-Website](http://go.microsoft.com/fwlink/?LinkId=235233).  
+ Visual Studio 2012 oder höher muss auf dem Computer installiert sein. Weitere Informationen finden Sie auf der [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkId=235233).  
   
 ###  <a name="CreateWPFApp"></a> So erstellen Sie eine WPF-Anwendung  
   
@@ -55,7 +55,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  In der **installierte Vorlagen** Bereich Visual Basic auswählen, und wählen Sie dann **WPF-Anwendung** aus der Liste der Projekttypen zur Verfügung.  
+3.  In der **installierte Vorlagen** Bereich, wählen Sie die Visual Basic, und wählen Sie dann **WPF-Anwendung** aus der Liste der Projekttypen zur Verfügung.  
   
 4.  Geben Sie im Textfeld **Name** `AsyncExampleWPF` ein, und wählen Sie dann die Schaltfläche **OK** aus.  
   
@@ -108,9 +108,9 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
 6.  Wählen Sie die Schaltfläche **OK** aus, um das Dialogfeld zu schließen.  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> So fügen Sie erforderliche Imports-Anweisungen hinzu  
+###  <a name="ImportsState"></a> Erforderliche Imports-Anweisungen hinzufügen  
   
-1.  In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Code anzeigen**.  
+1.  In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
   
 2.  Fügen Sie die folgenden `Imports` Anweisungen am Anfang der Codedatei ein, wenn sie nicht bereits vorhanden sind.  
   
@@ -123,7 +123,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
 ##  <a name="BKMK_CreatSynchApp"></a>   
 ###  <a name="synchronous"></a> So erstellen Sie eine synchrone Anwendung  
   
-1.  Doppelklicken Sie im Entwurfsfenster "MainWindow.xaml", auf die **starten** Schaltfläche zum Erstellen der `startButton_Click` -Ereignishandler in "MainWindow.Xaml.vb".  
+1.  Doppelklicken Sie im Entwurfsfenster "MainWindow.xaml" auf die **starten** Schaltfläche zum Erstellen der `startButton_Click` -Ereignishandler in "MainWindow.Xaml.vb".  
   
 2.  In "MainWindow.Xaml.vb", kopieren Sie den folgenden Code in den Text der `startButton_Click`:  
   
@@ -265,7 +265,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 2.  `GetResponseAsync` gibt einen Wert vom Typ <xref:System.Threading.Tasks.Task%601> zurück. In diesem Fall weist die *Aufgabenrückgabevariable*, `TResult`, den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.  
   
-     Zum Abrufen der `WebResponse` aus der Aufgabe, Anwenden einer ["await"](../../../../visual-basic/language-reference/operators/await-operator.md) Operator, um den Aufruf von `GetResponseAsync`, wie der folgende Code zeigt.  
+     Zum Abrufen der `WebResponse` -Werts aus der Aufgabe, Anwenden einer ["await"](../../../../visual-basic/language-reference/operators/await-operator.md) Operator, um den Aufruf von `GetResponseAsync`, wie der folgende Code zeigt.  
   
     ```vb  
     Using response As WebResponse = Await webReq.GetResponseAsync()  
@@ -280,9 +280,9 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     'Using response As WebResponse = Await responseTask  
     ```  
   
-     Durch den Aufruf von `webReq.GetResponseAsync` wird `Task(Of WebResponse)` oder `Task<WebResponse>` zurückgegeben. Ein `Await` Operator angewendet wird, für den Task zum Abrufen der `WebResponse` Wert.  
+     Durch den Aufruf von `webReq.GetResponseAsync` wird `Task(Of WebResponse)` oder `Task<WebResponse>` zurückgegeben. Ein `Await` Operator angewendet wird, um den Vorgang zum Abrufen der `WebResponse` Wert.  
   
-     Wenn Ihre asynchrone Methode Aktionen vornehmen muss, die nicht von der Fertigstellung der Aufgabe abhängen, kann die Methode diese Aktionen zwischen zwei Anweisungen fortsetzen, und zwar nach dem Aufruf der asynchronen Methode und vor dem Anwenden des await-Operators. Beispiele finden Sie unter [Vorgehensweise: Erstellen mehrerer Webanforderungen durch Verwenden von Async und Await (Visual Basic) parallel](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) und [wie: Erweitern der asynchronen Walkthrough mithilfe von "Task.WhenAll" (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Wenn Ihre asynchrone Methode Aktionen vornehmen muss, die nicht von der Fertigstellung der Aufgabe abhängen, kann die Methode diese Aktionen zwischen zwei Anweisungen fortsetzen, und zwar nach dem Aufruf der asynchronen Methode und vor dem Anwenden des await-Operators. Beispiele finden Sie in [Vorgehensweise: Stellen mehrerer Webanforderungen mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) und [Vorgehensweise: Erweitern der asynchronen Walkthrough mit Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
 3.  Da Sie den Operator `Await` im vorherigen Schritt hinzugefügt haben, tritt ein Compilerfehler auf. Der Operator kann verwendet werden, nur in Methoden, die mit markiert sind die [Async](../../../../visual-basic/language-reference/modifiers/async.md) Modifizierer. Ignorieren Sie den Fehler, während Sie die Konvertierungsschritte zum Ersetzen des Aufrufs von `CopyTo` mit einem Aufruf von `CopyToAsync` wiederholen.  
   
@@ -311,7 +311,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     Private Async Function GetURLContents(url As String) As Byte()  
     ```  
   
-5.  Der Rückgabetyp einer Async-Methode kann nur <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>. In Visual Basic muss die Methode eine `Function` sein, die eine `Task` oder eine `Task(Of T)` zurückgibt, oder die Methode muss ein `Sub` sein. In der Regel eine `Sub` Methode ist nur in einem asynchronen Ereignishandler verwendet, in denen `Sub` ist erforderlich. In anderen Fällen verwenden Sie `Task(T)` , wenn die abgeschlossene Methode eine [zurückgeben](../../../../visual-basic/language-reference/statements/return-statement.md) -Anweisung, die einen Wert zurückgibt Typ T, und Sie `Task` , wenn die abgeschlossene Methode keinen sinnvollen Wert zurückgibt.  
+5.  Der Rückgabetyp einer Async-Methode kann nur sein <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>. In Visual Basic muss die Methode eine `Function` sein, die eine `Task` oder eine `Task(Of T)` zurückgibt, oder die Methode muss ein `Sub` sein. In der Regel eine `Sub` Methode wird nur in einem asynchronen Ereignishandler verwendet, in denen `Sub` ist erforderlich. In anderen Fällen verwenden Sie `Task(T)` , wenn die abgeschlossene Methode eine [zurückgeben](../../../../visual-basic/language-reference/statements/return-statement.md) -Anweisung, die den Wert zurückgibt, Typ T, und Sie `Task` , wenn die abgeschlossene Methode keinen sinnvollen Wert zurückgibt.  
   
      Weitere Informationen finden Sie unter [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
@@ -359,7 +359,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
     -   Fügen Sie dem Methodennamen „Async“ hinzu.  
   
-    -   Es ist dieses Mal keine Aufgabenrückgabevariable „T“ vorhanden, da `SumPageSizesAsync` keinen Wert für „T“ zurückgibt. (Die Methode weist keine `Return`-Anweisung auf.) Die Methode muss jedoch eine `Task` zurückgeben, die awaitable ist. Daher ändern Sie den Methodentyp von `Sub` auf `Function`. Der Rückgabetyp der Funktion lautet `Task`.  
+    -   Es ist dieses Mal keine Aufgabenrückgabevariable „T“ vorhanden, da `SumPageSizesAsync` keinen Wert für „T“ zurückgibt. (Die Methode weist keine `Return`-Anweisung auf.) Die Methode muss jedoch eine `Task` zurückgeben, die awaitable ist. Daher ändern Sie den Methodentyp von `Sub` zu `Function`. Der Rückgabetyp der Funktion lautet `Task`.  
   
      Im folgenden Code sind diese Änderungen dargestellt.  
   
@@ -403,7 +403,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     startButton.IsEnabled = True  
     ```  
   
-     Weitere Informationen über das erneute eintreten finden Sie unter [Eintretens in asynchronen Anwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).  
+     Weitere Informationen zum erneuten eintreten finden Sie unter [Eintretens in asynchronen Anwendungen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).  
   
 4.  Fügen Sie der Deklaration abschließend den Modifizierer `Async` hinzu, sodass der Ereignishandler auf `SumPagSizesAsync` warten kann.  
   
@@ -411,7 +411,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     Async Sub startButton_Click(sender As Object, e As RoutedEventArgs) Handles startButton.Click  
     ```  
   
-     In der Regel werden die Namen der Ereignishandler nicht geändert. Der Rückgabetyp wird nicht geändert, um `Task` da Ereignishandler Transportservers `Sub` -Prozeduren in Visual Basic.  
+     In der Regel werden die Namen der Ereignishandler nicht geändert. Der Rückgabetyp wird nicht geändert, um `Task` da Ereignishandler befinden müssen `Sub` -Prozeduren in Visual Basic.  
   
      Die Konvertierung des Projekts von der synchronen zu asynchronen Verarbeitung ist abgeschlossen.  
   
@@ -679,6 +679,6 @@ End Class
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Asynchrone Rückgabetypen (Visual Basic))  
- [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://go.microsoft.com/fwlink/?LinkId=204847)  
  [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Gewusst wie: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic))  
  [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Gewusst wie: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic))

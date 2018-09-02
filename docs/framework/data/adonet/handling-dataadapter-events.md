@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7013f855fb54f6c67c569ccabda91727359d22b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759152"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398759"
 ---
 # <a name="handling-dataadapter-events"></a>Behandeln von DataAdapter-Ereignissen
 Der ADO.NET-<xref:System.Data.Common.DataAdapter> macht drei Ereignisse verfügbar, mit denen Sie auf Änderungen der Daten der Datenquelle reagieren können. In der folgenden Tabelle finden Sie eine Beschreibung dieser `DataAdapter`-Ereignisse.  
@@ -39,7 +39,7 @@ Der ADO.NET-<xref:System.Data.Common.DataAdapter> macht drei Ereignisse verfügb
   
  Sie können auch die `ContinueUpdateOnError`-Eigenschaft verwenden, um Fehler für aktualisierte Zeilen zu behandeln. Wenn für `DataAdapter.ContinueUpdateOnError` der Wert `true` angegeben ist und das Updates einer Zeile eine Ausnahme auslöst, wird der Text der Ausnahme in die `RowError`-Information der entsprechenden Zeile aufgenommen. Die Verarbeitung wird fortgesetzt, ohne dass eine Ausnahme ausgelöst wird. Auf diese Weise können Sie auf Fehler reagieren, wenn `Update` abgeschlossen wurde. Dagegen können Sie beim `RowUpdated`-Ereignis auf den Fehler reagieren, sobald er festgestellt wird.  
   
- Im folgenden Codebeispiel wird dargestellt, wie Ereignishandler hinzugefügt und entfernt werden. Der `RowUpdating`-Ereignishandler schreibt ein Protokoll aller gelöschten Datensätze und versieht die Löschvorgangaufzeichnungen jeweils mit einem Timestamp. Die `RowUpdated` -Ereignishandler fügt Informationen an die `RowError` -Eigenschaft der Zeile in der `DataSet`unterdrückt die Ausnahme und setzt die Verarbeitung fort (entspricht dem Verhalten von `ContinueUpdateOnError`  =  `true`).  
+ Im folgenden Codebeispiel wird dargestellt, wie Ereignishandler hinzugefügt und entfernt werden. Der `RowUpdating`-Ereignishandler schreibt ein Protokoll aller gelöschten Datensätze und versieht die Löschvorgangaufzeichnungen jeweils mit einem Timestamp. Die `RowUpdated` Ereignishandler fügt Informationen an die `RowError` -Eigenschaft der Zeile in der `DataSet`, unterdrückt die Ausnahme und setzt die Verarbeitung fort (entspricht dem Verhalten von `ContinueUpdateOnError`  =  `true`).  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -191,4 +191,4 @@ protected static void FillError(object sender, FillErrorEventArgs args)
  [Handling DataSet Events (Behandeln von DataSet-Ereignissen)](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  [Behandeln von DataTable-Ereignissen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  [Ereignisse](../../../../docs/standard/events/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: b70387e604b0917d154fc056b904e9ee05f6fbbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a11dcfc9030944365adda3656a8895912b0ef0d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557237"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399213"
 ---
 # <a name="tooltip-overview"></a>Übersicht über die QuickInfo
-Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger über ein Element, z. B. über hält eine <xref:System.Windows.Controls.Button>. In diesem Thema wird die QuickInfo vorgestellt und das Erstellen und Anpassen von QuickInfo-Inhalten erläutert.  
+Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger auf ein Element, beispielsweise über hält eine <xref:System.Windows.Controls.Button>. In diesem Thema wird die QuickInfo vorgestellt und das Erstellen und Anpassen von QuickInfo-Inhalten erläutert.  
   
  
   
@@ -30,46 +30,46 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
   
 -   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
- Die Eigenschaft, die Sie verwenden, hängt davon ab, ob das Steuerelement, das die QuickInfo definiert erbt die <xref:System.Windows.FrameworkContentElement> oder <xref:System.Windows.FrameworkElement> Klasse.  
+ Die Eigenschaft, die Sie verwenden, hängt davon ab, ob das Steuerelement, das die QuickInfo definiert, erbt die <xref:System.Windows.FrameworkContentElement> oder <xref:System.Windows.FrameworkElement> Klasse.  
   
 <a name="create_tooltip"></a>   
 ## <a name="creating-a-tooltip"></a>Erstellen einer QuickInfo  
- Im folgende Beispiel wird gezeigt, wie zum Erstellen einer einfachen QuickInfo durch Festlegen der <xref:System.Windows.FrameworkElement.ToolTip%2A> -Eigenschaft für eine <xref:System.Windows.Controls.Button> Steuerelement in eine Textzeichenfolge.  
+ Das folgende Beispiel zeigt, wie Sie eine einfache QuickInfo erstellen, durch Festlegen der <xref:System.Windows.FrameworkElement.ToolTip%2A> -Eigenschaft für eine <xref:System.Windows.Controls.Button> Steuerelement auf eine Zeichenfolge.  
   
  [!code-xaml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
   
- Sie können auch eine QuickInfo als definieren eine <xref:System.Windows.Controls.ToolTip> Objekt. Im folgenden Beispiel wird [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] an eine <xref:System.Windows.Controls.ToolTip> Objekt als die QuickInfo eines ein <xref:System.Windows.Controls.TextBox> Element. Beachten Sie, die im Beispiel wird die <xref:System.Windows.Controls.ToolTip> durch Festlegen der <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> Eigenschaft.  
+ Sie können auch eine QuickInfo als definieren eine <xref:System.Windows.Controls.ToolTip> Objekt. Im folgenden Beispiel wird [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] an eine <xref:System.Windows.Controls.ToolTip> Objekt als QuickInfo für ein <xref:System.Windows.Controls.TextBox> Element. Beachten Sie, die im Beispiel wird die <xref:System.Windows.Controls.ToolTip> durch Festlegen der <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> Eigenschaft.  
   
  [!code-xaml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
   
- Im folgenden Beispiel wird Code zum Generieren einer <xref:System.Windows.Controls.ToolTip> Objekt. Das Beispiel erstellt eine <xref:System.Windows.Controls.ToolTip> (`tt`) und ordnet sie einer <xref:System.Windows.Controls.Button>.  
+ Im folgenden Beispiel wird der Code zum Generieren einer <xref:System.Windows.Controls.ToolTip> Objekt. Das Beispiel erstellt eine <xref:System.Windows.Controls.ToolTip> (`tt`) und ordnet ihn einem <xref:System.Windows.Controls.Button>.  
   
  [!code-csharp[ToolTipSimple#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ToolTipSimple#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
   
- Sie können auch nicht als definierten QuickInfo-Inhalt erstellen eine <xref:System.Windows.Controls.ToolTip> Objekt vom einschließenden des QuickInfo-Inhalts in einem Layoutelement, z. B. eine <xref:System.Windows.Controls.DockPanel>. Das folgende Beispiel zeigt, wie Sie festlegen der <xref:System.Windows.FrameworkElement.ToolTip%2A> Eigenschaft eine <xref:System.Windows.Controls.TextBox> auf Inhalte, die in eingeschlossen ist ein <xref:System.Windows.Controls.DockPanel> Steuerelement.  
+ Sie können auch QuickInfo-Inhalte, die als nicht definiert ist erstellen eine <xref:System.Windows.Controls.ToolTip> Objekt schließen Sie den QuickInfo-Inhalt in ein Layoutelement, z. B. eine <xref:System.Windows.Controls.DockPanel>. Das folgende Beispiel zeigt, wie Sie festlegen der <xref:System.Windows.FrameworkElement.ToolTip%2A> Eigenschaft eine <xref:System.Windows.Controls.TextBox> zu Inhalt, der in eingeschlossen ist eine <xref:System.Windows.Controls.DockPanel> Steuerelement.  
   
  [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
   
 <a name="Using_the_ToolTip_and_ToolTipService_Properties"></a>   
 ## <a name="using-the-properties-of-the-tooltip-and-tooltipservice-classes"></a>Verwenden der Eigenschaften der Klassen ToolTip und ToolTipService  
- Sie können den Inhalt einer QuickInfo anpassen, indem Sie Eigenschaften für das Erscheinungsbild festlegen und Stile anwenden. Wenn Sie den Inhalt als QuickInfo definieren eine <xref:System.Windows.Controls.ToolTip> -Objekt können Sie die visuellen Eigenschaften des Festlegen der <xref:System.Windows.Controls.ToolTip> Objekt. Andernfalls müssen Sie entsprechende angefügte Eigenschaften festlegen, auf die <xref:System.Windows.Controls.ToolTipService> Klasse.  
+ Sie können den Inhalt einer QuickInfo anpassen, indem Sie Eigenschaften für das Erscheinungsbild festlegen und Stile anwenden. Wenn Sie den QuickInfo-Inhalt als definieren eine <xref:System.Windows.Controls.ToolTip> Objekt ist, können Sie die visuellen Eigenschaften des Festlegen der <xref:System.Windows.Controls.ToolTip> Objekt. Andernfalls müssen Sie entsprechende angefügte Eigenschaften festlegen, auf die <xref:System.Windows.Controls.ToolTipService> Klasse.  
   
- Ein Beispiel zum Festlegen von Eigenschaften, um die Position des QuickInfo-Inhalte mithilfe von angeben der <xref:System.Windows.Controls.ToolTip> und <xref:System.Windows.Controls.ToolTipService> Eigenschaften finden Sie in [platzieren eine QuickInfo](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
+ Ein Beispiel zum Festlegen von Eigenschaften, um die Position der QuickInfo-Inhalte mithilfe von angeben der <xref:System.Windows.Controls.ToolTip> und <xref:System.Windows.Controls.ToolTipService> Eigenschaften finden Sie [Positionieren einer QuickInfo](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
   
 <a name="StylingToolTip"></a>   
 ## <a name="styling-a-tooltip"></a>Formatieren einer QuickInfo  
- Sie können Formatieren einer <xref:System.Windows.Controls.ToolTip> durch Definieren einer benutzerdefiniertes <xref:System.Windows.Style>. Das folgende Beispiel definiert eine <xref:System.Windows.Style> aufgerufen `Simple` veranschaulicht, wie die Platzierung der offset der <xref:System.Windows.Controls.ToolTip> und ändern Sie seine Darstellung durch Festlegen der <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, und <xref:System.Windows.Controls.Control.FontWeight%2A>.  
+ Sie können Formatieren einer <xref:System.Windows.Controls.ToolTip> durch Definieren eines benutzerdefinierten <xref:System.Windows.Style>. Das folgende Beispiel definiert eine <xref:System.Windows.Style> namens `Simple` , die zeigt, wie die Platzierung der offset der <xref:System.Windows.Controls.ToolTip> , und ändern Sie seine Darstellung durch Festlegen der <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, und <xref:System.Windows.Controls.Control.FontWeight%2A>.  
   
  [!code-xaml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
   
 <a name="UsingtheToolTipServiceTimeIntervalProperties"></a>   
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Verwenden der Eigenschaften von ToolTipService für Zeitintervalle  
- Die <xref:System.Windows.Controls.ToolTipService> Klasse enthält die folgenden Eigenschaften zum Festlegen der QuickInfo anzuzeigen, wie oft: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, und <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
+ Die <xref:System.Windows.Controls.ToolTipService> -Klasse bietet die folgenden Eigenschaften für die Sie festlegen, QuickInfo anzeigen: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, und <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Verwenden der <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> und <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> Eigenschaften zur Angabe einer Verzögerung in der Regel eine kurze, bevor eine <xref:System.Windows.Controls.ToolTip> angezeigt wird und auch, um anzugeben, wie lange eine <xref:System.Windows.Controls.ToolTip> weiterhin angezeigt. Weitere Informationen finden Sie unter [Vorgehensweise: Verzögern der Anzeige einer QuickInfo](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Verwenden der <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> und <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> Eigenschaften an eine Verzögerung in der Regel eine kurze, vor einer <xref:System.Windows.Controls.ToolTip> angezeigt wird und auch angeben, wie lange eine <xref:System.Windows.Controls.ToolTip> sichtbar bleibt. Weitere Informationen finden Sie unter [Vorgehensweise: Verzögern der Anzeige einer QuickInfo](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
- Die <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Eigenschaft bestimmt, ob QuickInfos für verschiedene Steuerelemente ohne eine Verzögerung angezeigt, wenn Sie den Mauszeiger schnell dazwischen verschieben. Weitere Informationen zu den <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> -Eigenschaft, finden Sie unter [verwenden Sie die Eigenschaft BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
+ Die <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Eigenschaft bestimmt, ob QuickInfos für andere Steuerelemente ohne Verzögerung angezeigt werden, wenn Sie den Mauszeiger Maus schnell zwischen diesen bewegen. Weitere Informationen zu den <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> -Eigenschaft finden Sie unter [verwenden der BetweenShowDelay-Eigenschaft](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   
  Das nachstehende Beispiel zeigt, wie Sie diese Eigenschaften für eine QuickInfo festlegen.  
   

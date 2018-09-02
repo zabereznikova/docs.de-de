@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: 05cc79abdeb41cd3bfb7db21ebb206eb309ad5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522571"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398631"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Drag & Drop-Operationen und Unterstützung der Zwischenablage
 Sie können Drag & Drop-Operationen für Benutzer innerhalb einer Windows-basierten Anwendung aktivieren, indem Sie eine Reihe von Ereignissen, insbesondere die Ereignisse <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> und <xref:System.Windows.Forms.Control.DragDrop>, entsprechend handhaben.  
@@ -42,4 +42,4 @@ Sie können Drag & Drop-Operationen für Benutzer innerhalb einer Windows-basier
  Beschreibt die Komplexität der Methode, die für das Starten des Ziehvorgangs von zentraler Bedeutung ist.   
   
  <xref:System.Windows.Forms.Clipboard>  
- Siehe auch [wie: Senden von Daten an das aktive untergeordnete MDI-Fenster](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
+ Siehe auch [wie: Senden von Daten an das aktive untergeordnete MDI-Element](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).

@@ -12,18 +12,18 @@ ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 184547dd47e728f17f28105e74b2ca67c1436efc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac1e1f7bc36d8d2b12b99de2794bb0ba31ddbd7a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749981"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398731"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;RequiredRuntime&gt; Element
-Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Dieses Element ist veraltet und sollte nicht mehr verwendet werden. Die [ `supportedRuntime` ](supportedruntime-element.md) -Element sollte stattdessen verwendet werden.
+Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Dieses Element ist veraltet und sollte nicht mehr verwendet werden. Die [ `supportedRuntime` ](supportedruntime-element.md) Element sollte stattdessen verwendet werden.
   
  \<configuration>  
-\<Start >  
+\<Startup >  
 \<requiredRuntime>  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,15 +41,15 @@ safemode="true|false"/>
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`version`|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der die Version von .NET Framework angibt, die diese Anwendung unterstützt. Der String-Wert muss es sich um den Namen des Verzeichnisses finden Sie unter .NET Framework-Installationsstammverzeichnis übereinstimmen. Der Inhalt des Zeichenfolgenwerts wird nicht analysiert.|  
-|`safemode`|Optionales Attribut.<br /><br /> Gibt an, ob der Laufzeitstartcode, die Registrierung sucht, um die Common Language Runtime-Version zu bestimmen.|  
+|`version`|Optionales Attribut.<br /><br /> Ein Zeichenfolgenwert, der angibt, die Version von .NET Framework, die diese Anwendung unterstützt. Der Zeichenfolgenwert muss den Namen des Verzeichnisses finden Sie unter dem Stamm der .NET Framework-Installation übereinstimmen. Der Inhalt des Zeichenfolgenwerts wird nicht analysiert.|  
+|`safemode`|Optionales Attribut.<br /><br /> Gibt an, ob die Common Language Runtime-Startcode die Registrierung zum Ermitteln der RuntimeVersion der Common Language durchsucht.|  
   
 ## <a name="safemode-attribute"></a>Safemode-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Der Laufzeitstartcode sucht in der Registrierung. Dies ist der Standardwert.|  
-|`true`|Der Laufzeitstartcode sucht nicht in der Registrierung.|  
+|`false`|Der Startcode für die Common Language Runtime sucht in der Registrierung. Dies ist der Standardwert.|  
+|`true`|Der Laufzeitstartcode scheint sich nicht in der Registrierung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -62,18 +62,18 @@ safemode="true|false"/>
 |`startup`|Enthält die `<requiredRuntime>` Element.|  
   
 ## <a name="remarks"></a>Hinweise  
- Anwendungen, die nur Version 1.0 der Laufzeit unterstützen müssen verwenden die `<requiredRuntime>` Element. Anwendungen, die mit Version 1.1 oder höher der Runtime erstellt müssen verwenden die `<supportedRuntime>` Element.  
+ Anwendungen, die nur in Version 1.0 von der Laufzeit nicht verwenden, müssen die `<requiredRuntime>` Element. Erstellen von Anwendungen mit Version 1.1 oder höher der Runtime verwenden, müssen die `<supportedRuntime>` Element.  
   
 > [!NOTE]
 >  Bei Verwendung der [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) Funktion, um die Konfigurationsdatei angeben, müssen Sie die `<requiredRuntime>` -Element für alle Versionen der Laufzeit. Die `<supportedRuntime>` Element wird ignoriert, wenn Sie [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
- Die `version` Attributzeichenfolge muss die Installation Ordnernamen für die angegebene Version von .NET Framework entsprechen. Diese Zeichenfolge wird nicht interpretiert werden. Wenn der Laufzeitstartcode übereinstimmenden Ordner nicht gefunden wird, wird die Common Language Runtime nicht geladen. der Startcode zeigt eine Fehlermeldung an und beendet.  
+ Die `version` Attributzeichenfolge muss den Ordnernamen Installation, für die angegebene Version von .NET Framework entsprechen. Diese Zeichenfolge wird nicht interpretiert. Wenn der Laufzeitstartcode einen entsprechenden Ordner nicht gefunden wird, ist die Runtime nicht geladen werden. der Startcode zeigt eine Fehlermeldung an und wird beendet.  
   
 > [!NOTE]
 >  Der Startcode für eine Anwendung, die in Microsoft Internet Explorer gehostet wird, ignoriert der `<requiredRuntime>` Element.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird gezeigt, wie die Common Language Runtime-Version in einer Konfigurationsdatei angegeben.  
+ Das folgende Beispiel zeigt, wie die Runtime-Version in einer Konfigurationsdatei angegeben wird.  
   
 ```xml  
 <configuration>  
@@ -86,4 +86,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>Siehe auch  
  [Startup Settings Schema (Schema für Starteinstellungen)](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Specifying Which Runtime Version to Use (Festlegen der zu verwendenden Runtimeversion)](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> Specifying Which Runtime Version to Use (Festlegen der zu verwendenden Runtimeversion)](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572afc5eb9ec3cf52199e5ad74406c876485461c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d60e1e503cd48b9b9e2ed91a6bfea000aeeea2af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434089"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399212"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall-Methode
-Importiert ein öffentliches/privates Schlüsselpaar in einen Container.  
+Ein öffentliches/privates Schlüsselpaar importiert in einem Container.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +39,22 @@ HRESULT StrongNameKeyInstall (
   
 #### <a name="parameters"></a>Parameter  
  `wszKeyContainer`  
- [in] Der Name des Schlüsselcontainers. `wszKeyContainer` eine nicht leere Zeichenfolge muss sein.  
+ [in] Der Name des Containers mit dem Schlüssel. `wszKeyContainer` eine nicht leere Zeichenfolge muss sein.  
   
  `pbKeyBlob`  
  [in] Das binäre Schlüsselpaar.  
   
  `cbKeyBlob`  
- [in] Die Größe in Bytes, der `pbKeyBlob`.  
+ [in] Die Größe in Bytes, des `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden der [ICLRStrongName:: StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) Methode, um den Schlüsselcontainer zu löschen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   

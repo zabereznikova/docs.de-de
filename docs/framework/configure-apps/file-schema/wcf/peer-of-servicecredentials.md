@@ -2,12 +2,12 @@
 title: '&lt;peer&gt; von &lt;serviceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: f50c192639df7b7ed35e863821d5b7a8d62f29bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 94f93a7955af3bff1c17e59a11af3fad85c9134d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747680"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399842"
 ---
 # <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;peer&gt; von &lt;serviceCredentials&gt;
 Gibt die aktuellen Anmeldeinformationen für einen Peerknoten an.  
@@ -55,7 +55,7 @@ Gibt die aktuellen Anmeldeinformationen für einen Peerknoten an.
  <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>  
  <xref:System.ServiceModel.Security.PeerCredential>  
  [Peer-to-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Peerkanal Nachrichtenauthentifizierung](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Benutzerdefinierter Peerkanal-Authentifizierung](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Peerkanal-Nachrichtenauthentifizierung](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Benutzerdefinierter Peerkanal-Authentifizierung](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Sichern von Peerkanalanwendungen](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
  [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -9,16 +9,16 @@ ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 61e387462126bc7b0752932ca617f7a97235a1c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25d27faeac2c60a50801b817185aa1d5196e506d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409532"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398559"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den ComboBox-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „ComboBox“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte, Steuerelementmuster und [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse ein.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33409532"
   
 |Steuerelementansicht|Inhaltsansicht|  
 |------------------|------------------|  
-|ComboBox<br /><br /> / Bearbeiten (0 oder 1)<br />-Liste (1)<br />-Listenelement (untergeordnetes Element von Liste; 0 bis viele)<br />-Schaltfläche (1)|ComboBox<br /><br /> -Listenelement (0 bis viele)|  
+|ComboBox<br /><br /> -Edit (0 oder 1)<br />-Liste (1)<br />-Listenelement (untergeordnetes Element von Liste; 0 bis viele)<br />-Taste (1)|ComboBox<br /><br /> -Listenelement (0 bis viele)|  
   
  Das Bearbeitungssteuerelement in der Steuerelementansicht des Kombinationsfelds ist nur erforderlich, wenn das Kombinationsfeld bearbeitet werden kann, um beliebige Eingaben anzunehmen, wie dies für das Kombinationsfeld im Dialogfeld „Ausführen“ der Fall ist.  
   

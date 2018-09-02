@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: c963b3e08eba7776a0ed579017f1e84828794379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355297"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399855"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Angeben von XML-Werten als Parameter
-Wenn eine Abfrage einen Parameter erfordert, dessen Wert eine XML-Zeichenfolge ist, können Entwickler den Wert mithilfe einer Instanz von geben die **SqlXml** -Datentyp. Es gibt tatsächlich ohne zusätzlichen Aufwand. XML-Spalten in SQL Server werden die Parameterwerte auf genau die gleiche Weise wie andere Datentypen annehmen.  
+Wenn eine Abfrage einen Parameter erfordert, deren Wert eine XML-Zeichenfolge ist, können Entwickler geben diesen Wert mithilfe einer Instanz von der **SqlXml** -Datentyp. Es gibt wirklich ohne zusätzlichen Aufwand. Parameterwerte werden von XML-Spalten in SQL Server auf genau die gleiche Weise wie andere Datentypen annehmen.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Konsolenanwendung erstellt eine neue Tabelle in der **AdventureWorks** Datenbank. Die neue Tabelle enthält eine Spalte namens **SalesID** und eine XML-Spalte namens **SalesInfo**.  
+ Die folgende Konsolenanwendung erstellt eine neue Tabelle in der **AdventureWorks** Datenbank. Die neue Tabelle enthält eine Spalte namens **SalesID** und einer XML-Spalte, die mit dem Namen **SalesInfo**.  
   
 > [!NOTE]
->  Die **AdventureWorks** Beispieldatenbank ist bei der Installation von SQL Server nicht standardmäßig installiert. Sie kann jedoch durch Ausführen des Setups von SQL Server installiert werden.  
+>  Die **AdventureWorks** Beispieldatenbank ist nicht standardmäßig installiert, bei der Installation von SQL Server. Sie kann jedoch durch Ausführen des Setups von SQL Server installiert werden.  
   
  In dem Beispiel wird ein <xref:System.Data.SqlClient.SqlCommand>-Objekt vorbereitet, um eine Zeile in der neuen Tabelle einzufügen. Eine gespeicherte Datei stellt die XML-Daten für die **SalesInfo** Spalte.  
   
@@ -162,4 +162,4 @@ class Class1
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Data.SqlTypes.SqlXml>  
  [XML-Daten in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

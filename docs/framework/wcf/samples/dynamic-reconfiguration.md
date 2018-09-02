@@ -2,22 +2,22 @@
 title: Dynamische Neukonfiguration
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810379"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401339"
 ---
 # <a name="dynamic-reconfiguration"></a>Dynamische Neukonfiguration
-Diesem Beispiel wird den Windows Communication Foundation (WCF)-Routingdienst veranschaulicht. Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht. In diesem Beispiel wird die standard-WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie der Routingdienst während der Laufzeit dynamisch neu konfiguriert werden kann.  
+Diesem Beispiel wird der Windows Communication Foundation (WCF)-Routingdienst veranschaulicht. Der Routingdienst ist eine WCF-Komponente, die es einfach macht, ein inhaltsbasierten Routers in Ihre Anwendung einbinden. In diesem Beispiel wird die standard-WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie der Routingdienst während der Laufzeit dynamisch neu konfiguriert werden kann.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\DynamicReconfiguration`  
   
@@ -30,11 +30,11 @@ Diesem Beispiel wird den Windows Communication Foundation (WCF)-Routingdienst ve
   
 1.  Öffnen Sie mit [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] DynamicReconfiguration.sln.  
   
-2.  So öffnen **Projektmappen-Explorer**wählen **Projektmappen-Explorer** aus der **Ansicht** Menü.  
+2.  Zum Öffnen **Projektmappen-Explorer**Option **Projektmappen-Explorer** aus der **Ansicht** im Menü.  
   
 3.  Drücken Sie **F5** oder **STRG + UMSCHALT + B** in Visual Studio.  
   
-    1.  Wenn Sie möchten, um die erforderlichen Projekte automatisch gestartet, wenn Sie durch Drücken **F5**mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Eigenschaften**. Wählen Sie die **Startprojekt** Knoten unter **allgemeine Eigenschaften** im linken Bereich. Wählen Sie die **mehrere Startprojekte** Optionsfeld aus, und legen Sie alle Projekte haben die **starten** Aktion.  
+    1.  Wenn Sie möchten, um-die notwendigen Projekte automatisch gestartet, wenn Sie drücken **F5**mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Eigenschaften**. Wählen Sie die **Startprojekt** Knoten unter **allgemeine Eigenschaften** im linken Bereich. Wählen Sie die **mehrere Startprojekte** Optionsfeld aus, und legen Sie alle Projekte die **starten** Aktion.  
   
     2.  Wenn Sie das Projekt mit erstellen **STRG + UMSCHALT + B**, müssen Sie die folgenden Anwendungen starten:  
   
@@ -72,7 +72,7 @@ Diesem Beispiel wird den Windows Communication Foundation (WCF)-Routingdienst ve
   
 6.  Vom Rechnerdienst und der Rundungsrechnerdienst wird außerdem ein Protokoll der Vorgänge gedruckt, die in den jeweiligen Konsolenfenstern aufgerufen werden.  
   
-7.  Klicken Sie im Konsolenfenster Clients geben Sie "Beenden", und drücken Sie EINGABETASTE zu beenden.  
+7.  Klicken Sie im Konsolenfenster Clients geben Sie "quit", und drücken Sie EINGABETASTE zum Beenden.  
   
 8.  Drücken Sie die EINGABETASTE in den Dienstkonsolenfenstern, um die Dienste zu beenden.  
   
@@ -83,4 +83,4 @@ Diesem Beispiel wird den Windows Communication Foundation (WCF)-Routingdienst ve
  Contoso möchte sämtliche Dienste virtualisieren, um nur einen Endpunkt öffentlich verfügbar zu machen, über den Zugriff auf mehrere verschiedene Dienste gewährt wird. In diesem Fall werden die inhaltsbasierten Routingfunktionen des Routingdiensts verwendet, um zu bestimmen, wohin die eingehenden Anforderungen gesendet werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

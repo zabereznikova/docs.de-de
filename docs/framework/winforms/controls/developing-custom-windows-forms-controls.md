@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528667"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397602"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework
 Windows Forms-Steuerelemente sind wiederverwendbare Komponenten, die Funktionen der Benutzeroberfläche einschließen und in clientseitigen Windows-basierten Anwendungen verwendet werden. Windows Forms stellt nicht nur viele einsatzbereite Steuerelemente bereit, sondern auch die Infrastruktur für die Entwicklung eigener Steuerelemente. Sie können vorhandene Steuerelemente kombinieren und erweitern oder eigene benutzerdefinierte Steuerelemente erstellen. Dieser Abschnitt enthält Hintergrundinformationen und Beispiele, die Sie beim Entwickeln von Windows Forms-Steuerelementen unterstützen.  
@@ -51,13 +51,13 @@ Windows Forms-Steuerelemente sind wiederverwendbare Komponenten, die Funktionen 
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Entwurfszeitattribute für Komponenten](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [Entwurfszeitattribute für Komponenten](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
  Listet die Metadatenattribute für Komponenten und Steuerelemente auf, damit sie in visuellen Designern zur Entwurfszeit korrekt angezeigt werden.  
   
- [Erweitern der Entwurfszeitunterstützung](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Erweitern der Entwurfszeitunterstützung](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  Beschreibt die Implementierung von Klassen wie Editoren und Designern, die Entwurfszeitunterstützung bereitstellen.  
   
- [Vorgehensweise: Lizenzieren von Komponenten und Steuerelementen](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [Vorgehensweise: Lizenzieren von Komponenten und Steuerelementen](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
  Beschreibt das Implementieren einer Lizenzierung in ein Steuerelement oder eine Komponente.  
   
- Siehe auch [Entwickeln von Windows Forms-Steuerelemente zur Entwurfszeit](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).
+ Siehe auch [Entwickeln von Windows Forms-Steuerelemente zur Entwurfszeit](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f023abe6f803413b862d695a73988c3ea779a88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05ca122f425f929264669ca4914f87e850154246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526639"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398935"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Gewusst wie: Erstellen eines einfachen Windows Forms-ToolStrip mit Standardelementen im Designer
 Das folgende Verfahren veranschaulicht, wie eine <xref:System.Windows.Forms.ToolStrip> und fügen Sie sieben <xref:System.Windows.Forms.ToolStripButton> Steuerelemente, die typische Aufgaben darstellen.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-standard-items-in-the-designer"></a>Hinzufügen von Standardelementen im designer  
   
-1.  Erstellen einer <xref:System.Windows.Forms.ToolStrip> Steuerelement.  
+1.  Erstellen Sie eine <xref:System.Windows.Forms.ToolStrip> Steuerelement.  
   
 2.  In der oberen rechten Ecke des der <xref:System.Windows.Forms.ToolStrip>, klicken Sie auf den Pfeil Smarttask zum Anzeigen der **ToolStrip-Aufgaben** Bereich.  
   
-3.  In der **ToolStrip-Aufgaben** Bereich auswählen **Standardelemente einfügen**.  
+3.  In der **ToolStrip-Aufgaben** Bereich wählen **Standardelemente einfügen**.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.ToolStrip>  

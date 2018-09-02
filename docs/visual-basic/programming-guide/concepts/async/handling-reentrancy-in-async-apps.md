@@ -1,30 +1,30 @@
 ---
-title: Des erneuten Eintretens in asynchronen Anwendungen (Visual Basic)
+title: Umgang mit Ablaufinvarianz in asynchronen Anwendungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 4b899a695fef0e626eb9db3d376a74acba17b086
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b633e3cf9a499cd5f364692cd0461aed640fe54d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697156"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401889"
 ---
-# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Des erneuten Eintretens in asynchronen Anwendungen (Visual Basic)
+# <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Umgang mit Ablaufinvarianz in asynchronen Anwendungen (Visual Basic)
 Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintreten, also den erneuten Beginn eines asynchronen Vorgangs vor seinem Abschließen, berücksichtigen und möglicherweise verhindern. Wenn Sie Möglichkeiten für erneutes Eintreten nicht identifizieren und behandeln, kann dies zu unerwarteten Ergebnissen führen.  
   
  **Inhalt**  
   
--   [Erkennen von Ablaufinvarianz](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Erkennen von Ablaufinvarianz](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [Umgang mit Ablaufinvarianz](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Umgang mit Ablaufinvarianz](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Die Schaltfläche „Start“ deaktivieren](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Die Schaltfläche „Start“ deaktivieren](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Den Vorgang abbrechen und neu starten](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Den Vorgang abbrechen und neu starten](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
-    -   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+    -   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
--   [Die Beispiel-App überprüfen und ausführen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Die Beispiel-App überprüfen und ausführen](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
 > [!NOTE]
 >  Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.  
@@ -84,20 +84,20 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen Bildlauf zum Ende dieses Themas durchführen. Sie können mit dem Code experimentieren, indem Sie die Projektmappe auf den lokalen Computer herunterladen und das WebsiteDownload-Projekt ausführen, oder, indem Sie den Code am Ende dieses Themas zum Erstellen Ihres eigenen Projekts verwenden. Weitere Informationen und Anweisungen finden Sie unter [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+ Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen Bildlauf zum Ende dieses Themas durchführen. Sie können mit dem Code experimentieren, indem Sie die Projektmappe auf den lokalen Computer herunterladen und das WebsiteDownload-Projekt ausführen, oder, indem Sie den Code am Ende dieses Themas zum Erstellen Ihres eigenen Projekts verwenden. Weitere Informationen und Anweisungen finden Sie unter [Überprüfen und Ausführen der Beispiel-App](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
   
 ##  <a name="BKMK_HandlingReentrancy"></a> Umgang mit Ablaufinvarianz  
  Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, was von der App ausgeführt werden soll. In diesem Thema werden die folgenden Beispiele zur Veranschaulichung verwendet:  
   
--   [Die Schaltfläche „Start“ deaktivieren](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Die Schaltfläche „Start“ deaktivieren](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      Deaktivieren der Schaltfläche **Start**, während der Vorgang ausgeführt wird, sodass der Benutzer ihn nicht unterbrechen kann  
   
--   [Den Vorgang abbrechen und neu starten](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Den Vorgang abbrechen und neu starten](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      Abbrechen aller Vorgänge, die noch ausgeführt werden, wenn der Benutzer die Schaltfläche **Start** erneut anklickt, sodass nur der zuletzt angeforderte Vorgang fortgesetzt wird  
   
--   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+-   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
   
      Alle angeforderten Vorgänge asynchron ausführen lassen, die Anzeige der Ausgabe allerdings koordinieren, damit die Ergebnisse der einzelnen Vorgänge zusammen und in Reihenfolge angezeigt werden.  
   
@@ -132,9 +132,9 @@ End Sub
 ###  <a name="BKMK_CancelAndRestart"></a> Den Vorgang abbrechen und neu starten  
  Anstatt die Schaltfläche **Start** zu deaktivieren, kann die Schaltfläche aktiv bleiben. Wenn der Benutzer die Schaltfläche dann erneut anklickt, brechen Sie den bereits ausgeführten Vorgang ab und lassen den zuletzt begonnenen Vorgang fortsetzen.  
   
- Weitere Informationen über Abbrüche finden Sie unter [Optimieren der Async-Anwendung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
+ Weitere Informationen über Abbrüche finden Sie unter [Feinabstimmung der Async-Anwendung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".  
+ Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Ablaufinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".  
   
 1.  Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.  
   
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert der `cts` ist `Nothing`, kein Vorgang ist bereits aktiv. Wenn der Wert ist keine `Nothing`, der Vorgang, der bereits ausgeführt wird abgebrochen.  
+2.  Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert des `cts` ist `Nothing`, es ist noch kein Vorgang aktiv. Wenn der Wert nicht `Nothing`, der Vorgang, der bereits ausgeführt wird, wird abgebrochen.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -285,11 +285,11 @@ TOTAL bytes returned:  890591
  Zum Ausschließen der Teillisten entfernen Sie die Kommentarmarkierungen der ersten Codezeile in `StartButton_Click`, um das Textfeld bei jedem erneuten Start des Vorgangs zu löschen.  
   
 ###  <a name="BKMK_RunMultipleOperations"></a> Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen  
- Das dritte Beispiel ist das schwierigste, da von der App jedes Mal, wenn der Benutzer die Schaltfläche **Start** anklickt, ein anderer asynchroner Vorgang gestartet wird und alle Vorgänge vollständig ausgeführt werden. Alle angeforderten Vorgänge laden Websites asynchron aus der Liste herunter, doch die Ausgabe der Vorgänge wird sequenziell dargestellt. Das bedeutet, die tatsächliche Downloadaktivität überlappt, wie es die Ausgabe in [Erkennen von Ablaufinvarianz](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) zeigt, die Ergebnislisten für jede Gruppe aber getrennt angezeigt werden.  
+ Das dritte Beispiel ist das schwierigste, da von der App jedes Mal, wenn der Benutzer die Schaltfläche **Start** anklickt, ein anderer asynchroner Vorgang gestartet wird und alle Vorgänge vollständig ausgeführt werden. Alle angeforderten Vorgänge laden Websites asynchron aus der Liste herunter, doch die Ausgabe der Vorgänge wird sequenziell dargestellt. Das bedeutet, die tatsächliche Downloadaktivität überlappt, wie es die Ausgabe in [Erkennen von Ablaufinvarianz](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) zeigt, die Ergebnislisten für jede Gruppe aber getrennt angezeigt werden.  
   
  Die Vorgänge geben global <xref:System.Threading.Tasks.Task>, `pendingWork` frei, der als Gatekeeper für den Anzeigenprozess dient.  
   
- Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code in [Erstellen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) einfügen, oder Sie können den Anweisungen in [Herunterladen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgen, um das Beispiel herunterzuladen und dann das QueueResults-Projekt auszuführen.  
+ Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code in [Erstellen der App](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) einfügen, oder Sie können den Anweisungen in [Herunterladen der App](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgen, um das Beispiel herunterzuladen und dann das QueueResults-Projekt auszuführen.  
   
  Die folgende Ausgabe zeigt das Ergebnis bei einmaliger Betätigung der Schaltfläche **Start**. Die Buchstabenbezeichnung „A“ gibt an, dass das Ergebnis vom ersten Klick auf die Schaltfläche **Start** stammt. Die Zahlen geben die Reihenfolge der URL in der Liste der Downloadziele wieder.  
   
@@ -473,7 +473,7 @@ Private Async Function FinishOneGroupAsync(urls As List(Of String), contentTasks
 End Function  
 ```  
   
- Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code in [Erstellen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) einfügen, oder Sie können den Anweisungen in [Herunterladen der App](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgen, um das Beispiel herunterzuladen und dann das QueueResults-Projekt auszuführen.  
+ Sie können dieses Beispiel ausführen, indem Sie die Änderungen in den Code in [Erstellen der App](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) einfügen, oder Sie können den Anweisungen in [Herunterladen der App](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) folgen, um das Beispiel herunterzuladen und dann das QueueResults-Projekt auszuführen.  
   
 #### <a name="points-of-interest"></a>Relevante Punkte  
  Die Informationszeilen, die mit einem Nummernzeichen (#) in der Ausgabe beginnen, erläutern die Funktionsweise dieses Beispiels.  
@@ -592,9 +592,9 @@ End Function
   
 8.  Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.  
   
-9. In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Code anzeigen**.  
+9. In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
   
-10. Ersetzen Sie in "MainWindow.Xaml.vb" den Code durch den folgenden Code ein.  
+10. Ersetzen Sie den Code in "MainWindow.Xaml.vb" mit dem folgenden Code.  
   
     ```vb  
     ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -674,7 +674,7 @@ End Function
   
 11. Wählen Sie zum Ausführen des Programms die Tastenkombination „STRG+F5“ aus, und wählen Sie dann mehrmals die Schaltfläche **Start** aus.  
   
-12. Nehmen Sie die Änderungen aus [Die Schaltfläche „Start“ deaktivieren](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Den Vorgang abbrechen und neu starten](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) oder [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) vor, um mit Ablaufinvarianz umzugehen.  
+12. Nehmen Sie die Änderungen aus [Die Schaltfläche „Start“ deaktivieren](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Den Vorgang abbrechen und neu starten](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) oder [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](https://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) vor, um mit Ablaufinvarianz umzugehen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic))  

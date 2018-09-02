@@ -21,15 +21,15 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: d39b0b7ccf95f0da22086a72aa2cee424d7ea8ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535612"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399325"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes
-Windows Forms-Steuerelemente zeigen in der Regel Text an, der mit der Hauptfunktion des Steuerelements zusammenhängt. Beispielsweise verfügt ein <xref:System.Windows.Forms.Button>-Steuerelement üblicherweise über eine Beschriftung, die auf die beim Klicken der Schaltfläche ausgeführte Aktion hinweist. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden. Sie können den Text aber auch mithilfe des Designers festlegen.   Siehe auch [Vorgehensweise: Erstellen Zugriff Schlüssel für Windows Forms-Steuerelemente mithilfe des Designers](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [wie: Festlegen der Text angezeigt, indem Sie ein Steuerelement in Windows Forms mithilfe den Designer](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [wie: das Bild Angezeigt wird, indem Sie ein Windows Forms-Steuerelement mithilfe des Designers](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).  
+Windows Forms-Steuerelemente zeigen in der Regel Text an, der mit der Hauptfunktion des Steuerelements zusammenhängt. Beispielsweise verfügt ein <xref:System.Windows.Forms.Button>-Steuerelement üblicherweise über eine Beschriftung, die auf die beim Klicken der Schaltfläche ausgeführte Aktion hinweist. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden. Sie können den Text aber auch mithilfe des Designers festlegen.   Siehe auch [wie: Erstellen Access Keys für Windows Forms-Steuerelemente mithilfe des Designers](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [wie: Festlegen der Text angezeigt, die ein Windows Forms-Steuerelement mithilfe den Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [wie: Festlegen des Images Angezeigt wird, indem Sie eine Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>So legen Sie den von einem Steuerelement angezeigten Text programmgesteuert fest  
   

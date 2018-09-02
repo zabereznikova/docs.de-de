@@ -2,12 +2,12 @@
 title: Auftragsverarbeitung mit Richtlinie
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519417"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398369"
 ---
 # <a name="order-processing-with-policy"></a>Auftragsverarbeitung mit Richtlinie
 Das Beispiel Auftragsverarbeitungsrichtlinie veranschaulicht einige der in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] von Windows Workflow Foundation (WF) eingeführten Schlüsselfeatures. Die folgende Funktionalität ist für das WF-Regelmodul neu:  
@@ -24,7 +24,7 @@ Das Beispiel Auftragsverarbeitungsrichtlinie veranschaulicht einige der in [!INC
  Das Beispiel veranschaulicht ein `OrderProcessingPolicy`-Projekt, in dem eine Kundenbestellung eingegeben wird, die aus einer nummerierten Liste mit verfügbaren Elementen und einer Postleitzahl besteht. Die Bestellung wird erfolgreich verarbeitet, wenn beide Einträge richtig sind. Andernfalls erstellt die Richtlinie Fehlerobjekte, wobei ein überladener `+`-Operator sowie eine vordefinierte Erweiterungsmethode verwendet werden, um den Benutzer über die Fehler zu informieren.  
   
 > [!NOTE]
->  Weitere Informationen über Erweiterungsmethoden finden Sie unter [c# Version 3.0-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Weitere Informationen zu Erweiterungsmethoden finden Sie unter [c# Version 3.0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=95402).  
   
  Das Beispiel besteht aus den folgenden Projekten:  
   
@@ -64,7 +64,7 @@ Das Beispiel Auftragsverarbeitungsrichtlinie veranschaulicht einige der in [!INC
   
          Bei dieser Regel wird überprüft, ob von den vorherigen beiden Regeln in den beiden `OrderErrorCollection`-Objekten `invalidItemNumErrorCollection` und `invalidIZipCodeErrorCollection` Fehler hinzugefügt wurden. Wenn es Fehler (entweder die `invalidItemNumErrorCollection` oder die `invalidZipCodeErrorCollection` ist nicht `null`) gegeben hat, geht die Regel wie folgt vor:  
   
-        1.  Ruft den überladenen `+` -Operator zum Kopieren des Inhalts der `invalidItemNumErrorCollection` und `invalidZipCodeErrorCollection` auf eine `invalidOrdersCollection``OrderErrorCollection` Instanz.  
+        1.  Ruft den überladenen `+` Operator, um das Kopieren des Inhalts der `invalidItemNumErrorCollection` und `invalidZipCodeErrorCollection` auf eine `invalidOrdersCollection``OrderErrorCollection` Instanz.  
   
         2.  Sie ruft die `PrintOrderErrors`-Erweiterungsmethode für die `invalidOrdersCollection` auf und gibt die `ErrorText`-Eigenschaft für alle `orderError`-Objekte in der `invalidOrdersCollection` aus.  
   
@@ -140,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

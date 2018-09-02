@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925552"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397363"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Generische Typen in Visual Basic (Visual Basic)
 Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst, dass es für verschiedene Datentypen dieselben Funktionalität ausführt. Wenn Sie eine generische Klasse oder Prozedur definieren, müssen Sie keine separate Version für jeden Datentyp definieren, für den Sie diese Funktionalität möglicherweise ausführen möchten.  
@@ -158,4 +158,4 @@ Schraubendrehersatz als generisches Werkzeug
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
  [Kovarianz und Kontravarianz](../../concepts/covariance-contravariance/index.md)  
- [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+ [Iteratoren](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
