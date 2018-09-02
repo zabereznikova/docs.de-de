@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667ac5a19664507b767ee6c5421a5e93f6cdfe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 021f2b7a720c2190d56bdb2b35214c581a7b5f56
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433255"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456934"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime-Funktion
 Lädt die Common Language Runtime (CLR) in einen Prozess, indem in einer XML-Datei gespeicherte Versionsinformationen verwendet werden. Das Format der XML-Datei ist der standard-Anwendungskonfigurationsdatei nachgebildet. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../../docs/framework/configure-apps/file-schema/index.md).  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet. Finden Sie unter [Laden der Common Language Runtime in einen Prozess](http://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f).  
+ Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet. Finden Sie unter [laden die Common Language Runtime in einen Prozess](https://msdn.microsoft.com/library/1e2d6dc1-6aab-43e2-bbc0-aae40756d24f).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,11 +42,11 @@ HRESULT CorBindToCurrentRuntime (
   
 #### <a name="parameters"></a>Parameter  
  `pwszFileName`  
- [in] Der Name von einer Anwendungskonfigurationsdatei, die angibt, die Version der CLR geladen. Wenn der Dateiname nicht vollständig qualifiziert ist, wird davon ausgegangen werden im gleichen Verzeichnis wie die ausführbare Datei, die den Aufruf.  
+ [in] Der Name der Konfigurationsdatei einer Anwendung, die angibt, die Version der CLR geladen. Wenn der Dateiname nicht vollqualifiziert ist, wird davon ausgegangen, im gleichen Verzeichnis wie die ausführbare Datei, die den Aufruf sein.  
   
- Die Version der Laufzeit geladen werden, wird durch das Versionsattribut in beschrieben die [ \<RequiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) Element der Konfigurationsdatei.  
+ Die Version der Laufzeit zu ladenden wird beschrieben, durch das Versionsattribut in der [ \<RequiredRuntime >](../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) Element der Konfigurationsdatei.  
   
- Wenn keine Version angegeben ist, oder wenn die `<requiredRuntime>` Element kann nicht gefunden werden, die neueste Version der CLR, die auf dem Computer installiert ist, wird geladen.  
+ Wenn keine Version angegeben wird, oder wenn die `<requiredRuntime>` Element kann nicht gefunden werden, die neueste Version der CLR, die auf dem Computer installiert ist, wird geladen.  
   
  `rclsid`  
  [in] Die `CLSID` der Co-Klasse, die entweder implementiert die [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) oder [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) Schnittstelle. Unterstützte Werte sind "CLSID_CorRuntimeHost" oder "CLSID_CLRRuntimeHost".  
@@ -58,7 +58,7 @@ HRESULT CorBindToCurrentRuntime (
  [out] Der zurückgegebene Schnittstellenzeiger.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   

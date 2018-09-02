@@ -2,12 +2,12 @@
 title: WorkflowApplication-ReadLine-Host
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518537"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470852"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication-ReadLine-Host
 Dieses Beispiel stellt einen generischen ReadLine-Host dar. Sie können einen beliebigen Workflow mithilfe der eingeschlossenen `ReadLine`-Aktivität (oder anderen ähnlichen Aktivitäten, die Daten aus Lesezeichen abrufen, die mit Zeichenfolgen wieder aufgenommen werden) laden und ausführen. Ausgaben von der `WriteLine`-Aktivität oder Ausgaben, die in die <xref:System.Activities.Statements.WriteLine.TextWriter%2A>-Erweiterung schreiben, werden an das Hostfenster weitergeleitet. Wenn sich eine Instanz im Leerlauf befindet, werden die verfügbaren Lesezeichen für diese Instanz in einem Kombinationsfeld angezeigt. Durch Auswählen eines Lesezeichens, Eingeben von Text und Drücken der Schaltfläche zum Wiederaufnehmen von Lesezeichen wird die Ausführung des Workflows fortgesetzt. Sie können einen ausgewählten Workflow auch abbrechen oder beenden. Persistenz ist standardmäßig aktiviert. Sie können den Host herunterfahren und neu starten; die Instanzliste wird daraufhin mit den in der Datenbank gespeicherten Instanzen aufgefüllt. Die Nachverfolgung wird verwendet, um Ereignisse auf <xref:System.Activities.WorkflowApplication>-Ebene an den Host auszugeben, mit der Option, eine ausführliche Nachverfolgung auf Aktivitätsebene hinzuzufügen.  
@@ -33,17 +33,17 @@ Dieses Beispiel stellt einen generischen ReadLine-Host dar. Sie können einen be
   
 6.  Sobald es ausgeführt wird, können Sie die Persistenz optional aktivieren oder deaktivieren. Außerdem können Sie optional die ausführliche Aktivitätsnachverfolgung aktivieren oder deaktivieren.  
   
-7.  Drücken Sie die Schaltfläche mit den Auslassungspunkten neben der **ausführen** Schaltfläche, um einen Workflow in einer XAML-Datei definierten navigieren  
+7.  Drücken Sie die Schaltfläche mit den Auslassungspunkten neben der **ausführen** Schaltfläche um einen Workflow in einer XAML-Datei definierten suchen  
   
      Im Ordner "SampleWorkflows" finden Sie zwei Beispiele. Das Beispiel "parallel1.xaml" tritt in den Leerlauf ein.  
   
-8.  Nachdem ein Beispiel ausgewählt ist, drücken Sie die **ausführen** Schaltfläche.  
+8.  Nachdem Sie ein Beispiel ausgewählt haben, drücken Sie die **ausführen** Schaltfläche.  
   
-9. Wenn, oder wenn der Workflow im Leerlauf ist, geht die **Lesezeichen** Kombinationsfeld mit verfügbaren Lesezeichen aufgefüllt wird.  
+9. Wenn, oder wenn der Workflow im Leerlauf ist, wechselt der **Lesezeichen** Kombinationsfeld mit verfügbaren Lesezeichen aufgefüllt wird.  
   
 10. Sie können nun entweder ein Lesezeichen wiederaufnehmen oder den Workflow abbrechen bzw. beenden. Sie können auch den Host herunterfahren und ihn neu starten. Wenn die Persistenz aktiviert bleibt, werden die Instanzen beim Herunterfahren entladen und beim Starten erneut geladen.  
   
-     Zur Wiederaufnahme eines Lesezeichens, das gewünschte Lesezeichen auswählen, geben Sie einen Wert in das Textfeld neben dem Kombinationsfeld ", und drücken Sie **Lesezeichen wiederaufnehmen**.  
+     Um ein Lesezeichen wiederaufzunehmen, wählen Sie das gewünschte Lesezeichen aus, geben Sie einen Wert in das Textfeld neben dem Kombinationsfeld, und drücken Sie **Wiederaufnahme des Lesezeichens**.  
   
 #### <a name="to-remove-the-instance-store-database"></a>So entfernen Sie die Instanzspeicherdatenbank  
   
@@ -56,6 +56,6 @@ Dieses Beispiel stellt einen generischen ReadLine-Host dar. Sie können einen be
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

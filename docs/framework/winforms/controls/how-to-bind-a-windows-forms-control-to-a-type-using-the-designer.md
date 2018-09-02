@@ -6,25 +6,23 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: a58a528cd1a2246ddfdff7997b7c7cb0d8dcc6a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33df9e050dd8c2b3ace8ff89cbd5939b538fcd95
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531052"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466795"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Gewusst wie: Binden eines Windows Forms-Steuerelements an einen Typ mithilfe des Designers
-Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal erforderlich, ein Steuerelement an einen Typ statt an ein Objekt zu binden. Sie müssen normalerweise ein Steuerelement zur Entwurfszeit an einen Typ binden, wenn Daten möglicherweise nicht verfügbar sind, aber die datengebundenen Steuerelemente dennoch Daten von der öffentlichen Schnittstelle eines Typs anzeigen sollen. Die folgenden Verfahren wird gezeigt, wie zum Erstellen eines neuen <xref:System.Windows.Forms.BindingSource> also an einen Typ gebunden, und klicken Sie dann eine der Eigenschaften des Typs binden der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft eine <xref:System.Windows.Forms.TextBox>.  
+Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal erforderlich, ein Steuerelement an einen Typ statt an ein Objekt zu binden. Sie müssen normalerweise ein Steuerelement zur Entwurfszeit an einen Typ binden, wenn Daten möglicherweise nicht verfügbar sind, aber die datengebundenen Steuerelemente dennoch Daten von der öffentlichen Schnittstelle eines Typs anzeigen sollen. Die folgenden Verfahren wird veranschaulicht, wie zum Erstellen eines neuen <xref:System.Windows.Forms.BindingSource> , an einen Typ gebunden, und klicken Sie dann eine der Eigenschaften des Typs zu binden der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft eine <xref:System.Windows.Forms.TextBox>.  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>So binden Sie die BindingSource an einen Typen  
   
-1.  Erstellen Sie ein Windows Forms-Projekt.  
-  
-     Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Erstellen Sie ein Windows Forms-Projekt (**Datei** > **neu** > **Projekt** > **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
   
 2.  In **Entwurf** anzuzeigen, ziehen Sie eine <xref:System.Windows.Forms.BindingSource> -Komponente auf das Formular.  
   
-3.  In der **Eigenschaften** Fenster, klicken Sie auf den Pfeil für den <xref:System.Windows.Forms.BindingSource.DataSource%2A> Eigenschaft.  
+3.  In der **Eigenschaften** Fenster, klicken Sie auf den Pfeil für die <xref:System.Windows.Forms.BindingSource.DataSource%2A> Eigenschaft.  
   
 4.  Klicken Sie im **DataSource-UI-Typ-Editor** auf **Projektdatenquelle hinzufügen**.  
   
@@ -51,7 +49,7 @@ Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal 
   
 3.  Klicken Sie auf den Pfeil neben der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft.  
   
-4.  In der **DataSource UI-Typ-Editor**, erweitern Sie den Knoten für die <xref:System.Windows.Forms.BindingSource> zuvor hinzugefügt, und wählen Sie die Eigenschaft des gebundenen Typs, die Sie binden möchten die <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft von der <xref:System.Windows.Forms.TextBox>.  
+4.  In der **DataSource UI Type Editor**, erweitern Sie den Knoten für die <xref:System.Windows.Forms.BindingSource> zuvor hinzugefügt werden soll, und wählen Sie die Eigenschaft des gebundenen Typen Sie binden möchten die <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft der <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Siehe auch  
  [BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md)  

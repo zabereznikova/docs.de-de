@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98997bfbb7d3c9343f78438b1195222565c5b9ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 899f2ca5ef1b987687f5c065ad3e1965e142d103
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444550"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466112"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge-Methode
-Die Liste der zusammenzuführenden Bereiche hinzugefügt im angegebenen importierten Bereich.  
+Fügt im angegebenen importierten Bereich der Liste der Bereiche zusammengeführt werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,19 +39,19 @@ HRESULT Merge (
   
 #### <a name="parameters"></a>Parameter  
  `pImport`  
- [in] Ein Zeiger auf ein [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -Objekt, das die importierten Bereichs zusammengeführt werden sollen.  
+ [in] Ein Zeiger auf ein [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) Objekt, das den importierten Bereich zusammengeführt werden identifiziert.  
   
  `pIMap`  
- [in] Ein Zeiger auf ein [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) Objekt, das das token erneut zuordnen angibt.  
+ [in] Ein Zeiger auf ein [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) Objekt, das das token Berichtscode angibt.  
   
  `pHandleer`  
- [in] Ein Zeiger auf ein <!--<<!--zzxref:IUnknown --> `IUnknown`>--> `IUnknown` Objekt, das den Fehler angibt.  
+ [in] Ein Zeiger auf ein [IUnknown](/cpp/atl/iunknown) Objekt, das den Fehler angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) die Zusammenführung von Metadaten in den Gültigkeitsbereich einer einzelnen auslösen.  
+ Rufen Sie [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) die Zusammenführung von Metadaten in einem einzelnen Bereich auslösen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   

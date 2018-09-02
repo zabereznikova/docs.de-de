@@ -7,15 +7,15 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: bc14c0563be631662737b6d5f244d3c369d57901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557640"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468666"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Gewusst-wie-Themen zu Animation und Zeitsteuerung
-In den folgenden Themen veranschaulichen, wie Sie mithilfe der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Animations- und Zeitsteuerungssystems in Ihren Anwendungen.  
+In den folgenden Themen veranschaulichen, wie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Animations- und Zeitsteuerungssystem in Ihren Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Beschleunigen oder Verlangsamen einer Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
@@ -31,7 +31,6 @@ In den folgenden Themen veranschaulichen, wie Sie mithilfe der [!INCLUDE[TLA#tla
  [Steuern von Animationen mit From, To und By](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [Definieren eines Namensbereichs](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [Empfangen von Benachrichtigungen bei Statusänderungen der Uhr](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Vorgehensweise: entfernen ein Drehbuchs](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [Wiederholen einer Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [Durchsuchen eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [Synchrones Suchen von Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

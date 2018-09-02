@@ -2,15 +2,15 @@
 title: '&lt;transport&gt; von &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 9369351e4e197f321feb4ae56939bec2a8280a64
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c2a0de73db2ec4a1c2150fc7e62b7a3a9f086bc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752558"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474000"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;transport&gt; von &lt;netTcpBinding&gt;
-Definiert den Typ der Sicherheit auf Nachrichtenebene Anforderungen für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  
 \<bindings>  
@@ -48,7 +48,7 @@ Definiert den Typ der Sicherheit auf Nachrichtenebene Anforderungen für einen E
 |---------------|-----------------|  
 |clientCredentialType|Dies ist optional. Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mit Transportsicherheit verwendet werden.<br /><br /> – Der Standardwert ist `Windows`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.TcpClientCredentialType>.|  
 |protectionLevel|Dies ist optional. Definiert die Sicherheit auf der Ebene des TCP-Transports. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit.<br /><br /> Der Standardwert ist `EncryptAndSign`.|  
-|sslProtocols|Ein SslProtocols Enum-Flagwert, der angibt, welche SslProtocols unterstützt werden. Die Standardeinstellung ist Tls&#124;Tls11&#124;Tls12.|  
+|sslProtocols|Ein SslProtocols Enum-Flagwert, der angibt, welche SslProtocols unterstützt werden. Der Standardwert ist Tls&#124;Tls11&#124;Tls12.|  
 |policyEnforcement|Diese Enumeration gibt an, wann die <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> erzwungen werden soll.<br /><br /> 1.  Never – die Richtlinie wird nie erzwungen (erweiterter Schutz ist deaktiviert).<br />2.  WhenSupported – die Richtlinie wird nur erzwungen, wenn der Client erweiterten Schutz unterstützt.<br />3.  Always – die Richtlinie wird immer erzwungen. Clients, die erweiterten Schutz nicht unterstützen, werden nicht authentifiziert.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
@@ -87,5 +87,5 @@ Definiert den Typ der Sicherheit auf Nachrichtenebene Anforderungen für einen E
  [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

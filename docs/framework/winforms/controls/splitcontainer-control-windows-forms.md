@@ -5,18 +5,18 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539200"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463693"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer-Steuerelement (Windows Forms)
 Das `SplitContainer`-Steuerelement in Windows Forms kann als zusammengesetztes Steuerelement betrachtet werden. Es setzt sich aus zwei Bereichen zusammen, die durch eine verschiebbare Leiste getrennt sind. Wenn sich der Mauszeiger über der Leiste befindet, ändert sich seine Form und zeigt an, dass die Leiste verschiebbar ist.  
   
 > [!NOTE]
->  In der **Toolbox**, gibt diese steuern ersetzt die <xref:System.Windows.Forms.Splitter> Steuerelement, das in der vorherigen Version von Visual Studio enthalten war. Das `SplitContainer`-Steuerelement ist dem <xref:System.Windows.Forms.Splitter>-Steuerelement vorzuziehen. Die <xref:System.Windows.Forms.Splitter>-Klasse ist aus Gründen der Kompatibilität mit vorhandenen Anwendungen weiterhin in .NET Framework enthalten. Bei neuen Projekten wird jedoch ausdrücklich die Verwendung des `SplitContainer`-Steuerelements empfohlen.   
+>  In der **Toolbox**wird in diesem steuern, ersetzt die <xref:System.Windows.Forms.Splitter> Steuerelement, das in der vorherigen Version von Visual Studio war. Das `SplitContainer`-Steuerelement ist dem <xref:System.Windows.Forms.Splitter>-Steuerelement vorzuziehen. Die <xref:System.Windows.Forms.Splitter>-Klasse ist aus Gründen der Kompatibilität mit vorhandenen Anwendungen weiterhin in .NET Framework enthalten. Bei neuen Projekten wird jedoch ausdrücklich die Verwendung des `SplitContainer`-Steuerelements empfohlen.   
   
  Mit dem `SplitContainer`-Steuerelement können Sie komplexe Benutzeroberflächen erstellen. Häufig bestimmt die Auswahl in einem Fensterbereich, welche Objekte im anderen Fensterbereich angezeigt werden. Diese Anordnung eignet sich sehr gut für die Anzeige und das Durchsuchen von Informationen. Die beiden Fensterbereiche ermöglichen Ihnen, Informationen in getrennten Bereichen anzuordnen, und mithilfe der Leiste, die auch als "Splitter" bezeichnet wird, können Benutzer die Größe der Fensterbereiche leicht anpassen.  
   
@@ -33,7 +33,7 @@ Das `SplitContainer`-Steuerelement in Windows Forms kann als zusammengesetztes S
  [Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Erstellt eine Multipane-Benutzeroberfläche, die der in Microsoft Outlook ähnelt.  
   
- Siehe auch [wie: Aufteilen einer Fenster horizontal mithilfe des Designers](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [wie: Erstellen Sie ein Windows-Explorer-Style-Schnittstelle in einem Windows Form](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
+ Siehe auch [wie: Aufteilen einer Fenster horizontal mithilfe des Designers](how-to-split-a-window-horizontally-using-the-designer.md), [wie: Erstellen Sie eine Windows-Explorer-Style-Schnittstelle in einem Windows Form](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.SplitContainer>-Klasse  

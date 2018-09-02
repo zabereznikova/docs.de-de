@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 8e813383f68644315d59aa58f87cea7532a1d4c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8881339a5dcf21df17e7200847fc46854ead17e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767608"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468442"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation-Konfigurationsschema
 Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationsschema von Windows Identity Foundation (WIF). Sie können eine Anwendung auch für die Verwendung von WIF konfigurieren, indem Sie die Klassen verwenden, die durch das Framework verfügbar gemacht werden. Diese Klassen sind in den Abschnitten aufgeführt, die die für das Schema relevanten Elemente behandeln. Im Folgenden wird die grundlegende Struktur von XML-Tags dargestellt, die vom WIF-Konfigurationsschema verfügbar gemacht wird. Attribute werden ausgelassen. Hervorgehobene Kommentare zeigen die Hauptkomponenten des Schemas an.  
@@ -113,4 +113,4 @@ Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationss
  [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Stellt Konfigurationen für den passiven Verbund mit WIF bereit. Konfiguriert das Sitzungsauthentifizierungsmodul (SAM) und das Verbundsauthentifizierungsmodul (WSFAM).  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Configuration, Administration, And Management (Konfiguration, Administration und Verwaltung)](http://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Beschreibt die Konfiguration und Verwaltung von WIF-Anwendungen und -Diensten.
+ [Configuration, Administration, And Management (Konfiguration, Administration und Verwaltung)](https://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Beschreibt die Konfiguration und Verwaltung von WIF-Anwendungen und -Diensten.

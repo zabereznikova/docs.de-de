@@ -6,56 +6,57 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 58e4b1dd311ccd6e1bbab79f4c4dda2207f96eaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce8209c89430988f57c211d388c6e73b2dc17004
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457275"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Exemplarische Vorgehensweise: Hosten einer WPF-Uhr in Win32
-Versetzen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Anwendungen verwenden <xref:System.Windows.Interop.HwndSource>, stellt das HWND, die enthält Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt. Erstellen Sie zuerst die <xref:System.Windows.Interop.HwndSource>, und geben sie Ihnen Parameter CreateWindow ähnelt.  Setzen Sie die <xref:System.Windows.Interop.HwndSource> über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Content soll darin.  Schließlich erhalten Sie das HWND aus der <xref:System.Windows.Interop.HwndSource>. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie ein gemischtes erstellen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Anwendung, die das Betriebssystemdialogfeld **Datums- und Uhrzeiteigenschaften** Dialogfeld.  
+Einzufügenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Anwendungen verwenden <xref:System.Windows.Interop.HwndSource>, das bietet des HWND, das enthält Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt. Erstellen Sie zunächst die <xref:System.Windows.Interop.HwndSource>, legen sie Parameter, die denen von CreateWindow ähneln.  Sie weisen die <xref:System.Windows.Interop.HwndSource> über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt darin enthalten sein soll.  Schließlich erhalten Sie das HWND aus der <xref:System.Windows.Interop.HwndSource>. Diese exemplarische Vorgehensweise veranschaulicht, wie Sie ein gemischtes erstellen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Anwendung, die das Betriebssystemdialogfeld **Datums- und Uhrzeiteigenschaften** Dialogfeld.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Finden Sie unter [WPF und Win32 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ Finden Sie unter [WPF und Win32-Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
 ## <a name="how-to-use-this-tutorial"></a>Verwendung dieses Tutorials  
- Dieses Tutorial konzentriert sich auf die wichtigsten Schritte zum Erstellen einer interoperativen Anwendung. Ein Beispiel des Lernprogramms gesichert ist [Win32 Clock Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=160051), aber dieser Beispiel wird das Endprodukt reflektiert. In diesem Lernprogramm werden die Schritte aus, als ob Sie mit einem vorhandenen gestartet wurden [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt Ihrer Wahl und möglicherweise einem vorhandenen Projekt eine gehostete hinzufügen wurden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für Ihre Anwendung. Sie können Ihre Endprodukt mit vergleichen [Win32 Clock Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=160051).  
+ Dieses Tutorial konzentriert sich auf die wichtigsten Schritte zum Erstellen einer interoperativen Anwendung. Ein Beispiel, das Tutorial stützt [Beispiel für die Interaktion von Win32-Uhr](https://go.microsoft.com/fwlink/?LinkID=160051), aber dieses Beispiel ist das Endprodukt repräsentiert. In diesem Tutorial werden die Schritte aus, als ob Sie mit einem vorhandenen starten [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] eigenes Projekt, z. B. einem vorhandenen Projekt und ein gehostetes hinzufügen wurden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für Ihre Anwendung. Sie können Ihr Endprodukt mit vergleichen [Beispiel für die Interaktion von Win32-Uhr](https://go.microsoft.com/fwlink/?LinkID=160051).  
   
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Eine exemplarische Vorgehensweise für Windows Presentation Framework in Win32 (HwndSource)  
  Die folgende Grafik zeigt das angestrebte Endprodukt dieses Tutorials:  
   
  ![Dialogfeld Datums- und Uhrzeiteigenschaften](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")  
   
- Sie können dieses Dialogfeld erstellen, durch das Erstellen von C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], und verwenden den Dialog-Editor Folgendes erstellen:  
+ Sie können dieses Dialogfeld reproduzieren, durch das Erstellen von C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], und Verwenden des Dialog-Editors Folgendes erstellen:  
   
  ![Dialogfeld Datums- und Uhrzeiteigenschaften](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")  
   
- (Sie müssen nicht verwenden [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] verwenden <xref:System.Windows.Interop.HwndSource>, und Sie müssen nicht mit C++ schreiben [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programme, aber dies eine Recht typische Möglichkeit dafür ist, und eignet sich gut für eine schrittweise Erklärung der Tutorial).  
+ (Sie müssen nicht mit [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] verwenden <xref:System.Windows.Interop.HwndSource>, und Sie müssen nicht C++ verwenden, um das Schreiben von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programme, aber dies ist eine durchaus übliche Vorgehensweise und eignet sich gut für eine schrittweise Erklärung des Tutorials).  
   
- Müssen Sie fünf bestimmte Schritte zu erreichen, um das Einfügen einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr in das Dialogfeld ":  
+ Sie müssen fünf bestimmte Teilschritte zu erreichen, um die put ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr in das Dialogfeld:  
   
-1.  Aktivieren der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt verwalteten Code aufrufen (**"/ CLR"**) durch Ändern von projekteinstellungen in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+1.  Aktivieren Sie Ihre [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt, um verwalteten Code aufrufen (**"/ CLR"**) durch Ändern von projekteinstellungen in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
   
-2.  Erstellen einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> in einer separaten DLL.  
+2.  Erstellen Sie eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> in einer separaten DLL.  
   
 3.  Einfügen, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> innerhalb einer <xref:System.Windows.Interop.HwndSource>.  
   
-4.  Rufen Sie ein HWND für diese <xref:System.Windows.Controls.Page> mithilfe der <xref:System.Windows.Interop.HwndSource.Handle%2A> Eigenschaft.  
+4.  Rufen Sie ein HWND für diesen <xref:System.Windows.Controls.Page> mithilfe der <xref:System.Windows.Interop.HwndSource.Handle%2A> Eigenschaft.  
   
-5.  Verwendung [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] entscheiden, platzieren Sie das HWND in der größeren [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Anwendung  
+5.  Verwendung [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] entscheiden, wo das HWND innerhalb der größeren [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Anwendung  
   
 ## <a name="clr"></a>/clr  
- Der erste Schritt ist das nicht verwaltete aktivieren [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] von verwaltetem Code Projekt in eine, die aufgerufen werden können.  Verwenden Sie die Compileroption "/ CLR", die mit den erforderlichen DLLs Sie verwenden möchten verknüpft werden, und passen Sie die Main-Methode für die Verwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Der erste Schritt ist, dieses nicht verwaltete [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt in eine, die aufgerufen wird, können von verwaltetem Code.  Sie verwenden die Compileroption "/ CLR", die die erforderlichen DLLs verknüpft werden, Sie verwenden möchten, und passen Sie die Main-Methode für die Verwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- So aktivieren Sie die Verwendung von verwaltetem Code im C++-Projekt: mit der rechten Maustaste auf win32clock-Projekt, und wählen Sie **Eigenschaften**.  Auf der **allgemeine** Eigenschaftenseite "" (Standard), ändern Sie Common Language Runtime-Unterstützung in `/clr`.  
+ So aktivieren Sie die Verwendung von verwaltetem Code im C++-Projekt: mit der rechten Maustaste auf das win32clock-Projekt, und wählen Sie **Eigenschaften**.  Auf der **allgemeine** Eigenschaftenseite (Standardeinstellung), ändern Sie Common Language Runtime-Unterstützung in `/clr`.  
   
- Als Nächstes fügen Sie Verweise auf DLLs, die für die erforderlichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll, PresentationFramework.dll "System.dll", WindowsBase.dll, UIAutomationProvider.dll und UIAutomationTypes.dll. (Bei den nachfolgenden Anweisungen wird davon ausgegangen, dass das Betriebssystem auf Laufwerk C: installiert ist.)  
+ Fügen Sie Verweise auf DLLs für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: PresentationCore.dll, PresentationFramework.dll, System.dll, WindowsBase.dll, UIAutomationProvider.dll und UIAutomationTypes.dll. (Bei den nachfolgenden Anweisungen wird davon ausgegangen, dass das Betriebssystem auf Laufwerk C: installiert ist.)  
   
 1.  Mit der rechten Maustaste win32clock-Projekt, und wählen Sie **Verweise...** , und klicken Sie in diesem Dialogfeld:  
   
 2.  Mit der rechten Maustaste win32clock-Projekt, und wählen Sie **Verweise...** .  
   
-3.  Klicken Sie auf **neuen Verweis hinzufügen**, klicken Sie auf die Registerkarte "Durchsuchen", geben Sie c:\Programme\Microsoft c:\Programme\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll, und klicken Sie auf OK.  
+3.  Klicken Sie auf **neuen Verweis hinzufügen**, klicken Sie auf die Registerkarte "Durchsuchen", geben Sie c:\Programme\Microsoft c:\Programme\Reference Assemblies\Microsoft\Framework\v3.0\PresentationCore.dll aus, und klicken Sie auf OK.  
   
 4.  Wiederholen Sie diesen Schritt für PresentationFramework.dll: C:\Program Files\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll.  
   
@@ -67,9 +68,9 @@ Versetzen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincli
   
 8.  Klicken Sie auf **neuen Verweis hinzufügen**, wählen Sie "System.dll" aus, und klicken Sie auf **OK**.  
   
-9. Klicken Sie auf **OK** um die win32clock-Eigenschaftenseiten für das Hinzufügen von Verweisen zu beenden.  
+9. Klicken Sie auf **OK** um die win32clock-Eigenschaftenseiten zum Hinzufügen von Verweisen zu beenden.  
   
- Fügen Sie schließlich die `STAThreadAttribute` auf die `_tWinMain` Methode für die Verwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
+ Fügen Sie abschließend die `STAThreadAttribute` auf die `_tWinMain` Methode für die Verwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
 ```  
 [System::STAThreadAttribute]  
@@ -79,14 +80,14 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)  
 ```  
   
- Dieses Attribut weist die [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] , wenn es initialisiert [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], sollten Sie ein Modell Singlethread-Apartment (STA), die für erforderlich ist verwenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]).  
+ Dieses Attribut teilt die [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] , die bei der Initialisierung [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)], muss bei Verwendung ein Modells für Singlethread-Apartment (STA), der erforderlich ist [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]).  
   
 ## <a name="create-a-windows-presentation-framework-page"></a>Erstellen einer Windows Presentation Framework-Seite  
- Als Nächstes erstellen Sie eine DLL, definiert einen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>. Häufig ist es am einfachsten, erstellen Sie die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> als eigenständige Anwendung, und Schreiben und Debuggen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Teil auf diese Weise.  Sobald erfolgt, kann dieses Projekt in eine DLL aktiviert werden, mit der rechten Maustaste auf das Projekt **Eigenschaften**, navigieren Sie zu der Anwendung und Ausgabetyp in Windows-Klassenbibliothek ändern.  
+ Als Nächstes erstellen Sie eine DLL, definiert ein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page>. Es ist häufig am einfachsten, erstellen die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> als eigenständige Anwendung, und Schreiben und Debuggen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Codeabschnitte darin.  Danach kann das Projekt in eine DLL aktiviert werden, mit der rechten Maustaste auf das Projekt **Eigenschaften**, zur Anwendung wechseln und das Ändern der Ausgabetyp für Windows-Klassenbibliothek.  
   
- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dll-Projekt kann dann zusammen mit den [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt (eine Lösung, die zwei Projekte enthält) – mit der rechten Maustaste auf die Projektmappe, wählen **vorhandenes Projekt**.  
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dll-Projekt kann dann mit kombiniert werden die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt (eine Projektmappe, die zwei Projekte enthält) – mit der rechten Maustaste auf die Projektmappe, wählen **hinzufügen\vorhandenes Projekt**.  
   
- Verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dll aus dem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Projekt müssen Sie einen Verweis hinzu:  
+ Verwendet werden soll, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Dll aus dem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Projekt müssen Sie einen Verweis hinzufügen:  
   
 1.  Mit der rechten Maustaste win32clock-Projekt, und wählen Sie **Verweise...** .  
   
@@ -94,10 +95,10 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
   
 3.  Klicken Sie auf die Registerkarte **Projekte**.  Wählen Sie „WPFClock” aus und klicken Sie auf OK.  
   
-4.  Klicken Sie auf **OK** um die win32clock-Eigenschaftenseiten für das Hinzufügen von Verweisen zu beenden.  
+4.  Klicken Sie auf **OK** um die win32clock-Eigenschaftenseiten zum Hinzufügen von Verweisen zu beenden.  
   
 ## <a name="hwndsource"></a>HwndSource  
- Verwenden Sie als Nächstes <xref:System.Windows.Interop.HwndSource> vornehmen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> HWND aussehen.  Sie fügen diesen Codeblock zu einer C++-Datei hinzu:  
+ Verwenden Sie als Nächstes <xref:System.Windows.Interop.HwndSource> vornehmen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Page> ein HWND aussehen.  Sie fügen diesen Codeblock zu einer C++-Datei hinzu:  
   
 ```  
 namespace ManagedCode  
@@ -136,13 +137,13 @@ namespace ManagedCode
     using namespace System::Windows::Media;  
 ```  
   
- Anschließend definieren Sie eine Funktion, die erstellt die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt, setzt eine <xref:System.Windows.Interop.HwndSource> um, und gibt den HWND zurück:  
+ Anschließend definieren Sie eine Funktion, die erstellt die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt, fügt ein <xref:System.Windows.Interop.HwndSource> Rand, und gibt den HWND zurück:  
   
 ```  
 HWND GetHwnd(HWND parent, int x, int y, int width, int height) {  
 ```  
   
- Zunächst erstellen Sie eine <xref:System.Windows.Interop.HwndSource>, deren Parameter CreateWindow ähneln:  
+ Erstellen Sie zunächst eine <xref:System.Windows.Interop.HwndSource>, denen von CreateWindow ähneln, deren Parameter:  
   
 ```  
 HwndSource^ source = gcnew HwndSource(  
@@ -155,34 +156,34 @@ HwndSource^ source = gcnew HwndSource(
     );  
 ```  
   
- Anschließend Sie erstellen die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] content-Klasse durch Aufrufen des Konstruktors:  
+ Anschließend Sie erstellen die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhaltsklasse, indem Sie ihren Konstruktor aufrufen:  
   
 ```  
 UIElement^ page = gcnew WPFClock::Clock();  
 ```  
   
- Verbinden Sie Sie dann die Seite die <xref:System.Windows.Interop.HwndSource>:  
+ Verbinden Sie Sie dann die Seite, um die <xref:System.Windows.Interop.HwndSource>:  
   
 ```  
 source->RootVisual = page;  
 ```  
   
- Und in die letzte Zeile zurückzugeben HWND für die <xref:System.Windows.Interop.HwndSource>:  
+ Und geben Sie in der letzten Zeile zurück HWND für den <xref:System.Windows.Interop.HwndSource>:  
   
 ```  
 return (HWND) source->Handle.ToPointer();  
 ```  
   
 ## <a name="positioning-the-hwnd"></a>Positionieren des HWND  
- Nun, dass Sie einen HWND haben, enthält die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr, müssen Sie das HWND platziert die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Dialogfeld.  Wenn Sie nur eines Speicherorts für das HWND wussten, würde übergeben Sie einfach, die Größe und Position, an die `GetHwnd` zuvor definierte Funktion.  Da Sie für die Definition des Dialogs aber eine Ressourcendatei verwendet haben, können Sie nicht sicher wissen, wo ein HWND jeweils platziert sein wird.  Können Sie die [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] Dialog-Editor, eingefügt werden soll eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] statische steuern die Uhr wechseln soll ("Uhr hier einfügen"), und verwenden Sie diese zum Positionieren der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr.  
+ Nun, Sie verfügen über ein HWND mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr, müssen Sie das HWND platziert die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Dialogfeld.  Wenn Sie wissen, dass nur, wo das HWND, nur übergeben Sie dessen Größe und Position, an die `GetHwnd` Funktion, die Sie zuvor definiert haben.  Da Sie für die Definition des Dialogs aber eine Ressourcendatei verwendet haben, können Sie nicht sicher wissen, wo ein HWND jeweils platziert sein wird.  Können Sie die [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] Dialog-Editor Platzieren einer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] statische steuern, in dem Sie die Uhr haben möchten ("Uhr hier einfügen"), und positionieren Sie die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr.  
   
- Bei WM_INITDIALOG können Sie verwenden, `GetDlgItem` das HWND für den STATIC-Platzhalter abrufen:  
+ Bei der Sie WM_INITDIALOG handeln, verwenden Sie `GetDlgItem` das HWND für den Platzhalter statische abrufen:  
   
 ```  
 HWND placeholder = GetDlgItem(hDlg, IDC_CLOCK);  
 ```  
   
- Sie klicken Sie dann berechnen die Größe und Position des Platzhalters STATIC "," damit Sie platzieren können die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] clock an dieser Stelle:  
+ Klicken Sie dann berechnet die Größe und Position des Platzhalters "STATIC", und Sie nehmen können die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Uhr an dieser Stelle:  
   
  RECT rectangle;  
   
@@ -208,7 +209,7 @@ ShowWindow(placeholder, SW_HIDE);
 HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);  
 ```  
   
- Lernprogramm interessanter und um eine echte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr, müssen Sie erstellen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelement zu diesem Zeitpunkt clock. Den größten Teil davon können Sie in Markup erledigen, mit nur einigen wenigen Ereignishandlern im CodeBehind. Da dieses Lernprogramm auf Informationen über die Interoperation und nicht zum Entwerfen von Steuerelement wird, wird der vollständige Code für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr erfolgt hier als ein Codeblock, ohne separate Anweisungen zum Aufbau und der Bedeutung der einzelnen Teile. Experimentieren Sie ruhig mit diesem Code, um Aussehen, Verhalten oder Funktionalität des Steuerelements zu ändern.  
+ Um das Tutorial etwas interessanter zu machen, und um eine echte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr, Sie benötigen zum Erstellen einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr-Steuerelement an diesem Punkt. Den größten Teil davon können Sie in Markup erledigen, mit nur einigen wenigen Ereignishandlern im CodeBehind. Da in diesem Tutorial zu Interoperabilität und Design von Steuerelementen beschäftigt ist, wird der vollständige Code für die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uhr dient hier als Codeblock, ohne Einzelschritte Aufbau oder die Bedeutung der einzelnen Teile. Experimentieren Sie ruhig mit diesem Code, um Aussehen, Verhalten oder Funktionalität des Steuerelements zu ändern.  
   
  Dies ist das Markup:  
   
@@ -222,9 +223,9 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  ![Dialogfeld Datums- und Uhrzeiteigenschaften](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")  
   
- Um Ihr Ergebnis an den Code zu vergleichen, die diesem Screenshot erzeugt, finden Sie unter [Win32 Clock Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=160051).  
+ Um Ihr Ergebnis mit den Code zu vergleichen, die diese Abbildung produzierte, finden Sie unter [Beispiel für die Interaktion von Win32-Uhr](https://go.microsoft.com/fwlink/?LinkID=160051).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Interop.HwndSource>  
  [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [Beispiel für Interaktion mit der Win32-Uhr](http://go.microsoft.com/fwlink/?LinkID=160051)
+ [Beispiel für Interaktion mit der Win32-Uhr](https://go.microsoft.com/fwlink/?LinkID=160051)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 45b9ee94b35f368a9d0c96381083aa58c9a23f77
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: e8fa4c084ae9c775a18de06c344b2c0b439c2b1b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255487"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467814"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable-Attribut
 Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespacepräfixe, die bei der ein Markup-Datei können ignoriert werden, indem eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor. Die `mc:Ignorable` Attribut Markupkompatibilität unterstützt, für den benutzerdefinierten Namespace-Zuordnung und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] versionsverwaltung.  
@@ -62,8 +62,8 @@ Gibt an, welche [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md
  Standardmäßig eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor ignoriert den Inhalt in einem Element ignoriert. Sie können jedoch zusätzlich das Attribut angeben [MC: ProcessContent-Attribut](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), um die kontinuierliche Verarbeitung des Inhalts in einem ignoriert Element vom nächsten verfügbaren übergeordneten Element erforderlich.  
   
  Mehrere Präfixe können angegeben werden, in das Attribut, wobei eine oder mehrere Leerzeichen als Trennzeichen, z. B.: `mc:Ignorable="ignore1 ignore2"`.  
-  
- Die [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] -Namespace definiert, andere Elemente und Attribute, die in diesem Bereich nicht dokumentiert sind die [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]. Weitere Informationen finden Sie unter [XML-Markup-Compatibility-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=73824).  
+
+ Die [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] -Namespace definiert, andere Elemente und Attribute, die in diesem Bereich nicht dokumentiert sind die [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]. Weitere Informationen finden Sie unter [XML-Markup-Compatibility-Spezifikation](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Markup.XamlReader>  

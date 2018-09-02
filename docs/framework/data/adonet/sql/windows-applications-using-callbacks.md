@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365474"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457020"
 ---
 # <a name="windows-applications-using-callbacks"></a>Verwenden von Rückrufen in Windows-Anwendungen
 In den meisten asynchronen Verarbeitungsszenarien möchten Sie eine Datenbankoperation starten und weitere Prozesse ausführen, ohne dabei warten zu müssen, bis die Datenbankoperation abgeschlossen ist. Viele Szenarien erfordern allerdings nach dem Beenden der Datenbankoperation eine Aktion. So möchten Sie beispielsweise in einer Windows-Anwendung die länger dauernde Operation an einen Hintergrundthread weitergeben, während der Benutzeroberflächenthread weiterhin reagieren kann. Nach dem Beenden der Datenbankoperation möchten Sie allerdings die Ergebnisse verwenden, um das Formular zu füllen. Dieser Typ von Szenario wird am Besten durch einen Rückruf implementiert.  
@@ -380,4 +380,4 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Siehe auch  
  [Asynchrone Vorgänge](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 60e33f9f3ab767a6fd1d5489721fd2a82950155e
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754635"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465987"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Exemplarische Vorgehensweise: Lokalisieren einer Hybridanwendung
 
@@ -28,7 +28,7 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 -   Verwenden des LocBaml-Tools zum Erzeugen einer Satellitenassembly.
 
-Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Lokalisieren einer Anwendung Hybridbeispiel](http://go.microsoft.com/fwlink/?LinkID=160015).
+Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Lokalisieren einer Anwendung Hybridbeispiel](https://go.microsoft.com/fwlink/?LinkID=160015).
 
 Am Ende werden Sie eine lokalisierte Hybridanwendung haben.
 
@@ -44,7 +44,7 @@ Der erste Schritt ist die Erstellung der [!INCLUDE[TLA#tla_winforms](../../../..
 
 ### <a name="to-create-the-host-project"></a>So erstellen Sie das Hostprojekt
 
-1.  Erstellen Sie eine **WPF-App** Projekt mit dem Namen `LocalizingWpfInWf`. Weitere Informationen finden Sie unter [How to: Create a Windows Application Project (Vorgehensweise: Erstellen eines neuen Windows Forms-Anwendungsprojekts)](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).
+1.  Erstellen Sie eine **WPF-App** Projekt mit dem Namen `LocalizingWpfInWf`.  (**Datei** > **neue** > **Projekt** > **Visual C#-** oder **Visual Basic**   >  **Klassischer Desktop** > **WPF-Anwendung**).
 
 2.  Hinzufügen einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> Element namens `SimpleControl` zum Projekt.
 
@@ -177,5 +177,5 @@ Ihr lokalisierte Inhalt befindet sich in einer reinen Ressourcen- *Satellitenass
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Lokalisieren einer Anwendung](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](http://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
-- [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Exemplarische Vorgehensweise: Lokalisieren von Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

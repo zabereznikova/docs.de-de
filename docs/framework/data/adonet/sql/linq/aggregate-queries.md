@@ -2,12 +2,12 @@
 title: Aggregatabfragen
 ms.date: 03/30/2017
 ms.assetid: 13ec5580-05ce-4a1f-9d3d-8660be7891a2
-ms.openlocfilehash: e4d5e0a9dc1ffb0bf1857fee788d46947f3901d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c8f6191cfb832a71bd32c60db492eafb8ca22ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358842"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464152"
 ---
 # <a name="aggregate-queries"></a>Aggregatabfragen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Aggregatoperatoren `Average`, `Count`, `Max`, `Min` und `Sum`. Beachten Sie die folgenden Eigenschaften von Aggregatoperatoren in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -18,7 +18,7 @@ ms.locfileid: "33358842"
   
 -   Aggregatabfragen geben i. d. R. eine Zahl statt einer Auflistung zurück.  
   
-     Weitere Informationen finden Sie unter [Aggregationsvorgänge](http://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
+     Weitere Informationen finden Sie unter [Aggregationsvorgänge](https://msdn.microsoft.com/library/36d97c83-5de5-457d-971d-10a69365e7c4).  
   
 -   Sie können keine Aggregate für anonyme Typen aufrufen.  
   

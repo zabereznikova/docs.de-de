@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 836e920ef7c95d4a7a2b752c2f76f29d8c880e7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: de2fc0f562b079d5310ed2cd81211e14d4257515
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750465"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468545"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;security&gt; von &lt;wsHttpBinding&gt;
-Stellt die Sicherheitsfunktionen des der [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  
 \<bindings>  
@@ -46,7 +46,7 @@ Stellt die Sicherheitsfunktionen des der [ \<WsHttpBinding >](../../../../../doc
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|mode|-Dies ist optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
+|mode|– Optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
@@ -81,5 +81,5 @@ Stellt die Sicherheitsfunktionen des der [ \<WsHttpBinding >](../../../../../doc
  [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<binding>](../../../../../docs/framework/misc/binding.md)

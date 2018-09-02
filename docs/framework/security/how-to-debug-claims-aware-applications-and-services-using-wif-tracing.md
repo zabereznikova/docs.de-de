@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408631"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463194"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Vorgehensweise: Debuggen von Ansprüche-unterstützenden Anwendungen und Diensten mittels WIF-Ablaufverfolgung
 ## <a name="applies-to"></a>Gilt für  
@@ -77,14 +77,14 @@ ms.locfileid: "33408631"
     </system.diagnostics>  
     ```  
   
-3.  Die obige Konfiguration weist WIF an, ausführliche Ablaufverfolgungsereignisse zu erstellen und in der Datei *WIFTrace.e2e* zu protokollieren. Eine vollständige Liste der Werte für das **switchValue**-Attribut finden Sie in der Tabelle mit den Ablaufverfolgungsebenen im folgenden Thema: [Configuring Tracing (Konfigurieren der Ablaufverfolgung)](http://msdn.microsoft.com/library/ms733025.aspx).  
+3.  Die obige Konfiguration weist WIF an, ausführliche Ablaufverfolgungsereignisse zu erstellen und in der Datei *WIFTrace.e2e* zu protokollieren. Eine vollständige Liste der Werte für das **switchValue**-Attribut finden Sie in der Tabelle mit den Ablaufverfolgungsebenen im folgenden Thema: [Configuring Tracing (Konfigurieren der Ablaufverfolgung)](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Schritt 2: Analysieren von WIF-Ablaufverfolgungsdateien mithilfe des Trace Viewer-Tools  
  In diesem Schritt verwenden Sie das Trace Viewer-Tool (SvcTraceViewer.exe), um WIF-Ablaufverfolgungsprotokolle zu analysieren.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>So analysieren Sie WIF-Ablaufverfolgungsprotokolle mit dem Trace Viewer-Tool (SvcTraceViewer.exe)  
   
-1.  Das Trace Viewer-Tool (SvcTraceViewer.exe) ist im Windows SDK enthalten. Wenn Sie das Windows SDK noch nicht installiert haben, können Sie es hier herunterladen: [Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279).  
+1.  Das Trace Viewer-Tool (SvcTraceViewer.exe) ist im Windows SDK enthalten. Wenn Sie das Windows SDK noch nicht installiert haben, können Sie es hier herunterladen: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2.  Führen Sie das Trace Viewer-Tool (SvcTraceViewer.exe) aus. Es befindet sich in der Regel im Installationspfad im Ordner **Bin**.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408631"
   
 |**Fehler-ID**|**Fehlermeldung**|**Aktion zum Beheben des Fehlers**|  
 |-|-|-|  
-|ID4175|Der Aussteller des Sicherheitstokens wurde von der IssuerNameRegistry nicht erkannt.  Konfigurieren Sie die IssuerNameRegistry, um einen gültigen Name für diesen Aussteller zurückzugeben und die Sicherheitstoken dieses Ausstellers zu akzeptieren.|Dieser Fehler kann entstehen, wenn Sie einen Fingerabdruck aus dem MMC-Snap-In kopieren und in die Datei *Web.config* einfügen. Insbesondere beim Kopieren des Fingerabdrucks aus dem Fenster mit den Zertifikateigenschaften kann es passieren, dass ein zusätzliches, nicht druckbares Zeichen in die Zeichenfolge eingefügt wird. Dieses zusätzliche Zeichen bewirkt, dass der Fingerabdruck Übereinstimmung fehlschlägt. Die Prozedur für den Fingerabdruck richtig kopieren finden Sie hier: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|Der Aussteller des Sicherheitstokens wurde von der IssuerNameRegistry nicht erkannt.  Konfigurieren Sie die IssuerNameRegistry, um einen gültigen Name für diesen Aussteller zurückzugeben und die Sicherheitstoken dieses Ausstellers zu akzeptieren.|Dieser Fehler kann entstehen, wenn Sie einen Fingerabdruck aus dem MMC-Snap-In kopieren und in die Datei *Web.config* einfügen. Insbesondere beim Kopieren des Fingerabdrucks aus dem Fenster mit den Zertifikateigenschaften kann es passieren, dass ein zusätzliches, nicht druckbares Zeichen in die Zeichenfolge eingefügt wird. Dieses zusätzliche Zeichen bewirkt, dass der Fingerabdruck Übereinstimmung ein Fehler auftritt. Das Verfahren für den Fingerabdruck richtig kopieren finden Sie hier: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Verwandte Elemente  
   
--   [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

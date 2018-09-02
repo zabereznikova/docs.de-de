@@ -2,12 +2,12 @@
 title: WAS-Aktivierungsarchitektur
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497996"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457159"
 ---
 # <a name="was-activation-architecture"></a>WAS-Aktivierungsarchitektur
 In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungsdiensts (auch WAS genannt) aufgeführt und erläutert.  
@@ -34,10 +34,10 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
   
 |Dienstname des Listeneradapters|Protokoll|Hinweise|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Allgemeine Komponente, die HTTP-Aktivierung für IIS 7.0 und WCF bereitstellt.|  
+|W3SVC|http|Allgemeine Komponente, die für IIS 7.0 und WCF-HTTP-Aktivierung bereitstellt.|  
 |NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Für die Verwendung mit WCF-basierte Message Queuing-Anwendungen.|  
+|NetMsmqActivator|net.msmq|Für die Verwendung mit WCF-basierten Message Queuing-Anwendungen.|  
 |NetMsmqActivator|msmq.formatname|Stellt Abwärtskompatibilität mit vorhandenen Message Queuing-Anwendungen bereit.|  
   
  Listeneradapter für bestimmte Protokolle werden während der Installation in der Datei applicationHost.config registriert. Dies wird im folgenden XML-Beispiel veranschaulicht.  
@@ -87,4 +87,4 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von WAS für die Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
- [Windows Server AppFabric-Hostingfunktionen](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)

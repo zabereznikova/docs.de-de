@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587e2086a03e9c9ba57ae3b68de841f12543404e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98c0dbbbe65d8f8c0b0196c82db1a8fd2b0ee3dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435607"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468245"
 ---
 # <a name="iclrstrongnamestrongnametokenfrompublickey-method"></a>ICLRStrongName::StrongNameTokenFromPublicKey-Methode
-Ruft ein Token, das einen öffentlichen Schlüssel darstellt. Ein starker Name-Token ist die Kurzform eines öffentlichen Schlüssels.  
+Ruft ein Token, das einen öffentlichen Schlüssel darstellt. Ein starker Name-Token ist die Kurzform für einen öffentlichen Schlüssel.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,22 +43,22 @@ HRESULT StrongNameTokenFromPublicKey (
  [in] Eine Struktur des Typs [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) , enthält den öffentlichen Teil des Schlüsselpaars verwendet, um die Signatur mit starkem Namen generieren.  
   
  `cbPublicKeyBlob`  
- [in] Die Größe in Bytes, der `pbPublicKeyBlob`.  
+ [in] Die Größe in Bytes, des `pbPublicKeyBlob`.  
   
  `ppbStrongNameToken`  
- [out] Entspricht dem Schlüssel Token mit starkem Namen übergeben `pbPublicKeyBlob`. Die common Language Runtime ordnet den Arbeitsspeicher, in dem das Token zurückgegeben. Der Aufrufer muss diesen Arbeitsspeicher freigeben, mithilfe der [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) Methode.  
+ [out] Entspricht dem Schlüssel Token mit starkem Namen übergegebenen `pbPublicKeyBlob`. Die common Language Runtime ordnet den Speicher in den das Token zurückgegeben werden sollen. Der Aufrufer muss diesen Arbeitsspeicher freigeben, mithilfe der [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) Methode.  
   
  `pcbStrongNameToken`  
- [out] Die Größe in Bytes, des Tokens zurückgegebenen starken Namen.  
+ [out] Die Größe in Bytes, der das zurückgegebene strong Name-Token.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Ein starker Name-Token ist die Kurzform eines öffentlichen Schlüssels, der verwendet wird, um Platz zu sparen, wenn wichtige Informationen in den Metadaten gespeichert. Insbesondere sind starken Namenstoken in Assemblyverweise verwendet, um auf die abhängige Assembly zu verweisen.  
+ Ein starker Name-Token ist die Kurzform für einen öffentlichen Schlüssel, der verwendet wird, um Platz zu sparen, wenn wichtige Informationen in den Metadaten gespeichert. Insbesondere werden Token mit starkem Namen in Assemblyverweise verwendet, um auf die abhängige Assembly zu verweisen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   

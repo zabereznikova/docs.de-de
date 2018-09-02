@@ -2,17 +2,17 @@
 title: Programmierhandbuch
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 081b5b9fb0765a69e1f45dd0dc25234b8d217ab4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a6dad5237c149186a91637ec98efd6f7f315c4d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361383"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465511"
 ---
 # <a name="programming-guide"></a>Programmierhandbuch
 Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodells. Wenn Sie Visual Studio verwenden, können Sie auch die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] viele dieser Aufgaben ausführen.  
   
- Sie können auch Microsoft Docs nach speziellen Themen suchen und Sie können teilnehmen, der [LINQ-Forum](http://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren. Schließlich die [LINQ to SQL: .NET Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) Details finden Sie im Whitepaper [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie Visual Basic- und C#-Codebeispiele.  
+ Sie können auch Microsoft Docs nach speziellen Themen suchen und Sie können teilnehmen, der [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren. Zum Schluss die [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) Whitepaper Details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie sowie Beispiele für Visual Basic und C#-Code.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
@@ -40,5 +40,5 @@ Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLU
  [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  Umfasst Links zu Themen, die die Verwendung gespeicherter Prozeduren erläutern.  
   
- [Einführung in LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
+ [Einführung in LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
  Stellt Ressourcen bereit, die Ihnen die ersten Schritte mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erleichtern.

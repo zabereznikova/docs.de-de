@@ -24,12 +24,12 @@ ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b227ba343db7996d38d5a485b54629a1f4ed28bd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c7aebbfd0d25f6c5a9266857816a1723cb0c660e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744108"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466583"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Konfigurationsdateischema für .NET Framework
 
@@ -78,10 +78,10 @@ Informationen über die Typen, das Format und den Speicherort der Konfigurations
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Remoting Settings Schema (Schema für die Remoteeinstellungen)](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e): Beschreibt die Elemente, mit denen Client- und Serveranwendungen konfiguriert werden, die Remotefunktionen implementieren.
+[Remoting Settings Schema (Schema für die Remoteeinstellungen)](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e): Beschreibt die Elemente, mit denen Client- und Serveranwendungen konfiguriert werden, die Remotefunktionen implementieren.
 
-[ASP.NET Settings Schema (Schema für die ASP.NET-Einstellungen)](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx): Beschreibt die Elemente, die das Verhalten von ASP.NET-Webanwendungen steuern.
+[ASP.NET Settings Schema (Schema für die ASP.NET-Einstellungen)](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx): Beschreibt die Elemente, die das Verhalten von ASP.NET-Webanwendungen steuern.
 
-[Web Services Settings Schema (Schema für die Webdiensteinstellungen)](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e): Das Einstellungsschema für Webdienste definiert Konfigurationsdateielemente, die das Verhalten von ASP.NET-Webdiensten und deren Clients steuern.
+[Web Services Settings Schema (Schema für die Webdiensteinstellungen)](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e): Das Einstellungsschema für Webdienste definiert Konfigurationsdateielemente, die das Verhalten von ASP.NET-Webdiensten und deren Clients steuern.
 
-[Configuring .NET Framework Apps (Konfigurieren von .NET Framework-Apps)](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42): Beschreibt, wie Sicherheit, Assemblybindung und Remotefunktionen in .NET Framework konfiguriert werden.
+[Configuring .NET Framework Apps (Konfigurieren von .NET Framework-Apps)](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42): Beschreibt, wie Sicherheit, Assemblybindung und Remotefunktionen in .NET Framework konfiguriert werden.

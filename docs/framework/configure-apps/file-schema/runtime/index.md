@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c517fe7736fd19fd93926d79ae5709b049adad1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747949"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465615"
 ---
 # <a name="runtime-settings-schema"></a>Schema für Laufzeiteinstellungen
 Laufzeiteinstellungen werden von der Common Language Runtime verwendet, um Anwendungen für das .NET Framework zu konfigurieren.  
 
-## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>Die \<Runtime > Abschnitt und seine übergeordneten und untergeordneten Elemente
+## <a name="the-runtime-section-and-its-parent-and-child-elements"></a>Die \<Runtime > Abschnitt und seine übergeordneten und untergeordneten Elementen
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<Common Language Runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
@@ -65,7 +65,7 @@ Laufzeiteinstellungen werden von der Common Language Runtime verwendet, um Anwen
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<NamedCaches >](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Hinzufügen >](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Deaktivieren Sie >](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Entfernen >](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[\<Entfernen Sie >](../../../../../docs/framework/configure-apps/file-schema/runtime/remove-element-for-namedcaches.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;[<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;[\<ThrowUnobservedTaskExceptions>](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;[<TimeSpan_LegacyFormatMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
@@ -75,7 +75,7 @@ Laufzeiteinstellungen werden von der Common Language Runtime verwendet, um Anwen
 &nbsp;&nbsp;\<\runtime >  
 \<\Configuration >
 
-## <a name="alphabetical-list-of-runtime-elements"></a>Alphabetische Liste \<Runtime > Elemente
+## <a name="alphabetical-list-of-runtime-elements"></a>Alphabetische Liste aller \<Runtime > Elemente
 
 |Element|Beschreibung|  
 |-------------|-----------------|  
@@ -133,5 +133,5 @@ Laufzeiteinstellungen werden von der Common Language Runtime verwendet, um Anwen
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Vorgehensweise: Deaktivieren der gleichzeitigen Garbagecollection](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Vorgehensweise: Deaktivieren von gleichzeitigen Garbagecollection](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

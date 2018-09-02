@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551190"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466355"
 ---
 # <a name="combobox"></a>ComboBox
-Die <xref:System.Windows.Controls.ComboBox> -Steuerelement stellt Benutzern eine Liste mit Optionen. Die Liste wird angezeigt und ausgeblendet, wenn das Steuerelement erweitert oder reduziert. Die Liste ist in seinem Standardzustand reduziert und zeigt nur eine Auswahl. Der Benutzer klickt auf eine Schaltfläche, um die vollständige Liste der Optionen anzuzeigen.  
+Die <xref:System.Windows.Controls.ComboBox> -Steuerelement stellt Benutzern eine Liste mit Optionen. Die Liste wird angezeigt und ausgeblendet werden, wie das Steuerelement erweitert bzw. reduziert. In seinem Standardzustand verwenden wird die Liste zeigt nur eine Auswahl reduziert. Der Benutzer klickt auf eine Schaltfläche, um die vollständige Liste der Optionen anzuzeigen.  
   
- Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.ComboBox> in unterschiedlichen Zuständen.  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.ComboBox> in verschiedenen Zuständen.  
   
- ![Kombinationsfelder in Standard- und gedrückt-Zuständen](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![Kombinationsfeld in Standard- und gedrückt-Zuständen](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 Reduziert und erweitert  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Abrufen eines ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Vorgehensweise: Abrufen eines ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ComboBox>

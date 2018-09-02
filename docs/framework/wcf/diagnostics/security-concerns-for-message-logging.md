@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804130"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466490"
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -90,7 +90,7 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
   
  Die Änderungen sind nur wirksam, wenn die Anwendung gestartet oder neu gestartet wird. Ein Ereignis wird beim Start protokolliert, wenn beide Attribute auf `true` festgelegt werden. Ein Ereignis wird außerdem protokolliert, wenn `logKnownPii` auf `true` festgelegt wird, `enableLoggingKnownPii` jedoch `false` ist.  
   
- Der Computeradministrator und der Anwendungsbereitsteller sollten diese beiden Schalter mit großer Vorsicht verwenden. Wenn die PII-Protokollierung aktiviert ist, werden Sicherheitsschlüssel und PII protokolliert. Wenn sie deaktiviert ist, werden vertrauliche und anwendungsspezifische Daten immer noch in Nachrichtenheadern und -texten protokolliert. Eine ausführlichere Erläuterung zu Datenschutz und Schutz von PII verfügbar gemacht wird, finden Sie unter [Datenschutz](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ Der Computeradministrator und der Anwendungsbereitsteller sollten diese beiden Schalter mit großer Vorsicht verwenden. Wenn die PII-Protokollierung aktiviert ist, werden Sicherheitsschlüssel und PII protokolliert. Wenn sie deaktiviert ist, werden vertrauliche und anwendungsspezifische Daten immer noch in Nachrichtenheadern und -texten protokolliert. Eine ausführlichere Erläuterung zu Datenschutz und zum Schutz von PII verfügbar gemacht wird, finden Sie unter [Benutzerdatenschutz](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
 >  PII wird nicht in falsch formatierten Nachrichten ausgeblendet. Solche Nachrichten werden ohne Änderung protokolliert. Vorher erwähnte Attribute haben keine Auswirkungen darauf.  
@@ -105,11 +105,11 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
   
 -   Nachrichtenprotokollierung aus: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung durch WMI deaktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde deaktiviert".  
   
--   Protokollieren von bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. In diesem Fall bei der `enableLoggingKnownPii` Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `true`, und die `logKnownPii` Attribut des der `source` Element in der App.config oder Web.config auf festgelegtist`true`.  
+-   Protokollieren von bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. In diesem Fall bei der `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `true`, und die `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei auf festgelegtist`true`.  
   
--   Protokollieren von bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen ist. In diesem Fall bei der `logKnownPii` Attribut des der `source` Element in der App.config oder Web.config auf festgelegt ist `true`, aber die `enableLoggingKnownPii` Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `false`. Es werden keine Ausnahmen ausgelöst.  
+-   Protokollieren von bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen ist. In diesem Fall bei der `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei wird festgelegt, um `true`, aber die `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei Machine.config auf festgelegtist`false`. Es werden keine Ausnahmen ausgelöst.  
   
- Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen dazu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)  

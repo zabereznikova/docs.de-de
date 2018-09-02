@@ -2,15 +2,15 @@
 title: Ableiten von Beziehungen
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 9833966fa5a16bef70a6ae2b9ca618fde0e05fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7dc3fb0c6098d636e640aaf52b72a404c1486492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759035"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470813"
 ---
 # <a name="inferring-relationships"></a>Ableiten von Beziehungen
-Wenn ein als Tabelle hergeleitetes Element ein ebenfalls als Tabelle hergeleitetes untergeordnetes Element aufweist, wird zwischen den beiden Tabellen eine <xref:System.Data.DataRelation> erstellt. Eine neue Spalte mit dem Namen **ParentTableName_Id** wird für das übergeordnete Element erstellten Tabelle, und für das untergeordnete Element erstellten Tabelle hinzugefügt werden. Die **ColumnMapping** -Eigenschaft dieser Identitätsspalte wird auf festgelegt **MappingType.Hidden**. Die Spalte wird automatisch erhöhenden Primärschlüssel für die übergeordnete Tabelle und verwendet werden, für die **DataRelation** zwischen den beiden Tabellen. Der Datentyp der hinzugefügten Identitätsspalte **System. Int32**, im Gegensatz zum Datentyp aller anderen hergeleiteten Spalten **System.String**. Ein <xref:System.Data.ForeignKeyConstraint> mit **DeleteRule** = **Cascade** wird auch mit der neuen Spalte in der über- und untergeordneten Tabellen erstellt werden.  
+Wenn ein als Tabelle hergeleitetes Element ein ebenfalls als Tabelle hergeleitetes untergeordnetes Element aufweist, wird zwischen den beiden Tabellen eine <xref:System.Data.DataRelation> erstellt. Eine neue Spalte mit dem Namen **ParentTableName_Id** wird sowohl für das übergeordnete Element erstellten Tabelle als auch für das untergeordnete Element erstellten Tabelle hinzugefügt werden. Die **ColumnMapping** -Eigenschaft dieser Identitätsspalte wird festgelegt **MappingType.Hidden**. Die Spalte wird ein automatisch erhöhenden Primärschlüssel für die übergeordnete Tabelle und verwendet werden, für die **DataRelation** zwischen den beiden Tabellen. Der Datentyp der hinzugefügten Identitätsspalte **System. Int32**, im Gegensatz zu dem Datentyp der aller anderen hergeleiteten Spalten, d.h. **System.String**. Ein <xref:System.Data.ForeignKeyConstraint> mit **DeleteRule** = **Cascade** wird auch unter Verwendung der neuen Spalte in der über- und untergeordneten Tabellen erstellt werden.  
   
  Betrachten Sie beispielsweise den folgenden XML-Code:  
   
@@ -25,21 +25,21 @@ Wenn ein als Tabelle hergeleitetes Element ein ebenfalls als Tabelle hergeleitet
   
  Die Herleitung wird zwei Tabellen: **Element1** und **ChildElement1**.  
   
- Die **Element1** Tabelle weist zwei Spalten: **Element1_Id** und **ChildElement2**. Die **ColumnMapping** Eigenschaft von der **Element1_Id** Spaltensatz zu **MappingType.Hidden**. Die **ColumnMapping** Eigenschaft von der **ChildElement2** Spaltensatz zu **MappingType.Element**. Die **Element1_Id** Spaltensatz wird als Primärschlüssel von der **Element1** Tabelle.  
+ Die **Element1** Tabelle weist zwei Spalten: **Element1_Id** und **ChildElement2**. Die **ColumnMapping** Eigenschaft der **Element1_Id** Spalte festgelegt **MappingType.Hidden**. Die **ColumnMapping** Eigenschaft der **ChildElement2** Spalte festgelegt **MappingType.Element**. Die **Element1_Id** Spaltensatz wird als den primären Schlüssel für die **Element1** Tabelle.  
   
- Die **ChildElement1** Tabelle weist drei Spalten: **attr1**, **attr2** und **Element1_Id**. Die **ColumnMapping** -Eigenschaft für die **attr1** und **attr2** Spalten festgelegt, um **MappingType.Attribute**. Die **ColumnMapping** Eigenschaft von der **Element1_Id** Spaltensatz zu **MappingType.Hidden**.  
+ Die **ChildElement1** Tabelle weist drei Spalten: **attr1**, **attr2** und **Element1_Id**. Die **ColumnMapping** -Eigenschaft für die **attr1** und **attr2** Spalten festgelegt **MappingType.Attribute**. Die **ColumnMapping** Eigenschaft der **Element1_Id** Spalte festgelegt **MappingType.Hidden**.  
   
- Ein **DataRelation** und **ForeignKeyConstraint** mithilfe erstellt die **Element1_Id** Spalten aus beiden Tabellen.  
+ Ein **DataRelation** und **ForeignKeyConstraint** erstellt mithilfe der **Element1_Id** Spalten beider Tabellen.  
   
  **DataSet:** DocumentElement  
   
- **Table:** Element1  
+ **Tabelle:** Element1  
   
 |Element1_Id|ChildElement2|  
 |------------------|-------------------|  
 |0|Text2|  
   
- **Table:** ChildElement1  
+ **Tabelle:** ChildElement1  
   
 |attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
@@ -49,7 +49,7 @@ Wenn ein als Tabelle hergeleitetes Element ein ebenfalls als Tabelle hergeleitet
   
  **ParentTable:** Element1  
   
- **ParentColumn:** Element1_Id  
+ **Von der übergeordneten Spalte:** Element1_Id  
   
  **UntergeordneteTabelle:** ChildElement1  
   
@@ -67,7 +67,7 @@ Wenn ein als Tabelle hergeleitetes Element ein ebenfalls als Tabelle hergeleitet
   
  **DeleteRule:** Cascade  
   
- **AcceptRejectRule:** None  
+ **AcceptRejectRule:** keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
@@ -76,4 +76,4 @@ Wenn ein als Tabelle hergeleitetes Element ein ebenfalls als Tabelle hergeleitet
  [Schachteln von DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,18 +11,18 @@ ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ae85b1184c6ed58d68a401870e509919ed2ad345
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85cd0e4910fdef28721cfb4be341b74fcf1f3c1e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407026"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466238"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>Hilfethemen zu Textmustern zur Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Dieser Abschnitt enthält Themen, in denen erläutert Textmuster UI-Automatisierung verwenden.  
+ Dieser Abschnitt enthält Themen, in denen beschrieben, wie Textmuster zur Benutzeroberflächenautomatisierung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  

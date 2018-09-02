@@ -2,12 +2,12 @@
 title: ADO.NET-Architektur
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759867"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472110"
 ---
 # <a name="adonet-architecture"></a>ADO.NET-Architektur
 Die traditionelle Datenverarbeitung basierte primär auf einem verbindungsbasierten Modell mit zwei Ebenen. Da für die Datenverarbeitung immer mehr auf Architekturen mit mehreren Ebenen zurückgegriffen wird, wird verstärkt mit nicht verbundenen Lösungen gearbeitet, um eine bessere Skalierbarkeit der Anwendungen zu erzielen.  
@@ -19,7 +19,7 @@ Die traditionelle Datenverarbeitung basierte primär auf einem verbindungsbasier
  Die .NET Framework-Datenanbieter sind Komponenten, die explizit für die Datenbearbeitung und den schnellen, vorwärts gerichteten, schreibgeschützten Zugriff auf Daten entworfen wurden. Das `Connection`-Objekt sorgt für die Verbindung mit einer Datenquelle. Mit dem `Command`-Objekt können Sie auf Datenbankbefehle zugreifen, um Daten zurückzugeben oder zu ändern, gespeicherte Prozeduren auszuführen und Parameterinformationen zu senden oder abzurufen. Der `DataReader` sorgt dafür, dass die Daten mit maximaler Geschwindigkeit per Stream bereitgestellt werden. Der `DataAdapter` fungiert als Brücke zwischen dem `DataSet`-Objekt und der Datenquelle. Der `DataAdapter` verwendet zum Ausführen von SQL-Befehlen an der Datenquelle `Command`-Objekte, um damit sowohl Daten in das `DataSet` zu laden als auch um die Datenquelle mit den an den Daten im `DataSet` vorgenommenen Änderungen zu aktualisieren. Weitere Informationen finden Sie unter [.NET Framework-Datenanbieter](../../../../docs/framework/data/adonet/data-providers.md) und [abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
   
 ### <a name="the-dataset"></a>Das "DataSet"  
- Das ADO.NET-`DataSet` wurde explizit für den datenquellenunabhängigen Datenzugriff entwickelt. Aus diesem Grund kann es mit mehreren, unterschiedlichen Datenquellen, mit XML-Daten oder zum Verwalten von lokalen Anwendungsdaten verwendet werden. Das `DataSet` enthält eine Auflistung von einem oder mehreren <xref:System.Data.DataTable>-Objekten, die aus Datenzeilen und -spalten sowie aus Primärschlüsseln, Fremdschlüsseln, Einschränkungen und Beziehungsinformationen zu den in den `DataTable`-Objekten enthaltenen Daten bestehen. Weitere Informationen finden Sie unter [DataSets und Datentabellen "DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
+ Das ADO.NET-`DataSet` wurde explizit für den datenquellenunabhängigen Datenzugriff entwickelt. Aus diesem Grund kann es mit mehreren, unterschiedlichen Datenquellen, mit XML-Daten oder zum Verwalten von lokalen Anwendungsdaten verwendet werden. Das `DataSet` enthält eine Auflistung von einem oder mehreren <xref:System.Data.DataTable>-Objekten, die aus Datenzeilen und -spalten sowie aus Primärschlüsseln, Fremdschlüsseln, Einschränkungen und Beziehungsinformationen zu den in den `DataTable`-Objekten enthaltenen Daten bestehen. Weitere Informationen finden Sie unter [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
   
  Das folgende Diagramm zeigt die Beziehung zwischen einem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter und einem `DataSet`.  
   
@@ -27,7 +27,7 @@ Die traditionelle Datenverarbeitung basierte primär auf einem verbindungsbasier
 ADO.NET-Architektur  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Auswählen eines "DataReader" oder eines "DataSet"  
- Bei der Entscheidung, ob Ihre Anwendung verwenden soll eine `DataReader` (finden Sie unter [Retrieving Data Using eines "DataReader"](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) oder ein `DataSet` (finden Sie unter [DataSets und Datentabellen "DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), sollten Sie den Typ des Funktionen, die die Anwendung erforderlich sind. Ein `DataSet` sollten Sie für folgende Aufgaben verwenden:  
+ Wenn Sie entscheiden, ob es sich bei Ihrer Anwendung verwenden soll eine `DataReader` (finden Sie unter [Abrufen von Daten mit einem DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) oder ein `DataSet` (finden Sie unter [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), sollten Sie den Typ des Funktionen, die Ihre Anwendung erfordert. Ein `DataSet` sollten Sie für folgende Aufgaben verwenden:  
   
 -   Lokales Zwischenspeichern von Daten in Ihrer Anwendung, um sie bearbeiten zu können. Wenn die Ergebnisse einer Abfrage nur gelesen werden sollen, ist der `DataReader` die bessere Wahl.  
   
@@ -37,7 +37,7 @@ ADO.NET-Architektur
   
 -   Ausführen umfangreicher Datenverarbeitungsschritte ohne eine offene Verbindung zur Datenquelle. Dadurch wird die Verbindung zur Nutzung durch andere Clients freigegeben.  
   
- Wenn Sie die vom `DataSet` bereitgestellte Funktionalität nicht benötigen, können Sie die Geschwindigkeit Ihrer Anwendung verbessern, indem Sie den `DataReader` verwenden, der Ihre Daten vorwärts gerichtet und schreibgeschützt zurückgibt. Obwohl die `DataAdapter` verwendet die `DataReader` zum Füllen des eine `DataSet` (finden Sie unter [Auffüllen eines Datasets mit "DataAdapter"](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), mit der `DataReader`, Leistung steigern, weil Sie Speicherplatz einsparen werden würde genutzt werden, indem Sie die `DataSet`, und vermeiden Sie die Verarbeitung, die erforderlich sind, erstellen und füllen den Inhalt des der `DataSet`.  
+ Wenn Sie die vom `DataSet` bereitgestellte Funktionalität nicht benötigen, können Sie die Geschwindigkeit Ihrer Anwendung verbessern, indem Sie den `DataReader` verwenden, der Ihre Daten vorwärts gerichtet und schreibgeschützt zurückgibt. Zwar die `DataAdapter` verwendet die `DataReader` zu füllen eine `DataSet` (finden Sie unter [Auffüllen eines Datasets mit einen "DataAdapter"](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), mit der `DataReader`, Sie können die Leistung steigern, da Sie Weise Arbeitsspeicher sparen verwendet, die von der `DataSet`, außerdem entfällt der Verarbeitungsaufwand, der zum Erstellen und Füllen des benötigt die `DataSet`.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  LINQ to DataSet stellt Abfragefunktionen und Typüberprüfungsfunktionen zur Kompilierzeit über die in einem DataSet-Objekt zwischengespeicherten Daten bereit. Sie können damit Abfragen in einer der .NET Framework-Entwicklungssprachen schreiben, z. B. in C# oder Visual Basic. Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
@@ -58,4 +58,4 @@ ADO.NET-Architektur
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

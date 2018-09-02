@@ -2,12 +2,12 @@
 title: FILESTREAM-Daten
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: fb7291fad15917614f5eebd31ad0e239c987a81d
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931399"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463168"
 ---
 # <a name="filestream-data"></a>FILESTREAM-Daten
 Das FILESTREAM-Speicherattribut wird für Binärdaten (BLOBs) verwendet, die in einer varbinary(max)-Spalte gespeichert sind. Vor FILESTREAM erforderte das Speichern von Binärdaten besondere Maßnahmen. Unstrukturierte Daten wie z. B. Textdokumente, Bilder und Videos werden häufig außerhalb der Datenbank gespeichert und sind daher schwieriger zu verwalten.  
@@ -176,8 +176,8 @@ namespace FileStreamTest
 |-----------|-----------------|  
 |[Entwerfen und Implementieren der FILESTREAM-Speicherung](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Stellt Links zur FILESTREAM-Dokumentation und verwandten Themen bereit.|  
 |[Übersicht über FILESTREAM](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|Beschreibt, in welchen Fällen die FILESTREAM-Speicherung verwendet werden sollte und wie diese die SQL Server-Datenbank-Engine mit einem NTFS-Dateisystem integriert.|  
-|[Erste Schritte mit FILESTREAM-Speicherung](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Beschreibt, wie FILESTREAM für eine Instanz von SQL Server aktiviert wird, wie eine Datenbank und eine Tabelle zum Speichern von FILESTREAM-Daten erstellt werden und wie Zeilen mit FILESTREAM-Daten bearbeitet werden.|  
-|[Verwenden von FILESTREAM-Speicherung in Clientanwendungen](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|Beschreibt die Win32 API-Funktionen zum Arbeiten mit FILESTREAM-Daten.|  
+|[Erste Schritte mit FILESTREAM-Speicherung](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Beschreibt, wie FILESTREAM für eine Instanz von SQL Server aktiviert wird, wie eine Datenbank und eine Tabelle zum Speichern von FILESTREAM-Daten erstellt werden und wie Zeilen mit FILESTREAM-Daten bearbeitet werden.|  
+|[Verwenden von FILESTREAM-Speicherung in Clientanwendungen](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|Beschreibt die Win32 API-Funktionen zum Arbeiten mit FILESTREAM-Daten.|  
 |[FILESTREAM und andere SQL Server-Funktionen](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Enthält Überlegungen, Richtlinien und Einschränkungen zur Verwendung von FILESTREAM-Daten mit anderen Funktionen von SQL Server.|  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -185,4 +185,4 @@ namespace FileStreamTest
  [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -12,24 +12,24 @@ ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 874eada0714ed0f96248ebac8edb0efe205d9f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be813a16e1cdbf8367a358d91cf3b958ac36398
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407182"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466324"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- In diesem Thema wird gezeigt, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] können verwendet werden, um den Inhalten und systeminternen Eigenschaften jeder Zelle in einem tabellarischen Steuerelement verfügbar zu machen.  
+ Dieses Thema wird gezeigt, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kann verwendet werden, um den Inhalten und systeminternen Eigenschaften der einzelnen Zellen in einem tabellarischen Steuerelement verfügbar zu machen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Windows.Automation.AutomationElement> , die den Inhalt einer Tabellenzelle darstellt; Zelleigenschaften, z. B. Zeilen- und Spaltenindizes, Zeilen- und Spannen und Zeilen- und Headerinformationen auch abgerufen werden. Dieses Beispiel verwendet einen Ereignishandler für den Fokus Änderung Tastatur Durchlauf eines tabellarischen Steuerelements zu simulieren, die implementiert [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Informationen für jedes Tabellenelement ein Fokusänderungsereignis verfügbar gemacht wird.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Abrufen einer <xref:System.Windows.Automation.AutomationElement> , das den Inhalt einer Tabellenzelle darstellt; Zelleigenschaften wie Zeilen- und Spaltenindizes, Zeilen- und Spaltenbereichen und Headerinformationen für Zeilen- und erhalten Sie auch. Dieses Beispiel verwendet einen Ereignishandler für den Fokus ändern, um ein Tabellensteuerelement Tastatur Durchlauf zu simulieren, die implementiert [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Informationen für jedes Tabellenelement wird auf ein Fokusänderungsereignis verfügbar gemacht.  
   
 > [!NOTE]
->  Da fokusänderungen globale desktop Ereignisse ausgeführt werden, sollten den Fokus Änderungsereignisse außerhalb der Tabelle gefiltert werden. Finden Sie unter der [TrackFocus Sample](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) eine ähnliche Implementierung.  
+>  Da Änderungen des Eingabefokus globale desktop Ereignisse sind, sollte der Fokusereignisse außerhalb der Tabelle gefiltert werden. Finden Sie unter den [TrackFocus Sample](https://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) eine ähnliche Implementierung.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 89d2c6476334080fb162eadd4b2bf5984970f3fd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 34119d889c8d6600fdda12cac33192c32d8e0fa6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934680"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467123"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement
 
@@ -29,7 +29,7 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 -   Erweitern einer standardmäßigen Eigenschaftenzuordnung
 
-Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160018).
+Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160018).
 
 Wenn Sie fertig sind, Sie werden zum Zuordnen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Eigenschaften entsprechenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaften eines gehosteten Elements.
 
@@ -62,7 +62,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgend
 
 4.  Öffnen Sie `Form1` im Windows Forms-Designer. Doppelklicken Sie auf das Formular, um das Hinzufügen eines ereignishandlers für das <xref:System.Windows.Forms.Form.Load> Ereignis.
 
-5.  Zurück zu den Windows Forms-Designer, und fügen Sie einen Ereignishandler für des Formulars des <xref:System.Windows.Forms.Control.Resize> Ereignis. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern mithilfe der Designer](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
+5.  Zurück zu den Windows Forms-Designer, und fügen Sie einen Ereignishandler für des Formulars des <xref:System.Windows.Forms.Control.Resize> Ereignis. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern mithilfe der Designer](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
 
 6.  Deklarieren Sie eine <xref:System.Windows.Forms.Integration.ElementHost> -Feld in der `Form1` Klasse.
 
@@ -146,5 +146,5 @@ Sie können auch eine standardmäßige Eigenschaftenzuordnung verwenden und sie 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

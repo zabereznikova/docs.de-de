@@ -2,15 +2,15 @@
 title: 'Transport: WSE 3.0-TCP-Interoperabilität'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808011"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461695"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0-TCP-Interoperabilität
-Die WSE 3.0-TCP-Interoperabilitätstransports-Beispiel zeigt, wie eine TCP-duplexsitzung als ein benutzerdefinierter Windows Communication Foundation (WCF)-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte zeigen, wie dieser benutzerdefinierte WCF-Transport zu erstellen:  
+Das Beispiel WSE 3.0-TCP-Interoperabilitätstransports veranschaulicht, wie eine TCP-duplexsitzung als ein benutzerdefiniertes Windows Communication Foundation (WCF)-Transport implementiert wird. Außerdem zeigt es, wie Sie die Erweiterbarkeit der Kanalschicht verwenden können, um über das Netzwerk auf vorhandene bereitgestellte Systeme zuzugreifen. Die folgenden Schritte zeigen, wie Sie diesen benutzerdefinierten WCF-Transport zu erstellen:  
   
 1.  Beginnen Sie mit einem TCP-Socket. Erstellen Sie Client- und Serverimplementierungen von <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, die Nachrichtenbegrenzungen mittels DIME Framing voneinander abgrenzen.  
   
@@ -37,7 +37,7 @@ Die WSE 3.0-TCP-Interoperabilitätstransports-Beispiel zeigt, wie eine TCP-duple
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Wenn die <xref:System.ServiceModel.Channels.Message>-Instanz in Bytes codiert ist, muss sie über das Netzwerk gesendet werden. Dazu ist ein System zum Definieren von Nachrichtenbegrenzungen erforderlich. WSE 3.0 verwendet eine Version der [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) liegendes Framing-Protokoll. `WriteData` kapselt die Framinglogik zum Einschließen eines Byte[] in einen Satz von DIME-Datensätzen.  
+ Wenn die <xref:System.ServiceModel.Channels.Message>-Instanz in Bytes codiert ist, muss sie über das Netzwerk gesendet werden. Dazu ist ein System zum Definieren von Nachrichtenbegrenzungen erforderlich. WSE 3.0 verwendet eine Version von [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) als framingprotokoll. `WriteData` kapselt die Framinglogik zum Einschließen eines Byte[] in einen Satz von DIME-Datensätzen.  
   
  Die Logik zum Empfangen von Nachrichten ist sehr ähnlich. Das Hauptproblem besteht darin, mit dem Umstand umzugehen, dass ein Socketlesevorgang weniger Bytes als angefordert zurückgeben kann. Zum Empfangen einer Nachricht liest `WseTcpDuplexSessionChannel` Bytes aus dem Netzwerk, decodiert das DIME-Framing und wandelt dann mithilfe von <xref:System.ServiceModel.Channels.MessageEncoder> das Byte[] in eine <xref:System.ServiceModel.Channels.Message> um.  
   
@@ -79,7 +79,7 @@ Die WSE 3.0-TCP-Interoperabilitätstransports-Beispiel zeigt, wie eine TCP-duple
 ## <a name="channel-listener"></a>Kanallistener  
  Im nächsten Schritt wird eine Implementierung von <xref:System.ServiceModel.Channels.IChannelListener> zum Entgegennehmen von Serverkanälen erstellt.  
   
--   `WseTcpChannelListener` leitet sich von <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > und Außerkraftsetzungen [Begin] Open und On [Begin] nahe an die Lebensdauer seines lauschsockets zu steuern. In OnOpen wird ein Socket zum Lauschen an IP_ANY erstellt. Weiter fortgeschrittene Implementierungen können einen zweiten Socket erstellen, um auch an IPv6 zu lauschen. Sie können außerdem zulassen, dass die IP-Adresse im Hostnamen angegeben wird.  
+-   `WseTcpChannelListener` leitet sich von <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > und Außerkraftsetzungen auf [Begin] Open und On [Begin] schließen, um die Lebensdauer seines lauschsockets zu steuern. In OnOpen wird ein Socket zum Lauschen an IP_ANY erstellt. Weiter fortgeschrittene Implementierungen können einen zweiten Socket erstellen, um auch an IPv6 zu lauschen. Sie können außerdem zulassen, dass die IP-Adresse im Hostnamen angegeben wird.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -129,7 +129,7 @@ Die WSE 3.0-TCP-Interoperabilitätstransports-Beispiel zeigt, wie eine TCP-duple
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- Er besteht aus zwei Tests: Der erste Test richtet einen typisierten Client mithilfe von aus WSE 3.0 WSDL generiertem Code ein. Der zweite Test verwendet WCF als Client und Server durch Senden von Nachrichten direkt über die Kanal-APIs.  
+ Er besteht aus zwei Tests: Der erste Test richtet einen typisierten Client mithilfe von aus WSE 3.0 WSDL generiertem Code ein. Der zweite Test verwendet WCF sowohl der Client als auch der Server durch Senden von Nachrichten direkt über die Kanal-APIs.  
   
  Beim Ausführen des Beispiels sollte die Ausgabe wie folgt aussehen.  
   
@@ -172,7 +172,7 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Um dieses Beispiel ausführen zu können, müssen WSE 3.0 und das WSE-`TcpSyncStockService`-Beispiel installiert sein. Sie können herunterladen [WSE 3.0 von MSDN](http://go.microsoft.com/fwlink/?LinkId=95000).  
+1.  Um dieses Beispiel ausführen zu können, müssen WSE 3.0 und das WSE-`TcpSyncStockService`-Beispiel installiert sein. Sie können [WSE 3.0 von MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
 >  Da WSE 3.0 von [!INCLUDE[lserver](../../../../includes/lserver-md.md)] nicht unterstützt wird, können Sie das `TcpSyncStockService`-Beispiel unter diesem Betriebssystem nicht installieren und ausführen.  
@@ -183,7 +183,7 @@ Symbols:
   
     2.  Legen Sie das StockService-Projekt als Startprojekt fest.  
   
-    3.  Öffnen Sie StockService.cs im StockService-Projekt, und kommentieren Sie das [Policy]-Attribut in der `StockService`-Klasse aus. Dadurch werden die Sicherheitsfunktionen im Beispiel deaktiviert. Während WCF mit WSE 3.0 sichere Endpunkte zusammenarbeiten kann, ist die Sicherheitsfunktionen deaktiviert, um dieses Beispiel konzentriert sich auf den benutzerdefinierten TCP-Transport zu halten.  
+    3.  Öffnen Sie StockService.cs im StockService-Projekt, und kommentieren Sie das [Policy]-Attribut in der `StockService`-Klasse aus. Dadurch werden die Sicherheitsfunktionen im Beispiel deaktiviert. Während WCF mit WSE 3.0 sichere Endpunkte zusammenarbeiten kann, ist die Sicherheit deaktiviert, um dieses Beispiel konzentriert sich auf die benutzerdefinierte TCP-Transport zu.  
   
     4.  Drücken Sie F5, um `TcpSyncStockService` zu starten. Der Dienst wird in einem neuen Konsolenfenster gestartet.  
   

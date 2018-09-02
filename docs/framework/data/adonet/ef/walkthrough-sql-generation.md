@@ -2,15 +2,15 @@
 title: 'Exemplarische Vorgehensweise: SQL-Generierung'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766321"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472071"
 ---
 # <a name="walkthrough-sql-generation"></a>Exemplarische Vorgehensweise: SQL-Generierung
-In diesem Thema wird veranschaulicht, wie die SQL-Generierung in erfolgt die [Beispielanbieter](http://go.microsoft.com/fwlink/?LinkId=180616). Die folgende Entity SQL-Abfrage verwendet das im Beispielanbieter enthaltene Modell:  
+In diesem Thema veranschaulicht die SQL-Generierung in der [Beispielanbieter](https://go.microsoft.com/fwlink/?LinkId=180616). Die folgende Entity SQL-Abfrage verwendet das im Beispielanbieter enthaltene Modell:  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -126,7 +126,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- Im nächsten Schritt wird "false" auf dem IsParentAJoin-Stapel abgelegt, und die Joinbedingung "Var(Extent1).CategoryID == Var(Extent2).CategoryID" wird verarbeitet. Var(Extent1) wird nach einer Suche in der Symboltabelle in <symbol_Extent1> aufgelöst. Da die Instanz in einem einfachen Symbol als Ergebnis der Verarbeitung Var(Extent1) aufgelöst wird. CategoryID, ein SqlBuilder mit \<symbol1 >. " CategoryID"zurückgegeben. Auf ähnliche Weise wird die andere Seite des Vergleichs verarbeitet. Das Ergebnis des Zugriffs auf die Joinbedingung wird an die FROM-Klausel von SelectStatement1 angefügt, und der Wert "false" wird vom IsParentAJoin-Stapel ausgelesen.  
+ Im nächsten Schritt wird "false" auf dem IsParentAJoin-Stapel abgelegt, und die Joinbedingung "Var(Extent1).CategoryID == Var(Extent2).CategoryID" wird verarbeitet. Var(Extent1) wird nach einer Suche in der Symboltabelle in <symbol_Extent1> aufgelöst. Da die Instanz in einem einfachen Symbol als Ergebnis der Verarbeitung Var(Extent1) aufgelöst wird. Kategorie-ID, ein SqlBuilder mit \<symbol1 >. " CategoryID"zurückgegeben. Auf ähnliche Weise wird die andere Seite des Vergleichs verarbeitet. Das Ergebnis des Zugriffs auf die Joinbedingung wird an die FROM-Klausel von SelectStatement1 angefügt, und der Wert "false" wird vom IsParentAJoin-Stapel ausgelesen.  
   
  Damit wurde Join1 vollständig verarbeitet, und aus der Symboltabelle wird ein Bereich ausgelesen.  
   

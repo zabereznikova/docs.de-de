@@ -9,16 +9,16 @@ ms.assetid: 329891d7-b609-49e6-920a-09ea8a627d07
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 96760b1e4d2ad73374eb3cc2a2df42df13023c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c2f1ae77585576c8ad1c83b37e6ec530dd31598
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409151"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464183"
 ---
 # <a name="ui-automation-support-for-the-scrollbar-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den ScrollBar-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „ScrollBar“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte und Steuerelementmuster ein.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33409151"
   
 |Steuerelementansicht|Inhaltsansicht|  
 |------------------|------------------|  
-|ScrollBar<br /><br /> -Schaltfläche (2 oder 4)<br />-Thumb (0 oder 1)|Nicht zutreffend. Das Bildlaufleisten-Steuerelement enthält keinen Inhalt.|  
+|ScrollBar<br /><br /> -Button (2 oder 4)<br />-Thumb (0 oder 1)|Nicht zutreffend. Das Bildlaufleisten-Steuerelement enthält keinen Inhalt.|  
   
  Das Bildlaufleisten-Steuerelement umfasst immer drei bis fünf untergeordnete Elemente. Da die Teilstruktur mehrere Schaltflächen enthält, müssen Sie einen bestimmten <xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty> -Wert für jedes Element festlegen, sodass diese von Testautomatisierungstools erkannt werden können.  
   

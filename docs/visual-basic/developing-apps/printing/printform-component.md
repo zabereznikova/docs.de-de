@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 6cb7cfe022b2b4d23f47a47ec70f08d5c0ccbc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591407"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472084"
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm-Komponente (Visual Basic)
-Die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente für Visual Basic können Sie ein Bild eines Windows Forms zur Laufzeit zu drucken. Ihr Verhalten ersetzt das der Methode `PrintForm` in früheren Visual Basic-Versionen.  
+Die <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> für Visual Basic ermöglicht es Ihnen, ein Bild eines Windows Forms zur Laufzeit zu drucken. Ihr Verhalten ersetzt das der Methode `PrintForm` in früheren Visual Basic-Versionen.  
   
- Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, Sie können sie jedoch aus dem [Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=25169)herunterladen.  
+ Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, aber Sie können sie aus der [Downloadcenter](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="printform-component-overview"></a>PrintForm-Komponente – Übersicht  
  Ein häufiges Szenario bei Windows Forms bildet die Erstellung eines Formulars, das einem Papierformular oder einem Bericht ähnelt, von dem dann ein Bild gedruckt werden soll. Zwar können Sie dazu eine <xref:System.Drawing.Printing.PrintDocument> -Komponente verwenden, das würde aber viel Code erfordern. Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente können Sie ein Bild eines Formulars auf einem Drucker, in einem Druckvorschaufenster oder in einer Datei ausgeben, ohne eine <xref:System.Drawing.Printing.PrintDocument> -Komponente zu verwenden.  

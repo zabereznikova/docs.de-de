@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 80555ad714ffe5cab6722d2d6d45fb6a6bb45609
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540842"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463966"
 ---
 # <a name="annotations-overview"></a>Übersicht über Anmerkungen
 Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten. Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren. Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.  
   
- In diesem Thema mehrere allgemeine Typen von Anmerkungen, insbesondere Haftnotizen und hervorgehoben wird, überprüft und veranschaulicht, wie die [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] erleichtert diese Arten von Anmerkungen in Anwendungen, die durch das Dokument Windows Presentation Foundation (WPF) Anzeigen von Steuerelementen.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Dokument anzeigen-Steuerelementen, die Anmerkungen zu unterstützen, gehören <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer>sowie Steuerelemente abgeleitet <xref:System.Windows.Controls.Primitives.DocumentViewerBase> wie z. B. <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ In diesem Thema werden mehrere allgemeine Typen von Anmerkungen, insbesondere Kurznotizen und Markierungen, und veranschaulicht, wie die [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] erleichtert diese Typen von Anmerkungen in Anwendungen, die durch das Windows Presentation Foundation (WPF)-Dokument Steuerelemente für das anzeigen.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Steuerelemente für das Dokument anzeigen, die Anmerkungen unterstützen enthalten <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer>sowie Steuerelemente abgeleitet <xref:System.Windows.Controls.Primitives.DocumentViewerBase> wie z. B. <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
   
 <a name="caf1_type_stickynotes"></a>   
@@ -43,7 +43,7 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
   
  ![Anmerkung hervorheben](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
   
- Benutzer in der Regel erstellen Sie Anmerkungen, indem zunächst einige Text oder ein zu berücksichtigendes Element auszuwählen, und klicken Sie dann mit der rechten Maustaste, um anzuzeigen eine <xref:System.Windows.Controls.ContextMenu> Anmerkung-Optionen.  Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] können Sie deklarieren eine <xref:System.Windows.Controls.ContextMenu> mit weitergeleiteten Befehlen, die die Benutzer zugreifen können, zum Erstellen und Verwalten von Anmerkungen.  
+ Benutzer erstellen Anmerkungen in der Regel von der ersten Auswahl von Text oder ein Element von Interesse sind, und klicken Sie dann mit der rechten Maustaste, um anzuzeigen einer <xref:System.Windows.Controls.ContextMenu> einer Anmerkungsoption.  Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] können Sie Sie deklarieren eine <xref:System.Windows.Controls.ContextMenu> mit weitergeleiteten Befehlen, die Benutzer zugreifen können, zum Erstellen und Verwalten von Anmerkungen.  
   
  [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
@@ -62,7 +62,7 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Ein weiteres Beispielszenario umfasst die Anwendungen, die den Austausch von Anmerkungen und Haftnotizen zwischen Lesern von Dokument per e-Mail zu ermöglichen. Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.  
+ Ein weiteres Beispielszenario umfasst Anwendungen, die den Austausch von Anmerkungen und Kurznotizen zwischen Lesern von Dokument per e-Mail ermöglichen. Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
@@ -75,4 +75,4 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
  [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
  [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [How to: Add a Command to a MenuItem (Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem)](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+ [How to: Add a Command to a MenuItem (Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem)](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

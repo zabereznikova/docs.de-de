@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496112"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457124"
 ---
 # <a name="denial-of-service"></a>Dienstverweigerung (Denial of Service)
 Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass Nachrichten nicht verarbeitet werden können oder extrem langsam verarbeitet werden.  
@@ -44,24 +44,24 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="auditing-event-log-can-be-filled"></a>Überwachungsereignisprotokoll kann ausgefüllt werden  
  Wenn ein böswilliger Benutzer erkennt, dass die Überwachung aktiviert ist, kann dieser Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl.  
   
- Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zum Verwenden der Ereignisanzeige zum Anzeigen und Verwalten von Ereignisprotokollen finden Sie unter [Ereignisanzeige](http://go.microsoft.com/fwlink/?LinkId=186123). Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen zur Verwendung der Ereignisanzeige zum Anzeigen und Verwalten von Ereignisprotokollen finden Sie unter [Ereignisanzeige](https://go.microsoft.com/fwlink/?LinkId=186123). Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Ungültige Implementierungen von IAuthorizationPolicy können zu Dienstfehlern führen  
  Das Aufrufen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für eine fehlerhafte Implementierung der <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Schnittstelle kann Dienstfehler verursachen.  
   
- Gegenmaßnahme: Verwenden Sie ausschließlich vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. WCF wird nicht zwischen Anwendungscode und fremden Code, der eingesteckt ist über Erweiterungspunkte stellen.  
+ Gegenmaßnahme: Verwenden Sie ausschließlich vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. WCF macht nicht zwischen Anwendungscode und Fremdschlüssel Code, der im Netzbetrieb befindet über Erweiterungspunkte.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Maximale Größe des Kerberos-Tokens muss möglicherweise geändert werden  
- Gehört ein Client zu vielen Gruppen (ungefähr 900, obwohl die tatsächliche Anzahl je nach den Gruppen variiert), kann ein Problem auftreten, wenn ein Nachrichtenheaderblock größer als 64 Kilobyte ist. In diesem Fall können Sie die maximale Kerberos-Tokengröße erhöhen, wie in den Microsoft Support-Artikel beschrieben "[Internet Explorer Kerberos-Authentifizierung funktioniert nicht wegen nicht ausreichenden Puffers Herstellen einer Verbindung mit IIS](http://go.microsoft.com/fwlink/?LinkId=89176)." Sie müssen möglicherweise auch die maximale Größe der WCF-Nachrichten angepasst größere Kerberos-Token zu erhöhen.  
+ Gehört ein Client zu vielen Gruppen (ungefähr 900, obwohl die tatsächliche Anzahl je nach den Gruppen variiert), kann ein Problem auftreten, wenn ein Nachrichtenheaderblock größer als 64 Kilobyte ist. In diesem Fall können Sie die maximale Größe des Kerberos token, erhöhen, wie beschrieben im Microsoft Support-Artikel "[Internet Explorer Kerberos-Authentifizierung funktioniert nicht wegen nicht ausreichenden Puffers für Verbindung zu IIS](https://go.microsoft.com/fwlink/?LinkId=89176)." Sie müssen möglicherweise auch die maximale Größe der WCF-Nachrichten zur Aufnahme der größeren Kerberos-Token zu erhöhen.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Automatische Registrierung führt zu mehreren Zertifikaten mit gleichem Antragstellernamen für den Computer  
- *Automatische Registrierung* ist die Fähigkeit von [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] -Benutzer und-Computer für Zertifikate automatisch registrieren. Befindet sich ein Computer in einer Domäne mit aktivierter Funktion, wird ein X.509-Zertifikat mit dem beabsichtigten Zweck der Clientauthentifizierung automatisch erstellt und in den persönlichen Zertifikatspeicher des lokalen Computers eingefügt, wenn ein neuer Computer mit dem Netzwerk verbunden wird. Die automatische Registrierung verwendet jedoch den gleichen Antragstellernamen für alle Zertifikate, die sie im Cache erstellt.  
+ *Automatische Registrierung* ist die Fähigkeit von [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] , Benutzer und-Computer für Zertifikate automatisch registrieren. Befindet sich ein Computer in einer Domäne mit aktivierter Funktion, wird ein X.509-Zertifikat mit dem beabsichtigten Zweck der Clientauthentifizierung automatisch erstellt und in den persönlichen Zertifikatspeicher des lokalen Computers eingefügt, wenn ein neuer Computer mit dem Netzwerk verbunden wird. Die automatische Registrierung verwendet jedoch den gleichen Antragstellernamen für alle Zertifikate, die sie im Cache erstellt.  
   
- Die Auswirkung ist, dass WCF-Dienste fehlschlagen, um in Domänen mit automatischer Registrierung zu öffnen. Die Ursache ist, dass die standardmäßigen Suchkriterien des Dienstes für X.509-Anmeldeinformationen mehrdeutig sein können, da mehrere Zertifikate mit dem vollqualifizierten DNS (Domain Name System) des Computers vorhanden sind. Ein Zertifikat stammt aus der automatischen Registrierung, das andere kann ein selbst ausgestelltes Zertifikat sein.  
+ Die Auswirkung ist, dass WCF-Dienste möglicherweise nicht in Domänen mit automatischer Registrierung zu öffnen. Die Ursache ist, dass die standardmäßigen Suchkriterien des Dienstes für X.509-Anmeldeinformationen mehrdeutig sein können, da mehrere Zertifikate mit dem vollqualifizierten DNS (Domain Name System) des Computers vorhanden sind. Ein Zertifikat stammt aus der automatischen Registrierung, das andere kann ein selbst ausgestelltes Zertifikat sein.  
   
- Um dies abzuschwächen, verweisen Sie Zertifikat zu verwenden, indem Sie eine feiner abgestimmte Suchkriterium auf die [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
+ Um dies zu vermeiden, verweisen Sie auf das Zertifikat zu verwenden, indem Sie ein genaueres Suchkriterium für die [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Verwenden Sie z. B. die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>-Option, und geben Sie das Zertifikat anhand seines eindeutigen Fingerabdrucks an (Hash).  
   
- Weitere Informationen zum Feature "Automatische Registrierung" finden Sie unter [automatischen Registrierung von Zertifikaten in Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ Weitere Informationen über die automatische Registrierung finden Sie unter [automatischen Registrierung von Zertifikaten in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Der letzte von mehreren für die Autorisierung verwendeten alternativen Antragstellernamen  
  In dem seltenen Fall, dass ein X.509-Zertifikat mehrere alternative Antragstellernamen enthält und Sie die Verwendung des alternativen Antragstellernamens autorisieren, kann die Autorisierung fehlschlagen.  
@@ -69,13 +69,13 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="protect-configuration-files-with-acls"></a>Schutz von Konfigurationsdateien mit Zugriffssteuerungslisten  
  Sie können erforderliche und optionale Ansprüche im Code und in Konfigurationsdateien für von [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ausgestellten Token angeben. Dies führt dazu, dass entsprechende Elemente in `RequestSecurityToken`-Nachrichten ausgegeben werden, die an den Sicherheitstokendienst gesendet werden. Ein Angreifer kann den Code oder die Konfiguration ändern, um erforderliche oder optionale Ansprüche zu entfernen, sodass der Sicherheitstokendienst möglicherweise einen Token ausstellt, der keinen Zugriff auf den Zieldienst gewährt.  
   
- Erfordern Sie zum Ändern der Konfigurationsdatei den Zugriff auf den Computer, um diese Gefahr zu umgehen. Verwenden Sie Zugriffssteuerungslisten zum Sichern von Konfigurationsdateien. WCF erfordert, dass der Code im Anwendungsverzeichnis oder dem globalen Assemblycache werden, bevor sie diesen Code aus der Konfiguration geladen werden kann. Verwenden Sie Verzeichnis-Zugriffssteuerungslisten zum Sichern von Verzeichnissen.  
+ Erfordern Sie zum Ändern der Konfigurationsdatei den Zugriff auf den Computer, um diese Gefahr zu umgehen. Verwenden Sie Zugriffssteuerungslisten zum Sichern von Konfigurationsdateien. WCF erfordert, dass der Code in das Anwendungsverzeichnis oder im globalen Assemblycache sein, bevor er aus der Konfiguration geladen werden kann. Verwenden Sie Verzeichnis-Zugriffssteuerungslisten zum Sichern von Verzeichnissen.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Maximale Anzahl von sicheren Sitzungen für einen Dienst wurde erreicht  
  Wenn ein Client erfolgreich durch einen Dienst authentifiziert wird und eine sichere Verbindung mit dem Dienst eingerichtet wird, verfolgt der Dienst die Sitzung, bis sie vom Client abgebrochen wird oder abläuft. Jede eingerichtete Sitzung wird auf den Grenzwert für die maximale Anzahl gleichzeitiger aktiver Sitzungen mit dem Dienst angerechnet. Wenn dieser Grenzwert erreicht wird, werden Clients abgelehnt, die versuchen, eine neue Sitzung mit diesem Dienst zu erstellen, bis eine oder mehrere aktive Sitzungen ablaufen oder vom Client abgebrochen werden. Ein Client kann über mehrere Sitzungen mit einem Dienst verfügen, und jede dieser Sitzungen wird auf den Grenzwert angerechnet.  
   
 > [!NOTE]
->  Wenn Sie zustandsbehaftete Sitzungen verwenden, trifft der vorhergehende Absatz nicht zu. Weitere Informationen zu statusbehaftete Sitzungen finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Wenn Sie zustandsbehaftete Sitzungen verwenden, trifft der vorhergehende Absatz nicht zu. Weitere Informationen zu statusbehafteten Sitzungen finden Sie unter [Vorgehensweise: Erstellen Sie ein Token für den Sicherheitskontext für eine Sicherheitssitzung](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Legen Sie den Grenzwert für die maximale Anzahl aktiver Sitzungen und die maximale Lebensdauer für eine Sitzung über die <xref:System.ServiceModel.Channels.SecurityBindingElement>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse fest, wenn Sie dieses Sicherheitsproblem vermeiden möchten.  
   

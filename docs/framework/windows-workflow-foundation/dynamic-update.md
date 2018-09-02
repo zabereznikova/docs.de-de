@@ -2,12 +2,12 @@
 title: Dynamisches Update
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207520"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43455769"
 ---
 # <a name="dynamic-update"></a>Dynamisches Update
 Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieses Thema enthält eine Übersicht über die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführte dynamische Updatefunktionalität.  
@@ -57,7 +57,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```  
   
 > [!NOTE]
->  Zum Herunterladen des Beispielcodes, die dieses Thema erhalten, finden Sie unter [Beispielcode für dynamische Updates](http://go.microsoft.com/fwlink/?LinkId=227905).  
+>  Zum Herunterladen des Beispielcodes, die in diesem Thema begleitet wird, finden Sie unter [Beispielcode für dynamische Updates](https://go.microsoft.com/fwlink/?LinkId=227905).  
   
 ###  <a name="Update"></a> Aktualisieren der Workflowdefinition, um die gewünschten Änderungen widerzuspiegeln  
  Sobald die Workflowdefinition für das Update vorbereitet wurde, können die gewünschten Änderungen vorgenommen werden. Sie können Aktivitäten hinzufügen oder entfernen, öffentliche Variablen hinzufügen, verschieben oder löschen, Argumente hinzufügen oder entfernen und Änderungen an der Signatur von Aktivitätsdelegaten vornehmen. Es ist nicht möglich, eine ausgeführte Aktivität zu entfernen oder die Signatur eines ausgeführten Delegaten zu ändern. Diese Änderungen können mithilfe von Code oder in einem neu gehosteten Workflow-Designer vorgenommen werden. Im folgenden Beispiel wird eine benutzerdefinierte `VerifyAppraisal`-Aktivität der Sequence-Aktivität hinzugefügt, die den Text von `MortgageWorkflow` aus dem vorherigen Beispiel darstellt.  
@@ -191,4 +191,4 @@ wfApp.Load(InstanceId);
 ```  
   
 > [!NOTE]
->  Zum Herunterladen des Beispielcodes, die dieses Thema erhalten, finden Sie unter [Beispielcode für dynamische Updates](http://go.microsoft.com/fwlink/?LinkId=227905).
+>  Zum Herunterladen des Beispielcodes, die in diesem Thema begleitet wird, finden Sie unter [Beispielcode für dynamische Updates](https://go.microsoft.com/fwlink/?LinkId=227905).

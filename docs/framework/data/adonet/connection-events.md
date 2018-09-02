@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: aebd38cf57d602fef61c1ad4e6679f37227b1355
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: c1ef9ff9cc4d77e4951e99ed74c96cf78eb71506
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930861"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465524"
 ---
 # <a name="connection-events"></a>Verbindungsereignisse
 Alle von .NET Framework-Datenanbietern **Verbindung** Objekte mit zwei Ereignisse, die Sie verwenden können, um informationsmeldungen aus einer Datenquelle abzurufen oder zu bestimmen, ob der Status der eine **Verbindung** hat geändert. Die folgende Tabelle beschreibt die Ereignisse der **Verbindung** Objekt.  
@@ -107,4 +107,4 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>Siehe auch  
  [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

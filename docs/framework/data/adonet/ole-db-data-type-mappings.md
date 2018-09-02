@@ -2,12 +2,12 @@
 title: OLE DB-Datentypzuordnungen
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 4287b125b26bc0c7233f59322c84e2ac27c0c594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758931"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457104"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB-Datentypzuordnungen
 In folgender Tabelle ist der abgeleitete [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ für Datentypen vom .NET Framework-Datenanbieter für ADO und OLE DB (<xref:System.Data.OleDb>) dargestellt. Die typisierten Accessormethoden für den <xref:System.Data.OleDb.OleDbDataReader> sind ebenfalls aufgeführt.  
@@ -18,7 +18,7 @@ In folgender Tabelle ist der abgeleitete [!INCLUDE[dnprdnshort](../../../../incl
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
 |adBoolean|DBTYPE_BOOL|Boolean|GetBoolean()|  
 |adBSTR|DBTYPE_BSTR|Zeichenfolge|GetString()|  
-|adChapter|DBTYPE_HCHAPTER|Unterstützt durch den `DataReader`. Finden Sie unter [Abrufen von Daten mittels ein "DataReader"](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
+|adChapter|DBTYPE_HCHAPTER|Unterstützt durch den `DataReader`. Finden Sie unter [Abrufen von Daten, die mit "DataReader"](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).|GetValue()|  
 |adChar|DBTYPE_STR|Zeichenfolge|GetString()|  
 |adCurrency|DBTYPE_CY|Decimal|GetDecimal()|  
 |adDate|DBTYPE_DATE|DateTime|GetDateTime()|  
@@ -47,8 +47,8 @@ In folgender Tabelle ist der abgeleitete [!INCLUDE[dnprdnshort](../../../../incl
 |adUserDefined|DBTYPE_UDT|wird nicht unterstützt||  
 |adVarNumeric|DBTYPE_VARNUMERIC|wird nicht unterstützt||  
   
- \* Für den OLE DB-Datentypen `DBTYPE_IUNKNOWN` und `DBTYPE_IDISPATCH`, der Objektverweis ist eine gemarshallte Darstellung des Zeigers.  
+ \* Für die OLE DB-Typen `DBTYPE_IUNKNOWN` und `DBTYPE_IDISPATCH`, der Objektverweis ist eine gemarshallte Darstellung des Zeigers.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

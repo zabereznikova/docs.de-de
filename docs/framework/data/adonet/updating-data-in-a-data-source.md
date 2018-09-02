@@ -5,11 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463909"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aktualisieren von Daten in einer Datenquelle
 SQL-Anweisungen, mit denen Daten geändert werden (z. B. INSERT, UPDATE oder DELETE), geben keine Zeilen zurück. Ähnlich verhält es sich mit vielen gespeicherten Prozeduren, die zwar eine Aktion durchführen, jedoch keine Zeilen zurückgeben. Zum Ausführen von Befehlen, die keine Zeilen zurückgeben, erstellen Sie eine **Befehl** Objekt mit den entsprechenden SQL-Befehl und einem **Verbindung**, einschließlich der erforderlichen **Parameter**. Führen Sie den Befehl mit der **ExecuteNonQuery** Methode der **Befehl** Objekt.  
@@ -17,7 +18,7 @@ SQL-Anweisungen, mit denen Daten geändert werden (z. B. INSERT, UPDATE oder DE
  Die **ExecuteNonQuery** Methode gibt eine ganze Zahl, die die Anzahl der Zeilen betroffen sind, durch die Anweisung oder gespeicherte Prozedur, die ausgeführt wurde. Wenn mehrere Anweisungen ausgeführt werden, entspricht der zurückgegebene Wert der Summe der Datensätze, die von allen ausgeführten Anweisungen betroffen sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel führt eine INSERT-Anweisung zum Einfügen eines Datensatzes in einer Datenbank durch **ExecuteNonQuery**.  
+ Das folgende Codebeispiel führt eine INSERT-Anweisung zum Einfügen eines Datensatzes in einer Datenbank mit **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -41,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Das folgende Codebeispiel führt die gespeicherte Prozedur, die erstellt, indem der Beispielcode im [Ausführen von Katalogoperationen](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Keine Zeilen zurückgegeben werden, von der gespeicherten Prozedur, sodass der **ExecuteNonQuery** Methode wird verwendet, aber die gespeicherte Prozedur empfängt einen Eingabeparameter und gibt einen Ausgabeparameter und einen Rückgabewert.  
+ Das folgende Codebeispiel führt die gespeicherte Prozedur erstellt, durch den Beispielcode in [Ausführen von Katalogoperationen](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Keine Zeilen zurückgegeben werden, von der gespeicherten Prozedur, sodass die **ExecuteNonQuery** Methode wird verwendet, aber die gespeicherte Prozedur empfängt einen Eingabeparameter und gibt ein Output-Parameter und einen Rückgabewert zurück.  
   
- Für die <xref:System.Data.OleDb.OleDbCommand> -Objekt, das **ReturnValue** Parameter hinzugefügt werden muss die **Parameter** Auflistung erste.  
+ Für die <xref:System.Data.OleDb.OleDbCommand> -Objekt, das **ReturnValue** muss Parameter hinzugefügt werden der **Parameter** Auflistung erste.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -94,4 +95,4 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
  [Verwenden von Befehlen zum Ändern von Daten](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

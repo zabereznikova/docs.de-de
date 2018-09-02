@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544db23abf89a20bd2f7763cfdb1256ea4a326c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441363"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468292"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS-Enumeration
 Enthält Werte, die angeben, welche Informationen über die common Language Runtime (CLR) zurückgegeben werden sollen.  
@@ -47,17 +47,17 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Gibt an, dass keine Verzeichnisinformationen enthalten sein sollen.|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|Gibt an, dass keine Versionsinformationen enthalten sein sollen.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Gibt an, dass ein Fehlerdialogfeld bei einem Fehler nicht angezeigt werden sollen.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Gibt an, dass die Auswirkungen der Aufruf der [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion mit dem SEM_FAILCRITICALERRORS-Flag überschrieben werden soll. D. h. soll ein Dialogfeld für die Installation bei einem Fehler, statt zu unterdrückenden angezeigt werden.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Gibt eine Anforderung für Informationen zu einer AMD-64-kompatible Version der Laufzeit.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Gibt eine Anforderung für Informationen zu einer IA-64-kompatible Version der Laufzeit.|  
-|`RUNTIME_INFO_REQUEST_X86`|Gibt eine Anforderung für Informationen zu einer X86-kompatible Version der Laufzeit.|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|Gibt an, dass Version Upgrade Informationen eingeschlossen werden sollen.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Gibt an, dass Verzeichnisinformationen nicht enthalten sein sollen.|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|Gibt an, dass keine Informationen zur Version enthalten sein sollen.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Gibt an, dass ein Fehlerdialogfeld bei einem Fehler nicht angezeigt werden soll.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Gibt an, dass die Auswirkungen des Aufrufs der [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) Funktion mit dem SEM_FAILCRITICALERRORS-Flag überschrieben werden soll. D. h. soll ein Dialogfeld für die Installation bei einem Fehler unterdrückt wird angezeigt werden.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Gibt eine Anforderung für Informationen zu einer AMD-64-kompatible Version der Laufzeit an.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Gibt eine Anforderung für Informationen zu einer IA-64-kompatible Version der Laufzeit an.|  
+|`RUNTIME_INFO_REQUEST_X86`|Gibt eine Anforderung für Informationen zu einer X86 kompatible Version der Laufzeit an.|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|Gibt an, dass das Upgrade Versionsinformationen eingeschlossen werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgenden Flags der Plattform-Architektur können angegebenen nur einzeln nacheinander und können nicht kombiniert werden:  
+ Die folgenden Flags der Plattform-Architektur können angegebenen nur jeweils nur ein und können nicht kombiniert werden:  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   
@@ -66,7 +66,7 @@ typedef enum {
 -   RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   

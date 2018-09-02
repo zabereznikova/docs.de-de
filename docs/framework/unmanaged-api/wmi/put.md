@@ -1,6 +1,6 @@
 ---
 title: Put-Funktion (Referenz zur nicht verwalteten API)
-description: Die Put-Funktion weist einen neuen Wert an eine benannte Eigenschaft an.
+description: Die Put-Funktion weist einen neuen Wert an eine benannte Eigenschaft.
 ms.date: 11/06/2017
 api_name:
 - Put
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460378"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43460984"
 ---
 # <a name="put-function"></a>Put-Funktion
 Legt eine benannte Eigenschaft auf einen neuen Wert fest.
@@ -47,7 +47,7 @@ HRESULT Put (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `wszName`  
 [in] Der Name der Eigenschaft. Dieser Parameter darf nicht sein `null`.
@@ -56,45 +56,45 @@ HRESULT Put (
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pVal`   
-[in] Ein Zeiger auf eine gültige `VARIANT` , wird der neue Eigenschaftswert. Wenn `pVal` ist `null` oder verweist auf eine `VARIANT` des Typs `VT_NULL`, die Eigenschaft wird festgelegt, um `null`. 
+[in] Ein Zeiger auf ein gültiges `VARIANT` , wird der neue Eigenschaftswert. Wenn `pVal` ist `null` oder verweist auf eine `VARIANT` des Typs `VT_NULL`, die Eigenschaft wird festgelegt, um `null`. 
 
 `vtType`  
-[in] Der Typ des `VARIANT` verweist `pVal`. Finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
+[in] Der Typ des `VARIANT` verweist `pVal`. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
  
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Einen oder mehrere Parameter sind ungültig. |
-|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Der Eigenschaftentyp wird nicht erkannt. Dieser Wert wird zurückgegeben, wenn Klasseninstanzen zu erstellen, wenn die Klasse bereits besteht. |
+|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
+|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein oder mehrere Parameter sind ungültig. |
+|`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Der Eigenschaftentyp wird nicht erkannt. Beim Erstellen von Klasseninstanzen, wenn die Klasse bereits vorhanden ist, wird dieser Wert zurückgegeben. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Für Instanzen: Gibt an, dass `pVal` verweist auf eine `VARIANT` mit einem falschen Typ für die Eigenschaft. <br/> Für Klassendefinitionen: die Eigenschaft bereits vorhanden ist, in der übergeordneten Klasse und der neue COM-Typ unterscheidet sich von der alten COM-Typ. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Für Instanzen: Gibt an, dass `pVal` verweist auf eine `VARIANT` mit einem falschen Typ für die Eigenschaft. <br/> Für Klassendefinitionen: die Eigenschaft, die bereits in der übergeordneten Klasse vorhanden ist, und die neue COM-Typ unterscheidet sich von der alten COM-Typ. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich. |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) Methode.
 
-Diese Funktion überschreibt immer den aktuellen Eigenschaftenwert durch ein neues. Wenn die [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) verweist auf eine Klassendefinition `Put` erstellt oder aktualisiert den Wert der Eigenschaft. Wenn [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) verweist auf eine CIM-Instanz `Put` aktualisiert den Wert der Eigenschaft nur; `Put` einen Eigenschaftswert kann nicht erstellt werden.
+Diese Funktion überschreibt immer den aktuellen Eigenschaftswert durch ein neues. Wenn die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) verweist auf eine Klassendefinition `Put` erstellt oder aktualisiert den Wert der Eigenschaft. Wenn [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) verweist auf eine CIM-Instanz, `Put` aktualisiert den Wert der Eigenschaft; nur `Put` einen Eigenschaftswert kann nicht erstellt werden.
 
-Die `__CLASS` Systemeigenschaft überschreibbar nur während der klassenerstellung, wenn er nicht leer sein kann. Alle anderen Systemeigenschaften sind schreibgeschützt.
+Die `__CLASS` Systemeigenschaft überschreibbar nur während der klassenerstellung, wenn es nicht leer sein kann. Alle anderen Systemeigenschaften sind schreibgeschützt.
 
-Ein Benutzer kann keine Eigenschaften mit Namen erstellen, die mit einem Unterstrich ("_") beginnen oder enden. Dies ist für Systemklassen und Eigenschaften reserviert.
+Einen Benutzer kann keine Eigenschaften mit Namen erstellen, die mit einem Unterstrich ("_") beginnen oder enden. Dies ist für die Systemklassen und Eigenschaften reserviert.
 
-Wenn die Eigenschaft festgelegt wird, indem Sie die `Put` Funktion, die in der übergeordneten Klasse vorhanden ist, wird der Standardwert der Eigenschaft wird geändert, es sei denn, der Eigenschaftstyp nicht den Typ der übergeordneten Klasse übereinstimmt. Wenn die Eigenschaft ist nicht vorhanden, und es kein Typenkonflikt ist, ist die Eigenschaft Ceated.
+Wenn die Eigenschaft festgelegt wird, durch die `Put` Funktion, die in der übergeordneten Klasse vorhanden ist, wird der Standardwert der Eigenschaft geändert, wenn der Eigenschaftentyp nicht den Typ der übergeordneten Klasse übereinstimmt. Wenn die Eigenschaft ist nicht vorhanden, und es ist dabei nicht um ein Typenkonflikt, ist die Eigenschaft mit erstellter.
 
-Verwenden der `vtType` Parameters nur beim Erstellen von neuer Eigenschaften in einer CIM-Klassendefinition und `pVal` ist `null` oder verweist auf eine `VARIANT` vom Typ `VT_NULL`. In diesem Fall die `vType` Parameter gibt den CIM-Typ der Eigenschaft. In allen anderen Fällen `vtType` muss 0 sein. `vtType` muss auch 0 sein, wenn das zugrunde liegende Objekt eine Instanz ist (auch wenn `Val` ist `null`), da der Typ der Eigenschaft unveränderlich ist und kann nicht geändert werden.   
+Verwenden der `vtType` Parameter nur, wenn neue Eigenschaften in der Definition einer CIM-Klasse zu erstellen und `pVal` ist `null` oder verweist auf eine `VARIANT` des Typs `VT_NULL`. In diesem Fall die `vType` Parameter gibt den CIM-Typ der Eigenschaft. In allen anderen Fällen `vtType` muss 0 sein. `vtType` muss auch 0 sein, wenn das zugrunde liegende Objekt eine Instanz ist (selbst wenn `Val` ist `null`) daran, dass der Typ der Eigenschaft unveränderlich ist und kann nicht geändert werden.   
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel finden Sie die [IWbemClassObject::Put](https://msdn.microsoft.com/library/aa391455(v=vs.85).aspx) Methode.
+Ein Beispiel finden Sie unter den [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

@@ -9,16 +9,16 @@ ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3008b710a6fcaba476fd8c425beaa8eb11f9e52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409467"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470076"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den DataItem-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „DataItem“. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] umfasst ein Steuerelementtyp eine Reihe von Bedingungen, die ein Steuerelement erfüllen muss, damit die <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> -Eigenschaft verwendet werden kann. Die Bedingungen schließen bestimmte Richtlinien für [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftswerte und Steuerelementmuster ein.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33409467"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Steuerelementansicht|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur – Inhaltsansicht|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Gruppe "Contoso" (Table, Grid)<br />-DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable.doc"<br />-Bearbeiten Sie "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />– Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />– Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-Gruppe "Contoso" (Table, Grid)<br />-DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable.doc"<br />-Bearbeiten Sie "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />– Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />– Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
+|-Die Gruppe "Contoso" (Table, Grid)<br />-DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable.doc"<br />-Edit "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />-Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />-Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-Die Gruppe "Contoso" (Table, Grid)<br />-DataItem "Accounts Receivable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable.doc"<br />-Edit "Name" (TableItem, GridItem, Value "Accounts Receivable.doc")<br />-Edit "Date modified" (TableItem, GridItem, Value "8/25/2006 3:29 PM")<br />-Edit "Size" (GridItem, TableItem, Value "11.0 KB)<br />-DataItem "Accounts Payable.doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
   
  Wenn ein Raster eine Liste wählbarer Elemente darstellt, können die entsprechenden Benutzeroberflächenelemente mit dem Steuerelementtyp „ListItem“ statt mit dem Steuerelementtyp „DataItem“ verfügbar gemacht werden. Im vorherigen Beispiel können die DataItem-Elemente („Accounts Receivable.doc“ und „Accounts Payable.doc“) unter Group („Contoso“) verbessert werden, wenn Sie diese als ListItem-Steuerelementtypen verfügbar machen, da dieser Typ bereits das Steuerelementmuster „SelectionItem“ unterstützt.  
   

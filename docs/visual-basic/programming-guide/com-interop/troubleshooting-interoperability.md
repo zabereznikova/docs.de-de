@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 65005dbbe42f52b3159c8e595972dace3064f986
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5b92eaf56e337b8a8128bb3a0706ecdb76177c0e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332656"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472006"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Problembehandlung bei Interoperabilität (Visual Basic)
 Wenn Sie die Interoperabilität zwischen COM und verwalteten Code die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], können Sie eine oder mehrere der folgenden Probleme auftreten.  
@@ -130,7 +130,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (Type Library Exporter-Tool)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Tlbexp.exe (Type Library Exporter-Tool)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md)  
  [Globaler Assemblycache](../../../framework/app-domains/gac.md)

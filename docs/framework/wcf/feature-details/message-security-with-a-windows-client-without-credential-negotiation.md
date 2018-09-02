@@ -7,20 +7,20 @@ dev_langs:
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f46ea28fe0827e7919b62550492d66a51a125fc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496600"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470050"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung
-Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Dienst, die durch das Kerberos-Protokoll gesichert.  
+Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und-Dienst gesichert durch das Kerberos-Protokoll.  
   
  Sowohl der Dienst als auch der Client befinden sich in der gleichen Domäne bzw. in den gleichen vertrauenswürdigen Domänen.  
   
 > [!NOTE]
->  Der Unterschied zwischen diesem Szenario und [Nachrichtensicherheit mit einem Windows-Client](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) ist, dass dieses Szenario die Dienstanmeldeinformationen mit dem Dienst vor dem Senden der Anwendungsnachricht nicht verhandelt werden. Da hierzu das Kerberos-Protokoll erforderlich ist, muss für dieses Szenario auch eine Windows-Domänenumgebung vorhanden sein.  
+>  Der Unterschied zwischen diesem Szenario und [Nachrichtensicherheit mit einem Windows-Client](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) besteht darin, dass dieses Szenario die Dienstanmeldeinformationen mit dem Dienst vor dem Senden der Anwendungsnachricht keine Aushandlung ist. Da hierzu das Kerberos-Protokoll erforderlich ist, muss für dieses Szenario auch eine Windows-Domänenumgebung vorhanden sein.  
   
  ![Nachrichtensicherheit ohne Anmeldeinformationen-Aushandlung](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")  
   
@@ -48,11 +48,11 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 > [!NOTE]
 >  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss das Benutzerkonto des Diensts Zugriff auf den bei der Active Directory-Domäne registrierten Dienstprinzipalnamen (Service Principal Name, SPN) haben. Dazu gibt es zwei Möglichkeiten:  
   
-1.  Verwenden Sie das `NetworkService`-Konto oder das `LocalSystem`-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf die Computer-SPN, die hergestellt wird haben, wenn der Computer die Active Directory-Domäne beitritt, generiert WCF automatisch den richtige SPN-Element im Endpunkt des Diensts in den Dienstmetadaten (Web Services Description Language oder WSDL).  
+1.  Verwenden Sie das `NetworkService`-Konto oder das `LocalSystem`-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf den Computer-SPN haben, die festgelegt wird, wenn der Computer der Active Directory-Domäne beigetreten ist, generiert WCF automatisch das zutreffende SPN-Element innerhalb der Endpunkt des Diensts in den Dienstmetadaten (Web Services Description Language oder WSDL).  
   
-2.  Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. In diesem Fall muss für das Domänenkonto ein SPN eingerichtet werden. Eine mögliche Vorgehensweise hierzu besteht in der Verwendung des Tools Setspn.exe. Sobald der SPN für das Konto des Diensts erstellt wird, konfigurieren Sie WCF um, dass dieser SPN für den Dienst Clients über seine Metadaten (WSDL) veröffentlicht. Legen Sie hierzu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest. Im folgenden Beispiel wird die Identität programmgesteuert veröffentlicht:  
+2.  Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. In diesem Fall muss für das Domänenkonto ein SPN eingerichtet werden. Eine mögliche Vorgehensweise hierzu besteht in der Verwendung des Tools Setspn.exe. Nachdem Sie der SPN für das Dienstkonto erstellt wird, konfigurieren Sie WCF, damit dieser SPN für die Clients des Dienstes über seine Metadaten (WSDL) veröffentlicht. Legen Sie hierzu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest. Im folgenden Beispiel wird die Identität programmgesteuert veröffentlicht:  
   
- Weitere Informationen zu SPNs, die Kerberos-Protokoll und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen über Identitäten Endpunkt finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Weitere Informationen zu SPNs, Kerberos-Protokoll und Active Directory, finden Sie unter [Kerberos Technical Supplement für Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen zu endpunktidentitäten finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -108,15 +108,15 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
  Der folgende Code dient zum Konfigurieren des Clients. Der Sicherheitsmodus ist auf Nachrichtensicherheit, der Typ der Clientanmeldeinformationen auf Windows festgelegt. Die Eigenschaften <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> und <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> sind auf `false` festgelegt.  
   
 > [!NOTE]
->  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss der Client vor dem Starten der Kommunikation mit dem Dienst mit dem Konto-SPN des Diensts konfiguriert werden. Der SPN wird vom Client zum Abrufen des Kerberos-Tokens verwendet, um damit die Kommunikation mit dem Dienst zu authentifizieren und zu sichern. Im folgenden Beispiel wird das Konfigurieren des Clients mit dem SPN des Diensts veranschaulicht. Bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) um den Client zu generieren, den SPN des Diensts wird automatisch weitergegeben werden an den Client aus Dienstmetadaten (WSDL), wenn die Metadaten des Diensts enthält Diese Informationen. Weitere Informationen zur Konfiguration des Diensts, um einen SPN in den Metadaten des Diensts eingeschlossen werden sollen finden Sie unter im Abschnitt "Dienst" weiter unten in diesem Thema.  
+>  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss der Client vor dem Starten der Kommunikation mit dem Dienst mit dem Konto-SPN des Diensts konfiguriert werden. Der SPN wird vom Client zum Abrufen des Kerberos-Tokens verwendet, um damit die Kommunikation mit dem Dienst zu authentifizieren und zu sichern. Im folgenden Beispiel wird das Konfigurieren des Clients mit dem SPN des Diensts veranschaulicht. Bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Generieren des Clients, der SPN des Diensts wird automatisch weitergegeben werden an den Client aus den Dienstmetadaten (WSDL), wenn die Metadaten des Diensts enthält. Diese Informationen. Weitere Informationen zum Konfigurieren des Diensts, der SPN in den Metadaten des Diensts enthält finden Sie unter "Dienst" im Abschnitt weiter unten in diesem Thema.  
 >   
->  Weitere Informationen über SPNs, Kerberos und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen über Identitäten Endpunkt finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) Thema.  
+>  Weitere Informationen zu SPNs, Kerberos und Active Directory finden Sie unter [Kerberos Technical Supplement für Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen zu endpunktidentitäten finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) Thema.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  
   
 ### <a name="configuration"></a>Konfiguration  
- Der folgende Code dient zum Konfigurieren des Clients. Beachten Sie, dass die [ \<ServicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element muss festgelegt werden, um den SPN des Diensts überein, wie für das Dienstkonto in Active Directory-Domäne registriert.  
+ Der folgende Code dient zum Konfigurieren des Clients. Beachten Sie, dass die [ \<ServicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) -Element muss entsprechend der SPN des Diensts für das Dienstkonto in Active Directory-Domäne registrierten festgelegt werden.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -151,4 +151,4 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

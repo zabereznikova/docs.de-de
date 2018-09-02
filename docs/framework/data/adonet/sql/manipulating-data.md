@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 57d7342ab88bcafbb8bcd1d288254b5e81846975
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363113"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466296"
 ---
 # <a name="manipulating-data"></a>Bearbeiten von Daten
-Vor der Einführung von MARS (Multiple Active Result Set) mussten Entwickler zum Lösen bestimmter Szenarien entweder mehrere Verbindungen oder serverseitige Cursor verwenden. Darüber hinaus bei der Verwendung mehrerer Verbindungen in einem Transaktionskontext waren gebundene Verbindungen (mit **Sp_getbindtoken** und **Sp_bindsession**) sind erforderlich. In den folgenden Szenarien wird veranschaulicht, wie eine Verbindung mit aktivierter MARS-Funktion anstelle mehrerer Verbindungen verwendet werden kann.  
+Vor der Einführung von MARS (Multiple Active Result Set) mussten Entwickler zum Lösen bestimmter Szenarien entweder mehrere Verbindungen oder serverseitige Cursor verwenden. Darüber hinaus, wenn mehrere Verbindungen in einem Transaktionskontext verwendet wurden, gebundene Verbindungen (mit **Sp_getbindtoken** und **Sp_bindsession**) waren erforderlich. In den folgenden Szenarien wird veranschaulicht, wie eine Verbindung mit aktivierter MARS-Funktion anstelle mehrerer Verbindungen verwendet werden kann.  
   
 ## <a name="using-multiple-commands-with-mars"></a>Verwenden mehrerer Befehle mit MARS  
  In der folgenden Konsolenanwendung wird veranschaulicht, wie bei aktivierter MARS-Funktion zwei <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit zwei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt verwendet werden.  
   
 ### <a name="example"></a>Beispiel  
- Im Beispiel wird geöffnet, eine einzelne Verbindung mit der **AdventureWorks** Datenbank. Mithilfe eines <xref:System.Data.SqlClient.SqlCommand>-Objekts wird ein <xref:System.Data.SqlClient.SqlDataReader> erstellt. Während der Verwendung des Readers wird ein zweiter <xref:System.Data.SqlClient.SqlDataReader> geöffnet, der Daten aus dem ersten <xref:System.Data.SqlClient.SqlDataReader> als Eingabe für die WHERE-Klausel für den zweiten Reader verwendet.  
+ Im Beispiel wird geöffnet, eine einzige Verbindung mit der **AdventureWorks** Datenbank. Mithilfe eines <xref:System.Data.SqlClient.SqlCommand>-Objekts wird ein <xref:System.Data.SqlClient.SqlDataReader> erstellt. Während der Verwendung des Readers wird ein zweiter <xref:System.Data.SqlClient.SqlDataReader> geöffnet, der Daten aus dem ersten <xref:System.Data.SqlClient.SqlDataReader> als Eingabe für die WHERE-Klausel für den zweiten Reader verwendet.  
   
 > [!NOTE]
->  Im folgenden Beispiel wird das Beispiel **AdventureWorks** mit SQL Server-Datenbank. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+>  Im folgenden Beispiel wird das Beispiel **AdventureWorks** Datenbank in SQL Server enthalten. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
   
 ```vb  
 Option Strict On  
@@ -164,13 +164,13 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>Lesen und Aktualisieren von Daten mit MARS  
- Mit MARS ist es möglich, eine Verbindung sowohl für Lesevorgänge als auch für DML-Vorgänge (Data Manipulation Language) mit mehr als einem ausstehenden Vorgang zu verwenden. Mit dieser Funktion müssen Anwendungen nicht mehr auf Fehler im Zusammenhang mit ausgelasteten Verbindungen reagieren. Darüber hinaus können mit MARS serverseitige Cursor ersetzt werden, durch die i. d. R. mehr Ressourcen verbraucht werden. Schließlich, da mehrere Vorgänge über eine einzelne Verbindung ausgeführt werden können, sie können gemeinsam verwenden, Hierdurch entfällt die Notwendigkeit, verwenden die gleichen bereits verwendeten Transaktionskontext **Sp_getbindtoken** und **Sp_bindsession** systemgespeicherte Prozeduren.  
+ Mit MARS ist es möglich, eine Verbindung sowohl für Lesevorgänge als auch für DML-Vorgänge (Data Manipulation Language) mit mehr als einem ausstehenden Vorgang zu verwenden. Mit dieser Funktion müssen Anwendungen nicht mehr auf Fehler im Zusammenhang mit ausgelasteten Verbindungen reagieren. Darüber hinaus können mit MARS serverseitige Cursor ersetzt werden, durch die i. d. R. mehr Ressourcen verbraucht werden. Abschließend da mehrere Vorgänge für eine einzelne Verbindung ausgeführt werden können, sie können die gemeinsame Nutzung gemeinsamer Transaktionskontext, verwenden Sie die überflüssig **Sp_getbindtoken** und **Sp_bindsession** gespeicherten Verfahren.  
   
 ### <a name="example"></a>Beispiel  
- In der folgenden Konsolenanwendung wird veranschaulicht, wie bei aktivierter MARS-Funktion zwei <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit drei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt verwendet werden. Mit dem ersten Befehlsobjekt wird eine Liste von Anbietern abgerufen, deren Bonität 5 ist. Das zweite Befehlsobjekt verwendet die von einem <xref:System.Data.SqlClient.SqlDataReader> bereitgestellte Anbieter-ID, um den zweiten <xref:System.Data.SqlClient.SqlDataReader> mit allen Produkten für den bestimmten Anbieter zu laden. Die einzelnen Produktdatensätze werden vom zweiten <xref:System.Data.SqlClient.SqlDataReader> aufgerufen. Wird eine Berechnung ausgeführt, um zu bestimmen, welche die neue **OnOrderQty** werden sollte. Das dritte Command-Objekt wird dann zum Aktualisieren der **ProductVendor** Tabelle mit dem neuen Wert. Der gesamte Prozess findet in einer einzigen Transaktion statt, für die am Ende ein Rollback ausgeführt wird.  
+ In der folgenden Konsolenanwendung wird veranschaulicht, wie bei aktivierter MARS-Funktion zwei <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit drei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt verwendet werden. Mit dem ersten Befehlsobjekt wird eine Liste von Anbietern abgerufen, deren Bonität 5 ist. Das zweite Befehlsobjekt verwendet die von einem <xref:System.Data.SqlClient.SqlDataReader> bereitgestellte Anbieter-ID, um den zweiten <xref:System.Data.SqlClient.SqlDataReader> mit allen Produkten für den bestimmten Anbieter zu laden. Die einzelnen Produktdatensätze werden vom zweiten <xref:System.Data.SqlClient.SqlDataReader> aufgerufen. Wird eine Berechnung ausgeführt, um zu bestimmen, welche die neue **OnOrderQty** werden sollte. Das dritte Command-Objekt wird dann zum Aktualisieren der **ProductVendor** Tabelle mit den neuen Wert. Der gesamte Prozess findet in einer einzigen Transaktion statt, für die am Ende ein Rollback ausgeführt wird.  
   
 > [!NOTE]
->  Im folgenden Beispiel wird das Beispiel **AdventureWorks** mit SQL Server-Datenbank. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+>  Im folgenden Beispiel wird das Beispiel **AdventureWorks** Datenbank in SQL Server enthalten. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
   
 ```vb  
 Option Strict On  
@@ -404,4 +404,4 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>Siehe auch  
  [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

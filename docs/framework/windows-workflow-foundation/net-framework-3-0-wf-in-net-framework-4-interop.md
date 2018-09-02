@@ -2,18 +2,18 @@
 title: Verwenden von .NET Framework 3.0-WF-Aktivitäten unter .NET Framework 4 mit der Interop-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 8110c86ab8bf5c557dbf8eb361d4ead2e256a3b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518410"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467504"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Verwenden von .NET Framework 3.0-WF-Aktivitäten unter .NET Framework 4 mit der Interop-Aktivität
 Die <xref:System.Activities.Statements.Interop>-Aktivität ist eine [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5)-Aktivität, die eine [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5)-Aktivität in einem [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflow umschließt. Die WF 3-Aktivität kann eine einzelne Blattaktivität oder eine ganze Aktivitätsstruktur darstellen. Die Ausführung (einschließlich Abbruch und Ausnahmebehandlung) und die Persistenz der [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Aktivität treten im Kontext der [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflowinstanz auf, die ausgeführt wird.  
   
 > [!NOTE]
->  Die <xref:System.Activities.Statements.Interop> Aktivität wird nicht in der Toolbox des Workflow-Designer angezeigt, es sei denn, das Projekt des Workflows dessen **Zielframework** eingestellt **.NET Framework 4.5**.  
+>  Die <xref:System.Activities.Statements.Interop> Aktivität wird in der Toolbox des Workflow-Designer nicht angezeigt, es sei denn, das Projekt des Workflows der seine **Zielframework** Einstellung **.NET Framework 4.5**.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Kriterien für die Verwendung einer WF 3-Aktivität mit einer Interop-Aktivität  
  Damit eine WF 3-Aktivität innerhalb einer <xref:System.Activities.Statements.Interop>-Aktivität erfolgreich ausgeführt werden kann, müssen die folgenden Kriterien erfüllt werden:  
@@ -24,12 +24,12 @@ Die <xref:System.Activities.Statements.Interop>-Aktivität ist eine [!INCLUDE[ne
   
 -   Die WF 3-Aktivität muss über einen öffentlichen Standardkonstruktor verfügen.  
   
--   Aufgrund von Einschränkungen bei den Schnittstellentypen, die die <xref:System.Activities.Statements.Interop>-Aktivität unterstützen kann, können das <xref:System.Workflow.Activities.HandleExternalEventActivity>-Objekt und das <xref:System.Workflow.Activities.CallExternalMethodActivity>-Objekt nicht direkt verwendet werden. Abgeleitete Aktivitäten, die mit dem Tool für Workflow-Kommunikationsaktivitäten (WCA.exe) erstellt wurden, können jedoch verwendet werden. Finden Sie unter [Windows Workflow Foundation – Tools](http://go.microsoft.com/fwlink/?LinkId=178889) Details.  
+-   Aufgrund von Einschränkungen bei den Schnittstellentypen, die die <xref:System.Activities.Statements.Interop>-Aktivität unterstützen kann, können das <xref:System.Workflow.Activities.HandleExternalEventActivity>-Objekt und das <xref:System.Workflow.Activities.CallExternalMethodActivity>-Objekt nicht direkt verwendet werden. Abgeleitete Aktivitäten, die mit dem Tool für Workflow-Kommunikationsaktivitäten (WCA.exe) erstellt wurden, können jedoch verwendet werden. Finden Sie unter [Windows Workflow Foundation – Tools](https://go.microsoft.com/fwlink/?LinkId=178889) Details.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Konfigurieren einer WF 3-Aktivität innerhalb einer Interop-Aktivität  
  Um Daten zu konfigurieren und in bzw. aus einer WF 3-Aktivität über die Grenzen der Interoperation zu übergeben, werden die Eigenschaften und die Metadateneigenschaften der WF 3-Aktivität von der <xref:System.Activities.Statements.Interop>-Aktivität verfügbar gemacht. Die Metadateneigenschaften der WF 3-Aktivität (z. B. <xref:System.Workflow.ComponentModel.Activity.Name%2A>) werden über die <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A>-Auflistung verfügbar gemacht. Dies ist eine Auflistung von Name-Wert-Paaren, mit denen die Werte für die Metadateneigenschaften der WF 3-Aktivität definiert werden. Eine Metadateneigenschaft ist eine Eigenschaft, die von der Abhängigkeitseigenschaft unterstützt wird, für die das <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata>-Kennzeichen festgelegt ist.  
   
- Die Eigenschaften der WF 3-Aktivität werden über die <xref:System.Activities.Statements.Interop.ActivityProperties%2A>-Auflistung verfügbar gemacht. Dies ist ein Satz von Name-Wert-Paaren, wobei jeder Wert ein <xref:System.Activities.Argument>-Objekt ist, mit dem Argumente für die Eigenschaften der WF 3-Aktivität definiert werden. Da die Richtung der Eigenschaft einer WF 3-Aktivität nicht abgeleitet werden kann, wird jede Eigenschaft Diagnoseinformationen werden als ein <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument> Paar. Abhängig von der Verwendung der Aktivitätseigenschaft empfiehlt es sich, einen <xref:System.Activities.InArgument>-Eintrag, einen <xref:System.Activities.OutArgument>-Eintrag oder beides bereitzustellen. Der erwartete Name des <xref:System.Activities.InArgument>-Eintrags in der Auflistung entspricht dem Namen der Eigenschaft, wie sie für die WF 3-Aktivität definiert wurde. Der erwartete Name des der <xref:System.Activities.OutArgument> Eintrag in der Auflistung besteht aus einer Verkettung des Namens der Eigenschaft und die Zeichenfolge "Out".  
+ Die Eigenschaften der WF 3-Aktivität werden über die <xref:System.Activities.Statements.Interop.ActivityProperties%2A>-Auflistung verfügbar gemacht. Dies ist ein Satz von Name-Wert-Paaren, wobei jeder Wert ein <xref:System.Activities.Argument>-Objekt ist, mit dem Argumente für die Eigenschaften der WF 3-Aktivität definiert werden. Da die Richtung der Eigenschaft einer WF 3-Aktivität nicht abgeleitet werden kann, wird jede Eigenschaft angezeigt, als ein <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument> Paar. Abhängig von der Verwendung der Aktivitätseigenschaft empfiehlt es sich, einen <xref:System.Activities.InArgument>-Eintrag, einen <xref:System.Activities.OutArgument>-Eintrag oder beides bereitzustellen. Der erwartete Name des <xref:System.Activities.InArgument>-Eintrags in der Auflistung entspricht dem Namen der Eigenschaft, wie sie für die WF 3-Aktivität definiert wurde. Der erwartete Name des der <xref:System.Activities.OutArgument> Eintrag in der Auflistung ist eine Verkettung aus dem Namen der Eigenschaft und die Zeichenfolge "Out".  
   
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Einschränkungen bei der Verwendung einer WF 3-Aktivität innerhalb einer Interop-Aktivität  
  Die vom System bereitgestellten WF 3-Aktivitäten können nicht direkt in einer <xref:System.Activities.Statements.Interop>-Aktivität umschlossen werden. Bei einigen WF 3-Aktivitäten ist der Grund hierfür, dass es eine analoge WF 4.5-Aktivität wie z. B. <xref:System.Workflow.Activities.DelayActivity> gibt. Bei anderen rührt dies daher, dass die Funktionalität der Aktivität nicht unterstützt wird. Viele vom System bereitgestellte WF 3-Aktivitäten können in Workflows verwendet werden, die von der <xref:System.Activities.Statements.Interop>-Aktivität umschlossen werden, jedoch mit folgenden Einschränkungen:  

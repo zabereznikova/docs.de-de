@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: bec890f7937965c314ccf16b4142905c52ceff49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bba86801ec4971e884cb4703d7a6323a2e94fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546935"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455743"
 ---
 # <a name="sample-opentype-font-pack"></a>OpenType-Beispielschriftartenpaket
 Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten, die mit [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] verteilt sind. Die Beispielschriftarten unterstützen erweiterte [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Features, die von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwendet werden können .  
@@ -34,10 +34,10 @@ Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA#tla_opentype](../.
   
  Die folgende Abbildung zeigt, wie die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten aussehen.  
   
- ![Liste der Schriftartennamen im Beispiel-Schriftartpaket](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
+ ![Liste der Schriftartennamen im beispielschriftartpaket](../../../../docs/framework/wpf/advanced/media/samplefontpack01.gif "samplefontpack01")  
 Schriftarten im OpenType-Schriftartenpaket  
   
- Die Beispielschriftarten werden unter der Lizenz von Ascender Corporation bereitgestellt. Ascender ist ein Anbieter von erweiterten Schriftartprodukten. Auf der [Ascender Corporation Website](http://go.microsoft.com/fwlink/?LinkId=182627) finden Sie erweiterte oder benutzerdefinierte Versionen, um die Beispielschriftarten zu lizenzieren.  
+ Die Beispielschriftarten werden unter der Lizenz von Ascender Corporation bereitgestellt. Ascender ist ein Anbieter von erweiterten Schriftartprodukten. Auf der [Ascender Corporation Website](https://go.microsoft.com/fwlink/?LinkId=182627) finden Sie erweiterte oder benutzerdefinierte Versionen, um die Beispielschriftarten zu lizenzieren.  
   
 > [!NOTE]
 >  Aus diesem Grund liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anders verteilen.  
@@ -46,7 +46,7 @@ Schriftarten im OpenType-Schriftartenpaket
 ## <a name="installing-the-fonts"></a>Installieren der Schriftarten  
  Sie haben die Möglichkeit zum Installieren der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Beispielschriftarten auf das [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Standardschriftartenverzeichnis **\WINDOWS\Fonts**. Verwenden Sie die Systemsteuerung „Schriftarten“, um die Schriftarten zu installieren. Sobald sich diese Schriftarten auf Ihrem Computer befinden, können alle Anwendungen darauf zugreifen, die auf die [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Standardschriftarten verweisen. Sie können eine repräsentative Anzahl an Zeichen in mehreren Schriftgraden anzeigen, indem Sie doppelt auf die Schriftartendatei klicken. Der folgende Screenshot zeigt die Schriftartendatei Lindsey, Linds.ttf.  
   
- ![Lindsey-Schriftart &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Schriftart Lindsey &#40;OpenType&#41;](../../../../docs/framework/wpf/advanced/media/typographyinwpf-04.png "TypographyInWPF_04")  
 Anzeigen der Schriftart Lindsey  
   
 <a name="using_the_fonts"></a>   

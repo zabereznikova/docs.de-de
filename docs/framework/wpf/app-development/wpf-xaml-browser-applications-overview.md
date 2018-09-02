@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: cdd636a1854b891605abadaf31b1667e235eea92
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253197"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462478"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43253197"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Erstellen einer neuen XAML-Browseranwendung (XBAP)  
- Die einfachste Möglichkeit zum Erstellen eines neuen XBAP-Projekts ist mit Microsoft Visual Studio. Wenn Sie ein neues Projekt erstellen, wählen Sie **WPF-Browseranwendung** aus der Liste der Vorlagen aus. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Browseranwendungsprojekts](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Die einfachste Möglichkeit zum Erstellen eines neuen XBAP-Projekts ist mit Microsoft Visual Studio. Wenn Sie ein neues Projekt erstellen, wählen Sie **WPF-Browseranwendung** aus der Liste der Vorlagen aus. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Browseranwendungsprojekts](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  Wenn Sie das XBAP-Projekt ausführen, wird es in einem Browserfenster geöffnet, nicht in einem eigenständigen Fenster. Wenn Sie die XBAP aus Visual Studio debuggen, wird die Anwendung mit Internetzonenberechtigung ausgeführt und löst daher Sicherheitsausnahmen aus, wenn diese Berechtigungen überschritten werden. Weitere Informationen finden Sie unter[ Sicherheit (WPF)](../../../../docs/framework/wpf/security-wpf.md) und [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "43253197"
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>Kommunizieren mit der Hostwebseite  
- Wenn die Anwendung in einem HTML-Frame gehostet wird, können Sie mit der Webseite kommunizieren, die die XBAP enthält. Sie dazu die <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> Eigenschaft <xref:System.Windows.Interop.BrowserInteropHelper>. Diese Eigenschaft gibt ein Skriptobjekt zurück, das das HTML-Fenster darstellt. Sie können dann auf die Eigenschaften, Methoden und Ereignisse auf dem [Fensterobjekt](http://go.microsoft.com/fwlink/?LinkId=160274) mit regulärer Punktsyntax zugreifen. Sie können auch auf Skriptmethoden und globale Variablen zugreifen. Im folgenden Beispiel wird veranschaulicht, wie Sie das Skriptobjekt abrufen und den Browser schließen.  
+ Wenn die Anwendung in einem HTML-Frame gehostet wird, können Sie mit der Webseite kommunizieren, die die XBAP enthält. Sie dazu die <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> Eigenschaft <xref:System.Windows.Interop.BrowserInteropHelper>. Diese Eigenschaft gibt ein Skriptobjekt zurück, das das HTML-Fenster darstellt. Sie können dann auf die Eigenschaften, Methoden und Ereignisse auf dem [Fensterobjekt](https://go.microsoft.com/fwlink/?LinkId=160274) mit regulärer Punktsyntax zugreifen. Sie können auch auf Skriptmethoden und globale Variablen zugreifen. Im folgenden Beispiel wird veranschaulicht, wie Sie das Skriptobjekt abrufen und den Browser schließen.  
   
  [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
@@ -176,7 +176,7 @@ ms.locfileid: "43253197"
 > [!NOTE]
 >  Das in der obigen Tabelle beschriebene Verhalten gilt für vollständig vertrauenswürdige XBAPs, die nicht dem ClickOnce Trusted-Bereitstellungsmodell folgen.  
   
- Es wird empfohlen, dass Sie das ClickOnce Trusted-Bereitstellungsmodell zum Bereitstellen einer vollständig vertrauenswürdigen XBAP verwenden. Mit diesem Modell können Sie der XBAP unabhängig von der Sicherheitszone automatisch die volle Vertrauenswürdigkeit gewähren lassen, sodass der Benutzer nicht aufgefordert wird. Als Teil dieses Modells müssen Sie die Anwendung mit einem Zertifikat für einen vertrauenswürdigen Verleger signieren. Weitere Informationen finden Sie unter [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview) und [Introduction to Code Signing (Einführung in die Codesignatur)](http://go.microsoft.com/fwlink/?LinkId=166327).  
+ Es wird empfohlen, dass Sie das ClickOnce Trusted-Bereitstellungsmodell zum Bereitstellen einer vollständig vertrauenswürdigen XBAP verwenden. Mit diesem Modell können Sie der XBAP unabhängig von der Sicherheitszone automatisch die volle Vertrauenswürdigkeit gewähren lassen, sodass der Benutzer nicht aufgefordert wird. Als Teil dieses Modells müssen Sie die Anwendung mit einem Zertifikat für einen vertrauenswürdigen Verleger signieren. Weitere Informationen finden Sie unter [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview) und [Introduction to Code Signing (Einführung in die Codesignatur)](https://go.microsoft.com/fwlink/?LinkId=166327).  
   
 <a name="xbap_start_time_performance_considerations"></a>   
 ## <a name="xbap-start-time-performance-considerations"></a>Überlegungen zur XBAP-Startzeitleistung  

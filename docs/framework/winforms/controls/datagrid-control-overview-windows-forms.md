@@ -20,11 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 1849fd0d81b00f1fa351d2a8cf1d2ed567e04401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462463"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Übersicht über das DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -51,7 +52,7 @@ Ein DataGrid-Steuerelement mit einer Bindung an Daten in mehreren Tabellen
 ## <a name="binding-data-to-the-control"></a>Binden von Daten an das Steuerelement  
  Damit das <xref:System.Windows.Forms.DataGrid>-Steuerelement funktioniert, muss es zur Entwurfszeit mit der <xref:System.Windows.Forms.DataGrid.DataSource%2A>-Eigenschaft und der <xref:System.Windows.Forms.DataGrid.DataMember%2A>-Eigenschaft oder zur Laufzeit mit der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>-Methode an eine Datenquelle gebunden werden. Diese Bindung verweist das <xref:System.Windows.Forms.DataGrid>-Steuerelement auf ein instanziiertes Datenquellenobjekt, beispielsweise auf ein <xref:System.Data.DataSet> oder eine <xref:System.Data.DataTable>. Das <xref:System.Windows.Forms.DataGrid>-Steuerelement zeigt die Ergebnisse der für die Daten ausgeführten Aktionen an. Die meisten datenspezifischen Aktionen werden nicht vom <xref:System.Windows.Forms.DataGrid>-Steuerelement, sondern von der Datenquelle ausgeführt.  
   
- Wenn die Daten im gebundenen DataSet auf beliebige Weise aktualisiert werden, spiegelt das <xref:System.Windows.Forms.DataGrid>-Steuerelement die Änderungen wider. Wenn das Datenraster und dessen Tabellen- und Spaltenformate haben die `ReadOnly` -Eigenschaftensatz auf `false`, können die Daten im Dataset aktualisiert werden, über die <xref:System.Windows.Forms.DataGrid> Steuerelement.  
+ Wenn die Daten im gebundenen DataSet auf beliebige Weise aktualisiert werden, spiegelt das <xref:System.Windows.Forms.DataGrid>-Steuerelement die Änderungen wider. Wenn das Datenraster und dessen Tabellen- und Spaltenformate haben die `ReadOnly` -Eigenschaft auf festgelegt `false`, die Daten in Datasets können aktualisiert werden, über die <xref:System.Windows.Forms.DataGrid> Steuerelement.  
   
  Es kann jeweils nur eine Tabelle im <xref:System.Windows.Forms.DataGrid> angezeigt werden. Wenn zwischen Tabellen Beziehungen zwischen über- und untergeordneten Elementen definiert sind, kann der Benutzer zwischen den verknüpften Tabellen navigieren, um die im <xref:System.Windows.Forms.DataGrid>-Steuerelement anzuzeigende Tabelle auszuwählen. Informationen zum Binden einer <xref:System.Windows.Forms.DataGrid> die Steuerung an eine [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] -Datenquelle zur Entwurfszeit oder zur Laufzeit finden Sie unter [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
@@ -89,7 +90,7 @@ Ein DataGrid-Steuerelement mit einer Bindung an Daten in mehreren Tabellen
 |Mehrere verknüpfte Tabellen|Im Raster kann eine Strukturansicht angezeigt werden, in der Tabellen ausgewählt werden können. Sie können aber auch angeben, dass im Raster die übergeordnete Tabelle angezeigt werden soll. Mithilfe von Datensätzen in der übergeordneten Tabelle können Benutzer zu den entsprechenden untergeordneten Zeilen navigieren.|  
   
 > [!NOTE]
->  Tabellen in einem DataSet werden mithilfe eines <xref:System.Data.DataRelation>-Objekts verknüpft.  Siehe auch [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" Beziehungen in Datasets](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) oder [Beziehungen in Datasets](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Tabellen in einem DataSet werden mithilfe eines <xref:System.Data.DataRelation>-Objekts verknüpft.  Siehe auch [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" Beziehungen in Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) oder [Beziehungen in Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Wenn das <xref:System.Windows.Forms.DataGrid>-Steuerelement eine Tabelle anzeigt und die <xref:System.Windows.Forms.DataGrid.AllowSorting%2A>-Eigenschaft auf `true` festgelegt ist, können die Daten durch Klicken auf die Spaltenheader sortiert werden. Der Benutzer kann auch Zeilen hinzufügen und Zellen bearbeiten.  
   
@@ -100,7 +101,7 @@ Ein DataGrid-Steuerelement mit einer Bindung an Daten in mehreren Tabellen
   
  Auf jede <xref:System.Windows.Forms.DataGridTableStyle>-Eigenschaft, die dem <xref:System.Windows.Forms.DataGrid>-Steuerelement zugeordnet ist, kann über <xref:System.Windows.Forms.GridTableStylesCollection> zugegriffen werden. Die <xref:System.Windows.Forms.GridTableStylesCollection> kann im Designer mit dem <xref:System.Windows.Forms.DataGridTableStyle>-Auflistungs-Editor oder programmgesteuert über die <xref:System.Windows.Forms.DataGrid.TableStyles%2A>-Eigenschaft des <xref:System.Windows.Forms.DataGrid>-Steuerelements bearbeitet werden.  
   
- ![Im DataGrid-Steuerelement enthaltenen Objekte](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
+ ![Im DataGrid-Steuerelement enthaltene Objekte](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
 In der folgenden Abbildung sind die im DataGrid-Steuerelement enthaltenen Objekte dargestellt.  
   
  Tabellen- und Spaltenformate werden mit <xref:System.Data.DataTable>- und <xref:System.Data.DataColumn>-Objekten synchronisiert, indem ihre `MappingName`-Eigenschaften auf die entsprechende <xref:System.Data.DataTable.TableName%2A>-Eigenschaft und die <xref:System.Data.DataColumn.ColumnName%2A>-Eigenschaft festgelegt werden. Wenn ein <xref:System.Windows.Forms.DataGridTableStyle> ohne Spaltenformate einem <xref:System.Windows.Forms.DataGrid>-Steuerelement hinzugefügt wird, das an eine gültige Datenquelle gebunden ist, und die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>-Eigenschaft dieses Tabellenformats auf eine gültige <xref:System.Data.DataTable.TableName%2A>-Eigenschaft festgelegt ist, wird für dieses Tabellenformat eine Auflistung von <xref:System.Windows.Forms.DataGridColumnStyle>-Objekten erstellt. Für jede <xref:System.Data.DataColumn>, die in der <xref:System.Data.DataTable.Columns%2A>-Auflistung der <xref:System.Data.DataTable> enthalten ist, wird der <xref:System.Windows.Forms.GridColumnStylesCollection> ein entsprechendes <xref:System.Windows.Forms.DataGridColumnStyle> hinzugefügt. Der Zugriff auf die <xref:System.Windows.Forms.GridColumnStylesCollection> erfolgt über die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>-Eigenschaft von <xref:System.Windows.Forms.DataGridTableStyle>. Sie können dem Raster Spalten hinzufügen oder Spalten daraus löschen, indem Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A>- bzw. die <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A>-Methode für die <xref:System.Windows.Forms.GridColumnStylesCollection> verwenden. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) in Windows Forms und [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
@@ -123,7 +124,7 @@ In der folgenden Abbildung sind die im DataGrid-Steuerelement enthaltenen Objekt
   
  Spaltenformate werden mit Spalten in einem DataSet auf die gleiche Weise verknüpft wie Tabellenformate mit Datentabellen. So wie Sie für jede Tabelle jeweils nur ein Tabellenformat definieren können, kann auch in einem bestimmten Tabellenformat für jede Spalte nur ein Spaltenformat definiert werden. Diese Beziehung wird in der <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>-Eigenschaft der Spalte definiert.  
   
- Wenn Sie ein Tabellenformat ohne Spaltenformate darauf erstellt haben, wird Visual Studio Standardspaltenformate hinzufügen, wenn das Formular und das Raster zur Laufzeit erstellt werden. Jedoch, wenn Sie ein Tabellenformat erstellt und die entsprechenden Spaltenformate hinzugefügt haben, wird Visual Studio nicht Spaltenformate erstellen. Außerdem müssen Sie Spaltenformate definieren und diesen den Zuordnungsnamen zuweisen, damit die gewünschten Spalten im Raster angezeigt werden.  
+ Wenn Sie ein Tabellenformat ohne Spaltenformate darauf erstellt haben, wird Visual Studio Standardspaltenformate hinzugefügt, wenn das Formular und das Raster zur Laufzeit erstellt werden. Jedoch, wenn Sie ein Tabellenformat und Spaltenformate es hinzugefügt haben, wird Visual Studio keine Spaltenformate erstellt. Außerdem müssen Sie Spaltenformate definieren und diesen den Zuordnungsnamen zuweisen, damit die gewünschten Spalten im Raster angezeigt werden.  
   
  Da Sie die im Raster enthaltenen Spalten angeben, indem Sie diesen ein Spaltenformat zuweisen, den Spalten jedoch kein Spaltenformat zugewiesen wurde, können Sie im DataSet Datenspalten einfügen, die nicht im Raster angezeigt werden. Da die Datenspalte jedoch im DataSet enthalten ist, können Sie die nicht angezeigten Daten programmgesteuert bearbeiten.  
   

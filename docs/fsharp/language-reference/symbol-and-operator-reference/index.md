@@ -2,12 +2,12 @@
 title: Symbol- und Operatorenreferenz (F#)
 description: Informationen Sie zu den Symbolen und Operatoren, die in der Programmiersprache f# verwendet werden.
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566703"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457199"
 ---
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
@@ -27,9 +27,9 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`"""`|[Zeichenfolgen](../strings.md)|Begrenzt eine wörtliche Textzeichenfolge. Unterscheidet sich insofern von `@"..."`, dass Sie mit einem einfachen Anführungszeichen in der Zeichenfolge ein Anführungszeichen angeben können.|
 |`#`|[Compileranweisungen](../compiler-directives.md)<br /><br />[Flexible Typen](../flexible-types.md)|<ul><li>Präfix für eine Präprozessor- oder Compilerdirektive, z. B. `#light`.<br /></li><li>Gibt bei Verwendung mit einem Typ einen *flexiblen Typ* an, der auf einen Typ oder einen seiner abgeleiteten Typen verweist.<br /></li><ul/>|
 |`$`|Es sind keine weiteren Informationen verfügbar.|<ul><li>Wird intern für bestimmte vom Compiler generierte Variablen- und Funktionsnamen verwendet.<br /></li><ul/>|
-|`%`|[Arithmetische Operatoren](arithmetic-operators.md)<br /><br />[Zitieren von Code](../code-quotations.md)|<ul><li>Berechnet den ganzzahligen Rest einer.<br /></li><li>Wird beim Splicing von Ausdrücken in typisierte Codequotationen verwendet.<br /></li><ul/>|
+|`%`|[Arithmetische Operatoren](arithmetic-operators.md)<br /><br />[Zitieren von Code](../code-quotations.md)|<ul><li>Berechnet den ganzzahligen Rest.<br /></li><li>Wird beim Splicing von Ausdrücken in typisierte Codequotationen verwendet.<br /></li><ul/>|
 |`%%`|[Zitieren von Code](../code-quotations.md)|<ul><li>Wird beim Splicing von Ausdrücken in nicht typisierte Codequotationen verwendet.<br /></li><ul/>|
-|`%?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet den ganzzahligen Rest einer an, wenn die rechte Seite dem nullable-Typ ist.<br /></li><ul/>|
+|`%?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet den ganzzahligen Rest an, wenn die rechte Seite ein nullable-Typ ist.<br /></li><ul/>|
 |`&`|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Berechnet die Adresse eines änderbaren Werts, der bei der Interoperation mit anderen Sprachen verwendet werden kann.<br /></li><li>Wird in AND-Mustern verwendet.<br /></li><ul/>|
 |`&&`|[Boolesche Operatoren](boolean-operators.md)|<ul><li>Berechnet die boolesche AND-Operation.<br /></li><ul/>|
 |`&&&`|[Bitweise Operatoren](bitwise-operators.md)|<ul><li>Berechnet die bitweise AND-Operation.<br /></li><ul/>|
@@ -82,10 +82,10 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`=?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "gleich"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li><ul/>|
 |`==`|Nicht zutreffend.|<ul><li>Nicht in F# verwendet. Verwenden Sie `=` für Gleichheitsoperationen.<br /></li><ul/>|
 |`>`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` zurück, wenn die linke Seite größer als die rechte Seite ist; andernfalls wird `false` zurückgegeben.<br /></li><ul/>|
-|`>?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größer als"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li><ul/>|
+|`>?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größere als"-Operation an, wenn die rechte Seite ein nullable-Typ ist.<br /></li><ul/>|
 |`>>`|[Funktionen](../functions/index.md)|<ul><li>Verfasst zwei Funktionen (Vorwärtskompositionsoperator).<br /></li><ul/>|
 |`>>>`|[Bitweise Operatoren](bitwise-operators.md)|<ul><li>Verschiebt Bits in der Menge auf der linken Seite um die Anzahl der Bits nach rechts, die auf der rechten Seite angegeben wurde.<br /></li><ul/>|
-|`>=`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` ist die linke Seite größer als oder gleich der rechten Seite ist; andernfalls gibt `false`.<br /></li><ul/>|
+|`>=`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Gibt `true` ist die linke Seite größer als oder gleich der rechten Seite ist; andernfalls `false`.<br /></li><ul/>|
 |`>=?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Berechnet die "größer gleich"-Operation, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li><ul/>|
 |`?`|[Parameter und Argumente](../parameters-and-arguments.md)|<ul><li>Gibt ein optionales Argument an.<br /></li><li>Wird als Operator für dynamische Methoden- und Eigenschaftenaufrufe verwendet. Sie müssen Ihre eigene Implementierung bereitstellen.<br /></li><ul/>|
 |`? ... <- ...`|Es sind keine weiteren Informationen verfügbar.|<ul><li>Wird als Operator zum Festlegen von dynamischen Eigenschaften verwendet. Sie müssen Ihre eigene Implementierung bereitstellen.<br /></li><ul/>|

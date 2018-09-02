@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ba554ed23ae039796f51f4a699d368c4a6c0587e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809387"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462408"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers
 In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitstokenauthentifizierer erstellen und in einen benutzerdefinierten Sicherheitstoken-Manager integrieren. Ein Sicherheitstokenauthentifizierer überprüft den Inhalt eines Sicherheitstokens, das mit einer eingehenden Nachricht bereitgestellt wird. Bei erfolgreicher Validierung gibt der Authentifizierer eine Sammlung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück, die nach der Auswertung einen Satz von Ansprüchen zurückgeben.  
   
- Um einen benutzerdefinierten Sicherheitstokenauthentifizierer in der Windows Communication Foundation (WCF) verwenden, müssen Sie zunächst benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-managerimplementierungen erstellen. Weitere Informationen zum Erstellen von benutzerdefinierten Anmeldeinformationen und eine Sicherheits-Sicherheitstoken-Manager finden Sie unter [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Weitere Informationen zu Anmeldeinformationen und Sicherheitstoken-Manager-Anbieter und -Authentifizierer Klassen finden Sie unter [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Um einen benutzerdefinierten Sicherheitstoken-Authentifikator in Windows Communication Foundation (WCF) verwenden, müssen Sie zunächst benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-managerimplementierungen erstellen. Weitere Informationen zum Erstellen von benutzerdefinierten Anmeldeinformationen und Sicherheitstoken-Manager finden Sie unter [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Weitere Informationen zu Anmeldeinformationen, Sicherheitstoken-Manager sowie Anbieter- und authentifiziererklassen finden Sie unter [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Verfahren  
   
@@ -34,7 +34,7 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  
   
- Der vorherige Code gibt eine Auflistung von Autorisierungsrichtlinien in der <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29>-Methode zurück. WCF bietet keine öffentliche Implementierung dieser Schnittstelle. Die folgende Prozedur zeigt, wie Sie diese Schritte Ihren eigenen Anforderungen entsprechend ausführen.  
+ Der vorherige Code gibt eine Auflistung von Autorisierungsrichtlinien in der <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateToken%28System.IdentityModel.Tokens.SecurityToken%29>-Methode zurück. WCF stellt keine öffentliche Implementierung dieser Schnittstelle bereit. Die folgende Prozedur zeigt, wie Sie diese Schritte Ihren eigenen Anforderungen entsprechend ausführen.  
   
 #### <a name="to-create-a-custom-authorization-policy"></a>So erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie  
   
@@ -44,12 +44,12 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
   
 3.  Implementieren Sie die schreibgeschützte <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Issuer%2A>-Eigenschaft. Diese Eigenschaft muss einen Aussteller der Sätze von Ansprüchen zurückgeben, die aus dem Token abgerufen werden. Dieser Aussteller sollte dem Aussteller des Tokens oder einer Autorität entsprechen, die für die Überprüfung der Tokeninhalte zuständig ist. Im folgenden Beispiel wird der Ausstelleranspruch, der von dem in der vorherigen Prozedur erstellten benutzerdefinierten Sicherheitstokenauthentifizierer an diese Klasse übergeben wird, verwendet. Der benutzerdefinierte Sicherheitstokenauthentifizierer nutzt den vom System bereitgestellten Satz von Ansprüchen (der von der <xref:System.IdentityModel.Claims.ClaimSet.System%2A>-Eigenschaft zurückgegeben wird), um den Aussteller des Benutzernamentokens darzustellen.  
   
-4.  Implementieren Sie die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode. Diese Methode füllt eine Instanz der <xref:System.IdentityModel.Policy.EvaluationContext>-Klasse (die als Argument weitergegeben wurde) mit Ansprüchen auf, die auf dem eingehenden Sicherheitstokeninhalt basieren. Die Methode gibt `true` zurück, wenn der Vorgang mit der Evaluierung vorgenommen wird. In Fällen, in denen die Implementierung vom Vorhandensein anderer Autorisierungsrichtlinien abhängt, die zusätzliche Informationen zum Evaluierungskontext bieten, kann diese Methode `false` zurückgeben, wenn die erforderlichen Informationen noch nicht im Evaluierungskontext vorhanden sind. In diesem Fall wird WCF Aufrufen der Methode erneut nach der Auswertung aller Autorisierungsrichtlinien, die für die eingehende Nachricht generiert, wenn mindestens eine der Autorisierungsrichtlinien den Evaluierungskontext modifiziert hat.  
+4.  Implementieren Sie die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode. Diese Methode füllt eine Instanz der <xref:System.IdentityModel.Policy.EvaluationContext>-Klasse (die als Argument weitergegeben wurde) mit Ansprüchen auf, die auf dem eingehenden Sicherheitstokeninhalt basieren. Die Methode gibt `true` zurück, wenn der Vorgang mit der Evaluierung vorgenommen wird. In Fällen, in denen die Implementierung vom Vorhandensein anderer Autorisierungsrichtlinien abhängt, die zusätzliche Informationen zum Evaluierungskontext bieten, kann diese Methode `false` zurückgeben, wenn die erforderlichen Informationen noch nicht im Evaluierungskontext vorhanden sind. In diesem Fall wird WCF Aufrufen der Methode erneut nach der Auswertung aller Autorisierungsrichtlinien, die für die eingehende Nachricht generiert wird, wenn mindestens eine der Autorisierungsrichtlinien den Evaluierungskontext modifiziert.  
   
      [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
   
- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) beschreibt, wie benutzerdefinierte Anmeldeinformationen und einen benutzerdefinierten sicherheitstokenmanager zu erstellen. Zur Verwendung des hier erstellten benutzerdefinierten Sicherheitstokenauthentifizierers wird eine Implementierung des Sicherheitstoken-Managers so geändert, dass der benutzerdefinierte Authentifizierer von der <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>-Methode zurückgegeben wird. Die Methode gibt einen Authentifizierer zurück, wenn eine entsprechende Sicherheitstokenanforderung übergeben wird.  
+ [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) wird beschrieben, wie benutzerdefinierte Anmeldeinformationen und einen benutzerdefinierten Sicherheitstoken-Manager erstellen. Zur Verwendung des hier erstellten benutzerdefinierten Sicherheitstokenauthentifizierers wird eine Implementierung des Sicherheitstoken-Managers so geändert, dass der benutzerdefinierte Authentifizierer von der <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>-Methode zurückgegeben wird. Die Methode gibt einen Authentifizierer zurück, wenn eine entsprechende Sicherheitstokenanforderung übergeben wird.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>So integrieren Sie einen benutzerdefinierten Sicherheitstokenauthentifizierer mit einem benutzerdefinierten Sicherheitstoken-Manager  
   
@@ -67,4 +67,4 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
  [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
  [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Sicherheitsarchitektur](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

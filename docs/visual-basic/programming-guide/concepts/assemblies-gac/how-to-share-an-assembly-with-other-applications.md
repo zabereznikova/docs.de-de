@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Freigeben einer Assembly mit anderen Anwendungen (Visual Basic)'
+title: 'Vorgehensweise: Freigeben einer Assembly für andere Anwendungen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: 3a6a04a3aef5430eb65d0c1a7eb37f6afb9e5c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642850"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466475"
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Vorgehensweise: Freigeben einer Assembly mit anderen Anwendungen (Visual Basic)
+# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Vorgehensweise: Freigeben einer Assembly für andere Anwendungen (Visual Basic)
 Assemblys können sowohl privat als auch freigegeben sein: Standardmäßig bestehen die meisten einfachen Programme aus einer privaten Assembly, da sie nicht für den Gebrauch durch andere Anwendungen vorgesehen sind.  
   
  Um eine Assembly für andere Anwendungen freizugeben, muss diese in den [globalen Assemblycache](../../../../framework/app-domains/gac.md) (Global Assembly Cache, GAC) platziert werden.  
@@ -24,7 +24,7 @@ Assemblys können sowohl privat als auch freigegeben sein: Standardmäßig beste
   
 4.  Fügen Sie Ihre Assembly in den globalen Assemblycache ein. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren einer Assembly in den globalen Assemblycache](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Greifen Sie auf die Typen anderer Anwendungen zu, die in der Assembly enthalten sind. Weitere Informationen finden Sie unter [Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Greifen Sie auf die Typen anderer Anwendungen zu, die in der Assembly enthalten sind. Weitere Informationen finden Sie unter [Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmierkonzepte für die](../../../../visual-basic/programming-guide/concepts/index.md) [Assemblys und dem globalen Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  

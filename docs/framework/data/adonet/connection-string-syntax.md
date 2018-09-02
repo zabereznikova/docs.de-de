@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen-Syntax
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 3d8b37315ab3ceea2ddedd139787627e86b6a131
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472749"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469920"
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xref:System.Data.Common.DbConnection> erbt, sowie eine anbieterspezifische <xref:System.Data.Common.DbConnection.ConnectionString%2A>-Eigenschaft. Die spezifische Verbindungszeichenfolgensyntax für den jeweiligen Anbieter wird in dessen `ConnectionString`-Eigenschaft dokumentiert. In der folgenden Tabelle sind die vier Datenanbieter aufgelistet, die in .NET Framework enthalten sind.  
@@ -30,10 +30,10 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
   
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Mit den Verbindungszeichenfolgen-Generatoren können Sie zur Laufzeit syntaktisch gültige Verbindungszeichenfolgen erstellen, sodass Sie die Werte der Verbindungszeichenfolgen nicht manuell im Code verketten müssen. Weitere Informationen finden Sie unter [Verbindungszeichenfolgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Mit den Verbindungszeichenfolgen-Generatoren können Sie zur Laufzeit syntaktisch gültige Verbindungszeichenfolgen erstellen, sodass Sie die Werte der Verbindungszeichenfolgen nicht manuell im Code verketten müssen. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Windows-Authentifizierung  
- Es wird empfohlen, mithilfe der Windows-Authentifizierung (auch bezeichnet als *integrierte Sicherheit von*) zur Verbindung mit Datenquellen, die sie unterstützen. Die in der Verbindungszeichenfolge zu verwendende Syntax richtet sich nach dem Datenanbieter. In der folgenden Tabelle wird die Syntax der Windows-Authentifizierung dargestellt, die bei .NET Framework-Datenanbietern verwendet wird.  
+ Es wird empfohlen, mithilfe der Windows-Authentifizierung (auch bezeichnet als *integrierte Sicherheit von*) zur Verbindung mit Datenquellen, die dies unterstützen. Die in der Verbindungszeichenfolge zu verwendende Syntax richtet sich nach dem Datenanbieter. In der folgenden Tabelle wird die Syntax der Windows-Authentifizierung dargestellt, die bei .NET Framework-Datenanbietern verwendet wird.  
   
 |Anbieter|Syntax|  
 |--------------|------------|  
@@ -49,10 +49,10 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
 Die Syntax für eine <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge wird in der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Eigenschaft dokumentiert. Mit der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>-Eigenschaft können Sie eine Verbindungszeichenfolge für eine SQL Server-Datenbank abrufen oder festlegen. Wenn Sie eine Verbindung mit einer früheren Version von SQL Server herstellen müssen, müssen Sie den .NET Framework-Datenanbieter für OLE DB verwenden (<xref:System.Data.OleDb>). Für die meisten Schlüsselwörter in Verbindungszeichenfolgen gibt es bei den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Eigenschaften passende Entsprechungen.  
 
 > [!IMPORTANT]
->  Die Standardeinstellung für die `Persist Security Info` -Schlüsselwort ist `false`. Wenn die Einstellung in `true` bzw. `yes` geändert wird, sind sicherheitsrelevante Informationen, die über diese Verbindung übertragen werden, wie Benutzer-ID und Kennwort, nicht mehr sicher. Behalten Sie `Persist Security Info` festgelegt `false` um sicherzustellen, dass es sich bei eine nicht vertrauenswürdige Quelle keinen Zugriff auf sicherheitsrelevante Informationen in Verbindungszeichenfolgen.  
+>  Die Standardeinstellung für die `Persist Security Info` -Schlüsselwort ist `false`. Wenn die Einstellung in `true` bzw. `yes` geändert wird, sind sicherheitsrelevante Informationen, die über diese Verbindung übertragen werden, wie Benutzer-ID und Kennwort, nicht mehr sicher. Behalten Sie `Persist Security Info` festgelegt `false` um sicherzustellen, dass es sich bei eine nicht vertrauenswürdige Quelle nicht auf sicherheitsrelevante Informationen in Verbindungszeichenfolgen zugreifen kann.  
 
 ### <a name="windows-authentication-with-sqlclient"></a>Windows-Authentifizierung mit SqlClient 
- Jede der folgenden Syntaxformen verwendet Windows-Authentifizierung zum Herstellen der **AdventureWorks** Datenbank auf einem lokalen Server.  
+ Jede der folgenden Formen der Syntax verwendet Windows-Authentifizierung zum Herstellen einer Verbindung mit der **AdventureWorks** Datenbank auf einem lokalen Server.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,13 +70,13 @@ Die Syntax für eine <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeich
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Wenn Sie eine Verbindung mit Azure SQL-Datenbank oder Azure SQL Data Warehouse herstellen, und geben Sie einen Benutzernamen im Format `user@servername`, stellen Sie sicher, dass die `servername` Wert in der Anmeldung entspricht den Wert für `Server=`.
+Wenn Sie mit Azure SQL-Datenbank oder in Azure SQL Data Warehouse verbinden, und geben Sie einen Anmeldenamen im Format `user@servername`, stellen Sie sicher, dass die `servername` Wert in der Anmeldung entspricht den Wert für `Server=`.
 
 > [!NOTE]
 >  Das Angeben der Windows-Authentifizierung hat Vorrang vor SQL Server-Anmeldungen. Wenn Sie sowohl die integrierte Sicherheit aktivieren als auch einen Benutzernamen und ein Kennwort angeben, werden Benutzername und Kennwort ignoriert, und die Windows-Authentifizierung wird verwendet.  
 
-### <a name="connect-to-a-named-instance-of-sql-server"></a>Herstellen einer Verbindung mit einer benannten Instanz von SQL Server
-Um eine Verbindung mit einer benannten Instanz von SQL Server herzustellen, verwenden Sie die *Servername\Instanzname* Syntax.  
+### <a name="connect-to-a-named-instance-of-sql-server"></a>Verbinden Sie mit einer benannten Instanz von SQL Server
+Verwenden Sie zum Verbinden mit einer benannten Instanz von SQL Server die *Servername\Instanzname* Syntax.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
@@ -93,7 +93,7 @@ Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.D
  Weitere Informationen zum Arbeiten mit Benutzerinstanzen finden Sie unter [SQL Server Express-Benutzerinstanzen](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Verwenden von "TrustServerCertificate"  
- Die `TrustServerCertificate` Schlüsselwort gilt nur, wenn eine Verbindung mit SQL Server-Instanz mit einem gültigen Zertifikat herstellen. Wenn `TrustServerCertificate` auf `true` gesetzt wird, verwendet die Transportschicht zum Verschlüsseln des Kanals SSL und umgeht beim Validieren der Vertrauenswürdigkeit die Zertifikatkette.  
+ Die `TrustServerCertificate` Schlüsselwort gilt nur bei der Verbindung mit SQL Server-Instanz mit einem gültigen Zertifikat. Wenn `TrustServerCertificate` auf `true` gesetzt wird, verwendet die Transportschicht zum Verschlüsseln des Kanals SSL und umgeht beim Validieren der Vertrauenswürdigkeit die Zertifikatkette.  
   
 ```  
 "TrustServerCertificate=true;"   
@@ -103,9 +103,9 @@ Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.D
 >  Wenn `TrustServerCertificate` auf `true` gesetzt wird und die Verschlüsselung aktiviert ist, wird die auf dem Server angegebene Verschlüsselungsstufe auch dann verwendet, wenn `Encrypt` in der Verbindungszeichenfolge auf `false` gesetzt ist. Andernfalls schlägt die Verbindung fehl.  
   
 ### <a name="enabling-encryption"></a>Aktivieren der Verschlüsselung  
- Um die Verschlüsselung zu aktivieren, wenn ein Zertifikat auf dem Server nicht bereitgestellt wurde die **Protokollverschlüsselung** und **Serverzertifikat vertrauen** Optionen müssen in SQL Server-Konfigurations-Manager festgelegt werden. In diesem Fall verwendet die Verschlüsselung ein selbst signiertes Serverzertifikat ohne Validierung, sofern auf dem Server kein überprüfbares Zertifikat bereitgestellt wurde.  
+ Um die Verschlüsselung zu aktivieren, wenn ein Zertifikat auf dem Server nicht bereitgestellt wurde die **Protokollverschlüsselung** und **dem Serverzertifikat vertrauen** Optionen in SQL Server-Konfigurations-Manager festgelegt werden müssen. In diesem Fall verwendet die Verschlüsselung ein selbst signiertes Serverzertifikat ohne Validierung, sofern auf dem Server kein überprüfbares Zertifikat bereitgestellt wurde.  
   
- Die Anwendungseinstellungen können nicht zu einer Einschränkung der in SQL Server konfigurierten Sicherheitsstufe führen, sondern verstärken sie sogar möglicherweise. Eine Anwendung kann die Verschlüsselung anfordern, indem Sie festlegen der `TrustServerCertificate` und `Encrypt` Schlüsselwörter `true`, um zu garantieren, dass die Verschlüsselung erfolgt auch, wenn ein Serverzertifikat bereitgestellt wurde und **Protokollverschlüsselung**  wurde nicht für den Client konfiguriert. Wenn jedoch `TrustServerCertificate` in der Clientkonfiguration nicht aktiviert wird, ist immer noch ein bereitgestelltes Serverzertifikat erforderlich.  
+ Die Anwendungseinstellungen können nicht zu einer Einschränkung der in SQL Server konfigurierten Sicherheitsstufe führen, sondern verstärken sie sogar möglicherweise. Eine Anwendung kann die Verschlüsselung anfordern, durch Festlegen der `TrustServerCertificate` und `Encrypt` Schlüsselwörter `true`, garantieren, dass die Verschlüsselung erfolgt auch, wenn Sie ein Serverzertifikat nicht bereitgestellt wurde und **Protokollverschlüsselung**  nicht für den Client konfiguriert wurde. Wenn jedoch `TrustServerCertificate` in der Clientkonfiguration nicht aktiviert wird, ist immer noch ein bereitgestelltes Serverzertifikat erforderlich.  
   
  In der folgenden Tabelle werden alle Fälle beschrieben.  
   
@@ -113,13 +113,13 @@ Sie können beim Erstellen einer Verbindungszeichenfolge auch die <xref:System.D
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Nein|Nicht zutreffend|Nein (Standard)|Ignoriert|Es erfolgt keine Verschlüsselung.|  
 |Nein|Nicht zutreffend|Ja|Nein (Standard)|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist. Andernfalls tritt ein Fehler beim Verbindungsversuch auf.|  
-|Nein|Nicht zutreffend|Ja|Ja|Verschlüsselung kann immer auftritt, jedoch ein selbst signiertes Serverzertifikat.|  
-|Ja|Nein|Ignoriert|Ignoriert|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist; Andernfalls schlägt der Verbindungsversuch fehl.|  
-|Ja|Ja|Nein (Standard)|Ignoriert|Verschlüsselung kann immer auftritt, jedoch ein selbst signiertes Serverzertifikat.|  
-|Ja|Ja|Ja|Nein (Standard)|Eine Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist; Andernfalls schlägt der Verbindungsversuch fehl.|  
-|Ja|Ja|Ja|Ja|Verschlüsselung kann immer auftritt, jedoch ein selbst signiertes Serverzertifikat.|  
+|Nein|Nicht zutreffend|Ja|Ja|Verschlüsselung immer ausgeführt, aber möglicherweise ein selbst signiertes Zertifikat verwenden.|  
+|Ja|Nein|Ignoriert|Ignoriert|Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist; Andernfalls schlägt der Verbindungsversuch fehl.|  
+|Ja|Ja|Nein (Standard)|Ignoriert|Verschlüsselung immer ausgeführt, aber möglicherweise ein selbst signiertes Zertifikat verwenden.|  
+|Ja|Ja|Ja|Nein (Standard)|Verschlüsselung erfolgt nur, wenn ein überprüfbares Serverzertifikat vorhanden ist; Andernfalls schlägt der Verbindungsversuch fehl.|  
+|Ja|Ja|Ja|Ja|Verschlüsselung immer ausgeführt, aber möglicherweise ein selbst signiertes Zertifikat verwenden.|  
   
- Weitere Informationen finden Sie unter [mithilfe von Verschlüsselung ohne Überprüfung](http://go.microsoft.com/fwlink/?LinkId=120500) in SQL Server-Onlinedokumentation.  
+ Weitere Informationen finden Sie unter [mithilfe von Verschlüsselung ohne Überprüfung](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   
 ## <a name="oledb-connection-strings"></a>OLE DB-Verbindungszeichenfolgen  
  Mit der <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>-Eigenschaft von <xref:System.Data.OleDb.OleDbConnection> können Sie eine Verbindungszeichenfolge für eine OLE DB-Datenquelle wie Microsoft Access abrufen bzw. festlegen. Sie können auch zur Laufzeit mit der `OleDb`-Klasse eine <xref:System.Data.OleDb.OleDbConnectionStringBuilder>-Verbindungszeichenfolge erstellen.  
@@ -138,7 +138,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 ```  
   
 > [!IMPORTANT]
->  Es ist möglich, die Verbindungsinformationen für eine **OleDbConnection** in einer Datei (Universal Data Link, UDL); jedoch sollten Sie auf diese Weise. UDL-Dateien sind nicht verschlüsselt und machen Informationen zur Verbindungszeichenfolge im Klartext verfügbar. Da es sich bei einer UDL-Datei um eine externe Ressource der Anwendung handelt, kann sie nicht mit .NET Framework gesichert werden. UDL-Dateien können nicht für **SqlClient**.  
+>  Es ist möglich, geben Sie Verbindungsinformationen für eine **OleDbConnection** in einer Datei (Universal Data Link, UDL), jedoch müssen dies zu vermeiden. UDL-Dateien sind nicht verschlüsselt und machen Informationen zur Verbindungszeichenfolge im Klartext verfügbar. Da es sich bei einer UDL-Datei um eine externe Ressource der Anwendung handelt, kann sie nicht mit .NET Framework gesichert werden. UDL-Dateien können nicht für **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Verwenden von "DataDirectory" zum Herstellen einer Verbindung mit Access/Jet  
  `DataDirectory` steht nicht exklusiv für `SqlClient` zur Verfügung. Es kann auch für den <xref:System.Data.OleDb>- und den <xref:System.Data.Odbc>-.NET-Datenanbieter verwendet werden. Die folgende <xref:System.Data.OleDb.OleDbConnection>-Beispielzeichenfolge zeigt die Syntax, die erforderlich ist, um eine Verbindung mit der im Ordner <legacyBold>app_data</legacyBold> der Anwendung befindlichen Datei <legacyBold>Northwind.mdb</legacyBold> herzustellen. Die Systemdatenbank (<legacyBold>System.mdw</legacyBold>) ist ebenfalls an diesem Speicherort gespeichert.  
@@ -197,4 +197,4 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

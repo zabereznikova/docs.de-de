@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73866ef2dc7069708887c128f977f730519603bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5fd96f390b0bba60d1b95d20273bbf670208d41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446022"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456531"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo-Methode
-Diese Methode ist nicht implementiert. Wenn Sie aufgerufen wird, wird E_NOTIMPL zurückgegeben.  
+Diese Methode ist nicht implementiert. Wird aufgerufen, gibt E_NOTIMPL zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,10 +40,10 @@ HRESULT OpenScopeOnITypeInfo (
   
 #### <a name="parameters"></a>Parameter  
  `pITI`  
- [in] Zeiger auf eine [ITypeInfo](http://msdn.microsoft.com/library/f3356463-3373-4279-bae1-953378aa2680) Schnittstelle, die die Typinformationen für das Öffnen des Bereichs bereitstellt.  
+ [in] Zeiger auf ein [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) -Schnittstelle, die von die Typinformationen für die den Bereich geöffnet.  
   
  `dwOpenFlags`  
- [in] Die open-Modus-Flags.  
+ [in] Der Modus "open"-Flags.  
   
  `riid`  
  [in] Die gewünschte Schnittstelle.  

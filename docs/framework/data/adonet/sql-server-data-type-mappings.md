@@ -2,12 +2,12 @@
 title: SQL Server-Datentypzuordnungen
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 26ba7aa730eb9c30cfeaf50c59d6b9721fe5857d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362464"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456395"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server-Datentypzuordnungen
 SQL Server und .NET Framework basieren auf unterschiedlichen Typsystemen. Die <xref:System.Decimal>-Struktur von .NET Framework hat eine maximale Skalierung von 28, die dezimalen und numerischen Datentypen von SQL Server haben hingegen eine maximale Skalierung von 38. Um die Integrität beim Lesen und Schreiben von Daten zu gewährleisten, stellt der <xref:System.Data.SqlClient.SqlDataReader> Accessormethoden für SQL Server-spezifische Typen zur Verfügung, die Objekte als <xref:System.Data.SqlTypes> zurückgeben. Zusätzlich werden Accessormethoden zum Zurückgeben von .NET Framework-Typen zur Verfügung gestellt. Sowohl die SQL Server- als auch die .NET Framework-Typen werden weiterhin als Enumerationen in der <xref:System.Data.DbType>-Klasse und <xref:System.Data.SqlDbType>Klasse dargestellt, die zum Angeben von <xref:System.Data.SqlClient.SqlParameter>-Datentypen verwendet werden können.  
@@ -49,15 +49,16 @@ SQL Server und .NET Framework basieren auf unterschiedlichen Typsystemen. Die <
 |varchar|Zeichenfolge<br /><br /> Char[]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|Keine|  
   
-<sup>1</sup> kann nicht festgelegt werden die `DbType` Eigenschaft eine `SqlParameter` auf `SqlDbType.Date`.  
-<sup>2</sup> einen spezifischen typisierten Accessor verwenden, wenn Sie wissen, dass den zugrunde liegende Typ der `sql_variant`.  
+<sup>1</sup> kann nicht festgelegt werden die `DbType` Eigenschaft eine `SqlParameter` zu `SqlDbType.Date`.  
+<sup>2</sup> verwenden Sie eine spezifische typisierte Zugriffsmethode, wenn Sie wissen, dass den zugrunde liegende Typ der `sql_variant`.  
   
-## <a name="sql-server-books-online-reference"></a>SQL Server 2005-Onlinedokumentation  
- Weitere Informationen zu SQL Server-Datentypen finden Sie unter [Datentypen (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkID=107468).  
+## <a name="sql-server-documentation"></a>SQL Server-Dokumentation
+
+Weitere Informationen zu SQL Server-Datentypen, finden Sie unter [-Datentypen (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [Konfigurieren von Parametern und Parameterdatentypen](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: c03bf37c737a19b0a90f12e7ad5db78b75323f5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2866cbd5862bf55286fc771823488cf913863de2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499274"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466570"
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Gewusst wie: Konfigurieren eines grundlegenden Windows Communication Foundation-Clients
-Dies ist die fünfte von sechs Aufgaben, die zum Erstellen einer grundlegenden Windows Communication Foundation (WCF)-Anwendung erforderlich sind. Einen Überblick über alle sechs Aufgaben finden Sie unter der [Lernprogramm für erste Schritte](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.  
+Dies ist die fünfte von sechs Aufgaben, die zum Erstellen einer grundlegenden Windows Communication Foundation (WCF)-Anwendung erforderlich sind. Eine Übersicht über alle sechs Aufgaben finden Sie im Artikel [Getting Started Tutorial (Tutorial: Erste Schritte)](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
- In diesem Thema wird erläutert, die Clientkonfigurationsdatei, die generiert wurde, mit der Funktion "Dienstverweis hinzufügen" des [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] oder [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Für die Konfiguration des Clients muss der Endpunkt angegeben werden, den der Client verwendet, um auf den Dienst zuzugreifen. Ein Endpunkt hat eine Adresse, eine Bindung und einen Vertrag. Bei der Konfiguration eines Clients muss jedes dieser Elemente angegeben werden.  
+ In diesem Thema wird erläutert, die Clientkonfigurationsdatei, die generiert wurde, mithilfe der Funktion "Dienstverweis hinzufügen" von [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] oder [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Für die Konfiguration des Clients muss der Endpunkt angegeben werden, den der Client verwendet, um auf den Dienst zuzugreifen. Ein Endpunkt hat eine Adresse, eine Bindung und einen Vertrag. Bei der Konfiguration eines Clients muss jedes dieser Elemente angegeben werden.  
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>So konfigurieren Sie einen Windows Communication Foundation-Client  
   
-1.  Öffnen Sie die generierte Konfigurationsdatei (App.config) aus dem GettingStartedClient-Projekt. Im folgenden Beispiel wird der Inhalt der generierten Konfiguration gezeigt. Klicken Sie unter der [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt aus, suchen Sie die [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
+1.  Öffnen Sie die generierte Konfigurationsdatei (App.config) aus dem GettingStartedClient-Projekt. Im folgenden Beispiel wird der Inhalt der generierten Konfiguration gezeigt. Unter den [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, suchen Sie nach der [ \<Endpunkt >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -48,9 +48,9 @@ Dies ist die fünfte von sechs Aufgaben, die zum Erstellen einer grundlegenden W
     </configuration>   
     ```  
   
-     In diesem Beispiel wird den Endpunkt, den der Client verwendet, um den Dienst zuzugreifen, der sich unter folgender Adresse befindet: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
+     In diesem Beispiel wird den Endpunkt, den der Client verwendet, um den Zugriff auf den Dienst, der sich unter folgender Adresse befindet: http://localhost:8000/ServiceModelSamples/Service/CalculatorService  
   
-     Das Endpunktelement gibt an, dass für die Kommunikation zwischen dem WCF-Client und dem Dienst der `ServiceReference1.ICalculator`-Dienstvertrag verwendet wird. Der WCF-Kanal mit der vom System bereitgestellten konfiguriert ist <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>. Dieser Vertrag wurde mithilfe der Visual Studio-Funktion Dienstverweis hinzufügen generiert. Es handelt sich eigentlich um eine Kopie des Vertrags, der im GettingStartedLib-Projekt definiert wurde. Die <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>-Bindung gibt HTTP als Transport, interoperable Sicherheit und weitere Einzelheiten der Konfiguration.  
+     Das Endpunktelement gibt an, dass für die Kommunikation zwischen dem WCF-Client und dem Dienst der `ServiceReference1.ICalculator`-Dienstvertrag verwendet wird. Der WCF-Kanal wird mit der vom System bereitgestellten <xref:System.ServiceModel.WSHttpBinding> konfiguriert. Dieser Vertrag wurde mithilfe der Visual Studio-Funktion Dienstverweis hinzufügen generiert. Es handelt sich eigentlich um eine Kopie des Vertrags, der im GettingStartedLib-Projekt definiert wurde. Die <xref:System.ServiceModel.WSHttpBinding>-Bindung gibt HTTP als Transport, interoperable Sicherheit und weitere Einzelheiten der Konfiguration an.  
   
 2.  Weitere Informationen zur Verwendung des generierten Clients mit dieser Konfiguration finden Sie unter [Vorgehensweise: Verwenden Sie einen Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   

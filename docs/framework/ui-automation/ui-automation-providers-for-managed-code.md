@@ -11,18 +11,18 @@ ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 3968b78f986c4f8106d0614a131aa4b4ecf055e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14e00caf666186e2ad25c746334afaff7ae5f664
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406382"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456278"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Dieser Abschnitt enthält Übersichten und Hilfethemen, die beschreiben, wie Sie schreiben [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Anbieter für benutzerdefinierte [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] Elemente.  
+ Dieser Abschnitt enthält Übersichten und Gewusst-wie-Themen, die beschreiben, wie Sie schreiben [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Anbieter für benutzerdefinierte [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] Elemente.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)  

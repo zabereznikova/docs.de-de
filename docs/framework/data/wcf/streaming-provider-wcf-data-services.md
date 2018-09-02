@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805472"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474338"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -24,7 +24,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
 -   Medienlinkeintrag – eine Entität, die über einen Verweis auf einen zugehörigen Medienressourcenstream verfügt.  
   
- Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] definieren Sie einen binären Ressourcenstream durch das Implementieren eines Streamingdatenanbieters. Die streaminganbieterimplementierung des Datendiensts mit einer bestimmten Entität als zugeordneten medienressourcenstream ein <xref:System.IO.Stream> Objekt. Diese Implementierung ermöglicht dem Datendienst, Medienressourcen über HTTP als binäre Datenströme eines angegebenen MIME-Typs zu akzeptieren und zurückzugeben.  
+ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] definieren Sie einen binären Ressourcenstream durch das Implementieren eines Streamingdatenanbieters. Die streaminganbieterimplementierung Datendienst mit den als eine bestimmte Entität zugeordneten medienressourcenstream ein <xref:System.IO.Stream> Objekt. Diese Implementierung ermöglicht dem Datendienst, Medienressourcen über HTTP als binäre Datenströme eines angegebenen MIME-Typs zu akzeptieren und zurückzugeben.  
   
  Folgende Schritte sind erforderlich, um einen Datendienst zu konfigurieren, der das Streaming von Binärdaten unterstützt:  
   
@@ -38,7 +38,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
 5.  Aktivieren Sie den Zugriff auf binäre Ressourcen auf dem Server oder in einer Datenquelle.  
   
- In den Beispielen in diesem Thema basieren auf einer Stichprobe streamingfotodienst, das ausführlich im Beitrag erläutert wird [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](http://go.microsoft.com/fwlink/?LinkID=198989). Der Quellcode für diesen Beispieldienst ist verfügbar, auf die [Streaming Photo Data Service Sample Seite](http://go.microsoft.com/fwlink/?LinkID=198988) in der MSDN Code Gallery.  
+ In die Beispielen in diesem Thema basieren auf einer Stichprobe streamingfotodienst, das ausführlich im Beitrag erläutert wird [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Der Quellcode für diesen Beispieldienst ist auf die [Streaming Photo Data Service Sample Seite](https://go.microsoft.com/fwlink/?LinkID=198988) in der MSDN Code Gallery.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definieren eines Medienlinkeintrags im Datenmodell  
  Der Datenquellenanbieter bestimmt die Methode, mit der eine Entität im Datenmodell als Medienlinkeintrag definiert wird.  
@@ -50,7 +50,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
  Sie müssen außerdem entweder der Entität oder dem Stamm der EDMX- oder CSDL-Datei, die das Datenmodell definiert, den Namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` hinzufügen.  
   
- Ein Beispiel für einen Datendienst, verwendet der [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Anbieter und eine Medienressource verfügbar macht finden Sie im Beitrag [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Ein Beispiel für ein Data-Dienst, verwendet der [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Anbieter und eine Medienressource verfügbar macht finden Sie im Beitrag [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Reflektionsanbieter**  
  Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Klasse, die den Entitätstyp im Reflektionsanbieter definiert, <xref:System.Data.Services.Common.HasStreamAttribute> hinzu.  
@@ -77,7 +77,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
  [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
  [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
- Allgemeine Informationen dazu, wie Sie einen Datendienst erstellen, finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
+ Allgemeine Informationen über das Erstellen eines Datendiensts finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Aktivieren von großen binären Datenströmen in der Hostumgebung  
  Wenn Sie einen Datendienst in einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendung erstellen, wird Windows Communication Foundation (WCF) verwendet, um die HTTP-Protokollimplementierung bereitzustellen. Standardmäßig schränkt WCF die Größe von HTTP-Nachrichten auf nur 65 KB ein. Damit umfangreiche Binärdaten als Datenstrom zum und vom Datendienst gesendet werden können, müssen Sie auch die Webanwendung für die Verwendung großer Binärdateien und den Einsatz von Datenströmen für die Übertragung konfigurieren. Fügen Sie dazu Folgendes im `<configuration />`-Element der Datei Web.config der Anwendung hinzu:  
@@ -85,11 +85,11 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
   
 > [!NOTE]
->  Verwenden Sie eine <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> Übertragungsmodus, um sicherzustellen, dass die Binärdaten in sowohl die Anforderungs-und Antwortnachrichten gestreamt und nicht durch WCF gepuffert.  
+>  Verwenden Sie eine <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> Übertragungsmodus, um sicherzustellen, dass die Binärdaten im sowohl die Anforderungs-und Antwortnachrichten gestreamt und von WCF nicht gepuffert.  
   
  Weitere Informationen finden Sie unter [Nachrichtenübertragung per Stream](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) und [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Sie müssen auch festlegen, um den Datendienst, um Datenströme, die größer als 4 MB zu erhalten, wenn auf dem IIS ausgeführt zu aktivieren, die `maxRequestLength` Attribut des der [HttpRuntime-Element ((ASP.NET Settings Schema)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) in der `<system.web />` Konfigurationsabschnitt, als Im folgenden Beispiel gezeigt:  
+ Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Um Datenströme, die größer als 4 MB zu erhalten, wenn die Ausführung in IIS vom Datendienst zu aktivieren, müssen Sie auch Festlegen der `maxRequestLength` Attribut der [HttpRuntime-Element ((ASP.NET Einstellungsschema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) in die `<system.web />` Konfigurationsabschnitt als Im folgenden Beispiel gezeigt:  
   
   
   
@@ -111,7 +111,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
     -   Eine binäre Eigenschaft, die eine Medienressource ist, sollte nicht im Datenmodell enthalten sein. Alle in einem Datenmodell zur Verfügung gestellten Eigenschaften werden im Eintrag in einem Antwortfeed zurückgegeben.  
   
-    -   Um die Leistung bei einem großen binären Datenstrom zu verbessern, empfiehlt es sich, eine benutzerdefinierte Datenstromklasse zu erstellen, um Binärdaten in der Datenbank zu speichern. Diese Klasse wird von der <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>-Implementierung zurückgegeben und sendet die Binärdaten in Blöcken an die Datenbank. Für eine SQL Server-Datenbank wird empfohlen, dass Sie FILESTREAM zum Streamen von Daten in die Datenbank verwenden, wenn die Binärdaten größer als 1 MB ist.  
+    -   Um die Leistung bei einem großen binären Datenstrom zu verbessern, empfiehlt es sich, eine benutzerdefinierte Datenstromklasse zu erstellen, um Binärdaten in der Datenbank zu speichern. Diese Klasse wird von der <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>-Implementierung zurückgegeben und sendet die Binärdaten in Blöcken an die Datenbank. Für eine SQL Server-Datenbank empfehlen wir, dass Sie FILESTREAM zum Streamen von Daten in die Datenbank verwenden, wenn die Binärdaten größer als 1 MB sind.  
   
     -   Stellen Sie sicher, dass die Datenbank zum Speichern großer binärer Datenströme entworfen wurde, die vom Datendienst empfangen werden sollen.  
   
@@ -119,7 +119,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
 -   Wenn Sie die Methode <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> oder <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> implementieren, müssen Sie die eTag- und Content-Type-Werte verwenden, die als Methodenparameter angegeben werden. Legen Sie keine eTag- oder Content-Type-Header in der <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Anbieterimplementierung fest.  
   
--   Standardmäßig sendet der Client große binäre Datenströme mithilfe einer segmentierten HTTP-Übertragungscodierung. Da die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server diese Art von Codierung nicht unterstützt, können Sie diesen Webserver verwenden, um eines streamingdatendiensts zu hosten, die große binäre Datenströme annehmen muss. Weitere Informationen zu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, finden Sie unter [Webserver in Visual Studio für ASP.NET-Webprojekte](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Standardmäßig sendet der Client große binäre Datenströme mithilfe einer segmentierten HTTP-Übertragungscodierung. Da die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server diese Art von Codierung nicht unterstützt, Sie können nicht diesen Webserver verwenden, um einen streamingdatendienst zu hosten, der große binäre Datenströme annehmen muss. Weitere Informationen zu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server finden Sie unter [Webserver in Visual Studio für ASP.NET-Webprojekte](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Versionsanforderungen  

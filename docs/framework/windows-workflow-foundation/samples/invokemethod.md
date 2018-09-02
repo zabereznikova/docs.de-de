@@ -2,12 +2,12 @@
 title: InvokeMethod
 ms.date: 03/30/2017
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-ms.openlocfilehash: 12d028515c34c0e3593c90b81a5589fb05f36b82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 861e0cf160aec9814abcf8c27c37ce13a5d88b2a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517737"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457180"
 ---
 # <a name="invokemethod"></a>InvokeMethod
 In diesem Beispiel werden die verschiedenen Möglichkeiten zum Aufrufen von Methoden einer Klasse mit der <xref:System.Activities.Statements.InvokeMethod>-Aktivität veranschaulicht.  
@@ -42,7 +42,7 @@ In diesem Beispiel werden die verschiedenen Möglichkeiten zum Aufrufen von Meth
 12. Abrufen eines Werts aus einer Objektinstanz.  
   
 ## <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
- Dieses Beispiel wird in zwei Versionen bereitgestellt. Die erste Version dieses Beispiels veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> mit C#-code über das Windows Workflow Foundation (WF)-Programmiermodell und finden Sie unter dem Ordner "CodedWorkflow\CS". Die zweite Version veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> mit XAML und befindet sich im Ordner "DesignerWorkflow\CS".  
+ Dieses Beispiel wird in zwei Versionen bereitgestellt. Die erste Version dieses Beispiels veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> über C#-code über das Programmiermodell von Windows Workflow Foundation (WF), und finden Sie unter dem Ordner "CodedWorkflow\CS". Die zweite Version veranschaulicht die Verwendung von <xref:System.Activities.Statements.InvokeMethod> mit XAML und befindet sich im Ordner "DesignerWorkflow\CS".  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>So führen Sie das Codebeispiel aus  
   
@@ -65,6 +65,6 @@ In diesem Beispiel werden die verschiedenen Möglichkeiten zum Aufrufen von Meth
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

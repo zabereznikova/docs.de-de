@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396759"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474076"
 ---
 # <a name="runtime-directive-policy-settings"></a>Richtlinieneinstellungen für die Laufzeitanweisung
 > [!NOTE]
->  Dieses Thema bezieht sich auf die .NET Native Developer Preview, ein Vorabrelease der Software. Sie können die Vorschau von der [Microsoft Connect-Website](http://go.microsoft.com/fwlink/?LinkId=394611) herunterladen (Registrierung erforderlich).  
+>  Dieses Thema bezieht sich auf die .NET Native Developer Preview, ein Vorabrelease der Software. Sie können die Vorschau von der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/?LinkId=394611) herunterladen (Registrierung erforderlich).  
   
  Laufzeitanweisungs-Richtlinieneinstellungen für .NET Native bestimmen die Verfügbarkeit von Metadaten für Typen und Typmember zur Laufzeit. Ohne die erforderlichen Metadaten können Vorgänge, die auf Reflektion, Serialisierung und Deserialisierung oder Marshalling von .NET Framework-Typen zu COM oder Windows-Runtime beruhen, fehlschlagen und eine Ausnahme auslösen. Die häufigsten Ausnahmen sind [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) und (im Fall von Interop) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).  
   

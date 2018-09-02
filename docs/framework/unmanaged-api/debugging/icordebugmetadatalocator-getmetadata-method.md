@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c7042f7eee1ccd03d04cc20c5a0db83d986b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421917"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470826"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData-Methode
 Fordert den Debugger auf, den vollständigen Pfad eines Moduls zurückzugeben, dessen Metadaten benötigt werden, um einen vom Debugger angeforderten Vorgang abzuschließen.  
@@ -43,10 +43,10 @@ HRESULT GetMetaData(
   
 #### <a name="parameters"></a>Parameter  
  `wszImagePath`  
- [in] Eine mit NULL endende Zeichenfolge, die den vollständigen Pfad zu der Datei darstellt. Wenn der vollständige Pfad nicht verfügbar ist, ist der Name und die Erweiterung der Datei (*Filename*. *Erweiterung*).  
+ [in] Eine mit NULL endende Zeichenfolge, die den vollständigen Pfad zu der Datei darstellt. Wenn der vollständige Pfad nicht verfügbar ist, ist der Name und Erweiterung der Datei (*Filename*. *Erweiterung*).  
   
  `dwImageTimeStamp`  
- [in] Der Zeitstempel aus den PE-Dateiheadern des Bilds. Dieser Parameter kann potenziell für einen anderen Symbolserver verwendet werden ([SymSrv](http://msdn.microsoft.com/library/cc266470.aspx)) Suche.  
+ [in] Der Zeitstempel aus den PE-Dateiheadern des Bilds. Dieser Parameter kann potenziell für einen Symbolserver verwendet werden ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) nachschlagen.  
   
  `dwImageSize`  
  [in] Die Bildgröße aus PE-Dateiheadern. Dieser Parameter kann potenziell für eine SymSrv-Suche verwendet werden.  
@@ -76,7 +76,7 @@ HRESULT GetMetaData(
  Wenn `wszImagePath` einen vollständigen Pfad für ein Modul aus einem Speicherabbild enthält, gibt es den Pfad von dem Computer an, auf dem das Speicherabbild erfasst wurde. Die Datei ist an diesem Speicherort möglicherweise nicht vorhanden, oder es wird eine falsche Datei mit gleichem Namen in diesem Pfad gespeichert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

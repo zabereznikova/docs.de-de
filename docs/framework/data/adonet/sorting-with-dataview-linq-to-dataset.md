@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f69b64088093bbdd46239a26f16aeea50b6dee7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365903"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465563"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortieren mit DataView (LINQ to DataSet)
-Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu sortieren und nach bestimmten Sortierkriterien geordnete Datenzeilen zurückzugeben. Neben den zeichenfolgenbasierten Sortierfunktionen <xref:System.Data.DataView> auch können Sie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Ausdrücke für die Kriterien sortieren. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Sortieroperationen als die zeichenfolgenbasierte Sortierung. In diesem Thema werden beide Ansätze für die Sortierung mit <xref:System.Data.DataView> beschrieben.  
+Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu sortieren und nach bestimmten Sortierkriterien geordnete Datenzeilen zurückzugeben. Neben den zeichenfolgenbasierten Sortierfunktionen bietet <xref:System.Data.DataView> auch können Sie mit [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Ausdrücke für die Kriterien sortieren. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Sortieroperationen als die zeichenfolgenbasierte Sortierung. In diesem Thema werden beide Ansätze für die Sortierung mit <xref:System.Data.DataView> beschrieben.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Erstellen einer "DataView" auf der Grundlage einer Abfrage mit Sortierinformationen  
- Ein <xref:System.Data.DataView>-Objekt kann auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt werden. Wenn diese Abfrage enthält eine <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, oder <xref:System.Linq.Enumerable.ThenByDescending%2A> Klausel, die die Ausdrücke in diesen Klauseln als Grundlage dienen für die Sortierung der Daten in der <xref:System.Data.DataView>. Wenn die Abfrage enthält z. B. die `Order By…`und `Then By…` Klauseln, die den resultierenden <xref:System.Data.DataView> würden die Daten nach beiden angegebenen Spalten sortieren.  
+ Ein <xref:System.Data.DataView>-Objekt kann auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt werden. Wenn diese Abfrage enthält eine <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, oder <xref:System.Linq.Enumerable.ThenByDescending%2A> Klausel, die die Ausdrücke in diesen Klauseln als Grundlage dienen für die Sortierung der Daten in die <xref:System.Data.DataView>. Wenn die Abfrage enthält z. B. die `Order By…`und `Then By…` -Klauseln, die resultierende <xref:System.Data.DataView> würden die Daten nach beiden angegebenen Spalten sortieren.  
   
  Die ausdrucksbasierte Sortierung bietet leistungsfähigere und komplexere Sortierfunktionen als die einfachere zeichenfolgenbasierten Sortierung. Beachten Sie, dass sich die zeichenfolgenbasierte und die ausdrucksbasierte Sortierung gegenseitig ausschließen. Wenn mit <xref:System.Data.DataView.Sort%2A> die zeichenfolgenbasierte Sortierung festgelegt wird, nachdem eine <xref:System.Data.DataView> auf der Grundlage einer Abfrage erstellt wurde, wird der ausdrucksbasierte Filter gelöscht, der aus der Abfrage abgeleitet wurde. Er kann dann nicht wiederhergestellt werden.  
   
@@ -48,7 +48,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
   
  Die zeichenfolgenbasierte und die ausdrucksbasierte Sortierung schließen sich gegenseitig aus. Durch die Einrichtung der <xref:System.Data.DataView.Sort%2A>-Eigenschaft wird die ausdrucksbasierte Sortierung gelöscht, die von der Abfrage geerbt wurde, auf der die <xref:System.Data.DataView> basiert.  
   
- Weitere Informationen zu zeichenfolgenbasierten <xref:System.Data.DataView.Sort%2A> Filtern finden Sie unter [sortieren und Filtern von Daten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Weitere Informationen zur zeichenfolgenbasierten <xref:System.Data.DataView.Sort%2A> filtern, finden Sie [sortieren und Filtern von Daten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird auf der Grundlage der <legacyBold>Contact</legacyBold>-Tabelle eine <xref:System.Data.DataView> erstellt. Anschließend werden die Zeilen nach dem Nachnamen in absteigender und dann nach dem Vornamen in aufsteigender Richtung sortiert:  
@@ -84,4 +84,4 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu sortieren und dann über ei
 ## <a name="see-also"></a>Siehe auch  
  [Datenbindung und LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [Filtern mit DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Sortieren von Daten](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+ [Sortieren von Daten](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

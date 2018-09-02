@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 373a7f977a9dad59cd40fd29fdd39c8fc6996ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529301"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462336"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Exemplarische Vorgehensweise: Anordnen von WPF-Inhalt in Windows Forms zur Entwurfszeit
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Forms-Layoutfunktionen, z. B. Verankern und Ausrichtungslinien, verwendet werden können, um WPF-Steuerelemente (Windows Presentation Foundation) anzuordnen.  
@@ -32,7 +32,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
 -   Verankern und Andocken von WPF-Steuerelementen  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
@@ -54,11 +54,11 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
   
 #### <a name="to-create-wpf-controls"></a>So erstellen Sie ein WPF-Steuerelement  
   
-1.  Fügen Sie dem Projekt ein neues WPF-<xref:System.Windows.Controls.UserControl>-Objekt hinzu. Verwenden Sie den Standardnamen (`UserControl1.xaml`) für den Steuerelementtyp. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Fügen Sie dem Projekt ein neues WPF-<xref:System.Windows.Controls.UserControl>-Objekt hinzu. Verwenden Sie den Standardnamen (`UserControl1.xaml`) für den Steuerelementtyp. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF-Inhalt in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist. Weitere Informationen finden Sie unter [Vorgehensweise: auswählen und Verschieben von Elementen auf der Entwurfsoberfläche](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist. Weitere Informationen finden Sie unter [Vorgehensweise: auswählen und Verschieben von Elementen auf der Entwurfsoberfläche](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
-3.  In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften `200`.  
+3.  In der **Eigenschaften** legen den Wert des der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften `200`.  
   
 4.  Legen Sie den Wert der <xref:System.Windows.Controls.Control.Background%2A>-Eigenschaft auf `Blue` fest.  
   
@@ -73,19 +73,19 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
   
 2.  In der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement auf das Formular.  
   
-3.  Auf der <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements Smarttagbereich select **letzte Zeile entfernen**.  
+3.  Auf der <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements im Smarttagbereich auf **letzte Zeile entfernen**.  
   
 4.  Ändern Sie die Größe des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements, sodass es breiter und höher wird.  
   
-5.  In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz des `UserControl1` in der ersten Zelle der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
+5.  In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz von `UserControl1` in der ersten Zelle der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
   
      Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost1` gehostet.  
   
-6.  In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen von einer anderen Instanz in der zweiten Zelle des der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
+6.  In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen von einer anderen Instanz in der zweiten Zelle die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
   
-7.  In der **Dokumentgliederung** Option `tableLayoutPanel1`. Weitere Informationen finden Sie unter [Dokumentgliederung (Fenster)](http://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
+7.  In der **Dokumentgliederung** wählen Sie im Fenster `tableLayoutPanel1`. Weitere Informationen finden Sie unter [Dokumentgliederung (Fenster)](https://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
   
-8.  In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft `10, 10, 10, 10`.  
+8.  In der **Eigenschaften** legen den Wert des der <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft `10, 10, 10, 10`.  
   
      Die Größe beider <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelemente wird entsprechend dem neuen Layout angepasst.  
   
@@ -94,7 +94,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>So verwenden Sie Ausrichtungslinien zum Ausrichten von WPF-Steuerelementen  
   
-1.  Aus der **Toolbox**, ziehen Sie eine Instanz des `UserControl1` auf das Formular, und platzieren Sie es in dem Bereich unterhalb der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
+1.  Aus der **Toolbox**, ziehen Sie eine Instanz des `UserControl1` auf das Formular, und fügen Sie ihn in den Bereich unterhalb der <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement.  
   
      Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost3` gehostet.  
   
@@ -104,7 +104,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
   
 4.  Verschieben Sie `elementHost3` in Richtung des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements,  steuern, bis zwischen den Steuerelementen eine mittige Ausrichtungslinie angezeigt wird.  
   
-5.  In der **Eigenschaften** Fenster, legen Sie den Wert der Margin-Eigenschaft auf `20, 20, 20, 20`.  
+5.  In der **Eigenschaften** legen den Wert der Margin-Eigenschaft auf `20, 20, 20, 20`.  
   
 6.  Verschieben Sie `elementHost3` vom <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement weg, bis die mittige Ausrichtungslinie erneut angezeigt wird. Die mittige Ausrichtungslinie kennzeichnet jetzt einen Rand von 20.  
   
@@ -127,7 +127,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
   
 4.  Klicken Sie auf `elementHost2`.  
   
-5.  In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.  
+5.  In der **Eigenschaften** legen den Wert des der <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.  
   
      Die Größe des `elementHost2`-Steuerelements wird geändert, sodass es die Zelle ausfüllt.  
   
@@ -145,7 +145,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
   
      Die Größen aller drei <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelemente werden entsprechend angepasst.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Ankerelemente und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Anker und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.Integration.ElementHost>  
@@ -155,4 +155,4 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie die Windows Fo
  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Verwenden von WPF-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807839"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469829"
 ---
 # <a name="configuring-message-logging"></a>Konfigurieren der Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für verschiedene Szenarien konfigurieren können.  
@@ -22,14 +22,14 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
 ```xml  
 <system.diagnostics>  
   <sources>  
-      <source name="System.ServiceModel.MessageLogging">  
-        <listeners>  
-                 <add name="messages"  
-                 type="System.Diagnostics.XmlWriterTraceListener"  
-                 initializeData="c:\logs\messages.svclog" />  
-          </listeners>  
-      </source>  
-    </sources>  
+    <source name="System.ServiceModel.MessageLogging">  
+      <listeners>  
+         <add name="messages"  
+              type="System.Diagnostics.XmlWriterTraceListener"  
+              initializeData="c:\logs\messages.svclog" />  
+        </listeners>  
+    </source>  
+  </sources>  
 </system.diagnostics>  
   
 <system.serviceModel>  
@@ -60,7 +60,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. Weitere Informationen zum Konfigurations-Editor-Tool finden Sie unter [Dienstkonfigurations-Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Weitere Informationen zu WMI finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Wenn Sie die Ablaufverfolgungsquelle deaktivieren möchten, verwenden Sie stattdessen das `logMessagesAtServiceLevel`, `logMalformedMessages`-Attribut und das `logMessagesAtTransportLevel`-Attribut des `messageLogging`-Elements. Sie sollten all diese Attribute auf `false` festlegen. Dieser Schritt kann anhand der Konfigurationsdatei im vorigen Beispielcode über die Benutzeroberfläche des Configuration Editor oder über WMI durchgeführt werden. Weitere Informationen zum Konfigurations-Editor-Tool finden Sie unter [Configuration Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Weitere Informationen zu WMI finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Protokollieren von Ebenen und Optionen  
  Für eingehende Nachrichten erfolgt die Protokollierung direkt nach dem Erstellen der Nachricht, unmittelbar bevor die Nachricht Benutzercode auf der Dienstebene erhält und wenn falsch formatierte Nachrichten erkannt werden.  
@@ -78,7 +78,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
  Auf dieser Ebene protokollierte Nachrichten können vor oder nach dem Transport codiert oder decodiert werden. Wenn Filter definiert wurden, werden nur Nachrichten, die zu den Filtern passen, protokolliert. Andernfalls werden alle Nachrichten auf der Transportschicht protokolliert. Auf dieser Ebene werden alle Infrastrukturnachrichten protokolliert, einschließlich zuverlässiger Messagingnachrichten. Bei per Streaming übertragenen Nachrichten werden nur die Header protokolliert. Außerdem werden sichere Nachrichten auf dieser Ebene verschlüsselt protokolliert, außer bei Verwendung eines sicheren Transports wie HTTPS.  
   
 ### <a name="malformed-level"></a>Falsch formatierte Ebene  
- Falsch formatierte Nachrichten sind Nachrichten, die vom WCF-Stapel in keiner Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie in Abschnitt Weitere Optionen.  
+ Falsch formatierte Nachrichten sind Nachrichten, die vom WCF-Stapel in jeder Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie im Abschnitt Weitere Optionen.  
   
 ### <a name="other-options"></a>Weitere Optionen  
  Zusätzlich zu den Protokollierungsebenen kann der Benutzer die folgenden Optionen angeben:  
@@ -94,11 +94,11 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
   
  Wenn in der Konfigurationsdatei kein Ablaufverfolgungslistener definiert ist, wird unabhängig von der angegebenen Protokollierungsebene keine Protokollierungsausgabe generiert.  
   
- Die Nachrichtenprotokollierungsoptionen, wie die in diesem Abschnitt beschriebenen Attribute, können zur Laufzeit mit der Windows-Verwaltungsinstrumentierung (WMI) geändert werden. Dies kann geschehen, indem Sie den Zugriff auf die [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) -Instanz, die diese boolesche Eigenschaften verfügbar gemacht: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, und `LogMalformedMessages`. Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren. Weitere Informationen finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Die Nachrichtenprotokollierungsoptionen, wie die in diesem Abschnitt beschriebenen Attribute, können zur Laufzeit mit der Windows-Verwaltungsinstrumentierung (WMI) geändert werden. Dies ist möglich durch den Zugriff auf die [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) -Instanz, die folgende booleschen Eigenschaften verfügbar macht: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, und `LogMalformedMessages`. Wenn Sie einen Ablaufverfolgungslistener für die Nachrichtenprotokollierung konfigurieren, diese Optionen in der Konfiguration jedoch auf `false` festlegen, können Sie sie später, wenn die Anwendung ausgeführt wird, zu `true` ändern. Dadurch wird die Nachrichtenprotokollierung zur Laufzeit aktiviert. Entsprechend können Sie die Nachrichtenprotokollierung zur Laufzeit mit WMI deaktivieren, wenn Sie sie in der Konfigurationsdatei aktivieren. Weitere Informationen finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Das `source`-Feld in einem Nachrichtenprotokoll gibt an, in welchem Kontext die Nachricht protokolliert wird: beim Senden/Empfangen einer Anforderungsnachricht, für eine Anforderungsantwort oder eine unidirektionale Anforderung, auf der Dienstmodell- oder Transportschicht oder im Falle einer falsch formatierten Nachricht.  
   
- Bei falsch formatierten Nachrichten `source` gleich `Malformed`. Andernfalls verfügt die Quelle über die folgenden Werte auf der Grundlage des Kontexts.  
+ Für falsch formatierte Nachrichten `source` gleich `Malformed`. Andernfalls verfügt die Quelle über die folgenden Werte auf der Grundlage des Kontexts.  
   
  Für Anforderung/Antwort  
   

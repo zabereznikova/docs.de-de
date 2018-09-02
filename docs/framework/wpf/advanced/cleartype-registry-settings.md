@@ -5,62 +5,62 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6a121e2a95ce4005b43937f83c6c74ec7d8f1c1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541712"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474004"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType-Registrierungseinstellungen
-Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] registrierungseinstellungen, mit denen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen.  
+Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] registrierungseinstellungen, mit denen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen.  
   
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Übersicht über die Technologie  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen, die Text an eine Anzeige Gerät Verwendung Rendern [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] -Funktionen, die eine verbesserte Übersichtlichkeit. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z.B. auf Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen, optimiert wird. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] greift dabei auf die einzelnen vertikalen Farbstreifenelemente in jedem Pixel auf einem LCD-Bildschirm zu. Weitere Informationen zu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], finden Sie unter [ClearType-Übersicht](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen, Rendern von Text, der einer Anzeige verwenden [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Funktionen, um eine bessere Lesbarkeit zu gewährleisten. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z.B. auf Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen, optimiert wird. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] greift dabei auf die einzelnen vertikalen Farbstreifenelemente in jedem Pixel auf einem LCD-Bildschirm zu. Weitere Informationen zu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], finden Sie unter [Übersicht über ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
- Text, der mit gerendert wird [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] stehen erheblich anders aus, wenn auf verschiedenen Anzeigegeräte angezeigt. Z. B. eine kleine Anzahl von Monitoren implementieren, Stripe Farbelemente in Blau, Grün, Rot Reihenfolge statt der gängigeren Rot, Grün, Blau ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) Reihenfolge.  
+ Mit gerenderter Text [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] deutlich unterschiedlich auf verschiedenen Anzeigegeräten angezeigt werden können. Implementieren beispielsweise eine kleine Anzahl von Monitoren die Farbstreifenelemente in Blau, Grün, Rot Reihenfolge anstelle der häufiger Rot, Grün, Blau ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) Reihenfolge.  
   
- Text, der mit gerendert wird [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] stehen auch erheblich anders aus, wenn von Personen mit unterschiedlichem Sensitivität Farbe angezeigt. Manche Benutzer erkennen leichte Farbunterschiede besser als andere.  
+ Mit gerenderter Text [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] stehen auch deutlich unterschiedlich von Personen mit unterschiedlicher farbempfindlichkeit angezeigt. Manche Benutzer erkennen leichte Farbunterschiede besser als andere.  
   
- In jedem dieser Fälle [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Funktionen müssen geändert werden, um die optimale Lesbarkeit für den einzelnen bereitzustellen.  
+ In allen diesen Fällen [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Funktionen geändert werden müssen, um die optimale Lesbarkeit für jede Einzelperson bereitzustellen.  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Registrierungseinstellungen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Gibt an, vier registrierungseinstellungen zum Steuern von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Funktionen:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibt vier registrierungseinstellungen zum Steuern der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Features:  
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Ebene|Beschreibt den Grad der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Klarheit Farbe.|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Ebene|Beschreibt den Grad der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] farbklarheit.|  
 |Gammastufe|Beschreibt die Ebene der Pixelfarbkomponente für ein Anzeigegerät.|  
 |Pixelstruktur|Beschreibt die Anordnung der Pixel für ein Anzeigegerät.|  
 |Textkontrastebene|Beschreibt die Kontrastebene für den angezeigten Text.|  
   
- Diese Einstellungen über eine externe Konfigurationshilfsprogramm, die weiß, wie die angegebene verweisen möglich [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registrierungseinstellungen. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Registrierungs-Editor auf die Werte zugreifen.  
+ Diese Einstellungen können von einem externen Konfigurationsprogramm aus, das die angegebene verweisen kann, zugegriffen werden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registrierungseinstellungen. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Registrierungs-Editor auf die Werte zugreifen.  
   
- Wenn die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registrierungseinstellungen werden nicht (Standardstatus) festgelegt, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungsabfragen der [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Parameter Systeminformationen für Einstellungen für die schriftartglättung.  
+ Wenn die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] registrierungseinstellungen sind nicht festgelegt (Standardzustand ist), die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungsabfragen der [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] -systemparameterinformationen für die Einstellungen für die schriftartglättung.  
   
 > [!NOTE]
->  Informationen zum Auflisten von Anzeigenamen Gerät sind, finden Sie unter der `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Funktion.  
+>  Informationen über das Auflisten von Anzeigegerätenamen finden Sie in der `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Funktion.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType-Ebene  
- Die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene ermöglicht es Ihnen, passen Sie die Darstellung von Text anhand der Empfindlichkeit Farbe und das Gefühl einer Einzelperson. Für einige Personen, die die Darstellung von Text, verwendet [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] auf der höchsten Ebene generiert keine optimalen Lesbarkeit.  
+ Die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene können Sie das Rendern von Text auf Basis der farbempfindlichkeit und Wahrnehmung einer Person anpassen. Für einige Benutzer das Rendern von Text, verwendet [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] auf der höchsten Ebene erzeugt keinen die optimale Lesbarkeit.  
   
- Die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene ist ein Ganzzahlwert, die zwischen 0 und 100. Der Standardwert ist 100, d. h. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] verwendet die maximale Kapazität der Farbelemente Stripe des Geräts angezeigt. Allerdings eine [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene 0 Text Graustufen gerendert. Durch Festlegen der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene irgendwo zwischen 0 und 100 liegen, können Sie eine gewisse, die eine einzelne Farbe Empfindlichkeit eignet erstellen.  
+ Die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene ist ein ganzzahliger Wert, der zwischen 0 und 100 liegt. Der Standardwert ist 100, d. h. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] verwendet die maximale Funktion der Farbstreifenelemente des Anzeigegeräts. Allerdings eine [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene 0 Text, Graustufen gerendert. Durch Festlegen der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] auf einen Wert zwischen 0 und 100 liegen, können Sie erstellen einen mittleren Wissensstand, die für eine individuelle farbempfindlichkeit geeignet ist.  
   
 ### <a name="registry-setting"></a>Registrierungseinstellung  
- Der Registrierungsspeicherort-Einstellung für die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene ist ein einzelner Benutzer-Einstellung, die in einem bestimmten Gerät Anzeigenamen entspricht:  
+ Der Ort der Einstellung für die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene ist eine lokale benutzereinstellung, die einem bestimmten Anzeigegerätenamen entspricht:  
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Für jedes Gerät Anzeigenamen für einen Benutzer einer `ClearTypeLevel` DWORD-Wert definiert ist. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene.  
+ Für jeden Anzeigegerätenamen eines Benutzers einer `ClearTypeLevel` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene.  
   
  ![ClearType-Einstellungen im Registrierungs-Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen Rendern von Text in einem der beiden Modi mit und ohne [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Wenn Text gerendert wird, ohne [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], wird er als Graustufenrendering bezeichnet.  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendungen Rendern Text in einem der beiden Modi: mit und ohne [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Wenn Text gerendert wird, ohne [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], wird dies als Graustufenrendering bezeichnet.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gammastufe  
@@ -73,7 +73,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Für jedes Gerät Anzeigenamen für einen Benutzer einer `GammaLevel` DWORD-Wert definiert ist. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Gammastufe.  
+ Für jeden Anzeigegerätenamen eines Benutzers einer `GammaLevel` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Gammastufe.  
   
  ![ClearType-Einstellungen im Registrierungs-Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
@@ -90,14 +90,14 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
  Die Pixelstruktur entspricht einem Ganzzahlwert zwischen 0 und 2. Der Standardwert ist 0, was einer flachen Pixelstruktur entspricht.  
   
 > [!NOTE]
->  Informationen zum Auflisten von Anzeigenamen Gerät sind, finden Sie unter der `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Funktion.  
+>  Informationen über das Auflisten von Anzeigegerätenamen finden Sie in der `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Funktion.  
   
 ### <a name="registry-setting"></a>Registrierungseinstellung  
  Der Ort für die Registrierungseinstellung der Pixelstruktur ist eine lokale Computereinstellung und entspricht einem bestimmten Anzeigegerätenamen:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Für jedes Gerät Anzeigenamen für einen Benutzer einer `PixelStructure` DWORD-Wert definiert ist. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Pixelstruktur.  
+ Für jeden Anzeigegerätenamen eines Benutzers einer `PixelStructure` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Pixelstruktur.  
   
  ![ClearType-Einstellungen im Registrierungs-Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
@@ -110,10 +110,10 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- Für jedes Gerät Anzeigenamen für einen Benutzer einer `TextContrastLevel` DWORD-Wert definiert ist. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Textkontraststufe.  
+ Für jeden Anzeigegerätenamen eines Benutzers einer `TextContrastLevel` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Textkontraststufe.  
   
  ![ClearType-Einstellungen im Registrierungs-Editor](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType-Antialiasing](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)
+ [ClearType-Antialiasing](/windows/desktop/gdi/cleartype-antialiasing)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: c51645fb64f512b5974000f89e8e98f884a7381d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc0c848d1c92871dacab93497c674645f3ac83fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526200"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463938"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Windows Forms und nicht verwaltete Anwendungen
 Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkungen mit nicht verwalteten Anwendungen zusammenarbeiten. In den folgenden Abschnitten werden die von Windows Forms-Anwendungen und -Steuerelementen unterstützten und nicht unterstützten Szenarien und Konfigurationen beschrieben.  
@@ -28,7 +28,7 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
  [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows Forms in einem eigenen Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  Enthält ein Codebeispiel für die Ausführung eines Windows Forms in einem eigenen Thread.  
   
- Siehe auch [Exemplarische Vorgehensweise: Unterstützen von COM-Interop durch das Anzeigen jedes Windows Forms in einem eigenen Thread](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
+ Siehe auch [Exemplarische Vorgehensweise: unterstützen von COM-Interop durch Anzeigen jedes Windows Forms in einem eigenen Thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  
