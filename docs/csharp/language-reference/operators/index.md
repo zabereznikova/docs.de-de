@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 30e4942934e5d65b214d24a0948f70169d625485
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34457603"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461075"
 ---
 # <a name="c-operators"></a>C#-Operatoren
 C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, welche Operationen (Mathematik, Indizierung, Funktionsaufruf usw.) in einem Ausdruck ausgeführt werden. Sie können viele Operatoren [überladen](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md), um ihre Bedeutung zu ändern, wenn sie auf einen benutzerdefinierten Typ angewendet werden.  
@@ -207,10 +207,11 @@ C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, w
 -   Arithmetischer Überlauf oder Division durch 0 (null) löst bei Gleitkommazahlen nie eine Ausnahme aus, weil die Gleitkommatypen auf IEEE 754 basieren und daher Vorkehrungen für die Darstellung von Unendlich und NaN (Not a Number/Keine Zahl) aufweisen.  
   
 -   Arithmetischer Überlauf bei [Decimal](../../../csharp/language-reference/keywords/decimal.md) löst immer eine <xref:System.OverflowException> aus. Dezimale Division durch Null löst immer eine <xref:System.DivideByZeroException> aus.  
-  
-  
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#](../../../csharp/index.md): [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#](../../../csharp/index.md)
+- [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
