@@ -4,12 +4,12 @@ description: Informationen zu den neuen Features in .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935578"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43392848"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -49,7 +49,7 @@ Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von [`DotnetCliT
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    Beachten Sie, dass die `--`-Option der `--verbose`-Option vorausgeht. Sie begrenzt die Optionen, die dem `dotnet watch`-Befehl direkt von den Argumenten übergeben werden, die dem untergeordneten `dotnet`-Prozess übergeben werden. Ohne sie gilt die `--verbose`-Option für den `dotnet watch`-Befehl, nicht den `dotnet build`-Befehl.
   
    Weitere Informationen finden Sie unter [Entwickeln von ASP.NET Core-Apps mit dotnet watch](/aspnet/core/tutorials/dotnet-watch).
@@ -88,7 +88,7 @@ In .NET Core SDK 2.1 (Version 2.1.300) verwenden alle Toolsvorgänge den `dotnet
 
 ## <a name="roll-forward"></a>Rollforward
 
-Ab .NET Core 2.0 wird für alle .NET Core-Anwendungen automatisch ein Rollforward auf die neueste *Nebenversion* auf einem System installiert. 
+Ab .NET Core 2.0 wird für alle .NET Core-Anwendungen automatisch ein Rollforward auf die neueste *Nebenversion* auf einem System installiert.
 
 Wenn die Version von .NET Core, mit der eine Anwendung erstellt wurde, nicht zur Runtime vorhanden ist, wird die Anwendung ab .NET Core 2.0 automatisch für die neueste installierte *Nebenversion* von .NET Core ausgeführt. Das heißt, wenn eine Anwendung mit .NET Core 2.0 erstellt wurde, und .NET Core 2.0 auf dem Hostsystem nicht vorhanden ist, jedoch .NET Core 2.1, wird die Anwendung mit .NET Core 2.1 ausgeführt.
 
@@ -233,6 +233,6 @@ Auf Linux und macOS können Sie <xref:System.Net.Http.HttpClient> nur pro Prozes
 
 ## <a name="see-also"></a>Siehe auch
 
-[Neuigkeiten in .NET Core](index.md)  
-[Neue Features in EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-[Neuerungen in ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+* [Neuigkeiten in .NET Core](index.md)  
+* [Neue Features in EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
+* [Neuerungen in ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

@@ -4,12 +4,12 @@ description: Informationen zu den neuen Funktionen in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566338"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456886"
 ---
 # <a name="whats-new-in-net-core-20"></a>Neuigkeiten in .NET Core 2.0
 
@@ -30,7 +30,7 @@ In früheren Versionen von .NET Core mussten Sie den [dotnet restore](../tools/d
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Sie können den automatischen Aufruf von `dotnet restore` auch deaktivieren, indem Sie die Befehlszeilenoption `--no-restore` den Befehlen `new`, `run`, `build`, `publish`, `pack` und `test` übergeben. 
+Sie können den automatischen Aufruf von `dotnet restore` auch deaktivieren, indem Sie die Befehlszeilenoption `--no-restore` den Befehlen `new`, `run`, `build`, `publish`, `pack` und `test` übergeben.
 
 ### <a name="retargeting-to-net-core-20"></a>Neuzuweisung zu .NET Core 2.0
 
@@ -76,7 +76,7 @@ Führen Sie z.B. zum Erstellen einer „Hello World“-Anwendung in Visual Basic
 
    Der Befehl erstellt eine Projektdatei mit einer `.vbproj`-Erweiterung zusammen mit einer Visual Basic-Quellcodedatei mit dem Namen *Program.vb*. Diese Datei enthält den Quellcode, um die Zeichenfolge „Hello World!“ im Konsolenfenster anzuzeigen.
 
-1.  Geben Sie den Befehl `dotnet run` ein. Die [.NET Core-CLI](../tools/index.md) kompiliert die Anwendung automatisch und führt sie aus, um die Meldung „Hallo Welt!“ anzuzeigen. im Konsolenfenster anzuzeigen.
+1. Geben Sie den Befehl `dotnet run` ein. Die [.NET Core-CLI](../tools/index.md) kompiliert die Anwendung automatisch und führt sie aus, um die Meldung „Hallo Welt!“ anzuzeigen. im Konsolenfenster anzuzeigen.
 
 ### <a name="support-for-c-71"></a>Unterstützung für C# 7.1
 
@@ -162,4 +162,5 @@ Sie können das .NET Core-SDK jetzt unabhängig von Visual Studio installieren. 
 - [Anwendungen, die mit Azure in der Cloud bereitgestellt werden](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>Siehe auch
-[What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0) (Neuigkeiten in ASP.NET Core 2.0)
+
+* [What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0) (Neuigkeiten in ASP.NET Core 2.0)

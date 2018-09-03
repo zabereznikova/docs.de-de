@@ -2,17 +2,17 @@
 title: SQL Server-Datentypen und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: da98ac72fab0bc3934cef79aeec9b12d003b6888
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363501"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424352"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server-Datentypen und ADO.NET
 SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Datenverlust führen. Um die Datenintegrität beizubehalten, stellt der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) typisierte Accessormethoden zum Arbeiten mit SQL Server-Daten bereit. Sie können mit den Enumerationen in den <xref:System.Data.SqlDbType>-Klassen <xref:System.Data.SqlClient.SqlParameter>-Datentypen angeben.  
   
- Weitere Informationen und eine Tabelle an, die die Daten beschreibt datentypzuordnungen zwischen SQL Server und .NET Framework-Datentypen finden Sie unter [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
+ Weitere Informationen und eine Tabelle mit der die Daten beschreibt, die datentypzuordnungen zwischen SQL Server und .NET Framework-Datentypen, finden Sie unter [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
   
  In SQL Server 2008 werden neue Datentypen eingeführt, die für die Anforderungen von Unternehmen im Hinblick auf die Arbeit mit Datums- und Uhrzeitangeben sowie mit strukturierten, halbstrukturierten und unstrukturierten Daten entworfen wurden. Diese Datentypen werden in der SQL Server 2008-Onlinedokumentation dokumentiert.  
   
@@ -20,7 +20,7 @@ SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Dat
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1.  [Datentypen (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkID=107468)  
+1.  [Datentypen (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkID=107468)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [SqlTypes und DataSet](../../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)  
@@ -59,4 +59,4 @@ SQL Server und .NET Framework basieren auf anderen Typsystemen. Dies kann zu Dat
  [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Tabellenwertparameter](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

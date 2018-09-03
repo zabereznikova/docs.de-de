@@ -4,12 +4,12 @@ description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in e
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 8a10ac9175ee5fcf8649efbb07d8d382ac3afdc7
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 2bee78ca44026f28c51fac3bcf87d976b53e48a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696269"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390689"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -22,25 +22,31 @@ ms.locfileid: "34696269"
 ## <a name="synopsis"></a>Übersicht
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
 dotnet test [-h|--help]
 ```
+
 ---
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
 Der Befehl `dotnet test` wird zum Ausführen von Komponententests in einem bestimmten Projekt verwendet. Mit dem `dotnet test`-Befehl wird die Testlauf-Konsolenanwendung gestartet, die für ein Projekt angegeben wurde. Durch den Testlauf werden Tests ausgeführt, die für ein Komponententestframework (z.B. MSTest, NUnit oder xUnit) definiert wurden, und der Erfolg oder Misserfolg der einzelnen Testausführungen wird gemeldet. Der Testlauf und die Komponententestbibliothek werden als NuGet-Pakete gepackt und als gewöhnliche Abhängigkeiten für das Projekt wiederhergestellt.
 
@@ -284,5 +290,5 @@ Weitere Informationen und Beispiele zur Verwendung von selektiven Komponententes
 
 ## <a name="see-also"></a>Siehe auch
 
-[Frameworks und Ziele](../../standard/frameworks.md)  
-[.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
+* [Frameworks und Ziele](../../standard/frameworks.md)  
+* [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998871"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405556"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
 Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Verbindung mit dem Endpunkt eines Windows Communication Foundation (WCF)-Diensts erforderlich sind. Jeder Endpunkt in einem WCF-Dienst erfordert eine wohldefinierte Bindung. Dieses Thema beschreibt die Typen von Kommunikationsdetails, die die Bindungen definieren die Elemente einer Bindung, welche Bindungen in WCF enthalten sind und wie eine Bindung für einen Endpunkt angegeben werden kann.  

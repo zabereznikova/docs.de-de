@@ -4,12 +4,12 @@ description: Der Befehl „dotnet tool list“ listet die angegebenen globalen .
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5f4793cd37c3a8df06eb6930ad9f381ac70d4e67
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696724"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467055"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -21,13 +21,13 @@ ms.locfileid: "34696724"
 
 ## <a name="synopsis"></a>Übersicht
 
-```
+```console
 dotnet tool list <-g|--global>
 dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
 Der Befehl `dotnet tool list` ermöglicht Ihnen das Auflisten aller globalen .NET Core-Tools, die benutzerweit (aktuelles Benutzerprofil) oder unter dem angegebenen Pfad auf Ihrem Computer installiert sind. Der Befehl listet den Paketnamen, die installierte Version und den Befehl für das globale Tool auf. Zum Verwenden des list-Befehls müssen Sie entweder mit der Option `--global` angeben, dass alle benutzerweiten Tools angezeigt werden sollen, oder mit der Option `--tool-path` einen benutzerdefinierten Pfad angeben.
 
@@ -61,4 +61,4 @@ Listet die globalen Tools aus einem bestimmten Linux-/macOS-Ordner auf:
 
 ## <a name="see-also"></a>Siehe auch
 
-[.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)
+* [.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)

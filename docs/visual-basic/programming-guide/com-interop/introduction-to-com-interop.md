@@ -5,19 +5,19 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 639b621215f25bc1042274a92a21fca2985e5918
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244113"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389743"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Einführung in COM-Interop (Visual Basic)
 Das Component Object Model (COM) können ein Objekt, das die Funktionen an andere Komponenten und hostanwendungen verfügbar zu machen. COM-Objekte für die Windows-Programmierung seit vielen Jahren von grundlegender Wichtigkeit waren bieten für die common Language Runtime (CLR) entwickelte Anwendungen zahlreiche Vorteile.  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Anwendungen werden letztlich mit COM entwickelte ersetzt Bis dahin müssen Sie möglicherweise verwenden oder COM-Objekte mithilfe von Visual Studio erstellen. COM-Interoperabilität oder *COM-Interop*, können Sie vorhandenen COM-Objekte verwenden, bei der Umsetzung in den [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] in Ihrem eigenen Tempo.  
   
- Mithilfe der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] um COM-Komponenten zu erstellen, Sie können COM-Interop ohne Registrierung verwenden. Dies können Sie steuern, welche DLL-Version aktiviert ist, wenn mehr als eine Version, die auf einem Computer installiert ist, und Endbenutzer, verwenden Sie XCOPY oder FTP, kopieren Sie die Anwendung in ein geeignetes Verzeichnis auf ihrem Computer, in dem sie ausgeführt werden kann. Weitere Informationen finden Sie unter [-COM-Interop ohne Registrierung](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
+ Mithilfe der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] um COM-Komponenten zu erstellen, Sie können COM-Interop ohne Registrierung verwenden. Dies können Sie steuern, welche DLL-Version aktiviert ist, wenn mehr als eine Version, die auf einem Computer installiert ist, und Endbenutzer, verwenden Sie XCOPY oder FTP, kopieren Sie die Anwendung in ein geeignetes Verzeichnis auf ihrem Computer, in dem sie ausgeführt werden kann. Weitere Informationen finden Sie unter [-COM-Interop ohne Registrierung](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
 ## <a name="managed-code-and-data"></a>Verwalteter Code und Daten  
  Code entwickelt wird, für die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] genannt *von verwaltetem Code*, und enthält Metadaten, die von der CLR verwendet wird. Vom verwendeten Daten [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Anwendungen heißt *verwalteten Daten* , da die Laufzeit datenbezogene Aufgaben verwaltet, wie z. B. typüberprüfung, zuordnen und Freigeben von Arbeitsspeicher und ausführen. Standardmäßig Visual Basic .NET verwendet wird, verwalteten Code und Daten, aber Sie können den nicht verwalteten Code und Daten von COM-Objekten, die mithilfe von Interop-Assemblys (weiter unten auf dieser Seite beschrieben) zugreifen.  
@@ -43,7 +43,7 @@ Das Component Object Model (COM) können ein Objekt, das die Funktionen an ander
 ### <a name="importing-and-exporting-type-libraries"></a>Importieren und Exportieren von Typbibliotheken  
  Visual Studio enthält das Dienstprogramm "Tlbimp", mit der Sie die Informationen aus einer Typbibliothek in importieren kann eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Anwendung. Sie können mithilfe des Hilfsprogramms Tlbexp Typbibliotheken aus Assemblys generieren.  
   
- Weitere Informationen über "Tlbimp" und Tlbexp, finden Sie unter [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md) und [Tlbexp.exe (Type Library Exporter-Tool)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Weitere Informationen über "Tlbimp" und Tlbexp, finden Sie unter [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md) und [Tlbexp.exe (Type Library Exporter-Tool)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Interop-Assemblys  
  Interop-Assemblys sind [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys, die Brücke zwischen verwaltetem und nicht verwaltetem code, die Member der Zuordnung COM-Objekts in entsprechende [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verwalteten Mitglieder. Interop-Assemblys, die von Visual Basic .NET erstellten behandeln viele der Details für die Arbeit mit COM-Objekte, z. B. Interop-Marshalling.  
@@ -58,6 +58,6 @@ Das Component Object Model (COM) können ein Objekt, das die Funktionen an ander
  [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (Type Library Exporter-Tool)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Tlbexp.exe (Type Library Exporter-Tool)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Interop Marshaling (Interop-Marshalling)](../../../framework/interop/interop-marshaling.md)  
- [COM-Interop ohne Registrierung](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+ [COM-Interop ohne Registrierung](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
