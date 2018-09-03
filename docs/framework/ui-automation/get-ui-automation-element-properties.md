@@ -11,30 +11,30 @@ ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 73678433692f5532f712f0d2c7a3c5bf138a87b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9876aa894c49ec7af1ecd240e12e0f70eccfd89f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405576"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467356"
 ---
 # <a name="get-ui-automation-element-properties"></a>Abrufen von Elementeigenschaften der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In diesem Thema wird gezeigt, wie zum Abrufen der Eigenschaften einer [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Element.  
   
-### <a name="get-a-current-property-value"></a>Abrufen von einem aktuellen Eigenschaftswert  
+### <a name="get-a-current-property-value"></a>Erhalten Sie einen aktuellen Eigenschaftswert  
   
-1.  Abrufen der <xref:System.Windows.Automation.AutomationElement> , deren Eigenschaft, die Sie abrufen möchten.  
+1.  Abrufen der <xref:System.Windows.Automation.AutomationElement> , dessen Eigenschaft, die Sie abrufen möchten.  
   
-2.  Rufen Sie <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, oder Abrufen der <xref:System.Windows.Automation.AutomationElement.Current%2A> Eigenschaftsstruktur und beziehen Sie den Wert von einem seiner Member.  
+2.  Rufen Sie <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, oder Abrufen der <xref:System.Windows.Automation.AutomationElement.Current%2A> Struktur der Eigenschaft an, und erhalten den Wert von eins ihrer Elemente.  
   
-### <a name="get-a-cached-property-value"></a>Abrufen eines zwischengespeicherten Werts  
+### <a name="get-a-cached-property-value"></a>Abrufen eines Werts für die zwischengespeicherten Eigenschaftswerte  
   
-1.  Abrufen der <xref:System.Windows.Automation.AutomationElement> , deren Eigenschaft, die Sie abrufen möchten. Die Eigenschaft muss angegeben wurde der <xref:System.Windows.Automation.CacheRequest>.  
+1.  Abrufen der <xref:System.Windows.Automation.AutomationElement> , dessen Eigenschaft, die Sie abrufen möchten. Die Eigenschaft muss angegeben wurden die <xref:System.Windows.Automation.CacheRequest>.  
   
-2.  Rufen Sie <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, oder Abrufen der <xref:System.Windows.Automation.AutomationElement.Cached%2A> Eigenschaftsstruktur und beziehen Sie den Wert von einem seiner Member.  
+2.  Rufen Sie <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, oder Abrufen der <xref:System.Windows.Automation.AutomationElement.Cached%2A> Struktur der Eigenschaft an, und erhalten den Wert von eins ihrer Elemente.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt verschiedene Möglichkeiten zum Abrufen der aktuellen Eigenschaften des ein <xref:System.Windows.Automation.AutomationElement>.  
