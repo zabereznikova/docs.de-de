@@ -22,7 +22,7 @@ Sie können Probleme mit der Component Object Model-Interoperabilität (COM) beh
   
 -   Verwenden Sie die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>-Methode, um die Windows Form anzuzeigen.  
   
--   Zeigen Sie jedes Windows Form in einem separaten Thread an. Weitere Informationen finden Sie unter [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+-   Zeigen Sie jedes Windows Form in einem separaten Thread an. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows Forms in einem eigenen Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="procedure"></a>Prozedur  
  Die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>-Methode ist möglicherweise die einfachste Möglichkeit, eine Form in einer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Nachrichtenschleife anzuzeigen, weil es von allen Ansätzen die geringste Codeimplementierung erfordert.  

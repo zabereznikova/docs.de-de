@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754968"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487064"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 Die Werttypen sind in zwei Hauptkategorien unterteilt:  
@@ -97,11 +97,12 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Typen](../../../csharp/language-reference/keywords/types.md)  
- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
- [Nullable-Typen](../../programming-guide/nullable-types/index.md)  
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [Typen](../../../csharp/language-reference/keywords/types.md)  
+- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Nullable-Typen](../../programming-guide/nullable-types/index.md)  
