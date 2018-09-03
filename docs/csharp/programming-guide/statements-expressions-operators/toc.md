@@ -13,7 +13,6 @@
 ### [Verwenden von Konvertierungsoperatoren](using-conversion-operators.md)
 ### [Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](how-to-implement-user-defined-conversions-between-structs.md)
 ## [Ausdrücke mit Standardwert](default-value-expressions.md)
-## [Gewusst wie: Verwenden der Operatorüberladung zum Erstellen einer Klasse für komplexe Zahlen](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [Übereinstimmungsvergleiche](equality-comparisons.md)
 ### [Gewusst wie: Definieren von Wertgleichheit für einen Typ](how-to-define-value-equality-for-a-type.md)
 ### [Gewusst wie: Überprüfen auf Verweisgleichheit (Identität)](how-to-test-for-reference-equality-identity.md)
