@@ -9,19 +9,20 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 971f85b2cabe79237ff62eb36de43873df1d2ae5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296142"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933586"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
-Weil C# zur Laufzeit statisch kompiliert ist, kann eine Variable, nachdem sie deklariert wurde, nicht noch einmal deklariert oder dazu verwendet werden, Werte anderer Typen zu speichern, es sei denn, der Wert ist in den Wert der Variablen konvertierbar. Es gibt z.B. keine Konvertierung einer Ganzzahl in eine willkürliche Zeichenfolge. Deshalb können Sie, nachdem Sie `i` Ganzzahl deklariert haben, die Zeichenfolge „Hello“ nicht zuweisen, wie in folgendem Codebeispiel gezeigt.  
+
+Weil C# zur Kompilierzeit statisch typisiert ist, kann eine Variable, nachdem sie deklariert wurde, nicht erneut deklariert werden oder einen Wert von einem anderen Typ zugewiesen bekommen, es sei denn, dieser Typ ist implizit in den Typ der Variable konvertierbar. `string` kann beispielsweise nicht implizit in `int` konvertiert werden. Deshalb können Sie, nachdem Sie `i` als `int` deklariert haben, nicht die Zeichenfolge „Hello“ zuweisen. Dies wird im folgenden Beispiel veranschaulicht:
   
 ```csharp  
 int i;  
-i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"  
+i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 ```  
   
  Manchmal müssen Sie möglicherweise einen Wert in eine Variable oder einen Methodenparameter eines anderen Typen kopieren. Sie haben z.B. möglicherweise eine Ganzzahlvariable, die Sie an eine Methode übergeben müssen, deren Parameter vom Type `double` ist. Möglicherweise müssen Sie auch einer Variablen eines Schnittstellentyps eine Klassenvariable zuweisen. Derartige Vorgänge werden als *Typkonvertierungen* bezeichnet. In C# können Sie folgende Arten von Konvertierungen durchführen:  
@@ -35,7 +36,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 -   **Konvertierungen mit Hilfsklassen**:Für eine Konvertierung von nicht kompatiblen Typen, z.B. von ganzen Zahlen und <xref:System.DateTime?displayProperty=nameWithType>-Objekten oder von Hexadezimalzeichenfolgen und Bytearrays, können Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse, die <xref:System.Convert?displayProperty=nameWithType>-Klasse und die `Parse`-Methoden der integrierten numerischen Typen (z.B. <xref:System.Int32.Parse%2A?displayProperty=nameWithType>) verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) und [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Implizite Konvertierungen  
- Eine implizite Konvertierung kann für integrierte numerische Typen durchgeführt werden, wenn der zu speichernde Wert in die Variable passt, ohne abgeschnitten oder abgerundet zu werden. Eine Variable den Typs [long](../../../csharp/language-reference/keywords/long.md) (8-Byte-Ganzzahl) kann z.B. jeden Wert speichern, den eine Variable des Typs [int](../../../csharp/language-reference/keywords/int.md) (4-Bytes auf einem 32-Bit-Computer) speichern kann. In folgendem Beispiel konvertiert der Compiler den Wert auf der rechten Seite implizit in einen Typ `long`, bevor er ihn `bigNum` zuweist.  
+ Eine implizite Konvertierung kann für integrierte numerische Typen durchgeführt werden, wenn der zu speichernde Wert in die Variable passt, ohne abgeschnitten oder abgerundet zu werden. Zum Beispiel kann eine Variable vom Typ [long](../../../csharp/language-reference/keywords/long.md) (64-Bit-Integer) jeden Wert speichern, den eine Variable vom Typ [int](../../../csharp/language-reference/keywords/int.md) (32-Bit-Integer) speichern kann. Im folgenden Beispiel konvertiert der Compiler den Wert von `num` auf der rechten Seite implizit in einen `long`-Typ, bevor er ihn `bigNum` zuweist.  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   

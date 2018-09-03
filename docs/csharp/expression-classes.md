@@ -3,22 +3,22 @@ title: Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 description: Erfahren Sie mehr zu Frameworktypen, die Ausdrucksbaumstrukturen unterstützen, wie Sie diese erstellen können und Methoden zum Arbeiten mit Ausdrucksbaumstruktur-APIs.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214944"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934791"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 
 [Vorherige – Ausdrucksbaumstrukturen mit Erläuterung](expression-trees-explained.md)
 
 Es gibt eine umfangreiche Liste von Klassen im .NET Core Framework, die mit Ausdrucksbaumstrukturen arbeiten.
-[Hier](/dotnet/core/api/System.Linq.Expressions) finden Sie die vollständige Liste.
+Die vollständige Liste finden Sie unter <xref:System.Linq.Expressions>.
 Anstatt die vollständige Liste zu durchlaufen, sehen wir uns an, wie die Framework-Klassen entwickelt wurden.
 
-Im Sprachentwurf ist ein Ausdruck ein Teil eines Codes, der ausgewertet wird und einen Wert zurückgibt. Ausdrücke können sehr einfach sein: Der konstante Ausdruck `1` gibt den konstanten Wert 1 zurück. Sie sind möglicherweise komplizierter: Der Ausdruck `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` gibt ein Stammverzeichnis für eine quadratische Gleichung zurück (in dem Fall, in dem die Gleichung eine Lösung hat).  
+Im Sprachentwurf ist ein Ausdruck ein Teil eines Codes, der ausgewertet wird und einen Wert zurückgibt. Ausdrücke können sehr einfach sein: Der konstante Ausdruck `1` gibt den konstanten Wert 1 zurück. Sie sind möglicherweise komplizierter: Der Ausdruck `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` gibt ein Stammverzeichnis für eine quadratische Gleichung zurück (in dem Fall, in dem die Gleichung eine Lösung hat).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Es beginnt alles mit System.Linq.Expression
 

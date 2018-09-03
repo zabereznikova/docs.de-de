@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579690"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931179"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 <a name="Top"></a> Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt. Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:  
@@ -70,7 +70,7 @@ ms.locfileid: "33579690"
   
  In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit positiven Zeichenklassen aufgeführt.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`[aeiou]`|Übereinstimmung mit allen Vokalen.|  
 |`[\p{P}\d]`|Übereinstimmung mit allen Interpunktions- und Dezimalzeichen.|  
@@ -83,7 +83,7 @@ ms.locfileid: "33579690"
   
  Der reguläre Ausdruck `gr[ae]y\s\S+?[\s|\p{P}]` ist wie folgt definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`gr`|Übereinstimmung mit den Literalzeichen"gr".|  
 |`[ae]`|Übereinstimmung mit entweder "a" oder "e".|  
@@ -98,7 +98,7 @@ ms.locfileid: "33579690"
   
  Der reguläre Ausdruck `\b[A-Z]\w*\b` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`[A-Z]`|Übereinstimmung mit einem die oft ausgegebene Befehlszeilen  Großbuchstaben von A bis Z.|  
@@ -132,7 +132,7 @@ ms.locfileid: "33579690"
   
  In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit negativen Zeichengruppen aufgeführt.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`[^aeiou]`|Übereinstimmung mit allen Zeichen mit Ausnahme von Vokalen.|  
 |`[^\p{P}\d]`|Übereinstimmung mit allen Zeichen mit Ausnahme von Interpunktions- und Dezimalzeichen.|  
@@ -144,7 +144,7 @@ ms.locfileid: "33579690"
   
  Der reguläre Ausdruck `\bth[^o]\w+\b` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`th`|Übereinstimmung mit den Literalzeichen"th".|  
@@ -168,7 +168,7 @@ ms.locfileid: "33579690"
 > [!NOTE]
 >  Da für die `.`-Zeichenklasse mit Ausnahme von `\n` eine Übereinstimmung mit jedem Zeichen vorliegt, stimmt `\r` (das Wagenrücklaufzeichen, "\u000D") ebenfalls überein.  
   
--   In einer positiven oder negativen Zeichengruppe wird ein Punkt anstatt einer Zeichenklasse als Literalzeichen behandelt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Positive Zeichengruppe](#PositiveGroup) und [Negative Zeichengruppe](#NegativeGroup). Im folgenden Beispiel wird zur Veranschaulichung ein regulärer Ausdruck definiert, der das Punktzeichen (`.`) sowohl als Zeichenklasse als auch als Mitglied einer positiven Zeichengruppe aufweist. Der reguläre Ausdruck `\b.*[.?!;:](\s|\z)` beginnt an einer Wortgrenze und stimmt bis zum Erreichen eines von vier Interpunktionszeichen (einschließlich eines Punkts) mit jedem Zeichen überein. Anschließend liegt entweder eine Übereinstimmung mit einem Leerzeichen oder dem Ende der Zeichenfolge vor.  
+-   In einer positiven oder negativen Zeichengruppe wird ein Punkt anstatt einer Zeichenklasse als Literalzeichen behandelt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Positive Zeichengruppe](#PositiveGroup) und [Negative Zeichengruppe](#NegativeGroup). Im folgenden Beispiel wird zur Veranschaulichung ein regulärer Ausdruck definiert, der das Punktzeichen (`.`) sowohl als Zeichenklasse als auch als Mitglied einer positiven Zeichengruppe aufweist. Der reguläre Ausdruck `\b.*[.?!;:](\s|\z)` beginnt an einer Wortgrenze und stimmt bis zum Erreichen eines von fünf Interpunktionszeichen (einschließlich eines Punkts) mit jedem Zeichen überein. Anschließend liegt entweder eine Übereinstimmung mit einem Leerzeichen oder dem Ende der Zeichenfolge vor.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -195,7 +195,7 @@ ms.locfileid: "33579690"
   
  Der reguläre Ausdruck `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\p{IsGreek}+`|Übereinstimmung mit mindestens einem griechischen Zeichen.|  
@@ -232,7 +232,7 @@ ms.locfileid: "33579690"
 ## <a name="word-character-w"></a>Wortzeichen: \w  
  `\w` entspricht einem beliebigen Wortzeichen. Ein Wortzeichen gehört einer der in der folgenden Tabelle aufgeführten Unicode-Kategorien an.  
   
-|Kategorie|description|  
+|Kategorie|Beschreibung |  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
 |Lu|Letter, Uppercase (Buchstabe, Großschreibung)|  
@@ -250,7 +250,7 @@ ms.locfileid: "33579690"
   
  Im folgenden Beispiel werden mit dem `\w`-Sprachelement übereinstimmende doppelte Zeichen innerhalb eines Worts ermittelt. Im Beispiel wird ein Muster für reguläre Ausdrücke definiert (`(\w)\1`), das wie folgt interpretiert werden kann.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |(\w)|Übereinstimmung mit einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
 |\1|Übereinstimmung mit dem Wert der ersten Erfassung.|  
@@ -270,7 +270,7 @@ ms.locfileid: "33579690"
   
  Anders ausgedrückt: Mit Ausnahme der Zeichen, die in den Unicode-Kategorien enthalten sind, die in der folgenden Tabelle aufgelistet werden, liegt eine Übereinstimmung mit jedem Zeichen vor.  
   
-|Kategorie|description|  
+|Kategorie|Beschreibung |  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
 |Lu|Letter, Uppercase (Buchstabe, Großschreibung)|  
@@ -288,7 +288,7 @@ ms.locfileid: "33579690"
   
  Das folgende Beispiel veranschaulicht die `\W`-Zeichenklasse.  Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b(\w+)(\W){1,2}`), das mit einem von einem oder zwei Nichtwortzeichen (z. B. Leer- oder Interpunktionszeichen) gefolgten Wort übereinstimmt. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |\b|Der Vergleich beginnt an einer Wortgrenze.|  
 |(\w+)|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -305,7 +305,7 @@ ms.locfileid: "33579690"
 ## <a name="white-space-character-s"></a>Leerzeichen: \s  
  `\s` stimmt mit jedem Leerzeichen überein. Dies ist zu den in der folgenden Tabelle aufgeführten Escapesequenzen und Unicode-Kategorien äquivalent.  
   
-|Kategorie|description|  
+|Kategorie|Beschreibung |  
 |--------------|-----------------|  
 |`\f`|Seitenvorschubzeichen, "\u000C".|  
 |`\n`|Zeilenumbruchzeichen, "\u000A".|  
@@ -319,7 +319,7 @@ ms.locfileid: "33579690"
   
  Das folgende Beispiel veranschaulicht die `\s`-Zeichenklasse. Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b\w+(e)?s(\s|$)`), das mit einem entweder auf "s" oder "es" endenden Wort übereinstimmt. Auf dieses Wort muss ein Leerzeichen oder das Ende der Eingabezeichenfolge folgen. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |\b|Der Vergleich beginnt an einer Wortgrenze.|  
 |\w+|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -340,7 +340,7 @@ ms.locfileid: "33579690"
   
  Im folgenden Beispiel wird das `\S`-Sprachelement veranschaulicht. Das Muster für den regulären Ausdruck `\b(\S+)\s?` stimmt mit durch Leerzeichen getrennten Zeichenfolgen überein. Das zweite Element im <xref:System.Text.RegularExpressions.GroupCollection>-Objekt der Übereinstimmung enthält die entsprechende Zeichenfolge. Der reguläre Ausdruck kann wie in der folgenden Tabelle dargestellt interpretiert werden.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\S+)`|Übereinstimmung mit mindestens einem Nicht-Leerzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -359,7 +359,7 @@ ms.locfileid: "33579690"
   
  Im folgenden Beispiel wird das `\d`-Sprachelement veranschaulicht. Anhand eines Tests soll ermittelt werden, ob eine Eingabezeichenfolge eine gültige Telefonnummer in den USA und Kanada darstellt. Das Muster für reguläre Ausdrücke `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |`^`|Beginnt den Vergleich am Anfang der Eingabezeichenfolge.|  
 |`\(?`|Übereinstimmung mit null oder einem Literalzeichen ("(").|  
@@ -383,7 +383,7 @@ ms.locfileid: "33579690"
   
  Im folgenden Beispiel wird das "\D"-Sprachelement veranschaulicht. Anhand eines Tests wird ermittelt, ob eine Zeichenfolge (z. B. eine Teilenummer) aus der gewünschten Kombination von Dezimalzahlen und Nicht-Dezimalzahlen besteht. Das Muster für reguläre Ausdrücke `^\D\d{1,5}\D*$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |`^`|Beginnt den Vergleich am Anfang der Eingabezeichenfolge.|  
 |`\D`|Übereinstimmung mit jedem Zeichen außer Zahlen.|  
@@ -400,7 +400,7 @@ ms.locfileid: "33579690"
 ## <a name="supported-unicode-general-categories"></a>Unterstützte allgemeine Unicode-Kategorien  
  In der folgenden Tabelle werden die allgemeinen, in Unicode definierten Kategorien aufgeführt. Weitere Informationen finden Sie in den Unterthemen „UCD File Format“ (UCD-Dateiformat) und „General Category Values“ (Allgemeine Kategorienwerte) der [Unicode Character Database](https://www.unicode.org/reports/tr44/).  
   
-|Kategorie|description|  
+|Kategorie|Beschreibung |  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase (Buchstabe, Großschreibung)|  
 |`Ll`|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
@@ -581,7 +581,7 @@ ms.locfileid: "33579690"
   
  Im folgenden Beispiel wird ein regulärer Ausdruck definiert (`^[0-9-[2468]]+$`), der in einer Eingabezeichenfolge Übereinstimmungen für Null und ungerade Zahlen ergibt.  Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |^|Beginnt am Anfang der Eingabezeichenfolge mit der Übereinstimmung.|  
 |`[0-9-[2468]]+`|Mindestens eine Übereinstimmung mit einem Zeichen von 0 bis 9 (mit Ausnahme von 2, 4, 6 und 8) liegt vor. Anders ausgedrückt: Es liegt mindestens eine Übereinstimmung mit Null oder einer ungeraden Zahl vor.|  

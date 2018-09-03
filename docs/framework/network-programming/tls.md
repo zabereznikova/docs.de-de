@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397259"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925503"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -119,7 +119,7 @@ Sie müssen die neuesten Betriebssystempatches installieren. Siehe [Sicherheitsu
 
 Das WCF-Framework wählt automatisch das höchste bis TLS 1.2 verfügbare Protokoll, es sei denn, Sie konfigurieren explizit eine Protokollversion. Weitere Informationen finden Sie im vorhergehenden Abschnitt [Für WCF-TCP-Transport unter Berücksichtigung der Transportsicherheit mit Zertifikatanmeldeinformationen](#wcf-tcp-cert).
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>Für .NET Framework 3.5 bis 4.5.1 und ohne WFC
+### <a name="for-net-framework-35---452-and-not-wcf"></a>Für .NET Framework 3.5 bis 4.5.2 und ohne WCF
 
 Es wird empfohlen, ein Upgrade Ihrer App auf .NET Framework 4.7 oder höher auszuführen. Wenn Sie kein Upgrade ausführen können, gehen Sie wie folgt vor. Möglicherweise tritt irgendwann in Ihrer Anwendung ein Fehler auf, bis Sie ein Upgrade auf .NET Framework 4.7 oder höher ausgeführt haben.
 

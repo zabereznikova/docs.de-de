@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a113130d29336ecabb52095ca7f5809f5f0ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592547"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925610"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -23,33 +23,33 @@ In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von 
   
 ## <a name="current-version"></a>Aktuelle Version
 
-Visual Basic 15.5   
+Visual Basic 15.5/Visual Studio 2017 Version 15.5  
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Frühere Versionen
 
-Visual Basic 15.3   
+Visual Basic 15.3/Visual Studio 2017 Version 15.3  
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153)
 
-Visual Basic 2017   
+Visual Basic 2017/Visual Studio 2017  
 Informationen zu neuen Funktionen finden Sie unter [Visual Basic 2017](#visual-basic-2017)
 
-Visual Basic / Visual Studio .NET 2015   
+Visual Basic/Visual Studio 2015   
 Informationen zu neuen Funktionen finden Sie unter [Visual Basic 14](#visual-basic-14)
 
-Visual Basic / Visual Studio .NET 2013  
+Visual Basic/Visual Studio 2013  
 Technologievorschau von .NET Compiler Platform („Roslyn“)
 
-Visual Basic / Visual Studio .NET 2012   
+Visual Basic/Visual Studio 2012   
 Die Schlüsselwörter `Async` und `await`, Iteratoren, Aufruferinformationsattribute
 
-Visual Basic, Visual Studio .NET 2010   
+Visual Basic, Visual Studio 2010   
 Automatisch implementierte Eigenschaften, Auflistungsinitialisierer, implizite Zeilenfortsetzung, dynamische, generische Ko-/Kontravarianz, Zugriff auf globalen Namespace
 
-Visual Basic / Visual Studio .NET 2008   
+Visual Basic/Visual Studio 2008   
 Language Integrated Query (LINQ), XML-Literale, lokaler Typrückschluss, Objektinitialisierer, anonyme Typen, Erweiterungsmethoden, lokaler `var`-Typrückschluss, Lambda-Ausdrücke, `if`-Operator, partielle Methoden, auf NULL festlegbare Werttypen  
 
-Visual Basic / Visual Studio .NET 2005   
+Visual Basic/Visual Studio 2005   
 Der `My`-Typ und Hilfstypen (Zugriff auf App, Computer, Dateisystem, Netzwerk)
 
 Visual Basic / Visual Studio .NET 2003   
@@ -123,7 +123,7 @@ Sie können ein binäres Literal definieren, indem Sie die Präfixe `&B` oder `&
 
 Weitere Informationen finden Sie im Abschnitt „Zuweisung von Literalen“ der Datentypen [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) und [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-**Unterstützung für Verweisrückgabewerte von C#**
+[**Support for C# reference return values (Unterstützung für Verweisrückgabewerte von C#)**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Ab C# 7.0 unterstützt C# Verweisrückgabewerte. Das heißt, wenn die aufrufende Methode einen von einem Verweis zurückgegebenen Wert erhält, kann sie den Wert des Verweises ändern. In Visual Basic können Sie keine Methoden mit Verweisrückgabewerten erstellen. Allerdings können Sie Verweisrückgabewerte verarbeiten und modifizieren.
 
@@ -156,43 +156,43 @@ Weitere Informationen finden Sie unter [Verweisrückgabewerte](../programming-gu
 [Memberzugriff und Indizierung mit NULL-Bedingung](../../csharp/language-reference/operators/null-conditional-operators.md)  
 Sie können eine Prüfung auf null auf sehr einfache syntaktische Weise vornehmen, bevor Sie eine Operation für den Memberzugriff (`?.`) oder die Indizierung (`?[]`) ausführen.  Mithilfe dieser Operatoren müssen Sie für die Prüfung auf null weniger Code schreiben, insbesondere beim tieferen Eindringen in Datenstrukturen.  Wenn der linke Operand oder Objektverweis NULL ist, geben die Operationen NULL zurück.  
   
-[Multi-line String Literals (Mehrzeilige Zeichenfolgenliterale)](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+[Multi-line string literals (Mehrzeilige Zeichenfolgenliterale)](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Zeichenfolgenliterale können Zeilenumbruchsequenzen enthalten.  Sie müssen nicht mehr die alte Problemumgehung mit `<xml><![CDATA[...text with newlines...]]></xml>.Value` verwenden.  
   
-Kommentare  
+**Kommentare**  
 Sie können Kommentare nach impliziten Zeilenfortsetzungen, innerhalb von Initialisierungsausdrücken und zwischen LINQ-Ausdrücken einfügen.  
   
- Intelligentere Auflösung vollqualifizierter Namen  
+**Intelligentere Auflösung vollqualifizierter Namen**  
  Bei Code wie `Threading.Thread.Sleep(1000)` suchte Visual Basic bisher den Namespace "Threading", stellte fest, dass dieser mit "System.Threading" und "System.Windows.Threading" mehrdeutig war und meldete dann einen Fehler.  Nun berücksichtigt Visual Basic die beiden möglichen Namespaces gemeinsam.  Wenn Sie die Vervollständigungsliste anzeigen, listet der Visual Studio-Editor Member beider Typen in der Vervollständigungsliste auf.  
   
- Datumsliterale mit Jahresangabe am Anfang  
+ **Datumsliterale mit Jahresangabe am Anfang**  
  Datumsliterale im Format jjjj-mm-tt sind möglich, z. B. `#2015-03-17 16:10 PM#`.  
   
- Schreibgeschützte Schnittstelleneigenschaften  
+ **Schreibgeschützte Schnittstelleneigenschaften**  
  Sie können mithilfe einer Readwrite-Eigenschaft schreibgeschützte Schnittstelleneigenschaften implementieren.  Die Schnittstelle garantiert Mindestfunktionalität und hindert eine Implementierungsklasse nicht daran, die Festlegung der Eigenschaft zuzulassen.  
   
  [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)  
  Zur besseren Lesbarkeit des Codes können Sie nun `TypeOf` mit `IsNot` verwenden.  
   
- [#Disable Warning\<<ID> und #Enable Warning \<<ID>](../../visual-basic/language-reference/directives/directives.md)  
+ [#Disable Warning\<<ID> und #Enable Warning \<<ID>](../../visual-basic/language-reference/directives/index.md)  
  Sie können bestimmte Warnungen für Bereiche innerhalb einer Quelldatei deaktivieren und aktivieren.  
   
- Verbesserungen bei XML-Dokumentationskommentaren  
+ **Verbesserungen bei XML-Dokumentationskommentaren**  
  Beim Schreiben von Dokumentationskommentaren steht intelligente Editor- und Buildunterstützung zum Überprüfen von Parameternamen, ordnungsgemäßer Handhabung von `crefs` (Generika, Operatoren usw.), Farben und Umgestaltung bereit.  
   
  [Partial Module and Interface Definitions (Partielle Modul- und Schnittstellendefinitionen)](../../visual-basic/language-reference/modifiers/partial.md)  
  Zusätzlich zu Klassen und Strukturen können Sie partielle Module und Schnittstellen deklarieren.  
   
- [Partial Module and Interface Definitions (#Region-Direktiven in Methodentexten)](../../visual-basic/language-reference/directives/region-directive.md)  
+ [#Region directives inside method bodies (#Region-Anweisungen in Methodentexten)](../../visual-basic/language-reference/directives/region-directive.md)  
  Sie können die Begrenzer #Region...#End Region an einer beliebigen Stelle in einer Datei, innerhalb von Funktionen und sogar Funktionsrümpfe übergreifend einfügen.  
   
- [Overrides Definitions are Implicitly Overloads (Überschreibungsdefinitionen sind implizite Überladungen)](../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Overrides definitions are implicitly overloads (Überschreibungsdefinitionen sind implizite Überladungen)](../../visual-basic/language-reference/modifiers/overrides.md)  
  Wenn Sie den `Overrides`-Modifizierer zu einer Definition hinzufügen, fügt der Compiler implizit `Overloads` hinzu, sodass Sie in allgemeinen Fällen weniger Code eingeben können.  
   
- CObj in Attributargumenten zulässig  
+ **CObj in Attributargumenten zulässig**  
  Der Compiler gab gewöhnlich eine Fehlermeldung aus, dass CObj(...) bei Verwendung in Attributkonstruktionen keine Konstante war.  
   
- Deklarieren und Verwenden mehrdeutiger Methoden von unterschiedlichen Schnittstellen  
+ **Deklarieren und Verwenden mehrdeutiger Methoden von unterschiedlichen Schnittstellen**  
  Zuvor führte der folgende Code zu Fehlern, die Sie daran hinderten, `IMock` zu deklarieren oder `GetDetails` aufzurufen (wenn diese in C# deklariert waren):  
   
 ```vb  

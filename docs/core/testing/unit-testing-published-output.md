@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem Befehl „dotnet vstest“ Tests für
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210252"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936025"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Test einer veröffentlichten Ausgabe mit „dotnet vtest“
 
@@ -34,5 +34,6 @@ dotnet vstest out/MyProject.Tests.dll
 > Hinweis: Wenn Ihre App Zielversionen für ein anderes Framework als `netcoreapp` festlegt, können Sie den Befehl `dotnet vstest` trotzdem ausführen, indem Sie das Zielframework mit einem Frameworkflag übergeben. Beispielsweise `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. In Visual Studio 2017 Update 5 wird das gewünschte Framework automatisch erkannt.
 
 ## <a name="see-also"></a>Siehe auch
- [Komponententests mit „dotnet-test“ und xUnit](unit-testing-with-dotnet-test.md)  
- [Komponententests mit „dotnet-test“ und MSTest](unit-testing-with-mstest.md)  
+- [Komponententests mit „dotnet-test“ und xUnit](unit-testing-with-dotnet-test.md)
+- [Komponententests mit „dotnet-test“ und NUnit](unit-testing-with-nunit.md)
+- [Komponententests mit „dotnet-test“ und MSTest](unit-testing-with-mstest.md)

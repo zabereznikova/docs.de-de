@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 869d64902c53e20667907b99276b9f8c6f3a2e20
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392189"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932848"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version des .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -47,7 +47,7 @@ Downloadlinks finden Sie im Abschnitt [Verteilbare Pakete](#redistributable-pack
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und die Punktversionen bauen inkrementell auf [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]auf. Wenn Sie das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder dessen Punktreleases auf einem System installieren, auf dem das [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] installiert ist, werden die Assemblys der Version 4 durch neuere Versionen ersetzt.
 
-- Wenn Sie in Ihrer App auf ein Microsoft [Out-of-Band-Paket](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) verweisen, wird die Assembly in das App-Paket aufgenommen.
+- Wenn Sie in Ihrer App auf ein Microsoft [Out-of-Band-Paket](../get-started/the-net-framework-and-out-of-band-releases.md) verweisen, wird die Assembly in das App-Paket aufgenommen.
 
 - Sie müssen über Administratorrechte verfügen, um [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und die Punktversionen zu installieren.
 
@@ -80,7 +80,7 @@ Downloadlinks finden Sie im Abschnitt [Verteilbare Pakete](#redistributable-pack
 |Größe des Downloads|Kleiner (enthält nur Installationsprogramm für die Zielplattform)*|Größer*|
 |Language Packs|Enthalten**|Muss [getrennt installiert werden](#chain_langpack), außer Sie verwenden das Paket, das auf alle Betriebssysteme abzielt|
 |Bereitstellungsmethode|Unterstützt alle Methoden:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Manuelle Installation](#installing_manually)<br />- [Benutzerdefiniertes Setup (Verkettung)](#chaining)|Unterstützt alle Methoden:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Manuelle Installation](#installing_manually)<br />- [Benutzerdefiniertes Setup (Verkettung)](#chaining)|
-|Speicherort des Downloads bei ClickOnce-Bereitstellung|Microsoft Download Center:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Ihr eigener Server oder das Microsoft Download Center:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Speicherort des Downloads bei ClickOnce-Bereitstellung|Microsoft Download Center:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Ihr eigener Server oder das Microsoft Download Center:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* Der Offlineinstaller ist das größere Paket, da es Komponenten für alle Zielplattformen enthält. Nach Abschluss des Setups speichert das Windows-Betriebssystem nur das Installationsprogramm, das verwendet wurde. Wenn der Offlineinstaller nach der Installation gelöscht wird, ist die Menge an verwendetem Speicherplatz identisch zum Webinstaller. Wenn das von Ihnen verwendete Tool zum Erstellen des Setupprogramms Ihrer App (beispielsweise [InstallAware](#installaware-deployment) oder [InstallShield](#installshield-deployment)) einen Setupdateiordner verwendet, der nach der Installation entfernt wird, können Sie den Offlineinstaller im Setupordner ablegen, damit er automatisch gelöscht wird.
 
@@ -247,14 +247,14 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Version|Wert des Versions-DWORD|
 |-------------|--------------------------------|
-|.NET Framework 4.7.2, installiert unter dem Windows 10-Update für April 2018|461808|
-|.NET Framework 4.7.2 wird unter allen Betriebssystemen außer unter dem Windows 10-Update für April 2018 installiert|461814|
-|.NET Framework 4.7.1 installiert unter Windows 10 Creators Update|461308|
-|.NET Framework 4.7.1 wird unter allen Betriebssystemen außer Windows 10 Creators Update installiert|461310|
+|.NET Framework 4.7.2, installiert im Windows 10-Update von April 2018 und in Windows Server Version 1803|461808|
+|.NET Framework 4.7.2, installiert in allen Betriebssystemversionen, abgesehen vom Windows 10-Update von April 2018 und Windows Server Version 1803|461814|
+|.NET Framework 4.7.1, installiert im Windows 10 Fall Creators Update und Windows Server Version 1709|461308|
+|.NET Framework 4.7.1, installiert in allen Betriebssystemversionen, abgesehen vom Windows 10 Fall Creators Update und Windows Server Version 1709|461310|
 |.NET Framework 4.7 installiert unter Windows 10 Creators Update|460798|
 |.NET Framework 4.7 wird unter allen Betriebssystemen außer Windows 10 Creators Update installiert|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installiert auf der Windows 10 Anniversary Edition|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installiert auf allen Betriebssystemen außer der Windows 10 Anniversary Edition|394806|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installiert in der Windows 10 Anniversary Edition und Windows Server 2016|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] installiert in allen Betriebssystemen außer der Windows 10 Anniversary Edition und Windows Server 2016|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installiert unter Windows 10, Update von November|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installiert unter allen Betriebssystemen außer Windows 10, Update von November|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installiert unter Windows 10|393295|
@@ -319,7 +319,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="return-codes"></a>Rückgabecodes
  In der folgenden Tabelle sind die häufigsten Rückgabecodes für das verteilbare Installationsprogramm für .NET Framework aufgeführt. Die Rückgabecodes sind für alle Versionen des Installationsprogramms identisch. Links zu ausführlichen Informationen finden Sie im nächsten Abschnitt.
 
-|Rückgabecode|description|
+|Rückgabecode|Beschreibung |
 |-----------------|-----------------|
 |0|Die Installation wurde erfolgreich abgeschlossen.|
 |1602|Der Benutzer hat die Installation abgebrochen.|
@@ -355,7 +355,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>Befehlszeilenoptionen
  In der folgenden Tabelle sind die Optionen aufgeführt, die Sie einschließen können, wenn Sie das verteilbare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] -Paket mit dem Setup der App verketten.
 
-|Option|description|
+|Option|Beschreibung |
 |------------|-----------------|
 |**/CEIPConsent**|Überschreibt das Standardverhalten und sendet anonymes Feedback an Microsoft, um die Bereitstellungsumgebung für die Zukunft zu verbessern. Diese Option kann nur verwendet werden, wenn vom Setupprogramm die Zustimmung angefordert wird und der Benutzer die Berechtigung erteilt, anonymes Feedback an Microsoft zu senden.|
 |**/chainingpackage** `packageName`|Gibt den Namen der ausführbaren Datei an, die das Verketten ausführt. Diese Informationen werden als anonymes Feedback an Microsoft gesendet, um zu helfen, die Bereitstellungsumgebung für die Zukunft zu verbessern.<br /><br /> Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Lucerne Publishing"**. Ein Beispiel für ein Verkettungspaket finden Sie in der MSDN Library unter [Abrufen von Statusinformationen aus einem Installationspaket](http://go.microsoft.com/fwlink/?LinkId=181926) .|

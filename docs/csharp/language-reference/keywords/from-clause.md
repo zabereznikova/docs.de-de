@@ -8,12 +8,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: e8bb7782fc60a3af20d5926e609a5edea68fd1a3
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 6efcdb720e0d83e69df647c5176feaa9dcc9b023
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027979"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42753995"
 ---
 # <a name="from-clause-c-reference"></a>from-Klausel (C#-Referenz)
 
@@ -25,7 +25,7 @@ Ein Abfrageausdruck muss mit einer `from`-Klausel beginnen. Darüber hinaus kann
 
 Sowohl die Bereichsvariable als auch die Datenquelle sind stark typisiert. Die Datenquelle, auf die in der `from`-Klausel verwiesen wird, muss vom Typ <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> oder von einem abgeleiteten Typ wie <xref:System.Linq.IQueryable%601> sein.
 
-Im folgenden Beispiel `numbers` ist die Datenquelle und `num` ist die Bereichsvariable. Beachten Sie, dass beide Variablen stark typisiert sind, obwohl das [var-](var.md)Schlüsselwort verwendet wird.
+Im folgenden Beispiel `numbers` ist die Datenquelle und `num` ist die Bereichsvariable. Beachten Sie, dass beide Variablen stark typisiert sind, obwohl das [var](var.md)-Schlüsselwort verwendet wird.
 
 [!code-csharp[cscsrefQueryKeywords#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#1)]
 

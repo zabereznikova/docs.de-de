@@ -6,23 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929677"
 ---
 # <a name="using-static-directive-c-reference"></a>using static-Direktive (C#-Referenz)
 
-Die `using static`-Direktive legt einen Typ fest, auf dessen statische Member Sie ohne Angabe eines Typnamens zugreifen können. Die Syntax lautet:
+Die `using static`-Anweisung legt einen Typ fest, auf dessen statische Member und geschachtelte Typen Sie ohne Angabe eines Typnamens zugreifen können. Die Syntax lautet:
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-Wo *vollqualifizierter Typname* der Name des Typs ist, auf dessen statische Member verwiesen werden kann, ohne einen Typnamen anzugeben. Wenn Sie keinen vollqualifizierten Typnamen angeben (der vollständige Namespacename mit dem Typnamen), generiert C# den Compilerfehler CS0246: „The type or namespace name '<type-name>' could not be found“ („Der Typ- oder Namespacename <type-name> konnte nicht gefunden werden.“)
+Hier steht *fully-qualified-type-name* für den Namen des Typs, auf dessen statische Member und geschachtelte Typen verwiesen werden kann, ohne einen Typnamen anzugeben. Wenn Sie keinen vollqualifizierten Typnamen angeben (der vollständige Namespacename mit dem Typnamen), generiert C# den Compilerfehler [CS0246](../compiler-messages/cs0246.md): „The type or namespace name 'type/namespace' could not be found (are you missing a using directive or an assembly reference?)“ (Der Typ- oder Namespacename „Typ/Namespace“ konnte nicht gefunden werden (haben Sie eine using-Anweisung oder einen Assemblyverweis vergessen?)).
 
-Die `using static`-Direktive gilt für jeden Typ, der über statische Member verfügt, auch wenn er ebenfalls über Instanzmember verfügt. Instanzmember können jedoch nur über die Typinstanz aufgerufen werden.
+Die `using static`-Anweisung gilt für jeden Typ, der über statische Member (oder geschachtelte Typen) verfügt, auch wenn er ebenfalls über Instanzmember verfügt. Instanzmember können jedoch nur über die Typinstanz aufgerufen werden.
 
 Die `using static`-Direktive wurde in C# 6 eingeführt.
 
@@ -52,9 +53,9 @@ In diesem Beispiel hätte die `using static`-Direktive auch auf den Typ <xref:Sy
 
 ## <a name="see-also"></a>Siehe auch
 
-[using directive (using-Direktive)](using-directive.md)   
-[C#-Referenz](../../../csharp/language-reference/index.md)   
-[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)   
-[Using-Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
-[Namespace Keywords (Schlüsselwörter des Namespace)](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[Namespaces](../../../csharp/programming-guide/namespaces/index.md)   
+- [using-Anweisung](using-directive.md)
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+- [Using-Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)

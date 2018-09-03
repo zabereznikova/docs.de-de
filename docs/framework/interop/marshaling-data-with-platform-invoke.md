@@ -1,6 +1,6 @@
 ---
 title: Marshallen von Daten mit Plattformaufruf
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391315"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911730"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshallen von Daten mit Plattformaufruf
 Zum Aufrufen von Funktionen, die aus einer unverwalteten Bibliothek exportiert wurden, erfordert eine .NET Framework-Anwendung einen Funktionsprototypen im verwalteten Code, der die unverwaltete Funktion darstellt. Gehen Sie zum Erstellen eines Prototypen, der den Aufruf der Plattform für das korrekte Marshalling von Daten ermöglicht, gehen Sie folgendermaßen vor:  
@@ -31,9 +31,10 @@ Zum Aufrufen von Funktionen, die aus einer unverwalteten Bibliothek exportiert w
 ## <a name="platform-invoke-data-types"></a>Datentypen für den Plattformaufruf  
  Die folgende Tabelle listet die Datentypen auf, die in der WIN 32-API (aufgeführt in Wtypes.h) verwendet werden, und die Funktionen im C-Stil auf. Viele unverwaltete Bibliotheken enthalten Funktionen, die diese Datentypen als Parameter und Rückgabewerte übergeben. Die dritte Spalte enthält den entsprechenden in .NET Framework integrierten Werttype oder die Klasse, die Sie in verwaltetem Code verwenden. In einigen Fällen können Sie einen Typ der gleichen Größe durch den in der Tabelle aufgeführten Typ ersetzen.  
   
-|Unverwalteter Typ in Wtypes.h|Unverwalteter Typ in C-Sprache|Name der verwalteten Klasse|description|  
+|Unverwalteter Typ in Wtypes.h|Unverwalteter Typ in C-Sprache|Name der verwalteten Klasse|Beschreibung |  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 Bit unter 32-Bit-Windows-Betriebssystemen, 64 Bit unter 64-Bit-Windows-Betriebssystemen.|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|Auf eine Funktion angewendet, die keinen Wert zurückgibt|
+|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|32 Bit unter 32-Bit-Windows-Betriebssystemen, 64 Bit unter 64-Bit-Windows-Betriebssystemen.|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 Bit|  
 |**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 Bit|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 Bit|  
@@ -45,10 +46,10 @@ Zum Aufrufen von Funktionen, die aus einer unverwalteten Bibliothek exportiert w
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 Bit|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 Bit|  
   

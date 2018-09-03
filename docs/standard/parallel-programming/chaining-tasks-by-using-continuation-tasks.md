@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c046094db52f2db55bb095839d354c7e6c691e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591936"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912041"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben
 Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorgangs häufig ein zweiter Vorgang aufgerufen und Daten an diesen weitergegeben. In der Vergangenheit wurden hierfür vor allem Rückrufmethoden genutzt. In der Task Parallel Library wird die gleiche Funktionalität durch *Fortsetzungsaufgaben*bereitgestellt. Eine Fortsetzungsaufgabe (auch kurz als Fortsetzung bezeichnet) ist eine asynchrone Aufgabe, die von einer anderen Aufgabe, die wiederum als *Vorgänger*bezeichnet wird, nach deren Beendigung aufgerufen wird.  
@@ -44,7 +44,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
  Eine Fortsetzung ist selbst ein <xref:System.Threading.Tasks.Task> und blockiert nicht den Thread, in dem sie gestartet wird. Rufen Sie die <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>-Methode auf, um den Thread bis zum Abschluss der Fortsetzungsaufgabe zu blockieren.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Erstellen einer Fortsetzung für einen einzelnen Vorgänger  
- Sie erstellen eine Fortsetzung, die durch Aufrufen der Methode <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> ausgeführt wird, wenn ihr Vorgänger abgeschlossen wurde. Im folgenden Beispiel ist das grundlegende Muster dargestellt (aus Gründen der Übersichtlichkeit wird die Ausnahmebehandlung ausgelassen). Es führt eine Vorgängeraufgabe `taskA`aus, der ein <xref:System.DayOfWeek> -Objekt zurückgibt, der den Namen des aktuellen Wochentags angibt. Nach Abschluss des Vorgängers wird der Fortsetzungsaufgabe `taskB`der Vorgänger übergeben; sie zeigt dann eine Zeichenfolge an, die dessen Ergebnis beinhaltet.  
+ Sie erstellen eine Fortsetzung, die durch Aufrufen der Methode <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> ausgeführt wird, wenn ihr Vorgänger abgeschlossen wurde. Im folgenden Beispiel ist das grundlegende Muster dargestellt (aus Gründen der Übersichtlichkeit wird die Ausnahmebehandlung ausgelassen). Es führt eine Vorgängeraufgabe `taskA`aus, der ein <xref:System.DayOfWeek> -Objekt zurückgibt, der den Namen des aktuellen Wochentags angibt. Nach Abschluss des Vorgängers wird der Fortsetzungsaufgabe `continuation` der Vorgänger übergeben; sie zeigt dann eine Zeichenfolge an, die dessen Ergebnis beinhaltet.  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

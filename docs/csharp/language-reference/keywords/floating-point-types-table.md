@@ -1,32 +1,36 @@
 ---
 title: Tabelle für Gleitkommatypen (C#-Referenz)
-ms.date: 07/20/2015
+description: Übersicht über die integrierten C#-Gleitkommatypen
+ms.date: 08/20/2018
 helpviewer_keywords:
 - floating-point numbers [C#]
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: 0a0d59e653138d5037eaec8d494313222e526ad8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 804e6529e67785ed5bcdb0db9efaeccb6b3a1a61
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219273"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933267"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabelle für Gleitkommatypen (C#-Referenz)
+
 Die folgende Tabelle zeigt die Genauigkeit und den ungefähren Bereich für die Gleitkommatypen.  
   
 |Typ|Ungefährer Bereich|Genauigkeit|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|±1,5e−45 bis ±3,4e38|7 Stellen|  
-|[double](double.md)|±5,0e−324 bis ±1,7e308|15-16 Ziffern|  
+|[float](float.md)|±1.5 × 10<sup>−45</sup> zu ±3.4 × 10<sup>38</sup>|7 Stellen|  
+|[double](double.md)|±5,0 × 10<sup>−324</sup> bis ±1,7 × 10<sup>308</sup>|15-16 Ziffern|  
+|[decimal](decimal.md)|±1.0 × 10<sup>-28</sup> to ±7.9228 × 10<sup>28</sup>|28-29 Stellen|  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Tabelle für Standardwerte](default-values-table.md)  
- [Tabelle integrierter Typen](built-in-types-table.md)  
- [Tabelle ganzzahliger Typen](integral-types-table.md)  
- [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md)  
- [Referenztabellen für Typen](reference-tables-for-types.md)  
- [decimal](decimal.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [Referenztabellen für Typen](reference-tables-for-types.md)
+- [Tabelle ganzzahliger Typen](integral-types-table.md)
+- [Tabelle für Standardwerte](default-values-table.md)
+- [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md)
+- [Tabelle integrierter Typen](built-in-types-table.md)

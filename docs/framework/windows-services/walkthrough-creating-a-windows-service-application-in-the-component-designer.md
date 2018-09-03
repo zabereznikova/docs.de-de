@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520512"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925801"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer
 In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendung in Visual Studio erstellen, die Meldungen in ein Ereignisprotokoll schreibt. Hier werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen und Verwenden Ihres Dienstes:  
@@ -161,7 +161,7 @@ In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendun
   
 <a name="BK_SetStatus"></a>   
 ## <a name="setting-service-status"></a>Einstellung des Dienststatus  
- Dienste melden ihren Status mit dem Dienststeuerungs-Manager, damit Benutzer erkennen können, ob ein Dienst ordnungsgemäß ausgeführt wird. Dienste, die von standardmäßig von <xref:System.ServiceProcess.ServiceBase> übernommen werden, melden eine begrenzte Anzahl von Statuseinstellungen, darunter Beendet, Angehalten und Werden ausgeführt. Wenn es etwas länger dauert, bis ein Dienst startet, kann es hilfreich sein, einen Status Start ausstehend zu melden. Sie können auch die Statuseinstellungen Start ausstehend und Stopp ausstehend durch Hinzufügen von Code implementieren, der in Windows die Funktion [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx)aufruft.  
+ Dienste melden ihren Status mit dem Dienststeuerungs-Manager, damit Benutzer erkennen können, ob ein Dienst ordnungsgemäß ausgeführt wird. Dienste, die von standardmäßig von <xref:System.ServiceProcess.ServiceBase> übernommen werden, melden eine begrenzte Anzahl von Statuseinstellungen, darunter Beendet, Angehalten und Werden ausgeführt. Wenn es etwas länger dauert, bis ein Dienst startet, kann es hilfreich sein, einen Status Start ausstehend zu melden. Sie können auch die Statuseinstellungen Start ausstehend und Stopp ausstehend durch Hinzufügen von Code implementieren, der in Windows die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) aufruft.  
   
 #### <a name="to-implement-service-pending-status"></a>Für die Implementierung des Status Service ausstehend  
   
@@ -225,7 +225,7 @@ In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendun
     End Structure  
     ```  
   
-3.  Deklarieren Sie jetzt in der `MyNewService` -Klasse die Funktion [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) durch einen Plattformaufruf:  
+3.  Deklarieren Sie jetzt in der `MyNewService`-Klasse die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) durch einen Plattformaufruf:  
   
     ```csharp  
     [DllImport("advapi32.dll", SetLastError=true)]  
@@ -271,7 +271,7 @@ In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendun
 6.  (Optional) Wiederholen Sie diesen Vorgang für die <xref:System.ServiceProcess.ServiceBase.OnStop%2A> Methode.  
   
 > [!CAUTION]
->  Das Dialogfeld [Dienststeuerungs-Manager](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx) , um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss. Wenn Ihre <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> -Methoden eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) mit einem erhöhten `dwCheckPoint` -Wert mehr Zeit anfordern.  
+>  Das Dialogfeld [Dienststeuerungs-Manager](/windows/desktop/Services/service-control-manager) verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](/windows/desktop/api/winsvc/ns-winsvc-_service_status), um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss. Wenn Ihre Methoden <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mit einem erhöhten `dwCheckPoint`-Wert mehr Zeit anfordern.  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>Hinzufügen von Installern zum Dienst  

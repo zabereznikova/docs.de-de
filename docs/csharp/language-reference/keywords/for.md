@@ -1,5 +1,5 @@
 ---
-title: for (C#-Referenz)
+title: for-Anweisung in C#
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208009"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930949"
 ---
 # <a name="for-c-reference"></a>for (C#-Referenz)
 
 Die Anweisung `for` führt eine Anweisung oder einen Anweisungsblock aus, während ein angegebener boolescher Ausdruck `true` ergibt.
 
 Sie können die Schleife an jedem Punkt im `for`-Anweisungsblock mit der Anweisung [break](break.md) unterbrechen oder mit der Anweisung [continue](continue.md) direkt zum nächsten Durchlauf der Schleife springen. Sie können eine `for`-Schleife auch mit den Anweisungen [goto](goto.md), [return](return.md) oder [throw](throw.md) beenden.
-  
+
 ## <a name="structure-of-the-for-statement"></a>Struktur der `for`-Anweisung
 
 Jede `for`-Anweisung definiert die Abschnitte *initializer*, *condition* und *iterator*:
-  
+
 ```csharp
-for (initializer; condition; iterator)  
-    body  
+for (initializer; condition; iterator)
+    body
 ```
 
 Alle drei Abschnitte sind optional. Der Schleifenkörper ist entweder eine Anweisung oder ein Anweisungsblock
@@ -45,11 +45,11 @@ Die Anweisungen im Abschnitt *initializer* werden nur einmal ausgeführt, bevor 
 
   - [Zuweisungsanweisung](../operators/assignment-operator.md)
 
-  - Aufruf einer Methode  
+  - Aufruf einer Methode
 
-  - Präfix- oder Postfix-[Inkrementausdruck](../operators/increment-operator.md), z.B. `++i` oder `i++`  
+  - Präfix- oder Postfix-[Inkrementausdruck](../operators/increment-operator.md), z.B. `++i` oder `i++`
 
-  - Präfix- oder Postfix-[Dekrementausdruck](../operators/decrement-operator.md), z.B. `--i` oder `i--`  
+  - Präfix- oder Postfix-[Dekrementausdruck](../operators/decrement-operator.md), z.B. `--i` oder `i--`
 
   - Erstellung eines Objekts mithilfe des Schlüsselworts [new](new-operator.md)
 
@@ -73,15 +73,15 @@ i < 5
 
 ### <a name="the-iterator-section"></a>Der Abschnitt *iterator*
 
-Der Abschnitt *iterator* definiert, was nach jeder Iteration des Schleifenkörpers geschieht. Der Abschnitt *iterator* enthält keine oder mehrere der folgenden durch Kommas getrennten Anweisungsausdrücke:  
+Der Abschnitt *iterator* definiert, was nach jeder Iteration des Schleifenkörpers geschieht. Der Abschnitt *iterator* enthält keine oder mehrere der folgenden durch Kommas getrennten Anweisungsausdrücke:
 
 - [Zuweisungsanweisung](../operators/assignment-operator.md)
 
-- Aufruf einer Methode  
+- Aufruf einer Methode
 
-- Präfix- oder Postfix-[Inkrementausdruck](../operators/increment-operator.md), z.B. `++i` oder `i++`  
+- Präfix- oder Postfix-[Inkrementausdruck](../operators/increment-operator.md), z.B. `++i` oder `i++`
 
-- Präfix- oder Postfix-[Dekrementausdruck](../operators/decrement-operator.md), z.B. `--i` oder `i--`  
+- Präfix- oder Postfix-[Dekrementausdruck](../operators/decrement-operator.md), z.B. `--i` oder `i--`
 
 - Erstellung eines Objekts mithilfe des Schlüsselworts [new](new-operator.md)
 
@@ -96,23 +96,23 @@ i++
 ## <a name="examples"></a>Beispiele
 
 Das folgende Beispiel veranschaulicht mehrere weniger übliche Verwendungen der Abschnitte der `for`-Anweisung: das Zuweisen eines Werts für eine externe Schleifenvariable im Abschnitt *initializer*, das Aufrufen einer Methode in den Abschnitten *initializer* und *iterator* und das Ändern der Werte von zwei Variablen im Abschnitt *iterator*. Klicken Sie auf **Run** (Ausführen), um den Beispielcode auszuführen. Danach können Sie Änderungen am Code vornehmen und ihn erneut ausführen.
-  
+
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
-  
+
 Im folgenden Beispiel wird die Endlosschleife `for` definiert:
-  
+
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
-  
-## <a name="c-language-specification"></a>C#-Sprachspezifikation  
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-  
+
 ## <a name="see-also"></a>Siehe auch
 
-[Die for-Anweisung (C#-Spezifikation)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[C#-Referenz](../index.md)  
-[C#-Programmierhandbuch](../../programming-guide/index.md)  
-[C#-Schlüsselwörter](index.md)  
-[foreach, in](foreach-in.md)  
-[for-Anweisung (C++)](/cpp/cpp/for-statement-cpp)  
-[Iterationsanweisungen](iteration-statements.md)
+- [Die for-Anweisung (C#-Spezifikation)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [foreach, in](foreach-in.md)
+- [for-Anweisung (C++)](/cpp/cpp/for-statement-cpp)
+- [Iterationsanweisungen](iteration-statements.md)

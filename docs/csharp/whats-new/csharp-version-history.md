@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404592"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752062"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C# #
 
@@ -105,7 +105,11 @@ Die dynamische Bindung kann zu Fehlern führen, bietet aber gleichzeitig eine ho
 C# Version 5.0 war eine fokussierte Version der Sprache. Beinahe die gesamten Mühen für diese Version flossen in ein weiteres bahnbrechendes Sprachkonzept: Die Modelle `async` und `await` für die asynchrone Programmierung.  Hier ist die Liste der wichtigsten Features:
 
 - [Asynchrone Member](../async.md)
-- [Attribute „CallerInfo“](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Attribute „CallerInfo“](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>Siehe auch
+
+* [Codeprojekt: Aufruferinfoattribute in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Mit dem Attribut „CallerInfo“ können Sie leicht Informationen über den Kontext erhalten, in dem Sie ausführen, ohne auf Dutzende Reflektionscodebausteine zurückzugreifen. Es gibt viele Verwendungsmöglichkeiten für Diagnose- und Protokollierungsaufgaben.
 
