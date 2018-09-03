@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f7b53f800bc8c5c23f49a0781287a38bf8c959
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 342739f6c71e9c576e557433dc6abd0adbf38c8c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421515"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468351"
 ---
-# <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a><span data-ttu-id="d10bc-102">ICorDebugModule3::CreateReaderForInMemorySymbols-Methode</span><span class="sxs-lookup"><span data-stu-id="d10bc-102">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>
-<span data-ttu-id="d10bc-103">Erstellt einen Debug-Symbolreader für ein dynamisches Modul.</span><span class="sxs-lookup"><span data-stu-id="d10bc-103">Creates a debug symbol reader for a dynamic module.</span></span>  
+# <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a><span data-ttu-id="41c21-102">ICorDebugModule3::CreateReaderForInMemorySymbols-Methode</span><span class="sxs-lookup"><span data-stu-id="41c21-102">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>
+<span data-ttu-id="41c21-103">Erstellt einen Debug-Symbolreader für ein dynamisches Modul.</span><span class="sxs-lookup"><span data-stu-id="41c21-103">Creates a debug symbol reader for a dynamic module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d10bc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d10bc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41c21-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="41c21-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateReaderForInMemorySymbols (  
@@ -35,44 +35,44 @@ HRESULT CreateReaderForInMemorySymbols (
       [out][iid_is(riid)] void **    ppObj  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d10bc-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d10bc-105">Parameters</span></span>  
- <span data-ttu-id="d10bc-106">riid</span><span class="sxs-lookup"><span data-stu-id="d10bc-106">riid</span></span>  
- <span data-ttu-id="d10bc-107">[in] Die IID der COM-Schnittstelle zurück.</span><span class="sxs-lookup"><span data-stu-id="d10bc-107">[in] The IID of the COM interface to return.</span></span> <span data-ttu-id="d10bc-108">Dies ist normalerweise ein [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span><span class="sxs-lookup"><span data-stu-id="d10bc-108">Typically, this is an [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="41c21-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="41c21-105">Parameters</span></span>  
+ <span data-ttu-id="41c21-106">riid</span><span class="sxs-lookup"><span data-stu-id="41c21-106">riid</span></span>  
+ <span data-ttu-id="41c21-107">[in] Die IID der COM-Schnittstelle zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="41c21-107">[in] The IID of the COM interface to return.</span></span> <span data-ttu-id="41c21-108">Dies ist normalerweise ein [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span><span class="sxs-lookup"><span data-stu-id="41c21-108">Typically, this is an [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md).</span></span>  
   
- <span data-ttu-id="d10bc-109">ppObj</span><span class="sxs-lookup"><span data-stu-id="d10bc-109">ppObj</span></span>  
- <span data-ttu-id="d10bc-110">[out] Zeiger auf einen Zeiger auf die zurückgegebene Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="d10bc-110">[out] Pointer to a pointer to the returned interface.</span></span>  
+ <span data-ttu-id="41c21-109">ppObj</span><span class="sxs-lookup"><span data-stu-id="41c21-109">ppObj</span></span>  
+ <span data-ttu-id="41c21-110">[out] Zeiger auf einen Zeiger auf die zurückgegebene Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="41c21-110">[out] Pointer to a pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d10bc-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d10bc-111">Return Value</span></span>  
- <span data-ttu-id="d10bc-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="d10bc-112">S_OK</span></span>  
- <span data-ttu-id="d10bc-113">Den Reader erstellt.</span><span class="sxs-lookup"><span data-stu-id="d10bc-113">Successfully created the reader.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="41c21-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="41c21-111">Return Value</span></span>  
+ <span data-ttu-id="41c21-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="41c21-112">S_OK</span></span>  
+ <span data-ttu-id="41c21-113">Wurde erfolgreich erstellt. den Reader.</span><span class="sxs-lookup"><span data-stu-id="41c21-113">Successfully created the reader.</span></span>  
   
- <span data-ttu-id="d10bc-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span><span class="sxs-lookup"><span data-stu-id="d10bc-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span></span>  
- <span data-ttu-id="d10bc-115">Das Modul ist kein im Arbeitsspeicher oder dynamisches Modul.</span><span class="sxs-lookup"><span data-stu-id="d10bc-115">The module is not an in-memory or dynamic module.</span></span>  
+ <span data-ttu-id="41c21-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span><span class="sxs-lookup"><span data-stu-id="41c21-114">CORDBG_E_MODULE_LOADED_FROM_DISK</span></span>  
+ <span data-ttu-id="41c21-115">Das Modul ist es sich nicht um ein im Arbeitsspeicher oder dynamischen Modul.</span><span class="sxs-lookup"><span data-stu-id="41c21-115">The module is not an in-memory or dynamic module.</span></span>  
   
- <span data-ttu-id="d10bc-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d10bc-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span></span>  
- <span data-ttu-id="d10bc-117">Symbole nicht zur Verfügung gestellt wurden von der Anwendung, oder es sind noch nicht verfügbar.</span><span class="sxs-lookup"><span data-stu-id="d10bc-117">Symbols have not been supplied by the application or are not yet available.</span></span>  
+ <span data-ttu-id="41c21-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span><span class="sxs-lookup"><span data-stu-id="41c21-116">CORDBG_E_SYMBOLS_NOT_AVAILABLE</span></span>  
+ <span data-ttu-id="41c21-117">Symbole nicht von der Anwendung bereitgestellt haben, oder es sind noch nicht verfügbar.</span><span class="sxs-lookup"><span data-stu-id="41c21-117">Symbols have not been supplied by the application or are not yet available.</span></span>  
   
- <span data-ttu-id="d10bc-118">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="d10bc-118">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="d10bc-119">Erstellen den Reader nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="d10bc-119">Unable to create the reader.</span></span>  
+ <span data-ttu-id="41c21-118">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="41c21-118">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="41c21-119">Erstellen des Readers nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="41c21-119">Unable to create the reader.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d10bc-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d10bc-120">Remarks</span></span>  
- <span data-ttu-id="d10bc-121">Diese Methode kann auch sein verwendet zum Erstellen eines Symbols Reader-Objekts für Module im Arbeitsspeicher (nicht dynamisch), jedoch nur, nachdem zuerst die Symbole verfügbar sind (angegeben durch die [UpdateModuleSymbols-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) Rückruf).</span><span class="sxs-lookup"><span data-stu-id="d10bc-121">This method can also be used to create a symbol reader object for in-memory (non-dynamic) modules, but only after the symbols are first available (indicated by the [UpdateModuleSymbols Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) callback).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="41c21-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="41c21-120">Remarks</span></span>  
+ <span data-ttu-id="41c21-121">Diese Methode kann auch sein verwendet, um ein Symbol Reader-Objekt zu (nicht dynamisch) im Arbeitsspeicher-Modulen zu erstellen, aber nur, wenn die Symbole zuerst zur Verfügung stehen (angegeben durch die [UpdateModuleSymbols-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) Rückruf).</span><span class="sxs-lookup"><span data-stu-id="41c21-121">This method can also be used to create a symbol reader object for in-memory (non-dynamic) modules, but only after the symbols are first available (indicated by the [UpdateModuleSymbols Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md) callback).</span></span>  
   
- <span data-ttu-id="d10bc-122">Jedes Mal, wenn sie aufgerufen wird, gibt diese Methode eine neue Readerinstanz (z. B. [CComPtrBase:: CoCreateInstance](http://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)).</span><span class="sxs-lookup"><span data-stu-id="d10bc-122">This method returns a new reader instance every time it is called (like [CComPtrBase::CoCreateInstance](http://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)).</span></span> <span data-ttu-id="d10bc-123">Aus diesem Grund sollte der Debugger cache das Ergebnis und fordern Sie eine neue Instanz nur, wenn die zugrunde liegenden Daten geändert haben, können (d. h. bei einem [LoadClass-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) Rückruf empfangen wird).</span><span class="sxs-lookup"><span data-stu-id="d10bc-123">Therefore, the debugger should cache the result and request a new instance only when the underlying data may have changed (that is, when a [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback is received).</span></span>  
+ <span data-ttu-id="41c21-122">Diese Methode gibt eine neue Readerinstanz zurück, jedes Mal, wenn sie aufgerufen wird (z. B. [CComPtrBase:: CoCreateInstance](https://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)).</span><span class="sxs-lookup"><span data-stu-id="41c21-122">This method returns a new reader instance every time it is called (like [CComPtrBase::CoCreateInstance](https://msdn.microsoft.com/library/c0965041-6cb6-40c5-b272-2b99f02668a6)).</span></span> <span data-ttu-id="41c21-123">Aus diesem Grund sollte der Debugger Zwischenspeicherung des Ergebnisses und fordern Sie eine neue Instanz nur, wenn die zugrunde liegenden Daten geändert haben können (d. h. bei einer [LoadClass-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) -Rückruf empfangen wird).</span><span class="sxs-lookup"><span data-stu-id="41c21-123">Therefore, the debugger should cache the result and request a new instance only when the underlying data may have changed (that is, when a [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback is received).</span></span>  
   
- <span data-ttu-id="d10bc-124">Dynamische Module müssen keine verfügbaren Symbole, bis der erste Typ geladen wurde (durch die [LoadClass-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) Rückruf).</span><span class="sxs-lookup"><span data-stu-id="d10bc-124">Dynamic modules do not have any symbols available until the first type has been loaded (as indicated by the [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback).</span></span>  
+ <span data-ttu-id="41c21-124">Dynamische Module müssen keine verfügbaren Symbole aus, bis der erste Typ geladen wurde (wie durch die [LoadClass-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) Rückruf).</span><span class="sxs-lookup"><span data-stu-id="41c21-124">Dynamic modules do not have any symbols available until the first type has been loaded (as indicated by the [LoadClass Method](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) callback).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d10bc-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d10bc-125">Requirements</span></span>  
- <span data-ttu-id="d10bc-126">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d10bc-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41c21-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="41c21-125">Requirements</span></span>  
+ <span data-ttu-id="41c21-126">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="41c21-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d10bc-127">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d10bc-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="41c21-127">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="41c21-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d10bc-128">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d10bc-128">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="41c21-128">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="41c21-128">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d10bc-129">**.NET Framework-Versionen:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="d10bc-129">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="41c21-129">**.NET Framework-Versionen:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="41c21-129">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d10bc-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d10bc-130">See Also</span></span>  
- [<span data-ttu-id="d10bc-131">ICorDebugRemoteTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d10bc-131">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [<span data-ttu-id="d10bc-132">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d10bc-132">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+## <a name="see-also"></a><span data-ttu-id="41c21-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="41c21-130">See Also</span></span>  
+ [<span data-ttu-id="41c21-131">ICorDebugRemoteTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="41c21-131">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
+ [<span data-ttu-id="41c21-132">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="41c21-132">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     
- [<span data-ttu-id="d10bc-133">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d10bc-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [<span data-ttu-id="41c21-133">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="41c21-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
