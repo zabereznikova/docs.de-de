@@ -2,15 +2,15 @@
 title: "\"DataAdapters\" und \"DataReaders\""
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758099"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476221"
 ---
 # <a name="dataadapters-and-datareaders"></a>"DataAdapters" und "DataReaders"
-Sie können mithilfe des ADO.NET- **DataReader** einen schreibgeschützt, vorwärts gerichteten Datenstrom aus einer Datenbank abgerufen. Ergebnisse werden zurückgegeben, da die Abfrage ausgeführt wird, und im Netzwerkpuffer auf dem Client gespeichert, bis Sie sie anfordern mithilfe der **lesen** Methode der **DataReader**. Mithilfe der **DataReader** können die Anwendungsleistung erhöhen, durch Abrufen von Daten, sobald es verfügbar ist und (standardmäßig) nur eine Zeile zu einem Zeitpunkt im Arbeitsspeicher, wodurch der systemmehraufwand speichern.  
+Sie können mithilfe des ADO.NET- **DataReader** einen schreibgeschützten, nur vorwärts gerichteten Datenstrom aus einer Datenbank abgerufen. Ergebnisse werden zurückgegeben, während die Abfrage ausgeführt wird, und im Netzwerkpuffer auf dem Client gespeichert, bis Sie diese anfordern mithilfe der **lesen** Methode der **DataReader**. Mithilfe der **DataReader** kann die Anwendungsleistung erhöhen, indem Daten abgerufen werden, sobald diese verfügbar ist, sowohl (standardmäßig) speichern nur eine Zeile zu einem Zeitpunkt im Arbeitsspeicher, der Systemverwaltungsaufwand reduziert.  
   
  Ein <xref:System.Data.Common.DataAdapter> wird zum Abrufen von Daten aus einer Datenquelle und zum Auffüllen von Tabellen in einem <xref:System.Data.DataSet> verwendet. Mit dem `DataAdapter` werden außerdem im `DataSet` vorgenommene Änderungen für die Datenquelle übernommen. Der `DataAdapter` verwendet das `Connection`-Objekt des .NET Framework-Datenanbieters, um eine Verbindung mit der Datenquelle herzustellen, sowie `Command`-Objekte, um Daten aus der Datenquelle abzurufen und die Datenquelle zu aktualisieren.  
   
@@ -49,4 +49,4 @@ Sie können mithilfe des ADO.NET- **DataReader** einen schreibgeschützt, vorwä
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

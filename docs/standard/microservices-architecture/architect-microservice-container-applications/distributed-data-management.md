@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Her
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998683"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480664"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Herausforderungen und Lösungen für die verteilte Datenverwaltung
 
@@ -43,7 +43,7 @@ Wenn Ihr Anwendungsentwurf jedoch das kontinuierliche Aggregieren von Informatio
 
 Wie bereits erwähnt wurde, sind die Daten, die sich im Besitz des einzelnen Microservices befinden, für diesen Microservice privat, und es kann nur mit seiner Microservice-API auf sie zugegriffen werden. Dies führt häufig zu der Herausforderung, wie sich End-to-End-Geschäftsprozesse implementieren lassen, wenn gleichzeitig die Konsistenz über mehrere Microservices gewahrt bleiben soll.
 
-Um dieses Problem zu untersuchen, sehen wir uns einen Fall aus der [Beispielanwendung eShopOnContainers](http://aka.ms/eshoponcontainers) an. Der Microservice Katalog verwaltet Informationen zu allen Produkten, einschließlich ihres Lagerbestands. Der Microservice Bestellung verwaltet Bestellungen und muss sicherstellen, dass eine neue Bestellung nicht den verfügbaren Produktbestand des Katalogs übersteigt. (Alternativ kann das Szenario eine Logik umfassen, die Lieferrückstände berücksichtigt.) In einer hypothetischen monolithischen Version dieser Anwendung könnte das Bestellungssubsystem einfach eine ACID-Transaktion verwenden, um den verfügbaren Bestand zu überprüfen, die Bestellung in der Tabelle Bestellungen zu erstellen und den verfügbaren Bestand in der Tabelle Produkte zu aktualisieren.
+Um dieses Problem zu untersuchen, sehen wir uns einen Fall aus der [Beispielanwendung eShopOnContainers](https://aka.ms/eshoponcontainers) an. Der Microservice Katalog verwaltet Informationen zu allen Produkten, einschließlich ihres Lagerbestands. Der Microservice Bestellung verwaltet Bestellungen und muss sicherstellen, dass eine neue Bestellung nicht den verfügbaren Produktbestand des Katalogs übersteigt. (Alternativ kann das Szenario eine Logik umfassen, die Lieferrückstände berücksichtigt.) In einer hypothetischen monolithischen Version dieser Anwendung könnte das Bestellungssubsystem einfach eine ACID-Transaktion verwenden, um den verfügbaren Bestand zu überprüfen, die Bestellung in der Tabelle Bestellungen zu erstellen und den verfügbaren Bestand in der Tabelle Produkte zu aktualisieren.
 
 In einer auf Microservices basierenden Anwendung sind die Tabellen Bestellungen und Produkte jedoch im Besitz ihrer jeweiligen Microservices. Wie Abbildung 4-9 zeigt, sollte ein Microservice niemals in seinen Transaktionen oder Abfragen Datenbanken umfassen, die im Besitz eines anderen Microservice sind.
 
@@ -51,7 +51,7 @@ In einer auf Microservices basierenden Anwendung sind die Tabellen Bestellungen 
 
 **Abbildung 4-9.** Ein Microservice kann nicht direkt auf eine Tabelle in einem anderen Microservice zugreifen
 
-Der Microservice Bestellung sollte die Tabelle Produkte nicht direkt aktualisieren, da die Tabelle Produkte im Besitz des Microservices Katalog ist. Um den Microservice Katalog zu aktualisieren, sollte der Microservice Bestellung stets nur eine asynchrone Kommunikation wie z.B. Integrationsereignisse (nachrichten- und ereignisbasierte Kommunikation) verwenden. So wird diese Art der Aktualisierung von der Beispielanwendung [eShopOnContainers](http://aka.ms/eshoponcontainers) ausgeführt.
+Der Microservice Bestellung sollte die Tabelle Produkte nicht direkt aktualisieren, da die Tabelle Produkte im Besitz des Microservices Katalog ist. Um den Microservice Katalog zu aktualisieren, sollte der Microservice Bestellung stets nur eine asynchrone Kommunikation wie z.B. Integrationsereignisse (nachrichten- und ereignisbasierte Kommunikation) verwenden. So wird diese Art der Aktualisierung von der Beispielanwendung [eShopOnContainers](https://aka.ms/eshoponcontainers) ausgeführt.
 
 Wie aus dem [CAP-Theorem](https://en.wikipedia.org/wiki/CAP_theorem) hervorgeht, müssen Sie sich zwischen der Verfügbarkeit und einer starken ACID-Konsistenz entscheiden. Die meisten auf Microservices basierenden Szenarios erfordern die Verfügbarkeit und eine hohe Skalierbarkeit – und weniger eine starke Konsistenz. Unternehmenskritische Anwendungen müssen ununterbrochen verfügbar sein, und Entwickler können eine starke Konsistenz umgehen, indem sie Techniken für das Arbeiten mit schwachen oder letztlichen Konsistenzen verwenden. Dieser Ansatz wird von den meisten auf Microservices basierenden Architekturen genutzt.
 

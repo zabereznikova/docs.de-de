@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925503"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389776"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>Konfigurieren von Schannel-Protokollen in der Windows-Registrierung
 
-Sie können die Registrierung verwenden, um die Protokolle, die Ihre Client- und/oder Server-App aushandelt, genau zu steuern. Die Vernetzung Ihrer App erfolgt über Schannel (eine andere Bezeichnung für [Secure Channel](https://msdn.microsoft.com/library/windows/desktop/aa380123)). Durch die Konfiguration von `Schannel` können Sie das Verhalten Ihrer App konfigurieren.
+Sie können die Registrierung verwenden, um die Protokolle, die Ihre Client- und/oder Server-App aushandelt, genau zu steuern. Die Vernetzung Ihrer App erfolgt über Schannel (eine andere Bezeichnung für [Secure Channel](/windows/desktop/SecAuthN/secure-channel)). Durch die Konfiguration von `Schannel` können Sie das Verhalten Ihrer App konfigurieren.
 
 Beginnen Sie mit dem Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Unter diesem Schlüssel können Sie beliebige Unterschlüssel im Satz `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` und `TLS 1.2` anlegen. Unter jedem dieser Unterschlüssel können Sie die Unterschlüssel `Client` und/oder `Server` anlegen. Unter `Client` und `Server` können Sie die DWORD-Werte `DisabledByDefault` (0 oder 1) und `Enabled` (0 oder 0xFFFFFFFF) anlegen.
 
@@ -239,8 +239,8 @@ Beginnen Sie mit dem Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SYSTEM\Current
 
 Wenn es aktiviert ist (standardmäßig durch einen `AppContext`-Switch oder durch die Windows-Registrierung), verwendet .NET Framework das Flag `SCH_USE_STRONG_CRYPTO`, wenn Ihre App ein TLS-Sicherheitsprotokoll anfordert. Das Flag `SCH_USE_STRONG_CRYPTO` kann standardmäßig mit dem `AppContext`-Switch oder mit der Registrierung aktiviert werden. Das Betriebssystem übergibt das Flag an `Schannel` und weist es an, bekannte schwache Kryptografiealgorithmen, Verschlüsselungssuiten und TLS/SSL-Protokollversionen zu deaktivieren, die andernfalls für eine bessere Interoperabilität aktiviert werden könnten. Weitere Informationen finden Sie unter:
 
-- [Secure Channel](https://msdn.microsoft.com/library/windows/desktop/aa380123)
-- [SCHANNEL_CRED-Struktur](https://msdn.microsoft.com/library/windows/desktop/aa379810)
+- [Secure Channel](/windows/desktop/SecAuthN/secure-channel)
+- [SCHANNEL_CRED-Struktur](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
 
 Das Flag `SCH_USE_STRONG_CRYPTO` wird ebenfalls an `Schannel` übergeben, wenn Sie explizit die Enumerationswerte `Tls` (TLS 1.0), `Tls11` oder `Tls12` von <xref:System.Net.SecurityProtocolType> oder <xref:System.Security.Authentication.SslProtocols> verwenden.
 

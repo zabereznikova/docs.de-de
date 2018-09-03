@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497012"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480403"
 ---
 # <a name="queues-overview"></a>Warteschlangenübersicht
-In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Warteschlangenkommunikation vorgestellt. Die folgenden Abschnitte werden in den Details wie die hier beschriebenen warteschlangenbegriffe in Windows Communication Foundation (WCF) festgelegt werden.  
+In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Warteschlangenkommunikation vorgestellt. Die folgenden Abschnitte werden in den Details wie den hier beschriebenen warteschlangenbegriffe in Windows Communication Foundation (WCF) festgelegt werden.  
   
 ## <a name="basic-queuing-concepts"></a>Grundlegende Warteschlangenbegriffe  
  Beim Entwerfen einer verteilten Anwendung ist das Wählen der richtigen Transportart für die Kommunikation zwischen Diensten und Clients sehr wichtig. Mehrere Faktoren beeinflussen, für welche Transportart Sie sich entscheiden sollten. Ein wichtiger Faktor, nämlich die Isolation zwischen Dienst, Client und Transport, bestimmt die Verwendung eines Warteschlangentransports oder eines direkten Transports wie TCP oder HTTP. Aufgrund des Aufbaus von direkten Transporten (wie TCP und HTTP) wird die Kommunikation vollständig gestoppt, wenn der Dienst oder der Client nicht ordnungsgemäß funktioniert oder wenn Netzwerkprobleme auftreten. Der Dienst, der Client und das Netzwerk müssen gleichzeitig ausgeführt werden, damit die Anwendung funktioniert. Warteschlangentransporte ermöglichen eine Isolation. Dies bedeutet, dass der Client und der Dienst weiterhin funktionieren, wenn der Dienst bzw. der Client ausfallen oder wenn die jeweiligen Kommunikationsverbindungen ausfallen.  
   
- Warteschlangen sorgen sogar für die zuverlässige Kommunikation, wenn Ausfälle bei den Kommunikationspartnern oder im Netzwerk auftreten. Warteschlangen erfassen Nachrichten, die zwischen den Kommunikationspartnern ausgetauscht werden, und stellen diese zu. Warteschlangen werden in der Regel von einem Speicher eines bestimmten Typs unterstützt, beispielsweise flüchtiger oder permanenter Speicher. Warteschlangen speichern Nachrichten für einen Dienst und leiten diese Nachrichten später dann an den Dienst weiter. Die Dereferenzierungswarteschlangen ermöglichen eine sichere Fehlerisolation für beide Parteien. Aus diesem Grund ist dies der bevorzugte Kommunikationsmechanismus für Systeme, die eine hohe Verfügbarkeit erfordern, sowie für verteilte Dienste. Die Dereferenzierung führt jedoch zu einer hohen Latenz. *Latenz* ist die zeitverzögerung zwischen dem Zeitpunkt, die der Client eine Nachricht sendet und die Zeit, die der Dienst er empfängt. Dies bedeutet, dass Sie nach dem Senden einer Nachricht nicht wissen, wann die Nachricht verarbeitet wird. Die meisten Warteschlangenanwendungen weisen eine hohe Latenz auf. Die folgende Abbildung zeigt ein Modell einer Warteschlangenkommunikation.  
+ Warteschlangen sorgen sogar für die zuverlässige Kommunikation, wenn Ausfälle bei den Kommunikationspartnern oder im Netzwerk auftreten. Warteschlangen erfassen Nachrichten, die zwischen den Kommunikationspartnern ausgetauscht werden, und stellen diese zu. Warteschlangen werden in der Regel von einem Speicher eines bestimmten Typs unterstützt, beispielsweise flüchtiger oder permanenter Speicher. Warteschlangen speichern Nachrichten für einen Dienst und leiten diese Nachrichten später dann an den Dienst weiter. Die Dereferenzierungswarteschlangen ermöglichen eine sichere Fehlerisolation für beide Parteien. Aus diesem Grund ist dies der bevorzugte Kommunikationsmechanismus für Systeme, die eine hohe Verfügbarkeit erfordern, sowie für verteilte Dienste. Die Dereferenzierung führt jedoch zu einer hohen Latenz. *Latenz* ist die zeitverzögerung zwischen dem Zeitpunkt, die der Client eine Nachricht sendet und die Zeit, die der Dienst diese empfängt. Dies bedeutet, dass Sie nach dem Senden einer Nachricht nicht wissen, wann die Nachricht verarbeitet wird. Die meisten Warteschlangenanwendungen weisen eine hohe Latenz auf. Die folgende Abbildung zeigt ein Modell einer Warteschlangenkommunikation.  
   
- ![Modell einer warteschlangenkommunikation](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual Figure1c")  
+ ![Modell einer warteschlangenkommunikation](../../../../docs/framework/wcf/feature-details/media/qconceptual-figure1c.gif "QConceptual-Figure1c")  
   
  Modell einer Warteschlangenkommunikation  
   
@@ -46,7 +46,7 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
   
  Aufgrund der hohen Latenz beim Senden einer Nachricht können Sie weder wissen, wie lange diese zum Erreichen der Zielwarteschlange benötigt, noch ist Ihnen bekannt, wie lange der Dienst zum Verarbeiten der Nachricht benötigt. Aus diesem Grund sollten Sie keine einzelne Transaktion verwenden, um die Nachricht zu senden, die Nachricht zu empfangen und die Nachricht zu verarbeiten. Dabei wird eine Transaktion erstellt, für die für einen unbestimmten Zeitraum kein Commit besteht. Wenn ein Client und ein Dienst über eine Warteschlange mithilfe von Transaktionen kommunizieren, sind daran zwei Transaktionen beteiligt: eine beim Client und eine beim Dienst. Die folgende Abbildung zeigt die Transaktionsgrenzen einer typischen Warteschlangenkommunikation.  
   
- ![Warteschlange mit Transaktionen](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions-Abbildung 3")  
+ ![Warteschlange mit Transaktionen](../../../../docs/framework/wcf/feature-details/media/qwithtransactions-figure3.gif "QWithTransactions-abbildung3")  
   
  Warteschlangenkommunikation mit separaten Transaktionen zur Erfassung und Zustellung  
   
@@ -81,6 +81,6 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
  [Flüchtige Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Message Queuing-Integration Bindung-Beispiele](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
+ [Message Queuing-Integrationsbindung Beispiele](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
  [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
  [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

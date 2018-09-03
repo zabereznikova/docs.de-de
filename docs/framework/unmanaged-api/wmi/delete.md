@@ -1,6 +1,6 @@
 ---
-title: Löschfunktion (Referenz zur nicht verwalteten API)
-description: Die Delete-Funktion löscht die angegebene Eigenschaft und alle seine Qualifizierer aus der Definition einer CIM-Klasse.
+title: Delete-Funktion (Referenz zur nicht verwalteten API)
+description: Die Löschfunktion löscht die angegebene Eigenschaft und aller seiner Qualifizierer aus der Definition einer CIM-Klasse.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460242"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479863"
 ---
-# <a name="delete-function"></a>Löschen Sie-Funktion
-Löscht die angegebene Eigenschaft und aller seiner Qualifizierer aus der Definition einer CIM-Klasse.
+# <a name="delete-function"></a>Delete-Funktion
+Löscht die angegebene Eigenschaft und aller seiner Qualifizierer aus der Definition einer CIM-Klasse an.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -44,18 +44,18 @@ HRESULT Delete (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `wszName`  
-[in] Der Name des zu löschenden Eigenschaft. `wszName` muss ein Zeiger auf eine gültige `LPCWSTR`.
+[in] Der Name des zu löschenden Eigenschaft. `wszName` muss ein Zeiger auf ein gültiges `LPCWSTR`.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Nicht angegebener Fehler ist aufgetreten. |
+| `WBEM_E_FAILED` | 0 x 80041001 | Ein Unbekannter Fehler aufgetreten. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Die Eigenschaft kann nicht gelöscht werden. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `wszzName` ist ungültig. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Eigenschaft ist nicht vorhanden. |
@@ -63,14 +63,14 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Die Eigenschaft wird von einer Basisklasse geerbt. |
 | `WBEM_E_SYSTEM_PROPERTY` | | Die Eigenschaft ist eine Systemeigenschaft. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Die Funktion gelöscht einen Standardwert überschreiben für die aktuelle Klasse. Der Standardwert für diese Eigenschaft in der übergeordneten Klasse wurde Reactiviated. | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Die Funktion gelöscht einen Standardwert außer Kraft setzen, für die aktuelle Klasse. Der Standardwert für diese Eigenschaft in der übergeordneten Klasse wurde Reactiviated. | 
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::Delete](https://msdn.microsoft.com/library/aa391438(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

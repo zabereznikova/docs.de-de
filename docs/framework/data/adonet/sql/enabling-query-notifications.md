@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: 4cda3ce3bcae7741df66496c87ba6654e0bbfe6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c164490464d839dacefaf570c8956bf15caeb7de
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356007"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480541"
 ---
 # <a name="enabling-query-notifications"></a>Aktivieren von Abfragebenachrichtigungen
 Anwendungen, die Abfragebenachrichtigungen verwenden, haben einige Anforderungen gemeinsam. Ihre Datenquelle muss richtig konfiguriert sein, um SQL-Abfragebenachrichtigungen zu unterstützen, und die Benutzer müssen über die richtigen client- und serverseitigen Berechtigungen verfügen.  
@@ -30,26 +30,26 @@ Anwendungen, die Abfragebenachrichtigungen verwenden, haben einige Anforderungen
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
--   [Erstellen eine Abfrage für die Benachrichtigung](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Erstellen eine Abfrage für die Benachrichtigung](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Sicherheitsaspekte für Service Broker](http://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Überlegungen zur Sicherheit für Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
   
--   [Sicherheit und Schutz (Service Broker)](http://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Sicherheit und Schutz (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
   
--   [Sicherheitsaspekte für Notification Services](http://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Sicherheitsaspekte für Notification Services](https://msdn.microsoft.com/library/ms172604.aspx)  
   
--   [Berechtigungen für Abfragebenachrichtigungen](http://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Berechtigungen für Abfragebenachrichtigungen](https://msdn.microsoft.com/library/ms188311.aspx)  
   
--   [Internationale Gesichtspunkte bei Service Broker](http://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Internationale Gesichtspunkte bei Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
   
--   [Überlegungen zu Lösungsentwürfen (Service Broker)](http://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Überlegungen zu Lösungsentwürfen (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
   
--   [Service Broker-Entwickler (InfoCenter)](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker-Entwickler (InfoCenter)](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [Entwicklerhandbuch (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Entwicklerhandbuch (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Aktivieren von Abfragebenachrichtigungen für das Ausführen von Beispielcode  
- Zum Aktivieren von Service Broker auf die **AdventureWorks** -Datenbank mithilfe des SQL Server Management Studio, führen Sie die folgenden Transact-SQL-Anweisung:  
+ Zum Aktivieren von Service Broker für die **AdventureWorks** -Datenbank mithilfe des SQL Server Management Studio, führen Sie die folgende Transact-SQL-Anweisung:  
   
  `ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
   
@@ -86,4 +86,4 @@ CREATE SERVICE ContactChangeNotifications
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

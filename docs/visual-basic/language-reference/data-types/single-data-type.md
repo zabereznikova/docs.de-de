@@ -20,28 +20,28 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 770961f225b139aaddf34b42327bca63638c725d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590771"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483644"
 ---
 # <a name="single-data-type-visual-basic"></a>Single-Datentyp (Visual Basic)
-Speichert signierte IEEE-32-Bit (4-Byte) einzelne Gleitkommazahlen mit doppelter Genauigkeit im Bereich von - 3,4028235E + 38 bis - 1.401298E-45 für negative Werte und 1.401298E-45 bis 3,4028235E + 38 für positive Werte zulässig sind. Zahlen mit einfacher Genauigkeit Näherung eine einer reellen Zahl.  
+Speichert signierte IEEE-32-Bit (4-Byte) mit einfacher Genauigkeit Gleitkommazahlen im Bereich von - 3,4028235E + 38 bis - 1.401298E-45 für negative Werte und 1.401298E-45 bis 3,4028235E + 38 für positive Werte. Zahlen mit einfacher Genauigkeit speichern eine Approximation einer reellen Zahl.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `Single` -Datentyp, um Gleitkommawerte enthalten, die nicht die gesamten Datenbreite des erfordern `Double`. In einigen Fällen die common Language Runtime möglicherweise pack Ihre `Single` Variablen eng zusammen, und speichern Sie den Arbeitsspeicherverbrauch.  
+ Verwenden der `Single` Datentyp in Gleitkommazahlen-Punktwerte enthalten, die nicht die gesamten Datenbreite des erfordern `Double`. In einigen Fällen die common Language Runtime kann in der Lage, Packen Ihrer `Single` Variablen, die eng zusammen und Arbeitsspeicher belegt.  
   
  Der Standardwert von `Single` lautet 0.  
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Mit einfacher Genauigkeit.** Beim Arbeiten mit Gleitkommazahlen, sollten Sie bedenken, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, über bestimmte Vorgänge, z. B. Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   **Mit einfacher Genauigkeit.** Beim Arbeiten mit Gleitkommazahlen, Bedenken Sie, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, von der bestimmte Vorgänge, z. B. den Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Widening.** Die `Single` -Datentyp zu `Double`. Dies bedeutet, dass Sie Sie konvertieren können `Single` auf `Double` ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
+-   **Erweiternde.** Die `Single` -Datentyp wird zu `Double`. Dies bedeutet, Sie können konvertieren `Single` zu `Double` unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Nachfolgende Nullen.** Der Gleitkomma-Datentypen keine interne Darstellung für nachfolgende 0 Zeichen. Angenommen, unterscheiden sie nicht zwischen 4,2000 und 4.2. Folglich werden nachfolgende 0 Zeichen nicht angezeigt, wenn Sie anzeigen oder Drucken von Gleitkommawerten.  
+-   **Nachfolgende Nullen.** Der Gleitkomma-Datentypen keine interne Darstellung für nachfolgende 0 Zeichen. Angenommen, unterscheiden sie nicht zwischen 4,2000 und 4.2. Nachfolgende 0 Zeichen werden daher nicht angezeigt, wenn Sie anzeigen oder Drucken von Gleitkommazahlen-Punktwerte.  
   
 -   **Typzeichen.** Durch Anhängen des Literaltypzeichens `F` an ein Literal wird der `Single`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `!` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Single`-Datentyp erzwungen.  
   
@@ -49,7 +49,7 @@ Speichert signierte IEEE-32-Bit (4-Byte) einzelne Gleitkommazahlen mit doppelter
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Single?displayProperty=nameWithType>  
- [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
  [Decimal-Datentyp](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
  [Double-Datentyp](../../../visual-basic/language-reference/data-types/double-data-type.md)  
  [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

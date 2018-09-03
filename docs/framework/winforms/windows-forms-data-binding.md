@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540643"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486009"
 ---
 # <a name="windows-forms-data-binding"></a>Datenbindung in Web Forms
 Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Informationen aus einer Datenquelle in Steuerelementen im Formular anzuzeigen und zu ändern. Sie können sowohl herkömmliche Datenquellen als auch beinahe alle Strukturen binden, die Daten enthalten.  
@@ -51,7 +51,7 @@ Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Information
  [Gewusst wie: Sicherstellen, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Beschreibt, wie Sie sicherstellen können, dass die ausgewählte Zeile in einer untergeordneten Tabelle nicht geändert wird, wenn an einem Feld in der übergeordneten Tabelle eine Änderung vorgenommen wird.  
   
- Siehe auch [im Zusammenhang mit Schnittstellen mit einer Datenbindung](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [wie: Navigieren Sie Daten in Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Siehe auch [im Zusammenhang mit Schnittstellen mit Datenbindung](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [wie: Navigieren Sie Daten in Windows Forms](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in Windows Forms](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
@@ -67,4 +67,4 @@ Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Information
  [DataGridView-Steuerelement](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  Enthält eine Liste mit Themen, in denen gezeigt wird, wie ein bindbares DataGrid-Steuerelement verwendet wird.  
   
- Siehe auch [zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+ Siehe auch [den Zugriff auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

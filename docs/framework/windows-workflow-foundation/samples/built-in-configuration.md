@@ -2,12 +2,12 @@
 title: Integrierte Konfiguration
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-ms.openlocfilehash: 8488a753cb1c540d9c34d9bcf7b2a3112302a122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518619"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476117"
 ---
 # <a name="built-in-configuration"></a>Integrierte Konfiguration
 In diesem Beispiel werden die Verwendung und die Konfiguration des SQL-Workflowinstanzspeichers veranschaulicht. Beim SQL-Workflowinstanzspeicher handelt es sich um die SQL-basierte Implementierung eines Instanzspeichers. Diese ermöglicht einer Instanz das Speichern und Laden von Zuständen in eine bzw. aus einer SQL Server- oder SQL Server Express-Datenbank.  
@@ -17,7 +17,7 @@ In diesem Beispiel werden die Verwendung und die Konfiguration des SQL-Workflowi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie (Downloadseite) auf allen Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, rufen Sie (Downloadseite) auf alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
@@ -26,7 +26,7 @@ In diesem Beispiel werden die Verwendung und die Konfiguration des SQL-Workflowi
   
  Der Zählworkflow wird auf einem Workflowdiensthost gehostet. Die `Main`-Methode des Programms erstellt eine Instanz des Workflowdiensthosts, auf dem der Zählworkflow gehostet ist. Zunächst werden die Endpunkte definiert, unter denen der Zählworkflow erreichbar ist. Anschließend wird das Verhalten zur Konfiguration des SQL-Workflowinstanzspeichers definiert. Dann erstellt das Programm einen Client, der die Startmethode des Zählworkflows aufruft.  
   
- Der Zählvorgang wird bei Programmstart automatisch gestartet. Beachten Sie, dass das Laden der Instanz und die Konfiguration des SQL-Workflowinstanzspeichers einige Sekunden dauern kann. Weitere Informationen zur workflowinstanzspeicher finden Sie unter [SQL-Workflowinstanzspeicher](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Der Zählvorgang wird bei Programmstart automatisch gestartet. Beachten Sie, dass das Laden der Instanz und die Konfiguration des SQL-Workflowinstanzspeichers einige Sekunden dauern kann. Weitere Informationen zu den workflowinstanzspeicher finden Sie unter [SQL Workflow-Instanz Store](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  Das Beispiel besteht aus zwei Teilen:  
   
@@ -75,7 +75,7 @@ In diesem Beispiel werden die Verwendung und die Konfiguration des SQL-Workflowi
   
 5.  Öffnen Sie die Datei InstanceStore.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], und erstellen Sie die Projektmappe, indem Sie STRG+UMSCHALT+B drücken.  
   
-6.  In [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], navigieren Sie zum Verzeichnis für das Beispiel entsprechende "bin\Debug" (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), klicken Sie mit der rechten Maustaste auf InstanceStore.exe, und wählen Sie **Ausführen als Administrator**. Dieses Beispiel muss mit Administratorberechtigungen ausgeführt werden, da es einen Kanallistener öffnet.  
+6.  In [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], navigieren Sie zum entsprechenden Bin\debug-Verzeichnis des Beispiels (\WF\Basic\Persistence\BuiltInConfiguration\cs\InstanceStore(1 or 2)\bin\debug), klicken Sie mit der rechten Maustaste auf InstanceStore.exe, und wählen Sie **führen Sie als Administrator**. Dieses Beispiel muss mit Administratorberechtigungen ausgeführt werden, da es einen Kanallistener öffnet.  
   
 7.  Wenn Sie den Instanzspeicher nicht in der lokalen Installation von SQL Server Express erstellt haben, müssen Sie die Datenbankverbindungszeichenfolge (InstanceStore1-Projekt: `const string ConnectionString` in der Datei "Program.cs", InstanceStore2-Projekt: `connectionString`-Attribut in der Datei "App.config") im Beispiel aktualisieren und das Beispiel neu kompilieren.  
   
@@ -83,15 +83,15 @@ In diesem Beispiel werden die Verwendung und die Konfiguration des SQL-Workflowi
   
 1.  Starten Sie SQL Server Management Studio, während das Beispiel ausgeführt wird.  
   
-2.  In der **Objektexplorer**Option **Datenbanken**, **InstanceStore**, **Tabellen**, und klicken Sie dann  **System.Activities.DurableInstancing.InstanceTable**.  
+2.  In der **Objekt-Explorer**Option **Datenbanken**, **InstanceStore**, **Tabellen**, und klicken Sie dann  **System.Activities.DurableInstancing.InstanceTable**.  
   
 3.  Klicken Sie mit der rechten Maustaste auf **InstanceTable** , und wählen Sie **oberste 1000 Zeilen auswählen**.  
   
-4.  Beachten Sie, dass es einen neuen Eintrag, und dass die **Gültigkeit der Sperre** alle fünf Sekunden ändert (klicken Sie auf der Taskleiste **Execute** Schaltfläche, um die Abfrage zu aktualisieren). Dies ist eine Folge der Einstellung der **Host Lock Renewal Period** bis 5.  
+4.  Beachten Sie, dass es einen neuen Eintrag, und dass die **Ablauf der Sperre** alle fünf Sekunden ändert (klicken Sie auf der Taskleiste **Execute** Schaltfläche, um die Abfrage aktualisieren). Dies ist eine Folge der Einstellung der **Host Lock Renewal Period** auf 5.  
   
-5.  Nach Abschluss des Zählvorgangs wird der Eintrag aus der Instanztabelle entfernt. Dies ist eine Folge der Einstellung **Instance Completion Action** auf **DeleteAll**.  
+5.  Nach Abschluss des Zählvorgangs wird der Eintrag aus der Instanztabelle entfernt. Dies ist eine Folge der Einstellung **Instance Completion Action** zu **DeleteAll**.  
   
-6.  Drücken Sie EINGABETASTE, um die workflowhostanwendung zu beenden, und beachten Sie, dass die **LockOwnersTable** wird gelöscht.  
+6.  Drücken Sie die EINGABETASTE, um die workflowhostanwendung zu beenden, und beachten Sie, dass die **LockOwnersTable** wird gelöscht.  
   
 #### <a name="to-uninstall-the-sample"></a>So installieren Sie das Beispiel aus  
   
@@ -102,9 +102,9 @@ In diesem Beispiel werden die Verwendung und die Konfiguration des SQL-Workflowi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

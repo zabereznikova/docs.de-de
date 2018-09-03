@@ -1,6 +1,6 @@
 ---
 title: '&lt;Compilerfehler&gt; Element'
-ms.date: 03/30/2017
+ms.date: 08/14/2018
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compiler
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers/compiler
@@ -13,95 +13,98 @@ ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b033e26d64f23398a4da6842bb4688cc94627d68
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 84000d8762c5d5cfd8d2359a377ffcd5b50ab07c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754492"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486752"
 ---
 # <a name="ltcompilergt-element"></a>&lt;Compilerfehler&gt; Element
-Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.  
-  
- \<Konfiguration-Element >  
-\<System.CodeDom-Element >  
-\<Compilers-Element >  
-\<Compilerfehler >-Element  
-  
-## <a name="syntax"></a>Syntax  
-  
-```xml  
-<compiler  
-  language="languageName[;...;...]"  
-  extension="fileExtension[;...;...]"  
-  type="typeName, assemblyName"  
-  warningLevel="number"  
-  compilerOptions="option1 option2"  
-/>  
-```  
-  
-## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
-  
-### <a name="attributes"></a>Attribute  
-  
-|Attribut|Beschreibung|  
-|---------------|-----------------|  
-|`compilerOptions`|Optionales Attribut.<br /><br /> Gibt zusätzliche compilerspezifisch Argumente für die Kompilierung an. Die Werte für die `compilerOptions` Attribut werden in der Regel in einem Compileroptionen-Thema für den Compiler aufgelistet. In der Visual Studio 2005-Dokumentation können Sie die Optionen für den Compiler suchen, durch die Suche nach "Compileroptionen" im Index.|  
-|`extension`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste der Dateinamenerweiterungen, die von Quelldateien für das Language-Anbieter verwendet. Z. B. "cs".|  
-|`language`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste der Sprachnamen, die von der Language-Anbieter unterstützt. Z. B. "c#; Cs; Csharp".|  
-|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typnamen des Sprachanbieters, einschließlich des Namens der Assembly, die die Implementierung eines Anbieters enthält. Der Typname muss die Anforderungen erfüllen [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`warningLevel`|Optionales Attribut.<br /><br /> Gibt die Warnstufe für Standard-Compiler. Bestimmt die Ebene an, an der der Sprachanbieter Kompilierung Warnungen als Fehler behandelt.|  
-  
-### <a name="child-elements"></a>Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|-----------------|  
-|[\<"Provideroption" >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/provideroption-element.md)|Gibt die Version Compilerattribute für einen Sprachanbieter an.|  
-  
-### <a name="parent-elements"></a>Übergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|-----------------|  
-|[\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
-|[\<System.CodeDom > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
-|[\<Compiler >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Container für compilerkonfigurationselemente; enthält 0 (null) oder mehrere `<compiler>` Elemente.|  
-  
-## <a name="remarks"></a>Hinweise  
- Jede `<compiler>` Element gibt die compilerkonfigurationsattribute für eine bestimmte Sprache-Anbieter. Der Anbieter erweitert die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> Klasse für eine bestimmte Sprache; die `<compiler>` -Element definiert den Compiler und den Code-Generator-Einstellungen für den Sprachanbieter.  
-  
- .NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config). Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
-  
- Compilerfehler Elemente in der Anwendungs- oder Webkonfigurationsdatei können ergänzen oder diesen überschreiben die Einstellungen in der Computerkonfigurationsdatei. Wenn mehr als eine Implementierung eines Anbieters für den gleichen Sprachenname oder der gleichen Erweiterung konfiguriert ist, überschreibt die letzten übereinstimmende Konfiguration alle vorherigen konfigurierten Anbieter für diese Sprache oder die Erweiterung an.  
-  
-## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computerkonfigurationsdatei und der Anwendungskonfigurationsdatei verwendet werden.  
-  
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht ein typisches Compilerkonfigurationselement.  
-  
-```xml  
-<configuration>  
-  <system.codedom>  
-    <compilers>  
-      <!-- zero or more compiler elements -->  
-      <compiler  
-        language="c#;cs;csharp"  
-        extension=".cs"  
-        type="Microsoft.CSharp.CSharpCodeProvider, System,   
-          Version=2.0.3600.0, Culture=neutral,   
-          PublicKeyToken=b77a5c561934e089"  
-        compilerOptions="/optimize"  
-        warningLevel="1" />  
-    </compilers>  
-  </system.codedom>  
-</configuration>  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- <xref:System.CodeDom.Compiler.CompilerInfo>  
- <xref:System.CodeDom.Compiler.CodeDomProvider>  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<Compiler >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
- [Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [Compiler-Element für Compiler für Kompilierung ((ASP.NET Settings Schema)](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e(v=vs.100))
+
+Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.
+
+\<Configuration-Element > \<system.codedom-Element > \<Compilers-Element > \<Compiler > Element
+
+## <a name="syntax"></a>Syntax
+
+```xml
+<compiler
+  language="languageName[;...;...]"
+  extension="fileExtension[;...;...]"
+  type="typeName, assemblyName"
+  warningLevel="number"
+  compilerOptions="option1 option2"
+/>
+```
+
+## <a name="attributes-and-elements"></a>Attribute und Elemente
+
+In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
+
+### <a name="attributes"></a>Attribute
+
+|Attribut|Beschreibung|
+|---------------|-----------------|
+|`compilerOptions`|Optionales Attribut.<br /><br /> Gibt zusätzliche compilerspezifische Argumente für die Kompilierung an. Die Werte für die `compilerOptions` Attribut finden Sie in der Regel in einem Compileroptionen-Thema für den Compiler.|
+|`extension`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste der Dateinamenerweiterungen, die von Quelldateien verwendet werden, für den Sprachanbieter an. Z. B. ". cs".|
+|`language`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste von vom Sprachanbieter unterstützten Sprachnamen. Z. B. "c#; Cs; Csharp".|
+|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typnamen des Sprachanbieters, einschließlich des Namens der Assembly, die die anbieterimplementierung enthält. Der Typname muss die Anforderungen erfüllen [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
+|`warningLevel`|Optionales Attribut.<br /><br /> Gibt die Warnstufe des Compilers "Standard" an. Bestimmt die Ebene, die mit der des Sprachanbieters für compilerwarnungen als Fehler behandelt.|
+
+### <a name="child-elements"></a>Untergeordnete Elemente
+
+|Element|Beschreibung|
+|-------------|-----------------|
+|[\<"Provideroption" >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/provideroption-element.md)|Gibt den Compilerfehler Version-Attribute für einen Sprachanbieter an.|
+
+### <a name="parent-elements"></a>Übergeordnete Elemente
+
+|Element|Beschreibung|
+|-------------|-----------------|
+|[\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
+|[\<System.CodeDom >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|
+|[\<Compiler > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Container für compilerkonfigurationselemente; enthält 0 (null) oder mehr `<compiler>` Elemente.|
+
+## <a name="remarks"></a>Hinweise
+
+Jede `<compiler>` Element gibt die compilerkonfigurationsattribute für einen bestimmten Sprachanbieter an. Der Datenanbieter erweitert die <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> -Klasse für eine bestimmte Sprache; der `<compiler>` -Element definiert den Compiler und den Code-Generator-Einstellungen für den Sprachanbieter.
+
+.NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config). Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.
+
+Compilerfehler Elemente der Anwendungs-oder Webkonfigurationsdatei können ergänzen oder überschreiben die Einstellungen in der Computerkonfigurationsdatei. Wenn mehr als eine Implementierung eines Anbieters für den Namen der gleichen Sprache oder die gleiche Dateierweiterung konfiguriert ist, überschreibt die letzten übereinstimmende Konfiguration alle vorherigen konfigurierten Anbieter für diese Sprache oder die Erweiterung an.
+
+## <a name="configuration-file"></a>Konfigurationsdatei
+
+Dieses Element kann in der Konfigurationsdatei des Computers und der Anwendungskonfigurationsdatei verwendet werden.
+
+## <a name="example"></a>Beispiel
+
+Das folgende Beispiel veranschaulicht ein typisches Compilerkonfigurationselement:
+
+```xml
+<configuration>
+  <system.codedom>
+    <compilers>
+      <!-- zero or more compiler elements -->
+      <compiler
+        language="c#;cs;csharp"
+        extension=".cs"
+        type="Microsoft.CSharp.CSharpCodeProvider, System,
+          Version=2.0.3600.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089"
+        compilerOptions="/optimize"
+        warningLevel="1" />
+    </compilers>
+  </system.codedom>
+</configuration>
+```
+
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<Compiler > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
+- [Angeben vollqualifizierter vollqualifizierte Typnamen]-(.. /.. /.. /.. /.. / docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [Compiler-Element für Compilers für Compilation ((ASP.NET Einstellungsschema)](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e(v=vs.100))

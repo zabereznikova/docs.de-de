@@ -2,12 +2,12 @@
 title: ByteStream-Encoder
 ms.date: 03/30/2017
 ms.assetid: e674a8ab-f79a-4a93-b984-54b34392dafc
-ms.openlocfilehash: ab9ccf47527dcf7f01f272f09b3b341d30fbd8d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbd4110ecc04923b79d6b910fcf7ab4ca2012680
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499679"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480691"
 ---
 # <a name="bytestream-encoder"></a>ByteStream-Encoder
 In diesem Beispiel wird veranschaulicht, wie eine `ByteStreamHttpBinding` erstellt wird, eine <xref:System.ServiceModel.Channels.Binding>, die die Funktionalität des Bytestreamencoder veranschaulicht.  
@@ -23,7 +23,7 @@ In diesem Beispiel wird veranschaulicht, wie eine `ByteStreamHttpBinding` erstel
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\ByteStreamEncoder`  
   
@@ -31,6 +31,6 @@ In diesem Beispiel wird veranschaulicht, wie eine `ByteStreamHttpBinding` erstel
   
 1.  Öffnen Sie die Datei ByteStreamHttpBinding.sln in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  Starten Sie eine neue Instanz des ByteStreamHttpBindingServer-Projekts, indem Sie das Projekt im Projektmappen-Explorer mit der rechten Maustaste und auswählen **Debuggen**, und klicken Sie dann **neue Instanz starten** aus dem Kontextmenü.  
+2.  Mit der rechten Maustaste in des Projekts im Projektmappen-Explorer, und wählen Sie eine neue Instanz des ByteStreamHttpBindingServer-Projekts zunächst **Debuggen**, und klicken Sie dann **neue Instanz starten** aus dem Kontextmenü.  
   
-3.  Starten Sie eine neue Instanz des ByteStreamHttpBindingClient-Projekts, indem Sie das Projekt im Projektmappen-Explorer mit der rechten Maustaste und auswählen **Debuggen**, **neue Instanz starten** aus dem Kontextmenü.
+3.  Mit der rechten Maustaste in des Projekts im Projektmappen-Explorer, und wählen Sie eine neue Instanz des ByteStreamHttpBindingClient-Projekts zunächst **Debuggen**, **neue Instanz starten** aus dem Kontextmenü.

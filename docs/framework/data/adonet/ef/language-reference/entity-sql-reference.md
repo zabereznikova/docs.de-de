@@ -2,12 +2,12 @@
 title: Entity SQL-Referenz
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: d6b40d0c1662e18ed83c58bfdde7b6dac65220dd
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221048"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487418"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL-Referenz
 
@@ -67,7 +67,7 @@ Logische Operatoren testen den Wahrheitswert einer Bedingung. Der CASE-Ausdruck 
 |[\! (Logisches NOT)](not-entity-sql.md)|Logisches 'NOT'|
 |[&#124;&#124;(Logisches OR)](or-entity-sql.md)|Logisches OR.|
 |[CASE](case-entity-sql.md)|Wertet eine Reihe von booleschen Ausdrücken aus, um das Ergebnis zu bestimmen.|
-|[THEN](then-entity-sql.md)|Das Ergebnis einer [beim](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) -Klausel, wenn er auf "true" ausgewertet wird.|
+|[THEN](then-entity-sql.md)|Das Ergebnis einer [beim](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) -Klausel, wenn er auf "true" ausgewertet wird.|
 
 ## <a name="query-operators"></a>Abfrageoperatoren
 

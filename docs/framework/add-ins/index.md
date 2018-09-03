@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f097a14486b9a07df867ffa5514da33f3db6d4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744524"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482222"
 ---
 # <a name="add-ins-and-extensibility"></a>Add-Ins und Erweiterbarkeit
 <a name="top"></a> Add-Ins stellen erweiterte Funktionen oder Dienste für eine Hostanwendung bereit. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt ein Programmiermodell bereit, mit dem Entwickler Add-Ins entwickeln und in ihrer Hostanwendung aktivieren können. Zu diesem Zweck erstellt das Modell eine Kommunikationspipeline zwischen dem Host und dem Add-In. Das Modell wird implementiert, indem die Typen in den Namespaces <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>und <xref:System.AddIn.Contract> verwendet werden.  
@@ -35,7 +35,7 @@ ms.locfileid: "32744524"
 -   [Verweis](#reference)  
   
 > [!NOTE]
->  Zusätzlichen Beispielcode und Customer Technology Previews von Tools zum Erstellen von Add-In-Pipelines finden Sie auf der [Managed Extensibility and Add-In Framework-Website auf CodePlex](http://go.microsoft.com/fwlink/?LinkId=121190).  
+>  Finden Sie zusätzliche Beispielcode und Customer Technology Previews von Tools zum Erstellen von Add-in-Pipelines, auf die [Managed Extensibility and Add-In Framework-Website auf CodePlex](https://go.microsoft.com/fwlink/?LinkId=121190).  
   
 <a name="addin_model"></a>   
 ## <a name="add-in-model"></a>Add-In-Modell  
@@ -43,7 +43,7 @@ ms.locfileid: "32744524"
   
  In der folgenden Abbildung ist die Pipeline dargestellt.  
   
- ![Hinzufügen&#45;im Pipeline-Modell. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Hinzufügen&#45;im pipelinemodell. ](../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Add-In-Pipeline  
   
  Die Assemblys für diese Segmente müssen sich nicht in derselben Anwendungsdomäne befinden. Sie können ein Add-In in seine eigene neue Anwendungsdomäne, in eine vorhandene Anwendungsdomäne oder sogar in die Anwendungsdomäne des Hosts laden. Sie können mehrere Add-Ins in dieselbe Anwendungsdomäne laden. Dadurch können die Add-Ins Ressourcen und Sicherheitskontexte gemeinsam nutzen.  
@@ -72,7 +72,7 @@ Add-In-Pipeline
 ### <a name="discovery-and-activation"></a>Suche und Aktivierung  
  Sie können ein Add-In aktivieren, indem Sie ein Token aus einer Auflistung verwenden, die die in einem Informationsspeicher gefundenen Add-Ins darstellt. Add-Ins werden anhand des Typs gesucht, der die Hostansicht des Add-Ins definiert. Sie können auch ein bestimmtes Add-In anhand des Typs suchen, der das Add-In definiert. Der Informationsspeicher besteht aus zwei Cachedateien: dem Pipelinespeicher und dem Add-In-Speicher.  
   
- Informationen zum Aktualisieren und Neuerstellen des Informationsspeichers finden Sie unter [Add-in-Ermittlung](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Informationen zum Aktivieren von Add-Ins finden Sie unter [Add-in-Aktivierung](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) und [Vorgehensweise: Aktivieren von Add-Ins mit Unterschiedlicher Isolation und Sicherheit](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Informationen zum Aktualisieren und Neuerstellen des Informationsspeichers finden Sie unter [Add-Ins](https://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Informationen zum Aktivieren von Add-Ins finden Sie unter [Add-in-Aktivierung](https://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) und [Vorgehensweise: Aktivieren von Add-Ins mit unterschiedlichen Isolations- und Sicherheitsstufen](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="isolation-levels-and-external-processes"></a>Isolationsstufen und externe Prozesse  
  Das Add-In-Modell unterstützt mehrere Isolationsstufen zwischen einem Add-In und dessen Host oder zwischen Add-Ins. Beginnend mit der niedrigsten Isolationsstufe werden die folgenden Stufen unterstützt:  
@@ -87,16 +87,16 @@ Add-In-Pipeline
   
 -   Jedes Add-In wird in einem externen Prozess ausschließlich in die eigene Anwendungsdomäne geladen. Dies ist das Szenario mit der stärksten Isolation.  
   
- Weitere Informationen zur Verwendung externer Prozesse finden Sie unter [Vorgehensweise: Aktivieren von Add-Ins mit Unterschiedlicher Isolation und Sicherheit](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Weitere Informationen zur Verwendung externer Prozesse finden Sie unter [Vorgehensweise: Aktivieren von Add-Ins mit unterschiedlichen Isolations- und Sicherheitsstufen](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Verwaltung der Lebensdauer  
- Da das Add-In-Modell Anwendungsdomänen- und Prozessgrenzen überschreitet, reicht die Garbage Collection nicht aus, um Objekte freizugeben. Das Add-In-Modell bietet einen Mechanismus zur Verwaltung der Lebensdauer, der Token und Referenzzähler verwendet und in der Regel keine zusätzliche Programmierung erfordert. Weitere Informationen finden Sie unter [Lebenszeitverwaltung](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Da das Add-In-Modell Anwendungsdomänen- und Prozessgrenzen überschreitet, reicht die Garbage Collection nicht aus, um Objekte freizugeben. Das Add-In-Modell bietet einen Mechanismus zur Verwaltung der Lebensdauer, der Token und Referenzzähler verwendet und in der Regel keine zusätzliche Programmierung erfordert. Weitere Informationen finden Sie unter [Lebensdauerverwaltung](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Zurück zum Anfang](#top)  
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>Unterscheiden zwischen Add-Ins und Hosts  
- Der Unterschied zwischen einem Add-In und einem Host besteht darin, dass der Host die Komponente ist, die das Add-In aktiviert. Der Host kann die größere der beiden Komponenten, beispielsweise eine Textverarbeitungsanwendung mit ihren Rechtschreibprüfungen, oder die kleinere der beiden Komponenten sein, beispielsweise ein Instant Messaging-Client mit einem eingebetteten Media Player. Das Add-In-Modell unterstützt Add-Ins sowohl in Client- als auch in Serverszenarien. Beispiele für Server-Add-Ins sind Add-Ins, die Virenüberprüfung, Spamfilter und IP-Schutz für Mailserver bieten. Beispiele für Client-add-Ins sind Referenz-add-ins für Textverarbeitungsprogramme, spezielle Funktionen für Grafikprogramme und Spiele sowie virenüberprüfung für lokale e-Mail-Clients.  
+ Der Unterschied zwischen einem Add-In und einem Host besteht darin, dass der Host die Komponente ist, die das Add-In aktiviert. Der Host kann die größere der beiden Komponenten, beispielsweise eine Textverarbeitungsanwendung mit ihren Rechtschreibprüfungen, oder die kleinere der beiden Komponenten sein, beispielsweise ein Instant Messaging-Client mit einem eingebetteten Media Player. Das Add-In-Modell unterstützt Add-Ins sowohl in Client- als auch in Serverszenarien. Beispiele für Server-Add-Ins sind Add-Ins, die Virenüberprüfung, Spamfilter und IP-Schutz für Mailserver bieten. Client zählen-add-in Referenz-add-ins für Textverarbeitungsprogramme, spezielle Funktionen für Grafikprogramme und Spiele sowie virenüberprüfung für lokale e-Mail-Clients.  
   
  [Zurück zum Anfang](#top)  
   
@@ -105,8 +105,8 @@ Add-In-Pipeline
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Beschreibt die Kommunikationspipeline von Segmenten von der Hostanwendung zum Add-In. Die Codebeispiele in exemplarischen Vorgehensweisen, die beschreiben, wie Sie die Pipeline erstellen und wie Sie Segmente für die Pipeline in Visual Studio bereitstellen.|  
-|[Anwendungsdomänen und Assemblys](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Beschreibt die Beziehung zwischen Anwendungsdomänen, die eine Isolationsgrenze zwecks Sicherheit, Zuverlässigkeit und Versionsverwaltung bereitstellen, und Assemblys.|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Beschreibt die Kommunikationspipeline von Segmenten von der Hostanwendung zum Add-In. Enthält Codebeispiele in exemplarischen Vorgehensweisen, die beschreiben, wie Sie die Pipeline zu erstellen und Segmente für die Pipeline in Visual Studio bereitstellen.|  
+|[Anwendungsdomänen und Assemblys](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Beschreibt die Beziehung zwischen Anwendungsdomänen, die eine Isolationsgrenze zwecks Sicherheit, Zuverlässigkeit und Versionsverwaltung bereitstellen, und Assemblys.|  
   
  [Zurück zum Anfang](#top)  
   

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652869"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483618"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Gewusst wie: Erstellen von XML-Literalen (Visual Basic)
-Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, mit einem XML-literal. In den Beispielen in diesem Thema wird veranschaulicht, wie ein XML-Element zu erstellen, die über drei untergeordnete Elemente verfügt, wie ein XML-Dokument erstellt.  
+Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, mit einem XML-literal. In die Beispielen in diesem Thema wird veranschaulicht, wie ein XML-Element zu erstellen, die über drei untergeordnete Elemente verfügt wie ein XML-Dokument erstellt.  
   
  Sie können auch die [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs zum Erstellen [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte. Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XElement>.  
   
-### <a name="to-create-an-xml-element"></a>So erstellen ein XML-element  
+### <a name="to-create-an-xml-element"></a>Erstellen Sie ein XML-element  
   
--   Erstellen Sie die XML-Inline mit der XML-literal Syntax, die die tatsächlichen XML-Syntax entspricht.  
+-   Erstellen Sie die XML-Inline, indem Sie mit der XML-Literalen Syntax, die die tatsächlichen XML-Syntax identisch ist.  
   
      [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
@@ -34,9 +34,9 @@ Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, m
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a>Beim Erstellen des XML-Dokuments  
+### <a name="to-create-an-xml-document"></a>Zum Erstellen eines XML-Dokuments  
   
--   Erstellen der XML-Dokument zu ermöglichen. Der folgende Code erstellt ein XML-Dokument, dessen literal Syntax, eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, das ein anderes Element enthält.  
+-   Die XML-Dokument Inline zu erstellen. Der folgende Code erstellt eine XML-Dokument mit Literalen Syntax, eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, ein anderes Element enthält.  
   
      [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   

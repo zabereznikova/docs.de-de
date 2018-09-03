@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a8a454919a195a0f0c03ed6890e51b2723f64fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d82f41e3722ab568f14fbbb00bb0972d759a329
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754105"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485912"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;SupportPortability&gt; Element
 Gibt an, dass eine Anwendung in zwei verschiedenen Implementierungen von .NET Framework durch das Deaktivieren des Standardverhaltens, das die Assemblys zu Anwendungsportabilitätszwecken als gleich behandelt, auf die gleiche Assembly verweisen kann.  
   
- \<Konfiguration >-Element  
+ \<Configuration >-Element  
 \<Common Language Runtime >-Element  
 \<AssemblyBinding >-Element  
 \<SupportPortability >-Element  
@@ -57,7 +57,7 @@ Gibt an, dass eine Anwendung in zwei verschiedenen Implementierungen von .NET Fr
 |`assemblyBinding`|Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], Unterstützung für Anwendungen, die beide Implementierungen von .NET Framework verwenden, können automatisch bereitgestellt wird z. B. die Implementierung von .NET Framework oder .NET Framework for Silverlight-Implementierung. Die zwei Implementierungen einer bestimmten .NET Framework-Assembly werden vom Assemblybinder als äquivalent betrachtet. In einigen Szenarien verursacht diese Anwendungsportabilitätsfunktion Probleme. In jenen Szenarien kann das `<supportPortability>`-Element verwendet werden, um die Funktion zu deaktivieren.  
+ Beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], wird automatisch unterstützt für Anwendungen, die beide Implementierungen von .NET Framework verwenden, können z. B. die Implementierung von .NET Framework oder .NET Framework for Silverlight-Implementierung. Die zwei Implementierungen einer bestimmten .NET Framework-Assembly werden vom Assemblybinder als äquivalent betrachtet. In einigen Szenarien verursacht diese Anwendungsportabilitätsfunktion Probleme. In jenen Szenarien kann das `<supportPortability>`-Element verwendet werden, um die Funktion zu deaktivieren.  
   
  Ein solches Szenario ist eine Assembly, die sowohl die .NET Framework-Implementierung als auch die .NET Framework for Silverlight-Implementierung einer bestimmten Verweisassembly mit Verweisen versehen muss. Ein in Windows Presentation Foundation (WPF) geschriebener XAML-Designer müsste möglicherweise sowohl auf die WPF-Desktopimplementierung, für die Benutzeroberfläche des Designers, als auch die Teilmenge von WPF, die in der Silverlight-Implementierung enthalten ist, verweisen. Standardmäßig verursachen die separaten Verweise einen Compilerfehler, da die Assemblybindung die zwei Assemblys als Entsprechung ansieht. Dieses Element deaktiviert das Standardverhalten und ermöglicht eine erfolgreiche Kompilierung.  
   
@@ -79,5 +79,5 @@ Gibt an, dass eine Anwendung in zwei verschiedenen Implementierungen von .NET Fr
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [/ appconfig (C#-Compileroptionen)](http://msdn.microsoft.com/library/ee523958.aspx)  
- [Übersicht über die Vereinheitlichung von .NET Framework-Assembly](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+ [/ appconfig (C#-Compileroptionen)](https://msdn.microsoft.com/library/ee523958.aspx)  
+ [Übersicht über die Vereinheitlichung von .NET Framework-Assembly](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

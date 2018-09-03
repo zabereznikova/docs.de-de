@@ -2,12 +2,12 @@
 title: Verteilte Transaktionen
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766087"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486326"
 ---
 # <a name="distributed-transactions"></a>Verteilte Transaktionen
 Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgaben, die entweder in ihrer Gesamtheit erfolgreich abgeschlossen werden (Commit) oder nicht (Abort). Ein *verteilte Transaktion* ist eine Transaktion, die sich auf verschiedene Ressourcen auswirkt. Damit ein Commit einer verteilten Transaktion erfolgreich ausgeführt werden kann, müssen alle Beteiligten gewährleisten, dass jede vorgenommene Datenänderung dauerhaft ist. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Sobald auch nur ein Beteiligter dies nicht gewährleisten kann, kann die gesamte Transaktion nicht ausgeführt werden, und sämtliche im Zuge der Transaktion durchgeführten Datenänderungen werden in einem Rollback zurückgenommen.  
@@ -16,7 +16,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
 >  Wenn Sie versuchen, einen Commit oder Rollback für eine Transaktion auszuführen, wenn ein `DataReader` gestartet wird und die Transaktion aktiv ist, wird eine Ausnahme ausgelöst.  
   
 ## <a name="working-with-systemtransactions"></a>Arbeiten mit System.Transactions  
- In .NET Framework werden verteilte Transaktionen durch die API im <xref:System.Transactions>-Namespace verwaltet. Die <xref:System.Transactions>-API delegiert die Behandlung verteilter Transaktionen an einen Transaktionsmonitor wie den MS DTC (Microsoft Distributed Transaction Coordinator), wenn mehrere ständige Ressourcen-Manager beteiligt sind. Weitere Informationen finden Sie unter [Transaktion Grundlagen](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
+ In .NET Framework werden verteilte Transaktionen durch die API im <xref:System.Transactions>-Namespace verwaltet. Die <xref:System.Transactions>-API delegiert die Behandlung verteilter Transaktionen an einen Transaktionsmonitor wie den MS DTC (Microsoft Distributed Transaction Coordinator), wenn mehrere ständige Ressourcen-Manager beteiligt sind. Weitere Informationen finden Sie unter [Transaktionsgrundlagen](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
   
  Die Unterstützung der Auflistung in einer verteilten Transaktion mithilfe der `EnlistTransaction`-Methode, die eine Verbindung in einer <xref:System.Transactions.Transaction>-Instanz auflistet, ist eine neue Funktion in ADO.NET 2.0. In früheren Versionen von ADO.NET wurde die explizite Eintragung in verteilte Transaktionen mithilfe der `EnlistDistributedTransaction`-Methode einer Verbindung für das Eintragen einer Verbindung in eine <xref:System.EnterpriseServices.ITransaction>-Instanz durchgeführt, die aus Gründen der Abwärtskompatibilität unterstützt wird. Weitere Informationen zu Enterprise Services-Transaktionen, finden Sie unter [Interoperabilität mit Enterprise Services und COM+-Transaktionen](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
@@ -33,7 +33,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
   
  Das Eintragen in verteilte Transaktionen eignet sich besonders beim Pooling von Geschäftsobjekten. Wenn sich ein Geschäftsobjekt mit einer hergestellten Verbindung in einem Pool befindet, erfolgt die automatische Transaktionseintragung nur, wenn diese Verbindung hergestellt wird. Wenn mehrere Transaktionen unter Verwendung des Geschäftsobjekts im Pool ausgeführt werden, wird die für das Objekt hergestellte Verbindung nicht automatisch in neu initialisierte Transaktionen eingetragen. In diesem Fall können Sie die automatische Transaktionseintragung für die Verbindung deaktivieren und die Verbindung mithilfe der `EnlistTransaction`-Methode in Transaktionen eintragen.  
   
- `EnlistTransaction` akzeptiert ein einzelnes Argument vom Typ <xref:System.Transactions.Transaction> , das einen Verweis auf die vorhandene Transaktion. Nach dem Aufrufen der `EnlistTransaction`-Methode der Verbindung werden alle Änderungen, die mit der Verbindung an der Datenquelle vorgenommen wurden, in die Transaktion eingetragen. Beim Übergeben eines NULL-Werts wird die Verbindung aus der aktuellen verteilten Transaktionseintragung ausgetragen. Beachten Sie, dass die Verbindung vor dem Aufrufen der `EnlistTransaction`-Methode hergestellt werden muss.  
+ `EnlistTransaction` akzeptiert ein einzelnes Argument vom Typ <xref:System.Transactions.Transaction> , einen Verweis auf die vorhandene Transaktion. Nach dem Aufrufen der `EnlistTransaction`-Methode der Verbindung werden alle Änderungen, die mit der Verbindung an der Datenquelle vorgenommen wurden, in die Transaktion eingetragen. Beim Übergeben eines NULL-Werts wird die Verbindung aus der aktuellen verteilten Transaktionseintragung ausgetragen. Beachten Sie, dass die Verbindung vor dem Aufrufen der `EnlistTransaction`-Methode hergestellt werden muss.  
   
 > [!NOTE]
 >  Nachdem eine Verbindung ausdrücklich in eine Transaktion eingetragen wurde, kann sie solange nicht ausgetragen oder in eine andere Transaktion eingetragen werden, bis die erste Transaktion beendet wurde.  
@@ -42,7 +42,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
 >  Die `EnlistTransaction`-Methode löst eine Ausnahme aus, wenn die Verbindung bereits mithilfe ihrer <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode eine Transaktion begonnen hat. Wenn es sich bei der Transaktion jedoch um eine lokale Transaktion handelt, die an der Datenquelle begonnen wurde (z. B. die explizite Ausführung der BEGIN TRANSACTION-ANWEISUNG mithilfe eines <xref:System.Data.SqlClient.SqlCommand>), führt die `EnlistTransaction`-Methode einen Rollback der lokalen Transaktion durch und trägt sich selbst wie angefordert in die vorhandene verteilte Transaktion ein. Sie werden nicht über den Rollback der lokalen Transaktion benachrichtigt und müssen nicht begonnene lokale Transaktionen mithilfe der <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode verwalten. Wenn Sie den .NET Framework-Datenanbieter für SQL Server (`SqlClient`) mit SQL Server verwenden, wird beim Eintragen eine Ausnahme ausgelöst. Alle anderen Fälle bleiben unerkannt.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Heraufstufbare Transaktionen in SQL Server  
- SQL Server unterstützt heraufstufbare Transaktionen, bei denen eine lokale kompakte Transaktion nur bei Bedarf automatisch zu einer verteilten Transaktion heraufgestuft werden kann. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Weitere Informationen und ein Codebeispiel finden Sie unter [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
+ SQL Server unterstützt heraufstufbare Transaktionen, bei denen eine lokale kompakte Transaktion nur bei Bedarf automatisch zu einer verteilten Transaktion heraufgestuft werden kann. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Weitere Informationen und ein Codebeispiel finden Sie [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
   
 ## <a name="configuring-distributed-transactions"></a>Konfigurieren von verteilten Transaktionen  
  Möglicherweise müssen Sie MS DTC über das Netzwerk aktivieren, um verteilte Transaktionen zu verwenden. Wenn die Windows-Firewall aktiviert ist, müssen Sie dem MS DTC-Dienst die Erlaubnis erteilen, das Netzwerk zu verwenden, oder den MS DTC-Port öffnen.  
@@ -50,4 +50,4 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
 ## <a name="see-also"></a>Siehe auch  
  [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

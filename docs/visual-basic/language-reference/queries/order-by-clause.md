@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
 ms.openlocfilehash: d4abb5f0b75ae4069c1dbe695a5c810b1f7aa6e1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253580"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482596"
 ---
 # <a name="order-by-clause-visual-basic"></a>ORDER BY-Klausel (Visual Basic)
 Gibt die Sortierreihenfolge für eine Abfrage an.  

@@ -11,16 +11,16 @@ ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 66ae453a8b82ea78acfb0dc423bce546324f901f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1ab9a9eeae6de29fc838e263225050ec4122f2d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410071"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480241"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Benutzeroberflächenautomatisierungs-Eigenschaften für Clients
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In dieser Übersicht werden [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften vorgestellt, die für Benutzeroberflächenautomatisierungs-Clientanwendungen verfügbar gemacht werden.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33410071"
 ## <a name="property-ids"></a>Eigenschaften-IDs  
  Die Eigenschaften- [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] sind eindeutige, konstante Werte, die in <xref:System.Windows.Automation.AutomationProperty> -Objekten gekapselt werden. Benutzeroberflächenautomatisierungs-Clientanwendungen rufen diese [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] aus der <xref:System.Windows.Automation.AutomationElement> -Klasse oder aus entsprechenden Steuerelementmusterklassen, wie zum Beispiel <xref:System.Windows.Automation.ScrollPattern>, ab. Benutzeroberflächenautomatisierungs-Anbieter rufen sie aus <xref:System.Windows.Automation.AutomationElementIdentifiers> oder aus einer der Klassen von Steuerelementmuster-IDs ab, z. B. aus <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
- Der numerische <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> des ein <xref:System.Windows.Automation.AutomationProperty> wird von Anbietern verwendet, um Eigenschaften zu identifizieren, die in abgefragt werden die <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> Methode. Im Allgemeinen müssen Clientanwendungen die <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>nicht prüfen. Der <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> wird nur zum Debuggen und für Diagnosezwecke verwendet.  
+ Die numerische <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> von einem <xref:System.Windows.Automation.AutomationProperty> wird von Anbietern verwendet, um Eigenschaften zu identifizieren, die in abgefragt werden die <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> Methode. Im Allgemeinen müssen Clientanwendungen die <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>nicht prüfen. Der <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> wird nur zum Debuggen und für Diagnosezwecke verwendet.  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>Eigenschaftsbedingungen  
@@ -80,7 +80,7 @@ ms.locfileid: "33410071"
 ## <a name="default-property-values"></a>Standardeigenschaftswerte  
  Wenn ein Benutzeroberflächenautomatisierungs-Anbieter eine Eigenschaft nicht implementiert, kann das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -System einen Standardwert bereitstellen. Wenn der Anbieter für ein Steuerelement die durch <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>bezeichnete Eigenschaft z. B. nicht unterstützt, gibt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] eine leere Zeichenfolge zurück. Wenn der Anbieter die durch <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>bezeichnete Eigenschaft nicht unterstützt, gibt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] entsprechend `false`zurück.  
   
- Sie können dieses Verhalten ändern, indem Sie mit der <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> und <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> methodenüberladungen. Wenn Sie `true` als zweiten Parameter angeben, gibt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] keinen Standardwert zurück, sondern stattdessen den speziellen Wert <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
+ Sie können dieses Verhalten ändern, indem Sie mit der <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> und <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> Überladungen der Methode. Wenn Sie `true` als zweiten Parameter angeben, gibt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] keinen Standardwert zurück, sondern stattdessen den speziellen Wert <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
   
  Mit dem folgenden Beispielcode wird versucht, eine Eigenschaft aus einem Element abzurufen. Wenn die Eigenschaft nicht unterstützt wird, wird stattdessen ein von der Anwendung definierter Wert verwendet.  
   

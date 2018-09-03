@@ -7,58 +7,60 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0678300fca4442cf90dd15c5a4e011d80656eac6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810108"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478155"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Zugreifen auf Dienste mithilfe eines WCF-Clients
-Nachdem Sie einen Dienst erstellt haben, besteht der nächste Schritt erstellen Sie einen WCF-Clientproxy. Eine Clientanwendung verwendet den WCF-Clientproxy, um mit dem Dienst kommunizieren. Clientanwendungen importieren normalerweise Metadaten eines Diensts, um WCF-Clientcode generieren, die zum Aufrufen des Diensts verwendet werden kann.  
-  
- Die grundlegenden Schritte zum Erstellen eines WCF-Clients umfassen Folgendes:  
-  
-1.  Kompilieren Sie den Dienstcode.  
-  
-2.  Generieren Sie den WCF-Clientproxy.  
-  
-3.  Instanziieren Sie den WCF-Clientproxy.  
-  
- Der WCF-Clientproxy kann manuell generiert werden, mithilfe der Service Model Metadata Utility Tool (SvcUtil.exe) Weitere Informationen finden Sie unter [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Der WCF-Clientproxy kann auch mithilfe der Funktion Dienstverweis hinzufügen in Visual Studio generiert werden. Um den WCF-Clientproxy mithilfe einer dieser Methoden zu generieren, muss der Dienst ausgeführt werden. Wenn es sich um einen selbst gehosteten Dienst handelt, müssen Sie den Host ausführen. Wenn der Dienst in IIS/WAS gehostet wird, ist kein weiterer Schritt erforderlich.  
-  
-## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata Utility Tool  
- Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ist ein Befehlszeilentool zum Generieren von Code aus den Metadaten. Die folgende Verwendung ist ein Beispiel für einen grundlegenden Svcutil.exe-Befehl.  
-  
-```  
-Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
-```  
-  
- Alternativ können Sie Svcutil.exe mit WSDL (Web Services Description Language) und XSD (XML Schema Definition Language)-Dateien im Dateisystem verwenden.  
-  
-```  
-Svcutil.exe <list of WSDL and XSD files on file system>  
-```  
-  
- Das Ergebnis ist eine Codedatei, die WCF-Clientcode, die die Clientanwendung verwenden können enthält, um den Dienst aufzurufen.  
-  
- Sie können das Tool auch zum Generieren von Konfigurationsdateien verwenden.  
-  
-```  
-Svcutil.exe <file1 [,file2]>  
-```  
-  
- Wenn nur ein Dateiname angegeben wird, ist das der Name der Ausgabedatei. Wenn zwei Dateinamen angegeben werden, ist die erste Datei eine Eingabekonfigurationsdatei, deren Inhalt mit der generierten Konfiguration zusammengeführt und in die zweite Datei geschrieben wird. Weitere Informationen zur Konfiguration finden Sie unter [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
-  
+
+Nachdem Sie einen Dienst erstellt haben, werden im nächste Schritt erstellen Sie einen WCF-Clientproxy. Eine Clientanwendung verwendet den WCF-Clientproxy, um mit dem Dienst kommunizieren. Clientanwendungen importieren normalerweise Metadaten eines Diensts, um WCF-Clientcode zu generieren, die zum Aufrufen des Diensts verwendet werden kann.
+
+ Die folgenden: die grundlegenden Schritte zum Erstellen eines WCF-Clients
+
+1.  Kompilieren Sie den Dienstcode.
+
+2.  Generieren Sie den WCF-Clientproxy.
+
+3.  Instanziieren Sie den WCF-Clientproxy.
+
+Der WCF-Clientproxy kann manuell generiert werden, mithilfe der Service Model Metadata Utility Tool (SvcUtil.exe) Weitere Informationen finden Sie unter [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Der WCF-Clientproxy kann auch in Visual Studio generiert werden mithilfe der **Hinzufügen eines Dienstverweises** Feature. Um den WCF-Clientproxy mithilfe einer dieser Methoden zu generieren, muss der Dienst ausgeführt werden. Wenn es sich um einen selbst gehosteten Dienst handelt, müssen Sie den Host ausführen. Wenn der Dienst in IIS/WAS gehostet wird, ist kein weiterer Schritt erforderlich.
+
+## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata Utility Tool
+ Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ist ein Befehlszeilentool zum Generieren von Code aus den Metadaten. Die folgende Verwendung ist ein Beispiel für einen grundlegenden Svcutil.exe-Befehl.
+
+```
+Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
+```
+
+ Alternativ können Sie Svcutil.exe mit WSDL (Web Services Description Language) und XSD (XML Schema Definition Language)-Dateien im Dateisystem verwenden.
+
+```
+Svcutil.exe <list of WSDL and XSD files on file system>
+```
+
+ Das Ergebnis ist eine Codedatei, die WCF-Clientcode, die die Client-Anwendung verwenden können enthält, um den Dienst aufzurufen.
+
+ Sie können das Tool auch zum Generieren von Konfigurationsdateien verwenden.
+
+```
+Svcutil.exe <file1 [,file2]>
+```
+
+ Wenn nur ein Dateiname angegeben wird, ist das der Name der Ausgabedatei. Wenn zwei Dateinamen angegeben werden, ist die erste Datei eine Eingabekonfigurationsdatei, deren Inhalt mit der generierten Konfiguration zusammengeführt und in die zweite Datei geschrieben wird. Weitere Informationen zur Konfiguration finden Sie unter [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
+
 > [!IMPORTANT]
->  Nicht gesicherte Metadatenanforderungen stellen genau wie nicht gesicherte Netzwerkanforderungen ein gewisses Risiko dar: Wenn Sie sich nicht sicher sind, ob der Endpunkt, mit dem Sie kommunizieren, der vorgegebenen Identität entspricht, stammen die abgerufenen Informationen unter Umständen von einem bösartigen Dienst.  
-  
-## <a name="add-service-reference-in-visual-studio"></a>"Dienstverweis hinzufügen" in Visual Studio  
- Mit dem Dienst wird ausgeführt, mit der rechten Maustaste klicken Sie auf das Projekt, das den WCF-Clientproxy enthalten wird, und wählen **Hinzufügen eines Dienstverweises**. In der **hinzufügen "Dienstverweis"** Geben Sie die URL des Diensts, die Sie verwenden möchten, rufen Sie aus, und klicken Sie auf die **Go** Schaltfläche. Das Dialogfeld zeigt eine Liste der Dienste an, die unter der Adresse verfügbar sind. Klicken Sie mit der Doppelklicken auf den Dienst finden Sie unter die Verträge und Vorgänge verfügbar, geben Sie einen Namespace für den generierten Code aus, und klicken Sie auf die **OK** Schaltfläche.  
-  
-## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird ein für einen Dienst erstellter Dienstvertrag gezeigt.  
-  
+> Nicht gesicherte Metadatenanforderungen stellen genau wie nicht gesicherte Netzwerkanforderungen ein gewisses Risiko dar: Wenn Sie sich nicht sicher sind, ob der Endpunkt, mit dem Sie kommunizieren, der vorgegebenen Identität entspricht, stammen die abgerufenen Informationen unter Umständen von einem bösartigen Dienst.
+
+## <a name="add-service-reference-in-visual-studio"></a>"Dienstverweis hinzufügen" in Visual Studio
+
+ Mit dem Dienst ausgeführt wird, mit der rechten Maustaste des Projekts, das den WCF-Clientproxy enthält, und wählen Sie **hinzufügen** > **Dienstverweis**. In der **Dialog für Dienstverweise hinzufügen**, geben Sie die URL des Diensts, die Sie verwenden möchten, rufen Sie aus, und klicken Sie auf die **wechseln** Schaltfläche. Das Dialogfeld zeigt eine Liste der Dienste an, die unter der Adresse verfügbar sind. Klicken Sie mit der Doppelklicken auf den Dienst finden Sie unter die Verträge und Vorgänge verfügbar sind. Geben Sie einen Namespace für den generierten Code, und klicken Sie auf die **OK** Schaltfläche.
+
+## <a name="example"></a>Beispiel
+ Im folgenden Codebeispiel wird ein für einen Dienst erstellter Dienstvertrag gezeigt.
+
 ```csharp
 // Define a service contract.
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -69,7 +71,7 @@ public interface ICalculator
     // Other methods are not shown here.
 }
 ```
-  
+
 ```vb
 ' Define a service contract.
 <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
@@ -79,9 +81,9 @@ Public Interface ICalculator
     ' Other methods are not shown here.
 End Interface
 ```
-  
- Das ServiceModel Metadata Utility-Tool und Hinzufügen eines Dienstverweises in Visual Studio generiert die folgenden WCF-Clientklasse. Die Klasse erbt von der generischen <xref:System.ServiceModel.ClientBase%601>-Klasse und implementiert die `ICalculator`-Schnittstelle. Das Tool generiert auch die `ICalculator`-Schnittstelle (wird hier nicht gezeigt).  
-  
+
+ Das ServiceModel Metadata Utility-Tool und **Hinzufügen eines Dienstverweises** in Visual Studio generiert die folgende WCF-Client-Klasse. Die Klasse erbt von der generischen <xref:System.ServiceModel.ClientBase%601>-Klasse und implementiert die `ICalculator`-Schnittstelle. Das Tool generiert auch die `ICalculator`-Schnittstelle (wird hier nicht gezeigt).
+
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
 {
@@ -111,9 +113,9 @@ public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculat
         return base.Channel.Add(n1, n2);
     }
 }
-```  
-  
-```vb  
+```
+
+```vb
 Partial Public Class CalculatorClient
     Inherits System.ServiceModel.ClientBase(Of ICalculator)
     Implements ICalculator
@@ -146,10 +148,10 @@ Partial Public Class CalculatorClient
     End Function
 End Class
 ```
-  
-## <a name="using-the-wcf-client"></a>Verwenden des WCF-Clients  
- Um den WCF-Client verwenden, erstellen Sie eine Instanz der WCF-Client, und rufen Sie klicken Sie dann seine Methoden auf, wie im folgenden Code gezeigt.  
-  
+
+## <a name="using-the-wcf-client"></a>Verwenden des WCF-Clients
+ Um den WCF-Client zu verwenden, erstellen Sie eine Instanz der WCF-Client, und rufen Sie klicken Sie dann seine Methoden auf, wie im folgenden Code gezeigt.
+
 ```csharp
 // Create a client object with the given client endpoint configuration.
 CalculatorClient calcClient = new CalculatorClient("CalculatorEndpoint"));
@@ -159,7 +161,7 @@ double value2 = 15.99D;
 double result = calcClient.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
 ```
-  
+
 ```vb
 ' Create a client object with the given client endpoint configuration.
 Dim calcClient As CalculatorClient = _
@@ -171,25 +173,27 @@ Dim value2 As Double = 15.99D
 Dim result As Double = calcClient.Add(value1, value2)
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
-  
-## <a name="debugging-exceptions-thrown-by-a-client"></a>Debuggen der von einem Client ausgelösten Ausnahmen  
- Viele von einem WCF-Client ausgelöste Ausnahmen werden durch eine Ausnahme für den Dienst verursacht. Im Folgenden finden Sie einige Beispiele:  
-  
--   <xref:System.Net.Sockets.SocketException>: Vom Remotehost wurde die Schließung einer bestehenden Verbindung erzwungen.  
-  
--   <xref:System.ServiceModel.CommunicationException>: Die zugrunde liegende Verbindung wurde unerwartet geschlossen.  
-  
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Die Socketverbindung wurde abgebrochen. Mögliche Ursache: Ein Fehler beim Verarbeiten der Nachricht, eine Zeitüberschreitung durch den Remotehost beim Empfang oder ein Problem mit einer zugrunde liegenden Netzwerkressource.  
-  
- Tritt eine Ausnahme dieses Typs auf, aktivieren Sie die Ablaufverfolgung auf der Dienstseite, und ermitteln Sie die dort aufgetretene Ausnahme. Weitere Informationen zur Ablaufverfolgung finden Sie unter [Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/index.md) und [mithilfe-Ablaufverfolgung zum Beheben der Anwendung](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
-  
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Vorgehensweise: Zugriff auf einen WSE3.0-Dienst](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [Grundlagen des generierten Clientcodes](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
- [Angeben des Clientlaufzeitverhaltens](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [Konfigurieren von Clientverhalten](../../../docs/framework/wcf/configuring-client-behaviors.md)
+
+## <a name="debugging-exceptions-thrown-by-a-client"></a>Debuggen der von einem Client ausgelösten Ausnahmen
+
+Viele von einem WCF-Client ausgelöste Ausnahmen werden durch eine Ausnahme für den Dienst verursacht. Im Folgenden finden Sie einige Beispiele:
+
+-   <xref:System.Net.Sockets.SocketException>: Vom Remotehost wurde die Schließung einer bestehenden Verbindung erzwungen.
+
+-   <xref:System.ServiceModel.CommunicationException>: Die zugrunde liegende Verbindung wurde unerwartet geschlossen.
+
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Die Socketverbindung wurde abgebrochen. Mögliche Ursache: Ein Fehler beim Verarbeiten der Nachricht, eine Zeitüberschreitung durch den Remotehost beim Empfang oder ein Problem mit einer zugrunde liegenden Netzwerkressource.
+
+Tritt eine Ausnahme dieses Typs auf, aktivieren Sie die Ablaufverfolgung auf der Dienstseite, und ermitteln Sie die dort aufgetretene Ausnahme. Weitere Informationen zur Ablaufverfolgung finden Sie unter [Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/index.md) und [mithilfe der Ablaufverfolgung Ihrer Anwendung beheben](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+
+## <a name="see-also"></a>Siehe auch
+
+- [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Vorgehensweise: Zugriff auf einen WSE3.0-Dienst](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Grundlagen des generierten Clientcodes](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
+- [Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Angeben des Clientlaufzeitverhaltens](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [Konfigurieren von Clientverhalten](../../../docs/framework/wcf/configuring-client-behaviors.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556912"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482975"
 ---
 # <a name="control-styles-and-templates"></a>Steuerelementformate und -vorlagen
-Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Sie können die Struktur und die Darstellung eines Steuerelements ändern, durch Ändern der <xref:System.Windows.Controls.ControlTemplate> dieses Steuerelements. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuerelements zu ersetzen. um die visuelle Struktur eines Steuerelements zu ändern, müssen Sie festlegen, der <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft des Steuerelements an ihre neuen und vollständige <xref:System.Windows.Controls.ControlTemplate>.  
+Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Sie können die Struktur und Darstellung eines Steuerelements ändern, durch Ändern der <xref:System.Windows.Controls.ControlTemplate> des Steuerelements. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuerelements zu ersetzen; um die visuelle Struktur eines Steuerelements zu ändern, Sie festlegen müssen, die <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft des Steuerelements auf dessen neues und vollständiges <xref:System.Windows.Controls.ControlTemplate>.  
   
- Die Desktopdesigns bestimmen, welches Ressourcenverzeichnis verwendet wird. Die Ressourcenwörterbücher für die Desktopdesigns finden Sie unter [Default WPF Themes (Standard-WPF-Designs)](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Die Desktopdesigns bestimmen, welches Ressourcenverzeichnis verwendet wird. Die Ressourcenwörterbücher für die Desktopdesigns finden Sie unter [Default WPF Themes (Standard-WPF-Designs)](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
  In der folgenden Tabelle werden die Dateinamen der Ressourcenwörterbücher und die entsprechenden Desktopdesigns beschrieben.  
   
@@ -50,18 +50,18 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
  [ListView-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Menu-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [NavigationWindow-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [Für das PasswordBox-Stile und Vorlagen](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [PasswordBox-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [ProgressBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [RadioButton-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton-Stile und Vorlagen](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [RepeatButton-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [ScrollBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [ScrollViewer-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Slider-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
  [StatusBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb-Stile und Vorlagen](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton-Stile und Vorlagen](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Thumb-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [ToggleButton-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

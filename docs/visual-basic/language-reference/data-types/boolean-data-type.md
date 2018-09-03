@@ -12,31 +12,31 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590276"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478044"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean-Datentyp (Visual Basic)
-Enthält Werte, die nur können `True` oder `False`. Die Schlüsselwörter `True` und `False` entsprechen die beiden Status `Boolean` Variablen.  
+Enthält Werte, die nur können `True` oder `False`. Die Schlüsselwörter `True` und `False` entsprechen, die beiden Status `Boolean` Variablen.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der [Boolean-Datentyp (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) zwei-Status-Werte wie wahr/falsch, enthalten, Ja/Nein, oder ein/aus.  
+ Verwenden der [Boolean-Datentyp (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) enthält zwei-Status-Werte wie wahr/falsch, Ja/Nein, oder ein/aus.  
   
  Der Standardwert von `Boolean` ist `False`.  
   
- `Boolean` Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte dürfen nicht mit Zahlen gleichwertig sein. Schreiben Sie Code, der auf den entsprechenden numerischen Werten für nutzt `True` und `False`. Wann immer möglich, beschränken Sie die Verwendung von `Boolean` Variablen, die für sie vorgesehenen logischen Werte.  
+ `Boolean` Werte werden nicht als Zahlen gespeichert, und die gespeicherten Werte sind nicht für das Zahlen entsprechen soll. Schreiben Sie Code, der auf den entsprechenden numerischen Werten für basiert `True` und `False`. Wann immer möglich, beschränken Sie die Verwendung von `Boolean` Variablen, um die logischen Werte, die für die sie entworfen werden.  
   
 ## <a name="type-conversions"></a>Typkonvertierungen  
- Wenn Visual Basic numerische Datentypwerte konvertiert `Boolean`, wird 0 `False` und alle anderen Werte werden `True`. Wenn Visual Basic konvertiert `Boolean` Werte in numerische Typen `False` wird 0 und `True` wird – 1.  
+ Wenn konvertiert Visual Basic numerischen Typ Datenwerte `Boolean`, wird 0 `False` und alle anderen Werte werden `True`. Wenn Visual Basic konvertiert `Boolean` Werten in numerische Typen `False` ist 0 und `True` wird – 1.  
   
- Bei der Konvertierung zwischen `Boolean` Werte und numerische Datentypen ausgelöst werden, sollten Sie bedenken, dass die .NET Framework-Konvertierungsmethoden nicht immer die gleichen Ergebnisse wie die Visual Basic-Konvertierungsschlüsselwörter erzeugen. Dies ist, da die Visual Basic-Konvertierung Verhalten kompatibel mit früheren Versionen werden beibehalten. Weitere Informationen finden Sie unter "Boolescher Typ wird nicht präzise zu den numerischen Typ konvertieren" in [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Beim Konvertieren zwischen `Boolean` Werte und numerische Datentypen und Bedenken Sie, dass die .NET Framework-Konvertierungsmethoden nicht immer die gleichen Ergebnisse wie die Schlüsselwörter der Visual Basic-Konvertierung erzeugen. Dies ist, da die Visual Basic-Konvertierung Verhalten kompatibel mit früheren Versionen werden beibehalten. Weitere Informationen finden Sie unter "Boolescher Typ ist nicht präzise, den numerischen Typ konvertieren" in [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Negative Zahlen.** `Boolean` ist kein numerischen Typ und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Boolean` für numerische Werte.  
+-   **Negative Zahlen.** `Boolean` ist kein numerischer Typ und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Boolean` für numerische Werte.  
   
 -   **Typzeichen.** `Boolean` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
   
@@ -55,7 +55,7 @@ End If
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Boolean?displayProperty=nameWithType>  
- [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
  [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  

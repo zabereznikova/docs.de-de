@@ -2,20 +2,20 @@
 title: Mehrere Endpunkte unter einem ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: f3eb2036ffbb7c5e8cae77ebc1a86e07d31626c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45963bcf03a6734b85a1213c99facd9023711bf5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506505"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480388"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Mehrere Endpunkte unter einem ListenUri
-In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , implementiert einen rechnerdienst.  
+In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Wie in der [mehrere Endpunkte](../../../../docs/framework/wcf/samples/multiple-endpoints.md) Beispiel Hosten eines Diensts kann mehrere Endpunkte mit unterschiedlichen Adressen und möglicherweise auch unterschiedlichen Bindungen. In diesem Beispiel wird gezeigt, dass mehrere Endpunkte auch bei der gleichen Adresse gehostet werden können. Außerdem werden in diesem Beispiel die Unterschiede zwischen den beiden Arten der Adressen eines Dienstendpunkts dargestellt: `EndpointAddress` und `ListenUri`.  
+ Wie in der [mehrere Endpunkte](../../../../docs/framework/wcf/samples/multiple-endpoints.md) Beispiel ein Dienst kann mehrere Endpunkte, die jeweils unterschiedliche Adressen und möglicherweise auch verschiedene Bindungen hosten. In diesem Beispiel wird gezeigt, dass mehrere Endpunkte auch bei der gleichen Adresse gehostet werden können. Außerdem werden in diesem Beispiel die Unterschiede zwischen den beiden Arten der Adressen eines Dienstendpunkts dargestellt: `EndpointAddress` und `ListenUri`.  
   
  Die `EndpointAddress` ist die logische Adresse eines Diensts. An diese Adresse werden SOAP-Nachrichten adressiert. Der `ListenUri` ist die physische Adresse des Diensts. Er verfügt über die Informationen zu Port und Adresse, an denen der Dienst auf dem aktuellen Computer tatsächlich Nachrichten überwacht. In den meisten Fällen müssen diese Adressen nicht unterschiedlich sein. Wenn ein `ListenUri` nicht explizit angegeben ist, wird er standardmäßig auf den URI der `EndpointAddress` des Endpunkts festgelegt. In einigen Fällen ist es jedoch nützlich, die Adressen zu unterscheiden, z.&#160;B. wenn Sie einen Router konfigurieren, der Nachrichten akzeptiert, die möglicherweise an eine Reihe verschiedener Dienste adressiert sind.  
   
@@ -48,7 +48,7 @@ In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem ei
   
  Wie auf dem Server sind diese beiden Adressen standardmäßig identisch. Um einen `Via` auf dem Client anzugeben, der sich von der Adresse des Endpunkts unterscheidet, wird `ClientViaBehavior` verwendet:  
   
-```  
+```csharp  
 Uri via = new Uri("http://localhost/ServiceModelSamples/service.svc");  
 CalculatorClient calcClient = new CalculatorClient();  
 calcClient.ChannelFactory.Endpoint.Behaviors.Add(  
@@ -61,11 +61,11 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Bei einer computerübergreifenden Konfiguration müssen Sie "localhost" in der Datei "Client.cs" durch den Namen des Dienstcomputers ersetzen.  
@@ -75,7 +75,7 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   

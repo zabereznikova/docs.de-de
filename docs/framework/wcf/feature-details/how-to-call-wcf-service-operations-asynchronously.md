@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 8058f0fac8a0401f72f84e2d2e91c28c7e46d1e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493362"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488169"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Vorgehensweise: Asynchrones Aufrufen von WCF-Dienstvorgängen
-In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann. Der in diesem Thema behandelte Dienst implementiert die `ICalculator`-Schnittstelle. Der Client kann mithilfe des ereignisgesteuerten asynchronen Aufrufmodells die Vorgänge asynchron an dieser Schnittstelle aufrufen. (Weitere Informationen über die das ereignisbasierte asynchrone Aufrufmodell finden Sie unter [Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster](http://go.microsoft.com/fwlink/?LinkId=248184)). Ein Beispiel, das veranschaulicht, wie einen Vorgang asynchron in einem Dienst zu implementieren, finden Sie unter [Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann. Der in diesem Thema behandelte Dienst implementiert die `ICalculator`-Schnittstelle. Der Client kann mithilfe des ereignisgesteuerten asynchronen Aufrufmodells die Vorgänge asynchron an dieser Schnittstelle aufrufen. (Weitere Informationen über den ereignisbasierten asynchronen aufrufmodells finden Sie unter [Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster](https://go.microsoft.com/fwlink/?LinkId=248184)). Ein Beispiel, wie Sie das asynchrone Implementieren eines Vorgangs in einem Dienst veranschaulicht, finden Sie unter [Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Weitere Informationen zu synchronen und asynchronen Vorgängen, finden Sie unter [synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 > [!NOTE]
->  Bei Verwendung einer <xref:System.ServiceModel.ChannelFactory%601> wird das ereignisgesteuerte asynchrone Aufrufmodell nicht unterstützt. Informationen zum asynchronen Aufrufe mithilfe der <xref:System.ServiceModel.ChannelFactory%601>, finden Sie unter [Vorgehensweise: Aufrufen mithilfe Vorgänge asynchron eine Kanalfactory](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+>  Bei Verwendung einer <xref:System.ServiceModel.ChannelFactory%601> wird das ereignisgesteuerte asynchrone Aufrufmodell nicht unterstützt. Informationen über die Verwendung asynchroner Aufrufe mit den <xref:System.ServiceModel.ChannelFactory%601>, finden Sie unter [Vorgehensweise: Rufen Sie Vorgänge asynchron unter Verwendung einer Kanalfactory](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
 ## <a name="procedure"></a>Prozedur  
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>So rufen Sie WCF-Dienstvorgänge asynchron auf  
   
-1.  Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool mit der `/async` und die `/tcv:Version35` zusammen Befehlsoptionen wie in den folgenden Befehl gezeigt.  
+1.  Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool, mit der `/async` und `/tcv:Version35` Befehlsoptionen wie in den folgenden Befehl gezeigt.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   
-     Dies wird generiert, zusätzlich zu den synchronen und standard delegatbasierte asynchrone Vorgänge, eine WCF-Clientklasse, die enthält:  
+     Dies wird generiert, zusätzlich zu den synchronen "und" standard delegatbasierte asynchrone Vorgänge, eine WCF-Client-Klasse enthält:  
   
-    -   Zwei <`operationName` > `Async` Vorgänge für die Verwendung mit dem ereignisbasierten asynchronen aufrufenden Ansatz. Zum Beispiel:  
+    -   Zwei <`operationName` > `Async` Vorgänge für die Verwendung mit dem ereignisbasierten asynchronen Aufrufmodell. Zum Beispiel:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   Vorgang wurde abgeschlossen, Ereignisse im Format <`operationName` > `Completed` für die Verwendung mit dem ereignisbasierten asynchronen aufrufenden Ansatz. Zum Beispiel:  
+    -   Abgeschlossen-Ereignisse im Format <`operationName` > `Completed` für die Verwendung mit dem ereignisbasierten asynchronen Aufrufmodell. Zum Beispiel:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> Typen, die für jeden Vorgang (im Format <`operationName`>`CompletedEventArgs`) für die Verwendung mit dem ereignisbasierten asynchronen aufrufenden Ansatz. Zum Beispiel:  
+    -   <xref:System.EventArgs?displayProperty=nameWithType> Typen, die für jeden Vorgang (im Format <`operationName`>`CompletedEventArgs`) für die Verwendung mit dem ereignisbasierten asynchronen Aufrufmodell. Zum Beispiel:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
@@ -50,7 +50,7 @@ In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchr
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3.  Vor dem Aufrufen des Vorgangs, verwenden Sie eine neue generische <xref:System.EventHandler%601?displayProperty=nameWithType> vom Typ <`operationName` > `EventArgs` die Handlermethode (im vorherigen Schritt erstellt) zum Hinzufügen der <`operationName` > `Completed` Ereignis. Rufen Sie anschließend die <`operationName` > `Async` Methode. Zum Beispiel:  
+3.  Verwenden Sie vor dem Aufruf des Vorgangs einen neuen generischen <xref:System.EventHandler%601?displayProperty=nameWithType> vom Typ <`operationName` > `EventArgs` hinzuzufügende Handlermethode (im vorherigen Schritt erstellt) die <`operationName` > `Completed` Ereignis. Rufen Sie dann die <`operationName` > `Async` Methode. Zum Beispiel:  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  

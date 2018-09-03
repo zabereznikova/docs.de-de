@@ -1,23 +1,23 @@
 ---
-title: Option &lt;Schlüsselwort&gt; Anweisung
+title: Option &lt;Schlüsselwort&gt; Anweisung (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: c5a53faec01b8c10de5802eccb21d66350193696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598223"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484526"
 ---
 # <a name="option-ltkeywordgt-statement"></a>Option &lt;Schlüsselwort&gt; Anweisung
-Führt eine Anweisung, die eine Compileroption angegeben, die für die gesamte Quelldatei gilt.  
+Führt eine Anweisung, die eine Compileroption angibt, die für die gesamte Quelldatei gilt.  
   
 ## <a name="remarks"></a>Hinweise  
- Gibt an, ob alle Variablen explizit deklariert werden müssen, gibt an, ob einschränkende typkonvertierungen explizit sein muss, oder gibt an, ob Zeichenfolgen verglichen werden sollen, als Text oder binär Mengen, können die Compileroptionen steuern.  
+ Gibt an, ob alle Variablen explizit deklariert werden müssen, gibt an, ob einschränkende typkonvertierungen explizit sein muss und gibt an, ob Zeichenfolgen als Text oder als binärer Mengen verglichen werden sollen, können die Compiler-Optionen steuern.  
   
  Das `Option`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   

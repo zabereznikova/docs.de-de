@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5adf39c37fce92d4caf1d85e2a6a12e9e6b59b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408059"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486515"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Vorgehensweise: Aktivieren der Erkennung einer Tokenmehrfachverwendung
 ## <a name="applies-to"></a>Gilt für  
@@ -19,7 +19,7 @@ ms.locfileid: "33408059"
 -   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
- In dieser Vorgehensweise werden ausführliche Prozeduren zum Aktivieren der Erkennung einer Tokenmehrfachverwendung in einer ASP.NET-Anwendung, die WIF verwendet, vorgestellt. Es werden auch Anleitungen bereitgestellt, wie die Anwendung danach überprüft werden kann, ob die Erkennung einer Tokenmehrfachverwendung aktiviert ist. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann auf der folgenden Seite heruntergeladen werden: [Identity and Access Tool (Identitäts- und Zugriffstool)](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ In dieser Vorgehensweise werden ausführliche Prozeduren zum Aktivieren der Erkennung einer Tokenmehrfachverwendung in einer ASP.NET-Anwendung, die WIF verwendet, vorgestellt. Es werden auch Anleitungen bereitgestellt, wie die Anwendung danach überprüft werden kann, ob die Erkennung einer Tokenmehrfachverwendung aktiviert ist. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann auf der folgenden Seite heruntergeladen werden: [Identity and Access Tool (Identitäts- und Zugriffstool)](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Inhalt  
   

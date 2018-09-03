@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 9c0b6d250dcedc9b5996c50ccdb2f183707e54e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364270"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486040"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
   
 > [!NOTE]
->  Neu in .NET Framework 2.0 ist die Unterstützung für Typen, die NULL-Werte zulassen. Programmierer können damit einen Werttyp so erweitern, dass dieser alle Werte des zugrunde liegenden Typs darstellen kann. Die CLR-Typen, die NULL-Werte zulassen, stellen eine Instanz der <xref:System.Nullable>-Struktur dar. Diese Funktion erweist sich vor allem dann als hilfreich, wenn Werttypen geschachtelt und nicht geschachtelt sind, wodurch sich die Kompatibilität mit Objekttypen verbessert. CLR-Typen, die NULL-Werte zulassen, sind nicht zum Speichern von Datenbank-NULL-Werten gedacht, weil sich ein ANSI-SQL-NULL-Wert anders als ein `null`-Verweis (oder `Nothing` in Visual Basic) verhält. Verwenden Sie zum Arbeiten mit ANSI SQL-Datenbank-NULL-Werten statt <xref:System.Data.SqlTypes> lieber <xref:System.Nullable>-NULL-Werte. Weitere Informationen zum Arbeiten mit CLR-Typen in Visual Basic, finden Sie unter [auf NULL festlegbaren Werttypen](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), und c# finden Sie unter [mithilfe von auf NULL festlegbaren Typen](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md).  
+>  Neu in .NET Framework 2.0 ist die Unterstützung für Typen, die NULL-Werte zulassen. Programmierer können damit einen Werttyp so erweitern, dass dieser alle Werte des zugrunde liegenden Typs darstellen kann. Die CLR-Typen, die NULL-Werte zulassen, stellen eine Instanz der <xref:System.Nullable>-Struktur dar. Diese Funktion erweist sich vor allem dann als hilfreich, wenn Werttypen geschachtelt und nicht geschachtelt sind, wodurch sich die Kompatibilität mit Objekttypen verbessert. CLR-Typen, die NULL-Werte zulassen, sind nicht zum Speichern von Datenbank-NULL-Werten gedacht, weil sich ein ANSI-SQL-NULL-Wert anders als ein `null`-Verweis (oder `Nothing` in Visual Basic) verhält. Verwenden Sie zum Arbeiten mit ANSI SQL-Datenbank-NULL-Werten statt <xref:System.Data.SqlTypes> lieber <xref:System.Nullable>-NULL-Werte. Weitere Informationen zum Arbeiten mit CLR auf NULL festlegbare Typen in Visual Basic finden Sie unter [auf NULL festlegbare Werttypen](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md), und für c# finden Sie unter [Using Nullable Types](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md).  
   
 ## <a name="nulls-and-three-valued-logic"></a>NULL-Werte und dreiwertige Logik  
  Wenn in Spaltendefinitionen NULL-Werte zugelassen werden, wird dreiwertige Logik in die Anwendung eingeführt. Eine Vergleichsoperation wird mit einer der drei nachfolgenden Bedingungen ausgewertet:  
@@ -35,9 +35,9 @@ Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relational
  ![Wahrheitstabelle](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Informationen zur ANSI_NULLS-Option  
- Mit <xref:System.Data.SqlTypes> wird dieselbe Semantik bereitgestellt wie bei aktivierter ANSI_NULLS-Option in SQL Server. Alle arithmetischen Operatoren (+, -, *, /, %), bitweisen Operatoren (~, &, &#124;), und die meisten Funktionen null zurück, wenn einer der Operanden oder Argumente null ist, außer für die Eigenschaft `IsNull`.  
+ Mit <xref:System.Data.SqlTypes> wird dieselbe Semantik bereitgestellt wie bei aktivierter ANSI_NULLS-Option in SQL Server. Alle arithmetischen Operatoren (+, -, *, /, %), bitweise Operatoren (~, &, &#124;), und die meisten Funktionen null zurück, wenn einer der Operanden oder Argumente null ist, außer für die Eigenschaft `IsNull`.  
   
- ANSI SQL-92-Standard unterstützt keine *ColumnName* = NULL in einer WHERE-Klausel. In SQL Server steuert die ANSI_NULLS-Option die Fähigkeit, in der Standardeinstellung NULL-Werte in der Datenbank zuzulassen sowie die Auswertung von Vergleichen mit NULL-Werten. Wenn ANSI_NULLS aktiviert ist (Standardeinstellung), muss der IS NULL-Operator beim Testen auf NULL-Werte in Ausdrücken verwendet werden. Der folgende Vergleich ergibt z. B. immer "Unknown", wenn ANSI_NULLS aktiviert ist:  
+ Der ANSI SQL-92-Standard unterstützt keine *ColumnName* = NULL in einer WHERE-Klausel. In SQL Server steuert die ANSI_NULLS-Option die Fähigkeit, in der Standardeinstellung NULL-Werte in der Datenbank zuzulassen sowie die Auswertung von Vergleichen mit NULL-Werten. Wenn ANSI_NULLS aktiviert ist (Standardeinstellung), muss der IS NULL-Operator beim Testen auf NULL-Werte in Ausdrücken verwendet werden. Der folgende Vergleich ergibt z. B. immer "Unknown", wenn ANSI_NULLS aktiviert ist:  
   
 ```  
 colname > NULL  
@@ -87,7 +87,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Darüber hinaus gelten für Instanzen von `DataRow.["columnName"]`-NULL-Zuweisungen die folgenden Regeln:  
   
-1.  Die Standardeinstellung *Standard* Wert `DbNull.Value` für alle außer den stark typisierten null-Spalten, in denen es eignet sich die stark null-Wert typisierte.  
+1.  Der Standardwert *Standard* Wert `DbNull.Value` für alle außer den stark typisierten null-Spalten das entsprechende stark also null-Wert typisierte.  
   
 2.  NULL-Werte werden bei der Serialisierung in XML-Dateien (wie in "xsi:nil") nie ausgegeben.  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Vergleichen von NULL-Werten mit "SqlTypes" und CLR-Typen  
- Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle von der <xref:System.Data.SqlTypes> `Equals` -Methoden für die Bewertung von null-Werte verwenden: Wenn eine oder beide Werte null ist, ergibt der Vergleich Null. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
+ Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle der <xref:System.Data.SqlTypes> `Equals` -Methoden für die Bewertung von null-Werte verwenden: Wenn eine oder beide Werte null ist, ergibt der Vergleich Null. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
   
  Das folgende Beispiel zeigt den Unterschied in den Ergebnissen zwischen der `SqlString.Equals`-Methode und der `String.Equals`-Methode, wenn beiden Methoden ein Paar von NULL-Werten und dann ein Paar leerer Zeichenfolgen übergeben wird.  
   
@@ -143,4 +143,4 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

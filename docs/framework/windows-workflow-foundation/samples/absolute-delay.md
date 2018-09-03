@@ -2,12 +2,12 @@
 title: Absolute Verzögerung
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518384"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486101"
 ---
 # <a name="absolute-delay"></a>Absolute Verzögerung
 Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in einer Workflowanwendung mithilfe von permanenten Zeitgebern bis zu einem angegebenen Zeitpunkt (<xref:System.DateTime>). Dies unterscheidet sich von der Verwendung der integrierten <xref:System.Activities.Statements.Delay>-Aktivität, da ein Vorgang hierdurch nur für eine bestimmte Zeitspanne (<xref:System.TimeSpan>) bzw. eine Anzahl von Minuten/Sekunden verzögert werden kann.  
@@ -39,7 +39,7 @@ Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in ei
   
  In diesem Beispiel wird auch veranschaulicht, wie die Persistenz für <xref:System.Activities.WorkflowApplication> aktiviert wird. Für dieses spezielle Beispiel werden permanente Zeitgeber verwendet. Die Workflowdaten werden während der Leerlaufzeit in die Persistenzdatenbank entladen, während auf das Ablaufen des Zeitgebers gewartet wird. Diese Implementierung kann auch für andere Persistenzaktionen verwendet werden. In diesem Beispiel wird veranschaulicht, wie die Persistenzverbindungszeichenfolge mit SQL Server eingerichtet und der Instanzspeicher erstellt wird, um die Daten für Workflowinstanzen beizubehalten. Mit einer bereitgestellten Logik wird festlegt, wie der Workflow fortgesetzt wird, sobald ein Ereignis ausgelöst wird, das die Workflowinstanz ausführbar macht.  
   
- Während Sie in diesem Beispiel durchlaufen, sehen Sie sich, dass die Zeit, in der die integrierte Verzögerung beginnt und abgeschlossen ist, die wiederum, verursacht eine e-Mail-Nachricht gesendet werden. Ab diesem Punkt wird die AbsoluteDelay-Aktivität bis zum angegebenen Zeitpunkt (<xref:System.DateTime>) oder für 0 Sekunden angehalten, wenn der <xref:System.DateTime> abgelaufen ist. Nach dem Ablauf des Zeitgebers wird eine E-Mail gesendet. Dies veranschaulicht die zwei verschiedenen Anwendungsfälle der integrierten <xref:System.Activities.Statements.Delay>-Funktionen im Vergleich zum Verwenden einer AbsoluteDelay-Aktivität.  
+ Wie Sie dieses Beispiel durchlaufen schrittweise, sehen Sie sich, dass die Zeit, in der die integrierte Verzögerung beginnt und abgeschlossen ist, die wiederum, verursacht eine e-Mail-Nachricht gesendet werden. Ab diesem Punkt wird die AbsoluteDelay-Aktivität bis zum angegebenen Zeitpunkt (<xref:System.DateTime>) oder für 0 Sekunden angehalten, wenn der <xref:System.DateTime> abgelaufen ist. Nach dem Ablauf des Zeitgebers wird eine E-Mail gesendet. Dies veranschaulicht die zwei verschiedenen Anwendungsfälle der integrierten <xref:System.Activities.Statements.Delay>-Funktionen im Vergleich zum Verwenden einer AbsoluteDelay-Aktivität.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
@@ -67,6 +67,6 @@ Das Hauptszenario für dieses Beispiel ist die Verzögerung eines Vorgangs in ei
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

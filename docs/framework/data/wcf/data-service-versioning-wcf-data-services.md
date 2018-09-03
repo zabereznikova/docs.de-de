@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: c71e42d644b03f16cdee944d52ea1a0e3868b9fc
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 9a92346267012d3651d04648b357bbf530097e34
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255794"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484736"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Datendienst-Versionskontrolle (WCF Data Services)
 Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht es Ihnen, Datendienste zu erstellen, sodass Clients Daten als Ressourcen mit URIs zugreifen können, die auf einem Datenmodell basieren. OData unterstützt auch die Definition von Dienstvorgängen. Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen diese Datendienste eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z. B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Wenn Sie Änderungen an einem vorhandenen Datendienst vornehmen, müssen Sie berücksichtigen, ob eine neue Version des Datendiensts definiert wird und wie die Auswirkungen auf vorhandene Clientanwendungen am besten minimiert werden. Dieses Thema enthält einen Leitfaden, wann und wie eine neue Version eines Datendiensts erstellt wird. Es wird beschrieben, wie WCF Data Services verarbeitet einen Austausch zwischen Clients und Datendiensten, die verschiedene Versionen des OData-Protokolls unterstützen.
@@ -53,7 +53,7 @@ Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht 
 ## <a name="odata-protocol-versions"></a>OData-Protokollversionen
  Wenn neue Versionen von OData veröffentlicht werden, können Clientanwendungen nicht die gleiche Version des OData-Protokolls verwenden, die vom Datendienst unterstützt wird. Eine ältere Clientanwendung greift möglicherweise auf einen Datendienst zugreifen, der eine neuere Version von OData unterstützt. Eine Client-Anwendung auch eine neuere Version von der Clientbibliothek für WCF Data Services verwenden möglicherweise eine neuere Version von OData, als der Datendienst, der auf den zugegriffen wird, wird unterstützt.
 
- WCF Data Services nutzt die Unterstützung von OData auf die Behandlung solcher versionsszenarien. Es gibt auch Unterstützung für das Generieren und Verwenden von Datenmodellmetadaten für die Client-Datendienstklassen erstellen, wenn der Client eine andere Version von OData als Daten verwendet-Dienst verwendet. Weitere Informationen finden Sie unter [OData: Protocol Versioning](http://go.microsoft.com/fwlink/?LinkId=186071).
+ WCF Data Services nutzt die Unterstützung von OData auf die Behandlung solcher versionsszenarien. Es gibt auch Unterstützung für das Generieren und Verwenden von Datenmodellmetadaten für die Client-Datendienstklassen erstellen, wenn der Client eine andere Version von OData als Daten verwendet-Dienst verwendet. Weitere Informationen finden Sie unter [OData: Protocol Versioning](https://go.microsoft.com/fwlink/?LinkId=186071).
 
 ### <a name="version-negotiation"></a>Versionsaushandlung
  Der Datendienst kann so konfiguriert werden, um die höchste Version des OData-Protokolls zu definieren, die vom Dienst unabhängig von der vom Client angeforderten Version verwendet werden. Hierzu können Sie angeben einer <xref:System.Data.Services.Common.DataServiceProtocolVersion> Wert für die <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> Eigenschaft der <xref:System.Data.Services.DataServiceBehavior> vom Datendienst verwendet. Weitere Informationen finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
@@ -65,13 +65,13 @@ Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht 
 |OData-Protokollversion|Unterstützt seit...|
 |-----------------------------------------------------------------------------------|----------------------------|
 |Version 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Servicepack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] Version 3|
-|Version 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Ein Update für [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Sie können auch herunterladen und installieren Sie das Update aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] Version 4|
-|Version 3|– Sie können auch herunterladen und installieren Sie eine Vorabversion, die OData Version 3 unterstützt die [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885).|
+|Version 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Ein Update für [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Sie können auch herunterladen und installieren Sie das Update aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] Version 4|
+|Version 3|– Sie können auch herunterladen und installieren Sie eine Vorabversion, die OData Version 3 unterstützt die [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Metadatenversionen
- Standardmäßig verwendet WCF Data Services Version 1.1 von CSDL, um ein Datenmodell darzustellen. Dies ist immer bei Datenmodellen der Fall, die auf einem Reflektionsanbieter oder einem benutzerdefinierten Datendienstanbieter basieren. Wenn das Datenmodell jedoch mit [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] definiert wird, wird die CSDL-Version zurückgegeben, die von [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] verwendet wird. Die CSDL-Version richtet sich nach den Namespace der [Schemaelement](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). Weitere Informationen finden Sie in der Spezifikation [ \[MC-CSDL\]: Conceptual Schema Definition File Format](http://go.microsoft.com/fwlink/?LinkId=159072).
+ Standardmäßig verwendet WCF Data Services Version 1.1 von CSDL, um ein Datenmodell darzustellen. Dies ist immer bei Datenmodellen der Fall, die auf einem Reflektionsanbieter oder einem benutzerdefinierten Datendienstanbieter basieren. Wenn das Datenmodell jedoch mit [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] definiert wird, wird die CSDL-Version zurückgegeben, die von [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] verwendet wird. Die CSDL-Version richtet sich nach den Namespace der [Schemaelement](https://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). Weitere Informationen finden Sie in der Spezifikation [ \[MC-CSDL\]: Conceptual Schema Definition File Format](https://go.microsoft.com/fwlink/?LinkId=159072).
 
- Das `DataServices`-Element der zurückgegebenen Metadaten enthält auch ein `DataServiceVersion`-Attribut, das den gleichen Wert wie der `DataServiceVersion`-Header in der Antwortnachricht hat. Clientanwendungen, z. B. die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio verwenden Sie diese Informationen zum Generieren von clientdatendienstklassen, die mit der Version von WCF Data Services ordnungsgemäß arbeiten, die den Datendienst hostet. Weitere Informationen finden Sie unter [OData: Protocol Versioning](http://go.microsoft.com/fwlink/?LinkId=186071).
+ Das `DataServices`-Element der zurückgegebenen Metadaten enthält auch ein `DataServiceVersion`-Attribut, das den gleichen Wert wie der `DataServiceVersion`-Header in der Antwortnachricht hat. Clientanwendungen, z. B. die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio verwenden Sie diese Informationen zum Generieren von clientdatendienstklassen, die mit der Version von WCF Data Services ordnungsgemäß arbeiten, die den Datendienst hostet. Weitere Informationen finden Sie unter [OData: Protocol Versioning](https://go.microsoft.com/fwlink/?LinkId=186071).
 
 ## <a name="see-also"></a>Siehe auch
 

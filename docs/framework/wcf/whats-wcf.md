@@ -6,15 +6,15 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: e49b393b9dd09a513066a6cb3612ad9f938e9adb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5838422b1f7c4b0b88a6085e5120d5e3b85b0abb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807409"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483975"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
-Windows Communication Foundation (WCF) ist ein Framework zum Erstellen von dienstorientierten Anwendungen. Mit WCF können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt zu einem anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
+Windows Communication Foundation (WCF) ist ein Framework zum Erstellen dienstorientierter Anwendungen. Verwenden von WCF, können Sie Daten als asynchrone Nachrichten von einem Dienstendpunkt zu einem anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:  
   
 -   Ein sicherer Dienst zur Verarbeitung von Geschäftstransaktionen.  
   
@@ -28,18 +28,18 @@ Windows Communication Foundation (WCF) ist ein Framework zum Erstellen von diens
   
 -   Eine Silverlight-Anwendung zum Abfragen aktueller Datenfeeds von einem Dienst.  
   
- Beim Erstellen solcher Anwendungen möglich ist, bevor das Vorhandensein von WCF wurde, wird von WCF in die Entwicklung von Endpunkten einfacher als je zuvor. Zusammenfassend WCF entwickelt, um einen leichten von Webdiensten und Webdienstclients zu ermöglichen.  
+ Bei der Erstellung solcher Anwendungen möglich ist, bevor Sie das Vorhandensein von WCF ist, macht WCF die Entwicklung von Endpunkten einfacher als je zuvor. Zusammenfassend lässt sich sagen WCF soll einen verwaltbaren Ansatz zum Erstellen von Webdiensten und Webdienstclients zu bieten.  
   
 ## <a name="features-of-wcf"></a>Funktionen von WCF  
- WCF bietet die folgende Gruppe von Funktionen. Weitere Informationen finden Sie unter [Details zur WCF-Funktion](../../../docs/framework/wcf/feature-details/index.md).  
+ WCF umfasst die folgende Gruppe von Funktionen. Weitere Informationen finden Sie unter [WCF-Produktfeatures](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Dienstausrichtung**  
   
-     Ein Vorteil der Verwendung des WS-Standards ist, dass WCF Ihnen die ermöglicht Erstellung *dienstorientierten* Anwendungen. Dienstorientierte Architektur (SOA) wird von Webdiensten für das Senden und Empfangen von Daten verwendet. Der allgemeine Vorteil der Dienste ist, dass sie untereinander lose verknüpft und nicht hartcodiert sind. Eine lose verknüpfte Beziehung impliziert, dass ein beliebiger Client, der auf einer beliebigen Plattform erstellt wurde, mit einem beliebigen Dienst verbunden werden kann, so lange die wesentlichen Vereinbarungen erfüllt sind.  
+     Ein Vorteil der Verwendung von WS-Standards ist, dass WCF Ihnen die Erstellung ermöglicht *dienstorientierten* Anwendungen. Dienstorientierte Architektur (SOA) wird von Webdiensten für das Senden und Empfangen von Daten verwendet. Der allgemeine Vorteil der Dienste ist, dass sie untereinander lose verknüpft und nicht hartcodiert sind. Eine lose verknüpfte Beziehung impliziert, dass ein beliebiger Client, der auf einer beliebigen Plattform erstellt wurde, mit einem beliebigen Dienst verbunden werden kann, so lange die wesentlichen Vereinbarungen erfüllt sind.  
   
 -   **Interoperabilität**  
   
-     WCF implementiert aktuelle Industriestandards für die Webdienstinteroperabilität. Weitere Informationen zu den unterstützten Standards finden Sie unter [Interoperabilität und Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     WCF implementiert aktuelle Branchenstandards für Webdienstinteroperabilität. Weitere Informationen zu den unterstützten Standards finden Sie unter [Interoperabilität und Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
   
 -   **Mehrere Nachrichtenmuster**  
   
@@ -47,11 +47,11 @@ Windows Communication Foundation (WCF) ist ein Framework zum Erstellen von diens
   
 -   **Dienstmetadaten**  
   
-     WCF unterstützt die publishing Metadaten in den Formaten der Branchenstandards, z. B. WSDL, XML-Schema und WS-Richtlinie. Diese Metadaten kann verwendet werden, automatisch generieren und Konfigurieren von Clients für den Zugriff auf WCF-Dienste. Metadaten können per HTTP und HTTPS oder mit dem Austauschstandard für Webdienstmetadaten veröffentlicht werden. Weitere Informationen finden Sie unter [Metadaten](../../../docs/framework/wcf/feature-details/metadata.md).  
+     WCF unterstützt Veröffentlichen von Dienstmetadaten Formaten der Branchenstandards, z. B. WSDL, XML-Schema und WS-Richtlinie. Diese Metadaten kann verwendet werden, automatisch zu generieren und Konfigurieren von Clients für den Zugriff auf WCF-Dienste. Metadaten können per HTTP und HTTPS oder mit dem Austauschstandard für Webdienstmetadaten veröffentlicht werden. Weitere Informationen finden Sie unter [Metadaten](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Datenverträge**  
   
-     Da WCF integriert ist mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], enthält er auch Code-codefreundliche Methoden für die Verträge, die Sie durchsetzen möchten. Einer der universalen Vertragstypen ist der Datenvertrag. Beim Codieren des Diensts mit Visual C# oder Visual Basic lassen sich Daten am einfachsten durch das Erstellen von Klassen verwalten, die eine Datenentität mit zur Datenentität gehörenden Eigenschaften darstellen. WCF bietet ein umfassendes System für die Arbeit mit Daten in diese einfache Weise. Nachdem Sie die Klassen erstellt haben, die Daten darstellen, werden vom Dienst automatisch die Metadaten erstellt, mit denen Clients die von Ihnen entworfenen Datentypen verarbeiten können. Weitere Informationen finden Sie unter [mithilfe von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Da WCF erstellt wird, mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es enthält auch Code-codefreundliche Methoden für die die Verträge, die Sie erzwingen möchten. Einer der universalen Vertragstypen ist der Datenvertrag. Beim Codieren des Diensts mit Visual C# oder Visual Basic lassen sich Daten am einfachsten durch das Erstellen von Klassen verwalten, die eine Datenentität mit zur Datenentität gehörenden Eigenschaften darstellen. WCF umfasst ein umfassendes System für die Arbeit mit Daten auf diese Weise einfach. Nachdem Sie die Klassen erstellt haben, die Daten darstellen, werden vom Dienst automatisch die Metadaten erstellt, mit denen Clients die von Ihnen entworfenen Datentypen verarbeiten können. Weitere Informationen finden Sie unter [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Sicherheit**  
   
@@ -59,11 +59,11 @@ Windows Communication Foundation (WCF) ist ein Framework zum Erstellen von diens
   
 -   **Mehrfache Transporte und Codierungen**  
   
-     Nachrichten können mithilfe der zahlreichen integrierten Transportprotokolle und -codierungen versendet werden. Die gängigste Protokoll- und Codierungsmethode Text codiert SOAP-Nachrichten über das HyperText Transfer-Protokoll (HTTP) für die Verwendung im World Wide Web gesendet wird. Alternativ können Sie zum Senden von Nachrichten über TCP, mit dem Namen WCF Pipes oder MSMQ. Diese Nachrichten können als Text oder mit einem optimierten Binärformat codiert werden.  Binärdaten können mit dem MTOM-Standard effizient gesendet werden. Wenn keine der bereitgestellten Transport- oder Codierungsmöglichkeiten Ihren Erfordernissen entspricht, können Sie eine benutzerdefinierte Transport- oder Codierungsmöglichkeit erstellen. Weitere Informationen zu von WCF unterstützten Transporten und Codierungen finden Sie unter [Transporte](../../../docs/framework/wcf/feature-details/transports.md).  
+     Nachrichten können mithilfe der zahlreichen integrierten Transportprotokolle und -codierungen versendet werden. Die gängigste Protokoll- und Codierungsmethode ist zum Senden von codierter SOAP-Nachrichten mit HyperText Transfer Protocol (HTTP) für die Verwendung im World Wide Web Text. Alternativ können Sie zum Senden von Nachrichten über TCP mit dem Namen WCF Pipes oder MSMQ. Diese Nachrichten können als Text oder mit einem optimierten Binärformat codiert werden.  Binärdaten können mit dem MTOM-Standard effizient gesendet werden. Wenn keine der bereitgestellten Transport- oder Codierungsmöglichkeiten Ihren Erfordernissen entspricht, können Sie eine benutzerdefinierte Transport- oder Codierungsmöglichkeit erstellen. Weitere Informationen zu von WCF unterstützten Transporten und Codierungen finden Sie unter [Transporte](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Zuverlässige Nachrichtensendung und Nachrichten in Warteschlangen**  
   
-     WCF unterstützt zuverlässigen Nachrichtenaustausch mit zuverlässigen Sitzungen über WS-Reliable Messaging implementiert und mithilfe von MSMQ. Weitere Informationen zu Unterstützung Nachrichten zuverlässig und in der Warteschlange in WCF finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
+     WCF unterstützt zuverlässigen Nachrichtenaustausch mit zuverlässigen Sitzungen über WS-Reliable Messaging implementiert und der Verwendung von MSMQ. Weitere Informationen zu reliable und in der Warteschlange befindlichen messaging-Unterstützung in WCF finden Sie unter [Warteschlangen und zuverlässige Sitzungen](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).  
   
 -   **Permanente Nachrichten**  
   
@@ -71,26 +71,26 @@ Windows Communication Foundation (WCF) ist ein Framework zum Erstellen von diens
   
 -   **Transaktionen**  
   
-     WCF unterstützt auch Transaktionen, bei denen eines der drei Transaktionsmodelle verwendet wird: WS-AtomicTtransactions, die APIs im <xref:System.Transactions> -Namespace und Microsoft Distributed Transaction Coordinator. Weitere Informationen zur Transaktion-Unterstützung in WCF finden Sie unter [Transaktionen](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
+     WCF unterstützt auch Transaktionen, bei denen eines der drei Transaktionsmodelle verwendet wird: WS-AtomicTtransactions, die APIs im <xref:System.Transactions> -Namespace und Microsoft Distributed Transaction Coordinator. Weitere Informationen zu Transaktion-Unterstützung in WCF finden Sie unter [Transaktionen](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).  
   
 -   **Unterstützung für AJAX und REST**  
   
-     REST ist ein Beispiel für eine sich weiterentwickelnde Web 2.0-Technologie. WCF kann konfiguriert werden, um "rein" XML-Daten zu verarbeiten, die nicht in einen SOAP-Umschlag umgeben sind. WCF kann auch erweitert werden, um bestimmte XML-Formaten, z. B. ATOM (ein verbreiteter RSS-standard) und auch nicht-XML-Formaten, z. B. JavaScript Object Notation (JSON) zu unterstützen.  
+     REST ist ein Beispiel für eine sich weiterentwickelnde Web 2.0-Technologie. WCF kann konfiguriert werden, um "einfache" XML-Daten zu verarbeiten, die nicht von einem SOAP-Umschlag umgeben sind. WCF kann auch erweitert werden, um spezifische XML-Formate wie ATOM (ein verbreiteter RSS-standard) und sogar nicht-XML-Formate wie JavaScript Object Notation (JSON) unterstützt.  
   
 -   **Erweiterungen**  
   
-     Die WCF-Architektur besteht aus einer Reihe von Erweiterungspunkten. Wenn zusätzliche Fähigkeiten benötigt werden, können Sie an verschiedenen Punkten ansetzen, um das Verhalten eines Diensts anzupassen. Weitere Informationen zu verfügbaren Erweiterungen Punkte finden Sie unter [Erweitern von WCF](../../../docs/framework/wcf/extending/index.md).  
+     Die WCF-Architektur hat es sich um eine Reihe von Erweiterungspunkten. Wenn zusätzliche Fähigkeiten benötigt werden, können Sie an verschiedenen Punkten ansetzen, um das Verhalten eines Diensts anzupassen. Weitere Informationen zu verfügbaren Erweiterungspunkten finden Sie unter [Erweitern von WCF](../../../docs/framework/wcf/extending/index.md).  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF-Integration mit anderen Microsoft-Technologien  
- WCF ist eine flexible Plattform. Aufgrund der hohen Flexibilität wird WCF auch in zahlreichen anderen Produkten von Microsoft verwendet. Durch die Grundlagen von WCF, müssen Sie einen unmittelbaren Vorteil, wenn Sie auch eines dieser Produkte verwenden.  
+ WCF ist eine flexible Plattform. Aufgrund der hohen Flexibilität wird WCF auch in verschiedenen anderen Microsoft-Produkten verwendet. Durch die Grundlagen von WCF, müssen Sie einen unmittelbaren Vorteil, wenn Sie auch eines dieser Produkte verwenden.  
   
- Die erste Technologie, mit WCF war Windows Workflow Foundation (WF). Workflows vereinfachen die Anwendungsentwicklung durch die kapselnden Schritte im Workflow als "Aktivitäten". In der ersten Version von Windows Workflow Foundation musste ein Entwickler einen Host für den Workflow zu erstellen. Die nächste Version von Windows Workflow Foundation wurde in WCF integriert. Beliebiger Workflow kann problemlos in einem WCF-Dienst gehostet werden darf; dazu können Sie seither WF/WCF einen Projekttyp in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ Die erste Technologie, die mit WCF gekoppelt wurde die Windows Workflow Foundation (WF). Workflows vereinfachen die Anwendungsentwicklung von kapselnde Schritte im Workflow als "Aktivitäten". In der ersten Version von Windows Workflow Foundation musste ein Entwickler einen Host für den Workflow zu erstellen. Die nächste Version von Windows Workflow Foundation wurde in WCF integriert. Jeder Workflow ganz einfach in einem WCF-Dienst gehostet werden darf, Hierzu können Sie automatisch einen Projekttyp auswählen WF/WCF in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
- Microsoft BizTalk Server R2 nutzt u. a. auch WCF als kommunikationstechnologie. BizTalk wurde zum Empfangen und Umwandeln von Daten aus einem Standardformat in ein anderes entwickelt. Nachrichten müssen an den zentralen Posteingang der Anwendung gesendet werden, wo sie entweder per strikter Zuordnung oder mit einer der BizTalk-Funktionen (z.B. Workflow-Engine) umgewandelt werden können. BizTalk kann jetzt die WCF Line of Business (LOB)-Adapter verwenden, Nachrichten an die MessageBox übermittelt.  
+ Microsoft BizTalk Server R2 nutzt auch die WCF als kommunikationstechnologie. BizTalk wurde zum Empfangen und Umwandeln von Daten aus einem Standardformat in ein anderes entwickelt. Nachrichten müssen an den zentralen Posteingang der Anwendung gesendet werden, wo sie entweder per strikter Zuordnung oder mit einer der BizTalk-Funktionen (z.B. Workflow-Engine) umgewandelt werden können. BizTalk kann nun die Möglichkeit, den WCF Line of Business (LOB)-Adapter verwenden, zum Übermitteln von Nachrichten in der MessageBox.  
   
- Microsoft Silverlight ist eine Plattform für die Entwicklung interoperabler und leistungsfähiger Webanwendungen, mit denen Entwickler multimediale Websites (z. B. mit Videostreams) erstellen können. Seit Version 2, hat Silverlight als kommunikationstechnologie so Silverlight-Anwendungen WCF-Endpunkten mit WCF integriert.  
+ Microsoft Silverlight ist eine Plattform für die Entwicklung interoperabler und leistungsfähiger Webanwendungen, mit denen Entwickler multimediale Websites (z. B. mit Videostreams) erstellen können. Ab Version 2 können hat Silverlight WCF als kommunikationstechnologie Verbindung Silverlight-Anwendungen auf Endpunkte von WCF integriert.  
   
- Die [!INCLUDE[dublin](../../../includes/dublin-md.md)] -Anwendungsserver wurde speziell für die Bereitstellung und Verwaltung von Anwendungen, die WCF für die Kommunikation verwendet entwickelt. Die [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] enthält umfangreiche bearbeitungs- und Konfigurationsoptionen, die speziell für die WCF-fähigen Anwendungen.  
+ Die [!INCLUDE[dublin](../../../includes/dublin-md.md)] Anwendungsserver wurde speziell dafür entwickelt, für die Bereitstellung und Verwaltung von Anwendungen, die WCF für die Kommunikation zu verwenden. Die [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] enthält umfassende bearbeitungs- und Konfigurationsoptionen, die speziell für WCF-fähigen Anwendungen.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel>  
@@ -100,4 +100,4 @@ Windows Communication Foundation (WCF) ist ein Framework zum Erstellen von diens
  [Tutorial mit ersten Schritten](../../../docs/framework/wcf/getting-started-tutorial.md)  
  [Anleitung zur Dokumentation](../../../docs/framework/wcf/guide-to-the-documentation.md)  
  [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Windows Communication Foundation-Beispiele](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+ [Windows Communication Foundation-Beispiele](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)

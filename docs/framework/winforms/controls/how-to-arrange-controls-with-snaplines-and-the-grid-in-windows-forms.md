@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253390"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488078"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Gewusst wie: Anordnen von Steuerelementen mithilfe der Ausrichtungslinien und des Rasters in Windows Forms
 Verwenden die Layoutfeatures von Visual Studio, können Sie genau steuern, wo die Steuerelemente in einem Formular platziert werden. Steuerelemente zu einem Formular hinzugefügt oder verschoben werden, in einem Formular automatisch auf die Zeilen und Spalten von der Windows Forms-Designer-Raster ausgerichtet werden können, oder Ausrichten von Steuerelementen mithilfe der Ausrichtungslinien-Funktion.  
@@ -25,7 +25,7 @@ Verwenden die Layoutfeatures von Visual Studio, können Sie genau steuern, wo di
   
 -   Wählen Sie die **SnapToGrid** Layoutmodus im Windows Forms-Designer **Optionen** Dialogfeld.  
   
-     Weitere Informationen finden Sie unter [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Alle Steuerelemente ausrichten jetzt selbst auf die Punkte im Raster.  
+     Weitere Informationen finden Sie unter [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Alle Steuerelemente ausrichten jetzt selbst auf die Punkte im Raster.  
   
      Sie können einzelne Steuerelemente am Raster ausrichten, indem Sie ihrer Position sperren. Allerdings gesperrte, werden nicht verschoben oder geändert. Weitere Informationen zum Sperren von Steuerelementen finden Sie unter [Vorgehensweise: Sperren von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -36,7 +36,7 @@ Verwenden die Layoutfeatures von Visual Studio, können Sie genau steuern, wo di
      Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Sie können jetzt mithilfe von Ausrichtungslinien ausrichten und Steuerelemente im Formular anordnen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
  [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

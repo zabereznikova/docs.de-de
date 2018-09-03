@@ -2,12 +2,12 @@
 title: Multiple Active Result Sets (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.openlocfilehash: e7c3f1e18980d6b34e9261cda000b6e77ae1c53b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358424"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480752"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Multiple Active Result Sets (MARS)
 MARS ist eine Funktion, die das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. In früheren Versionen konnte jeweils nur ein Batch pro einzelne Verbindung ausgeführt werden. Das Ausführen mehrerer Batches mit MARS bedeutet nicht das gleichzeitige Ausführen von Vorgängen.  
@@ -25,4 +25,4 @@ MARS ist eine Funktion, die das Ausführen mehrerer Batches über eine einzelne 
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

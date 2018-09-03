@@ -2,12 +2,12 @@
 title: Aktivität zur Höherstufung einer Eigenschaft
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519924"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481136"
 ---
 # <a name="property-promotion-activity"></a>Aktivität zur Höherstufung einer Eigenschaft
 In diesem Beispiel wird eine End-to-End-Projektmappe bereitgestellt, mit der die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Funktion zur Höherstufung direkt in die Workflowerstellung integriert wird. Eine Auflistung von Konfigurationselementen, Workflowaktivitäten und Workflowerweiterungen wird bereitgestellt, um die Verwendung der Funktion zur Höherstufung zu vereinfachen. Außerdem enthält das Beispiel einen einfachen Workflow, mit dem die Verwendung dieser Auflistung veranschaulicht wird.  
@@ -23,9 +23,9 @@ In diesem Beispiel wird eine End-to-End-Projektmappe bereitgestellt, mit der die
   
 ## <a name="sample-projects"></a>Beispielprojekte  
   
--   Die **PropertyPromotionActivity** Projekt enthält Dateien mit der Promotion-spezifischen Konfigurationselementen, Workflowaktivitäten und workflowerweiterungen.  
+-   Die **PropertyPromotionActivity** -Projekt enthält Dateien, die die heraufstufung spezifischen Konfigurationselementen, Workflowaktivitäten und workflowerweiterungen angehören.  
   
--   Die **CounterServiceApplication** Projekt enthält einen Beispielworkflow, die mithilfe der **SqlWorkflowInstanceStorePromotion** Projekt.  
+-   Die **CounterServiceApplication** Projekt enthält einen Beispielworkflow, der verwendet die **SqlWorkflowInstanceStorePromotion** Projekt.  
   
 -   Ein SQL-Skript (PropertyPromotionActivitySQLSample.sql), das für die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Datenbank ausgeführt werden muss.  
   
@@ -37,11 +37,11 @@ In diesem Beispiel wird eine End-to-End-Projektmappe bereitgestellt, mit der die
   
     1.  Navigieren Sie zum Beispielverzeichnis (\WF\Basic\Persistence\PropertyPromotionActivity), und führen Sie CreateInstanceStore.cmd aus.  
   
-    2.  Wenn Sie nicht über Administratorberechtigungen verfügen, erstellen Sie eine SQL Server-Anmeldung. Wechseln Sie in SQL Server Management Studio zu **Sicherheit**, **Anmeldungen**. Mit der rechten Maustaste **Anmeldungen** und eine neue Anmeldung erstellen. Der SQL-Rolle Ihr ACL-Benutzerkonto hinzufügen, durch Öffnen des **Datenbanken**, **InstanceStore**, **Sicherheit**. Mit der rechten Maustaste **Benutzer** , und wählen Sie **neuer Benutzer**. Legen Sie die **Anmeldename** auf den vorherigen Schritt erstellten Benutzer. Fügen Sie den Benutzer der Datenbankrollenmitgliedschaft System.Activities.DurableInstancing.InstanceStoreUsers (und anderen) hinzu. Beachten Sie, dass der Benutzer möglicherweise bereits vorhanden ist (z. B. als DBO).  
+    2.  Wenn Sie nicht über Administratorberechtigungen verfügen, erstellen Sie eine SQL Server-Anmeldung. Wechseln Sie in SQL Server Management Studio zu **Sicherheit**, **Anmeldungen**. Mit der rechten Maustaste **Anmeldungen** und eine neue Anmeldung erstellen. Der SQL-Rolle Ihr ACL-Benutzerkonto hinzufügen, indem öffnen **Datenbanken**, **InstanceStore**, **Sicherheit**. Mit der rechten Maustaste **Benutzer** , und wählen Sie **neuer Benutzer**. Legen Sie die **Anmeldename** auf den vorherigen Schritt erstellten Benutzer. Fügen Sie den Benutzer der Datenbankrollenmitgliedschaft System.Activities.DurableInstancing.InstanceStoreUsers (und anderen) hinzu. Beachten Sie, dass der Benutzer möglicherweise bereits vorhanden ist (z. B. als DBO).  
   
 2.  Öffnen Sie die Projektmappendatei PropertyPromotionActivity.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Wenn Sie den Instanzspeicher nicht in der lokalen Installation von SQL Server Express, sondern in einer anderen Datenbank erstellt haben, müssen Sie die Datenbankverbindungszeichenfolge aktualisieren. Ändern Sie die Datei "App.config" unter der **CounterServiceApplication** durch Festlegen des Werts von der `connectionString` -Attribut auf die `sqlWorkflowInstanceStorePromotion` Knoten, damit er in die Persistenzdatenbank zeigt, der initialisiert wurde in Schritt 1.  
+3.  Wenn Sie den Instanzspeicher nicht in der lokalen Installation von SQL Server Express, sondern in einer anderen Datenbank erstellt haben, müssen Sie die Datenbankverbindungszeichenfolge aktualisieren. Ändern Sie die Datei "App.config", unter der **CounterServiceApplication** durch Festlegen des Werts von der `connectionString` -Attribut für die `sqlWorkflowInstanceStorePromotion` Knoten, damit er mit der persistenten Datenbank verweist, der initialisiert wurde in Schritt 1.  
   
 4.  Erstellen Sie die Projektmappe, und führen Sie sie aus. Dadurch wird der WF-Zählerdienst gestartet und automatisch eine Workflowinstanz aufgerufen.  
   
@@ -60,11 +60,11 @@ In diesem Beispiel wird eine End-to-End-Projektmappe bereitgestellt, mit der die
 ## <a name="understanding-this-sample"></a>Grundlagen dieses Beispiels  
  Das Beispiel enthält zwei Projekte und eine SQL-Datei:  
   
--   **CounterServiceApplication** ist eine Konsolenanwendung, die einen einfachen WF-Zählerdienst fungiert. Nach dem Erhalt einer unidirektionalen Nachricht über den `Start`-Endpunkt inkrementiert der Workflow alle zwei Sekunden eine Zählervariable und zählt so von 0 bis 29. Der Workflow wird nach jeder Erhöhung des Zählerwerts beibehalten, und die höher gestuften Eigenschaften werden in der Sicht [dbo].[CounterService] aktualisiert. Wenn Sie die Konsolenanwendung ausführen, wird der WF-Dienst gehostet. Eine Nachricht wird an den `Start`-Endpunkt gesendet, und es wird eine WF-Zählerinstanz erstellt.  
+-   **CounterServiceApplication** ist eine Konsolenanwendung, die einen einfachen WF-zählerdienst fungiert. Nach dem Erhalt einer unidirektionalen Nachricht über den `Start`-Endpunkt inkrementiert der Workflow alle zwei Sekunden eine Zählervariable und zählt so von 0 bis 29. Der Workflow wird nach jeder Erhöhung des Zählerwerts beibehalten, und die höher gestuften Eigenschaften werden in der Sicht [dbo].[CounterService] aktualisiert. Wenn Sie die Konsolenanwendung ausführen, wird der WF-Dienst gehostet. Eine Nachricht wird an den `Start`-Endpunkt gesendet, und es wird eine WF-Zählerinstanz erstellt.  
   
 -   **PropertyPromotionActivity** ist eine Klassenbibliothek, die den Konfigurationselementen, Workflowaktivitäten und workflowerweiterungen enthält, die die **CounterServiceApplication** verwendet.  
   
--   **PropertyPromotionActivitySQLSample.sql** erstellt und fügt die Sicht [Dbo]. [ CounterService] in der Datenbank.  
+-   **PropertyPromotionActivitySQLSample.sql** erstellt und fügt Sie die Sicht [Dbo]. [ CounterService] in der Datenbank.  
   
 ### <a name="counterserviceapplication"></a>CounterServiceApplication  
   
@@ -107,13 +107,13 @@ go
   
  Beachten Sie, dass die `PromotedValue`-Aktivität außerdem über den booleschen Member `ClearExistingPromotedData` verfügt. Wenn dieser Member auf `true` festgelegt wird, werden alle höher gestuften Eigenschaftswerte bis zu diesem Punkt im Workflow bereinigt. Beispielsweise ist eine Sequence-Aktivität wie folgt definiert:  
   
-1.  PromoteValue {Name = "Count", Value = 3}  
+1.  PromoteValue {Name = "Count", Wert = 3}  
   
 2.  PromoteValue {Name = "LastIncrementedAt", Wert = 1-1-2000}  
   
 3.  Beibehalten  
   
-4.  PromoteValue {Name = "Count", Wert = 4, ClearExistingPromotedData = "true"}  
+4.  PromoteValue {Name = "Count", Wert = 4 "," ClearExistingPromotedData = "true"}  
   
 5.  Beibehalten  
   
@@ -142,7 +142,7 @@ public class PromoteValue<T> : CodeActivity
  Löscht alle Werte, die vor dieser Aktivität höher gestuft wurden.  
   
  Name (Zeichenfolge)  
- Der Name, der diese Eigenschaft darstellt. Dies sollte das Namensattribut des entsprechen einem \<PromotedValue >-Elements in der Konfigurationsdatei.  
+ Der Name, der diese Eigenschaft darstellt. Dies sollte das Name-Attribut entsprechen einem \<PromotedValue >-Elements in der Konfigurationsdatei.  
   
  Wert (InArgument\<T >)  
  Die Variable/der Wert, die bzw. der in der Spalte gespeichert werden soll.  
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

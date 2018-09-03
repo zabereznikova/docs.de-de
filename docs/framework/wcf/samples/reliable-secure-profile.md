@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805745"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486908"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
-Dieses Beispiel veranschaulicht, wie WCF verfassen und [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Dieses Beispiel veranschaulicht die Implementierung einer [Make Connection](http://go.microsoft.com/fwlink/?LinkId=178141) Kanal, der zusammen mit zuverlässigem Messaging und optional zusammengesetzt werden kann ein sicherer Kanal zum Erstellen einer zuverlässigen sichere Bindung auf Basis der RSP Spezifikation.  
+In diesem Beispiel wird veranschaulicht, wie zum Erstellen von WCF und [Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Dieses Beispiel veranschaulicht die Implementierung einer [Make Connection](https://go.microsoft.com/fwlink/?LinkId=178141) Kanal, der zusammen mit zuverlässigem Messaging und optional zusammengesetzt werden kann ein sicherer Kanal aus, um eine zuverlässige sichere Bindung erstellen basierend auf der RSP-Spezifikation.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -30,7 +30,7 @@ Dieses Beispiel veranschaulicht, wie WCF verfassen und [Reliable Secure Profile]
   
 1.  Öffnen der **ReliableSecureProfile** Lösung.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die **Service** im Projekt **Projektmappen-Explorer**Option **Debuggen**, **neue Instanz starten** aus dem Kontextmenü. Daraufhin wird der Diensthost gestartet.  
+2.  Klicken Sie mit der rechten Maustaste auf die **Service** Projekt **Projektmappen-Explorer**Option **Debuggen**, **neue Instanz starten** aus dem Kontextmenü. Daraufhin wird der Diensthost gestartet.  
   
 3.  Klicken Sie mit der rechten Maustaste auf die **Client** Projekt **Projektmappen-Explorer**Option **Debuggen**, **neue Instanz starten** aus dem Kontextmenü. Daraufhin wird der Client gestartet.  
   
