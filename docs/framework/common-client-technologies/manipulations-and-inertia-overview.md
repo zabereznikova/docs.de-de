@@ -2,12 +2,12 @@
 title: Überblick über Manipulationen und Trägheit
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 7aec2756bfc3a7d4ccd394d54f19428d73b44fcb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744394"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401224"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Überblick über Manipulationen und Trägheit
 Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche (User Interface, UI) mithilfe von *Manipulatoren* zu verschieben, zu drehen und in der Größe zu ändern. Ein Manipulator kann eine Maus oder (in einem Touchscreen-Szenario) ein Stift oder ein Finger sein.  
@@ -25,11 +25,11 @@ Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche
   
  Ein Bild, das mit zwei Manipulatoren manipuliert wird.  
   
- Die Manipulationsverarbeitung stellt ein Framework bereit, das eine Teilmenge der Manipulatoren überwacht und diese so interpretiert, als würden sie zusammen und nicht unabhängig voneinander agieren. Sie können mehrere Manipulationsprozessor-Objekte gleichzeitig erstellen, eines für jedes UI-Element, das in einer Anwendung manipuliert werden soll. Ein Manipulationsprozessor wird darüber informiert, welche Eingabegeräte beobachtet werden sollen, und er meldet Manipulationen über [.NET-Ereignisse](http://msdn.microsoft.com/library/17sde2xt.aspx).  
+ Die Manipulationsverarbeitung stellt ein Framework bereit, das eine Teilmenge der Manipulatoren überwacht und diese so interpretiert, als würden sie zusammen und nicht unabhängig voneinander agieren. Sie können mehrere Manipulationsprozessor-Objekte gleichzeitig erstellen, eines für jedes UI-Element, das in einer Anwendung manipuliert werden soll. Ein Manipulationsprozessor wird darüber informiert, welche Eingabegeräte beobachtet werden sollen, und er meldet Manipulationen über [.NET-Ereignisse](https://msdn.microsoft.com/library/17sde2xt.aspx).  
   
  Ein Manipulationsprozessor hat keine Informationen zu dem speziellen Element, das manipuliert wird. Eine Anwendung wendet die Änderungen separat auf ein anwendungsspezifisches Element an. So wendet eine Anwendung beispielsweise Transformationen auf ein Bild an oder zeichnet es neu, um es an seiner neuen Position oder mit einer neuen Größe oder Ausrichtung darzustellen.  
   
- Manipulationen würden für zweidimensionale (2-D) [affine Transformationen](http://msdn.microsoft.com/library/ms533810\(VS.85\).aspx)entwickelt. Zu diesen Transformationen gehören Umsetzen, Drehen und Skalieren.  
+ Manipulationen würden für zweidimensionale (2-D) [affine Transformationen](/windows/desktop/gdiplus/-gdiplus-transformations-use)entwickelt. Zu diesen Transformationen gehören Umsetzen, Drehen und Skalieren.  
   
 ### <a name="parts-of-a-manipulation"></a>Teile einer Manipulation  
  Eine Manipulation ist eine Auflistung von <xref:System.Windows.Input.Manipulations.Manipulator2D>-Objekten. Diese aggregierte Manipulation wird von einem Ursprungspunkt und einer Ellipse dargestellt. Der Ursprungspunkt ist die mittlere Position aller Manipulatoren, mit dem ein Element manipuliert werden kann. Die Ellipse hat einen Radius, der gleich dem mittleren Abstand vom Ursprungspunkt zu jedem der <xref:System.Windows.Input.Manipulations.Manipulator2D>-Objekte ist.  
@@ -41,7 +41,7 @@ Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche
  Wenn für ein UI-Element Manipulatoren hinzugefügt, verschoben oder entfernt werden, aktualisiert die Anwendung das <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D>-Objekt, indem sie die <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>-Methode aufruft. Zu Beginn der Manipulation wird das <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started>-Ereignis ausgelöst.  
   
 > [!NOTE]
->  Die Manipulationsverarbeitung ist effizienter, wenn sie in einer framebasierten Updateumgebung ausgeführt wird. Bei Verwendung der Manipulationsverarbeitung in einer Microsoft XNA-Anwendung ist dies kein Problem, da XNA-Framework framebasierte Updates mithilfe der [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)-Methode ermöglicht. In einer anderen Umgebung (wie WinForms) müssen Sie ggf. Ihre eigene framebasierte Logik bereitstellen, um Manipulationen zu sammeln und diese regelmäßig im Batch an die <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>-Methode senden.  
+>  Die Manipulationsverarbeitung ist effizienter, wenn sie in einer framebasierten Updateumgebung ausgeführt wird. Bei Verwendung der Manipulationsverarbeitung in einer Microsoft XNA-Anwendung ist dies kein Problem, da XNA-Framework framebasierte Updates mithilfe der [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)-Methode ermöglicht. In einer anderen Umgebung (wie WinForms) müssen Sie ggf. Ihre eigene framebasierte Logik bereitstellen, um Manipulationen zu sammeln und diese regelmäßig im Batch an die <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>-Methode senden.  
   
  Wenn sich die Anzahl der Manipulatoren oder deren Position ändert, wird das <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta>-Ereignis ausgelöst. Eigenschaften des <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs>-Objekts, die an den <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta>-Ereignishandler übergeben werden, geben Änderungen am Ursprungspunkt, an der Skalierung, Drehung und Umsetzung an, die seit dem letzten Ereignis aufgetreten sind. Der Ursprung der Manipulation ändert sich, wenn Manipulatoren verschoben und wenn Manipulatoren hinzugefügt oder entfernt werden. Die Umsetzungswerte geben an, wie viel X- oder Y-Verschiebung die Manipulation umfasst.  
   

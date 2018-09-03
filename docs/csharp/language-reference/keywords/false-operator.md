@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: e1c6da604f35031dd9d712125356243e1735f452
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: e73113bd37dbb68590267141ad037f78919520bc
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027836"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253248"
 ---
 # <a name="false-operator-c-reference"></a>FALSE-Operator (C#-Referenz)
 
@@ -33,8 +33,8 @@ Ein Typ kann nicht direkt die bedingten logischen Operatoren [&&](../operators/c
 
 ## <a name="see-also"></a>Siehe auch
 
-[C#-Referenz](../index.md)  
-[C#-Programmierhandbuch](../../programming-guide/index.md)  
-[C#-Schlüsselwörter](index.md)  
-[C#-Operatoren](../operators/index.md)  
-[true](true.md)  
+- [C#-Referenz](../index.md)  
+- [C#-Programmierhandbuch](../../programming-guide/index.md)  
+- [C#-Schlüsselwörter](index.md)  
+- [C#-Operatoren](../operators/index.md)  
+- [true](true.md)  

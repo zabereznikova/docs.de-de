@@ -1,14 +1,14 @@
 ---
 title: Gruppieren von Ergebnissen nach zusammenhängenden Schlüsseln (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie mit LINQ in C# Ergebnisse nach zusammenhängenden Schlüsseln gruppieren.
-ms.date: 12/1/2016
+ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
-ms.openlocfilehash: 8ad08d861e2d0f5ee0f8a2eceeb8d82a9aa2a5a6
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404761"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484001"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Gruppieren von Ergebnissen nach zusammenhängenden Schlüsseln
 
@@ -51,4 +51,4 @@ Um die Erweiterungsmethode in Ihrem Projekt zu verwenden, kopieren Sie die stati
 
 ## <a name="see-also"></a>Siehe auch
 
-[Language-Integrated Query (LINQ)](index.md)
+- [Language-Integrated Query (LINQ)](index.md)

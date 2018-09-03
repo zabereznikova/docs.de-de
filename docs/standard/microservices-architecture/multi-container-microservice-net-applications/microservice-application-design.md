@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Entw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6cbe4512c8ed89540599d1257046bd080b464165
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4adf7e759d4475d0bb9b3aa0abe8dbdc5e57edd3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105958"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470115"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
@@ -63,7 +63,7 @@ Jeder Microservice verfügt über seine eigene Datenbank, wodurch er vollständi
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: Eine Referenzanwendung für .NET Core und Microservices, die mithilfe von Containern bereitgestellt wurde
 
-Damit Sie sich auf die Architektur und die Technologien konzentrieren können, anstatt über eine hypothetische Geschäftsdomäne nachzudenken, mit der Sie sich möglicherweise nicht auskennen, wurde eine bekannte Geschäftsdomäne ausgewählt, nämlich eine vereinfachte E-Commerce-Anwendung (Onlineshop), die einen Katalog von Produkten darstellt, Bestellungen von Kunden entgegennimmt, den Lagerbestand überprüft und weitere Geschäftsfunktionen übernimmt. Dieser containerbasierte Anwendungsquellcode ist im GitHub-Repository [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) verfügbar.
+Damit Sie sich auf die Architektur und die Technologien konzentrieren können, anstatt über eine hypothetische Geschäftsdomäne nachzudenken, mit der Sie sich möglicherweise nicht auskennen, wurde eine bekannte Geschäftsdomäne ausgewählt, nämlich eine vereinfachte E-Commerce-Anwendung (Onlineshop), die einen Katalog von Produkten darstellt, Bestellungen von Kunden entgegennimmt, den Lagerbestand überprüft und weitere Geschäftsfunktionen übernimmt. Dieser containerbasierte Anwendungsquellcode ist im GitHub-Repository [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) verfügbar.
 
 Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-Ends der Shop-Benutzeroberfläche (einer Webanwendung und einer nativen mobilen App), sowie den Back-End-Microservices und -Containern für alle erforderlichen serverseitigen Vorgänge. Abbildung 8-1 zeigt die Architektur der Referenzanwendung.
 
@@ -171,7 +171,7 @@ Softwarearchitekten und -entwickler verwenden eine Vielzahl von Architekturmuste
 
 -   [Domain-Driven Design mit n Ebenen](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/)
 
--   [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (wie bei [eShopOnWeb](http://aka.ms/WebAppArchitecture) verwendet)
+-   [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (wie bei [eShopOnWeb](https://aka.ms/WebAppArchitecture) verwendet)
 
 -   [Command and Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS)
 

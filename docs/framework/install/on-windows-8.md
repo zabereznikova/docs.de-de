@@ -5,12 +5,12 @@ description: Informationen zum Installieren von .NET Framework unter Windows 8
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: f912013773759c6c8f52734f74bdca867f60e7a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1edc928318ec56853df06c1382465e24d9604c9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386908"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416453"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Installieren von .NET Framework unter Windows 8 und Windows Server 2012
 
@@ -18,7 +18,7 @@ ms.locfileid: "33386908"
 
 ![Diese Anwendung konnte nicht gestartet werden](./media/this-application-could-not-be-started.png)
 
-Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) ist die aktuelle Version. Es wird unter Windows Server 2012 unterstützt, aber nicht unter Windows 8. Es ist im Lieferumfang vom [Windows 10-Update vom April 2018](https://www.microsoft.com/software-download/windows10) enthalten.
+Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) ist die aktuelle Version. Es wird unter Windows Server 2012 unterstützt, aber nicht unter Windows 8. Es ist im Lieferumfang vom [Windows 10-Update vom April 2018](https://www.microsoft.com/software-download/windows10) enthalten.
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
@@ -27,7 +27,7 @@ Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Ver
 
 .NET Framework 4.7.2 wird von Windows Server 2012 unterstützt. Es wird unter Windows 8 nicht unterstützt.
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 4.0 oder höher entwickelt wurden.
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 4.0 oder höher entwickelt wurden.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

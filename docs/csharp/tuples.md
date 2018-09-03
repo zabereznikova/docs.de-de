@@ -3,12 +3,12 @@ title: Tupeltypen | C#-Leitfaden
 description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208298"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404313"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen #
 
@@ -71,7 +71,7 @@ Wenn ein expliziter Name vergeben wird, hat dieser vor jedem projizierten Namen 
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Für jedes Feld ohne expliziten Namen wird ein zutreffender, impliziter Name projiziert. Es ist weder explizit noch implizit nötig, semantische Namen bereitzustellen. Der folgende Initialisierer besitzt den Feldnamen `Item1`, dessen Wert `42` ist, und `StringContent`, dessen Wert „Die Antwort auf alles“ ist:
+Für jedes Feld ohne expliziten Namen wird ein zutreffender, impliziter Name projiziert. Es ist weder explizit noch implizit nötig, semantische Namen bereitzustellen. Der folgende Initialisierer besitzt den Feldnamen `Item1`, dessen Wert `42` ist, und `stringContent`, dessen Wert „Die Antwort auf alles“ ist:
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -92,7 +92,7 @@ Ab C# 7.3 unterstützen Tupeltypen die Operatoren `==` und `!=`. Diese Operatore
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Es gibt einige Regeln, die Tupelgleichheitstests einfacher machen. Die Tupelgleichheit führt [mehrstufige Konvertierungen](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators) aus, wenn eines der Tupel ein Tupel mit NULL-Werten ist, so wie im folgenden Code dargestellt:
+Es gibt einige Regeln, die Tupelgleichheitstests einfacher machen. Die Tupelgleichheit führt [mehrstufige Konvertierungen](language-reference/language-specification/index.md) aus, wenn eines der Tupel ein Tupel mit NULL-Werten ist, so wie im folgenden Code dargestellt:
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

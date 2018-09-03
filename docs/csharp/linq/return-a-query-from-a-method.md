@@ -3,12 +3,12 @@ title: Zurückgeben einer Abfrage aus einer Methode
 description: Vorgehensweise zum Zurückgeben einer Abfrage aus einer Methode.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 1c5fa534f3f39f8201d93b986e687d85bb303736
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404156"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473943"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Gewusst wie: Zurückgeben einer Abfrage aus einer Methode (C#-Programmierhandbuch)
 In diesem Beispiel wird gezeigt, wie Sie eine Abfrage aus einer Methode als Rückgabewert oder `out`-Parameter zurückgeben.  
@@ -20,5 +20,6 @@ In diesem Beispiel wird gezeigt, wie Sie eine Abfrage aus einer Methode als Rüc
   
  [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
-## <a name="see-also"></a>Siehe auch  
- [Language-Integrated Query (LINQ)](index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Language-Integrated Query (LINQ)](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ?? operator [C#]
 - conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8fa751654acaf5939fb8f8068c7323e365f7bdab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 03d81d4216dabce2ea75b9fdcf6ef0971cc32490
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458100"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43388858"
 ---
 # <a name="-operator-c-reference"></a>?? Operator (C#-Referenz)
 Der Operator `??` wird NULL-Sammeloperator genannt.  Der linke Operand wird zurückgegeben, falls dieser nicht NULL ist. Andernfalls wird der rechte Operand zurückgegeben.  
@@ -28,9 +28,10 @@ Der Operator `??` wird NULL-Sammeloperator genannt.  Der linke Operand wird zur�
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)  
- [Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/index.md)  
- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Was genau bedeutet „Lifted“?)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)  
+- [Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/index.md)  
+- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Was genau bedeutet „Lifted“?)

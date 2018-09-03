@@ -3,18 +3,18 @@ title: Arbeiten mit XML-Namespaces (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330472"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416240"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Arbeiten mit XML-Namespaces (C#)
 In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Namespaces unterstützt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[Übersicht über Namespaces (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Dieses Thema enthält eine Einführung in die Namespaces, die <xref:System.Xml.Linq.XName>-Klasse und die <xref:System.Xml.Linq.XNamespace>-Klasse.|  
 |[Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md)|Beschreibt das Erstellen von Dokumenten mit Namespaces.|  

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7c54e5e55770f3df44819cdf6d2d2c866f7e0fc
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 2ffc8c88f01ba10bceb4f768f38ae9b1dcc4148e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298161"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43422174"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Gewusst wie: Lesen aus einer Textdatei
 In den folgenden Beispielen wird das synchrone und asynchrone Lesen aus einer Textdatei mithilfe von .NET für Desktop-Apps veranschaulicht. In beiden Beispielen geben Sie beim Erstellen der Instanz der <xref:System.IO.StreamReader>-Klasse einen absoluten oder relativen Pfad zur Datei an. In den folgenden Beispielen wird angenommen, dass sich eine Datei mit dem Namen "TestFile.txt" im gleichen Ordner wie die Anwendung befindet.  
   
- Diese Codebeispiele gelten nicht für die Entwicklung von Windows Store-Apps, da die Windows-Runtime verschiedene Streamtypen für Lese- und Schreibvorgänge für Dateien bereitstellt. Ein Beispiel für das Lesen von Text aus einer Datei in einer Windows Store-App finden Sie unter [Schnellstart: Lesen und Schreiben einer Datei](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh758325(v=win.10)). Weitere Beispiele zum Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams finden Sie unter [Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
+ Diese Codebeispiele gelten nicht für die Entwicklung von Windows Store-Apps, da die Windows-Runtime verschiedene Streamtypen für Lese- und Schreibvorgänge für Dateien bereitstellt. Ein Beispiel für das Lesen von Text aus einer Datei in einer Windows Store-App finden Sie unter [Schnellstart: Lesen und Schreiben einer Datei](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)). Weitere Beispiele zum Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams finden Sie unter [Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein synchroner Lesevorgang in einer Konsolenanwendung veranschaulicht. In diesem Beispiel wird die Textdatei mit einem Streamreader geöffnet, der Inhalt wird in eine Zeichenfolge kopiert, und die Zeichenfolge wird in der Konsole ausgegeben.  
@@ -44,7 +44,7 @@ In den folgenden Beispielen wird das synchrone und asynchrone Lesen aus einer Te
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)  
  [NIB: Gewusst wie: Erstellen einer Verzeichnisauflistung](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [Schnellstart: Lesen und Schreiben einer Datei](http://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
+ [Schnellstart: Lesen und Schreiben einer Datei](https://msdn.microsoft.com/library/windows/apps/hh758325.aspx)  
  [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
  [Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e944f224ff9bf6dc3b8cefc293182bb79f74f2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 831c4cce14e902697d84129e54cc54f07d26b9f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457486"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417357"
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 Signalisiert das Auftreten einer Ausnahme während der Programmausführung.  
@@ -65,11 +65,12 @@ Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werd
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [The try, catch, and throw Statements in C++ (Die Anweisungen „try“, „catch“ und „throw“ in C++)](../../../csharp/language-reference/keywords/try-catch.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [The try, catch, and throw Statements in C++ (Die Anweisungen „try“, „catch“ und „throw“ in C++)](../../../csharp/language-reference/keywords/try-catch.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [Ausnahmebehandlungsanweisungen](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+- [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

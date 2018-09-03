@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 843b791177b57134483a7076dbc6ec979956ef60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408817"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43421854"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
@@ -32,11 +32,11 @@ tlbexp assemblyName [options]
   
 #### <a name="parameters"></a>Parameter  
   
-|Argument|description|  
+|Argument|Beschreibung |  
 |--------------|-----------------|  
 |*assemblyName*|Die Assembly, für die eine Typbibliothek exportiert werden soll.|  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**/asmpath:** *verzeichnis*|Gibt den Speicherort an, der nach Assemblys durchsucht werden soll. Wenn Sie diese Option verwenden, müssen Sie die Speicherorte, die nach Assemblys durchsucht werden sollen, auf die verwiesen wird, explizit angeben, einschließlich des aktuellen Verzeichnisses.<br /><br /> Wenn Sie die **asmpath**-Option verwenden, sucht das Type Library Exporter-Tool nicht nach einer Assembly im globalen Assemblycache (GAC).|  
 |**/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Beachten Sie, dass "Tlbexp.exe" das Feld <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> ignoriert.  
   
- Da Typbibliotheken nicht alle in den Assemblys gefundenen Informationen aufnehmen können, verwirft "Tlbexp.exe" während des Exportvorgangs möglicherweise einige Daten. Eine Erläuterung des Transformationsprozesses sowie Informationen darüber, wie Sie die Quelle der Informationen identifizieren, die an eine Typbibliothek ausgegeben werden, finden Sie unter [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Da Typbibliotheken nicht alle in den Assemblys gefundenen Informationen aufnehmen können, verwirft "Tlbexp.exe" während des Exportvorgangs möglicherweise einige Daten. Eine Erläuterung des Transformationsprozesses sowie Informationen darüber, wie Sie die Quelle der Informationen identifizieren, die an eine Typbibliothek ausgegeben werden, finden Sie unter [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
   
  Beachten Sie, dass das Type Library Exporter-Tool Methoden exportiert, die über <xref:System.TypedReference>-Parameter als `VARIANT` verfügen, obwohl das <xref:System.TypedReference>-Objekt in nicht verwaltetem Code keine Bedeutung hat. Wenn Sie Methoden exportieren, die über <xref:System.TypedReference>-Parameter verfügen, generiert das Type Library Exporter-Tool keine Warnung und keinen Fehler, und nicht verwalteter Code, der die resultierende Typbibliothek verwendet, wird nicht ordnungsgemäß ausgeführt.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [Extras](../../../docs/framework/tools/index.md)  
  [Regasm.exe (Assembly Registration-Tool)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
  [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

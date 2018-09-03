@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 47c13f960cb6b70205feabfa0488e584ad6a098f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f1d62c5aa29f2074106ab102775b9a0283d646
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216937"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43389545"
 ---
 # <a name="async-c-reference"></a>async (C#-Referenz)
 Mit dem `async`-Modifizierer können Sie angeben, dass eine Methode, ein [Lambdaausdruck](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) oder eine [anonyme Methode](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) asynchron ist. Wenn Sie diesen Modifizierer auf Methoden oder Ausdrücke anwenden, wird dies als *asynchrone Methode* bezeichnet. Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `ExampleMethodAsync` definiert: 
@@ -82,8 +82,9 @@ Ab C# 7.0 wird ein anderer Typ zurückgegeben, üblicherweise ein Werttyp, der �
 
 Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
- [await](../../../csharp/language-reference/keywords/await.md)  
- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+- [await](../../../csharp/language-reference/keywords/await.md)  
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)

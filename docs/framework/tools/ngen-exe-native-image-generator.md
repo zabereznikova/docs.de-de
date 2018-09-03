@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0811e32a9483238d1cd15084c19951075c8a36a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3875b4f44a2c2aad5cc5021d55e22e99bb00a91e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399542"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405905"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
 Native Image Generator (Ngen.exe) ist ein Tool zur Leistungsoptimierung verwalteter Anwendungen. Mit "Ngen.exe" können Sie systemeigene Images erstellen, also Dateien mit kompiliertem prozessorspezifischem Computercode, die daraufhin im Cache für systemeigene Images auf dem lokalen Computer installiert werden. Die Laufzeit kann systemeigene Abbilder aus dem Cache nutzen und muss nicht den JIT (Just-In-Time)-Compiler verwenden, um die ursprüngliche Assembly zu kompilieren.  
@@ -48,12 +48,12 @@ Native Image Generator (Ngen.exe) ist ein Tool zur Leistungsoptimierung verwalte
   
 -   Einige Ursachen für die Ungültigkeit von Images wurden eliminiert.  
   
- Unter Windows 8 finden Sie weitere Informationen unter [Aufgabe zur Generierung nativer Images](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
+ Unter Windows 8 finden Sie weitere Informationen unter [Aufgabe zur Generierung nativer Images](#native-image-task).  
   
  Weitere Informationen zur Verwendung von „Ngen.exe“ und des Diensts für native Images finden Sie unter [Dienst für native Images][Native Image Service].  
   
 > [!NOTE]
->  Die Syntax von „Ngen.exe“ für die Versionen 1.0 und 1.1 von .NET Framework finden Sie unter [Legacysyntax des Native Image Generator (Ngen.exe)](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
+>  Die Syntax von „Ngen.exe“ für die Versionen 1.0 und 1.1 von .NET Framework finden Sie unter [Legacysyntax des Native Image Generator (Ngen.exe)](https://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
  Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -72,7 +72,7 @@ ngen /? | /help
 ## <a name="actions"></a>Aktionen  
  In der folgenden Tabelle wird die Syntax für jede einzelne `action` dargestellt. Beschreibungen der einzelnen Teile einer `action` finden Sie in den Tabellen [Argumente](#ArgumentTable), [Prioritätsebenen](#PriorityTable), [Szenarien](#ScenarioTable) und [Konfigurationen](#ConfigTable). In der Tabelle [Optionen](#OptionTable) werden die `options` und die Hilfeschalter beschrieben.  
   
-|Aktion|description|  
+|Aktion|Beschreibung |  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Generiert systemeigene Images für eine Assembly und ihre Abhängigkeiten und installiert die Images im Cache für systemeigene Images.<br /><br /> Wenn `/queue` angegeben wird, wird die Aktion in die Warteschlange des Diensts für systemeigene Images gestellt. Die Standardpriorität ist 3. Informationen hierzu finden Sie in der Tabelle [Prioritätsebenen](#PriorityTable).|  
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Löscht die systemeigenen Images einer Assembly und ihre Abhängigkeiten aus dem Cache für systemeigene Images.<br /><br /> Verwenden Sie zum Deinstallieren eines einzelnen Images und seiner Abhängigkeiten dieselben Befehlszeilenargumente wie beim Installieren des Images. **Hinweis:** Beginnend mit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] wird die Aktion `uninstall` * nicht mehr unterstützt.|  
@@ -84,7 +84,7 @@ ngen /? | /help
 <a name="ArgumentTable"></a>   
 ## <a name="arguments"></a>Argumente  
   
-|Argument|description|  
+|Argument|Beschreibung |  
 |--------------|-----------------|  
 |`assemblyName`|Der vollständige Anzeigename der Assembly. Beispielsweise `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Hinweis:** Sie können einen partiellen Assemblynamen wie `myAssembly` für die `display`-Aktion und die `uninstall`-Aktion angeben. <br /><br /> In jeder Befehlszeile von "Ngen.exe" kann nur eine Assembly angegeben werden.|  
 |`assemblyPath`|Der explizite Pfad der Assembly. Sie können einen vollständigen oder einen relativen Pfad angeben.<br /><br /> Wenn Sie einen Dateinamen ohne Pfad angeben, muss sich die Assembly im aktuellen Verzeichnis befinden.<br /><br /> In jeder Befehlszeile von "Ngen.exe" kann nur eine Assembly angegeben werden.|  
@@ -92,7 +92,7 @@ ngen /? | /help
 <a name="PriorityTable"></a>   
 ## <a name="priority-levels"></a>Prioritätsebenen  
   
-|Priorität|description|  
+|Priorität|Beschreibung |  
 |--------------|-----------------|  
 |`1`|Systemeigene Images werden sofort generiert und installiert, ohne dass auf Leerlaufzeit gewartet wird.|  
 |`2`|Systemeigene Images werden ohne Warten auf Leerlaufzeit generiert und installiert, aber nachdem alle Aktionen mit Priorität 1 (und ihre Abhängigkeiten) abgeschlossen wurden.|  
@@ -101,7 +101,7 @@ ngen /? | /help
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>Szenarien  
   
-|Szenario|description|  
+|Szenario|Beschreibung |  
 |--------------|-----------------|  
 |`/Debug`|Generiert systemeigene Images, die unter einem Debugger verwendet werden können.|  
 |`/Profile`|Generiert systemeigene Images, die unter einem Profiler verwendet werden können.|  
@@ -110,7 +110,7 @@ ngen /? | /help
 <a name="ConfigTable"></a>   
 ## <a name="config"></a>Konfigurationen  
   
-|Konfiguration|description|  
+|Konfiguration|Beschreibung |  
 |-------------------|-----------------|  
 |`/ExeConfig:` `exePath`|Verwendet die Konfiguration der angegebenen ausführbaren Assembly.<br /><br /> "Ngen.exe" muss beim Binden an Abhängigkeiten die gleichen Entscheidungen wie das Ladeprogramm treffen. Wenn eine freigegebene Komponente zur Laufzeit mit der <xref:System.Reflection.Assembly.Load%2A>-Methode geladen wird, bestimmt die Konfigurationsdatei der Anwendung die Abhängigkeiten, die für die freigegebene Komponente geladen werden, beispielsweise die Version einer zu ladenden Abhängigkeit. Über den Schalter `/ExeConfig` erhält "Ngen.exe" Anweisungen dazu, welche Abhängigkeiten zur Laufzeit geladen werden.|  
 |`/AppBase:` `directoryPath`|Verwendet das angegebene Verzeichnis beim Suchen nach Abhängigkeiten als Anwendungsbasis.|  
@@ -118,7 +118,7 @@ ngen /? | /help
 <a name="OptionTable"></a>   
 ## <a name="options"></a>Optionen  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |`/nologo`|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |`/silent`|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
@@ -514,7 +514,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  Beispiele, die sich auf den Dienst für native Images beziehen, finden Sie unter [Dienst für native Images][Native Image Service].  
   
 ## <a name="native-image-task"></a>Aufgabe zur Generierung nativer Images  
- Die Aufgabe zur Generierung systemeigener Images ist eine Windows-Aufgabe, die systemeigene Images generiert und verwaltet. Die Aufgabe zur Generierung nativer Images geht so vor, dass sie automatisch native Images für die unterstützten Szenarien generiert und freigibt. (Weitere Informationen finden Sie unter [Erstellen systemeigener Images](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Sie ermöglichte es Installationsprogrammen außerdem, [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) zu verwenden, um native Images nach einer Zeitverzögerung zu erstellen und zu aktualisieren.  
+ Die Aufgabe zur Generierung systemeigener Images ist eine Windows-Aufgabe, die systemeigene Images generiert und verwaltet. Die Aufgabe zur Generierung nativer Images geht so vor, dass sie automatisch native Images für die unterstützten Szenarien generiert und freigibt. (Weitere Informationen finden Sie unter [Erstellen systemeigener Images](https://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Sie ermöglichte es Installationsprogrammen außerdem, [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) zu verwenden, um native Images nach einer Zeitverzögerung zu erstellen und zu aktualisieren.  
   
  Die Aufgabe zur Generierung nativer Images wird einmal für jede CPU-Architektur registriert, die auf einem Computer unterstützt wird. Dadurch ist es möglich, Anwendungen zu kompilieren, die genau für jede Architektur angepasst sind:  
   

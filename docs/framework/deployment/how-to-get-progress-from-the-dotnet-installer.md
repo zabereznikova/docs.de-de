@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393308"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472045"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine verteilbare Laufzeit. Wenn Sie Apps für diese Version von .NET Framework entwickeln, können Sie das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup als Teil einer erforderlichen Komponente in das Setup Ihrer App einschließen (mit dem Setup verketten). Für ein angepasstes oder einheitliches Setup können Sie festlegen, dass das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup automatisch gestartet und sein Status nachverfolgt wird, während der Setupstatus Ihrer App angezeigt wird. Das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup (das beobachtet werden kann) definiert mithilfe eines MMIO (Memory-Mapped IO)-Segments ein Protokoll für die Kommunikation mit Ihrem Setup (dem Monitor oder Chainer), um die automatische Nachverfolgung zu aktivieren. Dieses Protokoll definiert ein Verfahren für einen Chainer zum Abrufen von Statusinformationen und ausführlichen Ergebnissen, zum Antworten auf Meldungen sowie zum Abrechen des [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setups.  
@@ -55,13 +55,13 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
 > [!WARNING]
 >  Sie müssen das Beispiel als Administrator ausführen.  
   
- Sie können die vollständige Visual Studio-Projektmappe für das [Chainer-Beispiel für .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=231345) von der MSDN Samples Gallery herunterladen.  
+ Sie können die vollständige Visual Studio-Projektmappe für das [Chainer-Beispiel für .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkId=231345) von der MSDN Samples Gallery herunterladen.  
   
  In den folgenden Abschnitten werden die wichtigsten Dateien in diesem Beispiel beschrieben: MMIOChainer.h, ChainingdotNet4.cpp und IProgressObserver.h.  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
--   Die Datei „MMIOChainer.h“ (siehe den [vollständigen Code](http://go.microsoft.com/fwlink/?LinkId=231369)) enthält die Datenstrukturdefinition und die Basisklasse, von der die chainer-Klasse abgeleitet werden sollte. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] erweitert die MMIO-Datenstruktur, um Daten zu behandeln, die das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Installationsprogramm benötigt. Die Änderungen an der MMIO-Struktur sind abwärtskompatibel. Deshalb kann ein .NET Framework 4-Chainer mit dem .NET Framework 4.5-Setup verwendet werden, ohne dass eine Neukompilierung erforderlich ist. In diesem Szenario wird jedoch nicht die Funktion zur Reduzierung von Systemneustarts unterstützt.  
+-   Die Datei „MMIOChainer.h“ (siehe den [vollständigen Code](https://go.microsoft.com/fwlink/?LinkId=231369)) enthält die Datenstrukturdefinition und die Basisklasse, von der die chainer-Klasse abgeleitet werden sollte. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] erweitert die MMIO-Datenstruktur, um Daten zu behandeln, die das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Installationsprogramm benötigt. Die Änderungen an der MMIO-Struktur sind abwärtskompatibel. Deshalb kann ein .NET Framework 4-Chainer mit dem .NET Framework 4.5-Setup verwendet werden, ohne dass eine Neukompilierung erforderlich ist. In diesem Szenario wird jedoch nicht die Funktion zur Reduzierung von Systemneustarts unterstützt.  
   
      Ein Versionsfeld ermöglicht das Erkennen von Änderungen an der Struktur und dem Meldungsformat.  Das .NET Framework-Setup bestimmt die Version der Chainer-Schnittstelle, indem die `VirtualQuery`-Funktion aufgerufen wird, um die Größe der Dateizuordnung zu ermitteln.  Wenn die Größe für das Versionsfeld ausreicht, verwendet das .NET Framework-Setup den angegebenen Wert. Wenn die Dateizuordnung zu klein ist, um ein Versionsfeld aufzunehmen, wie dies bei .NET Framework 4 der Fall ist, wird beim Setupvorgang Version 0 (4) angenommen. Wenn der Chainer die Version der Meldung, die vom .NET Framework-Setup gesendet werden soll, nicht unterstützt, geht das .NET Framework-Setup von der Antwort "Ignorieren" aus.  
   
@@ -98,7 +98,7 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
   
 #### <a name="iprogressobserverh"></a>IProgressObserver.h  
   
--   Die Datei „IProgressObserver.h“ implementiert einen Statusbeobachter (siehe den [vollständigen Code](http://go.microsoft.com/fwlink/?LinkId=231370)). Dieser Beobachter wird über den Download- und Installationsstatus (als `char` ohne Vorzeichen mit den Werten 0-255, gibt Abschluss von 1 %-100 % an) benachrichtigt. Der Beobachter wird außerdem benachrichtigt, wenn der Chainee eine Meldung sendet, und der Beobachter sollte eine Antwort senden.  
+-   Die Datei „IProgressObserver.h“ implementiert einen Statusbeobachter (siehe den [vollständigen Code](https://go.microsoft.com/fwlink/?LinkId=231370)). Dieser Beobachter wird über den Download- und Installationsstatus (als `char` ohne Vorzeichen mit den Werten 0-255, gibt Abschluss von 1 %-100 % an) benachrichtigt. Der Beobachter wird außerdem benachrichtigt, wenn der Chainee eine Meldung sendet, und der Beobachter sollte eine Antwort senden.  
   
     ```cpp  
         class IProgressObserver  
@@ -112,7 +112,7 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
   
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
   
--   Die Datei [chainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) implementiert die von der `MmioChainer`-Klasse abgeleitete `Server`-Klasse und setzt die entsprechenden Methoden außer Kraft, um Statusinformationen anzuzeigen. Der MmioChainer erstellt einen Abschnitt mit dem angegebenen Abschnittsnamen und initialisiert den Chainer mit dem angegebenen Ereignisnamen. Der Ereignisname wird in der zugeordneten Datenstruktur gespeichert. Sie sollten eindeutige Abschnitts- und Ereignisnamen angeben. Die `Server`-Klasse im folgenden Code startet das angegebene Setupprogramm, überwacht seinen Status und gibt einen Exitcode zurück.  
+-   Die Datei [chainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) implementiert die von der `MmioChainer`-Klasse abgeleitete `Server`-Klasse und setzt die entsprechenden Methoden außer Kraft, um Statusinformationen anzuzeigen. Der MmioChainer erstellt einen Abschnitt mit dem angegebenen Abschnittsnamen und initialisiert den Chainer mit dem angegebenen Ereignisnamen. Der Ereignisname wird in der zugeordneten Datenstruktur gespeichert. Sie sollten eindeutige Abschnitts- und Ereignisnamen angeben. Die `Server`-Klasse im folgenden Code startet das angegebene Setupprogramm, überwacht seinen Status und gibt einen Exitcode zurück.  
   
     ```cpp  
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  

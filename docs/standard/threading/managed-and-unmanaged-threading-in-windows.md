@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591689"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390612"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Verwaltetes und nicht verwaltetes Threading in Windows
-Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -Klasse, einschließlich Threads, die von der Common Language Runtime erstellt werden, und Threads, die außerhalb der Runtime erstellt werden und in die verwaltete Umgebung eintreten, um Code auszuführen. Die Laufzeit überwacht alle Threads in ihrem Prozess, die jemals Code in der verwalteten Ausführungsumgebung ausgeführt haben. Sie verfolgt keine anderen Threads. Threads können über COM-Interop (da die Runtime verwaltete Objekte als COM-Objekte für die nicht verwaltete Umgebung verfügbar macht), über die COM-[DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx)-Funktion und über einen Plattformaufruf in die verwaltete Ausführungsumgebung eintreten.  
+Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -Klasse, einschließlich Threads, die von der Common Language Runtime erstellt werden, und Threads, die außerhalb der Runtime erstellt werden und in die verwaltete Umgebung eintreten, um Code auszuführen. Die Laufzeit überwacht alle Threads in ihrem Prozess, die jemals Code in der verwalteten Ausführungsumgebung ausgeführt haben. Sie verfolgt keine anderen Threads. Threads können über COM-Interop (da die Runtime verwaltete Objekte als COM-Objekte für die nicht verwaltete Umgebung verfügbar macht), über die COM-[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)-Funktion und über einen Plattformaufruf in die verwaltete Ausführungsumgebung eintreten.  
   
  Wenn ein nicht verwalteter Thread beispielsweise über einen COM Callable Wrapper in die Runtime eintritt, überprüft das System den lokalen Threadspeicher auf ein intern verwaltetes <xref:System.Threading.Thread> -Objekt. Wird eins gefunden, ist der Laufzeit dieser Thread bereits bewusst. Wird keins gefunden, erstellt die Runtime jedoch ein neues <xref:System.Threading.Thread> -Objekt und installiert es im lokalen Threadspeicher dieses Threads.  
   
@@ -45,7 +45,7 @@ Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -K
 |Nahe an **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Verwaltete Threads und COM-Apartments  
- Ein verwalteter Thread kann gekennzeichnet werden, um anzugeben, dass er ein [Singlethread](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx)- oder ein [Multithread](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx)-Apartment hostet. (Weitere Informationen zur COM-Threadingarchitektur finden Sie unter [Processes, threads, and Apartments (Prozesse, Threads und Apartments)](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Die Methoden <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> und <xref:System.Threading.Thread.TrySetApartmentState%2A> der <xref:System.Threading.Thread>-Klasse geben den Apartmentzustand eines Threads zurück und weisen ihn zu. Wurde der Zustand nicht festgelegt, gibt <xref:System.Threading.Thread.GetApartmentState%2A> den Wert <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType> zurück.  
+ Ein verwalteter Thread kann gekennzeichnet werden, um anzugeben, dass er ein [Singlethread](/windows/desktop/com/single-threaded-apartments)- oder ein [Multithread](/windows/desktop/com/multithreaded-apartments)-Apartment hostet. (Weitere Informationen zur COM-Threadingarchitektur finden Sie unter [Processes, threads, and Apartments (Prozesse, Threads und Apartments)](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Die Methoden <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> und <xref:System.Threading.Thread.TrySetApartmentState%2A> der <xref:System.Threading.Thread>-Klasse geben den Apartmentzustand eines Threads zurück und weisen ihn zu. Wurde der Zustand nicht festgelegt, gibt <xref:System.Threading.Thread.GetApartmentState%2A> den Wert <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType> zurück.  
   
  Die Eigenschaft kann nur festgelegt werden, wenn sich der Thread im Zustand <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> befindet. Die Eigenschaft kann für einen Thread nur einmal festgelegt werden.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
 ms.openlocfilehash: f2b2cfcb09dc0c8c4d65b64f5de55c0b72746457
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752114"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480607"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Gewusst wie: Erstellen eines Schlüssels in der Registrierung (Visual C#)
 Dieses Beispiel fügt der Registrierung des aktuellen Benutzers unter dem Schlüssel "Names" das Wertepaar "Name" und "Isabella" hinzu.  

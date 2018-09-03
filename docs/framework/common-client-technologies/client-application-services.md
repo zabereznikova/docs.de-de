@@ -17,12 +17,12 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-ms.openlocfilehash: d67b7467bdacdfca054d0ecd11a81c7d25b158f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d58510240593f73ff761aa669035f28598006c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743224"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401582"
 ---
 # <a name="client-application-services"></a>Clientanwendungsdienste
 Clientanwendungsdienste erleichtern Ihnen Erstellung von Windows-basierten Anwendungen, die die [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anmelde-, -Rollen- und -Profilanwendungsdienste verwenden, die in den Microsoft ASP.NET 2.0 AJAX-Erweiterungen enthalten sind. Diese Dienste ermöglichen mehreren web- und Windows-basierten Anwendungen die gemeinsame Nutzung von Benutzerinformationen und Benutzerverwaltungsfunktionen von einem einzelnen Server aus. Beispielsweise können Sie mithilfe dieser Dienste folgende Aufgaben ausführen:  
@@ -35,7 +35,7 @@ Clientanwendungsdienste erleichtern Ihnen Erstellung von Windows-basierten Anwen
   
  Clientanwendungsdienste nutzen das Erweiterbarkeitsmodell des Webdiensts durch Clientdienstanbieter, die Sie in Ihren Anwendungskonfigurationsdateien angeben können. Diese Dienstanbieter umfassen Offlinefunktionalitäten, die einen lokalen Cache für Authentifizierung, Rollen und Einstellungsdaten verwenden, wenn keine Netzwerkverbindung verfügbar ist.  
   
- Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+ Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
@@ -64,10 +64,10 @@ Clientanwendungsdienste erleichtern Ihnen Erstellung von Windows-basierten Anwen
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über die ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [Verwenden der Formularauthentifizierung mit Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Verwenden von Rolleninformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Verwenden von Profilinformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [Authentifizierung in ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Verwalten der Autorisierung mithilfe von Rollen](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
+ [Übersicht über die ASP.NET-Anwendungsdienste](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Verwenden der Formularauthentifizierung mit Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Verwenden von Rolleninformationen mit Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Verwenden von Profilinformationen mit Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Authentifizierung in ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [Verwalten der Autorisierung mithilfe von Rollen](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744381"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468997"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Gewusst wie: Installieren einer Assembly in den globalen Assemblycache
 Es gibt zwei Möglichkeiten, eine Assembly mit starkem Namen im globalen Assemblycache (GAC) zu installieren:  
@@ -23,7 +23,7 @@ Es gibt zwei Möglichkeiten, eine Assembly mit starkem Namen im globalen Assembl
 > [!IMPORTANT]
 >  Nur Assemblys mit starkem Namen können im GAC installiert werden. Informationen zum Erstellen einer Assembly mit starkem Namen finden Sie unter [How to: Sign an Assembly with a Strong Name (Vorgehensweise: Signieren einer Assembly mit einem starken Namen)](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
--   Verwenden des [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx)  
+-   Verwenden des [Windows Installer](/windows/desktop/Msi/windows-installer-portal)  
   
      Hierzu erstellen Sie in Visual Studio 2012 und Visual Studio 2013 ein InstallShield Limited Edition-Projekt.  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Windows Installer-Bereitstellung](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Windows Installer-Bereitstellung](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

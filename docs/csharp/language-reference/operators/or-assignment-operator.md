@@ -8,11 +8,11 @@ helpviewer_keywords:
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
 ms.openlocfilehash: fe56005ce94656b5e8a075cddfb91dc0da096cf7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929913"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408422"
 ---
 # <a name="-operator-c-reference"></a>Operator |= (C#-Referenz)
 Der OR-Zuweisungsoperator  

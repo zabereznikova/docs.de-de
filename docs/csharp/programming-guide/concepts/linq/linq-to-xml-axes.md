@@ -3,11 +3,11 @@ title: LINQ to XML-Achsen (C#)
 ms.date: 07/20/2015
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
 ms.openlocfilehash: d12d35a6f9b02056946ba201a7bd5a961f64ba36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331489"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408654"
 ---
 # <a name="linq-to-xml-axes-c"></a>LINQ to XML-Achsen (C#)
 Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktur geladen haben, können Sie durch Abfragen der XML-Struktur nach Elementen und Attributen suchen und deren Werte abrufen.  
@@ -16,7 +16,7 @@ Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktu
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[LINQ to XML Axes Overview (C#) (Übersicht über LINQ to XML-Achsen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|Definiert Achsen und erklärt, wie sie im Kontext von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen zu verwenden sind.|  
 |[How to: Retrieve a Collection of Elements (LINQ to XML) (C#) (Vorgehensweise: Abrufen einer Elementauflistung (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|Enthält eine Einführung in die <xref:System.Xml.Linq.XContainer.Elements%2A>-Methode. Diese Methode ruft eine Auflistung der untergeordneten Elemente eines Elements ab.|  

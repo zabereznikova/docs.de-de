@@ -5,12 +5,12 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 7ec8d2423c8f9d25ef48c0f0cc0d9627864c9c27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744495"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408560"
 ---
 # <a name="client-application-services-overview"></a>Übersicht über Clientanwendungsdienste
 Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anmeldung, Rollen und Profildienste von Windows Forms- und Windows Presentation Foundation-Anwendungen (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienste sind in den Microsoft ASP.NET 2.0 AJAX-Erweiterungen enthalten, die wiederum in [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] und [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] enthalten sind. Diese Dienste ermöglichen mehreren web- und Windows-basierten Anwendungen die gemeinsame Nutzung von Benutzerinformationen und Benutzerverwaltungsfunktionen von einem einzelnen Server aus.  
@@ -25,7 +25,7 @@ Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_cu
   
 -   Integration mit dem Visual Studio-Designer für Anwendungseinstellungen. Wenn Sie in Visual Studio Ihrem Projekt Einstellungen hinzufügen, können Sie angeben, auf welche Einstellungen über den Dienstanbieter für Clienteinstellungen zugegriffen werden soll.  
   
- In den folgenden Abschnitten werden diese Funktionen ausführlicher beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+ In den folgenden Abschnitten werden diese Funktionen ausführlicher beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="authentication"></a>Authentifizierung  
  Sie können Clientanwendungsdienste verwenden, um einen Benutzer durch einen vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Authentifizierungsdienst zu überprüfen. Sie können einen Benutzer mithilfe der Windows- oder Formularauthentifizierung überprüfen. Windows-Authentifizierung bedeutet, dass die Identität des Benutzers die ist, die vom Betriebssystem bereitgestellt wird, wenn sich ein Benutzer bei einem Computer oder einer Domäne anmeldet. Normalerweise verwenden Sie Windows-Authentifizierung für eine Anwendung, die in einem Firmenintranet bereitgestellt ist. Formularauthentifizierung bedeutet, dass Sie Anmeldesteuerelemente in Ihre Anwendung integrieren und die abgerufenen Anmeldeinformationen an den Authentifizierungsanbieter übergeben müssen. Normalerweise verwenden Sie Formularauthentifizierung für eine Anwendung, die im Internet bereitgestellt ist.  
@@ -40,17 +40,17 @@ Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_cu
   
  Wenn Sie Ihre Anwendung für die Verwendung eines Anmeldeinformationsanbieters bei der Formularauthentifizierung konfigurieren, müssen Sie leere Zeichenfolgen oder `null` als Parameter der <xref:System.Web.Security.Membership.ValidateUser%2A>-Methode übergeben. Der Dienstanbieter ruft dann Ihre <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType>-Methodenimplementierung auf. Normalerweise implementieren Sie diese Methode, um ein Dialogfeld anzuzeigen und ein aufgefülltes <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>-Objekt zurückzugeben.  
   
- Weitere Informationen zur Authentifizierung finden Sie unter [ASP.NET-Authentifizierung](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Authentifizierungsdiensts finden Sie unter [Verwenden der Formularauthentifizierung mit Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
+ Weitere Informationen zur Authentifizierung finden Sie unter [ASP.NET-Authentifizierung](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Authentifizierungsdiensts finden Sie unter [Verwenden der Formularauthentifizierung mit Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
 ## <a name="roles"></a>Rollen  
  Sie können Clientanwendungsdienste verwenden, um Rolleninformationen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Rollendienst abzurufen. Um zu bestimmen, ob der aktuelle, authentifizierte Benutzer eine bestimmte Rolle innehat, rufen Sie die <xref:System.Security.Principal.IPrincipal.IsInRole%2A>-Methode des <xref:System.Security.Principal.IPrincipal>-Verweises auf, der von der statischen `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft abgerufen wurde. Die <xref:System.Security.Principal.IPrincipal.IsInRole%2A>-Methode übernimmt den Rollennamen als Parameter und gibt einen <xref:System.Boolean> Wert zurück, der angibt, ob der aktuelle Benutzer die angegebene Rolle innehat. Diese Methode gibt `false` zurück, wenn der Benutzer nicht authentifiziert ist oder nicht die angegebenen Rolle innehat.  
   
- Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Rollendiensts finden Sie unter [Verwenden von Rolleninformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
+ Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Rollendiensts finden Sie unter [Verwenden von Rolleninformationen mit Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Einstellungen  
  Sie können Clientanwendungsdienste verwenden, um Benutzeranwendungseinstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildienst abzurufen. Die Webeinstellungenfunktion von Clientanwendungsdiensten integriert sich mit dem in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] bereitgestellten Feature für Anwendungseinstellungen. Generieren Sie zum Abrufen der Webeinstellungen zunächst eine `Settings`-Klasse (auf die in C# als `Properties.Settings.Default` und in Visual Basic als `My.Settings` zugegriffen wird) für Ihr Projekt, indem Sie die Registerkarte **Einstellungen** des Visual Studio-Projekt-Designers verwenden. Auf der Registerkarte **Einstellungen** können Sie die Schaltfläche **Webeinstellungen laden** verwenden, um Webeinstellungen abzurufen und sie der generierten `Settings`-Klasse hinzuzufügen. Sie können Webeinstellungen verwenden, die für die Verwendung durch alle authentifizierten Benutzer oder durch alle anonymen Benutzer konfiguriert sind.  
   
- Weitere Informationen zu Anwendungseinstellungen finden Sie unter [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md). Informationen zum Implementieren Ihrer eigenen Einstellungsklasse, statt eine in Visual Studio zu generieren, finden Sie unter [Gewusst wie: Erstellen von Anwendungseinstellungen](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildiensts finden Sie unter [Verwenden von Profilinformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
+ Weitere Informationen zu Anwendungseinstellungen finden Sie unter [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md). Informationen zum Implementieren Ihrer eigenen Einstellungsklasse, statt eine in Visual Studio zu generieren, finden Sie unter [Gewusst wie: Erstellen von Anwendungseinstellungen](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildiensts finden Sie unter [Verwenden von Profilinformationen mit Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   
 ## <a name="client-application-services-classes"></a>Clientanwendungsdienste-Klassen  
  In der folgenden Tabelle werden die Klassen beschrieben, die die Clientanwendungsdienste-Funktion implementieren.  
@@ -62,7 +62,7 @@ Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_cu
   
  Die Clientanwendungsdienst-Anbieter implementieren oder erweitern [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]-Standardtypen, implementieren aber nicht jeden Member bzw. jede Funktion, die von diesen Typen definiert werden. Beispielsweise können Sie die Clientanwendungsdienst-Anbieter nicht verwenden, um eine Benutzerverwaltungsanwendung für die Erstellung neuer Benutzer und die Verwaltung von Rollenmitgliedschaften zu implementieren. Um diese Funktionalität zu implementieren, müssen Sie aktuell eine Webanwendung und serverseitigen Code verwenden. Informationen dazu, welche Member nicht implementiert sind, finden Sie in der Referenzdokumentation, auf die Sie über die Links in dieser Tabelle zugreifen können.  
   
-|Klasse|description|  
+|Klasse|Beschreibung |  
 |-----------|-----------------|  
 |<xref:System.Web.ClientServices.ClientFormsIdentity>|Diese Klasse verwaltet die Benutzeridentität und Authentifizierungscookies für die Formularauthentifizierung.<br /><br /> Der Hauptgrund für den direkten Zugriff auf diese Klasse besteht darin, die <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A>-Methode aufzurufen, die einen Benutzer im Hintergrund neu überprüft (beispielsweise beim Wechsel vom Offline- in den Onlinemodus).<br /><br /> Nachdem der Benutzer unter Verwendung der Formularauthentifizierung authentifiziert wurde, können Sie eine Instanz dieser Klasse über die <xref:System.Security.Principal.IPrincipal.Identity%2A>-Eigenschaft des <xref:System.Security.Principal.IPrincipal>-Verweises abrufen, der über die statische `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft abgerufen wurde.|  
 |<xref:System.Web.ClientServices.ClientRolePrincipal>|Diese Klasse verwaltet die Benutzerrollen.<br /><br /> Diese Klasse besitzt keine Member, auf die nicht indirekt zugegriffen werden kann. Nach der Authentifizierung des Benutzer können Sie jedoch auf eine Instanz dieser Klasse über die statische `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft zugreifen.|  
@@ -82,10 +82,10 @@ Clientanwendungsdienste ermöglichen vereinfachten Zugriff auf [!INCLUDE[ajax_cu
  [Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Übersicht über die ASP.NET-Anwendungsdienste](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [Verwenden der Formularauthentifizierung mit Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Verwenden von Rolleninformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Verwenden von Profilinformationen mit Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [Authentifizierung in ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Managing Authorization Using Roles (Verwalten der Autorisierung mithilfe von Rollen)](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
- [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [Übersicht über die ASP.NET-Anwendungsdienste](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Verwenden der Formularauthentifizierung mit Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Verwenden von Rolleninformationen mit Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Verwenden von Profilinformationen mit Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Authentifizierung in ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [Managing Authorization Using Roles (Verwalten der Autorisierung mithilfe von Rollen)](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

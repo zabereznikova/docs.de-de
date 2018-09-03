@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: e6c28ee0c575bd6010a8aad76fc978062c5fc6a4
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 892b24b0283314f5aded0405df55a93069cf91e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960754"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43404028"
 ---
 # <a name="checked-c-reference"></a>checked (C#-Referenz)
 
@@ -42,8 +42,8 @@ Dieses Beispiel zeigt, wie mit `checked` die Überlaufüberprüfung zur Laufzeit
 
 ## <a name="see-also"></a>Siehe auch
 
-[C#-Referenz](../../../csharp/language-reference/index.md)  
-[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-[AKtiviert und nicht aktiviert](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
-[unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [AKtiviert und nicht aktiviert](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)

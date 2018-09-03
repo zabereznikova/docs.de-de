@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 904657175d87e0d78e518248ed89b3720227360f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339169"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463116"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Ihr erstes Programm (C#-Programmierhandbuch)
 Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!“ -Programms. Das Programm zeigt die Zeichenfolge `Hello World!` an.  
@@ -78,7 +78,7 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
   
  Der Parameter der `Main`-Methode, `args`, ist ein `string`-Array, das die Befehlszeilenargumente enthält, die zum Aufrufen des Programms verwendet werden. Im Gegensatz zu C++ enthält dieses Array nicht den Namen der ausführbaren Datei (EXE).  
   
- Weitere Informationen zur Verwendung von Befehlszeilenargumenten finden Sie unter [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md) und [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Weitere Informationen zur Verwendung von Befehlszeilenargumenten finden Sie unter [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md) und [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
  Der Aufruf von <xref:System.Console.ReadKey%2A> am Ende der `Main`-Methode verhindert, dass das Konsolenfenster geschlossen wird, bevor Sie die Ausgabe lesen können, wenn Sie das Programm durch Drücken von F5 im Debugmodus ausführen.  
   
@@ -130,7 +130,7 @@ Die folgende Prozedur erstellt eine C#-Version des herkömmlichen „Hallo Welt!
  [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
  [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>Beispielanwendungen für C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<paveover>Beispielanwendungen für C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [C#-Referenz](../../../csharp/language-reference/index.md)  
  [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

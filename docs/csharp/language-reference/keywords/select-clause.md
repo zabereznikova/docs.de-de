@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279983"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467340"
 ---
 # <a name="select-clause-c-reference"></a>select-Klausel (C#-Referenz)
 In einem Abfrageausdruck gibt die `select`-Klausel den Typ der Werte an, die beim Ausführen der Abfrage erstellt werden. Das Ergebnis basiert auf der Auswertung aller vorherigen Klauseln und auf allen Ausdrücke in der `select`-Klausel selbst. Ein Abfrageausdruck muss entweder mit einer `select`-Klausel oder einer [group](../../../csharp/language-reference/keywords/group-clause.md)-Klausel enden.  
@@ -34,11 +34,12 @@ In einem Abfrageausdruck gibt die `select`-Klausel den Typ der Werte an, die bei
 ## <a name="remarks"></a>Hinweise  
  Beim Kompilieren wird die `select`-Klausel in einen Methodenaufruf des <xref:System.Linq.Enumerable.Select%2A>-Standardabfrageoperators übersetzt.  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from-Klausel](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial (Methode) (C#-Referenz)](../../../csharp/language-reference/keywords/partial-method.md)  
- [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [Abfrageschlüsselwörter (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from-Klausel](../../../csharp/language-reference/keywords/from-clause.md)  
+- [partial (Methode) (C#-Referenz)](../../../csharp/language-reference/keywords/partial-method.md)  
+- [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

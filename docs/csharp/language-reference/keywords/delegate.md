@@ -9,12 +9,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: ba1cfdcc56b3d2301a07ffa4af793e7002da21bb
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7a5f46d137e22da01b2ab6cd3eee57d66c411e8f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948422"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43442732"
 ---
 # <a name="delegate-c-reference"></a>Delegat (C#-Referenz)
 
@@ -45,11 +45,11 @@ Der Delegat muss mit einer Methode oder einem Lambda-Ausdruck instanziiert werde
 
 ## <a name="see-also"></a>Siehe auch
 
-[C#-Referenz](../../../csharp/language-reference/index.md)  
-[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-[Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
-[Delegaten](../../../csharp/programming-guide/delegates/index.md)  
-[Ereignisse](../../../csharp/programming-guide/events/index.md)  
-[Delegate mit benannten im Vergleich zu anonymen Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
-[Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+- [Delegate mit benannten im Vergleich zu anonymen Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)

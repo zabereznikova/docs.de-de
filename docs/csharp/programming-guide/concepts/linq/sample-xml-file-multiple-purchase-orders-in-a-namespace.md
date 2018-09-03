@@ -3,11 +3,11 @@ title: 'Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
 ms.openlocfilehash: 03ca5cfbf198f576a52e6ceb5eb085195d599d3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338434"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470011"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält mehrere Aufträge. Der XML-Code befindet sich in einem Namespace.  

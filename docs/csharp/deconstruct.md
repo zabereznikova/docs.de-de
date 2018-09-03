@@ -5,22 +5,22 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 726a391a4a747e5446e252e669c5b16248a5e0ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48724c65de4fe71294eb5c61c1891d9d56c9b5a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217744"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392971"
 ---
-# <a name="deconstructing-tuples-and-other-types"></a>Dekonstruieren von Tupeln und anderen Typen #
+# <a name="deconstructing-tuples-and-other-types"></a>Dekonstruieren von Tupeln und anderen Typen
 
 Ein Tupel stellt einen einfachen Weg bereit, um mehrere Werte aus einem Methodenaufruf abzurufen. Sobald Sie den Tupel abrufen, müssen Sie jedoch seine individuellen Elemente bearbeiten. Jedes Element einzeln zu bearbeiten ist jedoch mühselig, wie das folgende Beispiel zeigt. Die Methode `QueryCityData` gibt ein 3-Tupel zurück, und jedes seiner Elemente wird in einem separaten Vorgang einer Variable zugewiesen.
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
-Das Abrufen von mehreren Feld- und Eigenschaftswerten aus einem Objekt kann genauso mühselig sein: Sie müssen einen Feld- oder Eigenschaftswert einer Variable zuweisen, indem Sie jedes Element einzeln eingeben. 
+Das Abrufen von mehreren Feld- und Eigenschaftswerten aus einem Objekt kann genauso mühselig sein: Sie müssen einen Feld- oder Eigenschaftswert einer Variable zuweisen, indem Sie jedes Element einzeln eingeben.
 
-Ab C# 7.0 können Sie mit einem einzigen *Dekonstruieren*-Vorgang mehrere Elemente aus einem Tupel oder mehrere berechnete, Feld- und Eigenschaftswerte aus einem Objekt abrufen. Wenn Sie ein Tupel dekonstruieren, weisen Sie seine Elemente einzelnen Variablen zu. Wenn Sie ein Objekt dekonstruieren, weisen Sie bestimmte Elemente einzelnen Variablen zu. 
+Ab C# 7.0 können Sie mit einem einzigen *Dekonstruieren*-Vorgang mehrere Elemente aus einem Tupel oder mehrere berechnete, Feld- und Eigenschaftswerte aus einem Objekt abrufen. Wenn Sie ein Tupel dekonstruieren, weisen Sie seine Elemente einzelnen Variablen zu. Wenn Sie ein Objekt dekonstruieren, weisen Sie bestimmte Elemente einzelnen Variablen zu.
 
 ## <a name="deconstructing-a-tuple"></a>Dekonstruieren eines Tupel
 
@@ -37,10 +37,10 @@ Es gibt drei Wege zum Dekonstruieren eines Tupels:
     [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
 - Sie können das Schlüsselwort `var` verwenden, damit C# den Typ jeder Variable herleitet. Platzieren Sie das Schlüsselwort `var` außerhalb der Klammern. Im folgenden Beispiel wird ein Typrückschluss beim Dekonstruieren des von der Methode `QueryCityData` zurückgegebenen 3-Tupel verwendet.
- 
+
     [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
-    Sie können das Schlüsselwort `var` auch einzeln mit beliebigen oder allen Variablendeklarationen innerhalb der Klammern verwenden. 
+    Sie können das Schlüsselwort `var` auch einzeln mit beliebigen oder allen Variablendeklarationen innerhalb der Klammern verwenden.
 
     [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
@@ -82,7 +82,7 @@ Das folgende Beispiel überlädt die Methode `Deconstruct`, um verschiedene Komb
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-Da Sie die Methode `Deconstruct` überladen können, um Gruppen von Daten zurückzusenden, die häufig aus einem Objekt extrahiert werden, sollten Sie bei der Definition von `Deconstruct`-Methoden darauf achten, dass deren Signaturen unverkennbar und eindeutig sind. Mehrere `Deconstruct`-Methoden, die über dieselbe Anzahl an `out`-Parametern oder über dieselbe Anzahl und dieselben Typen von `out`-Parametern in unterschiedlicher Reihenfolge verfügen, können zu Verwirrung führen. 
+Da Sie die Methode `Deconstruct` überladen können, um Gruppen von Daten zurückzusenden, die häufig aus einem Objekt extrahiert werden, sollten Sie bei der Definition von `Deconstruct`-Methoden darauf achten, dass deren Signaturen unverkennbar und eindeutig sind. Mehrere `Deconstruct`-Methoden, die über dieselbe Anzahl an `out`-Parametern oder über dieselbe Anzahl und dieselben Typen von `out`-Parametern in unterschiedlicher Reihenfolge verfügen, können zu Verwirrung führen.
 
 Die überladene Methode `Deconstruct` im folgenden Beispiel veranschaulicht eine mögliche Quelle der Verwirrung. Die erste Überladung gibt den Vor-, Zweit- und Nachnamen und das Alter eines `Person`-Objekts in dieser Reihenfolge zurück. Die zweite Überladung gibt die Informationen zu den Namen nur zusammen mit dem jährlichen Einkommen zurück. Die Reihenfolge von Vor-, Zweit- und Nachname ist jedoch eine andere. Dadurch kann die Reihenfolge eines Arguments beim Dekonstruieren einer `Person`-Instanz leicht verwechselt werden.
 
@@ -98,12 +98,13 @@ Im folgenden Beispiel wird ein `Person`-Objekt in vier Zeichenfolgen (den Vor- u
 
 ## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Dekonstruieren eines benutzerdefinierten Typs mit einer Erweiterungsmethode
 
-Wenn Sie nicht der Autor einer Klasse, Struktur oder Schnittstelle sind, können Sie die Objekte dieses Typs dennoch dekonstruieren, indem Sie eine oder mehrere `Deconstruct`[extension methods (Erweiterungsmethoden)](programming-guide/classes-and-structs/extension-methods.md) implementieren, um die Werte zurückzugeben, an denen Sie interessiert sind. 
+Wenn Sie nicht der Autor einer Klasse, Struktur oder Schnittstelle sind, können Sie die Objekte dieses Typs dennoch dekonstruieren, indem Sie eine oder mehrere `Deconstruct`[extension methods (Erweiterungsmethoden)](programming-guide/classes-and-structs/extension-methods.md) implementieren, um die Werte zurückzugeben, an denen Sie interessiert sind.
 
 Im folgenden Beispiel werden zwei `Deconstruct`-Erweiterungsmethoden für die Klasse <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> definiert. Die erste gibt einen Satz von Werten zurück, der die Merkmale der Eigenschaft angibt, einschließlich ihres Typs, ob es sich dabei um eine statische oder eine Instanzeigenschaft handelt und ob die Eigenschaft schreibgeschützt oder indiziert ist. Die zweite gibt die Zugriffsebene der Eigenschaft an. Da die Zugriffsebene von Get- und Set-Zugriffsmethoden Unterschiede aufweisen kann, geben boolesche Werte an, ob die Eigenschaft über separate Get- und Set-Zugriffsmethoden verfügt und, wenn dies der Fall ist, ob sie über dieselbe Zugriffsebene verfügen. Wenn es nur eine Zugriffsmethode gibt oder die Get- und Set-Zugriffsmethode über dieselbe Zugriffsebene verfügen, gibt die Variable `access` die Zugriffsebene der Eigenschaft als Ganzes an. Andernfalls wird die Zugriffsebene der Get- und Set-Zugriffsmethoden von den Variablen `getAccess` und `setAccess` angezeigt.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
- 
+
 ## <a name="see-also"></a>Siehe auch
-[Discards (Ausschuss)](discards.md)   
-[Tupel](tuples.md)  
+
+- [Verwerfen](discards.md)
+- [Tupel](tuples.md)  

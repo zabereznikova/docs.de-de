@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217973"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400864"
 ---
 # <a name="lambda-expressions"></a>Lambdaausdrücke #
 
@@ -78,7 +78,7 @@ Weitere Informationen zum Erstellen und Verwenden von asynchronen Methoden finde
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambdaausdrücke und Tupel ##
 
-Ab C# 7.0 bietet die C#-Programmiersprache integrierten Support für Tupel. Sie können ein Tupel einem Lambdaausdruck als Argument bereitstellen, und Ihr Lambdaausdruck kann ebenfalls einen Tupel zurückgeben. In einigen Fällen verwendet der C#-Compiler den Typrückschluss, um den Typ der Tupelkomponenten zu ermitteln. 
+Ab C# 7.0 bietet die C#-Programmiersprache integrierten Support für Tupel. Sie können ein Tupel einem Lambdaausdruck als Argument bereitstellen, und Ihr Lambdaausdruck kann ebenfalls einen Tupel zurückgeben. In einigen Fällen verwendet der C#-Compiler den Typrückschluss, um den Typ der Tupelkomponenten zu ermitteln.
 
 Sie können ein Tupel definieren, indem Sie eine durch Trennzeichen getrennte Liste seiner Komponenten in Klammern einschließen. In folgendem Beispiel wird ein Tupel mit fünf Komponenten verwenden, um eine Zahlensequenz an einen Lambdaausdruck zu übergeben; dadurch wird jeder Wert verdoppelt, und es wird ein Tupel mit fünf Komponenten zurückgegeben, das das Ergebnis der Multiplikation enthält.
 
@@ -154,6 +154,6 @@ Lambdas können auf *äußere Variablen* verweisen (siehe [Anonyme Methoden](pro
 
 ## <a name="see-also"></a>Siehe auch ##
 
-[LINQ (Language-Integrated Query, sprachintegrierte Abfrage)](../standard/using-linq.md)   
-[Anonyme Methoden](programming-guide/statements-expressions-operators/anonymous-methods.md)   
-[Ausdrucksbaumstrukturen](expression-trees.md)
+- [LINQ (Language Integrated Query)](../standard/using-linq.md)
+- [Anonyme Methoden](programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Ausdrucksbaumstrukturen](expression-trees.md)

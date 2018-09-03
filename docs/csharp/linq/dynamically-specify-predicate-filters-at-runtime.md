@@ -3,12 +3,12 @@ title: Dynamisches Festlegen von Prädikatfiltern zur Laufzeit (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Prädikatfilter zur Laufzeit mit LINQ in C# dynamisch festlegen.
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 7051d7c754a0db29771a2e03a3b624c0e434eecd
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404089"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482039"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Dynamisches Festlegen von Prädikatfiltern zur Laufzeit
 
@@ -70,5 +70,5 @@ In einigen Fällen wissen Sie bis zur Laufzeit nicht, wie viele Prädikate Sie f
 
 ## <a name="see-also"></a>Siehe auch
 
-[Language-Integrated Query (LINQ)](index.md)  
-[where-Klausel](../language-reference/keywords/where-clause.md)  
+- [Language-Integrated Query (LINQ)](index.md)
+- [where-Klausel](../language-reference/keywords/where-clause.md)

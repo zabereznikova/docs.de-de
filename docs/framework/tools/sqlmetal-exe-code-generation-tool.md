@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9dab959628343cd99f75ffeda30e3f423f2aaf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409801"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396921"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
 Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] -Komponente von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Durch Anwenden der später in diesem Thema behandelten Optionen können Sie SqlMetal anweisen, mehrere verschiedene Aktionen wie etwa die folgenden auszuführen:  
@@ -25,7 +25,7 @@ Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE
   
 -   Generieren von Code und Zuordnungsattributen oder einer Zuordnungsdatei von einer DBML-Datei aus  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Standardmäßig befindet sich die Datei unter " `drive`:\Programme\Microsoft SDKs\Windows\v`n.nn`\bin". Wenn Sie Visual Studio nicht installieren, können Sie die SQLMetal-Datei auch über einen Download des [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225)erhalten.  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Standardmäßig befindet sich die Datei unter " `drive`:\Programme\Microsoft SDKs\Windows\v`n.nn`\bin". Wenn Sie Visual Studio nicht installieren, können Sie die SQLMetal-Datei auch über einen Download des [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)erhalten.  
   
 > [!NOTE]
 >  Entwickler, die Visual Studio verwenden, können auch den [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] verwenden, um Entitätsklassen zu generieren. Die Befehlszeilenmethode ist für umfangreiche Datenbanken gut skalierbar. Da SqlMetal ein Befehlszeilentool ist, können Sie es in einem Buildprozess verwenden.  
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **Verbindungsoptionen**  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**/server:** *\<name>*|Gibt den Datenbank-Servernamen an.|  
 |**/database:** *\<name>*|Gibt den Datenbankkatalog auf dem Server an.|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **Extraktionsoptionen**  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**/views**|Extrahiert Datenbankansichten.|  
 |**/functions**|Extrahiert Datenbankfunktionen.|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **Ausgabeoptionen**  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**/dbml** *[:Dateipfad]*|Sendet die Ausgabe als DBML-Datei. Kann nicht zusammen mit der Option **/map** verwendet werden.|  
 |**/code** *[:Dateipfad]*|Sendet die Ausgabe als Quellcode. Kann nicht zusammen mit der Option **/dbml** verwendet werden.|  
@@ -70,7 +70,7 @@ sqlmetal [options] [<input file>]
   
  **Verschiedenes**  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**/language:** *\<sprache>*|Gibt die Quellcodesprache an.<br /><br /> Gültige *\<<sprache>*: vb, csharp.<br /><br /> Standardwert: von der Erweiterung des Namens der Codedatei abgeleitet.|  
 |**/namespace:** *\<name>*|Gibt den Namespace des generierten Codes an. Standardwert: kein Namespace.|  
@@ -81,7 +81,7 @@ sqlmetal [options] [<input file>]
   
  **Eingabedatei**  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**\<eingabedatei>**|Gibt eine SQL Server Express-Datei (.mdf), eine [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Datei (.sdf) oder eine Zwischendatei (.dbml) an.|  
   

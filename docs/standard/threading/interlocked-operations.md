@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589970"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393138"
 ---
 # <a name="interlocked-operations"></a>Interlocked-Vorgänge
 Die <xref:System.Threading.Interlocked>-Klasse stellt Methoden bereit, die den Zugriff auf eine Variable synchronisieren, die von mehreren Threads gemeinsam genutzt wird. Threads aus verschiedenen Prozessen können diesen Mechanismus verwenden, wenn sich die Variable im freigegebenen Speicher befindet. Interlocked-Vorgänge sind unteilbare (atomarische) Vorgänge. Der gesamte Vorgang ist eine Einheit, die durch einen anderen Interlocked-Vorgang mit derselben Variablen nicht unterbrochen werden kann. Dies ist in Betriebssystemen mit präemptivem Multithreading von Bedeutung, bei denen ein Thread nach dem Laden eines Werts aus einer Speicheradresse unterbrochen werden kann, bevor der Wert geändert oder gespeichert wurde.  
@@ -36,7 +36,7 @@ Die <xref:System.Threading.Interlocked>-Klasse stellt Methoden bereit, die den Z
   
  Bei modernen Prozessoren können die Methoden der <xref:System.Threading.Interlocked>-Klasse oft durch eine einzige Anweisung implementiert werden. Sie bieten folglich eine Hochleistungssynchronisierung und können verwendet werden, um Mechanismen für höherstufige Synchronisierung zu erstellen (z.B. Spinlocks).  
   
- Ein Beispiel, in dem die <xref:System.Threading.Monitor>- und <xref:System.Threading.Interlocked>-Klasse in Kombination verwendet werden, finden Sie unter [Monitor-Klasse](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Ein Beispiel, in dem die <xref:System.Threading.Monitor>- und <xref:System.Threading.Interlocked>-Klasse in Kombination verwendet werden, finden Sie unter [Monitor-Klasse](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="compareexchange-example"></a>CompareExchange-Beispiel  
  Mit der <xref:System.Threading.Interlocked.CompareExchange%2A>-Methode können Sie Berechnungen schützen, die komplexer sind als einfaches Inkrementieren und Dekrementieren. Im folgenden Beispiel wird eine threadsichere Methode dargestellt, durch die einer als Gleitkommazahl gespeicherten laufenden Summe Werte hinzugefügt werden. (Für ganze Zahlen ist die <xref:System.Threading.Interlocked.Add%2A>-Methode eine einfachere Lösung.) Vollständige Codebeispiele finden Sie unter den Überladungen von <xref:System.Threading.Interlocked.CompareExchange%2A>, die Argumente mit einfacher Genauigkeit und Gleitkommaargumente mit doppelter Genauigkeit (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> und <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>) annehmen.  

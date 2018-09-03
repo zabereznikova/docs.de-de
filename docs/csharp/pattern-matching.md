@@ -3,12 +3,12 @@ title: Musterabgleich – Leitfaden für C#
 description: Erfahren Sie mehr über Musterabgleichausdrücke in C#.
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231475"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255340"
 ---
 # <a name="pattern-matching"></a>Musterabgleich #
 
@@ -21,7 +21,7 @@ Wir arbeiten mit Strukturen, die geometrische Formen mithilfe Musterabgleichanwe
 Diese Techniken sind nicht für Daten geeignet, die nicht in einer Klassenhierarchie strukturiert sind. Wenn Daten und Methoden getrennt sind, benötigen Sie andere Tools. Die neuen *Musterabgleichkonstrukte* ermöglichen eine saubere Syntax, um Daten zu untersuchen und anhand jeder Bedingung dieser Daten Steuerungsflüsse zu bearbeiten. Sie schreiben bereits `if`-Anweisungen und `switch`, die den Wert einer Variable testen. Sie schreiben `is`-Anweisungen, die einen Typ einer Variable testen. *Musterabgleich* fügt neue Funktionen zu diesen Anweisungen hinzu.
 
 In diesem Thema erstellen Sie eine Methode, die den Bereich der verschiedenen geometrischen Formen berechnet. Aber Sie tun dies, ohne auf objektorientierte Techniken zurückzugreifen und eine Klassenhierarchie für die verschiedenen Formen zu erstellen.
-Sie verwenden stattdessen *Musterabgleich*. Sie machen jede Form zu einem `struct` anstatt zu einer Klasse, um weiter hervorzuheben, dass wir keine Vererbung verwenden. Beachten Sie, dass unterschiedliche `struct`-Typen keinen normalen benutzerdefinierten Basistyp angeben können, sodass Vererbung kein möglicher Entwurf ist.
+Sie verwenden stattdessen *Musterabgleich*.
 Während Sie dieses Beispiel bearbeiten, vergleichen Sie diesen Code damit, wie er als Objekthierarchie strukturiert wäre. Wenn die Klasse, die Sie abfragen und bearbeiten müssen, keine Klassenhierarchie ist, ermöglicht Musterabgleich sehr elegante Entwürfe.
 
 Anstatt mit einer Definition einer abstrakten Form zu starten und verschiedene bestimmte Formklassen hinzuzufügen, beginnen wir mit einfachen reinen Datendefinitionen für jede der geometrischen Formen:

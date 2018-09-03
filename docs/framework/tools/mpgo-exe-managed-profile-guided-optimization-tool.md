@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42e1fb080ac0af34c621cef3a991cad7bcf603ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0045dd8d947cfbf7da0ecfec6bbae9561eae652d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410019"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485767"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
 Das verwaltete, profilgesteuerte Optimierungstool (Managed, Profile Guides Optimization Tool, Mpgo.exe) ist ein Befehlszeilentool, das allgemeine Endbenutzerszenarios verwendet, um die vom [Native Image Generator (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) erstellten Assemblys nativer Bilder zu optimieren. Mit diesem Tool können Sie Aus- und Weiterbildungsszenarien ausführen, die Profildaten generieren. Der [Native Image Generator (Ngen.exe) ](../../../docs/framework/tools/ngen-exe-native-image-generator.md) verwendet diese Daten, um die generierten Anwendungsassemblys nativer Bilder zu optimieren. Ein Aus- und Weiterbildungsszenario ist die Testausführung einer erwarteten Nutzung Ihrer Anwendung. Mpgo.exe ist in Visual Studio Ultimate 2012 und höheren Versionen verfügbar. Ab [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] können Sie Mpgo.exe auch zum Optimieren von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden.  
   
  Profilgesteuerte Optimierung verbessert Anwendungsstartzeit, Arbeitsspeicherauslastung (Workingsetgröße) und Durchsatz, indem Daten aus Trainingsszenarien erfasst und verwendet werden, um den Aufbau von systemeigenen Abbildern zu optimieren.  
   
- Wenn Sie Leistungsprobleme bei Startzeit oder Workingsetgröße für Intermediate Language (IL)-Assemblys erkennen, empfehlen wir Ihnen zunächst die Verwendung von Ngen.exe, um Just-in-Time-Kompilierungsaufwände auszuschließen und die gemeinsame Verwendung von Code zu erleichtern. Wenn Sie weitere Verbesserungen benötigen, können Sie Mpgo.exe weiter zur Optimierung der Anwendung verwenden. Sie können die Leistungsdaten von nicht optimiertem Assemblys systemeigener Abbilder als Baseline verwenden, um die Leistungszuwächse zu ermitteln. Das Verwenden von Mpgo.exe kann möglicherweise zu kürzeren Kaltstartzeiten und einer geringeren Workingsetgröße führen. Durch Mpgo.exe werden IL-Assemblys Informationen hinzugefügt, die von Ngen.exe verwendet werden, um optimierte Assemblys von systemeigenen Abbildern zu erstellen. Weitere Informationen finden Sie im Eintrag [Improving Launch Performance for your Desktop Applications (Verbessern der Startleistung für Desktopanwendungen)](http://go.microsoft.com/fwlink/p/?LinkId=248943) im .NET-Blog.  
+ Wenn Sie Leistungsprobleme bei Startzeit oder Workingsetgröße für Intermediate Language (IL)-Assemblys erkennen, empfehlen wir Ihnen zunächst die Verwendung von Ngen.exe, um Just-in-Time-Kompilierungsaufwände auszuschließen und die gemeinsame Verwendung von Code zu erleichtern. Wenn Sie weitere Verbesserungen benötigen, können Sie Mpgo.exe weiter zur Optimierung der Anwendung verwenden. Sie können die Leistungsdaten von nicht optimiertem Assemblys systemeigener Abbilder als Baseline verwenden, um die Leistungszuwächse zu ermitteln. Das Verwenden von Mpgo.exe kann möglicherweise zu kürzeren Kaltstartzeiten und einer geringeren Workingsetgröße führen. Durch Mpgo.exe werden IL-Assemblys Informationen hinzugefügt, die von Ngen.exe verwendet werden, um optimierte Assemblys von systemeigenen Abbildern zu erstellen. Weitere Informationen finden Sie im Eintrag [Improving Launch Performance for your Desktop Applications (Verbessern der Startleistung für Desktopanwendungen)](https://go.microsoft.com/fwlink/p/?LinkId=248943) im .NET-Blog.  
   
  Dieses Tool wird automatisch mit Visual Studio installiert. Um das Tool auszuführen, verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7) mit Administratoranmeldeinformationen, und geben Sie Folgendes an der Eingabeaufforderung ein. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -46,7 +46,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 > [!NOTE]
 >  Sie können entweder `–Scenario` oder `–Import` als erforderlichen Befehl verwenden, aber nicht beide Befehle. Es wird keiner der erforderlichen Parameter verwendet, wenn Sie die Option `–Reset` angeben.  
   
-|Erforderlicher Parameter|description|  
+|Erforderlicher Parameter|Beschreibung |  
 |------------------------|-----------------|  
 |`-Scenario` \<*Befehl*><br /><br /> – oder –<br /><br /> `-Scenario` \<*Paketname*><br /><br /> - oder - <br /><br /> `-Import` \<*Verzeichnis*>|Für Desktop-Apps verwenden Sie `–Scenario` zum Angeben des Befehls zum Ausführen der Anwendung, die Sie optimieren möchten, einschließlich aller Befehlszeilenargumente. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Befehl*, wenn es einen Pfad angibt, der Leerzeichen enthält, z.B: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`. Verwenden Sie keine doppelten Anführungszeichen, da sie nicht ordnungsgemäß funktionieren, wenn der *Befehl* Leerzeichen enthält.<br /><br /> - oder - <br /><br /> Für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden Sie `–Scenario` zum Angeben des Pakets, für das Sie Profilinformationen generieren möchten. Wenn Sie den Paketanzeigenamen oder den Paketfamiliennamen anstelle des vollständigen Paketnamens angeben, wählt Mpgo.exe das Paket aus, das mit dem von Ihnen eingegebenen Namen übereinstimmt, sofern nur eine Übereinstimmung vorliegt. Wenn mehrere Pakete mit dem angegebenen Namen übereinstimmen, werden Sie von Mpgo.exe aufgefordert, ein Paket auszuwählen.<br /><br /> – oder –<br /><br /> Verwenden Sie `-Import` zum Angeben, dass Optimierungsdaten aus zuvor optimiertem Assemblys zum Optimieren der Assemblys in der `-AssemblyList` verwendet werden sollen. *Verzeichnis* gibt das Verzeichnis an, das die zuvor optimierten Dateien enthält. Die in `–AssemblyList` oder `–AssemblyListFile` angegebenen Assemblys sind die neuen Versionen der mit den Daten aus den importierten Dateien zu optimierenden Assemblys. Das Verwenden der Optimierungsdaten aus früheren Versionen der Assemblys ermöglicht Ihnen die Optimierung neuer Versionen, ohne erneute Ausführung des Szenarios.  Wenn die importierten und die neuen Assemblys jedoch erheblich unterschiedlichen Code enthalten, sind die Optimierungsdaten nicht effektiv. Die Assemblynamen, die in `–AssemblyList` oder `–AssemblyListFile` angegeben werden, müssen im Verzeichnis vorhanden sein, das durch `–Import`*verzeichnis* angegeben wird. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.<br /><br /> Sie müssen entweder `–Scenario` oder `–Import` angeben, jedoch nicht beide.|  
 |`-OutDir` \<*Verzeichnis*>|Das Verzeichnis, in dem die optimierten Assemblys gespeichert werden sollen. Wenn eine Assembly bereits im Ausgabeverzeichnisordner vorhanden ist, wird eine neue Kopie erstellt und eine Indexnummer an den Namen angefügt, beispielsweise „*assemblyname*-1.exe“. Verwenden Sie doppelte Anführungszeichen um *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.|  
@@ -54,7 +54,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-AppID` \<*appId*>|Die ID der Anwendung im angegebenen Paket. Wenn Sie den Platzhalter (\*) verwenden, versucht „mpgo.exe“ die AppIDs im Paket aufzulisten und greift bei einem Fehler auf die App \<*package_family_name*>! zurück. Wenn Sie eine Zeichenfolge mit einem vorangestellten Ausrufezeichen (!) angeben, wird Mpgo.exe den Paketfamiliennamen mit dem übergebenen Argument verketten.|  
 |`-Timeout` \<*Sekunden*>|Die Zeitspanne, in der die [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App ausgeführt werden kann, bevor die App beendet wird.|  
   
-|Optionale Parameter|description|  
+|Optionale Parameter|Beschreibung |  
 |------------------------|-----------------|  
 |`-64bit`|Instrumentiert die Assemblys für 64-Bit-Systeme.  Sie müssen diesen Parameter für 64-Bit-Assemblys angeben, auch wenn Ihre Assembly sich selbst als 64-Bit deklariert.|  
 |`-ExeConfig` \<*Dateiname*>|Gibt die Konfigurationsdatei an, die in Ihrem Szenario verwendet wird, um Versions- und Loaderinformationen bereitzustellen.|  
@@ -99,7 +99,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
  Dieser Prozess stellt sicher, dass alle Assemblys optimierte Daten haben. Durch häufiges Einchecken aktualisierter optimierter Assemblys (Schritte 1 und 2) werden die Leistungszahlen für die gesamte Produktentwicklung konsistenter.  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Verwenden von Mpgo.exe in Visual Studio  
- Sie können „mpgo.exe“ in Visual Studio mit den folgenden Einschränkungen ausführen(weitere Informationen finden Sie im Artikel [Vorgehensweise: Angeben von Buildereignissen (C#)](http://msdn.microsoft.com/library/b4ce1ad9-5215-4b6f-b6a2-798b249aa335)):  
+ Sie können „mpgo.exe“ in Visual Studio mit den folgenden Einschränkungen ausführen(weitere Informationen finden Sie im Artikel [Vorgehensweise: Angeben von Buildereignissen (C#)](https://msdn.microsoft.com/library/b4ce1ad9-5215-4b6f-b6a2-798b249aa335)):  
   
 -   Sie können Pfade in Anführungszeichen nicht mit nachgestellten Schrägstrichen verwenden, da Visual Studio-Makros standardmäßig nachgestellte Schrägstriche verwenden. (`–OutDir "C:\Output Folder\"` ist zum Beispiel ungültig.) Um diese Einschränkung zu umgehen, können Sie den nachgestellten Schrägstrich mit einem Escapezeichen versehen. (Verwenden Sie stattdessen z. B. `-OutDir "$(OutDir)\"`.)  
   
@@ -128,5 +128,5 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ## <a name="see-also"></a>Siehe auch  
  [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Improving Launch Performance for your Desktop Applications (Verbessern der Startleistung für Desktopanwendungen)](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
- [Überblick Leistungsverbesserungen in .NET 4.5](http://go.microsoft.com/fwlink/p/?LinkId=249131)
+ [Improving Launch Performance for your Desktop Applications (Verbessern der Startleistung für Desktopanwendungen)](https://go.microsoft.com/fwlink/p/?LinkId=248943)  
+ [Überblick Leistungsverbesserungen in .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131)

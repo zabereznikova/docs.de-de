@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: e2d788b27f54ac068922f0ebe558a2aea8a475ca
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960009"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43403433"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Vorgehensweise: Analysieren von Zeichenfolgen mithilfe von „String.Split“ (C#-Anleitung)
 
@@ -32,9 +32,11 @@ Jede Instanz eines Trennzeichens gibt einen Wert in dem zurückgegebenen Array z
 
 Dieses Verhalten vereinfacht den Vorgang für Dateien mit Formaten wie CSV (Comma Separated Values = durch Trennzeichen getrennte Werte), die Tabellendaten darstellen. Aufeinander folgende Kommas stellen eine leere Spalte dar.
 
-Sie können einen optionalen <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType>-Parameter übergeben, um jegliche leeren Zeichenfolgen aus dem zurückgegebenen Array auszuschließen. Für kompliziertere Prozesse der zurückgegebenen Auflistung können Sie [LINQ](../programming-guide/concepts/linq/index.md) verwenden, um die Ergebnissequenz zu manipulieren.    
+Sie können einen optionalen <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType>-Parameter übergeben, um jegliche leeren Zeichenfolgen aus dem zurückgegebenen Array auszuschließen. Für kompliziertere Prozesse der zurückgegebenen Auflistung können Sie [LINQ](../programming-guide/concepts/linq/index.md) verwenden, um die Ergebnissequenz zu manipulieren.
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> kann mehrere Trennzeichen verwenden. In diesem Beispiel werden Leerräume, Kommas, Punkte, Doppelpunkte und Tabstopps verwendet, die alle in einem Array, das diese Trennzeichen enthält, an <xref:System.String.Split%2A>übergeben werden.  Die Schleife am Ende des Codes zeigt sämtliche Wörter im zurückgegeben Array an.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> kann mehrere Trennzeichen verwenden.
+In diesem Beispiel werden Leerräume, Kommas, Punkte, Doppelpunkte und Tabstopps verwendet, die alle in einem Array, das diese Trennzeichen enthält, an <xref:System.String.Split%2A>übergeben werden.
+Die Schleife am Ende des Codes zeigt sämtliche Wörter im zurückgegeben Array an.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -48,7 +50,8 @@ Aufeinander folgende Instanzen einer beliebigen Trennlinie geben die leere Zeich
 
 Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) herunterladen.
 
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../programming-guide/index.md)  
- [Zeichenfolgen](../programming-guide/strings/index.md)  
- [Reguläre Ausdrücke von .NET](../../standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../programming-guide/index.md)  
+- [Zeichenfolgen](../programming-guide/strings/index.md)  
+- [Reguläre Ausdrücke von .NET](../../standard/base-types/regular-expressions.md)

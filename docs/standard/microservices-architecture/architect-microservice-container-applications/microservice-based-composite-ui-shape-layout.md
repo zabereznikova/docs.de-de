@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Erst
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4e1e1671238d3cc5944bfe53b49f7d0ddd969aff
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105368"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43418639"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices, wobei das Layout der Benutzeroberfläche wiederum von mehreren Microservices generiert wurde
 
@@ -35,7 +35,7 @@ Jeder dieser Microservices, die die Benutzeroberfläche erzeugen, ähnelt einem 
 
 Eine zusammengesetzte Benutzeroberfläche, die von Microservices erzeugt wird, kann schwieriger oder leichter zu erstellen sein, je nachdem, welche Benutzeroberflächentechnologien Sie verwenden. Die Verfahren für das Erstellen einer herkömmlichen Webanwendung eignen sich z.B. weder zum Erstellen einer SPA oder einer nativen mobilen App, noch zum Entwickeln von Xamarin-Apps, die sehr viel schwieriger für diesen Ansatz genutzt werden können.
 
-Für die Beispielanwendung [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) wird aus verschiedenen Gründen der monolithische Ansatz verwendet. Erstens handelt es sich um eine Einführung in Microservices und Container. Eine zusammengesetzte Benutzeroberfläche ist komplexer, erfordert jedoch auch mehr Komplexität beim Entwerfen und Entwickeln der Benutzeroberfläche. Zweitens stellt eShopOnContainers auch eine native mobile App bereit, die auf Xamarin basiert, die die Komplexität auf der C\#-Clientseite erhöht.
+Für die Beispielanwendung [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) wird aus verschiedenen Gründen der monolithische Ansatz verwendet. Erstens handelt es sich um eine Einführung in Microservices und Container. Eine zusammengesetzte Benutzeroberfläche ist komplexer, erfordert jedoch auch mehr Komplexität beim Entwerfen und Entwickeln der Benutzeroberfläche. Zweitens stellt eShopOnContainers auch eine native mobile App bereit, die auf Xamarin basiert, die die Komplexität auf der C\#-Clientseite erhöht.
 
 Wir empfehlen Ihnen, sich in den folgenden Ressourcen weiter über die mithilfe von Microservices zusammengesetzte Benutzeroberfläche zu informieren.
 

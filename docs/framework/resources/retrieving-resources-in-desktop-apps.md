@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40eec7c03de616b22ae7b20c56cd5a05237ec759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399807"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43406593"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
-Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
+Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>Abrufen von Ressourcen aus Assemblys  
@@ -158,7 +158,7 @@ Verzeichnisstruktur und Namenskonventionen für Ressourcendateien
  Nachdem Sie Ihre Ressourcen erstellt und im richtigen Verzeichnis gespeichert haben, erstellen Sie ein <xref:System.Resources.ResourceManager> -Objekt, um die Ressourcen durch Aufrufen der <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> -Methode zu verwenden. Der erste Parameter gibt den Stammnamen der Standard-Ressourcendatei der App an (dies wäre „strings“ für das Beispiel im vorherigen Abschnitt). Der zweite Parameter gibt den Speicherort der Ressourcen an („Resources“ im vorherigen Beispiel). Der dritte Parameter gibt die zu verwendende <xref:System.Resources.ResourceSet> -Implementierung an. Wenn der dritte Parameter `null`ist, wird das Standard-Laufzeit <xref:System.Resources.ResourceSet> verwendet.  
   
 > [!NOTE]
->  Stellen Sie keine ASP.NET-Apps mit eigenständigen Ressourcendateien bereit. Dies kann zu Sperrproblemen führen und unterbricht die XCOPY-Bereitstellung. Es wird empfohlen, dass Sie ASP.NET-Ressourcen in Satellitenassemblys bereitstellen. Weitere Informationen finden Sie unter [ASP.NET Web Page Resources Overview](http://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+>  Stellen Sie keine ASP.NET-Apps mit eigenständigen Ressourcendateien bereit. Dies kann zu Sperrproblemen führen und unterbricht die XCOPY-Bereitstellung. Es wird empfohlen, dass Sie ASP.NET-Ressourcen in Satellitenassemblys bereitstellen. Weitere Informationen finden Sie unter [ASP.NET Web Page Resources Overview](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
   
  Nach dem Instanziieren des <xref:System.Resources.ResourceManager> -Objekts verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>und <xref:System.Resources.ResourceManager.GetStream%2A> -Methoden wie bereits erwähnt, um die Ressourcen abzurufen. Das direkte Abrufen von Ressourcen aus Ressourcendateien unterscheidet sich jedoch von dem Abruf von eingebetteten Ressourcen aus Assemblys. Beim Abrufen von Ressourcen aus Ressourcendateien rufen die Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> immer die Standardkultur-Ressourcen ab, unabhängig von der aktuellen Kultur. Um die Ressourcen entweder der aktuellen Kultur der Anwendung oder einer bestimmten Kultur abrufen zu können, müssen Sie, die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>oder <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> -Methode aufrufen und die Kultur angeben, deren Ressourcen abgerufen werden sollen. Um die Ressourcen der aktuellen Kultur abzurufen, geben Sie den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft als `culture` Argument an. Wenn der Ressourcen-Manager die Ressourcen von `culture`nicht abrufen kann, verwendet er die Standard-Ressourcen-Fallback-Regeln, um die entsprechenden Ressourcen abzurufen.  
   
@@ -205,4 +205,4 @@ csc Example.cs
  [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
  [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](http://go.microsoft.com/fwlink/p/?LinkID=241674)
+ [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392147"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43394740"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit
 Das Aktivierungssystem der CLR (Common Language Runtime) bestimmt die Version der CLR, die verwendet wird, um verwalteten Anwendungscode auszuführen. In einigen Fällen ist das Aktivierungssystem eventuell nicht in der Lage, eine Version der CLR zu suchen und zu laden. Diese Situation tritt in der Regel auf, wenn eine Anwendung eine CLR-Version erfordert, die ungültig oder nicht auf einem Computer installiert ist. Wenn die angeforderte Version nicht gefunden wird, gibt das CLR-Aktivierungssystem einen HRESULT-Fehlercode von der aufgerufenen Funktion oder Schnittstelle zurück und zeigt dem Benutzer, der die Anwendung ausführt, eventuell eine Fehlermeldung an. Dieser Artikel enthält eine Liste von HRESULT-Codes und beschreibt, wie Sie die Anzeige der Fehlermeldung verhindern können.  
@@ -55,7 +55,7 @@ Typische Fehlermeldung bei Initialisierungsfehlern
   
  Die [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)-Methode akzeptiert einen [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)-Enumerationsmember als Eingabe. Sie können das METAHOST_POLICY_SHOW_ERROR_DIALOG-Flag einschließen, um eine Fehlermeldung anzufordern, wenn die angeforderte Version der CLR nicht gefunden wird. Standardmäßig wird die Fehlermeldung nicht angezeigt. (Die [ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)-Methode akzeptiert dieses Flag nicht und stellt keine andere Möglichkeit bereit, um die Fehlermeldung anzuzeigen.)  
   
- Windows bietet eine [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242)-Funktion, die Sie verwenden können, um zu deklarieren, dass Sie Fehlermeldungen aufgrund des innerhalb des Prozesses ausgeführten Codes angezeigt werden soll. Sie können das SEM_FAILCRITICALERRORS-Flag angeben, um das Anzeigen der Fehlermeldung zu verhindern.  
+ Windows bietet eine [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242)-Funktion, die Sie verwenden können, um zu deklarieren, dass Sie Fehlermeldungen aufgrund des innerhalb des Prozesses ausgeführten Codes angezeigt werden soll. Sie können das SEM_FAILCRITICALERRORS-Flag angeben, um das Anzeigen der Fehlermeldung zu verhindern.  
   
  In einigen Szenarios ist es wichtig, die SEM_FAILCRITICALERRORS-Einstellung zu überschreiben, die von einem Anwendungsprozess festgelegt wurde. Wenn Sie beispielsweise über eine systemeigene COM-Komponente verfügen, die die CLR hostet und in einem Prozess gehostet wird, in dem SEM_FAILCRITICALERRORS festgelegt ist, können Sie das Flag in Abhängigkeit von den Auswirkungen der Anzeige von Fehlermeldungen in diesem bestimmten Prozess überschreiben. In diesem Fall können Sie eines der folgenden Flags verwenden, um SEM_FAILCRITICALERRORS zu überschreiben:  
   
@@ -66,7 +66,7 @@ Typische Fehlermeldung bei Initialisierungsfehlern
 ## <a name="ui-policy-for-clr-provided-hosts"></a>UI-Richtlinie für von der CLR bereitgestellte Hosts  
  Die CLR bietet eine Reihe von Hosts für verschiedene Szenarien, und alle diese Hosts zeigen eine Fehlermeldung an, wenn Probleme beim Laden der erforderlichen Laufzeitversion auftreten. Die folgende Tabelle enthält eine Liste von Hosts und deren Fehlermeldungsrichtlinien.  
   
-|CLR-Host|description|Fehlermeldungsrichtlinie|Kann die Fehlermeldung deaktiviert werden?|  
+|CLR-Host|Beschreibung |Fehlermeldungsrichtlinie|Kann die Fehlermeldung deaktiviert werden?|  
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Verwalteter EXE-Host|Startet verwaltete EXE-Dateien.|Wird im Fall von fehlender .NET Framework-Version angezeigt|Nein|  
 |Verwalteter COM-Host|Lädt verwalteten COM-Komponenten in einen Prozess.|Wird im Fall von fehlender .NET Framework-Version angezeigt|Ja, durch Festlegen des SEM_FAILCRITICALERRORS-Flags|  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: cb0e26b03841c093f223b3013a0d3c52ffd914c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e204a053f6f68a4b848d22c95c98f04edff58716
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215276"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391434"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (C# Compileroptionen)
 
@@ -45,5 +45,6 @@ Verweisassemblys entfernen außerdem Metadaten (private Member) aus auf Metadate
 Die Optionen `-refout` und [`-refonly`](refonly-compiler-option.md) schließen sich gegenseitig aus.
 
 ## <a name="see-also"></a>Siehe auch
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

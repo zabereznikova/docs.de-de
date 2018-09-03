@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
 ms.openlocfilehash: 55da36099af72259a4e72205f142ab855f000c4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321287"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252784"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Vorgehensweise: Abrufen eines einzelnen Attributs (LINQ to XML) (C#)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen Attributs eines Elements anhand des Attributsnamens erläutert. Diese Vorgehensweise eignet sich für das Schreiben von Abfrageausdrücken, mit denen Sie nach einem Element mit einem bestimmten Attribut suchen möchten.  

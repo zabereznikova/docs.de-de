@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 985ba9cfefce458fac73aa4b92de0b3d438405c6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: f586b6d097a8592fd74e92df7886b519d623e478
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948341"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393004"
 ---
 # <a name="const-c-reference"></a>const (C#-Referenz)
 
@@ -64,8 +64,8 @@ In diesem Beispiel wird das Verwenden von Konstanten als lokale Variablen demons
 
 ## <a name="see-also"></a>Siehe auch
 
-[C#-Referenz](../../../csharp/language-reference/index.md)  
-[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-[Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
-[readonly](../../../csharp/language-reference/keywords/readonly.md)
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)
