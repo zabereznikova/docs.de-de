@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243827"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533641"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports-Anweisung (XML-Namespace)
 Importiert die XML-Namespacepräfixe für XML-Literale und XML-Achseneigenschaften.  
@@ -35,7 +35,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="remarks"></a>Hinweise  
  Können Sie die `Imports` Anweisung, um globale XML-Namespaces definieren, mit denen Sie mit XML-Literale und XML-Achseneigenschaften oder als Parameter übergeben, um die `GetXmlNamespace` Operator. (Informationen zur Verwendung der `Imports` Anweisung, um einen Alias zu importieren, die, in dem Typnamen verwendet werden, in Ihrem Code verwendet werden können, finden Sie unter [Imports-Anweisung (.NET-Namespace und Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Die Syntax zum Deklarieren eines XML-Namespaces mithilfe der `Imports` -Anweisung ist identisch mit der Syntax, die im XML-Format verwendet. Aus diesem Grund können Sie eine Namespacedeklaration aus einer XML-Datei kopieren und verwenden Sie ihn in ein `Imports` Anweisung.  
   
- XML-Namespacepräfixe sind nützlich, wenn Sie wiederholt auf XML-Elemente erstellen, die aus dem gleichen Namespace sind möchten. Das XML-Namespacepräfix deklariert, mit der `Imports` Anweisung ist global, in dem Sinne, dass sie auf den gesamten Code in der Datei verfügbar ist. Sie können es verwenden, wenn Sie XML-Elementliteralen und beim Zugriff auf XML-Achseneigenschaften erstellen. Weitere Informationen finden Sie unter [XML-Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) und [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ XML-Namespacepräfixe sind nützlich, wenn Sie wiederholt auf XML-Elemente erstellen, die aus dem gleichen Namespace sind möchten. Das XML-Namespacepräfix deklariert, mit der `Imports` Anweisung ist global, in dem Sinne, dass sie auf den gesamten Code in der Datei verfügbar ist. Sie können es verwenden, wenn Sie XML-Elementliteralen und beim Zugriff auf XML-Achseneigenschaften erstellen. Weitere Informationen finden Sie unter [XML-Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) und [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md).  
   
  Wenn Sie einen globalen XML-Namespace ohne ein Namespacepräfix zu definieren (z. B. `Imports <xmlns="http://SomeNameSpace>"`), diesen Namespace gilt den XML-Standardnamespace. Der XML-Standardnamespace wird verwendet, für alle XML-Elementliteralen oder XML-Attribut-Achseneigenschaften, die nicht explizit einen Namespace angeben. Der Standardnamespace wird auch verwendet werden, wenn der angegebene Namespace der leere Namespace ist (d. h. `xmlns=""`). Der XML-Standardnamespace gilt nicht, um XML-Attribute im XML-Literalen oder XML-Attribut-Achseneigenschaften, die nicht mit einen Namespace verfügen.  
   
@@ -90,6 +90,6 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="see-also"></a>Siehe auch  
  [XML-Elementliteral](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)  
  [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
  [GetXmlNamespace-Operator](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

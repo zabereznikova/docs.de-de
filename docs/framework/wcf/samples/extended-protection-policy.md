@@ -2,12 +2,12 @@
 title: Erweiterte Schutzrichtlinie
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 00d1500b271625addde4499bc62b5ed4d689caf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504357"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532344"
 ---
 # <a name="extended-protection-policy"></a>Erweiterte Schutzrichtlinie
 Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-Middle-Angriffen (MITM-Angriff, Janusangriff). Ein MITM-Angriff ist eine Sicherheitsbedrohung, bei der ein MITM die Anmeldeinformationen eines Clients an einen Server weiterleitet.  
@@ -26,15 +26,15 @@ Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-M
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Installieren Sie Internetinformationsdienste über **in der Systemsteuerung**, **Programme hinzufügen/entfernen**, **Windows-Features**.  
+1.  Installieren Sie Internetinformationsdienste über **Systemsteuerung**, **Programme hinzufügen/entfernen**, **Windows Features**.  
   
-2.  Installieren Sie **Windows-Authentifizierung** in **Windows-Features**, **Internetinformationsdienste (IIS)**, **WWW-Dienste**,  **Sicherheit**, und **Windows-Authentifizierung**.  
+2.  Installieren Sie **Windows-Authentifizierung** in **Windows Features**, **Internetinformationsdienste**, **WWW-Dienste**,  **Sicherheit**, und **Windows-Authentifizierung**.  
   
-3.  Installieren Sie **Windows Communication Foundation-HTTP-Aktivierung** in **Windows-Features**, **Microsoft .NET Framework 3.5.1**, und **Windows Communication Foundation-HTTP-Aktivierung**.  
+3.  Installieren Sie **Windows Communication Foundation-HTTP-Aktivierung** in **Windows Features**, **Microsoft .NET Framework 3.5.1**, und **Windows-Kommunikation Foundation-HTTP-Aktivierung**.  
   
 4.  In diesem Beispiel muss der Client eine Verbindung über einen sicheren Kanal zum Server herstellen. Dazu muss ein Serverzertifikat vorliegen, das im IIS (Internet Information Services)-Manager installiert werden kann.  
   
-    1.  Öffnen Sie IIS-Manager. Open **Serverzertifikate**, das angezeigt wird, der **Ansicht "Feature"** Registerkarte bei ausgewähltem Stammknoten (Computername).  
+    1.  Öffnen Sie IIS-Manager. Open **Serverzertifikate**, die angezeigt wird, der **Ansicht "Feature"** Registerkarte, wenn der Stammknoten (Computername) ausgewählt ist.  
   
     2.  Erstellen Sie zum Testen dieses Beispiels ein selbstsigniertes Zertifikat. Wenn Sie von Internet Explorer keine Meldung hinsichtlich der fehlenden Sicherheit des Zertifikats erhalten möchten, installieren Sie das Zertifikat im entsprechenden Autoritätsspeicher für vertrauenswürdige Zertifikate.  
   
@@ -44,9 +44,9 @@ Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-M
   
 7.  Öffnen Sie IIS-Manager. Mit der rechten Maustaste in des virtuellen Verzeichnis (**ExtendedProtection**), der im vorherigen Schritt erstellt wurde. Wählen Sie **in Anwendung konvertieren**.  
   
-8.  Öffnen der **Authentifizierung** im IIS-Manager-Modul für dieses virtuelle Verzeichnis und aktivieren Sie **Windows-Authentifizierung**.  
+8.  Öffnen der **Authentifizierung** im IIS-Manager-Modul für dieses virtuelle Verzeichnis und Enable **Windows-Authentifizierung**.  
   
-9. Open **Erweiterte Einstellungen** unter **Windows-Authentifizierung** für dieses virtuelle Verzeichnis, und legen Sie es auf **erforderlich**.  
+9. Open **Erweiterte Einstellungen** unter **Windows-Authentifizierung** für dieses virtuelle Verzeichnis, und legen Sie ihn auf **erforderlich**.  
   
 10. Sie können den Dienst testen, indem Sie die HTTPS-URL in einem Browserfenster öffnen. (Geben Sie einen vollqualifizierten Domänennamen an.) Möchten Sie von einem Remotecomputer aus auf die URL zugreifen, konfigurieren Sie die Firewall entsprechend, damit ein- und ausgehende HTTP- und HTTPS-Verbindungen hergestellt werden können.  
   
@@ -59,6 +59,6 @@ Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-M
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

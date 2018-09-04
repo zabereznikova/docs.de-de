@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 368faf0881c5c0073fe8367a051b6c6c802b9110
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808522"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536003"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -27,7 +27,7 @@ In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden bei
   
 5.  [Dienst und Client funktionieren hervorragend, nicht jedoch, wenn sich der Client auf einem anderen Computer befindet. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Wenn ich auslösen eine FaultException\<Ausnahme >, in dem der Typ eine Ausnahme ist, erhält ich immer einen allgemeinen FaultException-Typ auf dem Client und nicht den generischen Typ. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6.  [Wenn ich auslösen eine FaultException\<Ausnahme >, wenn der Typ eine Ausnahme ist, erhalten ich immer einen allgemeinen FaultException-Typ, auf dem Client und nicht den generischen Typ. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
 7.  [Unidirektionale und Anforderung-Antwort-Vorgänge scheinen nahezu mit der gleichen Geschwindigkeit zurückgegeben zu werden, wenn die Antwort keine Daten enthält. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
@@ -47,15 +47,15 @@ In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden bei
   
  HTTP Fehler 404.3 – Nicht gefunden. Die angeforderte Seite kann aufgrund einer Konfigurationserweiterung nicht angezeigt werden. Wenn es sich bei der Seite um ein Skript handelt, müssen Sie einen Handler hinzufügen. Wenn die Datei heruntergeladen werden soll, müssen Sie eine MIME-Zuordnung hinzufügen. Detaillierte Fehlerinformationen finden Sie unter dem Modul StaticFileModule.  
   
- Dieser Fehler tritt auf, wenn "Windows Communication Foundation-HTTP-Aktivierung" nicht explizit in der Systemsteuerung festgelegt ist. Um diese Einstellung festzulegen, wechseln Sie zur Systemsteuerung, und klicken Sie in der linken unteren Ecke des Fensters auf "Programme". Klicken Sie auf "Windows-Funktionen ein- oder ausschalten". Erweitern Sie "Microsoft .NET Framework 3.5.1", und wählen Sie "Windows Communication Foundation-Http-Aktivierung" aus.  
+ Diese Fehlermeldung tritt auf, wenn "Windows Communication Foundation-HTTP-Aktivierung" nicht explizit in der Systemsteuerung festgelegt wird. Um diese Einstellung festzulegen, wechseln Sie zur Systemsteuerung, und klicken Sie in der linken unteren Ecke des Fensters auf "Programme". Klicken Sie auf "Windows-Funktionen ein- oder ausschalten". Erweitern Sie "Microsoft .NET Framework 3.5.1", und wählen Sie "Windows Communication Foundation-Http-Aktivierung" aus.  
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Manchmal wird eine MessageSecurityException bei der zweiten Anforderung ausgelöst, wenn sich der Client nach der ersten Anforderung eine Weile im Leerlauf befunden hat. Woran liegt das?  
- Die zweite Anforderung kann in erster Linie aus zwei Gründen fehlschlagen: (1) Das Timeout der Sitzung wurde überschritten. (2) Der Webserver, der diesen Dienst hostet, wird wiederverwendet. Im ersten Fall ist die Sitzung so lange gültig, bis das Timeout des Dienstes überschrietten wird. Wenn der Dienst innerhalb des Zeitrahmens, der in der Bindung des Dienstes angegeben ist (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) keine Anforderung vom Client erhält, beendet der Dienst die Sicherheitssitzung. Nachfolgende Clientnachrichten führen zu <xref:System.ServiceModel.Security.MessageSecurityException>. Der Code muss erneut eine Sicherheitssitzung mit dem Dienst herstellen, um weitere Nachrichten senden oder ein Token für den Sicherheitszustandskontext verwenden zu können. Token für den Sicherheitszustandskontext sorgen auch dafür, dass eine Sicherheitssitzung das Wiederverwenden eines Webservers überdauert. Weitere Informationen zur Verwendung von sicherheitszustandskontext in einer sicheren Sitzung finden Sie unter [Vorgehensweise: Erstellen Sie ein Sicherheitskontexttoken für eine Sicherheitssitzung](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Stattdessen können Sie Sicherheitssitzungen auch deaktivieren. Bei Verwendung der [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) binden, können Sie festlegen der `establishSecurityContext` Eigenschaft `false` um sichere Sitzungen zu deaktivieren. Wenn Sie Sicherheitssitzungen für andere Bindungen deaktivieren möchten, müssen Sie eine benutzerdefinierte Bindung erstellen. Ausführliche Informationen zum Erstellen einer benutzerdefinierten Bindung finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bevor Sie eine dieser Optionen anwenden, müssen Sie die Sicherheitsanforderungen der Anwendung kennen.  
+ Die zweite Anforderung kann in erster Linie aus zwei Gründen fehlschlagen: (1) Das Timeout der Sitzung wurde überschritten. (2) Der Webserver, der diesen Dienst hostet, wird wiederverwendet. Im ersten Fall ist die Sitzung so lange gültig, bis das Timeout des Dienstes überschrietten wird. Wenn der Dienst innerhalb des Zeitrahmens, der in der Bindung des Dienstes angegeben ist (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>) keine Anforderung vom Client erhält, beendet der Dienst die Sicherheitssitzung. Nachfolgende Clientnachrichten führen zu <xref:System.ServiceModel.Security.MessageSecurityException>. Der Code muss erneut eine Sicherheitssitzung mit dem Dienst herstellen, um weitere Nachrichten senden oder ein Token für den Sicherheitszustandskontext verwenden zu können. Token für den Sicherheitszustandskontext sorgen auch dafür, dass eine Sicherheitssitzung das Wiederverwenden eines Webservers überdauert. Weitere Informationen zur Verwendung von sicherheitszustandskontext in sicherheitssitzungen finden Sie unter [Vorgehensweise: Erstellen Sie ein Token für den Sicherheitskontext für eine Sicherheitssitzung](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Stattdessen können Sie Sicherheitssitzungen auch deaktivieren. Bei Verwendung der [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) binden, Sie können festlegen, die `establishSecurityContext` Eigenschaft, um `false` sicherheitssitzungen zu deaktivieren. Wenn Sie Sicherheitssitzungen für andere Bindungen deaktivieren möchten, müssen Sie eine benutzerdefinierte Bindung erstellen. Ausführliche Informationen zum Erstellen einer benutzerdefinierten Bindung finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Bevor Sie eine dieser Optionen anwenden, müssen Sie die Sicherheitsanforderungen der Anwendung kennen.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?  
- Standardmäßig können Dienste nur 10 Sitzungen gleichzeitig verarbeiten. Wenn die Dienstbindungen Sitzungen verwenden, akzeptiert der Dienst neue Clientverbindungen folglich, bis diese Zahl erreicht ist. Anschließend lehnt er neue Clientverbindungen ab, bis eine der aktuellen Sitzungen beendet wird. Es gibt verschiedene Möglichkeiten, mehr Clients zu unterstützen. Wenn der Dienst keine Sitzungen erfordert, verwenden Sie keine sitzungsbasierte Bindung. (Weitere Informationen finden Sie unter [mit Sitzungen](../../../docs/framework/wcf/using-sessions.md).) Sie können auch das Sitzungslimit erhöhen, indem Sie den Wert der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>-Eigenschaft auf eine Zahl festlegen, die Ihren Anforderungen entspricht.  
+ Standardmäßig können Dienste nur 10 Sitzungen gleichzeitig verarbeiten. Wenn die Dienstbindungen Sitzungen verwenden, akzeptiert der Dienst neue Clientverbindungen folglich, bis diese Zahl erreicht ist. Anschließend lehnt er neue Clientverbindungen ab, bis eine der aktuellen Sitzungen beendet wird. Es gibt verschiedene Möglichkeiten, mehr Clients zu unterstützen. Wenn der Dienst keine Sitzungen erfordert, verwenden Sie keine sitzungsbasierte Bindung. (Weitere Informationen finden Sie unter [mithilfe von Sitzungen](../../../docs/framework/wcf/using-sessions.md).) Sie können auch das Sitzungslimit erhöhen, indem Sie den Wert der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>-Eigenschaft auf eine Zahl festlegen, die Ihren Anforderungen entspricht.  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Kann ich die Dienstkonfiguration aus einer anderen Quelle laden als der Konfigurationsdatei der WCF-Anwendung?  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   Sie müssen gegebenenfalls den Anschluss zur Anwendung öffnen. Weitere Informationen finden Sie unter [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) in den SDK-Beispielen.  
   
--   Bei anderen möglichen Problemen finden Sie im Thema mit den Beispielen [Ausführen der Beispiele in einer Arbeitsgruppe und computerübergreifend](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
+-   Weiteren möglichen Problemen finden Sie im Thema Beispiele [Ausführen der Beispiele in einer Arbeitsgruppe und computerübergreifend](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
   
 -   Wenn der Client Windows-Anmeldeinformationen verwendet und es sich bei der Ausnahme um <xref:System.ServiceModel.Security.SecurityNegotiationException>handelt, konfigurieren Sie Kerberos wie folgt.  
   
@@ -136,12 +136,12 @@ public class MyServiceHost : ServiceHost
   
 -   [Debuggen von Windows-Authentifizierungsfehlern](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von HTTP.SYS.](http://go.microsoft.com/fwlink/?LinkId=86943)  
+-   [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von Http.sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Informationen zu Kerberos](http://go.microsoft.com/fwlink/?LinkId=86946)  
+-   [Informationen zu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Wenn ich auslösen eine FaultException\<Ausnahme >, in dem der Typ eine Ausnahme ist, erhält ich immer einen allgemeinen FaultException-Typ auf dem Client und nicht den generischen Typ. Woran liegt das?  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Wenn ich auslösen eine FaultException\<Ausnahme >, wenn der Typ eine Ausnahme ist, erhalten ich immer einen allgemeinen FaultException-Typ, auf dem Client und nicht den generischen Typ. Woran liegt das?  
  Erstellen Sie unbedingt einen eigenen benutzerdefinierten Fehlerdatentyp und deklarieren Sie ihn als Detailtyp in ihrem Fehlervertrag. Das Problem entsteht, weil Folgendes geschieht, wenn vom System bereitgestellter Ausnahmetypen verwendet werden:  
   
 -   Eine Typabhängigkeit wird erstellt, die eine der größten Stärken dienstorientierter Anwendungen entfernt.  
@@ -154,7 +154,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Unidirektionale und Anforderung-Antwort-Vorgänge scheinen nahezu mit der gleichen Geschwindigkeit zurückgegeben zu werden, wenn die Antwort keine Daten enthält. Woran liegt das?  
- Einen Vorgang als unidirektional anzugeben, bedeutet, dass der Vorgangsvertrag lediglich eine Eingabenachricht akzeptiert und keine Ausgabenachricht zurückgibt. In WCF zurück allen Clientaufrufe auf, wenn die ausgehenden Daten zur Übertragung geschrieben wurden oder eine Ausnahme ausgelöst. Unidirektionale Vorgänge funktionieren genauso. Außerdem können sie eine Ausnahme auslösen, falls der Dienst nicht gefunden wird, oder sie können blockiert werden, falls der Dienst nicht zur Annahme der Daten aus dem Netzwerk bereit ist. In der Regel führt in WCF, dies zu unidirektionalen aufrufen, die schneller als Anforderung-Antwort an den Client zurückgegeben; aber das Senden der ausgehenden Daten über das Netzwerk verlangsamt jede Bedingung, verlangsamt, unidirektionale Vorgänge ebenso wie Anforderung-Antwort-Vorgänge. Weitere Informationen finden Sie unter [unidirektionaler Services](../../../docs/framework/wcf/feature-details/one-way-services.md) und [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Einen Vorgang als unidirektional anzugeben, bedeutet, dass der Vorgangsvertrag lediglich eine Eingabenachricht akzeptiert und keine Ausgabenachricht zurückgibt. In WCF zurückgeben allen Clientaufrufe auf, wenn die ausgehenden Daten zur Übertragung geschrieben wurden oder eine Ausnahme ausgelöst. Unidirektionale Vorgänge funktionieren genauso. Außerdem können sie eine Ausnahme auslösen, falls der Dienst nicht gefunden wird, oder sie können blockiert werden, falls der Dienst nicht zur Annahme der Daten aus dem Netzwerk bereit ist. In der Regel führt in WCF, dies zu unidirektionalen aufrufen, die schneller als Anforderung-Antwort an den Client zurückgegeben werden; aber verlangsamt Bedingung, die das Senden der ausgehenden Daten über das Netzwerk verlangsamt, unidirektionale Vorgänge ebenso wie Anforderung-Antwort-Vorgänge. Weitere Informationen finden Sie unter [unidirektionaler Services](../../../docs/framework/wcf/feature-details/one-way-services.md) und [Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Ich verwende ein X.509-Zertifikat mit dem Dienst und erhalte eine System.Security.Cryptography.CryptographicException. Woran liegt das?  
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Bei der Verwendung eines meiner Ablaufverfolgungstools wird EndpointNotFoundException ausgelöst. Woran liegt das?  
- Wenn Sie ein Tool zum verfolgen, die nicht den vom System bereitgestellten WCF-Ablaufverfolgungsmechanismus ist und Sie erhalten eine <xref:System.ServiceModel.EndpointNotFoundException> , der angibt, dass es ein adressfilterkonflikt aufgetreten, müssen Sie die <xref:System.ServiceModel.Description.ClientViaBehavior> Klasse, die Nachrichten auf das Ablaufverfolgungstool zu leiten und haben Sie diese Nachrichten an die Dienstadresse weiterleiten. Die <xref:System.ServiceModel.Description.ClientViaBehavior> -Klasse ändert den Adressierungsheader `Via` und gibt die nächste Netzwerkadresse unabhängig vom endgültigen Empfänger an, der mit dem Adressierungsheader `To` angegeben wird. Ändern Sie dabei jedoch nicht die Endpunktadresse, die den `To` -Wert festlegt.  
+ Wenn Sie ein Werkzeug zum verfolgen, die nicht den vom System bereitgestellten WCF-Ablaufverfolgung-Mechanismus verwenden, und Sie erhalten eine <xref:System.ServiceModel.EndpointNotFoundException> , der angibt, dass ein adressfilterkonflikt aufgetreten, müssen Sie die <xref:System.ServiceModel.Description.ClientViaBehavior> Klasse, um die Nachrichten an das Ablaufverfolgungstool weiterzuleiten und Lassen Sie das Tool, das diese Nachrichten an die Dienstadresse umzuleiten. Die <xref:System.ServiceModel.Description.ClientViaBehavior> -Klasse ändert den Adressierungsheader `Via` und gibt die nächste Netzwerkadresse unabhängig vom endgültigen Empfänger an, der mit dem Adressierungsheader `To` angegeben wird. Ändern Sie dabei jedoch nicht die Endpunktadresse, die den `To` -Wert festlegt.  
   
  Das folgende Codebeispiel zeigt eine standardmäßige Konfigurationsdatei für einen Beispielclient.  
   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Sie erhalten eine Fehlermeldung wie folgt: nicht behandelte Ausnahme: System.ServiceModel.AddressAlreadyInUseException: Es ist bereits ein Listener auf IP-Endpunkt 0.0.0.0:9000 Sie diesen Fehler umgehen können, indem Sie eine vollqualifizierte URL mit einem anderen Port für angeben der MEX-Endpunkt wie im folgenden Konfigurationsausschnitt gezeigt:  
+ Sie sehen eine Fehlermeldung wie die folgende: Unbehandelte Ausnahme: System.ServiceModel.AddressAlreadyInUseException: Es ist bereits ein Listener auf IP-Endpunkt 0.0.0.0:9000 Sie diesen Fehler umgehen können, indem Sie eine vollqualifizierte URL angeben, mit einem anderen Port für der MEX-Endpunkt, wie im folgenden Konfigurationsausschnitt gezeigt:  
   
 ```xml
 <services>  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Beim Aufruf einer WCF-Web HTTP-Anwendung aus einer WCF-SOAP-Anwendung gibt der Dienst die folgende Fehlermeldung zurück: 405 "Method Not Allowed"  
- Aufrufen einer WCF-Web-HTTP-Anwendung (ein Dienst, verwendet der <xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.Description.WebHttpBehavior>) aus einem WCF Service möglicherweise die folgende Ausnahme generieren: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: der Remoteserver hat eine unerwartete Antwort zurückgegeben. : (405)-Methode nicht zulässig. "Diese Ausnahme tritt auf, weil WCF den ausgehenden überschreibt <xref:System.ServiceModel.OperationContext> mit dem eingehenden <xref:System.ServiceModel.OperationContext>. Um dieses Problem zu beheben, erstellen Sie im WCF-Web-HTTP-Dienstvorgang einen <xref:System.ServiceModel.OperationContextScope> . Zum Beispiel:  
+ Aufruf einer WCF-Web-HTTP-Anwendung (ein Dienst, verwendet der <xref:System.ServiceModel.WebHttpBinding> und <xref:System.ServiceModel.Description.WebHttpBehavior>) aus einem WCF Service möglicherweise die folgende Ausnahme generieren: `Unhandled Exception: System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: der Remoteserver hat eine unerwartete Antwort zurückgegeben. : (405)-Methode nicht zulässig. "Diese Ausnahme tritt auf, weil WCF den ausgehenden überschreibt <xref:System.ServiceModel.OperationContext> mit dem eingehenden <xref:System.ServiceModel.OperationContext>. Um dieses Problem zu beheben, erstellen Sie im WCF-Web-HTTP-Dienstvorgang einen <xref:System.ServiceModel.OperationContextScope> . Zum Beispiel:  
   
 ```csharp
 public string Echo(string input)  

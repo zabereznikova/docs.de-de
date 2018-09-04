@@ -2,12 +2,12 @@
 title: Verwenden der WorkflowInvoker-Klasse
 ms.date: 03/30/2017
 ms.assetid: 0a966164-3990-4e78-8aa2-c6797ebbee94
-ms.openlocfilehash: 70fc94b1f190236cb2cb40c407e0172f0213fb7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6525dbbd30aae95be4c4ee1de267736e557a541
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515813"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552204"
 ---
 # <a name="using-the-workflowinvoker-class"></a>Verwenden der WorkflowInvoker-Klasse
 Dieses Beispiel veranschaulicht, wie die <xref:System.Activities.WorkflowInvoker>-Klasse verwendet wird, um eine Aktivität wie eine Methode aufzurufen.  
@@ -15,7 +15,7 @@ Dieses Beispiel veranschaulicht, wie die <xref:System.Activities.WorkflowInvoker
 ## <a name="sample-details"></a>Beispieldetails  
  Die Verwendung der <xref:System.Activities.WorkflowInvoker>-Klasse ist die einfachste Möglichkeit, eine Aktivität auszuführen. Damit kann eine Aktivität direkt ausgeführt werden, als ob es sich um einen Methodenaufruf handeln würde. Dabei handelt es sich um eine schlanke, leistungsstarke und benutzerfreundliche API, die für Szenarios verwendet werden kann, in denen die Ausführung einer Aktivität nicht die von anderen Hostingvarianten bereitgestellte Steuerungsinfrastruktur erfordert.  
   
- Das Beispiel verwendet eine benutzerdefinierte Aktivität, die abgeleitet <xref:System.Activities.CodeActivity%601>< Int32\> mit dem Namen `Add` , addiert zwei <xref:System.Activities.InArgument%601>, `X` und `Y`, und gibt eine `Result` <xref:System.Activities.OutArgument%601>. (<xref:System.Activities.CodeActivity%601>\<T > leitet sich von <xref:System.Activities.Activity%601>< T\>, verfügt über eine <xref:System.Activities.OutArgument%601> \<T > mit dem Namen `Result`.) Ein `Dictionary` \<string, object > wird verwendet, um die Übergabe von Argumenten in einer Aktivität aufgerufen wird, über <xref:System.Activities.WorkflowInvoker>. Der Schlüssel des Wörterbuchs entspricht dem Namen eines Arguments für die aufgerufene Aktivität. Der einem bestimmten Schlüssel zugeordnete Wert wird an das durch den Schlüssel identifizierte Argument gebunden.  
+ Das Beispiel verwendet eine benutzerdefinierte Aktivität, die von abgeleitet <xref:System.Activities.CodeActivity%601>< Int32\> mit dem Namen `Add` , addiert zwei <xref:System.Activities.InArgument%601>, `X` und `Y`, und gibt eine `Result` <xref:System.Activities.OutArgument%601>. (<xref:System.Activities.CodeActivity%601>\<T > leitet sich von <xref:System.Activities.Activity%601>< T\>, die eine <xref:System.Activities.OutArgument%601> \<T > mit dem Namen `Result`.) Ein `Dictionary` \<string, object > wird verwendet, um die Übergabe von Argumenten in eine aufgerufene Aktivität wird <xref:System.Activities.WorkflowInvoker>. Der Schlüssel des Wörterbuchs entspricht dem Namen eines Arguments für die aufgerufene Aktivität. Der einem bestimmten Schlüssel zugeordnete Wert wird an das durch den Schlüssel identifizierte Argument gebunden.  
   
  Im Beispiel wird <xref:System.Activities.WorkflowInvoker.Invoke%2A> aufgerufen und ein Wörterbuch übergeben, das Werte für `X` und `Y` enthält. Die <xref:System.Activities.WorkflowInvoker>-Klasse bindet diese Werte an die Argumente der `Add`-Aktivität, führt die Aktivität aus und gibt das Ergebnis zurück.  
   
@@ -32,6 +32,6 @@ Dieses Beispiel veranschaulicht, wie die <xref:System.Activities.WorkflowInvoker
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\WorkflowInvoker`

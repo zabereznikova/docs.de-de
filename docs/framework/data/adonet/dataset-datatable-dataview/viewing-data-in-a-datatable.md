@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478090"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536865"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Anzeigen von Daten in einer "DataTable"
 Sie können den Inhalt zugreifen eine <xref:System.Data.DataTable> mithilfe der **Zeilen** und **Spalten** Sammlungen von der **DataTable**. Sie können auch die <xref:System.Data.DataTable.Select%2A> Methode zum Zurückgeben von Teilmengen der Daten in eine **DataTable** gemäß bestimmten Kriterien einschließlich Suchkriterien, Sortierreihenfolge und Zeilenstatus. Darüber hinaus können Sie mithilfe der <xref:System.Data.DataRowCollection.Find%2A> Methode der **DataRowCollection** bei der Suche nach einer bestimmten Zeile, die einen primären Schlüsselwert verwenden.  

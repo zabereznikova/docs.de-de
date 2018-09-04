@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF content [Windows Forms], hosting in Windows Forms
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
-ms.openlocfilehash: d17273f52d0cef118b79fef03af72522f6677073
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529820"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535641"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Exemplarische Vorgehensweise: Ändern von Eigenschaften eines gehosteten WPF-Elements zur Entwurfszeit
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswerte eines WPF-Steuerelements (Windows Presentation Foundation) geändert werden, das in einem Windows Form-Objekt gehostet wird.  
@@ -28,7 +28,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswe
 -   Verwenden des WPF-Designers für Visual Studio, um Eigenschaftswerte zu ändern  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
@@ -50,9 +50,9 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswe
   
 #### <a name="to-create-wpf-controls"></a>So erstellen Sie ein WPF-Steuerelement  
   
-1.  Fügen Sie dem Projekt ein neues WPF-<xref:System.Windows.Controls.UserControl>-Objekt hinzu. Verwenden Sie den Standardnamen (`UserControl1.xaml`) für den Steuerelementtyp. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Fügen Sie dem Projekt ein neues WPF-<xref:System.Windows.Controls.UserControl>-Objekt hinzu. Verwenden Sie den Standardnamen (`UserControl1.xaml`) für den Steuerelementtyp. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen neuen WPF-Inhalt in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft `Blue`.  
+2.  In der **Eigenschaften** legen den Wert des der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft `Blue`.  
   
 3.  Erstellen Sie das Projekt.  
   
@@ -63,7 +63,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswe
   
 1.  Öffnen Sie `Form1` im Windows Forms-Designer.  
   
-2.  In der **Toolbox**in der **WPF-Benutzersteuerelemente** Registerkarte, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz von `UserControl1` auf dem Formular.  
+2.  In der **Toolbox**in die **WPF-Benutzersteuerelemente** Registerkarte, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz von `UserControl1` auf dem Formular.  
   
      Die Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost1` gehostet.  
   
@@ -71,7 +71,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswe
   
      Die Datei "UserControl1.xaml" wird im WPF-Designer geöffnet.  
   
-4.  In der **Eigenschaften** Fenster, legen Sie den Wert von der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft `Red`.  
+4.  In der **Eigenschaften** legen den Wert des der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft `Red`.  
   
 5.  Erstellen Sie das Projekt neu.  
   
@@ -87,4 +87,4 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Eigenschaftswe
  [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Verwenden von WPF-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [WPF-Designer](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

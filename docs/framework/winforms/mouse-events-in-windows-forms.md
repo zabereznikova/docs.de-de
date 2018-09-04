@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: cd5f87b1c1e2d32a6e7fa94dfce977c7432f7f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541209"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537158"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Mausereignisse in Windows Forms
-Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Mauszeigers und den Zustand der Maustasten kennen. Dieses Thema enthält Details zum Abrufen dieser Informationen von Mausereignissen und erörtert die Reihenfolge, in der Mausklickereignisse in Windows Forms-Steuerelementen ausgelöst werden. Eine Liste und Beschreibung aller Mausereignisse finden Sie unter [Maus Funktionsweise in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Übersicht über Ereignisse (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
+Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Mauszeigers und den Zustand der Maustasten kennen. Dieses Thema enthält Details zum Abrufen dieser Informationen von Mausereignissen und erörtert die Reihenfolge, in der Mausklickereignisse in Windows Forms-Steuerelementen ausgelöst werden. Eine Liste und Beschreibung aller von den Mausereignissen, finden Sie unter [Maus Funktionsweise in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
   
 ## <a name="mouse-information"></a>Mausinformationen  
  Ein <xref:System.Windows.Forms.MouseEventArgs> wird an Handler von Mausereignissen gesendet, die beim Drücken einer Maustaste und Verfolgen von Mausbewegungen ausgelöst werden. <xref:System.Windows.Forms.MouseEventArgs> enthält Informationen zum aktuellen Zustand der Maus, z. B. die Position des Mauszeigers in Clientkoordinaten, welche Maustasten gedrückt werden und ob das Mausrad bewegt wurde. Zahlreiche Mausereignisse, beispielsweise Ereignisse, die lediglich darüber informieren, dass der Mauszeiger die Grenzen eines Steuerelements überschritten hat, senden ein <xref:System.EventArgs> ohne weitere Informationen an den Ereignishandler.  
@@ -62,7 +62,7 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
   
 8.  <xref:System.Windows.Forms.Control.MouseUp>-Ereignis.  
   
- Click-Ereignisse für ein Codebeispiel, das die Reihenfolge der Mausklickereignisse veranschaulicht, finden Sie unter [wie: Behandeln von Benutzer Eingabe-Ereignisse in Windows Forms-Steuerelementen](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Klicken Sie auf Ereignisse, ein Codebeispiel, das die Reihenfolge der Mausklickereignisse veranschaulicht, finden Sie unter [wie: Behandeln von Benutzereingabeereignissen in Windows Forms-Steuerelemente](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Einzelne Steuerelemente  
  Die folgenden Steuerelemente weisen nicht das Standardverhalten bei Mausklickereignissen auf:  

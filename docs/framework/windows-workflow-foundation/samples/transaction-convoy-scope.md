@@ -2,12 +2,12 @@
 title: Transaktions-Konvoi-Bereich
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516564"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536090"
 ---
 # <a name="transaction-convoy-scope"></a>Transaktions-Konvoi-Bereich
 Anhand dieses Beispiels wird veranschaulicht, wie ein paralleles Konvoi-Meldungsaktivitätsmuster zusammen mit einem <xref:System.ServiceModel.Activities.TransactedReceiveScope> verwendet wird, um ein Protokoll zu modellieren, bei dem in derselben Transaktion mehrere Vorgänge in beliebiger Reihenfolge auftreten können. Des Weiteren wird veranschaulicht, wie ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatisch eine neue Transaktion erstellt, wenn keine Transaktion an den Server weitergegeben wird, sodass der Client keine Transaktionen verwendet.  
@@ -24,9 +24,9 @@ Anhand dieses Beispiels wird veranschaulicht, wie ein paralleles Konvoi-Meldungs
   
 3.  Stellen Sie sicher, dass beide Projekte als Startprojekte festgelegt sind.  
   
-    1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Startprojekte festlegen**.  
+    1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe, und wählen Sie **Startprojekte**.  
   
-    2.  Wählen Sie **mehrere Startprojekte** und vergewissern Sie sich die Aktion für beide Projekte **starten**.  
+    2.  Wählen Sie **mehrere Startprojekte** und stellen Sie sicher, die Aktion für beide Projekte nastaven NA hodnotu **starten**.  
   
 4.  Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
   
@@ -39,6 +39,6 @@ Anhand dieses Beispiels wird veranschaulicht, wie ein paralleles Konvoi-Meldungs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

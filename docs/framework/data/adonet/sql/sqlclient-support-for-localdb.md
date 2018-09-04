@@ -2,18 +2,18 @@
 title: SqlClient-Unterstützung für LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359796"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532708"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient-Unterstützung für LocalDB
-Ab SQL Server Codename Denali, wird eine vereinfachte Version von SQL Server, dem Namen LocalDB verfügbar sein. In diesem Thema wird erläutert, wie eine Verbindung mit einer LocalDB-Datenbank hergestellt wird.  
+Ab SQL Server Codename Denali, wird eine einfache Version von SQL Server, dem Namen LocalDB verfügbar sein. In diesem Thema wird erläutert, wie eine Verbindung mit einer LocalDB-Datenbank hergestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu LocalDB, z. B. wie Sie LocalDB installieren und Konfigurieren der LocalDB-Instanz finden Sie in der SQL Server-Onlinedokumentation.  
+ Weitere Informationen zu LocalDB, einschließlich Informationen zum Installieren von LocalDB und die LocalDB-Instanz konfigurieren, finden in SQL Server-Onlinedokumentation.  
   
  Zusammenfassung der Verwendungsmöglichkeiten für LocalDB:  
   
@@ -31,7 +31,7 @@ Ab SQL Server Codename Denali, wird eine vereinfachte Version von SQL Server, de
   
  `User Instance=True` ist bei einer Verbindung mit einer LocalDB-Datenbank nicht zulässig.  
   
- Sie können LocalDB aus dem [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065)herunterladen. Wenn Sie sqlcmd.exe verwenden, um Daten in der LocalDB-Instanz zu ändern, benötigen Sie Sqlcmd aus SQL Server 2012, die Sie auch aus der SQL Server 2012 Feature Pack abrufen können.  
+ Sie können LocalDB aus [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Wenn Sie sqlcmd.exe verwenden möchten, um Daten in der LocalDB-Instanz ändern, benötigen Sie Sqlcmd von SQL Server 2012, die Sie auch über die SQL Server 2012 Feature Pack abrufen können.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Programmgesteuertes Erstellen einer benannten Instanz  
  Eine Anwendung kann eine benannte Instanz erstellen und eine Datenbank wie folgt angeben:  
@@ -60,4 +60,4 @@ Ab SQL Server Codename Denali, wird eine vereinfachte Version von SQL Server, de
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

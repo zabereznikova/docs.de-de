@@ -9,21 +9,21 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540085"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Bidirektionale Unterstützung für Windows Forms-Anwendungen
-Sie können Visual Studio verwenden, um Windows-basierten Anwendungen zu erstellen, die bidirektionale (von rechts nach links) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.  
+Sie können Visual Studio verwenden, um die Windows-basierte Anwendungen zu erstellen, die bidirektionalen (rechts-nach-links) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.  
   
 ## <a name="culture-support"></a>Kulturspezifische Unterstützung  
- Durch Einstellungen der Kultur und Benutzeroberflächenkultur wird festgelegt, wie Datums- und Zeitangaben, Währungen und andere Informationen in Anwendungen gehandhabt werden. Kultur und Benutzeroberflächenkultur werden für bidirektionale Sprachen genauso wie für andere Sprachen unterstützt.   Siehe auch [Kulturspezifische Klassen für globale Windows Forms und Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) oder [Kulturspezifische Klassen für globale Windows Forms und Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
+ Durch Einstellungen der Kultur und Benutzeroberflächenkultur wird festgelegt, wie Datums- und Zeitangaben, Währungen und andere Informationen in Anwendungen gehandhabt werden. Kultur und Benutzeroberflächenkultur werden für bidirektionale Sprachen genauso wie für andere Sprachen unterstützt.   Siehe auch [Kulturspezifische Klassen für globale Windows Forms und Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) oder [Kulturspezifische Klassen für globale Windows Forms und Web Forms](https://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft-Eigenschaft und RightToLeftLayout-Eigenschaft  
- Die <xref:System.Windows.Forms.Control>-Basisklasse, von der Formulare abgeleitet werden, enthält auch eine <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft, die Sie zum Ändern der Leserichtung eines Formulars und seiner Steuerelemente verwenden können. Wenn Sie die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft eines Formulars festlegen, erben standardmäßig alle Steuerelemente des Formulars diese Einstellung. Bei den meisten Steuerelementen können Sie die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft aber auch individuell festlegen. Siehe auch [Vorgehensweise: Anzeigen von Text mit der Schreibrichtung von rechts nach links in Windows Forms für die Globalisierung](http://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+ Die <xref:System.Windows.Forms.Control>-Basisklasse, von der Formulare abgeleitet werden, enthält auch eine <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft, die Sie zum Ändern der Leserichtung eines Formulars und seiner Steuerelemente verwenden können. Wenn Sie die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft eines Formulars festlegen, erben standardmäßig alle Steuerelemente des Formulars diese Einstellung. Bei den meisten Steuerelementen können Sie die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft aber auch individuell festlegen. Siehe auch [Vorgehensweise: Anzeigen von Text mit der Schreibrichtung von rechts nach links in Windows Forms für die Globalisierung](https://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
   
  Die Auswirkung der <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft kann sich von Steuerelement zu Steuerelement unterscheiden. Bei einigen Steuerelementen, wie den Steuerelementen <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ToolTip>, legt die Eigenschaft nur die Leserichtung fest. Bei anderen Steuerelementen wird durch die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft sowohl die Leserichtung als auch das Layout geändert. Dazu gehören Steuerelemente des Typs <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.CheckBox>. Andere Steuerelemente erfordern, dass die <xref:System.Windows.Forms.Form.RightToLeftLayout%2A>-Eigenschaft angewendet wird, um das Layout von rechts nach links zu spiegeln. In der folgenden Tabelle ist angegeben, wie sich die <xref:System.Windows.Forms.Control.RightToLeft%2A>-Eigenschaft und die <xref:System.Windows.Forms.Form.RightToLeftLayout%2A>-Eigenschaft auf die einzelnen Windows Forms-Steuerelemente auswirken.   
   
@@ -54,7 +54,7 @@ Sie können Visual Studio verwenden, um Windows-basierten Anwendungen zu erstell
 |<xref:System.Windows.Forms.MonthCalendar>|Keine Auswirkung. Hängt von der Sprache des Betriebssystems ab.|Spiegelt das Steuerelement|Ja|  
 |<xref:System.Windows.Forms.NotifyIcon>|Nicht unterstützt|Nicht unterstützt|Nein|  
 |<xref:System.Windows.Forms.NumericUpDown>|Die Schaltflächen "Nach oben" und "Nach unten" sind linksbündig.|Keine Auswirkung|Nein|  
-|<xref:System.Windows.Forms.OpenFileDialog>|Für rechts-nach-links-Betriebssysteme, Festlegen des enthaltenden Formulars <xref:System.Windows.Forms.Control.RightToLeft> Eigenschaft <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> zur Lokalisierung des Dialogfeld " |Keine Auswirkung|Nein|  
+|<xref:System.Windows.Forms.OpenFileDialog>|Festlegen von auf rechts-nach-links-Betriebssystemen, des enthaltenden Formulars <xref:System.Windows.Forms.Control.RightToLeft> Eigenschaft <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> ordnet das Dialogfeld " |Keine Auswirkung|Nein|  
 |<xref:System.Windows.Forms.PageSetupDialog>|Keine Auswirkung. Hängt von der Sprache des Betriebssystems ab.|Keine Auswirkung|Nein|  
 |<xref:System.Windows.Forms.Panel>|Untergeordnete Steuerelemente können diese Eigenschaft erben.|Verwenden Sie <xref:System.Windows.Forms.TableLayoutPanel> im Steuerelement für die Rechts-nach-Links-Unterstützung.|Ja|  
 |<xref:System.Windows.Forms.PictureBox>|Nicht unterstützt|Keine Auswirkung|Nein|  
@@ -119,5 +119,5 @@ Sie können Visual Studio verwenden, um Windows-basierten Anwendungen zu erstell
   
 ## <a name="see-also"></a>Siehe auch
 
-[Bidirektionale Unterstützung für ASP.NET-Webanwendungen](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Bidirektionale Unterstützung für ASP.NET-Webanwendungen](https://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
 [Globalisieren von Windows Forms-Anwendungen](globalizing-windows-forms.md)

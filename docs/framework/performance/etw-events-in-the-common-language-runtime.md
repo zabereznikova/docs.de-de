@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7855007c7566d3be0012bbff2cb124ee2681cb6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398052"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536952"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>ETW-Ereignisse in der Common Language Runtime
 Die Common Language Runtime (CLR) stellt nützliche Diagnoseinformationen für die Ereignisablaufverfolgung für Windows (ETW) durch eine große Vielfalt von Ereignissen für das Debuggen und die Profilerstellung bereit. CLR-ETW-Ereignisse nutzen das Windows-ETW-Ablaufverfolgungssystem, um die bestehende Unterstützung für die Profilerstellung und das Debuggen zu erweitern, die von der Common Language Runtime bereitgestellt wird.  
   
- Weitere Informationen zu ETW finden Sie im Artikel [Improve Debugging and Performance Tuning with ETW (Verbessertes Debugging und Leistungsoptimierung mit ETW)](http://go.microsoft.com/fwlink/?LinkID=161142) auf MSDN. Weitere Informationen zu Xperf finden Sie im Eintrag [Windows Performance Toolkit – Xperf](http://go.microsoft.com/fwlink/?LinkID=161144) im NTDebugging-Blog.  
+ Weitere Informationen zu ETW finden Sie im Artikel [Improve Debugging and Performance Tuning with ETW (Verbessertes Debugging und Leistungsoptimierung mit ETW)](https://go.microsoft.com/fwlink/?LinkID=161142) auf MSDN. Weitere Informationen zu Xperf finden Sie im Eintrag [Windows Performance Toolkit – Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) im NTDebugging-Blog.  
   
  Für alle Ereignisse, die in den Themen zu Ereignissen beschrieben werden, ist [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher erforderlich. Das Betriebssystem „Windows Vista“ ist die mindestens erforderliche Version für den Client, und Windows Server 2008 ist die mindestens erforderliche Version für den Server.  
   

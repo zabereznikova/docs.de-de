@@ -2,15 +2,15 @@
 title: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 5d094bb1d2d1155565e48850a2f41829a93cff84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460488"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542309"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
-Projekte für Portable Teilmengen ermöglichen es Programmierern .NET-Assemblys, eine einzelne Quellstruktur zu verwalten und das System mit Unterstützung mehrerer .NET-Implementierungen (Desktop, Silverlight, Windows Phone und XBOX) aufzubauen. Projekte für Portable Teilmengen verweisen nur portable .NET-Bibliotheken, die einer .NET Framework-Assembly sind, die für die Implementierung einer .NET verwendet werden kann.  
+Projekte für Portable Teilmengen ermöglichen .NET Assembly-Programmierern, die eine einzelne Quellstruktur zu verwalten und Buildsystem Unterstützung mehrerer .NET Implementierungen (Desktop, Silverlight, Windows Phone und XBOX). Projekte für Portable Teilmengen verweisen nur auf .NET portable Bibliotheken, die eine .NET Framework-Assembly sind, die auf jeder .NET-Implementierung verwendet werden kann.  
   
 ## <a name="add-service-reference-details"></a>Details zu "Dienstverweis hinzufügen"  
  Wenn Sie einem Projekt für portable Teilmengen einen Dienstverweis hinzufügen, werden die folgenden Einschränkungen erzwungen:  
@@ -45,4 +45,4 @@ Projekte für Portable Teilmengen ermöglichen es Programmierern .NET-Assemblys,
   
 ## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Portable Klassenbibliothek](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))
+ [Portable Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

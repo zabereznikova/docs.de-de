@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d08cfbde82f74dcf88ddadd844854bdfeb403935
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538030"
 ---
 # <a name="ltqualifyassemblygt-element"></a>&lt;QualifyAssembly&gt; Element
 Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll, wenn Sie ein Teilname verwendet wird.  
@@ -41,7 +41,7 @@ Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`partialName`|Erforderliches Attribut.<br /><br /> Gibt die partielle Name der Assembly an, wie er im Code angezeigt wird.|  
+|`partialName`|Erforderliches Attribut.<br /><br /> Gibt den Teil des Namens der Assembly an, wie er im Code angezeigt wird.|  
 |`fullName`|Erforderliches Attribut.<br /><br /> Gibt den vollständigen Namen der Assembly an, wie er im globalen Assemblycache angezeigt wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -56,9 +56,9 @@ Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufen der <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> mit partiellen Assemblynamen Methode bewirkt, dass die common Language Runtime für die Assembly nur im Basisverzeichnis Anwendung gesucht werden soll. Verwenden der  **\<QualifyAssembly >** Element in der Konfigurationsdatei der Anwendung geben Sie die vollständige Assemblyinformationen (Name, Version, öffentliches Schlüsseltoken und Kultur) und dazu führen, dass die common Language Runtime, gesucht werden soll für die Assembly im globalen Assemblycache.  
+ Aufrufen der <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> mit partiellen Assemblynamen Methode bewirkt, dass die common Language Runtime die Assembly nur im Basisverzeichnis Anwendung gesucht. Verwenden der  **\<QualifyAssembly >** Element in der Konfigurationsdatei der Anwendung geben Sie die vollständige Assemblyinformationen (Name, Version, öffentliches Schlüsseltoken und Kultur) und dazu führen, dass die common Language Runtime suchen für die Assembly im globalen Assemblycache.  
   
- Die **FullName** Attribut muss vier Felder der Assemblyidentität enthalten: Name, Version, öffentliches Schlüsseltoken und Kultur. Die **PartialName** Attribut muss teilweise auf eine Assembly verweisen. Geben Sie mindestens den Namen der Assembly Text (die am häufigsten vorkommen), aber Sie können auch die Version, Token des öffentlichen Schlüssels oder Kultur (oder eine beliebige Kombination aus den vier, aber nicht alle vier) einschließen. Die **PartialName** muss die im Aufruf angegebenen Namen übereinstimmen. Angenommen, Sie können nicht angeben, `"math"` als die **PartialName** Attribut in der Konfigurationsdatei und der Aufruf `Assembly.Load("math, Version=3.3.3.3")` im Code.  
+ Die **"FullName"** Attribut muss vier Felder der Assemblyidentität enthalten: Name, Version, Kultur und Token des öffentlichen Schlüssels. Die **PartialName** Attribut muss teilweise auf eine Assembly verweisen. Geben Sie mindestens den Namen der Assembly Text (die am häufigsten verwendeten Fall), aber Sie können auch die Version, Token des öffentlichen Schlüssels oder Kultur (oder eine beliebige Kombination aus den vier, aber nicht alle vier) einschließen. Die **PartialName** muss den im Aufruf angegebenen Namen übereinstimmen. Angenommen, Sie können nicht angeben, `"math"` als die **PartialName** Attribut in Ihrer Konfigurationsdatei, und rufen `Assembly.Load("math, Version=3.3.3.3")` in Ihrem Code.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird logisch der Aufruf `Assembly.Load("math")` in `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
@@ -78,4 +78,4 @@ Gibt den vollständigen Namen der Assembly an, die dynamisch geladen werden soll
 ## <a name="see-also"></a>Siehe auch  
  [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB: Partielle Assemblyverweise](http://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+ [NIB: Partielle Assemblyverweise](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
