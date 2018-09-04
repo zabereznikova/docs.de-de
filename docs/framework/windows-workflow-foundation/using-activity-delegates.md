@@ -2,12 +2,12 @@
 title: Verwenden von Aktivitätsdelegaten
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 96a412a066342fb9c459e1388c5b58847ebac390
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518951"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489928"
 ---
 # <a name="using-activity-delegates"></a>Verwenden von Aktivitätsdelegaten
 Aktivitätsdelegaten ermöglichen es Aktivitätsautoren, Rückrufe mit bestimmten Signaturen verfügbar zu machen, für die Benutzer der Aktivität aktivitätsbasierte Handler bereitstellen können. Es sind zwei Typen von Aktivitätsdelegaten verfügbar: <xref:System.Activities.ActivityAction%601> wird verwendet, um Aktivitätsdelegaten zu definieren, die keinen Rückgabewert haben, und <xref:System.Activities.ActivityFunc%601> wird verwendet, um Aktivitätsdelegaten zu definieren, die einen Rückgabewert aufweisen.  
@@ -27,9 +27,9 @@ In den Beispielen in diesem Thema wird die Syntax zur Objektinitialisierung verw
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- Weitere Informationen über Objektinitialisierer finden Sie unter [wie: Initialisieren von Objekten ohne Aufruf eines Konstruktors (C#-Programmierhandbuch)](http://go.microsoft.com/fwlink/?LinkId=161015) und [wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ Weitere Informationen über Objektinitialisierer finden Sie unter [wie: Initialisieren von Objekten ohne Aufruf eines Konstruktors (C#-Programmierhandbuch)](https://go.microsoft.com/fwlink/?LinkId=161015) und [wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers](https://go.microsoft.com/fwlink/?LinkId=161016).  
   
- Im folgenden Beispiel wird eine <xref:System.Activities.Statements.TryCatch>-Aktivität in einem Workflow verwendet. Eine <xref:System.ApplicationException> wird vom Workflow ausgelöst und wird von einer <xref:System.Activities.Statements.Catch%601>-Aktivität behandelt. Der Handler für das <xref:System.Activities.Statements.Catch%601> aktivitätsaktion Aktivität ist eine <xref:System.Activities.Statements.WriteLine> Aktivität und die Ausnahmedetails werden dorthin mithilfe der `ex` <xref:System.Activities.DelegateInArgument%601>.  
+ Im folgenden Beispiel wird eine <xref:System.Activities.Statements.TryCatch>-Aktivität in einem Workflow verwendet. Eine <xref:System.ApplicationException> wird vom Workflow ausgelöst und wird von einer <xref:System.Activities.Statements.Catch%601>-Aktivität behandelt. Der Handler für die <xref:System.Activities.Statements.Catch%601> -Aktivität ist eine <xref:System.Activities.Statements.WriteLine> -Aktivität, und die Ausnahmedetails übergeben wird durch Sie über die `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   

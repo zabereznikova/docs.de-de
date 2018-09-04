@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753626"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403188"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 
@@ -33,8 +33,10 @@ Standardformatzeichenfolgen für Zahlen werden für die Formatierung allgemeiner
   
 -   `xx` ist eine optionale ganze Zahl, die als *Genauigkeitsspezifizierer* (Genauigkeitsangabe) bezeichnet wird. Die Genauigkeitsangabe reicht von 0 bis 99 und wirkt sich auf die Anzahl der Ziffern im Ergebnis aus. Beachten Sie, dass die Genauigkeitsangabe die Anzahl der Ziffern in der Zeichenfolgendarstellung einer Zahl steuert. Die Zahl selbst wird nicht gerundet. Verwenden Sie für einen Rundungsvorgang die <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>-, <xref:System.Math.Floor%2A?displayProperty=nameWithType>- oder <xref:System.Math.Round%2A?displayProperty=nameWithType>-Methode.  
   
-     Wenn der *Genauigkeitsspezifizierer* die Anzahl von Dezimalstellen in der Ergebniszeichenfolge steuert, entsprechen Ergebniszeichenfolgen Zahlen, die von null weg gerundet werden (d.h., es wird <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType> verwendet).  
-  
+    Wenn der *Genauigkeitsspezifizierer* die Anzahl von Dezimalstellen in der Ergebniszeichenfolge steuert, gibt die Ergebniszeichenfolge eine Zahl an, die auf ein darstellbares Ergebnis gerundet wird, das am ehesten dem unendlich präzisen Ergebnis entspricht. Wenn zwei gleich nahe darstellbare Ergebnisse vorhanden sind:
+    - **In .NET Framework und in .NET Core bis .NET Core 2.0** wählt die Runtime das Ergebnis mit der größeren am wenigsten signifikanten Ziffer aus (d.h. <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **In .NET Core 2.1 und höher** wählt die Runtime das Ergebnis mit einer geraden am wenigsten signifikanten Ziffer aus (d.h. <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
+
     > [!NOTE]
     >  Der Genauigkeitsspezifizierer bestimmt Anzahl von Ziffern in der Ergebniszeichenfolge. Verwenden zum Auffüllen einer Ergebniszeichenfolge mit führenden oder nachgestellten Leerzeichen die Funktion für die [zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md), und definieren Sie eine *Ausrichtungskomponente* im Formatelement.  
   

@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: c3c28392a9e4bee0e2f9e0dcf553e13b67c378dd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 90aa1e5dceb3cac87d330837496b9dc467dc1876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758356"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489889"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Hinzufügen von vorhandenen Einschränkungen zu einem "DataSet"
-Die **füllen** Methode der **"DataAdapter"** füllt eine <xref:System.Data.DataSet> nur mit Tabellenspalten und Tabellenzeilen aus einer Datenquelle; jedoch Einschränkungen werden häufig festgelegt, indem die Datenquelle die **Ausfüllen** Methode fügt diese Schemainformationen nicht der **DataSet** standardmäßig. Zum Auffüllen einer **DataSet** mit vorhandenen primary Key-Einschränkungsinformationen aus einer Datenquelle können Sie entweder die **FillSchema** Methode der **"DataAdapter"**, oder legen Sie die **MissingSchemaAction** Eigenschaft von der **"DataAdapter"** auf **AddWithKey** vor dem Aufruf **füllen**. Dadurch wird sichergestellt, dass die Einschränkungen in der **DataSet** in der Datenquelle entsprechen. Foreign Key-Einschränkungsinformationen nicht enthalten ist, und muss entsprechend explizit erstellt werden [DataTable-Einschränkungen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+Die **füllen** -Methode der der **DataAdapter** füllt eine <xref:System.Data.DataSet> nur mit Spalten und Zeilen aus einer Datenquelle jedoch Einschränkungen sind häufig festgelegt, indem die Datenquelle, die **Füllen** Methode fügt diese Schemainformationen nicht der **DataSet** standardmäßig. Zum Auffüllen einer **DataSet** mit vorhandenen primary Key-Einschränkungsinformationen aus einer Datenquelle können Sie entweder Aufruf der **FillSchema** -Methode der der **DataAdapter**, oder legen Sie die **MissingSchemaAction** Eigenschaft der **DataAdapter** zu **AddWithKey** vor dem Aufruf **füllen**. Dadurch wird sichergestellt, dass die Einschränkungen in der **DataSet** widerzuspiegeln, die in der Datenquelle. Foreign Key-Einschränkungsinformationen nicht enthalten ist, und muss erstellt werden, siehe explizit [DataTable-Einschränkungen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
- Schemainformationen Hinzufügen einer **DataSet** , bevor es mit Daten gefüllt wird sichergestellt, dass die primary Key-Einschränkungen enthalten sind die <xref:System.Data.DataTable> Objekte in der **DataSet**. Als Ergebnis bei weiteren Aufrufen zum Füllen der **DataSet** erfolgen, ist das primäre Schlüsselspalteninformationen wird verwendet, um die neue Zeilen aus der Datenquelle mit den aktuellen Zeilen in jeder entsprechen **DataTable**, und aktuellen Daten in die Tabellen mit Daten aus der Datenquelle überschrieben wird. Ohne die Schemainformationen werden die neuen Zeilen aus der Datenquelle angefügt, um die **DataSet**, wodurch doppelte Zeilen.  
+ Schemainformationen Hinzufügen einer **DataSet** vor dem Füllen mit Daten stellt sicher, dass die primary Key-Einschränkungen enthalten sind die <xref:System.Data.DataTable> Objekte in der **DataSet**. Als Ergebnis bei weiteren Aufrufen zum Füllen der **DataSet** vorgenommen werden, wird die primäre Schlüsselspalteninformationen wird verwendet, um neue Zeilen aus der Datenquelle mit den aktuellen Zeilen in jeder entsprechen **DataTable**, und aktuellen Daten in die Tabellen mit Daten aus der Datenquelle überschrieben wird. Ohne die Schemainformationen werden die neuen Zeilen aus der Datenquelle angefügt, um die **DataSet**, wodurch doppelte Zeilen.  
   
 > [!NOTE]
->  Wenn eine Spalte in einer Datenquelle als automatisch erhöht, identifiziert wird die **FillSchema** -Methode, oder die **ausfüllen** Methode mit einer **MissingSchemaAction** von  **AddWithKey**, erstellt eine **DataColumn** mit einem **AutoIncrement** -Eigenschaftensatz auf `true`. Allerdings müssen Sie legen die **AutoIncrementStep** und **AutoIncrementSeed** Werte selbst. Weitere Informationen zu Spalten automatisch erhöht, finden Sie unter [erstellen "AutoIncrement"-Spalten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+>  Wenn eine Spalte in einer Datenquelle als automatisch erhöht, identifiziert wird die **FillSchema** -Methode, oder die **füllen** -Methode mit einer **MissingSchemaAction** von  **AddWithKey**, erstellt eine **DataColumn** mit einer **AutoIncrement** -Eigenschaftensatz auf `true`. Allerdings müssen Sie zum Festlegen der **AutoIncrementStep** und **AutoIncrementSeed** Werte selbst. Weitere Informationen zu Spalten automatisch erhöht, finden Sie unter [Erstellen von AutoIncrement-Spalten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
- Mit **FillSchema** oder Einstellung der **MissingSchemaAction** auf **AddWithKey** erfordert zusätzliche Verarbeitungsschritte an der Datenquelle um Primärschlüsselspalte Informationen zu erhalten. Diese zusätzlichen Verarbeitungsschritte können zu einem Leistungsabfall führen. Wenn Sie die Primärschlüsselinformationen zur Entwurfszeit kennen, empfiehlt es sich, zum Erzielen einer optimalen Leistung die Primärschlüsselspalte(n) explizit in der richtigen Reihenfolge anzugeben. Informationen zum Primärschlüsselinformationen für eine Tabelle explizit festlegen, finden Sie unter [Primärschlüssel definieren](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ Mithilfe von **FillSchema** oder einer Einstellung der **MissingSchemaAction** zu **AddWithKey** erfordert zusätzliche Verarbeitungsschritte an der Datenquelle um Primärschlüsselspalte Informationen zu ermitteln. Diese zusätzlichen Verarbeitungsschritte können zu einem Leistungsabfall führen. Wenn Sie die Primärschlüsselinformationen zur Entwurfszeit kennen, empfiehlt es sich, zum Erzielen einer optimalen Leistung die Primärschlüsselspalte(n) explizit in der richtigen Reihenfolge anzugeben. Informationen zum expliziten Festlegen von Primärschlüsselinformationen für eine Tabelle finden Sie unter [Definieren von Primärschlüsseln](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
- Das folgende Codebeispiel veranschaulicht das Hinzufügen von Schemainformationen zu einer **DataSet** mit **FillSchema**.  
+ Im folgenden Codebeispiel wird veranschaulicht, das Hinzufügen von Schemainformationen einer **DataSet** mit **FillSchema**.  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -38,7 +38,7 @@ custAdapter.FillSchema(custDataSet, SchemaType.Source, "Customers");
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
- Das folgende Codebeispiel veranschaulicht das Hinzufügen von Schemainformationen eine **DataSet** mithilfe der **MissingSchemaAction.AddWithKey** Eigenschaft von der **füllen** Methode.  
+ Im folgenden Codebeispiel wird veranschaulicht, das Hinzufügen von Schemainformationen einer **DataSet** mithilfe der **MissingSchemaAction.AddWithKey** Eigenschaft der **füllen** Methode.  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -55,13 +55,13 @@ custAdapter.Fill(custDataSet, "Customers");
 ```  
   
 ## <a name="handling-multiple-result-sets"></a>Umgang mit mehreren Resultsets  
- Wenn die **"DataAdapter"** trifft mehrere Resultsets aus der **SelectCommand**, erstellt jedoch mehrere Tabellen in der **DataSet**. Die Tabellen erhält einen standardmäßig nullbasierte Namen von **Tabelle** *N*, beginnend mit **Tabelle** anstelle von "Table0". Wenn ein Tabellenname als Argument übergeben wird die **FillSchema** -Methode, die Tabellen erhält einen nullbasierten Namen **TableName** *N*, beginnend mit **TableName** anstelle von "TableName0".  
+ Wenn die **DataAdapter** erkennt mehrere Resultsets aus der **SelectCommand**, erstellt es mehrere Tabellen in der **DataSet**. Die Tabellen erhält einen standardmäßig nullbasierte Namen **Tabelle** *N*, beginnend mit **Tabelle** anstelle von "Table0". Wenn ein Tabellenname als Argument übergeben wird die **FillSchema** -Methode, die Tabellen erhält einen nullbasierten Namen **TableName** *N*, beginnend mit **TableName** anstelle von "TableName0".  
   
 > [!NOTE]
->  Wenn die **FillSchema** Methode der **OleDbDataAdapter** -Objekts aufgerufen wird, für einen Befehl, der mehrere Resultsets zurückgibt, wird nur die Schemainformationen aus dem ersten Resultset zurückgegeben. Wenn Schemainformationen für mehrere Resultsets Sätze unter Verwendung der **OleDbDataAdapter**, es wird empfohlen, Sie geben eine **MissingSchemaAction** von **AddWithKey** und die Schemainformationen zu erhalten, beim Aufrufen der **füllen** Methode.  
+>  Wenn die **FillSchema** Methode der **OleDbDataAdapter** -Objekts aufgerufen wird, für einen Befehl aus, die mehrere Resultsets zurückgibt, wird nur die Schemainformationen aus dem ersten Resultset zurückgegeben. Wenn Schemainformationen für mehrere Resultsets zurückgeben Sätze unter Verwendung der **OleDbDataAdapter**, es wird empfohlen, die Sie angeben, ein **MissingSchemaAction** von **AddWithKey** und rufen Sie die Schemainformationen beim Aufruf der **füllen** Methode.  
   
 ## <a name="see-also"></a>Siehe auch  
  [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

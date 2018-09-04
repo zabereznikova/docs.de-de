@@ -1,6 +1,6 @@
 ---
 title: SpawnDerivedClass-Funktion (Referenz zur nicht verwalteten API)
-description: Die SpawnDerivedClass-Funktion erstellt ein neues Objekt, das von einem Objekt abgeleitet wird.
+description: Die SpawnDerivedClass-Funktion erstellt ein neues Objekt, das von einem Objekt abgeleitet ist.
 ms.date: 11/06/2017
 api_name:
 - SpawnDerivedClass
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462298"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489798"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass-Funktion
 Erstellt ein Klassenobjekt für die neu abgeleitete aus einem angegebenen Objekt.    
@@ -44,37 +44,37 @@ HRESULT SpawnDerivedClass (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `ppNewClass`  
-[out] Erhält den Zeiger auf das neue Objekt der Klasse Definition an. Wenn ein Fehler auftritt, wird ein neues Objekt nicht zurückgegeben, und `ppNewClass` ist der linke unverändert bleiben sollen. Der Wert darf nicht sein `null`.
+[out] Erhält der Zeiger auf das neue Objekt der Klasse-Definition. Wenn ein Fehler auftritt, ist ein neues Objekt nicht zurückgegeben, und `ppNewClass` wird links unverändert. Der Wert darf nicht sein `null`.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Es wurde eine ungültige Operation, z. B. Erstellen einer Klasse aus einer Instanz angefordert. |
-| `WBEM_E_INCOMPLETE_CLASS` | Die Quellklasse wurde nicht vollständig definiert oder bei der Verwaltung von Windows registriert werden, damit eine neue abgeleitete Klasse nicht zulässig ist. |
+| `WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Es wurde eine ungültige Operation, z. B. das Erzeugen einer Klasse von einer Instanz angefordert. |
+| `WBEM_E_INCOMPLETE_CLASS` | Die Quellklasse wurde nicht vollständig definiert oder mit Windows-Verwaltung, registriert werden, damit eine neue abgeleitete Klasse nicht zulässig ist. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `ppNewClass` ist `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) Methode.
 
 `ptr` muss eine Definition einer Klasse, die die übergeordnete Klasse des Objekts erzeugten wird. Das zurückgegebene Objekt ist eine Unterklasse des aktuellen Objekts.
 
-Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklasse des aktuellen Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode aus, die durch den Unterklassen (abgeleitete Klassen) erstellt werden können.
+Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklasse des aktuellen Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, die von der Unterklasse (abgeleitete Klassen) erstellt werden können.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
