@@ -3,11 +3,11 @@ title: Korrelierter Rechner
 ms.date: 03/30/2017
 ms.assetid: c365166e-6552-49a4-bf17-9f4e597d4d41
 ms.openlocfilehash: 71cfdd0906ef20ec36b76ef5e508a4551b9fe3fe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384670"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517312"
 ---
 # <a name="correlated-calculator"></a>Korrelierter Rechner
 In diesem Beispiel wird veranschaulicht, wie die Messagingaktivitäten (<xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply>) im Designer auf Grundlage eines Parameters in der Meldung mit inhaltsbasierter Korrelation verwendet werden. In diesem Szenario befinden sich die Vorgänge des Rechners in einem parallelen Konvoi. Sowohl eine Instanz als auch eine Korrelation (basierend auf `CalculatorId`) werden erstellt, wenn die erste Meldung an den Workflow gesendet wird; nachfolgende Meldungen mit derselben `CalculatorId` werden an diese Instanz weitergeleitet, bis der Reset-Vorgang aufgerufen wird. Der Client wird als WPF-Anwendung implementiert, die einen codebasierten Clientproxy verwendet, um mit dem Dienst zu kommunizieren.  

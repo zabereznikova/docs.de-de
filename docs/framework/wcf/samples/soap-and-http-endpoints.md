@@ -2,25 +2,25 @@
 title: SOAP- und HTTP-Endpunkte
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809517"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523190"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP- und HTTP-Endpunkte
-In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementiert und im SOAP-Format und das "Plain Old XML" (POX)-Format, die mit dem WCF-Web-Programmiermodell verfügbar gemacht. Finden Sie unter der [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Sample detaillierte Informationen über die HTTP-Bindung für den Dienst. Dieses Beispiel befasst sich mit den Details der Bereitstellung des gleichen Diensts über SOAP und HTTP, allerdings mit unterschiedlichen Bindungen.  
+In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementiert, und machen Sie ihn in der SOAP-Format und das Verwenden der WCF-Webprogrammiermodell "Plain Old XML" (POX)-Format verfügbar. Finden Sie unter den [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Weitere Informationen zur HTTP-Bindung für den Dienst. Dieses Beispiel befasst sich mit den Details der Bereitstellung des gleichen Diensts über SOAP und HTTP, allerdings mit unterschiedlichen Bindungen.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
- Verfügbarmachen eines RPC-Diensts über SOAP und HTTP, die mithilfe von WCF.  
+ Einen RPC-Dienst verfügbar gemacht werden, über SOAP und HTTP, die mithilfe von WCF.  
   
 ## <a name="discussion"></a>Diskussion  
- Dieses Beispiel besteht aus zwei Komponenten: einem Webanwendungsprojekt (Dienst), die einen WCF-Dienst und einer Konsolenanwendung (Client), mit dem Dienstvorgänge mit SOAP- und HTTP-Bindungen aufgerufen enthält.  
+ In diesem Beispiel besteht aus zwei Komponenten: einem Webanwendungsprojekt (Dienst), die einen WCF-Dienst und eine Konsolenanwendung (Client), die aufruft, dem Dienstvorgänge mit SOAP- und HTTP-Bindungen enthält.  
   
- Der WCF-Dienst macht 2 Vorgänge –`GetData` und `PutData` –, die die Zeichenfolge, die als Eingabe übergebene echo. Die Dienstvorgänge werden mit <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> kommentiert. Diese Attribute steuern die HTTP-Projektion dieser Vorgänge. Außerdem werden sie mit <xref:System.ServiceModel.OperationContractAttribute> kommentiert, sodass sie über SOAP-Bindungen verfügbar gemacht werden können. Die `PutData`-Methode des Diensts löst eine <xref:System.ServiceModel.Web.WebFaultException> aus, die mithilfe des HTTP-Statuscodes über HTTP zurückgesendet und als SOAP-Fehler über SOAP zurückgesendet wird.  
+ Der WCF-Dienst macht 2 Vorgänge –`GetData` und `PutData` –, die die Zeichenfolge, die als Eingabe übergebene ausgeben. Die Dienstvorgänge werden mit <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> kommentiert. Diese Attribute steuern die HTTP-Projektion dieser Vorgänge. Außerdem werden sie mit <xref:System.ServiceModel.OperationContractAttribute> kommentiert, sodass sie über SOAP-Bindungen verfügbar gemacht werden können. Die `PutData`-Methode des Diensts löst eine <xref:System.ServiceModel.Web.WebFaultException> aus, die mithilfe des HTTP-Statuscodes über HTTP zurückgesendet und als SOAP-Fehler über SOAP zurückgesendet wird.  
   
- Die Datei "Web.config" konfiguriert den WCF-Dienst mit 3 Endpunkten:  
+ Die Datei "Web.config" wird den WCF-Dienst mit 3 Endpunkten konfiguriert:  
   
 -   Der ~/service.svc/mex-Endpunkt, der die Dienstmetadaten für den Zugriff durch SOAP-basierte Clients verfügbar macht.  
   
@@ -40,11 +40,11 @@ In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementi
   
 2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-3.  Wenn es nicht bereits geöffnet ist, drücken Sie STRG + W, S, öffnen Sie die **Projektmappen-Explorer** Fenster.  
+3.  Wenn es nicht bereits geöffnet ist, drücken Sie STRG + W, S, um das Öffnen der **Projektmappen-Explorer** Fenster.  
   
-4.  Aus der **Projektmappen-Explorer** Fenster mit der rechten Maustaste die **Service** Projekt, und platzieren Sie den Cursor über die **Debuggen** Kontextmenüoption, damit die **neue starten Instanz** Kontextmenü wird angezeigt. Klicken Sie auf **neue Instanz starten**. Der ASP.NET-Entwicklungsserver, der den Dienst hostet, wird gestartet.  
+4.  Von der **Projektmappen-Explorer** Fenster mit der rechten Maustaste die **Service** Projekt, und platzieren Sie den Cursor über der **Debuggen** Option im Kontextmenü, damit die **neue starten Instanz** Kontextmenü angezeigt wird. Klicken Sie auf **neue Instanz starten**. Der ASP.NET-Entwicklungsserver, der den Dienst hostet, wird gestartet.  
   
-5.  Aus dem Projektmappen-Explorer-Fenster mit der rechten Maustaste des Clientprojekts, und platzieren Sie den Cursor über die **Debuggen** Kontextmenüoption, damit die **neue Instanz starten** Kontextmenü wird angezeigt. Klicken Sie auf **neue Instanz starten**.  
+5.  Klicken Sie im Projektmappen-Explorer-Windows mit der rechten Maustaste in des Clientprojekts, und platzieren Sie den Cursor über der **Debuggen** Option im Kontextmenü, damit der **neue Instanz starten** Kontextmenü angezeigt wird. Klicken Sie auf **neue Instanz starten**.  
   
 6.  Im eingeblendeten Clientkonsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML-Hilfeseite für den ausgeführten Dienst angezeigt. Sie können die HTML-Hilfeseite jederzeit anzeigen, indem sie den URI der Hilfeseite in einem Browser eingeben.  
   
@@ -54,13 +54,13 @@ In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementi
   
 9. Drücken Sie UMSCHALT+F5, um das Debugging des Diensts zu beenden.  
   
-10. Klicken Sie im Windows-Infobereich mit der rechten Maustaste des Symbol "ASP.NET Development Server", und wählen **beenden** aus dem Kontextmenü.  
+10. Klicken Sie in der Windows-Infobereich mit der rechten Maustaste in des ASP.NET Development Server-Symbols, und wählen **beenden** aus dem Kontextmenü.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\SoapAndHttpEndpoints`

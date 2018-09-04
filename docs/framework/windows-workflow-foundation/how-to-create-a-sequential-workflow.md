@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
 ms.openlocfilehash: e2cfb3068a416da40b99072a0c7dfd751d3578c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407356"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524183"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Vorgehensweise: Erstellen eines sequenziellen Workflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt durch Erstellen eines Workflows, der integrierten Aktivitäten wie z. B. verwendet die <xref:System.Activities.Statements.Sequence> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  

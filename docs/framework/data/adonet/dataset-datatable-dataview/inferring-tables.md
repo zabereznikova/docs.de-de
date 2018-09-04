@@ -3,11 +3,11 @@ title: Ableiten von Tabellen
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332852"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528171"
 ---
 # <a name="inferring-tables"></a>Ableiten von Tabellen
 Beim Herleiten eines Schemas für ein <xref:System.Data.DataSet> aus einem XML-Dokument wird in ADO.NET zunächst bestimmt, welche XML-Elemente Tabellen darstellen. Führen Sie die folgenden XML-Strukturen in einer Tabelle für die **DataSet** Schema:  

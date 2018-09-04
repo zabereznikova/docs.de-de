@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
 ms.openlocfilehash: 0283fd8b3fd275be9787bb75763e9395091426a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406261"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513670"
 ---
 # <a name="windows-service-host"></a>Windows-Diensthost
 Dieses Beispiel zeigt einen Windows Communication Foundation (WCF)-Dienst in einem verwalteten Windows-Dienst gehostet wird. Windows-Dienste gesteuert werden, verwenden das Applet "Dienste" in **Systemsteuerung** und konfiguriert werden können, um automatisch nach einem Systemneustart gestartet. Das Beispiel besteht aus einem Clientprogramm und einem Windows-Dienstprogramm. Der Dienst wird als EXE-Programm implementiert und enthält seinen eigenen Hostingcode. In anderen Hostumgebungen, z. B. WAS (Windows Process Activation Services, Windows-Prozessaktivierungsdienste) oder IIS (Internet Information Services, Internetinformationsdienste), müssen Sie keinen Hostcode schreiben.  

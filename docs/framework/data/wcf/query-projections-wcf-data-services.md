@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
 ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526687"
 ---
 # <a name="query-projections-wcf-data-services"></a>Abfrageprojektionen (WCF Data Services)
 Projektion stellt einen Mechanismus in der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] reduzieren die Datenmenge im Feed zurückgegeben, die von einer Abfrage, indem Sie angeben, die nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden. Weitere Informationen finden Sie unter [OData: Select System Query Option ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  

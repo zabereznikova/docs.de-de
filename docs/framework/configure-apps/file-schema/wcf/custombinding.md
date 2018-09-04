@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 514d0770bd94e55ef3eb7ce2421d1d031c90c3e9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751776"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527134"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.  
@@ -182,7 +182,7 @@ Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |closeTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|Name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert ist eine benutzerdefinierte Zeichenfolge, die als Identifikationszeichenfolge für die benutzerdefinierte Bindung fungiert. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zur Standardkonfiguration und namenlos Bindungen und Verhaltensweisen finden Sie unter [vereinfachte Konfiguration](../../../../../docs/framework/wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|Name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert ist eine benutzerdefinierte Zeichenfolge, die als Identifikationszeichenfolge für die benutzerdefinierte Bindung fungiert. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |receiveTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |sendTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
@@ -260,7 +260,7 @@ Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   Am Ende befindet sich ein erforderliches Transportelement. Sie können einen eigenen Transport verwenden oder eines der transportbindungselemente von Windows Communication Foundation (WCF):  
+-   Am Ende befindet sich ein erforderliches Transportelement. Sie können einen eigenen Transport oder eines der transportbindungselemente von Windows Communication Foundation (WCF):  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -290,7 +290,7 @@ Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.
   
  Zusätzlich können Sie Ihre eigenen Bindungselemente definieren und diese zwischen den vorangehenden definierten Ebenen einsetzen.  
   
- Eine Erläuterung zum Verwenden einer benutzerdefiniertes Bindung für eine vom System bereitgestellte Bindung zu ändern, finden Sie unter [wie: Anpassen einer Bindung sicherheitsbindungsarten](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+ Eine Erläuterung zur Verwendung eine benutzerdefinierten Bindung für eine vom System bereitgestellte Bindung zu ändern, finden Sie unter [wie: Anpassen einer System-provided Bindung](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
 1.  
   
@@ -306,4 +306,4 @@ Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.
  [CustomBinding-Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+ [Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)

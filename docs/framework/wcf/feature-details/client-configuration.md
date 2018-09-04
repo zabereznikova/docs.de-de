@@ -3,11 +3,11 @@ title: Clientkonfiguration
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423754"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527715"
 ---
 # <a name="client-configuration"></a>Clientkonfiguration
 Sie können die Windows Communication Foundation (WCF) Clientkonfiguration verwenden, an die Adresse, Bindung, Verhalten und Vertrag, der Eigenschaften "ABC" den Clientendpunkt an, welche Clients verwenden, um den Dienstendpunkten herstellen. Die [ \<Client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) Element verfügt über eine [ \<Endpunkt >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element, dessen Attribute werden zum Konfigurieren des Endpunkts abc. Diese Attribute werden im Abschnitt "Konfigurieren von Endpunkten" dieses Themas erläutert.  

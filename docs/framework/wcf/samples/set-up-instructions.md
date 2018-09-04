@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
 ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487444"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529577"
 ---
 # <a name="set-up-instructions"></a>Setupanweisungen
 Diese Reihe von Themen wird beschrieben, wie Dienste einrichten, die erforderlich sind, um ein Windows Communication Foundation (WCF)-Dienst ausgeführt wird.  

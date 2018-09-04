@@ -3,11 +3,11 @@ title: CustomDiscoveryMetadata
 ms.date: 03/30/2017
 ms.assetid: c42455fd-3652-4b7e-b698-ab3a2bb52e48
 ms.openlocfilehash: 181910db3f1dd6da892f6ae2ddcbf7bd5859ff17
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525420"
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 In diesem Beispiel wird gezeigt, wie benutzerdefinierte XML-Metadaten in die Suchmetadaten eines sichtbaren Endpunkts eingefügt werden, der von einem Dienst verfügbar gemacht wird. Im Beispiel wird außerdem erläutert, wie ein Client nach dem Dienst suchen und diese benutzerdefinierten Daten extrahieren kann. Das folgende Beispiel besteht aus zwei Projekten, Dienst und Client.  

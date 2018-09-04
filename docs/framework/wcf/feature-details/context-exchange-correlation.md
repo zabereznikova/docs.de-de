@@ -3,11 +3,11 @@ title: Kontextaustauschkorrelation
 ms.date: 03/30/2017
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 ms.openlocfilehash: d9de111fa08b4a398bba52bc903ea1fec8c7f298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483696"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519731"
 ---
 # <a name="context-exchange-correlation"></a>Kontextaustauschkorrelation
 Kontextkorrelation basiert auf dem kontextaustauschmechanismus, die in beschriebenen der [.NET Context Exchange Protocol Specification](https://go.microsoft.com/fwlink/?LinkId=166059). Bei der Kontextkorrelation wird ein bekannter Kontextheader oder ein Cookie verwendet, um Nachrichten der richtigen Instanz zuzuordnen. Zur Durchführung der Kontextkorrelation muss eine kontextbasierte Bindung wie <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> oder <xref:System.ServiceModel.NetTcpContextBinding> auf dem Endpunkt verwendet werden, der für <xref:System.ServiceModel.Activities.WorkflowServiceHost> bereitgestellt wird. In diesem Thema wird erläutert, wie die Kontextkorrelation mit Messagingaktivitäten in einem Workflowdienst verwendet wird.  

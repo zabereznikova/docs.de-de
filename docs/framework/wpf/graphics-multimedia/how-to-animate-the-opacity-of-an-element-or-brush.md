@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
 ms.openlocfilehash: 549d3eab0d6d75403e962eeb146be8d7995cc931
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525852"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Gewusst wie: Animieren der Durchlässigkeit eines Elements oder eines Pinsels
 Um ein FrameworkElement ein-und auszublenden, animieren Sie dessen <xref:System.Windows.UIElement.Opacity%2A> -Eigenschaft, oder Sie können Animieren der <xref:System.Windows.Media.Brush.Opacity%2A> Eigenschaft der <xref:System.Windows.Media.Brush> (oder Pinsel) verwendet, um es zu zeichnen. Animieren der Durchlässigkeit des Elements können sie und ihren untergeordneten Elementen ein-und ausgeblendet, aber den Pinsel ab, die zum Zeichnen des Elements animieren, können Sie zum welcher Bereich des Elements wird ausgeblendet. Sie können z. B. die Deckkraft eines Pinsels, der zum Zeichnen des Hintergrunds einer Schaltfläche verwendete animieren. Dadurch würde der Hintergrund der Schaltfläche auf der Ansicht, bleiben dessen Text vollständig deckend ein-und ausgeblendet.  

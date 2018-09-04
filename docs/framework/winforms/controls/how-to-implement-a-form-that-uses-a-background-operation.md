@@ -17,11 +17,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
 ms.openlocfilehash: 8f348097223d2db4c54d9ecbba89eb8d179b6680
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404535"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523120"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Gewusst wie: Implementieren eines Formulars, das eine Hintergrundoperation verwendet
 Mit dem folgenden Beispielprogramm wird ein Formular erstellt, das Fibonacci-Zahlen berechnet. Die Berechnung erfolgt in einem separaten (vom Thread der Benutzeroberfläche unabhängigen) Thread, sodass die Benutzeroberfläche während der Berechnung weiterhin ohne Verzögerungen ausgeführt wird.  

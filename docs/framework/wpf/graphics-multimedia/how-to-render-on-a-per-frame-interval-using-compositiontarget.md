@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
 ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473917"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526440"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Gewusst wie: Rendern in Pro-Frame-Intervallen mit CompositionTarget
 Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animations-Engine stellt zahlreiche Funktionen zum Erstellen framebasierter Animationen bereit. In manchen Anwendungsszenarios müssen Sie das Rendering jedoch pro Frame detaillierter steuern können. Die <xref:System.Windows.Media.CompositionTarget> Objekt bietet die Möglichkeit, benutzerdefinierte Animationen, die basierend auf einer pro-Frame-Rückruf zu erstellen.  

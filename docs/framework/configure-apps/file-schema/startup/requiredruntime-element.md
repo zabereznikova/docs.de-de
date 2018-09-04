@@ -13,11 +13,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: ac1e1f7bc36d8d2b12b99de2794bb0ba31ddbd7a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398731"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518646"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;RequiredRuntime&gt; Element
 Gibt an, dass die Anwendung nur Version 1.0 der Common Language Runtime unterstützt. Dieses Element ist veraltet und sollte nicht mehr verwendet werden. Die [ `supportedRuntime` ](supportedruntime-element.md) Element sollte stattdessen verwendet werden.

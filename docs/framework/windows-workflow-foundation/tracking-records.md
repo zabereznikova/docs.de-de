@@ -2,12 +2,12 @@
 title: Nachverfolgungsdatensätze
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520278"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527038"
 ---
 # <a name="tracking-records"></a>Nachverfolgungsdatensätze
 Die Workflowlaufzeit ist so instrumentiert, dass Überwachungsdatensätze im Zusammenhang mit der Ausführung einer Workflowinstanz ausgegeben werden.  
@@ -26,27 +26,27 @@ Die Workflowlaufzeit ist so instrumentiert, dass Überwachungsdatensätze im Zus
   
  Die folgenden <xref:System.Activities.Tracking.TrackingRecord>-Objekttypen werden von der Workflowlaufzeit ausgegeben:  
   
--   **WorkflowInstanceRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> beschreibt den Lebenszyklus der Workflowinstanz. Es wird unter anderem ein Datensatz ausgegeben, wenn der Workflow gestartet oder abgeschlossen wird. Der Datensatz enthält den Zustand der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceRecord>-Objekt angezeigt.  
+-   **WorkflowInstanceRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> beschreiben den Lebenszyklus der Workflowinstanz. Es wird unter anderem ein Datensatz ausgegeben, wenn der Workflow gestartet oder abgeschlossen wird. Der Datensatz enthält den Zustand der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceRecord>-Objekt angezeigt.  
   
--   **WorkflowInstanceAbortedRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Workflowinstanz abgebrochen. Der Datensatz enthält den Grund für den Abbruch der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>-Objekt angezeigt.  
+-   **WorkflowInstanceAbortedRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Workflowinstanz abgebrochen. Der Datensatz enthält den Grund für den Abbruch der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>-Objekt angezeigt.  
   
--   **WorkflowInstanceUnhandledExceptionRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Ausnahme tritt auf, in der Workflowinstanz und nicht von einer Aktivität behandelt wird. Der Datensatz enthält die Details zur Ausnahme. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>-Objekt angezeigt.  
+-   **WorkflowInstanceUnhandledExceptionRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Ausnahme tritt auf, in der Workflowinstanz und nicht von einer Aktivität behandelt. Der Datensatz enthält die Details zur Ausnahme. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>-Objekt angezeigt.  
   
--   **WorkflowInstanceSuspendedRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Workflowinstanz angehalten wird. Der Datensatz enthält den Grund für das Anhalten der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>-Objekt angezeigt.  
+-   **WorkflowInstanceSuspendedRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Workflowinstanz angehalten wird. Der Datensatz enthält den Grund für das Anhalten der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>-Objekt angezeigt.  
   
--   **WorkflowInstanceTerminatedRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Workflowinstanz beendet wird. Der Datensatz enthält den Grund für das Beenden der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>-Objekt angezeigt.  
+-   **WorkflowInstanceTerminatedRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Workflowinstanz beendet wird. Der Datensatz enthält den Grund für das Beenden der Workflowinstanz. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>-Objekt angezeigt.  
   
--   **ActivityStateRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Aktivität in einem Workflow ausgeführt wird. Diese Datensätze geben den Zustand der Aktivität innerhalb der Workflowinstanz an. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.ActivityStateRecord>-Objekt angezeigt.  
+-   **ActivityStateRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Aktivität in einem Workflow ausgeführt wird. Diese Datensätze geben den Zustand der Aktivität innerhalb der Workflowinstanz an. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.ActivityStateRecord>-Objekt angezeigt.  
   
--   **ActivityScheduledRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Aktivität eine untergeordnete Aktivität plant. Dieser Datensatz enthält Details für die übergeordnete Aktivität (Planungsaktivität) und die untergeordnete Aktivität (geplante Aktivität). Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.ActivityScheduledRecord>-Objekt angezeigt.  
+-   **ActivityScheduledRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Aktivität eine untergeordnete Aktivität plant. Dieser Datensatz enthält Details für die übergeordnete Aktivität (Planungsaktivität) und die untergeordnete Aktivität (geplante Aktivität). Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.ActivityScheduledRecord>-Objekt angezeigt.  
   
--   **FaultPropagationRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, für jeden Handler, der den Datensatz anzeigt, bis er behandelt wird. Es wird verwendet, um den Pfad eines Fehlers innerhalb der Workflowinstanz zu bezeichnen. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.FaultPropagationRecord>-Objekt angezeigt.  
+-   **FaultPropagationRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, für jeden Handler, die den Datensatz untersucht werden soll, bis er behandelt wird. Es wird verwendet, um den Pfad eines Fehlers innerhalb der Workflowinstanz zu bezeichnen. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.FaultPropagationRecord>-Objekt angezeigt.  
   
--   **CancelRequestedRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Aktivität versucht, eine untergeordnete Aktivität abzubrechen. Dieser Datensatz enthält Details für die übergeordnete Aktivität und die untergeordnete Aktivität, die abgebrochen wird. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.CancelRequestedRecord>-Objekt angezeigt.  
+-   **CancelRequestedRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> wird ausgegeben, wenn eine Aktivität versucht, das Abbrechen einer untergeordneten Aktivität. Dieser Datensatz enthält Details für die übergeordnete Aktivität und die untergeordnete Aktivität, die abgebrochen wird. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.CancelRequestedRecord>-Objekt angezeigt.  
   
--   **BookmarkResumptionRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> verfolgt alle Lesezeichen, die erfolgreich fortgesetzt wird. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.BookmarkResumptionRecord>-Objekt angezeigt.  
+-   **BookmarkResumptionRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> verfolgt alle Lesezeichen aus, die erfolgreich fortgesetzt wird. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.BookmarkResumptionRecord>-Objekt angezeigt.  
   
--   **CustomTrackingRecord** - dieses <xref:System.Activities.Tracking.TrackingRecord> erstellt und von einem workflowautor in einer benutzerdefinierten Workflowaktivität ausgegeben. Benutzerdefinierte Überwachungsdatensätze können mit Daten aufgefüllt werden, die mit den Datensätzen ausgegeben werden. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekt angezeigt.  
+-   **CustomTrackingRecord** : dieses <xref:System.Activities.Tracking.TrackingRecord> erstellt und von einem workflowautor in einer benutzerdefinierten Workflowaktivität ausgegeben. Benutzerdefinierte Überwachungsdatensätze können mit Daten aufgefüllt werden, die mit den Datensätzen ausgegeben werden. Die Details dieses Datensatzes werden im <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekt angezeigt.  
   
  Beispielsweise könnte eine einfache <xref:System.Activities.Statements.Sequence>-Aktivität vorhanden sein, die einen <xref:System.Activities.Statements.WriteLine>-Vorgang mit Überwachungsdatensätzen enthält, die in der folgenden Reihenfolge ausgegeben werden:  
   
@@ -61,5 +61,5 @@ Die Workflowlaufzeit ist so instrumentiert, dass Überwachungsdatensätze im Zus
 5.  Das <xref:System.Activities.Tracking.WorkflowInstanceRecord>-Objekt gibt an, dass der Workflow abgeschlossen wird.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Windows Server App Fabric-Überwachung](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Überwachen von Anwendungen mit AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

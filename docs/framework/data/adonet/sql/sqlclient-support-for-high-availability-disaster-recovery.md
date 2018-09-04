@@ -3,11 +3,11 @@ title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellu
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513025"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] eingeführte) SqlClient-Unterstützung für hohe Verfügbarkeit und Notfallwiederherstellung erörtert, die in Form von AlwaysOn-Verfügbarkeitsgruppen bereitgestellt wird.  SQL Server 2012 wurde AlwaysOn-Verfügbarkeitsgruppen hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  

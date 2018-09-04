@@ -3,11 +3,11 @@ title: Überbrückung und Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
 ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514541"
 ---
 # <a name="bridging-and-error-handling"></a>Überbrückung und Fehlerbehandlung
 In diesem Beispiel wird veranschaulicht, wie der Windows Communication Foundation (WCF)-Routingdienst zum Überbrücken von Kommunikation zwischen einem Client und ein Dienst, andere Bindungen verwendet wird. In diesem Beispiel wird auch gezeigt, wie ein Sicherungsdienst für Failoverszenarien verwendet wird. Der Routingdienst ist eine WCF-Komponente, die es einfach macht, ein inhaltsbasierten Routers in Ihre Anwendung einbinden. In diesem Beispiel wird die standard-WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst.  

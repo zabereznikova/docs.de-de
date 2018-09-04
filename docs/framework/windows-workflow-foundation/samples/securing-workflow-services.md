@@ -2,19 +2,19 @@
 title: Sichern von Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 28c34ecf7d6d781bfa461b2737cb9325a657f47e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806668"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524334"
 ---
 # <a name="securing-workflow-services"></a>Sichern von Workflowdiensten
 Im Beispiel für einen gesicherten Workflowdienst werden die folgenden Verfahren veranschaulicht:  
   
 -   Erstellen eines grundlegenden Workflowdiensts mit den Aktivitäten <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply>.  
   
--   Verwenden der Windows Communication Foundation (WCF)-Konfiguration zur Definition sicherer Endpunkte für die Verwendung durch den Workflowdienst.  
+-   Verwenden Windows Communication Foundation (WCF)-Konfiguration, um sichere Endpunkte für die Verwendung durch den Workflowdienst zu definieren.  
   
 -   Erstellen von Ansprüchen in einer benutzerdefinierten Richtlinie und Überprüfen von Ansprüchen mithilfe von <xref:System.ServiceModel.ServiceAuthorizationManager>.  
   
@@ -22,7 +22,7 @@ Im Beispiel für einen gesicherten Workflowdienst werden die folgenden Verfahren
  Verwenden der WCF-Sicherheit, um die Kommunikation zwischen Client und Workflowdienst zu sichern, anspruchsbasierte Autorisierung.  
   
 ## <a name="discussion"></a>Diskussion  
- Dieses Beispiel veranschaulicht die Verwendung von WCF-Sicherheitstokendienst-Infrastruktur zum Sichern eines Workflowdiensts, ebenso wie mit einem normalen WCF-Dienst. Es wird ein benutzerdefinierter Anspruch zur Autorisierung verwendet. In diesem Fall werden <xref:System.ServiceModel.WSHttpBinding> und der Nachrichtensicherheitsmodus mit Windows-Anmeldeinformationen verwendet.  
+ Dieses Beispiel veranschaulicht die Verwendung von WCF-Sicherheit-Infrastruktur zum Sichern eines Workflowdiensts, wie Sie mit einem normalen WCF-Dienst. Es wird ein benutzerdefinierter Anspruch zur Autorisierung verwendet. In diesem Fall werden <xref:System.ServiceModel.WSHttpBinding> und der Nachrichtensicherheitsmodus mit Windows-Anmeldeinformationen verwendet.  
   
  Das benutzerdefinierte <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Element (`CustomNameCheckerPolicy`) überprüft den Windows-Benutzernamen des Clients auf ein bestimmtes Zeichen. Wenn dieses Zeichen vorhanden ist, wird der Anspruch erstellt und <xref:System.IdentityModel.Policy.EvaluationContext> hinzugefügt. Dadurch erklärt die benutzerdefinierte Richtlinie, dass der Client dieses Zeichen im Benutzernamen aufweist. Dieser Anspruch kann während der gesamten Lebensdauer des Aufrufs abgefragt werden. Sie können dieses Zeichen in `Constants.cs` finden.  
   
@@ -49,6 +49,6 @@ Im Beispiel für einen gesicherten Workflowdienst werden die folgenden Verfahren
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\SecuringWorkflowServices`

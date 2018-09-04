@@ -3,11 +3,11 @@ title: ReceiveContext-aktivierte WCF-Kanäle
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
 ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442745"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515929"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>ReceiveContext-aktivierte WCF-Kanäle
 In diesem Beispiel wird die Nützlichkeit WCF-Kanälen mit Aktivierung von <xref:System.ServiceModel.Channels.ReceiveContext> erläutert. Im Beispiel wird ein Dienst für die Suche nach dem Produkt von zwei Zahlen mithilfe eines NetMSMQ-Kanals implementiert.  

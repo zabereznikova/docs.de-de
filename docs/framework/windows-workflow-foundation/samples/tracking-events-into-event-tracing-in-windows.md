@@ -2,20 +2,20 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b2e43e169faade06d8816d9ae517b6957fbf1ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519505"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527095"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
-Dieses Beispiel veranschaulicht, wie zum Aktivieren von Windows Workflow Foundation (WF) für einen Workflowdienst nachverfolgen und die Überwachungsereignisse im Ereignis Ereignisablaufverfolgung für Windows (ETW). In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.  
+In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) für einen Workflowdienst nachverfolgung aktivieren und die Überwachungsereignisse in Event Tracing for Windows (ETW) ausgegeben wird. In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.  
   
  Der Workflow in dem Beispiel erhält eine Anforderung, weist den Umkehrwert der Eingabedaten der Eingabevariablen zu und gibt den Umkehrwert an den Client zurück. Wenn die Eingabedaten 0 betragen, tritt eine nicht behandelte Ausnahme aufgrund einer Division durch 0 (null) auf, aufgrund der der Workflow abgebrochen wird. Wenn die Nachverfolgung aktiviert ist, wird der Fehlerdatensatz an ETW ausgegeben, sodass der Fehler später behoben werden kann. Der ETW-Überwachungsteilnehmer ist mit einem Überwachungsprofil konfiguriert, um Überwachungsdatensätze zu abonnieren. Das Überwachungsprofil ist in der Datei "Web.config" definiert und für den ETW-Überwachungsteilnehmer als Konfigurationsparameter bereitgestellt. Der ETW-Überwachungsteilnehmer ist in der Datei "Web.config" des Workflowdiensts konfiguriert und wird auf den Dienst als Dienstverhalten angewendet. In diesem Beispiel zeigen Sie die Überwachungsereignisse im Ereignisprotokoll mithilfe der Ereignisanzeige an.  
   
 ## <a name="workflow-tracking-details"></a>Workflowüberwachungsdetails  
- Windows Workflow Foundation bietet eine Überwachungsinfrastruktur, um die Ausführung einer Workflowinstanz nachzuverfolgen. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.  
+ Windows Workflow Foundation stellt eine Überwachungsinfrastruktur, um die Ausführung einer Workflowinstanz nachzuverfolgen. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.  
   
 |Komponente|Beschreibung|  
 |---------------|-----------------|  
@@ -45,11 +45,11 @@ Dieses Beispiel veranschaulicht, wie zum Aktivieren von Windows Workflow Foundat
   
 3.  Drücken Sie F5, um die Projektmappe auszuführen.  
   
-     Der Dienst ist empfangsbereit standardmäßig an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
+     Der Dienst lauscht standardmäßig an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
   
 4.  Öffnen Sie den WCF-Testclient mit [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)].  
   
-     WCF-Testclient (WcfTestClient.exe) befindet sich der \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] -Installationsordner > \Common7\IDE\-Ordner.  
+     WCF-Testclient (WcfTestClient.exe) befindet sich in der \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] -Installationsordner > \Common7\IDE\-Ordner.  
   
      Der standardmäßige [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Installationsordner ist "C:\Programme\Microsoft-Visual Studio 10.0".  
   
@@ -59,13 +59,13 @@ Dieses Beispiel veranschaulicht, wie zum Aktivieren von Windows Workflow Foundat
   
 6.  Öffnen Sie die Ereignisanzeige.  
   
-     Starten Sie vor dem Aufrufen des Diensts die Ereignisanzeige über den **starten** klicken Sie im Menü **ausführen** , und geben Sie im `eventvwr.exe`. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.  
+     Starten Sie vor dem Aufrufen des Diensts die Ereignisanzeige über den **starten** , wählen Sie im Menü **ausführen** und geben Sie im `eventvwr.exe`. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.  
   
-7.  Wechseln Sie in der Strukturansicht der Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, und **Microsoft**. Mit der rechten Maustaste **Microsoft** , und wählen Sie **Ansicht** und dann **anzeigen analytische und Debugprotokolle** aktivieren Sie die analytischen und Debugprotokolle  
+7.  In der Strukturansicht der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, und **Microsoft**. Mit der rechten Maustaste **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle** , aktivieren Sie die analytischen und Debugprotokolle  
   
-     Sicherstellen, dass die **anzeigen analytische und Debugprotokolle** Option aktiviert ist.  
+     Sicherstellen, dass die **analytische und Debugprotokolle** Option aktiviert ist.  
   
-8.  Wechseln Sie in der Strukturansicht in der Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren** So aktivieren Sie die **analytisch** Protokoll.  
+8.  In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren** zum Aktivieren der **analytisch** Protokoll.  
   
 9. Testen Sie den Dienst mithilfe des WCF-Testclients, indem Sie auf `GetData` doppelklicken.  
   
@@ -125,11 +125,11 @@ Dieses Beispiel veranschaulicht, wie zum Aktivieren von Windows Workflow Foundat
   
 1.  Öffnen Sie die Ereignisanzeige.  
   
-2.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Applications**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.  
+2.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.  
   
-3.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Applications**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.  
+3.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.  
   
-4.  Wählen Sie die **deaktivieren** Option aus, um die Ereignisse zu löschen.  
+4.  Wählen Sie die **löschen** Option aus, um die Ereignisse zu löschen.  
   
 ## <a name="known-issue"></a>Bekanntes Problem  
   
@@ -145,9 +145,9 @@ Dieses Beispiel veranschaulicht, wie zum Aktivieren von Windows Workflow Foundat
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überwachen der AppFabric-Beispiele](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

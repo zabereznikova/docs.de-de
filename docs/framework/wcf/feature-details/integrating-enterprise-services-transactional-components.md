@@ -3,11 +3,11 @@ title: Integrieren von Enterprise Services-Transaktionskomponenten
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 1fd338e57dab16a02cd31de6b45d4c5291591043
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514616"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrieren von Enterprise Services-Transaktionskomponenten
 Windows Communication Foundation (WCF) bietet einen automatischen Mechanismus zur Integration mit Enterprise Services (finden Sie unter [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Möglicherweise benötigen Sie die Flexibilität zur Entwicklung von Diensten, die von Enterprise Services gehostete Transaktionskomponenten intern verwenden. Da die WCF-Transaktionsfunktion erstellt wird, auf die <xref:System.Transactions> Infrastruktur, der Prozess zum Integrieren von Enterprise Services mit WCF ist identisch mit dem zur Angabe der Interoperabilität zwischen <xref:System.Transactions> und Enterprise Services, wie in [Interoperabilität mit Enterprise Services und COM+-Transaktionen](https://go.microsoft.com/fwlink/?LinkId=94949).  

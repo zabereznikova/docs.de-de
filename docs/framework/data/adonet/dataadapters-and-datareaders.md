@@ -3,11 +3,11 @@ title: "\"DataAdapters\" und \"DataReaders\""
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43476221"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516776"
 ---
 # <a name="dataadapters-and-datareaders"></a>"DataAdapters" und "DataReaders"
 Sie können mithilfe des ADO.NET- **DataReader** einen schreibgeschützten, nur vorwärts gerichteten Datenstrom aus einer Datenbank abgerufen. Ergebnisse werden zurückgegeben, während die Abfrage ausgeführt wird, und im Netzwerkpuffer auf dem Client gespeichert, bis Sie diese anfordern mithilfe der **lesen** Methode der **DataReader**. Mithilfe der **DataReader** kann die Anwendungsleistung erhöhen, indem Daten abgerufen werden, sobald diese verfügbar ist, sowohl (standardmäßig) speichern nur eine Zeile zu einem Zeitpunkt im Arbeitsspeicher, der Systemverwaltungsaufwand reduziert.  

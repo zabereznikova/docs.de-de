@@ -2,12 +2,12 @@
 title: OLE DB-, ODBC- und Oracle-Verbindungspooling
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803123"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527375"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB-, ODBC- und Oracle-Verbindungspooling
 Durch Verbindungspooling kann die Leistung und Skalierbarkeit einer Anwendung wesentlich erhöht werden. In diesem Abschnitt wird das Verbindungspooling für die .NET Framework-Datenanbieter für OLE DB, ODBC und Oracle erläutert.  
@@ -21,12 +21,12 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Es wird empfohlen, nach Abschluss der Verwendung einer Verbindung diese immer zu schließen oder zu verwerfen, um die Verbindung an den Pool zurückzugeben. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise nicht an den Pool zurückgegeben. Beispielsweise wird eine Verbindung, die sich nicht mehr im Gültigkeitsbereich befindet, aber nicht explizit geschlossen wurde, nur dann an den Verbindungspool zurückgegeben, wenn die maximale Poolgröße erreicht wurde und die Verbindung immer noch gültig ist.  
   
- Weitere Informationen zu OLE DB-Sitzungspooling oder Ressourcenpooling, sowie zum Deaktivieren des Poolings durch Überschreiben der Standardwerte für den OLE DB-Anbieter finden Sie unter der [OLE DB Programmer's Guide](http://go.microsoft.com/fwlink/?linkid=45232).  
+ Weitere Informationen zu OLE DB-Sitzungspooling oder -Ressourcenpooling, sowie zum Deaktivieren des Poolings durch Überschreiben der Standardwerte für den OLE DB-Anbieter, finden Sie unter den [OLE DB Programmer's Guide](https://go.microsoft.com/fwlink/?linkid=45232).  
   
 ## <a name="connection-pooling-for-odbc"></a>Verbindungspooling für ODBC  
  Das Verbindungspooling für .NET Framework-Datenanbieter für ODBC wird von dem für die Verbindung verwendeten ODBC-Treiber-Manager verwaltet und wird nicht vom .NET Framework-Datenanbieter für ODBC beeinflusst.  
   
- Öffnen Sie zum Aktivieren oder deaktivieren Verbindungspooling, **ODBC-Datenquellenadministrator** in den Ordner "Verwaltung" der Systemsteuerung. Die **Verbindungspooling** Registerkarte können Sie die Verbindungspoolingparameter für jeden installierten ODBC-Treiber angeben. Beachten Sie, dass im Fall von Verbindungspoolingänderungen für einen bestimmten ODBC-Treiber alle Anwendungen betroffen sind, die diesen ODBC-Treiber verwenden.  
+ Öffnen Sie zum Aktivieren oder Deaktivieren von Anwendungspooling, **ODBC-Datenquellenadministrator** in den Ordner "Verwaltung" der Systemsteuerung. Die **Verbindungspooling** Registerkarte können Sie die Verbindungspoolingparameter für jeden installierten ODBC-Treiber angeben. Beachten Sie, dass im Fall von Verbindungspoolingänderungen für einen bestimmten ODBC-Treiber alle Anwendungen betroffen sind, die diesen ODBC-Treiber verwenden.  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Verbindungspooling für OracleClient  
  Der .NET Framework-Datenanbieter für Oracle stellt das Verbindungspooling für die ADO.NET-Clientanwendung automatisch bereit. Sie können auch mehrere Modifizierer für Verbindungszeichenfolgen angeben, um das Verbindungspoolingverhalten zu steuern (siehe "Steuern von Verbindungspooling mit Verbindungszeichenfolgen-Schlüsselwörtern" weiter unten in diesem Thema).  
@@ -51,7 +51,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>Transaktionsunterstützung  
- Verbindungen werden aus dem Pool entnommen und basierend auf dem Transaktionskontext zugewiesen. Der Kontext des anfordernden Threads und der zugewiesenen Verbindung müssen übereinstimmen. Aus diesem Grund jedem Verbindungspool wird Verbindungspool in Verbindungen unterteilt mit kein Transaktionskontext zugewiesen ist, und in *N* Teilbereiche, die jeweils Verbindungen für einen bestimmten Transaktionskontext enthalten.  
+ Verbindungen werden aus dem Pool entnommen und basierend auf dem Transaktionskontext zugewiesen. Der Kontext des anfordernden Threads und der zugewiesenen Verbindung müssen übereinstimmen. Aus diesem Grund jedem Verbindungspool wird tatsächlich in Verbindungen unterteilt, denen kein Transaktionskontext verknüpft ist, und in *N* Teilbereiche, die jeweils Verbindungen für einen bestimmten Transaktionskontext enthalten.  
   
  Wenn eine Verbindung geschlossen wird, wird sie an den Pool und an den entsprechenden Teilbereich auf der Grundlage des Transaktionskontexts zurückgegeben. Sie können die Verbindung daher trennen, ohne einen Fehler zu generieren, auch wenn eine verteilte Transaktion noch aussteht. So haben Sie die Möglichkeit, die verteilte Transaktion zu einem späteren Zeitpunkt durchzuführen oder abzubrechen.  
   
@@ -71,4 +71,4 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>Siehe auch  
  [Verbindungspooling](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [Leistungsindikatoren](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

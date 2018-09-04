@@ -10,11 +10,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 ms.openlocfilehash: 720660153cb357c11168ab45ebf8343559faf82a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393245"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514284"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Gewusst wie: Zurückgeben eines LINQ-Abfrageergebnisses als ein bestimmter Typ (Visual Basic)
 Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und Ausführen von Abfragen. Standardmäßig zurück LINQ-Abfragen eine Liste von Objekten als anonymer Typ. Sie können auch angeben, dass eine Abfrage eine Liste eines bestimmten Typs mit Zurückgeben der `Select` Klausel.  

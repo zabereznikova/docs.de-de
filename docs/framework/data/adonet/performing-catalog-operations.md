@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: c1d8b9dd579cae7f4868058343c034caf17c5fff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7588b2b4592a5298a69eb4adfbc06edb6913ef76
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519095"
 ---
 # <a name="performing-catalog-operations"></a>Ausführen von Katalogoperationen
 Erstellen Sie zum Ausführen eines Befehls zum Ändern einer Datenbank oder der Katalog, z. B. der CREATE TABLE- oder CREATE PROCEDURE-Anweisung, eine **Befehl** -Objekt unter Verwendung der entsprechenden SQL-Anweisungen und ein **Verbindung** Objekt. Führen Sie den Befehl mit der **ExecuteNonQuery** Methode der **Befehl** Objekt.  
@@ -48,4 +48,4 @@ command.ExecuteNonQuery();
 ## <a name="see-also"></a>Siehe auch  
  [Verwenden von Befehlen zum Ändern von Daten](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

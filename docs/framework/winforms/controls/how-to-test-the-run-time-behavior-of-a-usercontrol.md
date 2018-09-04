@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
 ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392902"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512208"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Gewusst wie: Testen des Laufzeitverhaltens eines UserControl
 Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie dessen Laufzeitverhalten zu testen. Können einen separaten Windows-basiertes Anwendungsprojekt zu erstellen und das Steuerelement auf einem Testformular, aber dieses Verfahren ist unpraktisch. Eine schnellere und einfachere Möglichkeit ist die Verwendung der **UserControl-Testcontainer** von Visual Studio bereitgestellt. Dieser Testcontainer, die direkt über das Windows-Steuerelementbibliothek-Projekt wird gestartet.  

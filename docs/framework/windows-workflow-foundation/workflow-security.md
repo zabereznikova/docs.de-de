@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38f679dff1f4e23f0aae541a775ef727917b03e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519580"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527608"
 ---
 # <a name="workflow-security"></a>Workflowsicherheit
-Windows Workflow Foundation (WF) wird in mehrere unterschiedliche Technologien, wie z. B. Microsoft SQL Server und Windows Communication Foundation (WCF) integriert. Die Interaktion mit diesen Technologien kann zu Sicherheitsproblemen für den Workflow führen, falls diese nicht ordnungsgemäß durchgeführt wird.  
+Windows Workflow Foundation (WF) ist in eine Reihe verschiedener Technologien, wie z. B. Microsoft SQL Server und Windows Communication Foundation (WCF) integriert. Die Interaktion mit diesen Technologien kann zu Sicherheitsproblemen für den Workflow führen, falls diese nicht ordnungsgemäß durchgeführt wird.  
   
 ## <a name="persistence-security-concerns"></a>Sicherheitsaspekte der Persistenz  
   
@@ -30,22 +30,22 @@ Windows Workflow Foundation (WF) wird in mehrere unterschiedliche Technologien, 
   
 -   Wenn eine hohe Zahl an untergeordneten Aktivitäten, Speicherorten, Lesezeichen, Hosterweiterungen oder Bereichen verwendet wird oder wenn Lesezeichen mit sehr großen Nutzlasten verwendet werden, kann es zu einer Überlastung des Arbeitsspeichers kommen. Außerdem kann während des Persistenzvorgangs eine unangemessen hohe Menge an Datenbankspeicherplatz zugeordnet werden. Sie können dieses Risiko reduzieren, indem Sie die Sicherheit auf Objekt- und Datenbankebene verwenden.  
   
--   Bei der Verwendung von <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> muss der Instanzspeicher gesichert werden. Weitere Informationen finden Sie unter [Best Practices für SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Bei der Verwendung von <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> muss der Instanzspeicher gesichert werden. Weitere Informationen finden Sie unter [bewährte Methoden für SQL Server](https://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   Vertrauliche Daten im Instanzspeicher sollten verschlüsselt werden. Weitere Informationen finden Sie unter [SQL-Sicherheitsverschlüsselung](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   Vertrauliche Daten im Instanzspeicher sollten verschlüsselt werden. Weitere Informationen finden Sie unter [SQL-Sicherheitsverschlüsselung](https://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Da die Datenbank-Verbindungszeichenfolge häufig in einer Konfigurationsdatei enthalten ist, sollte Sicherheit auf Windows-Ebene (ACL) verwendet werden, um sicherzustellen, dass die Konfigurationsdatei (normalerweise "Web.Config") sicher ist und dass keine Anmelde- und Kennwortdaten in der Verbindungszeichenfolge enthalten sind. Die Windows-Authentifizierung sollte stattdessen zwischen der Datenbank und dem Webserver verwendet werden.  
   
 ## <a name="considerations-for-workflowservicehost"></a>Überlegungen zu WorkflowServiceHost  
   
--   Windows Communication Foundation (WCF)-Endpunkte, die zur Verwendung in Workflows sollten geschützt werden. Weitere Informationen finden Sie unter [Sicherheitsübersicht](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Windows Communication Foundation (WCF)-Endpunkte, die in Workflows verwendet, sollten geschützt werden. Weitere Informationen finden Sie unter [Sicherheitsübersicht](https://go.microsoft.com/fwlink/?LinkID=164975).  
   
--   Sie können die Autorisierung auf Hostebene mit <xref:System.ServiceModel.ServiceAuthorizationManager> implementieren. Finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](http://go.microsoft.com/fwlink/?LinkId=192228) Details. Dies wird auch im folgenden Beispiel dargestellt: [Sichern von Workflowdiensten](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
+-   Sie können die Autorisierung auf Hostebene mit <xref:System.ServiceModel.ServiceAuthorizationManager> implementieren. Finden Sie unter [so wird's gemacht: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](https://go.microsoft.com/fwlink/?LinkId=192228) Details. Dies wird auch im folgenden Beispiel dargestellt: [Sichern von Workflowdiensten](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   
 -   Der ServiceSecurityContext für die eingehende Nachricht ist über den Zugriff auf OperationContext auch im Workflow verfügbar.  Finden Sie unter [zugreifen auf OperationContext aus einem Workflowdienst](../../../docs/framework/wcf/feature-details/accessing-operationcontext-from-a-workflow-service.md) Details.  
   
 ## <a name="wf-security-pack-ctp"></a>WF-Sicherheitspaket CTP  
- Das Microsoft WF-Sicherheitspaket CTP 1 ist die erste Community Technology Preview (CTP) Version einer Reihe von Aktivitäten und deren Implementierung auf Basis [Windows Workflow Foundation](http://msdn.microsoft.com/netframework/aa663328.aspx)in [.NET Framework 4](http://msdn.microsoft.com/netframework/default.aspx) (WF (4) und die [Windows Identity Foundation (WIF)](http://msdn.microsoft.com/security/aa570351.aspx).  Das Microsoft WF-Sicherheitspaket CTP 1 enthält beide Aktivitäten und deren Designer, die veranschaulichen, wie einfach verschiedene sicherheitsrelevante Szenarien mithilfe von Workflows aktiviert werden können, darunter:  
+ Das Microsoft WF-Sicherheitspaket CTP 1 ist die erste Community Technology Preview (CTP) Version von einer Gruppe von Aktivitäten und deren Implementierung auf Basis [Windows Workflow Foundation](https://msdn.microsoft.com/netframework/aa663328.aspx)in [.NET Framework 4](https://msdn.microsoft.com/netframework/default.aspx) (WF (4) und die [Windows Identity Foundation (WIF)](https://msdn.microsoft.com/security/aa570351.aspx).  Das Microsoft WF-Sicherheitspaket CTP 1 enthält beide Aktivitäten und deren Designer, die veranschaulichen, wie einfach verschiedene sicherheitsrelevante Szenarien mithilfe von Workflows aktiviert werden können, darunter:  
   
 1.  Wechseln zu einer Clientidentität im Workflow  
   
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) wird in mehrere unterschiedliche Technologien, 
   
 4.  Übertragen eines Clientsicherheitstokens an einen Back-End-Dienst (anspruchsbasierte Delegierung) mithilfe von WS-Trust ActAs  
   
-Weitere Informationen und den download der WF-Sicherheitspaket CTP finden Sie unter: [WF-Sicherheitspaket CTP](http://wf.codeplex.com/releases/view/48114)
+Weitere Informationen und zum Herunterladen der WF-Sicherheitspaket CTP finden Sie unter: [WF-Sicherheitspaket CTP](http://wf.codeplex.com/releases/view/48114)

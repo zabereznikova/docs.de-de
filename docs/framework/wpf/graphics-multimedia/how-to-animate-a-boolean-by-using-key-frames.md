@@ -10,11 +10,11 @@ helpviewer_keywords:
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
 ms.openlocfilehash: 0142748a5c8e9a4375802d1b48beec0501d37e7c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468275"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521073"
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Gewusst wie: Animieren eines booleschen Werts mithilfe von Keyframes
 Dieses Beispiel zeigt, wie die boolesche Eigenschaft-Wert, der animiert ein <xref:System.Windows.Controls.Button> Steuerelement mithilfe von Keyframes.  

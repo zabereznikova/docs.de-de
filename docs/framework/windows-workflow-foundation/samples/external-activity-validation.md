@@ -3,11 +3,11 @@ title: Externe Aktivitätsvalidierung
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527806"
 ---
 # <a name="external-activity-validation"></a>Externe Aktivitätsvalidierung
 In diesem Beispiel wird gezeigt, wie einer integrierten Aktivität Validierungslogik hinzugefügt wird, die Sie nicht erstellt haben. Mit der Validierungslogik wird erzwungen, dass für alle im Workflow vorhandenen <xref:System.Activities.Statements.If>-Aktivitäten entweder die <xref:System.Activities.Statements.If.Then%2A>-Eigenschaft oder die <xref:System.Activities.Statements.If.Else%2A>-Eigenschaft festgelegt wird. Darüber hinaus wird mit der Validierungslogik geprüft, ob alle <xref:System.Activities.Statements.Pick>-Aktivitäten im Workflow mehr als eine Verzweigung aufweisen. Wenn das nicht der Fall ist, wird eine Warnung ausgegeben.  

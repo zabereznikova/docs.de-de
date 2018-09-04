@@ -2,23 +2,23 @@
 title: EDM-Generator (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 90d67af0d2ba3ff04ee5c78b7d0a3f061a69bc1d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edec83b187afc74f3ad93181c4737a4d6cec8d0e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766269"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516122"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM-Generator (EdmGen.exe)
 EdmGen.exe ist ein Befehlszeilentool, das für die Arbeit mit [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Modell- und Zuordnungsdateien verwendet wird. Mit dem Tool EdmGen.exe können folgende Aufgaben ausgeführt werden:  
   
--   Herstellen einer Verbindung zu einer Datenquelle mithilfe eines datenquellenspezifischen .NET Framework-Datenanbieters, und Erstellen der Dateien für das konzeptionelle Modell (CSDL), das Speichermodell (SSDL) und die Zuordnungen (MSL), die von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: verwenden EdmGen.exe generiert die Modell- und Zuordnen von Dateien](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+-   Herstellen einer Verbindung zu einer Datenquelle mithilfe eines datenquellenspezifischen .NET Framework-Datenanbieters, und Erstellen der Dateien für das konzeptionelle Modell (CSDL), das Speichermodell (SSDL) und die Zuordnungen (MSL), die von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet werden. Weitere Informationen finden Sie unter [wie: Generieren Sie das Modell und die Mapping-Dateien mithilfe von EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
--   Überprüfen eines bestehenden Modells. Weitere Informationen finden Sie unter [wie: Verwenden von EdmGen.exe Validate Model "und" Zuordnen von Dateien](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
+-   Überprüfen eines bestehenden Modells. Weitere Informationen finden Sie unter [How to: Validate Model "und" Zuordnen von Dateien mithilfe von EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).  
   
--   Erstellen einer C#- oder Visual Basic-Codedatei, die die Objektklassen enthält, die aus einer Datei für das konzeptionelle Modell (CSDL) generiert wurden. Weitere Informationen finden Sie unter [wie: Verwenden von EdmGen.exe zum Generieren von Objektebenencode](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
+-   Erstellen einer C#- oder Visual Basic-Codedatei, die die Objektklassen enthält, die aus einer Datei für das konzeptionelle Modell (CSDL) generiert wurden. Weitere Informationen finden Sie unter [Vorgehensweise: mithilfe von EdmGen.exe zum Generieren von Objektebenencode](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).  
   
--   Generieren einer C#- oder Visual Basic-Codedatei, die die vorab generierten Sichten für ein vorhandenes Modell enthält. Weitere Informationen [Vorgehensweise: Pre-Generate Ansichten zum Verbessern der Abfrageleistung](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
+-   Generieren einer C#- oder Visual Basic-Codedatei, die die vorab generierten Sichten für ein vorhandenes Modell enthält. Weitere Informationen [wie: Verbessern der Abfrageleistung Pre-Generate Ansichten](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579).  
   
  Das Tool EdmGen.exe wird im [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Verzeichnis installiert. Dieses befindet sich meist unter C:\Windows\Microsoft.NET\Framework\v4.0. Bei 64-Bit-Systemen befindet es sich unter C:\Windows\Microsoft.NET\Framework64\v4.0. Sie können auch das Tool EdmGen.exe zugreifen, von der Visual Studio-Eingabeaufforderung (klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft Visual Studio 2010**, zeigen Sie auf **Visual Studio-Tools**, und klicken Sie dann auf **Visual Studio 2010-Eingabeaufforderung**).  
   
@@ -43,7 +43,7 @@ EdmGen /mode:choice [options]
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|`/p[roject]:`\<Zeichenfolge >|Gibt den zu verwendenden Projektnamen an. Der Projektname wird für die standardmäßige Namespaceeinstellung, die Namen der Modell- und Zuordnungsdateien, den Namen der Objektquelldatei und den Namen der Quelldatei für das Generieren von Ansichten verwendet. Name des Entitätencontainers festgelegt ist, um \<Projekt > Kontext.|  
+|`/p[roject]:`\<Zeichenfolge >|Gibt den zu verwendenden Projektnamen an. Der Projektname wird für die standardmäßige Namespaceeinstellung, die Namen der Modell- und Zuordnungsdateien, den Namen der Objektquelldatei und den Namen der Quelldatei für das Generieren von Ansichten verwendet. Der Name des Entitätscontainers nastaven NA hodnotu \<Projekt > Kontext.|  
 |`/prov[ider]:`\<Zeichenfolge >|Der Name des [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Datenanbieters zum Erstellen der Speichermodelldatei (SSDL). Der Standardanbieter ist die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
 |`/c[onnectionstring]:`\<Verbindungszeichenfolge >|Gibt die Zeichenfolge an, die verwendet wird, um eine Verbindung mit der Datenquelle herzustellen.|  
 |`/incsdl:`\<file>|Gibt die CSDL-Datei oder ein Verzeichnis an, in dem sich die CSDL-Dateien befinden. Dieses Argument kann mehrmals angegeben werden, damit Sie mehrere Verzeichnisse oder CSDL-Dateien angeben können. Das Angeben mehrerer Verzeichnisse ist beim Erstellen von Klassen (`/mode:EntityClassGeneration`) oder Sichten (`/mode:ViewGeneration`) hilfreich, wenn das konzeptionelle Modell in mehrere Dateien aufgeteilt ist. Dies kann auch nützlich sein, wenn Sie mehrere Modelle (`/mode:ValidateArtifacts`) überprüfen möchten.|  
@@ -58,7 +58,7 @@ EdmGen /mode:choice [options]
 |`/language:`[VB&#124;CSharp]|Gibt die Sprache für die erstellten Quellcodedateien an. Die Standardsprache ist C#.|  
 |`/namespace:`\<Zeichenfolge >|Gibt den zu verwendenden Namespace für das Modell an. Der Namespace wird beim Ausführen von `/mode:FullGeneration` oder `/mode:FromSSDLGeneration` in der CSDL-Datei festgelegt. Beim Ausführen `/mode:EntityClassGeneration` wird der Namespace nicht verwendet.|  
 |`/entitycontainer:`\<Zeichenfolge >|Gibt den Namen an, der dem `<EntityContainer>`-Element in den generierten Modell- und Zuordnungsdateien hinzugefügt wird.|  
-|`/pl[uralize]`|Wendet für das Englische geltende Regeln für Singular- und Pluralbildung auf die Namen von `Entity`, `EntitySet` und `NavigationProperty` im konzeptionellen Modell an. Diese Option führt die folgenden Aktionen aus:<br /><br /> -Stellen Sie alle `EntityType` Namen im singular.<br />-Stellen Sie alle `EntitySet` Namen im plural.<br />– Für jedes `NavigationProperty` , die höchstens eine Entität zurückgibt, stellen Sie den Namen im singular.<br />– Für jedes `NavigationProperty` , die mehr als eine Entität zurückgibt, stellen Sie den Namen im plural.|  
+|`/pl[uralize]`|Wendet für das Englische geltende Regeln für Singular- und Pluralbildung auf die Namen von `Entity`, `EntitySet` und `NavigationProperty` im konzeptionellen Modell an. Diese Option führt die folgenden Aktionen aus:<br /><br /> -Stellen Sie alle `EntityType` Namen im singular.<br />-Stellen Sie alle `EntitySet` Namen im plural.<br />– Für jede `NavigationProperty` , die höchstens eine Entität zurückgibt, wird der Name den Singular gesetzt.<br />– Für jede `NavigationProperty` , die mehr als eine Entität zurückgibt, wird der Name den plural gesetzt.|  
 |`/SupressForeignKeyProperties or /nofk`|Verhindert, dass Fremdschlüsselspalten als skalare Eigenschaften von Entitätstypen im konzeptionellen Modell verfügbar gemacht werden.|  
 |`/help` oder `?`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |`/nologo`|Unterdrückt die Anzeige der Copyrightmeldung.|  
@@ -72,6 +72,6 @@ EdmGen /mode:choice [options]
  [Vorgehensweise: Überprüfen von Modell- und Zuordnungsdateien mit „EdmGen.exe“](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
+ [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
  [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)  
  [CSDL, SSDL, and MSL Specifications (CSDL-, SSDL- und MSL-Spezifikationen)](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

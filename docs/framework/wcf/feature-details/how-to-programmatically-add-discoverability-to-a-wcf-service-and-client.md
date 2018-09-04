@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu e
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524139"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
 In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst erkennbar zu machen. Es basiert auf der [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel.  

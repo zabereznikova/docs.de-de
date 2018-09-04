@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 07c6f01f983d4a6fb49dd6dcc009b51205d5f4f9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: af7b444a391de56f516d84620b4dbd2eba3497fc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767153"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521413"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
 Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters werden Verbindungen mit einer Datenbank hergestellt, Befehle ausgeführt und Ergebnisse abgerufen. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter sind einfach. Sie erstellen eine Ebene von minimaler Größe zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne auf Funktionalität verzichten zu müssen.  
@@ -24,7 +24,7 @@ Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Datenanbieter für ODBC|Für Datenquellen, die mit ODBC verfügbar gemacht werden. Verwendet den <xref:System.Data.Odbc> -Namespace.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für Oracle|Für Oracle-Datenquellen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für Oracle unterstützt Oracle-Clientsoftware der Version 8.1.7 und höher und verwendet den <xref:System.Data.OracleClient> -Namespace.|  
 |EntityClient-Anbieter|Stellt Datenzugriff für Entity Data Model (EDM)-Anwendungen bereit. Verwendet den <xref:System.Data.EntityClient> -Namespace.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer Compact 4.0.|Ermöglicht den Datenzugriff für Microsoft SQL Server Compact 4.0. Verwendet den Namespace [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer Compact 4.0.|Ermöglicht den Datenzugriff für Microsoft SQL Server Compact 4.0. Verwendet die [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) Namespace.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Hauptobjekte von .NET Framework-Datenanbietern  
  In der folgenden Tabelle werden die vier Hauptobjekte aufgelistet, aus denen sich ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter zusammensetzt.  
@@ -49,7 +49,7 @@ Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -
 |`ClientPermission`|Wird für Codezugriffs-Sicherheitsattribute von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbietern bereitgestellt. Die Basisklasse für alle `ClientPermission` -Objekte ist die <xref:System.Data.Common.DBDataPermission> -Klasse.|  
   
 ## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>.NET Framework-Datenanbieter für SQL Server (SqlClient)  
- Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (SqlClient) verwendet ein eigenes Protokoll für die Kommunikation mit SQL Server. Es ist kompakt und leistungsfähig, da er Zugriff auf eine SQL-Server direkt, ohne das Hinzufügen einer OLE DB- oder Open Database Connectivity (ODBC) optimiert ist. Die folgende Abbildung stellt die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server mit der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB kommuniziert mit einer OLE DB-Datenquelle über die OLE DB-Dienstkomponente, die das Verbindungspooling und Transaktionsdienste bereitstellt, und über den OLE DB-Anbieter für die Datenquelle.  
+ Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (SqlClient) verwendet ein eigenes Protokoll für die Kommunikation mit SQL Server. Es ist nicht sehr umfangreich und leistungsfähig, da sie Zugriff auf eine SQL-Server direkt ohne das Hinzufügen einer Ebene mit OLE DB oder Open Database Connectivity (ODBC) optimiert ist. Die folgende Abbildung stellt die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server mit der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB kommuniziert mit einer OLE DB-Datenquelle über die OLE DB-Dienstkomponente, die das Verbindungspooling und Transaktionsdienste bereitstellt, und über den OLE DB-Anbieter für die Datenquelle.  
   
 > [!NOTE]
 >  Die Architektur des [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters für ODBC ähnelt der des [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters für OLE DB. So wird z. B. bei beiden eine ODBC-Dienstkomponente aufgerufen.  
@@ -57,7 +57,7 @@ Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -
  ![Datenanbieter](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Vergleich des .NET Framework-Datenanbieters für SQL Server und des .NET Framework-Datenanbieters für OLE DB  
   
- Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server-Klassen befinden sich der <xref:System.Data.SqlClient> Namespace.  
+ Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server-Klassen befinden sich in der <xref:System.Data.SqlClient> Namespace.  
   
  Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server unterstützt sowohl lokale als auch verteilte Transaktionen. Für verteilte Transaktionen die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, wird standardmäßig automatisch in einer Transaktion eingetragen, und ruft Transaktionsdetails von den Windows-Komponentendiensten ab oder <xref:System.Transactions>. Weitere Informationen finden Sie unter [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
@@ -123,7 +123,7 @@ using System.Data.Odbc;
 ```  
   
 > [!NOTE]
->  Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC erfordert MDAC 2.6 oder höher, wir empfehlen MDAC 2.8 SP1. Sie können MDAC 2.8 SP1 aus dem [Developer Center für Datenzugriff und -speicherung](http://go.microsoft.com/fwlink/?linkid=4173)herunterladen.  
+>  Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC erfordert MDAC 2.6 oder höher, wir empfehlen MDAC 2.8 SP1. Sie können MDAC 2.8 SP1 von der [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?linkid=4173).  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework-Datenanbieter für Oracle  
  Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für Oracle (OracleClient) ermöglicht den Datenzugriff auf Oracle-Daten mithilfe von Oracle-Clientverbindungssoftware. Der Datenanbieter unterstützt Oracle-Clientsoftware Version 8.1.7 oder höher. Der Datenanbieter unterstützt sowohl lokale als auch verteilte Transaktionen. Weitere Informationen finden Sie unter [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
@@ -149,15 +149,15 @@ using System.Data.OracleClient;
   
 |Anbieter|Hinweise|  
 |--------------|-----------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer|Empfohlen für Anwendungen der mittleren Ebene, die Microsoft SQL Server verwenden.<br /><br /> Es wird empfohlen, ein-Ebenen-Anwendungen, die Microsoft Database Engine (MSDE) oder SQL Server verwenden.<br /><br /> Empfohlen bei Verwendung des OLE DB-Anbieter für SQL Server (SQLOLEDB) mit der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB|Für SQL Server die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server wird empfohlen, anstelle dieses Anbieters.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Access-Datenbanken verwenden. Von der Verwendung einer Access-Datenbank für eine Anwendung der mittleren Ebene wird abgeraten.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ''-Datenanbieter für ODBC|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die ODBC-Datenquellen verwenden.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ''-Datenanbieter für Oracle|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die Oracle-Datenquellen verwenden.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer|Empfohlen für Anwendungen der mittleren Ebene, die Microsoft SQL Server verwenden.<br /><br /> Es wird empfohlen, ein-Ebenen-Anwendungen, die Microsoft-Datenbank-Engine (MSDE) oder SQL Server verwenden.<br /><br /> Empfohlen bei Verwendung des OLE DB-Anbieter für SQL Server (SQLOLEDB) mit der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB|Für SQL Server die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server wird empfohlen, anstelle von diesem Anbieter.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Access-Datenbanken verwenden. Von der Verwendung einer Access-Datenbank für eine Anwendung der mittleren Ebene wird abgeraten.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] "-Datenanbieter für ODBC|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die ODBC-Datenquellen verwenden.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] "-Datenanbieter für Oracle|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die Oracle-Datenquellen verwenden.|  
   
 ## <a name="entityclient-provider"></a>EntityClient-Anbieter  
- Der EntityClient-Anbieter wird für den Datenzugriff basierend auf einem Entity Data Model (EDM) verwendet. Im Gegensatz zu anderen .NET Framework-Datenanbietern interagiert er nicht direkt mit einer Datenquelle. Stattdessen kommuniziert er über Entity SQL mit dem zugrunde liegenden Datenanbieter. Weitere Informationen finden Sie unter [EntityClient und Entity SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ Der EntityClient-Anbieter wird für den Datenzugriff basierend auf einem Entity Data Model (EDM) verwendet. Im Gegensatz zu anderen .NET Framework-Datenanbietern interagiert er nicht direkt mit einer Datenquelle. Stattdessen kommuniziert er über Entity SQL mit dem zugrunde liegenden Datenanbieter. Weitere Informationen finden Sie unter [EntityClient und Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

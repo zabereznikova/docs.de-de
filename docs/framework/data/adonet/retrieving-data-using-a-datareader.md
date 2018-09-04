@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 4370a7a700a01943548bf067827e6640245caf4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482163"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516790"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Abrufen von Daten mit "DataReader"
 Abrufen von Daten mithilfe einer **DataReader** umfasst das Erstellen einer Instanz von der **Befehl** und klicken Sie dann erstellen, eine **DataReader** durch Aufrufen von  **Command.ExecuteReader** um Zeilen aus einer Datenquelle abzurufen. Das folgende Beispiel veranschaulicht die Verwendung einer **DataReader** , in denen `reader` stellt ein gültiger DataReader-Ziel und `command` ein gültiges Command-Objekt darstellt.  

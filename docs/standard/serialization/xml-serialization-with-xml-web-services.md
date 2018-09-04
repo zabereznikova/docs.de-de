@@ -18,11 +18,11 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 781c78fde1a8bd9c5c09f64d66f730c28e670aef
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42753632"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528141"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML-Serialisierung mit XML-Webdiensten
 Bei der XML-Serialisierung handelt es sich um den durch die <xref:System.Xml.Serialization.XmlSerializer>-Klasse ausgeführten Transportmechanismus, der die Grundlage für die Architektur der XML-Webdienste ist. Zum Steuern des mit einem XML-Webdienst generierten XML-Streams können Sie sowohl die unter [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) als auch die unter [Attribute zur Steuerung der Serialisierung von codiertem SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) aufgelisteten Attribute auf die Klassen, Rückgabewerte, Parameter und Felder einer Datei anwenden, die zum Erstellen eines XML-Webdiensts (ASMX) verwendet wurden. Weitere Informationen zum Erstellen von XML-Webdiensten finden Sie unter [Erstellen von XML-Webdiensten mit ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  

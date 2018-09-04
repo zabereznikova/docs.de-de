@@ -2,15 +2,15 @@
 title: Tokenauthentifizierer
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5c103f5a5a4f95761a5c19e6a8d6159a7439d05a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808326"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523219"
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
-Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein Tokenauthentifizierer in Windows Communication Foundation (WCF) Dient zum Überprüfen des Tokens, die mit der Nachricht verwendete prüft, ob es in sich selbst konsistent und Authentifizieren der Identität mit dem Token zugeordnet.  
+Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein tokenauthentifizierers in Windows Communication Foundation (WCF) wird zum Überprüfen des Tokens verwendet wird, mit der Meldung, überprüfen, dass es in sich selbst konsistent, und Authentifizieren der Identität mit dem Token zugeordnet.  
   
  Benutzerdefinierte Tokenauthentifizierer sind in einer Vielzahl von Fällen nützlich, z. B.:  
   
@@ -24,11 +24,11 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tok
   
 -   Wie der Server die Clientanmeldeinformationen mit einem benutzerdefinierten Tokenauthentifizierer überprüfen kann.  
   
--   Der WCF-Dienstcode wie sich mit dem benutzerdefinierten Tokenauthentifizierer verknüpft.  
+-   Wie der WCF-Dienstcode mit dem benutzerdefinierten Tokenauthentifizierer verknüpft.  
   
 -   Wie der Server mit dem X.509-Zertifikat des Servers authentifiziert werden kann.  
   
- Dieses Beispiel zeigt auch, wie die Identität des Aufrufers nach dem benutzerdefinierten tokenauthentifizierungsprozess WCF zugänglich ist.  
+ Dieses Beispiel zeigt außerdem an, wie die Identität des Aufrufers nach dem benutzerdefinierten tokenauthentifizierungsprozess zugegriffen werden kann, von WCF ist.  
   
  Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der App.conf-Konfigurationsdatei definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard-`wsHttpBinding` konfiguriert, wobei der Sicherheitsmodus auf "Nachricht" festgelegt ist. Dies ist der Standardmodus von `wsHttpBinding`. In diesem Beispiel wird das Standard-`wsHttpBinding` auf die Verwendung der Clientbenutzernamenauthentifizierung festgelegt. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `securityCredentials`-Verhalten können Sie ein Dienstzertifikat angeben. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird, wie im folgenden Setup beschrieben.  
   
@@ -324,9 +324,9 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4.  Wenn Client und Dienst nicht miteinander kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.  
   
-10. Wenn Client und Dienst nicht miteinander kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   

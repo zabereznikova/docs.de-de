@@ -5,11 +5,11 @@ ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 81d7bc6d8d530b2cd3fc528c3f8b44ec8f98f237
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522212"
 ---
 # <a name="security-behaviors-in-wcf"></a>Sicherheitsverhalten in WCF
 In Windows Communication Foundation (WCF) Verhalten zu Laufzeitverhalten auf Dienstebene bzw. auf Endpunktebene ändern. (Weitere Informationen zu Verhalten im Allgemeinen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Sicherheitsverhalten* Ihnen die Kontrolle über Anmeldeinformationen, Authentifizierung und Autorisierung und über Überwachungsprotokolle. Sie können Verhalten entweder mittels Programmierung oder mittels Konfiguration verwenden. In diesem Thema wird die Konfiguration der folgenden, auf Sicherheitsfunktionen bezogenen Verhalten erläutert:  

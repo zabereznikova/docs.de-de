@@ -3,11 +3,11 @@ title: Unterstützen mehrerer IIS-Sitebindungen
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 ms.openlocfilehash: 2c42ba7cf3713e5d165d10ce7049df8200d612fb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517873"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Unterstützen mehrerer IIS-Sitebindungen
 Wenn ein Windows Communication Foundation (WCF)-Dienst unter IIS 7.0 (Internetinformationsdienste) gehostet wird, empfiehlt es sich um mehrere Basisadressen bereitstellen, die das gleiche Protokoll auf derselben Website zu verwenden. Auf diese Weise kann ein Dienst auf unterschiedliche URIs reagieren. Dies ist nützlich, wenn zum Hosten eines Diensts, die überwacht werden sollen http://www.contoso.com und http://contoso.com. Es ist auch hilfreich, einen Dienst zu erstellen, der über eine Basisadresse für interne Benutzer und eine separate Basisadresse für externe Benutzer verfügt. Zum Beispiel: http://internal.contoso.com und http://www.contoso.com.  

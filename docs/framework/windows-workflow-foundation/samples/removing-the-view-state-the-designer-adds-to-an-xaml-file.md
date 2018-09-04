@@ -3,11 +3,11 @@ title: Entfernen des vom Designer zu einer XAML-Datei hinzugefügten Ansichtzust
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386932"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524951"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Entfernen des vom Designer zu einer XAML-Datei hinzugefügten Ansichtzustands
 Dieses Beispiel veranschaulicht, wie eine Klasse erstellt wird, die von <xref:System.Windows.Markup.XamlWriter> abgeleitet wird, und entfernt den Ansichtszustand aus einer XAML-Datei. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] schreibt Informationen in das XAML-Dokument, das als Ansichtszustand bezeichnet wird. Der Ansichtszustand bezieht sich auf die Informationen, die während der Entwurfszeit erforderlich sind, z. B. die Layoutpositionierung, jedoch nicht zur Laufzeit. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] fügt diese Informationen in das XAML-Dokument ein, während es bearbeitet wird. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] schreibt den Ansichtszustand in der XAML-Datei mit dem `mc:Ignorable`-Attribut. Daher werden diese Informationen nicht geladen, wenn die Laufzeit die XAML-Datei lädt. In diesem Beispiel wird veranschaulicht, wie eine Klasse erstellt wird, mit der diese Ansichtszustandsinformationen bei der Verarbeitung von XAML-Knoten entfernt werden.  

@@ -3,11 +3,11 @@ title: Bezeichner (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
 ms.openlocfilehash: 390c69dec6caed1ffe6faccb5893174d2c211a6b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419714"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528579"
 ---
 # <a name="identifiers-entity-sql"></a>Bezeichner (Entity SQL)
 Bezeichner werden in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet, um Abfrageausdruckaliase, Verweise auf Variablen, Eigenschaften von Objekten und Funktionen usw. darzustellen. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet zwei Arten von Bezeichner: einfache Bezeichner und Bezeichner in Anführungszeichen.  

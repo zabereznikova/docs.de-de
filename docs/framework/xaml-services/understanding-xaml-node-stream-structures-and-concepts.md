@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423243"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519446"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 Die in .NET Framework-XAML-Diensten implementierten XAML-Reader und XAML-Writer basieren auf dem Entwurfskonzept eines XAML-Knotenstreams. Der XAML-Knotenstream ist eine Konzeptualisierung eines Satzes von XAML-Knoten. In dieser Konzeptualisierung arbeitet ein XAML-Prozessor die Struktur der Knotenbeziehungen in der XAML einzeln ab. Dabei ist immer nur ein aktueller Datensatz oder eine aktuelle Position in einem geöffneten XAML-Knotenstream vorhanden, und viele Aspekte der APIs melden nur die von dieser Position verfügbaren Informationen. Der aktuelle Knoten in einem XAML-Knotenstream kann als Objekt, Member oder Wert beschrieben werden. Indem Sie XAML als einen XAML-Knotenstream behandeln, können XAML-Reader mit XAML-Writern kommunizieren und ein Programm aktivieren, um die Inhalte eines XAML-Knotenstreams während eines Ladepfad- oder Speicherpfadvorgangs, an dem XAML beteiligt ist, anzuzeigen, mit diesen zu interagieren oder sie zu verändern. Der API-Entwurf von XAML-Readern und -Writern und das Konzept des XAML-Knotenstreams ähneln früheren verwandten Reader- und Writerentwürfen und -konzepten, z. B. dem [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] und den <xref:System.Xml.XmlReader> - und <xref:System.Xml.XmlWriter> -Klassen. In diesem Thema werden XAML-Knotenstreamkonzepte erläutert, und es wird beschrieben, wie Sie Routinen schreiben können, die mit XAML-Darstellungen auf XAML-Knotenebene interagieren.  

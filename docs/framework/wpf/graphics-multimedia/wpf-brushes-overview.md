@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 794b17c5a7735201296958580540273879398e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566599"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521684"
 ---
 # <a name="wpf-brushes-overview"></a>Übersicht über WPF-Pinsel
-Alles, was auf dem Bildschirm sichtbar ist sichtbar, da er von einem Pinsel gezeichnet wurde. Z. B. wird ein Pinsel verwendet, um den Hintergrund einer Schaltfläche, die Vordergrundfarbe des Texts und der Ausfüllen einer Form zu beschreiben. In diesem Thema werden die Konzepte der Zeichnung mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel und stellt Beispiele bereit. Mithilfe von Pinseln können Sie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen.  
+Alles, was auf dem Bildschirm sichtbar ist sichtbar, da es mit einem Pinsel gezeichnet wurde. Beispielsweise wird ein Pinsel verwendet, um den Hintergrund einer Schaltfläche, die Vordergrundfarbe des Texts und des Ausfüllens einer Form zu beschreiben. In diesem Thema werden die Konzepte Zeichnen mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel und stellt Beispiele bereit. Mithilfe von Pinseln können Sie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen.  
   
 <a name="paintingwithbrush"></a>   
 ## <a name="painting-with-a-brush"></a>Zeichnen mit einem Pinsel  
- Ein <xref:System.Windows.Media.Brush> "zeichnet einen Bereich mit der Ausgabe". Unterschiedlicher Pinsel werden verschiedene Typen der Ausgabe aufweisen. Einige Pinsel zeichnen einen Bereich mit einer Volltonfarbe, andere Personen mit einem Farbverlauf, Muster, Bild oder Zeichnung. Die folgende Abbildung zeigt Beispiele für jeden der verschiedenen <xref:System.Windows.Media.Brush> Typen.  
+ Ein <xref:System.Windows.Media.Brush> "zeichnet einen Bereich mit der Ausgabe". Andere Pinsel haben unterschiedliche Arten von Ausgaben. Einige Pinsel zeichnen ein Bereichs mit einer Volltonfarbe, andere Personen mit einem Farbverlauf, Muster, Bild oder zeichnen. Die folgende Abbildung zeigt Beispiele für jeden der verschiedenen <xref:System.Windows.Media.Brush> Typen.  
   
  ![Pinseltypen](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushtypes.jpg "Graphicsmm_brushtypes")  
-Pinsel-Beispiele  
+Beispiele für Pinsel  
   
  Die meisten visuellen Objekte können Sie angeben, wie sie gezeichnet werden. Die folgende Tabelle enthält einige allgemeine Objekte und Eigenschaften, die mit dem können Sie eine <xref:System.Windows.Media.Brush>.  
   
@@ -35,11 +35,11 @@ Pinsel-Beispiele
 |<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
- Die folgenden Abschnitte beschreiben die verschiedenen <xref:System.Windows.Media.Brush> Typen, und geben Sie jeweils ein Beispiel.  
+ Die folgenden Abschnitte beschreiben die verschiedenen <xref:System.Windows.Media.Brush> eingibt, und geben Sie jeweils ein Beispiel.  
   
 <a name="paintwithsolidcolorbrush"></a>   
-## <a name="paint-with-a-solid-color"></a>Zeichnen mit einer Volltonfarbe aus  
- Ein <xref:System.Windows.Media.SolidColorBrush> zeichnet einen Bereich mit einer einfarbigen <xref:System.Windows.Media.Color>. Gibt es eine Vielzahl von Möglichkeiten zum Angeben der <xref:System.Windows.Media.SolidColorBrush.Color%2A> von einer <xref:System.Windows.Media.SolidColorBrush>: Beispielsweise können Sie über Kanäle alpha, roten, blauen und Grün geben oder verwenden Sie eine der vordefinierten Farben gebotenen der <xref:System.Windows.Media.Colors> Klasse.  
+## <a name="paint-with-a-solid-color"></a>Zeichnen mit einer Volltonfarbe  
+ Ein <xref:System.Windows.Media.SolidColorBrush> zeichnet einen Bereich mit einer Volltonfarbe <xref:System.Windows.Media.Color>. Stehen eine Vielzahl von Möglichkeiten zum Angeben der <xref:System.Windows.Media.SolidColorBrush.Color%2A> von einer <xref:System.Windows.Media.SolidColorBrush>: Sie können z. B. über Kanäle alpha, Rot, Blau und Grün geben oder verwenden Sie eine der vordefinierten Farben von bereitgestellten der <xref:System.Windows.Media.Colors> Klasse.  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.SolidColorBrush> zum Zeichnen der <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle>. Die folgende Abbildung zeigt das gezeichnete Rechteck.  
   
@@ -50,11 +50,11 @@ Ein mit einem SolidColorBrush gezeichnetes Rechteck
  [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- Weitere Informationen zu den <xref:System.Windows.Media.SolidColorBrush> Klasse, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Weitere Informationen zu den <xref:System.Windows.Media.SolidColorBrush> Klasse, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithlineargradientbrush"></a>   
 ## <a name="paint-with-a-linear-gradient"></a>Zeichnen mit einem linearen Farbverlauf  
- Ein <xref:System.Windows.Media.LinearGradientBrush> zeichnet einen Bereich mit einem linearen Farbverlauf. Ein linearer Farbverlauf kombiniert zwei oder mehr Farben entlang einer Linie, der Farbverlaufsachse. Verwenden Sie <xref:System.Windows.Media.GradientStop> Objekte, um die Farben in der Farbverlauf und ihre relativen Positionen anzugeben.  
+ Ein <xref:System.Windows.Media.LinearGradientBrush> zeichnet einen Bereich mit einem linearen Farbverlauf. Ein linearer Farbverlauf mischt zwei oder mehr Farben in einer Zeile der Farbverlaufsachse an. Verwenden Sie <xref:System.Windows.Media.GradientStop> Objekte, um die Farben des Farbverlaufs und ihre Positionen im anzugeben.  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.LinearGradientBrush> zum Zeichnen der <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle>. Die folgende Abbildung zeigt das gezeichnete Rechteck.  
   
@@ -65,11 +65,11 @@ Ein mit einem LinearGradientBrush gezeichnetes Rechteck
  [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- Weitere Informationen zu den <xref:System.Windows.Media.LinearGradientBrush> Klasse, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Weitere Informationen zu den <xref:System.Windows.Media.LinearGradientBrush> Klasse, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithradialgradientbrush"></a>   
 ## <a name="paint-with-a-radial-gradient"></a>Zeichnen mit einem radialen Farbverlauf  
- Ein <xref:System.Windows.Media.RadialGradientBrush> zeichnet einen Bereich mit einem radialen Farbverlauf. Ein Radialer Farbverlauf kombiniert zwei oder mehr Farben über ein Kreis. Wie bei der <xref:System.Windows.Media.LinearGradientBrush> -Klasse, verwenden Sie <xref:System.Windows.Media.GradientStop> Objekte, um die Farben in der Farbverlauf und ihre relativen Positionen anzugeben.  
+ Ein <xref:System.Windows.Media.RadialGradientBrush> zeichnet einen Bereich mit einem radialen Farbverlauf. Ein Radialer Farbverlauf mischt zwei oder mehr Farben in einem Kreis an. Wie bei der <xref:System.Windows.Media.LinearGradientBrush> -Klasse, die Sie verwenden <xref:System.Windows.Media.GradientStop> Objekte, um die Farben des Farbverlaufs und ihre Positionen im anzugeben.  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.RadialGradientBrush> zum Zeichnen der <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle>. Die folgende Abbildung zeigt das gezeichnete Rechteck.  
   
@@ -80,7 +80,7 @@ Ein mit einem RadialGradientBrush gezeichnetes Rechteck
  [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- Weitere Informationen zu den <xref:System.Windows.Media.RadialGradientBrush> Klasse, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Weitere Informationen zu den <xref:System.Windows.Media.RadialGradientBrush> Klasse, finden Sie unter [Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithimage"></a>   
 ## <a name="paint-with-an-image"></a>Zeichnen mit einem Bild  
@@ -89,7 +89,7 @@ Ein mit einem RadialGradientBrush gezeichnetes Rechteck
  Im folgenden Beispiel wird ein <xref:System.Windows.Media.ImageBrush> zum Zeichnen der <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle>. Die folgende Abbildung zeigt das gezeichnete Rechteck.  
   
  ![Ein Rechteck mit einem ImageBrush gezeichnetes](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-imagebrush.jpg "Graphicsmm_brush_ovw_imagebrush")  
-Ein mit einem Bild gezeichnetes Rechteck  
+Ein mit einem Image gezeichnetes Rechteck  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmimagebrushexampleinline)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmimagebrushexampleinline)]
@@ -99,7 +99,7 @@ Ein mit einem Bild gezeichnetes Rechteck
   
 <a name="paintwithdrawing"></a>   
 ## <a name="paint-with-a-drawing"></a>Zeichnen mit einer Zeichnung  
- Ein <xref:System.Windows.Media.DrawingBrush> zeichnet einen Bereich mit einem <xref:System.Windows.Media.Drawing>. Ein <xref:System.Windows.Media.Drawing> Formen, Bilder, Text und Medien enthalten können.  
+ Ein <xref:System.Windows.Media.DrawingBrush> zeichnet einen Bereich mit einem <xref:System.Windows.Media.Drawing>. Ein <xref:System.Windows.Media.Drawing> kann Formen, Bildern, Text und Medien enthalten.  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.DrawingBrush> zum Zeichnen der <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle>. Die folgende Abbildung zeigt das gezeichnete Rechteck.  
   
@@ -113,12 +113,12 @@ Ein mit einem DrawingBrush gezeichnetes Rechteck
  Weitere Informationen zu den <xref:System.Windows.Media.DrawingBrush> Klasse, finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithvisual"></a>   
-## <a name="paint-with-a-visual"></a>Paint mit einer Visualisierung  
- Ein <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich mit einem <xref:System.Windows.Media.Visual> Objekt. Beispiele für visuelle Objekte <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Page>, und <xref:System.Windows.Controls.MediaElement>. Ein <xref:System.Windows.Media.VisualBrush> ermöglicht auch zum projizieren von Inhalten von einem Teil der Anwendung in einem anderen Bereich; diese Funktion ist hilfreich zum Erstellen von Reflektion Auswirkungen und Teile des Bildschirms vergrößern.  
+## <a name="paint-with-a-visual"></a>Zeichnen mit einem visuellen Element  
+ Ein <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich mit einem <xref:System.Windows.Media.Visual> Objekt. Beispiele für visuelle Objekte <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Page>, und <xref:System.Windows.Controls.MediaElement>. Ein <xref:System.Windows.Media.VisualBrush> können Sie projizieren von Inhalten von einem Teil der Anwendung in einem anderen Bereich; es ist sehr nützlich für reflexionseffekte erstellen und Teile des Bildschirms zu vergrößern.  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.VisualBrush> zum Zeichnen der <xref:System.Windows.Shapes.Shape.Fill%2A> von einem <xref:System.Windows.Shapes.Rectangle>. Die folgende Abbildung zeigt das gezeichnete Rechteck.  
   
- ![Ein mit einem VisualBrush gezeichnetes Rechteck](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-visualbrush.jpg "Graphicsmm_brush_ovw_visualbrush")  
+ ![Ein Rechteck mit einem VisualBrush gezeichnetes](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-visualbrush.jpg "Graphicsmm_brush_ovw_visualbrush")  
 Ein mit einem VisualBrush gezeichnetes Rechteck  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmvisualbrushexampleinline)]
@@ -128,37 +128,37 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
  Weitere Informationen zu den <xref:System.Windows.Media.VisualBrush> Klasse, finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
-## <a name="paint-using-predefined-and-system-brushes"></a>Zeichnen Sie mit vordefinierten und Systempinsel  
- Der Einfachheit halber bietet Windows Presentation Foundation (WPF), einen Satz vordefinierter und System Pinsel, dass Sie zum Zeichnen von Objekten verwenden können.  
+## <a name="paint-using-predefined-and-system-brushes"></a>Zeichnen Sie vordefinierte mit Systempinsel  
+ Der Einfachheit halber stellt Windows Presentation Foundation (WPF) bereit, einen Satz vordefinierter und System Pinsel, dass Sie zum Zeichnen von Objekten verwenden können.  
   
--   Eine Liste der verfügbaren vordefinierten Pinsel, finden Sie unter der <xref:System.Windows.Media.Brushes> Klasse. Ein Beispiel zum Verwenden eines vordefinierten Pinsels finden Sie unter [Zeichnen eines Bereichs mit einer Volltonfarbe](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
+-   Eine Liste der verfügbaren vordefinierten Pinsel, finden Sie unter den <xref:System.Windows.Media.Brushes> Klasse. Ein Beispiel ein vordefiniertes Pinsels verwenden, finden Sie unter [Zeichnen eines Bereichs mit einer Volltonfarbe](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
--   Eine Liste der verfügbaren Systempinsel, finden Sie unter der <xref:System.Windows.SystemColors> Klasse. Ein Beispiel finden Sie unter [Zeichnen eines Bereichs mit einem Systempinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md).  
+-   Eine Liste der verfügbaren Systempinsel, finden Sie unter den <xref:System.Windows.SystemColors> Klasse. Ein Beispiel finden Sie unter [Zeichnen eines Bereichs mit einem Systempinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
-## <a name="common-brush-features"></a>Allgemeine Pinsel-Funktionen  
- <xref:System.Windows.Media.Brush> -Objekte stellen eine <xref:System.Windows.Media.Brush.Opacity%2A> -Eigenschaft, die verwendet werden kann, um einen Pinsel transparent oder teilweise transparent machen. Ein <xref:System.Windows.Media.Brush.Opacity%2A> der Wert 0 wird ein Pinsel völlig transparent, während ein <xref:System.Windows.Media.Brush.Opacity%2A> Wert 1 wird ein Pinsel vollständig deckend. Im folgenden Beispiel wird die <xref:System.Windows.Media.Brush.Opacity%2A> Eigenschaft, um eine <xref:System.Windows.Media.SolidColorBrush> 25 Prozent.  
+## <a name="common-brush-features"></a>Allgemeine Funktionen für Pinsel  
+ <xref:System.Windows.Media.Brush> -Objekte stellen eine <xref:System.Windows.Media.Brush.Opacity%2A> -Eigenschaft, die verwendet werden kann, um einen Pinsel transparent bzw. teilweise transparent machen. Ein <xref:System.Windows.Media.Brush.Opacity%2A> Wert 0 wird ein Pinsel, der völlig transparent, während ein <xref:System.Windows.Media.Brush.Opacity%2A> Wert 1 wird ein Pinsel transparent. Im folgenden Beispiel wird die <xref:System.Windows.Media.Brush.Opacity%2A> Eigenschaft, um eine <xref:System.Windows.Media.SolidColorBrush> 25 Prozent undurchlässig ist.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
  [!code-csharp[BrushOverviewExamples_snip#OpacityExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/OpacityExample.cs#opacityexample1csharp)]  
   
- Wenn der Pinsel Farben, die teilweise transparent sind enthält, wird der Wert für die Deckkraft der Farbe durch Multiplikation mit dem Wert für die Deckkraft des Pinsels kombiniert. Wenn ein Pinsel einen Wert für die Deckkraft von 0,5 hat und eine Farbe, die in den Pinsel verwendet verfügt auch über einen Wert für die Deckkraft von 0,5, hat die Ausgabefarbe Durchlässigkeitswert 0,25.  
+ Wenn der Pinsel Farben, die teilweise transparent sind enthält, wird die Farbe der Durchlässigkeitswert durch Multiplikation mit dem Deckkraftwert des Pinsels kombiniert. Beispielsweise weist die Ausgabefarbe Wenn ein Pinsel Durchlässigkeitswert 0,5 hat, und eine Farbe ab, in der Pinsel verfügt auch über eine der Deckkraftwert 0,5, Durchlässigkeitswert 0,25.  
   
 > [!NOTE]
->  Es ist jedoch effizienter, den Wert für die Deckkraft eines Pinsels ändern, als dies so ändern Sie die Deckkraft eines gesamten Element mithilfe der <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> Eigenschaft.  
+>  Es ist effizienter, den Deckkraftwert eines Pinsels ändern, als zu ändern, die Deckkraft eines gesamten Elements mithilfe der <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> Eigenschaft.  
   
- Sie können drehen, skalieren, neigen und übersetzen Sie den Inhalt eines Pinsels mit seiner <xref:System.Windows.Media.Brush.Transform%2A> oder <xref:System.Windows.Media.Brush.RelativeTransform%2A> Eigenschaften. Weitere Informationen finden Sie unter [Pinsel Transformation Overview](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
+ Sie können zu drehen, skalieren, neigen und übersetzen Sie den Inhalt eines Pinsels mit seiner <xref:System.Windows.Media.Brush.Transform%2A> oder <xref:System.Windows.Media.Brush.RelativeTransform%2A> Eigenschaften. Weitere Informationen finden Sie unter [Übersicht über Pinseltransformationen](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
   
- Da sie sind <xref:System.Windows.Media.Animation.Animatable> Objekte <xref:System.Windows.Media.Brush> Objekte animiert werden können. Weitere Informationen finden Sie unter [Übersicht über Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Da sie sind <xref:System.Windows.Media.Animation.Animatable> Objekte <xref:System.Windows.Media.Brush> Objekte können animiert werden. Weitere Informationen finden Sie unter [Übersicht über Animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
 <a name="freezable_features"></a>   
 ### <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
- Da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.Brush> Klasse bietet verschiedene Sonderfunktionen: <xref:System.Windows.Media.Brush> deklarierte Objekte als [Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)für mehrere Objekte freigegeben und geklont. Darüber hinaus alle der <xref:System.Windows.Media.Brush> Typen außer <xref:System.Windows.Media.VisualBrush> zur Verbesserung der Leistung mit Schreibschutz versehen wurden und Thread-sichere vorgenommen werden können.  
+ Da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.Brush> stellt mehrere spezielle Features bereit: <xref:System.Windows.Media.Brush> als Objekte deklariert werden [Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)von mehreren Objekten freigegeben und geklont. Darüber hinaus alle dem <xref:System.Windows.Media.Brush> Typen außer <xref:System.Windows.Media.VisualBrush> schreibgeschützt zur Verbesserung der Leistung und threadsicher gemacht werden kann.  
   
- Weitere Informationen zu den verschiedenen Features von <xref:System.Windows.Freezable> anzuzeigen, [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Weitere Informationen zu den verschiedenen Funktionen von <xref:System.Windows.Freezable> Objekten finden Sie [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
- Weitere Informationen dazu, warum <xref:System.Windows.Media.VisualBrush> Objekte nicht fixiert, finden Sie unter der <xref:System.Windows.Media.VisualBrush> Seite ".  
+ Weitere Informationen zu den Gründen <xref:System.Windows.Media.VisualBrush> -Objekte können nicht fixiert ist, finden Sie in der <xref:System.Windows.Media.VisualBrush> Seite.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Media.Brush>  
@@ -166,8 +166,8 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
  [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Beispiel für Pinsel](http://go.microsoft.com/fwlink/?LinkID=159973)  
- [ImageBrush-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush-Beispiel](http://go.microsoft.com/fwlink/?LinkID=160049)  
+ [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973)  
+ [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
+ [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)  
  [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
  [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

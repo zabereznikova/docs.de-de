@@ -3,11 +3,11 @@ title: Überblick über WCF-Web-HTTP-Programmiermodelle
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517074"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
 Das Windows Communication Foundation (WCF)-WEB-HTTP-Programmiermodell bietet die grundlegenden Elemente zum Erstellen von WEB-HTTP-Diensten mit WCF. WCF-WEB-HTTP-Diensten sind die größtmögliche Palette an möglichen Clients, einschließlich Webbrowsern zugegriffen werden soll und haben die folgenden besonderen Anforderungen:  
