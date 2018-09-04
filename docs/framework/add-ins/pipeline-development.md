@@ -11,82 +11,83 @@ helpviewer_keywords:
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 047cd7a2b8a6d315c6cadb9b535b84f744fd2d09
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504884"
 ---
 # <a name="pipeline-development"></a>Pipeline-Entwicklung
-Die Add-in-Pipeline ist der Pfad der Pipelinesegmente, die die hostanwendung und seine-Add-in verwenden müssen, um miteinander kommunizieren.  
+Die Add-in-Pipeline ist der Pfad der Pipelinesegmente, die die hostanwendung und der Add-in verwenden müssen, um miteinander zu kommunizieren.  
   
  Die folgende Abbildung zeigt die Kommunikationspipeline und seine Segmente.  
   
- ![Hinzufügen&#45;im Pipeline-Modell. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Hinzufügen&#45;im pipelinemodell. ](../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Add-In-Pipeline  
   
- Die hostanwendung wird an einem Ende der Pipeline, und das Add-in ist am anderen Ende. Beginnend mit beiden Enden, und in die Mitte verschieben, haben die hostanwendung und das Add-in eine abstrakte Basisklasse, die einen Überblick über das Objektmodell definiert, die beide gemeinsam nutzen. Diese Typen (Klassen) bilden zusammen das Anzeigen von Add-in-Pipeline-Segment und der Hostansicht des Add-In-Pipelinesegments. Das Anzeigen von Add-in-Pipeline-Segment enthält oft mehr als eine abstrakte Klasse, aber die Klasse, der das Add-in von erbt als Add-in-Basis bekannt ist.  
+ Die hostanwendung an einem Ende der Pipeline ist und das Add-in ist am anderen Ende. Beginnend mit beiden Enden, und verschieben in die Mitte, haben sowohl die Host-Anwendung als auch das Add-in eine abstrakte Basisklasse, die einen Überblick über das Objektmodell definiert, die beide gemeinsam nutzen. Diese Typen (Klassen), bilden des Add-in-Ansichtspipelinesegments und die Hostansicht des Add-in-Pipeline-Segments ab. Das Add-In-Ansichtspipelinesegment enthält oft mehr als eine abstrakte Klasse, aber die Klasse, der das Add-in von erbt als Basis-Add-in bekannt ist.  
   
- Das Add-In-seitiger Adapter Pipeline-Segment und hostseitige Adapter Pipeline Segment konvertieren den Fluss von Typen zwischen ihren Ansichtssegmente der Pipeline und das Vertragssegment der Pipeline. Das zentrale Segment der Pipeline ist ein Vertrag, die abgeleitet ist die <xref:System.AddIn.Contract.IContract> Schnittstelle. Dieser Vertrag definiert die Methoden, die Host-Anwendung und die add-in verwendet werden.  
+ Die Add-In-seitigen Adapterpipelinesegments und der hostseitige Adapter Pipeline konvertieren den Fluss von Datentypen zwischen ihrer Ansichtssegmente der Pipeline und des Vertragspipelinesegments. Das zentrale Segment der Pipeline ist, einen Vertrag, der von abgeleitet ist die <xref:System.AddIn.Contract.IContract> Schnittstelle. Dieser Vertrag definiert die Methoden, die die hostanwendung und der add-in verwendet werden.  
   
- Wenn Sie den Host und das Add-in in separaten Anwendungsdomänen laden, müssen Sie eine isolationsbegrenzung, die den Bereich der hostanwendung aus dem Bereich des Add-ins trennt. Der Vertrag ist die einzige Assembly, die in den Host und -add-in Anwendungsdomänen geladen wird. Der Host und das Add-in jedes finden Sie nur in ihrer Ansicht eines der Methoden des Dienstvertrags. Aus diesem Grund werden sie durch eine Abstraktionsebene vom Vertrag getrennt.  
+ Wenn Sie dem Host und das Add-in in getrennte Anwendungsdomänen laden, müssen Sie eine isolationsbegrenzung, die den Rahmen der hostanwendung aus dem Bereich, der das Add-in trennt. Der Vertrag ist die einzige Assembly, die in den Host und Add-in-Anwendungsdomänen geladen wird. Der Host und das Add-in jedes beziehen sich nur für die Darstellung der der Contract-Methoden. Aus diesem Grund werden sie durch eine Abstraktionsebene vom Vertrag getrennt.  
   
- Um Pipelinesegmente zu entwickeln, müssen Sie eine Verzeichnisstruktur erstellen, die sie enthält. Weitere Informationen zu den Anforderungen an die Entwicklungsumgebung und Bereich Richtlinien finden Sie unter [Pipelineentwicklung](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Um Pipelinesegmente entwickeln zu können, müssen Sie eine Verzeichnisstruktur erstellen, die sie enthält. Weitere Informationen zu den Anforderungen für die Entwicklung und Bereichs-Richtlinien finden Sie unter [Anforderungen für die Pipelineentwicklung](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
- Die folgende Abbildung zeigt die Typen, die die Pipelinesegmente bilden. Die Namen der Typen in der Abbildung dargestellten wurden willkürlich ausgewählt, jedoch alle Typen außer dem Host und dem Host Anzeigen der Attribute-Add-in erforderlich, damit diese von Methoden gefunden werden können, die einen Informationsspeicher zu erstellen.  
+ Die folgende Abbildung zeigt die Typen, die der Pipelinesegmente bilden. Die Namen der Typen in der Abbildung dargestellten wurden willkürlich ausgewählt, aber alle Typen außer dem Host und dem Host-Add-ins erfordern Attribute anzeigen, damit diese durch Methoden gefunden werden können, die einen Informationsspeicher zu erstellen.  
   
- ![Hinzufügen&#45;im Modell mit erforderlichen Attributen für Typen. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Hinzufügen&#45;im Modell mit erforderlichen Attributen für Typen. ](../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Add-in-Pipeline mit Typen  
   
- Die folgende Tabelle beschreibt die Pipelinesegmente für ein Add-in aktivieren. Weitere Informationen zu diesen Segmenten finden Sie unter [Verträge, Ansichten und Adapter](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ Die folgende Tabelle beschreibt der Pipelinesegmente für ein Add-in aktivieren. Weitere Informationen zu diesen Segmenten finden Sie unter [Verträge, Ansichten und Adapter](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
-|Pipelinesegment|Beschreibung|  
+|Pipelinesegmente|Beschreibung|  
 |----------------------|-----------------|  
-|Host|Der Assembly, die eine Instanz ein Add-in erstellt.|  
-|Hostansicht des Add-Ins|Stellt die hostanwendung Überblick über die Objekttypen und Methoden zur Kommunikation mit dem Add-in dar. Die Hostansicht ist eine abstrakte Basisklasse oder Schnittstelle.|  
-|Hostseitige adapter|Eine Assembly mit einer oder mehreren Klassen, die Methoden in und aus dem Vertrag anpasst.<br /><br /> Diese Pipelinesegment wird identifiziert, mit der <xref:System.AddIn.Pipeline.HostAdapterAttribute> Attribut.<br /><br /> Assemblys mit mehreren Modulen werden nicht unterstützt.|  
-|Vertrag|Eine Schnittstelle, die abgeleitet ist die <xref:System.AddIn.Contract.IContract> -Schnittstelle, und dass das Protokoll für die Kommunikation zwischen dem Host und seine Add-in-Typen definiert.<br /><br /> Diese Pipelinesegment wird durch Festlegen von identifiziert die <xref:System.AddIn.Pipeline.AddInContractAttribute> Attribut.|  
-|Add-In-seitiger adapter|Eine Assembly mit einer oder mehreren Klassen, die Methoden in und aus dem Vertrag anpasst.<br /><br /> Diese Pipelinesegment wird identifiziert, mit der <xref:System.AddIn.Pipeline.AddInAdapterAttribute> Attribut.<br /><br /> Jede Assembly im Add-In-seitiger Adapterverzeichnis, das einen Typ enthält, ein <xref:System.AddIn.Pipeline.AddInAdapterAttribute> Attribut in die Anwendungsdomäne für das Add-In geladen wird.<br /><br /> Jede Assembly im Add-In-seitiger Verzeichnis wird in einer eigenen Anwendungsdomäne geladen.<br /><br /> Assemblys mit mehreren Modulen werden nicht unterstützt.|  
-|Add-In-Ansicht|Eine Assembly, die das Add-in Überblick über die Objekttypen und Methoden, die verwendet werden, um die Kommunikation mit dem Host darstellt. Die Add-In-Ansicht ist eine abstrakte Basisklasse oder Schnittstelle.<br /><br /> Diese Pipelinesegment wird identifiziert, mit der <xref:System.AddIn.Pipeline.AddInBaseAttribute> Attribut.<br /><br /> Jede Assembly im Verzeichnis AddInViews, die einen Typ enthält, ein <xref:System.AddIn.Pipeline.AddInBaseAttribute> Attribut in die Anwendungsdomäne für das Add-In geladen wird.|  
-|Add-In|Ein instanziierter Typ, der ein Dienst für den Host führt.|  
+|Host|Der Assembly, die eine Instanz von einem Add-in erstellt.|  
+|Hostansicht des Add-Ins|Stellt die hostanwendung die Objekttypen und Methoden, die zur Kommunikation mit dem Add-In-Ansicht dar. Die hostanwendung die Hostansicht ist eine abstrakte Basisklasse oder Schnittstelle.|  
+|Hostseitiger adapter|Eine Assembly mit der eine oder mehrere Klassen, die Methoden zum und vom Vertrag anpasst.<br /><br /> Dieses Pipelinesegment wird mit identifiziert die <xref:System.AddIn.Pipeline.HostAdapterAttribute> Attribut.<br /><br /> Assemblys mit mehreren Modulen werden nicht unterstützt.|  
+|Vertrag|Eine Schnittstelle, die von abgeleitet ist die <xref:System.AddIn.Contract.IContract> Schnittstelle zudem wird festgelegt, das Protokoll für die Kommunikation von Typen, die zwischen dem Host und seine-add-in.<br /><br /> Dieses Pipelinesegment wird durch Festlegen von identifiziert die <xref:System.AddIn.Pipeline.AddInContractAttribute> Attribut.|  
+|Add-In-seitige adapter|Eine Assembly mit der eine oder mehrere Klassen, die Methoden zum und vom Vertrag anpasst.<br /><br /> Dieses Pipelinesegment wird mit identifiziert die <xref:System.AddIn.Pipeline.AddInAdapterAttribute> Attribut.<br /><br /> Jede Assembly im Add-In-seitige Adapterverzeichnis, das einen Typ enthält, die eine <xref:System.AddIn.Pipeline.AddInAdapterAttribute> Attribut in das Add-in die Anwendungsdomäne geladen wird.<br /><br /> Jede Assembly im Add-In-seitige Verzeichnis wird in seiner eigenen Anwendungsdomäne geladen.<br /><br /> Assemblys mit mehreren Modulen werden nicht unterstützt.|  
+|Add-In-Ansicht|Eine Assembly, die das Add-In-Ansicht der Objekte des Typs und Methoden, die verwendet werden, für die Kommunikation mit dem Host darstellt. Die Add-In Ansicht ist eine abstrakte Basisklasse oder Schnittstelle.<br /><br /> Dieses Pipelinesegment wird mit identifiziert die <xref:System.AddIn.Pipeline.AddInBaseAttribute> Attribut.<br /><br /> Jede Assembly im Verzeichnis AddInViews, das einen Typ enthält, die eine <xref:System.AddIn.Pipeline.AddInBaseAttribute> Attribut in das Add-in die Anwendungsdomäne geladen wird.|  
+|Add-In|Einen instanziierten Typ, der einen Dienst für den Host ausführt.|  
   
 ## <a name="pipeline-activation-path"></a>Pipeline-Aktivierungspfad  
- Die folgende Abbildung zeigt die Aktivierung von Typen aus, wenn ein Add-In aktiviert wird. Es zeigt auch die Übergabe von Objekten auf dem Host, z. B. die Ergebnisse einer Berechnung oder eine Auflistung von Objekten. Dies ist das häufigste Szenario.  
+ Die folgende Abbildung zeigt die Aktivierung von Typen aus, wenn ein Add-in aktiviert ist. Es zeigt auch die Übergabe von Objekten an dem Host, z. B. die Ergebnisse einer Berechnung oder eine Auflistung von Objekten an. Dies ist das typische Szenario.  
   
- ![Hinzufügen&#45;im Modell mit Aktivierungspfad. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Hinzufügen&#45;im Modell mit Aktivierungspfad. ](../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Aktivierungspfad aus dem Add-in auf dem host  
   
- Der Aktivierungspfad der Pipeline erfolgt wie folgt aus:  
+ Der Aktivierungspfad der Pipeline erfolgt folgendermaßen:  
   
 1.  Die hostanwendung aktiviert das Add-in mit der <xref:System.AddIn.Hosting.AddInToken.Activate%2A> Methode.  
   
-2.  Die Add-Ins, Add-in-Sicht, Add-In-seitiger Adapter und der Vertragsassemblys werden in das Add-in Anwendungsdomäne geladen.  
+2.  Der Add-Ins, Add-In-Ansicht, Add-In-seitige Adapter und der Vertragsassemblys werden in das Add-in die Anwendungsdomäne geladen.  
   
-3.  Eine Instanz von der Add-In-seitiger Adapter wird mithilfe der Add-In-Ansicht erstellt (mit der Klasse identifiziert wird, indem Sie die <xref:System.AddIn.Pipeline.AddInBaseAttribute> Attribut) als Konstruktor. Der Add-In-seitiger Adapter erbt vom Vertrag.  
+3.  Eine Instanz des Add-In-seitigen Adapters wird erstellt, mit der View-Add-in (mit der Klasse, die von identifiziert die <xref:System.AddIn.Pipeline.AddInBaseAttribute> Attribut) als Konstruktor. Der Add-In-seitige Adapter erbt vom Vertrag.  
   
-4.  Der Add-In-seitiger-Adapter, die als Vertrag typisiert ist, wird über die Isolationsgrenze (optional) der hostseitige Adapter-Konstruktor übergeben.  
+4.  Die Add-In-seitige Adapter, die als Vertrag typisiert ist, wird über die isolationsbegrenzung für (optional) an der hostseitige Adapter-Konstruktor übergeben.  
   
-5.  Die Hostansicht den Add-Ins, hostseitige Adapter und der Vertragsassemblys werden in der Anwendungsdomäne des Hosts geladen.  
+5.  Die Hostansicht des der Add-Ins, hostseitige Adapter und die Vertragsassemblys sind in der Anwendungsdomäne des Hosts geladen werden.  
   
-6.  Eine Instanz von der hostseitige Adapter wird mit dem Vertrag als Konstruktor erstellt. Der hostseitige Adapter erbt von der Hostansicht des Add-Ins.  
+6.  Eine Instanz von der hostseitige Adapter wird mit dem Vertrag als seinem Konstruktor erstellt. Der hostseitige Adapter erbt von die Hostansicht des Add-Ins ab.  
   
-7.  Der Host kann das Add-in, das typisiert ist, wie der Host des Add-Ins anzuzeigen, und kann weiterhin ihre Methoden aufrufen.  
+7.  Der Host kann die Add-in, das eingegeben wurde, wie der Host das Add-In-Ansicht und kann weiterhin seine Methoden aufrufen.  
   
 ## <a name="walkthroughs"></a>Exemplarische Vorgehensweisen  
- Es gibt drei exemplarischen Vorgehensweisen, die zum Erstellen von Pipelines mit dem Visual Studio zu beschreiben:  
+ Es gibt drei exemplarischen Vorgehensweisen, die beschreiben, wie Sie Pipelines mithilfe von Visual Studio erstellen:  
   
 -   [Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen](../../../docs/framework/add-ins/walkthrough-create-extensible-app.md)  
   
      Beschreibt ein Rechner-add-in, die Addition, Subtraktion, Multiplikation und Division Berechnungen für den Host ausführt.  
   
--   [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als die Host-Änderungen](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität bei geändertem Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
-     Beschreibt ein Rechner-add-in mit erweiterten Berechnungsfunktionen und zum Verwalten der Kompatibilität mit dem ersten Rechner-add-Ins.  
+     Beschreibt ein Rechner-add-in mit erweiterten Berechnungsfunktionen und wie Sie die Kompatibilität mit der ersten Rechner-add-Ins zu gewährleisten.  
   
--   [Exemplarische Vorgehensweise: Übergeben von Sammlungen zwischen Hosts und -Add-Ins](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [Exemplarische Vorgehensweise: Übergeben von Auflistungen zwischen Hosts und -Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
-     Beschreibt, wie Datensammlungen über die Pipeline, die mit einem Buch Store Szenario zu übergeben.  
+     Beschreibt, wie datenauflistungen über die Pipeline basierend auf einem Buch Store übergeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Add-In-Pipeline-Szenarien](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Add-In-Pipeline-Szenarios](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Add-Ins und Erweiterbarkeit](../../../docs/framework/add-ins/index.md)

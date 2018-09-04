@@ -3,11 +3,11 @@ title: WCF-Dienste und Ereignisablaufverfolgung für Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
 ms.openlocfilehash: 11f476b966886d4a114f7870b4c029e200ee84e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388022"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504771"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF-Dienste und Ereignisablaufverfolgung für Windows
 In diesem Beispiel wird veranschaulicht, wie die analytische Ablaufverfolgung in Windows Communication Foundation (WCF) verwendet, um Ereignisse im Event Tracing for Windows (ETW) auszugeben. Die analytische Ablaufverfolgung werden Ereignisse an wichtigen Punkten im WCF-Stapel, mit denen die Problembehandlung für die WCF-Dienste in der produktionsumgebung ausgegeben.  

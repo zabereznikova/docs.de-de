@@ -3,11 +3,11 @@ title: Wählen eines Typs von Anmeldeinformationen
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: c2ee1b9062d14eaa44de0651985c2a385fe02f8e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503390"
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmeldeinformationen* sind die Daten, die Windows Communication Foundation (WCF) verwendet wird, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In WCF können Anmeldeinformationen viele Formate haben, wie z. B. Benutzernamentoken und x. 509-Zertifikate nutzen. In diesem Thema wird erläutert, Anmeldeinformationen, wie sie in WCF verwendet werden und wie Sie die richtige Anmeldeinformationen für Ihre Anwendung auswählen.  

@@ -3,11 +3,11 @@ title: Beispiel für benutzerdefinierte Kompensationslogik
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
 ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503718"
 ---
 # <a name="custom-compensation-sample"></a>Beispiel für benutzerdefinierte Kompensationslogik
 In diesem Beispiel wird gezeigt, wie <xref:System.Activities.Statements.CompensableActivity> und der zugehörige Kompensierungshandler zur Definition benutzerdefinierter Kompensierungslogik verwendet werden. Das Szenario in diesem Beispiel ist eine LKW-Vermietung.  

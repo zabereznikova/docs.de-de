@@ -2,18 +2,18 @@
 title: Permanenter Duplex
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 107c617fa4a8ee0279dcaa07e495587c617b866e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809426"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513352"
 ---
 # <a name="durable-duplex"></a>Permanenter Duplex
-Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter duplexnachrichtenaustausch mithilfe der messagingaktivitäten in Windows Workflow Foundation (WF). Ein permanenter Duplexnachrichtenaustausch ist ein bidirektionaler Nachrichtenaustausch, der im Verlauf eines langen Zeitraums stattfindet. Die Lebensdauer des Nachrichtenaustauschs ist möglicherweise länger als die Lebensdauer des Kommunikationskanals und die Lebensdauer der Dienstinstanzen im Arbeitsspeicher.  
+Dieses Beispiel veranschaulicht das Einrichten und Konfigurieren von permanenter duplexnachrichtenaustausch mithilfe der messagingaktivitäten in Windows Workflow Foundation (WF). Ein permanenter Duplexnachrichtenaustausch ist ein bidirektionaler Nachrichtenaustausch, der im Verlauf eines langen Zeitraums stattfindet. Die Lebensdauer des Nachrichtenaustauschs ist möglicherweise länger als die Lebensdauer des Kommunikationskanals und die Lebensdauer der Dienstinstanzen im Arbeitsspeicher.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- In diesem Beispiel sind zwei Windows Communication Foundation (WCF)-Dienste, die mithilfe von Windows Workflow Foundation implementiert haben einen permanenten duplexnachrichtenaustausch konfiguriert. Der permanente duplexnachrichtenaustausch besteht aus zwei unidirektionalen Nachrichten über MSMQ gesendet und eine Korrelation zwischen verwenden [.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059). Die Nachrichten werden mit den Messagingaktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> gesendet. Der .NET-Kontextaustausch wird verwendet, um die Rückrufadresse in den gesendeten Nachrichten anzugeben. Beide Dienste werden mit WAS (Windows Process Activation Services) gehostet und sind konfiguriert, um Persistenz der Dienstinstanzen zu ermöglichen.  
+ In diesem Beispiel werden zwei Windows Communication Foundation (WCF)-Dienste, die mithilfe von Windows Workflow Foundation implementiert einen permanenten duplexnachrichtenaustausch konfiguriert. Der permanente duplexnachrichtenaustausch besteht aus zwei unidirektionalen Nachrichten über MSMQ gesendet und korreliert mit [.NET Context Exchange](https://go.microsoft.com/fwlink/?LinkID=166059). Die Nachrichten werden mit den Messagingaktivitäten <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.Receive> gesendet. Der .NET-Kontextaustausch wird verwendet, um die Rückrufadresse in den gesendeten Nachrichten anzugeben. Beide Dienste werden mit WAS (Windows Process Activation Services) gehostet und sind konfiguriert, um Persistenz der Dienstinstanzen zu ermöglichen.  
   
  Der erste Dienst (Service1.xamlx) sendet eine Anforderung an den zweiten Dienst (Service2.xamlx), einige Arbeiten zu erledigen. Sobald die Arbeit abgeschlossen ist, sendet Service2.xamlx eine Benachrichtigung an Service1.xamlx zurück, um anzugeben, dass die Arbeit abgeschlossen ist. Eine Konsolenanwendung für Workflows richtet die Warteschlangen ein, die die Dienste überwachen, und sendet die ursprüngliche Startnachricht, um Service1.xamlx zu aktivieren. Sobald Service1.xamlx die Benachrichtigung von Service2.xamlx empfangen hat, dass die angeforderte Arbeit abgeschlossen ist, speichert Service1.xamlx das Ergebnis in einer XML-Datei. Während des Wartens auf die Rückrufmeldung behält Service1.xamlx den Instanzzustand mit dem standardmäßigen <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> bei. Service2.xamlx behält den Instanzzustand als Teil des Abschlusses der von Service1.xamlx angeforderten Arbeit bei.  
   
@@ -42,7 +42,7 @@ Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter dup
 >  Die von diesem Beispiel verwendete Bindung ist nicht sicher. Wenn Sie die Anwendung bereitstellen, sollten Sie die Bindung auf Grundlage der Sicherheitsanforderungen der Anwendung konfigurieren.  
   
 > [!NOTE]
->  Die in diesem Beispiel verwendeten Warteschlangen sind nicht transaktionsgebunden. Ein Beispiel, das zeigt, wie WCF-Nachrichtenaustausch, die mithilfe von Warteschlangen Transaktion eingerichtet werden, finden Sie unter der [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md) Beispiel.  
+>  Die in diesem Beispiel verwendeten Warteschlangen sind nicht transaktionsgebunden. Ein Beispiel, das zeigt, wie WCF-Nachrichtenaustausch mit Transaktionswarteschlangen eingerichtet wird, finden Sie unter den [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md) Beispiel.  
   
  Die von Service1.xamlx an Service2.xamlx gesendete Nachricht wird mit einem Clientendpunkt gesendet, der mit der Adresse von Service2.xamlx und der benutzerdefinierten Bindung, die zuvor definiert wurden, konfiguriert ist. Der Rückruf von Service2.xamlx an Service1.xamlx wird mit einem Clientendpunkt ohne explizit konfigurierte Adresse gesendet, da die Adresse dem Rückrufkontext entnommen wird, der von Service1.xamlx gesendet wurde. Im folgenden Codebeispiel werden die Clientendpunkte definiert.  
   
@@ -120,7 +120,7 @@ Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter dup
         aspnet_regiis -i  
         ```  
   
-    2.  Führen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] mit Administratorberechtigungen durch Rechtsklicken auf [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] auswählen und **als Administrator ausführen**.  
+    2.  Führen Sie [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] mit Administratorberechtigungen, indem Sie mit der rechten Maustaste [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] und **als Administrator ausführen**.  
   
     3.  Öffnen Sie mit [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die Datei "DurableDuplex.sln".  
   
@@ -128,19 +128,19 @@ Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter dup
   
     1.  Um den DurableDuplex-Client auszuführen, drücken Sie F5.  
   
-    2.  Öffnen der **Computerverwaltung** Konsole Treiberdienst `Compmgmt.msc` über eine Eingabeaufforderung.  
+    2.  Öffnen der **Computerverwaltung** Verwaltungskonsole, indem Sie Ausführung `Compmgmt.msc` über eine Eingabeaufforderung.  
   
     3.  Erweitern Sie **Dienste und Anwendungen**, **Message Queuing-**. **Private Warteschlangen**.  
   
     4.  Mit der rechten Maustaste in der Warteschlangen durableduplex/service1.xamlx und durableduplex/Service2.xamlx, und wählen Sie **Eigenschaften**.  
   
-    5.  Wählen Sie die **Sicherheit** Registerkarte und ermöglichen **"Jeder" Nachricht empfangen**, **Peek Message** und **Send Message** Berechtigungen für beide Warteschlangen.  
+    5.  Wählen Sie die **Sicherheit** Registerkarte und ermöglichen **jeder Nachricht empfangen**, **Nachricht einsehen** und **Send Message** Berechtigungen für beide Warteschlangen.  
   
     6.  Öffnen Sie den IIS-Manager (Internet Information Services, Internetinformationsdienste).  
   
-    7.  Navigieren Sie zu **Server**, **Sites**, **Standardwebsite**, **private**, **permanenter Duplex** , und wählen Sie **Erweiterte Optionen**.  
+    7.  Navigieren Sie zu **Server**, **Websites**, **Standardwebsite**, **private**, **permanenter Duplex** , und wählen Sie **Erweiterte Optionen**.  
   
-    8.  Ändern der **aktivierte Protokolle** auf **HTTP, NET.MSMQ**.  
+    8.  Ändern der **aktivierte Protokolle** zu **HTTP, NET.MSMQ**.  
   
 4.  Führen Sie das Beispiel aus.  
   
@@ -160,13 +160,13 @@ Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter dup
   
 2.  Entfernen Sie die virtuelle Anwendung für die Dienste.  
   
-    1.  Öffnen Sie den Internetinformationsdienste (Internet Information Services, IIS) Manager durch Ausführen von `Inetmgr.exe` über eine Eingabeaufforderung.  
+    1.  Öffnen Sie Internet Information Services (IIS) Manager mit `Inetmgr.exe` über eine Eingabeaufforderung.  
   
     2.  Navigieren Sie zu der Standardwebsite, und entfernen Sie die **private** virtuelles Verzeichnis.  
   
 3.  Entfernen Sie die Warteschlangeneinrichtung für dieses Beispiel.  
   
-    1.  Öffnen Sie die Computerverwaltungskonsole Treiberdienst `Compmgmt.msc` über eine Eingabeaufforderung.  
+    1.  Öffnen Sie die Konsole Computerverwaltung mit `Compmgmt.msc` über eine Eingabeaufforderung.  
   
     2.  Erweitern Sie **Dienste und Anwendungen**, **Message Queuing-**, **Private Warteschlangen**.  
   
@@ -179,6 +179,6 @@ Dieses Beispiel veranschaulicht das Einrichten und konfigurieren permanenter dup
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

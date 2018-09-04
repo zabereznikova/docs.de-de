@@ -5,11 +5,11 @@ ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7de6670043e6ff8862d611e987ef7b4191b3ba8d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397812"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508676"
 ---
 # <a name="message-security-sample"></a>Beispiel für Nachrichtensicherheit
 In diesem Beispiel wird veranschaulicht, wie eine Anwendung implementiert wird, die `basicHttpBinding` und Nachrichtensicherheit verwendet. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert.  

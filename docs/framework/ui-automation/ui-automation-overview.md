@@ -9,23 +9,23 @@ ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b4752bf8f5fb75115618f95c4dab8b1359a1eb5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40656fb2617b4863994c1dafd8f0f4b3c46ef427
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409481"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502270"
 ---
 # <a name="ui-automation-overview"></a>Übersicht über die Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Barrierefreiheit-Framework für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]. Es ist für alle Betriebssysteme verfügbar, die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]unterstützen.  
   
  Die[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] stellt programmgesteuerten Zugriff auf die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] auf dem Desktop zur Verfügung, sodass Hilfstechnologieprodukte, z. B. die Bildschirmsprachausgabe, Informationen über die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] für die Endbenutzer bereitstellen und die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] mit anderen Verfahren als Standardeingaben ändern können. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht außerdem die Interaktion von automatisierten Testskripts mit der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht keine Kommunikation zwischen Prozessen, die von anderen Benutzern durch gestartet der **ausführende** Befehl.  
+>  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht keine Kommunikation zwischen Prozessen, gestartet, die von anderen Benutzern durch die **ausführende** Befehl.  
   
  Benutzeroberflächenautomatisierungs-Clientanwendungen können mit der Gewissheit geschrieben werden, dass sie mit verschiedenen Frameworks funktionieren. Der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kern maskiert alle Unterschiede in den Frameworks, die den verschiedenen Komponenten von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]zugrunde liegen. Beispielsweise sind die `Content` -Eigenschaft einer [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Schaltfläche, die `Caption` -Eigenschaft einer [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] -Schaltfläche und die `ALT` -Eigenschaft eines HTML-Bildes alle nur einer einzelnen Eigenschaft, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ansicht zugewiesen.  
   

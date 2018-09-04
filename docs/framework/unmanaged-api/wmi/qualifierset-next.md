@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405526"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507692"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next-Funktion
-Ruft ab, der nächsten Qualifizierer in einer Enumeration, die durch einen Aufruf gestartet hat die [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) Funktion.   
+Ruft den nächsten Qualifizierer in einer Enumeration ab, die durch einen Aufruf der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)-Funktion gestartet wurde.   
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
 ms.openlocfilehash: 1bbc155e1c77c3512455816d2b66e7d4b55e57b7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387211"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508172"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>"DbConnection", "DbCommand" und "DbException"
 Wenn Sie eine <xref:System.Data.Common.DbProviderFactory> und eine <xref:System.Data.Common.DbConnection> erstellt haben, können Sie mithilfe von Befehlen und Datenlesern Daten aus der Datenquelle abrufen.  

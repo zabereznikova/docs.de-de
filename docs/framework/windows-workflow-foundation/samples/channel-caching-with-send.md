@@ -3,11 +3,11 @@ title: Zwischenspeichern von Channels mit Send
 ms.date: 03/30/2017
 ms.assetid: e69a2502-25cb-43bf-b8d2-95fbdecb41cb
 ms.openlocfilehash: 619088def1f5e443a31244516655d75d1e25c9cb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503814"
 ---
 # <a name="channel-caching-with-send"></a>Zwischenspeichern von Channels mit Send
 Der <xref:System.ServiceModel.Activities.SendMessageChannelCache> ermöglicht unterschiedliche Ebenen des Zwischenspeicherns von Channels mit der <xref:System.ServiceModel.Activities.Send>-Aktivität und der <xref:System.ServiceModel.Activities.SendParametersContent>-Aktivität für Benutzer. Das Zwischenspeichern auf Instanzebene ist standardmäßig aktiviert, und in diesem Beispiel werden die folgenden Funktionen veranschaulicht:  

@@ -3,11 +3,11 @@ title: Abfragen von DataSets (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
 ms.openlocfilehash: 5ecf85a73cd38fc1fa575bd591618e5273b390e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422441"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510141"
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>Abfragen von DataSets (LINQ to DataSet)
 Nachdem ein <xref:System.Data.DataSet>-Objekt mit Daten aufgefüllt wurde, können Sie anfangen, es abzufragen. Das Formulieren von Abfragen mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ähnelt der Verwendung von [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] zur Abfrage anderer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-fähiger Datenquellen. Beachten Sie, allerdings, dass bei Verwendung von [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfragen eine <xref:System.Data.DataSet> Objekt, die Sie eine Enumeration von Abfragen <xref:System.Data.DataRow> Objekte statt einer Enumeration eines benutzerdefinierten Typs. Dies bedeutet, dass Sie jedes der Elemente verwenden können die <xref:System.Data.DataRow> -Klasse in Ihrem [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfragen. Auf diese Weise lassen sich umfangreiche und komplexe Abfragen erstellen.  

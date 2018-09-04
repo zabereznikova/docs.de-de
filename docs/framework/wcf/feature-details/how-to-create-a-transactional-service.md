@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines Transaktionsdiensts'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: d59c0b96b766f0692c7b84a02deed55e32dc655a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bba3a1f9c1d08e882cd5e4117c97f9f84d0c2be8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494978"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509866"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Vorgehensweise: Erstellen eines Transaktionsdiensts
 In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiensts und die Nutzung einer von einem Client initiierten Transaktion für die Koordinierung von Dienstvorgängen veranschaulicht.  
@@ -65,7 +65,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
     }  
     ```  
   
-3.  Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. Weitere Informationen finden Sie unter [ServiceModel-Transaktionskonfiguration](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. Die [ \<Endpunkt >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element enthält eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `transactionalOleTransactionsTcpBinding`, wie in der folgenden Beispielkonfiguration gezeigt.  
+3.  Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. Weitere Informationen finden Sie unter [ServiceModel-Transaktionskonfiguration](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. Die [ \<Endpunkt >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element enthält eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `transactionalOleTransactionsTcpBinding`, wie in der folgenden Beispielkonfiguration gezeigt.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -91,7 +91,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Unterstützung mehrerer Transaktionsprotokolle  
   
-1.  Für eine optimale Leistung sollten Sie das OleTransactions-Protokoll für Szenarien im Zusammenhang mit Client und Dienst mithilfe von Windows Communication Foundation (WCF) beschrieben verwenden. Allerdings ist das WS-AtomicTransaction (WS-AT)-Protokoll für Szenarien nützlich, bei denen Interoperabilität mit Protokollstapeln eines Drittanbieters erforderlich ist. Sie können konfigurieren, dass WCF-Diensten für beide Protokolle zu unterstützen, indem Sie mehrere Endpunkte mit den entsprechenden protokollspezifischen Bindungen bereitstellen, wie in der folgenden Beispielkonfiguration gezeigt.  
+1.  Um eine optimale Leistung sollten Sie für Szenarien im Zusammenhang mit Client und Dienst mithilfe von Windows Communication Foundation (WCF) geschrieben das OleTransactions-Protokoll verwenden. Allerdings ist das WS-AtomicTransaction (WS-AT)-Protokoll für Szenarien nützlich, bei denen Interoperabilität mit Protokollstapeln eines Drittanbieters erforderlich ist. Sie können WCF-Diensten für beide Protokolle unterstützen, indem mehrere Endpunkte mit entsprechenden protokollspezifischen Bindungen bereitstellen, wie in der folgenden Beispielkonfiguration gezeigt konfigurieren.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -182,7 +182,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Kontrolle der Lebensdauer einer Transaktionsdienstinstanz  
   
-1.  WCF verwendet die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> Eigenschaft, um anzugeben, ob die zugrunde liegende Dienstinstanz beim Abschluss einer Transaktion freigegeben wird. Da hier der Standardwert `true`, sofern nicht anders, WCF-Verhalten auch ein effizientes und vorhersehbares "just-in-Time" konfiguriert. Aufrufe an einen Dienst bei einer nachfolgenden Transaktion erhalten ohne Auswirkung des Status der vorherigen Transaktion garantiert eine neue Dienstinstanz. Obwohl dies oft nützlich sein kann, möchten Sie eventuell den Status innerhalb der Dienstinstanz bis über den Transaktionsabschluss hinaus beibehalten. Beispielsweise könnte dies der Fall sein, wenn erforderliche Status oder Handle zu Ressourcen in der Anschaffung oder Wiederherstellung teuer sind. Sie können dies vornehmen, indem Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>-Eigenschaft auf `false` festlegen. Mit dieser Einstellung stehen die Instanz und alle zugehörigen Status bei folgenden Aufrufen zur Verfügung. Achten Sie hierbei insbesondere darauf, wann und wie der Zustand und die Transaktion gelöscht und abgeschlossen werden. Das folgende Beispiel veranschaulicht die Vorgehensweise, indem die Instanz mit der `runningTotal`-Variablen beibehalten wird.  
+1.  WCF verwendet die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> Eigenschaft, um anzugeben, ob die zugrunde liegende Dienstinstanz beim Abschluss einer Transaktion freigegeben wird. Da hier der Standardwert `true`, sofern nicht anders, Anhänge ein effizientes und vorhersehbares "just-in-Time" WCF-Verhalten konfiguriert. Aufrufe an einen Dienst bei einer nachfolgenden Transaktion erhalten ohne Auswirkung des Status der vorherigen Transaktion garantiert eine neue Dienstinstanz. Obwohl dies oft nützlich sein kann, möchten Sie eventuell den Status innerhalb der Dienstinstanz bis über den Transaktionsabschluss hinaus beibehalten. Beispielsweise könnte dies der Fall sein, wenn erforderliche Status oder Handle zu Ressourcen in der Anschaffung oder Wiederherstellung teuer sind. Sie können dies vornehmen, indem Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>-Eigenschaft auf `false` festlegen. Mit dieser Einstellung stehen die Instanz und alle zugehörigen Status bei folgenden Aufrufen zur Verfügung. Achten Sie hierbei insbesondere darauf, wann und wie der Zustand und die Transaktion gelöscht und abgeschlossen werden. Das folgende Beispiel veranschaulicht die Vorgehensweise, indem die Instanz mit der `runningTotal`-Variablen beibehalten wird.  
   
     ```  
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  

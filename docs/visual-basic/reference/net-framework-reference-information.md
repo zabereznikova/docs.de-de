@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 8a949fa6554316ebd2b4abd90e512f4a8496f874
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 7e1370ad27072bcbdd4b80125f94a0cc0aaac8f9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244477"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511076"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework-Referenzinformationen (Visual Basic)
 Dieses Thema enthält Links zu Informationen über das Arbeiten mit der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Klassenbibliothek.  
@@ -29,7 +29,7 @@ Dieses Thema enthält Links zu Informationen über das Arbeiten mit der [!INCLUD
  [Extras](../../framework/tools/index.md)  
  Beschreibt die Tools, die Sie zum Entwickeln, konfigurieren und Bereitstellen von Anwendungen mithilfe von .NET Framework-Technologien verwenden können.  
   
- [.NET Framework-Beispiele](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ [.NET Framework-Beispiele](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Enthält Links zu Beispielanwendungen, die zur Veranschaulichung von .NET Framework-Technologien.  
   
  [.NET API-Browser](../../../api/index.md)  

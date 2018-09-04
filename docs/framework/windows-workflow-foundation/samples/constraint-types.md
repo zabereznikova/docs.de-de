@@ -3,11 +3,11 @@ title: Einschränkungstypen
 ms.date: 03/30/2017
 ms.assetid: b6b246e6-1130-4698-9625-c5c42abcbfed
 ms.openlocfilehash: 202a2c7b3a3fc400552e42c8606457964af66af2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401531"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506611"
 ---
 # <a name="constraint-types"></a>Einschränkungstypen
 In diesem Beispiel werden zwei verschiedene Möglichkeiten zum Anwenden von Einschränkungen auf einen Workflow veranschaulicht. Eine Möglichkeit besteht darin, dies innerhalb der Aktivität auszuführen (Build), die andere Möglichkeit besteht darin, dies außerhalb der Aktivität auszuführen (Richtlinie). In diesem Szenario möchte ein Aktivitätsautor (von einem Drittanbieter-Softwareunternehmen) die Beziehung zwischen zwei Argumenten überprüfen. In diesem Fall sollten die Kosten kleiner oder gleich dem Preis sein. Dies ist eine allgemeine Validierungsbuildeinschränkung.  
