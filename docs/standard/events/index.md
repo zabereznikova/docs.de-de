@@ -13,11 +13,11 @@ ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43452741"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538707"
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
 Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell folgt dem Beobachter-Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann. Von einem Ereignissender wird eine Benachrichtigung erstellt, die angibt, dass ein Ereignis aufgetreten ist. Diese Benachrichtigung wird dann vom Ereignisempfänger empfangen, und eine Antwort wird definiert. In diesem Artikel werden die Hauptkomponenten des Delegatmodells, das Verwenden von Ereignissen in Anwendungen und das Implementieren von Ereignissen im Code beschrieben.  

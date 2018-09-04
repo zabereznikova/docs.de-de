@@ -10,12 +10,12 @@ ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: efecd4f2858843a2401e3d69538d87f92475b816
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4ed8fa218e97f4a6b06bd1c8a06d9b300b16119
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397896"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557178"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
@@ -142,5 +142,5 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Netzwerkbeispiele für .NET in der MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
- [HttpClient Sample (HttpClient-Beispiel)](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [Netzwerkbeispiele für .NET in der MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
+ [HttpClient Sample (HttpClient-Beispiel)](https://go.microsoft.com/fwlink/?LinkId=242550)

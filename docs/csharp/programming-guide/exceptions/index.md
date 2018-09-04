@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: de396ca4da2e115d221036d3ec49fb7b43d3d21d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9e92c253aa1981065274dc3413f9b8888b5f8849
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244266"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500662"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Ausnahmen und Ausnahmebehandlung (C#-Programmierhandbuch)
 Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder außergewöhnliche Situationen zu verarbeiten, die beim Ausführen von Programmen auftreten können. Die Ausnahmebehandlung verwendet die Schlüsselwörter `try`, `catch` und `finally`, um Aktionen zu testen, die möglicherweise nicht erfolgreich sind, um Fehler zu behandeln, wenn Sie entscheiden, dass dies vernünftig ist, und um später Ressourcen zu bereinigen. Ausnahmen können von der Common Language Runtime (CLR), vom .NET Framework bzw. anderen Drittanbieterbibliotheken oder vom Anwendungscode generiert werden. Ausnahmen werden mit dem Schlüsselwort `throw` erstellt.  
@@ -63,12 +63,13 @@ Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder au
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.SystemException>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [throw](../../../csharp/language-reference/keywords/throw.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
- [Ausnahmen](../../../standard/exceptions/index.md)  
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.SystemException>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [throw](../../../csharp/language-reference/keywords/throw.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+- [Ausnahmen](../../../standard/exceptions/index.md)  

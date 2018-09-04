@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 60e4c6e98ca9e71d1a095a0c7ee1df6be6d13f4b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0e678f6577c07e4d56c485e0fd104397eddbd079
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934872"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517454"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 Namespaces werden beim Programmieren mit C# häufig und auf zwei verschiedene Arten verwendet. Erstens: Das .NET Framework verwendet Namespaces, um seine vielen Klassen folgendermaßen zu organisieren:  
@@ -52,9 +52,10 @@ Namespaces werden beim Programmieren mit C# häufig und auf zwei verschiedene Ar
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [using-Direktive](../../../csharp/language-reference/keywords/using-directive.md)  
- [::-Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
- [ Operator](../../../csharp/language-reference/operators/member-access-operator.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [using-Direktive](../../../csharp/language-reference/keywords/using-directive.md)  
+- [::-Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [ Operator](../../../csharp/language-reference/operators/member-access-operator.md)

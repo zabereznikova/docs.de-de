@@ -2,12 +2,12 @@
 title: Ausdrucksbaumstrukturen (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 14ca5394a21b8dddb6c4431e6cabbf44a2f9add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326497"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526864"
 ---
 # <a name="expression-trees-c"></a>Ausdrucksbaumstrukturen (C#)
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
@@ -147,10 +147,11 @@ Console.WriteLine(expr.Compile()(4));
   
  Weitere Informationen finden Sie unter [How to: Execute Expression Trees (C#) (Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#))](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Expressions>  
- [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [How to: Modify Expression Trees (C#) (Vorgehensweise: Bearbeiten von Ausdrucksbaumstrukturen (C#))](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
- [Lambda-Ausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Übersicht über die Dynamic Language Runtime](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- [Programmierkonzepte (C#)](../../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Linq.Expressions>  
+- [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [How to: Modify Expression Trees (C#) (Vorgehensweise: Bearbeiten von Ausdrucksbaumstrukturen (C#))](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+- [Lambda-Ausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Übersicht über die Dynamic Language Runtime](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- [Programmierkonzepte (C#)](../../../../csharp/programming-guide/concepts/index.md)

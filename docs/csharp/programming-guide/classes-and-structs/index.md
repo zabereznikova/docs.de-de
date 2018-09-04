@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8860b519ece14a13e2a3350d299aa67598eadcc2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419575"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513984"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klassen und Strukturen (C#-Programmierhandbuch)
 Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Typsystems in .NET Framework. Bei beiden handelt es sich um eine Datenstruktur, die einen als logische Einheit zusammengehörenden Satz von Daten und Verhalten kapselt. Die Daten und die Verhalten sind die *Member* der Klasse oder Struktur. Diese enthalten deren Methoden, Eigenschaften, Ereignisse usw., die weiter unten in diesem Thema aufgeführt werden.  
@@ -101,5 +101,6 @@ Klassen und Strukturen sind zwei der grundlegenden Konstrukte des allgemeinen Ty
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)

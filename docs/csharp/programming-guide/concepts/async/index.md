@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung mit „async“ und „await“ (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: f38247969260fecd2fe527efb1ddb0c097fa2a47
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390232"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529162"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Asynchrone Programmierung mit Async und Await (C#)
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.  
@@ -251,7 +251,7 @@ Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden
 |[Videos zur asynchronen Programmierung auf Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Stellt Links zu einer Vielzahl von Videos über die asynchrone Programmierung bereit.||  
   
 ##  <a name="BKMK_CompleteExample"></a> Vollständiges Beispiel  
- Beim folgenden Code handelt es sich um die Datei „MainWindow.xaml.cs“ aus der WPF-Anwendung (Windows Presentation Foundation), die in diesem Thema erläutert wird. Sie können das Beispiel in dem [Thema mit einem Beispiel aus der asynchronen Programmierung mit „Async“ und „Await“](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) herunterladen.  
+ Beim folgenden Code handelt es sich um die Datei „MainWindow.xaml.cs“ aus der WPF-Anwendung (Windows Presentation Foundation), die in diesem Thema erläutert wird. Sie können das Beispiel unter [Async Sample: Example from "Asynchronous Programming with Async and Await"](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c) (Beispiel aus der asynchronen Programmierung mit „Async“ und „Await“) herunterladen.  
   
 ```csharp  
 using System;  
@@ -333,8 +333,9 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)  
- [Asynchrone Programmierung](../../../../csharp/async.md)  
- [Async (Übersicht)](../../../../standard/async.md)  
+## <a name="see-also"></a>Siehe auch
+
+- [async](../../../../csharp/language-reference/keywords/async.md)  
+- [await](../../../../csharp/language-reference/keywords/await.md)  
+- [Asynchrone Programmierung](../../../../csharp/async.md)  
+- [Async (Übersicht)](../../../../standard/async.md)  

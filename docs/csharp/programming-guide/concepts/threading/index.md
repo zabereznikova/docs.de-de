@@ -3,11 +3,11 @@ title: Threading (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
 ms.openlocfilehash: ca5b2b2d38e72d3511a570c22a153e792a27a04a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456914"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507788"
 ---
 # <a name="threading-c"></a>Threading (C#)
 Mit Threading kann Ihr C#-Programm parallele Verarbeitungsaufgaben durchführen, damit Sie mehr als einen Vorgang gleichzeitig durchführen können. Sie können z.B. Threading verwenden, um Benutzereingaben zu überwachen, Aufgaben im Hintergrund auszuführen und parallele Eingabestreams zu behandeln.  

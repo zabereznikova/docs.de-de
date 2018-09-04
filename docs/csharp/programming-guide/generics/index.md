@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 8f412366072c81b8aaca94829e0aa214f356200d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 638612a0ece8e701b088c97e5dfc49362e6d6419
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333813"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506080"
 ---
 # <a name="generics-c-programming-guide"></a>Generika (C#-Programmierhandbuch)
 Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (CLR) hinzugefügt. Generika führen in .NET Framework das Konzept der Typparameter ein, wodurch Sie Klassen und Methoden entwerfen können, die die Spezialisierung einer oder mehr Typen verzögern können, bis die Klasse oder Methode vom Clientcode deklariert und instanziiert wird. Indem Sie z.B. einen generischen Parameter „T“ verwenden, können Sie eine einzelne Klasse schreiben, die anderer Clientcode verwenden kann, ohne die Kosten und Risiken von Umwandlungen zur Laufzeit oder Boxingvorgängen einzugehen, wie folgendermaßen gezeigt wird:  
@@ -59,10 +59,11 @@ Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  Weitere Informationen erhalten Sie unter [C#-Sprachspezifikation](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Typen](../../../csharp/programming-guide/types/index.md)  
- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
- [Generika in .NET](../../../standard/generics/index.md)  
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Typen](../../../csharp/programming-guide/types/index.md)  
+- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
+- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
+- [Generika in .NET](../../../standard/generics/index.md)  

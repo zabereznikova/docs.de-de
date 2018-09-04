@@ -5,14 +5,15 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e01b9463eca88858633b847be256ae5b063459b2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1469336bf034fd22c9d7355b2f8dd8be32721fdf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936010"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510637"
 ---
 # <a name="arrays-c-programming-guide"></a>Arrays (C#-Programmierhandbuch)
+
 Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur speichern. Ein Array wird deklariert, indem der Typ seiner Elemente angegeben wird.  
   
  `type[] arrayName;`  
@@ -21,7 +22,8 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
   
  [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="array-overview"></a>Übersicht über Arrays  
+## <a name="array-overview"></a>Übersicht über Arrays
+
  Ein Array verfügt über die folgenden Eigenschaften:  
   
 -   Ein Array kann [eindimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [mehrdimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) oder [verzweigt](../../../csharp/programming-guide/arrays/jagged-arrays.md) sein.  
@@ -48,10 +50,12 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
   
 -   [Übergeben von Arrays mithilfe von "ref" und "out"](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Sammlungen](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [Array-Auflistungstyp](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Sammlungen](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+- [Array-Auflistungstyp](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

@@ -13,11 +13,11 @@ ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394333"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556934"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
