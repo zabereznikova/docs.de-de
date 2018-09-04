@@ -5,19 +5,19 @@ ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: c084c9e393728c2f4c2889339dbc36517c058d24
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456515"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525334"
 ---
-# <a name="message-security-with-issued-tokens"></a><span data-ttu-id="e892c-102">Nachrichtensicherheit durch ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="e892c-102">Message Security with Issued Tokens</span></span>
-<span data-ttu-id="e892c-103">Client für ausgestellte token ermöglicht das Verbundsicherheitsszenario in Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e892c-103">The issued token client enables the federated security scenario in Windows Communication Foundation (WCF).</span></span>  
+# <a name="message-security-with-issued-tokens"></a><span data-ttu-id="9824e-102">Nachrichtensicherheit durch ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="9824e-102">Message Security with Issued Tokens</span></span>
+<span data-ttu-id="9824e-103">Client für ausgestellte token ermöglicht das Verbundsicherheitsszenario in Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="9824e-103">The issued token client enables the federated security scenario in Windows Communication Foundation (WCF).</span></span>  
   
- <span data-ttu-id="e892c-104">Die Verbundsicherheit fördert die Vertrauenswürdigkeit zwischen unabhängigen Domänen.</span><span class="sxs-lookup"><span data-stu-id="e892c-104">Federated security enables the establishment of trust between independent domains.</span></span> <span data-ttu-id="e892c-105">Jede Domäne zentralisiert die Authentifizierung und Autorisierung in einem Sicherheitstokendienst.</span><span class="sxs-lookup"><span data-stu-id="e892c-105">Each domain centralizes authentication and authorization in a security token service.</span></span> <span data-ttu-id="e892c-106">Wenn zwischen zwei Diensten Vertrauen hergestellt wurde, können Member jeder Domäne die Dienste der anderen verwenden.</span><span class="sxs-lookup"><span data-stu-id="e892c-106">When trust is established between two such services, members of each domain can use the services of the other.</span></span>  
+ <span data-ttu-id="9824e-104">Die Verbundsicherheit fördert die Vertrauenswürdigkeit zwischen unabhängigen Domänen.</span><span class="sxs-lookup"><span data-stu-id="9824e-104">Federated security enables the establishment of trust between independent domains.</span></span> <span data-ttu-id="9824e-105">Jede Domäne zentralisiert die Authentifizierung und Autorisierung in einem Sicherheitstokendienst.</span><span class="sxs-lookup"><span data-stu-id="9824e-105">Each domain centralizes authentication and authorization in a security token service.</span></span> <span data-ttu-id="9824e-106">Wenn zwischen zwei Diensten Vertrauen hergestellt wurde, können Member jeder Domäne die Dienste der anderen verwenden.</span><span class="sxs-lookup"><span data-stu-id="9824e-106">When trust is established between two such services, members of each domain can use the services of the other.</span></span>  
   
- <span data-ttu-id="e892c-107">Eine ausführliche Erläuterung zum Verbundszenario finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span><span class="sxs-lookup"><span data-stu-id="e892c-107">For a detailed explanation about the federated scenario, see [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>  
+ <span data-ttu-id="9824e-107">Eine ausführliche Erläuterung zum Verbundszenario finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span><span class="sxs-lookup"><span data-stu-id="9824e-107">For a detailed explanation about the federated scenario, see [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e892c-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e892c-108">See Also</span></span>  
- [<span data-ttu-id="e892c-109">Verbund und ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="e892c-109">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [<span data-ttu-id="e892c-110">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="e892c-110">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="9824e-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9824e-108">See Also</span></span>  
+ [<span data-ttu-id="9824e-109">Verbund und ausgestellte Token</span><span class="sxs-lookup"><span data-stu-id="9824e-109">Federation and Issued Tokens</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [<span data-ttu-id="9824e-110">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="9824e-110">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
