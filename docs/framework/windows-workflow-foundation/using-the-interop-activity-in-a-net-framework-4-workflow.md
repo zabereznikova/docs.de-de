@@ -2,41 +2,41 @@
 title: Verwenden der Interop-Aktivität in einem .NET Framework 4-Workflow
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-ms.openlocfilehash: 64e8aef01aefa23dc98b42ab835de097d6c222df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520226"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466724"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Verwenden der Interop-Aktivität in einem .NET Framework 4-Workflow
 Mit [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] oder [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] erstellte Aktivitäten können in einem [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflow mithilfe der <xref:System.Activities.Statements.Interop>-Aktivität verwendet werden. Dieses Thema enthält eine Übersicht über die Verwendung der <xref:System.Activities.Statements.Interop>-Aktivität.  
   
 > [!NOTE]
->  Die <xref:System.Activities.Statements.Interop> Aktivität wird nicht in der Toolbox des Workflow-Designer angezeigt, es sei denn, das Projekt des Workflows dessen **Zielframework** eingestellt **.Net Framework 4** oder höher.  
+>  Die <xref:System.Activities.Statements.Interop> Aktivität wird in der Toolbox des Workflow-Designer nicht angezeigt, es sei denn, das Projekt des Workflows der seine **Zielframework** Einstellung **.Net Framework 4** oder höher.  
   
 ## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>Verwenden der Interop-Aktivität in Workflows von .NET Framework 4.5  
  In diesem Thema wird eine [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Aktivitätsbibliothek erstellt, die eine `DiscountCalculator`-Aktivität enthält. Der `DiscountCalculator` berechnet einen Rabatt auf Grundlage einer Kaufmenge. Er besteht aus einem <xref:System.Workflow.Activities.SequenceActivity>-Objekt, das ein <xref:System.Workflow.Activities.PolicyActivity>-Objekt enthält.  
   
 > [!NOTE]
->  Die in diesem Thema erstellte [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Aktivität implementiert die Logik der Aktivität mithilfe eines <xref:System.Workflow.Activities.PolicyActivity>-Objekts. Die Verwendung von Regeln in einem [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Workflow erfordert weder eine benutzerdefinierte <xref:System.Activities.Statements.Interop>-Aktivität noch die [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Aktivität. Ein Beispiel der Verwendung von Regeln in einem [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflow ohne Verwendung der <xref:System.Activities.Statements.Interop> Aktivität, finden Sie unter der [Richtlinienaktivität in .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) Beispiel.  
+>  Die in diesem Thema erstellte [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Aktivität implementiert die Logik der Aktivität mithilfe eines <xref:System.Workflow.Activities.PolicyActivity>-Objekts. Die Verwendung von Regeln in einem [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Workflow erfordert weder eine benutzerdefinierte <xref:System.Activities.Statements.Interop>-Aktivität noch die [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Aktivität. Ein Beispiel für die Verwendung von Regeln in einer [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] -Workflow ohne die <xref:System.Activities.Statements.Interop> -Aktivität, finden Sie unter den [Richtlinienaktivität in .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) Beispiel.  
   
 #### <a name="to-create-the-net-framework-35-activity-library-project"></a>So erstellen Sie das Projekt für die .NET Framework 3.5-Aktivitätsbibliothek  
   
-1.  Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] , und wählen Sie **neu** und dann **Projekt...** aus der **Datei** Menü.  
+1.  Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] , und wählen Sie **neu** und dann **Projekt...** von der **Datei** Menü.  
   
-2.  Erweitern Sie die **andere Projekttypen** Knoten in der **installierte Vorlagen** und wählen **Visual Studio-Projektmappen**.  
+2.  Erweitern Sie die **andere Projekttypen** Knoten in der **installierte Vorlagen** Bereich, und wählen Sie **Visual Studio-Projektmappen**.  
   
-3.  Wählen Sie **leere Projektmappe** aus der **Visual Studio-Projektmappen** Liste. Typ `PolicyInteropDemo` in der **Namen** Feld, und klicken Sie auf **OK**.  
+3.  Wählen Sie **leere Projektmappe** aus der **Visual Studio-Projektmappen** Liste. Typ `PolicyInteropDemo` in die **Namen** ein, und klicken Sie auf **OK**.  
   
 4.  Mit der rechten Maustaste **PolicyInteropDemo** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen** und dann **neues Projekt...** .  
   
     > [!TIP]
     >  Wenn die **Projektmappen-Explorer** Fenster ist nicht sichtbar ist, wählen **Projektmappen-Explorer** aus der **Ansicht** Menü.  
   
-5.  In der **installierte Vorlagen** Liste **Visual C#-** und dann **Workflow**. Wählen Sie **.NET Framework 3.5** aus .NET Framework Version Dropdown-Liste, und wählen Sie dann **Workflowaktivitätsbibliothek** aus der **Vorlagen** Liste.  
+5.  In der **installierte Vorlagen** Liste **Visual C#-** und dann **Workflow**. Wählen Sie **.NET Framework 3.5** aus der Dropdown-Liste von .NET Framework Version, und wählen Sie dann **Workflowaktivitätsbibliothek** aus der **Vorlagen** Liste.  
   
-6.  Typ `PolicyActivityLibrary` in der **Namen** Feld, und klicken Sie auf **OK**.  
+6.  Typ `PolicyActivityLibrary` in die **Namen** ein, und klicken Sie auf **OK**.  
   
 7.  Mit der rechten Maustaste **Activity1.cs** in **Projektmappen-Explorer** , und wählen Sie **löschen**. Klicken Sie zur Bestätigung auf **OK** .  
   
@@ -44,9 +44,9 @@ Mit [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] oder [!INCLUDE[ne
   
 1.  Mit der rechten Maustaste **PolicyActivityLibrary** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen** und dann **Aktivität...** .  
   
-2.  Wählen Sie **Aktivität (mit getrenntem Code)** aus der **Visual C#-Elemente** Liste. Typ `DiscountCalculator` in der **Namen** Feld, und klicken Sie auf **OK**.  
+2.  Wählen Sie **Aktivität (mit getrenntem Code)** aus der **Visual c#-Elemente** Liste. Typ `DiscountCalculator` in die **Namen** ein, und klicken Sie auf **OK**.  
   
-3.  Mit der rechten Maustaste **DiscountCalculator.xoml** in **Projektmappen-Explorer** , und wählen Sie **Code anzeigen**.  
+3.  Mit der rechten Maustaste **DiscountCalculator.xoml** in **Projektmappen-Explorer** , und wählen Sie **Ansichtscode**.  
   
 4.  Fügen Sie der `DiscountCalculator`-Klasse die folgenden drei Eigenschaften hinzu:  
   
@@ -59,7 +59,7 @@ Mit [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] oder [!INCLUDE[ne
     }  
     ```  
   
-5.  Mit der rechten Maustaste **DiscountCalculator.xoml** in **Projektmappen-Explorer** , und wählen Sie **Sicht-Designer**.  
+5.  Mit der rechten Maustaste **DiscountCalculator.xoml** in **Projektmappen-Explorer** , und wählen Sie **Ansicht-Designer**.  
   
 6.  Ziehen Sie eine **Richtlinie** Aktivität aus der **Windows Workflow v3. 0** Teil der **Toolbox** und legen Sie sie in der **DiscountCalculator** Aktivität .  
   
@@ -70,12 +70,12 @@ Mit [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] oder [!INCLUDE[ne
   
 1.  Klicken Sie auf die neu hinzugefügte **Richtlinie** Aktivität, um diese auszuwählen, falls er nicht bereits ausgewählt ist.  
   
-2.  Klicken Sie auf die **RuleSetReference** Eigenschaft in der **Eigenschaften** Fenster aus, um auszuwählen, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um die rechts neben der Eigenschaft.  
+2.  Klicken Sie auf die **RuleSetReference** -Eigenschaft in der **Eigenschaften** Fenster, um ihn auszuwählen, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um die rechts neben der Eigenschaft.  
   
     > [!TIP]
     >  Wenn die **Eigenschaften** nicht sichtbar ist, wählen Sie **Fenster "Eigenschaften"** aus der **Ansicht** Menü.  
   
-3.  Wählen Sie **klicken Sie auf neu...** .  
+3.  Wählen Sie **neu...** .  
   
 4.  Klicken Sie auf **Regel hinzufügen**.  
   
@@ -125,7 +125,7 @@ Mit [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] oder [!INCLUDE[ne
     this.Total = this.Subtotal  
     ```  
   
-14. Klicken Sie auf **OK** schließen die **Regelsatz-Editor** (Dialogfeld).  
+14. Klicken Sie auf **OK** schließen die **Regelsatz-Editor** Dialogfeld.  
   
 15. Sicherstellen, dass die neu erstellte <xref:System.Workflow.Activities.Rules.RuleSet> ausgewählt ist, der **Namen** aus, und klicken Sie auf **OK**.  
   
@@ -154,13 +154,13 @@ Rule3: IF this.DiscountPercent > 0
   
 1.  Mit der rechten Maustaste **PolicyInteropDemo** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, und klicken Sie dann **neues Projekt...** .  
   
-2.  Sicherstellen, dass **.NET Framework 4.5** , die in der Dropdownliste mit den .NET Framework-Version ausgewählt ist, und wählen Sie **Workflowkonsolenanwendung** aus der **Visual C#-Elemente** Liste.  
+2.  Sicherstellen, dass **.NET Framework 4.5** , die in der Dropdownliste mit den .NET Framework-Version ausgewählt ist, und wählen Sie **Konsolenanwendung für Workflows** aus der **Visual c#-Elemente** Liste.  
   
-3.  Typ `PolicyInteropHost` in der **Namen** Feld, und klicken Sie auf **OK**.  
+3.  Typ `PolicyInteropHost` in die **Namen** ein, und klicken Sie auf **OK**.  
   
 4.  Mit der rechten Maustaste **PolicyInteropHost** in **Projektmappen-Explorer** , und wählen Sie **Eigenschaften**.  
   
-5.  In der **Zielframework** Dropdown-Liste, ändern Sie die Auswahl von **.NET Framework 4 Client Profile** auf **.NET Framework 4.5**. Klicken Sie auf **Ja** zu bestätigen.  
+5.  In der **Zielframework** Dropdownliste aus, ändern Sie die Auswahl von **.NET Framework 4 Client Profile** zu **.NET Framework 4.5**. Klicken Sie auf **Ja** um zu bestätigen.  
   
 6.  Mit der rechten Maustaste **PolicyInteropHost** in **Projektmappen-Explorer** , und wählen Sie **Verweis hinzufügen...** .  
   
@@ -179,7 +179,7 @@ Rule3: IF this.DiscountPercent > 0
   
 ##### <a name="to-use-the-interop-activity-in-code"></a>So verwenden Sie die Interop-Aktivität im Code  
   
-1.  Mit der rechten Maustaste **"Program.cs"** in **Projektmappen-Explorer** , und wählen Sie **Code anzeigen**.  
+1.  Mit der rechten Maustaste **"Program.cs"** in **Projektmappen-Explorer** , und wählen Sie **Ansichtscode**.  
   
 2.  Fügen Sie am Anfang der Datei die folgende `using`-Anweisung hinzu.  
   
@@ -267,45 +267,45 @@ Rule3: IF this.DiscountPercent > 0
   
 2.  Mit der rechten Maustaste **PolicyInteropHost** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Element...** .  
   
-3.  Erweitern Sie die **Visual C#-Elemente** Knoten, und wählen **Workflow**. Wählen Sie **Aktivität** aus der **Visual C#-Elemente** Liste.  
+3.  Erweitern Sie die **Visual c#-Elemente** Knoten, und wählen **Workflow**. Wählen Sie **Aktivität** aus der **Visual c#-Elemente** Liste.  
   
-4.  Typ `DiscountWorkflow` in der **Namen** Feld, und klicken Sie auf **hinzufügen**.  
+4.  Typ `DiscountWorkflow` in die **Namen** ein, und klicken Sie auf **hinzufügen**.  
   
-5.  Klicken Sie auf die **Argumente** Schaltfläche auf die links unten im Workflow-Designer zum Anzeigen der **Argumente** Bereich.  
+5.  Klicken Sie auf die **Argumente** Schaltfläche auf der unteren linken Seite des Workflow-Designers zum Anzeigen der **Argumente** Bereich.  
   
 6.  Klicken Sie auf **Argument erstellen**.  
   
-7.  Typ `Subtotal` in der **Namen** wählen Sie im **In** aus der **Richtung** Dropdownliste, wählen **doppelte** aus der **Argumenttyp** Dropdownliste aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+7.  Typ `Subtotal` in die **Namen** wählen Sie im **In** aus der **Richtung** Dropdownliste, wählen **doppelte** aus der **Argumenttyp** Dropdownliste aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
   
     > [!NOTE]
-    >  Wenn **doppelte** befindet sich nicht in der **Argumenttyp** Dropdown-Liste **nach Typen suchen...** , Typ `System.Double` in der **Typnamen** ein, und klicken Sie auf **OK**.  
+    >  Wenn **doppelte** befindet sich nicht in der **Argumenttyp** Dropdown-Liste **nach Typen suchen...** , Typ `System.Double` in die **Typnamen** ein, und klicken Sie auf **OK**.  
   
 8.  Klicken Sie auf **Argument erstellen**.  
   
-9. Typ `DiscountPercent` in der **Namen** wählen Sie im **Out** aus der **Richtung** Dropdownliste, wählen **doppelte** aus der **Argumenttyp** Dropdownliste aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+9. Typ `DiscountPercent` in die **Namen** wählen Sie im **Out** aus der **Richtung** Dropdownliste, wählen **doppelte** aus der **Argumenttyp** Dropdownliste aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
   
 10. Klicken Sie auf **Argument erstellen**.  
   
-11. Typ `Total` in der **Namen** wählen Sie im **Out** aus der **Richtung** Dropdownliste, wählen **doppelte** aus der **Argumenttyp** Dropdownliste aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+11. Typ `Total` in die **Namen** wählen Sie im **Out** aus der **Richtung** Dropdownliste, wählen **doppelte** aus der **Argumenttyp** Dropdownliste aus, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
   
-12. Klicken Sie auf die **Argumente** Schaltfläche links unten im Workflow-Designer schließen auf die **Argumente** Bereich.  
+12. Klicken Sie auf die **Argumente** Schaltfläche auf der unteren linken Seite des Workflow-Designers zu schließen die **Argumente** Bereich.  
   
-13. Ziehen Sie eine **Sequenz** Aktivität aus der **Control Flow** Teil der **Toolbox** und legen ihn auf die Oberfläche des Workflow-Designers.  
+13. Ziehen Sie eine **Sequenz** Aktivität aus der **Ablaufsteuerung** Teil der **Toolbox** und legen Sie es auf die Oberfläche des Workflow-Designers.  
   
 14. Ziehen Sie ein **Interop** Aktivität aus der **Migration** Teil der **Toolbox** und legen Sie sie in der **Sequenz** Aktivität.  
   
-15. Klicken Sie auf die **Interop** Aktivität auf die **klicken Sie auf Durchsuchen...** beschriften, **DiscountCalculator** in der **Typnamen** ein, und klicken Sie auf **OK**.  
+15. Klicken Sie auf die **Interop** Aktivität auf die **zum Durchsuchen klicken...** beschriften, **DiscountCalculator** in die **Typnamen** ein, und klicken Sie auf **OK**.  
   
     > [!NOTE]
-    >  Wenn dem Workflow die <xref:System.Activities.Statements.Interop>-Aktivität hinzugefügt wird und der `DiscountCalculator`-Typ als <xref:System.Activities.Statements.Interop.ActivityType%2A> angegeben wird, macht die <xref:System.Activities.Statements.Interop>-Aktivität drei <xref:System.Activities.ArgumentDirection.In>-Argumente und drei <xref:System.Activities.ArgumentDirection.Out>-Argumente verfügbar. Diese stellen die drei öffentlichen Eigenschaften der `DiscountCalculator`-Aktivität dar. Die <xref:System.Activities.ArgumentDirection.In> Argumente haben den gleichen Namen wie die drei öffentlichen Eigenschaften und die drei <xref:System.Activities.ArgumentDirection.Out> -Argumente haben den gleichen Namen mit **Out** des Eigenschaftennamens angefügt. In den folgenden Schritten werden die in den vorherigen Schritten erstellten Workflowargumente an die Argumente der <xref:System.Activities.Statements.Interop>-Aktivität gebunden.  
+    >  Wenn dem Workflow die <xref:System.Activities.Statements.Interop>-Aktivität hinzugefügt wird und der `DiscountCalculator`-Typ als <xref:System.Activities.Statements.Interop.ActivityType%2A> angegeben wird, macht die <xref:System.Activities.Statements.Interop>-Aktivität drei <xref:System.Activities.ArgumentDirection.In>-Argumente und drei <xref:System.Activities.ArgumentDirection.Out>-Argumente verfügbar. Diese stellen die drei öffentlichen Eigenschaften der `DiscountCalculator`-Aktivität dar. Die <xref:System.Activities.ArgumentDirection.In> Argumente haben den gleichen Namen wie die drei öffentlichen Eigenschaften und die drei <xref:System.Activities.ArgumentDirection.Out> Argumente haben die gleichen Namen mit **Out** an den Eigenschaftennamen angefügt. In den folgenden Schritten werden die in den vorherigen Schritten erstellten Workflowargumente an die Argumente der <xref:System.Activities.Statements.Interop>-Aktivität gebunden.  
   
-16. Typ `DiscountPercent` in der **VB-Ausdruck eingeben** Feld rechts neben der **DiscountPercentOut** -Eigenschaft, und drücken Sie TAB.  
+16. Typ `DiscountPercent` in die **VB-Ausdruck eingeben** Feld rechts neben der **DiscountPercentOut** -Eigenschaft, und drücken Sie TAB.  
   
-17. Typ `Subtotal` in der **VB-Ausdruck eingeben** Feld rechts neben der **Subtotal** -Eigenschaft, und drücken Sie TAB.  
+17. Typ `Subtotal` in die **VB-Ausdruck eingeben** Feld rechts neben der **Subtotal** -Eigenschaft, und drücken Sie TAB.  
   
-18. Typ `Total` in der **VB-Ausdruck eingeben** Feld rechts neben der **TotalOut** -Eigenschaft, und drücken Sie TAB.  
+18. Typ `Total` in die **VB-Ausdruck eingeben** Feld rechts neben der **TotalOut** -Eigenschaft, und drücken Sie TAB.  
   
-19. Mit der rechten Maustaste **"Program.cs"** in **Projektmappen-Explorer** , und wählen Sie **Code anzeigen**.  
+19. Mit der rechten Maustaste **"Program.cs"** in **Projektmappen-Explorer** , und wählen Sie **Ansichtscode**.  
   
 20. Fügen Sie am Anfang der Datei die folgende `using`-Anweisung hinzu.  
   
@@ -359,11 +359,11 @@ Rule3: IF this.DiscountPercent > 0
   
 |Regelfunktionen|Dokumentation|  
 |-------------------|-------------------|  
-|Übersicht über Regeln|[Einführung in das Windows Workflow Foundation-Regelmodul](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[Verwenden von RuleSets in Workflows](http://go.microsoft.com/fwlink/?LinkId=178516) und <xref:System.Workflow.Activities.Rules.RuleSet>|  
-|Auswertung von Regeln|[Regelauswertung in RuleSets](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|Regelverkettung|[Vorwärtsverkettung Steuerelement](http://go.microsoft.com/fwlink/?LinkId=178518) und [Vorwärtsverketten von Regeln](http://go.microsoft.com/fwlink/?LinkId=178519)|  
-|Verarbeiten von Auflistungen in Regeln|[Verarbeiten von Auflistungen in Regeln](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|Verwenden der PolicyActivity|[Verwenden der PolicyActivity-Aktivität](http://go.microsoft.com/fwlink/?LinkId=178521) und <xref:System.Workflow.Activities.PolicyActivity>|  
+|Übersicht über Regeln|[Einführung in das Windows Workflow Foundation-Regelmodul](https://go.microsoft.com/fwlink/?LinkID=152836)|  
+|RuleSet|[Verwenden von RuleSets in Workflows](https://go.microsoft.com/fwlink/?LinkId=178516) und <xref:System.Workflow.Activities.Rules.RuleSet>|  
+|Auswertung von Regeln|[Regelauswertung in RuleSets](https://go.microsoft.com/fwlink/?LinkId=178517)|  
+|Regelverkettung|[Steuerelement für die Vorwärtsverkettung](https://go.microsoft.com/fwlink/?LinkId=178518) und [Vorwärtsverketten von Regeln](https://go.microsoft.com/fwlink/?LinkId=178519)|  
+|Verarbeiten von Auflistungen in Regeln|[Verarbeiten von Auflistungen in Regeln](https://go.microsoft.com/fwlink/?LinkId=178520)|  
+|Verwenden der PolicyActivity|[Verwenden der PolicyActivity-Aktivität](https://go.microsoft.com/fwlink/?LinkId=178521) und <xref:System.Workflow.Activities.PolicyActivity>|  
   
  In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] erstellte Workflows verwenden nicht alle Regelfunktionen, die von [!INCLUDE[wf1](../../../includes/wf1-md.md)] bereitgestellt werden, z. B. deklarative Aktivitätsbedingungen und Bedingungsaktivitäten wie das <xref:System.Workflow.Activities.ConditionedActivityGroup>-Objekt und das <xref:System.Workflow.Activities.ReplicatorActivity>-Objekt. Bei Bedarf ist diese Funktionalität für Workflows verfügbar, die mit [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] und [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] erstellt wurden. Weitere Informationen finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).

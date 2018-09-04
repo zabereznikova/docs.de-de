@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525083"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332018"
 ---
 # <a name="button-control-windows-forms"></a>Button-Steuerelement (Windows Forms)
 Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klicken eine Aktion auszuführen. Im `Button`-Steuerelement können sowohl Text als auch Bilder angezeigt werden. Wenn der Benutzer auf die Schaltfläche klickt, wird sie als gedrückt bzw. nicht gedrückt angezeigt.  
@@ -31,7 +31,7 @@ Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klic
  [Methoden zur Auswahl eines Button-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  Listet die Methoden zum Auswählen einer Schaltfläche auf.  
   
- Siehe auch [wie: Festlegen einer Windows Forms-Schaltfläche als die akzeptieren Schaltfläche mithilfe der Designer](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) und [wie: eine Windows Forms-Schaltfläche als die "Abbrechen"-Schaltfläche mithilfe der Designer festlegen](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ Siehe auch [wie: eine Windows Forms-Schaltfläche als die akzeptieren Schaltfläche mithilfe der Designer festlegen.](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) und [wie: eine Windows Forms-Schaltfläche als das Abbrechen Schaltfläche mithilfe der Designer festlegen.](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Button>-Klasse  
@@ -41,4 +41,4 @@ Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klic
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- Siehe auch [Benutzereingaben in Dialogfelder](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) und [wie: Schließen von Dialogfeldern und Speichern von Benutzereingaben](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ Siehe auch [Benutzereingaben in Dialogfelder](https://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) und [wie: Schließen von Dialogfeldern und Speichern von Benutzereingaben](https://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
