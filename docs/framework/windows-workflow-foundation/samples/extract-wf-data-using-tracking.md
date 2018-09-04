@@ -2,18 +2,18 @@
 title: Extrahieren von WF-Daten mithilfe der Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519872"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501582"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extrahieren von WF-Daten mithilfe der Nachverfolgung
 In diesem Beispiel wird veranschaulicht, wie die Workflownachverfolgung verwendet wird, um Workflowvariablen und Argumente aus Aktivitäten zu extrahieren. Außerdem wird auch das Hinzufügen von Bemerkungen zu Überwachungsdatensätzen sowie das Extrahieren der Datennutzlast innerhalb von benutzerdefinierten Überwachungsdatensätzen dargestellt. Im Beispiel wird der ETW-Überwachungsteilnehmer (Ereignisablaufverfolgung für Windows) zum Extrahieren von Daten aus dem Workflow verwendet.  
   
 ## <a name="sample-details"></a>Beispieldetails  
- Windows Workflow Foundation (WF) ermöglicht die nachverfolgung, um einen Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Zusammen mit den Workflowüberwachungsdatensätzen können Daten innerhalb der Workflowinstanz aus dem Workflow extrahiert werden. In der folgenden Liste sind die Typen von Daten aufgeführt, die aus Überwachungsdatensätzen extrahiert werden können:  
+ Windows Workflow Foundation (WF) bietet Überwachung, um Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Zusammen mit den Workflowüberwachungsdatensätzen können Daten innerhalb der Workflowinstanz aus dem Workflow extrahiert werden. In der folgenden Liste sind die Typen von Daten aufgeführt, die aus Überwachungsdatensätzen extrahiert werden können:  
   
 1.  Workflowvariablen in einer Aktivität und Überwachungsdatensätze während der Aktivitätsausführung.  
   
@@ -96,17 +96,17 @@ In diesem Beispiel wird veranschaulicht, wie die Workflownachverfolgung verwende
   
 6.  Starten Sie vor dem Aufrufen des Diensts die Ereignisanzeige, und stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.  
   
-7.  Aus der **starten** klicken Sie im Menü **Verwaltung** und dann **Ereignisanzeige**.  
+7.  Von der **starten** , wählen Sie im Menü **Verwaltung** und dann **Ereignisanzeige**.  
   
-8.  Wechseln Sie in der Strukturansicht in der Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, und **Microsoft**. Mit der rechten Maustaste **Microsoft** , und wählen Sie **Ansicht** und dann **anzeigen analytische und Debugprotokolle**.  
+8.  In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, und **Microsoft**. Mit der rechten Maustaste **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle**.  
   
-     Sicherstellen, dass die **anzeigen analytische und Debugprotokolle** Option aktiviert ist.  
+     Sicherstellen, dass die **analytische und Debugprotokolle** Option aktiviert ist.  
   
-9. Wechseln Sie in der Strukturansicht in der Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**.  
+9. In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**.  
   
 10. Öffnen Sie den WCF-Testclient mit [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)].  
   
-     WCF-Testclient (WcfTestClient.exe) befindet sich der \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] -Installationsordner > \Common7\IDE\-Ordner.  
+     WCF-Testclient (WcfTestClient.exe) befindet sich in der \< [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] -Installationsordner > \Common7\IDE\-Ordner.  
   
      Der standardmäßige [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Installationsordner ist "C:\Programme\Microsoft-Visual Studio 10.0".  
   
@@ -131,11 +131,11 @@ In diesem Beispiel wird veranschaulicht, wie die Workflownachverfolgung verwende
   
 1.  Öffnen Sie die Ereignisanzeige.  
   
-2.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Applications**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.  
+2.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.  
   
-3.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Applications**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.  
+3.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.  
   
-     Wählen Sie die **deaktivieren** Option aus, um die Ereignisse zu löschen.  
+     Wählen Sie die **löschen** Option aus, um die Ereignisse zu löschen.  
   
 ## <a name="known-issue"></a>Bekanntes Problem  
   
@@ -144,16 +144,16 @@ In diesem Beispiel wird veranschaulicht, wie die Workflownachverfolgung verwende
 >   
 >  `The description for Event ID <id> from source Microsoft-Windows-Application Server-Applications cannot be found. Either the component that raises this event is not installed on your local computer or the installation is corrupted. You can install or repair the component on the local computer.`  
 >   
->  Wenn dieser Fehler auftritt, klicken Sie auf **aktualisieren** klicken Sie im Bereich "Aktionen". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.  
+>  Wenn dieser Fehler auftritt, klicken Sie auf **aktualisieren** in den Bereich "Aktionen". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überwachen der AppFabric-Beispiele](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -2,12 +2,12 @@
 title: WS 2007 Federation-HTTP-Bindung
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 0fe4c0e62dbff3ae7f99f3a6dde34940abf90ae9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507080"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513061"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federation-HTTP-Bindung
 In diesem Beispiel wird die Verwendung von <xref:System.ServiceModel.WS2007FederationHttpBinding> veranschaulicht. Dabei handelt es sich um eine Standardbindung, mit der Sie verbundene Szenarien erstellen können, die die Version 1.3 der WS-Trust-Spezifikation unterstützen.  
@@ -36,7 +36,7 @@ In diesem Beispiel wird die Verwendung von <xref:System.ServiceModel.WS2007Feder
 </bindings>  
 ```  
   
- Auf der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)die `security` Wert gibt an, welcher Sicherheitsmodus verwendet werden soll. In diesem Beispiel `message` Sicherheit verwendet wird, wird daher die [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) wird angegeben, in der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Die [ \<Aussteller >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) Element innerhalb der [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) gibt die Adresse und Bindung für den STS, der ein Sicherheitstoken an den Client ausgibt, damit der Client kann authentifizieren Sie sich bei der `ICalculator` Dienst.  
+ Auf der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), `security` Wert gibt an, welcher Sicherheitsmodus verwendet werden soll. In diesem Beispiel wird `message` Sicherheit verwendet wird, wird daher die [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) angegeben ist, in der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Die [ \<Aussteller >](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) Element innerhalb der [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) gibt die Adresse und Bindung für den STS an, die ein Sicherheitstoken an den Client ausgibt, damit der Client kann authentifizieren Sie sich bei der `ICalculator` Service.  
   
  Das folgende Codebeispiel zeigt die Konfiguration dieser Bindung auf dem Dienst.  
   
@@ -63,7 +63,7 @@ In diesem Beispiel wird die Verwendung von <xref:System.ServiceModel.WS2007Feder
 </bindings>  
 ```  
   
- Auf der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)die `security` Wert gibt an, welcher Sicherheitsmodus verwendet werden soll. In diesem Beispiel `message` Sicherheit verwendet wird, wird daher die [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) wird angegeben, in der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Die [ \<IssuerMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) Element des `ws2007FederationHttpBinding` innerhalb der [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) gibt die Adresse und Identität für einen Endpunkt, der zum Abrufen von verwendet werden kann Metadaten für den STS.  
+ Auf der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), `security` Wert gibt an, welcher Sicherheitsmodus verwendet werden soll. In diesem Beispiel wird `message` Sicherheit verwendet wird, wird daher die [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) angegeben ist, in der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). Die [ \<"issuermetadata" >](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) Element `ws2007FederationHttpBinding` innerhalb der [ \<Nachricht >](../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) gibt die Adresse und Identität für einen Endpunkt, der zum Abrufen von verwendet werden kann die Metadaten für den STS.  
   
  Das Verhalten für den Dienst wird im folgenden Code gezeigt.  
   
@@ -92,7 +92,7 @@ In diesem Beispiel wird die Verwendung von <xref:System.ServiceModel.WS2007Feder
 </behaviors>  
 ```  
   
- Die [ \<IssuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> ermöglicht es dem Dienst Einschränkungen für die Token angeben, können Clients während der Authentifizierung an. In dieser Konfiguration wird angegeben, dass von einem Zertifikat mit dem Ausstellernamen CN=STS signierte Token vom Dienst akzeptiert werden.  
+ Die [ \<IssuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)> kann der Dienst Einschränkungen für die Token Geben sie die Clients bei der Authentifizierung ermöglicht. In dieser Konfiguration wird angegeben, dass von einem Zertifikat mit dem Ausstellernamen CN=STS signierte Token vom Dienst akzeptiert werden.  
   
  STS macht einen einzelnen Endpunkt durch die Standard-<xref:System.ServiceModel.WS2007HttpBinding> verfügbar. Der Dienst antwortet auf Token-Anforderungen von Clients. Wenn der Client mit einem Windows-Konto authentifiziert ist, gibt der Dienst ein Token aus, das den Benutzernamen des Clients als einen Anspruch enthält. Beim Erstellen des Tokens signiert STS das Token mit dem privaten Schlüssel, der dem CN=STS-Zertifikat zugeordnet ist. Außerdem wird ein symmetrischer Schlüssel erstellt und mit dem öffentlichen Schlüssel verschlüsselt, der dem CN=localhost-Zertifikat zugeordnet ist. Beim Zurückgeben des Tokens an den Client gibt STS auch den symmetrischen Schlüssel zurück. Der Client zeigt dem `ICalculator`-Dienst das ausgegebene Token und beweist, dass der symmetrische Schlüssel bekannt ist, indem die Nachricht mit diesem Schlüssel signiert wird.  
   
@@ -110,7 +110,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Öffnen Sie eine Visual Studio-Eingabeaufforderung mit Administratorrechten, und führen Sie die Datei Setup.bat aus, um die erforderlichen Zertifikate zu erstellen.  
   
@@ -118,14 +118,14 @@ Press <ENTER> to terminate client.
   
 1.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-2.  Um das Beispiel in einer Einzelcomputer- oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Bei Verwendung von [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], führen Sie Service.exe, Client.exe und SecurityTokenService.exe mit erweiterten Berechtigungen (mit der rechten Maustaste in den Dateien, und klicken Sie dann auf **als Administrator ausführen**).  
+2.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Bei Verwendung von [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], führen Sie Service.exe, Client.exe und SecurityTokenService.exe mit erweiterten Berechtigungen (mit der rechten Maustaste in der Dateien, und klicken Sie dann auf **als Administrator ausführen**).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`  
   

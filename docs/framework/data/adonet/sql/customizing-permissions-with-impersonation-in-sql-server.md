@@ -2,12 +2,12 @@
 title: Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362642"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513971"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 Viele Anwendungen verwenden für den Zugriff auf Daten gespeicherte Prozeduren, wobei der Zugriff auf die Basistabellen per Besitzverkettung gesteuert wird. Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren und so Berechtigungen für die Basistabellen widerrufen oder verweigern. Wenn der Besitzer der gespeicherten Prozedur identisch mit dem Besitzer der Tabellen ist, nimmt SQL Server keine Prüfung der Berechtigungen des Aufrufers vor. Bei Objekten, die verschiedenen Besitzern gehören, und bei dynamischem SQL funktioniert die Besitzverkettung jedoch nicht.  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Verwenden von EXECUTE AS mit REVERT  
  Mit der Transact-SQL-REVERT-Anweisung  können Sie zum ursprünglichen Ausführungskontext zurückkehren.  
   
- Die optionale Klausel, WITH NO REVERT COOKIE = @variableName, ermöglicht, den Ausführungskontext zurück zum Aufrufer wechseln, wenn die @variableName Variable enthält den richtigen Wert. Auf diese Weise kann der Ausführungskontext in Umgebungen, in denen Verbindungspooling verwendet wird, wieder an den Aufrufer zurückgegeben werden. Da der Wert des @variableName ist bekannt, nur an den Aufrufer der EXECUTE AS-Anweisung, dass der Ausführungskontext vom Endbenutzer geändert werden kann, die die Anwendung aufruft, kann der Aufrufer sicherstellen. Beim Schließen wird die Verbindung an den Pool zurückgegeben. Weitere Informationen zum Verbindungs-pooling in ADO.NET finden Sie unter [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Der optionale Klausel WITH NO REVERT COOKIE = @variableName, können Sie den Ausführungskontext zurück zum Aufrufer wechseln, wenn die @variableName Variable enthält den richtigen Wert. Auf diese Weise kann der Ausführungskontext in Umgebungen, in denen Verbindungspooling verwendet wird, wieder an den Aufrufer zurückgegeben werden. Da der Wert des @variableName kennt nur der Aufrufer der EXECUTE AS-Anweisung, dass der Ausführungskontext vom Endbenutzer geändert werden kann, die die Anwendung aufruft, kann der Aufrufer sicherstellen. Beim Schließen wird die Verbindung an den Pool zurückgegeben. Weitere Informationen zum Verbindungspooling in ADO.NET finden Sie unter [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Angeben des Ausführungskontexts  
  Neben dem Angeben eines Benutzers können Sie EXECUTE AS auch zusammen mit den folgenden Schlüsselwörtern verwenden.  
@@ -65,14 +65,6 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   SELF: Mit SELF wird die Prozedur im Sicherheitskontext des Erstellers der gespeicherten Prozedur ausgeführt. Dies entspricht der Ausführung der Prozedur als ein spezifischer Benutzer, wobei der spezifische Benutzer die Person ist, die die Prozedur erstellt oder geändert hat.  
   
-## <a name="external-resources"></a>Externe Ressourcen  
- Weitere Informationen finden Sie in den folgenden Ressourcen.  
-  
-|Ressource|Beschreibung|  
-|--------------|-----------------|  
-|[Wechseln des Kontexts](http://msdn.microsoft.com/library/ms188268.aspx) in SQL Server-Onlinedokumentation|Enthält Links zu Themen, die die Verwendung der EXECUTE AS-Klausel beschreiben.|  
-|[Verwenden von EXECUTE AS zum Erstellen benutzerdefinierter Berechtigungssätze](http://msdn.microsoft.com/library/ms190384.aspx) und [Verwenden von EXECUTE AS in Modulen](http://msdn.microsoft.com/library/ms178106.aspx) in SQL Server-Onlinedokumentation|Enthält Themen, in denen die Verwendung der EXECUTE AS-Klausel beschrieben wird.|  
-  
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
@@ -81,4 +73,4 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
  [Schreiben von sicherem dynamischen SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Ändern von Daten mit gespeicherten Prozeduren](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

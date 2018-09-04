@@ -3,11 +3,11 @@ title: Vereinfachte Konfiguration für WCF-Dienste
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482890"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500712"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Vereinfachte Konfiguration für WCF-Dienste
 Dieses Beispiel veranschaulicht das Implementieren und konfigurieren ein typischer Dienst und Client mit Windows Communication Foundation (WCF). Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  

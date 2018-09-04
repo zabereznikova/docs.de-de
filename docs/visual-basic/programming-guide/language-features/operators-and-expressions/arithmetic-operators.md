@@ -14,17 +14,17 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
 ms.openlocfilehash: cd66d08eba973a796472fcbd40a6a84edbbb62ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499262"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Arithmetische Operatoren in Visual Basic
-Arithmetische Operatoren werden verwendet, um viele bekannte arithmetischen Operationen ausführen, die die Berechnung von numerischen Werten, die durch die Literale, Variablen, andere Ausdrücke, Funktion und Eigenschaftenaufrufe und Konstanten dargestellt einschließen. Auch mit arithmetischen Operatoren klassifiziert sind Bitschiebeoperatoren, die auf der Ebene der einzelnen Bits der Operanden fungieren und ihre Bitmuster nach links oder rechts.  
+Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen ausführen, bei denen die Berechnung von numerischen Werten, die durch Literale, Variablen, andere Ausdrücke, Funktion und eigenschaftsaufrufen und Konstanten dargestellt verwendet. Sind Sie auch mit arithmetischen Operatoren klassifiziert Bitschiebeoperatoren, die auf der Ebene der einzelbits der Operanden werden und ihre Bitmuster nach links oder rechts.  
   
 ## <a name="arithmetic-operations"></a>Arithmetische Operationen  
- Können Sie zwei Werte hinzufügen, in einem Ausdruck zusammen mit den [+-Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), oder Subtrahieren von einem anderen mit der [-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), wie im folgenden Beispiel wird veranschaulicht.  
+ Sie können zwei Werte hinzufügen, in einem Ausdruck zusammen mit der [+ (Operator)](../../../../visual-basic/language-reference/operators/addition-operator.md), oder entfernen Sie eine von einem anderen mit der [--Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), wie im folgende Beispiel wird veranschaulicht.  
   
  [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
   
@@ -32,28 +32,28 @@ Arithmetische Operatoren werden verwendet, um viele bekannte arithmetischen Oper
   
  [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
   
- Multiplikation und Division der [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) und [/-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)zugeordnet, wie im folgende Beispiel veranschaulicht.  
+ Multiplikation und Division verwenden die [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) und [/-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)bzw., wie im folgende Beispiel wird veranschaulicht.  
   
  [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
   
- Potenzierung verwendet die [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), wie das folgende Beispiel veranschaulicht.  
+ Potenzierung verwendet die [^-Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), wie das folgende Beispiel veranschaulicht.  
   
  [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
   
- Ganzzahldivision erfolgt mit der [\-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Ganzzahldivision gibt den Quotienten zurück, d. h. die ganze Zahl, die die Anzahl der Male darstellt der Divisor kann in unterteilt der Dividend ohne Berücksichtigung der Rest. Sowohl der Divisor als auch der Dividend muss Ganzzahltypen (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, und `ULong`) für diesen Operator. Alle anderen Typen müssen zuerst in einen ganzzahligen Typ konvertiert werden. Das folgende Beispiel zeigt eine Ganzzahldivision.  
+ Division ganzer Zahlen erfolgt mit der [\-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Division ganzer Zahlen gibt den Quotienten, d. h. die ganze Zahl, die die Anzahl der Male darstellt. der Divisor geteilt werden kann der Dividend geteilt werden ohne Rest. Sowohl der Divisor als auch der Dividend muss Ganzzahltypen (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, und `ULong`) für diesen Operator. Alle anderen Typen müssen zuerst in einen ganzzahligen Typ konvertiert werden. Das folgende Beispiel zeigt die Division ganzer Zahlen.  
   
  [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
   
- Modulo erfolgt mithilfe der [Mod Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). Dieser Operator gibt den Rest nach der Division des Divisors in der Dividend geteilt wie oft eine ganze Zahl zurück. Wenn sowohl der Divisor als auch der Dividend geteilt werden ganzzahlige Typen sind, ist der zurückgegebene Wert ganzzahligen. Wenn der Divisor und Dividend Gleitkommatypen sind, ist der zurückgegebene Wert auch Gleitkommawert. Das folgende Beispiel veranschaulicht dieses Verhalten.  
+ Arithmetischer Modulo erfolgt unter Verwendung der [Mod-Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). Dieser Operator gibt den Rest nach der Division des Divisors in der Dividend geteilt eine ganzzahlige Anzahl von Malen zurück. Wenn sowohl der Divisor als auch der Dividend geteilt werden ganzzahlige Typen sind, ist der zurückgegebene Wert ganzzahligen. Wenn der Divisor und Dividend Gleitkomma-Datentypen handelt, ist der zurückgegebene Wert auch Gleitkommazahl. Das folgende Beispiel veranschaulicht dieses Verhalten.  
   
  [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
   
  [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
   
 ### <a name="attempted-division-by-zero"></a>Versuchte Division durch 0 (null)  
- Division durch 0 (null) hat unterschiedliche Ergebnisse abhängig von den beteiligten Datentypen. Bei der ganzzahligen Division (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] löst eine <xref:System.DivideByZeroException> Ausnahme. Bei Divisionen der `Decimal` oder `Single` -Datentyp, der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] löst außerdem eine <xref:System.DivideByZeroException> Ausnahme.  
+ Division durch 0 (null) verfügt über unterschiedliche Ergebnisse abhängig von den beteiligten Datentypen. Bei der ganzzahligen Division (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] löst eine <xref:System.DivideByZeroException> Ausnahme. Bei Divisionen der `Decimal` oder `Single` -Datentyp, der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] löst auch eine <xref:System.DivideByZeroException> Ausnahme.  
   
- In Gleitkommazahlen Abteilungen, die im Zusammenhang mit der `Double` Datentyp, wird keine Ausnahme ausgelöst, und das Ergebnis ist die Klassenmember darstellt <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, oder <xref:System.Double.NegativeInfinity>, je nachdem, auf der Dividend geteilt. Die folgende Tabelle enthält die verschiedenen Ergebnisse beim Aufteilen einer `Double` Wert von 0 (null).  
+ Bei Gleitkommadivisionen mit die `Double` -Datentyp, wird keine Ausnahme ausgelöst, und das Ergebnis ist der Klassenmember darstellt <xref:System.Double.NaN>, <xref:System.Double.PositiveInfinity>, oder <xref:System.Double.NegativeInfinity>, je nachdem, auf der Dividend geteilt. Die folgende Tabelle enthält die verschiedenen Ergebnisse beim Aufteilen einer `Double` Wert von 0 (null).  
   
 |Dividend-Datentyp|Divisor-Datentyp|Wert der Dividend geteilt werden|Ergebnis|  
 |---|---|---|---|  
@@ -61,38 +61,38 @@ Arithmetische Operatoren werden verwendet, um viele bekannte arithmetischen Oper
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
- Wenn Sie Abfangen einer <xref:System.DivideByZeroException> Ausnahme können Sie ihre Member können Sie die er behandeln. Z. B. die <xref:System.Exception.Message%2A> Eigenschaft enthält den Meldungstext für die Ausnahme. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Wenn Sie Abfangen einer <xref:System.DivideByZeroException> Ausnahme können Sie ihre Member können Sie sie verarbeiten. Z. B. die <xref:System.Exception.Message%2A> Eigenschaft enthält den Meldungstext für die Ausnahme. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="bit-shift-operations"></a>Bitverschiebung Vorgänge  
- Ein bitverschiebung Vorgang führt eine arithmetische Verschiebung in einem Bitmuster. Das Muster ist in der Operand auf der linken Seite enthalten, während der Operand auf der rechten Seite die Anzahl von Bitpositionen das Muster angibt. Schalten Sie das Muster, um die rechte Seite mit den [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) oder auf der linken Seite mit den [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
+ Ein bitverschiebung Vorgang führt eine arithmetische Verschiebung in einem Bitmuster. Das Muster ist in der Operand auf der linken Seite enthalten, während der Operand auf der rechten Seite die Anzahl der Bitpositionen das Muster angibt. Schalten Sie das Muster, auf der rechten Seite mit den [>> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md) oder auf der linken Seite mit den [<< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md).  
   
- Der Datentyp des Operanden für das Muster muss `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`. Der Datentyp des Operanden für die Verschiebung muss `Integer` oder Indikatorvariablen `Integer`.  
+ Der Datentyp des Operanden für das Muster muss `SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`. Es muss der Datentyp des Operanden für die Verschiebung `Integer` oder muss erweitert werden, um `Integer`.  
   
- Arithmetische Schichten sind nicht zirkulär, d. h. die Bits verschobene ein Ende des Resultsets nicht am anderen Ende wieder hinzugefügt werden. Die Bitpositionen durch eine Verschiebung werden wie folgt festgelegt:  
+ Arithmetische Verschiebungen sind nicht zirkuläre, was bedeutet die Bits verschoben aus einem Ende des Resultsets nicht am anderen Ende wieder eingeführt werden. Die Bitpositionen, die von einer Schicht werden wie folgt festgelegt:  
   
--   0 für eine arithmetische Verschiebung nach links  
+-   0 für die eine arithmetische Verschiebung nach links  
   
--   0 für eine arithmetische rechtsverschiebung einer positiven Zahl  
+-   0 für die eine arithmetische rechtsverschiebung einer positiven Zahl  
   
--   0 für eine arithmetische Verschiebung nach rechts ein Datentyp ohne Vorzeichen (`Byte`, `UShort`, `UInteger`, `ULong`)  
+-   0 für die eine arithmetische Verschiebung nach rechts ein Datentyp ohne Vorzeichen (`Byte`, `UShort`, `UInteger`, `ULong`)  
   
--   1 für eine arithmetische Verschiebung nach rechts eine negative Zahl (`SByte`, `Short`, `Integer`, oder `Long`)  
+-   1 für die eine arithmetische rechtsverschiebung einer negativen Zahl (`SByte`, `Short`, `Integer`, oder `Long`)  
   
- Im folgenden Beispiel wird der nächste Schritt ein `Integer` Wert links und rechts.  
+ Im folgende Beispiel wechselt ein `Integer` Wert nach rechts und Links.  
   
  [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
   
- Arithmetische Schichten generieren nie Stapelüberlauf-Ausnahmen.  
+ Arithmetische Schichten generieren keine Stapelüberlauf-Ausnahmen.  
   
 ## <a name="bitwise-operations"></a>Bitweise Operationen  
- Abgesehen davon, dass logische Operatoren `Not`, `Or`, `And`, und `Xor` auch ausführen bitweiser Arithmetik auf numerische Werte. Weitere Informationen finden Sie unter "Bitweise Operationen" in [logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
+ Abgesehen davon, dass logische Operatoren, `Not`, `Or`, `And`, und `Xor` auch ausführen bitweiser Arithmetik, bei der Verwendung von numerischen Werten. Weitere Informationen finden Sie unter "Bitweise Vorgänge" in [logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md).  
   
 ## <a name="type-safety"></a>Typsicherheit  
- Operanden sollten normalerweise vom selben Typ sein. Angenommen, Sie außerdem mit auf diese Weise werden ein `Integer` Variablen, Sie sollten ihn hinzufügen zu einem anderen `Integer` Variable und Sie weisen das Ergebnis einer Variablen vom Typ `Integer` ebenfalls.  
+ Operanden sollten normalerweise vom gleichen Typ sein. Z. B., wenn Sie außerdem mit Durchführen einer `Integer` Variablen, addieren Sie sie in eine andere `Integer` Variable, und Sie weisen das Ergebnis einer Variablen vom Typ `Integer` ebenfalls.  
   
- Eine Möglichkeit, typsichere gute Programmierpraxis ist die Verwendung der [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Wenn Sie festlegen, `Option Strict On`, Visual Basic automatisch führt *als typsicherer* Konvertierungen. Z. B., wenn Sie versuchen, hinzuzufügen ein `Integer` Variable auf ein `Double` Variable und weisen Sie den Wert einer `Double` Variablen, der Vorgang normal ausgeführt, weil ein `Integer` Wert konvertiert werden kann, um `Double` ohne Verlust von Daten. Typ-unsichere Konvertierungen andererseits, verursachen einen Compilerfehler mit `Option Strict On`. Z. B., wenn Sie versuchen, Sie fügen ein `Integer` Variable auf eine `Double` Variable und weisen Sie den Wert ein `Integer` Variable, ein Compilerfehler verursacht, weil eine `Double` Variable kann nicht Typ implizit konvertiert werden `Integer`.  
+ Eine Möglichkeit, um sicherzustellen, dass typsichere gute Vorgehensweise bei der Codierung ist die Verwendung der [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Setzen Sie `Option Strict On`, Visual Basic automatisch führt *typsichere* Konvertierungen. Z. B., wenn Sie versuchen, Sie fügen ein `Integer` Variable eine `Double` Variable und weisen Sie den Wert ein `Double` Variablen, die Operation normal ausgeführt, weil ein `Integer` Wert konvertiert werden kann `Double` ohne Datenverlust. Typ-unsichere Konvertierungen, die auf der anderen Seite verursachen einen Compilerfehler mit `Option Strict On`. Z. B., wenn Sie versuchen, das Hinzufügen einer `Integer` Variable eine `Double` Variable und weisen Sie den Wert ein `Integer` Variable, ein Compilerfehler verursacht, weil eine `Double` Variable kann nicht Typ implizit konvertiert werden `Integer`.  
   
- Wenn Sie festlegen, `Option Strict Off`, Visual Basic ermöglicht jedoch implizite einschränkende Konvertierungen erfolgen, obwohl sie zu unerwarteten Datenverlust oder Genauigkeitsverlust führen können. Aus diesem Grund empfehlen wir die Verwendung `Option Strict On` beim Produktionscode zu schreiben. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Setzen Sie `Option Strict Off`, Visual Basic ermöglicht implizite einschränkende Konvertierungen erfolgen, jedoch auch unerwarteten Verlust von Daten oder Genauigkeit führen können. Aus diesem Grund empfehlen wir die Verwendung `Option Strict On` beim Schreiben von Produktionscode. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arithmetische Operatoren](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  

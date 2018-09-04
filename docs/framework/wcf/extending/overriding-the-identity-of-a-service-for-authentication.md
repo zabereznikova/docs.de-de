@@ -5,37 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c6810009e4cda0b493a5f215d966cb37fc6fb090
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806941"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511993"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Überschreiben der Identität eines Dienstes zur Authentifizierung
-In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurationscode verwendet beispielsweise die [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element und legt die `clientCredentialType` -Attribut auf Windows.  
+In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurationscode verwendet beispielsweise die [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) -Element und legt die `clientCredentialType` -Attribut auf Windows.  
   
   
   
- Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel wird der Dienst ausgeführt wird, als ein selbst gehosteter Dienst unter einem bestimmten Benutzerkonto (username@contoso.com) und aus diesem Grund enthält die Identität des Benutzers Benutzerprinzipalnamen (UPN) des Kontonamens. Der UPN wird in einer Windows-Domäne auch als Benutzeranmeldename bezeichnet.  
+ Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel ist der Dienst ausgeführt wird, wie ein selbst gehosteter Dienst unter einem bestimmten Benutzerkonto (username@contoso.com) und daher die Identität des Benutzers Benutzerprinzipalnamen (UPN) der Kontoname enthält. Der UPN wird in einer Windows-Domäne auch als Benutzeranmeldename bezeichnet.  
   
   
   
- Eine beispielanwendung, die identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md). Weitere Informationen zur Dienstidentität, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Eine beispielanwendung, die identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md). Weitere Informationen zur Dienstidentität finden Sie unter [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos-Authentifizierung und Identität  
- In der Standardeinstellung, wenn ein Dienst so konfiguriert ist, ein Windows-Anmeldeinformationen verwendet ein [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) -Element, enthält eine [ \<"userPrincipalName" >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) oder [ \<ServicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element in die WSDL-Datei generiert wird. Wenn der Dienst, unter ausgeführt wird der `LocalSystem`, `LocalService`, oder `NetworkService` Konto, einen Dienst mit dem Dienstprinzipalnamen (SPN) wird standardmäßig, in Form von generiert `host/` \< *Hostname*> da Diese Konten haben Zugriff auf den Computer-SPN-Daten. Wenn der Dienst unter einem anderen Konto ausgeführt wird, generiert Windows Communication Foundation (WCF) einen UPN im Format \< *Benutzername*>@<*DomainName* `>` . Die Kerberos-Authentifizierung erfordert nämlich, dass für den Client ein UPN oder SPN zum Authentifizieren des Dienstes bereitgestellt wird.  
+ Wenn ein Dienst konfiguriert wird, eine Windows-Anmeldeinformationen verwenden, wird standardmäßig ein [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) -Element, enthält eine [ \<"userPrincipalName" >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md) oder [ \<ServicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) Element wird in die WSDL-Datei generiert. Wenn der Dienst, unter ausgeführt wird der `LocalSystem`, `LocalService`, oder `NetworkService` -Konto, ein Dienst, der Dienstprinzipalnamen (SPN), wird standardmäßig in Form von generiert wird `host/` \< *Hostname*> da Diese Konten haben Zugriff auf den Computer-SPN-Daten. Wenn der Dienst unter einem anderen Konto ausgeführt wird, generiert Windows Communication Foundation (WCF) einen UPN im Format \< *Benutzername*>@<*DomainName* `>` . Die Kerberos-Authentifizierung erfordert nämlich, dass für den Client ein UPN oder SPN zum Authentifizieren des Dienstes bereitgestellt wird.  
   
- Sie können auch das Tool Setspn.exe zur Registrierung eines zusätzlichen SPN beim Konto eines Dienstes in einer Domäne verwenden. Sie können dann den SPN als die Identität des Dienstes verwenden. Zum Herunterladen des Tools finden Sie unter [Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752). Weitere Informationen zu diesem Tool finden Sie unter [Übersicht über Setspn](http://go.microsoft.com/fwlink/?LinkId=61374).  
+ Sie können auch das Tool Setspn.exe zur Registrierung eines zusätzlichen SPN beim Konto eines Dienstes in einer Domäne verwenden. Sie können dann den SPN als die Identität des Dienstes verwenden. Zum Herunterladen des Tools finden Sie unter [Windows 2000 Resource Kit Tool: Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752). Weitere Informationen zu diesem Tool finden Sie unter [Setspn Overview](https://go.microsoft.com/fwlink/?LinkId=61374).  
   
 > [!NOTE]
 >  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss das Benutzerkonto des Dienstes Zugriff auf den bei der Active Directory-Domäne registrierten SPN haben. Dazu stehen Ihnen folgende Möglichkeiten zur Verfügung:  
   
--   Verwenden Sie das NetworkService- oder das LocalSystem-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf die Computer-SPN, die hergestellt wird haben, wenn der Computer die Active Directory-Domäne beitritt, generiert WCF automatisch den richtige SPN-Element im Endpunkt des Diensts in den Dienstmetadaten (WSDL).  
+-   Verwenden Sie das NetworkService- oder das LocalSystem-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf den Computer-SPN haben, die festgelegt wird, wenn der Computer der Active Directory-Domäne beigetreten ist, generiert WCF automatisch das zutreffende SPN-Element innerhalb der Endpunkt des Diensts in den Dienstmetadaten (WSDL).  
   
--   Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. Erstellen Sie in diesem Fall mit dem Tool Setspn.exe einen SPN für dieses Domänenkonto. Konfigurieren Sie nach dem Erstellen des SPN für das Konto des Diensts WCF um, dass dieser SPN für den Dienst Clients über seine Metadaten (WSDL) veröffentlicht. Legen Sie dazu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest.  
+-   Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. Erstellen Sie in diesem Fall mit dem Tool Setspn.exe einen SPN für dieses Domänenkonto. Nachdem Sie den SPN für das Dienstkonto erstellt haben, konfigurieren Sie WCF, damit dieser SPN für die Clients des Dienstes über seine Metadaten (WSDL) veröffentlicht. Legen Sie dazu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest.  
   
- Weitere Informationen zu SPNs, die Kerberos-Protokoll und Active Directory finden Sie unter [technische Kerberos-Ergänzung für Windows](http://go.microsoft.com/fwlink/?LinkId=88330).  
+ Weitere Informationen zu SPNs, Kerberos-Protokoll und Active Directory, finden Sie unter [Kerberos Technical Supplement für Windows](https://go.microsoft.com/fwlink/?LinkId=88330).  
   
 ### <a name="when-spn-or-upn-equals-the-empty-string"></a>Wenn SPN oder UPN der leeren Zeichenfolge entspricht  
  Das Festlegen von SPN oder UPN gleich einer leeren Zeichenfolge führt abhängig von der Sicherheitsebene und dem verwendeten Authentifizierungsmodus zu verschiedenen Ergebnissen:  
@@ -50,7 +50,7 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
 -   Wenn Sie Kerberos direkt (wird auch als "One-Shot" bezeichnet) verwenden, schlägt die Authentifizierung fehl.  
   
-### <a name="using-the-identity-element-in-configuration"></a>Mithilfe der \<Identity >-Elements in der Konfiguration  
+### <a name="using-the-identity-element-in-configuration"></a>Mithilfe der \<Identity >-Element in der Konfiguration  
  Wenn Sie den Clientanmeldeinformationstyp in der zuvor gezeigten Bindung zu Certificate`,` ändern, enthält die generierte WSDL ein serialisiertes Base64-X.509-Zertifikat als Identitätswert, wie im folgenden Code gezeigt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
   
   
@@ -60,7 +60,7 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
   
 ### <a name="setting-identity-programmatically"></a>Programmgesteuertes Festlegen der Identität  
- Der Dienst verfügt nicht explizit eine Identität angeben, da WCF automatisch bestimmt. WCF ermöglicht Ihnen die Angabe eine Identität für einen Endpunkt jedoch bei Bedarf. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
+ Ihr Dienst verfügt nicht explizit eine Identität angeben, da WCF automatisch bestimmt. WCF können Sie eine Identität für einen Endpunkt angeben möchten jedoch bei Bedarf. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

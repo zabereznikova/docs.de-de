@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354867"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514002"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
 SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeitinformationen. Die neuen Datentypen beinhalten separate Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit einem größerem Bereich, höherer Präzision und Zeitzonenermittlung. Ab .NET Framework Version 3.5 Service Pack (SP) 1 bietet der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) vollständige Unterstützung für alle neuen Funktionen des SQL Server 2008-Datenbankmoduls. Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um diese neuen Funktionen mit SqlClient zu verwenden.  
@@ -21,7 +21,7 @@ SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeiti
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1.  [Verwenden von Datums- und Zeitdaten](http://go.microsoft.com/fwlink/?LinkID=98361)  
+1.  [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Neue Datums-/Uhrzeitdaten in SQL Server 2008  
  In der folgenden Tabelle werden die neuen Datums- und Uhrzeitdatentypen beschrieben.  
@@ -31,7 +31,7 @@ SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeiti
 |`date`|Der Bereich der gültigen Werte für den `date`-Datentyp reicht vom 1. Januar 0001 bis zum 31. Dezember 9999 mit einer Genauigkeit von einem Tag. Der Standardwert ist der 1. Januar 1900. Die Speichergröße beträgt 3 Bytes.|  
 |`time`|Der `time`-Datentyp speichert reine Uhrzeitwerte im 24-Stunden-Format. Der Bereich der gültigen Werte des `time`-Datentyps reicht von 00:00:00.0000000 bis 23:59:59.9999999 mit einer Genauigkeit von 100 Nanosekunden. Der Standardwert ist 00:00:00.0000000 Uhr, also Mitternacht. Der `time`-Datentyp unterstützt eine benutzerdefinierte Genauigkeit der Sekundenbruchteile, und die Speichergröße variiert je nach angegebener Genauigkeit zwischen 3 und 6 Bytes.|  
 |`datetime2`|Der `datetime2`-Datentyp fasst den Gültigkeitsbereich und die Genauigkeit der Datentypen `date` und `time` in einem Datentyp zusammen.<br /><br /> Die Standardwerte und Formate der Zeichenfolgenliterale sind identisch mit denen der Datentypen `date` und `time`.|  
-|`datetimeoffset`|Der `datetimeoffset`-Datentyp verfügt über alle Funktionen von `datetime2` und über einen zusätzlichen Zeitzonenoffset. Der Zeitzonenoffset wird dargestellt als [+&#124;-] hh: mm. "HH" sind zwei Ziffern im Bereich von 00 bis 14, die für die Anzahl der Stunden in der Zeitzonenangabe stehen. "MM" sind zwei Ziffern im Bereich von 00 bis 59, die zur Angabe der zusätzlichen Minuten in der Zeitzonenangabe dienen. Uhrzeitformate werden mit einer Genauigkeit von bis zu 100 Nanosekunden unterstützt. Das obligatorische Pluszeichen (+) oder Minuszeichen (-) in der Zeitzonenangabe gibt an, ob der jeweilige Wert zum UTC-Wert (Universal Time Coordinate, koordinierte Weltzeit, auch als "Greenwich Mean Time" bekannt) addiert oder von diesem subtrahiert werden muss, um die lokale Uhrzeit zu ermitteln.|  
+|`datetimeoffset`|Der `datetimeoffset`-Datentyp verfügt über alle Funktionen von `datetime2` und über einen zusätzlichen Zeitzonenoffset. Der Zeitzonenoffset wird als [+&#124;-] hh: mm. "HH" sind zwei Ziffern im Bereich von 00 bis 14, die für die Anzahl der Stunden in der Zeitzonenangabe stehen. "MM" sind zwei Ziffern im Bereich von 00 bis 59, die zur Angabe der zusätzlichen Minuten in der Zeitzonenangabe dienen. Uhrzeitformate werden mit einer Genauigkeit von bis zu 100 Nanosekunden unterstützt. Das obligatorische Pluszeichen (+) oder Minuszeichen (-) in der Zeitzonenangabe gibt an, ob der jeweilige Wert zum UTC-Wert (Universal Time Coordinate, koordinierte Weltzeit, auch als "Greenwich Mean Time" bekannt) addiert oder von diesem subtrahiert werden muss, um die lokale Uhrzeit zu ermitteln.|  
   
 > [!NOTE]
 >  Weitere Informationen zur Verwendung des `Type System Version`-Schlüsselworts finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -41,12 +41,12 @@ SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeiti
   
  Die Transact-SQL SET LANGUAGE-Anweisung legt das DATEFORMAT, das die Reihenfolge der Datumsteile bestimmt, implizit fest. Sie können die Transact-SQL-Anweisung SET DATEFORMAT für eine Verbindung verwenden, um Datumswerte eindeutig zu bestimmen, indem die Datumsteile in MDY-, DMY-, YMD-, YDM-, MYD- oder DYM-Reihenfolge sortiert werden.  
   
- Wenn Sie kein DATEFORMAT für die Verbindung angeben, verwendet SQL Server die der Verbindung zugewiesene Standardsprache. So wird beispielsweise eine Datumszeichenfolge von '01/02/03' auf einem Server mit Spracheinstellung "Englisch (USA)" als MDY (2. Januar 2003) und auf einem Server mit Englisch (britisch) als DMY (1. Februar 2003) interpretiert. Das Jahr wird durch die Umstellungsjahrregel von SQL Server festgestellt, die das Umstellungsdatum zum Zuweisen des Jahrhundertwerts definiert. Weitere Informationen finden Sie unter [Option der Wert von two Digit Year cutoff](http://go.microsoft.com/fwlink/?LinkId=120473) in SQL Server-Onlinedokumentation.  
+ Wenn Sie kein DATEFORMAT für die Verbindung angeben, verwendet SQL Server die der Verbindung zugewiesene Standardsprache. So wird beispielsweise eine Datumszeichenfolge von '01/02/03' auf einem Server mit Spracheinstellung "Englisch (USA)" als MDY (2. Januar 2003) und auf einem Server mit Englisch (britisch) als DMY (1. Februar 2003) interpretiert. Das Jahr wird durch die Umstellungsjahrregel von SQL Server festgestellt, die das Umstellungsdatum zum Zuweisen des Jahrhundertwerts definiert. Weitere Informationen finden Sie unter [Option der Wert von two Digit Year cutoff](https://go.microsoft.com/fwlink/?LinkId=120473) in SQL Server-Onlinedokumentation.  
   
 > [!NOTE]
 >  Das YDM-Datumsformat wird bei der Konvertierung von einem Zeichenfolgenformat in `date`, `time`, `datetime2` oder `datetimeoffset` nicht unterstützt.  
   
- Weitere Informationen zur Interpretation von Datums-und Uhrzeitdaten in SQL Server finden Sie unter [Verwenden von Datums- und Zeitdaten](http://go.microsoft.com/fwlink/?LinkID=98361) in SQL Server 2008-Onlinedokumentation.  
+ Weitere Informationen zur Interpretation von Datums-und Uhrzeitdaten in SQL Server finden Sie unter [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361) in SQL Server 2008-Onlinedokumentation.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Datentypen und Parameter zur Angabe von Datum und Uhrzeit  
  Zur Unterstützung der neuen Datums- und Uhrzeitdatentypen wurden <xref:System.Data.SqlDbType> die folgenden Enumerationen hinzugefügt:  
@@ -62,7 +62,7 @@ SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeiti
 Sie können angeben, den den Datentyp des einen <xref:System.Data.SqlClient.SqlParameter> mithilfe eines der vorangehenden <xref:System.Data.SqlDbType> Enumerationen. 
 
 > [!NOTE]
-> Kann nicht festgelegt werden die `DbType` Eigenschaft eine `SqlParameter` auf `SqlDbType.Date`.
+> Kann nicht festgelegt werden die `DbType` Eigenschaft eine `SqlParameter` zu `SqlDbType.Date`.
 
  Sie können den Typ eines <xref:System.Data.SqlClient.SqlParameter> auch generisch angeben, indem Sie die <xref:System.Data.SqlClient.SqlParameter.DbType%2A>-Eigenschaft eines `SqlParameter`-Objekts auf einen bestimmten <xref:System.Data.DbType>-Enumerationswert festlegen. Zur Unterstützung der Datentypen <xref:System.Data.DbType> und `datetime2` wurden `datetimeoffset` die im Folgenden aufgeführten Enumerationswerte hinzugefügt.  
   
@@ -88,9 +88,9 @@ Sie können angeben, den den Datentyp des einen <xref:System.Data.SqlClient.SqlP
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ruft ab oder legt fest, ob ein NULL-Wert zulässig ist. Wenn Sie einen NULL-Parameterwert an den Server senden, müssen Sie <xref:System.DBNull> und nicht `null` (in Visual Basic `Nothing`) angeben. Weitere Informationen zu Datenbank-Nullen, finden Sie unter [Behandlung von Null-Werte](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ruft ab oder legt fest, ob ein NULL-Wert zulässig ist. Wenn Sie einen NULL-Parameterwert an den Server senden, müssen Sie <xref:System.DBNull> und nicht `null` (in Visual Basic `Nothing`) angeben. Weitere Informationen zu Datenbank-Nullen, finden Sie unter [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Legt die maximale Anzahl von Ziffern fest, die zur Darstellung des Werts verwendet werden, oder ruft diese ab. Diese Einstellung wird für Datums- und Uhrzeitdatentypen ignoriert.|  
-|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Ruft ab oder legt die Anzahl der Dezimalstellen ab, der den Uhrzeitteil des Werts für aufgelöst wird `Time`, `DateTime2`, und `DateTimeOffset`. Der Standardwert ist 0, d. h., dass die tatsächliche Skalierung aus dem Wert hergeleitet und an den Server gesendet wird.|  
+|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Übernimmt oder bestimmt die Anzahl der Dezimalstellen, der Uhrzeitteil des Werts für aufgelöst wird `Time`, `DateTime2`, und `DateTimeOffset`. Der Standardwert ist 0, d. h., dass die tatsächliche Skalierung aus dem Wert hergeleitet und an den Server gesendet wird.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Dies wird für Datums- und Uhrzeitdatentypen ignoriert.|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Ruft den Parameterwert ab oder legt diesen fest.|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Ruft den Parameterwert ab oder legt diesen fest.|  
@@ -101,7 +101,7 @@ Sie können angeben, den den Datentyp des einen <xref:System.Data.SqlClient.SqlP
 ### <a name="creating-parameters"></a>Erstellen von Parametern  
  Sie können ein <xref:System.Data.SqlClient.SqlParameter>-Objekt erstellen, indem Sie dessen Konstruktor verwenden, oder Sie fügen es zu einer <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>-Auflistung hinzu, indem Sie die `Add`-Methode der <xref:System.Data.SqlClient.SqlParameterCollection> aufrufen. Die `Add`-Methode akzeptiert entweder Konstruktorargumente oder ein bestehendes Parameterobjekt als Eingabe.  
   
- Die nächsten Abschnitte in diesem Thema enthalten Beispiele über das Angeben von Datums- und Uhrzeitparametern. Weitere Beispiele für die Verwendung von Parametern finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) und [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ Die nächsten Abschnitte in diesem Thema enthalten Beispiele über das Angeben von Datums- und Uhrzeitparametern. Weitere Beispiele zum Arbeiten mit Parametern, finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) und [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Datumsbeispiel  
  Das folgende Codefragment zeigt, wie ein `date`-Parameter festgelegt wird.  
@@ -235,12 +235,12 @@ command.Parameters.AddWithValue( _
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
-|[Verwenden von Datums- und Zeitdaten](http://go.microsoft.com/fwlink/?LinkId=98361)|Enthält Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung.|  
-|[Datentypen (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
+|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
+|[Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkId=98361)|Enthält Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung.|  
+|[Datentypen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

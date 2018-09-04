@@ -8,33 +8,33 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 7e4f9cc2f5e6815a35b4911f5b4a480161d66ef3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83254bcb0b2aef53a53874a67e8ae169ad242d57
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556691"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499938"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Gewusst wie: Binden an XDocument, XElement oder LINQ für XML-Abfrageergebnisse
-Dieses Beispiel veranschaulicht das Binden von XML-Daten in eine <xref:System.Windows.Controls.ItemsControl> mit <xref:System.Xml.Linq.XDocument>.  
+In diesem Beispiel wird veranschaulicht, wie XML-Daten binden ein <xref:System.Windows.Controls.ItemsControl> mit <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende XAML-Code definiert eine <xref:System.Windows.Controls.ItemsControl> und enthält eine Datenvorlage für Daten vom Typ `Planet` in der `http://planetsNS` XML-Namespace. Ein XML-Datentyp, der in einem Namespace definiert ist, muss den Namespace in geschweiften Klammern enthalten. An einer Position, an der XAML-Markuperweiterungen auftreten können, muss dem Namespace eine Escapesequenz mit geschweiften Klammern vorangestellt werden. Dieser Code bindet an dynamische Eigenschaften entsprechen den <xref:System.Xml.Linq.XContainer.Element%2A> und <xref:System.Xml.Linq.XElement.Attribute%2A> Methoden die <xref:System.Xml.Linq.XElement> Klasse. Dynamische Eigenschaften ermöglichen die Bindung von XAML an dynamische Eigenschaften, die die Namen von Methoden gemeinsam verwenden. Weitere Informationen dazu finden Sie unter [Dynamische Eigenschaften in LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties). Beachten Sie, dass die XML-Standardnamespacedeklaration nicht für Attributnamen gilt.  
+ Der folgende XAML-Code definiert eine <xref:System.Windows.Controls.ItemsControl> und schließt eine Datenvorlage für Daten vom Typ `Planet` in die `http://planetsNS` XML-Namespace. Ein XML-Datentyp, der in einem Namespace definiert ist, muss den Namespace in geschweiften Klammern enthalten. An einer Position, an der XAML-Markuperweiterungen auftreten können, muss dem Namespace eine Escapesequenz mit geschweiften Klammern vorangestellt werden. Dieser Code bindet an dynamische Eigenschaften entsprechen den <xref:System.Xml.Linq.XContainer.Element%2A> und <xref:System.Xml.Linq.XElement.Attribute%2A> Methoden der <xref:System.Xml.Linq.XElement> Klasse. Dynamische Eigenschaften ermöglichen die Bindung von XAML an dynamische Eigenschaften, die die Namen von Methoden gemeinsam verwenden. Weitere Informationen dazu finden Sie unter [Dynamische Eigenschaften in LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties). Beachten Sie, dass die XML-Standardnamespacedeklaration nicht für Attributnamen gilt.  
   
  [!code-xaml[XLinqExample#StackPanelResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
 [!code-xaml[XLinqExample#ItemsControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#itemscontrol)]  
   
- Die folgende C#-Code ruft <xref:System.Xml.Linq.XDocument.Load%2A> und legt den StackPanel-Datenkontext auf alle untergeordneten Elemente des Elements mit dem Namen `SolarSystemPlanets` in der `http://planetsNS` XML-Namespace.  
+ Der folgende C#-Code ruft <xref:System.Xml.Linq.XDocument.Load%2A> und legt den StackPanel-Datenkontext auf alle Unterelemente des Elements namens `SolarSystemPlanets` in die `http://planetsNS` XML-Namespace.  
   
  [!code-csharp[XLinqExample#LoadDCFromFile](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromfile)]
  [!code-vb[XLinqExample#LoadDCFromFile](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromfile)]  
   
- XML-Daten gespeichert werden können, als eine XAML-Ressource mit <xref:System.Windows.Data.ObjectDataProvider>. Ein vollständiges Beispiel finden Sie unter [Quellcode in der Datei ‚L2DBForm.xaml‘](http://msdn.microsoft.com/library/624e96d4-6d27-4195-8ac2-2f3835f6c57e). Im folgenden Beispiel wird gezeigt, wie der Datenkontext in Code auf eine Objektressource festgelegt werden kann.  
+ XML-Daten gespeichert werden können, als eine XAML-Ressourcen mit <xref:System.Windows.Data.ObjectDataProvider>. Ein vollständiges Beispiel finden Sie unter [Quellcode in der Datei ‚L2DBForm.xaml‘](https://msdn.microsoft.com/library/624e96d4-6d27-4195-8ac2-2f3835f6c57e). Im folgenden Beispiel wird gezeigt, wie der Datenkontext in Code auf eine Objektressource festgelegt werden kann.  
   
  [!code-csharp[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#loaddcfromxaml)]
  [!code-vb[XLinqExample#LoadDCFromXAML](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#loaddcfromxaml)]  
   
- Die dynamischen Eigenschaften, die zugeordnet <xref:System.Xml.Linq.XContainer.Element%2A> und <xref:System.Xml.Linq.XElement.Attribute%2A> bieten Flexibilität innerhalb von XAML. Der Code kann auch an die Ergebnisse einer LINQ to XML-Abfrage gebunden werden. In diesem Beispiel erfolgt die Bindung an die nach einem Elementwert sortierten Abfrageergebnisse.  
+ Die dynamischen Eigenschaften, die den zuordnen <xref:System.Xml.Linq.XContainer.Element%2A> und <xref:System.Xml.Linq.XElement.Attribute%2A> sorgen für Flexibilität in XAML. Der Code kann auch an die Ergebnisse einer LINQ to XML-Abfrage gebunden werden. In diesem Beispiel erfolgt die Bindung an die nach einem Elementwert sortierten Abfrageergebnisse.  
   
  [!code-csharp[XLinqExample#BindToResults](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml.cs#bindtoresults)]
  [!code-vb[XLinqExample#BindToResults](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  

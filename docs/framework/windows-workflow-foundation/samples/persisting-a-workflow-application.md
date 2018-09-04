@@ -2,12 +2,12 @@
 title: Beibehalten einer Workflowanwendung
 ms.date: 03/30/2017
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
-ms.openlocfilehash: e5c0cf23dd238c0c5a81519b5e6c415f4ef75f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c225a9ed56a742fce0aaff3704bab31dabb0b9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519186"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500003"
 ---
 # <a name="persisting-a-workflow-application"></a>Beibehalten einer Workflowanwendung
 In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.WorkflowApplication> ausgeführt wird, wie sie im Leerlauf entladen wird und wie sie neu geladen wird, um ihre Ausführung fortzusetzen.  
@@ -17,11 +17,11 @@ In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.Workfl
   
  Der Beispielworkflow ist eine <xref:System.Activities.Statements.WriteLine>-Aktivität, die den Benutzer zur Eingabe seines Namens auffordert, eine `ReadLine`-Aktivität zum Empfangen des Namens durch die Wiederaufnahme eines <xref:System.Activities.Bookmark> als Eingabe und einer anderen <xref:System.Activities.Statements.WriteLine>-Aktivität zum Ausgeben eines Grußes an den Benutzer. Wenn ein Workflow auf eine Eingabe wartet, stellt dies einen natürlichen Punkt für Dauerhaftigkeit dar. Dies wird häufig als <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle>-Punkt bezeichnet. <xref:System.Activities.WorkflowApplication> löst das <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle>-Ereignis immer dann aus, wenn das Workflowprogramm beibehalten werden kann, auf die Wiederaufnahme eines Lesezeichens wartet und keine andere Verarbeitung erfolgt. Im Workflow dieses Beispiels tritt dieser Punkt sofort auf, nachdem die `ReadLine`-Aktivität mit der Ausführung begonnen hat.  
   
- Ein <xref:System.Activities.WorkflowApplication> ist zum Ausführen von Persistenz mit Einrichten einer <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`. In diesem Beispiel wird der <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> verwendet. Die <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` zugewiesen werden, die <xref:System.Activities.WorkflowApplication.InstanceStore%2A> Eigenschaft, bevor die <xref:System.Activities.WorkflowApplication> ausgeführt wird.  
+ Ein <xref:System.Activities.WorkflowApplication> wird eingerichtet, führen Sie den Persistenz mit einer <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`. In diesem Beispiel wird der <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> verwendet. Die <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` zugewiesen werden muss die <xref:System.Activities.WorkflowApplication.InstanceStore%2A> Eigenschaft, bevor die <xref:System.Activities.WorkflowApplication> ausgeführt wird.  
   
  Im Beispiel wird dem <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>-Ereignis ein Handler hinzugefügt. Der Handler für dieses Ereignis gibt durch die Rückgabe einer <xref:System.Activities.WorkflowApplication> an, was die <xref:System.Activities.PersistableIdleAction> durchführen soll. Wenn <xref:System.Activities.PersistableIdleAction.Unload> zurückgegeben wird, wird die <xref:System.Activities.WorkflowApplication> entladen.  
   
- Im Beispiel wird dann eine Benutzereingabe akzeptiert, und der beibehaltene Workflow wird in eine neue <xref:System.Activities.WorkflowApplication> geladen. Dies erfolgt durch Erstellen eines neuen <xref:System.Activities.WorkflowApplication>, Neuerstellen der <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`, und Zuordnen der abgeschlossenen und entladenen Ereignisse zur Instanz, und dem anschließenden Aufrufen <xref:System.Activities.WorkflowApplication.Load%2A> durch den Bezeichner der Ziel-Workflowinstanz. Sobald die Instanz abgerufen wurde, wird das Lesezeichen der `ReadLine`-Aktivität fortgesetzt. Der Workflow setzt die Ausführung aus der `ReadLine`-Aktivität bis zum Abschluss fort. Wenn der Workflow abgeschlossen und entladen wurde, die <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` ist ein letztes Mal aufgerufen, um den Workflow zu löschen.  
+ Im Beispiel wird dann eine Benutzereingabe akzeptiert, und der beibehaltene Workflow wird in eine neue <xref:System.Activities.WorkflowApplication> geladen. Dies erfolgt durch Erstellen eines neuen <xref:System.Activities.WorkflowApplication>, Neuerstellen der <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`, und Zuordnen der abgeschlossenen und entladenen Ereignisse zur Instanz, und dem anschließenden Aufrufen <xref:System.Activities.WorkflowApplication.Load%2A> durch den Bezeichner der Ziel-Workflowinstanz. Sobald die Instanz abgerufen wurde, wird das Lesezeichen der `ReadLine`-Aktivität fortgesetzt. Der Workflow setzt die Ausführung aus der `ReadLine`-Aktivität bis zum Abschluss fort. Wenn der Workflow abgeschlossen und entladen wird, die <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` ein letztes Mal aufgerufen wird, um den Workflow zu löschen.  
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
@@ -39,7 +39,7 @@ In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.Workfl
     > [!CAUTION]
     >  Wenn Sie die Datenbank auf einer nicht standardmäßigen Instanz von SQL Server installiert haben, aktualisieren Sie vor dem Erstellen der Projektmappe die Verbindungszeichenfolge im Code.  
   
-4.  Führen Sie das Beispiel mit Administratorrechten aus, navigieren Sie zur Bin-Verzeichnis des Projekts (\WF\Basic\Persistence\InstancePersistence\bin\Debug) in [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]mit der rechten Maustaste auf Workflow.exe, und Auswählen von **als AdministratorAusführen**.  
+4.  Führen Sie das Beispiel mit Administratorrechten empfängerrollenbildschirm Bin-Verzeichnis des Projekts (\WF\Basic\Persistence\InstancePersistence\bin\Debug) im [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]mit der rechten Maustaste auf Workflow.exe, und Auswählen von **als AdministratorAusführen**.  
   
 #### <a name="to-remove-the-instance-store-database"></a>So entfernen Sie die Instanzspeicherdatenbank  
   
@@ -52,9 +52,9 @@ In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.Workfl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

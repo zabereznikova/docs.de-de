@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
 ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255296"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499424"
 ---
 # <a name="join-clause-visual-basic"></a>Join-Klausel (Visual Basic)
 Fasst zwei Auflistungen zu einer einzelnen Auflistung zusammen. Die Join-Operation wird auf Grundlage übereinstimmender Schlüssel und verwendet die `Equals` Operator.  
