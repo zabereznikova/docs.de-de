@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_EndEnumeration-Funktion (Referenz zur nicht verwalteten API)
-description: Die Funktion QualifierSet_EndEnumeration beendet eine Enumeration.
+description: Die QualifierSet_EndEnumeration-Funktion wird eine Enumeration beendet.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460743"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486817"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration-Funktion
-Beendet die Enumeration, die mit einem Aufruf von begonnen der [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) Funktion.  
+Beendet die Enumeration, die mit einem Aufruf gestartet wurde die [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) Funktion.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -43,11 +43,11 @@ HRESULT QualifierSet_EndEnumeration (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`   
-[in] Ein Zeiger auf ein [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) Instanz.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der folgende Wert, der von dieser Funktion zurückgegebenen wird definiert, der *WbemCli.h* Header-Datei, oder Sie können es als definieren eine Konstante in Ihrem Code:
+Der folgende Wert zurückgegeben, die von dieser Funktion wird definiert, der *WbemCli.h* Header-Datei, oder Sie können ihn definieren als Konstante in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
@@ -55,13 +55,13 @@ Der folgende Wert, der von dieser Funktion zurückgegebenen wird definiert, der 
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) Methode.
 
-Dieser Aufruf wird empfohlen, jedoch nicht erforderlich. Es gibt sofort die Enumeration zugeordnete Ressourcen frei.
+Dieser Aufruf wird empfohlen, aber nicht erforderlich. Es gibt sofort die Enumeration zugeordnete Ressourcen frei.
 
 ## <a name="requirements"></a>Anforderungen  
 
-**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
 **Header:** WMINet_Utils.idl  
   

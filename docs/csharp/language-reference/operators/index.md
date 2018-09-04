@@ -19,11 +19,11 @@ helpviewer_keywords:
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 ms.openlocfilehash: 30e4942934e5d65b214d24a0948f70169d625485
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461075"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507248"
 ---
 # <a name="c-operators"></a>C#-Operatoren
 C# bietet viele Operatoren, bei denen es sich um Symbole handelt, die angeben, welche Operationen (Mathematik, Indizierung, Funktionsaufruf usw.) in einem Ausdruck ausgeführt werden. Sie können viele Operatoren [überladen](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md), um ihre Bedeutung zu ändern, wenn sie auf einen benutzerdefinierten Typ angewendet werden.  

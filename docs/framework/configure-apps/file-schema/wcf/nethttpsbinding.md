@@ -3,11 +3,11 @@ title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
 ms.openlocfilehash: 2dbcdbe7fff758bab0e932817feddab398ed9ed1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466555"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526503"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Stellt eine Bindung, die ein Windows Communication Foundation (WCF)-Dienst verwenden können, zum Konfigurieren und Verfügbarmachen von Endpunkten, die über HTTPS kommunizieren können. Bei Verwendung mit einem Duplexvertrag werden WebSockets verwendet; andernfalls wird HTTPS verwendet.  
