@@ -2,12 +2,12 @@
 title: SQL Server-Funktionen und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: e19cec01cb749968b051541e78ee8c9af5cbb333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2747af4ee2937f5b5d26217df5eb45c806606ac5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356567"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658872"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Funktionen und ADO.NET
 In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entwicklung von Datenbankanwendungen mit ADO.NET beschrieben.  
@@ -16,7 +16,7 @@ In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entw
   
  **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1.  [Entwicklung (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=115245)  
+1.  [Entwicklung (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Aufzählen von SQL Server-Instanzen (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  
@@ -51,4 +51,4 @@ In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entw
  [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

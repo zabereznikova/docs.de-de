@@ -3,11 +3,11 @@ title: Dateiinformationen können nicht abgefragt werden, wenn die Datei nicht v
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
 ms.openlocfilehash: 698d5ee08d470d846e2d13b3793be62a3699f807
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403204"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561733"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Dateiinformationen können nicht abgefragt werden, wenn die Datei nicht vorhanden ist.
 Es wurde versucht, ein <xref:System.IO.FileInfo> -Objekt nach Informationen zu einer Datei abzufragen, die nicht vorhanden ist. Dies liegt in der Regel an einem Fehler bei der Angabe des Dateinamens.  

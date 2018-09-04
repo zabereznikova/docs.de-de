@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398987"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564716"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Gewusst wie: Aktivieren von WIF für eine WCF-Webdienstanwendung
 ## <a name="applies-to"></a>Gilt für  
@@ -19,7 +19,7 @@ ms.locfileid: "33398987"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Zusammenfassung  
- In dieser Vorgehensweise werden ausführliche schrittweise Prozeduren zum Aktivieren von WIF in einem WCF-Webdienst vorgestellt. Sie enthält auch Anweisungen für Tests der Anwendung, mit denen überprüft werden kann, ob der Webdienst Ansprüche ordnungsgemäß darstellt, wenn die Anwendung ausgeführt wird. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann auf der folgenden Seite heruntergeladen werden: [Identity and Access Tool (Identitäts- und Zugriffstool)](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ In dieser Vorgehensweise werden ausführliche schrittweise Prozeduren zum Aktivieren von WIF in einem WCF-Webdienst vorgestellt. Sie enthält auch Anweisungen für Tests der Anwendung, mit denen überprüft werden kann, ob der Webdienst Ansprüche ordnungsgemäß darstellt, wenn die Anwendung ausgeführt wird. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann auf der folgenden Seite heruntergeladen werden: [Identity and Access Tool (Identitäts- und Zugriffstool)](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Inhalt  
   

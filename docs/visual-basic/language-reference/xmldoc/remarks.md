@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 6e4e280760b9238fdc403ac5fe586743334e4c69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97fca8758d9c21ac0b8f15bf9d5831750fbabe77
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598186"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557075"
 ---
 # <a name="ltremarksgt-visual-basic"></a>&lt;"Hinweise"&gt; (Visual Basic)
 Gibt einen Abschnitt "Hinweise" für das Element an.  
@@ -26,16 +26,16 @@ Gibt einen Abschnitt "Hinweise" für das Element an.
  Eine Beschreibung des Members  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `<remarks>` -Tag, um Informationen über einen Typ, ergänzen die Informationen, die mit angegebenen hinzufügen [ \<summary >](../../../visual-basic/language-reference/xmldoc/summary.md).  
+ Verwenden der `<remarks>` Tag, das Hinzufügen von Informationen zu einem Typ, die mit angegebene Informationen ergänzen [ \<summary >](../../../visual-basic/language-reference/xmldoc/summary.md).  
   
- Diese Informationen werden im Objektkatalog angezeigt. Informationen über den Objektkatalog finden Sie unter [Anzeigen der Codestruktur](/visualstudio/ide/viewing-the-structure-of-code).  
+ Diese Informationen werden im Objektkatalog angezeigt. Weitere Informationen zu den Objektkatalog, finden Sie unter [Anzeigen der Codestruktur](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) kompiliert werden.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `<remarks>` -Tag erläutert, was die `UpdateRecord` Methode hat.  
+ Dieses Beispiel verwendet die `<remarks>` -Tag erläutert, was die `UpdateRecord` Methode.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)

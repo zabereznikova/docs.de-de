@@ -2,28 +2,28 @@
 title: Oracle-LOBs
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 04789b385d7a956b65b7cd99594fc92001183af3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560216"
 ---
 # <a name="oracle-lobs"></a>Oracle-LOBs
-Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleLob> -Klasse, die verwendet wird, um das Arbeiten mit Oracle- **LOB** Datentypen.  
+Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleLob> -Klasse, die verwendet wird, um das Arbeiten mit Oracle- **LOB** -Datentypen.  
   
- Ein **OracleLob** möglicherweise eine der folgenden <xref:System.Data.OracleClient.OracleType> -Datentypen:  
+ Ein **OracleLob** möglicherweise eines der folgenden <xref:System.Data.OracleClient.OracleType> -Datentypen:  
   
 |Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |**Blob**|Ein Oracle **BLOB** -Datentyp, der Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält. Dies ordnet eine **Array** des Typs **Byte**.|  
-|**Clob**|Ein Oracle **CLOB** -Datentyp, Zeichendaten, basierend auf den Standardzeichen enthält, die auf dem Server, mit einer maximalen Größe von 4 Gigabyte festgelegt. Entspricht dem **Zeichenfolge**.|  
-|**NClob**|Ein Oracle **NCLOB** -Datentyp, Zeichendaten enthält, auf Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem **Zeichenfolge**.|  
+|**Clob**|Ein Oracle **CLOB** -Datentyp, der Zeichendaten, basierend auf dem Standardzeichensatz festgelegt wird, auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem **Zeichenfolge**.|  
+|**NClob**|Ein Oracle **NCLOB** -Datentyp, der Zeichendaten enthält auf Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem **Zeichenfolge**.|  
   
- Ein **OracleLob** unterscheidet sich von einer <xref:System.Data.OracleClient.OracleBFile> darin, dass die Daten auf dem Server statt in einer physischen Datei im Betriebssystem gespeichert ist. Sie können auch ein Objekt mit Lese-/ Schreibzugriff sein, im Gegensatz zu einer **OracleBFile**, die immer schreibgeschützt ist.  
+ Ein **OracleLob** unterscheidet sich von einem <xref:System.Data.OracleClient.OracleBFile> , da die Daten auf dem Server statt in einer physischen Datei im Betriebssystem gespeichert ist. Es kann ein Objekt mit Lese-/ Schreibzugriff, auch sein, im Gegensatz zu einer **OracleBFile**, die immer schreibgeschützt ist.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Erstellen, Abrufen und Schreiben in ein LOB  
- Im folgenden C#-Beispiel wird veranschaulicht, wie Sie erstellen LOBs in einer Oracle-Tabelle, und klicken Sie dann abrufen und in Form von geschrieben **OracleLob** Objekte. Im Beispiel veranschaulicht die Verwendung der <xref:System.Data.OracleClient.OracleDataReader> Objekt und die **OracleLob** **lesen** und **schreiben** Methoden. Im Beispiel wird Oracle **BLOB**, **CLOB**, und **NCLOB** Datentypen.  
+ Im folgenden C# -Code wird veranschaulicht, wie Sie LOBs in einer Oracle-Tabelle erstellen, und klicken Sie dann abrufen und in sie schreiben, in Form von **OracleLob** Objekte. Das Beispiel veranschaulicht die Verwendung der <xref:System.Data.OracleClient.OracleDataReader> Objekt und die **OracleLob** **lesen** und **schreiben** Methoden. Im Beispiel wird Oracle **BLOB**, **CLOB**, und **NCLOB** -Datentypen.  
   
 ```csharp  
 using System;  
@@ -249,4 +249,4 @@ tx.Commit();
   
 ## <a name="see-also"></a>Siehe auch  
  [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

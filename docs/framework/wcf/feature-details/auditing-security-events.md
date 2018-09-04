@@ -6,28 +6,28 @@ helpviewer_keywords:
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bad963db8d0e3644204824645f702c7b7b84963d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558383"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
-Mit der Windows Communication Foundation (WCF) erstellte Anwendungen können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
+Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
   
  Mithilfe der Überwachung können Administratoren bereits stattgefundene oder gerade laufende Angriffe erkennen. Darüber hinaus können Entwickler mittels Überwachung sicherheitsrelevante Probleme debuggen. Falls beispielsweise berechtigten Benutzern versehentlich aufgrund eines Fehlers in der Konfiguration der Autorisierung oder Überprüfungsrichtlinie der Zugriff verweigert wird, kann die Ursache für diesen Fehler schnell durch Überprüfung des Ereignisprotokolls erkannt und isoliert werden.  
   
- Weitere Informationen zu WCF-Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung WCF finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Weitere Informationen zu WCF-Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md). Weitere Informationen zur Programmierung von WCF finden Sie unter [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Überwachungsstufe und Überwachungsverhalten  
  Es gibt zwei Stufen für die Sicherheitsüberwachung:  
   
 -   Autorisierung auf Dienstebene: Es wird ein Aufrufer autorisiert.  
   
--   Nachrichtenebene, in denen WCF Gültigkeit der Nachricht überprüft und authentifiziert den Aufrufer.  
+-   Auf der Nachrichtenebene, in der WCF für die Gültigkeit der Nachricht überprüft und authentifiziert den Aufrufer.  
   
- Sie können beide Überwachungsstufen auf Erfolg oder Fehler, die so genannte Überprüfen der *Überwachungsverhalten*.  
+ Sie können beide Überwachungsstufen auf Erfolg oder Fehler, die so genannte überprüfen die *Überwachungsverhalten*.  
   
 ## <a name="audit-log-location"></a>Auswahl des Überwachungsprotokolls  
  Nachdem Überwachungsstufe und Überwachungsverhalten festgelegt wurden, können Sie (oder ein Administrator) angeben, in welches Überwachungsprotokoll geschrieben werden soll. Zur Auswahl stehen drei Optionen: Standard (Default), Anwendung (Application) und Sicherheit (Security). Wenn Sie Standard auswählen, ist das tatsächlich verwendete Protokoll vom verwendeten Betriebssystem abhängig und davon, ob auf diesem System in das Sicherheitsprotokoll geschrieben werden darf. Weitere Informationen finden Sie im Abschnitt "Betriebssystem" weiter unten in diesem Thema.  
@@ -56,7 +56,7 @@ Mit der Windows Communication Foundation (WCF) erstellte Anwendungen können mit
  Ein Beispiel für das Einrichten einer Anwendung, Überwachungsereignisse zu protokollieren, finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Konfiguration  
- Sie können auch Configuration an Überwachungsverhalten durch Hinzufügen einer [ \<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) unter der [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Sie müssen das Element unter Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) wie im folgenden Code gezeigt.  
+ Sie können auch die Konfiguration verwenden, an Überwachungsverhalten durch Hinzufügen einer [ \<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) unter der [ \<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Sie müssen das Element unter Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) wie im folgenden Code gezeigt.  
   
 ```xml  
 <configuration>  
@@ -78,7 +78,7 @@ Mit der Windows Communication Foundation (WCF) erstellte Anwendungen können mit
  Falls bei aktivierter Überwachung `auditLogLocation` nicht angegeben wird, lautet der standardmäßige Protokollname "Security" bei Plattformen, auf denen in das Sicherheitsprotokoll geschrieben werden darf. Andernfalls wird "Application" verwendet. Das Schreiben in das Sicherheitsprotokoll wird nur von den Betriebssystemen [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt. Weitere Informationen finden Sie im Abschnitt "Betriebssystem" weiter unten in diesem Thema.  
   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
- Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen finden Sie unter den Microsoft Support-Artikel anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige in Windows XP unter [anzeigen und Verwalten von Ereignisprotokollen in der Ereignisanzeige in Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Wenn böswillige Benutzer erkennen, dass die Überwachung aktiviert ist, können diese Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl. Legen Sie die <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` fest, und verwenden Sie die Eigenschaften der Ereignisanzeige zum Steuern des Überwachungsverhaltens, um diese Gefahr zu umgehen. Weitere Informationen finden Sie unter den Microsoft Support-Artikel zum Anzeigen und Verwalten von Ereignisprotokollen mithilfe der Ereignisanzeige in Windows XP unter [anzeigen und Verwalten von Ereignisprotokollen in der Ereignisanzeige in Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sind die in das Anwendungsprotokoll geschriebenen Überwachungsereignisse für alle authentifizierten Benutzer sichtbar.  
   
@@ -108,4 +108,4 @@ Mit der Windows Communication Foundation (WCF) erstellte Anwendungen können mit
  [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Sicherheitsmodell für Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

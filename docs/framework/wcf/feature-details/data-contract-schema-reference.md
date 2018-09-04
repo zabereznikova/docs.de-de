@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554692"
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer-Zuordnungen  
- Die `DataContractSerializer` ordnet CLR-Typen in XSD, wenn Metadaten aus einem Windows Communication Foundation (WCF)-Dienst mithilfe eines metadatenendpunkts exportiert wird oder die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Weitere Informationen finden Sie unter [Datenvertragsserialisierer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ Die `DataContractSerializer` ordnet CLR-Typen in XSD, wenn Metadaten exportiert werden, von einem Windows Communication Foundation (WCF)-Dienst mithilfe eines metadatenendpunkts oder dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Weitere Informationen finden Sie unter [Data Contract Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  Der `DataContractSerializer` ordnet XSD auch dann CLR-Typen zu, wenn Svcutil.exe für den Zugriff auf WSDL- (Web Services Description Language) oder XSD-Dokumente und für die Generierung von Vertragsdateien für Dienste oder Clients verwendet wird.  
   
@@ -32,7 +32,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 ## <a name="general-information"></a>Allgemeine Informationen  
   
--   Der Schemanamespace wird unter [XML-Schema](http://go.microsoft.com/fwlink/?LinkId=95475)beschrieben. In diesem Dokument wird das Präfix "xs" verwendet.  
+-   Der Schemanamespace wird unter beschrieben [XML-Schema](https://go.microsoft.com/fwlink/?LinkId=95475). In diesem Dokument wird das Präfix "xs" verwendet.  
   
 -   Alle Attribute mit einem Nicht-Schema-Namespace werden ignoriert.  
   
@@ -44,10 +44,10 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |---------------|------------------|  
 |`attributeFormDefault`|Ignoriert.|  
 |`blockDefault`|Ignoriert.|  
-|`elementFormDefault`|Muss qualifiziert sein. Damit ein Schema vom `DataContractSerializer`unterstützt wird, müssen alle Elemente qualifiziert werden. Dies kann erreicht werden, indem entweder xs:schema/@elementFormDefault auf "qualified" oder durch Festlegen von xs:element/@form auf jeder einzelnen Elementdeklaration auf "qualified".|  
+|`elementFormDefault`|Muss qualifiziert sein. Damit ein Schema vom `DataContractSerializer`unterstützt wird, müssen alle Elemente qualifiziert werden. Dies kann erreicht werden, indem entweder xs:schema/@elementFormDefault "qualified" oder durch Festlegen von xs:element/@form auf jeder einzelnen Elementdeklaration auf "qualified".|  
 |`finalDefault`|Ignoriert.|  
 |`Id`|Ignoriert.|  
-|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Nicht mit der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Nicht möglich, der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|Ignoriert.|  
   
 ### <a name="xsschema-contents"></a>\<xs: Schema >: Inhalt  
@@ -142,7 +142,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`minOccurs`|Wird der <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> -Eigenschaft eines Datenmembers zugeordnet (`IsRequired` hat den Wert true, wenn `minOccurs` &amp;#160;1 ist).|  
 |`nillable`|Beeinflusst die Typzuordnung. Siehe Zuordnung von Typen zu primitivem Typen.|  
   
-### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs: Element > mit MaxOccurs > 1 innerhalb einer \<xs: Sequence > (Auflistungen)  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs: Element > mit MaxOccurs > 1 innerhalb einer \<xs: Sequence > (Sammlungen)  
   
 -   Wird einem <xref:System.Runtime.Serialization.CollectionDataContractAttribute>zugeordnet.  
   
@@ -200,15 +200,15 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`keyref`|Ignoriert.|  
 |(leer)|Unterstützt.|  
   
- \* Bei Verwendung der `simpleType` und `complexType,` Zuordnung von anonymen Typen entspricht derjenigen nicht anonyme Typen, außer dass es keine anonymen Datenverträge gibt, weshalb ein benannter Datenvertrag erstellt wird, dessen generierter Name von dem Elementnamen abgeleitet. Die folgende Liste enthält die Regeln für anonyme Typen:  
+ \* Bei Verwendung der `simpleType` und `complexType,` Zuordnung von anonymen Typen ist das gleiche wie nicht anonyme Typen, die mit dem Unterschied, dass es keine anonymen Datenverträge gibt, und damit ein benannter Datenvertrag erstellt wird, können Sie auch mit einem generierten Namen, die von dem Elementnamen abgeleitet. Die folgende Liste enthält die Regeln für anonyme Typen:  
   
--   WCF-Implementierungsdetail: Wenn die `xs:element` -Name keine Punkte, die der anonyme Typ einem inneren Typ des äußeren datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig (kein innerer Typ).  
+-   WCF-Implementierungsdetail: Wenn die `xs:element` Namen keine Punkte enthält, der anonyme Typ einem inneren Typ des äußeren datenvertragstyps zugeordnet. Wenn der Name Punkte enthält, ist der resultierende Datenvertragstyp unabhängig (kein innerer Typ).  
   
 -   Der generierte Datenvertragsname des inneren Typs setzt sich zusammen aus dem Namen des äußeren Typs, gefolgt von einem Punkt, dem Namen des Elements und der Zeichenfolge "Type".  
   
 -   Ist ein Datenvertrag mit diesem Namen bereits vorhanden, wird dem Namen&#160;"1", "2", "3" usw. angehängt, um ihn eindeutig zu machen.  
   
-## <a name="simple-types---xssimpletype"></a>Einfache Typen – \<simpleType >  
+## <a name="simple-types---xssimpletype"></a>Einfache Typen: \<simpleType >  
   
 ### <a name="xssimpletype-attributes"></a>\<xs:simpleType>: attributes  
   
@@ -232,7 +232,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Einfache Typeinschränkungen von `xs:string` , die keine anderen Einschränkungsfacets als `xs:enumeration` haben, werden Enumerationsdatenverträgen zugeordnet.  
   
--   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. Weitere Informationen zur Zuordnung primitiver Typ finden Sie unter Zuordnung von Typen zu primitiven Typen.  
+-   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. Weitere Informationen zum Zuordnen von primitiven Typ finden Sie in der Zuordnung von Typen zu primitivem.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >: Attribute  
   
@@ -478,7 +478,7 @@ public class Employee : Person
 |--------------|---------------|  
 |`anyType`|<xref:System.Object>.|  
 |`anySimpleType`|<xref:System.String>|  
-|`duration`|<xref:System.TimeSpan>.|  
+|`duration`|<xref:System.TimeSpan>|  
 |`dateTime`|<xref:System.DateTime>.|  
 |`dateTimeOffset`|<xref:System.DateTime> und <xref:System.TimeSpan> für den Offset. Siehe DateTimeOffset-Serialisierung (unten).|  
 |`time`|<xref:System.String>|  
@@ -491,10 +491,10 @@ public class Employee : Person
 |`boolean`|<xref:System.Boolean>|  
 |`base64Binary`|<xref:System.Byte> -Array.|  
 |`hexBinary`|<xref:System.String>|  
-|`float`|<xref:System.Single>.|  
-|`double`|<xref:System.Double>.|  
-|`anyURI`|<xref:System.Uri>.|  
-|`QName`|<xref:System.Xml.XmlQualifiedName>.|  
+|`float`|<xref:System.Single>|  
+|`double`|<xref:System.Double>|  
+|`anyURI`|<xref:System.Uri>|  
+|`QName`|<xref:System.Xml.XmlQualifiedName>|  
 |`string`|<xref:System.String>|  
 |`normalizedString`|<xref:System.String>|  
 |`token`|<xref:System.String>|  
@@ -508,23 +508,23 @@ public class Employee : Person
 |`ENTITIES`|<xref:System.String>|  
 |`NMTOKEN`|<xref:System.String>|  
 |`NMTOKENS`|<xref:System.String>|  
-|`decimal`|<xref:System.Decimal>.|  
-|`integer`|<xref:System.Int64>.|  
-|`nonPositiveInteger`|<xref:System.Int64>.|  
-|`negativeInteger`|<xref:System.Int64>.|  
-|`long`|<xref:System.Int64>.|  
-|`int`|<xref:System.Int32>.|  
-|`short`|<xref:System.Int16>.|  
-|`Byte`|<xref:System.SByte>.|  
-|`nonNegativeInteger`|<xref:System.Int64>.|  
-|`unsignedLong`|<xref:System.UInt64>.|  
-|`unsignedInt`|<xref:System.UInt32>.|  
-|`unsignedShort`|<xref:System.UInt16>.|  
-|`unsignedByte`|<xref:System.Byte>.|  
+|`decimal`|<xref:System.Decimal>|  
+|`integer`|<xref:System.Int64>|  
+|`nonPositiveInteger`|<xref:System.Int64>|  
+|`negativeInteger`|<xref:System.Int64>|  
+|`long`|<xref:System.Int64>|  
+|`int`|<xref:System.Int32>|  
+|`short`|<xref:System.Int16>|  
+|`Byte`|<xref:System.SByte>|  
+|`nonNegativeInteger`|<xref:System.Int64>|  
+|`unsignedLong`|<xref:System.UInt64>|  
+|`unsignedInt`|<xref:System.UInt32>|  
+|`unsignedShort`|<xref:System.UInt16>|  
+|`unsignedByte`|<xref:System.Byte>|  
 |`positiveInteger`|<xref:System.Int64>|  
   
 ## <a name="iserializable-types-mapping"></a>Zuordnung von ISerializable-Typen  
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. `DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Z. B. die `DataContractSerializer` ordnet <xref:System.Exception> die folgenden XSD-Typ in der http://schemas.datacontract.org/2004/07/System Namespace.  
+ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. `DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Z. B. die `DataContractSerializer` ordnet <xref:System.Exception> in den folgenden XSD-Typ in der http://schemas.datacontract.org/2004/07/System Namespace.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -536,7 +536,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann. Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer` -Instanz sein. Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Das optionale, im Serialisierungsschema des Datenvertrags deklarierte Attribut `ser:FactoryType` verweist auf eine Factoryklasse, die den Typ deserialisieren kann. Die Factoryklasse muss Teil der Auflistung bekannter Typen der verwendeten `DataContractSerializer` -Instanz sein. Weitere Informationen zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract-Serialisierungsschema  
  Eine Anzahl der vom `DataContractSerializer` exportierten Schemas verwendet Typen, Elemente und Attribute eines speziellen Datenvertrags-Serialisierungsnamespace:  

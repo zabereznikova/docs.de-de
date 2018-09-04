@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759542"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659388"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurieren von Parametern und Parameterdatentypen
 Befehlsobjekte verwenden Parameter, um Werte an SQL-Anweisungen oder gespeicherte Prozeduren zu übergeben, und ermöglichen so Typüberprüfungen und Validierungen. Im Unterschied zu Befehlstext wird die Parametereingabe als Literalwert und nicht als ausführbarer Code behandelt. Dies hilft beim Schutz vor SQL Injection-Angriffen, bei denen ein Angreifer einen SQL-Befehl, der die Sicherheit auf dem Server gefährdet, in eine SQL-Anweisung einschleust.  
   
- Parametrisierte Befehle können außerdem die Leistung bei der Abfrageausführung verbessern, da sie den Datenbankserver dabei unterstützen, den eingehenden Befehl mit dem richtigen zwischengespeicherten Abfrageplan abzugleichen. Weitere Informationen finden Sie unter [Zwischenspeichern und Wiederverwenden von Ausführungsplänen](http://go.microsoft.com/fwlink/?LinkId=120424) und [Parameter und Wiederverwendung von Ausführungsplänen](http://go.microsoft.com/fwlink/?LinkId=120423) in der SQL Server-Onlinedokumentation. Parametrisierte Befehle sind aber nicht nur aus Sicherheits- und Leistungsgründen vorteilhaft, sondern sie stellen auch eine bequeme Methode zum Organisieren von Werten dar, die an eine Datenquelle übergeben werden.  
+ Parametrisierte Befehle können außerdem die Leistung bei der Abfrageausführung verbessern, da sie den Datenbankserver dabei unterstützen, den eingehenden Befehl mit dem richtigen zwischengespeicherten Abfrageplan abzugleichen. Weitere Informationen finden Sie unter [Ausführung planen Zwischenspeichern und Wiederverwenden von](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) und [Parameter und Wiederverwendung von Ausführungsplänen](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Parametrisierte Befehle sind aber nicht nur aus Sicherheits- und Leistungsgründen vorteilhaft, sondern sie stellen auch eine bequeme Methode zum Organisieren von Werten dar, die an eine Datenquelle übergeben werden.  
   
  Ein <xref:System.Data.Common.DbParameter> -Objekt kann mithilfe des zugehörigen Konstruktors erstellt werden, oder es wird durch Aufrufen der <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> -Methode der `Add` -Auflistung zur <xref:System.Data.Common.DbParameterCollection> hinzugefügt. Die `Add` -Methode verwendet als Eingabe je nach Datenanbieter Konstruktorargumente oder ein vorhandenes Parameterobjekt.  
   
@@ -48,7 +48,7 @@ Befehlsobjekte verwenden Parameter, um Werte an SQL-Anweisungen oder gespeichert
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|Bit|Boolesch|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte[]|Binär|VarBinary`.` diese implizite Konvertierung schlägt fehl, wenn das Bytearray ist größer als die maximale Größe eines varbinary 8000 Bytes. Legen Sie für Bytearrays mit mehr als 8000 Bytes explizit die <xref:System.Data.SqlDbType>.|VarBinary|Binär|Raw|  
+|byte[]|Binär|VarBinary`.` diese implizite Konvertierung schlägt fehl, wenn das Bytearray größer als die maximale Größe eines varbinary ist, 8000 Byte. Legen Sie für Bytearrays mit mehr als 8000 Bytes explizit den <xref:System.Data.SqlDbType>.|VarBinary|Binär|Raw|  
 |<xref:System.Char>|``|Das Ableiten von <xref:System.Data.SqlDbType> aus char wird nicht unterstützt.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|"DateTimeOffset" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus DateTimeOffset wird erst ab SQL Server 2008 unterstützt.|||DateTime|  
@@ -56,7 +56,7 @@ Befehlsobjekte verwenden Parameter, um Werte an SQL-Anweisungen oder gespeichert
 |<xref:System.Double>|Double|Float|Double|Double|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Nummer|  
 |<xref:System.Object>|Objekt|Variante|Variante|Das Ableiten von OdbcType aus Object wird nicht unterstützt.|Blob|  
@@ -90,10 +90,10 @@ Befehlsobjekte verwenden Parameter, um Werte an SQL-Anweisungen oder gespeichert
  Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuilder-Objekten](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Verwenden von Parametern mit einem "SqlCommand" und einer gespeicherten Prozedur  
- Gespeicherte Prozeduren bieten zahlreiche Vorteile in datengesteuerten Anwendungen. Mit gespeicherten Prozeduren können Datenbankoperationen in einem einzelnen Befehl zusammengefasst, für die beste Leistung optimiert und mit zusätzlicher Sicherheit ausgestattet werden. Obwohl eine gespeicherte Prozedur aufgerufen werden kann, übergeben Sie den Namen der gespeicherten Prozedur gefolgt von Parameterargumenten als SQL-Anweisung, mit der <xref:System.Data.Common.DbCommand.Parameters%2A> Auflistung von der [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> Objekt können Sie gespeicherte Definition Prozedurparameter, sowie zum Zugriff auf Ausgabeparameter und Rückgabewerte.  
+ Gespeicherte Prozeduren bieten zahlreiche Vorteile in datengesteuerten Anwendungen. Mit gespeicherten Prozeduren können Datenbankoperationen in einem einzelnen Befehl zusammengefasst, für die beste Leistung optimiert und mit zusätzlicher Sicherheit ausgestattet werden. Während eine gespeicherte Prozedur aufgerufen werden kann, übergeben Sie den Namen der gespeicherten Prozedur gefolgt von Parameterargumenten als SQL-Anweisung, mit der <xref:System.Data.Common.DbCommand.Parameters%2A> Auflistung von der [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> -Objekt ermöglicht es Ihnen genauere Definition der gespeicherten Parameter der Prozedur und zum Zugriff auf Ausgabeparameter und Rückgabewerte.  
   
 > [!NOTE]
->  Parametrisierte Anweisungen werden auf dem Server mit `sp_executesql,` ausgeführt, sodass die Wiederverwendung von Abfrageplänen möglich ist. Lokale Cursor oder Variablen im `sp_executesql` -Batch sind für den Batch, der `sp_executesql`aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der `sp_executesql` -Anweisung gültig. Weitere Informationen dazu finden Sie in der SQL Server-Onlinedokumentation.  
+> Parametrisierte Anweisungen werden auf dem Server mit `sp_executesql,` ausgeführt, sodass die Wiederverwendung von Abfrageplänen möglich ist. Lokale Cursor oder Variablen im `sp_executesql` -Batch sind für den Batch, der `sp_executesql`aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der `sp_executesql` -Anweisung gültig. Weitere Informationen finden Sie unter [Sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
   
  Wenn Sie Parameter mit einem <xref:System.Data.SqlClient.SqlCommand> verwenden, um eine gespeicherte SQL Server-Prozedur auszuführen, müssen die der <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> -Auflistung hinzugefügten Parameternamen mit den Namen der Parametermarkierungen in der gespeicherten Prozedur übereinstimmen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server unterstützt keine Fragezeichenplatzhalter (?) für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. Er behandelt die Parameter in der gespeicherten Prozedur als benannte Parameter und sucht nach den entsprechenden Parametermarkierungen. Nehmen wir z. B. an, die gespeicherte Prozedur `CustOrderHist` ist mit einem Parameter mit dem Namen `@CustomerID`definiert. Wenn Ihr Code die gespeicherte Prozedur ausführt, muss er ebenfalls einen Parameter mit dem Namen `@CustomerID`verwenden.  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter-Parameter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

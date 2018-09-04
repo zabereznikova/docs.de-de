@@ -2,15 +2,15 @@
 title: Abrufen und Ändern von Daten in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 0c970c01352aecf6a25bac1b89b9f79c96f80d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361542"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562562"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
-Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.NET bilden eine Brücke zwischen einer Anwendung und einer Datenquelle können Sie zum Ausführen von Befehlen sowie zum Abrufen von Daten mithilfe einer **DataReader** oder ein **"DataAdapter"** . Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET aktualisieren von Daten werden mithilfe der **"DataAdapter"** und <xref:System.Data.DataSet>, und **Befehl** Objekte und u. u. auch Transaktionen.  
+Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.NET bilden eine Brücke zwischen einer Anwendung und einer Datenquelle, sodass Sie zum Ausführen von Befehlen sowie zum Abrufen von Daten mithilfe einer **DataReader** oder **DataAdapter** . Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET aktualisieren von Daten werden mithilfe der **DataAdapter** und <xref:System.Data.DataSet>, und **Befehl** Objekte und u. u. auch Transaktionen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
@@ -32,7 +32,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  Enthält Themen, in denen beschrieben wird, wie lokale Transaktionen und verteilte Transaktionen ausgeführt werden und wie Sie mit vollständiger Parallelität arbeiten.  
   
  [Abrufen von Identity- oder Autonumber-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Enthält ein Beispiel für die Zuordnung der Werte für generiert eine **Identität** Spalte in einer SQL Server-Tabelle oder für eine **Autonumber** Feld in einer Microsoft Access-Tabelle auf eine Spalte einer eingefügten Zeile in einer Tabelle. Erläutert das Zusammenführen von Identitätswerten in einer `DataTable`.  
+ Enthält ein Beispiel der Zuordnung die Werte für generiert eine **Identität** Spalte in einer SQL Server-Tabelle oder für eine **Autonumber** Feld in einer Microsoft Access-Tabelle, auf eine Spalte einer eingefügten Zeile in einer Tabelle. Erläutert das Zusammenführen von Identitätswerten in einer `DataTable`.  
   
  [Abrufen von Binärdaten](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  Beschreibt, wie zum Abrufen von Binärdaten oder große Datenstrukturen mit `CommandBehavior`.`SequentialAccess` So ändern Sie das Standardverhalten einer `DataReader`.  
@@ -56,11 +56,11 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  Beschreibt die [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Unterstützung für die asynchrone Programmierung.  
   
  [SqlClient-Streamingunterstützung](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Erläutert, wie Sie Anwendungen, Streamen von Daten aus SQL Server schreiben, ohne sie vollständig in den Arbeitsspeicher geladen.  
+ Erläutert, wie Sie Anwendungen, Streamen von Daten aus SQL Server schreiben, ohne dass es vollständig in den Arbeitsspeicher geladen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: HTTP-Bestätigungskanal
 ms.date: 03/30/2017
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d83f3aa590471aa3d83b8f7bd1464ec1e6e106fc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502831"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559542"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP-Bestätigungskanal
 Der HTTP-Bestätigungskanal ist ein Beispiel für einen geschichteten Kanal, der das unidirektionale Nachrichtenmuster ändert, sodass nicht automatisch beim Eingang eine Bestätigung gesendet wird, sondern ein Dienst eingehende Nachrichten bestätigen oder ablehnen kann. Der HTTP-Bestätigungskanal ermöglicht es auch, dass der Dienst die Bestätigung verzögern kann, bis auf Geschäftsebene garantiert werden kann, dass die Nachricht verarbeitet wird.  
@@ -28,9 +28,9 @@ Der HTTP-Bestätigungskanal ist ein Beispiel für einen geschichteten Kanal, der
   
 2.  Öffnen der **HttpAckChannel** Lösung.  
   
-3.  Starten Sie eine neue Instanz der dem **Service** Projekt, indem Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer**, auswählen und **Debuggen**, **neue Instanz starten** aus dem Kontextmenü.  
+3.  Starten Sie eine neue Instanz der der **Service** Projekt mit der rechten Maustaste das Projekt im **Projektmappen-Explorer**, und wählen **Debuggen**, **neue Instanz starten** aus dem Kontextmenü.  
   
-4.  Starten Sie eine neue Instanz der dem **Client** Projekt, indem Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer**, auswählen und **Debuggen**, und **neue Instanz starten** aus dem Kontextmenü.  
+4.  Starten Sie eine neue Instanz der der **Client** Projekt mit der rechten Maustaste das Projekt im **Projektmappen-Explorer**, und wählen **Debuggen**, und **neue Instanz starten** aus dem Kontextmenü.  
   
 5.  Sobald der Dienst gestartet wurde, drücken Sie im Clientfenster auf die EINGABETASTE, damit der Client eine Nachricht an den Dienst sendet.  
   
@@ -43,6 +43,6 @@ Der HTTP-Bestätigungskanal ist ein Beispiel für einen geschichteten Kanal, der
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

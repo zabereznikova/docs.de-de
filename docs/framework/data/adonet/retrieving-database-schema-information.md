@@ -2,21 +2,21 @@
 title: Abrufen von Datenbankschemainformationen
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 1ac39a556fd7539550b12cb71b701c4bd3224a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359688"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562703"
 ---
 # <a name="retrieving-database-schema-information"></a>Abrufen von Datenbankschemainformationen
 Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abgerufen. Schemasuche können Anwendungen anfordern, dass verwaltete Anbieter suchen und Zurückgeben von Informationen über das Datenbankschema, auch bekannt als *Metadaten*, einer bestimmten Datenbank. Verschiedene Schemaelemente von Datenbanken (z. B. Tabellen, Spalten und gespeicherte Prozeduren) werden über Schemaauflistungen verfügbar gemacht. Jede Schemaauflistung enthält eine Vielzahl von Schemainformationen, die für den verwendeten Anbieter spezifisch sind.  
   
- Jede von .NET Framework verwalteten Anbieter implementieren die **GetSchema** Methode in der **Verbindung** Klasse und die Schemainformationen, die von zurückgegeben wird das **GetSchema**Methode kommt in Form einer <xref:System.Data.DataTable>. Die **GetSchema** Methode ist eine überladene Methode, die optionale Parameter zum Angeben der zurückzugebenden schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
+ Jeder von .NET Framework verwalteten Anbieter implementieren die **GetSchema** -Methode in der die **Verbindung** -Klasse, und die Schemainformationen, die von zurückgegeben wird das **GetSchema**Methode kommt in Form einer <xref:System.Data.DataTable>. Die **GetSchema** Methode ist eine überladene Methode, die optionale Parameter, die zum Angeben der zurückzugebenden schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
   
- Geben Sie die .NET Framework-Datenanbieter für OLE DB, ODBC, Oracle und SqlClient eine **GetSchemaTable** -Methode, die eine "DataTable", die die Spaltenmetadaten beschreibt gibt die **DataReader**.  
+ Geben Sie die .NET Framework-Datenanbieter für OLE DB, ODBC, Oracle und SqlClient eine **GetSchemaTable** -Methode, die eine "DataTable", beschreibt die Spaltenmetadaten des gibt die **DataReader**.  
   
- Der .NET Framework-Datenanbieter für OLE DB stellt außerdem Schemainformationen mithilfe der <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A>-Methode des <xref:System.Data.OleDb.OleDbConnection>-Objekts zur Verfügung. Als Argumente **GetOleDbSchemaTable** nimmt eine <xref:System.Data.OleDb.OleDbSchemaGuid> , die die zurückzugebenden Schemainformationen identifiziert, und ein Array von Einschränkungen in diesen zurückgegebenen Spalten. **GetOleDbSchemaTable** gibt eine <xref:System.Data.DataTable> mit den abgefragten Schemainformationen aufgefüllt.  
+ Der .NET Framework-Datenanbieter für OLE DB stellt außerdem Schemainformationen mithilfe der <xref:System.Data.OleDb.OleDbConnection.GetOleDbSchemaTable%2A>-Methode des <xref:System.Data.OleDb.OleDbConnection>-Objekts zur Verfügung. Als Argumente **GetOleDbSchemaTable** nimmt eine <xref:System.Data.OleDb.OleDbSchemaGuid> , die die zurückzugebenden Schemainformationen identifiziert, und ein Array mit Einschränkungen für diese zurückgegebenen Spalten. **GetOleDbSchemaTable** gibt eine <xref:System.Data.DataTable> mit den abgefragten Schemainformationen aufgefüllt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [GetSchema und Schemasammlungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
@@ -73,4 +73,4 @@ Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abge
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

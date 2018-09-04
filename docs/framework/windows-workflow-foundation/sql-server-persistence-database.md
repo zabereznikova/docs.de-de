@@ -3,11 +3,11 @@ title: SQL Server-Persistenzdatenbank
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: 3929148cf6a236db7d226b45da750e8d4ae1d0cc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486765"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557573"
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server-Persistenzdatenbank
 Dieser Abschnitt enthält Details zu öffentlichen Datenbankansichten, die vom SQL-Workflowinstanzspeicher unterstützt werden, und zeigt, wie primitive Instanzdateneigenschaften deserialisiert und wie nicht persistente Instanzen abgefragt werden.  

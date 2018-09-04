@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803740"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558890"
 ---
 # <a name="basic-wcf-programming"></a>Basis-WCF-Programmierung
 In diesem Abschnitt werden die Grundlagen zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlegender Programmierlebenszyklus](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Beschreibt den Lebenszyklus des entwerfen, erstellen und Bereitstellen von WCF-Dienst und Clientanwendungen.  
+ Beschreibt den Lebenszyklus der entwerfen, erstellen und Bereitstellen von WCF-Dienst und Client-Anwendungen.  
   
  [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  Beschreibt, wie ein Dienstvertrag erstellt und eingebunden, ein Nachrichtenaustauschmuster ausgewählt und ein Fehlervertrag festgelegt wird sowie andere grundlegende Aspekte zu Diensten.  
@@ -32,10 +32,10 @@ In diesem Abschnitt werden die Grundlagen zum Erstellen von Windows Communicatio
  Beschreibt die Grundlagen des Hostings eines Diensts in einer Anwendung.  
   
  [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)  
- Beschreibt das Abrufen von Metadaten von Diensten, in WCF-Clientcode zu konvertieren, Behandeln von Sicherheitsproblemen, und erstellen, konfigurieren und Hosten eines WCF-Clients.  
+ Beschreibt das Abrufen von Metadaten aus Diensten, in WCF-Clientcode zu konvertieren, Behandeln von Sicherheitsproblemen zu erstellen, konfigurieren und Hosten eines WCF-Clients.  
   
  [Einführung in die Erweiterbarkeit](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Beschreibt, wie WCF zum Erstellen von benutzerdefinierter Lösungen erweitern.  
+ Beschreibt das Erweitern von WCF, um benutzerdefinierte Lösungen zu erstellen.  
   
  [Schnelleinstieg zur Problembehandlung in WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  Beschreibt einige der üblichsten Probleme, die auftreten können, was Sie tun können, um diese zu beheben, und wo Sie weitere Informationen über das Problem finden.  
@@ -61,7 +61,7 @@ In diesem Abschnitt werden die Grundlagen zum Erstellen von Windows Communicatio
   
  [Windows Communication Foundation-Tools](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation-Beispiele](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation-Beispiele](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Erste Schritte](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

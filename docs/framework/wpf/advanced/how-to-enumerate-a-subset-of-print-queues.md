@@ -9,22 +9,22 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 3e616b3b61b4b1b561d5bdb7e51525f391901a22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543588"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562068"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen
-Eine allgemeine Situation gegenüberstehen (IT) Spezialisten verwalten einen Satz unternehmensweiten der Drucker ist zum Generieren einer Liste von Druckern mit bestimmten Merkmalen. Diese Funktionalität wird bereitgestellt, indem Sie die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode von einer <xref:System.Printing.PrintServer> Objekt und die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration.  
+Eine gängige Situation gegenüberstehen (IT) Experten, die Verwaltung einer unternehmensweiten Gruppe der Drucker ist zum Generieren einer Liste der Drucker mit bestimmten Eigenschaften. Diese Funktionalität wird bereitgestellt, indem die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode eine <xref:System.Printing.PrintServer> Objekt und die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird zuerst im Code erstellen ein Array von Flags, die die Merkmale der Druckerwarteschlangen angeben, die wir auflisten möchten. In diesem Beispiel werden wir Druckwarteschlangen gesucht, die lokal installiert sind, auf dem Druckserver und freigegeben werden. Die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration bietet viele weitere Möglichkeiten.  
+ Der Code zunächst im folgenden Beispiel erstellen ein Array von Flags, die die Merkmale der Druckerwarteschlangen angeben, die wir auflisten möchten. In diesem Beispiel suchen wir nach Druckwarteschlangen, die lokal installiert sind, auf dem Druckerserver und freigegeben werden. Die <xref:System.Printing.EnumeratedPrintQueueTypes> -Enumeration bietet viele weitere Möglichkeiten.  
   
- Anschließend erstellt der Code eine <xref:System.Printing.LocalPrintServer> -Objekt, eine abgeleitete Klasse <xref:System.Printing.PrintServer>. Der lokale Druckerserver ist der Computer, auf dem die Anwendung ausgeführt wird.  
+ Anschließend erstellt der Code eine <xref:System.Printing.LocalPrintServer> Objekt eine abgeleitete Klasse <xref:System.Printing.PrintServer>. Der lokale Druckerserver ist der Computer, auf dem die Anwendung ausgeführt wird.  
   
- Der letzte wichtige Schritt ist zum Übergeben des Arrays an die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode.  
+ Der letzte wichtige Schritt ist das Array, das Übergeben der <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode.  
   
  Abschließend werden dem Benutzer die Ergebnisse präsentiert.  
   
@@ -32,7 +32,7 @@ Eine allgemeine Situation gegenüberstehen (IT) Spezialisten verwalten einen Sat
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- Könnten Sie in diesem Beispiel erweitern, indem Sie die `foreach` -Schleife, die weiter über jede Druckerwarteschlange Schritte ausblenden. Angenommen, Sie konnte Bildschirm, Drucker, die nicht drucken zweiseitigen unterstützen, durch die Verwendung des Schleife Aufrufs jede Druckerwarteschlange <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> -Methode und Testen der zurückgegebene Wert auf das Vorhandensein des Duplexdruck.  
+ Sie könnten dieses Beispiel erweitern, indem Sie die `foreach` Schleife, die jeder Druckwarteschlange werden die Schritte weiter sicherheitsüberprüfungen unterzogen. Angenommen, Sie könnten blenden Sie Drucker, die nicht doppelseitiger Druck unterstützen, indem Sie den Aufruf der Schleife jeder Druckwarteschlange <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> -Methode und Testen Sie den zurückgegebenen Wert, auf das Vorhandensein von Duplexdruck.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
@@ -43,4 +43,4 @@ Eine allgemeine Situation gegenüberstehen (IT) Spezialisten verwalten einen Sat
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)
+ [Microsoft XPS-Dokument-Generator](https://go.microsoft.com/fwlink/?LinkId=147319)

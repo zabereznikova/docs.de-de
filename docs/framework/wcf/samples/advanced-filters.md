@@ -2,22 +2,22 @@
 title: Erweiterte Filter
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805615"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564199"
 ---
 # <a name="advanced-filters"></a>Erweiterte Filter
-Dieses Beispiel zeigt einen Windows Communication Foundation (WCF)-routing-Dienst. Der Routingdienst ist eine WCF-Komponente, die integrieren ein inhaltsbasierten Routers in die Anwendung aufnehmen vereinfacht. In diesem Beispiel wird der standardmäßigen WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie die inhaltsbasierte Routinglogik durch die Verwendung von Nachrichtenfiltern und Nachrichtenfiltertabellen definiert wird.  
+Dieses Beispiel zeigt einen Windows Communication Foundation (WCF)-routing-Dienst. Der Routingdienst ist eine WCF-Komponente, die es einfach macht, ein inhaltsbasierten Routers in Ihre Anwendung einbinden. In diesem Beispiel wird der standardmäßigen WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie die inhaltsbasierte Routinglogik durch die Verwendung von Nachrichtenfiltern und Nachrichtenfiltertabellen definiert wird.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
@@ -49,7 +49,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Der dritte Filter ist ein <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Dieser Filter ergibt für jede Nachricht eine Übereinstimmung, die an einem Endpunkt mit einer Adresse angezeigt wurde, die mit dem angegebenen Adresspräfix (oder dem Anfang) übereinstimmt. In diesem Beispiel wird das Adresspräfix als definiert "http://localhost/routingservice/router/rounding/". Dies bedeutet, dass alle eingehenden Nachrichten, die an adressiert sind "http://localhost/routingservice/router/rounding/*", die von diesem Filter abgeglichen werden. In diesem Fall ist es Nachrichten, die auf den rundungsrechnerendpunkt angezeigt werden, werden die hat der Adresse des "http://localhost/routingservice/router/rounding/calculator".  
+ Der dritte Filter ist ein <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Dieser Filter ergibt für jede Nachricht eine Übereinstimmung, die an einem Endpunkt mit einer Adresse angezeigt wurde, die mit dem angegebenen Adresspräfix (oder dem Anfang) übereinstimmt. In diesem Beispiel wird das Adresspräfix als definiert "http://localhost/routingservice/router/rounding/". Dies bedeutet, dass alle eingehenden Nachrichten, die an adressiert sind "http://localhost/routingservice/router/rounding/*" werden von diesem Filter übereinstimmen. In diesem Fall es Nachrichten, die auf den rundungsrechnerendpunkt ausgewiesen ist der hat der Adresse des "http://localhost/routingservice/router/rounding/calculator".  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -78,11 +78,11 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 1.  Öffnen Sie AdvancedFilters.sln in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  So öffnen **Projektmappen-Explorer**wählen **Projektmappen-Explorer** aus der **Ansicht** Menü.  
+2.  Zum Öffnen **Projektmappen-Explorer**Option **Projektmappen-Explorer** aus der **Ansicht** im Menü.  
   
-3.  Drücken Sie F5 oder STRG + UMSCHALT + B in Visual Studio aus.  
+3.  Drücken Sie F5 oder STRG + UMSCHALT + B in Visual Studio ein.  
   
-    1.  Möchten Sie die notwendigen Projekte automatisch gestartet, wenn Sie F5 drücken, Maustaste auf die Projektmappe, und wählen Sie **Eigenschaften**. Wählen Sie die **Startprojekt** Knoten unter **allgemeine Eigenschaften** im linken Bereich. Wählen Sie die **mehrere Startprojekte** Optionsfeld aus, und legen Sie alle Projekte haben die **starten** Aktion.  
+    1.  Wenn Sie möchten die erforderlichen Projekte automatisch gestartet, wenn Sie F5 drücken, wird mit der rechten Maustaste in der Projektmappe, und wählen **Eigenschaften**. Wählen Sie die **Startprojekt** Knoten unter **allgemeine Eigenschaften** im linken Bereich. Wählen Sie die **mehrere Startprojekte** Optionsfeld aus, und legen Sie alle Projekte die **starten** Aktion.  
   
     2.  Wenn Sie das Projekt mit STRG+UMSCHALT+B erstellen, müssen Sie die folgenden Anwendungen starten:  
   
@@ -140,7 +140,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 8.  Vom Rechnerdienst und Rundungsrechnerdienst wird außerdem ein Protokoll der Vorgänge gedruckt, die in den jeweiligen Konsolenfenstern aufgerufen werden.  
   
-9. Geben Sie im Konsolenfenster Clients `quit` , und drücken Sie EINGABETASTE, um zu beenden.  
+9. Geben Sie im Konsolenfenster Clients, `quit` , und drücken Sie EINGABETASTE zum Beenden.  
   
 10. Drücken Sie die EINGABETASTE in den Dienstkonsolenfenstern, um die Dienste zu beenden.  
   
@@ -154,4 +154,4 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
  Contoso möchte sämtliche Dienste virtualisieren, um nur einen Endpunkt öffentlich verfügbar zu machen, über den Zugriff auf mehrere verschiedene Dienste gewährt wird. In diesem Fall werden die inhaltsbasierten Routingfunktionen des Routingdiensts verwendet, um zu bestimmen, wohin die eingehenden Anforderungen gesendet werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting und Persistenzbeispiele](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
