@@ -2,12 +2,12 @@
 title: Erweiterbarkeit von Eigenschaftenrastern
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 50fb2fce2fa8c52942a221401f88523c7b407dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519593"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660255"
 ---
 # <a name="property-grid-extensibliity"></a>Erweiterbarkeit von Eigenschaftenrastern
 Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktivität im Designer angezeigt wird. Auf diese Weise lassen sich die Bearbeitungsmöglichkeiten optimieren. Dieses Beispiel veranschaulicht die Vorgehensweise.  
@@ -20,7 +20,7 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
@@ -89,7 +89,7 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  Überschreibt die <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` -Methode im Designertyp zur Behandlung die Anzeige des Dialogfelds zu behandeln. In diesem Beispiel wird ein einfaches <xref:System.Windows.Forms.FileDialog> gezeigt.  
+4.  Überschreibt die <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` -Methode im Designertyp zur Behandlung der Anzeige des Dialogfelds behandelt. In diesem Beispiel wird ein einfaches <xref:System.Windows.Forms.FileDialog> gezeigt.  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -120,13 +120,13 @@ Entwickler können das Eigenschaftenraster anpassen, das bei Auswahl einer Aktiv
   
 2.  Ziehen Sie eine **SimpleCodeActivity** aus der Toolbox auf den designerzeichnungsbereich.  
   
-3.  Klicken Sie auf die **SimpleCodeActivity** und öffnen Sie dann das Eigenschaftenraster, das ein Schieberegler-Steuerelement und ein Dateiauswahl-Steuerelement.  
+3.  Klicken Sie auf die **SimpleCodeActivity** und öffnen Sie dann das Eigenschaftenraster, ein Schieberegler-Steuerelement und ein Dateiauswahl-Steuerelement.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

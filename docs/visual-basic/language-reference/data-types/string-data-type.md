@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481610"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661553"
 ---
 # <a name="string-data-type-visual-basic"></a>String-Datentyp (Visual Basic)
 Enthält Sequenzen von unsignierten 16-Bit (2-Byte)-Codepunkte dieses Bereichs im Wert von 0 bis 65535 an. Jede *Codepunkt*, oder Zeichencode ein einzelnes Unicodezeichens darstellt. Eine Zeichenfolge kann zwischen 0 und etwa zwei Milliarden enthalten (2 ^ 31) Unicode-Zeichen.  
