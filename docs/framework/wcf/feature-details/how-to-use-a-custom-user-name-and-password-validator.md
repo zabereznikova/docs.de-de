@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
 ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671239"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747450"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Vorgehensweise: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungssteuerelements
 Wenn einen Benutzernamen und ein Kennwort für die Authentifizierung verwendet wird, verwendet Windows Communication Foundation (WCF) standardmäßig Windows um den Benutzernamen und das Kennwort zu überprüfen. WCF ermöglicht jedoch für die benutzerdefinierten Benutzernamen- und Kennwort-Authentifizierungsschemas, auch bekannt als *Validierungssteuerelemente*. Zum Verwenden eines benutzerdefinierten Benutzernamen- und Kennwort-Validierungssteuerelements erstellen und konfigurieren Sie eine Klasse, die sich von <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ableitet.  

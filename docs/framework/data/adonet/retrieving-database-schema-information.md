@@ -3,11 +3,11 @@ title: Abrufen von Datenbankschemainformationen
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
 ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562703"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43772840"
 ---
 # <a name="retrieving-database-schema-information"></a>Abrufen von Datenbankschemainformationen
 Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abgerufen. Schemasuche können Anwendungen anfordern, dass verwaltete Anbieter suchen und Zurückgeben von Informationen über das Datenbankschema, auch bekannt als *Metadaten*, einer bestimmten Datenbank. Verschiedene Schemaelemente von Datenbanken (z. B. Tabellen, Spalten und gespeicherte Prozeduren) werden über Schemaauflistungen verfügbar gemacht. Jede Schemaauflistung enthält eine Vielzahl von Schemainformationen, die für den verwendeten Anbieter spezifisch sind.  

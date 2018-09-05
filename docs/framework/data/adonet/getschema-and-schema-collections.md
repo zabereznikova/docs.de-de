@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 1694a6de515e5326264f345f50d0730fe2a62e4f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c6ea41b9da9c98f8c4ee45ca1e223a29712729a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763942"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742494"
 ---
 # <a name="getschema-and-schema-collections"></a>"GetSchema" und Schemaauflistungen
-Die **Verbindung** -Klassen aller von .NET Framework verwalteten Anbieter implementieren eine **GetSchema** Methode dient zum Abrufen von Schemainformationen über die Datenbank, die derzeit verbunden ist, und die Schemainformationen zurückgegeben, aus der **GetSchema** Methode kommt in Form von einer <xref:System.Data.DataTable>. Die **GetSchema** Methode ist eine überladene Methode, die optionale Parameter zum Angeben der zurückzugebenden schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
+Die **Verbindung** -Klassen in jedem von der .NET Framework verwalteten Anbieter implementieren eine **GetSchema** Methode dient zum Abrufen von Schemainformationen zur Datenbank, die derzeit verbunden ist, und die Schemainformationen zurückgegeben, die von der **GetSchema** Methode kommt in Form von einem <xref:System.Data.DataTable>. Die **GetSchema** Methode ist eine überladene Methode, die optionale Parameter, die zum Angeben der zurückzugebenden schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
   
 ## <a name="specifying-the-schema-collections"></a>Angeben der Schemaauflistungen  
- Dem ersten optionalen Parameter von der **GetSchema** Methode ist der Name der als Zeichenfolge angegeben wird. Es gibt zwei Arten von Schemaauflistungen: allgemeine Schemaauflistungen, die von allen Anbietern verwendet werden, und besondere Schemaauflistungen, die für jeden Anbieter spezifisch sind.  
+ Dem ersten optionalen Parameter, der die **GetSchema** Methode ist der Name der als Zeichenfolge angegeben wird. Es gibt zwei Arten von Schemaauflistungen: allgemeine Schemaauflistungen, die von allen Anbietern verwendet werden, und besondere Schemaauflistungen, die für jeden Anbieter spezifisch sind.  
   
- Sie können einen verwalteten .NET Framework-Datenanbieter, um die Liste der unterstützten schemaauflistungen durch Aufrufen von Abfragen die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
+ Sie können einen verwalteten .NET Framework-Datenanbieter, um die Liste der unterstützten schemaauflistungen zu ermitteln, durch Aufrufen von Abfragen die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
   
 ### <a name="retrieving-schema-collections-example"></a>Beispiel zum Abrufen von Schemaauflistungen  
- Die folgenden Beispiele veranschaulichen, wie Sie die <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Methode von der .NET Framework-Datenanbieter für SQL Server <xref:System.Data.SqlClient.SqlConnection> -Klasse zum Abrufen von Schemainformationen zu allen enthaltenen Tabellen die **AdventureWorks**-Beispieldatenbank:  
+ Die folgenden Beispiele veranschaulichen, wie Sie mit der <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Methode von der .NET Framework-Datenanbieter für SQL Server <xref:System.Data.SqlClient.SqlConnection> -Klasse zum Abrufen von Schemainformationen zu allen enthaltenen Tabellen die **AdventureWorks**-Beispieldatenbank:  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -106,4 +106,4 @@ class Program
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,31 +1,29 @@
 ---
 title: Signaturdateien (f#)
-description: Informationen Sie zum f# Signaturdateien zu verwenden, um Informationen zu den öffentlichen Signaturen einer Reihe von F#-Programmelementen, z. B. Typen, Namespaces und Modulen aufzunehmen.
+description: Erfahren Sie, wie Sie mit F#-Signaturdateien, zum Speichern von Informationen zu den öffentlichen Signaturen einer Reihe von F#-Programmelementen, z. B. Typen, Namespaces und Modulen.
 ms.date: 06/15/2018
-ms.openlocfilehash: 21e1b1d1cb67ea64206070a947d667fd52441dd8
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208666"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745969"
 ---
 # <a name="signatures"></a>Signaturen
 
 Eine Signaturdatei enthält Informationen zu den öffentlichen Signaturen einer Reihe von F#-Programmelementen wie Typen, Namespaces und Modulen. Mit ihr kann der Zugriff auf diese Programmelemente angegeben werden.
 
-
 ## <a name="remarks"></a>Hinweise
+
 Für jede F#-Codedatei kann eine *Signaturdatei*vorhanden sein. Diese hat den gleichen Namen wie die Codedatei, aber die Erweiterung FSI statt FS. Signaturdateien können auch der Kompilierungsbefehlszeile hinzugefügt werden, wenn Sie die Befehlszeile direkt verwenden. Für die Unterscheidung zwischen Codedateien und Signaturdateien werden Codedateien manchmal als *Implementierungsdateien*bezeichnet. In einem Projekt sollte die Signaturdatei der zugeordneten Codedatei vorausgehen.
 
 Eine Signaturdatei beschreibt die Namespaces, Module, Typen und Member in der entsprechenden Implementierungsdatei. Mithilfe der Informationen in einer Signaturdatei geben Sie an, auf welche Teile des Codes in der entsprechenden Implementierungsdatei von Code außerhalb der Implementierungsdatei zugegriffen werden kann und welche Teile interner Code der Implementierungsdatei sind. Die Namespaces, Module und Typen in der Signaturdatei müssen eine Teilmenge der Namespaces, Module und Typen in der Implementierungsdatei sein. Abgesehen von einigen weiter unten in diesem Thema genannten Ausnahmen werden die Sprachelemente, die nicht in der Signaturdatei aufgeführt sind, als private Elemente der Implementierungsdatei betrachtet. Wenn im Projekt oder der Befehlszeile keine Signaturdatei gefunden wird, wird Standardzugriff verwendet.
 
-Weitere Informationen zum Standardzugriff finden Sie unter [Access Control](access-control.md).
+Weitere Informationen zum Standardzugriff finden Sie unter [Zugriffssteuerung](access-control.md).
 
 In einer Signaturdatei werden die Definition der Typen und die Implementierungen der einzelnen Methoden oder Funktionen nicht wiederholt. Stattdessen verwenden Sie die Signatur für die jeweilige Methode bzw. Funktion, die als vollständige Spezifikation der von einem Modul- oder Namespacefragment implementierten Funktionalität fungiert. Die Syntax für eine Typsignatur ist mit der in abstrakten Methodendeklarationen in Schnittstellen und abstrakten Klassen verwendeten Syntax identisch. Sie wird auch von IntelliSense und dem F#-Interpreter "fsi.exe" dargestellt, wenn dieser eine ordnungsgemäß kompilierte Eingabe anzeigt.
 
 Wenn die Informationen in der Typsignatur nicht ausreichen, um anzugeben, ob ein Typ versiegelt oder ein Schnittstellentyp ist, müssen Sie ein Attribut hinzufügen, das für den Compiler die Art des Typs angibt. Zu diesem Zweck verwendete Attribute werden in der folgenden Tabelle beschrieben.
-
-
 
 |Attribut|Beschreibung|
 |---------|-----------|
@@ -39,36 +37,25 @@ Sie können mit der `--sig` -Compileroption eine Signaturdatei generieren. Im Al
 
 Für Typsignaturen gelten mehrere Regeln:
 
-
 - Typabkürzungen in einer Implementierungsdatei dürfen keinem Typ ohne Abkürzung in einer Signaturdatei entsprechen.
-
 
 - Datensätze und Unterscheidungs-Unions müssen entweder alle oder keine der zugehörigen Felder und Konstruktoren verfügbar machen, und die Reihenfolge in der Signatur muss mit der Reihenfolge in der Implementierungsdatei übereinstimmen. Klassen können einige, alle oder keine ihrer Felder und Methoden in der Signatur offenlegen.
 
-
 - Klassen und Strukturen, die über Konstruktoren verfügen, müssen die Deklarationen ihrer Basisklassen (die `inherits` -Deklaration) verfügbar machen. Klassen und Strukturen, die über Konstruktoren verfügen, müssen außerdem alle ihre abstrakten Methoden und Schnittstellendeklarationen verfügbar machen.
-
 
 - Schnittstellentypen müssen alle ihre Methoden und Schnittstellen offenlegen.
 
-
 Für Wertsignaturen gelten folgende Regeln:
-
 
 - Zugriffsmodifizierer (`public`, `internal`usw.) sowie der `inline` -Modifizierer und der `mutable` -Modifizierer in der Signatur müssen mit den entsprechenden Modifizierern in der Implementierung übereinstimmen.
 
-
 - Die Anzahl der generischen Typparameter (implizit abgeleitet oder explizit deklariert) muss übereinstimmen, und die Typen und Typeinschränkungen in generischen Typparametern müssen übereinstimmen.
-
 
 - Wenn das `Literal` -Attribut verwendet wird, muss es sowohl in der Signatur als auch in der Implementierung erscheinen, und für beide muss der gleiche Literalwert verwendet werden.
 
-
 - Das Muster der Parameter (auch *Stelligkeit*) von Signaturen und Implementierungen muss konsistent sein.
 
-
-- Wenn Parameternamen in einer Signaturdatei aus der entsprechenden Implementierungsdatei unterscheiden, wird der Name in der Signaturdatei stattdessen Dies verursacht möglicherweise Probleme beim Debuggen oder profilerstellung verwendet werden. Wenn Sie solche Nichtübereinstimmungen, Enable 3218 in der Projektdatei Warnung benachrichtigt werden möchten, oder beim Aufrufen des Compilers (finden Sie unter `--warnon` unter [Compileroptionen](compiler-options.md)).
-
+- Wenn Parameternamen in einer Signaturdatei von der entsprechenden Implementierungsdatei unterscheiden zu können, wird der Name in der Signaturdatei stattdessen Dies verursacht möglicherweise Probleme beim Debuggen oder die profilerstellung verwendet werden. Wenn Sie über solche Nichtübereinstimmungen, Enable 3218 in Ihrer Projektdatei Warnung benachrichtigt werden möchten, oder beim Aufrufen des Compilers (finden Sie unter `--warnon` unter [Compileroptionen](compiler-options.md)).
 
 Das folgende Codebeispiel veranschaulicht eine Signaturdatei, die Namespace-, Modul-, Funktionswert- und Typsignaturen sowie die entsprechenden Attribute enthält. Im Beispiel wird außerdem die entsprechende Implementierungsdatei gezeigt.
 
@@ -77,10 +64,9 @@ Das folgende Codebeispiel veranschaulicht eine Signaturdatei, die Namespace-, Mo
 Im folgenden Code wird die Implementierungsdatei veranschaulicht.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
-    
+
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Zugriffssteuerung](access-control.md)
-
-[Compileroptionen](compiler-options.md)
+- [F#-Sprachreferenz](index.md)
+- [Zugriffssteuerung](access-control.md)
+- [Compileroptionen](compiler-options.md)

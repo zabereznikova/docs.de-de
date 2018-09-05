@@ -3,11 +3,11 @@ title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451661"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745595"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der Funktionen auf, wenn in einer teilweise vertrauenswürdigen Umgebung ausgeführt. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  

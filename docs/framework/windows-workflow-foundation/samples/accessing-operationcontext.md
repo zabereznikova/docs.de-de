@@ -3,11 +3,11 @@ title: Zugreifen auf OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419756"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735487"
 ---
 # <a name="accessing-operationcontext"></a>Zugreifen auf OperationContext
 In diesem Beispiel wird veranschaulicht, wie die messagingaktivitäten (<xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.Send>) mit einer benutzerdefinierten bereichsaktivität verwendet werden können, um den Zugriff auf <xref:System.ServiceModel.OperationContext.Current%2A> und anzufügen oder einen benutzerdefinierten Nachrichtenheader in einer ausgehenden oder eingehenden Nachricht abzurufen.  

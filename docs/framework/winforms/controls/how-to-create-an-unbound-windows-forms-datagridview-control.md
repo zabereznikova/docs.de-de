@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
 ms.openlocfilehash: 0441f0ce1005c82ae7ea9a0daecb3ec7ff41f59b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564121"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745712"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a>Gewusst wie: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms
 Im folgenden Codebeispiel wird veranschaulicht, wie ein <xref:System.Windows.Forms.DataGridView>-Steuerelement programmgesteuert mit Daten aufgefüllt wird, ohne dass das Element an eine Datenquelle gebunden wird. Dies ist hilfreich, wenn Sie über eine kleine Menge Daten verfügen, die Sie in einem Tabellenformat anzeigen möchten.  

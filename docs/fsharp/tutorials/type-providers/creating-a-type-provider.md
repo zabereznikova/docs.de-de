@@ -2,12 +2,12 @@
 title: 'Tutorial: Erstellen eines Typanbieters (f#)'
 description: Erfahren Sie, wie Sie eigene F#-Typanbieter in f# 3.0 zu erstellen, indem Sie mehrere einfache Typanbieter zur Veranschaulichung der grundlegenden Konzepte untersucht.
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499327"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745725"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Erstellen eines Typanbieters
 
@@ -24,7 +24,6 @@ Das f#-Ökosystem enthält einen Bereich von typanbietern für häufig verwendet
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) ist eine ältere Typanbieter für die Verwendung nur mit .NET Framework-Programmierung für den Zugriff auf SQL, Entity Framework, OData und WSDL-Datendienste.
 
 Bei Bedarf können Sie eigene benutzerdefinierte Typanbieter erstellen oder auf Typanbieter verweisen, die von anderen Entwicklern erstellt wurden. Angenommen, in einer Organisation wird ein Datendienst verwendet, der eine große und wachsende Anzahl von benannten Datasets bereitstellt, die alle ein eigenes, stabiles Datenschema verwenden. Für diesen Dienst können Sie einen Typanbieter erstellen, der die Schemas liest und dem Programmierer alle aktuellen Datasets mit starker Typisierung zur Verfügung stellt.
-
 
 ## <a name="before-you-start"></a>Vor der Installation
 
@@ -51,7 +50,6 @@ Bevor Sie beginnen, stellen Sie sich die folgenden Fragen:
 - Ändert es sich während der Programmausführung?
 
 Typanbieter sind für Situationen geeignet, in denen das Schema zur Laufzeit und während der Lebensdauer des kompilierten Codes stabil ist.
-
 
 ## <a name="a-simple-type-provider"></a>Ein einfacher Typanbieter
 
@@ -93,8 +91,7 @@ type Type100 =
 
 Beachten Sie, dass der Satz der bereitgestellten Typen und Member statisch verfügbar gemacht wird. In diesem Beispiel wird die Möglichkeit von Anbietern, Typen abhängig von einem Schema bereitzustellen, nicht verwendet. Die Implementierung des Typanbieters wird im folgenden Code erläutert. Die Details werden in den folgenden Abschnitten dieses Themas behandelt.
 
-
->[!WARNING] 
+>[!WARNING]
 Möglicherweise gibt es Unterschiede zwischen diesem Code und die Onlinebeispiele.
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 Öffnen Sie alternativ Visual Studio, öffnen Sie im Menü Debuggen, wählen Sie `Debug/Attach to process…`, und fügen Sie in ein anderes `devenv` Prozess, in dem Sie das Skript bearbeiten. Mit dieser Methode können Sie leichter eine ganz bestimmte Logik im Typanbieter überprüfen, da Sie in der zweiten Instanz interaktiv Ausdrücke eingeben können (mit vollständiger IntelliSense-Unterstützung und anderen Funktionen).
 
 Sie können die Debugging-Option Nur eigenen Code deaktivieren, um Fehler in generiertem Code besser identifizieren zu können. Weitere Informationen zum Aktivieren oder Deaktivieren dieses Feature zu erhalten, finden Sie unter [Navigieren im Code mit dem Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger). Darüber hinaus können Sie auch nicht abgefangene Ausnahme abfangen, indem Sie öffnen Festlegen der `Debug` Menü auswählen und dann `Exceptions` oder mithilfe der Tastenkombination Strg + Alt + E, öffnen Sie die `Exceptions` Dialogfeld. In diesem Dialogfeld unter `Common Language Runtime Exceptions`, wählen die `Thrown` Kontrollkästchen.
-
 
 ### <a name="implementation-of-the-type-provider"></a>Implementierung des Typanbieters
 
@@ -376,7 +372,6 @@ Im Beispiel in diesem Abschnitt wird nur *gelöschte bereitgestellte Typen*, die
 
 In diesem Beispiel wird jeder bereitgestellte Typ zu `obj` gelöscht, und alle Verwendungen des Typs erscheinen im kompilierten Code als `obj`. Tatsächlich sind die zugrunde liegenden Objekte in diesen Beispielen Zeichenfolgen, der Typ im kompilierten .NET-Code ist jedoch `System.Object`. Wie bei jeder Verwendung der Typlöschung können Sie explizites Boxing und Unboxing sowie Umwandlungen verwenden, um gelöschte Typen zu unterlaufen. In diesem Fall kann eine ungültige Umwandlungsausnahme auftreten, wenn das Objekt verwendet wird. Eine Anbieterlaufzeit kann ihren eigenen privaten Darstellungstyp definieren, um falsche Darstellungen zu vermeiden. In F# selbst können Sie keine gelöschten Typen definieren. Nur bereitgestellte Typen dürfen gelöscht werden. Sie müssen sich darüber im Klaren sein, welche Auswirkungen, sowohl praktisch als auch semantisch, die Verwendung von gelöschten Typen für Ihren Typanbieter hat, im Vergleich zu einem Anbieter, der selbst gelöschte Typen bereitstellt. Ein gelöschter Typ hat keinen tatsächlichen .NET-Typ. Daher können Sie keine genaue Reflektion über den Typ ausführen, und Sie unterlaufen möglicherweise gelöschte Typen, wenn Sie zur Laufzeit Umwandlungen oder andere Techniken verwenden, die zur Laufzeit eine exakte Typsemantik erfordern. Das Unterlaufen gelöschter Typen führt zur Laufzeit häufig zu Ausnahmen bei der Typumwandlung.
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>Auswählen von Darstellungen für gelöschte bereitgestellte Typen
 
 Für einige Verwendungen von gelöschten bereitgestellten Typen ist keine Darstellung erforderlich. Zum Beispiel kann der gelöschte bereitgestellte Typ ausschließlich statische Eigenschaften und Member enthalten, aber keine Konstruktoren, sodass keine Methoden oder Eigenschaften eine Instanz des Typs zurückgeben. Wenn Instanzen eines gelöschten bereitgestellten Typ verfügbar sind, berücksichtigen Sie die folgenden Fragen:
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 Im vorherigen Abschnitt wurde das Erstellen eines einfachen gelöschten Typanbieters erläutert, der einen Typenbereich, Eigenschaften und Methoden bereitstellt. Im Abschnitt wurde außerdem das Konzept der Typlöschung erläutert, und es wurden einige der Vor- und Nachteile beim Bereitstellen gelöschter Typen durch einen Typanbieter sowie mögliche Darstellungen für gelöschte Typen behandelt.
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Ein Typanbieter, der statische Parameter verwendet
 
 Die Möglichkeit, Typanbieter durch statische Daten zu parametrisieren, eröffnet viele interessante Szenarien, sogar in Fällen, in denen der Anbieter gar nicht auf lokale oder Remotedaten zugreifen muss. In diesem Abschnitt lernen Sie einige der grundlegenden Techniken für den Entwurf eines solchen Anbieters kennen.
-
 
 ### <a name="type-checked-regex-provider"></a>Typgeprüfter Regex-Anbieter
 
@@ -737,16 +730,13 @@ do ()
 
 In diesem Abschnitt wird erläutert, wie ein Typanbieter erstellt wird, der seine statischen Parameter verarbeitet. Der Anbieter überprüft den statischen Parameter und stellt Vorgänge auf Grundlage des ermittelten Werts bereit.
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Ein Typanbieter, der lokale Daten verarbeitet
 
 Häufig sollen mithilfe von Typanbietern APIs bereitgestellt werden, die nicht nur auf statischen Parametern, sondern zusätzlich auf Informationen von lokalen oder Remotesystemen basieren. In diesem Abschnitt werden Typanbieter erläutert, die auf lokalen Daten basieren, z. B. auf lokalen Datendateien.
 
-
 ### <a name="simple-csv-file-provider"></a>Einfacher CSV-Dateianbieter
 
 Als einfaches Beispiel soll ein Typanbieter für den Zugriff auf wissenschaftliche Daten im CSV-Format (Comma Separated Value) betrachtet werden. In diesem Abschnitt wird davon ausgegangen, dass die CSV-Dateien eine Kopfzeile gefolgt von den Gleitkommadaten enthalten, wie in der folgenden Tabelle gezeigt:
-
 
 |Abstand (Meter)|Zeit (Sekunden)|
 |----------------|-------------|
@@ -893,11 +883,9 @@ Beachten Sie die folgenden Punkte in der Implementierung:
 
 In diesem Abschnitt wurde erläutert, wie ein Typanbieter für eine lokale Datenquelle mit einem einfachen Schema erstellt werden kann, wenn das Schema in der Datenquelle selbst enthalten ist.
 
-
 ## <a name="going-further"></a>Weiterführende Themen
 
 Die folgenden Abschnitte enthalten Vorschläge für das weitere selbstständige Lernen.
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Ein Blick auf den kompilierten Code für gelöschte Typen
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 Wie das Beispiel zeigt, wurden alle Erwähnungen des Typs `Type1` und der `InstanceProperty`-Eigenschaft gelöscht, sodass nur noch die Vorgänge und Laufzeittypen vorhanden sind.
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Entwurf- und Namenskonventionen für Typanbieter
+
 Beachten Sie die folgenden Konventionen, wenn Sie Typanbieter erstellen.
 
 **Anbieter für Konnektivitätsprotokolle** im allgemeinen Namen der meisten Anbieter-DLLs für Daten- und dienstkonnektivitätsprotokolle, wie OData oder SQL-Verbindungen, enden sollte `TypeProvider` oder `TypeProviders`. Verwenden Sie z. B. einen DLL-Namen ähnlich der folgenden Zeichenfolge:
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 Weitere Informationen finden Sie in der `GetConnection`-Entwurfskonvention, die weiter unten in diesem Thema beschrieben wird.
 
-
 ### <a name="design-patterns-for-type-providers"></a>Entwurfsmuster für Typanbieter
 
 In den folgenden Abschnitten werden Entwurfsmuster beschrieben, die Sie beim Erstellen von Typanbietern heranziehen können.
 
-
 #### <a name="the-getconnection-design-pattern"></a>Das Entwurfsmuster GetConnection
+
 Die meisten Typanbieter sollten unter Beachtung des `GetConnection`-Musters geschrieben werden, das von den Typanbietern in FSharp.Data.TypeProviders.dll verwendet wird, wie im folgenden Beispiel gezeigt:
 
 ```fsharp
@@ -1147,10 +1134,7 @@ In vielen Fällen können Typanbieter am einfachsten debuggt werden, indem Sie f
 
   Zur Protokollierung können Sie die normale Ausgabe auf die Standardausgabe verwenden.
 
-
 ## <a name="see-also"></a>Siehe auch
 
-* [Typanbieter](index.md)
-
-* [Der SDK-Typanbieter](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [Typanbieter](index.md)
+- [Der SDK-Typanbieter](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

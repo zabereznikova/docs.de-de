@@ -7,11 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 2c8cb2d89ffaedde59d54edf6cae1f8c47548680
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b53547e8e61e69834f262407de490422e6b6bb00
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748704"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement
 Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die <xref:System.Windows.Forms.Control.Anchor%2A>- und die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft in seinen untergeordneten Steuerelementen.  
@@ -20,7 +21,7 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die <
   
 1.  Erstellen Sie ein <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement auf dem Formular.  
   
-2.  Festlegen der <xref:System.Windows.Forms.Control.Width%2A> von der <xref:System.Windows.Forms.FlowLayoutPanel> die Steuerung an **300**, und legen Sie seine <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> auf <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2.  Festlegen der <xref:System.Windows.Forms.Control.Width%2A> von der <xref:System.Windows.Forms.FlowLayoutPanel> die Steuerung an **300**, und legen Sie seine <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> zu <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
 3.  Erstellen Sie zwei <xref:System.Windows.Forms.Button>-Steuerelemente, und platzieren Sie diese im <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.  
   
@@ -57,7 +58,7 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die <
   
 -   Verweise auf die Assemblys "System", "System.Data", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.FlowLayoutPanel>  

@@ -3,11 +3,11 @@ title: Erweiterte Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
 ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423431"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745253"
 ---
 # <a name="advanced-error-handling"></a>Erweiterte Fehlerbehandlung
 Diesem Beispiel wird der Windows Communication Foundation (WCF)-Routingdienst veranschaulicht. Der Routingdienst ist eine WCF-Komponente, die es einfach macht, ein inhaltsbasierten Routers in Ihre Anwendung einbinden. In diesem Beispiel wird gezeigt, wie der Routingdienst eine intelligente Fehlerwiederherstellung mit Transaktionen und anderen komplexen Messagingkonzepten (z. B. Multicasting) ausführt.  

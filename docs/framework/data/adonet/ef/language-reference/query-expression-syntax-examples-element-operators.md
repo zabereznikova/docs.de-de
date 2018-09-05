@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 32268fe2-de18-4065-8060-f250def83837
 ms.openlocfilehash: 36823b02d581b47493950b6393bda323b2e8f9b7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467083"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749183"
 ---
 # <a name="query-expression-syntax-examples-element-operators"></a>Beispiele für die Abfrageausdruckssyntax: Elementoperatoren
 In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.First%2A> -Methode und die [AdventureWorks Sales-Modell](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mithilfe der Abfrageausdruckssyntax Abfragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  

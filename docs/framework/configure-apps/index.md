@@ -28,11 +28,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 4bd30b26a3e05f97904200cab40234d00924820c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673647"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746008"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  

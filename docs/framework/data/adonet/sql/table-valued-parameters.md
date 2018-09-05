@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365942"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742518"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus einer Clientanwendung nach SQL Server zu marshallen, ohne dass mehrere Roundtrips oder eine besondere serverseitige Logik für die Verarbeitung der Daten notwendig ist. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und diese Daten in einem einzelnen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die anschließend mit [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] bearbeitet werden kann.  
@@ -24,11 +24,11 @@ Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus ein
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Tabellenwertparameter (Datenbankmodul)](http://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server-Onlinedokumentation|Beschreibt das Erstellen und Verwenden von Tabellenwertparametern.|  
-|[Benutzerdefinierte Tabellentypen](http://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server-Onlinedokumentation|Beschreibt benutzerdefinierte Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden.|  
+|[Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in SQL Server-Onlinedokumentation|Beschreibt das Erstellen und Verwenden von Tabellenwertparametern.|  
+|[Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server-Onlinedokumentation|Beschreibt benutzerdefinierte Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Übergeben von mehreren Zeilen in älteren Versionen von SQL Server  
- Bevor Tabellenwertparameter auf SQL Server 2008 eingeführt wurden, wurden die Optionen zum Übergeben mehrerer Datenzeilen an eine gespeicherte Prozedur oder einen parametrisierten SQL‑Befehl beschränkt. Ein Entwickler konnte aus den folgenden Optionen zum Übergeben mehrerer Zeilen an den Server auswählen:  
+ Bevor Sie Tabellenwertparameter in SQL Server 2008 eingeführt wurden, konnten die Optionen zum Übergeben mehrerer Datenzeilen an eine gespeicherte Prozedur oder einen parametrisierten SQL‑Befehl. Ein Entwickler konnte aus den folgenden Optionen zum Übergeben mehrerer Zeilen an den Server auswählen:  
   
 -   Er hatte die Möglichkeit, eine Reihe einzelner Parameter zu verwenden, um die Werte in mehreren Spalten und Zeilen von Daten darzustellen. Die Datenmenge, die mithilfe dieser Methode übergeben werden kann, ist durch die Anzahl der zulässigen Parameter beschränkt. SQL Server-Prozeduren können höchstens über 2100 Parameter verfügen. Eine Zusammenstellung zur Verarbeitung dieser einzelnen Werte in einer Tabellenvariablen oder einer temporären Tabelle erfordert serverseitige Logik.  
   
@@ -39,7 +39,7 @@ Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus ein
 -   Das `bcp`-Hilfsprogramm und das <xref:System.Data.SqlClient.SqlBulkCopy>-Objekt bieten ebenfalls die Möglichkeit, mehrere Datenzeilen in eine Tabelle zu laden. Obwohl diese Technik sehr effizient ist, bietet sie keine Unterstützung für serverseitige Verarbeitung, wenn die Daten nicht in eine temporäre Tabelle oder Tabellenvariable geladen werden.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
- Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit CREATE TYPE-Anweisungen in [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [benutzerdefinierte Tabellentypen](http://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server-Onlinedokumentation.  
+ Tabellenwertparameter basieren auf stark typisierten Tabellenstrukturen, die mit CREATE TYPE-Anweisungen in [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] definiert werden. Sie müssen einen Tabellentyp erstellen und die Struktur in SQL Server definieren, bevor Sie Tabellenwertparameter in Ihren Clientanwendungen verwenden können. Weitere Informationen zum Erstellen von Tabellentypen finden Sie unter [benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server-Onlinedokumentation.  
   
  Die folgende Anweisung erstellt einen Tabellentyp mit dem Namen <legacyBold>CategoryTableType</legacyBold>, der aus den Spalten <legacyBold>CategoryID</legacyBold> und <legacyBold>CategoryName</legacyBold> besteht:  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>Einschränkungen von Tabellenwertparametern  
  Es gibt mehrere Einschränkungen bei Tabellenwertparametern:  
   
--   Sie können keine Tabellenwertparameter zu übergeben [benutzerdefinierte CLR-Funktionen](http://msdn.microsoft.com/library/ms131077.aspx).  
+-   Sie können keine Tabellenwertparameter zu übergeben [CLR-benutzerdefinierten Funktionen](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
 -   Tabellenwertparameter können nur zur Unterstützung von UNIQUE- und PRIMARY KEY-Einschränkungen indiziert werden. SQL Server führt keine Statistik zu Tabellenwertparametern.  
   
@@ -275,4 +275,4 @@ insertCommand.ExecuteNonQuery()
  [Befehle und Parameter](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

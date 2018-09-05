@@ -2,12 +2,12 @@
 title: Gewähren zeilenspezifischer Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 5f777b47c9b2f92c40fec01b4ff0c35fc28dbd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361305"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749154"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Gewähren zeilenspezifischer Berechtigungen in SQL Server
 Es gibt Szenarien, in denen der Zugriff auf Daten genauer gesteuert werden muss, als dies durch einfaches Gewähren, Widerrufen oder Ablehnen von Berechtigungen möglich ist. Eine Anwendung für eine Krankenhausdatenbank kann z. B. für einzelne Ärzte erfordern, dass diese jeweils nur auf Daten der eigenen Patienten zugreifen dürfen. Ähnliche Anforderungen gibt es in vielen Umgebungen, vom Finanzwesen über die Justiz und die Behörden bis hin zum militärischen Bereich. SQL Server 2016 bietet ein Feature für die [zeilenbasierte Sicherheit](https://msdn.microsoft.com/library/dn765131.aspx) , die die zeilenbasierte Zugriffslogik in einer Sicherheitsrichtlinie vereinfacht und zentralisiert, um diese Szenarien besser zu unterstützen. Frühere Versionen von SQL Server können mithilfe von Ansichten eine ähnliche Funktionalität erreichen, um die Filterung auf Zeilenebene zu ermöglichen.  
@@ -21,7 +21,7 @@ Es gibt Szenarien, in denen der Zugriff auf Daten genauer gesteuert werden muss,
   
 -   Aktivieren der zeilenbasierten Filterung:  
   
-    -   Bei Verwendung von SQLServer 2016 oder höher oder [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/), erstellen Sie eine Sicherheitsrichtlinie, die ein Prädikat für die Tabelle, das die Zeilen zurückgegeben, mit denen, die einem entsprechen den aktuellen Datenbankbenutzer (mithilfe der CURRENT_USER() hinzufügt integrierte Funktion) oder dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion)):  
+    -   Wenn Sie SQLServer 2016 oder höher verwenden oder [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/), erstellen Sie eine Sicherheitsrichtlinie, die hinzugefügt wird, ein Prädikat für die Tabelle aus, das die Zeilen zurückgegeben, die entweder entspricht dem aktuellen Datenbankbenutzer (mithilfe der CURRENT_USER() integrierte Funktion) oder dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion)):  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -64,7 +64,7 @@ Es gibt Szenarien, in denen der Zugriff auf Daten genauer gesteuert werden muss,
   
 |||  
 |-|-|  
-|[Implementieren zeilen- und zellenbasierter Sicherheit in klassifizierten Datenbanken unter Verwendung von SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=98227) auf der SQL Server TechCenter-Website.|Beschreibt, wie Sie mithilfe von zeilen- und zellenbasierter Sicherheit die Sicherheitsanforderungen für klassifizierte Datenbanken erfüllen können.|  
+|[Implementieren Zeilen- und Zellenbasierter Sicherheit in klassifizierten Datenbanken unter Verwendung von SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) auf der SQL Server-TechCenter-Website.|Beschreibt, wie Sie mithilfe von zeilen- und zellenbasierter Sicherheit die Sicherheitsanforderungen für klassifizierte Datenbanken erfüllen können.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit auf Zeilenebene](https://msdn.microsoft.com/library/dn765131.aspx)  
@@ -73,4 +73,4 @@ Es gibt Szenarien, in denen der Zugriff auf Daten genauer gesteuert werden muss,
  [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Schreiben von sicherem dynamischen SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

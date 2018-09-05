@@ -3,11 +3,11 @@ title: ADO.NET-Architektur
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472110"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773395"
 ---
 # <a name="adonet-architecture"></a>ADO.NET-Architektur
 Die traditionelle Datenverarbeitung basierte primär auf einem verbindungsbasierten Modell mit zwei Ebenen. Da für die Datenverarbeitung immer mehr auf Architekturen mit mehreren Ebenen zurückgegriffen wird, wird verstärkt mit nicht verbundenen Lösungen gearbeitet, um eine bessere Skalierbarkeit der Anwendungen zu erzielen.  

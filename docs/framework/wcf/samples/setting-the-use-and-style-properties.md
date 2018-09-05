@@ -3,11 +3,11 @@ title: Festlegen der Use-Eigenschaft und der Style-Eigenschaft
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
 ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421349"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734693"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Festlegen der Use-Eigenschaft und der Style-Eigenschaft
 In diesem Beispiel wird die Verwendung der Use-Eigenschaft und der Style-Eigenschaft in <xref:System.ServiceModel.XmlSerializerFormatAttribute> und <xref:System.ServiceModel.DataContractFormatAttribute> veranschaulicht. Diese Eigenschaften beeinflussen die Formatierung von Nachrichten. Standardmäßig wird der Nachrichtentext mit dem auf <xref:System.ServiceModel.OperationFormatStyle.Document> festgelegten Format formatiert. Diese Einstellungen können entweder auf der Dienstvertragsebene oder der Vorgangsvertragsebene angegeben werden.  

@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NE
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559950"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748277"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts
 Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, mit der einen ASP.NET AJAX-aktivierten Endpunkt verfügbar, die auf einer Client-Website von JavaScript aufgerufen werden können. Zum Erstellen eines solchen Endpunkts können Sie entweder eine Konfigurationsdatei verwenden, wie bei allen anderen Windows Communication Foundation (WCF)-Endpunkten oder verwenden Sie eine Methode, die keine Konfigurationselemente benötigt. In diesem Thema wird die Konfigurationsmethode veranschaulicht.  

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 51df8ad695b3e59b368499d35ac76cc7ac0cd6e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5465238e4b9deaa13c76cb35122fcaded7acd7f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363363"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736658"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>"SqlDependency" in einer ASP.NET-Anwendung
 Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System.Data.SqlClient.SqlDependency> durch Verwendung des ASP.NET-<xref:System.Web.Caching.SqlCacheDependency>-Objekts. Das <xref:System.Web.Caching.SqlCacheDependency>-Objekt verwendet eine <xref:System.Data.SqlClient.SqlDependency>, um Benachrichtigungen zu empfangen und den Cache ordnungsgemäß zu aktualisieren.  
   
 > [!NOTE]
->  Im Beispielcode wird davon ausgegangen, dass Sie abfragebenachrichtigungen aktiviert haben, durch das Ausführen von Skripts in [Aktivieren von Abfragebenachrichtigungen](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
+>  Im Beispielcode wird davon ausgegangen, dass Sie abfragebenachrichtigungen aktiviert haben, durch Ausführen der Skripts in [Aktivieren von Abfragebenachrichtigungen](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Die Beispielanwendung  
- Die beispielanwendung verwendet eine einzelne ASP.NET-Webseite anzuzeigenden Produktinformationen aus der **AdventureWorks** SQL Server-Datenbank in einem <xref:System.Web.UI.WebControls.GridView> Steuerelement. Beim Laden der Seite schreibt der Code die aktuelle Zeit in ein <xref:System.Web.UI.WebControls.Label>-Steuerelement. Anschließend wird ein <xref:System.Web.Caching.SqlCacheDependency>-Objekt definiert, und es werden Eigenschaften für das <xref:System.Web.Caching.Cache>-Objekt festgelegt, um die Daten für bis zu drei Minuten zwischenzuspeichern. Der Code stellt dann eine Verbindung mit der Datenbank her und ruft die Daten ab. Wenn die Seite geladen ist und die Anwendung ausgeführt wird, ruft ASP.NET Daten aus dem Cache ab, die Sie anhand dessen verifizieren können, dass sich die Zeit auf der Seite nicht ändert. Wenn sich die überwachten Daten ändern, macht ASP.NET den Cache ungültig und füllt das `GridView`-Steuerelement mit frischen Daten auf. Dabei wird die im `Label`-Steuerelement angezeigte Zeit aktualisiert.  
+ Der beispielanwendung wird eine einzelne ASP.NET-Webseite verwendet, um Produktinformationen aus anzuzeigen die **AdventureWorks** SQL Server-Datenbank in eine <xref:System.Web.UI.WebControls.GridView> Steuerelement. Beim Laden der Seite schreibt der Code die aktuelle Zeit in ein <xref:System.Web.UI.WebControls.Label>-Steuerelement. Anschließend wird ein <xref:System.Web.Caching.SqlCacheDependency>-Objekt definiert, und es werden Eigenschaften für das <xref:System.Web.Caching.Cache>-Objekt festgelegt, um die Daten für bis zu drei Minuten zwischenzuspeichern. Der Code stellt dann eine Verbindung mit der Datenbank her und ruft die Daten ab. Wenn die Seite geladen ist und die Anwendung ausgeführt wird, ruft ASP.NET Daten aus dem Cache ab, die Sie anhand dessen verifizieren können, dass sich die Zeit auf der Seite nicht ändert. Wenn sich die überwachten Daten ändern, macht ASP.NET den Cache ungültig und füllt das `GridView`-Steuerelement mit frischen Daten auf. Dabei wird die im `Label`-Steuerelement angezeigte Zeit aktualisiert.  
   
 ## <a name="creating-the-sample-application"></a>Erstellen der Beispielanwendung  
  Gehen Sie zum Erstellen und Ausführen der Beispielanwendung wie folgt vor:  
@@ -47,7 +47,7 @@ Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Fügen Sie zwei Hilfsmethoden hinzu, `GetConnectionString` und `GetSQL`. Die definierte Verbindungszeichenfolge verwendet integrierte Sicherheit. Sie müssen überprüfen, ob die von Ihnen verwendete Konto die erforderlichen Datenbankberechtigungen und, verfügt der Beispieldatenbank **AdventureWorks**, besitzt eine Benachrichtigung aktiviert. Weitere Informationen finden Sie unter [spezielle Überlegungen beim Verwenden von Abfragebenachrichtigungen](http://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
+5.  Fügen Sie zwei Hilfsmethoden hinzu, `GetConnectionString` und `GetSQL`. Die definierte Verbindungszeichenfolge verwendet integrierte Sicherheit. Sie müssen Sie sicherstellen, dass die von Ihnen verwendete Konto, die erforderlichen Datenbankberechtigungen und dass verfügt der-Beispieldatenbank **AdventureWorks**, Benachrichtigungen aktiviert. Weitere Informationen finden Sie unter [besondere Überlegungen beim Verwenden von Abfragebenachrichtigungen](https://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  
@@ -59,4 +59,4 @@ Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

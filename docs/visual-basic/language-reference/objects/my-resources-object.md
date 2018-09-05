@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: 41b6eaa39abfab6cda943162c5c10d1cbeaa9e49
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395916"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732987"
 ---
 # <a name="myresources-object"></a>My.Resources-Objekt
 Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendung bereit.  

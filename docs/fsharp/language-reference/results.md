@@ -1,17 +1,17 @@
 ---
 title: Ergebnisse (f#)
-description: Erfahren Sie, wie den F#-'Result' Typ zu verwenden, um Sie fehlertolerante Code schreiben.
+description: Erfahren Sie, wie den F#-'Result' Typ zu verwenden, um Sie fehlertoleranten Code schreiben.
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563007"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749248"
 ---
 # <a name="results"></a>Ergebnisse
 
-Ab f# 4.1, es ist ein `Result<'T,'TFailure>` Typ, die Sie verwenden können, für das Schreiben von fehlertoleranten standardcodezeile zusammengesetzt werden kann.
+Ab f# 4.1, es ist ein `Result<'T,'TFailure>` geben, die Sie verwenden können, für das Schreiben von fehlertoleranten Code, der zusammengesetzt werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass der Rückgabetyp einer [Struktur Unterscheidungs-Union](discriminated-unions.md#struct-discriminated-unions), dies ist eine weitere Funktion, die in f# 4.1 eingeführt.  Semantik der strukturellen gleichheitsüberprüfung hier gelten.
+Beachten Sie, dass der Rückgabetyp einer [diskriminierte Union](discriminated-unions.md#struct-discriminated-unions), dies ist ein weiteres Feature, die in f# 4.1 eingeführt.  Strukturelle Gleichheitssemantik gelten hier.
 
-Die `Result` Typ werden in der Regel in monadische Fehlerbehandlung, was häufig als bezeichnet wird [gleich objektorientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) in der f#-Community.  Das folgende einfache Beispiel veranschaulicht diesen Ansatz.
+Die `Result` Typ wird normalerweise verwendet, bei der monadische-Fehlerbehandlung, die häufig als bezeichnet wird [Eisenbahn objektorientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) in der F#-Community.  Das folgende einfache Beispiel veranschaulicht diesen Ansatz.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-Wie Sie sehen können, es ist recht einfach, um verschiedene Validierungsfunktionen für die miteinander verketten, wenn Sie sie alle zurückzugebenden Erzwingen einer `Result`.  Damit können aufteilen Funktionalität wie folgt in kleine Teile aufgeteilt sind als zusammensetzbar, wie Sie benötigt werden.  Dies hat auch den Wert Added *erzwingen* die Verwendung von [Mustervergleich](pattern-matching.md) am Ende einer Rundung der Überprüfung, das wiederum ein höheres Maß an Programm Richtigkeit erzwingt.
+Wie Sie sehen können, ist es recht einfach, verschiedene Validierungsfunktionen miteinander zu verketten, wenn Sie sie alle zurückgeben Erzwingen einer `Result`.  So können Sie Funktionen wie folgt in kleine Teile aufteilen sind als zusammensetzbar, wie Sie diese benötigen.  Dies hat auch dem Mehrwert des *erzwingen* die Verwendung von [Musterabgleich](pattern-matching.md) am Ende einer Rundung der Überprüfung, das wiederum ein höheres Maß an Richtigkeit des Programms erzwingt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Unterscheidbare Unions](discriminated-unions.md)
-
-[Mustervergleich](pattern-matching.md)
+- [Unterscheidbare Unions](discriminated-unions.md)
+- [Mustervergleich](pattern-matching.md)

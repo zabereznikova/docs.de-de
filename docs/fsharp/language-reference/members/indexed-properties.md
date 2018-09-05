@@ -1,24 +1,23 @@
 ---
 title: Indizierte Eigenschaften (F#)
-description: Informationen Sie zu f#-indizierte Eigenschaften, die Eigenschaften sind, die arrayähnlichen Zugriff auf geordnete Daten bereitstellen.
+description: Informationen Sie zu F#-indizierte Eigenschaften, die Eigenschaften sind, die arrayähnlichen Zugriff auf sortierte Daten bereitstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 503cef9693cfe5e13d4e2d19a721d65bff1ce749
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235940"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749592"
 ---
 # <a name="indexed-properties"></a>Indizierte Eigenschaften
 
-*Indizierte Eigenschaften* befohlen Eigenschaften, die arrayähnlichen Zugriff auf Daten. Sie gibt drei Arten:
+*Indizierte Eigenschaften* sind Eigenschaften, die arrayähnlichen Zugriff auf bereitstellen sortiert Daten. Sie gibt drei Arten:
 
 * `Item`
 * `Ordinal`
 * `Cardinal`
 
-Ein f#-Element muss einen dieser drei Namen arrayähnlichen Zugriff benannt werden. `IndexerName` wird verwendet, um eine der folgenden drei Optionen darzustellen:
-
+Ein F#-Element muss einen dieser drei Namen arrayähnlichen Zugriff bereitstellen benannt werden. `IndexerName` wird verwendet, um jeden der drei folgenden Optionen darstellen:
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +45,18 @@ member self-identifier.IndexerName
 ```
 
 ## <a name="remarks"></a>Hinweise
-Die Formen der vorherigen Syntax zeigen, wie indizierte Eigenschaften definieren, die sowohl eine `get` und ein `set` -Methode, haben eine `get` Methode nur oder über eine `set` Methode nur. Sie können auch kombiniert sowohl die Syntax für nur Get- und Set nur die Syntax und erzeugt eine Eigenschaft, die Get- und Set hat. Diese Form können Sie unterschiedliche Zugriffsmodifizierer und Attribute in der Get und set-Methoden.
 
-Wenn die *IndexerName* ist `Item`, behandelt der Compiler die Eigenschaft als eine indizierte Standardeigenschaft. Ein *indizierte Standardeigenschaft* ist eine Eigenschaft, die Sie mithilfe einer arrayähnlichen Syntax auf die Objektinstanz zugreifen können. Z. B. wenn `obj` ist ein Objekt des Typs, der diese Eigenschaft, die Syntax definiert `obj.[index]` wird verwendet, um Zugriff auf die Eigenschaft.
+Die Formen der vorherigen Syntax zeigen, wie Sie indizierte Eigenschaften definiert, die sowohl eine `get` und ein `set` -Methode, haben eine `get` Methode nur oder über eine `set` Methode nur. Sie können auch kombiniert sowohl die Syntax für nur Get- und die Syntax für die Gruppe nur und erzeugen eine Eigenschaft, die sowohl get- und Set hat. Diese Form können Sie verschiedene Zugriffsmodifizierer und Attribute für die Get-und set-Methoden.
 
-Die Syntax für den Zugriff auf eine nicht standardmäßige indizierte Eigenschaft wird zum Bereitstellen des Namens der Eigenschaft und der Index in Klammern. Wenn die Eigenschaft beispielsweise `Ordinal`, Schreiben Sie `obj.Ordinal(index)` darauf zugreifen.
+Wenn die *IndexerName* ist `Item`, behandelt der Compiler die Eigenschaft als eine indizierte Standardeigenschaft. Ein *indizierte Standardeigenschaft* ist eine Eigenschaft, die Sie zugreifen können, mithilfe einer arrayähnlichen Syntax in der Objektinstanz. Z. B. wenn `obj` ist ein Objekt des Typs, der diese Eigenschaft, die Syntax definiert `obj.[index]` wird verwendet, um die Eigenschaft zugreifen.
 
-Unabhängig davon, welche Form, die Sie verwenden, immer die Curry-Form verwenden sollte die `set` Methode nach einer indizierten Eigenschaft. Informationen über Curry-Funktionen finden Sie unter [Funktionen](../functions/index.md).
+Die Syntax für den Zugriff auf eine nicht standardmäßige indizierte Eigenschaft ist auf den Namen der Eigenschaft und der Index in Klammern angeben. Wenn die Eigenschaft ist z. B. `Ordinal`, Sie schreiben `obj.Ordinal(index)` , darauf zuzugreifen.
+
+Unabhängig davon, welche Form, die Sie verwenden, Sie immer die Curry-Form verwenden sollten die `set` Methode für eine indizierte Eigenschaft. Weitere Informationen zu Funktionen mit Currying, finden Sie unter [Funktionen](../functions/index.md).
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Codebeispiel veranschaulicht die Definition und Verwendung von Standard- und nicht standardmäßiger indizierte Eigenschaften, die verfügen über get- und set-Methoden.
+Das folgende Codebeispiel veranschaulicht die Definition und Verwendung von Standard- und nicht standardmäßigen indizierte Eigenschaften, die verfügen über get- und set-Methoden.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
@@ -69,11 +69,13 @@ seven seventh eight eighth nine ninth ten tenth
 ```
 
 ## <a name="indexed-properties-with-multiple-index-variables"></a>Indizierte Eigenschaften mit mehreren Indexvariablen
-Indizierte Eigenschaften können mehr als eine Indexvariable haben. In diesem Fall werden die Variablen durch Kommas getrennt, wenn die Eigenschaft verwendet wird. Die Set-Methode in einer solchen Eigenschaft benötigen zwei Curry-Argumenten, das erste ist ein Tupel, die mit den Schlüsseln, und das zweite ist der festgelegte Wert.
+
+Indizierte Eigenschaften können mehrere Indexvariable haben. In diesem Fall werden die Variablen durch Kommas getrennt, wenn die Eigenschaft verwendet wird. Die Set-Methode in eine entsprechende Eigenschaft benötigen zwei Curry-Argumente, das erste Argument ist ein Tupel, die die Schlüssel und die zweite ist der Wert festgelegt wird.
 
 Der folgende Code veranschaulicht die Verwendung einer indizierten Eigenschaft mit mehreren Indexvariablen.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3302.fs)]
-    
+
 ## <a name="see-also"></a>Siehe auch
-[Mitglieder](index.md)
+
+- [Mitglieder](index.md)

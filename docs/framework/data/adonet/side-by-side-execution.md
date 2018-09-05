@@ -3,11 +3,11 @@ title: Parallele Ausführung in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
 ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558649"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747274"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Parallele Ausführung in ADO.NET
 Parallele Ausführung in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ist die Fähigkeit, eine Anwendung auf einem Computer, auf dem mehrere Versionen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] installiert sind, ausschließlich mit der Version auszuführen, für die die Anwendung kompiliert wurde. Ausführliche Informationen zum Konfigurieren von Seite-an-Seite-Ausführung finden Sie unter [Seite-an-Seite-Ausführung](../../../../docs/framework/deployment/side-by-side-execution.md).  

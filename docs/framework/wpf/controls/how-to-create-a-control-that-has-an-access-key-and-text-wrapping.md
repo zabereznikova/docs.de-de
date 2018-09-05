@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: bc170334496ca4c2a2028b9c493385674d235ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552780"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745608"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Gewusst wie: Erstellen eines Steuerelements, das über eine Tastenkombination und Textumbruch verfügt
 Diese Beispiel veranschaulicht, wie Sie ein Steuerelement erstellen, das über eine Tastenkombination verfügt und das Umbrechen von Text unterstützt. Im Beispiel wird eine <xref:System.Windows.Controls.Label> Steuerelement zur Veranschaulichung dieser Konzepte.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
 ms.openlocfilehash: 5f1ef8680bc6826f4e8b1beb1e49fce3a15c40c9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538334"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773343"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>Beispiele für die methodenbasierte Abfragesyntax: Konvertierung
 In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> und <xref:System.Linq.Enumerable.ToList%2A> Methoden zum Abfragen der [AdventureWorks Sales-Modell](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mit der methodenbasierten Abfragesyntax. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  

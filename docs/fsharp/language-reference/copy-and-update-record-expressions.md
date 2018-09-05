@@ -1,19 +1,18 @@
 ---
-title: Kopieren und Update der Datensatz Ausdrücke (f#)
-description: Informationen Sie zum Schreiben 'kopieren und Update Datensatz Ausdruck', der einen vorhandenen Datensatz, Updates kopiert Felder angegeben und den aktualisierten Datensatz zurückgegeben.
+title: Kopieren und Aktualisieren von Datensatzausdrücken (f#)
+description: Informationen Sie zum Schreiben von 'kopieren und aktualisieren Datensatz Ausdruck', die einen vorhandenen Datensatz, Updates kopiert Felder angegeben und gibt den aktualisierten Datensatz zurück.
 author: ChrSteinert
 ms.date: 06/04/2016
-ms.openlocfilehash: 000746b6e76349ae6d8f338519a58034f4e29020
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563058"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745904"
 ---
 # <a name="copy-and-update-record-expressions"></a>Kopieren und Aktualisieren von Datensatzausdrücken
 
-Ein *kopieren und update der Datensatz Ausdruck* ist ein Ausdruck, der einen vorhandenen Datensatz kopiert werden, aktualisiert die angegebenen Felder und gibt die aktualisierte Datensatz zurück.
-
+Ein *kopieren und Aktualisieren des Datensatzes Ausdruck* ist ein Ausdruck, der einen vorhandenen Datensatz kopiert werden, aktualisiert die angegebenen Felder und gibt den aktualisierten Datensatz zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,18 +22,19 @@ Ein *kopieren und update der Datensatz Ausdruck* ist ein Ausdruck, der einen vor
 ```
 
 ## <a name="remarks"></a>Hinweise
-Datensätze sind unveränderlich ist, wird standardmäßig, sodass es kein Update einen vorhandenen Datensatz möglich ist. Um eine aktualisierte Datensatz aller Felder eines Datensatzes erstellen müssten erneut angegeben werden. Um diese Aufgabe zu vereinfachen ein *kopieren und update der Datensatz Ausdruck* kann verwendet werden. Dieser Ausdruck verwendet einen vorhandenen Datensatz, erstellt eine neue desselben Typs mithilfe des angegebenen Felder aus dem Ausdruck und das fehlende Feld mit dem angegebenen Ausdruck.
-Dies kann nützlich sein, wenn Sie zum Kopieren eines vorhandenen Datensatzes und möglicherweise einige der Werte der Felder ändern.
+
+Datensätze sind standardmäßig unveränderlich, sodass es kein Update einen vorhandenen Datensatz möglich ist. Um eine aktualisierte Datensatz alle Felder eines Datensatzes erstellen müsste erneut angegeben werden. Zur Vereinfachung dieser Aufgabe eine *kopieren und Aktualisieren des Datensatzes Ausdruck* kann verwendet werden. Dieser Ausdruck verwendet einen vorhandenen Datensatz, erstellt eine neue des gleichen Typs mit angegebenen Felder aus dem Ausdruck und das fehlende Feld, das dem angegebenen Ausdruck.
+Dies kann nützlich sein, beim Kopieren eines vorhandenen Datensatzes, und möglicherweise einige Werte der Felder ändern.
 
 Nehmen Sie z. B. einen neu erstellten Datensatz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Würden Sie nur auf das Feld für diesen Datensatz aktualisieren Sie können die *kopieren und update der Datensatz Ausdruck* wie folgt:
+Würden Sie nur auf das Feld für diesen Datensatz aktualisieren Sie können die *kopieren und Aktualisieren des Datensatzes Ausdruck* wie folgt:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
 ## <a name="see-also"></a>Siehe auch
-[Datensätze](records.md)
 
-[F#-Sprachreferenz](index.md)
+- [Datensätze](records.md)
+- [F#-Sprachreferenz](index.md)

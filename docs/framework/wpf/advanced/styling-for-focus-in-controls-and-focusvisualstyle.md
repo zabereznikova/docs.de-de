@@ -7,11 +7,11 @@ helpviewer_keywords:
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
 ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672630"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744984"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Fokusstile in Steuerelementen und FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt zwei parallele Mechanismen zum Ändern der Darstellung eines Steuerelements bereit, wenn es den Tastaturfokus erhält. Der erste Mechanismus besteht im Eigenschaften-Settern für Eigenschaften verwenden, z. B. <xref:System.Windows.UIElement.IsKeyboardFocused%2A> innerhalb der Stil oder Vorlage, die auf das Steuerelement angewendet wird. Der zweite Mechanismus besteht in der Bereitstellung eines gesonderten Stils als Wert für die <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> Eigenschaft der "visuelle Fokusstil" erstellt Sie eine separate visuelle Struktur für einen Adorner, auf das Steuerelement, anstatt die visuelle Struktur des Steuerelements oder eine andere Benutzeroberfläche zu ändern Element, indem Sie ersetzt wird. In diesem Thema werden die Szenarios erläutert, für die sich die jeweiligen Mechanismen eignen.  

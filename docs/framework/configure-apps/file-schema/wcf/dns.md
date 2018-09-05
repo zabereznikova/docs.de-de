@@ -3,11 +3,11 @@ title: '&lt;DNS&gt;'
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
 ms.openlocfilehash: 2f5b9d5e1bc57230adbb32664e9ae15d3c71d46f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472032"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732614"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.509-Zertifikat-Authentifizierungsmodus gültig, wenn das Serverzertifikat eine DNS mit dem gleichen Wert enthält. Sie ist auch für den Windows-Authentifizierungsmodus gültig, wenn der SPN den gleichen Wert hat.  

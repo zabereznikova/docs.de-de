@@ -15,11 +15,11 @@ helpviewer_keywords:
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
 ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405381"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749651"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Gewusst wie: Implementieren der bidirektionalen Kommunikation zwischen DHTML-Code und Clientanwendungscode
 Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, um Ihren Windows Forms-Clientanwendungen vorhandenen DHTML-Webanwendungscode (dynamisches HTML) hinzuzufügen. Dies ist hilfreich, wenn Sie viel Zeit in die Erstellung DHTML-basierter Steuerelemente investiert haben und von den Möglichkeiten der Windows Forms-Benutzeroberfläche profitieren möchten, ohne vorhandenen Code umschreiben zu müssen.   

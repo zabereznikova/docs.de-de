@@ -12,11 +12,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], customizing
 ms.assetid: 46acef3e-9844-4ae8-9a2e-3006fe99cadf
 ms.openlocfilehash: b86724bda83c701ad5c5872ae8d97bb490158e76
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672530"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773026"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-for-an-application"></a>Gewusst wie: Festlegen des ToolStrip-Renderers für eine Anwendung
 Sie können die Darstellung von <xref:System.Windows.Forms.ToolStrip>-Steuerelementen einzeln oder für alle <xref:System.Windows.Forms.ToolStrip>-Steuerelemente in Ihrer Anwendung anpassen.  

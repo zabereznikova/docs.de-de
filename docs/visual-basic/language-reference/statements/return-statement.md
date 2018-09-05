@@ -10,11 +10,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
 ms.openlocfilehash: fe200add4e29fe4bbe0fdf335dcd94107b8ff1eb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537539"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747810"
 ---
 # <a name="return-statement-visual-basic"></a>Return-Anweisung (Visual Basic)
 Übergibt die Steuerung an den Code, der Namen einer `Function`, `Sub`, `Get`, `Set`, oder `Operator` Verfahren.  

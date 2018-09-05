@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561073"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745514"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms
 Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von einem Steuerelement zu einem anderen wechselt durch Drücken der TAB-Taste. Jedes Formular verfügt über eine eigene Aktivierreihenfolge. Standardmäßig entspricht die Aktivierreihenfolge der Reihenfolge, in der Sie die Steuerelemente erstellt. Aktivierreihenfolge Nummerierung beginnt mit 0 (null).  

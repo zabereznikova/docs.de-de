@@ -1,17 +1,17 @@
 ---
 title: Verzögerte Berechnungen (F#)
-description: Erfahren Sie, wie die Leistung Ihrer apps und Bibliotheken von f# verzögerte Berechnungen verbessert werden können.
+description: Erfahren Sie, wie f# verzögerte Berechnungen auf die Leistung Ihrer apps und Bibliotheken verbessern können.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1c4eb6ab247c44a04a9d145185e2de7ec01b8e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563931"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744614"
 ---
 # <a name="lazy-computations"></a>Verzögerte Berechnungen
 
-*Verzögerte Berechnungen* sind Berechnungen, die nicht sofort ausgewertet werden, sondern werden stattdessen ausgewertet, wenn das Ergebnis benötigt wird. Dadurch können um die Leistung des Codes zu verbessern.
+*Verzögerte Berechnungen* sind Berechnungen, die nicht sofort ausgewertet, aber stattdessen ausgewertet, wenn das Ergebnis benötigt wird. Dies kann helfen, um die Leistung Ihres Codes zu verbessern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,20 +21,19 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax *Ausdruck* ist Code, der ausgewertet wird, nur, wenn ein Ergebnis erforderlich ist und *Bezeichner* ist ein Wert, der das Ergebnis speichert. Der Wert ist vom Typ [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), in dem die tatsächlichen eingeben, die verwendet wird, für `'T` wird über das Ergebnis des Ausdrucks bestimmt.
+In der vorherigen Syntax *Ausdruck* ist Code, der ausgewertet wird, nur, wenn das Ergebnis erforderlich ist, und *Bezeichner* ist ein Wert, der das Ergebnis speichert. Der Wert ist vom Typ [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), in dem Typ, der tatsächlich dient zur `'T` wird aus dem Ergebnis des Ausdrucks bestimmt.
 
-Verzögerte Berechnungen ermöglichen es Ihnen, Verbessern der Leistung durch Einschränken der Ausführung einer Berechnung auf nur die Fälle, in denen ein Ergebnis benötigt wird.
+Verzögerte Berechnungen können Sie zur Verbesserung der Leistung durch Einschränken der Ausführung einer Berechnung auf nur die Fälle, in denen ein Ergebnis benötigt wird.
 
-Um die Berechnung ausgeführt werden zu erzwingen, rufen Sie die Methode `Force`. `Force` bewirkt, dass die Ausführung nur einmal ausgeführt werden. Nachfolgende Aufrufe `Force` zurückgeben identisch zu, wobei jedoch keinen Code nicht ausgeführt.
+Um die Berechnung ausgeführt werden zu erzwingen, rufen Sie die Methode `Force`. `Force` bewirkt, dass die Ausführung nur einmal ausgeführt werden. Nachfolgende Aufrufe von `Force` zurückgegeben werden, dieselben dazu führen, jedoch keinen Code nicht ausgeführt.
 
-Der folgende Code veranschaulicht die Verwendung der verzögerten Berechnung und die Verwendung von `Force`. In diesem Code wird der Typ des `result` ist `Lazy<int>`, und die `Force` Methode gibt ein `int`.
+Der folgende Code veranschaulicht die Verwendung von verzögerten Berechnungen und die Verwendung von `Force`. In diesem Code wird der Typ des `result` ist `Lazy<int>`, und die `Force` Methode gibt ein `int`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-Verzögerte Auswertung jedoch nicht die `Lazy` eingeben, wird auch für Sequenzen verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md).
+Verzögerte Auswertung, aber nicht die `Lazy` eingeben, wird auch für Sequenzen verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-[F#-Sprachreferenz](index.md)
-
-[LazyExtensions-Modul](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
+- [F#-Sprachreferenz](index.md)
+- [LazyExtensions-Modul](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)

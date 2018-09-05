@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 801dff0f-2508-45aa-9416-f45d6887740c
 ms.openlocfilehash: 3a2c8949537c749ba30b116a0dc8131336de6092
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671581"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742279"
 ---
 # <a name="ref-cursor-parameters-in-an-oracledatareader"></a>REF CURSOR-Parameter in "OracleDataReader"
 In diesem Microsoft Visual Basic-Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die einen REF CURSOR-Parameter zurückgibt und den Wert als <xref:System.Data.OracleClient.OracleDataReader> liest.  

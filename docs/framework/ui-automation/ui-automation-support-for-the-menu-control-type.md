@@ -9,16 +9,16 @@ ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 38610d4421345c31e76b8020e401ffa9927eef9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 467209d9ead0101f841a017fc409657f2790f2ae
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408804"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747550"
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Menü-Steuerelementtyp
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Informationen über [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Unterstützung für den Steuerelementtyp „Menu“. Im Thema wird die [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Struktur des Steuerelements beschrieben und werden die Eigenschaften sowie Steuerelementmuster für bestimmte Steuerelementszenarien angegeben.  
   
@@ -32,13 +32,13 @@ ms.locfileid: "33408804"
   
 |Steuerelementansicht|Inhaltsansicht|  
 |------------------|------------------|  
-|Menü<br /><br /> -"MenuItem" (1 oder viele)|Nicht zutreffend (es sei denn, das Menüsteuerelement ist ein Kontextmenü, das ein übergeordnetes Element eines Objekts ist, die kein Menüelement ist)<br /><br /> -"MenuItem" (1 oder viele)|  
+|Menü<br /><br /> -MenuItem (1 oder viele)|Nicht zutreffend (es sei denn, das Menüsteuerelement ist ein Kontextmenü, das ein übergeordnetes Element eines Objekts ist, die kein Menüelement ist)<br /><br /> -MenuItem (1 oder viele)|  
   
  Menüsteuerelemente werden immer in der Steuerelementansicht und der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur angezeigt. Menu-Steuerelementtypen sollten unter dem Steuerelement angezeigt werden, auf das ihre Informationen verweisen. Benutzeroberflächenautomatisierungs-Clients müssen `MenuOpenedEvent` lauschen, damit sichergestellt ist, dass sie durchgängig von Menüsteuerelementen übermittelte Informationen erhalten. Kontextmenü-Steuerelemente sind ein besonderer Fall. Sie werden als untergeordnete Elemente des Desktops angezeigt.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
- In der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften aufgelistet, deren Wert oder Definition für den Menu-Steuerelementtyp besonders relevant ist. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie in [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ In der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften aufgelistet, deren Wert oder Definition für den Menu-Steuerelementtyp besonders relevant ist. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
