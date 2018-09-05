@@ -14,11 +14,11 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931179"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43405085"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 <a name="Top"></a> Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt. Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:  
