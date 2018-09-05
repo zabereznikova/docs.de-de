@@ -2,12 +2,12 @@
 title: Oracle-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766854"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745345"
 ---
 # <a name="oracle-schema-collections"></a>Oracle-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den allgemeinen Schemaauflistungen die folgenden spezifischen Schemaauflistungen:  
@@ -101,9 +101,9 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |LAST_ANALYZED|DateTime|Datum, an dem dieser Index zuletzt analysiert wurde.|  
 |DEGREE|Zeichenfolge|Anzahl von Threads pro Instanz zum Durchsuchen des Indexes.|  
 |INSTANCES|Zeichenfolge|Anzahl von Instanzen, in den die Indizes durchsucht werden sollen.|  
-|PARTITIONED|Zeichenfolge|Gibt an, ob dieser Index partitioniert ist (Ja &#124; NO).|  
+|PARTITIONED|Zeichenfolge|Gibt an, ob dieser Index partitioniert ist (Ja &#124; Nein).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob sich der Index in einer temporären Tabelle befindet.|  
-|GENERATED|Zeichenfolge|Gibt an, ob der Name des Indexes vom System generiert wurde (Y&#124;N).|  
+|GENERATED|Zeichenfolge|Gibt an, ob der Name des Indexes vom System generiert wird (Y&#124;N).|  
 |SECONDARY|Zeichenfolge|Gibt an, ob der Index ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y&#124;N).|  
 |BUFFER_POOL|Zeichenfolge|Name des Standardpufferpools, der für die Indexblöcke verwendet wird.|  
 |USER_STATS|Zeichenfolge|Gibt an, ob die Statistik direkt vom Benutzer eingegeben wurde.|  
@@ -146,7 +146,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
+|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|  
   
 ## <a name="sequences"></a>Sequenzen  
@@ -221,7 +221,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
+|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
   
 ## <a name="packages"></a>Pakete  
   
@@ -237,7 +237,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
+|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|  
   
 ## <a name="packagebodies"></a>PackageBodies  
@@ -254,7 +254,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |STATUS|Zeichenfolge|Status des Objekts (VALID, INVALID oder N/A).|  
 |TEMPORARY|Zeichenfolge|Gibt an, ob das Objekt temporär ist (von der aktuellen Sitzung können nur Daten angezeigt werden, die von ihr in diesem Objekt abgelegt wurden).|  
 |GENERATED|Zeichenfolge|Wurde der Name dieses Objekts vom System generiert? (Y &#124; N).|  
-|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
+|SECONDARY|Zeichenfolge|Ob dies ein sekundäres Objekt, die von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y &#124; N).|  
 |CREATED|DateTime|Das Datum, an dem das Objekt erstellt wurde.|  
   
 ## <a name="arguments"></a>Argumente  
@@ -380,4 +380,4 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |CHAR_USED|Zeichenfolge|Gibt an, ob für die Zeichenfolge eine Bytebeschränkung (B) oder eine Zeichenbeschränkung (C) gilt.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

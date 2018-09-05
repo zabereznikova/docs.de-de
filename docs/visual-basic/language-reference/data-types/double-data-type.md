@@ -19,35 +19,35 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: c2d3d7d360ccb240bafbe0e19e9f396adfba7f7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590263"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734811"
 ---
 # <a name="double-data-type-visual-basic"></a>Double-Datentyp (Visual Basic)
-Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazahlen, die von - 1.79769313486231570E + 308 bis - Wertebereich 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 bis 1.79769313486231570E + 308 für positive Werte zulässig sind. Zahlen mit doppelter Genauigkeit Näherung eine einer reellen Zahl.  
+Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazahlen, die in den Wertebereich von - 1.79769313486231570E + 308 bis - liegen 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 bis 1.79769313486231570E + 308 für positive Werte. Zahlen mit doppelter Genauigkeit speichern eine Approximation einer reellen Zahl.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Double` -Datentyp stellt den größten und kleinsten möglichen Werte für einige.  
+ Die `Double` -Datentyp stellt die größte und kleinsten möglichen Werte für eine Reihe.  
   
  Der Standardwert von `Double` lautet 0.  
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Mit einfacher Genauigkeit.** Wenn Sie mit Gleitkommazahlen arbeiten, denken Sie daran, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, über bestimmte Vorgänge, z. B. Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   **Mit einfacher Genauigkeit.** Beim Arbeiten mit Gleitkommazahlen, denken Sie daran, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, von der bestimmte Vorgänge, z. B. den Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Nachfolgende Nullen.** Der Gleitkomma-Datentypen keine interne Darstellung des Nachstellen von 0 (null) Zeichen. Angenommen, unterscheiden sie nicht zwischen 4,2000 und 4.2. Folglich Nachstellen von 0 (null) Zeichen erscheinen nicht beim Anzeigen oder Drucken Gleitkommawerte.  
+-   **Nachfolgende Nullen.** Der Gleitkomma-Datentypen keine interne Darstellung für nachfolgende Nullen. Angenommen, unterscheiden sie nicht zwischen 4,2000 und 4.2. Folglich nachfolgende Nullen erscheinen nicht beim Anzeigen oder Drucken Gleitkommawerte.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `R` an ein Literal wird der `Double`-Datentyp erzwungen. Wenn Sie ein ganzzahligen Wert folgt, wird z. B. `R`, der Wert wird geändert, um eine `Double`.  
+-   **Typzeichen.** Durch Anhängen des Literaltypzeichens `R` an ein Literal wird der `Double`-Datentyp erzwungen. Wenn ein ganzzahliger Wert folgt, wird z. B. `R`, der Wert wird geändert, um eine `Double`.  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     Durch Anhängen des Typkennzeichens `#` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Double`-Datentyp erzwungen. Im folgenden Beispiel wird die Variable `num` als typisiert ist, eine `Double`:  
+     Durch Anhängen des Typkennzeichens `#` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Double`-Datentyp erzwungen. Im folgenden Beispiel ist die Variable `num` typisiert ist, als eine `Double`:  
   
     ```  
     Dim num# = 3  
@@ -57,7 +57,7 @@ Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazah
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Double?displayProperty=nameWithType>  
- [Datentypen](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
  [Decimal-Datentyp](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
  [Single-Datentyp](../../../visual-basic/language-reference/data-types/single-data-type.md)  
  [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

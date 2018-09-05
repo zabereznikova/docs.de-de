@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: ef6dc80bc00e2582b514bff7fe3e9c5d6d5770e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420983"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735860"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Gewusst wie: Festlegen von Rasteroptionen für alle Windows Forms
 Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwendet, können Sie Einstellungen für die Formulare und Projekte, mit denen, die Sie zusammenarbeiten, im Windows Forms-Designer festlegen.  

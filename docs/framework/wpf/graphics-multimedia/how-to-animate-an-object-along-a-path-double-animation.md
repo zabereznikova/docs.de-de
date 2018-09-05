@@ -9,11 +9,11 @@ helpviewer_keywords:
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
 ms.openlocfilehash: 3dcdf6cfe8631ae0b7b1472e22d027cf9288a1db
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386221"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749735"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Gewusst wie: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> Klasse, um ein Objekt entlang eines Pfads durch Verschieben einer <xref:System.Windows.Media.PathGeometry>.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
 ms.openlocfilehash: 86645396033ca1c3cfb025ba6db42b726f7e7969
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468728"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734394"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Gewusst wie: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers
 Die Funktion der Tile-Ansicht der <xref:System.Windows.Forms.ListView> -Steuerelement können Sie eine visuelle Balance zwischen grafischen und textbasierten Daten bereitstellen. Die textbasierten Daten, die für ein Element in der Ansicht "Nebeneinander" angezeigt werden, sind die gleichen wie die Spalteninformationen, die für die Detailansicht definiert wurden. Markieren Sie Funktionen in Funktionen der Tile-Ansicht in Kombination mit der Gruppierung oder Einfügen der <xref:System.Windows.Forms.ListView> Steuerelement.  

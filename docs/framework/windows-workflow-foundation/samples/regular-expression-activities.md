@@ -2,15 +2,15 @@
 title: Aktivitäten mit regulären Ausdrücken
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519833"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743163"
 ---
 # <a name="regular-expression-activities"></a>Aktivitäten mit regulären Ausdrücken
-In diesem Beispiel wird veranschaulicht, wie ein Satz von Aktivitäten erstellt wird, der die reguläre Ausdrucksfunktionalität des <xref:System.Text.RegularExpressions>-Namespaces verfügbar macht. Diese benutzerdefinierten Aktivitäten können innerhalb einer Workflowanwendung verwendet werden. Weitere Informationen zu regulären Ausdrücken finden Sie unter [System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
+In diesem Beispiel wird veranschaulicht, wie ein Satz von Aktivitäten erstellt wird, der die reguläre Ausdrucksfunktionalität des <xref:System.Text.RegularExpressions>-Namespaces verfügbar macht. Diese benutzerdefinierten Aktivitäten können innerhalb einer Workflowanwendung verwendet werden. Weitere Informationen zu regulären Ausdrücken finden Sie unter [n: System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  
   
  In der folgenden Tabelle sind die benutzerdefinierten Aktivitäten in diesem Beispiel aufgeführt.  
   
@@ -29,7 +29,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Satz von Aktivitäten erstellt 
 |------------------------------|-----------------|  
 |Muster (erforderlich)|Der für die Suche zu verwendende reguläre Ausdruck.|  
 |Eingabe (erforderlich)|Die zu suchende Eingabezeichenfolge.|  
-|RegexOptions|Bitweise OR-Kombination von [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) Enumerationswerte.|  
+|RegexOptions|Bitweise OR-Kombination von [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) -Enumerationswerte fest.|  
 |Rückgabewert|`true`, wenn die Eingabe eine Übereinstimmung im bereitgestellten Muster findet; andernfalls `false`.|  
   
  Das folgende Codebeispiel zeigt, wie Sie die benutzerdefinierte `IsMatch`-Aktivität verwenden.  
@@ -51,7 +51,7 @@ new IsMatch
 |------------------------------|-----------------|  
 |Muster (erforderlich)|Der für die Suche zu verwendende reguläre Ausdruck.|  
 |Eingabe (erforderlich)|Die zu suchende Eingabezeichenfolge.|  
-|RegexOptions|Bitweise OR-Kombination von [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) Enumerationswerte.|  
+|RegexOptions|Bitweise OR-Kombination von [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) -Enumerationswerte fest.|  
 |Rückgabewert|Eine <xref:System.Text.RegularExpressions.MatchCollection>, die die Auflistung erfolgreicher Übereinstimmungen enthält.|  
   
  Das folgende Codebeispiel zeigt, wie Sie die benutzerdefinierte `Matches`-Aktivität verwenden.  
@@ -75,7 +75,7 @@ new Matches
 |Eingabe (erforderlich)|Die zu suchende Eingabezeichenfolge.|  
 |Ersetzung|Die Ersatzzeichenfolge.<br /><br /> Wenn eine `Replacement` angegeben wurde, wird die `MatchEvaluator`-Eigenschaft ignoriert. Es muss entweder die `Replacement`-Eigenschaft oder die `MatchEvaluator`-Eigenschaft angegeben werden.|  
 |MatchEvaluator|Eine benutzerdefinierte Methode, die jede Übereinstimmung überprüft und entweder die ursprüngliche entsprechende Zeichenfolge oder eine Ersatzzeichenfolge zurückgibt.<br /><br /> Wenn eine `Replacement` angegeben wurde, wird die `MatchEvaluator`-Eigenschaft ignoriert. Es muss entweder die `Replacement`-Eigenschaft oder die `MatchEvaluator`-Eigenschaft angegeben werden.|  
-|RegexOptions|Bitweise OR-Kombination von [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) Enumerationswerte.|  
+|RegexOptions|Bitweise OR-Kombination von [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) -Enumerationswerte fest.|  
 |Rückgabewert|Eine <xref:System.Text.RegularExpressions.MatchCollection>, die die Auflistung erfolgreicher Übereinstimmungen enthält.|  
   
  Das folgende Codebeispiel zeigt, wie Sie die benutzerdefinierte `Replace`-Aktivität verwenden.  
@@ -111,6 +111,6 @@ new Replace
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

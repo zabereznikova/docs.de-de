@@ -2,22 +2,22 @@
 title: 'Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808740"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735873"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder
-In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder mit der Windows Communication Foundation (WCF)-Plattform implementiert wird.  
+In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder mit der Windows Communication Foundation (WCF)-Plattform implementiert werden.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
@@ -25,7 +25,7 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder m
  Das Beispiel besteht aus einem Clientkonsolenprogramm (.exe), einem selbst gehosteten Dienstkonsolenprogramm (.exe) und einer Komprimierungsnachrichtenencoder-Bibliothek (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird durch die `ISampleServer`-Schnittstelle definiert, die allgemeine Zeichenfolgen-Echovorgänge (`Echo` und `BigEcho`) verfügbar macht. Der Client stellt synchrone Anforderungen an einen angegebenen Vorgang, und der Dienst antwortet dem Client, indem er die Nachricht wiederholt. Client- und Dienstaktivität sind in den Konsolenfenstern sichtbar. Das Beispiel soll zeigen, wie ein benutzerdefinierter Encoder geschrieben wird und wie sich das Komprimieren einer Nachricht auf das Netzwerk auswirkt. Sie können dem Komprimierungsnachrichtenencoder eine Instrumentierung zum Berechnen der Nachrichtengröße und/oder der Verarbeitungszeit hinzufügen.  
   
 > [!NOTE]
->  In .NET Framework 4 wurde automatische dekomprimierung auf einem WCF-Client aktiviert, wenn der Server, eine komprimierte Antwort sendet (erstellt mit einem Algorithmus wie GZip oder Deflate). Bei einem im Internet über Internet Information Server (IIS) gehosteten Dienst kann IIS so konfiguriert werden, dass der Dienst eine komprimierte Antwort sendet. Dieses Beispiel kann verwendet werden, wenn die Komprimierung und Dekomprimierung für den Client und für den Dienst durchgeführt werden müssen oder wenn der Dienst selbst gehostet wird.  
+>  In .NET Framework 4 wurde die automatische dekomprimierung auf einem WCF-Client aktiviert, wenn der Server eine komprimierte Antwort sendet (erstellt mit einem Algorithmus wie GZip oder Deflate). Bei einem im Internet über Internet Information Server (IIS) gehosteten Dienst kann IIS so konfiguriert werden, dass der Dienst eine komprimierte Antwort sendet. Dieses Beispiel kann verwendet werden, wenn die Komprimierung und Dekomprimierung für den Client und für den Dienst durchgeführt werden müssen oder wenn der Dienst selbst gehostet wird.  
   
  Das Beispiel veranschaulicht das Erstellen und integrieren einen benutzerdefinierten Nachrichtenencoder in einer WCF-Anwendung. Die Bibliothek "GZipEncoder.dll" wird sowohl mit dem Client als auch mit dem Dienst bereitgestellt. Das Beispiel zeigt auch, wie sich das Komprimieren von Nachrichten auswirkt. Der Code in der "GZipEncoder.dll" zeigt Folgendes:  
   
@@ -63,7 +63,7 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder m
   
  Die gepufferten `ReadMessage`-Klasse und `WriteMessage`-Klasse machen von der `BufferManager`-Klasse Gebrauch. Auf den Encoder kann nur über die Encoder-Factory zugegriffen werden. Die abstrakte `MessageEncoderFactory`-Klasse bietet zum Zugreifen auf den aktuellen Encoder eine Eigenschaft namens `Encoder` und zum Erstellen eines Encoders, der Sitzungen unterstützt, eine Methode namens `CreateSessionEncoder`. Ein solcher Encoder kann in Situationen verwendet werden, in denen der Kanal Sitzungen unterstützt, geordnet und zuverlässig ist. In diesem Szenario ist in jeder Sitzung, in der Daten zur Übertragung geschrieben werden, eine Optimierung möglich. Wenn dies nicht erwünscht ist, sollte die Basismethode nicht überladen werden. Die `Encoder`-Eigenschaft bietet einen Mechanismus zum Zugreifen auf den sitzungslosen Encoder, und der Wert der Eigenschaft wird von der Standardimplementierung der `CreateSessionEncoder`-Methode zurückgegeben. Da das Beispiel einen vorhandenen Encoder einschließt, um Komprimierung zu ermöglichen, akzeptiert die `MessageEncoderFactory`-Implementierung eine `MessageEncoderFactory`, die die innere Encoder-Factory darstellt.  
   
- Nun, dass der Encoder und die Encoder-Factory definiert sind, können sie mit einem WCF-Client und Dienst verwendet werden. Allerdings müssen diese Encoder dem Kanalstapel hinzugefügt werden. Zum manuellen Hinzufügen dieser Encoder-Factory können Sie Klassen von der <xref:System.ServiceModel.ServiceHost>-Klasse und der <xref:System.ServiceModel.ChannelFactory%601>-Klasse ableiten und die `OnInitialize`-Methoden überschreiben. Sie können die Encoder-Factory auch über ein benutzerdefiniertes Bindungselement verfügbar machen.  
+ Nun, da der Encoder und der Nachrichtenencoder-Factory definiert sind, können sie mit einem WCF-Client und Dienst verwendet werden. Allerdings müssen diese Encoder dem Kanalstapel hinzugefügt werden. Zum manuellen Hinzufügen dieser Encoder-Factory können Sie Klassen von der <xref:System.ServiceModel.ServiceHost>-Klasse und der <xref:System.ServiceModel.ChannelFactory%601>-Klasse ableiten und die `OnInitialize`-Methoden überschreiben. Sie können die Encoder-Factory auch über ein benutzerdefiniertes Bindungselement verfügbar machen.  
   
  Zum Erstellen eines neuen benutzerdefinierten Bindungselements leiten Sie eine Klasse von der <xref:System.ServiceModel.Channels.BindingElement>-Klasse ab. Es gibt jedoch mehrere Typen von Bindungselementen. Um sicherzustellen, dass das benutzerdefinierte Bindungselement als ein Nachrichtencodierungs-Bindungselement erkannt wird, müssen Sie auch das <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> implementieren. Das <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> macht eine Methode zum Erstellen einer neuen Nachrichtenencoder-Factory verfügbar (`CreateMessageEncoderFactory`), die so implementiert ist, dass sie eine Instanz der übereinstimmenden Nachrichtenencoder-Factory zurückgibt. Außerdem besitzt das <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> eine Eigenschaft zum Angeben der Adressierungsversion. Da dieses Beispiel die vorhandenen Encoder einschließt, schließt die Implementierung des Beispiels auch die vorhandenen Encoderbindungselemente ein und nimmt ein inneres Encoderbindungselement als Parameter für den Konstruktor entgegen, das es über eine Eigenschaft verfügbar macht. Das folgende Codebeispiel zeigt die Implementierung der `GZipMessageEncodingBindingElement`-Klasse.  
   
@@ -340,18 +340,18 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Stellen Sie sicher, dass Sie ausgeführt haben die [Setupprozedur für die Windows Communication Foundation-Beispiele zum einmaligen](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

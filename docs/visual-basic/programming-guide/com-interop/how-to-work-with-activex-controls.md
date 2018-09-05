@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 740f2c899e7548829e4822bbfb56c7d61d64777a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421814"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43772779"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Gewusst wie: Verwenden von ActiveX-Steuerelementen (Visual Basic)
 ActiveX-Steuerelemente sind COM-Komponenten oder Objekte, die Sie einfügen können, in einer Webseite oder einer anderen Anwendung um wiederverwenden, die eine andere Person programmiert wurde. Können Sie ActiveX-Steuerelemente für Visual Basic 6.0 und früheren Versionen entwickelte Funktionen zum Hinzufügen der **Toolbox** von Visual Studio.  

@@ -3,11 +3,11 @@ title: Ausführungseigenschaften
 ms.date: 03/30/2017
 ms.assetid: 31c009db-397c-4653-87e2-32dc77fa4b13
 ms.openlocfilehash: 4906c2ad11c8b5822764435d2b39a5b51f2673ba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409088"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748193"
 ---
 # <a name="execution-properties"></a>Ausführungseigenschaften
 Dieses Beispiel zeigt, wie in einer benutzerdefinierten Aktivität eine Ausführungseigenschaft definiert und verwendet wird. Mit der Ausführungseigenschaft in diesem Beispiel wird die Vordergrundfarbe der Konsole bestimmt. Anhand eines Beispielworkflows wird gezeigt, wie mit verschiedenen logischen Ausführungspfaden (Verzweigungen einer <xref:System.Activities.Statements.Parallel>-Aktivität) trotz der überlappenden Ausführung von Aktivitäten (verzweigungsübergreifende Ausführung der <xref:System.Activities.Statements.Parallel>-Aktivität) unterschiedliche Konsolenfarben beibehalten werden können.  

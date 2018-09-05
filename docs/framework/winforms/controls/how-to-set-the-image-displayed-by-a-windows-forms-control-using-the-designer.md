@@ -10,11 +10,11 @@ helpviewer_keywords:
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
 ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392627"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735902"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers
 Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, z. B. auf eine Schaltfläche, ein Datenträgersymbol wird ermittelt, werden die **speichern** Befehl. Alternativ kann das Symbol ein Hintergrundbild auf dem Steuerelement der gewünschten Eindruck sein.  

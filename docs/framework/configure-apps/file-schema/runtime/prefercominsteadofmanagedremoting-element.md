@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cac4ebb46fabad49e2e4e6a7d566522ca027094
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c05e27226a58086c806e8977ba50a55873d1167e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745473"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735887"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; Element
-Gibt an, ob die Laufzeit COM-Interop anstelle von Remoting für alle Aufrufe über Anwendungsdomänengrenzen hinweg verwendet werden.  
+Gibt an, ob die Runtime COM-Interop anstelle von anwendungsdomänenübergreifendem Remoting für alle Aufrufe über Anwendungsdomänengrenzen hinweg verwendet werden.  
   
  \<configuration>  
 \<Common Language Runtime >  
@@ -34,14 +34,14 @@ Gibt an, ob die Laufzeit COM-Interop anstelle von Remoting für alle Aufrufe üb
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime, COM-Interop anstelle von Remoting über Anwendungsdomänengrenzen hinweg verwendet werden.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Runtime COM-Interop anstelle von anwendungsdomänenübergreifendem Remoting über Anwendungsdomänen hinweg verwendet werden.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Die Common Language Runtime wird Remoting über Anwendungsdomänengrenzen hinweg verwendet werden. Dies ist die Standardeinstellung.|  
-|`true`|Die Common Language Runtime wird COM-Interop über Anwendungsdomänengrenzen hinweg verwendet werden.|  
+|`false`|Die Laufzeit wird Remoting über Anwendungsdomänen hinweg verwendet werden. Dies ist die Standardeinstellung.|  
+|`true`|Die Runtime wird COM-Interop über Anwendungsdomänengrenzen hinweg verwendet werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,16 +54,16 @@ Gibt an, ob die Laufzeit COM-Interop anstelle von Remoting für alle Aufrufe üb
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Festlegen der `enabled` -Attribut `true`, die Common Language Runtime verhält sich wie folgt:  
+ Beim Festlegen der `enabled` Attribut `true`, die Laufzeit verhält sich wie folgt:  
   
--   Die Common Language Runtime nicht aufgerufen [IUnknown:: QueryInterface](http://go.microsoft.com/fwlink/?LinkID=144867) für eine [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) Schnittstelle, wenn ein [IUnknown](http://go.microsoft.com/fwlink/?LinkId=148003) Schnittstelle wechselt in die Domäne über eine COM-Schnittstelle. Stattdessen erstellt er eine [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) um das Objekt.  
+-   Die Runtime ruft nicht [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) für eine [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) Schnittstelle, wenn ein [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) Schnittstelle gibt die Domäne über eine COM-Schnittstelle. Stattdessen erstellt eine [Runtime Callable Wrapper](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) für das Objekt.  
   
--   Die Common Language Runtime wird E_NOINTERFACE zurückgegeben, bei Erhalt des eine `QueryInterface` rufen Sie für eine [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) Schnittstelle für eine beliebige [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW), die in dieser Domäne erstellt wurde.  
+-   Die Laufzeit wird E_NOINTERFACE zurückgegeben, wenn er empfängt eine `QueryInterface` rufen Sie für eine [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) Schnittstelle für alle [COM Callable Wrapper](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW), die in dieser Domäne erstellt wurde.  
   
- Diese zwei Verhaltensweisen stellen Sie sicher, dass alle Aufrufe über COM-Schnittstellen zwischen verwalteten Objekten über Anwendung Domäne Grenzen verwenden COM- und COM-Interop anstelle von Remoting.  
+ Diese zwei Verhaltensweisen stellen Sie sicher, dass alle Aufrufe über COM-Schnittstellen zwischen verwalteten Objekten über Domänen hinweg Anwendungsverwendung COM- und COM-Interop anstelle von anwendungsdomänenübergreifendem Remoting.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel veranschaulicht angeben, dass die Common Language Runtime für COM-Interop-hinweg Isolation:  
+ Das folgende Beispiel zeigt wie angegeben, dass die Runtime COM verwenden soll, die über Isolationsgrenzen hinweg interop:  
   
 ```xml  
 <configuration>  
