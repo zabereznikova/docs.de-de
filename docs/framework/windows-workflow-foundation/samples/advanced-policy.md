@@ -3,81 +3,81 @@ title: Erweiterte Richtlinie
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
 ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672839"
 ---
-# <a name="advanced-policy"></a><span data-ttu-id="6ceee-102">Erweiterte Richtlinie</span><span class="sxs-lookup"><span data-stu-id="6ceee-102">Advanced Policy</span></span>
-<span data-ttu-id="6ceee-103">Dieses Beispiel erweitert das Beispiel für einfache Richtlinien.</span><span class="sxs-lookup"><span data-stu-id="6ceee-103">This sample extends the Simple Policy sample.</span></span> <span data-ttu-id="6ceee-104">Zusätzlich zu den Rabattregeln für Privat- und Geschäftskunden aus dem Beispiel für eine einfache Richtlinie wurden mehrere neue Regeln hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="6ceee-104">In addition to the residential discount and business discount rules from the Simple Policy example, several new rules have been added.</span></span>  
+# <a name="advanced-policy"></a><span data-ttu-id="0b3b2-102">Erweiterte Richtlinie</span><span class="sxs-lookup"><span data-stu-id="0b3b2-102">Advanced Policy</span></span>
+<span data-ttu-id="0b3b2-103">Dieses Beispiel erweitert das Beispiel für einfache Richtlinien.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-103">This sample extends the Simple Policy sample.</span></span> <span data-ttu-id="0b3b2-104">Zusätzlich zu den Rabattregeln für Privat- und Geschäftskunden aus dem Beispiel für eine einfache Richtlinie wurden mehrere neue Regeln hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-104">In addition to the residential discount and business discount rules from the Simple Policy example, several new rules have been added.</span></span>  
   
- <span data-ttu-id="6ceee-105">Es wurde eine Regel für hohe Werte hinzugefügt, wodurch ein höherer Rabatt für Bestellungen mit hohem Wert gewährt wird.</span><span class="sxs-lookup"><span data-stu-id="6ceee-105">A high-value rule is added, which provides a bigger discount for high-value orders.</span></span> <span data-ttu-id="6ceee-106">Diese Regel erhält einen höheren Prioritätswert als die beiden vorhergehenden Regeln, sodass das Rabattfeld überschrieben wird und diese Regel Vorrang vor der Rabattregel für Privatkunden und Geschäftskunden hat.</span><span class="sxs-lookup"><span data-stu-id="6ceee-106">It is given a priority value less than the previous two rules so that it will overwrite the discount field and take precedence over both the residential and business discount rules.</span></span>  
+ <span data-ttu-id="0b3b2-105">Es wurde eine Regel für hohe Werte hinzugefügt, wodurch ein höherer Rabatt für Bestellungen mit hohem Wert gewährt wird.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-105">A high-value rule is added, which provides a bigger discount for high-value orders.</span></span> <span data-ttu-id="0b3b2-106">Diese Regel erhält einen höheren Prioritätswert als die beiden vorhergehenden Regeln, sodass das Rabattfeld überschrieben wird und diese Regel Vorrang vor der Rabattregel für Privatkunden und Geschäftskunden hat.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-106">It is given a priority value less than the previous two rules so that it will overwrite the discount field and take precedence over both the residential and business discount rules.</span></span>  
   
- <span data-ttu-id="6ceee-107">Es wurde ebenso eine Regel zum Berechnen der Gesamtsumme hinzugefügt, mit der die Gesamtsumme hinsichtlich der Rabattstufe berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="6ceee-107">A calculate total rule is also added, which computes the total based on the discount level.</span></span> <span data-ttu-id="6ceee-108">Sie zeigt, wie eine in der Workflowaktivität definierte Methode referenziert und wie else-Aktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="6ceee-108">It shows how to reference a method defined on the workflow activity, as well as how to use else actions.</span></span> <span data-ttu-id="6ceee-109">Diese Regel veranschaulicht außerdem das Verkettungsverhalten, da sie jedes Mal dann ausgewertet wird, wenn eine Änderung im Rabattfeld auftritt.</span><span class="sxs-lookup"><span data-stu-id="6ceee-109">This rule also demonstrates chaining behavior since it will be evaluated anytime the discount field changes.</span></span> <span data-ttu-id="6ceee-110">Darüber hinaus wird die Attributzuweisung für Methoden mit RuleWriteAttribute für die CalculateTotal-Methode dargestellt.</span><span class="sxs-lookup"><span data-stu-id="6ceee-110">Furthermore, method attributing is shown with the RuleWriteAttribute on the CalculateTotal method.</span></span> <span data-ttu-id="6ceee-111">Dies führt dazu, dass betroffene Regeln (ErrorTotalRule) immer dann neu ausgewertet werden, wenn die Methode ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="6ceee-111">This causes impacted rules (ErrorTotalRule) to be re-evaluated whenever the method gets executed.</span></span>  
+ <span data-ttu-id="0b3b2-107">Es wurde ebenso eine Regel zum Berechnen der Gesamtsumme hinzugefügt, mit der die Gesamtsumme hinsichtlich der Rabattstufe berechnet wird.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-107">A calculate total rule is also added, which computes the total based on the discount level.</span></span> <span data-ttu-id="0b3b2-108">Sie zeigt, wie eine in der Workflowaktivität definierte Methode referenziert und wie else-Aktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-108">It shows how to reference a method defined on the workflow activity, as well as how to use else actions.</span></span> <span data-ttu-id="0b3b2-109">Diese Regel veranschaulicht außerdem das Verkettungsverhalten, da sie jedes Mal dann ausgewertet wird, wenn eine Änderung im Rabattfeld auftritt.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-109">This rule also demonstrates chaining behavior since it will be evaluated anytime the discount field changes.</span></span> <span data-ttu-id="0b3b2-110">Darüber hinaus wird die Attributzuweisung für Methoden mit RuleWriteAttribute für die CalculateTotal-Methode dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-110">Furthermore, method attributing is shown with the RuleWriteAttribute on the CalculateTotal method.</span></span> <span data-ttu-id="0b3b2-111">Dies führt dazu, dass betroffene Regeln (ErrorTotalRule) immer dann neu ausgewertet werden, wenn die Methode ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-111">This causes impacted rules (ErrorTotalRule) to be re-evaluated whenever the method gets executed.</span></span>  
   
- <span data-ttu-id="6ceee-112">Die letzte hinzugefügte Regel dient der Fehlererkennung (in diesem Fall, wenn die Gesamtsumme geringer als 0 (null) ist).</span><span class="sxs-lookup"><span data-stu-id="6ceee-112">The last rule added is one that detects errors (in this case, Total less than 0).</span></span> <span data-ttu-id="6ceee-113">Wenn dies auftritt, wird die Richtlinienausführung unterbrochen.</span><span class="sxs-lookup"><span data-stu-id="6ceee-113">If this occurs, the policy execution is halted.</span></span>  
+ <span data-ttu-id="0b3b2-112">Die letzte hinzugefügte Regel dient der Fehlererkennung (in diesem Fall, wenn die Gesamtsumme geringer als 0 (null) ist).</span><span class="sxs-lookup"><span data-stu-id="0b3b2-112">The last rule added is one that detects errors (in this case, Total less than 0).</span></span> <span data-ttu-id="0b3b2-113">Wenn dies auftritt, wird die Richtlinienausführung unterbrochen.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-113">If this occurs, the policy execution is halted.</span></span>  
   
- <span data-ttu-id="6ceee-114">Zuletzt wurden jeder Regel `Console.Writeline`-Aufrufe als Aktionen hinzugefügt, um die Sichtbarkeit der Regelausführung zu erhöhen, während ebenfalls aufgezeigt wird, dass es möglich ist, auf statische Methoden in referenzierten Typen zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="6ceee-114">Finally, `Console.Writeline` calls are added as actions to each rule to provide more visibility into rule execution, while also showing that it is possible to access static methods on referenced types.</span></span> <span data-ttu-id="6ceee-115">Sie könnten die Überwachung auch verwenden, um die Sichtbarkeit von Regeln bei deren Ausführung zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="6ceee-115">You could also use tracking to get visibility into the rules that are executed.</span></span>  
+ <span data-ttu-id="0b3b2-114">Zuletzt wurden jeder Regel `Console.Writeline`-Aufrufe als Aktionen hinzugefügt, um die Sichtbarkeit der Regelausführung zu erhöhen, während ebenfalls aufgezeigt wird, dass es möglich ist, auf statische Methoden in referenzierten Typen zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-114">Finally, `Console.Writeline` calls are added as actions to each rule to provide more visibility into rule execution, while also showing that it is possible to access static methods on referenced types.</span></span> <span data-ttu-id="0b3b2-115">Sie könnten die Überwachung auch verwenden, um die Sichtbarkeit von Regeln bei deren Ausführung zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-115">You could also use tracking to get visibility into the rules that are executed.</span></span>  
   
- <span data-ttu-id="6ceee-116">In diesem Beispiel werden die folgenden Regeln verwendet:</span><span class="sxs-lookup"><span data-stu-id="6ceee-116">The rules used in this sample are:</span></span>  
+ <span data-ttu-id="0b3b2-116">In diesem Beispiel werden die folgenden Regeln verwendet:</span><span class="sxs-lookup"><span data-stu-id="0b3b2-116">The rules used in this sample are:</span></span>  
   
- <span data-ttu-id="6ceee-117">**ResidentialDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="6ceee-117">**ResidentialDiscountRule:**</span></span>  
+ <span data-ttu-id="0b3b2-117">**ResidentialDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="0b3b2-117">**ResidentialDiscountRule:**</span></span>  
   
- <span data-ttu-id="6ceee-118">IF OrderValue > 500 AND CustomerType = Residential</span><span class="sxs-lookup"><span data-stu-id="6ceee-118">IF OrderValue > 500 AND CustomerType = Residential</span></span>  
+ <span data-ttu-id="0b3b2-118">IF OrderValue > 500 AND CustomerType = Residential</span><span class="sxs-lookup"><span data-stu-id="0b3b2-118">IF OrderValue > 500 AND CustomerType = Residential</span></span>  
   
- <span data-ttu-id="6ceee-119">THEN Discount = 5%</span><span class="sxs-lookup"><span data-stu-id="6ceee-119">THEN Discount = 5%</span></span>  
+ <span data-ttu-id="0b3b2-119">THEN Discount = 5%</span><span class="sxs-lookup"><span data-stu-id="0b3b2-119">THEN Discount = 5%</span></span>  
   
- <span data-ttu-id="6ceee-120">**BusinessDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="6ceee-120">**BusinessDiscountRule:**</span></span>  
+ <span data-ttu-id="0b3b2-120">**BusinessDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="0b3b2-120">**BusinessDiscountRule:**</span></span>  
   
- <span data-ttu-id="6ceee-121">IF OrderValue > 10000 AND CustomerType = Business</span><span class="sxs-lookup"><span data-stu-id="6ceee-121">IF OrderValue > 10000 AND CustomerType = Business</span></span>  
+ <span data-ttu-id="0b3b2-121">IF OrderValue > 10000 AND CustomerType = Business</span><span class="sxs-lookup"><span data-stu-id="0b3b2-121">IF OrderValue > 10000 AND CustomerType = Business</span></span>  
   
- <span data-ttu-id="6ceee-122">THEN Discount = 10%</span><span class="sxs-lookup"><span data-stu-id="6ceee-122">THEN Discount = 10%</span></span>  
+ <span data-ttu-id="0b3b2-122">THEN Discount = 10%</span><span class="sxs-lookup"><span data-stu-id="0b3b2-122">THEN Discount = 10%</span></span>  
   
- <span data-ttu-id="6ceee-123">**HighValueDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="6ceee-123">**HighValueDiscountRule:**</span></span>  
+ <span data-ttu-id="0b3b2-123">**HighValueDiscountRule:**</span><span class="sxs-lookup"><span data-stu-id="0b3b2-123">**HighValueDiscountRule:**</span></span>  
   
- <span data-ttu-id="6ceee-124">IF OrderValue > 20000</span><span class="sxs-lookup"><span data-stu-id="6ceee-124">IF OrderValue > 20000</span></span>  
+ <span data-ttu-id="0b3b2-124">IF OrderValue > 20000</span><span class="sxs-lookup"><span data-stu-id="0b3b2-124">IF OrderValue > 20000</span></span>  
   
- <span data-ttu-id="6ceee-125">THEN Discount = 15%</span><span class="sxs-lookup"><span data-stu-id="6ceee-125">THEN Discount = 15%</span></span>  
+ <span data-ttu-id="0b3b2-125">THEN Discount = 15%</span><span class="sxs-lookup"><span data-stu-id="0b3b2-125">THEN Discount = 15%</span></span>  
   
- <span data-ttu-id="6ceee-126">**TotalRule:**</span><span class="sxs-lookup"><span data-stu-id="6ceee-126">**TotalRule:**</span></span>  
+ <span data-ttu-id="0b3b2-126">**TotalRule:**</span><span class="sxs-lookup"><span data-stu-id="0b3b2-126">**TotalRule:**</span></span>  
   
- <span data-ttu-id="6ceee-127">IF Discount > 0</span><span class="sxs-lookup"><span data-stu-id="6ceee-127">IF Discount > 0</span></span>  
+ <span data-ttu-id="0b3b2-127">IF Discount > 0</span><span class="sxs-lookup"><span data-stu-id="0b3b2-127">IF Discount > 0</span></span>  
   
- <span data-ttu-id="6ceee-128">THEN CalculateTotal(OrderValue, Discount)</span><span class="sxs-lookup"><span data-stu-id="6ceee-128">THEN CalculateTotal(OrderValue, Discount)</span></span>  
+ <span data-ttu-id="0b3b2-128">THEN CalculateTotal(OrderValue, Discount)</span><span class="sxs-lookup"><span data-stu-id="0b3b2-128">THEN CalculateTotal(OrderValue, Discount)</span></span>  
   
- <span data-ttu-id="6ceee-129">ELSE Total = OrderValue</span><span class="sxs-lookup"><span data-stu-id="6ceee-129">ELSE Total = OrderValue</span></span>  
+ <span data-ttu-id="0b3b2-129">ELSE Total = OrderValue</span><span class="sxs-lookup"><span data-stu-id="0b3b2-129">ELSE Total = OrderValue</span></span>  
   
- <span data-ttu-id="6ceee-130">**Errortotalrule immer dann:**</span><span class="sxs-lookup"><span data-stu-id="6ceee-130">**ErrorTotalRule:**</span></span>  
+ <span data-ttu-id="0b3b2-130">**Errortotalrule immer dann:**</span><span class="sxs-lookup"><span data-stu-id="0b3b2-130">**ErrorTotalRule:**</span></span>  
   
- <span data-ttu-id="6ceee-131">IF insgesamt \< 0</span><span class="sxs-lookup"><span data-stu-id="6ceee-131">IF Total \< 0</span></span>  
+ <span data-ttu-id="0b3b2-131">IF insgesamt \< 0</span><span class="sxs-lookup"><span data-stu-id="0b3b2-131">IF Total \< 0</span></span>  
   
- <span data-ttu-id="6ceee-132">THEN Error = "Fired ErrorTotalRule"; Halt</span><span class="sxs-lookup"><span data-stu-id="6ceee-132">THEN Error = "Fired ErrorTotalRule"; Halt</span></span>  
+ <span data-ttu-id="0b3b2-132">THEN Error = "Fired ErrorTotalRule"; Halt</span><span class="sxs-lookup"><span data-stu-id="0b3b2-132">THEN Error = "Fired ErrorTotalRule"; Halt</span></span>  
   
- <span data-ttu-id="6ceee-133">Die Auswertung und Ausführung von Regeln kann außerdem über die Verfolgung und Überwachung beobachtet werden.</span><span class="sxs-lookup"><span data-stu-id="6ceee-133">Rule evaluation and execution can also be seen through tracing and tracking.</span></span>  
+ <span data-ttu-id="0b3b2-133">Die Auswertung und Ausführung von Regeln kann außerdem über die Verfolgung und Überwachung beobachtet werden.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-133">Rule evaluation and execution can also be seen through tracing and tracking.</span></span>  
   
-### <a name="to-build-the-sample"></a><span data-ttu-id="6ceee-134">So erstellen Sie das Beispiel</span><span class="sxs-lookup"><span data-stu-id="6ceee-134">To build the sample</span></span>  
+### <a name="to-build-the-sample"></a><span data-ttu-id="0b3b2-134">So erstellen Sie das Beispiel</span><span class="sxs-lookup"><span data-stu-id="0b3b2-134">To build the sample</span></span>  
   
-1.  <span data-ttu-id="6ceee-135">Öffnen Sie die Projektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6ceee-135">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="0b3b2-135">Öffnen Sie die Projektmappe in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0b3b2-135">Open the solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="6ceee-136">Erstellen Sie die Projektmappe, indem Sie STRG+UMSCHALT+B drücken.</span><span class="sxs-lookup"><span data-stu-id="6ceee-136">Build the solution by pressing CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="0b3b2-136">Erstellen Sie die Projektmappe, indem Sie STRG+UMSCHALT+B drücken.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-136">Build the solution by pressing CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="6ceee-137">Führen Sie die Projektmappe ohne Debuggen aus, indem Sie STRG+F5 drücken.</span><span class="sxs-lookup"><span data-stu-id="6ceee-137">Run the solution without debugging by pressing CTRL+F5.</span></span>  
+3.  <span data-ttu-id="0b3b2-137">Führen Sie die Projektmappe ohne Debuggen aus, indem Sie STRG+F5 drücken.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-137">Run the solution without debugging by pressing CTRL+F5.</span></span>  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="6ceee-138">So führen Sie das Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="6ceee-138">To run the sample</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="0b3b2-138">So führen Sie das Beispiel aus</span><span class="sxs-lookup"><span data-stu-id="0b3b2-138">To run the sample</span></span>  
   
--   <span data-ttu-id="6ceee-139">Führen Sie im Eingabeaufforderungsfenster des SDK die EXE-Datei im Ordner AdvancedPolicy\bin\debug aus (bzw. im Ordner AdvancedPolicy\bin für die Visual Basic-Version des Beispiels), der sich unter dem Hauptordner des Beispiels befindet.</span><span class="sxs-lookup"><span data-stu-id="6ceee-139">In the SDK Command Prompt window, run the .exe file in the AdvancedPolicy\bin\debug folder (or the AdvancedPolicy \bin folder for the Visual Basic version of the sample), which is located below the main folder for the sample.</span></span>  
+-   <span data-ttu-id="0b3b2-139">Führen Sie im Eingabeaufforderungsfenster des SDK die EXE-Datei im Ordner AdvancedPolicy\bin\debug aus (bzw. im Ordner AdvancedPolicy\bin für die Visual Basic-Version des Beispiels), der sich unter dem Hauptordner des Beispiels befindet.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-139">In the SDK Command Prompt window, run the .exe file in the AdvancedPolicy\bin\debug folder (or the AdvancedPolicy \bin folder for the Visual Basic version of the sample), which is located below the main folder for the sample.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="6ceee-140">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="6ceee-140">The samples may already be installed on your computer.</span></span> <span data-ttu-id="6ceee-141">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren:</span><span class="sxs-lookup"><span data-stu-id="6ceee-141">Check for the following (default) directory before continuing:</span></span>  
+>  <span data-ttu-id="0b3b2-140">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-140">The samples may already be installed on your computer.</span></span> <span data-ttu-id="0b3b2-141">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren:</span><span class="sxs-lookup"><span data-stu-id="0b3b2-141">Check for the following (default) directory before continuing:</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="6ceee-142">Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele.</span><span class="sxs-lookup"><span data-stu-id="6ceee-142">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6ceee-143">Dieses Beispiel befindet sich im folgenden Verzeichnis:</span><span class="sxs-lookup"><span data-stu-id="6ceee-143">This sample is located in the following directory:</span></span>  
+>  <span data-ttu-id="0b3b2-142">Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele.</span><span class="sxs-lookup"><span data-stu-id="0b3b2-142">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="0b3b2-143">Dieses Beispiel befindet sich im folgenden Verzeichnis:</span><span class="sxs-lookup"><span data-stu-id="0b3b2-143">This sample is located in the following directory:</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   
-## <a name="see-also"></a><span data-ttu-id="6ceee-144">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6ceee-144">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0b3b2-144">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0b3b2-144">See Also</span></span>  
  <xref:System.Workflow.Activities.Rules.RuleSet>  
  <xref:System.Workflow.Activities.PolicyActivity>  
- [<span data-ttu-id="6ceee-145">Einfache Richtlinie</span><span class="sxs-lookup"><span data-stu-id="6ceee-145">Simple Policy</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)
+ [<span data-ttu-id="0b3b2-145">Einfache Richtlinie</span><span class="sxs-lookup"><span data-stu-id="0b3b2-145">Simple Policy</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/simple-policy.md)
