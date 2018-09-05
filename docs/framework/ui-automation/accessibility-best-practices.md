@@ -8,16 +8,16 @@ ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf3d9aafa428b82b9e8817bcd31b9a6bd2cfeba4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b451e0c66d2c595826e90debfcb0fb3a2602fec
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400968"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502425"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Durch Implementieren der folgenden bewährten Methoden in Steuerelementen oder Anwendungen wird die Barrierefreiheit für Personen verbessert, die [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] -Geräte verwenden. Viele dieser bewährten Methoden konzentrieren sich auf einen guten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Entwurf. Jede bewährte Methode umfasst Implementierungsinformationen für [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Steuerelemente oder -Anwendungen. In vielen Fällen enthalten die [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Steuerelemente bereits die Funktionen, um diese bewährten Methoden zu erfüllen.  
   
@@ -135,5 +135,5 @@ ms.locfileid: "33400968"
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Automation.Peers>  
- [Benutzerdefiniertes NumericUpDown-Steuerelement mit Unterstützung von Design und Automatisierung](http://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [Richtlinien für die Gestaltung einer tastaturgesteuerten Benutzeroberfläche](http://msdn2.microsoft.com/library/ms971323.aspx)
+ [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
+ [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](http://msdn2.microsoft.com/library/ms971323.aspx)

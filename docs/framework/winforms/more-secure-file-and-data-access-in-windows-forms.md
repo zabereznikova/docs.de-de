@@ -14,11 +14,11 @@ helpviewer_keywords:
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
 ms.openlocfilehash: d5a9b08188e346fdea5b155149dee1ef8368c2a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404069"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536257"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms
 In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] werden Berechtigungen zum Schutz von Ressourcen und Daten verwendet. In welchen Situationen Daten von einer Anwendung gelesen oder geschrieben werden können, hängt davon ab, welche Berechtigungen der Anwendung gewährt wurden. Wenn die Anwendung in einer Umgebung mit teilweiser Vertrauenswürdigkeit ausgeführt wird, können Sie unter Umständen auf bestimmte Daten nicht zugreifen oder müssen die Art des Zugriffs auf bestimmte Daten ändern.  
