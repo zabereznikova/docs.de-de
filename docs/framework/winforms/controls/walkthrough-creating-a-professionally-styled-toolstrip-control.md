@@ -10,57 +10,57 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 2d2443f1f7153ed35aecbbb9d69c9e1421269e24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6435f33489be1355313e43a046b0e3169e1eaea3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541605"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538564"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements
-Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> steuert ein professionelles Aussehen und Verhalten durch Schreiben einer eigenen Klasse abgeleitet wurde. die <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Typ.  
+Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.ToolStrip> steuert, ein professionelles Aussehen und Verhalten durch eine eigene Klasse abgeleitet schreiben die <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Typ.  
   
- Diese exemplarische Vorgehensweise veranschaulicht, wie <xref:System.Windows.Forms.ToolStrip> Steuerelemente zum Erstellen eines zusammengesetzten Steuerelements, das ähnelt der **Navigationsbereich** von Microsoft® Outlook® bereitgestellten. In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht:  
+ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie mit <xref:System.Windows.Forms.ToolStrip> Steuerelemente, um ein zusammengesetztes Steuerelement zu erstellen, ähnelt die **Navigationsbereich** von Microsoft® Outlook® bereitgestellten. Die folgenden Aufgaben werden in dieser exemplarischen Vorgehensweise veranschaulicht:  
   
 -   Erstellen eines Windows-Steuerelementbibliothek-Projekts.  
   
--   Entwerfen des StackView-Steuerelements an.  
+-   Entwerfen des StackView-Steuerelements.  
   
 -   Implementieren eines benutzerdefinierten Renderers.  
   
- Wenn Sie fertig sind, müssen Sie ein wiederverwendbare benutzerdefinierte Clientsteuerelement mit professionelle Darstellung eines Microsoft Office® XP-Steuerelements.  
+ Wenn Sie fertig sind, müssen Sie ein Steuerelement wiederverwendbare benutzerdefinierte Clienteinstellungen, mit der professionelle Darstellung eines Microsoft Office® XP-Steuerelements.  
   
- Um den Code in diesem Thema als einzelne Auflistung kopieren zu können, finden Sie unter [Vorgehensweise: Erstellen einer professionellen ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ Um den Code in diesem Thema als einzelne Auflistung kopieren möchten, finden Sie unter [Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
--   Ausreichende Berechtigungen zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
+-   Berechtigt sind, können zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Erstellen eine Windows-Steuerelementbibliothek-Projekt  
- Der erste Schritt besteht darin-Steuerelementbibliothek-Projekt zu erstellen.  
+ Der erste Schritt ist das Steuerelementbibliothek-Projekt zu erstellen.  
   
-#### <a name="to-create-the-control-library-project"></a>-Steuerelementbibliothek-Projekt erstellen  
+#### <a name="to-create-the-control-library-project"></a>Um die Steuerelementbibliothek-Projekt zu erstellen.  
   
 1.  Erstellen Sie ein neues Windows-Steuerelementbibliothek-Projekt namens `StackViewLibrary`.  
   
-2.  In **Projektmappen-Explorer**, Standardsteuerelement für das Projekt löschen, indem Sie die Quelldatei mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von einer Sprache Ihrer Wahl zu löschen.  
+2.  In **Projektmappen-Explorer**, löschen Sie Standardsteuerelement des Projekts, indem Sie die Quelldatei, die mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von der Sprache Ihrer Wahl löschen.  
   
-     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
-3.  Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element an der **StackViewLibrary** Projekt. Benennen Sie die neue Quelldatei Basis von `StackView`.  
+3.  Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die **StackViewLibrary** Projekt. Weisen Sie der neuen Quelldatei Basisnamen `StackView`.  
   
 ## <a name="designing-the-stackview-control"></a>Entwerfen des StackView-Steuerelements  
- Die `StackView` Steuerelement ist ein zusammengesetztes Steuerelement mit einem untergeordneten <xref:System.Windows.Forms.ToolStrip> Steuerelement. Weitere Informationen über zusammengesetzte Steuerelemente finden Sie unter [Varianten von benutzerdefinierten Steuerelementen](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).  
+ Die `StackView` Steuerelement ist ein zusammengesetztes Steuerelement mit einem untergeordneten <xref:System.Windows.Forms.ToolStrip> Steuerelement. Weitere Informationen über zusammengesetzte Steuerelemente finden Sie unter [Varieties of Custom Controls](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md).  
   
-#### <a name="to-design-the-stackview-control"></a>So entwerfen Sie das StackView-Steuerelement  
+#### <a name="to-design-the-stackview-control"></a>So entwerfen Sie die StackView-Steuerelement  
   
-1.  Aus der **Toolbox**, ziehen Sie ein <xref:System.Windows.Forms.ToolStrip> Steuerelement auf die Entwurfsoberfläche.  
+1.  Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.ToolStrip> Steuerelement auf die Entwurfsoberfläche.  
   
-2.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStrip> Eigenschaften des Steuerelements gemäß der folgenden Tabelle.  
+2.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStrip> Eigenschaften des Steuerelements entsprechend der folgenden Tabelle.  
   
     |Eigenschaft|Wert|  
     |--------------|-----------|  
@@ -73,9 +73,9 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
     |Textabstand|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
-3.  In Windows Forms-Designer, klicken Sie auf die <xref:System.Windows.Forms.ToolStrip> des Steuerelements **hinzufügen** Schaltfläche und Hinzufügen einer <xref:System.Windows.Forms.ToolStripButton> auf die `stackStrip` Steuerelement.  
+3.  Im Windows Forms-Designer, klicken Sie auf die <xref:System.Windows.Forms.ToolStrip> des Steuerelements **hinzufügen** Schaltfläche, und fügen eine <xref:System.Windows.Forms.ToolStripButton> auf die `stackStrip` Steuerelement.  
   
-4.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStripButton> Eigenschaften des Steuerelements gemäß der folgenden Tabelle.  
+4.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStripButton> Eigenschaften des Steuerelements entsprechend der folgenden Tabelle.  
   
     |Eigenschaft|Wert|  
     |--------------|-----------|  
@@ -93,12 +93,12 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
   
 5.  Wiederholen Sie Schritt 7 für drei weitere <xref:System.Windows.Forms.ToolStripButton> Steuerelemente.  
   
-     Benennen Sie die Steuerelemente `calendarStackButton`, `contactsStackButton`, und `tasksStackButton`. Legen Sie den Wert von der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft **Kalender**, **Kontakte**, und **Aufgaben**bzw.  
+     Benennen Sie die Steuerelemente `calendarStackButton`, `contactsStackButton`, und `tasksStackButton`. Legen Sie den Wert, der die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft **Kalender**, **Kontakte**, und **Aufgaben**bzw.  
   
 ## <a name="handling-events"></a>Behandeln von Ereignissen  
- Zwei Ereignisse sind wichtig, damit die `StackView` -Steuerelement ordnungsgemäß verhält. Behandeln der <xref:System.Windows.Forms.UserControl.Load> Ereignis, um das Steuerelement ordnungsgemäß zu positionieren. Behandeln der <xref:System.Windows.Forms.ToolStripItem.Click> Ereignis für jedes <xref:System.Windows.Forms.ToolStripButton> so erteilen Sie die `StackView` Zustand Verhalten ähnelt steuern die <xref:System.Windows.Forms.RadioButton> Steuerelement.  
+ Zwei Ereignisse sind wichtig, zu der `StackView` -Steuerelement ordnungsgemäß verhält. Behandeln der <xref:System.Windows.Forms.UserControl.Load> Ereignis, um das Steuerelement ordnungsgemäß zu positionieren. Behandeln der <xref:System.Windows.Forms.ToolStripItem.Click> -Ereignis für jeden <xref:System.Windows.Forms.ToolStripButton> gerne die `StackView` steuern das Verhalten ähnlich wie die <xref:System.Windows.Forms.RadioButton> Steuerelement.  
   
-#### <a name="to-handle-events"></a>Um Ereignisse zu behandeln.  
+#### <a name="to-handle-events"></a>Zum Behandeln von Ereignissen  
   
 1.  Wählen Sie in der Windows Forms-Designer die `StackView` Steuerelement.  
   
@@ -117,13 +117,13 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
   
 7.  Doppelklicken Sie auf das Click-Ereignis.  
   
-     Windows Forms-Designer generiert die `mailStackButton_Click` -Ereignishandler.  
+     Die Windows Forms-Designer generiert die `mailStackButton_Click` -Ereignishandler.  
   
 8.  Benennen Sie die `mailStackButton_Click` Ereignishandler `stackButton_Click`.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern (Visual Basic)](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
-9. Fügen Sie den folgenden Code in der `stackButton_Click` -Ereignishandler.  
+9. Fügen Sie folgenden Code in die `stackButton_Click` -Ereignishandler.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#4)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#4)]  
@@ -135,26 +135,26 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
 12. Wiederholen Sie die Schritte 10 und 11 für den `contactsStackButton` und `tasksStackButton` Steuerelemente.  
   
 ## <a name="defining-icons"></a>Definieren von Symbolen  
- Jede `StackView` Schaltfläche verfügt über ein zugeordnetes Symbol. Der Einfachheit halber jedes Symbol wird dargestellt als Base64-codierte Zeichenfolge, die deserialisiert wird, bevor Sie eine <xref:System.Drawing.Bitmap> daraus erstellt wird. In einer produktionsumgebung Bitmapdaten als Ressourcen gespeichert, und die Symbole in Windows Forms-Designer angezeigt. Weitere Informationen finden Sie unter [wie: Hinzufügen von Hintergrundbildern zu Windows Forms](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Jede `StackView` Schaltfläche verfügt über ein zugeordnetes Symbol. Der Einfachheit halber jedes Symbol wird dargestellt, als Base64-codierte Zeichenfolge, die deserialisiert wird, bevor Sie eine <xref:System.Drawing.Bitmap> daraus erstellt wird. In einer produktionsumgebung Bitmapdaten werden als Ressource gespeichert, und die Symbole, die im Windows Forms-Designer angezeigt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Hintergrundbildern zu Windows Forms](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
-#### <a name="to-define-icons"></a>So definieren Sie Symbole  
+#### <a name="to-define-icons"></a>Um Symbole zu definieren.  
   
-1.  Fügen Sie im Code-Editor den folgenden Code in die `StackView` Klassendefinition. Dieser Code initialisiert die Bitmaps für die <xref:System.Windows.Forms.ToolStripButton> Symbole.  
+1.  Im Code-Editor, fügen Sie folgenden Code in die `StackView` Definition der Klasse. Dieser Code initialisiert die Bitmaps für die <xref:System.Windows.Forms.ToolStripButton> Symbole.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
-2.  Fügen Sie einen Aufruf an die `InitializeImages` Methode in der `StackView` Klassenkonstruktor.  
+2.  Fügen Sie einen Aufruf an die `InitializeImages` -Methode in der die `StackView` Klassenkonstruktor.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="implementing-a-custom-renderer"></a>Implementieren eines benutzerdefinierten Renderers  
- Sie können die meisten Elemente der Anpassen der `StackView` steuern, implementieren eine Klasse, abgeleitet wird, die <xref:System.Windows.Forms.ToolStripRenderer> Klasse. In diesem Verfahren implementieren Sie eine <xref:System.Windows.Forms.ToolStripProfessionalRenderer> -Klasse, die den Ziehpunkt anpasst und für Farbverlauf Hintergründe zeichnet die <xref:System.Windows.Forms.ToolStripButton> Steuerelemente.  
+ Sie können anpassen, dass die meisten Elemente der `StackView` steuern Implementieren einer Klasse, die von abgeleitet der <xref:System.Windows.Forms.ToolStripRenderer> Klasse. In diesem Verfahren implementieren Sie eine <xref:System.Windows.Forms.ToolStripProfessionalRenderer> -Klasse, die den Ziehpunkt anpasst und Hintergründe mit Farbverlauf für zeichnet die <xref:System.Windows.Forms.ToolStripButton> Steuerelemente.  
   
-#### <a name="to-implement-a-custom-renderer"></a>Implementieren ein benutzerdefiniertes Renderers  
+#### <a name="to-implement-a-custom-renderer"></a>Zum Implementieren eines benutzerdefinierten Renderers  
   
-1.  Fügen Sie den folgenden Code in die `StackView` Definition zu steuern.  
+1.  Fügen Sie folgenden Code in die `StackView` Definition zu steuern.  
   
      Dies ist die Definition für die `StackRenderer` Klasse, welche Außerkraftsetzungen der <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>, <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>, und <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> Methoden, um eine benutzerdefinierte Darstellung zu erzeugen.  
   
@@ -166,23 +166,23 @@ Sie können angeben, kann Ihre Anwendung <xref:System.Windows.Forms.ToolStrip> s
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
-## <a name="testing-the-stackview-control"></a>Testen des StackView-Steuerelements  
- Die `StackView` Steuerelement leitet sich von der <xref:System.Windows.Forms.UserControl> Klasse. Aus diesem Grund können Sie das Steuerelement mit dem Testen der **UserControl-Testcontainer**. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="testing-the-stackview-control"></a>Testen des Steuerelements StackView  
+ Die `StackView` Steuerelement abgeleitet wird, aus der <xref:System.Windows.Forms.UserControl> Klasse. Aus diesem Grund können Sie testen, das Steuerelement mit dem **UserControl-Testcontainer**. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
-#### <a name="to-test-the-stackview-control"></a>So testen Sie das StackView-Steuerelement  
+#### <a name="to-test-the-stackview-control"></a>So testen Sie die StackView-Steuerelement  
   
-1.  Drücken Sie F5, um das Projekt erstellen und starten Sie die **UserControl-Testcontainer**.  
+1.  Drücken Sie F5, um das Projekt erstellen und starten Sie den **UserControl-Testcontainer**.  
   
-2.  Bewegen Sie den Zeiger über die Schaltflächen des der `StackView` steuern, und klicken Sie dann auf eine Schaltfläche, um die Darstellung des ausgewählten Zustand anzuzeigen.  
+2.  Bewegen Sie den Zeiger über die Schaltflächen des der `StackView` steuern, und klicken Sie dann auf eine Schaltfläche, um die Darstellung im ausgewählten Zustand anzuzeigen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- In dieser exemplarischen Vorgehensweise haben Sie ein wiederverwendbare benutzerdefinierte Clientsteuerelement mit professionelle Darstellung eines Steuerelements Office XP erstellt. Sie können die <xref:System.Windows.Forms.ToolStrip> -Steuerelementfamilie zu vielen anderen Zwecken:  
+ In dieser exemplarischen Vorgehensweise haben Sie eine wiederverwendbare benutzerdefinierte Clientsteuerelement mit der professionelle Darstellung eines Steuerelements Office XP erstellt. Sie können die <xref:System.Windows.Forms.ToolStrip> -Steuerelementfamilie zu vielen anderen Zwecken:  
   
--   Erstellen von Kontextmenüs für die Steuerelemente mit <xref:System.Windows.Forms.ContextMenuStrip>. Weitere Informationen finden Sie unter [Übersicht über die ContextMenu-Komponente](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
+-   Erstellen von Kontextmenüs für Ihre Steuerelemente mit <xref:System.Windows.Forms.ContextMenuStrip>. Weitere Informationen finden Sie unter [Übersicht über die ContextMenu-Komponente](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   
--   Erstellen Sie ein Formular mit einem automatisch gefüllten Standardmenü. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
+-   Erstellen Sie ein Formular mit einem automatisch angegebenen Standardmenü. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/walkthrough-providing-standard-menu-items-to-a-form.md).  
   
--   Erstellen Sie ein Formular der multiple Document Interface (MDI) mit andockbaren <xref:System.Windows.Forms.ToolStrip> Steuerelemente. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines MDI-Formulars mit das Zusammenführen von Menüs und ToolStrip-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
+-   Erstellen Sie ein Formular für multiple Document Interface (MDI) mit andockbaren <xref:System.Windows.Forms.ToolStrip> Steuerelemente. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines MDI-Formulars mit das Zusammenführen von Menüs und ToolStrip-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.MenuStrip>  

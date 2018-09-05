@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
 ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332018"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537441"
 ---
 # <a name="button-control-windows-forms"></a>Button-Steuerelement (Windows Forms)
 Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klicken eine Aktion auszuführen. Im `Button`-Steuerelement können sowohl Text als auch Bilder angezeigt werden. Wenn der Benutzer auf die Schaltfläche klickt, wird sie als gedrückt bzw. nicht gedrückt angezeigt.  
