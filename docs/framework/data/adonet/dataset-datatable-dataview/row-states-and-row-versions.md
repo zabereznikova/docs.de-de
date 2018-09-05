@@ -1,16 +1,16 @@
 ---
 title: Zeilenstatus und Zeilenversionen
-ms.date: 03/30/2017
+ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759412"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672813"
 ---
 # <a name="row-states-and-row-versions"></a>Zeilenstatus und Zeilenversionen
 ADO.NET verwaltet Zeilen in Tabellen mithilfe des Zeilenstatus und der Zeilenversion. Ein Zeilenstatus gibt den Status einer Zeile an. In Zeilenversionen werden die Werte, die in einer Zeile gespeichert werden, während der Bearbeitung verwaltet. Zu diesen Werten zählen z. B. die Werte current, original und default. Wenn Sie beispielsweise eine Spalte in einer Zeile geändert haben, weist die Zeile den Zeilenstatus `Modified` und die folgenden beiden Zeilenversionen auf: `Current` mit den aktuellen Zeilenwerten und `Original` mit den Zeilenwerten vor den Änderungen der Spalte.  
@@ -44,7 +44,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
 |"DataRowVersion"-Wert|Beschreibung|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|Die aktuellen Werte der Zeile. Diese Zeilenversion ist für Zeilen, deren `RowState` auf `Deleted` festgelegt ist, nicht vorhanden.|  
-|<xref:System.Data.DataRowVersion.Default>|Die Standardzeilenversion einer bestimmten Zeile. Die Standardzeilenversion für eine Zeile mit dem Status `Added`, `Modified` oder `Unchanged` lautet `Current`. Die Standardzeilenversion für eine Zeile mit dem Status `Deleted` lautet `Original`. Die Standardzeilenversion für eine Zeile mit dem Status `Detached` lautet `Proposed`.|  
+|<xref:System.Data.DataRowVersion.Default>|Die Standardzeilenversion einer bestimmten Zeile. Die Standardzeilenversion für eine Zeile mit dem Status `Added`, `Modified` oder `Deleted` lautet `Current`. Die Standardzeilenversion für eine Zeile mit dem Status `Detached` lautet `Proposed`.|  
 |<xref:System.Data.DataRowVersion.Original>|Die ursprünglichen Werte der Zeile. Diese Zeilenversion ist für Zeilen, deren `RowState` auf `Added` festgelegt ist, nicht vorhanden.|  
 |<xref:System.Data.DataRowVersion.Proposed>|Die vorgeschlagenen Werte für die Zeile. Diese Zeilenversion ist während der Bearbeitung einer Zeile vorhanden oder wird für Zeilen verwendet, die nicht Teil einer `DataRowCollection` sind.|  
   
@@ -98,4 +98,4 @@ foreach (DataRow delRow in delRows)
  [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataAdapters und DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,11 +3,11 @@ title: Unterstützte Bereitstellungsszenarien
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421072"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672617"
 ---
 # <a name="supported-deployment-scenarios"></a>Unterstützte Bereitstellungsszenarien
 Die Teilmenge der Windows Communication Foundation (WCF)-Funktionen, die für die Verwendung in teilweise vertrauenswürdigen Anwendungen unterstützt soll die Anforderungen der einige, aber nicht alle Szenarien für die Verwendung von WCF. Auf dem Server, freigegebenen WCF erfüllt die Anforderungen der internetweite Hostinganbieter, die Anwendung eines Drittanbieters ausführen in den [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] mittlere Vertrauenswürdigkeit Berechtigungssatz aus Sicherheitsgründen. Auf dem Client, Unterstützung von teilweiser Vertrauenswürdigkeit WCF soll die Anforderungen von bereitstellungstechnologien erfüllen zu können, wie etwa [ClickOnce-Bereitstellung](https://go.microsoft.com/fwlink/?LinkId=83712) oder [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]der XAML Browser Application-Technologie, die nahtlose und sichere zulassen Bereitstellung von desktopanwendungen von nicht vertrauenswürdigen Sites.  

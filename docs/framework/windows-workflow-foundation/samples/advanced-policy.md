@@ -3,11 +3,11 @@ title: Erweiterte Richtlinie
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
 ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387888"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672839"
 ---
 # <a name="advanced-policy"></a>Erweiterte Richtlinie
 Dieses Beispiel erweitert das Beispiel für einfache Richtlinien. Zusätzlich zu den Rabattregeln für Privat- und Geschäftskunden aus dem Beispiel für eine einfache Richtlinie wurden mehrere neue Regeln hinzugefügt.  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87600781c90fe5e6e049af74a68859955153f3b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: acfa5c138faa47c96600530ab923de102b173ed6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433340"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672733"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW-Methode
-Generiert einen Hash des Inhalts der Datei durch eine Unicode-Zeichenfolge angegeben.  
+Generiert einen Hashwert für den Inhalt der durch eine Unicode-Zeichenfolge angegebenen Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,25 +44,25 @@ HRESULT GetHashFromFileW (
  [in] Der Unicode-Name der Datei für den Hash.  
   
  `piHashAlg`  
- [in, out] Der Algorithmus beim Generieren des Hashs verwendet wird. Gültige Algorithmen sind diejenigen, die von Win32 Crypto-API definiert. Wenn `piHashAlg` ist auf 0 festgelegt, der Standardalgorithmus CALG_SHA-1 verwendet.  
+ [in, out] Der Algorithmus beim Generieren des Hashs verwendet werden soll. Gültige Algorithmen sind durch Win32 Crypto-API definiert. Wenn `piHashAlg` ist auf 0 festgelegt, den Standardalgorithmus CALG_SHA-1 verwendet.  
   
  `pbHash`  
- [out] Ein Bytearray, das den generierten Hash enthält.  
+ [out] Ein Bytearray, die den generierten Hash enthält.  
   
  `cchHash`  
  [in] Die maximale Größe des Puffers verweist `pbHash`.  
   
  `pchHash`  
- [out] Die Größe in Bytes, der `pbHash`.  
+ [out] Die Größe in Bytes, des `pbHash`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ist identisch mit der [ICLRStrongName:: GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) -Methode, außer dass der name der Datei Spezifikation Unicode anstelle von ANSI codiert ist.  
+ Diese Methode ist identisch mit der [ICLRStrongName:: GetHashFromFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) -Methode, mit der Ausnahme, dass die Datei den Namen Spezifikation Unicode anstelle von ANSI codiert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   

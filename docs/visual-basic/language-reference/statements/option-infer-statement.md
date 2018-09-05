@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245790"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672584"
 ---
 # <a name="option-infer-statement"></a>Option Infer-Anweisung
 Ermöglicht die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen.  
@@ -41,12 +41,12 @@ Option Infer { On | Off }
   
  In der folgenden Abbildung ist `Option Infer` eingeschaltet. Die Variable in der Deklaration `Dim someVar = 2` wird als ganze Zahl durch Typrückschluss deklariert.  
   
- ![IntelliSense-Ansicht der Deklaration. ] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "OptionInferAsInteger")  
+ ![IntelliSense-Ansicht der Deklaration. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "OptionInferAsInteger")  
 IntelliSense, wenn die Option Infer aktiviert ist.  
   
  In der folgenden Abbildung ist `Option Infer` deaktiviert. Die Variable in der Deklaration `Dim someVar = 2` ist durch Typrückschluss als `Object` deklariert. In diesem Beispiel die **Option Strict** Einstellung **aus** auf die [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![IntelliSense-Ansicht der Deklaration. ] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "OptionInferAsObject")  
+ ![IntelliSense-Ansicht der Deklaration. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "OptionInferAsObject")  
 IntelliSense, wenn Option Infer deaktiviert ist  
   
 > [!NOTE]

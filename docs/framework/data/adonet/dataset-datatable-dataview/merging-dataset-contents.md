@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763669"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672260"
 ---
 # <a name="merging-dataset-contents"></a>Zusammenführen von DataSet-Inhalten
 Sie können die <xref:System.Data.DataSet.Merge%2A>-Methode verwenden, um den Inhalt eines <xref:System.Data.DataSet>-, <xref:System.Data.DataTable>- oder <xref:System.Data.DataRow>-Arrays in einem vorhandenen `DataSet` zusammenzuführen. Wie die neuen Daten in einem vorhandenen `DataSet` zusammengeführt werden, hängt von mehreren Faktoren und Optionen ab.  
@@ -84,4 +84,4 @@ Sie können die <xref:System.Data.DataSet.Merge%2A>-Methode verwenden, um den In
  [DataAdapters und DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Abrufen von Identity- oder Autonumber-Werten](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

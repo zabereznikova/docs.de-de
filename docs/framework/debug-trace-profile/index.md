@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 481360f731297e1c287c969e6524c68e0c9c0b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674294"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debuggen, Ablaufverfolgung und Profilerstellung
 Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und die Laufzeitumgebung so konfiguriert sein, dass ein Debugger an die Anwendung angefügt werden und der Debugger, wenn möglich, sowohl Symbole als auch Zeilenzuordnungen für die Anwendung und deren entsprechende Microsoft Intermediate Language (MSIL) erstellen kann. Nach dem Debuggen einer verwalteten Anwendung kann ein Profil für sie erstellt werden, um die Leistung zu verbessern. Bei einer Profilerstellung werden die Quellcodezeilen bewertet und beschrieben, die den am häufigsten ausgeführten Code generieren, und wird ermittelt, wie lange es dauert, diese auszuführen.  
@@ -28,7 +29,7 @@ Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und d
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Aktivieren von JIT-attach Debugging](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
- Zeigt, wie die Registrierung zu konfigurieren ist, um ein Debugmodul an eine .NET Framework-Anwendung anzufügen (JIT-attach Debugging).  
+ Zeigt, wie die Registrierung zu konfigurieren ist, um eine Debug-Engine an eine .NET Framework-Anwendung anzufügen (JIT-attach Debugging).  
   
  [Erleichtern des Debuggens für ein Abbild](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
  Zeigt, wie die JIT-Verfolgung aktiviert und die Optimierung deaktiviert wird, damit sich eine Assembly einfacher debuggen lässt.  
@@ -46,7 +47,7 @@ Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und d
  Beschreibt die Leistungsindikatoren, die Sie zum Überwachen der Leistung einer Anwendung verwenden können.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Debuggen von ASP.NET- und AJAX-Anwendungen](http://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [Debuggen von ASP.NET- und AJAX-Anwendungen](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
  Enthält Voraussetzungen und Anweisungen für das Debuggen einer ASP.NET-Anwendung während der Entwicklung oder nach der Bereitstellung.  
   
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  

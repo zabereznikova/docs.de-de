@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421709"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674213"
 ---
 # <a name="printing-how-to-topics"></a>Gewusst-wie-Themen zum Drucken
 Die Themen in diesem Abschnitt veranschaulichen, wie das Drucken und Drucksystem-Management-Funktionen enthalten, mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sowie den neuen [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] -Druckpfad.  

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538813"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672890"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer-Klasse
 Die `SoundPlayer`-Klasse ermöglicht es Ihnen, Sounds problemlos in Ihre Anwendungen zu integrieren.  
@@ -51,4 +51,4 @@ Die `SoundPlayer`-Klasse ermöglicht es Ihnen, Sounds problemlos in Ihre Anwendu
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- Siehe auch [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer-Objekt](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) oder [My.Computer-Objekt](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+ Siehe auch [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer-Objekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) oder [My.Computer-Objekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).

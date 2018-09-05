@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36e4f07f04968579be2e42efad666b0453cc4796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7686a84759f8ac40a123d2c9a7b8f1b9b8096cb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434790"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672599"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW-Methode
-Generiert einen Hash des Inhalts der Datei durch eine Unicode-Zeichenfolge angegeben.  
+Generiert einen Hashwert für den Inhalt der durch eine Unicode-Zeichenfolge angegebenen Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,22 +44,22 @@ HRESULT GetHashFromAssemblyFileW (
  [in] Der Pfad zu der Datei, der Hashwert berechnet werden soll. Dieser Parameter muss eine Unicode-Zeichenfolge sein.  
   
  `piHashAlg`  
- [in, out] Eine Konstante, die den Hashalgorithmus angibt. Verwenden Sie 0 (null), für die Standard-Hash-Algorithmus.  
+ [in, out] Eine Konstante, die den Hashalgorithmus angibt. Verwenden Sie 0 (null), für den Standard-Hashalgorithmus.  
   
  `pbHash`  
  [out] Der zurückgegebene Hashpuffer.  
   
  `cchHash`  
- [in] Die angeforderte maximale Größe der `pbHash`.  
+ [in] Die angeforderte maximale Größe des `pbHash`.  
   
  `pchHash`  
- [out] Die Größe in Bytes, der zurückgegebenen `pbHash`.  
+ [out] Die zurückgegebene Größe in Bytes, `pbHash`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [häufig auftretende HRESULT-Werte](http://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
+ `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   
