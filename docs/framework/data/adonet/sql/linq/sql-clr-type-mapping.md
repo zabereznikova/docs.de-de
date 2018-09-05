@@ -2,12 +2,12 @@
 title: SQL-CLR-Typenzuordnung
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365526"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735435"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR-Typenzuordnung
 In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektmodell zugeordnet, das in einer beliebigen Programmiersprache erstellt wurde. Bei der Ausführung der Anwendung wandelt LINQ to SQL die sprachintegrierten Abfragen im Objektmodell in SQL um und sendet sie zur Ausführung an die Datenbank. Wenn die Datenbank die Ergebnisse zurückgibt, übersetzt LINQ to SQL diese zurück in Objekte, mit denen in einer Programmiersprache gearbeitet werden kann.  
@@ -60,7 +60,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
 -   In SQL Server und der CLR werden verschiedene vergleichbare Datentypen unterschiedlich sortiert. Zum Beispiel werden SQL Server-Daten des Typs `UNIQUEIDENTIFIER` anders sortiert als CLR-Daten des Typs <xref:System.Guid?displayProperty=nameWithType>.  
   
--   SQL Server behandelt verschiedene Vorgänge für Zeichenfolgenvergleiche anders als die CLR. In SQL Server ist das Verhalten bei Zeichenfolgenvergleichen von den Sortierungseinstellungen auf dem Server abhängig. Weitere Informationen finden Sie unter [arbeiten mit Sortierungen](http://go.microsoft.com/fwlink/?LinkId=115330) in der Microsoft SQL Server-Onlinedokumentation.  
+-   SQL Server behandelt verschiedene Vorgänge für Zeichenfolgenvergleiche anders als die CLR. In SQL Server ist das Verhalten bei Zeichenfolgenvergleichen von den Sortierungseinstellungen auf dem Server abhängig. Weitere Informationen finden Sie unter [arbeiten mit Sortierungen](https://go.microsoft.com/fwlink/?LinkId=115330) in der Microsoft SQL Server-Onlinedokumentation.  
   
 -   Für einige zugeordnete Funktionen werden von SQL Server andere Werte zurückgegeben als von der CLR. Die Funktionen für die Überprüfung auf Gleichheit beispielsweise unterscheiden sich, da von SQL Server zwei Zeichenketten als gleich aufgefasst werden, wenn sie sich lediglich durch nachgestellte Leerzeichen unterscheiden, während solche Zeichenketten von der CLR als unterschiedlich aufgefasst werden.  
   
@@ -232,11 +232,11 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  Das `FILESTREAM`-Attribut für `VARBINARY(MAX)`-Spalten ist seit Microsoft SQL Server 2008 verfügbar. Dieses Attribut kann ab .NET Framework Version 3.5 SP1 mit LINQ to SQL zugeordnet werden.  
   
- Obwohl `VARBINARY(MAX)`-Spalten mit dem `FILESTREAM`-Attribut <xref:System.Data.Linq.Binary>-Objekten zugeordnet werden können, können von der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode keine Spalten mit dem `FILESTREAM`-Attribut automatisch erstellt werden. Weitere Informationen zu `FILESTREAM`, finden Sie unter [Übersicht über FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=115291) auf Microsoft SQL Server-Onlinedokumentation.  
+ Obwohl `VARBINARY(MAX)`-Spalten mit dem `FILESTREAM`-Attribut <xref:System.Data.Linq.Binary>-Objekten zugeordnet werden können, können von der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode keine Spalten mit dem `FILESTREAM`-Attribut automatisch erstellt werden. Weitere Informationen zu `FILESTREAM`, finden Sie unter [Übersicht über FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) auf Microsoft SQL Server-Onlinedokumentation.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Binäre Serialisierung  
- Wenn eine Klasse die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementiert, kann ein Objekt in ein beliebiges binäres SQL-Feld (`BINARY`, `VARBINARY`, `IMAGE`) serialisiert werden. Das Objekt wird je nach Implementierung der <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle serialisiert und deserialisiert. Weitere Informationen finden Sie unter [Binärserialisierung](http://go.microsoft.com/fwlink/?LinkId=115581).  
+ Wenn eine Klasse die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementiert, kann ein Objekt in ein beliebiges binäres SQL-Feld (`BINARY`, `VARBINARY`, `IMAGE`) serialisiert werden. Das Objekt wird je nach Implementierung der <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle serialisiert und deserialisiert. Weitere Informationen finden Sie unter [Binärserialisierung](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>Verschiedene Mappingtypen  
