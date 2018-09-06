@@ -2,12 +2,12 @@
 title: Serialisierungstools
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
-ms.openlocfilehash: c03edbc7747d680f151c4a3ea1857937314b4c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581406"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882294"
 ---
 # <a name="serialization-tools"></a>Serialisierungstools
 In diesem Abschnitt werden die Serialisierungstools detailliert beschrieben. Sie können alle Tools von der Befehlszeile aus ausführen.  
@@ -22,5 +22,6 @@ In diesem Abschnitt werden die Serialisierungstools detailliert beschrieben. Sie
 |[XML Serializer Generator-Tool (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|Erstellt eine XML-Serialisierungsassembly für Typen in einer angegebenen Assembly, um die Laufzeitleistung von <xref:System.Xml.Serialization.XmlSerializer> zu erhöhen.|  
 |[XML Schema Definition-Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|Generiert XML-Schemas, die der vom World Wide Web Consortium (W3C) vorgeschlagenen XSD-Sprache entsprechen. Mit diesem Tool werden Common Language Runtime-Klassen und <xref:System.Data.DataSet>-Klassen aus einer XSD-Schemadatei generiert.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Extras](../../../docs/framework/tools/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Extras](../../../docs/framework/tools/index.md)

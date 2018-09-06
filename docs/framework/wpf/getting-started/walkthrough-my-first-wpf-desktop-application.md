@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38f6e16616ad931641539d3ae164381ddd9ad941
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931724"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885180"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung
 
@@ -38,7 +38,7 @@ Diese exemplarische Vorgehensweise umfasst die folgenden Schritte aus:
 Am Ende dieser exemplarischen Vorgehensweise werden Sie eine eigenständigen Windows-Anwendung erstellt haben, die Benutzer spesenabrechnungen für bestimmte Personen anzeigen können. Die Anwendung besteht aus der WPF-Seiten, die in einem Fenster im Browserstil gehostet werden.
 
 > [!TIP]
-> Der Beispielcode, der verwendet wird, in dieser exemplarischen Vorgehensweise steht für Visual Basic und c# in [Introduction to Building WPF Applications](http://go.microsoft.com/fwlink/?LinkID=160008).
+> Der Beispielcode, der verwendet wird, in dieser exemplarischen Vorgehensweise steht für Visual Basic und c# in [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
@@ -326,7 +326,7 @@ Die folgende Abbildung zeigt die Ergebnisse von was Sie gerade hinzugefügt habe
 
 1. Open *`ExpenseItHome.xaml`*.
 
-2. Hinzufügen einer <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler der <xref:System.Windows.Controls.Button> Element. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines einfachen ereignishandlers](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Hinzufügen einer <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler der <xref:System.Windows.Controls.Button> Element. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines einfachen ereignishandlers](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -464,7 +464,7 @@ In diesem Abschnitt Aktualisieren Sie die Benutzeroberfläche für jedes Element
 
     [!code-xaml[ExpenseIt#30](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. Die Vorlagen zum Anwenden der <xref:System.Windows.Controls.DataGrid> Berichtsdaten, Spalten, die die Ausgaben anzuzeigen.
+4. Ersetzen Sie die <xref:System.Windows.Controls.DataGridTextColumn> Elemente mit <xref:System.Windows.Controls.DataGridTemplateColumn> unter der <xref:System.Windows.Controls.DataGrid> Element und die Vorlagen auf sie angewendet.
 
     [!code-xaml[ExpenseIt#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 

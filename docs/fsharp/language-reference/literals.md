@@ -2,21 +2,22 @@
 title: Literale (F#)
 description: Erfahren Sie, bis die Literaltypen in der Programmiersprache f#.
 ms.date: 05/16/2016
-ms.openlocfilehash: f28ca0ae7a0b092bbc039d23625b883faffd241c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564338"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035777"
 ---
 # <a name="literals"></a>Literale
 
 > [!NOTE]
-Die API-Referenz-Links in diesem Artikel auf MSDN (vorerst) gelangen Sie.
+Die API-Referenz-Links in diesem Artikel gelangen Sie zu MSDN (für den Moment).
 
 Dieses Thema enthält eine Tabelle, die erläutert, wie in F# der Typ eines Literals angegeben wird.
 
 ## <a name="literal-types"></a>Literaltypen
+
 In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, die Ziffern in Hexadezimalschreibweise darstellen, wird die Groß-/Kleinschreibung nicht beachtet. Bei Zeichen, die den Typ angeben, wird die Groß-/Kleinschreibung beachtet.
 
 |Typ|Beschreibung|Suffix oder Präfix|Beispiele|
@@ -43,9 +44,10 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 |String oder byte[]|wörtliche Zeichenfolge|@-Präfix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>Hinweise
-Unicode-Zeichenfolgen darf explizite Codierungen, bei denen Sie angeben können, indem Sie mit `\u` gefolgt von einem hexadezimalen 16-Bit-Code oder UTF-32-Codierungen, bei denen Sie angeben können, indem Sie mit `\U` gefolgt von einer 32-Bit-Hexadezimalcode, der eine Unicode-darstellt Ersatzzeichenpaar.
 
-Ab f# 3.1, können Sie die `+` melden beim Kombinieren von Zeichenfolgenliteralen. Sie können auch das bitweise verwenden oder (`|||`) Operator, um Enumerationsflags zu kombinieren. In F# 3.1 ist beispielsweise der folgende Code zulässig:
+Unicode-Zeichenfolgen können explizite Codierungen, die Sie angeben können, indem Sie mithilfe von enthalten `\u` gefolgt von einem hexadezimalen 16-Bit-Code oder UTF-32-Codierungen, die Sie angeben können, indem Sie mithilfe von `\U` gefolgt von eine hexadezimale 32-Bit-Code, der eine Unicode-darstellt das Ersatzzeichenpaar.
+
+Ab f# 3.1, können Sie die `+` melden Sie beim Kombinieren von Zeichenfolgenliteralen. Sie können auch das bitweise verwenden oder (`|||`) Operator, um Enumerationsflags zu kombinieren. In F# 3.1 ist beispielsweise der folgende Code zulässig:
 
 ```fsharp
 [<Literal>]
@@ -63,22 +65,22 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 Die Verwendung anderer bitweiser Operatoren ist nicht zulässig.
 
-
 ## <a name="named-literals"></a>Benannte Literale
+
 Werte, die Konstanten sein sollen können gekennzeichnet werden, mit der [Literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) Attribut. Dieses Attribut bewirkt, dass ein Wert als Konstante kompiliert wird.
 
 In Musterabgleichsausdrücken werden Bezeichner, die mit Kleinbuchstaben beginnen, immer als zu bindende Variablen statt als Literale behandelt. Verwenden Sie daher im Allgemeinen Großbuchstaben am Wortanfang, wenn Sie Literale definieren.
 
 ## <a name="integers-in-other-bases"></a>Ganze Zahlen In andere Basiszahlen
 
-32-Bit-Ganzzahlen mit Vorzeichen können auch angegeben werden, in das hexadezimale, oktale oder binäre mithilfe einer `0x`, `0o` oder `0b` bzw. Präfix.
+32-Bit-Ganzzahlen mit Vorzeichen können auch angegeben werden, mithilfe von hexadezimalen, Oktal- oder binäre eine `0x`, `0o` oder `0b` bzw. voranstellen.
 
 ```fsharp
 let Numbers = (0x9F, 0o77, 0b1010)
 // Result: Numbers : int * int * int = (159, 63, 10)
 ```
 
-## <a name="underscores-in-numeric-literals"></a>Unterstriche in numerische Literale
+## <a name="underscores-in-numeric-literals"></a>Unterstriche in numerischen Literalen
 
 Ab f# 4.1, können Sie Ziffern mit einem Unterstrich trennen (`_`).
 
@@ -92,4 +94,4 @@ let ExampleSSN = 123_456_7890
 
 ## <a name="see-also"></a>Siehe auch
 
-[Core.LiteralAttribute-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)
+- [Core.LiteralAttribute-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)

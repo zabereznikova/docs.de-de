@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803001"
+ms.locfileid: "44037749"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Gewusst wie: Implementieren von PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert, indem Sie eine Liste der Bindungen angeben. Die Liste der Bindungen ist von der höchsten zur niedrigsten Priorität geordnet. Wenn die höchste Priorität Bindung einen Wert zurückgibt erfolgreich bei der Verarbeitung wird besteht nie die anderen Bindungen in der Liste verarbeitet werden muss. Es könnte den Fall, den die höchste Priorität Bindung sehr lange dauert, die ausgewertet werden, die nächstniedrigeren Priorität, die einen Wert, erfolgreich zurückgibt verwendet werden, bis eine Bindung mit einer höheren Priorität erfolgreich einen Wert zurückgibt.  

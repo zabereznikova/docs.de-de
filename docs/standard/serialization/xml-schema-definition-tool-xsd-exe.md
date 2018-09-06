@@ -2,12 +2,12 @@
 title: XML Schema Definition-Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 71a964831b661e97d3be3853a179849e037d3ff6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592456"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879776"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 Das XML Schema Definition-Tool (Xsd.exe) generiert XML-Schema- oder Common Language Runtime-Klassen aus XDR-, XML- und XSD-Dateien oder aus Klassen in einer Laufzeitassembly.  
@@ -66,7 +66,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ t**[**Ype**] **: *** Typname*|Gibt den Namen des Typs an, für den ein Schema erstellt werden soll. Sie können mehrere Typargumente angeben. Wenn *Typname* keinen Namespace bezeichnet, ordnet „Xsd.exe“ alle Typen in der Assembly dem angegebenen Typ zu. Wenn *Typname* einen Namespace bezeichnet, wird nur der übereinstimmende Typ zugeordnet. Wenn *Typname* auf ein Sternchen (\*) endet, ordnet das Tool alle Typen zu, die mit der Zeichenfolge vor \* beginnen. Wenn Sie die `/type`-Option nicht angeben, generiert Xsd.exe Schemas für alle Typen in der Assembly.|  
+|**/ t /**[**yp**] **: *** Typename*|Gibt den Namen des Typs an, für den ein Schema erstellt werden soll. Sie können mehrere Typargumente angeben. Wenn *Typname* keinen Namespace bezeichnet, ordnet „Xsd.exe“ alle Typen in der Assembly dem angegebenen Typ zu. Wenn *Typname* einen Namespace bezeichnet, wird nur der übereinstimmende Typ zugeordnet. Wenn *Typname* auf ein Sternchen (\*) endet, ordnet das Tool alle Typen zu, die mit der Zeichenfolge vor \* beginnen. Wenn Sie die `/type`-Option nicht angeben, generiert Xsd.exe Schemas für alle Typen in der Assembly.|  
   
 ## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle werden die von Xsd.exe ausgeführten Operationen angezeigt.  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Klassen nach XSD  
  Generiert ein XML-Schema aus einem oder mehreren Typen in einer Laufzeitassemblydatei. Das generierte Schema definiert das von `System.Xml.Serialization.XmlSerializer`verwendete XML-Format.  
   
- Mit Xsd.exe können Sie ausschließlich XML-Schemas ändern, die der durch das World Wide Web Consortium (W3C) veröffentlichten XSD-Sprache (XML Schema Definition language) entsprechen. Weitere Informationen zu den XML-Schemadefinition Vorschlag oder XML-Standard, finden Sie unter http://w3.org.  
+ Mit Xsd.exe können Sie ausschließlich XML-Schemas ändern, die der durch das World Wide Web Consortium (W3C) veröffentlichten XSD-Sprache (XML Schema Definition language) entsprechen. Weitere Informationen zu den XML-Schemadefinition oder dem XML-Standard, finden Sie unter http://w3.org.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Festlegen von Optionen mit einer XML-Datei  
  Mithilfe des `/parameters`-Schalters können Sie eine einzelne XML-Datei angeben, durch die verschiedene Optionen festgelegt werden. Welche Optionen Sie festlegen können, richtet sich danach, wie Sie das Tool XSD.exe verwenden. Zu den möglichen Optionen gehören das Generieren von Schemas oder Codedateien sowie das Generieren von Codedateien, die `DataSet`-Funktionen umfassen. So können Sie z.&#160;B. das `<assembly\>`-Element auf den Namen einer ausführbaren Datei (.exe) oder Typbibliothek (.dll) festlegen, wenn Sie ein Schema generieren. Dies gilt jedoch nicht für das Generieren von Codedateien. Die folgende XML veranschaulicht die Verwendung des `<generateSchemas\>`-Elements mit einer angegebenen ausführbaren Datei:  
@@ -221,11 +221,12 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
- [Tools](../../../docs/framework/tools/index.md)      
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [Abfragen von typisierten DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Data.DataSet>  
+- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
+- [Extras](../../../docs/framework/tools/index.md)      
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+- [Übersicht über LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+- [Abfragen von typisierten DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

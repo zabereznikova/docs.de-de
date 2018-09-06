@@ -3,11 +3,11 @@ title: Registrierungsschlüssel &#39; &lt;Keyname&gt; &#39; wurde nicht gefunden
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 874371dd2d4dc9f7d4b1374ae08359e4ea6afc87
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805701"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038681"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-found"></a>Registrierungsschlüssel &#39; &lt;Keyname&gt; &#39; wurde nicht gefunden
 Ein Registrierungsschlüssel kann nicht gefunden werden.  

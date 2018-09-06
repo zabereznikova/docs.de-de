@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: c292c9f7827e86d48f2006c05f6012ad95da1485
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757904"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885093"
 ---
 # <a name="managing-dataviews"></a>Verwalten von "DataViews"
-Mit einem <xref:System.Data.DataViewManager> können Sie die Ansichtseinstellungen für alle Tabellen in einer <xref:System.Data.DataView> verwalten. Wenn Sie ein Steuerelement, das Sie an mehrere Tabellen binden möchten, z. B. ein Raster, das Beziehungen navigiert, eine **DataViewManager** ist ideal.  
+Mit einem <xref:System.Data.DataViewManager> können Sie die Ansichtseinstellungen für alle Tabellen in einer <xref:System.Data.DataView> verwalten. Wenn Sie ein Steuerelement, das Sie an mehrere Tabellen binden möchten, z. B. ein Raster, das Beziehungen navigiert, eine **DataViewManager** eignet sich ideal.  
   
- Die **DataViewManager** enthält eine Auflistung von <xref:System.Data.DataViewSetting> Objekte, die verwendet werden, um die Ansicht eingestellt, der Tabellen in der <xref:System.Data.DataSet>. Die <xref:System.Data.DataViewSettingCollection> enthält mindestens ein <xref:System.Data.DataViewSetting> Objekt für jede Tabelle in einer **DataSet**. Setzen Sie die standardmäßige **ApplyDefaultSort**, **sortieren**, **RowFilter**, und **RowStateFilter** Eigenschaften der von der referenzierten Tabelle Mithilfe der **DataViewSetting**. Sie können verweisen die **DataViewSetting** für eine bestimmte Tabelle nach Name oder Ordinalzahlverweis oder durch einen Verweis auf das bestimmte Tabellenobjekt übergeben. Sie erreichen die Auflistung der **DataViewSetting** Objekte in einem **DataViewManager** mithilfe der **DataViewSettings** Eigenschaft.  
+ Die **DataViewManager** enthält eine Auflistung von <xref:System.Data.DataViewSetting> Objekte, die verwendet werden, um die Einstellung für die Tabellen im Festlegen der <xref:System.Data.DataSet>. Die <xref:System.Data.DataViewSettingCollection> enthält mindestens ein <xref:System.Data.DataViewSetting> Objekt für jede Tabelle in eine **DataSet**. Legen Sie die standardmäßige **ApplyDefaultSort**, **Sortierreihenfolge**, **RowFilter**, und **RowStateFilter** Eigenschaften der Tabelle, indem auf die verwiesen wird Mithilfe der **DataViewSetting**. Sie können verweisen, die **DataViewSetting** für eine bestimmte Tabelle nach Name oder Ordinalzahlverweis verwiesen oder durch einen Verweis auf das bestimmte Tabellenobjekt übergeben. Sie können die Auflistung der zugreifen **DataViewSetting** Objekte in ein **DataViewManager** mithilfe der **DataViewSettings** Eigenschaft.  
   
- Im folgenden Codebeispiel Beispiel füllt ein **DataSet** mit dem SQL Server **Northwind** -Datenbanktabellen **Kunden**, **Aufträge**, und  **Auftragsdetails**, die Beziehungen zwischen den Tabellen erstellt, verwendet eine **DataViewManager** festlegen **"DataView"** Einstellungen, und bindet ein **DataGrid**  auf die **DataViewManager**. Im Beispiel wird die Standardeinstellung **"DataView"** Einstellungen für alle Tabellen in der **DataSet** sortiert nach dem Primärschlüssel der Tabelle (**ApplyDefaultSort**  =  **"true"**), und ändert dann die Sortierreihenfolge der **Kunden** Tabelle Sortierungskriterium **CompanyName**.  
+ Im folgenden Codebeispiel Beispiel füllt ein **DataSet** mit dem SQL Server **Northwind** Datenbanktabellen **Kunden**, **Bestellungen**, und  **Details zum**, erstellt die Beziehungen zwischen den Tabellen, verwendet eine **DataViewManager** festlegen **DataView** Einstellungen, und bindet eine **DataGrid**  auf die **DataViewManager**. Im Beispiel wird der Standardwert **DataView** Einstellungen für alle Tabellen in der **DataSet** nach dem Primärschlüssel der Tabelle sortiert (**ApplyDefaultSort**  =  **"true"**), und ändert dann die Sortierreihenfolge der **Kunden** Tabelle Sortierungskriterium **CompanyName**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -125,4 +125,4 @@ grid.SetDataBinding(viewManager, "Customers");
  <xref:System.Data.DataViewSetting>  
  <xref:System.Data.DataViewSettingCollection>  
  [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

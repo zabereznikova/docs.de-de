@@ -1,6 +1,6 @@
 ---
 title: GetQualifierSet-Funktion (Referenz zur nicht verwalteten API)
-description: Die GetQualifierSet-Funktion ruft den Qualifizierer für eine Klasse oder Instanz festlegen.
+description: Die GetQualifierSet-Funktion ruft den Qualifizierer aus, legen Sie für eine Klasse oder Instanz ab.
 ms.date: 11/06/2017
 api_name:
 - GetQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b50befa4346e17048598afd3d018dbde2fe8572
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458561"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032873"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet-Funktion
-Ruft den Qualifizierer für die Instanz einer Klasse oder einer Klassendefinition festgelegt.
+Ruft den Qualifizierer ab, der für eine Klasseninstanz oder eine Klassendefinition festgelegt ist.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -44,18 +44,18 @@ HRESULT GetQualifierSet (
 [in] Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) Instanz.
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `ppQualSet`  
-[out] Empfängt den Schnittstellenzeiger, der Zugriff auf die Qualifizierer des Klassenobjekts ermöglicht. `ppQualSet` darf nicht `null` sein. Wenn ein Fehler auftritt, ein neues Objekt nicht zurückgegeben wird und der Zeiger bleibt unverändert. 
+[out] Empfängt den Schnittstellenzeiger, der Zugriff auf die Qualifizierer des Klassenobjekts ermöglicht. `ppQualSet` darf nicht `null` sein. Wenn ein Fehler auftritt, wird ein neues Objekt nicht zurückgegeben wird und der Zeiger bleibt unverändert. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Ein allgemeiner Fehler ist aufgetreten. |
+|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Methode ist nicht vorhanden. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist `null`. |
@@ -63,12 +63,12 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion dient als Wrapper für einen Aufruf der [IWbemClassObject::GetQualifierSet](https://msdn.microsoft.com/library/aa391451(v=vs.85).aspx) Methode. 
+Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) Methode. 
 
-Die [IWbemQualifierSet Zeiger](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) ermöglicht den Aufrufer hinzufügen, bearbeiten oder löschen diese Qualifizierer. Solche Qualifizierer hinzugefügt, bearbeitet oder gelöscht, gelten für die gesamte Instanz oder Klassendefinition.
+Die [IWbemQualifierSet Zeiger](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lässt den Aufrufer hinzufügen, bearbeiten oder löschen diese Qualifizierer. Eine solche hinzugefügt, bearbeitet oder gelöscht.-Qualifizierer gelten für die vollständige Definition der Instanz oder Klasse.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

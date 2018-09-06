@@ -3,11 +3,11 @@ title: SQL Server und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.openlocfilehash: 32fc946f46ddac63d87b7e5a3d8f7120799f7223
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742341"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885930"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server und ADO.NET
 In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für den .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) spezifisch sind.  

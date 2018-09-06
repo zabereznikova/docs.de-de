@@ -1,28 +1,27 @@
 ---
 title: Compileranweisungen (F#)
-description: Informationen Sie zu F#-Sprache Präprozessordirektiven, bedingten Kompilierungsdirektiven, Line-Direktiven und Compiler-Direktiven.
+description: Informationen Sie zu F#-Sprache präprozessoranweisungen, Anweisungen für bedingte Kompilierung, Line-Anweisungen und Compiler-Direktiven.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b7974d586b085ad8a40bc2d872cdd425494475a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563385"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042456"
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 
 In diesem Thema werden Prozessor- und Compileranweisungen beschrieben.
 
-
 ## <a name="preprocessor-directives"></a>Präprozessordirektiven
+
 Einer Präprozessordirektive wird das #-Symbol vorangestellt und wird für sich genommen in einer Zeile angezeigt. Sie wird durch den Präprozessor interpretiert, der vom Compiler ausgeführt wird.
 
 In der folgenden Tabelle werden die Präprozessordirektiven aufgelistet, die in F# verfügbar sind.
 
-
 |Direktive|Beschreibung|
 |---------|-----------|
-|`#if` *Symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` liegt vor, wenn die *Symbol* definiert ist.|
+|`#if` *Symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` enthalten ist, wenn die *Symbol* definiert ist.|
 |`#else`|Unterstützt die bedingte Kompilierung. Markiert einen einzubeziehenden Codeabschnitt, wenn das mit dem vorherigen verwendeten `#if` nicht definiert ist.|
 |`#endif`|Unterstützt die bedingte Kompilierung. Markiert das Ende eines bedingten Codeabschnitts.|
 |`#`[Zeile] *Int*,<br/>`#`[Zeile] *Int* *Zeichenfolge*,<br/>`#`[Zeile] *Int* *wörtliche Zeichenfolge*|Gibt die ursprüngliche Quellcodezeile und den Dateinamen für das Debuggen an. Diese Funktion wird für Tools bereitgestellt, die F#-Quellcode generieren.|
@@ -30,18 +29,16 @@ In der folgenden Tabelle werden die Präprozessordirektiven aufgelistet, die in 
 
 `#nowarn "9" "40"`
 
-
-Die Auswirkung der Deaktivierung einer Warnung wird angewendet, auf die gesamte Datei, einschließlich Teilmengen der Datei, die die Direktive vorausgehen. |
+Die Auswirkungen der Deaktivierung einer Warnung, die auf die gesamte Datei, einschließlich der Teile der Datei, die von der Anweisung vorausgehen angewendet wird. |
 
 ## <a name="conditional-compilation-directives"></a>Anweisungen für die bedingte Kompilierung
-Code, der durch eine dieser Direktiven deaktivierte wird im Visual StudioCode Editor abgeblendet angezeigt.
 
+Code, der durch eine dieser Anweisungen deaktiviert wird, die im Editor von Visual StudioCode abgeblendet angezeigt.
 
->[!NOTE] 
+>[!NOTE]
 Das Verhalten der Anweisungen für die bedingte Kompilierung entspricht nicht dem in anderen Sprachen. Beispielsweise können Sie keine booleschen Ausdrücke mit Symbolen verwenden, zudem verfügen `true` und `false` über keine besondere Bedeutung. In der `if`-Direktive von Ihnen verwendete Symbole müssen über die Befehlszeile oder in den Projekteinstellungen definiert werden. Es steht keine `define`-Präprozessordirektive zur Verfügung.
 
-
-Im folgenden Code wird die Verwendung der Direktiven `#if`, `#else` und `#endif` veranschaulicht. In diesem Beispiel enthält der Code zwei Versionen der Definition von `function1`. Wenn `VERSION1` wird definiert, mit der [-define-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), den Code zwischen die `#if` Richtlinie und die `#else` Richtlinie aktiviert ist. Andernfalls wird der Code zwischen `#else` und `#endif` aktiviert.
+Im folgenden Code wird die Verwendung der Direktiven `#if`, `#else` und `#endif` veranschaulicht. In diesem Beispiel enthält der Code zwei Versionen der Definition von `function1`. Wenn `VERSION1` wird definiert, mit der [-define-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), den Code zwischen die `#if` Richtlinie und die `#else` aktiviert. Andernfalls wird der Code zwischen `#else` und `#endif` aktiviert.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
@@ -49,8 +46,8 @@ Es gibt keine `#define`-Präprozessordirektive in F#. Sie müssen die Compilerop
 
 Direktiven für die bedingte Kompilierung können geschachtelt werden. Der Einzug ist für Präprozessordirektiven nicht entscheidend.
 
-
 ## <a name="line-directives"></a>Line-Direktiven
+
 Beim Erstellen meldet der Compiler Fehler im F#-Code durch das Referenzieren von Zeilennummern, in denen die jeweiligen Fehler auftreten. Diese Zeilennummern beginnen bei 1 für die erste Zeile in einer Datei. Wenn Sie jedoch F#-Quellcode aus einem anderen Tool generieren, sind die Zeilennummern im generierten Code im Allgemeinen nicht relevant, da die Fehler im generierten F#-Code höchstwahrscheinlich auf eine andere Quelle zurückgehen. Mit der `#line`-Direktive können Autoren von Tools, die F#-Quellcode generieren, Informationen über die ursprünglichen Zeilennummern und Quelldateien an den generierten F#-Code weitergeben.
 
 Beim Verwenden der `#line`-Direktive müssen Dateinamen in Anführungszeichen gesetzt werden. Sofern das verbatim-Token (`@`) nicht am Anfang der Zeichenfolge angezeigt wird, müssen Sie umgekehrte Schrägstriche durch die Verwendung von zwei (und nicht nur einem) umgekehrten Schrägstrichen escapen, um sie im Pfad zu verwenden. Im Folgenden finden Sie gültige Zeilentoken. In diesen Beispielen wird davon ausgegangen, dass die ursprüngliche `Script1`-Datei in einer automatisch generierten F#-Codedatei resultiert, wenn er über ein Tool ausgeführt wird, und dass der Code am Speicherort dieser Direktiven aus einigen Token in Zeile 25 in der Datei `Script1` generiert wird.
@@ -59,21 +56,18 @@ Beim Verwenden der `#line`-Direktive müssen Dateinamen in Anführungszeichen ge
 
 Diese Token geben an, dass der an diesem Speicherort generierte F#-Code aus einigen Konstrukten in oder in der Nähe der Zeile `25` in `Script1` abgeleitet ist.
 
-
 ## <a name="compiler-directives"></a>Compileranweisungen
+
 Compilerdirektiven ähneln Präprozessordirektiven, da ihnen ein #-Zeichen vorangestellt ist. Anstelle jedoch durch den Präprozessor interpretiert zu werden, werden sie durch den Compiler interpretiert und verarbeitet.
 
 Die folgende Tabelle enthält die Compilerdirektive, die in F# verfügbar ist.
 
-
 |Direktive|Beschreibung|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Aktiviert oder deaktiviert die einfache Syntax für die Kompatibilität mit anderen MK-Versionen. Standardmäßig ist die einfache Syntax aktiviert. Die ausführliche Syntax ist immer aktiviert. Daher können Sie die einfache und ausführliche Syntax verwenden. Die Direktive `#light` an sich entspricht `#light "on"`. Beim Angeben von `#light "off"` müssen Sie die ausführliche Syntax für alle Sprachkonstrukte verwenden. Bei der in der Dokumentation für F# gezeigten Syntax wird davon ausgegangen, dass Sie die einfache Syntax verwenden. Weitere Informationen finden Sie unter [ausführliche Syntax](verbose-syntax.md).|
-Interpreter (fsi.exe)-Anweisungen finden Sie unter [Interaktive Programmierung mit F#-](../tutorials/fsharp-interactive/index.md).
-
+Interpreter (fsi.exe)-Anweisungen finden Sie unter [Interaktive Programmierung mit f#](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Compileroptionen](compiler-options.md)
-
+- [F#-Sprachreferenz](index.md)
+- [Compileroptionen](compiler-options.md)

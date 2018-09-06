@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers'
+title: 'Gewusst wie: erstellen ein benutzerdefinierten sicherheitstokenauthentifizierers'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8cbc22be68aae976e939520383995652e896d529
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724421"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892320"
 ---
-# <a name="how-to-create-a-custom-security-token-authenticator"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers
+# <a name="how-to-create-a-custom-security-token-authenticator"></a>Gewusst wie: erstellen ein benutzerdefinierten sicherheitstokenauthentifizierers
 In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitstokenauthentifizierer erstellen und in einen benutzerdefinierten Sicherheitstoken-Manager integrieren. Ein Sicherheitstokenauthentifizierer überprüft den Inhalt eines Sicherheitstokens, das mit einer eingehenden Nachricht bereitgestellt wird. Bei erfolgreicher Validierung gibt der Authentifizierer eine Sammlung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück, die nach der Auswertung einen Satz von Ansprüchen zurückgeben.  
   
  Um einen benutzerdefinierten Sicherheitstoken-Authentifikator in Windows Communication Foundation (WCF) verwenden, müssen Sie zunächst benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-managerimplementierungen erstellen. Weitere Informationen zum Erstellen von benutzerdefinierten Anmeldeinformationen und Sicherheitstoken-Manager finden Sie unter [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Weitere Informationen zu Anmeldeinformationen, Sicherheitstoken-Manager sowie Anbieter- und authentifiziererklassen finden Sie unter [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
@@ -46,9 +46,9 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
   
 4.  Implementieren Sie die <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode. Diese Methode füllt eine Instanz der <xref:System.IdentityModel.Policy.EvaluationContext>-Klasse (die als Argument weitergegeben wurde) mit Ansprüchen auf, die auf dem eingehenden Sicherheitstokeninhalt basieren. Die Methode gibt `true` zurück, wenn der Vorgang mit der Evaluierung vorgenommen wird. In Fällen, in denen die Implementierung vom Vorhandensein anderer Autorisierungsrichtlinien abhängt, die zusätzliche Informationen zum Evaluierungskontext bieten, kann diese Methode `false` zurückgeben, wenn die erforderlichen Informationen noch nicht im Evaluierungskontext vorhanden sind. In diesem Fall wird WCF Aufrufen der Methode erneut nach der Auswertung aller Autorisierungsrichtlinien, die für die eingehende Nachricht generiert wird, wenn mindestens eine der Autorisierungsrichtlinien den Evaluierungskontext modifiziert.  
   
-     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
-     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
+     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
+
  [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) wird beschrieben, wie benutzerdefinierte Anmeldeinformationen und einen benutzerdefinierten Sicherheitstoken-Manager erstellen. Zur Verwendung des hier erstellten benutzerdefinierten Sicherheitstokenauthentifizierers wird eine Implementierung des Sicherheitstoken-Managers so geändert, dass der benutzerdefinierte Authentifizierer von der <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>-Methode zurückgegeben wird. Die Methode gibt einen Authentifizierer zurück, wenn eine entsprechende Sicherheitstokenanforderung übergeben wird.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>So integrieren Sie einen benutzerdefinierten Sicherheitstokenauthentifizierer mit einem benutzerdefinierten Sicherheitstoken-Manager  
@@ -57,9 +57,9 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
   
 2.  Fügen Sie Logik zur Methode hinzu, um diese zu befähigen, Ihren benutzerdefinierten Sicherheitstokenauthentifizierer basierend auf dem <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>-Parameter zurückzugeben. Im folgenden Beispiel wird ein benutzerdefinierter Sicherheitstokenauthentifizierer zurückgegeben, wenn der Tokentyp der Tokenanforderungen ein Benutzername ist (der von der <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A>-Eigenschaft dargestellt wird) und die Nachrichtenrichtung, für die der Sicherheitstokenauthentifizierer angefordert wird, eingegeben wird (dargestellt durch das <xref:System.ServiceModel.Description.MessageDirection.Input>-Feld).  
   
-     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
-     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
+     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
+ 
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  

@@ -2,12 +2,12 @@
 title: Referenzzellen (F#)
 description: Erfahren Sie, wie f# Referenzzellen Speicherorte sind, die Ihnen ermöglichen, änderbare Werte mit Verweissemantik zu erstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149061"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892419"
 ---
 # <a name="reference-cells"></a>Referenzzellen
 
@@ -20,6 +20,7 @@ ref expression
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 Sie verwenden den Operator `ref` vor einem Wert, um eine neue Referenzzelle zu erstellen, die den Wert kapselt. Anschließend können Sie den zugrunde liegenden Wert ändern, da er änderbar ist.
 
 Eine Referenzzelle enthält einen tatsächlichen Wert, sie ist nicht lediglich eine Adresse. Wenn Sie mit dem Operator `ref` eine Referenzzelle erstellen, erstellen Sie eine Kopie des zugrunde liegenden Werts als gekapselten änderbaren Wert.
@@ -73,21 +74,21 @@ Die Ausgabe lautet wie folgt.
 
 Das Feld `contents` wird für die Kompatibilität mit anderen Versionen von ML bereitgestellt und gibt während der Kompilierung eine Warnung aus. Verwenden Sie die `--mlcompatibility`-Compileroption, um die Warnung zu deaktivieren. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).
 
-Im folgenden Code wird die Verwendung von Referenzzellen beim Übergeben von Parametern veranschaulicht. Der Incrementor weist einer Methode Inkrement, die einen Parameter akzeptiert, der in den Parametertyp Byref enthält. Byref im Parametertyp gibt an, dass Aufrufer eine Referenzzelle oder die Adresse einer typischen Variablen des angegebenen Typs in diesem Fall "int". übergeben müssen Im restlichen Code wird veranschaulicht, wie Inkrement mit beiden dieser Typen von Argumenten aufgerufen, und zeigt die Verwendung von Ref-Operator auf eine Variable zum Erstellen einer Referenzzelle (Ref myDelta1). Anschließend wird die Verwendung des address-of-Operators (&amp;) zum Generieren eines entsprechenden Arguments veranschaulicht. Schließlich wird erneut Increment-Methode aufgerufen, mithilfe einer Referenzzelle, die mit einem Let-Bindung deklariert wird. Die letzte Codezeile veranschaulicht die Verwendung von der! Operator zum Dereferenzieren der Referenzzelle für den Druck.
+Im folgenden Code wird die Verwendung von Referenzzellen beim Übergeben von Parametern veranschaulicht. Der Typ Incrementor hat es sich um eine Methode erhöhen, die einen Parameter akzeptiert, der Byref in den Parametertyp enthält. Byref im Parametertyp gibt an, dass der Aufrufer eine Referenzzelle oder die Adresse einer typischen Variablen des angegebenen Typs, in diesem Fall "int". übergeben müssen Der restliche Code wird veranschaulicht, wie Inkrement mit beide Typen von Argumenten aufrufen, und zeigt die Verwendung von Ref-Operator für eine Variable zum Erstellen einer Referenzzelle (Ref myDelta1). Anschließend wird die Verwendung des address-of-Operators (&amp;) zum Generieren eines entsprechenden Arguments veranschaulicht. Schließlich wird erneut die Increment-Methode aufgerufen, mithilfe einer Referenzzelle, die mit einer Let-Bindung deklariert wird. Die letzte Codezeile veranschaulicht die Verwendung der! Operator zu dereferenzieren der Referenzzelle für den Druck.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
 
-Weitere Informationen dazu, wie Sie als Verweis übergeben, finden Sie unter [Parameter und Argumente](parameters-and-arguments.md).
+Weitere Informationen zur Übergabe als Verweis finden Sie unter [Parameter und Argumente](parameters-and-arguments.md).
 
 >[!NOTE]
-C#-Programmierer sollten wissen, dass die Ref unterschiedlich in f# funktioniert als in C# geschrieben. Beispielsweise die Verwendung von Ref beim Übergeben eines Arguments denselben Effekt in f# keine wie in c#.
+C#-Programmierer sollten wissen, dass Ref anders als in f# funktioniert, als dies in c# der Fall ist. Z. B. die Verwendung von Ref, wenn Sie ein Argument übergeben die gleiche Auswirkung in f# keine wie in c#.
 
 >[!NOTE]
-`mutable` Variablen können automatisch auf heraufgestuft werden `'a ref` Closure; erfasst konsultieren [Werte](values/index.md).
+`mutable` Variablen automatisch auf heraufgestuft werden `'a ref` ; Closure erfasst finden Sie unter [Werte](values/index.md).
 
 ## <a name="consuming-c-ref-returns"></a>Verarbeiten von c# `ref` zurückgibt
 
-Ab f# 4.1, können Sie nutzen `ref` gibt, die in c# generiert.  Das Ergebnis der solch ein Aufruf ist eine `byref<_>` Zeiger.
+Ab f# 4.1 können Sie nutzen können `ref` gibt, die in c# generiert.  Das Ergebnis eines solchen Aufrufs ist eine `byref<_>` Zeiger.
 
 Die folgende C#-Methode:
 
@@ -112,7 +113,7 @@ namespace RefReturns
 }
 ```
 
-Kann transparent von f# mit keine besondere Syntax aufgerufen werden:
+Können transparent von f# mit keine spezielle Syntax aufgerufen werden:
 
 ```fsharp
 open RefReturns
@@ -122,19 +123,17 @@ let consumeRefReturn() =
     ()
 ```
 
-Sie können auch Funktionen, die Zeit dauern können deklarieren eine `ref` als Eingabe verwendet, z. B. zurückzugeben:
+Sie können auch deklarieren die Funktionen dieser Vorgang kann eine `ref` zurückgeben als Eingabe, z.B.:
 
 ```fsharp
 let f (x: byref<int>) = &x
 ```
 
-Es gibt derzeit keine Möglichkeit zum Generieren einer `ref` return in F# erläutert die in c# genutzt werden kann.
+Es gibt derzeit keine Möglichkeit zum Generieren einer `ref` zurück in f# die in c# genutzt werden kann.
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Parameter und Argumente](parameters-and-arguments.md)
-
-[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)
-
-[Werte](values/index.md)
+- [F#-Sprachreferenz](index.md)
+- [Parameter und Argumente](parameters-and-arguments.md)
+- [Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)
+- [Werte](values/index.md)

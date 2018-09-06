@@ -12,11 +12,11 @@ ms.assetid: 5e87881c-9c13-4b52-8ad1-e34bb46e8aaa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c62a469b3e31283e5790c747092a8fe504ef8c2a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733338"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885411"
 ---
 # <a name="security-changes-in-the-net-framework"></a>Änderungen der Sicherheit in .NET Framework
 Die wichtigste Änderung im Hinblick auf die Sicherheit in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] betrifft starke Namen. Eine Beschreibung dieser Änderungen finden Sie unter [Enhanced Strong Naming](../../../docs/framework/app-domains/enhanced-strong-naming.md) .  

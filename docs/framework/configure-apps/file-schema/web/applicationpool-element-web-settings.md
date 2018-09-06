@@ -9,11 +9,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489941"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037684"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;ApplicationPool&gt; -Element (Webeinstellungen)
 Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus ausgeführt wird, auf [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version.  
@@ -46,7 +46,7 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozes
 |`requestQueueLimit`|Gibt die maximale Anzahl von Anforderungen, die für ASP.NET in einem einzigen Prozess in die Warteschlange eingereiht werden können. Wenn zwei oder mehr ASP.NET-Anwendungen in einen einzelnen Anwendungspool ausführen möchten, unterliegt die kumulative Satz von Anforderungen an jede Anwendung im Anwendungspool, der mit dieser Einstellung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

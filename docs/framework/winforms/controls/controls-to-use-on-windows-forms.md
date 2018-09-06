@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 53474de53375546e2a7f416488cf7758b3f9cd22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18c3cf638934551ba40306d98b3bf28dfdd03463
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529719"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041143"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Steuerelemente für Windows Forms
 Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Komponenten, die in Windows Forms verwendet werden können. Zusätzlich zu den in diesem Abschnitt behandelten Windows Forms-Steuerelementen können Windows Forms auch ActiveX- und benutzerdefinierte Steuerelemente hinzugefügt werden. Wenn Sie die von Ihnen benötigten Steuerelemente hier nicht finden, können Sie auch eigene erstellen. Ausführliche Informationen finden Sie unter [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Weitere Informationen zum Auswählen des benötigten Steuerelements finden Sie unter [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Visual Basic-Steuerelemente werden basierend auf von bereitgestellten Klassen der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Visual Basic-Steuerelemente werden auf Grundlage von bereitgestellten Klassen der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
@@ -50,10 +50,10 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  Zeigt Daten in einem Dropdown-Kombinationsfeld an.  
   
  [ContextMenu-Komponente](../../../../docs/framework/winforms/controls/contextmenu-component-windows-forms.md)  
- Stellt Benutzern ein leicht zugängliches Menü der häufig verwendeten Befehle zur Verfügung, die zum ausgewählten Objekt gehören. Obwohl <xref:System.Windows.Forms.ContextMenuStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.ContextMenu> -Steuerelement früherer Versionen <xref:System.Windows.Forms.ContextMenu> wird bei Bedarf für Abwärtskompatibilität und für zukünftige Verwendung beibehalten.  
+ Stellt Benutzern ein leicht zugängliches Menü der häufig verwendeten Befehle zur Verfügung, die zum ausgewählten Objekt gehören. Obwohl <xref:System.Windows.Forms.ContextMenuStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.ContextMenu> -Steuerelements früherer Versionen <xref:System.Windows.Forms.ContextMenu> wird für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, falls gewünscht.  
   
  [ContextMenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
- Stellt ein Kontextmenü dar. Obwohl <xref:System.Windows.Forms.ContextMenuStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.ContextMenu> -Steuerelement früherer Versionen <xref:System.Windows.Forms.ContextMenu> wird bei Bedarf für Abwärtskompatibilität und für zukünftige Verwendung beibehalten.  
+ Stellt ein Kontextmenü dar. Obwohl <xref:System.Windows.Forms.ContextMenuStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.ContextMenu> -Steuerelements früherer Versionen <xref:System.Windows.Forms.ContextMenu> wird für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, falls gewünscht.  
   
  [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
  Zeigt tabellarische Daten aus einem Dataset an und ermöglicht die Aktualisierung der Datenquelle.  
@@ -73,7 +73,7 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  [ErrorProvider-Komponente](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)  
  Zeigt Benutzern Fehlerinformationen auf diskrete Weise an.  
   
- [FileDialog-Klasse](../../../../docs/framework/winforms/controls/filedialog-class.md) bietet Funktionen der Basisklasse für Dateidialogfelder.
+ [FileDialog-Klasse](../../../../docs/framework/winforms/controls/filedialog-class.md) stellt die Basisklassenfunktionalität für Dateidialogfelder bereit.
 
  [FlowLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)  
  Stellt einen Bereich dar, dessen Inhalt auf dynamische Weise horizontal oder vertikal angeordnet wird.  
@@ -109,13 +109,13 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  Zeigt eine Liste von Symbolen in der Art von Windows Explorer an.  
   
  [MainMenu-Komponente](../../../../docs/framework/winforms/controls/mainmenu-component-windows-forms.md)  
- Zeigt ein Menü zur Laufzeit an. Obwohl <xref:System.Windows.Forms.MenuStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.MainMenu> -Steuerelement früherer Versionen <xref:System.Windows.Forms.MainMenu> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
+ Zeigt ein Menü zur Laufzeit an. Obwohl <xref:System.Windows.Forms.MenuStrip> das <xref:System.Windows.Forms.MainMenu>-Steuerelement vorheriger Versionen ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.MainMenu>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
  [MaskedTextBox-Steuerelement](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
  Schränkt das Format der Benutzereingabe in einem Formular ein.  
   
  [MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- Stellt ein Menüsystem für ein Formular bereit. Obwohl <xref:System.Windows.Forms.MenuStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.MainMenu> -Steuerelement früherer Versionen <xref:System.Windows.Forms.MainMenu> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
+ Stellt ein Menüsystem für ein Formular bereit. Obwohl <xref:System.Windows.Forms.MenuStrip> das <xref:System.Windows.Forms.MainMenu>-Steuerelement vorheriger Versionen ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.MainMenu>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
  [MonthCalendar-Steuerelement](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
  Bietet eine intuitive grafische Oberfläche, auf der Benutzer Datumsinformationen anzeigen und festlegen können.  
@@ -189,13 +189,13 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  Löst ein Ereignis in regelmäßigen Abständen aus.  
   
  [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- Zeigt Menüs und bebilderte Schaltflächen zum Aktivieren von Befehlen an. Sie können die Funktionalität des Steuerelements erweitern sowie Darstellung und Verhalten ändern. Obwohl <xref:System.Windows.Forms.ToolStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.ToolBar> -Steuerelement früherer Versionen <xref:System.Windows.Forms.ToolBar> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
+ Zeigt Menüs und bebilderte Schaltflächen zum Aktivieren von Befehlen an. Sie können die Funktionalität des Steuerelements erweitern sowie Darstellung und Verhalten ändern. Obwohl <xref:System.Windows.Forms.ToolStrip> das <xref:System.Windows.Forms.ToolBar>-Steuerelement vorheriger Versionen ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
  [ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- Erstellt in Ihrer Windows Forms-Anwendung benutzerdefinierte Symbolleisten und Menüs. Obwohl <xref:System.Windows.Forms.ToolStrip> ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.ToolBar> -Steuerelement früherer Versionen <xref:System.Windows.Forms.ToolBar> wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
+ Erstellt in Ihrer Windows Forms-Anwendung benutzerdefinierte Symbolleisten und Menüs. Obwohl <xref:System.Windows.Forms.ToolStrip> das <xref:System.Windows.Forms.ToolBar>-Steuerelement vorheriger Versionen ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
  [ToolStripContainer-Steuerelement](../../../../docs/framework/winforms/controls/toolstripcontainer-control.md)  
- Stellt Bereiche auf jeder Seite eines Formulars für das Andocken, rafting und Anordnen von <xref:System.Windows.Forms.ToolStrip> Steuerelemente und ein zentrales <xref:System.Windows.Forms.ToolStripContentPanel> für herkömmliche Steuerelemente.  
+ Stellt Bereiche auf jeder Seite eines Formulars bereit, für das Andocken, rafting und Anordnen von <xref:System.Windows.Forms.ToolStrip> -Steuerelemente sowie einen zentralen <xref:System.Windows.Forms.ToolStripContentPanel> für herkömmliche Steuerelemente.  
   
  [ToolStripPanel-Steuerelement](../../../../docs/framework/winforms/controls/toolstrippanel-control.md)  
  Stellt einen Bereich für das Andocken, rafting und Anordnen von <xref:System.Windows.Forms.ToolStrip> Steuerelemente.  
@@ -228,7 +228,7 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Enthält Links zu Schrittfolgen, Empfehlungen für die Erstellung von Steuerelementen sowie weitere Informationen zur Erstellung eigener Steuerelemente.  
   
- [In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  Enthält eine Tabelle, in der Steuerelemente in Visual Basic 6.0 dem entsprechenden Steuerelement in [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] zugeordnet werden. Beachten Sie, dass Steuerelemente jetzt Klassen in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] entsprechen.  
   
  [Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

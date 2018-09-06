@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 ms.openlocfilehash: f19b207c840994ffa3aa364135583b5daeb26827
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542283"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890459"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Gewusst wie: Erben von vorhandenen Windows Forms-Steuerelementen
 Wenn Sie die Funktionalität eines vorhandenen Steuerelements erweitern möchten, können Sie ein Steuerelement erstellen, dass durch Vererbung von einem vorhandenen Steuerelement abgeleitet ist. Beim Erben von einem vorhandenen Steuerelement erben Sie die gesamte Funktionalität und die visuellen Eigenschaften dieses Steuerelements. Angenommen, Sie ein Steuerelement erstellt haben, die von geerbt <xref:System.Windows.Forms.Button>, das neue Steuerelement sieht und Act, genau wie ein standardmäßiges <xref:System.Windows.Forms.Button> Steuerelement. Sie können die Funktionalität Ihres neuen Steuerelements durch Implementieren von benutzerdefinierten Methoden und Eigenschaften erweitern oder ändern. Bei einigen Steuerelementen können Sie auch die visuelle Darstellung des geerbten Steuerelements ändern, indem Sie überschreiben die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode.  

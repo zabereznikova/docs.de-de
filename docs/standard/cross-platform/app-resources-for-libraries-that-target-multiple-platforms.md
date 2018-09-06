@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: a6c589a393ccfb5610a19776af6e33e4046bf5d3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245493"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879831"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
 Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Projekttyp, um sicherzustellen, dass Ressourcen in den Klassenbibliotheken, die von mehreren Plattformen zugegriffen werden kann. Dieser Projekttyp ist in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] verfügbar, und er ist für die portable Teilmenge der .NET Framework-Klassenbibliothek vorgesehen. Durch die Verwendung von [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] wird sichergestellt, dass von Desktop-Apps, Silverlight-Apps, Windows Phone-Apps und [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps auf die Bibliothek zugegriffen werden kann.  
@@ -35,7 +35,7 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
   
  Das [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt enthält die vier <xref:System.Resources.ResourceManager>-Member, die in der folgenden Tabelle aufgeführt sind. Diese Konstruktoren und Methoden ermöglichen es Ihnen, ein <xref:System.Resources.ResourceManager>-Objekt zu instanziieren und Zeichenfolgenressourcen abzurufen.  
   
-|`ResourceManager`-Member|Description|  
+|`ResourceManager`-Member|Beschreibung|  
 |------------------------------|-----------------|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz für den Zugriff auf die benannte Ressourcendatei in der angegebenen Assembly.|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Erstellt eine <xref:System.Resources.ResourceManager>-Instanz, die dem angegebenen Typ entspricht.|  
@@ -104,7 +104,8 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Resources.ResourceManager>  
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Resources.ResourceManager>  
+- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
+- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -3,11 +3,11 @@ title: SQL Server-Datentypzuordnungen
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
 ms.openlocfilehash: 9bc2747dff7b6f2bffdca4186519f2a36083e5f0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456395"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031560"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server-Datentypzuordnungen
 SQL Server und .NET Framework basieren auf unterschiedlichen Typsystemen. Die <xref:System.Decimal>-Struktur von .NET Framework hat eine maximale Skalierung von 28, die dezimalen und numerischen Datentypen von SQL Server haben hingegen eine maximale Skalierung von 38. Um die Integrität beim Lesen und Schreiben von Daten zu gewährleisten, stellt der <xref:System.Data.SqlClient.SqlDataReader> Accessormethoden für SQL Server-spezifische Typen zur Verfügung, die Objekte als <xref:System.Data.SqlTypes> zurückgeben. Zusätzlich werden Accessormethoden zum Zurückgeben von .NET Framework-Typen zur Verfügung gestellt. Sowohl die SQL Server- als auch die .NET Framework-Typen werden weiterhin als Enumerationen in der <xref:System.Data.DbType>-Klasse und <xref:System.Data.SqlDbType>Klasse dargestellt, die zum Angeben von <xref:System.Data.SqlClient.SqlParameter>-Datentypen verwendet werden können.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
 ms.openlocfilehash: 4e7c94dce5b50fe93f00aaaa72206be3394faf62
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788661"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042282"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Gewusst wie: Aufrufen benutzerdefinierter Datenbankfunktionen
 In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben, die in der Datenbank in LINQ to Entities-Abfragen definiert werden.  

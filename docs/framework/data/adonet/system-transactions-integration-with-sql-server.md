@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481682"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884181"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions-Integration in SQL Server
 Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 wurde ein neues Transaktionsframework eingeführt, auf das über den <xref:System.Transactions> -Namespace zugegriffen werden kann. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die vollständig in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]integriert ist, einschließlich [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  

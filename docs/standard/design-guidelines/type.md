@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af7511f4159fdbfe2d3f972dc927e9ee11fd586f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7fb9964d0e542c0937c55ae65bd88b3f7149fa8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572888"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036024"
 ---
 # <a name="type-design-guidelines"></a>Richtlinien für den Entwurf von Typen
-Aus der Perspektive CLR stehen nur zwei Kategorien von Typen – Verweistypen und Werttypen, aber für eine Erläuterung zu Framework-Designs, teilen wir Typen in mehr logische Gruppen, jeweils einen eigenen bestimmten Regeln.  
+Aus Sicht der CLR stehen nur zwei Kategorien von Typen, Verweistypen und Werttypen, jedoch für eine Erläuterung zu Framework-Designs, einzuteilen Typen in logische Gruppen, die jeweils über eigene bestimmte Regeln.  
   
- Klassen sind Referenztypen der allgemeinen Groß-/Kleinschreibung. Sie stellen den Großteil der Typen in den meisten Frameworks. Klassen Schulden ihre Beliebtheit, um die umfassenden Satz von objektorientierten Funktionsumfangs und ihrer allgemeine Anwendbarkeit. Abstrakte Klassen und Basisklassen sind spezielle logische Gruppen, die im Zusammenhang mit der Erweiterbarkeit.  
+ Klassen sind grundsätzlich von Verweistypen. Sie stellen den Großteil der Typen in den meisten Frameworks. Klassen Schulden ihre Beliebtheit, um die umfassenden Satz von objektorientierten Funktionen, die sie unterstützen und ihre allgemeine Anwendbarkeit. Abstrakte Klassen und Basisklassen sind spezielle logische Gruppen, die im Zusammenhang mit der Erweiterbarkeit.  
   
- Schnittstellen sind Typen, die implementiert werden können, indem Verweistypen und Werttypen. Sie können daher als Wurzeln polymorphen Hierarchien von Verweistypen und Werttypen dienen. Darüber hinaus können Schnittstellen verwendet werden, um mehrfache Vererbung zu simulieren, die von der CLR nicht systemintern unterstützt wird.  
+ Schnittstellen sind von Typen, die implementiert werden, können sowohl Verweistypen und Werttypen. Sie können daher als Stamm der polymorphen Hierarchien von Verweistypen und Werttypen dienen. Darüber hinaus können Schnittstellen, mehrfachvererbung, zu simulieren, die von der CLR nicht systemintern unterstützt wird, verwendet werden.  
   
- Strukturen sind Werttypen der allgemeinen Groß-/Kleinschreibung und für kleine, einfache Typen, ähnlich wie Sprachprimitive reserviert sein.  
+ Strukturen sind grundsätzlich von Werttypen und für kleine, einfache Typen, ähnlich wie Sprachprimitive reserviert werden soll.  
   
- Enumerationen sind ein besonderer Fall von Werttypen verwendet, um kurze Sätze von Werten, z. B. Tage der Woche, konsolenfarben und So weiter definieren.  
+ Enumerationen sind ein Sonderfall von Werttypen, die zum Definieren von kurzen Sätze von Werten, z. B. Tage der Woche, konsolenfarben usw. verwendet.  
   
- Statische Klassen sind Typen, die Container für statische Member werden soll. Sie werden häufig verwendet, um Verknüpfungen zu anderen Vorgängen bereitzustellen.  
+ Statische Klassen sind Typen, die Container für statische Member erstellt werden soll. Sie werden häufig verwendet, um Verknüpfungen zu anderen Vorgängen bereitzustellen.  
   
- Delegaten, Ausnahmen, Attribute, Arrays und Sammlungen sind alle Sonderfälle von Verweistypen, die für einen bestimmten Verwendungszweck gedacht und Richtlinien für Design und Nutzung werden an anderer Stelle in diesem Handbuch erläutert.  
+ Delegaten, Ausnahmen, Attribute, Arrays und Sammlungen sind alle Sonderfälle von Verweistypen, die für einen bestimmten Verwendungszweck vorgesehen und Richtlinien für Design und Nutzung in diesem Buch an anderer Stelle erörtert werden.  
   
  **✓ DO** stellen Sie sicher, dass jeder Typ einen genau definierten Satz verwandter Elemente, nicht nur eine zufällige Sammlung von unabhängigen Funktionalität ist.  
   
@@ -42,9 +42,10 @@ Aus der Perspektive CLR stehen nur zwei Kategorien von Typen – Verweistypen un
  [Strukturentwurf](../../../docs/standard/design-guidelines/struct.md)  
  [Enum-Entwurf](../../../docs/standard/design-guidelines/enum.md)  
  [Geschachtelte Typen](../../../docs/standard/design-guidelines/nested-types.md)  
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

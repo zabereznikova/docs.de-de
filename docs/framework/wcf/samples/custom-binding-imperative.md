@@ -3,11 +3,11 @@ title: Imperativ für benutzerdefinierte Bindungen
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 ms.openlocfilehash: dac98d2c08a207019b9ec5b18340afc02e62f836
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779379"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035738"
 ---
 # <a name="custom-binding-imperative"></a>Imperativ für benutzerdefinierte Bindungen
 Im Beispiel wird veranschaulicht, wie zum Schreiben von imperativen Codes, um zu definieren und verwenden benutzerdefinierte Bindungen ohne Verwendung einer Konfigurationsdatei oder ein Client für Windows Communication Foundation (WCF) generiert wird. Dieses Beispiel kombiniert die Funktionen, die vom HTTP-Transport und dem zuverlässigen Sitzungskanal zur Verfügung gestellt werden, um eine zuverlässige HTTP-basierte Bindung zu erstellen. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert.  

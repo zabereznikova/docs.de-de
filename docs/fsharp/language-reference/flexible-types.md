@@ -1,17 +1,17 @@
 ---
 title: Flexible Typen (F#)
-description: Erfahren Sie, wie f# flexible typanmerkung verwendet wird, der angibt, dass ein Parameter, eine Variable oder ein Wert ein Typs mit einem angegebenen Typ kompatibel ist.
+description: Erfahren Sie, wie Sie mit F#-Anmerkung flexibler Typen, die angibt, dass ein Parameter, Variablen oder Wert ein Typs mit einem angegebenen Typ kompatibel ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: a54d462d04e4e65680a4612f58da72173f04d1f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563349"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886369"
 ---
 # <a name="flexible-types"></a>Flexible Typen
 
-Ein *flexible typanmerkung* gibt an, dass ein Parameter, eine Variable oder ein Wert ein Typs ist kompatibel mit einem angegebenen Typ, in denen die Kompatibilität anhand der Position in einer objektorientierten Hierarchie von Klassen oder Schnittstellen bestimmt. Flexible Typen sind sinnvoll, insbesondere, wenn die automatische Konvertierung in Typen, die in der Hierarchie höher nicht erfolgt, aber immer noch die Funktionalität zum Arbeiten mit beliebigen Typs in der Hierarchie und für alle Typen, die eine Schnittstelle implementiert werden soll.
+Ein *Anmerkung flexibler Typen* gibt an, dass ein Parameter, Variablen oder Wert ein Typs, der mit einem angegebenen Typ kompatibel ist, in denen die Kompatibilität anhand der Position in einer objektorientierten Hierarchie von Klassen oder Schnittstellen bestimmt. Flexible Typen eignen sich besonders dann, wenn die automatische Konvertierung in Typen, die in der Hierarchie höher nicht erfolgt, aber weiterhin die Funktionen zum Arbeiten mit beliebigen Typs in der Hierarchie oder jeder Typ, der eine Schnittstelle implementiert aktivieren möchten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,9 +21,9 @@ Ein *flexible typanmerkung* gibt an, dass ein Parameter, eine Variable oder ein 
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax *Typ* ein Basistyp oder eine Schnittstelle darstellt.
+In der vorherigen Syntax *Typ* stellt einen Basistyp oder eine Schnittstelle dar.
 
-Ein flexibler Typ entspricht einem generischen Typ, der eine Einschränkung aufweist, die die zulässigen Typen für Typen beschränkt, die mit dem Typ Basis oder Schnittstelle kompatibel sind. D. h. entsprechen den folgenden zwei Codezeilen.
+Ein flexibler Typ entspricht ein generischer Typ mit einer Einschränkung, die die zulässigen Typen auf Typen beschränkt, die mit dem Typ Basis oder Schnittstelle kompatibel sind. Das heißt, entsprechen die folgenden zwei Codezeilen.
 
 ```fsharp
 #SomeType
@@ -31,13 +31,13 @@ Ein flexibler Typ entspricht einem generischen Typ, der eine Einschränkung aufw
 'T when 'T :> SomeType
 ```
 
-Flexible Typen sind in verschiedenen Arten von Situationen nützlich. Bei einer Funktion höherer Ordnung (Funktion, die eine Funktion als Argument akzeptiert), ist es beispielsweise oft sinnvoll, verwenden die Funktion einen flexiblen Typ zurückgeben. Im folgenden Beispiel die Verwendung eines flexiblen Typs mit einem Sequenzargument in `iterate2` ermöglicht die Funktion höheren Ordnung arbeiten mit Funktionen, die Sequenzen, Arrays, Listen und aufzählbare andersartiges zu generieren.
+Flexible Typen sind in verschiedenen Arten von Situationen nützlich. Bei einer Funktion höherer Ordnung (eine Funktion, die eine Funktion als Argument akzeptiert), ist es beispielsweise häufig nützlich, um die Funktion einen flexiblen Typ zurückgeben. Im folgenden Beispiel ist die Verwendung eines flexiblen Typs mit einer Sequenzargument in `iterate2` ermöglicht die Funktion höheren Ordnung Arbeit mit Funktionen, die Sequenzen, Arrays, Listen und beliebige andere aufzählbare Typen zu generieren.
 
-Berücksichtigen Sie die folgenden beiden Funktionen, des welche eine Sequenz zurückgibt, von denen andere einen flexiblen Typ zurückgibt.
+Erwägen Sie die folgenden zwei Funktionen, die eine der gibt eine Sequenz, der andere einen flexiblen Typ zurückgibt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
 
-Betrachten Sie als weiteres Beispiel die [Seq.concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) Library-Funktion:
+Betrachten Sie als ein weiteres Beispiel: die [Seq.concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) Library-Funktion:
 
 ```fsharp
 val concat: sequences:seq<#seq<'T>> -> seq<'T>
@@ -49,9 +49,9 @@ Sie können eine der folgenden aufzählbaren Sequenzen dieser Funktion übergebe
 - Eine Liste von arrays
 - Ein Array von Listen
 - Ein Array von Sequenzen
-- Eine beliebige andere Kombination von aufzählbare Sequenzen
+- Eine beliebige andere Kombination der aufzählbaren Sequenzen
 
-Der folgende code verwendet `Seq.concat` der Szenarien veranschaulicht, die Sie über flexible Typen unterstützen können.
+Der folgende code verwendet `Seq.concat` die Szenarien veranschaulicht werden, die Sie mithilfe flexible Typen unterstützen können.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4102.fs)]
 
@@ -65,10 +65,9 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-In F# erläutert sind wie in anderen objektorientierten Sprachen Kontexte vorhanden in denen abgeleiteten Typen oder Typen, die Schnittstellen implementieren automatisch in einen Basistyp oder Schnittstellentyp konvertiert werden. Diese automatische Konvertierungen erfolgen in direkten Argumente, aber nicht, wenn der Typ in einer untergeordneten Position, im Rahmen eines komplexen Typs wie z. B. einen Rückgabetyp eines Funktionstyps oder als Typargument ist. Daher ist die flexiblen Typ Notation primär nützlich, wenn der Typ, den sie zum Anwenden eines komplexen Typs gehört.
+In f# sind wie in anderen objektorientierten Sprachen Kontexte, die in denen abgeleiteten Typen oder Typen, die Schnittstellen implementieren automatisch in einem Basistyp oder der Schnittstellentyp konvertiert werden. Diesen automatischen Konvertierungen erfolgen in direkten Argumente, jedoch nicht, wenn der Typ in eine untergeordnete Position, als Teil einer komplexeren Typ wie einen Rückgabetyp eines Funktionstyps oder als ein Argument vom Typ ist. Daher ist die flexiblen Typ Notation vor allem nützlich, wenn der Typ, die, dem Sie sie anwenden können, sind, Teil eines komplexen Typs ist.
 
 ## <a name="see-also"></a>Siehe auch
 
-[F#-Sprachreferenz](index.md)
-
-[Generika](generics/index.md)
+- [F#-Sprachreferenz](index.md)
+- [Generika](generics/index.md)

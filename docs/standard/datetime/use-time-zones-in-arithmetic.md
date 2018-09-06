@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen'
+title: 'Gewusst wie: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f9d326750cdef96be1aa6055d46b4ac08ec7a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574581"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041514"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Vorgehensweise: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Gewusst wie: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen
 
-Normalerweise beim Ausführen von Datum und Zeit arithmetische <xref:System.DateTime> oder <xref:System.DateTimeOffset> Werte, die das Ergebnis sind keine Regeln zur Anpassung der Zeitzone enthalten. Dies ist "true", selbst wenn der Wert für Datum und Uhrzeit der Zeitzone eindeutig erkennbar ist (z. B. wenn die <xref:System.DateTime.Kind%2A> -Eigenschaftensatz auf <xref:System.DateTimeKind.Local>). In diesem Thema wird gezeigt, wie arithmetische Operationen für Datums-und Uhrzeitwerte ausgeführt, die zu einer bestimmten Zeitzone gehören. Die Ergebnisse der arithmetischen Operationen berücksichtigen die Anpassungsregeln der Zeitzone.
+Normalerweise beim Ausführen von Datum und Uhrzeit mithilfe von arithmetischen <xref:System.DateTime> oder <xref:System.DateTimeOffset> -Werten in den Ergebnissen berücksichtigt nicht die Anpassungsregeln der Zeitzone. Dies ist "true", auch wenn die Zeitzone des Datums-und Uhrzeit eindeutig erkennbar ist (z. B. wenn die <xref:System.DateTime.Kind%2A> -Eigenschaftensatz auf <xref:System.DateTimeKind.Local>). In diesem Thema wird gezeigt, wie Sie arithmetische Operationen für Datums-und Uhrzeitwerte durchführen, die zu einer bestimmten Zeitzone gehören. Die Ergebnisse der arithmetischen Operationen berücksichtigen die Anpassungsregeln der Zeitzone.
 
 ### <a name="to-apply-adjustment-rules-to-date-and-time-arithmetic"></a>So wenden Sie Anpassungsregeln auf arithmetische Datums- und Uhrzeitoperationen an
 
@@ -30,11 +30,11 @@ Normalerweise beim Ausführen von Datum und Zeit arithmetische <xref:System.Date
    [!code-csharp[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#6)]
    [!code-vb[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#6)]
 
-2. Konvertiert eine Uhrzeit in Coordinated Universal Time (UTC) durch Aufrufen der <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> Methode oder die <xref:System.TimeZoneInfo.ConvertTime%2A> Methode.
+2. Konvertiert eine Uhrzeit in Coordinated Universal Time (UTC) durch Aufrufen der <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> Methode oder der <xref:System.TimeZoneInfo.ConvertTime%2A> Methode.
 
 3. Führen Sie die arithmetische Operation für die UTC-Zeit aus.
 
-4. Die Zeit von UTC in die ursprüngliche Uhrzeit zugehörigen Zeitzone zu konvertieren, durch Aufrufen der <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> Methode.
+4. Konvertieren Sie die Zeit von UTC, der zugehörigen Zeitzone in der ursprünglichen Zeit durch Aufrufen der <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> Methode.
 
 ## <a name="example"></a>Beispiel
 
@@ -43,28 +43,28 @@ Im folgenden Beispiel werden zwei Stunden und 30 Minuten zum 9. März 2008 um 1:
 [!code-csharp[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual8.cs#8)]
 [!code-vb[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual8.vb#8)]
 
-Beide <xref:System.DateTime> und <xref:System.DateTimeOffset> Werte werden an eine beliebige Zeitzone, zu dem sie gehören möglicherweise, aufgehoben. Um arithmetische Datums- und Uhrzeitoperationen so durchführen zu können, dass Anpassungsregeln für Zeitzonen automatisch angewendet werden, muss die Zeitzone, zu der der Datums- und Uhrzeitwert gehört, direkt identifizierbar sein. Dies bedeutet, dass Datum und Uhrzeit sowie die zugeordnete Zeitzone eng verknüpft sein müssen. Hierzu gibt es mehrere Möglichkeiten, darunter die folgenden:
+Beide <xref:System.DateTime> und <xref:System.DateTimeOffset> Werte werden an eine beliebige Zeitzone zu dem sie gehören möglicherweise aufgehoben. Um arithmetische Datums- und Uhrzeitoperationen so durchführen zu können, dass Anpassungsregeln für Zeitzonen automatisch angewendet werden, muss die Zeitzone, zu der der Datums- und Uhrzeitwert gehört, direkt identifizierbar sein. Dies bedeutet, dass Datum und Uhrzeit sowie die zugeordnete Zeitzone eng verknüpft sein müssen. Hierzu gibt es mehrere Möglichkeiten, darunter die folgenden:
 
 * Nehmen Sie an, dass alle in einer Anwendung verwendeten Uhrzeiten zu einer bestimmten Zeitzone gehören. Obwohl dieser Ansatz in einigen Fällen geeignet ist, bietet er jedoch nur eingeschränkte Flexibilität sowie möglicherweise eine eingeschränkte Portabilität.
 
 * Definieren Sie einen Typ, der ein Datum und eine Uhrzeit eng mit der zugehörigen Zeitzone verknüpft, indem Sie beide als Felder des Typs einschließen. Dieser Ansatz wird im Codebeispiel verwendet, in dem eine Struktur zum Speichern des Datums und der Uhrzeit sowie der Zeitzone in zwei Memberfeldern definiert wird.
 
-Im Beispiel wird veranschaulicht, wie arithmetische Operationen für <xref:System.DateTime> Werte so, dass die Regeln zur Anpassung der Zeitzone auf das Ergebnis angewendet werden. Allerdings <xref:System.DateTimeOffset> Werte genauso einfach verwendet werden können. Im folgende Beispiel wird veranschaulicht, wie der Code im ursprünglichen Beispiel angepasst werden möglicherweise <xref:System.DateTimeOffset> anstelle von <xref:System.DateTime> Werte.
+Im Beispiel wird veranschaulicht, wie auf arithmetische Operationen <xref:System.DateTime> Werte, damit auf das Ergebnis die Anpassungsregeln der Zeitzone angewendet werden. Allerdings <xref:System.DateTimeOffset> Werte können genauso einfach verwendet werden. Das folgende Beispiel veranschaulicht, wie der Code in das ursprüngliche Beispiel angepasst werden möglicherweise <xref:System.DateTimeOffset> anstelle von <xref:System.DateTime> Werte.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#7)]
 
-Beachten Sie, dass diese Ergänzung einfach nach erfolgt die <xref:System.DateTimeOffset> ohne zuerst in UTC konvertiert, das Ergebnis richtigen Zeitpunkt zeitlich wobei der Offset ist nicht widerspiegelt, die der festgelegten Zeitzone für diese Zeit-Wert.
+Beachten Sie, dass diese Ergänzung einfach durchgeführt wird, auf die <xref:System.DateTimeOffset> Wert, ohne zuerst in UTC konvertiert, gibt das Ergebnis der richtige Zeitpunkt Zeitpunkt wieder, aber die Abweichung spiegelt nicht mit der festgelegten Zeitzone für diese Zeit wider.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Für dieses Beispiel benötigen Sie Folgendes:
 
-* Dem Projekt ein Verweis auf "System.Core.dll" hinzugefügt werden.
+* Dass das Projekt ein Verweis auf "System.Core.dll" hinzugefügt werden.
 
 * Dass die <xref:System> Namespace importiert werden, mit der `using` -Anweisung (in C#-Code erforderlich).
 
 ## <a name="see-also"></a>Siehe auch
 
-[Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
-[durchführen arithmetischer Datums-und Uhrzeitoperationen](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+* [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+* [Durchführen arithmetischer Datums- und Uhrzeitoperationen](../../../docs/standard/datetime/performing-arithmetic-operations.md)

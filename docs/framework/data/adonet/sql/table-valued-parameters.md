@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742518"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042581"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus einer Clientanwendung nach SQL Server zu marshallen, ohne dass mehrere Roundtrips oder eine besondere serverseitige Logik für die Verarbeitung der Daten notwendig ist. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und diese Daten in einem einzelnen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die anschließend mit [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] bearbeitet werden kann.  

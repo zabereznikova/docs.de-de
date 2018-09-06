@@ -10,11 +10,11 @@ ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 1a58260ecf5a4126554c23f1a5f8d7b3ba43f215
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553046"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891616"
 ---
 # <a name="programming-wcf-security"></a>Programmieren der WCF-Sicherheit
 Dieses Thema beschreibt die grundlegenden Programmierungsaufgaben verwendet, um eine sichere Windows Communication Foundation (WCF)-Anwendung zu erstellen. Dieses Thema behandelt nur Authentifizierung, Vertraulichkeit und Integrität, die zusammen als bezeichnet *übertragungssicherheit*. Dieses Thema deckt sich nicht auf die Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste); Weitere Informationen zur Autorisierung finden Sie unter [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

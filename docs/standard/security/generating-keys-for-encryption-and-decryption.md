@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb506ee4e9dde8fcc58e92dfcecd9b896a78401e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587611"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036089"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Erzeugen von Schlüsseln für die Ver- und Entschlüsselung
 Das Erstellen und Verwalten von Schlüsseln ist ein wichtiger Bestandteil des kryptografischen Prozesses. Bei symmetrischen Algorithmen müssen ein Schlüssel und ein Initialisierungsvektor (IV) erstellt werden. Der Schlüssel muss vor Unbefugten, die Ihre Daten nicht entschlüsseln können sollen, geheim gehalten werden. Der IV muss nicht geheim sein, sollte aber für jede Sitzung geändert werden. Bei asymmetrischen Algorithmen müssen ein öffentlicher und ein privater Schlüssel erstellt werden. Der öffentliche Schlüssel kann allgemein zugänglich sein, während der private Schlüssel nur dem Teilnehmer bekannt sein darf, der die mit dem öffentlichen Schlüssel verschlüsselten Daten entschlüsselt. In diesem Abschnitt wird beschrieben, wie Schlüssel für symmetrische und asymmetrische Algorithmen erzeugt und verwaltet werden.  
@@ -88,8 +88,9 @@ RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();
 RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verschlüsseln von Daten](../../../docs/standard/security/encrypting-data.md)  
- [Entschlüsseln von Daten](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- [Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Verschlüsseln von Daten](../../../docs/standard/security/encrypting-data.md)  
+- [Entschlüsseln von Daten](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
+- [Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

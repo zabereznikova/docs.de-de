@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466503"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881797"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete-Funktion
-Löscht einen angegebenen Qualifizierer anhand des Namens an.  
+Löscht einen angegebenen Qualifizierer anhand des Namens.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

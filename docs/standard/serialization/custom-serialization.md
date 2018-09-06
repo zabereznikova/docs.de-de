@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 79cb7a2a0706cb06cbd444f4a2e1ae87cb701101
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592105"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881914"
 ---
 # <a name="custom-serialization"></a>Benutzerdefinierte Serialisierung
 Unter benutzerdefinierter Serialisierung wird die Steuerung der Serialisierung und Deserialisierung eines Typs verstanden. Durch die Steuerung der Serialisierung lässt sich die Serialisierungskompatibilität sicherstellen. Damit ist die Fähigkeit gemeint, Objekte unterschiedlicher Versionen eines Typs serialisieren und deserialisieren zu können, ohne die Kernfunktionalität des Typs zu beeinträchtigen. Zum Beispiel kann die erste Version eines Typs nur zwei Felder umfassen. In der nächsten Version des Typs werden mehrere weitere Felder hinzugefügt. Die zweite Version einer Anwendung muss jedoch fähig sein, beide Typen zu serialisieren und zu deserialisieren. In den folgenden Abschnitten wird beschrieben, wie Serialisierung gesteuert wird.
@@ -184,7 +184,8 @@ End Class
   
  Objekte werden von innen nach außen rekonstruiert. Dies bedeutet, dass das Aufrufen von Methoden während der Deserialisierung unerwünschte Nebeneffekte haben kann, wenn sich die aufgerufenen Methoden auf Objektverweise beziehen, die zum Zeitpunkt des Aufrufs noch nicht deserialisiert worden sind. Wenn die deserialisierte Klasse <xref:System.Runtime.Serialization.IDeserializationCallback> implementiert, wird die <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization*>-Methode automatisch aufgerufen, sobald die gesamte Objektgrafik deserialisiert wurde. Zu diesem Zeitpunkt sind auch die untergeordneten Objekte, auf die verwiesen wurde, vollständig wiederhergestellt. Eine Hashtabelle ist ein typisches Beispiel für eine Klasse, die ohne Verwendung des Ereignislisteners schwer zu deserialisieren ist. Es ist einfach, die Schlüssel- und Wert-Paare während der Deserialisierung abzurufen. Es kann jedoch problematisch sein, diese Objekte dann wieder der Hashtabelle hinzuzufügen, da nicht gewährleistet ist, dass die von der Hashtabelle abgeleiteten Klassen deserialisiert wurden. Daher wird davon abgeraten, zu diesem Zeitpunkt Methoden für Hashtabellen aufzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Binäre Serialisierung](binary-serialization.md)  
- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)  
- [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Binäre Serialisierung](binary-serialization.md)  
+- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)  
+- [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)

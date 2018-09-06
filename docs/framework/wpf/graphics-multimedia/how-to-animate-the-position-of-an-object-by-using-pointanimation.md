@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
 ms.openlocfilehash: 91447685988d91dfe86707c2cf265deabeb717b9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801579"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036664"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Gewusst wie: Animieren der Position eines Objekts mit PointAnimation
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.PointAnimation> -Klasse zum Animieren eines Objekts entlang einer <xref:System.Windows.Shapes.Path>.  

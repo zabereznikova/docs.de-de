@@ -9,11 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: 54fc56e5e7d6ee5cd0e7bc55bd22c7d4127eb4d3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532117"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036573"
 ---
 # <a name="security-in-windows-forms-overview"></a>Übersicht über die Sicherheit in Windows Forms
 Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben wurde, hatte jeglicher Code, der auf dem Computer eines Benutzers ausgeführt wurde, dieselben Berechtigungen für Zugriffe auf Ressourcen, wie der Benutzer auf dem Computer hatte. Wenn der Benutzer beispielsweise berechtigt war, auf das Dateisystem zuzugreifen, war auch der Code berechtigt, auf das Dateisystem zuzugreifen. Wenn der Benutzer Zugriffsrechte für eine Datenbank hatte, konnte der Code ebenfalls auf diese Datenbank zugreifen. Diese Berechtigungen können für Code in ausführbaren Dateien akzeptabel sein, die der Benutzer explizit auf dem lokalen Computer installiert hat. Sie sind aber wahrscheinlich nicht für potenzielle Schadsoftware akzeptabel, der aus dem Internet oder einem lokalen Intranet stammt. Dieser Code darf nicht ohne Berechtigung auf Computerressourcen des Benutzers zugreifen können.  
@@ -51,7 +51,7 @@ Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben w
   
  Manchmal ist es schwierig zu wissen, ob Sie alle entsprechenden Berechtigungen bedacht haben. Ein Methodenaufruf, der in der Oberfläche harmlos aussieht, kann z. B. irgendwann während seiner Ausführung auf das Dateisystem zugreifen. Wenn Sie Ihre Anwendung nicht mit allen erforderlichen Berechtigungen bereitstellen, kann es passieren, dass sie in Tests beim Debuggen auf Ihrem Desktop einwandfrei ausgeführt wird, aber fehlschlägt, wenn sie bereitgestellt ist. Sowohl die [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK und [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] enthalten Tools für die Berechtigungen eine Anwendung benötigt: der MT.exe Befehl Tools "Linie" und das Feature "Berechtigungen berechnen" von Visual Studio.  
   
- In den folgenden Themen sind zusätzliche Sicherheitsfeatures von Windows Forms beschrieben.  
+ In den folgenden Themen sind zusätzliche Sicherheitsfunktionen von Windows Forms beschrieben.  
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  

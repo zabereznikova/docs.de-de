@@ -2,17 +2,16 @@
 title: Enumerationen (F#)
 description: Erfahren Sie, wie Sie F#-Enumerationen anstelle von literalen verwenden, um den Code besser lesbar und verwaltbar zu gestalten.
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518836"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891641"
 ---
 # <a name="enumerations"></a>Enumerationen
 
 *Enumerationen*, auch bekannt als *Enumerationen*, integrale Typen sind, in dem Bezeichnungen auf eine Teilmenge der Werte zugewiesen werden. Sie können diese anstelle von Literalen verwenden, um Code lesbarer und verwaltbarer zu machen.
-
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 Eine Enumeration sieht ähnlich wie eine Unterscheidungs-Union, die einfache Werte, mit dem Unterschied, dass die Werte angegeben werden können. Die Werte sind in der Regel an ganzen Zahlen, die mit 0 oder 1 beginnen, oder ganze Zahlen, die Bitpositionen darstellen. Wenn eine Enumeration Bitpositionen darstellen soll, verwenden Sie auch die [Flags](xref:System.FlagsAttribute) Attribut.
 
 Der zugrunde liegende Typ der Enumeration wird durch das Literal, das verwendet wird, bestimmt, sodass z. B. Sie z. B. Literale mit Suffix verwenden können `1u`, `2u`usw., für die ganze Zahl ohne Vorzeichen (`uint32`) Typ.
@@ -49,8 +49,8 @@ Der Standardwert `enum` Funktion arbeitet mit dem Typ `int32`. Es kann nicht aus
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 Darüber hinaus Fällen für Enumerationen immer als ausgegeben werden `public`. Dies ist so, dass sie mit c# und den Rest der .NET-Plattform ausgerichtet sind.
-    
-## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Umwandlung und Konvertierungen](casting-and-conversions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [F#-Sprachreferenz](index.md)
+- [Umwandlung und Konvertierungen](casting-and-conversions.md)

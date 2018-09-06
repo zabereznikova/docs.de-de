@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
 ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535473"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042542"
 ---
 # <a name="propertypath-xaml-syntax"></a>XAML-Syntax von PropertyPath
 Die <xref:System.Windows.PropertyPath> Objekt unterstützt eine komplexe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Syntax für das Festlegen verschiedener Eigenschaften, die annehmen der <xref:System.Windows.PropertyPath> -Typ als Wert. Dieses Thema dokumentiert die <xref:System.Windows.PropertyPath> Syntax auf die Bindungs- und animationssyntax Syntaxen angewendet.  

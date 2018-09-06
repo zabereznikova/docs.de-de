@@ -1,18 +1,17 @@
 ---
 title: Einstiegspunkt (F#)
-description: Erfahren Sie, wie ein f#-Programms Einstiegspunkt fest, die als eine ausführbare Datei kompiliert wird, in dem Ausführung formal beginnt.
+description: Erfahren Sie, wie eine f#-Programm Einstiegspunkt fest, die als ausführbare Datei kompiliert wird, in dem Ausführung formal beginnt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3d6cab755dd89f2d3d669a8763aa08660432a0ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563619"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884769"
 ---
 # <a name="entry-point"></a>Einstiegspunkt
 
-Dieses Thema beschreibt die Methode, mit denen Sie den Einstiegspunkt auf einem F#-Programm festgelegt.
-
+In diesem Thema wird beschrieben, die Methode, die Sie verwenden, um den Einstiegspunkt auf einem F#-Programm festgelegt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -22,27 +21,28 @@ let-function-binding
 ```
 
 ## <a name="remarks"></a>Hinweise
-In der vorherigen Syntax *Let funktionsbindung* ist die Definition einer Funktion in einer `let` Bindung.
 
-Der Einstiegspunkt an ein Programm, das kompiliert wird, wie eine ausführbare Datei handelt, in dem Ausführung formal beginnt. Geben Sie den Einstiegspunkt für eine f#-Anwendung, durch Anwenden der `EntryPoint` -Attribut auf des Programms `main` Funktion. Diese Funktion (erstellt mit einer `let` Bindung) muss die letzte Funktion in der letzten kompilierten Datei sein. Die letzte kompilierte Datei ist die letzte Datei im Projekt oder die letzte Datei, die an der Befehlszeile übergeben wird.
+In der vorherigen Syntax *Let-Funktion-Bindung* ist die Definition einer Funktion in einer `let` Bindung.
 
-Die Einstiegspunktfunktion weist den Typ `string array -> int`. Argumente in der Befehlszeile übergeben werden, um die `main` -Funktion in das Array von Zeichenfolgen. Das erste Element des Arrays ist das erste Argument; der Name der ausführbaren Datei ist nicht im Array enthalten, da es in einigen anderen Sprachen ist. Der zurückgegebene Wert wird als der Exitcode für den Prozess verwendet. 0 (null) gibt in der Regel die erfolgreiche Ausführung; Werte ungleich Null geben einen Fehler an. Es gibt keine Konvention für die spezifische Bedeutung des Rückgabecodes ungleich null; die Bedeutung des Rückgabecodes sind anwendungsspezifisch.
+Der Einstiegspunkt an ein Programm, das kompiliert wird, wie eine ausführbare Datei handelt, in dem Ausführung formal beginnt. Sie geben den Einstiegspunkt für eine F#-Anwendung durch Anwenden der `EntryPoint` Attribut des Programms `main` Funktion. Diese Funktion (erstellt mit einem `let` Bindung) muss die letzte Funktion in der letzten kompilierten Datei. Die letzte kompilierte Datei ist die letzte Datei im Projekt oder die letzte Datei, die an der Befehlszeile übergeben wird.
+
+Die Einstiegspunktfunktion weist den Typ `string array -> int`. Die Argumente, die in der Befehlszeile angegeben werden übergeben die `main` -Funktion in das Array von Zeichenfolgen. Das erste Element des Arrays ist das erste Argument. der Name der ausführbaren Datei ist nicht im Array enthalten, da es in einigen anderen Sprachen ist. Der zurückgegebene Wert wird als Exitcode für den Prozess verwendet. 0 (null) gibt in der Regel Erfolg; ungleich NULL-Werte geben einen Fehler an. Es gibt keine Konvention für die spezifische Bedeutung des Rückgabecodes für ungleich NULL. die Bedeutung des Rückgabecodes sind anwendungsspezifisch.
 
 Das folgende Beispiel veranschaulicht eine einfache `main` Funktion.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/entry-point/snippet501.fs)]
 
-Wenn dieser Code ausgeführt wird, mit der Befehlszeile `EntryPoint.exe 1 2 3`, die Ausgabe lautet wie folgt.
+Wenn dieser Code ausgeführt wird, über die Befehlszeile `EntryPoint.exe 1 2 3`, die Ausgabe lautet wie folgt.
 
 ```console
 Arguments passed to function : [|"1"; "2"; "3"|]
 ```
 
-## <a name="implicit-entry-point"></a>Implizite Einstiegspunkt
-Wenn ein Programm hat keine **EntryPoint** -Attribut, das den Einstiegspunkt der obersten Ebene Bindungen in der letzten Datei zu kompilierenden gibt explizit an als Einstiegspunkt verwendet werden.
+## <a name="implicit-entry-point"></a>Impliziter Einstiegspunkt
 
+Wenn ein Programm hat keine **EntryPoint** -Attribut, das explizit angibt, den Einstiegspunkt, der die Bindungen auf oberster Ebene in der letzten Datei kompiliert werden, werden als Einstiegspunkt verwendet.
 
 ## <a name="see-also"></a>Siehe auch
-[Funktionen](index.md)
 
-[let-Bindungen](let-bindings.md)
+- [Funktionen](index.md)
+- [let-Bindungen](let-bindings.md)

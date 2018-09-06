@@ -3,11 +3,11 @@ title: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teil
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
 ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542309"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038704"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 Projekte für Portable Teilmengen ermöglichen .NET Assembly-Programmierern, die eine einzelne Quellstruktur zu verwalten und Buildsystem Unterstützung mehrerer .NET Implementierungen (Desktop, Silverlight, Windows Phone und XBOX). Projekte für Portable Teilmengen verweisen nur auf .NET portable Bibliotheken, die eine .NET Framework-Assembly sind, die auf jeder .NET-Implementierung verwendet werden kann.  

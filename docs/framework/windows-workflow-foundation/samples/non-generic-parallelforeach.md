@@ -3,11 +3,11 @@ title: ParallelForEach (nicht generisch)
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
 ms.openlocfilehash: 70d5de587dda3cb61205a8d77f2173df9b93498b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772766"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881810"
 ---
 # <a name="non-generic-parallelforeach"></a>ParallelForEach (nicht generisch)
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ausgeliefert wird in der Toolbox einen Satz von ablaufsteuerungsaktivitäten, einschließlich <xref:System.Activities.Statements.ParallelForEach%601>, wodurch durchlaufen <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` Sammlungen.  

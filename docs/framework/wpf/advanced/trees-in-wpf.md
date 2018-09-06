@@ -7,11 +7,11 @@ helpviewer_keywords:
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
 ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401393"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037307"
 ---
 # <a name="trees-in-wpf"></a>Strukturen in WPF
 In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. Außerdem verwendet [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mehrere Baumstrukturmetaphern, um Beziehungen zwischen Programmelementen festzulegen. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF zeigt zwei hilfsprogrammklassen, die eine strukturmetapheransicht bereitstellen <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>. Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema definiert, was die visuelle Struktur und die logische Struktur darstellen, wird erläutert, wie sich diese Strukturen auf ein allgemeines Objektstrukturkonzept beziehen und führt <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s.  

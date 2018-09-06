@@ -1,13 +1,13 @@
 ---
 title: Assertionen (F#)
-description: Erfahren Sie, wie den Ausdruck "assert" als eine Debugfunktion für das Testen von Ausdrücken in der Programmiersprache f# verwendet.
+description: Erfahren Sie, wie Sie mit der Ausdruck "assert" als eine Debugfunktion zum Testen von Ausdrücken in der Programmiersprache f#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 83e6cd77bbbb2c32e9b778e5bf6dd9d2e9c8fe32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563145"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032126"
 ---
 # <a name="assertions"></a>Assertionen
 
@@ -21,13 +21,13 @@ assert condition
 
 ## <a name="remarks"></a>Hinweise
 
-Die `assert` Ausdruck weist den Typ `bool -> unit`.
+Die `assert` Ausdruck weist Typ `bool -> unit`.
 
-In der vorherigen Syntax *Bedingung* stellt einen booleschen Ausdruck, der getestet werden soll. Wenn der ausgewertete Ausdruck `true`, Ausführung wird fortgeführt, hat keine Auswirkung. Ergibt die Auswertung `false`, wird ein Systemfehlerdialogfeld generiert. Das Dialogfeld "Fehler" hat einer Beschriftung, die die Zeichenfolge enthält **"Assertionsfehler"**. Das Dialogfeld enthält eine stapelüberwachung, die angibt, in der Assertionsfehler aufgetreten ist.
+In der vorherigen Syntax *Bedingung* stellt einen booleschen Ausdruck, der getestet werden soll. Wenn der Ausdruck ergibt `true`, Ausführung wird fortgeführt, nicht betroffen. Ergibt die Auswertung `false`, wird ein Dialogfeld System Fehler generiert. Das Dialogfeld "Fehler" hat einer Beschriftung, die die Zeichenfolge enthält **Assertionsfehler**. Das Dialogfeld enthält eine stapelüberwachung, die angibt, in der Assertionsfehler aufgetreten ist.
 
-Assertionsüberprüfung ist nur aktiviert, wenn Sie im Debugmodus kompiliert; d. h., wenn die Konstante `DEBUG` definiert ist. Im Projektsystem wird standardmäßig die `DEBUG` Konstante ist, aber nicht in der Releasekonfiguration in der Debugkonfiguration automatisch definiert.
+Assertionsüberprüfung ist aktiviert, nur beim Kompilieren im Debugmodus befindet. d.h., wenn die Konstante `DEBUG` definiert ist. Im Projektsystem, standardmäßig die `DEBUG` Konstante wird definiert, in der Debug-Konfiguration jedoch nicht in der Releasekonfiguration.
 
-Der Assertionsfehler kann nicht mit der f#-Ausnahmebehandlung abgefangen werden.
+Der Assertionsfehler kann nicht abgefangen werden, mithilfe von F#-Ausnahmebehandlung.
 
 >[!NOTE]
 Die `assert` Funktion löst in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
@@ -37,7 +37,7 @@ Die `assert` Funktion löst in <xref:System.Diagnostics.Debug.Assert*?displayPro
 Das folgende Codebeispiel veranschaulicht die Verwendung von der `assert` Ausdruck.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5401.fs)]
-    
+
 ## <a name="see-also"></a>Siehe auch
 
-[F#-Sprachreferenz](index.md)
+- [F#-Sprachreferenz](index.md)

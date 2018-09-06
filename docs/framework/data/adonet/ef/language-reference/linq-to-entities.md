@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 7e04155c3129fd3b70977dd2960ccdc99c194cab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760777"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037018"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  
@@ -41,16 +41,16 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
   
  Für eine Reihe von LINQ-Standardabfrageoperatoren gibt es keine gültige Übersetzung in LINQ to Entities. Die Verwendung dieser Operatoren löst bei der Übersetzung der Abfrage eine Ausnahme aus. Eine Liste der unterstützten LINQ to Entities-Operatoren, finden Sie unter [unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md).  
   
- Weitere Informationen zur Verwendung von Standardabfrageoperatoren in LINQ to Entities finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md).  
+ Weitere Informationen zur Verwendung der Standardabfrageoperatoren in LINQ to Entities finden Sie unter [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md).  
   
  Im Allgemeinen werden Ausdrücke in LINQ to Entities auf dem Server ausgewertet, daher dürfte sich das Verhalten der Ausdrücke nicht nach der CLR-Semantik richten. Weitere Informationen finden Sie unter [Ausdrücke in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
   
- Informationen über die Zuordnung von CLR-Methodenaufrufe werden kanonischen Funktionen in der Datenquelle finden Sie unter [CLR-Methoden zu kanonischen Funktionszuordnung](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
+ Informationen, wie CLR-Methodenaufrufe kanonischen Funktionen in der Datenquelle zugeordnet werden, finden Sie unter [CLR-Methoden zu kanonischen Funktionszuordnung](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Informationen zum Aufrufen von kanonischen Datenbank und benutzerdefinierte Funktionen innerhalb von [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen finden Sie im [aufrufende Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Informationen zu Datenbank zum Aufrufen von kanonischen und benutzerdefinierten Funktionen aus [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen finden Sie [aufrufende Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Abfrageausführung  
- Nachdem der Benutzer die LINQ-Abfrage erstellt hat, wird sie in eine Darstellung konvertiert, die mit dem Entity Framework kompatibel ist (in Form von Befehlsstrukturen). Diese wird anschließend für die Datenquelle ausgeführt. Bei der Abfrageausführung werden alle Abfrageausdrücke (oder Abfragekomponenten) auf dem Client oder dem Server ausgewertet. Dazu gehören Ausdrücke, die zur Materialisierung der Ergebnisse oder zur Entitätsprojektion verwendet werden. Weitere Informationen finden Sie unter [Abfrageausführung](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Informationen zum Verbessern der Leistung durch eine Abfrage einmal kompiliert und anschließend der anschließend mehrmals mit verschiedenen Parametern ausgeführt haben, finden Sie unter [kompilierte Abfragen (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+ Nachdem der Benutzer die LINQ-Abfrage erstellt hat, wird sie in eine Darstellung konvertiert, die mit dem Entity Framework kompatibel ist (in Form von Befehlsstrukturen). Diese wird anschließend für die Datenquelle ausgeführt. Bei der Abfrageausführung werden alle Abfrageausdrücke (oder Abfragekomponenten) auf dem Client oder dem Server ausgewertet. Dazu gehören Ausdrücke, die zur Materialisierung der Ergebnisse oder zur Entitätsprojektion verwendet werden. Weitere Informationen finden Sie unter [Abfrageausführung](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Weitere Informationen zur Verbesserung der Leistung durch eine Abfrage einmal kompiliert, und klicken Sie dann mehrfach mit verschiedenen Parametern ausgeführt wird, finden Sie unter [kompilierte Abfragen (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
 ## <a name="materialization"></a>Materialisierung  
  Als Materialisierung wird das Zurückgeben von Abfrageergebnissen in Form von CLR-Typen an den Client bezeichnet. In LINQ to Entities werden Datensätze mit Abfrageergebnissen nie zurückgegeben. Es ist immer ein Sicherungs-CLR-Typ vorhanden, der vom Benutzer oder vom Entity Framework definiert oder vom Compiler generiert wird (anonyme Typen). Jede Objektmaterialisierung wird vom Entity Framework durchgeführt. Alle Fehler, die dadurch entstehen, dass zwischen dem Entity Framework und der CLR keine Zuordnung vorgenommen werden kann, lösen bei der Objektmaterialisierung Ausnahmen aus.  
@@ -90,6 +90,6 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
   
 ## <a name="see-also"></a>Siehe auch  
  [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ und ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

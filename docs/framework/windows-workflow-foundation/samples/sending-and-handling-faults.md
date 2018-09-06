@@ -3,11 +3,11 @@ title: Senden und Behandeln von Fehlern
 ms.date: 03/30/2017
 ms.assetid: 98e8e04d-2ac9-4a33-ae08-462f757a7a14
 ms.openlocfilehash: 896f209e7daeeab2bb33c1fde15298aae96c8776
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800994"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037710"
 ---
 # <a name="sending-and-handling-faults"></a>Senden und Behandeln von Fehlern
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.ServiceModel.Activities.SendReply>-Messagingaktivität und <xref:System.ServiceModel.Activities.ReceiveReply>-Messagingaktivität verwendet werden, um erwartete und unerwartete Fehler zu senden und zu empfangen. In diesem Szenario führt die erste Clientanforderung zu einem erwarteten Fehler, der in der <xref:System.ServiceModel.Activities.Send.KnownTypes%2A>-Auflistung enthalten ist. Die nächsten Clientanforderungen führen zu unerwarteten Fehlern, bevor die abschließende Anforderung erfolgreich ist.  

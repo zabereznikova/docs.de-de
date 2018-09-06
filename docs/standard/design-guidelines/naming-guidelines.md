@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53ffb641d3e507a937c304725b3c8590d046338e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572969"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031834"
 ---
 # <a name="naming-guidelines"></a>Richtlinien für die Benennung
-Befolgen konsistente Benennungskonventionen in die Entwicklung von einem Framework kann einen wesentlichen Beitrag das Framework verwendbarkeits-sein. Es kann das Framework weit getrennte Projekte für viele Entwickler verwendet werden. Über die Konsistenz des Formulars Namen von Frameworkelemente leicht verstanden werden müssen und müssen die Funktion der einzelnen Elemente zu vermitteln.  
+Befolgen einen konsistenten Satz von Benennungskonventionen in die Entwicklung eines Frameworks kann einen wichtigen Beitrag zum die Framework benutzerfreundlichkeit sein. Sie können das Framework von vielen Entwicklern häufig separate Projekte verwendet werden. Über die Konsistenz des Formulars Namen von Frameworkelementen leicht verstanden werden müssen und müssen die Funktion jedes Elements zu vermitteln.  
   
- Das Ziel dieses Kapitels ist konsistente Benennungskonventionen angeben, die sich im Namen ergibt, die sofortige für Entwickler sinnvoll.  
+ Das Ziel dieses Kapitels ist einen konsistenten Satz von Benennungskonventionen angeben, der Namen, die sofortige für Entwickler sinnvoll ergeben.  
   
- Obwohl diese Benennungskonventionen einführen, da mit Richtlinien für die allgemeine Entwicklung konsistenter Benennung im gesamten Code führen würde, Sie sind nur erforderlich, um deren Anwendung auf APIs an, die öffentlich verfügbar gemacht werden (öffentliche oder geschützte Typen und Member, und explizit implementierte Schnittstellen).  
+ Obwohl diese Namenskonventionen übernehmen, da Richtlinien für die Entwicklung von allgemeinen Code führen würde, konsistente Benennung im gesamten Code, Sie sind nur erforderlich, um diese APIs gelten, die öffentlich verfügbar gemacht werden (öffentliche oder geschützte Typen und Member, und explizit implementierte Schnittstellen).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Konventionen für die Groß-/Kleinschreibung](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -36,9 +36,10 @@ Befolgen konsistente Benennungskonventionen in die Entwicklung von einem Framewo
  [Namen von Typmembern](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [Benennen von Parametern](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [Benennen von Ressourcen](../../../docs/standard/design-guidelines/naming-resources.md)  
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

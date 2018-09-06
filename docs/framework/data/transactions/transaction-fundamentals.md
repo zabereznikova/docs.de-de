@@ -3,11 +3,11 @@ title: Transaktionsgrundlagen
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
 ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43859713"
+ms.locfileid: "44036651"
 ---
 # <a name="transaction-fundamentals"></a>Transaktionsgrundlagen
 In Transaktionen werden mehrere Aufgaben zusammengefasst. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zuerst erstellt sie eine neue Tabelle in einer Datenbank. Danach ruft sie ein spezielles Objekt auf, um Daten zu sammeln, zu formatieren und in die neue Tabelle einzufügen. Diese beiden Aufgaben sind aufeinander bezogen und sogar voneinander abhängig, da nur dann eine neue Tabelle erstellt werden sollte, wenn diese mit Daten gefüllt werden kann. Wenn beide Aufgaben im Bereich einer Transaktion ausgeführt werden, wird die zwischen ihnen bestehende Beziehung verstärkt. Falls die zweite Aufgabe fehlschlägt, wird die erste Aufgabe bis zu einem Punkt rückgängig gemacht, der vor der Erstellung der Tabelle liegt.  

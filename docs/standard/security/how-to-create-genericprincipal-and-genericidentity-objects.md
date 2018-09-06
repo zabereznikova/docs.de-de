@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd078b6be9dbcdfc03e34285d70a6bfe42d87b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581777"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035586"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Gewusst wie: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten
-Können Sie die <xref:System.Security.Principal.GenericIdentity> Klasse in Verbindung mit der <xref:System.Security.Principal.GenericPrincipal> Klasse, um ein Authentifizierungsschema, das vorhanden ist unabhängig von einer Windows-Domäne zu erstellen.  
+Können Sie die <xref:System.Security.Principal.GenericIdentity> Klasse in Verbindung mit der <xref:System.Security.Principal.GenericPrincipal> Klasse, um ein Autorisierungsschema, die vorhanden ist unabhängig von einer Windows-Domäne zu erstellen.  
   
 ### <a name="to-create-a-genericprincipal-object"></a>So erstellen Sie ein GenericPrincipal-Objekt  
   
@@ -47,7 +47,7 @@ Können Sie die <xref:System.Security.Principal.GenericIdentity> Klasse in Verbi
     GenericPrincipal MyPrincipal = new GenericPrincipal(MyIdentity, MyStringArray);  
     ```  
   
-3.  Verwenden Sie den folgenden Code, um den Prinzipal an den aktuellen Thread anzufügen. Dies ist hilfreich in Situationen, in denen der Prinzipal mehrmals bzw. von anderem Code in Ihrer Anwendung ausgeführt wird oder durch geprüft werden muss, ein <xref:System.Security.Permissions.PrincipalPermission> Objekt. Sie können weiterhin rollenbasierte Überprüfung für das Prinzipalobjekt ausführen, ohne es an den Thread anzufügen. Weitere Informationen finden Sie unter [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md).  
+3.  Verwenden Sie den folgenden Code, um den Prinzipal an den aktuellen Thread anzufügen. Das ist hilfreich in Situationen, in dem der Prinzipal muss mehrmals überprüft werden, von anderem Code in der Anwendung ausgeführten geprüft werden muss oder es muss geprüft werden, indem, eine <xref:System.Security.Permissions.PrincipalPermission> Objekt. Sie können weiterhin rollenbasierte Überprüfung für das Prinzipalobjekt ausführen, ohne es an den Thread anzufügen. Weitere Informationen finden Sie unter [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md).  
   
     ```vb  
     Thread.CurrentPrincipal = MyPrincipal  
@@ -140,9 +140,10 @@ The IsAuthenticated is: True
 Is this a Manager? True  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Principal.GenericIdentity>  
- <xref:System.Security.Principal.GenericPrincipal>  
- <xref:System.Security.Permissions.PrincipalPermission>  
- [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md)  
- [Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Security.Principal.GenericIdentity>  
+- <xref:System.Security.Principal.GenericPrincipal>  
+- <xref:System.Security.Permissions.PrincipalPermission>  
+- [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md)  
+- [Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)

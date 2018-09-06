@@ -7,11 +7,11 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: 017c685139979ec3aa411be6e6b5fdf0e91657de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563140"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878443"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>Gewusst wie: Zeichnen eines Bereichs mit einer Volltonfarbe
 Um einen Bereich mit einer Volltonfarbe zu zeichnen, können Sie einen vordefinierten Systempinsel, z. B. <xref:System.Windows.Media.Brushes.Red%2A> oder <xref:System.Windows.Media.Brushes.Blue%2A>, oder Sie können ein neues erstellen <xref:System.Windows.Media.SolidColorBrush> und eine Beschreibung für die <xref:System.Windows.Media.SolidColorBrush.Color%2A> mit alpha, Rot, Grün und Blau-Werte. In XAML können Sie einen Bereich mit einer Volltonfarbe auch mit der Hexadezimalschreibweise zeichnen.  

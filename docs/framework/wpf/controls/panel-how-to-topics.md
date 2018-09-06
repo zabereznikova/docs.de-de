@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
 ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746245"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039542"
 ---
 # <a name="panel-how-to-topics"></a>Gewusst-wie-Themen zu Panel
 Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Panel> Element und die zugehörigen [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
