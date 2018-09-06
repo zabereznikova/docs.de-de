@@ -2,12 +2,12 @@
 title: Inhaltsbasierte Korrelation
 ms.date: 03/30/2017
 ms.assetid: 8638b5d6-1d59-456d-8acd-179a5b39b260
-ms.openlocfilehash: b90d076d96e1bae5c44dc1c2b06f826d256f7463
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: c0367f480701468dcd5024ea3439bdcd38acc78f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518831"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731721"
 ---
 # <a name="content-based-correlation"></a>Inhaltsbasierte Korrelation
 Dieses Beispiel veranschaulicht, wie die Messagingaktivitäten (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> und <xref:System.ServiceModel.Activities.ReceiveReply>) mit mehreren inhaltsbasierten Korrelationen und einer inhaltsbasierter Korrelation verwendet werden können. In diesem Szenario wird zuerst auf Grundlage einer Bestellungs-ID eine Korrelation initialisiert, und dann wird auf Grundlage der Kunden-ID später eine andere Korrelation erstellt. Dies zeigt, wie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität basierend auf der gleichen eingehenden Nachricht einer vorhandenen Korrelation folgen und eine neue Korrelation initialisieren kann.  
@@ -35,6 +35,6 @@ Dieses Beispiel veranschaulicht, wie die Messagingaktivitäten (<xref:System.Ser
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\ContentBasedCorrelation`

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e69dafaf2e415a0686594c4757bcf20dfd135944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4836a5076401de2f7c3112b298cdadc0e0307962
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473229"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731844"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde
 Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde  
@@ -31,6 +31,6 @@ Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler pro Sekunde
   
 -   Während des TLSNEGO-/SPNEGO-Handshakes sind Fehler aufgetreten.  
   
- Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird:  
+ Dieser Indikator wird der Leistungsindikator vom Typ [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dessen Wert anhand der folgenden Formel berechnet wird:  
   
  (N1-N0)/((D1-D0)/F)

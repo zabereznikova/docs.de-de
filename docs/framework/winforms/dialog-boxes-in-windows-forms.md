@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
 ms.openlocfilehash: ef07c087ca43efaf99231453fcb56af0db24234a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733247"
+ms.locfileid: "43776941"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Dialogfelder in Windows Forms
 Dialogfelder werden für die Interaktion mit dem Benutzer und zum Abrufen von Informationen verwendet. Einfach ausgedrückt handelt es sich bei einem Dialogfeld um ein Formular mit einem eigenen <xref:System.Windows.Forms.FormBorderStyle>-Enumerationseigenschaftensatz, der auf `FixedDialog` festgelegt wird. Sie können eigene benutzerdefinierte Dialogfelder erstellen, indem Sie mit der Windows Forms-Designer in Visual Studio. Fügen Sie Steuerelemente wie `Label`, `Textbox` und `Button` hinzu, um die Dialogfelder an Ihre speziellen Anforderungen anzupassen. Die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält ebenfalls vordefinierte Dialogfelder wie z. B. **Datei öffnen** und Meldungsfelder, die Sie für Ihre eigenen Anwendungen anpassen können. Weitere Informationen finden Sie unter [Dialogfeld-Steuerelemente und-Komponenten](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  

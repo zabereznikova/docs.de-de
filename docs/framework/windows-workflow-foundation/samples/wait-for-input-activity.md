@@ -3,11 +3,11 @@ title: Warten auf Eingabeaktivität
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
 ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401208"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741171"
 ---
 # <a name="wait-for-input-activity"></a>Warten auf Eingabeaktivität
 Dieses Beispiel veranschaulicht, wie benannte Lesezeichen in einem Workflow erstellt werden. Windows Workflow Foundation (WF) stellt keine Aktivität zur deklarativen lesezeichenerstellung bereit. Wenn Sie daher in Ihrem Workflow ein Lesezeichen erstellen möchten, müssen Sie eine benutzerdefinierte Aktivität schreiben, die eines erstellt. Die in diesem Beispiel definierte `WaitForInput`-Aktivität stellt diese Funktionalität bereit, damit Benutzer Lesezeichen deklarativ innerhalb eines Workflows erstellen können.  

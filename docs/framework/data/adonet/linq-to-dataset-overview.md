@@ -2,12 +2,12 @@
 title: Übersicht über LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
-ms.openlocfilehash: 1de5a7490ac39406fc76f37cc059916231108a0a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 43c3aa081bd934202bd3a7831741054115d7a6d5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258780"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739349"
 ---
 # <a name="linq-to-dataset-overview"></a>Übersicht über LINQ to DataSet
 Das <xref:System.Data.DataSet> ist eine der am meisten verwendeten Komponenten von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Es ist eines der Schlüsselelemente des nicht verbundenen Programmierungsmodells, auf dem [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] basiert, und versetzt Sie in die Lage, Daten aus unterschiedlichen Datenquellen explizit zwischenzuspeichern. Für die Darstellungsebene arbeitet das <xref:System.Data.DataSet> eng mit GUI-Steuerelementen für die Datenbindung zusammen. Für die mittlere Ebene stellt es einen Cache bereit, in dem die relationale Form von Daten zwischengespeichert wird, und es bietet Dienste für die schnelle und einfache Navigation in Abfragen und Hierarchien. Ein gängiges Verfahren verwendet, um die Anzahl der Anforderungen für eine Datenbank zu verringern, ist die Verwendung der <xref:System.Data.DataSet> für die Zwischenspeicherung in der mittleren Ebene. Betrachten Sie beispielsweise einen datengesteuerten [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web-Anwendung. Ein beträchtlicher Teil der Anwendung weist keine häufigen Änderungen auf und bleibt auch über Sitzungsgrenzen hinweg und bei verschiedenen Benutzern unverändert. Diese Daten können im Arbeitsspeicher des Webservers abgelegt werden, wodurch sich die Zahl der Datenbankanfragen verringert und die Interaktionen des Benutzers beschleunigt werden. Ein weiterer nützlicher Aspekt des der <xref:System.Data.DataSet> besteht darin, dass es einer Anwendung in der Anwendungsraum platzieren, Teilmengen von Daten aus mindestens einer Datenquelle ermöglicht. Die Anwendung kann dann die Daten im Arbeitsspeicher bearbeiten, während die relationale Form erhalten bleibt.  
@@ -30,5 +30,5 @@ Das <xref:System.Data.DataSet> ist eine der am meisten verwendeten Komponenten v
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfragen von DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

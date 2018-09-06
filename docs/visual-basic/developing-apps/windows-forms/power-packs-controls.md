@@ -6,16 +6,16 @@ helpviewer_keywords:
 - components, Power Packs
 - Power Packs
 ms.assetid: 5e53a2d2-f200-4357-8b20-430f8f4860a4
-ms.openlocfilehash: c7c257d34c691a23ae44ef08feb1f032d27c80cd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 71b02233f842ef3fd01f030fe7df7bda97eacc78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43252797"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778067"
 ---
 # <a name="visual-basic-power-packs-controls"></a>Visual Basic Power Packs-Steuerelemente
 
-Visual Basic Power Packs-Steuerelemente sind zusätzliche Windows Forms-Steuerelemente. Sie sind nicht in Visual Studio enthalten.  Können Sie [herunterladen](http://go.microsoft.com/fwlink/?LinkId=321343), aber wie sie sind angeboten – ist, ohne Unterstützung.  
+Visual Basic Power Packs-Steuerelemente sind zusätzliche Windows Forms-Steuerelemente. Sie sind nicht in Visual Studio enthalten.  Können Sie [herunterladen](https://go.microsoft.com/fwlink/?LinkId=321343), aber wie sie sind angeboten – ist, ohne Unterstützung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
   

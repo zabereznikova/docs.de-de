@@ -3,11 +3,11 @@ title: Anwendungssicherheitsszenarios in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
 ms.openlocfilehash: bf4f4adfd5f49bd210026e40bd5fa4e67da10d75
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535988"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777807"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Anwendungssicherheitsszenarios in SQL Server
 Für das Erstellen einer sicheren SQL Server-Clientanwendung gibt es kein Patentrezept. Jede Anwendung hat spezifische Anforderungen, eine spezielle Bereitstellungsumgebung und einen eigenen Benutzerkreis. Eine Anwendung, die zum Zeitpunkt ihrer Bereitstellung angemessen sicher ist, kann im Laufe der Zeit weniger sicher werden. Es ist unmöglich, genau vorherzusagen, welche Bedrohungen zukünftig entstehen können.  

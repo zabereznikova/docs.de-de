@@ -1,18 +1,17 @@
 ---
 title: Statisch aufgelöste Typparameter (F#)
-description: Informationen zum Verwenden von f#-statisch aufgelösten Typparameter, der zur Kompilierzeit statt zur Laufzeit durch einen tatsächlichen Typ ersetzt wird.
+description: Informationen zum Verwenden von f#-Statisch aufgelöste Typparameter, der durch einen tatsächlichen Typ zur Kompilierzeit statt zur Laufzeit ersetzt wurde.
 ms.date: 05/16/2016
-ms.openlocfilehash: 12c2af4d9df7ae1e5e77efc9413eb8777459a83c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34233781"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777863"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statisch aufgelöste Typparameter
 
-Ein *statisch aufgelösten Typparameter* ist ein Typparameter, der zur Kompilierzeit statt zur Laufzeit durch einen tatsächlichen Typ ersetzt wird. Ihnen wird ein Caretzeichen (^) vorangestellt.
-
+Ein *statisch aufgelöster Typparameter* ist ein Typparameter, die zur Kompilierzeit statt zur Laufzeit durch einen tatsächlichen Typ ersetzt wird. Ihnen wird ein Caretzeichen (^) vorangestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,6 +20,7 @@ Ein *statisch aufgelösten Typparameter* ist ein Typparameter, der zur Kompilier
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 In der Programmiersprache F# gibt es zwei unterschiedliche Arten von Typparametern. Die erste Art ist der standardmäßige generische Typparameter. Diese werden durch ein Apostroph (') angegeben, wie bei `'T` und `'U`. Sie entsprechen generischen Typparametern in anderen .NET Framework-Sprachen. Die andere Art ist statisch aufgelöst und wird von einem Caretzeichensymbol, wie in `^T` und `^U`.
 
 Statisch aufgelöste Typparameter sind hauptsächlich in Verbindung mit Membereinschränkungen nützlich, die Ihnen die Angabe ermöglichen, dass ein Typargument zur Verwendung einen bestimmten Member oder mehrere Member aufweisen muss. Es gibt keine Möglichkeit, diese Art von Einschränkung mit einem regulären generischen Typparameter zu erstellen.
@@ -57,7 +57,7 @@ Die Ausgabe lautet wie folgt.
 1.500000
 ```
 
-Ab f# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache des Typnamens tatsächlich vom Compiler abgeleitet werden, aber konnte nicht tatsächlich in der Signatur angegeben werden.  Ab f# 4.1 können Sie auch die konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
+Ab f# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache der Typname kann tatsächlich vom Compiler abgeleitet werden, aber konnte nicht tatsächlich in der Signatur angegeben werden.  Ab f# 4.1 können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
 
 ```fsharp
 let inline konst x _ = x
@@ -86,12 +86,9 @@ let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member r
 ```
 
 ## <a name="see-also"></a>Siehe auch
-[Generika](index.md)
 
-[Typableitung](../type-inference.md)
-
-[Automatische Verallgemeinerung](automatic-generalization.md)
-
-[Einschränkungen](constraints.md)
-
-[Inlinefunktionen](../functions/inline-functions.md)
+- [Generika](index.md)
+- [Typableitung](../type-inference.md)
+- [Automatische Verallgemeinerung](automatic-generalization.md)
+- [Einschränkungen](constraints.md)
+- [Inlinefunktionen](../functions/inline-functions.md)

@@ -2,12 +2,12 @@
 title: Grundlegende Typen (f#)
 description: Entdecken Sie die grundlegenden, einfachen Typen, die in der Sprache f# verwendet werden.
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937197"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777206"
 ---
 # <a name="basic-types"></a>Grundlegende Typen
 
@@ -38,4 +38,5 @@ Dieses Thema enthält die grundlegenden Typen, die in der F#-Sprache definiert s
 Sie können Berechnungen mit ganzen Zahlen zu groß für den 64-Bit-Ganzzahl-Typ ausführen, indem Sie mit der [Bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) Typ. `bigint` ein Basistyp wurde nicht betrachtet werden. Es ist eine Abkürzung für `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
+
+- [F#-Sprachreferenz](index.md)

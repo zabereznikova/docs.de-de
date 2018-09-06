@@ -8,18 +8,18 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1c669860b545150e75777b8c8cc434f47675ec5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541793"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740624"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C# #
 Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefinierte grafische Schnittstellen erstellt und wiederverwendet werden können. Ein zusammengesetztes Steuerelement ist im wesentlichen eine Komponente mit visueller Darstellung. Daher können zusammengesetzte Steuerelemente aus einem oder mehr Windows Forms-Steuerelementen, Komponenten oder Codeblöcken bestehen. Diese erweitern die Funktionalität durch Validieren von Benutzereingaben, verändern Anzeigeeigenschaften oder führen andere vom Autor gewünschte Aufgaben aus. Zusammengesetzte Steuerelemente können genau wie andere Steuerelemente in Windows Forms platziert werden. Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches zusammengesetztes Steuerelement namens `ctlClock`. Im zweiten Teil der exemplarischen Vorgehensweise erweitern Sie die Funktionalität von `ctlClock` durch Vererbung.  
   
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Anpassen der Entwicklungseinstellungen in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  Geben Sie beim Erstellen des Projekts den Namen an, um den Stammnamespace, Assemblynamen und Projektnamen festzulegen und sicherzustellen, dass sich die Standardkomponente im richtigen Namespace befindet.  
@@ -28,14 +28,14 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
   
 1.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**, um das Dialogfeld **Neues Projekt** zu öffnen.  
   
-2.  Wählen Sie in der Liste der Visual C#-Projekten, die **Windows Forms-Steuerelementbibliothek** Geben Sie die Projektvorlage `ctlClockLib` in der **Namen** Feld, und klicken Sie dann auf **OK**.  
+2.  Wählen Sie aus der Liste der Visual C#-Projekten, die **Windows Forms-Steuerelementbibliothek** Projekt aus, geben `ctlClockLib` in die **Namen** ein, und klicken Sie dann auf **OK**.  
   
      Der Projektname `ctlClockLib` wird standardmäßig auch dem Stammnamespace zugewiesen. Der Stammnamespace wird verwendet, um die Namen der Komponenten in der Assembly zu qualifizieren. Wenn z.B. zwei Assemblys Komponenten mit dem Namen `ctlClock` bereitstellen, können Sie Ihre `ctlClock`-Komponente mithilfe von `ctlClockLib.ctlClock.` überprüfen.  
   
 3.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **UserControl1.cs**, und klicken Sie dann auf **Umbenennen**. Ändern Sie den Dateinamen in `ctlClock.cs`. Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob alle Verweise auf das Codeelement „UserControl1“ umbenannt werden sollen.  
   
     > [!NOTE]
-    >  Standardmäßig erbt ein zusammengesetztes Steuerelement von der <xref:System.Windows.Forms.UserControl> Klasse, die vom System bereitgestellt werden. Die <xref:System.Windows.Forms.UserControl> Klasse stellt alle zusammengesetzte Steuerelemente erforderliche Funktionalität bereit, und standard-Methoden und Eigenschaften implementiert.  
+    >  Standardmäßig erbt ein zusammengesetztes Steuerelement von der <xref:System.Windows.Forms.UserControl> Klasse, die vom System bereitgestellt werden. Die <xref:System.Windows.Forms.UserControl> Klasse bietet Funktionen, die von allen zusammengesetzten Steuerelementen benötigt und implementiert Standardmethoden und-Eigenschaften.  
   
 4.  Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.  
   
@@ -48,7 +48,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
   
 2.  Erweitern Sie in der **Toolbox** den Knoten **Allgemeine Steuerelemente**, und doppelklicken Sie dann auf **Bezeichnung**.  
   
-     Ein <xref:System.Windows.Forms.Label> Steuerelement namens `label1` Ihr Steuerelement auf der Designeroberfläche hinzugefügt wird.  
+     Ein <xref:System.Windows.Forms.Label> Steuerelement mit dem Namen `label1` zu Ihrem Steuerelement auf der Designeroberfläche hinzugefügt wird.  
   
 3.  Klicken Sie im Designer auf **label1**. Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.  
   
@@ -61,9 +61,9 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
   
 4.  Erweitern Sie in der **Toolbox** den Knoten **Komponenten**, und doppelklicken Sie dann auf **Timer**.  
   
-     Da eine <xref:System.Windows.Forms.Timer> ist eine Komponente sie zur Laufzeit keine visuelle Darstellung hat. Er wird daher nicht bei den Steuerelementen auf der Designeroberfläche angezeigt, sondern im **Komponenten-Designer** (eine Taskleiste am unteren Ende der Designeroberfläche).  
+     Da eine <xref:System.Windows.Forms.Timer> ist eine Komponente, zur Laufzeit keine visuelle Darstellung hat. Er wird daher nicht bei den Steuerelementen auf der Designeroberfläche angezeigt, sondern im **Komponenten-Designer** (eine Taskleiste am unteren Ende der Designeroberfläche).  
   
-5.  In der **Komponenten-Designer**, klicken Sie auf **timer1**, und legen Sie dann die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft `1000` und die <xref:System.Windows.Forms.Timer.Enabled%2A> Eigenschaft `true`.  
+5.  In der **Component Designer**, klicken Sie auf **timer1**, und legen Sie dann die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft `1000` und die <xref:System.Windows.Forms.Timer.Enabled%2A> Eigenschaft `true`.  
   
      Die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft steuert die Häufigkeit, mit denen die <xref:System.Windows.Forms.Timer> Komponente Ticks. Bei jedem Tick von `timer1` führt sie den Code im Ereignis `timer1_Tick` aus. Das Intervall stellt die Anzahl von Millisekunden zwischen Ticks dar.  
   
@@ -90,7 +90,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
 9. Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.  
   
 ## <a name="adding-properties-to-the-composite-control"></a>Hinzufügen von Eigenschaften zum zusammengesetzten Steuerelement  
- Kapselt die Uhren-Steuerelement nun eine <xref:System.Windows.Forms.Label> Steuerelement und ein <xref:System.Windows.Forms.Timer> Komponente, jeweils über einen eigenen Satz von inhärenten Eigenschaften. Während nachfolgende Benutzer des Steuerelements nicht auf die einzelnen Eigenschaften dieser Steuerelemente zugreifen können, können Sie benutzerdefinierte Eigenschaften durch Schreiben der geeigneten Codeblöcke erstellen und verfügbar machen. Im folgenden Vorgang fügen Sie Eigenschaften zum Steuerelement hinzu, die dem Benutzer ermöglichen, die Farbe des Hintergrunds und des Texts zu ändern.  
+ Ihr Uhr-Steuerelement kapselt nun ein <xref:System.Windows.Forms.Label> Steuerelement und ein <xref:System.Windows.Forms.Timer> -Komponente, beide mit eigenen vererbten Eigenschaften. Während nachfolgende Benutzer des Steuerelements nicht auf die einzelnen Eigenschaften dieser Steuerelemente zugreifen können, können Sie benutzerdefinierte Eigenschaften durch Schreiben der geeigneten Codeblöcke erstellen und verfügbar machen. Im folgenden Vorgang fügen Sie Eigenschaften zum Steuerelement hinzu, die dem Benutzer ermöglichen, die Farbe des Hintergrunds und des Texts zu ändern.  
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>So fügen Sie eine Eigenschaft zum zusammengesetzten Steuerelement hinzu  
   
@@ -241,9 +241,9 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
     > [!NOTE]
     >  Wenn Sie möchten, dass nachfolgende Benutzer des zusammengesetzten Steuerelements Zugriff auf interne Steuerelemente haben, deklarieren Sie sie als `public` oder `protected`. Dadurch können Sie Eigenschaften von Steuerelementen, die in Ihrem zusammengesetzten Steuerelement enthalten sind, festlegen und ändern, indem Sie den entsprechenden Code verwenden.  
   
-3.  Hinzufügen einer <xref:System.Windows.Forms.Label> Steuerelement Ihrer zusammengesetzten Steuerelements.  
+3.  Hinzufügen einer <xref:System.Windows.Forms.Label> Steuerelement zum zusammengesetzten Steuerelement.  
   
-4.  Mithilfe der Maus ziehen, um die <xref:System.Windows.Forms.Label> Steuerelement sofort unter Anzeigefelds. Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.  
+4.  Ziehen Sie mit der Maus die <xref:System.Windows.Forms.Label> -Steuerelement direkt unter das Anzeigefeld. Legen Sie im Eigenschaftenfenster die folgenden Eigenschaften fest.  
   
     |Eigenschaft|Einstellung|  
     |--------------|-------------|  
@@ -406,7 +406,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
   
 ## <a name="see-also"></a>Siehe auch  
  [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Programmieren mit Komponenten](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [Exemplarische Vorgehensweise: Erstellen von Komponenten](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
+ [Programmieren mit Komponenten](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+ [Exemplarische Vorgehensweise: Erstellen von Komponenten](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
  [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537218"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739515"
 ---
 # <a name="polling-in-console-applications"></a>Abrufen in Konsolenanwendungen
 Mithilfe asynchroner Vorgänge in ADO.NET können Sie zeitaufwändige Datenbankvorgänge in einem Thread initiieren, während andere Aufgaben in einem anderen Thread ausgeführt werden. In den meisten Szenarien gelangen Sie jedoch schließlich an einen Punkt, an dem die Anwendung nicht weiter ausgeführt werden kann, bis der Datenbankvorgang abgeschlossen ist. In solchen Fällen kann durch Abrufen des asynchronen Vorgangs ermittelt werden, ob der Vorgang abgeschlossen ist oder nicht.  
