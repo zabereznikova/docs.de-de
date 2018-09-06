@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787713"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041355"
 ---
-# <a name="corelementtype-enumeration1"></a><span data-ttu-id="64481-102">CorElementType-Enumeration1</span><span class="sxs-lookup"><span data-stu-id="64481-102">CorElementType Enumeration1</span></span>
-<span data-ttu-id="64481-103">Gibt an, eine common Language Runtime <xref:System.Type>, einen Typmodifizierer oder Informationen zu einem Typ in einer Signatur der Metadaten-Typ.</span><span class="sxs-lookup"><span data-stu-id="64481-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
+# <a name="corelementtype-enumeration1"></a><span data-ttu-id="d72a2-102">CorElementType-Enumeration1</span><span class="sxs-lookup"><span data-stu-id="d72a2-102">CorElementType Enumeration1</span></span>
+<span data-ttu-id="d72a2-103">Gibt an, eine common Language Runtime <xref:System.Type>, einen Typmodifizierer oder Informationen zu einem Typ in einer Signatur der Metadaten-Typ.</span><span class="sxs-lookup"><span data-stu-id="d72a2-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="64481-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="64481-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d72a2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d72a2-104">Syntax</span></span>  
   
 ```  
 typedef enum CorElementType {  
@@ -76,74 +76,74 @@ typedef enum CorElementType {
 } CorElementType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="64481-105">Member</span><span class="sxs-lookup"><span data-stu-id="64481-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="d72a2-105">Member</span><span class="sxs-lookup"><span data-stu-id="d72a2-105">Members</span></span>  
   
-|<span data-ttu-id="64481-106">Member</span><span class="sxs-lookup"><span data-stu-id="64481-106">Member</span></span>|<span data-ttu-id="64481-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="64481-107">Description</span></span>|  
+|<span data-ttu-id="d72a2-106">Member</span><span class="sxs-lookup"><span data-stu-id="d72a2-106">Member</span></span>|<span data-ttu-id="d72a2-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d72a2-107">Description</span></span>|  
 |------------|-----------------|  
-|`ELEMENT_TYPE_END`|<span data-ttu-id="64481-108">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="64481-108">Used internally.</span></span>|  
-|`ELEMENT_TYPE_VOID`|<span data-ttu-id="64481-109">Ein void-Typ.</span><span class="sxs-lookup"><span data-stu-id="64481-109">A void type.</span></span>|  
-|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="64481-110">Ein boolescher Typ</span><span class="sxs-lookup"><span data-stu-id="64481-110">A Boolean type</span></span>|  
-|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="64481-111">Ein Zeichentyp.</span><span class="sxs-lookup"><span data-stu-id="64481-111">A character type.</span></span>|  
-|`ELEMENT_TYPE_I1`|<span data-ttu-id="64481-112">Eine 1-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="64481-112">A signed 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U1`|<span data-ttu-id="64481-113">Ein unsignierter 1-Byte-Ganzzahltyp.</span><span class="sxs-lookup"><span data-stu-id="64481-113">An unsigned 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I2`|<span data-ttu-id="64481-114">Eine 2-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="64481-114">A signed 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U2`|<span data-ttu-id="64481-115">Eine 2-Byte-Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="64481-115">An unsigned 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I4`|<span data-ttu-id="64481-116">Eine 4-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="64481-116">A signed 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U4`|<span data-ttu-id="64481-117">Eine 4-Byte-Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="64481-117">An unsigned 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I8`|<span data-ttu-id="64481-118">Eine 8-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="64481-118">A signed 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U8`|<span data-ttu-id="64481-119">Eine 8-Byte-Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="64481-119">An unsigned 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_R4`|<span data-ttu-id="64481-120">Eine 4-Byte-Gleitkommazahl.</span><span class="sxs-lookup"><span data-stu-id="64481-120">A 4-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_R8`|<span data-ttu-id="64481-121">Eine 8-Byte-Gleitkommazahl.</span><span class="sxs-lookup"><span data-stu-id="64481-121">An 8-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_STRING`|<span data-ttu-id="64481-122">Ein System.String-Typ.</span><span class="sxs-lookup"><span data-stu-id="64481-122">A System.String type.</span></span>|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="64481-123">Ein Typmodifizierer "Zeiger".</span><span class="sxs-lookup"><span data-stu-id="64481-123">A pointer type modifier.</span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="64481-124">Ein Modifizierer für den Verweis-Typ.</span><span class="sxs-lookup"><span data-stu-id="64481-124">A reference type modifier.</span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="64481-125">Typmodifizierer Wert.</span><span class="sxs-lookup"><span data-stu-id="64481-125">A value type modifier.</span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="64481-126">Ein Typmodifizierer "Klasse".</span><span class="sxs-lookup"><span data-stu-id="64481-126">A class type modifier.</span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="64481-127">Ein Variablentyp Modifizierer der Klasse.</span><span class="sxs-lookup"><span data-stu-id="64481-127">A class variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="64481-128">Ein mehrdimensionales Array-Typ-Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="64481-128">A multi-dimensional array type modifier.</span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="64481-129">Ein Typmodifizierer für generische Typen.</span><span class="sxs-lookup"><span data-stu-id="64481-129">A type modifier for generic types.</span></span>|  
-|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="64481-130">Ein typisierter Verweis.</span><span class="sxs-lookup"><span data-stu-id="64481-130">A typed reference.</span></span>|  
-|`ELEMENT_TYPE_I`|<span data-ttu-id="64481-131">Die Größe des eine systemeigene ganze Zahl.</span><span class="sxs-lookup"><span data-stu-id="64481-131">Size of a native integer.</span></span>|  
-|`ELEMENT_TYPE_U`|<span data-ttu-id="64481-132">Die Größe des systemeigenen Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="64481-132">Size of an unsigned native integer.</span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="64481-133">Ein Zeiger auf eine Funktion.</span><span class="sxs-lookup"><span data-stu-id="64481-133">A pointer to a function.</span></span>|  
-|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="64481-134">Ein System.Object-Typ.</span><span class="sxs-lookup"><span data-stu-id="64481-134">A System.Object type.</span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="64481-135">Ein eindimensionales, NULL Typmodifizierer Untergrenze Array.</span><span class="sxs-lookup"><span data-stu-id="64481-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="64481-136">Methodenmodifizierer Variablentyp.</span><span class="sxs-lookup"><span data-stu-id="64481-136">A method variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="64481-137">Eine C#-Sprache erforderlich Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="64481-137">A C language required modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="64481-138">Eine C#-Sprache Optionaler Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="64481-138">A C language optional modifier.</span></span>|  
-|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="64481-139">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="64481-139">Used internally.</span></span>|  
-|`ELEMENT_TYPE_MAX`|<span data-ttu-id="64481-140">Ein ungültiger Typ.</span><span class="sxs-lookup"><span data-stu-id="64481-140">An invalid type.</span></span>|  
-|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="64481-141">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="64481-141">Used internally.</span></span>|  
-|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="64481-142">Ein Typmodifizierer, der eine Liste der eine Variable Anzahl von Parametern Sentinel ist.</span><span class="sxs-lookup"><span data-stu-id="64481-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
-|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="64481-143">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="64481-143">Used internally.</span></span>|  
+|`ELEMENT_TYPE_END`|<span data-ttu-id="d72a2-108">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="d72a2-108">Used internally.</span></span>|  
+|`ELEMENT_TYPE_VOID`|<span data-ttu-id="d72a2-109">Ein void-Typ.</span><span class="sxs-lookup"><span data-stu-id="d72a2-109">A void type.</span></span>|  
+|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="d72a2-110">Ein boolescher Typ</span><span class="sxs-lookup"><span data-stu-id="d72a2-110">A Boolean type</span></span>|  
+|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="d72a2-111">Ein Zeichentyp.</span><span class="sxs-lookup"><span data-stu-id="d72a2-111">A character type.</span></span>|  
+|`ELEMENT_TYPE_I1`|<span data-ttu-id="d72a2-112">Eine 1-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="d72a2-112">A signed 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U1`|<span data-ttu-id="d72a2-113">Ein unsignierter 1-Byte-Ganzzahltyp.</span><span class="sxs-lookup"><span data-stu-id="d72a2-113">An unsigned 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I2`|<span data-ttu-id="d72a2-114">Eine 2-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="d72a2-114">A signed 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U2`|<span data-ttu-id="d72a2-115">Eine 2-Byte-Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="d72a2-115">An unsigned 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I4`|<span data-ttu-id="d72a2-116">Eine 4-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="d72a2-116">A signed 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U4`|<span data-ttu-id="d72a2-117">Eine 4-Byte-Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="d72a2-117">An unsigned 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I8`|<span data-ttu-id="d72a2-118">Eine 8-Byte-Ganzzahl.</span><span class="sxs-lookup"><span data-stu-id="d72a2-118">A signed 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U8`|<span data-ttu-id="d72a2-119">Eine 8-Byte-Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="d72a2-119">An unsigned 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_R4`|<span data-ttu-id="d72a2-120">Eine 4-Byte-Gleitkommazahl.</span><span class="sxs-lookup"><span data-stu-id="d72a2-120">A 4-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_R8`|<span data-ttu-id="d72a2-121">Eine 8-Byte-Gleitkommazahl.</span><span class="sxs-lookup"><span data-stu-id="d72a2-121">An 8-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_STRING`|<span data-ttu-id="d72a2-122">Ein System.String-Typ.</span><span class="sxs-lookup"><span data-stu-id="d72a2-122">A System.String type.</span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="d72a2-123">Ein Typmodifizierer "Zeiger".</span><span class="sxs-lookup"><span data-stu-id="d72a2-123">A pointer type modifier.</span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="d72a2-124">Ein Modifizierer für den Verweis-Typ.</span><span class="sxs-lookup"><span data-stu-id="d72a2-124">A reference type modifier.</span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="d72a2-125">Typmodifizierer Wert.</span><span class="sxs-lookup"><span data-stu-id="d72a2-125">A value type modifier.</span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="d72a2-126">Ein Typmodifizierer "Klasse".</span><span class="sxs-lookup"><span data-stu-id="d72a2-126">A class type modifier.</span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="d72a2-127">Ein Variablentyp Modifizierer der Klasse.</span><span class="sxs-lookup"><span data-stu-id="d72a2-127">A class variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="d72a2-128">Ein mehrdimensionales Array-Typ-Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="d72a2-128">A multi-dimensional array type modifier.</span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="d72a2-129">Ein Typmodifizierer für generische Typen.</span><span class="sxs-lookup"><span data-stu-id="d72a2-129">A type modifier for generic types.</span></span>|  
+|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="d72a2-130">Ein typisierter Verweis.</span><span class="sxs-lookup"><span data-stu-id="d72a2-130">A typed reference.</span></span>|  
+|`ELEMENT_TYPE_I`|<span data-ttu-id="d72a2-131">Die Größe des eine systemeigene ganze Zahl.</span><span class="sxs-lookup"><span data-stu-id="d72a2-131">Size of a native integer.</span></span>|  
+|`ELEMENT_TYPE_U`|<span data-ttu-id="d72a2-132">Die Größe des systemeigenen Ganzzahl ohne Vorzeichen.</span><span class="sxs-lookup"><span data-stu-id="d72a2-132">Size of an unsigned native integer.</span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="d72a2-133">Ein Zeiger auf eine Funktion.</span><span class="sxs-lookup"><span data-stu-id="d72a2-133">A pointer to a function.</span></span>|  
+|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="d72a2-134">Ein System.Object-Typ.</span><span class="sxs-lookup"><span data-stu-id="d72a2-134">A System.Object type.</span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="d72a2-135">Ein eindimensionales, NULL Typmodifizierer Untergrenze Array.</span><span class="sxs-lookup"><span data-stu-id="d72a2-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="d72a2-136">Methodenmodifizierer Variablentyp.</span><span class="sxs-lookup"><span data-stu-id="d72a2-136">A method variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="d72a2-137">Eine C#-Sprache erforderlich Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="d72a2-137">A C language required modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="d72a2-138">Eine C#-Sprache Optionaler Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="d72a2-138">A C language optional modifier.</span></span>|  
+|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="d72a2-139">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="d72a2-139">Used internally.</span></span>|  
+|`ELEMENT_TYPE_MAX`|<span data-ttu-id="d72a2-140">Ein ungültiger Typ.</span><span class="sxs-lookup"><span data-stu-id="d72a2-140">An invalid type.</span></span>|  
+|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="d72a2-141">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="d72a2-141">Used internally.</span></span>|  
+|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="d72a2-142">Ein Typmodifizierer, der eine Liste der eine Variable Anzahl von Parametern Sentinel ist.</span><span class="sxs-lookup"><span data-stu-id="d72a2-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
+|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="d72a2-143">Wird intern verwendet.</span><span class="sxs-lookup"><span data-stu-id="d72a2-143">Used internally.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="64481-144">Hinweise</span><span class="sxs-lookup"><span data-stu-id="64481-144">Remarks</span></span>  
- <span data-ttu-id="64481-145">Der Typmodifizierer bilden die Grundlage für komplexere Typen darstellt.</span><span class="sxs-lookup"><span data-stu-id="64481-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="64481-146">Ein `CorElementType` Typwert-Modifizierer wird angewendet, auf den Wert, der durch den sie in der Typsignatur unmittelbar folgt.</span><span class="sxs-lookup"><span data-stu-id="64481-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="64481-147">Der Wert, der `CorElementType` Modifizierer Typwert möglich ein `CorElementType` einfacher Werttyp, ein Metadatentoken, oder ein anderer Wert als in der folgenden Tabelle angegeben.</span><span class="sxs-lookup"><span data-stu-id="64481-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d72a2-144">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d72a2-144">Remarks</span></span>  
+ <span data-ttu-id="d72a2-145">Der Typmodifizierer bilden die Grundlage für komplexere Typen darstellt.</span><span class="sxs-lookup"><span data-stu-id="d72a2-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="d72a2-146">Ein `CorElementType` Typwert-Modifizierer wird angewendet, auf den Wert, der durch den sie in der Typsignatur unmittelbar folgt.</span><span class="sxs-lookup"><span data-stu-id="d72a2-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="d72a2-147">Der Wert, der `CorElementType` Modifizierer Typwert möglich ein `CorElementType` einfacher Werttyp, ein Metadatentoken, oder ein anderer Wert als in der folgenden Tabelle angegeben.</span><span class="sxs-lookup"><span data-stu-id="d72a2-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="64481-148">Alle Zahlen (*Anzahl*, *Argumentanzahl*, *Metadatentoken*, *Rang*, *Anzahl*, und *gebunden*) als komprimierte ganze Zahlen gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="64481-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="64481-149">Finden Sie unter [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) auf der ECMA-Website für Details.</span><span class="sxs-lookup"><span data-stu-id="64481-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
+>  <span data-ttu-id="d72a2-148">Alle Zahlen (*Anzahl*, *Argumentanzahl*, *Metadatentoken*, *Rang*, *Anzahl*, und *gebunden*) als komprimierte ganze Zahlen gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="d72a2-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="d72a2-149">Finden Sie unter [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) auf der ECMA-Website für Details.</span><span class="sxs-lookup"><span data-stu-id="d72a2-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
   
-|<span data-ttu-id="64481-150">Typmodifizierer</span><span class="sxs-lookup"><span data-stu-id="64481-150">Type modifier</span></span>|<span data-ttu-id="64481-151">Format</span><span class="sxs-lookup"><span data-stu-id="64481-151">Format</span></span>|  
+|<span data-ttu-id="d72a2-150">Typmodifizierer</span><span class="sxs-lookup"><span data-stu-id="d72a2-150">Type modifier</span></span>|<span data-ttu-id="d72a2-151">Format</span><span class="sxs-lookup"><span data-stu-id="d72a2-151">Format</span></span>|  
 |-------------------|------------|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="64481-152">ELEMENT_TYPE_PTR < eine `CorElementType` Wert ></span><span class="sxs-lookup"><span data-stu-id="64481-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="64481-153">ELEMENT_TYPE_BYREF < eine `CorElementType` Wert ></span><span class="sxs-lookup"><span data-stu-id="64481-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="64481-154">ELEMENT_TYPE_VALUETYPE < ein `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="64481-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="64481-155">ELEMENT_TYPE_CLASS < ein `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="64481-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="64481-156">ELEMENT_TYPE_VAR \<Anzahl ></span><span class="sxs-lookup"><span data-stu-id="64481-156">ELEMENT_TYPE_VAR \<number></span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="64481-157">ELEMENT_TYPE_ARRAY < eine `CorElementType` Wert > \<Rang > \<count1 > \<bound1 >... \<CountN > \<BoundN ></span><span class="sxs-lookup"><span data-stu-id="64481-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="64481-158">ELEMENT_TYPE_GENERICINST < ein `mdTypeDef` Metadatentoken > \<Argumentanzahl > \<arg1 >... \<ArgN ></span><span class="sxs-lookup"><span data-stu-id="64481-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="64481-159">ELEMENT_TYPE_FNPTR \<vollständige Signatur für die Funktion, einschließlich der Aufrufkonvention ></span><span class="sxs-lookup"><span data-stu-id="64481-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="64481-160">ELEMENT_TYPE_SZARRAY < eine `CorElementType` Wert ></span><span class="sxs-lookup"><span data-stu-id="64481-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="64481-161">ELEMENT_TYPE_MVAR \<Anzahl ></span><span class="sxs-lookup"><span data-stu-id="64481-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="64481-162">ELEMENT_TYPE_ < eine `mdTypeRef` oder `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="64481-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="64481-163">E_T_CMOD_OPT < eine `mdTypeRef` oder `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="64481-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="d72a2-152">ELEMENT_TYPE_PTR < eine `CorElementType` Wert ></span><span class="sxs-lookup"><span data-stu-id="d72a2-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="d72a2-153">ELEMENT_TYPE_BYREF < eine `CorElementType` Wert ></span><span class="sxs-lookup"><span data-stu-id="d72a2-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="d72a2-154">ELEMENT_TYPE_VALUETYPE < ein `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="d72a2-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="d72a2-155">ELEMENT_TYPE_CLASS < ein `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="d72a2-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="d72a2-156">ELEMENT_TYPE_VAR \<Anzahl ></span><span class="sxs-lookup"><span data-stu-id="d72a2-156">ELEMENT_TYPE_VAR \<number></span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="d72a2-157">ELEMENT_TYPE_ARRAY < eine `CorElementType` Wert > \<Rang > \<count1 > \<bound1 >... \<CountN > \<BoundN ></span><span class="sxs-lookup"><span data-stu-id="d72a2-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="d72a2-158">ELEMENT_TYPE_GENERICINST < ein `mdTypeDef` Metadatentoken > \<Argumentanzahl > \<arg1 >... \<ArgN ></span><span class="sxs-lookup"><span data-stu-id="d72a2-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="d72a2-159">ELEMENT_TYPE_FNPTR \<vollständige Signatur für die Funktion, einschließlich der Aufrufkonvention ></span><span class="sxs-lookup"><span data-stu-id="d72a2-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="d72a2-160">ELEMENT_TYPE_SZARRAY < eine `CorElementType` Wert ></span><span class="sxs-lookup"><span data-stu-id="d72a2-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="d72a2-161">ELEMENT_TYPE_MVAR \<Anzahl ></span><span class="sxs-lookup"><span data-stu-id="d72a2-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="d72a2-162">ELEMENT_TYPE_ < eine `mdTypeRef` oder `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="d72a2-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="d72a2-163">E_T_CMOD_OPT < eine `mdTypeRef` oder `mdTypeDef` Metadatentoken ></span><span class="sxs-lookup"><span data-stu-id="d72a2-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="64481-164">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="64481-164">Requirements</span></span>  
- <span data-ttu-id="64481-165">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="64481-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d72a2-164">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d72a2-164">Requirements</span></span>  
+ <span data-ttu-id="d72a2-165">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d72a2-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="64481-166">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="64481-166">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="d72a2-166">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="d72a2-166">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="64481-167">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="64481-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d72a2-167">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d72a2-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="64481-168">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="64481-168">See Also</span></span>  
- [<span data-ttu-id="64481-169">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="64481-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="d72a2-168">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d72a2-168">See Also</span></span>  
+ [<span data-ttu-id="d72a2-169">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="d72a2-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

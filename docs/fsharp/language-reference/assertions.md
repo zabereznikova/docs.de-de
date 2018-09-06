@@ -1,43 +1,43 @@
 ---
 title: Assertionen (F#)
-description: Erfahren Sie, wie den Ausdruck "assert" als eine Debugfunktion für das Testen von Ausdrücken in der Programmiersprache f# verwendet.
+description: Erfahren Sie, wie Sie mit der Ausdruck "assert" als eine Debugfunktion zum Testen von Ausdrücken in der Programmiersprache f#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 83e6cd77bbbb2c32e9b778e5bf6dd9d2e9c8fe32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563145"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44032126"
 ---
-# <a name="assertions"></a><span data-ttu-id="f2b8e-103">Assertionen</span><span class="sxs-lookup"><span data-stu-id="f2b8e-103">Assertions</span></span>
+# <a name="assertions"></a><span data-ttu-id="68b51-103">Assertionen</span><span class="sxs-lookup"><span data-stu-id="68b51-103">Assertions</span></span>
 
-<span data-ttu-id="f2b8e-104">Die `assert` Ausdruck ist eine Debugfunktion, die Sie verwenden können, um einen Ausdruck zu testen.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-104">The `assert` expression is a debugging feature that you can use to test an expression.</span></span> <span data-ttu-id="f2b8e-105">Bei einem Fehler im Debugmodus generiert eine Assertion ein Dialogfeld „Systemfehler“.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-105">Upon failure in Debug mode, an assertion generates a system error dialog box.</span></span>
+<span data-ttu-id="68b51-104">Die `assert` Ausdruck ist eine Debugfunktion, die Sie verwenden können, um einen Ausdruck zu testen.</span><span class="sxs-lookup"><span data-stu-id="68b51-104">The `assert` expression is a debugging feature that you can use to test an expression.</span></span> <span data-ttu-id="68b51-105">Bei einem Fehler im Debugmodus generiert eine Assertion ein Dialogfeld „Systemfehler“.</span><span class="sxs-lookup"><span data-stu-id="68b51-105">Upon failure in Debug mode, an assertion generates a system error dialog box.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f2b8e-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="f2b8e-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="68b51-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="68b51-106">Syntax</span></span>
 
 ```fsharp
 assert condition
 ```
 
-## <a name="remarks"></a><span data-ttu-id="f2b8e-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f2b8e-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="68b51-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="68b51-107">Remarks</span></span>
 
-<span data-ttu-id="f2b8e-108">Die `assert` Ausdruck weist den Typ `bool -> unit`.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-108">The `assert` expression has type `bool -> unit`.</span></span>
+<span data-ttu-id="68b51-108">Die `assert` Ausdruck weist Typ `bool -> unit`.</span><span class="sxs-lookup"><span data-stu-id="68b51-108">The `assert` expression has type `bool -> unit`.</span></span>
 
-<span data-ttu-id="f2b8e-109">In der vorherigen Syntax *Bedingung* stellt einen booleschen Ausdruck, der getestet werden soll.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-109">In the previous syntax, *condition* represents a Boolean expression that is to be tested.</span></span> <span data-ttu-id="f2b8e-110">Wenn der ausgewertete Ausdruck `true`, Ausführung wird fortgeführt, hat keine Auswirkung.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-110">If the expression evaluates to `true`, execution continues unaffected.</span></span> <span data-ttu-id="f2b8e-111">Ergibt die Auswertung `false`, wird ein Systemfehlerdialogfeld generiert.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-111">If it evaluates to `false`, a system error dialog box is generated.</span></span> <span data-ttu-id="f2b8e-112">Das Dialogfeld "Fehler" hat einer Beschriftung, die die Zeichenfolge enthält **"Assertionsfehler"**.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-112">The error dialog box has a caption that contains the string **Assertion Failed**.</span></span> <span data-ttu-id="f2b8e-113">Das Dialogfeld enthält eine stapelüberwachung, die angibt, in der Assertionsfehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-113">The dialog box contains a stack trace that indicates where the assertion failure occurred.</span></span>
+<span data-ttu-id="68b51-109">In der vorherigen Syntax *Bedingung* stellt einen booleschen Ausdruck, der getestet werden soll.</span><span class="sxs-lookup"><span data-stu-id="68b51-109">In the previous syntax, *condition* represents a Boolean expression that is to be tested.</span></span> <span data-ttu-id="68b51-110">Wenn der Ausdruck ergibt `true`, Ausführung wird fortgeführt, nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="68b51-110">If the expression evaluates to `true`, execution continues unaffected.</span></span> <span data-ttu-id="68b51-111">Ergibt die Auswertung `false`, wird ein Dialogfeld System Fehler generiert.</span><span class="sxs-lookup"><span data-stu-id="68b51-111">If it evaluates to `false`, a system error dialog box is generated.</span></span> <span data-ttu-id="68b51-112">Das Dialogfeld "Fehler" hat einer Beschriftung, die die Zeichenfolge enthält **Assertionsfehler**.</span><span class="sxs-lookup"><span data-stu-id="68b51-112">The error dialog box has a caption that contains the string **Assertion Failed**.</span></span> <span data-ttu-id="68b51-113">Das Dialogfeld enthält eine stapelüberwachung, die angibt, in der Assertionsfehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="68b51-113">The dialog box contains a stack trace that indicates where the assertion failure occurred.</span></span>
 
-<span data-ttu-id="f2b8e-114">Assertionsüberprüfung ist nur aktiviert, wenn Sie im Debugmodus kompiliert; d. h., wenn die Konstante `DEBUG` definiert ist.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-114">Assertion checking is enabled only when you compile in Debug mode; that is, if the constant `DEBUG` is defined.</span></span> <span data-ttu-id="f2b8e-115">Im Projektsystem wird standardmäßig die `DEBUG` Konstante ist, aber nicht in der Releasekonfiguration in der Debugkonfiguration automatisch definiert.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-115">In the project system, by default, the `DEBUG` constant is defined in the Debug configuration but not in the Release configuration.</span></span>
+<span data-ttu-id="68b51-114">Assertionsüberprüfung ist aktiviert, nur beim Kompilieren im Debugmodus befindet. d.h., wenn die Konstante `DEBUG` definiert ist.</span><span class="sxs-lookup"><span data-stu-id="68b51-114">Assertion checking is enabled only when you compile in Debug mode; that is, if the constant `DEBUG` is defined.</span></span> <span data-ttu-id="68b51-115">Im Projektsystem, standardmäßig die `DEBUG` Konstante wird definiert, in der Debug-Konfiguration jedoch nicht in der Releasekonfiguration.</span><span class="sxs-lookup"><span data-stu-id="68b51-115">In the project system, by default, the `DEBUG` constant is defined in the Debug configuration but not in the Release configuration.</span></span>
 
-<span data-ttu-id="f2b8e-116">Der Assertionsfehler kann nicht mit der f#-Ausnahmebehandlung abgefangen werden.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-116">The assertion failure error cannot be caught by using F# exception handling.</span></span>
+<span data-ttu-id="68b51-116">Der Assertionsfehler kann nicht abgefangen werden, mithilfe von F#-Ausnahmebehandlung.</span><span class="sxs-lookup"><span data-stu-id="68b51-116">The assertion failure error cannot be caught by using F# exception handling.</span></span>
 
 >[!NOTE]
-<span data-ttu-id="f2b8e-117">Die `assert` Funktion löst in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-117">The `assert` function resolves to <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="68b51-117">Die `assert` Funktion löst in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="68b51-117">The `assert` function resolves to <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f2b8e-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f2b8e-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="68b51-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="68b51-118">Example</span></span>
 
-<span data-ttu-id="f2b8e-119">Das folgende Codebeispiel veranschaulicht die Verwendung von der `assert` Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="f2b8e-119">The following code example illustrates the use of the `assert` expression.</span></span>
+<span data-ttu-id="68b51-119">Das folgende Codebeispiel veranschaulicht die Verwendung von der `assert` Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="68b51-119">The following code example illustrates the use of the `assert` expression.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5401.fs)]
-    
-## <a name="see-also"></a><span data-ttu-id="f2b8e-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f2b8e-120">See Also</span></span>
 
-[<span data-ttu-id="f2b8e-121">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="f2b8e-121">F# Language Reference</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="68b51-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="68b51-120">See also</span></span>
+
+- [<span data-ttu-id="68b51-121">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="68b51-121">F# Language Reference</span></span>](index.md)
