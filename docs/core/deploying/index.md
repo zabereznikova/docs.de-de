@@ -4,12 +4,12 @@ description: Bereitstellen einer .NET Core-Anwendung.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792425"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562005"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
@@ -21,7 +21,7 @@ Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen
 
 ## <a name="framework-dependent-deployments-fdd"></a>Framework-abhängige Bereitstellungen (FDD)
 
-Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten bereit. Sie müssen .NET Core nicht bereitstellen, da Ihre Anwendung die .NET Core- Version verwendet, die auf dem Zielsystem vorhanden ist. Dies ist das Standard-Bereitstellungsmodell für .NET Core-Anwendungen.
+Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten bereit. Sie müssen .NET Core nicht bereitstellen, da Ihre Anwendung die .NET Core- Version verwendet, die auf dem Zielsystem vorhanden ist. Dies ist das Standardbereitstellungsmodell für .NET Core- und ASP.NET Core-Apps, die für .NET Core vorgesehen sind.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Warum eine Framework-abhängige Bereitstellung erstellen?
 
@@ -70,9 +70,9 @@ Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit 
 - Eigenständige Bereitstellung
 - Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
 
-# <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
-[Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)  (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools)  
-[Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)  (Bereitstellen von .NET Core-Apps mit Visual Studio)  
-[Pakete, Metapakete und Frameworks](../packages.md)   
-[.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
+* [Deploying .NET Core Apps with CLI Tools (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools)](deploy-with-cli.md)
+* [Deploying .NET Core Apps with Visual Studio (Bereitstellen von .NET Core-Apps mit Visual Studio)](deploy-with-vs.md)
+* [Pakete, Metapakete und Frameworks](../packages.md)
+* [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

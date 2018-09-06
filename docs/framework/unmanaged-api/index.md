@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442916"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508521"
 ---
 # <a name="unmanaged-api-reference"></a>Referenz zur nicht verwalteten API
 Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwendungen mit verwaltetem Code verwendet werden können, wie Laufzeithosts, Compiler, Disassembler, Obfuskatoren, Debugger und Profiler.  
@@ -32,7 +32,7 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  [Konstanten](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Beschreibt die Konstanten, die in CorSym.idl definiert werden.  
   
- [Benutzerdefinierte Schnittstellenattribute](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Benutzerdefinierte Schnittstellenattribute](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  Beschreibt benutzerdefinierte Schnittstellenattribute des Component Object Model (COM).  
   
  [Debuggen](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -57,7 +57,7 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  Beschreibt die API für starke Namen, die einem Client ermöglicht, die starke Namenssignierung für Assemblys zu verwalten.  
 
  [WMI und Leistungsindikatoren](wmi/index.md)  
- Beschreibt die APIs, die Aufrufe von Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI)-Bibliotheken zu umschließen.
+ Beschreibt die APIs, die Aufrufe an Bibliotheken der Windows-Verwaltungsinstrumentation (WMI) umschließen.
   
  [Tlbexp-Hilfsfunktionen](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  Beschreibt die beiden Hilfsfunktionen und eine Schnittstelle, die vom Typbibliothekexporter (Tlbexp.exe) bei der Konvertierung von Assemblys in Typbibliotheken verwendet werden.  
@@ -65,4 +65,4 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  
   
- [Weiterführende Informationen zu .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Weiterführende Informationen zu .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

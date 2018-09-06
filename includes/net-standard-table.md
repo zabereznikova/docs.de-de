@@ -11,7 +11,7 @@
 | Windows Phone              | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight  | 8.0   |        |       |       |       |            |            |            |
 
-<sup>1 Die für .NET Frameworks aufgeführten Versionen gelten für das .NET Core SDK 2.0 und höhere Versionen des Tools. Ältere Versionen haben eine andere Zuordnung für .NET Standard 1.5 und höher verwendet. </sup>
+<sup>1 Die für .NET Frameworks aufgeführten Versionen gelten für das .NET Core SDK 2.0 und höhere Versionen des Tools. Ältere Versionen haben eine andere Zuordnung für .NET Standard 1.5 und höher verwendet. Sie können [Tools für .NET Core-Tools für Visual Studio 2015 herunterladen](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md), falls Sie kein Upgrade auf Visual Studio 2017 durchführen können.</sup>
 
 - Die Spalten stellen die .NET Standard-Versionen dar. Jede Zelle enthält einen Link zu einem Dokument, im dem die APIs angegeben sind, die in dieser Version von .NET Standard hinzugefügt wurden.
 - Die Zeilen stellen die verschiedenen .NET-Implementierungen dar.

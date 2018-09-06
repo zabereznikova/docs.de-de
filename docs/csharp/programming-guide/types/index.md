@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961533"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525487"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 ## <a name="types-variables-and-values"></a>Typen, Variablen und Werte  
@@ -73,7 +73,7 @@ ms.locfileid: "37961533"
   
  In der folgenden Abbildung wird die Beziehung zwischen Werttypen und Referenztypen im CTS dargestellt.  
   
- ![Wert- und Verweistypen] (../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypeCTS")  
+ ![Wert- und Verweistypen](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypeCTS")  
 Werttypen und Referenztypen im CTS  
   
 > [!NOTE]
@@ -99,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- Werttypen sind *versiegelt* (sealed). Dies bedeutet z.B., dass Sie keinen Typ von <xref:System.Int32?displayProperty=nameWithType> ableiten können und dass eine Struktur nicht von einer benutzerdefinierten Klasse oder Struktur erben kann, weil eine Struktur nur von <xref:System.ValueType?displayProperty=nameWithType> erben kann. Eine Struktur kann jedoch eine oder mehrere Schnittstellen implementieren. Sie können einen Strukturtyp in einen Schnittstellentyp umwandeln. Dadurch wird ein *Boxing*-Vorgang gestartet, mit dem die Struktur von einem Referenztypobjekt im verwalteten Heap umschlossen wird. Boxing-Vorgänge werden auch ausgeführt, wenn Sie einen Werttyp an eine Methode übergeben, die <xref:System.Object?displayProperty=nameWithType> als Eingabeparameter akzeptiert. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Werttypen sind *versiegelt* (sealed). Dies bedeutet z.B., dass Sie keinen Typ von <xref:System.Int32?displayProperty=nameWithType> ableiten können und dass eine Struktur nicht von einer benutzerdefinierten Klasse oder Struktur erben kann, weil eine Struktur nur von <xref:System.ValueType?displayProperty=nameWithType> erben kann. Eine Struktur kann jedoch eine oder mehrere Schnittstellen implementieren. Sie können einen Strukturtyp in einen Schnittstellentyp umwandeln, der von diesem implementiert wird. Dadurch wird ein *Boxing*-Vorgang gestartet, mit dem die Struktur von einem Verweistypobjekt im verwalteten Heap umschlossen wird. Boxing-Vorgänge werden auch ausgeführt, wenn Sie einen Werttyp an eine Methode übergeben, die <xref:System.Object?displayProperty=nameWithType> oder einen beliebigen Schnittstellentyp als Eingabeparameter akzeptiert. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
  Sie können das [struct](../../../csharp/language-reference/keywords/struct.md)-Schlüsselwort verwenden, um eigene benutzerdefinierte Werttypen zu erstellen. In der Regel wird eine Struktur als Container für einen kleinen Satz verwandter Variablen verwendet, wie im folgenden Beispiel dargestellt:  
   
@@ -183,8 +183,9 @@ stringList.Add(4);
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Konvertierung von XML-Datentypen](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Konvertierung von XML-Datentypen](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)
