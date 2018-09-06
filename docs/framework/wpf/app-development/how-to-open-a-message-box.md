@@ -9,20 +9,20 @@ helpviewer_keywords:
 - opening message boxes [WPF]
 ms.assetid: acaad17f-af43-4eca-a004-f1c9e7c6f292
 ms.openlocfilehash: f05190030ed6324917348fa1926abd5385e30f7e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425811"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881209"
 ---
-# <a name="how-to-open-a-message-box"></a><span data-ttu-id="43fcf-102">Vorgehensweise: Öffnen eines Meldungsfelds</span><span class="sxs-lookup"><span data-stu-id="43fcf-102">How to: Open a Message Box</span></span>
-<span data-ttu-id="43fcf-103">Dieses Beispiel zeigt, wie ein Meldungsfeld geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="43fcf-103">This example shows how to open a message box.</span></span>  
+# <a name="how-to-open-a-message-box"></a><span data-ttu-id="98659-102">Vorgehensweise: Öffnen eines Meldungsfelds</span><span class="sxs-lookup"><span data-stu-id="98659-102">How to: Open a Message Box</span></span>
+<span data-ttu-id="98659-103">Dieses Beispiel zeigt, wie ein Meldungsfeld geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="98659-103">This example shows how to open a message box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="43fcf-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="43fcf-104">Example</span></span>  
- <span data-ttu-id="43fcf-105">Ein Meldungsfeld wird eine vorgefertigte modales Dialogfeld für die Anzeige von Informationen für Benutzer.</span><span class="sxs-lookup"><span data-stu-id="43fcf-105">A message box is a prefabricated modal dialog box for displaying information to users.</span></span> <span data-ttu-id="43fcf-106">Ein Meldungsfeld wird geöffnet, durch Aufrufen der statischen <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Klasse.</span><span class="sxs-lookup"><span data-stu-id="43fcf-106">A message box is opened by calling the static <xref:System.Windows.MessageBox.Show%2A> method of the <xref:System.Windows.MessageBox> class.</span></span> <span data-ttu-id="43fcf-107">Wenn <xref:System.Windows.MessageBox.Show%2A> wird aufgerufen, wird die Meldung übergeben mit einem String-Parameter.</span><span class="sxs-lookup"><span data-stu-id="43fcf-107">When <xref:System.Windows.MessageBox.Show%2A> is called, the message is passed using a string parameter.</span></span> <span data-ttu-id="43fcf-108">Mehrere Überladungen der <xref:System.Windows.MessageBox.Show%2A> können Sie konfigurieren, wie ein Meldungsfeld angezeigt wird (siehe <xref:System.Windows.MessageBox>).</span><span class="sxs-lookup"><span data-stu-id="43fcf-108">Several overloads of <xref:System.Windows.MessageBox.Show%2A> allow you to configure how a message box will appear (see <xref:System.Windows.MessageBox>).</span></span>  
+## <a name="example"></a><span data-ttu-id="98659-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="98659-104">Example</span></span>  
+ <span data-ttu-id="98659-105">Ein Meldungsfeld wird eine vorgefertigte modales Dialogfeld für die Anzeige von Informationen für Benutzer.</span><span class="sxs-lookup"><span data-stu-id="98659-105">A message box is a prefabricated modal dialog box for displaying information to users.</span></span> <span data-ttu-id="98659-106">Ein Meldungsfeld wird geöffnet, durch Aufrufen der statischen <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Klasse.</span><span class="sxs-lookup"><span data-stu-id="98659-106">A message box is opened by calling the static <xref:System.Windows.MessageBox.Show%2A> method of the <xref:System.Windows.MessageBox> class.</span></span> <span data-ttu-id="98659-107">Wenn <xref:System.Windows.MessageBox.Show%2A> wird aufgerufen, wird die Meldung übergeben mit einem String-Parameter.</span><span class="sxs-lookup"><span data-stu-id="98659-107">When <xref:System.Windows.MessageBox.Show%2A> is called, the message is passed using a string parameter.</span></span> <span data-ttu-id="98659-108">Mehrere Überladungen der <xref:System.Windows.MessageBox.Show%2A> können Sie konfigurieren, wie ein Meldungsfeld angezeigt wird (siehe <xref:System.Windows.MessageBox>).</span><span class="sxs-lookup"><span data-stu-id="98659-108">Several overloads of <xref:System.Windows.MessageBox.Show%2A> allow you to configure how a message box will appear (see <xref:System.Windows.MessageBox>).</span></span>  
   
  [!code-csharp[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MessageBoxSnippets/CSharp/Show1Window.xaml.cs#messageboxshow1code)]
  [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
   
-## <a name="see-also"></a><span data-ttu-id="43fcf-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="43fcf-109">See Also</span></span>  
- [<span data-ttu-id="43fcf-110">MessageBox-Beispiel</span><span class="sxs-lookup"><span data-stu-id="43fcf-110">MessageBox Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160023)
+## <a name="see-also"></a><span data-ttu-id="98659-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="98659-109">See Also</span></span>  
+ [<span data-ttu-id="98659-110">MessageBox-Beispiel</span><span class="sxs-lookup"><span data-stu-id="98659-110">MessageBox Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160023)

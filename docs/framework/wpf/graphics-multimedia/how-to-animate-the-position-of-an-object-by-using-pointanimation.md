@@ -9,28 +9,28 @@ helpviewer_keywords:
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
 ms.openlocfilehash: 91447685988d91dfe86707c2cf265deabeb717b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561042"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43801579"
 ---
-# <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a><span data-ttu-id="65a71-102">Gewusst wie: Animieren der Position eines Objekts mit PointAnimation</span><span class="sxs-lookup"><span data-stu-id="65a71-102">How to: Animate the Position of an Object by Using PointAnimation</span></span>
-<span data-ttu-id="65a71-103">Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.PointAnimation> -Klasse zum Animieren eines Objekts entlang einer <xref:System.Windows.Shapes.Path>.</span><span class="sxs-lookup"><span data-stu-id="65a71-103">This example shows how to use the <xref:System.Windows.Media.Animation.PointAnimation> class to animate an object along a <xref:System.Windows.Shapes.Path>.</span></span>  
+# <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a><span data-ttu-id="3ec18-102">Gewusst wie: Animieren der Position eines Objekts mit PointAnimation</span><span class="sxs-lookup"><span data-stu-id="3ec18-102">How to: Animate the Position of an Object by Using PointAnimation</span></span>
+<span data-ttu-id="3ec18-103">Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.PointAnimation> -Klasse zum Animieren eines Objekts entlang einer <xref:System.Windows.Shapes.Path>.</span><span class="sxs-lookup"><span data-stu-id="3ec18-103">This example shows how to use the <xref:System.Windows.Media.Animation.PointAnimation> class to animate an object along a <xref:System.Windows.Shapes.Path>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="65a71-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="65a71-104">Example</span></span>  
- <span data-ttu-id="65a71-105">Im folgenden Beispiel wird eine Ellipse entlang einer <xref:System.Windows.Shapes.Path> von einem Punkt auf dem Bildschirm in eine andere.</span><span class="sxs-lookup"><span data-stu-id="65a71-105">The following example moves an ellipse along a <xref:System.Windows.Shapes.Path> from one point on the screen to another.</span></span> <span data-ttu-id="65a71-106">Im Beispiel wird die Position des animiert ein <xref:System.Windows.Media.EllipseGeometry> mit <xref:System.Windows.Media.Animation.PointAnimation> zum Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="65a71-106">The example animates the position of an <xref:System.Windows.Media.EllipseGeometry> by using <xref:System.Windows.Media.Animation.PointAnimation> to animate the <xref:System.Windows.Media.EllipseGeometry.Center%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="3ec18-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3ec18-104">Example</span></span>  
+ <span data-ttu-id="3ec18-105">Im folgenden Beispiel wird eine Ellipse entlang einer <xref:System.Windows.Shapes.Path> von einem Punkt auf dem Bildschirm in eine andere.</span><span class="sxs-lookup"><span data-stu-id="3ec18-105">The following example moves an ellipse along a <xref:System.Windows.Shapes.Path> from one point on the screen to another.</span></span> <span data-ttu-id="3ec18-106">Im Beispiel wird die Position des animiert ein <xref:System.Windows.Media.EllipseGeometry> mit <xref:System.Windows.Media.Animation.PointAnimation> zum Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="3ec18-106">The example animates the position of an <xref:System.Windows.Media.EllipseGeometry> by using <xref:System.Windows.Media.Animation.PointAnimation> to animate the <xref:System.Windows.Media.EllipseGeometry.Center%2A> property.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#PointAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/PointAnimationExample.cs#pointanimationwholepage)]
  [!code-vb[BasicAnimations_snip#PointAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/PointAnimationExample.vb#pointanimationwholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="65a71-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="65a71-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3ec18-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ec18-107">See Also</span></span>  
  <xref:System.Windows.Media.Animation.PointAnimation>  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.EllipseGeometry>  
  <xref:System.Windows.Media.EllipseGeometry.Center%2A>  
- [<span data-ttu-id="65a71-108">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="65a71-108">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="65a71-109">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="65a71-109">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [<span data-ttu-id="65a71-110">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="65a71-110">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
- [<span data-ttu-id="65a71-111">Animations- und Zeitsteuerungssystem</span><span class="sxs-lookup"><span data-stu-id="65a71-111">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [<span data-ttu-id="65a71-112">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="65a71-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [<span data-ttu-id="3ec18-108">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="3ec18-108">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="3ec18-109">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="3ec18-109">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [<span data-ttu-id="3ec18-110">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="3ec18-110">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [<span data-ttu-id="3ec18-111">Animations- und Zeitsteuerungssystem</span><span class="sxs-lookup"><span data-stu-id="3ec18-111">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="3ec18-112">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="3ec18-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
