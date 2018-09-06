@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca6871886a64c864451eb3e2f6f4843e0150123b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 10449867a37863798a0da2df9111bcd7addfc6ef
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805714"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891784"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Ergebnisstrukturfragment in Transformationen
 
@@ -194,7 +194,7 @@ Nachfolgend wird das Ergebnis der XML-Transformation mit diesem Stylesheet darge
 
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.Xml.XPath.XPathNodeIterator>  
-<xref:System.Xml.XPath.XPathNodeIterator>  
-[XSLT-Transformationen mit der XslTransform-Klasse](xslt-transformations-with-the-xsltransform-class.md)  
-[Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](xsltransform-class-implements-the-xslt-processor.md)  
+- <xref:System.Xml.XPath.XPathNodeIterator>  
+- <xref:System.Xml.XPath.XPathNodeIterator>  
+- [XSLT-Transformationen mit der XslTransform-Klasse](xslt-transformations-with-the-xsltransform-class.md)  
+- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](xsltransform-class-implements-the-xslt-processor.md)  
