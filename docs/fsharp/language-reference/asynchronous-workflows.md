@@ -2,12 +2,12 @@
 title: Asynchrone Workflows (F#)
 description: Erfahren Sie mehr über Unterstützung für in die F#-Programmiersprache zum Ausführen von Berechnungen asynchron, die ausgeführt werden, ohne dass die Ausführung weiterer Aufgaben blockiert.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9516a281701b6c431fc950fe6881359f9c8a672b
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143504"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861561"
 ---
 # <a name="asynchronous-workflows"></a>Asynchrone Workflows
 
@@ -67,8 +67,6 @@ Die `runAll` Funktion startet drei asynchrone Workflows parallel und wartet, bis
 
 ## <a name="see-also"></a>Siehe auch
 
-[F#-Sprachreferenz](index.md)
-
-[Berechnungsausdrücke](computation-expressions.md)
-
-[Control.Async-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [F#-Sprachreferenz](index.md)
+- [Berechnungsausdrücke](computation-expressions.md)
+- [Control.Async-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)

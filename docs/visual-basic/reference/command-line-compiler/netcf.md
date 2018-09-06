@@ -12,11 +12,11 @@ ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36b2cba14f15cebdcc7f371f53f46b657ab12758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655771"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854401"
 ---
 # <a name="-netcf"></a>-netcf
 Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fest.  
@@ -28,28 +28,28 @@ Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fe
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-netcf` Option bewirkt, dass die Visual Basic-Compiler zum Ziel der [!INCLUDE[Compact](~/includes/compact-md.md)] anstelle der vollständigen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Language-Funktionen, die nur in den vollständigen vorliegt [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ist deaktiviert.  
+ Die `-netcf` Option bewirkt, dass Visual Basic-Compiler zum Ziel der [!INCLUDE[Compact](~/includes/compact-md.md)] anstelle der vollständigen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Language-Funktionen, die nur im vollständigen vorliegt [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ist deaktiviert.  
   
- Die `-netcf` ist bei Verwendung der Option mit [- Sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Die Sprachfunktionen von deaktiviert `-netcf` sind die gleichen Sprachfunktionen, die in den Dateien, die als Ziel für "nicht vorhanden" `-sdkpath`.  
+ Die `-netcf` Option dient für zu verwendenden [- Sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Die Sprachfunktionen, die deaktiviert `-netcf` sind die gleichen Sprachfunktionen, die nicht vorhanden ist, in den Dateien, die angesprochenen `-sdkpath`.  
   
 > [!NOTE]
->  Die `-netcf` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren. Die `-netcf` Option wird festgelegt, wenn ein Gerät Visual Basic-Projekt geladen wird.  
+>  Die `-netcf` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren. Die `-netcf` Option wird festgelegt, wenn ein Gerät Visual Basic-Projekt geladen wird.  
   
  Die `-netcf` Option ändert die folgenden Sprachfunktionen:  
   
--   Die [End \<Schlüsselwort >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md) Schlüsselwort, das Ausführung eines Programms beendet wird, ist deaktiviert. Das folgende Programm kompiliert und ausgeführt wird, ohne `-netcf` dagegen ein Fehler auftritt, zum Zeitpunkt der Kompilierung mit `-netcf`.  
+-   Die [End \<Schlüsselwort >-Anweisung](../../../visual-basic/language-reference/statements/end-keyword-statement.md) -Schlüsselwort, das Ausführung eines Programms beendet wird, ist deaktiviert. Das folgende Programm kompiliert und ausgeführt wird, ohne `-netcf` jedoch ein Fehler auftritt, zum Zeitpunkt der Kompilierung mit `-netcf`.  
   
      [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
--   Späte Bindung, in allen Formularen: ist deaktiviert. Kompilierungsfehler werden generiert, wenn erkannte späte Bindung Szenarien auftreten. Das folgende Programm kompiliert und ausgeführt wird, ohne `-netcf` dagegen ein Fehler auftritt, zum Zeitpunkt der Kompilierung mit `-netcf`.  
+-   Späte Bindung, in allen Formularen: ist deaktiviert. Kompilierungsfehler werden generiert, wenn bekannte Szenarios für spätes Binden gefunden werden. Das folgende Programm kompiliert und ausgeführt wird, ohne `-netcf` jedoch ein Fehler auftritt, zum Zeitpunkt der Kompilierung mit `-netcf`.  
   
      [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
--   Die [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), und [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) Modifizierer sind deaktiviert. Die Syntax der [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) -Anweisung wird auch geändert, um `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Der folgende Code zeigt die Auswirkung des `-netcf` auf eine Kompilierung.  
+-   Die [automatisch](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), und [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) Modifizierer sind deaktiviert. Die Syntax der [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md) Anweisung hat sich ebenfalls geändert `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Der folgende Code zeigt die Auswirkungen der `-netcf` auf eine Kompilierung.  
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   Verwenden von Visual Basic 6.0-Schlüsselwörtern, die aus Visual Basic entfernt wurden, generiert einen anderen Fehler bei der `-netcf` verwendet wird. Dies wirkt sich auf die Fehlermeldungen für die folgenden Schlüsselwörter:  
+-   Verwenden von Visual Basic 6.0-Schlüsselwörtern, die von Visual Basic entfernt wurden, generiert einen anderen Fehler bei der `-netcf` verwendet wird. Dies wirkt sich auf, die Fehlermeldungen für die folgenden Schlüsselwörter:  
   
     -   `Open`  
   
@@ -84,7 +84,7 @@ Legt für den Compiler [!INCLUDE[Compact](~/includes/compact-md.md)] als Ziel fe
     -   `Line`  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `Myfile.vb` mit der [!INCLUDE[Compact](~/includes/compact-md.md)], mit den Versionen von "mscorlib.dll" und "Microsoft.VisualBasic.dll" in das Standardverzeichnis für die Installation der gefunden die [!INCLUDE[Compact](~/includes/compact-md.md)] auf Laufwerk C. Normalerweise verwenden Sie die neueste Version von der [!INCLUDE[Compact](~/includes/compact-md.md)].  
+ Der folgende code kompiliert `Myfile.vb` mit der [!INCLUDE[Compact](~/includes/compact-md.md)], verwenden die Versionen der Datei "mscorlib.dll" und "Microsoft.VisualBasic.dll" finden Sie in das Standardverzeichnis für die Installation von der [!INCLUDE[Compact](~/includes/compact-md.md)] auf Laufwerk C. Normalerweise verwenden Sie die neueste Version von der [!INCLUDE[Compact](~/includes/compact-md.md)].  
   
 ```console  
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

@@ -3,11 +3,11 @@ title: Objektmodell für WCF-Web-HTTP-Programmierung
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
 ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670638"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861636"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Objektmodell für WCF-Web-HTTP-Programmierung
 Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Communication Foundation (WCF)-Webdienste durch grundlegende HTTP-Anforderungen, die ohne SOAP verfügbar machen. Der WCF-HTTP-Webprogrammierungsmodell basiert auf der vorhandenen WCF-Erweiterbarkeitsmodell. Mit diesem Modell werden folgende Klassen definiert:  

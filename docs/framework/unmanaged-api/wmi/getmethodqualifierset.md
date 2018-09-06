@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724720"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800127"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet-Funktion
 Ruft den Qualifizierer ab, der für eine bestimmte Methode festgelegt ist.

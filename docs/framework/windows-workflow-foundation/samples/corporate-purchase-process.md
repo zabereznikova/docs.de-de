@@ -2,12 +2,12 @@
 title: Unternehmenseinkaufsprozess
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 34d9280fb1d4009aa729cb2eba55b817db9fff56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520041"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802910"
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.  
@@ -43,12 +43,12 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) aller Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Beschreibung des Vorgangs  
- Dieses Beispiel zeigt eine Implementierung eines Windows Workflow Foundation (WF)-Programms Angebote von Anbietern für ein allgemeines Unternehmen sammeln.  
+ Dieses Beispiel zeigt eine Implementierung eines Programms Windows Workflow Foundation (WF), um die Angebote von Anbietern für ein allgemeines Unternehmen erfasst.  
   
 1.  Ein Mitarbeiter des Unternehmens X erstellt eine Ausschreibung (Request for Proposal, RFP).  
   
@@ -83,7 +83,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |Allgemein|Die im Vorgang verwendeten Entitätsobjekte (Ausschreibung, Anbieter und Angebot).|  
 |WfDefinition|Die Definition des Vorgangs (als [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Programm) und der Host (`PurchaseProcessHost`), die von den Clientanwendungen zum Erstellen und Verwenden von Instanzen des Einkaufsworkflows verwendet werden.|  
 |WebClient|Eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit dem Workflowmodul.|  
-|WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit dem Workflowmodul.|  
+|WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
  Die folgende Tabelle enthält eine Beschreibung der wichtigsten Dateien im WfDefinition-Projekt.  
@@ -127,7 +127,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |Formular|Beschreibung|  
 |-|-|  
 |NewRfp|Erstellt und sendet eine neue Ausschreibung.|  
-|ShowProposals|Zeigt alle aktuellen und abgeschlossenen Ausschreibungen an. **Hinweis:** müssen Sie möglicherweise klicken Sie auf die **aktualisieren** Schaltfläche in der Benutzeroberfläche auf Änderungen in diesem Bildschirm angezeigt wird, nachdem Sie erstellen oder ändern eine Ausschreibung.|  
+|ShowProposals|Zeigt alle aktuellen und abgeschlossenen Ausschreibungen an. **Hinweis:** müssen Sie möglicherweise klicken Sie auf die **aktualisieren** Schaltfläche in der Benutzeroberfläche, um die Änderungen in diesem Bildschirm angezeigt wird, nachdem Sie erstellen oder ändern eine Ausschreibung.|  
 |SubmitProposal|Ruft im Rahmen einer bestimmten Ausschreibung ein Angebot eines Anbieters ab. Dieses Fenster wird nur von Anbietern verwendet.|  
 |ViewRfp|Zeigt alle Informationen über eine Ausschreibung an (eingegangene Angebote, Daten, Werte usw.). Dieses Fenster wird nur vom Ersteller der Ausschreibung verwendet.|  
   
@@ -145,9 +145,9 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 1.  Öffnen Sie mit [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die PurchaseProcess.sln-Projektmappendatei.  
   
-2.  Öffnen Sie zum Ausführen des webclientprojekts **Projektmappen-Explorer** der rechten Maustaste auf die **WebClient** Projekt. Wählen Sie **als Startprojekt festlegen**.  
+2.  Öffnen Sie zum Ausführen des webclientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WebClient** Projekt. Wählen Sie **als Startprojekt festlegen**.  
   
-3.  Öffnen Sie zum Ausführen der WinForms-Clientprojekts **Projektmappen-Explorer** der rechten Maustaste auf die **WinForms Client** Projekt. Wählen Sie **als Startprojekt festlegen**.  
+3.  Öffnen Sie zum Ausführen der WinForms-Clientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WinForms Client** Projekt. Wählen Sie **als Startprojekt festlegen**.  
   
 4.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
@@ -155,20 +155,20 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 ### <a name="web-client-options"></a>Webclientoptionen  
   
--   **Erstellen Sie eine neue Ausschreibung**: erstellt eine neue Anforderung für Vorschläge Einkaufsworkflow und startet eine Kaufvorgang fort.  
+-   **Erstellen Sie eine neue Ausschreibung**: erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
   
 -   **Aktualisieren Sie**: aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
   
--   **Ansicht**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+-   **Ansicht**: Zeigt den Inhalt einer vorhandenen Ausschreibung. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
--   Anzeigen als: Der Benutzer zugreifen kann die Ausschreibung mit verschiedenen Identitäten, indem er den gewünschten Teilnehmer in der **anzeigen als** Kombinationsfeld auswählt.  
+-   Anzeigen als: Der Benutzer zugreifen kann die Ausschreibung, die mit verschiedenen Identitäten durch den gewünschten Teilnehmer im Auswählen der **anzeigen als** im Kombinationsfeld auswählt.  
   
 ### <a name="winforms-client-options"></a>WinForms-Clientoptionen  
   
--   **Ausschreibung erstellen**: erstellt eine neue Anforderung für Vorschläge Einkaufsworkflow und startet eine Kaufvorgang fort.  
+-   **Ausschreibung erstellen**: erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
   
 -   **Aktualisieren Sie**: aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
   
--   **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+-   **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
--   **Verbinden als**: der Benutzer zugreifen kann die Ausschreibung mit verschiedenen Identitäten, indem er den gewünschten Teilnehmer in der **anzeigen als** Kombinationsfeld auswählt.
+-   **Verbinden als**: der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.

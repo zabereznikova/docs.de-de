@@ -9,32 +9,32 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: a59ceb62d7feb33d2cc8a747a7bfb85e551d785c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2fd8c6c6fd84bbfd6d56f573588d7204249f31d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557354"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857400"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Gewusst wie: Animieren eines Point mithilfe von Keyframes
-Dieses Beispiel zeigt, wie die <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> Klasse zum Animieren einer <xref:System.Windows.Point>.  
+Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> -Klasse zum Animieren einer <xref:System.Windows.Point>.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird eine Ellipse entlang eines dreieckigen Pfads verschoben. Im Beispiel wird die <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> Klasse zum Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> Eigenschaft ein <xref:System.Windows.Media.EllipseGeometry>. In dieser Animation werden drei Keyframes folgendermaßen verwendet:  
+ Im folgende Beispiel wird eine Ellipse entlang eines dreieckigen Pfads verschoben. Im Beispiel wird die <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> -Klasse zum Animieren der <xref:System.Windows.Media.EllipseGeometry.Center%2A> Eigenschaft eine <xref:System.Windows.Media.EllipseGeometry>. In dieser Animation werden drei Keyframes folgendermaßen verwendet:  
   
-1.  In der ersten halben Sekunde verwendet eine Instanz der <xref:System.Windows.Media.Animation.LinearPointKeyFrame> Klasse, um die Ellipse entlang eines Pfads von der Startposition mit konstanter Geschwindigkeit zu verschieben. Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearPointKeyFrame> glatte, lineare Interpolation zwischen Werten zu erstellen.  
+1.  In der ersten halben Sekunde wird eine Instanz von der <xref:System.Windows.Media.Animation.LinearPointKeyFrame> Klasse, um die Ellipse entlang eines Pfads von der Startposition mit konstanter Geschwindigkeit zu verschieben. Lineare Keyframes wie <xref:System.Windows.Media.Animation.LinearPointKeyFrame> eine glatte, lineare Interpolation zwischen Werten zu erstellen.  
   
-2.  Am Ende der nächsten halben Sekunde wird eine Instanz von der <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> Klasse, um die Ellipse entlang des Pfads plötzlich an der nächsten Position zu verschieben. Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> plötzlichen Sprünge zwischen Werten.  
+2.  Am Ende der nächsten halben Sekunde wird eine Instanz von der <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> Klasse, um die Ellipse entlang des Pfads abrupt an die nächste Position zu bewegen. Diskrete Keyframes wie <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> ermöglichen abrupte Sprünge zwischen Werten.  
   
-3.  In den letzten zwei Sekunden verwendet eine Instanz der <xref:System.Windows.Media.Animation.SplinePointKeyFrame> Klasse, das die Ellipse wieder auf seine Anfangsposition zu verschieben. Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplinePointKeyFrame> erstellen Sie einen variablen Übergang zwischen Werten, die von der <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> Eigenschaft. In diesem Beispiel beginnt die Animation zunächst langsam und beschleunigt dann exponentiell im letzten Bereich des Zeitabschnitts.  
+3.  In den letzten zwei Sekunden wird eine Instanz von der <xref:System.Windows.Media.Animation.SplinePointKeyFrame> Klasse, um die Ellipse zurück an seine Ausgangsposition zu verschieben. Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplinePointKeyFrame> erzeugen einen variablen Übergang zwischen Werten, die von der <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> Eigenschaft. In diesem Beispiel beginnt die Animation zunächst langsam und beschleunigt dann exponentiell im letzten Bereich des Zeitabschnitts.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#PointAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/PointAnimationUsingKeyFramesExample.xaml#pointanimationusingkeyframeswholepage)]  
   
- Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
- Aus Gründen der Konsistenz mit anderen Animation Beispiele für die Codeversionen der in diesem Beispiel verwenden eine <xref:System.Windows.Media.Animation.Storyboard> Objekt anzuwendende der <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Beim Anwenden einer Animation im Code ist es jedoch einfacher zu verwenden, die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode anstelle einer <xref:System.Windows.Media.Animation.Storyboard>. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+ Verwenden Sie für Konsistenz mit anderen Animationsbeispielen die Codeversionen dieses Beispiels ein <xref:System.Windows.Media.Animation.Storyboard> Objekt anzuwendende der <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Beim Anwenden einer Animation im Code ist es jedoch einfacher, die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode anstelle einer <xref:System.Windows.Media.Animation.Storyboard>. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  

@@ -2,12 +2,12 @@
 title: Schlüsselwortreferenz (F#)
 description: Links zu Informationen über alle von der F#-Schlüsselwörter.
 ms.date: 05/16/2016
-ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526188"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856023"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
@@ -132,8 +132,7 @@ Die folgenden Token werden als Schlüsselwörter für die zukünftige Erweiterun
 * `volatile`
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)
-
-[Compileroptionen](compiler-options.md)
+- [F#-Sprachreferenz](index.md)
+- [Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)
+- [Compileroptionen](compiler-options.md)

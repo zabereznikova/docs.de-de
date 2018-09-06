@@ -1,17 +1,17 @@
 ---
 title: Strukturen (F#)
-description: Erfahren Sie mehr über die f#-Struktur, ein kompakter Objekttyp, der häufig effizienter als eine Klasse für Typen mit einer kleinen Menge an Daten und einfaches Verhalten.
+description: Erfahren Sie mehr über die F#-Struktur, ein kompakter Objekttyp, der häufig effizienter als eine Klasse für Typen mit einer geringeren Menge an Daten und ein einfaches Verhalten.
 ms.date: 05/16/2016
-ms.openlocfilehash: 57c4148aec1d6a19237d74aa99824ef475c3632e
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172463"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799670"
 ---
 # <a name="structures"></a>Strukturen
 
-Ein *Struktur* ist ein kompakter Objekttyp, die effizienter als eine Klasse für Typen sein kann, die eine kleine Menge von Daten und ein einfaches Verhalten aufweisen.
+Ein *Struktur* ist ein kompakter Objekttyp, die effizienter als eine Klasse für Typen sein können, die eine geringe Datenmenge und ein einfaches Verhalten aufweisen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,11 +29,12 @@ type [accessibility-modifier] type-name =
 ```
 
 ## <a name="remarks"></a>Hinweise
-Strukturen sind *Werttypen*, dies bedeutet, dass diese gespeichert sind, direkt auf dem Stapel oder, wenn sie als verwendet werden, dass Felder oder Array-Elemente Inline in der übergeordneten Tabelle geben. Im Gegensatz zu Klassen und Datensätzen verfügen Strukturen über eine Übergabewertsemantik. Dies bedeutet, dass sie hauptsächlich für kleine Datenaggregate sinnvoll sind, die häufig aufgerufen und kopiert werden.
+
+Strukturen sind *Werttypen*, Felder, d. h., der sie gespeichert sind, direkt auf dem Stapel oder, wenn sie als verwendet werden, oder geben Sie die Elemente des Arrays, Inline im übergeordneten Element. Im Gegensatz zu Klassen und Datensätzen verfügen Strukturen über eine Übergabewertsemantik. Dies bedeutet, dass sie hauptsächlich für kleine Datenaggregate sinnvoll sind, die häufig aufgerufen und kopiert werden.
 
 In der vorherigen Syntax werden zwei Formen gezeigt. Die erste ist nicht die einfache Syntax, aber sie wird trotzdem häufig verwendet, da Sie bei Verwendung der Schlüsselwörter `struct` und `end` das `StructAttribute`-Attribut auslassen können, das in der zweiten Form angezeigt wird. Sie können `StructAttribute` zu `Struct` abkürzen.
 
-Die *-Definition-Elemente-und-Typmember* in der vorherigen Syntax stellt Memberdeklarationen und-Definitionen. Strukturen können über Konstruktoren sowie änderbare und unveränderliche Felder verfügen, und sie können Member und Schnittstellenimplementierungen deklarieren. Weitere Informationen finden Sie unter [Elemente](members/index.md).
+Die *-Definition-Elemente-und-Typmember* in der vorherigen Syntax stellt Memberdeklarationen und-Definitionen. Strukturen können über Konstruktoren sowie änderbare und unveränderliche Felder verfügen, und sie können Member und Schnittstellenimplementierungen deklarieren. Weitere Informationen finden Sie unter [Mitglieder](members/index.md).
 
 Strukturen können nicht an der Vererbung beteiligt sein, sie können keine `let`- oder `do`-Bindungen enthalten und können nicht rekursiv Felder des eigenen Typs enthalten (obwohl sie Verweiszellen enthalten können, die auf den eigenen Typ verweisen).
 
@@ -41,21 +42,19 @@ Da Strukturen keine `let`-Bindungen zulassen, müssen Sie Felder in Strukturen m
 
 Explizite Konstruktoren können eine Initialisierung von Feldwerten beinhalten. Wenn Sie eine Struktur mit einem expliziten Konstruktor haben, unterstützt sie weiterhin die Initialisierung mit 0 (Null); Sie verwenden jedoch nicht das `DefaultValue`-Attribut auf den `val`-Deklarationen, da es mit dem expliziten Konstruktor in Konflikt steht. Weitere Informationen zu `val` Deklarationen finden Sie unter [explizite Felder: das `val` Schlüsselwort](members/explicit-fields-the-val-keyword.md).
 
-Attribute und Zugriffsmodifizierer sind für Strukturen zulässig und folgen denselben Regeln wie jene für andere Typen. Weitere Informationen finden Sie unter [Attribute](attributes.md) und [Access Control](access-control.md).
+Attribute und Zugriffsmodifizierer sind für Strukturen zulässig und folgen denselben Regeln wie jene für andere Typen. Weitere Informationen finden Sie unter [Attribute](attributes.md) und [Zugriffssteuerung](access-control.md).
 
 Die folgenden Codebeispiele veranschaulichen Strukturdefinitionen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
-## <a name="struct-records-and-discriminated-unions"></a>Struct-Datensätze und Unterscheidungs-Unions
+## <a name="struct-records-and-discriminated-unions"></a>Struktur-Datensätze und Unterscheidungs-Unions
 
-Ab f# 4.1, Sie können darstellen [Datensätze](records.md) und [Unterscheidungs-Unions](discriminated-unions.md) als Strukturen mit dem `[<Struct>]` Attribut.  Finden Sie unter jeder Artikel, um mehr zu erfahren.
-    
+Ab f# 4.1, Sie können darstellen [Datensätze](records.md) und [Unterscheidungs-Unions](discriminated-unions.md) als Strukturen mit dem `[<Struct>]` Attribut.  Finden Sie alle Artikel, um mehr zu erfahren.
+
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Klassen](classes.md)
-
-[Datensätze](records.md)
-
-[Mitglieder](members/index.md)
+- [F#-Sprachreferenz](index.md)
+- [Klassen](classes.md)
+- [Datensätze](records.md)
+- [Mitglieder](members/index.md)

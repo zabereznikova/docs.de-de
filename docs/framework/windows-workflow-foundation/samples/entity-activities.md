@@ -3,11 +3,11 @@ title: Entitätsaktivitäten
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
 ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385803"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861152"
 ---
 # <a name="entity-activities"></a>Entitätsaktivitäten
 Dieses Beispiel zeigt, wie Sie das ADO.NET Entity Framework mit Windows Workflow Foundation zu verwenden, um den Datenzugriff zu vereinfachen.  

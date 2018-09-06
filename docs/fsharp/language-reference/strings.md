@@ -2,12 +2,12 @@
 title: Zeichenfolgen (F#)
 description: Erfahren Sie, wie der f#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561290"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799342"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
@@ -17,6 +17,7 @@ Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.mic
 Die `string` stellt unveränderlichen Text als Sequenz von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET Framework.
 
 ## <a name="remarks"></a>Hinweise
+
 Trennzeichen für Zeichenfolgenliterale dient das Anführungszeichen ("). Der umgekehrte Schrägstrich ( \\ ) wird verwendet, um bestimmte Sonderzeichen codiert. Der umgekehrte Schrägstrich und das nächste Zeichen, die zusammen als bekanntermaßen eine *Escapesequenz*. Escape-Zeichensequenzen in F#-Zeichenfolge, die Literale in der folgenden Tabelle gezeigt werden unterstützt.
 
 |Zeichen|Escapesequenz|
@@ -66,23 +67,27 @@ def
 Sie können die ASCII-Zeichenfolgen darstellen, indem die Arrays von Bytes ohne Vorzeichen, Typ `byte[]`. Sie fügen Sie das Suffix `B` auf ein Zeichenfolgenliteral, um anzugeben, dass es sich um eine ASCII-Zeichenfolge ist. ASCII-Zeichenfolgenliterale mit Byte-Arrays unterstützt die gleichen Escapesequenzen, die als Unicode-Zeichenfolgen, mit Ausnahme der Unicode-Escapesequenzen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
-    
+
 ## <a name="string-operators"></a>Zeichenfolgenoperatoren
+
 Es gibt zwei Möglichkeiten zum Verketten von Zeichenfolgen: mithilfe der `+` Operator oder mithilfe der `^` Operator. Die `+` -Operator erhält die Kompatibilität mit der .NET Framework-Zeichenfolge, die Funktionen zu behandeln.
 
 Das folgende Beispiel veranschaulicht die Verkettung von Zeichenfolgen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
-    
+
 ## <a name="string-class"></a>String-Klasse
+
 Da der Zeichenfolgentyp in f# tatsächlich eine .NET Framework ist `System.String` eingeben, die alle die `System.String` Member verfügbar sind. Dies schließt die `+` -Operator, der zum Verketten von Zeichenfolgen verwendet wird, die `Length` -Eigenschaft, und die `Chars` -Eigenschaft, die die Zeichenfolge als ein Array von Unicode-Zeichen zurückgibt. Weitere Informationen zu Zeichenfolgen finden Sie unter `System.String`.
 
 Mithilfe der `Chars` Eigenschaft `System.String`, Sie können die einzelnen Zeichen in einer Zeichenfolge zugreifen, indem Sie einen Index angeben, wie im folgenden Code gezeigt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
-    
+
 ## <a name="string-module"></a>String-Modul
+
 Zusätzliche Funktionen für die Behandlung von Zeichenfolgen ist enthalten, der `String` -Modul in die `FSharp.Core` Namespace. Weitere Informationen finden Sie unter [Core.String-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
+
+- [F#-Sprachreferenz](index.md)

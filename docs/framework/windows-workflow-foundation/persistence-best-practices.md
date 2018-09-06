@@ -3,11 +3,11 @@ title: Empfohlene Vorgehensweisen für die Persistenz
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
 ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558874"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800650"
 ---
 # <a name="persistence-best-practices"></a>Empfohlene Vorgehensweisen für die Persistenz
 In diesem Dokument werden empfohlene Vorgehensweisen für Entwurf und Konfiguration von Workflows bezüglich der Workflowpersistenz behandelt.  

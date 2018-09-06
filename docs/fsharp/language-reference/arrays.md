@@ -2,12 +2,12 @@
 title: Arrays (F#)
 description: Informationen Sie zum Erstellen und Verwenden von Arrays in der Programmiersprache f#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2cd887b8385235185afb9099c3142a572efe3f41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566534"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874828"
 ---
 # <a name="arrays"></a>Arrays
 
@@ -17,7 +17,8 @@ Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Ref
 Arrays sind nullbasierte, änderbare Sequenzen fester Größe von aufeinander folgenden Datenelementen, die alle den gleichen Typ aufweisen.
 
 ## <a name="creating-arrays"></a>Erstellen von Arrays
-Sie können Arrays auf verschiedene Arten erstellen. Sie können ein kleines Array erstellen, indem Sie aufeinanderfolgende Werte zwischen auflisten `[|` und `|]` und durch Semikolons getrennt, wie in den folgenden Beispielen gezeigt.
+
+Sie können Arrays auf verschiedene Arten erstellen. Sie können ein kleines Array erstellen, indem Sie aufeinanderfolgende Werte zwischen auflisten `[|` und `|]` und durch Semikolons getrennt werden, wie in den folgenden Beispielen gezeigt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet1.fs)]
 
@@ -39,10 +40,10 @@ Sie können Arrays mithilfe von Sequenzausdrücken erstellen. Im folgenden Beisp
 Verwenden Sie `Array.zeroCreate`, um ein Array zu erstellen, dessen sämtliche Elemente mit 0 (null) initialisiert sind.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet4.fs)]
-    
+
 ## <a name="accessing-elements"></a>Zugreifen auf Elemente
 
-Sie können Elemente des Arrays zugreifen, mit dem Punktoperator (`.`) und Klammern (`[` und `]`).
+Sie können Elemente des Arrays zugreifen, mit dem Punktoperator (`.`) und eckige Klammern (`[` und `]`).
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet5.fs)]
 
@@ -54,14 +55,15 @@ Der Zugriff auf Arrayelemente kann auch mit Slicenotation erfolgen, die es Ihnen
 
 Bei Verwendung von Slicenotation wird eine neue Kopie des Arrays erstellt.
 
-
 ## <a name="array-types-and-modules"></a>Arraytypen und Module
+
 Alle F#-Arrays sind vom .NET Framework-Typ <xref:System.Array?displayProperty=nameWithType>. Daher unterstützen F#-Arrays alle in <xref:System.Array?displayProperty=nameWithType> verfügbaren Funktionen.
 
-Das Bibliotheksmodul [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) unterstützt Operationen auf eindimensionalen Arrays. Die Module `Array2D`, `Array3D` und `Array4D` enthalten Funktionen, die Operationen für Arrays mit zwei, drei bzw. vier Dimensionen unterstützen. Mit <xref:System.Array?displayProperty=nameWithType> können Sie Arrays mit einem Rang größer vier erstellen.
+Das Bibliotheksmodul [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) Operationen auf eindimensionalen Arrays unterstützt. Die Module `Array2D`, `Array3D` und `Array4D` enthalten Funktionen, die Operationen für Arrays mit zwei, drei bzw. vier Dimensionen unterstützen. Mit <xref:System.Array?displayProperty=nameWithType> können Sie Arrays mit einem Rang größer vier erstellen.
 
 ### <a name="simple-functions"></a>Einfache Funktionen
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) Ruft ein Element ab. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) Gibt die Länge eines Arrays. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Legt ein Element an einen angegebenen Wert fest. Im folgenden Codebeispiel wird die Verwendung dieser Funktionen veranschaulicht.
+
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) Ruft ein Element ab. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) Gibt die Länge eines Arrays. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Legt ein Element mit einem angegebenen Wert fest. Im folgenden Codebeispiel wird die Verwendung dieser Funktionen veranschaulicht.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -73,7 +75,7 @@ Die Ausgabe lautet wie folgt.
 
 ### <a name="functions-that-create-arrays"></a>Funktionen, die Arrays generieren
 
-Mehrere Funktionen erstellen Arrays, ohne ein vorhandenes Array zu erfordern. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) erstellt ein neues Array, das keine Elemente enthält. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) erstellt ein Array mit einer angegebenen Größe und legt alle Elemente auf bereitgestellte Werte fest. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) erstellt ein Array unter Verwendung einer Dimensionen und einer Funktion, um die Elemente zu generieren. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) erstellt ein Array, in dem alle Elemente auf den Wert 0 für den Typ des Arrays initialisiert werden. Dieser Code demonstriert die Funktionen.
+Mehrere Funktionen erstellen Arrays, ohne ein vorhandenes Array zu erfordern. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) erstellt ein neues Array, das keine Elemente enthält. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) erstellt ein Array mit einer angegebenen Größe aus, und legt alle Elemente mit angegebenen Werten. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) erstellt ein Array unter Verwendung einer Dimensionen und eine Funktion, die die Elemente zu generieren. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) erstellt ein Array, in dem alle Elemente auf den Wert für den Typ des Arrays initialisiert werden. Dieser Code demonstriert die Funktionen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -98,7 +100,7 @@ Der obige Code gibt Folgendes aus:
 
 Die Zeichenfolge `Test1` wird nur im ersten Array angezeigt, da der Vorgang der Erstellung eines neuen Elements, den Verweis in `firstArray` überschreibt, aber sich nicht auf den ursprünglichen Verweis auf eine leere Zeichenfolge auswirkt, die immer noch im `secondArray` vorhanden ist. Die Zeichenfolge `Test2` wird in beiden Arrays angezeigt, da sich die `Insert`-Operation für den <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Typ auf das zugrundeliegende <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Objekt auswirkt, auf das in beiden Arrays verwiesen wird.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) generiert ein neues Array aus einem Teilbereich eines Arrays. Sie geben den Teilbereich an, indem Sie den Startindex und die Länge bereitstellen. Das folgende Codebeispiel veranschaulicht die Verwendung von `Array.sub`.
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) generiert ein neues Array aus einem Teilbereich eines Arrays an. Sie geben den Teilbereich an, indem Sie den Startindex und die Länge bereitstellen. Das folgende Codebeispiel veranschaulicht die Verwendung von `Array.sub`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -107,9 +109,9 @@ Die Ausgabe zeigt an, dass das Unterfeld bei Element "5" beginnt und 10 Elemente
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) erstellt ein neues Array von zwei vorhandene Arrays kombiniert.
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) ein neues Array erstellt, indem zwei vorhandene Arrays kombiniert.
 
-Der folgende Code zeigt **Array.append**.
+Der folgende Code veranschaulicht **Array.append**.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet13.fs)]
 
@@ -129,7 +131,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) führt eine angegebene Funktion auf jedes Arrayelement eines vorhandenen Arrays und sammelt die von der Funktion generierten Elemente und kombiniert sie in ein neues Array. Der folgende Code stellt `Array.collect` dar.
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) führt eine angegebene Funktion für jedes Arrayelement eines vorhandenen Arrays und erfasst die von der Funktion generierten Elemente und kombiniert diese Elemente in ein neues Array. Der folgende Code stellt `Array.collect` dar.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -139,7 +141,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) verwendet eine Sequenz von Arrays und kombiniert sie zu einem Array. Der folgende Code stellt `Array.concat` dar.
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) nimmt eine Sequenz von Arrays und kombiniert diese Elemente in ein einzelnes Array. Der folgende Code stellt `Array.concat` dar.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -150,7 +152,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) nimmt eine boolesche Bedingungsfunktion und generiert ein neues Array, das nur die Elemente des Eingabearrays enthält, für die die Bedingung "true" ist. Der folgende Code stellt `Array.filter` dar.
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) nimmt eine boolesche Bedingungsfunktion und generiert ein neues Array, das nur die Elemente des Eingabearrays enthält, für die die Bedingung erfüllt ist. Der folgende Code stellt `Array.filter` dar.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -160,7 +162,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) generiert ein neues Array, indem die Reihenfolge eines vorhandenen Arrays umgekehrt. Der folgende Code stellt `Array.rev` dar.
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) generiert ein neues Array durch Umkehren der Reihenfolge eines vorhandenen Arrays an. Der folgende Code stellt `Array.rev` dar.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -170,7 +172,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 "Hello world!"
 ```
 
-Funktionen im Arraymodul, die Arrays umwandeln, mithilfe des pipelineoperators können problemlos kombiniert werden (`|>`), wie im folgenden Beispiel gezeigt.
+Sie können problemlos Funktionen im Arraymodul, die Arrays zu transformieren, indem Sie mit dem Pipeline-Operator kombinieren (`|>`), wie im folgenden Beispiel gezeigt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet19.fs)]
 
@@ -186,21 +188,21 @@ Ein mehrdimensionales Array kann erstellt werden, jedoch gibt es keine Syntax zu
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet20.fs)]
 
-Sie können auch mithilfe der Funktion [ `Array2D.init` ](https://msdn.microsoft.com/library/9de07e95-bc21-4927-b5b4-08fdec882c7b) zum Initialisieren von Arrays mit zwei Dimensionen und ähnliche Funktionen für Arrays mit drei und vier Dimensionen verfügbar sind. Diese Funktionen nehmen eine Funktion, die zum Erstellen der Elemente verwendet wird. Um ein zweidimensionales Array zu erstellen, die auf einen Anfangswert angeben einer funktionsrückgabewerts, statt festgelegt Elemente enthält, verwenden Sie die [ `Array2D.create` ](https://msdn.microsoft.com/library/36c9d980-b241-4a20-bc64-bcfa0205d804) Funktion, die auch für arrays bis zu vier Dimensionen. Im folgenden Codebeispiel wird die Erstellung eines Arrays von Arrays mit den gewünschten Elementen veranschaulicht, und dann wird mit `Array2D.init` das gewünschte zweidimensionale Array generiert.
+Sie können auch die Funktion [ `Array2D.init` ](https://msdn.microsoft.com/library/9de07e95-bc21-4927-b5b4-08fdec882c7b) zum Initialisieren von Arrays mit zwei Dimensionen und ähnliche Funktionen für Arrays mit drei und vier Dimensionen verfügbar sind. Diese Funktionen nehmen eine Funktion, die zum Erstellen der Elemente verwendet wird. Verwenden Sie zum Erstellen eines zweidimensionalen Arrays, die Elemente, die festlegen, die auf einen Anfangswert anstelle einer Funktion enthält die [ `Array2D.create` ](https://msdn.microsoft.com/library/36c9d980-b241-4a20-bc64-bcfa0205d804) arrays mit bis zu vier Dimensionen-Funktion, die auch für verfügbar ist. Im folgenden Codebeispiel wird die Erstellung eines Arrays von Arrays mit den gewünschten Elementen veranschaulicht, und dann wird mit `Array2D.init` das gewünschte zweidimensionale Array generiert.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet21.fs)]
 
-Arrayindizierung und das Aufteilen von Syntax in Slices werden für Arrays bis zu Rang 4 unterstützt. Wenn Sie einen Index in mehreren Dimensionen angeben, verwenden Sie Kommas zum Trennen der Indizes, wie im folgenden Codebeispiel wird veranschaulicht.
+Arrayindizierung und das Aufteilen von Syntax in Slices werden für Arrays bis zu Rang 4 unterstützt. Wenn Sie einen Index in mehreren Dimensionen angeben, verwenden Sie Kommas zum Trennen die Indizes, wie im folgenden Codebeispiel dargestellt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet22.fs)]
-    
+
 Der Typ eines zweidimensionalen Arrays wird als `<type>[,]` (z. B.,`int[,]`, `double[,]`) geschrieben, und der Typ eines dreidimensionalen Arrays wird als `<type>[,,]` usw. für Arrays mit mehr Dimensionen geschrieben.
 
 Nur eine Teilmenge der Funktionen für eindimensionale Arrays ist auch für mehrdimensionale Arrays verfügbar. Weitere Informationen finden Sie unter [ `Collections.Array Module` ](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array-module-%5bfsharp%5d), [ `Collections.Array2D Module` ](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array2d-module-%5bfsharp%5d), [ `Collections.Array3D Module` ](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array3d-module-%5bfsharp%5d), und [ `Collections.Array4D Module` ](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array4d-module-%5bfsharp%5d).
 
 ### <a name="array-slicing-and-multidimensional-arrays"></a>Arraysegmentierung und mehrdimensionale Arrays
 
-In ein zweidimensionales Array (eine Matrix), können Sie eine Sub-Matrix extrahieren, indem Sie Bereiche angeben und Platzhalter (`*`) Zeichen, ganze Zeilen oder Spalten an.
+In einem zweidimensionalen Array (eine Matrix), können Sie eine Sub-Matrix extrahieren, indem Sie Bereiche angeben und Verwenden eines Platzhalters (`*`) Zeichen, ganze Zeilen oder Spalten anzugeben.
 
 ```fsharp
 / Get rows 1 to N from an NxM matrix (returns a matrix):
@@ -297,7 +299,7 @@ module test =
 
 ### <a name="boolean-functions-on-arrays"></a>Boolesche Funktionen für Arrays
 
-Die Funktionen [ `Array.exists` ](https://msdn.microsoft.com/library/8e47ad6c-c065-4876-8cb4-ec960ec3e5c9) und [ `Array.exists2` ](https://msdn.microsoft.com/library/2e384a6a-f99d-4e23-b677-250ffbc1dd8e) bzw. Testen Elemente in einer oder zwei Arrays. Diese Funktionen akzeptieren eine Testfunktion und geben `true` zurück, wenn die Bedingung von einem Element (oder Elementpaaren für `Array.exists2`) erfüllt wird.
+Die Funktionen [ `Array.exists` ](https://msdn.microsoft.com/library/8e47ad6c-c065-4876-8cb4-ec960ec3e5c9) und [ `Array.exists2` ](https://msdn.microsoft.com/library/2e384a6a-f99d-4e23-b677-250ffbc1dd8e) bzw. Testen von Elemente in einer oder zwei Arrays. Diese Funktionen akzeptieren eine Testfunktion und geben `true` zurück, wenn die Bedingung von einem Element (oder Elementpaaren für `Array.exists2`) erfüllt wird.
 
 Das folgende Codebeispiel veranschaulicht die Verwendung von `Array.exists` und `Array.exists2`. In diesen Beispielen werden neue Funktionen durch das Übernehmen von nur einem der Argumente, in diesen Fällen das Funktionsargument, erstellt.
 
@@ -312,7 +314,7 @@ false
 true
 ```
 
-Auf ähnliche Weise die Funktion [ `Array.forall` ](https://msdn.microsoft.com/library/d88f2cd0-fa7f-45cf-ac15-31eae9086cc4) testet ein Array, um zu bestimmen, ob jedes Element eine boolesche Bedingung erfüllt. Die Variation [ `Array.forall2` ](https://msdn.microsoft.com/library/c68f61a1-030c-4024-b705-c4768b6c96b9) führt die gleiche Aufgabe mithilfe einer booleschen Funktion, die Elemente zweier Arrays gleicher Länge enthält. Im folgenden Code wird die Verwendung dieser Funktionen veranschaulicht.
+Auf ähnliche Weise die Funktion [ `Array.forall` ](https://msdn.microsoft.com/library/d88f2cd0-fa7f-45cf-ac15-31eae9086cc4) testet ein Array, um zu bestimmen, ob jedes Element eine boolesche Bedingung erfüllt. Die Variation [ `Array.forall2` ](https://msdn.microsoft.com/library/c68f61a1-030c-4024-b705-c4768b6c96b9) führt die gleiche Aufgabe mithilfe einer booleschen Funktion, die Elemente zweier Arrays gleicher Länge umfasst. Im folgenden Code wird die Verwendung dieser Funktionen veranschaulicht.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet24.fs)]
 
@@ -327,7 +329,7 @@ false
 
 ### <a name="searching-arrays"></a>Durchsuchen von Arrays
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) nimmt eine boolesche Funktion und gibt das erste Element, für die die Funktion zurückgibt `true`, oder löst eine <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> , wenn kein Element, das die Bedingung gefunden wird. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) entspricht dem `Array.find`, außer dass der Index des Elements statt dem Element selbst zurückgegeben.
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) nimmt eine boolesche Funktion und gibt das erste Element, das für die die Funktion zurückgibt `true`, oder löst eine <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> , wenn kein Element die Bedingung gefunden wird. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) entspricht dem `Array.find`, außer dass der Index des Elements statt dem Element selbst zurückgegeben.
 
 Der folgende Code sucht mithilfe von `Array.find` und `Array.findIndex` eine Zahl, die sowohl ein perfektes Quadrat als auch perfekter Cube ist.
 
@@ -339,7 +341,7 @@ Die Ausgabe lautet wie folgt.
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) entspricht dem `Array.find`, außer dass das Ergebnis ein Optionstyp ist und es gibt `None` , wenn kein Element gefunden wird. `Array.tryFind` sollte statt `Array.find` verwendet werden, wenn nicht bekannt ist, ob ein entsprechendes Element im Array vorhanden ist. Auf ähnliche Weise [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) entspricht [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) mit dem Unterschied, dass der Optionstyp der Rückgabewert ist. Wenn kein Element gefunden wird, lautet die Option `None`.
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) entspricht dem `Array.find`, außer dass das Ergebnis ein Optionstyp ist und es gibt `None` , wenn kein Element gefunden wird. `Array.tryFind` sollte statt `Array.find` verwendet werden, wenn nicht bekannt ist, ob ein entsprechendes Element im Array vorhanden ist. Auf ähnliche Weise [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) ähnelt [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) mit dem Unterschied, dass der Optionstyp der Rückgabewert ist. Wenn kein Element gefunden wird, lautet die Option `None`.
 
 Das folgende Codebeispiel veranschaulicht die Verwendung von `Array.tryFind`. Dieser Code hängt vom vorherigen Code ab.
 
@@ -352,7 +354,7 @@ Found an element: 1
 Found an element: 729
 ```
 
-Verwendung [ `Array.tryPick` ](https://msdn.microsoft.com/library/72d45f85-037b-43a9-97fd-17239f72713e) Wenn Sie ein Element zusätzlich zum Auffinden transformieren müssen. Das Ergebnis ist das erste Element, für das die Funktion das transformierte Element als Optionswert zurückgibt, oder `None`, wenn kein solches Element gefunden wird.
+Verwendung [ `Array.tryPick` ](https://msdn.microsoft.com/library/72d45f85-037b-43a9-97fd-17239f72713e) Wenn Sie ein Element zusätzlich zu suchen, sie transformieren müssen. Das Ergebnis ist das erste Element, für das die Funktion das transformierte Element als Optionswert zurückgibt, oder `None`, wenn kein solches Element gefunden wird.
 
 Im folgenden Code wird die Verwendung von `Array.tryPick` veranschaulicht: In diesem Fall werden statt eines Lambdaausdrucks mehrere lokale Hilfsfunktionen definiert, um den Code zu vereinfachen.
 
@@ -371,21 +373,21 @@ Found an element 4096 with square root 64 and cube root 16.
 
 Die [ `Array.average` ](https://msdn.microsoft.com/library/7029f2b9-91ea-41cb-be1b-466a5a0db20e) Funktion gibt den Durchschnitt jedes Elements in einem Array zurück. Sie ist auf Elementtypen beschränkt, die die exakte Division durch eine ganze Zahl unterstützen, wozu Gleitkommatypen aber keine ganzzahligen Typen gehören. Die [ `Array.averageBy` ](https://msdn.microsoft.com/library/e9d64609-06a3-48f0-bc07-226ab0f85c54) Funktion gibt den Durchschnitt der Ergebnisse des Aufrufs einer Funktion auf jedes Element zurück. Für ein Array eines ganzzahligen Typs können Sie `Array.averageBy` verwenden und für die Berechnung die Funktion jedes Element in einen Gleitkommatyp konvertieren lassen.
 
-Verwendung [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) oder [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) auf die maximale oder minimale Element abzurufen, wenn der Elementtyp dies unterstützt. Auf ähnliche Weise [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) und [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) ermöglichen einer Funktion, die zuerst ausgeführt werden, ggf. zur Transformation eines Typs, der Vergleich unterstützt.
+Verwendung [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) oder [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) um die maximale oder minimale Element abzurufen, wenn der Elementtyp dies unterstützt. Auf ähnliche Weise [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) und [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) ermöglichen einer Funktion, die zuerst ausgeführt werden, ggf. zur Transformation eines Typs, der Vergleich unterstützt.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) Fügt die Elemente eines Arrays hinzu und [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) Ruft eine Funktion auf jedes Element und fügt die Ergebnisse zusammen.
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) Fügt die Elemente eines Arrays hinzu und [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) Ruft eine Funktion für jedes Element und fügt die Ergebnisse zusammen.
 
-Verwenden, um eine Funktion auf jedes Element in einem Array auszuführen, ohne zu speichern die Rückgabewerte [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). Verwenden Sie für eine Funktion mit zwei Arrays gleicher Länge [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Wenn Sie auch ein Array der Ergebnisse der Funktion beibehalten müssen, verwenden Sie [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) oder [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), die zu einem Zeitpunkt wirkt auf zwei Arrays.
+Verwenden Sie zum Ausführen einer Funktion auf jedes Element in einem Array ohne zu speichern die Rückgabewerte [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). Verwenden Sie für eine Funktion mit zwei Arrays gleicher Länge [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Wenn Sie auch ein Array mit den Ergebnissen der Funktion behalten müssen, verwenden Sie [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) oder [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), die zwei Arrays zu einem Zeitpunkt verarbeitet.
 
-Die Variationen [ `Array.iteri` ](https://msdn.microsoft.com/library/8bbe2ed4-ada7-4906-ac3e-cb09f9db6486) und [ `Array.iteri2` ](https://msdn.microsoft.com/library/c041b91f-6080-45b7-867b-2ed983a90405) ermöglichen dem Index des Elements, das in die Berechnung einbezogen werden, die dasselbe gilt für [ `Array.mapi` ](https://msdn.microsoft.com/library/f7e45994-b0a1-49e6-8fb5-5641cea8fde4) und [ `Array.mapi2` ](https://msdn.microsoft.com/library/5edb33d2-47da-44e1-9290-40c00c47d5b0).
+Die Varianten [ `Array.iteri` ](https://msdn.microsoft.com/library/8bbe2ed4-ada7-4906-ac3e-cb09f9db6486) und [ `Array.iteri2` ](https://msdn.microsoft.com/library/c041b91f-6080-45b7-867b-2ed983a90405) ermöglichen dem Index des Elements, der Berechnung beteiligt sein; das gleiche gilt für [ `Array.mapi` ](https://msdn.microsoft.com/library/f7e45994-b0a1-49e6-8fb5-5641cea8fde4) und [ `Array.mapi2` ](https://msdn.microsoft.com/library/5edb33d2-47da-44e1-9290-40c00c47d5b0).
 
-Die Funktionen [ `Array.fold` ](https://msdn.microsoft.com/library/5ed9dd3b-3694-4567-94d0-fd9a24474e09), [ `Array.foldBack` ](https://msdn.microsoft.com/library/1121a453-dead-4711-a0ca-cc147752989c), [ `Array.reduce` ](https://msdn.microsoft.com/library/fd62a985-89fe-4f49-a9d4-0c808ac6749d), [ `Array.reduceBack` ](https://msdn.microsoft.com/library/4fdd4cbe-2238-4c5c-b286-597a7e9036f9), [ `Array.scan` ](https://msdn.microsoft.com/library/f6893608-9146-450d-9ebb-a0016803fbb0), und [ `Array.scanBack` ](https://msdn.microsoft.com/library/7610f406-7a5c-41db-a0ca-8e2a2a4826ad) führen Algorithmen aus, die alle Elemente eines Arrays einschließen. Auf ähnliche Weise, die Variationen [ `Array.fold2` ](https://msdn.microsoft.com/library/5c845087-d041-476e-8cc4-53ae6849ef79) und [ `Array.foldBack2` ](https://msdn.microsoft.com/library/aa51b405-df20-4c51-9998-a6530f7db862) führen Berechnungen für zwei Arrays.
+Die Funktionen [ `Array.fold` ](https://msdn.microsoft.com/library/5ed9dd3b-3694-4567-94d0-fd9a24474e09), [ `Array.foldBack` ](https://msdn.microsoft.com/library/1121a453-dead-4711-a0ca-cc147752989c), [ `Array.reduce` ](https://msdn.microsoft.com/library/fd62a985-89fe-4f49-a9d4-0c808ac6749d), [ `Array.reduceBack` ](https://msdn.microsoft.com/library/4fdd4cbe-2238-4c5c-b286-597a7e9036f9), [ `Array.scan` ](https://msdn.microsoft.com/library/f6893608-9146-450d-9ebb-a0016803fbb0), und [ `Array.scanBack` ](https://msdn.microsoft.com/library/7610f406-7a5c-41db-a0ca-8e2a2a4826ad) führen Algorithmen aus, die alle Elemente eines Arrays einschließen. Auf ähnliche Weise die Variationen [ `Array.fold2` ](https://msdn.microsoft.com/library/5c845087-d041-476e-8cc4-53ae6849ef79) und [ `Array.foldBack2` ](https://msdn.microsoft.com/library/aa51b405-df20-4c51-9998-a6530f7db862) führen Berechnungen für zwei Arrays.
 
-Diese Funktionen zum Ausführen von Berechnungen entsprechen den Funktionen mit dem gleichen Namen in der [listenmodul](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Verwendungsbeispiele finden Sie unter [listet](lists.md).
+Diese Funktionen zum Ausführen von Berechnungen entsprechen den Funktionen, mit dem gleichen Namen in der [listenmodul](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Verwendungsbeispiele finden Sie unter [listet](lists.md).
 
 ### <a name="modifying-arrays"></a>Ändern von Arrays
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Legt ein Element an einen angegebenen Wert fest. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) Legt einen Bereich von Elementen in einem Array auf einen angegebenen Wert fest. Das folgende Codebeispiel enthält ein Beispiel für `Array.fill`.
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) Legt ein Element mit einem angegebenen Wert fest. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) Legt einen Bereich von Elementen in einem Array mit einem angegebenen Wert fest. Das folgende Codebeispiel enthält ein Beispiel für `Array.fill`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -403,17 +405,17 @@ Sie können [ `Array.blit` ](https://msdn.microsoft.com/library/675e13e4-7fb9-4e
 
 ### <a name="sorting-arrays"></a>Sortieren von Arrays
 
-Verwendung [ `Array.sort` ](https://msdn.microsoft.com/library/c6679075-e7eb-463c-9be5-c89be140c312) , mithilfe der generischen Vergleichsfunktion ein Array zu sortieren. Verwendung [ `Array.sortBy` ](https://msdn.microsoft.com/library/144498dc-091d-4575-a229-c0bcbd61426b) an eine Funktion, die einen Wert generiert bezeichnet als eine *Schlüssel*, um mithilfe der generischen Vergleichsfunktion auf den Schlüssel zu sortieren. Verwendung [ `Array.sortWith` ](https://msdn.microsoft.com/library/699d3638-4244-4f42-8496-45f53d43ce95) , wenn Sie eine benutzerdefinierte Vergleichsfunktion bereitstellen möchten. `Array.sort`, `Array.sortBy` und `Array.sortWith` geben das sortierte Array als neues Array zurück. Die Variationen [ `Array.sortInPlace` ](https://msdn.microsoft.com/library/36f39947-8a88-4823-9e9b-e9d838d292e0), [ `Array.sortInPlaceBy` ](https://msdn.microsoft.com/library/7fb9d2dd-d461-4c67-8b43-b5c59fc12c3f), und [ `Array.sortInPlaceWith` ](https://msdn.microsoft.com/library/454f9e11-972d-47a6-a854-8031cb0c7b0b) das vorhandene Array anstatt ein neues Konto zu ändern.
+Verwendung [ `Array.sort` ](https://msdn.microsoft.com/library/c6679075-e7eb-463c-9be5-c89be140c312) , mithilfe der generischen Vergleichsfunktion ein Array zu sortieren. Verwenden [ `Array.sortBy` ](https://msdn.microsoft.com/library/144498dc-091d-4575-a229-c0bcbd61426b) an, die einen Wert generiert eine Funktion als bezeichnet ein *Schlüssel*, sortieren, indem Sie die generische Vergleichsfunktion auf den Schlüssel verwenden. Verwendung [ `Array.sortWith` ](https://msdn.microsoft.com/library/699d3638-4244-4f42-8496-45f53d43ce95) , wenn Sie eine benutzerdefinierte Vergleichsfunktion bereitstellen möchten. `Array.sort`, `Array.sortBy` und `Array.sortWith` geben das sortierte Array als neues Array zurück. Die Varianten [ `Array.sortInPlace` ](https://msdn.microsoft.com/library/36f39947-8a88-4823-9e9b-e9d838d292e0), [ `Array.sortInPlaceBy` ](https://msdn.microsoft.com/library/7fb9d2dd-d461-4c67-8b43-b5c59fc12c3f), und [ `Array.sortInPlaceWith` ](https://msdn.microsoft.com/library/454f9e11-972d-47a6-a854-8031cb0c7b0b) anstatt eine neue Ressourcengruppe des vorhandenen Arrays zu ändern.
 
 ### <a name="arrays-and-tuples"></a>Arrays und Tupel
 
-Die Funktionen [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) und [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) konvertieren Arrays von Tupelpaaren in Tupel von Arrays und umgekehrt. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) und [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) sind ähnlich, außer dass sie mit Tupeln von drei Elementen oder Tupeln von drei Arrays arbeiten.
+Die Funktionen [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) und [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) Arrays von Tupelpaaren in Tupel von Arrays und umgekehrt zu konvertieren. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) und [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) sind ähnlich, außer dass sie mit Tupeln von drei Elementen oder Tupeln von drei Arrays arbeiten.
 
 ## <a name="parallel-computations-on-arrays"></a>Parallele Berechnungen auf Arrays
 
 Das Modul [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-4050-9a5c-bcdb3f5cbb09) enthält Funktionen zum Ausführen paralleler Berechnungen für Arrays. Dieses Modul ist in Anwendungen nicht verfügbar, die auf Versionen vor Version 4 von .NET Framework abzielen.
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[F#; Typen](fsharp-types.md)
+- [F#-Sprachreferenz](index.md)
+- [F#; Typen](fsharp-types.md)

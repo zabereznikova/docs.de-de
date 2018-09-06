@@ -8,11 +8,11 @@ helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
 ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43469907"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857094"
 ---
 # <a name="getting-started-sample"></a>Beispiel 'Erste Schritte'
 Die Getting Started-Beispiel veranschaulicht, wie ein typischer Dienst und ein typischer Client mit Windows Communication Foundation (WCF) zu implementieren. Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  

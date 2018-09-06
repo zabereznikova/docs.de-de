@@ -1,20 +1,19 @@
 ---
 title: Funktionen (F#)
-description: Informationen Sie zu Funktionen in F# erläutert werden und wie f# üblichen Konstrukte der funktionalen Programmierung unterstützt.
+description: Informationen Sie zu Funktionen in f# und wie f# gemeinsamen Konstrukte der funktionalen Programmierung unterstützt.
 ms.date: 05/16/2016
-ms.openlocfilehash: c96dddb07ca671a9e823fb25f6f6c3788fe32fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566404"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43803911"
 ---
 # <a name="functions"></a>Funktionen
 
 Funktionen sind die grundlegende Einheit für die Ausführung des Programms in einer beliebigen Programmiersprache. So wie in anderen Sprachen auch, verfügt eine F#-Funktion über einen Namen, kann Parameter besitzen und Argumente verwenden und verfügt über Text. F# unterstützt auch funktionale Konstrukte der Programmierung, z.B. das Behandeln von Funktionen als Werte, Verwenden von unbenannten Funktionen als Ausdrücke, die Zusammensetzung von Funktionen zum Bilden neuer Funktionen, Funktionen mit Currying sowie die implizite Definition von Funktionen mit der teilweise Anwendung von Funktionsargumenten.
 
 Sie definieren Funktionen durch Verwendung des Schlüsselworts `let` oder – sofern die Funktion rekursiv ist – die Schlüsselwortkombination `let rec`.
-
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,6 +25,7 @@ let rec function-name parameter-list = recursive-function-body
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 Der *function-name* ist ein Bezeichner, der die Funktion darstellt. Der Bezeichner *parameter-list* besteht aus aufeinanderfolgenden Parametern, die durch Leerzeichen getrennt sind. Sie können einen expliziten Typ für jeden Parameter angeben, wie im Abschnitt „Parameter“ beschrieben. Wenn Sie keinen bestimmten Argumenttyp angeben, versucht der Compiler den Typ aus dem Funktionsrumpf abzuleiten. *function-body* besteht aus einem Ausdruck. Der Ausdruck, der den Funktionsrumpf bildet, ist in der Regel ein zusammengesetzter Ausdruck, bestehend aus einer Reihe von Ausdrücken, die in einem abschließenden Ausdruck enden, was der Rückgabewert ist. Der *return-type* ist ein Doppelpunkt, dem ein Typ folgt und der optional ist. Wenn Sie den Typ des Rückgabewerts nicht explizit angeben, bestimmt der Compiler den Rückgabetyp anhand des abschließenden Ausdrucks.
 
 Eine einfache Funktionsdefinition lautet ungefähr folgendermaßen:
@@ -38,8 +38,8 @@ Im vorherigen Beispiel ist der Funktionsname ist `f`, das Argument `x`, das den 
 
 Funktionen können als `inline` markiert werden. Informationen zu `inline` finden Sie unter [Inlinefunktionen](../functions/inline-functions.md).
 
-
 ## <a name="scope"></a>Bereich
+
 Auf jeder Ebene des Bereichs, der nicht der Modulbereich ist, ist es kein Fehler, einen Wert oder einen Namen einer Funktion Namen erneut zu verwenden. Wenn Sie einen Namen wiederverwenden, führt der später deklarierte Name zum Shadowing des früher deklarierten Namens. Im Bereich der obersten Ebene in einem Modul, müssen Namen jedoch eindeutig sein. Der folgende Code generiert z.B. einen Fehler, wenn er im Modulbereich erscheint, jedoch nicht, wenn er innerhalb einer Funktion angezeigt wird:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
@@ -47,8 +47,9 @@ Auf jeder Ebene des Bereichs, der nicht der Modulbereich ist, ist es kein Fehler
 Der folgende Code ist jedoch auf jeder Ebene des Bereichs akzeptabel:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
-    
-#### <a name="parameters"></a>Parameter
+
+### <a name="parameters"></a>Parameter
+
 Namen von Parametern werden nach dem Funktionsnamen aufgeführt. Sie können einen Typ für einen Parameter angeben, wie im folgenden Beispiel gezeigt:
 
 ```fsharp
@@ -69,16 +70,16 @@ let f x = (x, x)
 
 Die Funktion erstellt ein Tupel aus einem Argument eines beliebigen Typs. Da der Typ nicht angegeben ist, kann die Funktion mit jedem Argumenttyp verwendet werden. Weitere Informationen finden Sie unter [Automatische Verallgemeinerung](../generics/automatic-generalization.md).
 
-
 ## <a name="function-bodies"></a>Funktionsrümpfe
+
 Ein Funktionsrumpf kann Definitionen von lokalen Variablen und Funktionen enthalten. Diese Variablen und Funktionen sind im Bereich des Texts der aktuellen Funktion enthalten, jedoch nicht außerhalb. Wenn Sie die einfache Syntaxoption aktiviert haben, müssen Sie einen Einzug verwenden, um anzugeben, dass sich eine Definition in einem Funktionsrumpf befindet, so wie im folgenden Beispiel gezeigt.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 Weitere Informationen finden Sie unter [Richtlinien für das Formatieren von Code](../code-formatting-guidelines.md) und [Ausführliche Syntax](../verbose-syntax.md).
 
-
 ## <a name="return-values"></a>Rückgabewerte
+
 Der Compiler verwendet den letzten Ausdruck in einem Funktionsrumpf, um den Rückgabewert und den Typ zu bestimmen. Der Compiler kann den Typ des abschließenden Ausdrucks möglicherweise von vorherigen Ausdrücken ableiten. In der Funktion `cylinderVolume`, die im vorherigen Abschnitt gezeigt wird, wird bestimmt, dass der Typ `pi` vom Typ des Literals `3.14159` `float` ist. Der Compiler verwendet den Typ `pi`, um zu bestimmen, dass der Typ des Ausdrucks `h * pi * r * r` `float` ist. Daher ist der allgemeine Rückgabetyp der Funktion `float`.
 
 Um den Rückgabewert explizit anzugeben, schreiben Sie den Code wie folgt:
@@ -92,6 +93,7 @@ let cylinderVolume (radius : float) (length : float) : float
 ```
 
 ## <a name="calling-a-function"></a>Aufrufen einer Funktion
+
 Sie können Funktionen aufrufen, indem den Funktionsnamen, gefolgt von einem Leerzeichen angeben, und dann beliebige Argumente, die durch Leerzeichen getrennt sind. Um z.B. die Funktion **cylinderVolume** abzurufen und das Ergebnis dem Wert **vol** zuzuweisen, schreiben Sie folgenden Code:
 
 ```fsharp
@@ -99,6 +101,7 @@ let vol = cylinderVolume 2.0 3.0
 ```
 
 ## <a name="partial-application-of-arguments"></a>Teilweise Anwendung von Argumenten
+
 Wenn Sie weniger als die angegebene Anzahl von Argumenten angeben, erstellen Sie eine neue Funktion, die die übrigen Argumente erwartet. Diese Methode zum Behandeln von Argumenten  wird als *Currying* bezeichnet und ist ein Merkmal funktionaler Programmiersprachen wie F#. Nehmen wir beispielsweise an, dass Sie mit zwei Pipegrößen arbeiten: eine besitzt den Radius von **2,0** und die andere einen Radius von **3,0**. Sie können Funktionen erstellen, die die Menge der Pipe wie folgt bestimmen:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
@@ -106,16 +109,17 @@ Wenn Sie weniger als die angegebene Anzahl von Argumenten angeben, erstellen Sie
 Sie geben dann das zusätzliche Argument an, das für unterschiedliche Längen der Pipe mit den zwei verschiedenen Größen benötigt wird:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
-    
+
 ## <a name="recursive-functions"></a>Rekursive Funktionen
+
 *Rekursive Funktionen* sind Funktionen, die sich selbst aufrufen. Sie erfordern die Angabe des Schlüsselworts **rec**, das dem Schlüsselwort **let** folgt. Rufen Sie die rekursive Funktion im Rumpf der Funktion so auf, wie Sie auch jede andere Funktion aufrufen würden. Die folgende rekursive Funktion berechnet die *n*te Fibonacci-Zahl. Die die Fibonacci-Zahlenfolge ist seit dem Altertum bekannt und ist eine Sequenz, in der die einzelnen aufeinander folgenden Zahlen die Summe der vorherigen zwei Zahlen in der Sequenz sind.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 Einige rekursive Funktionen können auf einem Programmstapel möglicherweise zum Überlauf führen oder ineffizient ausgeführt werden, wenn Sie sie nicht sorgfältig und unter Beachtung besonderer Methoden schreiben, z.B. mit der Verwendung von Akkumulatoren und Fortsetzungen.
 
-
 ## <a name="function-values"></a>Funktionswerte
+
 In F# werden alle Funktionen als Werte betrachtet. Sie sind in der Tat als *Funktionswerte* bekannt. Da Funktionen Werte sind, können sie als Argumente für andere Funktionen oder in anderen Kontexten verwendet werden, in denen Werte verwendet werden. Es folgt ein Beispiel für eine Funktion, die den Wert einer Funktion als Argument akzeptiert:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
@@ -132,16 +136,16 @@ Mehrere Argumente werden durch aufeinander folgende `->`-Token getrennt, wie im 
 
 Das Ergebnis ist 200.
 
-
 ## <a name="lambda-expressions"></a>Lambda-Ausdrücke
+
 Ein *Lambdaausdruck* ist eine unbenannte Funktion. Im vorherigen Beispiel könnten Sie Lambdaausdrücke verwenden, anstatt benannte Funktionen als **increment** und **mul** zu definieren.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
 Sie definieren Lambdaausdrücke mithilfe des `fun`-Schlüsselworts. Ein Lambdaausdruck ähnelt einer Funktionsdefinition, außer dass statt eines `=`-Tokens das `->`-Token zum Trennen der Argumentliste vom Funktionsrumpf verwendet wird. So wie in einer regulären Funktionsdefinition, können Argumenttypen explizit abgeleitet oder angegeben werden. Der Rückgabetyp des Lambdaausdrucks wird vom Typ des letzten Ausdrucks im Text abgeleitet. Weitere Informationen finden Sie unter [Lambda-Ausdrücke: Das `fun`-Schlüsselwort (F#)](../functions/lambda-expressions-the-fun-keyword.md).
 
-
 ## <a name="function-composition-and-pipelining"></a>Funktionskomposition und Pipelining
+
 Funktionen in F# können aus anderen Funktionen zusammengestellt werden. Die Zusammensetzung der beiden Funktionen **function1** und **function2** ist eine weitere Funktion, die die Anwendung von **function1** gefolgt von der Anwendung von **function2** darstellt:
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
@@ -195,10 +199,10 @@ let result4 = Pipeline2 2
 ```
 
 ## <a name="overloading-functions"></a>Überladen von Funktionen
+
 Sie können die Methoden eines Typs überladen, jedoch keine Funktionen. Weitere Informationen finden Sie unter [Methoden](../members/methods.md).
 
-
 ## <a name="see-also"></a>Siehe auch
-[Werte](../values/index.md)
 
-[F#-Sprachreferenz](../index.md)
+- [Werte](../values/index.md)
+- [F#-Sprachreferenz](../index.md)
