@@ -8,22 +8,22 @@ helpviewer_keywords:
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
 ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554902"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863055"
 ---
-# <a name="combobox"></a><span data-ttu-id="cdac3-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="cdac3-102">ComboBox</span></span>
-<span data-ttu-id="cdac3-103">Die <xref:System.Windows.Controls.ComboBox> -Steuerelement stellt Benutzern eine Liste mit Optionen.</span><span class="sxs-lookup"><span data-stu-id="cdac3-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="cdac3-104">Die Liste wird angezeigt und ausgeblendet werden, wie das Steuerelement erweitert bzw. reduziert.</span><span class="sxs-lookup"><span data-stu-id="cdac3-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="cdac3-105">In seinem Standardzustand verwenden wird die Liste zeigt nur eine Auswahl reduziert.</span><span class="sxs-lookup"><span data-stu-id="cdac3-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="cdac3-106">Der Benutzer klickt auf eine Schaltfläche, um die vollständige Liste der Optionen anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="cdac3-106">The user clicks a button to see the complete list of options.</span></span>  
+# <a name="combobox"></a><span data-ttu-id="7a552-102">ComboBox</span><span class="sxs-lookup"><span data-stu-id="7a552-102">ComboBox</span></span>
+<span data-ttu-id="7a552-103">Die <xref:System.Windows.Controls.ComboBox> -Steuerelement stellt Benutzern eine Liste mit Optionen.</span><span class="sxs-lookup"><span data-stu-id="7a552-103">The <xref:System.Windows.Controls.ComboBox> control presents users with a list of options.</span></span> <span data-ttu-id="7a552-104">Die Liste wird angezeigt und ausgeblendet werden, wie das Steuerelement erweitert bzw. reduziert.</span><span class="sxs-lookup"><span data-stu-id="7a552-104">The list is shown and hidden as the control expands and collapses.</span></span> <span data-ttu-id="7a552-105">In seinem Standardzustand verwenden wird die Liste zeigt nur eine Auswahl reduziert.</span><span class="sxs-lookup"><span data-stu-id="7a552-105">In its default state, the list is collapsed, displaying only one choice.</span></span> <span data-ttu-id="7a552-106">Der Benutzer klickt auf eine Schaltfläche, um die vollständige Liste der Optionen anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="7a552-106">The user clicks a button to see the complete list of options.</span></span>  
   
- <span data-ttu-id="cdac3-107">Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.ComboBox> in verschiedenen Zuständen.</span><span class="sxs-lookup"><span data-stu-id="cdac3-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
+ <span data-ttu-id="7a552-107">Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.ComboBox> in verschiedenen Zuständen.</span><span class="sxs-lookup"><span data-stu-id="7a552-107">The following illustration shows a <xref:System.Windows.Controls.ComboBox> in different states.</span></span>  
   
- <span data-ttu-id="cdac3-108">![Kombinationsfeld in Standard- und gedrückt-Zuständen](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="cdac3-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
-<span data-ttu-id="cdac3-109">Reduziert und erweitert</span><span class="sxs-lookup"><span data-stu-id="cdac3-109">Collapsed and expanded</span></span>  
+ <span data-ttu-id="7a552-108">![Kombinationsfeld in Standard- und gedrückt-Zuständen](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span><span class="sxs-lookup"><span data-stu-id="7a552-108">![Combo boxes in default and pressed states](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")</span></span>  
+<span data-ttu-id="7a552-109">Reduziert und erweitert</span><span class="sxs-lookup"><span data-stu-id="7a552-109">Collapsed and expanded</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="cdac3-110">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="cdac3-110">In This Section</span></span>  
- [<span data-ttu-id="cdac3-111">Vorgehensweise: Abrufen eines ComboBoxItem</span><span class="sxs-lookup"><span data-stu-id="cdac3-111">How to: Get a ComboBoxItem</span></span>](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+## <a name="in-this-section"></a><span data-ttu-id="7a552-110">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7a552-110">In This Section</span></span>  
+ [<span data-ttu-id="7a552-111">Vorgehensweise: Abrufen eines ComboBoxItem</span><span class="sxs-lookup"><span data-stu-id="7a552-111">How to: Get a ComboBoxItem</span></span>](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
-## <a name="reference"></a><span data-ttu-id="cdac3-112">Referenz</span><span class="sxs-lookup"><span data-stu-id="cdac3-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7a552-112">Referenz</span><span class="sxs-lookup"><span data-stu-id="7a552-112">Reference</span></span>  
  <xref:System.Windows.Controls.ComboBox>
