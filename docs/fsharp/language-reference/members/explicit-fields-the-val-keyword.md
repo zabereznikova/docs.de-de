@@ -1,17 +1,17 @@
 ---
 title: 'Explizite Felder: Das val-Schlüsselwort (F#)'
-description: Erfahren Sie mehr über die F#-"Val" Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs deklarieren.
+description: Erfahren Sie mehr über die F#-'Wert'-Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs deklarieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2bd1aae24a5823ddcd6bb8f121d8110f4a211a6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876238"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das val-Schlüsselwort
 
 Das `val`-Schlüsselwort wird zum Deklarieren eines Speicherort zum Speichern eines Werts in einer Klasse oder einem Strukturtyp verwendet, ohne ihn zu initialisieren. Speicherorte, die auf diese Weise deklariert heißen *explizite Felder*. Das `val`-Schlüsselwort kann auch zusammen mit dem `member`-Schlüsselwort verwendet werden, um eine automatisch implementierte Eigenschaft zu deklarieren. Weitere Informationen zu automatisch implementierte Eigenschaften finden Sie unter [Eigenschaften](properties.md).
-
 
 ## <a name="syntax"></a>Syntax
 
@@ -20,11 +20,12 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 In der Regel werden Felder in einer Klasse oder einem Strukturtyp durch eine `let`-Bindung definiert. `let`-Bindungen müssen jedoch als Teil des Klassenkonstruktors initialisiert werden, was nicht immer möglich, notwendig oder gewünscht ist. Sie können das `val`-Schlüsselwort verwenden, wenn Sie ein nicht initialisiertes Feld implementieren möchten.
 
 Explizite Felder können statisch oder nicht statisch sein. Die *Zugriffsmodifizierer* kann `public`, `private`, oder `internal`. Standardmäßig sind explizite Felder öffentlich. Dies unterscheidet sich von `let`-Bindungen in Klassen, die immer privat sind.
 
-Die ["DefaultValue"](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) Attribut muss für explizite Felder in Klassentypen, die über einen primären Konstruktor verfügen. Dieses Attribut gibt an, dass das Feld mit 0 (null) initialisiert wird. Der Typ des Felds muss die Initialisierung mit 0 (null) unterstützen. Ein Typ unterstützt die Initialisierung mit 0 (null), wenn er eine der folgenden Bedingungen erfüllt:
+Die [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) Attribut muss für explizite Felder in Klassentypen, die einen primären Konstruktor verfügen. Dieses Attribut gibt an, dass das Feld mit 0 (null) initialisiert wird. Der Typ des Felds muss die Initialisierung mit 0 (null) unterstützen. Ein Typ unterstützt die Initialisierung mit 0 (null), wenn er eine der folgenden Bedingungen erfüllt:
 
 - Ein primitiver Typ, der einen Wert von 0 (null) hat.
 
@@ -34,15 +35,12 @@ Die ["DefaultValue"](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-
 
 - Eine Struktur, deren Felder alle einen Standardwert von 0 (null) unterstützen.
 
-
 Ein unveränderliches Feld mit der Bezeichnung `someField` verfügt zum Beispiel über ein zugrunde liegendes Feld in der kompilierten .NET-Darstellung, das `someField@` heißt, und Sie greifen auf den gespeicherten Wert mit einer Eigenschaft mit der Bezeichnung `someField` zu.
 
 Bei einem veränderlichen Feld ist die kompilierte .NET-Darstellung ein .NET-Feld.
 
-
->[!WARNING] 
+>[!WARNING]
 `Note` .NET Framework-Namespaces `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
-
 
 Der folgende Code zeigt die Verwendung expliziter Felder und zum Vergleich eine `let`-Bindung in einer Klasse, die über einen primären Konstruktor verfügt. Beachten Sie, dass das `let`-gebundene Feld `myInt1` privat ist. Wenn das `let`-gebundene Feld `myInt1` von einer Membermethode referenziert wird, ist der Selbstbezeichner `this` nicht erforderlich. Wenn Sie jedoch die expliziten Felder `myInt2` und `myString` referenzieren, ist der Selbstbezeichner erforderlich.
 
@@ -71,10 +69,8 @@ Explizite Felder sind nicht für die routinemäßige Verwendung gedacht. Im Allg
 
 Wenn die Schlüsselwörter `member val` zusammen in einer Typdefinition angezeigt werden, handelt es sich um eine Definition einer automatisch implementierten Eigenschaft. Weitere Informationen finden Sie unter [Eigenschaften](properties.md).
 
-
 ## <a name="see-also"></a>Siehe auch
-[Eigenschaften](properties.md)
 
-[Mitglieder](index.md)
-
-[`let`-Bindungen in Klassen](let-bindings-in-classes.md)
+- [Eigenschaften](properties.md)
+- [Mitglieder](index.md)
+- [`let`-Bindungen in Klassen](let-bindings-in-classes.md)

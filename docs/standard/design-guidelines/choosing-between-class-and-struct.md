@@ -14,46 +14,47 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bb05b825113c025781a790dc206d500633a3b08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573580"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865552"
 ---
 # <a name="choosing-between-class-and-struct"></a>Auswählen zwischen Klasse und Struktur
-Eine der grundlegenden Designentscheidungen, die jede Framework Designer portalclient ist, ob einen Typ als Klasse (ein Verweistyp) oder als eine Struktur (Werttyp) entworfen. Die Kenntnis der Unterschiede im Verhalten von Verweistypen und Werttypen ist in dieser Auswahl entscheidend.  
+Eine der grundlegenden entwurfsentscheidungen, die alle Framework-Designer zeigt ist, ob einen Typ als eine Klasse (Referenztyp) oder als eine Struktur (Werttyp) entwerfen. Die Kenntnis der Unterschiede im Verhalten von Verweistypen und Werttypen ist in dieser Auswahl entscheidend.  
   
- Die erste der Unterschied zwischen der Referenztypen und Werttypen, die wir in Betracht ziehen, besteht darin, dass die Verweistypen sind, auf dem Heap reserviert und Garbage Collection, wohingegen Werttypen entweder auf dem Stapel zugeordnet werden oder Inline im mit Typen und freigegeben, wenn der Stapel Entlädt oder wenn ihrem enthaltenden Typ Ruft die Zuordnung aufgehoben. Daher werden speicherzuordnungen und Aufhebungen von Werttypen im Allgemeinen günstiger als speicherzuordnungen und Aufhebungen von Verweistypen sind.  
+ Das erste der Unterschied zwischen Verweistypen und Werttypen, die wir berücksichtigen werden, besteht darin, dass Verweistypen sind, auf dem Heap reserviert und die Garbage Collection, während bei Werttypen werden entweder auf dem Stapel zugeordnet oder Inline im mit Typen und aufgehoben, wenn des Stapels Entlädt oder bei ihrem enthaltenden Typ Ruft die Zuordnung aufgehoben. Speicherzuordnungen und Aufhebungen von Werttypen werden daher im Allgemeinen günstiger sein als die speicherzuordnungen und Aufhebungen von Verweistypen sind.  
   
- Als Nächstes Arrays von Typen sind Verweisdaten Out-of-Line, d. h. das Array, das Elemente sind nur Verweise auf Instanzen des Verweistyps befinden, auf dem Heap zugeordnet. Wert Typ Arrays sind Inline, was bedeutet, dass die Elemente des Arrays die eigentlichen Instanzen des Werttyps sind zugeordnet. Aus diesem Grund werden speicherzuordnungen und Aufhebungen von Wert Typ Arrays weitaus günstigere als speicherzuordnungen und Aufhebungen von Verweis Typ Arrays. Darüber hinaus weisen Wert Typ Arrays in den meisten Fällen wesentlich bessere Positionierung von Verweisen auf.  
+ Als Nächstes Arrays von Verweisen auf Typen werden Out-of-Line, d. h. das Array die Elemente sind nur die Verweise auf Instanzen des Referenztyps auf dem Heap zugeordnet. Wert Typ Arrays werden Inline, was bedeutet, dass die Elemente des Arrays, die eigentlichen Instanzen des Werttyps sind zugeordnet. Aus diesem Grund werden speicherzuordnungen und Aufhebungen von Typ Wertarrays wesentlich günstiger als speicherzuordnungen und Aufhebungen von Verweistyparrays. Darüber hinaus eine Wertarrays-Typ in der Mehrheit der Fälle viel bessere Positionierung von Verweisen auf.  
   
- Nächste Unterschied bezieht sich auf die speicherauslastung. Werttypen Abrufen mittels Boxing konvertiert, wenn ein Verweistyp oder eine der Schnittstellen, die sie implementieren umgewandelt. Erhalten sie mittels Unboxing konvertiert Wenn wieder auf den Werttyp umgewandelt. Da sind Objekte, die auf dem Heap zugeordnet sind und Garbage Collection, viel mit Boxing und unboxing können sich negativ auf dem Heap der Garbage Collector und letztlich die Leistung der Anwendung verfügen.  Im Gegensatz dazu erfolgt keine solche Boxing wie Verweistypen umgewandelt werden.  
+ Nächste Unterschied bezieht sich auf die speicherauslastung. Werttypen erste geschachtelt beim Konvertieren in ein Verweistyp oder eine der Schnittstellen, die sie implementieren. Sie erhalten nicht geschachtelte beim Konvertieren in den Werttyp zurück. Da Felder Objekte sind, die auf dem Heap reserviert sind und Garbage Collection zu viel Boxing und unboxing können sich negativ auf dem Heap der Garbage Collector und letztlich die Leistung der Anwendung haben.  Im Gegensatz dazu tritt auf, keine solche Boxing-Konvertierung, da Verweistypen umgewandelt werden.  
   
- Im nächsten Schritt kopieren Verweis Zuweisung den Verweis, während der Zuweisung Wert den gesamten Wert kopieren. Daher sind Zuweisungen von großen Verweistypen günstiger als Zuweisungen von Datentypen mit umfangreichen Werten.  
+ Kopieren Sie anschließend den Verweis-Typ-Zuweisungen die Referenz während der Wert bei typzuweisungen kopieren Sie den gesamten Wert. Aus diesem Grund sind Zuweisungen von großen Verweistypen günstiger als Zuweisungen von Typen mit umfangreichen Werten.  
   
- Schließlich werden die Verweistypen als Verweis übergeben, während Werttypen als Wert übergeben werden. Änderungen an den eine Instanz eines Verweistyps betreffen alle Verweise auf die Instanz verweist. Wert von Typinstanzen werden kopiert, wenn sie als Wert übergeben werden. Wenn eine Instanz eines Werttyps geändert wird, beeinflusst natürlich nicht seine Kopien. Da die Kopien werden nicht explizit vom Benutzer erstellt, aber es werden implizit erstellt, wenn Argumente übergeben oder zurückgeben Werte zurückgegeben werden, können Werttypen, die geändert werden können für viele Benutzer verwirrend sein. Aus diesem Grund sollten Werttypen unveränderlich sein.  
+ Schließlich werden die Verweistypen als Verweis übergeben, während Werttypen als Wert übergeben werden. Änderungen an einer Instanz eines Referenztyps Auswirkungen auf alle Verweise auf die Instanz verweist. Wert von Typinstanzen werden kopiert, wenn sie nach Wert übergeben werden. Wenn eine Instanz eines Werttyps geändert wird, wirkt es natürlich seine Kopien sich nicht. Da die Kopien werden nicht explizit vom Benutzer erstellt, aber es werden implizit erstellt werden, wenn Argumente übergeben oder zurückgegeben wird, dass die Werte zurückgegeben werden, können Werttypen, die geändert werden können, für viele Benutzer verwirrend sein. Aus diesem Grund sollten Werttypen unveränderlich sein.  
   
- Als Faustregel gilt sollte die meisten Typen in einem Framework Klassen sein. Es gibt jedoch einige Situationen, in denen die Merkmale eines Werttyps besser geeignet ist, verwenden von Strukturen zu vereinfachen.  
+ Als Faustregel gilt sollten die meisten Typen in einem Framework Klassen sein. Es gibt jedoch einige Situationen, in denen die Merkmale eines Werttyps besser geeignet, verwenden Sie Strukturen zu erleichtern.  
   
  **✓ CONSIDER** eine Struktur anstelle einer Klasse definieren, wenn Instanzen des Typs klein und im Allgemeinen kurzlebig sind oder in anderen Objekten eingebettet sind.  
   
  **X AVOID** eine Struktur definieren, es sei denn, der Typ aller folgende Merkmale aufweist:  
   
--   Logisch stellt dar, einen einzelnen Wert, der ähnlich wie primitive Typen (`int`, `double`usw..).  
+-   Es logisch einen einzelnen Wert, der ähnlich wie primitive Typen darstellt (`int`, `double`usw..).  
   
--   Es wurde eine Instanzgröße unter 16 Bytes.  
+-   Es hat eine Größe der Instanz unter 16 Bytes.  
   
 -   Er ist unveränderlich.  
   
--   Es wird kein häufig geschachtelt werden.  
+-   Es wird keine häufig geschachtelt werden.  
   
  In allen anderen Fällen sollten Sie die Typen als Klassen definieren.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

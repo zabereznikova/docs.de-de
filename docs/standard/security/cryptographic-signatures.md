@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589804"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869992"
 ---
 # <a name="cryptographic-signatures"></a>Kryptografische Signaturen
 <a name="top"></a> Kryptografische digitale Signaturen verwenden Algorithmen für öffentliche Schlüssel, um die Datenintegrität sicherzustellen. Wenn Sie Daten mit einer digitalen Signatur signieren, kann eine andere Person die Signatur überprüfen und kann nachweisen, dass die Daten von Ihnen stammen und nicht geändert wurde, nachdem Sie sie signiert haben. Weitere Informationen zu digitalen Signaturen finden Sie unter [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
@@ -121,7 +121,7 @@ class Class1
   
 -   Der vom Signaturgeber verwendete Hashalgorithmus.  
   
- Zum Überprüfen einer Signatur, die von der <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> -Klasse signiert wurde, verwenden Sie die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse. Die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse muss dem öffentlichen Schlüssel des Signaturgebers bereitgestellt werden. Sie benötigen die Werte für den Modulo und den Exponenten, um den öffentlichen Schlüssel anzugeben. (Der Anbieter, der das öffentliche/private Schlüsselpaar generiert hat, sollte diese Werte bereitstellen.) Erstellen Sie zunächst eine <xref:System.Security.Cryptography.RSACryptoServiceProvider> Objekt, das den öffentlichen Schlüssel enthält, die die Signatur überprüft wird, und initialisieren Sie ein <xref:System.Security.Cryptography.RSAParameters> Struktur den Modulo und einen Exponenten Werten, die den öffentlichen Schlüssel angeben.  
+ Zum Überprüfen einer Signatur, die von der <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> -Klasse signiert wurde, verwenden Sie die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse. Die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse muss dem öffentlichen Schlüssel des Signaturgebers bereitgestellt werden. Sie benötigen die Werte für den Modulo und den Exponenten, um den öffentlichen Schlüssel anzugeben. (Der Anbieter, der das öffentliche/private Schlüsselpaar generiert hat, sollte diese Werte bereitstellen.) Erstellen Sie zunächst eine <xref:System.Security.Cryptography.RSACryptoServiceProvider> Objekt, das den öffentlichen Schlüssel enthält, die die Signatur überprüft wird, und initialisieren Sie ein <xref:System.Security.Cryptography.RSAParameters> Struktur mit den Modulo- und Exponentenwerte-Werten, die den öffentlichen Schlüssel angeben.  
   
  Der folgende Code zeigt die Erstellung einer <xref:System.Security.Cryptography.RSAParameters> -Struktur. Die `Modulus` -Eigenschaft wird auf den Wert eines Bytearrays namens `ModulusData` und die `Exponent` -Eigenschaft auf den Wert eines Bytearrays namens `ExponentData`festgelegt.  
   
@@ -172,5 +172,6 @@ else
   
  Dieses Codefragment zeigt "`The signature is valid`" an, wenn die Signatur gültig ist, und "`The signature is not valid`", wenn sie ungültig ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

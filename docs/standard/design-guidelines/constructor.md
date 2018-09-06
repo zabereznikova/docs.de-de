@@ -14,71 +14,72 @@ helpviewer_keywords:
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d7ca279dc1626cd526910af93326280bcd8301d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ad920c8028b102a13fdfe928d21768538e25b0f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575556"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868153"
 ---
 # <a name="constructor-design"></a>Konstruktorentwurf
 Es gibt zwei Arten von Konstruktoren: Geben Sie die Konstruktoren und Instanz.  
   
- Typkonstruktoren sind statisch und werden von der CLR ausgeführt, bevor der Typ verwendet wird. Instanzkonstruktoren wird ausgeführt, wenn eine Instanz eines Typs erstellt wird.  
+ Typkonstruktoren sind statisch und von der CLR ausgeführt werden, bevor der Typ verwendet wird. Instanzkonstruktoren wird ausgeführt, wenn eine Instanz eines Typs erstellt wird.  
   
- Typkonstruktoren können keine Parameter annimmt. Instanzkonstruktoren können. Instanzkonstruktoren, die keine Parameter werden häufig Standardkonstruktoren bezeichnet.  
+ Typen können keine Parameter annimmt. Instanzkonstruktoren können. Instanzkonstruktoren, die Parameter annehmen, nicht werden standardmäßige Konstruktoren häufig bezeichnet werden.  
   
- Konstruktoren sind die meisten natürliche Möglichkeit zum Erstellen von Instanzen eines Typs. Die meisten Entwickler suchen und versuchen, einen Konstruktor verwenden, bevor sie alternative Methoden zum Erstellen von Instanzen (z. B. Factorymethoden) in Betracht ziehen.  
+ Konstruktoren sind die beste Möglichkeit zum Erstellen von Instanzen eines Typs. Die meisten Entwickler durchsucht und versuchen, einen Konstruktor zu verwenden, bevor sie alternative Methoden zum Erstellen von Instanzen (z. B. Factorymethoden) in Betracht ziehen.  
   
  **✓ CONSIDER** einfach, im Idealfall Standard, Konstruktoren bereitstellen.  
   
- Ein einfache Konstruktor hat eine sehr kleine Anzahl von Parametern, und alle Parameter sind primitive Typen oder Enumerationen. Diese einfache Konstruktoren Verwendbarkeit des Frameworks.  
+ Eine sehr kleine Anzahl von Parametern über einen einfachen Konstruktor verfügt, und alle Parameter sind primitive oder Enumerationen. Diese einfache Konstruktoren erhöhen Nutzbarkeit des Frameworks.  
   
  **✓ CONSIDER** eine statische Factorymethode statt einen Konstruktor verwenden, wenn die Semantik des gewünschten Vorgangs nicht direkt der Erstellung einer neuen Instanz zugeordnet sind, oder der Konstruktor Entwurfsrichtlinien unnatürlichen idealer.  
   
  **✓ DO** Konstruktorparameter als Tastenkombinationen verwenden, für die wichtigsten Eigenschaften festlegen.  
   
- Es darf kein Unterschied in der Semantik zwischen mit dem leeren Konstruktor gefolgt von einigen Eigenschaftensätze und mit einem Konstruktor mit mehreren Argumenten.  
+ Es muss kein Unterschied in der Semantik zwischen mit dem leeren Konstruktor gefolgt von einigen Eigenschaftensätze und über einen Konstruktor mit mehreren Argumenten.  
   
  **✓ DO** verwenden Sie denselben Namen für Konstruktorparameter und eine Eigenschaft aus, wenn der Konstruktorparameter verwendet werden, einfach die Eigenschaft festgelegt.  
   
- Der einzige Unterschied zwischen Eigenschaften und solche Parameter sollten Groß-/Kleinschreibung.  
+ Der einzige Unterschied zwischen Eigenschaften und solche Parameter muss Groß-/Kleinschreibung unterscheiden.  
   
  **✓ DO** nur minimale Arbeitsschritte im Konstruktor.  
   
- Konstruktoren tun nicht viel Arbeit als Capture die Konstruktorparametern. Die Kosten für weitere Verarbeitungsschritte sollten verzögert werden, bis die erforderlich sind.  
+ Konstruktoren tun nicht viel Arbeit als Capture Parameter des Konstruktors. Die Kosten für weitere Verarbeitungsschritte muss verzögert werden, bis erforderlich.  
   
  **✓ DO** Ausnahmen von Instanzkonstruktoren, falls zutreffend.  
   
  **✓ DO** in Klassen, die öffentlichen Standardkonstruktor explizit deklariert werden, wenn ein solcher Konstruktor erforderlich ist.  
   
- Wenn Sie keine Konstruktoren explizit auf einen Typ deklarieren nicht, werden viele Sprachen (z. B. c#) einen öffentlichen Standardkonstruktor automatisch hinzugefügt. (Abstrakte Klassen get einen geschützten Konstruktor.)  
+ Wenn Sie für einen Typ explizit keine Konstruktoren deklarieren nicht, werden viele Sprachen (z. B. C# -Referenz) automatisch einen öffentlichen Standardkonstruktor hinzugefügt. (Abstrakte Klassen erhalten einen geschützten Konstruktor.)  
   
- Eine Klasse einen parametrisierten Konstruktor hinzugefügt wird verhindert, dass den Compiler den Standardkonstruktor hinzufügen. Dadurch wird häufig eine versehentliche Änderungen.  
+ Eine Klasse einen parametrisierten Konstruktor hinzugefügt wird verhindert, dass den Compiler die standardmäßigen Konstruktor hinzufügt. Dies führt häufig zu versehentlichen Änderungen.  
   
  **X AVOID** explizit standardmäßige Konstruktoren für Strukturen definiert.  
   
- Dadurch Arrayerstellung schneller, da der Standardkonstruktor nicht definiert ist, nicht enthalten ist jeder Steckplatz im Array ausgeführt werden. Beachten Sie, dass Strukturen parameterlose Konstruktoren aus diesem Grund haben viele Compiler, z. B. c#, nicht.  
+ Dadurch Arrayerstellung schneller, da der Standardkonstruktor nicht definiert ist, es nicht unbedingt auf alle Slot im Array ausgeführt werden. Beachten Sie, dass viele Compiler, u. a. c#, Strukturen, die aus diesem Grund parameterlose Konstruktoren besitzen nicht zulassen.  
   
  **X AVOID** virtuelle Member für ein Objekt in seinem Konstruktor aufrufen.  
   
- Aufrufen eines virtuellen Members bewirkt die am stärksten abgeleitete Außerkraftsetzung, die aufgerufen wird, auch wenn Sie der Konstruktor des am weitesten abgeleiteten Typ noch vollständig nicht ausgeführt wurde.  
+ Aufrufen eines virtuellen Members bewirkt die am stärksten abgeleitete Außerkraftsetzung aufgerufen wird, selbst wenn der Konstruktor, der am weitesten abgeleiteten Typ noch vollständig nicht ausgeführt wurde.  
   
-### <a name="type-constructor-guidelines"></a>Richtlinien-Konstruktor  
+### <a name="type-constructor-guidelines"></a>Richtlinien für die Typen-Konstruktor  
  **✓ DO** als statische Konstruktoren privat festlegen.  
   
- Ein statischer Konstruktor, der einen Klassenkonstruktor, so genannte wird verwendet, Initialisierung eines Typs. Die CLR ruft den statischen Konstruktor auf, bevor die erste Instanz des Typs erzeugt wird bzw. irgendwelche statischen Member für diesen Typ aufgerufen werden. Der Benutzer hat keine Kontrolle darüber, wann der statische Konstruktor aufgerufen wird. Wenn ein statischer Konstruktor nicht privat ist, kann er von anderen Codes als die CLR aufgerufen werden. Je nach den Operationen, die im Konstruktor ausgeführt wird kann dies unerwartetem Verhalten führen. Der C#-Compiler erzwingt, dass statische Konstruktoren privat sein.  
+ Ein statischer Konstruktor auch einen Klassenkonstruktor, genannt wird verwendet, um einen Typ zu initialisieren. Die CLR ruft den statischen Konstruktor aus, bevor die erste Instanz des Typs erstellt oder auf irgendwelche statischen Member für diesen Typ aufgerufen werden. Der Benutzer hat keine Kontrolle darüber, wenn der statische Konstruktor aufgerufen wird. Wenn ein statischer Konstruktor nicht privat ist, kann es durch anderen Code als die CLR aufgerufen werden. Je nach den Operationen, die im Konstruktor ausgeführt wird kann dies unerwartetes Verhalten führen. Der C#-Compiler erzwingt, dass statische Konstruktoren privat sein.  
   
  **X DO NOT** lösen Ausnahmen aus statischen Konstruktoren.  
   
- Wenn eine Ausnahme aus eines Konstruktors eines Typs ausgelöst wird, ist der Typ nicht in der aktuellen Anwendungsdomäne verwendet werden kann.  
+ Wenn von einem Typkonstruktor eine Ausnahme ausgelöst wird, ist der Typ in der aktuellen Anwendungsdomäne nicht verwendet werden.  
   
  **✓ CONSIDER** statische Felder von Inline initialisieren, anstatt explizit statische Konstruktoren zu verwenden, da die Common Language Runtime ist in der Lage, zur Optimierung der Leistung von Typen, die nicht über einen explizit definierten statischen Konstruktor verfügen.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

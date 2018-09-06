@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77d86e2ade841b715fc4bea8350d4e043bcb91b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 016f19c7141ebaf9b5c1f03adc263b689489119b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581790"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874208"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Gewusst wie: Erstellen eines WindowsPrincipal-Objekts
 Es gibt zwei Möglichkeiten, ein <xref:System.Security.Principal.WindowsPrincipal>-Objekt zu erstellen. Diese hängen davon ab, ob Code eine rollenbasierte Validierung mehrfach oder nur einmal ausführen muss.  
@@ -77,5 +77,6 @@ Es gibt zwei Möglichkeiten, ein <xref:System.Security.Principal.WindowsPrincipa
   
 3.  Nachdem das Principal-Objekt erstellt wurde, können Sie es mit einer von mehreren Methoden überprüfen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)

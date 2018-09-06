@@ -9,40 +9,41 @@ helpviewer_keywords:
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d47934c3fed17f75a97ef5da0397c6ceba53d68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571112"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873941"
 ---
 # <a name="field-design"></a>Feldentwurf
-Das Prinzip der Kapselung ist einer der wichtigsten Konzepte in eines objektorientierten Entwurfs. Dieses Prinzip gibt an, dass in einem Objekt gespeicherte Daten nur auf dieses Objekt zugegriffen werden soll.  
+Das Prinzip der Kapselung ist eines der wichtigsten Konzepte in objektorientierten Entwurf. Dieses Prinzip besagt, dass die Daten in ein Objekt nur dieses Objekt zugegriffen werden soll.  
   
- Eine gute Möglichkeit, interpretiert das Prinzip ist zu sagen, dass ein Typ, damit Änderungen an Felder des Typs (Änderungen, Name oder Typ) vorgenommen werden können, ohne Unterbrechung Code nur für Elemente des Typs entworfen werden soll. Diese Interpretation impliziert sofort, dass alle Felder privat sein müssen.  
+ Eine gute Möglichkeit, das Prinzip zu interpretieren ist zu sagen, dass ein Typ sollten so konzipiert sein, dass Änderungen an Feldern dieses Typs (ändert sich Name oder Typ) erfolgen können, ohne Code, außer für Elemente des Typs. Dieser Interpretation impliziert sofort, dass alle Felder privat sein müssen.  
   
- Wir ausschließen Konstanten und statische schreibgeschützte Felder aus dieser Einschränkung strict, da Suchfelder, fast per Definition nie erforderlich sind, ändern.  
+ Wir schließen Konstanten und statische schreibgeschützte Felder aus dieser Einschränkung strict, da solche Felder per Definition fast nie ändern müssen.  
   
  **X DO NOT** bieten Instanzfelder, die öffentlich und/oder geschützt sind.  
   
- Sie sollten Eigenschaften für den Zugriff auf Felder und trifft diese öffentliche oder geschützte bereitstellen.  
+ Für den Zugriff auf Felder anstelle von öffentlichen oder geschützten somit sollten Sie die Eigenschaften bereitstellen.  
   
  **✓ DO** verwenden Sie Konstante Felder für Konstanten, die nie geändert wird.  
   
- Der Compiler brennt const Felder die Werte direkt in Aufrufen von Code. Aus diesem Grund können Konstante Werte ohne beschädigen Kompatibilität nie geändert werden.  
+ Der Compiler nutzt die Werte der Konstanten, Felder direkt in Aufrufen von Code. Aus diesem Grund können Konstante Werte ohne das Risiko der Unterbrechung der Kompatibilität nicht geändert werden.  
   
  **✓ DO** öffentliche statische `readonly` Felder für vordefinierte Objektinstanzen.  
   
- Wenn die vordefinierten Instanzen des Typs vorhanden sind, deklarieren Sie diese als öffentliche schreibgeschützte statische Felder des Typs selbst.  
+ Wenn Sie vordefinierte Instanzen des Typs vorhanden sind, deklarieren Sie wie öffentliche schreibgeschützte statische Felder des Typs selbst.  
   
  **X DO NOT** Zuweisen von Instanzen von Typen, die auf änderbare `readonly` Felder.  
   
- Ein änderbarer Typ ist ein Typ mit Instanzen, die geändert werden können, nachdem sie instanziiert werden. Z. B. Arrays, die meisten Auflistungen und Streams änderbare Typen sind jedoch <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, und <xref:System.String?displayProperty=nameWithType> sind alle unveränderlich. Den schreibgeschützten Modifizierer auf einen Typ Verweisfeld wird verhindert, dass die Instanz, die in das Feld ersetzt wird gespeichert, aber es verhindert jedoch nicht das Feld Instanzdaten bearbeitet werden durch Aufrufen von Membern die Instanz ändern.  
+ Ein änderbarer Typ ist ein Typ mit Instanzen, die geändert werden kann, nachdem sie instanziiert werden. Z. B. Arrays, die meisten Auflistungen und Streams veränderlicher Typen sind jedoch <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, und <xref:System.String?displayProperty=nameWithType> sind alle unveränderlich. Die schreibgeschützten Modifizierer auf einen Typ Referenzfeld wird verhindert, dass die Instanz, die in das Feld ersetzt wird gespeichert, aber es verhindert, dass Instanzdaten des Felds nicht geändert wird, durch Aufrufen von Membern die Instanz zu ändern.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

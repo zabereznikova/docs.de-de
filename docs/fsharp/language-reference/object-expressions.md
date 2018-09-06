@@ -1,18 +1,17 @@
 ---
 title: Objektausdrücke (F#)
-description: Erfahren Sie, wie Objektausdrücke [F#] verwenden, wenn Sie den zusätzlichen Code und Mehraufwands für das Erstellen eines neuen vermeiden möchten benannten Typs dar.
+description: Erfahren Sie, wie F#-Object-Ausdrücke verwenden, wenn Sie den zusätzlichen Code und zum Erstellen einer neuen erforderlichen Aufwand vermeiden möchten, mit dem Namen geben.
 ms.date: 05/16/2016
-ms.openlocfilehash: fed78e2be52838eedf55759b195696f1210a8a20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564390"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865461"
 ---
 # <a name="object-expressions"></a>Objektausdrücke
 
-Ein *-Objekt Ausdruck* ist ein Ausdruck, der eine neue Instanz eines Objekttyps dynamisch erstellte, anonymes, das erstellt wird basierend auf eine vorhandene Basistyp, eine Schnittstelle oder eine Gruppe von Schnittstellen.
-
+Ein *Objekt Ausdruck* ist ein Ausdruck, der eine neue Instanz von einem dynamisch erstellten anonymen Objekttyps erstellt basiert auf einem vorhandenen Basistyp, Schnittstelle oder Satz von Schnittstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,15 +29,17 @@ Ein *-Objekt Ausdruck* ist ein Ausdruck, der eine neue Instanz eines Objekttyps 
 ```
 
 ## <a name="remarks"></a>Hinweise
-In der vorherigen Syntax der *Typename* einer vorhandenen Klassen- oder Schnittstellentyp darstellt. *Typ-Params* beschreibt die optionalen generischen Typparameter. Die *Argumente* werden nur für Klassentypen, die Konstruktorparameter erfordern verwendet. Die *Memberdefinitionen* sind überschreibungen von Methoden der Basisklasse oder Implementierungen abstrakte Methoden aus einer Basisklasse oder Schnittstelle.
 
-Das folgende Beispiel zeigt verschiedene Typen von Objektausdrücke.
+In der vorherigen Syntax wird die *Typename* darstellt, einen vorhandenen Klassen- oder Schnittstellentyp. *Typ-Params* wird beschrieben, die optional generischen Typparameter. Die *Argumente* werden verwendet, nur für Klassentypen, die Konstruktorparameter erforderlich ist. Die *Memberdefinitionen* sind überschreibungen von Basisklassenmethoden oder Implementierungen von abstrakten Methoden von einer Basisklasse oder Schnittstelle.
+
+Das folgende Beispiel veranschaulicht verschiedene Arten von Object-Ausdrücke.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4301.fs)]
 
-## <a name="using-object-expressions"></a>Objektausdrücke verwenden
-Objektausdrücke werden verwendet, wenn Sie möchten, um zu vermeiden, die zusätzlichen Code und den Aufwand, die zum Erstellen eines neuen benannten Typ erforderlich ist. Wenn Sie Objektausdrücke verwenden, minimiert die Anzahl von Typen, die in einem Programm erstellt, können Sie reduzieren die Anzahl der Codezeilen und zu verhindern, dass der unnötige Vervielfältigung von Typen. Statt viele Typen nur, um bestimmte Situationen zu bewältigen, können Sie ein Objektausdrücke, die einen vorhandenen Typ passt, oder stellt eine geeignete Implementierung einer Schnittstelle für den speziellen Fall zur hand.
+## <a name="using-object-expressions"></a>Verwenden von Object-Ausdrücke
 
+Sie verwenden die Object-Ausdrücke, wenn Sie möchten, um zu vermeiden, die zusätzlichen Code und den Aufwand, die zum Erstellen einer neuen benannten Typ erforderlich ist. Wenn Sie Object-Ausdrücke verwenden, um die Anzahl der in einem Programm erstellten Typen zu minimieren, können Sie reduzieren Sie die Anzahl von Codezeilen und zu verhindern, dass die unnötige die Verbreitung von Typen. Anstatt zu erstellen, viele Typen nur, um bestimmte Situationen zu behandeln, können Sie einen Object-Ausdruck, der einen vorhandenen Typ anpasst, oder eine geeignete Implementierung der Schnittstelle für den speziellen Fall zur Verfügung stellt.
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
+
+- [F#-Sprachreferenz](index.md)

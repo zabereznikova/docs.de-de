@@ -2,22 +2,20 @@
 title: F#-Sprachreferenz
 description: Informieren Sie sich F#-Sprache-Feature von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
 ms.date: 05/16/2016
-ms.openlocfilehash: e0f0b54ab95e634538fc8511a18aac9d8ee00f26
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937084"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873249"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
 Dieser Abschnitt ist ein Verweis auf die Sprache f#, eine Multi-Paradigma-Programmiersprache für .NET. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
 
-
 ## <a name="f-tokens"></a>F#-Token
+
 Die folgende Tabelle enthält Referenzthemen, die Tabellen der Schlüsselwörter, Symbole und Literale bereitstellen, die als Token in F# verwendet werden.
-
-
 
 |Titel|Beschreibung|
 |-----|-----------|
@@ -26,9 +24,8 @@ Die folgende Tabelle enthält Referenzthemen, die Tabellen der Schlüsselwörter
 |[Literale](literals.md)|Beschreibt die Syntax für literale Werte in F# und wie Typinformationen für F#-Literale angegeben werden.|
 
 ## <a name="f-language-concepts"></a>F#-Sprachkonzepte
+
 Die folgende Tabelle listet die verfügbare Referenzthemen auf, die Sprachkonzepte beschreiben.
-
-
 
 |Titel|Beschreibung|
 |-----|-----------|
@@ -56,9 +53,8 @@ Die folgende Tabelle listet die verfügbare Referenzthemen auf, die Sprachkonzep
 |[Ausführliche Syntax](verbose-syntax.md)|Beschreibt die Syntax für F#-Konstrukte, wenn die einfache Syntax nicht aktiviert ist. Ausführliche Syntax wird durch die `#light "off"`-Direktive ganz oben in der Codedatei beschrieben.|
 
 ## <a name="f-types"></a>F#-Typen
+
 Die folgende Tabelle enthält verfügbare Referenzthemen, die von F# unterstützte Typen beschreiben.
-
-
 
 |Titel|Beschreibung|
 |-----|-----------|
@@ -88,6 +84,7 @@ Die folgende Tabelle enthält verfügbare Referenzthemen, die von F# unterstütz
 |[Typanbieter](../tutorials/type-providers/index.md)|Beschreibt Typanbieter und stellt Links zu exemplarischen Vorgehensweisen zur Verwendung des integrierten Typanbieters bereit, um auf Datenbanken und Webdienste zuzugreifen.|
 
 ## <a name="f-expressions"></a>F#-Ausdrücke
+
 Die folgende Tabelle enthält Themen, in denen F#-Ausdrücke beschrieben werden.
 
 |Titel|Beschreibung|
@@ -105,6 +102,7 @@ Die folgende Tabelle enthält Themen, in denen F#-Ausdrücke beschrieben werden.
 |[Abfrageausdrücke](query-expressions.md)|Beschreibt die Abfrageausdrücke, ein Sprachfeature, das LINQ für F# implementiert, und mit dem Sie Abfragen für eine Datenquelle oder eine aufzählbare Auflistung schreiben können.|
 
 ## <a name="compiler-supported-constructs"></a>Vom Compiler unterstützte Konstrukte
+
 Die folgende Tabelle enthält Themen, die bestimmte compilerunterstützte Konstrukte enthalten.
 
 |Thema|Beschreibung|
@@ -114,4 +112,5 @@ Die folgende Tabelle enthält Themen, die bestimmte compilerunterstützte Konstr
 |[Quellzeilen-, Datei- und Pfadbezeichner](source-line-file-path-identifiers.md)|Beschreibt die Bezeichner `__LINE__`, `__SOURCE_DIRECTORY__` und `__SOURCE_FILE__`, die integrierte Werte darstellen, mit denen Sie auf die Zeilennummer der Quelle sowie auf das Verzeichnis und den Dateinamen in Ihrem Code zugreifen können.|
 
 ## <a name="see-also"></a>Siehe auch
-[Visual F#](../index.md)
+
+- [Visual F#](../index.md)

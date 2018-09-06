@@ -3,11 +3,11 @@ title: Zusammenwirken mit ASMX-Webdiensten
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
 ms.openlocfilehash: ff1b497dde615e5c14417bd0ad14f1dbfd80d5e2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864536"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Zusammenwirken mit ASMX-Webdiensten
 In diesem Beispiel wird veranschaulicht, wie Sie eine Windows Communication Foundation (WCF)-Client-Anwendung in einem vorhandenen ASMX-Webdienst zu integrieren.  

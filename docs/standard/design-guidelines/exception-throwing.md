@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a493e6591d90ce05a652e48807f63fa90764a91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573720"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869953"
 ---
 # <a name="exception-throwing"></a>Auslösen von Ausnahmen
-Ausnahme auslösende-Richtlinien, die in diesem Abschnitt beschriebenen erfordern eine gute Definition der Bedeutung der Ausführung ein Fehler aufgetreten. Fehler bei der Ausführung tritt auf, wenn es sich bei Mitglied nicht seiner Vorgehensweise (welche die Elementnamen impliziert) entwickelt. Beispielsweise, wenn die `OpenFile` Methode kann nicht an den Aufrufer eine geöffnete Dateihandle zurückgeben, es werden Fehler bei der Ausführung betrachtet.  
+In diesem Abschnitt beschriebene Richtlinien für die eine Ausnahme auslösen müssen klare Definition der Bedeutung des Fehler bei der Ausführung. Fehler bei der Ausführung tritt auf, wenn ein Member nicht möglich, was es ist vorgesehen haben (was der Membername impliziert). Z. B. wenn die `OpenFile` Methode kann keinen geöffneten Dateihandle an den Aufrufer zurückgeben, es Fehler bei der Ausführung betrachtet werden.  
   
- Die meisten Entwickler haben mit der Verwendung von Ausnahmen für Verwendungsfehler z. B. Division durch 0 (null) oder null-Verweise vertraut werden. Ausnahmen werden in das Framework für alle fehlerbedingungen, einschließlich Fehler bei der Ausführung verwendet.  
+ Die meisten Entwickler sind mit der Verwendung von Ausnahmen für Fehler z. B. Division durch 0 (null) oder null-Verweise vertraut geworden. Im Framework werden Ausnahmen für alle fehlerbedingungen, einschließlich der Fehler bei der Ausführung verwendet.  
   
  **X DO NOT** Fehlercodes zurück.  
   
@@ -31,40 +31,41 @@ Ausnahme auslösende-Richtlinien, die in diesem Abschnitt beschriebenen erforder
   
  **X DO NOT** verwenden Sie Ausnahmen für die normale ablaufsteuerung, falls möglich.  
   
- Mit Ausnahme von Systemfehlern und Vorgänge mit potenzielle Racebedingungen sollten Framework-Entwickler APIs entwerfen, damit Benutzer Code schreiben können, der keine Ausnahmen auslöst. Sie können z. B. angeben, dass eine Möglichkeit zum Überprüfen von Vorbedingungen vor dem Mitglied aufrufen, damit Benutzer Code schreiben können, der keine Ausnahmen auslöst.  
+ Mit Ausnahme von Systemfehlern und Vorgänge mit potenzielle Racebedingungen sollten Framework Designer APIs entwickeln, damit Sie Benutzercode schreiben können, die keine Ausnahmen auslöst. Sie können z. B. angeben, dass eine Möglichkeit zum Überprüfen von Vorbedingungen vor dem Aufrufen eines Members, damit Sie Benutzercode schreiben können, die keine Ausnahmen auslöst.  
   
- Das Element zum Prüfen auf Vorbedingungen eines anderen Elements wird häufig als ein Tester bezeichnet, und der Member, der eigentliche Arbeit übernimmt einen Ausführer aufgerufen.  
+ Das Element, das zum Überprüfen von Vorbedingungen eines anderen Elements verwendet wird häufig als ein Tester bezeichnet, und das Element, das eigentliche Arbeit übernimmt eine Doer aufgerufen wird.  
   
- Es gibt Fälle, wenn der Tester-Ausführer-Muster ein inakzeptabler Leistung auswirken können. In solchen Fällen sollte dem so genannten Try-Analyse Muster berücksichtigt werden (finden Sie unter [Ausnahmen und Leistungsfähigkeit](../../../docs/standard/design-guidelines/exceptions-and-performance.md) für Weitere Informationen).  
+ Es gibt Fälle, bei dem Tester-Doer-Muster einen nicht akzeptablen Leistungsaufwand haben kann. In solchen Fällen das so genannte Versuch der Analyse Muster angesehen werden (siehe [Ausnahmen und Leistung](../../../docs/standard/design-guidelines/exceptions-and-performance.md) für Weitere Informationen).  
   
- **✓ CONSIDER** Leistungseinbußen bei der Auslösen von Ausnahmen. Throw-Raten über 100 pro Sekunde sind wahrscheinlich die Leistung der meisten Anwendung deutlich beeinträchtigen.  
+ **✓ CONSIDER** Leistungseinbußen bei der Auslösen von Ausnahmen. Throw-Preise über 100 pro Sekunde werden wahrscheinlich deutlich die Leistung der meisten Anwendungen auswirken.  
   
  **✓ DO** Dokument alle Ausnahmen öffentlich aufrufbare Member aufgrund einer Verletzung des Elements (anstatt aufgrund eines Systemfehlers) Vertrag, und behandeln Sie sie als Bestandteil des Vertrags.  
   
- Ausnahmen, die Bestandteil des Vertrags sind sollten nicht von einer Version zur nächsten ändern (d. h. Ausnahmetyp nicht ändern sollten, und neue Ausnahmen nicht hinzugefügt werden sollen).  
+ Ausnahmen, die Teil des Vertrags sind sollten nicht von einer Version zur nächsten ändern (d. h. Typ der Ausnahme sollte nicht geändert werden und neue Ausnahmen sollten nicht hinzugefügt werden).  
   
  **X DO NOT** haben öffentliche Member, die entweder auslösen oder keine können basierend auf bestimmte Option.  
   
  **X DO NOT** öffentliche Member, die zum Zurückgeben von Ausnahmen als Rückgabewert oder ein `out` Parameter.  
   
- Zurückgeben von Ausnahmen von öffentlichen APIs, statt sie unterlaufen kann viele der Vorteile von Ausnahmen basierende-Fehlerberichterstattung.  
+ Zurückgeben von Ausnahmen von öffentlichen APIs, statt sie verfehlt viele der Vorteile bei der Fehlerberichterstattung ausnahmebasierten.  
   
  **✓ CONSIDER** Ausnahme-Generator-Methoden verwenden.  
   
- Es ist üblich, die von verschiedenen Positionen in die gleiche Ausnahme auslöst. Um Codeumfang zu vermeiden, verwenden Sie Hilfsmethoden, die Ausnahmen zu erstellen und initialisieren Sie ihre Eigenschaften.  
+ Es ist üblich, die an verschiedenen Stellen die gleiche Ausnahme ausgelöst. Um codeüberfrachtung zu vermeiden, verwenden Sie Hilfsmethoden, die erstellen Sie Ausnahmen und deren Eigenschaften zu initialisieren.  
   
- Außerdem werden Elemente, die Ausnahmen auslösen nicht abrufen Inlining. Verschieben die Throw-Anweisung in der Generator lassen möglicherweise das Element inline zu setzen.  
+ Darüber hinaus werden Elemente, die Ausnahmen auslösen nicht immer inline ersetzt. Verschieben die Throw-Anweisung in der Generator, kann das Element zu setzende machen.  
   
  **X DO NOT** lösen Ausnahmen aus Ausnahmeblöcke-Filter.  
   
- Wenn ein Ausnahmefilter eine Ausnahme auslöst, wird die Ausnahme von der CLR und der Filter "false" zurückgegeben. Dieses Verhalten ist nicht von den Filter ausführen und explizit "false" zurückgeben und ist daher sehr schwer zu beheben.  
+ Wenn ein Ausnahmefilter eine Ausnahme auslöst, wird die Ausnahme von der CLR und der Filter "false" zurückgibt. Dieses Verhalten wird nicht aus dem Filter ausführen, und false zurückgibt, explizit zu unterscheiden und ist daher sehr schwer zu beheben.  
   
- **X AVOID** explizit Auslösen von Ausnahmen von finally-Blöcke. Implizit ausgelöste Ausnahmen, Aufrufen von Methoden, die ausgelöst werden, sind zulässig.  
+ **X AVOID** explizit Auslösen von Ausnahmen von finally-Blöcke. Implizit ausgelöste Ausnahmen, die durch Aufrufen von Methoden, die auslösen, sind zulässig.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
- [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)

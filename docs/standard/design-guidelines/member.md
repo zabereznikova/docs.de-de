@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571396"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871017"
 ---
 # <a name="member-design-guidelines"></a>Entwurfsrichtlinien für Member
-Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder werden zusammenfassend als Mitglieder bezeichnet. Mitglieder werden letztlich von der Framework-Funktionalitäten an die Endbenutzer von einem Framework verfügbar gemacht wird.  
+Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder werden zusammen als Mitglieder bezeichnet. Elemente sind schließlich die Möglichkeit, die mit denen Framework-Funktionen für die Benutzer von einem Framework verfügbar gemacht wird.  
   
- Mitglieder möglich, virtuellen oder nicht virtuelle, konkrete oder abstrakten, statischen oder und können mehrere unterschiedliche Bereiche der Barrierefreiheit haben. Alle Vielfalt unglaubliche Ausdruckskraft bietet jedoch zur selben Zeit erfordert Sorgfalt seitens der Framework-Designer.  
+ Mitglieder können virtuell oder nicht virtuelle, konkrete oder abstrakt statischen oder werden und können mehrere unterschiedliche Bereiche der Barrierefreiheit haben. Alle diese Reihe unglaublich Ausdruckskraft bietet jedoch zur gleichen Zeit erfordert Sorgfalt seitens der Framework-Designer.  
   
- Dieses Kapitel bietet die grundlegende Richtlinien, die beim Entwerfen der Elemente eines beliebigen Typs ausgeführt werden sollen.  
+ Dieses Kapitel bietet grundlegende Richtlinien, die beim Entwerfen der Elemente eines beliebigen Typs befolgt werden sollten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Überladen von Membern](../../../docs/standard/design-guidelines/member-overloading.md)  
@@ -33,9 +33,10 @@ Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder werden zusammenfas
  [Erweiterungsmethoden](../../../docs/standard/design-guidelines/extension-methods.md)  
  [Operatorüberladungen](../../../docs/standard/design-guidelines/operator-overloads.md)  
  [Parameterentwurf](../../../docs/standard/design-guidelines/parameter-design.md)  
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

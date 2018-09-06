@@ -3,11 +3,11 @@ title: Muster der automatischen Bestätigung
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
 ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552269"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864054"
 ---
 # <a name="auto-confirm-pattern"></a>Muster der automatischen Bestätigung
 Dieses Beispiel besteht aus drei Szenarien, die zur Veranschaulichung eine benutzerdefinierte `AutoConfirmScope`-Aktivität ausführen. Im ersten Beispiel wird die erfolgreiche Ausführung einer Sequenz von vier kompensierbaren Aktivitäten veranschaulicht, bei denen die zweite und dritte in `AutoConfirmScope` geschachtelt sind. Im zweiten Beispiel wird die gleiche Sequenz mit einer Ausnahme veranschaulicht, die nach der Ausführung der vierten <xref:System.Activities.Statements.CompensableActivity> auftritt. Das dritte Szenario zeigt die gleiche Sequenz mit einer Ausnahme, die in `AutoConfirmScope` auftritt, nachdem die zweite <xref:System.Activities.Statements.CompensableActivity> abgeschlossen wurde.  

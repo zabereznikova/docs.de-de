@@ -2,15 +2,15 @@
 title: Verbindungspooling
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-ms.openlocfilehash: 47143e1d08f6a910b82b435303c164729b6ad3a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755525"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876603"
 ---
 # <a name="connection-pooling"></a>Verbindungspooling
-Das Herstellen einer Verbindung mit einer Datenquelle kann viel Zeit kosten. Um die Kosten für das Öffnen von Verbindungen zu minimieren, verwendet ADO.NET eine Optimierungstechnik, die auch aufgerufen *Verbindungspooling*, und die Kosten für das wiederholte öffnen und Schließen von Verbindungen geeignet ist. Das Verbindungspooling wird bei den einzelnen .NET Framework-Datenanbietern unterschiedlich gehandhabt.  
+Das Herstellen einer Verbindung mit einer Datenquelle kann viel Zeit kosten. Um die Kosten für das Herstellen von Verbindungen zu reduzieren, verwendet ADO.NET eine Optimierungstechnik, die Namen *Verbindungspooling*, die die Kosten für das wiederholte öffnen und Schließen von Verbindungen minimiert. Das Verbindungspooling wird bei den einzelnen .NET Framework-Datenanbietern unterschiedlich gehandhabt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [SQL Server-Verbindungspooling (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
@@ -21,4 +21,4 @@ Das Herstellen einer Verbindung mit einer Datenquelle kann viel Zeit kosten. Um 
   
 ## <a name="see-also"></a>Siehe auch  
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

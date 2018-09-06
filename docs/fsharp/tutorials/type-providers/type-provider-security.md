@@ -1,35 +1,32 @@
 ---
 title: Sicherheit von Typanbietern
-description: Informationen Sie zur Sicherheit von typanbietern in f#, einschließlich Informationen zum Ändern der Einstellungen für einen Typanbieter für die Vertrauensstellung.
+description: Informationen Sie zu Sicherheit von typanbietern in F# erläutert, wie Sie die Einstellungen für einen Typanbieter für die Vertrauensstellung zu ändern.
 ms.date: 05/16/2016
-ms.openlocfilehash: 66a873a32029d706f1f6fab50dd4f93bc29bca03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563544"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861906"
 ---
 # <a name="type-provider-security"></a>Sicherheit von Typanbietern
 
-Typanbieter sind Assemblys (DLLs) auf dem f#-Projekt oder das Skript verweist, die Code enthalten, um eine Verbindung mit externen Datenquellen herstellen und diese Typinformationen Oberfläche, mit der F#-Typ-Umgebung. In der Regel wird Code in Assemblys, auf die verwiesen wird nur ausgeführt, beim Kompilieren und dann führen Sie den Code (oder im Falle eines Skripts den Code an f# Interactive senden). Eine typanbieterassembly wird jedoch innerhalb von Visual Studio ausgeführt werden, wenn der Code im Editor lediglich durchsucht wird. Dies liegt daran, dass Typanbieter müssen ausführen, um zusätzliche Informationen in den Editor, z. B. QuickInfos, IntelliSense-Beendigungen hinzufügen und so weiter. Daher sind zusätzliche sicherheitsüberlegungen für den Typ Anbieterassemblys vorhanden, da diese automatisch in Visual Studio-Prozess ausgeführt werden.
+Typanbieter sind Assemblys (DLLs) durch Ihre f#-Projekt oder das Skript verwiesen wird, die Code enthalten, um eine Verbindung mit externen Datenquellen herstellen und diese Typinformationen in der F#-Typ-Umgebung auftreten. In der Regel wird Code in referenzierten Assemblys nur ausgeführt, beim Kompilieren, und klicken Sie dann den Code ausführen (oder bei einem Skript den Code an f# Interactive senden). Eine typanbieterassembly wird jedoch innerhalb von Visual Studio ausgeführt werden, wenn lediglich der Code im Editor durchsucht wird. Dies geschieht, weil der Typanbieter müssen ausführen, um zusätzliche Informationen in den Editor, z. B. QuickInfos, IntelliSense-Vervollständigung, hinzufügen und so weiter. Daher sind gibt es zusätzliche sicherheitsüberlegungen für den Typ Anbieterassemblys, da sie automatisch in Visual Studio-Prozesses ausgeführt.
 
+## <a name="security-warning-dialog"></a>Sicherheitswarnungs-Dialogfeld
 
-## <a name="security-warning-dialog"></a>Warnung-Dialogfeld "Sicherheit"
-Wenn Sie einen bestimmten typanbieterassembly zum ersten Mal verwenden, zeigt Visual Studio ein Dialogfeld "Sicherheit", die darauf hinweist, dass der Typanbieter ausgeführt. Bevor Sie den Typanbieter in Visual Studio geladen wird, bietet Ihnen die Gelegenheit, entscheiden, ob Sie diesen bestimmten Anbieter als vertrauenswürdig einstufen. Wenn Sie die Quelle des typanbieters vertrauen, wählen Sie "Ich vertrauen dieser Typanbieter." Wenn Sie nicht die Quelle des typanbieters vertrauen, wählen Sie "Ich vertrauen nicht dieser Typanbieter." Vertrauen den Anbieter kann innerhalb von Visual Studio ausgeführt und IntelliSense zur Verfügung stellen und Funktionen erstellen. Aber wenn Sie der Typanbieter selbst bösartig ist, Ausführen des Codes gefährden kann Ihrem Computer.
+Wenn Sie eine bestimmten typanbieterassembly zum ersten Mal verwenden, zeigt Visual Studio ein Sicherheitsdialogfeld an, die darauf hinweist, dass der Typanbieter wird gleich ausgeführt. Bevor Sie den Typanbieter in Visual Studio geladen wird, erhalten Sie die Möglichkeit zu entscheiden, ob Sie diesen bestimmten Anbieter als vertrauenswürdig einstufen. Wenn Sie die Quelle des typanbieters vertrauen, wählen Sie dann "Ich vertraue dieser Typanbieter." Wenn Sie nicht über die Quelle des typanbieters vertrauen, wählen Sie "Ich nicht diesem Anbieter vertrauen." Vertrauen den Anbieter ermöglicht, führen Sie in Visual Studio und IntelliSense-Funktionalität bereitstellen und die Funktionen erstellen. Aber wenn Sie der Typanbieter selbst bösartig ist, Ausführen des Codes gefährden kann Ihrem Computer.
 
-Wenn Ihr Projekt Code, der Typanbieter, die Sie im Dialogfeld ausgewählt haben enthält verweist, nicht zu vertrauen, klicken Sie dann meldet zum Zeitpunkt der Kompilierung der Compiler einen Fehler, der angibt, dass der Typanbieter nicht vertrauenswürdig ist. Alle Typen, die den nicht vertrauenswürdigen Typanbieter abhängig sind, werden durch rote Wellenlinien angezeigt. Sie können ruhig auf den Code im Editor durchsuchen.
+Wenn Ihr Projekt Code, der Typanbieter, die Sie im Dialogfeld ausgewählt haben enthält verweist, nicht zu vertrauen, klicken Sie dann meldet zum Zeitpunkt der Kompilierung der Compiler einen Fehler, der angibt, dass der Typanbieter nicht vertrauenswürdig ist. Alle Typen, die den nicht vertrauenswürdigen Typanbieter abhängig sind, werden durch rote Wellenlinien angezeigt. Es ist sicher, um den Code im Editor zu durchsuchen.
 
 Wenn Sie die vertrauenseinstellung direkt in Visual Studio ändern möchten, führen Sie die folgenden Schritte aus.
 
+### <a name="to-change-the-trust-settings-for-type-providers"></a>So ändern Sie die Einstellungen für die Vertrauensstellung für Typanbieter
 
-#### <a name="to-change-the-trust-settings-for-type-providers"></a>So ändern Sie die vertrauenseinstellungen für Typanbieter
+1. Auf der `Tools` , wählen Sie im Menü `Options`, und erweitern Sie die `F# Tools` Knoten.
 
-1. Auf der `Tools` klicken Sie im Menü `Options`, und erweitern Sie die `F# Tools` Knoten.
-<br />
-
-2. Wählen Sie `Type Providers`, und klicken Sie in der Liste der Typanbieter, aktivieren Sie das Kontrollkästchen für Typanbieter, die Sie als vertrauenswürdig einstufen, und deaktivieren Sie das Kontrollkästchen für die Sie nicht vertrauen.
-<br />
-
+2. Wählen Sie `Type Providers`, und klicken Sie in der Liste der Typanbieter, aktivieren Sie das Kontrollkästchen für Typanbieter, der Sie vertrauen, und deaktivieren Sie das Kontrollkästchen für die Sie nicht vertrauen.
 
 ## <a name="see-also"></a>Siehe auch
-[Typanbieter](index.md)
+
+- [Typanbieter](index.md)
