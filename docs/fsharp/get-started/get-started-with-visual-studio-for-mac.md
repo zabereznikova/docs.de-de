@@ -2,12 +2,12 @@
 title: Erste Schritte mit f# in Visual Studio für Mac
 description: Erfahren Sie, wie f# in Visual Studio für Mac verwenden.
 ms.date: 07/03/2018
-ms.openlocfilehash: 200c3a8fee072797a54d15d8989937f4cadb33e2
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874652"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785530"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Erste Schritte mit f# in Visual Studio für Mac
 
@@ -114,8 +114,9 @@ Dies ist nur ein kurzer Einblick in die Verwendungsmöglichkeiten mit f# Interac
 Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in f#](../tour.md), die behandelt einige der wichtigsten Funktionen der Sprache f#.  Es wird bieten Ihnen einen Überblick über einige der Funktionen von f# und bieten reichlich Codebeispiele, die Sie in Visual Studio für Mac kopieren und ausführen können.  Es gibt auch einige hervorragenden externe Ressourcen, die Sie verwenden können, im gerätekatalog dargestellt die [Leitfaden für f#](../index.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Visual F#](../index.md)  
- [Einführung in F#](../tour.md)  
- [F#-Sprachreferenz](../language-reference/index.md)  
- [Typrückschluss](../language-reference/type-inference.md)  
- [Symbol und dem Operator-Referenz](../language-reference/symbol-and-operator-reference/index.md)  
+
+- [Visual F#](../index.md)  
+- [Einführung in F#](../tour.md)  
+- [F#-Sprachreferenz](../language-reference/index.md)  
+- [Typrückschluss](../language-reference/type-inference.md)  
+- [Symbol und dem Operator-Referenz](../language-reference/symbol-and-operator-reference/index.md)  

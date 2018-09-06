@@ -2,18 +2,19 @@
 title: Bitweise Operatoren (F#)
 description: Erfahren Sie, bis die bitweisen Operatoren, die in der Programmiersprache f# verfügbar sind.
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559555"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784367"
 ---
 # <a name="bitwise-operators"></a>Bitweise Operatoren
 
 In diesem Thema wird beschrieben, bitweise Operatoren, die in f# verfügbar sind.
 
 ## <a name="summary-of-bitwise-operators"></a>Zusammenfassung der Operatoren zur Bitmanipulation
+
 Die folgende Tabelle beschreibt die bitweisen Operatoren, die für Unboxing integrale Typen in der Sprache f# unterstützt werden.
 
 |Operator|Hinweise|
@@ -28,9 +29,7 @@ Die folgende Tabelle beschreibt die bitweisen Operatoren, die für Unboxing inte
 Die folgenden Typen können mit Operatoren zur Bitmanipulation verwendet werden: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, und `unativeint`.
 
 ## <a name="see-also"></a>Siehe auch
-[Symbol- und Operatorenreferenz](index.md)
 
-[Arithmetische Operatoren](arithmetic-operators.md)
-
-[Boolesche Operatoren](boolean-operators.md)
-
+- [Symbol- und Operatorenreferenz](index.md)
+- [Arithmetische Operatoren](arithmetic-operators.md)
+- [Boolesche Operatoren](boolean-operators.md)
