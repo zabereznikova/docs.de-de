@@ -2,18 +2,18 @@
 title: Berechnungsausdrücke (F#)
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in f#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207432"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800909"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
 Berechnungsausdrücke in f# bieten eine bequeme Syntax für das Schreiben von Berechnungen, die sequenziert werden können und mithilfe von ablaufsteuerungskonstrukten und Bindungen kombiniert. Abhängig von der Art des Berechnungsausdrucks können sie als eine Möglichkeit, Monaden, Monoids, Monad Transformatoren und applicative Funktionselemente auszudrücken betrachtet werden. Anders als bei anderen Sprachen (z. B. *-Notation* in Haskell), sie sind nicht an eine einzelne Abstraktion gebunden, und verlassen Sie sich nicht in Makros oder anderen Formen der Metaprogrammierung, um eine praktische und kontextbezogene Syntax zu erreichen.
 
-## <a name="overview"></a>Übersicht
+## <a name="overview"></a>Überblick
 
 Berechnungen können viele Formen annehmen. Die häufigste Form der Berechnung ist Singlethread-Ausführung, bei dem ist leicht zu verstehen und zu bearbeiten. Nicht alle Arten von Berechnungen sind jedoch so einfach wie das Singlethread-Ausführung. Beispiele:
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 Im obigen Code, die Aufrufe an `Run` und `Delay` werden ausgelassen, wenn sie nicht in der Berechnung Ausdrucks-Generator-Klasse definiert sind. Der Text des Berechnungsausdrucks, hier bezeichnet als `{| cexpr |}`, durch die Übersetzungen, die in der folgenden Tabelle beschrieben in Aufrufe, die im Zusammenhang mit den Methoden der Builder-Klasse übersetzt. Der Ausdruck für die Berechnung `{| cexpr |}` wird definierten rekursiv nach diese Übersetzungen, in denen `expr` ist ein F#-Ausdruck und `cexpr` ist ein Ausdruck für die Berechnung.
 
-
-
 |Ausdruck|Übersetzung|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 Ein Ausdruck für die Berechnung hat einen zugrunde liegenden Typ, der der Ausdruck zurückgibt. Der zugrunde liegende Typ kann eine berechnete Ergebnis oder eine verzögerte Berechnung, die ausgeführt werden kann oder darstellen kann es eine Möglichkeit zum iterieren durch eine Art von Auflistung bereitstellen. Im vorherigen Beispiel wurde der zugrunde liegende Typ **schließlich**. Für einen Sequenzausdruck der zugrunde liegenden Typ ist <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bei einem Abfrageausdruck, der zugrunde liegende Typ ist <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Ist ein asynchroner Workflow, der zugrunde liegenden Typ [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Die `Async` Objekt darstellt, die Arbeit ausgeführt werden, um das Ergebnis zu berechnen. Rufen Sie z. B. [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) führen eine Berechnung, und geben das Ergebnis zurück.
 
 ## <a name="custom-operations"></a>Benutzerdefinierte Vorgänge
+
 Sie können einen Vorgang auf einen Ausdruck für die Berechnung definieren und verwenden einen Vorgang als einen Operator in einem Ausdruck für die Berechnung. Beispielsweise können Sie einen Abfrageoperator in einem Abfrageausdruck einschließen. Wenn Sie einen Vorgang definieren, müssen Sie die "yield" definieren und für Methoden in den Ausdruck für die Berechnung. Um einen Vorgang zu definieren, fügen Sie ihn in eine Builder-Klasse für den Ausdruck für die Berechnung aus, und wenden Sie dann die [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Dieses Attribut akzeptiert eine Zeichenfolge als Argument, das heißt, die in einem benutzerdefinierten Vorgang verwendet werden. Dieser Name wird in den Bereich am Anfang der öffnenden geschweiften Klammer des Berechnungsausdrucks. Aus diesem Grund sollte nicht Sie Bezeichner mit den gleichen Namen wie einen Vorgang in diesem Block verwendet werden. Vermeiden Sie z. B. wie z. B. die Verwendung von Bezeichnern `all` oder `last` in Abfrageausdrücken.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Erweitern Sie vorhandene Generatoren mit neuen benutzerdefinierten-Vorgänge
+
 Wenn Sie bereits über ein Zeichenfolgengenerator-Klasse verfügen, können benutzerdefinierte Vorgänge außerhalb dieser Zeichenfolgengenerator-Klasse aus erweitert werden. Erweiterungen müssen in Modulen deklariert werden. Namespaces können nicht enthalten, Erweiterungsmember außer in der gleichen Datei und der gleichen Namespace-Deklaration-Gruppe, in denen der Typ definiert ist.
 
 Das folgende Beispiel zeigt die Erweiterung des bestehenden `Microsoft.FSharp.Linq.QueryBuilder` Klasse.
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Asynchrone Workflows](asynchronous-workflows.md)
-
-[Sequenzen](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[Abfrageausdrücke](query-expressions.md)
+- [F#-Sprachreferenz](index.md)
+- [Asynchrone Workflows](asynchronous-workflows.md)
+- [Sequenzen](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Abfrageausdrücke](query-expressions.md)
