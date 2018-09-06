@@ -3,11 +3,11 @@ title: Assemblys und der globale Assemblycache (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 ms.openlocfilehash: ed5ecff57035b4d3cf47f8325fe5c172180f9d40
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534322"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778385"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblys und der globale Assemblycache (C#)
 Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET-basierte Anwendung. Assemblys sind ausführbare Dateien (EXE-Dateien) oder DLL-Dateien und bilden die Bausteine von .NET Framework. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie können sich eine Assembly als Sammlung von Typen und Ressourcen vorstellen, die eine logische Funktionalitätseinheit bilden und zusammenarbeiten.  

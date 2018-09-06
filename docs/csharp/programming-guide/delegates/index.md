@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558409"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43805454"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Wenn Sie einen Delegaten instanziieren, können Sie jeder Methode seine Instanz mit einer kompatiblen Signatur und dem Rückgabetyp zuordnen. Sie können die Methode über die Delegatinstanz aufrufen.  

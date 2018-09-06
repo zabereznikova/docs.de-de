@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
 ms.openlocfilehash: 5e7edfbeb9a3cddcdcd81d9c87e5e85bfc947339
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736723"
+ms.locfileid: "43785013"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF
 Diese exemplarische Vorgehensweise veranschaulicht das Hosten von Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwendung.  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43725032"
+ms.locfileid: "43788164"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Abfangen von Tablettstifteingaben
 Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanismus zum Implementieren der Steuerung auf niedriger Ebene über <xref:System.Windows.Input.Stylus> sowie die Erstellung von digitaler Tinte <xref:System.Windows.Ink.Stroke> Objekte. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> -Klasse bietet einen Mechanismus für die Sie benutzerdefiniertes Verhalten implementieren, und klicken Sie auf die vom Tablettstift für eine optimale Leistung eingehenden Datenstrom anzuwenden.  

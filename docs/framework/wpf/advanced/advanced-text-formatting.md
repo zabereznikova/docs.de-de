@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: e8347f1a82c70f1ce8aa7cc05841bc869abbcc33
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462505"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787667"
 ---
 # <a name="advanced-text-formatting"></a>Erweiterte Textformatierung
 Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] zum Einschließen von Text in Ihrer Anwendung. Layout und [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Controls.TextBlock>, geben Sie die häufigsten und allgemeinsten Elemente für die Textdarstellung. Zeichnen von [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Media.GlyphRunDrawing> und <xref:System.Windows.Media.FormattedText>, bieten eine Möglichkeit zum Einschließen von formatierten Texts in Zeichnungen bereit. Auf der höchsten Ebene [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine erweiterbare textformatierungs-Engine, um jeden Aspekt der Textdarstellung an, wie z. B. Speicherverwaltung für Text, die formatierungsverwaltung des Lauftexts und die Verwaltung eingebetteter Objekte steuern.  

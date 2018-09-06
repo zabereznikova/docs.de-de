@@ -9,11 +9,11 @@ ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17ca2eb93fb2b75f043d33d376a5650092030cac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387100"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43797416"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hosting (Referenz zur nicht verwalteten API)
 Die Hosting-API ermöglicht, dass nicht verwaltete Hosts die CLR (Common Language Runtime) in ihre Anwendungen integrieren können.  

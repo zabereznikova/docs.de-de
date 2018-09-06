@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fdbb220cd856fd7309d54c41a39f91a9316fe434
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408879"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805155"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funktionalitäten, die von einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder einer [Struktur](../../../csharp/language-reference/keywords/struct.md) implementiert werden können.  
@@ -93,6 +93,7 @@ Eine Schnittstelle enthält Definitionen für eine Gruppe von zugehörigen Funkt
 ## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel  
  [Interfaces (Schnittstellen)](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) in [Learning C# 3.0: Master the Fundamentals of C# 3.0 (C# 3.0 lernen: Die Grundlagen von C# 3.0 meistern)](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
