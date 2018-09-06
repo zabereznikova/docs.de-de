@@ -1,6 +1,6 @@
 ---
 title: CloneEnumWbemClassObject-Funktion (Referenz zur nicht verwalteten API)
-description: Die CloneEnumWbemClassObject-Funktion macht eine logische Kopie eines Enumerators.
+description: CloneEnumWbemClassObject-Funktion ist eine logische Kopie eines Enumerators.
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 35bd458eb6046f57d37764e0a8e58616f2c2c3a1
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460605"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778531"
 ---
-# <a name="cloneenumwbemclassobject-function"></a><span data-ttu-id="4d0ae-103">CloneEnumWbemClassObject-Funktion</span><span class="sxs-lookup"><span data-stu-id="4d0ae-103">CloneEnumWbemClassObject function</span></span>
-<span data-ttu-id="4d0ae-104">Erstellt eine logische Kopie eines Enumerators, der seiner aktuellen Position in einer Enumeration beibehalten.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-104">Makes a logical copy of an enumerator, retaining its current position in an enumeration.</span></span>  
+# <a name="cloneenumwbemclassobject-function"></a><span data-ttu-id="20373-103">CloneEnumWbemClassObject-Funktion</span><span class="sxs-lookup"><span data-stu-id="20373-103">CloneEnumWbemClassObject function</span></span>
+<span data-ttu-id="20373-104">Erstellt eine logische Kopie eines Enumerators unter Beibehaltung der aktuellen Position in einer Enumeration.</span><span class="sxs-lookup"><span data-stu-id="20373-104">Makes a logical copy of an enumerator, retaining its current position in an enumeration.</span></span>  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="4d0ae-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="4d0ae-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20373-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="20373-105">Syntax</span></span>  
   
 ```  
 HRESULT CloneEnumWbemClassObject (
@@ -42,58 +42,58 @@ HRESULT CloneEnumWbemClassObject (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="4d0ae-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="4d0ae-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="20373-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="20373-106">Parameters</span></span>
 
 `ppEnum`  
-<span data-ttu-id="4d0ae-107">[out] Empfängt einen Zeiger auf eine neue [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="4d0ae-107">[out] Receives a pointer to a new [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx).</span></span>
+<span data-ttu-id="20373-107">[out] Erhält einen Zeiger auf ein neues [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).</span><span class="sxs-lookup"><span data-stu-id="20373-107">[out] Receives a pointer to a new [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).</span></span>
 
 `authLevel`  
-<span data-ttu-id="4d0ae-108">[in] Die Autorisierungsebene.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-108">[in] The authorization level.</span></span>
+<span data-ttu-id="20373-108">[in] Die Autorisierungsebene.</span><span class="sxs-lookup"><span data-stu-id="20373-108">[in] The authorization level.</span></span>
 
-<span data-ttu-id="4d0ae-109">`impLevel` [in] Die Ebene des Identitätswechsels.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-109">`impLevel` [in] The impersonation level.</span></span>
+<span data-ttu-id="20373-109">`impLevel` [in] Die Ebene des Identitätswechsels.</span><span class="sxs-lookup"><span data-stu-id="20373-109">`impLevel` [in] The impersonation level.</span></span>
 
 `pCurrentEnumWbemClassObject`  
-<span data-ttu-id="4d0ae-110">[out] Ein Zeiger auf die [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) Instanz, geklont zu werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-110">[out] A pointer to the [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) instance to be cloned.</span></span>
+<span data-ttu-id="20373-110">[out] Ein Zeiger auf die [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) Instanz, geklont zu werden.</span><span class="sxs-lookup"><span data-stu-id="20373-110">[out] A pointer to the [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) instance to be cloned.</span></span>
 
 `strUser`   
-<span data-ttu-id="4d0ae-111">[in] Der Benutzername.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-111">[in] The user name.</span></span> <span data-ttu-id="4d0ae-112">Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-112">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="20373-111">[in] Der Benutzername.</span><span class="sxs-lookup"><span data-stu-id="20373-111">[in] The user name.</span></span> <span data-ttu-id="20373-112">Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="20373-112">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `strPassword`   
-<span data-ttu-id="4d0ae-113">[in] Das Kennwort.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-113">[in] The password.</span></span> <span data-ttu-id="4d0ae-114">Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-114">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="20373-113">[in] Das Kennwort.</span><span class="sxs-lookup"><span data-stu-id="20373-113">[in] The password.</span></span> <span data-ttu-id="20373-114">Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="20373-114">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
 `strAuthority`   
-<span data-ttu-id="4d0ae-115">[in] Der Domänenname des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-115">[in] The domain name of the user.</span></span> <span data-ttu-id="4d0ae-116">Finden Sie unter der [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-116">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="20373-115">[in] Der Domänenname des Benutzers.</span><span class="sxs-lookup"><span data-stu-id="20373-115">[in] The domain name of the user.</span></span> <span data-ttu-id="20373-116">Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="20373-116">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="4d0ae-117">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="4d0ae-117">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="20373-117">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="20373-117">Return value</span></span>
 
-<span data-ttu-id="4d0ae-118">Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, oder Sie können diese definieren als Konstanten in Ihrem Code:</span><span class="sxs-lookup"><span data-stu-id="4d0ae-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="20373-118">Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:</span><span class="sxs-lookup"><span data-stu-id="20373-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="4d0ae-119">Konstante</span><span class="sxs-lookup"><span data-stu-id="4d0ae-119">Constant</span></span>  |<span data-ttu-id="4d0ae-120">Wert</span><span class="sxs-lookup"><span data-stu-id="4d0ae-120">Value</span></span>  |<span data-ttu-id="4d0ae-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4d0ae-121">Description</span></span>  |
+|<span data-ttu-id="20373-119">Konstante</span><span class="sxs-lookup"><span data-stu-id="20373-119">Constant</span></span>  |<span data-ttu-id="20373-120">Wert</span><span class="sxs-lookup"><span data-stu-id="20373-120">Value</span></span>  |<span data-ttu-id="20373-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20373-121">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | <span data-ttu-id="4d0ae-122">0 x 80041001</span><span class="sxs-lookup"><span data-stu-id="4d0ae-122">0x80041001</span></span> | <span data-ttu-id="4d0ae-123">Ein allgemeiner Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-123">There has been a general failure.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="4d0ae-124">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="4d0ae-124">0x80041008</span></span> | <span data-ttu-id="4d0ae-125">Ein Parameter ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-125">A parameter is invalid.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="4d0ae-126">0x80041006</span><span class="sxs-lookup"><span data-stu-id="4d0ae-126">0x80041006</span></span> | <span data-ttu-id="4d0ae-127">Ist nicht genügend Arbeitsspeicher verfügbar, der Vorgang abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-127">Not enough memory is available complete the operation.</span></span> |
-| `WBEM_E_TRANSPORT_FAILURE` | <span data-ttu-id="4d0ae-128">0x80041015</span><span class="sxs-lookup"><span data-stu-id="4d0ae-128">0x80041015</span></span> | <span data-ttu-id="4d0ae-129">Der Remoteprozeduraufruf (RPC)-Link zwischen dem aktuellen Prozess und die WMI-ausgefallen ist.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-129">The remote procedure call (RPC) link between the current process and WMI has failed.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="4d0ae-130">0</span><span class="sxs-lookup"><span data-stu-id="4d0ae-130">0</span></span> | <span data-ttu-id="4d0ae-131">Der Funktionsaufruf war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-131">The function call was successful.</span></span>  |
+| `WBEM_E_FAILED` | <span data-ttu-id="20373-122">0 x 80041001</span><span class="sxs-lookup"><span data-stu-id="20373-122">0x80041001</span></span> | <span data-ttu-id="20373-123">Es wurde ein allgemeiner Fehler.</span><span class="sxs-lookup"><span data-stu-id="20373-123">There has been a general failure.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="20373-124">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="20373-124">0x80041008</span></span> | <span data-ttu-id="20373-125">Ein Parameter ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="20373-125">A parameter is invalid.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="20373-126">0x80041006</span><span class="sxs-lookup"><span data-stu-id="20373-126">0x80041006</span></span> | <span data-ttu-id="20373-127">Ist nicht genügend Arbeitsspeicher verfügbar, der Vorgang abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="20373-127">Not enough memory is available complete the operation.</span></span> |
+| `WBEM_E_TRANSPORT_FAILURE` | <span data-ttu-id="20373-128">0x80041015</span><span class="sxs-lookup"><span data-stu-id="20373-128">0x80041015</span></span> | <span data-ttu-id="20373-129">Der Remoteprozeduraufruf-Remoteprozeduraufruf (RPC)-Link zwischen dem aktuellen Prozess und die WMI-hat Fehler.</span><span class="sxs-lookup"><span data-stu-id="20373-129">The remote procedure call (RPC) link between the current process and WMI has failed.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="20373-130">0</span><span class="sxs-lookup"><span data-stu-id="20373-130">0</span></span> | <span data-ttu-id="20373-131">Der Funktionsaufruf war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="20373-131">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="4d0ae-132">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4d0ae-132">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="20373-132">Hinweise</span><span class="sxs-lookup"><span data-stu-id="20373-132">Remarks</span></span>
 
-<span data-ttu-id="4d0ae-133">Diese Funktion dient als Wrapper für einen Aufruf der [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) Methode.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-133">This function wraps a call to the [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="20373-133">Diese Funktion umschließt einen Aufruf der [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) Methode.</span><span class="sxs-lookup"><span data-stu-id="20373-133">This function wraps a call to the [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) method.</span></span>
 
-<span data-ttu-id="4d0ae-134">Bei dieser Methode ist nur eine Kopie "best-Effort".</span><span class="sxs-lookup"><span data-stu-id="4d0ae-134">This method makes only a "best effort" copy.</span></span> <span data-ttu-id="4d0ae-135">Aufgrund der dynamischen Natur der viele CIM-Objekte ist es möglich, dass der neue Enumerator nicht den gleichen Satz von Objekten wie der Quell-Enumerator aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-135">Due to the dynamic nature of many CIM objects, it is possible that the new enumerator does not enumerate the same set of objects as the source enumerator.</span></span>  
+<span data-ttu-id="20373-134">Auf diese Weise wird nur eine "best-Effort" kopieren.</span><span class="sxs-lookup"><span data-stu-id="20373-134">This method makes only a "best effort" copy.</span></span> <span data-ttu-id="20373-135">Aufgrund der dynamischen Natur der viele CIM-Objekte werden soll ist es möglich, dass der neue Enumerator nicht den gleichen Satz von Objekten als Enumerator aus Quelle aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="20373-135">Due to the dynamic nature of many CIM objects, it is possible that the new enumerator does not enumerate the same set of objects as the source enumerator.</span></span>  
 
-<span data-ttu-id="4d0ae-136">Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, durch Aufrufen der [GetErrorInfo](geterrorinfo.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-136">If the function call fails, you can obtain additional error information by calling the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="20373-136">Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, durch den Aufruf der [GetErrorInfo](geterrorinfo.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="20373-136">If the function call fails, you can obtain additional error information by calling the [GetErrorInfo](geterrorinfo.md) function.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4d0ae-137">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4d0ae-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="20373-137">Beispiel</span><span class="sxs-lookup"><span data-stu-id="20373-137">Example</span></span>
 
-<span data-ttu-id="4d0ae-138">Ein Beispiel finden Sie die [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) Methode.</span><span class="sxs-lookup"><span data-stu-id="4d0ae-138">For an example, see the [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="20373-138">Ein Beispiel finden Sie unter den [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) Methode.</span><span class="sxs-lookup"><span data-stu-id="20373-138">For an example, see the [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4d0ae-139">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4d0ae-139">Requirements</span></span>  
- <span data-ttu-id="4d0ae-140">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4d0ae-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="20373-139">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="20373-139">Requirements</span></span>  
+ <span data-ttu-id="20373-140">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="20373-140">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4d0ae-141">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4d0ae-141">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="20373-141">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="20373-141">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="4d0ae-142">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4d0ae-142">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="20373-142">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="20373-142">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4d0ae-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4d0ae-143">See also</span></span>  
-[<span data-ttu-id="4d0ae-144">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="4d0ae-144">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="20373-143">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="20373-143">See also</span></span>  
+[<span data-ttu-id="20373-144">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="20373-144">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
