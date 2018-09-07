@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
 ms.openlocfilehash: 013f1980d2ea13927871719aeea293cfce38b4d5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385306"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861893"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>Gewusst wie: Ausführen einer Abfrage, die komplexe Typen zurückgibt
 Dieses Thema zeigt, wie eine [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfrage ausgeführt wird, die Entitätstypobjekte zurückgibt, die eine Eigenschaft eines komplexen Typs enthalten.  

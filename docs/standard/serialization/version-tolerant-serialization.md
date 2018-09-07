@@ -13,12 +13,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: 3be5c08ae2bffcf548fe1d635dd96ba29dcadca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f26de2dbf8ec200a4b53195ae97bbb174e815166
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592339"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042646"
 ---
 # <a name="version-tolerant-serialization"></a>Versionstolerante Serialisierung
 In Version&#160;1.0 und Version 1.1 von .NET&#160;Framework war das Erstellen serialisierbarer Typen problematisch, die für mehrere Anwendungsversionen verwendbar waren. Wenn ein Typ durch Hinzufügen eines zusätzlicher Felder geändert wurde, traten die folgenden Probleme auf:  
@@ -183,7 +183,7 @@ End Class
 ```  
   
 ## <a name="the-versionadded-property"></a>Die VersionAdded-Eigenschaft  
- Das **OptionalFieldAttribute** verfügt über die **VersionAdded**-Eigenschaft. In Version 2.0 von .NET Framework wird diese nicht verwendet. Es ist jedoch wichtig, dass diese Eigenschaft richtig festgelegt wird, um sicherzustellen, dass der Typ mit zukünftigen Serialisierungmodulen kompatibel ist.  
+ Das **OptionalFieldAttribute** verfügt über die **VersionAdded**-Eigenschaft. In Version 2.0 von .NET Framework wird diese nicht verwendet. Es ist jedoch wichtig, dass diese Eigenschaft richtig festgelegt wird, um sicherzustellen, dass der Typ mit zukünftigen Serialisierungs-Engines kompatibel ist.  
   
  Die Eigenschaft gibt an, welche Version eines Typs einem bestimmten Feld hinzugefügt wurde. Sie sollte bei jeder Änderung des Typs um genau 1 erhöht werden (ausgehend von 2). Dies veranschaulicht das folgende Beispiel:  
   
@@ -274,22 +274,23 @@ End Class
   
 -   Legen Sie für alle optionalen Felder sinnvolle Standardwerte fest, indem Sie die Serialisierungsrückrufe verwenden, sofern 0 oder **NULL** nicht als Standardwerte zulässig sind.  
   
- Um sicherzustellen, dass ein Typ mit zukünftigen Serialisierungsmodulen kompatibel ist, beachten Sie die folgenden Richtlinien:  
+ Um sicherzustellen, dass ein Typ mit zukünftigen Serialisierungs-Engines kompatibel ist, beachten Sie die folgenden Richtlinien:  
   
 -   Legen Sie die **VersionAdded**-Eigenschaft im **OptionalFieldAttribute**-Attribut ordnungsgemäß fest.  
   
 -   Vermeiden Sie verzweigte Versionen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.SerializableAttribute>  
- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
- <xref:System.Runtime.Serialization.StreamingContext>  
- <xref:System.NonSerializedAttribute>  
- [Binäre Serialisierung](binary-serialization.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.SerializableAttribute>  
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>  
+- <xref:System.Runtime.Serialization.OptionalFieldAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.StreamingContext>  
+- <xref:System.NonSerializedAttribute>  
+- [Binäre Serialisierung](binary-serialization.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 ms.openlocfilehash: 1930826cf51d67ceb789e20920ca42f04d1adc1b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734355"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873071"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation-Bindungen
 Windows Communication Foundation (WCF) trennt, wie die Software für eine Anwendung geschrieben wird und wie sie mit anderer Software kommuniziert. Mit Bindungen werden Transport, Codierung und Protokolldetails angegeben, die für die Kommunikation zwischen Clients und Diensten erforderlich sind. WCF verwendet Bindungen, um die zugrunde liegende übertragungsdarstellung des Endpunkts, zu generieren, damit die meisten Details zur Bindung von den codeeigentümern erteilt vereinbart werden müssen, mit die kommuniziert werden. Das geschieht am einfachsten, indem die Clients eines Diensts dieselbe Bindung wie der Endpunkt dieses Diensts verwenden. Weitere Informationen hierzu finden Sie unter [Verwendung von Bindungen zum Konfigurieren von Windows Communication Foundation-Dienste und Clients](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
