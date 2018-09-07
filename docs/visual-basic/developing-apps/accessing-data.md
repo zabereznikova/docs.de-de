@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198839"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098536"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Zugreifen auf Daten in Visual Basic-Anwendungen
 Visual Basic umfasst mehrere neue Features, die bei der Entwicklung von Anwendungen, die auf Daten zugreifen, hilfreich sind. Datengebundene Formulare für Windows-Anwendungen werden erstellt, indem Elemente aus dem [Datenquellenfenster](/visualstudio/data-tools/add-new-data-sources) auf das Formular gezogen werden. Sie können Steuerelemente an Daten binden, indem Sie Elemente aus dem **Datenquellenfenster** auf vorhandene Steuerelemente ziehen.  
@@ -55,5 +55,4 @@ Visual Basic umfasst mehrere neue Features, die bei der Entwicklung von Anwendun
  [ADO.NET](../../framework/data/adonet/index.md)  
  Beschreibt die ADO.NET-Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen.
 
- [Daten in Office-Projektmappen](https://msdn.microsoft.com/library/xx069ybh)  
- Enthält Links zu Seiten, die die allgemeine Funktionsweise von Daten in Office-Projektmappen erläutern, und enthält Informationen über die schemaorientierte Programmierung, das Zwischenspeichern von Daten sowie den serverseitigen Datenzugriff.
+ [Daten in Office-Projektmappen](/visualstudio/vsto/data-in-office-solutions) enthält Links zu Seiten, die Erläutern der Funktionsweise von Daten in Office-Projektmappen, einschließlich Informationen über schemaorientierte Programmierung, datenzwischenspeicherung und serverseitigen Datenzugriff.

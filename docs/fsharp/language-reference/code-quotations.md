@@ -1,34 +1,34 @@
 ---
 title: Zitieren von Code (F#)
-description: Erfahren Sie mehr über f# Zitieren von Code, eine Sprachfunktion, die zum Generieren von und Arbeiten mit f#-Code-Ausdrücke programmgesteuert ermöglicht.
+description: Erfahren Sie mehr über f# Codezitate, eine Sprachfunktion, die Ihnen zum Generieren von und arbeiten programmgesteuert mit F#-Codeausdrücken ermöglicht.
 ms.date: 05/16/2016
-ms.openlocfilehash: a6fab0364cadef1f45276267a59c694140b24a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564533"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070068"
 ---
 # <a name="code-quotations"></a>Zitieren von Code
 
 > [!NOTE]
 Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
-In diesem Thema wird beschrieben, *Codezitate*, eine Sprachfunktion, die zum Generieren von und Arbeiten mit f#-Code-Ausdrücke programmgesteuert ermöglicht. Mit diesem Feature können Sie eine abstrakte Syntaxstruktur zu generieren, die f#-Code darstellt. Die abstrakte Syntaxstruktur kann durchlaufen und entsprechend den Anforderungen der Anwendung verarbeitet werden. Beispielsweise können Sie die Struktur zum Generieren von f#-Code oder Code in einer anderen Sprache zu generieren.
+In diesem Thema wird beschrieben, *Codezitate*, eine Sprachfunktion, die Ihnen zum Generieren von und arbeiten programmgesteuert mit F#-Codeausdrücken ermöglicht. Dieses Feature ermöglicht Ihnen eine abstrakte Syntaxstruktur generieren, die F#-Code darstellt. Die abstrakte Syntaxstruktur kann dann durchlaufen und gemäß den Anforderungen Ihrer Anwendung verarbeitet werden. Beispielsweise können Sie die Struktur zum Generieren von F#-Code oder Generieren von Code in einer anderen Sprache.
 
+## <a name="quoted-expressions"></a>Zitierte Ausdrücke
 
-## <a name="quoted-expressions"></a>Ausdrücke in Anführungszeichen
-Ein *in Anführungszeichen Ausdruck* ist ein Ausdruck F#-Code, der begrenzt wird, auf eine Weise, dass er nicht als Teil des Programms kompiliert wird, sondern stattdessen in ein Objekt, das einen f#-Ausdruck darstellt. Sie können einen Ausdruck in Anführungszeichen in zweierlei kennzeichnen: entweder mit oder ohne Typinformationen. Wenn Sie Typinformationen einschließen möchten, verwenden Sie die Symbole `<@` und `@>` auf den zitierten Ausdruck. Wenn Sie Typinformationen nicht benötigen, verwenden Sie die Symbole `<@@` und `@@>`. Der folgende Code zeigt, typisierte und nicht typisierte angeboten wird.
+Ein *in Anführungszeichen Ausdruck* ist ein F#-Ausdruck in Ihrem Code, der getrennt wird, so, dass es nicht als Teil des Programms kompiliert wird, sondern stattdessen in ein Objekt, das einen F#-Ausdruck darstellt. Sie können einen Ausdruck in Anführungszeichen in eine von zwei Arten kennzeichnen: entweder mit oder ohne Typinformationen. Wenn Sie Typinformationen einschließen möchten, verwenden Sie die Symbole `<@` und `@>` zitierten Ausdrucks zu trennen. Wenn Sie Typinformationen nicht benötigen, verwenden Sie die Symbole `<@@` und `@@>`. Der folgende Code zeigt die typisierte und nicht typisierte Angebote.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet501.fs)]
 
-Durchlaufen einer großen Ausdrucksbaumstruktur ist schneller, wenn Sie keine Typinformationen enthalten. Der resultierende Typ eines Ausdrucks mit den typisierten Symbolen in Anführungszeichen ist `Expr<'T>`, in dem der Typparameter den Typ des Ausdrucks wie vom f#-Compiler den Typ mithilfe eines Rückschlusses Algorithmus bestimmt wurde. Bei Verwendung von Zitieren von Code ohne Typinformationen ist der Typ des zitierten Ausdrucks die nichtgenerischen Typ [Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65). Sie erreichen die [Raw](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2) Eigenschaft für die typisierte `Expr` Klasse zum Abrufen der nicht typisierte `Expr` Objekt.
+Durchlaufen einer Ausdrucksbaumstruktur zu großen ist schneller, wenn Sie keine Typinformationen einschließen. Der resultierende Typ eines Ausdrucks für die typisierte Symbole in Anführungszeichen ist `Expr<'T>`, in dem der Typparameter den Typ des Ausdrucks gemäß der Typrückschluss-Algorithmus, der F#-Compiler den Typ aufweist. Wenn Sie Zitieren von Code ohne Typinformationen verwenden, ist der Typ des zitierten Ausdrucks der nicht generischen Typ [Expr](https://msdn.microsoft.com/library/ed6a2caf-69d4-45c2-ab97-e9b3be9bce65). Rufen Sie die [Raw](https://msdn.microsoft.com/library/47fb94f1-e77f-4c68-aabc-2b0ba40d59c2) Eigenschaft für die typisierte `Expr` Klasse, die nicht typisierte erhalten `Expr` Objekt.
 
-Es gibt eine Vielzahl von statischen Methoden, die Ihnen ermöglichen, Generieren von F#-Ausdrucksobjekte programmgesteuert in die `Expr` Klasse ohne zitierte Ausdrücke.
+Es gibt eine Vielzahl statischer Methoden, mit denen Sie zum Generieren von F#-Ausdrucksobjekten programmgesteuert in die `Expr` Klasse ohne zitierte Ausdrücke.
 
-Beachten Sie, dass eine codequotation einen vollständigen Ausdruck enthalten muss. Für eine `let` binden, z. B. benötigen Sie sowohl die Definition der gebundenen Namens und einen zusätzlichen Ausdruck, der Bindung verwendet. In ausführlicher Syntax ist dies ein Ausdruck, der folgt die `in` Schlüsselwort. Auf der obersten Ebene in einem Modul Dies ist nur für den nächsten Ausdruck im Modul, aber in ein Zitat es unbedingt erforderlich ist.
+Beachten Sie, dass ein Code-Angebot einen vollständigen Ausdruck enthalten muss. Für eine `let` Bindung, beispielsweise benötigen Sie sowohl die Definition der gebundenen Namens und einen zusätzlichen Ausdruck, der die Bindung verwendet. In ausführlicher Syntax ist dies ein Ausdruck, der `in` Schlüsselwort. Auf der obersten Ebene in einem Modul Dies ist nur des nächsten Ausdrucks in das Modul, aber in einem Angebot, es unbedingt erforderlich ist.
 
-Der folgende Ausdruck ist daher ungültig.
+Aus diesem Grund ist der folgende Ausdruck ungültig.
 
 ```fsharp
 // Not valid:
@@ -41,21 +41,21 @@ Die folgenden Ausdrücke sind jedoch gültig.
 
 Zum Zitieren von Code verwenden zu können, müssen Sie eine Importdeklaration hinzufügen (mithilfe der `open` Schlüsselwort), öffnet der [Microsoft.FSharp.Quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2) Namespace.
 
-F#-PowerPack bietet Unterstützung für auszuwerten und f#-Ausdrucksobjekte auszuführen.
-
+F#-PowerPack bietet Unterstützung für die Auswertung und Ausführung von F#-Ausdrucksobjekten.
 
 ## <a name="expr-type"></a>Expr-Typ
-Eine Instanz von der `Expr` Typ einen f#-Ausdruck darstellt. Der generische und nicht-generische `Expr` Typen sind in der F#-Bibliothek-Dokumentation dokumentiert. Weitere Informationen finden Sie unter [Microsoft.FSharp.Quotations-Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d) und [Quotations.Expr-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d).
 
+Eine Instanz von der `Expr` Typ stellt ein f#-Ausdrucks dar. Der generische und nicht generischen `Expr` Typen sind in der F#-Bibliothek-Dokumentation dokumentiert. Weitere Informationen finden Sie unter [Microsoft.FSharp.Quotations-Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d) und [Quotations.Expr-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d).
 
 ## <a name="splicing-operators"></a>Wird beim Splicing von Operatoren
-Splicing ermöglicht es Ihnen, literale Codezitate mit Ausdrücken kombinieren, die Sie programmgesteuert oder über eine andere codequotation erstellt haben. Die `%` und `%%` Operatoren ermöglichen es Ihnen, ein F#-Ausdrucksobjekt ein Codezitat hinzuzufügen. Verwenden Sie die `%` Operator zum Einfügen einer typisierten Ausdruck-Objekts in ein typisiertes Zitat; Sie verwenden die `%%` Operator, um eine nicht typisierte Expression-Objekt in eine nicht typisierte Anführungszeichen eingefügt. Beide Operatoren sind unäre Präfixoperatoren. Also wenn `expr` ist ein nicht typisierter Ausdruck des Typs `Expr`, der folgende Code ist ungültig.
+
+Einfügen, können Sie literale Codezitate mit Ausdrücken kombinieren, die Sie programmgesteuert oder aus einem anderen Code-Angebot erstellt haben. Die `%` und `%%` Operatoren ermöglichen es Ihnen, ein F#-Expression-Objekt in ein Code-Angebot hinzuzufügen. Sie verwenden die `%` Operator zum Einfügen von einem typisierten Datenquellenausdrucks-Objekt in ein typisiertes Zitat; Sie verwenden die `%%` Operator, um eine nicht typisierte Datenquellenausdrucks-Objekt in eine nicht typisierte Anführungszeichen einfügen. Beide Operatoren sind Unäroperatoren-Präfix. Also wenn `expr` ist ein nicht typisierter Ausdruck vom Typ `Expr`, der folgende Code ist ungültig.
 
 ```fsharp
 <@@ 1 + %%expr @@>
 ```
 
-Und wenn `expr` ist eine typisierte Angebot des Typs `Expr<int>`, der folgende Code ist ungültig.
+Und wenn `expr` ist ein typisiertes Zitat des Typs `Expr<int>`, der folgende Code ist ungültig.
 
 ```fsharp
 <@ 1 + %expr @>
@@ -64,12 +64,13 @@ Und wenn `expr` ist eine typisierte Angebot des Typs `Expr<int>`, der folgende C
 ## <a name="example"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
-Das folgende Beispiel veranschaulicht die Verwendung von Zitieren von Code f#-Code in einem Expression-Objekt und drucken Sie anschließend die f#-Code, der den Ausdruck darstellt. Eine Funktion `println` definiert ist, enthält eine rekursive Funktion `print` , die ein f#-Ausdrucksobjekt anzeigt (des Typs `Expr`) in einem benutzerfreundlichen Format. Es gibt mehrere aktive Muster in den [Microsoft.FSharp.Quotations.Patterns](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4) und [Microsoft.FSharp.Quotations.DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd) Module, die zum Analysieren von Ausdrucksobjekten verwendet werden können. Dieses Beispiel umfasst nicht alle möglichen Muster, die angezeigt werden in einem f#-Ausdruck. Jedes nicht erkannte Muster löst eine Übereinstimmung mit dem Platzhaltermuster (`_`) und gerendert wird, indem Sie die `ToString` Methode, die auf die `Expr` eingeben, können Sie wissen, dass die aktive Muster, um Ihre Vergleichsausdruck hinzufügen.
 
+Das folgende Beispiel veranschaulicht die Verwendung von Zitieren von Code zum f#-Code in ein Datenquellenausdrucks-Objekt und klicken Sie dann die F#-Code, der den Ausdruck darstellt, zu drucken. Eine Funktion `println` definiert ist, enthält eine rekursive Funktion `print` , anzeigt, dass ein F#-Expression-Objekt (des Typs `Expr`) in einem freundlichen Format. Es gibt mehrere aktive Muster in den [Microsoft.FSharp.Quotations.Patterns](https://msdn.microsoft.com/library/093944a9-c752-403a-8983-5fcd5dbf92a4) und [Microsoft.FSharp.Quotations.DerivedPatterns](https://msdn.microsoft.com/library/d2434a6e-ae7b-4f3d-b567-c162938bc9cd) Module, die zum Ausdrucksobjekten verwendet werden können. In diesem Beispiel enthält keine alle Muster, die angezeigt werden, möglicherweise in einem F#-Ausdruck. Eine nicht erkannte Muster löst eine Übereinstimmung mit dem Platzhaltermuster (`_`) und gerendert wird, indem Sie die `ToString` Methode, das auf die `Expr` eingeben, können Sie das aktive Muster der Match-Ausdruck hinzu.
 
 ### <a name="code"></a>Code
+
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
-    
+
 ### <a name="output"></a>Ausgabe
 
 ```fsharp
@@ -81,16 +82,17 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 ## <a name="example"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
-Sie können auch die drei aktive Muster in den [ExprShape-Modul](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) um Ausdrucksbaumstrukturen mit weniger aktiven Mustern zu durchlaufen. Diese mit aktiven Mustern können nützlich sein, wenn Durchlaufen einer Struktur verwendet werden sollen, aber nicht alle Informationen in den meisten Knoten erforderlich. Wenn Sie diese Muster verwenden, alle f#-Ausdruck übereinstimmt, eines der folgenden drei Muster: `ShapeVar` , wenn der Ausdruck eine Variable ist `ShapeLambda` ist der Ausdruck einen Lambda-Ausdruck oder `ShapeCombination` , wenn der Ausdruck etwas anderes ist. Wenn Sie mithilfe der aktive Muster wie im vorherigen Codebeispiel eine Ausdrucksbaumstruktur zu durchlaufen, müssen Sie viele weitere Muster verwenden, um alle möglichen f# Ausdruckstypen zu behandeln, und wird der Code komplexer sein. Weitere Informationen finden Sie unter [ExprShape.ShapeVar&#124;ShapeLambda&#124;aktives ShapeCombination-Muster](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
-Das folgende Codebeispiel kann als Grundlage für komplexere Durchläufe verwendet werden. In diesem Code wird eine Ausdrucksbaumstruktur für einen Ausdruck, der einen Funktionsaufruf umfasst erstellt `add`. Die [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) aktives Muster dient zum Erkennen von jeder Aufruf von `add` in der Ausdrucksbaumstruktur. Dieses aktive Muster weist die Argumenten des Aufrufs an die `exprList` Wert. In diesem Fall fallen nur zwei, sodass diese herausziehen und die Funktion ist für die Argumente rekursiv aufgerufen. Die Ergebnisse werden in einer codequotation, die einen Aufruf darstellt eingefügt `mul` mithilfe des Operators Splice (`%%`). Die `println` Funktion aus dem vorherigen Beispiel wird verwendet, um die Ergebnisse anzuzeigen.
+Sie können auch die drei aktive Muster in den [ExprShape-Modul](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de) um Ausdrucksbaumstrukturen mit weniger aktive Muster zu durchlaufen. Diese aktive Muster können hilfreich sein, wenn Sie eine Struktur zu durchlaufen möchten, aber alle Informationen in den meisten der Knoten ist nicht erforderlich. Wenn Sie diese Muster verwenden, alle f#-Ausdruck entspricht einem der folgenden drei Muster: `ShapeVar` ist der Ausdruck einer Variablen, `ShapeLambda` der Ausdruck ist ein Lambda-Ausdruck oder `ShapeCombination` nichts ist der Ausdruck. Wenn Sie eine Ausdrucksbaumstruktur durchlaufen, indem Sie die aktive Muster wie im vorherigen Codebeispiel, müssen Sie viele weitere Muster verwenden, um alle möglichen f# Ausdruckstypen verarbeiten, und Code komplexer sein wird. Weitere Informationen finden Sie unter [ExprShape.ShapeVar&#124;ShapeLambda&#124;aktives ShapeCombination-Muster](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d).
 
-Der Code in anderen Verzweigungen aktives Muster generiert nur die gleichen Ausdrucksbaumstruktur, daher ist die einzige Änderung in der sich ergebenden Ausdrucks die Änderung von `add` auf `mul`.
+Im folgenden Codebeispiel wird als Grundlage für komplexere Durchläufe dienen. In diesem Code wird eine Ausdrucksbaumstruktur erstellt wird, für einen Ausdruck, der einen Funktionsaufruf umfasst `add`. Die [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d) aktives Muster verwendet, um jeden Aufruf von erkennen `add` in der Ausdrucksbaumstruktur. Dieses aktive Muster weist die Argumente des Aufrufs an die `exprList` Wert. In diesem Fall stehen nur zwei, damit diese abgerufen werden, und die Funktion rekursiv, auf den Argumenten aufgerufen wird. Die Ergebnisse werden in einem Code-Angebot, die einen Aufruf darstellt eingefügt `mul` mithilfe des Operators für die Einfügung (`%%`). Die `println` Funktion aus dem vorherigen Beispiel wird verwendet, um die Ergebnisse anzuzeigen.
 
+Der Code in anderen Verzweigungen aktives Muster wird nur die gleichen Ausdrucksbaumstruktur generiert, ist die einzige Änderung in der sich ergebenden Ausdrucks die Änderung von `add` zu `mul`.
 
 ### <a name="code"></a>Code
+
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
-    
+
 ### <a name="output"></a>Ausgabe
 
 ```fsharp
@@ -99,5 +101,5 @@ Der Code in anderen Verzweigungen aktives Muster generiert nur die gleichen Ausd
 ```
 
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
+- [F#-Sprachreferenz](index.md)

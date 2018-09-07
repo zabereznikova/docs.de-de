@@ -1,23 +1,21 @@
 ---
 title: Ausführliche Syntax (F#)
-description: Erläutert den Unterschied zwischen ausführliche und einfache Syntax in der Programmiersprache f#.
+description: Erfahren Sie, den Unterschied zwischen ausführliche und einfache Syntax in der Programmiersprache f#.
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563783"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063117"
 ---
 # <a name="verbose-syntax"></a>Ausführliche Syntax
 
-Es gibt zwei Formen der Syntax für viele Konstrukte der Programmiersprache f# verfügbar: *ausführliche Syntax* und *einfache Syntax*. Die ausführliche Syntax ist nicht so häufig verwendet, aber hat den Vorteil, dass weniger empfindlich gegenüber Einzug. Die einfache Syntax ist kürzer und Einzug verwendet, um Anfang und Ende von Konstrukten zu signalisieren, anstatt zusätzliche Schlüsselwörter wie `begin`, `end`, `in`und so weiter. Standardmäßig ist die einfache Syntax. Dieses Thema beschreibt die Syntax für F#-Konstrukte, wenn einfacher Syntax nicht aktiviert ist. Ausführlicher Syntax ist immer aktiviert, damit auch, wenn Sie einfachen Syntax aktiviert haben, können Sie ausführlichen Syntax für einigen Konstrukten weiterhin verwenden. Sie können einfachen Syntax deaktivieren, indem Sie mit der `#light "off"` Richtlinie.
+Es gibt zwei Formen der Syntax für viele Konstrukte in f# verfügbar: *ausführliche Syntax* und *einfache Syntax*. Die ausführliche Syntax ist nicht so häufig verwendet, aber Sie hat den Vorteil, dass weniger anfällig für den Einzug. Die einfache Syntax ist kürzer und Einzüge verwendet, um Anfang und Ende von Konstrukten zu signalisieren, anstatt zusätzliche Schlüsselwörter wie `begin`, `end`, `in`und so weiter. Standardmäßig ist die einfache Syntax. Dieses Thema beschreibt die Syntax für f#-Konstrukte, wenn die einfacher Syntax nicht aktiviert ist. Ausführlicher Syntax ist immer aktiviert, sodass auch, wenn Sie einfachen Syntax aktiviert haben, können Sie ausführlichen Syntax für einige Konstrukte weiterhin verwenden. Sie können einfachen Syntax deaktivieren, indem Sie mit der `#light "off"` Richtlinie.
 
+## <a name="table-of-constructs"></a>Tabelle der Konstrukte
 
-## <a name="table-of-constructs"></a>Tabelle von Konstrukten
-Die folgende Tabelle zeigt die einfache und ausführliche Syntax für f#-Sprachkonstrukte in Kontexten besteht ein Unterschied zwischen den beiden Formaten. In dieser Tabelle spitze Klammern (&lt;&gt;) schließen Sie benutzerdefinierte Syntaxelemente. Finden Sie in der Dokumentation für jede Sprachkonstrukt Weitere ausführliche Informationen zur Syntax, die innerhalb dieser Konstrukte verwendet.
-
-
+Die folgende Tabelle zeigt die einfache und ausführliche Syntax für F#-Konstrukte in Kontexten, ein Unterschied zwischen den beiden Formaten besteht. In dieser Tabelle spitze Klammern (&lt;&gt;) schließen Sie die benutzerdefinierte Syntaxelemente. Finden Sie in der Dokumentation für jede Sprachkonstrukt Weitere ausführliche Informationen zur Syntax, die innerhalb dieser Konstrukte verwendet.
 
 <table>
 <tr>
@@ -68,7 +66,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-Code-block
+Codeblock
 </td><td>
 
 ```
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
-
-
 ## <a name="see-also"></a>Siehe auch
-[F#-Sprachreferenz](index.md)
 
-[Compileranweisungen](compiler-directives.md)
-
-[Richtlinien für das Formatieren von Code](code-formatting-guidelines.md)
+- [F#-Sprachreferenz](index.md)
+- [Compileranweisungen](compiler-directives.md)
+- [Richtlinien für das Formatieren von Code](code-formatting-guidelines.md)

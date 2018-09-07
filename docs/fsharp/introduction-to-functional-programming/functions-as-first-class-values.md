@@ -2,12 +2,12 @@
 title: Funktionen als erstrangige Werte (F#)
 description: Erfahren Sie, wie Funktionen als erstrangige in der Programmiersprache f# erhöht werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: cccff5fcf9de150da26422f80cae032ddf21014c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45b65ab2454a592d38c80fd367e7243635614727
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566664"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048235"
 ---
 # <a name="functions-as-first-class-values"></a>Funktionen als erstrangige Werte
 
@@ -15,24 +15,23 @@ Eine wichtige Eigenschaft funktionaler Programmiersprachen ist die Behandlung vo
 
 Zur Feststellung der Erstrangigkeit gehören folgende Kriterien:
 
-- Binden Sie können Funktionen auf Bezeichner? D. h., können Sie ihnen Namen geben?
+- Können Sie Funktionen auf Bezeichner binden? D.h., können Sie diese Namen geben?
 
-- Können Sie Funktionen in den Datenstrukturen, z. B. in einer Liste speichern?
+- Können Sie Funktionen in Datenstrukturen, z. B. in einer Liste speichern?
 
-- Kann eine Funktion in einem Funktionsaufruf als Argument werden übergeben?
+- Können Sie eine Funktion als Argument in einem Funktionsaufruf übergeben?
 
-- Können Sie eine Funktion aus einem Funktionsaufruf zurückgeben?
+- Können Sie eine Funktion von einem Funktionsaufruf zurückgeben?
 
-Die letzten beiden Measures definieren, so genannten *Operationen höherer Ordnung* oder *Funktionen höherer Ordnung*. Funktionen höherer Ordnung unterstützen Funktionen als Argumente und geben Funktionen als Werte von Funktionsaufrufen zurück. Diese Operationen bilden die Grundlage für die Hauptstützen der funktionalen Programmierung, wie z. B. Zuordnungsfunktionen und Funktionszusammensetzung.
-
+Die letzten beiden Measures zu definieren, so genannten *Operationen höherer Ordnung* oder *Funktionen höherer Ordnung*. Funktionen höherer Ordnung unterstützen Funktionen als Argumente und geben Funktionen als Werte von Funktionsaufrufen zurück. Diese Operationen bilden die Grundlage für die Hauptstützen der funktionalen Programmierung, wie z. B. Zuordnungsfunktionen und Funktionszusammensetzung.
 
 ## <a name="give-the-value-a-name"></a>Zuweisen eines Namens zu einem Wert
 
-Einem erstrangigen Funktionswert muss wie ganzen Zahlen, Zeichenfolgen und anderen integrierten Typen ein Name zugewiesen werden können. Bei der funktionalen Programmierung wird dies als Bindung eines Bezeichners an einen Wert ausgedrückt. F# verwendet [ `let` Bindungen](../language-reference/functions/let-bindings.md) zum Binden von Namen an Werte: `let <identifier> = <value>`. Der folgende Code enthält zwei Beispiele.
+Einem erstrangigen Funktionswert muss wie ganzen Zahlen, Zeichenfolgen und anderen integrierten Typen ein Name zugewiesen werden können. Bei der funktionalen Programmierung wird dies als Bindung eines Bezeichners an einen Wert ausgedrückt. F#-verwendet [ `let` Bindungen](../language-reference/functions/let-bindings.md) zur Bindung von Namen an Werte: `let <identifier> = <value>`. Der folgende Code enthält zwei Beispiele.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
-Das Zuweisen eines Namens zu einer Funktion ist ebenso einfach. Das folgende Beispiel definiert eine Funktion namens `squareIt` durch den Bezeichner binden `squareIt` auf die [Lambda-Ausdruck](../language-reference/functions/lambda-expressions-the-fun-keyword.md) `fun n -> n * n`. Die Funktion `squareIt` verfügt über einen Parameter `n` und gibt das Quadrat dieses Parameters zurück.
+Das Zuweisen eines Namens zu einer Funktion ist ebenso einfach. Das folgende Beispiel definiert eine Funktion namens `squareIt` durch die Bindung des Bezeichners `squareIt` auf die [Lambda-Ausdruck](../language-reference/functions/lambda-expressions-the-fun-keyword.md) `fun n -> n * n`. Die Funktion `squareIt` verfügt über einen Parameter `n` und gibt das Quadrat dieses Parameters zurück.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
 
@@ -41,7 +40,6 @@ Durch die folgende kürzere Syntax in F# erzielen Sie das gleiche Ergebnis mit w
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet22.fs)]
 
 In den folgenden Beispielen wird meist das erste Format (`let <function-name> = <lambda-expression>`) verwendet, um die Ähnlichkeiten zwischen der Deklaration von Funktionen und der Deklaration anderer Werttypen hervorzuheben. Sie können jedoch alle benannten Funktionen mit der kürzeren Syntax schreiben. In einigen Beispielen werden beide Formate verwendet.
-
 
 ## <a name="store-the-value-in-a-data-structure"></a>Speichern des Werts in einer Datenstruktur
 
@@ -56,7 +54,7 @@ Um zu überprüfen, ob ein in einem Tupel gespeicherter Funktionsname tatsächli
 Ebenso wie der Bezeichner `num` und die ganze Zahl 10 sind auch der Bezeichner `squareIt` und der lambda-Ausdruck `fun n -> n * n` austauschbar.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet25.fs)]
-    
+
 ## <a name="pass-the-value-as-an-argument"></a>Übergeben des Werts als Argument
 
 Werte mit erstrangigem Status in einer Sprache können als Argumente an eine Funktion übergeben werden. So werden z. B. ganze Zahlen und Zeichenfolgen häufig als Argumente übergeben. Im folgenden Code werden ganze Zahlen und Zeichenfolgen in F# als Argumente übergeben.
@@ -93,7 +91,7 @@ Mit dem folgenden inline deklarierten Funktionsaufruf wird ein boolescher Wert z
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet31.fs)]
 
-Die Fähigkeit, eine Funktion als Wert eines Funktionsaufrufs zurückzugeben, ist die zweite Eigenschaft von Funktionen höherer Ordnung. Im folgenden Beispiel wird `checkFor` als Funktion definiert, die ein Argument erfordert (`item`) und eine neue Funktion als Wert zurückgibt. Die zurückgegebene Funktion erfordert eine Liste als Argument (`lst`) und führt in `item` eine Suche nach `lst` aus. Wenn `item` gefunden wird, gibt die Funktion `true` zurück. Wenn `item` nicht vorhanden ist, wird `false` zurückgegeben. Wie im vorherigen Abschnitt, der folgende Code verwendet eine Funktion bereitgestellte Liste [List.exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8), um die Liste zu suchen.
+Die Fähigkeit, eine Funktion als Wert eines Funktionsaufrufs zurückzugeben, ist die zweite Eigenschaft von Funktionen höherer Ordnung. Im folgenden Beispiel wird `checkFor` als Funktion definiert, die ein Argument erfordert (`item`) und eine neue Funktion als Wert zurückgibt. Die zurückgegebene Funktion erfordert eine Liste als Argument (`lst`) und führt in `item` eine Suche nach `lst` aus. Wenn `item` gefunden wird, gibt die Funktion `true` zurück. Wenn `item` nicht vorhanden ist, wird `false` zurückgegeben. Wie im vorherigen Abschnitt, der folgende Code verwendet eine Funktion bereitgestellten Liste [List.exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8), um die Liste zu suchen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
@@ -104,16 +102,15 @@ Im folgenden Code wird mit `checkFor` eine neue Funktion erstellt, die ein Liste
 Im folgenden Beispiel wird der erstrangige Funktionsstatus in F# verwendet, um die Funktion `compose` zu deklarieren, die eine Zusammensetzung von zwei Funktionsargumenten zurückgibt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
-    
+
 >[!NOTE]
 Eine noch kürzere Version finden Sie im folgenden Abschnitt, "Funktionen mit Currying".
-
 
 Mit dem folgenden Code werden zwei Funktionen als Argumente an `compose` gesendet, die beide ein einzelnes Argument desselben Typs erfordern. Der Rückgabewert ist eine neue Funktion, bei der es sich um eine Zusammensetzung der beiden Funktionsargumente handelt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
-    
->[!NOTE] 
+
+>[!NOTE]
 F# bietet zwei Operatoren zum Zusammensetzen von Funktionen: `<<` und `>>`. `let squareAndDouble2 = doubleIt << squareIt` entspricht im vorangehenden Beispiel `let squareAndDouble = compose doubleIt squareIt`.
 
 Im folgenden Beispiel zur Rückgabe einer Funktion als Wert eines Funktionsaufrufs wird ein einfaches Ratespiel erstellt. Rufen Sie zum Erstellen eines Spiels `makeGame` auf, und senden Sie den Wert, der erraten werden soll, an `target`. Der Rückgabewert der Funktion `makeGame` ist eine Funktion, die ein Argument erfordert (den zu erratenden Wert) und zurückgibt, ob richtig geraten wurde.
@@ -123,10 +120,10 @@ Im folgenden Beispiel zur Rückgabe einer Funktion als Wert eines Funktionsaufru
 Im folgenden Code wird `makeGame` aufgerufen und der Wert `7` an `target` gesendet. Der Bezeichner `playGame` wird an den zurückgegebenen Lambda-Ausdruck gebunden. Somit ist `playGame` eine Funktion, die den Wert für `guess` als einzelnes Argument erfordert.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet37.fs)]
-    
+
 ## <a name="curried-functions"></a>Funktionen mit Currying
 
-In vielen der Beispiele im vorherigen Abschnitt geschrieben werden können noch kürzer fassen durch Nutzen der impliziten *currying* in Funktionsdeklarationen in F# erläutert werden. Beim sogenannten Currying wird eine Funktion mit mehreren Parametern in eine Reihe eingebetteter Funktionen mit jeweils einem einzelnen Parameter transformiert. In F# wird Currying grundsätzlich auf Funktionen mit mehreren Parametern angewendet. Beispiel: `compose` aus dem vorherigen Abschnitt kann in dem folgenden kurz gefassten Format mit drei Parametern geschrieben werden.
+Viele der Beispiele im vorherigen Abschnitt können durch die Nutzung der impliziten präziser geschrieben werden *currying* in Funktionsdeklarationen in f#. Beim sogenannten Currying wird eine Funktion mit mehreren Parametern in eine Reihe eingebetteter Funktionen mit jeweils einem einzelnen Parameter transformiert. In F# wird Currying grundsätzlich auf Funktionen mit mehreren Parametern angewendet. Beispiel: `compose` aus dem vorherigen Abschnitt kann in dem folgenden kurz gefassten Format mit drei Parametern geschrieben werden.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -141,9 +138,9 @@ Für den Zugriff auf diese Funktion haben Sie verschiedene Möglichkeiten. In je
 Um zu überprüfen, ob die Funktion wie gehabt funktioniert, verwenden Sie die ursprünglichen Testsituationen erneut.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet41.fs)]
-    
->[!NOTE] 
-Zur Einschränkung von Currying können Sie die Parameter in Tupeln einschließen. Weitere Informationen finden Sie unter "Muster der Parameter" in [Parameter und Argumente](../language-reference/parameters-and-arguments.md).
+
+>[!NOTE]
+Zur Einschränkung von Currying können Sie die Parameter in Tupeln einschließen. Weitere Informationen finden Sie unter "Parametermuster" in [Parameter und Argumente](../language-reference/parameters-and-arguments.md).
 
 Im folgenden Beispiel wird mit implizitem Currying eine kürzere Version von `makeGame` geschrieben. Wie `makeGame` die `game`-Funktion erstellt und zurückgibt, ist in diesem Format weniger explizit, Sie können das Ergebnis aber mit den ursprünglichen Testsituationen überprüfen.
 
@@ -151,8 +148,8 @@ Im folgenden Beispiel wird mit implizitem Currying eine kürzere Version von `ma
 
 Weitere Informationen zu currying finden Sie unter "Partielle Anwendung von Argumenten" in [Funktionen](../language-reference/functions/index.md).
 
-
 ## <a name="identifier-and-function-definition-are-interchangeable"></a>Bezeichner und Funktionsdefinition sind austauschbar
+
 Der Variablenname `num` in den vorherigen Beispielen ergibt die ganze Zahl 10, wenn also `num` gültig ist, hat 10 ebenso Gültigkeit. Dasselbe gilt für Funktionsbezeichner und ihre Werte: Wenn der Name der Funktion verwendet werden kann, kann auch der daran gebundene lambda-Ausdruck verwendet werden.
 
 Im folgenden Beispiel wird eine `Boolean`-Funktion mit dem Namen `isNegative` definiert. Dann werden Funktionsname und Funktionsdefinition beliebig ausgetauscht. In den nächsten drei Beispielen wird immer `False` zurückgegeben und angezeigt.
@@ -163,7 +160,7 @@ Gehen Sie noch einen Schritt weiter und ersetzen Sie `applyIt` durch den Wert, a
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet44.fs)]
 
-## <a name="functions-are-first-class-values-in-f"></a>Funktionen in F# sind erstrangige Werte #
+## <a name="functions-are-first-class-values-in-f"></a>Funktionen sind erstrangige Werte in F\#
 
 Die Beispiele in den vorherigen Abschnitten veranschaulichen, dass die Funktionen in F# die Kriterien für erstrangige Werte in F# erfüllen:
 
@@ -179,7 +176,7 @@ Die Beispiele in den vorherigen Abschnitten veranschaulichen, dass die Funktione
 - Sie können eine Funktion als Wert eines Funktionsaufrufs zurückgeben.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-Weitere Informationen zu F# erläutert werden, finden Sie unter der [f#-Sprachreferenz](../language-reference/index.md).
+Weitere Informationen zu f# finden Sie unter den [F#-Sprachreferenz](../language-reference/index.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -190,15 +187,11 @@ Der folgende Code enthält alle Beispiele aus diesem Thema.
 ### <a name="code"></a>Code
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet47.fs)]
-    
+
 ## <a name="see-also"></a>Siehe auch
 
-[Listen](../language-reference/lists.md)
-
-[Tupel](../language-reference/tuples.md)
-
-[Funktionen](../language-reference/functions/index.md)
-
-[`let` Bindungen](../language-reference/functions/let-bindings.md)
-
-[Lambda-Ausdrücke: Das `fun` Schlüsselwort](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Listen](../language-reference/lists.md)
+- [Tupel](../language-reference/tuples.md)
+- [Funktionen](../language-reference/functions/index.md)
+- [`let` Bindungen](../language-reference/functions/let-bindings.md)
+- [Lambdaausdrücke: Das `fun` Schlüsselwort](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

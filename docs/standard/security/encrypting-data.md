@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39dd7bfe4e5dd3405e24bf044723dbd92ccc65a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070380"
 ---
 # <a name="encrypting-data"></a>Verschlüsseln von Daten
 Symmetrische Verschlüsselung und asymmetrische Verschlüsselung werden mit unterschiedlichen Prozesse ausgeführt. Die symmetrische Verschlüsselung wird für Streams ausgeführt und ist daher für die Verschlüsselung großer Datenmengen geeignet. Die asymmetrische Verschlüsselung wird für eine kleine Anzahl von Bytes ausgeführt und ist daher nur für kleine Datenmengen geeignet.  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>Asymmetrische Verschlüsselung  
  Asymmetrische Algorithmen werden in der Regel zum Verschlüsseln kleiner Datenmengen verwendet, beispielsweise zum Verschlüsseln eines symmetrischen Schlüssels und eines Initialisierungsvektors (IV). Üblicherweise verwendet eine Person, die eine asymmetrische Verschlüsselung ausführt, einen öffentlichen Schlüssel, den eine andere Person erzeugt hat. Zu diesem Zweck wird von .NET Framework die <xref:System.Security.Cryptography.RSACryptoServiceProvider> -Klasse bereitgestellt.  
   
- Im folgenden Beispiel werden die Informationen eines öffentlichen Schlüssels verwendet, um einen symmetrischen Schlüssel und eine IV zu verschlüsseln. Zwei Bytearrays werden initialisiert, die den öffentlichen Schlüssel einer dritten Person darstellen. Ein <xref:System.Security.Cryptography.RSAParameters> -Objekt wird mit diesen Werten initialisiert. Als Nächstes wird die **RSAParameters** -Objekt (zusammen mit dem öffentlichen Schlüssel, die es darstellt) importiert eine **RSACryptoServiceProvider** mithilfe der <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> Methode. Zum Schluss werden der von einer <xref:System.Security.Cryptography.RijndaelManaged> -Klasse erstellte private Schlüssel und erstellte IV verschlüsselt. Für dieses Beispiel ist ein System erforderlich, auf dem 128-Bit-Verschlüsselung installiert ist.  
+ Im folgenden Beispiel werden die Informationen eines öffentlichen Schlüssels verwendet, um einen symmetrischen Schlüssel und eine IV zu verschlüsseln. Zwei Bytearrays werden initialisiert, die den öffentlichen Schlüssel einer dritten Person darstellen. Ein <xref:System.Security.Cryptography.RSAParameters> -Objekt wird mit diesen Werten initialisiert. Als Nächstes wird der **RSAParameters** Objekt (zusammen mit dem öffentlichen Schlüssel, die es darstellt) in importiert ein **RSACryptoServiceProvider** mithilfe der <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> Methode. Zum Schluss werden der von einer <xref:System.Security.Cryptography.RijndaelManaged> -Klasse erstellte private Schlüssel und erstellte IV verschlüsselt. Für dieses Beispiel ist ein System erforderlich, auf dem 128-Bit-Verschlüsselung installiert ist.  
   
 ```vb  
 Imports System  
@@ -262,7 +262,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Entschlüsseln von Daten](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Entschlüsseln von Daten](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

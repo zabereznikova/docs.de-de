@@ -15,11 +15,11 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 3113b953c1c547035883a4f4b51f53e4aefdf0a6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777386"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085772"
 ---
 # <a name="creating-an-ink-input-control"></a>Erstellen eines Freihandeingabesteuerelements
 Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und statisch rendert Freihandeingaben. Freihandeingaben gerendert wird, wenn ein Benutzer ein Strichs zeichnet, wodurch die Freihandeingaben angezeigt werden, "flow" aus der Tablettstift und Freihandeingaben dahinter angezeigt wurde an das Steuerelement, entweder über den Tablettstift aus der Zwischenablage eingefügten oder aus einer Datei geladen. Zum Rendern von Freihandeingaben dynamisch das Steuerelement verwenden, muss ein <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Zum Rendern von Freihandeingaben statisch, müssen Sie den Stift-Event-Methoden überschreiben (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, und <xref:System.Windows.UIElement.OnStylusUp%2A>) zum Sammeln von <xref:System.Windows.Input.StylusPoint> , Striche zu erstellen, und fügen sie eine <xref:System.Windows.Controls.InkPresenter> (die rendert Freihandeingaben auf dem Steuerelement).  

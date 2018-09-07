@@ -7,11 +7,11 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: e5a07e5264c715f568121403721a3c844b903d99
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886317"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085662"
 ---
 # <a name="getting-started-tutorial"></a>Lernprogramm 'Erste Schritte'
 In diesem Abschnitt enthaltenen Themen sollen Sie schnelle Offenlegung auf der Windows Communication Foundation (WCF) Programmierung erteilen. Die Liste am Ende dieses Themas gibt Aufschluss über die Reihenfolge, in der die Aufgaben ausgeführt werden müssen. Für dieses Tutorial vermittelt Ihnen Grundkenntnisse zu der die erforderlichen Schritte zum WCF-Dienst und Client-Anwendungen erstellen. Ein Dienst macht einen oder mehrere Endpunkte verfügbar, von denen jeder wiederum einen oder mehrere Dienstvorgänge zur Verfügung stellt. Die *Endpunkt* eines Diensts gibt eine Adresse, in dem der Dienst gefunden werden kann, eine Bindung, die Informationen, die beschreibt enthält, wie ein Client kommunizieren muss, mit dem Dienst und einen Vertrag, der die Funktionen definiert sind, vom Dienst für seine Clients bereitgestellt werden.  

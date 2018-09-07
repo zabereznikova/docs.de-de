@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037973"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076923"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Merkmale deklarierter Elemente (Visual Basic)
 Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, die betroffen sind, wie Code mit ihm interagieren kann. Jedem deklariertes Element verfügt über eine oder mehrere der folgenden Eigenschaften zugeordnet:  
@@ -46,10 +46,10 @@ Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, die be
 |Prozedurparameter|Ja|Ja|Ja|Nein|  
 |Funktionsrückgabe|Ja|Ja|Ja|Nein|  
 |Operator|Ja|Nein|Ja|Ja|  
-|Schnittstelle|Nein|Nein|Ja|Ja|  
+|Interface|Nein|Nein|Ja|Ja|  
 |Klasse|Nein|Nein|Ja|Ja|  
-|Ereignis|Nein|Nein|Ja|Ja|  
-|Delegate|Nein|Nein|Ja|Ja|  
+|event|Nein|Nein|Ja|Ja|  
+|delegate|Nein|Nein|Ja|Ja|  
   
  <sup>1</sup> Bereich wird manchmal als bezeichnet *Sichtbarkeit*.  
   

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68419fe293dd25936aa3c1e3def10bbe8852e175
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571383"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080981"
 ---
 # <a name="designing-for-extensibility"></a>Entwerfen für Erweiterbarkeit
-Ein wichtiger Aspekt beim Entwerfen einer Framework wird sichergestellt, dass die Erweiterbarkeit des Frameworks sorgfältig berücksichtigt wurde. Dies erfordert, dass Sie verstehen, die Kosten und Vorteile, die verschiedene Mechanismen für Erweiterbarkeit zugeordnet. In diesem Kapitel können Sie entscheiden, welche die Mechanismen für Erweiterbarkeit – Unterklassen, Ereignisse, virtuelle Member, Rückrufe und usw. – können am besten erfüllt die Anforderungen von Ihrem Framework.  
+Ein wichtiger Aspekt des Entwurfs ein Framework wird sichergestellt, dass die Erweiterbarkeit des Frameworks sorgfältig in Betracht gezogen wurde. Dies erfordert, dass Sie verstehen, die Kosten und Vorteile, die mit verschiedenen Mechanismen zur Erweiterbarkeit verknüpft ist. In diesem Kapitel können Sie entscheiden, welche die Erweiterbarkeitsmechanismen – Unterklassen, Ereignisse, virtuelle Member, Rückrufe und So weiter – kann am besten erfüllen die Anforderungen der Ihr Framework.  
   
- Es gibt viele Möglichkeiten, die Erweiterbarkeit in Frameworks zu ermöglichen. Sie liegen an weniger leistungsfähig, aber weniger Aufwand zu sehr umfangreichen jedoch teuer. Für jede Anforderung angegebenen Erweiterbarkeit sollten Sie die geringsten Ausfallkosten verursacht Erweiterungsmechanismus auswählen, der die Anforderungen erfüllt. Bedenken Sie, dass kann normalerweise stärkere Erweiterbarkeit später hinzufügen, aber Sie nie, dass er sofort führen können ohne Änderungen, die die Einführung.  
+ Es gibt viele Möglichkeiten, um die Erweiterbarkeit in Frameworks zu ermöglichen. Sie reicht aus weniger leistungsfähigen, jedoch weniger aufwändige zu sehr leistungsfähig, aber teuer. Für jede Anforderung angegebenen Erweiterbarkeit sollten Sie den geringsten Ausfallkosten verursacht Erweiterungsmechanismus auswählen, der die Anforderungen erfüllt. Bedenken Sie, dass in der Regel umfassendere Erweiterbarkeit später hinzufügen können, aber Sie nie es sofort dauert ohne wichtige Änderungen einzuführen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Nicht versiegelte Klassen](../../../docs/standard/design-guidelines/unsealed-classes.md)  
@@ -30,9 +30,10 @@ Ein wichtiger Aspekt beim Entwerfen einer Framework wird sichergestellt, dass di
  [Abstraktionen (abstrakte Typen und Schnittstellen)](../../../docs/standard/design-guidelines/abstractions-abstract-types-and-interfaces.md)  
  [Basisklassen zum Implementieren von Abstraktionen](../../../docs/standard/design-guidelines/base-classes-for-implementing-abstractions.md)  
  [Versiegeln](../../../docs/standard/design-guidelines/sealing.md)  
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

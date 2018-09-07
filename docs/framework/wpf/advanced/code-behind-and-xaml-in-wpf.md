@@ -6,11 +6,11 @@ helpviewer_keywords:
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
 ms.openlocfilehash: ee08dc22588264b25d40b3fd818ef9ee1da90319
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032905"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085665"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-Behind und XAML in WPF
 <a name="introduction"></a> CodeBehind ist ein Begriff zum Beschreiben des Codes, der mit Markup-definierten Objekten verknüpft ist, verwendet bei einem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite ist Markupkompilierte. Dieses Thema beschreibt die Anforderungen für die Code-Behind sowie eine alternative Inline-Code-Mechanismus für den Code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
