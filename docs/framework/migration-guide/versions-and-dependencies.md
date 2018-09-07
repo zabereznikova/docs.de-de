@@ -8,11 +8,11 @@ ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43859778"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067950"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework-Versionen und -Abhängigkeiten
 Jede Version von .NET Framework enthält die CLR (Common Language Runtime) sowie die Basisklassenbibliotheken und andere verwaltete Bibliotheken. In diesem Thema werden die Hauptfunktionen von .NET Framework nach Version beschrieben und Informationen zu den zugrunde liegenden CLR-Versionen sowie den zugeordneten Entwicklungsumgebungen bereitgestellt und die vom Windows-Betriebssystem installierten Versionen dargestellt.  
