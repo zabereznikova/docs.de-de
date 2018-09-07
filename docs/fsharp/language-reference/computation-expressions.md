@@ -3,17 +3,17 @@ title: Berechnungsausdrücke (F#)
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in f#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800909"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44048269"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
 Berechnungsausdrücke in f# bieten eine bequeme Syntax für das Schreiben von Berechnungen, die sequenziert werden können und mithilfe von ablaufsteuerungskonstrukten und Bindungen kombiniert. Abhängig von der Art des Berechnungsausdrucks können sie als eine Möglichkeit, Monaden, Monoids, Monad Transformatoren und applicative Funktionselemente auszudrücken betrachtet werden. Anders als bei anderen Sprachen (z. B. *-Notation* in Haskell), sie sind nicht an eine einzelne Abstraktion gebunden, und verlassen Sie sich nicht in Makros oder anderen Formen der Metaprogrammierung, um eine praktische und kontextbezogene Syntax zu erreichen.
 
-## <a name="overview"></a>Überblick
+## <a name="overview"></a>Übersicht
 
 Berechnungen können viele Formen annehmen. Die häufigste Form der Berechnung ist Singlethread-Ausführung, bei dem ist leicht zu verstehen und zu bearbeiten. Nicht alle Arten von Berechnungen sind jedoch so einfach wie das Singlethread-Ausführung. Beispiele:
 

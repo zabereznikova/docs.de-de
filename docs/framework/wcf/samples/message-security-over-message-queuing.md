@@ -5,11 +5,11 @@ ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: a7bb69fa40637629e416336a893f98277cb6ed08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419687"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44040995"
 ---
 # <a name="message-security-over-message-queuing"></a>Nachrichtensicherheit über Message Queuing
 Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherheit mit X.509v3-Zertifikatauthentifizierung für den Client verwendet wird, und die eine Serverauthentifizierung mit dem X.509v3-Zertifikat des Servers über MSMQ erfordert. Nachrichtensicherheit wird manchmal vorgezogen, um sicherzustellen, dass die Nachrichten im MSMQ-Speicher verschlüsselt bleiben und die Anwendung ihre eigene Authentifizierung der Nachricht ausführt.  
