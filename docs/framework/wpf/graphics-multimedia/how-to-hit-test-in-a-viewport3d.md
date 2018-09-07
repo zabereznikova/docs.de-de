@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
 ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733380"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047158"
 ---
-# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="80c04-102">Gewusst wie: Treffertest in Viewport3D</span><span class="sxs-lookup"><span data-stu-id="80c04-102">How to: Hit Test in a Viewport3D</span></span>
-<span data-ttu-id="80c04-103">Dieses Beispiel zeigt, wie ein Treffertest für 3D-Elemente in einem <xref:System.Windows.Controls.Viewport3D>.</span><span class="sxs-lookup"><span data-stu-id="80c04-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
+# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="124f4-102">Gewusst wie: Treffertest in Viewport3D</span><span class="sxs-lookup"><span data-stu-id="124f4-102">How to: Hit Test in a Viewport3D</span></span>
+<span data-ttu-id="124f4-103">Dieses Beispiel zeigt, wie ein Treffertest für 3D-Elemente in einem <xref:System.Windows.Controls.Viewport3D>.</span><span class="sxs-lookup"><span data-stu-id="124f4-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
   
- <span data-ttu-id="80c04-104">Da <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 2D- und 3D-Spiele gibt Informationen zurück, es ist möglich, durchlaufen die Testergebnisse nur 3D Ergebnisse zu lesen.</span><span class="sxs-lookup"><span data-stu-id="80c04-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
+ <span data-ttu-id="124f4-104">Da <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> 2D- und 3D-Spiele gibt Informationen zurück, es ist möglich, durchlaufen die Testergebnisse nur 3D Ergebnisse zu lesen.</span><span class="sxs-lookup"><span data-stu-id="124f4-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <span data-ttu-id="80c04-105">Die <xref:System.Windows.Media.HitTestResultBehavior> in den folgenden Code bestimmt, wie die Treffertestergebnissen verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="80c04-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  <span data-ttu-id="80c04-106">`UpdateResultInfo` und `UpdateMaterial` lokal definierte Methoden sind.</span><span class="sxs-lookup"><span data-stu-id="80c04-106">`UpdateResultInfo` and `UpdateMaterial` are locally defined methods.</span></span>  
+ <span data-ttu-id="124f4-105">Die <xref:System.Windows.Media.HitTestResultBehavior> in den folgenden Code bestimmt, wie die Treffertestergebnissen verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="124f4-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  <span data-ttu-id="124f4-106">`UpdateResultInfo` und `UpdateMaterial` lokal definierte Methoden sind.</span><span class="sxs-lookup"><span data-stu-id="124f4-106">`UpdateResultInfo` and `UpdateMaterial` are locally defined methods.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
-## <a name="see-also"></a><span data-ttu-id="80c04-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="80c04-107">See Also</span></span>  
- [<span data-ttu-id="80c04-108">Drücken Sie Beispiel zu Leistungstests in 3D</span><span class="sxs-lookup"><span data-stu-id="80c04-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)
+## <a name="see-also"></a><span data-ttu-id="124f4-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="124f4-107">See Also</span></span>  
+ [<span data-ttu-id="124f4-108">Drücken Sie Beispiel zu Leistungstests in 3D</span><span class="sxs-lookup"><span data-stu-id="124f4-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)
