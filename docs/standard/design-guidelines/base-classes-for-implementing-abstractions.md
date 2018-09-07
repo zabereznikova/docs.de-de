@@ -8,32 +8,33 @@ helpviewer_keywords:
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c247ed7273687dbd61a6f19923b71e07e9ed960
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571507"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078638"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Basisklassen zum Implementieren von Abstraktionen
-Streng genommen wird eine Klasse eine Basisklasse aus, wenn die einer anderen Klasse abgeleitet ist. In diesem Abschnitt ist eine Basisklasse jedoch eine Klasse, die hauptsächlich für die bieten einer allgemeine Abstraktion oder für andere Klassen einige wiederverwenden Standardimplementierung über Vererbung konzipiert. Basisklassen befinden sich in der Regel in der Mitte Vererbungshierarchien zwischen eine Abstraktion der Stamm einer Hierarchie und mehrere benutzerdefinierte Implementierungen unten.  
+Genau genommen wird eine Klasse eine Basisklasse, bei einer anderen Klasse abgeleitet wird. In diesem Abschnitt ist eine Basisklasse jedoch eine Klasse, die hauptsächlich um eine allgemeine Abstraktion oder für andere Klassen wiederverwenden einige Standardimplementierung über Vererbung entworfen. Base-Klassen befinden sich in der Regel in der Mitte Vererbungshierarchien, zwischen einer Abstraktion am Stamm einer Hierarchie und mehrere benutzerdefinierte Implementierungen am unteren Rand.  
   
- Sie dienen als Implementierung Hilfsprogramme zum Implementieren von Abstraktionen. Beispielsweise ist eine das Framework Abstraktionen für geordnete Auflistungen von Elementen der <xref:System.Collections.Generic.IList%601> Schnittstelle. Implementieren von <xref:System.Collections.Generic.IList%601> ist keine einfache Aufgabe, und das Framework bietet daher mehrere Basisklassen, z. B. <xref:System.Collections.ObjectModel.Collection%601> und <xref:System.Collections.ObjectModel.KeyedCollection%602>, die zum Implementieren von benutzerdefinierter Sammlungen dienen als Hilfe.  
+ Sie dienen als Implementierung Hilfsprogramme zum Implementieren von Abstraktionen. Eines der Framework Abstraktionen für die sortierte Auflistungen von Elementen ist z. B. die <xref:System.Collections.Generic.IList%601> Schnittstelle. Implementieren von <xref:System.Collections.Generic.IList%601> ist keine leichte Aufgabe, und das Framework bietet daher mehrere Basisklassen, z. B. <xref:System.Collections.ObjectModel.Collection%601> und <xref:System.Collections.ObjectModel.KeyedCollection%602>, die zum Implementieren von benutzerdefinierter Sammlungen als Hilfe dienen.  
   
- Basisklassen sind normalerweise nicht geeignet, als Abstraktionen von sich selbst zu fungieren, da sie tendenziell eher zu viel Implementierung enthalten. Z. B. die `Collection<T>` Basisklasse enthält viele der Implementierung, die im Zusammenhang mit der Tatsache, dass sie die nicht generische implementiert `IList` (um die nicht generischen Auflistungen besser integrieren)-Schnittstelle und die Tatsache, dass sie gespeicherte eine Auflistung von Elementen Speicher in einem der zugehörigen Felder.  
+ Basisklassen sind normalerweise nicht geeignet, die als Abstraktionen von selbst, bedienen, da sie tendenziell eher zu viel Implementierung enthalten. Z. B. die `Collection<T>` Basisklasse enthält viele der Implementierung, die im Zusammenhang mit der Tatsache, dass sie die nicht generische implementiert `IList` (um Sie besser in nicht generischen Auflistungen zu integrieren)-Schnittstelle und die Tatsache, die eine Auflistung von Elementen, die in gespeichert Speicher in eines seiner Felder.  
   
- Wie zuvor erwähnt Basisklassen können wertvolle Hilfe für Benutzer, die Abstraktionen implementieren müssen, nach Belieben zur gleichen Zeit eine erhebliche Haftung sein. Sie Oberfläche hinzufügen und erhöhen die Tiefe der Vererbungshierarchien und Dienstantwort erschweren das Framework. Aus diesem Grund sollte Basisklassen verwendet werden, nur dann, wenn sie erheblichem Wert für die Benutzer des Frameworks bieten. Sie sollten vermieden werden, wenn sie Wert nur für die Implementierung von Frameworks bieten in denen Groß-/Kleinschreibung Delegierung an eine interne Implementierung anstelle von Vererbung von einer Basisklasse stark berücksichtigt werden soll.  
+ Wie bereits erwähnt Basisklassen können wertvolle Hilfe für Benutzer, die zum Implementieren von Abstraktionen bereitstellen, aber sie können zur gleichen Zeit eine erhebliche Schuld sein. Diese Oberfläche hinzufügen, erhöhen Sie die Tiefe der Vererbungshierarchien und Dienstantwort erschweren das Framework. Aus diesem Grund sollte Basisklassen verwendet werden, nur dann, wenn sie erhebliche Wert für die Benutzer des Frameworks bieten. Sie sollten vermieden werden, wenn sie nur die während der Implementierung des Frameworks, einen in denen Groß-/Kleinschreibung Delegierung an eine interne Implementierung anstelle von Vererbung von einer Basisklasse stark berücksichtigt werden soll.  
   
- **✓ CONSIDER** machen Basisklassen abstrakt, auch wenn sie keine abstrakten Member enthalten. Dies deutlich kommuniziert mit den Benutzern, die die Klasse dient ausschließlich zu geerbt werden.  
+ **✓ CONSIDER** machen Basisklassen abstrakt, auch wenn sie keine abstrakten Member enthalten. Dies deutlich kommuniziert, um die Benutzer, die die Klasse dient ausschließlich für die von der geerbt werden.  
   
- **✓ CONSIDER** Basisklassen in einem separaten Namespace aus den danach werden die Hauptszenarien Szenario platzieren. Definitionsgemäß Basisklassen sind für erweiterte Erweiterbarkeitsszenarios gedacht und sind daher nicht für die meisten Benutzer interessant.  
+ **✓ CONSIDER** Basisklassen in einem separaten Namespace aus den danach werden die Hauptszenarien Szenario platzieren. Definitionsgemäß Basisklassen dienen zur erweiterten Szenarios und sind daher nicht interessant, die Mehrheit der Benutzer.  
   
  **X AVOID** naming Basisklassen, mit dem Suffix "Basis", wenn die Klasse zur Verwendung in öffentlichen APIs vorgesehen ist.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

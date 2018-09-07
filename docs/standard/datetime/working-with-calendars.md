@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a37ec8a5d62e4a4eb7cfcd22f684821cfd204945
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fca25786096ebeb97c133d306129f33f2bb4580
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065340"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
-Obwohl ein Datums- und Uhrzeitwert eine universale zeitliche Angabe darstellt, ist die Zeichenfolgendarstellung eines solchen Werts kulturabhängig. Sie wird sowohl durch die Anzeigekonventionen für Datums- und Uhrzeitwerte einer bestimmten Kultur als auch durch den Kalender bestimmt, der in der jeweiligen Kultur verwendet wird. Dieses Thema behandelt die Unterstützung für Kalender in .NET und erläutert die Verwendung der Kalenderklassen beim Arbeiten mit Datumswerten.
+Obwohl ein Datums- und Uhrzeitwert eine universale zeitliche Angabe darstellt, ist die Zeichenfolgendarstellung eines solchen Werts kulturabhängig. Sie wird sowohl durch die Anzeigekonventionen für Datums- und Uhrzeitwerte einer bestimmten Kultur als auch durch den Kalender bestimmt, der in der jeweiligen Kultur verwendet wird. Dieses Thema behandelt die Unterstützung für Kalender in .NET und erläutert die Verwendung der Kalenderklassen, bei der Arbeit mit Datumswerten.
 
 ## <a name="calendars-in-net"></a>Kalender in .NET
 
-Alle Kalender in .NET ableiten der <xref:System.Globalization.Calendar?displayProperty=nameWithType> Klasse, die die basisimplementierung für Kalender Implementierung bereitstellt. Eine der Klassen, die von der <xref:System.Globalization.Calendar>-Klasse erbt, ist die <xref:System.Globalization.EastAsianLunisolarCalendar>-Klasse. Dies ist die Basisklasse für alle Mond-Sonne-Kalender. .NET beinhaltet folgende kalenderimplementierungen:
+Alle Kalender in .NET leiten Sie von der <xref:System.Globalization.Calendar?displayProperty=nameWithType> -Klasse, die die basisimplementierung für Kalender-Implementierung bietet. Eine der Klassen, die von der <xref:System.Globalization.Calendar>-Klasse erbt, ist die <xref:System.Globalization.EastAsianLunisolarCalendar>-Klasse. Dies ist die Basisklasse für alle Mond-Sonne-Kalender. .NET umfasst folgende kalenderimplementierungen:
 
 * <xref:System.Globalization.ChineseLunisolarCalendar> stellt den chinesischen Mond-Sonne-Kalender dar.
 
@@ -128,18 +128,18 @@ Im folgenden Beispiel wird ein <xref:System.Globalization.JulianCalendar>-Objekt
 
 Das früheste Datum, das von einem Kalender unterstützt wird, wird durch die <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType>-Eigenschaft dieses Kalenders angegeben. Für die <xref:System.Globalization.GregorianCalendar>-Klasse ist dieses Datum der 1. Januar 0001 unserer Zeitrechnung. Die meisten anderen Kalender in .NET unterstützen ein späteres Datum. Der Versuch, mit einem Datums- und Zeitwert zu arbeiten, der vor dem frühesten unterstützten Datum eines Kalenders liegt, löst eine <xref:System.ArgumentOutOfRangeException> Ausnahme aus.
 
-Es gibt jedoch eine wichtige Ausnahme. Der (nicht initialisierte) Standardwert eines <xref:System.DateTime>-Objekts und eines <xref:System.DateTimeOffset>-Objekts ist gleich dem <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType>-Wert. Wenn Sie versuchen, dieses Datum in einem Kalender zu formatieren, der dem 1. Januar 0001 unserer Zeitrechnung nicht unterstützt und Sie bieten keines Formatbezeichners, Formatierungsmethode verwendet der Formatbezeichner "s" (sortierbares Datums-/Zeitmuster) anstelle der Formatbezeichner "G" (Allgemeine Datums-/Zeitmuster). In der Folge löst der Formatierungsvorgang keine <xref:System.ArgumentOutOfRangeException>-Ausnahme aus. Stattdessen wird das nicht unterstützte Datum zurückgegeben. Dies wird im folgenden Beispiel veranschaulicht. Der Wert von <xref:System.DateTime.MinValue?displayProperty=nameWithType> wird anzeigt, wenn die aktuelle Kultur auf Japanisch (Japan) mit dem japanischen Kalender und in Arabisch (Ägypten) mit dem Um Al Qura-Kalender festgelegt wird. Außerdem wird die aktuelle Kultur auf Englisch (USA) festgelegt die <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>-Methode mit jedem dieser <xref:System.Globalization.CultureInfo>-Objekte aufgerufen. In jedem Fall wird das Datum mithilfe des sortierbaren Datums-/Zeitmusters angezeigt.
+Es gibt jedoch eine wichtige Ausnahme. Der (nicht initialisierte) Standardwert eines <xref:System.DateTime>-Objekts und eines <xref:System.DateTimeOffset>-Objekts ist gleich dem <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType>-Wert. Wenn Sie versuchen, dieses Datum in einem Kalender zu formatieren, das am 1. Januar 0001 unserer Zeitrechnung nicht unterstützt. und keinen Formatbezeichner angegeben, verwendet die Formatierungsmethode den Formatbezeichner für "s" (sortierbares Datums-/Zeitmuster) anstelle des Formatbezeichners "G" (Allgemeine Datums-/Zeitmuster). In der Folge löst der Formatierungsvorgang keine <xref:System.ArgumentOutOfRangeException>-Ausnahme aus. Stattdessen wird das nicht unterstützte Datum zurückgegeben. Dies wird im folgenden Beispiel veranschaulicht. Der Wert von <xref:System.DateTime.MinValue?displayProperty=nameWithType> wird anzeigt, wenn die aktuelle Kultur auf Japanisch (Japan) mit dem japanischen Kalender und in Arabisch (Ägypten) mit dem Um Al Qura-Kalender festgelegt wird. Außerdem wird die aktuelle Kultur auf Englisch (USA) festgelegt die <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>-Methode mit jedem dieser <xref:System.Globalization.CultureInfo>-Objekte aufgerufen. In jedem Fall wird das Datum mithilfe des sortierbaren Datums-/Zeitmusters angezeigt.
 
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
 
 ## <a name="working-with-eras"></a>Arbeiten mit Zeiträumen
 
-Kalender unterteilen Datumsangaben in der Regel in Zeiträume. Allerdings die <xref:System.Globalization.Calendar> Klassen in .NET unterstützen nicht alle Zeiträume definiert, die durch einen Kalender und die meisten der <xref:System.Globalization.Calendar> Klassen unterstützen nur einen einzigen Zeitraum. Nur die Klassen <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar> unterstützen mehrere Zeiträume.
+Kalender unterteilen Datumsangaben in der Regel in Zeiträume. Allerdings die <xref:System.Globalization.Calendar> Klassen in .NET unterstützen nicht alle Zeiträume, die durch einen Kalender, und die meisten definiert die <xref:System.Globalization.Calendar> Klassen unterstützen nur einen einzigen Zeitraum. Nur die Klassen <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar> unterstützen mehrere Zeiträume.
 
 ### <a name="eras-and-era-names"></a>Zeiträume und Namen
 
-In .NET Ganzzahlen, das die Zeiträume, die von einer bestimmten Implementierung unterstützt darstellt, befinden sich in umgekehrter Reihenfolge in der <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> Array. Der aktuelle Zeitraum hat den Index 0 (null), und bei <xref:System.Globalization.Calendar>-Klassen, die mehrere Zeiträume unterstützen, entspricht jeder nachfolgende Index dem jeweils davorliegenden Zeitraum. Die statische <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType>-Eigenschaft definiert den Index des aktuellen Zeitraums im <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>-Array. Dies ist eine Konstante, die stets den Wert 0 (null) hat. Einzelne <xref:System.Globalization.Calendar>-Klassen beinhalten darüber hinaus auch statische Felder, die den Wert des aktuellen Zeitraums zurückgeben. Sie sind in der folgenden Tabelle aufgeführt.
+In .NET Ganzzahlen, das die Zeiträume unterstützt bei einer bestimmten Implementierung darstellt, befinden sich in umgekehrter Reihenfolge in der <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> Array. Der aktuelle Zeitraum hat den Index 0 (null), und bei <xref:System.Globalization.Calendar>-Klassen, die mehrere Zeiträume unterstützen, entspricht jeder nachfolgende Index dem jeweils davorliegenden Zeitraum. Die statische <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType>-Eigenschaft definiert den Index des aktuellen Zeitraums im <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>-Array. Dies ist eine Konstante, die stets den Wert 0 (null) hat. Einzelne <xref:System.Globalization.Calendar>-Klassen beinhalten darüber hinaus auch statische Felder, die den Wert des aktuellen Zeitraums zurückgeben. Sie sind in der folgenden Tabelle aufgeführt.
 
 | Kalenderklasse                                        | Feld für den aktuellen Zeitraum                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -160,7 +160,7 @@ Der Name, der dem Zeitraum mit einer bestimmten Nummer entspricht, kann durch Ü
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
 
-Darüber hinaus enthält die benutzerdefinierte Formatzeichenfolge "g" für Datum und Uhrzeit den Namen des Zeitraums eines Kalenders in der Zeichenfolgendarstellung eines Datums- und Uhrzeitwerts. Weitere Informationen finden Sie unter [benutzerdefinierte Datums- und Uhrzeit-Formatzeichenfolgen](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
+Darüber hinaus enthält die benutzerdefinierte Formatzeichenfolge "g" für Datum und Uhrzeit den Namen des Zeitraums eines Kalenders in der Zeichenfolgendarstellung eines Datums- und Uhrzeitwerts. Weitere Informationen finden Sie unter [Formatzeichenfolgen benutzerdefinierte Datums- und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
 ### <a name="instantiating-a-date-with-an-era"></a>Instanziieren eines Datums mit einem Zeitraum
 
@@ -179,7 +179,7 @@ Wenn ein <xref:System.Globalization.Calendar>-Objekt Zeiträume unterstützt und
 [!code-vb[Conceptual.Calendars#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings1.vb#8)]
 
 > [!WARNING]
-> Die <xref:System.Globalization.JapaneseCalendar> Klasse ist die einzige Kalenderklasse in .NET, die beide unterstützt Datumsangaben in mehreren Zeiträumen enthalten und als aktueller Kalender der sein können eine <xref:System.Globalization.CultureInfo> Objekt – genauer gesagt, eines ein <xref:System.Globalization.CultureInfo> Objekt, das die Kultur für Japanisch (Japan) darstellt.
+> Die <xref:System.Globalization.JapaneseCalendar> -Klasse ist die einzige Kalenderklasse in .NET, die beide unterstützt Datumsangaben in mehr als ein Zeitraum und die den aktuellen Kalender können eine <xref:System.Globalization.CultureInfo> Objekt - genauer gesagt, eines eine <xref:System.Globalization.CultureInfo> -Objekt, das die Kultur für Japanisch (Japan) darstellt.
 
 Bei allen Kalendern enthält der benutzerdefinierte Formatbezeichner "g" auch den Zeitraum in der Ergebniszeichenfolge. Das folgende Beispiel verwendet die benutzerdefinierte Formatzeichenfolge "MM-DD-yyyy g", um den Zeitraum in der Ergebniszeichenfolge anzuzeigen, wenn als aktueller Kalender der gregorianische Kalender festgelegt ist.
 
@@ -193,5 +193,5 @@ In Fällen, in denen die Zeichenfolgendarstellung eines Datums in einem Kalender
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-[Beispiel: Woche Bereich Hilfsprogramm "Kalender"](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [Gewusst wie: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [Beispiel: Liegen Sie Kalenderwoche Hilfsprogramm](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

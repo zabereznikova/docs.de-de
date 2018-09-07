@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfffc2a1c0f607541194a7f51717d5bf8a8537f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d664b7b61394bd9bfe6d0abd7130f9f0191e7a03
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575335"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083545"
 ---
 # <a name="exceptions-and-performance"></a>Ausnahmen und Leistung
-Eine allgemeine Sorge, die im Zusammenhang mit Ausnahmen ist, dass Ausnahmen für Code verwendet werden, die routinemäßig fehlschlägt, die Leistung der Implementierung nicht akzeptabel ist. Dies ist eine gültige relevant. Wenn ein Element eine Ausnahme auslöst, kann die Leistung erheblich langsamer sein. Allerdings ist es möglich, die gute Leistung bei der Einhaltung streng an die Ausnahme, die mit Fehlercodes zu unterbinden, erzielen. Zwei Muster, die in diesem Abschnitt beschriebenen Möglichkeiten vorgeschlagen, dies zu tun.  
+Eine häufige Problem im Zusammenhang mit Ausnahmen ist, wenn Ausnahmen für Code, die routinemäßig ein Fehler auftritt verwendet werden, die Leistung der Implementierung nicht akzeptabel sein wird. Dies ist ein Grund zur Sorge. Wenn ein Element eine Ausnahme auslöst, kann die Leistung erheblich langsamer sein. Allerdings ist es möglich, erzielen gute Leistung bei strikt befolgen Sie die Ausnahme-Richtlinien, die nicht zulassen, mit Fehlercodes. Zwei Muster, die in diesem Abschnitt beschriebenen Möglichkeiten vorgeschlagen, dies zu tun.  
   
  **X DO NOT** Fehlercodes aufgrund von Bedenken, dass Ausnahmen die Leistung negativ beeinträchtigen können verwendet werden.  
   
- Um die Leistung zu verbessern, ist es möglich, verwenden Sie entweder die Tester-Ausführer oder Wiederholen Sie den Analyse-Muster, in den nächsten beiden Abschnitten beschrieben.  
+ Zur Verbesserung der Leistung ist es möglich, verwenden entweder die Tester-Doer-Muster oder dem Versuch der Analyse Muster in den nächsten beiden Abschnitten beschrieben.  
   
-## <a name="tester-doer-pattern"></a>Tester-Ausführer-Muster  
- Manchmal kann die Leistung eines Members eine Ausnahme auslösen kann durch das Element in zwei wichtige verbessert werden. Sehen wir uns die <xref:System.Collections.Generic.ICollection%601.Add%2A> Methode der <xref:System.Collections.Generic.ICollection%601> Schnittstelle.  
+## <a name="tester-doer-pattern"></a>Tester-Doer-Muster  
+ Leistung der ein Element eine Ausnahme auslösen kann manchmal verbessert werden, von der Members in zwei wichtige. Sehen wir uns die <xref:System.Collections.Generic.ICollection%601.Add%2A> Methode der <xref:System.Collections.Generic.ICollection%601> Schnittstelle.  
   
 ```  
 ICollection<int> numbers = ...   
 numbers.Add(1);  
 ```  
   
- Die Methode `Add` löst aus, wenn die Auflistung schreibgeschützt ist. Dies kann ein Leistungsproblem in Szenarien, in dem häufig ein Aufruf der Methode erwartet wird. Eine der Methoden, um das Problem zu lindern ist zu prüfen, ob die Auflistung schreibgeschützt ist, bevor Sie versuchen, einen Wert hinzufügen.  
+ Die Methode `Add` wird ausgelöst, wenn die Auflistung schreibgeschützt ist. Dies kann ein Leistungsproblem in Szenarien sein, die dem Aufruf der Methode erwartet wird, häufig fehlschlägt. Eine der Möglichkeiten, um das Problem zu lindern ist zum Überprüfen, ob die Auflistung schreibgeschützt ist, bevor Sie versuchen, einen Wert hinzufügen.  
   
 ```  
 ICollection<int> numbers = ...   
@@ -43,12 +43,12 @@ if(!numbers.IsReadOnly){
 }  
 ```  
   
- Das Element verwendet, um eine Bedingung zu testen, in unserem Beispiel die Eigenschaft ist `IsReadOnly`, wird als der Tester bezeichnet. Das Element verwendet, um eine potenziell auslösenden Vorgang die `Add` Methode in unserem Beispiel ist als der Ausführer bezeichnet.  
+ Der Member, die mit dem Testen einer Bedingung, die in unserem Beispiel die Eigenschaft ist `IsReadOnly`, wird als der Tester bezeichnet. Das Element verwendet, um eine ggf. auslösenden Operation ausführen, die `Add` -Methode in unserem Beispiel ist als die Doer bezeichnet.  
   
  **✓ CONSIDER** der Tester-Ausführer-Muster für Member, die Ausnahmen auslösen können Szenarien, um Leistungsprobleme zu vermeiden gemeinsam mit Ausnahmen verknüpft.  
   
-## <a name="try-parse-pattern"></a>Wiederholen Sie den Analyse-Muster  
- Für extrem leistungsabhängigen-APIs sollte eine schnellere Muster als das Tester-Ausführer-Muster, die im vorherigen Abschnitt beschrieben verwendet werden. Das Muster Ruft für die Anpassung der Elementname, um einen klar definierten Test case-Teil der Member-Semantik zu machen. Beispielsweise <xref:System.DateTime> definiert eine <xref:System.DateTime.Parse%2A> Methode, die eine Ausnahme auslöst, wenn Analysieren einer Zeichenfolge ein Fehler auftritt. Er definiert außerdem eine entsprechende <xref:System.DateTime.TryParse%2A> -Methode, die versucht, zu analysieren, jedoch "false" zurückgegeben, wenn die Analyse nicht erfolgreich, und gibt das Ergebnis eines erfolgreichen Analyse mithilfe einer `out` Parameter.  
+## <a name="try-parse-pattern"></a>Try-Analysemuster  
+ Für äußerst leistungsabhängigen-APIs sollte eine Muster für die sogar noch schnellere als das Tester-Doer-Muster, das im vorherigen Abschnitt beschrieben verwendet werden. Das Muster Ruft für die Anpassung der Membername, um eine klar definierte Test case-Teil von der Members-Semantik zu machen. Z. B. <xref:System.DateTime> definiert eine <xref:System.DateTime.Parse%2A> -Methode, die eine Ausnahme auslöst, wenn ein Fehler mit der Analyse einer Zeichenfolge auftritt. Sie definiert außerdem eine entsprechende <xref:System.DateTime.TryParse%2A> -Methode, die versucht, zu analysieren, gibt aber "false" zurück, wenn die Analyse nicht erfolgreich ist, und gibt das Ergebnis eines erfolgreichen Analyse mit einer `out` Parameter.  
   
 ```  
 public struct DateTime {  
@@ -61,7 +61,7 @@ public struct DateTime {
 }  
 ```  
   
- Wenn Sie dieses Muster zu verwenden, ist es wichtig, die Funktionen der Try strict ausgedrückt definieren. Wenn das Element aus irgendeinem Grund klar definierten wiederholen Sie dann ein Fehler auftritt, muss das Element noch eine entsprechende Ausnahme auslösen.  
+ Wenn Sie dieses Muster verwenden, ist es wichtig, die die Funktionalität versuchen Sie es im strict-Bedingungen zu definieren. Wenn das Element einem anderen Grund als der klar definierte Versuch fehlschlägt, muss das Element immer noch eine entsprechende Ausnahme auslösen.  
   
  **✓ CONSIDER** des Try-Analyse-Musters für Elemente, die Ausnahmen auslösen können Szenarien, um Leistungsprobleme zu vermeiden gemeinsam mit Ausnahmen verknüpft.  
   
@@ -69,10 +69,11 @@ public struct DateTime {
   
  **✓ DO** stellen eine Ausnahme auslösen kann für jedes Element mit dem Try-Analyse-Muster.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
- [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)

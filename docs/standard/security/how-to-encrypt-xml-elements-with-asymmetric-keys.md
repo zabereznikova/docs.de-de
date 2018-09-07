@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6840a9005aaca4805252298e1ceaf7e51f38971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b1ca4f0809659b3e164623f488a8585a33ea718
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591459"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071725"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Gewusst wie: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln
-Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zu den XML-Verschlüsselungsstandard, finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation für XML-Verschlüsselung auf http://www.w3.org/TR/xmldsig-core/.  
+Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zu XML-Verschlüsselungsstandard, finden Sie die Spezifikation des World Wide Web Consortium (W3C) XML-Verschlüsselung im Pfad http://www.w3.org/TR/xmldsig-core/.  
   
  Sie können die XML-Verschlüsselung verwenden, um jedes XML-Element oder XML-Dokument durch ein <`EncryptedData`>-Element zu ersetzen, das die verschlüsselten XML-Daten enthält.  Das <`EncryptedData`>-Element kann auch Unterelemente mit Informationen über die bei der Verschlüsselung verwendeten Schlüssel und Prozesse enthalten.  XML-Verschlüsselung unterstützt, dass ein Dokument mehrere verschlüsselte Elemente enthält und dass ein Element mehrfach verschlüsselt ist.  Das Codebeispiel in dieser Vorgehensweise veranschaulicht das Erstellen eines <`EncryptedData`>-Elements zusammen mit weiteren Unterelementen, die Sie später bei der Entschlüsselung verwenden können.  
   
  In diesem Beispiel wird ein XML-Element mithilfe zweier Schlüssel verschlüsselt.  Es wird ein öffentliches/privates RSA-Schlüsselpaar generiert und in einem sicheren Schlüsselcontainer gespeichert.  Anschließend wird ein separater Sitzungsschlüssel mithilfe des AES-Algorithmus (Advanced Encryption Standard) erstellt, der auch als Rijndael-Algorithmus bezeichnet wird.  Dieser AES-Sitzungsschlüssel wird verwendet, um das XML-Dokument zu verschlüsseln, und anschließend wird der öffentliche RSA-Schlüssel verwendet, um den AES-Sitzungsschlüssel zu verschlüsseln.  Schließlich werden in diesem Beispiel der verschlüsselte AES-Sitzungsschlüssel sowie die verschlüsselten XML-Daten im XML-Dokument innerhalb eines neuen <`EncryptedData`>-Elements gespeichert.  
   
- Um das XML-Element zu entschlüsseln, rufen Sie den privaten RSA-Schlüssel aus dem Schlüsselcontainer ab, verwenden ihn zum Entschlüsseln des Sitzungsschlüssels und entschlüsseln mit diesem Sitzungsschlüssel das Dokument.  Weitere Informationen dazu, wie ein XML-Element zu entschlüsseln, die mit dieser Vorgehensweise verschlüsselt wurde, finden Sie unter [wie: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
+ Um das XML-Element zu entschlüsseln, rufen Sie den privaten RSA-Schlüssel aus dem Schlüsselcontainer ab, verwenden ihn zum Entschlüsseln des Sitzungsschlüssels und entschlüsseln mit diesem Sitzungsschlüssel das Dokument.  Weitere Informationen dazu, wie Sie ein XML-Element zu entschlüsseln, die mit dieser Vorgehensweise verschlüsselt wurde, finden Sie unter [wie: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
  Das Beispiel eignet sich für Situationen, in denen mehrere Anwendungen verschlüsselte Daten gemeinsam nutzen müssen, oder in denen eine Anwendung verschlüsselte Daten zwischen den Zeiten speichern muss, in denen sie ausgeführt wird.  
   
@@ -138,10 +138,11 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Speichern Sie einen symmetrischen kryptografischen Schlüssel nie im Klartextformat, und übertragen Sie einen symmetrischen Schlüssel nie im Klartextformat zwischen Computern.  Außerdem sollten Sie den privaten Schlüssel eines asymmetrischen Schlüsselpaars niemals in Klartext speichern oder übertragen.  Weitere Informationen über symmetrische und asymmetrische kryptografische Schlüssel finden Sie unter [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Sie sollten einen Schlüssel niemals direkt in Ihren Quellcode einbetten.  Eingebettete Schlüssel können problemlos aus einer Assembly gelesen werden die [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oder durch die Assembly in einem Texteditor wie Editor öffnen.  
+ Sie sollten einen Schlüssel niemals direkt in Ihren Quellcode einbetten.  Eingebettete Schlüssel können problemlos gelesen werden, aus einer Assembly mithilfe der [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oder durch die Assembly in einem Text-Editor wie Editor geöffnet.  
   
  Wenn Sie einen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 (null) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>-Methode der verwalteten Kryptografieklasse aufrufen.  Kryptografische Schlüssel können manchmal von einem Debugger aus dem Arbeitsspeicher oder von einer Festplatte gelesen werden, falls der entsprechende Arbeitsspeicherbereich auf den Datenträger ausgelagert wurde.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Cryptography.Xml>  
- [Gewusst wie: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Gewusst wie: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md)

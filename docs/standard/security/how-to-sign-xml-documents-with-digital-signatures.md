@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 829be8663068d4eb492631ccc4194b4e4c3000aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590298"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061675"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Gewusst wie: Signieren von XML-Dokumenten mit digitalen Signaturen
-Um ein XML-Dokument teilweise oder vollständig mit einer digitalen Signatur zu versehen, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden.  Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.  Weitere Informationen zum XMLDSIG-Standard finden Sie in der Empfehlung World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
+Um ein XML-Dokument teilweise oder vollständig mit einer digitalen Signatur zu versehen, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden.  Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.  Weitere Informationen zum XMLDSIG-Standard finden Sie unter der Empfehlung des World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
  Im Codebeispiel in dieser Vorgehensweise wird veranschaulicht, wie ein gesamtes XML-Dokument digital signiert und die Signatur dem Dokument in einem <`Signature`>-Element angefügt wird.  Im Beispiel wird ein RSA-Signaturschlüssel erstellt, wird der Schlüssel einem sicheren Schlüsselcontainer hinzugefügt und wird der Schlüssel dann verwendet, um ein XML-Dokument digital zu signieren.  Der Schlüssel kann danach abgerufen werden, um die digitale Signatur des XML-Dokuments zu überprüfen oder ein anderes XML-Dokument zu signieren.  
   
- Weitere Informationen dazu, wie eine digitale Signatur zu überprüfen, die mit dieser Prozedur erstellt wurde, finden Sie unter [Vorgehensweise: Überprüfen der digitalen Signaturen von XML-Dokumenten](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ Informationen dazu, wie Sie eine digitale Signatur zu überprüfen, die mit dieser Prozedur erstellt wurde, finden Sie unter [Vorgehensweise: Überprüfen der digitalen Signaturen von XML-Dokumenten](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>So signieren Sie ein XML-Dokument digital  
   
@@ -116,8 +116,9 @@ Um ein XML-Dokument teilweise oder vollständig mit einer digitalen Signatur zu 
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Sie sollten den privaten Schlüssel eines asymmetrischen Schlüsselpaars niemals in Klartext speichern oder übertragen.  Weitere Informationen über symmetrische und asymmetrische kryptografische Schlüssel finden Sie unter [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  
   
- Sie sollten einen privaten Schlüssel niemals direkt in Ihren Quellcode einbetten.  Eingebettete Schlüssel können problemlos aus einer Assembly gelesen werden die [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oder durch die Assembly in einem Texteditor wie Editor öffnen.  
+ Sie sollten einen privaten Schlüssel niemals direkt in Ihren Quellcode einbetten.  Eingebettete Schlüssel können problemlos gelesen werden, aus einer Assembly mithilfe der [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) oder durch die Assembly in einem Text-Editor wie Editor geöffnet.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Cryptography.Xml>  
- [Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

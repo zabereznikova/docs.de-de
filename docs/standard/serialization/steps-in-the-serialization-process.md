@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: b44b3b0539237c0f0d0a4af877e8955c6f612003
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581819"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084913"
 ---
 # <a name="steps-in-the-serialization-process"></a>Schritte im Serialisierungsprozess
 Wenn die <xref:System.Runtime.Serialization.Formatter.Serialize*>-Methode für ein [Formatierungsprogramm](xref:System.Runtime.Serialization.Formatter) aufgerufen wird, erfolgt die Objektserialisierung nach den folgenden Regeln:
@@ -25,6 +25,7 @@ Wenn die <xref:System.Runtime.Serialization.Formatter.Serialize*>-Methode für e
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>Siehe auch  
- [Binäre Serialisierung](binary-serialization.md)  
- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Binäre Serialisierung](binary-serialization.md)  
+- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)

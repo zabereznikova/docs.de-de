@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 07c4c1e9b9a9da2e9a585efdcac644c616012078
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778564"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44065653"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>Attribute zur Steuerung der Serialisierung von codiertem SOAP
 
@@ -34,10 +34,10 @@ Weitere Informationen zu Attributen finden Sie unter [Attribute](../../../docs/s
 
 ## <a name="see-also"></a>Siehe auch
 
-[XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)  
-[Vorgehensweise: Serialisieren eines Objekts als SOAP-codierter XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-[Gewusst wie: Überschreiben von codierter SOAP-XML-Serialisierung](how-to-override-encoded-soap-xml-serialization.md)  
-[Attribute](../../../docs/standard/attributes/index.md)  
-<xref:System.Xml.Serialization.XmlSerializer>  
-[Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)  
-[Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)
+- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)  
+- [Vorgehensweise: Serialisieren eines Objekts als SOAP-codierter XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+- [Gewusst wie: Überschreiben von codierter SOAP-XML-Serialisierung](how-to-override-encoded-soap-xml-serialization.md)  
+- [Attribute](../../../docs/standard/attributes/index.md)  
+- <xref:System.Xml.Serialization.XmlSerializer>  
+- [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)  
+- [Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)

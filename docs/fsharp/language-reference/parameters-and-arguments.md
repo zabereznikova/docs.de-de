@@ -2,25 +2,25 @@
 title: Parameter und Argumente (F#)
 description: Informationen Sie zu F#-sprachunterstützung zum Definieren von Parametern und übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9744339110314e4e6b3c3cf8d49b1c988bc25e3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471980"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062636"
 ---
 # <a name="parameters-and-arguments"></a>Parameter und Argumente
 
 Dieses Thema beschreibt die sprachunterstützung zum Definieren von Parametern und übergeben von Argumenten an Funktionen, Methoden und Eigenschaften. Sie enthält Informationen zur Übergabe als Verweis, und wie Sie definieren und Verwenden von Methoden, die eine Variable Anzahl von Argumenten akzeptieren können.
 
-
 ## <a name="parameters-and-arguments"></a>Parameter und Argumente
+
 Der Begriff *Parameter* wird verwendet, um die Namen für Werte beschreiben, die bereitgestellt werden sollen. Der Begriff *Argument* wird verwendet, für die Werte für jeden Parameter bereitgestellt.
 
 Parameter können in Tupel oder Curry-Form oder in eine Kombination aus den beiden angegeben werden. Sie können mithilfe eines expliziten Parameternamens Argumente übergeben. Parameter der Methoden können als optional festgelegt und einen Standardwert angegeben werden.
 
-
 ## <a name="parameter-patterns"></a>Parametermuster
+
 Parameter, Funktionen und Methoden bereitgestellt sind, im allgemeinen Mustern, die durch Leerzeichen getrennt. Dies bedeutet, dass im Prinzip die Muster in beschrieben [Vergleichsausdrücke](match-expressions.md) in einer Parameterliste für eine Funktion oder Member verwendet werden können.
 
 In der Regel verwenden Sie Methoden Tupelform übergeben von Argumenten. Dies wird ein besseres Ergebnis aus der Perspektive der anderen erreicht, da die Tupelform wie übereinstimmt, die Argumente in .NET Methoden übergeben werden.
@@ -90,6 +90,7 @@ In einigen Fällen Muster, bei denen unvollständige Übereinstimmungen sind nü
 Die Verwendung von Mustern, die unvollständige Übereinstimmungen ist am besten für die schnelle Erstellung von Prototypen und andere temporäre Zwecke reserviert. Der Compiler gibt eine Warnung für diese Art von Code. Solche Muster nicht grundsätzlich alle möglichen Eingaben abdecken und sind daher nicht für die Komponenten-APIs geeignet ist.
 
 ## <a name="named-arguments"></a>Benannte Argumente
+
 Argumente für Methoden Position in einer Argumentliste von durch Trennzeichen getrennte angegeben werden können, oder sie können übergeben werden an eine Methode explizit durch Eingabe des Namens, gefolgt von einem Gleichheitszeichen und dem Wert übergeben werden. Wenn angegeben, indem Sie den Namen angeben, können sie in einer anderen Reihenfolge aus, die verwendet werden, in der Deklaration angezeigt werden.
 
 Benannte Argumente können Code besser lesbar und besser anpassen auf bestimmte Arten von Änderungen in der API, z. B. eine neuanordnung der Parameter der Methode zu machen.
@@ -107,6 +108,7 @@ In einem Aufruf für einen Klassenkonstruktor können Sie die Werte der Eigensch
 Weitere Informationen finden Sie unter [Konstruktoren (f#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Optionale Parameter
+
 Sie können einen optionalen Parameter für eine Methode mit einem Fragezeichen angegeben vor den Parameternamen angeben. Optionale Parameter wie der F#-Option-Typ, interpretiert werden, damit Sie auf die übliche Weise abgefragt werden können, dass Optionstypen, mithilfe abgefragt werden einer `match` Ausdruck mit `Some` und `None`. Optionale Parameter sind zulässig, nur für Elemente, die nicht auf Funktionen, die mithilfe von erstellt `let` Bindungen.
 
 Sie können auch eine Funktion `defaultArg`, wodurch einen Standardwert eines optionalen Arguments festgelegt. Die `defaultArg` Funktion akzeptiert den optionalen Parameter als erstes Argument und der Standardwert als das zweite.
@@ -124,6 +126,7 @@ Baud Rate: 300 Duplex: Half Parity: true
 ```
 
 ## <a name="passing-by-reference"></a>Übergeben als Verweis
+
 Übergeben einen F#-Wert als Verweis umfasst die `byref` Schlüsselwort, das angibt, dass der Parameter um einen Zeiger auf den Wert, der als Verweis übergeben wird. Übergeben Sie einen beliebigen Wert in eine Methode mit einem `byref` wie das Argument muss `mutable`.
 
 Da der Parameter ein Zeiger ist, und der Wert kann geändert werden, werden alle Änderungen an den Wert nach der Ausführung der Funktion beibehalten.
@@ -139,6 +142,7 @@ Sie können ein Tupel als Rückgabewert einer speichern `out` Parameter in .NET-
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Parameterarrays
+
 Gelegentlich ist es erforderlich, eine Funktion zu definieren, die eine beliebige Anzahl von Parametern heterogenen Typs akzeptiert. Es wäre nicht sehr praktisch, erstellen alle möglichen überladenen Methoden um für alle Typen zu berücksichtigen, die verwendet werden können. Die .NET Implementierungen bieten Unterstützung für solche Methoden über die Parameter-Array-Funktion. Eine Methode, die ein Parameterarray in der Signatur verwendet, werden, kann mit einer beliebigen Anzahl von Parametern angegeben werden. Die Parameter werden in ein Array eingefügt. Der Typ der Elemente des Arrays bestimmt die Parametertypen, die an die Funktion übergeben werden können. Wenn Sie das Parameterarray mit definieren `System.Object` als Typ des Elements, klicken Sie dann Clientcode kann Werte übergeben eines beliebigen Typs.
 
 In f# können Parameterarrays nur in Methoden definiert werden. Sie können nicht verwendet werden, in der eigenständigen oder Funktionen, die in Modulen definiert sind.
@@ -162,4 +166,5 @@ true
 ```
 
 ## <a name="see-also"></a>Siehe auch
-[Mitglieder](members/index.md)
+
+- [Mitglieder](members/index.md)

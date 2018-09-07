@@ -7,11 +7,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
 ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43741145"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066827"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>ClickOnce-Bereitstellung für Windows Forms
 Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Technologie für die einfache Bereitstellung von Windows Forms-Anwendungen auf Clientcomputern.  
