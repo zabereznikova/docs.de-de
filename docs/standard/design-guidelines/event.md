@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d1ad0f02ae34675c0a910d7651d718c060db60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575389"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064068"
 ---
 # <a name="event-design"></a>Ereignisentwurf
-Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die das Framework zum Aufrufen von Benutzercode zu ermöglichen). Andere Rückrufmechanismen enthalten Elemente und Delegaten, virtuelle Member und schnittstellenbasierten-Plug-ins. Daten aus der Verwendbarkeit Studien anzugeben, dass die meisten Entwickler sind nachrichtenorientierten Ereignisse verwenden, als sie die anderen Rückrufmechanismen verwenden. Ereignisse sind gut mit Visual Studio und vielen Sprachen integriert.  
+Ereignisse sind am häufigsten verwendeten Form von Rückrufen (Konstrukte, die das Framework für den Aufruf von Benutzercode zu ermöglichen). Andere Rückrufmechanismen enthalten Elemente, die die Delegaten, virtuelle Member und schnittstellenbasierter-Plug-ins. Daten aus Umfragen zur benutzerfreundlichkeit haben anzugeben, dass die meisten Entwickler sind wohler, Ereignisse, als sie die anderen Rückrufmechanismen verwenden. Ereignisse sind in Visual Studio und vielen Sprachen gut integriert.  
   
- Es ist wichtig zu beachten, dass es zwei Gruppen von Ereignisse gibt: Ereignisse, die ausgelöst wird, bevor ein Status des Systems ändert, aufgerufen wird, vorab auch Ereignisse, die ausgelöst wird, nachdem ein Zustand ändert, sogenannte nach der Ereignisse. Ein Beispiel eines Ereignisses vor wäre `Form.Closing`, der Fehler wird ausgelöst, bevor ein Formular geschlossen wird. Ein Beispiel für ein Ereignis nach der wäre `Form.Closed`, der Fehler wird ausgelöst, nachdem ein Formular geschlossen wird.  
+ Es ist wichtig zu beachten, dass es zwei Gruppen von Ereignisse gibt: Ereignisse, die ausgelöst wird, bevor ein Status des Systems geändert wird, wird aufgerufen, Pre-Ereignisse sowie Ereignisse ausgelöst, nachdem ein Zustand ändert, wird nach der Ereignisse aufgerufen. Ein Beispiel für ein Ereignis vor `Form.Closing`, der Fehler wird ausgelöst, bevor ein Formular geschlossen wird. Ein Beispiel für ein Ereignis nach der `Form.Closed`, der Fehler wird ausgelöst, nachdem ein Formular geschlossen wird.  
   
  **✓ DO** verwenden Sie den Begriff "Auslösen" Ereignisse anstatt "Feuer" oder "Auslösen" an.  
   
@@ -30,17 +30,17 @@ Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die
   
  **✓ CONSIDER** verwenden eine Unterklasse von <xref:System.EventArgs> als Ereignisargument, es sei denn, Sie sicher, dass das Ereignis nie zur Übertragung von Daten an die Ereignisbehandlungsmethode müssen sind in diesem Fall können Sie die `EventArgs` direkt eingeben.  
   
- Wenn Sie eine API mit liefern `EventArgs` direkt, Sie werden nie mehr Daten mit dem Ereignis ausgeführt werden, ohne Unterbrechung der Kompatibilität hinzuzufügen. Wenn Sie eine Unterklasse verwenden, auch wenn anfänglich vollständig leer ist, die Unterklasse bei Bedarf Eigenschaften hinzugefügt werden kann.  
+ Wenn Sie schicken eine API mit `EventArgs` direkt, Sie werden nie Daten mit dem Ereignis ausgeführt werden, ohne wichtige Kompatibilität hinzufügen. Wenn Sie eine Unterklasse verwenden, auch wenn Anfangs vollständig leer ist, Sie Eigenschaften in die Unterklasse, die bei Bedarf hinzufügen können.  
   
- **✓ DO** verwenden Sie eine geschützte virtuelle Methode jedes Ereignis ausgelöst werden soll. Dies gilt nur für nicht statische Ereignisse für nicht versiegelte Klassen, nicht für Strukturen, versiegelte Klassen oder statische Ereignisse.  
+ **✓ DO** verwenden Sie eine geschützte virtuelle Methode jedes Ereignis ausgelöst werden soll. Dies gilt nur für nicht statischen Ereignisse, die für nicht versiegelte Klassen nicht statischen Ereignisse, versiegelte Klassen oder Strukturen.  
   
- Der Zweck der Methode ist eine Möglichkeit für eine abgeleitete Klasse für die Ereignisbehandlung mit einer Außerkraftsetzung bereitstellen. Überschreiben ist eine flexiblere, schnellere und besser Möglichkeit zum Basisklassenereignissen in abgeleiteten Klassen zu verarbeiten. Gemäß der Konvention werden der Name der Methode sollte mit "On" beginnen und mit dem Namen des Ereignisses folgen.  
+ Der Zweck der Methode ist eine Möglichkeit für eine abgeleitete Klasse zum Behandeln des Ereignisses, das mit einer Außerkraftsetzung. Überschreiben ist eine flexiblere, schneller und natürliche Möglichkeit, Behandeln von Basisklassenereignissen in abgeleiteten Klassen. Gemäß der Konvention der Namen der Methode muss mit "On" beginnen und mit dem Namen des Ereignisses folgen.  
   
- Die abgeleitete Klasse können nicht die grundlegende Implementierung der Methode in der Überschreibung aufrufen. Für diesen vorbereitet werden, ausgenommen Verarbeitungen in der Methode, die für die Basisklasse ordnungsgemäß funktioniert erforderlich ist.  
+ Die abgeleitete Klasse können nicht die grundlegende Implementierung der Methode in der Überschreibung aufrufen. Für dieses vorbereitet werden, dazu eine Verarbeitung nicht in der Methode, die für die Basisklasse ordnungsgemäß ausgeführt werden muss.  
   
  **✓ DO** akzeptieren einen Parameter für die geschützte Methode, die ein Ereignis auslöst.  
   
- Der Parameter heißen `e` und sollten als Ereignisargumentklasse eingegeben werden.  
+ Der Parameter heißen `e` und soll als die Ereignisargumentklasse eingegeben werden.  
   
  **X DO NOT** übergeben Sie null als Sender an, wenn eine nicht statische Ereignis durch das auslösen.  
   
@@ -50,16 +50,16 @@ Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die
   
  Übergeben Sie `EventArgs.Empty` Wenn keine Daten an die Ereignisbehandlungsmethode übergeben werden sollen. Entwickler erwarten, dass dieser Parameter nicht null sein.  
   
- **✓ CONSIDER** Auslösen von Ereignissen, die der Endbenutzer abbrechen können. Dies gilt nur für Ereignisse vor.  
+ **✓ CONSIDER** Auslösen von Ereignissen, die der Endbenutzer abbrechen können. Dies gilt nur für vorherige Ereignisse.  
   
- Verwendung <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> oder seiner Unterklasse als das Ereignisargument für die Endbenutzer zum Abbrechen von Ereignissen ermöglichen.  
+ Verwendung <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> oder die Unterklasse als das Ereignisargument, das dem Endbenutzer Ereignisse ermöglichen.  
   
 ### <a name="custom-event-handler-design"></a>Entwurf benutzerdefinierter Ereignishandler  
- Es gibt Fälle, in denen `EventHandler<T>` kann nicht verwendet werden, z. B. wenn das Framework benötigt Arbeit mit früheren Versionen der CLR, Generika nicht unterstützt. In solchen Fällen müssen Sie möglicherweise entwerfen und entwickeln einen benutzerdefinierten Ereignishandler-Delegaten.  
+ Es gibt Fälle, in denen `EventHandler<T>` kann nicht verwendet werden, z. B. wenn das Framework muss mit früheren Versionen der CLR arbeiten, dem keine Generika unterstützt. In solchen Fällen müssen Sie möglicherweise zum Entwerfen und entwickeln ein benutzerdefiniertes Ereignis-Handler-Delegat.  
   
  **✓ DO** verwenden Sie den Rückgabetyp "void" für den Ereignishandler.  
   
- Ein Ereignishandler kann mehrere Methoden, die möglicherweise bei mehreren Objekten für die Ereignisbehandlung aufrufen. Ereignisbehandlung Methoden zugelassen wird, einen Wert zurückzugeben, wäre mehrere Rückgabewerte für jeden Aufruf des Ereignisses.  
+ Ein Ereignishandler kann mehrere Methoden, die möglicherweise auf mehrere Objekte für die Ereignisbehandlung aufrufen. Wenn Ereignisbehandlung Methoden zum Zurückgeben eines Werts zulässig wäre, würde Rückgabe mehrerer Werte für jeden Aufruf des Ereignisses vorhanden sein.  
   
  **✓ DO** verwenden `object` als Typ des ersten Parameters der Ereignishandler, und rufen sie `sender`.  
   
@@ -67,10 +67,11 @@ Ereignisse werden am häufigsten verwendete Form von Rückrufen (Konstrukte, die
   
  **X DO NOT** verfügen über mehr als zwei Parameter auf Ereignishandler.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Entwurfsrichtlinien für Member](../../../docs/standard/design-guidelines/member.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
