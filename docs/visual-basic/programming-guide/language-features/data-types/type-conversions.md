@@ -11,37 +11,37 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800663"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037002"
 ---
-# <a name="type-conversions-in-visual-basic"></a><span data-ttu-id="9d7d9-102">Typkonvertierung in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9d7d9-102">Type Conversions in Visual Basic</span></span>
-<span data-ttu-id="9d7d9-103">Das Ändern eines Werts aus einem Datentyp in einen anderen Typ wird als bezeichnet *Konvertierung*.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-103">The process of changing a value from one data type to another type is called *conversion*.</span></span> <span data-ttu-id="9d7d9-104">Konvertierungen sind entweder *erweiternde* oder *einschränkende*, je nachdem, auf die Datenkapazität, der den verwendeten Typen.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-104">Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved.</span></span> <span data-ttu-id="9d7d9-105">Sie sind auch *implizite* oder *explizite*, je nachdem, auf die Syntax im Quellcode.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-105">They are also *implicit* or *explicit*, depending on the syntax in the source code.</span></span>  
+# <a name="type-conversions-in-visual-basic"></a><span data-ttu-id="3be1b-102">Typkonvertierung in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3be1b-102">Type Conversions in Visual Basic</span></span>
+<span data-ttu-id="3be1b-103">Das Ändern eines Werts aus einem Datentyp in einen anderen Typ wird als bezeichnet *Konvertierung*.</span><span class="sxs-lookup"><span data-stu-id="3be1b-103">The process of changing a value from one data type to another type is called *conversion*.</span></span> <span data-ttu-id="3be1b-104">Konvertierungen sind entweder *erweiternde* oder *einschränkende*, je nachdem, auf die Datenkapazität, der den verwendeten Typen.</span><span class="sxs-lookup"><span data-stu-id="3be1b-104">Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved.</span></span> <span data-ttu-id="3be1b-105">Sie sind auch *implizite* oder *explizite*, je nachdem, auf die Syntax im Quellcode.</span><span class="sxs-lookup"><span data-stu-id="3be1b-105">They are also *implicit* or *explicit*, depending on the syntax in the source code.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9d7d9-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9d7d9-106">In This Section</span></span>  
- [<span data-ttu-id="9d7d9-107">Erweiternde und eingrenzende Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="9d7d9-107">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- <span data-ttu-id="9d7d9-108">Erläutert, Konvertierungen klassifiziert, indem Sie, ob der Zieltyp für die Daten enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-108">Explains conversions classified by whether the destination type can hold the data.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="3be1b-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="3be1b-106">In This Section</span></span>  
+ [<span data-ttu-id="3be1b-107">Erweiternde und eingrenzende Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="3be1b-107">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ <span data-ttu-id="3be1b-108">Erläutert, Konvertierungen klassifiziert, indem Sie, ob der Zieltyp für die Daten enthalten kann.</span><span class="sxs-lookup"><span data-stu-id="3be1b-108">Explains conversions classified by whether the destination type can hold the data.</span></span>  
   
- [<span data-ttu-id="9d7d9-109">Implizite und explizite Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="9d7d9-109">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- <span data-ttu-id="9d7d9-110">Beschreibt die Konvertierungen, die klassifiziert, indem Sie, ob Visual Basic automatisch ausführt.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-110">Discusses conversions classified by whether Visual Basic performs them automatically.</span></span>  
+ [<span data-ttu-id="3be1b-109">Implizite und explizite Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="3be1b-109">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ <span data-ttu-id="3be1b-110">Beschreibt die Konvertierungen, die klassifiziert, indem Sie, ob Visual Basic automatisch ausführt.</span><span class="sxs-lookup"><span data-stu-id="3be1b-110">Discusses conversions classified by whether Visual Basic performs them automatically.</span></span>  
   
- [<span data-ttu-id="9d7d9-111">Konvertierungen zwischen Zeichenfolgen und anderen Typen</span><span class="sxs-lookup"><span data-stu-id="9d7d9-111">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- <span data-ttu-id="9d7d9-112">Veranschaulicht die Konvertierung zwischen Zeichenfolgen und numerischen, `Boolean`, oder Datum/Uhrzeit-Werte.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-112">Illustrates converting between strings and numeric, `Boolean`, or date/time values.</span></span>  
+ [<span data-ttu-id="3be1b-111">Konvertierungen zwischen Zeichenfolgen und anderen Typen</span><span class="sxs-lookup"><span data-stu-id="3be1b-111">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ <span data-ttu-id="3be1b-112">Veranschaulicht die Konvertierung zwischen Zeichenfolgen und numerischen, `Boolean`, oder Datum/Uhrzeit-Werte.</span><span class="sxs-lookup"><span data-stu-id="3be1b-112">Illustrates converting between strings and numeric, `Boolean`, or date/time values.</span></span>  
   
- [<span data-ttu-id="9d7d9-113">Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9d7d9-113">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- <span data-ttu-id="9d7d9-114">Zeigt, wie Konvertieren einer `Object` -Variable auf einen anderen Datentyp.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-114">Shows how to convert an `Object` variable to any other data type.</span></span>  
+ [<span data-ttu-id="3be1b-113">Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3be1b-113">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ <span data-ttu-id="3be1b-114">Zeigt, wie Konvertieren einer `Object` -Variable auf einen anderen Datentyp.</span><span class="sxs-lookup"><span data-stu-id="3be1b-114">Shows how to convert an `Object` variable to any other data type.</span></span>  
   
- [<span data-ttu-id="9d7d9-115">Arraykonvertierungen</span><span class="sxs-lookup"><span data-stu-id="9d7d9-115">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- <span data-ttu-id="9d7d9-116">Führt Sie durch den Prozess der Konvertierung zwischen Arrays mit unterschiedlichen Datentypen.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-116">Steps you through the process of converting between arrays of different data types.</span></span>  
+ [<span data-ttu-id="3be1b-115">Arraykonvertierungen</span><span class="sxs-lookup"><span data-stu-id="3be1b-115">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
+ <span data-ttu-id="3be1b-116">Führt Sie durch den Prozess der Konvertierung zwischen Arrays mit unterschiedlichen Datentypen.</span><span class="sxs-lookup"><span data-stu-id="3be1b-116">Steps you through the process of converting between arrays of different data types.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="9d7d9-117">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9d7d9-117">Related Sections</span></span>  
- [<span data-ttu-id="9d7d9-118">Datentypen</span><span class="sxs-lookup"><span data-stu-id="9d7d9-118">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- <span data-ttu-id="9d7d9-119">Führt die Visual Basic-Datentypen und beschreibt, wie sie.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-119">Introduces the Visual Basic data types and describes how to use them.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="3be1b-117">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="3be1b-117">Related Sections</span></span>  
+ [<span data-ttu-id="3be1b-118">Datentypen</span><span class="sxs-lookup"><span data-stu-id="3be1b-118">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ <span data-ttu-id="3be1b-119">Führt die Visual Basic-Datentypen und beschreibt, wie sie.</span><span class="sxs-lookup"><span data-stu-id="3be1b-119">Introduces the Visual Basic data types and describes how to use them.</span></span>  
   
- [<span data-ttu-id="9d7d9-120">Datentypen</span><span class="sxs-lookup"><span data-stu-id="9d7d9-120">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)  
- <span data-ttu-id="9d7d9-121">Listet die elementare Datentypen, die von Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-121">Lists the elementary data types supplied by Visual Basic.</span></span>  
+ [<span data-ttu-id="3be1b-120">Datentypen</span><span class="sxs-lookup"><span data-stu-id="3be1b-120">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)  
+ <span data-ttu-id="3be1b-121">Listet die elementare Datentypen, die von Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3be1b-121">Lists the elementary data types supplied by Visual Basic.</span></span>  
   
- [<span data-ttu-id="9d7d9-122">Problembehandlung bei Datentypen</span><span class="sxs-lookup"><span data-stu-id="9d7d9-122">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- <span data-ttu-id="9d7d9-123">Beschreibt einige häufig auftretende Probleme können bei der Arbeit mit Datentypen.</span><span class="sxs-lookup"><span data-stu-id="9d7d9-123">Discusses some common problems that can arise when working with data types.</span></span>
+ [<span data-ttu-id="3be1b-122">Problembehandlung bei Datentypen</span><span class="sxs-lookup"><span data-stu-id="3be1b-122">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ <span data-ttu-id="3be1b-123">Beschreibt einige häufig auftretende Probleme können bei der Arbeit mit Datentypen.</span><span class="sxs-lookup"><span data-stu-id="3be1b-123">Discusses some common problems that can arise when working with data types.</span></span>
