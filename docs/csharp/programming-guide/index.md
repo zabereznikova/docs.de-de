@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 04561adb254d001b5e4c7867a4017ede74972011
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486195"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892197"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
@@ -69,7 +69,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
  [XML-Dokumentationskommentare](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Abschnitte zur Plattform  
- [Anwendungsdomänen (C# und Visual Basic)](https://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Anwendungsdomänen](../../framework/app-domains/application-domains.md)  
   
  [Assemblys und der globale Assemblycache](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
@@ -85,6 +85,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
   
  [Reflexion](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../csharp/language-reference/index.md)  
- [C#](../../csharp/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../csharp/language-reference/index.md)  
+- [C#](../../csharp/index.md)

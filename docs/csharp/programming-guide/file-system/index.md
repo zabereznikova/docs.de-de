@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 20e8b857759253736d11bc31988fadb4843fa87a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3625f7a108675a3a9ab6be16ef94ae7e7c107612
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334859"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060569"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>Das Dateisystem und die Registrierung (C#-Programmierhandbuch)
 Die folgenden Themen zeigen die Verwendung von C# und dem .NET Framework zum Ausführen verschiedener grundlegender Vorgänge in Dateien, Ordnern und der Registrierung.  
@@ -31,7 +31,7 @@ Die folgenden Themen zeigen die Verwendung von C# und dem .NET Framework zum Aus
 |[Gewusst wie: Erstellen eines Schlüssels in der Registrierung](../../../csharp/programming-guide/file-system/how-to-create-a-key-in-the-registry.md)|Zeigt, wie Sie einen Schlüssel in die Systemregistrierung schreiben.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Datei- und Stream-E/A](https://msdn.microsoft.com/library/k3352a4t)  
+ [Datei- und Stream-E/A](../../../standard/io/index.md)  
   
  [Gewusst wie: Kopieren, Löschen und Verschieben von Dateien und Ordnern (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/how-to-copy-delete-and-move-files-and-folders.md)  
   

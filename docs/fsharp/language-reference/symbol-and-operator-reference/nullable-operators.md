@@ -2,20 +2,20 @@
 title: Operatoren, die NULL-Werte zulassen (F#)
 description: Informationen Sie zu den Nullwert-Operatoren, die in der Programmiersprache f# verfügbar sind.
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566349"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036778"
 ---
 # <a name="nullable-operators"></a>Operatoren, die NULL-Werte zulassen
 
-Nullwert-Operatoren sind binäre arithmetischen oder Vergleichsoperation Operatoren, die auf einem oder beiden Seiten mit arithmetischen Typen zu arbeiten. Auf NULL festlegbare Typen treten häufig bei der Arbeit mit Daten aus Quellen wie z. B. Datenbanken, die NULL-Werte anstelle der tatsächlichen Werte zu ermöglichen. Nullwert-Operatoren werden häufig in Abfrageausdrücken verwendet. Zusätzlich zu den Nullwert-Operatoren für arithmetische und Vergleichsoperatoren können Konvertierungsoperatoren zum Konvertieren zwischen Typen mit Nullwert verwendet werden. Es gibt auch NULL-Werte zu Versionen von bestimmten Abfrageoperatoren.
-
+Nullwert-Operatoren sind binäre Operatoren für den arithmetischen oder Vergleichsoperationen, die mit NULL-Werte zulässt, arithmetische Typen auf einem oder beiden Seiten verwendet. Auf NULL festlegbaren Typen entstehen häufig bei der Arbeit mit Daten aus Quellen wie Datenbanken, die NULL-Werte anstelle der tatsächlichen Werte zu ermöglichen. Nullwert-Operatoren werden häufig in Abfrageausdrücken verwendet werden. Zusätzlich zu den Nullwert-Operatoren für arithmetische und Vergleichsoperatoren können Konvertierungsoperatoren zum Konvertieren zwischen Typen mit Nullwert verwendet werden. Es gibt auch nullfähige Versionen von bestimmten Abfrageoperatoren.
 
 ## <a name="table-of-nullable-operators"></a>Tabelle mit Nullwert-Operatoren
-Die folgende Tabelle enthält die Nullwert-Operatoren in der Programmiersprache f# unterstützt.
+
+Die folgende Tabelle enthält die NULL-Werte zulässt, in der F#-Sprache unterstützte Operatoren.
 
 |Auf der linken Seite NULL-Werte zulässt|NULL-Werte zulässt, rechts|Beide Seiten NULL-Werte zulässt|
 |---|---|---|
@@ -32,11 +32,12 @@ Die folgende Tabelle enthält die Nullwert-Operatoren in der Programmiersprache 
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
 ## <a name="remarks"></a>Hinweise
-Nullwert-Operatoren sind in enthalten die [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) -Modul im Namespace [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Der Typ für NULL-Werte zulassen Daten ist `System.Nullable<'T>`.
 
-In Abfrageausdrücken entstehen auf NULL festlegbare Typen beim Auswählen von Daten aus einer Datenquelle, die NULL-Werte anstelle von Werten zulässt. In einer SQL Server-Datenbank hat jeder Spalte in einer Tabelle ein Attribut, das angibt, ob NULL-Werte zulässig sind. Wenn NULL-Werte zulässig sind, können aus der Datenbank zurückgegebenen Daten enthalten NULL-Werte, die z. B. durch einen primitiven Datentyp dargestellt werden können `int`, `float`und so weiter. Aus diesem Grund wird die Daten zurückgegeben, als eine `System.Nullable<int>` anstelle von `int`, und `System.Nullable<float>` anstelle von `float`. Aus der tatsächliche Wert abgerufen werden kann ein `System.Nullable<'T>` Objekt mithilfe der `Value` -Eigenschaft, und Sie können feststellen, ob eine `System.Nullable<'T>` Objekt hat den Wert durch Aufrufen der `HasValue` Methode. Eine andere nützliche Methode ist die `System.Nullable<'T>.GetValueOrDefault` -Methode, die Ihnen ermöglicht, den Wert oder einen Standardwert des entsprechenden Typs abzurufen. Der Standardwert ist eine Form von "NULL" Wert, z. B. 0, 0,0 ist, oder `false`.
+Der Nullwert-Operatoren sind in enthalten die [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) -Modul im Namespace [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Ist vom Typ auf NULL festlegbare Daten `System.Nullable<'T>`.
 
-Auf NULL festlegbare Typen konvertiert werden, NULL-primitive Typen, die mit den üblichen Konvertierungsoperatoren wie `int` oder `float`. Es ist auch möglich, die aus einem nullable-Typ zu einem anderen NULL-Werte zu konvertieren, mithilfe der Konvertierungsoperatoren für Typen mit Nullwert. Die entsprechende Konvertierung-Operatoren weisen den gleichen Namen wie die Standardtastenkombinationen, aber sie sind in einem separaten Modul die [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) Modul in die [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) Namespace. In der Regel öffnen Sie diesen Namespace, bei der Verwendung von Abfrageausdrücken. In diesem Fall können Sie die NULL-Werte zulassen Konvertierungsoperatoren verwenden, indem Sie das Präfix `Nullable.` an den entsprechenden Konvertierungsoperator, wie im folgenden Code gezeigt.
+In Abfrageausdrücken entstehen auf NULL festlegbare Typen beim Auswählen von Daten aus einer Datenquelle, die NULL-Werte anstelle von Werten zulässt. In einer SQL Server-Datenbank hat jeder Spalte in einer Tabelle ein Attribut, das angibt, ob NULL-Werte zulässig sind. Wenn NULL-Werte zulässig sind, können aus der Datenbank zurückgegebenen Daten enthalten NULL-Werte, die z. B. durch einen primitiven Datentyp dargestellt werden können nicht `int`, `float`und so weiter. Aus diesem Grund wird die Daten zurückgegeben, als eine `System.Nullable<int>` anstelle von `int`, und `System.Nullable<float>` anstelle von `float`. Aus der tatsächliche Wert abgerufen werden kann eine `System.Nullable<'T>` -Objekt unter Verwendung der `Value` -Eigenschaft, und Sie können feststellen, ob eine `System.Nullable<'T>` Objekt hat den Wert durch Aufrufen der `HasValue` Methode. Eine weitere nützliche Methode ist die `System.Nullable<'T>.GetValueOrDefault` -Methode, die Sie den Wert oder einen Standardwert des entsprechenden Typs erhalten kann. Der Standardwert ist eine Form "NULL"-Werts, z. B. 0, 0.0 oder `false`.
+
+Auf NULL festlegbare Typen konvertiert werden, die NULL-primitive Typen, die mit den üblichen Konvertierungsoperatoren wie `int` oder `float`. Es ist auch möglich, mithilfe der Konvertierungsoperatoren für nullfähige Typen aus einem nullable-Typ in einen anderen nullable-Typ konvertiert. Die entsprechenden Konvertierungsoperatoren haben den gleichen Namen wie die Standardtastenkombinationen, aber sie sind in einem separaten Modul, das [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) -Modul in die [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) Namespace. In der Regel öffnen Sie diesen Namespace aus, bei der Arbeit mit Abfrageausdrücken. In diesem Fall können Sie die NULL-Werte zulassen Konvertierungsoperatoren verwenden, indem Sie das Präfix `Nullable.` an den entsprechende Konvertierung-Operator, wie im folgenden Code gezeigt.
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -52,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 Die Ausgabe lautet `10.000000`.
 
-Abfrageoperatoren Datenfelder NULL-Werte zulässt, wie z. B. `sumByNullable`, auch für die Verwendung in Abfrageausdrücken vorhanden sein. Die Abfrageoperatoren für NULL-Typen sind nicht typkompatibel mit auf NULL festlegbaren Typen, damit Sie die NULL-Werte zu Version von den entsprechenden Abfrage-Operator verwenden müssen, bei der Arbeit mit NULL-Werte zu den Datenwerten. Weitere Informationen finden Sie unter [Abfrageausdrücke](../query-expressions.md).
+Abfrageoperatoren Datenfelder NULL-Werte zulässt, wie z. B. `sumByNullable`, auch für die Verwendung in Abfrageausdrücken vorhanden sein. Die Abfrageoperatoren für nicht auf NULL festlegbare Typen sind nicht typkompatibel auf NULL festlegbare Typen können, Sie die auf NULL festlegbare Version des entsprechenden Abfrageoperators verwenden müssen bei der Arbeit mit NULL-Werte zulassen von Datenwerten. Weitere Informationen finden Sie unter [Abfrageausdrücke](../query-expressions.md).
 
-Das folgende Beispiel zeigt die Verwendung von Nullwert-Operatoren in einer f#-Abfrageausdruck. Die erste Abfrage veranschaulicht, wie Sie eine Abfrage ohne NULL-Werte zulassen Operator schreiben würden; die zweite Abfrage zeigt eine entsprechende Abfrage, die einen NULL-Operator verwendet. Die gesamten Kontexts, einschließlich Informationen zum Einrichten der Datenbank mit diesem Beispielcode finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf eine SQL-Datenbank von mithilfe von Typanbietern](../../tutorials/type-providers/accessing-a-sql-database.md).
+Das folgende Beispiel zeigt die Verwendung von Nullwert-Operatoren in einem F#-Abfrageausdruck. Die erste Abfrage zeigt, wie Sie eine Abfrage ohne ein NULL-Werte zulassen Operator schreiben; die zweite Abfrage zeigt eine entsprechende Abfrage, die einen NULL-Operator verwendet. Die vollständigen Kontext, einschließlich Informationen zum Einrichten der Datenbank mit diesem Beispielcode finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf einer SQL-Datenbank mithilfe von Typanbietern](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System
@@ -84,6 +85,5 @@ query {
 
 ## <a name="see-also"></a>Siehe auch
 
-[Typanbieter](../../tutorials/type-providers/index.md)
-
-[Abfrageausdrücke](../query-expressions.md)
+- [Typanbieter](../../tutorials/type-providers/index.md)
+- [Abfrageausdrücke](../query-expressions.md)

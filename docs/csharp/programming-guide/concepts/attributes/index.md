@@ -1,12 +1,12 @@
 ---
 title: Attribute (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: fe94f0ee778f14581fd7949f705cc22f12058b27
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956071"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892385"
 ---
 # <a name="attributes-c"></a>Attribute (C#)
 
@@ -125,7 +125,7 @@ Weitere Informationen finden Sie unter:
 
 ## <a name="see-also"></a>Siehe auch
 
- [C#-Programmierhandbuch](../../index.md)  
- [Reflektion (C#)](../reflection.md)  
- [Attribute](../../../../standard/attributes/index.md)  
- [Verwenden von Attributen in C#](../../../tutorials/attributes.md)  
+- [C#-Programmierhandbuch](../../index.md)  
+- [Reflektion (C#)](../reflection.md)  
+- [Attribute](../../../../standard/attributes/index.md)  
+- [Verwenden von Attributen in C#](../../../tutorials/attributes.md)  
