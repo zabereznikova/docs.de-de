@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140423"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185518"
 ---
 # <a name="xstatic-markup-extension"></a>x:Statische Markuperweiterung
 Verweist auf alle statischen by-Value-Codeentitäten, die in definiert ist eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– konforme Speicherung. Die statische Eigenschaft, die auf die verwiesen wird kann verwendet werden, um den Wert einer Eigenschaft in XAML bereitzustellen.  

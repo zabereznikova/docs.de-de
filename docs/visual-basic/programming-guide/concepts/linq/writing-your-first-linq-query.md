@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068949"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184310"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Schreiben der ersten LINQ-Abfrage (Visual Basic)
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in einer dedizierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Arten von Datenquellen, z. B. SQL für relationale Datenbanken und XQuery für XML entwickelt. Dadurch für den Entwickler der Anwendung finden Sie eine neue Abfragesprache für jeden Typ von Datenquelle oder Datenformat, das unterstützt wird.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter. (Eine Liste dieser Anbieter wird, finden Sie unter [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Die Grundregel ist einfach: eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Datenquelle ist jedes Objekt, das die generische unterstützt <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder eine Schnittstelle, die von ihr erbt.  
+ Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter. (Eine Liste dieser Anbieter wird, finden Sie unter [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Die Grundregel ist einfach: eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Datenquelle ist jedes Objekt, das die generische unterstützt <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder eine Schnittstelle, die von ihr erbt.  
   
 > [!NOTE]
 >  Typen wie <xref:System.Collections.ArrayList> , die nicht generische unterstützen <xref:System.Collections.IEnumerable> Schnittstelle kann auch verwendet werden, als [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Datenquellen. Ein Beispiel für die Verwendung einer <xref:System.Collections.ArrayList>, finden Sie unter [Vorgehensweise: Abfragen von ArrayList mit LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
@@ -118,10 +118,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Sie können auch veranlassen, eine Abfrage ausgeführt werden soll ein `IEnumerable` Methode, z. B. die <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> Methode.  
   
-## <a name="see-also"></a>Siehe auch  
- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](getting-started-with-linq.md)  
- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)  
- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](getting-started-with-linq.md)  
+- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)  
+- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)

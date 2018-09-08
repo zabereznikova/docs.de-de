@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871058"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183170"
 ---
 # <a name="com-interop-visual-basic"></a>COM-Interop (Visual Basic)
 Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für andere Komponenten und Hostanwendungen verfügbar zu machen. Die moderne Software enthält in der Regel COM-Objekte. Obwohl .NET-Assemblys die beste Wahl für neue Anwendungen sind, müssen Sie von Zeit zu Zeit COM-Objekte nutzen. In diesem Abschnitt werden einige der Probleme im Zusammenhang mit dem Erstellen und Verwenden von COM-Objekte mit Visual Basic behandelt.  
@@ -50,10 +50,10 @@ Das Component Object Model (COM) erlaubt einem Objekt, seine Funktionen für and
  [Interoperabilität mit nicht verwaltetem Code](../../../framework/interop/index.md)  
  Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.  
   
- [Verfügbarmachen von COM-Komponenten für .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../framework/interop/exposing-com-components.md)  
  Beschreibt den Prozess, wie COM-Typen über COM-Interop aufgerufen werden.  
   
- [Verfügbarmachen von .NET Framework-Komponenten in COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Beschreibt die Vorbereitung und Verwendung von verwalteten Typen von COM.  
   
  [Anwenden von Interop-Attributen](../../../framework/interop/applying-interop-attributes.md)  

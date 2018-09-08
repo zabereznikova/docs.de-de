@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879603"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185362"
 ---
 # <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
 In den folgenden Themen vorgestellt, und es erläutert die wesentlichen Komponenten von Visual Basic, einer objektorientierten Programmiersprache. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt Visual Basic eine Reihe gebräuchlicher Programmierkonstrukte und Sprachelemente.  
@@ -77,8 +77,9 @@ In den folgenden Themen vorgestellt, und es erläutert die wesentlichen Komponen
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Dieser Artikel enthält Links zu Themen, in denen die Verwendung von XML in Visual Basic beschrieben wird.  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Sammlungen](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+ [Sammlungen](../../../visual-basic/programming-guide/concepts/collections.md)  
  Dieser Artikel beschreibt einige der Auflistungstypen, die von .NET Framework bereitgestellt werden. Veranschaulicht, wie einfache Auflistungen und Auflistungen von Schlüssel-Wert-Paaren verwendet werden.  
   
  [Sprachreferenz zu Visual Basic](../../../visual-basic/language-reference/index.md)  

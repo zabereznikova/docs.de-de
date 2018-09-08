@@ -3,11 +3,11 @@ title: Indizierte Eigenschaften (F#)
 description: Informationen Sie zu F#-indizierte Eigenschaften, die Eigenschaften sind, die arrayähnlichen Zugriff auf sortierte Daten bereitstellen.
 ms.date: 05/16/2016
 ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873022"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179272"
 ---
 # <a name="indexed-properties"></a>Indizierte Eigenschaften
 

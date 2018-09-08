@@ -2,12 +2,12 @@
 title: Beispiel-XML-Dokumente (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: f1860eed059de4b6922976da8d3b9190cf96bbed
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ddfdd9c8b7114651cea59a0b356ee87f29bd62b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883999"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186785"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Beispiel-XML-Dokumente (LINQ to XML)
 Die folgenden Beispieldateien werden in den Codebeispielen und den Codeausschnitten in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.  
@@ -26,7 +26,7 @@ Die folgenden Beispieldateien werden in den Codebeispielen und den Codeausschnit
 |[XML-Beispieldatei: Testkonfiguration (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|XML-Dokument, das einige Pseudokonfigurationsdaten zu Testzwecken enthält|  
 |[XML-Beispieldatei: Testkonfiguration in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)|XML-Dokument in einem Namespace, das einige Pseudokonfigurationsdaten zu Testzwecken enthält|  
 |[XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)|XML-Dokument, das Kunden und Aufträge enthält|  
-|[XSD-Beispieldatei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Eine XML-Schemadefinition (XSD), die die [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92) überprüft.|  
+|[XSD-Beispieldatei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)|Eine XML-Schemadefinition (XSD), die die [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) überprüft.|  
 |[XML-Beispieldatei: Kunden und Bestellungen in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|XML-Dokument in einem Namespace, das Kunden und Aufträge enthält|  
 |[XML-Beispieldatei: Numerische Daten (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|XML-Dokument mit Daten, die summiert und gruppiert werden können|  
 |[XML-Beispieldatei: Numerische Daten in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|XML-Dokument in einem Namespace mit Daten, die summiert und gruppiert werden können|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 3ade8eae67d29e2f3cb42911e42ed8696623db62
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507897"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191994"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereignissen zu arbeiten. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie behandeln Ereignisse aus, wenn sie auftreten.  
@@ -95,7 +95,7 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
 3.  Klicken Sie auf die **Abbrechen** Schaltfläche, um den Vorgang zu beenden. Beachten Sie, dass die Darstellung der **Abbrechen** Schaltfläche nicht direkt ändert, wenn Sie darauf klicken. Die `Click` Ereignis kann nicht ausgeführt, bis die `My.Application.DoEvents` -Anweisung können die Verarbeitung von Ereignissen.  
   
     > [!NOTE]
-    >  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht in die gleiche Weise wie das Formular. Klicken Sie beispielsweise in dieser exemplarischen Vorgehensweise, Sie müssen auf die **Abbrechen** Schaltfläche zweimal. Damit das Formular, um die Ereignisse direkt verarbeiten kann, können Sie multithreading. Weitere Informationen finden Sie unter [Threading](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c).  
+    >  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht in die gleiche Weise wie das Formular. Klicken Sie beispielsweise in dieser exemplarischen Vorgehensweise, Sie müssen auf die **Abbrechen** Schaltfläche zweimal. Damit das Formular, um die Ereignisse direkt verarbeiten kann, können Sie multithreading. Weitere Informationen finden Sie unter [Threading](../../../../visual-basic/programming-guide/concepts/threading/index.md).
   
  Möglicherweise ist es lehrreich, führen Sie das Programm durch Drücken von F11 und den Code zu einem Zeitpunkt durchlaufen. Klar erkennbar, wie die Ausführung beginnt `LongTask`, und klicken Sie dann kurz erneut eingegeben `Form1` jedes Mal die `PercentDone` Ereignis wird ausgelöst.  
   

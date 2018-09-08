@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
 ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871766"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213552"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Das Line-Steuerelement und das Shape-Steuerelement (Visual Studio)
 Die Linien- und Formsteuerelemente von Visual Basic Power Packs sind grafische Steuerelemente, mit deren Hilfe Sie horizontale, vertikale und diagonale Linien, Rechtecke, Quadrate, Ovale, und Kreise sowie Rechtecke und Quadrate mit abgerundeten Ecken auf einem Formular oder Container zeichnen können.  

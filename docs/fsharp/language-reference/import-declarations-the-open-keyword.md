@@ -3,11 +3,11 @@ title: 'Importdeklarationen: Das open-Schlüsselwort (F#)'
 description: Erfahren Sie mehr über f# Importdeklarationen und wie sie ein Modul oder einen Namespace angeben, dessen Elemente Sie ohne Verwendung eines vollqualifizierten Namens verweisen können.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130184"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191993"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Importdeklarationen: Das `open` Schlüsselwort
 
