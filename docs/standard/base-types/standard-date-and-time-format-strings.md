@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579807"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207641"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standard-Formatzeichenfolgen für Datum und Uhrzeit
 Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines Datums- und Uhrzeitwerts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:  
@@ -413,9 +413,10 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo-Eigenschaften  
  Die Formatierung wird durch die Eigenschaften des aktuellen <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst, das implizit durch die aktuelle Threadkultur oder explizit durch den <xref:System.IFormatProvider>-Parameter der Methode bereitgestellt wird, die die Formatierung aufruft. Für den <xref:System.IFormatProvider>-Parameter sollte Ihre Anwendung ein <xref:System.Globalization.CultureInfo>-Objekt angeben, das eine Kultur darstellt, oder ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, das die Formatierungskonventionen für Datum und Uhrzeit einer bestimmten Kultur darstellt. Bei vielen der Standardformatbezeichner für Datum und Uhrzeit handelt es sich um Aliase für Formatierungsmuster, die durch Eigenschaften des aktuellen <xref:System.Globalization.DateTimeFormatInfo>-Objekts definiert werden. Die Anwendung kann das von einigen Standardformatbezeichner für Datum und Uhrzeit erstellte Ergebnis ändern, indem sie die entsprechenden Formatmuster für Datum und Uhrzeit der entsprechenden <xref:System.Globalization.DateTimeFormatInfo>-Eigenschaft ändert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Beispiel: .NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Beispiel: .NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
