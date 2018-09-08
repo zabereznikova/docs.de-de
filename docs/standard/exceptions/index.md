@@ -14,11 +14,11 @@ ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43883780"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177234"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Behandeln und Auslösen von Ausnahmen in .NET
 
@@ -30,7 +30,7 @@ Bei einer Ausnahme handelt es sich um einen Fehlerzustand oder unerwartetes Verh
 
 In .NET ist eine Ausnahme ein Objekt, das von der <xref:System.Exception?displayProperty=nameWithType>-Klasse erbt. Eine Ausnahme wird in einem Codebereich ausgelöst, in dem ein Fehler aufgetreten ist. Die Ausnahme bleibt solange im Stapel, bis sie durch die Anwendung behandelt oder das Programm beendet wird.
 
-## <a name="exceptions-vs-traditional-error-handling-methods"></a>Ausnahmen vs. herkömmliche Fehlerbehandlungsmethoden
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Ausnahmen im Vergleich zu herkömmlichen Fehlerbehandlungsmethoden
 
 Herkömmliche Modelle der Fehlerbehandlung in Sprachen beruhten bisher entweder auf eigenen sprachenabhängigen Methoden der Fehlererkennung und -behandlung oder auf dem Fehlerbehandlungsmechanismus des Betriebssystems. Die Art und Weise, in der die Ausnahmebehandlung in .NET implementiert ist, bietet folgende Vorteile:
 
@@ -48,7 +48,7 @@ Ausnahmen bieten verschiedene Vorteile gegenüber anderen Methoden zur Fehlerben
 
 In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgeführt, die die Ausnahmen verursachen können.
 
-| Ausnahmetyp | Beschreibung  | Beispiel |
+| Ausnahmetyp | Beschreibung | Beispiel |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Die Basisklasse für alle Ausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
 | <xref:System.IndexOutOfRangeException> | Wird von der Runtime nur dann ausgelöst, wenn ein Array falsch indiziert ist. | Indizieren eines Arrays außerhalb seines gültigen Vereichs: <br /> `arr[arr.Length+1]` |
