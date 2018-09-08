@@ -2,12 +2,12 @@
 title: Funktionen (F#)
 description: Informationen Sie zu Funktionen in f# und wie f# gemeinsamen Konstrukte der funktionalen Programmierung unterstützt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803911"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140917"
 ---
 # <a name="functions"></a>Funktionen
 
@@ -112,7 +112,7 @@ Sie geben dann das zusätzliche Argument an, das für unterschiedliche Längen d
 
 ## <a name="recursive-functions"></a>Rekursive Funktionen
 
-*Rekursive Funktionen* sind Funktionen, die sich selbst aufrufen. Sie erfordern die Angabe des Schlüsselworts **rec**, das dem Schlüsselwort **let** folgt. Rufen Sie die rekursive Funktion im Rumpf der Funktion so auf, wie Sie auch jede andere Funktion aufrufen würden. Die folgende rekursive Funktion berechnet die *n*te Fibonacci-Zahl. Die die Fibonacci-Zahlenfolge ist seit dem Altertum bekannt und ist eine Sequenz, in der die einzelnen aufeinander folgenden Zahlen die Summe der vorherigen zwei Zahlen in der Sequenz sind.
+*Rekursive Funktionen* sind Funktionen, die sich selbst aufrufen. Sie erfordern die Angabe des Schlüsselworts **rec**, das dem Schlüsselwort **let** folgt. Rufen Sie die rekursive Funktion im Rumpf der Funktion so auf, wie Sie auch jede andere Funktion aufrufen würden. Die folgende rekursive Funktion berechnet den *n*<sup>th</sup> Fibonacci-Zahl. Die die Fibonacci-Zahlenfolge ist seit dem Altertum bekannt und ist eine Sequenz, in der die einzelnen aufeinander folgenden Zahlen die Summe der vorherigen zwei Zahlen in der Sequenz sind.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

@@ -11,33 +11,33 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef7913a2601c3a791cb028b4074ce37b9e9421b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575283"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131934"
 ---
 # <a name="capitalization-conventions"></a>Konventionen für die Groß-/Kleinschreibung
-Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwendung von Fall, dass beim stellen-IDs für Typen, Member und Parameter, die leicht zu lesen konsistent angewendet.  
+Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwendung von Fall, wenn stellen-IDs für Typen, Member und Parameter, die leicht lesbar konsistent angewendet.  
   
-## <a name="capitalization-rules-for-identifiers"></a>Regeln für Groß-/Kleinschreibung für Bezeichner  
- Um Wörter in einem Bezeichner zu unterscheiden, profitieren Sie den ersten Buchstaben jedes Worts im Bezeichner. Verwenden Sie Unterstriche nicht zur Unterscheidung von Wörtern oder darum geht, eine beliebige Stelle in Bezeichnern. Es gibt zwei geeignete Möglichkeiten für die Großschreibung von Bezeichnern, abhängig von der Verwendung des Bezeichners ein:  
+## <a name="capitalization-rules-for-identifiers"></a>Regeln der Groß-/Kleinschreibung für Bezeichner  
+ Profitieren Sie um Wörter in einem Bezeichner zu unterscheiden, die den ersten Buchstaben jedes Worts in den Bezeichner. Verwenden Sie keine Unterstriche um Wörter zu unterscheiden oder einfach eine beliebige Stelle in Bezeichnern. Es gibt zwei geeignete Möglichkeiten, die Bezeichner, abhängig von der Verwendung des Bezeichners zu profitieren:  
   
 -   PascalCasing  
   
 -   camelCasing  
   
- Die PascalCasing-Konvention für alle Bezeichner mit Ausnahme von Parameternamen, nutzt das erste Zeichen jedes Worts (einschließlich Akronyme über zwei Buchstaben), wie in den folgenden Beispielen gezeigt:  
+ Die PascalCasing-Konvention für alle Bezeichner, mit Ausnahme von Parameternamen, nutzt das erste Zeichen jedes Worts (einschließlich Akronyme über zwei Buchstaben), wie in den folgenden Beispielen gezeigt:  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- Ein besonderer Fall erfolgt für zwei Buchstaben bestehende Akronyme, die in denen beide Buchstaben groß geschrieben werden, wie in der folgende Bezeichner angezeigt:  
+ Ein besonderer Fall besteht für zwei Buchstaben bestehenden Akronyme, die in denen beiden Buchstaben in Großbuchstaben angegeben werden, wie in der folgenden Bezeichner dargestellt:  
   
  `IOStream`  
   
- Die CamelCasing Konvention wird nur für Parameternamen, nutzt das erste Zeichen jedes Worts außer das erste Wort an, wie in den folgenden Beispielen gezeigt. Wie im Beispiel wird auch gezeigt, sind zwei Buchstaben bestehende Akronyme, die einen Bezeichner in Kamel-Schreibweise beginnen beide Kleinbuchstaben.  
+ Die CamelCasing-Konvention, die nur für Parameternamen verwendet nutzt das erste Zeichen jedes Worts mit Ausnahme des ersten Worts, wie in den folgenden Beispielen gezeigt. Wie das Beispiel auch zeigt, sind zwei Buchstaben bestehenden Akronyme, die einen Bezeichner in Kamel-Schreibweise beginnen Kleinbuchstaben.  
   
  `propertyDescriptor`  
  `ioStream`  
@@ -61,12 +61,12 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
 |Enum-Wert|Pascal-Schreibweise|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Parameter|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>Großschreibung zusammengesetzte Wörter und häufig verwendete Begriffe  
+## <a name="capitalizing-compound-words-and-common-terms"></a>Profitieren Sie von einer zusammengesetzten Wörter und Begriffe  
  Die meisten zusammengesetzten Wörter werden als einzelne Wörter für Zwecke der Groß-/Kleinschreibung behandelt.  
   
  **X DO NOT** jedes Wort in so genannten geschlossener Form zusammengesetzte Wörter profitieren.  
   
- Hierbei handelt es sich um zusammengesetzte Wörter, die als ein einzelnes Wort, wie z. B. Endpunkt geschrieben. Für die Richtlinien zur Groß-und Kleinschreibung behandeln Sie ein zusammengesetztes Wort in geschlossener Form als einzelnes Wort. Verwenden Sie eine aktuelle Wörterbuch, um zu bestimmen, ob ein zusammengesetztes Wort in geschlossener Form geschrieben wird.  
+ Hierbei handelt es sich um zusammengesetzte Wörter, die als einzelnes Wort, z. B. Endpunkt geschrieben. Behandeln Sie ein zusammengesetztes Wort in geschlossener Form als einzelnes Wort, für die Richtlinien zur Groß-und Kleinschreibung. Verwenden Sie einen aktuellen Wörterbuch, um zu bestimmen, ob ein zusammengesetztes Wort in geschlossene Form geschrieben ist.  
   
 |Pascal-Schreibweise|Camel|Not|  
 |------------|-----------|---------|  
@@ -97,14 +97,15 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>Groß- und Kleinschreibung  
- Sprachen, die in der CLR ausgeführt werden können sind nicht erforderlich, um die Unterscheidung, zu unterstützen, obwohl Teils häufiger erledigen. Auch wenn Ihre Sprache unterstützt wird, nicht anderen Sprachen, die möglicherweise Ihr Framework zugegriffen wird. Keine APIs, die extern zugegriffen werden kann nicht auf Fall allein zu Unterschieden zwischen den zwei Namen in demselben Kontext aus diesem Grund verlassen.  
+ Sprachen, die in der CLR ausgeführt werden können sind zur Unterstützung der Instanzenmethode, nicht erforderlich, obwohl einige führen. Auch wenn Ihre Sprache unterstützt wird, werden nicht anderen Sprachen, die Ihr Framework zugreifen können. Alle APIs, die extern zugegriffen werden kann, werden verlässlich nicht aus diesem Grund Fall allein, zur Unterscheidung zwischen zwei Namen im selben Kontext.  
   
- **X DO NOT** wird davon ausgegangen, dass alle Programmiersprachen die Groß-/Kleinschreibung beachtet werden. Das sind sie nicht. Namen dürfen sich nicht nach Groß-/Kleinschreibung allein unterscheiden.  
+ **X DO NOT** wird davon ausgegangen, dass alle Programmiersprachen die Groß-/Kleinschreibung beachtet werden. Das sind sie nicht. Namen dürfen sich nicht allein Groß-/Kleinschreibung unterscheiden.  
   
- *Teilen © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
+ *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson-Education, Inc. aus [Framework-Entwurfsrichtlinien: Konventionen, Idiome und Muster für Wiederverwendbaren .NET-Bibliotheken, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams veröffentlicht 22 Oktober 2008 durch Addison Wesley Professional als Teil der Microsoft Windows-Entwicklung Reihe.*  
+ *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
- [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

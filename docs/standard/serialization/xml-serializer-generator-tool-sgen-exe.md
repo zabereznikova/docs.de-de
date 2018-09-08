@@ -2,12 +2,12 @@
 title: XML Serializer Generator-Tool (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 54afa99af3365c3be8a9662905467fbcaf4e8aa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589178"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44136991"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer Generator-Tool (Sgen.exe)
 Der XML Serializer Generator erstellt eine XML-Serialisierungsassembly für die Typen in einer bestimmten Assembly, um die Startleistung von <xref:System.Xml.Serialization.XmlSerializer> beim Serialisieren oder Deserialisieren von Objekten der angegebenen Typen zu erhöhen.  
@@ -38,7 +38,7 @@ sgen [options]
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der XML Serializer Generator nicht verwendet wird, generiert <xref:System.Xml.Serialization.XmlSerializer> bei jeder Ausführung einer Anwendung für jeden Typ Serialisierungscode und eine Serialisierungsassembly. Zur Verbesserung der Leistung von XML-Serialisierung starten verwenden Sie das Tool Sgen.exe, um diese Assemblys im Voraus zu generieren. Diese Assemblys können dann zusammen mit der Anwendung bereitgestellt werden.  
+ Wenn der XML Serializer Generator nicht verwendet wird, generiert <xref:System.Xml.Serialization.XmlSerializer> bei jeder Ausführung einer Anwendung für jeden Typ Serialisierungscode und eine Serialisierungsassembly. Um die Leistung von XML-Serialisierung beim Start zu verbessern, verwenden Sie das Tool Sgen.exe, um die Assemblys im Voraus zu generieren. Diese Assemblys können dann zusammen mit der Anwendung bereitgestellt werden.  
   
  Mit dem XML Serializer Generator kann auch die Leistung von Clients, die zur Kommunikation mit Servern XML-Webdienstproxys verwenden, verbessert werden, da die Leistung durch den Serialisierungsprozess beim erstmaligen Laden des Typs nicht beeinträchtigt wird.  
   
@@ -55,7 +55,8 @@ sgen Data.dll
   
  Auf die Assembly Data.XmlSerializers.dll kann vom Code verwiesen werden, der die Typen in Data.dll serialisiert und deserialisiert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Extras](../../../docs/framework/tools/index.md)  
- [Übersicht über XML-Webdienste](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Extras](../../../docs/framework/tools/index.md)  
+- [Übersicht über XML-Webdienste](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

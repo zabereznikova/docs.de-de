@@ -3,11 +3,11 @@ title: 'Ressourcenverwaltung: Das use-Schlüsselwort (F#)'
 description: Informationen Sie zu den F#-Schlüsselwort "Use" und die "using"-Funktion, die die Initialisierung und Freigabe von Ressourcen steuern kann.
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43878387"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131684"
 ---
 # <a name="resource-management-the-use-keyword"></a>Ressourcenverwaltung: Das use-Schlüsselwort
 

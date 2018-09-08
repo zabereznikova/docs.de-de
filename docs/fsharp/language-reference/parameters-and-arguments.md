@@ -2,12 +2,12 @@
 title: Parameter und Argumente (F#)
 description: Informationen Sie zu F#-sprachunterstützung zum Definieren von Parametern und übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062636"
+ms.locfileid: "44131975"
 ---
 # <a name="parameters-and-arguments"></a>Parameter und Argumente
 
@@ -127,15 +127,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 ## <a name="passing-by-reference"></a>Übergeben als Verweis
 
-Übergeben einen F#-Wert als Verweis umfasst die `byref` Schlüsselwort, das angibt, dass der Parameter um einen Zeiger auf den Wert, der als Verweis übergeben wird. Übergeben Sie einen beliebigen Wert in eine Methode mit einem `byref` wie das Argument muss `mutable`.
+Übergeben einen F#-Wert als Verweis umfasst [Byrefs](byrefs.md), die verwaltete Zeigertypen sind. Anleitung für die zu verwendende Typ wie folgt lautet:
+
+* Verwendung `inref<'T>` , wenn Sie nur den Zeiger lesen müssen.
+* Verwendung `outref<'T>` , wenn Sie nur auf den Zeiger schreiben müssen.
+* Verwendung `byref<'T>` Wenn müssen Sie sowohl auslesen und Schreiben in den Zeiger.
+
+```fsharp
+let example1 (x: inref<int>) = printfn "It's %d" x
+
+let example2 (x: outref<int>) = x <- x + 1
+
+let example3 (x: byref<int>) =
+    printfn "It'd %d" x
+    x <- x + 1
+
+// No need to make it mutable, since it's read-only
+let x = 1
+example1 &x
+
+// Needs to be mutable, since we write to it
+let mutable y = 2
+example2 &y
+example3 &y // Now 'y' is 3
+```
 
 Da der Parameter ein Zeiger ist, und der Wert kann geändert werden, werden alle Änderungen an den Wert nach der Ausführung der Funktion beibehalten.
-
-Sie können die gleiche Aufgabe mit [Referenzzellen](reference-cells.md), aber es ist wichtig zu beachten, dass **Referenzzellen und `byref`s sind nicht dasselbe**. Eine Referenzzelle ist ein Container für ein Wert, den können Sie überprüfen und ändern Sie den Inhalt, aber dieser Wert befindet sich auf dem Heap und ist gleichbedeutend mit einem Datensatz mit einem änderbaren Wert, der darin enthaltenen. Ein `byref` ein tatsächliche-Zeiger ist, daher ist es verschiedene zugrunde liegende Semantik und Regeln für die Verwendung (das Recht restriktiv sein können).
-
-Die folgenden Beispiele veranschaulichen die Verwendung der `byref` Schlüsselwort. Beachten Sie, wenn Sie eine Referenzzelle als Parameter verwenden, muss eine Referenzzelle als einen benannten Wert erstellen und, die als Parameter verwenden, fügen Sie nicht einfach die `ref` -Operator wie im ersten Aufruf von gezeigt `Increment` in den folgenden Code. Da eine Kopie des zugrunde liegenden Werts erstellen eine Referenzzelle erstellt wird, erhöht der erste Aufruf nur einen temporären Wert.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
 Sie können ein Tupel als Rückgabewert einer speichern `out` Parameter in .NET-Methoden-Bibliothek. Alternativ können Sie behandeln die `out` Parameter als ein `byref` Parameter. Im folgenden Codebeispiel wird veranschaulicht, in beide Richtungen.
 
@@ -155,7 +172,7 @@ Der folgende Code veranschaulicht beide eine .NET-Methode übergeben wird, die e
 
 Wenn in einem Projekt ausführen, lautet die Ausgabe des obigen Codes wie folgt:
 
-```
+```console
 a 1 10 Hello world 1 True
 "a"
 1

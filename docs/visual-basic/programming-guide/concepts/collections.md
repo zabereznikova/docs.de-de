@@ -2,12 +2,12 @@
 title: Auflistungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504443"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129101"
 ---
 # <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -464,7 +464,7 @@ End Class
 ## <a name="defining-a-custom-collection"></a>Definieren einer benutzerdefinierten Auflistung  
  Sie können eine Auflistung definieren, indem Sie die <xref:System.Collections.Generic.IEnumerable%601>- oder <xref:System.Collections.IEnumerable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [enumerieren einer Auflistung](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) weiter oben in diesem Thema beschrieben.  
+ Sie können zwar eine benutzerdefinierte Auflistung definieren, in der Regel ist es aber besser, die in .NET Framework enthaltenen Auflistungen zu verwenden. Diese werden unter [Arten von Auflistungen](#kinds-of-collections) weiter oben in diesem Thema beschrieben.  
   
  Im folgenden Beispiel wird die benutzerdefinierte Auflistungsklasse `AllColors` definiert. Diese Klasse implementiert die <xref:System.Collections.IEnumerable>-Schnittstelle, die die Implementierung der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode erfordert.  
   
@@ -570,14 +570,15 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Programming Concepts (Visual Basic) (Programmierkonzepte (Visual Basic))](../../../visual-basic/programming-guide/concepts/index.md)  
- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)  
- [Erstellen und Bearbeiten von Auflistungen](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)  
- [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [Programming Concepts (Visual Basic) (Programmierkonzepte (Visual Basic))](../../../visual-basic/programming-guide/concepts/index.md)  
+- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)  
+- [Erstellen und Bearbeiten von Auflistungen](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)  
+- [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)

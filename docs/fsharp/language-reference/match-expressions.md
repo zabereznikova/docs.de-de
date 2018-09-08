@@ -3,11 +3,11 @@ title: Vergleichsausdrücke (f#)
 description: Erfahren Sie, wie der F#-Vergleichsausdruck verzweigungssteuerung bereitstellt, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44047674"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44132038"
 ---
 # <a name="match-expressions"></a>Vergleichsausdrücke
 

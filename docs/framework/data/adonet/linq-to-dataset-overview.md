@@ -3,11 +3,11 @@ title: Übersicht über LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 43c3aa081bd934202bd3a7831741054115d7a6d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883974"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138811"
 ---
 # <a name="linq-to-dataset-overview"></a>Übersicht über LINQ to DataSet
 Das <xref:System.Data.DataSet> ist eine der am meisten verwendeten Komponenten von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Es ist eines der Schlüsselelemente des nicht verbundenen Programmierungsmodells, auf dem [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] basiert, und versetzt Sie in die Lage, Daten aus unterschiedlichen Datenquellen explizit zwischenzuspeichern. Für die Darstellungsebene arbeitet das <xref:System.Data.DataSet> eng mit GUI-Steuerelementen für die Datenbindung zusammen. Für die mittlere Ebene stellt es einen Cache bereit, in dem die relationale Form von Daten zwischengespeichert wird, und es bietet Dienste für die schnelle und einfache Navigation in Abfragen und Hierarchien. Ein gängiges Verfahren verwendet, um die Anzahl der Anforderungen für eine Datenbank zu verringern, ist die Verwendung der <xref:System.Data.DataSet> für die Zwischenspeicherung in der mittleren Ebene. Betrachten Sie beispielsweise einen datengesteuerten [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web-Anwendung. Ein beträchtlicher Teil der Anwendung weist keine häufigen Änderungen auf und bleibt auch über Sitzungsgrenzen hinweg und bei verschiedenen Benutzern unverändert. Diese Daten können im Arbeitsspeicher des Webservers abgelegt werden, wodurch sich die Zahl der Datenbankanfragen verringert und die Interaktionen des Benutzers beschleunigt werden. Ein weiterer nützlicher Aspekt des der <xref:System.Data.DataSet> besteht darin, dass es einer Anwendung in der Anwendungsraum platzieren, Teilmengen von Daten aus mindestens einer Datenquelle ermöglicht. Die Anwendung kann dann die Daten im Arbeitsspeicher bearbeiten, während die relationale Form erhalten bleibt.  

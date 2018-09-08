@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785491"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133281"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Gewusst wie: Qualifizieren von XML-Element- und XML-Attributnamen
 
@@ -171,11 +171,11 @@ public class Book
 
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[Das XML Schema Definition-Tool und die XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md)
-[Einführung in die XML-Serialisierung](introducing-xml-serialization.md)
-[XmlSerializer-Klasse](xref:System.Xml.Serialization.XmlSerializer) 
- [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md)
-[Vorgehensweise: angeben ein alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md) 
- [Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Das XML Schema Definition-Tool und die XML-Serialisierung](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Einführung in die XML-Serialisierung](introducing-xml-serialization.md)
+- [XmlSerializer-Klasse](xref:System.Xml.Serialization.XmlSerializer)
+- [Attribute zur Steuerung der XML-Serialisierung](attributes-that-control-xml-serialization.md)
+- [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Vorgehensweise: Serialisieren eines Objekts](how-to-serialize-an-object.md)
+- [Vorgehensweise: Deserialisieren eines Objekts](how-to-deserialize-an-object.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747066"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137797"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Anpassung von Feeds (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , Daten als Feed verfügbar zu machen. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Bei Verwendung ein Atom-Feeds [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bietet eine Standardmethode zum Serialisieren von Daten, z. B. Entitäten und Beziehungen in einem XML-Format, das im Text der HTTP-Nachricht aufgenommen werden kann. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] definiert eine standardmäßige entitätseigenschaftszuordnung zwischen den Daten, die in Entitäten enthalten ist und Atom-Elementen. Weitere Informationen finden Sie unter [OData: Atom-Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
