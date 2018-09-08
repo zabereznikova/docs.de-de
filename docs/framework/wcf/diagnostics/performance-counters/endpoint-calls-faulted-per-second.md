@@ -3,11 +3,11 @@ title: 'Endpunkt: Fehlerhafte Aufrufe pro Sekunde'
 ms.date: 03/30/2017
 ms.assetid: 9840fc0a-0e4d-4638-96fd-40e3ab9e4667
 ms.openlocfilehash: f1b2997a0f1e16c897fc319d1833313141f5c4bf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44082082"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199595"
 ---
 # <a name="endpoint-calls-faulted-per-second"></a>Endpunkt: Fehlerhafte Aufrufe pro Sekunde
 Zählername: Calls Faulted Per Second.  

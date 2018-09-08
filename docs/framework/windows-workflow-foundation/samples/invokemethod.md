@@ -3,11 +3,11 @@ title: InvokeMethod
 ms.date: 03/30/2017
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
 ms.openlocfilehash: 861e0cf160aec9814abcf8c27c37ce13a5d88b2a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44047710"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217060"
 ---
 # <a name="invokemethod"></a>InvokeMethod
 In diesem Beispiel werden die verschiedenen Möglichkeiten zum Aufrufen von Methoden einer Klasse mit der <xref:System.Activities.Statements.InvokeMethod>-Aktivität veranschaulicht.  

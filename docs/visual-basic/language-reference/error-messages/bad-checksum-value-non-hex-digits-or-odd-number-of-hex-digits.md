@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 5c01e918e1f607febc10be89c3d27c50870c401a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e682c2c23dd6fe80aee87d2a86b3df2dae66b802
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589250"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213071"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>Ungültiger Prüfsummenwert, keine hexadezimalen Ziffern oder ungerade Anzahl von hexadezimalen Ziffern.
 Ein Prüfsummenwert enthält ungültige hexadezimale Ziffern oder hat eine ungerade Anzahl an Ziffern.  
@@ -31,6 +31,7 @@ Ein Prüfsummenwert enthält ungültige hexadezimale Ziffern oder hat eine unger
   
 3.  Wenn auch dann die Warnung weiterhin besteht oder wenn Sie nicht ASP.NET verwenden, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
   
-## <a name="see-also"></a>Siehe auch  
- [ASP.NET Overview (Übersicht über ASP.NET)](https://msdn.microsoft.com/library/4w3ex9c2.aspx)  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Siehe auch
+
+- [ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/overview)  
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

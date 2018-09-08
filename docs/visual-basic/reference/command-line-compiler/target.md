@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17528bb9faf137029b35e4a9f28bab7a28ae25db
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e3f691da48db863edd20bc6881785940a5451ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864614"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209380"
 ---
 # <a name="-target-visual-basic"></a>-Target (Visual Basic)
 Gibt das Format der Ausgabe des Compilers.  
@@ -38,7 +38,7 @@ Gibt das Format der Ausgabe des Compilers.
   
  Es sei denn, Sie geben `-target:module`, `-target` bewirkt, dass eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Assemblymanifest in eine Ausgabedatei hinzugefügt werden.  
   
- Jede Instanz des Vbc.exe erzeugt, die höchstens eine Ausgabedatei. Wenn Sie eine Compileroption, wie z. B. angeben `-out` oder `-target` mehrere Male, die letzte Lektion, die der Compiler verarbeitet in Kraft getreten ist. Informationen über alle Dateien in einer Kompilierung wird dem Manifest hinzugefügt. Alle Ausgabedateien außer erstellt mit `-target:module` Assemblymetadaten im Manifest enthalten. Verwendung [Ildasm.exe (IL Disassembler)](https://msdn.microsoft.com/library/f7dy01k1) zum Anzeigen der Metadaten in eine Ausgabedatei.  
+ Jede Instanz des Vbc.exe erzeugt, die höchstens eine Ausgabedatei. Wenn Sie eine Compileroption, wie z. B. angeben `-out` oder `-target` mehrere Male, die letzte Lektion, die der Compiler verarbeitet in Kraft getreten ist. Informationen über alle Dateien in einer Kompilierung wird dem Manifest hinzugefügt. Alle Ausgabedateien außer erstellt mit `-target:module` Assemblymetadaten im Manifest enthalten. Verwendung [Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md) zum Anzeigen der Metadaten in eine Ausgabedatei.  
   
  Die Kurzform von `-target` ist `-t`.  
   
@@ -57,12 +57,13 @@ Gibt das Format der Ausgabe des Compilers.
 vbc -target:library in.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
- [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
+- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+- [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

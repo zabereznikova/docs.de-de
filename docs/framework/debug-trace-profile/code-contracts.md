@@ -1,6 +1,6 @@
 ---
 title: Codeverträge
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080607"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222122"
 ---
 # <a name="code-contracts"></a>Codeverträge
 Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Objektinvarianten im Code festzulegen. Vorbedingungen sind Anforderungen, die beim Eingeben einer Methode oder Eigenschaft erfüllt werden müssen. Nachbedingungen beschreiben Erwartungen zu dem Zeitpunkt, zu dem die Methode oder der Eigenschaftencode beendet wird. Objektinvarianten beschreiben den erwarteten Zustand für eine Klasse, die in einem einwandfreien Zustand ist.  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- Invarianten werden durch das CONTRACTS_FULL-Präprozessorsymbol bedingt definiert. Bei der Laufzeitüberprüfung werden die Invarianten am Ende jeder öffentlichen Methode überprüft. Wenn eine Invariante eine öffentliche Methode in der gleichen Klasse erwähnt, wird die Invariantenüberprüfung, die normalerweise am Ende dieser öffentlichen Methode erfolgt, deaktiviert. Stattdessen wird die Überprüfung nur am Ende des äußersten Methodenaufrufs dieser Klasse ausgeführt. Dies geschieht auch, wenn die Klasse wegen eines Aufrufs einer Methode in einer anderen Klasse erneut eingegeben wird. Invarianten werden nicht auf Objektfinalizer oder Methoden überprüft, mit denen die <xref:System.IDisposable.Dispose%2A>-Methode implementiert wird.  
+ Invarianten werden durch das CONTRACTS_FULL-Präprozessorsymbol bedingt definiert. Bei der Laufzeitüberprüfung werden die Invarianten am Ende jeder öffentlichen Methode überprüft. Wenn eine Invariante eine öffentliche Methode in der gleichen Klasse erwähnt, wird die Invariantenüberprüfung, die normalerweise am Ende dieser öffentlichen Methode erfolgt, deaktiviert. Stattdessen wird die Überprüfung nur am Ende des äußersten Methodenaufrufs dieser Klasse ausgeführt. Dies geschieht auch, wenn die Klasse wegen eines Aufrufs einer Methode in einer anderen Klasse erneut eingegeben wird. Invarianten sind nicht auf einen Finalizer des Objekts überprüft und ein <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Implementierung.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Verwendungsrichtlinien  

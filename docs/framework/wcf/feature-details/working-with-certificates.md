@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870210"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198932"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.  
@@ -85,12 +85,12 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
   
  Wenn Sie eine benutzerdefinierte Authentifizierung erstellen, müssen Sie auf jeden Fall die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>-Methode überschreiben. Ein Beispiel zur benutzerdefinierten Authentifizierung finden Sie im Beispiel zum [Validierungssteuerelement des X.509-Zertifikats](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Weitere Informationen finden Sie unter [Custom Credential and Credential Validation (Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen)](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Verwenden von Makecert.exe zum Erstellen einer Zertifikatkette  
- Mit dem Certificate Creation-Tool (Makecert.exe) werden X.509-Zertifikate sowie Paare aus privaten und öffentlichen Schlüsseln erstellt. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Dieses Tool ist lediglich als Unterstützung bei der Entwicklung von Diensten gedacht und sollte niemals zur Erstellung von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen WCF-Dienst entwickeln, können Sie mit „Makecert.exe“ anhand der folgenden Schritte eine Zertifikatkette erstellen.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Verwendung des neuen Powershell-SelfSignedCertificate-Cmdlets zum Erstellen einer Zertifikatkette  
+ Das New-SelfSignedCertificate des Powershell-Cmdlet erstellt x. 509-Zertifikaten und privaten und öffentlichen Schlüsselpaaren. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Das Cmdlet dient lediglich als Hilfe beim Entwickeln von services und sollte nie zum Erstellen von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen WCF-Dienst zu entwickeln, gehen Sie folgendermaßen vor, um eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate" zu erstellen.  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>So erstellen Sie eine Kette von Vertrauensstellungen mit Makecert.exe  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Erstellen Sie eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate"  
   
-1.  Erstellen Sie ein (selbst signiertes) temporäres Zertifikat für eine Stammzertifizierungsstelle mit MakeCert.exe. Speichern Sie den privaten Schlüssel.  
+1.  Erstellen Sie ein temporären Stammzertifizierungsstellen (selbst signiertes)-Zertifikat mit dem Cmdlet "New-SelfSignedCertificate". Speichern Sie den privaten Schlüssel.  
   
 2.  Verwenden Sie das neue Zertifikat, um ein anderes Zertifikat auszustellen, das den öffentlichen Schlüssel enthält.  
   

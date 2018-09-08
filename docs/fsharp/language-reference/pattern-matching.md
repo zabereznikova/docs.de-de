@@ -3,11 +3,11 @@ title: Musterabgleich (F#)
 description: Erfahren Sie, wie Muster werden in f# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077183"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216567"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 

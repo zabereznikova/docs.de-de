@@ -11,11 +11,11 @@ ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8bfe0db3d6fcbdbbcfb90ff488ab19cdbfaab75e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658807"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216144"
 ---
 # <a name="ltgcservergt-element"></a>&lt;GcServer&gt; Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.  

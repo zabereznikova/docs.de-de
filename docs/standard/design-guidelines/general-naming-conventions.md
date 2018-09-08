@@ -17,11 +17,11 @@ ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071095"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209500"
 ---
 # <a name="general-naming-conventions"></a>Allgemeine Benennungskonventionen
 Dieser Abschnitt beschreibt allgemeine Benennungskonventionen, die im Zusammenhang mit der Auswahl der Wörter, die Richtlinien zum Verwenden von Abkürzungen und Akronyme und Empfehlungen zum Vermeiden Sie sprachspezifische Namen.  
