@@ -3,11 +3,11 @@ title: '&lt;Konfliktlöser&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
 ms.openlocfilehash: 48b6b6ca315f7ab63a8f7a64b97167fa04fe1e4e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804093"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133765"
 ---
 # <a name="ltresolvergt"></a>&lt;Konfliktlöser&gt;
 Gibt einen Peerresolver an, der zum Auflösen einer Peermesh-ID in einen Satz von Peerknotenadressen verwendet wird, die verschiedene Knoten im Mesh angeben.  
