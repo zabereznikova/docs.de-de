@@ -3,11 +3,11 @@ title: Ausführliche Syntax (F#)
 description: Erfahren Sie, den Unterschied zwischen ausführliche und einfache Syntax in der Programmiersprache f#.
 ms.date: 05/16/2016
 ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063117"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193158"
 ---
 # <a name="verbose-syntax"></a>Ausführliche Syntax
 

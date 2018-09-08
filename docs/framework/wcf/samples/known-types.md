@@ -3,11 +3,11 @@ title: Bekannte Typen
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
 ms.openlocfilehash: ec1dfa426c19b5471acb1c359f5068854fa8aa71
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069001"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192495"
 ---
 # <a name="known-types"></a>Bekannte Typen
 In diesem Beispiel wird veranschaulicht, wie Informationen über abgeleitete Typen in einem Datenvertrag angegeben werden. Datenverträge ermöglichen es Ihnen, strukturierte Daten an Dienste zu übergeben und von ihnen zu empfangen. In objektorientierten Programmierungen kann anstelle des ursprünglichen Typs ein Typ verwendet werden, der von einem anderen Typ erbt. In dienstorientierten Programmierungen werden Schemas und keine Typen kommuniziert, weshalb die Beziehung zwischen Typen nicht beibehalten wird. Das <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribut ermöglicht es, Informationen über abgeleitete Typen in den Datenvertrag einzubinden. Wenn dieser Mechanismus nicht verwendet wird, kann ein abgeleiteter Typ nicht gesendet oder empfangen werden, wenn ein Basistyp erwartet wird.  

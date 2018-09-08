@@ -5,11 +5,11 @@ ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d44a132f4bc4982ba0df437a56859de1a6fe441a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44060319"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194739"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Sichere Unterhaltungen und sichere Sitzungen.
 Ein Feature von Windows Communication Foundation (WCF) ist die Möglichkeit, sichere Sitzungen zwischen zwei Endpunkten herzustellen, die sich gegenseitig authentifizieren und eine Verschlüsselung und digitalen einverstanden. Der Dienstendpunkt könnte beispielsweise einen Clientendpunkt benötigen, um zur Authentifizierung ein Sicherheitstoken zu senden, das auf einem X.509-Zertifikat basiert. Sobald der Client authentifiziert ist, gibt der Dienstendpunkt ein Sicherheitskontexttoken (SCT) an den Client zurück, das dann verwendet wird, um alle folgenden Nachrichten innerhalb der Sitzung zu sichern. Durch das Einrichten dieser sicheren Sitzung kann der Nachrichtensatz, der zwischen den beiden Endpunkten ausgetauscht wird, effizienter werden, da SCT über einen symmetrischen Schlüssel verfügt. In Bezug auf das Generieren einer digitalen Signatur oder Verschlüsseln eines Datensatzes erfordern asymmetrische Schlüssel, auf denen X.509-Zertifikate basieren, bedeutend mehr Rechenleistung als symmetrische Schlüssel.  

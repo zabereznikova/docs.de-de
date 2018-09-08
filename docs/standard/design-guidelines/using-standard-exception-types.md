@@ -11,11 +11,11 @@ ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea4a61be3a76c30c564cbf98ba3318fc6c3e7d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874965"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193624"
 ---
 # <a name="using-standard-exception-types"></a>Verwenden von Standardausnahmetypen
 Dieser Abschnitt beschreibt die Standardausnahmen, die durch das Framework sowie Details zu ihrer Verwendung bereitgestellt. Die Liste ist keineswegs vollständig. Finden Sie in der .NET Framework-Referenzdokumentation für die Verwendung mit anderen Framework-Ausnahmetypen.  

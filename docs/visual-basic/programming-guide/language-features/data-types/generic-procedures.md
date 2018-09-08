@@ -12,59 +12,57 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 686087e4520ea5e6e69e5906c628af3ad54749da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a88a979a6b46f897e5f04f4481d4a23e245b165
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649395"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195019"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generische Prozeduren in Visual Basic
-Ein *generische Prozedur*auch Namens eine *generische Methode*, wird eine Prozedur mit mindestens einem Typparameter definiert. Dadurch wird den aufrufenden Code ein, um die Datentypen, die Anforderungen anzupassen, jedes Mal der Prozedur aufrufen.  
+Ein *generische Prozedur*auch Namens eine *generische Methode*, wird eine Prozedur mit mindestens einem Typparameter definiert. Dadurch wird den aufrufenden Code auf die Datentypen, die Anforderungen jedes Mal passen sie die Prozedur aufruft.  
   
- Eine Prozedur ist nicht generisch, einfach durch innerhalb einer generischen Klasse oder eine generische Struktur definiert wird. Um generisch sein, muss die Prozedur über mindestens einen Typparameter, zusätzlich zum normalen Parameter dauern dauern kann. Modul kann generische Prozeduren enthalten, oder einer generischen Klasse oder Struktur nicht generischen Prozeduren und eine nicht generische Klasse, Struktur, enthalten.  
+ Eine Prozedur ist nicht generisch, einfach aufgrund der innerhalb einer generischen Klasse oder eine generische Struktur definiert wird. Um generisch sein, muss die Prozedur mindestens einen Typparameter, zusätzlich zum normalen Parameter ausführen, dauert es möglicherweise. Module kann generische Prozeduren enthält, oder einer generischen Klasse oder Struktur nicht generischen Prozeduren und eine nicht generische Klasse, Struktur, enthalten.  
   
- Eine generische Prozedur können dessen Typparameter angegeben in der normalen Parameterliste, ihren Rückgabetyp, wenn sie ein, und in der Prozedur Code verfügt.  
+ Eine generische Prozedur können dessen Typparameter in der normalen Parameterliste, ihren Rückgabetyp, wenn sie über ein, und in der Prozedur Code verfügt.  
   
 ## <a name="type-inference"></a>Typableitung  
- Sie können eine generische Prozedur aufrufen, ohne Angabe von Typargumenten an. Wenn Sie auf diese Weise aufrufen, versucht der Compiler die entsprechenden Datentypen Übergabe an die Prozedur Typargumente bestimmen. Hierbei spricht *Typrückschluss*. Der folgende Code zeigt einen Aufruf in die leitet der Compiler, dass er Typ übergeben soll `String` an den Typparameter `t`.  
+ Sie können eine generische Prozedur aufrufen, ohne Angabe von Typargumenten überhaupt. Wenn Sie auf diese Weise aufrufen, versucht der Compiler, um zu bestimmen, die entsprechenden Datentypen Übergabe an die Prozedur Typargumente. Dies wird als bezeichnet *Typrückschluss*. Der folgende Code zeigt einen Aufruf in die leitet der Compiler, dass er Typ übergeben soll `String` an den Typparameter `t`.  
   
  [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
- Wenn der Compiler die Typargumente aus dem Kontext des Aufrufs ableiten kann, meldet er einen Fehler. Eine mögliche Ursache für einen derartigen Fehler gibt ein Array-Rank-Konflikt. Nehmen Sie beispielsweise an, dass Sie als ein Array eines Typparameters einen normalen Parameter definieren. Wenn Sie die generische Prozedur aufrufen, führt dazu, dass ein Array eines abweichenden Rang (Anzahl der Dimensionen) angeben, des Konflikts Typrückschluss fehlschlagen. Der folgende Code zeigt einen Aufruf in dem ein zweidimensionales Array an eine Prozedur übergeben wird, das ein eindimensionales Array erwartet.  
+ Wenn der Compiler die Typargumente aus dem Kontext des Aufrufs nicht ableiten kann, wird ein Fehler gemeldet. Eine mögliche Ursache für einen derartigen Fehler ist ein Array Rank-Konflikt. Nehmen wir beispielsweise an, dass Sie einen normalen Parameter als Array von einem Typparameter definieren. Rufen Sie die generische Prozedur bewirkt, dass ein Array von einem abweichenden Rang (Anzahl der Dimensionen) angeben, des Konflikts Typrückschluss fehlschlagen. Der folgende Code zeigt einen Aufruf in das ein zweidimensionales Array an eine Prozedur übergeben wird, das ein eindimensionales Array erwartet.  
   
- `Public Sub demoSub(Of t)(ByVal arg() As t)`  
+```vb  
+Public Sub demoSub(Of t)(ByVal arg() As t)
+End Sub
+
+Public Sub callDemoSub()
+    Dim twoDimensions(,) As Integer
+    demoSub(twoDimensions)
+End Sub
+```
   
- `End Sub`  
+ Sie können den Typrückschluss aufrufen, nur, indem Sie alle Typargumente auslassen. Wenn Sie ein Typargument angeben, müssen Sie alle angeben.  
   
- `Public Sub callDemoSub()`  
-  
- `Dim twoDimensions(,) As Integer`  
-  
- `demoSub(twoDimensions)`  
-  
- `End Sub`  
-  
- Typrückschluss kann nur durch das Weglassen der Typargumente aufgerufen werden. Wenn Sie ein Typargument angeben, müssen Sie alle angeben.  
-  
- Typrückschluss wird nur für generische Prozeduren unterstützt. Typrückschluss auf generische Klassen, Strukturen, Schnittstellen und Delegaten kann nicht aufgerufen werden.  
+ Typrückschluss ist nur für generische Prozeduren unterstützt. Typrückschluss für generische Klassen, Strukturen, Schnittstellen oder Delegaten kann nicht aufgerufen werden.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel definiert einen generischen `Function` Verfahren, um ein bestimmtes Element in einem Array zu ermitteln. Er definiert einen Typparameter und verwendet, um die beiden Parameter in der Parameterliste zu erstellen.  
+ Das folgende Beispiel definiert einen generischen `Function` Verfahren zum Suchen eines bestimmten Elements in einem Array. Er definiert einen Typparameter und wird verwendet, um die beiden Parameter in der Parameterliste zu erstellen.  
   
 ### <a name="code"></a>Code  
  [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### <a name="comments"></a>Kommentare  
- Das obige Beispiel erfordert, dass vergleichen `searchValue` für jedes Element `searchArray`. Um dies zu garantieren, wird den Typparameter `T` zum Implementieren der <xref:System.IComparable%601> Schnittstelle. Der Code verwendet die <xref:System.IComparable%601.CompareTo%2A> -Methode anstelle der `=` -Operator, da keine Garantie, die ein Type-Argument besteht für angegeben `T` unterstützt die `=` Operator.  
+ Das obige Beispiel erfordert die Möglichkeit, vergleichen `searchValue` für jedes Element `searchArray`. Um dies zu garantieren, schränkt sie die Typparameter `T` zum Implementieren der <xref:System.IComparable%601> Schnittstelle. Der Code verwendet die <xref:System.IComparable%601.CompareTo%2A> -Methode anstelle der `=` -Operator, da keine Garantie, die ein Typargument besteht für angegeben `T` unterstützt die `=` Operator.  
   
  Sie können testen, die `findElement` Prozedur durch den folgenden Code.  
   
  [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
- Die vorangehenden Aufrufe von `MsgBox` "0", "1" und "-1" bzw. anzuzeigen.  
+ Der vorherigen Aufrufe von `MsgBox` anzeigen bzw. "0", "1" und "-1".  
   
 ## <a name="see-also"></a>Siehe auch  
  [Generische Typen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  

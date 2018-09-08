@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140436"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195006"
 ---
 # <a name="row-states-and-row-versions"></a>Zeilenstatus und Zeilenversionen
 ADO.NET verwaltet Zeilen in Tabellen mithilfe des Zeilenstatus und der Zeilenversion. Ein Zeilenstatus gibt den Status einer Zeile an. In Zeilenversionen werden die Werte, die in einer Zeile gespeichert werden, während der Bearbeitung verwaltet. Zu diesen Werten zählen z. B. die Werte current, original und default. Wenn Sie beispielsweise eine Spalte in einer Zeile geändert haben, weist die Zeile den Zeilenstatus `Modified` und die folgenden beiden Zeilenversionen auf: `Current` mit den aktuellen Zeilenwerten und `Original` mit den Zeilenwerten vor den Änderungen der Spalte.  

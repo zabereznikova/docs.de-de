@@ -3,11 +3,11 @@ title: Umfangreiche Daten und Streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079759"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192573"
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfrastruktur. Da XML-Daten häufig in dem definierten im standard-Text-Format codiert ist die [XML 1.0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=94838), vernetzte Systementwickler und Architekten sind in der Regel, sorgen die über das Netzwerk Speicherbedarf (oder Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML stellt besondere Herausforderungen für die effiziente Übertragung binärer Daten dar.  

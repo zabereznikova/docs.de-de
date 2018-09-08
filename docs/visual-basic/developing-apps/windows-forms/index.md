@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881980"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192430"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
 Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von Windows Forms-Anwendungen, die lokal auf Benutzercomputern ausgeführt werden. Sie können Visual Studio verwenden, um die mithilfe von Windows Forms-Anwendung und die Benutzeroberfläche zu erstellen. Eine Windows Forms-Anwendung baut auf Klassen aus der <xref:System.Windows.Forms> Namespace.  
@@ -67,7 +67,7 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
 |Beschreibung|Siehe|  
 |--------|---------|  
 |Verwenden der <xref:System.Windows.Forms.BindingSource> Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Arbeiten mit [!INCLUDE[vstecado](~/includes/vstecado-md.md)] -Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|Arbeiten mit [!INCLUDE[vstecado](~/includes/vstecado-md.md)] -Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Verwenden Sie das Fenster "Datenquellen"|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Bereitstellen von Anwendungen auf Clientcomputern  
@@ -95,7 +95,8 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
 |Drucken des Inhalts eines Formulars|[Vorgehensweise: Drucken von Grafiken in Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Weitere Informationen zur Windows Forms-Sicherheit|[Übersicht über die Sicherheit in Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Übersicht über Windows Forms](../../../framework/winforms/windows-forms-overview.md)  
- [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+- [Übersicht über Windows Forms](../../../framework/winforms/windows-forms-overview.md)  
+- [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
