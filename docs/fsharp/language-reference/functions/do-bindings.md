@@ -3,32 +3,32 @@ title: do-Bindungen (F#)
 description: Erfahren Sie, wie eine F#-"Bindung" do"verwendet wird, Code auszuführen, ohne die Definition einer Funktion oder einen Wert.
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882732"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192150"
 ---
-# <a name="do-bindings"></a><span data-ttu-id="dc697-103">do-Bindungen</span><span class="sxs-lookup"><span data-stu-id="dc697-103">do Bindings</span></span>
+# <a name="do-bindings"></a><span data-ttu-id="96654-103">do-Bindungen</span><span class="sxs-lookup"><span data-stu-id="96654-103">do Bindings</span></span>
 
-<span data-ttu-id="dc697-104">Ein `do` Bindung wird verwendet, um Code auszuführen, ohne die Definition einer Funktion oder Wert.</span><span class="sxs-lookup"><span data-stu-id="dc697-104">A `do` binding is used to execute code without defining a function or value.</span></span> <span data-ttu-id="dc697-105">Darüber hinaus werden Bindungen möglich in Klassen finden Sie in [ `do` Bindungen in Klassen](../members/do-bindings-in-classes.md).</span><span class="sxs-lookup"><span data-stu-id="dc697-105">Also, do bindings can be used in classes, see [`do` Bindings in Classes](../members/do-bindings-in-classes.md).</span></span>
+<span data-ttu-id="96654-104">Ein `do` Bindung wird verwendet, um Code auszuführen, ohne die Definition einer Funktion oder Wert.</span><span class="sxs-lookup"><span data-stu-id="96654-104">A `do` binding is used to execute code without defining a function or value.</span></span> <span data-ttu-id="96654-105">Darüber hinaus werden Bindungen möglich in Klassen finden Sie in [ `do` Bindungen in Klassen](../members/do-bindings-in-classes.md).</span><span class="sxs-lookup"><span data-stu-id="96654-105">Also, do bindings can be used in classes, see [`do` Bindings in Classes](../members/do-bindings-in-classes.md).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="dc697-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="dc697-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="96654-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="96654-106">Syntax</span></span>
 
 ```fsharp
 [ attributes ]
 [ do ]expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="dc697-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dc697-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="96654-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="96654-107">Remarks</span></span>
 
-<span data-ttu-id="dc697-108">Verwenden einer `do` binden, wenn Sie möchten, dass zum Ausführen von Code unabhängig von der Definition einer Funktion oder Wert.</span><span class="sxs-lookup"><span data-stu-id="dc697-108">Use a `do` binding when you want to execute code independently of a function or value definition.</span></span> <span data-ttu-id="dc697-109">Der Ausdruck in einem `do` Bindung muss zurückgeben `unit`.</span><span class="sxs-lookup"><span data-stu-id="dc697-109">The expression in a `do` binding must return `unit`.</span></span> <span data-ttu-id="dc697-110">Code in einem der obersten Ebene `do` Bindung ausgeführt wird, wenn das Modul initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="dc697-110">Code in a top-level `do` binding is executed when the module is initialized.</span></span> <span data-ttu-id="dc697-111">Das Schlüsselwort `do` ist optional.</span><span class="sxs-lookup"><span data-stu-id="dc697-111">The keyword `do` is optional.</span></span>
+<span data-ttu-id="96654-108">Verwenden einer `do` binden, wenn Sie möchten, dass zum Ausführen von Code unabhängig von der Definition einer Funktion oder Wert.</span><span class="sxs-lookup"><span data-stu-id="96654-108">Use a `do` binding when you want to execute code independently of a function or value definition.</span></span> <span data-ttu-id="96654-109">Der Ausdruck in einem `do` Bindung muss zurückgeben `unit`.</span><span class="sxs-lookup"><span data-stu-id="96654-109">The expression in a `do` binding must return `unit`.</span></span> <span data-ttu-id="96654-110">Code in einem der obersten Ebene `do` Bindung ausgeführt wird, wenn das Modul initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="96654-110">Code in a top-level `do` binding is executed when the module is initialized.</span></span> <span data-ttu-id="96654-111">Das Schlüsselwort `do` ist optional.</span><span class="sxs-lookup"><span data-stu-id="96654-111">The keyword `do` is optional.</span></span>
 
-<span data-ttu-id="dc697-112">Attribute können auf oberster Ebene angewendet werden `do` Bindung.</span><span class="sxs-lookup"><span data-stu-id="dc697-112">Attributes can be applied to a top-level `do` binding.</span></span> <span data-ttu-id="dc697-113">Z. B. Wenn Ihr Programm COM-Interop verwendet, Sie möchten gelten die `STAThread` -Attribut auf Ihr Programm.</span><span class="sxs-lookup"><span data-stu-id="dc697-113">For example, if your program uses COM interop, you might want to apply the `STAThread` attribute to your program.</span></span> <span data-ttu-id="dc697-114">Sie erreichen dies, indem Sie ein Attribut auf eine `do` binden, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="dc697-114">You can do this by using an attribute on a `do` binding, as shown in the following code.</span></span>
+<span data-ttu-id="96654-112">Attribute können auf oberster Ebene angewendet werden `do` Bindung.</span><span class="sxs-lookup"><span data-stu-id="96654-112">Attributes can be applied to a top-level `do` binding.</span></span> <span data-ttu-id="96654-113">Z. B. Wenn Ihr Programm COM-Interop verwendet, Sie möchten gelten die `STAThread` -Attribut auf Ihr Programm.</span><span class="sxs-lookup"><span data-stu-id="96654-113">For example, if your program uses COM interop, you might want to apply the `STAThread` attribute to your program.</span></span> <span data-ttu-id="96654-114">Sie erreichen dies, indem Sie ein Attribut auf eine `do` binden, wie im folgenden Code gezeigt.</span><span class="sxs-lookup"><span data-stu-id="96654-114">You can do this by using an attribute on a `do` binding, as shown in the following code.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="dc697-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dc697-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96654-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="96654-115">See also</span></span>
 
-- [<span data-ttu-id="dc697-116">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="dc697-116">F# Language Reference</span></span>](../index.md)
-- [<span data-ttu-id="dc697-117">Funktionen</span><span class="sxs-lookup"><span data-stu-id="dc697-117">Functions</span></span>](index.md)
+- [<span data-ttu-id="96654-116">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="96654-116">F# Language Reference</span></span>](../index.md)
+- [<span data-ttu-id="96654-117">Funktionen</span><span class="sxs-lookup"><span data-stu-id="96654-117">Functions</span></span>](index.md)
