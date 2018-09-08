@@ -3,33 +3,33 @@ title: Das Fixed-Schlüsselwort (f#)
 description: Erfahren Sie, wie Sie "anheften" wird eine lokale im Stapel, um zu verhindern, dass bei der Sammlung mit den F#-'Schlüsselwort fixed".
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039284"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201412"
 ---
-# <a name="the-fixed-keyword"></a><span data-ttu-id="a8cbf-103">Das Fixed-Schlüsselwort</span><span class="sxs-lookup"><span data-stu-id="a8cbf-103">The Fixed Keyword</span></span>
+# <a name="the-fixed-keyword"></a><span data-ttu-id="b1bdf-103">Das Fixed-Schlüsselwort</span><span class="sxs-lookup"><span data-stu-id="b1bdf-103">The Fixed Keyword</span></span>
 
-<span data-ttu-id="a8cbf-104">F# 4.1 führt die `fixed` -Schlüsselwort, das Ihnen ermöglicht, eine lokale im Stapel, um zu verhindern, dass es gesammelt oder während der Garbage Collection verschoben "anheften".</span><span class="sxs-lookup"><span data-stu-id="a8cbf-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="a8cbf-105">Sie wird für Low-Level Programmierszenarios verwendet.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-105">It is used for low-level programming scenarios.</span></span>
+<span data-ttu-id="b1bdf-104">F# 4.1 führt die `fixed` -Schlüsselwort, das Ihnen ermöglicht, eine lokale im Stapel, um zu verhindern, dass es gesammelt oder während der Garbage Collection verschoben "anheften".</span><span class="sxs-lookup"><span data-stu-id="b1bdf-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="b1bdf-105">Sie wird für Low-Level Programmierszenarios verwendet.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-105">It is used for low-level programming scenarios.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a8cbf-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="a8cbf-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b1bdf-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="b1bdf-106">Syntax</span></span>
 
 ```fsharp
 use ptr = fixed expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="a8cbf-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a8cbf-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b1bdf-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b1bdf-107">Remarks</span></span>
 
-<span data-ttu-id="a8cbf-108">Dadurch wird die Syntax von Ausdrücken können Sie einen Zeiger zu extrahieren und binden Sie ihn in einen Namen verhindert gesammelt oder während der Garbage Collection verschoben wird, erweitert.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
+<span data-ttu-id="b1bdf-108">Dadurch wird die Syntax von Ausdrücken können Sie einen Zeiger zu extrahieren und binden Sie ihn in einen Namen verhindert gesammelt oder während der Garbage Collection verschoben wird, erweitert.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
 
-<span data-ttu-id="a8cbf-109">Ein Zeiger von einem Ausdruck wurde behoben, über die `fixed` Schlüsselwort gebunden ist, auf einen Bezeichner über die `use` Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="a8cbf-110">Die Semantik dieser ähneln denen auf die ressourcenverwaltung, über die `use` Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="a8cbf-111">Der Zeiger wurde behoben, während er im Gültigkeitsbereich befindet, und sobald sie außerhalb des gültigen Bereichs ist, ist es nicht mehr festgelegt.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="a8cbf-112">`fixed` kann nicht verwendet werden, außerhalb des Kontexts einer `use` Bindung.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="a8cbf-113">Sie müssen den Zeiger in einen Namen mit binden `use`.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-113">You must bind the pointer to a name with `use`.</span></span>
+<span data-ttu-id="b1bdf-109">Ein Zeiger von einem Ausdruck wurde behoben, über die `fixed` Schlüsselwort gebunden ist, auf einen Bezeichner über die `use` Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="b1bdf-110">Die Semantik dieser ähneln denen auf die ressourcenverwaltung, über die `use` Schlüsselwort.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="b1bdf-111">Der Zeiger wurde behoben, während er im Gültigkeitsbereich befindet, und sobald sie außerhalb des gültigen Bereichs ist, ist es nicht mehr festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="b1bdf-112">`fixed` kann nicht verwendet werden, außerhalb des Kontexts einer `use` Bindung.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="b1bdf-113">Sie müssen den Zeiger in einen Namen mit binden `use`.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-113">You must bind the pointer to a name with `use`.</span></span>
 
-<span data-ttu-id="a8cbf-114">Verwenden von `fixed` muss innerhalb eines Ausdrucks zu einer Funktion oder Methode erfolgen.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="a8cbf-115">Es kann nicht in einem Skript auf Serverebene oder auf Modulebene Bereich verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-115">It cannot be used at a script-level or module-level scope.</span></span>
+<span data-ttu-id="b1bdf-114">Verwenden von `fixed` muss innerhalb eines Ausdrucks zu einer Funktion oder Methode erfolgen.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="b1bdf-115">Es kann nicht in einem Skript auf Serverebene oder auf Modulebene Bereich verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-115">It cannot be used at a script-level or module-level scope.</span></span>
 
-<span data-ttu-id="a8cbf-116">Wie alle Zeiger-Code Dies ist eine unsichere-Funktion und gibt eine Warnung generiert wird.</span><span class="sxs-lookup"><span data-stu-id="a8cbf-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
+<span data-ttu-id="b1bdf-116">Wie alle Zeiger-Code Dies ist eine unsichere-Funktion und gibt eine Warnung generiert wird.</span><span class="sxs-lookup"><span data-stu-id="b1bdf-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
 
-## <a name="example"></a><span data-ttu-id="a8cbf-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a8cbf-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="b1bdf-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b1bdf-117">Example</span></span>
 
 ```fsharp
 open Microsoft.FSharp.NativeInterop
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a8cbf-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a8cbf-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1bdf-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b1bdf-118">See also</span></span>
 
-- [<span data-ttu-id="a8cbf-119">NativePtr-Modul</span><span class="sxs-lookup"><span data-stu-id="a8cbf-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [<span data-ttu-id="b1bdf-119">NativePtr-Modul</span><span class="sxs-lookup"><span data-stu-id="b1bdf-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

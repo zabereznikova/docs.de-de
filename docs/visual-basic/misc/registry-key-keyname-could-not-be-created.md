@@ -5,19 +5,19 @@ f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
 ms.openlocfilehash: 691257f76e18fc1fe24584d589e71f99db8d7463
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133966"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207381"
 ---
-# <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a><span data-ttu-id="7135a-102">Registrierungsschlüssel &#39; &lt;Keyname&gt; &#39; konnte nicht erstellt werden</span><span class="sxs-lookup"><span data-stu-id="7135a-102">Registry key &#39;&lt;keyname&gt;&#39; could not be created</span></span>
-<span data-ttu-id="7135a-103">Der angegebene Registrierungsschlüssel konnte möglicherweise aufgrund unzureichender Sicherheitsberechtigungen nicht erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="7135a-103">The specified registry key could not be created, possibly because of insufficient security permissions.</span></span>  
+# <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a><span data-ttu-id="63fe3-102">Registrierungsschlüssel &#39; &lt;Keyname&gt; &#39; konnte nicht erstellt werden</span><span class="sxs-lookup"><span data-stu-id="63fe3-102">Registry key &#39;&lt;keyname&gt;&#39; could not be created</span></span>
+<span data-ttu-id="63fe3-103">Der angegebene Registrierungsschlüssel konnte möglicherweise aufgrund unzureichender Sicherheitsberechtigungen nicht erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="63fe3-103">The specified registry key could not be created, possibly because of insufficient security permissions.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="7135a-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="7135a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="63fe3-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="63fe3-104">To correct this error</span></span>  
   
--   <span data-ttu-id="7135a-105">Stellen Sie sicher, dass Sie über ausreichende Sicherheitsberechtigungen für den Zugriff auf den Schlüssel verfügen.</span><span class="sxs-lookup"><span data-stu-id="7135a-105">Ensure that you have sufficient security permissions to access the key.</span></span>  
+-   <span data-ttu-id="63fe3-105">Stellen Sie sicher, dass Sie über ausreichende Sicherheitsberechtigungen für den Zugriff auf den Schlüssel verfügen.</span><span class="sxs-lookup"><span data-stu-id="63fe3-105">Ensure that you have sufficient security permissions to access the key.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7135a-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7135a-106">See Also</span></span>  
- [<span data-ttu-id="7135a-107">Registrierung: Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="7135a-107">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
- [<span data-ttu-id="7135a-108">Registrierung von Zugriffsänderungen in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="7135a-108">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
+## <a name="see-also"></a><span data-ttu-id="63fe3-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="63fe3-106">See Also</span></span>  
+ [<span data-ttu-id="63fe3-107">Registrierung: Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="63fe3-107">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
+ [<span data-ttu-id="63fe3-108">Registrierung von Zugriffsänderungen in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="63fe3-108">Registry Access Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/b58f7687-f4db-448a-a865-07f62fd16fb2)
