@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876599"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186630"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;umfassen&gt; (Visual Basic)
 Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschreibt.  
