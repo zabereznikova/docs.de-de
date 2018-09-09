@@ -6,20 +6,20 @@ helpviewer_keywords:
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
 ms.openlocfilehash: a47ce896be4d1c38147584dd80b1bc841737d526
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130655"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227021"
 ---
-# <a name="how-to-define-a-groupbox-template"></a><span data-ttu-id="756a6-102">Gewusst wie: Definieren einer GroupBox-Vorlage</span><span class="sxs-lookup"><span data-stu-id="756a6-102">How to: Define a GroupBox Template</span></span>
-<span data-ttu-id="756a6-103">Dieses Beispiel zeigt, wie Sie eine Vorlage zum Erstellen einer <xref:System.Windows.Controls.GroupBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="756a6-103">This example shows how to create a template for a <xref:System.Windows.Controls.GroupBox> control.</span></span>  
+# <a name="how-to-define-a-groupbox-template"></a><span data-ttu-id="d1c3d-102">Gewusst wie: Definieren einer GroupBox-Vorlage</span><span class="sxs-lookup"><span data-stu-id="d1c3d-102">How to: Define a GroupBox Template</span></span>
+<span data-ttu-id="d1c3d-103">Dieses Beispiel zeigt, wie Sie eine Vorlage zum Erstellen einer <xref:System.Windows.Controls.GroupBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="d1c3d-103">This example shows how to create a template for a <xref:System.Windows.Controls.GroupBox> control.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="756a6-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="756a6-104">Example</span></span>  
- <span data-ttu-id="756a6-105">Das folgende Beispiel definiert eine <xref:System.Windows.Controls.GroupBox> Steuerelementvorlage mit einem <xref:System.Windows.Controls.Grid> Steuerelement für das Layout.</span><span class="sxs-lookup"><span data-stu-id="756a6-105">The following example defines a <xref:System.Windows.Controls.GroupBox> control template by using a <xref:System.Windows.Controls.Grid> control for layout.</span></span> <span data-ttu-id="756a6-106">Die Vorlage verwendet eine <xref:System.Windows.Controls.BorderGapMaskConverter> definieren den Rahmen der <xref:System.Windows.Controls.GroupBox> , damit die Rahmen nicht verdeckt die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Inhalt.</span><span class="sxs-lookup"><span data-stu-id="756a6-106">The template uses a <xref:System.Windows.Controls.BorderGapMaskConverter> to define the border of the <xref:System.Windows.Controls.GroupBox> so that the border does not obscure the <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> content.</span></span>  
+## <a name="example"></a><span data-ttu-id="d1c3d-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d1c3d-104">Example</span></span>  
+ <span data-ttu-id="d1c3d-105">Das folgende Beispiel definiert eine <xref:System.Windows.Controls.GroupBox> Steuerelementvorlage mit einem <xref:System.Windows.Controls.Grid> Steuerelement für das Layout.</span><span class="sxs-lookup"><span data-stu-id="d1c3d-105">The following example defines a <xref:System.Windows.Controls.GroupBox> control template by using a <xref:System.Windows.Controls.Grid> control for layout.</span></span> <span data-ttu-id="d1c3d-106">Die Vorlage verwendet eine <xref:System.Windows.Controls.BorderGapMaskConverter> definieren den Rahmen der <xref:System.Windows.Controls.GroupBox> , damit die Rahmen nicht verdeckt die <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> Inhalt.</span><span class="sxs-lookup"><span data-stu-id="d1c3d-106">The template uses a <xref:System.Windows.Controls.BorderGapMaskConverter> to define the border of the <xref:System.Windows.Controls.GroupBox> so that the border does not obscure the <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> content.</span></span>  
   
  [!code-xaml[GroupBoxSnippet#GroupBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#groupboxtemplate)]  
   
-## <a name="see-also"></a><span data-ttu-id="756a6-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="756a6-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d1c3d-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d1c3d-107">See Also</span></span>  
  <xref:System.Windows.Controls.GroupBox>  
- [<span data-ttu-id="756a6-108">GroupBox Gewusst-wie-Themen</span><span class="sxs-lookup"><span data-stu-id="756a6-108">GroupBox How-to Topics</span></span>](https://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)
+ [<span data-ttu-id="d1c3d-108">GroupBox Gewusst-wie-Themen</span><span class="sxs-lookup"><span data-stu-id="d1c3d-108">GroupBox How-to Topics</span></span>](https://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)
