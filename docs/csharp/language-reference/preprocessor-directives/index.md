@@ -8,37 +8,37 @@ helpviewer_keywords:
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
 ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43872464"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44221453"
 ---
-# <a name="c-preprocessor-directives"></a><span data-ttu-id="c56c3-102">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="c56c3-102">C# preprocessor directives</span></span>
-<span data-ttu-id="c56c3-103">Dieser Abschnitt enthält Informationen zu den folgenden C#-Präprozessoranweisungen:</span><span class="sxs-lookup"><span data-stu-id="c56c3-103">This section contains information about the following C# preprocessor directives:</span></span>
+# <a name="c-preprocessor-directives"></a><span data-ttu-id="7c5ef-102">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="7c5ef-102">C# preprocessor directives</span></span>
+<span data-ttu-id="7c5ef-103">Dieser Abschnitt enthält Informationen zu den folgenden C#-Präprozessoranweisungen:</span><span class="sxs-lookup"><span data-stu-id="7c5ef-103">This section contains information about the following C# preprocessor directives:</span></span>
 
-- [<span data-ttu-id="c56c3-104">#if</span><span class="sxs-lookup"><span data-stu-id="c56c3-104">#if</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
-- [<span data-ttu-id="c56c3-105">#else</span><span class="sxs-lookup"><span data-stu-id="c56c3-105">#else</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)
-- [<span data-ttu-id="c56c3-106">#elif</span><span class="sxs-lookup"><span data-stu-id="c56c3-106">#elif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)
-- [<span data-ttu-id="c56c3-107">#endif</span><span class="sxs-lookup"><span data-stu-id="c56c3-107">#endif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)
-- [<span data-ttu-id="c56c3-108">#define</span><span class="sxs-lookup"><span data-stu-id="c56c3-108">#define</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)
-- [<span data-ttu-id="c56c3-109">#undef</span><span class="sxs-lookup"><span data-stu-id="c56c3-109">#undef</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
-- [<span data-ttu-id="c56c3-110">#warning</span><span class="sxs-lookup"><span data-stu-id="c56c3-110">#warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)
-- [<span data-ttu-id="c56c3-111">#error</span><span class="sxs-lookup"><span data-stu-id="c56c3-111">#error</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)
-- [<span data-ttu-id="c56c3-112">#line</span><span class="sxs-lookup"><span data-stu-id="c56c3-112">#line</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)
-- [<span data-ttu-id="c56c3-113">#region</span><span class="sxs-lookup"><span data-stu-id="c56c3-113">#region</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)
-- [<span data-ttu-id="c56c3-114">#endregion</span><span class="sxs-lookup"><span data-stu-id="c56c3-114">#endregion</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)
-- [<span data-ttu-id="c56c3-115">#pragma</span><span class="sxs-lookup"><span data-stu-id="c56c3-115">#pragma</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)
-- [<span data-ttu-id="c56c3-116">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="c56c3-116">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
-- [<span data-ttu-id="c56c3-117">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="c56c3-117">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+- [<span data-ttu-id="7c5ef-104">#if</span><span class="sxs-lookup"><span data-stu-id="7c5ef-104">#if</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)
+- [<span data-ttu-id="7c5ef-105">#else</span><span class="sxs-lookup"><span data-stu-id="7c5ef-105">#else</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)
+- [<span data-ttu-id="7c5ef-106">#elif</span><span class="sxs-lookup"><span data-stu-id="7c5ef-106">#elif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)
+- [<span data-ttu-id="7c5ef-107">#endif</span><span class="sxs-lookup"><span data-stu-id="7c5ef-107">#endif</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)
+- [<span data-ttu-id="7c5ef-108">#define</span><span class="sxs-lookup"><span data-stu-id="7c5ef-108">#define</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)
+- [<span data-ttu-id="7c5ef-109">#undef</span><span class="sxs-lookup"><span data-stu-id="7c5ef-109">#undef</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)
+- [<span data-ttu-id="7c5ef-110">#warning</span><span class="sxs-lookup"><span data-stu-id="7c5ef-110">#warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md)
+- [<span data-ttu-id="7c5ef-111">#error</span><span class="sxs-lookup"><span data-stu-id="7c5ef-111">#error</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md)
+- [<span data-ttu-id="7c5ef-112">#line</span><span class="sxs-lookup"><span data-stu-id="7c5ef-112">#line</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-line.md)
+- [<span data-ttu-id="7c5ef-113">#region</span><span class="sxs-lookup"><span data-stu-id="7c5ef-113">#region</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)
+- [<span data-ttu-id="7c5ef-114">#endregion</span><span class="sxs-lookup"><span data-stu-id="7c5ef-114">#endregion</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md)
+- [<span data-ttu-id="7c5ef-115">#pragma</span><span class="sxs-lookup"><span data-stu-id="7c5ef-115">#pragma</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma.md)
+- [<span data-ttu-id="7c5ef-116">#pragma warning</span><span class="sxs-lookup"><span data-stu-id="7c5ef-116">#pragma warning</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
+- [<span data-ttu-id="7c5ef-117">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="7c5ef-117">#pragma checksum</span></span>](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
 
-<span data-ttu-id="c56c3-118">Weitere Informationen und Beispiele finden Sie unter den einzelnen Themen.</span><span class="sxs-lookup"><span data-stu-id="c56c3-118">See the individual topics for more information and examples.</span></span>
+<span data-ttu-id="7c5ef-118">Weitere Informationen und Beispiele finden Sie unter den einzelnen Themen.</span><span class="sxs-lookup"><span data-stu-id="7c5ef-118">See the individual topics for more information and examples.</span></span>
 
-<span data-ttu-id="c56c3-119">Obwohl der Compiler keinen separaten Präprozessor hat, werden die in diesem Abschnitt beschriebenen Anweisungen verarbeitet, als gäbe es einen.</span><span class="sxs-lookup"><span data-stu-id="c56c3-119">Although the compiler doesn't have a separate preprocessor, the directives described in this section are processed as if there were one.</span></span> <span data-ttu-id="c56c3-120">Sie werden verwendet, um die bedingte Kompilierung zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="c56c3-120">They are used to help in conditional compilation.</span></span> <span data-ttu-id="c56c3-121">Diese Anweisungen können Sie im Gegensatz zu C- und C++-Anweisungen nicht verwenden, um Makros zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="c56c3-121">Unlike C and C++ directives, you cannot use these directives to create macros.</span></span>
+<span data-ttu-id="7c5ef-119">Obwohl der Compiler keinen separaten Präprozessor hat, werden die in diesem Abschnitt beschriebenen Anweisungen verarbeitet, als gäbe es einen.</span><span class="sxs-lookup"><span data-stu-id="7c5ef-119">Although the compiler doesn't have a separate preprocessor, the directives described in this section are processed as if there were one.</span></span> <span data-ttu-id="7c5ef-120">Sie werden verwendet, um die bedingte Kompilierung zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="7c5ef-120">They are used to help in conditional compilation.</span></span> <span data-ttu-id="7c5ef-121">Diese Anweisungen können Sie im Gegensatz zu C- und C++-Anweisungen nicht verwenden, um Makros zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="7c5ef-121">Unlike C and C++ directives, you cannot use these directives to create macros.</span></span>
 
-<span data-ttu-id="c56c3-122">Eine Präprozessordirektive muss die einzige Anweisung in einer Zeile sein.</span><span class="sxs-lookup"><span data-stu-id="c56c3-122">A preprocessor directive must be the only instruction on a line.</span></span>
+<span data-ttu-id="7c5ef-122">Eine Präprozessordirektive muss die einzige Anweisung in einer Zeile sein.</span><span class="sxs-lookup"><span data-stu-id="7c5ef-122">A preprocessor directive must be the only instruction on a line.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c56c3-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c56c3-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c5ef-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7c5ef-123">See also</span></span>
 
-- [<span data-ttu-id="c56c3-124">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="c56c3-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="c56c3-125">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="c56c3-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="7c5ef-124">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="7c5ef-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="7c5ef-125">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="7c5ef-125">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
