@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 7e35c7d6712323bd7088ad68160da05cdf3a5115
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9bbf08161162c2d0776a066098e40b57a415da6d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245777"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187136"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Generische Typen und Reflektion (C#-Programmierhandbuch)
 Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur Laufzeit verfügt, können Sie die Reflektion zum Abrufen von Informationen über generische Typen genauso wie für nicht generische Typen verwenden. Weitere Informationen finden Sie unter [Generika zur Laufzeit](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -44,8 +44,9 @@ Da die Common Language Runtime (CLR) Zugriff auf generische Typinformationen zur
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Gibt TRUE zurück, wenn die aktuelle <xref:System.Reflection.MethodInfo> die Definition eines generischen Typs darstellt|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Ersetzt die Typparameter der aktuellen generischen Methodendefinition durch die Elemente eines Arrays von Typen und gibt ein <xref:System.Reflection.MethodInfo>-Objekt zurück, das die sich ergebende konstruierte Methode darstellt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Generika](../../../csharp/programming-guide/generics/index.md)  
- [Reflektion und generische Typen](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [Generika](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Generika](../../../csharp/programming-guide/generics/index.md)  
+- [Reflektion und generische Typen](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Generika](~/docs/standard/generics/index.md)

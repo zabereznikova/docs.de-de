@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: d478370edcd0ec4772a8ad3706d08a4e85e43f06
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405126"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192196"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -81,12 +81,13 @@ using System.Linq;
   
  Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](../../../../docs/framework/app-domains/assembly-versioning.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Parallel Programming Samples (Beispiele für parallele Programmierung (dazu gehören viele Beispielerweiterungsmethoden))](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
- [Lambda-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Übersicht über Standardabfrageoperatoren](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Conversion rules for Instance parameters and their impact (Konvertierungsregeln für Instanzenparameter und ihre Auswirkungen)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
- [Extension methods Interoperability between languages (Erweiterungsmethoden-Interoperabilität zwischen Sprachen)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
- [Extension methods and Curried Delegates (Erweiterungsmethoden und Curry-Delegaten)](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
- [Extension method Binding and Error reporting (Binden von Erweiterungsmethoden und Problemberichten)](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Parallel Programming Samples (Beispiele für parallele Programmierung (dazu gehören viele Beispielerweiterungsmethoden))](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
+- [Lambda-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Übersicht über Standardabfrageoperatoren](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Conversion rules for Instance parameters and their impact (Konvertierungsregeln für Instanzenparameter und ihre Auswirkungen)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
+- [Extension methods Interoperability between languages (Erweiterungsmethoden-Interoperabilität zwischen Sprachen)](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
+- [Extension methods and Curried Delegates (Erweiterungsmethoden und Curry-Delegaten)](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+- [Extension method Binding and Error reporting (Binden von Erweiterungsmethoden und Problemberichten)](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

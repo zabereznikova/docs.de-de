@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 756e235dacc3fcb2bf741d1d426e8dfcb53bf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d32dfd626cb8484e935dd0e8608c2e29d3ecbde
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313799"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228077"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Automatisch implementierte Eigenschaften (C#-Programmierhandbuch)
 In C# 3.0 und höher werden Eigenschaftsdeklarationen durch automatisch implementierte Eigenschaften präziser, wenn in den Eigenschaftenzugriffsmethoden keine zusätzliche Logik erforderlich ist. Zudem ermöglichen sie Clientcode das Erstellen von Objekten. Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, erstellt der Compiler ein privates, anonymes, dahinter liegendes Feld, auf das nur über `get` und `set`-Accessoren zugegriffen werden kann.  
@@ -30,6 +30,7 @@ public string FirstName { get; set; } = "Jane";
   
  Attribute sind für automatisch implementierte Eigenschaften, jedoch offensichtlich nicht für die dahinter liegenden Felder zulässig, da diese nicht aus dem Quellcode zugänglich sind. Wenn Sie ein Attribut auf das dahinter liegende Feld einer Eigenschaft verwenden müssen, erstellen Sie einfach eine reguläre Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)

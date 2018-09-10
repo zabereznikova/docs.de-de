@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 8e2baed3ca32ea4273993fe5bed43fef768204ce
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: cb3e9fbc9567593cdc77ae116273f4c0fede4af3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221009"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195802"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader (C#)
 Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte XML-Struktur in den Arbeitsspeicher geladen werden. In diesem Thema wird gezeigt, wie mit einem <xref:System.Xml.XmlReader> Fragmente gestreamt werden können.  
@@ -82,5 +82,6 @@ ccc
   
  In diesem Beispiel ist das Quelldokument sehr klein. Dieses Beispiel würde aber auch dann wenig Speicher beanspruchen, wenn das Quelldokument Millionen `Child`-Elemente enthielte.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

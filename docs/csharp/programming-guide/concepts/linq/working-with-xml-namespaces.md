@@ -2,12 +2,12 @@
 title: Arbeiten mit XML-Namespaces (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416240"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189870"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Arbeiten mit XML-Namespaces (C#)
 In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Namespaces unterstützt.  
@@ -22,5 +22,6 @@ In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~
 |[Bereich von Standardnamespaces in C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Zeigt geeignete Möglichkeiten für das Schreiben von Abfragen für XML im Standardnamespace.|  
 |[Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Veranschaulicht, wie XML-Namespaces in LINQ to XML-Abfragen in C# angegeben werden|  
   
-## <a name="see-also"></a>Siehe auch  
- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

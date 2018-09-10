@@ -6,12 +6,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: a6dae35d31cf1553bdca8ebf0345c49b120ae13b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315658"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190831"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Gewusst wie: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode (C#-Programmierhandbuch)
 Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../../csharp/language-reference/keywords/struct.md) an eine Methode sich von der Übergabe einer [Klasseninstanz](../../../csharp/language-reference/keywords/class.md) an eine Methode unterscheidet. Im Beispiel werden beide Argumente (Struktur und Klasseninstanz) nach Wert übergeben, und beide Methoden ändern den Wert eines Felds des Arguments. Allerdings sind die Ergebnisse der beiden Methoden nicht identisch, denn wenn Sie eine Struktur übergeben, unterscheidet sich dies von dem, wenn Sie eine Instanz einer Klasse übergeben.  
@@ -25,8 +25,9 @@ Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../../cs
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
- [Übergeben von Parametern](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Übergeben von Parametern](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

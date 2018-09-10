@@ -4,11 +4,11 @@ description: Erfahren Sie, wie LINQ-Abfragen in C# geschrieben werden.
 ms.date: 12/1/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
 ms.openlocfilehash: 2ebba0d2d601932c976a88726fbe3ed37daffdcb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463103"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214978"
 ---
 # <a name="write-linq-queries-in-c"></a>Schreiben von LINQ-Abfragen in C# #
 

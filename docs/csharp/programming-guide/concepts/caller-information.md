@@ -2,19 +2,19 @@
 title: Aufruferinformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 6f0cd4d9d8fc85cb15431ccb4c76eee14b3f67c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 048e91ad337f74ef04a2a03412a44a0be0ef9506
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320689"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212450"
 ---
 # <a name="caller-information-c"></a>Aufruferinformationen (C#)
 Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen. Diese Informationen sind zum Verfolgen, Debuggen und Erstellen von Diagnosetools sehr nützlich.  
   
  Um diese Informationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden, von denen jeder einen Standardwert besitzt. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
-|Attribut|description|Typ|  
+|Attribut|Beschreibung |Typ|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Dateipfad zum Zeitpunkt der Kompilierung.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird.|`Integer`|  
@@ -75,8 +75,9 @@ public void TraceMessage(string message,
 |Attributkonstruktor|Der Name des Members, auf den das Attribut angewendet wird. Wenn das Attribut ein beliebiges Element in einem Member ist (z. B. ein Parameter, ein Rückgabewert oder ein generischer Typparameter), wird als Ergebnis der Name des Members ausgegeben, der diesem Element zugeordnet ist.|  
 |Kein enthaltender Member (z. B. auf Assemblyebene oder Attribute, die auf Typen angewendet werden)|Der Standardwert des optionalen Parameters.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Allgemeine Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
- [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Allgemeine Attribute (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+- [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)
