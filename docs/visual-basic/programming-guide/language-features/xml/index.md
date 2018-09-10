@@ -5,12 +5,12 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 402d80184f569f041692d139209a8916bd87c49b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4ccdf0f4b05e23c1107d7df2a813e8b6de423589
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042561"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084380"
 ---
 # <a name="xml-in-visual-basic"></a>XML in Visual Basic
 
@@ -27,8 +27,9 @@ Visual Basic bietet integrierte sprachunterstützung, die sie für die Interakti
 |[Bearbeiten von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)|Beschreibt, wie XML mithilfe von Visual Basic geladen und ausgewertet werden kann.|  
 |[Zugreifen auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|Beschreibt die XML-Achseneigenschaften und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Methoden für den Zugriff auf XML-Elemente und -Attribute.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq>  
- [XML-Literale](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [XML-Achseneigenschaften](../../../../visual-basic/language-reference/xml-axis/index.md)  
- [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.Linq>  
+- [XML-Literale](../../../../visual-basic/language-reference/xml-literals/index.md)  
+- [XML-Achseneigenschaften](../../../../visual-basic/language-reference/xml-axis/index.md)  
+- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

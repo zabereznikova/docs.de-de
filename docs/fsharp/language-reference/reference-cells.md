@@ -2,12 +2,12 @@
 title: Referenzzellen (F#)
 description: Erfahren Sie, wie f# Referenzzellen Speicherorte sind, die Ihnen ermöglichen, änderbare Werte mit Verweissemantik zu erstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892419"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079295"
 ---
 # <a name="reference-cells"></a>Referenzzellen
 
@@ -74,62 +74,9 @@ Die Ausgabe lautet wie folgt.
 
 Das Feld `contents` wird für die Kompatibilität mit anderen Versionen von ML bereitgestellt und gibt während der Kompilierung eine Warnung aus. Verwenden Sie die `--mlcompatibility`-Compileroption, um die Warnung zu deaktivieren. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).
 
-Im folgenden Code wird die Verwendung von Referenzzellen beim Übergeben von Parametern veranschaulicht. Der Typ Incrementor hat es sich um eine Methode erhöhen, die einen Parameter akzeptiert, der Byref in den Parametertyp enthält. Byref im Parametertyp gibt an, dass der Aufrufer eine Referenzzelle oder die Adresse einer typischen Variablen des angegebenen Typs, in diesem Fall "int". übergeben müssen Der restliche Code wird veranschaulicht, wie Inkrement mit beide Typen von Argumenten aufrufen, und zeigt die Verwendung von Ref-Operator für eine Variable zum Erstellen einer Referenzzelle (Ref myDelta1). Anschließend wird die Verwendung des address-of-Operators (&amp;) zum Generieren eines entsprechenden Arguments veranschaulicht. Schließlich wird erneut die Increment-Methode aufgerufen, mithilfe einer Referenzzelle, die mit einer Let-Bindung deklariert wird. Die letzte Codezeile veranschaulicht die Verwendung der! Operator zu dereferenzieren der Referenzzelle für den Druck.
+C#-Programmierer sollten wissen, dass `ref` in c# ist nicht dasselbe wie `ref` in F# erläutert werden. Die entsprechende Konstrukte in f# sind [Byrefs](byrefs.md), die ein anderes Konzept als Referenzzellen sind.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
-
-Weitere Informationen zur Übergabe als Verweis finden Sie unter [Parameter und Argumente](parameters-and-arguments.md).
-
->[!NOTE]
-C#-Programmierer sollten wissen, dass Ref anders als in f# funktioniert, als dies in c# der Fall ist. Z. B. die Verwendung von Ref, wenn Sie ein Argument übergeben die gleiche Auswirkung in f# keine wie in c#.
-
->[!NOTE]
-`mutable` Variablen automatisch auf heraufgestuft werden `'a ref` ; Closure erfasst finden Sie unter [Werte](values/index.md).
-
-## <a name="consuming-c-ref-returns"></a>Verarbeiten von c# `ref` zurückgibt
-
-Ab f# 4.1 können Sie nutzen können `ref` gibt, die in c# generiert.  Das Ergebnis eines solchen Aufrufs ist eine `byref<_>` Zeiger.
-
-Die folgende C#-Methode:
-
-```csharp
-namespace RefReturns
-{
-    public static class RefClass
-    {
-        public static ref int Find(int val, int[] vals)
-        {
-            for (int i = 0; i < vals.Length; i++)
-            {
-                if (vals[i] == val)
-                {
-                    return ref numbers[i]; // Returns the location, not the value
-                }
-            }
-
-            throw new IndexOutOfRangeException($"{nameof(number)} not found");
-        }
-    }
-}
-```
-
-Können transparent von f# mit keine spezielle Syntax aufgerufen werden:
-
-```fsharp
-open RefReturns
-
-let consumeRefReturn() =
-    let result = RefClass.Find(3, [| 1; 2; 3; 4; 5 |]) // 'result' is of type 'byref<int>'.
-    ()
-```
-
-Sie können auch deklarieren die Funktionen dieser Vorgang kann eine `ref` zurückgeben als Eingabe, z.B.:
-
-```fsharp
-let f (x: byref<int>) = &x
-```
-
-Es gibt derzeit keine Möglichkeit zum Generieren einer `ref` zurück in f# die in c# genutzt werden kann.
+Werte gekennzeichnet, als `mutable`automatisch auf heraufgestuft werden `'a ref` ; Closure erfasst finden Sie unter [Werte](values/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 

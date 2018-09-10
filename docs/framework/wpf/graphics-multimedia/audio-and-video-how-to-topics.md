@@ -7,18 +7,18 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: 446a7993f2c2849c8bdd67683c04c429ce9bc0c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556015"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075409"
 ---
 # <a name="audio-and-video-how-to-topics"></a>Gewusst-wie-Themen zu Audio und Video
-In den folgenden Themen veranschaulichen, wie Sie mithilfe der <xref:System.Windows.Controls.MediaElement> , Audio- und Videofunktionen Inhalte in Ihren Anwendungen zu integrieren.  
+In den folgenden Themen veranschaulichen, wie die <xref:System.Windows.Controls.MediaElement> , audio und video-Inhalte in Ihren Anwendungen zu integrieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Dynamisches Hinzufügen eines Elements](http://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [Vorgehensweise: Dynamisches Hinzufügen eines Elements](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
  [Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
  [Steuern eines MediaElement mit einem Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
  [Auslösen der Medienwiedergabe durch ein Benutzerereignis](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
