@@ -8,37 +8,37 @@ helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
 ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467204"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266682"
 ---
-# <a name="do-c-reference"></a><span data-ttu-id="105d3-102">do (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="105d3-102">do (C# Reference)</span></span>
+# <a name="do-c-reference"></a><span data-ttu-id="cc8ac-102">do (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="cc8ac-102">do (C# Reference)</span></span>
 
-<span data-ttu-id="105d3-103">Die Anweisung `do` führt eine Anweisung oder einen Anweisungsblock aus, während ein angegebener boolescher Ausdruck `true` ergibt.</span><span class="sxs-lookup"><span data-stu-id="105d3-103">The `do` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="105d3-104">Da der Ausdruck nach jeder Ausführung der Schleife ausgewertet wird, wird eine `do-while`-Schleife mindestens einmal ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="105d3-104">Because that expression is evaluated after each execution of the loop, a `do-while` loop executes one or more times.</span></span> <span data-ttu-id="105d3-105">Dies unterscheidet sich von der [while](while.md)-Schleife, die entweder nie oder mehrmals ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="105d3-105">This differs from the [while](while.md) loop, which executes zero or more times.</span></span>
+<span data-ttu-id="cc8ac-103">Die Anweisung `do` führt eine Anweisung oder einen Anweisungsblock aus, während ein angegebener boolescher Ausdruck `true` ergibt.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-103">The `do` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="cc8ac-104">Da der Ausdruck nach jeder Ausführung der Schleife ausgewertet wird, wird eine `do-while`-Schleife mindestens einmal ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-104">Because that expression is evaluated after each execution of the loop, a `do-while` loop executes one or more times.</span></span> <span data-ttu-id="cc8ac-105">Dies unterscheidet sich von der [while](while.md)-Schleife, die entweder nie oder mehrmals ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-105">This differs from the [while](while.md) loop, which executes zero or more times.</span></span>
 
-<span data-ttu-id="105d3-106">Sie können zu jedem Zeitpunkt im Anweisungsblock `do` aus der Schleife ausbrechen, indem Sie die Anweisung [break](break.md) verwenden.</span><span class="sxs-lookup"><span data-stu-id="105d3-106">At any point within the `do` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
+<span data-ttu-id="cc8ac-106">Sie können zu jedem Zeitpunkt im Anweisungsblock `do` aus der Schleife ausbrechen, indem Sie die Anweisung [break](break.md) verwenden.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-106">At any point within the `do` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
 
-<span data-ttu-id="105d3-107">Sie können mithilfe der [continue](continue.md)-Anweisung direkt die Auswertung des `while`-Ausdrucks ausführen.</span><span class="sxs-lookup"><span data-stu-id="105d3-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="105d3-108">Wenn der Ausdruck `true` ergibt, wird die Ausführung bei der ersten Anweisung in der Schleife fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="105d3-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="105d3-109">Andernfalls wird die Ausführung mit der ersten Anweisung nach der Schleife ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="105d3-109">Otherwise, execution continues at the first statement after the loop.</span></span>
+<span data-ttu-id="cc8ac-107">Sie können mithilfe der [continue](continue.md)-Anweisung direkt die Auswertung des `while`-Ausdrucks ausführen.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="cc8ac-108">Wenn der Ausdruck `true` ergibt, wird die Ausführung bei der ersten Anweisung in der Schleife fortgesetzt.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="cc8ac-109">Andernfalls wird die Ausführung mit der ersten Anweisung nach der Schleife ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-109">Otherwise, execution continues at the first statement after the loop.</span></span>
 
-<span data-ttu-id="105d3-110">Sie können eine `do-while`-Schleife auch mit den Anweisungen [goto](goto.md), [return](return.md) oder [throw](throw.md) beenden.</span><span class="sxs-lookup"><span data-stu-id="105d3-110">You also can exit a `do-while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+<span data-ttu-id="cc8ac-110">Sie können eine `do-while`-Schleife auch mit den Anweisungen [goto](goto.md), [return](return.md) oder [throw](throw.md) beenden.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-110">You also can exit a `do-while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
 
-## <a name="example"></a><span data-ttu-id="105d3-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="105d3-111">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cc8ac-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="cc8ac-111">Example</span></span>
 
-<span data-ttu-id="105d3-112">Im folgenden Beispiel wird die Verwendung der `do`-Anweisung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="105d3-112">The following example shows the usage of the `do` statement.</span></span> <span data-ttu-id="105d3-113">Klicken Sie auf **Run** (Ausführen), um den Beispielcode auszuführen.</span><span class="sxs-lookup"><span data-stu-id="105d3-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="105d3-114">Danach können Sie Änderungen am Code vornehmen und ihn erneut ausführen.</span><span class="sxs-lookup"><span data-stu-id="105d3-114">After that you can modify the code and run it again.</span></span>
+<span data-ttu-id="cc8ac-112">Im folgenden Beispiel wird die Verwendung der `do`-Anweisung veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-112">The following example shows the usage of the `do` statement.</span></span> <span data-ttu-id="cc8ac-113">Klicken Sie auf **Run** (Ausführen), um den Beispielcode auszuführen.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="cc8ac-114">Danach können Sie Änderungen am Code vornehmen und ihn erneut ausführen.</span><span class="sxs-lookup"><span data-stu-id="cc8ac-114">After that you can modify the code and run it again.</span></span>
 
 [!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="105d3-115">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="105d3-115">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="cc8ac-115">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="cc8ac-115">C# language specification</span></span>
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="105d3-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="105d3-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc8ac-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc8ac-116">See also</span></span>
 
-- [<span data-ttu-id="105d3-117">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="105d3-117">C# Reference</span></span>](../index.md)  
-- [<span data-ttu-id="105d3-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="105d3-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="105d3-119">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="105d3-119">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="105d3-120">do-while-Anweisung (C++)</span><span class="sxs-lookup"><span data-stu-id="105d3-120">do-while Statement (C++)</span></span>](/cpp/cpp/do-while-statement-cpp)  
-- [<span data-ttu-id="105d3-121">Iterationsanweisungen</span><span class="sxs-lookup"><span data-stu-id="105d3-121">Iteration Statements</span></span>](iteration-statements.md)  
-- [<span data-ttu-id="105d3-122">while-Anweisung</span><span class="sxs-lookup"><span data-stu-id="105d3-122">while statement</span></span>](while.md)  
+- [<span data-ttu-id="cc8ac-117">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="cc8ac-117">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="cc8ac-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="cc8ac-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="cc8ac-119">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="cc8ac-119">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="cc8ac-120">do-while-Anweisung (C++)</span><span class="sxs-lookup"><span data-stu-id="cc8ac-120">do-while Statement (C++)</span></span>](/cpp/cpp/do-while-statement-cpp)  
+- [<span data-ttu-id="cc8ac-121">Iterationsanweisungen</span><span class="sxs-lookup"><span data-stu-id="cc8ac-121">Iteration Statements</span></span>](iteration-statements.md)  
+- [<span data-ttu-id="cc8ac-122">while-Anweisung</span><span class="sxs-lookup"><span data-stu-id="cc8ac-122">while statement</span></span>](while.md)  

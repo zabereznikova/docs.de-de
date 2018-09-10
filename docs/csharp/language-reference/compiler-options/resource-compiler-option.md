@@ -12,62 +12,62 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: e02eda66ab9fadbc7b5b042c8940096c70ef6a03
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419550"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261654"
 ---
-# <a name="-resource-c-compiler-options"></a><span data-ttu-id="6f0c2-102">-resource (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="6f0c2-102">-resource (C# Compiler Options)</span></span>
-<span data-ttu-id="6f0c2-103">Bettet die angegebene Ressource in die Ausgabedatei ein.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-103">Embeds the specified resource into the output file.</span></span>  
+# <a name="-resource-c-compiler-options"></a><span data-ttu-id="36c9b-102">-resource (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="36c9b-102">-resource (C# Compiler Options)</span></span>
+<span data-ttu-id="36c9b-103">Bettet die angegebene Ressource in die Ausgabedatei ein.</span><span class="sxs-lookup"><span data-stu-id="36c9b-103">Embeds the specified resource into the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f0c2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6f0c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36c9b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="36c9b-104">Syntax</span></span>  
   
 ```console  
 -resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6f0c2-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="6f0c2-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="36c9b-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="36c9b-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="6f0c2-106">Die .NET Framework-Ressourcendatei, die in die Ausgabedatei eingebettet werden soll.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-106">The .NET Framework resource file that you want to embed in the output file.</span></span>  
+ <span data-ttu-id="36c9b-106">Die .NET Framework-Ressourcendatei, die in die Ausgabedatei eingebettet werden soll.</span><span class="sxs-lookup"><span data-stu-id="36c9b-106">The .NET Framework resource file that you want to embed in the output file.</span></span>  
   
- <span data-ttu-id="6f0c2-107">`identifier` (optional)</span><span class="sxs-lookup"><span data-stu-id="6f0c2-107">`identifier` (optional)</span></span>  
- <span data-ttu-id="6f0c2-108">Der logische Name der Ressource. Der Name, mit dem die Ressource geladen wird.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-108">The logical name for the resource; the name that is used to load the resource.</span></span> <span data-ttu-id="6f0c2-109">Der Standardwert ist der Name der Datei.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-109">The default is the name of the file name.</span></span>  
+ <span data-ttu-id="36c9b-107">`identifier` (optional)</span><span class="sxs-lookup"><span data-stu-id="36c9b-107">`identifier` (optional)</span></span>  
+ <span data-ttu-id="36c9b-108">Der logische Name der Ressource. Der Name, mit dem die Ressource geladen wird.</span><span class="sxs-lookup"><span data-stu-id="36c9b-108">The logical name for the resource; the name that is used to load the resource.</span></span> <span data-ttu-id="36c9b-109">Der Standardwert ist der Name der Datei.</span><span class="sxs-lookup"><span data-stu-id="36c9b-109">The default is the name of the file name.</span></span>  
   
- <span data-ttu-id="6f0c2-110">`accessibility-modifier` (optional)</span><span class="sxs-lookup"><span data-stu-id="6f0c2-110">`accessibility-modifier` (optional)</span></span>  
- <span data-ttu-id="6f0c2-111">Barrierefreiheit der Ressource: öffentlich oder privat.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-111">The accessibility of the resource: public or private.</span></span> <span data-ttu-id="6f0c2-112">Der Standardwert ist „öffentlich“.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-112">The default is public.</span></span>  
+ <span data-ttu-id="36c9b-110">`accessibility-modifier` (optional)</span><span class="sxs-lookup"><span data-stu-id="36c9b-110">`accessibility-modifier` (optional)</span></span>  
+ <span data-ttu-id="36c9b-111">Barrierefreiheit der Ressource: öffentlich oder privat.</span><span class="sxs-lookup"><span data-stu-id="36c9b-111">The accessibility of the resource: public or private.</span></span> <span data-ttu-id="36c9b-112">Der Standardwert ist „öffentlich“.</span><span class="sxs-lookup"><span data-stu-id="36c9b-112">The default is public.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6f0c2-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6f0c2-113">Remarks</span></span>  
- <span data-ttu-id="6f0c2-114">Verwenden Sie [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md), um eine Ressource mit einer Assembly zu verknüpfen, anstatt die Ressourcendatei zur Ausgabedatei hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-114">Use [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) to link a resource to an assembly and not add the resource file to the output file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="36c9b-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="36c9b-113">Remarks</span></span>  
+ <span data-ttu-id="36c9b-114">Verwenden Sie [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md), um eine Ressource mit einer Assembly zu verknüpfen, anstatt die Ressourcendatei zur Ausgabedatei hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="36c9b-114">Use [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) to link a resource to an assembly and not add the resource file to the output file.</span></span>  
   
- <span data-ttu-id="6f0c2-115">Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mithilfe des C#-Compilers erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-115">By default, resources are public in the assembly when they are created by using the C# compiler.</span></span> <span data-ttu-id="6f0c2-116">Geben Sie `private` als Modifizierer der Barrierefreiheit an.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-116">To make the resources private, specify `private` as the accessibility modifier.</span></span> <span data-ttu-id="6f0c2-117">Außer `public` und `private` sind keine anderen Zugriffsmethoden zulässig.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-117">No other accessibility other than `public` or `private` is allowed.</span></span>  
+ <span data-ttu-id="36c9b-115">Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mithilfe des C#-Compilers erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="36c9b-115">By default, resources are public in the assembly when they are created by using the C# compiler.</span></span> <span data-ttu-id="36c9b-116">Geben Sie `private` als Modifizierer der Barrierefreiheit an.</span><span class="sxs-lookup"><span data-stu-id="36c9b-116">To make the resources private, specify `private` as the accessibility modifier.</span></span> <span data-ttu-id="36c9b-117">Außer `public` und `private` sind keine anderen Zugriffsmethoden zulässig.</span><span class="sxs-lookup"><span data-stu-id="36c9b-117">No other accessibility other than `public` or `private` is allowed.</span></span>  
   
- <span data-ttu-id="6f0c2-118">Wenn es sich bei `filename` um eine .NET Framework-Ressourcendatei handelt, die beispielsweise von [resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern im <xref:System.Resources>-Namespace möglich.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-118">If `filename` is a .NET Framework resource file created, for example, by [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace.</span></span> <span data-ttu-id="6f0c2-119">Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-119">For more information, see <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6f0c2-120">Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`-Methoden in der <xref:System.Reflection.Assembly>-Klasse, um zur Laufzeit auf die Ressource zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-120">For all other resources, use the `GetManifestResource` methods in the <xref:System.Reflection.Assembly> class to access the resource at run time.</span></span>  
+ <span data-ttu-id="36c9b-118">Wenn es sich bei `filename` um eine .NET Framework-Ressourcendatei handelt, die beispielsweise von [resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern im <xref:System.Resources>-Namespace möglich.</span><span class="sxs-lookup"><span data-stu-id="36c9b-118">If `filename` is a .NET Framework resource file created, for example, by [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace.</span></span> <span data-ttu-id="36c9b-119">Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="36c9b-119">For more information, see <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.</span></span> <span data-ttu-id="36c9b-120">Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`-Methoden in der <xref:System.Reflection.Assembly>-Klasse, um zur Laufzeit auf die Ressource zuzugreifen.</span><span class="sxs-lookup"><span data-stu-id="36c9b-120">For all other resources, use the `GetManifestResource` methods in the <xref:System.Reflection.Assembly> class to access the resource at run time.</span></span>  
   
- <span data-ttu-id="6f0c2-121">**-res** ist die Kurzform von **-resource**.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-121">**-res** is the short form of **-resource**.</span></span>  
+ <span data-ttu-id="36c9b-121">**-res** ist die Kurzform von **-resource**.</span><span class="sxs-lookup"><span data-stu-id="36c9b-121">**-res** is the short form of **-resource**.</span></span>  
   
- <span data-ttu-id="6f0c2-122">Die Reihenfolge der Ressourcen in der Ausgabedatei wird durch die in der Befehlszeile angegebene Reihenfolge bestimmt.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-122">The order of the resources in the output file is determined from the order specified on the command line.</span></span>  
+ <span data-ttu-id="36c9b-122">Die Reihenfolge der Ressourcen in der Ausgabedatei wird durch die in der Befehlszeile angegebene Reihenfolge bestimmt.</span><span class="sxs-lookup"><span data-stu-id="36c9b-122">The order of the resources in the output file is determined from the order specified on the command line.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="6f0c2-123">So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest</span><span class="sxs-lookup"><span data-stu-id="6f0c2-123">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="36c9b-123">So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest</span><span class="sxs-lookup"><span data-stu-id="36c9b-123">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="6f0c2-124">Fügen Sie Ihrem Projekt eine Ressourcendatei hinzu.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-124">Add a resource file to your project.</span></span>  
+1.  <span data-ttu-id="36c9b-124">Fügen Sie Ihrem Projekt eine Ressourcendatei hinzu.</span><span class="sxs-lookup"><span data-stu-id="36c9b-124">Add a resource file to your project.</span></span>  
   
-2.  <span data-ttu-id="6f0c2-125">Wählen Sie im **Projektmappen-Explorer** die Datei aus, die Sie einbetten möchten.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-125">Select the file that you want to embed in **Solution Explorer**.</span></span>  
+2.  <span data-ttu-id="36c9b-125">Wählen Sie im **Projektmappen-Explorer** die Datei aus, die Sie einbetten möchten.</span><span class="sxs-lookup"><span data-stu-id="36c9b-125">Select the file that you want to embed in **Solution Explorer**.</span></span>  
   
-3.  <span data-ttu-id="6f0c2-126">Wählen Sie im Fenster **Eigenschaften** die Option **Buildvorgang** für die Datei aus.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-126">Select **Build Action** for the file in the **Properties** window.</span></span>  
+3.  <span data-ttu-id="36c9b-126">Wählen Sie im Fenster **Eigenschaften** die Option **Buildvorgang** für die Datei aus.</span><span class="sxs-lookup"><span data-stu-id="36c9b-126">Select **Build Action** for the file in the **Properties** window.</span></span>  
   
-4.  <span data-ttu-id="6f0c2-127">Legen Sie die Option **Buildvorgang** auf **Eingebettete Ressource** fest.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-127">Set **Build Action** to **Embedded Resource**.</span></span>  
+4.  <span data-ttu-id="36c9b-127">Legen Sie die Option **Buildvorgang** auf **Eingebettete Ressource** fest.</span><span class="sxs-lookup"><span data-stu-id="36c9b-127">Set **Build Action** to **Embedded Resource**.</span></span>  
   
- <span data-ttu-id="6f0c2-128">Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.FileProperties2.BuildAction%2A>.</span><span class="sxs-lookup"><span data-stu-id="6f0c2-128">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.FileProperties2.BuildAction%2A>.</span></span>  
+ <span data-ttu-id="36c9b-128">Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.FileProperties2.BuildAction%2A>.</span><span class="sxs-lookup"><span data-stu-id="36c9b-128">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.FileProperties2.BuildAction%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6f0c2-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6f0c2-129">Example</span></span>  
- <span data-ttu-id="6f0c2-130">Kompilieren Sie `in.cs`, und fügen Sie die Ressourcendatei `rf.resource` an:</span><span class="sxs-lookup"><span data-stu-id="6f0c2-130">Compile `in.cs` and attach resource file `rf.resource`:</span></span>  
+## <a name="example"></a><span data-ttu-id="36c9b-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="36c9b-129">Example</span></span>  
+ <span data-ttu-id="36c9b-130">Kompilieren Sie `in.cs`, und fügen Sie die Ressourcendatei `rf.resource` an:</span><span class="sxs-lookup"><span data-stu-id="36c9b-130">Compile `in.cs` and attach resource file `rf.resource`:</span></span>  
   
 ```console  
 csc -resource:rf.resource in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6f0c2-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6f0c2-131">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="36c9b-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36c9b-131">See Also</span></span>  
 
-- [<span data-ttu-id="6f0c2-132">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="6f0c2-132">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="6f0c2-133">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="6f0c2-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="36c9b-132">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="36c9b-132">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="36c9b-133">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="36c9b-133">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
