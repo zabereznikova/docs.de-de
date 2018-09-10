@@ -2,24 +2,24 @@
 title: 'Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: a448be9d86f9f2e2f85d45f9bc1f019b3f72305c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324160"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865357"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="9e191-102">Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9e191-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="9e191-103">Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen.</span><span class="sxs-lookup"><span data-stu-id="9e191-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="9e191-104">Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.</span><span class="sxs-lookup"><span data-stu-id="9e191-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="f137e-102">Vorgehensweise: Suchen nach nebengeordneten Knoten (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f137e-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="f137e-103">Sie können nach allen nebengeordneten Knoten eines Knotens mit einem bestimmten Namen suchen.</span><span class="sxs-lookup"><span data-stu-id="f137e-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="f137e-104">Die resultierende Auflistung kann den Kontextknoten enthalten, sofern der Kontextknoten ebenfalls diesen Namen besitzt.</span><span class="sxs-lookup"><span data-stu-id="f137e-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- <span data-ttu-id="9e191-105">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="9e191-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="f137e-105">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="f137e-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a><span data-ttu-id="9e191-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9e191-106">Example</span></span>  
- <span data-ttu-id="9e191-107">Dieses Beispiel sucht zuerst nach einem `Book`-Element und dann nach allen nebengeordneten Elementen mit dem Namen `Book`.</span><span class="sxs-lookup"><span data-stu-id="9e191-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="9e191-108">Die resultierende Auflistung enthält den Kontextknoten.</span><span class="sxs-lookup"><span data-stu-id="9e191-108">The resulting collection includes the context node.</span></span>  
+## <a name="example"></a><span data-ttu-id="f137e-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f137e-106">Example</span></span>  
+ <span data-ttu-id="f137e-107">Dieses Beispiel sucht zuerst nach einem `Book`-Element und dann nach allen nebengeordneten Elementen mit dem Namen `Book`.</span><span class="sxs-lookup"><span data-stu-id="f137e-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="f137e-108">Die resultierende Auflistung enthält den Kontextknoten.</span><span class="sxs-lookup"><span data-stu-id="f137e-108">The resulting collection includes the context node.</span></span>  
   
- <span data-ttu-id="9e191-109">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9e191-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f137e-109">In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Bücher (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="f137e-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -49,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="9e191-110">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="9e191-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="f137e-110">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="f137e-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -74,5 +74,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9e191-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9e191-111">See Also</span></span>  
- [<span data-ttu-id="9e191-112">LINQ to XML für XPath-Benutzer (C#)</span><span class="sxs-lookup"><span data-stu-id="9e191-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="f137e-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f137e-111">See Also</span></span>
+
+- [<span data-ttu-id="f137e-112">LINQ to XML für XPath-Benutzer (C#)</span><span class="sxs-lookup"><span data-stu-id="f137e-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
