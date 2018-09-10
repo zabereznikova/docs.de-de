@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f81db46c20b27517968078c96f9eb484a1aedec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572072"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275313"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der von der Common Language Runtime während der [verwalteten Ausführung](../../docs/standard/managed-execution-process.md) zur Verfügung gestellt wird. Der Garbage Collector der Common Language Runtime verwaltet die Belegung und Freigabe von Arbeitsspeicher für eine Anwendung. Das bedeutet, dass beim Entwickeln verwalteter Anwendungen kein Code für Aufgaben der Speicherverwaltung geschrieben werden muss. Mithilfe der automatischen Speicherverwaltung können häufig auftretende Probleme beseitigt werden, z. B. wenn ein Objekt versehentlich nicht freigegeben wurde und dadurch Speicherverluste entstehen oder wenn auf den Speicher für ein Objekt zugegriffen wird, das bereits freigegeben wurde. In diesem Abschnitt wird beschrieben, wie Sie den Garbage Collector zum Belegen und Freigeben von Arbeitsspeicher verwenden können.  
@@ -51,7 +51,8 @@ Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der vo
 ## <a name="releasing-memory-for-unmanaged-resources"></a>Freigeben von Speicher für nicht verwaltete Ressourcen  
  Für die meisten von einer Anwendung erzeugten Objekte führt der Garbage Collector alle Aufgaben der Speicherverwaltung automatisch aus. Allerdings ist bei nicht verwalteten Ressourcen explizites Bereinigen erforderlich. Die häufigsten nicht verwalteten Ressourcen sind Objekte, die eine Betriebssystemressource umschließen, z. B. ein Dateihandle, ein Fensterhandle oder eine Netzwerkverbindung. Obwohl der Garbage Collector die Lebensdauer eines verwalteten Objekts, das eine nicht verwaltete Ressource kapselt, verfolgen kann, stehen ihm keine genauen Informationen zum Bereinigen dieser Ressource zur Verfügung. Wenn Sie ein Objekt erstellen möchten, das eine nicht verwaltete Ressource kapselt, ist es ratsam, Code zum Bereinigen der nicht verwalteten Ressource in einer öffentlichen **Dispose**-Methode bereitzustellen. Durch Bereitstellen der **Dispose**-Methode wird Benutzern des Objekts die Möglichkeit gegeben, nicht mehr benötigten Speicherplatz explizit freizugeben, sobald das Objekt nicht mehr verwendet wird. Wenn Sie ein Objekt verwenden, das eine nicht verwaltete Ressource kapselt, sollten Sie die **Dispose**-Methode beachten und bei Bedarf aufrufen. Weitere Informationen zum Bereinigen nicht verwalteter Ressourcen und ein Beispiel für ein Entwurfsmuster zum Implementieren von **Dispose** finden Sie unter [Garbage Collection](../../docs/standard/garbage-collection/index.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.GC>  
- [Garbage Collection](../../docs/standard/garbage-collection/index.md)  
- [Der verwaltete Ausführungsprozess](../../docs/standard/managed-execution-process.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.GC>  
+- [Garbage Collection](../../docs/standard/garbage-collection/index.md)  
+- [Der verwaltete Ausführungsprozess](../../docs/standard/managed-execution-process.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
 ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211579"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276804"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;-Operator (C#-Referenz)
 Der Left Shift-Operator (`<<`) verschiebt den ersten Operanden um die Anzahl von Bits nach links, die durch den zweiten Operanden angegeben wird. Der Typ des zweiten Operanden muss ein [int](../../../csharp/language-reference/keywords/int.md) oder ein Typ sein, der eine vordefinierte implizite numerische Konvertierung in `int` besitzt.  

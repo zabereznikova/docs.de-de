@@ -3,11 +3,11 @@ title: Vergleich von funktionaler und Prozedurale Programmierung (LINQ to XML) (
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
 ms.openlocfilehash: 888c360e1b868c79d378f2fc46a26c152121300f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181523"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277441"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>Vergleich von funktionaler und Prozedurale Programmierung (LINQ to XML) (C#)
 Es gibt viele verschiedene Arten von XML-Anwendungen:  

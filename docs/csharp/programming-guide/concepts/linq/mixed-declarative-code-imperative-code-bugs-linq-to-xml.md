@@ -3,11 +3,11 @@ title: Fehler durch Vermischung von deklarativem und imperativem Code (LINQ to X
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
 ms.openlocfilehash: 56d8140613f3dae7f99c1374634dbd8bdf094a7c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192612"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275114"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Fehler durch Vermischung von deklarativem und imperativem Code (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enthält verschiedene Methoden, mit denen Sie eine XML-Struktur direkt ändern können. Sie können Elemente hinzufügen, Elemente löschen, den Inhalt eines Elements ändern, Attribute hinzufügen usw. Diese Programmierschnittstelle wird in [Ändern von XML-Strukturen (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md) beschrieben. Wenn Sie eine Iteration durch eine der Achsen, z. B. <xref:System.Xml.Linq.XContainer.Elements%2A> durchlaufen, und Sie dabei die XML-Struktur ändern, kann es zu einer Reihe eigenartiger Fehler kommen.  

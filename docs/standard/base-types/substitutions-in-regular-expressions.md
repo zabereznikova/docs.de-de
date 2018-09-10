@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579417"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277743"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 <a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode bereitgestellt, die über einen `replacement`-Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
   
  .NET Framework definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
   
-|Substitution|description|  
+|Substitution|Beschreibung |  
 |------------------|-----------------|  
 |`$` *number*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#Numbered).|  
 |`${` *Name* `}`|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).|  
@@ -63,7 +63,7 @@ ms.locfileid: "33579417"
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -89,7 +89,7 @@ ms.locfileid: "33579417"
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
@@ -111,7 +111,7 @@ ms.locfileid: "33579417"
   
  Das Muster für reguläre Ausdrücke `\b(\d+)(\.(\d+))?` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|Beginnt den Abgleich am Anfang einer Wortgrenze.|  
 |`(\d+)`|Entsprechung für mindestens eine Dezimalstelle finden. Dies ist die erste Erfassungsgruppe.|  
@@ -130,7 +130,7 @@ ms.locfileid: "33579417"
   
  Das Muster für reguläre Ausdrücke `^(\w+\s?)+$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`^`|Beginnt den Abgleich am Anfang der Eingabezeichenfolge.|  
 |`(\w+\s?)+`|Übereinstimmung mit dem Muster mindestens eines Wortzeichens, ein- oder mehrmals gefolgt von einer Null oder einem Leerzeichen.|  
@@ -149,7 +149,7 @@ ms.locfileid: "33579417"
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- In diesem Beispiel enthält die Eingabezeichenfolge `"aa1bb2cc3dd4ee5"` fünf Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung <code>$`</code> bewirkt, dass das Modul für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
+ In diesem Beispiel enthält die Eingabezeichenfolge `"aa1bb2cc3dd4ee5"` fünf Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung <code>$`</code> bewirkt, dass die Engine für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
   
 |Match|Position|Zeichenfolge vor Übereinstimmung|Ergebniszeichenfolge|  
 |-----------|--------------|-------------------------|-------------------|  
@@ -193,7 +193,7 @@ ms.locfileid: "33579417"
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\s\1\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -219,5 +219,6 @@ ms.locfileid: "33579417"
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

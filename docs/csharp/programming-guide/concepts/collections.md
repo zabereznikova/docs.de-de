@@ -2,12 +2,12 @@
 title: Auflistungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 7400d4eee4df99cb1e255e428f83028fddf481f4
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549619"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273293"
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -193,7 +193,7 @@ public class Galaxy
   
  In der folgenden Tabelle werden einige der häufig verwendeten Klassen des <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace aufgelistet:  
 
-|Klasse|description| 
+|Klasse|Beschreibung | 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, deren Reihenfolge anhand des Schlüssels bestimmt wird.|  
 |<xref:System.Collections.Generic.List%601>|Stellt eine Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.|  
@@ -219,7 +219,7 @@ public class Galaxy
   
  In der folgenden Tabelle werden einige der häufig verwendeten Klassen im `System.Collections`-Namespace aufgelistet:  
   
-|Klasse|description|  
+|Klasse|Beschreibung |  
 |---|---|  
 |<xref:System.Collections.ArrayList>|Stellt ein Array von Objekten dar, das je nach Bedarf dynamisch vergrößert wird.|  
 |<xref:System.Collections.Hashtable>|Stellt eine Auflistung von Schlüssel-Wert-Paaren dar, die auf Grundlage des Hashcodes des Schlüssels geordnet sind.|  
@@ -575,14 +575,15 @@ private static IEnumerable<int> EvenSequence(
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)  
- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [Auflistungen und Datenstrukturen](../../../standard/collections/index.md)  
- [Erstellen und Bearbeiten von Auflistungen](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)  
- [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)  
+## <a name="see-also"></a>Siehe auch
+
+- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)  
+- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)  
+- [Erstellen und Bearbeiten von Auflistungen](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)  
+- [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)  

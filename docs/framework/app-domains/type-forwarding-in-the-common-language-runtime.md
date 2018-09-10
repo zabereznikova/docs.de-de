@@ -11,11 +11,11 @@ ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192105"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275716"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Typweiterleitung in der Common Language Runtime
 Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben, ohne Anwendungen, die die ursprüngliche Assembly verwenden, neu kompilieren zu müssen.  

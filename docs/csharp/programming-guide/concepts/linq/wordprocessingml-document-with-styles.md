@@ -3,11 +3,11 @@ title: WordprocessingML-Dokumente mit Formatvorlagen 3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
 ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185112"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272006"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>WordprocessingML-Dokumente mit Formatvorlagen
 Kompliziertere WordprocessingML-Dokumente besitzen Absätze, die mit Formatvorlagen formatiert sind.  

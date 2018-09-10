@@ -13,11 +13,11 @@ ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44174990"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276773"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Generische Delegaten zum Bearbeiten von Arrays und Listen
 Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.  

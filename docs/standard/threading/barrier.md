@@ -11,11 +11,11 @@ ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212398"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274767"
 ---
 # <a name="barrier-net-framework"></a>Barriere (.NET Framework)
 Eine *Barriere* ist eine benutzerdefinierte Synchronisierungsprimitive, die mehreren (als *Teilnehmer* bezeichneten) Threads ermöglicht, in Phasen gleichzeitig an einem Algorithmus zu arbeiten. Jeder Teilnehmer wird ausgeführt, bis er den Barrierepunkt im Code erreicht hat. Die Barriere stellt das Ende einer Arbeitsphase dar. Wenn ein Teilnehmer die Barriere erreicht hat, wird er blockiert, bis alle Teilnehmer dieselbe Barriere erreicht haben. Nachdem alle Teilnehmer die Barriere erreicht haben, können Sie eine Nachphasenaktion aufrufen. Diese Nachphasenaktion kann verwendet werden, um Aktionen über einen einzelnen Thread auszuführen, während alle anderen Threads weiterhin blockiert sind. Nachdem die Aktion ausgeführt wurde, wird die Blockierung aller Teilnehmer aufgehoben.  
