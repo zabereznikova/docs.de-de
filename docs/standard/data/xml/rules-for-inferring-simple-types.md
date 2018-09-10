@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576392"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249165"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regeln zum Herleiten einfacher Typen
 Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.  
@@ -24,7 +24,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
   
  In der folgenden Tabelle werden die für das resultierende Schema möglichen hergeleiteten Typen aufgeführt.  
   
-|Einfacher Typ|description|  
+|Einfacher Typ|Beschreibung |  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Ganze Zahlen im Bereich von -128 bis 127.|  
@@ -68,14 +68,15 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 ### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Vom http://www.w3.org/2001/XMLSchema-instance-Namespace ignorierte Attribute  
  Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die während der Schemaherleitung ignoriert werden.  
   
-|Attribut|description|  
+|Attribut|Beschreibung |  
 |---------------|-----------------|  
 |`xsi:type`|Wenn ein Element mit der Angabe `xsi:type` festgestellt wird, wird `xsi:type` ignoriert.|  
 |`xsi:nil`|Wenn ein Element mit einem `xsi:nil`-Attribut festgestellt wird, weist dessen Elementdeklaration im hergeleiteten Schema den Wert `nillable="true"` auf. Ein Element, dessen `xsi:nil`-Attribut auf `true` festgelegt wurde, darf keine untergeordneten Elemente besitzen.|  
 |`xsi:schemaLocation`|Wenn `xsi:schemaLocation` festgestellt wird, wird dies ignoriert.|  
 |`xsi:noNamespaceSchemaLocation`|Wenn `xsi:noNamespaceSchemaLocation` festgestellt wird, wird dies ignoriert.|  
   
-## <a name="see-also"></a>Siehe auch  
- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

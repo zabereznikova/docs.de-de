@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 231bd98b556dafeb69091de4a6770c1462824659
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572852"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44182463"
 ---
 # <a name="composing-streams"></a>Erstellen von Streams
 Ein Sicherungsspeicher ist ein Speichermedium, wie etwa ein Datenträger oder Arbeitsspeicher. Jeder einzelne Sicherungsspeicher implementiert seinen eigenen Datenstrom als Implementierung der <xref:System.IO.Stream>-Klasse. Jeder Datenstromtyp liest und schreibt Bytes in einen bzw. aus einem angegebenen Sicherungsspeicher. Datenströme, die eine Verbindung mit Sicherungsspeichern herstellen, werden als Basisdatenströme bezeichnet. Basisdatenströme umfassen Konstruktoren mit den erforderlichen Parametern, um eine Verbindung zwischen dem Datenstrom und dem Sicherungsspeicher herzustellen. Beispielsweise weist <xref:System.IO.FileStream> Konstruktoren auf, die einen Pfadparameter angeben, der u.a. wiederum die Freigabe der Datei für Prozesse angibt.  
@@ -39,11 +39,12 @@ Ein Sicherungsspeicher ist ein Speichermedium, wie etwa ein Datenträger oder Ar
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.StreamReader>  
- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
- <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>  
- <xref:System.IO.FileStream>  
- <xref:System.IO.BinaryReader>  
- <xref:System.IO.BinaryReader.ReadByte%2A?displayProperty=nameWithType>  
- <xref:System.IO.BinaryReader.PeekChar%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.StreamReader>  
+- <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>  
+- <xref:System.IO.FileStream>  
+- <xref:System.IO.BinaryReader>  
+- <xref:System.IO.BinaryReader.ReadByte%2A?displayProperty=nameWithType>  
+- <xref:System.IO.BinaryReader.PeekChar%2A?displayProperty=nameWithType>

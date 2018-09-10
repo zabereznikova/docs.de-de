@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578329"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208756"
 ---
 # <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen
 Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) können die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Dies ist nützlich für Hosts wie ASP.NET, die eine Vielzahl von Anwendungsdomänen in einem Prozess mit langer Ausführungsdauer verwenden. Der Host kann die Anwendungsdomäne einer Anwendung entladen, die sich negativ auf die Leistung des gesamten Prozesses auswirkt, jedoch nur, wenn er die problematische Anwendung ermitteln kann. Die ARM stellt Informationen bereit, die als Unterstützung bei solchen Entscheidungen herangezogen werden können.  
@@ -83,8 +83,9 @@ Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) können di
 #### <a name="hosting-api"></a>Hosting-API  
  Wenn Sie die nicht verwaltete Hosting-API verwenden, muss Ihr Host der CLR eine Implementierung der [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md)-Schnittstelle übergeben. Die CLR ruft die Methode [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) auf, wenn bei der Ausführung einer Auflistung die Ausführung der angehaltenen Threads fortgesetzt wird. Die CLR übergibt die Erzeugung der abgeschlossenen Auflistung als Parameter der Methode, damit der Host ermitteln kann, ob die Auflistung vollständig oder teilweise ausgeführt wurde. Ihre Implementierung der [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md)-Methode kann den beibehaltenen Speicher abfragen, um sicherzustellen, dass die Werte direkt nach ihrer Aktualisierung abgerufen werden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [ICLRAppDomainResourceMonitor-Schnittstelle](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [ICLRAppDomainResourceMonitor-Schnittstelle](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

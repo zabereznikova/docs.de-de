@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 566a2e5e8587dc6d6d2259a5f79f5c59c2e60c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576294"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174990"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Generische Delegaten zum Bearbeiten von Arrays und Listen
 Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.  
@@ -41,10 +41,11 @@ Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierung
 ### <a name="chaining-delegates"></a>Verketten von Delegaten  
  Viele der Methoden, die diese Delegaten verwenden, geben ein Array oder eine Liste zurück, das oder die an eine andere Methode übergeben werden kann. Wenn Sie beispielsweise bestimmte Elemente eines Arrays auswählen, diese Elemente in einen neuen Typ konvertieren und sie in einem neuen Array speichern möchten, können Sie das Array, das von der generischen <xref:System.Array.FindAll%2A>-Methode zurückgegeben wird, an die generische <xref:System.Array.ConvertAll%2A>-Methode übergeben. Wenn der neue Elementtyp keine natürliche Sortierreihenfolge hat, können Sie das von der generischen der <xref:System.Array.ConvertAll%2A>-Methode zurückgegebene Array an die generische <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29>-Methode übergeben.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Generika](../../../docs/standard/generics/index.md)  
- [Generische Auflistungen in .NET Framework](../../../docs/standard/generics/collections.md)  
- [Generische Schnittstellen](../../../docs/standard/generics/interfaces.md)  
- [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Generika](../../../docs/standard/generics/index.md)  
+- [Generische Auflistungen in .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Generische Schnittstellen](../../../docs/standard/generics/interfaces.md)  
+- [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)

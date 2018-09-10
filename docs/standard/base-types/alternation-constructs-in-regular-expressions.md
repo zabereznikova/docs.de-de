@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956d16b47fb31549de8f25c513d73c43ab41c267
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574734"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44182998"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Alternierungskonstrukte in regulären Ausdrücken
 <a name="top"></a> Alternierungskonstrukte ändern einen regulären Ausdruck, um Entweder-Oder-Vergleiche oder eine bedingte Übereinstimmung zuzulassen. .NET unterstützt drei Alternierungskonstrukte:  
@@ -43,7 +43,7 @@ ms.locfileid: "33574734"
   
  Der reguläre Ausdruck, der das `|` -Zeichen verwendet, `\bgr(a|e)y\b`, wird wie in der folgenden Tabelle dargestellt interpretiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`gr`|Übereinstimmung mit den Zeichen "gr".|  
@@ -57,7 +57,7 @@ ms.locfileid: "33574734"
   
  Der reguläre Ausdruck `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Eine der folgenden Varianten muss übereinstimmen: zwei Dezimalstellen gefolgt von einem Bindestrich gefolgt von sieben Dezimalstellen; oder drei Dezimalstellen, ein Bindestrich, zwei Dezimalstellen, ein weiterer Bindestrich und vier Dezimalstellen.|  
@@ -87,7 +87,7 @@ ms.locfileid: "33574734"
   
  Das Muster für reguläre Ausdrücke `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(?(\d{2}-)`|Bestimmen, ob die nächsten drei Zeichen aus zwei Ziffern gefolgt von einem Bindestrich bestehen.|  
@@ -118,7 +118,7 @@ ms.locfileid: "33574734"
   
  Das Muster für reguläre Ausdrücke `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(?<n2>\d{2}-)?`|Entspricht 0 (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2`als Namen an.|  
@@ -132,5 +132,6 @@ ms.locfileid: "33574734"
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

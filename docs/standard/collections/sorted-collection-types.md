@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b40167be4f2760eb7c88155e1733266e34d11d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83efda175b7e5cef8c7042682827d2fe0562c207
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569820"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260083"
 ---
 # <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
 Die <xref:System.Collections.SortedList?displayProperty=nameWithType>-Klasse, die generische <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>-Klasse sowie die generische <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType>-Klasse sind der <xref:System.Collections.Hashtable>-Klasse und der generischen <xref:System.Collections.Generic.Dictionary%602>-Klasse in der Weise ähnlich, dass sie die <xref:System.Collections.IDictionary>-Schnittstelle implementieren. Sie behalten jedoch ihre Elemente in der Reihenfolge nach Schlüssel bei, und sie verfügen nicht über die O(1)-Einfüge- und -Abrufeigenschaften von Hashtabellen. Die drei Klassen haben verschiedene Merkmale gemeinsam:  
@@ -48,8 +48,9 @@ Die <xref:System.Collections.SortedList?displayProperty=nameWithType>-Klasse, di
   
  Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] stellt die Klasse <xref:System.Collections.Generic.SortedSet%601> eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet werden. Diese Klasse sowie die <xref:System.Collections.Generic.HashSet%601>-Klasse implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
- [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602>  
+- [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)

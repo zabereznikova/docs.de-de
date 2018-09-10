@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aef49f70f3a60151aa053a1a94a06bc71401531e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575439"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262229"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-Compiler (xsltc.exe)
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Das kompilierte Stylesheet kann dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Sie können mit xsltc.exe keine signierten Assemblys generieren.  
@@ -25,13 +25,13 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 ## <a name="argument"></a>Argument  
   
-|Argument|description|  
+|Argument|Beschreibung |  
 |--------------|-----------------|  
 |`sourceFile`|Gibt den Namen des Stylesheets an. Das Stylesheet muss eine lokale Datei sein oder sich im Intranet befinden.|  
   
 ## <a name="options"></a>Optionen  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Gibt den Namen der Klasse für das folgende Stylesheet an. Der Klassenname kann vollqualifiziert sein.<br /><br /> In der Standardeinstellung ist der Klassenname mit dem Namen des Stylesheets identisch. Wenn zum Beispiel das Stylesheet <legacyBold>customers.xsl</legacyBold> kompiliert wird, lautet der standardmäßige Klassenname <legacyBold>customers</legacyBold>.|  
 |`/debug[`+&#124;-`]`|Gibt an, ob Debuginformationen generiert werden sollen.<br /><br /> Wenn `+` oder `/debug` angegeben wird, generiert der Compiler Debuginformationen und speichert sie in einer Programmdatenbankdatei (PDB-Datei). Der Name der generierten PDB-Datei lautet `assemblyName`.pdb.<br /><br /> Wenn Sie `-` angeben, was im Endeffekt dasselbe ist, wie `/debug` nicht anzugeben, werden keine Debuginformationen erstellt. Es wird eine Retailassembly generiert. **Hinweis:** Beim Kompilieren im Debugmodus kann sich die XSLT-Leistung spürbar verringern.|  
@@ -82,7 +82,8 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)

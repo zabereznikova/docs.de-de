@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce9b8b0864f3ed30c2ff03866abdb0d5d07991db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0ff4cbc343cfbc1c81b24aa4401fa00ecf4f4b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580389"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199387"
 ---
 # <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Gewusst wie: Abbrechen einer Parallel.For-Schleife oder einer ForEach-Schleife
 Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Methode unterstützen den Abbruch durch die Verwendung von Abbruchtoken. Weitere Informationen über Abbrüche im Allgemeinen finden Sie unter [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md). Übergeben Sie in einer parallelen Schleife das <xref:System.Threading.CancellationToken> mit dem <xref:System.Threading.Tasks.ParallelOptions>-Parameter an die Methode, und schließen Sie den parallelen Aufruf in einen Try-Catch-Block ein.  
@@ -29,6 +29,7 @@ Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- 
   
  Wenn das Token, das den Abbruch signalisiert, mit dem in der <xref:System.Threading.Tasks.ParallelOptions>-Instanz angegebenen identisch ist, löst die parallele Schleife beim Abbruch eine einzelne <xref:System.OperationCanceledException> aus. Wenn ein anderes Token den Abbruch verursacht, löst die Schleife eine <xref:System.AggregateException> mit einer <xref:System.OperationCanceledException> als InnerException aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

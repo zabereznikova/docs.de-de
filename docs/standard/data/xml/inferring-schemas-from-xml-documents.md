@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8640a951acab512cbe2397df831a74700b5ad6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a27696b6511103e98d37fb72b33f801d23ad391
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574819"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042178"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Herleiten von Schemata aus XML-Dokumenten
 In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse zum Herleiten eines XSD-Schemas (XML Schema Definition Language) aus der Struktur eines XML-Dokuments verwendet wird.  
@@ -82,9 +82,10 @@ In diesem Thema wird beschrieben, wie die <xref:System.Xml.Schema.XmlSchemaInfer
 ## <a name="schemas-that-cannot-be-refined"></a>Nicht präzisierbare Schemata  
  Es existieren XML-Schemakonstrukte des W3C, die der <xref:System.Xml.Schema.XmlSchemaInference>-Prozess für das XSD-Schema (XML Schema Definition Language) nicht behandeln kann, wenn ein Typ zum Präzisieren und zum Hervorrufen einer auszulösenden Ausnahme vorhanden ist. Dabei handelt es sich um einen komplexen Typ, dessen Compositor auf der obersten Ebene keine Folge ist. In einem SOM (Schemaobjektmodell) entspricht dies einem <xref:System.Xml.Schema.XmlSchemaComplexType>, dessen <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A>-Eigenschaft keine Instanz von <xref:System.Xml.Schema.XmlSchemaSequence> ist.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Herleiten eines XML-Schemas](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
- [Regeln zum Herleiten einfacher Typen](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Herleiten eines XML-Schemas](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+- [Regeln zum Herleiten einfacher Typen](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

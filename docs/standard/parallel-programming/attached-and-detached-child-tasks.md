@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590766"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188266"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Angefügte und getrennte untergeordnete Aufgaben
 Eine *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Instanz, die im Benutzerdelegaten einer anderen Aufgabe erstellt wird, die als *übergeordnete Aufgabe* bezeichnet wird. Eine untergeordnete Aufgabe kann entweder getrennt oder angefügt werden. Eine *getrennte untergeordnete Aufgabe* ist eine Aufgabe, die unabhängig von der übergeordneten ausgeführt wird. Eine *angefügte ungeordnete Aufgabe* ist eine geschachtelte Aufgabe, die mit der Option <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> erstellt wird, deren übergeordnete Aufgabe nicht explizit oder standardmäßig verhindert, dass die Aufgabe angefügt wird. Eine Aufgabe kann beliebig viele angefügte oder getrennte untergeordnete Aufgaben erstellen. Die Anzahl wird lediglich durch die Systemressourcen beschränkt.  
@@ -78,6 +78,7 @@ Eine *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:Syst
   
  Sie können auch verhindern, dass sich eine untergeordnete Aufgabe an das übergeordnete Element anfügt, wenn die untergeordnete Aufgabe nicht rechtzeitig beendet wird. Da eine übergeordnete Aufgabe nicht beendet wird, ehe alle untergeordneten Aufgaben abgeschlossen sind, kann eine untergeordnete Aufgabe mit langer Laufzeit zu einer Verschlechterung der Leistung der gesamten App führen. Ein Beispiel zur Verbesserung der App-Leistung durch Verhindern des Anfügens einer Aufgabe an das übergeordnete Element finden Sie unter [Gewusst wie: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
+- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

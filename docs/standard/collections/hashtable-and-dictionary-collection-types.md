@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f682ba370e364629d6b79c5cedd28b4af834e58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4dde57e03e26085d19099e749afd50ba14874a5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568884"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195373"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable-Auflistungstyp und Dictionary-Auflistungstyp
 Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und die generischen Klassen <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> implementiert außerdem die generische <xref:System.Collections.Generic.IDictionary%602>-Schnittstelle. Daher ist jedes Element in diesen Auflistungen ein Schlüssel-Wert-Paar.  
@@ -36,11 +36,12 @@ Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und 
   
  Die Klassen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602> weisen die gleiche Funktionalität wie die Klasse <xref:System.Collections.Hashtable> auf. Ein <xref:System.Collections.Generic.Dictionary%602> eines bestimmten Typs (außer <xref:System.Object>) bietet eine bessere Leistung als eine <xref:System.Collections.Hashtable> für Werttypen. Der Grund hierfür ist, dass die Elemente von <xref:System.Collections.Hashtable> vom Typ <xref:System.Object> sind. Daher treten das Boxing und das Unboxing in der Regel beim Speichern oder Abrufen eines Werttyps auf. Die Klasse <xref:System.Collections.Concurrent.ConcurrentDictionary%602> sollte verwendet werden, wenn mehrere Threads möglicherweise gleichzeitig auf die Auflistung zugreifen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Hashtable>  
- <xref:System.Collections.IDictionary>  
- <xref:System.Collections.IHashCodeProvider>  
- <xref:System.Collections.Generic.Dictionary%602>  
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
- [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Hashtable>  
+- <xref:System.Collections.IDictionary>  
+- <xref:System.Collections.IHashCodeProvider>  
+- <xref:System.Collections.Generic.Dictionary%602>  
+- <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
+- [Häufig verwendete Auflistungstypen](../../../docs/standard/collections/commonly-used-collection-types.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f4429d50f6b7646cb75fad44957a98812282928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571263"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225200"
 ---
 # <a name="handling-com-interop-exceptions"></a>Behandeln von COM-Interop-Ausnahmen
 Verwalteter und nicht verwalteter Code können zusammenarbeiten, um Ausnahmen zu behandeln. Wenn eine Methode in verwaltetem Code eine Ausnahme auslöst, kann die Common Language Runtime ein HRESULT an ein COM-Objekt übergeben. Wenn eine Methode in nicht verwaltetem Code fehlschlägt, indem ein Fehler-HRESULT zurückgegeben wird, löst die Common Language Runtime eine Ausnahme aus, die von verwaltetem Code abgefangen werden kann.  
@@ -31,4 +31,5 @@ Verwalteter und nicht verwalteter Code können zusammenarbeiten, um Ausnahmen zu
  Wenn eine Methode in nicht verwaltetem Code fehlschlägt, kann eine Ausnahme an ein verwaltetes Codesegment übergeben werden. Das Thema [HRESULTS und Ausnahmen](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) enthält eine Tabelle mit Zuordnungen von HRESULTS zu Ausnahmeobjekten der Common Language Runtime.  
 
 ## <a name="see-also"></a>Siehe auch
-[Ausnahmen](index.md) 
+
+- [Ausnahmen](index.md)

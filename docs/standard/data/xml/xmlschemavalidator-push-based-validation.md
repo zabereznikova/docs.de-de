@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 36d91d4bd479c1592ae0b3f98d227947686188d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579599"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189075"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Pushbasierte Validierung mit „XmlSchemaValidator“
 Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt eine effiziente leistungsstarke Methode zum Validieren von XML-Daten anhand von XML-Schemata in einem Push-Verfahren bereit. Zum Beispiel ermöglicht Ihnen die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse das direkte Validieren eines XML-Infosets, ohne es als XML-Dokument serialisieren zu müssen, und das anschließende erneute Analysieren des XML-Infosets mithilfe eines validierenden XML-Readers.  
   
- Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse kann in erweiterten Szenarios verwendet werden, z. B. beim Erstellen von Validierungsmodulen für benutzerdefinierte XML-Datenquellen oder als eine Möglichkeit zum Erstellen eines validierenden XML-Writers.  
+ Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse kann in erweiterten Szenarios verwendet werden, z. B. beim Erstellen von Validierungs-Engines für benutzerdefinierte XML-Datenquellen oder als eine Möglichkeit zum Erstellen eines validierenden XML-Writers.  
   
  Im folgenden Beispiel wird mithilfe der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse die `contosoBooks.xml`-Datei anhand des `contosoBooks.xsd`-Schemas validiert. Im Beispiel wird mit der <xref:System.Xml.Serialization.XmlSerializer>-Klasse die `contosoBooks.xml`-Datei deserialisiert, und der Wert der Knoten wird an die Methoden der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse übergeben.  
   
@@ -148,7 +148,7 @@ validator.ValidateEndElement(null);
 ### <a name="validating-elements-attributes-and-content"></a>Validieren von Elementen, Attributen und Inhalt  
  Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt verschiedene Methoden zum Validieren von Elementen, Attributen und Inhalt in einem XML-Infoset anhand von XML-Schemata bereit. In der folgenden Tabelle werden diese Methoden beschrieben.  
   
-|Methode|description|  
+|Methode|Beschreibung |  
 |------------|-----------------|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Validiert den Elementnamen im aktuellen Kontext.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Validiert das Attribut im aktuellen Elementkontext oder anhand des <xref:System.Xml.Schema.XmlSchemaAttribute>-Objekts, das als Parameter an die <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methode übergeben wurde.|  
@@ -448,7 +448,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  In der folgenden Tabelle wird beschrieben, welche Auswirkungen die Satzzeichen in der Tabelle der Zustandsübergänge oben auf die Methoden und andere Zustände haben, die für jeden Zustand im Zustandsübergang der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse aufgerufen werden können.  
   
-|Symbol|description|  
+|Symbol|Beschreibung |  
 |------------|-----------------|  
 |&#124;|Entweder die Methode bzw. der Zustand vor oder die Methode bzw. der Zustand nach dem senkrechten Strich, kann aufgerufen werden.|  
 |?|Die Methode oder der Zustand nach dem Fragezeichen ist optional, es kann jedoch nur ein Aufruf der Methode bzw. des Zustands erfolgen.|  
@@ -477,5 +477,6 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 > [!NOTE]
 >  Die von den verschiedenen Eigenschaften der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse zurückgegebenen Werte werden nicht durch das Aufrufen einer der Methoden in der oben stehenden Tabelle verändert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Schema.XmlSchemaValidator>
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.Schema.XmlSchemaValidator>

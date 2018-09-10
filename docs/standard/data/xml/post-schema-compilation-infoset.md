@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db1c952003e73beb756567be74ed4eb72612c989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569628"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083818"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema-Compilation-Infoset
 In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](https://www.w3.org/XML/Schema) wird der Informationssatz (Infoset) erörtert, der für die Pre-Schema-Validierung und die Post-Schema-Kompilierung verfügbar gemacht werden muss. Das XML-SOM (Schema Object Model) zeigt dieses Offenlegen vor und nachdem die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode vom <xref:System.Xml.Schema.XmlSchemaSet> aufgerufen wird an.  
@@ -40,5 +40,6 @@ In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](https://www.w
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

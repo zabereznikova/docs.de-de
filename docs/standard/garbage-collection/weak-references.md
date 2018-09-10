@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575654"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264951"
 ---
 # <a name="weak-references"></a>Schwache Verweise
 Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwendet wird, während der Anwendungscode dieses Objekt erreichen kann. Dies wird als starker Verweis der Anwendung auf das Objekt bezeichnet.  
@@ -52,5 +52,6 @@ Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwende
   
  Vermeiden Sie, schwache Verweise als automatische Lösung für Speicherverwaltungsprobleme zu verwenden. Entwickeln Sie stattdessen eine wirksame Richtlinie zum Zwischenspeichern für die Behandlung von Objekten der Anwendung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

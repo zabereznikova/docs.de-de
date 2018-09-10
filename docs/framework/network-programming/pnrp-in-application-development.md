@@ -5,12 +5,12 @@ ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b085604d7d20eb9222507b4820be219ffeae4726
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55716e7baa382bffbb37dc9248ec1cbd15065ac1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395735"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504617"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP in der Anwendungsentwicklung
 In Windows Vista können Netzwerkanwendungen über eine vereinfachte PNRP-Anwendungsprogrammierschnittstelle (application programming interface – API) auf Funktionen zur Veröffentlichung und Auflösung von Namen zugreifen.  
@@ -20,7 +20,7 @@ In Windows Vista können Netzwerkanwendungen über eine vereinfachte PNRP-Anwend
   
  Für die sehr stark vereinfachte PNRP-Namensauflösung in Windows Vista werden PNRP-Namen nun in die Windows Sockets-Funktion getaddrinfo() integriert. Namen lassen sich mithilfe von PNRP in eine IPv6-Adresse aufzulösen. Dazu können Anwendungen mit der Funktion getaddrinfo() den vollqualifizierten Domänennamen (Fully Qualified Domain Name – FQDN) „name-prnp.net“ verwenden. „name“ steht hier für den aufzulösenden Peernamen. Die Domain „pnrp.net“ ist in Windows Vista für die Auflösung von PNRP-Namen reserviert.  
   
- Die Nachrichtenübergabe zwischen Peer-zu-Peer-Anwendungen wird weiterhin von der zu Grunde liegenden Architektur übernommen, z.B. PeerChannel oder der WCF-Funktion für [umfangreiche Daten und Streaming](http://go.microsoft.com/fwlink/?LinkID=179652).  
+ Die Nachrichtenübergabe zwischen Peer-zu-Peer-Anwendungen wird weiterhin von der zu Grunde liegenden Architektur übernommen, z.B. PeerChannel oder der WCF-Funktion für [umfangreiche Daten und Streaming](https://go.microsoft.com/fwlink/?LinkID=179652).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Net.PeerToPeer>

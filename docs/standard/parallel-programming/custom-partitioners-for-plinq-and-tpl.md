@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592365"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267207"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Benutzerdefinierte Partitionierer für PLINQ und TPL
 Einer der wesentlichen Schritte, um einen Vorgang für eine Datenquelle zu parallelisieren, ist das *Partitionieren* der Quelle in mehrere Abschnitte, auf die mehrere Threads gleichzeitig zugreifen können. PLINQ und die Task Parallel Library (TPL) stellen standardmäßige Partitionierer bereit, die transparent arbeiten, wenn Sie eine parallele Abfrage oder <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife schreiben. Für erweiterte Szenarien können Sie Ihren eigenen Partitionierer einbeziehen.  
@@ -120,7 +120,8 @@ Einer der wesentlichen Schritte, um einen Vorgang für eine Datenquelle zu paral
   
 -   Alle Indizes dürfen nicht negativ sein. Wenn diese Regel nicht befolgt wird, kann PLINQ/TPL Ausnahmen auslösen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
- [Gewusst wie: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
- [Gewusst wie: Implementieren eines Partitionierers für statisches Partitionieren](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
+- [Gewusst wie: Implementieren von dynamischen Partitionen](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+- [Gewusst wie: Implementieren eines Partitionierers für statisches Partitionieren](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

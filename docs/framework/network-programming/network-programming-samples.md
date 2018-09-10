@@ -5,12 +5,12 @@ ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 85c190756821ee14fffad600ce7b44029c314ec1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a8230d382cfcf3709a2e4df42758470f3caea4e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397467"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187389"
 ---
 # <a name="network-programming-samples"></a>Beispiele zur Netzwerkprogrammierung
 Dieser Abschnitt enthält Beschreibungen und Links zu Downloads von Programmierbeispielen für Netzwerke, die Klassen in <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> und in verwandten Namespaces verwenden. 
@@ -28,7 +28,7 @@ Dieser Abschnitt enthält Beschreibungen und Links zu Downloads von Programmierb
  [Beispiel zur HttpListener-Technologie](https://msdn.microsoft.com/en-us/library/y7cbb2y2(v=vs.85).aspx)  
  Zeigt, wie HTTP-Anforderungen aus einer Anwendung heraus verarbeitet werden.  
  
- [HttpListener ASPX Host Application Sample (Anwendungsbeispiel für HttpListener ASPX-Host)](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
+ [HttpListener ASPX Host Application Sample (Anwendungsbeispiel für HttpListener ASPX-Host)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
  Veranschaulicht, wie die Funktionen der <xref:System.Net.HttpListener?displayProperty=nameWithType>-Klasse verwendet werden, um einen HTTP-Server zu erstellen, der Aufrufe an eine gehostete ASP.NET-Anwendung weiterleitet.
   
  [Beispiel zur Mailer-Technologie](https://msdn.microsoft.com/en-us/library/whw7xbk2(v=vs.85).aspx)  

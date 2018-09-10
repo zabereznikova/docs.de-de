@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f62a113865a481276c371f2fce55a5d9486eb00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572209"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261956"
 ---
 # <a name="types-of-xml-nodes"></a>XML-Knotentypen
 Wenn ein XML-Dokument als Knotenstruktur in den Speicher eingelesen wird, werden die Knotentypen für die Knoten beim Erstellen festgelegt. Das XML-DOM (Document Object Model, Dokumentobjektmodell) umfasst mehrere Knotentypen, die vom W3C (World Wide Web Consortium) festgelegt wurden und in Abschnitt 1.1.1, "The DOM Structure Model", aufgeführt sind. In der folgenden Tabelle sind die Knotentypen sowie das jedem Knotentyp zugewiesene Objekt und eine kurze Beschreibung enthalten.  
   
-|DOM-Knotentyp|Object|description|  
+|DOM-Knotentyp|Object|Beschreibung |  
 |-------------------|------------|-----------------|  
 |Dokument|<xref:System.Xml.XmlDocument>|Der Container für alle Knoten in der Struktur. 	Er wird auch als Dokumentstamm bezeichnet und ist nicht immer mit dem Stammelement identisch.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Eine temporäre Sammlung, die einen oder mehrere Knoten ohne Struktur enthält.|  
@@ -34,7 +34,7 @@ Wenn ein XML-Dokument als Knotenstruktur in den Speicher eingelesen wird, werden
   
  In der folgenden Tabelle sind zusätzliche Knotentypen aufgeführt, die nicht vom W3C definiert wurden, jedoch im Microsoft .NET Framework-Objektmodell als **XmlNodeType**-Enumerationen zur Verfügung stehen. Daher ist bei diesen Knotentypen keine entsprechende Spalte für den DOM-Knotentyp vorhanden.  
   
-|Knotentyp|description|  
+|Knotentyp|Beschreibung |  
 |---------------|-----------------|  
 |<xref:System.Xml.XmlDeclaration>|Stellt den Deklarationsknoten `<?xml version="1.0"…>` dar.|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Stellt signifikanten Leerraum, d. h. Leerraum in gemischtem Inhalt, dar.|  
@@ -46,5 +46,6 @@ Wenn ein XML-Dokument als Knotenstruktur in den Speicher eingelesen wird, werden
   
  Weitere Informationen zur Objekthierarchie der Knotentypen und ihren entsprechenden Objektnamen finden Sie unter [Hierarchie im XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Weitere Informationen zu den in der Knotenstruktur erstellten Objekten finden Sie unter [Zuordnen der Objekthierarchie zu XML-Daten](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

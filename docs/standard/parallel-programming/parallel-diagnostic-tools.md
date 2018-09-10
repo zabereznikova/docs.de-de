@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 016229ea1b80c82ed9174e19bb08adfa67f016fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580522"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201399"
 ---
 # <a name="parallel-diagnostic-tools"></a>Diagnosetools für die parallele Ausführung
 Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profilerstellung in Multithreadanwendungen.  
@@ -29,5 +29,6 @@ Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profi
 ## <a name="profiling"></a>Profilerstellung  
  Mit den Berichtsansichten der Parallelitätsschnellansicht können Sie visuell darstellen, wie die Threads in einem parallelen Programm miteinander und mit Threads von anderen Prozessen auf dem System interagieren. Weitere Informationen finden Sie unter [Parallelitätsschnellansicht](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)

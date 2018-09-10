@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efeed61c5748a0a6ac731cdcfce1a110982b2941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa933e0fc589d0dbfec741e9db7fb11222cfdf38
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572722"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193216"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Gewusst wie: Auslösen und Behandeln von Ereignissen
 Mithilfe der Beispiele in diesem Thema wird veranschaulicht, wie mit Ereignissen gearbeitet wird. Sie schließen Beispiele für den <xref:System.EventHandler>-Delegaten, den <xref:System.EventHandler%601>-Delegaten und einen benutzerdefinierten Delegaten ein, um Ereignisse mit und ohne Daten zu veranschaulichen.  
@@ -44,5 +44,6 @@ Mithilfe der Beispiele in diesem Thema wird veranschaulicht, wie mit Ereignissen
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Ereignisse](../../../docs/standard/events/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Ereignisse](../../../docs/standard/events/index.md)

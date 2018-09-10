@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d4fd91eccd5e8f3fd6be7c8a63ab1c097002382
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073228"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214120"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potenzielle Fehler bei Daten- und Aufgabenparallelität
 In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> erhebliche Leistungssteigerungen gegenüber gewöhnlichen sequenziellen Schleifen bieten. Die Parallelisierung der Schleife erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen. In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von parallelen Schleifen vermieden werden sollten.  
@@ -52,10 +52,10 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
 >  Sie können dies testen, indem Sie in Ihre Abfragen Aufrufe von <xref:System.Console.WriteLine%2A> einfügen. Diese Methode wird jedoch nur in den Dokumentationsbeispielen zu Demonstrationszwecken verwendet. Nutzen Sie sie nur in parallelen Schleifen, wenn dies erforderlich ist.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Beachten Sie Threadaffinitätsprobleme.  
- Einige Technologien, z. B. COM-Interoperabilität für STA-Komponenten (Singlethread-Apartment), Windows Forms und Windows Presentation Foundation (WPF), erzeugen Threadaffinitätseinschränkungen, aufgrund derer Code in einem bestimmten Thread ausgeführt werden muss. Beispielsweise kann sowohl in Windows Forms als auch in WPF nur in einem Thread auf ein Steuerelement zugegriffen werden, in dem es erstellt wurde. Dies bedeutet beispielsweise, dass Sie kein Listensteuerelement von einer parallelen Schleife aktualisieren können, außer wenn Sie den Threadplaner konfigurieren, um die Arbeit nur im UI-Thread zu planen. Weitere Informationen finden Sie unter [How to: Schedule Work on the User Interface (UI) Thread (Vorgehensweise: Planen von Arbeit am Benutzeroberflächenthread)](http://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Einige Technologien, z. B. COM-Interoperabilität für STA-Komponenten (Singlethread-Apartment), Windows Forms und Windows Presentation Foundation (WPF), erzeugen Threadaffinitätseinschränkungen, aufgrund derer Code in einem bestimmten Thread ausgeführt werden muss. Beispielsweise kann sowohl in Windows Forms als auch in WPF nur in einem Thread auf ein Steuerelement zugegriffen werden, in dem es erstellt wurde. Dies bedeutet beispielsweise, dass Sie kein Listensteuerelement von einer parallelen Schleife aktualisieren können, außer wenn Sie den Threadplaner konfigurieren, um die Arbeit nur im UI-Thread zu planen. Weitere Informationen finden Sie unter [How to: Schedule Work on the User Interface (UI) Thread (Vorgehensweise: Planen von Arbeit am Benutzeroberflächenthread)](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Seien Sie vorsichtig, wenn Sie in Delegaten warten, die von Parallel.Invoke aufgerufen werden.  
- Unter bestimmten Umständen wird ein Task von der Task Parallel Library inline ausgeführt, d.h. die Ausführung erfolgt im derzeit ausgeführten Thread. (Weitere Informationen finden Sie unter [TaskScheduler-Klasse](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).) Diese Leistungsoptimierung kann in bestimmten Fällen einen Deadlock zur Folge haben. Beispiel: Bei zwei Tasks wird möglicherweise der gleiche Delegatcode ausgeführt, der signalisiert, wenn ein Ereignis auftritt und anschließend auf die Signalisierung des anderen Tasks wartet. Wenn der zweite Task im gleichen Thread wie der erste Task inline ausgeführt wird und der erste Task in einen Wartezustand versetzt wird, kann der zweite Task das Ereignis niemals signalisieren. Um dies zu vermeiden, können Sie für den Wartevorgang ein Timeout angeben oder explizite Threadkonstruktoren verwenden, um sicherzustellen, dass ein Task nicht den anderen blockieren kann.  
+ Unter bestimmten Umständen wird ein Task von der Task Parallel Library inline ausgeführt, d.h. die Ausführung erfolgt im derzeit ausgeführten Thread. (Weitere Informationen finden Sie unter [TaskScheduler-Klasse](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).) Diese Leistungsoptimierung kann in bestimmten Fällen einen Deadlock zur Folge haben. Beispiel: Bei zwei Tasks wird möglicherweise der gleiche Delegatcode ausgeführt, der signalisiert, wenn ein Ereignis auftritt und anschließend auf die Signalisierung des anderen Tasks wartet. Wenn der zweite Task im gleichen Thread wie der erste Task inline ausgeführt wird und der erste Task in einen Wartezustand versetzt wird, kann der zweite Task das Ereignis niemals signalisieren. Um dies zu vermeiden, können Sie für den Wartevorgang ein Timeout angeben oder explizite Threadkonstruktoren verwenden, um sicherzustellen, dass ein Task nicht den anderen blockieren kann.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Gehen Sie nicht davon aus, dass Iterationen von „ForEach“, „For“ und „ForAll“ immer parallel ausgeführt werden.  
  Beachten Sie unbedingt, dass einzelne Iterationen in einer <xref:System.Threading.Tasks.Parallel.For%2A>-, <xref:System.Threading.Tasks.Parallel.ForEach%2A>- oder <xref:System.Linq.ParallelEnumerable.ForAll%2A>-Schleife parallel ausgeführt werden können, jedoch nicht parallel ausgeführt werden müssen. Schreiben Sie daher nach Möglichkeit keinen Code, dessen Korrektheit von der parallelen Ausführung von Iterationen oder der Ausführung von Iterationen in einer bestimmten Reihenfolge abhängig ist. Beim folgenden Code ist z. B. ein Deadlock wahrscheinlich:  
@@ -80,7 +80,8 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
- [Potential Pitfalls with PLINQ (Potenzielle Fehler bei PLINQ)](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4)](https://www.microsoft.com/download/details.aspx?id=19222)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
+- [Potential Pitfalls with PLINQ (Potenzielle Fehler bei PLINQ)](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
+- [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4 (Muster für die parallele Programmierung: Begreifen und Anwenden von parallelen Mustern mit .NET Framework 4)](https://www.microsoft.com/download/details.aspx?id=19222)

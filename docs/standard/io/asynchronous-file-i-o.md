@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 270ae5a8cfa7c69c7caa0896dfe23b84db48f659
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf253ff4a25ba902c16c6d00a8be4bf291166774
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575517"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268733"
 ---
 # <a name="asynchronous-file-io"></a>Asynchrone Datei-E/A
 Mithilfe von asynchronen Vorgängen können Sie ressourcenintensive E/A-Vorgänge auszuführen, ohne den Hauptthread zu blockieren. Diese Überlegungen zur Leistung sind insbesondere in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -App oder [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] -App wichtig, bei der ein zeitaufwendiger Streamvorgang den UI-Thread blockieren kann und es dann den Anschein hat, dass Ihre App nicht funktioniert.  
@@ -58,7 +58,8 @@ Mithilfe von asynchronen Vorgängen können Sie ressourcenintensive E/A-Vorgäng
   
  [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.Stream>  
- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
- [Asynchrone Programmierung mit Async und Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.Stream>  
+- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
+- [Asynchrone Programmierung mit Async und Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)

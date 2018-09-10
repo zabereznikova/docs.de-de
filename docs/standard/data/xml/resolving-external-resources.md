@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1c56d69724212b9d1cd6a24204a12460071633f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577087"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268405"
 ---
 # <a name="resolving-external-resources"></a>Auflösen von externen Ressourcen
 Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument**-Klasse nach Ressourcen, die sich nicht inline in den XML-Daten befinden, z.B. externe Document Type Definitions (DTDs – Dokumenttypdefinitionen), Entitäten und Schemata. Diese Elemente können in einem Netzwerk oder auf einem lokalen Laufwerk gesucht werden und sind durch einen URI (Uniform Resource Identifier) gekennzeichnet. Somit kann **XmlDocument** im Dokument vorhandene **EntityReference**-Knoten auflösen und das Dokument entsprechend der externen DTD oder dem externen Schema validieren.  
@@ -52,5 +52,6 @@ Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument*
   
  Weitere Informationen finden Sie im Abschnitt Hinweise unter der <xref:System.Xml.XmlResolver> Referenzseite.  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

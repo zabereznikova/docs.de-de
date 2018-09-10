@@ -4,12 +4,12 @@ description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellu
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934532"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864961"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -103,8 +103,10 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 
 ## <a name="see-also"></a>Siehe auch
 
- [Wählen zwischen ASP.NET und ASP.NET Core](/aspnet/core/choose-aspnet-framework) [Zielframeworks](frameworks.md) [Leitfaden für .NET Core](../core/index.md)  
- [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)  
- [Leitfaden zu .NET Framework in Docker](../framework/docker/index.md)  
- [.NET-Komponenten – Übersicht](components.md)  
- [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md)
+* [Wählen zwischen ASP.NET und ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+* [Zielframeworks](frameworks.md)
+* [Leitfaden für .NET Core](../core/index.md)  
+* [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)  
+* [Leitfaden zu .NET Framework in Docker](../framework/docker/index.md)  
+* [.NET-Komponenten – Übersicht](components.md)  
+* [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md)

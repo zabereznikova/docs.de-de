@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4dd3e16edae6e30d93083694a2d2d18c0815933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579534"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192683"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 <a name="top"></a> In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager. Der Garbage Collector bietet folgende Vorteile:  
@@ -296,5 +296,6 @@ Garbage Collection auf Arbeitsstationen im Hintergrund
  ![Garbage Collection auf dem Server im Hintergrund](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 Garbage Collection auf dem Server im Hintergrund  
   
-## <a name="see-also"></a>Siehe auch  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

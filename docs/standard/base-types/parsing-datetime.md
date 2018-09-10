@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576102"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207615"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -87,9 +87,10 @@ Im folgenden Codebeispiel wird die <xref:System.DateTime.ParseExact%2A?displayPr
 
 Jede Überladung der Methode <xref:System.DateTime.Parse%2A> und <xref:System.DateTime.ParseExact%2A> umfasst auch einen <xref:System.IFormatProvider>-Parameter, der kulturspezifische Informationen zur Formatierung der Zeichenfolge enthält. In der Regel handelt es sich bei diesem <xref:System.IFormatProvider>-Objekt um ein <xref:System.Globalization.CultureInfo>-Objekt, das eine Standardkultur oder ein von der Eigenschaft <xref:System.Globalization.DateTimeFormatInfo> zurückgegebenes <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>-Objekt darstellt.  <xref:System.DateTime.ParseExact%2A> verwendet außerdem ein zusätzliches Zeichenfolgen- oder Zeichenfolgenarrayargument, mit dem mindestens ein benutzerdefiniertes Datums- und Uhrzeitformat definiert wird.  
 
-## <a name="see-also"></a>Siehe auch  
- [Analysieren von Zeichenfolgen](parsing-strings.md)  
- [Formatierung von Typen](formatting-types.md)  
- [Typkonvertierung in .NET](type-conversion.md)  
- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)  
- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Analysieren von Zeichenfolgen](parsing-strings.md)  
+- [Formatierung von Typen](formatting-types.md)  
+- [Typkonvertierung in .NET](type-conversion.md)  
+- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)  
+- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)

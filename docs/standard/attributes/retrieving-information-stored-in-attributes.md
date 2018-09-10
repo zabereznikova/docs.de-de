@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6799763b4635632728561eef2820b26820aeed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570399"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264778"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  
@@ -84,8 +84,9 @@ The attribute was not found.
   
  Sie können die Elemente der <xref:System.Type>-Klasse verwenden, um die einzelnen Methoden und Elemente der übergebenen Klasse abzurufen. In diesem Beispiel wird zuerst das **Type**-Objekt abgefragt, um Attributinformationen für die Klassenebene abzurufen. Als Nächstes wird <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> verwendet, um Instanzen aller Methoden in einem Array von <xref:System.Reflection.MemberInfo?displayProperty=nameWithType>-Objekten zu platzieren, um Attributinformationen für die Methodenebene abzurufen. Sie können mithilfe der <xref:System.Type.GetProperties%2A?displayProperty=nameWithType>-Methode nach Attributen auf Eigenschaftenebene oder mithilfe von <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> nach Attributen auf Konstruktorebene suchen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [Attribute](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Type?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- [Attribute](../../../docs/standard/attributes/index.md)

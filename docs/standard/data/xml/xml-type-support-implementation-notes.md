@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d2d6f2932e1afeb7369c32a43ca48f55fade2e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571409"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44191065"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Implementierungshinweise zur XML-Typunterstützung
 In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beachten müssen.  
@@ -47,5 +47,6 @@ In diesem Thema werden einige Implementierungsdetails beschrieben, die Sie beach
 ### <a name="xsanyuri-and-systemuri"></a>"xs:anyURI" und "System.Uri"  
  Wenn einer Instanz von `xs:anyURI`, die einen relativen URI darstellt, ein <xref:System.Uri> zugeordnet wird, hat das <xref:System.Uri>-Objekt keinen Basis-URI.  
   
-## <a name="see-also"></a>Siehe auch  
- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

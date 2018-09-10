@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b2102c4e33f551cf3dc71cf83539cdc494e5379
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579794"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265168"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 <a name="top"></a> In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen. Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können. Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.  
@@ -778,5 +778,6 @@ ms.locfileid: "33579794"
   
      Wenn der `% Time in GC`-Wert zum selben Zeitpunkt einen Spitzenwert erreicht wie die Prozesszeit, dann verursacht die Garbage Collection die hohe CPU-Auslastung. Erstellen Sie andernfalls ein Profil der Anwendung, um zu ermitteln, wie die hohe Auslastung zustande kommt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

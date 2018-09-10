@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591295"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877806"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Ausnahmebehandlung (Task Parallel Library)
 Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutzercode ausgelöst werden, werden zurück zum aufrufenden Thread geleitet. Hiervon ausgenommen sind bestimmte Szenarios, die weiter unten in diesem Thema beschrieben werden. Ausnahmen werden weitergegeben, wenn Sie die statische oder instanzbasierte <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>- oder <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` -Methode verwenden. Zur Behandlung dieser Ausnahmen schließen Sie den Aufruf in eine `try`/`catch`-Anweisung ein. Wenn eine Aufgabe das übergeordnete Element angefügter untergeordneter Aufgaben ist oder wenn Sie auf mehrere Aufgaben warten, können mehrere Ausnahmen ausgelöst werden.  
@@ -91,5 +91,6 @@ Nicht behandelte Ausnahmen, die von innerhalb einer Aufgabe ausgeführtem Benutz
 ## <a name="unobservedtaskexception-event"></a>UnobservedTaskException-Ereignis  
  In einigen Szenarien können häufig Ausnahmen ohne Auswirkungen auftreten (z. B. wenn Sie nicht vertrauenswürdige Plug-Ins hosten), und es kann schwierig sein, alle Ausnahmen manuell zu überwachen. In diesen Fällen können Sie das <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>-Ereignis behandeln. Mit der an den Handler übergebenen <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType>-Instanz kann verhindert werden, dass die nicht überwachte Ausnahme wieder an den Verbindungsthread übergeben wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

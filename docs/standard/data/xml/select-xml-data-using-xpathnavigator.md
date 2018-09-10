@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c937754f031420d90f89bf89563db17ddaaf3bbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fea54d36759b12b01fa7a68748d069c7890d84e4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572121"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44177405"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Auswählen von XML-Daten mit XPathNavigator
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, mit denen eine Gruppe von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe eines XPath-Ausdrucks ausgewählt werden können. Sobald die Knoten ausgewählt sind, können die ausgewählten Knoten durchlaufen werden.  
@@ -62,13 +62,14 @@ while(nodes.MoveNext())
 ### <a name="optimized-selection-methods"></a>Optimierte Auswahlmethoden  
  Die Methoden <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> und <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> der <xref:System.Xml.XPath.XPathNavigator>-Klasse stellen XPath-Ausdrücke dar, mit denen normalerweise direkt untergeordnete sowie indirekt untergeordnete und übergeordnete Knoten abgerufen werden. Diese Methoden tragen zur Leistungsoptimierung bei und sind schneller als die entsprechenden XPath-Ausdrücke. Die Methoden <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> und <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> wählen übergeordnete, direkt untergeordnete und indirekt untergeordnete Knoten auf der Grundlage eines <xref:System.Xml.XPath.XPathNodeType>-Werts oder des lokalen Namens und des Namespace-URIs der auszuwählenden Knoten aus. Die ausgewählten übergeordneten, direkt untergeordneten und indirekt untergeordneten Knoten werden in einem <xref:System.Xml.XPath.XPathNodeIterator>-Objekt zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Auswerten von XPath-Ausdrücken mit XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [Vergleich von Knoten mit XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
- [Kompilierte XPath-Ausdrücke](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [Auswerten von XPath-Ausdrücken mit XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+- [Vergleich von Knoten mit XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+- [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+- [Kompilierte XPath-Ausdrücke](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

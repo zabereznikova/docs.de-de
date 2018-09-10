@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ef88add49cb4a269612965d14dfbca6b3263533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579274"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252355"
 ---
 # <a name="recoverable-xslt-errors"></a>Wiederherstellbare XSLT-Fehler
 Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht. Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet. Laut W3C-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen gibt die Empfehlung zu XSLT 1.0 auch Maßnahmen für den Fall an, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.  
@@ -54,5 +54,6 @@ Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte 
   
  <sup>*</sup> Diese Verhaltensweise unterscheidet sich von der der <xref:System.Xml.Xsl.XslTransform>-Klasse. Weitere Informationen finden Sie unter [Implementierung von freigegebenen Verhaltensweisen in der XslTransform-Klasse](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)

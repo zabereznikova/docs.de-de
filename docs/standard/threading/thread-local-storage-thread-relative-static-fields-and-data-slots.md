@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589853"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042230"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots
 Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum Speichern von Daten verwenden, die für einen Thread und die Anwendungsdomäne eindeutig sind. .NET Framework bietet zwei Möglichkeiten zur Verwendung von verwaltetem TLS: threadbezogene statische Felder und Datenslots.  
@@ -57,9 +57,10 @@ Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum S
   
  Benannte Slots sind praktisch, da Sie den Slot bei Bedarf abrufen können, indem Sie seinen Namen der <xref:System.Threading.Thread.GetNamedDataSlot%2A>-Methode übergeben, statt einen Verweis auf einen unbenannten Slot beizubehalten. Wenn allerdings eine andere Komponente denselben Namen für ihren threadbezogenen Speicher verwendet, und ein Thread sowohl Code aus Ihrer Komponente als auch der anderen ausführt, könnten die zwei Komponenten sich gegenseitig ihre Daten beschädigen. (Dieses Szenario setzt voraus, dass beide Komponenten in derselben Anwendungsdomäne ausgeführt werden und nicht zur gemeinsamen Nutzung derselben Daten konzipiert sind.)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ContextStaticAttribute>  
- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
- <xref:System.ThreadStaticAttribute>  
- <xref:System.Runtime.Remoting.Messaging.CallContext>  
- [Threading](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.ContextStaticAttribute>  
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
+- <xref:System.ThreadStaticAttribute>  
+- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- [Threading](../../../docs/standard/threading/index.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579365"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087190"
 ---
 # <a name="xml-document-object-model-dom"></a>XML-Dokumentobjektmodell (DOM)
 Die XML-DOM-Klasse ist eine Darstellung eines XML-Dokuments im Speicher. Mit dem DOM können Sie ein XML-Dokument programmgesteuert lesen und ändern. Die **XmlReader**-Klasse liest auch XML. Sie bietet jedoch nur nicht zwischengespeicherten, schreibgeschützten Forward-Only-Zugriff. Das bedeutet, dass keine Funktionen zum Bearbeiten der Werte eines Attributs oder des Inhalts eines Elements existieren, oder dass Knoten nicht mit der **XmlReader**-Klasse eingefügt oder entfernt werden können. Der DOM erfüllt in erster Linie Bearbeitungsfunktionen. Es ist die herkömmliche strukturierte Methode, XML-Daten im Speicher darzustellen, obwohl die tatsächlichen XML-Daten linear gespeichert werden, wenn sie sich in einer Datei befinden oder aus einem anderen Objekt in eine Datei eingefügt werden. Im Folgenden werden XML-Daten dargestellt.  
@@ -76,6 +76,7 @@ Struktur von XML-Dokumenten
   
  Das DOM ist zum Einlesen von XML-Daten in den Speicher besonders nützlich, um deren Struktur zu ändern, Knoten hinzuzufügen oder zu entfernen oder die in einem Knoten gespeicherten Daten zu bearbeiten, z. B. den Text in einem Element. Allerdings stehen auch andere Klassen zur Verfügung, die in anderen Szenarios schneller als das DOM sind. Verwenden Sie für einen schnellen, nicht zwischengespeicherten Forward-Only-Datenstromzugriff auf XML die **XmlReader**-Klasse und die **XmlWriter**-Klasse. Verwenden Sie für einen wahlfreien Zugriff mit einem Cursormodell und **XPath** die **XPathNavigator**-Klasse.  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Knotentypen](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [Zuordnen der Objekthierarchie zu XML-Daten](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML-Knotentypen](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Zuordnen der Objekthierarchie zu XML-Daten](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

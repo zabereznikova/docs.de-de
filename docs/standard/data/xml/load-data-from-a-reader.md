@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569973"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207225"
 ---
 # <a name="load-data-from-a-reader"></a>Laden von Daten aus einem Reader
 Wenn ein XML-Dokument mithilfe der <xref:System.Xml.XmlDocument.Load%2A>-Methode und einem Parameter eines <xref:System.Xml.XmlReader> geladen wird, weist das Verhalten Unterschiede zu dem Verhalten auf, das beim Laden von Daten aus anderen Formaten eintritt. Wenn sich der Reader in seinem Ausgangszustand befindet, verarbeitet <xref:System.Xml.XmlDocument.Load%2A> den gesamten Inhalt des Readers und erstellt das XML-DOM (Dokumentobjektmodell) aus allen Daten im Reader.  
@@ -29,5 +29,6 @@ Wenn ein XML-Dokument mithilfe der <xref:System.Xml.XmlDocument.Load%2A>-Methode
   
  In der Standardeinstellung überprüft <xref:System.Xml.XmlDocument.Load%2A> nicht mithilfe der DTD (Document Type Definition) oder der Schemavalidierung, ob das XML gültig ist. Es wird nur überprüft, ob das XML wohlgeformt ist. Damit die Validierung ausgeführt wird, muss mithilfe der <xref:System.Xml.XmlReader>-Klasse ein <xref:System.Xml.XmlReaderSettings> erstellt werden. Die <xref:System.Xml.XmlReader>-Klasse kann die Validierung mithilfe der DTD oder des XSD-Schemas (Schema Definition Language) erzwingen. Die <xref:System.Xml.ValidationType>-Eigenschaft der <xref:System.Xml.XmlReaderSettings>-Klasse bestimmt, ob die <xref:System.Xml.XmlReader>-Instanz eine Validierung erzwingt. Weitere Informationen zum Überprüfen von XML-Daten finden Sie im Abschnitt Hinweise der <xref:System.Xml.XmlReader>-Referenzseite.  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

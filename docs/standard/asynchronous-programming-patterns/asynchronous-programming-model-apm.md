@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 992cc1f60ee3f08131b478d2336321bf87d7ef89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd2fa6219f39a8506d865d85e1ce5f84d22a92f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573788"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269032"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Asynchrones Programmiermodell (APM)
 Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwendet, wird als zwei Methoden mit den Namen **Begin***OperationName* und **End***OperationName* implementiert, die den asynchronen Vorgang *OperationName* jeweils starten bzw. beenden. Die <xref:System.IO.FileStream> -Klasse stellt z. B. die Methoden <xref:System.IO.FileStream.BeginRead%2A> und <xref:System.IO.FileStream.EndRead%2A> zum asynchronen Lesen von Bytes aus einer Datei bereit. Diese Methoden implementieren die asynchrone Version der <xref:System.IO.FileStream.Read%2A> -Methode.  
@@ -31,7 +31,7 @@ Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwe
 ## <a name="beginning-an-asynchronous-operation"></a>Starten eines asynchronen Vorgangs  
  Die Methode **Begin***OperationName* startet den asynchronen Vorgang *OperationName* und gibt ein Objekt zurück, das die <xref:System.IAsyncResult>-Schnittstelle implementiert. <xref:System.IAsyncResult> -Objekte speichern Informationen zu einem asynchronen Vorgang. In der folgenden Tabelle werden Informationen zu einem asynchronen Vorgang angezeigt.  
   
-|Member|description|  
+|Member|Beschreibung |  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Ein optionales, anwendungsspezifisches Objekt, das Informationen über die asynchrone Operation enthält.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Ein <xref:System.Threading.WaitHandle> , mit dem die Ausführung der Anwendung blockiert werden kann, bis der asynchrone Vorgang abgeschlossen ist.|  
@@ -65,7 +65,8 @@ Ein asynchroner Vorgang, der das <xref:System.IAsyncResult>-Entwurfsmuster verwe
   
 -   Verwenden Sie einen <xref:System.AsyncCallback> -Delegat, um eine Methode aufzurufen, wenn der Vorgang abgeschlossen ist. Ein Beispiel zur Veranschaulichung dieses Verfahrens finden Sie unter [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [Asynchrones Aufrufen von synchronen Methoden](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
- [Verwenden von AsyncCallback-Delegat und Zustandsobjekt](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Asynchrones Aufrufen von synchronen Methoden](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+- [Verwenden von AsyncCallback-Delegat und Zustandsobjekt](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)

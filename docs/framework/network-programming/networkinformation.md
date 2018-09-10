@@ -7,12 +7,12 @@ ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 964e76a008e1c18fe9f609f1dd63bce565e95d44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88b39b5ae01ec5b22044dde82ba0f802c1a50ca9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396319"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526751"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 Mit dem Namespace <xref:System.Net.NetworkInformation> können Sie Informationen über Netzwerkereignisse, Änderungen, Statistiken sowie Eigenschaften sammeln. Sie können auch bestimmen, ob ein remoter Host mithilfe der <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>-Klasse erreichbar ist.  
@@ -28,6 +28,6 @@ Mit dem Namespace <xref:System.Net.NetworkInformation> können Sie Informationen
   
 ## <a name="see-also"></a>Siehe auch  
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Beispiel zur Netzwerk-Informationstechnologie](http://go.microsoft.com/fwlink/?LinkID=179564)  
- [Beispiel zur Technologie des NetStat-Tools](http://go.microsoft.com/fwlink/?LinkID=179562)  
- [Beispiel für die Technologie eines Ping-Clients](http://go.microsoft.com/fwlink/?LinkID=179565)
+ [Beispiel zur Netzwerk-Informationstechnologie](https://go.microsoft.com/fwlink/?LinkID=179564)  
+ [Beispiel zur Technologie des NetStat-Tools](https://go.microsoft.com/fwlink/?LinkID=179562)  
+ [Beispiel für die Technologie eines Ping-Clients](https://go.microsoft.com/fwlink/?LinkID=179565)

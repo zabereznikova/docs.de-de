@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f829fc0b399f5cfd10d98f6b7439de757674f11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586372"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208178"
 ---
 # <a name="reader-writer-locks"></a>Lese-/Schreibsperren
 Die <xref:System.Threading.ReaderWriterLockSlim>-Klasse ermöglicht mehreren Threads, eine Ressource gleichzeitig zu lesen, aber ein Thread muss zum Schreiben in die Ressource auf eine exklusive Sperre warten.  
@@ -27,8 +27,9 @@ Die <xref:System.Threading.ReaderWriterLockSlim>-Klasse ermöglicht mehreren Thr
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] verfügt über zwei Lese-/Schreibsperren, <xref:System.Threading.ReaderWriterLockSlim> und <xref:System.Threading.ReaderWriterLock>. <xref:System.Threading.ReaderWriterLockSlim> wird für alle Neuentwicklungen empfohlen. <xref:System.Threading.ReaderWriterLockSlim> ähnelt <xref:System.Threading.ReaderWriterLock>, verfügt aber über vereinfachte Regeln für Rekursion sowie für Upgrade und Downgrade des Sperrstatus. <xref:System.Threading.ReaderWriterLockSlim> vermeidet viele potenzielle Deadlocks. Darüber hinaus ist die Leistung von <xref:System.Threading.ReaderWriterLockSlim> wesentlich besser als die von <xref:System.Threading.ReaderWriterLock>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.ReaderWriterLockSlim>  
- <xref:System.Threading.ReaderWriterLock>  
- [Threading](../../../docs/standard/threading/index.md)  
- [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Threading.ReaderWriterLockSlim>  
+- <xref:System.Threading.ReaderWriterLock>  
+- [Threading](../../../docs/standard/threading/index.md)  
+- [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)

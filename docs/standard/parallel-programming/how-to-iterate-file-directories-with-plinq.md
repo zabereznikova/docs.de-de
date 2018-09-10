@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3222c4b78367222caa4a6564109864c0fb55524e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580795"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43871623"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Gewusst wie: Iterieren von Dateiverzeichnissen mit PLINQ
 Dieses Beispiel zeigt zwei einfache Möglichkeiten, um Vorgänge für Dateiverzeichnisse zu parallelisieren. Die erste Abfrage füllt mit der <xref:System.IO.Directory.GetFiles%2A>-Methode ein Array von Dateinamen in einem Verzeichnis und allen Unterverzeichnissen. Diese Methode erzeugt keine Rückgabe, solange nicht das gesamte Array aufgefüllt ist, und daher kann am Anfang des Vorgangs eine Wartezeit auftreten. Sobald das Array aufgefüllt ist, kann PLINQ es jedoch sehr schnell parallel verarbeiten.  
@@ -36,5 +36,6 @@ Dieses Beispiel zeigt zwei einfache Möglichkeiten, um Vorgänge für Dateiverze
   
  Wenn E/A-Wartezeit ein Problem ist, z.B. bei Datei-E/A über ein Netzwerk, erwägen Sie die Verwendung einer der in [TPL und herkömmliche asynchrone .NET Framework-Programmierung](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) und in diesem [Blogbeitrag](https://blogs.msdn.microsoft.com/pfxteam/2009/08/04/parallel-extensions-and-io/) beschriebenen asynchronen E/A-Techniken.  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

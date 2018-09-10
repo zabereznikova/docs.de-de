@@ -3,11 +3,11 @@ title: Verwenden von Manipulationen und Trägheit in einer XNA-Anwendung
 ms.date: 03/30/2017
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
 ms.openlocfilehash: 70b8d0c5c098089b6f16ef817ff86698f68cf7c3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478142"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44248903"
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>Verwenden von Manipulationen und Trägheit in einer XNA-Anwendung
 Dieser Artikel beschreibt, wie Sie Manipulationen und Trägheitsverarbeitung in einer Microsoft XNA-Anwendung verwenden können, um die Bewegungen von Spielelementen zu steuern. Bevor Sie diesen Artikel lesen, sollten Sie sich mit dem Thema [Manipulationen und Trägheit (Übersicht)](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md) sowie mit den grundlegenden XNA-Programmierkonzepten vertraut gemacht haben.  

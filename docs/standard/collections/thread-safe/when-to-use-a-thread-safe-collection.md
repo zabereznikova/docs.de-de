@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574838"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209957"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Verwendung einer threadsicheren Auflistung
 Mit [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] werden fünf neue Sammlungstypen eingeführt, die speziell für die Unterstützung von multithreaded Hinzufügen- und Entfernungsvorgängen ausgelegt sind. Zur Gewährleistung von Threadsicherheit verwenden diese neuen Typen unterschiedliche Arten effizienter sperrender und sperrfreier Synchronisierungsmechanismen. Ein Vorgang wird durch Synchronisierung aufwändiger. Das Ausmaß des Aufwands hängt von der Art der verwendeten Synchronisierung, der Art der ausgeführten Vorgänge und von anderen Faktoren ab, z.B. der Anzahl der Threads, die versuchen, gleichzeitig auf die Sammlung zuzugreifen.  
@@ -62,7 +62,8 @@ Mit [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] werden fü
 ## <a name="blockingcollection"></a>BlockingCollection  
  Wenn Begrenzungs- und Blockierungssemantiken erforderlich sind, wird <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> wahrscheinlich schneller als jede beliebige benutzerdefinierte Implementierung ausgeführt. Zudem werden umfassende Möglichkeiten für die Abbruch-, Enumerations- und Ausnahmebehandlung unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [threadsichere Auflistungen](../../../../docs/standard/collections/thread-safe/index.md)  
- [Parallele Programmierung](../../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Threadsichere Sammlungen](../../../../docs/standard/collections/thread-safe/index.md)  
+- [Parallele Programmierung](../../../../docs/standard/parallel-programming/index.md)

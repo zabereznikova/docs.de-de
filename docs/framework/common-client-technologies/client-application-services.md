@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
 ms.openlocfilehash: d58510240593f73ff761aa669035f28598006c10
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401582"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521999"
 ---
 # <a name="client-application-services"></a>Clientanwendungsdienste
 Clientanwendungsdienste erleichtern Ihnen Erstellung von Windows-basierten Anwendungen, die die [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anmelde-, -Rollen- und -Profilanwendungsdienste verwenden, die in den Microsoft ASP.NET 2.0 AJAX-Erweiterungen enthalten sind. Diese Dienste ermöglichen mehreren web- und Windows-basierten Anwendungen die gemeinsame Nutzung von Benutzerinformationen und Benutzerverwaltungsfunktionen von einem einzelnen Server aus. Beispielsweise können Sie mithilfe dieser Dienste folgende Aufgaben ausführen:  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00c91daf2811ecba01b77d51a74740027ced5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581585"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227622"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Gewusst wie: JoinBlock zum Lesen aus mehreren Quellen verwenden
 In diesem Dokument erfahren Sie, wie Sie mithilfe der <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>-Klasse einen Vorgang ausführen, wenn Daten aus mehreren Quellen verfügbar sind. Zudem wird der nicht gierige Modus veranschaulicht, durch den mehrere Gruppierungsblöcke eine Datenquelle effizienter gemeinsam verwenden können.
@@ -46,5 +46,6 @@ In diesem Dokument erfahren Sie, wie Sie mithilfe der <xref:System.Threading.Tas
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die Verwendung von nicht gierigen Gruppierungen kann Ihnen auch dabei helfen, einen Deadlock in Ihrer Anwendung zu vermeiden. In einer Softwareanwendung kommt es zu einem *Deadlock*, wenn zwei oder mehr Prozesse jeweils eine Ressource halten und gegenseitig darauf warten, dass ein anderer Prozess eine andere Ressource freigibt. Betrachten Sie eine Anwendung, die zwei <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>-Objekte definiert. Beide Objekte lesen jeweils Daten aus zwei gemeinsam genutzten Quellblöcken. Wenn ein Gruppierungsblock im gierigen Modus aus der ersten Quelle und der zweite Gruppierungsblock aus der zweiten Quelle liest, könnte die Anwendung blockieren, weil beide Gruppierungsblöcke gegenseitig darauf warten, dass der andere seine Ressource freigibt. Im nicht gierigen Modus liest jeder Gruppierungsblock nur dann aus seinen Quellen, wenn alle Daten verfügbar sind und somit das Risiko eines Deadlocks ausgeschlossen ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Dataflow (Datenfluss)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

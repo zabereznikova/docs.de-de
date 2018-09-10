@@ -3,11 +3,11 @@ title: Überblick über Manipulationen und Trägheit
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
 ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401224"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521238"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Überblick über Manipulationen und Trägheit
 Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche (User Interface, UI) mithilfe von *Manipulatoren* zu verschieben, zu drehen und in der Größe zu ändern. Ein Manipulator kann eine Maus oder (in einem Touchscreen-Szenario) ein Stift oder ein Finger sein.  

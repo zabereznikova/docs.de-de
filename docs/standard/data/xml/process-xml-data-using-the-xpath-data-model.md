@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ae129d0be4afb91aedb050ff4b90aff1ce058976
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569953"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44204587"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells
 Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der <xref:System.Xml.XmlDocument>-Klasse oder der <xref:System.Xml.XPath.XPathDocument>-Klasse eine programmgesteuerte Darstellung von XML-Dokumenten, XML-Fragmenten, XML-Knoten oder XML-Knotengruppen im Speicher.  
@@ -35,8 +35,9 @@ Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der
  [Schemavalidierung mithilfe von „XPathNavigator“](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  Beschreibt die Möglichkeiten zum Validieren der XML-Inhalte, die in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt enthalten sind.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [Verarbeiten von XML-Daten mithilfe des DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [Verarbeiten von XML-Daten mithilfe des DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

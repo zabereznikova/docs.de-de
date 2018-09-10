@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578156"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085224"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
 Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, die Datums- und Uhrzeitwerte analysieren und formatieren, bei der Interaktion mit dem Benutzer nicht von einem Standardformat (am häufigsten das Format der lokalen Kultur des Webservers) abhängen. Stattdessen sollten Webformulare, die vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen behandeln, die Zeichenfolgen gemäß der bevorzugten Kultur des Benutzers analysieren. Entsprechend sollten Datums- und Uhrzeitdaten dem Benutzer in einem Format angezeigt werden, das seiner Kultur entspricht. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
@@ -108,8 +108,9 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Um zu verhindern, dass ein Benutzer ein Skript in den HTML-Stream einfügt, sollte eine Benutzereingabe nie direkt in der Antwort des Servers wiederholt werden. Sie sollte stattdessen mithilfe der <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>-Methode codiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Verarbeiten von Zeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/parsing-datetime.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Verarbeiten von Zeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/parsing-datetime.md)

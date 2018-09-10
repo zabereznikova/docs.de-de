@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745369"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788927"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clientanwendungsdienste zum Authentifizieren von Benutzern und zum Abrufen von Benutzerrollen und Einstellungen verwendet wird.  
@@ -69,7 +69,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
  An diesem Punkt ist die Anwendung darauf konfiguriert, von demselben Host auf alle drei Dienste zuzugreifen. Im nächsten Abschnitt erstellen Sie den Host als einfache Webdienstanwendung, wodurch Sie ihre  Clientkonfiguration testen können.  
   
 ## <a name="creating-the-application-services-host"></a>Erstellen des Anwendungsdienst-Hostes  
- In diesem Abschnitt erstellen Sie eine einfache Webdienstanwendung, die auf Benutzerdaten aus einer lokalen SQL Server Compact-Datenbankdatei zugreift. Anschließend füllen Sie die Datenbank mit [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)auf. Mit dieser einfachen Konfiguration können Sie die Clientanwendung schnell überprüfen. Alternativ können Sie den Webdiensthost so konfigurieren, dass er auf Benutzerdaten aus einer vollständigen SQL Server-Datenbank oder durch benutzerdefinierte Klassen <xref:System.Web.Security.MembershipProvider> und <xref:System.Web.Security.RoleProvider> zugreift. Weitere Informationen finden Sie unter [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ In diesem Abschnitt erstellen Sie eine einfache Webdienstanwendung, die auf Benutzerdaten aus einer lokalen SQL Server Compact-Datenbankdatei zugreift. Anschließend füllen Sie die Datenbank mit [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)auf. Mit dieser einfachen Konfiguration können Sie die Clientanwendung schnell überprüfen. Alternativ können Sie den Webdiensthost so konfigurieren, dass er auf Benutzerdaten aus einer vollständigen SQL Server-Datenbank oder durch benutzerdefinierte Klassen <xref:System.Web.Security.MembershipProvider> und <xref:System.Web.Security.RoleProvider> zugreift. Weitere Informationen finden Sie unter [Creating and Configuring the Application Services Database for SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  Im folgenden Verfahren erstellen und konfigurieren Sie den AppServices-Webdienst.  
   
@@ -105,7 +105,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
      Mithilfe der Elemente `authenticationService`, `profileService`und `roleService` in diesem Markup werden die Anwendungsdienste aktiviert und konfiguriert. Für Testzwecke wird das Attribut `requireSSL` des Elements `authenticationService` auf „false“ festgelegt. Die Attribute `readAccessProperties` und `writeAccessProperties` des Elements `profileService` zeigen an, dass die Eigenschaft `WebSettingsTestText` schreibgeschützt ist.  
   
     > [!NOTE]
-    >  In Produktionscode sollten Sie auf den Authentifizierungsdienst stets über SSL (Secure Sockets Layer; unter Verwendung des HTTPS-Protokolls) zugreifen. Weitere Informationen zum Einrichten von SSL finden Sie unter [Konfigurieren von SSL (Secure Sockets Layer) (Bedienerhandbuch zu IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=91844).  
+    >  In Produktionscode sollten Sie auf den Authentifizierungsdienst stets über SSL (Secure Sockets Layer; unter Verwendung des HTTPS-Protokolls) zugreifen. Weitere Informationen zum Einrichten von SSL finden Sie unter [Konfigurieren von SSL (Secure Sockets Layer) (Bedienerhandbuch zu IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=91844).  
   
     ```xml  
     <system.web.extensions>  
@@ -538,6 +538,6 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
  [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [ASP.NET-Websiteverwaltungs-Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [Exemplarische Vorgehensweise: Verwenden von ASP.NET-Anwendungsdiensten](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [ASP.NET-Websiteverwaltungs-Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Erstellen und Konfigurieren der Datenbank für die Anwendungsdienste für SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [Exemplarische Vorgehensweise: Verwenden von ASP.NET-Anwendungsdiensten](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

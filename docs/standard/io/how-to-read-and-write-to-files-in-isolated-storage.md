@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90195e4e1a368f8b8b0fcf04fd8d86afce3ea7c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9aecf7aef9023439e145d408e40fb4adf5c0e986
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573775"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195503"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher
 Um aus einer Datei in einem isolierten Speicher zu lesen oder in sie zu schreiben, verwenden Sie ein <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-Objekt mit einem Streamreader (<xref:System.IO.StreamReader>-Objekt) oder Streamwriter (<xref:System.IO.StreamWriter>-Objekt).  
@@ -34,12 +34,13 @@ Um aus einer Datei in einem isolierten Speicher zu lesen oder in sie zu schreibe
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
- <xref:System.IO.FileMode?displayProperty=nameWithType>  
- <xref:System.IO.FileAccess?displayProperty=nameWithType>  
- <xref:System.IO.StreamReader?displayProperty=nameWithType>  
- <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+- <xref:System.IO.FileMode?displayProperty=nameWithType>  
+- <xref:System.IO.FileAccess?displayProperty=nameWithType>  
+- <xref:System.IO.StreamReader?displayProperty=nameWithType>  
+- <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
+- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b16cfeda88b8e700c4d473962155a8510ce7df2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574607"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262372"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder eine Teilzeichenfolge innerhalb einer Zeichenfolge zu identifizieren. Wenn z.B. die Eingabezeichenfolge mehrere Vorkommen einer beliebigen Teilzeichenfolge enthält, können Sie das erste Vorkommen mit einer Erfassungsgruppe abgleichen und dann mit einem Rückverweis nachfolgende Vorkommen der Teilzeichenfolge abgleichen.  
@@ -49,7 +49,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(\w)\1` wird definiert, der aus den folgenden Elementen besteht.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |`(\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zur ersten Erfassungsgruppe.|  
 |`\1`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der ersten Erfassungsgruppe identisch ist.|  
@@ -70,7 +70,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(?<char>\w)\k<char>` wird definiert, der aus den folgenden Elementen besteht.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |`(?<char>\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zu einer Erfassungsgruppe mit dem Namen `char`|  
 |`\k<char>`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der `char`-Erfassungsgruppe identisch ist|  
@@ -100,7 +100,7 @@ Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassung
   
  Das folgende Beispiel enthält ein Muster für reguläre Ausdrücke, `(?<1>a)(?<1>\1b)*`, das die Gruppe namens „\1“ neu definiert. Die folgende Tabelle beschreibt jedes Muster im regulären Ausdruck.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`(?<1>a)`|Übereinstimmung mit dem Zeichen „a“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|  
 |`(?<1>\1b)*`|Übereinstimmung mit null oder einem Vorkommen der Gruppe `1` zusammen mit einem „b“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|  
@@ -120,7 +120,7 @@ Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassung
   
  Wurden durch eine Gruppe keine Teilzeichenfolgen gefunden, ist der Rückverweis auf diese Gruppe nicht definiert und führt niemals zu einer Übereinstimmung. Dies wird durch das Muster des regulären Ausdrucks `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` veranschaulicht, das folgendermaßen definiert ist:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|Beginnt den Vergleich an einer Wortgrenze.|  
 |`(\p{Lu}{2})`|Übereinstimmung mit zwei Großbuchstaben. Dies ist die erste Erfassungsgruppe.|  
@@ -133,5 +133,6 @@ Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassung
  [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

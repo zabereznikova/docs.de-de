@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fc995843c1e2f5977acbfe2158457d30ac355ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573912"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185049"
 ---
 # <a name="localization"></a>Lokalisierung
 Unter Lokalisierung versteht man den Vorgang, bei dem Anwendungsressourcen in lokalisierte Versionen für sämtliche von der Anwendung unterstützten Kulturen übersetzt werden. Sie sollten erst nach Durchführung des Schritts [Überprüfung der Lokalisierbarkeit](../../../docs/standard/globalization-localization/localizability-review.md) mit dem Lokalisierungsschritt fortfahren, um sicherzustellen, dass die globalisierte Anwendung für die Lokalisierung bereit ist.  
@@ -32,8 +32,9 @@ Unter Lokalisierung versteht man den Vorgang, bei dem Anwendungsressourcen in lo
   
  Das [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] stellt den Windows Forms-Ressourcen-Editor (Winres.exe) bereit, mit dem Sie im Handumdrehen Windows Forms für Zielkulturen lokalisieren können. Informationen zur Verwendung dieses Tools finden Sie unter [Winres.exe (Windows Forms-Ressourcen-Editor)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  
- [Überprüfung der Lokalisierbarkeit](../../../docs/standard/globalization-localization/localizability-review.md)  
- [Globalisierung](../../../docs/standard/globalization-localization/globalization.md)  
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  
+- [Überprüfung der Lokalisierbarkeit](../../../docs/standard/globalization-localization/localizability-review.md)  
+- [Globalisierung](../../../docs/standard/globalization-localization/globalization.md)  
+- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)

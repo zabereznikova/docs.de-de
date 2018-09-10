@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70b8e3d1f56eafc04b97a19a1582d9c664e587d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18458e52c6cf38b2900036613676adea3f3b2d0b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584669"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188123"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Gewusst wie: Schreiben einer Parallel.For-Schleife mit thread-lokalen Variablen
 Dieses Beispiel zeigt, wie Sie threadlokale Variablen verwenden, um den Status in jeder separaten Aufgabe zu speichern und abzurufen, die von einer <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife erstellt wird. Durch die Verwendung von threadlokalen Daten können Sie den mit der Synchronisierung einer großen Anzahl von Zugriffen auf einen Freigabezustand verbundenen Mehraufwand vermeiden. Statt an eine freigegebene Ressourcen in jeder Iteration zu schreiben, berechnen und speichern Sie den Wert, bis alle Iterationen für die Aufgabe abgeschlossen sind. Sie können dann das endgültige Ergebnis einmal an die freigegebene Ressource schreiben oder sie an eine andere Methoden übergeben.  
@@ -44,8 +44,9 @@ Function() new MyClass()
   
  Weitere Informationen zur Verwendung von Lambdaausdrücken finden Sie unter [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
+- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+- [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

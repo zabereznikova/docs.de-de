@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357f380a7103f186f7a66ea92a1a8b7930adead8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cac7e0fca4a009b7f5b6f677abed70cf2519052d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579716"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200471"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt werden können. Eine Zeichencodierung ist ein System, in dem jedes Zeichen in einem unterstützten Zeichensatz mit einem Wert verknüpft wird, der dieses Zeichen darstellt. Beispielsweise handelt es sich beim Morsealphabet um eine Zeichencodierung, die alle Zeichen im römischen Alphabet mit einem Muster aus Punkten und Bindestrichen verknüpft, das für die Übertragung über Telegrafenleitungen geeignet ist. Bei einer Zeichencodierung für Computer wird jedes Zeichen in einem unterstützten Zeichensatz mit einem numerischen Wert verknüpft, der das jeweilige Zeichen darstellt. Eine Zeichencodierung verfügt über zwei verschiedene Komponenten:  
@@ -64,7 +64,7 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
   
  Sie können Informationen über alle in .NET verfügbaren Codierungen abrufen, indem Sie die <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>-Methode aufrufen. .NET unterstützt die in der folgenden Tabelle aufgelisteten Zeichencodierungssysteme.  
   
-|Codierung|Klasse|description|Vorteile/Nachteile|  
+|Codierung|Klasse|Beschreibung |Vorteile/Nachteile|  
 |--------------|-----------|-----------------|-------------------------------|  
 |ASCII|<xref:System.Text.ASCIIEncoding>|Codiert einen begrenzten Bereich von Zeichen mithilfe der unteren sieben Bits eines Bytes.|Da diese Codierung nur Zeichenwerte von U+0000 bis U+007F unterstützt, ist sie in den meisten Fällen für weltweit einsetzbare Anwendungen nicht geeignet.|  
 |UTF-7|<xref:System.Text.UTF7Encoding>|Stellt Zeichen als Sequenzen von 7-Bit-ASCII-Zeichen dar. Nicht-ASCII-Unicode-Zeichen werden durch eine Escapesequenz von ASCII-Zeichen dargestellt.|UTF-7 unterstützt Protokolle wie E-Mail- und Newsgroupprotokolle. UTF-7 ist jedoch nicht besonders sicher oder robust. In einigen Fällen kann die Änderung eines Bits die Interpretation einer gesamten UTF-7-Zeichenfolge radikal ändern. In anderen Fällen können verschiedene UTF-7-Zeichenfolgen denselben Text codieren. Bei Sequenzen, die Nicht-ASCII-Zeichen enthalten, benötigt UTF-7 mehr Speicherplatz als UTF-8, und auch die Codierung/Decodierung erfolgt langsamer. Daher sollten Sie nach Möglichkeit UTF-8 anstelle von UTF-7 verwenden.|  
@@ -263,10 +263,11 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
  [!code-csharp[Conceptual.Encoding#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/custom1.cs#7)]
  [!code-vb[Conceptual.Encoding#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/custom1.vb#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Text.Encoder>  
- <xref:System.Text.Decoder>  
- <xref:System.Text.DecoderFallback>  
- <xref:System.Text.Encoding>  
- <xref:System.Text.EncoderFallback>  
- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Text.Encoder>  
+- <xref:System.Text.Decoder>  
+- <xref:System.Text.DecoderFallback>  
+- <xref:System.Text.Encoding>  
+- <xref:System.Text.EncoderFallback>  
+- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)

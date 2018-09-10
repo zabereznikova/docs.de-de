@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 604aabbff8554416d6794ff0b87188fb5bcc3185
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576681"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084069"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Gewusst wie: Erhalten von Speichern für isolierten Speicher
 Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot verfügbar. Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Klasse bietet eine Reihe von Methoden für die Interaktion mit einem isolierten Speicher. Zum Erstellen und Abrufen von Speichern stellt <xref:System.IO.IsolatedStorage.IsolatedStorageFile> drei statische Methoden bereit:  
@@ -56,9 +56,10 @@ Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot ver
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
  [!code-vb[Conceptual.IsolatedStorage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)  
- [Isolationstypen](../../../docs/standard/io/types-of-isolation.md)  
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)  
+- [Isolationstypen](../../../docs/standard/io/types-of-isolation.md)  
+- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

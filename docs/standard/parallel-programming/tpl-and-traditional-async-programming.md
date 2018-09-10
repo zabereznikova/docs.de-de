@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d708068dc0d55a1c7ec725977a4ca6d16b0f43c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591754"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225593"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL und herkömmliche asynchrone .NET Framework-Programmierung
 .NET Framework stellt die folgenden zwei Standardmuster zum Ausführen von E/A-gebundenen und rechnergebundenen asynchronen Vorgängen bereit:  
@@ -119,5 +119,6 @@ ms.locfileid: "33591754"
 ## <a name="using-the-streamextensions-sample-code"></a>Verwenden des StreamExtensions-Beispielcodes  
  Die Datei „Streamextensions.cs“ unter [Beispiele für die parallele Programmierung mit .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples) enthält mehrere Referenzimplementierungen, in denen Aufgabenobjekte für asynchrone Datei- und Netzwerk-E/A verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

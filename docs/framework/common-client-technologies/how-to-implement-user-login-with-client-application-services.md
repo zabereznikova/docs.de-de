@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation [.NET Framework], client application services
 - client application services, authenticate users
 ms.assetid: 5431a671-eb02-4e18-a651-24764fccec9a
-ms.openlocfilehash: 1b1c5bebb5bd94f0a56dc6da303ef2503ab6dd4f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a878b12620faf9a6e9fecbd2e76644aea3d80611
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743809"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504795"
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten
-Sie können Clientanwendungsdienste verwenden, um Benutzer durch einen vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildienst zu überprüfen. Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildiensts finden Sie unter [Verwenden der Formularauthentifizierung mit Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
+Sie können Clientanwendungsdienste verwenden, um Benutzer durch einen vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildienst zu überprüfen. Informationen zum Einrichten des [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Profildiensts finden Sie unter [Verwenden der Formularauthentifizierung mit Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
  Die folgenden Verfahren beschreiben, wie Benutzer über den Authentifizierungsdienst überprüft werden können, wenn Ihre Anwendung entsprechend auf die Anwendung eines der Client-Authentifizierungs-Dienstanbieter konfiguriert ist. Weitere Informationen finden Sie unter [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
@@ -59,4 +59,4 @@ Sie können Clientanwendungsdienste verwenden, um Benutzer durch einen vorhanden
  [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Vorgehensweise: Konfigurieren von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [Verwenden der Formularauthentifizierung mit Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)
+ [Verwenden der Formularauthentifizierung mit Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)

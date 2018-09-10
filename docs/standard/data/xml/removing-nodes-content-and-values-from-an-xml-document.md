@@ -5,17 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6710ecc80b8b053c2f2899dd89f8a5844cb6404d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568936"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44179376"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Entfernen von Knoten, Inhalten und Werten aus einem XML-Dokument
 Sobald sich ein XML-Dokumentobjektmodell (DOM) im Speicher befindet, können Sie Knoten aus der Struktur oder Inhalte und Werte aus bestimmten Knotentypen entfernen. Informationen zum Entfernen eines Blattknotens oder einer ganzen Knotenunterstruktur aus einem Dokument finden Sie unter [Entfernen von Knoten aus dem DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). Informationen zum Entfernen von Attributen aus einem Element finden Sie unter [Entfernen von Attributen aus einem Elementknoten im DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). Informationen zum Entfernen von Inhalten aus einem Knoten unter Beibehaltung des Knotens in der Struktur finden Sie unter [Entfernen von Knoteninhalt im Dokumentobjektmodell](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
- [Einfügen von Knoten in ein XML-Dokument](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
- [Ändern von Knoten, Inhalten und Werten in einem XML-Dokument](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+- [Einfügen von Knoten in ein XML-Dokument](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
+- [Ändern von Knoten, Inhalten und Werten in einem XML-Dokument](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)

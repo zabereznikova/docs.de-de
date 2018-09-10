@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582687"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865630"
 ---
 # <a name="task-cancellation"></a>Aufgabenabbruch
 Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>- und <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Klasse unterstützen einen Abbruch durch die Verwendung von Abbruchtoken, die in .NET Framework neu sind. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md). In den Task-Klassen erfordert ein Abbruch eine Zusammenarbeit zwischen dem Benutzerdelegaten, der einen abbrechbaren Vorgang darstellt, und dem Code, der den Abbruch angefordert hat.  Für einen erfolgreichen Abbruch muss der anfordernde Code die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>-Methode aufrufen und der Benutzerdelegat den Vorgang rechtzeitig beenden. Sie können den Vorgang mithilfe einer dieser Optionen beenden:  
@@ -40,6 +40,7 @@ Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>- und <xref:S
   
  Es ist möglich, dass eine Aufgabe nach dem Anfordern des Abbruchs weiterhin einige Elemente verarbeitet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [Gewusst wie: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

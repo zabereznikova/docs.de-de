@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b169353752f6e6483a056cdc9dd8c3227b9ebeb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571449"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185203"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Verwenden des try/catch-Blocks zum Abfangen von Ausnahmen
 
@@ -36,5 +36,6 @@ Die Common Language Runtime fängt Ausnahmen ab, die nicht von einem catch-Block
 > [!NOTE] 
 > Nahezu jede Codezeile kann eine Ausnahme verursachen, insbesondere Ausnahmen, die von der Common Language Runtime selbst ausgelöst werden, wie z.B. eine <xref:System.OutOfMemoryException>. Die meisten Anwendungen müssen diese Ausnahmen nicht behandeln, beim Schreiben von Bibliotheken, die von anderen Anwendungen verwendet werden sollen, sollte diese Möglichkeit allerdings berücksichtigen werden. Vorschläge dazu, wann Sie Code in einen try-Block platzieren sollten, finden Sie unter [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md).
 
-## <a name="see-also"></a>Siehe auch  
-[Ausnahmen](index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Ausnahmen](index.md)

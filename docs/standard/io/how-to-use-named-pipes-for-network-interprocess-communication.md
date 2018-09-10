@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8da9ff6df910e1932c593c1f1b882dca12146a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572358"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225528"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk
 Benannte Pipes stellen prozessübergreifende Kommunikation zwischen einem Pipeserver und einem oder mehreren Pipeclients bereit. Sie bieten mehr Funktionen als anonyme Pipes, die eine prozessübergreifende Kommunikation auf einem lokalen Computer bereitstellen. Benannte Pipes unterstützen Vollduplexkommunikation über ein Netzwerk und mehrere Serverinstanzen, meldungsbasierte Kommunikation und Clientidentitätswechsel, die verbindenden Prozessen die Verwendung ihrer eigenen Berechtigungen auf Remoteservern ermöglichen.  
@@ -45,8 +45,9 @@ Benannte Pipes stellen prozessübergreifende Kommunikation zwischen einem Pipese
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Der Client- und der Serverprozess in diesem Beispiel sind zur Ausführung auf dem gleichen Computer vorgesehen, sodass der Servername, der dem <xref:System.IO.Pipes.NamedPipeClientStream>-Objekt bereitgestellt wird, `"."` lautet. Wenn der Client- und der Serverprozess auf verschiedenen Computern ausgeführt würden, würde `"."` durch den Netzwerknamen des Computers ersetzt, auf dem der Serverprozess ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Principal.TokenImpersonationLevel>  
- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
- [Pipes](../../../docs/standard/io/pipe-operations.md)  
- [Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Security.Principal.TokenImpersonationLevel>  
+- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
+- [Pipes](../../../docs/standard/io/pipe-operations.md)  
+- [Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

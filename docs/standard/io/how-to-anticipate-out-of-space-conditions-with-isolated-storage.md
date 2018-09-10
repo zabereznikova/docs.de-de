@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575579"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207719"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Gewusst wie: Vorhersehen von Speicherengpässen bei isoliertem Speicher
 Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](../../../docs/standard/io/isolated-storage.md#quotas) eingeschränkt, das die maximale Größe für das Datendepot festlegt, in dem isolierte Speicherdateien und Verzeichnisse vorhanden sind. Das Kontingent wird durch die Sicherheitsrichtlinie definiert und kann von Administratoren konfiguriert werden. Falls die maximal zulässige Größe überschritten wird, wenn Sie versuchen, Daten zu schreiben, wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme ausgelöst, und bei dem Vorgang tritt ein Fehler auf. Dies hilft, bösartige Denial-of-Service-Angriffe zu vermeiden, die dazu führen könnten, dass die Anwendung Anforderungen verweigert, da der Datenspeicher gefüllt ist.  
@@ -45,7 +45,8 @@ Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](../../../doc
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
  [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)  
- [Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)  
+- [Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

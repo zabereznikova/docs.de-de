@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93303ba84538a85350fd09b78f9963558668b91b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3b9671c10889287bc22d64df1fb5c3a2984bd55
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582108"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195279"
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Gewusst wie: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock
 <xref:System.Threading.SpinLock?displayProperty=nameWithType> ist eine gegenseitige Low-Level- Ausschlusssperre, die Sie für Szenarien mit sehr kurzen Wartezeiten verwenden können. <xref:System.Threading.SpinLock> ist nicht wiedereintrittsfähig. Wenn ein Thread in die Sperre eintritt, muss er die Sperre ordnungsgemäß beenden, bevor er erneut eintreten kann. In der Regel würde jeder Versuch, erneut in die Sperre einzutreten, einen Deadlock verursachen, und Deadlocks sind sehr schwer zu beheben. Als Hilfe zur Entwicklung unterstützt <xref:System.Threading.SpinLock?displayProperty=nameWithType> einen Modus zum Nachverfolgen von Threads, der bewirkt, dass eine Ausnahme ausgelöst wird, wenn ein Thread versucht, erneut in eine Sperre einzutreten, in der er sich bereits befindet. So können Sie leichter den Punkt lokalisieren, an dem die Sperre nicht ordnungsgemäß beendet wurde. Sie können den Modus zum Nachverfolgen von Threads mithilfe des <xref:System.Threading.SpinLock>-Konstruktors einschalten, der einen booleschen Eingabeparameter akzeptiert, und ein `true`-Argument übergeben. Deaktivieren Sie den Modus zum Nachverfolgen von Threads nach Abschluss der Entwicklungs- und Testphase im Interesse besserer Leistung.  
@@ -30,5 +30,6 @@ ms.locfileid: "33582108"
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  
   
-## <a name="see-also"></a>Siehe auch  
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a>Siehe auch
+
+- [SpinLock](../../../docs/standard/threading/spinlock.md)

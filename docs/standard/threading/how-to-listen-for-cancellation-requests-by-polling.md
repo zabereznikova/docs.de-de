@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6e257ced27812f8383edf9eb9688e9f48cfde02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583746"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266851"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Gewusst wie: Lauschen auf Abbruchanforderungen durch Abruf
 Das folgende Beispiel zeigt eine Möglichkeit, wie Benutzercode ein Abbruchtoken in regelmäßigen Abständen abfragen kann, um festzustellen, ob vom aufrufenden Thread ein Abbruch angefordert wurde. In diesem Beispiel wird der <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Typ verwendet, aber das gleiche Muster gilt für asynchrone Vorgänge, die direkt vom <xref:System.Threading.ThreadPool?displayProperty=nameWithType>- oder <xref:System.Threading.Thread?displayProperty=nameWithType>-Typ erstellt werden.  
@@ -30,5 +30,6 @@ Das folgende Beispiel zeigt eine Möglichkeit, wie Benutzercode ein Abbruchtoken
   
  Beim Aufrufen von <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> müssen Sie die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft nur dann explizit überprüfen, wenn als Reaktion auf den Abbruch neben dem Auslösen der Ausnahme noch Anderes erforderlich ist. In diesem Beispiel sehen Sie, dass der Code tatsächlich zweimal auf die Eigenschaft zugreift: einmal mit explizitem Zugriff und erneut in der <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>-Methode. Da jedoch das Lesen der <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft nur eine flüchtige Leseanweisung pro Zugriff beinhaltet, ist der doppelte Zugriff im Hinblick auf die Leistung nicht signifikant. Dennoch ist der Methodenaufruf dem manuellen Auslösen der <xref:System.OperationCanceledException> vorzuziehen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)

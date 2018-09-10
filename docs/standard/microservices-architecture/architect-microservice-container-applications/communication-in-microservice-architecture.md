@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Kommu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: f0e0e63c6ce2e4699cc4f9c0bd0d120549b88cca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 827d28adda90403d866e7bc13d9eae99fe47c137
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106011"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804106"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -61,7 +61,7 @@ Wenn Ihr Microservice eine weitere Aktion in einem anderen Microservice auslöse
 
 Und schließlich sollten Sie sich nicht auf die Erstellung synchroner Anforderungen für Daten stützen, wenn Ihr ursprünglicher Microservice Daten benötigt, die ursprünglich zu anderen Microservices gehörten (an diesem Punkt treten bei der Erstellung von Microservices die meisten Probleme auf). Stattdessen können Sie diese Daten (nur die benötigten Attribute) in der Datenbank des ersten Dienstes replizieren oder verteilen, indem Sie die letztliche Konsistenz verwenden (in der Regel über Integrationsereignisse, wie in den folgenden Abschnitten erläutert wird).
 
-Wie bereits oben im Abschnitt [Identifizieren von Domänenmodellgrenzen für jeden Microservice](#identifying-domain-model-boundaries-for-each-microservice) erläutert wurde, stellt das Duplizieren einiger Daten, die mehrere Microservices übergreifen, keinen falschen Entwurf dar. Im Gegenteil: Durch diese Vorgehensweise können Sie die Daten in die spezifische Sprache bzw. Benennungen dieser zusätzlichen Domäne oder des begrenzten Kontexts verschieben. In der Anwendung [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) gibt es beispielsweise den Microservice „identity.api“, der bei der Entität „User“ (Benutzer) für die meisten Benutzerdaten zuständig ist. Wenn Sie jedoch Daten über den Benutzer im Microservice für Bestellungen speichern müssen, speichern Sie diese unter einer anderen Entität mit dem Namen „Buyer“ (Käufer). Die Entität „Buyer“ (Käufer) weist die gleiche Identität wie die ursprüngliche Entität „User“ (Benutzer) auf, sie verfügt jedoch möglicherweise nur über die Attribute, die von der Bestelldomäne benötigt werden, und nicht über das gesamte Benutzerprofil.
+Wie bereits oben im Abschnitt [Identifizieren von Domänenmodellgrenzen für jeden Microservice](#identifying-domain-model-boundaries-for-each-microservice) erläutert wurde, stellt das Duplizieren einiger Daten, die mehrere Microservices übergreifen, keinen falschen Entwurf dar. Im Gegenteil: Durch diese Vorgehensweise können Sie die Daten in die spezifische Sprache bzw. Benennungen dieser zusätzlichen Domäne oder des begrenzten Kontexts verschieben. In der Anwendung [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) gibt es beispielsweise den Microservice „identity.api“, der bei der Entität „User“ (Benutzer) für die meisten Benutzerdaten zuständig ist. Wenn Sie jedoch Daten über den Benutzer im Microservice für Bestellungen speichern müssen, speichern Sie diese unter einer anderen Entität mit dem Namen „Buyer“ (Käufer). Die Entität „Buyer“ (Käufer) weist die gleiche Identität wie die ursprüngliche Entität „User“ (Benutzer) auf, sie verfügt jedoch möglicherweise nur über die Attribute, die von der Bestelldomäne benötigt werden, und nicht über das gesamte Benutzerprofil.
 
 Sie können für die Microservices übergreifende asynchrone Übertragung und Weitergabe von Daten ein beliebiges Protokoll verwenden, um die letztliche Konsistenz zu erhalten. Wie bereits erwähnt, könnten Sie Integrationsereignisse mithilfe eines Ereignisbus oder Nachrichtenbrokers verwenden. Alternativ könnten Sie auch HTTP verwenden, indem Sie stattdessen die anderen Dienste abrufen. Das spielt keine Rolle. Wichtig ist, dass Sie keine synchronen Abhängigkeiten zwischen Ihren Microservices schaffen.
 

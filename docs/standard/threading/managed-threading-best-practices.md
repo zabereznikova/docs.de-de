@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592469"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204980"
 ---
 # <a name="managed-threading-best-practices"></a>Empfohlene Vorgehensweise für das verwaltete Threading
 Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforderlich. Für die meisten Aufgaben können Sie die Komplexität reduzieren, indem Sie Ausführungsanforderungen mithilfe von Threadpoolthreads in Warteschlangen einfügen. Dieses Thema behandelt problematische Situationen wie die Koordinierung der Verarbeitung von mehreren Threads oder die Behandlung von blockierenden Threads.  
@@ -196,6 +196,7 @@ else {
   
 -   Vermeiden Sie die Bereitstellung von statischen Methoden, die den statischen Zustand ändern. Bei den üblichen Serverszenarios wird der statische Zustand in mehreren Anforderungen gemeinsam genutzt, d. h., mehrere Threads können den Code gleichzeitig ausführen. Dadurch werden Threadingfehler möglich. Verwenden Sie u. U. ein Entwurfsmuster, bei dem Daten in Instanzen gekapselt werden, die nicht in mehreren Anforderungen gemeinsam genutzt werden. Darüber hinaus können bei der Synchronisierung statischer Daten Aufrufe zwischen statischen Methoden, die den Zustand ändern, zu Deadlocks oder redundanter Synchronisierung führen und die Leistung beeinträchtigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Threading](../../../docs/standard/threading/index.md)  
- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Threading](../../../docs/standard/threading/index.md)  
+- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)

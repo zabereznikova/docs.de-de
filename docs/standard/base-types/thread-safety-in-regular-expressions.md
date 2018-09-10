@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79ca0b92cf79ca9be023925f064c1c7c16b3c9ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567717"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208165"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Threadsicherheit in regulären Ausdrücken
 Die <xref:System.Text.RegularExpressions.Regex>-Klasse selbst ist threadsicher und nicht änderbar (schreibgeschützt). **Regex**-Objekte können also in jedem Thread erzeugt und von mehreren Threads gemeinsam genutzt werden. Übereinstimmende Methoden können von jedem Thread aufgerufen werden und ändern keinen globalen Zustand.  
@@ -27,5 +27,6 @@ Die <xref:System.Text.RegularExpressions.Regex>-Klasse selbst ist threadsicher u
   
  Enumeratoren sind die einzige Ausnahme. Eine Anwendung muss Aufrufe von Sammlungsenumeratoren serialisieren. Die Regel ist, dass für eine Sammlung, die in mehr als einem Thread gleichzeitig als Enumeration verwendet werden kann, die Enumeratormethoden im Stammobjekt der Sammlung, die der Enumerator durchläuft, synchronisiert werden müssen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)

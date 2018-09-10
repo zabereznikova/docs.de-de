@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569771"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086721"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Gewusst wie: Auffüllen einer Zahl mit führenden Nullen
 Führende Nullen können Sie mithilfe der [numerischen Standardformatzeichenfolge](../../../docs/standard/base-types/standard-numeric-format-strings.md) „D“ zusammen mit einem Genauigkeitsbezeichner zu einer Ganzzahl hinzufügen. Ganz- und Gleitkommazahlen können Sie führende Nullen mithilfe einer [benutzerdefinierten numerischen Formatzeichenfolge](../../../docs/standard/base-types/custom-numeric-format-strings.md) hinzufügen. In diesem Thema lernen Sie beide Methoden zum Auffüllen einer Zahl mit führenden Nullen kennen.  
@@ -93,7 +93,8 @@ Führende Nullen können Sie mithilfe der [numerischen Standardformatzeichenfolg
  [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
  [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)

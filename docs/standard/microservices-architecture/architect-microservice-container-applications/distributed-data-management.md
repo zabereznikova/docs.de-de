@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Her
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480664"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268850"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Herausforderungen und Lösungen für die verteilte Datenverwaltung
 
@@ -79,7 +79,7 @@ Wenn Ihre internen Microservices miteinander kommunizieren, indem sie wie beschr
 
 Um eine Autonomie der Microservices zu erzwingen und eine bessere Resilienz zu erhalten, sollten Sie daher die Kommunikation in Form von Anforderungs-/Antwortketten über Microservices auf ein Minimum reduzieren. Es wird empfohlen, für die Kommunikation zwischen Microservices ausschließlich eine asynchrone Interaktion zu verwenden, und zwar entweder mithilfe einer asynchronen nachrichten- und ereignisbasierten Kommunikation oder mithilfe von HTTP-Abrufen, die vom ursprünglichen HTTP-Anforderungs-/Antwort-Zyklus unabhängig sind.
 
-Die Verwendung der asynchronen Kommunikation wird weiter unten in diesem Leitfaden in den Abschnitten [Asynchronous microservice integration enforces microservice’s autonomy (Asynchrone Microservice-Integration erzwingt Microservice-Autonomie)](#asynchronous-microservice-integration-enforce-microservices-autonomy) und [Asynchronous message-based communication (Asynchrone nachrichtenbasierte Kommunikation)](#asynchronous-message-based-communication) mit zusätzlichen Details beschrieben.
+Die Verwendung der asynchronen Kommunikation wird weiter unten in diesem Leitfaden in den Abschnitten [Asynchronous microservice integration enforces microservice’s autonomy (Asynchrone Microservice-Integration erzwingt Microservice-Autonomie)](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) und [Asynchronous message-based communication (Asynchrone nachrichtenbasierte Kommunikation)](asynchronous-message-based-communication.md) mit zusätzlichen Details beschrieben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

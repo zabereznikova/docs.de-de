@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c1e1b476a1de1f0c348e264c9dc6b42ceb81eff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574049"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869340"
 ---
 # <a name="culture-insensitive-string-operations"></a>Kulturunabhängige Zeichenfolgenoperationen
 Kulturabhängige Zeichenfolgenoperationen können von Vorteil sein, wenn Sie Anwendungen erstellen, mit denen Benutzern Ergebnisse auf Kulturbasis angezeigt werden. In der Standardeinstellung rufen kulturabhängige Methoden die zu verwendende Kultur aus der <xref:System.Globalization.CultureInfo.CurrentCulture%2A>-Eigenschaft für den aktuellen Thread ab.  
@@ -32,5 +32,6 @@ Kulturabhängige Zeichenfolgenoperationen können von Vorteil sein, wenn Sie Anw
   
  Unabhängig davon, ob die von Ihnen entwickelte Anwendung Code zur Behandlung von Lokalisierungs- und Globalisierungsproblemen enthält, müssen Sie die .NET Framework-Methoden kennen, die in der Standardeinstellung kulturabhängige Ergebnisse abrufen. Aus diesem Grund wird in diesem Thema erläutert, wie die Anwendungen diese Methoden ordnungsgemäß verwenden, um kulturunabhängige Ergebnisse zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)

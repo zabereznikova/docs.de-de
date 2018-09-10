@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebea62f33c5df252dd73a0708f31612cd2998728
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c85731b991399e92297d6109a3000c1e345e02f6
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580938"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087206"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>Gewusst wie: Angeben des Ausführungsmodus in PLINQ
 Dieses Beispiel zeigt, wie erzwungen wird, dass PLINQ seine Standardheuristik umgeht und eine Abfrage unabhängig von der Form parallelisiert.  
@@ -32,6 +32,7 @@ Dieses Beispiel zeigt, wie erzwungen wird, dass PLINQ seine Standardheuristik um
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Schneiden Sie diesen Code aus, fügen Sie ihn in das [PLINQ-Datenbeispiel](../../../docs/standard/parallel-programming/plinq-data-sample.md) ein, und rufen Sie die Methode in `Main` auf.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

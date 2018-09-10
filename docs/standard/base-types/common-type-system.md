@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d21a3a315b7dc63a84f7b5d43d55c06eb2d5188
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579586"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262606"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
@@ -71,7 +71,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  In der folgenden Tabelle werden einige Eigenschaften beschrieben, über die eine Klasse verfügen kann. Jede für Laufzeitunterstützung ausgelegte Sprache bietet eine Möglichkeit, eines oder mehrere Merkmale für eine Klasse oder einen Klassenmember festzulegen. In einzelnen Programmiersprachen, die .NET als Ziel haben, sind jedoch möglicherweise nicht alle dieser Eigenschaften verfügbar.  
   
-|Merkmal|description|  
+|Merkmal|Beschreibung |  
 |--------------------|-----------------|  
 |sealed|Legt fest, dass von diesem Typ keine andere Klasse abgeleitet werden kann.|  
 |implements|Gibt an, dass die Klasse eine oder mehrere Schnittstellen verwendet; es werden Implementierungen von Schnittstellenmembern bereitgestellt.|  
@@ -190,7 +190,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ### <a name="type-accessibility"></a>Typzugriff  
  Alle Typen verfügen über einen Modifizierer, der regelt, welche anderen Typen auf diesen Typ zugreifen können. In der folgenden Tabelle werden die von der Laufzeit unterstützten Zugriffsarten auf Typen beschrieben.  
   
-|Zugriff|description|  
+|Zugriff|Beschreibung |  
 |-------------------|-----------------|  
 |public|Auf diesen Typ kann von allen Assemblys zugegriffen werden.|  
 |Assembly|Auf diesen Typ kann nur innerhalb seiner Assembly zugegriffen werden.|  
@@ -295,7 +295,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ## <a name="characteristics-of-type-members"></a>Eigenschaften von Typmembern  
  Das allgemeine Typsystem unterstützt Typmember, die eine Vielzahl unterschiedlicher Merkmale haben können. Zur Unterstützung all dieser Merkmale sind jedoch keine speziellen Sprachen erforderlich. In der folgenden Tabelle sind diese Membermerkmale beschrieben.  
   
-|Merkmal|Anwendbar auf|description|  
+|Merkmal|Anwendbar auf|Beschreibung |  
 |--------------------|------------------|-----------------|  
 |abstract|Methoden, Eigenschaften und Ereignisse|Der Typ stellt keine Methodenimplementierung bereit. Typen, die abstrakte Methoden erben oder implementieren, müssen eine Implementierung für die Methode bereitstellen. Die einzige Ausnahme liegt vor, wenn der abgeleitete Typ selbst vom Typ abstract ist. Alle Methoden vom Typ abstract sind auch virtual.|  
 |private, family, assembly, family und assembly, family oder assembly oder public|Alle|Definiert die Zugriffsart des Members:<br /><br /> private<br /> Zugriff ist nur innerhalb desselben Typs wie dem des Members oder innerhalb eines geschachtelten Typs möglich.<br /><br /> family<br /> Zugriff innerhalb desselben Typs wie dem des Members und von abgeleiteten Typen möglich, die davon erben.<br /><br /> Assembly<br /> Zugriff nur in der Assembly möglich, in der der Typ definiert ist.<br /><br /> family und assembly<br /> Zugriff nur von Typen möglich, die sowohl über den Zugriffstyp family als auch assembly verfügen.<br /><br /> family oder assembly<br /> Zugriff nur von Typen möglich, die über den Zugriffstyp "family" oder "assembly" verfügen.<br /><br /> public<br /> Zugriff von jedem Typ möglich.|  
@@ -320,7 +320,8 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
 -   Ein abgeleiteter Typ kann eine geerbte virtuelle Methode überschreiben. Die überschreibende Methode stellt eine neue Definition für die Methode bereit, die basierend auf dem Werttyp zur Laufzeit aufgerufen wird und nicht basierend auf dem zur Kompilierungszeit bekannten Variablentyp. Eine virtuelle Methode kann nur von einer Methode überschrieben werden, wenn die virtuelle Methode nicht als `final` gekennzeichnet ist und die neue Methode mindestens dieselben Zugriffstypen unterstützt wie die virtuelle Methode.  
   
-## <a name="see-also"></a>Siehe auch  
- [.NET API-Browser](/dotnet/api)  
- [Common Language Runtime](../../../docs/standard/clr.md)  
- [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Siehe auch
+
+- [.NET API-Browser](/dotnet/api)  
+- [Common Language Runtime](../../../docs/standard/clr.md)  
+- [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)

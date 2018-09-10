@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392852"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519407"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung
 Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur geringfügig schwieriger als bei COM-Komponenten. Für das Setup sind zwei Manifeste erforderlich:  
@@ -37,7 +37,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Weitere Informationen über Elemente von Manifesten und deren Attribute finden Sie unter [Anwendungsmanifeste](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
+     Weitere Informationen über Elemente von Manifesten und deren Attribute finden Sie unter [Anwendungsmanifeste](/windows/desktop/SbsCs/application-manifests).  
   
 3.  Bestimmen Sie den Besitzer des Manifests. Im folgenden Beispiel ist `myComApp`, Version 1, Besitzer der Manifestdatei.  
   
@@ -77,7 +77,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
   
 5.  Speichern und benennen Sie die Manifestdatei. Der Name eines Anwendungsmanifests besteht aus dem Namen der ausführbaren Assembly gefolgt von der Erweiterung MANIFEST. Der Dateiname des Anwendungsmanifests für myComApp.exe lautet z. B. myComApp.exe.manifest.  
   
- Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung installieren. Sie können es aber auch der EXE-Datei der Anwendung als eine Ressource hinzufügen. Weitere Informationen finden Sie unter [About Side-by-Side Assemblies (Parallele Assemblys)](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
+ Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung installieren. Sie können es aber auch der EXE-Datei der Anwendung als eine Ressource hinzufügen. Weitere Informationen finden Sie unter [About Side-by-Side Assemblies (Parallele Assemblys)](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>So erstellen Sie ein Komponentenmanifest  
   
@@ -105,7 +105,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
   
 4.  Bestimmen Sie alle Klassen in der Assembly. Verwenden Sie das `<clrClass>`-Element, um die einzelnen Klassen in der verwalteten Assembly eindeutig zu kennzeichnen. Das Element, das ein Unterelement des `<assembly>`-Elements ist, verfügt über die in der folgenden Tabelle beschriebenen Attribute.  
   
-    |Attribut|description|Erforderlich|  
+    |Attribut|Beschreibung |Erforderlich|  
     |---------------|-----------------|--------------|  
     |`clsid`|Der Bezeichner, der die zu aktivierende Klasse kennzeichnet.|Ja|  
     |`description`|Eine Zeichenfolge, die Benutzer über die Komponente informiert. Der Standardwert ist eine leere Zeichenfolge.|Nein|  

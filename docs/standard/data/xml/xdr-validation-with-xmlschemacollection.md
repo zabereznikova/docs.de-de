@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72bb3c2badef5262907e2e4fa8b461b576e8867d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ca806f0f9c7e1ad859affe05d5db8ec0d3b36b03
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43476049"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44078874"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>XDR-Validierung mit „XmlSchemaCollection“
 
@@ -160,5 +160,5 @@ Im folgenden Beispiel wird der Inhalt der XDR-Schemadatei *HeadCount.xdr* darges
 
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
-[Schemakompilierung mit „XmlSchemaCollection“](xmlschemacollection-schema-compilation.md)  
+- <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
+- [Schemakompilierung mit „XmlSchemaCollection“](xmlschemacollection-schema-compilation.md)

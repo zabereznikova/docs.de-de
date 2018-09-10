@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91835006925f9768c25ad1a984a3b189e3e4c58c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579079"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262499"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -251,13 +251,14 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  Weitere Informationen zum Validieren von XML-Dokumenten mithilfe einer <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
- [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
+- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
+- [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

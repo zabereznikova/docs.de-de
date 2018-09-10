@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390612"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864549"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Verwaltetes und nicht verwaltetes Threading in Windows
 Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -Klasse, einschließlich Threads, die von der Common Language Runtime erstellt werden, und Threads, die außerhalb der Runtime erstellt werden und in die verwaltete Umgebung eintreten, um Code auszuführen. Die Laufzeit überwacht alle Threads in ihrem Prozess, die jemals Code in der verwalteten Ausführungsumgebung ausgeführt haben. Sie verfolgt keine anderen Threads. Threads können über COM-Interop (da die Runtime verwaltete Objekte als COM-Objekte für die nicht verwaltete Umgebung verfügbar macht), über die COM-[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)-Funktion und über einen Plattformaufruf in die verwaltete Ausführungsumgebung eintreten.  
@@ -63,9 +63,10 @@ Die Verwaltung aller Threads erfolgt über die <xref:System.Threading.Thread> -K
 ## <a name="blocking-issues"></a>Blockierungsprobleme  
  Wenn ein Thread einen nicht verwalteten Aufruf in der Betriebssystem vornimmt, das den Thread in nicht verwaltetem Code blockiert hat, übernimmt die Laufzeit keine Kontrolle darüber für <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> oder <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Im Fall von <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> kennzeichnet die Laufzeit den Thread für **Abort** und übernimmt die Kontrolle darüber, wenn der verwaltete Code erneut eingegeben wird. Sie sollten vorzugsweise die verwaltete Blockierung statt die nicht verwaltete Blockierung verwenden. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> usw. reagieren alle auf <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> und <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Wenn sich Ihr Thread in einem Singlethread-Apartment befindet, werden all diese verwalteten Blockierungsvorgänge außerdem Meldungen in Ihr Apartment verschieben, während Ihr Thread blockiert ist.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

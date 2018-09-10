@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a0c57ab049fff699d5bb12004fd48d90a226e514
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935686"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525021"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Gewusst wie: Debuggen von Windows-Dienstanwendungen
 Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb von Visual Studio ausgeführt werden. Aus diesem Grund ist das Debuggen eines Dienstes nicht so einfach wie das Debuggen anderer Anwendungstypen in Visual Studio. Damit ein Dienst gedebuggt werden kann, muss er gestartet werden. Danach muss ein Debugger an den Prozess angehängt werden, in dem er ausgeführt wird. Anschließend kann die Anwendung mit allen Standarddebugfunktionen von Visual Studio gedebuggt werden.  
@@ -33,7 +33,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
 >  Das Debuggen der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode kann Schwierigkeiten bereiten, da vom Dienststeuerungs-Manager ein Limit von 30 Sekunden für alle Versuche erzwungen wird, einen Dienst zu starten. Weitere Informationen finden Sie unter [Problembehandlung: Debuggen von Windows-Diensten](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Um aussagekräftige Informationen für das Debuggen zu erhalten, muss der Visual Studio-Debugger Symboldateien für die Binärdateien finden, die gerade gedebuggt werden. Wenn Sie einen Dienst debuggen, den Sie in Visual Studio erstellt haben, befinden sich die Symboldateien (PDB-Dateien) in demselben Ordner wie die ausführbare Datei oder Bibliothek, und der Debugger lädt diese automatisch. Wenn Sie einen Dienst debuggen, den Sie erstellt haben, sollten Sie zuerst die Symbole für den Dienst suchen und sicherstellen, dass sie vom Debugger gefunden werden können. Weitere Informationen finden Sie unter [Angeben von Symbol(PDB)- und Quelldateien](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Wenn Sie einen Systemprozess debuggen oder Symbole für Systemaufrufe in Ihren Diensten haben möchten, sollten Sie die Microsoft-Symbolserver hinzufügen. Weitere Informationen finden Sie unter [Debugging with Symbols(Debuggen mit Symbolen)](/windows/desktop/DxTechArts/debugging-with-symbols).  
+>  Um aussagekräftige Informationen für das Debuggen zu erhalten, muss der Visual Studio-Debugger Symboldateien für die Binärdateien finden, die gerade gedebuggt werden. Wenn Sie einen Dienst debuggen, den Sie in Visual Studio erstellt haben, befinden sich die Symboldateien (PDB-Dateien) in demselben Ordner wie die ausführbare Datei oder Bibliothek, und der Debugger lädt diese automatisch. Wenn Sie einen Dienst debuggen, den Sie erstellt haben, sollten Sie zuerst die Symbole für den Dienst suchen und sicherstellen, dass sie vom Debugger gefunden werden können. Weitere Informationen finden Sie unter [Angeben von Symbol(PDB)- und Quelldateien](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Wenn Sie einen Systemprozess debuggen oder Symbole für Systemaufrufe in Ihren Diensten haben möchten, sollten Sie die Microsoft-Symbolserver hinzufügen. Weitere Informationen finden Sie unter [Debugging with Symbols(Debuggen mit Symbolen)](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>So debuggen Sie einen Dienst  
   
@@ -112,7 +112,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
   
 5.  Wenn Sie das Programm als Windows-Dienst ausführen, installieren Sie es, und starten Sie sie wie gewohnt für einen Windows-Dienst. Es ist nicht notwendig, diese Änderungen rückgängig zu machen.  
   
- In einigen Fällen, z. B. beim Debuggen eines Problems, das nur beim Systemstart auftritt, müssen Sie den Windows-Debugger verwenden. Installieren Sie die [Debugtools für Windows](http://msdn.microsoft.com/windows/hardware/hh852365). Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von Windows-Diensten](http://support.microsoft.com/kb/824344).  
+ In einigen Fällen, z. B. beim Debuggen eines Problems, das nur beim Systemstart auftritt, müssen Sie den Windows-Debugger verwenden. Installieren Sie die [Debugtools für Windows](https://msdn.microsoft.com/windows/hardware/hh852365). Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von Windows-Diensten](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

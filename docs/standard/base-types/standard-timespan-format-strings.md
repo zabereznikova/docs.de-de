@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578306"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085264"
 ---
 # <a name="standard-timespan-format-strings"></a>TimeSpan-Standardformatzeichenfolgen
 <a name="Top"></a> Eine standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.TimeSpan>-Werts zu definieren, der sich aus einem Formatierungsvorgang ergibt. Jede Formatzeichenfolge, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte <xref:System.TimeSpan>-Zahlenformatzeichenfolge interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "33578306"
   
 <a name="top"></a> Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.  
   
-|Formatbezeichner|name|description|Beispiele|  
+|Formatbezeichner|name|Beschreibung |Beispiele|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Konstantenformat (unveränderlich)|Dieser Bezeichner ist nicht kulturabhängig. Er hat das Format `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> (Die "t"- und "T"-Formatzeichenfolgen erzeugen die gleichen Ergebnisse.)<br /><br /> Weitere Informationen finden Sie unter [Der Konstantenformatbezeichner "c"](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Allgemeines kurzes Format|Dieser Bezeichner gibt nur aus, was benötigt wird. Es ist kulturabhängig und besitzt das Format `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Weitere Informationen finden Sie unter [Der allgemeine kurze Formatbezeichner "g"](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -55,7 +55,7 @@ ms.locfileid: "33578306"
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Punkt (.) und der Doppelpunkt (:) sind Literalsymbole. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die optionale Anzahl von Tagen ohne führende Nullen.|  
@@ -84,7 +84,7 @@ ms.locfileid: "33578306"
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die optionale Anzahl von Tagen ohne führende Nullen.|  
@@ -111,7 +111,7 @@ ms.locfileid: "33578306"
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
-|Element|description|  
+|Element|Beschreibung |  
 |-------------|-----------------|  
 |*-*|Ein optionales negatives Vorzeichen, das ein negatives Zeitintervall angibt.|  
 |*d*|Die Anzahl von Tagen ohne führende Nullen.|  
@@ -130,7 +130,8 @@ ms.locfileid: "33578306"
   
  [Zurück zur Tabelle](#Top)  
   
-## <a name="see-also"></a>Siehe auch  
- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
+- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

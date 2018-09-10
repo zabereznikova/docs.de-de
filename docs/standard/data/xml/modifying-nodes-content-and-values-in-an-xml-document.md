@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571435"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208581"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Ändern von Knoten, Inhalten und Werten in einem XML-Dokument
 Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ändern. Sie haben folgende Möglichkeiten:  
@@ -46,5 +46,6 @@ Es gibt viele Möglichkeiten, die Knoten und den Inhalt eines Dokuments zu ände
   
  Das Hinzufügen oder Entfernen von schreibgeschützten untergeordneten Elementen eines Knotens, der bearbeitet werden kann, ist ein gültiger Vorgang. Durch Versuche, den schreibgeschützten Knoten selbst zu ändern, wird eine <xref:System.InvalidOperationException> ausgelöst. Ein Bespiel dafür ist das Verändern der untergeordneten Elemente eines <xref:System.Xml.XmlEntityReference>-Knotens. Die untergeordneten Elemente sind schreibgeschützt und können nicht verändert werden. Durch einen Versuch, diese zu verändern, wird eine <xref:System.InvalidOperationException> ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XML-Dokumentobjektmodell (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

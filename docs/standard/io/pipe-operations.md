@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e0d2747abbacf766ddeda6f41404d8701cbc273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdc12091a377a118dc533e5f299fa4833af64baf
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574365"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081868"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>Pipeoperationen in .NET Framework
 Pipes stellen eine Möglichkeit zur prozessübergreifenden Kommunikation dar. Es gibt zwei Arten von Pipes:  
@@ -36,7 +36,8 @@ Pipes stellen eine Möglichkeit zur prozessübergreifenden Kommunikation dar. Es
   
      Siehe [Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
- [Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
- [Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
+- [Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+- [Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

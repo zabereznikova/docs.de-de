@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579157"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084948"
 ---
 # <a name="garbage-collection-notifications"></a>Garbage Collection-Benachrichtigungen
 Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine Garbage Collection der Generation 2) der Common Language Runtime die Leistung beeinträchtigen kann. Dies kann vor allem bei Servern, die eine hohe Zahl an Anforderungen verarbeiten, ein Problem sein; in diesem Fall kann eine lange Garbage Collection einen Anforderungstimeout verursachen. Um eine vollständige Garbage Collection im Rahmen eines kritischen Zeitraums zu verhindern, können Sie benachrichtigt werden, wenn eine vollständige Garbage Collection bevorsteht, und Maßnahmen ergreifen, um die Workload auf eine andere Serverinstanz umzuleiten. Sie können auch selbst eine Garbage Collection auslösen, vorausgesetzt, dass die aktuelle Serverinstanz keine Anforderungen verarbeiten muss.  
@@ -54,7 +54,7 @@ Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine G
 ## <a name="notification-threshold-parameters"></a>Schwellenwertparameter für die Benachrichtigung  
  Die <xref:System.GC.RegisterForFullGCNotification%2A>-Methode verfügt über zwei Parameter zur Angabe der Schwellenwerte der Objekte der Generation 2 und des großen Objektheaps. Wenn diese Werte erfüllt sind, sollte eine Garbage Collection-Benachrichtigung ausgelöst werden. In der folgenden Tabelle werden diese Parameter beschrieben.  
   
-|Parameter|description|  
+|Parameter|Beschreibung |  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Eine Zahl zwischen 1 und 99, die auf der Grundlage der in Generation 2 heraufgestuften Objekte angibt, wann die Benachrichtigung ausgelöst werden soll.|  
 |`largeObjectHeapThreshold`|Eine Zahl zwischen 1 und 99, die auf der Grundlage der dem großen Objektheap zugeordneten Objekte angibt, wann die Benachrichtigung ausgelöst werden soll.|  
@@ -65,7 +65,7 @@ Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine G
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>description  
+### <a name="description"></a>Beschreibung   
  Im folgenden Beispiel verarbeitet eine Gruppe von Servern eingehende Webanforderungen. Um die Workload der Verarbeitung von Anforderungen zu simulieren, werden Bytearrays einer <xref:System.Collections.Generic.List%601>-Sammlung hinzugefügt. Jeder Server wird für eine Garbage Collection-Benachrichtigung registriert und startet dann einen Thread auf der `WaitForFullGCProc`-Benutzermethode, um kontinuierlich die <xref:System.GCNotificationStatus> -Enumeration zu überwachen, die von der <xref:System.GC.WaitForFullGCApproach%2A>- und <xref:System.GC.WaitForFullGCComplete%2A>-Methode zurückgegeben wird.  
   
  Die <xref:System.GC.WaitForFullGCApproach%2A>- und <xref:System.GC.WaitForFullGCComplete%2A>-Methode rufen ihre jeweiligen Benutzermethoden zur Ereignisbehandlung auf, wenn eine Benachrichtigung ausgelöst wird:  
@@ -122,5 +122,6 @@ Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine G
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

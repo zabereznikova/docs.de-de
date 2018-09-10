@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43452793"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086763"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Exemplarische Vorgehensweisen für Visual Basic
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -62,7 +62,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  [Creating Custom Log Listeners (Erstellen von benutzerdefinierten Protokolllistenern)](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Veranschaulicht, wie Sie einen benutzerdefinierten Protokolllistener erstellen, und ihn so konfigurieren, dass er der Ausgabe des `My.Application.Log`-Objekts lauscht  
   
- [Embedding Types from Managed Assemblies (Einbetten von Typen aus verwalteten Assemblys)](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Embedding Types from Managed Assemblies (Einbetten von Typen aus verwalteten Assemblys)](../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  Beschreibt das Erstellen einer Assembly und eines Clientprogramms, mit dem Typen eingebettet werden können  
   
  [Überprüfen der Komplexität von Kennwörtern (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,7 +77,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  [Manipulating Files Using .NET Framework Methods (Bearbeiten von Dateien mit .NET Framework-Methoden)](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Veranschaulicht die Verwendung von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Methoden zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei.  
   
- [Persisting an Object in Visual Basic (Beibehalten eines Objekts in Visual Studio)](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Persisting an Object in Visual Basic (Beibehalten eines Objekts in Visual Studio)](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Veranschaulicht, wie man ein einfaches Objekt erstellt und dessen Daten in einer Datei beibehält.  
   
  [Test-First Support with the Generate from Usage Feature (Test-First-Unterstützung mit der Funktion „Generate From Usage“)](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  

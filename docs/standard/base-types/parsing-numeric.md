@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e79c6cf8bfce4fa1ce37f7253e8583a67afe2f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ad8b278f6a44fce78bccc980acdc0dc93b1a7a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576181"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193249"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analysieren numerischer Zeichenfolgen in .NET
 Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `TryParse`, mit denen Sie die Zeichenfolgendarstellung einer Zahl in einen numerischen Typ konvertieren können. Mit diesen Methoden können Sie Zeichenfolgen analysieren, die mithilfe der Formatzeichenfolgen erstellt wurden, die unter [Standardformatzeichenfolgen für Zahlen](../../../docs/standard/base-types/standard-numeric-format-strings.md) und [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md) dokumentiert sind. In der Standardeinstellung können die Methoden `Parse` und `TryParse` Zeichenfolgen, die nur Vorkommastellen enthalten, erfolgreich in ganzzahlige Werte konvertieren. Sie können Zeichenfolgen, die Vor- und Nachkommastellen, Gruppentrennzeichen und ein Dezimaltrennzeichen enthalten, erfolgreich in Gleitkommawerte konvertieren. Die `Parse`-Methode löst eine Ausnahme aus, wenn der Vorgang einen Fehler verursacht, wohingegen die `TryParse`-Methode `false` zurückgibt.  
@@ -83,7 +83,8 @@ Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `T
  [!code-csharp[Parsing.Numbers#3](../../../samples/snippets/csharp/VS_Snippets_CLR/parsing.numbers/cs/unicode1.cs#3)]
  [!code-vb[Parsing.Numbers#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/unicode1.vb#3)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Globalization.NumberStyles>  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Globalization.NumberStyles>  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)

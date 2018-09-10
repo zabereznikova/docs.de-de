@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a0151f6cc3ce25ca0c52a25be328ece8cb4434
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567366"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193717"
 ---
 # <a name="applying-attributes"></a>Anwenden von Attributen
 Mit dem folgenden Verfahren wenden Sie ein Attribut auf ein Codeelement an.  
@@ -52,8 +52,9 @@ Mit dem folgenden Verfahren wenden Sie ein Attribut auf ein Codeelement an.
   
  Beim Anwenden dieses Attributs wird die Zeichenfolge `"My Assembly"` im Metadatenteil der Datei im Assemblymanifest platziert. Sie können das Attribut entweder mithilfe des [MSIL-Disassemblers (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) anzeigen lassen oder ein benutzerdefiniertes Programm erstellen, um das Attribut abzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Attribute](../../../docs/standard/attributes/index.md)  
- [Abrufen von Informationen aus Attributen](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
- [Konzepte](/cpp/windows/attributed-programming-concepts)  
- [Attribute](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a>Siehe auch
+
+- [Attribute](../../../docs/standard/attributes/index.md)  
+- [Abrufen von Informationen aus Attributen](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Konzepte](/cpp/windows/attributed-programming-concepts)  
+- [Attribute](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a764912e46707b6f10e720f95a7d971ec4fc8e15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592170"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44228103"
 ---
 # <a name="cancellation-in-managed-threads"></a>Abbruch in verwalteten Threads
 Seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet das .NET Framework ein einheitliches Modell für den kooperativen Abbruch von asynchronen oder lang andauernden synchronen Vorgängen. Dieses Modell basiert auf einem einfachen Objekt, dem sogenannten "Abbruchtoken". Das Objekt, das einen oder mehrere abbrechbare Vorgänge aufruft, z. B. durch Erstellen neuer Threads oder Aufgaben, übergibt das Token an jeden Vorgang. Einzelne Vorgänge können wiederum Kopien des Tokens an andere Vorgänge übergeben. Zu einem späteren Zeitpunkt kann das Objekt, das das Token erstellt hat, damit anfordern, dass die Vorgänge ihre aktuelle Aktivität einstellen. Nur das anfordernde Objekt kann die Abbruchanforderung ausgeben, und jeder Listener ist dafür verantwortlich, die Anforderung zu bemerken und angemessen und rechtzeitig darauf zu reagieren.  
@@ -54,7 +54,7 @@ Seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet da
 ## <a name="cancellation-types"></a>Abbruchtypen  
  Das Abbruchframework ist als Gruppe von verwandten Typen implementiert, die in der folgenden Tabelle aufgeführt sind.  
   
-|Typname|description|  
+|Typname|Beschreibung |  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|Ein Objekt, das ein Abbruchtoken erstellt und auch die Abbruchanforderung für alle Kopien dieses Token ausgibt.|  
 |<xref:System.Threading.CancellationToken>|Ein einfacher Werttyp, der in der Regel als Methodenparameter an mindestens einen Listener übergeben wird. Listener überwachen den Wert der `IsCancellationRequested`-Eigenschaft des Token durch Abruf, Rückruf oder Wait-Handle.|  
@@ -148,5 +148,6 @@ Seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] verwendet da
   
  <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> sind Beispiele für Klassen, die diese Richtlinien einhalten. Weitere Informationen finden Sie unter [Aufgabenabbruch](../../../docs/standard/parallel-programming/task-cancellation.md) und [Gewusst wie: Abbrechen einer PLINQ-Abfrage](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)

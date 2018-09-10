@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577654"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210220"
 ---
 # <a name="common-io-tasks"></a>Allgemeine E/A-Aufgaben
 Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene Aktionen ermöglichen, z. B. Lese- und Schreibvorgänge für Dateien, Verzeichnisse und Streams. Weitere Informationen finden Sie unter [File and Stream I/O (Datei- und Datenstrom-E/A)](../../../docs/standard/io/index.md).  
@@ -53,7 +53,8 @@ Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene A
 |Suchen der Größe eines Verzeichnisses|<xref:System.IO.Directory?displayProperty=nameWithType>-Klasse|  
 |Bestimmen, ob ein Verzeichnis vorhanden ist|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>-Methode|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
- [Erstellen von Streams](../../../docs/standard/io/composing-streams.md)  
- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
+- [Erstellen von Streams](../../../docs/standard/io/composing-streams.md)  
+- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)

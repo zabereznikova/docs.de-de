@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afa22ed1fe1986712493c2aaa844d7f2c6ffd5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583129"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44178564"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Gewusst wie: Lauschen auf mehrere Abbruchanforderungen
 In diesem Beispiel wird gezeigt, wie Sie zwei Abbruchtoken gleichzeitig abhören können, um einen Vorgang abzubrechen, wenn dies von einem der beiden Token angefordert wird.  
@@ -34,5 +34,6 @@ In diesem Beispiel wird gezeigt, wie Sie zwei Abbruchtoken gleichzeitig abhören
   
  In diesem Beispiel sollte <xref:System.AggregateException> niemals ausgelöst werden, aber es wird hier dennoch abgefangen, da in der Praxis alle anderen Ausnahmen außer <xref:System.OperationCanceledException>, die von dem Taskdelegaten ausgelöst werden, von einer <xref:System.OperationCanceledException> umschlossen sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)

@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 619aa1f34b91c1a883f9c76351302880ff453c13
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400167"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501539"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1
 Es wurden Sicherheitsänderungen in .NET Framework Version 3.5 SP1 und höher vorgenommen, die beeinflussen, wie die integrierte Windows-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> und verwandte Klassen im System.Net-Namespace behandelt wird. Diese Änderungen können sich auf Anwendungen auswirken, die diese Klassen für Webanforderungen und den Empfang der Antworten verwenden, in denen die integrierte Windows-Authentifizierung auf NTLM-Basis verwendet wird. Die Änderung kann sich auf Webserver und Clientanwendungen auswirken, die für die Verwendung der integrierten Windows-Authentifizierung konfiguriert sind.  

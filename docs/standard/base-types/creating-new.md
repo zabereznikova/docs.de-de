@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9f0c487d3d04af998fb1c3339d736e9bb043374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567818"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870109"
 ---
 # <a name="creating-new-strings-in-net"></a>Erstellen neuer Zeichenfolgen in .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht das Erstellen von Zeichenfolgen mithilfe einer einfachen Zuweisung und überlädt auch einen Klassenkonstruktor, um die Zeichenfolgenerstellung mithilfe einer Reihe verschiedener Parameter zu unterstützen. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt auch verschiedene Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse bereit, die durch Kombinieren verschiedener Zeichenfolgen, Zeichenfolgenarrays oder Objekte neue Zeichenfolgenobjekte erstellen.  
@@ -80,6 +80,7 @@ ms.locfileid: "33567818"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
- [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)

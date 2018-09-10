@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47162a43c942416c5a2b842663288290c9f43f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574721"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214822"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Verwalten von Namespaces in einem XML-Dokument
 XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-Dokument Element- und Attributnamen zu. Um diese Zuordnungen zu erstellen, definieren Sie Präfixe für Namespace-URIs und verwenden diese zur Kennzeichnung von Element- und Attributnamen in XML-Daten. Namespaces verhindern Konflikte zwischen Element- und Attributnamen. Sie ermöglichen eine unterschiedliche Verarbeitung und Validierung von gleichnamigen Elementen und Attributen.  
@@ -79,6 +79,7 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
 |Überprüfen, ob im aktuellen Gültigkeitsbereich ein Präfix definiert ist|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>-Methode|  
 |Abrufen der Namenstabelle, die für die Suche nach Präfixen und URIs verwendet wird|<xref:System.Xml.XmlNamespaceManager.NameTable%2A>-Eigenschaft|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.XmlNamespaceManager>  
- [XML-Dokumente und -Daten](../../../../docs/standard/data/xml/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.XmlNamespaceManager>  
+- [XML-Dokumente und -Daten](../../../../docs/standard/data/xml/index.md)

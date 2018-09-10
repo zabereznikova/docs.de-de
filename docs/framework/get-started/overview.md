@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c844a81da036c5e96c2c619e3a3aae85f70f8ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397857"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522090"
 ---
 # <a name="overview-of-the-net-framework"></a>Übersicht über .NET Framework
 
@@ -87,7 +87,7 @@ Wie von einer objektorientierten Klassenbibliothek zu erwarten, lassen sich mit 
 
 - Dienstorientierte Apps mit Windows Communication Foundation (WCF) Siehe [Dienstorientierte Anwendungen mit WCF](../../../docs/framework/wcf/index.md).
 
-- Workflowfähige Apps mit Windows Workflow Foundation (WF) Siehe [Erstellen von Workflows in .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Workflowfähige Apps mit Windows Workflow Foundation (WF) Siehe [Erstellen von Workflows in .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
 Die Klassen für Windows Forms bestehen aus einem umfangreichen Satz wiederverwendbarer Typen, die die Entwicklung für Windows-GUIs erheblich vereinfachen. Beim Schreiben einer ASP.NET Web Form-Apps können diese Web Forms-Klassen verwendet werden.
 
@@ -97,5 +97,5 @@ Die Klassen für Windows Forms bestehen aus einem umfangreichen Satz wiederverwe
 [Installationshandbuch](../../../docs/framework/install/index.md)   
 [Entwicklungshandbuch](../../../docs/framework/development-guide.md)   
 [Tools](../../../docs/framework/tools/index.md)   
-[.NET Framework-Beispiele](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[.NET Framework-Klassenbibliothek](http://go.microsoft.com/fwlink/?LinkID=227195)
+[.NET Framework-Beispiele](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[.NET Framework-Klassenbibliothek](https://go.microsoft.com/fwlink/?LinkID=227195)

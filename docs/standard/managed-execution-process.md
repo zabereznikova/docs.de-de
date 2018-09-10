@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4901a81e318efe8371dc72cd9c1d511d55b0c65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33c498e8379d68287bfe4a2e781d6797fd6b4c10
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578975"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192588"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
@@ -107,13 +107,14 @@ ms.locfileid: "33578975"
   
  [Zurück nach oben](#introduction)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht](../../docs/framework/get-started/overview.md)  
- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)  
- [Metadaten und selbstbeschreibende Komponenten](../../docs/standard/metadata-and-self-describing-components.md)  
- [Ilasm.exe (IL-Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
- [Sicherheit](../../docs/standard/security/index.md)  
- [Interoperabilität mit nicht verwaltetem Code](../../docs/framework/interop/index.md)  
- [Bereitstellung](../../docs/framework/deployment/net-framework-applications.md)  
- [Assemblys in der Common Language Runtime (CLR)](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Anwendungsdomänen](../../docs/framework/app-domains/application-domains.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Übersicht](../../docs/framework/get-started/overview.md)  
+- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)  
+- [Metadaten und selbstbeschreibende Komponenten](../../docs/standard/metadata-and-self-describing-components.md)  
+- [Ilasm.exe (IL-Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
+- [Sicherheit](../../docs/standard/security/index.md)  
+- [Interoperabilität mit nicht verwaltetem Code](../../docs/framework/interop/index.md)  
+- [Bereitstellung](../../docs/framework/deployment/net-framework-applications.md)  
+- [Assemblys in der Common Language Runtime (CLR)](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Anwendungsdomänen](../../docs/framework/app-domains/application-domains.md)

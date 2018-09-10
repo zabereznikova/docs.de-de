@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa1049528458d558409ac1ace215c7d5b10f520e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572095"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183485"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Ausgabeoptionen für die XslCompiledTransform-Klasse
 In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptionen. Sie können Ausgabeoptionen im Stylesheet oder in der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode angeben.  
@@ -57,5 +57,6 @@ In diesem Thema finden Sie Informationen zu den verfügbaren XSLT-Ausgabeoptione
   
 -   Beim Schreiben leerer Tags wird ein Leerzeichen zwischen das letzte Zeichen des Elementnamens und den umgekehrten Schrägstrich geschrieben, beispielsweise `<myElement />`. Dadurch können die generierten HTML-Seiten in älteren Webbrowsern ordnungsgemäß angezeigt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Siehe auch
+
+- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)

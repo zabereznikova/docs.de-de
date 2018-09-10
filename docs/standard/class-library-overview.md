@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207455"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216619"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -86,7 +86,7 @@ ms.locfileid: "36207455"
   
  In der folgenden Tabelle sind die in .NET verfügbaren Basistypen mit einer Kurzbeschreibung der einzelnen Typen und den entsprechenden Typen in Visual Basic, C#, C++ und F# aufgeführt.  
   
-|Kategorie|Klassenname|description|Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
+|Kategorie|Klassenname|Beschreibung |Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Ganze Zahl|<xref:System.Byte>|Eine 8-Bit-Ganzzahl ohne Vorzeichen.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> - oder - <br /> **char** **mit Vorzeichen**|**sbyte**|  
@@ -110,7 +110,8 @@ ms.locfileid: "36207455"
   
  Verwenden Sie für weitere Informationen zu Namespaces den [.NET-API-Browser](https://docs.microsoft.com/dotnet/api), um die .NET Framework-Klassenbibliothek zu durchsuchen. Die API-Referenzdokumentation bietet Dokumentationen zu jedem Namespace, den dazu gehörigen Typen und Membern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)  
- [.NET API-Browser](https://docs.microsoft.com/dotnet/api)  
- [Übersicht](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)  
+- [.NET API-Browser](https://docs.microsoft.com/dotnet/api)  
+- [Übersicht](../../docs/framework/get-started/overview.md)

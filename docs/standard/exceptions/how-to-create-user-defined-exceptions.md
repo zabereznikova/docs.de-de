@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90bf9d6dbfebf8f7c1aa22e5844cf4e30b89b8d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572800"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192235"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>Erstellen benutzerdefinierter Ausnahmen
 
@@ -33,5 +33,6 @@ Beim Erstellen eigener Ausnahmen muss der Klassenname der benutzerdefinierten Au
 > [!NOTE]
 > In Situationen, in denen Sie Remoting verwenden, müssen Sie sicherstellen, dass die Metadaten für alle benutzerdefinierten Ausnahmen sowohl auf dem Server (Aufgerufener) als auch für den Client (Proxyobjekt oder Aufrufer) verfügbar sind. Weitere Informationen finden Sie unter [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md).
 
-## <a name="see-also"></a>Siehe auch  
-[Ausnahmen](index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Ausnahmen](index.md)

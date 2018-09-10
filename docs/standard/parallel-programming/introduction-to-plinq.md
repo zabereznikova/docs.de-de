@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 173efcf485d5eb019b22a329a9d96b5cbe6a2f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592300"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879753"
 ---
 # <a name="introduction-to-plinq"></a>Einführung in PLINQ
 ## <a name="what-is-a-parallel-query"></a>Was ist eine parallele-Abfrage?  
@@ -37,7 +37,7 @@ ms.locfileid: "33592300"
   
  Zusätzlich zu den Standardabfrageoperatoren enthält die <xref:System.Linq.ParallelEnumerable>-Klasse einen Satz von Methoden, die spezielle Verhaltensweisen für die parallele Ausführung unterstützen. Diese PLINQ-spezifischen Methoden sind in der folgenden Tabelle aufgeführt.  
   
-|ParallelEnumerable-Operator|description|  
+|ParallelEnumerable-Operator|Beschreibung |  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Der Einstiegspunkt für PLINQ. Gibt an, dass der Rest der Abfrage nach Möglichkeit parallelisiert werden soll.|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Gibt an, dass der Rest der Abfrage sequenziell, als nicht parallele LINQ-Abfrage ausgeführt werden soll.|  
@@ -120,6 +120,7 @@ ms.locfileid: "33592300"
 ## <a name="measuring-plinq-performance"></a>Messen der PLINQ-Leistung  
  In vielen Fällen kann eine Abfrage parallelisiert werden, der mit dem Einrichten der parallelen Abfrage verbundene Mehraufwand überwiegt jedoch die erzielte Leistungssteigerung. Wenn eine Abfrage nur wenige Berechnung ausführt oder wenn die Datenquelle klein ist, ist eine PLINQ-Abfrage möglicherweise langsamer als ein sequenzielle LINQ to Objects-Abfrage. Mithilfe des Parallel Performance Analyzer in Visual Studio Team Server können Sie die Leistung verschiedener Abfragen vergleichen, Verarbeitungsengpässe suchen und bestimmen, ob die Abfrage parallel oder sequenziell ausgeführt wird. Weitere Informationen finden Sie unter [Parallelitätsschnellansicht](/visualstudio/profiling/concurrency-visualizer) und [How to: Measure PLINQ Query Performance (Vorgehensweise: Messen der Leistung von PLINQ-Abfragen)](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

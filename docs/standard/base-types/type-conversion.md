@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c542a38152a21a62208bee81e123923fb05d0e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579482"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211948"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Typkonvertierung in .NET Framework
 <a name="top"></a> Jeder Wert verfügt über einen zugeordneten Typ, durch den Attribute, z. B. der dem Wert zugewiesene Speicherplatz, der zulässige Wertebereich und die verfügbar gemachten Member, festgelegt werden. Viele Werte können durch mehrere Typen ausgedrückt werden. Beispielsweise kann der Wert 4 als ganze Zahl oder als Gleitkommawert dargestellt werden. Durch Typkonvertierung wird ein Wert neuen Typs erstellt, der mit dem Wert des alten Typs äquivalent ist. Die Identität (oder der exakte Wert) des ursprünglichen Objekts bleibt dabei nicht immer erhalten.  
@@ -206,7 +206,8 @@ ms.locfileid: "33579482"
   
  Weitere Informationen über das Verwenden von Typkonvertern zum Durchführen von Konvertierungen finden Sie unter <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Convert?displayProperty=nameWithType>  
- <xref:System.IConvertible>  
- [Typkonvertierungstabellen](../../../docs/standard/base-types/conversion-tables.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Convert?displayProperty=nameWithType>  
+- <xref:System.IConvertible>  
+- [Typkonvertierungstabellen](../../../docs/standard/base-types/conversion-tables.md)

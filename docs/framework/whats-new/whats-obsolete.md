@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514449"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855334"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 .NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.  
@@ -73,13 +73,13 @@ ms.locfileid: "33514449"
  [Veraltete Member](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Listen mit veralteten Komponenten für frühere Versionen  
- [Veraltete Typen in .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  
+ [Veraltete Typen in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Veraltete Member in .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Veraltete Member in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Liste veralteter Elemente in .NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [Liste veralteter Elemente in .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Liste veralteter Elemente in .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [Liste veralteter Elemente in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Siehe auch  
  [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

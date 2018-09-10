@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06876b91c72b939768d480e40631a8e85170bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568541"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264531"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Zuordnen von XML-Datentypen zu CLR-Typen
 In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.  
@@ -79,5 +79,6 @@ In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Type
 |Kommentarknoten|<xref:System.Xml.XPath.XPathNavigator>|  
 |Verarbeitungsanweisungsknoten|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

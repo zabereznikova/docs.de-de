@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1907841694cde82cebada4a9e73b8ce703208611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576128"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206061"
 ---
 # <a name="localizability-review"></a>Überprüfung der Lokalisierbarkeit
 Die Überprüfung der Lokalisierbarkeit ist ein Zwischenschritt bei der Entwicklung einer weltweit einsetzbaren Anwendung. Dabei wird überprüft, ob eine globalisierte Anwendung für die Lokalisierung bereit ist, und es werden Code oder Aspekte der Benutzeroberfläche bezeichnet, die eine besondere Behandlung erfordern. Mit diesem Schritt wird zudem sichergestellt, dass beim Lokalisierungsprozess keine Funktionsfehler in Ihrer Anwendung auftreten. Wenn Sie alle Probleme behoben haben, die bei der Überprüfung der Lokalisierbarkeit ausgelöst wurden, ist Ihre Anwendung für die Lokalisierung bereit. Bei einer gründlichen Überprüfung der Lokalisierbarkeit sollten Sie beim Lokalisierungsprozess nicht den Quellcode ändern müssen.  
@@ -73,8 +73,9 @@ Die Überprüfung der Lokalisierbarkeit ist ein Zwischenschritt bei der Entwickl
   
  Wenn Sie bei der Anwendungsentwicklung die Globalisierungsempfehlungen befolgt, kulturabhängige Features ordnungsgemäß behandelt und im Zuge von Tests Lokalisierungsprobleme ermittelt und behoben haben, können Sie mit dem nächsten Schritt der [Lokalisierung](../../../docs/standard/globalization-localization/localization.md) fortfahren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  
- [Lokalisierung](../../../docs/standard/globalization-localization/localization.md)  
- [Globalisierung](../../../docs/standard/globalization-localization/globalization.md)  
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  
+- [Lokalisierung](../../../docs/standard/globalization-localization/localization.md)  
+- [Globalisierung](../../../docs/standard/globalization-localization/globalization.md)  
+- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e8de7a1b5de580ca768ec0dfbcbfab2d8cb6271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b324cc391bc784ac558ed3eb634506b5eea0d63
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573486"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214562"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher
 Sie können Verzeichnisse und Dateien in einer isolierten Speicherdatei löschen. In einem Speicher sind Datei- und Verzeichnisnamen abhängig und werden relativ zum Stamm des virtuellen Dateisystems angegeben. In Windows-Betriebssystemen wird bei ihnen nicht zwischen Groß- und Kleinschreibung unterschieden.  
@@ -40,6 +40,7 @@ Sie können Verzeichnisse und Dateien in einer isolierten Speicherdatei löschen
  [!code-csharp[Conceptual.IsolatedStorage#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source4.cs#4)]
  [!code-vb[Conceptual.IsolatedStorage#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

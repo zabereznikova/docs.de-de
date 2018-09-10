@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 195fbb799432b9d01a5faf301c9f8f2d1edfa1ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579404"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188682"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -268,9 +268,8 @@ Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen u
 
 ## <a name="see-also"></a>Siehe auch
 
-[.NET Guide (Leitfaden für .NET)](index.md)  
-[Leitfaden für .NET Framework](../framework/index.md)  
-[.NET Core](../core/index.md)  
-[ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/index#pivot=aspnet)  
-[ASP.NET Core Overview (Übersicht über ASP.NET Core)](/aspnet/index#pivot=core)  
-
+- [.NET Guide (Leitfaden für .NET)](index.md)  
+- [Leitfaden für .NET Framework](../framework/index.md)  
+- [.NET Core](../core/index.md)  
+- [ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/index#pivot=aspnet)  
+- [ASP.NET Core Overview (Übersicht über ASP.NET Core)](/aspnet/index#pivot=core)  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f29a92c0d0b8961c178b7a92ea5964a1575a48db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570527"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262507"
 ---
 # <a name="changing-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
 Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie nicht sicher sein, ob die Daten in Groß- oder Kleinschreibung eingegeben werden. Häufig möchten Sie, dass Zeichenfolgen in einheitlicher Schreibung vorliegen, insbesondere, wenn sie in der Benutzeroberfläche angezeigt werden. In der folgenden Tabelle sind drei Methoden zur Änderung der Groß-/Kleinschreibung beschrieben. Die ersten beiden Methoden stellen eine Überladung bereit, die eine Kultur akzeptiert.  
@@ -70,6 +70,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
   
  Beachten Sie, dass die <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>-Methode, obwohl sie kulturabhängig ist, keine linguistisch korrekten Regeln für Groß-/Kleinschreibung bereitstellt. Beispielsweise konvertiert die Methode die Zeichenfolge "a tale of two cities" im vorherigen Beispiel in "A Tale Of Two Cities". Die linguistisch korrekte Schreibung für die Kultur "en-US" ist aber "A Tale of Two Cities".  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d51f6c8e7dc03edb2823f61ab638fc669847dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574932"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211813"
 ---
 # <a name="selecting-a-collection-class"></a>Auswählen einer Auflistungsklasse
 Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein falscher Typ kann die Verwendung der Auflistung einschränken. Vermeiden Sie im Allgemeinen die Verwendung der Typen im <xref:System.Collections>-Namespace - es sei denn, Ihr Ziel ist ausdrücklich .NET Framework, Version 1.1. Die generischen und parallelen Versionen der Auflistungen sind vorzuziehen, weil sie größere Typsicherheit und andere Optimierungen aufweisen.  
@@ -79,8 +79,9 @@ Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein f
   
  PLINQ stellt eine parallele Implementierung von LINQ to Objects bereit, die in vielen Szenarien eine schnellere Abfrageausführung durch eine effizientere Verwendung von Computern mit mehreren Kernen bietet. Weitere Informationen finden Sie unter [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections>  
- <xref:System.Collections.Specialized>  
- <xref:System.Collections.Generic>  
- [threadsichere Auflistungen](../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections>  
+- <xref:System.Collections.Specialized>  
+- <xref:System.Collections.Generic>  
+- [Threadsichere Sammlungen](../../../docs/standard/collections/thread-safe/index.md)

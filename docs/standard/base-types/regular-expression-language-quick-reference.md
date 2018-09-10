@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948604"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041615"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 <a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "36948604"
 ## <a name="character-escapes"></a>Escapezeichen  
  Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck gibt an, dass es sich bei dem darauf folgenden Zeichen um ein Sonderzeichen handelt (wie in der folgenden Tabelle gezeigt) oder dass das Zeichen als solches interpretiert werden soll. Weitere Informationen finden Sie unter [Escapezeichen](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
-|Escapezeichen|description|Muster|Übereinstimmungen|  
+|Escapezeichen|Beschreibung |Muster|Übereinstimmungen|  
 |-----------------------|-----------------|-------------|-------------|  
 |`\a`|Entspricht einem Klingelzeichen (Warnsignal) \u0007.|`\a`|"\u0007" in "Fehler!" + '\u0007'|  
 |`\b`|Entspricht in einer Zeichenklasse einem Rücktastenzeichen \u0008.|`[\b]{3,}`|"\b\b\b\b" in "\b\b\b\b"|  
@@ -70,7 +70,7 @@ ms.locfileid: "36948604"
 ## <a name="character-classes"></a>Zeichenklassen  
  Eine Zeichenklasse entspricht einer beliebigen Reihe von Zeichen. Zeichenklassen verwenden die in der folgenden Tabelle aufgeführten Sprachelemente. Weitere Informationen finden Sie unter [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
-|Zeichenklasse|description|Muster|Übereinstimmungen|  
+|Zeichenklasse|Beschreibung |Muster|Übereinstimmungen|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Entspricht einem beliebigen einzelnen Zeichen in *character_group*. Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|"a" in "wage"<br /><br /> "a", "e" in "klasse"|  
 |`[^` *character_group* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *character_group*enthalten ist. Standardmäßig wird bei Zeichen in *character_group* die Groß-/Kleinschreibung beachtet.|`[^aei]`|"r", "g", "n" in "ringen"|  
@@ -91,7 +91,7 @@ ms.locfileid: "36948604"
 ## <a name="anchors"></a>Anchor  
  Anchor oder atomare Assertionen mit einer Breite von Null bewirken, dass, in Abhängigkeit von der Position in der Zeichenfolge, eine Entsprechung gefunden oder nicht gefunden wird. Sie bewirken jedoch nicht, dass die Engine die Zeichenfolge durchläuft oder Zeichen verwendet. Die Metazeichen in der folgenden Tabelle sind Anchor. Weitere Informationen finden Sie unter [Anchor](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
-|Assertion|description|Muster|Übereinstimmungen|  
+|Assertion|Beschreibung |Muster|Übereinstimmungen|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|Die Übereinstimmung muss standardmäßig zu Anfang der Zeichenfolge beginnen. Im Mehrzeilenmodus muss sie am Anfang der Zeile beginnen.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
 |`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
@@ -108,7 +108,7 @@ ms.locfileid: "36948604"
 ## <a name="grouping-constructs"></a>Gruppierungskonstrukte  
  Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und zeichnen gewöhnlich Teilzeichenfolgen einer Eingabezeichenfolge auf. Gruppierungskonstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
-|Gruppierungskonstrukt|description|Muster|Übereinstimmungen|  
+|Gruppierungskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck auf und weist diesem eine einsbasierte Ordinalzahl zu.|`(\w)\1`|"aa" in "paarweise"|  
 |`(?<` *Name* `>` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|"aa" in "paarweise"|  
@@ -127,7 +127,7 @@ ms.locfileid: "36948604"
 ## <a name="quantifiers"></a>Quantifizierer  
  Quantifizierer geben an, wie viele Instanzen des vorherigen Elements (bei dem es sich um ein Zeichen, eine Gruppe oder eine Zeichenklasse handeln kann) in der Eingabezeichenfolge vorhanden sein müssen, damit eine Entsprechung gefunden wird. Quantifizierer verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Quantifiers](quantifiers-in-regular-expressions.md).  
   
-|Quantifizierer|description|Muster|Übereinstimmungen|  
+|Quantifizierer|Beschreibung |Muster|Übereinstimmungen|  
 |----------------|-----------------|-------------|-------------|  
 |`*`|Entspricht dem vorangehenden Element nicht oder mehrmals.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Entspricht dem vorangehenden Element einmal oder mehrmals.|`"be+"`|"bei" in beim"", "be" in "bei"|  
@@ -148,7 +148,7 @@ ms.locfileid: "36948604"
 ## <a name="backreference-constructs"></a>Rückverweiskonstrukte  
  Ein Rückverweis ermöglicht es, einen zuvor gefundenen Teilausdruck später im gleichen regulären Ausdruck zu identifizieren. In der folgenden Tabelle sind die Rückverweiskonstrukte aufgeführt, die von regulären .NET-Ausdrücken unterstützt werden. Weitere Informationen finden Sie unter [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
-|Rückverweiskonstrukt|description|Muster|Übereinstimmungen|  
+|Rückverweiskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |-----------------------------|-----------------|-------------|-------------|  
 |`\` *number*|Rückverweis. Entspricht dem Wert eines nummerierten Teilausdrucks.|`(\w)\1`|"ee" in "beseelt"|  
 |`\k<` *Name* `>`|Benannter Rückverweis. Entspricht dem Wert eines benannten Ausdrucks.|`(?<char>\w)\k<char>`|"ee" in "beseelt"|  
@@ -159,7 +159,7 @@ ms.locfileid: "36948604"
 ## <a name="alternation-constructs"></a>Alternierungskonstrukte  
  Alternierungskonstrukte ändern einen regulären Ausdruck, um entweder/oder-Vergleiche zuzulassen. Diese Konstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
   
-|Alternierungskonstrukt|description|Muster|Übereinstimmungen|  
+|Alternierungskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Entspricht jedem beliebigen durch einen senkrechten Strich (&#124;) getrennten Element.|<code>th(e&#124;is&#124;at)</code>|"the", "this" in "This is the day. "|  
 |`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *yes* , wenn das von *expression* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *no* . *expression* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" in "A10 C103 910"|  
@@ -171,7 +171,7 @@ ms.locfileid: "36948604"
 ## <a name="substitutions"></a>Ersetzungen  
  Ersetzungen sind Sprachelemente regulärer Ausdrücke, die in Ersetzungsmustern unterstützt werden. Weitere Informationen finden Sie unter [Substitutions](substitutions-in-regular-expressions.md). Die Metazeichen in der folgenden Tabelle sind atomare Assertionen mit einer Breite von Null.  
   
-|Zeichen|description|Muster|Ersetzungsmuster|Eingabezeichenfolge|Ergebniszeichenfolge|  
+|Zeichen|Beschreibung |Muster|Ersetzungsmuster|Eingabezeichenfolge|Ergebniszeichenfolge|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
 |`$` *number*|Ersetzt die untergeordnete Zeichenfolge, die der *number*einer Gruppe entspricht.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
 |`${` *Name* `}`|Ersetzt die untergeordnete Zeichenfolge, die dem genannten *name*der Gruppe entspricht.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
@@ -196,7 +196,7 @@ ms.locfileid: "36948604"
   
  Die .NET-Engine für reguläre Ausdrücke unterstützt die folgenden Inlineoptionen.  
   
-|Option|description|Muster|Übereinstimmungen|  
+|Option|Beschreibung |Muster|Übereinstimmungen|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Groß-/Kleinschreibung bei der Suche ignorieren|`\b(?i)a(?-i)a\w+\b`|"Aale" und "Aasblumen" in "Aale essen Aasblumen roh"|  
 |`m`|Mehrzeilenmodus verwenden. `^` und `$` entsprechen dem Anfang und Ende einer Zeile anstatt dem Anfang und Ende einer Zeichenfolge.|Ein Beispiel finden Sie im Abschnitt zum Mehrzeilenmodus in [Regular Expression Options](regular-expression-options.md).||  
@@ -216,11 +216,12 @@ ms.locfileid: "36948604"
 |`(?#` *comment* `)`|Inlinekommentar. Der Kommentar endet bei der ersten schließenden Klammer.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [bis Zeilenende]|X‑Modus-Kommentar. Der Kommentar beginnt bei einem `#` ohne Escapezeichen und reicht bis zum Ende der Zeile.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [Reguläre Ausdrücke von .NET](regular-expressions.md)  
- [Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md)  
- [Beispiele für reguläre Ausdrücke](regular-expression-examples.md)  
- [Reguläre Ausdrücke – Kurzübersicht (Download im Word-Format)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Reguläre Ausdrücke – Kurzübersicht (Download im PDF-Format)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [Reguläre Ausdrücke von .NET](regular-expressions.md)  
+- [Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md)  
+- [Beispiele für reguläre Ausdrücke](regular-expression-examples.md)  
+- [Reguläre Ausdrücke – Kurzübersicht (Download im Word-Format)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [Reguläre Ausdrücke – Kurzübersicht (Download im PDF-Format)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948588"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085185"
 ---
 # <a name="anchors-in-regular-expressions"></a>Anker in regulären Ausdrücken
 <a name="top"></a> Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position in der Zeichenfolge an, an der eine Übereinstimmung auftreten muss. Wenn Sie im Suchausdruck einen Anker verwenden, durchsucht die Engine für reguläre Ausdrücke nicht die Zeichenfolge oder durchläuft Zeichen, sondern sucht nur an der angegebenen Position nach einer Übereinstimmung. Beispielsweise gibt `^` an, dass die Übereinstimmung am Anfang einer Zeile oder Zeichenfolge beginnen muss. Daher stimmt der reguläre Ausdruck `^http:` nur mit "http:" überein, wenn dies am Anfang einer Zeile steht. In der folgenden Tabelle werden die von den regulären .NET-Ausdrücken unterstützten Anker aufgeführt.  
   
-|Anker|description|  
+|Anker|Beschreibung |  
 |------------|-----------------|  
 |`^`|Die Übereinstimmung muss standardmäßig zu Beginn der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie zu Beginn der Zeile erfolgen. Weitere Informationen finden Sie unter [Anfang der Zeichenfolge oder Zeile](#Start).|  
 |`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen. Weitere Informationen finden Sie unter [Ende der Zeichenfolge oder Zeile](#End).|  
@@ -53,7 +53,7 @@ ms.locfileid: "36948588"
   
  Das Muster für reguläre Ausdrücke `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`^`|Suchen Sie nach einer Übereinstimmung am Anfang der Eingabezeichenfolge (oder am Anfang der Zeile, wenn die Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option aufgerufen wird).|  
 |`((\w+(\s?)){2,}`|Suchen Sie nach einer Übereinstimmung mit mindestens einem Wortzeichen, auf das genau zwei Mal eine 0 (Null) oder ein Leerzeichen folgt. Dies ist die erste Erfassungsgruppe. Durch diesen Ausdruck werden auch eine zweite und dritte Erfassungsgruppe definiert: Die zweite Gruppe besteht aus dem erfassten Wort, die dritte aus den erfassten Leerzeichen.|  
@@ -126,7 +126,7 @@ ms.locfileid: "36948588"
   
  Der reguläre Ausdruck `\G(\w+\s?\w*),?` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\G`|Beginnt die Übereinstimmung am Ende der vorherigen.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -148,7 +148,7 @@ ms.locfileid: "36948588"
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`are`|Übereinstimmung mit der Teilzeichenfolge "are".|  
@@ -168,12 +168,13 @@ ms.locfileid: "36948588"
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\B`|Übereinstimmung beginnt nicht an einer Wortgrenze.|  
 |`qu`|Übereinstimmung mit der Teilzeichenfolge "qu".|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md)

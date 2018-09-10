@@ -21,11 +21,11 @@ ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43406593"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43801553"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  

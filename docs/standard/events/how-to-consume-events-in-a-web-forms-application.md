@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b8af7b3894c010d5a7a4c712efe2458a6bb2a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c03ab0e1d493d9669f1e3821393d41d1c1b89867
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571072"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227544"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Gewusst wie: Verarbeiten von Ereignissen in einer Web Forms-Anwendung
 Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen ist das Auffüllen einer Webseite mit Steuerelementen und das anschließende Durchführen einer bestimmten Aktion, auf deren Steuerelement der Benutzer klickt. Beispielsweise löst ein <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType>-Steuerelement ein Ereignis aus, wenn der Benutzer auf der Webseite darauf klickt. Durch die Verarbeitung des Ereignisses kann Ihre Anwendung die zugehörige Anwendungslogik für diesen Schaltflächenklick ausführen.  
@@ -51,5 +51,6 @@ Ein häufiges Szenario in ASP.NET Web Forms-Anwendungen ist das Auffüllen einer
   
 3.  Fügen Sie in der in Schritt 2 definierten Ereignishandlermethode Code hinzu, um die beim Auftreten des Ereignisses erforderlichen Aktionen auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ereignisse](../../../docs/standard/events/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Ereignisse](../../../docs/standard/events/index.md)

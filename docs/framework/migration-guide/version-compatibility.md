@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398273"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198503"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Kompatibilität von .NET Framework-Versionen
 Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Plattform entwickelte App in höheren Versionen dieser Plattform ausgeführt werden kann. Bei .NET Framework wird versucht, die Abwärtskompatibilität zu maximieren: Für eine Version von .NET Framework geschriebener Quellcode wird auf höheren Versionen von .NET Framework kompiliert, und Binärdateien, die auf einer Version von .NET Framework ausgeführt werden, verhalten sich auch auf höheren Versionen von .NET Framework gleich.  
@@ -52,9 +52,9 @@ Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Pl
 
 - Wenn Sie über eine App für .NET Framework 3.5 verfügen, finden Sie außerdem Informationen unter [Migrationsprobleme in .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md).
 
-- Wenn Sie über eine App für .NET Framework 2.0 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 3.5 SP1 (Änderungen in .NET Framework 3.5 SP1)](http://go.microsoft.com/fwlink/?LinkId=186989).
+- Wenn Sie über eine App für .NET Framework 2.0 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 3.5 SP1 (Änderungen in .NET Framework 3.5 SP1)](https://go.microsoft.com/fwlink/?LinkId=186989).
 
-- Wenn Sie über eine App für .NET Framework 1.1 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 2.0 (Änderungen in .NET Framework 2.0)](http://go.microsoft.com/fwlink/?LinkID=125263).  
+- Wenn Sie über eine App für .NET Framework 1.1 verfügen, finden Sie außerdem Informationen unter [Changes in .NET Framework 2.0 (Änderungen in .NET Framework 2.0)](https://go.microsoft.com/fwlink/?LinkID=125263).  
   
 -   Wenn Sie vorhandenen Quellcode neu kompilieren, sodass er in .NET Framework 4.5 oder den zugehörigen Releases ausgeführt werden kann, oder wenn Sie eine neue Version einer App oder einer Komponente entwickeln, die basierend auf vorhandenem Quellcode auf [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder die zugehörigen Releases ausgerichtet ist, überprüfen Sie [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md) auf veraltete Typen und Member, und wenden Sie die beschriebene Problemumgehung an. (Bereits kompilierter Code wird weiterhin mit Typen und Membern ausgeführt, die als veraltet markiert wurden.)  
   
@@ -69,5 +69,5 @@ Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Pl
  [Neuigkeiten](../../../docs/framework/whats-new/index.md)  
  [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)  
  [Anwendungskompatibilität](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Microsoft .NET Framework Support Lifecycle-Richtlinien](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+ [Microsoft .NET Framework Support Lifecycle-Richtlinien](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [Migrationsprobleme in .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

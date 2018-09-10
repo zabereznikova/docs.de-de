@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4402bf58ea853d8a373592eec274a8bf75e7e90c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 956dc7daad91d9daa3ac950d7f5897404dd314c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925741"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041264"
 ---
 # <a name="enumeration-format-strings"></a>Enumerationsformatzeichenfolgen
 Sie können die <xref:System.Enum.ToString%2A?displayProperty=nameWithType>-Methode verwenden, um ein neues Zeichenfolgenobjekt zu erstellen, das den numerischen, den Hexadezimal- oder den Zeichenfolgenwert eines Enumerationsmembers darstellt. Diese Methode akzeptiert eine der Enumerationsformatzeichenfolgen, um den Wert anzugeben, der zurückgegeben werden soll.
@@ -50,4 +50,4 @@ Dann kann die `Color.ToString(System.String)`-Methode verwendet werden, um den E
 
 ## <a name="see-also"></a>Siehe auch
 
-[Formatierung von Typen](formatting-types.md)
+- [Formatierung von Typen](formatting-types.md)

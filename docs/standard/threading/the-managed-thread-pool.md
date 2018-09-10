@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33592417"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268759"
 ---
 # <a name="the-managed-thread-pool"></a>Der verwaltete Threadpool
 
@@ -87,12 +87,12 @@ In einigen Szenarios ist die Erstellung und Verwaltung eigener Threads der Verwe
   
 ## <a name="see-also"></a>Siehe auch
 
- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
- [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
- [Gewusst wie: Zurückgeben eines Werts aus einer Aufgabe](../parallel-programming/how-to-return-a-value-from-a-task.md)  
- [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)  
- [Threads and Threading (Threads und Threading)](threads-and-threading.md)  
- [Asynchrone Datei-E/A](../io/asynchronous-file-i-o.md)  
- [Timer](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
+- [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
+- [Gewusst wie: Zurückgeben eines Werts aus einer Aufgabe](../parallel-programming/how-to-return-a-value-from-a-task.md)  
+- [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)  
+- [Threads and Threading (Threads und Threading)](threads-and-threading.md)  
+- [Asynchrone Datei-E/A](../io/asynchronous-file-i-o.md)  
+- [Timer](timers.md)  

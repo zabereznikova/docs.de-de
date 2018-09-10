@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 866be7970c43051dd7e2bf8d45ae779aca130a45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574877"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44197811"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher
 Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>-Methode. Diese Methode akzeptiert eine Zeichenfolge, die ein Suchmuster darstellt. Sie können Platzhalterzeichen für einzelne Zeichen (?) und mehrere Zeichen (*) im Suchmuster verwenden, aber die Platzhalterzeichen müssen im letzten Teil des Namens angezeigt werden. Beispielsweise ist `directory1/*ect*` eine gültige Suchzeichenfolge, `*ect*/directory2` aber nicht.  
@@ -40,6 +40,7 @@ Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:Sys
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575972"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198477"
 ---
 # <a name="generic-interfaces"></a>Generische Schnittstellen
 Dieses Thema bietet einen Überblick über generische Schnittstellen, die allgemeine Funktionen für Familien generischer Typen bereitstellen.  
@@ -42,10 +42,11 @@ Dieses Thema bietet einen Überblick über generische Schnittstellen, die allgem
   
  Die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle stellt eine generische Enumeratorstruktur bereit. Die generische <xref:System.Collections.Generic.IEnumerator%601>-Schnittstelle, die von generischen Enumeratoren implementiert wird, erbt die nicht generische <xref:System.Collections.IEnumerator>-Schnittstelle. Die Member <xref:System.Collections.IEnumerator.MoveNext%2A> und <xref:System.Collections.IEnumerator.Reset%2A>, die nicht vom `T`-Typparameter abhängig sind, sind nur für die nicht generische Schnittstelle vorhanden. Dies bedeutet, dass jeder Consumer der nicht generischen Schnittstelle auch die generische Schnittstelle verwenden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Generika](../../../docs/standard/generics/index.md)  
- [Generische Auflistungen in .NET Framework](../../../docs/standard/generics/collections.md)  
- [Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Generika](../../../docs/standard/generics/index.md)  
+- [Generische Auflistungen in .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [Kovarianz und Kontravarianz](../../../docs/standard/generics/covariance-and-contravariance.md)

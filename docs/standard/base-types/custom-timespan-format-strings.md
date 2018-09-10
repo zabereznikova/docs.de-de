@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9a22f462bc425a9c9e8f1be700474e7326193674
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390662"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262632"
 ---
 # <a name="custom-timespan-format-strings"></a>Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 
@@ -420,5 +420,5 @@ Im folgenden Beispiel werden sowohl das Escapezeichen als auch einfache Anführu
 
 ## <a name="see-also"></a>Siehe auch
 
-[Formatierung von Typen](formatting-types.md)  
-[TimeSpan-Standardformatzeichenfolgen](standard-timespan-format-strings.md)  
+- [Formatierung von Typen](formatting-types.md)  
+- [TimeSpan-Standardformatzeichenfolgen](standard-timespan-format-strings.md)  

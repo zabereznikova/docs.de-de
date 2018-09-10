@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d4d423bbdf72f2af7dad38812aa508df0067c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580249"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44190279"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Gewusst wie: Kombinieren von parallelen und sequenziellen LINQ-Abfragen
 Dieses Beispiel zeigt die Verwendung der <xref:System.Linq.ParallelEnumerable.AsSequential%2A>-Methode, um PLINQ anzuweisen, alle nachfolgenden Operatoren in der Abfrage sequenziell zu verarbeiten. Sequenzielle Verarbeitung ist zwar in der Regel langsamer als parallele, doch manchmal ist sie erforderlich, um richtige Ergebnisse zu erzielen.  
@@ -32,5 +32,6 @@ Dieses Beispiel zeigt die Verwendung der <xref:System.Linq.ParallelEnumerable.As
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Um diesen Code zu kompilieren und auszuführen, fügen Sie ihn in das [PLINQ-Datenbeispiel](../../../docs/standard/parallel-programming/plinq-data-sample.md)-Projekt ein, fügen Sie eine Zeile für den Methodenaufruf aus `Main` hinzu, und drücken Sie F5.  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

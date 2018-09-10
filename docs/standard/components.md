@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574806"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262256"
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
@@ -68,11 +68,11 @@ Weitere Informationen zur UWP finden Sie unter [Einführung in die universelle W
 ## <a name="net-runtimes"></a>.NET-Runtimes
 
 Eine Laufzeit ist die Ausführungsumgebung eines verwalteten Programms. Das Betriebssystem ist Teil der Laufzeitumgebung, gehört jedoch nicht zur .NET-Runtime. Dies sind einige Beispiele für .NET-Runtimes:
- 
- - Die Common Language Runtime (CLR) für das .NET Framework
- - Die Core Common Language Runtime (CoreCLR) für .NET Core
- - .NET Native für die universelle Windows-Plattform 
- - Die Mono-Runtime für Xamarin.iOS, Xamarin.Android, Xamarin.Mac und das Mono-Desktopframework
+
+- Die Common Language Runtime (CLR) für das .NET Framework
+- Die Core Common Language Runtime (CoreCLR) für .NET Core
+- .NET Native für die universelle Windows-Plattform 
+- Die Mono-Runtime für Xamarin.iOS, Xamarin.Android, Xamarin.Mac und das Mono-Desktopframework
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET-Tools und die allgemeine Infrastruktur
 
@@ -80,17 +80,16 @@ Es stehen verschiedene Tools und Infrastrukturkomponenten zur Verfügung, die in
 
 - Die .NET-Sprachen und deren Compiler
 - Das .NET-Projektsystem, das auf *CSPROJ*-, *VBPROJ*- und *FSPROJ*-Dateien basiert)
-- 
-  [MSBuild](/visualstudio/msbuild/msbuild), die Build-Engine, mit dem Projekte erstellt werden
+- [MSBuild](/visualstudio/msbuild/msbuild), die Build-Engine, mit dem Projekte erstellt werden
 - [NuGet](/nuget/), der Paket-Manager von Microsoft für .NET
 - Open-Source-Buildorchestrierungtools, z.B. [CAKE](https://cakebuild.net/) und [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Siehe auch
-[Wahl zwischen .NET Core und .NET Framework für Server-Apps](choosing-core-framework-server.md)   
-[.NET-Standard](net-standard.md)  
-[Leitfaden für .NET Core](../core/index.md)  
-[Leitfaden für .NET Framework](../framework/index.md)  
-[Leitfaden für C#](../csharp/index.md)  
-[Leitfaden für F#](../fsharp/index.md)  
-[Leitfaden für VB.NET](../visual-basic/index.md)  
 
+- [Wahl zwischen .NET Core und .NET Framework für Server-Apps](choosing-core-framework-server.md)   
+- [.NET-Standard](net-standard.md)  
+- [Leitfaden für .NET Core](../core/index.md)  
+- [Leitfaden für .NET Framework](../framework/index.md)  
+- [Leitfaden für C#](../csharp/index.md)  
+- [Leitfaden für F#](../fsharp/index.md)  
+- [Leitfaden für VB.NET](../visual-basic/index.md)  

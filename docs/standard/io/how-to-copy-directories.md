@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cfe07af216da1c35b093a1ca23e4d48c60a7bfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571234"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216053"
 ---
 # <a name="how-to-copy-directories"></a>Gewusst wie: Kopieren von Verzeichnissen
 Dieses Beispiel zeigt, wie E/A-Klassen zum synchronen Kopieren der Inhalte eines Verzeichnisses an einen anderen Speicherort verwendet werden. In diesem Beispiel kann der Benutzer angeben, ob auch die Unterverzeichnisse kopiert werden sollen. Wenn dies der Fall ist, werden die Unterverzeichnisse von der Methode in diesem Beispiel rekursiv kopiert, indem sie sich selbst so lange für jedes weitere Unterverzeichnis aufruft, bis alle kopiert wurden.  
@@ -30,10 +30,11 @@ Dieses Beispiel zeigt, wie E/A-Klassen zum synchronen Kopieren der Inhalte eines
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.FileInfo>  
- <xref:System.IO.DirectoryInfo>  
- <xref:System.IO.FileStream>  
- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
- [Allgemeine E/A-Aufgaben](../../../docs/standard/io/common-i-o-tasks.md)  
- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.FileInfo>  
+- <xref:System.IO.DirectoryInfo>  
+- <xref:System.IO.FileStream>  
+- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
+- [Allgemeine E/A-Aufgaben](../../../docs/standard/io/common-i-o-tasks.md)  
+- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)

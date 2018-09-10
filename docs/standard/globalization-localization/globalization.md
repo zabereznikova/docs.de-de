@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579573"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221908"
 ---
 # <a name="globalization"></a>Globalisierung
 Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Benutzeroberflächen und regionale Daten für Benutzer verschiedener Kulturen unterstützen. Bevor Sie mit der Entwurfsphase beginnen, sollten Sie festlegen, welche Kulturen die App unterstützen soll. Auch wenn eine App standardmäßig auf eine einzige Kultur oder Region ausgerichtet ist, kann Sie so entworfen und geschrieben werden, dass sie leicht auf Benutzer in anderen Kulturen oder Regionen ausgeweitet werden kann.  
@@ -369,6 +369,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
 -   Der Benutzer kann kulturspezifische Einstellungen über die App **Region und Sprache** in der Systemsteuerung anpassen. Wenn Sie ein <xref:System.Globalization.CultureInfo>-Objekt instanziieren, können Sie festlegen, ob es diese Benutzeranpassungen widergespiegelt, indem Sie den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor aufrufen. In der Regel sollten Sie bei Endbenutzer-Apps die Benutzereinstellungen berücksichtigen, sodass der Benutzer die Daten in einem Format angezeigt bekommt, das er erwartet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  
- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  
+- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)

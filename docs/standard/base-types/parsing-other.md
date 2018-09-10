@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7becf993db866e24381fe9013c82d74dd91ee9a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85bb6dcdaa198b6b038cc80e1e38fa7d11123678
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568029"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086380"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analysieren anderer Zeichenfolgen in .NET
 Neben den numerischen und den <xref:System.DateTime>-Zeichenfolgen können Sie auch Zeichenfolgen in Datentypen analysieren, die die Typen <xref:System.Char>, <xref:System.Boolean> und <xref:System.Enum> darstellen.  
@@ -50,7 +50,8 @@ Neben den numerischen und den <xref:System.DateTime>-Zeichenfolgen können Sie a
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
- [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
+- [Typkonvertierung in .NET](../../../docs/standard/base-types/type-conversion.md)

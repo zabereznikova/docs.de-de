@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80bee210b12c588163a3e11dfdab4dadda9ec0c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7bb158331c1e03b18601dc553ed8ac0e8fa7930
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573801"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041394"
 ---
 # <a name="compiled-xpath-expressions"></a>Kompilierte XPath-Ausdrücke
 Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath-Abfrage dar, die entweder von der statischen <xref:System.Xml.XPath.XPathExpression.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathExpression>-Klasse oder der <xref:System.Xml.XPath.XPathNavigator.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegeben wurde.  
@@ -37,7 +37,7 @@ Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath
   
  In der folgenden Tabelle werden alle XPath-Rückgabetypen des W3C sowie ihre Entsprechungen in Microsoft .NET Framework beschrieben. Außerdem wird erläutert, welche Methoden das <xref:System.Xml.XPath.XPathExpression>-Objekt auf der Basis des Rückgabetyps verwenden.  
   
-|XPath-Rückgabetyp des W3C|Entsprechender .NET Framework-Typ|description|Methoden|  
+|XPath-Rückgabetyp des W3C|Entsprechender .NET Framework-Typ|Beschreibung |Methoden|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|Eine ungeordnete Auflistung von Knoten ohne Duplikate, die in der Reihenfolge der Dokumente erstellt wurde.|<xref:System.Xml.XPath.XPathNavigator.Select%2A> oder <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|Ein `true`-Wert oder ein `false`-Wert.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> oder<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -119,13 +119,14 @@ Console.WriteLine(nodes.Current.Value);
   
  Weitere Informationen zu den Methoden der Knotensatznavigation der <xref:System.Xml.XPath.XPathNavigator>-Klasse finden Sie unter [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Auswählen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [Auswerten von XPath-Ausdrücken mit XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [Vergleich von Knoten mit XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [Auswählen von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+- [Auswerten von XPath-Ausdrücken mit XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+- [Vergleich von Knoten mit XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+- [In XPath-Abfragen erkannte Knotentypen](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- [XPath-Abfragen und Namespaces](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

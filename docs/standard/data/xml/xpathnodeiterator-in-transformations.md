@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d30760ef018c9b2d1264b323b57172417e4ef0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571323"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186252"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>„XPathNodeIterator“ in Transformationen
 <xref:System.Xml.XPath.XPathNodeIterator> stellt Methoden zum Durchlaufen einer Knotengruppe dar, die als Ergebnis einer XPath-Abfrage (XML Path Language) oder als Konvertierung eines Ergebnisstrukturfragments mit der node-set-Methode in eine Knotengruppe erstellt wurde. Mit <xref:System.Xml.XPath.XPathNodeIterator> können die Knoten innerhalb dieser Knotengruppe durchlaufen werden. Nach dem Abrufen der Knotengruppe stellt die <xref:System.Xml.XPath.XPathNodeIterator>-Klasse einen schreibgeschützten vorwärtsgerichteten Cursor für die ausgewählte Knotengruppe bereit. Die Knotengruppe wird in der Dokumentreihenfolge erstellt, sodass beim Aufrufen dieser Methode mit dem nächsten Knoten in der Dokumentreihenfolge fortgefahren wird. <xref:System.Xml.XPath.XPathNodeIterator> erstellt keine Knotenstruktur aller Knoten im Satz. Stattdessen stellt er ein Fenster bereit, wodurch der zugrunde liegende Knoten, auf den er verweist, während der Bewegung durch die Struktur verfügbar gemacht wird. Mit den Methoden und Eigenschaften der <xref:System.Xml.XPath.XPathNodeIterator>-Klasse können Sie Informationen aus dem aktuellen Knoten abrufen. Eine Liste der verfügbaren Methoden und Eigenschaften finden Sie unter <xref:System.Windows.Forms.ToolBar>.  
@@ -158,5 +158,6 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

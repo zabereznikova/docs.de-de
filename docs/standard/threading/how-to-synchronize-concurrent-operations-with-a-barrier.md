@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a2dc5e650a479e782a6739a82e247c25e196fda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583152"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44194493"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Gewusst wie: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere
 Das folgende Beispiel zeigt das Synchronisieren gleichzeitiger Aufgaben mit einer <xref:System.Threading.Barrier>.  
@@ -28,5 +28,6 @@ Das folgende Beispiel zeigt das Synchronisieren gleichzeitiger Aufgaben mit eine
   
  Eine <xref:System.Threading.Barrier> ist ein Objekt, das verhindert, dass einzelne Aufgaben in einem parallelen Vorgang fortgesetzt werden, bevor alle Aufgaben die Barriere erreichen. Das ist nützlich, wenn ein parallel ausgeführter Vorgang in Phasen erfolgt, und jede Phase eine Synchronisierung zwischen Aufgaben erfordert. In diesem Beispiel besteht der Vorgang aus zwei Phasen. In der ersten Phase füllt jede Aufgabe ihren Abschnitt des Puffers mit Daten. Wenn eine Aufgabe ihren Abschnitt gefüllt hat, signalisiert die Aufgabe der Barriere, das sie zum Fortfahren bereit ist, und wartet. Wenn alle Aufgaben ihr Signal an die Barriere gesendet haben, werden sie entsperrt, und die zweite Phase startet. Die Barriere ist erforderlich, da die zweite Phase voraussetzt, dass jede Aufgabe Zugriff auf alle Daten hat, die bis zu diesem Punkt generiert wurden. Ohne die Barriere könnten die Aufgaben, die zuerst ihre Abschnitte gefüllt haben, versuchen, aus Puffern zu lesen, die noch nicht von anderen Aufgaben gefüllt wurden. Sie können eine beliebige Anzahl von Phasen auf diese Weise synchronisieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenstrukturen für die parallele Programmierung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Datenstrukturen für die parallele Programmierung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

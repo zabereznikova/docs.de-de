@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573899"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883721"
 ---
 # <a name="latency-modes"></a>Latenzmodi
 Zum Freigeben von Objekten muss der Garbage Collector alle ausgeführten Threads einer Anwendung beenden. In einigen Situationen, z. B. wenn eine Anwendung Daten abruft oder Inhalte anzeigt, kann eine vollständige Garbage Collection zu einem kritischen Zeitpunkt erfolgen und die Leistung beeinträchtigen. Sie können das Ausmaß der Garbage Collection anpassen, indem Sie die <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType>-Eigenschaft auf einen der <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>-Werte festlegen.  
@@ -54,7 +54,8 @@ Zum Freigeben von Objekten muss der Garbage Collector alle ausgeführten Threads
   
 -   Sie können Garbage Collections der Generation 2 in Zeiten mit geringer Latenz erzwingen, indem Sie die <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>-Methode aufrufen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.GC?displayProperty=nameWithType>  
- [Induzierte Sammlungen](../../../docs/standard/garbage-collection/induced.md)  
- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- [Induzierte Sammlungen](../../../docs/standard/garbage-collection/induced.md)  
+- [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

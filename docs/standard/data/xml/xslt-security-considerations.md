@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e369f570adf51355d02c73bde5d4b1a462e59870
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43422792"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210957"
 ---
 # <a name="xslt-security-considerations"></a>XSLT-Sicherheitsaspekte
 Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leistungsfähigkeit und Flexibilität. Sie enthält viele Funktionen, die zwar hilfreich sind, jedoch auch von externen Quellen ausgenutzt werden können. Um die XSLT-Sicherheit zu verwenden, müssen Sie die verschiedenen Arten von Sicherheitsproblemen kennen und die grundlegenden Strategien verstehen, mit denen Sie diese verringern können.  
@@ -56,7 +56,8 @@ Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leis
   
 -   Wenn Sie sich vergewissern möchten, dass auf keine externe Ressource zugegriffen wird, können Sie für das `null`-Argument <xref:System.Xml.XmlResolver> angeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Auflösen von externen Ressourcen während der XSLT-Verarbeitung](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
- [Codezugriffssicherheit](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+## <a name="see-also"></a>Siehe auch
+
+- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Auflösen von externen Ressourcen während der XSLT-Verarbeitung](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
+- [Codezugriffssicherheit](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)

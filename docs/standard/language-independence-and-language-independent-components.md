@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579625"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864786"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.  
@@ -169,7 +169,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Das [allgemeine Typsystem](../../docs/standard/base-types/common-type-system.md) von .NET Framework enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.  
   
-|CLS-kompatibler Typ|description|  
+|CLS-kompatibler Typ|Beschreibung |  
 |-------------------------|-----------------|  
 |<xref:System.Byte>|Ganze 8-Bit-Zahl ohne Vorzeichen|  
 |<xref:System.Int16>|Ganze 16-Bit-Zahl mit Vorzeichen|  
@@ -185,7 +185,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.  
   
-|Nicht kompatibler Typ|description|CLS-kompatible Alternative|  
+|Nicht kompatibler Typ|Beschreibung |CLS-kompatible Alternative|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|Ganzzahliger 8-Bit-Datentyp mit Vorzeichen|<xref:System.Int16>|  
 |<xref:System.TypedReference>|Zeiger auf ein Objekt und den Laufzeittyp|Keiner|  
@@ -585,5 +585,6 @@ vbc example.vb /r:UtilityLib.dll
 csc example.cs /r:UtilityLib.dll  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.CLSCompliantAttribute>
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.CLSCompliantAttribute>

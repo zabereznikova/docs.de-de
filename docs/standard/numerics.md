@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a795fb52c123840c1ba7b82f77d6745feba89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588696"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209486"
 ---
 # <a name="numerics-in-the-net-framework"></a>Numerische Ausdrücke in .NET Framework
 .NET Framework unterstützt die standardmäßigen numerischen Ganzzahlen und Gleitkomma-Primitive sowie <xref:System.Numerics.BigInteger>, ein ganzzahliger Typ ohne theoretische obere oder untere Grenze, <xref:System.Numerics.Complex>, einen komplexe Zahlen darstellenden Typ, und eine Reihe von SIMD-fähigen Vektortypen im <xref:System.Numerics>-Namespace.  
@@ -77,5 +77,6 @@ ms.locfileid: "33588696"
   
  SIMD kann auch als [NuGet-Paket](https://www.nuget.org/packages/System.Numerics.Vectors) heruntergeladen werden.  Das NuGET-Paket umfasst auch eine generische <xref:System.Numerics.Vector%601>-Struktur, mit der Sie einen Vektor eines beliebigen primitiven numerischen Typs erstellen können. (Zu den primitiven numerischen Typen gehören alle numerischen Typen im <xref:System>-Namespace außer <xref:System.Decimal>). Darüber hinaus stellt die <xref:System.Numerics.Vector%601>-Struktur eine Bibliothek von Hilfsmethoden bereit, die Sie bei der Arbeit mit Vektoren aufrufen können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen der Anwendung](../../docs/standard/application-essentials.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Grundlagen der Anwendung](../../docs/standard/application-essentials.md)

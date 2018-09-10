@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697820b01bd629baa306d96002a98d92e44dab51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592196"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084717"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Signalisieren und Warten auf Signale miteinander zu kommunizieren. Ereignis-Wait-Handles (die auch einfach als „Ereignisse“ bezeichnet werden) sind Wait-Handles, die als Signale verwendet werden können, damit ein oder mehrere wartende Threads freigegeben werden. Nachdem ein Ereignis-Wait-Handle als Signal verwendet wurde, wird es entweder manuell oder automatisch zurückgesetzt. Die <xref:System.Threading.EventWaitHandle>-Klasse kann entweder ein lokales Ereignis-Wait-Handle (lokales Ereignis) darstellen oder ein Ereignis-Wait-Handle eines benannten Systems (benanntes Ereignis oder Systemereignis, für alle Prozesse sichtbar).  
@@ -62,9 +62,10 @@ Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Si
 > [!NOTE]
 >  Im Gegensatz zur <xref:System.Threading.EventWaitHandle>-Klasse können die abgeleiteten Klassen <xref:System.Threading.AutoResetEvent> und <xref:System.Threading.ManualResetEvent> nur lokale Wait-Handles darstellen. Sie können keine benannten Systemereignisse darstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
