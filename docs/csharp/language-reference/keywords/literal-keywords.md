@@ -5,25 +5,25 @@ helpviewer_keywords:
 - literal keywords [C#]
 ms.assetid: 95b3f075-47d7-4990-8ea8-9e637678bf3c
 ms.openlocfilehash: e031e55642e31ca450517dd03d10e33a2e6e8455
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44205321"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275339"
 ---
-# <a name="literal-keywords-c-reference"></a><span data-ttu-id="f9e2b-102">Literalschlüsselwörter (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f9e2b-102">Literal Keywords (C# Reference)</span></span>
-<span data-ttu-id="f9e2b-103">C# hat die folgenden Literalschlüsselwörter:</span><span class="sxs-lookup"><span data-stu-id="f9e2b-103">C# has the following literal keywords:</span></span>  
+# <a name="literal-keywords-c-reference"></a><span data-ttu-id="ae4ea-102">Literalschlüsselwörter (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ae4ea-102">Literal Keywords (C# Reference)</span></span>
+<span data-ttu-id="ae4ea-103">C# hat die folgenden Literalschlüsselwörter:</span><span class="sxs-lookup"><span data-stu-id="ae4ea-103">C# has the following literal keywords:</span></span>  
   
--   [<span data-ttu-id="f9e2b-104">null</span><span class="sxs-lookup"><span data-stu-id="f9e2b-104">null</span></span>](../../../csharp/language-reference/keywords/null.md)  
+-   [<span data-ttu-id="ae4ea-104">null</span><span class="sxs-lookup"><span data-stu-id="ae4ea-104">null</span></span>](../../../csharp/language-reference/keywords/null.md)  
   
--   [<span data-ttu-id="f9e2b-105">true</span><span class="sxs-lookup"><span data-stu-id="f9e2b-105">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
+-   [<span data-ttu-id="ae4ea-105">true</span><span class="sxs-lookup"><span data-stu-id="ae4ea-105">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
   
--   [<span data-ttu-id="f9e2b-106">false</span><span class="sxs-lookup"><span data-stu-id="f9e2b-106">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
+-   [<span data-ttu-id="ae4ea-106">false</span><span class="sxs-lookup"><span data-stu-id="ae4ea-106">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
   
--   [<span data-ttu-id="f9e2b-107">default</span><span class="sxs-lookup"><span data-stu-id="f9e2b-107">default</span></span>](../../../csharp/language-reference/keywords/default.md)  
+-   [<span data-ttu-id="ae4ea-107">default</span><span class="sxs-lookup"><span data-stu-id="ae4ea-107">default</span></span>](../../../csharp/language-reference/keywords/default.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f9e2b-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f9e2b-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae4ea-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ae4ea-108">See Also</span></span>
 
-- [<span data-ttu-id="f9e2b-109">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="f9e2b-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="f9e2b-110">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="f9e2b-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="f9e2b-111">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="f9e2b-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
+- [<span data-ttu-id="ae4ea-109">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="ae4ea-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="ae4ea-110">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="ae4ea-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="ae4ea-111">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="ae4ea-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
