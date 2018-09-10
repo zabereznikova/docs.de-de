@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 809385bda48c6fb8dae125fe348228aaee375a6c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: e399a512d2bee636aec35e008c0632ce9c5fa781
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071304"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44172641"
 ---
 # <a name="asynchronous-programming-patterns"></a>Muster für die asynchrone Programmierung
 
@@ -71,7 +71,7 @@ Eine umfassende Erörterung von TAP, APM und EAP finden Sie unter den Links im n
   
 ## <a name="related-topics"></a>Verwandte Themen
 
-| Titel | description |
+| Title | Beschreibung |
 | ----- | ----------- |
 | [Asynchronous Programming Model (APM) (Asynchrones Programmiermodell (APM))](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | Beschreibt das Legacymodell, das die <xref:System.IAsyncResult>-Schnittstelle verwendet, um asynchrones Verhalten bereitzustellen. Dieses Modell ist für neue Entwicklungen nicht mehr empfehlenswert. |
 | [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | Beschreibt das ereignisbasierte Legacymodell für die Bereitstellung des asynchronen Verhaltens. Dieses Modell ist für neue Entwicklungen nicht mehr empfehlenswert. |
@@ -79,6 +79,6 @@ Eine umfassende Erörterung von TAP, APM und EAP finden Sie unter den Links im n
 
 ## <a name="see-also"></a>Siehe auch
 
-[Asynchrone Programmierung in C#](~/docs/csharp/async.md)   
-[Asynchrone Programmierung in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-[Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchrone Programmierung in C#](~/docs/csharp/async.md)   
+- [Asynchrone Programmierung in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

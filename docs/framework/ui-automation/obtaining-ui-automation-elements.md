@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 9994f6a3026c790acdb35af3300379786f615607
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518882"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Abrufen von Benutzeroberflächenautomatisierungs-Elementen
 > [!NOTE]
@@ -39,7 +39,7 @@ ms.locfileid: "43481983"
   
  Die einfachste Bedingung ist <xref:System.Windows.Automation.Condition.TrueCondition>. Dies ist ein vordefiniertes Objekt, das angibt, dass alle im Suchbereich befindlichen Elemente zurückgegeben werden sollen. <xref:System.Windows.Automation.Condition.FalseCondition>(das Gegenteil von <xref:System.Windows.Automation.Condition.TrueCondition>) ist weniger nützlich, da diese Bedingung verhindert, dass irgendein Element gefunden wird.  
   
- Sie können drei weitere vordefinierte Bedingungen jeweils eigenständig oder in Kombination mit anderen Bedingungen verwenden: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>und <xref:System.Windows.Automation.Automation.RawViewCondition>. Eigenständig verwendet entspricht<xref:System.Windows.Automation.Automation.RawViewCondition>der Bedingung <xref:System.Windows.Automation.Condition.TrueCondition>, da Elemente hierbei nicht nach ihrer <xref:System.Windows.Automation.AutomationElement.AutomationElementInf-Eigenschaft odermation.IsControlElement%2A> -Eigenschaft oder <xref:System.Windows.Automation.AutomationElement.AutomationElementInf-Eigenschaft odermation.IsContentElement%2A> -Eigenschaft gefiltert werden.  
+ Sie können drei weitere vordefinierte Bedingungen jeweils eigenständig oder in Kombination mit anderen Bedingungen verwenden: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>und <xref:System.Windows.Automation.Automation.RawViewCondition>. Eigenständig verwendet entspricht<xref:System.Windows.Automation.Automation.RawViewCondition>der Bedingung <xref:System.Windows.Automation.Condition.TrueCondition>, da Elemente hierbei nicht nach ihrer <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> -Eigenschaft oder <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> -Eigenschaft gefiltert werden.  
   
  Andere Bedingungen werden aus <xref:System.Windows.Automation.PropertyCondition> -Objekten erstellt, von denen jedes einen Eigenschaftswert angibt. Beispielsweise kann ein <xref:System.Windows.Automation.PropertyCondition> -Objekt angeben, dass das Element aktiviert ist oder dass es bestimmtes Steuerelementmuster unterstützt.  
   
