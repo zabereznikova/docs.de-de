@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9f253f31a7376bf0429784a031188b91cc070df
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269660"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515826"
 ---
 # <a name="statement-keywords-c-reference"></a>Anweisungsschlüsselwörter (C#-Referenz)
 Anweisungen sind Instruktionen des Programms. Sie werden nacheinander ausgeführt, mit Ausnahme der Anweisungen, auf die in der folgenden Tabelle verwiesen wird. In der folgenden Tabelle sind die C#-Anweisungsschlüsselwörter aufgeführt. Weitere Informationen zu Anweisungen, die durch kein Schlüsselwort ausgedrückt werden, finden Sie unter [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
@@ -25,7 +25,8 @@ Anweisungen sind Instruktionen des Programms. Sie werden nacheinander ausgeführ
 [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)|[fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|  
 |[lock-Anweisung](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [Anweisungen](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)

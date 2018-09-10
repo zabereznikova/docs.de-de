@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: bd0a133c6ce1a9623bfe8598d1dc786c44e6eaad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336829"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503793"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Vorteile von Generika (C#-Programmierhandbuch)
 Generika bieten die Lösung für eine Einschränkung in früheren Versionen der Common Language Runtime und der C#-Sprache, bei der Generalisierung durch die Umwandlung von Typen in den und aus dem universellen Basistyp <xref:System.Object> erfolgt. Durch Erstellen einer generischen Klasse können Sie eine Auflistung erstellen, die zur Kompilierzeit typsicher ist.  
@@ -34,10 +34,11 @@ Generika bieten die Lösung für eine Einschränkung in früheren Versionen der 
   
  Bei Clientcode ist im Vergleich von <xref:System.Collections.Generic.List%601> mit <xref:System.Collections.ArrayList> als Syntax lediglich das Typargument in der Deklaration und Instanziierung hinzugekommen. Zwar ist die Codierung etwas komplexer, aber dafür können Sie eine Liste erstellen, die nicht nur sicherer als <xref:System.Collections.ArrayList> ist, sondern auch bedeutend schneller, vor allem wenn es sich bei den Listenelementen um Werttypen handelt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)  
- [Richtlinien für Auflistungen](../../../standard/design-guidelines/guidelines-for-collections.md)   
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+- [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Richtlinien für Auflistungen](../../../standard/design-guidelines/guidelines-for-collections.md)   

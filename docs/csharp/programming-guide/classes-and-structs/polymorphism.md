@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328444"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523392"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
@@ -94,13 +94,14 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
 -   [Gewusst wie: Überschreiben der ToString-Methode](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
- [Typen](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [Typen](../../../csharp/programming-guide/types/index.md)

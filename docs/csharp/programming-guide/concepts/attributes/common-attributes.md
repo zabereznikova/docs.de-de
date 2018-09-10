@@ -2,12 +2,12 @@
 title: Allgemeine Attribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332529"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504394"
 ---
 # <a name="common-attributes-c"></a>Allgemeine Attribute (C#)
 Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwendet werden.  
@@ -221,7 +221,7 @@ class SampleClass
   
  Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
-|Attribut|description|Typ|  
+|Attribut|Beschreibung |Typ|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Pfad zum Zeitpunkt der Kompilierung.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird|`Integer`|  
@@ -229,10 +229,11 @@ class SampleClass
   
  Weitere Informationen zu den Aufruferinformationsattributen finden Sie unter [Caller Information (C#) (Aufruferinformationen (C#))](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
- [Attribute](../../../../../docs/standard/attributes/index.md)  
- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+- [Attribute](../../../../../docs/standard/attributes/index.md)  
+- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

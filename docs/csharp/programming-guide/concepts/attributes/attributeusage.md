@@ -1,12 +1,12 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 869e6509e55268767915a783a8652f7f950d7137
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955927"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500571"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -14,13 +14,13 @@ Bestimmt, wie eine benutzerdefinierte Attributklasse verwendet werden kann. Bei 
 
 - Auf welche Programmelemente das Attribut angewendet werden kann. Wenn Sie die Verwendung nicht einschränken, kann ein Attribut auf jedes der folgenden Programmelemente angewendet werden:
   - Assembly
-  - Modul
+  - module
   - Feld
-  - Ereignis
+  - event
   - Methode
   - Parameter
-  - Eigenschaft
-  - Rückgabe
+  - property
+  - return
   - Typ
 - Ob ein Attribut mehrfach auf ein einzelnes Programmelement angewendet werden kann.
 - Ob Attribute von abgeleiteten Klassen geerbt werden.
@@ -80,11 +80,12 @@ SecondAttribute
 ```
 
 ## <a name="see-also"></a>Siehe auch
- <xref:System.Attribute>  
- <xref:System.Reflection>  
- [C#-Programmierhandbuch](../..//index.md)  
- [Attribute](../../../..//standard/attributes/index.md)  
- [Reflektion (C#)](../reflection.md)  
- [Attribute](index.md)  
- [Erstellen benutzerdefinierter Attribute (C#)](creating-custom-attributes.md)  
- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](accessing-attributes-by-using-reflection.md)
+
+- <xref:System.Attribute>  
+- <xref:System.Reflection>  
+- [C#-Programmierhandbuch](../..//index.md)  
+- [Attribute](../../../..//standard/attributes/index.md)  
+- [Reflektion (C#)](../reflection.md)  
+- [Attribute](index.md)  
+- [Erstellen benutzerdefinierter Attribute (C#)](creating-custom-attributes.md)  
+- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](accessing-attributes-by-using-reflection.md)

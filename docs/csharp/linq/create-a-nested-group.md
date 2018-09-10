@@ -3,12 +3,12 @@ title: Erstellen einer geschachtelten Gruppe (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie eine geschachtelten Gruppe in einem LINQ-Abfrageausdruck in C# erstellen.
 ms.date: 12/1/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
-ms.openlocfilehash: c973048d0859f61596c62c294131b8c00d0039f8
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 82b07c303215200fa974ce614a2d5a77882dcf4c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404748"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509967"
 ---
 # <a name="create-a-nested-group"></a>Erstellen einer geschachtelten Gruppe
 
@@ -25,4 +25,4 @@ Beachten Sie, das drei geschachtelte `foreach`-Schleifen für die Iteration übe
 
 ## <a name="see-also"></a>Siehe auch
 
-[Language-Integrated Query (LINQ)](index.md)
+- [Language-Integrated Query (LINQ)](index.md)

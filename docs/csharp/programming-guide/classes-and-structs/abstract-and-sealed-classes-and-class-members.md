@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: aa7c951acadd2e7b60f6da17cd7bf357fbd02d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e80357a51bde270d5ed012f16f7b2e821f084c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313913"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517341"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Abstrakte und versiegelte Klassen und Klassenmember (C#-Programmierhandbuch)
 Das Schlüsselwort [abstract](../../../csharp/language-reference/keywords/abstract.md) ermöglicht die Erstellung von Klassen und [Klassenmembern](../../../csharp/language-reference/keywords/class.md), die unvollständig sind und in einer abgeleiteten Klasse implementiert werden müssen.  
@@ -47,10 +47,11 @@ Das Schlüsselwort [abstract](../../../csharp/language-reference/keywords/abstra
   
  [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Gewusst wie: Definieren von abstrakten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Gewusst wie: Definieren von abstrakten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

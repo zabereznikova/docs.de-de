@@ -2,12 +2,12 @@
 title: 'Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)'
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 948363fcf3392a6258bb05e448dfb4ee37549304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64749bfda88b3bf9473fef08d5aef6490d2c37c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340111"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514781"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)
 In diesem Tutorial wird gezeigt, wie Sie mit der funktionalen Transformation und LINQ to XML den Inhalt von XML-Dokumenten manipulieren können. Die C#-Beispiele fragen Informationen in von Microsoft Word gespeicherten Office Open XML-WordprocessingML-Dokumenten ab und bearbeiten sie.  
@@ -16,7 +16,7 @@ In diesem Tutorial wird gezeigt, wie Sie mit der funktionalen Transformation und
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[Form von WordprocessingML-Dokumenten (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|Enthält eine kurze Erläuterung der Bestandteile von WordprocessingML-Dokumenten.|  
 |[Erstellen eines Office Open-Quell-XML-Dokuments (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|Enthält schrittweise Anweisungen zum Erstellen des Quelldokuments für Abfragen in diesem Lernprogramm.|  
@@ -29,6 +29,7 @@ In diesem Tutorial wird gezeigt, wie Sie mit der funktionalen Transformation und
 |[Suchen von Text in Word-Dokumenten (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Verwendet die vorherigen Abfragen, um nach einer konkreten Textzeichenfolge in einem Dokument zu suchen.|  
 |[Details of Office Open XML WordprocessingML Documents (C#) (Details eines Office Open XML-WordprocessingML-Dokuments (C#))](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Enthält einige Detailinformationen zu Office Open XML-WordprocessingML-Dokumenten.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Reine funktionale XML-Transformationen (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Reine funktionale XML-Transformationen (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

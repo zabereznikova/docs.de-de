@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 298ee915bbe11313f3b33ea7dae9353ef956a231
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549454"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509534"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Verwenden von foreach mit Arrays (C#-Programmierhandbuch)
 
@@ -26,10 +26,11 @@ Bei mehrdimensionalen Arrays werden Elemente so durchlaufen, dass die Indizes de
 
 Bei mehrdimensionalen Arrays haben Sie jedoch eine größere Kontrolle über die Reihenfolge bei der Verarbeitung von Arrayelementen, wenn Sie eine geschachtelte [for](../../language-reference/keywords/for.md)-Schleife verwenden.
 
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Array>  
- [C#-Programmierhandbuch](../index.md)  
- [Arrays](index.md)  
- [Eindimensionale Arrays](single-dimensional-arrays.md)  
- [Mehrdimensionale Arrays](multidimensional-arrays.md)  
- [Verzweigte Arrays](jagged-arrays.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Array>  
+- [C#-Programmierhandbuch](../index.md)  
+- [Arrays](index.md)  
+- [Eindimensionale Arrays](single-dimensional-arrays.md)  
+- [Mehrdimensionale Arrays](multidimensional-arrays.md)  
+- [Verzweigte Arrays](jagged-arrays.md)

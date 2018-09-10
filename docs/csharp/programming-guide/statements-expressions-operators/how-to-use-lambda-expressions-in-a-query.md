@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 97abbada9ff77c6e6d4fa401e956a6bd7edca9d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1632466aaa29cb79f053bd3ac2ca42e8b03ea89c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936762"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506483"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Gewusst wie: Verwenden von Lambdaausdrücken in einer Abfrage (C#-Programmierhandbuch)
 Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sondern nur in Methodenaufrufen. Abfrageausdrücke können Methodenaufrufe enthalten. Einige Abfragevorgänge können nur in Methodensyntax ausgedrückt werden. Weitere Informationen zu den Unterschieden zwischen Abfragesyntax und Methodensyntax finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -31,5 +31,5 @@ Sie können Lambdaausdrücke nicht direkt in der Abfragesyntax verwenden, sonder
   
 ## <a name="see-also"></a>Siehe auch
 
-[Lambda-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-[Ausdrucksbaumstrukturen (C#)](../concepts/expression-trees/index.md)  
+- [Lambda-Ausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Ausdrucksbaumstrukturen (C#)](../concepts/expression-trees/index.md)  

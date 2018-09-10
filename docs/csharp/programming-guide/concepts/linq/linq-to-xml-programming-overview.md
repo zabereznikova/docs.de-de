@@ -2,12 +2,12 @@
 title: Übersicht über die LINQ to XML-Programmierung (C#)
 ms.date: 07/20/2015
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
-ms.openlocfilehash: c461d4b4082293d91d18538596cfa03d9445c224
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 9eb86e0c9c5dada36e09c78e7070d32afa9824c1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198884"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522711"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>Übersicht über die LINQ to XML-Programmierung (C#)
 Diese Themen enthalten allgemeine Informationen zu den [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen sowie detaillierte Informationen zu drei der wichtigsten Klassen.  
@@ -23,5 +23,6 @@ Diese Themen enthalten allgemeine Informationen zu den [!INCLUDE[sqltecxlinq](~/
 |[Übersicht über die XDocument-Klasse (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|Enthält eine Einführung in die <xref:System.Xml.Linq.XDocument>-Klasse, die XML-Dokumente darstellt.|  
 |[Vorgehensweise: Erstellen von LINQ to XML-Beispielen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|Enthält die `Using`-Direktiven, die für das Erstellen der LINQ to XML-Beispiele erforderlich sind|  
   
-## <a name="see-also"></a>Siehe auch  
- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

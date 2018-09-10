@@ -3,12 +3,12 @@ title: Strukturen - Leitfaden für C#
 description: Erfahren Sie mehr über den Typ „Struktur“ und wie Sie diesen erstellen
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26b7b075dbe159d43fd7f84e9599d2d8d6a8332c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349768"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513085"
 ---
 # <a name="structs"></a>Strukturen
 Eine *Struktur* ist ein Werttyp. Wenn eine Struktur erstellt wird, enthält die Variable, der die Struktur zugewiesen wird, die eigentlichen Daten der Struktur. Wenn die Struktur einer neuen Variable zugewiesen wird, werden diese kopiert. Die neue Variable und die ursprüngliche Variable enthalten daher zwei separate Kopien der gleichen Daten. Änderungen an einer Kopie wirken sich nicht auf die andere Kopie aus.
@@ -66,6 +66,6 @@ Im zweiten Beispiel werden *binäre Literale* veranschaulicht, mit denen Sie ein
 Gewöhnliche Werttypen können den Wert [NULL](./language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie ein **?** nach dem Typ anfügen. Zum Beispiel ist **int?** ein **int**-Typ, der auch den Wert [NULL](./language-reference/keywords/null.md) haben kann. Im CTS sind Typen, die NULL-Werte zulassen, Instanzen vom generischen Strukturtyp <xref:System.Nullable%601>. Typen, die NULL-Werte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Typen, die NULL-Werte zulassen (C#-Programmierhandbuch)](./programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Siehe auch
-[Klassen](classes.md)
 
-[Grundlegende Typen](basic-types.md)
+- [Klassen](classes.md)
+- [Grundlegende Typen](basic-types.md)
