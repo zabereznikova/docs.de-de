@@ -2,20 +2,20 @@
 title: 'Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 4313c5263b6a219ec3c8d05a7b7938c41c7cc028
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98fa8bd9ae393e9c87b67ae3f2874a2c279415af
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328187"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526946"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a><span data-ttu-id="a514d-102">Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML (C#)</span><span class="sxs-lookup"><span data-stu-id="a514d-102">How to: Perform Streaming Transformations of Text to XML (C#)</span></span>
-<span data-ttu-id="a514d-103">Ein Ansatz für die Verarbeitung einer Textdatei besteht darin, eine Erweiterungsmethode zu schreiben, die die Textdatei mit dem `yield return`-Konstrukt zeilenweise streamt.</span><span class="sxs-lookup"><span data-stu-id="a514d-103">One approach to processing a text file is to write an extension method that streams the text file a line at a time using the `yield return` construct.</span></span> <span data-ttu-id="a514d-104">Anschließend können Sie eine LINQ-Abfrage schreiben, die die Textdatei verzögert verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="a514d-104">You then can write a LINQ query that processes the text file in a lazy deferred fashion.</span></span> <span data-ttu-id="a514d-105">Wenn Sie dann die Ausgabe mit <xref:System.Xml.Linq.XStreamingElement> streamen, erstellen Sie eine Transformation der Textdatei in XML, die, unabhängig von der Größe der ursprünglichen Textdatei, nur einen minimalen Teil des Arbeitsspeichers beansprucht.</span><span class="sxs-lookup"><span data-stu-id="a514d-105">If you then use <xref:System.Xml.Linq.XStreamingElement> to stream output, you then can create a transformation from the text file to XML that uses a minimal amount of memory, regardless of the size of the source text file.</span></span>  
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a><span data-ttu-id="bf954-102">Vorgehensweise: Durchführen einer Streamingtransformation von Text in XML (C#)</span><span class="sxs-lookup"><span data-stu-id="bf954-102">How to: Perform Streaming Transformations of Text to XML (C#)</span></span>
+<span data-ttu-id="bf954-103">Ein Ansatz für die Verarbeitung einer Textdatei besteht darin, eine Erweiterungsmethode zu schreiben, die die Textdatei mit dem `yield return`-Konstrukt zeilenweise streamt.</span><span class="sxs-lookup"><span data-stu-id="bf954-103">One approach to processing a text file is to write an extension method that streams the text file a line at a time using the `yield return` construct.</span></span> <span data-ttu-id="bf954-104">Anschließend können Sie eine LINQ-Abfrage schreiben, die die Textdatei verzögert verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="bf954-104">You then can write a LINQ query that processes the text file in a lazy deferred fashion.</span></span> <span data-ttu-id="bf954-105">Wenn Sie dann die Ausgabe mit <xref:System.Xml.Linq.XStreamingElement> streamen, erstellen Sie eine Transformation der Textdatei in XML, die, unabhängig von der Größe der ursprünglichen Textdatei, nur einen minimalen Teil des Arbeitsspeichers beansprucht.</span><span class="sxs-lookup"><span data-stu-id="bf954-105">If you then use <xref:System.Xml.Linq.XStreamingElement> to stream output, you then can create a transformation from the text file to XML that uses a minimal amount of memory, regardless of the size of the source text file.</span></span>  
   
- <span data-ttu-id="a514d-106">Beim Streamen von Transformationen gilt es jedoch, einige Punkte zu beachten.</span><span class="sxs-lookup"><span data-stu-id="a514d-106">There are some caveats regarding streaming transformations.</span></span> <span data-ttu-id="a514d-107">Streamingtransformationen eignen sich am besten in Situationen, in denen Sie die gesamte Datei auf einmal verarbeiten können und in denen Sie die Zeilen in derselben Reihenfolge wie im ursprünglichen Dokument verarbeiten können.</span><span class="sxs-lookup"><span data-stu-id="a514d-107">A streaming transformation is best applied in situations where you can process the entire file once, and if you can process the lines in the order that they occur in the source document.</span></span> <span data-ttu-id="a514d-108">Wenn Sie die Datei mehr als einmal verarbeiten müssen oder wenn Sie vor der Verarbeitung der Zeilen deren Reihenfolge ändern müssen, gehen viele Vorteile des Streamingverfahrens verloren.</span><span class="sxs-lookup"><span data-stu-id="a514d-108">If you have to process the file more than once, or if you have to sort the lines before you can process them, you will lose many of the benefits of using a streaming technique.</span></span>  
+ <span data-ttu-id="bf954-106">Beim Streamen von Transformationen gilt es jedoch, einige Punkte zu beachten.</span><span class="sxs-lookup"><span data-stu-id="bf954-106">There are some caveats regarding streaming transformations.</span></span> <span data-ttu-id="bf954-107">Streamingtransformationen eignen sich am besten in Situationen, in denen Sie die gesamte Datei auf einmal verarbeiten können und in denen Sie die Zeilen in derselben Reihenfolge wie im ursprünglichen Dokument verarbeiten können.</span><span class="sxs-lookup"><span data-stu-id="bf954-107">A streaming transformation is best applied in situations where you can process the entire file once, and if you can process the lines in the order that they occur in the source document.</span></span> <span data-ttu-id="bf954-108">Wenn Sie die Datei mehr als einmal verarbeiten müssen oder wenn Sie vor der Verarbeitung der Zeilen deren Reihenfolge ändern müssen, gehen viele Vorteile des Streamingverfahrens verloren.</span><span class="sxs-lookup"><span data-stu-id="bf954-108">If you have to process the file more than once, or if you have to sort the lines before you can process them, you will lose many of the benefits of using a streaming technique.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a514d-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a514d-109">Example</span></span>  
- <span data-ttu-id="a514d-110">In diesem Beispiel wird die folgende Textdatei, <legacyBold>People.txt</legacyBold>, als Quelldatei verwendet:</span><span class="sxs-lookup"><span data-stu-id="a514d-110">The following text file, People.txt, is the source for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="bf954-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bf954-109">Example</span></span>  
+ <span data-ttu-id="bf954-110">In diesem Beispiel wird die folgende Textdatei, <legacyBold>People.txt</legacyBold>, als Quelldatei verwendet:</span><span class="sxs-lookup"><span data-stu-id="bf954-110">The following text file, People.txt, is the source for this example.</span></span>  
   
 ```  
 #This is a comment  
@@ -24,7 +24,7 @@ ms.locfileid: "33328187"
 3,David,Wright,Inventor  
 ```  
   
- <span data-ttu-id="a514d-111">Der folgende Code enthält eine Erweiterungsmethode, die die Zeilen der Textdatei verzögert streamt.</span><span class="sxs-lookup"><span data-stu-id="a514d-111">The following code contains an extension method that streams the lines of the text file in a deferred fashion.</span></span>  
+ <span data-ttu-id="bf954-111">Der folgende Code enthält eine Erweiterungsmethode, die die Zeilen der Textdatei verzögert streamt.</span><span class="sxs-lookup"><span data-stu-id="bf954-111">The following code contains an extension method that streams the lines of the text file in a deferred fashion.</span></span>  
   
 ```csharp  
 public static class StreamReaderSequence  
@@ -64,7 +64,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="a514d-112">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="a514d-112">This example produces the following output:</span></span>  
+ <span data-ttu-id="bf954-112">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="bf954-112">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -86,6 +86,7 @@ class Program
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a514d-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a514d-113">See Also</span></span>  
- <xref:System.Xml.Linq.XStreamingElement>  
- [<span data-ttu-id="a514d-114">Erweiterte Abfragetechniken (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a514d-114">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bf954-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bf954-113">See Also</span></span>
+
+- <xref:System.Xml.Linq.XStreamingElement>  
+- [<span data-ttu-id="bf954-114">Erweiterte Abfragetechniken (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bf954-114">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

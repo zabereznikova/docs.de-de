@@ -9,44 +9,44 @@ helpviewer_keywords:
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
 ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43408006"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520707"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="2135e-103">sein.</span><span class="sxs-lookup"><span data-stu-id="2135e-103">.</span></span> <span data-ttu-id="2135e-104">Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="2135e-104">Operator (C# Reference)</span></span>
-<span data-ttu-id="2135e-105">Der Punktoperator (`.`) wird für den Memberzugriff verwendet.</span><span class="sxs-lookup"><span data-stu-id="2135e-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="2135e-106">Der Punktoperator gibt einen Member eines Typs oder Namespaces an.</span><span class="sxs-lookup"><span data-stu-id="2135e-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="2135e-107">Der Punktoperator wird z.B. verwendet, um auf bestimmte Methoden innerhalb der .NET Framework-Klassenbibliotheken zuzugreifen:</span><span class="sxs-lookup"><span data-stu-id="2135e-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="ab7b7-103">sein.</span><span class="sxs-lookup"><span data-stu-id="ab7b7-103">.</span></span> <span data-ttu-id="ab7b7-104">Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ab7b7-104">Operator (C# Reference)</span></span>
+<span data-ttu-id="ab7b7-105">Der Punktoperator (`.`) wird für den Memberzugriff verwendet.</span><span class="sxs-lookup"><span data-stu-id="ab7b7-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="ab7b7-106">Der Punktoperator gibt einen Member eines Typs oder Namespaces an.</span><span class="sxs-lookup"><span data-stu-id="ab7b7-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="ab7b7-107">Der Punktoperator wird z.B. verwendet, um auf bestimmte Methoden innerhalb der .NET Framework-Klassenbibliotheken zuzugreifen:</span><span class="sxs-lookup"><span data-stu-id="ab7b7-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
   
- <span data-ttu-id="2135e-108">Betrachten Sie beispielsweise die folgende Klasse:</span><span class="sxs-lookup"><span data-stu-id="2135e-108">For example, consider the following class:</span></span>  
+ <span data-ttu-id="ab7b7-108">Betrachten Sie beispielsweise die folgende Klasse:</span><span class="sxs-lookup"><span data-stu-id="ab7b7-108">For example, consider the following class:</span></span>  
   
  [!code-csharp[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
   
  [!code-csharp[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
   
- <span data-ttu-id="2135e-109">Die Variable `s` verfügt über zwei Member (`a` und `b`); verwenden Sie den Punktoperator, um auf beide zuzugreifen:</span><span class="sxs-lookup"><span data-stu-id="2135e-109">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
+ <span data-ttu-id="ab7b7-109">Die Variable `s` verfügt über zwei Member (`a` und `b`); verwenden Sie den Punktoperator, um auf beide zuzugreifen:</span><span class="sxs-lookup"><span data-stu-id="ab7b7-109">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>  
   
  [!code-csharp[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
   
- <span data-ttu-id="2135e-110">Der Punkt wird auch verwendet, um qualifizierte Namen zu erzeugen, die z.B. den Namespace oder die Schnittstelle angeben, zu der Sie gehören.</span><span class="sxs-lookup"><span data-stu-id="2135e-110">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
+ <span data-ttu-id="ab7b7-110">Der Punkt wird auch verwendet, um qualifizierte Namen zu erzeugen, die z.B. den Namespace oder die Schnittstelle angeben, zu der Sie gehören.</span><span class="sxs-lookup"><span data-stu-id="ab7b7-110">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>  
   
  [!code-csharp[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
   
- <span data-ttu-id="2135e-111">Die using-Direktive macht manche Namensqualifikationen optional:</span><span class="sxs-lookup"><span data-stu-id="2135e-111">The using directive makes some name qualification optional:</span></span>  
+ <span data-ttu-id="ab7b7-111">Die using-Direktive macht manche Namensqualifikationen optional:</span><span class="sxs-lookup"><span data-stu-id="ab7b7-111">The using directive makes some name qualification optional:</span></span>  
   
  [!code-csharp[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
   
- <span data-ttu-id="2135e-112">Wenn ein Bezeichner jedoch nicht eindeutig ist, muss er qualifiziert werden:</span><span class="sxs-lookup"><span data-stu-id="2135e-112">But when an identifier is ambiguous, it must be qualified:</span></span>  
+ <span data-ttu-id="ab7b7-112">Wenn ein Bezeichner jedoch nicht eindeutig ist, muss er qualifiziert werden:</span><span class="sxs-lookup"><span data-stu-id="ab7b7-112">But when an identifier is ambiguous, it must be qualified:</span></span>  
   
  [!code-csharp[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="2135e-113">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="2135e-113">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="ab7b7-113">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="ab7b7-113">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2135e-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2135e-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab7b7-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ab7b7-114">See Also</span></span>
 
-- [<span data-ttu-id="2135e-115">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="2135e-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="2135e-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="2135e-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="2135e-117">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="2135e-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="ab7b7-115">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="ab7b7-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="ab7b7-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="ab7b7-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="ab7b7-117">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="ab7b7-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

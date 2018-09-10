@@ -2,22 +2,22 @@
 title: 'Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: a5de5ffdafc2dd191a35860150e48a86a3603f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29c4b01bfce75ce71d5214fef0cc55cd82c4e776
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320329"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525642"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="1b373-102">Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (C#)</span><span class="sxs-lookup"><span data-stu-id="1b373-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
-<span data-ttu-id="1b373-103">Wenn Sie eine Abfrage für XML in einem Namespace schreiben möchten, müssen Sie <xref:System.Xml.Linq.XName>-Objekte verwenden, die den richtigen Namespace enthalten.</span><span class="sxs-lookup"><span data-stu-id="1b373-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="0d9d0-102">Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (C#)</span><span class="sxs-lookup"><span data-stu-id="0d9d0-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
+<span data-ttu-id="0d9d0-103">Wenn Sie eine Abfrage für XML in einem Namespace schreiben möchten, müssen Sie <xref:System.Xml.Linq.XName>-Objekte verwenden, die den richtigen Namespace enthalten.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  
   
- <span data-ttu-id="1b373-104">In C# besteht der am häufigsten verwendete Ansatz darin, einen <xref:System.Xml.Linq.XNamespace> mit einer Zeichenfolge zu initialisieren, die den URI enthält, und dann mithilfe der Additionsoperatorüberladung den Namespace mit dem lokalen Namen zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="1b373-104">For C#, the most common approach is to initialize an <xref:System.Xml.Linq.XNamespace> using a string that contains the URI, then use the addition operator overload to combine the namespace with the local name.</span></span>  
+ <span data-ttu-id="0d9d0-104">In C# besteht der am häufigsten verwendete Ansatz darin, einen <xref:System.Xml.Linq.XNamespace> mit einer Zeichenfolge zu initialisieren, die den URI enthält, und dann mithilfe der Additionsoperatorüberladung den Namespace mit dem lokalen Namen zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-104">For C#, the most common approach is to initialize an <xref:System.Xml.Linq.XNamespace> using a string that contains the URI, then use the addition operator overload to combine the namespace with the local name.</span></span>  
   
- <span data-ttu-id="1b373-105">Die erste Gruppe der Beispiele in diesem Thema zeigt,wie Sie eine XML-Struktur in einem Standardnamespace erstellen.</span><span class="sxs-lookup"><span data-stu-id="1b373-105">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="1b373-106">Die zweite Gruppe der Beispiele zeigt, wie Sie eine XML-Struktur in einem Namespace mit einem Präfix erstellen.</span><span class="sxs-lookup"><span data-stu-id="1b373-106">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
+ <span data-ttu-id="0d9d0-105">Die erste Gruppe der Beispiele in diesem Thema zeigt,wie Sie eine XML-Struktur in einem Standardnamespace erstellen.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-105">The first set of examples in this topic shows how to create an XML tree in a default namespace.</span></span> <span data-ttu-id="0d9d0-106">Die zweite Gruppe der Beispiele zeigt, wie Sie eine XML-Struktur in einem Namespace mit einem Präfix erstellen.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-106">The second set shows how to create an XML tree in a namespace with a prefix.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1b373-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1b373-107">Example</span></span>  
- <span data-ttu-id="1b373-108">Das folgende Beispiel erstellt eine XML-Struktur, die sich in einem Standardnamespace befindet.</span><span class="sxs-lookup"><span data-stu-id="1b373-108">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="1b373-109">Anschließend ruft das Beispiel eine Auflistung der Elemente ab.</span><span class="sxs-lookup"><span data-stu-id="1b373-109">It then retrieves a collection of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="0d9d0-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0d9d0-107">Example</span></span>  
+ <span data-ttu-id="0d9d0-108">Das folgende Beispiel erstellt eine XML-Struktur, die sich in einem Standardnamespace befindet.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-108">The following example creates an XML tree that is in a default namespace.</span></span> <span data-ttu-id="0d9d0-109">Anschließend ruft das Beispiel eine Auflistung der Elemente ab.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-109">It then retrieves a collection of elements.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -37,7 +37,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- <span data-ttu-id="1b373-110">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="1b373-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="0d9d0-110">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="0d9d0-110">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -45,10 +45,10 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="example"></a><span data-ttu-id="1b373-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1b373-111">Example</span></span>  
- <span data-ttu-id="1b373-112">In C# schreiben Sie Abfragen auf die gleiche Weise. Dies gilt unabhängig davon, ob Sie Abfragen für eine XML-Struktur schreiben, die einen Namespace mit einem Präfix verwendet, oder für eine XML-Struktur mit einem Standardnamespace.</span><span class="sxs-lookup"><span data-stu-id="1b373-112">In C#, you write queries in the same way regardless of whether you are writing queries on an XML tree that uses a namespace with a prefix or on an XML tree with a default namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="0d9d0-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0d9d0-111">Example</span></span>  
+ <span data-ttu-id="0d9d0-112">In C# schreiben Sie Abfragen auf die gleiche Weise. Dies gilt unabhängig davon, ob Sie Abfragen für eine XML-Struktur schreiben, die einen Namespace mit einem Präfix verwendet, oder für eine XML-Struktur mit einem Standardnamespace.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-112">In C#, you write queries in the same way regardless of whether you are writing queries on an XML tree that uses a namespace with a prefix or on an XML tree with a default namespace.</span></span>  
   
- <span data-ttu-id="1b373-113">Das folgende Beispiel erstellt eine XML-Struktur, die sich in einem Namespace mit einem Präfix befindet.</span><span class="sxs-lookup"><span data-stu-id="1b373-113">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="1b373-114">Anschließend ruft das Beispiel eine Auflistung der Elemente ab.</span><span class="sxs-lookup"><span data-stu-id="1b373-114">It then retrieves a collection of elements.</span></span>  
+ <span data-ttu-id="0d9d0-113">Das folgende Beispiel erstellt eine XML-Struktur, die sich in einem Namespace mit einem Präfix befindet.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-113">The following example creates an XML tree that is in a namespace with a prefix.</span></span> <span data-ttu-id="0d9d0-114">Anschließend ruft das Beispiel eine Auflistung der Elemente ab.</span><span class="sxs-lookup"><span data-stu-id="0d9d0-114">It then retrieves a collection of elements.</span></span>  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -68,7 +68,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- <span data-ttu-id="1b373-115">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="1b373-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="0d9d0-115">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="0d9d0-115">This example produces the following output:</span></span>  
   
 ```  
 1  
@@ -76,5 +76,6 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1b373-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1b373-116">See Also</span></span>  
- [<span data-ttu-id="1b373-117">Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))</span><span class="sxs-lookup"><span data-stu-id="1b373-117">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="0d9d0-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0d9d0-116">See Also</span></span>
+
+- [<span data-ttu-id="0d9d0-117">Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))</span><span class="sxs-lookup"><span data-stu-id="0d9d0-117">Working with XML Namespaces (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
