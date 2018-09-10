@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464336"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083948"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Befehlszeilenargumente (C#-Programmierhandbuch)
 Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf eine der folgenden Arten definieren:  
@@ -71,13 +71,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](/visualstudio/ide/reference/debug-page-project-designer) angeben.  
   
- Weitere Beispiele zur Verwendung von Befehlszeilenargumenten finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Weitere Beispiele zur Verwendung von Befehlszeilenargumenten finden Sie unter [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Environment?displayProperty=nameWithType>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Gewusst wie: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Gewusst wie: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Environment?displayProperty=nameWithType>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Gewusst wie: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Gewusst wie: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: a9f06dcf608a83b53e894310f20810182cf6daa4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7596ace0ea404cc345d73c0979fa7bd03a26b047
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332906"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857535"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Generische Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) kann seine eigenen Typparameter definieren. Wie im folgenden Beispiel gezeigt, kann Code, der auf den generischen Delegaten verweist, das Typargument zum Erstellen eines geschlossenen konstruierten Typs angeben, genau wie wenn eine generische Klasse instanziiert oder eine generische Methode aufgerufen wird:  
@@ -33,12 +33,13 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) kann sein
   
  [!code-csharp[csProgGuideGenerics#40](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_5.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Generische Methoden](../../../csharp/programming-guide/generics/generic-methods.md)  
- [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)  
- [Generische Schnittstellen](../../../csharp/programming-guide/generics/generic-interfaces.md)  
- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
- [Generika](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Generische Methoden](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Generische Schnittstellen](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
+- [Generika](~/docs/standard/generics/index.md)

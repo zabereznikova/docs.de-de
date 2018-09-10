@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 59110a5bd0fe738239c0ca8b177a8c775db99ccf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336153"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083935"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)
 In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
@@ -61,8 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Überprüfen Sie immer die Eingaben, und deserialisieren Sie keine Daten aus einer nicht vertrauenswürdigen Quelle. Das neu erstellte Objekt wird auf einem lokalen Computer mit den Berechtigungen des Codes ausgeführt, der es deserialisiert hat. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO.StreamWriter>  
- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#))  
- [Serialisierung (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO.StreamWriter>  
+- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#))  
+- [Serialisierung (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)

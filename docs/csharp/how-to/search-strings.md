@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961218"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857153"
 ---
 # <a name="how-to-search-strings"></a>Vorgehensweise: Durchsuchen von Zeichenfolgen
 
@@ -68,7 +68,6 @@ Der folgende Code verwendet reguläre Ausdrücke, um das Format jeder Zeichenfol
 | \d{4}    | Findet genau 4 Ziffernzeichen.  |
 | $        | Findet das Ende der Zeichenfolge.       |
 
-
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
 Dieses einzelne Suchmuster findet alle gültigen Zeichenfolgen. Reguläre Ausdrücke eignen sich besser zum Suchen nach Mustern oder zum Überprüfen von Zeichenfolgen anhand eines Musters als für einzelne Zeichenfolgen.
@@ -77,10 +76,10 @@ Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [Gi
 
 ## <a name="see-also"></a>Siehe auch  
 
- [C#-Programmierhandbuch](../programming-guide/index.md)  
- [Zeichenfolgen](../programming-guide/strings/index.md)  
- [LINQ und Zeichenfolgen](../programming-guide/concepts/linq/linq-and-strings.md)   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)   
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../../standard/base-types/best-practices-strings.md)  
+- [C#-Programmierhandbuch](../programming-guide/index.md)  
+- [Zeichenfolgen](../programming-guide/strings/index.md)  
+- [LINQ und Zeichenfolgen](../programming-guide/concepts/linq/linq-and-strings.md)
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../../standard/base-types/best-practices-strings.md)  

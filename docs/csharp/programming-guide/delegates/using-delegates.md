@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: b27c94570fdf76808e8a7df67b34466bde20de7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337404"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042204"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) als Argument übernimmt und [void](../../../csharp/language-reference/keywords/void.md) zurückgibt:  
@@ -64,10 +64,11 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
- [Verwenden von Varianz bei Delegaten](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
- [Varianz bei Delegaten](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
- [Verwenden von Varianz für die generischen Delegaten Func und Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
- [Ereignisse](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Delegaten](../../../csharp/programming-guide/delegates/index.md)
+- [Verwenden von Varianz bei Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [Varianz bei Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Verwenden von Varianz für die generischen Delegaten Func und Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)

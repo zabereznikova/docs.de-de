@@ -2,12 +2,12 @@
 title: Leistung verketteter Abfragen (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 6e0b2ec0b73afe10e21c83499c1a3a52c923f591
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9377c4e57eb19f133a1f973ea7f86c3bf72e4cf8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43466929"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854579"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Leistung verketteter Abfragen (LINQ to XML) (C#)
 Einer der wichtigsten Vorteile von LINQ (und LINQ to XML) besteht darin, dass verkettete Abfragen wie eine einzelne große, kompliziertere Abfrage ausgeführt werden können.  
@@ -54,7 +54,8 @@ foreach (var i in query2)
   
  Weitere Informationen zu Iteratoren finden Sie unter [yield](../../../../csharp/language-reference/keywords/yield.md).  
   
- Ein ausführlicheres Tutorial zum Verketten von Abfragen finden Sie unter [Tutorial: Verketten von Abfragen](https://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).  
+ Ein ausführlicheres Tutorial zum Verketten von Abfragen finden Sie unter [Tutorial: Verketten von Abfragen](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Leistung (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Leistung (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

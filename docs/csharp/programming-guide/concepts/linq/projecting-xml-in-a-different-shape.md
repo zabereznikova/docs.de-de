@@ -2,12 +2,12 @@
 title: Projektieren von XML in eine andere Form (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: e9d555dadea1ddd8720ef2548136f9bf9fb833c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe6166a333988d4b0a4550900a9307f1c4951aec
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340423"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43786990"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projektieren von XML in eine andere Form (C#)
 In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere Form als das Quell-XML projizieren können.  
@@ -235,5 +235,6 @@ class Program
   
 -   [Finding Text in Word Documents (C#) (Suchen von Text in Word-Dokumenten (C#))](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: 892b6bfe5cf18bde91221bb8b2fa7ca7a2813870
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17f4c67792732be7a678ec858b6627fa712194c5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321245"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861286"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Einführung in Generika (C#-Programmierhandbuch)
 Generische Klassen und Methoden vereinen Wiederverwendbarkeit, Typsicherheit und Effizienz so, wie es ihre nicht generischen Gegenstücke nicht können. Generika werden am häufigsten für Auflistungen und deren Methoden verwendet. Version 2.0 der .NET Framework-Klassenbibliothek bietet einen neuen Namespace, <xref:System.Collections.Generic>, der mehrere neue generikabasierte Auflistungsklassen enthält. Es wird empfohlen, dass alle Anwendungen für .NET Framework 2.0 und höher die neue generische Auflistungsklasse statt der älteren nicht generischen Gegenstücke wie etwa <xref:System.Collections.ArrayList> verwenden. Weitere Informationen finden Sie unter [Generika in .NET](../../../standard/generics/index.md).  
@@ -30,7 +30,8 @@ Generische Klassen und Methoden vereinen Wiederverwendbarkeit, Typsicherheit und
   
  [!code-csharp[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Generika](../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Generika](../../../csharp/programming-guide/generics/index.md)

@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 33145f6a7ececd85e6eeaebb80a81f3075878761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb628941d53957356cfa49d81fb78f16369af86b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338129"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085211"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)
 Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher und intuitiver schreiben. Sie können asynchronen Code schreiben, der wie synchroner Code aussieht und veranlassen, dass der Compiler die komplizierten Rückruffunktionen und Fortsetzungen verarbeitet, die durch den asynchronen Code für gewöhnlich verursacht werden.  
@@ -723,12 +723,13 @@ namespace AsyncExampleWPF
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic) (Asynchrones Beispiel: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic))](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
- [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)  
- [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Asynchrone Rückgabetypen (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
- [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
- [Gewusst wie: Paralleles Erstellen mehrerer Webanforderungen mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic) (Asynchrones Beispiel: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic))](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
+- [async](../../../../csharp/language-reference/keywords/async.md)  
+- [await](../../../../csharp/language-reference/keywords/await.md)  
+- [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Asynchrone Rückgabetypen (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
+- [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
+- [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
+- [Gewusst wie: Paralleles Erstellen mehrerer Webanforderungen mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

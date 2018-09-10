@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 2a6a6f59320d94cf97b1a07448000bd708d95559
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dfed1c4a7e68bbe112a136260bf95ba0826392d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327550"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178376"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csharp/language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../../csharp/language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
@@ -78,8 +78,9 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csh
   
  Weitere Beispiele für `new` und `override` finden Sie unter [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

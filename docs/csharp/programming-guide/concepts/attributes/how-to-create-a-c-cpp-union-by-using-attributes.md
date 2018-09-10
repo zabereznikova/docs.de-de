@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315840"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798508"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen (C#)
 Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher angeordnet werden. Sie können z.B. das erstellen, was als eine Union in C/C++ bekannt ist, indem Sie die mit `StructLayout(LayoutKind.Explicit)`- und `FieldOffset`-Attribute verwenden.  
@@ -66,12 +66,13 @@ Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher 
   
  Die zwei Ganzzahlfelder `i1` und `i2` teilen die gleichen Speicheradressen wie `lg`. Diese Art der Kontrolle über das Strukturlayout ist nützlich, wenn Sie Plattformaufrufe nutzen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
- [Attribute](../../../../../docs/standard/attributes/index.md)  
- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+- [Attribute](../../../../../docs/standard/attributes/index.md)  
+- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Erstellen benutzerdefinierter Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

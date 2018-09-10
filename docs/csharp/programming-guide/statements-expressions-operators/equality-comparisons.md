@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: c1abee8636cf540d42d92eb7496fb078f06e6e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07607f96acb2ca44142bd6a8b4fdd84ea0d1b532
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335247"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788635"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
 Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu prüfen. In einigen Fällen prüfen Sie die *Wertgleichheit*, die auch als *Äquivalenz* bezeichnet wird. Das bedeutet, Sie prüfen, ob die in zwei Variablen enthaltenen Werte gleich sind. In anderen Fällen müssen Sie ermitteln, ob zwei Variablen auf das gleiche zugrunde liegende Objekt im Arbeitsspeicher verweisen. Diese Art von Gleichheit wird als *Verweisgleichheit* oder *Identität* bezeichnet. In diesem Thema werden diese zwei Arten der Gleichheit beschrieben. Außerdem finden Sie hier Links zu verwandten Themen mit weiteren Informationen.  
@@ -46,12 +46,13 @@ if( b == a)
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung |  
 |-----------|-----------------|  
 |[Gewusst wie: Überprüfen auf Verweisgleichheit (Identität)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Beschreibt, wie zwei Variablen auf Verweisgleichheit geprüft werden.|  
 |[Gewusst wie: Definieren von Wertgleichheit für einen Typ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Beschreibt, wie eine benutzerdefinierte Definition der Wertgleichheit für einen Typ erstellt wird.|  
 |[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)|Links zu ausführlichen Informationen zu wichtigen Funktionen der C#-Sprache sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.|  
 |[Typen](../../../csharp/programming-guide/types/index.md)|Informationen zum C#-Typsystem und Links zu weiteren Informationen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)

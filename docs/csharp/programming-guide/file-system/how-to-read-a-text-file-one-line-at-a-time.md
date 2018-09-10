@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: b31e3f0164b2a2094e84263702c52c2817219d20
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 6ba479e341b71bebe60d9744f239b752d3d81167
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751965"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43738767"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Gewusst wie: Zeilenweises Lesen einer Textdatei (Visual C#)
 Dieses Beispiel liest den Inhalt einer Textdatei Zeile pro Zeile in eine Zeichenfolge mithilfe der `ReadLine`-Methode der `StreamReader`-Klasse. Jede Textzeile wird in der Zeichenfolge `line` gespeichert und auf dem Bildschirm angezeigt.  
@@ -50,7 +50,8 @@ System.Console.ReadLine();
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei `myFile.cs` handelt es sich möglicherweise nicht um eine C#-Quelldatei.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO?displayProperty=nameWithType>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 2c6467434b56d624c42aaf54219959228e068ffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 975acb5b814bc5a250cba351e0d1559968f7e298
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217229"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864705"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C#-Compileroption)
 Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.  
@@ -93,7 +93,9 @@ class A {
 }  
 ```  
   
- **An_Internal_Class.Test** aufgerufen  
+**An_Internal_Class.Test** aufgerufen
+
 ## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

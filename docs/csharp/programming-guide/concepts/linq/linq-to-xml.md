@@ -2,12 +2,12 @@
 title: LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 26c907b1-bc58-465f-bcdc-adbe89df6e55
-ms.openlocfilehash: 6f7b33ce6b120dce224e8775cee8b5c11d6361a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b0eb7537a3f91093502e4c4efc3589838fa5d88
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328554"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087860"
 ---
 # <a name="linq-to-xml-c"></a>LINQ to XML (C#)
 LINQ to XML stellt eine XML-Programmierschnittstelle im Arbeitsspeicher bereit, die das .NET Language-Integrated Query-Framework (LINQ) nutzt. LINQ to XML verwendet die neuesten .NET Framework-Sprachfunktionen und kann mit einer aktualisierten und neu gestalteten DOM-XML-Programmierschnittstelle verglichen werden.  
@@ -24,5 +24,6 @@ LINQ to XML stellt eine XML-Programmierschnittstelle im Arbeitsspeicher bereit, 
  [Verweis (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)  
  Enthält Verweise auf die verwaltete LINQ to XML-Referenzdokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
- [Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))](../../../../csharp/programming-guide/concepts/linq/index.md)

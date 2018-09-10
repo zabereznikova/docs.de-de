@@ -3,12 +3,12 @@ title: Gruppieren von Abfrageergebnissen (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie Ergebnisse mit LINQ in C# gruppieren.
 ms.date: 12/1/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: 4da0aac6b406f588ea4f241c72d5700e8a63838c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: f768718cb1435efdc67791612776c9e9ce2b14b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403864"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798333"
 ---
 # <a name="group-query-results"></a>Gruppieren von Abfrageergebnissen
 
@@ -76,11 +76,11 @@ Fügen Sie die folgende Methode in die `StudentClass`-Klasse ein. Ändern Sie di
 
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.Linq.Enumerable.GroupBy%2A>  
-<xref:System.Linq.IGrouping%602>  
-[Language-Integrated Query (LINQ)](index.md)  
-[group-Klausel](../language-reference/keywords/group-clause.md)  
-[Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)  
-[Ausführen einer Unterabfrage für eine Gruppierungsoperation](perform-a-subquery-on-a-grouping-operation.md)  
-[Erstellen einer geschachtelten Gruppe](create-a-nested-group.md)  
-[Gruppieren von Daten](../programming-guide/concepts/linq/grouping-data.md)  
+- <xref:System.Linq.Enumerable.GroupBy%2A>  
+- <xref:System.Linq.IGrouping%602>  
+- [Language-Integrated Query (LINQ)](index.md)  
+- [group-Klausel](../language-reference/keywords/group-clause.md)  
+- [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)  
+- [Ausführen einer Unterabfrage für eine Gruppierungsoperation](perform-a-subquery-on-a-grouping-operation.md)  
+- [Erstellen einer geschachtelten Gruppe](create-a-nested-group.md)  
+- [Gruppieren von Daten](../programming-guide/concepts/linq/grouping-data.md)  

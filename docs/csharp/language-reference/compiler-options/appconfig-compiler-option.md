@@ -9,11 +9,11 @@ helpviewer_keywords:
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398507"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44172706"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (C#-Compileroptionen)
 Mit der Compileroption **-appconfig** kann eine C#-Anwendung den Speicherort der Anwendungskonfigurationsdatei („app.config“) der Assembly für die Common Language Runtime (CLR) zur Assemblybindungszeit festlegen.  

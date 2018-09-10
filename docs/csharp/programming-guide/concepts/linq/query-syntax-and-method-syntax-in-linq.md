@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fe1fbfbf76507f19905d1a9a3a836483a8dd3849
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465884"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748235"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Abfragesyntax und Methodensyntax in LINQ (C#)
 Die meisten Abfragen in der einführenden Dokumentation der Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) wurden mithilfe der deklarierten Abfragesyntax von LINQ geschrieben. Die Abfragesyntax muss jedoch in Methodenaufrufe für die .NET Common Language Runtime (CLR) übersetzt werden, wenn der Code kompiliert wird. Diese Methodenaufrufe rufen die Standardabfrageoperatoren auf, die z.B. folgende Namen haben: `Where`, `Select`, `GroupBy`, `Join`, `Max` und `Average`. Sie können sie direkt mithilfe der Methodensyntax anstatt der Abfragesyntax aufrufen.  
@@ -42,5 +42,6 @@ Die meisten Abfragen in der einführenden Dokumentation der Language Integrated 
 ## <a name="composability-of-queries"></a>Zusammensetzbarkeit von Abfragen  
  Beachten Sie im vorherigen Codebeispiel, dass die `OrderBy`-Methode durch Verwendung des Punktoperators auf dem Aufruf von `Where` aufgerufen wird. `Where` erzeugt eine gefilterte Sequenz, und `Orderby` bearbeitet sie anschließend durch Sortierung. Da Abfragen `IEnumerable` zurückgeben, erstellen Sie sie in der Methodensyntax durch Verkettung von Methodenaufrufen miteinander. Das führt auch der Compiler im Hintergrund aus, wenn Sie über die Abfragesyntax Abfragen erstellen. Da die Abfragevariable die Ergebnisse der Abfrage nicht speichert, können Sie sie jederzeit ändern oder als Basis für eine neue Abfrage verwenden, sogar, wenn sie bereits ausgeführt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

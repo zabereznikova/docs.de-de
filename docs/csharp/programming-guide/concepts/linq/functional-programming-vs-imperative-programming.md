@@ -2,12 +2,12 @@
 title: Funktionale Programmierung und Imperative Programmierung (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 85e0e4bf287157f2d4f952996cbb2e5a4ff6ac89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334898"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178337"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Funktionale Programmierung und Imperative Programmierung (C#)
 In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung erläutert.  
@@ -50,7 +50,8 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
   
  Glücklicherweise erfordert C# keinen kompletten Umstieg auf die funktionale Programmierung, da sowohl der imperative als auch der funktionale Programmierungsansatz unterstützt wird. Der Entwickler kann daher selbst entscheiden, welcher Ansatz für ein bestimmtes Szenario am geeignetsten ist. Bei vielen Programme werden beide Ansätze häufig miteinander kombiniert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XSLT Transformations (XSLT-Transformationen)](../../../../standard/data/xml/xslt-transformations.md)  
- [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [XSLT Transformations (XSLT-Transformationen)](../../../../standard/data/xml/xslt-transformations.md)  
+- [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

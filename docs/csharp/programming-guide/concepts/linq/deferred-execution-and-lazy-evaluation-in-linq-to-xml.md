@@ -2,12 +2,12 @@
 title: Verzögerte Ausführung und Auswertung in LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: dd0b8413f172182edfc83f99fd418d1372984b7d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baf6a26b1579c17adfc60b27b485ba3af66c67d7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340371"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085341"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Verzögerte Ausführung und Auswertung in LINQ to XML (C#)
 Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzögerte Ausführung (Deferred Execution) verwenden. In diesem Thema werden die Voraussetzungen und die Vorteile der verzögerten Ausführung erläutert und einige Überlegungen zur Implementierung angestellt.  
@@ -33,8 +33,9 @@ Abfrage- und Achsenoperationen werden oft so implementiert, dass sie die verzög
   
 -   [Beispiel für eine verzögerte Ausführung (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
- [Konzepte und Terminologie (funktionale Transformation) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
- [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
- [yield](../../../../csharp/language-reference/keywords/yield.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
+- [Konzepte und Terminologie (funktionale Transformation) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
+- [Aggregation Operations (C#) (Aggregationsvorgänge (C#))](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+- [yield](../../../../csharp/language-reference/keywords/yield.md)

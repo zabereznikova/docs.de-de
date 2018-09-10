@@ -5,12 +5,12 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: 7494f7d6a3897d56419f9d3aa96668fd9dab5f35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4296591875d9843d44a81adfd5937532bcd7fe94
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331590"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085818"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Explizite Schnittstellenimplementierung (C#-Programmierhandbuch)
 Wenn eine [Klasse](../../../csharp/language-reference/keywords/class.md) zwei Schnittstellen implementiert, die einen Member mit derselben Signatur enthalten, bewirkt die Implementierung dieses Members in der Klasse, dass beide Schnittstellen diesen Member als ihre Implementierung verwenden. Im folgenden Beispiel rufen alle Aufrufe von `Paint` dieselbe Methode auf.  
@@ -33,8 +33,9 @@ Wenn eine [Klasse](../../../csharp/language-reference/keywords/class.md) zwei Sc
   
  [!code-csharp[csProgGuideInheritance#43](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_5.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)  
- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)  
+- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

@@ -2,18 +2,19 @@
 title: Erweiterte Abfragetechniken (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44141190"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Erweiterte Abfragetechniken (LINQ to XML) (C#)
 Dieser Abschnitt enthält Beispiele für erweiterte [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragetechniken.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[Vorgehensweise: Verbinden von zwei Auflistungen (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|Zeigt, wie mit der `Join`-Klausel die Vorteile von Beziehungen in XML-Daten genutzt werden können.|  
 |[Vorgehensweise: Erstellen einer Hierarchie mittels Gruppierung (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|Zeigt, wie Daten gruppiert werden und anschließend anhand der Gruppierung XML generiert wird.|  
@@ -25,5 +26,6 @@ Dieser Abschnitt enthält Beispiele für erweiterte [!INCLUDE[sqltecxlinq](~/inc
 |[Vorgehensweise: Ändern eines Office Open-XML-Dokuments (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Enthält Code, der ein Office Open XML-Dokument öffnet, ändert und speichert.|  
 |[Vorgehensweise: Auffüllen einer XML-Struktur über das Dateisystem (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Enthält Code, der aus dem Dateisystem eine XML-Struktur erstellt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

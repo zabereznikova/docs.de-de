@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: cef2a907a8d7e6158239b88d5c8551c2c734faa0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 718be7e201788906fa0fad829922eb5b77b48aed
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43386297"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857309"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
 Visual Studio bietet Funktionen in C# und Visual Basic, die die Microsoft Office-Programmierung verbessern. Zu nützlichen C#-Funktionen gehören benannte und optionale Argumente und Rückgabewerte des Typs `dynamic`. Bei der COM-Programmierung können Sie das `ref`-Schlüsselwort weglassen und Zugriff auf indizierte Eigenschaften erhalten. Funktionen in Visual Basic umfassen automatisch implementierte Eigenschaften, Anweisungen in Lambdaausdrücken sowie Auflistungsinitialisierer.
 
-Beide Sprachen ermöglichen das Einbetten von Typinformationen, wodurch Assemblys bereitgestellt werden können, die mit COM-Komponenten interagieren, ohne primäre Interop-Assemblys (PIAs) auf dem Computer des Benutzers bereitzustellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+Beide Sprachen ermöglichen das Einbetten von Typinformationen, wodurch Assemblys bereitgestellt werden können, die mit COM-Komponenten interagieren, ohne primäre Interop-Assemblys (PIAs) auf dem Computer des Benutzers bereitzustellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
 Diese exemplarische Vorgehensweise veranschaulicht diese Funktionen im Kontext der Office-Programmierung, aber viele dieser Funktionen sind auch bei der allgemeinen Programmierung nützlich. In der exemplarischen Vorgehensweise verwenden Sie eine Excel-Add-In-Anwendung, um eine Excel-Arbeitsmappe zu erstellen. Als nächstes erstellen Sie ein Word-Dokument, das einen Link zur Arbeitsmappe enthält. Zum Schluss sehen Sie, wie Sie die PIA-Abhängigkeit aktivieren und deaktivieren können.  
   
@@ -93,11 +93,11 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
      Bei dieser Methode werden zwei neue C#-Funktionen verwendet. Beide Funktionen existieren bereits in Visual Basic.  
   
-    -   Die Methode [Add](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) hat einen *optionalen Parameter* zum Angeben einer bestimmten Vorlage. Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten. Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe. Die entsprechende Anweisung in früheren Versionen von C# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   Die Methode [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) hat einen *optionalen Parameter* zum Angeben einer bestimmten Vorlage. Optionale Parameter, die in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] neu sind, ermöglichen es Ihnen, das Argument für diesen Parameter auszulassen, wenn Sie den Standardwert des Parameters verwenden möchten. Da im vorherigen Beispiel kein Argument gesendet wurde, verwendet `Add` die Standardvorlage und erstellt eine neue Arbeitsmappe. Die entsprechende Anweisung in früheren Versionen von C# erfordert ein Platzhalterargument: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Weitere Informationen finden Sie unter [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   Die Eigenschaften `Range` und `Offset` des [range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx)-Objekts verwenden die Funktion *Indizierte Eigenschaften*. Diese Funktion ermöglicht es Ihnen, diese Eigenschaften von COM-Typen zu nutzen, indem Sie die folgende typische C#-Syntax verwenden. Indizierte Eigenschaften ermöglichen es Ihnen außerdem, die `Value`-Eigenschaft des `Range`-Objekts zu verwenden, sodass Sie die `Value2`-Eigenschaft nicht mehr verwenden müssen. Die `Value`-Eigenschaft ist indiziert, der Index ist jedoch optional. Optionale Argumente und indizierte Eigenschaften arbeiten im folgenden Beispiel zusammen.  
+    -   Die Eigenschaften `Range` und `Offset` des [range](<xref:Microsoft.Office.Interop.Excel.Range>)-Objekts verwenden die Funktion *Indizierte Eigenschaften*. Diese Funktion ermöglicht es Ihnen, diese Eigenschaften von COM-Typen zu nutzen, indem Sie die folgende typische C#-Syntax verwenden. Indizierte Eigenschaften ermöglichen es Ihnen außerdem, die `Value`-Eigenschaft des `Range`-Objekts zu verwenden, sodass Sie die `Value2`-Eigenschaft nicht mehr verwenden müssen. Die `Value`-Eigenschaft ist indiziert, der Index ist jedoch optional. Optionale Argumente und indizierte Eigenschaften arbeiten im folgenden Beispiel zusammen.  
   
          [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
@@ -117,7 +117,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
      Diese Ergänzungen veranschaulichen eine weitere Funktion in C#: die Behandlung von `Object`-Werten, die von COM-Hosts wie z.B. Office zurückgegeben wurden, als wären sie vom Typ [dynamic](../../../csharp/language-reference/keywords/dynamic.md). Dies geschieht automatisch, wenn **Einbetten von Interop-Typen** auf den Standardwert `True` festgelegt ist oder gleichermaßen wenn die [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)-Compileroption auf die Assembly verweist. Der Typ `dynamic` ermöglicht eine späte Bindung, bereits in Visual Basic verfügbar, und vermeidet die in Visual C# 2008 und in früheren Sprachversionen erforderliche explizite Umwandlung.  
   
-     `excelApp.Columns[1]` gibt z.B.`Object` zurück, und `AutoFit` ist eine [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx)-Methode von Excel. Ohne `dynamic` müssen Sie das von `excelApp.Columns[1]` zurückgegebene Objekt als eine Instanz von `Range` umwandeln, bevor Sie die Methode `AutoFit` aufrufen.  
+     `excelApp.Columns[1]` gibt z.B.`Object` zurück, und `AutoFit` ist eine [Range](<xref:Microsoft.Office.Interop.Excel.Range>)-Methode von Excel. Ohne `dynamic` müssen Sie das von `excelApp.Columns[1]` zurückgegebene Objekt als eine Instanz von `Range` umwandeln, bevor Sie die Methode `AutoFit` aufrufen.  
   
      [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
@@ -141,7 +141,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
-     Dieser Code veranschaulicht mehrere der neuen Funktionen in C#: die Möglichkeit, das `ref`-Schlüsselwort in der COM-Programmierung auszulassen, benannte Argumente sowie optionale Argumente. Diese Funktionen sind bereits in Visual Basic vorhanden. Die Methode [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) verfügt über sieben Parameter, die als optionale Verweisparameter definiert sind. Benannte und optionale Argumente ermöglichen es Ihnen, die Parameter festzulegen, auf die Sie namentlich zugreifen möchten, und Argumente nur an diese Parameter zu senden. In diesem Beispiel werden Argumente gesendet, um anzugeben, dass ein Link zur Arbeitsmappe in der Zwischenablage erstellt werden soll (Parameter `Link`) und dass der Link im Word-Dokument als Symbol angezeigt werden soll (Parameter `DisplayAsIcon`). Visual C# ermöglicht auch das Weglassen des `ref`-Schlüsselworts für diese Argumente.
+     Dieser Code veranschaulicht mehrere der neuen Funktionen in C#: die Möglichkeit, das `ref`-Schlüsselwort in der COM-Programmierung auszulassen, benannte Argumente sowie optionale Argumente. Diese Funktionen sind bereits in Visual Basic vorhanden. Die Methode [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) verfügt über sieben Parameter, die als optionale Verweisparameter definiert sind. Benannte und optionale Argumente ermöglichen es Ihnen, die Parameter festzulegen, auf die Sie namentlich zugreifen möchten, und Argumente nur an diese Parameter zu senden. In diesem Beispiel werden Argumente gesendet, um anzugeben, dass ein Link zur Arbeitsmappe in der Zwischenablage erstellt werden soll (Parameter `Link`) und dass der Link im Word-Dokument als Symbol angezeigt werden soll (Parameter `DisplayAsIcon`). Visual C# ermöglicht auch das Weglassen des `ref`-Schlüsselworts für diese Argumente.
   
 ### <a name="to-run-the-application"></a>So führen Sie die Anwendung aus  
   
@@ -190,22 +190,23 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
   
 8.  Klicken Sie in Visual Studio im Menü **Erstellen** auf **Projektmappe bereinigen**, um das abgeschlossene Projekt zu bereinigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Automatisch implementierte Eigenschaften (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Automatisch implementierte Eigenschaften (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
- [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [Optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Übergeben von Argumenten nach Position und Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
- [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Frühes und spätes Binden](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Lambdaausdrücke (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Lambdaausdrücke (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Gewusst wie: Indizierte Eigenschaften bei der COM-Interop-Programmierung](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Exemplarische Vorgehensweise: Erstellen des ersten VSTO-Add-Ins für Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
- [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Interoperabilität](../../../csharp/programming-guide/interop/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Automatisch implementierte Eigenschaften (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+- [Automatisch implementierte Eigenschaften (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Auflistungsinitialisierer](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [Optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+- [Übergeben von Argumenten nach Position und Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+- [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Frühes und spätes Binden](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Lambdaausdrücke (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+- [Lambdaausdrücke (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Gewusst wie: Indizierte Eigenschaften bei der COM-Interop-Programmierung](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Exemplarische Vorgehensweise: Erstellen des ersten VSTO-Add-Ins für Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
+- [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Interoperabilität](../../../csharp/programming-guide/interop/index.md)

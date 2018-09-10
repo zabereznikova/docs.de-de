@@ -5,19 +5,19 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318223"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087554"
 ---
 # <a name="members-c-programming-guide"></a>Member (C#-Programmierhandbuch)
 Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten darstellen. Die Member einer Klasse umfassen alle Member, die in dieser Klasse deklariert sind, sowie alle Member (mit Ausnahme von Konstruktoren und Finalizer), die in den Klassen der Vererbungshierarchie deklariert sind. Private Member in Basisklassen werden geerbt. Aus abgeleiteten Klassen kann jedoch nicht darauf zugegriffen werden.  
   
  In der folgenden Tabelle sind die Arten von Membern aufgeführt, die in einer Klasse oder Struktur enthalten sein können:  
   
-|Member|description|  
+|Member|Beschreibung |  
 |------------|-----------------|  
 |[Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)|Felder sind im Gültigkeitsbereich einer Klasse deklarierte Variablen. Ein Feld kann ein integrierter numerischer Typ oder eine Instanz einer anderen Klasse sein. So kann zum Beispiel eine Kalenderklasse über ein Feld verfügen, das das aktuelle Datum enthält.|  
 |[Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)|Konstanten sind Felder oder Eigenschaften, deren Wert bei der Kompilierung festgelegt wird und nicht geändert werden kann.|  
@@ -30,16 +30,17 @@ Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten 
 |[Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Finalizer werden in C# sehr selten verwendet. Bei Destruktoren handelt es sich um Methoden, die von der Ausführungs-Engine der Laufzeit aufgerufen werden, wenn das Objekt aus dem Speicher entfernt werden soll. In der Regel werden sie verwendet, um sicherzustellen, dass Ressourcen, die freigegeben werden müssen, angemessen verarbeitet werden.|  
 |[Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Geschachtelte Typen sind Typen, die in einem anderen Typ deklariert sind. Geschachtelte Typen werden häufig verwendet, um Objekte zu beschreiben, die nur von den Typen verwendet werden, in denen sie enthalten sind.|  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
- [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+- [Geschachtelte Typen](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

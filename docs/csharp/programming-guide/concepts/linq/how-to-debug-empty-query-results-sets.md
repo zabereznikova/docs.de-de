@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: a425327c6ba7168f7070d53a39fa64be991d4ddf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329760"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44082322"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (C#)
 Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.  
@@ -82,5 +82,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

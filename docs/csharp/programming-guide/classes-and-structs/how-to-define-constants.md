@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 03912a71aba883ec9127d265e6f1a2b05e1e60fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09d19f708570b55509a3ec2a41e439cb9c9de973
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313221"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739694"
 ---
 # <a name="how-to-define-constants-in-c"></a>Gewusst wie: Definieren von Konstanten in C#
 Konstanten sind Felder, deren Wert bei der Kompilierung festgelegt wird und nie geändert werden kann. Verwenden Sie Konstanten, um aussagekräftige Namen anstelle numerischer Literale („magische Zahlen“) für spezielle Werte bereitzustellen.  
@@ -27,5 +27,6 @@ Konstanten sind Felder, deren Wert bei der Kompilierung festgelegt wird und nie 
   
  Die Verwendung des Klassennamenqualifizierers hilft Ihnen sicherzustellen, dass Sie und andere Benutzer der Konstante verstehen, dass diese konstant ist und nicht verändert werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)

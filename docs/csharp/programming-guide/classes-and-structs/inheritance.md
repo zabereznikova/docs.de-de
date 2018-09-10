@@ -9,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f6620562a9500885f31d1343664919f09af33861
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323601"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855893"
 ---
 # <a name="inheritance-c-programming-guide"></a>Vererbung (C#-Programmierhandbuch)
 
@@ -53,8 +53,9 @@ Klassenvererbung
 ## <a name="derived-class-hiding-of-base-class-members"></a>Das Verbergen von Membern der Basisklasse in einer abgeleiteten Klasse  
  Eine abgeleitete Klasse kann Basisklassenmember verbergen, indem sie Member mit demselben Namen und derselben Signatur deklariert. Der Modifizierer [new](../../../csharp/language-reference/keywords/new.md) kann verwendet werden, um explizit anzugeben, dass der Member nicht dazu vorgesehen ist, den Basismember außer Kraft zu setzen. Das Verwenden von [new](../../../csharp/language-reference/keywords/new.md) ist nicht erforderlich, aber es wird eine Compilerwarnung generiert, wenn [new](../../../csharp/language-reference/keywords/new.md) nicht verwendet wird. Weitere Informationen finden Sie unter [Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) und [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [struct](../../../csharp/language-reference/keywords/struct.md)
