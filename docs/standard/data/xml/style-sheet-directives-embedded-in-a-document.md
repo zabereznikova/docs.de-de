@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bd33aab6cbeeeb9060f3de3565a05896c6ba7f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391093"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201828"
 ---
-# <a name="style-sheet-directives-embedded-in-a-document"></a><span data-ttu-id="196fd-102">In ein Dokument eingebettete Stylesheetanweisungen</span><span class="sxs-lookup"><span data-stu-id="196fd-102">Style Sheet Directives Embedded in a Document</span></span>
+# <a name="style-sheet-directives-embedded-in-a-document"></a><span data-ttu-id="289f7-102">In ein Dokument eingebettete Stylesheetanweisungen</span><span class="sxs-lookup"><span data-stu-id="289f7-102">Style Sheet Directives Embedded in a Document</span></span>
 
-<span data-ttu-id="196fd-103">Gelegentlich enthält vorhandener XML-Code die Stylesheetdirektive `<?xml:stylesheet?>`.</span><span class="sxs-lookup"><span data-stu-id="196fd-103">Occasionally, existing XML contains the style sheet directive of `<?xml:stylesheet?>`.</span></span> <span data-ttu-id="196fd-104">Microsoft Internet Explorer akzeptiert diese als Alternative zur `<?xml-stylesheet?>`-Syntax.</span><span class="sxs-lookup"><span data-stu-id="196fd-104">Microsoft Internet Explorer accepts this as an alternative to the `<?xml-stylesheet?>` syntax.</span></span> <span data-ttu-id="196fd-105">Wenn die XML-Daten, wie im Folgenden dargestellt, eine `<?xml:stylesheet?>`-Direktive enthalten, wird durch den Versuch, diese Daten in das Dokumentobjektmodell (DOM) zu laden, eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="196fd-105">When the XML data contains an `<?xml:stylesheet?>` directive, as shown in the following data, attempting to load this data into the XML Document Object Model (DOM) throws an exception.</span></span>
+<span data-ttu-id="289f7-103">Gelegentlich enthält vorhandener XML-Code die Stylesheetdirektive `<?xml:stylesheet?>`.</span><span class="sxs-lookup"><span data-stu-id="289f7-103">Occasionally, existing XML contains the style sheet directive of `<?xml:stylesheet?>`.</span></span> <span data-ttu-id="289f7-104">Microsoft Internet Explorer akzeptiert diese als Alternative zur `<?xml-stylesheet?>`-Syntax.</span><span class="sxs-lookup"><span data-stu-id="289f7-104">Microsoft Internet Explorer accepts this as an alternative to the `<?xml-stylesheet?>` syntax.</span></span> <span data-ttu-id="289f7-105">Wenn die XML-Daten, wie im Folgenden dargestellt, eine `<?xml:stylesheet?>`-Direktive enthalten, wird durch den Versuch, diese Daten in das Dokumentobjektmodell (DOM) zu laden, eine Ausnahme ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="289f7-105">When the XML data contains an `<?xml:stylesheet?>` directive, as shown in the following data, attempting to load this data into the XML Document Object Model (DOM) throws an exception.</span></span>
 
 ```xml
 <?xml version="1.0" ?>
@@ -25,18 +25,18 @@ ms.locfileid: "43391093"
 </root>
 ```
 
-<span data-ttu-id="196fd-106">Der Grund hierfür ist, dass `<?xml:stylesheet?>` als ungültige **ProcessingInstruction** für das DOM gilt.</span><span class="sxs-lookup"><span data-stu-id="196fd-106">This occurs because the `<?xml:stylesheet?>` is considered an invalid **ProcessingInstruction** to the DOM.</span></span> <span data-ttu-id="196fd-107">Bei einer **ProcessingInstruction** kann es sich, gemäß der Spezifikation „Namespaces in XML“, nur um Namen ohne Doppelpunkt (NCNames) handeln, und nicht um qualifizierte Namen (QNames).</span><span class="sxs-lookup"><span data-stu-id="196fd-107">Any **ProcessingInstruction**, according to the Namespaces in XML specification, can only be no-colon names (NCNames), as opposed to qualified names (QNames).</span></span>
+<span data-ttu-id="289f7-106">Der Grund hierfür ist, dass `<?xml:stylesheet?>` als ungültige **ProcessingInstruction** für das DOM gilt.</span><span class="sxs-lookup"><span data-stu-id="289f7-106">This occurs because the `<?xml:stylesheet?>` is considered an invalid **ProcessingInstruction** to the DOM.</span></span> <span data-ttu-id="289f7-107">Bei einer **ProcessingInstruction** kann es sich, gemäß der Spezifikation „Namespaces in XML“, nur um Namen ohne Doppelpunkt (NCNames) handeln, und nicht um qualifizierte Namen (QNames).</span><span class="sxs-lookup"><span data-stu-id="289f7-107">Any **ProcessingInstruction**, according to the Namespaces in XML specification, can only be no-colon names (NCNames), as opposed to qualified names (QNames).</span></span>
 
-<span data-ttu-id="196fd-108">Aus Abschnitt 6 der Spezifikation „Namespaces in XML“ ergibt sich Folgendes: Wenn die **Load**-Methode und die **LoadXml**-Methode entsprechend der Spezifikation verwendet werden, hat dies in einem Dokument folgende Auswirkungen:</span><span class="sxs-lookup"><span data-stu-id="196fd-108">From Section 6 of the Namespaces in XML specification, the effect of having the **Load** and **LoadXml** methods conform to the specification is that in a document:</span></span>
+<span data-ttu-id="289f7-108">Aus Abschnitt 6 der Spezifikation „Namespaces in XML“ ergibt sich Folgendes: Wenn die **Load**-Methode und die **LoadXml**-Methode entsprechend der Spezifikation verwendet werden, hat dies in einem Dokument folgende Auswirkungen:</span><span class="sxs-lookup"><span data-stu-id="289f7-108">From Section 6 of the Namespaces in XML specification, the effect of having the **Load** and **LoadXml** methods conform to the specification is that in a document:</span></span>
 
-- <span data-ttu-id="196fd-109">Alle Elementtypen und Attributnamen enthalten entweder keinen oder einen Doppelpunkt.</span><span class="sxs-lookup"><span data-stu-id="196fd-109">All element types and attribute names contain either zero or one colon.</span></span>
+- <span data-ttu-id="289f7-109">Alle Elementtypen und Attributnamen enthalten entweder keinen oder einen Doppelpunkt.</span><span class="sxs-lookup"><span data-stu-id="289f7-109">All element types and attribute names contain either zero or one colon.</span></span>
 
-- <span data-ttu-id="196fd-110">In Entitätsnamen, "ProcessingInstruction"-Zielen oder Notationsnamen ist kein Doppelpunkt enthalten.</span><span class="sxs-lookup"><span data-stu-id="196fd-110">No entity names, ProcessingInstruction targets, or notation names contain any colons.</span></span>
+- <span data-ttu-id="289f7-110">In Entitätsnamen, "ProcessingInstruction"-Zielen oder Notationsnamen ist kein Doppelpunkt enthalten.</span><span class="sxs-lookup"><span data-stu-id="289f7-110">No entity names, ProcessingInstruction targets, or notation names contain any colons.</span></span>
 
-<span data-ttu-id="196fd-111">Da `<?xml:stylesheet?>` einen Doppelpunkt enthält, verstößt der Name gegen die zweite der obigen Regeln.</span><span class="sxs-lookup"><span data-stu-id="196fd-111">With the `<?xml:stylesheet?>` containing a colon, you now violate the rule in the second bullet.</span></span>
+<span data-ttu-id="289f7-111">Da `<?xml:stylesheet?>` einen Doppelpunkt enthält, verstößt der Name gegen die zweite der obigen Regeln.</span><span class="sxs-lookup"><span data-stu-id="289f7-111">With the `<?xml:stylesheet?>` containing a colon, you now violate the rule in the second bullet.</span></span>
 
-<span data-ttu-id="196fd-112">Gemäß der W3C-Empfehlung [Associating Style Sheets with XML documents Version 1.0](https://www.w3.org/TR/xml-stylesheet/), lautet die Verarbeitungsanweisung zum Verknüpfen eines XSL-Stylesheets mit einem XML-Dokument `<?xml-stylesheet?>`, d.h. der Doppelpunkt wird durch einen Bindestrich ersetzt.</span><span class="sxs-lookup"><span data-stu-id="196fd-112">According to the World Wide Web Consortium (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/),  the processing instruction to associate an XSLT style sheet with an XML document is `<?xml-stylesheet?>`, with a dash replacing the colon.</span></span>
+<span data-ttu-id="289f7-112">Gemäß der W3C-Empfehlung [Associating Style Sheets with XML documents Version 1.0](https://www.w3.org/TR/xml-stylesheet/), lautet die Verarbeitungsanweisung zum Verknüpfen eines XSL-Stylesheets mit einem XML-Dokument `<?xml-stylesheet?>`, d.h. der Doppelpunkt wird durch einen Bindestrich ersetzt.</span><span class="sxs-lookup"><span data-stu-id="289f7-112">According to the World Wide Web Consortium (W3C) [Associating Style Sheets with XML documents Version 1.0 Recommendation](https://www.w3.org/TR/xml-stylesheet/),  the processing instruction to associate an XSLT style sheet with an XML document is `<?xml-stylesheet?>`, with a dash replacing the colon.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="196fd-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="196fd-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="289f7-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="289f7-113">See also</span></span>
 
-[<span data-ttu-id="196fd-114">XML-Dokumentobjektmodell (DOM)</span><span class="sxs-lookup"><span data-stu-id="196fd-114">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)  
+- [<span data-ttu-id="289f7-114">XML-Dokumentobjektmodell (DOM)</span><span class="sxs-lookup"><span data-stu-id="289f7-114">XML Document Object Model (DOM)</span></span>](xml-document-object-model-dom.md)

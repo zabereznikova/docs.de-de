@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3eb24d76ffb07b36b837056ffa5cde0cbd37f5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570533"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252778"
 ---
-# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="17525-102">Unterstützung der msxsl:node-set()-Funktion</span><span class="sxs-lookup"><span data-stu-id="17525-102">Support for the msxsl:node-set() Function</span></span>
-<span data-ttu-id="17525-103">Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren.</span><span class="sxs-lookup"><span data-stu-id="17525-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="17525-104">Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.</span><span class="sxs-lookup"><span data-stu-id="17525-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+# <a name="support-for-the-msxslnode-set-function"></a><span data-ttu-id="bbf3b-102">Unterstützung der msxsl:node-set()-Funktion</span><span class="sxs-lookup"><span data-stu-id="bbf3b-102">Support for the msxsl:node-set() Function</span></span>
+<span data-ttu-id="bbf3b-103">Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-103">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="bbf3b-104">Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-104">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="17525-105">Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="17525-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="17525-106">Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen.</span><span class="sxs-lookup"><span data-stu-id="17525-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="17525-107">Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="17525-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
+>  <span data-ttu-id="bbf3b-105">Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-105">The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].</span></span> <span data-ttu-id="bbf3b-106">Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-106">You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="bbf3b-107">Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).</span><span class="sxs-lookup"><span data-stu-id="bbf3b-107">See [Using the XslCompiledTransform Class](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) for more information.</span></span>  
   
- <span data-ttu-id="17525-108">Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren.</span><span class="sxs-lookup"><span data-stu-id="17525-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="17525-109">Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.</span><span class="sxs-lookup"><span data-stu-id="17525-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
+ <span data-ttu-id="bbf3b-108">Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-108">The `msxsl:node-set` function enables you to convert a result tree fragment into a node set.</span></span> <span data-ttu-id="bbf3b-109">Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-109">The resulting node set always contains a single node and is the root node of the tree.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="17525-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="17525-110">Example</span></span>  
- <span data-ttu-id="17525-111">Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt.</span><span class="sxs-lookup"><span data-stu-id="17525-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="17525-112">Die for-each`node-set`-Anweisung in Verbindung mit der -Funktion ermöglicht dem Benutzer, diese Knotenstruktur wie eine Knotengruppe zu durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="17525-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
+## <a name="example"></a><span data-ttu-id="bbf3b-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bbf3b-110">Example</span></span>  
+ <span data-ttu-id="bbf3b-111">Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-111">In the following example, `$var` is a variable that is a node tree in the style sheet.</span></span> <span data-ttu-id="bbf3b-112">Die for-each`node-set`-Anweisung in Verbindung mit der -Funktion ermöglicht dem Benutzer, diese Knotenstruktur wie eine Knotengruppe zu durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="bbf3b-112">The for-each statement combined with the `node-set` function allows the user to iterate over this node tree as a node set.</span></span>  
   
-## <a name="nodesetxsl"></a><span data-ttu-id="17525-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="17525-113">nodeset.xsl</span></span>  
+## <a name="nodesetxsl"></a><span data-ttu-id="bbf3b-113">nodeset.xsl</span><span class="sxs-lookup"><span data-stu-id="bbf3b-113">nodeset.xsl</span></span>  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -45,13 +45,14 @@ ms.locfileid: "33570533"
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a><span data-ttu-id="17525-114">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="17525-114">Output</span></span>  
- <span data-ttu-id="17525-115">Die Ausgabe der Transformation lautet:</span><span class="sxs-lookup"><span data-stu-id="17525-115">The output of the transformation is</span></span>  
+## <a name="output"></a><span data-ttu-id="bbf3b-114">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="bbf3b-114">Output</span></span>  
+ <span data-ttu-id="bbf3b-115">Die Ausgabe der Transformation lautet:</span><span class="sxs-lookup"><span data-stu-id="bbf3b-115">The output of the transformation is</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="17525-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="17525-116">See Also</span></span>  
- [<span data-ttu-id="17525-117">Implementierung des XSLT-Prozessors durch die XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="17525-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a><span data-ttu-id="bbf3b-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bbf3b-116">See also</span></span>
+
+- [<span data-ttu-id="bbf3b-117">Implementierung des XSLT-Prozessors durch die XslTransform-Klasse</span><span class="sxs-lookup"><span data-stu-id="bbf3b-117">XslTransform Class Implements the XSLT Processor</span></span>](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
