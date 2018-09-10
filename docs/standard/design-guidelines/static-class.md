@@ -13,11 +13,11 @@ ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3a0a51fc6055190f9a0189de2e17d98f88036ea
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44046982"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249567"
 ---
 # <a name="static-class-design"></a>Entwurf statischer Klassen
 Eine statische Klasse als eine Klasse, nur statische Member enthält, definiert ist (natürlich als Instanzmember vererbt <xref:System.Object?displayProperty=nameWithType> und möglicherweise einen privaten Konstruktor). Einige Sprachen bieten integrierte Unterstützung für statische Klassen. In c# 2.0 und höher, wenn eine Klasse statisch deklariert wird, es ist versiegelt, "abstract", und keine Instanzmember deklariert oder außer Kraft gesetzt werden können.  

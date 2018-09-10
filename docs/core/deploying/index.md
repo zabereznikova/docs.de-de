@@ -3,13 +3,13 @@ title: .NET Core Anwendungsbereitstellung
 description: Bereitstellen einer .NET Core-Anwendung.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562005"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891310"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
@@ -43,6 +43,8 @@ Es gibt auch einige Nachteile:
 
 Bei einer eigenständigen Bereitstellung stellen Sie nicht nur Ihre Anwendung und alle erforderlichen Drittanbieterabhängigkeiten bereit, sondern auch die .NET Core-Version, mit der Sie Ihre Anwendung erstellt haben. Eine eigenständige Bereitstellung schließt allerdings nicht die [nativen Abhängigkeiten von .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) auf verschiedenen Plattformen mit ein. Diese müssen daher vor dem Ausführen der Anwendung installiert werden. Weitere Informationen zur Versionsbindung zur Laufzeit finden Sie im Artikel zur [Versionsbindung in .NET Core](../versions/selection.md).
 
+Ab NET Core 2.1 SDK (Version 2.1.300) unterstützt .NET Core das *Rollforward von Patchversionen*. Bei Erstellung einer eigenständigen Bereitstellung enthalten .NET Core-Tools automatisch die neueste gewartete Runtime der .NET Core-Version, auf die die Anwendung ausgerichtet ist. (Die neueste gewartete Runtime enthält Sicherheitspatches und andere Fehlerbehebungen.) Die gewartete Runtime muss auf Ihrem Buildsystem nicht vorhanden sein; sie wird automatisch von NuGet.org heruntergeladen. Weitere Informationen, einschließlich Anweisungen zum Deaktivieren des Rollforwards von Patchversionen, finden Sie unter [Rollforward der eigenständigen Runtimebereitstellung](runtime-patch-selection.md).
+
 Framework-abhängige Bereitstellungen (FDD) und eigenständige Bereitstellungen (SCD) verwenden getrennte ausführbare Hostdateien, sodass Sie eine ausführbare Hostdatei für eine SCD mit Ihrer Herausgebersignatur signieren können.
 
 ### <a name="why-deploy-a-self-contained-deployment"></a>Was spricht für eine eigenständige Bereitstellung?
@@ -58,6 +60,8 @@ Es hat auch einige Nachteile:
 - Da .NET Core in Ihrem Bereitstellungspaket enthalten ist, müssen Sie die Zielplattformen auswählen, für die Sie im Voraus Bereitstellungspaketen erstellen.
 
 - Die Größe Ihres Bereitstellungspakets ist relativ groß, da es auch .NET Core, Ihre Anwendung und ihre Drittanbieter-Abhängigkeiten enthält.
+
+  Ab .NET Core 2.0 können Sie die Größe Ihrer Bereitstellung auf Linux-Systemen um etwa 28 MB reduzieren, indem Sie den [*invarianten Globalisierungsmodus*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) von .NET Core verwenden. Normalerweise basiert die Globalisierungsunterstützung von .NET Core unter Linux auf den [ICU-Bibliotheken](https://github.com/dotnet/docs/issues/http%22//icu-project.org). Im invarianten Modus werden die Bibliotheken nicht in die Bereitstellung einbezogen, und alle Kulturen verhalten sich wie die [invariante Kultur](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Das Bereitstellen von zahlreichen eigenständigen .NET Core-Anwendungen auf ein System kann viel Speicherplatz verbrauchen, da jede Anwendung .NET Core-Dateien dupliziert.
 

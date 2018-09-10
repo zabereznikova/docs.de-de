@@ -3,11 +3,11 @@ title: Transaktive Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
 ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048028"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253194"
 ---
 # <a name="transacted-queues"></a>Transaktive Warteschlangen
 Dieses Beispiel zeigt, wie Sie Warteschlangen und Transaktionen in Windows Workflow Foundation (WF) zum Erstellen von zuverlässiger und skalierbarer Diensten integrieren. Ein <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` wird im clientworkflow verwendet, zum Senden der Nachricht an eine Warteschlange unter einer Transaktion mithilfe der <xref:System.ServiceModel.NetMsmqBinding>. Ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> wird auf dem Server verwendet, um Meldungen von der Warteschlange zu empfangen und den Zustand des Workflows unter der gleichen Transaktion zu aktualisieren.  

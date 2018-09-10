@@ -4,12 +4,12 @@ description: Der „dotnet store“-Befehl speichert die angegebenen Assemblys i
 author: bleroy
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696324"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181062"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -23,7 +23,7 @@ ms.locfileid: "34696324"
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
 `dotnet store`: speichert die angegebenen Assemblys im [Laufzeitpaketspeicher](../deploying/runtime-store.md). Assemblys werden standardmäßig für die Ziellaufzeit und das Zielframework optimiert. Weitere Informationen finden Sie unter [Laufzeitpaketspeicher](../deploying/runtime-store.md).
 
@@ -83,4 +83,4 @@ Speichern Sie die in der Datei *packages.csproj* angegebenen Pakete ohne Optimie
 
 ## <a name="see-also"></a>Siehe auch
 
-[Laufzeitpaketspeicher](../deploying/runtime-store.md)
+* [Laufzeitpaketspeicher](../deploying/runtime-store.md)

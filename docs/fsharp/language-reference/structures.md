@@ -2,12 +2,12 @@
 title: Strukturen (F#)
 description: Erfahren Sie mehr über die F#-Struktur, ein kompakter Objekttyp, der häufig effizienter als eine Klasse für Typen mit einer geringeren Menge an Daten und ein einfaches Verhalten.
 ms.date: 05/16/2016
-ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799670"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181926"
 ---
 # <a name="structures"></a>Strukturen
 
@@ -48,9 +48,51 @@ Die folgenden Codebeispiele veranschaulichen Strukturdefinitionen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
+## <a name="byreflike-structs"></a>ByRefLike Strukturen
+
+Sie können definieren, dass Sie eigene Strukturen, die folgen können `byref`-Semantik wie: finden Sie unter [Byrefs](byrefs.md) für Weitere Informationen. Dies erfolgt mit der <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> Attribut:
+
+```fsharp
+open System
+open System.Runtime.CompilerServices
+
+[<IsByRefLike; Struct>]
+type S(count1: Span<int>, count2: Span<int>) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsByRefLike` impliziert nicht `Struct`. Beide müssen für den Typ vorhanden sein.
+
+Ein "`byref`-wie" "Struct" in f# ist ein Stack gebundene Wert. Sie wird nie auf dem verwalteten Heap zugewiesen. Ein `byref`-Struktur für Hochleistungs-Programmierung nützlich ist, wie sie mit leistungsfähiger Prüfungen zur Lebensdauer und nicht-Capture erzwungen wird. Die Regeln sind:
+
+* Sie können verwendet werden Methodenrückgabe als Funktionsparameter, Methodenparameter, lokale Variablen.
+* Sie können nicht statisch sein oder Instanzmember einer Klasse oder einer normalen Struktur.
+* Sie können nicht anhand des Konstrukte Closure erfasst werden (`async` Methoden oder Lambdaausdrücke).
+* Sie können nicht als generischer Parameter verwendet werden.
+
+Obwohl diese Regeln sehr stark Nutzung einzuschränken, werden diese zur Erfüllung der Zusage von High Performance computing, auf sichere Weise.
+
+## <a name="readonly-structs"></a>Schreibgeschützte Strukturen
+
+Sie können mit einer Anmerkung versehen Strukturen mit dem <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> Attribut. Zum Beispiel:
+
+```fsharp
+[<IsReadOnly; Struct>]
+type S(count1: int, count2: int) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsReadOnly` impliziert nicht `Struct`. Sie müssen beide haben Hinzufügen einer `IsReadOnly` Struktur.
+
+Verwendung dieses Attributs gibt Metadaten können von f# und c# kennen, die sie behandeln, als `inref<'T>` und `in ref`bzw.
+
+Definieren eines änderbaren Werts innerhalb einer Struktur Readonly erzeugt einen Fehler.
+
 ## <a name="struct-records-and-discriminated-unions"></a>Struktur-Datensätze und Unterscheidungs-Unions
 
-Ab f# 4.1, Sie können darstellen [Datensätze](records.md) und [Unterscheidungs-Unions](discriminated-unions.md) als Strukturen mit dem `[<Struct>]` Attribut.  Finden Sie alle Artikel, um mehr zu erfahren.
+Sie können darstellen [Datensätze](records.md) und [Unterscheidungs-Unions](discriminated-unions.md) als Strukturen mit dem `[<Struct>]` Attribut.  Finden Sie alle Artikel, um mehr zu erfahren.
 
 ## <a name="see-also"></a>Siehe auch
 

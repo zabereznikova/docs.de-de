@@ -6,23 +6,23 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 02b6b3fc9e149f5d1d5d78e310c7df257be983c1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961546"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201386"
 ---
 # <a name="learn-docker-basics-with-net-core"></a>Erlernen der Docker-Grundlagen mit .NET Core
 
-In diesem Tutorial werden die Aufgaben für das Erstellen und Bereitstellen von Docker-Containern für eine .NET Core-Anwendung erläutert. Im Verlauf dieses Tutorials lernen Sie Folgendes:
+In diesem Tutorial werden die Aufgaben für das Erstellen und Bereitstellen von Docker-Containern für eine .NET Core-Anwendung erläutert. Die [Docker-Plattform](https://docs.docker.com/engine/docker-overview/#the-docker-platform) verwendet die [Docker-Engine](https://docs.docker.com/engine/docker-overview/#docker-engine), um Pakete schnell als [Docker-Images](https://docs.docker.com/glossary/?term=image) zu erstellen und zu packen. Diese Images werden im [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile)-Format geschrieben, um in einem [mehrstufigen Container](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers) bereitgestellt und ausgeführt zu werden.
+
+Im Verlauf dieses Tutorials lernen Sie Folgendes:
 
 > [!div class="checklist"]
 > * das Erstellen einer Dockerfile-Datei
 > * das Erstellen einer .NET Core-App
 > * das Bereitstellen Ihrer App in einem Docker-Container
-
-Die [Docker-Plattform](https://docs.docker.com/engine/docker-overview/#the-docker-platform) verwendet die [Docker-Engine](https://docs.docker.com/engine/docker-overview/#docker-engine), um Pakete schnell als [Docker-Images](https://docs.docker.com/glossary/?term=image) zu erstellen und zu packen. Diese Images werden im [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile)-Format geschrieben, um in einem [mehrstufigen Container](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers) bereitgestellt und ausgeführt zu werden.
 
 ## <a name="net-core-easiest-way-to-get-started"></a>Einfacher Einstieg in .NET Core
 
@@ -283,7 +283,7 @@ Folgende Docker-Images werden in diesem Beispiel verwendet:
 
 ## <a name="related-resources"></a>Verwandte Ressourcen
 
-* [.NET Core Docker samples (Docker-Beispiele für .NET Core)](https://github.com/dotnet/dotnet-docker-samples/README.md)
+* [.NET Core Docker samples (Docker-Beispiele für .NET Core)](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Dockerfile-Datei in Windows-Containern](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [.NET Framework Docker samples (Docker-Beispiele für .NET Framework)](https://github.com/Microsoft/dotnet-framework-docker-samples)
 * [ASP.NET Core auf DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/)
