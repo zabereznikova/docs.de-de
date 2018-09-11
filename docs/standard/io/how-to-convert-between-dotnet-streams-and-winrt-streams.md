@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3cfaf4cf22bba445d774c653ff7797d535bcde2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398964"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087478"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams
 
@@ -79,6 +79,6 @@ Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertiere
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schnellstart: Lesen und Schreiben einer Datei (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-[.NET für Windows Store-Apps – Übersicht](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-[.NET für Windows Store-Apps – unterstützte APIs](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Schnellstart: Lesen und Schreiben einer Datei (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+- [.NET für Windows Store-Apps – Übersicht](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+- [.NET für Windows Store-Apps – unterstützte APIs](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  

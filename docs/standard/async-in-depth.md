@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0c098d0697dff3e1e772c348597a84ac9d262104
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43385695"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085315"
 ---
 # <a name="async-in-depth"></a>Async ausführlich
 
@@ -146,7 +146,7 @@ Sobald `await` festgestellt wird, wird die Ausführung von `CalculateResult()` a
 
 ## <a name="see-also"></a>Siehe auch
 
-[Asynchrone Programmierung in C#](~/docs/csharp/async.md)   
-[Asynchrone Programmierung mit Async und Await (C#)](../csharp/programming-guide/concepts/async/index.md)  
-[Asynchrone Programmierung in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-[Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+* [Asynchrone Programmierung in C#](~/docs/csharp/async.md)   
+* [Asynchrone Programmierung mit Async und Await (C#)](../csharp/programming-guide/concepts/async/index.md)  
+* [Asynchrone Programmierung in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+* [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

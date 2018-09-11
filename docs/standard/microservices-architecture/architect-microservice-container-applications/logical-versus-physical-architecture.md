@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Logi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238415"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213341"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Logische und physische Architektur im Vergleich
 
@@ -17,7 +17,7 @@ Zunächst einmal soll der Unterschied zwischen logischer und physischer Architek
 
 Für das Erstellen von Microservices sind keine spezifischen Technologien erforderlich. Beispielsweise sind keine Docker-Container erforderlich, um eine auf einem Microservice basierende Architektur zu erstellen. Diese Microservices könnten auch als einfache Prozesse ausgeführt werden. Microservices bauen auf einer logischen Architektur auf.
 
-Zudem ist diese Parität eines Unternehmensmicroservice und physischem Dienst oder Container nicht immer erforderlich, wenn Sie eine umfangreiche und komplexe Anwendung erstellen, die aus dutzenden oder sogar hunderten von Diensten besteht. Dies ist auch nicht der Fall, wenn ein Microservice physisch als einzelner Dienst, Prozess oder Container implementiert werden könnte (der Einfachheit halber wird dieser Ansatz in der ersten Version von [eShopOnContainers](http://aka.ms/MicroservicesArchitecture) angewendet).
+Zudem ist diese Parität eines Unternehmensmicroservice und physischem Dienst oder Container nicht immer erforderlich, wenn Sie eine umfangreiche und komplexe Anwendung erstellen, die aus dutzenden oder sogar hunderten von Diensten besteht. Dies ist auch nicht der Fall, wenn ein Microservice physisch als einzelner Dienst, Prozess oder Container implementiert werden könnte (der Einfachheit halber wird dieser Ansatz in der ersten Version von [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) angewendet).
 
 In diesem Zusammenhang besteht ein Unterschied zwischen der logischen und der physischen Architektur einer Anwendung. Die logische Architektur und die logischen Begrenzungen eines Systems können nicht in jeder einzelnen Komponente der physischen Architektur bzw. der Bereitstellungsarchitektur zugeordnet werden. Dies ist zwar möglich, allerdings ist es nur selten der Fall.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
 ms.openlocfilehash: b257c7d41618464e26ab3b54bcfb1f1e2c2e420e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467373"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510977"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;-Operator (C#-Referenz)
 Der `&`-Operator kann entweder als unärer oder als binärer Operator funktionieren.  

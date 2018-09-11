@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43395136"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524537"
 ---
 # <a name="line-c-reference"></a>#line (C#-Referenz)
 Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamensausgabe für Fehler und Warnungen bearbeiten.

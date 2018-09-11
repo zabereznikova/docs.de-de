@@ -6,12 +6,12 @@ helpviewer_keywords:
 - as operator [C#]
 - is operator [C#]
 ms.assetid: c1176cea-1426-4a44-8570-3eadafa58863
-ms.openlocfilehash: de59fb49ca5dbe1282cd828f7d6995dda449d31b
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8e0b17122bd23a7de82ca1c210a559fe09ad7fee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257300"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508117"
 ---
 # <a name="how-to-safely-cast-by-using-as-and-is-operators-c-programming-guide"></a>Gewusst wie: Sichere Umwandlung mit den Operatoren "as" und "is" (C#-Programmierhandbuch)
 Da Objekte polymorph sind, ist es möglich, dass eine Variable eines Basisklassentyps einen abgeleiteten Typ enthalten kann. Für den Zugriff auf die Instanzmethode des abgeleiteten Typs ist es erforderlich, dass Sie den Wert wieder in den abgeleiteten Typ umwandeln. Wenn Sie allerdings in diesen Fällen eine Umwandlung durchführen, besteht das Risiko, dass Sie eine <xref:System.InvalidCastException> auslösen. Deshalb bietet C# die Operatoren [is](../../../csharp/language-reference/keywords/is.md) und [as](../../../csharp/language-reference/keywords/as.md). Sie können diese Operatoren verwenden, um zu prüfen, ob eine Umwandlung erfolgreich durchgeführt werden kann, ohne dass eine Ausnahme ausgelöst wird. Für gewöhnlich ist der `as`-Operator effizienter, da er den Umwandlungswert zurückgibt, wenn die Umwandlung erfolgreich durchgeführt werden kann. Der `is`-Operator gibt einen booleschen Wert zurück. Er kann deshalb verwendet werden, wenn Sie nur den Typ eines Objekts bestimmen wollen, ihn aber nicht tatsächlich umwandeln müssen.  
@@ -21,7 +21,8 @@ Da Objekte polymorph sind, ist es möglich, dass eine Variable eines Basisklasse
   
  [!code-csharp[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Typen](../../../csharp/programming-guide/types/index.md)  
- [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Typen](../../../csharp/programming-guide/types/index.md)  
+- [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Typen mit Nullwert](../../../csharp/programming-guide/nullable-types/index.md)
