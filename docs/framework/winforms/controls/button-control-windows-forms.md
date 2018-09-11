@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
 ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43537441"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892745"
 ---
 # <a name="button-control-windows-forms"></a>Button-Steuerelement (Windows Forms)
 Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klicken eine Aktion auszuführen. Im `Button`-Steuerelement können sowohl Text als auch Bilder angezeigt werden. Wenn der Benutzer auf die Schaltfläche klickt, wird sie als gedrückt bzw. nicht gedrückt angezeigt.  
@@ -31,7 +31,7 @@ Das Windows Forms `Button`-Steuerelement ermöglicht es dem Benutzer, durch Klic
  [Methoden zur Auswahl eines Button-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  Listet die Methoden zum Auswählen einer Schaltfläche auf.  
   
- Siehe auch [wie: eine Windows Forms-Schaltfläche als die akzeptieren Schaltfläche mithilfe der Designer festlegen.](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) und [wie: eine Windows Forms-Schaltfläche als das Abbrechen Schaltfläche mithilfe der Designer festlegen.](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ Siehe auch [wie: eine Windows Forms-Schaltfläche als die akzeptieren Schaltfläche mithilfe der Designer festlegen.](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) und [wie: eine Windows Forms-Schaltfläche als das Abbrechen Schaltfläche mithilfe der Designer festlegen](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Button>-Klasse  
