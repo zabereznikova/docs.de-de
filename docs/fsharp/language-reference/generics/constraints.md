@@ -2,17 +2,16 @@
 title: Einschränkungen (F#)
 description: Informationen Sie zu F#-Einschränkungen, die für generische Typparameter an die Anforderungen für die ein Typargument in einer generischen Typ oder eine Funktion gelten.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525604"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867828"
 ---
 # <a name="constraints"></a>Einschränkungen
 
 In diesem Thema wird beschrieben, Einschränkungen, die Sie auf generische anwenden können Geben Sie Parameter, um die Anforderungen für die ein Typargument in einer generischen Typ oder eine Funktion anzugeben.
-
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,13 +20,14 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Hinweise
+
 Es gibt mehrere andere Einschränkungen, die Sie anwenden können, um die Typen beschränken, die in einem generischen Typ verwendet werden kann. Die folgende Tabelle enthält und beschreibt diese Einschränkungen.
 
 |Constraint|Syntax|Beschreibung|
 |----------|------|-----------|
 |Typeinschränkung|*Typparameter* :&gt; *Typ*|Der bereitgestellte Typ muss gleich oder abgeleitet aus dem angegebenen Typ oder, wenn der Typ eine Schnittstelle ist, muss der angegebene Typ die Schnittstelle implementieren.|
 |NULL-Einschränkung|*Typparameter* : null|Der angegebene Typ muss es sich um das null-Literal unterstützen. Dies schließt alle Objekttypen .NET, aber nicht F#-Liste, Tupel, Funktion, Klasse, Datensatz oder union-Typen.|
-|Explizites Mitglied-Einschränkung|[()]*Typparameter* [oder... oder *Typparameter*)]: (*Membersignatur*)|Mindestens eines der bereitgestellten Typargumente müssen ein Mitglied, das die angegebene Signatur verfügt; nicht für die allgemeine Verwendung vorgesehen. Mitglieder müssen entweder explizit auf den Typ oder einem Teil einer Erweiterung impliziter Typ werden gültige Ziele für eine explizite Einschränkung für Member definiert werden.|
+|Explizites Mitglied-Einschränkung|[(]*Typparameter* [oder... oder *Typparameter*)]: (*Membersignatur*)|Mindestens eines der bereitgestellten Typargumente müssen ein Mitglied, das die angegebene Signatur verfügt; nicht für die allgemeine Verwendung vorgesehen. Mitglieder müssen entweder explizit auf den Typ oder einem Teil einer Erweiterung impliziter Typ werden gültige Ziele für eine explizite Einschränkung für Member definiert werden.|
 |Konstruktoreinschränkung|*Typparameter* : (neu: Unit -&gt; "ein)|Der angegebene Typ muss einen Standardkonstruktor verfügen.|
 |Werttypeinschränkung|: Struktur|Der angegebene Typ muss ein.|
 |Verweistypeinschränkung|: nicht-Struktur|Der angegebene Typ muss ein Verweistyp für .NET.|
@@ -115,6 +115,6 @@ class end
 ```
 
 ## <a name="see-also"></a>Siehe auch
-[Generika](index.md)
 
-[Einschränkungen](constraints.md)
+- [Generika](index.md)
+- [Einschränkungen](constraints.md)

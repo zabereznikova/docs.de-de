@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334833"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207459"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Gewusst wie: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)
 Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unterordner erstellen, eine Datei im Unterordner erstellen und Daten in die Datei schreiben.  
@@ -67,7 +67,8 @@ Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unt
   
  Wenn Sie keine Berechtigung zum Erstellen des Ordners haben, wird in dem Beispiel eine Instanz der <xref:System.UnauthorizedAccessException>-Klasse ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IO?displayProperty=nameWithType>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Das Dateisystem und die Registrierung (C#-Programmierhandbuch)](../../../csharp/programming-guide/file-system/index.md)

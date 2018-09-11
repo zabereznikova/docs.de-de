@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728679"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187467"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für reguläre Ausdrücke: Suchen nach HREFs
 Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden alle href="..."-Werte und ihre Positionen in der Zeichenfolge angezeigt.  
@@ -38,7 +38,7 @@ Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden al
   
  Das Muster für reguläre Ausdrücke `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`href`|Sucht nach der Literalzeichenfolge „href“. Die Groß- und Kleinschreibung wird bei der Übereinstimmung nicht berücksichtigt.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
@@ -56,5 +56,6 @@ Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden al
   
  Um diesen Schwierigkeiten zu begegnen, unterstützt die <xref:System.Text.RegularExpressions.Regex>-Klasse die `(?<name>…)`-Syntax zur Erfassung einer Übereinstimmung in einem festgelegten Slot. (Der Slot kann mit einer Zeichenfolge oder einer ganzen Zahl benannt werden; ganze Zahlen können schneller aufgerufen werden.) Damit können alle Suchergebnisse für dieselbe Zeichenfolge an denselben Ort geleitet werden. Im Fall eines Konflikts ist das zuletzt im Slot gespeicherte Suchergebnis gültig. (Eine vollständige Liste mehrerer Übereinstimmungen für einen einzelnen Slot steht jedoch zur Verfügung. Weitere Informationen finden Sie in der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Auflistung.)  
   
-## <a name="see-also"></a>Siehe auch  
- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579092"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192264"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
   
-|Gieriger Quantifizierer|Träger Quantifizierer|description|  
+|Gieriger Quantifizierer|Träger Quantifizierer|Beschreibung |  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Übereinstimmung mit null oder mehr Vorkommen.|  
 |`+`|`+?`|Übereinstimmung mit einem oder mehr Vorkommen.|  
@@ -56,7 +56,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`91*`|Übereinstimmung mit „9“, gefolgt von null oder mehr Zeichen „1“.|  
@@ -73,7 +73,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`an+`|Übereinstimmung mit „a“, gefolgt von einem oder mehr Zeichen „n“.|  
@@ -90,7 +90,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`an?`|Übereinstimmung mit „a“, gefolgt von null oder einem Zeichen „n“.|  
@@ -106,7 +106,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
@@ -115,7 +115,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\b`|An einer Wortgrenze beenden.|  
   
 ### <a name="match-at-least-n-times-n"></a>Übereinstimmung mit mindestens n Vorkommen: {n,}  
- Der `{`*n*`,}`-Quantifizierer gleicht das vorangehende Element mindestens *n*-mal ab, wobei *n* für einen beliebigen Integer steht. `{`*n*`,}` ist ein gieriger Quantifizierer, dessen träges Äquivalent `{`*n*`}?` lautet.  
+ Der `{`*n*`,}`-Quantifizierer gleicht das vorangehende Element mindestens *n*-mal ab, wobei *n* für einen beliebigen Integer steht. `{`*n*`,}` ist ein gieriger Quantifizierer, dessen träges Äquivalent `{`*n*`,}?` lautet.  
   
  Beispielsweise versucht der reguläre Ausdruck `\b\d{2,}\b\D+`, eine Wortgrenze, gefolgt von mindestens zwei Ziffern, gefolgt von einer Wortgrenze und einer Nicht-Dezimalziffer abzugleichen. Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht. Der reguläre Ausdruck kann den Ausdruck `"7 days"` nicht abgleichen, da er nur eine Dezimalziffer enthält, findet aber erfolgreich Übereinstimmungen mit den Phrasen `"10 weeks and 300 years"`.  
   
@@ -124,7 +124,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\d{2,}`|Übereinstimmung mit mindestens zwei Dezimalziffern.|  
@@ -149,7 +149,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\w*?`|Übereinstimmung mit null oder mehr Wortzeichen, aber so wenigen Zeichen wie möglich.|  
@@ -175,7 +175,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`^`|Übereinstimmung mit dem Beginn des Eingabestreams.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
@@ -194,7 +194,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(\w{3,}?\.)`|Übereinstimmung mit mindestens 3 Wortzeichen, aber so wenigen Zeichen wie möglich, gefolgt von einem Punktzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -216,7 +216,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`[A-Z]`|Übereinstimmung mit einem Großbuchstaben von A bis Z.|  
@@ -260,7 +260,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
   
  Um den praktischen Unterschied zwischen einer Erfassungsgruppe, die eine Mindest- und eine Höchstzahl von Erfassungen definiert, und einer Erfassungsgruppe zu sehen, die eine feste Anzahl von Erfassungen definiert, betrachten Sie die Muster für reguläre Ausdrücke `(a\1|(?(1)\1)){0,2}` und `(a\1|(?(1)\1)){2}`. Beide reguläre Ausdrücke bestehen aus einer einzelnen Erfassungsgruppe, die wie in der folgenden Tabelle gezeigt definiert ist.  
   
-|Muster|description|  
+|Muster|Beschreibung |  
 |-------------|-----------------|  
 |`(a\1`|Entweder „a“ zusammen mit dem Wert der ersten Erfassungsgruppe abgleichen...|  
 |<code>&#124;(?(1)</code>|… oder testen, ob die erste Erfassungsgruppe definiert wurde. (Beachten Sie, dass das `(?(1)`-Konstrukt keine Erfassungsgruppe definiert.)|  
@@ -271,6 +271,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
