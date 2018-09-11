@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198932"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361601"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.  
@@ -55,7 +55,7 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
  Speicher werden analog zu Ordnern auf einem Computer durch Zugriffssteuerungslisten (ACLs) geschützt. Beim Erstellen eines Diensts, der von Internet Information Services (IIS) gehostet wird, wird der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Prozess unter dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Konto ausgeführt. Dieses Konto muss über Zugriff auf den Speicher mit den Zertifikaten verfügen, die von einem Dienst verwendet werden. Die zentralen Speicher werden durch eine Standardzugriffssteuerungsliste geschützt, eine Änderung der Listen ist jedoch möglich. Wenn Sie eine separate Rolle für den Speicherzugriff erstellen, muss diese über die entsprechende Zugriffsberechtigung verfügen. Unter [How to: Create Temporary Certificates for Use During Development (Vorgehensweise: Erstellen temporärer Zertifikate zur Verwendung während der Entwicklung)](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md) erfahren Sie, wie Sie die Zugriffsliste mit dem Tool „WinHttpCertConfig.exe“ bearbeiten. Weitere Informationen zur Verwendung von Clientzertifikaten mit IIS finden Sie unter [Aufrufen eines Webdiensts mit einem Clientzertifikat zur Authentifizierung in einer ASP.NET-Webanwendung](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Vertrauensketten und Zertifizierungsstellen  
- Zertifikate werden in einer Hierarchie erstellt, in der jedes einzelne Zertifikat mit der Zertifizierungsstelle verknüpft ist, von der es ausgestellt wurde. Dieser Link verweist auf das Zertifikat der Zertifizierungsstelle. Das Zertifikat der Zertifizierungsstelle wird dann mit der Zertifizierungsstelle verknüpft, von der das ursprüngliche Zertifikat der Zertifizierungsstelle ausgestellt wurde. Dieser Prozess wird wiederholt, bis das Zertifikat der Stammzertifizierungsstelle erreicht wird. Das Zertifikat der Stammzertifizierungsstelle ist grundsätzlich vertrauenswürdig.  
+ Zertifikate werden in einer Hierarchie erstellt, in der jedes einzelne Zertifikat mit der Zertifizierungsstelle verknüpft ist, von der es ausgestellt wurde. Dieser Link verweist auf das Zertifikat der Zertifizierungsstelle. Der Zertifizierungsstelle das Zertifikat klicken Sie dann Links auf die Zertifizierungsstelle, die der ursprünglichen ZS-Zertifikat ausgestellt hat. Dieser Prozess wird wiederholt, bis das Zertifikat der Stammzertifizierungsstelle erreicht wird. Das Zertifikat der Stammzertifizierungsstelle ist grundsätzlich vertrauenswürdig.  
   
  Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zertifikatkette* bezeichneten Hierarchie zu authentifizieren. Sie können die Kette eines beliebigen Zertifikats mit dem MMC-Snap-In anzeigen, indem Sie auf das Zertifikat doppelklicken und anschließend auf die Registerkarte **Zertifikatpfad** klicken. Weitere Informationen zum Importieren von Zertifikatketten für eine Zertifizierungsstelle finden Sie unter [How to: Specify the Certificate Authority Certificate Chain Used to Verify Signatures (Vorgehensweise: Angeben der Zertifikatkette der Zertifizierungsstelle zum Überprüfen von Signaturen)](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   

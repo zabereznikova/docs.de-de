@@ -15,11 +15,11 @@ helpviewer_keywords:
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
 ms.openlocfilehash: 10b6bb3f55c8acd62101a48ea53b42e331e4210f
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339525"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44354151"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Gewusst wie: Implementieren der bidirektionalen Kommunikation zwischen DHTML-Code und Clientanwendungscode
 Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, um Ihren Windows Forms-Clientanwendungen vorhandenen DHTML-Webanwendungscode (dynamisches HTML) hinzuzufügen. Dies ist hilfreich, wenn Sie viel Zeit in die Erstellung DHTML-basierter Steuerelemente investiert haben und von den Möglichkeiten der Windows Forms-Benutzeroberfläche profitieren möchten, ohne vorhandenen Code umschreiben zu müssen.   
@@ -95,7 +95,7 @@ Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, 
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#9)]  
   
 ## <a name="example"></a>Beispiel  
- Mit dem folgenden Codebeispiel steht Ihnen eine vollständige Beispielanwendung zur Verfügung, die Ihnen dabei hilft, sich mit diesem Feature vertraut zu machen. Der HTML-Code wird nicht aus einer separaten HTML-Datei, sondern über die <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>-Eigenschaft in das <xref:System.Windows.Forms.WebBrowser>-Steuerelement geladen.  
+ Mit dem folgenden Codebeispiel steht Ihnen eine vollständige Beispielanwendung zur Verfügung, die Ihnen dabei hilft, sich mit dieser Funktion vertraut zu machen. Der HTML-Code wird nicht aus einer separaten HTML-Datei, sondern über die <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>-Eigenschaft in das <xref:System.Windows.Forms.WebBrowser>-Steuerelement geladen.  
   
  [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#0](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#0)]  

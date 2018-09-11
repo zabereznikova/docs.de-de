@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 4f4b3db768b5466f8912b66a0a4709d0f773c1f3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44047190"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44369029"
 ---
 # <a name="-linkresource-visual-basic"></a>-Linkresource (Visual Basic)
 Erstellt einen Link zu einer verwalteten Ressource.  
@@ -39,7 +39,7 @@ Erstellt einen Link zu einer verwalteten Ressource.
   
  Die `-linkresource` -Option erfordert eine von der `-target` Optionen, die nicht `-target:module`.  
   
- Wenn `filename` ist eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ressourcendatei erstellt haben, z. B. durch die [Resgen.exe (Resource File Generator)](https://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der <xref:System.Resources> Namespace. (Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.) Verwenden Sie den Zugriff auf alle anderen Ressourcen zur Laufzeit die Methoden, die mit beginnen `GetManifestResource` in die <xref:System.Reflection.Assembly> Klasse.  
+ Wenn `filename` ist eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Ressourcendatei erstellt haben, z. B. durch die [Resgen.exe (Resource File Generator)](../../../framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung, können sie Zugriff mit Membern in der <xref:System.Resources> Namespace. (Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>.) Verwenden Sie den Zugriff auf alle anderen Ressourcen zur Laufzeit die Methoden, die mit beginnen `GetManifestResource` in die <xref:System.Reflection.Assembly> Klasse.  
   
  Der Dateiname kann jedes Dateiformat sein. Sie können z.B. eine native DLL zu einem Teil der Assembly machen, sodass sie im globalen Assemblycache installiert und aus verwaltetem Code in der Assembly darauf zugegriffen werden kann.  
   
@@ -55,8 +55,9 @@ Erstellt einen Link zu einer verwalteten Ressource.
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

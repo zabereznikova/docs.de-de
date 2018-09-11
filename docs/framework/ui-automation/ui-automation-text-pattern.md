@@ -12,11 +12,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 31dacad6b2b7c891ff8c32151f9bf02e8639375f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268486"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44364571"
 ---
 # <a name="ui-automation-text-pattern"></a>Textmuster zur Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "44268486"
  [Übersicht über TextPattern und eingebettete Objekte](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
  [Themen zu Vorgehensweisen](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Siehe auch  

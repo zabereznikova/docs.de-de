@@ -1,5 +1,5 @@
 ---
-title: x:Key-Direktive
+title: x:Key-Anweisung
 ms.date: 03/30/2017
 f1_keywords:
 - xKey
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: f77f0a952224f79ee95a755cb848a4f8b68c9602
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274134"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368467"
 ---
-# <a name="xkey-directive"></a>x:Key-Direktive
+# <a name="xkey-directive"></a>x:Key-Anweisung
 Kennzeichnet Elemente eindeutig, die in einem XAML-definierten Wörterbuch erstellt und referenziert werden. Einem XAML-Objektelement einen `x:Key`-Wert hinzuzufügen, ist der üblichste Weg, um eine Ressource in einem Ressourcenwörterbuch, beispielsweise in einem WPF- <xref:System.Windows.ResourceDictionary> zu identifizieren.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  

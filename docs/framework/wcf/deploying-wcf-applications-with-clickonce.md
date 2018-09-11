@@ -3,11 +3,11 @@ title: Bereitstellen von WCF-Anwendungen mit ClickOnce
 ms.date: 03/30/2017
 ms.assetid: 1a11feee-2a47-4d3e-a28a-ad69d5ff93e0
 ms.openlocfilehash: d733c6f523393737418c6394707c1d4e6e9c1710
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222213"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365016"
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>Bereitstellen von WCF-Anwendungen mit ClickOnce
 Mit Windows Communication Foundation (WCF) Client-Anwendungen können mithilfe von ClickOnce-Technologie bereitgestellt werden. Diese Technologie ermöglicht es, den von der Codezugriffssicherheit bereitgestellten Laufzeitsicherheitsschutz zu nutzen, sofern die Clientanwendungen digital mit einem vertrauenswürdigen Zertifikat signiert sind. Das Zertifikat, mit dem die ClickOnce-Anwendung signiert wird, muss sich im Speicher für vertrauenswürdige Herausgeber befinden. Die lokale Sicherheitsrichtlinie auf dem Clientcomputer muss so konfiguriert sein, dass signierte Anwendungen mit dem Zertifikat des Herausgebers Berechtigungen für volle Vertrauenswürdigkeit erhalten.  

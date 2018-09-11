@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198490"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360725"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Entwurfsrichtlinien für Ausnahmen
 Behandlung von Ausnahmen hat viele Vorteile gegenüber der Return-Wert-Basis-Fehlerberichterstattung. Gute Framework trägt den Anwendungsentwickler, die die Vorteile von Ausnahmen zu nutzen. In diesem Abschnitt werden die Vorteile von Ausnahmen und enthält Richtlinien zur effektiven Verwendung von ihnen.  

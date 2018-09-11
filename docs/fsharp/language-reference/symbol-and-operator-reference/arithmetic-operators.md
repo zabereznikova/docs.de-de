@@ -3,11 +3,11 @@ title: Arithmetische Operatoren (F#)
 description: Erfahren Sie, bis die arithmetischen Operatoren, die in der Programmiersprache f# verfügbar sind.
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271847"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361958"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 
@@ -30,7 +30,7 @@ Die folgende Tabelle enthält die binäre arithmetischen Operatoren, die für Un
 
 Die folgende Tabelle enthält die unären arithmetischen Operatoren, die für ganzzahlige Typen und Gleitkommatypen verfügbar sind.
 
-|Unäroperator|Notizen|
+|Unäroperator|Hinweise|
 |--------------|-----|
 |`+` (positiv)|Kann auf alle arithmetischen Ausdruck angewendet werden. Die Vorzeichen des Werts wird nicht geändert werden.|
 |`-` (Negation, negativ)|Kann auf alle arithmetischen Ausdruck angewendet werden. Ändert das Vorzeichen des Werts.|
@@ -42,7 +42,7 @@ Die folgende Tabelle zeigt die binäre Vergleichsoperatoren, die für ganzzahlig
 
 Gleitkommazahlen sollten nie direkt für gleich, verglichen werden, da der IEEE-gleitkommadarstellung einen exakte Übereinstimmung-Vorgang nicht unterstützt. Zwei Zahlen, die Sie ganz einfach überprüfen können, um gleich zu sein, durch den Code überprüfen möglicherweise tatsächlich anderen Bitmustern Darstellungen.
 
-|Operator|Notizen|
+|Operator|Hinweise|
 |--------|-----|
 |`=` (Gleichheit, Equals)|Dies ist kein Zuweisungsoperator. Es wird nur für den Vergleich verwendet. Dies ist ein generischer Operator.|
 |`>` (größer als)|Dies ist ein generischer Operator.|

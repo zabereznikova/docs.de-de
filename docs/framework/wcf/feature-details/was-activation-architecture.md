@@ -3,11 +3,11 @@ title: WAS-Aktivierungsarchitektur
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
 ms.openlocfilehash: 64219649e7b743b7dd3a67673c3f2409aeeba486
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261797"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365069"
 ---
 # <a name="was-activation-architecture"></a>WAS-Aktivierungsarchitektur
 In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungsdiensts (auch WAS genannt) aufgeführt und erläutert.  
@@ -32,7 +32,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 ### <a name="listener-adapters"></a>Listeneradapter  
  Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. Die folgende Tabelle enthält die Listeneradapter für Windows Communication Foundation (WCF)-Protokolle.  
   
-|Dienstname des Listeneradapters|Protokoll|Notizen|  
+|Dienstname des Listeneradapters|Protokoll|Hinweise|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|Allgemeine Komponente, die für IIS 7.0 und WCF-HTTP-Aktivierung bereitstellt.|  
 |NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  

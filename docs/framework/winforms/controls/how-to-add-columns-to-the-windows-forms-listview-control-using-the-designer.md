@@ -6,11 +6,11 @@ helpviewer_keywords:
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
 ms.openlocfilehash: 4c696644e61004bcac48399ffc752e40675642fc
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268837"
+ms.locfileid: "44342406"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Gewusst wie: Hinzufügen von Spalten zum ListView-Steuerelement in Windows Forms mithilfe des Designers
 Die Windows-Formulare <xref:System.Windows.Forms.ListView> Steuerelement kann mehrere Spalten für jede Liste anzeigen in Element der **Details** anzeigen. Sie können die Spalten verwenden, um verschiedene Arten von Informationen zu jedem Listenelement anzuzeigen. Beispielsweise kann eine Liste der Dateien angezeigt, der Dateiname, Typ, Größe und Datum, an der letzten der Datei Änderung. Informationen zum Auffüllen der Spalten aus, nachdem sie erstellt wurden, finden Sie unter [Vorgehensweise: Anzeigen von Unterelementen in Spalten mit dem ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  

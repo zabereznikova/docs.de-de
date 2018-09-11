@@ -1,18 +1,18 @@
 ---
-title: Ausführen einer XPath-Abfrage für ein "DataSet"
+title: Ausführen einer XPath-Abfrage für ein DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270378"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360751"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein "DataSet"
+# <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein DataSet
 Die Beziehung zwischen einem synchronisierten <xref:System.Data.DataSet> und <xref:System.Xml.XmlDataDocument> können Sie zum Verwenden von XML-Dienste, z. B. der Abfrage XML Path Language (XPath), die Zugriff auf die **XmlDataDocument** und bestimmte Funktionen ausführen können einfacher als der Zugriff auf die **DataSet** direkt. Z. B. statt der **wählen** -Methode der ein <xref:System.Data.DataTable> Navigieren in Beziehungen zu anderen Tabellen im eine **DataSet**, können Sie eine XPath-Abfrage ausführen, auf eine **XmlDataDocument**  synchronisiertes der **DataSet**, um eine Liste von XML-Elementen in Form von erhalten eine <xref:System.Xml.XmlNodeList>. Die Knoten in der **XmlNodeList**, umgewandelte <xref:System.Xml.XmlElement> Knoten, klicken Sie dann an übergeben werden kann die **GetRowFromElement** -Methode der der **XmlDataDocument**, um übereinstimmende zurückzugeben <xref:System.Data.DataRow> Verweise auf die Zeilen der Tabelle im synchronisierten **DataSet**.  
   
  Im folgenden Codebeispiel wird eine XPath-Abfrage für Elemente der zweiten Unterebene ausgeführt. Die **DataSet** mit drei Tabellen gefüllt: **Kunden**, **Bestellungen**, und **OrderDetails**. In diesem Beispiel wird zunächst eine hierarchische Beziehung zwischen erstellt die **Kunden** und **Bestellungen** Tabellen, und zwischen den **Bestellungen** und **OrderDetails** Tabellen. Wird zum Zurückgeben eine XPath-Abfrage ausgeführt ein **XmlNodeList** von **Kunden** Knoten bei einem "Enkel" **OrderDetails** Knoten verfügt über eine **"ProductID"** Knoten mit dem Wert 43. Im Wesentlichen wird im Beispiel die XPath-Abfrage verwenden, um zu bestimmen, welche Kunden das Produkt bestellt haben, die die **"ProductID"** 43.  

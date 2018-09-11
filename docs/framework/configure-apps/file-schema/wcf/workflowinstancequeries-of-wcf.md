@@ -3,11 +3,11 @@ title: '&lt;workflowInstanceQueries&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
 ms.openlocfilehash: dfa75a7e4729244ba5887e6666c0fdfe840e9faf
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271701"
+ms.locfileid: "44342143"
 ---
 # <a name="ltworkflowinstancequeriesgt-of-wcf"></a>&lt;workflowInstanceQueries&gt; von WCF
 Stellt eine Auflistung von Konfigurationselementen dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgen, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.  
@@ -30,7 +30,7 @@ Stellt eine Auflistung von Konfigurationselementen dar, die Änderungen im Leben
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine.  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

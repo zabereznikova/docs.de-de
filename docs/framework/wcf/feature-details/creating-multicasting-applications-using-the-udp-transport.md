@@ -3,11 +3,11 @@ title: Erstellen von Multicastanwendungen mithilfe des UDP-Transports
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264799"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360582"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Erstellen von Multicastanwendungen mithilfe des UDP-Transports
 Multicastanwendungen senden kleine Nachrichten gleichzeitig an eine große Anzahl von Empfängern, ohne dass eine Punkt-zu-Punkt-Verbindung eingerichtet werden muss. Bei diesen Anwendungen hat Geschwindigkeit Vorrang vor Zuverlässigkeit. Das heißt, es ist wichtiger, Daten zeitgerecht zu senden, als sicherzustellen, dass eine Nachricht auch tatsächlich empfangen wird. WCF unterstützt jetzt mit der <xref:System.ServiceModel.UdpBinding> das Schreiben von Multicastanwendungen. Dieser Transport ist in Szenarien nützlich, in denen ein Dienst kleine Nachrichten an eine große Anzahl von Clients gleichzeitig senden muss. Eine Börsenticker-Anwendung ist ein Beispiel für einen solchen Dienst.  

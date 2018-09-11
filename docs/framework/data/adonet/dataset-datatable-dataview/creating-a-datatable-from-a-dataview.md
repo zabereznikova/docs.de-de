@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252050"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368285"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Erstellen einer "DataTable" aus einer "DataView"
 Nachdem Sie Daten aus einer Datenquelle abgerufen und eine <xref:System.Data.DataTable> mit Daten gefüllt haben, möchten Sie die zurückgegebenen Daten möglicherweise sortieren, filtern oder anderweitig einschränken, ohne sie erneut abrufen zu müssen. Dies wird durch die <xref:System.Data.DataView>-Klasse ermöglicht. Darüber hinaus, wenn Sie ein neues erstellen müssen <xref:System.Data.DataTable> aus der <xref:System.Data.DataView>, können Sie die <xref:System.Data.DataView.ToTable%2A> Methode, um alle Zeilen und Spalten oder eine Teilmenge der Daten in eine neue kopieren <xref:System.Data.DataTable>. Die <xref:System.Data.DataView.ToTable%2A>-Methode stellt Überladungen für folgende Vorgänge bereit:  

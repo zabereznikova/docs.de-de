@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: 54c5caaf3ade07f342e94ad0359f00c1418eace4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271376"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368600"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Übersicht über WPF-Globalisierung und -Lokalisierung
 Wenn Sie die Verfügbarkeit Ihres Produkts auf eine Sprache beschränken, beschränken Sie damit auch Ihre potentielle Kundenbasis auf einen Bruchteil der 6,5 Milliarden Einwohner unseres Planeten. Wenn Ihre Anwendung eine globale Zielgruppe erreichen soll, ist die kostengünstige Lokalisierung Ihres Produktes eine der besten und effizientesten Möglichkeiten, mehr Kunden zu erreichen.  
@@ -258,7 +258,7 @@ Wenn Sie die Verfügbarkeit Ihres Produkts auf eine Sprache beschränken, beschr
   
 |Ressourcenschlüssel|Kategorie|Lesbar|Änderbar|Kommentar|Wert|  
 |-|-|-|-|-|-|  
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|Dieses Zeichen wird als dekorative Abgrenzungslinie verwendet.|&#124;|  
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|true|Dieses Zeichen wird als dekorative Abgrenzungslinie verwendet.|&#124;|  
   
  Kommentare können auf den Inhalt oder die Eigenschaften jedes Elements mithilfe der folgenden Syntax platziert werden:  
   

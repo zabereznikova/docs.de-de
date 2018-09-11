@@ -5,11 +5,11 @@ helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
 ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275301"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365276"
 ---
 # <a name="wcf-performance-counters"></a>WCF-Leistungsindikatoren
 Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsindikatoren können Sie die Leistung Ihrer Anwendung zu messen.  
@@ -74,7 +74,7 @@ config.Save();
 ## <a name="types-of-performance-counters"></a>Leistungsindikatortypen  
  Leistungsindikatoren werden für drei verschiedene Ebenen festgelegt: Dienst, Endpunkt und Vorgang.  
   
- Sie können WMI verwenden, um den Namen einer Leistungsindikatorinstanz abzurufen. Beispiel:  
+ Sie können WMI verwenden, um den Namen einer Leistungsindikatorinstanz abzurufen. Ein auf ein Objekt angewendeter  
   
 -   -Instanzname des Indikators Service erhalten Sie über WMI [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) die "CounterInstanceName"-Eigenschaft der Instanz.  
   

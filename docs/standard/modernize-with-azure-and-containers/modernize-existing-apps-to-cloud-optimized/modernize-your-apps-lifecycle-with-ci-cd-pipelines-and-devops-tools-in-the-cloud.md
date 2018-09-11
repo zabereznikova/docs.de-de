@@ -1,39 +1,39 @@
 ---
-title: Aktualisieren Sie Ihre app-Lebenszyklus mit CI-CD-Pipelines und DevOps-Tools in der cloud
-description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Aktualisieren Sie Ihre app-Lebenszyklus mit CI-CD-Pipelines und DevOps-Tools in der cloud
+title: Modernisieren des Lebenszyklus Ihrer app mit CI-/CD-Pipelines und DevOps-Tools in der cloud
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Modernisieren des Lebenszyklus Ihrer app mit CI-/CD-Pipelines und DevOps-Tools in der cloud
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 63907a1911b4c95f0dbecb2af33964225cf3e7b1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957900"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44366842"
 ---
-# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Aktualisieren Sie Ihre app-Lebenszyklus mit CI-CD-Pipelines und DevOps-Tools in der cloud
+# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernisieren des Lebenszyklus Ihrer app mit CI-/CD-Pipelines und DevOps-Tools in der cloud
 
-Moderne Unternehmen müssen Innovationsbereitschaft mit einer schnellen Geschwindigkeit im Marketplace Wettbewerber sein. Bereitstellen von hoher Qualität, moderne Anwendungen erfordert, DevOps-Tools und Prozesse, die zum Implementieren dieser slm Innovationen von entscheidender Bedeutung sind. Entwickler können mit den richtigen DevOps-Tools optimieren Sie die kontinuierliche Bereitstellung und innovative Anwendungen in die Hände von Benutzern schneller abrufen.
+Heutige Unternehmen müssen Innovationen mit einer schnellen Geschwindigkeit im Marketplace konkurrenzfähig sein. Bereitstellung qualitativ hochwertiger, moderne Anwendungen erfordert, DevOps-Tools und Prozesse, die zum Implementieren dieser Konstanten Zyklus der Innovation von entscheidender Bedeutung sind. Entwickler können mit den richtigen DevOps-Tools kontinuierliche Bereitstellung optimieren und schneller, innovative Anwendungen in die Hände von Benutzern zu erhalten.
 
-Obwohl continuous Integration und kontinuierlicher Bereitstellung Practices Bereich etabliert sind, ergeben sich die Einführung von Containern neue Faktoren, besonders bei der Arbeit mit Multi-containeranwendungen.
+Obwohl continuous Integration und Continuous Deployment-Verfahren etabliert sind, ergeben sich die Einführung von Containern neue Faktoren, insbesondere dann, wenn Sie mit Anwendungen mit mehreren Containern arbeiten.
 
-Visual Studio Team Services unterstützt die fortlaufende Integration und Bereitstellung von Multi-containeranwendungen mit einer Vielzahl von Umgebungen über die offiziellen Team Services-Bereitstellungsaufgaben:
+Azure DevOps-Services unterstützt continuous Integration und Bereitstellung von Anwendungen mit mehreren Containern mit einer Vielzahl von Umgebungen über die offiziellen Azure DevOps-Dienste-Bereitstellungsaufgaben:
 
--   [Die eigenständige Version von Docker-Host-VM bereitstellen](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-docker-windowsvm) (Linux- oder WindowsServer 2016 oder höher)
+-   [Für eigenständige Docker-Host-VM bereitstellen](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux oder WindowsServer 2016 oder höher)
 
--   [Bereitstellen von Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
+-   [Bereitstellen in Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
 
--   [Bereitstellen Sie auf Azure-Container Service – Kubernetes](https://docs.microsoft.com/vsts/build-release/apps/cd/azure/deploy-container-kubernetes)
+-   [Bereitstellen von Azure Container Service – Kubernetes](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 
-Aber auch zu bereitstellen [Docker Containerhostclustern](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) oder DC/OS mit Team Services skriptbasierte Aufgaben.
+Aber auch zu bereitstellen [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) oder DC/OS, mithilfe von Azure DevOps-Dienste skriptbasierte Aufgaben.
 
-Zum Fortsetzen des Vorgangs Erleichterung der Bereitstellung Flexibilität bieten diese Tools ausgezeichnete Dev auf Test, Produktions-Bereitstellung für Container-Arbeitslasten mithilfe einer Auswahl von Entwicklungs- und CI-CD Lösungen auftritt.
+Zum Fortsetzen des Vorgangs Erleichterung der Bereitstellung Flexibilität bieten diese Tools ausgezeichnete Entwicklung, Test, Produktion Deployment für containerworkloads mit einer Auswahl von Entwicklung und CI/CD-Lösungen auftritt.
 
-Abbildung 4-12 zeigt eine dauerhafte Bereitstellung-Pipeline, die zu einem Cluster Kubernetes im Azure-Container-Dienst bereitstellt.
+Abbildung 4-12 zeigt eine continuous Deployment-Pipeline, die in einem Kubernetes-Cluster in Azure Container Service bereitstellt.
 
-![Visual Studio Team Services dauerhafte Bereitstellungspipeline zu einem Cluster Kubernetes bereitstellen](./media/image12.png)
+![Azure DevOps-Dienste continuous Deployment-Pipeline, um einen Kubernetes-Cluster bereitstellen](./media/image12.png)
 
-> **Abbildung 4-12.** Visual Studio Team Services dauerhafte Bereitstellungspipeline zu einem Cluster Kubernetes bereitstellen
+> **Abbildung 4-12.** Azure DevOps-Dienste continuous Deployment-Pipeline, um einen Kubernetes-Cluster bereitstellen
 
 >[!div class="step-by-step"]
 [Zurück](modernize-your-apps-with-monitoring-and-telemetry.md)

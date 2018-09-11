@@ -3,11 +3,11 @@ title: Auflistungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276068"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353972"
 ---
 # <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iteratoren  
+##  <a name="iterators"></a>Iterators  
  Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) Anweisung, um jedes Element der Auflistung zu einem Zeitpunkt zurückzugeben.  
   
  Sie rufen einen Iterator mithilfe einer [für jede... Nächste](../../../visual-basic/language-reference/statements/for-each-next-statement.md) Anweisung. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  

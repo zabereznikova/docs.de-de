@@ -1,15 +1,15 @@
 ---
-title: Mustervergleich (F#)
+title: Musterabgleich (F#)
 description: Erfahren Sie, wie Muster werden in f# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269370"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361903"
 ---
-# <a name="pattern-matching"></a>Mustervergleich
+# <a name="pattern-matching"></a>Musterabgleich
 
 Muster sind Regeln zum Transformieren von Eingabedaten. Sie werden in F# stets verwendet, um Daten mit logischen Strukturen zu vergleichen, Daten in einzelne Bestandteile zu zerlegen oder auf unterschiedliche Weise Informationen aus Daten zu extrahieren.
 
@@ -29,7 +29,7 @@ Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausd
 
 In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit wird die Eingabe anhand jedes der folgenden Muster in der in der Tabelle aufgeführten Reihenfolge überprüft. Die Muster werden rekursiv vom ersten bis zum letzten Muster im Code und von links nach rechts in den einzelnen Zeilen angewendet.
 
-|Name|Beschreibung|Beispiel|
+|name|Beschreibung|Beispiel|
 |----|-----------|-------|
 |Konstantenmuster|Ein beliebiges numerisches Literal, Zeichenliteral oder Zeichenfolgenliteral, eine Enumerationskonstante oder ein definierter Literalbezeichner.|`1.0`, `"test"`, `30`, `Color.Red`|
 |Bezeichnermuster|Der Wert eines Falls einer Unterscheidungs-Union, eine Ausnahmebezeichnung oder ein Fall eines aktiven Musters.|`Some(x)`<br /><br />`Failure(msg)`|
@@ -82,7 +82,7 @@ type Shape =
     | Circle of radius : float
 ```
 
-Sie können die benannten Felder in einem Mustervergleichsausdruck wie folgt verwenden.
+Sie können die benannten Felder in einem Musterabgleichsausdruck wie folgt verwenden.
 
 ```fsharp
 let matchShape shape =
@@ -101,9 +101,9 @@ match shape with
 | _ -> ()
 ```
 
-Mit aktiven Mustern können Sie komplexere benutzerdefinierte Mustervergleiche definieren. Weitere Informationen über aktive Muster finden Sie unter [mit aktiven Mustern](active-patterns.md).
+Mit aktiven Mustern können Sie komplexere benutzerdefinierte Musterabgleiche definieren. Weitere Informationen über aktive Muster finden Sie unter [mit aktiven Mustern](active-patterns.md).
 
-Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Mustervergleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen über Mustervergleich bei der Behandlung von Ausnahmen finden Sie unter [Ausnahmen: die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
+Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen über Mustervergleich bei der Behandlung von Ausnahmen finden Sie unter [Ausnahmen: die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Variablenmuster
 
