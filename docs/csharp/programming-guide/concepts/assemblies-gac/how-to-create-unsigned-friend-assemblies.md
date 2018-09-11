@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen von nicht signierten Friend-Assemblys (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 676b9d3c641f45736af50bc2290426e261b591c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340202"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211800"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Vorgehensweise: Erstellen von nicht signierten Friend-Assemblys (C#)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwenden.  
@@ -90,9 +90,10 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Es gibt Ähnlichkeiten zwischen dem Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> und der Klasse <xref:System.Security.Permissions.StrongNameIdentityPermission>. Der Hauptunterschied besteht darin, dass <xref:System.Security.Permissions.StrongNameIdentityPermission> Sicherheitsberechtigungen verlangen kann, um einen bestimmten Codeabschnitt auszuführen, während das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> die Sichtbarkeit der `internal`-Typen und -Member steuert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)

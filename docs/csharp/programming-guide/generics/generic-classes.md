@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 65c5f376bce44e6120c17638076d2edfc38c734e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2568600c130847b3317aeb399541c61a050901ce
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338285"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216079"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Generische Klassen (C#-Programmierhandbuch)
 Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmten Datentyp sind. Generische Klassen werden am häufigsten bei Auflistungen verwendet, z.B. bei verknüpften Listen, Hashtabellen, Stapeln, Warteschlangen, Strukturen usw. Vorgänge wie das Hinzufügen oder Entfernen von Elementen aus der Auflistung werden nahezu auf die gleiche Art und Weise ausgeführt, unabhängig vom Typ der gespeicherten Daten.  
@@ -65,9 +65,10 @@ Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmt
   
  Generische Klassen sind unveränderlich. Wenn also ein Eingabeparameter eine `List<BaseClass>` angibt, wird Ihnen ein Kompilierungsfehler angezeigt, falls Sie versuchen, eine `List<DerivedClass>` bereitzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Generika](../../../csharp/programming-guide/generics/index.md)  
- [Saving the State of Enumerators (Speichern des Zustands von Enumeratoren)](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
- [An Inheritance Puzzle, Part One (Ein Vererbungs-Puzzle, Teil 1)](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Generika](../../../csharp/programming-guide/generics/index.md)  
+- [Saving the State of Enumerators (Speichern des Zustands von Enumeratoren)](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+- [An Inheritance Puzzle, Part One (Ein Vererbungs-Puzzle, Teil 1)](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

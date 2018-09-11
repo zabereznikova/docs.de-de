@@ -3,12 +3,12 @@ title: Versionierung in C# – Leitfaden für C#
 description: Informationen zur Versionierung in C# und .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351783"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185755"
 ---
 # <a name="versioning-in-c"></a>Versionierung in C# #
 
@@ -24,7 +24,7 @@ Als Entwickler, der bereits .NET-Bibliotheken für die öffentliche Verwendung e
 Im Idealfall sollten es die Versionsinformationen Ihrer Bibliothek Entwicklern erleichtern, festzustellen, ob ihre Projekte, die ältere Versionen dieser Bibliothek verwenden, kompatibel sind.
 
 Die einfachste Herangehensweise an SemVer ist das Format `MAJOR.MINOR.PATCH` mit drei Komponenten, bei dem:
- 
+
 * `MAJOR` inkrementiert wird, wenn Sie nicht kompatible API-Änderungen durchführen
 * `MINOR` inkrementiert wird, wenn Sie abwärtskompatible Funktionalität hinzufügen
 * `PATCH` inkrementiert wird, wenn Sie abwärtskompatible Fehlerkorrekturen durchführen
@@ -51,7 +51,7 @@ Je leichter Sie es Ihren Benutzern machen, auf die neue Version Ihrer Bibliothek
 
 ### <a name="application-configuration-file"></a>Anwendungskonfigurationsdatei
 
-Als .NET-Entwickler haben Sie sehr wahrscheinlich schon einmal mit [der `app.config`-Datei](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx) gearbeitet, die in den meisten Projekttypen enthalten ist.
+Als .NET-Entwickler haben Sie sehr wahrscheinlich schon einmal mit [der `app.config`-Datei](../framework/configure-apps/file-schema/index.md) gearbeitet, die in den meisten Projekttypen enthalten ist.
 Diese einfache Konfigurationsdatei kann beim Verbessern der Einführung neuer Updates einen großen Unterschied machen. In der Regel sollten Sie Ihre Bibliotheken so anlegen, dass die Informationen, die sich wahrscheinlich häufiger ändern, in der Datei `app.config` gespeichert werden. Daher muss die Konfigurationsdatei früherer Versionen nur mit der neuen Datei ersetzt werden, wenn solche Informationen aktualisiert werden. Die Bibliothek muss dann nicht mehr neu kompiliert werden.
 
 ## <a name="consuming-libraries"></a>Verarbeiten von Bibliotheken
@@ -62,7 +62,7 @@ Zum Glück gibt es im C# -und .NET-Ökosystem Features und Techniken, mit denen 
 
 ### <a name="assembly-binding-redirection"></a>Assemblybindungsumleitung
 
-Sie können die Datei `app.config` zum Aktualisieren der Version einer von Ihrer Anwendung verwendeten Bibliothek verwenden. Durch Hinzufügen einer sogenannten [*binding redirect*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx) (Bindungsumleitung) können Sie die neue Version der Bibliothek verwenden, ohne dass Sie Ihre Anwendung erneut kompilieren müssen. Im folgenden Beispiel wird gezeigt, wie Sie die Datei `app.config` Ihrer Anwendung aktualisieren, um die Patchversion `1.0.1` von `ReferencedLibrary` zu verwenden und nicht die Version `1.0.0`, mit der sie ursprünglich kompiliert war.
+Sie können die Datei `app.config` zum Aktualisieren der Version einer von Ihrer Anwendung verwendeten Bibliothek verwenden. Durch Hinzufügen einer sogenannten [*binding redirect*](../framework/configure-apps/redirect-assembly-versions.md) (Bindungsumleitung) können Sie die neue Version der Bibliothek verwenden, ohne dass Sie Ihre Anwendung erneut kompilieren müssen. Im folgenden Beispiel wird gezeigt, wie Sie die Datei `app.config` Ihrer Anwendung aktualisieren, um die Patchversion `1.0.1` von `ReferencedLibrary` zu verwenden und nicht die Version `1.0.0`, mit der sie ursprünglich kompiliert war.
 
 ```xml
 <dependentAssembly>

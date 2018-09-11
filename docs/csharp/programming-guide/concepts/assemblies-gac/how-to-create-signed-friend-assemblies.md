@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340657"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260005"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  
@@ -16,7 +16,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
   
 1.  Öffnen Sie eine Eingabeaufforderung.  
   
-2.  Verwenden Sie die folgende Sequenz von Befehlen mit dem Strong Name-Tool, um eine Schlüsseldatei zu generieren und den öffentlichen Schlüssel anzuzeigen. Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23).  
+2.  Verwenden Sie die folgende Sequenz von Befehlen mit dem Strong Name-Tool, um eine Schlüsseldatei zu generieren und den öffentlichen Schlüssel anzuzeigen. Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Generieren Sie einen Schlüssel mit starkem Namen für dieses Beispiel, und speichern Sie ihn in der Datei „FriendAssemblies.snk“:  
   
@@ -88,12 +88,13 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Es gibt Ähnlichkeiten zwischen dem Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> und der Klasse <xref:System.Security.Permissions.StrongNameIdentityPermission>. Der Hauptunterschied besteht darin, dass <xref:System.Security.Permissions.StrongNameIdentityPermission> Sicherheitsberechtigungen verlangen kann, um einen bestimmten Codeabschnitt auszuführen, während das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> die Sichtbarkeit der `internal`-Typen und -Member steuert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [How to: Create Unsigned Friend Assemblies (C#) (Vorgehensweise: Erstellen von nicht signierten Friend-Assemblys (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (Strong Name-Tool)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [How to: Create Unsigned Friend Assemblies (C#) (Vorgehensweise: Erstellen von nicht signierten Friend-Assemblys (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe (Strong Name-Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
+- [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)

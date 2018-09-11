@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337612"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253220"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Verwenden von Indexern (C#-Programmierhandbuch)
 Indexer sind ein syntaktisches Hilfsmittel, um Ihnen die Erstellung einer [Klasse](../../../csharp/language-reference/keywords/class.md), einer [Struktur](../../../csharp/language-reference/keywords/struct.md), oder einer [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) zu ermöglichen, auf die Clientanwendungen wie auf ein Array zugreifen können. Indexer werden am häufigsten in Typen implementiert, deren Hauptzweck darin besteht, eine interne Auflistung oder ein Array zu kapseln. Angenommen Sie verfügen über eine Klasse mit dem Namen .TempRecord, zur Darstellung der Temperatur in Fahrenheit zu 10 verschiedenen Zeitpunkten während eines 24-stündigen Zeitraums. Die Klasse enthält ein Array mit dem Namen "Temps" vom "float"-Datentyp, um die Temperaturen darzustellen, und einen <xref:System.DateTime>, der das Datum darstellt, an welchem die Temperaturen erfasst wurden. Durch die Implementierung eines Indexers in dieser Klasse, können Clients auf die Temperaturen in einer TempRecord-Instanz als `float temp = tr[4]` zugreifen, statt als `float temp = tr.temps[4]`. Die Angabe des Indexers vereinfacht nicht nur die Syntax für Clientanwendungen; die Klasse und Ihr Zweck können außerdem intuitiver von anderen Entwicklern verstanden werden.  
@@ -45,7 +45,7 @@ public int this [int index]   // Indexer declaration
   
 ## <a name="example-1"></a>Beispiel 1  
   
-### <a name="description"></a>description  
+### <a name="description"></a>Beschreibung   
  Im folgenden Beispiel wird die Deklaration eines öffentlichen Arrayfelds, `temps`, und eines Indexers dargestellt. Der Indexer ermöglicht den direkten Zugriff auf die Instanz `tempRecord[i]`. Als Alternative zur Verwendung des Indexers, kann das Array als [öffentliches](../../../csharp/language-reference/keywords/public.md) Mitglied deklariert und direkt auf dessen Mitglieder, `tempRecord.temps[i]`, zugegriffen werden.  
   
  Beachten Sie, dass, wenn der Zugriff eines Indexers, z.B. in einer `Console.Write`-Anweisung ausgewertet wird, der [get](../../../csharp/language-reference/keywords/get.md)-Accessor aufgerufen wird. Wenn kein `get`-Accessor vorhanden ist, tritt deshalb ein Kompilierzeitfehler auf.  
@@ -58,7 +58,7 @@ public int this [int index]   // Indexer declaration
   
 ## <a name="example-2"></a>Beispiel 2  
   
-### <a name="description"></a>description  
+### <a name="description"></a>Beschreibung   
  In diesem Beispiel wird eine Klasse deklariert, die die Wochentage speichert. Ein `get`-Accessor wird deklariert, der eine Zeichenfolge und den Namen eines Tages annimmt, und den entsprechenden Integer zurückgibt. Z.B. gibt Sonntag 0 zurück, Montag gibt 1 zurück, usw.  
   
 ### <a name="code"></a>Code  
@@ -71,7 +71,8 @@ public int this [int index]   // Indexer declaration
   
 -   Schränken Sie den Zugriff auf den `get`- und [set](../../../csharp/language-reference/keywords/set.md)-Accessor so ein, dass die Beschränkung angemessen ist. Dies ist insbesondere wichtig für den `set`-Accessor. Weitere Informationen finden Sie unter [Einschränken des Accessorzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)

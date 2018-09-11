@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: a97c3569899e7cf99dd522024de8373c60076571
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3efedd48303c79bafde3704b0fdd6fcdd465a0a7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339052"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44206142"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Enumerationstypen (C#-Programmierhandbuch)
 
@@ -88,6 +88,7 @@ Weitere Informationen finden Sie unter <xref:System.Enum?displayProperty=nameWit
 Sie können auch mithilfe einer Erweiterungsmethode eine neue Methode für ein enum erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer neuen Methode für eine Enumeration (C#-Programmierhandbuch)](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Siehe auch
- <xref:System.Enum?displayProperty=nameWithType>  
- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
- [enum](../../csharp/language-reference/keywords/enum.md)
+
+- <xref:System.Enum?displayProperty=nameWithType>  
+- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
+- [enum](../../csharp/language-reference/keywords/enum.md)

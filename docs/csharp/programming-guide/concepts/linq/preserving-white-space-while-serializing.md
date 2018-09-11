@@ -2,12 +2,12 @@
 title: Beibehalten von Leerraum beim Serialisieren3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 48e654c2b7992544cdc2c67dfc5a5136d6a9bb33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329880"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267088"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Beibehalten von Leerzeichen beim Serialisieren
 In diesem Thema wird beschrieben, wie Sie das Leerraumverhalten beim Serialisieren von XML-Strukturen steuern können.  
@@ -31,5 +31,6 @@ In diesem Thema wird beschrieben, wie Sie das Leerraumverhalten beim Serialisier
   
  Wenn die Methode <xref:System.Xml.Linq.SaveOptions> als Argument akzeptiert, können Sie angeben, dass der serialisierte XML-Code nicht formatiert (eingerückt) werden soll. In diesem Fall wird der gesamte Leerraum in der XML-Struktur beibehalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Serialisieren von XML-Strukturen (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Serialisieren von XML-Strukturen (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

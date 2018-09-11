@@ -2,12 +2,12 @@
 title: Reine funktionale XML-Transformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-ms.openlocfilehash: 7bbe5735541432108794959a7889976d4951fffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336709"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252128"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Reine funktionale XML-Transformationen (C#)
 Dieser Abschnitt enthält eine Einführung in die funktionale Transformation für XML. Sie finden hier Erläuterungen der wichtigsten Konzepte und Begriffe sowie die Sprachkonstrukte, die Sie für den Einsatz funktionaler Transformationen kennen müssen. Außerdem enthält der Abschnitt auch Beispiele für die Verwendung funktionaler Transformationen zur Manipulation eines XML-Dokuments. Die Codebeispiele in diesem Abschnitt beziehen sich zwar alle auf LINQ to XML, aber die zugrunde liegenden Konzepte lassen sich auch auf andere LINQ-Technologien übertragen.  
@@ -20,11 +20,12 @@ Dieser Abschnitt enthält eine Einführung in die funktionale Transformation fü
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|description|  
+|Thema|Beschreibung |  
 |-----------|-----------------|  
 |[Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Beschreibt funktionale Transformationen und enthält entsprechende Terminologiedefinitionen.|  
 |[Tutorial: Chaining Queries Together (C#) (Tutorial: Verketten von Abfragen (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Enthält ausführliche Beschreibungen der verzögerten Auswertung ("Lazy Evaluation") und der verzögerten Ausführung.|  
 |[Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Veranschaulicht eine funktionale Transformation.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

@@ -2,12 +2,12 @@
 title: Übersicht über Namespaces (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-ms.openlocfilehash: 03451f50605adf6de0d43f19d220aaeed382f13c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4d422d9f72eb3297cffda72c441d6370d519f450
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999224"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266646"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>Übersicht über Namespaces (LINQ to XML)
 Dieses Thema enthält eine Einführung in die Namespaces, die <xref:System.Xml.Linq.XName>-Klasse und die <xref:System.Xml.Linq.XNamespace>-Klasse.  
@@ -23,5 +23,6 @@ Dieses Thema enthält eine Einführung in die Namespaces, die <xref:System.Xml.L
   
  Weitere Informationen finden Sie unter <xref:System.Xml.Linq.XNamespace> und <xref:System.Xml.Linq.XName>.  
   
-## <a name="see-also"></a>Siehe auch  
- [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

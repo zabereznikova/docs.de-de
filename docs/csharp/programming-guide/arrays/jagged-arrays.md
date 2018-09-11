@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297367"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261668"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Verzweigte Arrays (C#-Programmierhandbuch)
+
 Ein verzweigtes Array ist ein Array, dessen Elemente wiederum Arrays sind. Die Elemente eines verzweigten Arrays können eine unterschiedliche Dimension und Größe besitzen. Ein verzweigtes Array wird auch „Array aus Arrays“ genannt. Die folgenden Beispiele zeigen, wie Sie verzweigte Arrays deklarieren, initialisieren und auf sie zugreifen können.  
   
  Die folgende Deklaration veranschaulicht ein eindimensionales Array mit drei Elementen, von denen jedes wiederum ein eindimensionales Array aus ganzen Zahlen darstellt:  
@@ -57,14 +58,16 @@ Ein verzweigtes Array ist ein Array, dessen Elemente wiederum Arrays sind. Die E
   
  den Wert 3 zurück.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Beispiel
+
  In diesem Beispiel wird ein Array erstellt, dessen Elemente wiederum selbst Arrays sind. Jedes Arrayelement hat eine unterschiedliche Größe.  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Array>  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
- [Eindimensionale Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Array>  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
+- [Eindimensionale Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

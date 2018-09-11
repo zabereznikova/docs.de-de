@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932094"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201256"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)
 Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbetten, können Sie Typen in einer Anwendung lose koppeln, um versionsunabhängig zu werden. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer verwalteten Bibliothek geschrieben werden; eine erneute Kompilierung für jede Version ist nicht erforderlich.  
@@ -232,8 +232,9 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
   
 6.  Öffnen Sie im Datei-Explorer den Ordner mit dem Ausgabepfad (z.B. C:\TypeEquivalenceSample). Doppelklicken Sie auf die Datei „TypeEquivalenceClient.exe“, um das Programm auszuführen. Das Programm reflektiert die neue Version der TypeEquivalenceRuntime-Assembly, ohne dass sie erneut kompiliert werden muss.  
   
-## <a name="see-also"></a>Siehe auch  
- [-link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
- [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [-link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+- [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

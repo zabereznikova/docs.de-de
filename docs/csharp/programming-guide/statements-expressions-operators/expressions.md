@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936948"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213805"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
 Ein *Ausdruck* ist eine Sequenz von einem oder mehr Operanden und null oder mehr Operatoren, die einen einzelnen Wert, ein Objekt, eine Methode oder ein Namespace annehmen können. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen *einfachen Namen* enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein.  
@@ -72,10 +72,11 @@ C# unterstützt *Ausdruckskörpermember*, mit denen Sie eine präzise Ausdrücks
 ## <a name="remarks"></a>Hinweise  
  Wann immer eine Variable, eine Objekteigenschaft oder ein Objektindexerzugriff von einem Ausdruck identifiziert wird, wird der Wert dieses Elements als Wert des Ausdrucks verwendet. Ein Ausdruck kann dort in C# platziert werden, wo ein Wert oder Objekt benötigt wird, solange der Ausdruck letztendlich den geforderten Typ ergibt.  
 
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Typen](../../../csharp/programming-guide/types/index.md)  
- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
+- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Typen](../../../csharp/programming-guide/types/index.md)  
+- [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

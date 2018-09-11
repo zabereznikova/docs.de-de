@@ -2,12 +2,12 @@
 title: Varianz bei Delegaten (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 8b74c29d8d94a31d30408131009d92e2b2a4281c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326227"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208673"
 ---
 # <a name="variance-in-delegates-c"></a>Varianz bei Delegaten (C#)
 Mit .NET Framework 3.5 wurde die Unterstützung von Varianz eingeführt, um Methodensignaturen und Delegattypen in allen Delegaten in C# vergleichen zu können. Das bedeutet, dass Sie Delegaten nicht nur Methoden mit übereinstimmenden Signaturen zuweisen können, sondern auch Methoden, die mehrere abgeleitete Typen zurückgeben (Kovarianz) oder die Parameter akzeptieren, die über weniger abgeleitete Typen verfügen, als durch den Delegattyp angegeben wurde (Kontravarianz). Dies umfasst generische und nicht generische Delegaten.  
@@ -196,7 +196,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Generika](~/docs/standard/generics/index.md)  
- [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
- [How to: Combine Delegates (Multicast Delegates) (Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten))](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Generika](~/docs/standard/generics/index.md)  
+- [Verwenden von Varianz für die generischen Delegaten Func und Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [How to: Combine Delegates (Multicast Delegates) (Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten))](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

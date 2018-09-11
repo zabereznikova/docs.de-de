@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implicit conversion operators [C#]
 - explicit conversion operators [C#]
 ms.assetid: caf36e89-c6c0-4b87-9f9e-85780a45c9a4
-ms.openlocfilehash: e03fb12200bc15de9c1686edd40921201598621f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17a722f7160ae9cd03caa2dff9c4436fcf0f9d9e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332307"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267075"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Verwenden von Konvertierungsoperatoren (C#-Programmierhandbuch)
 Sie können die einfacheren `implicit`-Konvertierungsoperatoren verwenden oder die `explicit`-Konvertierungsoperatoren, die eindeutig signalisieren, dass ein Typ konvertiert wird. In diesem Thema werden beide Typen von Konvertierungsoperatoren veranschaulicht.  
@@ -32,8 +32,9 @@ Sie können die einfacheren `implicit`-Konvertierungsoperatoren verwenden oder d
   
  [!code-csharp[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_2.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [is](../../../csharp/language-reference/keywords/is.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)

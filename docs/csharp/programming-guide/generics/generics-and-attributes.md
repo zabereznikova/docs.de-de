@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 3bfb4028fb5efce693abd83b40636b0149962e3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe2d61001584aa7c175500bfa754b2ae2244660
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339675"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209250"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Generische Typen und Attribute (C#-Programmierhandbuch)
 Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie auf nicht generische Typen. Weitere Informationen zum Anwenden von Attributen finden Sie unter [Attribute](../../../csharp/programming-guide/concepts/attributes/index.md).  
@@ -43,7 +43,8 @@ Das Anwenden von Attributen auf generische Typen erfolgt in derselben Weise wie 
   
  Um zur Laufzeit Informationen zu einem generischen Typ oder Typparameter abzurufen, können Sie die Methoden von <xref:System.Reflection> verwenden. Weitere Informationen finden Sie unter [Generische Typen und Reflektion](../../../csharp/programming-guide/generics/generics-and-reflection.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Generika](../../../csharp/programming-guide/generics/index.md)  
- [Attribute](../../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Generika](../../../csharp/programming-guide/generics/index.md)  
+- [Attribute](../../../../docs/standard/attributes/index.md)

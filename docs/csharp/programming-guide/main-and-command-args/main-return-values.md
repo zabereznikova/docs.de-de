@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 51a7d821b5705c0ddda96a34663ba0288e0f1da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339955"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44184927"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main()-Rückgabewerte (C#-Programmierhandbuch)
 
@@ -93,8 +93,8 @@ Wenn der Einstiegspunkt der Anwendung `Task` oder `Task<int>` zurückgibt, gener
 >Wäre im Beispiel der Modifizierer `async` auf die Methode `Main` angewendet worden, hätte der Compiler denselben Code generiert.
 
 ## <a name="see-also"></a>Siehe auch
-[C# Programming Guide (C#-Programmierhandbuch)](../../programming-guide/index.md)
-[C# Reference (C#-Referenz)](../index.md)
-[Main() and Command-Line Arguments (Main() und Befehlszeilenargumente)](index.md)
-[How to: Display Command Line Arguments (Vorgehensweise: Anzeigen von Befehlszeilenargumenten)](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-[How to: Access Command-Line Arguments Using foreach (Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von foreach)](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Referenz](../index.md)
+- [Main() und Befehlszeilenargumente](index.md)
+- [Gewusst wie: Anzeigen von Befehlszeilenargumenten](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Gewusst wie: Zugreifen auf Befehlszeilenargumente mithilfe von foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

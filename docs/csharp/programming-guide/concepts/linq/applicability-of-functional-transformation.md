@@ -2,12 +2,12 @@
 title: Anwendbarkeit der funktionalen Transformation (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: b913c8e43c5e7a9ede6cb693ff6d3c34f3631607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319149"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227086"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Anwendbarkeit der funktionalen Transformation (C#)
 Reine funktionale Transformationen können in vielen Situationen angewendet werden.  
@@ -32,7 +32,8 @@ Reine funktionale Transformationen können in vielen Situationen angewendet werd
   
  Vergessen Sie bei allem nicht: C# unterstützt sowohl den imperativen als auch den funktionalen Ansatz. Der beste Entwurf für Ihre Anwendung ist daher möglicherweise ein Entwurf, der beide Elemente beinhaltet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Funktionale Transformation von XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
- [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Funktionale Transformation von XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+- [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: 12cc7ff4f0a688145f2dee130e66dbe9a05ec7e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d7a0a014c330682316e869f6727082fa3b31ef
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313848"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266017"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>Mehrdimensionale Arrays (C#-Programmierhandbuch)
+
 Arrays können mehr als eine Dimension aufweisen. Die folgende Deklaration erstellt z.B. ein zweidimensionales Array mit vier Zeilen und zwei Spalten.  
   
  [!code-csharp[csProgGuideArrays#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_1.cs)]  
@@ -21,7 +22,8 @@ Arrays können mehr als eine Dimension aufweisen. Die folgende Deklaration erste
   
  [!code-csharp[csProgGuideArrays#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>Arrayinitialisierung  
+## <a name="array-initialization"></a>Arrayinitialisierung
+
  Sie können das Array wie im folgenden Beispiel gezeigt nach der Deklaration initialisieren.  
   
  [!code-csharp[csProgGuideArrays#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_3.cs)]  
@@ -46,8 +48,9 @@ Arrays können mehr als eine Dimension aufweisen. Die folgende Deklaration erste
   
  [!code-csharp[csProgGuideArrays#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/multidimensional-arrays_8.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
- [Eindimensionale Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Verzweigte Arrays](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
+- [Eindimensionale Arrays](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Verzweigte Arrays](../../../csharp/programming-guide/arrays/jagged-arrays.md)
