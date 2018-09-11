@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43880314"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259768"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet-Funktion
 Ruft den Qualifizierer ab, der für eine bestimmte Eigenschaft festgelegt ist.

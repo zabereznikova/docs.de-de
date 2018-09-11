@@ -3,11 +3,11 @@ title: UDP-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210285"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271152"
 ---
 # <a name="udp-activation"></a>UDP-Aktivierung
 Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel. Es erweitert die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel zur Unterstützung von prozessaktivierung mittels der Windows Process Activation Service (WAS).  
@@ -83,7 +83,7 @@ Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/
   
 2.  Erstellen Sie das Projekt unter Windows Vista. Nach dem Kompilieren führt es in der Postbuildphase auch die folgenden Vorgänge aus:  
   
-    -   Es installiert die UDP-Bindung für die Site „Default Web Site“.  
+    -   Es installiert die UDP-Bindung für die Site "Default Web Site".  
   
     -   Es erstellt den "ServiceModelSamples" der virtuellen Anwendung so, dass er auf den physischen Pfad zeigt: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
   
@@ -98,7 +98,7 @@ Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/
 4.  Klicken Sie auf die **Aktivierung** Registerkarte die Benutzeroberflächenanwendung "WasNetActivator.exe". Klicken Sie auf die **starten** Schaltfläche, um den Listeneradapter zu starten. Nun können Sie das Programm ausführen.  
   
     > [!NOTE]
-    >  Wenn Sie die Arbeit mit diesem Beispiel abgeschlossen haben, müssen Sie Cleanup.bat ausführen, um die net.udp-Bindung aus der „Default Web Site“ zu entfernen.  
+    >  Wenn Sie die Arbeit mit diesem Beispiel abgeschlossen haben, müssen Sie Cleanup.bat ausführen, um die net.udp-Bindung aus der "Default Web Site" zu entfernen.  
   
 ## <a name="sample-usage"></a>Verwendung des Beispiels  
  Nach dem Kompilieren liegen vier verschiedene Binärdateien vor:  

@@ -3,11 +3,11 @@ title: Verwenden von AsyncOperationContext in einem Aktivitätsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 0888a0bd-d227-4c00-ad6a-b654a01740e8
 ms.openlocfilehash: 4358a364a3f7ec69b7c1c548fcf82fe494f37505
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196906"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275002"
 ---
 # <a name="using-asyncoperationcontext-in-an-activity-sample"></a>Verwenden von AsyncOperationContext in einem Aktivitätsbeispiel
 In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte <xref:System.Activities.CodeActivity> entwickelt wird, die <xref:System.Activities.AsyncCodeActivityContext> verwendet, um Arbeiten asynchron außerhalb des Workflows auszuführen.  

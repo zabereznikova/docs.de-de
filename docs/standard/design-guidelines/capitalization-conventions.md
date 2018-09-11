@@ -12,11 +12,11 @@ ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210350"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274259"
 ---
 # <a name="capitalization-conventions"></a>Konventionen für die Groß-/Kleinschreibung
 Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwendung von Fall, wenn stellen-IDs für Typen, Member und Parameter, die leicht lesbar konsistent angewendet.  
@@ -53,10 +53,10 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
 |----------------|------------|-------------|  
 |Namespace|Pascal-Schreibweise|`namespace System.Security { ... }`|  
 |Typ|Pascal-Schreibweise|`public class StreamReader { ... }`|  
-|Interface|Pascal-Schreibweise|`public interface IEnumerable { ... }`|  
+|Schnittstelle|Pascal-Schreibweise|`public interface IEnumerable { ... }`|  
 |Methode|Pascal-Schreibweise|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |Eigenschaft|Pascal-Schreibweise|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|event|Pascal-Schreibweise|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|Ereignis|Pascal-Schreibweise|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Feld|Pascal-Schreibweise|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Enum-Wert|Pascal-Schreibweise|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
 |Parameter|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  

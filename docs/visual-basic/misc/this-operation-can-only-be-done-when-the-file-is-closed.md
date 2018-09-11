@@ -3,11 +3,11 @@ title: Dieser Vorgang kann nur durchgeführt werden, wenn die Datei geschlossen 
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
 ms.openlocfilehash: 0a7f6afc7f9ecb232e24d5536d2274db57d1d820
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185453"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259927"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>Dieser Vorgang kann nur durchgeführt werden, wenn die Datei geschlossen ist
 Bei einer geöffneten Datei wurde versucht, einen Vorgang auszuführen, der nur ausgeführt werden kann, wenn die Datei geschlossen ist.  

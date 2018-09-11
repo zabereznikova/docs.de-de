@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 75cc2003a88cc7be467b9062c37b6b5d9eb82f53
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195255"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337875"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;ProviderOption&gt; Element
 Gibt die Compiler-Version-Attribute für einen Sprachanbieter an.  
@@ -47,7 +47,7 @@ Gibt die Compiler-Version-Attribute für einen Sprachanbieter an.
 |`value`|Erforderliches Attribut.<br /><br /> Gibt den Wert für die Option an. z. B. "v3. 5".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keine.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

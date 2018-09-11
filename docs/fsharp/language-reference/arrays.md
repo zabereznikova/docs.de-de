@@ -3,11 +3,11 @@ title: Arrays (F#)
 description: Informationen Sie zum Erstellen und Verwenden von Arrays in der Programmiersprache f#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210389"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339226"
 ---
 # <a name="arrays"></a>Arrays
 
@@ -356,7 +356,7 @@ Found an element: 729
 
 Verwendung [ `Array.tryPick` ](https://msdn.microsoft.com/library/72d45f85-037b-43a9-97fd-17239f72713e) Wenn Sie ein Element zusätzlich zu suchen, sie transformieren müssen. Das Ergebnis ist das erste Element, für das die Funktion das transformierte Element als Optionswert zurückgibt, oder `None`, wenn kein solches Element gefunden wird.
 
-Im folgenden Code wird die Verwendung von `Array.tryPick` veranschaulicht: In diesem Fall werden statt eines Lambdaausdrucks mehrere lokale Hilfsfunktionen definiert, um den Code zu vereinfachen.
+Im folgenden Code wird die Verwendung von `Array.tryPick` veranschaulicht: In diesem Fall werden statt eines Lambda-Ausdrucks mehrere lokale Hilfsfunktionen definiert, um den Code zu vereinfachen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet27.fs)]
 

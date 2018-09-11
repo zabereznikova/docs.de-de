@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
 ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200788"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264570"
 ---
 # <a name="panel-how-to-topics"></a>Gewusst-wie-Themen zu Panel
 Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Panel> Element und die zugehörigen [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
@@ -24,7 +24,7 @@ Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Co
  [Festlegen der Höheneigenschaften eines Elements](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
  [Festlegen der Breiteneigenschaften eines Elements](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  

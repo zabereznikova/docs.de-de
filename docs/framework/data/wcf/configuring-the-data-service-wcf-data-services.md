@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192027"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338934"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurieren des Datendiensts (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie Datendienste, die verfügbar zu machen erstellen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] -feeds. Die Daten dieser Feeds können aus einer Vielzahl von Datenquellen stammen. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Mithilfe von Datenanbietern, um diese Daten als verfügbar zu machen eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Zu diesen Anbietern zählen ein [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-Anbieter, ein Reflektionsanbieter und ein Schnittstellensatz für benutzerdefinierte Datendienstanbieter. Die Anbieterimplementierung definiert das Datenmodell für den Dienst. Weitere Informationen finden Sie unter [Datendiensteanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -48,7 +48,7 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie Dat
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|Diese Konfigurationseigenschaft ermöglicht es Ihnen, die Problembehandlung in einem Datendienst zu vereinfachen, indem mehr Informationen in der Fehlerantwortnachricht zurückgegeben werden. Diese Option ist nicht für die Verwendung in einer Produktionsumgebung vorgesehen. Weitere Informationen finden Sie unter [entwickeln und Bereitstellen von WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md).|  
   
 <a name="accessRequirements"></a>   
-## <a name="minimum-resource-access-requirements"></a>Minimale Ressourcenzugriffsanforderungen  
+## <a name="minimum-resource-access-requirements"></a>Minimale Ressourcenzugriffsrechte  
  In der folgenden Tabelle sind die minimalen Rechte für Entitätenmengen aufgelistet, die gewährt werden müssen, um einen bestimmten Vorgang auszuführen. Pfadbeispiele basieren auf der Northwind-Datendienst, der erstellt wird, nach Abschluss der [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Da sowohl die <xref:System.Data.Services.EntitySetRights>-Enumeration als auch die <xref:System.Data.Services.ServiceOperationRights>-Enumeration mit dem <xref:System.FlagsAttribute> definiert werden, können Sie mithilfe eines logischen OR-Operators mehrere Berechtigungen für eine Entitätenmenge oder einen Vorgang angeben. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie den Zugriff auf den Datendienst](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).  
   
 |Pfad/Aktion|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44228025"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276759"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Gewusst wie: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten
 Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem datengebundenen Steuerelement angezeigt wird, indem die **Formatierung und erweiterte Bindung** Dialogfeld.  
@@ -46,7 +46,7 @@ Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem daten
     |Formattyp|Formatierungsoption|  
     |-----------------|-----------------------|  
     |Keine Formatierung|Keine Optionen.|  
-    |Numeric|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  
+    |Numerisch|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  
     |Währung|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  
     |Datum/Zeit|Wählen Sie, wie das Datum und die Uhrzeit angezeigt werden soll, wählen Sie eines der Elemente in der **Typ** Auswahlfeld.|  
     |Wissenschaftlich|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  

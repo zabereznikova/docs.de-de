@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 3736d1e8b23b8e05882a3fe016be0ac1a18ef51d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189682"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262040"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementieren des RangeValue-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -38,15 +38,15 @@ Beispiel für eine Statusanzeige, in der der Wert eine ganze Zahl ist und die mi
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
 ## <a name="required-members-for-irangevalueprovider"></a>Erforderliche Member für „IRangeValueProvider“  
   
-|Erforderliche Member|Memberart|Hinweise|  
+|Erforderliche Member|Memberart|Notizen|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Methoden|Keiner|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Methoden|Keine|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   

@@ -3,11 +3,11 @@ title: Schachteln von TransactionScope innerhalb eines Diensts
 ms.date: 03/30/2017
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
 ms.openlocfilehash: cf73c0c2d061f1c997a8ade5d7b2bf61887915ca
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187925"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266419"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Schachteln von TransactionScope innerhalb eines Diensts
 Dieses Beispiel besteht aus zwei Szenarien, in denen veranschaulicht wird, wie die <xref:System.Activities.Statements.TransactionScope>-Aktivitätsinstanzen innerhalb eines Diensts behandelt werden. Zunächst wird die Transaktion mit der <xref:System.Activities.Statements.TransactionScope>-Aktivität initiiert, um eine neue Transaktion auf dem Client zu erstellen, und mit <xref:System.ServiceModel.Activities.TransactedReceiveScope>, um die Lebensdauer von der Transaktion auf dem Server zu empfangen und zu bewerten. Das erste Szenario innerhalb des Diensts führt eine sekundäre <xref:System.Activities.Statements.TransactionScope>-Aktivität aus, um die Schachtelung der <xref:System.Activities.Statements.TransactionScope>-Aktivitäten innerhalb des Diensts zu veranschaulichen. Das zweite Szenario veranschaulicht, wie Timeouts innerhalb der geschachtelten <xref:System.Activities.Statements.TransactionScope>-Aktivitäten beachtet werden.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212112"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260127"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Übersicht über das WPF-Grafikrendering
 Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Schicht. Es konzentriert sich auf die Rolle der <xref:System.Windows.Media.Visual> Klasse zum Rendern der Unterstützung in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Modell.  
@@ -68,7 +68,7 @@ Klassenhierarchie von visuellen Objekten
 |--------------------------|-----------------|  
 |Vektorgrafik|Stellt vector Graphics-Daten und alle zugehörigen <xref:System.Windows.Media.Brush> und <xref:System.Windows.Media.Pen> Informationen.|  
 |Bild|Stellt ein Bild innerhalb einer Region, definiert durch eine <xref:System.Windows.Rect>.|  
-|Glyphe|Stellt eine Zeichnung, die rendert eine <xref:System.Windows.Media.GlyphRun>, dies ist eine Sequenz von Symbolen aus einer angegebenen schriftartenressource. So wird Text dargestellt.|  
+|Symbol|Stellt eine Zeichnung, die rendert eine <xref:System.Windows.Media.GlyphRun>, dies ist eine Sequenz von Symbolen aus einer angegebenen schriftartenressource. So wird Text dargestellt.|  
 |Video|Stellt eine Zeichnung dar, die Video rendert.|  
   
  Die <xref:System.Windows.Media.DrawingContext> können Sie zum Auffüllen einer <xref:System.Windows.Media.Visual> mit visuellem Inhalt. Bei Verwendung einer <xref:System.Windows.Media.DrawingContext> des Objekts zeichnen-Befehle, speichern Sie einen Satz von Renderingdaten, die später vom Grafiksystem verwendet werden; Sie zeichnen nicht in Echtzeit auf dem Bildschirm.  

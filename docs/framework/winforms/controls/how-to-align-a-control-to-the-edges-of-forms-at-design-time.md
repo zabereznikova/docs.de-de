@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
 ms.openlocfilehash: 513029c1bd5cc4af52fcee97f7fab961729e613c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197691"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277087"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Gewusst wie: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit
 Können Sie vornehmen, das Steuerelement an Ihre Formen ausrichten, durch Festlegen der <xref:System.Windows.Forms.Control.Dock%2A>. Diese Eigenschaft legt fest, wo auf dem Formular das Steuerelement sich befindet. Die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft kann auf einen der folgenden Werte festgelegt werden:  

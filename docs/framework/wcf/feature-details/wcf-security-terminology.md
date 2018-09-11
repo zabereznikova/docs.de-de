@@ -9,11 +9,11 @@ ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190045"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268889"
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
@@ -53,7 +53,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Authentifizierte Anmeldedaten, die von einem Sicherheitsprinzipal verwendet werden, um die eigene Identität festzustellen, beispielsweise ein Kennwort oder ein Kerberos-Protokollticket. Mit den Anmeldeinformationen wird der Zugriff auf Ressourcen gesteuert.  
   
  digestedData  
- Ein Dateninhaltstyp, der durch den Public Key Cryptographic Standard (PKCS) #7 definiert wird und aus einem beliebigen Datentyp sowie einem Nachrichtenhash (Hashwert) des Inhalts besteht.  
+ Ein Dateninhaltstyp, der durch den Public Key Cryptographic Standard (PKCS) #7 definiert wird und aus einem beliebigen Datentyp sowie einem Nachrichtenhash (Prüfsumme) des Inhalts besteht.  
   
  Digitale Signatur  
  Daten, durch die die Identität eines Absenders an die gesendeten Informationen gebunden wird. Digitale Signaturen können zusammen mit jeder Nachricht, Datei oder allen anderen digitalen Informationen sowie separat gesendet werden. Digitale Signaturen werden in Umgebungen für öffentliche Schlüssel verwendet und stellen Authentifizierungs- und Integritätsdienste bereit.  

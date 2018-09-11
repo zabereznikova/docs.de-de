@@ -3,11 +3,11 @@ title: Enumerationen (F#)
 description: Erfahren Sie, wie Sie F#-Enumerationen anstelle von literalen verwenden, um den Code besser lesbar und verwaltbar zu gestalten.
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208321"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268574"
 ---
 # <a name="enumerations"></a>Enumerationen
 

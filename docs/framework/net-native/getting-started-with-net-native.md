@@ -5,11 +5,11 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189302"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262247"
 ---
 # <a name="getting-started-with-net-native"></a>Erste Schritte mit .NET Native
 Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder eine vorhandene Windows Store-App migrieren, können Sie dieselben Verfahren verwenden. Um eine [!INCLUDE[net_native](../../../includes/net-native-md.md)] -App zu erstellen, gehen Sie wie folgt vor:  
@@ -52,7 +52,7 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
  **Serialisierung**  
  Es gibt zwei Kategorien von Serialisierungsprogrammen, und beide erfordern möglicherweise zusätzliche Einträge in der Laufzeitdirektivendatei:  
   
--   Nicht reflektionsbasierte Serialisierungsprogramme. Die Serialisierungsprogramme in der .NET Framework-Klassenbibliothek, wie die Klassen <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>und <xref:System.Xml.Serialization.XmlSerializer> , beruhen nicht auf Reflektion. Sie erfordern jedoch, dass Code basierend auf dem Objekt generiert wird, das serialisiert oder deserialisiert werden soll.  Weitere Informationen finden Sie im Abschnitt zu Serialisierungsprogrammen von Microsoft unter [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).  
+-   Nicht reflektionsbasierte Serialisierungsprogramme. Die Serialisierungsprogramme in der .NET Framework-Klassenbibliothek, wie die Klassen <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> und <xref:System.Xml.Serialization.XmlSerializer>, beruhen nicht auf Reflektion. Sie erfordern jedoch, dass Code basierend auf dem Objekt generiert wird, das serialisiert oder deserialisiert werden soll.  Weitere Informationen finden Sie im Abschnitt zu Serialisierungsprogrammen von Microsoft unter [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).  
   
 -   Serialisierungsprogramme von Drittanbietern. Serialisierungsbibliotheken von Drittanbietern, von denen die verbreitetste das Newtonsoft JSON-Serialisierungsprogramm ist, basieren im Allgemeinen auf Reflektion und benötigen Einträge in der Datei *.rd.xml, um Objektserialisierung und Deserialisierung zu unterstützen. Weitere Informationen finden Sie im Abschnitt „Serialisierungsprogramme von Drittanbietern“ unter [Serialization and Metadata](../../../docs/framework/net-native/serialization-and-metadata.md).  
   
@@ -97,7 +97,7 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
   
 -   Können Sie den Code so umschreiben, dass die Reflektion nicht verwendet wird?  
   
-    -   Verwendet der Code zum Beispiel das Schlüsselwort `dynamic` , wenn Sie wissen, welcher Typ zu erwarten ist?  
+    -   Verwendet der Code zum Beispiel das Schlüsselwort `dynamic`, wenn Sie wissen, welcher Typ zu erwarten ist?  
   
     -   Ruft der Code eine Methode auf, die von Reflektion abhängt, wenn eine bessere Alternative zur Verfügung steht?  
   

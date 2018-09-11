@@ -5,11 +5,11 @@ ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205945"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275235"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 In diesem Beispiel wird veranschaulicht, wie zum Erstellen von WCF und [Reliable Secure Profile](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Dieses Beispiel veranschaulicht die Implementierung einer [Make Connection](https://go.microsoft.com/fwlink/?LinkId=178141) Kanal, der zusammen mit zuverlässigem Messaging und optional zusammengesetzt werden kann ein sicherer Kanal aus, um eine zuverlässige sichere Bindung erstellen basierend auf der RSP-Spezifikation.  

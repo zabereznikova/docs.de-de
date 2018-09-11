@@ -11,11 +11,11 @@ ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187649"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276314"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Namen von Assemblys und DLLs
 Eine Assembly ist die Einheit der Bereitstellung und Identität für verwalteten Code Programme. Obwohl Assemblys eine oder mehrere Dateien umfassen können, in der Regel ordnet eine Assembly mit einer DLL 1: 1. Aus diesem Grund wird in diesem Abschnitt beschrieben, nur DLL Benennungskonventionen, die Sie dann den Benennungskonventionen für Assembly zugeordnet werden können.  
@@ -30,7 +30,7 @@ Eine Assembly ist die Einheit der Bereitstellung und Identität für verwalteten
   
  wo `<Component>` enthält eine oder mehrere Punkte getrennte Klauseln. Zum Beispiel:  
   
- `Litware.Controls.dll`  
+ `Litware.Controls.dll`.  
   
  *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

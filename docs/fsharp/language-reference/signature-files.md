@@ -3,11 +3,11 @@ title: Signaturdateien (f#)
 description: Erfahren Sie, wie Sie mit F#-Signaturdateien, zum Speichern von Informationen zu den öffentlichen Signaturen einer Reihe von F#-Programmelementen, z. B. Typen, Namespaces und Modulen.
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207186"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338050"
 ---
 # <a name="signatures"></a>Signaturen
 

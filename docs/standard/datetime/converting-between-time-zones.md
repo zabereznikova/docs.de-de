@@ -15,11 +15,11 @@ ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c77832a4c578ddb2c8a427b133e53ab4ab5c5e3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080620"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267296"
 ---
 # <a name="converting-times-between-time-zones"></a>Konvertieren von Uhrzeiten zwischen Zeitzonen
 
@@ -34,7 +34,7 @@ Die koordinierte Weltzeit (UTC, Coordinated Universal Time) ist ein auf der Atom
 
 Die einfachste Möglichkeit zum Konvertieren einer Uhrzeit in UTC wird zum Aufrufen der `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> Methode. Die tatsächlich von der Methode ausgeführte Konvertierung hängt vom Wert von der `dateTime` des Parameters <xref:System.DateTime.Kind%2A> Eigenschaft, wie der folgenden Tabelle gezeigt.
 
-| `DateTime.Kind`            | Umwandeln                                                                     |
+| `DateTime.Kind`            | Conversion                                                                     |
 | -------------------------- | ------------------------------------------------------------------------------ |
 | `DateTimeKind.Local`       | Konvertiert die lokale Zeit in die UTC.                                                    |
 | `DateTimeKind.Unspecified` | Nimmt an, dass der `dateTime`-Parameter die lokale Zeit angibt, und konvertiert die lokale Zeit in die UTC. |
@@ -77,7 +77,7 @@ Der folgende Code konvertiert die UTC in die Central Standard Time.
 
 Um UTC in eine lokale Zeit zu konvertieren, rufen die <xref:System.DateTime.ToLocalTime%2A> Methode der <xref:System.DateTime> Objekt, dessen Zeit Sie konvertieren möchten. Das genaue Verhalten der Methode hängt vom Wert des Objekts des <xref:System.DateTime.Kind%2A> Eigenschaft, wie der folgenden Tabelle gezeigt.
 
-| `DateTime.Kind`            | Umwandeln                                                                               |
+| `DateTime.Kind`            | Conversion                                                                               |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
 | `DateTimeKind.Local`       | Gibt die <xref:System.DateTime> Wert unverändert.                                      |
 | `DateTimeKind.Unspecified` | Setzt voraus, dass die <xref:System.DateTime> Wert UTC ist, und konvertiert die UTC in eine lokale Zeit. |

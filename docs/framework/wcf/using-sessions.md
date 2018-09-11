@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877374"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260203"
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert eine Gruppe von Nachrichten in einer Konversation. WCF--Sitzungen sind anders als das Session-Objekt, das in verfügbar [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen, unterstützen andere Verhaltensweisen und auf andere Weise gesteuert werden. Dieses Thema beschreibt die Funktionen, mit denen Sitzungen in WCF-Anwendungen und deren Verwendung.  
@@ -32,7 +32,7 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
  Wenn Sie kennen die <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> -Klasse im [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen und die Funktionalität bietet, fallen Ihnen möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen:  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Sitzungen werden immer vom Server initiiert.  
   
 -   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
   
@@ -70,7 +70,7 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
 -   Die <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType>-Bindung stellt MSMQ-Datagrammsitzungen bereit. Weitere Informationen finden Sie unter [Warteschlangen in WCF](../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
- Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> -Eigenschaft wird nicht der vom Vertrag angeforderte Typ der Sitzung angegeben, sondern nur, dass eine Sitzung erforderlich ist.  
+ Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>-Eigenschaft wird nicht der vom Vertrag angeforderte Typ der Sitzung angegeben, sondern nur, dass eine Sitzung erforderlich ist.  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>Erstellen eines Vertrags, der eine Sitzung erfordert  
  Beim Erstellen eines Vertrags, der eine Sitzung erfordert, wird angegeben, dass die gesamte Gruppe von Vorgängen, die der Dienstvertrag deklariert, innerhalb derselben Sitzung ausgeführt werden muss und dass Nachrichten der Reihenfolge nach zugestellt werden müssen. Zum Bestätigen der Ebene der Sitzungsunterstützung, die ein Dienstvertrag erfordert, legen Sie die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>-Eigenschaft der Dienstvertragschnittstelle oder -klasse auf den Wert der <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>-Enumeration fest. Damit geben Sie an, ob der Vertrag:  
@@ -81,7 +81,7 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
 -   Eine Sitzung verhindert.  
   
- Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> -Eigenschaft wird allerdings nicht der vom Vertrag angeforderte Typ des sitzungsbasierten Verhaltens angegeben. Sie weist WCF an, die zur Laufzeit zu bestätigen, die die Bindung (die den Kommunikationskanal erstellt) konfiguriert, für den Dienst ist, ist dies nicht, oder eine Sitzung aufbauen kann beim Implementieren eines Diensts. Die Bindung kann diese Anforderung wiederum mit einem beliebigen, von ihr gewählten Typ eines sitzungsbasierten Verhaltens erfüllen &#8211; Sicherheit, Transport, Zuverlässigkeit oder eine Kombination daraus. Das genaue Verhalten hängt vom ausgewählten <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>-Wert ab. Wenn die konfigurierte Bindung des Diensts nicht dem Wert von <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>entspricht, wird eine Ausnahme ausgelöst. Bindungen und die von ihnen erstellten Kanäle, die Sitzungen unterstützen, werden als sitzungsbasiert bezeichnet.  
+ Durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>-Eigenschaft wird allerdings nicht der vom Vertrag angeforderte Typ des sitzungsbasierten Verhaltens angegeben. Sie weist WCF an, die zur Laufzeit zu bestätigen, die die Bindung (die den Kommunikationskanal erstellt) konfiguriert, für den Dienst ist, ist dies nicht, oder eine Sitzung aufbauen kann beim Implementieren eines Diensts. Die Bindung kann diese Anforderung wiederum mit einem beliebigen, von ihr gewählten Typ eines sitzungsbasierten Verhaltens erfüllen &#8211; Sicherheit, Transport, Zuverlässigkeit oder eine Kombination daraus. Das genaue Verhalten hängt vom ausgewählten <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>-Wert ab. Wenn die konfigurierte Bindung des Diensts nicht dem Wert von <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>entspricht, wird eine Ausnahme ausgelöst. Bindungen und die von ihnen erstellten Kanäle, die Sitzungen unterstützen, werden als sitzungsbasiert bezeichnet.  
   
  Der folgende Dienstvertrag gibt an, dass alle Vorgänge in `ICalculatorSession` innerhalb einer Sitzung ausgetauscht werden müssen. Mit Ausnahme der `Equals` -Methode gibt keiner der Vorgänge einen Wert an den Aufrufer zurück. Die `Equals` -Methode verwendet jedoch keine Parameter und kann daher nur einen Wert ungleich 0 (null) innerhalb der Sitzung zurückgeben, in der Daten bereits an die anderen Vorgänge übergeben wurden. Dieser Vertrag erfordert, dass eine Sitzung ordnungsgemäß funktioniert. Ist keine Sitzung einem bestimmten Client zugeordnet, kann die Dienstinstanz nicht ermitteln, welche Daten dieser Client bereits gesendet hat.  
   

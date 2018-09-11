@@ -8,11 +8,11 @@ ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 59f8ceaf7981aebf3ae64e10d253004780f47e50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208717"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272877"
 ---
 # <a name="net-framework-performance"></a>.NET Framework-Leistung
 Wenn Sie sehr leistungsfähige Apps erstellen möchten, sollten Sie ebenso leistungsorientiert entwerfen und planen, wie Sie jede andere Funktion der App entwerfen würden. Sie können die von Microsoft bereitgestellten Tools verwenden, um die Leistung der App zu messen und gegebenenfalls Verbesserungen der Arbeitsspeichernutzung, des Codedurchsatzes und der Reaktionsfähigkeit vorzunehmen. In diesem Thema werden die von Microsoft bereitgestellten Leistungsanalysetools aufgelistet sowie Links zu anderen Themen bereitgestellt, die die Leistung für bestimmte Bereiche der App-Entwicklung behandeln.  

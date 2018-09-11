@@ -3,11 +3,11 @@ title: 'Rekursive Funktionen: Das rec-Schlüsselwort (F#)'
 description: Erfahren Sie, wie das F#-'Rec'-Schlüsselwort mit dem Schlüsselwort "let" verwendet wird, um eine rekursive Funktion zu definieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227060"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44336510"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Rekursive Funktionen: Das rec-Schlüsselwort
 

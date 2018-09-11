@@ -1,15 +1,15 @@
 ---
-title: 'Lambdaausdrücke: Das fun-Schlüsselwort (F#)'
+title: 'Lambda-Ausdrücke: Das fun-Schlüsselwort (F#)'
 description: Erfahren Sie, wie der F#-Schlüsselwort "Spaß" zu verwenden, um ein Lambda-Ausdruck definieren eine anonyme Funktion handelt.
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141177"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337017"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambdaausdrücke: Das fun-Schlüsselwort (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda-Ausdrücke: Das fun-Schlüsselwort (F#)
 
 Die `fun` -Schlüsselwort wird verwendet, um einen Lambdaausdruck, d. h. eine anonyme Funktion zu definieren.
 
@@ -40,7 +40,7 @@ Die *Ausdruck* ist der Text der Funktion, von denen der letzte Ausdruck einen We
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
 
-## <a name="using-lambda-expressions"></a>Verwenden von Lambdaausdrücken
+## <a name="using-lambda-expressions"></a>Verwenden von Lambda-Ausdrücken
 
 Lambda-Ausdrücke sind besonders nützlich, wenn Sie die Vorgänge auf eine Liste oder einer anderen Sammlung aus, und Definieren einer Funktion den zusätzlichen Aufwand vermeiden möchten, verwenden möchten. Viele f# Library-Funktionen nehmen die Werte von Funktionen als Argumente ein, und es kann sein, insbesondere dann hilfreich, einen Lambda-Ausdruck in diesen Fällen zu verwenden. Der folgende Code gilt einen Lambda-Ausdruck, für die Elemente einer Liste. In diesem Fall wird die anonyme Funktion 1 auf jedes Element einer Liste hinzugefügt.
 

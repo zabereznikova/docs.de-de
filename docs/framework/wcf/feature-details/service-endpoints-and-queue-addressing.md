@@ -3,11 +3,11 @@ title: Dienstendpunkte und Adressieren von Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180825"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268681"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Dienstendpunkte und Adressieren von Warteschlangen
 In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus Warteschlangen auslesen, und wie Dienstendpunkte Warteschlangen zugeordnet werden. Die folgende Abbildung zeigt, dass Windows Communication Foundation (WCF) die Bereitstellung einer Anwendung in der Warteschlange zur Erinnerung: dem klassischen Bereitstellungsmodell.  

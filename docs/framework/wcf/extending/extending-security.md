@@ -7,11 +7,11 @@ ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227648"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271259"
 ---
 # <a name="extending-security"></a>Erweitern der Sicherheit
 Um neue Anspruchstypen und benutzerdefinierte Token aufnehmen zu können, können Sie die Sicherheitsinfrastruktur von Windows Communication Foundation (WCF) erweitern. Die Themen dieses Abschnitts erläutern die entsprechende Vorgehensweise.  
@@ -41,7 +41,7 @@ Um neue Anspruchstypen und benutzerdefinierte Token aufnehmen zu können, könne
  [Vorgehensweise: Ändern des Kryptografieanbieters für den privaten Schlüssel eines X.509-Zertifikats](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  Erläutert das so ändern Sie den Kryptografieanbieter mit der private Schlüssel eines x. 509-Zertifikats zu bieten und wie Sie den Anbieter in der Windows Communication Foundation (WCF)-Framework zu integrieren.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
   
  <xref:System.ServiceModel.Security>  

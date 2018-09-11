@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 7466a7cc25ac742483e21fc1ee4a631bd43bc5a3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181588"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262541"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementieren des Table-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -49,11 +49,11 @@ Beispiel für eine Tabelle mit mehrdeutiger RowOrColumnMajor-Eigenschaft
 ## <a name="required-members-for-itableprovider"></a>Erforderliche Member für ITableProvider  
  Für die ITableProvider-Schnittstelle werden die folgenden Eigenschaften und Methoden benötigt.  
   
-|Erforderliche Member|Memberart|Hinweise|  
+|Erforderliche Member|Memberart|Notizen|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Methode|Keine|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   

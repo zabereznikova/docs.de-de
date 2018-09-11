@@ -3,11 +3,11 @@ title: Attribute (F#)
 description: Erfahren Sie, wie F#--Attribute für Metadaten, die auf ein Programmierungskonstrukt angewendet werden können.
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207433"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264414"
 ---
 # <a name="attributes"></a>Attribute
 
@@ -73,7 +73,7 @@ Obwohl Sie nicht in der Regel benötigen, geben Sie das Attributziel explizit g�
     <td>`[<assembly: AssemblyVersionAttribute("1.0.0.0")>]`</td> 
   </tr>
   <tr>
-    <td>return</td>
+    <td>Zurück</td>
     <td>"Funktion1 können X: [<return: Obsolete>] Int = X + 1"</td> 
   </tr>
   <tr>

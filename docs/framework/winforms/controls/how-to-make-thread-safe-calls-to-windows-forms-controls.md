@@ -17,11 +17,11 @@ helpviewer_keywords:
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
 ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44136042"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264869"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Gewusst wie: Threadsicheres Aufrufen von Windows Forms-Steuerelementen
 
@@ -29,7 +29,7 @@ Bei Verwendung von Multithreading zur Verbesserung der Leistung von Windows Form
 
 Zugriff auf Windows Forms-Steuerelemente ist nicht grundsätzlich threadsicher. Wenn Sie mit zwei oder mehr Threads den Zustand eines Steuerelements verändern, ist es möglich, das Steuerelement in eine inkonsistenten Zustand zu versetzen. Andere Fehler in Bezug auf Threads sind möglich, z. B. Racebedingungen und Deadlocks. Es ist wichtig, sicherzustellen, dass der Zugriff auf die Steuerelemente auf threadsichere Weise erfolgt.
 
-Es ist unsicher, ein Steuerelement von einem anderen Thread als dem aufzurufen, der das Steuerelement erstellt hat, ohne die <xref:System.Windows.Forms.Control.Invoke%2A> -Methode zu verwenden. Es folgt ein Beispiel für einen Aufruf, der nicht threadsicher ist.
+Es ist unsicher, ein Steuerelement von einem anderen Thread als dem aufzurufen, der das Steuerelement erstellt hat, ohne die <xref:System.Windows.Forms.Control.Invoke%2A>-Methode zu verwenden. Es folgt ein Beispiel für einen Aufruf, der nicht threadsicher ist.
 
 ```csharp
 // This event handler creates a thread that calls a
@@ -95,7 +95,7 @@ private:
 
 Mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] können Sie feststellen, wann Sie auf die Steuerelemente auf nicht threadsichere Weise zugreifen. Wenn Sie die Anwendung im Debugger ausführen und ein anderer Thread als der, der ein Steuerelement erstellt hat, versucht, das Steuerelement aufzurufen, löst der Debugger eine <xref:System.InvalidOperationException> mit einer Meldung wie "Zugriff auf Steuerelement *Steuerelementname* von einem anderen Thread als dem Erstellungsthread" aus.
 
-Diese Ausnahme tritt zuverlässig beim Debuggen und unter bestimmten Bedingungen zur Laufzeit auf. Diese Ausnahme wird möglicherweise angezeigt, wenn Sie Anwendungen debuggen, die Sie mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vor [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] geschrieben haben. Es wird dringend empfohlen, dieses Problem ggf. zu beheben. Sie können es aber deaktivieren, indem Sie die <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A> -Eigenschaft auf `false`festlegen. Dies bewirkt, dass das Steuerelement wie unter Visual Studio .NET 2003 und [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)]ausgeführt wird.
+Diese Ausnahme tritt zuverlässig beim Debuggen und unter bestimmten Bedingungen zur Laufzeit auf. Diese Ausnahme wird möglicherweise angezeigt, wenn Sie Anwendungen debuggen, die Sie mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] vor [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] geschrieben haben. Es wird dringend empfohlen, dieses Problem ggf. zu beheben. Sie können es aber deaktivieren, indem Sie die <xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A>-Eigenschaft auf `false` festlegen. Dies bewirkt, dass das Steuerelement wie unter Visual Studio .NET 2003 und [!INCLUDE[net_v11_short](../../../../includes/net-v11-short-md.md)] ausgeführt wird.
 
 > [!NOTE]
 > Wenn Sie ActiveX-Steuerelemente in einem Formular verwenden, erhalten Sie möglicherweise die threadübergreifende <xref:System.InvalidOperationException> beim Ausführen im Debugger. In diesem Fall unterstützt das ActiveX-Steuerelement kein Multithreading. Weitere Informationen zum Verwenden von ActiveX-Steuerelementen mit Windows Forms finden Sie unter [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md).
@@ -104,13 +104,13 @@ Diese Ausnahme tritt zuverlässig beim Debuggen und unter bestimmten Bedingungen
 
 ### <a name="to-make-a-thread-safe-call-to-a-windows-forms-control"></a>So führen Sie einen threadsicheren Aufruf des Windows Forms-Steuerelements aus
 
-1.  Fragen Sie die <xref:System.Windows.Forms.Control.InvokeRequired%2A> -Eigenschaft des Steuerelements ab.
+1.  Fragen Sie die <xref:System.Windows.Forms.Control.InvokeRequired%2A>-Eigenschaft des Steuerelements ab.
 
-2.  Wenn <xref:System.Windows.Forms.Control.InvokeRequired%2A> `true`zurückgibt, rufen Sie <xref:System.Windows.Forms.Control.Invoke%2A> mit einem Delegaten auf, der den eigentlichen Aufruf des Steuerelements übernimmt.
+2.  Wenn <xref:System.Windows.Forms.Control.InvokeRequired%2A> `true` zurückgibt, rufen Sie <xref:System.Windows.Forms.Control.Invoke%2A> mit einem Delegaten auf, der den eigentlichen Aufruf des Steuerelements übernimmt.
 
-3.  Wenn <xref:System.Windows.Forms.Control.InvokeRequired%2A> `false`zurückgibt, rufen Sie das Steuerelement direkt auf.
+3.  Wenn <xref:System.Windows.Forms.Control.InvokeRequired%2A> `false` zurückgibt, rufen Sie das Steuerelement direkt auf.
 
-Im folgenden Codebeispiel wird ein threadsicherer Aufruf in der `ThreadProcSafe` -Methode implementiert, die vom Hintergrundthread ausgeführt wird. Wenn das <xref:System.Windows.Forms.TextBox> des <xref:System.Windows.Forms.Control.InvokeRequired%2A> -Steuerelements `true`zurückgibt, erstellt die `ThreadProcSafe` -Methode eine Instanz von `StringArgReturningVoidDelegate` und übergibt sie an die <xref:System.Windows.Forms.Control.Invoke%2A> -Methode des Formulars. Dies bewirkt, dass die `SetText` -Methode in dem Thread aufgerufen wird, der das <xref:System.Windows.Forms.TextBox> -Steuerelement erstellt hat, und in diesem Threadkontext wird die <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft direkt festgelegt.
+Im folgenden Codebeispiel wird ein threadsicherer Aufruf in der `ThreadProcSafe`-Methode implementiert, die vom Hintergrundthread ausgeführt wird. Wenn das <xref:System.Windows.Forms.TextBox> des <xref:System.Windows.Forms.Control.InvokeRequired%2A>-Steuerelements `true` zurückgibt, erstellt die `ThreadProcSafe`-Methode eine Instanz von `StringArgReturningVoidDelegate` und übergibt sie an die <xref:System.Windows.Forms.Control.Invoke%2A>-Methode des Formulars. Dies bewirkt, dass die `SetText`-Methode in dem Thread aufgerufen wird, der das <xref:System.Windows.Forms.TextBox>-Steuerelement erstellt hat, und in diesem Threadkontext wird die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft direkt festgelegt.
 
 ```csharp
 // This event handler creates a thread that calls a
@@ -278,8 +278,8 @@ private:
     }
 ```
 
-## <a name="making-thread-safe-calls-by-using-backgroundworker"></a>threadsichere Aufrufe mit BackgroundWorker
- Das bevorzugte Verfahren zum Implementieren von Multithreading in der Anwendung ist die Verwendung der <xref:System.ComponentModel.BackgroundWorker> -Komponente. Die <xref:System.ComponentModel.BackgroundWorker> -Komponente verwendet ein ereignisgesteuertes Modell für Multithreading. Der Hintergrundthread führt den <xref:System.ComponentModel.BackgroundWorker.DoWork> -Ereignishandler aus, und der Thread, der die Steuerelemente erstellt, führt die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> - und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignishandler aus. Sie können die Steuerelemente von den <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> - und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignishandlern aus aufrufen.
+## <a name="making-thread-safe-calls-by-using-backgroundworker"></a>Threadsichere Aufrufe mit BackgroundWorker
+ Das bevorzugte Verfahren zum Implementieren von Multithreading in der Anwendung ist die Verwendung der <xref:System.ComponentModel.BackgroundWorker>-Komponente. Die <xref:System.ComponentModel.BackgroundWorker>-Komponente verwendet ein ereignisgesteuertes Modell für Multithreading. Der Hintergrundthread führt den <xref:System.ComponentModel.BackgroundWorker.DoWork>-Ereignishandler aus, und der Thread, der die Steuerelemente erstellt, führt die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>- und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>-Ereignishandler aus. Sie können die Steuerelemente von den <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>- und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>-Ereignishandlern aus aufrufen.
 
 #### <a name="to-make-thread-safe-calls-by-using-backgroundworker"></a>So führen Sie threadsichere Aufrufe mit BackgroundWorker durch
 
@@ -287,11 +287,11 @@ private:
 
 2.  Erstellen Sie eine Methode, um die Ergebnisse der Hintergrundverarbeitung nach Abschluss zu melden. Sie können durch den Hauptthread in dieser Methode erstellte Steuerelemente aufrufen.
 
-3.  Binden Sie die in Schritt 1 erstellte Methode an das <xref:System.ComponentModel.BackgroundWorker.DoWork> -Ereignis einer Instanz von <xref:System.ComponentModel.BackgroundWorker>, und binden Sie die in Schritt 2 erstellte Methode an das <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignis der gleichen Instanz.
+3.  Binden Sie die in Schritt 1 erstellte Methode an das <xref:System.ComponentModel.BackgroundWorker.DoWork>-Ereignis einer Instanz von <xref:System.ComponentModel.BackgroundWorker>, und binden Sie die in Schritt 2 erstellte Methode an das <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>-Ereignis der gleichen Instanz.
 
-4.  Um den Hintergrundthread zu starten, rufen Sie die <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> -Methode der <xref:System.ComponentModel.BackgroundWorker> -Instanz auf.
+4.  Um den Hintergrundthread zu starten, rufen Sie die <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>-Methode der <xref:System.ComponentModel.BackgroundWorker>-Instanz auf.
 
-Im folgenden Codebeispiel verwendet der <xref:System.ComponentModel.BackgroundWorker.DoWork> -Ereignishandler <xref:System.Threading.Thread.Sleep%2A> , um Arbeit zu simulieren, die einige Zeit dauert. Das <xref:System.Windows.Forms.TextBox> -Steuerelement des Formulars wird nicht aufgerufen. Die <xref:System.Windows.Forms.TextBox> -Eigenschaft des <xref:System.Windows.Forms.Control.Text%2A> -Steuerelements wird direkt im <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignishandler festgelegt.
+Im folgenden Codebeispiel verwendet der <xref:System.ComponentModel.BackgroundWorker.DoWork>-Ereignishandler <xref:System.Threading.Thread.Sleep%2A>, um Arbeit zu simulieren, die einige Zeit dauert. Das <xref:System.Windows.Forms.TextBox>-Steuerelement des Formulars wird nicht aufgerufen. Die <xref:System.Windows.Forms.TextBox>-Eigenschaft des <xref:System.Windows.Forms.Control.Text%2A>-Steuerelements wird direkt im <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>-Ereignishandler festgelegt.
 
 ```csharp
 // This BackgroundWorker is used to demonstrate the
@@ -400,7 +400,7 @@ private:
     }
 ```
 
- Sie können auch den Fortschritt einer Hintergrundaufgabe mithilfe des <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> -Ereignisses melden. Ein Beispiel, das das Ereignis enthält, finden Sie unter <xref:System.ComponentModel.BackgroundWorker>.
+ Sie können auch den Fortschritt einer Hintergrundaufgabe mithilfe des <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>-Ereignisses melden. Ein Beispiel, das das Ereignis enthält, finden Sie unter <xref:System.ComponentModel.BackgroundWorker>.
 
 ## <a name="example"></a>Beispiel
  Das folgende Codebeispiel stellt eine vollständige Windows Forms-Anwendung dar, die aus einem Formular mit drei Schaltflächen und einem Textfeld besteht. Die erste Schaltfläche zeigt den unsicheren threadübergreifenden Zugriff, die zweite Schaltfläche zeigt den sicheren Zugriff mithilfe von <xref:System.Windows.Forms.Control.Invoke%2A>, und die dritte Schaltfläche zeigt den sicheren Zugriff mithilfe von <xref:System.ComponentModel.BackgroundWorker>.
@@ -1041,7 +1041,7 @@ int main()
 }
 ```
 
-Wenn Sie die Anwendung ausführen und auf die Schaltfläche **Unsafe Call** klicken, wird sofort "Written by the main thread" im Textfeld angezeigt. Wenn zwei Sekunden später der unsichere Aufruf versucht wird, gibt der Visual Studio-Debugger an, dass eine Ausnahme aufgetreten ist. Der Debugger hält bei der Zeile im Hintergrundthread an, die versucht hat, direkt in das Textfeld zu schreiben. Sie müssen die Anwendung neu starten, um die anderen zwei Schaltflächen zu testen. Wenn Sie auf die Schaltfläche **Safe Call** klicken, wird "Written by the main thread" im Textfeld angezeigt. Zwei Sekunden später wird das Textfeld auf "Written by the background thread (Invoke)" festgelegt. Dadurch wird angegeben, dass die <xref:System.Windows.Forms.Control.Invoke%2A> -Methode aufgerufen wurde. Wenn Sie auf die Schaltfläche **Safe BW Call** klicken, wird "Written by the main thread" im Textfeld angezeigt. Zwei Sekunden später wird das Textfeld auf "Written by the main thread after the background thread completed" festgelegt, Dadurch wird angegeben, dass der Handler für das <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignis von <xref:System.ComponentModel.BackgroundWorker> aufgerufen wurde.
+Wenn Sie die Anwendung ausführen und auf die Schaltfläche **Unsafe Call** klicken, wird sofort "Written by the main thread" im Textfeld angezeigt. Wenn zwei Sekunden später der unsichere Aufruf versucht wird, gibt der Visual Studio-Debugger an, dass eine Ausnahme aufgetreten ist. Der Debugger hält bei der Zeile im Hintergrundthread an, die versucht hat, direkt in das Textfeld zu schreiben. Sie müssen die Anwendung neu starten, um die anderen zwei Schaltflächen zu testen. Wenn Sie auf die Schaltfläche **Safe Call** klicken, wird "Written by the main thread" im Textfeld angezeigt. Zwei Sekunden später wird das Textfeld auf "Written by the background thread (Invoke)" festgelegt. Dadurch wird angegeben, dass die <xref:System.Windows.Forms.Control.Invoke%2A> -Methode aufgerufen wurde. Wenn Sie auf die Schaltfläche **Safe BW Call** klicken, wird "Written by the main thread" im Textfeld angezeigt. Zwei Sekunden später wird das Textfeld auf "Written by the main thread after the background thread completed" festgelegt, Dadurch wird angegeben, dass der Handler für das <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>-Ereignis von <xref:System.ComponentModel.BackgroundWorker> aufgerufen wurde.
 
 ## <a name="robust-programming"></a>Stabile Programmierung
 

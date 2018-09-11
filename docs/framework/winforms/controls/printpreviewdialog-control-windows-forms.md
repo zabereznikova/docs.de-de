@@ -8,11 +8,11 @@ helpviewer_keywords:
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
 ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200439"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274241"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog-Steuerelement (Windows Forms)
 Das `PrintPreviewDialog`-Steuerelement von Windows Forms ist ein vorkonfiguriertes Dialogfeld, das verwendet wird, um das Erscheinungsbild eines Dokuments anzuzeigen, wenn es gedruckt wird. Verwenden Sie es in Ihrer auf Windows basierenden Anwendung als einfache Lösung, anstatt ein eigenes Dialogfeld zu konfigurieren. Das Steuerelement enthält Schaltflächen zum Drucken, Vergrößern, Anzeigen mindestens einer Seite und Schließen des Dialogfelds.  
@@ -24,7 +24,7 @@ Das `PrintPreviewDialog`-Steuerelement von Windows Forms ist ein vorkonfiguriert
  [Gewusst wie: Anzeigen der Seitenansicht in Windows Forms-Anwendungen](../../../../docs/framework/winforms/controls/how-to-display-print-preview-in-windows-forms-applications.md)  
  Erläutert, wie eine Seite angezeigt wird, die mithilfe einer Instanz des `PrintPreviewDialog`-Steuerelements zur Laufzeit gedruckt werden soll.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.PrintPreviewDialog>  
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
 ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179441"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339163"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider-Komponente (Windows Forms)
 Die `HelpProvider`-Komponente von Windows Forms wird verwendet, um eine HTML Help 1.x-Hilfedatei (entweder eine mit HTML Help Workshop erstellte CHM-Datei oder eine HTM-Datei) mit einer Windows-basierten Anwendung zu verknüpfen.  
@@ -22,7 +22,7 @@ Die `HelpProvider`-Komponente von Windows Forms wird verwendet, um eine HTML Hel
   
  Finden Sie unter [Hilfesysteme in Windows Forms-Anwendungen](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:System.Windows.Forms.HelpProvider>  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   

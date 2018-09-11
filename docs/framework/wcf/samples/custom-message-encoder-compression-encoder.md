@@ -3,11 +3,11 @@ title: 'Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
 ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179246"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277415"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder
 In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder mit der Windows Communication Foundation (WCF)-Plattform implementiert werden.  
@@ -22,7 +22,7 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder m
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
 ## <a name="sample-details"></a>Beispieldetails  
- Das Beispiel besteht aus einem Clientkonsolenprogramm (.exe), einem selbst gehosteten Dienstkonsolenprogramm (.exe) und einer Komprimierungsnachrichtenencoder-Bibliothek (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird durch die `ISampleServer`-Schnittstelle definiert, die allgemeine Zeichenfolgen-Echovorgänge (`Echo` und `BigEcho`) verfügbar macht. Der Client stellt synchrone Anforderungen an einen angegebenen Vorgang, und der Dienst antwortet dem Client, indem er die Nachricht wiederholt. Client- und Dienstaktivität sind in den Konsolenfenstern sichtbar. Das Beispiel soll zeigen, wie ein benutzerdefinierter Encoder geschrieben wird und wie sich das Komprimieren einer Nachricht auf das Netzwerk auswirkt. Sie können dem Komprimierungsnachrichtenencoder eine Instrumentierung zum Berechnen der Nachrichtengröße und/oder der Verarbeitungszeit hinzufügen.  
+ Das Beispiel besteht aus einem Clientkonsolenprogramm (.exe), einem selbst gehosteten Dienstkonsolenprogramm (.exe) und einer Komprimierungsnachrichtenencoder-Bibliothek (.dll). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird durch die `ISampleServer`-Schnittstelle definiert, die allgemeine Zeichenfolgen-Echovorgänge (`Echo` und `BigEcho`) verfügbar macht. Der Client stellt synchrone Anforderungen an einen angegebenen Vorgang, und der Dienst antwortet dem Client, indem er die Nachricht wiederholt. Client- und Dienstaktivität sind in den Konsolenfenstern sichtbar. Das Beispiel soll zeigen, wie ein benutzerdefinierter Encoder geschrieben wird und wie sich das Komprimieren einer Nachricht auf das Netzwerk auswirkt. Sie können dem Komprimierungsnachrichtenencoder eine Instrumentation zum Berechnen der Nachrichtengröße und/oder der Verarbeitungszeit hinzufügen.  
   
 > [!NOTE]
 >  In .NET Framework 4 wurde die automatische dekomprimierung auf einem WCF-Client aktiviert, wenn der Server eine komprimierte Antwort sendet (erstellt mit einem Algorithmus wie GZip oder Deflate). Bei einem im Internet über Internet Information Server (IIS) gehosteten Dienst kann IIS so konfiguriert werden, dass der Dienst eine komprimierte Antwort sendet. Dieses Beispiel kann verwendet werden, wenn die Komprimierung und Dekomprimierung für den Client und für den Dienst durchgeführt werden müssen oder wenn der Dienst selbst gehostet wird.  

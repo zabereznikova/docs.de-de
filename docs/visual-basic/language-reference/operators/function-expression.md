@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183092"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262151"
 ---
 # <a name="function-expression-visual-basic"></a>Funktionsausdruck (Visual Basic)
 Deklariert die Parameter und den Code, der einen Lambda-Ausdruck von Funktion definieren.  
@@ -37,7 +37,7 @@ End Function
 ## <a name="remarks"></a>Hinweise  
  Ein *Lambda-Ausdruck* ist eine Funktion ohne einen Namen, die berechnet, und gibt einen Wert zurück. Sie können einen Lambda-Ausdruck an einer beliebigen Stelle können Sie einen Delegattyp, außer als Argument an `RemoveHandler`. Weitere Informationen zu Delegaten und die Verwendung von Lambdaausdrücken mit Delegaten finden Sie unter [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md) und [gelockerte Delegatenkonvertierung](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
-## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
+## <a name="lambda-expression-syntax"></a>Lambda-Ausdruckssyntax  
  Die Syntax eines Lambda-Ausdrucks ähnelt einer standard-Funktion. Die Unterschiede sind wie folgt aus:  
   
 -   Ein Lambda-Ausdruck ist nicht auf einen Namen haben.  

@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 551e4ac5dc8917931e41d7aaa7dca1f8613852bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252115"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272799"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementieren des Window-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -42,20 +42,20 @@ ms.locfileid: "44252115"
 ## <a name="required-members-for-iwindowprovider"></a>Erforderliche Member für IWindowProvider  
  Die folgenden Eigenschaften, Methoden und Ereignisse sind für die IWindowProvider-Schnittstelle erforderlich.  
   
-|Erforderlicher Member|Memberart|Hinweise|  
+|Erforderlicher Member|Memberart|Notizen|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowInteractionState>|event|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Ereignis|Keine|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Ereignis|Keine|  
+|<xref:System.Windows.Automation.WindowInteractionState>|Ereignis|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Ausnahmen  

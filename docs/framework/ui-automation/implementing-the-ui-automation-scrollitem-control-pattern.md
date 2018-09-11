@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 0346b70b4400c5f7a8d282d945e029701973dad1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251627"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272292"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "44251627"
 ## <a name="required-members-for-iscrollitemprovider"></a>Erforderliche Member für IScrollItemProvider  
  Die folgende Methode ist zum Implementieren der IScrollProvider-Schnittstelle erforderlich.  
   
-|Erforderliche Member|Memberart|Hinweise|  
+|Erforderliche Member|Memberart|Notizen|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Methode|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Methode|Keine|  
   
  Diesem Steuerelementmuster sind keine Eigenschaften oder Ereignisse zugeordnet.  
   
