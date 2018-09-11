@@ -12,45 +12,45 @@ ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13bce09ca9fd1ae9ebb919a9245d8ccf87fbde1d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276367"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44368745"
 ---
-# <a name="-rootnamespace"></a><span data-ttu-id="32d67-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="32d67-102">-rootnamespace</span></span>
-<span data-ttu-id="32d67-103">Gibt einen Namespace für alle Typdeklarationen an.</span><span class="sxs-lookup"><span data-stu-id="32d67-103">Specifies a namespace for all type declarations.</span></span>  
+# <a name="-rootnamespace"></a><span data-ttu-id="e755e-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="e755e-102">-rootnamespace</span></span>
+<span data-ttu-id="e755e-103">Gibt einen Namespace für alle Typdeklarationen an.</span><span class="sxs-lookup"><span data-stu-id="e755e-103">Specifies a namespace for all type declarations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32d67-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="32d67-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e755e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e755e-104">Syntax</span></span>  
   
 ```  
 -rootnamespace:namespace  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="32d67-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="32d67-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="e755e-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="e755e-105">Arguments</span></span>  
   
-|<span data-ttu-id="32d67-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="32d67-106">Term</span></span>|<span data-ttu-id="32d67-107">Definition</span><span class="sxs-lookup"><span data-stu-id="32d67-107">Definition</span></span>|  
+|<span data-ttu-id="e755e-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="e755e-106">Term</span></span>|<span data-ttu-id="e755e-107">Definition</span><span class="sxs-lookup"><span data-stu-id="e755e-107">Definition</span></span>|  
 |---|---|  
-|`namespace`|<span data-ttu-id="32d67-108">Der Name des Namespace, in dem alle Typdeklarationen für das aktuelle Projekt zu schließen.</span><span class="sxs-lookup"><span data-stu-id="32d67-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
+|`namespace`|<span data-ttu-id="e755e-108">Der Name des Namespace, in dem alle Typdeklarationen für das aktuelle Projekt zu schließen.</span><span class="sxs-lookup"><span data-stu-id="e755e-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="32d67-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="32d67-109">Remarks</span></span>  
- <span data-ttu-id="32d67-110">Wenn Sie die ausführbare Datei (Devenv.exe) von Visual Studio verwenden, um ein erstelltes Projekt kompilieren in der integrierten Entwicklungsumgebung Visual Studio, verwenden `-rootnamespace` zum Angeben des Werts, der die <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="32d67-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `-rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="32d67-111">Finden Sie unter [Devenv-Befehlszeilenschalter](/visualstudio/ide/reference/devenv-command-line-switches) für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="32d67-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e755e-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e755e-109">Remarks</span></span>  
+ <span data-ttu-id="e755e-110">Wenn Sie die ausführbare Datei (Devenv.exe) von Visual Studio verwenden, um ein erstelltes Projekt kompilieren in der integrierten Entwicklungsumgebung Visual Studio, verwenden `-rootnamespace` zum Angeben des Werts, der die <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="e755e-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `-rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="e755e-111">Finden Sie unter [Devenv-Befehlszeilenschalter](/visualstudio/ide/reference/devenv-command-line-switches) für Weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="e755e-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
   
- <span data-ttu-id="32d67-112">Verwenden Sie die common Language Runtime MSIL Disassembler (`Ildasm.exe`) um die Namespacenamen in Ihrer Ausgabedatei anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="32d67-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
+ <span data-ttu-id="e755e-112">Verwenden Sie die common Language Runtime MSIL Disassembler (`Ildasm.exe`) um die Namespacenamen in Ihrer Ausgabedatei anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="e755e-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
   
-|<span data-ttu-id="32d67-113">-Rootnamespace in der integrierten Entwicklungsumgebung von Visual Studio festlegen.</span><span class="sxs-lookup"><span data-stu-id="32d67-113">To set -rootnamespace in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="e755e-113">-Rootnamespace in der integrierten Entwicklungsumgebung von Visual Studio festlegen.</span><span class="sxs-lookup"><span data-stu-id="e755e-113">To set -rootnamespace in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="32d67-114">1.  Ein Projekt auswählen in **Projektmappen-Explorer**.</span><span class="sxs-lookup"><span data-stu-id="32d67-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="32d67-115">Klicken Sie im Menü **Projekt** auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="32d67-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="32d67-116">2.  Klicken Sie auf die Registerkarte **Anwendung** .</span><span class="sxs-lookup"><span data-stu-id="32d67-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="32d67-117">3.  Ändern Sie den Wert in der **Stamm-Namespace** Feld.</span><span class="sxs-lookup"><span data-stu-id="32d67-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
+|<span data-ttu-id="e755e-114">1.  Ein Projekt auswählen in **Projektmappen-Explorer**.</span><span class="sxs-lookup"><span data-stu-id="e755e-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="e755e-115">Klicken Sie im Menü **Projekt** auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="e755e-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="e755e-116">2.  Klicken Sie auf die Registerkarte **Anwendung** .</span><span class="sxs-lookup"><span data-stu-id="e755e-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="e755e-117">3.  Ändern Sie den Wert in der **Stamm-Namespace** Feld.</span><span class="sxs-lookup"><span data-stu-id="e755e-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="32d67-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="32d67-118">Example</span></span>  
- <span data-ttu-id="32d67-119">Der folgende code kompiliert `In.vb` und alle Typdeklarationen im Namespace `mynamespace`.</span><span class="sxs-lookup"><span data-stu-id="32d67-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
+## <a name="example"></a><span data-ttu-id="e755e-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e755e-118">Example</span></span>  
+ <span data-ttu-id="e755e-119">Der folgende code kompiliert `In.vb` und alle Typdeklarationen im Namespace `mynamespace`.</span><span class="sxs-lookup"><span data-stu-id="e755e-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="32d67-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32d67-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e755e-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e755e-120">See also</span></span>
 
-- [<span data-ttu-id="32d67-121">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="32d67-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [<span data-ttu-id="32d67-122">Ildasm.exe (IL-Disassembler)</span><span class="sxs-lookup"><span data-stu-id="32d67-122">Ildasm.exe (IL Disassembler)</span></span>](../../../framework/tools/ildasm-exe-il-disassembler.md)  
-- [<span data-ttu-id="32d67-123">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="32d67-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="e755e-121">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="e755e-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [<span data-ttu-id="e755e-122">Ildasm.exe (IL-Disassembler)</span><span class="sxs-lookup"><span data-stu-id="e755e-122">Ildasm.exe (IL Disassembler)</span></span>](../../../framework/tools/ildasm-exe-il-disassembler.md)  
+- [<span data-ttu-id="e755e-123">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="e755e-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
