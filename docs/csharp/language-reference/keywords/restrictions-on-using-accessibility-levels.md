@@ -4,115 +4,119 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: fd2f9b11523aac1cb720559db44aa36029d52ddb
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 2bcf2b12d1aa1488e6d3e46f5b37ac9535b138dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960904"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43389350"
 ---
-# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="78947-102">Einschränkungen bei der Verwendung von Zugriffsebenen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="78947-102">Restrictions on Using Accessibility Levels (C# Reference)</span></span>
-<span data-ttu-id="78947-103">Wenn Sie in einer Deklaration einen Typ angeben, überprüfen Sie, ob die Zugriffsebene dieses Typs von der Zugriffsebene eines Members oder eines anderen Typs abhängt.</span><span class="sxs-lookup"><span data-stu-id="78947-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="78947-104">Auf die direkte Basisklasse muss z.B. mindestens genauso zugegriffen werden können wie auf die abgeleitete Klasse.</span><span class="sxs-lookup"><span data-stu-id="78947-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="78947-105">Die folgende Deklaration verursacht einen Compilerfehler, da die Basisklasse `BaseClass` eine stärkere Zugriffsbeschränkung hat als `MyClass`:</span><span class="sxs-lookup"><span data-stu-id="78947-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>  
-  
-```csharp  
-class BaseClass {...}  
-public class MyClass: BaseClass {...} // Error  
-```  
-  
- <span data-ttu-id="78947-106">In der folgenden Tabelle werden die Einschränkungen für deklarierte Zugriffsebenen zusammengefasst.</span><span class="sxs-lookup"><span data-stu-id="78947-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>  
-  
-|<span data-ttu-id="78947-107">Kontext</span><span class="sxs-lookup"><span data-stu-id="78947-107">Context</span></span>|<span data-ttu-id="78947-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="78947-108">Remarks</span></span>|  
-|-------------|-------------|  
-|[<span data-ttu-id="78947-109">Klassen</span><span class="sxs-lookup"><span data-stu-id="78947-109">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="78947-110">Die direkte Basisklasse eines Klassentyps muss mindesten dieselben Zugriffsmöglichkeiten wie der Klassentyp selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="78947-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|  
-|[<span data-ttu-id="78947-111">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="78947-111">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)|<span data-ttu-id="78947-112">Die explizite Basisschnittstelle eines Schnittstellentyps muss mindesten dieselben Zugriffsmöglichkeiten bieten wie der Schnittstellentyp selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|  
-|[<span data-ttu-id="78947-113">Delegaten</span><span class="sxs-lookup"><span data-stu-id="78947-113">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)|<span data-ttu-id="78947-114">Die Rückgabe- und Parametertypen eines Delegattyps müssen mindestens dieselben Zugriffsmöglichkeiten wie der Delegattyp selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="78947-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|  
-|[<span data-ttu-id="78947-115">Konstanten</span><span class="sxs-lookup"><span data-stu-id="78947-115">Constants</span></span>](../../../csharp/programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="78947-116">Der Typ einer Konstante muss mindestens dieselben Zugriffsmöglichkeiten wie die Konstante selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="78947-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|  
-|[<span data-ttu-id="78947-117">Felder</span><span class="sxs-lookup"><span data-stu-id="78947-117">Fields</span></span>](../../../csharp/programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="78947-118">Der Typ eines Felds muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Feld selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-118">The type of a field must be at least as accessible as the field itself.</span></span>|  
-|[<span data-ttu-id="78947-119">Methoden</span><span class="sxs-lookup"><span data-stu-id="78947-119">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="78947-120">Die Rückgabe- und Parametertypen einer Methode müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie die Methode selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|  
-|[<span data-ttu-id="78947-121">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="78947-121">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="78947-122">Der Typ einer Eigenschaft muss mindestens dieselben Zugriffsmöglichkeiten bieten wie die Eigenschaft selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-122">The type of a property must be at least as accessible as the property itself.</span></span>|  
-|[<span data-ttu-id="78947-123">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="78947-123">Events</span></span>](../../../csharp/programming-guide/events/index.md)|<span data-ttu-id="78947-124">Der Typ eines Ereignisses muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Ereignis selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-124">The type of an event must be at least as accessible as the event itself.</span></span>|  
-|[<span data-ttu-id="78947-125">Indexer</span><span class="sxs-lookup"><span data-stu-id="78947-125">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)|<span data-ttu-id="78947-126">Der Typ und die Parametertypen eines Indexers müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Indexer selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|  
-|[<span data-ttu-id="78947-127">Operatoren</span><span class="sxs-lookup"><span data-stu-id="78947-127">Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="78947-128">Die Rückgabe- und Parametertypen eines Operators müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Operator selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|  
-|[<span data-ttu-id="78947-129">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="78947-129">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="78947-130">Die Parametertypen eines Konstruktors müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Konstruktor selbst.</span><span class="sxs-lookup"><span data-stu-id="78947-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|  
-  
-## <a name="example"></a><span data-ttu-id="78947-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="78947-131">Example</span></span>  
- <span data-ttu-id="78947-132">Das folgende Beispiel enthält fehlerhafte Deklarationen verschiedener Typen.</span><span class="sxs-lookup"><span data-stu-id="78947-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="78947-133">Der Kommentar nach jeder Deklaration gibt den erwarteten Compilerfehler an.</span><span class="sxs-lookup"><span data-stu-id="78947-133">The comment following each declaration indicates the expected compiler error.</span></span>  
-  
-```csharp  
-// Restrictions on Using Accessibility Levels  
-// CS0052 expected as well as CS0053, CS0056, and CS0057  
-// To make the program work, change access level of both class B  
-// and MyPrivateMethod() to public.  
-  
-using System;  
-  
-// A delegate:  
-delegate int MyDelegate();  
-  
-class B  
-{  
-    // A private method:  
-    static int MyPrivateMethod()  
-    {  
-        return 0;  
-    }  
-}  
-  
-public class A  
-{  
-    // Error: The type B is less accessible than the field A.myField.  
-    public B myField = new B();  
-  
-    // Error: The type B is less accessible  
-    // than the constant A.myConst.  
-    public readonly B myConst = new B();  
-  
-    public B MyMethod()  
-    {  
-        // Error: The type B is less accessible   
-        // than the method A.MyMethod.  
-        return new B();  
-    }  
-  
-    // Error: The type B is less accessible than the property A.MyProp  
-    public B MyProp  
-    {  
-        set  
-        {  
-        }  
-    }  
-  
-    MyDelegate d = new MyDelegate(B.MyPrivateMethod);  
-    // Even when B is declared public, you still get the error:   
-    // "The parameter B.MyPrivateMethod is not accessible due to   
-    // protection level."  
-  
-    public static B operator +(A m1, B m2)  
-    {  
-        // Error: The type B is less accessible  
-        // than the operator A.operator +(A,B)  
-        return new B();  
-    }  
-  
-    static void Main()  
-    {  
-        Console.Write("Compiled successfully");  
-    }  
-}  
-```  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="78947-134">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="78947-134">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="78947-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="78947-135">See Also</span></span>  
- [<span data-ttu-id="78947-136">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="78947-136">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="78947-137">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="78947-137">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="78947-138">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="78947-138">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="78947-139">Zugriffsmodifizierer</span><span class="sxs-lookup"><span data-stu-id="78947-139">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [<span data-ttu-id="78947-140">Zugriffsdomäne</span><span class="sxs-lookup"><span data-stu-id="78947-140">Accessibility Domain</span></span>](../../../csharp/language-reference/keywords/accessibility-domain.md)  
- [<span data-ttu-id="78947-141">Zugriffsebenen</span><span class="sxs-lookup"><span data-stu-id="78947-141">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [<span data-ttu-id="78947-142">Zugriffsmodifizierer</span><span class="sxs-lookup"><span data-stu-id="78947-142">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [<span data-ttu-id="78947-143">public</span><span class="sxs-lookup"><span data-stu-id="78947-143">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
- [<span data-ttu-id="78947-144">private</span><span class="sxs-lookup"><span data-stu-id="78947-144">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
- [<span data-ttu-id="78947-145">protected</span><span class="sxs-lookup"><span data-stu-id="78947-145">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
- [<span data-ttu-id="78947-146">internal</span><span class="sxs-lookup"><span data-stu-id="78947-146">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
+# <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="9d1bc-102">Einschränkungen bei der Verwendung von Zugriffsebenen (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="9d1bc-102">Restrictions on using accessibility levels (C# Reference)</span></span>
+
+<span data-ttu-id="9d1bc-103">Wenn Sie in einer Deklaration einen Typ angeben, überprüfen Sie, ob die Zugriffsebene dieses Typs von der Zugriffsebene eines Members oder eines anderen Typs abhängt.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="9d1bc-104">Auf die direkte Basisklasse muss z.B. mindestens genauso zugegriffen werden können wie auf die abgeleitete Klasse.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="9d1bc-105">Die folgende Deklaration verursacht einen Compilerfehler, da die Basisklasse `BaseClass` eine stärkere Zugriffsbeschränkung hat als `MyClass`:</span><span class="sxs-lookup"><span data-stu-id="9d1bc-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>
+
+```csharp
+class BaseClass {...}
+public class MyClass: BaseClass {...} // Error
+```
+
+<span data-ttu-id="9d1bc-106">In der folgenden Tabelle werden die Einschränkungen für deklarierte Zugriffsebenen zusammengefasst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-106">The following table summarizes the restrictions on declared accessibility levels.</span></span>
+
+|<span data-ttu-id="9d1bc-107">Kontext</span><span class="sxs-lookup"><span data-stu-id="9d1bc-107">Context</span></span>|<span data-ttu-id="9d1bc-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9d1bc-108">Remarks</span></span>|
+|-------------|-------------|
+|[<span data-ttu-id="9d1bc-109">Klassen</span><span class="sxs-lookup"><span data-stu-id="9d1bc-109">Classes</span></span>](../../programming-guide/classes-and-structs/classes.md)|<span data-ttu-id="9d1bc-110">Die direkte Basisklasse eines Klassentyps muss mindesten dieselben Zugriffsmöglichkeiten wie der Klassentyp selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-110">The direct base class of a class type must be at least as accessible as the class type itself.</span></span>|
+|[<span data-ttu-id="9d1bc-111">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="9d1bc-111">Interfaces</span></span>](../../programming-guide/interfaces/index.md)|<span data-ttu-id="9d1bc-112">Die explizite Basisschnittstelle eines Schnittstellentyps muss mindesten dieselben Zugriffsmöglichkeiten bieten wie der Schnittstellentyp selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-112">The explicit base interfaces of an interface type must be at least as accessible as the interface type itself.</span></span>|
+|[<span data-ttu-id="9d1bc-113">Delegaten</span><span class="sxs-lookup"><span data-stu-id="9d1bc-113">Delegates</span></span>](../../programming-guide/delegates/index.md)|<span data-ttu-id="9d1bc-114">Die Rückgabe- und Parametertypen eines Delegattyps müssen mindestens dieselben Zugriffsmöglichkeiten wie der Delegattyp selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-114">The return type and parameter types of a delegate type must be at least as accessible as the delegate type itself.</span></span>|
+|[<span data-ttu-id="9d1bc-115">Konstanten</span><span class="sxs-lookup"><span data-stu-id="9d1bc-115">Constants</span></span>](../../programming-guide/classes-and-structs/constants.md)|<span data-ttu-id="9d1bc-116">Der Typ einer Konstante muss mindestens dieselben Zugriffsmöglichkeiten wie die Konstante selbst bieten.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-116">The type of a constant must be at least as accessible as the constant itself.</span></span>|
+|[<span data-ttu-id="9d1bc-117">Felder</span><span class="sxs-lookup"><span data-stu-id="9d1bc-117">Fields</span></span>](../../programming-guide/classes-and-structs/fields.md)|<span data-ttu-id="9d1bc-118">Der Typ eines Felds muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Feld selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-118">The type of a field must be at least as accessible as the field itself.</span></span>|
+|[<span data-ttu-id="9d1bc-119">Methoden</span><span class="sxs-lookup"><span data-stu-id="9d1bc-119">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)|<span data-ttu-id="9d1bc-120">Die Rückgabe- und Parametertypen einer Methode müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie die Methode selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-120">The return type and parameter types of a method must be at least as accessible as the method itself.</span></span>|
+|[<span data-ttu-id="9d1bc-121">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="9d1bc-121">Properties</span></span>](../../programming-guide/classes-and-structs/properties.md)|<span data-ttu-id="9d1bc-122">Der Typ einer Eigenschaft muss mindestens dieselben Zugriffsmöglichkeiten bieten wie die Eigenschaft selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-122">The type of a property must be at least as accessible as the property itself.</span></span>|
+|[<span data-ttu-id="9d1bc-123">Ereignisse</span><span class="sxs-lookup"><span data-stu-id="9d1bc-123">Events</span></span>](../../programming-guide/events/index.md)|<span data-ttu-id="9d1bc-124">Der Typ eines Ereignisses muss mindestens dieselben Zugriffsmöglichkeiten bieten wie das Ereignis selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-124">The type of an event must be at least as accessible as the event itself.</span></span>|
+|[<span data-ttu-id="9d1bc-125">Indexer</span><span class="sxs-lookup"><span data-stu-id="9d1bc-125">Indexers</span></span>](../../programming-guide/indexers/index.md)|<span data-ttu-id="9d1bc-126">Der Typ und die Parametertypen eines Indexers müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Indexer selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-126">The type and parameter types of an indexer must be at least as accessible as the indexer itself.</span></span>|
+|[<span data-ttu-id="9d1bc-127">Operatoren</span><span class="sxs-lookup"><span data-stu-id="9d1bc-127">Operators</span></span>](../../programming-guide/statements-expressions-operators/operators.md)|<span data-ttu-id="9d1bc-128">Die Rückgabe- und Parametertypen eines Operators müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Operator selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-128">The return type and parameter types of an operator must be at least as accessible as the operator itself.</span></span>|
+|[<span data-ttu-id="9d1bc-129">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="9d1bc-129">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)|<span data-ttu-id="9d1bc-130">Die Parametertypen eines Konstruktors müssen mindestens dieselben Zugriffsmöglichkeiten bieten wie der Konstruktor selbst.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-130">The parameter types of a constructor must be at least as accessible as the constructor itself.</span></span>|
+
+## <a name="example"></a><span data-ttu-id="9d1bc-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9d1bc-131">Example</span></span>
+
+<span data-ttu-id="9d1bc-132">Das folgende Beispiel enthält fehlerhafte Deklarationen verschiedener Typen.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-132">The following example contains erroneous declarations of different types.</span></span> <span data-ttu-id="9d1bc-133">Der Kommentar nach jeder Deklaration gibt den erwarteten Compilerfehler an.</span><span class="sxs-lookup"><span data-stu-id="9d1bc-133">The comment following each declaration indicates the expected compiler error.</span></span>
+
+```csharp
+// Restrictions on Using Accessibility Levels
+// CS0052 expected as well as CS0053, CS0056, and CS0057
+// To make the program work, change access level of both class B
+// and MyPrivateMethod() to public.
+
+using System;
+
+// A delegate:
+delegate int MyDelegate();
+
+class B
+{
+    // A private method:
+    static int MyPrivateMethod()
+    {
+        return 0;
+    }
+}
+
+public class A
+{
+    // Error: The type B is less accessible than the field A.myField.
+    public B myField = new B();
+
+    // Error: The type B is less accessible
+    // than the constant A.myConst.
+    public readonly B myConst = new B();
+
+    public B MyMethod()
+    {
+        // Error: The type B is less accessible 
+        // than the method A.MyMethod.
+        return new B();
+    }
+
+    // Error: The type B is less accessible than the property A.MyProp
+    public B MyProp
+    {
+        set
+        {
+        }
+    }
+
+    MyDelegate d = new MyDelegate(B.MyPrivateMethod);
+    // Even when B is declared public, you still get the error: 
+    // "The parameter B.MyPrivateMethod is not accessible due to 
+    // protection level."
+
+    public static B operator +(A m1, B m2)
+    {
+        // Error: The type B is less accessible
+        // than the operator A.operator +(A,B)
+        return new B();
+    }
+
+    static void Main()
+    {
+        Console.Write("Compiled successfully");
+    }
+}
+```
+
+## <a name="c-language-specification"></a><span data-ttu-id="9d1bc-134">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="9d1bc-134">C# language specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="9d1bc-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9d1bc-135">See also</span></span>
+
+- [<span data-ttu-id="9d1bc-136">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="9d1bc-136">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="9d1bc-137">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="9d1bc-137">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9d1bc-138">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="9d1bc-138">C# Keywords</span></span>](../../language-reference/keywords/index.md)
+- [<span data-ttu-id="9d1bc-139">Zugriffsmodifizierer</span><span class="sxs-lookup"><span data-stu-id="9d1bc-139">Access Modifiers</span></span>](../../language-reference/keywords/access-modifiers.md)
+- [<span data-ttu-id="9d1bc-140">Zugriffsdomäne</span><span class="sxs-lookup"><span data-stu-id="9d1bc-140">Accessibility Domain</span></span>](../../language-reference/keywords/accessibility-domain.md)
+- [<span data-ttu-id="9d1bc-141">Zugriffsebenen</span><span class="sxs-lookup"><span data-stu-id="9d1bc-141">Accessibility Levels</span></span>](../../language-reference/keywords/accessibility-levels.md)
+- [<span data-ttu-id="9d1bc-142">Zugriffsmodifizierer</span><span class="sxs-lookup"><span data-stu-id="9d1bc-142">Access Modifiers</span></span>](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [<span data-ttu-id="9d1bc-143">public</span><span class="sxs-lookup"><span data-stu-id="9d1bc-143">public</span></span>](../../language-reference/keywords/public.md)
+- [<span data-ttu-id="9d1bc-144">private</span><span class="sxs-lookup"><span data-stu-id="9d1bc-144">private</span></span>](../../language-reference/keywords/private.md)
+- [<span data-ttu-id="9d1bc-145">protected</span><span class="sxs-lookup"><span data-stu-id="9d1bc-145">protected</span></span>](../../language-reference/keywords/protected.md)
+- [<span data-ttu-id="9d1bc-146">internal</span><span class="sxs-lookup"><span data-stu-id="9d1bc-146">internal</span></span>](../../language-reference/keywords/internal.md)
