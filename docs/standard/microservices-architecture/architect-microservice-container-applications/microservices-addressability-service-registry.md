@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Adre
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106670"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43388904"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Adressierbarkeit von Microservices und die Dienstregistrierung
 
@@ -19,7 +19,7 @@ Das [Muster der Dienstregistrierung](https://microservices.io/patterns/service-r
 
 In manchen Bereitstellungsumgebungen für Microservices (auch Clusters genannt, wie in einem späteren Abschnitt erklärt wird) ist die Diensterkennung integriert. Zum Beispiel können Kubernetes und DC/OS mit Marathon innerhalb einer Azure Container Service-Umgebung die Registrierung und die Registrierungsaufhebung von Dienstinstanzen verarbeiten. Diese führen ebenfalls einen Proxy auf jedem Clusterhost aus, der die Rolle eines serverseitigen Suchrouters übernimmt. Ein weiteres Beispiel ist Azure Service Fabric, was ebenfalls eine Dienstregistrierung über einen integrierten Namensdienst bereitstellt.
 
-Beachten Sie, dass es eine gewisse Überschneidung zwischen der Dienstregistrierung und dem API-Gatewaymuster gibt, die ebenfalls zur Lösung dieses Problems beiträgt. Zum Beispiel ist der [Reverseproxy in Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) eine Art der Implementierung eines API-Gateways, die auf dem Namensdienst von Service Fabric basiert und dabei hilft, die Adressauflösung in interne Dienste aufzulösen.
+Beachten Sie, dass es eine gewisse Überschneidung zwischen der Dienstregistrierung und dem API-Gatewaymuster gibt, die ebenfalls zur Lösung dieses Problems beiträgt. Zum Beispiel ist der [Reverseproxy in Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) eine Art der Implementierung eines API-Gateways, die auf dem Naming Service von Service Fabric basiert und dabei hilft, die Adressauflösung in interne Dienste aufzulösen.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

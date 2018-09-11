@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Clie
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104568"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395675"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 
@@ -23,7 +23,7 @@ Selbst wenn Sie die clientseitige Prüfung verwenden, sollten Sie Befehle und Ei
 
 Aus diesem Grund überprüfen Sie im clientseitigen Code in der Regel die ViewModels. Sie können auch die Ausgabe-DTOs oder -befehle des Clients überprüfen, bevor sie an die Dienste gesendet werden.
 
-Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von Clientanwendung Sie erstellen, je nachdem, ob Sie Daten in einer MVC-Webanwendung mit einem Großteil des Codes in .NET, in einer SPA-Webanwendung in JavaScript oder TypeScript oder in einer mobilen, in Xamarin und C\# codierten App prüfen.
+Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von Clientanwendung Sie erstellen, je nachdem, ob Sie Daten in einer MVC-Webanwendung mit einem Großteil des Codes in .NET, in einer SPA-Webanwendung in JavaScript oder TypeScript oder in einer mobilen, in Xamarin und C# codierten App prüfen.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -42,8 +42,8 @@ Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von 
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Prüfung in SPA-Web-Apps (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation (Formularüberprüfung von Angular 2)** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Angular 2 Form Validation (Formularüberprüfung von Angular 2)**
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **Form Validation (Überprüfung von Formularen)**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von 
 
 Dies sind die wichtigsten Konzepte in Bezug auf die Prüfung:
 
--   Entitäten und Aggregate sollten ihre eigenen Konsistenz erzwingen und „immer gültig“ sein. Aggregatstämme sind für die Konsistenz mehrerer Entitäten innerhalb desselben Aggregats verantwortlich.
+- Entitäten und Aggregate sollten ihre eigenen Konsistenz erzwingen und „immer gültig“ sein. Aggregatstämme sind für die Konsistenz mehrerer Entitäten innerhalb desselben Aggregats verantwortlich.
 
--   Wenn Sie glauben, dass eine Entität in einen ungültigen Zustand übergehen muss, sollten Sie die Verwendung eines anderen Objektmodells in Betracht ziehen, z.B. ein vorübergehendes DTO, bis Sie die letzte Domänenentität erstellen.
+- Wenn Sie glauben, dass eine Entität in einen ungültigen Zustand übergehen muss, sollten Sie die Verwendung eines anderen Objektmodells in Betracht ziehen, z.B. ein vorübergehendes DTO, bis Sie die letzte Domänenentität erstellen.
 
--   Wenn Sie mehrere verwandte Objekte wie ein Aggregat erstellen müssen und diese nur gültig sind, wenn alle von ihnen erstellt wurden, sollten Sie die Verwendung des Factorymusters erwägen.
+- Wenn Sie mehrere verwandte Objekte wie ein Aggregat erstellen müssen und diese nur gültig sind, wenn alle von ihnen erstellt wurden, sollten Sie die Verwendung des Factorymusters erwägen.
 
--   Prüfungsframeworks funktionieren am besten in bestimmten Ebenen, z.B. in der Darstellungs- oder in der Anwendungs- bzw. Dienstebene, üblicherweise jedoch nicht auf der Domänenmodellebene, da dafür eine starke Abhängigkeit vom Infrastrukturframework notwendig wäre.
+- Prüfungsframeworks funktionieren am besten in bestimmten Ebenen, z.B. in der Darstellungs- oder in der Anwendungs- bzw. Dienstebene, üblicherweise jedoch nicht auf der Domänenmodellebene, da dafür eine starke Abhängigkeit vom Infrastrukturframework notwendig wäre.
 
--   In vielen Fällen ist eine redundante Prüfung auf Clientseite von Vorteil, da die Anwendung so proaktiv sein kann.
-
+- In vielen Fällen ist eine redundante Prüfung auf Clientseite von Vorteil, da die Anwendung so proaktiv sein kann.
 
 >[!div class="step-by-step"]
 [Zurück](domain-model-layer-validations.md)

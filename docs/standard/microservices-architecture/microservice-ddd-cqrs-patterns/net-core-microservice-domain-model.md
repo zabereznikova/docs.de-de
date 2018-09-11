@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Impl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e836eda7fdc7b55ca7d1fe2ef5bf48a2d4ecb5a3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106264"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43420926"
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
 

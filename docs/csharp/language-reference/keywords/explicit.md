@@ -1,26 +1,28 @@
 ---
 title: Schlüsselwort „explicit“ (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 66d271fdac0bad356ee0bafc1732e2f410854da1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027940"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463142"
 ---
 # <a name="explicit-c-reference"></a>explicit (C#-Referenz)
 
-Das `explicit`-Schlüsselwort deklariert einen benutzerdefinierten Typkonvertierungsoperator, der mit einer Umwandlung aufgerufen werden muss. Beispielsweise konvertiert dieser Operator aus einer Klasse „Fahrenheit“ in die Klasse „Celsius“:
+Das `explicit`-Schlüsselwort deklariert einen benutzerdefinierten Typkonvertierungsoperator, der mit einer Umwandlung aufgerufen werden muss.
+
+Im folgenden Beispiel wird der Operator definiert, der eine Konvertierung aus einer `Fahrenheit`-Klasse in eine `Celsius`-Klasse durchführt. Der Operator muss entweder in einer `Fahrenheit`-Klasse oder in einer `Celsius`-Klasse definiert sein:
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-Dieser Konvertierungsoperator kann wie folgt aufgerufen werden:
+Rufen Sie den definierten Konvertierungsoperator mit einer Umwandlung ab, wie im folgenden Beispiel dargestellt wird:
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
@@ -48,10 +50,10 @@ Das folgende Beispiel definiert eine Struktur, `Digit`, die eine einzelne Dezima
 
 ## <a name="see-also"></a>Siehe auch
 
-[C#-Referenz](../index.md)  
-[C#-Programmierhandbuch](../../programming-guide/index.md)  
-[C#-Schlüsselwörter](index.md)  
-[implicit](implicit.md)  
-[Operator (C#-Referenz)](operator.md)  
-[Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-[Chained user-defined explicit conversions in C# (Verkettete benutzerdefinierte, explizite Konvertierungen in C#)](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  
+- [C#-Referenz](../index.md)  
+- [C#-Programmierhandbuch](../../programming-guide/index.md)  
+- [C#-Schlüsselwörter](index.md)  
+- [implicit](implicit.md)  
+- [Operator (C#-Referenz)](operator.md)  
+- [Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Chained user-defined explicit conversions in C# (Verkettete benutzerdefinierte, explizite Konvertierungen in C#)](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  

@@ -2,12 +2,12 @@
 title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330690"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478025"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)
 In diesem Thema wird das Erstellen von Dokumenten mit Namespaces beschrieben.  
@@ -58,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt das Erstellen eines Dokuments, das zwei Namespaces enthält. Einer der Namespaces ist der Standardnamespace. Der andere Namespace besitzt ein Präfix.  
   
- Durch das Aufnehmen von Namespaceattributen in das Stammelement werden die Namespaces so serialisiert, dass http://www.adventure-works.com zum Standardnamespace wird und www.fourthcoffee.com mit dem Präfix „fc“ serialisiert wird. Zum Erstellen eines Attributs, das einen Standardnamespace deklariert, erstellen Sie ein Attribut mit dem Namen  <legacyBold>xmlns</legacyBold> ohne einen Namespace. Der Wert des Attributs ist der Standardnamespace-URI.  
+ Durch das Aufnehmen von Namespaceattributen in das Stammelement werden die Namespaces so serialisiert, dass `http://www.adventure-works.com` zum Standardnamespace wird und `www.fourthcoffee.com` mit dem Präfix „fc“ serialisiert wird. Zum Erstellen eines Attributs, das einen Standardnamespace deklariert, erstellen Sie ein Attribut mit dem Namen  <legacyBold>xmlns</legacyBold> ohne einen Namespace. Der Wert des Attributs ist der Standardnamespace-URI.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

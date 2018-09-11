@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592014"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485533"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Übersicht über Synchronisierungsprimitiven
 <a name="top"></a> .NET Framework stellt eine Reihe von Synchronisierungsmechanismen zum Steuern der Interaktionen von Threads und zum Vermeiden von Racebedingungen bereit. Diese können grob in drei Kategorien eingeteilt werden: Sperren, Signalisieren und Interlocked-Vorgänge.  
@@ -40,7 +40,7 @@ ms.locfileid: "33592014"
  Sperren gewähren jeweils einem Thread oder einer angegebenen Anzahl von Threads die Kontrolle über eine  Ressource. Ein Thread, der eine exklusive Sperre anfordert, wenn die Sperre aktiv ist, wird gesperrt, bis die Sperre verfügbar wird.  
   
 ### <a name="exclusive-locks"></a>Exklusive Sperren  
- Die einfachste Form einer Sperre ist die `lock`-Anweisung in C# und die `SyncLock`-Anweisung in Visual Basic, die den Zugriff auf einen Codeblock steuert. So ein Block wird häufig als kritischer Abschnitt bezeichnet. Die `lock`-Anweisung wird mithilfe der <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>- und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>-Methode implementiert und verwendet den `try…catch…finally`-Block, um sicherzustellen, dass die Sperre aufgehoben wird.  
+ Die einfachste Form einer Sperre ist die `lock`-Anweisung in C# und die `SyncLock`-Anweisung in Visual Basic, die den Zugriff auf einen Codeblock steuert. So ein Block wird häufig als kritischer Abschnitt bezeichnet. Die `lock`-Anweisung wird mithilfe der <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>- und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>-Methode implementiert und verwendet den `try…finally`-Block, um sicherzustellen, dass die Sperre aufgehoben wird.  
   
  Im Allgemeinen ist die Verwendung der `lock`- oder `SyncLock`-Anweisung zum Schützen kleiner Codeblöcke, die nie mehr als eine einzelne Methode umfassen, die beste Verwendung der <xref:System.Threading.Monitor>-Klasse. Die <xref:System.Threading.Monitor>-Klasse ist zwar leistungsstark, aber anfällig für verwaiste Sperren und Deadlocks.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592014"
   
  Die <xref:System.Threading.Monitor>-Klasse kann nicht instanziiert werden. Ihre Methoden sind statisch (`Shared` in Visual Basic) und reagieren auf ein instanziierbares Sperrobjekt.  
   
- Eine grundlegende Übersicht finden Sie unter [Monitore](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Eine grundlegende Übersicht finden Sie unter [Monitore](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 #### <a name="mutex-class"></a>Mutex-Klasse  
  Threads fordern eine <xref:System.Threading.Mutex> durch Aufruf einer Überladung der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode an. Überladungen mit Timeouts werden bereitgestellt, damit Threads den Wartevorgang aufgeben können. Im Gegensatz zur <xref:System.Threading.Monitor>-Klasse kann ein Mutex lokal oder global sein. Globale Mutexe, auch als benannte Mutexe bezeichnet, sind im gesamten Betriebssystem sichtbar und können verwendet werden, um Threads in mehreren Anwendungsdomänen oder Prozessen zu synchronisieren. Lokale Mutexe stammen von <xref:System.MarshalByRefObject> ab und können über Anwendungsdomänengrenzen hinweg verwendet werden.  
@@ -109,7 +109,7 @@ ms.locfileid: "33592014"
   
  Threads blockieren Wait-Handles durch Aufrufen der Instanzmethode <xref:System.Threading.WaitHandle.WaitOne%2A> oder einer der statischen Methoden <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> oder <xref:System.Threading.WaitHandle.SignalAndWait%2A>. Wie sie freigegeben werden, hängt von der aufgerufenen Methode sowie von der Art des Wait-Handles ab.  
   
- Eine grundlegende Übersicht finden Sie unter [Wait-Handle](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
+ Eine grundlegende Übersicht finden Sie unter [Wait-Handle](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
   
 #### <a name="event-wait-handles"></a>Ereignis-Wait-Handles  
  Ereignis-Wait-Handles schließen die <xref:System.Threading.EventWaitHandle>-Klasse und die abgeleiteten Klassen <xref:System.Threading.AutoResetEvent> und <xref:System.Threading.ManualResetEvent> ein. Threads werden von einem Ereignis-Wait-Handle freigegeben, wenn das Ereignis-Wait-Handle durch Aufrufen der <xref:System.Threading.EventWaitHandle.Set%2A>-Methode oder mithilfe der <xref:System.Threading.WaitHandle.SignalAndWait%2A>-Methode signalisiert wird.  
@@ -167,11 +167,11 @@ ms.locfileid: "33592014"
   
 ## <a name="see-also"></a>Siehe auch  
  [Datensynchronisierung für Multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Monitore](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [Monitore](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Mutexe](../../../docs/standard/threading/mutexes.md)  
  [Semaphore and SemaphoreSlim (Semaphore und SemaphoreSlim)](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [Wait-Handles](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [Wait-Handles](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [Interlocked-Vorgänge](../../../docs/standard/threading/interlocked-operations.md)  
  [Lese-/Schreibsperren](../../../docs/standard/threading/reader-writer-locks.md)  
  [Barrier](../../../docs/standard/threading/barrier.md)  

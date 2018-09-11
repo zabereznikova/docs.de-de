@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752062"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391247"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C# #
 
@@ -34,6 +34,10 @@ Die wichtigsten Features von C# 1.0 umfassten:
 - [Anweisungen](../programming-guide/statements-expressions-operators/statements.md)
 - [Attribute](../programming-guide/concepts/attributes/index.md)
 - Literale
+
+## <a name="c-version-12"></a>C# Version 1.2
+
+C# Version 1.2, wird in Visual Studio 2003 bereitgestellt. Sie enthielt einige kleine Verbesserungen der Sprache. Die wichtigste Änderung betrifft, ab dieser Version, den in einer `foreach`-Schleife namens <xref:System.IDisposable.Dispose%2A> generierten Code in <xref:System.Collections.IEnumerator>, wenn <xref:System.Collections.IEnumerator> <xref:System.IDisposable> implementiert hat.
 
 ## <a name="c-version-20"></a>C# Version 2.0
 

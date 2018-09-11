@@ -3,14 +3,14 @@ title: 'Vorgehensweise: Ändern von Zeichenfolgeninhalten (C#-Leitfaden)'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 99102fe90f5f675235e2993b7dd99f59214862d2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 23d52a52291b3d5c36fc2ed0f299ab82aa5ffabd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243747"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482279"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C# #
+# <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
 In diesem Artikel werden verschiedene Methoden zum Erzeugen einer `string` durch Modifizieren einer vorhandenen `string` erläutert. Alle diese gezeigten Methoden geben das Ergebnis der Modifizierung als neues `string`-Objekt zurück. Um dies deutlich zu machen, wird das Ergebnis in den Beispielen als neue Variable gespeichert. Dann können Sie sich sowohl die ursprüngliche `string` als auch die `string` ansehen, die durch die Modifizierung beim Ausführen jedes Beispiels entsteht.
 
@@ -73,5 +73,5 @@ Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [Gi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)  
- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)  
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)  

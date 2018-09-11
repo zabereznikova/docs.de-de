@@ -2,12 +2,12 @@
 title: Beibehalten von Leerraum beim Laden oder Parsen von XML1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: f863a80d3e949ddc2cfe630ae3c309009315d020
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 019b4452bcd76fff462edab6a584cf5ae0276ee7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220970"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514447"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Beibehalten von Leerzeichen beim Laden oder Parsen von XML
 In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gesteuert werden kann.  
@@ -37,5 +37,6 @@ In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltec
   
  Zum Erstellen einer XML-Struktur können Sie einen <xref:System.Xml.XmlWriter> verwenden. Knoten, die in den <xref:System.Xml.XmlWriter> geschrieben werden, werden in der Struktur aufgefüllt. Wenn Sie jedoch eine XML-Struktur mit dieser Methode erstellen, bleiben alle Knoten unabhängig davon erhalten, ob der Knoten Leerraum ist und ob er signifikant ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Analysieren von XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

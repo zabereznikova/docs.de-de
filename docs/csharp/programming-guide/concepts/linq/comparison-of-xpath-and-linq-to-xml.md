@@ -1,30 +1,33 @@
 ---
-title: Vergleich zwischen XPath und LINQ to XML2
+title: Vergleich zwischen XPath und LINQ to XML
 ms.date: 07/20/2015
+dev_langs:
+- csharp
+- vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: 64860ab538105e7e3826b29f83b8e713ca525e21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f41aa19c89365c9236ca0b8d385ffa6fbaf6be1c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326432"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391735"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Vergleich zwischen XPath und LINQ to XML
-XPath und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] haben hinsichtlich ihrer Funktionalität einige Gemeinsamkeiten. Beide können verwendet werden, um Elementauflistungen, Attributauflistungen, Knotenauflistungen oder die Werte von Elementen oder Attributen aus XML-Strukturen abzurufen. Aber es gibt auch einige Unterschiede.  
+XPath und LINQ to XML haben einige Gemeinsamkeiten hinsichtlich ihrer Funktionalität. Beide können verwendet werden, um Elementauflistungen, Attributauflistungen, Knotenauflistungen oder die Werte von Elementen oder Attributen aus XML-Strukturen abzurufen. Aber es gibt auch einige Unterschiede.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>Unterschiede zwischen XPath und LINQ to XML  
- XPath lässt keine Projektion neuer Typen zu Es können nur Auflistungen der Knoten aus der Struktur zurückgegeben werden. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] kann dagegen eine Abfrage ausführen und ein Objektdiagramm oder eine XML-Struktur in einer neuen Form projizieren. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen umfassen deutlich mehr Funktionen und sind viel leistungsstärker als XPath-Ausdrücke.  
+ XPath lässt keine Projektion neuer Typen zu Es können nur Sammlungen der Knoten aus der Struktur zurückgegeben werden. LINQ to XML kann dagegen eine Abfrage ausführen und ein Objektdiagramm oder eine XML-Struktur in einer neuen Form projizieren. LINQ to XML-Abfragen umfassen deutlich mehr Funktionen und sind viel leistungsstärker als XPath-Ausdrücke.  
   
- XPath-Ausdrücke existieren innerhalb einer Zeichenfolge isoliert. Der C#-Compiler kann nicht helfen, den XPath-Ausdruck beim Kompilieren zu analysieren. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen werden dagegen vom C#-Compiler analysiert und kompiliert. Der Compiler kann eine Vielzahl von Abfragefehlern abfangen.  
+ XPath-Ausdrücke existieren innerhalb einer Zeichenfolge isoliert. Der C#-Compiler kann nicht helfen, den XPath-Ausdruck beim Kompilieren zu analysieren. LINQ to XML-Abfragen werden dagegen vom C#-Compiler analysiert und kompiliert. Der Compiler kann eine Vielzahl von Abfragefehlern abfangen.  
   
- XPath-Ergebnisse sind nicht stark typisiert. In vielen Situationen ist das Ergebnis der Auswertung eines XPath-Ausdrucks ein Objekt, und es obliegt dem Entwickler, den richtigen Typ zu bestimmen und das Ergebnis nach Bedarf zu konvertieren. Im Gegensatz dazu sind die Projektionen aus einer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfrage stark typisiert.  
+ XPath-Ergebnisse sind nicht stark typisiert. In vielen Situationen ist das Ergebnis der Auswertung eines XPath-Ausdrucks ein Objekt, und es obliegt dem Entwickler, den richtigen Typ zu bestimmen und das Ergebnis nach Bedarf zu konvertieren. Im Gegensatz dazu sind die Projektionen aus einer LINQ to XML-Abfrage stark typisiert.  
   
 ## <a name="result-ordering"></a>Reihenfolge der Ergebnisanzeige  
  Laut XPath 1.0-Empfehlung ist eine Auflistung, die das Ergebnis der Auswertung eines XPath-Ausdrucks ist, nicht geordnet.  
   
- Beim Durchlaufen einer Auflistung, die von einer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-XPath-Achsenmethode zurückgegeben wurde, werden die Knoten in der Auflistung jedoch in der Dokumentreihenfolge zurückgegeben. Dies ist auch beim Zugriff auf die XPath-Achsen der Fall, wo beim Ausdrücken von Prädikaten auf die umgekehrte Dokumentreihenfolge zurückgegriffen wird, wie z. B. `preceding` und `preceding-sibling`.  
+ Beim Durchlaufen einer Sammlung, die von einer LINQ to XML-XPath-Achsenmethode zurückgegeben wurde, werden die Knoten in der Sammlung jedoch in der Dokumentreihenfolge zurückgegeben. Dies ist auch beim Zugriff auf die XPath-Achsen der Fall, wo beim Ausdrücken von Prädikaten auf die umgekehrte Dokumentreihenfolge zurückgegriffen wird, wie z. B. `preceding` und `preceding-sibling`.  
   
- Die meisten [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Achsen geben Auflistungen in der Dokumentreihenfolge zurück, aber bei zweien, <xref:System.Xml.Linq.XNode.Ancestors%2A> und <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, werden die Auflistungen in umgekehrter Dokumentreihenfolge zurückgegeben. In der folgenden Tabelle werden die Achsen aufgeführt, und es wird jeweils die Auflistungsreihenfolge angegeben:  
+ Die meisten LINQ to XML-Achsen geben Sammlungen in der Dokumentreihenfolge zurück, aber bei zweien, <xref:System.Xml.Linq.XNode.Ancestors%2A> und <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, werden die Sammlungen in umgekehrter Dokumentreihenfolge zurückgegeben. In der folgenden Tabelle werden die Achsen aufgeführt, und es wird jeweils die Auflistungsreihenfolge angegeben:  
   
 |LINQ to XML-Achse|Sortieren|  
 |----------------------|--------------|  
@@ -47,32 +50,44 @@ XPath und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] haben hinsichtli
 ## <a name="positional-predicates"></a>Positionsprädikate  
  Innerhalb von XPath-Ausdrücken werden Positionsprädikate bei vielen Achsen in der Dokumentreihenfolge angegeben, aber bei den rückwärts gerichteten Achsen `preceding`, `preceding-sibling`, `ancestor` und `ancestor-or-self` wird die umgekehrte Dokumentreihenfolge verwendet. So gibt z. B. der XPath-Ausdruck `preceding-sibling::*[1]` das unmittelbar vorausgehende nebengeordnete Element zurück, auch wenn das endgültige Resultset in der Dokumentreihenfolge angegeben wird.  
   
- Dagegen werden alle Positionsprädikate in LINQ to XML stets in der Reihenfolge der Achse angegeben. So wird z. B. bei `anElement.ElementsBeforeSelf().ToList()[0]` statt des unmittelbar vorausgehenden nebengeordneten Elements das erste untergeordnete Element der Ebene oberhalb des abgefragten Elements zurückgegeben. Ein anderes Beispiel: `anElement.Ancestors().ToList()[0]` gibt das übergeordnete Element zurück.  
+ Dagegen werden alle Positionsprädikate in LINQ to XML stets in der Reihenfolge der Achse angegeben. So wird z. B. bei `anElement.ElementsBeforeSelf().ElementAt(0)` statt des unmittelbar vorausgehenden nebengeordneten Elements das erste untergeordnete Element der Ebene oberhalb des abgefragten Elements zurückgegeben. Ein anderes Beispiel: `anElement.Ancestors().ElementAt(0)` gibt das übergeordnete Element zurück.  
   
- Beachten Sie, dass bei der oben beschriebenen Herangehensweise die gesamte Auflistung materialisiert wird. Dies ist nicht die effizienteste Art, diese Abfrage zu schreiben. Die Abfrage in der dargestellten Form soll lediglich das Verhalten der Positionsprädikate zeigen. Dieselbe Abfrage könnte vernünftiger mit der <xref:System.Linq.Enumerable.First%2A>-Methode geschrieben werden: `anElement.ElementsBeforeSelf().First()`.  
+ Wenn Sie für die Suche nach dem unmittelbar vorausgehenden Element LINQ to XML verwenden möchten, müssten Sie den folgenden Ausdruck schreiben:  
   
- Wenn Sie für die Suche nach dem unmittelbar vorausgehenden Element [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwenden möchten, müssten Sie den folgenden Ausdruck schreiben:  
+```csharp
+ElementsBeforeSelf().Last()
+```
   
- `ElementsBeforeSelf().Last()`  
+```vb
+ElementsBeforeSelf().Last()
+```
   
 ## <a name="performance-differences"></a>Leistungsunterschiede  
- XPath-Abfragen, die die XPath-Funktionalität in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] verwenden, sind nicht so schnell, wie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen.  
+ XPath-Abfragen, die die XPath-Funktionalität in LINQ to XML verwenden, sind nicht so schnell, wie LINQ to XML-Abfragen.  
   
 ## <a name="comparison-of-composition"></a>Verfassen von Abfragen im Vergleich  
- Das Verfassen einer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfrage weist Parallelen mit dem Verfassen eines XPath-Ausdrucks auf, beide haben aber eine sehr unterschiedliche Syntax.  
+ Das Verfassen einer LINQ to XML-Abfrage weist Parallelen mit dem Verfassen eines XPath-Ausdrucks auf, beide haben aber eine sehr unterschiedliche Syntax.  
   
  Wenn Sie z. B. ein Element in einer Variable namens `customers` haben und in allen untergeordneten Elementen mit dem Namen `CompanyName` nach einem Element der zweiten Unterebene namens `Customer` suchen, würden Sie den folgenden XPath-Ausdruck schreiben:  
   
 ```csharp  
-customers.XPathSelectElements("./Customer/CompanyName");  
+customers.XPathSelectElements("./Customer/CompanyName")
 ```  
   
- Die entsprechende [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfrage würde wie folgt lauten:  
+```vb
+customers.XPathSelectElements("./Customer/CompanyName")
+```
+
+ Die entsprechende LINQ to XML-Abfrage lautet wie folgt:  
   
 ```csharp  
-customers.Element("Customer").Elements("CompanyName");  
+customers.Elements("Customer").Elements("CompanyName")
 ```  
   
+```vb
+customers.Elements("Customer").Elements("CompanyName")
+```  
+
  Ähnliche Parallelen gibt es auch bei allen anderen XPath-Achsen.  
   
 |XPath-Achse|LINQ to XML-Achse|  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960039"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43388142"
 ---
 # <a name="using-directive-c-reference"></a>using-Anweisung (C#-Referenz)
 Die `using`-Direktive hat drei Verwendungszwecke:  
@@ -20,7 +20,7 @@ Die `using`-Direktive hat drei Verwendungszwecke:
     using System.Text;  
     ```  
   
--   Ermöglicht den Zugriff auf statische Member eines Typs, ohne den Zugriff mit dem Typnamen zu qualifizieren. 
+-   Ermöglicht den Zugriff auf statische Member eines geschachtelten Typs, ohne den Zugriff mit dem Typnamen zu qualifizieren. 
   
     ```csharp  
     using static System.Math;  
@@ -52,13 +52,23 @@ class Program
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Bereich einer `using`-Direktive ist auf die Datei beschränkt, in der er enthalten ist.  
+ Der Bereich einer `using`-Direktive ist auf die Datei beschränkt, in der er enthalten ist.
+ 
+ Die `using`-Direktive kann an folgenden Stellen erscheinen:
+- Am Anfang einer Quellcodedatei, vor Namespace- oder Typdefinitionen.
+- In einem beliebigen Namespace, jedoch vor in diesem Namespace deklarierten Namespaces oder Typen.
+
+Andernfalls wird der Compilerfehler [CS1529](../../misc/cs1529.md) generiert.
   
- Erstellen Sie einen `using`-Alias, um das Qualifizieren eines Bezeichners in einen Namespace oder Typ zu vereinfachen. Der rechten Seite einer using-Aliasdirektive muss immer ein vollqualifizierter Typ sein, unabhängig von den using-Direktiven davor.  
+ Erstellen Sie eine `using`-Alias-Direktive, um das Qualifizieren eines Bezeichners in einen Namespace oder Typ zu vereinfachen. In jeder `using`-Direktive muss der vollqualifizierte Namespace oder Typ unabhängig von den davor aufgeführten `using`-Direktiven verwendet werden. In der Deklaration einer `using`-Direktive kann kein `using`-Alias verwendet werden. Der folgende Code verursacht beispielsweise einen Compilerfehler:
+ ```csharp
+ using s = System.Text;
+ using s.RegularExpressions; 
+ ```
   
  Erstellen Sie eine `using`-Direktive, um die Typen in einem Namespace zu verwenden, ohne den Namespace angeben zu müssen. Eine `using`-Direktive ermöglicht Ihnen nicht den Zugriff auf Namespaces, die im angegebenen Namespace geschachtelt sind.  
   
- Gibt zwei Kategorien von Namespaces: benutzerdefinierte und systemdefinierte Namespaces. Benutzerdefinierte Namespaces sind Namespaces, die im Code definiert sind. Eine Liste der vom System definierten Namespaces finden Sie unter [Übersicht über die .NET Framework-Klassenbibliothek](../../../standard/class-library-overview.md).  
+ Gibt zwei Kategorien von Namespaces: benutzerdefinierte und systemdefinierte Namespaces. Benutzerdefinierte Namespaces sind Namespaces, die im Code definiert sind. Eine Liste der systemdefinierten Namespaces finden Sie unter [.NET API-Browser](https://docs.microsoft.com/en-us/dotnet/api/).  
   
  Beispiele für das Verweisen auf Methoden in anderen Assemblys finden Sie unter [Erstellen und Verwenden von Assemblys über die Befehlszeile](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
@@ -79,11 +89,12 @@ class Program
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Using-Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
- [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Using-Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
+- [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)

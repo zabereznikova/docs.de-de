@@ -6,15 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289268"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395136"
 ---
 # <a name="line-c-reference"></a>#line (C#-Referenz)
-Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamenausgabe für Fehler und Warnungen bearbeiten. Dieses Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind. Die `#line 200`-Anweisung erzwingt die Zeilennummer 200 (obwohl der Standardwert #7 ist), und bis zur nächsten #line-Anweisung wird der Dateiname als „Special“ gemeldet. Die #line-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.  
+Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamensausgabe für Fehler und Warnungen bearbeiten.
+
+Das folgende Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind. Die `#line 200`-Anweisung erzwingt die Nummer 200 der nächsten Zeile (obwohl der Standardwert #6 ist), und bis zur nächsten #line-Anweisung wird der Dateiname als „Special“ gemeldet. Die #line-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.  
   
 ```csharp
 class MainClass  
@@ -22,18 +24,28 @@ class MainClass
     static void Main()  
     {  
 #line 200 "Special"  
-        int i;    // CS0168 on line 200  
-        int j;    // CS0168 on line 201  
+        int i;
+        int j;
 #line default  
-        char c;   // CS0168 on line 9  
-        float f;  // CS0168 on line 10  
+        char c;
+        float f;
 #line hidden // numbering not affected  
         string s;   
-        double d; // CS0168 on line 13  
+        double d;
     }  
 }  
 ```  
-  
+Bei der Kompilierung wird die folgende Ausgabe erzeugt:
+
+```console
+Special(200,13): warning CS0168: The variable 'i' is declared but never used
+Special(201,13): warning CS0168: The variable 'j' is declared but never used
+MainClass.cs(9,14): warning CS0168: The variable 'c' is declared but never used
+MainClass.cs(10,15): warning CS0168: The variable 'f' is declared but never used
+MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
+MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
+```
+
 ## <a name="remarks"></a>Hinweise  
  Die `#line`-Anweisung könnte in einem automatischen Zwischenschritt im Buildprozess verwendet werden. Wenn beispielsweise Zeilen aus der ursprünglichen Quellcodedatei entfernt würden, Sie jedoch trotzdem möchten, dass der Compiler eine Ausgabe basierend auf der ursprünglichen Zeilennummerierung in der Datei generiert, könnten Sie Zeilen entfernen und anschließend die ursprüngliche Zeilennummerierung mit `#line` simulieren.  
   
@@ -64,7 +76,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)

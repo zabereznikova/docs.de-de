@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925801"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417860"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer
 In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendung in Visual Studio erstellen, die Meldungen in ein Ereignisprotokoll schreibt. Hier werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen und Verwenden Ihres Dienstes:  
@@ -477,7 +477,7 @@ Dieser Code ändert den **ImagePath** -Registrierungsschlüssel, der in der Rege
      Wenn der Dienst erfolgreich deinstalliert ist, meldet installutil.exe, dass der Dienst erfolgreich entfernt wurde. Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie können ein eigenständiges Setupprogramm erstellen, mit dem andere Ihren Windows-Dienst installieren können, aber es sind zusätzliche Schritte erforderlich. ClickOnce unterstützt Windows-Dienste nicht, deshalb können Sie den Webpublishing-Assistenten nicht verwenden. Sie können eine Vollversion von InstallShield verwenden, die Microsoft nicht bereitstellt. Weitere Informationen zu InstallShield finden Sie unter [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Ein Installationsprogramm für einen Windows-Dienst lässt sich auch mit dem [Windows Installer XML-Toolset](http://go.microsoft.com/fwlink/?LinkId=249067) erstellen.  
+ Sie können ein eigenständiges Setupprogramm erstellen, mit dem andere Ihren Windows-Dienst installieren können, aber es sind zusätzliche Schritte erforderlich. ClickOnce unterstützt Windows-Dienste nicht, deshalb können Sie den Webpublishing-Assistenten nicht verwenden. Sie können eine Vollversion von InstallShield verwenden, die Microsoft nicht bereitstellt. Weitere Informationen zu InstallShield finden Sie unter [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Ein Installationsprogramm für einen Windows-Dienst lässt sich auch mit dem [Windows Installer XML-Toolset](https://go.microsoft.com/fwlink/?LinkId=249067) erstellen.  
   
  Sie können eine <xref:System.ServiceProcess.ServiceController> -Komponente verwenden, um Befehle an den von Ihnen installierten Dienst zu senden.  
   
@@ -487,4 +487,4 @@ Dieser Code ändert den **ImagePath** -Registrierungsschlüssel, der in der Rege
  [Windows-Dienstanwendungen](../../../docs/framework/windows-services/index.md)  
  [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [Dienste (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [Dienste (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

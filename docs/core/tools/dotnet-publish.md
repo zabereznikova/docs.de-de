@@ -4,12 +4,12 @@ description: Der „dotnet publish“-Befehl veröffentlicht ein .NET Core-Proje
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 38224aa8472f99df107e523667e18892384a20b0
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: a60777d613573076f41fba3e5ed610b236884063
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220671"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416921"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -86,7 +86,7 @@ Gibt mindestens ein [Zielmanifest](../deploying/runtime-store.md) an, das verwen
 
 `--no-build`
 
-Erstellt das Projekt nicht vor der Veröffentlichung. Das `--no-restore`-Flag wird implizit festgelegt.
+Erstellt das Projekt nicht vor der Veröffentlichung. Zudem wird das Flag `--no-restore` implizit festgelegt.
 
 `--no-dependencies`
 

@@ -18,17 +18,17 @@ ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f85b63b151bcc20db635f56ec1dfec8df6c92241
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 640caf57638acae9bbe39d3f1039bc08c036785f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395777"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43394871"
 ---
 # <a name="listening-with-sockets"></a>Überwachen mit Sockets
 Listener oder Serversockets öffnen einen Port auf dem Netzwerk und warten dann darauf, dass ein Client eine Verbindung zu diesem Port herstellt. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie ein Remotedienst für ein TCP/IP-Netzwerk erstellt wird.  
   
- Die eindeutige Adresse eines TCP/IP-Diensts wird definiert, indem die IP-Adresse des Hosts mit der Portnummer des Diensts kombiniert wird, um einen Endpunkt für den Dienst zu erstellen. Die Klasse <xref:System.Net.Dns> enthält Methoden, die Informationen über die Netzwerkadressen zurückgeben, die vom lokalen Netzwerkgerät unterstützt werden. Wenn das lokale Netzwerkgerät über mehr als eine Netzwerkadresse verfügt, oder wenn das lokale System mehr als ein Netzwerkgerät unterstützt, gibt die **Dns**-Klasse Informationen über alle Netzwerkadressen zurück. Die Anwendung muss dann die richtige Adresse für den Dienst auswählen. Internet Assigned Numbers Authority (Iana) definiert die Portnummern für gemeinsame Dienste (weitere Informationen finden Sie unter www.iana.org/assignments/port-numbers). Andere Dienste haben registrierte Portnummern im Bereich von 1024 bis 65.535.  
+ Die eindeutige Adresse eines TCP/IP-Diensts wird definiert, indem die IP-Adresse des Hosts mit der Portnummer des Diensts kombiniert wird, um einen Endpunkt für den Dienst zu erstellen. Die Klasse <xref:System.Net.Dns> enthält Methoden, die Informationen über die Netzwerkadressen zurückgeben, die vom lokalen Netzwerkgerät unterstützt werden. Wenn das lokale Netzwerkgerät über mehr als eine Netzwerkadresse verfügt, oder wenn das lokale System mehr als ein Netzwerkgerät unterstützt, gibt die **Dns**-Klasse Informationen über alle Netzwerkadressen zurück. Die Anwendung muss dann die richtige Adresse für den Dienst auswählen. Die Internet Assigned Numbers Authority (Iana) definiert Portnummern für gemeinsame Dienste. Weitere Informationen finden Sie unter [Service Name and Transport Protocol Port Number Registry (Registrierung von Portnummern für Dienstnamen und Transportprotokolle)](https://www.iana.org/assignments/port-numbers). Andere Dienste haben registrierte Portnummern im Bereich von 1024 bis 65.535.  
   
  Das folgende Beispiel erstellt eine <xref:System.Net.IPEndPoint> für einen Server, indem die erste IP-Adresse, die die**Dns** für den Hostcomputer zurückgegeben hat, mit einer Portnummer kombiniert wird, die aus dem Bereich der registrierten Portnummern ausgewählt wird.  
   

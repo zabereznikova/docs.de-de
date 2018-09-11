@@ -4,18 +4,18 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Impl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d5902c5a0744d74ae5086a4df3aee606b24b6030
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875166"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403526"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
-Wie bereits in einem vorherigen Artikel erwähnt wurde, sollten Sie Fehler behandeln, deren Behebung unterschiedlich lange dauern kann. Dies kann beispielsweise der Fall sein, wenn Sie versuchen, eine Verbindung mit einem Remotedienst oder einer Remoteressource herzustellen. Die Behandlung derartiger Fehler kann die Stabilität und Robustheit einer Anwendung erhöhen.
+Wie bereits in einem vorherigen Artikel erwähnt wurde, sollten Sie Fehler behandeln, deren Behebung unterschiedlich lange dauern kann. Dies kann beispielsweise der Fall sein, wenn Sie versuchen, sich mit einem Remote-Dienst oder einer Remote-Ressource zu verbinden. Die Behandlung derartiger Fehler kann die Stabilität und Robustheit einer Anwendung erhöhen.
 
-In einer verteilten Umgebung können Aufrufe von Remote-Ressourcen und -Diensten fehlschlagen, wenn vorübergehende Fehler wie langsame Netzwerkverbindungen und Timeouts auftreten oder wenn Ressourcen zu langsam oder vorübergehend nicht verfügbar sind. Diese Fehler werden in der Regel nach kurzer Zeit korrigiert, und eine robuste Cloudanwendung sollte diese durch eine Strategie wie das Wiederholungsmuster behandeln können. 
+In einer verteilten Umgebung können Aufrufe von Remote-Ressourcen und -Diensten fehlschlagen, wenn vorübergehende Fehler wie langsame Netzwerkverbindungen und Timeouts auftreten oder wenn Ressourcen zu langsam reagieren oder vorübergehend nicht verfügbar sind. Diese Fehler werden in der Regel nach kurzer Zeit korrigiert, und eine robuste Cloudanwendung sollte diese durch eine Strategie wie das Wiederholungsmuster behandeln können. 
 
 Es gibt jedoch auch Situationen, in denen Fehler aufgrund unerwarteter Ereignisse auftreten. Die Behebung dieser Fehler kann deutlich mehr Zeit in Anspruch nehmen. Zu unterscheiden sind unterschiedliche Schweregrade, die von einem Teilverlust der Konnektivität bis hin zum vollständigen Ausfall des Diensts reichen können. In diesen Situationen ist es möglicherweise nicht sinnvoll, wenn eine Anwendung einen Vorgang mehrfach wiederholt, der wahrscheinlich nicht erfolgreich ausgeführt werden kann. 
 
@@ -23,7 +23,7 @@ Stattdessen sollte die Anwendung so programmiert sein, dass ein fehlgeschlagener
 
 Wenn Sie HTTP-Wiederholungen nicht sorgfältig verwenden, kann dies zu einem Denial-of-Service-Angriff ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) innerhalb Ihrer eigenen Software führen. Wenn ein Microservice fehlschlägt oder langsam ausgeführt wird, wiederholen möglicherweise mehrere Clients fehlgeschlagene Anforderungen. Dadurch entsteht das Risiko, exponentiell ansteigenden Datenverkehr zu erzeugen, den fehlgeschlagenen Dienst anzielt.
 
-Deshalb benötigen Sie eine „Sicherung“, damit die Anforderungen beendet werden, wenn weitere Versuche überflüssig sind. Bei dieser Sicherung handelt es sich um den Circuit Breaker.
+Deshalb benötigen Sie eine „Sicherung“, damit übermäßige Anforderungen beendet werden, wenn weitere Versuche überflüssig sind. Bei dieser Sicherung handelt es sich um den Circuit Breaker.
 
 Das Circuit Breaker-Muster hat einen anderen Zweck als das Wiederholungsmuster. Das Wiederholungsmuster ermöglicht es einer Anwendung, einen Vorgang erneut auszuführen, wobei davon ausgegangen wird, dass dieser irgendwann erfolgreich ist. Letzteres hindert eine Anwendung daran, einen Vorgang auszuführen, der vermutlich fehlschlagen wird. Eine Anwendung kann diese beiden Muster kombinieren. Die Wiederholungslogik sollte jedoch Ausnahmen behandeln können, die vom Circuit Breaker zurückgegeben werden, und auf Wiederholungsversuche verzichten, wenn der Circuit Breaker anzeigt, dass ein Fehler nicht temporär ist.
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Im obigen Codebeispiel wird die Circuit Breaker-Richtlinie dafür konfiguriert, die Kommunikation zu unterbrechen oder fortzusetzen, wenn fünf Ausnahmen beim Wiederholen der HTTP-Anforderungen ausgelöst wurden. Die Dauer der Unterbrechung beträgt dann 30 Sekunden.
+Im obigen Codebeispiel wird die Circuit Breaker-Richtlinie dafür konfiguriert, die Kommunikation zu unterbrechen oder fortzusetzen, wenn beim Wiederholen der HTTP-Anforderungen fünf aufeinanderfolgende Fehler aufgetreten sind. In diesem Fall wird der Schaltkreis 30 Sekunden lang unterbrochen: In diesem Zeitraum schlagen Aufrufe durch den Circuit Breaker sofort fehl, statt tatsächlich durchgeführt zu werden.  Die Richtlinie interpretiert [relevante Ausnahmen und HTTP-Statuscodes](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) automatisch als Fehler.  
 
 Circuit Breakers sollten auch verwendet werden, um Anforderungen an eine Fallbackinfrastruktur umzuleiten, wenn Probleme bei einer bestimmten Ressource aufgetreten sind, die in einer anderen Umgebung als die Clientanwendung oder der Dienst bereitgestellt wird, die bzw. der den HTTP-Aufruf ausführt. Auf diese Weise kann die Clientanwendung bei einem Ausfall im Datencenter, der nur Back-End-Microservices, nicht aber Clientanwendungen betrifft, Anforderungen an Fallbackdienste umleiten. Für Polly wird aktuell eine Richtlinie zur Automatisierung dieses [Failoverrichtlinienszenarios](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) geplant. 
 
@@ -65,7 +65,6 @@ Die erwähnten Features sind nur für Fälle geeignet, in denen das Failover mit
 Bei der Verwendung von HttpClient besteht aus Benutzerperspektive keine Notwendigkeit, neue Elemente hinzuzufügen, da der Code wie in den vorherigen Abschnitten dargestellt identisch mit dem ist, der bei HttpClient mit HttpClientFactory verwendet wird. 
 
 ## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testen von HTTP-Wiederholungen und Circuit Breakern in eShopOnContainers
-
 
 Sobald Sie die eShopOnContainers-Lösung in einem Docker-Host starten, müssen mehrere Container gestartet werden. Einige Container wie der SQL Server-Container werden langsamer gestartet und initialisiert. Dies ist v.a. dann der Fall, wenn Sie die eShopOnContainers-Anwendung zum ersten Mal in Docker bereitstellen, da die Images und die Datenbank eingerichtet werden müssen. Der langsamere Start einiger Container kann dazu führen, dass die anderen Dienste auch dann anfänglich HTTP-Ausnahmen auslösen, wenn Sie, wie in den vorherigen Abschnitten beschrieben, Abhängigkeiten zwischen Containern auf der docker-compose-Ebene festlegen. Diese docker-compose-Abhängigkeiten zwischen Containern befinden sich nur auf der Prozessebene. Auch wenn der Einstiegspunktprozess des Containers bereits gestartet wurde, ist SQL Server möglicherweise noch nicht für Abfragen bereit. Das Ergebnis können zahlreiche Fehler sein. Außerdem wird in der Anwendung möglicherweise eine Ausnahme angezeigt, wenn sie versucht, den Container zu verwenden. 
 

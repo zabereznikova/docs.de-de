@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Logi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d675ba753903e181c67712e34eea82fed72df0d7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105435"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238415"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Logische und physische Architektur im Vergleich
 

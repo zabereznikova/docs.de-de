@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: a681a2fcbb874d67b82c8bda73d92dd993928bbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3c9adda4ca3a58edca48d6df3d2f5e4d5783187
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334508"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389150"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -24,7 +24,7 @@ ms.locfileid: "33334508"
   
 #### <a name="parameters"></a>Parameter  
  `filename`  
- Der Name der XML-Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad qualifiziert werden. `filename` muss in einfache Anführungszeichen (‚‘) eingeschlossen werden.  
+ Der Name der XML-Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad relativ zur Quellcodedatei qualifiziert werden. `filename` muss in einfache Anführungszeichen (‚‘) eingeschlossen werden.  
   
  `tagpath`  
  Der Pfad der Tags in `filename`, der zum Tag `name` führt. Der Pfad muss in einfache Anführungszeichen (‚‘) eingeschlossen werden.  

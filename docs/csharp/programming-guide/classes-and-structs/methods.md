@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: d3fc4107c10d098d40e4021bef9f6acd06311fab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336397"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473985"
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm bewirkt die Ausführung der Anweisungen, indem die Methode aufgerufen wird und alle erforderlichen Methodenargumente angegeben werden. In C# werden alle Anweisungen im Kontext einer Methode ausgeführt. Die Main-Methode ist der Einstiegspunkt jeder C#-Anwendung und wird von der Common Language Runtime (CLR) aufgerufen, wenn das Programm gestartet wird.  
@@ -24,7 +24,7 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
 > [!NOTE]
 >  Ein Rückgabetyp einer Methode ist nicht Teil der Signatur der Methode, wenn es um die Methodenüberladung geht. Er ist jedoch Teil der Methodensignatur, wenn die Kompatibilität zwischen einem Delegaten und der Methode bestimmt wird, auf die dieser verweist.  
   
- Methodenparameter werden in Klammern eingeschlossen und durch Kommas getrennt. Leere Klammern geben an, dass für die Methode keine Parameter erforderlich sind. Diese Klasse enthält drei Methoden:  
+ Methodenparameter werden in Klammern eingeschlossen und durch Kommas getrennt. Leere Klammern geben an, dass für die Methode keine Parameter erforderlich sind. Diese Klasse enthält vier Methoden:  
   
  [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
@@ -88,23 +88,23 @@ ref int distance = plant
 Die Zurückgabe eines mehrdimensionalen Arrays aus einer Methode, `M`, die den Inhalt eines Arrays modifiziert, ist nicht vonnöten, wenn die aufrufende Funktion das Array an `M` übergeben hat.  Sie können das resultierende Array aus `M` für den funktionalen Fluss der Werte oder aus stilistischen Gründen zurückgeben. Dies ist jedoch nicht nötig, da C# alle Referenztypen nach Wert übergibt und der Wert eines Arrayverweises ein Zeiger auf das Array ist. In der Methode `M` sind Änderungen am Inhalt des Arrays durch beliebigen Code beobachtbar, der einen Verweis auf das Array enthält, wie im folgenden Beispiel gezeigt.  
   
 ```csharp  
-static void Main(string[] args)  
-        {  
-            int[,] matrix = new int[2, 2];  
-            FillMatrix(matrix);  
-            // matrix is now full of -1  
-        }  
-  
-        public static void FillMatrix(int[,] matrix)  
-        {  
-            for (int i = 0; i < matrix.GetLength(0); i++)  
-            {  
-                for (int j = 0; j < matrix.GetLength(1); j++)  
-                {  
-                    matrix[i, j] = -1;  
-                }  
-            }  
-        }  
+static void Main(string[] args)
+{
+    int[,] matrix = new int[2, 2];
+    FillMatrix(matrix);
+    // matrix is now full of -1
+}
+
+public static void FillMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = -1;
+        }
+    }
+}
 ```  
   
  Weitere Informationen finden Sie unter [return](../../../csharp/language-reference/keywords/return.md).  
@@ -150,7 +150,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>oder <xref:System.Collections.Generic.IEnumerator%601>sein.  
   
- Weitere Informationen finden Sie unter [Iteratoren](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Weitere Informationen finden Sie unter [Iteratoren](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

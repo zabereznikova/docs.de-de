@@ -4,12 +4,12 @@ description: Informationen zum asynchronen Programmiermodell auf C#-Sprachebene,
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b753b887da6f8836e0f4363a479c12c7364ea770
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34312065"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484966"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -118,7 +118,7 @@ Die folgenden Beispiele veranschaulichen verschiedene Möglichkeiten, wie Sie as
 
 ### <a name="extracting-data-from-a-network"></a>Extrahieren von Daten aus einem Netzwerk
 
-Dieser Ausschnitt lädt den HTML-Code von www.dotnetfoundation.org herunter und zählt die Häufigkeit, mit der die Zeichenfolge „.NET“ im HTML-Code auftritt.  Er verwendet ASP.NET MVC zur Definition einer Webcontrollermethode, die diese Aufgabe ausführt, indem sie die Zahl zurückgibt.
+Dieser Ausschnitt lädt den HTML-Cod von der Homepage [www.dotnetfoundation.org](https://www.dotnetfoundation.org) herunter und zählt die Häufigkeit, mit der die Zeichenfolge „.NET“ im HTML-Code auftritt.  Er verwendet ASP.NET MVC zur Definition einer Webcontrollermethode, die diese Aufgabe ausführt, indem sie die Zahl zurückgibt.
 
 > [!NOTE]
 > Wenn Sie eine HTML-Analyse im Produktionscode durchführen möchten, nutzen Sie dafür nicht die regulären Ausdrücke. Verwenden Sie stattdessen eine Analysebibliothek.

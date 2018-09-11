@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 19283a795f8cfc444dfcb186dcecc0ea86eb27fd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961440"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467431"
 ---
 # <a name="-operator-c-reference"></a>Operator [] (C#-Referenz)
 Eckige Klammern (`[]`) werden für Arrays, Indexer und Attribute verwendet. Sie können auch mit Zeigern verwendet werden.  
@@ -30,7 +30,7 @@ Eckige Klammern (`[]`) werden für Arrays, Indexer und Attribute verwendet. Sie 
   
  Eine Ausnahme wird ausgelöst, wenn ein Arrayindex außerhalb des gültigen Bereichs liegt.  
   
- Der Arrayindizierungsoperator kann nicht überladen werden. Allerdings können Typen Indexer definieren sowie Eigenschaften, die einen oder mehrere Parameter annehmen. Indexerparameter werden wie Arrayindizes in rechteckige Klammern eingeschlossen, können aber als beliebiger Typ deklariert werden, während Arrayindizes ganzzahlig sein müssen.  
+ Der Arrayindizierungsoperator kann nicht überladen werden. Allerdings können Typen Indexer definieren, die einen oder mehrere Parameter annehmen. Indexerparameter werden wie Arrayindizes in rechteckige Klammern eingeschlossen, können aber als beliebiger Typ deklariert werden, während Arrayindizes ganzzahlig sein müssen.  
   
  .NET Framework definiert z.B. einen `Hashtable`-Typ, der Schlüssel und Werte beliebigen Typs verknüpft:  
   
@@ -49,11 +49,12 @@ Eckige Klammern (`[]`) werden für Arrays, Indexer und Attribute verwendet. Sie 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)  
- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)  
+- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)

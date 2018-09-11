@@ -6,30 +6,34 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245714"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467041"
 ---
 # <a name="classes-c-programming-guide"></a>Klassen (C#-Programmierhandbuch)
 Ein *Klasse* ist ein Konstrukt, das Ihnen ermöglicht, Ihre eigenen benutzerdefinierten Typen erstellen, indem Variablen anderer Typen, Methoden und Ereignisse zusammengefasst werden. Eine Klasse ist mit einem Entwurf vergleichbar. Sie definiert die Daten und das Verhalten eines Typs. Wenn die Klasse nicht als statisch deklariert wird, kann der Clientcode *Instanzen* von ihr erstellen. Diese Instanzen sind *Objekte*, die einer Variable zugewiesen werden. Die Instanz einer Klasse verbleibt im Arbeitsspeicher, bis alle Verweise darauf ihre Gültigkeit verlieren. Zu diesem Zeitpunkt markiert die CLR sie als geeignet für die Garbage Collection. Wenn die Klasse als [statisch](../../../csharp/language-reference/keywords/static.md) deklariert wird, können Sie keine Instanzen erstellen, und der Clientcode kann nur über die Klasse selbst auf sie zugreifen. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
 
 ## <a name="reference-types"></a>Verweistypen  
-Ein Typ, der als [Klasse](../../../csharp/language-reference/keywords/class.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../../csharp/language-reference/keywords/null.md), bis Sie explizit eine Instanz der Klasse mithilfe des Operators [new](../../../csharp/language-reference/keywords/new.md) erstellen oder ihr ein Objekt zuweisen, das wie im folgenden Beispiel an anderer Stelle erstellt wurde:
+Ein Typ, der als [Klasse](../../../csharp/language-reference/keywords/class.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../../csharp/language-reference/keywords/null.md), bis Sie explizit eine Instanz der Klasse mithilfe des Operators [new](../../../csharp/language-reference/keywords/new.md) erstellen oder ihr ein Objekt eines kompatiblen Typs zuweisen, das wie im folgenden Beispiel möglicherweise an anderer Stelle erstellt wurde:
 
 ```csharp
+//Declaring a object of type MyClass.
 MyClass mc = new MyClass();
+
+//Declaring another object of the same type, assigning it the value of the first object.
 MyClass mc2 = mc;
 ```
 
-Beim Erstellen des Objekts wird der Speicher im verwalteten Heap belegt. Die Variable enthält lediglich einen Verweis auf den Speicherort des Objekts. Für Typen im verwalteten Heap ist Mehraufwand erforderlich, wenn sie zugewiesen werden und wenn sie von der automatischen Speicherverwaltungsfunktion der CLR freigegeben werden, was als *Garbage Collection* bezeichnet wird. Die Garbage Collection ist jedoch auch stark optimiert. In den meisten Szenarios führt sie nicht zu einem Leistungsproblem. Weitere Informationen zur Garbage Collection finden Sie unter [Automatische Speicherverwaltung und Garbage Collection](../../../standard/garbage-collection/gc.md).  
+Beim Erstellen des Objekts wird im verwalteten Heap für dieses bestimmte Objekt ausreichend Speicherplatz zugewiesen. Die Variable enthält lediglich einen Verweis auf den Speicherort dieses Objekts. Für Typen im verwalteten Heap ist Mehraufwand erforderlich, wenn sie zugewiesen werden und wenn sie von der automatischen Speicherverwaltungsfunktion der CLR freigegeben werden, was als *Garbage Collection* bezeichnet wird. Die Garbage Collection ist jedoch auch stark optimiert. In den meisten Szenarios führt sie nicht zu einem Leistungsproblem. Weitere Informationen zur Garbage Collection finden Sie unter [Automatische Speicherverwaltung und Garbage Collection](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Deklarieren von Klassen  
- Klassen werden mithilfe des Schlüsselworts [class](../../../csharp/language-reference/keywords/class.md) deklariert, so wie im folgenden Beispiel dargestellt:
+ Klassen werden mithilfe des Schlüsselworts [class](../../../csharp/language-reference/keywords/class.md) gefolgt von einem eindeutigen Bezeichner deklariert, wie im folgenden Beispiel dargestellt:
 
  ```csharp
+//[access modifier] - [class] - [identifier]
  public class Customer
  {
     // Fields, properties, methods and events go here...

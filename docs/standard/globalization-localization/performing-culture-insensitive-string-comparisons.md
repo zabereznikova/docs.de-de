@@ -1,6 +1,6 @@
 ---
 title: Durchführen kulturunabhängiger Zeichenfolgenvergleiche
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35805d1760b0e06d33498efeeb3104979da26bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84b1c10b655fefcd420a0c3cf038dba00e688d3e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573606"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461656"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Durchführen kulturunabhängiger Zeichenfolgenvergleiche
 In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode kulturabhängige Vergleiche sowie Vergleiche unter Berücksichtigung der Groß-/Kleinschreibung aus. Diese Methode schließt auch mehrere Überladungen ein, die einen `culture`-Parameter zur Angabe der zu verwendenden Kultur und einen `comparisonType`-Parameter zur Angabe der zu verwendenden Vergleichsregeln bereitstellen. Durch den Aufruf dieser Methoden statt der Standardüberladung wird jede Mehrdeutigkeit hinsichtlich der in einem bestimmten Methodenaufruf verwendeten Regeln vermieden. Es wird verdeutlicht, ob ein bestimmter Vergleich kulturabhängig oder kulturunabhängig ist.  
@@ -38,9 +38,12 @@ In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProp
   
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
-  
-## <a name="see-also"></a>Siehe auch  
- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)
+
+Sie können die aus mehreren Textdateien bestehenden [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) herunterladen. Diese Textdateien enthalten Informationen zur Gewichtung der Zeichen, die bei Sortierungs- und Vergleichsvorgängen unter Windows-Betriebssystemen verwendet werden.
+
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
+- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)

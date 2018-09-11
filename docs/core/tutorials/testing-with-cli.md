@@ -4,12 +4,12 @@ description: In diesem Tutorial wird das Organisieren und Testen von .NET Core-P
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960982"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400282"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 
@@ -162,7 +162,7 @@ public class PetTests
 Optionale Übung: Wenn Sie zuvor einen `Bird`-Typ hinzugefügt haben, der `Tweet!` dem Besitzer zurückgibt, fügen Sie der *PetTests.cs*-Datei eine Testmethode hinzu, `BirdTalkToOwnerReturnsTweet`, um zu überprüfen, dass die `TalkToOwner`-Methode ordnungsgemäß für den `Bird`-Typ funktioniert.
 
 > [!NOTE]
-> Obwohl Sie erwarten, dass die Werte `expected` und `actual` gleich sind, geben die anfänglichen Assertionen mit den `Assert.NotEqual`-Überprüfungen an, dass sie *nicht gleich* sind. Erstellen Sie Ihre Tests zuerst immer, damit sie einmal fehlschlagen können, um die Logik der Tests zu überprüfen. Dies ist ein wichtiger Schritt in der TDD-Methodik (test-driven design, testgesteuerter Entwurf). Nachdem Sie bestätigt haben, dass die Tests fehlschlagen, passen Sie die Assertion an, damit sie erfolgreich ausgeführt werden können.
+> Obwohl Sie erwarten, dass die Werte `expected` und `actual` gleich sind, gibt die anfängliche Assertion mit der `Assert.NotEqual`-Überprüfung an, dass sie *nicht gleich* sind. Erstellen Sie zunächst immer einen Test, damit dieser fehlschlagen und die Logik des Tests überprüft werden kann. Nachdem Sie das Fehlschlagen des Tests bestätigt haben, können Sie die Assertion so anpassen, dass der Test erfolgreich verläuft.
 
 Nachstehend ist die vollständige Projektstruktur dargestellt:
 

@@ -1,6 +1,6 @@
 ---
 title: Durchführen kulturunabhängiger Zeichenfolgenoperationen
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - case mappings
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9500550fe415d77bacb44011622ddd83ffc8a9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575374"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254644"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen
 Die meisten .NET Framework-Methoden, die standardmäßig kulturabhängige Zeichenfolgenoperationen durchführen, stellen Methodenüberladungen bereit, für die Sie die zu verwendende Kultur explizit angeben können, indem Sie einen <xref:System.Globalization.CultureInfo>-Parameter übergeben. Diese Überladungen ermöglichen es Ihnen, kulturelle Variationen in Groß-/Kleinschreibungszuordnungen und Sortierregeln zu eliminieren und kulturunabhängige Ergebnisse zu gewährleisten.  
@@ -41,3 +41,7 @@ Die meisten .NET Framework-Methoden, die standardmäßig kulturabhängige Zeiche
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Kulturunabhängige Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  Beschreibt, warum Sie die Kultur berücksichtigen sollten, wenn Sie Operationen mit Zeichenfolgen ausführen, und enthält Richtlinien dazu, wann kulturabhängige Operationen und wann kulturunabhängige Operationen ausgeführt werden sollten.
+
+## <a name="see-also"></a>Siehe auch
+
+- [Sortieren von Weight-Tabellen](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

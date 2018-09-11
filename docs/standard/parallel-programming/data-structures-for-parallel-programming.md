@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99d62eca26e19d343b3f8f6afb9824c009610fb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585086"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396473"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Datenstrukturen für die parallele Programmierung
 .NET Framework Version 4 führt mehrere neue Typen ein, die für die parallele Programmierung nützlich sind. Darunter eine Reihe von parallelen Auflistungsklassen, einfache Synchronisierungsprimitiven und Typen für die verzögerte Initialisierung. Sie können diese Typen mit jedem Multithreadanwendungscode verwenden, einschließlich der Task Parallel Library und PLINQ.  
@@ -22,7 +22,7 @@ ms.locfileid: "33585086"
   
  In der folgenden Tabelle sind die neuen parallelen Auflistungsklassen aufgeführt:  
   
-|Typ|description|  
+|Typ|Beschreibung |  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|Stellt Sperr- und Begrenzungsfunktionen für threadsichere Auflistungen bereit, die <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType> implementieren. Producerthreads werden blockiert, wenn keine Zeitfenster verfügbar sind oder wenn die Auflistung voll ist. Consumerthreads werden blockiert, wenn die Auflistung leer ist. Dieser Typ unterstützt auch nicht blockierenden Zugriff durch Consumer und Producer. <xref:System.Collections.Concurrent.BlockingCollection%601> kann als Basisklasse oder Sicherungsspeicher verwendet werden, um das Blockieren und Binden für jede Auflistungsklasse zu ermöglichen, die <xref:System.Collections.Generic.IEnumerable%601> unterstützt.|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|Eine threadsichere Behälterimplementierung, die skalierbare Vorgänge zum Hinzufügen und Abrufen bietet.|  
@@ -37,7 +37,7 @@ ms.locfileid: "33585086"
   
  Die folgende Tabelle enthält die neuen Synchronisierungstypen:  
   
-|Typ|description|  
+|Typ|Beschreibung |  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Ermöglicht mehreren Threads, parallel an einem Algorithmus zu arbeiten, indem ein Punkt bereitgestellt wird, an dem jeder Task seine Ankunft signalisieren und dann blockieren kann, bis einige oder alle Tasks angekommen sind. Weitere Informationen finden Sie unter [Barrier](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Vereinfacht Fork- und Join-Szenarien durch einen einfachen Rendezvousmechanismus. Weitere Informationen finden Sie unter [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
@@ -57,7 +57,7 @@ ms.locfileid: "33585086"
   
  Die folgende Tabelle enthält eine Auflistung der Typen für eine verzögerte Initialisierung:  
   
-|Typ|description|  
+|Typ|Beschreibung |  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|Stellt einfache, threadsichere verzögerte Initialisierung bereit.|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|Stellt einen Wert durch eine verzögerte Initialisierung auf Threadbasis bereit, wobei jeder Thread die Initialisierungsfunktion verzögert aufruft.|  
@@ -66,7 +66,7 @@ ms.locfileid: "33585086"
  Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Aggregieren von Ausnahmen  
- Die <xref:System.AggregateException?displayProperty=nameWithType>-Typ kann verwendet werden, um mehrere Ausnahmen zu erfassen, die in separaten Threads parallel ausgelöst und an den Verbindungsthread als eine einzelne Ausnahme zurückgegeben werden. Die Typen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> sowie PLINQ verwenden hierzu sehr häufig <xref:System.AggregateException>. Weitere Informationen finden Sie unter [NIB: Gewusst wie: Behandeln von Ausnahmen, die von Aufgaben ausgelöst werden](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) und [Gewusst wie: Behandeln von Ausnahmen in einer PLINQ-Abfrage](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ Die <xref:System.AggregateException?displayProperty=nameWithType>-Typ kann verwendet werden, um mehrere Ausnahmen zu erfassen, die in separaten Threads parallel ausgelöst und an den Verbindungsthread als eine einzelne Ausnahme zurückgegeben werden. Die Typen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> sowie PLINQ verwenden hierzu sehr häufig <xref:System.AggregateException>. Weitere Informationen finden Sie unter [Ausnahmebehandlung](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) und unter [Vorgehensweise: Behandeln von Ausnahmen in einer PLINQ-Abfrage](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

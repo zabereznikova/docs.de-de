@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 274c5eaee2b4bf0e1331fb7a4a1a89a432a567c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 154501d666b467c94f5d1dd721f1e2303189c908
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339578"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484823"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Typbeziehungen in LINQ-Abfragevorgängen (C#)
 Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, wie die Variablentypen in einer vollständigen Abfrageoperation miteinander zusammenhängen. Wenn Sie diese Beziehungen verstehen, können Sie die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Beispiele und die Codebeispiele in der Dokumentation besser nachvollziehen. Weiterhin können Sie dann besser verstehen, was im Hintergrund abläuft, wenn Variablen implizit mithilfe von `var` typisiert werden.  
@@ -33,7 +33,7 @@ Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, w
   
 1.  Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
   
-2.  Der Typ des Objekts, das ausgewählt ist, bestimmt den Typ der Abfragevariablen. In diesem Beispiel ist `name` eine Zeichenfolge. Daher ist die Abfragevariable eine `IEnumerable`\<Zeichenfolge>.  
+2.  Der Typ des Objekts, das ausgewählt ist, bestimmt den Typ der Abfragevariablen. In diesem Beispiel ist `name` eine Zeichenfolge. Daher ist die Abfragevariable ein `IEnumerable<string>`.  
   
 3.  Die Abfragevariable durchläuft in der `foreach`-Anweisung verschiedene Iterationen. Da die Abfragevariable eine Sequenz von Zeichenfolgen ist, ist die Iterationsvariable ebenfalls eine Zeichenfolge.  
   

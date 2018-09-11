@@ -2,12 +2,12 @@
 title: Asynchrone Rückgabetypen (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143556"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43387578"
 ---
 # <a name="async-return-types-c"></a>Asynchrone Rückgabetypen (C#)
 Asynchrone Methoden können folgende Rückgabetypen haben:
@@ -33,7 +33,7 @@ Im folgenden Beispiel enthält die asynchrone `GetLeisureHours`-Methode eine `re
 
 Wenn `GetLeisureHours` aus einem „await“-Ausdruck in der Methode `ShowTodaysInfo` aufgerufen wird, ruft der „await“-Ausdruck den ganzzahligen Wert ab (der Wert von `GetLeisureHours`), der in der Aufgabe gespeichert wird, die von der Methode `leisureHours` zurückgegeben wird. Weitere Informationen zu await-Ausdrücken finden Sie unter [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Sie können die Vorgehensweise besser verstehen, wenn Sie den Aufruf von `GetLeisureHours` von der Anwendung von `await` trennen, wie der folgenden Code zeigt. Ein Aufruf der `TaskOfT_MethodAsync`-Methode, die nicht sofort eine Antwort erwartet, gibt ein `Task<int>` zurück, wie Sie es von der Deklaration der Methode erwarten. Die Aufgabe wird im Beispiel der `integerTask`-Variablen zugewiesen. Da `integerTask` eine <xref:System.Threading.Tasks.Task%601> ist, enthält es eine <xref:System.Threading.Tasks.Task%601.Result>-Eigenschaft des Typs `TResult`. In diesem Fall stellt TResult einen ganzzahligen Typ dar. Wenn `await` auf `integerTask` angewendet wird, wertet der „await“-Ausdruck den Inhalt der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result%2A> von `integerTask` aus. Der Wert wird der `result2`-Variablen zugewiesen.  
+Sie können die Vorgehensweise besser verstehen, wenn Sie den Aufruf von `GetLeisureHours` von der Anwendung von `await` trennen, wie der folgenden Code zeigt. Ein Aufruf der `GetLeisureHours`-Methode, die nicht sofort eine Antwort erwartet, gibt ein `Task<int>` zurück, wie Sie es von der Deklaration der Methode erwarten. Die Aufgabe wird im Beispiel der `infoTask`-Variablen zugewiesen. Da `infoTask` eine <xref:System.Threading.Tasks.Task%601> ist, enthält es eine <xref:System.Threading.Tasks.Task%601.Result>-Eigenschaft des Typs `TResult`. In diesem Fall stellt `TResult` einen Integertyp dar. Wenn `await` auf `infoTask` angewendet wird, wertet der „await“-Ausdruck den Inhalt der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result%2A> von `infoTask` aus. Der Wert wird der `ret`-Variablen zugewiesen.  
   
 > [!IMPORTANT]
 >  Die <xref:System.Threading.Tasks.Task%601.Result%2A>-Eigenschaft ist eine Blocking-Eigenschaft. Wenn Sie darauf zuzugreifen versuchen, bevor seine Aufgabe beendet ist, wird der momentan aktive Thread blockiert, bis die Aufgabe abgeschlossen und der Wert verfügbar ist. In den meisten Fällen sollten Sie auf den Wert zugreifen, indem Sie `await` verwenden, anstatt direkt auf die Eigenschaft zuzugreifen. <br/> Im vorherigen Beispiel wurde der Wert der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result%2A> abgerufen, um den Hauptthread zu blockieren, sodass die Methode `ShowTodaysInfo` die Ausführung beenden konnte, bevor die Anwendung beendet wurde.  
@@ -49,20 +49,21 @@ Im folgenden Beispiel enthält die asynchrone Methode `WaitAndApologize` keine `
   
 `WaitAndApologize` wird erwartet, indem eine „await“-Anweisung anstelle eines „await“-Ausdrucks verwendet wird, ähnlich der Aufrufanweisung einer Methode, die „void“ zurückgibt. Die Anwendung eines Erwartungsoperators erzeugt in diesem Fall keinen Wert.  
   
-Wie im vorherigen Beispiel <xref:System.Threading.Tasks.Task%601> können Sie den Aufruf von `Task_MethodAsync` mit einem Erwartungsoperator trennen, wie der folgende Code zeigt. Beachten Sie jedoch, dass `Task` über keine `Result`-Eigenschaft verfügt und dass kein Wert erzeugt wird, wenn ein Erwartungsoperator auf `Task` angewendet wird.  
+Wie im vorherigen Beispiel <xref:System.Threading.Tasks.Task%601> können Sie den Aufruf von `WaitAndApologize` mit einem Erwartungsoperator trennen, wie der folgende Code zeigt. Beachten Sie jedoch, dass `Task` über keine `Result`-Eigenschaft verfügt und dass kein Wert erzeugt wird, wenn ein Erwartungsoperator auf `Task` angewendet wird.  
   
 Der folgende Code trennt Aufrufe der Methode `WaitAndApologize` vom Erwarten der Aufgabe, die die Methode zurückgibt.  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Rückgabetyp „Void“  
+##  <a name="BKMK_VoidReturnType"></a> Rückgabetyp „Void“
+
 Der Rückgabetyp `void` wird in asynchronen Ereignishandlern verwendet, die den Rückgabetyp `void` erfordern. Für andere Methoden als Ereignishandler, die keinen Wert zurückgeben, sollten Sie stattdessen <xref:System.Threading.Tasks.Task> zurückgeben, da eine asynchrone Methode, die `void` zurückgibt, nicht erwartet werden kann. Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.  
   
 Der Aufrufer einer "void" zurückgebenden asynchronen Methode kann die von der Methode ausgelöste Ausnahmen nicht behandeln, und solche Ausnahmefehler können möglicherweise zu Fehlern in der Anwendung führen. Wenn eine Ausnahme in einer asynchronen Methode auftritt, die <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgibt, wird die Ausnahme in der zurückgegebenen Aufgabe gespeichert und erneut ausgelöst, wenn die Aufgabe erwartet wird. Daher stellen Sie sicher, dass jede asynchrone Methode, die eine Ausnahme erstellen kann, über einen Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> verfügt und die Aufrufe der Methode erwartet werden.  
   
 Weitere Informationen zum Auffangen von Ausnahmen in asynchronen Methoden finden Sie im Abschnitt [Ausnahmen in asynchronen Methoden](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) im Thema [try-catch (C#-Referenz)](../../../language-reference/keywords/try-catch.md).  
   
-Das folgende Beispiel definiert einen asynchronen Ereignishandler.  
+Im folgenden Beispiel wird das Verhalten eines asynchronen Ereignishandlers dargestellt. Beachten Sie, dass ein asynchroner Ereignishandler im Beispielcode den Hauptthread wissen lassen muss, wenn dieser abgeschlossen wurde. Anschließend kann der Hauptthread darauf warten, dass ein asynchroner Ereignishandler abgeschlossen wird, bevor das Programm beendet wird.
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  

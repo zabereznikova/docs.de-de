@@ -4,35 +4,40 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 77c955102ba9cede831c85838a6a7e57025ad35b
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 9948fc65030a4636c5d23db4ef8c3a584018d2f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199459"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482150"
 ---
 # <a name="new-constraint-c-reference"></a>new-Einschränkung (C#-Referenz)
-Die `new`-Einschränkung gibt an, dass jedes Typargument in einer generischen Klassendeklaration über einen öffentlichen parameterlosen Konstruktor verfügen muss. Der Typ kann nicht abstrakt sein, um die neue Einschränkung zu verwenden.  
-  
-## <a name="example"></a>Beispiel  
- Wenden Sie die `new`-Einschränkung auf einen Typparameter an, wenn Ihre generische Klasse neue Instanzen desselben Typs erstellt, wie im folgenden Beispiel gezeigt wird:  
-  
- [!code-csharp[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
-  
-## <a name="example"></a>Beispiel  
- Beim Verwenden der `new()`-Einschränkung mit anderen Einschränkungen muss sie zuletzt angegeben werden:  
-  
- [!code-csharp[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
-  
- Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
-  
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Collections.Generic>  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Generika](../../../csharp/programming-guide/generics/index.md)
+
+Die `new`-Einschränkung gibt an, dass jedes Typargument in einer generischen Klassendeklaration über einen öffentlichen parameterlosen Konstruktor verfügen muss. Der Typ kann nicht abstrakt sein, um die neue Einschränkung zu verwenden.
+
+## <a name="example"></a>Beispiel
+
+Wenden Sie die `new`-Einschränkung auf einen Typparameter an, wenn Ihre generische Klasse neue Instanzen desselben Typs erstellt, wie im folgenden Beispiel gezeigt wird:
+
+[!code-csharp[csrefKeywordsOperator#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#5)]
+
+## <a name="example"></a>Beispiel
+
+Beim Verwenden der `new()`-Einschränkung mit anderen Einschränkungen muss sie zuletzt angegeben werden:
+
+[!code-csharp[csrefKeywordsOperator#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#6)]
+
+Weitere Informationen finden Sie unter [Einschränkungen für Typparameter](../../programming-guide/generics/constraints-on-type-parameters.md).
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Collections.Generic>
+- [C#-Referenz](../../language-reference/index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [Operatorschlüsselwörter](operator-keywords.md)
+- [Generika](../../programming-guide/generics/index.md)

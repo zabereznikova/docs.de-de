@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Verw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a5fce347193921305c264df34be99063920af715
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106644"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416496"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 

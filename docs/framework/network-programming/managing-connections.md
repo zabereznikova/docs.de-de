@@ -20,19 +20,19 @@ ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391172"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484979"
 ---
 # <a name="managing-connections"></a>Verwalten von Verbindungen
 Anwendungen, die HTTP zum Herstellen einer Verbindung mit Datenressourcen verwenden, können die <xref:System.Net.ServicePoint>- und <xref:System.Net.ServicePointManager>-Klassen von .NET Framework verwenden, um Verbindungen mit dem Internet zu verwalten und dabei zu helfen, dass diese eine optimale Skalierung und Leistung erreichen.  
   
  Die **ServicePoint**-Klasse stellt eine Anwendung mit einem Endpunkt bereit, mit der sich die Anwendung verbinden kann, um auf Internetressourcen zuzugreifen. Jede **ServicePoint**-Klasse enthält Informationen, die dabei helfen, Verbindungen mit einem Internetserver zu optimieren, indem Optimierungsinformationen zwischen Verbindungen geteilt werden, um die Leistung zu verbessern.  
   
- Jede **ServicePoint**-Klasse wird durch einen URI (Uniform Resource Identifier) identifiziert und gemäß dem Schemabezeichner und Hostfragmenten des URI kategorisiert. Beispielsweise würde die gleiche **ServicePoint**-Instanz Anforderungen für die URIs http://www.contoso.com/index.htm und http://www.contoso.com/news.htm?date=today bereitstellen, da sie über den gleichen Schemabezeichner (HTTP) und die gleichen Hostfragmente (www.contoso.com) verfügen. Wenn die Anwendung bereits über eine persistente Verbindung mit dem Server www.contoso.com verfügt, verwendet sie diese Verbindung zum Abrufen beider Anforderungen, wobei vermieden wird, dass zwei Verbindungen erstellt werden müssen.  
+ Jede **ServicePoint**-Klasse wird durch einen URI (Uniform Resource Identifier) identifiziert und gemäß dem Schemabezeichner und Hostfragmenten des URI kategorisiert. Beispielsweise würde die gleiche **ServicePoint**-Instanz Anforderungen für die URIs `http://www.contoso.com/index.htm` und `http://www.contoso.com/news.htm?date=today` bereitstellen, da sie über den gleichen Schemabezeichner (HTTP) und die gleichen Hostfragmente (`www.contoso.com`) verfügen. Wenn die Anwendung bereits über eine persistente Verbindung mit dem Server `www.contoso.com` verfügt, ruft sie über diese Verbindung beide Anforderungen ab, wobei vermieden wird, dass zwei Verbindungen erstellt werden müssen.  
   
  **ServicePointManager** ist eine statische Klasse, die die Erstellung und Zerstörung von **ServicePoint**-Instanzen verwaltet. Die **ServicePointManager**-Klasse erstellt eine **ServicePoint**-Klasse, wenn die Anwendung eine Internetressource anfordert, die nicht in der Auflistung der vorhandenen **ServicePoint**-Instanzen enthalten ist. **ServicePoint**-Instanzen werden zerstört, wenn sie die maximale Leerlaufzeit überschritten haben oder wenn die Anzahl der vorhandenen **ServicePoint**-Instanzen die maximale Anzahl von **ServicePoint**-Instanzen für die Anwendung überschreitet. Sie können sowohl die maximale Standardleerlaufzeit als auch die maximale Anzahl von **ServicePoint**-Instanzen steuern, indem Sie die <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A>- und <xref:System.Net.ServicePointManager.MaxServicePoints%2A>-Eigenschaften für die **ServicePointManager**-Klasse festlegen.  
   
@@ -53,7 +53,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- Das Ändern der **ServicePointManager.DefaultConnectionLimit**-Eigenschaft wirkt sich nicht auf zuvor initialisierte **ServicePoint**-Instanzen aus. Der folgende Code zeigt das Ändern der Verbindungsbeschränkung für eine vorhandene **ServicePoint**-Klasse für den Server http://www.contoso.com in den in `newLimit` gespeicherten Wert.  
+ Das Ändern der **ServicePointManager.DefaultConnectionLimit**-Eigenschaft wirkt sich nicht auf zuvor initialisierte **ServicePoint**-Instanzen aus. Der folgende Code zeigt das Ändern der Verbindungsbeschränkung für eine vorhandene **ServicePoint**-Klasse für den Server `http://www.contoso.com` in den in `newLimit` gespeicherten Wert.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

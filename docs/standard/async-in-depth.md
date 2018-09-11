@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577422"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385695"
 ---
 # <a name="async-in-depth"></a>Async ausführlich
 
@@ -114,7 +114,7 @@ Noch wichtiger: Da E/A-gebundene Arbeit praktisch keine CPU-Zeit beansprucht, w�
 
 Außerdem ist das Verteilen von Arbeit an den Benutzeroberflächenthread (z.B. die Aktualisierung einer Benutzeroberfläche) mit `async`-Methoden sehr einfach und erfordert keine zusätzliche Arbeit (wie den Aufruf eines threadsicheren Delegaten).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Tieferer Einblick in Task und Task<T> für einen CPU-gebundenen Vorgang
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Tieferer Einblick in Task und Task&lt;T&gt; für einen CPU-gebundenen Vorgang
 
 CPU-gebundener `async`-Code ist etwas anders als E/A-gebundener `async`-Code.  Da die Arbeit auf der CPU ausgeführt wird, besteht keine Möglichkeit, einen Thread für die Berechnung zu dedizieren.  Die Verwendung von `async` und `await` bietet Ihnen eine saubere Möglichkeit, mit einem Hintergrundthread zu interagieren und den Aufrufer der Async-Methode reaktionsfähig zu halten.  Beachten Sie, dass dies keinen Schutz freigegebener Daten bietet.  Wenn Sie freigegebene Daten verwenden, müssen Sie eine entsprechende Synchronisierungsstrategie anwenden.
 

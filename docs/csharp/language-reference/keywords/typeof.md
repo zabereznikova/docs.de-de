@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 4203b597d7045a13ffed9e61ddbbde57e2113c23
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 2493e78fd0782eebee17afd979e1c429339d0a3f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908029"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486804"
 ---
 # <a name="typeof-c-reference"></a>typeof (C#-Referenz)
 Wird zum Abrufen des Objekts `System.Type` eines Typs verwendet. Der Ausdruck `typeof` weist folgende Form auf:  
@@ -31,12 +31,9 @@ System.Type type = i.GetType();
   
  Operator `typeof` kann nicht überladen werden.  
   
- Der Operator `typeof` kann auch bei offenen generischen Typen verwendet werden. Typen mit mehr als einem Parameter müssen die entsprechende Anzahl von Kommas in der Spezifikation haben. Das folgende Beispiel zeigt, wie Sie bestimmen, ob der Rückgabetyp einer Methode ein generischer <xref:System.Collections.Generic.IEnumerable%601> ist. Nehmen Sie an, dass die Methode eine Instanz eines MethodInfo-Typs ist:  
+ Der Operator `typeof` kann auch bei offenen generischen Typen verwendet werden. Typen mit mehr als einem Parameter müssen die entsprechende Anzahl von Kommas in der Spezifikation haben. Das folgende Beispiel zeigt, wie Sie bestimmen, ob der Rückgabetyp einer Methode ein generischer <xref:System.Collections.Generic.IEnumerable%601> ist. <xref:System.Type.GetInterface%2A?displayProperty=nameWithType> gibt `null` zurück, wenn der Rückgabetyp kein generischer <xref:System.Collections.Generic.IEnumerable%601>-Typ ist.
   
-```csharp  
-string s = method.ReturnType.GetInterface  
-    (typeof(System.Collections.Generic.IEnumerable<>).FullName);  
-```  
+ [!code-csharp[typeof_3.cs](~/samples/snippets/csharp/keywords/typeof/typeof_3.cs)]   
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
@@ -49,10 +46,11 @@ string s = method.ReturnType.GetInterface
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Type?displayProperty=nameWithType>  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Type?displayProperty=nameWithType>  
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md)

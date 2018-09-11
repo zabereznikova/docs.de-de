@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961301"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484101"
 ---
-# <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C# #
+# <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C\#
 
 Durch den Vergleich zweier Zeichenfolgen können Sie entweder feststellen, ob diese gleich sind oder in welche Reihenfolge sie beim Sortieren gebracht werden sollen.
 
-Beide Vorgänge werden durch folgende Faktoren erschwert: 
+Beide Vorgänge werden durch folgende Faktoren erschwert:
+
 - Sie können einen Ordinalvergleich oder einen linguistischen Vergleich durchführen.
 - Sie können festlegen, ob die Groß/-Kleinschreibung berücksichtigt werden soll.
 - Sie können kulturspezifische Vergleiche durchführen.
@@ -36,14 +37,15 @@ Bei Ordinalvergleichen werden linguistische Regeln nicht berücksichtigt. Stattd
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Ordinalvergleich ohne Beachtung der Groß- und Kleinschreibung
 
-Mit der <xref:System.String.Equals%2A?displayProperty=nameWithType>-Methode können Sie einen <xref:System.StringComparison>-Wert von <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> angeben, um einen Vergleich ohne Berücksichtigung der Groß-/Kleinschreibung durchzuführen. Alternativ können Sie die statische Methode <xref:System.String.Compare%2A> verwenden, die denselben Zweck erfüllt und ein boolesches Argument erfordert. Diese Methoden werden im folgenden Codebeispiel verwendet:
+Mit der <xref:System.String.Equals%2A?displayProperty=nameWithType>-Methode können Sie einen <xref:System.StringComparison>-Wert von <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> angeben,
+um einen Vergleich ohne Beachtung der Groß-/Kleinschreibung durchzuführen. Alternativ können Sie die statische Methode <xref:System.String.Compare%2A> verwenden, die denselben Zweck erfüllt und ein boolesches Argument erfordert. Diese Methoden werden im folgenden Codebeispiel verwendet:
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>Linguistische Vergleiche
 
 Zeichenfolgen können auch mit linguistischen Regeln für die aktuelle Kultur sortiert werden.
-Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen eine bestimmte Gewichtung zugeordnet. Beispielsweise wird dem Bindestrich („-“) ggf. eine sehr geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz alphanumerischer Zeichen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, wobei „Straße“ einmal mit „ss“ und einmal mit „ß“ geschrieben wird. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ dem scharfen S („ß“). 
+Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen eine bestimmte Gewichtung zugeordnet. Beispielsweise wird dem Bindestrich („-“) ggf. eine sehr geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz alphanumerischer Zeichen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, wobei „Straße“ einmal mit „ss“ und einmal mit „ß“ geschrieben wird. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ dem scharfen S („ß“).
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ Linguistische Vergleiche sind sowohl von der aktuellen Kultur als auch vom Betri
 
 In den folgenden Beispielen wird gezeigt, wie Sie mit einem linguistischen Vergleich, der abhängig von der aktuellen Kultur ist, Zeichenfolgen in einem Array sortieren und nach diesen suchen. Dabei werden die statischen <xref:System.Array>-Methoden verwendet, die einen <xref:System.StringComparer?displayProperty=nameWithType>-Parameter akzeptieren.
 
-Im nächsten Beispiel wird demonstriert, wie Sie Zeichenfolgen in einem Array unter Berücksichtigung der aktuellen Kultur sortieren können: 
+Im nächsten Beispiel wird demonstriert, wie Sie Zeichenfolgen in einem Array unter Berücksichtigung der aktuellen Kultur sortieren können:
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ Nach der Sortierung kann die Liste der Zeichenfolgen mit einer Binärsuche durch
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-Achten Sie darauf, zum Sortieren und Suchen von Zeichenfolgen immer dieselbe Vergleichsart zu verwenden. Andernfalls werden unerwartete Ergebnisse angezeigt. 
+Achten Sie darauf, zum Sortieren und Suchen von Zeichenfolgen immer dieselbe Vergleichsart zu verwenden. Andernfalls werden unerwartete Ergebnisse angezeigt.
 
 Auflistungsklassen wie <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> und <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> verfügen über Konstruktoren, die einen <xref:System.StringComparer?displayProperty=nameWithType>-Parameter übernehmen, wenn der Typ des Elements oder der Schlüssel `string` ist. Im Allgemeinen sollten Sie nach Möglichkeit diese Konstruktoren verwenden und entweder <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> oder <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType> angeben.
 
@@ -118,8 +120,9 @@ Bisher wurde für kein Beispiel <xref:System.Object.ReferenceEquals%2A> verwende
 > Wenn Sie Zeichenfolgen auf Gleichheit überprüfen, sollten Sie Methoden verwenden, die explizit angeben, welche Art von Vergleich Sie durchführen möchten. Dadurch kann Ihr Code viel besser verwaltet und gelesen werden. Verwenden Sie dabei die überladenen Methoden der Klassen <xref:System.String?displayProperty=nameWithType> und <xref:System.Array?displayProperty=nameWithType>, die einen <xref:System.StringComparison>-Enumerationsparameter akzeptieren. Dadurch geben Sie die Art des Vergleichs an, der ausgeführt werden soll. Vermeiden Sie die Verwendung der Operatoren `==` und `!=`, wenn Sie Zeichenfolgen auf Gleichheit überprüfen. Die <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Instanzmethoden führen immer einen Ordinalvergleich unter Berücksichtigung der Groß-/Kleinschreibung durch. Sie eignen sich in erster Linie für die Sortierung von Zeichenfolgen in alphabetischer Reihenfolge.
 
 ## <a name="see-also"></a>Siehe auch
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [Zeichenfolgen](../programming-guide/strings/index.md)  
- [Vergleichen von Zeichenfolgen](../../standard/base-types/comparing.md)  
- [Globalisieren und Lokalisieren von Anwendungen](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [Zeichenfolgen](../programming-guide/strings/index.md)  
+- [Vergleichen von Zeichenfolgen](../../standard/base-types/comparing.md)  
+- [Globalisieren und Lokalisieren von Anwendungen](/visualstudio/ide/globalizing-and-localizing-applications)

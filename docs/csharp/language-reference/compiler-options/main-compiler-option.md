@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 2df02200578979f9a613f43dc92cc9e7b0cb430e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f3c9daf98bfe77ea9462c8126f7a8368016875c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212419"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468864"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C#-Compileroptionen)
 Diese Option gibt die Klasse an, die den Einstiegspunkt des Programms enthält, wenn mehr als eine Klasse eine **Main**-Methode enthält.  
@@ -27,6 +27,7 @@ Diese Option gibt die Klasse an, die den Einstiegspunkt des Programms enthält, 
 ## <a name="arguments"></a>Argumente  
  `class`  
  Der Typ, der die **Main**-Methode enthält.  
+ Der angegebene Klassenname muss vollqualifiziert sein. Er muss den vollständigen Namespace mit der Klasse, gefolgt von dem Klassennamen enthalten. Wenn sich die `Main`-Methode beispielsweise in der `Program`-Klasse im Namespace `MyApplication.Core` befindet, muss die Compileroption `-main:MyApplication.Core.Program` lauten.
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Ihre Kompilierung mehr als einen Typ mit einer [Main](../../../csharp/programming-guide/main-and-command-args/index.md)-Methode enthält, können Sie angeben, welcher Typ die **Main**-Methode enthält, die Sie als Einstiegspunkt des Programms verwenden möchten.  
@@ -50,6 +51,7 @@ Diese Option gibt die Klasse an, die den Einstiegspunkt des Programms enthält, 
 csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027849"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401323"
 ---
 # <a name="double-c-reference"></a>double (C#-Referenz)
 
@@ -34,9 +34,9 @@ double x = 3D;
 
 Sie können numerische ganzzahlige Typen und Gleitkommatypen in einem Ausdruck kombinieren. In diesem Fall werden die ganzzahligen Typen in Gleitkommatypen konvertiert. Die Auswertung des Ausdrucks erfolgt gemäß den folgenden Regeln:
 
-- Wenn einer der Gleitkommatypen `double` ist, ergibt der Ausdruck `double`, oder [bool](../../../csharp/language-reference/keywords/bool.md) in relationalen oder booleschen Ausdrücken.
+- Wenn einer der Gleitkommatypen `double` ist, wertet der Ausdruck in relationalen Vergleichen und in Vergleichen auf Gleichheit nach `double` oder [bool](../../../csharp/language-reference/keywords/bool.md) aus.
 
-- Wenn es im Ausdruck keinen `double`-Typ gibt, ergibt der es [float](../../../csharp/language-reference/keywords/float.md), oder [bool](../../../csharp/language-reference/keywords/bool.md) in relationalen oder booleschen Ausdrücken.
+- Wenn in dem Ausdruck kein `double`-Typ vorhanden ist, wird der Ausdruck in relationalen Vergleichen und Vergleichen auf Gleichheit in [float](../../../csharp/language-reference/keywords/float.md) oder [bool](../../../csharp/language-reference/keywords/bool.md) ausgewertet.
 
  Ein Gleitkomma-Ausdruck kann die folgenden Sätze von Werten enthalten:
 
@@ -62,11 +62,11 @@ Im folgenden Beispiel werden ein [int](../../../csharp/language-reference/keywor
 
 ## <a name="see-also"></a>Siehe auch
 
-[C#-Referenz](../../../csharp/language-reference/index.md)  
-[C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-[C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-[Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)  
-[Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Tabelle für Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-[Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tabelle für Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

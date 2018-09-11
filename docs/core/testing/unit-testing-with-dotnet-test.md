@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in C# und
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 6f3b041bf690183f60b687699d878a4d5006be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213329"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43404294"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Komponententests für C# in .NET Core mit „dotnet test“ und xUnit
 
@@ -134,7 +134,7 @@ namespace Prime.UnitTests.Services
 
 Das `[Fact]`-Attribut gibt eine Testmethode an, die von Test Runner ausgeführt wird. Führen Sie im Verzeichnis *PrimeService.Tests* [`dotnet test`](../tools/dotnet-test.md) aus, um die Tests und die Klassenbibliothek zu erstellen und anschließend die Tests auszuführen. Der xUnit Test Runner enthält den Programmeinstiegspunkt zum Ausführen Ihrer Tests. `dotnet test` startet Test Runner mithilfe des von Ihnen erstellten Komponententestprojekts.
 
-Ihr Test schlägt fehl. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie in der `PrimeService`-Klasse einen ganz einfachen Code. Ersetzen Sie die vorhandene Implementierung der Methode `IsPrime` durch den folgenden Code:
+Ihr Test schlägt fehl. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie einen ganz einfachen Code in die `PrimeService`-Klasse. Ersetzen Sie die vorhandene Implementierung der Methode `IsPrime` durch den folgenden Code:
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -171,4 +171,4 @@ Wiederholen Sie den Vorgang, indem Sie weitere Tests, Theorien und Code in der H
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-[Testen von Controllerlogik in ASP.NET Core](/aspnet/core/mvc/controllers/testing)
+- [Testen von Controllerlogik in ASP.NET Core](/aspnet/core/mvc/controllers/testing)

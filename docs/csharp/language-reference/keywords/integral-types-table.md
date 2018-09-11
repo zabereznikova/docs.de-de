@@ -1,42 +1,49 @@
 ---
 title: Tabelle ganzzahliger Typen (C#-Referenz)
-ms.date: 07/20/2015
+description: Übersicht über die ganzzahligen Typen in C#
+ms.date: 08/20/2018
 helpviewer_keywords:
 - integral types, C#
 - Visual C#, integral types
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: d524224f15d7861328cc24b1e4f9a54fcc16ee34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267908"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467191"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabelle ganzzahliger Typen (C#-Referenz)
+
 Die folgende Tabelle enthält Größe und Bereich der integralen Typen, die eine Teilmenge der einfachen Typen bilden.  
   
 |Typ|Bereich|Größe|  
 |----------|-----------|----------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|–128 bis 127|Ganze 8-Bit-Zahl mit Vorzeichen|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|0 bis 255|8-Bit-Ganzzahl ohne Vorzeichen|  
-|[char](../../../csharp/language-reference/keywords/char.md)|U+0000 bis U+ffff|Ein Unicode-Zeichen (16 Bit)|  
-|[short](../../../csharp/language-reference/keywords/short.md)|–32.768 bis 32.767|Ganze 16-Bit-Zahl mit Vorzeichen|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|0 bis 65.535|16-Bit-Ganzzahl ohne Vorzeichen|  
-|[int](../../../csharp/language-reference/keywords/int.md)|-2,147,483,648 bis 2,147,483,647|Eine 32-Bit-Ganzzahl mit Vorzeichen|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|0 bis 4.294.967.295|32-Bit Ganzzahl ohne Vorzeichen|  
-|[long](../../../csharp/language-reference/keywords/long.md)|-9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807|64-Bit-Ganzzahl mit Vorzeichen|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|0 bis 18.446.744.073.709.551.615|64-Bit-Ganzzahl ohne Vorzeichen|  
+|[sbyte](sbyte.md)|–128 bis 127|Ganze 8-Bit-Zahl mit Vorzeichen|  
+|[byte](byte.md)|0 bis 255|8-Bit-Ganzzahl ohne Vorzeichen|  
+|[char](char.md)|U+0000 bis U+ffff|Ein Unicode-Zeichen (16 Bit)|  
+|[short](short.md)|–32.768 bis 32.767|Ganze 16-Bit-Zahl mit Vorzeichen|  
+|[ushort](ushort.md)|0 bis 65.535|16-Bit-Ganzzahl ohne Vorzeichen|  
+|[int](int.md)|-2,147,483,648 bis 2,147,483,647|Eine 32-Bit-Ganzzahl mit Vorzeichen|  
+|[uint](uint.md)|0 bis 4.294.967.295|32-Bit Ganzzahl ohne Vorzeichen|  
+|[long](long.md)|-9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807|64-Bit-Ganzzahl mit Vorzeichen|  
+|[ulong](ulong.md)|0 bis 18.446.744.073.709.551.615|64-Bit-Ganzzahl ohne Vorzeichen|  
+
+## <a name="remarks"></a>Hinweise
   
- Überschreitet der durch ein Ganzzahlliteral dargestellte Wert den Bereich `ulong`, tritt ein Kompilierungsfehler auf.  
+Wenn der von einem Integer-Literal dargestellte Wert <xref:System.UInt64.MaxValue?displayProperty=nameWithType> überschreitet, tritt der Compilerfehler [CS1021](../../misc/cs1021.md) auf.
+
+Mit der <xref:System.Numerics.BigInteger?displayProperty=nameWithType>-Klasse können Sie eine beliebig große ganze Zahl mit Vorzeichen darstellen.
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Tabelle für Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
- [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [Referenztabellen für Typen](reference-tables-for-types.md)
+- [Tabelle für Gleitkommatypen](floating-point-types-table.md)
+- [Tabelle für Standardwerte](default-values-table.md)
+- [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md)
+- [Tabelle integrierter Typen](built-in-types-table.md)

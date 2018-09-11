@@ -11,12 +11,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: abb1f72a10a4aff448dea22b5c9415111c25eaab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 852efc14af02eec4608e133e4c75507cd881b80e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457392"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469946"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -40,21 +40,21 @@ Große Objekte gehören zu Generation 2, da sie nur während einer Garbage Colle
 Die Generationen stellen eine logische Ansicht des Garbage Collection-Heaps bereit. Physisch gesehen werden Objekte in verwalteten Heapsegmenten gespeichert. Ein *verwaltetes Heapsegment* ist ein Speicherblock, den der Garbage Collector vom Betriebssystem (durch Aufrufen der [VirtualAlloc-Funktion](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)) für verwalteten Code reserviert. Beim Laden der CLR ordnet der Garbage Collector zunächst zwei Heapsegmente zu: eines für kleine Objekte (der kleine Objektheap) und eines für große Objekte (der große Objektheap).
 
 Die Zuordnungsanforderungen werden dann erfüllt, indem verwaltete Objekte in diesen verwalteten Heapsegmenten abgelegt werden. Wenn das Objekt kleiner als 85.000 Byte ist, wird es im Segment für den kleinen Objektheap abgelegt, andernfalls im Segment für einen großen Objektheap. Segmente werden (in kleineren Blöcken) übernommen, wenn ihnen immer mehr Objekte zugeordnet werden.
-Beim kleinen Objektheap werden Objekte, die bei einer Garbage Collection nicht bereinigt werden, in die nächste Generation heraufgestuft. Objekte, die in einer Garbage Collection für Generation 0 nicht bereinigt werden, werden nun als Objekte von Generation 1 betrachtet und so weiter. Objekte, die die älteste Generation überdauern, werden jedoch weiterhin als Objekte der ältesten Generation betrachtet. Die Objekte, die Generation 2 überdauern, sind also Objekte von Generation 2, und die Objekte, die den großen Objektheap überdauern, sind Objekte des großen Objektheaps (die in Generation 2 bereinigt werden). 
+Beim kleinen Objektheap werden Objekte, die bei einer Garbage Collection nicht bereinigt werden, in die nächste Generation heraufgestuft. Objekte, die in einer Garbage Collection für Generation 0 nicht bereinigt werden, werden nun als Objekte von Generation 1 betrachtet und so weiter. Objekte, die die älteste Generation überdauern, werden jedoch weiterhin als Objekte der ältesten Generation betrachtet. Die Objekte, die Generation 2 überdauern, sind also Objekte von Generation 2, und die Objekte, die den großen Objektheap überdauern, sind Objekte des großen Objektheaps (die in Generation 2 bereinigt werden).
 
 Benutzercode kann nur in der Generation 0 (kleine Objekte) oder im großen Objektheap (große Objekte) zugeordnet werden. Nur der Garbage Collector kann Objekte von Generation 1 (durch Heraufstufen beibehaltener Objekte aus Generation 0) und Generation 2 (durch Heraufstufen beibehaltener Objekte aus den Generationen 1 und 2) zuordnen.
 
 Wenn eine Garbage Collection ausgelöst wird, geht der Garbage Collector alle aktiven Objekte durch und komprimiert sie. Da die Komprimierung jedoch aufwändig ist, *bereinigt* die Garbage Collection den großen Objektheap. Dabei wird eine Freiliste aus inaktiven Objekten erstellt, die später zur Erfüllung von Zuordnungsanforderungen für große Objekte wiederverwendet werden kann. Angrenzende inaktive Objekte werden in ein einzelnes freies Objekt umgewandelt.
 
-.NET Core und .NET Framework (ab .NET Framework 4.5.1) enthalten die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty="fullname">-Eigenschaft, durch die Benutzer angegeben können, dass der große Objektheap während der nächsten vollständigen blockierenden Garbage Collection komprimiert werden soll. Zukünftig erfolgt die Komprimierung des großen Objektheaps in .NET möglicherweise automatisch. Daher sollten Sie diese Objekte fixieren, wenn Sie große Objekte zuordnen und sicherstellen möchten, dass diese nicht verschoben werden.
+.NET Core und .NET Framework (ab .NET Framework 4.5.1) enthalten die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType>-Eigenschaft, durch die Benutzer angegeben können, dass der große Objektheap während der nächsten vollständigen blockierenden Garbage Collection komprimiert werden soll. Zukünftig erfolgt die Komprimierung des großen Objektheaps in .NET möglicherweise automatisch. Daher sollten Sie diese Objekte fixieren, wenn Sie große Objekte zuordnen und sicherstellen möchten, dass diese nicht verschoben werden.
 
 Abbildung 1 zeigt ein Szenario, bei dem Generation 1 nach der ersten Garbage Collection für Generation 0 gebildet wird, bei der `Obj1` und `Obj3` inaktiv sind. Generation 2 wird nach der ersten Garbage Collection für Generation 1 gebildet, bei der `Obj2` und `Obj5` inaktiv sind. Beachten Sie, dass diese und die folgenden Abbildungen nur zur Veranschaulichung dienen. Sie enthalten nur wenige Objekte, um besser darzustellen, was auf dem Heap geschieht. In der Praxis sind an einer Garbage Collection in der Regel wesentlich mehr Objekte beteiligt.
 
-![Abbildung 1: Garbage Collection für Generation 0 und 1](media/loh/loh-figure-1.jpg)   
+![Abbildung 1: Garbage Collection für Generation 0 und 1](media/loh/loh-figure-1.jpg)  
 Abbildung 1: Garbage Collection für Generation 0 und 1
 
 Abbildung 2 veranschaulicht, dass nach einer Garbage Collection für Generation 2, bei der `Obj1` und `Obj2` inaktiv sind, bildet die Garbage Collection freien Arbeitsspeicher, der von `Obj1` und `Obj2` belegt werden kann. Diese werden dann verwendet, um eine Zuordnungsanforderung für `Obj4` zu erfüllen. Der Speicherplatz nach dem letzten Objekt (`Obj3`) bis zum Ende des Segments kann ebenfalls zur Erfüllung von Zuordnungsanforderungen verwendet werden.
- 
+
 ![Abbildung 2: Nach einer Garbage Collection für Generation 2](media/loh/loh-figure-2.jpg)  
 Abbildung 2: Nach einer Garbage Collection für Generation 2
 
@@ -63,7 +63,7 @@ Wenn nicht genügend Speicherplatz zur Erfüllung der Zuordnungsanforderungen f�
 Bei einer Garbage Collection für Generation 1 oder 2 gibt der Garbage Collector Segmente frei für das Betriebssystem, in denen keine aktiven Objekte vorhanden sind, indem die Funktion [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) aufgerufen wird. Der Speicherplatz nach dem letzten aktiven Objekt bis zum Ende des Segments wird aufgehoben (außer in dem kurzlebigen Segment, in dem Generation 0 und Generation 1 aktiv sind und in dem der Garbage Collector einigen Speicherplatz beibehält, da dieser sofort Ihrer Anwendung zugewiesen wird). Die freien Speicherblöcke sind nach wie vor committet, obwohl sie zurückgesetzt werden. Das bedeutet, dass das Betriebssystem in ihnen befindliche Daten nicht wieder auf den Datenträger schreiben muss.
 
 Da der große Objektheap nur während Garbage Collections für Generation 2 bereinigt wird, kann ein Segment des großen Objektheaps nur während einer solchen Garbage Collection freigegeben werden. In Abbildung 3 wird ein Szenario veranschaulicht, indem der Garbage Collector ein Segment (Segment 2) für das Betriebssystem freigibt und mehr Speicherplatz für die verbleibenden Segmente aufhebt. Wenn der aufgehobene Speicherplatz am Ende des Segments verwendet werden muss, um Zuordnungsanforderungen für große Objekte zu erfüllen, wird der Arbeitsspeicher wieder committet. (Eine Erläuterung zum Übernehmen und Aufheben finden Sie in der Dokumentation für [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).)
- 
+
 ![Abbildung 3: Der große Objektheap nach einer Garbage Collection für Generation 2](media/loh/loh-figure-3.jpg)  
 Abbildung 3: Der große Objektheap nach einer Garbage Collection für Generation 2
 
@@ -73,17 +73,17 @@ Im Allgemeinen wird eine Garbage Collection durchgeführt, wenn eine der folgend
 
 - Die Zuordnung überschreitet den Schwellenwert von Generation 0 oder des großen Objekts.
 
-   Der Schwellenwert ist eine Eigenschaft einer Generation. Ein Schwellenwert wird für eine Generation festgelegt, wenn der Garbage Collector diesem Objekte zuordnet. Wenn der Schwellenwert überschritten wird, wird eine Garbage Collection für diese Generation ausgelöst. Wenn Sie kleine oder große Objekte zuweisen, verwenden Sie daher die jeweiligen Schwellenwerte für Generation 0 und den großen Objektheap. Wenn der Garbage Collector eine Zuordnung zu Generation 1 oder 2 vornimmt, verwendet er deren Schwellenwerte. Diese Schwellenwerte werden während der Ausführung des Programms dynamisch abgestimmt.
+  Der Schwellenwert ist eine Eigenschaft einer Generation. Ein Schwellenwert wird für eine Generation festgelegt, wenn der Garbage Collector diesem Objekte zuordnet. Wenn der Schwellenwert überschritten wird, wird eine Garbage Collection für diese Generation ausgelöst. Wenn Sie kleine oder große Objekte zuweisen, verwenden Sie daher die jeweiligen Schwellenwerte für Generation 0 und den großen Objektheap. Wenn der Garbage Collector eine Zuordnung zu Generation 1 oder 2 vornimmt, verwendet er deren Schwellenwerte. Diese Schwellenwerte werden während der Ausführung des Programms dynamisch abgestimmt.
 
-   Dies ist der Normalfall. Die meisten Garbage Collections werden aufgrund von Zuordnungen im verwalteten Heap ausgelöst.
+  Dies ist der Normalfall. Die meisten Garbage Collections werden aufgrund von Zuordnungen im verwalteten Heap ausgelöst.
 
 - Die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode wird aufgerufen.
 
-   Wenn die parameterlose <xref:System.GC.Collect?displayProperty=nameWithType>-Methode aufgerufen wird oder eine andere Überladung als Argument an <xref:System.GC.MaxGeneration?displayProperty=nameWithType> übergeben wird, wird der große Objektheap zusammen mit dem restlichen verwalteten Heap bereinigt.
+  Wenn die parameterlose <xref:System.GC.Collect?displayProperty=nameWithType>-Methode aufgerufen wird oder eine andere Überladung als Argument an <xref:System.GC.MaxGeneration?displayProperty=nameWithType> übergeben wird, wird der große Objektheap zusammen mit dem restlichen verwalteten Heap bereinigt.
 
 - Das System verfügt über wenig Arbeitsspeicher.
 
-   Dies tritt auf, wenn der Garbage Collector eine Benachrichtigung über eine hohe Arbeitsspeicherauslastung vom Betriebssystem erhält. Wenn der Garbage Collector eine Garbage Collection für Generation 2 für produktiv hält, wird diese ausgelöst.
+  Dies tritt auf, wenn der Garbage Collector eine Benachrichtigung über eine hohe Arbeitsspeicherauslastung vom Betriebssystem erhält. Wenn der Garbage Collector eine Garbage Collection für Generation 2 für produktiv hält, wird diese ausgelöst.
 
 ## <a name="loh-performance-implications"></a>Auswirkungen des großen Objektheaps auf die Leistung
 
@@ -91,41 +91,41 @@ Zuordnungen zum großen Objektheap beeinträchtigen die Leistung folgendermaßen
 
 - Zuordnungskosten:
 
-   Die CLR garantiert, dass der Speicher für jedes neue Objekt, das herausgegeben wird, bereinigt wird. Dies bedeutet, dass die Zuordnungskosten für ein großes Objekt vollständig von der Speicherbereinigung dominiert werden (sofern keine Garbage Collection ausgelöst wird). Wenn zwei Zyklen für die Bereinigung von einem Byte benötigt werden, bedeutet dies, dass zum Bereinigen des kleinsten großen Objekts 170.000 Zyklen erforderlich sind. Das Bereinigen des Arbeitsspeichers eines 16 MB großen Objekts auf einem Computer mit 2 GHz dauert ungefähr 16 Millisekunden. Dies führt zu hohen Kosten.
+  Die CLR garantiert, dass der Speicher für jedes neue Objekt, das herausgegeben wird, bereinigt wird. Dies bedeutet, dass die Zuordnungskosten für ein großes Objekt vollständig von der Speicherbereinigung dominiert werden (sofern keine Garbage Collection ausgelöst wird). Wenn zwei Zyklen für die Bereinigung von einem Byte benötigt werden, bedeutet dies, dass zum Bereinigen des kleinsten großen Objekts 170.000 Zyklen erforderlich sind. Das Bereinigen des Arbeitsspeichers eines 16 MB großen Objekts auf einem Computer mit 2 GHz dauert ungefähr 16 Millisekunden. Dies führt zu hohen Kosten.
 
 - Bereinigungskosten:
 
-   Da der große Objektheap und Generation 2 zusammen bereinigt werden, wird eine Garbage Collection für Generation 2 ausgelöst, wenn einer der beiden Schwellenwerte überschritten wird. Wenn eine Garbage Collection für Generation 2 aufgrund des großen Objektheaps ausgelöst wurde, wird Generation 2 nach der Garbage Collection nicht unbedingt erheblich kleiner. Wenn nicht viele Daten zu Generation 2 gehören, hat dies nur minimale Auswirkungen. Ist Generation 2 jedoch groß, können Leistungsprobleme auftreten, wenn viele Garbage Collections für Generation 2 ausgelöst werden. Wenn viele große Objekte nur vorübergehend zugewiesen werden und Sie über einen großen kleinen Objektheap verfügen, verwenden Sie möglicherweise zu viel Zeit für Garbage Collections. Darüber hinaus können die Zuordnungskosten sich summieren, wenn Sie sehr große Objekte weiterhin zuordnen und freigeben.
+  Da der große Objektheap und Generation 2 zusammen bereinigt werden, wird eine Garbage Collection für Generation 2 ausgelöst, wenn einer der beiden Schwellenwerte überschritten wird. Wenn eine Garbage Collection für Generation 2 aufgrund des großen Objektheaps ausgelöst wurde, wird Generation 2 nach der Garbage Collection nicht unbedingt erheblich kleiner. Wenn nicht viele Daten zu Generation 2 gehören, hat dies nur minimale Auswirkungen. Ist Generation 2 jedoch groß, können Leistungsprobleme auftreten, wenn viele Garbage Collections für Generation 2 ausgelöst werden. Wenn viele große Objekte nur vorübergehend zugewiesen werden und Sie über einen großen kleinen Objektheap verfügen, verwenden Sie möglicherweise zu viel Zeit für Garbage Collections. Darüber hinaus können die Zuordnungskosten sich summieren, wenn Sie sehr große Objekte weiterhin zuordnen und freigeben.
 
 - Arrayelemente mit Verweistypen:
 
-   Sehr große Objekte im großen Objektheap sind in der Regel Arrays (es kommt äußerst selten vor, dass ein sehr großes Instanzobjekt vorhanden ist). Wenn die Elemente eines Arrays viele Verweise enthalten, fallen Kosten an, die bei Elementen mit wenigen Verweise nicht anfallen. Enthält das Element keine Verweise, muss der Garbage Collector das Array überhaupt nicht durchlaufen. Wenn Sie beispielsweise ein Array zum Speichern von Knoten in einer binären Struktur verwenden, könnte dies implementiert werden, indem durch die tatsächlichen Knoten auf den rechten und linken Knoten eines Knotens verwiesen wird:
+  Sehr große Objekte im großen Objektheap sind in der Regel Arrays (es kommt äußerst selten vor, dass ein sehr großes Instanzobjekt vorhanden ist). Wenn die Elemente eines Arrays viele Verweise enthalten, fallen Kosten an, die bei Elementen mit wenigen Verweise nicht anfallen. Enthält das Element keine Verweise, muss der Garbage Collector das Array überhaupt nicht durchlaufen. Wenn Sie beispielsweise ein Array zum Speichern von Knoten in einer binären Struktur verwenden, könnte dies implementiert werden, indem durch die tatsächlichen Knoten auf den rechten und linken Knoten eines Knotens verwiesen wird:
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      Node left;
-      Node right;
-   };
+  ```csharp
+  class Node
+  {
+     Data d;
+     Node left;
+     Node right;
+  };
 
-   Node[] binary_tr = new Node [num_nodes];
-   ```
+  Node[] binary_tr = new Node [num_nodes];
+  ```
 
-   Wenn `num_nodes` groß ist, muss der Garbage Collector mindestens zwei Verweise pro Element durchlaufen. Ein alternativer Ansatz besteht darin, den Index des rechten und des linken Knotens zu speichern:
+  Wenn `num_nodes` groß ist, muss der Garbage Collector mindestens zwei Verweise pro Element durchlaufen. Ein alternativer Ansatz besteht darin, den Index des rechten und des linken Knotens zu speichern:
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      uint left_index;
-      uint right_index;
-   } ;
-   ```
+  ```csharp
+  class Node
+  {
+     Data d;
+     uint left_index;
+     uint right_index;
+  } ;
+  ```
 
-   Verweisen Sie auf die Daten des linken Knotens nicht mit `left.d`, sondern mit `binary_tr[left_index].d`. Der Garbage Collector muss dann keine Verweise für den linken und rechten Knoten betrachten.
+  Verweisen Sie auf die Daten des linken Knotens nicht mit `left.d`, sondern mit `binary_tr[left_index].d`. Der Garbage Collector muss dann keine Verweise für den linken und rechten Knoten betrachten.
 
-Von diesen drei Faktoren sind die ersten beiden üblicherweise relevanter als der dritte. Deshalb wird empfohlen, dass Sie einen Pool von großen Objekten zuordnen, den Sie wiederverwenden, statt temporäre Objekte zuzuordnen. 
+Von diesen drei Faktoren sind die ersten beiden üblicherweise relevanter als der dritte. Deshalb wird empfohlen, dass Sie einen Pool von großen Objekten zuordnen, den Sie wiederverwenden, statt temporäre Objekte zuzuordnen.
 
 ## <a name="collecting-performance-data-for-the-loh"></a>Sammeln von Leistungsdaten für den großen Objektheap
 
@@ -133,7 +133,7 @@ Bevor Sie Leistungsdaten für einen bestimmten Bereich erfassen, sollten Sie Fol
 
 1. Beweise dafür suchen, dass Sie diesen Bereich überprüfen sollten
 
-1. Andere bekannte Bereiche ohne ein Ergebnis untersuchen, das das vorhandene Leistungsproblem erklären könnte
+2. Andere bekannte Bereiche ohne ein Ergebnis untersuchen, das das vorhandene Leistungsproblem erklären könnte
 
 Weitere Informationen zu den Grundlagen zu Arbeitsspeicher und CPU finden Sie im Blogbeitrag [Understand the problem before you try to find a solution (Verstehen des Problems vor der Lösungsfindung)](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/).
 
@@ -149,7 +149,7 @@ Sie können folgende Tools verwenden, um Daten über die Leistung des großen Ob
 
 Diese Speicherleistungsindikatoren sind in der Regel ein guter erster Schritt bei der Untersuchung von Leistungsproblemen. Es wird jedoch empfohlen, [ETW-Ereignisse](#etw) zu verwenden. Sie können den Systemmonitor wie in Abbildung 4 dargestellt konfigurieren, indem Sie die gewünschten Indikatoren hinzufügen. Folgende sind für den großen Objektheap relevant:
 
-- **\# Anzahl der Garbage Collections für Generation 2**
+- **Anzahl der Garbage Collections für Generation 2**
 
    Zeigt an, wie viele Garbage Collections für Generation 2 durchgeführt wurden, seit der Prozess gestartet wurde. Der Indikator wird am Ende einer Garbage Collection für Generation 2 (auch als vollständige Garbage Collection bezeichnet) erhöht. Dieser Indikator zeigt den letzten erfassten Wert an.
 
@@ -159,7 +159,7 @@ Diese Speicherleistungsindikatoren sind in der Regel ein guter erster Schritt be
 
 Eine allgemeine Möglichkeit zum Anzeigen von Leistungsindikatoren ist die Verwendung des Systemmonitors (perfmon.exe). Fügen Sie den entsprechenden Indikator für Prozesse, die für Sie wichtig sind, mithilfe von „Leistungsindikatoren hinzufügen“ hinzu. Sie können die Leistungsindikatordaten im Systemmonitor wie in Abbildung 4 dargestellt in einer Protokolldatei speichern.
 
-![Abbildung 4: Hinzufügen von Leistungsindikatoren](media/loh/perfcounter.png)    
+![Abbildung 4: Hinzufügen von Leistungsindikatoren](media/loh/perfcounter.png)  
 Abbildung 4: Der große Objektheap nach einer Garbage Collection für Generation 2
 
 Leistungsindikatoren können auch programmgesteuert abgefragt werden. Viele Benutzer sammeln die Leistungsdaten auf diese Weise im Rahmen ihrer alltäglichen Testprozesse. Wenn Indikatoren mit ungewöhnlichen Werten angezeigt werden, können dann mithilfe anderer Methoden detailliertere Daten abgerufen werden, um die Untersuchung zu erleichtern.
@@ -171,13 +171,13 @@ Leistungsindikatoren können auch programmgesteuert abgefragt werden. Viele Benu
 
 Der Garbage Collector bietet viele ETW-Ereignisse, mit denen Sie besser nachvollziehen können, welche Aktionen der Heap durchführt und warum. In folgenden Blogbeiträgen wird das Erfassen und Verstehen von GC-Ereignissen mit ETW veranschaulicht:
 
-- [GC ETW Events - 1 (Garbage Collection: ETW-Ereignisse (1))](http://blogs.msdn.com/b/maoni/archive/2014/12/22/gc-etw-events.aspx)
+- [GC ETW Events - 1 (Garbage Collection: ETW-Ereignisse (1))](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
 
-- [GC ETW Events - 2 (Garbage Collection: ETW-Ereignisse (2))](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-2.aspx)
+- [GC ETW Events - 2 (Garbage Collection: ETW-Ereignisse (2))](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
 
-- [GC ETW Events - 3 (Garbage Collection: ETW-Ereignisse (3))](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-3.aspx) 
+- [GC ETW Events - 3 (Garbage Collection: ETW-Ereignisse (3))](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
 
-- [GC ETW Events - 4 (Garbage Collection: ETW-Ereignisse (4))](http://blogs.msdn.com/b/maoni/archive/2014/12/30/gc-etw-events-4.aspx)
+- [GC ETW Events - 4 (Garbage Collection: ETW-Ereignisse (4))](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
 
 Betrachten Sie die Spalte „Triggergrund“ für die Garbage Collections, um übermäßige Garbage Collections für Generation 2 zu identifizieren, die von temporären Zuordnungen von großen Objektheaps verursacht wurden. Wenn Sie einen einfachen Test durchführen möchten, der nur große Objekte temporär zuordnet, können Sie mithilfe der folgenden [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)-Befehlszeile Informationen zu ETW-Ereignissen erfassen:
 
@@ -186,7 +186,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 ```
 
 Das Ergebnis ähnelt Folgendem:
- 
+
 ![Abbildung 5: Überprüfen von ETW-Ereignissen mithilfe von PerfView](media/loh/perfview.png)  
 Abbildung 5: Mithilfe von PerfView angezeigte ETW-Ereignisse
 
@@ -199,18 +199,18 @@ perfview /GCOnly /AcceptEULA /nogui collect
 ```
 
 Dadurch wird ein AllocationTick-Ereignis erfasst, das etwa alle 100.000 Zuordnungen ausgelöst wird. Das bedeutet, dass immer dann ein Ereignis ausgelöst wird, wenn ein großes Objekt zugeordnet wird. Sie können dann eine der Ansichten für die Heapzuordnung der Garbage Collection betrachten, in denen die Aufruflisten angezeigt werden, die große Objekte zugeordnet haben:
- 
+
 ![Abbildung 6: Ansicht der Heapzuordnung einer Garbage Collection](media/loh/perfview2.png)  
 Abbildung 6: Ansicht der Heapzuordnung einer Garbage Collection
- 
+
 Wie Sie sehen können, handelt es sich hierbei um einen einfachen Test, der nur große Objekte aus seiner `Main`-Methode zuordnet.
 
 ### <a name="a-debugger"></a>Debugger
 
-Wenn Sie nur ein Speicherabbild besitzen und untersuchen müssen, welche Objekte sich im großen Objektheap befinden, können Sie die von .NET bereitgestellte [SOS-Debugerweiterung](http://msdn2.microsoft.com/ms404370.aspx) verwenden. 
+Wenn Sie nur ein Speicherabbild besitzen und untersuchen müssen, welche Objekte sich im großen Objektheap befinden, können Sie die von .NET bereitgestellte [SOS-Debugerweiterung](http://msdn2.microsoft.com/ms404370.aspx) verwenden.
 
 > [!NOTE]
-> Die in diesem Abschnitt erwähnten Debuggingbefehle gelten für die [Windows-Debugger](http://www.microsoft.com/whdc/devtools/debugging/default.mspx).
+> Die in diesem Abschnitt erwähnten Debuggingbefehle gelten für die [Windows-Debugger](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).
 
 Nachfolgend wird eine Beispielausgabe für die Analyse des großen Objektheaps angezeigt:
 
@@ -243,7 +243,7 @@ MT   Count   TotalSize Class Name
 Total 133 objects
 ```
 
-Die Größe des großen Objektheaps beträgt 49.738.016 Byte (16.754.224 + 16.699.288 + 16.284.504). Zwischen den Adressen 023e1000 und 033db630 sind 8.008.736 Byte von einem Array von <xref:System.Object?displayProperty=fullName>-Objekten und 6.663.696 Byte sind von einem Array von <xref:System.Byte?displayProperty=nameWithType>-Objekten belegt. 2.081.792 Byte sind von freiem Speicherplatz belegt.
+Die Größe des großen Objektheaps beträgt 49.738.016 Byte (16.754.224 + 16.699.288 + 16.284.504). Zwischen den Adressen 023e1000 und 033db630 sind 8.008.736 Byte von einem Array von <xref:System.Object?displayProperty=nameWithType>-Objekten und 6.663.696 Byte sind von einem Array von <xref:System.Byte?displayProperty=nameWithType>-Objekten belegt. 2.081.792 Byte sind von freiem Speicherplatz belegt.
 
 Manchmal zeigt der Debugger an, dass die Gesamtgröße des großen Objektheaps weniger als 85.000 Byte beträgt. Dies geschieht, weil die Runtime den großen Objektheap zur Zuordnung von bestimmten Objekten verwendet, die kleiner als ein großes Objekt sind.
 

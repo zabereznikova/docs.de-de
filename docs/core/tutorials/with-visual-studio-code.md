@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213615"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484667"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -50,7 +50,7 @@ Beginnen wir mit einem einfachen „Hello World“-Programm in .NET Core:
 
 4. Führen Sie das „Hello World“-Programm aus:
 
-    * Geben Sie `dotnet run` ein. 
+    * Geben Sie `dotnet run` ein.
 
       ![Der Befehl „dotnet run“](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 
     ![Öffnen der Datei „Program.cs“](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code fordert Sie dazu auf, die fehlenden Objekte zum Erstellen und Debuggen Ihrer App hinzuzufügen. Wählen Sie **Ja**. 
+2. Visual Studio Code fordert Sie dazu auf, die fehlenden Objekte zum Erstellen und Debuggen Ihrer App hinzuzufügen. Wählen Sie **Ja**.
 
     ![Aufforderung bei fehlenden Objekten](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 
     ![Auswählen von .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Fügen Sie einen Breakpoint zu Ihrem Projekt hinzu, indem Sie neben Zeile 9 auf den **Rand des Editors** (der Bereich links neben den Zeilennummern im Editor) klicken.
+5. Fügen Sie einen Breakpoint zu Ihrem Projekt hinzu, indem Sie auf den **Rand des Editors** klicken. Dieser befindet sich links neben den Zeilennummern im Editor, neben Zeile 9. Alternativ können Sie den Textcursor im Editor in Zeile 9 bewegen und die Taste <kbd>F9</kbd> drücken.
 
     ![Festlegen eines Haltepunkts](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 
 7. Wählen Sie im oberen Bereich den grünen Pfeil aus, um das Debuggen fortzusetzen, oder klicken Sie auf das rote Quadrat, um das Debuggen zu beenden.
 
-> [!TIP] 
+> [!TIP]
 > Weitere Informationen und Tipps zur Problembehandlung beim .NET Core-Debuggen mit OmniSharp in Visual Studio Code finden Sie unter [Instructions for setting up the .NET Core debugger (Anleitung zum Einrichten des .NET Core-Debuggers)](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
+## <a name="faq"></a>FAQ
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Mir fehlen für das Erstellen und Debuggen von C# in Visual Studio Code die erforderlichen Objekte. Mein Debugger gibt an: „Keine Konfiguration.“
+
+Die C#-Erweiterung in Visual Studio Code kann Objekte zum Erstellen und Debuggen für Sie generieren. Wenn Sie ein C#-Projekt zum ersten Mal öffnen, fordert Visual Studio Code Sie zur Generierung dieser Objekte auf. Wenn Sie zu diesem Zeitpunkt keine Objekte generiert haben, können Sie diesen Befehl weiterhin ausführen, indem Sie die Befehlspalette (**„Ansicht“ > „Befehlspalette“**) öffnen und „>.NET: Objekte zum Erstellen und Debuggen generieren“ eingeben. Durch diese Auswahl werden die erforderlichen Konfigurationsdateien „.vscode“, „launch.json“ und „tasks.json“ generiert.
+
 ## <a name="see-also"></a>Siehe auch
-[Einrichten von Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[Debuggen in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+
+* [Einrichten von Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+* [Debuggen in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

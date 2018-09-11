@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: 59813b4bc5781776c9f9741c3e49e660c684bff9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b257c7d41618464e26ab3b54bcfb1f1e2c2e420e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267879"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467373"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;-Operator (C#-Referenz)
 Der `&`-Operator kann entweder als unärer oder als binärer Operator funktionieren.  
@@ -24,7 +24,7 @@ Der `&`-Operator kann entweder als unärer oder als binärer Operator funktionie
   
  Binäre `&`-Operatoren sind für integrale Typen und `bool` vordefiniert. Für integrale Typen berechnet & die bitweise logische AND-Operation der Operanden. Für `bool`-Operanden berechnet & die logische AND-Operation seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `true` ist, wenn beide Operanden `true` sind.  
   
- Im Gegensatz zum [bedingten AND-Operator](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&` wertet der binäre `&`-Operator beide Operatoren unabhängig vom Wert des ersten Operators aus. Zum Beispiel:  
+ Im Gegensatz zum [bedingten AND-Operator](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&` wertet der binäre `&`-Operator beide Operanden unabhängig vom Wert des ersten Operanden aus. Zum Beispiel:  
   
  [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
@@ -33,7 +33,8 @@ Der `&`-Operator kann entweder als unärer oder als binärer Operator funktionie
 ## <a name="example"></a>Beispiel  
  [!code-csharp[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Referenz](../../../csharp/language-reference/index.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)

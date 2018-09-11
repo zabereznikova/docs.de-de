@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 8ea958ad5d3eba394eb914da81111a0eaf707cf4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483472"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43398877"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
@@ -38,11 +38,11 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
-   * Er importiert den Namespace [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), der die für die Komponententests verwendeten Typen enthält.
+   * Er importiert den Namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, der für Komponententests verwendeten Typen enthält.
 
-   * Er wendet das [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx)-Attribut auf die `UnitTest1`-Klasse an. Jede mit dem \[TestMethod\]-Attribut markierte Testmethode in einer Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
+   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an. Jede mit dem \[TestMethod\]-Attribut markierte Testmethode in einer Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
 
-   * Er wendet das [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx)-Attribut an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
+   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
@@ -67,11 +67,11 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
-   * Er importiert den Namespace [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), der die für die Komponententests verwendeten Typen enthält.
+   * Er importiert den Namespace [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType>, der die für Komponententests verwendeten Typen enthält.
 
-   * Er wendet das [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx)-Attribut auf die `UnitTest1`-Klasse an. Jede mit dem \[TestMethod\]-Attribut markierte Testmethode in einer Testklasse wird automatisch ausgeführt, wenn der Komponententest ausgeführt wird.
+   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an. Jede mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> markierte Testmethode in einer Testklasse wird bei Ausführung des Komponententests automatisch ausgeführt.
 
-   * Er wendet das [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx)-Attribut an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
+   * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> an, um `TestMethod1` als Testmethode für die automatische Ausführung zu definieren, wenn der Komponententest ausgeführt wird.
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
@@ -84,9 +84,9 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
 ## <a name="adding-and-running-unit-test-methods"></a>Hinzufügen und Ausführen von Komponententestmethoden
 
-Wenn Visual Studio einen Komponententest ausführt, wird jede Methode in einer Komponententestklasse – der Klasse, auf die das [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx)-Attribut angewendet wird – ausgeführt, die mit dem [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx)-Attribut markiert ist. Eine Testmethode endet, wenn der erste Fehler aufgetreten ist, oder wenn alle in der Methode enthaltenen Tests erfolgreich ausgeführt wurden.
+Wenn Visual Studio einen Komponententest ausführt, wird jede Methode in einer Komponententestklasse – der Klasse, auf die das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> angewendet wird – ausgeführt, die mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> markiert ist. Eine Testmethode endet, wenn der erste Fehler aufgetreten ist, oder wenn alle in der Methode enthaltenen Tests erfolgreich ausgeführt wurden.
 
-Die am häufigsten verwendeten Tests rufen Member der [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx)-Klasse auf. Viele Assert-Methoden enthalten mindestens zwei Parameter, von denen einer das erwartete und der andere das tatsächliche Testergebnis ist. Die am häufigsten aufgerufenen Methoden sind in der nachfolgenden Tabelle aufgeführt.
+In den am häufigsten verwendeten Tests werden Member der Klasse <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> aufgerufen. Viele Assert-Methoden enthalten mindestens zwei Parameter, von denen einer das erwartete und der andere das tatsächliche Testergebnis ist. Die am häufigsten aufgerufenen Methoden sind in der nachfolgenden Tabelle aufgeführt.
 
 Assert-Methoden | Funktion
 --- | ---
@@ -95,13 +95,13 @@ Assert-Methoden | Funktion
 `Assert.IsFalse` | Überprüft, ob eine Bedingung `false` ist. Die Bestätigung ist nicht erfolgreich, wenn die Bedingung `true` ist.
 `Assert.IsNotNull` | Überprüft, ob ein Objekt nicht `null` ist. Die Bestätigung ist nicht erfolgreich, wenn das Objekt `null` ist.
 
-Sie können auch das Attribut [\[ExpectedException\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx) auf eine Testmethode anwenden. Es gibt den Typ der Ausnahme an, die eine Testmethode auslösen soll. Der Test ist nicht erfolgreich, wenn die angegebene Ausnahme nicht ausgelöst wird.
+Sie können auch das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> auf eine Testmethode anwenden. Es gibt den Typ der Ausnahme an, die eine Testmethode auslösen soll. Der Test ist nicht erfolgreich, wenn die angegebene Ausnahme nicht ausgelöst wird.
 
-Beim Testen der `StringLibrary.StartsWithUpper`-Methode möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `true` zurückgibt, also können Sie die [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx)-Methode aufrufen. Außerdem möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die nicht mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `false` zurückgibt, also können Sie die [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx)-Methode aufrufen.
+Beim Testen der `StringLibrary.StartsWithUpper`-Methode möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `true` zurückgibt, also können Sie die Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> aufrufen. Außerdem möchten Sie eine Reihe von Zeichenfolgen bereitstellen, die nicht mit einem Großbuchstaben beginnen. Sie erwarten, dass die Methode in diesen Fällen `false` zurückgibt, also können Sie die Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> aufrufen.
 
 Da Ihre Bibliotheksmethode Zeichenfolgen behandelt, möchten Sie auch sicherstellen, dass sie eine [leere Zeichenfolge (`String.Empty`)](xref:System.String.Empty), eine gültige Zeichenfolge, die keine Zeichen enthält und deren <xref:System.String.Length> 0 ist, und eine `null`-Zeichenfolge, die nicht initialisiert wurde, erfolgreich behandelt. Wenn `StartsWithUpper` als eine Erweiterungsmethode für eine <xref:System.String>-Instanz aufgerufen wird, kann ihr keine `null`-Zeichenfolge übergeben werden. Allerdings kann sie auch direkt als statische Methode aufgerufen und ihr ein einzelnes <xref:System.String>-Argument übergeben werden.
 
-Sie definieren drei Methoden, von denen jede ihre [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx)-Methode wiederholt für jedes Element in einem Zeichenfolgenarray aufruft. Da die Testmethode nicht fortgesetzt wird, sobald sie auf den ersten Fehler trifft, rufen Sie eine Methodenüberladung auf, mit der Sie eine Zeichenfolge übergeben können, die den Zeichenfolgenwert angibt, der im Methodenaufruf verwendet wird.
+Sie definieren drei Methoden, von denen jede die zugehörige Methode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> wiederholt für jedes Element in einem Zeichenfolgenarray aufruft. Da die Testmethode nicht fortgesetzt wird, sobald sie auf den ersten Fehler trifft, rufen Sie eine Methodenüberladung auf, mit der Sie eine Zeichenfolge übergeben können, die den Zeichenfolgenwert angibt, der im Methodenaufruf verwendet wird.
 
 So erstellen Sie die Testmethoden:
 

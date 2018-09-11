@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579846"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484863"
 ---
 # <a name="formatting-types-in-net"></a>Formatieren von Typen in .NET
 <a name="Introduction"></a> Bei der Formatierung wird eine Instanz einer Klasse, Struktur oder eines Enumerationswerts in die entsprechende Zeichenfolgendarstellung konvertiert. Die resultierende Zeichenfolge kann dann häufig Benutzern angezeigt oder sie kann deserialisiert werden, um den ursprünglichen Datentyp wiederherzustellen. Diese Konvertierung kann eine Reihe von Problemen beinhalten:  
@@ -120,7 +120,7 @@ ms.locfileid: "33579846"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  Ab [!INCLUDE[win81](../../../includes/win81-md.md)]enthält [!INCLUDE[wrt](../../../includes/wrt-md.md)] eine [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) -Schnittstelle mit einer einzelnen Methode, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), die eine Standardformatierungsunterstützung bereitstellt. Es wird jedoch empfohlen, dass verwaltete Typen die `IStringable` -Schnittstelle nicht implementieren. Weitere Informationen finden Sie im Abschnitt "[!INCLUDE[wrt](../../../includes/wrt-md.md)] und die `IStringable`-Schnittstelle" auf der <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Referenzseite.  
+>  Ab [!INCLUDE[win81](../../../includes/win81-md.md)] enthält [!INCLUDE[wrt](../../../includes/wrt-md.md)] eine [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx)-Schnittstelle mit einer einzelnen Methode, [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), die eine Standardformatierungsunterstützung bereitstellt. Es wird jedoch empfohlen, dass verwaltete Typen die `IStringable` -Schnittstelle nicht implementieren. Weitere Informationen finden Sie im Abschnitt "[!INCLUDE[wrt](../../../includes/wrt-md.md)] und die `IStringable`-Schnittstelle" auf der <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Referenzseite.  
   
  Da alle anderen Typen außer Schnittstellen von <xref:System.Object>abgeleitet werden, wird diese Funktionalität automatisch für die benutzerdefinierten Klassen oder Strukturen bereitgestellt. Die Funktionalität der `ToString` -Standardmethode ist jedoch begrenzt: Sie identifiziert zwar den Typ, stellt jedoch keine Informationen zu einer Instanz des Typs bereit. Um eine Zeichenfolgendarstellung eines Objekts bereitzustellen, die Informationen zum Objekt enthält, müssen Sie die `ToString` -Methode überschreiben.  
   

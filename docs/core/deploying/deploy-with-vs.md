@@ -4,12 +4,12 @@ description: Erfahren Sie mehr zur .NET Core-App-Bereitstellung mit Visual Studi
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: dedf04a872faf1b35a05f9da0c61b80713fdce51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218676"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407448"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -72,11 +72,11 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung mit mindestens ein
 
 1. Wenn `Newtonsoft.Json` bereits auf Ihrem System installiert ist, fügen Sie es Ihrem Projekt hinzu, indem Sie Ihr Projekt im rechten Bereich der Registerkarte **Pakete für Projektmappe verwalten** auswählen.
 
-Beachten Sie, dass eine Framework-abhängige Bereitstellung mit Drittanbieter-Abhängigkeiten nur so tragbar wie ihre Drittanbieter-Abhängigkeiten ist. Falls eine Drittanbieter-Bibliothek nur macOS unterstützen sollte, so wird die Anwendung nicht auf Windows-Systeme übertragbar sein. Dies kann geschehen, wenn die Drittanbieter-Abhängigkeit selbst vom nativen Code abhängt. Ein gutes Beispiel dafür ist der [Kestrel-Server](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), der eine native Abhängigkeit unter [libuv](https://github.com/libuv/libuv) erfordert. Wenn bei dieser Art von Drittanbieter-Abhängigkeit eine FDD für eine Anwendung erstellt wird, enthält die veröffentlichte Ausgabe einen Ordner für jede [Runtime-ID (RID)](../rid-catalog.md), die die native Abhängigkeit unterstützt (und im NuGet-Paket vorhanden ist).
+Beachten Sie, dass eine Framework-abhängige Bereitstellung mit Drittanbieter-Abhängigkeiten nur so tragbar wie ihre Drittanbieter-Abhängigkeiten ist. Falls eine Drittanbieter-Bibliothek nur macOS unterstützen sollte, so wird die Anwendung nicht auf Windows-Systeme übertragbar sein. Dies kann geschehen, wenn die Drittanbieter-Abhängigkeit selbst vom nativen Code abhängt. Ein gutes Beispiel dafür ist der [Kestrel-Server](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), der eine native Abhängigkeit unter [libuv](https://github.com/libuv/libuv) erfordert. Wenn bei dieser Art von Drittanbieter-Abhängigkeit eine FDD für eine Anwendung erstellt wird, enthält die veröffentlichte Ausgabe einen Ordner für jede [Runtime-ID (RID)](../rid-catalog.md), die die native Abhängigkeit unterstützt (und im NuGet-Paket vorhanden ist).
 
 ## <a name="simpleSelf"></a> Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
 
-Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von Drittanbietern umfasst das Erstellen des Projekts, das Ändern der *CSPROJ*-Datei sowie das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. 
+Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von Drittanbietern umfasst das Erstellen des Projekts, das Ändern der *CSPROJ*-Datei sowie das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess.
 
 1. Erstellen eines Projekts
 
@@ -92,7 +92,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    1. Führen Sie auf Ihrem Projekt (nicht in der Projektmappe) im **Projektmappen-Explorer** einen Rechtsklick aus, und wählen Sie **Edit SCD.csproj** (SCD.csproj bearbeiten) aus.
 
-   1. Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei *csproj*, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID jeder Zielplattform angibt. Beachten Sie, dass Sie auch ein Semikolon hinzufügen müssen, um die RIDs trennen. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md). 
+   1. Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei *csproj*, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID jeder Zielplattform angibt. Beachten Sie, dass Sie auch ein Semikolon hinzufügen müssen, um die RIDs trennen. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md).
 
    Das folgende Beispiel gibt an, dass die Anwendung unter den Betriebssystemen Windows 10 (64-Bit) und OS X 10.11 (64-Bit) ausgeführt wird.
 
@@ -101,6 +101,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
+
    Beachten Sie, dass das Element `<RuntimeIdentifiers>` jedem `<PropertyGroup>`-Element in Ihrer Datei *CSPROJ* hinzugefügt werden kann. Eine vollständige *CSPROJ*-Beispieldatei wird später in diesem Abschnitt angezeigt.
 
 1. Erstellen Sie ein Debugbuild Ihrer App.
@@ -115,7 +116,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
       1. Ändern Sie die Projektmappenkonfiguration von **Debuggen** zu **Freigabe** auf der Symbolleiste, um eine Releaseversion (anstatt eine Debugversion) Ihrer App zu erstellen.
 
-      1. Führen Sie auf dem Projekt (nicht in der Projektmappe) im **Projektmappen-Explorer** einen Rechtsklick aus, und wählen Sie **Veröffentlichen** aus. 
+      1. Führen Sie auf dem Projekt (nicht in der Projektmappe) im **Projektmappen-Explorer** einen Rechtsklick aus, und wählen Sie **Veröffentlichen** aus.
 
       1. Wählen Sie auf der Registerkarte **Veröffentlichen** **Veröffentlichen** aus. Visual Studio schreibt die Dateien, die Ihre Anwendung enthalten, in das lokale Dateisystem.
 
@@ -180,6 +181,7 @@ Wenn Sie Ihre Anwendung bereitstellen, sind die Drittanbieter-Abhängigkeiten, d
 
 Beachten Sie, dass Sie eine eigenständige Bereitstellung mit einer Drittanbieter-Bibliothek nur auf von dieser Bibliothek unterstützten Plattformen bereitstellen können. Dies ist ähnlich, als wenn Sie über Drittanbieter-Abhängigkeiten mit nativen Abhängigkeiten in Ihrer Framework-abhängigen Bereitstellung verfügen, wobei die nativen Abhängigkeiten nicht auf der Zielplattform vorhanden sind, es sei denn, sie wurden dort zuvor installiert.
 
-# <a name="see-also"></a>Siehe auch
-[.NET Core Anwendungsbereitstellung](index.md)   
-[.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)   
+## <a name="see-also"></a>Siehe auch
+
+* [.NET Core-Anwendungsbereitstellung](index.md)
+* [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
