@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
 ms.openlocfilehash: 5bd7ebefc03dbe6b44a199ba3123414e7b282c90
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191273"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510193"
 ---
-# <a name="datarows-and-datarowviews"></a><span data-ttu-id="49bb3-102">"DataRows" und "DataRowViews"</span><span class="sxs-lookup"><span data-stu-id="49bb3-102">DataRows and DataRowViews</span></span>
-<span data-ttu-id="49bb3-103">Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar.</span><span class="sxs-lookup"><span data-stu-id="49bb3-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="49bb3-104">Die **DataRowView** Objekte verfügbar zu machen Werte als Objektarrays, die durch den Namen oder den Ordnungszahlverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden.</span><span class="sxs-lookup"><span data-stu-id="49bb3-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="49bb3-105">Sie erreichen die <xref:System.Data.DataRow> , die von verfügbar gemacht wird der **DataRowView** mithilfe der <xref:System.Data.DataRowView.Row%2A> Eigenschaft der **DataRowView**.</span><span class="sxs-lookup"><span data-stu-id="49bb3-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
+# <a name="datarows-and-datarowviews"></a><span data-ttu-id="7e579-102">"DataRows" und "DataRowViews"</span><span class="sxs-lookup"><span data-stu-id="7e579-102">DataRows and DataRowViews</span></span>
+<span data-ttu-id="7e579-103">Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar.</span><span class="sxs-lookup"><span data-stu-id="7e579-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="7e579-104">Die **DataRowView** Objekte verfügbar zu machen Werte als Objektarrays, die durch den Namen oder den Ordnungszahlverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden.</span><span class="sxs-lookup"><span data-stu-id="7e579-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="7e579-105">Sie erreichen die <xref:System.Data.DataRow> , die von verfügbar gemacht wird der **DataRowView** mithilfe der <xref:System.Data.DataRowView.Row%2A> Eigenschaft der **DataRowView**.</span><span class="sxs-lookup"><span data-stu-id="7e579-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
   
- <span data-ttu-id="49bb3-106">Beim Anzeigen von Werten mit einer **DataRowView**, wird die <xref:System.Data.DataView.RowStateFilter%2A> Eigenschaft der **DataView** bestimmt, welche Zeilenversion der zugrunde liegenden **DataRow** verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="49bb3-106">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="49bb3-107">Informationen zum Zugreifen auf verschiedene Zeilenversionen mithilfe einer **DataRow**, finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="49bb3-107">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
+ <span data-ttu-id="7e579-106">Beim Anzeigen von Werten mit einer **DataRowView**, wird die <xref:System.Data.DataView.RowStateFilter%2A> Eigenschaft der **DataView** bestimmt, welche Zeilenversion der zugrunde liegenden **DataRow** verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="7e579-106">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="7e579-107">Informationen zum Zugreifen auf verschiedene Zeilenversionen mithilfe einer **DataRow**, finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="7e579-107">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
- <span data-ttu-id="49bb3-108">Im folgenden Codebeispiel werden alle aktuellen und ursprünglichen Werte in einer Tabelle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="49bb3-108">The following code example displays all the current and original values in a table.</span></span>  
+ <span data-ttu-id="7e579-108">Im folgenden Codebeispiel werden alle aktuellen und ursprünglichen Werte in einer Tabelle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7e579-108">The following code example displays all the current and original values in a table.</span></span>  
   
 ```vb  
 Dim catView As DataView = New DataView(catDS.Tables("Categories"))  
@@ -59,10 +59,10 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="49bb3-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="49bb3-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7e579-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7e579-109">See Also</span></span>  
  <xref:System.Data.DataRowVersion>  
  <xref:System.Data.DataViewRowState>  
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
- [<span data-ttu-id="49bb3-110">DataViews</span><span class="sxs-lookup"><span data-stu-id="49bb3-110">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [<span data-ttu-id="49bb3-111">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="49bb3-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="7e579-110">DataViews</span><span class="sxs-lookup"><span data-stu-id="7e579-110">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="7e579-111">ADO.NET Managed Provider und DataSet Developer Center</span><span class="sxs-lookup"><span data-stu-id="7e579-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

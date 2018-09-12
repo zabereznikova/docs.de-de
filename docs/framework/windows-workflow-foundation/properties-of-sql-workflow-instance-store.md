@@ -3,29 +3,29 @@ title: Eigenschaften des SQL-Workflowinstanzspeichers
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44352280"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699318"
 ---
-# <a name="properties-of-sql-workflow-instance-store"></a><span data-ttu-id="adbac-102">Eigenschaften des SQL-Workflowinstanzspeichers</span><span class="sxs-lookup"><span data-stu-id="adbac-102">Properties of SQL Workflow Instance Store</span></span>
-<span data-ttu-id="adbac-103">Die Themen in diesem Abschnitt enthalten Informationen zu Eigenschaften des SQL-Workflowinstanzspeichers.</span><span class="sxs-lookup"><span data-stu-id="adbac-103">The topics in this section provide details about properties of the SQL Workflow Instance Store.</span></span>  
+# <a name="properties-of-sql-workflow-instance-store"></a><span data-ttu-id="e7f54-102">Eigenschaften des SQL-Workflowinstanzspeichers</span><span class="sxs-lookup"><span data-stu-id="e7f54-102">Properties of SQL Workflow Instance Store</span></span>
+<span data-ttu-id="e7f54-103">Die Themen in diesem Abschnitt enthalten Informationen zu Eigenschaften des SQL-Workflowinstanzspeichers.</span><span class="sxs-lookup"><span data-stu-id="e7f54-103">The topics in this section provide details about properties of the SQL Workflow Instance Store.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="adbac-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="adbac-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="e7f54-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e7f54-104">In This Section</span></span>  
   
--   [<span data-ttu-id="adbac-105">Instance Encoding Option</span><span class="sxs-lookup"><span data-stu-id="adbac-105">Instance Encoding Option</span></span>](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
+-   [<span data-ttu-id="e7f54-105">Instance Encoding Option</span><span class="sxs-lookup"><span data-stu-id="e7f54-105">Instance Encoding Option</span></span>](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   
--   [<span data-ttu-id="adbac-106">Instance Completion Action</span><span class="sxs-lookup"><span data-stu-id="adbac-106">Instance Completion Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
+-   [<span data-ttu-id="e7f54-106">Instance Completion Action</span><span class="sxs-lookup"><span data-stu-id="e7f54-106">Instance Completion Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
   
--   [<span data-ttu-id="adbac-107">Instance Locked Exception Action</span><span class="sxs-lookup"><span data-stu-id="adbac-107">Instance Locked Exception Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
+-   [<span data-ttu-id="e7f54-107">Instance Locked Exception Action</span><span class="sxs-lookup"><span data-stu-id="e7f54-107">Instance Locked Exception Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
   
--   [<span data-ttu-id="adbac-108">Host Lock Renewal Period</span><span class="sxs-lookup"><span data-stu-id="adbac-108">Host Lock Renewal Period</span></span>](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
+-   [<span data-ttu-id="e7f54-108">Host Lock Renewal Period</span><span class="sxs-lookup"><span data-stu-id="e7f54-108">Host Lock Renewal Period</span></span>](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
   
--   [<span data-ttu-id="adbac-109">Runnable Instances Detection Period</span><span class="sxs-lookup"><span data-stu-id="adbac-109">Runnable Instances Detection Period</span></span>](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
+-   [<span data-ttu-id="e7f54-109">Runnable Instances Detection Period</span><span class="sxs-lookup"><span data-stu-id="e7f54-109">Runnable Instances Detection Period</span></span>](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
   
--   [<span data-ttu-id="adbac-110">Verbindungszeichenfolge und Name der Verbindungszeichenfolge</span><span class="sxs-lookup"><span data-stu-id="adbac-110">Connection String and Connection String Name</span></span>](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
+-   [<span data-ttu-id="e7f54-110">Verbindungszeichenfolge und Name der Verbindungszeichenfolge</span><span class="sxs-lookup"><span data-stu-id="e7f54-110">Connection String and Connection String Name</span></span>](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
-## <a name="see-also"></a><span data-ttu-id="adbac-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="adbac-111">See Also</span></span>  
- [<span data-ttu-id="adbac-112">Windows Server App Fabric-Instanz Store</span><span class="sxs-lookup"><span data-stu-id="adbac-112">Windows Server App Fabric Instance Store</span></span>](https://go.microsoft.com/fwlink/?LinkId=201201)  
- [<span data-ttu-id="adbac-113">AppFabric SQL Server-Persistenzdatenbank</span><span class="sxs-lookup"><span data-stu-id="adbac-113">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkId=201202)
+## <a name="see-also"></a><span data-ttu-id="e7f54-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e7f54-111">See Also</span></span>  
+ [<span data-ttu-id="e7f54-112">Windows Server App Fabric-Instanz Store</span><span class="sxs-lookup"><span data-stu-id="e7f54-112">Windows Server App Fabric Instance Store</span></span>](https://go.microsoft.com/fwlink/?LinkId=201201)  
+ [<span data-ttu-id="e7f54-113">AppFabric SQL Server-Persistenzdatenbank</span><span class="sxs-lookup"><span data-stu-id="e7f54-113">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkId=201202)

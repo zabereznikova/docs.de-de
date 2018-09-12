@@ -5,19 +5,19 @@ f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
 ms.openlocfilehash: fc117c6b8993619e0610d5f51287e0fd0369729f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44226969"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44514198"
 ---
-# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a><span data-ttu-id="b701b-102">&#39;StrConv.LinguisticCasing&#39; erfordert &#39;StrConv.LowerCase&#39; oder &#39;StrConv.UpperCase ''&#39;</span><span class="sxs-lookup"><span data-stu-id="b701b-102">&#39;StrConv.LinguisticCasing&#39; requires &#39;StrConv.LowerCase&#39; or &#39;StrConv.UpperCase&#39;</span></span>
-<span data-ttu-id="b701b-103">Sie haben versucht, `StrConv.LinguisticCasing`zu verwenden. Dies ist jedoch nur in Kombination mit `StrConv.LowerCase` oder `StrConv.UpperCase`zulässig.</span><span class="sxs-lookup"><span data-stu-id="b701b-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
+# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a><span data-ttu-id="a8c20-102">&#39;StrConv.LinguisticCasing&#39; erfordert &#39;StrConv.LowerCase&#39; oder &#39;StrConv.UpperCase ''&#39;</span><span class="sxs-lookup"><span data-stu-id="a8c20-102">&#39;StrConv.LinguisticCasing&#39; requires &#39;StrConv.LowerCase&#39; or &#39;StrConv.UpperCase&#39;</span></span>
+<span data-ttu-id="a8c20-103">Sie haben versucht, `StrConv.LinguisticCasing`zu verwenden. Dies ist jedoch nur in Kombination mit `StrConv.LowerCase` oder `StrConv.UpperCase`zulässig.</span><span class="sxs-lookup"><span data-stu-id="a8c20-103">You have attempted to use `StrConv.LinguisticCasing`, which is only valid in combination with `StrConv.LowerCase` or `StrConv.UpperCase`.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b701b-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="b701b-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a8c20-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="a8c20-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="b701b-105">Verwenden Sie `StrConv.LowerCase` oder `StrConv.UpperCase` in Kombination mit `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="b701b-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
+1.  <span data-ttu-id="a8c20-105">Verwenden Sie `StrConv.LowerCase` oder `StrConv.UpperCase` in Kombination mit `StrConv.LinguisticCasing`.</span><span class="sxs-lookup"><span data-stu-id="a8c20-105">Use `StrConv.LowerCase` or `StrConv.UpperCase` in conjunction with `StrConv.LinguisticCasing`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b701b-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b701b-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="a8c20-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a8c20-106">See Also</span></span>  
    
- [<span data-ttu-id="b701b-107">StrConv-Konstante ändert sich in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="b701b-107">StrConv Constant Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/7a8c2781-2716-40dd-90c1-96c1548516e2)
+ [<span data-ttu-id="a8c20-107">StrConv-Konstante ändert sich in Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="a8c20-107">StrConv Constant Changes in Visual Basic .NET</span></span>](https://msdn.microsoft.com/library/7a8c2781-2716-40dd-90c1-96c1548516e2)
