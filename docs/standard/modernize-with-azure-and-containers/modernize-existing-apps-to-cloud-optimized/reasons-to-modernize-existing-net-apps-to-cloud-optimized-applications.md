@@ -1,71 +1,71 @@
 ---
-title: Gründe für die vorhandenen .NET apps für Cloud-optimierte Anwendungen zu aktualisieren.
-description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Gründe für die vorhandenen .NET apps für Cloud-optimierte Anwendungen zu aktualisieren.
+title: Gründe für Cloudoptimierte Anwendungen vorhandene .NET apps modernisieren
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Gründe für Cloudoptimierte Anwendungen vorhandene .NET apps modernisieren
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a874a742f6a5b32e15040ad0a237f0e0fa7908dc
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957980"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44509959"
 ---
-# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für die vorhandenen .NET apps für Cloud-optimierte Anwendungen zu aktualisieren.
+# <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für Cloudoptimierte Anwendungen vorhandene .NET apps modernisieren
 
-Mit einer Cloud-optimierten Anwendung können Sie schnell und wiederholt zuverlässige für Ihre Kunden Anwendungen bereitstellen. Durch Verschieben großer die operative Komplexität Ihrer App für die Plattform erhalten Sie wichtige Flexibilität und Zuverlässigkeit.
+Bei einer Anwendung Cloudoptimierte können Sie schnell und wiederholt zuverlässige Anwendungen für Ihre Kunden bereitstellen. Sie erhalten grundlegende Flexibilität und Zuverlässigkeit durch verzögern der Großteil der Komplexität des Betriebs Ihrer App auf der Plattform.
 
-Wenn Sie nicht Ihren Computer nach der Zeit schnell vermarkten Sie Ihrer app zu versenden wird der Markt anvisierten wurden entwickelt. Sie können möglicherweise zu spät, unabhängig davon, wie gut die Anwendung entworfen oder entwickelt wurde. Sie können fehlschlagen oder volle Potenzial nicht erreichen, da app-Bereitstellung mit den Anforderungen des Marktes nicht synchronisiert werden kann.
+Wenn Sie nicht Ihre Anwendungen in der Zeit schnell vermarkten Sie Ihre app senden wird der Markt, die, den Sie das Ziel, entwickelt. Möglicherweise möchten Sie zu spät, unabhängig davon, wie gut die Anwendung entworfen oder konzipiert wurde. Sie können Fehler oder volle Potenzial auszuschöpfen nicht erreicht werden, da Sie keine app-Bereitstellung mit den Anforderungen des Markts synchronisieren können.
 
-Die Notwendigkeit einer kontinuierlichen Business Innovation schiebt Entwicklungs- und Betriebsteams auf den Grenzwert. Die einzige Möglichkeit, die Flexibilität zu erzielen, fortlaufende Business Innovation benötigten wird durch Ihre Anwendungen mit Technologien wie Container und anwendungsspezifische Cloudoptimiertes Prinzipien Modernisierung.
+Die Notwendigkeit der kontinuierlichen geschäftsinnovationen überträgt Entwicklungs- und Betriebsteams auf den Grenzwert. Die einzige Möglichkeit, die Flexibilität zu erzielen, die nötig sind kontinuierliche geschäftsinnovationen ist durch die Modernisierung Ihrer Anwendungen mit Technologien wie Container und die Cloud optimierte anwendungsspezifische Prinzipien.
 
-Entscheidend ist, bei eine Organisation erstellt und verwaltet Anwendungen, die Cloud optimiert sind, fügen Sie Lösungen in die Hände von Kunden früher und können neue Ideen vermarkten, wenn sie relevant sind.
+Das Fazit ist, wenn eine Organisation erstellt und verwaltet Anwendungen, die Cloud optimiert sind, stellen Sie Lösungen von Kunden schneller und können neue Ideen bringen auf den Markt, wenn sie relevant sind.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Cloud-optimierten Anwendung Prinzipien und Grundsätze 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Cloud-optimierte Anwendung-Prinzipien und Grundsätze 
 
-Verbesserungen in der Cloud sind größtenteils konzentriert sich zwei Ziele zu erreichen: senken und die Wachstum verbessern, indem Sie die Flexibilität zu verbessern. Diese Ziele werden erzielt, indem Prozesse vereinfacht und Unstimmigkeiten verringern, wenn freigeben und Applications anzubieten.
+Verbesserungen in der Cloud vor allem liegt der Schwerpunkt auf zwei Ziele erfüllt: Kosten zu senken und Ihr Wachstum zu verbessern, indem Sie höhere Flexibilität. Diese Ziele werden erreicht, indem Prozesse vereinfachen, und die reibungslosere benutzereinladung, wenn Sie Version, und liefern von Anwendungen.
 
-Die Anwendung ist Cloud-optimiert, wenn Sie kann in eine agile app unabhängig von anderen lokalen apps Weise entwickeln, und lassen Sie anschließend, automatische Skalierung bereitstellen, überwachen und Problembehandlung für Ihre app in der Cloud.
+Ihre Anwendung ist Cloud optimiert sein, wenn Sie kann in einem flexiblen Weise – entwickeln Sie Ihre app unabhängig von anderen lokalen apps, und veröffentlichen, automatische Skalierung, bereitstellen, überwachen und Problembehandlung für Ihre app in der Cloud.
 
-Der Schlüssel ist *Agilität*. Agilität kann nicht ausgeliefert werden, es sei denn, Sie jede Produktion Bereitstellung auf ein absolutes Minimum reduzieren sowie Dev/Test-Umgebungsprobleme. Container (insbesondere Docker als de facto Standard) und verwaltete Dienste wurden speziell für diesen Zweck entwickelt.
+Der Schlüssel ist *Agilität*. Sie können nicht mit Agilität liefern, es sei denn, Sie jede Bereitstellung bis zur Produktion auf ein absolutes Minimum reduzieren sowie Dev/Test-Umgebungsprobleme. Container (insbesondere Docker, als ein de-facto-Standard) und verwalteten Diensten wurden speziell für diesen Zweck entwickelt.
 
-Um die Flexibilität zu erzielen, benötigen Sie auch automatisierte DevOps-Prozesse, die für CI-CD Pipelines basieren, die in der Cloud skalierbar Plattformen freigegeben. CI-CD-Plattformen (z. B. Visual Studio Team Services oder Jenkins), die eine skalierbare und robuste Cloudplattform (z. B. Azure App Service, Azure Service Fabric oder Azure Kubernetes-Dienst) bereitstellen, sind wichtige Technologien für Flexibilität in der Cloud zu erreichen.
+Um Flexibilität zu erzielen, benötigen Sie außerdem automatisierte DevOps-Prozesse, die auf CI/CD-Pipelines basieren, die skalierbare Plattformen in der Cloud freigegeben. CI-/CD-Plattformen (z.B. Azure DevOps-Services oder Jenkins), die für eine skalierbare und zuverlässige Cloud-Plattform (z.B. Azure App Service, Azure Service Fabric oder Azure Kubernetes Service) bereitstellen, sind wichtige Technologien für Flexibilität in der Cloud zu erreichen.
 
-Die folgende Liste beschreibt die wichtigsten Grundsätze oder Methoden für die Cloud optimierten Anwendungen. Beachten Sie, dass alle oder nur einige dieser Prinzipien durch, in einem progressiven oder inkrementellen Ansatz zu verwenden:
+Die folgende Liste beschreibt die wichtigsten Grundsätze oder Methoden für Cloudoptimierte Anwendungen. Beachten Sie, dass Sie alle oder nur einige dieser Prinzipien, einen schrittweisen oder inkrementellen Ansatz einführen können:
 
--   **Container**. Container bieten die Möglichkeit, die anwendungsabhängigkeiten mit der Anwendung selbst enthalten. Containerization reduziert erheblich die Anzahl der Probleme, die auftreten können, wenn Sie in produktionsumgebungen bereitstellen oder im staging-Umgebungen zu testen. Letztlich zu Containern die Flexibilität von Anwendungen verbessern.
+-   **Container**. Container bieten Ihnen die Möglichkeit, die Abhängigkeiten der Anwendung mit der Anwendung selbst enthalten. Containerisierung verringert erheblich die Anzahl der Probleme, die auftreten können, wenn Sie in produktionsumgebungen bereitstellen, oder im staging-Umgebungen zu testen. Container verbessern, die Flexibilität der anwendungsbereitstellung.
 
--   **Robusten und skalierbaren Cloud**. Die Cloud bietet eine Plattform, die verwaltete, elastische, skalierbare und robuste ist. Diese Merkmale werden grundlegende Kosten Verbesserungen erhalten und hoch verfügbar und zuverlässige Anwendungen in einer kontinuierlichen Bereitstellung ausgeliefert. Verwaltete Dienste wie verwaltete Datenbanken, cache, wie ein Dienst (CaaS), und klicken Sie auf verwalteten Speicher fundamentale Teile in die Wartungskosten einer Anwendung aktualisiert werden.
+-   **Robusten und skalierbaren Cloud**. Die Cloud bietet eine Plattform, die verwaltete, elastische, skalierbare und stabile ist. Diese Merkmale sind grundlegende Verbesserungen der Kosten und hoch verfügbare und zuverlässige Anwendungen in einer kontinuierlichen Bereitstellung liefern. Verwaltete Dienste wie verwaltete Datenbanken, die verwalteten cache-a-Service (CaaS) und verwalteten Speicher sind grundlegende Komponenten beseitigen die Wartungskosten Ihrer Anwendung.
 
--   **Überwachung**. Sie können keine zuverlässigen Anwendung haben, ohne eine gute Möglichkeit zum Erkennen und zu diagnostizieren, Ausnahmen und Leistungsproblemen der Anwendung. In diesem Fall müssen Sie eine umsetzbare Erkenntnisse über die anwendungsverwaltung für die Leistung und sofortige Analysen abzurufen.
+-   **Überwachen von**. Sie können keine zuverlässige Anwendung haben, ohne dass eine gute Möglichkeit zum Erkennen und Diagnostizieren von Ausnahmen und Leistungsproblemen der Anwendung. Sie müssen sich verwertbare Erkenntnisse über die Verwaltung der Anwendungsleistung und sofortige Analysen zu erhalten.
 
--   **DevOps Kultur und der kontinuierlichen Bereitstellung**. Einsetzen von DevOps-Methoden muss in der Teams nicht mehr in unabhängigen Silos funktioniert kulturellen geändert werden. CI-CD-Pipelines sind möglich, nur, wenn eine erhöhte Zusammenarbeit zwischen Entwicklungs- und IT-Betriebsteams, die von Containern und CI-CD Tools unterstützt.
+-   **DevOps Kultur und continuous Delivery**. Einführung von DevOps-Praktiken erfordert eine kulturelle Änderung, die in dem es nicht mehr Teams in unabhängige Silos arbeiten. CI/CD-Pipelines sind möglich, nur, wenn eine verbesserte Zusammenarbeit zwischen Entwicklung und IT Operations-Teams von Containern und CI/CD-Tools unterstützt werden.
 
-Abbildung 4 – 2 zeigt die wichtigsten optionalen Säulen einer Cloud-optimierten Anwendung. Weitere Säulen, die Sie implementieren, die readier Ihrer Anwendung aus, um die kundenerwartungen erfolgreich ist.
+Abbildung 4-2 zeigt die Hauptsäulen optionalen einer Cloud optimierte Anwendung an. Weitere Säulen, die Sie implementieren, steht der readier Ihrer Anwendung erfolgreich ausgeführt werden, erfüllen die Erwartungen Ihrer Kunden.
 
-> ![Main Säulen einer Cloud-optimierten Anwendung](./media/image2.png)
+> ![Hauptpfeiler von einer Anwendung Cloudoptimiert](./media/image2.png)
 >
-> **Abbildung 4-2**. Main Säulen einer Cloud-optimierten Anwendung
+> **Abbildung 4-2**. Hauptpfeiler von einer Anwendung Cloudoptimiert
 
-Kurz gesagt, ist eine Cloud-optimierten Anwendung eine Methode zum Erstellen und Verwalten von Anwendungen, die von der Cloud computing-Modell, beim Einsatz einer Kombination von Containern, verwaltete Cloudinfrastruktur, robusten anwendungstechniken nutzt, Überwachung, fortlaufende Übermittlung und DevOps, ohne die Notwendigkeit neu entwerfe und Ihre vorhandenen Anwendungen umgeschrieben werden müssen.
+Zusammenfassend lässt sich sagen, ist eine Cloud-optimierte Anwendung einen Ansatz zum Erstellen und Verwalten von Anwendungen, der von der Cloud computing-Modell, bei der Verwendung einer Kombination aus Container, verwalteten Cloud-Infrastruktur, robusten anwendungstechniken nutzt, Überwachung, continuous Delivery und DevOps, ohne die Notwendigkeit zum umstrukturieren und Ihre vorhandenen Anwendungen neu.
 
-Diese Technologien und Vorgehensweisen kann Ihrer Organisation schrittweise ausführen. Sie müssen nicht alle, alle auf einmal zu nutzen. Sie können diese inkrementell übernehmen Enterprise Prioritäten und Anforderungen der Benutzer abhängig.
+Ihrer Organisation kann diese Technologien und Ansätze nach und nach einführen. Sie müssen nicht alle, alle gleichzeitig zu nutzen. Sie können sie inkrementell übernehmen Enterprise Prioritäten und der Benutzer muss abhängig.
 
-## <a name="benefits-of-a-cloud-optimized-application"></a>Vorteile einer Cloud-optimierten Anwendung
+## <a name="benefits-of-a-cloud-optimized-application"></a>Vorteile einer Cloudoptimierte-Anwendung
 
-Sie erhalten die folgenden Vorteile durch Konvertieren einer vorhandenen Anwendung zu einer Cloud-optimierten Anwendung (ohne Neuentwurf oder Schreiben von Code):
+Sie können die folgenden Vorteile durch die Konvertierung von einer vorhandenen Anwendung zu einer Anwendung Cloudoptimierte (ohne Neuentwurf oder Codierung) abrufen:
 
--   **Kosten zu senken, da die verwaltete Infrastruktur vom Cloudanbieter gehandhabt wird**. Cloud-optimierte Anwendungen profitieren Sie von der Cloud mithilfe der Out-of-Box-Flexibilität der Cloud, automatische Skalierung und hohe Verfügbarkeit. Vorteile beziehen sich nicht nur auf die Compute-Funktionen (VMs und Containern), aber auch Ressourcen in der Cloud abhängig wie DBaaS, CaaS und jede Infrastruktur eine Anwendung möglicherweise benötigt.
+-   **Senken, da die verwaltete Infrastruktur vom Cloud-Anbieter erfolgt**. Cloudoptimierte Anwendungen erhalten die Vorteile der Cloud mithilfe von Out-of-the-Box-Elastizität der Cloud, für die automatische Skalierung und hohe Verfügbarkeit. Vorteile beziehen sich nicht nur auf die Compute-Funktionen (virtuelle Computer und Container), sondern auch von Ressourcen in der Cloud, wie DBaaS, CaaS und keine Infrastruktur eine Anwendung möglicherweise benötigt.
 
--   **Robuste Anwendung und Infrastruktur**. Wenn Sie in die Cloud migrieren, müssen Sie vorübergehende Fehler zu nutzen; Fehler werden in der Cloud auftreten. Darüber hinaus sind Cloudinfrastruktur und Hardwareressourcen "ersetzt" Verkaufschancen für vorübergehende Downtime zu erhöhen. Zur gleichen Zeit erleichtern innere Cloudfunktionen und bestimmte Anwendung Entwicklungstechniken, die resilienz zu implementieren und Automatisieren von unerwarteten Fehlern in der Cloud wiederherstellen.
+-   **Robuste Anwendung und Infrastruktur**. Wenn Sie in die Cloud migrieren, müssen Sie vorübergehende Fehler zu nutzen. Fehler werden in der Cloud auftreten. Darüber hinaus sind Cloud-Infrastruktur und Hardware "ersetzt" die Möglichkeiten für vorübergehender Ausfallzeiten erhöht. Zur gleichen Zeit vereinfachen innere Cloudfunktionen und bestimmte Anwendung Entwicklungstechniken, die resilienz zu implementieren und Automatisieren von unerwarteten Fehlern in der Cloud wiederherstellen.
 
--   **Tiefere Einblicke in die Leistung der Anwendung**. Cloud-Überwachungstools wie Azure Application Insights Visualisierung für Systemüberwachung, Protokollierung und Benachrichtigungen angeben. Überwachungsprotokolle können Anwendungen einfach Debuggen und zu überwachen, grundlegende für eine zuverlässige Cloudanwendung.
+-   **Tiefere Einblicke in die Anwendungsleistung**. Cloud-Überwachungstools wie Azure Application Insights Visualisierung für die integritätsverwaltung, Protokollierung und Benachrichtigungen zu ermöglichen. Überwachungsprotokolle stellen Anwendungen einfach zu debuggen und zu überwachen, die Grundlage für eine zuverlässige Cloud-Anwendung.
 
--   **Anwendungsportabilität mit agile Bereitstellungen**. (Basierend auf den Docker-Modul Linux- oder Windows-Container)-Container bieten die beste Lösung zum Vermeiden von einer Anwendung Cloud gesperrt. Mithilfe von Container und Docker-Hosts mit mehreren Cloud Orchestrators können problemlos zwischen Umgebungen verschieben oder zu einem anderen cloud. Container vermeiden, die Unstimmigkeiten, die in der Regel in Bereitstellungen auf eine beliebige Umgebung (Phase/Test/Produktionsserver) auftritt.
+-   **Anwendungsportabilität, mit agile-Bereitstellungen**. Container (Linux- oder Windows-Containern basierend auf Docker-Engine) bieten die beste Lösung für eine Cloud-locked-Anwendung zu vermeiden. Mithilfe von Containern, Docker-Hosts und multicloud-orchestratoren können ganz einfach zwischen Umgebungen verschieben oder zu einem anderen cloud. Container beseitigen die Reibung, die in der Regel in Bereitstellungen in beliebigen Umgebungen (Phase/Test und Produktion) auftritt.
 
-All diese Vorteile bieten letztlich Reduzierung der Kosten für Schlüssel für den End-to-End-Anwendungslebenszyklus.
+All diese Vorteile bieten letztlich Key kosteneinsparungen für den End-to-End-Anwendungslebenszyklus.
 
-In den folgenden Abschnitten diese Vorteile ausführlicher erläutert werden, und mit spezieller Technologien verknüpft sind.
+In den folgenden Abschnitten diese Vorteile ausführlicher erklärt werden, und zu bestimmten Technologien verknüpft sind.
 
 >[!div class="step-by-step"]
 [Zurück](index.md)
