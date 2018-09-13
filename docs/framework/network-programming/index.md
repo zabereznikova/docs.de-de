@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: f4ed8fa218e97f4a6b06bd1c8a06d9b300b16119
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198685"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44698613"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
@@ -83,12 +83,12 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  Beschreibt die Erweiterungen, die dem Namespace <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType> und <xref:System.Net.Sockets?displayProperty=nameWithType> hinzugefügt wurden, um NAT-Durchdringung mit IPv6 und Teredo zu unterstützen.  
   
  [Netzwerkisolation für Windows Store-Apps](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
- Beschreibt die Auswirkungen der Netzwerkisolation, wenn Klassen aus den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:System.Net.Http.Headers> in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwendet werden.  
+ Beschreibt die Auswirkungen der Netzwerkisolation, wenn Klassen aus den Namespaces <xref:System.Net>, <xref:System.Net.Http>und <xref:System.Net.Http.Headers> in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps verwendet werden.  
   
  [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
  Links zu herunterladbaren Beispielen für Netzwerkprogrammierung, in denen Klassen aus den Namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> verwendet werden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Net?displayProperty=nameWithType>  
  Stellt für viele der Protokolle, die gegenwärtig in Netzwerken verwendet werden, eine einfache Programmierschnittstelle bereit. Die Klassen <xref:System.Net.WebRequest?displayProperty=nameWithType> und <xref:System.Net.WebResponse?displayProperty=nameWithType> in diesem Namespace sind die Grundlage für austauschbare Protokolle.  
   
