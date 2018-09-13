@@ -2,12 +2,12 @@
 title: Parametry (f#)
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in f#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
-ms.translationtype: MT
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338661"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699645"
 ---
 # <a name="byrefs"></a>Parametry
 
@@ -105,7 +105,7 @@ Alle diese Regeln, die zusammen bedeuten, dass den Inhaber des ein `inref` Zeige
 
 Der Zweck der `outref<'T>` ist, um anzugeben, dass der Zeiger nur aus gelesen werden sollen. Unerwartet `outref<'T>` zulässt, lesen den zugrunde liegenden Wert trotz seines Namens. Dies ist für die Kompatibilität. Semantisch gesehen sind `outref<'T>` funktioniert genauso wie `byref<'T>`.
 
-### <a name="interop-with-c"></a>Interoperabilität mit C #
+### <a name="interop-with-c"></a>Interoperabilität mit c# #
 
 C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den `ref` zurückgibt. Die folgende Tabelle zeigt, wie f# interpretiert wie c# ausgibt:
 
@@ -196,7 +196,7 @@ Verwenden, um die implizite Dereferenzierung, z. B. übergeben einen Verweis üb
 Sie können auch direkt auf eine Rückgabe zuweisen `byref`. Betrachten Sie das folgende Programm aus (dringend imperative):
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

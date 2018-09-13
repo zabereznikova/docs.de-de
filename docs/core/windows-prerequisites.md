@@ -4,12 +4,12 @@ description: Erfahren Sie, welche Abhängigkeiten Ihr Windows-Computer aufweisen
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482609"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277246"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Voraussetzungen für .NET Core unter Windows
 
@@ -30,6 +30,8 @@ Dieser Artikel erläutert die notwendigen Abhängigkeiten zum Entwickeln von .NE
 * Windows Server 2012 SP1 (vollständiger Server oder Serverkern)
 * Windows Server 2012 R2 (vollständiger Server oder Serverkern)
 * Windows Server 2016 oder höhere Versionen (vollständiger Server, Serverkern oder Nano-Server)
+
+## <a name="net-core-supported-operating-systems"></a>Von .NET Core unterstützte Betriebssysteme
 
 Die folgenden Artikel enthalten eine vollständige Liste der von .NET Core unterstützten Betriebssysteme je nach Version:
 

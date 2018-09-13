@@ -3,11 +3,11 @@ title: CSDL-Spezifikation
 ms.date: 03/30/2017
 ms.assetid: 6bb94c37-87da-447a-8dfd-83d1c4b5a2d2
 ms.openlocfilehash: f3acb7933392fcd8a1d952354a2b45e4b588834e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510990"
+ms.locfileid: "44710099"
 ---
 # <a name="csdl-specification"></a>CSDL-Spezifikation
 Die [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) Website kann nun die wichtigste Quelle für Inhalte zu Entity Framework.  
