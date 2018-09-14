@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 805a495790266b34ede030b76fbd83e6f172ceaf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206116"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615513"
 ---
 # <a name="introducing-xml-serialization"></a>Einführung in die XML-Serialisierung
 
@@ -111,7 +111,7 @@ Die folgenden Elemente können mit der **XmlSerializer**-Klasse serialisiert wer
 
 ## <a name="advantages-of-using-xml-serialization"></a>Vorteile der XML-Serialisierung
 
-Die **XmlSerializer**-Klasse gibt Ihnen uneingeschränkte und flexible Kontrolle über die Serialisierung eines Objekts als XML. Wenn Sie einen XML-Webdienst erstellen, können Sie Attribute, die die Serialisierung steuern, auf Klassen und Member anwenden, um sicherzustellen, dass die XML-Ausgabe dem gegebenen Schema entspricht.
+Die **XmlSerializer** -Klasse gibt Ihnen uneingeschränkte und flexibles Kontrolle beim Serialisieren eines Objekts als XML. Wenn Sie einen XML-Webdienst erstellen, können Sie Attribute, die die Serialisierung steuern, auf Klassen und Member anwenden, um sicherzustellen, dass die XML-Ausgabe dem gegebenen Schema entspricht.
 
 **XmlSerializer** ermöglicht beispielsweise Folgendes:
 

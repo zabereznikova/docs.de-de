@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definiere
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510564"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616139"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -58,7 +58,7 @@ Der Verweisrückgabewert ist ein Alias für eine andere Variable im Bereich der 
 - Wenn Sie dessen Wert lesen, lesen Sie den Wert der Variable, für die diese als Alias fungiert.
 - Wenn Sie diesen *nach Verweis* zurückgeben, geben Sie einen Alias für diese Variable zurück.
 - Wenn Sie ihn *nach Verweis* an eine andere Methode übergeben, übergeben Sie einen Verweis auf die Variable, für die diese als Alias fungiert.
-- Wenn Sie einen Alias für einen [lokalen Verweis](#ref-local) erstellen, erstellen Sie einen neuen Alias für diese Variable.
+- Wenn Sie einen Alias für einen [lokalen Verweis](#ref-locals) erstellen, erstellen Sie einen neuen Alias für diese Variable.
 
 
 ## <a name="ref-locals"></a>Lokale ref-Variablen

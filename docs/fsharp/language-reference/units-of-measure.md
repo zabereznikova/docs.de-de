@@ -3,11 +3,11 @@ title: Maßeinheiten (F#)
 description: Erfahren Sie, wie für Gleitkommawerte und signierten Integer-Werte in f# können Einheiten, die in der Regel verwendet werden, Länge, Volumen und die Masse an verknüpft haben.
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519522"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616152"
 ---
 # <a name="units-of-measure"></a>Maßeinheiten
 

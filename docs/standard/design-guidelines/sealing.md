@@ -11,11 +11,11 @@ ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d8c445de44a69f6c0cb1eaefa0e59d682288318
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515869"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45614007"
 ---
 # <a name="sealing"></a>Versiegeln
 Eines der Features von objektorientierten Frameworks ist, dass Entwickler erweitern können, und passen Sie sie in Methoden, die durch die Entwickler das Frameworks unvorhergesehenen. Dies ist die Leistung und die Gefahr von erweiterbaren Entwurf. Wenn Sie Ihr Framework entwerfen, es ist daher sehr wichtig für die Erweiterbarkeit von sorgfältig entworfen wird, wenn es gewünscht wird, um Erweiterbarkeit zu beschränken, wenn es gefährlich ist.  
