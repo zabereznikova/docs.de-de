@@ -6,26 +6,26 @@ helpviewer_keywords:
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 805e2a87e586e96048dd40033e7d80a74dcc94e9
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44709963"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583793"
 ---
-# <a name="mycomputeraudio-object"></a><span data-ttu-id="26644-102">My.Computer.Audio-Objekt</span><span class="sxs-lookup"><span data-stu-id="26644-102">My.Computer.Audio Object</span></span>
-<span data-ttu-id="26644-103">Stellt Methoden zur Soundwiedergabe bereit.</span><span class="sxs-lookup"><span data-stu-id="26644-103">Provides methods for playing sounds.</span></span>  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="458e1-102">My.Computer.Audio-Objekt</span><span class="sxs-lookup"><span data-stu-id="458e1-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="458e1-103">Stellt Methoden zur Soundwiedergabe bereit.</span><span class="sxs-lookup"><span data-stu-id="458e1-103">Provides methods for playing sounds.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="26644-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="26644-104">Remarks</span></span>  
- <span data-ttu-id="26644-105">Informationen zu den Methoden und Eigenschaften der `My.Computer.Audio` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="26644-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="458e1-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="458e1-104">Remarks</span></span>  
+ <span data-ttu-id="458e1-105">Informationen zu den Methoden und Eigenschaften der `My.Computer.Audio` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="458e1-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- <span data-ttu-id="26644-106">Weitere Informationen finden Sie unter [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="26644-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
+ <span data-ttu-id="458e1-106">Weitere Informationen finden Sie unter [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="458e1-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26644-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="26644-107">Requirements</span></span>  
- <span data-ttu-id="26644-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="26644-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="458e1-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="458e1-107">Requirements</span></span>  
+ <span data-ttu-id="458e1-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="458e1-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="26644-109">**Klasse:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="26644-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
+ <span data-ttu-id="458e1-109">**Klasse:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="458e1-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- <span data-ttu-id="26644-110">**Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")</span><span class="sxs-lookup"><span data-stu-id="26644-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="458e1-110">**Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")</span><span class="sxs-lookup"><span data-stu-id="458e1-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26644-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="26644-111">See Also</span></span>  
- [<span data-ttu-id="26644-112">My.Computer-Objekt</span><span class="sxs-lookup"><span data-stu-id="26644-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="458e1-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="458e1-111">See Also</span></span>  
+ [<span data-ttu-id="458e1-112">My.Computer-Objekt</span><span class="sxs-lookup"><span data-stu-id="458e1-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
