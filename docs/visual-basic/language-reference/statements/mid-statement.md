@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 ms.openlocfilehash: a653e63ded04616b6b0c6bdfb26a0a673d9299fc
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353459"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45589338"
 ---
 # <a name="mid-statement"></a>Mid-Anweisung
 Ersetzt eine angegebene Anzahl von Zeichen in einem `String` Variable mit dem Zeichen aus einer anderen Zeichenfolge.  

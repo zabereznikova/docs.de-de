@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a023d8d8c31131db46cc8535d0e903c2a8d8a345
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360660"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595187"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms
 Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerelement seine Spalten automatisch so an, dass sie die Breite des verfügbaren Anzeigebereichs ausfüllen. Das Steuerelement zeigt die horizontale Bildlaufleiste nur an, wenn es erforderlich ist, dass die Breite jeder Spalte gleich oder größer als sein <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaftenwert ist.  

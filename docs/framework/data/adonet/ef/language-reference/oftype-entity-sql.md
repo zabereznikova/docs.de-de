@@ -3,11 +3,11 @@ title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
 ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274208"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45596987"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 Gibt eine Auflistung der Objekte von einem Abfrageausdruck eines bestimmten Typs zurück.  
@@ -26,12 +26,12 @@ OFTYPE ( expression, [ONLY] test_type )
  Der Typ, dessen Übereinstimmung mit jedem von `expression` zurückgegebenen Objekt getestet wird. Der Typ muss mit einem Namespace qualifiziert werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Eine Auflistung von Objekten vom Typ `test_type`, von einem Basistyp oder von einem von `test_type` abgeleiteten Typ. Wenn ONLY angegeben wird, werden nur Instanzen des `test_type` oder eine leere Auflistung zurückgegeben.  
+ Eine Auflistung von Objekten vom Typ `test_type`, von einem Basistyp oder von einem von `test_type`abgeleiteten Typ. Wenn ONLY angegeben wird, werden nur Instanzen des `test_type` oder eine leere Auflistung zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `OFTYPE`-Ausdruck stellt einen Typausdruck dar, der angegeben wird, um einen Typtest für jedes Element einer Auflistung durchzuführen.  Der `OFTYPE`-Ausdruck liefert eine neue Auflistung des angegebenen Typs, die nur die zu diesem Typ oder einem seiner Untertypen äquivalenten Elemente enthält.  
+ Ein `OFTYPE` -Ausdruck stellt einen Typausdruck dar, der angegeben wird, um einen Typtest für jedes Element einer Auflistung durchzuführen.  Der `OFTYPE` -Ausdruck liefert eine neue Auflistung des angegebenen Typs, die nur die zu diesem Typ oder einem seiner Untertypen äquivalenten Elemente enthält.  
   
- Ein `OFTYPE`-Ausdruck ist eine Abkürzung des folgenden Abfrageausdrucks:  
+ Ein `OFTYPE` -Ausdruck ist eine Abkürzung des folgenden Abfrageausdrucks:  
   
 ```  
 select value treat(t as T) from ts as t where t is of (T)  
@@ -51,7 +51,7 @@ OfType(executives, NamespaceName.Manager)
   
  Da alle Direktoren Manager sind, enthält die resultierende Auflistung alle Direktoren, auch wenn die Auflistung nun als eine Auflistung von Managern typisiert ist.  
   
- In der folgenden Tabelle wird das Verhalten des `OFTYPE`-Operators für verschiedene Muster dargestellt. Alle Ausnahmen werden von der Clientseite ausgelöst, bevor der Anbieter aufgerufen wird:  
+ In der folgenden Tabelle wird das Verhalten des `OFTYPE` -Operators für verschiedene Muster dargestellt. Alle Ausnahmen werden von der Clientseite ausgelöst, bevor der Anbieter aufgerufen wird:  
   
 |Muster|Verhalten|  
 |-------------|--------------|  

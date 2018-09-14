@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [Windows Forms], WebBrowser control
 ms.assetid: 0968846e-48ee-485a-9797-65b5b9a622f8
 ms.openlocfilehash: 683c6ad4cbc55a889f4a0c1d20ebe8e8a2669a13
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45557813"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45593831"
 ---
 # <a name="webbrowser-security"></a>WebBrowser-Sicherheit
 Die <xref:System.Windows.Forms.WebBrowser> dient als voll vertrauenswürdig nur funktioniert. Der im Steuerelement angezeigte HTML-Inhalt aus einer externen Webserver und kann nicht verwalteten Codes in Form eines Skripts oder Websteuerelemente enthalten. Bei Verwendung der <xref:System.Windows.Forms.WebBrowser> -Steuerelement in diesem Fall das Steuerelement ist nicht unsicherer als Internet Explorer, aber die verwaltete wäre <xref:System.Windows.Forms.WebBrowser> Steuerelements verhindert nicht solche nicht verwalteten Code ausgeführt wird.  

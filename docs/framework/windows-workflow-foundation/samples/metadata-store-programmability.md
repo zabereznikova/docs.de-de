@@ -3,11 +3,11 @@ title: Programmierbarkeit des Metadatenspeichers
 ms.date: 03/30/2017
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
 ms.openlocfilehash: 4ea6117686b985a9ea18ce4e5cc4ea2b5c25524c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45512529"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592736"
 ---
 # <a name="metadata-store-programmability"></a>Programmierbarkeit des Metadatenspeichers
 Der Metadatenspeicher ist eine [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]-Funktion, die zur Laufzeit die Zuordnung beliebiger Metadaten in Form von CLR-Attributen zu Typen zulässt. Dies ermöglicht eine lose Kopplung zwischen den Laufzeitkomponenten und ihren Entwurfszeitäquivalenten sowie die Fähigkeit, die Entwurfszeitkomponenten ohne Einfluss auf die Laufzeit zu ändern. Das Bespiel zeigt, wie eine Programmierung mit dem Metadatenspeicher durch Anwenden von Attributen auf einen Laufzeittyp, dessen Quelle nicht gesteuert werden kann, durchgeführt werden kann. Die in der Regel verwendete Terminologie ist, dass eine Hostinganwendung die Metadaten für einen Satz von Typen registriert.  

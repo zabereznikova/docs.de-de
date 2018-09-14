@@ -3,11 +3,11 @@ title: Benutzerdefinierte Suchkriterien
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: HT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/13/2018
-ms.locfileid: "44757210"
+ms.locfileid: "45560752"
 ---
 # <a name="custom-find-criteria"></a>Benutzerdefinierte Suchkriterien
 In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Bereichsübereinstimmung mithilfe von Logik erstellt wird und wie ein benutzerdefinierter Suchdienst implementiert wird. Clients verfeinern mithilfe der Funktionalität für benutzerdefinierte Bereichsübereinstimmungen die vom System bereitgestellten Suchfunktionen der WCF-Suche und bauen diese zusätzlich aus. In diesem Beispiel wird folgendes Szenario behandelt:  

@@ -3,11 +3,11 @@ title: LINQ to XML-Übersicht (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 962fddcfec04259425c1094f07adf0e3966dfab0
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705348"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568500"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML-Übersicht (Visual Basic)
 XML hat sich mittlerweile als hervorragende Möglichkeit durchgesetzt, Daten in einer Vielzahl von Kontexten zu formatieren. Sie finden XML beispielsweise im Internet, in Konfigurationsdateien, in Microsoft Office Word-Dateien und in Datenbanken.  

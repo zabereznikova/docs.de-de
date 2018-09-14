@@ -12,11 +12,11 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: b9b6e1911d3e372861ebcdc5a175314d69c89175
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192319"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45592245"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Gewusst wie: Anzeigen einer Einfügemarke in einem ListView-Steuerelement in Windows Forms
 Die Einfügemarke im <xref:System.Windows.Forms.ListView>-Steuerelement zeigt Benutzern die Stelle an, an der mit der Maus gezogene Elemente eingefügt werden. Wenn ein Benutzer ein Element an eine Stelle zwischen zwei anderen Elementen zieht, gibt die Einfügemarke die erwartete neue Position des Elements an.  

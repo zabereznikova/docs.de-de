@@ -8,11 +8,11 @@ helpviewer_keywords:
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
 ms.openlocfilehash: 89c78877e196e803f6b4139ffcfa2b4def1a07d7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521173"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609372"
 ---
 # <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>Gewusst wie: Zeichnen einer geschlossener Form mithilfe des Polygon-Elements
 Dieses Beispiel zeigt, wie Sie das Zeichnen einer geschlossenen Form mithilfe der <xref:System.Windows.Shapes.Polygon> Element. Um eine geschlossene Form zu zeichnen, erstellen eine <xref:System.Windows.Shapes.Polygon> -Element, und verwenden dessen <xref:System.Windows.Shapes.Polygon.Points%2A> -Eigenschaft an den Scheitelpunkten einer Form. Automatisch wird eine Linie gezeichnet, die die ersten und letzten Punkte verbindet. Geben Sie abschließend eine <xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>, oder beides.  

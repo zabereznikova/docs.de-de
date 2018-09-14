@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508698"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595060"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerzeichen in XAML verarbeitet
 Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet werden müssen, indem eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung. In diesem Thema werden diese XAML-Sprachregeln erläutert. Er dokumentiert auch zusätzliche Leerzeichen behandeln, die von definiert ist die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor und der XAML-Writer für die Serialisierung.  

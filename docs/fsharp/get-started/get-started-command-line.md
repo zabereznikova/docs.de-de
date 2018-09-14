@@ -3,11 +3,11 @@ title: Erste Schritte mit f# mit Befehlszeilentools
 description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekte in f# mit .NET Core-CLI auf einem beliebigen Betriebssystem (Windows, MacOs oder Linux) erstellen.
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44706866"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569774"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Erste Schritte mit f# mit .NET Core-CLI
 

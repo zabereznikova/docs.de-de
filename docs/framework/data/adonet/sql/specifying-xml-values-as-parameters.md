@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517982"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591146"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Angeben von XML-Werten als Parameter
 Wenn eine Abfrage einen Parameter erfordert, deren Wert eine XML-Zeichenfolge ist, können Entwickler geben diesen Wert mithilfe einer Instanz von der **SqlXml** -Datentyp. Es gibt wirklich ohne zusätzlichen Aufwand. Parameterwerte werden von XML-Spalten in SQL Server auf genau die gleiche Weise wie andere Datentypen annehmen.  

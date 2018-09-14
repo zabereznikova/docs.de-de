@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 52dcb71a033ba4c2943ccda6787bf4a4e41d53d3
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272461"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597706"
 ---
 # <a name="ui-automation-control-types"></a>Steuerelementtypen der Benutzeroberflächenautomatisierung
 **Hinweis** diese Dokumentation ist für .NET Framework-Entwickler, die die verwaltete verwenden möchten, vorgesehen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in definierten Klassen die <xref:System.Windows.Automation> Namespace. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
@@ -63,7 +63,7 @@ ms.locfileid: "44272461"
  [Benutzeroberflächenautomatisierungs-Unterstützung für den TreeItem-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Fenster-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Automation.ControlType>  
   
 ## <a name="see-also"></a>Siehe auch  

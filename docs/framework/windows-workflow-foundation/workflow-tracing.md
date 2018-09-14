@@ -3,11 +3,11 @@ title: Workflowüberwachung
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: 27e56933043c9eb955500cdd1c5bbd06cb33bde8
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44507795"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591248"
 ---
 # <a name="workflow-tracing"></a>Workflowüberwachung
 Die Workflowüberwachung bietet eine Möglichkeit, Diagnoseinformationen mit .NET Framework-Ablaufverfolgungslistenern zu erfassen. Die Ablaufverfolgung kann aktiviert werden, wenn ein Problem mit der Anwendung erkannt wird, und dann wieder deaktiviert werden, sobald das Problem behoben ist. Es gibt zwei Methoden zur Aktivierung der Debugablaufverfolgung für Workflows. Sie können sie mit der Ereignisablaufverfolgung (ETW) konfigurieren, oder Sie können Ablaufverfolgungsereignisse mit <xref:System.Diagnostics> an eine Datei senden.  

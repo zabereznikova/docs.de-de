@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519872"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591931"
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
 Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jedoch in diesem Thema wird ausführlich die leistungsstarke und komplexe Minisprache Sie den Pfad angeben können Pfadgeometrien kompakter unter Verwendung [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

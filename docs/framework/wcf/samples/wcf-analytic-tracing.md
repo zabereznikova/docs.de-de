@@ -3,11 +3,11 @@ title: Analytische Ablaufverfolgung von WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 006f8aa0bc2f32e43269aa83433e8ca7a773a1c9
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44494283"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597341"
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
 In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in ETW in schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. Dieses Beispiel zeigt, wie Sie mit der <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, um Ereignisse zu schreiben, die in WCF-Dienste integrieren.  

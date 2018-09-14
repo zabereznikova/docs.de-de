@@ -3,11 +3,11 @@ title: SqlClient-Unterstützung für LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191871"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45569085"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient-Unterstützung für LocalDB
 Ab SQL Server Codename Denali, wird eine einfache Version von SQL Server, dem Namen LocalDB verfügbar sein. In diesem Thema wird erläutert, wie eine Verbindung mit einer LocalDB-Datenbank hergestellt wird.  

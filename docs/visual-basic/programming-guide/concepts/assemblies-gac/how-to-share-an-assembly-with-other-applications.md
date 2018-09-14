@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Freigeben einer Assembly für andere Anwendungen (Visual
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
 ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515924"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45590964"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Vorgehensweise: Freigeben einer Assembly für andere Anwendungen (Visual Basic)
 Assemblys können sowohl privat als auch freigegeben sein: Standardmäßig bestehen die meisten einfachen Programme aus einer privaten Assembly, da sie nicht für den Gebrauch durch andere Anwendungen vorgesehen sind.  

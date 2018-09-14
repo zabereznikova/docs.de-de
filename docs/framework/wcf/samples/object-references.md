@@ -3,11 +3,11 @@ title: Objektverweise
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
 ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529132"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594791"
 ---
 # <a name="object-references"></a>Objektverweise
 In diesem Beispiel wird veranschaulicht, wie Objekte als Verweis zwischen Server und Client übergeben werden. Das Beispiel verwendet simulierte *soziale Netzwerke*. Ein gesellschaftliches Netzwerk besteht aus einer `Person`-Klasse, die eine Liste von Freunden enthält, wobei jeder Freund eine Instanz der `Person`-Klasse mit eigener Liste von Freunden ist. Damit wird ein Objektdiagramm erstellt. Der Dienst macht Operationen in diesen gesellschaftlichen Netzwerken verfügbar.  

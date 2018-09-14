@@ -8,11 +8,11 @@ ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 9a04b8aaf9c6263a8935099963aaa1dc8d9100fd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269097"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588669"
 ---
 # <a name="transport-security-overview"></a>Übersicht über die Transportsicherheit
 Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt davon ab, die Bindung und den Transport verwendet wird. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. Dieses Thema beschreibt die wichtigsten Sicherheitsmechanismen, die in den WCF-System bereitgestellten Bindungen verwendet.  
@@ -55,7 +55,7 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt
  IIS verfügt über eine Option, mit der sich die Clients mit einem Zertifikat anmelden müssen. Mit dieser Funktion können die Internetinformationsdienste auch einem Windows-Konto ein Clientzertifikat zuordnen. Weitere Informationen zu [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Aktivieren von Clientzertifikaten in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Weitere Informationen zu [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren von Serverzertifikaten in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="digest"></a>Digest  
- Die Digest-Authentifizierung ähnelt der Standardauthentifizierung, bietet jedoch den Vorteil, die Anmeldeinformationen als Hash zu senden und nicht als Klartext. Weitere Informationen zu [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Digestauthentifizierung in IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Weitere Informationen zu [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren der Digestauthentifizierung](https://go.microsoft.com/fwlink/?LinkId=88596).  
+ Die Hashwertauthentifizierung ähnelt der Standardauthentifizierung, bietet jedoch den Vorteil, die Anmeldeinformationen als Hash zu senden und nicht als Klartext. Weitere Informationen zu [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Digestauthentifizierung in IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Weitere Informationen zu [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren der Digestauthentifizierung](https://go.microsoft.com/fwlink/?LinkId=88596).  
   
 #### <a name="windows"></a>Windows  
  Dies entspricht der integrierten Windows-Authentifizierungsmethode in IIS. Bei dieser Methode muss sich auch der Server in einer Windows-Domäne befinden, die das Kerberos-Protokoll als Domänencontroller verwendet. Falls sich der Server nicht in einer Kerberos-Domäne befindet oder falls das Kerberos-System fehlschlägt, können Sie den im nächsten Abschnitt beschriebenen NTLM-Wert verwenden. Weitere Informationen zu [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [integrierte Windows-Authentifizierung in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88597). Weitere Informationen zu [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren von Serverzertifikaten in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  

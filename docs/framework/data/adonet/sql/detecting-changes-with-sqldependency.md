@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
 ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508477"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45568851"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Ermitteln von Änderungen mit "SqlDependency"
 Ein <xref:System.Data.SqlClient.SqlDependency>-Objekt kann mit einem <xref:System.Data.SqlClient.SqlCommand>-Objekt verknüpft werden, um so Abweichungen zwischen den aktuellen und den ursprünglichen Abfrageergebnissen zu erkennen. Sie können einen Delegaten auch dem `OnChange`-Ereignis zuweisen, das ausgelöst wird, wenn sich die Ergebnisse für einen verknüpften Befehl ändern. Vor dem Ausführen des Befehls müssen Sie ihm die <xref:System.Data.SqlClient.SqlDependency> zuordnen. Mit der `HasChanges`-Eigenschaft der <xref:System.Data.SqlClient.SqlDependency> kann auch ermittelt werden, ob sich die Abfrageergebnisse seit dem letzten Abrufen der Daten geändert haben.  

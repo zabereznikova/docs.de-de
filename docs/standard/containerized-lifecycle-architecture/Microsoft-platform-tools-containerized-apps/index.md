@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106190"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45594349"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Einführung in die Microsoft-Plattform und -Tools für Container-Apps
 
@@ -29,17 +29,17 @@ Tabelle 3-1: Offener DevOps-Workflow für jede Technologie
 | Host | Microsoft-Technologien | Drittanbieter, in Azure integrierbar |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Plattform für Docker-Apps   | • Microsoft Visual Studio und Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Beliebiger Code-Editor (z.B. Sublime)<br /> • Beliebige Sprache (Node.js, Java, Go usw.)<br /> • Beliebiger Orchestrator und Scheduler<br /> • Beliebige Docker-Registrierung<br /> |
-| DevOps für Docker-Apps     | • Visual Studio Team Services<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion usw.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI usw.<br /> • Lokales Docker-Datencenter, Docker Swarm, Mesos DC/OS, Kubernetes usw.<br /> |
+| DevOps für Docker-Apps     | • Azure DevOps-Dienste<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion usw.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI usw.<br /> • Lokales Docker-Datencenter, Docker Swarm, Mesos DC/OS, Kubernetes usw.<br /> |
 | Verwaltung und Überwachung  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon, Chronos usw.<br />
 
 Die Microsoft-Plattform und die Tools für containerisierte Docker-Anwendungen, wie in Tabelle 3-1 definiert, bestehen aus den folgenden Komponenten:
 
 -   **Plattform für die Entwicklung von Docker Apps**: Die Entwicklung eines Diensts oder einer Sammlung von Diensten, aus denen sich eine „App“ zusammensetzt. Die Entwicklungsplattform stellt alle Aufgaben bereit, die Entwickler benötigen, bevor sie ihren Code in ein gemeinsames Coderepository mithilfe von Push verschieben. Die Entwicklung von Diensten, die als Container bereitgestellt werden, ähnelt sehr der Entwicklung derselben Anwendungen oder Dienste ohne Docker. Sie verwenden weiterhin Ihre bevorzugte Sprache (.NET, Node.js, Go usw.) und Ihren bevorzugten Editor bzw. Ihre bevorzugte IDE wie Visual Studio oder Visual Studio Code. Anstatt Docker jedoch als Bereitstellungsziel zu betrachten, entwickeln Sie Ihre Dienste in der Docker-Umgebung. Die Erstellung, das Ausführen und Testen sowie das Debuggen Ihres Codes erfolgt lokal in Containern, und Sie stellen die Zielumgebung zur Entwicklungszeit zur Verfügung. Indem sie die Zielumgebung lokal bereitstellen, richten Docker-Container eine Umgebung ein, die Sie erheblich dabei unterstützen wird, Ihren DevOps-Lebenszyklus zu optimieren. Visual Studio und Visual Studio Code verfügen über Erweiterungen für die Integration von Docker-Containern in Ihren Entwicklungsprozess.
 
--   **DevOps für Docker-Apps**: Entwickler, die Docker-Anwendungen erstellen, können Visual Studio Team Services (VSTS) oder andere Drittanbieterprodukte wie Jenkins verwenden, um eine umfassende automatisierte ALM-Verwaltung (Application Lifecycle Management) einzurichten.
+-   **DevOps für Docker-Apps** können Entwickler, die Docker-Anwendungen erstellen, Azure DevOps-Dienste oder einem anderen Produkt in einem von Drittanbietern, wie Jenkins, um eine umfassende automatisierte Verwaltung des Anwendungslebenszyklus (ALM).
 
-Mit VSTS können Entwickler containerzentrierte DevOps für einen schnellen, iterativen Prozess erstellen, der die Quellcodeverwaltung von jedem beliebigen Ort aus (VSTS-Git, GitHub, beliebiges Git-Remoterepository oder Subversion), Continuous Integration (CI), interne Komponententests, containerübergreifende/Dienstintegrationstests, Continuous Delivery (CD) und Release-Management (RM) ermöglicht. Entwickler können auch ihre Docker-Anwendungsreleases in Azure Container Service automatisieren: von der Entwicklung bis hin zu Staging und Produktionsumgebungen.
-
+Mit Azure DevOps-Dienste können Entwickler erstellen, Container ausgerichtete DevOps für einen schnellen, iterativen Prozess, der Quellcode-abdeckt, Steuern von jedem beliebigen Standort (Azure DevOps-Services-Git, GitHub, alle Git-Remoterepository oder Subversion), Continuous Integration (CI) , interne Komponententests, zwischen virtuellen Netzwerken Integrationstests containerdienst/Continuous Delivery (CD) und releaseverwaltung (RM). Entwickler können auch ihre Docker-Anwendungsreleases in Azure Container Service automatisieren: von der Entwicklung bis hin zu Staging und Produktionsumgebungen.
+ 
 -   IT-Produktionsverwaltung und -überwachung.
 
 **Verwaltung**: Die IT-Abteilung kann Produktionsanwendungen und -dienste auf verschiedene Weise verwalten:
@@ -48,8 +48,7 @@ Mit VSTS können Entwickler containerzentrierte DevOps für einen schnellen, ite
 
 -   **Docker-Tools** : Sie können Ihre Containeranwendungen mit vertrauten Tools verwalten. Es besteht keine Notwendigkeit, Ihre vorhandenen Docker-Verwaltungsverfahren zu ändern, um Containerworkloads in die Cloud zu verschieben. Nutzen Sie die Ihnen bereits vertrauten Anwendungsverwaltungstools, und verbinden Sie sich über die API-Standardendpunkte mit dem Orchestrator Ihrer Wahl. Sie können auch andere Tools von Drittanbietern verwenden, um Ihre Docker-Anwendungen zu verwalten, z.B. Docker Datacenter oder sogar CLI-Tools von Docker.
 
--   
-  **Open Source-Tools** : Da ACS die API-Standardendpunkte für die Orchestrierungs-Engine bereitstellt, sind die gängigsten Tools mit ACS kompatibel und in den meisten Fällen sofort einsatzbereit (einschließlich Visualisierung, Überwachung, Befehlzeilentools und sogar zukünftige Tools, sobald diese verfügbar sind).
+-   **Open Source-Tools** : Da ACS die API-Standardendpunkte für die Orchestrierungs-Engine bereitstellt, sind die gängigsten Tools mit ACS kompatibel und in den meisten Fällen sofort einsatzbereit (einschließlich Visualisierung, Überwachung, Befehlzeilentools und sogar zukünftige Tools, sobald diese verfügbar sind).
 
 **Überwachung**: Während der Ausführung von Produktionsumgebungen können Sie jedes Detail überwachen, indem Sie Folgendes verwenden:
 

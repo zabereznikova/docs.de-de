@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507286"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609670"
 ---
 # <a name="custom-bindings"></a>Benutzerdefinierte Bindungen
 Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus nativen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Arbeitsbeispiele finden Sie unter [Beispiele für die benutzerdefinierte Bindung](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Weitere Informationen finden Sie unter [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  

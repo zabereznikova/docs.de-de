@@ -12,11 +12,11 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
 ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342367"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588110"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Übersicht über das HScrollBar-Steuerelement und das VScrollBar-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> Steuerelemente werden verwendet, um die einfache Navigation durch eine lange Liste von Elementen oder eine große Menge an Informationen horizontale oder vertikale innerhalb einer Anwendung oder eines Steuerelements angeben. Bildlaufleisten sind ein häufiges Element der Windows-Schnittstelle, sodass die <xref:System.Windows.Forms.ScrollBar> -Steuerelement wird häufig verwendet, mit Steuerelementen, die nicht von abgeleitet sind die <xref:System.Windows.Forms.ScrollableControl> Klasse. Viele Entwickler entscheiden sich auf ähnliche Weise integriert die <xref:System.Windows.Forms.ScrollBar> gesteuert werden, wenn ihre eigenen Benutzersteuerelemente zu erstellen.  

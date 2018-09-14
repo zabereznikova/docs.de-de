@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361533"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591861"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität für die Bereitstellung von Endpunkt und die Daten zum Dienst zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  

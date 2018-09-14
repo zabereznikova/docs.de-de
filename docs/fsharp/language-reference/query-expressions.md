@@ -3,11 +3,11 @@ title: Abfrageausdrücke (F#)
 description: Informationen Sie zu Abfrage-Ausdruck-Unterstützung für LINQ, in der Programmiersprache f#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519840"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591776"
 ---
 # <a name="query-expressions"></a>Abfrageausdrücke
 

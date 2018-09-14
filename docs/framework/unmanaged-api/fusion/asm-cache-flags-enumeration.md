@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b712c6ae5978e83dab085f48dd1fd572757384a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274647"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45585681"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS-Enumeration
 Gibt die Quelle einer Assembly, die durch dargestellt [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) im globalen Assemblycache.  
@@ -38,7 +38,7 @@ typedef enum {
 } ASM_CACHE_FLAGS;  
 ```  
   
-## <a name="members"></a>Mitglieder  
+## <a name="members"></a>Member  
   
 |Member|Beschreibung|  
 |------------|-----------------|  
