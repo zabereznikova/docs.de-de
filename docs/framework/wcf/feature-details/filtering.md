@@ -3,11 +3,11 @@ title: Filtern
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264930"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527058"
 ---
 # <a name="filtering"></a>Filtern
 Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filtern Nachrichten vergleichen und funktionsbezogene Entscheidungen treffen zu können. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
@@ -22,7 +22,7 @@ Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filt
  Die Filterung wird nach Eingang einer Nachricht durchgeführt und ist Teil des Prozesses, durch den eine Nachricht an die richtige Anwendungskomponente verteilt wird. Der Entwurf das Filtersystem erfüllt die Anforderungen mehrere WCF-Subsysteme, einschließlich messaging, routing, Sicherheit, Ereignisbehandlung und systemverwaltung.  
   
 ## <a name="filters"></a>Filter  
- Das Filtermodul besteht aus zwei primären Komponenten: Filtern und Filtertabellen. Ein Filter trifft anhand von benutzerdefinierten logischen Bedingungen boolesche Entscheidungen bezüglich der Nachricht. Filter implementieren die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse.  
+ Die Filter-Engine besteht aus zwei primären Komponenten: Filtern und Filtertabellen. Ein Filter trifft anhand von benutzerdefinierten logischen Bedingungen boolesche Entscheidungen bezüglich der Nachricht. Filter implementieren die <xref:System.ServiceModel.Dispatcher.MessageFilter>-Klasse.  
   
  Mit den <xref:System.ServiceModel.Dispatcher.MessageFilter.Match%2A>-Methoden wird ermittelt, ob eine Nachricht zu einem Filter passt. Eine der Methoden prüft den Nachrichtenheader, kann jedoch nicht den Nachrichtentext überprüfen. Die andere Methode nimmt einen *Nachrichtenpuffer* als Eingabeparameter und kann den Nachrichtentext überprüfen.  
   

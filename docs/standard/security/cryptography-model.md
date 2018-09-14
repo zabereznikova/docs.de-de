@@ -9,11 +9,11 @@ ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d74ce08197ac76a601202da8e35ca6f619207076
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264713"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44757024"
 ---
 # <a name="net-framework-cryptography-model"></a>Das Kryptografiemodell in .NET Framework
 .NET Framework stellt Implementierungen von vielen kryptografischen Standardalgorithmen bereit. Diese Algorithmen sind einfach zu verwenden und die sichersten möglichen Standardeigenschaften. Darüber hinaus ist das .NET Framework-Kryptografiemodell mit Objektvererbung, Streamdesign und Konfiguration äußerst erweiterbar.  

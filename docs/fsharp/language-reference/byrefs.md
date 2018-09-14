@@ -3,11 +3,11 @@ title: Parametry (f#)
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in f#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: HT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699645"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508303"
 ---
 # <a name="byrefs"></a>Parametry
 

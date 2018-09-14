@@ -6,14 +6,14 @@ helpviewer_keywords:
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
 ms.openlocfilehash: 108411269067dc4b19b585b991dffbd78f2bb23f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264492"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515562"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog-Komponente (Windows Forms)
-Bei der Windows Forms-Komponente <xref:System.Windows.Forms.OpenFileDialog> handelt es sich um ein vorkonfiguriertes Dialogfeld. Dies entspricht dem **geöffnete Datei** (Dialogfeld), die von der Windows-Betriebssystem verfügbar gemacht werden. Die Vererbung erfolgt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  
+Die <xref:System.Windows.Forms.OpenFileDialog>-Komponente von Windows Forms ist ein vorkonfiguriertes Dialogfeld. Dies entspricht dem **geöffnete Datei** (Dialogfeld), die von der Windows-Betriebssystem verfügbar gemacht werden. Die Vererbung erfolgt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die OpenFileDialog-Komponente](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
@@ -22,7 +22,7 @@ Bei der Windows Forms-Komponente <xref:System.Windows.Forms.OpenFileDialog> hand
  [Gewusst wie: Öffnen von Dateien mit der OpenFileDialog-Komponente](../../../../docs/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component.md)  
  Erläutert, wie eine Datei zur Laufzeit über eine Instanz der <xref:System.Windows.Forms.OpenFileDialog>-Komponente geöffnet werden kann.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.OpenFileDialog>  
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.OpenFileDialog>-Klasse und zu ihren Membern.  
   

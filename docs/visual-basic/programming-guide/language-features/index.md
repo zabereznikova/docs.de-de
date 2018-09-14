@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44360549"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507546"
 ---
 # <a name="visual-basic-language-features"></a>Funktionen von Visual Basic
 In den folgenden Themen vorgestellt, und es erläutert die wesentlichen Komponenten von Visual Basic, einer objektorientierten Programmiersprache. Nachdem Sie mithilfe von Formularen und Steuerelementen die Benutzerschnittstelle für Ihre Anwendung erstellt haben, müssen Sie den Code schreiben, der das Verhalten der Anwendung definiert. Wie jede moderne Programmiersprache unterstützt Visual Basic eine Reihe gebräuchlicher Programmierkonstrukte und Sprachelemente.  

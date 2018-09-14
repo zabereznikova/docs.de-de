@@ -3,11 +3,11 @@ title: Bitweise Operatoren (F#)
 description: Erfahren Sie, bis die bitweisen Operatoren, die in der Programmiersprache f# verfügbar sind.
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338042"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508459"
 ---
 # <a name="bitwise-operators"></a>Bitweise Operatoren
 
@@ -17,7 +17,7 @@ In diesem Thema wird beschrieben, bitweise Operatoren, die in f# verfügbar sind
 
 Die folgende Tabelle beschreibt die bitweisen Operatoren, die für Unboxing integrale Typen in der Sprache f# unterstützt werden.
 
-|Operator|Notizen|
+|Operator|Hinweise|
 |--------|-----|
 |`&&&`|Bitweise AND-Operator. Bits im Resultset haben den Wert 1, wenn die entsprechenden Bits in beide Quelloperanden den Wert 1 haben.|
 |<code>&#124;&#124;&#124;</code>|Bitweiser OR-Operator. Bits im Resultset den Wert 1 haben, wenn beide entsprechenden Bits in der Quelle Operanden 1 sind.|
