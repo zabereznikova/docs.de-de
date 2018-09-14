@@ -15,11 +15,11 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1747d99fbfbc31fb592aee570d10d574b8480b0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265051"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558222"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und Windows Store-Apps
 
@@ -383,7 +383,7 @@ GetAppContainerFolderPath(acSid, out acDir);
   
  Verwaltete XAML Windows Store-apps stellen Sie jedoch jetzt intensiven Gebrauch von abhängigen Handles.  Insbesondere werden die CLR, die diese unterstützen bei der Verwaltung von Verweiszyklen zwischen verwalteten Objekten und nicht verwaltete Windows-Runtime-Objekte verwendet.  Dies bedeutet, dass es wichtiger als je zuvor für Arbeitsspeicher-Profiler, der diese abhängigen Handles informiert zu werden, damit sie zusammen mit dem Rest der Kanten im Diagramm Heap visualisiert werden können.  Der Profiler-DLL verwenden, sollten [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), und [ConditionalWeakTableElementReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-conditionalweaktableelementreferences-method.md) zusammen, um eine vollständige Übersicht über das Diagramm Heap bilden. .  
   
-## <a name="conclusion"></a>Schlussfolgerung
+## <a name="conclusion"></a>Schlussbemerkung
 
  Es ist möglich, die CLR-Profilerstellungs-API verwenden, um in Windows Store-apps ausgeführten, verwalteten Code zu analysieren.  Sie können in der Tat nehmen eine vorhandene Profiler, die Sie entwickeln, und einige bestimmten Änderungen vornehmen, damit, dass sie Windows Store-apps als Ziel verwenden kann.   Der Profiler-Benutzeroberfläche sollten die neuen APIs verwenden, für das Aktivieren der Windows Store-app im Debugmodus.  Stellen Sie sicher, dass der Profiler-DLL die APIs für Windows Store-apps verwendet.  Der Kommunikationsmechanismus zwischen Ihrem Profiler-DLL und die Profiler-Benutzeroberfläche muss mit den Windows Store-app-API-Einschränkungen Bedenken und Bewusstsein für die eingeschränkten Berechtigungen vorhanden, die für Windows Store-apps geschrieben werden.  Der Profiler-DLL muss beachten wie die CLR WinMDs behandelt, und wie der Garbage Collector Verhalten in Bezug auf die verwalteten Threads unterscheidet.  
   

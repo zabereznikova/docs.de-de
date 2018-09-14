@@ -3,11 +3,11 @@ title: Verbindungspooling
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
 ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266601"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533411"
 ---
 # <a name="connection-pooling"></a>Verbindungspooling
 Das Herstellen einer Verbindung mit einer Datenquelle kann viel Zeit kosten. Um die Kosten für das Herstellen von Verbindungen zu reduzieren, verwendet ADO.NET eine Optimierungstechnik, die Namen *Verbindungspooling*, die die Kosten für das wiederholte öffnen und Schließen von Verbindungen minimiert. Das Verbindungspooling wird bei den einzelnen .NET Framework-Datenanbietern unterschiedlich gehandhabt.  

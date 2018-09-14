@@ -2,12 +2,12 @@
 title: Erstellen Sie in Visual Studio ein AJAX-aktivierten WCF-Dienst und einem ASP.NET-Client
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384285"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45558040"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Vorgehensweise: Erstellen eines AJAX-aktivierten WCF-Diensts und eines ASP.NET-Clients, der auf den Dienst zugreift
 
@@ -25,7 +25,7 @@ In diesem Thema wird gezeigt, wie mit Visual Studio zum Erstellen einer AJAX-fä
 
 1. In der **neue ASP.NET-Webanwendung** wählen Sie im Dialogfeld **leere** und wählen Sie dann **OK**.
 
-   ![Dialogfeld für ASP.NET Web-app-Typ in Visual Studio](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+   ![Dialogfeld für ASP.NET Web-app-Typ in Visual Studio](media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
 
 ## <a name="add-a-web-form"></a>Ein Web Form hinzufügen
 
@@ -51,7 +51,7 @@ In diesem Thema wird gezeigt, wie mit Visual Studio zum Erstellen einer AJAX-fä
 
 1. In der **neues Element hinzufügen** Dialogfeld erweitern Sie die **installiert** > **Visual C#-** > **Web** (Kategorie), und klicken Sie dann Wählen Sie die **WCF-Dienst (AJAX-fähig)** Vorlage.
 
-   ![WCF-Dienst (AJAX-fähig) Elementvorlage in Visual Studio](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+   ![WCF-Dienst (AJAX-fähig) Elementvorlage in Visual Studio](media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 
 1. Nennen Sie den Dienst **CostService** und wählen Sie dann **hinzufügen**.
 
