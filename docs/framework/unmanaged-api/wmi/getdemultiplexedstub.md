@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529661"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625567"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="4c3d8-103">GetDemultiplexedStub-Funktion</span><span class="sxs-lookup"><span data-stu-id="4c3d8-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="4c3d8-104">Erstellt eine Objektweiterleitungssenke, um einen Client beim Empfang asynchroner Aufrufe von der Windows-Verwaltung zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="4c3d8-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="2a528-103">GetDemultiplexedStub-Funktion</span><span class="sxs-lookup"><span data-stu-id="2a528-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="2a528-104">Erstellt eine Objektweiterleitungssenke, um einen Client beim Empfang asynchroner Aufrufe von der Windows-Verwaltung zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="2a528-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="4c3d8-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="4c3d8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2a528-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="2a528-105">Syntax</span></span>  
   
 ```  
 HRESULT GetDemultiplexedStub (
@@ -38,29 +38,29 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="4c3d8-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="4c3d8-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2a528-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="2a528-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="4c3d8-107">[in] Ein Zeiger auf dem Client in-Process-Implementierung von [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="4c3d8-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
+<span data-ttu-id="2a528-107">[in] Ein Zeiger auf dem Client in-Process-Implementierung von [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="2a528-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="4c3d8-108">[in] Ein Flag, das angibt, ob das Ereignis lokal ist (`true`) ist, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="4c3d8-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="2a528-108">[in] Ein Flag, das angibt, ob das Ereignis lokal ist (`true`) ist, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="2a528-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="4c3d8-109">[out] Eine Weiterleitung Objektsenke bei einem Client beim Empfang von asynchroner Aufrufen von der Windows-Verwaltung.</span><span class="sxs-lookup"><span data-stu-id="4c3d8-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="2a528-109">[out] Eine Weiterleitung Objektsenke bei einem Client beim Empfang von asynchroner Aufrufen von der Windows-Verwaltung.</span><span class="sxs-lookup"><span data-stu-id="2a528-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="4c3d8-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="4c3d8-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="2a528-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2a528-110">Return value</span></span>
 
-<span data-ttu-id="4c3d8-111">Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="4c3d8-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="2a528-111">Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="2a528-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="4c3d8-112">Wenn die Funktion fehlschlägt, ist der Rückgabewert ein NULL-Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="4c3d8-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="4c3d8-113">Um erweiterte Fehlerinformationen abzurufen, rufen Sie die [GetErrorInfo](geterrorinfo.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="4c3d8-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="2a528-112">Wenn die Funktion fehlschlägt, ist der Rückgabewert ein NULL-Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="2a528-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="2a528-113">Um erweiterte Fehlerinformationen abzurufen, rufen Sie die [GetErrorInfo](geterrorinfo.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="2a528-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="4c3d8-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4c3d8-114">Requirements</span></span>  
- <span data-ttu-id="4c3d8-115">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c3d8-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a528-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2a528-114">Requirements</span></span>  
+ <span data-ttu-id="2a528-115">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a528-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c3d8-116">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="4c3d8-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="2a528-116">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="2a528-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="4c3d8-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4c3d8-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="2a528-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="2a528-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c3d8-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4c3d8-118">See also</span></span>  
-[<span data-ttu-id="4c3d8-119">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="4c3d8-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="2a528-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2a528-118">See also</span></span>  
+[<span data-ttu-id="2a528-119">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="2a528-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
