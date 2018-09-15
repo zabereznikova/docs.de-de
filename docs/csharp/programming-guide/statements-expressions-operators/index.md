@@ -10,11 +10,11 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45512815"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45613981"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Anweisungen, Ausdrücke und Operatoren (C#-Programmierhandbuch)
 Der C#-Code, der eine Anwendung umfasst, besteht aus Anweisungen, die aus Schlüsselwörtern, Ausdrücken und Operatoren bestehen. Dieser Abschnitt enthält Informationen bezüglich dieser wichtigen Elemente eines C#-Programms.  
