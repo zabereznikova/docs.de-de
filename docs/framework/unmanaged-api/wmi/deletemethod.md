@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510233"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641195"
 ---
-# <a name="deletemethod-function"></a><span data-ttu-id="42ddf-103">DeleteMethod-Funktion</span><span class="sxs-lookup"><span data-stu-id="42ddf-103">DeleteMethod function</span></span>
-<span data-ttu-id="42ddf-104">Löscht die angegebene Methode aus der Definition einer CIM-Klasse.</span><span class="sxs-lookup"><span data-stu-id="42ddf-104">Deletes the specified method from a CIM class definition.</span></span>
+# <a name="deletemethod-function"></a><span data-ttu-id="c9b39-103">DeleteMethod-Funktion</span><span class="sxs-lookup"><span data-stu-id="c9b39-103">DeleteMethod function</span></span>
+<span data-ttu-id="c9b39-104">Löscht die angegebene Methode aus der Definition einer CIM-Klasse.</span><span class="sxs-lookup"><span data-stu-id="c9b39-104">Deletes the specified method from a CIM class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="42ddf-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="42ddf-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9b39-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c9b39-105">Syntax</span></span>  
   
 ```  
 HRESULT Delete (
@@ -38,39 +38,39 @@ HRESULT Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="42ddf-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="42ddf-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="c9b39-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="c9b39-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="42ddf-107">[in] Dieser Parameter wird nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="42ddf-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="c9b39-107">[in] Dieser Parameter wird nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="c9b39-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="42ddf-108">[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.</span><span class="sxs-lookup"><span data-stu-id="42ddf-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="c9b39-108">[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.</span><span class="sxs-lookup"><span data-stu-id="c9b39-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="42ddf-109">[in] Der Name der Methode, die aus der Tabelle zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="42ddf-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="42ddf-110">`wszName` muss ein Zeiger auf ein gültiges `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="42ddf-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="c9b39-109">[in] Der Name der Methode, die aus der Tabelle zu entfernen.</span><span class="sxs-lookup"><span data-stu-id="c9b39-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="c9b39-110">`wszName` muss ein Zeiger auf ein gültiges `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="c9b39-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="42ddf-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="42ddf-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="c9b39-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c9b39-111">Return value</span></span>
 
-<span data-ttu-id="42ddf-112">Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:</span><span class="sxs-lookup"><span data-stu-id="42ddf-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="c9b39-112">Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:</span><span class="sxs-lookup"><span data-stu-id="c9b39-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="42ddf-113">Konstante</span><span class="sxs-lookup"><span data-stu-id="42ddf-113">Constant</span></span>  |<span data-ttu-id="42ddf-114">Wert</span><span class="sxs-lookup"><span data-stu-id="42ddf-114">Value</span></span>  |<span data-ttu-id="42ddf-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42ddf-115">Description</span></span>  |
+|<span data-ttu-id="c9b39-113">Konstante</span><span class="sxs-lookup"><span data-stu-id="c9b39-113">Constant</span></span>  |<span data-ttu-id="c9b39-114">Wert</span><span class="sxs-lookup"><span data-stu-id="c9b39-114">Value</span></span>  |<span data-ttu-id="c9b39-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c9b39-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="42ddf-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="42ddf-116">0x80041002</span></span> | <span data-ttu-id="42ddf-117">Die angegebene Methode ist nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="42ddf-117">The specified method does not exist.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="42ddf-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="42ddf-118">0x80041006</span></span> | <span data-ttu-id="42ddf-119">Es ist nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="42ddf-119">There is not enough memory to complete the operation.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="42ddf-120">0</span><span class="sxs-lookup"><span data-stu-id="42ddf-120">0</span></span> | <span data-ttu-id="42ddf-121">Der Funktionsaufruf war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="42ddf-121">The function call was successful.</span></span>  |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="c9b39-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="c9b39-116">0x80041002</span></span> | <span data-ttu-id="c9b39-117">Die angegebene Methode ist nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="c9b39-117">The specified method does not exist.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="c9b39-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="c9b39-118">0x80041006</span></span> | <span data-ttu-id="c9b39-119">Es ist nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.</span><span class="sxs-lookup"><span data-stu-id="c9b39-119">There is not enough memory to complete the operation.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="c9b39-120">0</span><span class="sxs-lookup"><span data-stu-id="c9b39-120">0</span></span> | <span data-ttu-id="c9b39-121">Der Funktionsaufruf war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="c9b39-121">The function call was successful.</span></span>  |
 
-## <a name="remarks"></a><span data-ttu-id="42ddf-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="42ddf-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="c9b39-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c9b39-122">Remarks</span></span>
 
-<span data-ttu-id="42ddf-123">Diese Funktion umschließt einen Aufruf der [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) Methode.</span><span class="sxs-lookup"><span data-stu-id="42ddf-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
+<span data-ttu-id="c9b39-123">Diese Funktion umschließt einen Aufruf der [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) Methode.</span><span class="sxs-lookup"><span data-stu-id="c9b39-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
 
-<span data-ttu-id="42ddf-124">Löschen der Methode wird nicht unterstützt, für die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf das CIM-Instanzen verweisen.</span><span class="sxs-lookup"><span data-stu-id="42ddf-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
+<span data-ttu-id="c9b39-124">Löschen der Methode wird nicht unterstützt, für die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf das CIM-Instanzen verweisen.</span><span class="sxs-lookup"><span data-stu-id="c9b39-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="42ddf-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="42ddf-125">Requirements</span></span>  
- <span data-ttu-id="42ddf-126">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42ddf-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9b39-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c9b39-125">Requirements</span></span>  
+ <span data-ttu-id="c9b39-126">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9b39-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="42ddf-127">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="42ddf-127">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="c9b39-127">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="c9b39-127">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="42ddf-128">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="42ddf-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="c9b39-128">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="c9b39-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42ddf-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="42ddf-129">See also</span></span>  
-[<span data-ttu-id="42ddf-130">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="42ddf-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="c9b39-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c9b39-129">See also</span></span>  
+[<span data-ttu-id="c9b39-130">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="c9b39-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
