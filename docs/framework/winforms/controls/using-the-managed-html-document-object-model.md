@@ -5,11 +5,11 @@ helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
 ms.openlocfilehash: 7800311895d1c0fac43577076226a68712164f60
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361627"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625062"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>Verwenden des verwalteten HTML-Dokumentobjektmodells
 Das verwaltete HTML Document Object Model (DOM) stellt einen Wrapper, der auf der Grundlage der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für die HTML-Klassen, die von Internet Explorer verfügbar gemacht werden. Verwenden Sie diese Klassen zum Bearbeiten von HTML-Seiten gehostet werden, der <xref:System.Windows.Forms.WebBrowser> -Steuerelement, oder um neue Seiten vom Anfang zu erstellen.  

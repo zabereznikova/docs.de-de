@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
 ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513582"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624618"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Gewusst wie: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form
 Mit *einfache Bindung*, Sie können ein einzelnes Datenelement, z. B. ein Spaltenwert aus einem Dataset-Tabelle in einem Steuerelement anzeigen. Sie können einfach eine Eigenschaft eines Steuerelements an einen Datenwert binden.  

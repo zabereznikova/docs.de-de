@@ -8,11 +8,11 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45519798"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625450"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  

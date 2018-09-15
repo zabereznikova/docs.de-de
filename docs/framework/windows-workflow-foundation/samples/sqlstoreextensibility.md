@@ -3,11 +3,11 @@ title: SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
 ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517345"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624930"
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 In diesem Beispiel werden die Verwendung und die Konfiguration von höher gestuften Eigenschaften im SQL-Workflowinstanzspeicher veranschaulicht. Beim SQL-Workflowinstanzspeicher handelt es sich um die SQL-basierte Implementierung eines Instanzspeichers. Diese ermöglicht einer Instanz das Speichern und Laden von Zuständen in eine bzw. aus einer SQL Server- oder SQL Server Express-Datenbank. Die Speichererweiterbarkeitsfunktion ermöglicht es Benutzern, Eigenschaften zu definieren, die im Instanzspeicher gespeichert werden. Diese Eigenschaften werden in einer höher gestuften Eigenschaftenansicht angezeigt, die es Benutzern ermöglicht, sie abzufragen.  
