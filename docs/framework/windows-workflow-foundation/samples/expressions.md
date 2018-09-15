@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569384"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45645839"
 ---
 # <a name="expressions"></a>Ausdrücke
 In diesem Beispiel wird veranschaulicht, wie Basisausdrücke in einem Workflow verwendet werden. Es besteht aus einem Workflow, der die grundlegende Gehaltsstatistik für zwei Mitarbeiter eines fiktiven Unternehmens berechnet. In "Employee.cs" und "SalaryStats.cs" sind zwei Klassen (`Employee` und `SalaryStats`) definiert. Diese Klassen werden in einem Workflow verwendet, der zeigt, wie einfache arithmetische Operationen und Zeichenfolgenoperationen für Variableneigenschaften komplexer Typen ausgeführt werden.  

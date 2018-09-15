@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277665"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649212"
 ---
 # <a name="code-contracts"></a>Codeverträge
 Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Objektinvarianten im Code festzulegen. Vorbedingungen sind Anforderungen, die beim Eingeben einer Methode oder Eigenschaft erfüllt werden müssen. Nachbedingungen beschreiben Erwartungen zu dem Zeitpunkt, zu dem die Methode oder der Eigenschaftencode beendet wird. Objektinvarianten beschreiben den erwarteten Zustand für eine Klasse, die in einem einwandfreien Zustand ist.  

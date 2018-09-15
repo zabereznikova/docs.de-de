@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 522caed7e8006157f99e65e99bf52743871444ad
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708516"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646349"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
 > [!NOTE]

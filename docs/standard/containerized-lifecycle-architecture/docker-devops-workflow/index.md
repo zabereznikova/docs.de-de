@@ -4,32 +4,32 @@ description: 'Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Pla
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b915c53b70192139c64c63d8b47110263e1621d0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104464"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45639184"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 
-Microsoft Visual Studio, Visual Studio Team Services, Team Foundation Server und Application Insights bieten ein umfassendes Ökosystem für Entwicklungs- und IT-Vorgänge, das Ihrem Team die Tools zum Verwalten von Projekten und zum schnellen Erstellen, Testen und Bereitstellen von containerisierten Anwendungen an die Hand gibt.
+Microsoft Visual Studio, Azure DevOps-Services, Team Foundation Server und Application Insights geben ein umfassendes Ökosystem für Entwicklungs- und IT-Betrieb, mit denen dem Team die Tools zum Verwalten von Projekten und schnell erstellen, testen und bereitstellen Anwendungen in Containern.
 
-Mit Visual Studio und Visual Studio Team Services in der Cloud sowie einer lokalen Installation von Team Foundation Server können Entwicklungsteams produktiv Containeranwendungen erstellen, testen und freigeben, die für jede Plattform (Windows oder Linux) geeignet sind.
+Mit Visual Studio und Azure DevOps-Dienste in der Cloud, zusammen mit Team Foundation Server lokal können Entwicklungsteams produktiv erstellen, testen und Freigeben von containeranwendungen für jede Plattform (Windows oder Linux).
 
-Microsoft-Tools können die Pipeline für spezifische Implementierungen von Containeranwendungen automatisieren (Docker, .NET Core oder eine beliebige Kombination mit anderen Plattformen): von globalen Builds und Continuous Integration (CI) und Tests mit Visual Studio Team Services oder Team Foundation Server über Continuous Deployment (CD) bis hin zu Docker-Umgebungen (Entwicklung, Staging, Produktion) und zur Übermittlung von Analyseinformationen zu den Diensten an das Entwicklungsteam über Application Insights. Jeder Codecommit kann einen Build (CI) initiieren und die Dienste automatisch in bestimmten Containerumgebungen (CD) bereitstellen.
+Microsoft-Tools können die Pipeline für spezifische Implementierungen von containeranwendungen automatisieren, Docker, .NET Core oder eine beliebige Kombination mit anderen Plattformen – von globalen Builds und fortlaufende Integration (CI) und Tests mit Azure DevOps-Services oder Team Foundation-Server, um Continuous Deployment (CD) für Docker-Umgebungen (Entwicklung, Staging, Produktion), und um Analyseinformationen zu den Diensten an das Entwicklungsteam über Application Insights zu übertragen. Jeder Codecommit kann einen Build (CI) initiieren und die Dienste automatisch in bestimmten Containerumgebungen (CD) bereitstellen.
 
 Entwickler und Tester können einfach und schnell produktionsähnliche Entwicklungs- und Testumgebungen basierend auf Docker bereitstellen, indem sie Vorlagen in Microsoft Azure verwenden.
 
-Die Komplexität der Entwicklung von Containanwendungen nimmt abhängig von der Komplexität und Skalierbarkeit des Unternehmens stetig zu. Ein gutes Beispiel hierfür sind Anwendungen auf der Grundlage von Microservicesarchitekturen. Um in einer solchen Umgebung erfolgreich zu sein, muss Ihr Projekt den gesamten Lebenszyklus automatisieren: nicht nur die Erstellung und Bereitstellung, sondern auch die Versionsverwaltung und die Erfassung von Telemetriedaten. Visual Studio Team Services und Azure bieten die folgenden Funktionen:
+Die Komplexität der Entwicklung von Containanwendungen nimmt abhängig von der Komplexität und Skalierbarkeit des Unternehmens stetig zu. Ein gutes Beispiel hierfür sind Anwendungen auf der Grundlage von Microservicesarchitekturen. Um in einer solchen Umgebung erfolgreich zu sein, muss Ihr Projekt den gesamten Lebenszyklus automatisieren: nicht nur die Erstellung und Bereitstellung, sondern auch die Versionsverwaltung und die Erfassung von Telemetriedaten. Azure DevOps-Dienste und Azure bieten die folgenden Funktionen:
 
--   Visual Studio Team Services-/Team Foundation Server-Quellcodeverwaltung (basierend auf Git oder Team Foundation-Versionskontrolle), Agile-Planung (Agile, Scrum und CMMI werden unterstützt), CI, Release Management und andere Tools für Agile-Teams.
+-   Azure DevOps-Services-Team Foundation Server quellcodeverwaltung (basierend auf Git oder Team Foundation Version Control), Agile Planung (Agile, Scrum und CMMI werden unterstützt), CI, Release Management und andere Tools für Agile-Teams.
 
--   Visual Studio Team Services/Team Foundation Server umfassen ein leistungsstarkes und wachsendes Ökosystem aus Erst- und Drittanbietererweiterungen, mit denen Sie mühelos eine CI-, Build-, Test-, Bereitstellungs- und Release Management-Pipeline für Microservices erstellen können.
+-   Azure DevOps-Services-Team Foundation Server umfassen ein leistungsstarkes und wachsendes Ökosystem der ersten und Drittanbieter-Erweiterungen mit dem Sie ganz einfach Erstellen einer CI, im Build, Test, Bereitstellung und release Management-Pipeline für Microservices.
 
--   Führen Sie automatisierte Tests als Teil Ihrer Buildpipeline in Visual Studio Team Services aus.
+-   Ausführen von automatisierten Tests als Teil Ihrer Buildpipeline in Azure DevOps-Dienste.
 
--   Visual Studio Team Services kann den Lebenszyklus von DevOps mit der Bereitstellung in mehreren Umgebungen straffen, nicht nur für Produktionsumgebungen, sondern auch für Tests, einschließlich A/B-Experimente, [Canary Releases](https://martinfowler.com/bliki/CanaryRelease.html) usw.
+-   Azure DevOps-Dienste können ziehen Sie den Lebenszyklus von DevOps mit der Bereitstellung in Umgebungen mit mehreren, nicht nur für produktionsumgebungen, sondern auch für Tests, einschließlich A / B-Experimente, [Canary-Releases](https://martinfowler.com/bliki/CanaryRelease.html)und so weiter.
 
 -   Organisationen können Docker-Container aus privaten Images, die in der Azure Container Registry gespeichert sind, zusammen mit allen Abhängigkeiten von Azure-Komponenten (Daten, PaaS usw.) mithilfe von Azure Resource Manager-Vorlagen und -Tools bereitstellen, die schon jetzt problemlos eingesetzt werden.
 

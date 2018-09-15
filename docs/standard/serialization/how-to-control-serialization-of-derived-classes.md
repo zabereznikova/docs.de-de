@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45557930"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45645722"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Gewusst wie: Steuern der Serialisierung abgeleiteter Klassen
 Neben der Verwendung des **XmlElementAttribute**-Attributs zum Ändern eines XML-Elementnamens lässt sich die Objektserialisierung auch auf andere Weise anpassen. Sie können den XML-Stream ebenfalls anpassen, indem Sie von einer vorhandenen Klasse ableiten und die <xref:System.Xml.Serialization.XmlSerializer>-Instanz anweisen, wie die neue Klasse serialisiert werden soll.  

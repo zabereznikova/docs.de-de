@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: b46c763e7cddfc7617c9a6a23428f83a54955ba0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516319"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648173"
 ---
 # <a name="sql-xml-column-values"></a>SQL-XML-Spaltenwerte
 SQL Server unterstützt die `xml` -Datentyp, und Entwickler können Abrufen von Resultsets, die diesen Typ mithilfe des Standardverhaltens der einschließen, die <xref:System.Data.SqlClient.SqlCommand> Klasse. Eine `xml`-Spalte kann auf die gleiche Weise abgerufen werden wie jede andere Spalte auch (z. B. in einem <xref:System.Data.SqlClient.SqlDataReader>). Wenn Sie jedoch mit dem Inhalt der Spalte in Form von XML-Daten arbeiten möchten, müssen Sie einen <xref:System.Xml.XmlReader> verwenden.  

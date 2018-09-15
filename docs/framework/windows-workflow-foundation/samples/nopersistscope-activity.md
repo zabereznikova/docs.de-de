@@ -3,11 +3,11 @@ title: NoPersistScope-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529244"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649548"
 ---
 # <a name="nopersistscope-activity"></a>NoPersistScope-Aktivität
 In diesem Beispiel wird gezeigt, wie ein nicht serialisierbarer und verwerfbarer Zustand innerhalb eines Workflows bearbeitet wird. Es ist wichtig, dass Workflows nicht versuchen, den nicht serialisierbaren Zustand beizubehalten, und dass verwerfbare Objekte bereinigt werden, nachdem sie im Workflow verwendet wurden.  

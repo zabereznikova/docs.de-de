@@ -3,11 +3,11 @@ title: Attribute (F#)
 description: Erfahren Sie, wie F#--Attribute für Metadaten, die auf ein Programmierungskonstrukt angewendet werden können.
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513678"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45647949"
 ---
 # <a name="attributes"></a>Attribute
 
