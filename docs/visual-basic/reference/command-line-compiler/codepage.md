@@ -7,35 +7,35 @@ helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
 ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515483"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666391"
 ---
-# <a name="-codepage-visual-basic"></a><span data-ttu-id="6e9a4-102">-Codepage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6e9a4-102">-codepage (Visual Basic)</span></span>
-<span data-ttu-id="6e9a4-103">Gibt für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-103">Specifies the code page to use for all source-code files in the compilation.</span></span>  
+# <a name="-codepage-visual-basic"></a><span data-ttu-id="df6ae-102">-Codepage (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="df6ae-102">-codepage (Visual Basic)</span></span>
+<span data-ttu-id="df6ae-103">Gibt für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.</span><span class="sxs-lookup"><span data-stu-id="df6ae-103">Specifies the code page to use for all source-code files in the compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e9a4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6e9a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df6ae-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="df6ae-104">Syntax</span></span>  
   
 ```  
 -codepage:id  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6e9a4-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="6e9a4-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="df6ae-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="df6ae-105">Arguments</span></span>  
   
-|<span data-ttu-id="6e9a4-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="6e9a4-106">Term</span></span>|<span data-ttu-id="6e9a4-107">Definition</span><span class="sxs-lookup"><span data-stu-id="6e9a4-107">Definition</span></span>|  
+|<span data-ttu-id="df6ae-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="df6ae-106">Term</span></span>|<span data-ttu-id="df6ae-107">Definition</span><span class="sxs-lookup"><span data-stu-id="df6ae-107">Definition</span></span>|  
 |---|---|  
-|`id`|<span data-ttu-id="6e9a4-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-108">Required.</span></span> <span data-ttu-id="6e9a4-109">Der Compiler verwendet die Codepage, die anhand des `id` interpretiert die Codierung der Quelldateien.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-109">The compiler uses the code page specified by `id` to interpret the encoding of the source files.</span></span>|  
+|`id`|<span data-ttu-id="df6ae-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="df6ae-108">Required.</span></span> <span data-ttu-id="df6ae-109">Der Compiler verwendet die Codepage, die anhand des `id` interpretiert die Codierung der Quelldateien.</span><span class="sxs-lookup"><span data-stu-id="df6ae-109">The compiler uses the code page specified by `id` to interpret the encoding of the source files.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e9a4-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6e9a4-110">Remarks</span></span>  
- <span data-ttu-id="6e9a4-111">Zum Kompilieren von Quellcode mit einer bestimmten Codierung gespeichert, können Sie `-codepage` angeben, welche Codeseite verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-111">To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used.</span></span> <span data-ttu-id="6e9a4-112">Die `-codepage` Option gilt für alle Quellcodedateien in der Kompilierung.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-112">The `-codepage` option applies to all source-code files in your compilation.</span></span> <span data-ttu-id="6e9a4-113">Weitere Informationen finden Sie unter [Zeichencodierung in .NET Framework](../../../standard/base-types/character-encoding.md).</span><span class="sxs-lookup"><span data-stu-id="6e9a4-113">For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="df6ae-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="df6ae-110">Remarks</span></span>  
+ <span data-ttu-id="df6ae-111">Zum Kompilieren von Quellcode mit einer bestimmten Codierung gespeichert, können Sie `-codepage` angeben, welche Codeseite verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="df6ae-111">To compile source code saved with a specific encoding, you can use `-codepage` to specify which code page should be used.</span></span> <span data-ttu-id="df6ae-112">Die `-codepage` Option gilt für alle Quellcodedateien in der Kompilierung.</span><span class="sxs-lookup"><span data-stu-id="df6ae-112">The `-codepage` option applies to all source-code files in your compilation.</span></span> <span data-ttu-id="df6ae-113">Weitere Informationen finden Sie unter [Zeichencodierung in .NET Framework](../../../standard/base-types/character-encoding.md).</span><span class="sxs-lookup"><span data-stu-id="df6ae-113">For more information, see [Character Encoding in the .NET Framework](../../../standard/base-types/character-encoding.md).</span></span>  
   
- <span data-ttu-id="6e9a4-114">Die `-codepage` Option ist nicht erforderlich, wenn die Quellcodedateien mit der aktuellen ANSI-Codepage, Unicode oder UTF-8 mit einer Signatur gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-114">The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature.</span></span> <span data-ttu-id="6e9a4-115">Visual Studio speichert alle Quellcodedateien mit der aktuellen ANSI-Codepage in der Standardeinstellung, wenn der Benutzer gibt eine andere Codierung der **Codierung** Dialogfeld.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-115">Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box.</span></span> <span data-ttu-id="6e9a4-116">Visual Studio verwendet die **Codierung** Dialogfeld zum Öffnen von Quellcode-Dateien, die mit einer anderen Codepage gespeichert.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-116">Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.</span></span>  
+ <span data-ttu-id="df6ae-114">Die `-codepage` Option ist nicht erforderlich, wenn die Quellcodedateien mit der aktuellen ANSI-Codepage, Unicode oder UTF-8 mit einer Signatur gespeichert wurden.</span><span class="sxs-lookup"><span data-stu-id="df6ae-114">The `-codepage` option is not needed if the source-code files were saved using the current ANSI code page, Unicode, or UTF-8 with a signature.</span></span> <span data-ttu-id="df6ae-115">Visual Studio speichert alle Quellcodedateien mit der aktuellen ANSI-Codepage in der Standardeinstellung, wenn der Benutzer gibt eine andere Codierung der **Codierung** Dialogfeld.</span><span class="sxs-lookup"><span data-stu-id="df6ae-115">Visual Studio saves all source-code files with the current ANSI code page by default, unless the user specifies another encoding in the **Encoding** dialog box.</span></span> <span data-ttu-id="df6ae-116">Visual Studio verwendet die **Codierung** Dialogfeld zum Öffnen von Quellcode-Dateien, die mit einer anderen Codepage gespeichert.</span><span class="sxs-lookup"><span data-stu-id="df6ae-116">Visual Studio uses the **Encoding** dialog box to open source-code files saved with a different code page.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6e9a4-117">Die `-codepage` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.</span><span class="sxs-lookup"><span data-stu-id="6e9a4-117">The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="df6ae-117">Die `-codepage` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.</span><span class="sxs-lookup"><span data-stu-id="df6ae-117">The `-codepage` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6e9a4-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6e9a4-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="df6ae-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="df6ae-118">See also</span></span>
 
-- [<span data-ttu-id="6e9a4-119">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="6e9a4-119">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="df6ae-119">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="df6ae-119">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
