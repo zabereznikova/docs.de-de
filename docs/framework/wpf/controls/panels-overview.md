@@ -10,11 +10,11 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514511"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674753"
 ---
 # <a name="panels-overview"></a>Übersicht über Panel-Elemente
 <xref:System.Windows.Controls.Panel> -Elemente sind Komponenten, die das Rendern von Elementen steuern – ihre Größe und Dimensionen, deren Position und die Anordnung des untergeordneten Inhalts. Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine Reihe von vordefinierten <xref:System.Windows.Controls.Panel> Elementen sowie die Möglichkeit zum Erstellen von benutzerdefinierten <xref:System.Windows.Controls.Panel> Elemente.  

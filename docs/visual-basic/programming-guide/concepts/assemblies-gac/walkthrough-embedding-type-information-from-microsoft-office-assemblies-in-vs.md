@@ -3,11 +3,11 @@ title: 'Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microso
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514513"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668209"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)
 Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verweist, ist die Verwendung einer primären Interopassembly (PIA) nicht mehr erforderlich. Darüber hinaus wird die Anwendung durch die eingebetteten Typinformationen versionsunabhängig. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer COM-Bibliothek geschrieben werden; eine versionsspezifische PIA ist nicht erforderlich. Dies ist ein allgemeines Szenario für Anwendungen, die Objekte aus Microsoft Office-Bibliotheken verwenden. Mithilfe von eingebetteten Typinformationen kann ein Build eines Programms verschiedene Versionen von Microsoft Office auf unterschiedlichen Computern verwenden, ohne dass das Programm oder die PIA für jede Version von Microsoft Office erneut bereitgestellt werden müssen.  

@@ -3,11 +3,11 @@ title: Abfragebenachrichtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699604"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677726"
 ---
 # <a name="query-notifications-in-sql-server"></a>Abfragebenachrichtigungen in SQL Server
 Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich bei Anwendungen, die Informationen aus einer Datenbank zwischenspeichern, z. B. aus einer Webanwendung, und bei Änderungen von Quelldaten benachrichtigt werden müssen.  

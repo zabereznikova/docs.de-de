@@ -8,11 +8,11 @@ helpviewer_keywords:
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
 ms.openlocfilehash: be2eefdc52d38df3071d457b7a71dbac6eaa2657
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526849"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674519"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren von IEnumerable(Of T) in Visual Basic
 Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird implementiert von Klassen, die eine Sequenz von Werten eines Elements zu einem Zeitpunkt zurückgeben kann. Der Vorteil des Zurückgebens von Daten, die ein Element zu einem Zeitpunkt ist, dass Sie nicht den vollständigen Satz von Daten in den Arbeitsspeicher zu dessen Funktionsweise geladen werden soll. Sie müssen nur genügend Arbeitsspeicher verwenden, um ein einzelnes Element aus den Daten zu laden. Klassen, in denen die `IEnumerable(T)` Schnittstelle kann verwendet werden, mit `For Each` Schleifen oder LINQ-Abfragen.  

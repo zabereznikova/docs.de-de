@@ -3,11 +3,11 @@ title: Aktivitäten mit regulären Ausdrücken
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588266"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668950"
 ---
 # <a name="regular-expression-activities"></a>Aktivitäten mit regulären Ausdrücken
 In diesem Beispiel wird veranschaulicht, wie ein Satz von Aktivitäten erstellt wird, der die reguläre Ausdrucksfunktionalität des <xref:System.Text.RegularExpressions>-Namespaces verfügbar macht. Diese benutzerdefinierten Aktivitäten können innerhalb einer Workflowanwendung verwendet werden. Weitere Informationen zu regulären Ausdrücken finden Sie unter [n: System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  

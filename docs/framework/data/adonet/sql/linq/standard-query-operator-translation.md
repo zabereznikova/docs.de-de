@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197471"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685780"
 ---
 # <a name="standard-query-operator-translation"></a>Übersetzen von Standardabfrageoperatoren
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Standardabfrageoperatoren in SQL-Befehle. Der Abfrageprozessor der Datenbank bestimmt die Ausführungssemantik der SQL-Übersetzung an.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
 ms.openlocfilehash: f520e897ad467686e0dc151548a61ea8370eb07a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513341"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685555"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats
 Wenn Sie einer Windows Communication Foundation (WCF)-Anwendung schreiben, das ein x. 509-Zertifikat für die Authentifizierung verwendet, ist es oft notwendig, geben Sie die Ansprüche im Zertifikat gefunden. Sie müssen z. B. einen Fingerabdruckanspruch bereitstellen, wenn Sie die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> -Enumeration in der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> -Methode verwenden. Zum Suchen des Anspruchswerts sind zwei Schritte erforderlich. Öffnen Sie zuerst in der Microsoft Management Console (MMC) das Snap-In für Zertifikate. (Siehe [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Suchen Sie dann, wie hier beschrieben, ein entsprechendes Zertifikat, und kopieren Sie seinen Fingerabdruck (oder andere Anspruchswerte).  

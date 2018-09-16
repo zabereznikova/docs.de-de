@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: fb37c55076f243c48604cbaafdb5fd32c94934f2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526927"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676531"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementieren des Selection-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]

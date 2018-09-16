@@ -11,11 +11,11 @@ ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515443"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685646"
 ---
 # <a name="securing-state-data"></a>Sichern von Statusdaten
 Anwendungen, die vertrauliche Daten verarbeiten oder irgendwelche Sicherheitsentscheidungen treffen, müssen diese Daten unter eigener Kontrolle behalten und sie vor dem direkten Zugriff durch möglicherweise böswilligen Code schützen. Die beste Möglichkeit, Daten im Speicher zu schützen, besteht darin, diese als private oder interne (Gültigkeitsbereich ist auf dieselbe Assembly beschränkt) Variablen zu deklarieren. Allerdings wird auch auf diese Daten zugegriffen, also sollten Sie Folgendes berücksichtigen:  

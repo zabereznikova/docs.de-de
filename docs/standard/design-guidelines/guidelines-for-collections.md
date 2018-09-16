@@ -6,11 +6,11 @@ ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272945"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674090"
 ---
 # <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
 Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten, die einige gemeinsame Merkmale haben, kann eine Auflistung betrachtet werden. Es ist fast immer für solche Typen implementieren <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>, sodass in diesem Abschnitt nur Typen, die Implementierung einer oder beide dieser Schnittstellen, die Sammlungen sein betrachten wir.  

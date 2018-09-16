@@ -9,11 +9,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 1a129abca5888120d03c42689ac825d768733a9d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515638"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678019"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;ApplicationPool&gt; -Element (Webeinstellungen)
 Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus ausgeführt wird, auf [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version.  

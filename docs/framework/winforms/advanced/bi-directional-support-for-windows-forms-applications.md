@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214926"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666869"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Bidirektionale Unterstützung für Windows Forms-Anwendungen
 Sie können Visual Studio verwenden, um die Windows-basierte Anwendungen zu erstellen, die bidirektionalen (rechts-nach-links) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.  

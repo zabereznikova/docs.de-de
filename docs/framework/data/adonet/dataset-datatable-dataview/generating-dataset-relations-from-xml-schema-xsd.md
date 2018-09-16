@@ -3,11 +3,11 @@ title: Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 7c73dcec3d23b094436791af6649de83b9eacad9
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513934"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664461"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen. Es gibt drei Möglichkeiten zur Darstellung einer **DataSet** Beziehung in ein Schema für XML Schema Definition Language (XSD):  

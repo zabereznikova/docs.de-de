@@ -10,11 +10,11 @@ helpviewer_keywords:
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
 ms.openlocfilehash: ff113b3abfb8363e65d7ccb101973b6821d97262
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515729"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666693"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Gewusst wie: Drucken in Windows Forms unter Verwendung der Seitenansicht
 Es ist üblich, in Windows Forms-Programmen zusätzlich zu Druckdiensten eine Seitenansicht zur Verfügung zu stellen. Eine einfache Möglichkeit, Dienste für Seitenansichten zu Ihrer Anwendung hinzufügen, besteht darin, ein <xref:System.Windows.Forms.PrintPreviewDialog> -Steuerelement in Kombination mit der Behandlungslogik für <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignisse zu verwenden, um eine Datei zu drucken.  

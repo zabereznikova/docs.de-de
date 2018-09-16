@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
 ms.openlocfilehash: d0f481979ead7af775d462a2624ec43080e2c5a9
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517488"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675820"
 ---
 # <a name="adding-datarelations"></a>Hinzufügen von "DataRelations"
 In einem <xref:System.Data.DataSet> mit mehreren <xref:System.Data.DataTable>-Objekten können Sie mithilfe von <xref:System.Data.DataRelation>-Objekten eine Beziehung zwischen zwei Tabellen herstellen, um durch die Tabellen navigieren und untergeordnete oder übergeordnete Zeilen aus einer verknüpften Tabelle zurückgeben zu können.  

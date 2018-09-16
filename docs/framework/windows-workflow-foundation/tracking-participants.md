@@ -3,11 +3,11 @@ title: Überwachungsteilnehmer
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
 ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45527123"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679621"
 ---
 # <a name="tracking-participants"></a>Überwachungsteilnehmer
 Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwickler auf <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A>-Objekte zugreifen und sie verarbeiten kann. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält einen standardmäßigen Überwachungsteilnehmer, der Überwachungsdatensätze als ETW (Ereignisablaufverfolgung für Windows)-Ereignisse schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben.  

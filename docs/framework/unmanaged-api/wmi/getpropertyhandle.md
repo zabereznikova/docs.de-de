@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510116"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668131"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle-Funktion
 Gibt ein eindeutiges Handle zurück, das eine Eigenschaft identifiziert.

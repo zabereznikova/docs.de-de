@@ -3,11 +3,11 @@ title: Berechnungsausdrücke (F#)
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in f#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508537"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685737"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 

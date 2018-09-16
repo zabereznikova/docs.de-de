@@ -7,11 +7,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
 ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700049"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45685932"
 ---
 # <a name="collection-initializers-visual-basic"></a>Auflistungsinitialisierer (Visual Basic)
 *Auflistungsinitialisierer* stellen eine gekürzte Syntax bereit, mit der Sie eine Auflistung erstellen und mit einem anfänglichen Satz von Werten auffüllen können. Auflistungsinitialisierer sind nützlich beim Erstellen einer Auflistung aus einem Satz unbekannter Werte, z.B. eine Liste von Menüoptionen oder Kategorien, ein ursprünglicher Satz numerischer Werte, eine statische Liste von Zeichenfolgen wie Tag- oder Monatsnamen oder geografische Orte, z.B. eine Liste von Staaten, die für eine Überprüfung verwendet werden.  
