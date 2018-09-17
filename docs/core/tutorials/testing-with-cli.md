@@ -3,13 +3,13 @@ title: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 description: In diesem Tutorial wird das Organisieren und Testen von .NET Core-Projekten von der Befehlszeile aus erläutert.
 author: cartermp
 ms.author: mairaw
-ms.date: 05/16/2017
-ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.date: 09/10/2018
+ms.openlocfilehash: 8131e51577bcad9191c0cacb61317fa146bf476d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185414"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668352"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 
@@ -188,47 +188,33 @@ Beginnen Sie im *test/NewTypesTests*-Verzeichnis. Stellen Sie das Testprojekt mi
 
  
 Der Test schlägt wie erwartet fehl, und die Konsole zeigt die folgende Ausgabe:
- 
+
 ```
-Test run for C:\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp1.1\NewTypesTests.dll(.NETCoreApp,Version=v1.1)
-Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
+Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
-[xUnit.net 00:00:00.7271827]   Discovering: NewTypesTests
-[xUnit.net 00:00:00.8258687]   Discovered:  NewTypesTests
-[xUnit.net 00:00:00.8663545]   Starting:    NewTypesTests
-[xUnit.net 00:00:01.0109236]     PetTests.CatTalkToOwnerReturnsMeow [FAIL]
-[xUnit.net 00:00:01.0119107]       Assert.NotEqual() Failure
-[xUnit.net 00:00:01.0120278]       Expected: Not "Meow!"
-[xUnit.net 00:00:01.0120968]       Actual:   "Meow!"
-[xUnit.net 00:00:01.0130500]       Stack Trace:
-[xUnit.net 00:00:01.0141240]         C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs(22,0): at PetTests.CatTalkToOwnerReturnsMeow()
-[xUnit.net 00:00:01.0272364]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
-[xUnit.net 00:00:01.0273649]       Assert.NotEqual() Failure
-[xUnit.net 00:00:01.0274166]       Expected: Not "Woof!"
-[xUnit.net 00:00:01.0274690]       Actual:   "Woof!"
-[xUnit.net 00:00:01.0275264]       Stack Trace:
-[xUnit.net 00:00:01.0275960]         C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs(13,0): at PetTests.DogTalkToOwnerReturnsWoof()
-[xUnit.net 00:00:01.0294509]   Finished:    NewTypesTests
-Failed   PetTests.CatTalkToOwnerReturnsMeow
-Error Message:
- Assert.NotEqual() Failure
-Expected: Not "Meow!"
-Actual:   "Meow!"
-Stack Trace:
-   at PetTests.CatTalkToOwnerReturnsMeow() in C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 22
+[xUnit.net 00:00:00.77]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
+[xUnit.net 00:00:00.78]     PetTests.CatTalkToOwnerReturnsMeow [FAIL]
 Failed   PetTests.DogTalkToOwnerReturnsWoof
 Error Message:
  Assert.NotEqual() Failure
 Expected: Not "Woof!"
 Actual:   "Woof!"
 Stack Trace:
-   at PetTests.DogTalkToOwnerReturnsWoof() in C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 13
+   at PetTests.DogTalkToOwnerReturnsWoof() in c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 13
+Failed   PetTests.CatTalkToOwnerReturnsMeow
+Error Message:
+ Assert.NotEqual() Failure
+Expected: Not "Meow!"
+Actual:   "Meow!"
+Stack Trace:
+   at PetTests.CatTalkToOwnerReturnsMeow() in c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 22
 
 Total tests: 2. Passed: 0. Failed: 2. Skipped: 0.
 Test Run Failed.
-Test execution time: 2.1371 Seconds
+Test execution time: 1.7000 Seconds
 ```
 
 Ändern Sie die Assertionen Ihrer Tests von `Assert.NotEqual` zu `Assert.Equal`:
@@ -238,18 +224,15 @@ Test execution time: 2.1371 Seconds
 Führen Sie die Tests erneut mit dem `dotnet test`-Befehl aus, und achten Sie auf die folgende Ausgabe:
 
 ```
-Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
+Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
-[xUnit.net 00:00:01.3882374]   Discovering: NewTypesTests
-[xUnit.net 00:00:01.4767970]   Discovered:  NewTypesTests
-[xUnit.net 00:00:01.5157667]   Starting:    NewTypesTests
-[xUnit.net 00:00:01.6408870]   Finished:    NewTypesTests
 
 Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
 Test Run Successful.
-Test execution time: 1.6634 Seconds
+Test execution time: 1.6029 Seconds
 ```
 
 Die Tests werden erfolgreich ausgeführt. Die Haustiertyp-Methoden geben die korrekten Werte zurück, wenn sie mit dem Besitzer kommunizieren.

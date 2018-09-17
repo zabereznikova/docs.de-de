@@ -4,12 +4,12 @@ description: Erläutert, wie Abhängigkeiten mit den .NET Core-Tools verwaltet w
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244227"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45591120"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Verwalten von Abhängigkeiten mit .NET Core SDK 1.0
 
@@ -32,7 +32,7 @@ Wenn Sie mit MSBuild vertraut sind, kommt es Ihnen durch bereits vorhandene Verw
 Beim Hinzufügen einer Abhängigkeit, die nur für ein bestimmtes Ziel verfügbar ist, werden Bedingungen wie im folgenden Beispiel verwendet:
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
 Der obige Code bedeutet, dass die Abhängigkeit nur gültig ist, wenn der Build für das angegebene Ziel erstellt wird. `$(TargetFramework)` in der Bedingung ist eine MSBuild-Eigenschaft, die im Projekt festgelegt wird. Bei den gängigsten .NET Core-Anwendungen ist dies nicht erforderlich. 
@@ -57,7 +57,7 @@ Das vollständige Projekt sieht folgendermaßen aus:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

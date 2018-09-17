@@ -4,12 +4,12 @@ description: Informationen zur Zuordnung zwischen project.json und csproj-Elemen
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518556"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45647368"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
@@ -487,7 +487,7 @@ Siehe auch [Dateien](#files).
 ```
 
 Es gibt keine Entsprechung für das `owners`-Element in MSBuild.
-Für `summary` können Sie die `<Description>`-Eigenschaft von MSBuild verwenden, obwohl der Wert der `summary` nicht automatisch zur Eigenschaft migriert wird, da die Eigenschaft dem [`description`](#-other-common-root-level-options)-Element zugeordnet ist.
+Für `summary` können Sie die `<Description>`-Eigenschaft von MSBuild verwenden, obwohl der Wert der `summary` nicht automatisch zur Eigenschaft migriert wird, da die Eigenschaft dem [`description`](#other-common-root-level-options)-Element zugeordnet ist.
 
 ## <a name="scripts"></a>Skripts
 
