@@ -7,11 +7,11 @@ ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678437"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964292"
 ---
 # <a name="security-guidance-and-best-practices"></a>Sicherheitsleitfaden und empfohlene Vorgehensweisen
 Die Themen in diesem Abschnitt enthalten Richtlinien "und" zu berücksichtigenden Punkte beim Erstellen sicherer Anwendungen für Windows Communication Foundation (WCF). Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheit-Modell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
