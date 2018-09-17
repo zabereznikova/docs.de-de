@@ -11,11 +11,11 @@ ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615023"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698328"
 ---
 # <a name="order-preservation-in-plinq"></a>Beibehaltung der Reihenfolge in PLINQ
 Das Ziel in PLINQ ist, die Leistung zu maximieren und gleichzeitig die korrekte Ausführung sicherzustellen. Eine Abfrage sollte so schnell wie möglich ausgeführt werden, dabei jedoch stets die korrekten Ergebnissen erzeugen. In einigen Fällen muss für eine korrekte Ausführung die Reihenfolge der Quellsequenz beibehalten werden, eine Sortierung kann jedoch sehr rechenintensiv sein. PLINQ behält die Reihenfolge der Quellsequenz daher standardmäßig nicht bei. In dieser Hinsicht ähnelt PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], unterscheidet sich jedoch von LINQ to Objects, wo die Reihenfolge beibehalten wird.  
