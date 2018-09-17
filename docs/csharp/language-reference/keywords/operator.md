@@ -9,42 +9,42 @@ helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207628"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45560161"
 ---
-# <a name="operator-c-reference"></a><span data-ttu-id="f3d8c-103">operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="f3d8c-103">operator (C# Reference)</span></span>
+# <a name="operator-c-reference"></a><span data-ttu-id="c0130-103">operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="c0130-103">operator (C# Reference)</span></span>
 
-<span data-ttu-id="f3d8c-104">Verwenden Sie das Schlüsselwort `operator`, um einen integrierten Operator zu überladen oder um eine benutzerdefinierte Konvertierung in einer Klassen- oder Strukturdeklaration bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-104">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
+<span data-ttu-id="c0130-104">Verwenden Sie das Schlüsselwort `operator`, um einen integrierten Operator zu überladen oder um eine benutzerdefinierte Konvertierung in einer Klassen- oder Strukturdeklaration bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="c0130-104">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>
 
-<span data-ttu-id="f3d8c-105">Zum Überladen eines Operators in einer benutzerdefinierten Klasse oder Struktur müssen Sie eine Operatordeklaration im entsprechenden Typ erstellen.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-105">To overload an operator on a custom class or struct, you create an operator declaration in the corresponding type.</span></span> <span data-ttu-id="f3d8c-106">Die Operatordeklaration, die einen integrierten C#-Operator überlädt, muss die folgenden Regeln erfüllen:</span><span class="sxs-lookup"><span data-stu-id="f3d8c-106">The operator declaration that overloads a built-in C# operator must satisfy the following rules:</span></span>
+<span data-ttu-id="c0130-105">Zum Überladen eines Operators in einer benutzerdefinierten Klasse oder Struktur müssen Sie eine Operatordeklaration im entsprechenden Typ erstellen.</span><span class="sxs-lookup"><span data-stu-id="c0130-105">To overload an operator on a custom class or struct, you create an operator declaration in the corresponding type.</span></span> <span data-ttu-id="c0130-106">Die Operatordeklaration, die einen integrierten C#-Operator überlädt, muss die folgenden Regeln erfüllen:</span><span class="sxs-lookup"><span data-stu-id="c0130-106">The operator declaration that overloads a built-in C# operator must satisfy the following rules:</span></span>
 
-- <span data-ttu-id="f3d8c-107">Sie enthält sowohl einen `public`- als auch einen `static`-Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-107">It includes both a `public` and a `static` modifier.</span></span>
-- <span data-ttu-id="f3d8c-108">Sie enthält `operator X`, wobei `X` für den Namen oder das Symbol des überladenen Operators steht.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-108">It includes `operator X` where `X` is the name or symbol of the operator being overloaded.</span></span>
-- <span data-ttu-id="f3d8c-109">Unäre Operatoren verfügen über einen Parameter. Demgegenüber weisen binäre Operatoren zwei Parameter auf.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-109">Unary operators have one parameter, and binary operators have two parameters.</span></span> <span data-ttu-id="f3d8c-110">In jedem Fall muss mindestens ein Parameter denselben Typ wie die Klasse oder Struktur aufweisen, die den Operator deklariert.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-110">In each case, at least one parameter must be the same type as the class or struct that declares the operator.</span></span>
+- <span data-ttu-id="c0130-107">Sie enthält sowohl einen `public`- als auch einen `static`-Modifizierer.</span><span class="sxs-lookup"><span data-stu-id="c0130-107">It includes both a `public` and a `static` modifier.</span></span>
+- <span data-ttu-id="c0130-108">Sie enthält `operator X`, wobei `X` für den Namen oder das Symbol des überladenen Operators steht.</span><span class="sxs-lookup"><span data-stu-id="c0130-108">It includes `operator X` where `X` is the name or symbol of the operator being overloaded.</span></span>
+- <span data-ttu-id="c0130-109">Unäre Operatoren verfügen über einen Parameter. Demgegenüber weisen binäre Operatoren zwei Parameter auf.</span><span class="sxs-lookup"><span data-stu-id="c0130-109">Unary operators have one parameter, and binary operators have two parameters.</span></span> <span data-ttu-id="c0130-110">In jedem Fall muss mindestens ein Parameter denselben Typ wie die Klasse oder Struktur aufweisen, die den Operator deklariert.</span><span class="sxs-lookup"><span data-stu-id="c0130-110">In each case, at least one parameter must be the same type as the class or struct that declares the operator.</span></span>
 
-<span data-ttu-id="f3d8c-111">Weitere Informationen zum Definieren von Konvertierungsoperatoren finden Sie in den [expliziten](explicit.md) und [impliziten](implicit.md) Keyword-Artikeln.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-111">For information about how to define conversion operators, see the [explicit](explicit.md) and [implicit](implicit.md) keyword articles.</span></span>
+<span data-ttu-id="c0130-111">Weitere Informationen zum Definieren von Konvertierungsoperatoren finden Sie in den [expliziten](explicit.md) und [impliziten](implicit.md) Keyword-Artikeln.</span><span class="sxs-lookup"><span data-stu-id="c0130-111">For information about how to define conversion operators, see the [explicit](explicit.md) and [implicit](implicit.md) keyword articles.</span></span>
 
-<span data-ttu-id="f3d8c-112">Eine Übersicht über die C#-Operatoren, die überladen werden können, finden Sie im Artikel [Überladbare Operatoren](../../programming-guide/statements-expressions-operators/overloadable-operators.md).</span><span class="sxs-lookup"><span data-stu-id="f3d8c-112">For an overview of the C# operators that can be overloaded, see the [Overloadable operators](../../programming-guide/statements-expressions-operators/overloadable-operators.md) article.</span></span>
+<span data-ttu-id="c0130-112">Eine Übersicht über die C#-Operatoren, die überladen werden können, finden Sie im Artikel [Überladbare Operatoren](../../programming-guide/statements-expressions-operators/overloadable-operators.md).</span><span class="sxs-lookup"><span data-stu-id="c0130-112">For an overview of the C# operators that can be overloaded, see the [Overloadable operators](../../programming-guide/statements-expressions-operators/overloadable-operators.md) article.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f3d8c-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f3d8c-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c0130-113">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0130-113">Example</span></span>
 
-<span data-ttu-id="f3d8c-114">Im folgenden Beispiel wird ein `Fraction`-Typ definiert, der Bruchzahlen darstellt.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-114">The following example defines a `Fraction` type that represents fractional numbers.</span></span> <span data-ttu-id="f3d8c-115">Sie überlädt die Operatoren `+` und `*`, um Addition und Multiplikation bei Brüchen auszuführen, und stellt einen Konvertierungsoperator bereit, der einen `Fraction`-Typ in einen `double`-Typ konvertiert.</span><span class="sxs-lookup"><span data-stu-id="f3d8c-115">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
+<span data-ttu-id="c0130-114">Im folgenden Beispiel wird ein `Fraction`-Typ definiert, der Bruchzahlen darstellt.</span><span class="sxs-lookup"><span data-stu-id="c0130-114">The following example defines a `Fraction` type that represents fractional numbers.</span></span> <span data-ttu-id="c0130-115">Sie überlädt die Operatoren `+` und `*`, um Addition und Multiplikation bei Brüchen auszuführen, und stellt einen Konvertierungsoperator bereit, der einen `Fraction`-Typ in einen `double`-Typ konvertiert.</span><span class="sxs-lookup"><span data-stu-id="c0130-115">It overloads the `+` and `*` operators to perform fractional addition and multiplication, and also provides a conversion operator that converts a `Fraction` type to a `double` type.</span></span>
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="f3d8c-116">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="f3d8c-116">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="c0130-116">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="c0130-116">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f3d8c-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f3d8c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0130-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0130-117">See also</span></span>
 
-- [<span data-ttu-id="f3d8c-118">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="f3d8c-118">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="f3d8c-119">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="f3d8c-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="f3d8c-120">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="f3d8c-120">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="f3d8c-121">implicit</span><span class="sxs-lookup"><span data-stu-id="f3d8c-121">implicit</span></span>](implicit.md)
-- [<span data-ttu-id="f3d8c-122">explicit</span><span class="sxs-lookup"><span data-stu-id="f3d8c-122">explicit</span></span>](explicit.md)
-- [<span data-ttu-id="f3d8c-123">Überladbare Operatoren</span><span class="sxs-lookup"><span data-stu-id="f3d8c-123">Overloadable operators</span></span>](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [<span data-ttu-id="f3d8c-124">Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen</span><span class="sxs-lookup"><span data-stu-id="f3d8c-124">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [<span data-ttu-id="c0130-118">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="c0130-118">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c0130-119">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="c0130-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c0130-120">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="c0130-120">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="c0130-121">implicit</span><span class="sxs-lookup"><span data-stu-id="c0130-121">implicit</span></span>](implicit.md)
+- [<span data-ttu-id="c0130-122">explicit</span><span class="sxs-lookup"><span data-stu-id="c0130-122">explicit</span></span>](explicit.md)
+- [<span data-ttu-id="c0130-123">Überladbare Operatoren</span><span class="sxs-lookup"><span data-stu-id="c0130-123">Overloadable operators</span></span>](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [<span data-ttu-id="c0130-124">Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen</span><span class="sxs-lookup"><span data-stu-id="c0130-124">How to: Implement User-Defined Conversions Between Structs</span></span>](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

@@ -5,36 +5,36 @@ helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 ms.openlocfilehash: d3920fff26eccdd509c72143ff8553fb0c501bbc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44182069"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45597640"
 ---
-# <a name="general-structure-of-a-c-program-c-programming-guide"></a><span data-ttu-id="e875a-102">Allgemeine Struktur eines C#-Programms (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e875a-102">General Structure of a C# Program (C# Programming Guide)</span></span>
-<span data-ttu-id="e875a-103">C#-Programme bestehen aus mindestens einer Datei.</span><span class="sxs-lookup"><span data-stu-id="e875a-103">C# programs can consist of one or more files.</span></span> <span data-ttu-id="e875a-104">Jede Datei kann 0 (null) oder mehrere Namespaces enthalten.</span><span class="sxs-lookup"><span data-stu-id="e875a-104">Each file can contain zero or more namespaces.</span></span> <span data-ttu-id="e875a-105">Ein Namespace kann Typen, z.B. Klassen, Strukturen, Schnittstellen, Enumerationen und Delegaten sowie andere Namespaces enthalten.</span><span class="sxs-lookup"><span data-stu-id="e875a-105">A namespace can contain types such as classes, structs, interfaces, enumerations, and delegates, in addition to other namespaces.</span></span> <span data-ttu-id="e875a-106">Im Folgenden wird das Grundgerüst eines C#-Programms dargestellt, das alle diese Elemente enthält.</span><span class="sxs-lookup"><span data-stu-id="e875a-106">The following is the skeleton of a C# program that contains all of these elements.</span></span>  
+# <a name="general-structure-of-a-c-program-c-programming-guide"></a><span data-ttu-id="177ca-102">Allgemeine Struktur eines C#-Programms (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="177ca-102">General Structure of a C# Program (C# Programming Guide)</span></span>
+<span data-ttu-id="177ca-103">C#-Programme bestehen aus mindestens einer Datei.</span><span class="sxs-lookup"><span data-stu-id="177ca-103">C# programs can consist of one or more files.</span></span> <span data-ttu-id="177ca-104">Jede Datei kann 0 (null) oder mehrere Namespaces enthalten.</span><span class="sxs-lookup"><span data-stu-id="177ca-104">Each file can contain zero or more namespaces.</span></span> <span data-ttu-id="177ca-105">Ein Namespace kann Typen, z.B. Klassen, Strukturen, Schnittstellen, Enumerationen und Delegaten sowie andere Namespaces enthalten.</span><span class="sxs-lookup"><span data-stu-id="177ca-105">A namespace can contain types such as classes, structs, interfaces, enumerations, and delegates, in addition to other namespaces.</span></span> <span data-ttu-id="177ca-106">Im Folgenden wird das Grundgerüst eines C#-Programms dargestellt, das alle diese Elemente enthält.</span><span class="sxs-lookup"><span data-stu-id="177ca-106">The following is the skeleton of a C# program that contains all of these elements.</span></span>  
   
  [!code-csharp[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/general-structure-of-a-csharp-program_1.cs)]  
   
-## <a name="related-sections"></a><span data-ttu-id="e875a-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="e875a-107">Related Sections</span></span>  
- <span data-ttu-id="e875a-108">Weitere Informationen finden Sie unter: </span><span class="sxs-lookup"><span data-stu-id="e875a-108">For more information:</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="177ca-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="177ca-107">Related Sections</span></span>  
+ <span data-ttu-id="177ca-108">Weitere Informationen finden Sie unter: </span><span class="sxs-lookup"><span data-stu-id="177ca-108">For more information:</span></span>  
   
--   [<span data-ttu-id="e875a-109">Klassen</span><span class="sxs-lookup"><span data-stu-id="e875a-109">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+-   [<span data-ttu-id="177ca-109">Klassen</span><span class="sxs-lookup"><span data-stu-id="177ca-109">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [<span data-ttu-id="e875a-110">Strukturen</span><span class="sxs-lookup"><span data-stu-id="e875a-110">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+-   [<span data-ttu-id="177ca-110">Strukturen</span><span class="sxs-lookup"><span data-stu-id="177ca-110">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [<span data-ttu-id="e875a-111">Namespaces</span><span class="sxs-lookup"><span data-stu-id="e875a-111">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
+-   [<span data-ttu-id="177ca-111">Namespaces</span><span class="sxs-lookup"><span data-stu-id="177ca-111">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)  
   
--   [<span data-ttu-id="e875a-112">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="e875a-112">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)  
+-   [<span data-ttu-id="177ca-112">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="177ca-112">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)  
   
--   [<span data-ttu-id="e875a-113">Delegaten</span><span class="sxs-lookup"><span data-stu-id="e875a-113">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
+-   [<span data-ttu-id="177ca-113">Delegaten</span><span class="sxs-lookup"><span data-stu-id="177ca-113">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
   
-## <a name="c-language-specification"></a><span data-ttu-id="e875a-114">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="e875a-114">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="177ca-114">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="177ca-114">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e875a-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e875a-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="177ca-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="177ca-115">See Also</span></span>
 
-- [<span data-ttu-id="e875a-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="e875a-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="e875a-117">Einblicke in ein C#-Programm</span><span class="sxs-lookup"><span data-stu-id="e875a-117">Inside a C# Program</span></span>](../../../csharp/programming-guide/inside-a-program/index.md)  
-- [<span data-ttu-id="e875a-118">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="e875a-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="e875a-119">\<paveover>Beispielanwendungen für C#</span><span class="sxs-lookup"><span data-stu-id="e875a-119">\<paveover>C# Sample Applications</span></span>](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+- [<span data-ttu-id="177ca-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="177ca-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="177ca-117">Einblicke in ein C#-Programm</span><span class="sxs-lookup"><span data-stu-id="177ca-117">Inside a C# Program</span></span>](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [<span data-ttu-id="177ca-118">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="177ca-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="177ca-119">\<paveover>Beispielanwendungen für C#</span><span class="sxs-lookup"><span data-stu-id="177ca-119">\<paveover>C# Sample Applications</span></span>](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
