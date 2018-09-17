@@ -3,11 +3,11 @@ title: Konfigurationsbasierte Aktivierung unter IIS und WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
 ms.openlocfilehash: d15202a7d34f3246cd7679687b6a510252fe3541
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594030"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746051"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Konfigurationsbasierte Aktivierung unter IIS und WAS
 Wenn Sie einen Windows Communication Foundation (WCF)-Dienst unter Internetinformationsdienste (Internet Information Services, IIS) oder Windows Process Activation Service (WAS) hosten, müssen Sie normalerweise eine SVC-Datei angeben. Die SVC-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory. Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand. Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC-Datei, sodass auch der damit verbundene Mehraufwand entfällt.  

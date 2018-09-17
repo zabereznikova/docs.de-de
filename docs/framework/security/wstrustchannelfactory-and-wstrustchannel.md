@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597005"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743747"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>„WSTrustChannelFactory“ und „WSTrustChannel“
 Wenn Sie mit Windows Communication Foundation (WCF) bereits vertraut sind, wissen Sie, dass ein WCF-Client bereits verbundfähig ist. Wird ein WCF-Client mit <xref:System.ServiceModel.WSFederationHttpBinding> oder einer ähnlichen benutzerdefinierten Bindung konfiguriert, können Sie die Verbundauthentifizierung für einen Dienst aktivieren.  

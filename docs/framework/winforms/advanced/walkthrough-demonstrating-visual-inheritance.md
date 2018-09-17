@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: bc91e3bde54eedb4d9dbcfcb9f7faa0ccc98e397
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505623"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746204"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
@@ -80,7 +80,7 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
     -   Legen Sie die **(Name)** Eigenschaft **BtnProtected**.  
   
-    -   Legen Sie die**Modifizierer** Eigenschaft **geschützte**. Dadurch wird es möglich, dass Formulare, die von erben **Form1** beim Ändern der Eigenschaften von **BtnProtected**.  
+    -   Legen Sie die **Modifizierer** Eigenschaft **geschützte**. Dadurch wird es möglich, dass Formulare, die von erben **Form1** beim Ändern der Eigenschaften von **BtnProtected**.  
   
 4.  Doppelklicken Sie auf die **Say Hello** Schaltfläche zum Hinzufügen eines ereignishandlers für das **klicken Sie auf** Ereignis.  
   
@@ -128,7 +128,7 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 #### <a name="to-add-an-inherited-form"></a>So fügen Sie ein geerbtes Formular hinzu  
   
-1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **InheritanceTest** -Projekt, wählen **hinzufügen**, und wählen Sie dann**neues Element**.  
+1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **InheritanceTest** -Projekt, wählen **hinzufügen**, und wählen Sie dann **neues Element**.  
   
 2.  In der **neues Element hinzufügen** wählen Sie im Dialogfeld die **Windows Forms** Kategorie (Wenn Sie eine Liste der Kategorien haben), und wählen Sie dann die **geerbtes Formular** Vorlage.  
   

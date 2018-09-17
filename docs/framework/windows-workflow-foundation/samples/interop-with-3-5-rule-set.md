@@ -3,11 +3,11 @@ title: Zusammenarbeit mit dem 3.5-Regelsatz
 ms.date: 03/30/2017
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
 ms.openlocfilehash: 5ea5454ef80bfd83611ed20392782d99cd8c0c25
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677278"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743994"
 ---
 # <a name="interop-with-35-rule-set"></a>Zusammenarbeit mit dem 3.5-Regelsatz
 Dieses Beispiel veranschaulicht die Verwendung von der <xref:System.Activities.Statements.Interop> -Aktivität zur Integration mit einer benutzerdefinierten Aktivität in [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] mit <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` und Regeln. Es übergibt Daten an die benutzerdefinierte Aktivität, indem es [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]-Variablen an die von der benutzerdefinierten Aktivität verfügbar gemachten Abhängigkeitseigenschaften bindet.  
