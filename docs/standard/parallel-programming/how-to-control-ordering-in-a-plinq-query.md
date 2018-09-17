@@ -11,41 +11,41 @@ ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aaa08106126212345bb594cdeabe6e7281cd7b5e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180779"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45668886"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a><span data-ttu-id="d275b-102">Gewusst wie: Steuern der Sortierung in einer PLINQ-Abfrage</span><span class="sxs-lookup"><span data-stu-id="d275b-102">How to: Control Ordering in a PLINQ Query</span></span>
-<span data-ttu-id="d275b-103">Diese Beispiele zeigen die Steuerung der Reihenfolge in einer PLINQ-Abfrage mithilfe der <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>-Erweiterungsmethode.</span><span class="sxs-lookup"><span data-stu-id="d275b-103">These examples show how to control the ordering in a PLINQ query by using the <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> extension method.</span></span>  
+# <a name="how-to-control-ordering-in-a-plinq-query"></a><span data-ttu-id="85c38-102">Gewusst wie: Steuern der Sortierung in einer PLINQ-Abfrage</span><span class="sxs-lookup"><span data-stu-id="85c38-102">How to: Control Ordering in a PLINQ Query</span></span>
+<span data-ttu-id="85c38-103">Diese Beispiele zeigen die Steuerung der Reihenfolge in einer PLINQ-Abfrage mithilfe der <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>-Erweiterungsmethode.</span><span class="sxs-lookup"><span data-stu-id="85c38-103">These examples show how to control the ordering in a PLINQ query by using the <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> extension method.</span></span>  
   
 > [!WARNING]
->  <span data-ttu-id="d275b-104">Diese Beispiele sollen primär die Nutzung darstellen und werden möglicherweise nicht schneller ausgeführt als die entsprechenden sequenziellen LINQ to Objects-Abfragen.</span><span class="sxs-lookup"><span data-stu-id="d275b-104">These examples are primarily intended to demonstrate usage, and may or may not run faster than the equivalent sequential LINQ to Objects queries.</span></span>  
+>  <span data-ttu-id="85c38-104">Diese Beispiele sollen primär die Nutzung darstellen und werden möglicherweise nicht schneller ausgeführt als die entsprechenden sequenziellen LINQ to Objects-Abfragen.</span><span class="sxs-lookup"><span data-stu-id="85c38-104">These examples are primarily intended to demonstrate usage, and may or may not run faster than the equivalent sequential LINQ to Objects queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d275b-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d275b-105">Example</span></span>  
- <span data-ttu-id="d275b-106">Im folgenden Beispiel wird die Reihenfolge der Quellsequenz beibehalten.</span><span class="sxs-lookup"><span data-stu-id="d275b-106">The following example preserves the ordering of the source sequence.</span></span> <span data-ttu-id="d275b-107">Dies ist manchmal notwendig. Beispielsweise erfordern einige Abfrageoperatoren eine geordnete Quellsequenz, um richtige Ergebnisse zu erzielen.</span><span class="sxs-lookup"><span data-stu-id="d275b-107">This is sometimes necessary; for example some query operators require an ordered source sequence to produce correct results.</span></span>  
+## <a name="example"></a><span data-ttu-id="85c38-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="85c38-105">Example</span></span>  
+ <span data-ttu-id="85c38-106">Im folgenden Beispiel wird die Reihenfolge der Quellsequenz beibehalten.</span><span class="sxs-lookup"><span data-stu-id="85c38-106">The following example preserves the ordering of the source sequence.</span></span> <span data-ttu-id="85c38-107">Dies ist manchmal notwendig. Beispielsweise erfordern einige Abfrageoperatoren eine geordnete Quellsequenz, um richtige Ergebnisse zu erzielen.</span><span class="sxs-lookup"><span data-stu-id="85c38-107">This is sometimes necessary; for example some query operators require an ordered source sequence to produce correct results.</span></span>  
   
  [!code-csharp[PLINQ#12](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#12)]
  [!code-vb[PLINQ#12](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#12)]  
   
-## <a name="example"></a><span data-ttu-id="d275b-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d275b-108">Example</span></span>  
- <span data-ttu-id="d275b-109">Das folgende Beispiel zeigt einige Abfrageoperatoren, bei denen wahrscheinlich eine sortierte Quellsequenz zu erwarten ist.</span><span class="sxs-lookup"><span data-stu-id="d275b-109">The following example shows some query operators whose source sequence is probably expected to be ordered.</span></span> <span data-ttu-id="d275b-110">Diese Operatoren funktionieren bei ungeordneten Sequenzen, aber sie können zu unerwarteten Ergebnissen führen.</span><span class="sxs-lookup"><span data-stu-id="d275b-110">These operators will work on unordered sequences, but they might produce unexpected results.</span></span>  
+## <a name="example"></a><span data-ttu-id="85c38-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="85c38-108">Example</span></span>  
+ <span data-ttu-id="85c38-109">Das folgende Beispiel zeigt einige Abfrageoperatoren, bei denen wahrscheinlich eine sortierte Quellsequenz zu erwarten ist.</span><span class="sxs-lookup"><span data-stu-id="85c38-109">The following example shows some query operators whose source sequence is probably expected to be ordered.</span></span> <span data-ttu-id="85c38-110">Diese Operatoren funktionieren bei ungeordneten Sequenzen, aber sie können zu unerwarteten Ergebnissen führen.</span><span class="sxs-lookup"><span data-stu-id="85c38-110">These operators will work on unordered sequences, but they might produce unexpected results.</span></span>  
   
  [!code-csharp[PLINQ#14](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#14)]
  [!code-vb[PLINQ#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#14)]  
   
- <span data-ttu-id="d275b-111">Um diese Methode auszuführen, fügen Sie sie im [PLINQ-Datenbeispiel](../../../docs/standard/parallel-programming/plinq-data-sample.md)-Projekt in die PLINQDataSample-Klasse ein, und drücken Sie F5.</span><span class="sxs-lookup"><span data-stu-id="d275b-111">To run this method, paste it into the PLINQDataSample class in the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project and press F5.</span></span>  
+ <span data-ttu-id="85c38-111">Um diese Methode auszuführen, fügen Sie sie im [PLINQ-Datenbeispiel](../../../docs/standard/parallel-programming/plinq-data-sample.md)-Projekt in die PLINQDataSample-Klasse ein, und drücken Sie F5.</span><span class="sxs-lookup"><span data-stu-id="85c38-111">To run this method, paste it into the PLINQDataSample class in the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project and press F5.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d275b-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d275b-112">Example</span></span>  
- <span data-ttu-id="d275b-113">Im folgenden Beispiel werden das Beibehalten der Reihenfolge für den ersten Teil einer Abfrage, dann das Entfernen der Reihenfolge zur Steigerung der Leistung einer Join-Klausel sowie das erneute Anwenden der Reihenfolge für die endgültige Ergebnissequenz gezeigt.</span><span class="sxs-lookup"><span data-stu-id="d275b-113">The following example shows how to preserve ordering for the first part of a query, then remove the ordering to increase the performance of a join clause, and then reapply ordering to the final result sequence.</span></span>  
+## <a name="example"></a><span data-ttu-id="85c38-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="85c38-112">Example</span></span>  
+ <span data-ttu-id="85c38-113">Im folgenden Beispiel werden das Beibehalten der Reihenfolge für den ersten Teil einer Abfrage, dann das Entfernen der Reihenfolge zur Steigerung der Leistung einer Join-Klausel sowie das erneute Anwenden der Reihenfolge für die endgültige Ergebnissequenz gezeigt.</span><span class="sxs-lookup"><span data-stu-id="85c38-113">The following example shows how to preserve ordering for the first part of a query, then remove the ordering to increase the performance of a join clause, and then reapply ordering to the final result sequence.</span></span>  
   
  [!code-csharp[PLINQ#15](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#15)]
  [!code-vb[PLINQ#15](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#15)]  
   
- <span data-ttu-id="d275b-114">Um diese Methode auszuführen, fügen Sie sie im [PLINQ-Datenbeispiel](../../../docs/standard/parallel-programming/plinq-data-sample.md)-Projekt in die PLINQDataSample-Klasse ein, und drücken Sie F5.</span><span class="sxs-lookup"><span data-stu-id="d275b-114">To run this method, paste it into the PLINQDataSample class in the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project and press F5.</span></span>  
+ <span data-ttu-id="85c38-114">Um diese Methode auszuführen, fügen Sie sie im [PLINQ-Datenbeispiel](../../../docs/standard/parallel-programming/plinq-data-sample.md)-Projekt in die PLINQDataSample-Klasse ein, und drücken Sie F5.</span><span class="sxs-lookup"><span data-stu-id="85c38-114">To run this method, paste it into the PLINQDataSample class in the [PLINQ Data Sample](../../../docs/standard/parallel-programming/plinq-data-sample.md) project and press F5.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d275b-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d275b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85c38-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="85c38-115">See also</span></span>
 
 - <xref:System.Linq.ParallelEnumerable>  
-- [<span data-ttu-id="d275b-116">Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))</span><span class="sxs-lookup"><span data-stu-id="d275b-116">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [<span data-ttu-id="85c38-116">Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))</span><span class="sxs-lookup"><span data-stu-id="85c38-116">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
