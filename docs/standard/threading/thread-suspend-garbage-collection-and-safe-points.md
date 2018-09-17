@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ded5c057b1c257e8bcf3c8427f5810720eaf0947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582160"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45658586"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Thread.Suspend, Garbage Collection und Sicherungspunkte
 Beim Aufruf von <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> in einem Thread hält das System fest, dass eine Threadunterbrechung angefordert wurde, und ermöglicht vor dem Unterbrechen des Threads dessen Ausführung bis zu einem sicheren Punkt. Ein sicherer Punkt für einen Thread ist ein Punkt in seiner Ausführung, an dem eine Garbage Collection durchgeführt werden kann.  
@@ -26,8 +26,9 @@ Beim Aufruf von <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWit
 > [!NOTE]
 >  Um eine Garbage Collection auszuführen, muss die Runtime alle Threads mit Ausnahme des Threads, der die Collection durchführt, unterbrechen. Jeder Thread muss an einen sicheren Punkt gebracht werden, bevor er unterbrochen werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Threading.Thread>  
- <xref:System.GC>  
- [Threading](../../../docs/standard/threading/index.md)  
- [Automatische Speicherverwaltung](../../../docs/standard/automatic-memory-management.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Threading.Thread>  
+- <xref:System.GC>  
+- [Threading](../../../docs/standard/threading/index.md)  
+- [Automatische Speicherverwaltung](../../../docs/standard/automatic-memory-management.md)

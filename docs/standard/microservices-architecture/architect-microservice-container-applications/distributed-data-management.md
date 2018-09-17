@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Her
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268850"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646219"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Herausforderungen und Lösungen für die verteilte Datenverwaltung
 
@@ -19,7 +19,7 @@ Das Definieren der Grenzen der Microservices stellt wahrscheinlich für jederman
 
 Zunächst müssen Sie sich auf die logischen Domänenmodelle der Anwendung und die zugehörigen Daten konzentrieren. Sie müssen versuchen, entkoppelte Daten-Inseln und unterschiedliche Kontexte innerhalb einer Anwendung zu identifizieren. Jeder Kontext weist möglicherweise eine andere Geschäftssprache (unterschiedliche Geschäftsbegriffe) auf. Die Kontexte sollten unabhängig voneinander definiert und verwaltet werden. Die in diesen unterschiedlichen Kontexten verwendeten Begriffe und Entitäten klingen unter Umständen ähnlich, aber Sie werden vermutlich feststellen, dass ein Geschäftskonzept in einem bestimmten Kontext für einen anderen Zweck verwendet wird als in einem anderen Kontext und möglicherweise auch einen anderen Namen aufweist. Ein Benutzer kann beispielsweise im Kontext Identität oder Mitgliedschaft als Benutzer, im Kontext CRM als Kunde und in einem Bestellkontext als Käufer bezeichnet werden usw.
 
-Die Methode, mit der Sie Grenzen zwischen mehreren Anwendungskontexten mit einer unterschiedlichen Domäne pro Kontext ermitteln, ist dieselbe Methode, mit der Sie auch die Grenzen für die einzelnen Unternehmensmicroservices und deren zugehörige Domänenmodelle und Daten ermitteln. Sie versuchen stets, die Kopplung zwischen diesen Microservices zu minimieren. Dieser Leitfaden befasst sich in seinem nachstehenden Abschnitt [Identifying domain-model boundaries for each microservice (Identifizieren von Domänenmodell-Grenzen für jeden Microservice)](#identifying-domain-model-boundaries-for-each-microservice) eingehender mit dieser Identifizierung und dem Domänenmodell-Entwurf.
+Die Methode, mit der Sie Grenzen zwischen mehreren Anwendungskontexten mit einer unterschiedlichen Domäne pro Kontext ermitteln, ist dieselbe Methode, mit der Sie auch die Grenzen für die einzelnen Unternehmensmicroservices und deren zugehörige Domänenmodelle und Daten ermitteln. Sie versuchen stets, die Kopplung zwischen diesen Microservices zu minimieren. Dieser Leitfaden befasst sich in seinem nachstehenden Abschnitt [Identifying domain-model boundaries for each microservice (Identifizieren von Domänenmodell-Grenzen für jeden Microservice)](identify-microservice-domain-model-boundaries.md) eingehender mit dieser Identifizierung und dem Domänenmodell-Entwurf.
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Herausforderung \#2: Erstellen von Abfragen, die Daten aus mehreren Microservices abrufen
 
@@ -57,7 +57,7 @@ Wie aus dem [CAP-Theorem](https://en.wikipedia.org/wiki/CAP_theorem) hervorgeht,
 
 Darüber hinaus verstoßen Transaktionen im ACID-Format bzw. mit Zweiphasen-Commit nicht nur gegen die Grundsätze von Microservices. Die meisten NoSQL-Datenbanken (wie Microsoft Azure Cosmos DB, MongoDB usw.) unterstützen keine Transaktionen mit Zweiphasen-Commit. Allerdings ist die Wahrung der Datenkonsistenz zwischen Services und Datenbanken unerlässlich. Diese Herausforderung betrifft auch die Frage, wie Änderungen über mehrere Microservices übertragen werden sollen, wenn bestimmte Daten wie z.B. der Name oder die Beschreibung des Produkts im Microservice Katalog und im Microservice Warenkorb redundant sein müssen.
 
-Eine geeignete Lösung für dieses Problem ist die Verwendung einer letztlichen Konsistenz zwischen Microservices, die über eine ereignisgesteuerte Kommunikation und ein Veröffentlichen/Abonnieren-System umgesetzt wird. Diese Themen werden im Abschnitt [Asynchronous event-driven communication (Asynchrone ereignisgesteuerte Kommunikation)](#async_event_driven_communication) weiter unten in diesem Leitfaden behandelt.
+Eine geeignete Lösung für dieses Problem ist die Verwendung einer letztlichen Konsistenz zwischen Microservices, die über eine ereignisgesteuerte Kommunikation und ein Veröffentlichen/Abonnieren-System umgesetzt wird. Diese Themen werden im Abschnitt [Asynchronous event-driven communication (Asynchrone ereignisgesteuerte Kommunikation)](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) weiter unten in diesem Leitfaden behandelt.
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Herausforderung \#4: Gestalten der Kommunikation über Microservice-Grenzen hinweg
 

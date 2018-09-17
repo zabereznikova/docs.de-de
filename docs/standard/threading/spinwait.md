@@ -11,11 +11,11 @@ ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273410"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45625516"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> ist ein einfacher Synchronisierungstyp, den Sie in Szenarien auf niedriger Ebene verwenden können, um die aufwändigen Kontextwechsel und Kernelübergänge zu vermeiden, die für Kernelereignisse erforderlich sind. Wenn bei Computern mit mehreren Kernen nicht erwartet wird, dass eine Ressource für längere Zeit beibehalten wird, kann es effizienter sein, wenn ein wartender Thread für ein paar Dutzend oder Hundert Zyklen im Benutzermodus rotiert und dann versucht wird, die Ressource zu erlangen. Wenn die Ressource nach den Spinvorgängen verfügbar ist, haben Sie mehrere Tausend Zyklen gespeichert. Wenn die Ressource immer noch nicht verfügbar ist, haben Sie nur wenige Zyklen verbraucht und können weiterhin in einen kernelbasierten Wartevorgang eintreten. Diese Kombination aus Spin- und Wartevorgang wird manchmal als *zweiphasiger Wartevorgang* bezeichnet.  
