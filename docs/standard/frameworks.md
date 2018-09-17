@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 346eece8fdb391fd62b369db6ef65964fcd6e67a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934855"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45616746"
 ---
 # <a name="target-frameworks"></a>Zielframeworks
 
@@ -131,10 +131,10 @@ Die folgenden Zielframeworks sind veraltet. Pakete, die für diese Zielframework
 
 ## <a name="see-also"></a>Siehe auch
 
-[Pakete, Metapakete und Frameworks](../core/packages.md)  
-[Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../core/tutorials/libraries.md)  
-[.NET-Standard](net-standard.md)  
-[.NET Core-Versionskontrolle](../core/versions/index.md)  
-[dotnet/standard-GitHub-Repository](https://github.com/dotnet/standard)  
-[GitHub-Repository NuGet-Tools)](https://github.com/joelverhagen/NuGetTools)  
-[Frameworkprofile in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+- [Pakete, Metapakete und Frameworks](../core/packages.md)  
+- [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../core/tutorials/libraries.md)  
+- [.NET-Standard](net-standard.md)  
+- [.NET Core-Versionskontrolle](../core/versions/index.md)  
+- [dotnet/standard-GitHub-Repository](https://github.com/dotnet/standard)  
+- [GitHub-Repository NuGet-Tools)](https://github.com/joelverhagen/NuGetTools)  
+- [Frameworkprofile in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

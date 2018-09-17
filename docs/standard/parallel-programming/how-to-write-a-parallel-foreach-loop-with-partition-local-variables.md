@@ -11,11 +11,11 @@ ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227570"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45590992"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit partitionslokalen Variablen
 Im folgenden Beispiel wird veranschaulicht, wie eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Methode geschrieben wird, für die partitionslokale Variablen verwendet werden. Wenn eine <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Schleife ausgeführt wird, wird die Quellauflistung in mehrere Partitionen unterteilt. Jede Partition besitzt eine eigene Kopie der partitionslokalen Variable. Eine partitionslokale Variable ähnelt einer [threadlokalen Variable](xref:System.Threading.ThreadLocal%601). Der Unterschied besteht darin, dass mehrere Partitionen in einem einzelnen Thread ausgeführt werden können.

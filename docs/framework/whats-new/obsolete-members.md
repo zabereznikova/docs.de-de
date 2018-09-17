@@ -10,11 +10,11 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a36e08c9b54dd6b47b11b36fd20993bff8c805e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386342"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678586"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Veraltete Member in .NET Framework
 In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet aufgeführt, die in .NET Framework 4.5 und höheren Versionen veraltet sind. Über die nachfolgenden Links finden Sie eine Liste der veralteten Member und empfohlenen Alternativen in den jeweiligen Assemblys. In diesem Thema werden nicht die Member veralteter Typen aufgeführt. Eine Liste veralteter Typen finden Sie unter [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md).  
