@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615513"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999464"
 ---
 # <a name="introducing-xml-serialization"></a>Einführung in die XML-Serialisierung
 
@@ -61,7 +61,7 @@ Beim Erstellen einer Anwendung, die die **XmlSerializer**-Klasse verwendet, soll
 
 - Serialisierte vertrauliche Daten sind unter Umständen verwundbar.
 
-  Nachdem die Daten von **XmlSerializer** serialisiert wurden, können sie in einer XML-Datei oder einem anderen Datenspeicher gespeichert werden. Wenn dieser Datenspeicher für andere Prozesse zugänglich oder im Intranet oder dem Internet sichtbar ist, können die Daten gestohlen und missbraucht werden. Wenn Sie beispielsweise eine Anwendung erstellen, die Bestellungen serialisiert, welche Kreditkartennummern enthalten, dann sind diese Daten streng vertraulich. Um Missbrauch oder Diebstahl zu verhindern, sollten Sie den Speicherort der Daten stets schützen und durch geeignete Maßnahmen sicherstellen, dass die Daten vertraulich bleiben.
+  Nach der **XmlSerializer** serialisiert wurden, können Sie eine XML-Datei oder andere Datenspeicher gespeichert werden. Wenn dieser Datenspeicher für andere Prozesse zugänglich oder im Intranet oder dem Internet sichtbar ist, können die Daten gestohlen und missbraucht werden. Wenn Sie beispielsweise eine Anwendung erstellen, die Bestellungen serialisiert, welche Kreditkartennummern enthalten, dann sind diese Daten streng vertraulich. Um Missbrauch oder Diebstahl zu verhindern, sollten Sie den Speicherort der Daten stets schützen und durch geeignete Maßnahmen sicherstellen, dass die Daten vertraulich bleiben.
 
 ## <a name="serialization-of-a-simple-class"></a>Serialisierung einer einfachen Klasse
 

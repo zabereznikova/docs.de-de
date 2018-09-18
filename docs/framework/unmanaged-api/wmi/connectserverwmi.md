@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45675755"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45970422"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi-Funktion
 Erstellt über DCOM eine Verbindung mit einem WMI-Namespace auf einem angegebenen Computer.  

@@ -3,11 +3,11 @@ title: Herunterladen von Beispieldatenbanken
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
 ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747191"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006547"
 ---
 # <a name="downloading-sample-databases"></a>Herunterladen von Beispieldatenbanken
 Eine Reihe von Beispielen und exemplarischen Vorgehensweisen in der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Dokumentation basieren auf der Beispieldatenbank Northwind und auf SQL Server Express Edition. Sie können diese Produkte kostenlos von der Microsoft Downloadsite herunterladen.  

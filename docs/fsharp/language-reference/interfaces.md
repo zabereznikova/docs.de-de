@@ -3,11 +3,11 @@ title: Schnittstellen (F#)
 description: Erfahren Sie, wie F#-Schnittstellen für Gruppen von verwandten Elementen angeben, die anderen Klassen implementiert.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683189"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009348"
 ---
 # <a name="interfaces"></a>Schnittstellen
 

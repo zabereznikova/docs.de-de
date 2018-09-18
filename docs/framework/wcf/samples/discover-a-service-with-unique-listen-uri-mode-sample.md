@@ -3,11 +3,11 @@ title: Ermitteln eines Diensts mit UniqueListenUriMode (Beispiel)
 ms.date: 03/30/2017
 ms.assetid: 9a6d35b2-0469-43c8-a0c9-63623e3d2733
 ms.openlocfilehash: 7e1c5ae0cb1a44c72a27566035b4bc20acbf1614
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594694"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45970577"
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>Ermitteln eines Diensts mit UniqueListenUriMode (Beispiel)
 In diesem Beispiel wird veranschaulicht, wie ein Dienst ermittelt wird, dessen <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Description.ListenUriMode.Unique> festgelegt ist. Wenn die <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Description.ListenUriMode.Unique> festgelegt ist, wird die Eindeutigkeit des ListenUri sichergestellt, indem entweder der Port eindeutig festgelegt wird oder der Pfad durch Anhängen einer GUID eindeutig festgelegt wird.  

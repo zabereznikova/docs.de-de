@@ -3,11 +3,11 @@ title: Sequenzen (F#)
 description: Erfahren Sie, wie Sie F#-Sequenzen zu verwenden, wenn Sie eine große Sammlung von Daten sortiert haben, aber nicht unbedingt erwartet, dass alle Elemente zu verwenden.
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615821"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46009802"
 ---
 # <a name="sequences"></a>Sequenzen
 

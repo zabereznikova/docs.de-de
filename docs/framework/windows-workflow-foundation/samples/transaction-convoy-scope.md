@@ -3,11 +3,11 @@ title: Transaktions-Konvoi-Bereich
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46000426"
 ---
 # <a name="transaction-convoy-scope"></a>Transaktions-Konvoi-Bereich
 Anhand dieses Beispiels wird veranschaulicht, wie ein paralleles Konvoi-Meldungsaktivitätsmuster zusammen mit einem <xref:System.ServiceModel.Activities.TransactedReceiveScope> verwendet wird, um ein Protokoll zu modellieren, bei dem in derselben Transaktion mehrere Vorgänge in beliebiger Reihenfolge auftreten können. Des Weiteren wird veranschaulicht, wie ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> automatisch eine neue Transaktion erstellt, wenn keine Transaktion an den Server weitergegeben wird, sodass der Client keine Transaktionen verwendet.  
