@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288250"
 ---
 # <a name="exception-throwing"></a>Auslösen von Ausnahmen
 In diesem Abschnitt beschriebene Richtlinien für die eine Ausnahme auslösen müssen klare Definition der Bedeutung des Fehler bei der Ausführung. Fehler bei der Ausführung tritt auf, wenn ein Member nicht möglich, was es ist vorgesehen haben (was der Membername impliziert). Z. B. wenn die `OpenFile` Methode kann keinen geöffneten Dateihandle an den Aufrufer zurückgeben, es Fehler bei der Ausführung betrachtet werden.  

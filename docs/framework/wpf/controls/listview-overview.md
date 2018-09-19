@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287714"
 ---
 # <a name="listview-overview"></a>Übersicht über ListView
 Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastruktur, um einen Satz von Datenelementen in verschiedenen Layouts oder Ansichten anzuzeigen. Benutzer können damit z.B. die Datenelemente in einer Tabelle anzeigen und die Spalten sortieren.  

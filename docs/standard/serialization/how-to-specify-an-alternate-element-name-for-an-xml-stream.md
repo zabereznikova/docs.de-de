@@ -13,11 +13,11 @@ helpviewer_keywords:
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
 ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45594075"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46288026"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream
 [Code Example (Codebeispiel)](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
