@@ -3,29 +3,29 @@ title: Ausführliche Syntax (F#)
 description: Erfahren Sie, den Unterschied zwischen ausführliche und einfache Syntax in der Programmiersprache f#.
 ms.date: 05/16/2016
 ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647135"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972318"
 ---
-# <a name="verbose-syntax"></a><span data-ttu-id="27b63-103">Ausführliche Syntax</span><span class="sxs-lookup"><span data-stu-id="27b63-103">Verbose Syntax</span></span>
+# <a name="verbose-syntax"></a><span data-ttu-id="2140d-103">Ausführliche Syntax</span><span class="sxs-lookup"><span data-stu-id="2140d-103">Verbose Syntax</span></span>
 
-<span data-ttu-id="27b63-104">Es gibt zwei Formen der Syntax für viele Konstrukte in f# verfügbar: *ausführliche Syntax* und *einfache Syntax*.</span><span class="sxs-lookup"><span data-stu-id="27b63-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="27b63-105">Die ausführliche Syntax ist nicht so häufig verwendet, aber Sie hat den Vorteil, dass weniger anfällig für den Einzug.</span><span class="sxs-lookup"><span data-stu-id="27b63-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="27b63-106">Die einfache Syntax ist kürzer und Einzüge verwendet, um Anfang und Ende von Konstrukten zu signalisieren, anstatt zusätzliche Schlüsselwörter wie `begin`, `end`, `in`und so weiter.</span><span class="sxs-lookup"><span data-stu-id="27b63-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="27b63-107">Standardmäßig ist die einfache Syntax.</span><span class="sxs-lookup"><span data-stu-id="27b63-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="27b63-108">Dieses Thema beschreibt die Syntax für f#-Konstrukte, wenn die einfacher Syntax nicht aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="27b63-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="27b63-109">Ausführlicher Syntax ist immer aktiviert, sodass auch, wenn Sie einfachen Syntax aktiviert haben, können Sie ausführlichen Syntax für einige Konstrukte weiterhin verwenden.</span><span class="sxs-lookup"><span data-stu-id="27b63-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="27b63-110">Sie können einfachen Syntax deaktivieren, indem Sie mit der `#light "off"` Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="27b63-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
+<span data-ttu-id="2140d-104">Es gibt zwei Formen der Syntax für viele Konstrukte in f# verfügbar: *ausführliche Syntax* und *einfache Syntax*.</span><span class="sxs-lookup"><span data-stu-id="2140d-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="2140d-105">Die ausführliche Syntax ist nicht so häufig verwendet, aber Sie hat den Vorteil, dass weniger anfällig für den Einzug.</span><span class="sxs-lookup"><span data-stu-id="2140d-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="2140d-106">Die einfache Syntax ist kürzer und Einzüge verwendet, um Anfang und Ende von Konstrukten zu signalisieren, anstatt zusätzliche Schlüsselwörter wie `begin`, `end`, `in`und so weiter.</span><span class="sxs-lookup"><span data-stu-id="2140d-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="2140d-107">Standardmäßig ist die einfache Syntax.</span><span class="sxs-lookup"><span data-stu-id="2140d-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="2140d-108">Dieses Thema beschreibt die Syntax für f#-Konstrukte, wenn die einfacher Syntax nicht aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="2140d-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="2140d-109">Ausführlicher Syntax ist immer aktiviert, sodass auch, wenn Sie einfachen Syntax aktiviert haben, können Sie ausführlichen Syntax für einige Konstrukte weiterhin verwenden.</span><span class="sxs-lookup"><span data-stu-id="2140d-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="2140d-110">Sie können einfachen Syntax deaktivieren, indem Sie mit der `#light "off"` Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="2140d-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
 
-## <a name="table-of-constructs"></a><span data-ttu-id="27b63-111">Tabelle der Konstrukte</span><span class="sxs-lookup"><span data-stu-id="27b63-111">Table of Constructs</span></span>
+## <a name="table-of-constructs"></a><span data-ttu-id="2140d-111">Tabelle der Konstrukte</span><span class="sxs-lookup"><span data-stu-id="2140d-111">Table of Constructs</span></span>
 
-<span data-ttu-id="27b63-112">Die folgende Tabelle zeigt die einfache und ausführliche Syntax für F#-Konstrukte in Kontexten, ein Unterschied zwischen den beiden Formaten besteht.</span><span class="sxs-lookup"><span data-stu-id="27b63-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="27b63-113">In dieser Tabelle spitze Klammern (&lt;&gt;) schließen Sie die benutzerdefinierte Syntaxelemente.</span><span class="sxs-lookup"><span data-stu-id="27b63-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="27b63-114">Finden Sie in der Dokumentation für jede Sprachkonstrukt Weitere ausführliche Informationen zur Syntax, die innerhalb dieser Konstrukte verwendet.</span><span class="sxs-lookup"><span data-stu-id="27b63-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
+<span data-ttu-id="2140d-112">Die folgende Tabelle zeigt die einfache und ausführliche Syntax für F#-Konstrukte in Kontexten, ein Unterschied zwischen den beiden Formaten besteht.</span><span class="sxs-lookup"><span data-stu-id="2140d-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="2140d-113">In dieser Tabelle spitze Klammern (&lt;&gt;) schließen Sie die benutzerdefinierte Syntaxelemente.</span><span class="sxs-lookup"><span data-stu-id="2140d-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="2140d-114">Finden Sie in der Dokumentation für jede Sprachkonstrukt Weitere ausführliche Informationen zur Syntax, die innerhalb dieser Konstrukte verwendet.</span><span class="sxs-lookup"><span data-stu-id="2140d-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="27b63-115">Sprachkonstrukt</span><span class="sxs-lookup"><span data-stu-id="27b63-115">Language construct</span></span></th>
-<th><span data-ttu-id="27b63-116">Einfache syntax</span><span class="sxs-lookup"><span data-stu-id="27b63-116">Lightweight syntax</span></span></th>
-<th><span data-ttu-id="27b63-117">Ausführliche syntax</span><span class="sxs-lookup"><span data-stu-id="27b63-117">Verbose syntax</span></span></th>
+<th><span data-ttu-id="2140d-115">Sprachkonstrukt</span><span class="sxs-lookup"><span data-stu-id="2140d-115">Language construct</span></span></th>
+<th><span data-ttu-id="2140d-116">Einfache syntax</span><span class="sxs-lookup"><span data-stu-id="2140d-116">Lightweight syntax</span></span></th>
+<th><span data-ttu-id="2140d-117">Ausführliche syntax</span><span class="sxs-lookup"><span data-stu-id="2140d-117">Verbose syntax</span></span></th>
 </tr>
 <tr>
 <td>
-<span data-ttu-id="27b63-118">zusammengesetzte Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="27b63-118">compound expressions</span></span>
+<span data-ttu-id="2140d-118">zusammengesetzte Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="2140d-118">compound expressions</span></span>
 </td>
 <td>
 
@@ -44,7 +44,7 @@ ms.locfileid: "45647135"
 <tr><td>
 
 
-<span data-ttu-id="27b63-119">geschachtelte `let` Bindungen</span><span class="sxs-lookup"><span data-stu-id="27b63-119">nested `let` bindings</span></span>
+<span data-ttu-id="2140d-119">geschachtelte `let` Bindungen</span><span class="sxs-lookup"><span data-stu-id="2140d-119">nested `let` bindings</span></span>
 
 </td><td>
 ```
@@ -66,7 +66,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-<span data-ttu-id="27b63-120">Codeblock</span><span class="sxs-lookup"><span data-stu-id="27b63-120">code block</span></span>
+<span data-ttu-id="2140d-120">Codeblock</span><span class="sxs-lookup"><span data-stu-id="2140d-120">code block</span></span>
 </td><td>
 
 ```
@@ -162,7 +162,7 @@ in
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-121">record</span><span class="sxs-lookup"><span data-stu-id="27b63-121">record</span></span>
+<tr><td><span data-ttu-id="2140d-121">record</span><span class="sxs-lookup"><span data-stu-id="2140d-121">record</span></span>
 </td><td>
 
 ```
@@ -187,12 +187,12 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-122">Klasse</span><span class="sxs-lookup"><span data-stu-id="27b63-122">class</span></span>
-</td><td><span data-ttu-id="27b63-123">
+<tr><td><span data-ttu-id="2140d-122">Klasse</span><span class="sxs-lookup"><span data-stu-id="2140d-122">class</span></span>
+</td><td><span data-ttu-id="2140d-123">
 ```
 type <class-name>(<params>) = ... ```
 
-</span><span class="sxs-lookup"><span data-stu-id="27b63-123">
+</span><span class="sxs-lookup"><span data-stu-id="2140d-123">
 ```
 type <class-name>(<params>) = ... ```
 
@@ -206,7 +206,7 @@ type <class-name>(<params>) =
 ```
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-124">Struktur</span><span class="sxs-lookup"><span data-stu-id="27b63-124">structure</span></span></td><td>
+<tr><td><span data-ttu-id="2140d-124">Struktur</span><span class="sxs-lookup"><span data-stu-id="2140d-124">structure</span></span></td><td>
 
 ```
 [<StructAttribute>]
@@ -224,7 +224,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-125">Unterscheidungs-union</span><span class="sxs-lookup"><span data-stu-id="27b63-125">discriminated union</span></span></td><td>
+<tr><td><span data-ttu-id="2140d-125">Unterscheidungs-union</span><span class="sxs-lookup"><span data-stu-id="2140d-125">discriminated union</span></span></td><td>
 
 ```
 type <union-name> =
@@ -247,7 +247,7 @@ type <union-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-126">interface</span><span class="sxs-lookup"><span data-stu-id="27b63-126">interface</span></span></td><td>
+<tr><td><span data-ttu-id="2140d-126">interface</span><span class="sxs-lookup"><span data-stu-id="2140d-126">interface</span></span></td><td>
 
 ```
 type <interface-name> =
@@ -264,7 +264,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-127">Object-Ausdruck</span><span class="sxs-lookup"><span data-stu-id="27b63-127">object expression</span></span></td><td>
+<tr><td><span data-ttu-id="2140d-127">Object-Ausdruck</span><span class="sxs-lookup"><span data-stu-id="2140d-127">object expression</span></span></td><td>
 
 ```
 { new <type-name>
@@ -287,7 +287,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-128">Schnittstellenimplementierung</span><span class="sxs-lookup"><span data-stu-id="27b63-128">interface implementation</span></span></td><td>
+<tr><td><span data-ttu-id="2140d-128">Schnittstellenimplementierung</span><span class="sxs-lookup"><span data-stu-id="2140d-128">interface implementation</span></span></td><td>
 
 ```
 interface <interface-name>
@@ -306,7 +306,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-129">typerweiterung</span><span class="sxs-lookup"><span data-stu-id="27b63-129">type extension</span></span></td><td>
+<tr><td><span data-ttu-id="2140d-129">typerweiterung</span><span class="sxs-lookup"><span data-stu-id="2140d-129">type extension</span></span></td><td>
 
 ```
 type <type-name>
@@ -325,7 +325,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="27b63-130">module</span><span class="sxs-lookup"><span data-stu-id="27b63-130">module</span></span></td><td>
+<tr><td><span data-ttu-id="2140d-130">module</span><span class="sxs-lookup"><span data-stu-id="2140d-130">module</span></span></td><td>
 
 ```
 module <module-name> =
@@ -345,8 +345,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a><span data-ttu-id="27b63-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="27b63-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2140d-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2140d-131">See also</span></span>
 
-- [<span data-ttu-id="27b63-132">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="27b63-132">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="27b63-133">Compileranweisungen</span><span class="sxs-lookup"><span data-stu-id="27b63-133">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="27b63-134">Richtlinien für das Formatieren von Code</span><span class="sxs-lookup"><span data-stu-id="27b63-134">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
+- [<span data-ttu-id="2140d-132">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="2140d-132">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="2140d-133">Compileranweisungen</span><span class="sxs-lookup"><span data-stu-id="2140d-133">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="2140d-134">Richtlinien für das Formatieren von Code</span><span class="sxs-lookup"><span data-stu-id="2140d-134">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
