@@ -2,12 +2,12 @@
 title: Permanente Duplexkorrelation
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491487"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46323781"
 ---
 # <a name="durable-duplex-correlation"></a>Permanente Duplexkorrelation
 Die permanente Duplexkorrelation, die auch als Rückrufkorrelation bezeichnet wird, ist nützlich, wenn für einen Workflowdienst eine Anforderung besteht, einen Rückruf an den ursprünglichen Aufrufer zu senden. Im Gegensatz zu WCF-Duplex kann der Rückruf jederzeit in der Zukunft geschehen und ist nicht an den gleichen Kanal bzw. die Kanallebensdauer gebunden. Die einzige Anforderung besteht darin, dass der Aufrufer über einen aktiven Endpunkt verfügt, der die Rückrufnachricht überwacht. Auf diese Weise können zwei Workflowdienste eine lange Konversation führen. Dieses Thema bietet eine Übersicht über die permanente Duplexkorrelation.  
@@ -16,7 +16,7 @@ Die permanente Duplexkorrelation, die auch als Rückrufkorrelation bezeichnet wi
  Um die permanente Duplexkorrelation zu verwenden, müssen die beiden Dienste eine kontextfähige Bindung verwenden, die bidirektionale Vorgänge unterstützt, z. B. <xref:System.ServiceModel.NetTcpContextBinding> oder <xref:System.ServiceModel.WSHttpContextBinding>. Der aufrufende Dienst registriert eine <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> mit der gewünschten Bindung auf dem <xref:System.ServiceModel.Endpoint> des Clients. Der empfangende Dienst empfängt diese Daten mit dem ersten Aufruf und verwendet diese dann auf seinem eigenen <xref:System.ServiceModel.Endpoint> in der <xref:System.ServiceModel.Activities.Send>-Aktivität, die den Rückruf zum aufrufenden Dienst ausführt. In diesem Beispiel kommunizieren zwei Dienste miteinander. Der erste Dienst ruft eine Methode auf dem zweiten Dienst auf und wartet dann auf eine Antwort. Der zweite Dienst kennt den Namen der Rückrufmethode, aber der Endpunkt des Diensts, der diese Methode implementiert, ist zur Entwurfszeit nicht bekannt.  
   
 > [!NOTE]
->  Permanenter Duplex kann nur verwendet werden, wenn die <xref:System.ServiceModel.Channels.AddressingVersion> des Endpunkts mit <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> konfiguriert wird. Ist dies nicht der Fall, wird eine <xref:System.InvalidOperationException> Ausnahme wird mit der folgenden Meldung ausgelöst: "die Nachricht enthält einen rückrufkontextheader mit einem Endpunktverweis für AddressingVersion ' Addressing200408 (HYPERLINK"http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)". Der Rückrufkontext kann nur übertragen werden, wenn AddressingVersion mit 'WSAddressing10' konfiguriert ist."  
+> Permanenter Duplex kann nur verwendet werden, wenn die <xref:System.ServiceModel.Channels.AddressingVersion> des Endpunkts mit <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> konfiguriert wird. Ist dies nicht der Fall, wird eine <xref:System.InvalidOperationException> Ausnahme mit der folgenden Meldung ausgelöst: "die Nachricht enthält einen rückrufkontextheader mit einem Endpunktverweis für [AddressingVersion](http://schemas.xmlsoap.org/ws/2004/08/addressing). Rückrufkontext kann nur übertragen werden, wenn AddressingVersion mit 'WSAddressing10' konfiguriert ist.
   
  Im folgenden Beispiel wird ein Workflowdienst gehostet, der mithilfe von <xref:System.ServiceModel.Endpoint> einen <xref:System.ServiceModel.WSHttpContextBinding> für den Rückruf erstellt.  
   

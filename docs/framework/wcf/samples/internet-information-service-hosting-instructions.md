@@ -2,12 +2,12 @@
 title: Hostinganweisungen des Internetinformationsdiensts
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: 5d315fa482e423461eab171a19746b6ea792aac5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507573"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46320919"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Hostinganweisungen des Internetinformationsdiensts
 Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet werden, müssen Sie sicherstellen, dass der IIS ordnungsgemäß installiert ist und ausgeführt wird.  
@@ -18,15 +18,15 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 2.  Klicken Sie auf **Weiter** zum Anzeigen der **Serverrollen auswählen** Dialogfeld.  
   
-3.  Wählen Sie **Anwendungsserver** aus der **Rollen** aus, und klicken Sie dann auf **Weiter** zweimal, um anzuzeigen die **Rollendienste auswählen** Dialogfeld für die Anwendungsserverrolle.  
+3.  Wählen Sie **Anwendungsserver** aus der **Rollen** aus, und klicken Sie dann auf **Weiter** zweimal, um Sie anzuzeigen die **Rollendienste auswählen** Dialogfeld für die Die Anwendungsserverrolle.  
   
-4.  Wählen Sie die **Webserver (IIS)** Kontrollkästchen. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **erforderliche Features hinzufügen**. Klicken Sie auf **Weiter** zweimal, um die Anzeige der **Rollendienste auswählen** Dialogfeld für die Rolle "Webserver (IIS)".  
+4.  Wählen Sie die **Webserver (IIS)** Kontrollkästchen. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **erforderliche Features hinzufügen**. Klicken Sie auf **Weiter** zweimal, um die Anzeige der **Rollendienste auswählen** Dialogfeld für die Rolle Webserver (IIS).  
   
-5.  Erweitern Sie **Verwaltungstools**, und erweitern Sie dann **IIS 6-Verwaltungskompatibilität**. Wählen Sie **IIS 6-Skriptingtools**. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **Erforderliche Rollendienste hinzufügen**. Klicken Sie auf **Weiter**.  
+5.  Erweitern Sie **Verwaltungstools**, und erweitern Sie dann **IIS 6-Verwaltungskompatibilität**. Wählen Sie **IIS 6-Skripttools**. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **Erforderliche Rollendienste hinzufügen**. Klicken Sie auf **Weiter**.  
   
 6.  Wenn die Zusammenfassung der Auswahl korrekt ist, klicken Sie auf **installieren**.  
   
-7.  Nach Abschluss der Installation klicken Sie auf **schließen**.  
+7.  Wenn die Installation abgeschlossen ist, klicken Sie auf **schließen**.  
   
 ### <a name="to-install-iis-version-75-on-windows-7"></a>So installieren Sie IIS Version 7.5 unter Windows 7  
   
@@ -38,11 +38,11 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 4.  Die **User Account Control** Dialogfeld wird angezeigt. Klicken Sie auf **Weiter**.  
   
-5.  Die **Windows-Features** Dialogfeld wird angezeigt. Erweitern Sie das Element namens **Internetinformationsdienste (IIS)**.  
+5.  Die **Windows Features** Dialogfeld wird angezeigt. Erweitern Sie das Element namens **Internet Information Services**.  
   
-6.  Erweitern Sie das Element namens **World Wide Web Services**.  
+6.  Erweitern Sie das Element namens **WWW-Dienste**.  
   
-7.  Erweitern Sie das Element namens **Anwendungsentwicklungsfeatures**.  
+7.  Erweitern Sie das Element namens **Application Development Features**.  
   
 8.  Stellen Sie sicher, dass die folgenden Elemente ausgewählt sind:  
   
@@ -54,19 +54,19 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
     4.  **ISAPI-Filter**  
   
-9. Unter dem Element namens **World Wide Web Services**, erweitern Sie **allgemeine HTTP-Features**.  
+9. Unter dem Element namens **WWW-Dienste**, erweitern Sie **allgemeine Http-Features**.  
   
 10. Stellen Sie sicher, dass **statischer Inhalt** ausgewählt ist.  
   
-11. Unter dem Element namens **World Wide Web Services**, erweitern Sie **Sicherheit**.  
+11. Unter dem Element namens **WWW-Dienste**, erweitern Sie **Sicherheit**.  
   
 12. Stellen Sie sicher, dass **Windows-Authentifizierung** ausgewählt ist.  
   
-13. Klicken Sie unter der **Internetinformationsdienste (IIS)** Verzeichnis ist, erweitern Sie das Element namens **Webverwaltungstools**, und wählen Sie dann **IIS-Verwaltungskonsole**.  
+13. Unter den **Internet Information Services** Directory, erweitern Sie das Element namens **Webverwaltungstools**, und wählen Sie dann **IIS-Verwaltungskonsole**.  
   
 14. Erweitern Sie das Element namens **IIS 6-Verwaltungskompatibilität**, und wählen Sie dann **IIS 6-Skriptingtools**.  
   
-15. Klicken Sie unter der **Internetinformationsdienste (IIS)** Verzeichnis ist, erweitern Sie das Element namens **Microsoft .NET Framework 3.5.1**, und wählen Sie dann **Windows Communication Foundation-HTTP-Aktivierung**.  
+15. Unter den **Internet Information Services** Directory, erweitern Sie das Element namens **Microsoft .NET Framework 3.5.1**, und wählen Sie dann **Windows Communication Foundation-Http-Aktivierung**.  
   
 16. Klicken Sie auf **OK**.  
   
@@ -76,15 +76,15 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 2.  Klicken Sie auf **Weiter** zum Anzeigen der **Serverrollen auswählen** Dialogfeld.  
   
-3.  Wählen Sie **Anwendungsserver** aus der **Rollen** aus, und klicken Sie dann auf **Weiter** zweimal, um anzuzeigen die **Rollendienste auswählen** Dialogfeld für die Anwendungsserverrolle.  
+3.  Wählen Sie **Anwendungsserver** aus der **Rollen** aus, und klicken Sie dann auf **Weiter** zweimal, um Sie anzuzeigen die **Rollendienste auswählen** Dialogfeld für die Die Anwendungsserverrolle.  
   
-4.  Wählen Sie **Webserver (IIS)** Kontrollkästchen. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **erforderliche Features hinzufügen**. Klicken Sie auf **Weiter** zweimal, um die Anzeige der **Rollendienste auswählen** Dialogfeld für die Rolle "Webserver (IIS)".  
+4.  Wählen Sie **Webserver (IIS)** Kontrollkästchen. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **erforderliche Features hinzufügen**. Klicken Sie auf **Weiter** zweimal, um die Anzeige der **Rollendienste auswählen** Dialogfeld für die Rolle Webserver (IIS).  
   
-5.  Erweitern Sie **Verwaltungstools**, und erweitern Sie dann **IIS 6-Verwaltungskompatibilität**. Wählen Sie **IIS 6-Skriptingtools**. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **Erforderliche Rollendienste hinzufügen**. Klicken Sie auf **Weiter**.  
+5.  Erweitern Sie **Verwaltungstools**, und erweitern Sie dann **IIS 6-Verwaltungskompatibilität**. Wählen Sie **IIS 6-Skripttools**. Wenn Sie aufgefordert werden, zusätzliche Rollendienste und Features zu installieren, klicken Sie auf **Erforderliche Rollendienste hinzufügen**. Klicken Sie auf **Weiter**.  
   
 6.  Wenn die Zusammenfassung der Auswahl korrekt ist, klicken Sie auf **installieren**.  
   
-7.  Nach Abschluss der Installation klicken Sie auf **schließen**.  
+7.  Wenn die Installation abgeschlossen ist, klicken Sie auf **schließen**.  
   
 ### <a name="to-install-iis-version-70-on-windows-vista"></a>So installieren Sie IIS Version&#160;7.0 unter Windows Vista  
   
@@ -96,11 +96,11 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 4.  Die **User Account Control** Dialogfeld wird angezeigt. Klicken Sie auf **Weiter**.  
   
-5.  Die **Windows-Features** Dialogfeld wird angezeigt. Erweitern Sie das Element namens **Internetinformationsdienste (IIS)**.  
+5.  Die **Windows Features** Dialogfeld wird angezeigt. Erweitern Sie das Element namens **Internet Information Services**.  
   
-6.  Erweitern Sie das Element namens **World Wide Web Services**.  
+6.  Erweitern Sie das Element namens **WWW-Dienste**.  
   
-7.  Erweitern Sie das Element namens **Anwendungsentwicklungsfeatures**.  
+7.  Erweitern Sie das Element namens **Application Development Features**.  
   
 8.  Stellen Sie sicher, dass die folgenden Elemente ausgewählt sind:  
   
@@ -114,19 +114,19 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 9. Erweitern Sie das Element namens **Webverwaltungstools**, und wählen Sie dann **IIS-Verwaltungskonsole**.  
   
-10. Unter dem Element namens **World Wide Web Services**, erweitern Sie **allgemeine HTTP-Features**.  
+10. Unter dem Element namens **WWW-Dienste**, erweitern Sie **allgemeine Http-Features**.  
   
 11. Stellen Sie sicher, dass **statischer Inhalt** ausgewählt ist.  
   
-12. Unter dem Element namens **World Wide Web Services**, erweitern Sie **Sicherheit**.  
+12. Unter dem Element namens **WWW-Dienste**, erweitern Sie **Sicherheit**.  
   
 13. Stellen Sie sicher, dass **Windows-Authentifizierung** ausgewählt ist.  
   
 14. Erweitern Sie das Element namens **IIS 6-Verwaltungskompatibilität**, und wählen Sie dann **IIS 6-Skriptingtools**.  
   
-15. Erweitern Sie das Element namens **Microsoft .NET Framework 3.0**, und wählen Sie dann **Windows Communication Foundation-HTTP-Aktivierung**.  
+15. Erweitern Sie das Element namens **Microsoft .NET Framework 3.0**, und wählen Sie dann **Windows Communication Foundation-Http-Aktivierung**.  
   
-16. Klicken Sie auf**OK**.  
+16. Klicken Sie auf **OK**.  
   
 ### <a name="to-install-iis-version-60-on-windows-server-2003"></a>So installieren Sie IIS Version 6.0 unter Windows Server 2003  
   
@@ -134,7 +134,7 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 2.  Wählen Sie **Anwendungsserver (IIS, ASP.NET)** aus der **Serverrolle** aus, und klicken Sie dann auf **Weiter**.  
   
-3.  Wählen Sie **ASP.NET aktivieren** Kontrollkästchen, und klicken Sie dann auf **Weiter**.  
+3.  Wählen Sie **ASP.NET aktivieren** , und klicken Sie dann auf **Weiter**.  
   
 4.  Wenn die Zusammenfassung der Auswahl korrekt ist, klicken Sie auf Weiter.  
   
@@ -142,13 +142,13 @@ Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet 
   
 1.  Klicken Sie in der Systemsteuerung auf **Software**.  
   
-2.  In der **Software** (Dialogfeld), klicken Sie auf **Windows-Komponenten hinzufügen/entfernen**.  
+2.  In der **Software** Dialogfeld klicken Sie auf **Windows-Komponenten hinzufügen/entfernen**.  
   
-3.  In der **Assistenten für Windows-Komponenten**, wählen die **(Internet Information Services, IIS)** Kontrollkästchen, und klicken Sie dann auf **Weiter**.  
+3.  In der **Assistenten für Windows-Komponenten**, wählen die **(Internet Information Services, IIS)** , und klicken Sie dann auf **Weiter**.  
   
-4.  Wenn die **benötigten Dateien** Dialogfeld wird angezeigt, fügen Sie den Betriebssystem-Installationsdatenträger, navigieren Sie zu dem Ordner "i386", und klicken Sie dann auf **OK**.  
+4.  Wenn die **benötigten Dateien** Dialogfeld wird angezeigt, fügen Sie den Betriebssystem-Installationsdatenträger, navigieren Sie zum Ordner "i386" und klicken Sie dann auf **OK**.  
   
-5.  Nach Abschluss der Installation klicken Sie auf **Fertig stellen**.  
+5.  Wenn die Installation abgeschlossen ist, klicken Sie auf **Fertig stellen**.  
   
 6.  Schließen Sie die **Software** (Dialogfeld), und schließen Sie **Systemsteuerung**.  
   
