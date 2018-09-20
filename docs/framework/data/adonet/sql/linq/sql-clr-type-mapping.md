@@ -2,12 +2,12 @@
 title: SQL-CLR-Typenzuordnung
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862104"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478694"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR-Typenzuordnung
 In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektmodell zugeordnet, das in einer beliebigen Programmiersprache erstellt wurde. Bei der Ausführung der Anwendung wandelt LINQ to SQL die sprachintegrierten Abfragen im Objektmodell in SQL um und sendet sie zur Ausführung an die Datenbank. Wenn die Datenbank die Ergebnisse zurückgibt, übersetzt LINQ to SQL diese zurück in Objekte, mit denen in einer Programmiersprache gearbeitet werden kann.  
@@ -122,7 +122,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
  Es können viele andere numerische Mappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter den [Typ zuordnen Laufzeitverhaltens-Matrix](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Dezimal- und Währungstypen  
- Die standardgenauigkeit von SQL Server `DECIMAL` Typ (18 Dezimalstellen links und rechts vom Dezimaltrennzeichen) ist wesentlich kleiner ist als die Genauigkeit des CLR <!--zz <xref:System.Decima?displayProperty=nameWithType>l --> `Decimal` Typ, der es standardmäßig zugeordnet ist. Dies kann beim Speichern von Daten in der Datenbank zu Genauigkeitsverlust führen. Umgekehrt kann jedoch das gleiche auftreten, wenn der SQL Server-Typ `DECIMAL` für eine Genauigkeit von mehr als 29 Stellen konfiguriert ist. Wenn der SQL Server-Typ `DECIMAL` für eine höhere Genauigkeit konfiguriert ist als der CLR-Typ <xref:System.Decimal?displayProperty=nameWithType>, kann Genauigkeitsverlust beim Abrufen von Daten aus der Datenbank auftreten.  
+ Die standardgenauigkeit von SQL Server `DECIMAL` Typ (18 Dezimalstellen links und rechts vom Dezimaltrennzeichen) ist wesentlich kleiner ist als die Genauigkeit des CLR <xref:System.Decimal?displayProperty=nameWithType> Typ, der es standardmäßig zugeordnet ist. Dies kann beim Speichern von Daten in der Datenbank zu Genauigkeitsverlust führen. Umgekehrt kann jedoch das gleiche auftreten, wenn der SQL Server-Typ `DECIMAL` für eine Genauigkeit von mehr als 29 Stellen konfiguriert ist. Wenn der SQL Server-Typ `DECIMAL` für eine höhere Genauigkeit konfiguriert ist als der CLR-Typ <xref:System.Decimal?displayProperty=nameWithType>, kann Genauigkeitsverlust beim Abrufen von Daten aus der Datenbank auftreten.  
   
  Die SQL Server-Typen `MONEY` und `SMALLMONEY`, die standardmäßig ebenfalls dem CLR-Typ <xref:System.Decimal?displayProperty=nameWithType> zugeordnet werden, haben eine niedrigere Genauigkeit. Dies kann beim Speichern von Daten in der Datenbank einen Überlauf oder Datenverlust verursachen.  
   
