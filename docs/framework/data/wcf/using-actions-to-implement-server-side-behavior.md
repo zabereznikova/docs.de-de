@@ -2,15 +2,16 @@
 title: Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: 415797114d1e6d2ff307f0d872361f7d415cad3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 515553540053ed0c16085fde06e2cc2d2dedda1e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516260"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471721"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
-OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData-Dienst abgerufene Ressource zu implementieren.  Nehmen wir als Beispiel für eine Ressource einen digitalen Film, den Sie auf viele verschiedene Weisen verwenden können: Auschecken, Bewerten/Kommentieren oder Einchecken. Das alles sind Beispiele für Aktionen, die von einem WCF Data Service implementiert werden können, der digitale Filme verwaltet. Aktionen werden in einer OData-Antwort beschrieben, die eine Ressource enthält, für die die Aktion aufgerufen werden kann. Wenn ein Benutzer eine Ressource anfordert, die einen digitalen Film darstellt, enthält die vom WCF Data Service zurückgegebene Antwort Informationen zu den Aktionen, die für diese Ressource verfügbar sind. Die Verfügbarkeit einer Aktion kann vom Zustand des Datendienstes oder der Ressource abhängen. Nachdem ein digitaler Film beispielsweise ausgecheckt wurde, kann er nicht von einem weiteren Benutzer ausgecheckt werden. Clients können eine Aktion aufrufen, indem sie einfach eine URL angeben. Z. B. http://MyServer/MovieService.svc/Movies(6) würde einen bestimmten digitalen Film identifiziert und http://MyServer/MovieService.svc/Movies(6)/Checkout würde die Aktion für den jeweiligen Film aufgerufen. Mithilfe von Aktionen ist es möglich, das Dienstmodell ohne das Datenmodell verfügbar zu machen. Wir bleiben beim Beispiel mit dem Filmportal: Stellen Sie sich vor, dass Sie einem Benutzer die Bewertung eines Films ermöglichen möchten, ohne die Bewertungsdaten jedoch direkt als Ressource verfügbar zu machen. Sie könnten eine Bewertungsaktion implementieren, um dem Benutzer die Bewertung eines Films zu erlauben, ohne dass auf die Bewertungsdaten direkt als Ressource zugegriffen wird.  
+
+OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData-Dienst abgerufene Ressource zu implementieren. Nehmen wir als Beispiel für eine Ressource einen digitalen Film, den Sie auf viele verschiedene Weisen verwenden können: Auschecken, Bewerten/Kommentieren oder Einchecken. Das alles sind Beispiele für Aktionen, die von einem WCF Data Service implementiert werden können, der digitale Filme verwaltet. Aktionen werden in einer OData-Antwort beschrieben, die eine Ressource enthält, für die die Aktion aufgerufen werden kann. Wenn ein Benutzer eine Ressource anfordert, die einen digitalen Film darstellt, enthält die vom WCF Data Service zurückgegebene Antwort Informationen zu den Aktionen, die für diese Ressource verfügbar sind. Die Verfügbarkeit einer Aktion kann vom Zustand des Datendienstes oder der Ressource abhängen. Nachdem ein digitaler Film beispielsweise ausgecheckt wurde, kann er nicht von einem weiteren Benutzer ausgecheckt werden. Clients können eine Aktion aufrufen, indem sie einfach eine URL angeben. Z. B. `http://MyServer/MovieService.svc/Movies(6)` würde einen bestimmten digitalen Film identifiziert und `http://MyServer/MovieService.svc/Movies(6)/Checkout` würde die Aktion für den jeweiligen Film aufgerufen. Mithilfe von Aktionen ist es möglich, das Dienstmodell ohne das Datenmodell verfügbar zu machen. Wir bleiben beim Beispiel mit dem Filmportal: Stellen Sie sich vor, dass Sie einem Benutzer die Bewertung eines Films ermöglichen möchten, ohne die Bewertungsdaten jedoch direkt als Ressource verfügbar zu machen. Sie könnten eine Bewertungsaktion implementieren, um dem Benutzer die Bewertung eines Films zu erlauben, ohne dass auf die Bewertungsdaten direkt als Ressource zugegriffen wird.
   
 ## <a name="implementing-an-action"></a>Implementieren einer Aktion  
  Zum Implementieren einer Dienstaktion müssen Sie implementieren die <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx), und [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) Schnittstellen. <xref:System.IServiceProvider> ermöglicht es WCF Data Services zum Abrufen der Implementierung von [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx). [IDataServiceActionProvider](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceactionprovider(v=vs.113).aspx) sind WCF Data Services zu erstellen, suchen, zu beschreiben und Aufrufen von Dienstaktionen. [IDataServiceInvokable](https://msdn.microsoft.com/library/system.data.services.providers.idataserviceinvokable(v=vs.113).aspx) können Sie Sie rufen Sie den Code, der Dienstaktionen Verhalten implementiert, und rufen Sie die Ergebnisse, sofern vorhanden. Bedenken Sie, dass die WCF Data Services pro Aufruf berechnet werden. Bei jedem Aufruf des Dienstes wird eine neue Dienstinstanz erstellt.  Stellen Sie sicher, dass mit dem Dienst keine unnötigen Arbeiten ausgeführt werden.  
@@ -52,7 +53,7 @@ OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData
 ## <a name="invoking-a-wcf-data-service-action"></a>Aufrufen einer WCF Data Service-Aktion  
  Aktionen werden mithilfe einer HTTP POST-Anforderung aufgerufen. In der URL wird die Ressource gefolgt vom Aktionsnamen angegeben. Parameter werden im Textkörper der Anforderung übergeben. Stellen Sie sich z. B. einen Dienst mit dem Namen MovieService vor, der die Bewertungsaktion (Rate) verfügbar macht. Sie sollten die folgende URL verwenden, um die Bewertungsaktion (Rate) für einen bestimmten Film aufzurufen:  
   
- http://MovieServer/MovieService.svc/Movies(1)/Rate  
+ `http://MovieServer/MovieService.svc/Movies(1)/Rate`
   
  Movies(1) gibt den Film an, den Sie bewerten möchten, und Rate die Bewertungsaktion. Der tatsächliche Wert der Bewertung befindet sich im Textkörper der HTTP-Anforderung, wie im folgenden Beispiel dargestellt:  
   
@@ -67,15 +68,15 @@ Host: localhost:15238
 ```  
   
 > [!WARNING]
->  Der oben angegebene Beispielcode funktioniert nur mit WCF Data Services 5.2 und höher, da diese Versionen Unterstützung für JSON Light bieten. Wenn Sie eine frühere Version von WCF Data Services verwenden, müssen Sie den Inhaltstyp für "json verbose" wie folgt angeben: `application/json;odata=verbose`.  
+> Der oben angegebene Beispielcode funktioniert nur mit WCF Data Services 5.2 und höher, da diese Versionen Unterstützung für JSON Light bieten. Wenn Sie eine frühere Version von WCF Data Services verwenden, müssen Sie den Inhaltstyp für "json verbose" wie folgt angeben: `application/json;odata=verbose`.  
   
  Alternativ können Sie eine Aktion mit dem WCF Data Services-Client aufrufen, wie im folgenden Codeausschnitt dargestellt.  
   
-```  
+```csharp
 MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.svc/"));  
-            //...  
-            context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );           
-```  
+//...  
+context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "POST", new BodyOperationParameter("rating",4) );
+```
   
  Im oben angegebenen Codeausschnitt wurde die `MoviesModel`-Klasse von Visual Studio generiert, um einem WCF Data Service einen Dienstverweis hinzuzufügen.  
   
