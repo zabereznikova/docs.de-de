@@ -7,48 +7,48 @@ helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
 ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44364584"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515137"
 ---
-# <a name="soundplayer-class"></a><span data-ttu-id="d4e5c-102">SoundPlayer-Klasse</span><span class="sxs-lookup"><span data-stu-id="d4e5c-102">SoundPlayer Class</span></span>
-<span data-ttu-id="d4e5c-103">Die `SoundPlayer`-Klasse ermöglicht es Ihnen, Sounds problemlos in Ihre Anwendungen zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-103">The `SoundPlayer` class enables you to easily include sounds in your applications.</span></span>  
+# <a name="soundplayer-class"></a><span data-ttu-id="625f2-102">SoundPlayer-Klasse</span><span class="sxs-lookup"><span data-stu-id="625f2-102">SoundPlayer Class</span></span>
+<span data-ttu-id="625f2-103">Die `SoundPlayer`-Klasse ermöglicht es Ihnen, Sounds problemlos in Ihre Anwendungen zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="625f2-103">The `SoundPlayer` class enables you to easily include sounds in your applications.</span></span>  
   
- <span data-ttu-id="d4e5c-104">Sie können auch die <xref:System.Media.SystemSounds>-Klasse verwenden, um allgemeine Systemsounds wiederzugeben, einschließlich eines akustischen Signals.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-104">You can also use the <xref:System.Media.SystemSounds> class to play common system sounds, including a beep.</span></span>  
+ <span data-ttu-id="625f2-104">Sie können auch die <xref:System.Media.SystemSounds>-Klasse verwenden, um allgemeine Systemsounds wiederzugeben, einschließlich eines akustischen Signals.</span><span class="sxs-lookup"><span data-stu-id="625f2-104">You can also use the <xref:System.Media.SystemSounds> class to play common system sounds, including a beep.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d4e5c-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d4e5c-105">In This Section</span></span>  
- [<span data-ttu-id="d4e5c-106">Übersicht über die SoundPlayer-Klasse</span><span class="sxs-lookup"><span data-stu-id="d4e5c-106">SoundPlayer Class Overview</span></span>](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
- <span data-ttu-id="d4e5c-107">Stellt die Klasse und die am häufigsten verwendeten Eigenschaften, Methoden und Ereignisse vor.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-107">Introduces the class and its commonly used properties, methods, and events.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="625f2-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="625f2-105">In This Section</span></span>  
+ [<span data-ttu-id="625f2-106">Übersicht über die SoundPlayer-Klasse</span><span class="sxs-lookup"><span data-stu-id="625f2-106">SoundPlayer Class Overview</span></span>](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)  
+ <span data-ttu-id="625f2-107">Stellt die Klasse und die am häufigsten verwendeten Eigenschaften, Methoden und Ereignisse vor.</span><span class="sxs-lookup"><span data-stu-id="625f2-107">Introduces the class and its commonly used properties, methods, and events.</span></span>  
   
- [<span data-ttu-id="d4e5c-108">Gewusst wie: Wiedergabe von Sound in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d4e5c-108">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- <span data-ttu-id="d4e5c-109">Stellt Code zum Abspielen eines Sounds bereit, der über einen Dateipfad, UNC-Pfad oder HTTP-Pfad angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-109">Provides code to play a sound specified via a file path, UNC path, or HTTP path.</span></span>  
+ [<span data-ttu-id="625f2-108">Gewusst wie: Wiedergabe von Sound in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="625f2-108">How to: Play a Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ <span data-ttu-id="625f2-109">Stellt Code zum Abspielen eines Sounds bereit, der über einen Dateipfad, UNC-Pfad oder HTTP-Pfad angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="625f2-109">Provides code to play a sound specified via a file path, UNC path, or HTTP path.</span></span>  
   
- [<span data-ttu-id="d4e5c-110">Gewusst wie: Wiedergabe eines Signaltons in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d4e5c-110">How to: Play a Beep from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
- <span data-ttu-id="d4e5c-111">Stellt Code zum Wiedergeben des Signaltons des Computers bereit.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-111">Provides code to play the computer's beep sound.</span></span>  
+ [<span data-ttu-id="625f2-110">Gewusst wie: Wiedergabe eines Signaltons in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="625f2-110">How to: Play a Beep from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ <span data-ttu-id="625f2-111">Stellt Code zum Wiedergeben des Signaltons des Computers bereit.</span><span class="sxs-lookup"><span data-stu-id="625f2-111">Provides code to play the computer's beep sound.</span></span>  
   
- [<span data-ttu-id="d4e5c-112">Gewusst wie: Wiedergeben eines in einer Ressource aus Windows Form eingebetteten Sounds</span><span class="sxs-lookup"><span data-stu-id="d4e5c-112">How to: Play a Sound Embedded in a Resource from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
- <span data-ttu-id="d4e5c-113">Stellt Code zum Wiedergeben eines Sounds über eine Ressource bereit.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-113">Provides code to play a sound from a resource.</span></span>  
+ [<span data-ttu-id="625f2-112">Gewusst wie: Wiedergeben eines in einer Ressource aus Windows Form eingebetteten Sounds</span><span class="sxs-lookup"><span data-stu-id="625f2-112">How to: Play a Sound Embedded in a Resource from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md)  
+ <span data-ttu-id="625f2-113">Stellt Code zum Wiedergeben eines Sounds über eine Ressource bereit.</span><span class="sxs-lookup"><span data-stu-id="625f2-113">Provides code to play a sound from a resource.</span></span>  
   
- [<span data-ttu-id="d4e5c-114">Gewusst wie: Wiedergabe eines Systemsounds in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d4e5c-114">How to: Play a System Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
- <span data-ttu-id="d4e5c-115">Stellt Code zum Wiedergeben eines Systemsounds bereit.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-115">Provides code to play the one of the system sounds.</span></span>  
+ [<span data-ttu-id="625f2-114">Gewusst wie: Wiedergabe eines Systemsounds in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="625f2-114">How to: Play a System Sound from a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ <span data-ttu-id="625f2-115">Stellt Code zum Wiedergeben eines Systemsounds bereit.</span><span class="sxs-lookup"><span data-stu-id="625f2-115">Provides code to play the one of the system sounds.</span></span>  
   
- [<span data-ttu-id="d4e5c-116">Gewusst wie: Asynchrones Laden eines Sounds in einem Windows Form</span><span class="sxs-lookup"><span data-stu-id="d4e5c-116">How to: Load a Sound Asynchronously within a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- <span data-ttu-id="d4e5c-117">Stellt Code zum asynchronen Laden eines Sounds aus einer URL und für dessen Wiedergabe bereit.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-117">Provides code to load a sound asynchronously from a URL and play it.</span></span>  
+ [<span data-ttu-id="625f2-116">Gewusst wie: Asynchrones Laden eines Sounds in einem Windows Form</span><span class="sxs-lookup"><span data-stu-id="625f2-116">How to: Load a Sound Asynchronously within a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
+ <span data-ttu-id="625f2-117">Stellt Code zum asynchronen Laden eines Sounds aus einer URL und für dessen Wiedergabe bereit.</span><span class="sxs-lookup"><span data-stu-id="625f2-117">Provides code to load a sound asynchronously from a URL and play it.</span></span>  
   
- [<span data-ttu-id="d4e5c-118">Gewusst wie: Starten einer Schleife eines wiedergegebenen Sounds in Windows Form</span><span class="sxs-lookup"><span data-stu-id="d4e5c-118">How to: Loop a Sound Playing on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
- <span data-ttu-id="d4e5c-119">Stellt Code zum wiederholten Wiedergeben eines Sounds bereit.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-119">Provides code that plays a sound repeatedly.</span></span>  
+ [<span data-ttu-id="625f2-118">Gewusst wie: Starten einer Schleife eines wiedergegebenen Sounds in Windows Form</span><span class="sxs-lookup"><span data-stu-id="625f2-118">How to: Loop a Sound Playing on a Windows Form</span></span>](../../../../docs/framework/winforms/controls/how-to-loop-a-sound-playing-on-a-windows-form.md)  
+ <span data-ttu-id="625f2-119">Stellt Code zum wiederholten Wiedergeben eines Sounds bereit.</span><span class="sxs-lookup"><span data-stu-id="625f2-119">Provides code that plays a sound repeatedly.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d4e5c-120">Referenz</span><span class="sxs-lookup"><span data-stu-id="d4e5c-120">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="625f2-120">Referenz</span><span class="sxs-lookup"><span data-stu-id="625f2-120">Reference</span></span>  
  <xref:System.Media.SoundPlayer>  
- <span data-ttu-id="d4e5c-121">Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-121">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="625f2-121">Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.</span><span class="sxs-lookup"><span data-stu-id="625f2-121">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="d4e5c-122">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d4e5c-122">Related Sections</span></span>  
- [<span data-ttu-id="d4e5c-123">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="d4e5c-123">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
- <span data-ttu-id="d4e5c-124">Enthält Links zu Themen über Steuerelemente, die speziell für Windows Forms vorgesehen sind.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-124">Provides links to topics about the controls designed specifically to work with Windows Forms.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="625f2-122">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="625f2-122">Related Sections</span></span>  
+ [<span data-ttu-id="625f2-123">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="625f2-123">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)  
+ <span data-ttu-id="625f2-124">Enthält Links zu Themen über Steuerelemente, die speziell für Windows Forms vorgesehen sind.</span><span class="sxs-lookup"><span data-stu-id="625f2-124">Provides links to topics about the controls designed specifically to work with Windows Forms.</span></span>  
   
- [<span data-ttu-id="d4e5c-125">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="d4e5c-125">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="d4e5c-126">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="d4e5c-126">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+ [<span data-ttu-id="625f2-125">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="625f2-125">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="625f2-126">Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.</span><span class="sxs-lookup"><span data-stu-id="625f2-126">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- <span data-ttu-id="d4e5c-127">Siehe auch [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer-Objekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) oder [My.Computer-Objekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).</span><span class="sxs-lookup"><span data-stu-id="d4e5c-127">Also see [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer Object](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) or [My.Computer Object](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).</span></span>
+ <span data-ttu-id="625f2-127">Siehe auch [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer-Objekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) oder [My.Computer-Objekt](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).</span><span class="sxs-lookup"><span data-stu-id="625f2-127">Also see [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" My.Computer Object](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) or [My.Computer Object](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).</span></span>
