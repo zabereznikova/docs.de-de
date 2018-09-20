@@ -1,33 +1,33 @@
 ---
 title: Zusammenfassung
-description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Schlussfolgerungen
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Schlussfolgerungen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: 9c115aa09c3de2cbd71a3b7dab7e8bbedc911ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580509"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45509743"
 ---
 # <a name="conclusions"></a>Zusammenfassung
 
-- Container-basierte Lösungen bieten letztlich Kosten eingespart Vorteile. Container sind eine Lösung zu Problemen bei der Bereitstellung, da sie nicht die Unstimmigkeiten zurückzuführen, dass keine Abhängigkeiten in produktionsumgebungen entfernen. Durch das Entfernen dieser Probleme müssen verbessert sie Dev/Test, DevOps und Produktion Vorgänge erheblich.
+- Containerbasierte Lösungen bieten letztlich einsparungen Kostenvorteile. Container sind eine Lösung für Bereitstellungsprobleme, da sie nicht die Abwesenheit von Abhängigkeiten in produktionsumgebungen auftreten entfernen. Durch das Entfernen dieser Probleme an, verbessert sie Dev/Test, DevOps und Produktionsabläufe erheblich.
 
 - Ein Docker-Container wird zur Standardeinheit für jede serverbasierte Anwendung oder jeden serverbasierten Dienst.
 
-- Für produktionsumgebungen sollten Sie ein Orchestrator (z. B. Service Fabric oder Kubernetes) zum Hosten von skalierbaren Windows-Container-basierte Anwendungen verwenden.
+- Für produktionsumgebungen sollten Sie einen Orchestrator (z.B. Service Fabric oder Kubernetes) zum Hosten von skalierbaren Windows-Containern basierenden Anwendungen verwenden.
 
-- Azure-Container hostet VMs sind eine schnelle und einfache Möglichkeit zum kleine Dev/Test-Umgebungen in der Cloud zu erstellen.
+- Azure Virtual Machines-Container hostet, sind eine schnelle und einfache Möglichkeit zum Erstellen von kleinen Entwicklungs-/testumgebungen in der Cloud.
 
-- Azure SQL-Datenbank verwaltete Instanz wird standardmäßig empfohlen, bei der Migration von relationalen Datenbanken von vorhandenen Anwendungen in Azure.
+- Azure verwaltete SQL-Datenbankinstanz wird standardmäßig empfohlen, bei der Migration vorhandener Anwendungen zu Azure von relationalen Datenbanken.
 
-- Visual Studio 2017 und Image2Docker grundlegende Tools sind für Sie Ihre vorhandenen .NET Anwendungen mit Windows-Containern durch Beschleunigung abrufen gestarteten Lernkurve Modernisierung starten.
+- Visual Studio 2017 und Image2Docker sind grundlegende Tools zum Starten, modernisieren Ihre vorhandenen Anwendungen für .NET mit Windows-Containern durch eine beschleunigte die ersten Schritte Lernkurve.
 
-- Beim Platzieren von Sammelartikeleinheit in der Produktion wird immer erstellen oder DevOps-Tools für CI-CD-Pipelines, wie Visual Studio Team Services oder Jenkins und einer DevOps-Kultur zu verwenden.
+- Bei der Platzierung von Anwendungen in Container in der Produktion wird immer erstellen oder eine DevOps-Kultur und DevOps-Tools für CI/CD-Pipelines, wie Azure DevOps-Services oder Jenkins zu übernehmen.
 
-- Microsoft Azure bietet die meisten umfassende und vollständige Umgebung, Ihre vorhandenen .NET Framework-Anwendungen mit Windows-Container, Cloud-Infrastruktur und PaaS-Dienste zu aktualisieren.
+- Microsoft Azure bietet die umfassende und vollständige Umgebung zum modernisieren Sie Ihre vorhandenen .NET Framework-Anwendungen mit Windows-Containern, Cloud-Infrastruktur und PaaS-Dienste.
 
 >[!div class="step-by-step"]
 [Vorherige](walkthroughs-technical-get-started-overview.md)

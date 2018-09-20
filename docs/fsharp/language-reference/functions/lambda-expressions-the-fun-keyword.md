@@ -3,11 +3,11 @@ title: 'Lambdaausdrücke: Das fun-Schlüsselwort (F#)'
 description: Erfahren Sie, wie der F#-Schlüsselwort "Spaß" zu verwenden, um ein Lambda-Ausdruck definieren eine anonyme Funktion handelt.
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353706"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515287"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Lambdaausdrücke: Das fun-Schlüsselwort (F#)
 

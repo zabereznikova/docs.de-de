@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104637"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45646245"
 ---
 # <a name="key-takeaways"></a>Wichtige Erkenntnisse
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104637"
 
 -   Eine DevOps-End-to-End-Umgebung, die Continuous Integration/Continuous Deployment unterstützt und eine Verbindung zu den Docker-Produktionsumgebungen herstellt, sorgt für Agilität und verbessert letztlich die Zeit bis zur Markteinführung Ihrer Anwendungen.
 
-Visual Studio Team Services vereinfacht Ihre DevOps-Umgebung erheblich, die für Docker-Umgebungen von Ihren Continuous Deployment-Pipelines vorgesehen ist, einschließlich einfacher Docker-Umgebungen oder komplexerer Microservice- und Containerorchestratoren, die auf Azure basieren.
+Azure DevOps-Dienste vereinfacht Ihre DevOps-Umgebung, die für Docker-Umgebungen über Ihre Continuous Deployment-Pipelines, einschließlich einfacher Docker-Umgebungen oder erweiterte microservice- und containerorchestratoren, die auf Basis von Azure festgelegt.
 
 >[!div class="step-by-step"]
 [Vorherige](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

@@ -3,11 +3,11 @@ title: Bestätigung
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
 ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: MT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368111"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44757236"
 ---
 # <a name="confirmation"></a>Bestätigung
 In diesem Beispiel werden vier allgemeine Szenarien im Zusammenhang mit der Verwendung von <xref:System.Activities.Statements.CompensableActivity> und der Bestätigung veranschaulicht. Im Beispiel werden vier Workflows ausgeführt, um die Bestätigung zu veranschaulichen. Dieses Beispiel ist in deklarativen und imperativen Versionen verfügbar.  

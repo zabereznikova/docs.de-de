@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
 ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270707"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45745563"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard-Objekt
 Stellt Methoden zur Bearbeitung der Zwischenablage bereit.  
