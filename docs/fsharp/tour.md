@@ -1,5 +1,5 @@
 ---
-title: Einführung in f#
+title: Einführung in F#
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
 ms.date: 02/28/2018
 ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/25/2018
 ms.locfileid: "42924520"
 ---
-# <a name="tour-of-f"></a>Einführung in f# #
+# <a name="tour-of-f"></a>Einführung in F# #
 
 Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben.  Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können.  Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
 
@@ -55,11 +55,11 @@ Folgendes muss jedoch beachtet werden: `struct`-Tupel sind keine Werttypen, desh
 
 ## <a name="pipelines-and-composition"></a>Pipelines und Komposition
 
-Übergeben Sie Operatoren wie z. B. `|>` werden häufig verwendet, bei der Verarbeitung von Daten in f#. Diese Operatoren sind Funktionen, die Sie zum Herstellen von "Pipelines" von Funktionen auf flexible Weise zu ermöglichen. Im folgenden Beispiel wird erläutert wie Sie diese Operatoren zum Erstellen einer einfachen funktionalen Pipeline nutzen können:
+Übergeben Sie Operatoren wie z. B. `|>` werden häufig verwendet, bei der Verarbeitung von Daten in F#. Diese Operatoren sind Funktionen, die Sie zum Herstellen von "Pipelines" von Funktionen auf flexible Weise zu ermöglichen. Im folgenden Beispiel wird erläutert wie Sie diese Operatoren zum Erstellen einer einfachen funktionalen Pipeline nutzen können:
 
 [!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-Im vorherigen Beispiel vorgenommen verwenden viele der Features von f#, einschließlich der Liste Verarbeitungsfunktionen, Funktionen, und [teilweise Anwendung](language-reference/functions/index.md#partial-application-of-arguments). Obwohl ein umfassendes Verständnis all dieser Konzepte einer weiterführenden Erläuterung bedarf, sollte klar geworden sein, wie einfach Funktionen beim Erstellen von Pipelines zum Verarbeiten von Daten verwendet werden können.
+Im vorherigen Beispiel vorgenommen verwenden viele der Features von F#, einschließlich der Liste Verarbeitungsfunktionen, Funktionen, und [teilweise Anwendung](language-reference/functions/index.md#partial-application-of-arguments). Obwohl ein umfassendes Verständnis all dieser Konzepte einer weiterführenden Erläuterung bedarf, sollte klar geworden sein, wie einfach Funktionen beim Erstellen von Pipelines zum Verarbeiten von Daten verwendet werden können.
 
 ## <a name="lists-arrays-and-sequences"></a>Listen, Arrays und Sequenzen
 
@@ -69,7 +69,7 @@ Listen, Arrays und Sequenzen sind drei primäre Auflistungstypen in der F#-Kernb
 
 [!code-fsharp[Lists](../../samples/snippets/fsharp/tour.fs#L309-L359)]
 
-[Arrays](language-reference/arrays.md) sind feste Größe, *änderbare* Auflistungen von Elementen des gleichen Typs.  Diese schnellen, wahlfreien Zugriff von Elementen zu unterstützen, und sind schneller als f#-Listen, da sie nur zusammenhängende Speicherblöcke sind.
+[Arrays](language-reference/arrays.md) sind feste Größe, *änderbare* Auflistungen von Elementen des gleichen Typs.  Diese schnellen, wahlfreien Zugriff von Elementen zu unterstützen, und sind schneller als F#-Listen, da sie nur zusammenhängende Speicherblöcke sind.
 
 [!code-fsharp[Arrays](../../samples/snippets/fsharp/tour.fs#L368-L407)]
 
@@ -96,7 +96,7 @@ Datensatz und Union-Typen werden zwei grundlegende Datentypen in F#-Code verwend
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
-Ab f# 4.1, können Sie auch Datensätze darstellen `struct`s.  Dies erfolgt mit der `[<Struct>]` Attribut:
+Ab F# 4.1, können Sie auch Datensätze darstellen `struct`s.  Dies erfolgt mit der `[<Struct>]` Attribut:
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L561-L568)]
 
@@ -129,7 +129,7 @@ Fehler bei den oben genannten folgen, führt zu einem Kompilierungsfehler.
 
 ## <a name="pattern-matching"></a>Musterabgleich
 
-[Übereinstimmende Muster](language-reference/pattern-matching.md) ist die F#-Sprache-Funktion die Richtigkeit für Vorgänge für f#-Typen ermöglicht.  In den obigen Beispielen haben Sie wahrscheinlich bemerkt, dass einiges an `match x with ...` Syntax.  Dieses Konstrukt kann den Compiler, der verstehen kann, die "Form" Datentypen, um gezwungen, alle möglichen Fälle berücksichtigen, wenn ein Datentyp, durch was bekannt ist als vollständige Musterabgleich mit.  Dies ist unglaublich leistungsfähige auf Richtigkeit, und auf "heben", was normalerweise relevant Runtime in während der Kompilierung wäre clever verwendet werden kann.
+[Übereinstimmende Muster](language-reference/pattern-matching.md) ist die F#-Sprache-Funktion die Richtigkeit für Vorgänge für F#-Typen ermöglicht.  In den obigen Beispielen haben Sie wahrscheinlich bemerkt, dass einiges an `match x with ...` Syntax.  Dieses Konstrukt kann den Compiler, der verstehen kann, die "Form" Datentypen, um gezwungen, alle möglichen Fälle berücksichtigen, wenn ein Datentyp, durch was bekannt ist als vollständige Musterabgleich mit.  Dies ist unglaublich leistungsfähige auf Richtigkeit, und auf "heben", was normalerweise relevant Runtime in während der Kompilierung wäre clever verwendet werden kann.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
 
@@ -145,7 +145,7 @@ Sie haben möglicherweise bemerkt wird die Verwendung von der `_` Muster.  Dies 
 
 ## <a name="optional-types"></a>Optionale Typen
 
-Ein Sonderfall des Unterscheidungs-Union-Typen ist der Typ, der eignet sich daher, dass es sich um einen Teil der f#-Kernbibliothek ist.
+Ein Sonderfall des Unterscheidungs-Union-Typen ist der Typ, der eignet sich daher, dass es sich um einen Teil der F#-Kernbibliothek ist.
 
 [Der Optionstyp](language-reference/options.md) ist ein Typ, der eine der beiden Fälle darstellt: ein Wert oder nichts überhaupt.  Sie wird in jedem Szenario verwendet, in dem ein Wert möglicherweise vorhanden oder kann nicht von einem bestimmten Vorgang führen.  Dies zwingt dann für beide Fälle, die ein Problem während der Kompilierung, anstatt ein Laufzeit-Problem somit berücksichtigen.  Diese werden häufig in APIs verwendet, in denen `null` wird verwendet, um "nichts" stattdessen darstellen und Sie somit kümmern müssen `NullReferenceException` in vielen Fällen.
 
@@ -153,7 +153,7 @@ Ein Sonderfall des Unterscheidungs-Union-Typen ist der Typ, der eignet sich dahe
 
 ## <a name="units-of-measure"></a>Maßeinheiten
 
-Eine einzigartige Funktion des # Typsystem ist die Möglichkeit, den Kontext für numerische Literale durch Einheiten bereitzustellen.
+Eine einzigartige Funktion des F# Typsystem ist die Möglichkeit, den Kontext für numerische Literale durch Einheiten bereitzustellen.
 
 [Maßeinheiten](language-reference/units-of-measure.md) ermöglichen Ihnen das Zuordnen eines numerischen Typs mit einer Einheit, z. B. Meter und haben Funktionen ausführen können Einheiten anstelle numerischer Literale.  Dies ermöglicht es den Compiler an, stellen Sie sicher, dass die Typen von numerischen Literalen übergebenen sinnvoll unter einem bestimmten Kontext, wodurch persistenzspeicherpunkte Laufzeitfehler zugeordnet, dass diese Art von Aufgaben.
 
@@ -193,6 +193,6 @@ Klassen eignen sich hervorragend für eine Vielzahl von Gründen, z. B. Wenn Sie
 
 Nun, da Sie einige der wichtigsten Funktionen der Sprache gesehen haben, sollten Sie Ihre erste F#-Programme zu schreiben sein!  Sehen Sie sich [Einstieg](tutorials/getting-started/index.md) zu erfahren, wie Sie Ihre Entwicklungsumgebung einrichten, und Schreiben von Code.
 
-Die nächsten Schritte für weitere können beliebig sein, aber es wird empfohlen [Funktionen als erstrangige Werte](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> abzurufenden mit Core Konzepte der funktionalen Programmierung vertraut.  Dieser werden wichtige bei der Erstellung von robusten Programme in f#.
+Die nächsten Schritte für weitere können beliebig sein, aber es wird empfohlen [Funktionen als erstrangige Werte](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> abzurufenden mit Core Konzepte der funktionalen Programmierung vertraut.  Dieser werden wichtige bei der Erstellung von robusten Programme in F#.
 
-Darüber hinaus sehen Sie sich die [F#-Sprachreferenz](language-reference/index.md) eine umfangreiche Sammlung von konzeptionellen Inhalten in f# angezeigt.
+Darüber hinaus sehen Sie sich die [F#-Sprachreferenz](language-reference/index.md) eine umfangreiche Sammlung von konzeptionellen Inhalten in F# angezeigt.
