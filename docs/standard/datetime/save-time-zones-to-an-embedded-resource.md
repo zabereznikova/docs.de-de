@@ -13,11 +13,11 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778628"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45653341"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Gewusst wie: Speichern von Zeitzonen in einer eingebetteten Ressource
 
