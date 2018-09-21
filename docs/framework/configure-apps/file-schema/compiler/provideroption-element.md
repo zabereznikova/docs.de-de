@@ -12,11 +12,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 75cc2003a88cc7be467b9062c37b6b5d9eb82f53
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618898"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480668"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;ProviderOption&gt; Element
 Gibt die Compiler-Version-Attribute für einen Sprachanbieter an.  

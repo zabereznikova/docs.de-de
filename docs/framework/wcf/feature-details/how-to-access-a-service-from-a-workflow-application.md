@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595463"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493299"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung
 In diesem Thema wird beschrieben, wie Sie einen Workflowdienst in einer Workflowkonsolenanwendung aufrufen. Es setzt das Ende der [Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) Thema. Obwohl in diesem Thema wird beschrieben, wie Sie einen Workflowdienst aus einer workflowanwendung aufrufen, können die gleichen Methoden verwendet werden, um einen Windows Communication Foundation (WCF)-Dienst aus einer workflowanwendung aufrufen.
@@ -42,13 +42,13 @@ In diesem Thema wird beschrieben, wie Sie einen Workflowdienst in einer Workflow
 
      ![Echo-Aktivität in der Toolbox](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  Drag & drop eine <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` Aktivität auf die Designeroberfläche. Es befindet sich unter dem **Ablaufsteuerung** Abschnitt der Toolbox.
+7.  Ziehen Sie eine <xref:System.Activities.Statements.Sequence>-Aktivität auf die Designeroberfläche. Es befindet sich unter dem **Ablaufsteuerung** Abschnitt der Toolbox.
 
-8.  Mit der <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` -Aktivität in den Fokus besitzt, klicken Sie auf die **Variablen** verknüpfen, und fügen Sie eine Zeichenfolgenvariable mit dem Namen `inString`. Geben Sie der Variable den Standardwert `"Hello, world"` sowie eine String-Variable, die mit dem Namen `outString` wie im folgenden Diagramm dargestellt.
+8.  Mit der <xref:System.Activities.Statements.Sequence> -Aktivität in den Fokus besitzt, klicken Sie auf die **Variablen** verknüpfen, und fügen Sie eine Zeichenfolgenvariable mit dem Namen `inString`. Geben Sie der Variable den Standardwert `"Hello, world"` sowie eine String-Variable, die mit dem Namen `outString` wie im folgenden Diagramm dargestellt.
 
      ![Eine Variable hinzugefügt](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "InStringVar")
 
-9. Drag & drop eine **Echo** Aktivität in der <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`. Binden Sie im Eigenschaftenfenster die `inMsg` Argument für die `inString` Variable und die `outMsg` Argument für die `outString` -Variable, wie in der folgenden Abbildung dargestellt. Dadurch wird der Wert der `inString`-Variable an den Vorgang übergeben und anschließend der Rückgabewert in die `outString`-Variable eingefügt.
+9. Drag & drop eine **Echo** Aktivität in der <xref:System.Activities.Statements.Sequence>. Binden Sie im Eigenschaftenfenster die `inMsg` Argument für die `inString` Variable und die `outMsg` Argument für die `outString` -Variable, wie in der folgenden Abbildung dargestellt. Dadurch wird der Wert der `inString`-Variable an den Vorgang übergeben und anschließend der Rückgabewert in die `outString`-Variable eingefügt.
 
      ![Binden von Argumenten an Variablen](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

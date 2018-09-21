@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
-ms.translationtype: MT
+ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287740"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473537"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi-Funktion
 Erstellt über DCOM eine Verbindung mit einem WMI-Namespace auf einem angegebenen Computer.  
@@ -48,7 +48,7 @@ HRESULT ConnectServerWmi (
 
 `strNetworkResource` [in] Zeiger auf eine gültige `BSTR` , die den den richtigen Namespace der WMI-Objektpfad enthält. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
-`strUser` [in] Ein Zeiger auf ein gültiges `BSTR` , die den Benutzernamen enthält. Ein `null` Wert gibt an, den aktuellen Sicherheitskontext. Wenn der Benutzer aus einer anderen Domäne als der aktuelle Knoten ist `strUser` kann auch die Domäne und den Namen getrennt durch einen umgekehrten Schrägstrich enthalten. `strUser` können auch werden Benutzer Benutzerprinzipalnamen (UPN) formatieren, Suhc als *userName@domainName*. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
+`strUser` [in] Ein Zeiger auf ein gültiges `BSTR` , die den Benutzernamen enthält. Ein `null` Wert gibt an, den aktuellen Sicherheitskontext. Wenn der Benutzer aus einer anderen Domäne als der aktuelle Knoten ist `strUser` kann auch die Domäne und den Namen getrennt durch einen umgekehrten Schrägstrich enthalten. `strUser` kann auch sein im Format der User-principal-Name (UPN), z. B. `userName@domainName`. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
 `strPassword` [in] Ein Zeiger auf ein gültiges `BSTR` , die Kennwort enthält. Ein `null` gibt den aktuellen Sicherheitskontext. Eine leere Zeichenfolge ("") gibt an, ein gültiges Kennwort für die Länge 0 (null).
 

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490103"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471685"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen
-Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. In der COM+-gehosteten Modus, befindet sich die Datei Application.config im Stammverzeichnis Anwendung (%PROGRAMFILES%\ComPlus Anwendungen\\{Appid} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
+Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. Im COM+-gehosteten Modus befindet sich die Datei Application.config im Stammverzeichnis Anwendung (%PROGRAMFILES%\ComPlus Anwendungen\\{Appid} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
   
 > [!NOTE]
->  Nachrichtensignaturen sollten zum Schutz vor Manipulation von Nachrichten zwischen einem Client und einem Server verwendet werden. Außerdem sollte Verschlüsselung auf Nachrichten- oder Transportebene verwendet werden, um Schutz vor der Offenlegung von Informationen in Nachrichten zu bieten, die zwischen einem Client und einem Server übertragen werden. Wie bei Windows Communication Foundation (WCF)-Dienste, sollten Sie die Einschränkung verwenden, um die Anzahl der gleichzeitigen Anrufe, Verbindungen, Instanzen und ausstehenden Vorgänge zu begrenzen. Dies trägt zur Vermeidung einer übermäßigen Ressourcenbeanspruchung bei. Das Drosselungsverhalten wird durch Dienstkonfigurations-Dateieinstellungen angegeben.  
+>  Nachrichtensignaturen sollten zum Schutz vor Manipulation von Nachrichten zwischen einem Client und einem Server verwendet werden. Außerdem sollte Verschlüsselung auf Nachrichten- oder Transportebene verwendet werden, um Schutz vor der Offenlegung von Informationen in Nachrichten zu bieten, die zwischen einem Client und einem Server übertragen werden. Wie bei Windows Communication Foundation (WCF)-Diensten, sollten Sie die Drosselung verwenden, um die Anzahl der gleichzeitigen Anrufe, Verbindungen, Instanzen und ausstehenden Vorgänge zu beschränken. Dies trägt zur Vermeidung einer übermäßigen Ressourcenbeanspruchung bei. Das Drosselungsverhalten wird durch Dienstkonfigurations-Dateieinstellungen angegeben.  
   
 ## <a name="example"></a>Beispiel  
  Beispiel: Eine Komponente, mit der die folgende Schnittstelle implementiert wird:  
@@ -49,15 +49,15 @@ public interface IFinancesContract : IDisposable
   
  Clientanwendungen, die diesen Dienst verwenden, müssen den Vorgaben dieses Vertrags entsprechen und eine Bindung verwenden, die mit der in der Anwendungskonfiguration angegebenen Bindung kompatibel ist.  
   
- Das folgende Codebeispiel zeigt eine standardmäßige Konfigurationsdatei. Wird ein Windows Communication Foundation (WCF)-Webdienst, dies entspricht dem standard-Service Model Configuration-Schema und kann bearbeitet werden, auf die gleiche Weise wie andere WCF-Services-Konfigurationsdateien.  
+ Das folgende Codebeispiel zeigt eine standardmäßige Konfigurationsdatei. Einen Windows Communication Foundation (WCF)-Webdienst, dies entspricht dem standard-Service Model Configuration Schema und kann bearbeitet werden, auf die gleiche Weise wie andere WCF-Services-Konfigurationsdateien.  
   
  Folgende Änderungen sind üblich:  
   
--   Das Ändern der Endpunktadresse vom standardmäßigen Format Anwendungsname/Komponentenname/Schnittstellenname in eine benutzerfreundlichere Form.  
+- Das Ändern der Endpunktadresse vom standardmäßigen Format Anwendungsname/Komponentenname/Schnittstellenname in eine benutzerfreundlichere Form.  
   
--   Ändern den Namespace des Diensts von der Standardeinstellung "http://tempuri.org/InterfaceID" Formular, um eine aussagekräftigere Form.  
+- Ändern den Namespace des Diensts von der Standardeinstellung `http://tempuri.org/InterfaceID` Formular aus, um eine aussagekräftigere Form.  
   
--   Das Ändern des Endpunkts, um eine andere Transportbindung zu verwenden.  
+- Das Ändern des Endpunkts, um eine andere Transportbindung zu verwenden.  
   
      Bei einem Hosting durch COM+ wird standardmäßig der Transport mittels benannter Pipes verwendet, doch es kann auch ein Datentransportprotokoll wie TCP verwendet werden.  
   

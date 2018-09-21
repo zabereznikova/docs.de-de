@@ -15,11 +15,11 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262554"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46509118"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 <a name="Top"></a> Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen in einem Muster eines regulären Ausdrucks die Groß-/Kleinschreibung beachtet, Leerstellen in einem Muster eines regulären Ausdrucks werden als literale Leerstellenzeichen interpretiert, und Erfassungsgruppen in einem regulären Ausdruck werden implizit sowie explizit benannt. Sie können diese und andere Aspekte des Standardverhaltens regulärer Ausdrücke ändern, indem Sie Optionen für reguläre Ausdrücke angeben. Diese Optionen, die in der folgenden Tabelle aufgeführt sind, können inline als Teil des Musters eines regulären Ausdrucks enthalten sein, oder sie können für einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Mustervergleichsmethode als <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Enumerationswert angegeben werden.  

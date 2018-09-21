@@ -3,11 +3,11 @@ title: Grundlegende Typen (f#)
 description: Entdecken Sie die grundlegenden, einfachen Typen, die in der Sprache f# verwendet werden.
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991011"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480733"
 ---
 # <a name="basic-types"></a>Grundlegende Typen
 

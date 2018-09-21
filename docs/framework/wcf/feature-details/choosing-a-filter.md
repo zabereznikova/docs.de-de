@@ -2,12 +2,12 @@
 title: Auswählen eines Filters
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743142"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478500"
 ---
 # <a name="choosing-a-filter"></a>Auswählen eines Filters
 Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter auszuwählen und so zu konfigurieren, dass Sie genaue Übereinstimmungen mit den Nachrichten erzielen können, die Sie empfangen. Falls die ausgewählten Filter in Bezug auf die Übereinstimmungen zu ungenau oder falsch konfiguriert sind, werden die Nachrichten nicht korrekt weitergeleitet. Wenn die Filter zu restriktiv sind, kann es sein, dass für einige Nachrichten keine gültigen Weiterleitungsrouten verfügbar sind.  
@@ -16,7 +16,7 @@ Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter
  Beim Auswählen der vom Routingdienst verwendeten Filter ist es wichtig, dass Sie verstehen, wie die einzelnen Filter funktionieren. Außerdem sollten Sie wissen, welche Informationen in Verbindung mit den eingehenden Nachrichten verfügbar sind. Falls beispielsweise alle Nachrichten über den gleichen Endpunkt empfangen werden, sind die Adress- und EndpointName-Filter nicht hilfreich, weil alle Nachrichten Übereinstimmungen mit diesen Filtern aufweisen.  
   
 ### <a name="action"></a>Aktion  
- Der Action-Filter überprüft die <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>-Eigenschaft. Falls der Inhalt des Action-Headers in der Nachricht mit dem Filterdatenwert übereinstimmt, der in der Filterkonfiguration angegeben ist, gibt dieser Filter `true` zurück. Das folgende Beispiel definiert eine `FilterElement` , den Action-Filter verwendet, Nachrichten mit einer Action-Header entsprechen, die den Wert "http://namespace/contract/operation/".  
+ Der Action-Filter überprüft die <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>-Eigenschaft. Falls der Inhalt des Action-Headers in der Nachricht mit dem Filterdatenwert übereinstimmt, der in der Filterkonfiguration angegeben ist, gibt dieser Filter `true` zurück. Das folgende Beispiel definiert eine `FilterElement` , verwendet den Aktionsfilter, Nachrichten mit einer Action-Header entsprechen, die den Wert enthält `http://namespace/contract/operation/`.
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  Dieser Filter sollte verwendet werden, wenn die eingehenden Nachrichten an eine eindeutige Adresse adressiert sind.  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- Der EndpointAddressPrefix-Filter ähnelt dem EndpointAddress-Filter. Der EndpointAddressPrefix-Filter überprüft die EndpointAddress, über die die Nachricht empfangen wurde. Der EndpointAddressPrefix-Filter fungiert jedoch als Platzhalter, indem er Übereinstimmungen für Adressen ermittelt, die mit dem in der Filterkonfiguration angegebenen Wert beginnen. Das folgende Beispiel definiert eine `FilterElement` , die alle Nachrichten entsprechend den EndpointAddressPrefix-Filter verwendet "http://\<Hostname > / Vdir *".  
+ Der EndpointAddressPrefix-Filter ähnelt dem EndpointAddress-Filter. Der EndpointAddressPrefix-Filter überprüft die EndpointAddress, über die die Nachricht empfangen wurde. Der EndpointAddressPrefix-Filter fungiert jedoch als Platzhalter, indem er Übereinstimmungen für Adressen ermittelt, die mit dem in der Filterkonfiguration angegebenen Wert beginnen. Das folgende Beispiel definiert eine `FilterElement` , den EndpointAddressPrefix-Filter verwendet, alle Nachrichten entsprechend `http://<hostname>/vdir*`.  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  
