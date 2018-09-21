@@ -8,22 +8,22 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: 46a6c4896dae3951b5aedae79361f2e06d02bc04
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488924"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538072"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a><span data-ttu-id="c5830-102">XML-Namespace-URI `http://www.w3.org/XML/1998/namespace`; kann nur für gebunden werden &#39;Xmlns&#39;</span><span class="sxs-lookup"><span data-stu-id="c5830-102">XML namespace URI `http://www.w3.org/XML/1998/namespace`; can be bound only to &#39;xmlns&#39;</span></span>
-<span data-ttu-id="c5830-103">Der URI `http://www.w3.org/XML/1998/namespace` wird in eine XML-Namespacedeklaration verwendet.</span><span class="sxs-lookup"><span data-stu-id="c5830-103">The URI `http://www.w3.org/XML/1998/namespace` is used in an XML namespace declaration.</span></span> <span data-ttu-id="c5830-104">Dieser URI ist ein reservierter Namespace und kann nicht in eine XML-Namespacedeklaration enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="c5830-104">This URI is a reserved namespace and cannot be included in an XML namespace declaration.</span></span>  
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a><span data-ttu-id="ba940-102">XML-Namespace-URI `http://www.w3.org/XML/1998/namespace`; kann nur für gebunden werden &#39;Xmlns&#39;</span><span class="sxs-lookup"><span data-stu-id="ba940-102">XML namespace URI `http://www.w3.org/XML/1998/namespace`; can be bound only to &#39;xmlns&#39;</span></span>
+<span data-ttu-id="ba940-103">Der URI `http://www.w3.org/XML/1998/namespace` wird in eine XML-Namespacedeklaration verwendet.</span><span class="sxs-lookup"><span data-stu-id="ba940-103">The URI `http://www.w3.org/XML/1998/namespace` is used in an XML namespace declaration.</span></span> <span data-ttu-id="ba940-104">Dieser URI ist ein reservierter Namespace und kann nicht in eine XML-Namespacedeklaration enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="ba940-104">This URI is a reserved namespace and cannot be included in an XML namespace declaration.</span></span>  
   
- <span data-ttu-id="c5830-105">**Fehler-ID:** BC31183</span><span class="sxs-lookup"><span data-stu-id="c5830-105">**Error ID:** BC31183</span></span>  
+ <span data-ttu-id="ba940-105">**Fehler-ID:** BC31183</span><span class="sxs-lookup"><span data-stu-id="ba940-105">**Error ID:** BC31183</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="c5830-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="c5830-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ba940-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="ba940-106">To correct this error</span></span>  
   
--   <span data-ttu-id="c5830-107">Entfernen Sie die XML-Namespacedeklaration oder Ersetzen Sie den URI http://www.w3.org/XML/1998/namespace mit gültiger Namespace-URI.</span><span class="sxs-lookup"><span data-stu-id="c5830-107">Remove the XML namespace declaration or replace the URI http://www.w3.org/XML/1998/namespace with a valid namespace URI.</span></span>  
+-   <span data-ttu-id="ba940-107">Entfernen Sie die XML-Namespacedeklaration oder Ersetzen Sie den URI http://www.w3.org/XML/1998/namespace mit gültiger Namespace-URI.</span><span class="sxs-lookup"><span data-stu-id="ba940-107">Remove the XML namespace declaration or replace the URI http://www.w3.org/XML/1998/namespace with a valid namespace URI.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5830-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5830-108">See Also</span></span>  
- [<span data-ttu-id="c5830-109">Imports-Anweisung (XML-Namespace)</span><span class="sxs-lookup"><span data-stu-id="c5830-109">Imports Statement (XML Namespace)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [<span data-ttu-id="c5830-110">XML-Literale</span><span class="sxs-lookup"><span data-stu-id="c5830-110">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
- [<span data-ttu-id="c5830-111">XML</span><span class="sxs-lookup"><span data-stu-id="c5830-111">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="ba940-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ba940-108">See Also</span></span>  
+ [<span data-ttu-id="ba940-109">Imports-Anweisung (XML-Namespace)</span><span class="sxs-lookup"><span data-stu-id="ba940-109">Imports Statement (XML Namespace)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
+ [<span data-ttu-id="ba940-110">XML-Literale</span><span class="sxs-lookup"><span data-stu-id="ba940-110">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)  
+ [<span data-ttu-id="ba940-111">XML</span><span class="sxs-lookup"><span data-stu-id="ba940-111">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
