@@ -2,17 +2,17 @@
 title: Hilfeseite zum WCF-Web-HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 75babbeda7d5f0dca18c2de2e3187145164ac9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500951"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529975"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Hilfeseite zum WCF-Web-HTTP-Dienst
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Klicken Sie bei-Benutzer an einen WCF-WEB-HTTP-Dienst durchsucht und fügt "/ Help" das Ende der URL, beispielsweise http://localhost:8000/Customers/Help, einer Hilfeseite ein, wie die folgende angezeigt wird.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Klicken Sie bei-Benutzer an einen WCF-WEB-HTTP-Dienst durchsucht und fügt "/ Help" an das Ende der URL, z. B. http://localhost:8000/Customers/Help, einer Hilfeseite ein, wie die folgende angezeigt wird.  
   
- ![WCF REST-Hilfeseite](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![WCF-REST-Hilfeseite](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
  Benutzer können dann auf alle Methoden klicken, die auf der Hilfeseite aufgeführt sind. Außerdem wird für den jeweiligen Vorgang eine Seite angezeigt, die weitere Informationen zur Methode enthält, beispielsweise Nachrichtenformate und Beispielantworten. Das folgende Bild ist ein Beispiel für eine Hilfeseite einer Methode.  
   
@@ -45,12 +45,12 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Um die WCF-Web HTTP-Hilfeseite im Code zu aktivieren, fügen Sie einen Dienstendpunkt hinzu, und fügen eine <xref:System.ServiceModel.Description.WebHttpBehavior> die Endpunkt-Einstellung <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` auf `true`. Dies wird im folgenden Code veranschaulicht.  
+ Um die WCF-Web-HTTP-Hilfeseite im Code zu aktivieren, fügen Sie einen Dienstendpunkt hinzu, fügen der Endpunkteinstellung <xref:System.ServiceModel.Description.WebHttpBehavior> hinzu und legen  <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> auf `true` fest. Dies wird im folgenden Code veranschaulicht.  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
-   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");               
+   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
    host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { EnableHelp = true });  
    // ...  
 }  
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Weitere Informationen zur Serialisierung des datenvertragsschema finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Weitere Informationen über das Schema für die Datenvertragsserialisierung finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

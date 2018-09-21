@@ -2,12 +2,12 @@
 title: Auflistungsaktivitäten in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516726"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538387"
 ---
 # <a name="collection-activities-in-wf"></a>Auflistungsaktivitäten in WF
 Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection` und `RemoveFromCollection` haben eine <xref:System.Activities.OutArgument%601> des Typs <xref:System.Boolean>, das das Ergebnis angibt.  
@@ -25,7 +25,7 @@ Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem 
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Entfernt ein Element aus einer angegebenen Auflistung und gibt `true` zurück, wenn das Element erfolgreich entfernt wurde.|  
   
 ## <a name="using-collection-activities"></a>Verwenden von Auflistungsaktivitäten  
- Im folgenden Codebeispiel wird die Arbeit mit einer Auflistung erläutert, die als Workflowvariable deklariert wurde. Die verwendete Auflistung ist eine <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` von <xref:System.String> Objekte, die mit dem Namen `fruitList`.  
+ Im folgenden Codebeispiel wird die Arbeit mit einer Auflistung erläutert, die als Workflowvariable deklariert wurde. Die verwendete Auflistung ist ein <xref:System.Collections.Generic.List%601>-Objekt von <xref:System.String>-Objekten mit dem Namen `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -227,7 +227,7 @@ Activity wf = new Sequence
   
  Die oben erwähnten Codebeispiele können auch mit <xref:Microsoft.CSharp.Activities.CSharpValue%601> anstelle von <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> erstellt werden.  
   
-```  
+```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
 {  
     Default = new CSharpValue<ICollection<string>>("new List<String> From {\"Apple\", \"Orange\"};"),  

@@ -3,11 +3,11 @@ title: Aufruferinformationen (f#)
 description: Beschreibt die Attribute "Callerinfo"-Argument zu verwenden, um von einer Methode memberaufruferinformationen zu erhalten.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991453"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537279"
 ---
 # <a name="caller-information"></a>Aufruferinformationen
 

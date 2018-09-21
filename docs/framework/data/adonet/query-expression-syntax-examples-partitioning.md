@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
 ms.openlocfilehash: 456e4289af2c71ee2ef96f48939dc9f7b70c6bc0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990780"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46518663"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>Beispiele für die Abfrageausdruckssyntax: Partitionierung (LINQ to DataSet)
 In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der Methoden <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Take%2A> und der Abfrageausdruckssyntax ein <xref:System.Data.DataSet> abfragen können.  

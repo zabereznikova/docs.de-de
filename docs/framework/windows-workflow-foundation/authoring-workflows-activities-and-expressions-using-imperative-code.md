@@ -3,11 +3,11 @@ title: Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Cod
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46489145"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46519525"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code
 Eine Workflowdefinition ist eine Struktur konfigurierter Aktivitätsobjekte. Diese Struktur mit Aktivitäten kann auf viele verschiedene Arten definiert werden, z. B. durch manuelle Bearbeitung des XAML-Codes oder mit dem Workflow-Designer, um XAML-Daten zu erzeugen. Die Verwendung von XAML ist jedoch keine Voraussetzung. Sie können Workflowdefinitionen auch programmgesteuert erstellen. Dieses Thema bietet eine Übersicht über das Erstellen von Workflowdefinitionen, Aktivitäten und Ausdrücken mithilfe von Code. Beispiele zum Arbeiten mit XAML-Workflows mithilfe von Code, finden Sie unter [Serialisieren von Workflows und Aktivitäten in und aus XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  

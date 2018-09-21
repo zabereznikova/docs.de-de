@@ -3,11 +3,11 @@ title: Nachverfolgung von Variablen und Argumenten
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46492560"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538046"
 ---
 # <a name="variable-and-argument-tracking"></a>Nachverfolgung von Variablen und Argumenten
 Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Daten oft als nützlich erweisen. Sie stellt zusätzlichen Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] können Sie alle sichtbaren Variablen oder Argumente innerhalb des Bereichs einer Aktivität in einem Workflow mithilfe der Nachverfolgung extrahieren. Überwachungsprofile vereinfachen das Extrahieren von Daten.  

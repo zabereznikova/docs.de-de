@@ -3,11 +3,11 @@ title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
 ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: HT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46490451"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508001"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Gibt einen Dienstvertrag für die COM+-Integration an.  
