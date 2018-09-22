@@ -3,11 +3,11 @@ title: Serialisierungstools
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525619"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698429"
 ---
 # <a name="serialization-tools"></a>Serialisierungstools
 In diesem Abschnitt werden die Serialisierungstools detailliert beschrieben. Sie können alle Tools von der Befehlszeile aus ausführen.  

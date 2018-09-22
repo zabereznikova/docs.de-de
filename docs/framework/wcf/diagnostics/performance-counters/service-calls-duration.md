@@ -3,11 +3,11 @@ title: 'Dienst: Aufrufe Dauer'
 ms.date: 03/30/2017
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
 ms.openlocfilehash: 660a36844c2b48324447616aa0f2530127cef94f
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46516508"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698054"
 ---
 # <a name="service-calls-duration"></a>Dienst: Aufrufe Dauer
 Indikatorname: Aufrufe Dauer  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46325379"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697554"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete-Funktion
 Löscht einen angegebenen Qualifizierer anhand des Namens.  

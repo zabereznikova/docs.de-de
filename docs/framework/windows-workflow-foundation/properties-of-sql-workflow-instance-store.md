@@ -3,11 +3,11 @@ title: Eigenschaften des SQL-Workflowinstanzspeichers
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538702"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46578854"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Eigenschaften des SQL-Workflowinstanzspeichers
 Die Themen in diesem Abschnitt enthalten Informationen zu Eigenschaften des SQL-Workflowinstanzspeichers.  
