@@ -5,11 +5,11 @@ helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
 ms.openlocfilehash: e8ac320c1edde05074d42652a708320d10690550
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45970382"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529391"
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Gibt eine sichere, zuverlässige und optimierte Bindung an, die computerübergreifende Kommunikation unterstützt. Diese Bindung generiert standardmäßig einen Laufzeitkommunikationsstapel mit Windows-Sicherheit für die Nachrichtensicherheit und die Authentifizierung, TCP für die Nachrichtenübermittlung sowie binäre Nachrichtencodierung.  
