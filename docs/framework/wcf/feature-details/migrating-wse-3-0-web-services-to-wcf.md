@@ -3,11 +3,11 @@ title: Migrieren von WSE 3.0-Webdiensten zu WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: 21e36be178bb0dd0c52213d8c4c1387a564a0e5a
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539680"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580303"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrieren von WSE 3.0-Webdiensten zu WCF
 Das Migrieren von WSE 3.0-Webdiensten, Windows Communication Foundation (WCF) Vorteile verbesserte Leistung und die Unterstützung zusätzlicher Transporte, zusätzlicher Sicherheitsszenarien und WS-* Spezifikationen. Ein Webdienst, der von WSE 3.0 zu WCF migriert wird, kann bis zu einer leistungsverbesserung 200 % bis 400 % auftreten. Weitere Informationen über die von WCF unterstützten Transporte finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Eine Liste mit den Szenarien, die von WCF unterstützt werden, finden Sie unter [häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Eine Liste der Spezifikationen, die von WCF unterstützt werden, finden Sie unter [Handbuch für die Interoperabilität von Web Services-Protokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
