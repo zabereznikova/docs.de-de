@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie .NET Core und .NET Core-CLI aus dem Quellcode
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618518"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577502"
 ---
 # <a name="build-net-core-from-source"></a>Erstellen von .NET Core aus einer Quelle
 
@@ -93,7 +93,7 @@ Um die .NET Core-CLI zu erstellen, müssen Sie Folgendes auf dem Computer instal
   * Xcode
   * OpenSSL
 
-Führen Sie zum Erstellen `build.cmd` unter Windows oder `build.sh` unter Linux und macOS aus dem Stamm aus. Wenn Sie keine Tests ausführen möchten, führen Sie `build.cmd /t:Compile` oder `./build.sh /t:Compile` aus. Um die CLI unter macOS Sierra zu erstellen, müssen Sie die Umgebungsvariable DOTNET_RUNTIME_ID festlegen, indem Sie `export DOTNET_RUNTIME_ID=osx.10.11-x64` ausführen.
+Führen Sie zum Erstellen `build.cmd` unter Windows oder `build.sh` unter Linux und macOS aus dem Stamm aus. Wenn Sie keine Tests ausführen möchten, führen Sie `build.cmd -t:Compile` oder `./build.sh -t:Compile` aus. Um die CLI unter macOS Sierra zu erstellen, müssen Sie die Umgebungsvariable DOTNET_RUNTIME_ID festlegen, indem Sie `export DOTNET_RUNTIME_ID=osx.10.11-x64` ausführen.
 
 ### <a name="using-your-build"></a>Verwenden Ihres Builds
 
