@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
 ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009082"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706355"
 ---
 # <a name="performance-counters-in-adonet"></a>Leistungsindikatoren in ADO.NET
 Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren. Dazu gehört auch die Unterstützung für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient>. Die in früheren ADO.NET-Versionen verfügbaren <xref:System.Data.SqlClient>-Leistungsindikatoren wurden durch neue Leistungsindikatoren ersetzt, die in diesem Thema beschrieben werden. Mit den ADO.NET-Leistungsindikatoren können Sie den Status Ihrer Anwendung und die Verbindungsressourcen überwachen, die die Anwendung verwendet. Für die Überwachung der Leistungsindikatoren kann der Windows-Leistungsmonitor verwendet werden, und die <xref:System.Diagnostics.PerformanceCounter>-Klasse im <xref:System.Diagnostics>-Namespace ermöglicht den programmgesteuerten Zugriff auf diese Indikatoren.  

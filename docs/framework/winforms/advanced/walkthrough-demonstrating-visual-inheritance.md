@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746204"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703677"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
