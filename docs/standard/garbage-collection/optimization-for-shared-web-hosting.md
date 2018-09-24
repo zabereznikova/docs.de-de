@@ -10,11 +10,11 @@ ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45595359"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586371"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Optimierung für freigegebenes Webhosting
 Wenn Sie Administrator eines Servers sind, der zum Hosten von mehreren kleinen Websites freigegeben ist, können Sie die Leistung optimieren und die Websitekapazität erhöhen, indem Sie die folgende `gcTrimCommitOnLowMemory`-Einstellung für den `runtime`-Knoten in der Datei „aspnet.config“ im .NET-Verzeichnis festlegen:  

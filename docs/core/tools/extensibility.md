@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die Tools für die Befehlszeilenschnittstelle
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592061"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46326581"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
 
@@ -133,7 +133,7 @@ Im folgenden Beispiel können Sie die Projektdatei des Ziels mithilfe der `cspro
 
 Die Nutzung benutzerdefinierter Ziele erfolgt durch Bereitstellung einer `<PackageReference>`, die auf ein Paket und dessen Version innerhalb des Projekts verweist, das erweitert wird. Im Gegensatz zu den Tools wird das benutzerdefinierte Zielpaket in die Hülle der Abhängigkeiten des nutzenden Projekts eingeschlossen.
 
-Die Verwendung des benutzerdefinierten Ziels hängt ausschließlich von seiner Konfiguration ab. Da dies ein MSBuild-Ziel ist, kann es von einem angegebenen Ziel abhängen, nach einem anderen Ziel ausgeführt werden und mit dem Befehl `dotnet msbuild /t:<target-name>` auch manuell aufgerufen werden.
+Die Verwendung des benutzerdefinierten Ziels hängt ausschließlich von seiner Konfiguration ab. Da dies ein MSBuild-Ziel ist, kann es von einem angegebenen Ziel abhängen, nach einem anderen Ziel ausgeführt werden und mit dem Befehl `dotnet msbuild -t:<target-name>` auch manuell aufgerufen werden.
 
 Wenn Sie jedoch Ihren Benutzern eine bessere Erfahrung bieten möchten, können Sie projektbezogene Tools und benutzerdefinierte Ziele kombinieren. In diesem Szenario akzeptiert das projektbezogene Tool lediglich die benötigten Parameter, die in den erforderlichen Aufruf von [`dotnet msbuild`](dotnet-msbuild.md) übersetzt werden, über den das Ziel ausgeführt wird. Sie sehen ein Beispiel dieser Art von Synergie im Repository mit den [MVP Summit 2016 Hackathon-Beispielen](https://github.com/dotnet/MVPSummitHackathon2016) im Projekt [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 

@@ -6,11 +6,11 @@ ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4231516848cc50212a3a6a03d101907b2f6b3920
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692949"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585170"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Auswirkungen von Namespaces auf die Entitätsverweiserweiterung für neue Knoten mit Elementen und Attributen
 Da in einer Entitätsdeklaration beinahe alles enthalten sein kann, besteht die Möglichkeit, dass ein Element wie `<!ENTITY aname "<elem>test</elem>">` enthalten ist.  

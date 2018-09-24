@@ -11,11 +11,11 @@ ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "44710945"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705720"
 ---
 # <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen
 Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) können die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Dies ist nützlich für Hosts wie ASP.NET, die eine Vielzahl von Anwendungsdomänen in einem Prozess mit langer Ausführungsdauer verwenden. Der Host kann die Anwendungsdomäne einer Anwendung entladen, die sich negativ auf die Leistung des gesamten Prozesses auswirkt, jedoch nur, wenn er die problematische Anwendung ermitteln kann. Die ARM stellt Informationen bereit, die als Unterstützung bei solchen Entscheidungen herangezogen werden können.  

@@ -11,11 +11,11 @@ ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc36c926ba81de8a59ff3af69719bec6b7370efc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45619150"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586843"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Grundlagen zur Beschleunigung in PLINQ
 Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to Objects-Abfragen durch paralleles Ausführen der Abfragedelegaten auf Computern mit mehreren Kernen. PLINQ zeigt die beste Leistung, wenn die Verarbeitung der einzelnen Elemente in einer Quellsammlung unabhängig erfolgt, ohne gemeinsamen Zustand der einzelnen Delegaten. Solche Vorgänge sind häufig in LINQ to Objects und PLINQ und werden oft als „*optimal parallel*“ bezeichnet, da sie gut auf mehrere Threads verteilt werden können. Nicht alle Abfragen bestehen jedoch vollständig aus optimal parallel verarbeitbaren Vorgängen; in den meisten Fällen umfasst eine Abfrage einige Operatoren, die entweder nicht parallelisiert werden können oder die parallele Ausführung verlangsamen. Und auch bei optimal parallel verarbeitbaren Abfragen muss PLINQ noch die Datenquelle partitionieren, die Arbeit auf die Threads aufteilen und in der Regel die Ergebnisse zusammenführen, wenn die Abfrage abgeschlossen ist. Alle diese Vorgänge tragen zum Rechenaufwand für die Parallelisierung bei; dieser Aufwand zum Hinzufügen der Parallelisierung wird als *Mehraufwand* bezeichnet. Um optimale Leistung in einer PLINQ-Abfrage zu erzielen, besteht das Ziel darin, optimal parallel verarbeitbare Teile zu maximieren und Teile, die Mehraufwand erfordern, zu minimieren. Dieser Artikel enthält Informationen, mit deren Hilfe Sie PLINQ-Abfragen schreiben können, die so effizient wie möglich sind und nichtsdestoweniger richtige Ergebnisse liefern.  

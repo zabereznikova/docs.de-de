@@ -5,11 +5,11 @@ helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
 ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45679530"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46538913"
 ---
 # <a name="selection-statements-c-reference"></a>Auswahlanweisungen (C#-Referenz)
 Eine Auswahlanweisung bewirkt, dass die Programmsteuerung zu einem bestimmten Fluss übertragen wird, basierend darauf, ob eine bestimmte Bedingung `true` ist oder nicht.  

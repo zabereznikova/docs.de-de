@@ -15,11 +15,11 @@ ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e343d48b5e50fdaef3a3667f066894dea03eeb80
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45614841"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45991336"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 Bei der automatischen Speicherverwaltung handelt es sich um einen Dienst, der von der Common Language Runtime während der [verwalteten Ausführung](../../docs/standard/managed-execution-process.md) zur Verfügung gestellt wird. Der Garbage Collector der Common Language Runtime verwaltet die Belegung und Freigabe von Arbeitsspeicher für eine Anwendung. Das bedeutet, dass beim Entwickeln verwalteter Anwendungen kein Code für Aufgaben der Speicherverwaltung geschrieben werden muss. Mithilfe der automatischen Speicherverwaltung können häufig auftretende Probleme beseitigt werden, z. B. wenn ein Objekt versehentlich nicht freigegeben wurde und dadurch Speicherverluste entstehen oder wenn auf den Speicher für ein Objekt zugegriffen wird, das bereits freigegeben wurde. In diesem Abschnitt wird beschrieben, wie Sie den Garbage Collector zum Belegen und Freigeben von Arbeitsspeicher verwenden können.  

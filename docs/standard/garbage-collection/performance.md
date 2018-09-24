@@ -9,11 +9,11 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45529849"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584291"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 <a name="top"></a> In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen. Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können. Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.  

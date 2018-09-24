@@ -21,11 +21,11 @@ ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 49708175f8501c735a77b0f7f965a106b6e086f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45652991"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705759"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  

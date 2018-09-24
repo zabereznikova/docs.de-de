@@ -11,11 +11,11 @@ ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45687672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003762"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Angefügte und getrennte untergeordnete Aufgaben
 Eine *untergeordnete Aufgabe* (oder *geschachtelte Aufgabe*) ist eine <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Instanz, die im Benutzerdelegaten einer anderen Aufgabe erstellt wird, die als *übergeordnete Aufgabe* bezeichnet wird. Eine untergeordnete Aufgabe kann entweder getrennt oder angefügt werden. Eine *getrennte untergeordnete Aufgabe* ist eine Aufgabe, die unabhängig von der übergeordneten ausgeführt wird. Eine *angefügte ungeordnete Aufgabe* ist eine geschachtelte Aufgabe, die mit der Option <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> erstellt wird, deren übergeordnete Aufgabe nicht explizit oder standardmäßig verhindert, dass die Aufgabe angefügt wird. Eine Aufgabe kann beliebig viele angefügte oder getrennte untergeordnete Aufgaben erstellen. Die Anzahl wird lediglich durch die Systemressourcen beschränkt.  

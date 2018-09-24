@@ -6,11 +6,11 @@ ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5361ef036d91435b674a1637ac8c2a9a757bf8ab
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609345"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46492547"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>Bearbeiten von XML-Daten mit XPathNavigator
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden zum Einfügen, Ändern oder Entfernen von Knoten und Werten aus einem XML-Dokument bereit, das in einem <xref:System.Xml.XmlDocument>-Objekt enthalten ist. Um eine der Methoden zum Einfügen, Ändern oder Entfernen von Knoten und Werten verwenden zu können, muss das <xref:System.Xml.XPath.XPathNavigator>-Objekt editierbar sein, d. h., seine <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>-Eigenschaft muss auf true festgelegt sein.  

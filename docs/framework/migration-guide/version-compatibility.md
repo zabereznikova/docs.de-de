@@ -10,11 +10,11 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45646336"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46528852"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Kompatibilität von .NET Framework-Versionen
 Abwärtskompatibilität bedeutet, dass eine für eine bestimmte Version einer Plattform entwickelte App in höheren Versionen dieser Plattform ausgeführt werden kann. Bei .NET Framework wird versucht, die Abwärtskompatibilität zu maximieren: Für eine Version von .NET Framework geschriebener Quellcode wird auf höheren Versionen von .NET Framework kompiliert, und Binärdateien, die auf einer Version von .NET Framework ausgeführt werden, verhalten sich auch auf höheren Versionen von .NET Framework gleich.  

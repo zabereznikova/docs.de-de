@@ -16,11 +16,11 @@ ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a08e97b02e2f60422132e97e2f3f7d4d2d5b8ec4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45594736"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46583784"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Gewusst wie: Extrahieren eines Protokolls und einer Portnummer aus einer URL
 Das folgende Beispiel extrahiert ein Protokoll und eine Portnummer aus einer URL.  

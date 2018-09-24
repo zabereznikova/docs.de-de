@@ -6,11 +6,11 @@ ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45625203"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581933"
 ---
 # <a name="recoverable-xslt-errors"></a>Wiederherstellbare XSLT-Fehler
 Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht. Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet. Laut W3C-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen gibt die Empfehlung zu XSLT 1.0 auch Maßnahmen für den Fall an, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.  

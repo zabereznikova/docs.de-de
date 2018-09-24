@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
 ms.openlocfilehash: c535620f2dee1ec9cd1b6ee994fbf860629601ba
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45641351"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696684"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (C#)
 In diesem Beispiel wird gezeigt, wie Sie die <xref:System.Text.RegularExpressions.Regex>-Klasse verwenden, um einen regulären Ausdruck für komplexere Übereinstimmungen in Textzeichenfolgen erstellen. Die LINQ-Abfrage erleichtert das Filtern nach genau den Dateien, die Sie mithilfe des regulären Ausdrucks suchen möchten, sowie das Formen der Ergebnisse.  

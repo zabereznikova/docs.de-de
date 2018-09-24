@@ -5,11 +5,11 @@ helpviewer_keywords:
 - access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
 ms.openlocfilehash: 7700c49a609a90faf9b3b8b90719a223952d7e9e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666524"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703725"
 ---
 # <a name="access-keywords-c-reference"></a>Access-Schlüsselwörter (C#-Referenz)
 In diesem Abschnitt werden die folgenden Zugriffsschlüsselwörter beschrieben:  

@@ -8,11 +8,11 @@ ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45676706"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577034"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Verwendung einer threadsicheren Auflistung
 Mit [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] werden fünf neue Sammlungstypen eingeführt, die speziell für die Unterstützung von multithreaded Hinzufügen- und Entfernungsvorgängen ausgelegt sind. Zur Gewährleistung von Threadsicherheit verwenden diese neuen Typen unterschiedliche Arten effizienter sperrender und sperrfreier Synchronisierungsmechanismen. Ein Vorgang wird durch Synchronisierung aufwändiger. Das Ausmaß des Aufwands hängt von der Art der verwendeten Synchronisierung, der Art der ausgeführten Vorgänge und von anderen Faktoren ab, z.B. der Anzahl der Threads, die versuchen, gleichzeitig auf die Sammlung zuzugreifen.  

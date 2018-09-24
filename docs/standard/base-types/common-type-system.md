@@ -18,11 +18,11 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615689"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46326659"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  

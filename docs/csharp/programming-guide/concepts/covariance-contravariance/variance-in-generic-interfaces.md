@@ -3,11 +3,11 @@ title: Varianz in generischen Schnittstellen (C#)
 ms.date: 07/20/2015
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
 ms.openlocfilehash: 11d0c8665412bb513cb68d58203a454b7c97e052
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677109"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46580290"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianz in generischen Schnittstellen (C#)
 In .NET Framework 4 wurde die Varianzunterstützung für mehrere vorhandene generische Schnittstellen eingeführt. Die Varianzunterstützung lässt eine implizite Konvertierung von Klassen zu, die diese Schnittstellen implementieren. Die folgenden Schnittstellen sind jetzt variant:  

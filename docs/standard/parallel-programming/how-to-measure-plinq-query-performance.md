@@ -11,11 +11,11 @@ ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dd9e3a0ead62450e87225212f4fc6ecec6ec9489
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45618765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45749108"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>Gewusst wie: Messen der Leistung von PLINQ-Abfragen
 Dieses Beispiel zeigt, wie Sie mithilfe der <xref:System.Diagnostics.Stopwatch>-Klasse messen können, wie viel Zeit für die Ausführung einer PLINQ-Abfrage benötigt wird.  

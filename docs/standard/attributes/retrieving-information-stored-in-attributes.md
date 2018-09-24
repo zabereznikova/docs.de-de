@@ -14,11 +14,11 @@ ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45668378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002995"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  

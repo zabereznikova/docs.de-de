@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45625190"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580407"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution-Protokoll (PNRP)
 In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, um Namen oder andere Arten von Bezeichner in die Netzwerkadressen des jeweils anderen Peers (Adressen, Protokolle und Ports) aufzulösen. In der Vergangenheit ist die Peernamensauflösung durch die grundsätzlich flüchtige Konnektivität sowie andere Mängel im Domänennamenserver (DNS) erschwert worden.  

@@ -11,11 +11,11 @@ ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddf311ad2b79e615f5c3097686035e7bbfbc49c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45668612"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46698093"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Gewusst wie: Behandeln von Ausnahmen in parallelen Schleifen
 Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Überladungen verfügen über keinen speziellen Mechanismus zur Behandlung von Ausnahmen, die möglicherweise ausgelöst werden. In dieser Hinsicht ähneln sie regulären `for`- und `foreach`-Schleifen (`For` und `For Each` in Visual Basic). Eine nicht behandelte Ausnahme bewirkt, dass die Schleife sofort beendet wird.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192196"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697697"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -52,9 +52,6 @@ using System.Linq;
 ```  
   
  (Möglicherweise müssen Sie auch einen Verweis auf System.Core.dll hinzufügen.) Wie Sie sehen, werden die Standardabfrageoperatoren jetzt in IntelliSense als zusätzliche Methoden, die für die meisten <xref:System.Collections.Generic.IEnumerable%601>-Typen verfügbar sind, angezeigt.  
-  
-> [!NOTE]
->  Obwohl Standardabfrageoperatoren nicht in IntelliSense für <xref:System.String> angezeigt werden, sind sie dennoch verfügbar.  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>Binden von Erweiterungsmethoden während der Kompilierung  
  Sie können Erweiterungsmethoden verwenden, um eine Klasse oder eine Schnittstelle zu erweitern, jedoch nicht, um sie zu überschreiben. Eine Erweiterungsmethode mit dem gleichen Namen und der gleichen Signatur wie eine Schnittstellen- oder Klassenmethode wird nie aufgerufen. Bei der Kompilierung verfügen Erweiterungsmethoden immer über niedrigere Priorität als im Typ selbst definierte Instanzmethoden. Das heißt, wenn ein Typ eine Methode mit dem Namen `Process(int i)` hat und Sie über eine Erweiterungsmethode mit der gleichen Signatur verfügen, stellt der Compiler immer eine Bindung mit der Instanzmethode her. Wenn der Compiler einen Methodenaufruf erkennt, sucht er zuerst nach einer Entsprechung in den Instanzmethoden des Typs. Wenn keine Entsprechung gefunden wird, sucht er nach Erweiterungsmethoden, die für den Typ definiert wurden, und stellt eine Bindung mit der ersten gefundenen Erweiterungsmethode her. Im folgenden Beispiel wird veranschaulicht, wie der Compiler bestimmt, mit welcher Erweiterungsmethode oder Instanzmethode die Bindung erfolgen soll.  

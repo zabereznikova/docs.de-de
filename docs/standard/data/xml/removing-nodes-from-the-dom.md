@@ -6,11 +6,11 @@ ms.assetid: 0a98e0ca-0555-45c1-ab69-0d8d20ca1abd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: be592466627e6ee7b23c608e0defe786548907ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676070"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576560"
 ---
 # <a name="removing-nodes-from-the-dom"></a>Entfernen von Knoten aus dem DOM
 Verwenden Sie zum Entfernen eines bestimmten Knotens aus dem XML-DOM (Document Object Model) die <xref:System.Xml.XmlNode.RemoveChild%2A>-Methode. Beim Entfernen eines Knotens entfernt die Methode auch die zu diesem Knoten gehörende Teilstruktur, wenn es sich nicht um einen Endknoten handelt.  

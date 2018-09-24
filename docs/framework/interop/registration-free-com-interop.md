@@ -13,11 +13,11 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45595346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002228"
 ---
 # <a name="registration-free-com-interop"></a>COM-Interop ohne Registrierung
 COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden. Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten. Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.  

@@ -10,11 +10,11 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45616126"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580082"
 ---
 # <a name="traversing-xml-schemas"></a>Durchlaufen von XML-Schemata
 Das Durchlaufen eines XML-Schemas mithilfe einer SOM-API (Schema Object Model) ermöglicht den Zugriff auf die im SOM gespeicherten Elemente, Attribute und Typen. Der erste Schritt beim Bearbeiten eines XML-Schemas mithilfe der SOM-API ist das Durchlaufen des im SOM geladenen XML-Schemas.  

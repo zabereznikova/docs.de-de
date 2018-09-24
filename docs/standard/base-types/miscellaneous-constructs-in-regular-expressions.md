@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45638674"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46580706"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Verschiedene Konstrukte in regulären Ausdrücken
 Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer ermöglicht Ihnen das Aktivieren oder Deaktivieren bestimmter Vergleichsoptionen mitten in einem Muster für reguläre Ausdrücke. Mithilfe der beiden anderen können Sie Kommentare in einen regulären Ausdruck aufnehmen.  

@@ -3,12 +3,12 @@ title: Architektur der .NET Core-Befehlszeilentools
 description: Informationen zu .NET Core-Toolschichten und Änderungen der neuesten Versionen.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245128"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46696329"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Allgemeine Übersicht über Änderungen in .NET Core-Tools
 
@@ -63,7 +63,7 @@ Aus Sicht der Ausführung verwenden die CLI-Befehle ihre Parameter und erstellen
     
 Mit diesem Befehl wird eine Anwendung im Ordner `pub` mithilfe der Konfiguration „Release“ veröffentlicht. Intern wird dieser Befehl in den folgenden MSBuild-Aufruf übersetzt: 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 Die wichtige Ausnahme dieser Regel sind die Befehle `new` und `run`, da sie nicht als MSBuild-Ziele implementiert wurden.
 

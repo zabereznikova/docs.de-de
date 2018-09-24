@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45676823"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577021"
 ---
 # <a name="composing-streams"></a>Erstellen von Streams
 Ein Sicherungsspeicher ist ein Speichermedium, wie etwa ein Datenträger oder Arbeitsspeicher. Jeder einzelne Sicherungsspeicher implementiert seinen eigenen Datenstrom als Implementierung der <xref:System.IO.Stream>-Klasse. Jeder Datenstromtyp liest und schreibt Bytes in einen bzw. aus einem angegebenen Sicherungsspeicher. Datenströme, die eine Verbindung mit Sicherungsspeichern herstellen, werden als Basisdatenströme bezeichnet. Basisdatenströme umfassen Konstruktoren mit den erforderlichen Parametern, um eine Verbindung zwischen dem Datenstrom und dem Sicherungsspeicher herzustellen. Beispielsweise weist <xref:System.IO.FileStream> Konstruktoren auf, die einen Pfadparameter angeben, der u.a. wiederum die Freigabe der Datei für Prozesse angibt.  

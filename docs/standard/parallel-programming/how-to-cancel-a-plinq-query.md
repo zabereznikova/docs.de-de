@@ -12,11 +12,11 @@ ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45653416"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45973091"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Gewusst wie: Abbrechen einer PLINQ-Abfrage
 In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-Abfrage veranschaulicht. Das erste Beispiel zeigt, wie eine Abfrage abgebrochen wird, die größtenteils aus Datendurchlauf besteht. Im zweiten Beispiel wird gezeigt, wie eine Abfrage abgebrochen wird, die eine rechenintensive Benutzerfunktion enthält.  

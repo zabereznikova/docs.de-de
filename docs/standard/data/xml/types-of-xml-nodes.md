@@ -6,11 +6,11 @@ ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45597614"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583706"
 ---
 # <a name="types-of-xml-nodes"></a>XML-Knotentypen
 Wenn ein XML-Dokument als Knotenstruktur in den Speicher eingelesen wird, werden die Knotentypen für die Knoten beim Erstellen festgelegt. Das XML-DOM (Document Object Model, Dokumentobjektmodell) umfasst mehrere Knotentypen, die vom W3C (World Wide Web Consortium) festgelegt wurden und in Abschnitt 1.1.1, "The DOM Structure Model", aufgeführt sind. In der folgenden Tabelle sind die Knotentypen sowie das jedem Knotentyp zugewiesene Objekt und eine kurze Beschreibung enthalten.  

@@ -6,11 +6,11 @@ ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45613890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743981"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath-Namespacenavigation
 Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces und die darin enthaltenen Elemente korrekt adressieren. Mithilfe von Namespaces werden Zweideutigkeiten vermieden, die auftreten können, wenn Namen in mehr als einem Kontext verwendet werden. Der Name `ID` kann beispielsweise auf mehrere ID-Bezeichner verweisen, die unterschiedlichen Elementen eines XML-Dokuments zugewiesen sind. In der Namespace-Syntax werden URIs, Namen und Präfixe zur Unterscheidung der Elemente in einem XML-Dokument definiert.  

@@ -4,11 +4,11 @@ description: Grundlegendes zu Sprachfeatures, die das Kopieren von Strukturen au
 ms.date: 11/10/2017
 ms.custom: mvc
 ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45592152"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45964696"
 ---
 # <a name="reference-semantics-with-value-types"></a>Verweissemantik mit Werttypen
 

@@ -13,11 +13,11 @@ ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45619015"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562371"
 ---
 # <a name="managed-threading-best-practices"></a>Empfohlene Vorgehensweise für das verwaltete Threading
 Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforderlich. Für die meisten Aufgaben können Sie die Komplexität reduzieren, indem Sie Ausführungsanforderungen mithilfe von Threadpoolthreads in Warteschlangen einfügen. Dieses Thema behandelt problematische Situationen wie die Koordinierung der Verarbeitung von mehreren Threads oder die Behandlung von blockierenden Threads.  
