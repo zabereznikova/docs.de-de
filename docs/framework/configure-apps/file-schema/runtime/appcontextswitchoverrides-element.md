@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; Element'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747524"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027365"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
@@ -125,7 +125,21 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
   
  Bibliotheksentwickler können auch benutzerdefinierte Schalter verwenden, um Aufrufern zum Deaktivieren der geänderten Funktionalität in höheren Versionen ihrer Bibliotheken eingeführt erlauben definieren. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.AppContext>-Klasse.  
   
-## <a name="example"></a>Beispiel  
+## <a name="switches-in-aspnet-applications"></a>Schalter in ASP.NET-Anwendungen
+
+Sie können konfigurieren, dass eine ASP.NET-Anwendung zum Verwenden von kompatibilitätseinstellungen durch Hinzufügen einer [ \<hinzufügen >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) Element der [ \<"appSettings" >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) -Abschnitt der Datei "Web.config". 
+
+Im folgenden Beispiel wird die `<add>` Element zum Hinzufügen von zwei Einstellungen, die `<appSettings>` Abschnitt der Datei "Web.config":
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>Beispiel
+
  Im folgenden Beispiel wird die `AppContextSwitchOverrides` -Elements definieren eine einzelne anwendungskompatibilitätswechsel `Switch.System.Globalization.NoAsyncCurrentCulture`, Kultur, die verhindert, dass über Threads in asynchrone Methodenaufrufe fließen.  
   
 ```xml  
