@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
 ms.openlocfilehash: 0ac711740a3d20d83787882b5ff38954bed2ac14
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45596353"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002748"
 ---
-# <a name="endregion-c-reference"></a><span data-ttu-id="ec419-102">#endregion (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ec419-102">#endregion (C# Reference)</span></span>
-<span data-ttu-id="ec419-103">`#endregion` markiert das Ende eines [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)-Blocks.</span><span class="sxs-lookup"><span data-stu-id="ec419-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="ec419-104">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="ec419-104">For example:</span></span>  
+# <a name="endregion-c-reference"></a><span data-ttu-id="d8a39-102">#endregion (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d8a39-102">#endregion (C# Reference)</span></span>
+<span data-ttu-id="d8a39-103">`#endregion` markiert das Ende eines [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md)-Blocks.</span><span class="sxs-lookup"><span data-stu-id="d8a39-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="d8a39-104">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="d8a39-104">For example:</span></span>  
   
 ```csharp
 #region MyClass definition  
@@ -27,8 +27,8 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ec419-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ec419-105">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8a39-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d8a39-105">See Also</span></span>
 
-- [<span data-ttu-id="ec419-106">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="ec419-106">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ec419-107">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="ec419-107">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="ec419-108">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="ec419-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="d8a39-106">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="d8a39-106">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="d8a39-107">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="d8a39-107">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="d8a39-108">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="d8a39-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
