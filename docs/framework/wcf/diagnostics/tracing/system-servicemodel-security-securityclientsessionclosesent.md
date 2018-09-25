@@ -3,21 +3,20 @@ title: System.ServiceModel.Security.SecurityClientSessionCloseSent
 ms.date: 03/30/2017
 ms.assetid: 6933e77d-ac9b-47cc-bc07-95f957d2299f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9cdf084b8946528ebe206d3ff51af7c074094a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5df0cf8c348d3e6c370038d37f7648d93c51a91b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33483392"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073344"
 ---
-# <a name="systemservicemodelsecuritysecurityclientsessionclosesent"></a><span data-ttu-id="178bc-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="178bc-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>
-<span data-ttu-id="178bc-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="178bc-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>  
+# <a name="systemservicemodelsecuritysecurityclientsessionclosesent"></a><span data-ttu-id="45b2f-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="45b2f-102">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>
+<span data-ttu-id="45b2f-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span><span class="sxs-lookup"><span data-stu-id="45b2f-103">System.ServiceModel.Security.SecurityClientSessionCloseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="178bc-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="178bc-104">Description</span></span>  
- <span data-ttu-id="178bc-105">Von der Clientsicherheitssitzung wurde eine 'Schließen'-Nachricht gesendet.</span><span class="sxs-lookup"><span data-stu-id="178bc-105">A Close message was sent by the client security session.</span></span>  
+## <a name="description"></a><span data-ttu-id="45b2f-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="45b2f-104">Description</span></span>  
+ <span data-ttu-id="45b2f-105">Von der Clientsicherheitssitzung wurde eine 'Schließen'-Nachricht gesendet.</span><span class="sxs-lookup"><span data-stu-id="45b2f-105">A Close message was sent by the client security session.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="178bc-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="178bc-106">See Also</span></span>  
- [<span data-ttu-id="178bc-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="178bc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="178bc-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="178bc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="178bc-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="178bc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="45b2f-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="45b2f-106">See Also</span></span>  
+ [<span data-ttu-id="45b2f-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="45b2f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="45b2f-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="45b2f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="45b2f-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="45b2f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

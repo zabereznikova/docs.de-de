@@ -3,24 +3,23 @@ title: '&lt;security&gt; von &lt;netPeerBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 45000554226fcde753041fca283bfc8b1eeba5ce
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d17d063ffdd354327c2523415b7d9394e723135a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970330"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085722"
 ---
-# <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a><span data-ttu-id="35ab1-102">&lt;security&gt; von &lt;netPeerBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="35ab1-102">&lt;security&gt; of &lt;netPeerBinding&gt;</span></span>
-<span data-ttu-id="35ab1-103">Definiert die Sicherheitseinstellungen der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), z. B. den Typ der Authentifizierung verwendet und die Sicherheit für den Nachrichtentransport verwendet.</span><span class="sxs-lookup"><span data-stu-id="35ab1-103">Defines the security settings of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), including the type of authentication used and the security used for the message transport.</span></span>  
+# <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a><span data-ttu-id="c2cb7-102">&lt;security&gt; von &lt;netPeerBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="c2cb7-102">&lt;security&gt; of &lt;netPeerBinding&gt;</span></span>
+<span data-ttu-id="c2cb7-103">Definiert die Sicherheitseinstellungen der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), z. B. den Typ der Authentifizierung verwendet und die Sicherheit für den Nachrichtentransport verwendet.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-103">Defines the security settings of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), including the type of authentication used and the security used for the message transport.</span></span>  
   
- <span data-ttu-id="35ab1-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="35ab1-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="35ab1-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="35ab1-105">\<bindings></span></span>  
-<span data-ttu-id="35ab1-106">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="35ab1-106">\<netPeerBinding></span></span>  
-<span data-ttu-id="35ab1-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="35ab1-107">\<binding></span></span>  
-<span data-ttu-id="35ab1-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="35ab1-108">\<security></span></span>  
+ <span data-ttu-id="c2cb7-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="c2cb7-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c2cb7-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="c2cb7-105">\<bindings></span></span>  
+<span data-ttu-id="c2cb7-106">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="c2cb7-106">\<netPeerBinding></span></span>  
+<span data-ttu-id="c2cb7-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="c2cb7-107">\<binding></span></span>  
+<span data-ttu-id="c2cb7-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="c2cb7-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="35ab1-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="35ab1-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2cb7-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="c2cb7-109">Syntax</span></span>  
   
 ```xml  
 <netPeerBinding>  
@@ -32,47 +31,47 @@ ms.locfileid: "45970330"
 </netPeerBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="35ab1-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="35ab1-110">Attributes and Elements</span></span>  
- <span data-ttu-id="35ab1-111">In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="35ab1-111">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c2cb7-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="c2cb7-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c2cb7-111">In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-111">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="35ab1-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="35ab1-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c2cb7-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="c2cb7-112">Attributes</span></span>  
   
-|<span data-ttu-id="35ab1-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="35ab1-113">Attribute</span></span>|<span data-ttu-id="35ab1-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="35ab1-114">Description</span></span>|  
+|<span data-ttu-id="c2cb7-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="c2cb7-113">Attribute</span></span>|<span data-ttu-id="c2cb7-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c2cb7-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="35ab1-115">Modus</span><span class="sxs-lookup"><span data-stu-id="35ab1-115">mode</span></span>|<span data-ttu-id="35ab1-116">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="35ab1-116">Optional.</span></span> <span data-ttu-id="35ab1-117">Gibt den Sicherheitstyp an, der von Peers verwendet wird, die mit dieser Bindung konfiguriert sind.</span><span class="sxs-lookup"><span data-stu-id="35ab1-117">Specifies the type of security used by peers configured with this binding.</span></span> <span data-ttu-id="35ab1-118">Der Standardwert ist `Message`.</span><span class="sxs-lookup"><span data-stu-id="35ab1-118">The default value is `Message`.</span></span> <span data-ttu-id="35ab1-119">Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="35ab1-119">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
+|<span data-ttu-id="c2cb7-115">Modus</span><span class="sxs-lookup"><span data-stu-id="c2cb7-115">mode</span></span>|<span data-ttu-id="c2cb7-116">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-116">Optional.</span></span> <span data-ttu-id="c2cb7-117">Gibt den Sicherheitstyp an, der von Peers verwendet wird, die mit dieser Bindung konfiguriert sind.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-117">Specifies the type of security used by peers configured with this binding.</span></span> <span data-ttu-id="c2cb7-118">Der Standardwert ist `Message`.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-118">The default value is `Message`.</span></span> <span data-ttu-id="c2cb7-119">Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-119">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="35ab1-120">mode-Attribut</span><span class="sxs-lookup"><span data-stu-id="35ab1-120">mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="c2cb7-120">mode-Attribut</span><span class="sxs-lookup"><span data-stu-id="c2cb7-120">mode Attribute</span></span>  
   
-|<span data-ttu-id="35ab1-121">Wert</span><span class="sxs-lookup"><span data-stu-id="35ab1-121">Value</span></span>|<span data-ttu-id="35ab1-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="35ab1-122">Description</span></span>|  
+|<span data-ttu-id="c2cb7-121">Wert</span><span class="sxs-lookup"><span data-stu-id="c2cb7-121">Value</span></span>|<span data-ttu-id="c2cb7-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c2cb7-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="35ab1-123">Meldung</span><span class="sxs-lookup"><span data-stu-id="35ab1-123">Message</span></span>|<span data-ttu-id="35ab1-124">Durch die SOAP-Sicherheit werden Authentifizierung, Integrität und Vertraulichkeit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="35ab1-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
-|<span data-ttu-id="35ab1-125">Keine</span><span class="sxs-lookup"><span data-stu-id="35ab1-125">None</span></span>|<span data-ttu-id="35ab1-126">Die Sicherheitsfunktionen sind deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="35ab1-126">Security is disabled.</span></span>|  
-|<span data-ttu-id="35ab1-127">Transport</span><span class="sxs-lookup"><span data-stu-id="35ab1-127">Transport</span></span>|<span data-ttu-id="35ab1-128">Die Sicherheit wird über HTTPS bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="35ab1-128">Security is provided using HTTPS.</span></span>|  
-|<span data-ttu-id="35ab1-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="35ab1-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="35ab1-130">HTTPS stellt Authentifizierung und Vertraulichkeit bereit.</span><span class="sxs-lookup"><span data-stu-id="35ab1-130">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="35ab1-131">Die SOAP-Nachrichten bieten umfassende Anmeldeinformationstypen.</span><span class="sxs-lookup"><span data-stu-id="35ab1-131">SOAP messages provide rich credential types.</span></span>|  
+|<span data-ttu-id="c2cb7-123">Meldung</span><span class="sxs-lookup"><span data-stu-id="c2cb7-123">Message</span></span>|<span data-ttu-id="c2cb7-124">Durch die SOAP-Sicherheit werden Authentifizierung, Integrität und Vertraulichkeit bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
+|<span data-ttu-id="c2cb7-125">Keine</span><span class="sxs-lookup"><span data-stu-id="c2cb7-125">None</span></span>|<span data-ttu-id="c2cb7-126">Die Sicherheitsfunktionen sind deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-126">Security is disabled.</span></span>|  
+|<span data-ttu-id="c2cb7-127">Transport</span><span class="sxs-lookup"><span data-stu-id="c2cb7-127">Transport</span></span>|<span data-ttu-id="c2cb7-128">Die Sicherheit wird über HTTPS bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-128">Security is provided using HTTPS.</span></span>|  
+|<span data-ttu-id="c2cb7-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="c2cb7-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="c2cb7-130">HTTPS stellt Authentifizierung und Vertraulichkeit bereit.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-130">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="c2cb7-131">Die SOAP-Nachrichten bieten umfassende Anmeldeinformationstypen.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-131">SOAP messages provide rich credential types.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="35ab1-132">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="35ab1-132">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c2cb7-132">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c2cb7-132">Child Elements</span></span>  
   
-|<span data-ttu-id="35ab1-133">Element</span><span class="sxs-lookup"><span data-stu-id="35ab1-133">Element</span></span>|<span data-ttu-id="35ab1-134">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="35ab1-134">Description</span></span>|  
+|<span data-ttu-id="c2cb7-133">Element</span><span class="sxs-lookup"><span data-stu-id="c2cb7-133">Element</span></span>|<span data-ttu-id="c2cb7-134">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c2cb7-134">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="35ab1-135">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="35ab1-135">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|<span data-ttu-id="35ab1-136">Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet werden, die mit dieser Bindung konfiguriert sind.</span><span class="sxs-lookup"><span data-stu-id="35ab1-136">Defines the transport type for secured messages sent by peers configured with this binding.</span></span> <span data-ttu-id="35ab1-137">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="35ab1-137">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="c2cb7-135">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="c2cb7-135">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|<span data-ttu-id="c2cb7-136">Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet werden, die mit dieser Bindung konfiguriert sind.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-136">Defines the transport type for secured messages sent by peers configured with this binding.</span></span> <span data-ttu-id="c2cb7-137">Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-137">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="35ab1-138">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="35ab1-138">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c2cb7-138">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c2cb7-138">Parent Elements</span></span>  
   
-|<span data-ttu-id="35ab1-139">Element</span><span class="sxs-lookup"><span data-stu-id="35ab1-139">Element</span></span>|<span data-ttu-id="35ab1-140">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="35ab1-140">Description</span></span>|  
+|<span data-ttu-id="c2cb7-139">Element</span><span class="sxs-lookup"><span data-stu-id="c2cb7-139">Element</span></span>|<span data-ttu-id="c2cb7-140">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c2cb7-140">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="35ab1-141">\<binding></span><span class="sxs-lookup"><span data-stu-id="35ab1-141">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="35ab1-142">Definiert alle bindungsfähigkeiten von der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="35ab1-142">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
+|[<span data-ttu-id="c2cb7-141">\<binding></span><span class="sxs-lookup"><span data-stu-id="c2cb7-141">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="c2cb7-142">Definiert alle bindungsfähigkeiten von der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="c2cb7-142">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="35ab1-143">Hinweise</span><span class="sxs-lookup"><span data-stu-id="35ab1-143">Remarks</span></span>  
- <span data-ttu-id="35ab1-144">Sicherheit kann entweder nachrichten- oder transportspezifisch sein.</span><span class="sxs-lookup"><span data-stu-id="35ab1-144">Security can be either message- or transport-specific.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c2cb7-143">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c2cb7-143">Remarks</span></span>  
+ <span data-ttu-id="c2cb7-144">Sicherheit kann entweder nachrichten- oder transportspezifisch sein.</span><span class="sxs-lookup"><span data-stu-id="c2cb7-144">Security can be either message- or transport-specific.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35ab1-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="35ab1-145">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c2cb7-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c2cb7-145">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
  <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>  
  <xref:System.ServiceModel.PeerSecuritySettings>  
- [<span data-ttu-id="35ab1-146">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="35ab1-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="35ab1-147">Ausählen eines Anmeldeinformationentyps</span><span class="sxs-lookup"><span data-stu-id="35ab1-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [<span data-ttu-id="35ab1-148">Bindungen</span><span class="sxs-lookup"><span data-stu-id="35ab1-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="35ab1-149">Konfigurieren der vom System bereitgestellten Bindungen</span><span class="sxs-lookup"><span data-stu-id="35ab1-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="35ab1-150">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="35ab1-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="35ab1-151">\<binding></span><span class="sxs-lookup"><span data-stu-id="35ab1-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="c2cb7-146">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="c2cb7-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="c2cb7-147">Ausählen eines Anmeldeinformationentyps</span><span class="sxs-lookup"><span data-stu-id="c2cb7-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="c2cb7-148">Bindungen</span><span class="sxs-lookup"><span data-stu-id="c2cb7-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="c2cb7-149">Konfigurieren der vom System bereitgestellten Bindungen</span><span class="sxs-lookup"><span data-stu-id="c2cb7-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="c2cb7-150">Verwenden von Bindungen, um Windows Communication Foundation-Dienste und Clients konfigurieren</span><span class="sxs-lookup"><span data-stu-id="c2cb7-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="c2cb7-151">\<binding></span><span class="sxs-lookup"><span data-stu-id="c2cb7-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

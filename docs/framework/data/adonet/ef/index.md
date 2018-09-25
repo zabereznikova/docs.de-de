@@ -3,13 +3,13 @@ title: ADO.NET Entity Framework
 ms.date: 03/30/2017
 ms.assetid: a437041f-6899-4ae7-96ce-aabf528d7205
 ms.openlocfilehash: e5a282a1a4cfd0e986456d0e277585c2b08c0bfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580524"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085423"
 ---
-# <a name="adonet-entity-framework"></a><span data-ttu-id="c69d5-102">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="c69d5-102">ADO.NET Entity Framework</span></span>
-<span data-ttu-id="c69d5-103">Die [docs.microsoft.com/ef/](https://docs.microsoft.com/ef/) Website kann nun die wichtigste Quelle für Inhalte zu Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="c69d5-103">The [docs.microsoft.com/ef/](https://docs.microsoft.com/ef/) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="adonet-entity-framework"></a><span data-ttu-id="a7685-102">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a7685-102">ADO.NET Entity Framework</span></span>
+<span data-ttu-id="a7685-103">Die [docs.microsoft.com/ef/](https://docs.microsoft.com/ef/) Website kann nun die wichtigste Quelle für Inhalte zu Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="a7685-103">The [docs.microsoft.com/ef/](https://docs.microsoft.com/ef/) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="c69d5-104">Der Inhalt zu diesem Thema ist nun auf der folgenden Seite verfügbar: [Introducing Entity Framework (Einführung in Entity Framework)](https://msdn.microsoft.com/data/jj590134).</span><span class="sxs-lookup"><span data-stu-id="c69d5-104">The content for this topic is now available on the following page: [Introducing Entity Framework](https://msdn.microsoft.com/data/jj590134).</span></span>
+ <span data-ttu-id="a7685-104">Der Inhalt zu diesem Thema ist nun auf der folgenden Seite verfügbar: [Introducing Entity Framework (Einführung in Entity Framework)](https://msdn.microsoft.com/data/jj590134).</span><span class="sxs-lookup"><span data-stu-id="a7685-104">The content for this topic is now available on the following page: [Introducing Entity Framework](https://msdn.microsoft.com/data/jj590134).</span></span>

@@ -5,22 +5,22 @@ f1_keywords:
 - vbrTextFieldParser_FieldWidthsNothing
 ms.assetid: 623e0825-5640-4e47-8341-7eeec80fc145
 ms.openlocfilehash: cb9051269bf46e23d5ae070956994212d3e98675
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027517"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071691"
 ---
-# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a><span data-ttu-id="bafec-102">Fehler beim Lesen von Feldern mit fester Breite. FieldWidths ist 'Nothing' oder leer.</span><span class="sxs-lookup"><span data-stu-id="bafec-102">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>
-<span data-ttu-id="bafec-103">Der `TextFieldParser` kann Felder mit fester Breite nicht lesen, da die `FieldWidths` -Eigenschaft auf `Nothing` festgelegt oder leer ist.</span><span class="sxs-lookup"><span data-stu-id="bafec-103">The `TextFieldParser` is unable to read fixed-width fields because the `FieldWidths` property is set to `Nothing` or is empty.</span></span>  
+# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a><span data-ttu-id="00460-102">Fehler beim Lesen von Feldern mit fester Breite. FieldWidths ist 'Nothing' oder leer.</span><span class="sxs-lookup"><span data-stu-id="00460-102">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>
+<span data-ttu-id="00460-103">Der `TextFieldParser` kann Felder mit fester Breite nicht lesen, da die `FieldWidths` -Eigenschaft auf `Nothing` festgelegt oder leer ist.</span><span class="sxs-lookup"><span data-stu-id="00460-103">The `TextFieldParser` is unable to read fixed-width fields because the `FieldWidths` property is set to `Nothing` or is empty.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="bafec-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="bafec-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="00460-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="00460-104">To correct this error</span></span>  
   
--   <span data-ttu-id="bafec-105">Legen Sie für `FieldWidths` einen gültigen Wert fest.</span><span class="sxs-lookup"><span data-stu-id="bafec-105">Set `FieldWidths` to a valid value.</span></span>  
+-   <span data-ttu-id="00460-105">Legen Sie für `FieldWidths` einen gültigen Wert fest.</span><span class="sxs-lookup"><span data-stu-id="00460-105">Set `FieldWidths` to a valid value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bafec-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bafec-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00460-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="00460-106">See also</span></span>
 
-- [<span data-ttu-id="bafec-107">TextFieldParser.SetFieldWidths-Methode</span><span class="sxs-lookup"><span data-stu-id="bafec-107">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)  
-- [<span data-ttu-id="bafec-108">TextFieldParser.FieldWidths-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="bafec-108">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
-- [<span data-ttu-id="bafec-109">Gewusst wie: Lesen aus einer Textdatei mit fester Breite</span><span class="sxs-lookup"><span data-stu-id="bafec-109">How to: Read From Fixed-width Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
-- [<span data-ttu-id="bafec-110">TextFieldParser-Objekt</span><span class="sxs-lookup"><span data-stu-id="bafec-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+- [<span data-ttu-id="00460-107">TextFieldParser.SetFieldWidths-Methode</span><span class="sxs-lookup"><span data-stu-id="00460-107">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)  
+- [<span data-ttu-id="00460-108">TextFieldParser.FieldWidths-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="00460-108">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
+- [<span data-ttu-id="00460-109">Gewusst wie: Lesen aus einer Textdatei mit fester Breite</span><span class="sxs-lookup"><span data-stu-id="00460-109">How to: Read From Fixed-width Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+- [<span data-ttu-id="00460-110">TextFieldParser-Objekt</span><span class="sxs-lookup"><span data-stu-id="00460-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)
