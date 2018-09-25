@@ -6,13 +6,12 @@ dev_langs:
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: ef2f02bb5ad6e7458ae11e7880fe403f3a6e9916
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85954dd89bdb576b68d234a364a406a6e0d2145b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493411"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079882"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Vorgehensweise: Erstellen eines Tokens für den Sicherheitskontext einer sicheren Sitzung
 Durch das Verwenden eines zustandsbehafteten Sicherheitskontexttokens (SCT) in einer sicheren Sitzung, kann die Sitzung verhindern, dass der Dienst wiederverwendet wird. Wenn beispielsweise ein zustandsloses SCT in einer sicheren Sitzung verwendet wird und die IIS (Internet Information Services) zurückgesetzt werden, gehen die Sitzungsdaten, die dem Dienst zugewiesen sind, verloren. Zu den Sitzungsdaten gehört auch ein SCT-Token-Cache. Wenn ein Client also das nächste Mal dem Dienst einen zustandsloses SCT sendet, wird ein Fehler zurückgegeben, da der diesem SCT zugewiesene Schlüssel nicht abgerufen werden kann. Wenn jedoch ein zustandsbehafteter SCT verwendet wird, enthält das SCT den diesem SCT zugewiesenen Schlüssel. Da der Schlüssel im SCT enthalten ist und somit auch in der Nachricht, wird die sichere Sitzung nicht von der Wiederverwendung des Dienstes beeinträchtigt. Standardmäßig verwendet Windows Communication Foundation (WCF) zustandslose SCTs in einer sicheren Sitzung an. Dieses Thema erläutert, wie Sie zustandsbehaftete SCTs in einer sicheren Sitzung verwenden können.  
@@ -30,7 +29,7 @@ Durch das Verwenden eines zustandsbehafteten Sicherheitskontexttokens (SCT) in e
   
 -   Erstellen Sie eine benutzerdefinierte Bindung, die angibt, dass SOAP-Nachrichten durch eine sichere Sitzung mit einem zustandsbehafteten SCT geschützt sind.  
   
-    1.  Definieren Sie eine benutzerdefinierte Bindung durch Hinzufügen einer [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) in die Konfigurationsdatei für den Dienst.  
+    1.  Definieren Sie eine benutzerdefinierte Bindung, durch das Hinzufügen einer [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) in die Konfigurationsdatei für den Dienst.  
   
         ```xml  
         <customBinding>  
@@ -44,7 +43,7 @@ Durch das Verwenden eines zustandsbehafteten Sicherheitskontexttokens (SCT) in e
         <binding name="StatefulSCTSecureSession">  
         ```  
   
-    3.  Geben Sie den Authentifizierungsmodus für Nachrichten an und von diesem Dienst durch Hinzufügen einer [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) untergeordnetes Element der [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+    3.  Geben Sie den Authentifizierungsmodus für Nachrichten an und von diesem Dienst gesendet werden, durch das Hinzufügen einer [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) untergeordnetes Element der [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
          Legen Sie fest, dass eine sichere Sitzung verwendet wird, indem Sie das `authenticationMode`-Attribut auf `SecureConversation` setzen. Legen Sie fest, dass zustandsbehaftete SCTs verwendet werden, indem Sie das `requireSecurityContextCancellation`-Attribut auf `false` setzen.  
   
@@ -53,7 +52,7 @@ Durch das Verwenden eines zustandsbehafteten Sicherheitskontexttokens (SCT) in e
                   requireSecurityContextCancellation="false">  
         ```  
   
-    4.  Angeben, wie der Client authentifiziert wird, während die sichere Sitzung, durch Hinzufügen verwendet wird einer [ \<SecureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) untergeordnetes Element der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
+    4.  Angeben, wie der Client authentifiziert wird, während die sichere Sitzung, durch das Hinzufügen hergestellt wurde einer [ \<SecureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) untergeordnetes Element der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md).  
   
          Geben Sie an, wie der Client authentifiziert wird, indem Sie das `authenticationMode`-Attribut setzen.  
   
@@ -67,7 +66,7 @@ Durch das Verwenden eines zustandsbehafteten Sicherheitskontexttokens (SCT) in e
         <textMessageEncoding />  
         ```  
   
-    6.  Geben Sie den Transport durch Hinzufügen von ein Transportelement, z. B. die [ \<HttpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
+    6.  Geben Sie den Transport, indem Sie ein Transportelement, z. B. Hinzufügen der [ \<HttpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md).  
   
         ```xml  
         <httpTransport />  
@@ -94,7 +93,7 @@ Durch das Verwenden eines zustandsbehafteten Sicherheitskontexttokens (SCT) in e
  [!code-csharp[c_CreateStatefulSCT#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createstatefulsct/cs/secureservice.cs#2)]
  [!code-vb[c_CreateStatefulSCT#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createstatefulsct/vb/secureservice.vb#2)]  
   
- Wenn Windows-Authentifizierung in Kombination mit einem zustandsbehafteten SCT verwendet wird, füllt WCF nicht auf die <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> Eigenschaft mit dem tatsächlichen Aufrufer Identität des, sondern legt die Eigenschaft auf anonym. Da WCF-Sicherheit den Inhalt des dienstsicherheitskontextes für jede Anfrage vom eingehenden SCT neu erstellen muss, der Server ist nicht die sicherheitssitzung im Speicher des nachvollziehen. Da die <xref:System.Security.Principal.WindowsIdentity>-Instanz nicht in das SCT serialisiert werden kann, gibt die <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft eine anonyme Identität zurück.  
+ Bei der Windows-Authentifizierung in Kombination mit einem zustandsbehafteten SCT verwendet wird, füllt WCF nicht auf die <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> Eigenschaft mit dem tatsächlichen Aufrufer Identität des sondern legt die Eigenschaft auf anonym. Da WCF-Sicherheit den Inhalt des dienstsicherheitskontextes für jede Anfrage vom eingehenden SCT neu erstellen muss, der Server ist nicht die sicherheitssitzung im Speicher des nachvollziehen. Da die <xref:System.Security.Principal.WindowsIdentity>-Instanz nicht in das SCT serialisiert werden kann, gibt die <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft eine anonyme Identität zurück.  
   
  Die folgende Konfiguration weist dieses Verhalten auf.  
   

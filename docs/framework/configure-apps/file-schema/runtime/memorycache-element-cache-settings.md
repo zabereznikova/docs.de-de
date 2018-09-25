@@ -1,5 +1,5 @@
 ---
-title: '&lt;MemoryCache&gt; Element (Cacheeinstellungen)'
+title: '&lt;MemoryCache&gt; -Element (Cacheeinstellungen)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
@@ -8,15 +8,14 @@ helpviewer_keywords:
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3d0d741fd8193c7d874d70248cbd149f11163ed0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d6b7a1ba9c9b7ba598dbcea076ff6ee553ddc9a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748398"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075384"
 ---
-# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;MemoryCache&gt; Element (Cacheeinstellungen)
+# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;MemoryCache&gt; -Element (Cacheeinstellungen)
 Definiert ein Element, das für die Konfiguration des Cache verwendet wird, der auf der <xref:System.Runtime.Caching.MemoryCache> -Klasse basiert. Die <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> -Klasse definiert ein [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) -Element, das Sie zum Konfigurieren des Caches verwenden können. Mehrere Instanzen der <xref:System.Runtime.Caching.MemoryCache> -Klasse können in einer einzigen Anwendung verwendet werden. Jedes `memoryCache` -Element in der Konfigurationsdatei kann Einstellungen für eine benannte <xref:System.Runtime.Caching.MemoryCache> -Instanz enthalten.  
   
  \<configuration>  

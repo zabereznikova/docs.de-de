@@ -1,5 +1,5 @@
 ---
-title: '&lt;Hinzufügen&gt; AuthenticationModules (Network Settings)-Element'
+title: '&lt;Hinzufügen&gt; -Element für AuthenticationModules (Netzwerkeinstellungen)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 471e36bb584164b851e7a06c0e682ba9872f7910
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742899"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083886"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;Hinzufügen&gt; AuthenticationModules (Network Settings)-Element
-Die Anwendung hinzugefügt ein Authentifizierungsmodul.  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;Hinzufügen&gt; -Element für AuthenticationModules (Netzwerkeinstellungen)
+Ein Modul für die Authentifizierung hinzugefügt der Anwendung.  
   
  \<configuration>  
 \<system.net>  
@@ -43,7 +42,7 @@ Die Anwendung hinzugefügt ein Authentifizierungsmodul.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`type`|Den vollqualifizierten Typnamen (erkennbar die <xref:System.Type.FullName%2A> Eigenschaft) und der Name der Assembly (angegeben durch die <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft), getrennt durch ein Komma.|  
+|`type`|Den vollqualifizierten Typnamen (angegeben durch die <xref:System.Type.FullName%2A> Eigenschaft) und den Assemblynamen (erkennbar der <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft) und durch ein Komma getrennt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -52,18 +51,18 @@ Die Anwendung hinzugefügt ein Authentifizierungsmodul.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die Module, die zum Authentifizieren von Anforderungen über das Netzwerk verwendet.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `add` -Element fügt ein Authentifizierungsmodul am Ende der Liste der registrierten Authentifizierungsmodule. Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in denen sie der Liste hinzugefügt wurden.  
+ Die `add` -Element fügt ein Authentifizierungsmodul an das Ende der Liste der registrierten Authentifizierungsmodule. Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in denen sie zur Liste hinzugefügt wurden.  
   
- Der Wert für die `type` Attribut muss eine gültige Typnamen und die entsprechenden Assemblynamen an, die durch ein Komma getrennt werden.  
+ Der Wert für die `type` Attribut sollte einen gültigen Typnamen und den entsprechenden Assemblynamen, die durch ein Komma getrennt sein.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Standard-Authentifizierungsmodule. Sie sollten die Werte für Version und PublicKeyToken durch die richtigen Werte für das angegebene Modul ersetzen.  
+ Im folgenden Beispiel wird die Standard-Authentifizierungsmodule. Sie sollten die Werte für die Version und ' PublicKeyToken ' machen durch die richtigen Werte für das angegebene Modul ersetzen.  
   
 ```xml  
 <configuration>  

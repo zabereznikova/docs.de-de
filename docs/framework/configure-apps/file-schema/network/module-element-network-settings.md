@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 06c653d8759224e1112183a7e86e9797a97402af
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d51010d6236103d252507802e14d01230d90219
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753767"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075199"
 ---
 # <a name="ltmodulegt-element-network-settings"></a>&lt;Modul&gt; -Element (Netzwerkeinstellungen)
 Fügt der Anwendung ein neues Proxymodul hinzu.  
@@ -41,7 +40,7 @@ Fügt der Anwendung ein neues Proxymodul hinzu.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`type`|Den vollqualifizierten Typnamen (erkennbar die <xref:System.Type.FullName%2A> Eigenschaft) und der Name der Assembly (angegeben durch die <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft), getrennt durch ein Komma, die den Proxy implementiert.|  
+|`type`|Den vollqualifizierten Typnamen (angegeben durch die <xref:System.Type.FullName%2A> Eigenschaft) und den Assemblynamen (erkennbar die <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft), getrennt durch ein Komma, die der Proxy implementiert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,15 +52,15 @@ Fügt der Anwendung ein neues Proxymodul hinzu.
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `module` -Element registriert Proxyklassen, implementieren die <xref:System.Net.IWebProxy> Schnittstelle. Nach dem Registrieren der Proxyklasse `module` kann zum Anfordern von Informationen über den unterstützten Proxy verwendet werden.  
+ Die `module` Element registriert Proxyklassen, implementieren die <xref:System.Net.IWebProxy> Schnittstelle. Nach dem Registrieren der Proxyklasse `module` zum Anfordern von Informationen über die unterstützten Proxy verwendet werden können.  
   
- Der Wert für die `type` Attribut muss der Klassenname des Moduls und den Namen der entsprechenden Dynamic Link Library (DLL).  
+ Der Wert für die `type` Attribut sollte sein, den Klassennamen des Moduls und den Namen der entsprechenden Dynamic Link Library (DLL).  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird eine benutzerdefinierte Proxyklasse registriert.  
+ Das folgende Beispiel registriert eine benutzerdefinierten Proxy-Klasse.  
   
 ```xml  
 <configuration>  

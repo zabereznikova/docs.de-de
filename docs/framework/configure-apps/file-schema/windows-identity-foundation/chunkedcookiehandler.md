@@ -3,20 +3,19 @@ title: '&lt;chunkedCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 193b783e44fe4386d3575e180dc5baa6a7f9a8be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f5592e0fd02d34b2882182196e0aa9425672a8fe
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758372"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082902"
 ---
 # <a name="ltchunkedcookiehandlergt"></a>&lt;chunkedCookieHandler&gt;
-Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut des der `<cookieHandler>` Element ist "Default" oder "Aufgeteilte".  
+Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut der `<cookieHandler>` -Element ist "Default" oder "Aufgeteilte".  
   
  \<system.identityModel.services >  
 \<FederationConfiguration >  
-\<"cookiehandler" >  
+\<CookieHandler >  
 \<ChunkedCookieHandler >  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,7 +38,7 @@ Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dies
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|chunkSize|Die maximale Größe in Zeichen, die HTTP-Cookie-Daten für alle HTTP-Cookie. Sie müssen vorsichtig Segmentgröße anpassen können. Webbrowser haben verschiedene Grenzwerte auf die Größe des Cookies und Anzahl pro Domäne zulässig. Die ursprünglichen Netscape-Spezifikation vorgesehenen z. B. diese Grenzwerte: 300 Cookies addieren, 4096 Bytes pro Cookie-Header (einschließlich Metadaten, nicht nur den Cookiewert) und 20 Cookies pro Domäne. Der Standardwert ist 2000. Erforderlich.|  
+|ChunkSize|Die maximale Größe in Zeichen, die HTTP-Cookie-Daten für alle eine HTTP-Cookie. Sie müssen Sie vorsichtig, wenn die Blockgröße anpassen können. Webbrowser haben verschiedene Grenzwerte auf der Größe des Cookies und die Anzahl der pro Domäne zulässig. Beispielsweise die ursprüngliche Netscape-Spezifikation diese Grenzwerte senkendatenquelle: 300 Cookies insgesamt maximal 4096 Bytes pro Cookie-Header (einschließlich Metadaten, nicht nur den Cookiewert) und 20 Cookies pro Domäne. Der Standardwert ist 2000. Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keiner  
@@ -48,15 +47,15 @@ Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dies
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<"cookiehandler" >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) zum Lesen und Schreiben von Cookies verwendet.|  
+|[\<CookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) zum Lesen und Schreiben von Cookies verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Geben Sie bei einer <xref:System.IdentityModel.Services.ChunkedCookieHandler> durch Festlegen der `mode` Attribut des der `<cookieHandler>` Element "Default" oder "Chunked", Sie können die Blockgröße, die der Cookie-Handler verwendet wird, zum Lesen und Schreiben von Cookies durch einschließen angeben eine `<chunkedCookieHandler>` untergeordnetes Element und Festlegen der `chunkSize` Attribut. Wenn die `<chunkedCookieHandler>` -Element nicht vorhanden ist, wird die Standardblockgröße 2000 Bytes verwendet. Dieses Element nicht angegeben, wann die `mode` -Attribut auf "Custom" festgelegt ist.  
+ Beim Angeben von eine <xref:System.IdentityModel.Services.ChunkedCookieHandler> durch Festlegen der `mode` Attribut der `<cookieHandler>` "Default" oder "Chunked"-Element geben Sie die Blockgröße, die der cookiehandler verwendet wird, zum Lesen und Schreiben von Cookies durch Einschließen einer `<chunkedCookieHandler>` untergeordnetes Element und Festlegen der `chunkSize` Attribut. Wenn die `<chunkedCookieHandler>` Element ist nicht vorhanden, wird die standardmäßige Segmentgröße von 2000 Bytes verwendet. Dieses Element nicht angegeben, wenn die `mode` -Attribut auf "Custom" festgelegt ist.  
   
- Die `<chunkedCookieHandler>` Element dargestellt ist, durch die <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> Klasse.  
+ Die `<chunkedCookieHandler>` Element wird dargestellt, durch die <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> Klasse.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel konfiguriert einen aufgeteilte Cookie-Handler, der Cookies in Abschnitten von 3000 Bytes schreibt.  
+ Im folgenden Beispiel wird einen segmentierten cookiehandler, der Cookies in Blöcken von 3000 Bytes schreibt.  
   
 ```xml  
 <cookieHandler mode="Chunked">  

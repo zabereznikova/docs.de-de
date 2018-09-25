@@ -1,5 +1,5 @@
 ---
-title: '&lt;Deaktivieren Sie&gt; WebRequestModules (Network Settings)-Element'
+title: '&lt;Deaktivieren Sie&gt; -Element für WebRequestModules (Netzwerkeinstellungen)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d89fbc757198f25219b8051bf77dbdeea0cef53
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752727"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070382"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Deaktivieren Sie&gt; WebRequestModules (Network Settings)-Element
-Entfernt alle registrierten Anforderung Webmodule aus der Anwendung an.  
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Deaktivieren Sie&gt; -Element für WebRequestModules (Netzwerkeinstellungen)
+Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.  
   
  \<configuration>  
 \<system.net>  
@@ -47,16 +46,16 @@ Entfernt alle registrierten Anforderung Webmodule aus der Anwendung an.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zu verwenden, um Informationen von Netzwerkhosts anfordern.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufordern.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `clear` -Element entfernt alle registrierten Anforderung Webmodule, die weiter oben in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert wurden.  
+ Die `clear` -Element entfernt alle registrierte Webanforderungsmodulen, die weiter oben in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert wurden.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel löscht alle Anforderung Webmodule und registriert dann eine Anforderung Webmodul für HTTP.  
+ Das folgende Beispiel löscht alle Webanforderungsmodule und registriert anschließend ein Webanforderungsmodul für HTTP.  
   
 ```xml  
 <configuration>  

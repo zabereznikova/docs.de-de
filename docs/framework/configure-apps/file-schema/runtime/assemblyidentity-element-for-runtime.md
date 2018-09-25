@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744966"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077342"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;AssemblyIdentity&gt; -Element für &lt;Common Language Runtime&gt;
-Enthält identifizierende Informationen über die Assembly an.  
+Enthält identifizierende Informationen für die Assembly an.  
   
  \<configuration>  
 \<Common Language Runtime >  
@@ -47,7 +46,7 @@ culture="assembly culture"/>
 |`name`|Erforderliches Attribut.<br /><br /> Der Name der assembly|  
 |`culture`|Optionales Attribut.<br /><br /> Eine Zeichenfolge, die Sprache und Land/Region der Assembly angibt.|  
 |`publicKeyToken`|Optionales Attribut.<br /><br /> Ein Hexadezimalwert, der den starken Namen der Assembly angibt.|  
-|`processorArchitecture`|Optionales Attribut.<br /><br /> Eines der Werte "X86", "amd64", "Msil" oder "ia64" Angeben von der Architektur des Prozessors für eine Assembly, die prozessorspezifischen Code enthält. Die Werte sind nicht in der Groß-/Kleinschreibung beachtet. Wenn das Attribut jedem anderen Wert wird die gesamte zugewiesen ist `<assemblyIdentity>` Element wird ignoriert. Siehe <xref:System.Reflection.ProcessorArchitecture>.|  
+|`processorArchitecture`|Optionales Attribut.<br /><br /> Eines der Werte "X86", "amd64", "Msil" oder "ia64" Angeben von der Prozessorarchitektur für eine Assembly, die Prozessor-spezifischen Code enthält. Die Werte sind keine Groß-/Kleinschreibung beachtet. Wenn das Attribut auf einen anderen Wert, den gesamten zugewiesen ist `<assemblyIdentity>` Element wird ignoriert. Siehe <xref:System.Reflection.ProcessorArchitecture>.|  
   
 ## <a name="processorarchitecture-attribute"></a>ProcessorArchitecture-Attribut  
   
@@ -55,8 +54,8 @@ culture="assembly culture"/>
 |-----------|-----------------|  
 |`amd64`|Nur ein 64-Bit-AMD-Prozessor.|  
 |`ia64`|Nur ein 64-Bit-Intel-Prozessor.|  
-|`msil`|Neutral in Bezug auf Prozessor und die Bits pro Wort|  
-|`x86`|Eine 32-Bit-Intel-Prozessor, entweder systemeigen oder in dem Windows on Windows (WOW)-Umgebung auf einer 64-Bit-Plattform.|  
+|`msil`|Neutral hinsichtlich des Prozessors und die Bits pro Wort|  
+|`x86`|Eine 32-Bit-Intel-Prozessor, entweder systemeigen oder in der Windows auf Windows (WOW)-Umgebung auf einer 64-Bit-Plattform.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -71,11 +70,11 @@ culture="assembly culture"/>
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Jede  **\<DependentAssembly >** Element benötigen eine  **\<AssemblyIdentity >** untergeordnetes Element.  
+ Jede  **\<DependentAssembly >** Element benötigen einen  **\<AssemblyIdentity >** untergeordnetes Element.  
   
- Wenn die `processorArchitecture` Attribut vorhanden ist, ist die `<assemblyIdentity>` Element gilt nur für die Assembly mit der entsprechenden Prozessorarchitektur. Wenn die `processorArchitecture` -Attribut nicht vorhanden ist, ist die `<assemblyIdentity>` Element auf eine Assembly mit einer beliebigen Prozessorarchitektur anwenden kann.  
+ Wenn die `processorArchitecture` -Attribut vorhanden ist, die `<assemblyIdentity>` Element gilt nur für die Assembly mit der entsprechenden Prozessorarchitektur. Wenn die `processorArchitecture` Attribut ist nicht vorhanden, die `<assemblyIdentity>` Element auf eine Assembly mit einer beliebigen Prozessorarchitektur anwenden kann.  
   
- Das folgende Beispiel zeigt eine Konfigurationsdatei für zwei Assemblys mit demselben Namen, die auf zwei verschiedenen zwei Prozessorarchitekturen und deren Versionen sind nicht synchron gehalten wurde. Wenn die Anwendung ausgeführt wird, auf die X86 Plattform den ersten `<assemblyIdentity>` Element angewendet wird und der andere wird ignoriert. Wenn die Anwendung auf einer anderen Plattform als X86 oder ia64 ausgeführt wird, werden beide ignoriert.  
+ Das folgende Beispiel zeigt eine Konfigurationsdatei für zwei Assemblys mit demselben Namen, die zwei verschiedene Prozessorarchitekturen in zwei vorgesehen und, deren Versionen müssen nicht synchron beibehalten wurde. Wenn die Anwendung ausgeführt wird, auf die X86 Plattform die erste `<assemblyIdentity>` Element angewendet wird und der andere Wert wird ignoriert. Wenn die Anwendung auf einer anderen Plattform als X86 oder ia64 ausgeführt wird, werden beide ignoriert.  
   
 ```xml  
 <configuration>  
@@ -102,10 +101,10 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
- Wenn eine Konfigurationsdatei enthält ein `<assemblyIdentity>` Element ohne `processorArchitecture` Attribut, und enthält ein Element, das der Plattform, für das Element ohne entspricht nicht der `processorArchitecture` Attribut wird verwendet.  
+ Wenn eine Konfigurationsdatei enthält eine `<assemblyIdentity>` Element ohne `processorArchitecture` Attribut, und enthält ein Element, das der Plattform, die dem Element ohne entspricht nicht der `processorArchitecture` Attribut wird verwendet.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Informationen zu einer Assembly bereit.  
+ Das folgende Beispiel zeigt, wie Informationen zu einer Assembly bereitgestellt wird.  
   
 ```xml  
 <configuration>  

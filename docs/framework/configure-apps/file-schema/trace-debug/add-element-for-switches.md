@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e0dc425327f6577606e1205a23fdaffcc39f6e01
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747453"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109523"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;Hinzufügen&gt; -Element für &lt;Switches&gt;
 Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.  
@@ -39,7 +38,7 @@ Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**name**|Erforderliches Attribut.<br /><br /> Gibt den Namen des Schalters. Der Wert dieses Attributs entspricht dem *DisplayName* Parameter, der übergeben wird, um den Konstruktor zu wechseln.|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Namen des Schalters. Der Wert dieses Attributs entspricht dem *"DisplayName"* Parameter, der übergeben wird, um den Konstruktor zu wechseln.|  
 |**value**|Erforderliches Attribut.<br /><br /> Gibt die Ebene des Schalters.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -54,10 +53,10 @@ Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können das Maß an einen Ablaufverfolgungsschalter ändern, indem Sie diese in einer Konfigurationsdatei zur Verfügung stellen. Wenn der Schalter ist eine <xref:System.Diagnostics.BooleanSwitch>, Sie können Sie aktivieren und deaktivieren. Wenn der Schalter ist eine <xref:System.Diagnostics.TraceSwitch>, können Sie verschiedene Ebenen hinzu, um die Typen von Ablaufverfolgung angeben zuweisen oder Debug Nachrichten, die Ausgaben der Anwendung.  
+ Sie können die Ebene der einen Ablaufverfolgungsschalter ändern, indem Sie es in einer Konfigurationsdatei platzieren. Wenn der Schalter ist eine <xref:System.Diagnostics.BooleanSwitch>, Sie können Sie aktivieren und deaktivieren. Wenn der Schalter ist eine <xref:System.Diagnostics.TraceSwitch>, können Sie verschiedene Ebenen, um die Typen der Ablaufverfolgung angeben zuweisen oder Debug Nachrichten, die Ausgaben der Anwendung.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die  **\<hinzufügen >** festzulegenden Elements der `General` Trace-Schalter, um die <xref:System.Diagnostics.TraceLevel> Ebene, und aktivieren Sie die `Data` booleschen Ablaufverfolgungsschalter.  
+ Das folgende Beispiel zeigt, wie Sie mit der  **\<hinzufügen >** festzulegende Element der `General` Trace-Schalter, um die <xref:System.Diagnostics.TraceLevel> Ebene, und aktivieren Sie die `Data` booleschen Ablaufverfolgungsschalter.  
   
 ```xml  
 <configuration>  

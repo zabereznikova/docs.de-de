@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 57927d09f10e84e73c3da424c283846bd79b5044
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745574"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070135"
 ---
 # <a name="ltsharedlistenersgt-element"></a>&lt;SharedListeners&gt; Element
-Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.  Diese Listener ablaufverfolgungen in der Standardeinstellung nicht gesendet, und es ist nicht möglich, diese Listener zur Laufzeit abrufen. Listener als freigegebene Listener Quellen oder ablaufverfolgungen namentlich hinzugefügt werden können.  
+Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.  Diese Listener empfangen keine ablaufverfolgungen in der Standardeinstellung, und es ist nicht möglich, diese Listener zur Laufzeit abrufen. Listener, die als freigegebene Listener können anhand des Namens mit Quellen oder ablaufverfolgungen hinzugefügt werden.  
   
  \<configuration>  
 \<System.Diagnostics >  
@@ -56,12 +55,12 @@ Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen 
 |`system.diagnostics`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Hinzufügen eines Listeners zur gemeinsam genutzten Auflistung ist keinen aktiven Listener erleichtern. Es muss immer noch eine Ablaufverfolgungsquelle oder einer Ablaufverfolgung hinzugefügt werden, durch Hinzufügen zu der `Listeners` Auflistung für das Trace-Element. Die Listenerklassen in .NET Framework abgeleitet werden, aus der <xref:System.Diagnostics.TraceListener> Klasse.  
+ Hinzufügen eines Listeners zur gemeinsam genutzten Auflistung ist es keinen aktiven Listener einzurichten. Es muss immer noch eine Ablaufverfolgungsquelle zu einer Ablaufverfolgung hinzugefügt werden, fügen es zu den `Listeners` Auflistung für das Trace-Element. Die Listenerklassen in .NET Framework leiten sich von der <xref:System.Diagnostics.TraceListener> Klasse.  
   
- Dieses Element kann in der Computerkonfigurationsdatei ("Machine.config") und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `<sharedListeners>` Element an den Listener hinzufügen `console` auf die `Listeners` Auflistung für beide die <xref:System.Diagnostics.TraceSource> und <xref:System.Diagnostics.Trace> Klassen. Die Konsolen-Ablaufverfolgungslistener Schreibt Ablaufverfolgungsinformationen in die Konsole durch Aufrufe von <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace>.  
+ Das folgende Beispiel zeigt, wie Sie mit der `<sharedListeners>` Element, um den Listener hinzuzufügen `console` auf die `Listeners` Auflistung für beide die <xref:System.Diagnostics.TraceSource> und <xref:System.Diagnostics.Trace> Klassen. Die Konsolen-Ablaufverfolgungslistener Schreibt Ablaufverfolgungsinformationen in die Konsole durch Aufrufen von <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace>.  
   
 ```xml  
 <configuration>  

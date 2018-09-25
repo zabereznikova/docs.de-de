@@ -7,16 +7,15 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d65dfd9a1560f2657f48b327277b64ab77014b47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743822"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085813"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;Hinzufügen&gt; -Element für &lt;NamedCaches&gt;
-Fügt eine `namedCache` Eintrags, der die `namedCaches` Auflistung für einen Arbeitsspeichercache.  
+Fügt eine `namedCache` einen Eintrag in der `namedCaches` Auflistung für einen Speichercache.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
@@ -42,10 +41,10 @@ Fügt eine `namedCache` Eintrags, der die `namedCaches` Auflistung für einen Ar
   
 |Attribut|Beschreibung|  
 |-|-|  
-|`CacheMemoryLimitMegabytes`|Ein Ganzzahlwert, der die maximal zulässige Größe (in Megabytes) angibt, die einer Instanz von einer <xref:System.Runtime.Caching.MemoryCache> anwachsen kann. Der Standardwert ist 0, was bedeutet, dass die <xref:System.Runtime.Caching.MemoryCache> Klasse Automatisches Anpassen der Größe Heuristik werden standardmäßig verwendet.|  
+|`CacheMemoryLimitMegabytes`|Ein ganzzahliger Wert, der angibt, die maximal zulässige Größe (in MB), die eine Instanz von einem <xref:System.Runtime.Caching.MemoryCache> anwachsen kann. Der Standardwert ist 0. das bedeutet, dass die <xref:System.Runtime.Caching.MemoryCache> -Heuristik-Klasse, die standardmäßig verwendet werden.|  
 |`Name`|Der Name des Caches.|  
-|`PhysicalMemoryLimitPercentage`|Eine ganze Zahl zwischen 0 und 100, die den maximalen Prozentsatz des Arbeitsspeichers physisch installierten Computer angibt, die vom Cache genutzt werden können. Der Standardwert ist 0, was bedeutet, dass die <xref:System.Runtime.Caching.MemoryCache> Klasse Automatisches Anpassen der Größe Heuristik werden standardmäßig verwendet.|  
-|`PollingInterval`|Ein Wert, der das Zeitintervall angibt, in dem die Cacheimplementierung die aktuelle Auslastung des Arbeitsspeichers mit den absoluten und prozentualen Speichergrenzen vergleicht, die für die Cacheinstanz festgelegt sind. Dieser Wert wird im Format "Hh" eingegeben.|  
+|`PhysicalMemoryLimitPercentage`|Ein ganzzahliger Wert zwischen 0 und 100, der den maximalen Prozentsatz der physisch installierten Arbeitsspeichers angibt, die vom Cache genutzt werden können. Der Standardwert ist 0. das bedeutet, dass die <xref:System.Runtime.Caching.MemoryCache> -Heuristik-Klasse, die standardmäßig verwendet werden.|  
+|`PollingInterval`|Ein Wert, der das Zeitintervall angibt, in dem die Cacheimplementierung die aktuelle Auslastung des Arbeitsspeichers mit den absoluten und prozentualen Speichergrenzen vergleicht, die für die Cacheinstanz festgelegt sind. Dieser Wert wird im-Format "Hh" eingegeben.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  `None`  
@@ -54,13 +53,13 @@ Fügt eine `namedCache` Eintrags, der die `namedCaches` Auflistung für einen Ar
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Enthält eine Auflistung von Konfigurationseinstellungen für die benannte <xref:System.Runtime.Caching.MemoryCache> Instanzen.|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Enthält eine Auflistung von Konfigurationseinstellungen für den benannten <xref:System.Runtime.Caching.MemoryCache> Instanzen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `add` -Element fügt einen Eintrag in einen der `namedCaches` Auflistung für einen Arbeitsspeichercache. Können Sie die [deaktivieren](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) Element vor der Verwendung der `add` Element sicher, dass es keine anderen sind benannte Caches in der Auflistung. Dieses Element kann in der Datei "Machine.config" und in der Datei "Web.config" verwendet werden.  
+ Die `add` -Element fügt einen Eintrag in einen der `namedCaches` Auflistung für einen Speichercache. Können Sie die [löschen](../../../../../docs/framework/configure-apps/file-schema/runtime/clear-element-for-namedcaches.md) Element vor der Verwendung der `add` Element sicher sein, dass es keine andere gibt benannte Caches in der Auflistung. Dieses Element kann in der Datei "Machine.config" und in der Datei "Web.config" verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Einstellungen für den standardmäßigen definiert `namedCache` Eintrags, der die `namedCaches` Auflistung für einen Arbeitsspeichercache.  
+ Das folgende Beispiel zeigt, wie Einstellungen für den standardmäßigen definiert `namedCache` einen Eintrag in der `namedCaches` Auflistung für einen Speichercache.  
   
 ```xml  
 <configuration>  

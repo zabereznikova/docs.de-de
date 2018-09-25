@@ -1,32 +1,32 @@
 ---
-title: Codekonventionen [F#]
-description: Erfahren Sie allgemeine Richtlinien und Idiome beim Schreiben von F#-Code.
+title: F#-Programmierung Konventionen
+description: Erfahren Sie, allgemeine Richtlinien und Idiome, beim Schreiben von F#-Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457981"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078472"
 ---
-# <a name="f-coding-conventions"></a>Codekonventionen [F#]
+# <a name="f-coding-conventions"></a>F#-Programmierung Konventionen
 
-Die folgenden Konventionen werden aus Erfahrung mit großen f# formuliert Codebasen. Die [fünf Prinzipien der gute f#-Code](index.md#five-principles-of-good-f-code) sind die Grundlage für jede Empfehlung. Sie beziehen sich auf die [f# Komponente Entwurfsrichtlinien](component-design-guidelines.md), jedoch gelten für alle f#-Code, nicht nur Komponenten wie Bibliotheken.
+Die folgenden Konventionen aus Erfahrung, die Arbeit mit großen f# formuliert werden Codebasen. Die [fünf Prinzipien guten F#-Code](index.md#five-principles-of-good-f-code) bilden die Grundlage jeder Empfehlung. Sie beziehen sich auf die [Entwurfsrichtlinien für F#-Komponente](component-design-guidelines.md), jedoch gelten für alle F#-Code, nicht nur Komponenten wie Bibliotheken.
 
 ## <a name="organizing-code"></a>Organisieren von code
 
-F# bietet zwei Hauptmethoden zum Organisieren von Code: Module und Namespaces. Diese sind ähnlich, aber Sie müssen die folgenden Unterschiede:
+F# bietet zwei bevorzugte Möglichkeiten, Code zu organisieren: Modulen und Namespaces. Diese sind ähnlich, aber Sie müssen die folgenden Unterschiede:
 
 * Namespaces werden als .NET Namespaces kompiliert. Module werden als statische Klassen kompiliert.
-* Namespaces sind immer der obersten Ebene. Module können auf der obersten Ebene und in anderen Modulen geschachtelt werden.
-* Namespaces können mehrere Dateien umfassen. Module können nicht.
+* Namespaces sind immer oberste Ebene. Module können der obersten Ebene und in anderen Modulen geschachtelt sein.
+* Namespaces können mehrere Dateien umfassen. Standardmodule nicht möglich.
 * Module können mit ergänzt werden `[<RequireQualifiedAccess>]` und `[<AutoOpen>]`.
 
 Die folgenden Richtlinien können Sie diese verwenden, um Ihren Code zu organisieren.
 
 ### <a name="prefer-namespaces-at-the-top-level"></a>Bevorzugen Sie Namespaces auf der obersten Ebene
 
-Für jeden öffentlich nutzbar Code sind Namespaces bietet, Module, die auf der obersten Ebene. Da sie als .NET Namespaces kompiliert werden, sind sie kann von c# mit kein Problem.
+Für jeden öffentlich nutzbar Code werden Namespaces Zugriffscode Modulen auf der obersten Ebene. Da sie als .NET Namespaces kompiliert werden, sind sie in c# genutzt, kein Problem.
 
 ```fsharp
 // Good!
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-Mithilfe der obersten Ebene treten möglicherweise anders aus, wenn Sie nur vom F#-aufgerufen, aber für C#-Consumern, können Aufrufer Katastrophenfall qualifizieren überrascht werden `MyClass` mit der `MyCode` Modul.
+Mit einem Modul auf oberster Ebene möglicherweise nicht angezeigt, unterschiedliche, wenn Sie nur von F#-aufgerufen, aber für C#-Verbraucher Aufrufer Ergebnissen möglicherweise überrascht sein, dass Sie zu qualifizieren `MyClass` mit der `MyCode` Modul.
 
 ```fsharp
 // Bad!
@@ -46,11 +46,11 @@ type MyClass() =
     ...
 ```
 
-### <a name="carefully-apply-autoopen"></a>Sorgfältig anwenden `[<AutoOpen>]`
+### <a name="carefully-apply-autoopen"></a>Sorgfältig anwenden. `[<AutoOpen>]`
 
-Die `[<AutoOpen>]` Konstrukt kann dadurch den Rahmen, was für Aufrufer verfügbar ist, und die Antwort auf etwas Ursprung ist "magische". Dies ist im Allgemeinen nicht empfehlenswert. Eine Ausnahme von dieser Regel wird die F#-Kernbibliothek selbst (obwohl dies auch etwas kontroverse ist).
+Die `[<AutoOpen>]` Konstrukt kann den Bereich der verfügbaren Aufrufern verunreinigen, und die Antwort auf einen Ursprung ist "magische". Dies ist in der Regel nicht gut. Eine Ausnahme von dieser Regel ist die F#-Kernbibliothek selbst (obwohl dies auch etwas umstrittenen ist).
 
-Es ist jedoch zur Vereinfachung, wenn Sie Hilfsfunktionen für eine öffentliche API verfügen, die Sie separat von diesem öffentliche API organisieren möchten.
+Es ist jedoch aus Gründen der benutzerfreundlichkeit, wenn Sie über Hilfsfunktionen für eine öffentliche API verfügen, die Sie zum Organisieren von separat über der öffentliche API möchten.
 
 ```fsharp
 module MyAPI =
@@ -67,15 +67,15 @@ module MyAPI =
         helper1 x y z
 ```
 
-Dadurch können Sie von der öffentlichen API einer Funktion ordnungsgemäß separate Implementierungsdetails ohne vollständig eine Hilfsprogramm jedes Mal zu qualifizieren Sie ihn aufrufen.
+Dadurch können Sie sauber separate Implementierungsdetails aus der öffentlichen API einer Funktion ohne vollständig eine Hilfsprogramm jedes Mal zu qualifizieren Sie ihn aufrufen.
 
-Darüber hinaus Verfügbarmachen von Erweiterungsmethoden und Ausdrucks-Generatoren auf Namespaceebene ausgedrückt werden kann problemlos mit `[<AutoOpen>]`.
+Darüber hinaus verfügbar gemacht, Erweiterungsmethoden und Ausdrucks-Generatoren auf Namespaceebene sauber ausgedrückt werden mit `[<AutoOpen>]`.
 
-### <a name="use-requirequalifiedaccess-whenever-names-could-conflict-or-you-feel-it-helps-with-readability"></a>Verwendung `[<RequireQualifiedAccess>]` sichern können einen Konflikt mit Namen, und es unterstützt die Lesbarkeit der Meinung
+### <a name="use-requirequalifiedaccess-whenever-names-could-conflict-or-you-feel-it-helps-with-readability"></a>Verwendung `[<RequireQualifiedAccess>]` jedes Mal, wenn Namen in Konflikt stehen können, oder Sie der Meinung sind, helfen Ihnen Lesbarkeit
 
-Hinzufügen der `[<RequireQualifiedAccess>]` Attribut auf ein Modul gibt an, dass das Modul kann nicht geöffnet werden, dass Verweise auf die Elemente des Moduls explizite benötigen Zugriff qualifiziert. Z. B. die `Microsoft.FSharp.Collections.List` -Modul ist dieses Attribut.
+Hinzufügen der `[<RequireQualifiedAccess>]` Attribut auf ein Modul gibt an, dass das Modul kann nicht geöffnet werden, dass Verweise auf die Elemente des Moduls explizite benötigen Zugriff qualifizierten. Z. B. die `Microsoft.FSharp.Collections.List` Modul verfügt über dieses Attribut.
 
-Dies ist hilfreich, wenn Funktionen und Werte im Modul Namen haben, die wahrscheinlich einen Konflikt mit Namen in anderen Modulen ausgeführt werden. Einen qualifizierten Zugriff erfordern, kann erheblich die langfristige Verwaltbarkeit und die Evolvability einer Bibliothek erhöhen.
+Dies ist nützlich, wenn Funktionen und Werte im Modul Namen haben, die einen Konflikt mit den Namen in anderen Modulen wahrscheinlich sind. Qualifizierten Zugriff erfordern, kann erheblich die langfristige wartbarkeit und Evolvability einer Bibliothek erhöhen.
 
 ```fsharp
 [<RequireQualifiedAccess>]
@@ -88,15 +88,15 @@ let s = getAString()
 let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 ```
 
-### <a name="sort-open-statements-topologically"></a>Sortieren `open` Anweisungen topologisch
+### <a name="sort-open-statements-topologically"></a>Sortierung `open` Anweisungen topologisch
 
-In F# erläutert werden, die Reihenfolge der Deklarationen ist von Belang, einschließlich mit `open` Anweisungen. Dies ist anders als bei c#, wobei die Auswirkung der `using` und `using static` ist unabhängig von der Reihenfolge der diese Anweisungen in einer Datei.
+In f# wird die Reihenfolge der Deklarationen von Bedeutung ist, einschließlich mit `open` Anweisungen. Dies ist anders als bei c#, wobei die Auswirkungen der `using` und `using static` ist unabhängig von der Reihenfolge dieser Anweisungen in einer Datei.
 
-In F# erläutert werden können Elemente, die in den Gültigkeitsbereich einer geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass dieser neuanordnung `open` alter-Anweisungen konnte die Bedeutung des Codes. Als Ergebnis jeder beliebige Sortierung aller `open` Anweisungen (z. B. alphanumerisch) ist im Allgemeinen nicht empfohlen werden, müssen Sie sich im Verhalten etwas generieren, die Sie möglicherweise erwarten.
+In f# können Elemente in einem Bereich geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass diese Neuordnung `open` Anweisungen können die Bedeutung des Codes ändern. Als Ergebnis jeden beliebigen aller sortieren `open` Anweisungen (z. B. alphanumerisch) wird im Allgemeinen nicht empfohlen, damit ein anderes Verhalten zu generieren, die Sie möglicherweise erwarten.
 
-Stattdessen empfehlen wir, dass sie zu sortieren [topologisch](https://en.wikipedia.org/wiki/Topological_sorting); d. h. sortieren Ihre `open` Anweisungen in der Reihenfolge, in der _Ebenen_ Ihres Systems definiert sind. Auf diese Weise alphanumerische Sortierung in verschiedene topologische Ebenen kann ebenfalls berücksichtigt werden.
+Stattdessen empfehlen wir, dass Sie diese sortieren [topologisch](https://en.wikipedia.org/wiki/Topological_sorting); sortieren, also Ihr `open` Anweisungen in der Reihenfolge, in der _Ebenen_ des Systems definiert sind. Alphanumerische in Schichten topologische Sortierung durchführen kann ebenfalls berücksichtigt werden.
 
-Als Beispiel sieht die topologische Sortierung für die F#-Compiler öffentliche API-Datei:
+Als Beispiel ist hier die topologische Sortierung für die F#-Compiler öffentliche API-Datei:
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -142,11 +142,11 @@ open Internal.Utilities
 open Internal.Utilities.Collections
 ```
 
-Beachten Sie, dass ein Zeilenumbruch topologische Ebenen mit jeder Ebene, die zu sortierenden alphanumerisch anschließend trennt. Diese werden ordnungsgemäß Code ohne versehentlich shadowing Werte organisiert.
+Beachten Sie, ein Zeilenumbruch topologische Ebenen, wobei jede Ebene danach alphanumerisch sortiert wird getrennt. Dieser organisiert Code ordnungsgemäß ohne shadowing versehentlich Werte.
 
 ## <a name="use-classes-to-contain-values-that-have-side-effects"></a>Verwenden Sie Klassen, um die Werte enthalten, die Nebeneffekte haben
 
-Es gibt viele Male Wenn Nebeneffekte, wie einen Kontext auf eine Datenbank oder andere Remoteressource instanziieren initialisieren einen Wert aufweisen kann. Es ist verlockend, u. a. in einem Modul zu initialisieren und in nachfolgenden Funktionen verwenden:
+Es gibt viele Male, wenn Nebeneffekte, wie Sie einen Kontext für eine Datenbank oder andere Remoteressource instanziieren initialisieren einen Wert haben kann. Es ist verlockend, beispielsweise in einem Modul zu initialisieren, und in nachfolgenden Funktionen verwenden:
 
 ```fsharp
 // This is bad!
@@ -161,15 +161,15 @@ module MyApi =
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
 ```
 
-Dies ist häufig nicht sinnvoll, Gründen:
+Dies ist häufig keine gute Idee für verschiedene Gründe haben:
 
-Zunächst Anwendungskonfiguration abgelegt wird, in die Codebase mit `dep1` und `dep2`. Dies ist schwer zu größeren Codebasen in verwalten.
+Zunächst wird die Anwendungskonfiguration in der Codebasis mit abgelegt `dep1` und `dep2`. Dies ist schwer in verwalten, dass die größeren Codebasen befindet.
 
-Zweitens statisch initialisierte Daten sollten keine Werte enthalten, die nicht threadsicher sind, wenn die Komponente selbst mehrere Threads verwendet wird. Dies ist eindeutig durch verletzt `dep3`.
+Zweitens werden statisch initialisierte Daten darf keine Werte enthalten, die nicht threadsicher sind, wenn die Komponente selbst mehrere Threads verwendet wird. Dies wird eindeutig durch verletzt `dep3`.
 
-Schließlich wird Initialisierung des Moduls in einem statischen Konstruktor für die gesamte Kompilationseinheit kompiliert. Wenn ein Fehler bei der Initialisierung der Let-Grenzwert in diesem Modul auftritt, Manifeste als eine `TypeInitializationException` , klicken Sie dann für die gesamte Lebensdauer der Anwendung zwischengespeichert wird. Dies kann nur schwer zu diagnostizieren sein. In der Regel eine innere Ausnahme, der Sie versuchen, zu dem Grund besteht, aber wenn keine vorhanden ist, besteht keine mitteilen, was die Ursache ist.
+Schließlich werden Initialisierung des Moduls in einem statischen Konstruktor für die gesamte Kompilationseinheit kompiliert. Wenn ein Fehler bei der wertinitialisierung von Let gebundenen in diesem Modul auftritt, manifestiert es als ein `TypeInitializationException` , die dann für die gesamte Lebensdauer der Anwendung zwischengespeichert wird. Dies kann nur schwer zu diagnostizieren sein. Es ist in der Regel eine innere Ausnahme, der Sie versuchen können, verständlich, aber wenn keine vorhanden ist, besteht keine Information darüber was die Ursache ist.
 
-Verwenden Sie eine einfache Klasse stattdessen nur zum Speichern von Abhängigkeiten:
+Stattdessen verwenden Sie eine einfache Klasse einfach, die Abhängigkeiten enthalten soll:
 
 ```fsharp
 type MyParametricApi(dep1, dep2, dep3) =
@@ -179,18 +179,18 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 Dies ermöglicht Folgendes:
 
-1. Betätigen alle abhängigen Status außerhalb der API selbst.
+1. Überträgt alle abhängigen Zustand die API selbst.
 2. Konfiguration kann nun außerhalb der API erfolgen.
 3. Fehler bei der Initialisierung für abhängige Werte können nicht als manifest wahrscheinlich eine `TypeInitializationException`.
 4. Die API ist jetzt einfacher zu testen.
 
 ## <a name="error-management"></a>Fehlerverwaltung
 
-Fehlerverwaltung in großen Systemen ist ein komplexer und vor-Unterfangen, und es sind keine Silber Nummerierung in Ihr System sichergestellt werden fehlertolerante und Verhalten sich auch. Die folgenden Richtlinien bieten Anleitungen zum Navigieren in dieser schwierig Speicherplatz.
+Fehlerverwaltung in großen Systemen ist ein komplexer und facettenreichen Unterfangen, und es sind keine Silver Aufzählungszeichen Ihrer Systeme zu gewährleisten, sind fehlertolerant und Verhalten sich auch. Die folgenden Richtlinien sollten bei der Navigation von dieser schwierig Speicherplatz hilfreich.
 
-### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Darstellen Sie Sonderfälle und ungültigen Status in Ihrer Domäne systeminterne Typen
+### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Darstellen Sie Fehlerfälle und ungültigen Status in Ihrer Domäne systeminterne Typen
 
-Mit [Unterscheidungs-Unions](../language-reference/discriminated-unions.md), f# bietet Ihnen die Möglichkeit, fehlerhafte Programmstatus in Ihrem Typsystem darstellen. Zum Beispiel:
+Mit [Unterscheidungs-Unions](../language-reference/discriminated-unions.md), f# gibt Ihnen die Möglichkeit, fehlerhafte Programmstatus in Ihrem Typsystem darstellen. Zum Beispiel:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -200,7 +200,7 @@ type MoneyWithdrawalResult =
     | UndisclosedFailure
 ```
 
-In diesem Fall stehen drei bekannte Methoden, die das Abbuchen von Geld von einem Bankkonto ausgeführt werden kann. Jeder Fehlerfall des Typs dargestellt wird und daher behandelt werden kann sicher in der gesamten Anwendung.
+In diesem Fall stehen drei bekannte Methoden, die bucht Geld von einem Bankkonto ausfallen können. Jeder Fehlerfall des Typs dargestellt wird und daher behandelt werden kann sicher in der gesamten Anwendung.
 
 ```fsharp
 let handleWithdrawal amount =
@@ -212,35 +212,35 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-Im Allgemeinen, wenn Sie die verschiedenen Möglichkeiten modellieren können, dass etwas kann **fehlschlagen** in Ihrer Domäne, klicken Sie dann Fehlerbehandlungscode ist nicht mehr als behandelt etwas müssen Sie zusätzlich zum normalen Programmablauf behandeln. Es ist einfach ein Bestandteil der normalen Programmablauf und nicht als **herausragende**. Es gibt zwei Hauptvorteile dieser:
+Im Allgemeinen, wenn Sie die verschiedenen Möglichkeiten modellieren können, dass etwas kann **fehlschlagen** in Ihrer Domäne, klicken Sie dann Fehlerbehandlungscode ist nicht mehr als behandelt etwas müssen Sie zusätzlich zum normalen Programmablauf behandeln. Es ist einfach ein Bestandteil der normalen Programmablauf und nicht als **außergewöhnliche**. Es gibt zwei Hauptvorteile sprechen für diese:
 
-1. Es ist einfacher zu verwalten, während Ihre Domäne im Zeitverlauf ändert.
-2. Für diesen Fehler sind einfacher zu Komponententest.
+1. Es ist einfacher zu verwalten wie Ihre Domäne im Laufe der Zeit ändert.
+2. Fehler werden einfacher Komponententests unterziehen.
 
-### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Verwenden Sie Ausnahmen aus, wenn der Fehler mit Typen dargestellt werden kann
+### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Verwenden Sie Ausnahmen aus, wenn der Fehler nicht mit Typen dargestellt werden kann
 
-Nicht alle Fehler können in einer Problemdomäne dargestellt werden. Diese Art von Fehlern werden *herausragende* Natur, daher die Möglichkeit, auslösen und Abfangen von Ausnahmen in F# erläutert werden.
+Nicht alle Fehler können in einer Problemdomäne dargestellt werden. Diese Art von Fehlern werden *außergewöhnliche* Natur, daher die Möglichkeit, auslösen und Abfangen von Ausnahmen in f#.
 
-Zunächst wird empfohlen, dass Sie Lesen der [Ausnahme Entwurfsrichtlinien](../../standard/design-guidelines/exceptions.md). Diese gelten auch für f#.
+Zunächst wird empfohlen, Sie lesen die [Ausnahme Entwurfsrichtlinien](../../standard/design-guidelines/exceptions.md). Diese gelten auch für f#.
 
-In f# verfügbar im Rahmen der Auslösen von Ausnahmen mit die wichtigen Konstrukten sollten in der folgenden Reihenfolge der Priorität berücksichtigt werden:
+Im Rahmen der Auslösen von Ausnahmen in f# verfügbar mit die wichtigen Konstrukten sollten in der folgenden Reihenfolge ihrer Priorität berücksichtigt werden:
 
 | Funktion | Syntax | Zweck |
 |----------|--------|---------|
-| `nullArg` | `nullArg "argumentName"` | Löst ein `System.ArgumentNullException` mit dem angegebenen Argumentnamen. |
-| `invalidArg` | `invalidArg "argumentName" "message"` | Löst ein `System.ArgumentException` mit einem angegebenen Argumentnamen und die Nachricht. |
-| `invalidOp` | `invalidOp "message"` | Löst ein `System.InvalidOperationException` mit der angegebenen Meldung. |
-|`raise`| `raise (ExceptionType("message"))` | Allgemeine Mechanismus zum Auslösen von Ausnahmen. |
-| `failwith` | `failwith "message"` | Löst ein `System.Exception` mit der angegebenen Meldung. |
-| `failwithf` | `failwithf "format string" argForFormatString` | Löst ein `System.Exception` mit einer Meldung durch die Formatzeichenfolge und ihre Eingaben bestimmt. |
+| `nullArg` | `nullArg "argumentName"` | Löst eine `System.ArgumentNullException` mit dem angegebenen Argumentnamen. |
+| `invalidArg` | `invalidArg "argumentName" "message"` | Löst eine `System.ArgumentException` mit einem angegebenen Argumentnamen und Nachricht. |
+| `invalidOp` | `invalidOp "message"` | Löst eine `System.InvalidOperationException` mit der angegebenen Meldung. |
+|`raise`| `raise (ExceptionType("message"))` | Allgemeinen Mechanismus zum Auslösen von Ausnahmen. |
+| `failwith` | `failwith "message"` | Löst eine `System.Exception` mit der angegebenen Meldung. |
+| `failwithf` | `failwithf "format string" argForFormatString` | Löst eine `System.Exception` mit der Meldung hängt von der Formatzeichenfolge und ihre Eingaben. |
 
-Verwendung `nullArg`, `invalidArg` und `invalidOp` als Mechanismus zum lösen `ArgumentNullException`, `ArgumentException` und `InvalidOperationException` gegebenenfalls.
+Verwendung `nullArg`, `invalidArg` und `invalidOp` als Mechanismus zum Auslösen `ArgumentNullException`, `ArgumentException` und `InvalidOperationException` bei Bedarf.
 
-Die `failwith` und `failwithf` Funktionen sollten im Allgemeinen vermieden werden, da sie die Basis auslösen `Exception` eingeben, nicht für eine bestimmte Ausnahme. Gemäß der [Ausnahme Entwurfsrichtlinien](../../standard/design-guidelines/exceptions.md), finden Sie spezifischere Ausnahmen auslösen, sofern möglich werden sollen.
+Die `failwith` und `failwithf` Funktionen sollten im Allgemeinen vermieden werden, da sie auf die Basis lösen `Exception` eingeben, nicht für eine bestimmte Ausnahme. Gemäß der [Ausnahme Entwurfsrichtlinien](../../standard/design-guidelines/exceptions.md), spezifischere Ausnahmen auslösen, wenn möglich werden sollen.
 
-### <a name="using-exception-handling-syntax"></a>Mithilfe der Ausnahmebehandlung-syntax
+### <a name="using-exception-handling-syntax"></a>Mithilfe der Syntax der Behandlung von Ausnahmen
 
-F# unterstützt Ausnahme Muster über die `try...with` Syntax:
+F# unterstützt Muster für die Ausnahme über die `try...with` Syntax:
 
 ```fsharp
 try
@@ -250,25 +250,25 @@ with
 | :? System.Security.SecurityException as e -> // Do something with it here
 ```
 
-Abstimmen von Funktionen zur Ausführung eine Ausnahme mit dem Mustervergleich ausführen werden etwas komplizierter, wenn Sie den Code bereinigen aufbewahren möchten. Eine solche Möglichkeit in diesem Fall ist die Verwendung [mit aktiven Mustern](../language-reference/active-patterns.md) als Mittel zum Funktion für den Fehlerfall eines mit einer Ausnahme selbst umgebenden. Beispielsweise können Sie eine API nutzen, die, wenn er eine Ausnahme auslöst, wertvollen Informationen in den Ausnahmemetadaten umschließt. Entpacken einen nützlichsten Wert im Text der Ausnahme aufgezeichnete in das aktive Muster und zurückgeben, dass der Wert in einigen Situationen hilfreich sein kann.
+Abgleichen von Funktionen bei einer Ausnahme mit dem Mustervergleich ausführen werden etwas schwieriger, wenn Sie den Code für eine übersichtlichere möchten. Eine solche Möglichkeit hierzu ist die Verwendung [mit aktiven Mustern](../language-reference/active-patterns.md) als Mittel zur Funktion für ein Fehler bei einer Ausnahme selbst um. Beispielsweise können Sie eine API nutzen, die, wenn es eine Ausnahme auslöst, wertvollen Informationen in die Ausnahmemetadaten einschließt. Das Aufheben dieses Zustands eines nützlicher Wert im Text die abgefangene Ausnahme in das aktive Muster und zurückgeben, dass der Wert in einigen Situationen hilfreich sein kann.
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Verwenden Sie keine monadische Fehlerbehandlung um Ausnahmen zu ersetzen.
 
-Ausnahmen werden als etwas Taboo bei der funktionalen Programmierung betrachtet. In der Tat verletzen Ausnahmen Reinheit, sodass sie nicht ganz funktionale berücksichtigt werden kann. Allerdings wird dadurch die Realität, in dem Code ausgeführt werden muss, und dieser Fehler können auftreten, Laufzeit ignoriert. Schreiben Sie Code in der Regel auf der Annahme, dass die meisten Dinge reinen weder total minimieren, unerfreuliche überraschungen sind.
+Ausnahmen werden als etwas Taboo bei der funktionalen Programmierung betrachtet. In der Tat verletzen Ausnahmen Reinheit, daher ist es sicher ist, die sie nicht-ziemlich funktionale berücksichtigen. Dies ignoriert jedoch die Realität, in dem Code ausgeführt werden muss, und dieser Laufzeit, Fehler auftreten können. Schreiben Sie Code in der Regel auf der Annahme, dass die meisten Informationen weder reine noch insgesamt, sodass unliebsame überraschungen Ausbleiben minimiert werden.
 
-Es ist wichtig, die folgenden Core Stärken/Aspekte von Ausnahmen im Hinblick auf ihre Relevanz und Eignung in der .NET Common Language Runtime und das sprachübergreifende Ökosystem als Ganzes zu berücksichtigen:
+Es ist wichtig, die folgenden Stärken/Kernaspekte von Ausnahmen in Bezug auf die Relevanz und die Eignung in der .NET Common Language Runtime und sprachübergreifende-Ökosystem als Ganzes zu berücksichtigen:
 
-1. Sie enthalten detaillierte Diagnoseinformationen, die sehr hilfreich ist, wenn ein Problem debuggen.
-2. Durch die Common Language Runtime und anderen gut verständlich sind.
-3. Reduzierung der erhebliche Textbaustein im Vergleich zu Code, der eine Methode zum verlässt *vermeiden* Ausnahmen durch die Implementierung einer Teilmenge der ihre Semantik auf Ad-hoc-Basis.
+1. Sie enthalten ausführliche Diagnoseinformationen, die sehr hilfreich ist, wenn ein Problem zu debuggen.
+2. Sie sind durch die Common Language Runtime und anderen .NET-Sprachen gut verstanden.
+3. Sie können zu verringern erheblich im Vergleich mit Code, der eine Methode zum verlässt *vermeiden* Ausnahmen durch die Implementierung einer Teilmenge der ihre Semantik auf Ad-hoc-Basis.
 
-Diese dritte Punkt ist wichtig. Für nicht trivialen komplexe Operationen ausführen kann wegen eines Fehlers beim Verwenden von Ausnahmen beim Umgang mit Datenstrukturen, z. B. Dies führen:
+Dieser dritte Punkt ist wichtig. Fehler beim Verwenden von Ausnahmen kann beim Umgang mit Strukturen wie folgt bei nicht trivialen komplexe Operationen ausführen führen:
 
 ```fsharp
 Result<Result<MyType, string>, string list>
 ```
 
-Dies kann problemlos zu instabilen Code wie einen Mustervergleich für "stringly typisierte" Fehler führen:
+Dies kann problemlos zu instabilem Code z. B. einen Musterabgleich für "stringly typisierte" Fehler führen:
 
 ```fsharp
 let result = doStuff()
@@ -280,7 +280,7 @@ match result with
     else ... // Who knows?
 ```
 
-Darüber hinaus kann es sein verlockend, jede Ausnahme in der Wunsch nach einer Funktion "einfache" behalten, die ein "nützlicher" zurückgibt:
+Darüber hinaus kann es verlockend sein, eine Ausnahme aus, in dem Wunsch nach einer "einfachen"-Funktion zu behalten, die ein "nützlicher" zurückgibt:
 
 ```fsharp
 // This is bad!
@@ -289,7 +289,7 @@ let tryReadAllText (path : string) =
     with _ -> None
 ```
 
-Leider `tryReadAllText` kann zahlreiche basierte auf einer Vielzahl von Vorgängen, die in einem Dateisystem durchgeführt kann Ausnahmen auslösen, und dieser Code verwirft sofort jegliche Informationen, was tatsächlich in Ihrer Umgebung falschen passiert werden kann. Wenn Sie diesen Code mit einem Ergebnistyp ersetzen, können Sie zurück zur Analyse des "stringly typisierte" Fehler:
+Leider `tryReadAllText` können zahlreiche basierte auf einer Vielzahl von Aufgaben, die in einem Dateisystem auftreten können Ausnahmen auslösen, und dieser Code verwirft sofort jegliche Informationen darüber, was tatsächlich in Ihrer Umgebung nicht in Ordnung sein kann. Wenn Sie diesen Code mit einem Ergebnistyp ersetzen, sind Sie an der Analyse des "stringly typisierte" Fehler:
 
 ```fsharp
 // This is bad!
@@ -305,9 +305,9 @@ match r with
     else ...
 ```
 
-Und platziert das Ausnahmeobjekt selbst in die `Error` Konstruktor nur erzwingt, dass Sie den Ausnahmetyp an der Aufrufsite anstatt in die Funktion ordnungsgemäß behandeln. Dadurch effektiv erstellt überprüfte Ausnahmen, die für den Umgang mit als Aufrufer einer API offenkundig unfun sind.
+Und das Ausnahmeobjekt selbst in die `Error` Konstruktor nur erzwingt, dass Sie den Typ der Ausnahme an der Aufrufsite und nicht in der Funktion ordnungsgemäß behandeln. Dadurch effektiv erstellt geprüften Ausnahmen, die bekanntermaßen für den Umgang mit als einer API-Aufrufer unfun sind.
 
-Eine gute Alternative zur in den Beispielen oben wird zum Abfangen von *bestimmte* Ausnahmen und der Rückgabewert keinen sinnvollen Wert im Kontext der diese Ausnahme. Wenn Sie ändern die `tryReadAllText` -Funktion wie folgt `None` hat mehr Bedeutung:
+Eine gute Alternative zu den obigen Beispielen ist zum Abfangen von *bestimmte* Ausnahmen und Return keinen sinnvollen Wert im Kontext dieser Ausnahme. Wenn Sie ändern die `tryReadAllText` funktioniert wie folgt `None` hat mehr Bedeutung:
 
 ```fsharp
 let tryReadAllTextIfPresent (path : string) =
@@ -315,21 +315,21 @@ let tryReadAllTextIfPresent (path : string) =
     with :? FileNotFoundException -> None
 ```
 
-Anstelle von funktioniert wie eine sammelfehlermeldung, ausführt diese Funktion jetzt ordnungsgemäß die Groß-/Kleinschreibung, wenn eine Datei wurde nicht gefunden, und weisen Sie diesem Bedeutung eine Rückgabe. Dieser Rückgabewert kann diese auftretender Fehler beim Zuordnen nicht verwerfen alle Kontextinformationen oder Erzwingen der Aufrufer für den Umgang mit einem Fall, die möglicherweise nicht relevant ist an diesem Punkt im Code.
+Statt als ein Catch-All funktioniert, wird diese Funktion jetzt ordnungsgemäß den Fall handhaben, eine Datei wurde nicht gefunden und eine Rückgabe, Bedeutung zuweisen. Dieser Rückgabewert kann zu diesem Fehlerfall bei der nicht verwerfen alle Kontextinformationen oder erzwingen Aufrufe an einen Fall verarbeiten, die möglicherweise nicht relevant ist an diesem Punkt im Code zuordnen.
 
-Typen wie `Result<'Success, 'Error>` eignen sich für Standardvorgänge, in dem sie geschachtelt sind nicht, und optionale f#-Typen sind ideal für die Darstellung etwas entweder möglich *etwas* oder *nichts*. Sie sind kein Ersatz für Ausnahmen, jedoch und sollte nicht in einem Versuch zum Ersetzen von Ausnahmen verwendet werden. Stattdessen sollten sie Umsicht Adresse bestimmte Aspekte der Ausnahme und die Richtlinie für die Verwaltung targeted angewendet werden.
+Typen wie `Result<'Success, 'Error>` eignen sich für grundlegende Vorgänge, in dem sie geschachtelt sind nicht und optionale f#-Typen sind ideal für darstellen, wenn etwas entweder zurückgeben könnte *etwas* oder *nichts*. Sie sind kein Ersatz für Ausnahmen, allerdings und sollte nicht versuchen, Ersetzen von Ausnahmen verwendet werden. Stattdessen sollten sie mit Bedacht auf Aspekte der Adresse der Ausnahme und die Richtlinie für die Verwaltung in die entsprechenden Methoden angewendet werden.
 
-## <a name="partial-application-and-point-free-programming"></a>Teilweise Anwendung und frei von Punkt-Programmierung
+## <a name="partial-application-and-point-free-programming"></a>Teilweise Anwendung "und" Punkt-free-Programmierung
 
-F# unterstützt teilweise Anwendung, und somit auf verschiedene Arten der Programmierung in einem Format mit Punkt freizugeben. Dies kann für die Wiederverwendung von Code in einem Modul oder die Implementierung von etwas von Vorteil sein, allerdings handelt es sich im Allgemeinen nicht etwas, um die öffentlich verfügbar zu machen. Im Allgemeinen Punkt frei Programmierung ist ein Vorteil, dass es in und von sich selbst und kann ein großes cognitive Hindernis für Personen, die im entsprechenden Stil nicht mehr über sind hinzufügen.
+F# unterstützt partielle Anwendung, und daher verschiedene Arten der Programmierung in einem Punkt-free-Stil. Dies kann für die Wiederverwendung von Code in einem Modul oder die Implementierung von etwas von Vorteil sein, aber es wird in der Regel nicht öffentlich verfügbar machen. Im Allgemeinen kann Point-free-Programmierung keine Tugend an und für sich selbst, und eine erhebliche Hürde für cognitive für Personen, die nicht in der Formatvorlage befinden werden.
 
-### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Verwenden Sie keine teilweise Anwendung und in öffentlichen APIs currying
+### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Verwenden Sie teilweise Anwendung und in öffentlichen APIs currying nicht
 
-Mit wenig Ausnahme kann die Verwendung der partiellen Anwendung von öffentlichen APIs für den Consumer verwirrend sein. In der Regel `let`-gebundenen Werte in f#-Code sind **Werte**, nicht **Funktion Werte**. Vermischen von Werten und Funktionswerten kann dazu führen, speichern eine kleine Anzahl von Codezeilen für relativ viel cognitive Mehraufwand, insbesondere dann, wenn Sie z. B. mit Operatoren kombiniert `>>` um Funktionen zu erstellen.
+Mit kleinen Ausnahme kann die Verwendung von teilweise Anwendung von öffentlichen APIs für Benutzer verwirrend sein. In der Regel `let`-gebundenen Werte in F#-Code sind **Werte**, nicht **Funktionswerte**. Miteinander kombinieren, Werte und Werte von Funktionen kann dazu führen, speichern eine kleine Anzahl von Codezeilen im Austausch gegen einiges an cognitive Mehraufwand, insbesondere dann, wenn Sie z. B. mit Operatoren kombiniert `>>` um Funktionen zu erstellen.
 
-### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Betrachten Sie die Auswirkungen auf die Tools für die Programmierung Punkt frei
+### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Betrachten Sie die Auswirkungen auf die Tools für Punkt-free-Programmierung
 
-Funktionen mit Currying ihre Argumente nicht beschriftet. Dies hat Auswirkungen auf die Tools. Betrachten Sie die folgenden zwei Funktionen:
+Funktionen mit Currying ihre Argumente nicht beschriftet. Dies hat Auswirkungen auf die Tools. Beachten Sie die folgenden zwei Funktionen:
 
 ```fsharp
 let func name age =
@@ -339,7 +339,7 @@ let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
 ```
 
-Beide sind gültige Funktionen jedoch `funcWithApplication` ist eine Funktion, mit Currying. Wenn Sie ihre Typen in einem Editor zeigen, wird Folgendes angezeigt:
+Beide sind gültige Funktionen, aber `funcWithApplication` ist eine Funktion, mit Currying. Wenn Sie über ihre Typen in einem Editor bewegen, wird Folgendes angezeigt:
 
 ```fsharp
 val func : name:string -> age:int -> unit
@@ -347,15 +347,15 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-An der Aufrufsite QuickInfos in Tools wie Visual Studio nicht erhalten Sie aussagekräftige Informationen, was die `string` und `int` Eingabetypen tatsächlich darstellen.
+An der Aufrufsite QuickInfos in Tools wie Visual Studio nicht erhalten Sie aussagekräftige Informationen, welche die `string` und `int` Eingabetypen tatsächlich darstellen.
 
-Treten Punkt frei Code wie `funcWithApplication` öffentlich nutzbar ist, es wird empfohlen, einen vollständigen η-Erweiterung vornehmen, sodass Tools wählen Sie aussagekräftige Namen für die Argumente an bis kann.
+Punkt-free-Code wie auftreten `funcWithApplication` , die öffentlich nutzbar ist, es wird empfohlen, eine vollständige η-Erweiterung, damit Tools wählen Sie aussagekräftige Namen für die Argumente an bis kann.
 
-Darüber hinaus kann Debugcode Punkt frei, wenn nicht sogar unmöglich schwierig sein. Tools zum Debuggen basieren auf Werte, die an den Namen gebunden (z. B. `let` Bindungen), um Sie in der Mitte Zwischenwerte durch die Ausführung überprüfen. Wenn der Code keine Werte überprüfen aufweist, wird nichts zu debuggen. In der Zukunft Debugtools weiterentwickelt kann, um diese Werte basierend auf der zuvor ausgeführten Pfade zu synthetisieren, aber es ist nicht ratsam, Ihre Suchergebnisse auf hedge *potenzielle* Funktionalität Debuggen.
+Darüber hinaus kann Punkt fehlerfreien Code zu debuggen, wenn nicht sogar unmöglich schwierig sein. Tools zum Debuggen communitywerte nutzen, um Namen gebunden (z. B. `let` Bindungen), damit Sie während der Ausführung Zwischenwerte Ausführung überprüfen können. Wenn im Code keine Werte, um zu überprüfen, aber es gibt noch nichts zu debuggen. In Zukunft weiterentwickeln kann debugging-Tools, um diese Werte, die anhand der zuvor ausgeführten Pfade zu synthetisieren, aber es ist nicht ratsam, Ihre Suchergebnisse auf allerhöchstem *potenzielle* Debugfunktionen.
 
-### <a name="consider-partial-application-as-a-technique-to-reduce-internal-boilerplate"></a>Betrachten Sie teilweise Anwendung als eine Technik zum Reduzieren der internen Textbaustein
+### <a name="consider-partial-application-as-a-technique-to-reduce-internal-boilerplate"></a>Betrachten Sie teilweise Anwendung als Verfahren, um interne Codebausteine zu reduzieren.
 
-Im Gegensatz zu vorherigen Punkt ist teilweise Anwendung ein traumhaftes Tool zur Reduzierung der Textbaustein innerhalb einer Anwendung oder die tieferen Besonderheiten der API. Es kann für die Implementierung der etwas komplizierteren APIs, wobei Textbaustein häufig einen Bereich mit den für den Umgang mit ist für die Komponententests hilfreich sein. Z. B. der folgende Code zeigt, wie Sie erreichen können, welche die meisten Mockframeworks Ihnen ohne externe Abhängigkeit solches Framework und einer verknüpften erfahren, dass die API Werk.
+Im Gegensatz zum vorherigen Punkt handelt ist teilweise Anwendung ein hervorragendes Tool zum Reduzieren der Codebaustein in einer Anwendung oder die umfassendere Interna einer API. Es kann für Komponententests, die die Implementierung komplizierter-APIs, in denen Codebausteine zu handhaben ist häufig hilfreich sein. Beispielsweise der folgende Code zeigt, wie Sie erreichen können, welche die meisten verfügbaren Mockframeworks erhalten Sie ohne eine externe Abhängigkeit auf solch einem Framework, und einen zugehörigen erfahren, dass Individual-API.
 
 Betrachten Sie beispielsweise die folgende Lösung Topografie aus:
 
@@ -379,7 +379,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-UnitTests `Transactions.doTransaction` in `ImplementationLogic.Tests.fspoj` ist einfach:
+Komponententests `Transactions.doTransaction` in `ImplementationLogic.Tests.fspoj` ist einfach:
 
 ```fsharp
 namespace TransactionsTestingUtil
@@ -390,7 +390,7 @@ module TransactionsTestable =
     let getTestableTransactionRoutine mockContext = Transactions.doTransaction mockContext
 ```
 
-Anwenden von teilweise `doTransaction` Objekt mit einem mocking Kontext können Sie die Funktion in allen Komponententests aufrufen, ohne einen mocked Kontext jedes Mal erstellen:
+Teilweise Anwendung `doTransaction` Objekt mit einem mocking Kontext können Sie die Funktion in allen Komponententests aufrufen, ohne jedes Mal einen simulierte Kontext zu erstellen:
 
 ```fsharp
 namespace TransactionTests
@@ -414,43 +414,43 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
     Assert.Equal(expected, actual)
 ```
 
-Dieses Verfahren sollten auf die gesamte Codebase nicht universell angewendet, aber es ist eine gute Möglichkeit, Textbausteine für komplizierte Besonderheiten und diese Mechanismen für die Komponententests zu reduzieren.
+Dieses Verfahren sollten nicht universell angewendet werden, Ihre gesamte Codebasis, aber es ist eine gute Möglichkeit zur Reduzierung von Codebausteine für komplizierte-Interna und Komponententests, die die Interna.
 
 ## <a name="access-control"></a>Zugriffssteuerung
 
-F#-verfügt über mehrere Optionen für [Zugriffssteuerung](../language-reference/access-control.md), geerbt vom was in der .NET Common Language Runtime verfügbar ist. Diese sind nicht nur für Typen verwendet werden – verwenden sie für Funktionen zu.
+F# weist mehrere Optionen für [Zugriffssteuerung](../language-reference/access-control.md), geerbt vom, was in der .NET Runtime verfügbar ist. Diese sind nicht nur für Typen verwendet werden – Sie können sie für Funktionen zu.
 
-* Bevorzugen nicht-`public` Typen und Member, bis Sie öffentlich werden benötigt. Dadurch wird minimiert auch, welche Consumer-Paar an
-* Bemühen, behalten Sie alle Hilfsfunktionen `private`.
-* Betrachten Sie die Verwendung von `[<AutoOpen>]` auf eine private Hilfsfunktionen, wenn zahlreiche versetzten-Modul.
+* Lieber nicht`public` Typen und Member, bis Sie sie öffentlich nutzbar sein benötigen. Dies minimiert ebenfalls, welche Consumer-Paar
+* Sich bemühen, behalten Sie alle Hilfsfunktionen `private`.
+* Betrachten Sie die Verwendung von `[<AutoOpen>]` für ein Modul private Hilfsfunktionen, wenn sie zahlreiche sind.
 
 ## <a name="type-inference-and-generics"></a>Typrückschluss und Generika
 
-Typrückschluss sparen Sie viel Textbaustein eingeben. Und automatische Verallgemeinerung in f#-Compiler können Sie allgemeineren Code mit fast keine zusätzlichen Aufwand ihrerseits zu schreiben. Diese Funktionen sind jedoch nicht universell gut.
+Typrückschluss können Sie über die Eingabe viele häufig speichern. Und automatische Verallgemeinerung in f#-Compiler können Sie generischen Code mit fast kein zusätzlicher Aufwand ihrerseits zu schreiben. Diese Funktionen sind jedoch nicht universell gut.
 
-* Betrachten Sie beschriften Argumentnamen mit expliziten Typen in öffentlichen APIs und verlassen Sie sich nicht auf den Typrückschluss für diesen.
+* Betrachten Sie die Argumentnamen mit expliziter Typen in öffentlichen APIs, die Bezeichnung, und verlassen Sie sich nicht auf den Typrückschluss für diese.
 
-    Der Grund dafür ist, dass **Sie** Kontrolle über die Form von Ihrer API, die nicht vom Compiler werden sollte. Obwohl der Compiler sehr gut an Ableiten von Typen für Sie ausführen kann, ist es möglich, dass die Form der API ändern, wenn die Mechanismen, die auf basiert Typen geändert wurden. Dies kann sein, was Sie möchten, aber Befehlsbeispiel führt zu einer Änderung der wichtige-API, für die downstreamconsumer dann für den Umgang mit. Stattdessen, wenn Sie die Form des Ihre öffentliche API explizit steuern, dann können Sie diese Änderungen steuern. DDD ausgedrückt kann dies als eine Schicht Anti-Beschädigung betrachtet werden.
+    Der Grund dafür ist, dass **Sie** muss in der Form Ihrer API, die nicht der Compiler-Steuerelement. Obwohl der Compiler sehr gut an das Ableiten von Typen für Sie tun kann, ist es möglich, dass die Form Ihrer API-Änderung, wenn die standardbibliotheksinternen Elementen, denen in diesem Fall verwendet die Typen geändert wurden. Dies ist möglicherweise erwünscht, aber in eine grundlegende Änderung der API, die downstreamconsumer klicken Sie dann für den Umgang mit fast absoluter Sicherheit führt. Stattdessen, wenn Sie explizit die Form der öffentlichen API steuern, dann können Sie diese Änderungen steuern. In DDD-Terminologie kann dies als eine Anti-Corruption-Ebene aufgefasst werden.
 
-* Nennen Sie einen aussagekräftigen Namen zu Ihrer generischen Argumenten.
+* Beachten Sie, sodass einen aussagekräftigen Namen zu Ihrer generischen Argumente.
 
-    Es sei denn, Sie tatsächlich generischen Code, der nicht spezifisch für eine bestimmte Domäne ist schreiben, können ein aussagekräftigen Namen andere Programmierer verstehen die Domäne, in dem sie arbeiten. Beispielsweise einen Typparameter mit dem Namen `'Document` im Kontext der Interaktion mit einem Dokument Datenbank erleichtert klarer, dass generische Dokumenttypen können, von der Funktion oder einen Member akzeptiert werden mit dem Sie arbeiten.
+    Es sei denn, Sie tatsächlich generischen Code, der nicht spezifisch für eine bestimmte Domäne ist schreiben, können ein aussagekräftigen Namen andere Programmierer verstehen der Domäne, die sie gerade arbeiten. Beispielsweise einen Typparameter, die mit dem Namen `'Document` in den Kontext für die Interaktion mit einem Dokument Datenbank ist es klarer, dass generische Dokumenttypen können, von der Funktion oder ein Element akzeptiert werden mit dem Sie arbeiten.
 
-* Erwägen Sie die Benennung der generische Typparameter mit "PascalCase".
+* Erwägen Sie die Benennung von generischen Typparametern mit PascalCase.
 
-    Dies ist die allgemeine Möglichkeit, die Aktionen in .NET, daher wird empfohlen, dass die Verwendung von "PascalCase" anstatt Snake_case oder camelCase ändern möchten.
+    Dies ist die allgemeine Vorgehensweise Dinge in .NET ist die Verwendung von PascalCase anstelle von Snake_case oder CamelCase empfohlen.
 
-Schließlich ist automatische Verallgemeinerung nicht immer ein Segen für Personen, die F#- oder einer großen Codebasis nicht vertraut sind. Bei der Verwendung von Komponenten, die generisch sind ist cognitive Aufwand. Wenn automatisch darüber hinaus die generalisierte Funktionen werden nicht mit verschiedenen Eingabetypen (Let allein, wenn sie z. B. verwendet werden soll) verwendet, wird keine echte Vorteil diese generischen zu diesem Zeitpunkt wird. In Betracht gezogen Sie, wenn der Code, den Sie schreiben tatsächlich nicht generischen profitieren.
+Schließlich ist automatische Verallgemeinerung nicht immer ein Segen für Personen gedacht, die f#- oder einer großen Codebasis. Mithilfe von Komponenten, die generisch sind ist cognitive Aufwand. Wenn automatisch darüber hinaus die generalisierte Funktionen werden nicht verwendet, mit verschiedenen Eingabetypen (Let nur, wenn sie z. B. verwendet werden sollen), dann keinen echten Vorteil, sie generisch zu diesem Zeitpunkt. Berücksichtigen Sie immer, wenn der Code, den Sie schreiben tatsächlich profitieren von der generischen.
 
 ## <a name="performance"></a>Leistung
 
-F#-Werte sind unveränderlich ist, wird standardmäßig die Ihnen ermöglicht, bestimmte Klassen von Fehlern (insbesondere die im Zusammenhang mit Parallelität und Parallelität) zu vermeiden. Allerdings kann in bestimmten Fällen um eine optimale (oder sogar sinnvoll) Effizienz Ausführungszeit oder speicherbelegungen zu erzielen eine Spanne der Arbeit am besten implementiert werden mithilfe von direkten Mutation des Status. Dies ist möglich, in ein Opt-in-Basis mit f# mit dem `mutable` Schlüsselwort.
+F#-Werte sind unveränderlich, standardmäßig die Ihnen ermöglicht, bestimmte Klassen von Fehlern (insbesondere die im Zusammenhang mit Parallelität und Konkurrenz) zu vermeiden. Allerdings kann in bestimmten Fällen um eine optimale (oder sogar sinnvoll) Effizienz Ausführungszeit oder speicherbelegungen, eine Spanne der Arbeit am besten implementiert werden mithilfe des direktes Veränderung des Zustands. Dies ist möglich, in einer Basis Opt-in mit f# mit der `mutable` Schlüsselwort.
 
-Allerdings verwenden der `mutable` in f# entwurfsseitig funktionale Reinheit fühlen. Dies ist in Ordnung, wenn Sie Erwartungen aus Reinheit zum Anpassen [referenzielle Transparenz](https://en.wikipedia.org/wiki/Referential_transparency). Referenzielle Transparenz - nicht Reinheit - ist Endziel es beim Schreiben von f#-Funktionen. Dadurch können Sie eine funktionsfähige Schnittstelle über einer Mutation-basierten Implementierung für Leistung wichtigen Code zu schreiben.
+Allerdings verwenden der `mutable` in f# echtzeiteinschränkungen funktionale Reinheit fühlen. Dies ist in Ordnung, wenn Sie anpassen, dass die Erwartungen Reinheit zu [referenzieller Transparenz](https://en.wikipedia.org/wiki/Referential_transparency). Referenzieller Transparenz - nicht Reinheit – ist das Ziel beim Schreiben von f#-Funktionen. Dadurch können Sie eine funktionsfähige-Schnittstelle über eine Mutation-basierte Implementierung für die Leistung kritischen Code zu schreiben.
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Umschließen Sie änderbare Code unveränderlichen Schnittstellen
+### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Umschließen Sie änderbare Code in der unveränderlichen Schnittstellen
 
-Mit referenziellen Transparenz als Ziel ist es wichtig, Code zu schreiben, die nicht die änderbare Tiefen leistungskritischen Funktionen zur Verfügung stellt. Z. B. der folgende code implementiert die `Array.contains` -Funktion in der f#-Kernbibliothek:
+Mit referenzieller Transparenz als Ziel ist es wichtig, Code schreiben, der nicht die änderbare Tiefen des leistungskritischen Funktionen verfügbar macht. Das folgende Codebeispiel implementiert die `Array.contains` Funktion in der F#-Kernbibliothek:
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -464,11 +464,11 @@ let inline contains value (array:'T[]) =
     state
 ```
 
-Das Aufrufen dieser Funktion mehrmals ändert sich nicht auf das zugrunde liegende Array, noch ist es erforderlich, alle änderbaren Zustand in Ihre Verwendung beibehalten. Es ist Referenziell transparent, obwohl fast jede Codezeile darin Mutation verwendet.
+Das Aufrufen dieser Funktion mehrmals ändert sich nicht auf das zugrunde liegende Array, noch ist es erforderlich, veränderlichen Zustand in Ihre Verwendung zu verwalten. Es ist Referenziell transparent, obwohl nahezu jede Codezeile darin Mutation verwendet.
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>Betrachten Sie änderbare Daten in Klassen kapseln
+### <a name="consider-encapsulating-mutable-data-in-classes"></a>Beachten Sie, änderbare Daten in Klassen kapseln
 
-Im vorherige Beispiel verwendet eine einzelne Funktion, um Vorgänge mithilfe änderbare Daten kapseln. Dies ist nicht immer ausreichend für komplexe Datenmengen. Betrachten Sie die folgenden Sätze von Funktionen aus:
+Im vorherige Beispiel verwendet eine einzelne Funktion, um Vorgänge mit änderbare Daten zu kapseln. Dies ist nicht immer ausreichend für komplexere Sätze von Daten. Beachten Sie die folgenden Sätze von Funktionen aus:
 
 ```fsharp
 open System.Collections.Generic
@@ -487,7 +487,7 @@ let closureTableContains (key, value) (t: Dictionary<_, HashSet<_>>) =
     | (false, _) -> false
 ```
 
-Dieser Code ist leistungsfähiger, aber macht die Mutation basierende Datenstruktur, dass Aufrufer für die Verwaltung zuständig sind. Dies kann innerhalb einer Klasse ohne zugrunde liegende Member umbrochen werden, die geändert werden kann:
+Macht die Mutation basierende Datenstruktur, dass Aufrufer für die Verwaltung zuständig sind, aber dieser Code ist leistungsfähig. Dies kann innerhalb einer Klasse ohne zugrunde liegende Member umbrochen werden, die geändert werden können:
 
 ```fsharp
 open System.Collections.Generic
@@ -510,11 +510,11 @@ type Closure1Table() =
         | (false, _) -> false
 ```
 
-`Closure1Table` Kapselt die zugrunde liegende Mutation kennwortbasierten Datenschutzdienst-Struktur, nicht erzwingen Aufrufer auf die zugrunde liegende Datenstruktur zu verwalten. Klassen sind eine leistungsfähige Möglichkeit zum Kapseln von Daten und Routinen, die Mutation-basiert sind, ohne die Details für Aufrufer verfügbar zu machen.
+`Closure1Table` Kapselt die zugrunde liegende Mutation basierende Data-Struktur, wodurch nicht erzwungen, Aufrufe an die zugrunde liegende Datenstruktur zu verwalten. Klassen sind eine leistungsstarke Möglichkeit zum Kapseln von Daten und Routinen, die Mutation-basiert sind, ohne die Details für Aufrufer verfügbar zu machen.
 
 ### <a name="prefer-let-mutable-to-reference-cells"></a>Bevorzugen `let mutable` zu Referenzzellen
 
-Referenzzellen sind eine Möglichkeit, den Verweis auf einen Wert anstatt den Wert selbst darstellen. Obwohl sie für leistungskritische Code verwendet werden können, werden sie im Allgemeinen nicht empfohlen. Betrachten Sie das folgende Beispiel:
+Referenzzellen sind eine Möglichkeit, den Verweis auf einen Wert anstatt den Wert selbst darstellen. Obwohl sie für leistungskritische Code verwendet werden können, werden sie in der Regel nicht empfohlen. Betrachten Sie das folgende Beispiel:
 
 ```fsharp
 let kernels =
@@ -528,7 +528,7 @@ let kernels =
     !acc |> Seq.toList
 ```
 
-Die Verwendung von einer Referenzzelle Täuschung"" alle nachfolgenden Code zu dereferenzieren und verweisen auf die zugrunde liegenden Daten erneut. Erwägen Sie stattdessen `let mutable`:
+Die Verwendung von einer Referenzzelle jetzt Täuschung"" alle nachfolgenden Code zu von dereferenziert und erneut auf die zugrunde liegenden Daten verweisen. Erwägen Sie stattdessen `let mutable`:
 
 ```fsharp
 let kernels =
@@ -542,49 +542,49 @@ let kernels =
     acc |> Seq.toList
 ```
 
-Abgesehen von den einzelnen Fehlerpunkt Mutation in der Mitte der Lambda-Ausdruck, alle anderen Code, der berührt `acc` können dies in einer Weise, die nicht für die Verwendung einer normalen unterscheidet tun `let`-unveränderlichen Wert gebunden. Dies wird im Laufe der Zeit ändern vereinfachen.
+Abgesehen von der einzige Punkt der Veränderung in der Mitte der Lambda-Ausdruck, alle anderen Code, der berührt `acc` dazu in einer Weise, die nicht für die Verwendung einer normalen unterscheidet `let`-unveränderlichen Wert gebunden. Dies wird im Laufe der Zeit ändern erleichtern.
 
-## <a name="object-programming"></a>Objekt-Programmierung
+## <a name="object-programming"></a>Objektprogrammierung
 
-F# bietet vollständige Unterstützung für Objekte und Konzepte für objektorientierte (OO). Obwohl viele OO Konzepte leistungsstarke und nützlich sind, sind nicht alle von ihnen sich perfekt für verwenden. Die folgenden Listen bieten Anleitungen zu den Kategorien von OO Funktionen auf hoher Ebene.
+F# bietet vollständige Unterstützung für Objekte und Konzepte für objektorientierte (OO). Obwohl viele OO-Konzepte leistungsfähig und nützlich sind, sind nicht alle von ihnen erzielen Sie, wenn verwenden. Die folgenden Listen bieten Anleitungen für die Kategorien von OO-Funktionen auf hoher Ebene.
 
 **Sollten Sie diese Funktionen in vielen Situationen verwenden:**
 
-* Punktnotation (`x.Length`)
+* Punktierte Schreibweise (`x.Length`)
 * Instanzmember
 * Implizite Konstruktoren
 * Statische Member
-* Indexer-Notation (`arr.[x]`)
+* Indexers (`arr.[x]`)
 * Benannte und optionale Argumente
 * Schnittstellen und schnittstellenimplementierungen
 
-**Erreichen Sie nicht zuerst für diese Funktionen, aber Umsicht anzuwenden Sie, wenn sie zur Lösung eines Problems sind:**
+**Greifen Sie nicht zuerst für diese Funktionen zu, jedoch mit Umsicht anzuwenden Sie, wenn sie zur Lösung eines Problems sind:**
 
 * Methodenüberladung
 * Gekapselten änderbaren Daten
-* Operatoren auf Typen
+* Operatoren für Typen
 * Auto-Eigenschaften
 * Implementieren von `IDisposable` und `IEnumerable`
-* Typerweiterungen
+* Erweiterungen des Typs
 * Ereignisse
 * Strukturen
 * Delegaten
 * Enumerationen
 
-**Vermeiden Sie diese Funktionen in der Regel, sofern Sie sie verwenden müssen:**
+**Vermeiden Sie diese Funktionen in der Regel, es sei denn, Sie sie verwenden müssen:**
 
-* Vererbung basierende Typenhierarchien und implementierungsvererbung
+* Vererbung basierende Typenhierarchien und von implementierungsvererbung
 * NULL-Werte und `Unchecked.defaultof<_>`
 
-### <a name="prefer-composition-over-inheritance"></a>Ziehen Sie Komposition Vererbung
+### <a name="prefer-composition-over-inheritance"></a>Vererbung Komposition vorziehen
 
-[Komposition über Vererbung](https://en.wikipedia.org/wiki/Composition_over_inheritance) ist ein langjähriges-Idiom, die gute f#-Code entsprechen kann. Fundamentales Prinzip ist, sollten nicht verfügbar eine Basisklasse machen und zum Erzwingen von Aufrufern das erben von dieser Basisklasse, Funktionalität zu erhalten.
+[Aufbau im Laufe der Vererbung](https://en.wikipedia.org/wiki/Composition_over_inheritance) ist eine langfristige Vorgehensweise, die guter F#-Code entsprechen kann. Das grundlegende Prinzip ist, dass Sie nicht verfügbar eine Basisklasse machen und Erzwingen von Aufrufern das erben von dieser Basisklasse um Funktionen zu erhalten.
 
-### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>Verwenden Sie Objektausdrücke, um Schnittstellen zu implementieren, wenn Sie eine Klasse benötigen
+### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>Verwenden Sie Object-Ausdrücke, um Schnittstellen zu implementieren, wenn Sie eine Klasse nicht
 
-[Objektausdrücke](../language-reference/object-expressions.md) ermöglichen es Ihnen, im Handumdrehen Schnittstellen implementieren die implementierte Schnittstelle auf einen Wert binden, ohne dass dazu innerhalb einer Klasse. Dies ist zweckmäßig, insbesondere dann, wenn Sie _nur_ müssen die Schnittstelle implementieren und keine Notwendigkeit für eine vollständige-Klasse.
+[Objektausdrücke](../language-reference/object-expressions.md) die implementierte Schnittstelle können Sie zum Implementieren von Schnittstellen dynamisch an einen Wert ohne dafür innerhalb einer Klasse gebunden. Dies ist praktisch, insbesondere dann, wenn Sie _nur_ müssen die Schnittstelle implementieren und müssen nicht für eine vollständige Klasse.
 
-Hier ist z. B. der Code, der ausgeführt wird, in [Ionide](http://ionide.io/) eine Update-Codeaktion bereitstellen, wenn Sie ein Symbol hinzugefügt haben, die Sie besitzen eine `open` -Anweisung:
+Beispielsweise sieht der Code, der ausgeführt wird, in [Ionide](http://ionide.io/) eine Korrektur Codeaktion bereitstellen, wenn Sie ein Symbol hinzugefügt haben, die Sie besitzen eine `open` -Anweisung für:
 
 ```fsharp
     let private createProvider () =
@@ -608,11 +608,11 @@ Hier ist z. B. der Code, der ausgeführt wird, in [Ionide](http://ionide.io/) ei
         }
 ```
 
-Da bei der Interaktion mit den Visual Studio Code-API, keine Notwendigkeit für eine Klasse besteht, sind Objektausdrücke ein ideales Tool dafür. Sie sind auch nützlich für Komponententests bereit, wenn Sie, eine Schnittstelle mit Test-Routinen in einer ad-hoc-Weise stub möchten.
+Da bei der Interaktion mit der Visual Studio Code-API, keine Notwendigkeit für eine Klasse besteht, sind Object-Ausdrücke ein ideales Tool dafür. Sie sind auch nützlich für Komponententests bereit, wenn Sie eine Schnittstelle mit Test-Routinen in einer ad-hoc-Weise stub werden sollen.
 
 ## <a name="type-abbreviations"></a>Typabkürzungen
 
-[Typabkürzungen](../language-reference/type-abbreviations.md) sind eine einfache Möglichkeit, einen anderen Typ, z. B. einer Funktionssignatur oder ein komplexer Typ eine Bezeichnung zuweisen. Beispielsweise weist der folgende Alias eine Bezeichnung, was erforderlich ist, um eine Berechnung mit definieren [CNTK](https://www.microsoft.com/cognitive-toolkit/), eine umfassende learning-Bibliothek:
+[Typabkürzungen](../language-reference/type-abbreviations.md) sind eine einfache Möglichkeit zum Zuweisen einer Bezeichnung in einen anderen Typ, z. B. einer Funktionssignatur oder einen komplexen Typ. Der folgende Alias weist z. B. eine Bezeichnung, was erforderlich ist, definieren Sie eine Berechnung mit [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), ein Deep learning-Bibliothek:
 
 ```fsharp
 open CNTK
@@ -621,11 +621,11 @@ open CNTK
 type Computation = DeviceDescriptor -> Variable -> Function
 ```
 
-Die `Computation` Name ist eine einfache Möglichkeit, eine beliebige Funktion anzumerken, die der Signatur entspricht, es handelt sich um Aliasing. Typabkürzungen wie folgt mit ist sehr nützlich und kompaktere Code ermöglicht.
+Die `Computation` Name ist eine bequeme Möglichkeit, eine Funktion anzugeben, die der Signatur entspricht, es ist Aliasing. Typabkürzungen wie folgt verwenden, ist praktisch und kompaktere Code ermöglicht.
 
-### <a name="avoid-using-type-abbreviations-to-represent-your-domain"></a>Vermeiden Sie die Verwendung von Typabkürzungen zur Darstellung Ihrer Domänenstatus
+### <a name="avoid-using-type-abbreviations-to-represent-your-domain"></a>Vermeiden Sie die Verwendung von Typabkürzungen zur Darstellung von Ihrer Domäne
 
-Obwohl Typabkürzungen praktisch für die Vergabe eines Namens für die Funktionssignaturen sind, können sie verwirrend sein, wenn abkürzen von anderen Typen von. Betrachten Sie diese Abkürzung aus:
+Obwohl Typabkürzungen praktisch für das Festlegen einer Bezeichnung für Funktionssignaturen sind, können sie verwirrend sein, wenn abkürzen, von anderen Typen. Betrachten Sie diese Abkürzung aus:
 
 ```fsharp
 // Does not actually abstract integers.
@@ -634,11 +634,11 @@ type BufferSize = int
 
 Dies kann auf verschiedene Weise verwirrend sein:
 
-* `BufferSize` ist nicht abstrakt. Es ist einfach einen anderen Namen für eine ganze Zahl.
-* Wenn `BufferSize` verfügbar gemacht wird in eine öffentliche API es kann problemlos falsch interpretiert werden, um mehr als nur bedeuten, dass `int`. Im Allgemeinen Domänentypen haben Sie mehrere Attribute werden und sind nicht primitive Typen wie `int`. Diese Abkürzung verstößt gegen diese Annahme.
-* Die Groß-/Kleinschreibung von `BufferSize` ("PascalCase") gibt an, dass dieser Typ mehr Daten enthält.
-* Dieser Alias bietet höhere Klarheit im Vergleich mit dem Ziel eines benannten Arguments an eine Funktion nicht.
-* Die Abkürzung wird nicht in die kompilierte IL manifest; Es ist nur eine ganze Zahl, und dieser Alias ist ein Konstrukt Zeitpunkt der Kompilierung.
+* `BufferSize` ist keine Abstraktion. Es ist nur ein anderer Name für eine ganze Zahl.
+* Wenn `BufferSize` verfügbar gemacht wird in eine öffentliche API nutzen, es kann leicht falsch interpretiert werden, um mehr als nur bedeutet, dass `int`. Im Allgemeinen Domänentypen mehrere Attribute werden und nicht primitive Typen wie `int`. Diese Abkürzung verstößt gegen diese Annahme.
+* Die Schreibweise von `BufferSize` (PascalCase) bedeutet, dass es sich bei diesem Typ mehr Daten enthält.
+* Dieser Alias bietet keine Verwaltungsaufgabe, die im Vergleich mit der Bereitstellung eines benannten Arguments an eine Funktion.
+* Die Abkürzung wird nicht in die kompilierte IL-manifest; Es ist nur eine ganze Zahl ein, und dieser Alias ist ein Konstrukt während der Kompilierung.
 
 ```fsharp
 module Networking =
@@ -647,4 +647,4 @@ module Networking =
         ...
 ```
 
-Im Grunde ist der Dateneingabe mit Typabkürzungen sind **nicht** Abstraktionen über die Typen, die sie sind abkürzen von. Im vorherigen Beispiel `BufferSize` lediglich ein `int` mit keine zusätzlichen Daten noch keine Vorteile aus dem Typsystem neben dem, was im Hintergrund `int` bereits hat.
+Zusammenfassung der Fehlers mit Typabkürzungen ist, dass sie **nicht** Abstraktionen, die Typen, die sie mit der sind abkürzen von. Im vorherigen Beispiel `BufferSize` ist einfach ein `int` mit keine zusätzlichen Daten, und alle Vorteile aus das Typensystem neben dem, was im Hintergrund `int` bereits verfügt.

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Entfernen Sie&gt; Bypasslist (Network Settings)-Element'
+title: '&lt;Entfernen Sie&gt; -Element für Bypasslist (Netzwerkeinstellungen)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742948"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074978"
 ---
-# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Entfernen Sie&gt; Bypasslist (Network Settings)-Element
-Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxyumgehungsliste.  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Entfernen Sie&gt; -Element für Bypasslist (Netzwerkeinstellungen)
+Entfernt eine IP-Adresse oder DNS-Namen, aus der Proxyumgehungsliste enthalten.  
   
  \<configuration>  
 \<system.net>  
@@ -44,7 +43,7 @@ Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxyumgehungsliste.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`address`|Ein regulärer Ausdruck, die eine IP-Adresse oder einen DNS-Namen beschreibt.|  
+|`address`|Ein regulärer Ausdruck, ein IP-Adresse oder DNS-Namen beschreibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,12 +52,12 @@ Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxyumgehungsliste.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Stellt einen Satz von regulären Ausdrücken, die Beschreibung der Adressen, die keinen Proxy verwenden.|  
+|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die einen Proxy nicht verwenden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `remove` -Element entfernt reguläre Ausdrücke, die IP-Adressen oder DNS-Servernamen aus der Liste der Adressen, die einen Proxyserver umgehen beschreibt. Die Adressen wurden früher in der Konfigurationsdatei oder auf einer höheren Ebene in der Hierarchie definiert.  
+ Die `remove` -Element entfernt reguläre Ausdrücke, die beschreiben, IP-Adressen oder DNS-Servernamen aus der Liste der Adressen, die einen Proxyserver zu umgehen. Die Adressen wurden früher in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert.  
   
- Der Wert für die `address` Attribut muss ein regulärer Ausdruck, der einen Satz von IP-Adressen oder Hostnamen beschreibt.  
+ Der Wert für die `address` Attribut sollte sein, einen regulären Ausdruck, der einen Satz von IP-Adressen oder Hostnamen beschreibt.  
   
  Weitere Informationen zu regulären Ausdrücken finden Sie unter. [Reguläre Ausdrücke von .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -66,7 +65,7 @@ Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxyumgehungsliste.
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel vorherige Definition für die Domäne Adventure-works.com entfernt und anschließend die Umgehungsliste der Domäne "contoso.com" hinzugefügt.  
+ Im folgende Beispiel entfernt jede vorherige Definition für die Domäne Adventure-works.com und anschließend wird der Umgehungsliste der Domäne "contoso.com" hinzugefügt.  
   
 ```xml  
 <configuration>  

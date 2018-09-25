@@ -2,12 +2,12 @@
 title: UriTemplate und UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478592"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090512"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
 Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. Windows Communication Foundation (WCF) hinzugefügt, zwei neue Klassen zum Steuern der URIs Entwicklern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage für die URI-basierten dispatchmoduls in WCF. Diese Klassen können auch auf ihre eigenen, ermöglicht Entwicklern das Nutzen von Vorlagen und der URI Mappingmechanismus verwendet werden, ohne die Implementierung eines WCF-Diensts.  
@@ -192,7 +192,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Einen URI wie z. B. http://localhost:8000/// entspricht nicht die Vorlage, die im vorherigen Code aufgeführt sind, jedoch einen URI wie z. B. http://localhost:8000/ ist.  
+> Einen URI wie z. B. `http://localhost:8000///` entspricht nicht die Vorlage, die im vorherigen Code aufgeführt sind, jedoch einen URI wie z. B. `http://localhost:8000/` ist.  
   
  Im folgenden Code wird die Behandlung von Standardvariablenwerten beim Erstellen eines URI mit einer Vorlage veranschaulicht:  
   
