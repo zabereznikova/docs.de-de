@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753585"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113068"
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;ServicePointManager&gt; -Element (Netzwerkeinstellungen)
 Konfiguriert die Verbindungen mit Netzwerkressourcen.  
@@ -47,13 +46,13 @@ Konfiguriert die Verbindungen mit Netzwerkressourcen.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Gibt an, ob das System überprüft, ob der Name für das Zertifikat den Hostnamen entspricht, bevor Sie mit dem Zertifikat. Der Standardwert ist `true`.|  
-|`checkCertificateRevocationList`|Gibt an, ob das System, ob das Zertifikat widerrufen wurde, bevor Sie mithilfe des Zertifikats überprüft werden soll. Der Standardwert ist `false`.|  
-|`dnsRefreshTimeout`|Gibt an, wie lange Dienst DNS (Domain Name) Lösungen zwischengespeichert werden in Verbindung mit der DNS-Round-Robin-Option in Millisekunden. Der Standardwert ist 120.000 Millisekunden (zwei Minuten).|  
-|`enableDnsRoundRobin`|Gibt an, ob die DNS-Auflösung des Hosts benennt mit mehreren IP (Internet Protocol)-Adressen zurückgegeben, alle Adressen oder nur die erste Aktivität. Der Standardwert ist `false`.|  
-|`encryptionPolicy`|Gibt an, die Verschlüsselungsrichtlinie für eine SSL/TLS-Sitzung angewendet wird, auf eine <xref:System.Net.ServicePointManager> Instanz. Die möglichen Werte sind entsprechen den Werten für die <xref:System.Net.Security.EncryptionPolicy> Enumeration. Die Verwendung von <xref:System.Security.Authentication.CipherAlgorithmType.Null> ist erforderlich, wenn die Verschlüsselungsrichtlinie, um festgelegt ist `NoEncryption`. Der Standardwert ist `RequireEncryption`.|  
-|`expect100Continue`|Gibt an, ob die POST-Methoden erwarten soll eine `100-continue` Antwort vom Server. Der Standardwert ist `true`.|  
-|`useNagleAlgorithm`|Gibt an, ob den Nagle-Algorithmus, Verbindungen, die von der Point-Dienst-Manager gesteuert verwenden. Der Standardwert ist `true`.|  
+|`checkCertificateName`|Gibt an, ob das System, dass der Name des Zertifikats den Serverhostnamen entspricht, bevor Sie mithilfe des Zertifikats überprüft werden soll. Der Standardwert ist `true`.|  
+|`checkCertificateRevocationList`|Gibt an, ob das System eine Überprüfung, ob das Zertifikat widerrufen wurde, bevor Sie mit dem Zertifikat. Der Standardwert ist `false`.|  
+|`dnsRefreshTimeout`|Gibt wie lange Dienst DNS (Domain Name), dass Sie Lösungen zwischengespeichert werden in Verbindung mit dem DNS-Round-Robin-Option in Millisekunden an. Der Standardwert ist 120.000 Millisekunden (zwei Minuten).|  
+|`enableDnsRoundRobin`|Gibt an, ob die DNS-Auflösungen des Hosts Namen mit mehreren IP (Internet Protocol)-Adressen zurückgegeben, alle Adressen oder nur die erste. Der Standardwert ist `false`.|  
+|`encryptionPolicy`|Gibt an, die Verschlüsselungsrichtlinie auf eine SSL/TLS-Sitzung angewendet wird, auf eine <xref:System.Net.ServicePointManager> Instanz. Die möglichen Werte entsprechen den Werten für die <xref:System.Net.Security.EncryptionPolicy> Enumeration. Die Verwendung von <xref:System.Security.Authentication.CipherAlgorithmType.Null> ist erforderlich, wenn die Verschlüsselungsrichtlinie, um festgelegt ist `NoEncryption`. Der Standardwert ist `RequireEncryption`.|  
+|`expect100Continue`|Gibt an, ob die POST-Methoden erwarten soll zum Empfangen einer `100-continue` Antwort vom Server. Der Standardwert ist `true`.|  
+|`useNagleAlgorithm`|Gibt an, ob den Nagle-Algorithmus, Verbindungen, die von der Point-Manager gesteuert verwenden. Der Standardwert ist `true`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

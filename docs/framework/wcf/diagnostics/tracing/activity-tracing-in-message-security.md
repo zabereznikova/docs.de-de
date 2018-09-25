@@ -3,13 +3,12 @@ title: Aktivitätsablaufverfolgung in der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 31882dfff746aa8e0e45698f70b0f19ae413d66a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 830339682f86d3882ff2cfc2d07d14145b987dde
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474856"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157518"
 ---
 # <a name="activity-tracing-in-message-security"></a>Aktivitätsablaufverfolgung in der Nachrichtensicherheit
 In diesem Thema wird die Aktivitätsablaufverfolgung für die Sicherheitsverarbeitung beschrieben, die in den folgenden drei Phasen erfolgt.  
@@ -23,7 +22,7 @@ In diesem Thema wird die Aktivitätsablaufverfolgung für die Sicherheitsverarbe
 ## <a name="negotiationsct-exchange"></a>Aushandlung/SCT-Austausch  
  In der Phase Aushandlung/SCT-Austausch werden zwei Aktivitätstypen auf dem Client erstellt: "Sicherheitssitzung einrichten" und "Sicherheitssitzung schließen". "Sicherheitssitzung einrichten" umfasst die Ablaufverfolgung für den RST/RSTR/SCT-Nachrichtenaustausch, während "Sicherheitssitzung schließen" die Ablaufverfolgung der Cancel-Nachricht einschließt.  
   
- Auf dem Server wird jede Anforderung/Antwort zu RST/RSTR/SCT in einer eigenen Aktivität angezeigt. Wenn `propagateActivity` = `true` auf dem Server und Client Aktivitäten auf dem Server die gleiche ID haben, und in der "Sicherheitssitzung einrichten" bei der Anzeige über Service Trace Viewer zusammen angezeigt werden.  
+ Auf dem Server wird jede Anforderung/Antwort zu RST/RSTR/SCT in einer eigenen Aktivität angezeigt. Wenn `propagateActivity` = `true` auf dem Server und Client Aktivitäten auf dem Server dieselbe ID haben, und in der "Sicherheitssitzung einrichten" bei der Anzeige über Service Trace Viewer zusammen angezeigt werden.  
   
  Dieses Aktivitätsablaufverfolgungsmodell ist bei der Benutzernamen-/Kennwortauthentifizierung, der Zertifikatsauthentifizierung und der NTLM-Authentifizierung wirksam.  
   
@@ -31,8 +30,8 @@ In diesem Thema wird die Aktivitätsablaufverfolgung für die Sicherheitsverarbe
   
 ||Zeitpunkt von Aushandlung-/SCT-Austausch|Aktivitäten|Ablaufverfolgungen|  
 |-|-------------------------------------------------|----------------|------------|  
-|Sicherer Transport<br /><br /> (HTTPS, SSL)|Bei der ersten empfangenen Nachricht.|Ablaufverfolgungen werden in der Umgebungsaktivität ausgegeben.|-Ablaufverfolgungen zu Austauschinformationen<br />-Sicherer Kanal wurde hergestellt<br />-Geheime Schlüssel wurden abgerufen.|  
-|Sichere Nachrichtenebene<br /><br /> (WSHTTP)|Bei der ersten empfangenen Nachricht.|Auf dem Client:<br /><br /> -"Sicherheitssitzung einrichten" aus "Aktion verarbeiten" dieser ersten Nachricht für jede Anforderung/Antwort zu RST/RSTR/SCT.<br />-"Sicherheitssitzung schließen" für die CANCEL-Austausch aus der Aktivität"Proxy schließen." Diese Aktivität kann aus einer anderen Umgebungsaktivität erfolgen, je nachdem, wann die Sicherheitssitzung geschlossen wird.<br /><br /> Auf dem Server:<br /><br /> -Eine "Aktion verarbeiten"-Aktivität für jede Anforderung/Antwort zu RST/SCT/Cancel auf dem Server. Wenn `propagateActivity` = `true`RST/RSTR/SCT-Aktivitäten werden zusammengeführt, mit "Sicherheitssitzung einrichten" und "Abbrechen" ist mit der Aktivität, die vom Client "Schließen" zusammengeführt.<br /><br /> "Sicherheitssitzung einrichten" erfolgt in zwei Stufen:<br /><br /> 1.  Aushandlung der Authentifizierung. Dies ist optional, wenn der Client bereits über die richtigen Anmeldeinformationen verfügt. Diese Stufe kann über den sicheren Transport oder über den Nachrichtenaustausch erfolgen. In letzterem Fall, kann der RST-/RSTR-Austausch ein- oder zweimal stattfinden. Bei diesem Austausch werden Ablaufverfolgungen in neuen zuvor entworfenen Anforderungs-/Antwortaktivitäten ausgegeben.<br />2.  Einrichtung der Sicherheitssitzung (SCT), wobei ein RST/RSTR-Austausch erfolgt. Dieser weist dieselben, bereits beschriebenen Umgebungsaktivitäten auf.|-Ablaufverfolgungen zu Austauschinformationen<br />-Sicherer Kanal wurde hergestellt<br />-Geheime Schlüssel wurden abgerufen.|  
+|Sicherer Transport<br /><br /> (HTTPS, SSL)|Bei der ersten empfangenen Nachricht.|Ablaufverfolgungen werden in der Umgebungsaktivität ausgegeben.|-Ablaufverfolgungen zu Austauschinformationen<br />– Sicherer Kanal wurde hergestellt<br />-Geheime Schlüssel wurden abgerufen.|  
+|Sichere Nachrichtenebene<br /><br /> (WSHTTP)|Bei der ersten empfangenen Nachricht.|Auf dem Client:<br /><br /> -"Sicherheitssitzung einrichten" aus "Aktion verarbeiten" dieser ersten Nachricht, für jede Anforderung/Antwort zu RST/RSTR/SCT.<br />-"Sicherheitssitzung schließen" für die CANCEL-Austausch aus der Aktivität"Proxy schließen." Diese Aktivität kann aus einer anderen Umgebungsaktivität erfolgen, je nachdem, wann die Sicherheitssitzung geschlossen wird.<br /><br /> Auf dem Server:<br /><br /> -Eine "Aktion verarbeiten"-Aktivität für jede Anforderung/Antwort zu RST/SCT/Cancel auf dem Server. Wenn `propagateActivity` = `true`RST/RSTR/SCT-Aktivitäten werden zusammengeführt, mit "Sicherheitssitzung einrichten" und "Abbrechen" ist mit der Aktivität "Schließen" auf dem Client zusammengeführt.<br /><br /> "Sicherheitssitzung einrichten" erfolgt in zwei Stufen:<br /><br /> 1.  Aushandlung der Authentifizierung. Dies ist optional, wenn der Client bereits über die richtigen Anmeldeinformationen verfügt. Diese Stufe kann über den sicheren Transport oder über den Nachrichtenaustausch erfolgen. In letzterem Fall, kann der RST-/RSTR-Austausch ein- oder zweimal stattfinden. Bei diesem Austausch werden Ablaufverfolgungen in neuen zuvor entworfenen Anforderungs-/Antwortaktivitäten ausgegeben.<br />2.  Einrichtung der Sicherheitssitzung (SCT), wobei ein RST/RSTR-Austausch erfolgt. Dieser weist dieselben, bereits beschriebenen Umgebungsaktivitäten auf.|-Ablaufverfolgungen zu Austauschinformationen<br />– Sicherer Kanal wurde hergestellt<br />-Geheime Schlüssel wurden abgerufen.|  
   
 > [!NOTE]
 >  Im gemischten Sicherheitsmodus erfolgt die Aushandlung der Authentifizierung in einem binären Austausch, SCT erfolgt jedoch im Nachrichtenaustausch. Im reinen Transportmodus findet die Aushandlung nur beim Transport ohne weitere Aktivitäten statt.  
@@ -44,7 +43,7 @@ In diesem Thema wird die Aktivitätsablaufverfolgung für die Sicherheitsverarbe
 |-|---------------------------------------------------------------------------------|  
 |Zeitpunkt der Nachrichtenverschlüsselung/-entschlüsselung sowie der Signatur als Nachricht Verschlüsselung/Entschlüsselung sowie die Signaturauthentifizierung|Beim Empfang der Nachricht|  
 |Aktivitäten|Ablaufverfolgungen werden in der Aktivität "Aktion verarbeiten" auf dem Client und dem Server ausgegeben.|  
-|Ablaufverfolgungen|-SendSecurityHeader (Absender):<br />-Nachricht signieren<br />-Verschlüsseln der Anforderungsdaten<br />-ReceiveSecurityHeader (Empfänger):<br />-Signatur wird überprüft.<br />-Entschlüsseln der Antwortdaten<br />-Authentifizierung|  
+|Ablaufverfolgungen|-SendSecurityHeader (Absender):<br />: Nachricht signieren<br />-Verschlüsseln der Anforderungsdaten<br />-ReceiveSecurityHeader (Empfänger):<br />: Überprüfen der Signatur<br />-Entschlüsseln der Antwortdaten<br />-Authentifizierung|  
   
 > [!NOTE]
 >  Im reinen Transportmodus findet die Verschlüsselung/Entschlüsselung nur beim Transport ohne weitere Aktivitäten statt.  
