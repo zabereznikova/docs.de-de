@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 763d15a1391d8c9539d5fb92d4ad50132c17c065
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745775"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073280"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Filter&gt; -Element für &lt;hinzufügen&gt; für &lt;Listener&gt; für &lt;Quelle&gt;
 Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.  
@@ -45,7 +44,7 @@ Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablau
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters, die von erben soll die <xref:System.Diagnostics.TraceFilter> Klasse. Können Sie die Namespace-qualifizierten Namen des Typs ab, der dem Typ entspricht <xref:System.Type.FullName%2A> -Eigenschaft, oder Sie können den vollqualifizierten Typnamen einschließlich der Assemblyinformationen, entspricht die <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft. Weitere Informationen zu den vollqualifizierten Typnamen, finden Sie unter [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters an, der von erben soll die <xref:System.Diagnostics.TraceFilter> Klasse. Sie können den Namespace-qualifizierten Namen des Typs, der des Typs entspricht <xref:System.Type.FullName%2A> -Eigenschaft, oder Sie können den vollqualifizierten Typnamen einschließlich der Assemblyinformationen, die entspricht der <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft. Weitere Informationen zu vollqualifizierten Typnamen, finden Sie unter [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die für die angegebenen Filter-Klasse an den Konstruktor übergeben werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -59,16 +58,16 @@ Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablau
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
 |`sources`|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
 |`source`|Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
-|`listeners`|Enthält die Listener, mit die sammeln, speichern und Weiterleiten von Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein geeignetes Ziel an.|  
+|`listeners`|Enthält Listener, die sammeln, speichern und Weiterleiten von Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel.|  
 |`add`|Fügt einen Listener zu der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<filter>` Element muss enthalten sein, einer `<add>` -Element für einen Ablaufverfolgungslistener für die Quelle, die den Typ des Listeners angibt, nicht nur der Namen eines Listeners definiert, einem [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Wenn der Listener in definiert ist ein [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), muss der Filter für diesen Listener in diesem Element definiert werden.  
+ Die `<filter>` Element muss enthalten sein, eine `<add>` -Element für einen Ablaufverfolgungslistener für die Datenquelle, die den Typ des Listeners, der angibt, die nicht nur der Namen eines Listeners in definiert eine [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Wenn der Listener in definiert ist eine [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), muss der Filter für diesen Listener in diesem Element definiert werden.  
   
- Dieses Element kann in der Computerkonfigurationsdatei ("Machine.config") und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `<filter>` Element zum Hinzufügen eines Filters mit dem Listener `console` in der `Listeners` Auflistung für die Ablaufverfolgungsquelle `myTraceSource`, Angeben der Ereignisebene Filter als `Error`.  
+ Das folgende Beispiel zeigt, wie Sie mit der `<filter>` Element um einen Filter hinzuzufügen, mit dem Listener `console` in die `Listeners` Auflistung für die Ablaufverfolgungsquelle `myTraceSource`, Angeben der Ebene des Filter-Ereignis wie `Error`.  
   
 ```xml  
 <configuration>  

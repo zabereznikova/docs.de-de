@@ -3,11 +3,11 @@ title: Übersicht über Windows-Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577886"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082538"
 ---
 # <a name="windows-workflow-overview"></a>Übersicht über Windows-Workflow
 Ein Workflow ist eine Reihe von elementaren Einheiten mit dem Namen *Aktivitäten* , die als Modell, das einen realen Vorgang beschreibt gespeichert sind. Mit Workflows können die Reihenfolge der Ausführung sowie abhängige Beziehungen zwischen kurz- und langfristiger Arbeit beschrieben werden. Diese Arbeit durchläuft das Modell vom Anfang bis zum Ende, und Aktivitäten werden unter Umständen von Personen oder Systemfunktionen ausgeführt.  

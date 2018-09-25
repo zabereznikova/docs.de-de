@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745993"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073182"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; Element
 Gibt an, in dem die common Language Runtime eine Assembly finden kann.  
@@ -43,8 +42,8 @@ href="URL of assembly"/>
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`href`|Erforderliches Attribut.<br /><br /> Gibt die URL, wo die Laufzeit die angegebene Version der Assembly finden kann.|  
-|`version`|Erforderliches Attribut.<br /><br /> Gibt die Version der Assembly, der die Codebasis gilt. Das Format der Versionsnummer einer Assembly ist *"Hauptversion.Nebenversion.Build.Revision" vorliegen*.|  
+|`href`|Erforderliches Attribut.<br /><br /> Gibt die URL, in dem die Runtime die angegebene Version der Assembly finden kann.|  
+|`version`|Erforderliches Attribut.<br /><br /> Gibt die Version der Assembly, die, der auf die Codebasis angewendet wird. Hat das Format einer Assemblyversionsnummer *"Hauptversion.Nebenversion.Build.Revision"*.|  
   
 ## <a name="version-attribute"></a>Version-Attribut  
   
@@ -60,19 +59,19 @@ href="URL of assembly"/>
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |`buildproviders`|Definiert eine Auflistung von Buildanbietern, die zum Kompilieren benutzerdefinierter Ressourcendateien verwendet werden. Sie können eine beliebige Anzahl von Buildanbietern verwenden.|  
-|`compilation`|Konfiguriert die kompilierungseinstellungen, die ASP.NET verwendet.|  
+|`compilation`|Konfiguriert alle kompilierungseinstellungen, mit denen ASP.NET an.|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`System.web`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Für die Laufzeit die  **\<codeBase >** in einer Konfigurationsdatei des Computers oder der Herausgeberrichtliniendatei festlegen, die Datei muss auch der Assemblyversionen umleiten. Anwendungskonfigurationsdateien können eine Codebase-Einstellung aufweisen, ohne die Version der Assembly umleiten. Nachdem die zu verwendende Assemblyversion ermittelt wurde, gilt die Common Language Runtime die Codebase-Einstellung aus der Datei, die die Version bestimmt. Wenn keine Codebase angegeben ist, sucht die Runtime für die Assembly, auf die übliche Weise.  
+ Für die Laufzeit die  **\<codeBase >** in einer Konfigurationsdatei des Computers oder der Herausgeberrichtliniendatei festlegen, die Datei muss auch umleiten, die Version der Assembly. Anwendungskonfigurationsdateien haben eine Codebase-Einstellung, ohne die Version der Assembly umleiten. Nachdem die zu verwendende Assemblyversion ermittelt wurde, gilt die Runtime die Codebase-Einstellung aus der Datei, die die Version bestimmt. Wenn keine Codebase angegeben, durchsucht die Runtime für die Assembly, auf die übliche Weise.  
   
- Wenn die Assembly einen starken Namen besitzt, kann die CodeBase an einer beliebigen Stelle im lokalen Intranet oder Internet sein. Wenn die Assembly eine private Assembly handelt, muss die Codebase-Einstellung ein Pfad relativ zum Verzeichnis der Anwendung.  
+ Wenn die Assembly einen starken Namen aufweist, kann die Codebase-Einstellung an eine beliebige Stelle im lokalen Intranet oder Internet sein. Wenn die Assembly über eine private Assembly handelt, muss die Codebase-Einstellung auf einen Pfad relativ zum Verzeichnis der Anwendung sein.  
   
- Für Assemblys ohne starken Namen, Version ignoriert und das Ladeprogramm verwendet die erste Darstellung der \<codebase > innerhalb \<DependentAssembly >. Wenn ein Eintrag in der Anwendungskonfigurationsdatei, die Bindung an eine andere Assembly umleitet vorhanden ist, wird die Umleitung Vorrang hat, auch wenn die Version der Assembly nicht mit die bindungsanforderung übereinstimmt.  
+ Für Assemblys ohne starken Namen, Version ignoriert, und das Ladeprogramm verwendet das erste Vorkommen von \<codebase > in \<DependentAssembly >. Wenn ein Eintrag vorhanden, in der Konfigurationsdatei der Anwendung, die Bindung an eine andere Assembly umleitet ist, hat die Umleitung Vorrang, selbst wenn die Version der Assembly nicht mit der bindungsanforderung übereinstimmt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die anzugeben, wo die Common Language Runtime eine Assembly finden kann.  
+ Das folgende Beispiel zeigt, wie Sie angeben, in dem die Runtime eine Assembly finden kann.  
   
 ```xml  
 <configuration>  

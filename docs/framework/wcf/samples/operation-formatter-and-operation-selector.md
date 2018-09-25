@@ -3,11 +3,11 @@ title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: a814de7433f2d06491245dc1d6e6e637b514118a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580004"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070891"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
 Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communication Foundation (WCF) verwendet werden können, um Nachrichtendaten in einem anderen Format wie erwartet, WCF dass zu ermöglichen. Standardmäßig erwarten die WCF-Formatierer Methodenparameter unter aufgenommen werden die `soap:body` Element. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  

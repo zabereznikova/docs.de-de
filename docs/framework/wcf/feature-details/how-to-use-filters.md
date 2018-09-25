@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Verwenden von Filtern'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
 ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586502"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070966"
 ---
 # <a name="how-to-use-filters"></a>Vorgehensweise: Verwenden von Filtern
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit mehreren Filtern zu erstellen. In diesem Beispiel werden Nachrichten an zwei Implementierungen eines Rechnerdiensts weitergeleitet: regularCalc und roundingCalc. Beide Implementierungen unterstützen die gleichen Vorgänge. Ein Dienst rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob die Rundungsversion des Diensts verwendet werden soll. Falls kein bevorzugter Dienst angegeben wird, wird für die Nachricht ein Lastenausgleich zwischen beiden Diensten durchgeführt. Beide Dienste machen die folgenden Vorgänge verfügbar:  

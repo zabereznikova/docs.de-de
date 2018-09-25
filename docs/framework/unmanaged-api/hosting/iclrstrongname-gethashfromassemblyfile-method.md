@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578678"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075160"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile-Methode
 Ruft einen Hash der angegebenen Assemblydatei unter Verwendung des angegebenen Hashalgorithmus ab.  

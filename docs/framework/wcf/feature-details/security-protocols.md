@@ -5,16 +5,15 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6160f3be39bc7317b57f8f1d85bda8e61dbd80fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508708"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078213"
 ---
 # <a name="security-protocols"></a>Sicherheitsprotokolle
-Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt wird beschrieben, die Windows Communication Foundation (WCF)-Details (implementiert der <xref:System.ServiceModel.Channels.SecurityBindingElement>) der folgenden Webdienste-Sicherheitsprotokolle.  
+Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt wird beschrieben, die Windows Communication Foundation (WCF)-Details (implementiert der <xref:System.ServiceModel.Channels.SecurityBindingElement>) die folgenden Webdienste-Sicherheitsprotokolle.  
   
 |Spezifikation/Dokument|Link|  
 |-|-|  
@@ -64,9 +63,9 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
   
  Endpunkte, die solche Authentifizierungsmodi verwenden, können ihre Sicherheitsanforderungen über WS-SecurityPolicy (WS-SP) ausdrücken. Dieses Dokument beschreibt die Struktur der Sicherheitsheader und der Infrastrukturnachrichten für jeden Authentifizierungsmodus und bietet Richtlinien- und Nachrichtenbeispiele.  
   
- WCF nutzt WS-SecureConversation, um zu gewährleisten, dass die sicherheitssitzungen unterstützen, um mehrteiligen Nachrichtenaustauschs zwischen Anwendungen zu schützen.  Weitere Informationen zur Implementierung finden Sie unten unter "Sichere Sitzungen".  
+ WCF nutzt die WS-SecureConversation, um sichere Sitzungen unterstützen, zum Schutz von mehrteiligen Nachrichtenaustauschs zwischen Anwendungen zu ermöglichen.  Weitere Informationen zur Implementierung finden Sie unten unter "Sichere Sitzungen".  
   
- Zusätzlich zu den Authentifizierungsmodi, bietet WCF Einstellungen zum Kontrollieren der Schutzmechanismen, die für die meisten Nachricht nachrichtensicherheit basierenden Authentifizierungsmodi z. B. gelten: Reihenfolge von Signatur gegen Verschlüsselungsvorgängen, algorithmussuites, schlüsselableitung , und signaturbestätigung.  
+ Zusätzlich zu den Authentifizierungsmodi, WCF bietet Einstellungen zur Steuerung von Schutzmechanismen, die für die meisten Nachrichten basierenden Authentifizierungsmodi gelten z. B.: Reihenfolge von Signatur gegen Verschlüsselungsvorgängen, algorithmussuites, Ableiten des Schlüssels , und signaturbestätigung.  
   
  Die folgenden XML-Präfixe und -Namespaces werden in diesem Dokument verwendet.  
   
@@ -93,9 +92,9 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
   
  Das R1101 PasswordType-Attribut auf Element UsernameToken\Password MUSS entweder weggelassen werden oder über den Wert #PasswordText (Standard) verfügen.  
   
- Man kann #PasswordDigest über Erweiterbarkeit implementieren. Es wurde beobachtet, dass #PasswordDigest oft für einen Kennwortschutzmechanismus gehalten wurde, der sicher genug ist. Aber #PasswordDigest kann nicht als Ersatz für eine Verschlüsselung von UsernameToken dienen. Das primäre Ziel von #PasswordDigest ist ein Schutz vor Replay-Angriffen. In WCF Authentifizierungsmodi sind Replay-Angriffe minimieren, indem Sie die Nutzung von Nachrichtensignaturen.  
+ Man kann #PasswordDigest über Erweiterbarkeit implementieren. Es wurde beobachtet, dass #PasswordDigest oft für einen Kennwortschutzmechanismus gehalten wurde, der sicher genug ist. Aber #PasswordDigest kann nicht als Ersatz für eine Verschlüsselung von UsernameToken dienen. Das primäre Ziel von #PasswordDigest ist ein Schutz vor Replay-Angriffen. In WCF Authentifizierungsmodi werden Replay-Angriffe verringert, indem Sie die Nutzung von Nachrichtensignaturen.  
   
- B1102 WCF gibt nie Nonce und erstellt untergeordnete Elemente von UsernameToken dienen.  
+ B1102 WCF gibt nie Nonce "und" Created untergeordnete Elemente von UsernameToken dienen.  
   
  Diese Unterelemente sollen die Replay-Erkennung unterstützen. WCF verwendet stattdessen Nachrichtensignaturen.  
   
@@ -120,14 +119,14 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
   
  R1204 Wenn X509TokenProfile1.1 verwendet wird, SOLLTE eine externe Referenz auf das X509-Sicherheitstoken den Fingerabdruck, der von WS-Sicherheit&#160;1.1 eingeführt wird, verwenden.  
   
- WCF unterstützt X509IssuerSerial. Es gibt jedoch Interoperabilitätsprobleme mit X509IssuerSerial: WCF verwendet eine Zeichenfolge, um zwei Werte von X509IssuerSerial zu vergleichen. Aus diesem Grund Neuordnen von Komponenten des betreffsnamens und dem Senden an einen WCF-Dienst eines Verweis auf ein Zertifikat, kann es nicht gefunden werden.  
+ WCF unterstützt X509IssuerSerial. Es gibt jedoch Interoperabilitätsprobleme mit X509IssuerSerial: WCF verwendet eine Zeichenfolge, um zwei Werte von X509IssuerSerial zu vergleichen. Aus diesem Grund, wenn eine neusortierung der Komponenten des Antragstellernamens und sendet an einen WCF-Dienst einen Verweis auf ein Zertifikat, kann es nicht gefunden werden.  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos-Token  
  WCF unterstützt KerberosTokenProfile1.1 für die Windows-Authentifizierung mit den folgenden Einschränkungen:  
   
  R1301 Ein Kerberos-Token muss den Wert eines GSS-ummantelten Kerberos&#160;v4&#160;AP_REQ tragen, gemäß der Definition in GSS_API und der Kerberos-Spezifikation, und muss das ValueType-Attribut mit dem Wert #GSS_Kerberosv5_AP_REQ besitzen.  
   
- WCF verwendet einen GSS umschlossen Kerberos AP-REQ und keine bare AP-ANF. Hierbei handelt es sich um eine empfohlene Vorgehensweise bezüglich der Sicherheit.  
+ WCF verwendet einen GSS umschlossen Kerberos AP-REQ und keiner reinen AP-req Hierbei handelt es sich um eine empfohlene Vorgehensweise bezüglich der Sicherheit.  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 Token  
  WCF unterstützt WSS SAML Token Profile 1.0 und 1.1 für SAML v1. 1-Token. Es ist möglich, andere Versionen von SAML-Tokenformaten zu implementieren.  
@@ -138,10 +137,10 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
 ## <a name="2-common-message-security-parameters"></a>2. Allgemeine Nachrichtensicherheitsparameter  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- Die <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse steuert, ob ein Zeitstempel vorhanden ist. WCF immer serialisiert wsse: Timestamp, mit dem Wsse: erstellt und dem Wsse: Expires-Feld. Der wsse:TimeStamp wird immer signiert, wenn Signatur verwendet wird.  
+ Die <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse steuert, ob ein Zeitstempel vorhanden ist. WCF serialisiert wsse Wsse: immer: erstellt und dem Wsse: Expires-Feld. Der wsse:TimeStamp wird immer signiert, wenn Signatur verwendet wird.  
   
 ### <a name="22-protection-order"></a>2.2 Schutzreihenfolge  
- WCF unterstützt die nachrichtenschutzreihenfolge "Anmeldung vor dem Encrypt" und "Encrypt Before Sign" (Security Policy 1.2). "Sign Before Encrypt" wird u.&#160;a. aus den folgenden Gründen empfohlen: Mit "Encrypt Before Sign" geschützte Nachrichten sind Signaturersatzangriffen ausgesetzt, sofern der WS-Sicherheit&#160;1.1 SignatureConfirmation-Mechanismus nicht verwendet wird, und eine Signatur über verschlüsselten Inhalt erschwert die Überprüfung.  
+ WCF unterstützt die nachrichtenschutzreihenfolge "Anmeldung vor dem Verschlüsseln" und "Encrypt Before Sign" (Security Policy 1.2). "Sign Before Encrypt" wird u.&#160;a. aus den folgenden Gründen empfohlen: Mit "Encrypt Before Sign" geschützte Nachrichten sind Signaturersatzangriffen ausgesetzt, sofern der WS-Sicherheit&#160;1.1 SignatureConfirmation-Mechanismus nicht verwendet wird, und eine Signatur über verschlüsselten Inhalt erschwert die Überprüfung.  
   
 ### <a name="23-signature-protection"></a>2.3 Signaturschutz  
  Wenn Encrypt Before Sign verwendet wird, ist es empfehlenswert, die Signatur zu schützen, um Brute-Force-Angriffe zu verhindern, die versuchen, den verschlüsselten Inhalt oder den Signaturschlüssel zu erraten (besonders dann, wenn ein benutzerdefiniertes Token zusammen mit schwachen Schlüsselmaterialien verwendet wird).  
@@ -150,7 +149,7 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
  WCF unterstützt alle in Security Policy 1.2 aufgeführten algorithmussuites.  
   
 ### <a name="25-key-derivation"></a>2.5 Schlüsselableitung  
- WCF verwendet "Schlüsselableitung für symmetrische Schlüssel" an, wie im WS-SecureConversation beschrieben.  
+ WCF verwendet die "Schlüsselableitung für symmetrische Schlüssel", wie im WS-SecureConversation beschrieben.  
   
 ### <a name="26-signature-confirmation"></a>2.6 Signaturbestätigung  
  Die Signaturbestätigung kann als Schutz gegen Angriffe von Mittelsmännern eingesetzt werden, um den Signatursatz zu schützen.  
@@ -171,7 +170,7 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
  Dieser Abschnitt bietet Beispielrichtlinien für jeden Authentifizierungsmodus, zusammen mit Beispielen, die die Sicherheitsheader-Struktur in Nachrichten, die zwischen Client und Dienst ausgetauscht werden, zeigen.  
   
 ### <a name="31-transport-protection"></a>3.1 Transportschutz  
- WCF bietet fünf Authentifizierungsmodi, die sicheren Transport verwenden, um Nachrichten zu schützen. : UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport und SspiNegotiatedOverTransport.  
+ WCF bietet fünf verschiedene Authentifizierungsmodi, die sicheren Transport verwenden, um Nachrichten zu schützen. : UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport und SspiNegotiatedOverTransport.  
   
  Diese Authentifizierungsmodi werden mit der in der Sicherheitsrichtlinie beschriebenen Transportbindung erstellt. Für den UserNameOverTransport-Authentifizierungsmodus ist das UsernameToken ein signiertes unterstützendes Token. Für die anderen Authentifizierungsmodi wird das Token als signiertes unterzeichnendes Token angezeigt. Anhang&#160;C.1.2 und&#160;C.1.3 von SecurityPolicy beschreiben detailliert das Sicherheitsheader-Layout. Die folgenden Beispielsicherheitsheader zeigen das "Strict"-Layout für einen gegebenen Authentifizierungsmodus an.  
   
@@ -278,7 +277,7 @@ Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, 
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- Bei diesem Modus wird ein Aushandlungsprotokoll verwendet, um Client- und Serverauthentifizierung auszuführen. Wenn möglich wird Kerberos verwendet, ansonsten NTLM. Das resultierende SCT wird auf der SOAP-Schicht als ausstellendes unterstützendes Token angezeigt, das immer vom Initiator an den Empfänger gesendet wird. Der Dienst wird zusätzlich auf der Transportschicht über ein X.509-Zertifikat authentifiziert. Die verwendete Bindung ist eine Transportbindung. "SPNEGO" (Aushandlung) beschreibt, wie WCF binäre SSPI-Aushandlungsprotokoll mit WS-Trust verwendet. Die Sicherheitsheaderbeispiele in diesem Abschnitt gelten, nachdem der SCT durch den SPNEGO-Handshake eingeführt wurde.  
+ Bei diesem Modus wird ein Aushandlungsprotokoll verwendet, um Client- und Serverauthentifizierung auszuführen. Wenn möglich wird Kerberos verwendet, ansonsten NTLM. Das resultierende SCT wird auf der SOAP-Schicht als ausstellendes unterstützendes Token angezeigt, das immer vom Initiator an den Empfänger gesendet wird. Der Dienst wird zusätzlich auf der Transportschicht über ein X.509-Zertifikat authentifiziert. Die verwendete Bindung ist eine Transportbindung. "SPNEGO" (Aushandlung) beschreibt, wie WCF binäre SSPI-Aushandlungsprotokoll zusammen mit WS-Trust verwendet. Die Sicherheitsheaderbeispiele in diesem Abschnitt gelten, nachdem der SCT durch den SPNEGO-Handshake eingeführt wurde.  
   
  Richtlinie  
   

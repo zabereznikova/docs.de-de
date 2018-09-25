@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754157"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088684"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;PerformanceCounters&gt; Element
 Gibt die Größe des globalen Speichers an, der von den Leistungsindikatoren freigegeben wird.  
@@ -51,11 +50,11 @@ Gibt die Größe des globalen Speichers an, der von den Leistungsindikatoren fre
 |`system.diagnostics`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Leistungsindikatoren werden eine im Speicher abgebildete Datei oder shared Memory verwenden, um Leistungsdaten zu veröffentlichen.  Die Größe des freigegebenen Speicherbereichs bestimmt, wie viele Instanzen gleichzeitig verwendet werden können.  Es gibt zwei Arten von freigegebenem Arbeitsspeicher: globale freigegebene Speicher und separater freigegebener Arbeitsspeicher.  Der globale freigegebene Speicher wird von allen Leistungsindikatorkategorien, die mit .NET Framework, Version 1.0 oder 1.1 installiert.  Leistungsindikatorkategorien, die mit .NET Framework, Version 2.0 installiert verwenden separaten freigegebenen Arbeitsspeicher mit jeder Leistungsindikatorkategorie mit ihren eigenen Arbeitsspeicher.  
+ Leistungsindikatoren werden im Speicher abgebildete Datei oder gemeinsam genutzten Speicher verwenden, um Leistungsdaten zu veröffentlichen.  Die Größe des freigegebenen Speichers wird bestimmt, wie viele Instanzen gleichzeitig verwendet werden können.  Es gibt zwei Arten von freigegebenem Arbeitsspeicher: globale freigegebene Speicher und separater freigegebener Arbeitsspeicher.  Der globale freigegebene Speicher wird von allen Leistungsindikatorkategorien, die mit .NET Framework, Version 1.0 oder 1.1 installiert verwendet.  Leistungsindikatorkategorien, die mit .NET Framework, Version 2.0 installiert verwenden separaten freigegebenen Arbeitsspeicher mit jeder Leistungsindikatorkategorie, die über einen eigenen Speicherbereich.  
   
- Die Größe der globale freigegebene Speicher kann nur mit einer Konfigurationsdatei festgelegt werden.  Die Standardgröße ist 524.288, die maximale Größe beträgt 33.554.432 Bytes und die minimale Größe beträgt 32.768 Byte.  Da der globale freigegebene Speicher von allen Prozessen und Kategorien gemeinsam verwendet wird, gibt der erste Ersteller die Größe an.  Wenn Sie die Größe in der Anwendungskonfigurationsdatei definieren, wird nur diese Größe verwendet, wenn die Anwendung die erste Anwendung, die bewirkt, die Leistungsindikatoren dass ausgeführt.  Aus diesem Grund den richtigen Speicherort zum Angeben der `filemappingsize` Wert ist die Datei "Machine.config".  Speicher in der globale freigegebene Speicher kann nicht von einzelnen Leistungsindikatoren, sodass freigegeben werden, der globaler freigegebener Speicher ausgeschöpft ist, wenn eine große Anzahl von Leistungsindikatorinstanzen mit unterschiedlichen Namen erstellt werden.  
+ Die Größe der globale freigegebene Speicher kann nur mit einer Konfigurationsdatei festgelegt werden.  Die Standardgröße ist 524.288, die maximale Größe beträgt 33.554.432 Byte und die minimale Größe beträgt 32.768 Byte.  Da der globale freigegebene Speicher von allen Prozessen und Kategorien gemeinsam verwendet wird, gibt der erste Ersteller die Größe an.  Wenn Sie die Größe in der Konfigurationsdatei Ihrer Anwendung definieren, wird diese Größe nur dann verwendet, wenn Ihre Anwendung die erste Anwendung, die bewirkt, die Leistungsindikatoren ist dass ausgeführt.  Aus diesem Grund den richtigen Speicherort zum Angeben der `filemappingsize` Wert ist die Datei "Machine.config".  Speicher, in der globale freigegebene Speicher kann nicht von einzelnen Leistungsindikatoren, sodass freigegeben werden, die globaler freigegebener Speicher ausgeschöpft ist, wenn eine große Anzahl von Leistungsindikatorinstanzen mit unterschiedlichen Namen erstellt werden.  
   
- Der FileMappingSize DWORD-Wert in der Registrierung Schlüssel für die Größe der separater freigegebener Arbeitsspeicher, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >* \Performance verwiesen wird zuerst dann, durch den Wert für die globale freigegebene Speicher in der Konfigurationsdatei angegeben. Wenn der FileMappingSize-Wert ist nicht vorhanden, und klicken Sie dann auf ein Viertel die Größe separater freigegebener Arbeitsspeicher festgelegt ist (1/4) die globale Einstellung in der Konfigurationsdatei.  
+ Der DWORD-Wert FileMappingSize in der Registrierung Schlüssel für die Größe der separater freigegebener Arbeitsspeicher, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<Kategorienamen >* \Performance verwiesen wird zuerst dann, den Wert für die globale freigegebene Speicher in der Konfigurationsdatei angegeben. Wenn der FileMappingSize-Wert ist nicht vorhanden, und klicken Sie dann auf ein Viertel die Größe separater freigegebener Arbeitsspeicher festgelegt ist (1/4) die globale Einstellung in der Konfigurationsdatei.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Diagnostics.PerformanceCounter>  

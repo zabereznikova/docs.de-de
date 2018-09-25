@@ -3,16 +3,15 @@ title: '&lt;auf "sessiontokenrequirement"&gt;'
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6c40948633eaf892db06e9bba756158dfc3c4a2e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4d5d2348f04ace7596a3a513c5106ea612dc17b7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754989"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070091"
 ---
 # <a name="ltsessiontokenrequirementgt"></a>&lt;auf "sessiontokenrequirement"&gt;
-Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> abgeleiteten Klassen.  
+Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Klasse oder abgeleitete Klassen.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -42,7 +41,7 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.Session
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Lebensdauer|Gibt die Lebensdauer der Sitzungstoken.|  
+|Lebensdauer|Gibt die Lebensdauer des Sitzungstoken.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keiner  
@@ -51,7 +50,7 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.Session
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Fügt den angegebenen Sicherheits-Tokenhandler der Tokenhandler Auflistung hinzu.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Der Tokenhandler-Auflistung hinzugefügt den angegebenen Sicherheitstokenhandler.|  
   
 ## <a name="example"></a>Beispiel  
   

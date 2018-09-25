@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350221"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073540"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;OidMap&gt; Element
-Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen von Klassen.  
+Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.  
   
  \<configuration>  
 \<"mscorlib" >  
@@ -43,7 +42,7 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen von Klassen.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<OidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Ordnet eine ASN. 1-OID einen Anzeigenamen ein.|  
+|[\<OidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Ordnet einen ASN. 1-Objektbezeichner in einen Anzeigenamen an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -54,7 +53,7 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen von Klassen.
 |`mscorlib`|Enthält die `cryptographySettings` Element.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die  **\<OidMap >** Element enthält eine Zuordnung von OID für RIPEMD-160-Hashalgorithmus, der eine Implementierung dieser Hashalgorithmus.  
+ Das folgende Beispiel zeigt, wie Sie mit der  **\<OidMap >** Element, in eine Zuordnung der OID für RIPEMD-160 Hashalgorithmus, der eine Implementierung dieses Hashalgorithmus.  
   
 ```xml  
 <configuration>  

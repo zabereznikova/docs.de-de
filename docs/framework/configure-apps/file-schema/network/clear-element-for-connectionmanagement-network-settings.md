@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5bcd17cfe1f3bd7531453b62552a4907df5b96bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741983"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070499"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Deaktivieren Sie&gt; -Element für ConnectionManagement (Netzwerkeinstellungen)
-Löscht die Verbindungsverwaltungsliste.  
+Löscht der Verbindungsverwaltungsliste an.  
   
  \<configuration>  
 \<system.net>  
@@ -50,13 +49,13 @@ Löscht die Verbindungsverwaltungsliste.
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `clear` -Element löscht alle Einträge aus der Verbindungsverwaltungsliste.  
+ Die `clear` Element löscht alle Einträge aus der Verbindungsverwaltungsliste.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel löscht die Verbindungsverwaltungsliste und fügt dann die neue Verbindung Management-Einträge für den Server www.contoso.com und alle anderen Netzwerkhosts hinzu.  
+ Das folgende Beispiel löscht der Verbindungsverwaltungsliste und fügt dann die neue Verbindung Management-Einträge für den Server www.contoso.com und alle anderen Netzwerkhosts hinzu.  
   
 ```xml  
 <configuration>  

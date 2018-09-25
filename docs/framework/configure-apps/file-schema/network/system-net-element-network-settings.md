@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f9098ce379cbaf12f589270729018da399f282b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25663774c639e9fea13ced54a9aa7f456922fa1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752441"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085689"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; -Element (Netzwerkeinstellungen)
 Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.  
@@ -41,13 +40,13 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die Module, die zum Authentifizieren von Anforderungen Internet verwendet.|  
+|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die Module, die zum Authentifizieren von internetanforderungen verwendet.|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Internethost an.|  
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).|  
 |[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Konfiguriert (SMTP, Simple Mail Transport Protocol) e-Mail-Sendeoptionen.|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Zwischenspeichermechanismus für Anforderungen über das Netzwerk an.|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.|  
 |[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für Klassen in der <xref:System.Net> und zugehörigen untergeordneten Namespaces.|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zu verwenden, um Informationen von Internethosts anfordern.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zum Anfordern von Informationen von Internethosts verwendet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -56,10 +55,10 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 |[Konfiguration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) Element enthält die Einstellungen für Klassen in der <xref:System.Net> und zugehörigen untergeordneten Namespaces. Die Einstellungen konfigurieren Authentifizierungsmodule, verbindungsverwaltung, e-Mail-Einstellungen, die Proxy-Server und Internet Anforderung Module zum Empfangen von Informationen von Internethosts.  
+ Die [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) Element enthält Einstellungen für Klassen in der <xref:System.Net> und zugehörigen untergeordneten Namespaces. Die Einstellungen konfigurieren Authentifizierungsmodule, verbindungsverwaltung, e-Mail-Einstellungen, die webanwendungsproxy-Server und Internet-Anforderung Module zum Empfangen von Informationen von Internethosts.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt eine typische Konfiguration von verwendet <xref:System.Net> Klassen.  
+ Das folgende Beispiel zeigt eine typische Konfiguration, die von verwendet <xref:System.Net> Klassen.  
   
 ```xml  
 <configuration>  

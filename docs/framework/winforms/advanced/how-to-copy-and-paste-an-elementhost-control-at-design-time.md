@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 43ebe50497df97511925bd2e413ab5b5988b7f57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a61a8538fb9b4245e3f3705c5d5cbb1b45ed0b72
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624787"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47089080"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Gewusst wie: Kopieren und Einfügen eines ElementHost-Steuerelements zur Entwurfszeit
 Dieses Verfahren zeigt, wie Sie ein Windows Presentation Foundation (WPF)-Steuerelement in Windows Forms zu kopieren.  
@@ -43,9 +43,9 @@ Dieses Verfahren zeigt, wie Sie ein Windows Presentation Foundation (WPF)-Steuer
      Ein neues <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement mit dem Namen `elementHost2` wird auf dem Formular erstellt.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Exemplarische Vorgehensweise: Kopieren und Einfügen eines ElementHost-Steuerelements in separate Windows Forms](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Verwenden von WPF-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+
+- <xref:System.Windows.Forms.Integration.ElementHost>  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
+- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+- [Verwenden von WPF-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
