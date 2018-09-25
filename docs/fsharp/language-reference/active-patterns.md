@@ -3,11 +3,11 @@ title: Aktive Muster (F#)
 description: Erfahren Sie, wie aktive Muster zu verwenden, um benannte Partitionen definieren, die Eingabedaten in der Programmiersprache f# zu unterteilen.
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46524414"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027725"
 ---
 # <a name="active-patterns"></a>Aktive Muster
 
