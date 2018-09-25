@@ -1,5 +1,5 @@
 ---
-title: '&lt;Entfernen Sie&gt; -Element für &lt;Listener&gt; für &lt;Trace&gt;'
+title: '&lt;Entfernen Sie&gt; -Element für &lt;Listener&gt; für &lt;Ablaufverfolgung&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -9,20 +9,19 @@ helpviewer_keywords:
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 11f4b648ac1ffc614f18a3686eb2b6508a272980
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 54fd529c571c8e8cf43c5dabe2398ae4a6cf4f11
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746552"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088957"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Entfernen Sie&gt; -Element für &lt;Listener&gt; für &lt;Trace&gt;
+# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Entfernen Sie&gt; -Element für &lt;Listener&gt; für &lt;Ablaufverfolgung&gt;
 Entfernt einen Listener aus der **Listener** Auflistung.  
   
  \<configuration>  
 \<System.Diagnostics >  
-\<Trace >  
+\<Ablaufverfolgung >  
 \<Listener >  
 \<remove>  
   
@@ -49,17 +48,17 @@ Entfernt einen Listener aus der **Listener** Auflistung.
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
-|`listeners`|Gibt an, einen Listener, der erfasst hat, speichert, und leitet Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein geeignetes Ziel an.|  
+|`listeners`|Gibt an, einen Listener, der sammelt, speichert, und leitet Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
-|`trace`|Konfiguriert den ASP.NET Trace-Dienst.|  
+|`trace`|Konfiguriert den ASP.NET-Ablaufverfolgungsdienst.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Entfernen der <xref:System.Diagnostics.DefaultTraceListener> aus der `Listeners` Auflistung ändert das Verhalten der <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, und <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> Methoden. Aufrufen einer `Assert` oder `Fail` Methode wird normalerweise in der Anzeige eines Meldungsfelds, führt jedoch im Meldungsfeld nicht angezeigt wird die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der `Listeners` Auflistung.  
+>  Entfernen der <xref:System.Diagnostics.DefaultTraceListener> aus der `Listeners` Auflistung ändert das Sitzungsverhalten, sodass die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, und <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> Methoden. Aufrufen einer `Assert` oder `Fail` -Methode führt normalerweise in der Anzeige eines Meldungsfelds, aber das Feld nicht angezeigt wird der <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der `Listeners` Auflistung.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird gezeigt, wie den standardmäßige Ablaufverfolgungslistener aus der Ablaufverfolgung entfernen **Listener** Auflistung.  
+ Das folgende Beispiel zeigt, wie Sie den standardmäßigen Ablaufverfolgungslistener aus der Ablaufverfolgung entfernen **Listener** Auflistung.  
   
 ```xml  
 <configuration>  

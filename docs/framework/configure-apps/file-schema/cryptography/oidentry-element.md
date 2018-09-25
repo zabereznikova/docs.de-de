@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746354"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082067"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;OidEntry&gt; Element
 Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.  
@@ -40,8 +39,8 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**OID**|Erforderliches Attribut.<br /><br /> Gibt die ASN. 1-OID für den Algorithmus, der von der Klasse implementiert.|  
-|**name**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** Attribut in der [ \<NameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Tag.|  
+|**OID**|Erforderliches Attribut.<br /><br /> Gibt an, das ASN. 1-Objektbezeichner für den Algorithmus, der von Ihrer Klasse implementiert.|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** -Attribut in der [ \<NameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Tag.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,13 +52,13 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
 |`mscorlib`|Enthält die `cryptographySettings` Element.|  
-|`oidMap`|Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen von Klassen.|  
+|`oidMap`|Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.|  
   
 ## <a name="remarks"></a>Hinweise  
- ASN. 1-Objektbezeichner identifizieren, in einigen Formaten kryptografischen Algorithmen. Ordnen Sie Objektbezeichner Anzeigenamen für die Algorithmen, die Sie ermitteln möchten.  
+ ASN. 1-Objektbezeichner identifizieren Algorithmen in bestimmten kryptografischen Formaten. Ordnen Sie Objekt-IDs aussagekräftigere Namen für die Algorithmen, die Sie ermitteln möchten.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die  **\<OidEntry >** -Element einen Objektbezeichner für die RIPEMD-160-Hashalgorithmus zu einer Implementierung dieses Hashalgorithmus zuordnen.  
+ Das folgende Beispiel zeigt, wie Sie mit der  **\<OidEntry >** Element, das eine Objekt-ID für den Hashalgorithmus RIPEMD-160-Implementierung dieses Hashalgorithmus zugeordnet.  
   
 ```xml  
 <configuration>  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46580329"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109091"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Schreiben der ersten LINQ-Abfrage (Visual Basic)
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in einer dedizierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Arten von Datenquellen, z. B. SQL für relationale Datenbanken und XQuery für XML entwickelt. Dadurch für den Entwickler der Anwendung finden Sie eine neue Abfragesprache für jeden Typ von Datenquelle oder Datenformat, das unterstützt wird.  

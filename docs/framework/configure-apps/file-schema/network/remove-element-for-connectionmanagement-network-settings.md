@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8d503e06139fc6ce14f4d2c50c46e4bcfeb1b860
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754479"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085534"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Entfernen Sie&gt; -Element für ConnectionManagement (Netzwerkeinstellungen)
-Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen.  
+Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.  
   
  \<configuration>  
 \<system.net>  
@@ -43,7 +42,7 @@ Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Name
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`address`|Eine IP-Adresse oder DNS-Name.|  
+|`address`|Eine IP-Adresse oder DNS-Namen.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -57,13 +56,13 @@ Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Name
 ## <a name="remarks"></a>Hinweise  
  Die `remove` Element entfernt den Verbindungs-Eintrag für den angegebenen Server.  
   
- Der Wert, der die `address` Attribut muss einen gültigen Namen von IP-Adresse oder den Hostnamen.  
+ Der Wert des der `address` Attribut sollte einen gültigen Namen von IP-Adresse oder Hostname sein.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel entfernt alle Einträge Verbindung Management Liste, für den Server www.adventure-works.com und anschließend die Anwendung für die Verwendung von vier Verbindungen mit dem Server www.contoso.com und zwei Verbindungen mit allen anderen Servern konfiguriert.  
+ Im folgenden Beispiel entfernt alle Verbindung Management Listeneinträge für den Server www.adventure-works.com und konfiguriert dann eine Anwendung zur Verwendung von vier Verbindungen mit dem Server www.contoso.com und zwei Verbindungen mit allen anderen Servern.  
   
 ```xml  
 <configuration>  

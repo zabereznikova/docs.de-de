@@ -8,16 +8,15 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b94c6fd4761a5b0383c21d36a6d717f78a8825de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40fe7b1fa6a61b56d5dfdde75a92834f096a8be4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496041"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082759"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen
-Sicherung eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformationen vereint die Vorteile der Transport- und von Sicherheitsmodi in Windows Communication Foundation (WCF). Während die Transport Layer Security (TLS) Integrität und Vertraulichkeit bietet, stellt die Message Layer Security (MLS) verschiedene Anmeldeinformationen bereit, die bei reinen Transportsicherheitsmechanismen nicht verfügbar sind. In diesem Thema werden die grundlegenden Schritte zur Implementierung des Transports mit Nachrichtenanmeldeinformationen mithilfe der Bindungen <xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding> veranschaulicht. Weitere Informationen zum Festlegen des Sicherheitsmodus finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Absichern eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformationen vereint die Vorteile der Transport- und Sicherheitsmodi, in Windows Communication Foundation (WCF) auf. Während die Transport Layer Security (TLS) Integrität und Vertraulichkeit bietet, stellt die Message Layer Security (MLS) verschiedene Anmeldeinformationen bereit, die bei reinen Transportsicherheitsmechanismen nicht verfügbar sind. In diesem Thema werden die grundlegenden Schritte zur Implementierung des Transports mit Nachrichtenanmeldeinformationen mithilfe der Bindungen <xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding> veranschaulicht. Weitere Informationen zum Festlegen des Sicherheitsmodus finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Wenn Sie den Sicherheitsmodus auf `TransportWithMessageCredential` festlegen, wird der tatsächliche Mechanismus, der die Sicherheitseinstellungen auf Transportebene bereitstellt, vom Transport bestimmt. Der Secure Sockets Layer (SSL)-Mechanismus über HTTP (HTTPS) wird für HTTP verwendet, wohingegen SSL über TCP oder Windows für TCP verwendet wird.  
   
@@ -31,7 +30,7 @@ Sicherung eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformatione
   
 2.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse, und legen Sie die <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>-Eigenschaft auf <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> fest.  
   
-3.  Legen Sie für die <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>-Eigenschaft einen geeigneten Wert fest. (Weitere Informationen finden Sie unter [Auswählen eines Anmeldeinformationentyps](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Im folgenden Code wird der <xref:System.ServiceModel.MessageCredentialType.Certificate>-Wert verwendet.  
+3.  Legen Sie für die <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>-Eigenschaft einen geeigneten Wert fest. (Weitere Informationen finden Sie unter [Ausählen eines Anmeldeinformationentyps](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Im folgenden Code wird der <xref:System.ServiceModel.MessageCredentialType.Certificate>-Wert verwendet.  
   
 4.  Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse mit einer entsprechenden Basisadresse. Dabei muss das HTTPS-Schema verwendet werden, und die Adresse muss den tatsächlichen Namen des Computers sowie die Nummer des Anschlusses enthalten, an den das SSL-Zertifikat gebunden ist. (Sie können die Basisadresse auch in der Konfiguration festlegen.)  
   
@@ -86,9 +85,9 @@ Sicherung eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformatione
   
 #### <a name="to-use-the-wshttpbinding"></a>So verwenden Sie die WSHttpBinding  
   
-1.  Konfigurieren Sie den Computer mit einem SSL-Zertifikat, das an einen Anschluss gebunden ist. (Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Sie müssen nicht festlegen einer <`transport`> Elementwert mit dieser Konfiguration.  
+1.  Konfigurieren Sie den Computer mit einem SSL-Zertifikat, das an einen Anschluss gebunden ist. (Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Sie müssen nicht festlegen eine <`transport`>-Element den Wert mit dieser Konfiguration.  
   
-2.  Geben Sie den Typ der Anmeldeinformationen für den Client bezüglich der Sicherheit auf Nachrichtenebene an. Im folgenden Beispiel wird die `clientCredentialType` Attribut von der <`message`>-Element `UserName`.  
+2.  Geben Sie den Typ der Anmeldeinformationen für den Client bezüglich der Sicherheit auf Nachrichtenebene an. Im folgenden Beispiel wird der `clientCredentialType` -Attribut der <`message`>-Element `UserName`.  
   
     ```xml  
     <wsHttpBinding>  
@@ -117,11 +116,11 @@ Sicherung eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformatione
     </behaviors>  
     ```  
   
-2.  Hinzufügen einer [ \<NetTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) , die im Abschnitt über Bindungen  
+2.  Hinzufügen einer [ \<NetTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) , im Abschnitt über Bindungen  
   
 3.  Fügen Sie ein Bindungselement hinzu, und legen Sie das `name`-Attribut auf einen geeigneten Wert fest.  
   
-4.  Hinzufügen einer <`security`>-Element, und legen die `mode` -Attribut `TransportWithMessageCredential`.  
+4.  Hinzufügen einer <`security`>-Element, und legen die `mode` Attribut `TransportWithMessageCredential`.  
   
 5.  Hinzufügen einer <`message>` -Element, und legen die `clientCredentialType` -Attribut auf einen geeigneten Wert.  
   
@@ -143,9 +142,9 @@ Sicherung eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformatione
   
 2.  Hinzufügen einer <`binding`> Element, und legen die `name` -Attribut auf einen geeigneten Wert.  
   
-3.  Hinzufügen einer <`security`>-Element, und legen die `mode` -Attribut `TransportWithMessageCredential`.  
+3.  Hinzufügen einer <`security`>-Element, und legen die `mode` Attribut `TransportWithMessageCredential`.  
   
-4.  Hinzufügen einer <`transport`> Element, und legen die `clientCredentialType` -Attribut `Windows`.  
+4.  Hinzufügen einer <`transport`> Element, und legen die `clientCredentialType` Attribut `Windows`.  
   
 5.  Hinzufügen einer <`message`> Element, und legen die `clientCredentialType` -Attribut auf einen geeigneten Wert. Im folgenden Code wird der Wert auf ein Zertifikat festgelegt.  
   

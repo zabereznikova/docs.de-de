@@ -10,11 +10,11 @@ helpviewer_keywords:
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529339"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47079999"
 ---
 # <a name="how-to-localize-an-application"></a>Gewusst wie: Lokalisieren einer Anwendung
 In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem LocBaml-Tool erstellt wird.  
