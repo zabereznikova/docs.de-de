@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 995a89dd67664fd6a408f88f20f6837d2dbaaad4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fb057ab75c31edd7bbdaf5d5115cda2802d3b057
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744238"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203994"
 ---
 # <a name="ltsocketgt-element-network-settings"></a>&lt;Socket&gt; -Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.  
@@ -43,9 +42,9 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`alwaysUseCompletionPortsForAccept`|Gibt an, ob der Socket immer Abschlussports für Accept-Methodenaufrufe verwenden soll. Der Standardwert ist `false`.|  
-|`alwaysUseCompletionPortsForConnect`|Gibt an, ob der Socket immer Abschlussports für Connect-Methodenaufrufe verwenden soll. Der Standardwert ist `false`.|  
-|`ipProtectionLevel`|Gibt die standardmäßige <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> für ein Socket verwendet. Der Standardwert hängt von der Version von Windows ab.|  
+|`alwaysUseCompletionPortsForAccept`|Gibt an, ob der Socket immer Komplettierungsports für Accept-Methodenaufrufe verwenden soll. Der Standardwert ist `false`.|  
+|`alwaysUseCompletionPortsForConnect`|Gibt an, ob der Socket immer Komplettierungsports für Connect Methodenaufrufe verwenden soll. Der Standardwert ist `false`.|  
+|`ipProtectionLevel`|Gibt die Standardvordergrundfarbe für <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> für einen Socket verwenden. Der Standardwert hängt von der Version von Windows.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -57,40 +56,40 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
 |[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` Attribute werden an das standardmäßige Verhalten bezüglich der Verwendung von Abschlussports verwendet, durch die Klassen in der <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Für hohe Leistung serveranwendungen werden Abschlussports empfohlen.  
+ Die `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` Attribute werden an das Standardverhalten in Bezug auf die Verwendung von Abschlussanschlüsse verwendet, von den Klassen in der <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Abschlussports werden für Anwendungen mit hoher Leistungsfähigkeit Server empfohlen.  
   
  Der Standardwert für die `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` Attribute **"false"**.  
   
- Die <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> können verwendet werden, um den aktuellen Wert der Abrufen der `alwaysUseCompletionPortsForAccept` Attribut aus anwendbaren Konfigurationsdateien. Die <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> können verwendet werden, um den aktuellen Wert der Abrufen der `alwaysUseCompletionPortsForConnect` Attribut aus anwendbaren Konfigurationsdateien.  
+ Die <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> können verwendet werden, um den aktuellen Wert der erste der `alwaysUseCompletionPortsForAccept` Attribut aus anwendbaren Konfigurationsdateien. Die <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> können verwendet werden, um den aktuellen Wert der erste der `alwaysUseCompletionPortsForConnect` Attribut aus anwendbaren Konfigurationsdateien.  
   
- Die `ipProtectionLevel` Attribut gibt die standardmäßige <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> für ein Socket verwendet. Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Eigenschaft ermöglicht die Konfiguration einer Einschränkung eines IPv6-Sockets auf einen angegebenen Bereich, z. B. Adressen mit demselben linklokalen oder standortlokalen Präfix. Diese Option ermöglicht Anwendungen zugriffseinschränkungen für IPv6-Sockets zu platzieren. Mit solchen Einschränkungen kann sich eine im privaten LAN ausgeführte Anwendung selbst einfach und stabil vor externen Angriffen schützen. Diese Option erweitert oder beschränkt den Bereich eines empfangsbereiten Sockets und ermöglicht den uneingeschränkten Zugriff von öffentlichen und privaten Benutzern oder beschränkt den Zugriff nur auf denselben Standort.  
+ Die `ipProtectionLevel` Attribut gibt die Standardvordergrundfarbe für <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> für einen Socket verwenden. Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> -Eigenschaft ermöglicht das Konfigurieren einer Einschränkung eines IPv6-Sockets auf einen angegebenen Bereich, z. B. Adressen mit demselben linklokalen oder standortlokalen Präfix. Diese Option ermöglicht es Anwendungen zugriffseinschränkungen für IPv6-Sockets zu platzieren. Mit solchen Einschränkungen kann sich eine im privaten LAN ausgeführte Anwendung selbst einfach und stabil vor externen Angriffen schützen. Diese Option erweitert oder beschränkt den Bereich eines empfangsbereiten Sockets, ermöglicht uneingeschränkten Zugriff von öffentlichen und privaten Benutzern bei Bedarf oder Einschränken des Zugriffs nur auf die denselben Standort erforderlich.  
   
- Dies `ipProtectionLevel` attributeinstellung betrifft nur die ersten eingehenden Datenverkehr:  
+ Dies `ipProtectionLevel` attributeinstellung wirkt sich auf nur die ersten eingehenden Datenverkehr:  
   
--   Ein TCP-Server für eingehende Verbindungen für ein Socket überwacht.  
+-   Ein TCP-Server lauscht für eingehende Verbindungen für einen Socket.  
   
--   Ein UDP-Anwendung empfangen eines Pakets auf einem Socket.  
+-   Eine UDP-Anwendung empfangen eines Pakets auf einem Socket.  
   
- Diese Einstellung wirkt sich nicht auf bereits eingerichtete TCP-Verbindungen (Datenverkehr ist nicht eingeschränkt in beide Richtungen) und wirkt sich nicht auf eine Anwendung, die UDP-Pakete zu senden.  
+ Diese Einstellung wirkt sich nicht auf bereits eingerichtete TCP-Verbindungen (Datenverkehr ist in beide Richtungen unrestricted) und wirkt sich nicht auf eine Anwendung, die UDP-Pakete zu senden.  
   
- Die möglichen Werte für die `ipProtectionLevel` attributeinstellung entsprechen, mit der definierten Schutzebenen angegeben, der <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> Enumeration wie folgt:  
+ Die möglichen Werte für die `ipProtectionLevel` Einstellung des Attributs entsprechen den Werten der definierten Schutzebenen angegeben, der <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> Enumeration wie folgt:  
   
 |**Attributwert**|**Beschreibung**|  
 |-|-|  
-|EdgeRestricted|Die IP-Schutzebene ist Edge beschränkt. Dieser Wert würde von Anwendungen, die für den Betrieb über das Internet verwendet werden. Diese Einstellung lässt keine (Network Address Translation, NAT)-Durchlauf mit der Windows-Teredo-Implementierung. IPv4-Firewalls, diese Anwendungen möglicherweise umgangen werden, damit Anwendungen gegen Angriffe aus dem Internet auf den geöffneten Port weitergeleitet festgeschrieben werden müssen. Unter Windows Server 2003 und Windows XP ist der Standardwert für die IP-Schutzebene für ein Socket Edge beschränkt.|  
-|Eingeschränkter Zugriff|Die IP-Schutzebene ist eingeschränkt. Dieser Wert wird von Intranetanwendungen verwendet werden, die keine Internetszenarien implementieren. Diese Anwendungen sind im Allgemeinen nicht getestet oder gegen Internet-ähnliche Angriffe möglichst reduziert. Diese Einstellung wird den empfangenen Datenverkehr verbindungslokale nur eingeschränkt.|  
-|Uneingeschränkt|Die IP-Schutzebene ist nicht eingeschränkt. Dieser Wert von Anwendungen, die für den Betrieb über das Internet, einschließlich Anwendungen profitieren von integrierten Funktionen für IPv6-NAT-Durchlauf verwendet werden würde in Windows (z. B. Teredo). IPv4-Firewalls, diese Anwendungen möglicherweise umgangen werden, damit Anwendungen gegen Angriffe aus dem Internet auf den geöffneten Port weitergeleitet festgeschrieben werden müssen. Unter Windows Server 2008 R2 und Windows Vista ist der Standardwert für die IP-Schutzebene für ein Socket nicht eingeschränkt.|  
-|Nicht angegeben.|Die IP-Schutzebene ist nicht angegeben. Unter Windows 7 und Windows Server 2008 R2 ist der Standardwert für die IP-Schutzebene für ein Socket nicht angegeben.|  
+|EdgeRestricted|Die IP-Schutzebene ist Edge beschränkt. Dieser Wert wird von Anwendungen entwickelt, um den Betrieb über das Internet verwendet werden. Diese Einstellung lässt keine (Network Address Translation, NAT) durchlaufen, die unter Verwendung der Windows Teredo-Implementierung. Diese Anwendungen können IPv4-Firewalls umgehen, damit Anwendungen vor auf den geöffneten Anschluss geleitet Internetangriffen geschützt werden müssen. Unter Windows Server 2003 und Windows XP ist der Standardwert für die IP-Schutzebene für einen Socket-Edge beschränkt.|  
+|Eingeschränkter Zugriff|Die IP-Schutzebene ist eingeschränkt. Dieser Wert wird von Intranetanwendungen verwendet werden, die keine Internetszenarios implementieren. Diese Anwendungen sind im Allgemeinen nicht getestet oder Angriffe Internetformat festgeschrieben. Diese Einstellung wird den empfangenen Datenverkehr auf linklokalen beschränkt.|  
+|Uneingeschränkt|Die IP-Schutzebene ist nicht eingeschränkt. Dieser Wert wird von Anwendungen entwickelt, um den Betrieb über das Internet, einschließlich Anwendungen profitieren von IPv6-NAT-Traversal-Funktionen integriert in Windows (z. B. Teredo). Diese Anwendungen können IPv4-Firewalls umgehen, damit Anwendungen vor auf den geöffneten Anschluss geleitet Internetangriffen geschützt werden müssen. Unter Windows Server 2008 R2 und Windows Vista ist der Standardwert für die IP-Schutzebene für einen Socket nicht eingeschränkt.|  
+|Nicht angegeben.|Die IP-Schutzebene ist nicht angegeben. Auf Windows 7 und Windows Server 2008 R2 ist der Standardwert für die IP-Schutzebene für einen Socket nicht angegeben.|  
   
- Der Standardwert für die `ipProtectionLevel` -Attribut ist **Unspecified**.  
+ Der Standardwert für die `ipProtectionLevel` Attribut **Unspecified**.  
   
- Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Eigenschaft kann verwendet werden, den aktuellen Wert der abzurufenden der `ipProtectionLevel` Attribut aus anwendbaren Konfigurationsdateien.  
+ Die <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Eigenschaft kann verwendet werden, um den aktuellen Wert der erhalten die `ipProtectionLevel` Attribut aus anwendbaren Konfigurationsdateien.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie angegeben, dass Abschlussports verwendet werden soll und dass der Standardwert <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> nicht eingeschränkt werden soll.  
+ Das folgende Beispiel zeigt, wie Sie angeben, dass Abschlussanschlüsse verwendet werden soll und dass der Standardwert <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> sollte nicht eingeschränkt werden.  
   
 ```xml  
 <configuration>  

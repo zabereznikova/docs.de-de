@@ -3,11 +3,11 @@ title: let-Bindungen in Klassen (F#)
 description: Erfahren Sie, wie Sie private Felder und private Funktionen für F#-Klassen definieren, mit "let"-Bindungen in der Klassendefinition.
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576717"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47210239"
 ---
 # <a name="let-bindings-in-classes"></a>let-Bindungen in Klassen
 

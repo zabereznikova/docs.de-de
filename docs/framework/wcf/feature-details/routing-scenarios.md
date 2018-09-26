@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 458b67de57be2bd0847ceccbc8a3aebd3b025f64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496151"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200445"
 ---
 # <a name="routing-scenarios"></a>Routingszenarien
 Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein, beim Erstellen einer völlig neuen Konfiguration eine effiziente Routinglogik zu entwerfen.  Es gibt jedoch einige allgemeine Szenarios, auf denen die meisten Routingdienstkonfigurationen basieren. Auch wenn diese Szenarios ggf. nicht genau mit Ihrer jeweiligen Konfiguration übereinstimmen, trägt es zum Verständnis des Routingdiensts bei, wenn Sie wissen, wie dieser in bestimmten Szenarios konfiguriert werden kann.  
@@ -34,17 +34,17 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
   
  Mithilfe des Routingdiensts können Sie einen Endpunkt verfügbar machen, um Nachrichten von Clientanwendungen zu empfangen und dann jede Nachricht anhand ihres Inhalts an die richtige Endversion weiterzuleiten. Die Basisimplementierung erfordert das Hinzufügen eines benutzerdefinierten Headers zur Nachricht, der die Version des Diensts angibt, von der die Nachricht verarbeitet werden soll. Der Routingdienst kann den XPathMessageFilter verwenden, um jede Nachricht auf das Vorhandensein des benutzerdefinierten Headers zu überprüfen und die Nachricht an den entsprechenden Zielendpunkt weiterzuleiten.  
   
- Die Schritte zum Erstellen einer Dienstkonfiguration für die versionsverwaltung verwendet, finden Sie unter [How To: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md). Ein Beispiel für den XPathMessageFilter zum Weiterleiten von Nachrichten basierend auf einem benutzerdefinierten Header verwenden, finden Sie unter der [erweiterte Filter](../../../../docs/framework/wcf/samples/advanced-filters.md) Beispiel.  
+ Die Schritte zum Erstellen einer dienstversionskonfiguration finden Sie unter [so wird's gemacht: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Dienstdatenpartitionierung  
  Beim Entwerfen einer verteilten Umgebung ist es häufig ratsam, die Verarbeitungslast auf mehrere Computer zu verteilen, um Hochverfügbarkeit sicherzustellen, die Verarbeitungslast für einzelne Computer zu verringern oder für eine bestimmte Teilmenge von Nachrichten dedizierte Ressourcen bereitzustellen. Der Routingdienst ist zwar kein Ersatz für eine dedizierte Lösung für den Lastenausgleich, aber Sie können die Funktion für das inhaltsbasierte Routing verwenden, um Nachrichten, die einander ansonsten ähnlich sind, an bestimmte Ziele weiterzuleiten. Es kann z. B. sein, dass Sie Nachrichten eines bestimmten Clients gesondert von den Nachrichten verarbeiten müssen, die Sie von anderen Clients empfangen.  
   
- Die Schritte zum Erstellen einer Konfiguration Partitionierung von Dienstdaten verwendet, finden Sie unter [How To: Dienst Datenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md). Ein Beispiel zum Verwenden von Filtern zum Partitionieren von Daten basierend auf URL und benutzerdefinierte Header finden Sie unter der [erweiterte Filter](../../../../docs/framework/wcf/samples/advanced-filters.md) Beispiel.  
+ Die Schritte zum Erstellen einer dienstdatenpartitionierung finden Sie unter [so wird's gemacht: Partitionieren von Daten in Service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Dynamisches Routing  
  Häufig ist es ratsam, die Routingkonfiguration zu ändern, um auf sich ändernde Geschäftsanforderungen zu reagieren. Dies kann das Hinzufügen einer Route zu einer neueren Version eines Diensts, das Ändern von Routingkriterien oder das Ändern des Zielendpunkts einer bestimmten Nachricht sein, an den der Filter Nachrichten weiterleitet. Mit dem Routingdienst können Sie dies mithilfe von <xref:System.ServiceModel.Routing.RoutingExtension> durchführen. Sie können damit zur Laufzeit ein neues RoutingConfiguration-Objekt bereitstellen. Die neue Konfiguration ist sofort wirksam. Sie gilt jedoch nur für die neuen Sitzungen, die vom Routingdienst verarbeitet werden.  
   
- Die Schritte zum Implementieren von dynamisches routing verwendet, finden Sie unter [Vorgehensweise: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md). Ein Beispiel für dynamisches routing verwenden, finden Sie unter der [dynamische Neukonfiguration](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md) Beispiel.  
+ Die Schritte zum Implementieren des dynamischen Routings finden Sie unter [so wird's gemacht: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multicast  
  Beim Weiterleiten von Nachrichten werden Nachrichten normalerweise an einen bestimmten Zielendpunkt weitergeleitet.  Es kann jedoch sein, dass Sie gelegentlich eine Kopie der Nachricht an mehrere Zielendpunkte weiterleiten müssen. Um das Routing per Multicast durchzuführen, müssen die folgenden Bedingungen erfüllt sein:  
@@ -56,16 +56,14 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
  Wenn diese Bedingungen erfüllt sind, empfängt jeder Zielendpunkt, der einem Filter mit der Rückgabe "true" zugeordnet ist, eine Kopie der Nachricht.  
   
 ### <a name="protocol-bridging"></a>Protokollüberbrückung  
- Beim Weiterleiten von Nachrichten zwischen unterschiedlichen SOAP-Protokollen verwendet der Routingdienst WCF-APIs zum Konvertieren der Nachricht von einem Protokoll zum anderen. Dies tritt automatisch ein, wenn die vom Routingdienst verfügbar gemachten Dienstendpunkte ein anderes Protokoll verwenden als die Clientendpunkte, an die Nachrichten weitergeleitet werden. Es ist möglich, dieses Verhalten zu deaktivieren, falls keine standardmäßigen Protokolle verwendet sind. Sie müssen dann jedoch einen eigenen Überbrückungscode bereitstellen.  
-  
- sein. Ein Beispiel über den Routingdienst, um Nachrichten zwischen Protokollen zu übersetzen, finden Sie unter der [Bridging und Fehlerbehandlung](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) Beispiel.  
+ Beim Weiterleiten von Nachrichten zwischen unterschiedlichen SOAP-Protokollen verwendet der Routingdienst WCF-APIs zum Konvertieren der Nachricht von einem Protokoll zum anderen. Dies tritt automatisch ein, wenn die vom Routingdienst verfügbar gemachten Dienstendpunkte ein anderes Protokoll verwenden als die Clientendpunkte, an die Nachrichten weitergeleitet werden. Es ist möglich, dieses Verhalten zu deaktivieren, falls keine standardmäßigen Protokolle verwendet sind. Sie müssen dann jedoch einen eigenen Überbrückungscode bereitstellen.
   
 ### <a name="error-handling"></a>Fehlerbehandlung  
  In einer verteilten Umgebung ist es nicht ungewöhnlich, dass vorübergehende Netzwerkfehler oder Kommunikationsfehler auftreten. Ohne einen Vermittlerdienst wie den Routingdienst ist die Clientanwendung für die Behandlung dieser Art von Fehlern zuständig. Falls die Clientanwendung keine spezielle Logik für wiederholte Versuche bei Netzwerk- oder Kommunikationsfehlern aufweist und keine alternativen Zielorte kennt, kann es zu Szenarios kommen, in denen eine Nachricht mehrere Male gesendet werden muss, bevor sie vom Zieldienst erfolgreich verarbeitet wird. Dies kann bei Kunden zu Unzufriedenheit mit der Anwendung führen, weil diese ggf. als unzuverlässig wahrgenommen wird.  
   
  Der Routingdienst versucht, dieses Szenario zu beheben, indem er robuste Fehlerbehandlungsfunktionen für Nachrichten bereitstellt, für die Netzwerk- oder Kommunikationsfehler auftreten. Wenn Sie eine Liste möglicher Zielendpunkte erstellen und diese Liste jedem Nachrichtenfilter zuordnen, beseitigen Sie die Fehlerquelle (Single Point of Failure), deren Ursache die Verwendung von nur einem möglichen Ziel ist. Bei einem Fehler versucht der Routingdienst, die Nachricht an den nächsten Endpunkt in der Liste zu übermitteln, bis die Nachricht übermittelt wurde, ein anderer Fehler als ein Kommunikationsfehler aufgetreten ist oder alle Endpunkte abgearbeitet wurden.  
   
- Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet, finden Sie unter [Vorgehensweise: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Ein Beispiel für die Fehlerbehandlung implementieren, finden Sie unter der [Bridging und Fehlerbehandlung](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) und [erweiterte Fehlerbehandlung](../../../../docs/framework/wcf/samples/advanced-error-handling.md) Beispiele.  
+ Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet wird, finden Sie unter [so wird's gemacht: Error Handling](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Dienstversionskontrolle](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  

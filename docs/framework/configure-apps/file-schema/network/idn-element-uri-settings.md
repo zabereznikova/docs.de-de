@@ -5,11 +5,11 @@ ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1537c17cb3c16beeb41cfaa4103e0664e93facc7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170599"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205943"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; -Elements (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domänennamen angewendet wird.  

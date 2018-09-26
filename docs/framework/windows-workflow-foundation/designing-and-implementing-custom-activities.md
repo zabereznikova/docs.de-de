@@ -2,18 +2,18 @@
 title: Entwerfen und Implementieren von benutzerdefinierten Aktivitäten
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 2ed80b5cbb27c6647053ee9b8f4cd2bedb0c6cde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 673145c856e950c8648a87cb3dcb9665ffa51ba9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513813"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216713"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Entwerfen und Implementieren von benutzerdefinierten Aktivitäten
 Benutzerdefinierte Aktivitäten in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] werden erstellt, indem entweder vom System bereitgestellte Aktivitäten zu zusammengesetzten Aktivitäten zusammengefasst oder indem neue Typen erstellt werden, die von <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> oder <xref:System.Activities.NativeActivity> abgeleitet werden. In diesem Abschnitt wird beschrieben, wie benutzerdefinierte Aktivitäten mit diesen beiden Methoden erstellt werden.  
   
 > [!IMPORTANT]
->  Benutzerdefinierte Aktivitäten werden im Workflow-Designer standardmäßig als einfaches Rechteck mit dem Namen der Aktivität angezeigt. Um eine benutzerdefinierte grafische Darstellung der Aktivität im Workflow-Designer bereitzustellen, müssen Sie auch einen benutzerdefinierten Designer erstellen. Weitere Informationen finden Sie unter [Verwenden benutzerdefinierter Aktivitätsdesigner und Vorlagen](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
+>  Benutzerdefinierte Aktivitäten werden im Workflow-Designer standardmäßig als einfaches Rechteck mit dem Namen der Aktivität angezeigt. Um eine benutzerdefinierte grafische Darstellung der Aktivität im Workflow-Designer bereitzustellen, müssen Sie auch einen benutzerdefinierten Designer erstellen. Weitere Informationen finden Sie unter [mithilfe von benutzerdefinierten Aktivitätsdesigner und Vorlagen](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Aktivitätserstellungsoptionen](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  
@@ -35,10 +35,7 @@ Benutzerdefinierte Aktivitäten in [!INCLUDE[netfx_current_long](../../../includ
  Beschreibt, wie die Eigenschaften der Workflowausführung verwendet werden, um der Umgebung einer Aktivität kontextspezifische Eigenschaften hinzuzufügen.  
   
  [Verwenden von Aktivitätsdelegaten](../../../docs/framework/windows-workflow-foundation/using-activity-delegates.md)  
- Erläutert, wie Aktivitäten erstellt und verwendet werden, die Aktivitätsdelegaten enthalten.  
-  
- [Aktivitätslokalisierung](../../../docs/framework/windows-workflow-foundation/activity-localization.md)  
- Beschreibt, wie die Lokalisierung von Zeichenfolgenressourcen in Aktivitäten verwendet wird.  
+ Erläutert, wie Aktivitäten erstellt und verwendet werden, die Aktivitätsdelegaten enthalten.
   
  [Verwenden von Aktivitätserweiterungen](../../../docs/framework/windows-workflow-foundation/using-activity-extensions.md)  
  Beschreibt, wie Aktivitätserweiterungen erstellt und verwendet werden.  
