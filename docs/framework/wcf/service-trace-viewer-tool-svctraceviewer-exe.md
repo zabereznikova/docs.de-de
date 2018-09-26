@@ -3,11 +3,11 @@ title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048350"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251783"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die Analyse der diagnoseablaufverfolgungen, die von WCF generiert werden. Service Trace Viewer bietet eine Möglichkeit, ganz einfach zusammenführen, anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, damit können Sie diagnostizieren, reparieren und prüfen die WCF-Dienstprobleme.  
