@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ab1644d23e4d6d78b62e701902e5ec39e134b38b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745119"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193511"
 ---
 # <a name="ltassertgt-element"></a>&lt;Assert-&gt; Element
 Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>-Methode aufrufen. Außerdem wird der Name der Datei angegeben, in die die Meldung geschrieben werden soll.  
@@ -38,7 +37,7 @@ Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnosti
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`assertuienabled`|Optionales Attribut.<br /><br /> Gibt an, ob die anzuzeigenden ein Meldungsfeld, wenn die **Debug.Assert** Methode ergibt **"false"**.|  
+|`assertuienabled`|Optionales Attribut.<br /><br /> Gibt an, ob die anzuzeigende ein Meldungsfeld, wenn die **Debug.Assert** Methode ergibt **"false"**.|  
 |`logfilename`|Optionales Attribut.<br /><br /> Gibt den Namen der Datei zum Schreiben der Nachricht auf, wenn **Debug.Assert** ergibt **"false"**.|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled-Attribut  
@@ -59,10 +58,10 @@ Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnosti
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beide Attribute in der  **\<assert >** Element sind optional. Sie können Meldungsfelder deaktivieren, ohne Angabe einer Datei, um die Nachrichten schreiben oder können Sie eine Datei zum Schreiben, dass Nachrichten an die while-verlassen Felder aktiviert Nachricht angeben.  
+ Beide Attribute in der  **\<assert >** -Element sind optional. Können Sie Meldungsfelder deaktivieren, ohne dass eine Datei zum Schreiben der Nachrichten an, oder Sie können eine Datei zum Schreiben, dass Nachrichten bei verlassen Felder aktiviert Nachricht angeben.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die Vorgehensweise beim Anzeigen von Meldungsfeldern deaktivieren, beim Aufrufen von **Debug.Assert** und Schreiben von Nachrichten auf `c:\log.txt`.  
+ Das folgende Beispiel zeigt die zum Anzeigen von Meldungsfeldern zu deaktivieren, beim Aufrufen **Debug.Assert** und schreiben die Nachrichten an `c:\log.txt`.  
   
 ```xml  
 <configuration>  

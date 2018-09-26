@@ -2,12 +2,12 @@
 title: Übersicht über das Hosten von Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
-ms.openlocfilehash: 7b5de31b5931af13b41b11af6e48a52b5628e27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe271e30e9c4e98a52c01ffaa21de25c127c7ff
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489559"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47208431"
 ---
 # <a name="hosting-workflow-services-overview"></a>Übersicht über das Hosten von Workflowdiensten
 Workflowdienste müssen gehostet werden, damit sie ausgeführt werden können. Der <xref:System.ServiceModel.WorkflowServiceHost> ist der vordefinierte Workflowhost, der mehrere Instanzen, Konfigurationen sowie WCF-Messaging unterstützt (obwohl die Verwendung von Messaging zum Hosten der Workflows nicht erforderlich ist).  Außerdem wird durch einen Satz von Dienstverhalten die Integration von Persistenz, Nachverfolgung und Instanzsteuerung bereitgestellt.  Ebenso wie der <xref:System.ServiceModel.ServiceHost> von WCF kann sich der <xref:System.ServiceModel.WorkflowServiceHost> in verwalteten .NET-Anwendungen selbst hosten, oder er wird in IIS/WAS (als XAMLX-Datei) im Internet gehostet.  In den Themen dieses Abschnitts wird beschrieben, wie Sie einen Workflowdienst hosten.  
@@ -23,10 +23,7 @@ Workflowdienste müssen gehostet werden, damit sie ausgeführt werden können. D
  Beschreibt, wie Sie die Funktionalität des Workflowdiensthosts erweitern.  
   
  [Workflowsteuerungsendpunkt](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
- Beschreibt, wie Sie einen Endpunkt definieren, der Ihnen das Erstellen von Workflowinstanzen ermöglicht.  
-  
- [Vorgehensweise: Hosten eines Nicht-Dienstworkflows in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)  
- Veranschaulicht das Hosten eines Workflows, der kein Workflowdienst in IIS ist.  
+ Beschreibt, wie Sie einen Endpunkt definieren, der Ihnen das Erstellen von Workflowinstanzen ermöglicht.
   
  [Vorgehensweise: Hosten eines Workflowdiensts mit Windows Server AppFabric](../../../../docs/framework/wcf/feature-details/how-to-host-a-workflow-service-with-windows-server-app-fabric.md)  
  Veranschaulicht das Hosten eines vorhandenen Workflowdiensts in Windows Server AppFabric.  

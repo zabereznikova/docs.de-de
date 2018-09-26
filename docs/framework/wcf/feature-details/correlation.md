@@ -2,12 +2,12 @@
 title: Korrelation
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: 9dbebf6d497a5cc109400d04206d39ad76321ba3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e72f462a9b8777fbeadb306c7fea8354f64ffe8c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491282"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216577"
 ---
 # <a name="correlation"></a>Korrelation
 Wenn Workflowdienstanwendungen mit anderen Diensten kommunizieren, ist es wichtig, dass ausgetauschte Nachrichten an die richtige Workflowinstanz weitergeleitet werden. Die Korrelation stellt den Mechanismus dafür bereit. Die Themen in diesem Abschnitt bieten eine Übersicht über die Korrelation und ihre Verwendung in unterschiedlichen Workflowdienstszenarien.  
@@ -16,14 +16,8 @@ Wenn Workflowdienstanwendungen mit anderen Diensten kommunizieren, ist es wichti
  [Übersicht über die Korrelation](../../../../docs/framework/wcf/feature-details/correlation-overview.md)  
  Bietet eine Übersicht über die Korrelationstypen, die in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] verfügbar sind.  
   
- [Kontextaustausch](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
- Beschreibt die Kontextaustauschkorrelation.  
-  
  [Permanenter Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
- Beschreibt die permanente Duplexkorrelation.  
-  
- [Inhaltsbasiert](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
- Beschreibt die inhaltsbasierte Korrelation.  
+ Beschreibt die permanente Duplexkorrelation.
   
  [Anforderung-Antwort](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
  Beschreibt die Anforderung/Antwort-Korrelation.  

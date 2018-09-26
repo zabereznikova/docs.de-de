@@ -5,11 +5,11 @@ ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 24a9923bc60b0379ee51c04a8e55d83bf262aa50
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171529"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47210070"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>Spezifikation für die Benutzeroberflächenautomatisierung und Zusicherung an die Community
 Automatisierung der Benutzeroberfläche ermöglicht programmgesteuerten Zugriff auf die meisten Elemente der Benutzeroberfläche (UI) auf dem Desktop, sodass Hilfstechnologieprodukte, z. B. die Bildschirmsprachausgabe, Informationen über die Benutzeroberfläche für Endbenutzer bereitzustellen und die Benutzeroberfläche von Verfahren als Standardeingaben ändern .  

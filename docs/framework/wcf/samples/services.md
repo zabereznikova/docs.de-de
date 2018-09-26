@@ -2,37 +2,34 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3987b170f216064073f14afb489bd7afb5228c77
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806096"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206370"
 ---
 # <a name="services"></a>Dienste
-Dieser Abschnitt enthält Beispiele, in denen Windows Communication Foundation (WCF)-Dienste veranschaulicht.  
+Dieser Abschnitt enthält Beispiele, in denen Dienste für Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Veranschaulicht, hostende von WCF-Diensten.  
+ Veranschaulicht, hosting von WCF-Dienste.  
   
  [Dienstinteroperabilität](../../../../docs/framework/wcf/samples/service-interoperability.md)  
  Veranschaulicht die Interaktion zwischen WCF und anderen diensttechnologien.  
   
  [Verhalten](../../../../docs/framework/wcf/samples/behaviors.md)  
- Zeigt die WCF-Dienstverhalten.  
+ WCF-Dienstverhaltensweisen veranschaulicht.  
   
  [Dienstsicherheit](../../../../docs/framework/wcf/samples/service-security.md)  
- Veranschaulicht die Sicherheit für WCF-Diensts.  
+ Zeigt die WCF-dienstsicherheit.  
   
  [Vereinfachte Konfiguration für WCF-Dienste](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- Veranschaulicht, wie ein typischer Dienst und mithilfe von WCF-Client implementiert und konfiguriert.  
+ Veranschaulicht das Implementieren und konfigurieren ein typischer Dienst und Verwenden von WCF-Client.  
   
  [Verwendung von Standardendpunkten](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
- Veranschaulicht, wie Standardendpunkte in Dienstkonfigurationsdateien verwendet werden.  
-  
- [Hierarchisches Konfigurationsmodell](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
- Zeigt, wie eine Hierarchie von Konfigurationsdateien für Dienste implementiert wird.  
+ Veranschaulicht, wie Standardendpunkte in Dienstkonfigurationsdateien verwendet werden.
   
  [Erweiterte Schutzrichtlinie](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
  Veranschaulicht erweiterten Schutz, eine Sicherheitsinitiative zum Schutz vor Man-In-The-Middle-Angriffen (MITM-Angriff, Janusangriff).  
@@ -56,7 +53,7 @@ Dieser Abschnitt enthält Beispiele, in denen Windows Communication Foundation (
  Zeigt einen Dienst, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Veranschaulicht, wie zusätzliche Informationen für einen WCF-Aufruf mithilfe von Headern zu senden.  
+ Veranschaulicht das Senden von zusätzlichen Informationen für einen WCF-Aufruf verwenden von Headern.  
   
  [Dienstbeschreibung](../../../../docs/framework/wcf/samples/service-description.md)  
  Veranschaulicht, wie ein Dienst seine Dienstbeschreibungsinformationen zur Laufzeit abrufen kann.  

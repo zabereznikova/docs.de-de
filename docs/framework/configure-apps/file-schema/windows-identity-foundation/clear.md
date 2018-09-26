@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
 ms.openlocfilehash: 8f5d2e2b580d6a2824fd885f9b08cb2b2f0b244e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111567"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205452"
 ---
 # <a name="ltcleargt"></a>&lt;clear&gt;
 Löscht alle Sicherheitstokenhandler aus der aktuellen Auflistung der Tokenhandler.  

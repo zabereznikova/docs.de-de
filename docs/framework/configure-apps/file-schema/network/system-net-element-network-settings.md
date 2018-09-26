@@ -11,11 +11,11 @@ ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 25663774c639e9fea13ced54a9aa7f456922fa1a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085689"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209937"
 ---
 # <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; -Element (Netzwerkeinstellungen)
 Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.  
