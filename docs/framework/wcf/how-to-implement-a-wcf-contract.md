@@ -8,21 +8,21 @@ helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
 ms.openlocfilehash: 569de6f49b56b46ccfeb22e9f0bd25bcf339b7e0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581141"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088139"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="92960-102">Gewusst wie: Implementieren eines Windows Communication Foundation-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="92960-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
+# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a><span data-ttu-id="67ae4-102">Gewusst wie: Implementieren eines Windows Communication Foundation-Dienstvertrags</span><span class="sxs-lookup"><span data-stu-id="67ae4-102">How to: Implement a Windows Communication Foundation Service Contract</span></span>
 
-<span data-ttu-id="92960-103">Dies ist die zweite von sechs Aufgaben, die zum Erstellen eines grundlegenden Windows Communication Foundation (WCF)-Diensts und ein Client, der den Dienst aufrufen kann.</span><span class="sxs-lookup"><span data-stu-id="92960-103">This is the second of six tasks required to create a basic Windows Communication Foundation (WCF) service and a client that can call the service.</span></span> <span data-ttu-id="92960-104">Eine Übersicht über alle sechs Aufgaben, finden Sie unter den [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="92960-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+<span data-ttu-id="67ae4-103">Dies ist die zweite von sechs Aufgaben, die zum Erstellen eines grundlegenden Windows Communication Foundation (WCF)-Diensts und ein Client, der den Dienst aufrufen kann.</span><span class="sxs-lookup"><span data-stu-id="67ae4-103">This is the second of six tasks required to create a basic Windows Communication Foundation (WCF) service and a client that can call the service.</span></span> <span data-ttu-id="67ae4-104">Eine Übersicht über alle sechs Aufgaben, finden Sie unter den [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="67ae4-104">For an overview of all six tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
 
-<span data-ttu-id="92960-105">Im nächsten Schritt zum Erstellen einer WCF-Anwendung wird die Dienstschnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="92960-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="92960-106">Dies schließt die Erstellung einer `CalculatorService`-Klasse ein, die die benutzerdefinierte `ICalculator`-Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="92960-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>
+<span data-ttu-id="67ae4-105">Im nächsten Schritt zum Erstellen einer WCF-Anwendung wird die Dienstschnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="67ae4-105">The next step in creating a WCF application is to implement the service interface.</span></span> <span data-ttu-id="67ae4-106">Dies schließt die Erstellung einer `CalculatorService`-Klasse ein, die die benutzerdefinierte `ICalculator`-Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="67ae4-106">This involves creating a class called `CalculatorService` that implements the user-defined `ICalculator` interface..</span></span>
 
-## <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="92960-107">So implementieren Sie einen WCF-Dienstvertrag</span><span class="sxs-lookup"><span data-stu-id="92960-107">To implement a WCF service contract</span></span>
+## <a name="to-implement-a-wcf-service-contract"></a><span data-ttu-id="67ae4-107">So implementieren Sie einen WCF-Dienstvertrag</span><span class="sxs-lookup"><span data-stu-id="67ae4-107">To implement a WCF service contract</span></span>
 
-<span data-ttu-id="92960-108">Öffnen Sie die Datei Service1.cs oder Service1.vb, und fügen Sie den folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="92960-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>
+<span data-ttu-id="67ae4-108">Öffnen Sie die Datei Service1.cs oder Service1.vb, und fügen Sie den folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="67ae4-108">Open the Service1.cs or Service1.vb file and add the following code:</span></span>
 
 ```csharp
 using System;
@@ -111,11 +111,11 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-<span data-ttu-id="92960-109">Jede Methode implementiert den Rechnervorgang und schreibt eine kleine Menge Text in die Konsole, um die Tests zu vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="92960-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>
+<span data-ttu-id="67ae4-109">Jede Methode implementiert den Rechnervorgang und schreibt eine kleine Menge Text in die Konsole, um die Tests zu vereinfachen.</span><span class="sxs-lookup"><span data-stu-id="67ae4-109">Each method implements the calculator operation and writes some text to the console to make testing easier.</span></span>
 
-## <a name="example"></a><span data-ttu-id="92960-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="92960-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="67ae4-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="67ae4-110">Example</span></span>
 
-<span data-ttu-id="92960-111">Im folgenden Code wird die Schnittstelle, die den Dienstvertrag definiert, sowie die Implementierung der Schnittstelle dargestellt.</span><span class="sxs-lookup"><span data-stu-id="92960-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>
+<span data-ttu-id="67ae4-111">Im folgenden Code wird die Schnittstelle, die den Dienstvertrag definiert, sowie die Implementierung der Schnittstelle dargestellt.</span><span class="sxs-lookup"><span data-stu-id="67ae4-111">The following code shows both the interface that defines the contract and the implementation of the interface.</span></span>
 
 ```csharp
 using System;
@@ -245,20 +245,20 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-## <a name="compile-the-code"></a><span data-ttu-id="92960-112">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="92960-112">Compile the code</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="67ae4-112">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="67ae4-112">Compile the code</span></span>
 
-<span data-ttu-id="92960-113">Erstellen Sie die Projektmappe aus, um sicherzustellen, dass keine Kompilierungsfehler vorliegen.</span><span class="sxs-lookup"><span data-stu-id="92960-113">Build the solution to ensure there are no compilation errors.</span></span> <span data-ttu-id="92960-114">Wenn Sie Visual Studio verwenden, sind die **erstellen** Menü die Option **Projektmappe** (oder drücken Sie **STRG**+**UMSCHALT** + **B**).</span><span class="sxs-lookup"><span data-stu-id="92960-114">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
+<span data-ttu-id="67ae4-113">Erstellen Sie die Projektmappe aus, um sicherzustellen, dass keine Kompilierungsfehler vorliegen.</span><span class="sxs-lookup"><span data-stu-id="67ae4-113">Build the solution to ensure there are no compilation errors.</span></span> <span data-ttu-id="67ae4-114">Wenn Sie Visual Studio verwenden, sind die **erstellen** Menü die Option **Projektmappe** (oder drücken Sie **STRG**+**UMSCHALT** + **B**).</span><span class="sxs-lookup"><span data-stu-id="67ae4-114">If you're using Visual Studio, on the **Build** menu select **Build Solution** (or press **Ctrl**+**Shift**+**B**).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="92960-115">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="92960-115">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="67ae4-115">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="67ae4-115">Next steps</span></span>
 
-<span data-ttu-id="92960-116">Der Dienstvertrag ist nun erstellt und implementiert.</span><span class="sxs-lookup"><span data-stu-id="92960-116">Now the service contract is created and implemented.</span></span> <span data-ttu-id="92960-117">Im nächsten Schritt führen Sie den Dienst.</span><span class="sxs-lookup"><span data-stu-id="92960-117">In the next step, you run the service.</span></span>
+<span data-ttu-id="67ae4-116">Der Dienstvertrag ist nun erstellt und implementiert.</span><span class="sxs-lookup"><span data-stu-id="67ae4-116">Now the service contract is created and implemented.</span></span> <span data-ttu-id="67ae4-117">Im nächsten Schritt führen Sie den Dienst.</span><span class="sxs-lookup"><span data-stu-id="67ae4-117">In the next step, you run the service.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="92960-118">Vorgehensweise: Hosten und Ausführen eines grundlegenden Diensts</span><span class="sxs-lookup"><span data-stu-id="92960-118">How to: Host and Run a Basic Service</span></span>](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
+> [<span data-ttu-id="67ae4-118">Vorgehensweise: Hosten und Ausführen eines grundlegenden Diensts</span><span class="sxs-lookup"><span data-stu-id="67ae4-118">How to: Host and Run a Basic Service</span></span>](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 
-<span data-ttu-id="92960-119">Informationen zur Problembehandlung finden Sie unter [Troubleshooting the Getting Started Tutorial (Problembehandlung für das Tutorial „Erste Schritte“)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="92960-119">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>
+<span data-ttu-id="67ae4-119">Informationen zur Problembehandlung finden Sie unter [Troubleshooting the Getting Started Tutorial (Problembehandlung für das Tutorial „Erste Schritte“)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="67ae4-119">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="92960-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="92960-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67ae4-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67ae4-120">See also</span></span>
 
-- [<span data-ttu-id="92960-121">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="92960-121">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [<span data-ttu-id="92960-122">Selbst gehostete Dienste</span><span class="sxs-lookup"><span data-stu-id="92960-122">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+- [<span data-ttu-id="67ae4-121">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="67ae4-121">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [<span data-ttu-id="67ae4-122">Selbst gehostete Dienste</span><span class="sxs-lookup"><span data-stu-id="67ae4-122">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
