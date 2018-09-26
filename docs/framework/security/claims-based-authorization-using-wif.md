@@ -3,13 +3,12 @@ title: Anspruchsbasierte Autorisierung mit WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 430959d50bf66801da2e1203496e77ad0f291a0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485881"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088112"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Anspruchsbasierte Autorisierung mit WIF
 In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche Ressourcen eine authentifizierte Identität zugreifen und welche Vorgänge sie mit diesen Ressourcen ausführen darf. Eine falsche oder schwache Autorisierung führt zu Offenlegung von Informationen und Datenmanipulation. In diesem Thema werden die verfügbaren Methoden zum Implementieren der Autorisierung für Ansprüche unterstützende ASP.NET-Webanwendungen und -Dienste mit Windows Identity Foundation (WIF) und einem Sicherheitstokendienst (STS) wie Microsoft Azure-Zugriffssteuerungsdienst (ACS) beschrieben.  

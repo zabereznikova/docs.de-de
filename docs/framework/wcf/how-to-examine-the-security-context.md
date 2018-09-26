@@ -10,16 +10,15 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8ff6969095a49dcae8b1d59b5b0ab28a8af24274
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2cb1f6d06961546a04b4a132bf9861c925ca421
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499475"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113857"
 ---
 # <a name="how-to-examine-the-security-context"></a>Vorgehensweise: Prüfen des Sicherheitskontexts
-Beim Programmieren von Windows Communication Foundation (WCF)-Dienste kann dienstsicherheitskontextes Sie Informationen über die Clientanmeldeinformationen und Ansprüche verwendet, um die Authentifizierung mit dem Dienst zu erhalten. Dies geschieht anhand der Eigenschaften der <xref:System.ServiceModel.ServiceSecurityContext>-Klasse.  
+Bei der Programmierung von Windows Communication Foundation (WCF)-Dienste kann dienstsicherheitskontextes Sie Details zu den Clientanmeldeinformationen und Ansprüche verwendet, um die Authentifizierung mit dem Dienst zu ermitteln. Dies geschieht anhand der Eigenschaften der <xref:System.ServiceModel.ServiceSecurityContext>-Klasse.  
   
  So können Sie z.&#160;B. die Identität des aktuellen Clients mit der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>-Eigenschaft oder der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft abrufen. Mit der <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>-Eigenschaft können Sie ermitteln, ob der Client anonym ist.  
   

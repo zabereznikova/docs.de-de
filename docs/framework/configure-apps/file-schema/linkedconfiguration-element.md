@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743796"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170820"
 ---
 # <a name="linkedconfiguration-element"></a>\<LinkedConfiguration >-Element
 
@@ -39,7 +38,7 @@ Gibt eine einzuschließende Konfigurationsdatei an.
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **href**  | Erforderliches Attribut.<br><br>Die URL der Konfigurationsdatei enthalten. Das einzige Format, unterstützt die **Href** -Attribut ist `file://`. Lokale Dateien und UNC-Dateien werden unterstützt. |
+| **href**  | Erforderliches Attribut.<br><br>Die URL der Konfigurationsdatei eingeschlossen werden soll. Die einzige unterstützte Format für die **Href** Attribut `file://`. Lokale Dateien und UNC-Dateien werden unterstützt. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -53,28 +52,28 @@ Keiner
 
 ## <a name="remarks"></a>Hinweise
 
-Die  **\<LinkedConfiguration >** Element vereinfacht die Wartung für Komponentenassemblys. Wenn eine oder mehrere Anwendungen eine Assembly, die über eine Konfigurationsdatei, die sich in einem bekannten Speicherort befinden verwenden, können die Konfigurationsdateien der Anwendungen, die die Assembly verwenden die  **\<LinkedConfiguration >** Element, das die Konfigurationsdatei für die Assembly, anstatt direkt einschließlich der Konfigurationsinformationen enthalten. Wenn der Komponentenassembly gewartet wird, enthält die Konfigurationsdatei mit allgemeinen aktualisieren aktualisierte Konfigurationsinformationen für alle Anwendungen, die Assembly zu verwenden.
+Die  **\<LinkedConfiguration >** Element vereinfacht die Wartung für Komponentenassemblys. Wenn eine oder mehrere Anwendungen eine Assembly zu, die über eine Konfigurationsdatei, die sich in einem bekannten Speicherort befinden verwenden, können die Konfigurationsdateien der Anwendungen, die die Assembly der  **\<LinkedConfiguration >** Element, das die Konfigurationsdatei der Assembly, anstatt direkt darunter von Konfigurationsinformationen enthalten. Wenn die Komponentenassembly gewartet wird, stellt das Aktualisieren der allgemeinen Konfigurationsdatei aktualisierte Konfigurationsinformationen für alle Anwendungen, die die Assembly zu verwenden.
 
 > [!NOTE]
 > Die  **\<LinkedConfiguration >** Element wird für Anwendungen mit Windows-Seite-an-Seite-Manifeste nicht unterstützt.
 
 Die folgenden Regeln bestimmen die Verwendung von verknüpfte Konfigurationsdateien:
 
-- Die Einstellungen in Konfigurationsdateien enthalten nur betreffen Lademodul Bindungsrichtlinie und werden nur vom Ladeprogramm verwendet. Die enthalten Konfigurationsdateien können andere als die Bindung von Richtlinien zu verwenden, aber diese Einstellungen nicht haben keine Auswirkung.
+- Die Einstellungen in Konfigurationsdateien enthalten nur Auswirkungen auf das Ladeprogramm Bindungsrichtlinie und werden nur vom Ladeprogramm verwendet. Die enthaltenen Konfigurationsdateien haben Einstellungen als die Bindung von Richtlinien, aber diese Einstellungen haben keinerlei Auswirkung.
 
-- Das einzige Format, unterstützt die `href` -Attribut ist `file://`. Lokale Dateien und UNC-Dateien werden unterstützt.
+- Die einzige unterstützte Format für die `href` Attribut `file://`. Lokale Dateien und UNC-Dateien werden unterstützt.
 
 - Es gibt keine Einschränkung für die Anzahl der verknüpften Konfigurationen pro Konfigurationsdatei.
 
-- Alle verknüpften Konfigurationsdateien werden zusammengeführt, um eine Datei bilden die `#include` in C/C++-Richtlinie.
+- Alle verknüpften Konfigurationsdateien werden zusammengeführt, um eine Datei, vergleichbar mit dem Verhalten von bilden die `#include` in C/C++-Direktive.
 
-- Die  **\<LinkedConfiguration >** Element ist nur in Anwendungskonfigurationsdateien zulässig; sie wird ignoriert, *"Machine.config"*.
+- Die  **\<LinkedConfiguration >** Element ist nur in Anwendungskonfigurationsdateien zulässig; es wird ignoriert, *"Machine.config"*.
 
-- Zirkelverweise werden erkannt und beendet. D. h., wenn die  **\<LinkedConfiguration >** Elemente einer Reihe von Konfigurationsdateien bilden eine Schleife, die Schleife wird erkannt und beendet.
+- Zirkelverweise werden erkannt und beendet. D.h., wenn die  **\<LinkedConfiguration >** Elemente aus einer Reihe von Konfigurationsdateien bilden eine Schleife, die Schleife erkannt und gestoppt wird.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei von der lokalen Festplatte enthalten:
+Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei aus der lokalen Festplatte enthalten:
 
 ```xml
 <configuration>

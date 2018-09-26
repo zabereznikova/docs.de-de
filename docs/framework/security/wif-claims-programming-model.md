@@ -3,13 +3,12 @@ title: WIF-Claims-Programmiermodell
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1a85b359450cb3ba07930466f550f964c6fdd98b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696296"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171711"
 ---
 # <a name="wif-claims-programming-model"></a>WIF-Claims-Programmiermodell
 Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden normalerweise die IIdentity- und IPrincipal-Schnittstellen zum Arbeiten mit Identitätsinformationen des Benutzers. Windows Identity Foundation (WIF) wurde in .NET 4.5 integriert, sodass Ansprüche jetzt immer für jeden Prinzipal vorhanden sind, wie in der folgenden Abbildung dargestellt:

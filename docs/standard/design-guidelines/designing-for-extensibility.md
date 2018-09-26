@@ -11,11 +11,11 @@ ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697528"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157453"
 ---
 # <a name="designing-for-extensibility"></a>Entwerfen für Erweiterbarkeit
 Ein wichtiger Aspekt des Entwurfs ein Framework wird sichergestellt, dass die Erweiterbarkeit des Frameworks sorgfältig in Betracht gezogen wurde. Dies erfordert, dass Sie verstehen, die Kosten und Vorteile, die mit verschiedenen Mechanismen zur Erweiterbarkeit verknüpft ist. In diesem Kapitel können Sie entscheiden, welche die Erweiterbarkeitsmechanismen – Unterklassen, Ereignisse, virtuelle Member, Rückrufe und So weiter – kann am besten erfüllen die Anforderungen der Ihr Framework.  

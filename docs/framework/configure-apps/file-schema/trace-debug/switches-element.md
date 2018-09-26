@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 60a18ae8d89d6be69b2c10c07064f123d3f9c0f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745146"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113883"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;Switches&gt; Element
 Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.  
@@ -53,10 +52,10 @@ Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind
 |`System.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können das Maß an einen Ablaufverfolgungsschalter ändern, indem Sie diese in einer Konfigurationsdatei zur Verfügung stellen. Wenn der Schalter ist eine <xref:System.Diagnostics.BooleanSwitch>, Sie können Sie aktivieren und deaktivieren. Wenn der Schalter ist eine <xref:System.Diagnostics.TraceSwitch>, können Sie verschiedene Ebenen hinzu, um die Typen von Ablaufverfolgung angeben zuweisen oder Debug Nachrichten, die Ausgaben der Anwendung.  
+ Sie können die Ebene der einen Ablaufverfolgungsschalter ändern, indem Sie es in einer Konfigurationsdatei platzieren. Wenn der Schalter ist eine <xref:System.Diagnostics.BooleanSwitch>, Sie können Sie aktivieren und deaktivieren. Wenn der Schalter ist eine <xref:System.Diagnostics.TraceSwitch>, können Sie verschiedene Ebenen, um die Typen der Ablaufverfolgung angeben zuweisen oder Debug Nachrichten, die Ausgaben der Anwendung.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die  **\<wechseln >** festzulegenden Elements der `General` Trace-Schalter, um die <xref:System.Diagnostics.TraceLevel> Ebene, und aktivieren Sie die `Data` booleschen Ablaufverfolgungsschalter.  
+ Das folgende Beispiel zeigt, wie Sie mit der  **\<wechseln >** festzulegende Element der `General` Trace-Schalter, um die <xref:System.Diagnostics.TraceLevel> Ebene, und aktivieren Sie die `Data` booleschen Ablaufverfolgungsschalter.  
   
 ```xml  
 <configuration>  

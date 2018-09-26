@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581206"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086735"
 ---
 # <a name="single-data-type-visual-basic"></a>Single-Datentyp (Visual Basic)
 Speichert signierte IEEE-32-Bit (4-Byte) mit einfacher Genauigkeit Gleitkommazahlen im Bereich von - 3,4028235E + 38 bis - 1.401298E-45 für negative Werte und 1.401298E-45 bis 3,4028235E + 38 für positive Werte. Zahlen mit einfacher Genauigkeit speichern eine Approximation einer reellen Zahl.  

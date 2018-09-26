@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a7e1609df0a7a1de4e70f425e649115459b43f8c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173069"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;ConnectionManagement&gt; -Element (Netzwerkeinstellungen)
 Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.  
@@ -42,8 +42,8 @@ Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Löscht die Verbindungsverwaltungsliste.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Löscht der Verbindungsverwaltungsliste an.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -52,13 +52,13 @@ Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `connectionManagement` -Element definiert die maximale Anzahl von Verbindungen auf einem Server oder eine Gruppe von Servern.  
+ Die `connectionManagement` Element definiert die maximale Anzahl von Verbindungen mit einem Server oder eine Gruppe von Servern.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird eine Anwendung mithilfe von vier Verbindungen mit dem Server www.contoso.com und zwei Verbindungen mit allen anderen Servern konfiguriert.  
+ Im folgende Beispiel wird eine Anwendung für die Verwendung von vier Verbindungen mit dem Server www.contoso.com und zwei Verbindungen mit allen anderen Servern konfiguriert.  
   
 ```xml  
 <configuration>  

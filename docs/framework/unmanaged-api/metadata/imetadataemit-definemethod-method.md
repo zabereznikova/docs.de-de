@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2dbc6b5ffaa3a381bdd657059a682a3d12dc4cf1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584265"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109660"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod-Methode
 Erstellt eine Definition für eine Methode oder globalen Funktion mit der angegebenen Signatur und ein Token an dieser Methodendefinition zurück.  

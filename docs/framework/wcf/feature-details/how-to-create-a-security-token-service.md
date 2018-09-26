@@ -9,19 +9,18 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 364d4e6b1009993c11a7f23edcd262de4ad435c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493877"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172192"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Vorgehensweise: Erstellen eines Sicherheitstokendiensts
 Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation definierte Protokoll. Dieses Protokoll definiert Meldungsformate und Meldungsaustauschmuster zum Herausgeben, Erneuern, Abbrechen und Überprüfen von Sicherheitstoken. Ein angegebener Sicherheitstokendienst stellt eine oder mehrere dieser Fähigkeiten zur Verfügung. Dieses Thema behandelt das am häufigsten verwendete Szenario: das Implementieren der Tokenausstellung.  
   
 ## <a name="issuing-tokens"></a>Ausstellen von Token  
- WS-Trust definiert Meldungsformate basierend auf dem `RequestSecurityToken`-XSD-Schemaelement (XML Schema Definition Language) und dem `RequestSecurityTokenResponse`-XSD-Schemaelement zum Durchführen der Tokenausstellung. Außerdem definiert WS-Trust die zugeordneten Aktions-URIs (Action Uniform Resource Identifiers). Der Aktions-URI mit der `RequestSecurityToken` Nachricht http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Der Aktions-URI mit der `RequestSecurityTokenResponse` Nachricht http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust definiert Meldungsformate basierend auf dem `RequestSecurityToken`-XSD-Schemaelement (XML Schema Definition Language) und dem `RequestSecurityTokenResponse`-XSD-Schemaelement zum Durchführen der Tokenausstellung. Außerdem definiert WS-Trust die zugeordneten Aktions-URIs (Action Uniform Resource Identifiers). Aktions-URI mit der `RequestSecurityToken` Nachricht http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Aktions-URI mit der `RequestSecurityTokenResponse` Nachricht http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
   
 ### <a name="request-message-structure"></a>Anforderungsmeldungsstruktur  
  Die Anforderungsmeldungsstruktur für Probleme besteht normalerweise aus den folgenden Elementen:  
@@ -113,7 +112,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- Weitere Informationen, wie das Prüftoken erstellt, wenn sowohl der Client als auch dem Sicherheitstokendienst Schlüsselmaterial für den gemeinsam verwendeten Schlüssel bereitstellt, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Weitere Informationen zum Erstellen des prüftokens, wenn sowohl der Client als auch dem Sicherheitstokendienst Schlüsselmaterial für den gemeinsam verwendeten Schlüssel bereitstellt, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  Die ausgestellten Tokenverweise werden durch Erstellen von Instanzen der <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>-Klasse erstellt.  
   
@@ -123,7 +122,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
  Diese verschiedenen Werte werden dann in der Antwortmeldung, die an den Client zurückgegeben wird, serialisiert.  
   
 ## <a name="example"></a>Beispiel  
- Vollständige Code für einen Sicherheitstokendienst finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Vollständiger Code für einen Security token Service, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.IdentityModel.Tokens.SigningCredentials>  

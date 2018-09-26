@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497177"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090226"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Gewusst wie: Sichere Metadatenendpunkte
 Metadaten für einen Dienst können vertrauliche Informationen über Ihre Anwendung enthalten, die böswillige Benutzer für ihre Zwecke missbrauchen können. Die Consumer Ihres Diensts benötigen möglicherweise auch einen sicheren Mechanismus für den Zugriff auf Metadaten über Ihren Dienst. Deshalb ist es manchmal notwendig, die Metadaten mit einem sicheren Endpunkt zu veröffentlichen.  
   
- Metadatenendpunkte werden in der Regel mit den Standardsicherheitsmechanismen, die in der Windows Communication Foundation (WCF) zum Sichern von Anwendungsendpunkten definiert, geschützt. (Weitere Informationen finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Metadatenendpunkte sind in der Regel gesichert mit den Standardsicherheitsmechanismen, die in Windows Communication Foundation (WCF) zum Sichern von Anwendungsendpunkten definiert. (Weitere Informationen finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  In diesem Thema sind die Schritte zur Erstellung eines Endpunkts beschrieben, der durch ein Verbunddienst-SSL-Zertifikat gesichert ist, also anders ausgedrückt: die Schritte zur Erstellung eines HTTPS-Endpunkts.  
   
@@ -41,11 +40,11 @@ Metadaten für einen Dienst können vertrauliche Informationen über Ihre Anwend
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>So erstellen Sie einen sicheren HTTPS-GET-Metadatenendpunkt in der Konfiguration  
   
-1.  Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element an der [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element der Konfigurationsdatei für den Dienst.  
+1.  Hinzufügen einer [ \<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element, das [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element der Konfigurationsdatei für den Dienst.  
   
-2.  Hinzufügen einer [ \<ServiceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) Element an der [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element.  
+2.  Hinzufügen einer [ \<ServiceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) Element, das [ \<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element.  
   
-3.  Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element an der `<serviceBehaviors>` Element.  
+3.  Hinzufügen einer [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element, das `<serviceBehaviors>` Element.  
   
 4.  Legen Sie einen angemessenen Wert für das `name`-Attribut des `<behavior>`-Elements fest. Das `name`-Attribut ist erforderlich. Das nachstehende Beispiel verwendet den Wert `mySvcBehavior`.  
   
@@ -55,7 +54,7 @@ Metadaten für einen Dienst können vertrauliche Informationen über Ihre Anwend
   
 7.  Legen Sie einen angemessenen Wert für das `httpsGetUrl`-Attribut des `<serviceMetadata>`-Elements fest. Beachten Sie, dass die URL mit dem Schema "https://" beginnen muss, wenn Sie eine absolute Adresse angeben. Wenn Sie eine relative Adresse angeben, müssen Sie eine HTTPS-Basisadresse für den Diensthost angeben. Wenn diese Eigenschaft nicht festgelegt ist, lautet die Standardadresse "" oder befindet sich direkt an der HTTPS-Basisadresse für den Dienst.  
   
-8.  Um das Verhalten mit einem Dienst verwenden möchten, legen die `behaviorConfiguration` Attribut von der [ \<Service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) -Elements auf den Wert des Attributs Name des verhaltenselements. Der folgende Konfigurationscode zeigt ein vollständiges Beispiel.  
+8.  Um das Verhalten mit einem Dienst verwenden möchten, legen die `behaviorConfiguration` Attribut der [ \<Service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) Elements mit dem Wert des Attributs Name des verhaltenselements. Der folgende Konfigurationscode zeigt ein vollständiges Beispiel.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

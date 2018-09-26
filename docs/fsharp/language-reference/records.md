@@ -3,11 +3,11 @@ title: Datensätze (F#)
 description: Erfahren Sie, wie f#-Datensätzen für einfache Aggregate benannter Werte, optional mit Membern darstellen.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576917"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111151"
 ---
 # <a name="records"></a>Datensätze
 

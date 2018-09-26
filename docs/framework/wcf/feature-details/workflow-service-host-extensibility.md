@@ -3,11 +3,11 @@ title: Erweiterbarkeit des Workflowdiensthosts
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: 6541558601c8f5daf255f2e7e5d774e41b59be2d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696333"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171854"
 ---
 # <a name="workflow-service-host-extensibility"></a>Erweiterbarkeit des Workflowdiensthosts
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt die <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse zum Hosten von Workflowdiensten bereit. Diese Klasse wird verwendet, wenn Sie einen Workflowdienst in einer verwalteten Anwendung oder einem Windows-Dienst selbst hosten. Diese Klasse wird auch verwendet, wenn Sie einen Workflow unter Internetinformationsdienste (IIS) oder dem Windows-Prozessaktivierungsdienst (WAS) hosten. Die <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Klasse stellt Erweiterungspunkte bereit, mit denen Sie benutzerdefinierte Erweiterungen hinzufügen, das Leerlaufverhalten ändern und andere Workflows als Dienstworkflows (die keine Messagingaktivitäten nutzen) hosten können.  

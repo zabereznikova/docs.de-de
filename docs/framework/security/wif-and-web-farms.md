@@ -3,13 +3,12 @@ title: WIF und Webfarmen
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 365416a82881c32b8fdcd3211aa42acb9f273483
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f65e10fa44c9d245bc7d275ac0e1d8fe914bae0b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502728"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112509"
 ---
 # <a name="wif-and-web-farms"></a>WIF und Webfarmen
 Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von einer Anwendung der vertrauenden Seite zu sichern, die in einer Webfarm bereitgestellt wird, müssen Sie bestimmte Schritte durchführen, um sicherzustellen, dass WIF Token von Instanzen der Anwendung der vertrauenden Seite verarbeiten kann. Diese Anwendung wird auf verschiedenen Computern in der Farm ausgeführt. Diese Verarbeitung beinhaltet die Überprüfung von Signaturen der Sitzungstokens, die Verschlüsselung, Entschlüsselung und Zwischenspeicherung der Sitzungstoken, und die Erkennung von wiedergegebenen Sicherheitstoken.  

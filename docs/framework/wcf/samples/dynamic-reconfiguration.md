@@ -3,11 +3,11 @@ title: Dynamische Neukonfiguration
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
 ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46699104"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157141"
 ---
 # <a name="dynamic-reconfiguration"></a>Dynamische Neukonfiguration
 Diesem Beispiel wird der Windows Communication Foundation (WCF)-Routingdienst veranschaulicht. Der Routingdienst ist eine WCF-Komponente, die es einfach macht, ein inhaltsbasierten Routers in Ihre Anwendung einbinden. In diesem Beispiel wird die standard-WCF--Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel wird gezeigt, wie der Routingdienst während der Laufzeit dynamisch neu konfiguriert werden kann.  

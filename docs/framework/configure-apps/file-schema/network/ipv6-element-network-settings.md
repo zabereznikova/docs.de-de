@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4b73e5d781829292513e809c39ac9de9dfc6d0e8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b1707d7490de07520603f6fdf6d1ee1a44ffba7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742483"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171412"
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; -Element (Netzwerkeinstellungen)
 Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, der die <xref:System.Net.Dns> Klasse.  
@@ -41,7 +40,7 @@ Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, 
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`enabled`|Gibt an, ob Mitglieder der <xref:System.Net.Dns> Klasse zurückgeben Internetprotokoll Version 6 (IPv6)-Adressen. Der Standardwert ist `false`.|  
+|`enabled`|Gibt an, ob Mitglieder der <xref:System.Net.Dns> Klasse zurückgeben Internet Protocol, Version 6 (IPv6)-Adressen. Der Standardwert ist `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,13 +52,13 @@ Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, 
 |[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Einstellung aktiviert, IPv6-Unterstützung für die veralteten Member von der <xref:System.Net.Dns> Klasse: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, und <xref:System.Net.Dns.Resolve%2A>. Für andere Mitglieder der <xref:System.Net?displayProperty=nameWithType> Namespace, IPv6-Adressen können zurückgegeben werden, wenn IPv6 im Betriebssystem aktiviert ist.  
+ Diese Einstellung ermöglicht IPv6-Unterstützung für die veralteten Member von der <xref:System.Net.Dns> Klasse: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, und <xref:System.Net.Dns.Resolve%2A>. Für andere Teammitglieder die <xref:System.Net?displayProperty=nameWithType> -Namespace, IPv6-Adressen können zurückgegeben werden, wenn IPv6 im Betriebssystem aktiviert ist.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird gezeigt, wie zum Aktivieren der IPv6-Unterstützung für die <xref:System.Net.Dns> Klasse.  
+ Das folgende Beispiel zeigt, wie Sie IPv6-Unterstützung für aktivieren die <xref:System.Net.Dns> Klasse.  
   
 ```xml  
 <configuration>  

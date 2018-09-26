@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741840"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172905"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;DefaultHttpCachePolicy&gt; -Element (Netzwerkeinstellungen)
-Beschreibt, ob HTTP-caching aktiv ist und beschreibt die Standardcachingrichtlinie.  
+Beschreibt, ob HTTP-Zwischenspeicherung aktiv ist und die Standardcachingrichtlinie beschreibt.  
   
  \<configuration>  
 \<system.net>  
@@ -45,8 +44,8 @@ Beschreibt, ob HTTP-caching aktiv ist und beschreibt die Standardcachingrichtlin
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`maximumAge`|Gibt das maximale Zeitintervall an, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.|  
-|`maximumStale`|Gibt die maximale Zeit berechnete Aktualität-Verzögerung, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.|  
-|`minimumFresh`|Gibt die minimale Zeit für ein zwischengespeichertes Objekt als aktuell angesehen.|  
+|`maximumStale`|Gibt die maximale Zeit nach der berechneten Aktualitätszeit, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.|  
+|`minimumFresh`|Gibt die minimale Zeit für ein zwischengespeichertes Objekt, das als aktuell angesehen.|  
 |`policyLevel`|Gibt an, ob die Cachingrichtlinie für automatische oder gibt an, ob der Cache umgangen wird. Der Standardwert ist `BypassCache`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -56,18 +55,18 @@ Beschreibt, ob HTTP-caching aktiv ist und beschreibt die Standardcachingrichtlin
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Zwischenspeichermechanismus für Anforderungen über das Netzwerk an.|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert für die `policyLevel` -Attribut ist entweder `BypassCache` oder `Default`.  
   
- Werte für die `maximumAge`, `maximumStale`, und `minimumFresh` Elemente sind ein explizites Zeitintervall im Format *d*. *"hh"*:*mm*:*ss* (Tage, Stunden, Minuten und Sekunden), oder die Konstanten `minValue` oder `maxValue`je nach Bedarf.  
+ Werte für die `maximumAge`, `maximumStale`, und `minimumFresh` Elemente sind ein explizites Zeitintervall im Format *d*. *Hh*:*mm*:*ss* (Tage, Stunden, Minuten und Sekunden), oder die Konstanten `minValue` oder `maxValue`je nach Bedarf.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie eine neue Mindestzeit von sechs Stunden kommen, ein maximales Alter von zwei Tagen und eine maximale veraltete von vier Stunden an.  
+ Das folgende Beispiel zeigt, wie Sie eine neue Zeit von sechs Stunden, ein maximales Alter zwei Tage, bis eine maximale veraltete Zeit von vier Stunden angeben.  
   
 ```xml  
 <configuration>  

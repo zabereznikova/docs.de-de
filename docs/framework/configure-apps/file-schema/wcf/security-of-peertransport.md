@@ -3,13 +3,12 @@ title: '&lt;security&gt; von &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 9d77c250b4843c9a0f83247cae5c2859429cf5bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 152087550d3fa881a7a88271d9c91dfcc5c894c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749841"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176759"
 ---
 # <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;security&gt; von &lt;peerTransport&gt;
 Enthält die einem Peerkanal zugeordneten Sicherheitseinstellungen, einschließlich für den Nachrichtentransport verwendeter Authentifizierungstyp und verwendete Sicherheit.  

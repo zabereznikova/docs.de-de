@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697619"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109742"
 ---
 # <a name="modifying-dataviews"></a>Ändern von "DataViews"
 Mit <xref:System.Data.DataView> können Datenzeilen in der zugrunde liegenden Tabelle hinzugefügt, gelöscht oder bearbeitet werden. Die Möglichkeit zum Verwenden der **DataView** zum Ändern von Daten in der zugrunde liegenden Tabelle werden gesteuert, indem eine der drei booleschen Eigenschaften der der **DataView**. Bei diesen Eigenschaften handelt es sich um <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> und <xref:System.Data.DataView.AllowDelete%2A>. Werden festgelegt, um **"true"** standardmäßig.  

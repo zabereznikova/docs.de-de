@@ -5,11 +5,11 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529313"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090252"
 ---
 # <a name="getting-started-with-net-native"></a>Erste Schritte mit .NET Native
 Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder eine vorhandene Windows Store-App migrieren, können Sie dieselben Verfahren verwenden. Um eine [!INCLUDE[net_native](../../../includes/net-native-md.md)] -App zu erstellen, gehen Sie wie folgt vor:  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
 ms.openlocfilehash: bcf1cab9386d9d9503af6258c1bb39f8744c073b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46579861"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172507"
 ---
 # <a name="ajax-integration-and-json-support"></a>AJAX-Integration und JSON-Unterstützung
 Die Windows Communication Foundation (WCF)-Unterstützung für (ASP.NET Asynchronous JavaScript and XML (AJAX) und das Datenformat JavaScript Object Notation (JSON) können WCF-Dienste, Vorgänge für AJAX-Clients verfügbar zu machen. AJAX-Clients sind Webseiten, JavaScript-Code ausführen und den Zugriff auf diese WCF-Dienste, die über HTTP-Anforderungen. Die Themen in diesem Abschnitt enthalten Informationen über diese Unterstützung und ihre Implementierung.  

@@ -3,16 +3,15 @@ title: Infodatei für das Beispiel zum erweiterten Schutz für die Authentifizie
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495079"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110312"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Infodatei für das Beispiel zum erweiterten Schutz für die Authentifizierung
-Erweiterter Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-in-the-Middle-Angriffen (MITM), in dem ein Angreifer (die "Man-in-the-Middle"), fängt die Anmeldeinformationen des Clients ab, und verwendet sie den Zugriff auf sichere Ressourcen auf dem Client vorgesehenen Server.  
+Erweiterter Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-in-the-Middle (MITM)-Angriffen, in dem ein Angreifer (der "Man-in-the-Middle"), fängt die Anmeldeinformationen eines Clients, und verwendet, um den Zugriff auf sichere Ressourcen auf dem Client vorgesehenen Server.  
   
  Weitere Informationen finden Sie unter [erweiterter Schutz für die Authentifizierung (Übersicht)](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
   
@@ -45,6 +44,6 @@ Erweiterter Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-in-the-Midd
   
 10. Testen Sie den Dienst, indem Sie von einem Browserfenster aus auf die URL zugreifen. Möchten Sie von einem Computer im Netzwerk aus auf die URL zugreifen, konfigurieren Sie die Firewall entsprechend, damit ein- und ausgehende HTTP- und HTTPS-Verbindungen hergestellt werden können.  
   
-11. Öffnen Sie die Client-Config-Datei, und geben Sie den vollständigen Computernamen für die \<Client >- \<Endpunkt >--adressenattribut << Full_machine_name >> ersetzen.  
+11. Öffnen Sie die Client-Config-Datei, und geben Sie den vollständigen Computernamen für den \<Client >- \<Endpunkt >--adressenattribut << Full_machine_name >> ersetzen.  
   
 12. Führen Sie den Client aus. Der Client kommuniziert mit dem Dienst über einen sicheren Kanal und verwendet verdeckt die erweiterte Sicherheit.

@@ -3,11 +3,11 @@ title: 'Schleifen: for...in-Ausdruck (F#)'
 description: Finden Sie unter wie der F#-for... in Ausdruck Schleifenkonstrukt zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird.
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576810"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087183"
 ---
 # <a name="loops-forin-expression"></a>Schleifen: for...in-Ausdruck
 

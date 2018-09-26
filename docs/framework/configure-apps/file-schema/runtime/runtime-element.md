@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748671"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172731"
 ---
 # <a name="ltruntimegt-element"></a>&lt;Common Language Runtime&gt; Element
 Enthält Informationen, die von der common Language Runtime verwendet werden, um Anwendungen zu konfigurieren.  
@@ -33,7 +32,7 @@ Enthält Informationen, die von der common Language Runtime verwendet werden, um
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
+ In den folgenden Abschnitten wird beschrieben, untergeordnete Elemente sowie übergeordnete Elemente.  
   
 ### <a name="attributes"></a>Attribute  
  Keine  
@@ -49,9 +48,9 @@ Enthält Informationen, die von der common Language Runtime verwendet werden, um
 |[\<appDomainResourceMonitoring>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses an.|  
 |[\<assemblyBinding>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.|  
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Gibt an, ob die Überprüfung starker Namen für vertrauenswürdige Assemblys umgangen werden soll.|  
-|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Gibt an, dass die Common Language Runtime legacy Sortierverhalten, beim Vergleichen von Zeichenfolgen verwenden soll.|  
+|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Gibt an, dass die Common Language Runtime beim Vergleichen von Zeichenfolgen verwenden soll.|  
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.|  
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Gibt an, ob das Zwischenspeichern von Bindungsfehlern, d., das h. das Standardverhalten in .NET Framework, Version 2.0, deaktiviert ist.|  
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Gibt an, ob das Zwischenspeichern von Bindungsfehlern, das das Standardverhalten in .NET Framework, Version 2.0, deaktiviert ist.|  
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Gibt an, ob beim Starten eines Threads für den vollständigen Threadstapel ein Commit ausgeführt wird|  
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.|  
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Legt fest, ob Analysemethoden für Datum und Uhrzeit einen angepassten Satz von Regeln zum Analysieren von Datumszeichenfolgen verwenden, die nur eine Angabe für Tag, Monat, Stunde und AM/PM-Kennzeichner enthalten.|  
@@ -88,9 +87,9 @@ Enthält Informationen, die von der common Language Runtime verwendet werden, um
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die untergeordneten Elemente in der [ \<Runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Abschnitt einer Konfigurationsdatei werden durch die common Language Runtime verwendet, so konfigurieren, wie eine Anwendung ausgeführt wird. Z. B. die [ \<GcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) -Element bestimmt, ob der Garbage Collector Garbagecollection für die Arbeitsstation oder Garbagecollection auf dem Server, verwendet die [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) -Element bestimmt, ob die common Language Runtime Hashcodes für die Zeichenfolge, die auf einer pro-Anwendung oder einer Basis pro Anwendungsdomäne berechnet und die `AppContextSwitchOverrides` Element können Benutzer der Bibliothek zum Abonnieren von oder Ablehnen der geänderten Funktionalität, die von einer Bibliothek bereitgestellt werden.  
+ Die untergeordneten Elemente in der [ \<Runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Abschnitt einer Konfigurationsdatei werden von der common Language Runtime verwendet, um zu konfigurieren, wie eine Anwendung ausgeführt wird. Z. B. die [ \<GcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) -Element bestimmt, ob es sich bei der Garbage Collector die Garbagecollection auf Arbeitsstationen oder Garbagecollection für Server, verwendet der [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) -Element bestimmt, ob die common Language Runtime Hashcodes für die Zeichenfolge, die auf einer pro-Anwendung oder einer Basis pro Anwendungsdomäne berechnet und die `AppContextSwitchOverrides` Element Bibliothek ermöglicht. Aktivieren oder Deaktivieren der geänderte Funktionalität, die von einer Bibliothek bereitgestellten.  
   
- Die Elemente in der [ \<Runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Abschnitt werden automatisch von der common Language Runtime beim Start der Anwendung gelesen. Sie können auch die Konfigurationsdatei für eine nicht standardmäßige Anwendungsdomäne definieren, indem Sie den Namen in der <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> Eigenschafts-seine Einstellungen werden gelesen, automatisch beim Laden der Anwendungsdomäne. Sie sollten nur selten, falls überhaupt, benötigen direkt lesen Sie die Einstellungen in der [ \<Runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Abschnitt in der Konfigurationsdatei Ihrer Anwendung.  
+ Die Elemente in der [ \<Runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) Abschnitt werden automatisch von der common Language Runtime beim Start der Anwendung gelesen. Sie können auch die Konfigurationsdatei für eine nicht standardmäßige Anwendungsdomäne definieren, indem Sie seinen Namen angeben der <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> Eigenschaft, die Einstellungen werden gelesen, automatisch Wenn die Anwendungsdomäne geladen wird. Sie sollten nur selten, wenn überhaupt, müssen eine direkt lesen Sie die Einstellungen in der [ \<Common Language Runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) in der Konfigurationsdatei Ihrer Anwendung im Abschnitt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

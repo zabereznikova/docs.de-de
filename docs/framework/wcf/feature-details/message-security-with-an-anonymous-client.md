@@ -6,13 +6,12 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d3e8269fc05caf70f4329ce8f13a3633a8982c0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: f488d2e840ec2524f0cde8dc4b3e6c1cd10c554e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586324"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090025"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Nachrichtensicherheit mit einem anonymen Client
 Das folgende Szenario zeigt einen Client und Dienst von Windows Communication Foundation (WCF)-nachrichtensicherheit gesichert. Ein Entwurfsziel ist die Verwendung von Nachrichtensicherheit statt Transportsicherheit, sodass zu einem späteren Zeitpunkt ein komplexeres anspruchsbasierter Modell unterstützt werden kann. Weitere Informationen zum Verwenden umfangreicher Ansprüche zur Autorisierung finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

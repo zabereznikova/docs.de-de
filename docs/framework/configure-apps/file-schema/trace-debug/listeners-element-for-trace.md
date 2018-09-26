@@ -1,5 +1,5 @@
 ---
-title: '&lt;Listener&gt; -Element für &lt;Trace&gt;'
+title: '&lt;Listener&gt; -Element für &lt;Ablaufverfolgung&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
@@ -9,21 +9,20 @@ helpviewer_keywords:
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748138"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172835"
 ---
-# <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;Listener&gt; -Element für &lt;Trace&gt;
-Gibt an, einen Listener, der erfasst hat, speichert, und leitet Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein geeignetes Ziel an.  
+# <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;Listener&gt; -Element für &lt;Ablaufverfolgung&gt;
+Gibt an, einen Listener, der sammelt, speichert, und leitet Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel.  
   
- \<Konfiguration >-Element  
-\<System.Diagnostics > Element  
-\<Trace >-Element  
-\<Listener >-Element für \<Trace >  
+ \<Configuration >-Element  
+\<System.Diagnostics >-Element  
+\<Ablaufverfolgung >-Element  
+\<Listener >-Element für \<Ablaufverfolgung >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,13 +57,13 @@ Gibt an, einen Listener, der erfasst hat, speichert, und leitet Nachrichten. Lis
 |`trace`|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> Klassen verwenden dieselbe **Listener** Auflistung. Wenn Sie der Auflistung in einer dieser Klassen ein Listener-Objekt hinzugefügt haben, verwendet die andere Klasse denselben Listener. Die Listenerklassen, die im Lieferumfang von .NET Framework abgeleitet werden, aus der <xref:System.Diagnostics.TraceListener> Klasse.  
+ Die <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.Trace> Klassen verwenden dieselbe **Listener** Auflistung. Wenn Sie einen Listener-Objekt der Auflistung in einer dieser Klassen hinzufügen, wird die andere Klasse den gleichen Listener verwendet. Die Listenerklassen, die im Lieferumfang von .NET Framework leiten sich von der <xref:System.Diagnostics.TraceListener> Klasse.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computerkonfigurationsdatei ("Machine.config") und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die  **\<Listener >** Listener hinzuzufügenden Elements `MyListener` und `MyEventListener` auf die **Listener** Auflistung. `MyListener` erstellt eine Datei namens `MyListener.log` und schreibt die Ausgabe in die Datei. `MyEventListener` erstellt einen Eintrag im Ereignisprotokoll.  
+ Das folgende Beispiel zeigt, wie Sie mit der  **\<Listener >** Element, um die Listener hinzuzufügen `MyListener` und `MyEventListener` auf die **Listener** Auflistung. `MyListener` erstellt eine Datei namens `MyListener.log` und schreibt die Ausgabe in der Datei. `MyEventListener` erstellt einen Eintrag im Ereignisprotokoll.  
   
 ```xml  
 <configuration>  

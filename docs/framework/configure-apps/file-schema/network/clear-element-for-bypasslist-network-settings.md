@@ -1,5 +1,5 @@
 ---
-title: '&lt;Deaktivieren Sie&gt; Bypasslist (Network Settings)-Element'
+title: '&lt;Deaktivieren Sie&gt; -Element für Bypasslist (Netzwerkeinstellungen)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742191"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170638"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Deaktivieren Sie&gt; Bypasslist (Network Settings)-Element
-Löscht die Proxyumgehungsliste.  
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Deaktivieren Sie&gt; -Element für Bypasslist (Netzwerkeinstellungen)
+Löscht der Proxyumgehungsliste enthalten.  
   
  \<configuration>  
 \<system.net>  
@@ -48,16 +47,16 @@ Löscht die Proxyumgehungsliste.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Stellt einen Satz von regulären Ausdrücken, die Beschreibung der Adressen, die keinen Proxy verwenden.|  
+|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die einen Proxy nicht verwenden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `clear` -Element löscht alle Einträge aus der Umgehungsliste.  
+ Die `clear` Element löscht alle Einträge in der Umgehungsliste aufgeführt.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel löscht die Bypass-Liste und klicken Sie dann die Umgehungsliste zwei Adressen hinzugefügt. Die erste umgeht den Proxy für alle Server in der Domäne "contoso.com"; die zweite umgeht den Proxy für alle Server, dessen IP-Adresse beginnt, mit 192.168.  
+ Das folgende Beispiel löscht die Bypass-Liste und klicken Sie dann die Bypass-Liste zwei Adressen hinzugefügt. Die erste umgeht den Proxy für alle Server in der Domäne "contoso.com"; die zweite wird der Proxy für alle Server, dessen IP-Adresse beginnt, mit 192.168. umgangen.  
   
 ```xml  
 <configuration>  

@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504817"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47156506"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Gewusst wie: Erstellen einer Herausgeberrichtlinie
 Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version einer Assembly verwenden sollen, dazu eine Herausgeberrichtlinien-Datei mit der aktualisierten Assembly ist. Die Herausgeberrichtliniendatei gibt Assemblyumleitungen und Code-Basis-Einstellungen, und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei. Die Herausgeberrichtliniendatei ist in eine Assembly kompiliert und im globalen Assemblycache platziert.  

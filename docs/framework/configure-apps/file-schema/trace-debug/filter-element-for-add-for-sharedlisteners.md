@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3bbba1c805c6b300f7cf7b3d9112cde9df7607a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5172a2be163e178b9c7115825fa5dba4ff073a96
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745054"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47115138"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltsharedlistenersgt"></a>&lt;Filter&gt; -Element für &lt;hinzufügen&gt; für &lt;SharedListeners&gt;
 Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.  
@@ -43,7 +42,7 @@ Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**Typ**|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters. Können Sie nur den vollständigen Namen des Typs (im Format der <xref:System.Type.FullName%2A?displayProperty=nameWithType> Eigenschaft), oder Sie können den vollqualifizierten Typnamen einschließlich der Assemblyinformationen (im Format der <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> Eigenschaft). Informationen zum Erstellen eines voll qualifizierten Typnamen finden Sie unter [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**Typ**|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters. Können Sie nur den vollständigen Namen des Typs (im Format der <xref:System.Type.FullName%2A?displayProperty=nameWithType> Eigenschaft), oder Sie können den vollqualifizierten Typnamen einschließlich der Assemblyinformationen (im Format der <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> Eigenschaft). Informationen zum Erstellen eines vollständigen Typnamen, finden Sie unter [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Optionales Attribut.<br /><br /> Die Zeichenfolge, die für die angegebene Klasse an den Konstruktor übergeben werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -55,16 +54,16 @@ Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
-|`sharedListeners`|Eine Auflistung von Listenern, die jeder Quelle oder das Trace-Element verweisen können.|  
+|`sharedListeners`|Eine Auflistung der Listener, die jedes Quell- oder Ablaufverfolgungselement verweisen kann.|  
 |`add`|Fügt einen Listener, damit die **SharedListeners** Auflistung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Listener in definiert ist ein `<add>` Element von der `<sharedListeners>` Element, der Filter für diesen Listener definiert werden eine `<filter>` Element, das ein untergeordnetes Element des der `<add>` Element.  
+ Wenn ein Listener in definiert ist ein `<add>` Element der `<sharedListeners>` Element der Filter für diesen Listener definiert werden eine `<filter>` -Element, das ein untergeordnetes Element des der `<add>` Element.  
   
- Dieses Element kann in der Computerkonfigurationsdatei ("Machine.config") und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `<filter>` Element zum Hinzufügen eines Filters, der Ablaufverfolgungslistener `console` in der `sharedListeners` Auflistung.  
+ Das folgende Beispiel zeigt, wie Sie mit der `<filter>` Elemente einen Filter für den Ablaufverfolgungslistener `console` in die `sharedListeners` Auflistung.  
   
 ```xml  
 <configuration>  
