@@ -2,12 +2,12 @@
 title: Suche und FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bd54a7bc896870035972daf1ea6f56d84dc5414e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855998"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205439"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Suche und FindCriteria
 Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Suchnachrichten finden Sie unter den [WS-Ermittlungsspezifikation](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -68,5 +68,4 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
  [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
  [Verwenden des Ermittlungsclientkanals](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Suche mit Bereichen](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Asynchrone Suche](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Standard](../../../../docs/framework/wcf/samples/basic-sample.md)

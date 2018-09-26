@@ -3,11 +3,11 @@ title: Hostinganweisungen des Internetinformationsdiensts
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: 303fe47df987901b09cee8cc4292f12bcda2b74d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071138"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204034"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Hostinganweisungen des Internetinformationsdiensts
 Zum Ausführen der Beispiele, die vom Internetinformationsdienst (IIS) gehostet werden, müssen Sie sicherstellen, dass der IIS ordnungsgemäß installiert ist und ausgeführt wird.  

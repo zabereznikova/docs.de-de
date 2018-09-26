@@ -10,11 +10,11 @@ ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076888"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216421"
 ---
 # <a name="virtual-members"></a>Virtuelle Member
 Virtuelle Member können überschrieben werden, daher ändern des Verhaltens der Unterklasse. Sie sind sehr ähnlich, mit der Rückrufe in Bezug auf die Erweiterbarkeit, die sie bereitstellen, aber sie sind im Hinblick auf die, ausführungsleistung und arbeitsspeichernutzung besser. Darüber hinaus einleuchtender virtuelle Member in Szenarien, die erfordern, erstellen eine besondere Art von einem vorhandenen Typ (Spezialisierung).  

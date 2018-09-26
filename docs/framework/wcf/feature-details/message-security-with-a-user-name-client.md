@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 author: BrucePerlerMS
 ms.openlocfilehash: e26665b76518e33de266c73600e1da918eb2a51d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071214"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203497"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Nachrichtensicherheit über einen Benutzernamenclient
 Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst und Client mit Sicherheit auf Nachrichtenebene gesichert. Der Dienst wird über ein X.509-Zertifikat authentifiziert. Der Client wird über den Benutzernamen und das Kennwort authentifiziert.  
