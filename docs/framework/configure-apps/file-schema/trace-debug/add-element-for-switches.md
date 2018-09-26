@@ -10,53 +10,53 @@ ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109523"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209125"
 ---
-# <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="ba2f3-102">&lt;Hinzufügen&gt; -Element für &lt;Switches&gt;</span><span class="sxs-lookup"><span data-stu-id="ba2f3-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
-<span data-ttu-id="ba2f3-103">Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-103">Specifies the level where a trace switch is set.</span></span>  
+# <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="e11e1-102">&lt;Hinzufügen&gt; -Element für &lt;Switches&gt;</span><span class="sxs-lookup"><span data-stu-id="e11e1-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
+<span data-ttu-id="e11e1-103">Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="e11e1-103">Specifies the level where a trace switch is set.</span></span>  
   
- <span data-ttu-id="ba2f3-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ba2f3-104">\<configuration></span></span>  
-<span data-ttu-id="ba2f3-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="ba2f3-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="ba2f3-106">\<Switches ></span><span class="sxs-lookup"><span data-stu-id="ba2f3-106">\<switches></span></span>  
-<span data-ttu-id="ba2f3-107">\<add></span><span class="sxs-lookup"><span data-stu-id="ba2f3-107">\<add></span></span>  
+ <span data-ttu-id="e11e1-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e11e1-104">\<configuration></span></span>  
+<span data-ttu-id="e11e1-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="e11e1-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="e11e1-106">\<Switches ></span><span class="sxs-lookup"><span data-stu-id="e11e1-106">\<switches></span></span>  
+<span data-ttu-id="e11e1-107">\<add></span><span class="sxs-lookup"><span data-stu-id="e11e1-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ba2f3-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="ba2f3-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e11e1-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="e11e1-108">Syntax</span></span>  
   
 ```xml  
 <add name="switch name"  
      value="value"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="ba2f3-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="ba2f3-109">Attributes and Elements</span></span>  
- <span data-ttu-id="ba2f3-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e11e1-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="e11e1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e11e1-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="e11e1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="ba2f3-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="ba2f3-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e11e1-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="e11e1-111">Attributes</span></span>  
   
-|<span data-ttu-id="ba2f3-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="ba2f3-112">Attribute</span></span>|<span data-ttu-id="ba2f3-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ba2f3-113">Description</span></span>|  
+|<span data-ttu-id="e11e1-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="e11e1-112">Attribute</span></span>|<span data-ttu-id="e11e1-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e11e1-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="ba2f3-114">**name**</span><span class="sxs-lookup"><span data-stu-id="ba2f3-114">**name**</span></span>|<span data-ttu-id="ba2f3-115">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="ba2f3-116">Gibt den Namen des Schalters.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-116">Specifies the name of the switch.</span></span> <span data-ttu-id="ba2f3-117">Der Wert dieses Attributs entspricht dem *"DisplayName"* Parameter, der übergeben wird, um den Konstruktor zu wechseln.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-117">The value of this attribute corresponds to the *displayName* parameter that is passed to switch constructor.</span></span>|  
-|<span data-ttu-id="ba2f3-118">**value**</span><span class="sxs-lookup"><span data-stu-id="ba2f3-118">**value**</span></span>|<span data-ttu-id="ba2f3-119">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="ba2f3-120">Gibt die Ebene des Schalters.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-120">Specifies the level of the switch.</span></span>|  
+|<span data-ttu-id="e11e1-114">**name**</span><span class="sxs-lookup"><span data-stu-id="e11e1-114">**name**</span></span>|<span data-ttu-id="e11e1-115">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="e11e1-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="e11e1-116">Gibt den Namen des Schalters.</span><span class="sxs-lookup"><span data-stu-id="e11e1-116">Specifies the name of the switch.</span></span> <span data-ttu-id="e11e1-117">Der Wert dieses Attributs entspricht dem *"DisplayName"* Parameter, der übergeben wird, um den Konstruktor zu wechseln.</span><span class="sxs-lookup"><span data-stu-id="e11e1-117">The value of this attribute corresponds to the *displayName* parameter that is passed to switch constructor.</span></span>|  
+|<span data-ttu-id="e11e1-118">**value**</span><span class="sxs-lookup"><span data-stu-id="e11e1-118">**value**</span></span>|<span data-ttu-id="e11e1-119">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="e11e1-119">Required attribute.</span></span><br /><br /> <span data-ttu-id="e11e1-120">Gibt die Ebene des Schalters.</span><span class="sxs-lookup"><span data-stu-id="e11e1-120">Specifies the level of the switch.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="ba2f3-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ba2f3-121">Child Elements</span></span>  
- <span data-ttu-id="ba2f3-122">Keine</span><span class="sxs-lookup"><span data-stu-id="ba2f3-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e11e1-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="e11e1-121">Child Elements</span></span>  
+ <span data-ttu-id="e11e1-122">Keine</span><span class="sxs-lookup"><span data-stu-id="e11e1-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="ba2f3-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="ba2f3-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e11e1-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="e11e1-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="ba2f3-124">Element</span><span class="sxs-lookup"><span data-stu-id="ba2f3-124">Element</span></span>|<span data-ttu-id="ba2f3-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ba2f3-125">Description</span></span>|  
+|<span data-ttu-id="e11e1-124">Element</span><span class="sxs-lookup"><span data-stu-id="e11e1-124">Element</span></span>|<span data-ttu-id="e11e1-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e11e1-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="ba2f3-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`switches`|<span data-ttu-id="ba2f3-127">Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-127">Contains trace switches and the level where the trace switches are set.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="ba2f3-128">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`configuration`|<span data-ttu-id="e11e1-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="e11e1-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`switches`|<span data-ttu-id="e11e1-127">Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.</span><span class="sxs-lookup"><span data-stu-id="e11e1-127">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="e11e1-128">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="e11e1-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ba2f3-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ba2f3-129">Remarks</span></span>  
- <span data-ttu-id="ba2f3-130">Sie können die Ebene der einen Ablaufverfolgungsschalter ändern, indem Sie es in einer Konfigurationsdatei platzieren.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-130">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="ba2f3-131">Wenn der Schalter ist eine <xref:System.Diagnostics.BooleanSwitch>, Sie können Sie aktivieren und deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-131">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="ba2f3-132">Wenn der Schalter ist eine <xref:System.Diagnostics.TraceSwitch>, können Sie verschiedene Ebenen, um die Typen der Ablaufverfolgung angeben zuweisen oder Debug Nachrichten, die Ausgaben der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-132">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e11e1-129">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e11e1-129">Remarks</span></span>  
+ <span data-ttu-id="e11e1-130">Sie können die Ebene der einen Ablaufverfolgungsschalter ändern, indem Sie es in einer Konfigurationsdatei platzieren.</span><span class="sxs-lookup"><span data-stu-id="e11e1-130">You can change the level of a trace switch by putting it in a configuration file.</span></span> <span data-ttu-id="e11e1-131">Wenn der Schalter ist eine <xref:System.Diagnostics.BooleanSwitch>, Sie können Sie aktivieren und deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="e11e1-131">If the switch is a <xref:System.Diagnostics.BooleanSwitch>, you can turn it on and off.</span></span> <span data-ttu-id="e11e1-132">Wenn der Schalter ist eine <xref:System.Diagnostics.TraceSwitch>, können Sie verschiedene Ebenen, um die Typen der Ablaufverfolgung angeben zuweisen oder Debug Nachrichten, die Ausgaben der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="e11e1-132">If the switch is a <xref:System.Diagnostics.TraceSwitch>, you can assign different levels to it to specify the types of trace or debug messages the application outputs.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ba2f3-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ba2f3-133">Example</span></span>  
- <span data-ttu-id="ba2f3-134">Das folgende Beispiel zeigt, wie Sie mit der  **\<hinzufügen >** festzulegende Element der `General` Trace-Schalter, um die <xref:System.Diagnostics.TraceLevel> Ebene, und aktivieren Sie die `Data` booleschen Ablaufverfolgungsschalter.</span><span class="sxs-lookup"><span data-stu-id="ba2f3-134">The following example shows how to use the **\<add>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
+## <a name="example"></a><span data-ttu-id="e11e1-133">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e11e1-133">Example</span></span>  
+ <span data-ttu-id="e11e1-134">Das folgende Beispiel zeigt, wie Sie mit der  **\<hinzufügen >** festzulegende Element der `General` Trace-Schalter, um die <xref:System.Diagnostics.TraceLevel> Ebene, und aktivieren Sie die `Data` booleschen Ablaufverfolgungsschalter.</span><span class="sxs-lookup"><span data-stu-id="e11e1-134">The following example shows how to use the **\<add>** element to set the `General` trace switch to the <xref:System.Diagnostics.TraceLevel> level, and enable the `Data` Boolean trace switch.</span></span>  
   
 ```xml  
 <configuration>  
@@ -69,8 +69,8 @@ ms.locfileid: "47109523"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ba2f3-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ba2f3-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e11e1-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e11e1-135">See Also</span></span>  
  <xref:System.Diagnostics.Switch>  
  <xref:System.Diagnostics.TraceSwitch>  
  <xref:System.Diagnostics.BooleanSwitch>  
- [<span data-ttu-id="ba2f3-136">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="ba2f3-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [<span data-ttu-id="e11e1-136">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="e11e1-136">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
