@@ -19,11 +19,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586823"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231085"
 ---
 # <a name="short-data-type-visual-basic"></a>Short-Datentyp (Visual Basic)
 Speichert signierte ganze Zahlen 16-Bit-(2-Byte), die im Wert von-32.768 bis 32.767 reichen.  
