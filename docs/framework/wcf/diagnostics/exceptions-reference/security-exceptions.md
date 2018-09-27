@@ -3,13 +3,12 @@ title: Sicherheitsausnahmen
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 057d01ba918a41df0bdf2acc30c9bb35777ebc27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474882"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233243"
 ---
 # <a name="security-exceptions"></a>Sicherheitsausnahmen
 Dieses Thema enthält alle Sicherheitsausnahmen.  
@@ -30,7 +29,7 @@ Dieses Thema enthält alle Sicherheitsausnahmen.
 |BindingDoesNotSupportWindowsIdenityForImpersonation|Der angegebene Vertragsvorgang erfordert Windows-Identität für den automatischen Identitätswechsel. Die angegebene Bindung für den angegebenen Vertrag stellt jedoch keine Windows-Identität bereit, die den Aufrufer darstellt.|  
 |CachedNegotiationStateQuotaReached|Der Dienst kann den Aushandlungsstatus nicht zwischenspeichern, weil die angegebene Kapazität ausgeschöpft wurde. Wiederholen Sie die Anforderung.|  
 |CacheQuotaReached|Das Element kann nicht hinzugefügt werden. Die maximale Cachegröße wurde erreicht.|  
-|CannotDetermineSPNBasedOnAddress|Der Client kann den Dienstprinzipalnamen auf der Basis der Identität in der angegebenen Zieladresse für die Verwendung durch SspiNegotiation/Kerberos nicht bestimmen. Der zieladressenidentität muss eine UPN-Identität (wie Acmedomain\\\alice) oder SPN-Identität (wie Host/Bobs-Computer).|  
+|CannotDetermineSPNBasedOnAddress|Der Client kann den Dienstprinzipalnamen auf der Basis der Identität in der angegebenen Zieladresse für die Verwendung durch SspiNegotiation/Kerberos nicht bestimmen. Der zieladressenidentität muss eine UPN-Identität (wie gipfeldomäne\\\alice) oder SPN-Identität (wie Host/Bobs-Computer).|  
 |CannotFindCert|Das X.509-Zertifikat kann mit den angegebenen Suchkriterien nicht gefunden werden: StoreName, StoreLocation, FindType, FindValue.|  
 |CannotFindCertForTarget|Das X.509-Zertifikat kann mit den angegebenen Suchkriterien nicht gefunden werden: StoreName, StoreLocation, FindType, FindValue für das angegebene Ziel.|  
 |CannotFindCorrelationStateForApplyingSecurity|Es kann kein Korrelierungsstatus für das Anwenden von Sicherheit zum Antworten gefunden werden.|  
