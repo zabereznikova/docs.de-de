@@ -2,15 +2,15 @@
 title: ASP.NET-Zwischenspeicherungsintegration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002787"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197447"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET-Zwischenspeicherungsintegration
-In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Informieren Sie sich die [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel eine selbst gehostete Version dieses Szenarios, die die dienstimplementierung eingehend erläutert wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.  
+In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.  
   
 ## <a name="demonstrates"></a>Veranschaulicht  
  Integration in den ASP.NET-Ausgabecache  
@@ -29,7 +29,7 @@ In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HT
   
  In der Datei "Service.cs" beispieldienstprojekt sowohl die `GetCustomer` und `GetCustomers` Vorgänge mit markiert sind, die <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, dem bietet es sich um des cacheprofilnamen "CacheFor60Seconds". In der Datei "Web.config" des Dienstprojekts wird das Cacheprofil "CacheFor60Seconds" bereitgestellt, unter der <`caching`>-Element von <`system.web`>. Für dieses Cacheprofil wird der Wert des der `duration` -Attribut ist "60", damit dieses Profil zugeordnete Antworten 60 Sekunden lang im ASP.NET-Ausgabecache zwischengespeichert werden. Für dieses Cacheprofil wird die `varmByParam` -Attribut festgelegt ist, um Anforderungen mit unterschiedlichen Werten für "formatieren" der `format` -Abfragezeichenfolgenparameter die Antworten getrennt zwischengespeichert. Und schließlich des Cacheprofils des `varyByHeader` -Attribut auf "Akzeptieren", festgelegt ist, sodass Anforderungen mit anderen Accept-Headerwerte die Antworten getrennt zwischengespeichert.  
   
- Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, die Zugriff auf den Dienst mit anderen .NET Framework-Klassen wie die WCF-Kanalfactory und <xref:System.Net.WebClient>. In anderen Beispielen im SDK (z. B. die [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Beispiel und die [automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md) Beispiel) veranschaulichen, wie Sie diese Klassen verwenden, um die Kommunikation mit einem WCF-Dienst.  
+ Program.cs im Clientprojekt zeigt, wie ein Client dieser Art mit <xref:System.Net.HttpWebRequest> erstellt werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, die Zugriff auf den Dienst mit anderen .NET Framework-Klassen wie die WCF-Kanalfactory und <xref:System.Net.WebClient>. In anderen Beispielen im SDK (z. B. die [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Beispiel) veranschaulichen, wie Sie diese Klassen verwenden, um die Kommunikation mit einem WCF-Dienst.  
   
 ## <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
  Das Beispiel umfasst drei Projekte:  
