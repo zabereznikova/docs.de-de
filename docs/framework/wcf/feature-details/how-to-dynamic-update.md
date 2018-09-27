@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dynamisches Update'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 891caf2570ea4f843f20f95ac347b66ef84569f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493294"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399280"
 ---
 # <a name="how-to-dynamic-update"></a>Vorgehensweise: Dynamisches Update
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um die Routingkonfiguration zu erstellen und dynamisch zu aktualisieren. In diesem Beispiel wird die ursprüngliche Routingkonfiguration aus der Konfigurationsdatei abgerufen, die alle Nachrichten an den regularCalc-Rechnerdienst weiterleitet. Die Konfiguration wird anschließend jedoch programmgesteuert aktualisiert, um den Zielendpunkt in den roundingCalc-Dienst zu ändern.  
@@ -64,7 +64,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filterTables>  
     ```  
   
-3.  Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Im folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" mit dem Dienstendpunkt.  
+3.  Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" mit dem Dienstendpunkt.  
   
     ```xml  
     <behaviors>  
@@ -160,7 +160,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     ```  
   
     > [!NOTE]
-    >  Da die Methode zum Bereitstellen einer neuen RoutingConfiguration in der RoutingExtension-Diensterweiterung enthalten ist, können neue RoutingConfiguration-Objekte überall im WCF-Erweiterbarkeitsmodell bereitgestellt werden, sofern das Modell über einen Verweis auf ServiceHost oder ServiceExtensions (z. B. in einer anderen ServiceExtension) verfügt oder diesen abrufen kann. Ein Beispiel der RoutingConfiguration auf diese Weise dynamisch zu aktualisieren, finden Sie unter [dynamische Neukonfiguration](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md).  
+    > Da die Methode zum Bereitstellen einer neuen RoutingConfiguration in der RoutingExtension-Diensterweiterung enthalten ist, können neue RoutingConfiguration-Objekte überall im WCF-Erweiterbarkeitsmodell bereitgestellt werden, sofern das Modell über einen Verweis auf ServiceHost oder ServiceExtensions (z. B. in einer anderen ServiceExtension) verfügt oder diesen abrufen kann.
   
 ## <a name="example"></a>Beispiel  
  Es folgt eine vollständige Liste der Konsolenanwendung, die in diesem Beispiel verwendet wird.  

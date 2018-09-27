@@ -2,12 +2,12 @@
 title: Workflowdienste
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-ms.openlocfilehash: a8871685007cdb81848848da5c6b3483d014bb20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7295041fe4b17e7e2b1560704badf20992d4b92
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499192"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397240"
 ---
 # <a name="workflow-services"></a>Workflowdienste
 Mit [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] können Sie einen workflowbasierten Dienst vollständig deklarativ in XAML beschreiben. Sie können einen Workflow definieren, der den Dienst implementiert, und Endpunkte beschreiben, die der Dienst verfügbar macht – alles in XAML. In den Themen in diesem Abschnitt wird ausführlich das Programmiermodell beschrieben, das das deklarative Schreiben von Diensten unterstützt.  
@@ -30,9 +30,6 @@ Mit [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)
   
  [Verarbeiten von Nachrichten außerhalb der normalen Reihenfolge](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
  Beschreibt, wie Sie einen Dienst so konfigurieren, dass dieser nicht in der richtigen Reihenfolge angeordnete Nachrichten akzeptiert.  
-  
- [Vorgehensweise: Erstellen eines Workflowdiensts zum Aufrufen eines anderen Workflowdiensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
- Beschreibt, wie Sie einen Workflowdienst synchron aus einem anderen Workflowdienst heraus aufrufen.  
   
  [Entwickeln von Vertrag zuerst-Workflowdiensten](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
  Beschreibt das Erstellen eines Workflowdiensts auf Grundlage eines vorhandenen Dienstvertrags.  

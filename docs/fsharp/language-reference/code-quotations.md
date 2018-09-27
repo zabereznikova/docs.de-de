@@ -3,11 +3,11 @@ title: Zitieren von Code (F#)
 description: Erfahren Sie mehr über f# Codezitate, eine Sprachfunktion, die Ihnen zum Generieren von und arbeiten programmgesteuert mit F#-Codeausdrücken ermöglicht.
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077667"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397201"
 ---
 # <a name="code-quotations"></a>Zitieren von Code
 
@@ -71,7 +71,7 @@ Das folgende Beispiel veranschaulicht die Verwendung von Zitieren von Code zum f
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```fsharp
 fun (x:System.Int32) -> x + 1
@@ -93,7 +93,7 @@ Der Code in anderen Verzweigungen aktives Muster wird nur die gleichen Ausdrucks
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet701.fs)]
 
-### <a name="output"></a>Ausgabe
+### <a name="output"></a>Output
 
 ```fsharp
 1 + Module1.add(2,Module1.add(3,4))

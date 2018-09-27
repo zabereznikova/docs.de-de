@@ -6,11 +6,11 @@ ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077680"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47396915"
 ---
 # <a name="extension-methods"></a>Erweiterungsmethoden
 Erweiterungsmethoden sind eine Sprachfunktion, die statische Methoden, mit der Aufruf der Instanzmethodensyntax aufgerufen werden kann. Diese Methoden müssen mindestens einen Parameter ausführen, das die Instanz, die die Methode, die darstellt zu verarbeitende ist.  
