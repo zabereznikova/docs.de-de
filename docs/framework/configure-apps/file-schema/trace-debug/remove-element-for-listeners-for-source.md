@@ -10,59 +10,59 @@ ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188936"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400841"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="f7b66-102">&lt;Entfernen Sie&gt; -Element für &lt;Listener&gt; für &lt;Quelle&gt;</span><span class="sxs-lookup"><span data-stu-id="f7b66-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
-<span data-ttu-id="f7b66-103">Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="f7b66-103">Removes a listener from the `Listeners` collection for a trace source.</span></span>  
+# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="169c8-102">&lt;Entfernen Sie&gt; -Element für &lt;Listener&gt; für &lt;Quelle&gt;</span><span class="sxs-lookup"><span data-stu-id="169c8-102">&lt;remove&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
+<span data-ttu-id="169c8-103">Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="169c8-103">Removes a listener from the `Listeners` collection for a trace source.</span></span>  
   
- <span data-ttu-id="f7b66-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f7b66-104">\<configuration></span></span>  
-<span data-ttu-id="f7b66-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="f7b66-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="f7b66-106">\<Quellen ></span><span class="sxs-lookup"><span data-stu-id="f7b66-106">\<sources></span></span>  
-<span data-ttu-id="f7b66-107">\<Quelle ></span><span class="sxs-lookup"><span data-stu-id="f7b66-107">\<source></span></span>  
-<span data-ttu-id="f7b66-108">\<Listener ></span><span class="sxs-lookup"><span data-stu-id="f7b66-108">\<listeners></span></span>  
-<span data-ttu-id="f7b66-109">\<remove></span><span class="sxs-lookup"><span data-stu-id="f7b66-109">\<remove></span></span>  
+ <span data-ttu-id="169c8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="169c8-104">\<configuration></span></span>  
+<span data-ttu-id="169c8-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="169c8-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="169c8-106">\<Quellen ></span><span class="sxs-lookup"><span data-stu-id="169c8-106">\<sources></span></span>  
+<span data-ttu-id="169c8-107">\<Quelle ></span><span class="sxs-lookup"><span data-stu-id="169c8-107">\<source></span></span>  
+<span data-ttu-id="169c8-108">\<Listener ></span><span class="sxs-lookup"><span data-stu-id="169c8-108">\<listeners></span></span>  
+<span data-ttu-id="169c8-109">\<remove></span><span class="sxs-lookup"><span data-stu-id="169c8-109">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7b66-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="f7b66-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="169c8-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="169c8-110">Syntax</span></span>  
   
 ```xml  
 <remove name="listenerName" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f7b66-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="f7b66-111">Attributes and Elements</span></span>  
- <span data-ttu-id="f7b66-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f7b66-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="169c8-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="169c8-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="169c8-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="169c8-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f7b66-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="f7b66-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="169c8-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="169c8-113">Attributes</span></span>  
   
-|<span data-ttu-id="f7b66-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="f7b66-114">Attribute</span></span>|<span data-ttu-id="f7b66-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7b66-115">Description</span></span>|  
+|<span data-ttu-id="169c8-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="169c8-114">Attribute</span></span>|<span data-ttu-id="169c8-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="169c8-115">Description</span></span>|  
 |---------------|-----------------|  
-|`name`|<span data-ttu-id="f7b66-116">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="f7b66-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="f7b66-117">Der Name des Listeners, Aufheben der `Listeners` Auflistung.</span><span class="sxs-lookup"><span data-stu-id="f7b66-117">The name of the listener to remove from the `Listeners` collection.</span></span>|  
+|`name`|<span data-ttu-id="169c8-116">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="169c8-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="169c8-117">Der Name des Listeners, Aufheben der `Listeners` Auflistung.</span><span class="sxs-lookup"><span data-stu-id="169c8-117">The name of the listener to remove from the `Listeners` collection.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="f7b66-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f7b66-118">Child Elements</span></span>  
- <span data-ttu-id="f7b66-119">Keine</span><span class="sxs-lookup"><span data-stu-id="f7b66-119">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="169c8-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="169c8-118">Child Elements</span></span>  
+ <span data-ttu-id="169c8-119">Keine</span><span class="sxs-lookup"><span data-stu-id="169c8-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="f7b66-120">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f7b66-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="169c8-120">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="169c8-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="f7b66-121">Element</span><span class="sxs-lookup"><span data-stu-id="f7b66-121">Element</span></span>|<span data-ttu-id="f7b66-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7b66-122">Description</span></span>|  
+|<span data-ttu-id="169c8-121">Element</span><span class="sxs-lookup"><span data-stu-id="169c8-121">Element</span></span>|<span data-ttu-id="169c8-122">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="169c8-122">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="f7b66-123">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="f7b66-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="f7b66-124">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="f7b66-124">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`sources`|<span data-ttu-id="f7b66-125">Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.</span><span class="sxs-lookup"><span data-stu-id="f7b66-125">Contains trace sources that initiate tracing messages.</span></span>|  
-|`source`|<span data-ttu-id="f7b66-126">Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.</span><span class="sxs-lookup"><span data-stu-id="f7b66-126">Specifies a trace source that initiates tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="f7b66-127">Gibt die Listener, die sammeln, speichern und Weiterleiten von Nachrichten an.</span><span class="sxs-lookup"><span data-stu-id="f7b66-127">Specifies listeners that collect, store, and route messages.</span></span>|  
+|`configuration`|<span data-ttu-id="169c8-123">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="169c8-123">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="169c8-124">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="169c8-124">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`sources`|<span data-ttu-id="169c8-125">Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.</span><span class="sxs-lookup"><span data-stu-id="169c8-125">Contains trace sources that initiate tracing messages.</span></span>|  
+|`source`|<span data-ttu-id="169c8-126">Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.</span><span class="sxs-lookup"><span data-stu-id="169c8-126">Specifies a trace source that initiates tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="169c8-127">Gibt die Listener, die sammeln, speichern und Weiterleiten von Nachrichten an.</span><span class="sxs-lookup"><span data-stu-id="169c8-127">Specifies listeners that collect, store, and route messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f7b66-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f7b66-128">Remarks</span></span>  
- <span data-ttu-id="f7b66-129">Die `<remove>` Element entfernt einen angegebenen Listener aus der `Listeners` -Sammlung für eine Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="f7b66-129">The `<remove>` element removes a specified listener from the `Listeners` collection for a trace source.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="169c8-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="169c8-128">Remarks</span></span>  
+ <span data-ttu-id="169c8-129">Die `<remove>` Element entfernt einen angegebenen Listener aus der `Listeners` -Sammlung für eine Ablaufverfolgungsquelle.</span><span class="sxs-lookup"><span data-stu-id="169c8-129">The `<remove>` element removes a specified listener from the `Listeners` collection for a trace source.</span></span>  
   
- <span data-ttu-id="f7b66-130">Können Sie ein Element Entfernen der `Listeners` Sammlung für eine Ablaufverfolgungsquelle programmgesteuert durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> Methode für die <xref:System.Diagnostics.TraceSource.Listeners%2A> Eigenschaft der <xref:System.Diagnostics.TraceSource> Instanz.</span><span class="sxs-lookup"><span data-stu-id="f7b66-130">You can remove an element from the `Listeners` collection for a trace source programmatically by calling the <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> method on the <xref:System.Diagnostics.TraceSource.Listeners%2A> property of the <xref:System.Diagnostics.TraceSource> instance.</span></span>  
+ <span data-ttu-id="169c8-130">Können Sie ein Element Entfernen der `Listeners` Sammlung für eine Ablaufverfolgungsquelle programmgesteuert durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> Methode für die <xref:System.Diagnostics.TraceSource.Listeners%2A> Eigenschaft der <xref:System.Diagnostics.TraceSource> Instanz.</span><span class="sxs-lookup"><span data-stu-id="169c8-130">You can remove an element from the `Listeners` collection for a trace source programmatically by calling the <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> method on the <xref:System.Diagnostics.TraceSource.Listeners%2A> property of the <xref:System.Diagnostics.TraceSource> instance.</span></span>  
   
- <span data-ttu-id="f7b66-131">Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f7b66-131">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="169c8-131">Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="169c8-131">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7b66-132">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f7b66-132">Example</span></span>  
- <span data-ttu-id="f7b66-133">Das folgende Beispiel zeigt, wie Sie mit der `<remove>` Element vor der Verwendung der `<add>` Element, um den Listener hinzuzufügen `console` auf die `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`.</span><span class="sxs-lookup"><span data-stu-id="f7b66-133">The following example shows how to use the `<remove>` element before using the `<add>` element to add the listener `console` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
+## <a name="example"></a><span data-ttu-id="169c8-132">Beispiel</span><span class="sxs-lookup"><span data-stu-id="169c8-132">Example</span></span>  
+ <span data-ttu-id="169c8-133">Das folgende Beispiel zeigt, wie Sie mit der `<remove>` Element vor der Verwendung der `<add>` Element, um den Listener hinzuzufügen `console` auf die `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`.</span><span class="sxs-lookup"><span data-stu-id="169c8-133">The following example shows how to use the `<remove>` element before using the `<add>` element to add the listener `console` to the `Listeners` collection for the trace source `TraceSourceApp`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,9 +81,9 @@ ms.locfileid: "47188936"
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f7b66-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f7b66-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="169c8-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="169c8-134">See Also</span></span>  
  <xref:System.Diagnostics.TraceSource.Listeners%2A>  
  <xref:System.Diagnostics.TraceSource>  
- [<span data-ttu-id="f7b66-135">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="f7b66-135">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [<span data-ttu-id="f7b66-136">\<clear></span><span class="sxs-lookup"><span data-stu-id="f7b66-136">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
- [<span data-ttu-id="f7b66-137">Trace Listeners (Ablaufverfolgungslistener)</span><span class="sxs-lookup"><span data-stu-id="f7b66-137">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [<span data-ttu-id="169c8-135">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="169c8-135">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="169c8-136">\<clear></span><span class="sxs-lookup"><span data-stu-id="169c8-136">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
+ [<span data-ttu-id="169c8-137">Trace Listeners (Ablaufverfolgungslistener)</span><span class="sxs-lookup"><span data-stu-id="169c8-137">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

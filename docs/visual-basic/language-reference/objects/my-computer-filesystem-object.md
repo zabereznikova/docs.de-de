@@ -13,30 +13,30 @@ helpviewer_keywords:
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
 ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070408"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47236147"
 ---
-# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="04572-102">My.Computer.FileSystem-Objekt</span><span class="sxs-lookup"><span data-stu-id="04572-102">My.Computer.FileSystem Object</span></span>
-<span data-ttu-id="04572-103">Stellt Eigenschaften und Methoden für die Arbeit mit Laufwerken, Dateien und Verzeichnissen bereit.</span><span class="sxs-lookup"><span data-stu-id="04572-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
+# <a name="mycomputerfilesystem-object"></a><span data-ttu-id="dc27f-102">My.Computer.FileSystem-Objekt</span><span class="sxs-lookup"><span data-stu-id="dc27f-102">My.Computer.FileSystem Object</span></span>
+<span data-ttu-id="dc27f-103">Stellt Eigenschaften und Methoden für die Arbeit mit Laufwerken, Dateien und Verzeichnissen bereit.</span><span class="sxs-lookup"><span data-stu-id="dc27f-103">Provides properties and methods for working with drives, files, and directories.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="04572-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="04572-104">Remarks</span></span>  
- <span data-ttu-id="04572-105">Informationen zu den Methoden und Eigenschaften der `My.Computer.FileSystem` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span><span class="sxs-lookup"><span data-stu-id="04572-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dc27f-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dc27f-104">Remarks</span></span>  
+ <span data-ttu-id="dc27f-105">Informationen zu den Methoden und Eigenschaften der `My.Computer.FileSystem` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span><span class="sxs-lookup"><span data-stu-id="dc27f-105">For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.</span></span>  
   
- <span data-ttu-id="04572-106">Weitere Informationen finden Sie unter [Dateizugriff mit Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span><span class="sxs-lookup"><span data-stu-id="04572-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
+ <span data-ttu-id="dc27f-106">Weitere Informationen finden Sie unter [Dateizugriff mit Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span><span class="sxs-lookup"><span data-stu-id="dc27f-106">For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="04572-107">Sie können auch die Klassen in der <xref:System.IO?displayProperty=nameWithType> Namespace zum Arbeiten mit Laufwerken, Dateien und Verzeichnisse.</span><span class="sxs-lookup"><span data-stu-id="04572-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
+>  <span data-ttu-id="dc27f-107">Sie können auch die Klassen in der <xref:System.IO?displayProperty=nameWithType> Namespace zum Arbeiten mit Laufwerken, Dateien und Verzeichnisse.</span><span class="sxs-lookup"><span data-stu-id="dc27f-107">You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04572-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="04572-108">Requirements</span></span>  
- <span data-ttu-id="04572-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="04572-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="dc27f-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dc27f-108">Requirements</span></span>  
+ <span data-ttu-id="dc27f-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="dc27f-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- <span data-ttu-id="04572-110">**Klasse:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (ermöglicht den Zugriff auf <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span><span class="sxs-lookup"><span data-stu-id="04572-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
+ <span data-ttu-id="dc27f-110">**Klasse:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (ermöglicht den Zugriff auf <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span><span class="sxs-lookup"><span data-stu-id="dc27f-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)</span></span>  
   
- <span data-ttu-id="04572-111">**Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")</span><span class="sxs-lookup"><span data-stu-id="04572-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="dc27f-111">**Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")</span><span class="sxs-lookup"><span data-stu-id="dc27f-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04572-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="04572-112">See Also</span></span>  
- [<span data-ttu-id="04572-113">My.Computer.FileSystem.SpecialDirectories-Objekt</span><span class="sxs-lookup"><span data-stu-id="04572-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
- [<span data-ttu-id="04572-114">My.Computer-Objekt</span><span class="sxs-lookup"><span data-stu-id="04572-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="dc27f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dc27f-112">See Also</span></span>  
+ [<span data-ttu-id="dc27f-113">My.Computer.FileSystem.SpecialDirectories-Objekt</span><span class="sxs-lookup"><span data-stu-id="dc27f-113">My.Computer.FileSystem.SpecialDirectories Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
+ [<span data-ttu-id="dc27f-114">My.Computer-Objekt</span><span class="sxs-lookup"><span data-stu-id="dc27f-114">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
