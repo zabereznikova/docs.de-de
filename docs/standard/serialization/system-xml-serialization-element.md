@@ -7,46 +7,46 @@ helpviewer_keywords:
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
 ms.openlocfilehash: b67c1ec1ec737976e4e50b80b42f34e508dc0224
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077316"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425919"
 ---
-# <a name="ltsystemxmlserializationgt-element"></a><span data-ttu-id="07c8e-102">&lt;system.xml.serialization&gt;-Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-102">&lt;system.xml.serialization&gt; Element</span></span>
-<span data-ttu-id="07c8e-103">Das Element der obersten Ebene zur Steuerung der XML-Serialisierung.</span><span class="sxs-lookup"><span data-stu-id="07c8e-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="07c8e-104">Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="07c8e-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
+# <a name="ltsystemxmlserializationgt-element"></a><span data-ttu-id="befcd-102">&lt;system.xml.serialization&gt;-Element</span><span class="sxs-lookup"><span data-stu-id="befcd-102">&lt;system.xml.serialization&gt; Element</span></span>
+<span data-ttu-id="befcd-103">Das Element der obersten Ebene zur Steuerung der XML-Serialisierung.</span><span class="sxs-lookup"><span data-stu-id="befcd-103">The top-level element for controlling XML serialization.</span></span> <span data-ttu-id="befcd-104">Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../docs/framework/configure-apps/file-schema/index.md).</span><span class="sxs-lookup"><span data-stu-id="befcd-104">For more information about configuration files, see [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md).</span></span>  
   
- <span data-ttu-id="07c8e-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="07c8e-105">\<configuration></span></span>  
-<span data-ttu-id="07c8e-106">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="07c8e-106">\<system.xml.serialization></span></span>  
+ <span data-ttu-id="befcd-105">\<configuration></span><span class="sxs-lookup"><span data-stu-id="befcd-105">\<configuration></span></span>  
+<span data-ttu-id="befcd-106">\<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="befcd-106">\<system.xml.serialization></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07c8e-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="07c8e-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="befcd-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="befcd-107">Syntax</span></span>  
   
 ```xml  
 <system.xml.serialization>  
 </system.xml.serialization>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="07c8e-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="07c8e-108">Attributes and Elements</span></span>  
- <span data-ttu-id="07c8e-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="07c8e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="befcd-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="befcd-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="befcd-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="befcd-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="07c8e-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="07c8e-110">Attributes</span></span>  
- <span data-ttu-id="07c8e-111">Keine</span><span class="sxs-lookup"><span data-stu-id="07c8e-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="befcd-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="befcd-110">Attributes</span></span>  
+ <span data-ttu-id="befcd-111">Keine</span><span class="sxs-lookup"><span data-stu-id="befcd-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="07c8e-112">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="07c8e-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="befcd-112">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="befcd-112">Child Elements</span></span>  
   
-|<span data-ttu-id="07c8e-113">Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-113">Element</span></span>|<span data-ttu-id="07c8e-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="07c8e-114">Description</span></span>|  
+|<span data-ttu-id="befcd-113">Element</span><span class="sxs-lookup"><span data-stu-id="befcd-113">Element</span></span>|<span data-ttu-id="befcd-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="befcd-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="07c8e-115">\<dateTimeSerialization>-Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="07c8e-116">Bestimmt den Serialisierungsmodus von <xref:System.DateTime>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="07c8e-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|  
-|[<span data-ttu-id="07c8e-117">\<schemaImporterExtensions>-Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="07c8e-118">Enthält Typen, die von der <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse zum Zuordnen von XSD-Typen zu .NET Framework-Typen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="07c8e-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|  
+|[<span data-ttu-id="befcd-115">\<dateTimeSerialization>-Element</span><span class="sxs-lookup"><span data-stu-id="befcd-115">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)|<span data-ttu-id="befcd-116">Bestimmt den Serialisierungsmodus von <xref:System.DateTime>-Objekten.</span><span class="sxs-lookup"><span data-stu-id="befcd-116">Determines the serialization mode of <xref:System.DateTime> objects.</span></span>|  
+|[<span data-ttu-id="befcd-117">\<schemaImporterExtensions>-Element</span><span class="sxs-lookup"><span data-stu-id="befcd-117">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)|<span data-ttu-id="befcd-118">Enthält Typen, die von der <xref:System.Xml.Serialization.XmlSchemaImporter>-Klasse zum Zuordnen von XSD-Typen zu .NET Framework-Typen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="befcd-118">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> for mapping of XSD types to .NET Framework types.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="07c8e-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="07c8e-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="befcd-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="befcd-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="07c8e-120">Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-120">Element</span></span>|<span data-ttu-id="07c8e-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="07c8e-121">Description</span></span>|  
+|<span data-ttu-id="befcd-120">Element</span><span class="sxs-lookup"><span data-stu-id="befcd-120">Element</span></span>|<span data-ttu-id="befcd-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="befcd-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="07c8e-122">\<configuration> Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="07c8e-123">Das Stammelement in jeder Konfigurationsdatei, die von der Common Language Runtime und den .NET Framework-Anwendungen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="07c8e-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
+|[<span data-ttu-id="befcd-122">\<configuration> Element</span><span class="sxs-lookup"><span data-stu-id="befcd-122">\<configuration> Element</span></span>](../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="befcd-123">Das Stammelement in jeder Konfigurationsdatei, die von der Common Language Runtime und den .NET Framework-Anwendungen verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="befcd-123">The root element in every configuration file that is used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="07c8e-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="07c8e-124">Example</span></span>  
- <span data-ttu-id="07c8e-125">Das folgende Codebeispiel veranschaulicht, wie der Serialisierungsmodus eines <xref:System.DateTime>-Objekts und das Hinzufügen von Typen, die von <xref:System.Xml.Serialization.XmlSchemaImporter> verwendet werden, beim Zuordnen von XSD-Typen zu .NET Framework-Typen festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="07c8e-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
+## <a name="example"></a><span data-ttu-id="befcd-124">Beispiel</span><span class="sxs-lookup"><span data-stu-id="befcd-124">Example</span></span>  
+ <span data-ttu-id="befcd-125">Das folgende Codebeispiel veranschaulicht, wie der Serialisierungsmodus eines <xref:System.DateTime>-Objekts und das Hinzufügen von Typen, die von <xref:System.Xml.Serialization.XmlSchemaImporter> verwendet werden, beim Zuordnen von XSD-Typen zu .NET Framework-Typen festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="befcd-125">The following code example illustrates how to specify the serialization mode of a <xref:System.DateTime> object, and the addition of types used by the <xref:System.Xml.Serialization.XmlSchemaImporter> when mapping XSD types to .NET Framework types.</span></span>  
   
 ```xml  
 <system.xml.serialization>  
@@ -62,11 +62,11 @@ ms.locfileid: "47077316"
 </system.sxml.serialization>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="07c8e-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="07c8e-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="befcd-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="befcd-126">See also</span></span>
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>  
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [<span data-ttu-id="07c8e-127">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="07c8e-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [<span data-ttu-id="07c8e-128">\<dateTimeSerialization>-Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
-- [<span data-ttu-id="07c8e-129">\<schemaImporterExtensions>-Element</span><span class="sxs-lookup"><span data-stu-id="07c8e-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
-- [<span data-ttu-id="07c8e-130">\<Hinzufügen >-Element für \<SchemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="07c8e-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [<span data-ttu-id="befcd-127">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="befcd-127">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+- [<span data-ttu-id="befcd-128">\<dateTimeSerialization>-Element</span><span class="sxs-lookup"><span data-stu-id="befcd-128">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
+- [<span data-ttu-id="befcd-129">\<schemaImporterExtensions>-Element</span><span class="sxs-lookup"><span data-stu-id="befcd-129">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+- [<span data-ttu-id="befcd-130">\<Hinzufügen >-Element für \<SchemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="befcd-130">\<add> Element for \<schemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
