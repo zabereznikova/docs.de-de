@@ -2,12 +2,12 @@
 title: Suche (Beispiele)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: 8bfeb98c63c6b0356a2ac408a5a78903406e20fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf01e3fec15ddae0d0901b3c2dc91d3d6109fc97
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500843"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421278"
 ---
 # <a name="discovery-samples"></a>Suche (Beispiele)
 Dieser Abschnitt enthält Beispiele, die sich auf die Suchfunktion beziehen.  
@@ -16,23 +16,11 @@ Dieser Abschnitt enthält Beispiele, die sich auf die Suchfunktion beziehen.
  [Ankündigungen](../../../../docs/framework/wcf/samples/announcements-sample.md)  
  Veranschaulicht, wie Ankündigungen mit der Suchfunktion verwendet werden.  
   
- [Asynchrone Suche](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
- Veranschaulicht, wie ein asynchroner Suchvorgang durchgeführt wird, um nach allen Rechnerdiensten zu suchen.  
-  
  [Standard](../../../../docs/framework/wcf/samples/basic-sample.md)  
  Veranschaulicht, wie ein Dienst programmgesteuert erkennbar gemacht werden kann und wie die Suche nach diesem Dienst mit dem <xref:System.ServiceModel.Discovery.DynamicEndpoint> durchgeführt werden kann.  
   
  [Konfiguration](../../../../docs/framework/wcf/samples/configuration-sample.md)  
  Veranschaulicht, wie ein Dienst mit einer Konfigurationsdatei erkennbar gemacht wird und wie <xref:System.ServiceModel.Discovery.DynamicEndpoint> bei der Konfiguration verwendet wird, um nach diesem Dienst zu suchen.  
-  
- [Beispiel für Ermittlungsbindungselement](../../../../docs/framework/wcf/samples/discovery-binding-element-sample.md)  
- Veranschaulicht, wie ein Suchbindungselement in einer benutzerdefinierten Bindung hinzugefügt wird. Dies ermöglicht es Clients, einen Dienst zu suchen, wenn ein Kanal geöffnet ist.  
-  
- [Suchproxybeispiel](../../../../docs/framework/wcf/samples/discovery-proxy-sample.md)  
- Zeigt, wie eine Implementierung eines Suchproxys erstellt wird, um Informationen zu vorhandenen Diensten zu speichern, und wie Clients Informationen von diesem Proxy abfragen können.  
-  
- [Ermitteln eines Diensts mit UniqueListenUriMode (Beispiel)](../../../../docs/framework/wcf/samples/discover-a-service-with-unique-listen-uri-mode-sample.md)  
- Veranschaulicht, wie ein Dienst gesucht wird, für den die <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Description.ListenUriMode.Unique> festgelegt ist.  
   
  [Suche mit Bereichen](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  Veranschaulicht, wie Bereiche verwendet werden, um erkennbare Endpunkte zu kategorisieren, und wie <xref:System.ServiceModel.Discovery.DiscoveryClient> verwendet wird, um eine asynchrone Suche nach Endpunkten durchzuführen.  
