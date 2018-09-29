@@ -2,12 +2,12 @@
 title: Einfacher HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516626"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455722"
 ---
 # <a name="basic-http-service"></a>Einfacher HTTP-Dienst
 In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter, RPC-basierte Service – auch bezeichnet als "POX" (Plain Old XML)-Dienst mithilfe des Windows Communication Foundation (WCF)-REST-Programmiermodells implementiert wird. In diesem Beispiel besteht aus zwei Komponenten: einem selbst gehosteten WCF-HTTP-Dienst (Service.cs) und eine Konsolenanwendung (Program.cs), die der Dienst erstellt und Aufrufe durchführt.  
@@ -21,7 +21,7 @@ In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter, RPC-basierte Se
   
  Die Datei App.config konfiguriert den WCF-Dienst mit einem Standard-<xref:System.ServiceModel.Description.WebHttpEndpoint>, für den die <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A>-Eigenschaft auf `true` festgelegt ist. Daher erstellt die WCF-Infrastruktur für eine automatische HTML-basierte Hilfeseite unter `http://localhost:8000/Customers/help` , Informationen zum HTTP-Anforderungen an den Dienst zu erstellen und nutzen Sie die HTTP-Antwort des Diensts bereitstellt.  
   
- "Program.cs" wird veranschaulicht, wie eine WCF-Kanalfactory Aufrufe an den Dienst und die Antworten verarbeiten verwendet werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework-Klassen wie <xref:System.Net.HttpWebRequest> und <xref:System.Net.WebClient> auf den Dienst zuzugreifen. In anderen Beispielen im SDK (z. B. die [automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md) Beispiel und [grundlegenden Ressourcendiensts](../../../../docs/framework/wcf/samples/basic-resource-service.md) Beispiel) zeigen, wie Sie diese Klassen verwenden, um die Kommunikation mit einem WCF-Dienst.  
+ "Program.cs" wird veranschaulicht, wie eine WCF-Kanalfactory Aufrufe an den Dienst und die Antworten verarbeiten verwendet werden kann. Beachten Sie, dass dies nur eine Möglichkeit für den Zugriff auf einen WCF-Dienst darstellt. Es ist auch möglich, mit anderen .NET Framework-Klassen wie <xref:System.Net.HttpWebRequest> und <xref:System.Net.WebClient> auf den Dienst zuzugreifen.
   
  Das Beispiel umfasst einen selbst gehosteten Dienst und einen Client, die in einer Konsolenanwendung ausgeführt werden. Während die Konsolenanwendung ausgeführt wird, sendet der Client Anforderungen an den Dienst und schreibt die in den Antworten enthaltenen wichtigen Informationen in das Konsolenfenster.  
   
@@ -41,7 +41,3 @@ In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter, RPC-basierte Se
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
-  
-## <a name="see-also"></a>Siehe auch  
- [Automatische Formatauswahl](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [Einfacher Ressourcendienst](../../../../docs/framework/wcf/samples/basic-resource-service.md)
