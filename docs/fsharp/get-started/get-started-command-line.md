@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit f# mit Befehlszeilentools
-description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekte in f# mit .NET Core-CLI auf einem beliebigen Betriebssystem (Windows, MacOs oder Linux) erstellen.
+title: Erste Schritte mit F# mit Befehlszeilentools
+description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekte in F# mit .NET Core-CLI auf einem beliebigen Betriebssystem (Windows, MacOS oder Linux) erstellen.
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
 ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
@@ -9,19 +9,19 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 09/16/2018
 ms.locfileid: "45673908"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Erste Schritte mit f# mit .NET Core-CLI
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Erste Schritte in F# mit der .NET Core-CLI
 
-Dieser Artikel beschreibt, wie Sie mit f# unter jedem Betriebssystem (Windows, MacOS oder Linux) mit .NET Core-CLI beginnen können. Danach wird durch die Erstellung einer Lösung mit mehreren Projekten mit einer Klassenbibliothek, die von einer Konsolenanwendung aufgerufen wird.
+Dieser Artikel beschreibt, wie Sie mit F# auf jedem Betriebssystem (Windows, MacOS oder Linux) unter Verwendung der .NET Core-CLI beginnen können. Dies wird an der Erstellung einer Projektmappe erläutert, die eine Klassenbibliothek enthält auf die von einer Konsolenanwendung zugegriffen wird.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
-Um zu beginnen, müssen Sie die neueste Version installieren [.NET Core SDK](https://www.microsoft.com/net/download/).
+Um zu beginnen, müssen Sie die neueste Version des [.NET Core SDK](https://www.microsoft.com/net/download/) installieren.
 
-In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlszeile verwenden und haben einen bevorzugten Text-Editor. Wenn Sie bereits, nicht [Visual Studio Code](get-started-vscode.md) ist eine großartige Möglichkeit, wie ein Text-Editor für f#.
+In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlszeile verwenden und dass sie einen bevorzugten Text-Editor haben. Wenn sie noch keinen haben sollten ist [Visual Studio Code](get-started-vscode.md) ein großartiger Text-Editor für F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Erstellen Sie eine einfache Lösung für die mit mehreren Projekte
 
-Öffnen einer Eingabeaufforderung den Befehl/Terminal, und Verwenden der [Dotnet neue](../../core/tools/dotnet-new.md) Befehl zum Erstellen von neuen Projektmappendatei mit dem Namen `FSNetCore`:
+Öffnen Sie eine Eingabeaufforderung/ein Terminal und verwenden Sie den Befehl [dotnet new](../../core/tools/dotnet-new.md) zum Erstellen von neuen Projektmappendatei mit dem Namen `FSNetCore`:
 
 ```console
 dotnet new sln -o FSNetCore
@@ -34,11 +34,11 @@ FSNetCore
     ├── FSNetCore.sln
 ```
 
-### <a name="write-a-class-library"></a>Schreiben Sie eine Klassenbibliothek
+### <a name="write-a-class-library"></a>Erstellen der Klassenbibliothek
 
-Wechseln Sie zum *FSNetCore*.
+Wechseln Sie zu dem Verzeichnis *FSNetCore*.
 
-Verwenden der `dotnet new` Befehl, erstellen Sie ein Klassenbibliotheksprojekt, in der **Src** Ordner "Library".
+Verwenden Sie den Befehl `dotnet new`, um ein neues Klassenbibliotheksprojekt unter dem Pfad **src/Library** zu erstellen.
 
 ```console
 dotnet new classlib -lang F# -o src/Library
@@ -55,7 +55,7 @@ Die folgende Verzeichnisstruktur wird erstellt, nach dem Ausführen des vorherig
             └── Library.fsproj
 ```
 
-Ersetzen Sie den Inhalt der `Library.fs` durch den folgenden Code:
+Ersetzen Sie den Inhalt der Datei `Library.fs` durch den folgenden Code:
 
 ```fsharp
 module Library
@@ -63,26 +63,26 @@ module Library
 open Newtonsoft.Json
 
 let getJsonNetJson value =
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
+    sprintf "Ich war mal %s, aber dank JSON.NET bin ich jetzt %s!" value (JsonConvert.SerializeObject(value))
 ```
 
-Fügen Sie das Newtonsoft.Json-NuGet-Paket, auf das Bibliotheksprojekt hinzu.
+Fügen Sie das Newtonsoft.Json NuGet-Paket zu dem Bibliotheksprojekt hinzu.
 
 ```console
 dotnet add src/Library/Library.fsproj package Newtonsoft.Json
 ```
 
-Hinzufügen der `Library` Projekt die `FSNetCore` mithilfe der [Dotnet-Sln hinzufügen](../../core/tools/dotnet-sln.md) Befehl:
+Hinzufügen des `Library` Projektes zur `FSNetCore` Projektmappe mithilfe des Befehls [dotnet sln add](../../core/tools/dotnet-sln.md):
 
 ```console
 dotnet sln add src/Library/Library.fsproj
 ```
 
-Führen Sie `dotnet build` zum Erstellen des Projekts. Beim Erstellen, werden nicht aufgelöste Abhängigkeiten wiederhergestellt werden.
+Führen Sie `dotnet build` zum Erstellen des Projekts aus. Beim Erstellen, werden nicht aufgelöste Abhängigkeiten wiederhergestellt.
 
-### <a name="write-a-console-application-that-consumes-the-class-library"></a>Schreiben einer Konsolenanwendung, die die Class-Bibliothek verwendet
+### <a name="write-a-console-application-that-consumes-the-class-library"></a>Schreiben einer Konsolenanwendung, die die Klassenbibliothek verwendet
 
-Verwenden der `dotnet new` Befehl erhalten Sie durch erstellen eine Konsolenanwendung in der **Src** Ordner mit dem Namen App.
+Verwenden sie den Befehl `dotnet new`, um eine Konsolenanwendung unter them Pfad **src/App** zu erstellen.
 
 ```console
 dotnet new console -lang F# -o src/App
@@ -102,7 +102,7 @@ Die folgende Verzeichnisstruktur wird erstellt, nach dem Ausführen des vorherig
             └── Library.fsproj
 ```
 
-Ersetzen Sie den Inhalt von der `Program.fs` -Datei mit den folgenden Code:
+Ersetzen Sie den Inhalt von der Datei `Program.fs` mit den folgenden Code:
 
 ```fsharp
 open System
@@ -110,45 +110,45 @@ open Library
 
 [<EntryPoint>]
 let main argv =
-    printfn "Nice command-line arguments! Here's what JSON.NET has to say about them:"
+    printfn "Nette CLI Argumente! Dies ist was JSON.NET über die zu sagen hat:"
 
     argv
     |> Array.map getJsonNetJson
     |> Array.iter (printfn "%s")
 
-    0 // return an integer exit code
+    0 // Gibt einen ganzzahligen Exitcode zurück
 ```
 
-Hinzufügen eines Verweises auf die `Library` -Projekt mit [Dotnet Verweis hinzufügen](../../core/tools/dotnet-add-reference.md).
+Hinzufügen eines Verweises auf das Projekt `Library` mit dem Befehl [dotnet reference add](../../core/tools/dotnet-add-reference.md).
 
 ```console
 dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 ```
 
-Hinzufügen der `App` Projekt die `FSNetCore` mithilfe der `dotnet sln add` Befehl:
+Hinzufügen des `App` Projektes zur `FSNetCore` Projektmappe mithilfe des `dotnet sln add` Befehls:
 
 ```console
 dotnet sln add src/App/App.fsproj
 ```
 
-Wiederherstellen der NuGet-Abhängigkeiten, `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)), und führen Sie `dotnet build` zum Erstellen des Projekts.
+Wiederherstellen der NuGet-Abhängigkeiten mit dem Befehl `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) und Erstellung des Projektes mit `dotnet build`.
 
-Wechseln Sie zum Verzeichnis der `src/App` console-Projekt, und führen Sie das Projekt, das Übergeben von `Hello World` als Argumente:
+Wechseln Sie zum Verzeichnis der `src/App` Konsolenanwendung und führen Sie das Projekt mit `Hello World` as Argumente aus:
 
 ```console
 cd src/App
 dotnet run Hello World
 ```
 
-Sie sollten die folgenden Ergebnisse angezeigt:
+Folgendes sollte angezeigt werden:
 
 ```console
-Nice command-line arguments! Here's what JSON.NET has to say about them:
+Nette CLI Argumente! Dies ist was JSON.NET über die zu sagen hat:
 
-I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
-I used to be World but now I'm ""World"" thanks to JSON.NET!
+Ich war mal Hello, aber dank JSON.NET bin ich jetzt ""Hello""!
+Ich war mal World, aber dank JSON.NET bin ich jetzt ""World""!
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Als Nächstes sehen Sie sich die [Einführung in f#](../tour.md) Weitere Informationen zu verschiedenen F#-Funktionen.
+Sehen sie sich [Einführung in f#](../tour.md) an für weitere Informationen zu verschiedenen F#-Funktionen.
