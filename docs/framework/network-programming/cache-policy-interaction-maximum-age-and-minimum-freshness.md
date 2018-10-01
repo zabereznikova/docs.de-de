@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d88ef1e736a16dddf156a1bc0e42f06d128d2c57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a35bdeaf0fc6cf513363f3d990167f342a496c76
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394165"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193459"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität
 Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückgegeben werden, führt die Interaktion der Cacherichtlinie für Clients und den Anforderungen der Serverüberprüfung immer zur konservativsten Cacherichtlinie. Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert wird und am 4. Januar abläuft.  

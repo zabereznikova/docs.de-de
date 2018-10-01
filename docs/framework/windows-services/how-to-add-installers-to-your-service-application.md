@@ -11,13 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-manager: douge
-ms.openlocfilehash: 77f41e696fed3d33282b6437e99129fda9e209e9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b73d7cf694e7bce5d055f8a3c9f78c27bb8cd5b9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44182056"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196225"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Gewusst wie: Hinzufügen von Installern zur Dienstanwendung
 Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendungen zugeordnete Ressourcen installiert werden können. Installationskomponenten registrieren einen einzelnen Dienst auf dem System, auf dem dieser installiert wird, und informieren den Dienststeuerungs-Manager über das Vorhandensein des Diensts. Bei der Arbeit mit einer Dienstanwendung können Sie im Fenster „Eigenschaften“ einen Link auswählen, damit die entsprechenden Installer für Ihr Projekt automatisch hinzugefügt werden.  

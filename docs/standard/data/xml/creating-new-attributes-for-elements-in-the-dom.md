@@ -9,11 +9,11 @@ ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027119"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47236016"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Erstellen von neuen Attributen für Elemente im Dokumentobjektmodell
 Das Erstellen von neuen Attributen unterscheidet sich vom Erstellen anderer Knotentypen, da Attribute keine Knoten sind, sondern Eigenschaften eines Elementknotens, und in einer mit dem Element verknüpften **XmlAttributeCollection** enthalten sind. Es gibt verschiedene Möglichkeiten, ein Attribut zu erstellen und an ein Element anzuhängen:  

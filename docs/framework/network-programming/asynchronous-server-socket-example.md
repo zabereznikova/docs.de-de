@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 6816b22014f9e6669abe0b1aab62d0863e1f895b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47398835"
 ---
 # <a name="asynchronous-server-socket-example"></a>Asynchroner Serversocket, Beispiel
 Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt. Der Server wird mit einem asynchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird. Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an, und gibt sie dann an den Client zurück. Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.  

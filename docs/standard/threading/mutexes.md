@@ -11,11 +11,11 @@ ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583680"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47207097"
 ---
 # <a name="mutexes"></a>Mutexe
 Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zugriff auf eine Ressource bereitzustellen. Die <xref:System.Threading.Mutex>-Klasse verwendet mehr Systemressourcen als die <xref:System.Threading.Monitor>-Klasse, sie kann jedoch über Anwendungsdomänengrenzen hinweg gemarshallt, mit mehreren Wartevorgängen verwendet sowie zur Synchronisierung von Threads in verschiedenen Prozessen verwendet werden. Ein Vergleich der verwalteten Synchronisierungsmechanismen finden Sie unter [Overview of Synchronization Primitives (Überblick über Synchronisierungsprimitiven)](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

@@ -1,20 +1,15 @@
 ---
 title: „project.json“ und Visual Studio 2015 mit .NET Core
 description: Hier finden Sie die Dokumentation für Vorabtools für .NET Core und ASP.NET Core („project.json“ und Visual Studio 2015).
-keywords: project.json, Visual Studio 2015, .NET Core, ASP.NET Core
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: e282c43b-593e-40a6-af91-de0babcd7b72
-ms.openlocfilehash: 2bfacd28a1560cd60f252b8f8368a8abdddab5bd
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "42871070"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47216616"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>„project.json“ und Visual Studio 2015 mit .NET Core
 

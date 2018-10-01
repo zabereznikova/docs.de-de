@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6cf25d3d7dcde963f06729794716b75dffdb64ae
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f4ae905b7500a8555691557b264985acf538d075
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207364"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47401250"
 ---
 # <a name="proxy-configuration"></a>Proxykonfiguration
 Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann eine angeforderte Ressource aus dem Cache zurückgeben oder die Anforderung an den Server weiterleiten, auf dem sich die Ressource befindet. Proxys können die Netzwerkleistung durch Reduzierung der Anzahl der an Remote-Server gesendeten Anforderungen verbessern. Proxys können auch verwendet werden, um den Zugriff auf Ressourcen einzuschränken.  
@@ -56,7 +55,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
   
  Die folgende Tabelle zeigt die Konfigurationsoptionen für einen statischen Proxy.  
   
-|Attribut-, Eigenschafts- oder Konfigurationseinstellung|description|  
+|Attribut-, Eigenschafts- oder Konfigurationseinstellung|Beschreibung |  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` oder <xref:System.Net.WebProxy.Address>|Die Adresse des Proxyservers, der verwendet werden soll.|  
 |`bypassonlocal` oder <xref:System.Net.WebProxy.BypassProxyOnLocal>|Steuert, ob der Proxy für lokale Adressen umgangen wird.|  

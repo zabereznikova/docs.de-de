@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393983"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47193147"
 ---
 # <a name="cache-policy"></a>Cacherichtlinie
 Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen, ob eine Anforderung mit der zwischengespeicherten Kopie der angeforderten Ressource erfüllt werden kann. Anwendungen geben Cache-Clientanforderungen für die Aktualität an, aber die effektive Cacherichtlinie richtet sich nach den Cache-Clientanforderungen, den Inhaltsablaufanforderungen des Servers sowie den Anforderungen zur erneuten Überprüfung des Servers. Die Interaktion der Cacherichtlinie und des Cacheservers für Clients resultiert immer in der konservativsten Cacherichtlinie, um sicherzustellen, dass die aktuellsten Inhalten an die Clientanwendung zurückgegeben werden.  
@@ -27,7 +26,7 @@ Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen
   
  Die in der folgenden Tabelle beschriebenen Klassen werden verwendet, um Cacherichtlinien anzugeben.  
   
-|Klassenname|description|  
+|Klassenname|Beschreibung |  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|Stellt speicherortbasierte und zeitbasierte Cacherichtlinien für mithilfe von <xref:System.Net.HttpWebRequest>-Objekten angeforderte Ressourcen dar.|  
 |<xref:System.Net.Cache.RequestCachePolicy>|Stellt die speicherortbasierten oder die <xref:System.Net.Cache.RequestCacheLevel.Default>-zeitbasierten Cacherichtlinien für Ressourcen dar, die mithilfe von <xref:System.Net.WebRequest>-Objekten angefordert werden.|  

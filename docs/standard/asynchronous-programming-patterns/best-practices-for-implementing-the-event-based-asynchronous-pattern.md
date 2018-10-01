@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46581050"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47401471"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um asynchrones Verhalten in Klassen mit einer vertrauten Ereignis- und Delegatsemantik verfügbar zu machen. Für eine Implementierung des ereignisbasierten asynchronen Musters müssen Sie einige spezielle Verhaltensanforderungen befolgen. In den folgenden Abschnitten sind Anforderungen und Richtlinien beschrieben, die Sie bei der Implementierung einer Klasse berücksichtigen sollten, die dem ereignisbasierten asynchronen Muster folgt.  

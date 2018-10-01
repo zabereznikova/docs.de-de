@@ -3,11 +3,11 @@ title: Warten von Name-Wert-Paaren (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
 ms.openlocfilehash: 28c01ce17881ffe7e8fcc35e2c23dec85d50955d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46578876"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47207642"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Warten von Name/Wert-Paaren (C#)
 Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-Paare geführt werden. Solche Informationen können z. B. Konfigurationsinformationen oder globale Einstellungen sein. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enthält einige Methoden, die das Unterhalten von Name/Wert-Paaren vereinfachen. Sie können die Informationen entweder als Attribute oder als Satz untergeordneter Elemente unterhalten.  

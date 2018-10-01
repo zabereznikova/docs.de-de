@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 562129b7deea4af9b91dfc92f83a538f6f89f06a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390298"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208301"
 ---
 # <a name="asynchronous-client-socket-example"></a>Asynchrone Clientsockets - Beispiel
 Das folgende Beispielprogramm erstellt einen Client, der mit einem Server verbunden ist. Der Client wird mit einem asynchronen Socket erstellt, damit die Ausführung der Clientanwendung nicht anhält, während der Server eine Antwort zurückgibt. Die Anwendung sendet eine Zeichenfolge an den Server und zeigt dann die Zeichenfolge, die vom Server in der Konsole zurückgegeben wird.  

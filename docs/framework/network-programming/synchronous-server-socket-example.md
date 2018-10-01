@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8b5dc8ed718402a128add375cc1adfb6d17713e8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 2edfeb85ee21b5d398938bc9500f463cd78a6c07
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955952"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198994"
 ---
 # <a name="synchronous-server-socket-example"></a>Synchroner Serversocket, Beispiel
 Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt. Der Server wird mit einem synchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird. Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an und gibt sie dann an den Client zurück. Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.  

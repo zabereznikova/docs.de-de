@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b018d646816bda96945a440a890da20b81b1cbbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f63d62c7605d32dfbe97193f8aed53f0fc547cff
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393931"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195612"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Aktivieren und Deaktivieren von IPv6
 Um das IPv6-Protokoll verwenden zu können, stellen Sie sicher, dass eine Betriebssystemversion ausgeführt wird, die IPv6 unterstützt. Stellen Sie zudem sicher, dass das Betriebssystem und die Netzwerkklassen ordnungsgemäß konfiguriert sind.  
@@ -18,7 +17,7 @@ Um das IPv6-Protokoll verwenden zu können, stellen Sie sicher, dass eine Betrie
 ## <a name="configuration-steps"></a>Konfigurationsschritte  
  In der folgenden Tabelle werden verschiedene Konfigurationen aufgelistet:  
   
-|Ist Betriebssystem IPv6-fähig?|Sind Netzwerkklassen IPv6-fähig?|description|  
+|Ist Betriebssystem IPv6-fähig?|Sind Netzwerkklassen IPv6-fähig?|Beschreibung |  
 |-------------------------------------|---------------------------------------|-----------------|  
 |Nein|Nein|Kann IPv6-Adressen analysieren.|  
 |Nein|Ja|Kann IPv6-Adressen analysieren.|  

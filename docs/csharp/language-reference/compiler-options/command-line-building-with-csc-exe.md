@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710684"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47216356"
 ---
 # <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
 Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren Datei (*csc.exe*) in der Befehlszeile eingeben.

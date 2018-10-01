@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d26b6df5d26a96bb8fa41dd3a8151fcb4a08b75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 97096d6fa41cd25a92c23cd47008b33fb6037190
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43773656"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195406"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Netzwerkisolation für Windows Store-Apps
 Klassen in den Namespaces <xref:System.Net>, <xref:System.Net.Http> und <xref:System.Net.Http.Headers> können verwendet werden, um Windows Store-Apps oder Desktop-Apps zu entwickeln. Bei Verwendung in einer Windows Store-App sind Klassen in diesen Namespaces von Netzwerkisolation betroffen, als Teil des Anwendungssicherheitsmodells, das von [!INCLUDE[win8](../../../includes/win8-md.md)] verwendet wird. Die entsprechenden Netzwerkfunktionen müssen im App-Manifest für eine Windows Store-App aktiviert sein, damit das System den Netzwerkzugriff erlaubt.  

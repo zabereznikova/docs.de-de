@@ -7,13 +7,12 @@ dev_langs:
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d15b63482cb37fa986dd065beefcf6baee4c8312
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a72e57156903c9d436a49aaf6da596868af4003
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47454868"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>Gewusst wie: Abrufen eines protokollspezifischen WebResponse, das einem WebRequest entspricht
 In diesem Beispiel erfahren Sie, wie Sie ein protokollspezifisches WebResponse abrufen, das einem WebRequest entspricht.  

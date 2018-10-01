@@ -8,13 +8,12 @@ helpviewer_keywords:
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: c2b27f3516169ee7b90eaa27fbf22ec02fb638fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e0b3ed66977dd6587789e3d88f532b699653c6f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391676"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195575"
 ---
 # <a name="cache-management-for-network-applications"></a>Cacheverwaltung für Netzwerkanwendungen
 Dieses Thema und seine zugehörigen Unterthemen beschreiben die Zwischenspeicherung von Ressourcen, die mithilfe der <xref:System.Net.WebClient>-, <xref:System.Net.WebRequest>-, <xref:System.Net.HttpWebRequest>- und <xref:System.Net.FtpWebRequest>-Klassen erhalten werden.  

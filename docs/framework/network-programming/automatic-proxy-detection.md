@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: acb14d8785a01d98d56233b8eb942f9bc4675f63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f43f8b4f7bdaba3902168ee7a1c6b7f7a2f3d39c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394880"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47193394"
 ---
 # <a name="automatic-proxy-detection"></a>Automatische Proxyerkennung
 Automatische Proxyerkennung ist ein Prozess, mit dem ein Webproxyserver vom System identifiziert und zum Senden von Anforderungen im Auftrag des Clients verwendet wird. Diese Funktion ist auch bekannt als Web Proxy Auto-Discovery (WPAD). Wenn die automatische Proxyerkennung aktiviert ist, versucht das System, ein Proxykonfigurationsskript zu finden, das für die Rückgabe des Proxysatzes verantwortlich ist, der für die Anforderung verwendet werden kann. Wenn das Proxykonfigurationsskript gefunden wird, wird es heruntergeladen, kompiliert und auf dem lokalen Computer ausgeführt, wenn Proxyinformationen, der Anforderungsstream oder die Antwort für eine Anforderung abgerufen werden, die eine <xref:System.Net.WebProxy>-Instanz verwendet.  

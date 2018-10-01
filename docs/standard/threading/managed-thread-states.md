@@ -8,11 +8,11 @@ ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711146"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235282"
 ---
 # <a name="managed-thread-states"></a>Zustände von verwalteten Threads
 Die Eigenschaft <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> stellt eine Bitmaske zur Verfügung, die den aktuellen Zustand des Threads angibt. Ein Thread ist immer in mindestens einem der möglichen Zustände in der <xref:System.Threading.ThreadState> -Enumeration und kann mehrere Zustände zugleich aufweisen.  

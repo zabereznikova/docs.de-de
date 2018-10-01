@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxtransformation (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618021"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47400789"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Erste Schritte mit der Syntaxtransformation
 
@@ -30,7 +30,7 @@ Sie wählen eine von zwei Strategien für Syntaxtransformationen. **Factorymetho
 
 Durch die erste Syntaxtransformation werden die Factorymethoden demonstriert. Sie werden eine `using System.Collections;`-Anweisung durch eine `using System.Collections.Generic;`-Anweisung ersetzen. Dieses Beispiel zeigt, wie Sie <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType>-Objekte mit den <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>-Factorymethoden erstellen. Für jede Art von **Knoten**, **Token** oder **Trivia** gibt es eine Factorymethode, die eine Instanz dieses Typs erstellt. Sie erstellen Syntaxstrukturen, indem Sie Knoten hierarchisch von unten nach oben zusammensetzen. Anschließend transformieren Sie das vorhandene Programm, indem Sie bestehende Knoten durch die neue, von Ihnen erstellte Struktur ersetzen.
 
-Starten Sie Visual Studio, und erstellen Sie ein neues C#-Projekt namens **Stand-Alone Code Analysis Tool**. Wählen Sie in Visual Studio **Datei** > **Neu* > **Projekt**, um das Dialogfeld „Neues Projekt“ anzuzeigen. Wählen Sie unter **Visual C#** > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus. Dieser Schnellstart enthält zwei Beispielprojekte. Nennen Sie daher die Lösung **SyntaxTransformationQuickStart** und das Projekt **ConstructionCS**. Klicken Sie auf **OK**.
+Starten Sie Visual Studio, und erstellen Sie ein neues C#-Projekt namens **Stand-Alone Code Analysis Tool**. Wählen Sie in Visual Studio **Datei** > **Neu** > **Projekt** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen. Wählen Sie unter **Visual C#** > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus. Dieser Schnellstart enthält zwei Beispielprojekte. Nennen Sie daher die Lösung **SyntaxTransformationQuickStart** und das Projekt **ConstructionCS**. Klicken Sie auf **OK**.
 
 Dieses Projekt verwendet die Methoden der Klasse <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>, um ein <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>-Element zu erstellen, das den `System.Collections.Generic`-Namespace repräsentiert.
 

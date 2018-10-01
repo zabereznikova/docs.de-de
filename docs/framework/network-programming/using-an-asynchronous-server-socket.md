@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ad52291f5f5f40a65d2f9ec1c07bfb3a3f39fc01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f89bf9e3ea9f2b3c385d267cfc77a05ee8eb82d6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396606"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47436101"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Verwenden eines asynchronen Serversockets
 Asynchrone Serversockets verwenden das asynchrone Programmiermodell von .NET Framework, um Dienstanforderungen über das Netzwerk zu verarbeiten. Die <xref:System.Net.Sockets.Socket>-Klasse folgt dem asynchronen Standardbenennungsmuster von .NET Framework, z.B. entspricht die synchrone <xref:System.Net.Sockets.Socket.Accept%2A>-Methode den asynchronen <xref:System.Net.Sockets.Socket.BeginAccept%2A>- und <xref:System.Net.Sockets.Socket.EndAccept%2A>-Methoden.  

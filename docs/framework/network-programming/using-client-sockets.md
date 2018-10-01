@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 458e67861bfd40b69f7a6f756ddee8be433e9e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395946"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195549"
 ---
 # <a name="using-client-sockets"></a>Verwenden von Clientsockets
 Bevor Sie eine Konversation über <xref:System.Net.Sockets.Socket> initiieren können, müssen Sie eine Datenpipeline zwischen Ihrer Anwendung und dem Remotegerät erstellen. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie eine TCP/IP-Verbindung mit einem Remotedienst erstellt wird.  

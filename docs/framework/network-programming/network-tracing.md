@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: bc58efa55656f50acfa58e3e0d15b35495af357c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65bd172d184b1346000c2bc84cb888dfab28bb61
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459775"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Netzwerkablaufverfolgung in .NET Framework
 Die Netzwerkablaufverfolgung im .NET Framework bietet Zugriff auf Informationen über den Aufruf von Methoden sowie Informationen zu dem von einer Anwendung generierten Netzwerkdatenverkehr. Dies ist nützlich für das Debuggen bei der Anwendungsentwicklung und für die Analyse von bereitgestellten Anwendungen. Die bei der Netzwerkablaufverfolgung ausgegebenen Informationen können für verschiedene Szenarien bei der Entwicklung und in Produktionsumgebungen angepasst werden.  

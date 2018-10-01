@@ -16,11 +16,11 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46532820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47204728"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen
 Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werden kann, können Benutzer numerische Daten in einer nahezu unbegrenzten Anzahl von Formaten in ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement einfügen. Daher ist es von entscheidender Bedeutung, das Gebietsschema und die Kultur des Webseitenbenutzers zu ermitteln. Bei der Analyse von Benutzereingaben können Sie dann die vom Gebietsschema und der Kultur des Benutzers definierten Formatierungskonventionen anwenden.  

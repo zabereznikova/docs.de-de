@@ -11,11 +11,11 @@ ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585427"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47192874"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Gewusst wie: Lauschen auf Abbruchanforderungen durch Abruf
 Das folgende Beispiel zeigt eine Möglichkeit, wie Benutzercode ein Abbruchtoken in regelmäßigen Abständen abfragen kann, um festzustellen, ob vom aufrufenden Thread ein Abbruch angefordert wurde. In diesem Beispiel wird der <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Typ verwendet, aber das gleiche Muster gilt für asynchrone Vorgänge, die direkt vom <xref:System.Threading.ThreadPool?displayProperty=nameWithType>- oder <xref:System.Threading.Thread?displayProperty=nameWithType>-Typ erstellt werden.  

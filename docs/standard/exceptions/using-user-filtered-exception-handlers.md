@@ -9,11 +9,11 @@ ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46699286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47436088"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Verwenden benutzergefilterter Ausnahmehandler
 Visual Basic unterstützt benutzergefilterte Ausnahmen. Benutzergefilterte Handler fangen und behandeln Ausnahmen gemäß benutzerdefinierten Ausnahmeanforderungen. In diesen Handlern wird die **Catch**-Anweisung mit dem Schlüsselwort **When** verwendet.  

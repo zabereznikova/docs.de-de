@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397818"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198149"
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
 Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (Personalcomputer), die am Rand des Internets für mehr als nur clientbasierte Rechenaufgaben vorhanden sind. Der moderne Personalcomputer (PC) verfügt über einen sehr schnellen Prozessor, einen beträchtlichen Arbeitsspeicher und eine große Festplatte, die beim Ausführen von allgemeinen Rechenaufgaben, wie z.B. E-Mail und Webbrowsen allesamt nicht voll ausgelastet werden. Der moderne PC kann einfach sowohl als Client als auch als Server (kein Peer) für viele Arten von Anwendungen fungieren.  

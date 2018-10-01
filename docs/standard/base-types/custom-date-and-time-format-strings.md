@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 730c6abfe9d49c319d1438a0821ad47e19fc0638
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46586429"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399345"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 
@@ -32,7 +32,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit können mit dem <xref:System.DateTime>-Wert und mit dem <xref:System.DateTimeOffset>-Wert verwendet werden.
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
 
 <a name="table"></a> In Formatierungsvorgängen können benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit entweder mit der `ToString`-Methode einer Datums- und Uhrzeitinstanz oder mit einer Methode verwendet werden, die die kombinierte Formatierung unterstützt. Das folgende Beispiel veranschaulicht beide Möglichkeiten.
 
@@ -108,7 +108,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "d" in mehrere Formatzeichenfolgen ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
+ [!code-csharp[Formatting.DateAndTime.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#1)]
 
  [Zurück zur Tabelle](#table)
@@ -120,7 +120,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "dd" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
+ [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
  [Zurück zur Tabelle](#table)
@@ -132,7 +132,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "ddd" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
+ [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
  [Zurück zur Tabelle](#table)
@@ -144,7 +144,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "dddd" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
+ [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
  [Zurück zur Tabelle](#table)
@@ -160,7 +160,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "f" in mehrere benutzerdefinierte Formatzeichenfolgen ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Zurück zur Tabelle](#table)
@@ -172,7 +172,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "ff" in mehrere benutzerdefinierte Formatzeichenfolgen ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Zurück zur Tabelle](#table)
@@ -184,7 +184,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "fff" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Zurück zur Tabelle](#table)
@@ -236,7 +236,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "F" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Zurück zur Tabelle](#table)
@@ -248,7 +248,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "FF" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Zurück zur Tabelle](#table)
@@ -260,7 +260,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "FFF" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#5)]
 
  [Zurück zur Tabelle](#table)
@@ -310,7 +310,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "g" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
+ [!code-csharp[Formatting.DateAndTime.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#6)]
 
  [Zurück zur Tabelle](#table)
@@ -324,7 +324,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "h" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Zurück zur Tabelle](#table)
@@ -336,7 +336,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "hh" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Zurück zur Tabelle](#table)
@@ -350,7 +350,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "H" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
+ [!code-csharp[Formatting.DateAndTime.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#9)]
 
  [Zurück zur Tabelle](#table)
@@ -362,7 +362,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "HH" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
+ [!code-csharp[Formatting.DateAndTime.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#10)]
 
  [Zurück zur Tabelle](#table)
@@ -398,7 +398,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "m" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Zurück zur Tabelle](#table)
@@ -410,7 +410,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "mm" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Zurück zur Tabelle](#table)
@@ -424,7 +424,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "M" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
+ [!code-csharp[Formatting.DateAndTime.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
  [Zurück zur Tabelle](#table)
@@ -436,7 +436,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "MM" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
+ [!code-csharp[Formatting.DateAndTime.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#2)]
 
  [Zurück zur Tabelle](#table)
@@ -448,7 +448,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "MMM" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
+ [!code-csharp[Formatting.DateAndTime.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#3)]
 
  [Zurück zur Tabelle](#table)
@@ -460,7 +460,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "MMMM" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
+ [!code-csharp[Formatting.DateAndTime.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#4)]
 
  [Zurück zur Tabelle](#table)
@@ -474,7 +474,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "s" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Zurück zur Tabelle](#table)
@@ -486,7 +486,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "ss" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Zurück zur Tabelle](#table)
@@ -500,7 +500,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "t" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#7)]
 
  [Zurück zur Tabelle](#table)
@@ -514,7 +514,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "tt" in eine benutzerdefinierte Formatzeichenfolge ein.
 
- [!code-csharp-interactive[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#8)]
 
  [Zurück zur Tabelle](#table)

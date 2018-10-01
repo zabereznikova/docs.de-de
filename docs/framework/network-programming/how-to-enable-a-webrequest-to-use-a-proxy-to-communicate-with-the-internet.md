@@ -7,13 +7,12 @@ dev_langs:
 ms.assetid: 63c0ef2c-44b5-4c54-9804-ba0b9b001ac7
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0f57869dfecce3e59d0a255a6201dd966bc407e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86bf21580db9bc6d9890f0935e283b653ba2e0b5
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396905"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397789"
 ---
 # <a name="how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet"></a>Gewusst wie: Aktivieren von WebRequest zur Verwendung eines Proxys für die Internetkommunikation
 In diesem Beispiel wird eine globale Proxyinstanz erstellt, die es jedem <xref:System.Net.WebRequest> ermöglicht, einen Proxy zu verwenden, um mit dem Internet zu kommunizieren. Im Beispiel wird davon ausgegangen, dass der Proxyserver `webproxy` heißt und auf Port 80 kommuniziert, dem Standard-HTTP-Port.  

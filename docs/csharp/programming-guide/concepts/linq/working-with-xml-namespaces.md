@@ -3,11 +3,11 @@ title: Arbeiten mit XML-Namespaces (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
 ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46579185"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47208866"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Arbeiten mit XML-Namespaces (C#)
 In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Namespaces unterstützt.  

@@ -10,13 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-manager: douge
-ms.openlocfilehash: 15ef15e0afe43d56db0972a686cd093e22c672dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 255dccfb74eced63ffbeff7ef567083a504cc6da
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512098"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47401289"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Gewusst wie: Fortsetzen eines Windows-Diensts (Visual Basic)
 In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Komponente verwendet, um den IIS-Verwaltungsdienst auf dem lokalen Computer fortzusetzen.  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7c4755e13202f60df5704f6faefb3b279a30ce58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47237045"
 ---
 # <a name="configuring-internet-applications"></a>Konfigurieren von Internetanwendungen
 Das Konfigurationselement [\<system.Net> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) enthält Informationen zur Netzwerkkonfiguration von Anwendungen. Mit dem Element [\<system.Net> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) können Sie Proxyserver und Parameter zur Verbindungsverwaltung festlegen sowie benutzerdefinierte Authentifizierung und Anforderungsmodule in Ihre Anwendung einfügen.  

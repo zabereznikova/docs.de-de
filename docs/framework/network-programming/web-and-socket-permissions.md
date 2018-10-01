@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4353f029d2e82460ab413bc8ccc248577a505504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aa7d54ae88a6dacf61488515a8ba3f13c54405e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394932"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200892"
 ---
 # <a name="web-and-socket-permissions"></a>Web- und Socketberechtigungen
 Internetsicherheit für Anwendungen, die den <xref:System.Net>-Namespace verwenden, wird von den <xref:System.Net.WebPermission>- und <xref:System.Net.SocketPermission>-Klassen bereitgestellt. Die **WebPermission**-Klasse steuert das Recht einer Anwendung, Daten aus einem URI abzufragen, oder einen URI für das Internet zu verarbeiten. Die **SocketPermission**-Klasse steuert das Recht einer Anwendung zur Verwendung von <xref:System.Net.Sockets.Socket> für das Annehmen von Daten auf einem lokalen Port oder für das Kontaktieren von Remotegeräten, die ein Transportprotokoll an einer anderen Adresse verwenden, und die auf dem Host, der Portnummer und dem Transportprotokoll des Sockets basieren.  

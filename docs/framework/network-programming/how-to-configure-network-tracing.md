@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 4b8fa55375de5057eca92591cbf4d9da628a3f85
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46479688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47193802"
 ---
 # <a name="how-to-configure-network-tracing"></a>Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung
 Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die das Format und die Inhalte von Netzwerkablaufverfolgungen bestimmen. Bevor Sie diese Verfahren ausführen, stellen Sie sicher, dass die Ablaufverfolgung aktiviert ist. Weitere Informationen zur Aktivierung der Netzwerkablaufverfolgung finden Sie unter [Enabling Network Tracing (Aktivieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/enabling-network-tracing.md).  

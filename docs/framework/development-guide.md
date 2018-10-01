@@ -7,11 +7,11 @@ ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581102"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209537"
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und Bereitstellen von .NET Framework-Apps beschrieben. Der Abschnitt enthält auch Informationen über Technologiebereiche, wie dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  

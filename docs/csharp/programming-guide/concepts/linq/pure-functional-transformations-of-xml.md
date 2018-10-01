@@ -3,11 +3,11 @@ title: Reine funktionale XML-Transformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
 ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46705409"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47209759"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Reine funktionale XML-Transformationen (C#)
 Dieser Abschnitt enthält eine Einführung in die funktionale Transformation für XML. Sie finden hier Erläuterungen der wichtigsten Konzepte und Begriffe sowie die Sprachkonstrukte, die Sie für den Einsatz funktionaler Transformationen kennen müssen. Außerdem enthält der Abschnitt auch Beispiele für die Verwendung funktionaler Transformationen zur Manipulation eines XML-Dokuments. Die Codebeispiele in diesem Abschnitt beziehen sich zwar alle auf LINQ to XML, aber die zugrunde liegenden Konzepte lassen sich auch auf andere LINQ-Technologien übertragen.  

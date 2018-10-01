@@ -6,11 +6,11 @@ ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2544070bb7ea891a804edd559a5d58e08b071771
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586476"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47193134"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden zum Auswählen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe einer XPath-Abfrage, zum Auswerten und Überprüfen der Ergebnisse eines XPath-Ausdrucks sowie zum Bestimmen, ob ein Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mit einem angegebenen XPath-Ausdruck übereinstimmt, bereit. Diese und andere Konzepte, die mit dem Auswählen, Auswerten und Zuordnen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt verbunden sind, werden in den folgenden Themen beschrieben.  

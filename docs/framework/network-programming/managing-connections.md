@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e4eb6c88bfad132f9e974445adf9ae0d6531f57
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47399436"
 ---
 # <a name="managing-connections"></a>Verwalten von Verbindungen
 Anwendungen, die HTTP zum Herstellen einer Verbindung mit Datenressourcen verwenden, können die <xref:System.Net.ServicePoint>- und <xref:System.Net.ServicePointManager>-Klassen von .NET Framework verwenden, um Verbindungen mit dem Internet zu verwalten und dabei zu helfen, dass diese eine optimale Skalierung und Leistung erreichen.  

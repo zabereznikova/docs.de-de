@@ -4,11 +4,11 @@ description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationsk
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
 ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46584072"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397058"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 

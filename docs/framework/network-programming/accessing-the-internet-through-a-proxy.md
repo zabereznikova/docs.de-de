@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9671dae85a5057f9077437ea16275ddcfcb3a75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32799b14c88ee098e15e0ffa1dfa5aaa585cdc73
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394978"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421279"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Zugreifen auf das Internet über einen Proxy
 Wenn Ihre Website einen Proxy verwendet, um den Internetzugriff zu ermöglichen, müssen Sie eine Proxyinstanz zum Aktivieren der Anwendung für die Kommunikation mit dem Webproxy konfigurieren.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fe9f9216c00448391967b82c84207f95eaccdb53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d517ef2683b8468410880d2bb50f79b382367bf
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396138"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47170151"
 ---
 # <a name="programming-pluggable-protocols"></a>Programmieren austauschbarer Protokolle
 Die abstrakten Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> stellen die Grundlage für austauschbare Protokolle bereit. Durch Ableiten protokollspezifischer Klassen von <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> kann eine Anwendung Daten von einer Internetressource anfordern und die Antwort ohne Angabe des verwendeten Protokolls lesen.  

@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e5dc6ee0f2c832e3274a1e58808acfdb56ae804c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 286ab6ad4742f3e31db8037e10e98d5890c6144d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862977"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200918"
 ---
 # <a name="ftp"></a>FTP
 .NET Framework bietet durch die Klassen <xref:System.Net.FtpWebRequest> und <xref:System.Net.FtpWebResponse> eine umfassende Unterstützung für das FTP-Protokoll. Diese Klassen werden von <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> abgeleitet. In den meisten Klassen stellen die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> alles bereit, was für die Anforderung notwendig ist. Wenn Sie jedoch Zugriff auf die FTP-spezifischen Funktionen benötigen, die als Eigenschaften verfügbar gemacht werden, können Sie den Typ dieser Klassen zu <xref:System.Net.FtpWebRequest> und <xref:System.Net.FtpWebResponse> umwandeln.  
