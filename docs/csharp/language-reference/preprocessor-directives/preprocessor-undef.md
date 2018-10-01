@@ -7,18 +7,18 @@ helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
 ms.openlocfilehash: 3957d58f61e51fab01618f5e1146be9cd0da58fd
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46525567"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47421465"
 ---
-# <a name="undef-c-reference"></a><span data-ttu-id="380bc-102">#undef (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="380bc-102">#undef (C# Reference)</span></span>
-<span data-ttu-id="380bc-103">Mit `#undef` können Sie ein Symbol definieren. Wenn dieses Symbol dann als Ausdruck in einer [#if`false`-Anweisung verwendet wird, wird der Ausdruck als ](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="380bc-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
+# <a name="undef-c-reference"></a><span data-ttu-id="55be5-102">#undef (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="55be5-102">#undef (C# Reference)</span></span>
+<span data-ttu-id="55be5-103">Mit `#undef` können Sie ein Symbol definieren. Wenn dieses Symbol dann als Ausdruck in einer [#if`false`-Anweisung verwendet wird, wird der Ausdruck als ](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="55be5-103">`#undef` lets you undefine a symbol, such that, by using the symbol as the expression in a [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive, the expression will evaluate to `false`.</span></span>  
   
- <span data-ttu-id="380bc-104">Ein Symbol kann entweder mit der Anweisung [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) oder der Compileroption [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) definiert werden.</span><span class="sxs-lookup"><span data-stu-id="380bc-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="380bc-105">Die `#undef`-Anweisung muss in einer Datei vor allen Anweisungen erscheinen, bei denen es sich nicht ebenfalls um Anweisungen handelt.</span><span class="sxs-lookup"><span data-stu-id="380bc-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
+ <span data-ttu-id="55be5-104">Ein Symbol kann entweder mit der Anweisung [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) oder der Compileroption [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) definiert werden.</span><span class="sxs-lookup"><span data-stu-id="55be5-104">A symbol can be defined either with the [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) directive or the [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) compiler option.</span></span> <span data-ttu-id="55be5-105">Die `#undef`-Anweisung muss in einer Datei vor allen Anweisungen erscheinen, bei denen es sich nicht ebenfalls um Anweisungen handelt.</span><span class="sxs-lookup"><span data-stu-id="55be5-105">The `#undef` directive must appear in the file before you use any statements that are not also directives.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="380bc-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="380bc-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="55be5-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="55be5-106">Example</span></span>  
 
 ```csharp
 // preprocessor_undef.cs  
@@ -38,10 +38,10 @@ class MyClass
 }  
 ```
 
-<span data-ttu-id="380bc-107">**DEBUG ist nicht definiert**</span><span class="sxs-lookup"><span data-stu-id="380bc-107">**DEBUG is not defined**</span></span>
+<span data-ttu-id="55be5-107">**DEBUG ist nicht definiert**</span><span class="sxs-lookup"><span data-stu-id="55be5-107">**DEBUG is not defined**</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="380bc-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="380bc-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55be5-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="55be5-108">See Also</span></span>
 
-- [<span data-ttu-id="380bc-109">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="380bc-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="380bc-110">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="380bc-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="380bc-111">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="380bc-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [<span data-ttu-id="55be5-109">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="55be5-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="55be5-110">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="55be5-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="55be5-111">C#-Präprozessoranweisungen</span><span class="sxs-lookup"><span data-stu-id="55be5-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

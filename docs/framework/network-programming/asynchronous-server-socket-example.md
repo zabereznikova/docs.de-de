@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9b770101e4295ea0c254905dd31f0e57527346fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 6816b22014f9e6669abe0b1aab62d0863e1f895b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47398835"
 ---
-# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="dbba2-102">Asynchroner Serversocket, Beispiel</span><span class="sxs-lookup"><span data-stu-id="dbba2-102">Asynchronous Server Socket Example</span></span>
-<span data-ttu-id="dbba2-103">Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt.</span><span class="sxs-lookup"><span data-stu-id="dbba2-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="dbba2-104">Der Server wird mit einem asynchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird.</span><span class="sxs-lookup"><span data-stu-id="dbba2-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="dbba2-105">Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an, und gibt sie dann an den Client zurück.</span><span class="sxs-lookup"><span data-stu-id="dbba2-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="dbba2-106">Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.</span><span class="sxs-lookup"><span data-stu-id="dbba2-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="asynchronous-server-socket-example"></a><span data-ttu-id="126a8-102">Asynchroner Serversocket, Beispiel</span><span class="sxs-lookup"><span data-stu-id="126a8-102">Asynchronous Server Socket Example</span></span>
+<span data-ttu-id="126a8-103">Das folgende Beispielprogramm erstellt einen Server, der Verbindungsanforderungen von Clients empfängt.</span><span class="sxs-lookup"><span data-stu-id="126a8-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="126a8-104">Der Server wird mit einem asynchronen Socket erstellt, damit die Ausführung der Serveranwendung nicht anhält, während auf eine Verbindung von einem Client gewartet wird.</span><span class="sxs-lookup"><span data-stu-id="126a8-104">The server is built with an asynchronous socket, so execution of the server application is not suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="126a8-105">Die Anwendung empfängt eine Zeichenfolge vom Client, zeigt die Zeichenfolge in der Konsole an, und gibt sie dann an den Client zurück.</span><span class="sxs-lookup"><span data-stu-id="126a8-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="126a8-106">Die Zeichenfolge vom Client muss die Zeichenfolge "\<EOF>" enthalten, um das Ende der Meldung zu signalisieren.</span><span class="sxs-lookup"><span data-stu-id="126a8-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -292,7 +291,7 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="dbba2-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dbba2-107">See Also</span></span>  
- [<span data-ttu-id="dbba2-108">Asynchrone Clientsockets - Beispiel</span><span class="sxs-lookup"><span data-stu-id="dbba2-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
- [<span data-ttu-id="dbba2-109">Verwenden eines asynchronen Serversockets</span><span class="sxs-lookup"><span data-stu-id="dbba2-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [<span data-ttu-id="dbba2-110">Socketcodebeispiele</span><span class="sxs-lookup"><span data-stu-id="dbba2-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="126a8-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="126a8-107">See Also</span></span>  
+ [<span data-ttu-id="126a8-108">Asynchrone Clientsockets - Beispiel</span><span class="sxs-lookup"><span data-stu-id="126a8-108">Asynchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)  
+ [<span data-ttu-id="126a8-109">Verwenden eines asynchronen Serversockets</span><span class="sxs-lookup"><span data-stu-id="126a8-109">Using an Asynchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [<span data-ttu-id="126a8-110">Socketcodebeispiele</span><span class="sxs-lookup"><span data-stu-id="126a8-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

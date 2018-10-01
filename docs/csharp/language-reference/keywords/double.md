@@ -8,65 +8,65 @@ helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
 ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46577008"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47207321"
 ---
-# <a name="double-c-reference"></a><span data-ttu-id="37fcf-102">double (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="37fcf-102">double (C# Reference)</span></span>
+# <a name="double-c-reference"></a><span data-ttu-id="d6c3d-102">double (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d6c3d-102">double (C# Reference)</span></span>
 
-<span data-ttu-id="37fcf-103">Das `double`-Schlüsselwort kennzeichnet einen einfachen Typ, der 64-Bit-Gleitkommawerte speichert.</span><span class="sxs-lookup"><span data-stu-id="37fcf-103">The `double` keyword signifies a simple type that stores 64-bit floating-point values.</span></span> <span data-ttu-id="37fcf-104">Die folgende Tabelle zeigt die Genauigkeit und den ungefähren Bereich für den `double`-Typ an.</span><span class="sxs-lookup"><span data-stu-id="37fcf-104">The following table shows the precision and approximate range for the `double` type.</span></span>
+<span data-ttu-id="d6c3d-103">Das `double`-Schlüsselwort kennzeichnet einen einfachen Typ, der 64-Bit-Gleitkommawerte speichert.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-103">The `double` keyword signifies a simple type that stores 64-bit floating-point values.</span></span> <span data-ttu-id="d6c3d-104">Die folgende Tabelle zeigt die Genauigkeit und den ungefähren Bereich für den `double`-Typ an.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-104">The following table shows the precision and approximate range for the `double` type.</span></span>
 
-|<span data-ttu-id="37fcf-105">Typ</span><span class="sxs-lookup"><span data-stu-id="37fcf-105">Type</span></span>|<span data-ttu-id="37fcf-106">Ungefährer Bereich</span><span class="sxs-lookup"><span data-stu-id="37fcf-106">Approximate range</span></span>|<span data-ttu-id="37fcf-107">Genauigkeit</span><span class="sxs-lookup"><span data-stu-id="37fcf-107">Precision</span></span>|<span data-ttu-id="37fcf-108">.NET-Typ</span><span class="sxs-lookup"><span data-stu-id="37fcf-108">.NET type</span></span>|
+|<span data-ttu-id="d6c3d-105">Typ</span><span class="sxs-lookup"><span data-stu-id="d6c3d-105">Type</span></span>|<span data-ttu-id="d6c3d-106">Ungefährer Bereich</span><span class="sxs-lookup"><span data-stu-id="d6c3d-106">Approximate range</span></span>|<span data-ttu-id="d6c3d-107">Genauigkeit</span><span class="sxs-lookup"><span data-stu-id="d6c3d-107">Precision</span></span>|<span data-ttu-id="d6c3d-108">.NET-Typ</span><span class="sxs-lookup"><span data-stu-id="d6c3d-108">.NET type</span></span>|
 |----------|-----------------------|---------------|-------------------------|
-|`double`|<span data-ttu-id="37fcf-109">±5,0 × 10<sup>−324</sup> bis ±1,7 × 10<sup>308</sup></span><span class="sxs-lookup"><span data-stu-id="37fcf-109">±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup></span></span>|<span data-ttu-id="37fcf-110">15-16 Ziffern</span><span class="sxs-lookup"><span data-stu-id="37fcf-110">15-16 digits</span></span>|<xref:System.Double?displayProperty=nameWithType>|
+|`double`|<span data-ttu-id="d6c3d-109">±5,0 × 10<sup>−324</sup> bis ±1,7 × 10<sup>308</sup></span><span class="sxs-lookup"><span data-stu-id="d6c3d-109">±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup></span></span>|<span data-ttu-id="d6c3d-110">15-16 Ziffern</span><span class="sxs-lookup"><span data-stu-id="d6c3d-110">15-16 digits</span></span>|<xref:System.Double?displayProperty=nameWithType>|
 
-## <a name="literals"></a><span data-ttu-id="37fcf-111">Literale</span><span class="sxs-lookup"><span data-stu-id="37fcf-111">Literals</span></span>
+## <a name="literals"></a><span data-ttu-id="d6c3d-111">Literale</span><span class="sxs-lookup"><span data-stu-id="d6c3d-111">Literals</span></span>
 
-<span data-ttu-id="37fcf-112">Ein echtes numerisches Literal auf der rechten Seite des Zuweisungsoperators wird standardmäßig als `double` behandelt.</span><span class="sxs-lookup"><span data-stu-id="37fcf-112">By default, a real numeric literal on the right side of the assignment operator is treated as `double`.</span></span> <span data-ttu-id="37fcf-113">Aber wenn Sie eine ganze Zahl als `double` behandeln möchten, verwenden Sie das Suffix d oder D, beispielsweise:</span><span class="sxs-lookup"><span data-stu-id="37fcf-113">However, if you want an integer number to be treated as `double`, use the suffix d or D, for example:</span></span>
+<span data-ttu-id="d6c3d-112">Ein echtes numerisches Literal auf der rechten Seite des Zuweisungsoperators wird standardmäßig als `double` behandelt.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-112">By default, a real numeric literal on the right side of the assignment operator is treated as `double`.</span></span> <span data-ttu-id="d6c3d-113">Aber wenn Sie eine ganze Zahl als `double` behandeln möchten, verwenden Sie das Suffix d oder D, beispielsweise:</span><span class="sxs-lookup"><span data-stu-id="d6c3d-113">However, if you want an integer number to be treated as `double`, use the suffix d or D, for example:</span></span>
 
 ```csharp
 double x = 3D;
 ```
 
-## <a name="conversions"></a><span data-ttu-id="37fcf-114">Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="37fcf-114">Conversions</span></span>
+## <a name="conversions"></a><span data-ttu-id="d6c3d-114">Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="d6c3d-114">Conversions</span></span>
 
-<span data-ttu-id="37fcf-115">Sie können numerische ganzzahlige Typen und Gleitkommatypen in einem Ausdruck kombinieren.</span><span class="sxs-lookup"><span data-stu-id="37fcf-115">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="37fcf-116">In diesem Fall werden die ganzzahligen Typen in Gleitkommatypen konvertiert.</span><span class="sxs-lookup"><span data-stu-id="37fcf-116">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="37fcf-117">Die Auswertung des Ausdrucks erfolgt gemäß den folgenden Regeln:</span><span class="sxs-lookup"><span data-stu-id="37fcf-117">The evaluation of the expression is performed according to the following rules:</span></span>
+<span data-ttu-id="d6c3d-115">Sie können numerische ganzzahlige Typen und Gleitkommatypen in einem Ausdruck kombinieren.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-115">You can mix numeric integral types and floating-point types in an expression.</span></span> <span data-ttu-id="d6c3d-116">In diesem Fall werden die ganzzahligen Typen in Gleitkommatypen konvertiert.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-116">In this case, the integral types are converted to floating-point types.</span></span> <span data-ttu-id="d6c3d-117">Die Auswertung des Ausdrucks erfolgt gemäß den folgenden Regeln:</span><span class="sxs-lookup"><span data-stu-id="d6c3d-117">The evaluation of the expression is performed according to the following rules:</span></span>
 
-- <span data-ttu-id="37fcf-118">Wenn einer der Gleitkommatypen `double` ist, wertet der Ausdruck in relationalen Vergleichen und in Vergleichen auf Gleichheit nach `double` oder [bool](../../../csharp/language-reference/keywords/bool.md) aus.</span><span class="sxs-lookup"><span data-stu-id="37fcf-118">If one of the floating-point types is `double`, the expression evaluates to `double`, or to [bool](../../../csharp/language-reference/keywords/bool.md) in relational comparisons and comparisons for equality.</span></span>
+- <span data-ttu-id="d6c3d-118">Wenn einer der Gleitkommatypen `double` ist, wertet der Ausdruck in relationalen Vergleichen und in Vergleichen auf Gleichheit nach `double` oder [bool](../../../csharp/language-reference/keywords/bool.md) aus.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-118">If one of the floating-point types is `double`, the expression evaluates to `double`, or to [bool](../../../csharp/language-reference/keywords/bool.md) in relational comparisons and comparisons for equality.</span></span>
 
-- <span data-ttu-id="37fcf-119">Wenn in dem Ausdruck kein `double`-Typ vorhanden ist, wird der Ausdruck in relationalen Vergleichen und Vergleichen auf Gleichheit in [float](../../../csharp/language-reference/keywords/float.md) oder [bool](../../../csharp/language-reference/keywords/bool.md) ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="37fcf-119">If there is no `double` type in the expression, it evaluates to [float](../../../csharp/language-reference/keywords/float.md), or to [bool](../../../csharp/language-reference/keywords/bool.md) in relational comparisons and comparisons for equality.</span></span>
+- <span data-ttu-id="d6c3d-119">Wenn in dem Ausdruck kein `double`-Typ vorhanden ist, wird der Ausdruck in relationalen Vergleichen und Vergleichen auf Gleichheit in [float](../../../csharp/language-reference/keywords/float.md) oder [bool](../../../csharp/language-reference/keywords/bool.md) ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-119">If there is no `double` type in the expression, it evaluates to [float](../../../csharp/language-reference/keywords/float.md), or to [bool](../../../csharp/language-reference/keywords/bool.md) in relational comparisons and comparisons for equality.</span></span>
 
- <span data-ttu-id="37fcf-120">Ein Gleitkomma-Ausdruck kann die folgenden Sätze von Werten enthalten:</span><span class="sxs-lookup"><span data-stu-id="37fcf-120">A floating-point expression can contain the following sets of values:</span></span>
+ <span data-ttu-id="d6c3d-120">Ein Gleitkomma-Ausdruck kann die folgenden Sätze von Werten enthalten:</span><span class="sxs-lookup"><span data-stu-id="d6c3d-120">A floating-point expression can contain the following sets of values:</span></span>
 
-- <span data-ttu-id="37fcf-121">Positive und negative null</span><span class="sxs-lookup"><span data-stu-id="37fcf-121">Positive and negative zero.</span></span>
+- <span data-ttu-id="d6c3d-121">Positive und negative null</span><span class="sxs-lookup"><span data-stu-id="d6c3d-121">Positive and negative zero.</span></span>
 
-- <span data-ttu-id="37fcf-122">Positive und negative Infinity</span><span class="sxs-lookup"><span data-stu-id="37fcf-122">Positive and negative infinity.</span></span>
+- <span data-ttu-id="d6c3d-122">Positive und negative Infinity</span><span class="sxs-lookup"><span data-stu-id="d6c3d-122">Positive and negative infinity.</span></span>
 
-- <span data-ttu-id="37fcf-123">Not-a-Number-Wert (NaN)</span><span class="sxs-lookup"><span data-stu-id="37fcf-123">Not-a-Number value (NaN).</span></span>
+- <span data-ttu-id="d6c3d-123">Not-a-Number-Wert (NaN)</span><span class="sxs-lookup"><span data-stu-id="d6c3d-123">Not-a-Number value (NaN).</span></span>
 
-- <span data-ttu-id="37fcf-124">Die begrenzte Menge von Werten ungleich Null</span><span class="sxs-lookup"><span data-stu-id="37fcf-124">The finite set of nonzero values.</span></span>
+- <span data-ttu-id="d6c3d-124">Die begrenzte Menge von Werten ungleich Null</span><span class="sxs-lookup"><span data-stu-id="d6c3d-124">The finite set of nonzero values.</span></span>
 
-<span data-ttu-id="37fcf-125">Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre Gleitkommaarithmetik auf der [IEEE](https://www.ieee.org)-Website.</span><span class="sxs-lookup"><span data-stu-id="37fcf-125">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](https://www.ieee.org) Web site.</span></span>
+<span data-ttu-id="d6c3d-125">Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre Gleitkommaarithmetik auf der [IEEE](https://www.ieee.org)-Website.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-125">For more information about these values, see IEEE Standard for Binary Floating-Point Arithmetic, available on the [IEEE](https://www.ieee.org) Web site.</span></span>
 
-## <a name="example"></a><span data-ttu-id="37fcf-126">Beispiel</span><span class="sxs-lookup"><span data-stu-id="37fcf-126">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d6c3d-126">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d6c3d-126">Example</span></span>
 
-<span data-ttu-id="37fcf-127">Im folgenden Beispiel werden ein [int](../../../csharp/language-reference/keywords/int.md), ein [short](../../../csharp/language-reference/keywords/short.md),ein [float](../../../csharp/language-reference/keywords/float.md) und ein `double` zusammen addiert, was ein `double`-Ergebnis ergibt.</span><span class="sxs-lookup"><span data-stu-id="37fcf-127">In the following example, an [int](../../../csharp/language-reference/keywords/int.md), a [short](../../../csharp/language-reference/keywords/short.md), a [float](../../../csharp/language-reference/keywords/float.md), and a `double` are added together giving a `double` result.</span></span>
+<span data-ttu-id="d6c3d-127">Im folgenden Beispiel werden ein [int](../../../csharp/language-reference/keywords/int.md), ein [short](../../../csharp/language-reference/keywords/short.md),ein [float](../../../csharp/language-reference/keywords/float.md) und ein `double` zusammen addiert, was ein `double`-Ergebnis ergibt.</span><span class="sxs-lookup"><span data-stu-id="d6c3d-127">In the following example, an [int](../../../csharp/language-reference/keywords/int.md), a [short](../../../csharp/language-reference/keywords/short.md), a [float](../../../csharp/language-reference/keywords/float.md), and a `double` are added together giving a `double` result.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#9)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="37fcf-128">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="37fcf-128">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="d6c3d-128">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="d6c3d-128">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="37fcf-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37fcf-129">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6c3d-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6c3d-129">See Also</span></span>
 
-- [<span data-ttu-id="37fcf-130">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="37fcf-130">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="37fcf-131">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="37fcf-131">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="37fcf-132">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="37fcf-132">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="37fcf-133">Tabelle für Standardwerte</span><span class="sxs-lookup"><span data-stu-id="37fcf-133">Default Values Table</span></span>](../../../csharp/language-reference/keywords/default-values-table.md)  
-- [<span data-ttu-id="37fcf-134">Tabelle integrierter Typen</span><span class="sxs-lookup"><span data-stu-id="37fcf-134">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [<span data-ttu-id="37fcf-135">Tabelle für Gleitkommatypen</span><span class="sxs-lookup"><span data-stu-id="37fcf-135">Floating-Point Types Table</span></span>](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-- [<span data-ttu-id="37fcf-136">Tabelle für implizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="37fcf-136">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="37fcf-137">Tabelle für explizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="37fcf-137">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="d6c3d-130">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="d6c3d-130">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="d6c3d-131">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="d6c3d-131">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="d6c3d-132">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="d6c3d-132">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="d6c3d-133">Tabelle für Standardwerte</span><span class="sxs-lookup"><span data-stu-id="d6c3d-133">Default Values Table</span></span>](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [<span data-ttu-id="d6c3d-134">Tabelle integrierter Typen</span><span class="sxs-lookup"><span data-stu-id="d6c3d-134">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [<span data-ttu-id="d6c3d-135">Tabelle für Gleitkommatypen</span><span class="sxs-lookup"><span data-stu-id="d6c3d-135">Floating-Point Types Table</span></span>](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [<span data-ttu-id="d6c3d-136">Tabelle für implizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="d6c3d-136">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [<span data-ttu-id="d6c3d-137">Tabelle für explizite numerische Konvertierungen</span><span class="sxs-lookup"><span data-stu-id="d6c3d-137">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
