@@ -13,4 +13,4 @@ ms.locfileid: "33209497"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Erste Schritte mit ASP.NET Core
 
-Wenn Sie Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen suchen, gehen Sie unter [ASP.NET Core documentation (Dokumentation zu ASP.NET Core)](/aspnet/core/).
+Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen finden Sie in der [ASP.NET Core-Dokumentation](/aspnet/core/).
