@@ -2,12 +2,12 @@
 title: Berechnungsausdrücke (F#)
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in f#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 07/27/2018
-ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47459801"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -88,7 +88,7 @@ Die `do!` -Schlüsselwort ist für einen Ausdruck für die Berechnung aufrufen, 
 ```fsharp
 let doThingsAsync data url =
     async {
-        do! sumbitData data url
+        do! submitData data url
         ...
     }
 ```
