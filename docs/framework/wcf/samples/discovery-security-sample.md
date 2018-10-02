@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 ms.openlocfilehash: be915a0b619c800c79ef1acbec9b71812c749cf7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863727"
 ---
 # <a name="discovery-security-sample"></a>Beispiel für Ermittlungssicherheit
 Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang beteiligt sind, sicher sein müssen. Die Erweiterung der Sicherheit von Suchmeldungen mindert das Risiko für verschiedene Angriffe (Meldungsänderung, Denial of Service, Wiederholung, Spoofing). In diesem Beispiel werden benutzerdefinierte Kanäle implementiert, die Meldungssignaturen mit dem kompakten Signaturformat berechnen und verifizieren. (Dies wird in Abschnitt 8.2 der WS-Discovery-Spezifikation beschrieben.) Das Beispiel unterstützt die [Discovery-Spezifikation von 2005](https://go.microsoft.com/fwlink/?LinkId=177912) und [Version 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863350"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Generische Typen in Visual Basic (Visual Basic)
 Ein *generischer Typ* ist ein einzelnes Programmierelement, das sich so anpasst, dass es für verschiedene Datentypen dieselben Funktionalität ausführt. Wenn Sie eine generische Klasse oder Prozedur definieren, müssen Sie keine separate Version für jeden Datentyp definieren, für den Sie diese Funktionalität möglicherweise ausführen möchten.  
