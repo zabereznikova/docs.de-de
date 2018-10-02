@@ -2,12 +2,12 @@
 title: Problembehandlung bei der Korrelation
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027922"
 ---
 # <a name="troubleshooting-correlation"></a>Problembehandlung bei der Korrelation
 Mit Korrelation werden Workflowdienstnachrichten miteinander und mit der richtigen Workflowinstanz verknüpft. Wenn die Konfiguration jedoch nicht richtig durchgeführt wurde, werden Meldungen nicht empfangen, und Anwendungen funktionieren nicht ordnungsgemäß. Dieses Thema bietet eine Übersicht über mehrere Methoden zum Beheben von Korrelationsproblemen. Des Weiteren werden einige häufig auftretende Probleme aufgeführt, die bei der Verwendung der Korrelation auftreten können.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Ein Nachverfolgungsteilnehmer (z. B. der ConsoleTrackingParticipant) ist nützlich bei selbst gehosteten Workflowdiensten mit Konsolenfenster. Für einen im Internet gehosteten Dienst, ein Nachverfolgungsteilnehmer, der die Überwachungsinformationen in einen permanenten Speicher protokolliert wird, z. B. der integrierte <xref:System.Activities.Tracking.EtwTrackingParticipant>, oder einen benutzerdefinierten Überwachungsteilnehmer, der die Informationen wie z. B. in einer Datei protokolliert die `TextWriterTrackingParticpant` aus der [ Überwachen mit einer Textdatei](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) Beispiel.
+ Ein Nachverfolgungsteilnehmer (z. B. der ConsoleTrackingParticipant) ist nützlich bei selbst gehosteten Workflowdiensten mit Konsolenfenster. Für einen im Internet gehosteten Dienst, ein Nachverfolgungsteilnehmer, der die Überwachungsinformationen in einen permanenten Speicher protokolliert wird, z. B. der integrierte <xref:System.Activities.Tracking.EtwTrackingParticipant>, oder einen benutzerdefinierten Überwachungsteilnehmer, der die Informationen in einer Datei protokolliert.
 
  Weitere Informationen zum Nachverfolgen und Konfigurieren der nachverfolgung für einen Web gehosteten Workflowdienst finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Konfigurieren der nachverfolgung für einen Workflow](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md), und die [ Nachverfolgen von &#91;WF-Beispiele&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) Beispiele.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Dies kann anhand des Nachrichtentexts überprüft werden.
+Dies kann anhand des Nachrichtentexts überprüft werden.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- Im folgenden Beispiel wird eine für einen <xref:System.ServiceModel.Activities.Receive>-Vorgang konfigurierte `AddItem`-Aktivität gezeigt, die Daten mithilfe des vorherigen Nachrichtenvertrags empfängt. Die XPath-Abfrage ist ordnungsgemäß konfiguriert.
+Im folgenden Beispiel wird eine für einen <xref:System.ServiceModel.Activities.Receive>-Vorgang konfigurierte `AddItem`-Aktivität gezeigt, die Daten mithilfe des vorherigen Nachrichtenvertrags empfängt. Die XPath-Abfrage ist ordnungsgemäß konfiguriert.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-Weitere Informationen zu einer Inhaltsbasierter Korrelation, finden Sie unter den [korrelierter Rechner](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) Beispiel.

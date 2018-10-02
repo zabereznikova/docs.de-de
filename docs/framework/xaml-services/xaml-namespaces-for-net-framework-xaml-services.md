@@ -3,11 +3,11 @@ title: XAML-Namespaces für .NET Framework-XAML-Dienste
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47455024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030865"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>XAML-Namespaces für .NET Framework-XAML-Dienste
 Ein XAML-Namespace ist ein Konzept, das auf der Definition eines XML-Namespaces erweitert. Ähnlich wie ein XML-Namespace, können Sie definieren eine XAML-Namespace mit einem `xmlns` Attribut im Markup. XAML-Namespaces werden auch in der XAML-Knotenstream und andere XAML-Dienste-APIs dargestellt. In diesem Thema das Konzept des XAML-Namespace definiert und beschreibt, wie XAML-Namespaces können definiert werden und von XAML-Schema-Kontexten und andere Aspekte der .NET Framework-XAML-Dienste verwendet werden.  

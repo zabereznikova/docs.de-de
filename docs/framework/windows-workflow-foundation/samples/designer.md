@@ -2,12 +2,12 @@
 title: Designer
 ms.date: 03/30/2017
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
-ms.openlocfilehash: 9a579b7aae785e664103fecb6717247b8383576a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fa97d5e9d9f83a134e91b0d50f923d72d36f12b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513496"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031419"
 ---
 # <a name="designer"></a>Designer
 Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] verwendet wird.  
@@ -17,10 +17,7 @@ Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie [!INCLUDE[wfd1](.
  Veranschaulicht, wie eine Klasse erstellt, die von <xref:System.Windows.Markup.XamlWriter> abgeleitet wird, und entfernt den Ansichtszustand aus einer XAML-Datei.  
   
  [Programmiermodell-Elementstruktur](../../../../docs/framework/windows-workflow-foundation/samples/programming-model-item-tree.md)  
- Veranschaulicht, wie zum Navigieren der <xref:System.Activities.Presentation.Model.ModelItem> -Struktur mit der deklarativen Datenbindung der Strukturansicht Windows Presentation Foundation (WPF).  
+ Veranschaulicht, wie zum Navigieren der <xref:System.Activities.Presentation.Model.ModelItem> -Struktur mit der deklarativen Datenbindung der Windows Presentation Foundation (WPF)-Strukturansicht.  
   
  [Erweiterbarkeit von Eigenschaftenrastern](../../../../docs/framework/windows-workflow-foundation/samples/property-grid-extensibliity.md)  
- Veranschaulicht, wie das angezeigte Eigenschaftenraster angepasst wird, wenn eine angegebene Aktivität innerhalb des Designers ausgewählt wird.  
-  
- [Toolboxdienst](../../../../docs/framework/windows-workflow-foundation/samples/toolbox-service.md)  
- Veranschaulicht, wie die [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Toolboxaktivitäten auf Grundlage des Kontexts des Workflows aktualisiert werden.
+ Veranschaulicht, wie das angezeigte Eigenschaftenraster angepasst wird, wenn eine angegebene Aktivität innerhalb des Designers ausgewählt wird.

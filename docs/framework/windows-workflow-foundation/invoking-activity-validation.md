@@ -2,15 +2,15 @@
 title: Aufrufen der Aktivitätsvalidierung
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035135"
 ---
 # <a name="invoking-activity-validation"></a>Aufrufen der Aktivitätsvalidierung
-Die Aktivitätsvalidierung stellt eine Methode bereit, um Fehler in der Konfiguration einer Aktivität vor der Ausführung zu identifizieren und zu melden. Eine Validierung wird ausgeführt, wenn ein Workflow im Workflow-Designer geändert und Validierungsfehler oder -warnungen im Workflow-Designer angezeigt werden. Die Validierung findet auch zur Laufzeit statt, wenn ein Workflow aufgerufen wird. Wenn Validierungsfehler auftreten, löst die Standardvalidierungslogik eine <xref:System.Activities.InvalidWorkflowException> aus. Windows Workflow Foundation (WF) bietet die <xref:System.Activities.Validation.ActivityValidationServices> -Klasse, die von workflowanwendungen und Tools sind Entwickler verwendet werden kann, um eine Aktivität explizit validieren. In diesem Thema wird beschrieben, wie Aktivitäten mit dem <xref:System.Activities.Validation.ActivityValidationServices>-Objekt validiert werden.  
+Die Aktivitätsvalidierung stellt eine Methode bereit, um Fehler in der Konfiguration einer Aktivität vor der Ausführung zu identifizieren und zu melden. Eine Validierung wird ausgeführt, wenn ein Workflow im Workflow-Designer geändert und Validierungsfehler oder -warnungen im Workflow-Designer angezeigt werden. Die Validierung findet auch zur Laufzeit statt, wenn ein Workflow aufgerufen wird. Wenn Validierungsfehler auftreten, löst die Standardvalidierungslogik eine <xref:System.Activities.InvalidWorkflowException> aus. Windows Workflow Foundation (WF) ermöglicht die <xref:System.Activities.Validation.ActivityValidationServices> -Klasse, die von workflowanwendungen und Tools von Entwicklern verwendet werden kann, um eine Aktivität explizit validieren. In diesem Thema wird beschrieben, wie Aktivitäten mit dem <xref:System.Activities.Validation.ActivityValidationServices>-Objekt validiert werden.  
   
 ## <a name="using-activityvalidationservices"></a>Verwenden von ActivityValidationServices  
  Das <xref:System.Activities.Validation.ActivityValidationServices>-Objekt verfügt über zwei <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>-Überladungen, mit denen die Validierungslogik einer Aktivität aufgerufen wird. Die erste Überladung akzeptiert die Stammaktivität, die validiert werden soll, und gibt eine Auflistung von Validierungsfehlern und -warnungen zurück. Im folgenden Beispiel wird eine benutzerdefinierte `Add`-Aktivität verwendet, die über zwei erforderliche Argumente verfügt.  
@@ -77,7 +77,7 @@ else
  Wenn <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> für diesen Beispielworkflow aufgerufen wird, werden zwei Validierungsfehler zurückgegeben.  
   
  **Fehler: Der Wert für das erforderliche aktivitätsargument 'Operand2' wurde nicht angegeben.**  
-**Fehler: Der Wert für das erforderliche aktivitätsargument "Operand1" wurde nicht angegeben.**  Bei Aufruf dieses Workflows würde ein <xref:System.Activities.InvalidWorkflowException>-Objekt ausgelöst werden, wie im folgenden Beispiel gezeigt.  
+**Fehler: Der Wert für das erforderliche aktivitätsargument 'Operand1' wurde nicht angegeben.**  Bei Aufruf dieses Workflows würde ein <xref:System.Activities.InvalidWorkflowException>-Objekt ausgelöst werden, wie im folgenden Beispiel gezeigt.  
   
 ```csharp  
 try  
@@ -91,9 +91,9 @@ catch (Exception ex)
 ```  
   
  **System.Activities.InvalidWorkflowException:**  
-**Der folgende Fehler traten bei der Verarbeitung der Workflowstruktur:**   
-**'Add': Wert für das erforderliche aktivitätsargument 'Operand2' wurde nicht bereitgestellt.**   
-**'Add': Wert für das erforderliche aktivitätsargument "Operand1" wurde nicht bereitgestellt.**  Damit dieser Beispielworkflow gültig ist, müssen die zwei erforderlichen Argumente der `Add`-Aktivität gebunden werden. Im folgenden Beispiel werden die zwei erforderlichen Argumente zusammen mit dem Ergebniswert an Workflowvariablen gebunden. In diesem Beispiel wird das <xref:System.Activities.Activity%601.Result%2A>-Argument zusammen mit den zwei erforderlichen Argumenten gebunden. Das <xref:System.Activities.Activity%601.Result%2A>-Argument muss nicht gebunden werden und verursacht keine Validierungsfehler, wenn es nicht gebunden ist. Es ist die Aufgabe des Workflowautors, das <xref:System.Activities.Activity%601.Result%2A>-Objekt zu binden, wenn sein Wert noch an einer anderen Stelle im Workflow verwendet wird.  
+**Die folgenden Fehler sind aufgetreten, während der Verarbeitung der Workflowstruktur:**   
+**'Add': für erforderliche aktivitätsargument "Operand2" kein Wert angegeben wurde.**   
+**'Add': für erforderliche aktivitätsargument "Operand1" kein Wert angegeben wurde.**  Damit dieser Beispielworkflow gültig ist, müssen die zwei erforderlichen Argumente der `Add`-Aktivität gebunden werden. Im folgenden Beispiel werden die zwei erforderlichen Argumente zusammen mit dem Ergebniswert an Workflowvariablen gebunden. In diesem Beispiel wird das <xref:System.Activities.Activity%601.Result%2A>-Argument zusammen mit den zwei erforderlichen Argumenten gebunden. Das <xref:System.Activities.Activity%601.Result%2A>-Argument muss nicht gebunden werden und verursacht keine Validierungsfehler, wenn es nicht gebunden ist. Es ist die Aufgabe des Workflowautors, das <xref:System.Activities.Activity%601.Result%2A>-Objekt zu binden, wenn sein Wert noch an einer anderen Stelle im Workflow verwendet wird.  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException: Die argumenteinstellungen der Stammaktivität sind falsch.**  
-**Korrigieren Sie die Workflowdefinition oder stellen Sie Eingabewerte zur Behebung dieser Fehler bereit:**   
-**'Add': Wert für das erforderliche aktivitätsargument 'Operand2' wurde nicht bereitgestellt.**   
-**'Add': Wert für das erforderliche aktivitätsargument "Operand1" wurde nicht bereitgestellt.**  Nachdem die richtigen Argumente übergeben wurden, wird der Workflow erfolgreich abgeschlossen, wie im folgenden Beispiel gezeigt.  
+ **System.ArgumentException:-argumenteinstellungen der Stammaktivität sind falsch.**  
+**Korrigieren Sie die Workflowdefinition oder geben Sie der Eingabewerten vornimmt, um diesen Fehler zu beheben an:**   
+**'Add': für erforderliche aktivitätsargument "Operand2" kein Wert angegeben wurde.**   
+**'Add': für erforderliche aktivitätsargument "Operand1" kein Wert angegeben wurde.**  Nachdem die richtigen Argumente übergeben wurden, wird der Workflow erfolgreich abgeschlossen, wie im folgenden Beispiel gezeigt.  
   
 ```csharp  
 Add wf = new Add();  
@@ -152,12 +152,13 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
->  In diesem Beispiel wurde die Stammaktivität als `Add` und nicht wie im vorherigen Beispiel als `Activity` deklariert. Deshalb kann die `WorkflowInvoker.Invoke`-Methode eine einzelne ganze Zahl zurückgeben, die die Ergebnisse der `Add`-Aktivität darstellt und kein Wörterbuch mit `out`-Argumenten. Die `wf`-Variable hätte auch als `Activity<int>` deklariert werden können.  
+> In diesem Beispiel wurde die Stammaktivität als `Add` und nicht wie im vorherigen Beispiel als `Activity` deklariert. Deshalb kann die `WorkflowInvoker.Invoke`-Methode eine einzelne ganze Zahl zurückgeben, die die Ergebnisse der `Add`-Aktivität darstellt und kein Wörterbuch mit `out`-Argumenten. Die `wf`-Variable hätte auch als `Activity<int>` deklariert werden können.  
   
  Bei der Validierung von Stammargumenten ist es die Aufgabe der Hostanwendung, sicherzustellen, dass alle erforderlichen Argumente beim Aufruf des Workflows übergeben werden.  
   
-### <a name="invoking-imperative-code-based-validation"></a>Aufrufen der imperativen codebasierten Validierung  
- Die imperative codebasierte Validierung stellt eine einfache Möglichkeit für eine Aktivität dar, eine Eigenvalidierung bereitzustellen. Dies ist für Aktivitäten verfügbar, die von <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> und <xref:System.Activities.NativeActivity> abgeleitet werden. Der Validierungscode, der sämtliche Validierungsfehler und -warnungen bestimmt, wird der Aktivität hinzugefügt. Wenn die Validierung für die Aktivität aufgerufen wird, sind diese Warnungen oder Fehler in der Auflistung enthalten, die durch den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> zurückgegeben wurde. Im folgenden Beispiel entnommen der [grundlegende Validierung](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md) Beispiel wird eine `CreateProduct` Aktivität definiert ist. Wenn `Cost` größer als `Price` ist, wird den Metadaten in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung ein Validierungsfehler hinzugefügt.  
+### <a name="invoking-imperative-code-based-validation"></a>Aufrufen der imperativen codebasierten Validierung
+
+Die imperative codebasierte Validierung stellt eine einfache Möglichkeit für eine Aktivität dar, eine Eigenvalidierung bereitzustellen. Dies ist für Aktivitäten verfügbar, die von <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> und <xref:System.Activities.NativeActivity> abgeleitet werden. Der Validierungscode, der sämtliche Validierungsfehler und -warnungen bestimmt, wird der Aktivität hinzugefügt. Wenn die Validierung für die Aktivität aufgerufen wird, sind diese Warnungen oder Fehler in der Auflistung enthalten, die durch den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> zurückgegeben wurde. Im folgenden Beispiel wird eine `CreateProduct`-Aktivität definiert. Wenn `Cost` größer als `Price` ist, wird den Metadaten in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung ein Validierungsfehler hinzugefügt.  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -233,7 +234,7 @@ else
 >  Autoren benutzerdefinierter Aktivitäten können in der <xref:System.Activities.CodeActivity.CacheMetadata%2A>-Überschreibung einer Aktivität Validierungslogik bereitstellen. Von <xref:System.Activities.CodeActivity.CacheMetadata%2A> ausgelöste Ausnahmen werden nicht als Validierungsfehler behandelt. Diese Ausnahmen werden im Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> nicht verarbeitet und müssen vom Aufrufer behandelt werden.  
   
 ## <a name="using-validationsettings"></a>Verwenden von ValidationSettings  
- Standardmäßig werden alle Aktivitäten in der Aktivitätsstruktur ausgewertet, wenn die Validierung durch <xref:System.Activities.Validation.ActivityValidationServices> aufgerufen wird. Mit <xref:System.Activities.Validation.ValidationSettings> kann die Validierung auf unterschiedliche Weise angepasst werden, indem die zugehörigen drei Eigenschaften konfiguriert werden. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> gibt an, ob das Validierungssteuerelement die gesamte Aktivitätsstruktur durchlaufen oder nur Validierungslogik auf die angegebene Aktivität anwenden soll. Der Standardwert ist `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> gibt zusätzliche Einschränkungszuordnungen eines Typs für eine Liste von Einschränkungen an. Es gibt für den Basistyp jeder Aktivität in der Aktivitätsstruktur, die validiert wird, eine Suche in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Wenn eine übereinstimmende Einschränkungsliste gefunden wird, werden alle Einschränkungen in der Liste für die Aktivität ausgewertet. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> gibt an, ob das Validierungssteuerelement alle Einschränkungen oder nur die in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> angegebenen Einschränkungen auswerten soll. Der Standardwert ist `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> und <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> sind nützlich, wenn Workflowhostautoren zusätzliche Validierung für Workflows hinzufügen möchten, z. B. Richtlinieneinschränkungen für Tools wie FxCop. Weitere Informationen zu Einschränkungen finden Sie unter [deklarative Einschränkungen](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
+ Standardmäßig werden alle Aktivitäten in der Aktivitätsstruktur ausgewertet, wenn die Validierung durch <xref:System.Activities.Validation.ActivityValidationServices> aufgerufen wird. Mit <xref:System.Activities.Validation.ValidationSettings> kann die Validierung auf unterschiedliche Weise angepasst werden, indem die zugehörigen drei Eigenschaften konfiguriert werden. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> gibt an, ob das Validierungssteuerelement die gesamte Aktivitätsstruktur durchlaufen oder nur Validierungslogik auf die angegebene Aktivität anwenden soll. Der Standardwert ist `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> gibt zusätzliche Einschränkungszuordnungen eines Typs für eine Liste von Einschränkungen an. Es gibt für den Basistyp jeder Aktivität in der Aktivitätsstruktur, die validiert wird, eine Suche in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Wenn eine übereinstimmende Einschränkungsliste gefunden wird, werden alle Einschränkungen in der Liste für die Aktivität ausgewertet. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> gibt an, ob das Validierungssteuerelement alle Einschränkungen oder nur die in <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> angegebenen Einschränkungen auswerten soll. Der Standardwert ist `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> und <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> sind nützlich, wenn Workflowhostautoren zusätzliche Validierung für Workflows hinzufügen möchten, z. B. Richtlinieneinschränkungen für Tools wie FxCop. Weitere Informationen zu Einschränkungen finden Sie unter [deklarativen Einschränkungen](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
   
  Um <xref:System.Activities.Validation.ValidationSettings> zu verwenden, konfigurieren Sie die gewünschten Eigenschaften, und übergeben Sie diese in den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. In diesem Beispiel wird ein Workflow überprüft, der aus einem <xref:System.Activities.Statements.Sequence>- Objekt mit einer benutzerdefinierten `Add`-Aktivität besteht. Die `Add`-Aktivität verfügt über zwei erforderliche Argumente.  
   
@@ -303,4 +304,4 @@ else
   
  In diesem Code wird die folgende Ausgabe angezeigt:  
   
- **Keine Warnungen oder Fehler** , obwohl die `Add` Aktivität erforderlichen Argumente, die nicht gebunden sind, die Überprüfung ist erfolgreich, da nur die Stammaktivität ausgewertet wird. Diese Art der Validierung ist nützlich, wenn nur bestimmte Elemente in einer Aktivitätsstruktur validiert werden, z. B. bei der Validierung einer Eigenschaftenänderung einer einzelnen Aktivität in einem Designer. Beachten Sie, dass beim Aufrufen dieses Workflows die vollständige Validierung, die im Workflow konfiguriert ist, ausgewertet wird, und dass <xref:System.Activities.InvalidWorkflowException> ausgelöst würde. Mit <xref:System.Activities.Validation.ActivityValidationServices> und <xref:System.Activities.Validation.ValidationSettings> wird nur eine Validierung konfiguriert, die explizit vom Host aufgerufen wurde, und keine Validierung, die beim Aufruf eines Workflows auftritt.
+ **Keine Warnungen oder Fehler** , obwohl die `Add` Aktivität erforderlichen Argumente, die nicht gebunden werden, die Überprüfung erfolgreich ist, da nur die Stammaktivität ausgewertet wird. Diese Art der Validierung ist nützlich, wenn nur bestimmte Elemente in einer Aktivitätsstruktur validiert werden, z. B. bei der Validierung einer Eigenschaftenänderung einer einzelnen Aktivität in einem Designer. Beachten Sie, dass beim Aufrufen dieses Workflows die vollständige Validierung, die im Workflow konfiguriert ist, ausgewertet wird, und dass <xref:System.Activities.InvalidWorkflowException> ausgelöst würde. Mit <xref:System.Activities.Validation.ActivityValidationServices> und <xref:System.Activities.Validation.ValidationSettings> wird nur eine Validierung konfiguriert, die explizit vom Host aufgerufen wurde, und keine Validierung, die beim Aufruf eines Workflows auftritt.

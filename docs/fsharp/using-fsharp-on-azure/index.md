@@ -4,11 +4,11 @@ description: Anleitung zur Verwendung von Azure-Diensten mit f#
 author: sylvanc
 ms.date: 09/22/2016
 ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033544"
 ---
 # <a name="using-f-on-azure"></a>Verwenden von F# in Azure
 

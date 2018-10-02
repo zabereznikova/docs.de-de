@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035265"
 ---
 # <a name="wif-session-management"></a>WIF-Sitzungsverwaltung
 Wenn ein Client erstmals versucht auf eine geschützte Ressource zuzugreifen, die von einer vertrauenden Seite gehostet wird, muss sich der Client zunächst gegenüber einem Sicherheitstokendienst (STS) authentifizieren, der von der vertrauenden Seite als vertrauenswürdig eingestuft wird. Der STS stellt dem Client dann ein Sicherheitstoken aus. Der Client präsentiert dieses Token der vertrauenden Seite, die dem Client dann Zugriff auf die geschützte Ressource gewährt. Sie möchten jedoch nicht, dass der Client sich für jede Anfrage erneut gegenüber dem STS authentifizieren muss, vor allem, da er sich möglicherweise nicht auf demselben Computer oder in derselben Domäne wie die vertrauende Seite befindet. Stattdessen fordert die Windows Identity Foundation (WIF) den Client und die vertrauende Seite zur Erstellung einer Sitzung auf, in der der Client ein Sitzungssicherheitstoken verwendet, um sich gegenüber der vertrauenden Seite für alle Anforderungen nach der ersten Anforderung zu authentifizieren. Die vertrauende Seite kann dieses Sitzungssicherheitstoken, das in einem Cookie gespeichert wird, zur Rekonstruktion des <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> des Clients verwenden.  

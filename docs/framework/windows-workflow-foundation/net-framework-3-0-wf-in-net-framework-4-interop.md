@@ -2,12 +2,12 @@
 title: Verwenden von .NET Framework 3.0-WF-Aktivitäten unter .NET Framework 4 mit der Interop-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467504"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029257"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Verwenden von .NET Framework 3.0-WF-Aktivitäten unter .NET Framework 4 mit der Interop-Aktivität
 Die <xref:System.Activities.Statements.Interop>-Aktivität ist eine [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5)-Aktivität, die eine [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5)-Aktivität in einem [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]-Workflow umschließt. Die WF 3-Aktivität kann eine einzelne Blattaktivität oder eine ganze Aktivitätsstruktur darstellen. Die Ausführung (einschließlich Abbruch und Ausnahmebehandlung) und die Persistenz der [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Aktivität treten im Kontext der [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflowinstanz auf, die ausgeführt wird.  
@@ -52,7 +52,4 @@ Die <xref:System.Activities.Statements.Interop>-Aktivität ist eine [!INCLUDE[ne
   
 3.  WF 3-Nachverfolgungsdatensätze für Aktivitäten in einer <xref:System.Activities.Statements.Interop>-Aktivität werden für WF 4.5-Nachverfolgungsteilnehmer in Form von <xref:System.Activities.Tracking.InteropTrackingRecord>-Objekten bereitgestellt. <xref:System.Activities.Tracking.InteropTrackingRecord> ist eine Ableitung von <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  Eine benutzerdefinierte WF 3-Aktivität kann über Workflowwarteschlangen in der Interoperationsumgebung auf Daten zugreifen, wie dies auch innerhalb der WF 3-Workflowlaufzeit möglich ist. Es sind keine benutzerdefinierten Änderungen an Aktivitätscode erforderlich. Auf dem Host werden Daten in eine WF 3-Workflowwarteschlange eingereiht, indem ein <xref:System.Activities.Bookmark>-Objekt wieder aufgenommen wird. Der Name des Lesezeichens entspricht dem Workflow-Warteschlangennamen des <xref:System.IComparable>-Objekts in Form einer Zeichenfolge.  
-  
-## <a name="see-also"></a>Siehe auch  
- [Verwenden einer .NET Framework 3.0- oder .NET Framework 3.5-Aktivität in einem .NET Framework 4.5-Workflow](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  Eine benutzerdefinierte WF 3-Aktivität kann über Workflowwarteschlangen in der Interoperationsumgebung auf Daten zugreifen, wie dies auch innerhalb der WF 3-Workflowlaufzeit möglich ist. Es sind keine benutzerdefinierten Änderungen an Aktivitätscode erforderlich. Auf dem Host werden Daten in eine WF 3-Workflowwarteschlange eingereiht, indem ein <xref:System.Activities.Bookmark>-Objekt wieder aufgenommen wird. Der Name des Lesezeichens entspricht dem Workflow-Warteschlangennamen des <xref:System.IComparable>-Objekts in Form einer Zeichenfolge.

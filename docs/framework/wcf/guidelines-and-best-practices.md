@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
 ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026541"
 ---
 # <a name="guidelines-and-best-practices"></a>Richtlinien und empfohlene Vorgehensweisen
 Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen.  
