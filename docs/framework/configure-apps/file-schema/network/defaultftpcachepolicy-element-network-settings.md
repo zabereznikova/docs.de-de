@@ -11,21 +11,21 @@ ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48032373"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="b759e-102">&lt;DefaultFtpCachePolicy&gt; -Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="b759e-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="b759e-103">Beschreibt, ob der FTP-caching ist aktiv und wird beschrieben, die Standardcachingrichtlinie.</span><span class="sxs-lookup"><span data-stu-id="b759e-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  
+# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="0f904-102">&lt;DefaultFtpCachePolicy&gt; -Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="0f904-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="0f904-103">Beschreibt, ob der FTP-caching ist aktiv und wird beschrieben, die Standardcachingrichtlinie.</span><span class="sxs-lookup"><span data-stu-id="0f904-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="b759e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b759e-104">\<configuration></span></span>  
-<span data-ttu-id="b759e-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="b759e-105">\<system.net></span></span>  
-<span data-ttu-id="b759e-106">\<RequestCaching ></span><span class="sxs-lookup"><span data-stu-id="b759e-106">\<requestCaching></span></span>  
-<span data-ttu-id="b759e-107">\<DefaultFtpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="b759e-107">\<defaultFtpCachePolicy></span></span>  
+ <span data-ttu-id="0f904-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0f904-104">\<configuration></span></span>  
+<span data-ttu-id="0f904-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="0f904-105">\<system.net></span></span>  
+<span data-ttu-id="0f904-106">\<RequestCaching ></span><span class="sxs-lookup"><span data-stu-id="0f904-106">\<requestCaching></span></span>  
+<span data-ttu-id="0f904-107">\<DefaultFtpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="0f904-107">\<defaultFtpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b759e-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="b759e-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f904-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="0f904-108">Syntax</span></span>  
   
 ```xml  
 <defaultFtpCachePolicy  
@@ -33,41 +33,41 @@ ms.locfileid: "47209425"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b759e-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="b759e-109">Attributes and Elements</span></span>  
- <span data-ttu-id="b759e-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="b759e-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0f904-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="0f904-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="0f904-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="0f904-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b759e-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="b759e-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0f904-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="0f904-111">Attributes</span></span>  
   
-|<span data-ttu-id="b759e-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="b759e-112">Attribute</span></span>|<span data-ttu-id="b759e-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b759e-113">Description</span></span>|  
+|<span data-ttu-id="0f904-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="0f904-112">Attribute</span></span>|<span data-ttu-id="0f904-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0f904-113">Description</span></span>|  
 |---------------|-----------------|  
-|`policyLevel`|<span data-ttu-id="b759e-114">Gibt die FTP-Cachingrichtlinie an.</span><span class="sxs-lookup"><span data-stu-id="b759e-114">Specifies the FTP caching policy.</span></span> <span data-ttu-id="b759e-115">Der Standardwert ist `Default`.</span><span class="sxs-lookup"><span data-stu-id="b759e-115">The default value is `Default`.</span></span>|  
+|`policyLevel`|<span data-ttu-id="0f904-114">Gibt die FTP-Cachingrichtlinie an.</span><span class="sxs-lookup"><span data-stu-id="0f904-114">Specifies the FTP caching policy.</span></span> <span data-ttu-id="0f904-115">Der Standardwert ist `Default`.</span><span class="sxs-lookup"><span data-stu-id="0f904-115">The default value is `Default`.</span></span>|  
   
-## <a name="policylevel-attribute"></a><span data-ttu-id="b759e-116">PolicyLevel-Attribut</span><span class="sxs-lookup"><span data-stu-id="b759e-116">policyLevel Attribute</span></span>  
+## <a name="policylevel-attribute"></a><span data-ttu-id="0f904-116">PolicyLevel-Attribut</span><span class="sxs-lookup"><span data-stu-id="0f904-116">policyLevel Attribute</span></span>  
   
-|<span data-ttu-id="b759e-117">Wert</span><span class="sxs-lookup"><span data-stu-id="b759e-117">Value</span></span>|<span data-ttu-id="b759e-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b759e-118">Description</span></span>|  
+|<span data-ttu-id="0f904-117">Wert</span><span class="sxs-lookup"><span data-stu-id="0f904-117">Value</span></span>|<span data-ttu-id="0f904-118">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0f904-118">Description</span></span>|  
 |-----------|-----------------|  
-|`Default`|<span data-ttu-id="b759e-119">Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource aktuell ist, die Inhaltslänge genau ist und den Ablauf, Änderungen und Content-Length-Attribute vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="b759e-119">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
-|`BypassCache`|<span data-ttu-id="b759e-120">Gibt die Ressource vom Server zurück.</span><span class="sxs-lookup"><span data-stu-id="b759e-120">Returns the resource from the server.</span></span>|  
-|`CacheOnly`|<span data-ttu-id="b759e-121">Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge vorhanden ist und der Größe des Eintrags übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="b759e-121">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
-|`CacheIfAvailable`|<span data-ttu-id="b759e-122">Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge bereitgestellt wird und der Größe des Eintrags übereinstimmt. Andernfalls wird die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b759e-122">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="b759e-123">Gibt die zwischengespeicherte Ressource zurück, wenn es sich bei der Timestamp der zwischengespeicherten Ressource dem Timestamp der Ressource auf dem Server identisch ist; Andernfalls wird die Ressource vom Server heruntergeladen, im Cache gespeichert und an den Aufrufer zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="b759e-123">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and returned to the caller.</span></span>|  
-|`Reload`|<span data-ttu-id="b759e-124">Lädt die Ressource vom Server herunter, speichert sie in den Cache und die Ressource an den Aufrufer zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="b759e-124">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
-|`NoCacheNoStore`|<span data-ttu-id="b759e-125">Wenn eine zwischengespeicherte Ressource vorhanden ist, wird sie gelöscht.</span><span class="sxs-lookup"><span data-stu-id="b759e-125">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="b759e-126">Die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="b759e-126">The resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="b759e-127">Führt eine Anforderung mithilfe die zwischengespeicherte Kopie der Ressource, wenn der Zeitstempel der Zeitstempel der Ressource auf dem Server identisch ist. Andernfalls ist die Ressource vom Server heruntergeladen, an den Aufrufer angezeigt und im Cache gespeichert.</span><span class="sxs-lookup"><span data-stu-id="b759e-127">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and stored in the cache.</span></span>|  
+|`Default`|<span data-ttu-id="0f904-119">Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource aktuell ist, die Inhaltslänge genau ist und den Ablauf, Änderungen und Content-Length-Attribute vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="0f904-119">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
+|`BypassCache`|<span data-ttu-id="0f904-120">Gibt die Ressource vom Server zurück.</span><span class="sxs-lookup"><span data-stu-id="0f904-120">Returns the resource from the server.</span></span>|  
+|`CacheOnly`|<span data-ttu-id="0f904-121">Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge vorhanden ist und der Größe des Eintrags übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="0f904-121">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
+|`CacheIfAvailable`|<span data-ttu-id="0f904-122">Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge bereitgestellt wird und der Größe des Eintrags übereinstimmt. Andernfalls wird die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="0f904-122">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="0f904-123">Gibt die zwischengespeicherte Ressource zurück, wenn es sich bei der Timestamp der zwischengespeicherten Ressource dem Timestamp der Ressource auf dem Server identisch ist; Andernfalls wird die Ressource vom Server heruntergeladen, im Cache gespeichert und an den Aufrufer zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="0f904-123">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and returned to the caller.</span></span>|  
+|`Reload`|<span data-ttu-id="0f904-124">Lädt die Ressource vom Server herunter, speichert sie in den Cache und die Ressource an den Aufrufer zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="0f904-124">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
+|`NoCacheNoStore`|<span data-ttu-id="0f904-125">Wenn eine zwischengespeicherte Ressource vorhanden ist, wird sie gelöscht.</span><span class="sxs-lookup"><span data-stu-id="0f904-125">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="0f904-126">Die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="0f904-126">The resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="0f904-127">Führt eine Anforderung mithilfe die zwischengespeicherte Kopie der Ressource, wenn der Zeitstempel der Zeitstempel der Ressource auf dem Server identisch ist. Andernfalls ist die Ressource vom Server heruntergeladen, an den Aufrufer angezeigt und im Cache gespeichert.</span><span class="sxs-lookup"><span data-stu-id="0f904-127">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and stored in the cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b759e-128">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="b759e-128">Child Elements</span></span>  
- <span data-ttu-id="b759e-129">Keine</span><span class="sxs-lookup"><span data-stu-id="b759e-129">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0f904-128">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="0f904-128">Child Elements</span></span>  
+ <span data-ttu-id="0f904-129">Keine</span><span class="sxs-lookup"><span data-stu-id="0f904-129">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b759e-130">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="b759e-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0f904-130">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="0f904-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="b759e-131">Element</span><span class="sxs-lookup"><span data-stu-id="b759e-131">Element</span></span>|<span data-ttu-id="b759e-132">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b759e-132">Description</span></span>|  
+|<span data-ttu-id="0f904-131">Element</span><span class="sxs-lookup"><span data-stu-id="0f904-131">Element</span></span>|<span data-ttu-id="0f904-132">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0f904-132">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b759e-133">requestCaching</span><span class="sxs-lookup"><span data-stu-id="b759e-133">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="b759e-134">Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.</span><span class="sxs-lookup"><span data-stu-id="b759e-134">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="0f904-133">requestCaching</span><span class="sxs-lookup"><span data-stu-id="0f904-133">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="0f904-134">Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.</span><span class="sxs-lookup"><span data-stu-id="0f904-134">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b759e-135">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b759e-135">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0f904-135">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0f904-135">Remarks</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b759e-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b759e-136">Example</span></span>  
- <span data-ttu-id="b759e-137">Das folgende Beispiel zeigt, wie Sie eine FTP-Cachingrichtlinie angeben `NoCacheNoStore`.</span><span class="sxs-lookup"><span data-stu-id="b759e-137">The following example shows how to specify an FTP caching policy of `NoCacheNoStore`.</span></span>  
+## <a name="example"></a><span data-ttu-id="0f904-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0f904-136">Example</span></span>  
+ <span data-ttu-id="0f904-137">Das folgende Beispiel zeigt, wie Sie eine FTP-Cachingrichtlinie angeben `NoCacheNoStore`.</span><span class="sxs-lookup"><span data-stu-id="0f904-137">The following example shows how to specify an FTP caching policy of `NoCacheNoStore`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,8 +81,8 @@ ms.locfileid: "47209425"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b759e-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b759e-138">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0f904-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0f904-138">See Also</span></span>  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  
- [<span data-ttu-id="b759e-139">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="b759e-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="0f904-139">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="0f904-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

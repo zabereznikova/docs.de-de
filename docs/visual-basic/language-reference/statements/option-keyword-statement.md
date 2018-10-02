@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48026859"
 ---
-# <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="acbb4-102">Option &lt;Schlüsselwort&gt; Anweisung</span><span class="sxs-lookup"><span data-stu-id="acbb4-102">Option &lt;keyword&gt; Statement</span></span>
-<span data-ttu-id="acbb4-103">Führt eine Anweisung, die eine Compileroption angibt, die für die gesamte Quelldatei gilt.</span><span class="sxs-lookup"><span data-stu-id="acbb4-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
+# <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="5862e-102">Option &lt;Schlüsselwort&gt; Anweisung</span><span class="sxs-lookup"><span data-stu-id="5862e-102">Option &lt;keyword&gt; Statement</span></span>
+<span data-ttu-id="5862e-103">Führt eine Anweisung, die eine Compileroption angibt, die für die gesamte Quelldatei gilt.</span><span class="sxs-lookup"><span data-stu-id="5862e-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="acbb4-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="acbb4-104">Remarks</span></span>  
- <span data-ttu-id="acbb4-105">Gibt an, ob alle Variablen explizit deklariert werden müssen, gibt an, ob einschränkende typkonvertierungen explizit sein muss und gibt an, ob Zeichenfolgen als Text oder als binärer Mengen verglichen werden sollen, können die Compiler-Optionen steuern.</span><span class="sxs-lookup"><span data-stu-id="acbb4-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5862e-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5862e-104">Remarks</span></span>  
+ <span data-ttu-id="5862e-105">Gibt an, ob alle Variablen explizit deklariert werden müssen, gibt an, ob einschränkende typkonvertierungen explizit sein muss und gibt an, ob Zeichenfolgen als Text oder als binärer Mengen verglichen werden sollen, können die Compiler-Optionen steuern.</span><span class="sxs-lookup"><span data-stu-id="5862e-105">The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.</span></span>  
   
- <span data-ttu-id="acbb4-106">Das `Option`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="acbb4-106">The `Option` keyword can be used in these contexts:</span></span>  
+ <span data-ttu-id="5862e-106">Das `Option`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="5862e-106">The `Option` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="acbb4-107">Option Compare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="acbb4-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
+ [<span data-ttu-id="5862e-107">Option Compare-Anweisung</span><span class="sxs-lookup"><span data-stu-id="5862e-107">Option Compare Statement</span></span>](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   
- [<span data-ttu-id="acbb4-108">Option Explicit-Anweisung</span><span class="sxs-lookup"><span data-stu-id="acbb4-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="5862e-108">Option Explicit-Anweisung</span><span class="sxs-lookup"><span data-stu-id="5862e-108">Option Explicit Statement</span></span>](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="acbb4-109">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="acbb4-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="5862e-109">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="5862e-109">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
- [<span data-ttu-id="acbb4-110">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="acbb4-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="5862e-110">Option Strict-Anweisung</span><span class="sxs-lookup"><span data-stu-id="5862e-110">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="acbb4-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="acbb4-111">See Also</span></span>  
- [<span data-ttu-id="acbb4-112">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="acbb4-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="5862e-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5862e-111">See Also</span></span>  
+ [<span data-ttu-id="5862e-112">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="5862e-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
