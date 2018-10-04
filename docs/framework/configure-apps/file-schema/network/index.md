@@ -15,11 +15,11 @@ ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028771"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780978"
 ---
 # <a name="network-settings-schema"></a>Netzwerkeinstellungsschema
 Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem Internet hergestellt werden. Die folgende Tabelle beschreibt die Funktion der einzelnen untergeordneten Konfigurationselemente des [\<system.Net>-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  

@@ -2,12 +2,12 @@
 title: MSMQ-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779311"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780153"
 ---
 # <a name="msmq-activation"></a>MSMQ-Aktivierung
 Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Activation Service (WAS), die von einer Nachrichtenwarteschlange gelesen werden. Dieses Beispiel verwendet die `netMsmqBinding` und basiert auf der [bidirektionaler Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md) Beispiel. In diesem Fall handelt es sich bei dem Dienst um eine im Internet gehostete Anwendung. Der Client ist selbst gehostet und gibt an die Konsole aus, um den Status eingereichter Bestellungen zu beobachten.  
@@ -20,7 +20,7 @@ Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Ac
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" und Windows Workflow Foundation (WF)-Beispiele für [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] zum Herunterladen aller WCF und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780"\t"\_leer" und Windows Workflow Foundation (WF)-Beispiele für [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] zum Herunterladen aller WCF und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  Die zu verwendende Clientbindung wird mithilfe einer Konfigurationsdatei festgelegt.  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  Die Auftragsstatuswarteschlange wird in der `Main`-Methode erstellt. Die Clientkonfiguration beinhaltet die Dienstkonfiguration für den Auftragsstatus, um den Auftragsstatusdienst zu hosten, wie in der folgenden Beispielkonfiguration dargestellt.  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Dieser Befehl ist eine einzelne Textzeile.  
   
-         Dieser Befehl aktiviert die Anwendung/servicemodelsamples darauf zugegriffen werden kann http://localhost/servicemodelsamples und MSMQ://localhost//servicemodelsamples.  
+         Dieser Befehl aktiviert die Anwendung/servicemodelsamples darauf zugegriffen werden kann `http://localhost/servicemodelsamples` und `net.msmq://localhost/servicemodelsamples`.
   
 7.  Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Von der **starten** Menü klicken Sie auf **ausführen**, und geben `Services.msc`. Durchsuchen Sie die Liste der Dienste für die **Net.Msmq-Listeneradapter**. Mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Legen Sie die **Starttyp** zu **automatische**, klicken Sie auf **übernehmen** , und klicken Sie auf die **starten** Schaltfläche. Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.  
   

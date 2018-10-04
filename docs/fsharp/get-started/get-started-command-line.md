@@ -1,4 +1,4 @@
-﻿---
+---
 title: Erste Schritte mit F# mit Befehlszeilentools
 description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekte in F# mit .NET Core-CLI auf einem beliebigen Betriebssystem (Windows, MacOS oder Linux) erstellen.
 ms.date: 03/26/2018
@@ -17,7 +17,7 @@ Dieser Artikel beschreibt, wie Sie mit F# auf jedem Betriebssystem (Windows, Mac
 
 Sie müssen die neueste Version des [.NET Core SDK](https://www.microsoft.com/net/download/) installieren, um zu beginnen.
 
-In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlszeile verwenden und dass Sie über einen bevorzugten Text-Editor verfügen. Sollten Sie noch keinen besitzen, dann ist [Visual Studio Code](get-started-vscode.md) ein geeigneter Text-Editor für F#.
+In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlszeile verwenden und haben einen bevorzugten Text-Editor. Wenn Sie bereits, nicht [Visual Studio Code](get-started-vscode.md) ist eine großartige Möglichkeit, wie ein Text-Editor für f#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Erstellen Sie eine einfache Lösung für die mit mehreren Projekte
 
@@ -78,7 +78,7 @@ Hinzufügen des `Library` Projektes zur `FSNetCore` Projektmappe mithilfe des Be
 dotnet sln add src/Library/Library.fsproj
 ```
 
-Führen Sie `dotnet build´zum Erstellen des Projekts aus. Beim Erstellen werden nicht aufgelöste Abhängigkeiten wiederhergestellt.
+Führen Sie `dotnet build` zum Erstellen des Projekts. Beim Erstellen, werden nicht aufgelöste Abhängigkeiten wiederhergestellt werden.
 
 ### <a name="write-a-console-application-that-consumes-the-class-library"></a>Schreiben einer Konsolenanwendung, die die Klassenbibliothek verwendet
 
@@ -102,7 +102,7 @@ Die folgende Verzeichnisstruktur wird erstellt, nach dem Ausführen des vorherig
             └── Library.fsproj
 ```
 
-Ersetzen Sie den Inhalt von der Datei `Program.fs´durch den folgenden Code:
+Ersetzen Sie den Inhalt von der `Program.fs` -Datei mit den folgenden Code:
 
 ```fsharp
 open System

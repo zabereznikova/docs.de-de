@@ -2,42 +2,42 @@
 title: Unternehmenseinkaufsprozess
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802910"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781660"
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
-In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.  
-  
- Dieses Beispiel umfasst eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, die es ermöglicht, mit dem Vorgang als verschiedene Beteiligte (als ursprünglicher Anforderer oder als ein bestimmter Anbieter) zu interagieren.  
-  
-## <a name="requirements"></a>Anforderungen  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]  
-  
-## <a name="demonstrates"></a>Veranschaulicht  
-  
--   Benutzerdefinierte Aktivitäten  
-  
--   Komposition von Aktivitäten  
-  
--   Lesezeichen  
-  
--   Dauerhaftigkeit  
-  
--   Schematisierte Dauerhaftigkeit  
-  
--   Ablaufverfolgung  
-  
--   Nachverfolgung  
-  
--   Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendungen und WinForms-Anwendungen)  
-  
+In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.
+
+ Dieses Beispiel umfasst eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, die es ermöglicht, mit dem Vorgang als verschiedene Beteiligte (als ursprünglicher Anforderer oder als ein bestimmter Anbieter) zu interagieren.
+
+## <a name="requirements"></a>Anforderungen
+
+-   Visual Studio 2012.
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+
+## <a name="demonstrates"></a>Veranschaulicht
+
+-   Benutzerdefinierte Aktivitäten
+
+-   Komposition von Aktivitäten
+
+-   Lesezeichen
+
+-   Dauerhaftigkeit
+
+-   Schematisierte Dauerhaftigkeit
+
+-   Ablaufverfolgung
+
+-   Nachverfolgung
+
+-   Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendungen und WinForms-Anwendungen)
+
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
@@ -143,7 +143,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Öffnen Sie mit [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die PurchaseProcess.sln-Projektmappendatei.  
+1.  Öffnen Sie mit Visual Studio 2010 die PurchaseProcess.sln-Projektmappendatei.  
   
 2.  Öffnen Sie zum Ausführen des webclientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WebClient** Projekt. Wählen Sie **als Startprojekt festlegen**.  
   
