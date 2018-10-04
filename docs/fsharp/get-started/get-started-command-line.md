@@ -15,9 +15,9 @@ Dieser Artikel beschreibt, wie Sie mit F# auf jedem Betriebssystem (Windows, Mac
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Um zu beginnen, müssen Sie die neueste Version des [.NET Core SDK](https://www.microsoft.com/net/download/) installieren.
+Sie müssen die neueste Version des [.NET Core SDK](https://www.microsoft.com/net/download/) installieren, um zu beginnen.
 
-In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlszeile verwenden und dass sie einen bevorzugten Text-Editor haben. Wenn sie noch keinen haben sollten ist [Visual Studio Code](get-started-vscode.md) ein großartiger Text-Editor für F#.
+In diesem Artikel wird davon ausgegangen, dass Sie wissen, wie Sie eine Befehlszeile verwenden und dass Sie über einen bevorzugten Text-Editor verfügen. Sollten Sie noch keinen besitzen, dann ist [Visual Studio Code](get-started-vscode.md) ein geeigneter Text-Editor für F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Erstellen Sie eine einfache Lösung für die mit mehreren Projekte
 
@@ -63,7 +63,7 @@ module Library
 open Newtonsoft.Json
 
 let getJsonNetJson value =
-    sprintf "Ich war mal %s, aber dank JSON.NET bin ich jetzt %s!" value (JsonConvert.SerializeObject(value))
+    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value (JsonConvert.SerializeObject(value))
 ```
 
 Fügen Sie das Newtonsoft.Json NuGet-Paket zu dem Bibliotheksprojekt hinzu.
@@ -78,7 +78,7 @@ Hinzufügen des `Library` Projektes zur `FSNetCore` Projektmappe mithilfe des Be
 dotnet sln add src/Library/Library.fsproj
 ```
 
-Führen Sie `dotnet build` zum Erstellen des Projekts aus. Beim Erstellen, werden nicht aufgelöste Abhängigkeiten wiederhergestellt.
+Führen Sie `dotnet build´zum Erstellen des Projekts aus. Beim Erstellen werden nicht aufgelöste Abhängigkeiten wiederhergestellt.
 
 ### <a name="write-a-console-application-that-consumes-the-class-library"></a>Schreiben einer Konsolenanwendung, die die Klassenbibliothek verwendet
 
@@ -102,7 +102,7 @@ Die folgende Verzeichnisstruktur wird erstellt, nach dem Ausführen des vorherig
             └── Library.fsproj
 ```
 
-Ersetzen Sie den Inhalt von der Datei `Program.fs` mit den folgenden Code:
+Ersetzen Sie den Inhalt von der Datei `Program.fs´durch den folgenden Code:
 
 ```fsharp
 open System
@@ -110,13 +110,13 @@ open Library
 
 [<EntryPoint>]
 let main argv =
-    printfn "Nette CLI Argumente! Dies ist was JSON.NET über die zu sagen hat:"
+    printfn "Nice command-line arguments! Here's what JSON.NET has to say about them:"
 
     argv
     |> Array.map getJsonNetJson
     |> Array.iter (printfn "%s")
 
-    0 // Gibt einen ganzzahligen Exitcode zurück
+    0 // return an integer exit code
 ```
 
 Hinzufügen eines Verweises auf das Projekt `Library` mit dem Befehl [dotnet reference add](../../core/tools/dotnet-add-reference.md).
@@ -143,10 +143,10 @@ dotnet run Hello World
 Folgendes sollte angezeigt werden:
 
 ```console
-Nette CLI Argumente! Dies ist was JSON.NET über die zu sagen hat:
+Nice command-line arguments! Here's what JSON.NET has to say about them:
 
-Ich war mal Hello, aber dank JSON.NET bin ich jetzt ""Hello""!
-Ich war mal World, aber dank JSON.NET bin ich jetzt ""World""!
+I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
+I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
