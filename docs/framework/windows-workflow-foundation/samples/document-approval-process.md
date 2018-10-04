@@ -2,16 +2,16 @@
 title: Dokumentgenehmigungsprozess
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508929"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582709"
 ---
 # <a name="document-approval-process"></a>Dokumentgenehmigungsprozess
-Dieses Beispiel veranschaulicht die Verwendung von vielen Features von Windows Workflow Foundation (WF) und Windows Communication Foundation (WCF) miteinander aus. Zusammen implementieren sie ein Szenario für einen Dokumentgenehmigungsprozess. Eine Clientanwendung kann Dokumente zur Genehmigung senden und Dokumente genehmigen. Es ist eine Genehmigungs-Manager-Anwendung vorhanden, um die Kommunikation zwischen Clients zu unterstützen und die Regeln für den Genehmigungsprozess umzusetzen. Der Genehmigungsprozess ist ein Workflow, der mehrere Genehmigungsarten ausführen kann. Es sind Aktivitäten vorhanden, mit denen ein Einzelgenehmigungsprozess, ein Quorumgenehmigungsprozess (Prozentsatz aller Genehmiger) und ein komplexer Genehmigungsprozess, der aus einer Abfolge einer Quorumgenehmigung und einer Einzelgenehmigung besteht, abgerufen werden.  
-  
+Dieses Beispiel veranschaulicht die Verwendung von vielen Features von Windows Workflow Foundation (WF) und Windows Communication Foundation (WCF) miteinander aus. Zusammen implementieren sie ein Szenario für einen Dokumentgenehmigungsprozess. Eine Clientanwendung kann Dokumente zur Genehmigung senden und Dokumente genehmigen. Es ist eine Genehmigungs-Manager-Anwendung vorhanden, um die Kommunikation zwischen Clients zu unterstützen und die Regeln für den Genehmigungsprozess umzusetzen. Der Genehmigungsprozess ist ein Workflow, der mehrere Genehmigungsarten ausführen kann. Es sind Aktivitäten vorhanden, mit denen ein Einzelgenehmigungsprozess, ein Quorumgenehmigungsprozess (Prozentsatz aller Genehmiger) und ein komplexer Genehmigungsprozess, der aus einer Abfolge einer Quorumgenehmigung und einer Einzelgenehmigung besteht, abgerufen werden.
+
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
@@ -80,11 +80,11 @@ Dieses Beispiel veranschaulicht die Verwendung von vielen Features von Windows W
   
 ##### <a name="to-set-up-the-database"></a>So richten Sie die Datenbank ein  
   
-1.  Navigieren Sie von einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung, die mit Administratorrechten geöffnet wurde, zu diesem Ordner "DocumentApprovalProcess", und führen Sie "Setup.cmd" aus.  
+1.  Navigieren Sie aus einer Visual Studio 2010-Eingabeaufforderung mit Administratorberechtigungen zum Ordner DocumentApprovalProcess, und führen Sie Setup.cmd aus.  
   
 ##### <a name="to-set-up-the-application"></a>So richten Sie die Anwendung ein  
   
-1.  Öffnen Sie mit [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] die DocumentApprovalProcess.sln-Projektmappendatei.  
+1.  Öffnen Sie mit Visual Studio 2010 die DocumentApprovalProcess.sln-Projektmappendatei.  
   
 2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
@@ -146,4 +146,4 @@ Dieses Beispiel veranschaulicht die Verwendung von vielen Features von Windows W
   
 ##### <a name="to-clean-up"></a>So führen Sie eine Bereinigung durch  
   
-1.  Navigieren Sie von einer [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]-Eingabeaufforderung aus zum Ordner DocumentApprovalProcess, und führen Sie Cleanup.cmd aus.
+1.  Klicken Sie an einer Visual Studio 2010-Eingabeaufforderung navigieren Sie zum Ordner DocumentApprovalProcess, und führen Sie "Cleanup.cmd" aus.

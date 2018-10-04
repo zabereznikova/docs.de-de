@@ -2,12 +2,12 @@
 title: Verwendung von Standardendpunkten
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: b3e8cb32832763c7182f86f68c5c80d80ce8c3af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518225"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584285"
 ---
 # <a name="usage-of-standard-endpoints"></a>Verwendung von Standardendpunkten
 
@@ -110,7 +110,7 @@ Es wird ein `CreateServiceEndpoint`-Objekt in der `CustomEndpoint`-Funktion erst
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
 {
-    public CustomEndpoint() 
+    public CustomEndpoint()
         : this(string.Empty)
     {
     }
@@ -139,7 +139,7 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] die Datei StandardEndpoints.sln.
+1.  Öffnen Sie die Datei StandardEndpoints.sln mit Visual Studio 2012.
 
 2.  Aktivieren Sie mehrere Projekte, um zu starten.
 

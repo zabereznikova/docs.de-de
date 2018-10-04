@@ -5,149 +5,149 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 708b62290900db3e668de81c31f3a1dc85eb6d19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: f0a3616e6723d43ee4f2772c37e930c5facef31a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528935"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263962"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation
-<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> ist ein Haupttyp im WF-Designer-Programmiermodell, der die Bearbeitung einer Auflistung enthaltener Elemente zulässt. In dem Beispiel wird veranschaulicht, wie ein Aktivitätsdesigner erstellt wird, der eine solche bearbeitbare Auflistung aufweist.  
-  
- Dieses Beispiel veranschaulicht Folgendes:  
-  
--   Erstellen eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.  
-  
--   Erstellen eines Aktivitätsdesigners mit einer "reduzierten" und "erweiterten" Ansicht an.  
-  
--   Überschreiben eines standardmäßigen Designers in einer neu gehosteten Anwendung.  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
-  
-1.  Öffnen der **UsingWorkflowItemsPresenter.sln** beispiellösung für c# oder VB in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
-  
-2.  Erstellen Sie die Projektmappe, und führen Sie sie aus. Eine neu gehostete Workflow-Designer-Anwendung sollte geöffnet werden, und Sie können Aktivitäten auf den Zeichenbereich ziehen.  
-  
-## <a name="sample-highlights"></a>Das Wichtigste zum Beispiel  
- Der Code für dieses Beispiel zeigt Folgendes:  
-  
--   Die Aktivität, für die ein Designer erstellt wird: `Parallel`  
-  
--   Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Einige wichtige Punkte:  
-  
-    -   Beachten Sie die Verwendung der WPF-Datenbindung, um eine Bindung an `ModelItem.Branches` auszuführen. `ModelItem` ist die Eigenschaft im `WorkflowElementDesigner`, die auf das zugrunde liegende Objekt verweist, für das der Designer verwendet wird; in diesem Fall `Parallel`.  
-  
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> kann verwendet werden, um ein visuelle Trennung festzulegen, die zwischen den einzelnen Elementen in der Auflistung angezeigt werden soll.  
-  
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> ist eine Vorlage, die bereitgestellt werden kann, um das Layout der Elemente in der Auflistung zu bestimmen. In diesem Fall wird ein horizontaler Stapelbereich verwendet.  
-  
- Dies wird im folgenden Codebeispiel gezeigt.  
-  
-```xaml  
-<sad:WorkflowItemsPresenter HintText="Drop Activities Here"  
-                              Items="{Binding Path=ModelItem.Branches}">  
-    <sad:WorkflowItemsPresenter.SpacerTemplate>  
-      <DataTemplate>  
-        <Ellipse Width="10" Height="10" Fill="Black"/>  
-      </DataTemplate>  
-    </sad:WorkflowItemsPresenter.SpacerTemplate>  
-    <sad:WorkflowItemsPresenter.ItemsPanel>  
-      <ItemsPanelTemplate>  
-        <StackPanel Orientation="Horizontal"/>  
-      </ItemsPanelTemplate>  
-    </sad:WorkflowItemsPresenter.ItemsPanel>  
-  </sad:WorkflowItemsPresenter>  
-```  
-  
--   Führen Sie eine Zuordnung von `DesignerAttribute` zum `Parallel`-Typ aus, und geben Sie dann die gemeldeten Attribute aus.  
-  
-    -   Registrieren Sie zuerst alle standardmäßigen Designer.  
-  
- Nachfolgend ist das Codebeispiel angegeben.  
-  
-```csharp  
-// register metadata  
-(new DesignerMetadata()).Register();  
-RegisterCustomMetadata();  
-```  
-  
-```vb  
-' register metadata  
-Dim metadata = New DesignerMetadata()  
-metadata.Register()  
-' register custom metadata  
-RegisterCustomMetadata()  
-```  
-  
-    -   Überschreiben Sie dann "Parallel" in der `RegisterCustomMetadata`-Methode.  
-  
- Im folgenden Code wird dies in C# und Visual Basic veranschaulicht.  
- 
-```csharp  
-void RegisterCustomMetadata()  
-{  
-      AttributeTableBuilder builder = new AttributeTableBuilder();  
-      builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));  
-      MetadataStore.AddAttributeTable(builder.CreateTable());  
-}  
-```  
-  
-```vb  
-Sub RegisterCustomMetadata()  
-   Dim builder As New AttributeTableBuilder()  
-   builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))  
-   MetadataStore.AddAttributeTable(builder.CreateTable())  
-End Sub  
-```  
-  
--   Beachten Sie schließlich die Verwendung unterschiedlicher Datenvorlagen und Trigger, um die entsprechende Vorlage auf Grundlage der `IsRootDesigner`-Eigenschaft auszuwählen.  
-  
- Nachfolgend ist das Codebeispiel angegeben.  
-  
-```xaml  
-<sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"  
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-    xmlns:sad="clr-namespace:System.Activities.Design;assembly=System.Activities.Design"  
-    xmlns:sadv="clr-namespace:System.Activities.Design.View;assembly=System.Activities.Design">  
-  <sad:ActivityDesigner.Resources>  
-    <DataTemplate x:Key="Expanded">  
-      <StackPanel>  
-        <TextBlock>This is the Expanded View</TextBlock>  
-        <sad:WorkflowItemsPresenter HintText="Drop Activities Here"  
-                                    Items="{Binding Path=ModelItem.Branches}">  
-          <sad:WorkflowItemsPresenter.SpacerTemplate>  
-            <DataTemplate>  
-              <Ellipse Width="10" Height="10" Fill="Black"/>  
-            </DataTemplate>  
-          </sad:WorkflowItemsPresenter.SpacerTemplate>  
-          <sad:WorkflowItemsPresenter.ItemsPanel>  
-            <ItemsPanelTemplate>  
-              <StackPanel Orientation="Horizontal"/>  
-            </ItemsPanelTemplate>  
-          </sad:WorkflowItemsPresenter.ItemsPanel>  
-        </sad:WorkflowItemsPresenter>  
-      </StackPanel>  
-    </DataTemplate>  
-    <DataTemplate x:Key="Collapsed">  
-      <TextBlock>This is the Collapsed View</TextBlock>  
-    </DataTemplate>  
-    <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">  
-      <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>  
-      <Style.Triggers>  
-        <DataTrigger Binding="{Binding Path=IsRootDesigner}" Value="true">  
-          <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>  
-        </DataTrigger>  
-      </Style.Triggers>  
-    </Style>  
-  </sad: ActivityDesigner.Resources>  
-  <Grid>  
-    <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
-  </Grid>  
-</sad: ActivityDesigner>  
-```  
-  
+<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> ist ein Haupttyp im WF-Designer-Programmiermodell, der die Bearbeitung einer Auflistung enthaltener Elemente zulässt. In dem Beispiel wird veranschaulicht, wie ein Aktivitätsdesigner erstellt wird, der eine solche bearbeitbare Auflistung aufweist.
+
+ Dieses Beispiel veranschaulicht Folgendes:
+
+-   Erstellen eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.
+
+-   Erstellen eines Aktivitätsdesigners mit einer "reduzierten" und "erweiterten" Ansicht an.
+
+-   Überschreiben eines standardmäßigen Designers in einer neu gehosteten Anwendung.
+
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
+
+1.  Öffnen der **UsingWorkflowItemsPresenter.sln** beispiellösung für c# oder VB in Visual Studio 2010.
+
+2.  Erstellen Sie die Projektmappe, und führen Sie sie aus. Eine neu gehostete Workflow-Designer-Anwendung sollte geöffnet werden, und Sie können Aktivitäten auf den Zeichenbereich ziehen.
+
+## <a name="sample-highlights"></a>Das Wichtigste zum Beispiel
+ Der Code für dieses Beispiel zeigt Folgendes:
+
+-   Die Aktivität, für die ein Designer erstellt wird: `Parallel`
+
+-   Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Einige wichtige Punkte:
+
+    -   Beachten Sie die Verwendung der WPF-Datenbindung, um eine Bindung an `ModelItem.Branches` auszuführen. `ModelItem` ist die Eigenschaft im `WorkflowElementDesigner`, die auf das zugrunde liegende Objekt verweist, für das der Designer verwendet wird; in diesem Fall `Parallel`.
+
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> kann verwendet werden, um ein visuelle Trennung festzulegen, die zwischen den einzelnen Elementen in der Auflistung angezeigt werden soll.
+
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> ist eine Vorlage, die bereitgestellt werden kann, um das Layout der Elemente in der Auflistung zu bestimmen. In diesem Fall wird ein horizontaler Stapelbereich verwendet.
+
+ Dies wird im folgenden Codebeispiel gezeigt.
+
+```xaml
+<sad:WorkflowItemsPresenter HintText="Drop Activities Here"
+                              Items="{Binding Path=ModelItem.Branches}">
+    <sad:WorkflowItemsPresenter.SpacerTemplate>
+      <DataTemplate>
+        <Ellipse Width="10" Height="10" Fill="Black"/>
+      </DataTemplate>
+    </sad:WorkflowItemsPresenter.SpacerTemplate>
+    <sad:WorkflowItemsPresenter.ItemsPanel>
+      <ItemsPanelTemplate>
+        <StackPanel Orientation="Horizontal"/>
+      </ItemsPanelTemplate>
+    </sad:WorkflowItemsPresenter.ItemsPanel>
+  </sad:WorkflowItemsPresenter>
+```
+
+-   Führen Sie eine Zuordnung von `DesignerAttribute` zum `Parallel`-Typ aus, und geben Sie dann die gemeldeten Attribute aus.
+
+    -   Registrieren Sie zuerst alle standardmäßigen Designer.
+
+ Nachfolgend ist das Codebeispiel angegeben.
+
+```csharp
+// register metadata
+(new DesignerMetadata()).Register();
+RegisterCustomMetadata();
+```
+
+```vb
+' register metadata
+Dim metadata = New DesignerMetadata()
+metadata.Register()
+' register custom metadata
+RegisterCustomMetadata()
+```
+
+    -   Überschreiben Sie dann "Parallel" in der `RegisterCustomMetadata`-Methode.
+
+ Im folgenden Code wird dies in C# und Visual Basic veranschaulicht.
+
+```csharp
+void RegisterCustomMetadata()
+{
+      AttributeTableBuilder builder = new AttributeTableBuilder();
+      builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));
+      MetadataStore.AddAttributeTable(builder.CreateTable());
+}
+```
+
+```vb
+Sub RegisterCustomMetadata()
+   Dim builder As New AttributeTableBuilder()
+   builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))
+   MetadataStore.AddAttributeTable(builder.CreateTable())
+End Sub
+```
+
+-   Beachten Sie schließlich die Verwendung unterschiedlicher Datenvorlagen und Trigger, um die entsprechende Vorlage auf Grundlage der `IsRootDesigner`-Eigenschaft auszuwählen.
+
+ Nachfolgend ist das Codebeispiel angegeben.
+
+```xaml
+<sad:ActivityDesigner x:Class="Microsoft.Samples.CustomParallelDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sad="clr-namespace:System.Activities.Design;assembly=System.Activities.Design"
+    xmlns:sadv="clr-namespace:System.Activities.Design.View;assembly=System.Activities.Design">
+  <sad:ActivityDesigner.Resources>
+    <DataTemplate x:Key="Expanded">
+      <StackPanel>
+        <TextBlock>This is the Expanded View</TextBlock>
+        <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
+                                    Items="{Binding Path=ModelItem.Branches}">
+          <sad:WorkflowItemsPresenter.SpacerTemplate>
+            <DataTemplate>
+              <Ellipse Width="10" Height="10" Fill="Black"/>
+            </DataTemplate>
+          </sad:WorkflowItemsPresenter.SpacerTemplate>
+          <sad:WorkflowItemsPresenter.ItemsPanel>
+            <ItemsPanelTemplate>
+              <StackPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+          </sad:WorkflowItemsPresenter.ItemsPanel>
+        </sad:WorkflowItemsPresenter>
+      </StackPanel>
+    </DataTemplate>
+    <DataTemplate x:Key="Collapsed">
+      <TextBlock>This is the Collapsed View</TextBlock>
+    </DataTemplate>
+    <Style x:Key="ExpandOrCollapsedStyle" TargetType="{x:Type ContentPresenter}">
+      <Setter Property="ContentTemplate" Value="{DynamicResource Collapsed}"/>
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding Path=IsRootDesigner}" Value="true">
+          <Setter Property="ContentTemplate" Value="{DynamicResource Expanded}"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+  </sad: ActivityDesigner.Resources>
+  <Grid>
+    <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>
+  </Grid>
+</sad: ActivityDesigner>
+```
+
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   

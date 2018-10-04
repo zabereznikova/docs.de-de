@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c77832a4c578ddb2c8a427b133e53ab4ab5c5e3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0f5a70a01937c52197978db776b90028e1fcb7c6
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595625"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580156"
 ---
 # <a name="converting-times-between-time-zones"></a>Konvertieren von Uhrzeiten zwischen Zeitzonen
 
@@ -44,9 +44,6 @@ Der folgende Code konvertiert die aktuelle lokale Zeit in die UTC und zeigt das 
 
 [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
 [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
-
-> [!NOTE]
-> Die <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> -Methode erzeugt nicht notwendigerweise Ergebnisse, die identisch sind mit den <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> Methoden. Wenn der Host-System den lokalen enthält Zeitzone mehrere Anpassungsregeln, <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> gilt die entsprechende Regel für ein bestimmtes Datum und Uhrzeit. Die anderen beiden Methoden wenden immer die jüngste Anpassungsregel an.
 
 Wenn der Wert für Datum und Uhrzeit keine der Ortszeit oder UTC, darstellt der <xref:System.DateTime.ToUniversalTime%2A> Methode wahrscheinlich ein falsches Ergebnis zurück. Sie können jedoch die <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> Methode, um das Datum und die Uhrzeit aus einer angegebenen Zeitzone zu konvertieren. (Weitere Informationen zum Abrufen einer <xref:System.TimeZoneInfo> -Objekt, das die Zielzeitzone darstellt, finden Sie unter [Suchen der in einem lokalen System definierten Zeitzonen](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) Der folgende code verwendet die <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> Methode, um die Eastern Standard Time in UTC zu konvertieren.
 

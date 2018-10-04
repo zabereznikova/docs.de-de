@@ -2,12 +2,12 @@
 title: Migrationsanleitung
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027389"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777957"
 ---
 # <a name="migration-guidance"></a>Migrationsanleitung
 In der [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], veröffentlicht Microsoft die zweite Hauptversion von Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] wurde unter [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] veröffentlicht (enthält auch die Typen in den System.Workflow.*-Namespaces, jetzt als WF3 bezeichnet) und unter [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] erweitert. WF3 ist auch Teil der [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], aber neben einer neuen workflowtechnologie (Typen in den System.Activities.\* Namespaces als WF4 bezeichnet). Beim Erwägen des Zeitpunkts für die Umstellung auf WF4 sollten Sie zuerst bedenken, dass Sie allein den zeitlichen Ablauf steuern können.  
@@ -16,7 +16,7 @@ In der [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], veröff
   
 -   WF3-Anwendungen werden unter [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] ohne Änderung ausgeführt und weiterhin voll unterstützt.  
   
--   Sie können neue WF3-Anwendungen erstellen, und Ihre bestehenden Anwendungen können in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] bearbeitet werden und werden vollständig unterstützt.  
+-   Können neue WF3-Anwendungen erstellt werden, und Ihre vorhandenen Anwendungen können in Visual Studio 2012 bearbeitet werden und werden vollständig unterstützt.  
   
  Daher ist die Entscheidung, ob .NET Framework 4 zu übernehmen entkoppelt, von der Entscheidung, in WF4 zu verschieben (System.Activities) von WF3 (System.Workflow.\*). Dieses Thema enthält Links zu WF-Migrationsanleitungen mit Informationen zum Arbeiten mit WF3 und WF4.  
   

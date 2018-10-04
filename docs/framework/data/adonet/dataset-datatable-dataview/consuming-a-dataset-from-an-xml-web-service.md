@@ -163,7 +163,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
   
      Clients des XML-Webdiensts benötigen einen SOAP-Proxy, um die verfügbar gemachten Methoden verarbeiten zu können. Sie können diesen Proxy von Visual Studio generieren lassen. Das in diesem Schritt beschriebene Verhalten wird transparent, wenn Sie einen Webverweis auf einen vorhandenen Webdienst von Visual Studio aus festlegen. Wenn Sie die Proxyklasse selbst erstellen möchten, finden Sie im Folgenden die notwendigen Informationen. In den meisten Fällen ist es jedoch ausreichend, wenn die Proxyklasse für die Clientanwendung mithilfe von Visual Studio erstellt wird.  
   
-     Ein Proxy kann mit dem Web Services Description Language-Tool erstellt werden. Wenn der XML-Webdienst verfügbar gemacht wird, unter der URL beispielsweise http://myserver/data/DataSetSample.asmx, einen Befehl wie den folgenden erstellen Sie einen Proxy für die Visual Basic .NET mit dem Namespace **http://myserver/data/DataSetSample.asmx** und in der Datei Datei "Sample.vb" zu speichern.  
+     Ein Proxy kann mit dem Web Services Description Language-Tool erstellt werden. Wenn der XML-Webdienst verfügbar gemacht wird, unter der URL beispielsweise http://myserver/data/DataSetSample.asmx, einen Befehl wie den folgenden erstellen Sie einen Proxy für die Visual Basic .NET mit dem Namespace **WebData.DSSample** und in der Datei Datei "Sample.vb" zu speichern.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

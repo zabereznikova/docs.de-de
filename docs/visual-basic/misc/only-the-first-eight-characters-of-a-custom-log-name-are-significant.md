@@ -3,11 +3,11 @@ title: Nur die ersten acht Zeichen eines benutzerdefinierten Protokollnamens sin
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035096"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583138"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Nur die ersten acht Zeichen eines benutzerdefinierten Protokollnamens sind von Bedeutung
 Bei der Prüfung der Ereignisprotokollnamen auf Eindeutigkeit werden nur die ersten acht Zeichen berücksichtigt. Aus Ereignisprotokollnamen, deren erste acht Zeichen übereinstimmen, kann ein Konflikt entstehen.  

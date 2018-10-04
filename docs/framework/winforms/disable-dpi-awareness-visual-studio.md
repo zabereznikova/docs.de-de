@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037040"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263504"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deaktivieren Sie die DPI--Unterstützung in Visual Studio
 
@@ -68,6 +68,10 @@ Sie können Visual Studio als DPI-Wert ohne markieren, durch Ändern der Registr
 Geben Sie zum Festlegen Ihrer Anzeige, die Einstellung auf 100 % für das Skalieren von Daten in Windows 10 **Anzeigeeinstellungen** in der Taskleiste im Suchfeld ein, und wählen Sie dann **Ändern der Anzeigeeinstellungen für**. In der **Einstellungen** legen **Ändern der Größe von Text, apps und anderen Elementen** zu **100 %**.
 
 Festlegen Ihrer Anzeige, die Skalierung auf 100 % nicht erwünscht ist, möglicherweise die Benutzeroberfläche zu klein, um verwendbar vereinfachen können.
+
+## <a name="troubleshoot"></a>Problembehandlung
+
+Wenn Sie nicht der Übergang DPI-Unterstützung in Visual Studio wie erwartet funktioniert, überprüfen, um festzustellen, ob die `dpiAwareness` Wert in der **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image Datei Ausführung Options\devenv.exe**  Unterschlüssel im Registrierungs-Editor. Löschen Sie den Wert aus, wenn es vorhanden ist.
 
 ## <a name="see-also"></a>Siehe auch
 

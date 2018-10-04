@@ -3,11 +3,11 @@ title: '&lt;Benutzerdefinierte&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036832"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778194"
 ---
 # <a name="ltcustomgt"></a>&lt;Benutzerdefinierte&gt;
 Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.  

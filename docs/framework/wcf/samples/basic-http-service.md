@@ -2,12 +2,12 @@
 title: Einfacher HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028245"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48262383"
 ---
 # <a name="basic-http-service"></a>Einfacher HTTP-Dienst
 In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter, RPC-basierte Service – auch bezeichnet als "POX" (Plain Old XML)-Dienst mithilfe des Windows Communication Foundation (WCF)-REST-Programmiermodells implementiert wird. In diesem Beispiel besteht aus zwei Komponenten: einem selbst gehosteten WCF-HTTP-Dienst (Service.cs) und eine Konsolenanwendung (Program.cs), die der Dienst erstellt und Aufrufe durchführt.  
@@ -27,7 +27,7 @@ In diesem Beispiel wird veranschaulicht, wie ein HTTP-basierter, RPC-basierte Se
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Öffnen Sie die Projektmappe für das Beispiel eines grundlegenden HTTP-Diensts. Sie müssen [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] als Administrator ausführen, damit das Beispiel erfolgreich ausgeführt werden kann. Zu diesem Zweck mit der rechten Maustaste die [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] und wählen Sie dann **als Administrator ausführen** aus dem Kontextmenü.  
+1.  Öffnen Sie die Projektmappe für das Beispiel eines grundlegenden HTTP-Diensts. Beim Starten von Visual Studio 2012, führen Sie als Administrator für das Beispiel erfolgreich ausgeführt. Zu diesem Zweck mit der rechten Maustaste in des Visual Studio 2012-Symbols, und wählen **als Administrator ausführen** aus dem Kontextmenü.  
   
 2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen, und dann STRG+F5, um die Konsolenanwendung ohne Debuggen auszuführen. Im eingeblendeten Konsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML-Hilfeseite für den ausgeführten Dienst angezeigt. Sie können die HTML-Hilfeseite jederzeit anzeigen, indem sie den URI der Hilfeseite in einem Browser eingeben. Während das Beispiel ausgeführt wird, schreibt der Client den Status der aktuellen Aktivität.  
   

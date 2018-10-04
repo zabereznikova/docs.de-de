@@ -2,12 +2,12 @@
 title: Erstellen einer Aktivität zur Laufzeit mit DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027363"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583871"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Erstellen einer Aktivität zur Laufzeit mit DynamicActivity
 <xref:System.Activities.DynamicActivity> ist eine konkrete, versiegelte Klasse mit einem öffentlichen Konstruktor. <xref:System.Activities.DynamicActivity> kann zur Zusammenstellung von Aktivitätsfunktionen zur Laufzeit mit einem Aktivitäts-DOM verwendet werden.  
@@ -21,7 +21,7 @@ ms.locfileid: "48027363"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>So erstellen Sie zur Laufzeit eine Aktivität mit imperativem Code  
   
-1.  Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Datenbankdateinamen Studio 2010.  
   
 2.  Wählen Sie **Datei**, **neue**, **Projekt**. Wählen Sie **Workflow 4.0** unter **Visual C#-** in die **Projekttypen** , und wählen die **v2010** Knoten. Wählen Sie **Konsolenanwendung für sequenzielle Workflows** in die **Vorlagen** Fenster. Geben Sie dem neuen Projekt den Namen DynamicActivitySample.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48027363"
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>So erstellen Sie zur Laufzeit eine Aktivität mit XAML  
   
-1.  Öffnen Sie [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Öffnen Sie Visual Studio 2010.  
   
 2.  Wählen Sie **Datei**, **neue**, **Projekt**. Wählen Sie **Workflow 4.0** unter **Visual C#-** in die **Projekttypen** , und wählen die **v2010** Knoten. Wählen Sie **Konsolenanwendung für Workflows** in die **Vorlagen** Fenster. Geben Sie dem neuen Projekt den Namen DynamicActivitySample.  
   
