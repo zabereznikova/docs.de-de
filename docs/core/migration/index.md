@@ -5,11 +5,11 @@ author: blackdwarf
 ms.author: mairaw
 ms.date: 07/19/2017
 ms.openlocfilehash: da1995ed3b77cb802d1f3d04e6d741809de20927
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027936"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584323"
 ---
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>Migrieren von .NET Core-Projekten in das .csproj-Format
 
