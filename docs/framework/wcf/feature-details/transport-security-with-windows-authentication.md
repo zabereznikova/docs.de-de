@@ -7,44 +7,44 @@ dev_langs:
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 ms.openlocfilehash: babafe369ee9f5c9261e3b5c8bc749d3d1d39ec4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236448"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778515"
 ---
-# <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="b2696-102">Transportsicherheit mit Windows-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="b2696-102">Transport Security with Windows Authentication</span></span>
-<span data-ttu-id="b2696-103">Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Dienst, die durch die Windows-Sicherheit geschützt.</span><span class="sxs-lookup"><span data-stu-id="b2696-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security.</span></span> <span data-ttu-id="b2696-104">Weitere Informationen zur Programmierung finden Sie unter [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span><span class="sxs-lookup"><span data-stu-id="b2696-104">For more information about programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  
+# <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="94b79-102">Transportsicherheit mit Windows-Authentifizierung</span><span class="sxs-lookup"><span data-stu-id="94b79-102">Transport Security with Windows Authentication</span></span>
+<span data-ttu-id="94b79-103">Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Dienst, die durch die Windows-Sicherheit geschützt.</span><span class="sxs-lookup"><span data-stu-id="94b79-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security.</span></span> <span data-ttu-id="94b79-104">Weitere Informationen zur Programmierung finden Sie unter [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span><span class="sxs-lookup"><span data-stu-id="94b79-104">For more information about programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  
   
- <span data-ttu-id="b2696-105">Ein Intranetwebdienst zeigt Personalinformationen an.</span><span class="sxs-lookup"><span data-stu-id="b2696-105">An intranet Web service displays human resources information.</span></span> <span data-ttu-id="b2696-106">Der Client ist eine Windows Forms-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="b2696-106">The client is a Windows Form application.</span></span> <span data-ttu-id="b2696-107">Die Anwendung wird in einer Domäne mit einem Kerberos-Controller bereitgestellt, der die Domäne sichert.</span><span class="sxs-lookup"><span data-stu-id="b2696-107">The application is deployed in a domain with a Kerberos controller securing the domain.</span></span>  
+ <span data-ttu-id="94b79-105">Ein Intranetwebdienst zeigt Personalinformationen an.</span><span class="sxs-lookup"><span data-stu-id="94b79-105">An intranet Web service displays human resources information.</span></span> <span data-ttu-id="94b79-106">Der Client ist eine Windows Forms-Anwendung.</span><span class="sxs-lookup"><span data-stu-id="94b79-106">The client is a Windows Form application.</span></span> <span data-ttu-id="94b79-107">Die Anwendung wird in einer Domäne mit einem Kerberos-Controller bereitgestellt, der die Domäne sichert.</span><span class="sxs-lookup"><span data-stu-id="94b79-107">The application is deployed in a domain with a Kerberos controller securing the domain.</span></span>  
   
- <span data-ttu-id="b2696-108">![Transportsicherheit mit Windows-Authentifizierung](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span><span class="sxs-lookup"><span data-stu-id="b2696-108">![Transport security with Windows authentication](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span></span>  
+ <span data-ttu-id="94b79-108">![Transportsicherheit mit Windows-Authentifizierung](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span><span class="sxs-lookup"><span data-stu-id="94b79-108">![Transport security with Windows authentication](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")</span></span>  
   
-|<span data-ttu-id="b2696-109">Merkmal</span><span class="sxs-lookup"><span data-stu-id="b2696-109">Characteristic</span></span>|<span data-ttu-id="b2696-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b2696-110">Description</span></span>|  
+|<span data-ttu-id="94b79-109">Merkmal</span><span class="sxs-lookup"><span data-stu-id="94b79-109">Characteristic</span></span>|<span data-ttu-id="94b79-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="94b79-110">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="b2696-111">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="b2696-111">Security Mode</span></span>|<span data-ttu-id="b2696-112">Transport</span><span class="sxs-lookup"><span data-stu-id="b2696-112">Transport</span></span>|  
-|<span data-ttu-id="b2696-113">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="b2696-113">Interoperability</span></span>|<span data-ttu-id="b2696-114">Nur WCF</span><span class="sxs-lookup"><span data-stu-id="b2696-114">WCF only</span></span>|  
-|<span data-ttu-id="b2696-115">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="b2696-115">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="b2696-116">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="b2696-116">Authentication (Client)</span></span>|<span data-ttu-id="b2696-117">Ja (mithilfe der integrierten Windows-Authentifizierung)</span><span class="sxs-lookup"><span data-stu-id="b2696-117">Yes (using Windows integrated authentication)</span></span><br /><br /> <span data-ttu-id="b2696-118">Ja (mithilfe der integrierten Windows-Authentifizierung)</span><span class="sxs-lookup"><span data-stu-id="b2696-118">Yes (using Windows integrated authentication)</span></span>|  
-|<span data-ttu-id="b2696-119">Integrität</span><span class="sxs-lookup"><span data-stu-id="b2696-119">Integrity</span></span>|<span data-ttu-id="b2696-120">Ja</span><span class="sxs-lookup"><span data-stu-id="b2696-120">Yes</span></span>|  
-|<span data-ttu-id="b2696-121">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="b2696-121">Confidentiality</span></span>|<span data-ttu-id="b2696-122">Ja</span><span class="sxs-lookup"><span data-stu-id="b2696-122">Yes</span></span>|  
-|<span data-ttu-id="b2696-123">Transport</span><span class="sxs-lookup"><span data-stu-id="b2696-123">Transport</span></span>|<span data-ttu-id="b2696-124">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="b2696-124">NET.TCP</span></span>|  
-|<span data-ttu-id="b2696-125">Bindung</span><span class="sxs-lookup"><span data-stu-id="b2696-125">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="94b79-111">Sicherheitsmodus</span><span class="sxs-lookup"><span data-stu-id="94b79-111">Security Mode</span></span>|<span data-ttu-id="94b79-112">Transport</span><span class="sxs-lookup"><span data-stu-id="94b79-112">Transport</span></span>|  
+|<span data-ttu-id="94b79-113">Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="94b79-113">Interoperability</span></span>|<span data-ttu-id="94b79-114">Nur WCF</span><span class="sxs-lookup"><span data-stu-id="94b79-114">WCF only</span></span>|  
+|<span data-ttu-id="94b79-115">Authentifizierung (Server)</span><span class="sxs-lookup"><span data-stu-id="94b79-115">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="94b79-116">Authentifizierung (Client)</span><span class="sxs-lookup"><span data-stu-id="94b79-116">Authentication (Client)</span></span>|<span data-ttu-id="94b79-117">Ja (mithilfe der integrierten Windows-Authentifizierung)</span><span class="sxs-lookup"><span data-stu-id="94b79-117">Yes (using Windows integrated authentication)</span></span><br /><br /> <span data-ttu-id="94b79-118">Ja (mithilfe der integrierten Windows-Authentifizierung)</span><span class="sxs-lookup"><span data-stu-id="94b79-118">Yes (using Windows integrated authentication)</span></span>|  
+|<span data-ttu-id="94b79-119">Integrität</span><span class="sxs-lookup"><span data-stu-id="94b79-119">Integrity</span></span>|<span data-ttu-id="94b79-120">Ja</span><span class="sxs-lookup"><span data-stu-id="94b79-120">Yes</span></span>|  
+|<span data-ttu-id="94b79-121">Vertraulichkeit</span><span class="sxs-lookup"><span data-stu-id="94b79-121">Confidentiality</span></span>|<span data-ttu-id="94b79-122">Ja</span><span class="sxs-lookup"><span data-stu-id="94b79-122">Yes</span></span>|  
+|<span data-ttu-id="94b79-123">Transport</span><span class="sxs-lookup"><span data-stu-id="94b79-123">Transport</span></span>|<span data-ttu-id="94b79-124">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="94b79-124">NET.TCP</span></span>|  
+|<span data-ttu-id="94b79-125">Bindung</span><span class="sxs-lookup"><span data-stu-id="94b79-125">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="b2696-126">Dienst</span><span class="sxs-lookup"><span data-stu-id="b2696-126">Service</span></span>  
- <span data-ttu-id="b2696-127">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b2696-127">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b2696-128">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="b2696-128">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="94b79-126">Dienst</span><span class="sxs-lookup"><span data-stu-id="94b79-126">Service</span></span>  
+ <span data-ttu-id="94b79-127">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="94b79-127">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="94b79-128">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="94b79-128">Do one of the following:</span></span>  
   
--   <span data-ttu-id="b2696-129">Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="b2696-129">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="94b79-129">Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.</span><span class="sxs-lookup"><span data-stu-id="94b79-129">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="b2696-130">Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="b2696-130">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="94b79-130">Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.</span><span class="sxs-lookup"><span data-stu-id="94b79-130">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="b2696-131">Code</span><span class="sxs-lookup"><span data-stu-id="b2696-131">Code</span></span>  
- <span data-ttu-id="b2696-132">Im folgenden Code wird gezeigt, wie ein Dienstendpunkt, der Windows-Sicherheit verwendet, erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="b2696-132">The following code shows how to create a service endpoint that uses a Windows security.</span></span>  
+### <a name="code"></a><span data-ttu-id="94b79-131">Code</span><span class="sxs-lookup"><span data-stu-id="94b79-131">Code</span></span>  
+ <span data-ttu-id="94b79-132">Im folgenden Code wird gezeigt, wie ein Dienstendpunkt, der Windows-Sicherheit verwendet, erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="94b79-132">The following code shows how to create a service endpoint that uses a Windows security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a><span data-ttu-id="b2696-133">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="b2696-133">Configuration</span></span>  
- <span data-ttu-id="b2696-134">Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienstendpunkt einzurichten:</span><span class="sxs-lookup"><span data-stu-id="b2696-134">The following configuration can be used instead of the code to set up the service endpoint:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="94b79-133">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="94b79-133">Configuration</span></span>  
+ <span data-ttu-id="94b79-134">Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienstendpunkt einzurichten:</span><span class="sxs-lookup"><span data-stu-id="94b79-134">The following configuration can be used instead of the code to set up the service endpoint:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -74,24 +74,24 @@ ms.locfileid: "47236448"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="b2696-135">Client</span><span class="sxs-lookup"><span data-stu-id="b2696-135">Client</span></span>  
- <span data-ttu-id="b2696-136">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="b2696-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="b2696-137">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="b2696-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="94b79-135">Client</span><span class="sxs-lookup"><span data-stu-id="94b79-135">Client</span></span>  
+ <span data-ttu-id="94b79-136">Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="94b79-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="94b79-137">Führen Sie einen der folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="94b79-137">Do one of the following:</span></span>  
   
--   <span data-ttu-id="b2696-138">Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.</span><span class="sxs-lookup"><span data-stu-id="b2696-138">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="94b79-138">Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.</span><span class="sxs-lookup"><span data-stu-id="94b79-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="b2696-139">Erstellen Sie einen Client, der keine Endpunktadressen definiert.</span><span class="sxs-lookup"><span data-stu-id="b2696-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="b2696-140">Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet.</span><span class="sxs-lookup"><span data-stu-id="b2696-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="b2696-141">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="b2696-141">For example:</span></span>  
+-   <span data-ttu-id="94b79-139">Erstellen Sie einen Client, der keine Endpunktadressen definiert.</span><span class="sxs-lookup"><span data-stu-id="94b79-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="94b79-140">Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet.</span><span class="sxs-lookup"><span data-stu-id="94b79-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="94b79-141">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="94b79-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="b2696-142">Code</span><span class="sxs-lookup"><span data-stu-id="b2696-142">Code</span></span>  
- <span data-ttu-id="b2696-143">Der folgende Code erstellt den Client.</span><span class="sxs-lookup"><span data-stu-id="b2696-143">The following code creates the client.</span></span> <span data-ttu-id="b2696-144">Die Bindung ist für die Verwendung der Transportmodussicherheit mit dem TCP-Transport konfiguriert, wobei der Clientanmeldeinformationstyp auf Windows festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="b2696-144">The binding is configured to use the Transport mode security, with the TCP transport, with the client credential type set to Windows.</span></span>  
+### <a name="code"></a><span data-ttu-id="94b79-142">Code</span><span class="sxs-lookup"><span data-stu-id="94b79-142">Code</span></span>  
+ <span data-ttu-id="94b79-143">Der folgende Code erstellt den Client.</span><span class="sxs-lookup"><span data-stu-id="94b79-143">The following code creates the client.</span></span> <span data-ttu-id="94b79-144">Die Bindung ist für die Verwendung der Transportmodussicherheit mit dem TCP-Transport konfiguriert, wobei der Clientanmeldeinformationstyp auf Windows festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="94b79-144">The binding is configured to use the Transport mode security, with the TCP transport, with the client credential type set to Windows.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a><span data-ttu-id="b2696-145">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="b2696-145">Configuration</span></span>  
- <span data-ttu-id="b2696-146">Die folgende Konfiguration kann statt des Codes verwendet werden, um den Client zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="b2696-146">The following configuration can be used instead of the code to create the client.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="94b79-145">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="94b79-145">Configuration</span></span>  
+ <span data-ttu-id="94b79-146">Die folgende Konfiguration kann statt des Codes verwendet werden, um den Client zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="94b79-146">The following configuration can be used instead of the code to create the client.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +118,7 @@ ms.locfileid: "47236448"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b2696-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b2696-147">See Also</span></span>  
- [<span data-ttu-id="b2696-148">Übersicht über die Sicherheit</span><span class="sxs-lookup"><span data-stu-id="b2696-148">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="b2696-149">Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="b2696-149">How to: Secure a Service with Windows Credentials</span></span>](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [<span data-ttu-id="b2696-150">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="b2696-150">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="94b79-147">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="94b79-147">See Also</span></span>  
+ [<span data-ttu-id="94b79-148">Übersicht über die Sicherheit</span><span class="sxs-lookup"><span data-stu-id="94b79-148">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="94b79-149">Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen</span><span class="sxs-lookup"><span data-stu-id="94b79-149">How to: Secure a Service with Windows Credentials</span></span>](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
+ [<span data-ttu-id="94b79-150">Sicherheitsmodell für Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="94b79-150">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
