@@ -34,7 +34,7 @@ Sie können in diesen Fällen Aufrufen der <xref:System.TimeZoneInfo.CreateCusto
 > [!IMPORTANT]
 > Benutzerdefinierte Zeitzonen durch Aufrufen von erstellt die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode werden nicht in der Registrierung hinzugefügt. Stattdessen können sie nur über das vom Objektverweis zugegriffen werden die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methodenaufruf.
 
-In diesem Thema veranschaulicht, wie mit Anpassungsregeln eine Zeitzone zu erstellen. Um eine Zeitzone zu erstellen, die keine Anpassungsregeln für die Sommerzeit unterstützt, finden Sie unter [How to: Create Time Zones Without Adjustment Rules](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+In diesem Thema veranschaulicht, wie mit Anpassungsregeln eine Zeitzone zu erstellen. Um eine Zeitzone zu erstellen, die keine Anpassungsregeln für die Sommerzeit unterstützt, finden Sie unter [Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>So erstellen eine Zeitzone mit bewegliche Anpassungsregeln
 
