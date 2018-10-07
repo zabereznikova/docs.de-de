@@ -3,15 +3,15 @@ title: Routingdienste
 ms.date: 03/30/2017
 ms.assetid: 9a430b4c-46eb-4d15-afbc-8834f0e985ab
 ms.openlocfilehash: aab9f30a21037a0e9ad0c4678304dff46dc7987a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781218"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837322"
 ---
-# <a name="routing-services"></a><span data-ttu-id="93059-102">Routingdienste</span><span class="sxs-lookup"><span data-stu-id="93059-102">Routing Services</span></span>
-<span data-ttu-id="93059-103">Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie mit der Windows Communication Foundation (WCF)-Router.</span><span class="sxs-lookup"><span data-stu-id="93059-103">This section includes samples that demonstrate how to use the Windows Communication Foundation (WCF) Router.</span></span>  
+# <a name="routing-services"></a><span data-ttu-id="97b10-102">Routingdienste</span><span class="sxs-lookup"><span data-stu-id="97b10-102">Routing Services</span></span>
+<span data-ttu-id="97b10-103">Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie mit der Windows Communication Foundation (WCF)-Router.</span><span class="sxs-lookup"><span data-stu-id="97b10-103">This section includes samples that demonstrate how to use the Windows Communication Foundation (WCF) Router.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="93059-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="93059-104">In This Section</span></span>  
- [<span data-ttu-id="93059-105">Hello World mit dem Routingdienst</span><span class="sxs-lookup"><span data-stu-id="93059-105">Hello World with the Routing Service</span></span>](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
- <span data-ttu-id="93059-106">Veranschaulicht, wie die WCF-Routers.</span><span class="sxs-lookup"><span data-stu-id="93059-106">Demonstrates how to use the WCF Router.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="97b10-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="97b10-104">In This Section</span></span>  
+ [<span data-ttu-id="97b10-105">Hello World mit dem Routingdienst</span><span class="sxs-lookup"><span data-stu-id="97b10-105">Hello World with the Routing Service</span></span>](../../../../docs/framework/wcf/samples/hello-world-with-the-routing-service.md)  
+ <span data-ttu-id="97b10-106">Veranschaulicht, wie die WCF-Routers.</span><span class="sxs-lookup"><span data-stu-id="97b10-106">Demonstrates how to use the WCF Router.</span></span>
