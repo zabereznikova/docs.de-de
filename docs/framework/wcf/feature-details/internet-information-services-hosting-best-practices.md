@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073592"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840744"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für Windows Communication Foundation (WCF).  
@@ -33,7 +33,7 @@ Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für 
  Szenarien der mittleren Ebene erzeugen außerdem Leistungssteigerungen durch Verwendung von asynchronen, von der `svcutil /a`-Option generierten APIs. Die `/a` -Option bewirkt, dass die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generieren `BeginXXX/EndXXX` Methoden für jeden Dienstvorgang, wodurch potenziell zeitintensive Aufrufe an Remotedienste auf Hintergrundthreads.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF in Szenarien mit mehreren Adressen oder mehreren Namen  
- Können Sie WCF-Dienste innerhalb einer IIS-Webfarm, die einen gemeinsamen externen Namen zum Weiterleiten von einer Gruppe von Computern bereitstellen (z. B. http://www.contoso.com) jedoch einzeln mithilfe der verschiedenen Hostnamen adressiert sind (z. B. http://www.contoso.com möglicherweise Weiterleitung von Datenverkehr an zwei verschiedenen Computern mit dem Namen http://machine1.internal.contoso.com und http://machine2.internal.contoso.com). Bei diesem Bereitstellungsszenario wird vollständig von WCF unterstützt, erfordert jedoch spezielle Konfiguration der IIS-Website Hosten von WCF-Dienste, um die richtige (externe) Hostname in den Dienstmetadaten (Web Services Description Language) anzuzeigen.  
+ Können Sie WCF-Dienste innerhalb einer IIS-Webfarm, die einen gemeinsamen externen Namen zum Weiterleiten von einer Gruppe von Computern bereitstellen (z. B. `http://www.contoso.com`) jedoch einzeln mithilfe der verschiedenen Hostnamen adressiert sind (z. B. `http://www.contoso.com` möglicherweise Weiterleitung von Datenverkehr an zwei verschiedenen Computern mit dem Namen `http://machine1.internal.contoso.com` und `http://machine2.internal.contoso.com`). Bei diesem Bereitstellungsszenario wird vollständig von WCF unterstützt, erfordert jedoch spezielle Konfiguration der IIS-Website Hosten von WCF-Dienste, um die richtige (externe) Hostname in den Dienstmetadaten (Web Services Description Language) anzuzeigen.  
   
  Um sicherzustellen, dass der richtige Hostname in den Metadaten des WCF wird generiert, konfigurieren die Standardidentität für die IIS-Website, die WCF-Diensten für die Verwendung eines expliziten Hostnamens hostet. Beispielsweise Computer, die innerhalb der Farm www.contoso.com befinden sollte verwenden, ein IIS-sitebindung *: 80: www.contoso.com für HTTP und \*: 443:www.contoso.com für HTTPS.  
   

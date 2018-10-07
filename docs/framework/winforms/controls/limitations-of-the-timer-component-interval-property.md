@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: e5b9e7e43369913f0cdc9c7f2111bd4fe58675e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9710568c3c21878aa6aad626e3152168a2f0c2fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465654"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836393"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Einschränkungen für die Timer-Komponente in Windows Forms&#39;s Interval-Eigenschaft
 Die Windows-Formulare <xref:System.Windows.Forms.Timer> Komponente weist eine <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft, die die Anzahl der Millisekunden angibt, die zwischen einem Timer-Ereignishandler und dem nächsten übergeben. Wenn die Komponente deaktiviert wird, wird ein Zeitgeber erhalten die <xref:System.Windows.Forms.Timer.Tick> Ereignis zu ungefähr gleichen Intervallen Zeit.  
@@ -26,7 +26,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.Timer> Komponente weist eine <x
   
 -   Das Intervall ist nicht unbedingt genau an der Zeit verstreichen. Um Genauigkeit zu gewährleisten, sollen der Timer die Systemuhr je nach Bedarf überprüfen, sondern versuchen, die bisher abgelaufene Zeit intern mitverfolgen.  
   
--   Die Genauigkeit der <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft wird in Millisekunden angegeben. Einige Computer Geben Sie einen hochauflösenden Indikator, der einer höher als Millisekunden Auflösung. Die Verfügbarkeit solcher Zähler hängt von der Prozessorhardware des Computers ab. Weitere Informationen finden Sie im Artikel 172338, "Wie um verwenden QueryPerformanceCounter zu Uhrzeitcode von" in der Microsoft Knowledge Base unter http://support.microsoft.com.  
+-   Die Genauigkeit der <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft wird in Millisekunden angegeben. Einige Computer Geben Sie einen hochauflösenden Indikator, der einer höher als Millisekunden Auflösung. Die Verfügbarkeit solcher Zähler hängt von der Prozessorhardware des Computers ab.
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Forms.Timer>  

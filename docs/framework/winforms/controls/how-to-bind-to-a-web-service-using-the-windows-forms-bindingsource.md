@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: fdbf1e1b419e5ad296376ec1f06fd361077895c4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 34d40cb9b0f4929330473ae0dc2f4c12dd309270
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702893"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840166"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Gewusst wie: Binden an einen Webdienst mithilfe der BindingSource in Windows Forms
 Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML-Webdiensts binden möchten, können Sie eine <xref:System.Windows.Forms.BindingSource>-Komponente verwenden. Dieses Verfahren ähnelt der Bindung einer <xref:System.Windows.Forms.BindingSource>-Komponente an einen Typ. Sie müssen einen clientseitigen Proxy erstellen, der die Methoden und Typen enthält, die vom Webdienst bereitgestellt werden. Sie generieren einen clientseitigen Proxy über den Webdienst (.asmx) selbst oder über seine WSDL-Datei (Web Services Description Language). Darüber hinaus muss der clientseitige Proxy die Felder von komplexen Typen verfügbar machen, die vom Webdienst als öffentliche Eigenschaften verwendet werden. Anschließend binden Sie <xref:System.Windows.Forms.BindingSource> an einen der im Webdienstproxy bereitgestellten Typen.  
@@ -32,7 +32,7 @@ Wenn Sie ein Windows Form-Steuerelements an die Ergebnisse des Aufrufs eines XML
   
 4.  Geben Sie mithilfe des WSDL-Tools `wsdl` und die URL für die ASMX- oder WSDL-Datei für den Webdienst gefolgt vom Namespace der Anwendung und wahlweise der verwendeten Programmiersprache ein.  
   
-     Das folgende Codebeispiel verwendet den Webdienst, der am http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx. Geben Sie z.B. für C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` oder für Visual Basic `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB` ein. Durch die Übergabe des Pfads als Argument an das WSDL-Tool wird ein clientseitiger Proxy in demselben Verzeichnis und Namespace wie Ihre Anwendung sowie in der angegebenen Sprache generiert. Wenn Sie Visual Studio verwenden, können fügen Sie die Datei zu Ihrem Projekt hinzu.  
+     Das folgende Codebeispiel verwendet den Webdienst, der am `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Geben Sie z.B. für C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` oder für Visual Basic `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB` ein. Durch die Übergabe des Pfads als Argument an das WSDL-Tool wird ein clientseitiger Proxy in demselben Verzeichnis und Namespace wie Ihre Anwendung sowie in der angegebenen Sprache generiert. Wenn Sie Visual Studio verwenden, können fügen Sie die Datei zu Ihrem Projekt hinzu.  
   
 5.  Wählen Sie im clientseitigen Proxy einen Typ für die Bindung aus.  
   

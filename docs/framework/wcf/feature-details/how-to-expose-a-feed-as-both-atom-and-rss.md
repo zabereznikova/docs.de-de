@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 4780e43679d461509911a4abda689a0c16112e4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b26dabb9ed5c2c7bb2410dc1e844add6a69bdf3
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493424"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842722"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Vorgehensweise: Einen Feed sowohl als Atom als auch als RSS verfügbar machen
-Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Syndication-feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. Weitere Informationen zu den verschiedenen WCF Hostingoptionen, finden Sie unter [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Syndication-feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. Weitere Informationen über die verschiedenen WCF-Hostingoptionen finden Sie unter [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>So erstellen Sie einen grundlegenden Syndication-Dienst  
   
-1.  Definieren Sie einen Dienstvertrag mit einer Schnittstelle, die mit dem <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut gekennzeichnet ist. Jeder Vorgang, der als Syndication-Feed verfügbar gemacht wird, gibt ein <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Objekt zurück. Beachten Sie die Parameter für das <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` gibt die URL an, mit der dieser Dienstvorgang aufgerufen wird. Die Zeichenfolge für diesen Parameter enthält Literale und eine Variable in der geschweiften Klammern ({*Format*}). Diese Variable entspricht dem `format`-Parameter des Dienstvorgangs. Weitere Informationen finden Sie unter <xref:System.UriTemplate>. `BodyStyle` wirkt sich darauf aus, wie die Nachrichten, die dieser Dienstvorgang sendet und empfängt, geschrieben werden. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> gibt an, dass die an diesen Dienstvorgang gesendeten und von ihm empfangenen Daten nicht von Infrastruktur-definierten XML-Elementen eingeschlossen werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1.  Definieren Sie einen Dienstvertrag mit einer Schnittstelle, die mit dem <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut gekennzeichnet ist. Jeder Vorgang, der als Syndication-Feed verfügbar gemacht wird, gibt ein <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Objekt zurück. Beachten Sie die Parameter für das <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate` gibt die URL an, mit der dieser Dienstvorgang aufgerufen wird. Die Zeichenfolge für diesen Parameter enthält Literale und eine Variable in geschweiften Klammern ({*Format*}). Diese Variable entspricht dem `format`-Parameter des Dienstvorgangs. Weitere Informationen finden Sie unter <xref:System.UriTemplate>. `BodyStyle` wirkt sich darauf aus, wie die Nachrichten, die dieser Dienstvorgang sendet und empfängt, geschrieben werden. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> gibt an, dass die an diesen Dienstvorgang gesendeten und von ihm empfangenen Daten nicht von Infrastruktur-definierten XML-Elementen eingeschlossen werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Dien
   
 ### <a name="to-call-getblog-with-an-http-get"></a>So rufen Sie GetBlog mit HTTP GET auf  
   
-1.  Öffnen Sie den Internet-Explorer, geben Sie die folgende URL ein, und drücken Sie die EINGABETASTE. http://localhost:8000/BlogService/GetBlog  
+1.  Öffnen Sie Internet Explorer, geben Sie die folgende URL, und drücken Sie die EINGABETASTE: `http://localhost:8000/BlogService/GetBlog`.
   
-     Die URL enthält die Basisadresse des Diensts (http://localhost:8000/BlogService), die relative Adresse des Endpunkts und den aufzurufenden Dienstvorgang.  
+     Die URL enthält die Basisadresse des Diensts (`http://localhost:8000/BlogService`), die relative Adresse des Endpunkts und den aufzurufenden Dienstvorgang.  
   
 ### <a name="to-call-getblog-from-code"></a>So rufen Sie GetBlog() aus dem Code auf  
   

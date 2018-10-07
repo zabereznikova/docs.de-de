@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200762"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837259"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata Utility-Tool (Svcutil.exe)
 
@@ -236,7 +236,7 @@ Der folgende Befehl generiert Serialisierungstypen für <xref:System.Xml.Seriali
 
 Wenn Sie mithilfe von svcutil.exe" die Metadaten für einen Dienst generieren, wird ggf. folgende Meldung angezeigt:
 
-Fehler: Können keine Metadaten abgerufen http://localhost:8000/somesservice/mex die maximale Anzahl von NameTable-Zeichen (16384) wurde beim Lesen von XML-Daten überschritten. Die Nametable ist eine Datenstruktur, in der bei der XML-Verarbeitung gefundene Zeichenfolgen gespeichert werden - lange XML-Dokumente mit sich nicht wiederholenden Elementnamen, Attributnamen und Attributwerten können zum Überschreiten dieses Kontingents führen. Dieses Kontingent kann durch Ändern der MaxNameTableCharCount-Eigenschaft des beim Erstellen des XML-Readers verwendeten XmlDictionaryReaderQuotas-Objekts erhöht werden.
+Fehler: Können keine Metadaten abgerufen `http://localhost:8000/somesservice/mex` die maximale Anzahl von NameTable-Zeichen (16384) wurde beim Lesen von XML-Daten überschritten. Die Nametable ist eine Datenstruktur, in der bei der XML-Verarbeitung gefundene Zeichenfolgen gespeichert werden - lange XML-Dokumente mit sich nicht wiederholenden Elementnamen, Attributnamen und Attributwerten können zum Überschreiten dieses Kontingents führen. Dieses Kontingent kann durch Ändern der MaxNameTableCharCount-Eigenschaft des beim Erstellen des XML-Readers verwendeten XmlDictionaryReaderQuotas-Objekts erhöht werden.
 
 Dieser Fehler kann durch einen Dienst verursacht werden, der eine große WSDL-Datei zurückgibt, wenn Sie die Metadaten des Diensts anfordern. Das Problem ist, dass das Zeichenkontingent für das Tool "svcutil.exe" überschritten wurde. Dieser Wert wird festgelegt, um DoS (Denial-of-Service)-Angriffe zu verhindern. Sie können dieses Kontingent erhöhen, indem Sie die folgende Konfigurationsdatei für "svcutil.exe" angeben.
 

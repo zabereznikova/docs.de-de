@@ -2,12 +2,12 @@
 title: SQL-Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 84d3fb994c790301ceb55b945bf972c21ed2a971
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 741df337187b2a5fffe63052c9fafbd430f7c2fc
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584319"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836380"
 ---
 # <a name="sql-tracking"></a>SQL-Nachverfolgung
 In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze in eine SQL-Datenbank schreibt, geschrieben wird. Windows Workflow Foundation (WF) stellt die workflownachverfolgung um Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Weitere Informationen zur workflownachverfolgung finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).
@@ -33,7 +33,7 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachver
   
 7.  Der Browser zeigt die Seite "StockPriceService" an, die die WSDL-Adresse des lokalen Diensts enthält. Kopieren Sie diese Adresse.  
   
-     Ein Beispiel für die WSDL-Adresse des lokalen Diensts ist http://localhost:65193/StockPriceService.xamlx?wsdl.  
+     Ein Beispiel für die WSDL-Adresse des lokalen Diensts ist `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
 8.  Führen Sie den WCF-Testclient (WcfTestClient.exe) über [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] aus. Er befindet im Verzeichnis "Microsoft Visual Studio 10.0 \Common7\IDE".  
   

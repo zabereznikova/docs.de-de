@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491854"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837533"
 ---
 # <a name="claims-and-tokens"></a>Ansprüche und Token
 Dieses Thema beschreibt die verschiedenen Anspruchstypen, die Windows Communication Foundation (WCF) aus den Standardtoken erstellt, die es unterstützt.  
   
  Sie können die Ansprüche von Clientanmeldeinformationen prüfen, indem Sie die <xref:System.IdentityModel.Claims.ClaimSet>-Klasse und die <xref:System.IdentityModel.Claims.Claim>-Klasse verwenden. `ClaimSet` enthält eine Auflistung von `Claim`-Objekten. Jeder `Claim` verfügt über die folgenden wichtigen Member:  
   
--   Die <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>-Eigenschaft gibt einen Uniform Resource Identifier (URI) zurück, der den Typ des erhobenen Anspruches angibt. Beispielsweise kann es sich bei einem Anspruchstypen um einen Fingerabdruck eines Zertifikats handeln. In diesem Fall ist der URI http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint.  
+-   Die <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>-Eigenschaft gibt einen Uniform Resource Identifier (URI) zurück, der den Typ des erhobenen Anspruches angibt. Ein Anspruchstyp kann z. B. einen Fingerabdruck eines Zertifikats, in dem Fall ist der URI ist sein `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.  
   
 -   Die <xref:System.IdentityModel.Claims.Claim.Right%2A>-Eigenschaft gibt einen URI zurück, der das Recht des Anspruchs angibt. Vordefinierte Rechte befinden sich in der <xref:System.IdentityModel.Claims.Rights>-Klasse (<xref:System.IdentityModel.Claims.Rights.Identity%2A>, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>).  
   
@@ -50,19 +50,19 @@ Dieses Thema beschreibt die verschiedenen Anspruchstypen, die Windows Communicat
   
     -   Ein `Claim` mit dem `ClaimType` Fingerabdruck, einem `Right` von PossessProperty und einer `Resource`, bei der es sich um ein Bytearray handelt, das den Fingerabdruck des Zertifikats beinhaltet.  
   
-    -   Zusätzliche PossessProperty-Ansprüche verschiedener Typen, einschließlich X500DistinguishedName, DNS, Name, UPN und RSA sind verschiedene Eigenschaften des Zertifikats. Die Ressource für den Rsa-Anspruch ist der öffentliche Schlüssel mit dem Zertifikat verknüpft ist. **Hinweis** , in dem der Typ der Clientanmeldeinformationen ein Zertifikat ist, der Dienst Windows zugeordnet, zu berücksichtigen, zwei `ClaimSet` -Objekte generiert. Die erste Ressource beinhaltet alle Ansprüche in Zusammenhang mit dem Windows-Konto, und die zweite Ressource beinhaltet alle Ansprüche, die mit dem Zertifikat in Zusammenhang stehen.  
+    -   Zusätzliche PossessProperty-Ansprüche verschiedener Typen, einschließlich X500DistinguishedName, DNS, Name, UPN und RSA sind verschiedene Eigenschaften des Zertifikats. Die Ressource für den Rsa-Anspruch ist der öffentliche Schlüssel mit dem Zertifikat verknüpft ist. **Hinweis** , in denen der Typ der Clientanmeldeinformationen ein Zertifikat ist, die die dienstzuordnungen zu einer Windows-Konto zwei `ClaimSet` Objekte generiert werden. Die erste Ressource beinhaltet alle Ansprüche in Zusammenhang mit dem Windows-Konto, und die zweite Ressource beinhaltet alle Ansprüche, die mit dem Zertifikat in Zusammenhang stehen.  
   
 ## <a name="user-namepassword"></a>Benutzername/Kennwort  
- Handelt es sich bei den Clientanmeldeinformationen um einen Benutzernamen bzw. ein Kennwort (oder Äquivalent), der bzw. das keinem Windows-Konto zugeordnet ist, wird der daraus resultierende `ClaimSet` von der statischen <xref:System.IdentityModel.Claims.ClaimSet.System%2A>-Eigenschaft der `ClaimSet`-Klasse ausgestellt. Die `ClaimSet` enthält ein `Identity` Anspruch des Typs <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> enthält, deren Ressourcen der Benutzername des Clients ist. Ein entsprechender Anspruch besitzt ein`Right` von `PossessProperty`.  
+ Handelt es sich bei den Clientanmeldeinformationen um einen Benutzernamen bzw. ein Kennwort (oder Äquivalent), der bzw. das keinem Windows-Konto zugeordnet ist, wird der daraus resultierende `ClaimSet` von der statischen <xref:System.IdentityModel.Claims.ClaimSet.System%2A>-Eigenschaft der `ClaimSet`-Klasse ausgestellt. Die `ClaimSet` enthält ein `Identity` -Anspruch vom Typ <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> , dessen Ressource der Benutzername des Clients ist. Ein entsprechender Anspruch besitzt ein`Right` von `PossessProperty`.  
   
 ## <a name="rsa-keys"></a>RSA-Schlüssel  
- Während ein RSA-Schlüssel, die nicht mit einem Zertifikat verknüpfte verwendet wird, das resultierende `ClaimSet` selbst-herausgegeben und enthält eine `Identity` Anspruch des Typs <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> , deren Ressourcen ist die RSA-Schlüssel. Ein entsprechender Anspruch besitzt ein`Right` von `PossessProperty`.  
+ Verwendet ein RSA-Schlüssel, die nicht mit einem Zertifikat zugeordnet, die resultierende `ClaimSet` selbst ausgestellt und enthält eine `Identity` -Anspruch vom Typ <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> , dessen Ressource ist der RSA-Schlüssel. Ein entsprechender Anspruch besitzt ein`Right` von `PossessProperty`.  
   
 ## <a name="saml"></a>SAML  
  Wird der Client mit einem Security Assertions Markup Language (SAML)-Token authentifiziert, wird der resultierende `ClaimSet` von der Entität ausgestellt, von der das SAML-Token signiert wurde. Oftmals handelt es sich dabei um das Zertifikat des Sicherheitstokendiensts (STS), von dem das SAML-Token ausgestellt wurde. `ClaimSet` enthält verschiedene Ansprüche, die sich im SAML-Token befinden. Beinhaltet das SAML-Token einen `SamlSubject` mit einem Nicht-`null`-Namen, werden ein `Identity`-Anspruch mit dem Typ <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> und ein Ressourcentyp von <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> erstellt.  
   
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Identitätsansprüche und ServiceSecurityContext.IsAnonymous  
- Wenn keines der `ClaimSet` Objekte, die aus den Clientanmeldeinformationen resultierende enthalten einen Anspruch mit einer `Right` von `Identity,` und dann die <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> -Eigenschaft gibt `true`. Ist mindestens ein derartiger Anspruch vorhanden, gibt die `IsAnonymous`-Eigenschaft `false` zurück.  
+ Stimmt keiner der der `ClaimSet` Objekte aus den Clientanmeldeinformationen resultieren, einen Anspruch mit einem `Right` von `Identity,` die <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> -Eigenschaft gibt `true`. Ist mindestens ein derartiger Anspruch vorhanden, gibt die `IsAnonymous`-Eigenschaft `false` zurück.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.IdentityModel.Claims.ClaimSet>  

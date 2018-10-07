@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793340"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840913"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF
 Dieses Thema beschreibt Verfahren zum Migrieren von eines einfachen ASP.NET AJAX-Diensts mit einem entsprechenden AJAX-fähigen Windows Communication Foundation (WCF)-Dienst. Es zeigt, wie eine funktional der WCF-Version von ASP.NET AJAX-Dienst zu erstellen. Die beiden Dienste können dann parallel verwendet werden, oder der WCF-Dienst kann verwendet werden, um die ASP.NET AJAX-Dienst zu ersetzen.

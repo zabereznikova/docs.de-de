@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748863"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838274"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt;-Element
 Stellt eine Auflistung von X.509-Zertifikaten dar, die von bestimmten Diensten (mit Gültigkeitsbereich) zur Authentifizierung bereitgestellt werden. Diese Auflistung wird normalerweise verwendet, um die Dienstzertifikate für Sicherheitstokendienste in einem Verbundsszenario anzugeben.  
@@ -56,10 +56,10 @@ EndpointBehaviors-Abschnitt
   
  Wenn eine Bindung ein Zertifikat für den Dienst erfordert und kein bestimmtes Zertifikat für die Dienst-URL in ScopedCertificates gefunden wird, wird das Standardzertifikat verwendet.  
   
- Weitere Informationen finden Sie im Abschnitt "Zertifikate im Bereich" [Vorgehensweise: Erstellen eines Clients Federated](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Weitere Informationen finden Sie im Abschnitt "Zertifikate mit Gültigkeitsbereich" [Vorgehensweise: Erstellen Sie einen Verbund Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Dienstzertifikat für den Client zu verwenden, wenn bei der Kommunikation mit Endpunkten, deren Domänenname http://www.contoso.com über das HTTP-Protokoll.  
+ Im folgenden Beispiel wird ein Dienstzertifikat für den Client zu verwenden, wenn die Kommunikation mit Endpunkten, deren Domänenname `http://www.contoso.com` über das HTTP-Protokoll.  
   
 ```xml  
 <serviceCertificate>  

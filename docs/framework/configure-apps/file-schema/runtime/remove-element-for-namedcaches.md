@@ -8,11 +8,11 @@ ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781673"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838220"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;Entfernen Sie&gt; -Element für &lt;NamedCaches&gt;
 Entfernt einen benannten Cacheeintrag aus der `namedCaches`-Sammlung für einen Speichercache.  

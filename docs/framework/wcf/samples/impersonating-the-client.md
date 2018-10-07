@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522287"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844292"
 ---
 # <a name="impersonating-the-client"></a>Durchführen eines Identitätswechsels für den Client
 Das Beispiel für einen Identitätswechsel veranschaulicht, wie die Identität der Aufruferanwendung vom Dienst angenommen wird, sodass der Dienst im Namen des Aufrufers auf Systemressourcen zugreifen kann.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Dienst- und Clientkonsolenfenster angezeigt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
   
 > [!NOTE]
->  Der Dienst muss, führen Sie entweder unter einem Administratorkonto oder das Konto unter wird muss werden Berechtigungen zum Registrieren der http://localhost:8000/ServiceModelSamples URI mit der HTTP-Ebene. Unterlizenzierung der Rechte erteilt werden können, durch das Einrichten einer [Namespace Reservierung](https://go.microsoft.com/fwlink/?LinkId=95012) mithilfe der [Tool Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Der Dienst muss, führen Sie entweder unter einem Administratorkonto oder das Konto unter wird muss werden Berechtigungen zum Registrieren der `http://localhost:8000/ServiceModelSamples` URI mit der HTTP-Ebene. Unterlizenzierung der Rechte erteilt werden können, durch das Einrichten einer [Namespace Reservierung](https://go.microsoft.com/fwlink/?LinkId=95012) mithilfe der [Tool Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  Auf Computern mit [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] wird der Identitätswechsel nur unterstützt, wenn die Host.exe-Anwendung über eine Berechtigung zum Identitätswechsel verfügt. (Standardmäßig verfügen nur Administratoren über diese Berechtigung.) Um diese Berechtigung zu einem Konto hinzufügen als der Dienst ausgeführt wird, wechseln Sie zu **Verwaltung**öffnen **Local Security Policy**öffnen **lokale Richtlinien**, klicken Sie auf **Zuweisen von Benutzerrechten**, und wählen Sie **annehmen der Clientidentität nach Authentifizierung** und doppelklicken Sie auf **Eigenschaften** Benutzer oder Gruppe hinzufügen.  

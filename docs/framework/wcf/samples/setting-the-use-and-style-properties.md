@@ -2,12 +2,12 @@
 title: Festlegen der Use-Eigenschaft und der Style-Eigenschaft
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c4cee5fac84d8fb47565cc4ebde47f04365b989e
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865539"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836847"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Festlegen der Use-Eigenschaft und der Style-Eigenschaft
 In diesem Beispiel wird die Verwendung der Use-Eigenschaft und der Style-Eigenschaft in <xref:System.ServiceModel.XmlSerializerFormatAttribute> und <xref:System.ServiceModel.DataContractFormatAttribute> veranschaulicht. Diese Eigenschaften beeinflussen die Formatierung von Nachrichten. Standardmäßig wird der Nachrichtentext mit dem auf <xref:System.ServiceModel.OperationFormatStyle.Document> festgelegten Format formatiert. Diese Einstellungen können entweder auf der Dienstvertragsebene oder der Vorgangsvertragsebene angegeben werden.  
@@ -73,7 +73,7 @@ public interface IUseAndStyleCalculator
 }  
 ```  
   
- Um den Unterschied zwischen den unterschiedlichen Einstellungen für <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> und <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> zu verdeutlichen, ändern Sie sie im Dienst, generieren Sie den Client erneut, führen Sie das Beispiel aus, und betrachten Sie dann die Datei "c:\logs\message.logs" im Service Trace Viewer-Tool. Beachten Sie die Auswirkungen auf die Metadaten auch anhand http://localhost/ServiceModelSamples/service.svc?wsdl. Die Metadaten für Dienste sind normalerweise in mehrere Seiten untergeteilt. WSDL-Hauptseite enthält die WSDL-Bindungen, aber anzeigen http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0 um die Nachrichtendefinitionen.  
+ Um den Unterschied zwischen den unterschiedlichen Einstellungen für <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> und <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> zu verdeutlichen, ändern Sie sie im Dienst, generieren Sie den Client erneut, führen Sie das Beispiel aus, und betrachten Sie dann die Datei "c:\logs\message.logs" im Service Trace Viewer-Tool. Beachten Sie die Auswirkungen auf die Metadaten auch anhand `http://localhost/ServiceModelSamples/service.svc?wsdl`. Die Metadaten für Dienste sind normalerweise in mehrere Seiten untergeteilt. WSDL-Hauptseite enthält die WSDL-Bindungen, aber anzeigen `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` um die Nachrichtendefinitionen.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   

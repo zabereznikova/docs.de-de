@@ -8,24 +8,26 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: bda9bb71dd2e9b6da2de2444013ed724979f61af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ce9ced0c7e6bc13d5cdf331135590ba48c624fb
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535284"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844916"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Übersicht über die ImageList-Komponente (Windows Forms)
-Die <xref:System.Windows.Forms.ImageList>-Komponente in Windows Forms wird zum Speichern von Bildern verwendet, die dann von Steuerelementen angezeigt werden können. Mit einer Bildliste können Sie Code für einen einzelnen, konsistenten Katalog von Bildern schreiben. So können z. B. Bilder, die durch ein <xref:System.Windows.Forms.Button>-Steuerelement angezeigt werden, gedreht werden, indem einfach die <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>- oder <xref:System.Windows.Forms.ButtonBase.ImageKey%2A>-Eigenschaft der Schaltfläche geändert wird. Dieselbe Bildliste kann auch mit mehreren Steuerelementen verbunden werden. Wenn z. B. sowohl ein <xref:System.Windows.Forms.ListView>-Steuerelement als auch ein <xref:System.Windows.Forms.TreeView>-Steuerelement verwendet werden, um dieselbe Liste von Dateien anzuzeigen, bewirkt eine Änderung des Dateisymbols in der Bildliste, dass das neue Symbol in beiden Ansichten angezeigt wird.  
-  
-## <a name="using-imagelist-with-controls"></a>Verwenden von ImageList mit Steuerelementen  
- Eine Bildliste kann mit jedem Steuerelement eingesetzt werden, das eine `ImageList`-Eigenschaft aufweist. Wenn jedoch ein <xref:System.Windows.Forms.ListView>-Steuerelement verwendet wird, muss dieses eine <xref:System.Windows.Forms.ListView.SmallImageList%2A>-Eigenschaft und eine <xref:System.Windows.Forms.ListView.LargeImageList%2A>-Eigenschaft aufweisen. Die folgenden Steuerelemente können mit einer Bildliste verbunden werden: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> und <xref:System.Windows.Forms.Label>. Legen Sie die `ImageList`-Eigenschaft des Steuerelements auf den Namen der <xref:System.Windows.Forms.ImageList>-Komponente fest, um die Bildliste einem Steuerelement zuzuordnen.  
-  
-## <a name="key-properties"></a>Schlüsseleigenschaften  
- Die wichtigste Eigenschaft der <xref:System.Windows.Forms.ImageList>-Komponente ist <xref:System.Windows.Forms.ImageList.Images%2A>, in der die Bilder enthalten sind, die vom zugeordneten Steuerelement verwendet werden. Der Zugriff auf jedes einzelne Bild kann über dessen Indexwert oder dessen Schlüssel erfolgen. Mit der <xref:System.Windows.Forms.ImageList.ColorDepth%2A>-Eigenschaft wird die Anzahl der Farben bestimmt, mit denen die Bilder dargestellt werden. Alle Bilder werden in derselben Größe angezeigt, die durch die <xref:System.Windows.Forms.ImageList.ImageSize%2A>-Eigenschaft festgelegt ist. Größere Bilder werden entsprechend angepasst.  
-  
- Bei Verwendung von [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] haben Sie Zugriff auf eine umfangreiche Bibliothek von Standardbildern, die Sie in Ihren Anwendungen verwenden können.  
-  
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ImageList>  
- [Gewusst wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+
+Die <xref:System.Windows.Forms.ImageList>-Komponente in Windows Forms wird zum Speichern von Bildern verwendet, die dann von Steuerelementen angezeigt werden können. Mit einer Bildliste können Sie Code für einen einzelnen, konsistenten Katalog von Bildern schreiben. So können z. B. Bilder, die durch ein <xref:System.Windows.Forms.Button>-Steuerelement angezeigt werden, gedreht werden, indem einfach die <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A>- oder <xref:System.Windows.Forms.ButtonBase.ImageKey%2A>-Eigenschaft der Schaltfläche geändert wird. Dieselbe Bildliste kann auch mit mehreren Steuerelementen verbunden werden. Wenn z. B. sowohl ein <xref:System.Windows.Forms.ListView>-Steuerelement als auch ein <xref:System.Windows.Forms.TreeView>-Steuerelement verwendet werden, um dieselbe Liste von Dateien anzuzeigen, bewirkt eine Änderung des Dateisymbols in der Bildliste, dass das neue Symbol in beiden Ansichten angezeigt wird.
+
+## <a name="using-imagelist-with-controls"></a>Verwenden von ImageList mit Steuerelementen
+
+Eine Bildliste kann mit jedem Steuerelement eingesetzt werden, das eine `ImageList`-Eigenschaft aufweist. Wenn jedoch ein <xref:System.Windows.Forms.ListView>-Steuerelement verwendet wird, muss dieses eine <xref:System.Windows.Forms.ListView.SmallImageList%2A>-Eigenschaft und eine <xref:System.Windows.Forms.ListView.LargeImageList%2A>-Eigenschaft aufweisen. Die folgenden Steuerelemente können mit einer Bildliste verbunden werden: <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ToolBar>, <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.CheckBox>, <xref:System.Windows.Forms.RadioButton> und <xref:System.Windows.Forms.Label>. Legen Sie die `ImageList`-Eigenschaft des Steuerelements auf den Namen der <xref:System.Windows.Forms.ImageList>-Komponente fest, um die Bildliste einem Steuerelement zuzuordnen.
+
+## <a name="key-properties"></a>Schlüsseleigenschaften
+
+Die wichtigste Eigenschaft der <xref:System.Windows.Forms.ImageList>-Komponente ist <xref:System.Windows.Forms.ImageList.Images%2A>, in der die Bilder enthalten sind, die vom zugeordneten Steuerelement verwendet werden. Der Zugriff auf jedes einzelne Bild kann über dessen Indexwert oder dessen Schlüssel erfolgen. Mit der <xref:System.Windows.Forms.ImageList.ColorDepth%2A>-Eigenschaft wird die Anzahl der Farben bestimmt, mit denen die Bilder dargestellt werden. Alle Bilder werden in derselben Größe angezeigt, die durch die <xref:System.Windows.Forms.ImageList.ImageSize%2A>-Eigenschaft festgelegt ist. Größere Bilder werden entsprechend angepasst.
+
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Windows.Forms.ImageList>
+- [Gewusst wie: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

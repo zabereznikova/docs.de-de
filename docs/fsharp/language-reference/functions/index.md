@@ -3,11 +3,11 @@ title: Funktionen (F#)
 description: Informationen Sie zu Funktionen in f# und wie f# gemeinsamen Konstrukte der funktionalen Programmierung unterstützt.
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781621"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839569"
 ---
 # <a name="functions"></a>Funktionen
 

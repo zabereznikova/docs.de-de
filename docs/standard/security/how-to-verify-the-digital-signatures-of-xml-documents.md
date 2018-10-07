@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111853"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840361"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten
-Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden.  Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.  Weitere Informationen zum XMLDSIG-Standard finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter http://www.w3.org/TR/xmldsig-core/.  
+Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden. Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden. Weitere Informationen zum XMLDSIG-Standard finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter <https://www.w3.org/TR/xmldsig-core/>.
   
  Das Codebeispiel in dieser Vorgehensweise veranschaulicht, wie eine digitale XML-Signatur überprüft wird, die in einem <`Signature`>-Element enthalten ist.   Im Beispiel wird ein öffentlicher RSA-Schlüssel aus einem Schlüsselcontainer abgerufen und anschließend zum Überprüfen der Signatur verwendet.   
   

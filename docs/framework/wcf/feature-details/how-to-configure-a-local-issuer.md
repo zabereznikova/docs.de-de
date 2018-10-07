@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bddab91fed0f8267804cdf8506c9a632c50d174
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495092"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837127"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Vorgehensweise: Konfigurieren eines lokalen Ausstellers
 In diesem Thema wird beschrieben, wie Sie einen Client für die Verwendung eines lokalen Ausstellers für ausgestellte Token konfigurieren.  
   
- Wenn ein Client mit einem Verbunddienst kommuniziert, wird vom Dienst die Adresse des Sicherheitstokendiensts angegeben, der das Token ausgeben soll, das vom Client für die Authentifizierung am Verbunddienst verwendet werden soll. In bestimmten Situationen kann der Client konfiguriert werden zum Verwenden einer *lokalen Ausstellers*.  
+ Wenn ein Client mit einem Verbunddienst kommuniziert, wird vom Dienst die Adresse des Sicherheitstokendiensts angegeben, der das Token ausgeben soll, das vom Client für die Authentifizierung am Verbunddienst verwendet werden soll. In bestimmten Situationen kann der Client konfiguriert werden um verwenden eine *lokalen Ausstellers*.  
   
- Windows Communication Foundation (WCF) verwendet einen lokalen Aussteller in den Fällen, in denen die Ausstelleradresse einer verbundbindung http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous oder `null`. In diesem Fall müssen Sie <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfigurieren.  
+ Windows Communication Foundation (WCF) verwendet einen lokalen Aussteller in Fällen, in denen die Ausstelleradresse einer verbundbindung `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` oder `null`. In diesem Fall müssen Sie <xref:System.ServiceModel.Description.ClientCredentials> mit der Adresse des lokalen Ausstellers und der für die Kommunikation mit diesem Aussteller zu verwendenden Bindung konfigurieren.  
   
 > [!NOTE]
->  Wenn die <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> Eigenschaft von der `ClientCredentials` -Klasse festgelegt, dass `true`, eine Adresse des lokalen Ausstellers nicht angegeben ist, und die Ausstelleradresse gemäß der [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder andere verbundbindung ist http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, oder `null`, klicken Sie dann den Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Aussteller verwendet wird.  
+>  Wenn die <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> Eigenschaft der `ClientCredentials` -Klasse festgelegt, dass `true`keine lokale Ausstelleradresse angegeben ist und die Ausstelleradresse angegeben wird, durch die [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) oder andere verbundbindung `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, oder `null`, klicken Sie dann die Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Aussteller verwendet wird.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>So konfigurieren Sie den lokalen Aussteller im Code  
   
@@ -44,7 +44,7 @@ In diesem Thema wird beschrieben, wie Sie einen Client für die Verwendung eines
      [!code-csharp[c_CreateSTS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#11)]
      [!code-vb[c_CreateSTS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#11)]  
   
-     Die `addressHeaders` Parameter ist ein Array von <xref:System.ServiceModel.Channels.AddressHeader> -Instanzen bestehen, wie dargestellt.  
+     Die `addressHeaders` -Parameter ist ein Array von <xref:System.ServiceModel.Channels.AddressHeader> Instanzen, wie hier gezeigt.  
   
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
      [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
@@ -61,15 +61,15 @@ In diesem Thema wird beschrieben, wie Sie einen Client für die Verwendung eines
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>So konfigurieren Sie den lokalen Aussteller in der Konfiguration  
   
-1.  Erstellen einer [ \<LocalIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) Element als untergeordnetes Element von der [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) Element, das sich selbst untergeordnet ist die [ \<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Element in ein Endpunktverhalten.  
+1.  Erstellen einer [ \<LocalIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) Element als untergeordnetes Element der [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) -Element, das selbst untergeordnet ist die [ \<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Element in einem Endpunktverhalten darstellt.  
   
 2.  Legen Sie das `address`-Attribut auf die Adresse des lokalen Ausstellers fest, der Tokenanforderungen annimmt.  
   
 3.  Legen Sie das `binding`-Attribut und das `bindingConfiguration`-Attribut auf Werte fest, mit denen die für die Kommunikation mit dem lokalen Ausstellerendpunkt geeignete Bindung referenziert wird.  
   
-4.  Dies ist optional. Legen Sie die [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) Element als untergeordnetes Element von der <`localIssuer`> Element, und geben Sie Identitätsinformationen für den lokalen Aussteller.  
+4.  Dies ist optional. Legen Sie die [ \<Identität >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) Element als untergeordnetes Element der <`localIssuer`> Element, und geben Sie Identitätsinformationen für den lokalen Aussteller.  
   
-5.  Dies ist optional. Legen Sie die [ \<Header >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) Element als untergeordnetes Element von der <`localIssuer`> Element, und geben Sie zusätzliche Header, die erforderlich sind, um zu den lokalen Aussteller ordnungsgemäß zu adressieren.  
+5.  Dies ist optional. Festlegen der [ \<Header >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) Element als untergeordnetes Element der <`localIssuer`> Element, und geben Sie zusätzliche Header, die erforderlich sind, um zu den lokalen Aussteller ordnungsgemäß zu adressieren.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Beachten Sie, dass beim Angeben einer Ausstelleradresse und einer Ausstellerbindung für eine bestimmte Bindung nicht der lokale Aussteller für Endpunkte verwendet wird, die diese Bindung verwenden. Clients, die immer den lokalen Aussteller verwenden möchten, sollten sicherstellen, dass keine solche Bindung verwendet wird oder dass die Bindung so geändert wird, dass die Ausstelleradresse `null` lautet.  
