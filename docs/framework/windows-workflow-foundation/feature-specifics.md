@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation-Funktionsdetails
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6929150f786f0d6b4a5887eb5c0758ebcfdd411c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205074"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846005"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Windows Workflow Foundation eine Reihe von Funktionen hinzugefügt. In diesem Dokument wird eine Reihe neuer Funktionen beschrieben. Darüber hinaus enthält das Dokument detaillierte Informationen zu den Szenarien, in denen sie möglicherweise nützlich sind.  
@@ -17,19 +17,11 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started-with-messaging-activities"></a>Erste Schritte mit Messagingaktivitäten  
   
--   Erstellen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] ein Projekt für eine Dienstanwendung für WCF-Workflows. Das Paar <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> wird auf dem Canvas platziert.  
+-   Erstellen Sie in Visual Studio 2012 ein WCF-Workflowdienstanwendung-Projekt ein. Das Paar <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> wird auf dem Canvas platziert.  
   
--   Mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen eines Dienstverweises**.  Zeigen Sie auf einen vorhandenen Webdienst-WSDL, und klicken Sie auf **OK**.  Erstellen Sie das Projekt aus, um die generierten Aktivitäten anzuzeigen (implementiert mit <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.ReceiveReply>) in der Toolbox.  
+-   Mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen eines Dienstverweises**.  Zeigen Sie auf einen vorhandenen Webdienst-WSDL, und klicken Sie auf **OK**.  Erstellen Sie das Projekt aus, um die generierten Aktivitäten anzuzeigen (implementiert mit <xref:System.ServiceModel.Activities.Send> und <xref:System.ServiceModel.Activities.ReceiveReply>) in der Toolbox.
   
--   Beispiele für diese Aktivitäten finden Sie in den folgenden Abschnitten:  
-  
-    -   Basic: [Dienste](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   In folgenden Szenarien: [Dienste](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
--   [Konzeptionelle Dokumentation](https://go.microsoft.com/fwlink/?LinkId=204801)  
-  
--   [Dokumentation für den Designer Messaging](https://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [Workflow-Services-Dokumentation](../wcf/feature-details/workflow-services.md)
   
 ### <a name="messaging-activities-example-scenario"></a>Beispielszenario für Messagingaktivitäten  
  Ein `BestPriceFinder` Dienst Ruft Informationen zu mehrere Airline-Services, um den besten TicketPreis für eine bestimmte Route zu suchen.  Implementieren dieses Szenario müssten Sie Nachrichtenaktivitäten verwendet, um die preisanforderung zu empfangen, die Preise von den Back-End-Diensten abzurufen und auf die preisanforderung mit dem besten Preis zu antworten.  Es wäre auch müssen Sie andere Aktivitäten des Out-of-Box zu verwenden, um die Geschäftslogik für die Berechnung von des besten Preis zu erstellen.  
@@ -47,15 +39,11 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 -   Beispiele für <xref:System.ServiceModel.WorkflowServiceHost> finden Sie in den folgenden Abschnitten:  
   
-    -   [Ausführung](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+    -   [Ausführung](samples/execution.md)
   
-    -   Basic: [Dienste](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+    -   Anwendung: [angehaltene Instanzverwaltung](samples/suspended-instance-management.md)  
   
-    -   In folgenden Szenarien: [Dienste](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Anwendung: [angehaltene Instanzverwaltung](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
-  
--   [WorkflowServiceHost-Dokumentation](https://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [Übersicht über Workflowdienste gehostet](../wcf/feature-details/hosting-workflow-services-overview.md)  
   
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost-Szenario  
  Ein BestPriceFinder-Dienst ruft mehrere Airline-Dienste, um den besten TicketPreis für eine bestimmte Route zu suchen.  Dieses Szenario implementieren, müssten Sie der Workflow in <xref:System.ServiceModel.WorkflowServiceHost>.  Er würde Nachrichtenaktivitäten auch verwenden, um die preisanforderung zu empfangen, die Preise von den Back-End-Diensten abzurufen und auf die preisanforderung mit dem besten Preis zu antworten.  
@@ -79,15 +67,9 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 -   Ein Beispiel für die Zuordnung eines Datenelements zu einer Dienstinstanz ist die inhaltsbasierte Korrelation, bei der ein Datenelement (z. B. eine Auftrags-ID) einer bestimmten Workflowinstanz zugeordnet wird.  
   
-    -   Klicken Sie auf die `CorrelationInitializers`-Eigenschaft einer Messagingaktivität, und fügen Sie mit der oben erstellten <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>-Variable einen <xref:System.ServiceModel.Activities.CorrelationHandle> hinzu. Doppelklicken Sie im Dropdownmenü auf die gewünschte Eigenschaft der Nachricht (z. B. "OrderID"). Legen Sie die `CorrelatesWith`-Eigenschaft auf die oben verwendete <xref:System.ServiceModel.Activities.CorrelationHandle>-Variable fest.  
+    -   Klicken Sie auf die `CorrelationInitializers`-Eigenschaft einer Messagingaktivität, und fügen Sie mit der oben erstellten <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>-Variable einen <xref:System.ServiceModel.Activities.CorrelationHandle> hinzu. Doppelklicken Sie im Dropdownmenü auf die gewünschte Eigenschaft der Nachricht (z. B. "OrderID"). Legen Sie die `CorrelatesWith`-Eigenschaft auf die oben verwendete <xref:System.ServiceModel.Activities.CorrelationHandle>-Variable fest. 
   
--   Beispiele:  
-  
-    -   Basic: [Dienste](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   In folgenden Szenarien: [Dienste](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   [Korrelationsdokumentation](https://go.microsoft.com/fwlink/?LinkId=204939)  
+-   [Korrelationsdokumentation](../wcf/feature-details/correlation.md)  
   
 ### <a name="correlation-scenario"></a>Korrelationsszenario  
  Erstellen neuer und Aktualisieren vorhandener Aufträge, die verarbeitet werden, wird ein bestellungsverarbeitungs Workflow verwendet.  Dieses Szenario implementieren, müssten Sie der Workflow in <xref:System.ServiceModel.WorkflowServiceHost> und messagingaktivitäten verwenden.  Es müsste auch die Korrelation auf Grundlage der `orderId` um sicherzustellen, dass der richtige Workflow Updates vorgenommen werden.  
@@ -155,7 +137,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started"></a>Erste Schritte  
   
--   Erstellen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer ein Flussdiagramm hinzu.  
+-   Erstellen Sie in Visual Studio 2012 eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer ein Flussdiagramm hinzu.  
   
 -   Die Flussdiagrammfunktion verwendet die folgenden Klassen:  
   
@@ -171,9 +153,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 -   Beispiele:  
   
-    -   [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    -   [StateMachine-Szenario mit einer Kombination aus FlowChart und Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) 
   
     -   [Einstellungsprozess](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -201,7 +181,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started"></a>Erste Schritte  
   
--   Erstellen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer Verfahrensaktivitäten hinzu.  
+-   Erstellen Sie in Visual Studio 2012 eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer Verfahrensaktivitäten hinzu.  
   
 -   Beispiele:  
   
@@ -226,11 +206,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started"></a>Erste Schritte  
   
--   Erstellen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] eine Konsolenanwendung für Workflows. Fügen Sie eine <xref:System.Activities.Statements.InvokeMethod>-Aktivität im Workflow-Designer hinzu, und konfigurieren Sie statische und Instanzmethoden für die Aktivität.  
-  
--   Beispiele:  
-  
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+-   Erstellen Sie in Visual Studio 2012 eine Konsolenanwendung für Workflows. Fügen Sie eine <xref:System.Activities.Statements.InvokeMethod>-Aktivität im Workflow-Designer hinzu, und konfigurieren Sie statische und Instanzmethoden für die Aktivität.  
   
 -   Designerdokumentation: [InvokeMethod-Aktivitätsdesigner](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -245,13 +221,9 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started"></a>Erste Schritte  
   
--   Erstellen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer eine <xref:System.Activities.Statements.TryCatch>-Aktivität hinzu.  
+-   Erstellen Sie in Visual Studio 2012 eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer eine <xref:System.Activities.Statements.TryCatch>-Aktivität hinzu.  
   
--   Beispiele:  
-  
-    1.  [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    2.  [Verwenden von Verfahrensaktivitäten](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+-   Beispiel: [Fault-Behandlung in einer Flussdiagrammaktivität mit TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
 -   Designerdokumentation: [Fehlerbehandlungs-Aktivitätsdesigner](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
@@ -263,7 +235,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started"></a>Erste Schritte  
   
--   Erstellen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer eine <xref:System.Activities.Statements.Pick>-Aktivität hinzu.  
+-   Erstellen Sie in Visual Studio 2012 eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer eine <xref:System.Activities.Statements.Pick>-Aktivität hinzu.  
   
 -   Beispiel: [verwenden der Pick-Aktivität](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
@@ -337,7 +309,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started"></a>Erste Schritte  
   
-1.  Erstellen Sie in [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] ein Projekt für eine Dienstanwendung für WCF-Workflows. Um mit der Projekterstellung zu beginnen, werden <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> auf dem Canvas platziert.  
+1.  Erstellen Sie in Visual Studio 2010 ein Projekt für eine Dienstanwendung für WCF-Workflows. Um mit der Projekterstellung zu beginnen, werden <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> auf dem Canvas platziert.  
   
 2.  Öffnen Sie die Datei "web.config", und fügen Sie ein ETW-Nachverfolgungsverhalten ohne Profil hinzu.  
   
@@ -358,7 +330,7 @@ Durch [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] werden Wind
   
 ### <a name="getting-started"></a>Erste Schritte  
   
-1.  Erstellen Sie in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] einen Workflow, der eine implizite oder explizite <xref:System.Activities.Statements.Persist>-Aktivität enthält. Fügen Sie dem Workflowdiensthost das <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Verhalten hinzu. Sie können die Aktivität dem Code oder der Anwendungskonfiguration hinzufügen.  
+1.  In Visual Studio 2012, erstellen Sie einen Workflow, der eine implizite oder explizite enthält <xref:System.Activities.Statements.Persist> Aktivität. Fügen Sie dem Workflowdiensthost das <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Verhalten hinzu. Sie können die Aktivität dem Code oder der Anwendungskonfiguration hinzufügen.  
   
 2.  Beispiele: [Persistenz](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   

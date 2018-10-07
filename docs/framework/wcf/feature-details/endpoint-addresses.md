@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855714"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847404"
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
 Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Adresse des Endpunkts wird dargestellt, in der Windows Communication Foundation (WCF)-Programmiermodell von der <xref:System.ServiceModel.EndpointAddress> -Klasse, die ein optionales enthält <xref:System.ServiceModel.EndpointAddress.Identity%2A> -Eigenschaft, die die Authentifizierung des Endpunkts durch andere Endpunkte ermöglicht, austauschen, mit denen er Meldungen und einen Satz Optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A> Eigenschaften, die alle anderen zum Erreichen des Diensts erforderlichen SOAP-Header festlegen. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
   
 ## <a name="uri-structure-of-an-address"></a>URI-Struktur einer Adresse  
- Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Z. B. die vier Teile des URIS http://www.fabrikam.com:322/mathservice.svc/secureEndpoint können wie folgt aufgeführt werden:  
+ Der Adress-URI besteht für die meisten Transporte aus vier Teilen. Z. B. die vier Teile des URIS `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` können wie folgt aufgeführt werden:  
   
--   Schema: http:  
+-   Schema: `http:`
   
 -   Computer: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  Eine Website kann beispielsweise die folgenden Basisadressen enthalten:  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  Bei [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] geben Sie in der Konfigurationsdatei auf der AppDomain-Ebene einen Präfixfilter an. Dies erledigen Sie über die [ \<BaseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) Element, das eine Liste der Präfixe enthält. Die eingehenden, von IIS angegebenen Basisadressen werden anhand der optionalen Präfixliste gefiltert. Standardmäßig werden alle Adressen übergeben, wenn ein Präfix nicht angegeben ist. Wenn die Präfixergebnisse angegeben werden, wird nur die Basisadresse übergeben, die dem Schema entspricht.  
   
@@ -75,7 +75,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
 </system.serviceModel>  
 ```  
   
- Im vorherigen Beispiel TCP://Payroll.myorg.com: 8000 und http://shipping.myorg.com:8000 sind die einzigen Basisadressen für die jeweiligen Schemata, die übergeben werden.  
+ Im vorherigen Beispiel `net.tcp://payroll.myorg.com:8000` und `http://shipping.myorg.com:8000` sind die einzigen Basisadressen für die jeweiligen Schemata, die übergeben werden.  
   
  Der `baseAddressPrefixFilter` unterstützt keine Platzhalter.  
   
