@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034336"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847827"
 ---
-# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="b3a84-102">IMetaDataEmit::ApplyEditAndContinue-Methode</span><span class="sxs-lookup"><span data-stu-id="b3a84-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
-<span data-ttu-id="b3a84-103">Aktualisiert den aktuellen Assemblybereich mit den Änderungen in den angegebenen Metadaten.</span><span class="sxs-lookup"><span data-stu-id="b3a84-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
+# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="adb58-102">IMetaDataEmit::ApplyEditAndContinue-Methode</span><span class="sxs-lookup"><span data-stu-id="adb58-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
+<span data-ttu-id="adb58-103">Aktualisiert den aktuellen Assemblybereich mit den Änderungen in den angegebenen Metadaten.</span><span class="sxs-lookup"><span data-stu-id="adb58-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3a84-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b3a84-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="adb58-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="adb58-104">Syntax</span></span>  
   
 ```  
 HRESULT ApplyEditAndContinue (   
@@ -35,21 +35,21 @@ HRESULT ApplyEditAndContinue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b3a84-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b3a84-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="adb58-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="adb58-105">Parameters</span></span>  
  `pImport`  
- <span data-ttu-id="b3a84-106">\[in\] Zeiger auf ein [IUnknown](/cpp/atl/iunknown) Objekt, das die Deltametadaten aus der Datei (portable Executable)-Datei darstellt.</span><span class="sxs-lookup"><span data-stu-id="b3a84-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
+ <span data-ttu-id="adb58-106">\[in\] Zeiger auf ein [IUnknown](/cpp/atl/iunknown) Objekt, das die Deltametadaten aus der Datei (portable Executable)-Datei darstellt.</span><span class="sxs-lookup"><span data-stu-id="adb58-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
   
- <span data-ttu-id="b3a84-107">Die Deltametadaten ist der Block von Metadaten mit den Änderungen, die auf die Kopie des Moduls eigentlichen Metadaten vorgenommen wurden.</span><span class="sxs-lookup"><span data-stu-id="b3a84-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
+ <span data-ttu-id="adb58-107">Die Deltametadaten ist der Block von Metadaten mit den Änderungen, die auf die Kopie des Moduls eigentlichen Metadaten vorgenommen wurden.</span><span class="sxs-lookup"><span data-stu-id="adb58-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3a84-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b3a84-108">Requirements</span></span>  
- <span data-ttu-id="b3a84-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3a84-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="adb58-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="adb58-108">Requirements</span></span>  
+ <span data-ttu-id="adb58-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="adb58-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3a84-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b3a84-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="adb58-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="adb58-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b3a84-111">**Bibliothek:** als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="b3a84-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="adb58-111">**Bibliothek:** als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="adb58-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b3a84-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3a84-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="adb58-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="adb58-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3a84-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b3a84-113">See Also</span></span>  
- [<span data-ttu-id="b3a84-114">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b3a84-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="b3a84-115">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b3a84-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="adb58-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="adb58-113">See Also</span></span>  
+ [<span data-ttu-id="adb58-114">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="adb58-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="adb58-115">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="adb58-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
