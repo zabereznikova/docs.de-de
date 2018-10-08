@@ -2,12 +2,12 @@
 title: Installieren von f#
 description: Erfahren Sie, wie Sie F#-basierend auf Ihrer Umgebung installieren.
 ms.date: 08/28/2018
-ms.openlocfilehash: 6c10b958e35bf7925965d076a48839b0ce19d2c0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515896"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844006"
 ---
 # <a name="install-f"></a>Installieren von f# #
 
@@ -17,7 +17,7 @@ Sie können f# auf verschiedene Arten, abhängig von Ihrer Umgebung installieren
 
 Wenn Sie herunterladen werden [Visual Studio](https://visualstudio.microsoft.com/) zum ersten Mal wird es zunächst Visual Studio-Installer installieren. Installieren Sie die entsprechende SKU von Visual Studio über den Installer. Wenn Sie bereits installiert haben, klicken Sie auf **ändern**.
 
-Als Nächstes sehen Sie, eine Liste von Workloads. Wählen Sie **ASP.NET und Webentwicklung**, die f#-Unterstützung, Unterstützung für .NET Core, installiert und F#-Unterstützung für ASP.NET Core-Projekte.
+Als Nächstes sehen Sie, eine Liste von Workloads. Wählen Sie **ASP.NET und Webentwicklung** der f#-Unterstützung und Unterstützung für ASP.NET Core-Projekte für .NET Core installieren.
 
 Klicken Sie anschließend **ändern** in der unteren rechten Ecke.  Dadurch wird alles, was installiert, die Sie ausgewählt haben. Anschließend können Sie Visual Studio 2017 mit F#-sprachunterstützung öffnen, indem Sie auf **starten**.
 

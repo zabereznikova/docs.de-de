@@ -3,11 +3,11 @@ title: Strukturen (F#)
 description: Erfahren Sie mehr über die F#-Struktur, ein kompakter Objekttyp, der häufig effizienter als eine Klasse für Typen mit einer geringeren Menge an Daten und ein einfaches Verhalten.
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47459855"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845296"
 ---
 # <a name="structures"></a>Strukturen
 
