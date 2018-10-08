@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462463"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850686"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Übersicht über das DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -90,7 +90,7 @@ Ein DataGrid-Steuerelement mit einer Bindung an Daten in mehreren Tabellen
 |Mehrere verknüpfte Tabellen|Im Raster kann eine Strukturansicht angezeigt werden, in der Tabellen ausgewählt werden können. Sie können aber auch angeben, dass im Raster die übergeordnete Tabelle angezeigt werden soll. Mithilfe von Datensätzen in der übergeordneten Tabelle können Benutzer zu den entsprechenden untergeordneten Zeilen navigieren.|  
   
 > [!NOTE]
->  Tabellen in einem DataSet werden mithilfe eines <xref:System.Data.DataRelation>-Objekts verknüpft.  Siehe auch [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" Beziehungen in Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) oder [Beziehungen in Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+> Tabellen in einem DataSet werden mithilfe eines <xref:System.Data.DataRelation>-Objekts verknüpft. Siehe auch [Beziehungen zwischen Datasets erstellen](/visualstudio/data-tools/relationships-in-datasets).
   
  Wenn das <xref:System.Windows.Forms.DataGrid>-Steuerelement eine Tabelle anzeigt und die <xref:System.Windows.Forms.DataGrid.AllowSorting%2A>-Eigenschaft auf `true` festgelegt ist, können die Daten durch Klicken auf die Spaltenheader sortiert werden. Der Benutzer kann auch Zeilen hinzufügen und Zellen bearbeiten.  
   
