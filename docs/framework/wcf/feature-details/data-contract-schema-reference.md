@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088036"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873718"
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
@@ -32,7 +32,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 ## <a name="general-information"></a>Allgemeine Informationen  
   
--   Der Schemanamespace wird unter beschrieben [XML-Schema](https://go.microsoft.com/fwlink/?LinkId=95475). In diesem Dokument wird das Präfix "xs" verwendet.  
+-   Der Schemanamespace wird unter [XML-Schema](https://go.microsoft.com/fwlink/?LinkId=95475)beschrieben. In diesem Dokument wird das Präfix "xs" verwendet.  
   
 -   Alle Attribute mit einem Nicht-Schema-Namespace werden ignoriert.  
   
@@ -47,22 +47,22 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`elementFormDefault`|Muss qualifiziert sein. Damit ein Schema vom `DataContractSerializer`unterstützt wird, müssen alle Elemente qualifiziert werden. Dies kann erreicht werden, indem entweder xs:schema/@elementFormDefault "qualified" oder durch Festlegen von xs:element/@form auf jeder einzelnen Elementdeklaration auf "qualified".|  
 |`finalDefault`|Ignoriert.|  
 |`Id`|Ignoriert.|  
-|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Nicht möglich, der reservierte Namespace http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Nicht möglich, der reservierte Namespace `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Ignoriert.|  
   
 ### <a name="xsschema-contents"></a>\<xs: Schema >: Inhalt  
   
 |Inhalt|Schema|  
 |--------------|------------|  
-|`include`|Unterstützt. `DataContractSerializer` unterstützt xs:include und xs:import. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
+|`include`|Unterstützt. `DataContractSerializer` unterstützt xs:include und xs:import. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation`- und `xs:import/@location`-Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
 |`redefine`|Unzulässig. Die Verwendung von `xs:redefine` durch `DataContractSerializer` ist aus Sicherheitsgründen unzulässig: `x:redefine` erfordert, dass `schemaLocation` befolgt wird. Unter bestimmten Umständen schränkt Svcutil.exe mit DataContract die Verwendung von `schemaLocation`ein.|  
-|`import`|Unterstützt. `DataContractSerializer` unterstützt `xs:include` und `xs:import`. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
+|`import`|Unterstützt. `DataContractSerializer` unterstützt `xs:include` und `xs:import`. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include` angegebene Schemadokumente werden ignoriert.|  
 |`simpleType`|Unterstützt. Siehe den Abschnitt `xs:simpleType` .|  
 |`complexType`|Unterstützt, wird Datenverträgen zugeordnet. Siehe den Abschnitt `xs:complexType` .|  
-|`group`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|`group`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
 |`attributeGroup`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
 |`element`|Unterstützt. Siehe Globale Elementdeklaration (GED).|  
-|`attribute`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|`attribute`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema` ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
 |`notation`|Ignoriert.|  
   
 ## <a name="complex-types--xscomplextype"></a>Komplexe Typen – \<xs: complexType >  
@@ -481,7 +481,7 @@ public class Employee : Person
 |`duration`|<xref:System.TimeSpan>|  
 |`dateTime`|<xref:System.DateTime>.|  
 |`dateTimeOffset`|<xref:System.DateTime> und <xref:System.TimeSpan> für den Offset. Siehe DateTimeOffset-Serialisierung (unten).|  
-|`time`|<xref:System.String>|  
+|`time`|<xref:System.String>.|  
 |`date`|<xref:System.String>|  
 |`gYearMonth`|<xref:System.String>|  
 |`gYear`|<xref:System.String>|  
@@ -490,7 +490,7 @@ public class Employee : Person
 |`gMonth`|<xref:System.String>.|  
 |`boolean`|<xref:System.Boolean>|  
 |`base64Binary`|<xref:System.Byte> -Array.|  
-|`hexBinary`|<xref:System.String>|  
+|`hexBinary`|<xref:System.String>.|  
 |`float`|<xref:System.Single>|  
 |`double`|<xref:System.Double>|  
 |`anyURI`|<xref:System.Uri>|  
@@ -521,10 +521,10 @@ public class Employee : Person
 |`unsignedInt`|<xref:System.UInt32>|  
 |`unsignedShort`|<xref:System.UInt16>|  
 |`unsignedByte`|<xref:System.Byte>|  
-|`positiveInteger`|<xref:System.Int64>|  
+|`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Zuordnung von ISerializable-Typen  
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. `DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Z. B. die `DataContractSerializer` ordnet <xref:System.Exception> in den folgenden XSD-Typ in der http://schemas.datacontract.org/2004/07/System Namespace.  
+ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&amp;#160;1.0 wurde `ISerializable` als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. `DataContractSerializer` unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Z. B. die `DataContractSerializer` ordnet <xref:System.Exception> in den folgenden XSD-Typ in der `http://schemas.datacontract.org/2004/07/System` Namespace.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>DataContract-Serialisierungsschema  
  Eine Anzahl der vom `DataContractSerializer` exportierten Schemas verwendet Typen, Elemente und Attribute eines speziellen Datenvertrags-Serialisierungsnamespace:  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  Das Folgende ist eine vollständige Schemadeklaration für die Datenvertragsserialisierung.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964383"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873117"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Erstellen eines kryptografischen Schemas
 Die kryptografischen Komponenten von .NET Framework können kombiniert werden, um unterschiedliche Schemas zum Ver- und Entschlüsseln von Daten zu erstellen.  
@@ -30,7 +30,7 @@ Die kryptografischen Komponenten von .NET Framework können kombiniert werden, u
   
 5.  Danach beginnen die Teilnehmer eine Konversation mit symmetrischer Verschlüsselung.  
   
- Das Erstellen eines kryptografischen Schemas ist keine leichte Aufgabe. Weitere Informationen zur Verwendung von Kryptografie finden Sie unter dem Thema "Cryptography" in der Platform SDK-Dokumentation unter http://msdn.microsoft.com/library.  
+ Das Erstellen eines kryptografischen Schemas ist keine leichte Aufgabe.
   
 ## <a name="see-also"></a>Siehe auch
 

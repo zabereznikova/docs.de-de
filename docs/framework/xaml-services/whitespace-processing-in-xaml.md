@@ -8,18 +8,18 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777746"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873439"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerzeichen in XAML verarbeitet
 Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet werden müssen, indem eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung. In diesem Thema werden diese XAML-Sprachregeln erläutert. Er dokumentiert auch zusätzliche Leerzeichen behandeln, die von definiert ist die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor und der XAML-Writer für die Serialisierung.  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>White-Space-definition  
- Das sortierflag [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], Leerzeichen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] werden Leerzeichen, Zeilenvorschub und Registerkarte. Diese entsprechen den [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)]-Werten 0020, 000A bzw. 0009.  
+ Das sortierflag [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], Leerzeichen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] werden Leerzeichen, Zeilenvorschub und Registerkarte. Diese entsprechen den [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] -Werten 0020, 000A bzw. 0009.  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>Normalisierung von Leerzeichen  

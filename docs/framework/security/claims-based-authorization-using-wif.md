@@ -3,12 +3,12 @@ title: Anspruchsbasierte Autorisierung mit WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: c13ea5c9f2f62c9c01139741d06de35dd2ff4be1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236055"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872922"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Anspruchsbasierte Autorisierung mit WIF
 In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche Ressourcen eine authentifizierte Identität zugreifen und welche Vorgänge sie mit diesen Ressourcen ausführen darf. Eine falsche oder schwache Autorisierung führt zu Offenlegung von Informationen und Datenmanipulation. In diesem Thema werden die verfügbaren Methoden zum Implementieren der Autorisierung für Ansprüche unterstützende ASP.NET-Webanwendungen und -Dienste mit Windows Identity Foundation (WIF) und einem Sicherheitstokendienst (STS) wie Microsoft Azure-Zugriffssteuerungsdienst (ACS) beschrieben.  
@@ -36,7 +36,7 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
 ### <a name="expressing-roles-as-claims"></a>Ausdrücken von Rollen als Ansprüche  
  Wenn die **IsInRole()**-Methode aufgerufen wird, wird eine Prüfung durchgeführt, um festzustellen, ob der aktuelle Benutzer diese Rolle besitzt. In den Ansprüche unterstützenden Anwendungen wird die Rolle durch einen Rollenanspruchstyp ausgedrückt, der im Token verfügbar sein soll. Der Rollenanspruchstyp wird mithilfe des folgenden URI ausgedrückt:  
   
- http://schemas.microsoft.com/ws/2008/06/identity/claims/role  
+ `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
  Es gibt mehrere Möglichkeiten, ein Token mit einem Rollenanspruchstyp zu erweitern:  
   

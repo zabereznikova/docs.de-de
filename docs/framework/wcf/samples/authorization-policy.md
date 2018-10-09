@@ -2,12 +2,12 @@
 title: Autorisierungsrichtlinie
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198318"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873478"
 ---
 # <a name="authorization-policy"></a>Autorisierungsrichtlinie
 
@@ -284,7 +284,7 @@ Oder Sie können die gleiche Aufgabe in der Konfiguration:
 
 Windows Communication Foundation (WCF) bietet einen umfangreichen anspruchsbasierten Modells, für das Durchführen von zugriffsüberprüfungen. Das <xref:System.ServiceModel.ServiceAuthorizationManager>-Objekt wird verwendet, um die Zugriffsüberprüfung durchzuführen und zu bestimmen, ob die dem Client zugeordneten Ansprüche die Anforderungen erfüllen, die für den Zugriff auf die Dienstmethode erforderlich sind.
 
-Der zu Demonstrationszwecken, dieses Beispiel zeigt eine Implementierung von <xref:System.ServiceModel.ServiceAuthorizationManager> , implementiert die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> Methode, um den Benutzerzugriff auf Methoden ermöglichen auf der Grundlage von Ansprüchen des Typs http://example.com/claims/allowedoperation , deren Wert ist der Aktions-URI, der den Vorgang Sie können aufgerufen werden.
+Der zu Demonstrationszwecken, dieses Beispiel zeigt eine Implementierung von <xref:System.ServiceModel.ServiceAuthorizationManager> , implementiert die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> Methode, um den Benutzerzugriff auf Methoden ermöglichen auf der Grundlage von Ansprüchen des Typs `http://example.com/claims/allowedoperation` , deren Wert ist der Aktions-URI, der den Vorgang Sie können aufgerufen werden.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -460,7 +460,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
 1. Starten Sie Client.exe aus *\client\bin*. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.
 
-  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus
 
@@ -500,7 +500,7 @@ Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschni
 
 14. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.
 
-   Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="clean-up-after-the-sample"></a>Bereinigen Sie nach dem Beispiel
 

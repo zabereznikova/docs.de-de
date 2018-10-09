@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
 ms.openlocfilehash: c7261d20ae2379ad33679cadecdef484f2afdecf
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778076"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873400"
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
 Der Konfigurationsabschnitt für die Authentifizierung mit dem WS-Verbund-Protokoll.  

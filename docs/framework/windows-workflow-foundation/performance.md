@@ -3,11 +3,11 @@ title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035369"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873692"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 Dustin Metzgar
@@ -437,7 +437,7 @@ public class Workflow1 : Activity
  Die Systemüberwachung wirkt sich in etwa zu 3 % auf den Durchsatz aus.  Die Kosten des grundlegenden Profils liegen bei etwa 8 %.
 
 ## <a name="interop"></a>Interop
- WF4 ist fast vollständig neue Version von [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Daher sind WF3-Workflows und Aktivitäten nicht direkt mit WF4 kompatibel.  Viele Kunden, die Windows Workflow Foundation früh übernommen haben interne oder Drittanbieter-workflowdefinitionen und benutzerdefinierte Aktivitäten für WF3.  Eine Möglichkeit, den Übergang zu WF4 zu vereinfachen, ist die Verwendung der Interop-Aktivität, mit der WF3-Aktivitäten in WF4-Workflows ausgeführt werden können.  Es wird empfohlen, die <xref:System.Activities.Statements.Interop>-Aktivität nur bei Bedarf zu verwenden. Weitere Informationen zum Migrieren zu WF4 finden Sie in der [WF4-Migrationsanleitung](https://go.microsoft.com/fwlink/?LinkID=153313).
+ WF4 ist eine fast vollständig neue Version von [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Daher sind WF3-Workflows und Aktivitäten nicht direkt mit WF4 kompatibel.  Viele Kunden, die Windows Workflow Foundation früh übernommen haben interne oder Drittanbieter-workflowdefinitionen und benutzerdefinierte Aktivitäten für WF3.  Eine Möglichkeit, den Übergang zu WF4 zu vereinfachen, ist die Verwendung der Interop-Aktivität, mit der WF3-Aktivitäten in WF4-Workflows ausgeführt werden können.  Es wird empfohlen, die <xref:System.Activities.Statements.Interop>-Aktivität nur bei Bedarf zu verwenden. Weitere Informationen zum Migrieren zu WF4 finden Sie in der [WF4-Migrationsanleitung](https://go.microsoft.com/fwlink/?LinkID=153313).
 
 ### <a name="environment-setup"></a>Umgebungssetup
  ![Testumgebung für workflowleistung](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")

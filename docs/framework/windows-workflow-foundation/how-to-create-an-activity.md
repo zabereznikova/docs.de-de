@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779906"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872956"
 ---
 # <a name="how-to-create-an-activity"></a>Vorgehensweise: Erstellen einer Aktivität
 
 Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Die Ausführungslogik einer Aktivität kann in verwaltetem Code oder mithilfe anderer Aktivitäten implementiert werden. In diesem Thema wird veranschaulicht, wie zwei Aktivitäten erstellt werden. Die erste Aktivität ist eine einfache Aktivität, die die Ausführungslogik auf der Basis von Code implementiert. Die Implementierung der zweiten Aktivität wird mithilfe anderer Aktivitäten definiert. Diese Aktivitäten werden in den folgenden Schritten des Lernprogramms verwendet.
 
 > [!NOTE]
-> Informationen zum Herunterladen einer abgeschlossenen Version des Lernprogramms finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.
 
 ## <a name="create-the-activity-library-project"></a>Erstellen Sie die Workflow-aktivitätsbibliothekprojekt
 
