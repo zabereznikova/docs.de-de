@@ -2,12 +2,12 @@
 title: F#-Programmierung Konventionen
 description: Erfahren Sie, allgemeine Richtlinien und Idiome, beim Schreiben von F#-Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237399"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087387"
 ---
 # <a name="f-coding-conventions"></a>F#-Programmierung Konventionen
 
@@ -420,7 +420,7 @@ Dieses Verfahren sollten nicht universell angewendet werden, Ihre gesamte Codeba
 
 F# weist mehrere Optionen für [Zugriffssteuerung](../language-reference/access-control.md), geerbt vom, was in der .NET Runtime verfügbar ist. Diese sind nicht nur für Typen verwendet werden – Sie können sie für Funktionen zu.
 
-* Lieber nicht`public` Typen und Member, bis Sie sie öffentlich nutzbar sein benötigen. Dies minimiert ebenfalls, welche Consumer-Paar
+* Lieber nicht`public` Typen und Member, bis Sie sie öffentlich nutzbar sein benötigen. Dies minimiert ebenfalls, welche Consumer-Paar.
 * Sich bemühen, behalten Sie alle Hilfsfunktionen `private`.
 * Betrachten Sie die Verwendung von `[<AutoOpen>]` für ein Modul private Hilfsfunktionen, wenn sie zahlreiche sind.
 

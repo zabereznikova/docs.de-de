@@ -3,11 +3,11 @@ title: Warteschlangen in WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266623"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086595"
 ---
 # <a name="queuing-in-wcf"></a>Warteschlangen in WCF
 In diesem Abschnitt wird beschrieben, wie warteschlangenkommunikation in Windows Communication Foundation (WCF) verwendet wird.  

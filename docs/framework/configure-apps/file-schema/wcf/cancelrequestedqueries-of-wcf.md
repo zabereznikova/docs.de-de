@@ -2,12 +2,12 @@
 title: '&lt;cancelRequestedQueries&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: c9266d9ce1f6a61c4468fd95467e76730b966249
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4d746290f01e702979d1dd0165ad3fc5299e1b75
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480625"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087751"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>&lt;cancelRequestedQueries&gt; von WCF
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen nachzuverfolgen, mit denen die übergeordnete Aktivität den Abbruch einer untergeordneten Aktivität verlangt. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte mit Abbruchanforderungen abonnieren kann.  
@@ -23,7 +23,16 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen 
 ## <a name="syntax"></a>Syntax  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <cancelRequestQueries>
+        <cancelRequestQuery activityName="String"
+                            childActivityName="String"/>
+      </cancelRequestQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

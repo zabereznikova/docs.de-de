@@ -10,11 +10,11 @@ ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046369"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086317"
 ---
 # <a name="add-element-for-appsettings"></a>\<Hinzufügen >-Element für \<AppSettings >
 
@@ -37,7 +37,7 @@ Fügt eine benutzerdefinierte anwendungseinstellung an.
 |           | Beschreibung |
 | --------- | ----------- |
 | **key**   | Erforderliches Attribut.<br><br>Gibt den Namen des hinzuzufügenden Schlüssels. |
-| **value** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzuzufügenden Schlüssels. |
+| **Wert** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzuzufügenden Schlüssels. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 

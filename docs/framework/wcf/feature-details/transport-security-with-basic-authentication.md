@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
 author: BrucePerlerMS
 ms.openlocfilehash: 4a6ad2746bea9dfea1999e272796d44f0341e64d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777278"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086608"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Transportsicherheit mit Standardauthentifizierung
 Die folgende Abbildung zeigt eine Windows Communication Foundation (WCF)-Dienst und Client. Der Server benötigt ein gültiges X.509-Zertifikat, das für Secure Sockets Layer (SSL) verwendet werden kann, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen. Außerdem verfügt der Webdienst bereits über eine SSL-Implementierung, die Sie verwenden können. Weitere Informationen zum Aktivieren der Standardauthentifizierung auf Internet Information Services (IIS) finden Sie unter [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  

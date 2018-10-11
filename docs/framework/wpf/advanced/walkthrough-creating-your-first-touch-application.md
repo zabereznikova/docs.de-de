@@ -11,16 +11,16 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 935999fd5ada93bedebb38462f9faa93b8ec923f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781478"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086725"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht es Anwendungen, die auf berührungen reagieren. Angenommen, Sie können mit einer Anwendung interagieren, indem Sie eine oder mehrere Finger auf einem Gerät mit Berührungseingabe, z.B. ein Touchscreen, den in dieser exemplarischen Vorgehensweise eine Anwendung, die dem Benutzer ermöglicht erstellt, zu verschieben, Ändern der Größe oder drehen Sie ein einzelnes Objekt mithilfe von Touch.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
 -   Visual Studio.  

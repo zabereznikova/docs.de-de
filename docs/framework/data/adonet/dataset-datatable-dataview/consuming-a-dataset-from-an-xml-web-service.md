@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522110"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087335"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Verwenden eines "DataSet" von einem XML-Webdienst aus
 Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht. Die **DataSet** ist "serializable" insofern, als Eingabe für angegeben werden oder Ausgabe aus XML-Webdiensten, ohne eine zusätzliche Codierung erforderlich, um den Inhalt der Streamen der **DataSet** aus einem XML-Webdienst zu einem Client und zurück. Die **DataSet** implizit in einen XML-Stream mit dem DiffGram-Format konvertiert, über das Netzwerk gesendet und dann aus der XML-Stream rekonstruiert eine **DataSet** auf der Empfangsseite. Dadurch steht Ihnen eine sehr einfache und flexible Methode zum Übertragen und Zurückübertragen von relationalen Daten mithilfe von XML-Webdiensten zur Verfügung. Weitere Informationen zum DiffGram-Format finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -163,7 +163,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
   
      Clients des XML-Webdiensts benötigen einen SOAP-Proxy, um die verfügbar gemachten Methoden verarbeiten zu können. Sie können diesen Proxy von Visual Studio generieren lassen. Das in diesem Schritt beschriebene Verhalten wird transparent, wenn Sie einen Webverweis auf einen vorhandenen Webdienst von Visual Studio aus festlegen. Wenn Sie die Proxyklasse selbst erstellen möchten, finden Sie im Folgenden die notwendigen Informationen. In den meisten Fällen ist es jedoch ausreichend, wenn die Proxyklasse für die Clientanwendung mithilfe von Visual Studio erstellt wird.  
   
-     Ein Proxy kann mit dem Web Services Description Language-Tool erstellt werden. Wenn der XML-Webdienst verfügbar gemacht wird, unter der URL beispielsweise http://myserver/data/DataSetSample.asmx, einen Befehl wie den folgenden erstellen Sie einen Proxy für die Visual Basic .NET mit dem Namespace **WebData.DSSample** und in der Datei Datei "Sample.vb" zu speichern.  
+     Ein Proxy kann mit dem Web Services Description Language-Tool erstellt werden. Wenn der XML-Webdienst verfügbar gemacht wird, unter der URL beispielsweise `http://myserver/data/DataSetSample.asmx`, einen Befehl wie den folgenden erstellen Sie einen Proxy für die Visual Basic .NET mit dem Namespace **WebData.DSSample** und in der Datei Datei "Sample.vb" zu speichern.  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  

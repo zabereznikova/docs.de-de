@@ -2,17 +2,17 @@
 title: '&lt;activityScheduledQuery&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 4efd6ba13e8a54d3338c25b077477d4abdbe9ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746237"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087764"
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>&lt;activityScheduledQuery&gt; von WCF
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um eine Aktivität zu verfolgen, deren Ausführung von einer übergeordneten Aktivität geplant wurde. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer die Datensätze der geplanten Aktivität abonnieren kann.  
   
- Weitere Informationen zu nachverfolgungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
  \<system.serviceModel>  
 \<Nachverfolgen von >  
@@ -24,7 +24,16 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um eine Aktivitä
 ## <a name="syntax"></a>Syntax  
   
 ```xml
-<tracking>     <trackingProfile name="Name">       <workflow>          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>       </workflow>     </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String"   
+                                childActivityName="String"/>
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
+</tracking> 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

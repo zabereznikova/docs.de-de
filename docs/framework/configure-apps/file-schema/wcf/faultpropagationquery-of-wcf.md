@@ -2,17 +2,17 @@
 title: '&lt;faultPropagationQuery&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: fe3dd90a5c6b26537ab461b4bf4993df5be625a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: df7119363e94a070bb898c984c12cf82755c3407
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747358"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087699"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>&lt;faultPropagationQuery&gt; von WCF
 Stellt eine Abfrage dar, die verwendet wird, um die Behandlung von Fehlern zu verfolgen, die in einer Aktivität auftreten.  Dieses Ereignis tritt jedes Mal auf, wenn ein FaultHandler einen Fehler verarbeitet. Sie sollten eine solche Abfrage verwenden, um die Behandlung der Fehler nachzuverfolgen, die in einer Aktivität auftreten. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Fehlerbehandlungsdatensätze abonnieren kann.  
   
- Weitere Informationen zu nachverfolgungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+ Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
  \<system.serviceModel>  
 \<Nachverfolgen von >  
@@ -24,7 +24,16 @@ Stellt eine Abfrage dar, die verwendet wird, um die Behandlung von Fehlern zu ve
 ## <a name="syntax"></a>Syntax  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <faultPropagationQueries>
+        <faultPropagationQuery activityName="String"
+                               faultHandlerActivityName="String"/>
+      </faultPropagationQueries>
+    </workflow>
+  </trackingProfile>
+</tracking>  
 ```
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

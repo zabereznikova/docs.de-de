@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793681"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087348"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn die Daten erneut zugegriffen werden, erhalten Anwendungen die Daten aus dem Cache stattdessen aus der ursprünglichen Quelle abrufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.

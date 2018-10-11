@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266129"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086166"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Ausführen einer XPath-Abfrage für ein DataSet
 Die Beziehung zwischen einem synchronisierten <xref:System.Data.DataSet> und <xref:System.Xml.XmlDataDocument> können Sie zum Verwenden von XML-Dienste, z. B. der Abfrage XML Path Language (XPath), die Zugriff auf die **XmlDataDocument** und bestimmte Funktionen ausführen können einfacher als der Zugriff auf die **DataSet** direkt. Z. B. statt der **wählen** -Methode der ein <xref:System.Data.DataTable> Navigieren in Beziehungen zu anderen Tabellen im eine **DataSet**, können Sie eine XPath-Abfrage ausführen, auf eine **XmlDataDocument**  synchronisiertes der **DataSet**, um eine Liste von XML-Elementen in Form von erhalten eine <xref:System.Xml.XmlNodeList>. Die Knoten in der **XmlNodeList**, umgewandelte <xref:System.Xml.XmlElement> Knoten, klicken Sie dann an übergeben werden kann die **GetRowFromElement** -Methode der der **XmlDataDocument**, um übereinstimmende zurückzugeben <xref:System.Data.DataRow> Verweise auf die Zeilen der Tabelle im synchronisierten **DataSet**.  

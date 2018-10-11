@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781608"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086842"
 ---
 # <a name="endpoint-creation-overview"></a>Übersicht über die Endpunkterstellung
 Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionen, die ein WCF-Dienst bietet. In diesem Abschnitt wird die Struktur eines Endpunkts beschrieben und dargestellt, wie ein Endpunkt in einer Konfiguration oder im Code definiert wird.  
