@@ -3,20 +3,20 @@ title: Wahl zwischen .NET Core und .NET Framework für Docker-Container
 description: .NET Microservices-Architektur für .NET-Containeranwendungen | Wahl zwischen .NET Core und .NET Framework für Docker-Container
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 0f6689468eda1dd1b12c24927e650b2b01381274
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 9abff2614e4022408a069be25440196111db19ab
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104441"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562108"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a><span data-ttu-id="9fa90-103">Wahl zwischen .NET Core und .NET Framework für Docker-Container</span><span class="sxs-lookup"><span data-stu-id="9fa90-103">Choosing Between .NET Core and .NET Framework for Docker Containers</span></span>
+# <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a><span data-ttu-id="b79ac-103">Wahl zwischen .NET Core und .NET Framework für Docker-Container</span><span class="sxs-lookup"><span data-stu-id="b79ac-103">Choosing Between .NET Core and .NET Framework for Docker Containers</span></span>
 
-<span data-ttu-id="9fa90-104">Bei der Erstellung von serverseitigen Containeranwendungen von Docker mit .NET werden zwei Implementierungen unterstützt: [.NET Framework](https://www.microsoft.com/net/download/framework) und [.NET Core](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="9fa90-104">There are two supported implementations for building server-side containerized Docker applications with .NET: [.NET Framework](https://www.microsoft.com/net/download/framework) and [.NET Core](https://www.microsoft.com/net/download/core).</span></span> <span data-ttu-id="9fa90-105">Sie nutzen viele .NET Standard-Komponenten, und Sie können Code über beide hinweg nutzen.</span><span class="sxs-lookup"><span data-stu-id="9fa90-105">They share many .NET Standard components, and you can share code across the two.</span></span> <span data-ttu-id="9fa90-106">Allerdings gibt es auch grundlegende Unterschiede zwischen den beiden Komponenten, daher richtet sich die Entscheidung, welche Sie verwenden, nach dem, was Sie erreichen möchten.</span><span class="sxs-lookup"><span data-stu-id="9fa90-106">However, there are fundamental differences between them, and which implementation you use will depend on what you want to accomplish.</span></span> <span data-ttu-id="9fa90-107">Dieser Abschnitt bietet Ihnen Unterstützung bei der Entscheidung, wann jede Implementierung ausgewählt werden soll.</span><span class="sxs-lookup"><span data-stu-id="9fa90-107">This section provides guidance on when to choose each implementation.</span></span>
+<span data-ttu-id="b79ac-104">Bei der Erstellung von serverseitigen Containeranwendungen von Docker mit .NET werden zwei Frameworks unterstützt: [.NET Framework und .NET Core](https://www.microsoft.com/net/download).</span><span class="sxs-lookup"><span data-stu-id="b79ac-104">There are two supported frameworks for building server-side containerized Docker applications with .NET: [.NET Framework and .NET Core](https://www.microsoft.com/net/download).</span></span> <span data-ttu-id="b79ac-105">Sie nutzen viele Komponenten der .NET-Plattform, und Sie können Code über beide hinweg nutzen.</span><span class="sxs-lookup"><span data-stu-id="b79ac-105">They share many .NET platform components, and you can share code across the two.</span></span> <span data-ttu-id="b79ac-106">Allerdings gibt es auch grundlegende Unterschiede zwischen beiden, daher richtet sich die Entscheidung, welches Framework Sie verwenden, nach dem, was Sie erreichen möchten.</span><span class="sxs-lookup"><span data-stu-id="b79ac-106">However, there are fundamental differences between them, and which framework you use will depend on what you want to accomplish.</span></span> <span data-ttu-id="b79ac-107">Dieser Abschnitt bietet Ihnen Unterstützung bei der Entscheidung, wann jedes Framework ausgewählt werden soll.</span><span class="sxs-lookup"><span data-stu-id="b79ac-107">This section provides guidance on when to choose each framework.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="9fa90-108">[Zurück](../container-docker-introduction/docker-containers-images-registries.md)
-[Weiter](general-guidance.md)</span><span class="sxs-lookup"><span data-stu-id="9fa90-108">[Previous](../container-docker-introduction/docker-containers-images-registries.md)
+<span data-ttu-id="b79ac-108">[Zurück](../container-docker-introduction/docker-containers-images-registries.md)
+[Weiter](general-guidance.md)</span><span class="sxs-lookup"><span data-stu-id="b79ac-108">[Previous](../container-docker-introduction/docker-containers-images-registries.md)
 [Next](general-guidance.md)</span></span>

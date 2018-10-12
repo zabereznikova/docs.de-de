@@ -3,61 +3,91 @@ title: 'Entscheidungstabelle: .NET Frameworks zur Verwendung für Docker'
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entscheidungstabelle, .NET Frameworks zur Verwendung für Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: c45fbb9f26e6cd315e1b623ba2c79d5d038a6919
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105299"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47401237"
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a><span data-ttu-id="807ec-104">Entscheidungstabelle: .NET Frameworks zur Verwendung für Docker</span><span class="sxs-lookup"><span data-stu-id="807ec-104">Decision table: .NET frameworks to use for Docker</span></span>
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a><span data-ttu-id="866cb-104">Entscheidungstabelle: .NET Frameworks zur Verwendung für Docker</span><span class="sxs-lookup"><span data-stu-id="866cb-104">Decision table: .NET frameworks to use for Docker</span></span>
 
-<span data-ttu-id="807ec-105">Im Folgenden wird zusammengefasst, ob .NET Framework oder .NET Core und Windows- oder Linux-Container verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="807ec-105">The following summarizes whether to use .NET Framework or .NET Core, and Windows or Linux containers.</span></span> <span data-ttu-id="807ec-106">Beachten Sie, dass Sie für Linux-Container Linux-basierte Docker-Hosts (VMs oder Server) und für Windows-Container Windows Server-basierte Docker-Hosts (VMs oder Server) benötigen.</span><span class="sxs-lookup"><span data-stu-id="807ec-106">Remember that for Linux containers, you need Linux-based Docker hosts (VMs or servers) and that for Windows Containers you need Windows Server based Docker hosts (VMs or servers).</span></span>
-
-<span data-ttu-id="807ec-107">Es gibt verschiedene Features Ihrer Anwendung, die diese Entscheidung beeinflussen.</span><span class="sxs-lookup"><span data-stu-id="807ec-107">There are several features of your application that affect your decision.</span></span> <span data-ttu-id="807ec-108">Sie sollten die Wichtigkeit dieser Features abwägen, bevor Sie Ihre Entscheidung treffen.</span><span class="sxs-lookup"><span data-stu-id="807ec-108">You should weigh the importance of these features when making your decision.</span></span>
+<span data-ttu-id="866cb-105">In der folgenden Entscheidungstabelle wird zusammengefasst, ob .NET Framework oder .NET Core verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="866cb-105">The following decision table summarizes whether to use .NET Framework or .NET Core.</span></span> <span data-ttu-id="866cb-106">Beachten Sie, dass Sie für Linux-Container Linux-basierte Docker-Hosts (VMs oder Server) und für Windows-Container Windows Server-basierte Docker-Hosts (VMs oder Server) benötigen.</span><span class="sxs-lookup"><span data-stu-id="866cb-106">Remember that for Linux containers, you need Linux-based Docker hosts (VMs or servers) and that for Windows Containers you need Windows Server based Docker hosts (VMs or servers).</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="807ec-109">Ihre Entwicklungscomputer führen einen Docker-Host aus: entweder Linux oder Windows.</span><span class="sxs-lookup"><span data-stu-id="807ec-109">Your development machines will run one Docker host, either Linux or Windows.</span></span> <span data-ttu-id="807ec-110">Verwandte Microservices, die Sie zusammen in einer Lösung ausführen und testen wollen, müssen alle auf der gleichen Containerplattform ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="807ec-110">Related microservices that you want to run and test together in one solution will all need to run on the same container platform.</span></span>
+> <span data-ttu-id="866cb-107">Ihre Entwicklungscomputer führen einen Docker-Host aus: entweder Linux oder Windows.</span><span class="sxs-lookup"><span data-stu-id="866cb-107">Your development machines will run one Docker host, either Linux or Windows.</span></span> <span data-ttu-id="866cb-108">Verwandte Microservices, die Sie zusammen in einer Lösung ausführen und testen wollen, müssen alle auf der gleichen Containerplattform ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="866cb-108">Related microservices that you want to run and test together in one solution will all need to run on the same container platform.</span></span>
 
-* <span data-ttu-id="807ec-111">Sie entscheiden sich für **Microservices auf Containern**:</span><span class="sxs-lookup"><span data-stu-id="807ec-111">Your application architecture choice is **Microservices on containers**.</span></span>
-    - <span data-ttu-id="807ec-112">Sie sollten *.NET Core* für die .NET-Implementierung auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-112">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="807ec-113">Sie können entweder *Linux-Container* oder *Windows-Container* als Containerplattform verwenden.</span><span class="sxs-lookup"><span data-stu-id="807ec-113">Your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-* <span data-ttu-id="807ec-114">Sie entscheiden sich für eine **monolithische Anwendung**:</span><span class="sxs-lookup"><span data-stu-id="807ec-114">Your application architecture choice is a **Monolithic application**.</span></span>
-    - <span data-ttu-id="807ec-115">Sie können entweder *.NET Core* oder *.NET Framework* zur Implementierung verwenden.</span><span class="sxs-lookup"><span data-stu-id="807ec-115">Your .NET implementation choice can be either *.NET Core* or *.NET Framework*.</span></span>
-    - <span data-ttu-id="807ec-116">Wenn Sie sich für *.NET Core* entschieden haben, können Sie als Containerplattform entweder *Linux-Container* oder *Windows-Container* auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-116">If you have chosen *.NET Core*, your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-    - <span data-ttu-id="807ec-117">Wenn Sie sich für *.NET Framework* entschieden haben, müssen Sie als Containerplattform *Windows-Container* auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-117">If you have chosen *.NET Framework*, your container platform choice must be *Windows containers*.</span></span>
-* <span data-ttu-id="807ec-118">Bei Ihrer Anwendung handelt es sich um eine **neue containerbasierte Entwicklung („Green-field“)**.</span><span class="sxs-lookup"><span data-stu-id="807ec-118">Your application is a  **New container-based development ("green-field")**.</span></span>
-    - <span data-ttu-id="807ec-119">Sie sollten *.NET Core* für die .NET-Implementierung auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-119">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="807ec-120">Sie können als Containerplattform entweder *Linux-Container* oder *Windows-Container* verwenden.</span><span class="sxs-lookup"><span data-stu-id="807ec-120">Your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-* <span data-ttu-id="807ec-121">Es handelt sich bei Ihrer Anwendung um eine **Legacy-App („brown-field“) für die Migration von Windows Server zu Containern**.</span><span class="sxs-lookup"><span data-stu-id="807ec-121">Your application is a **Windows Server legacy app ("brown-field") migration to containers**</span></span>
-    - <span data-ttu-id="807ec-122">Sie entscheiden sich aufgrund der Frameworkabhängigkeiten für *.NET Framework* als .NET-Implementierung:</span><span class="sxs-lookup"><span data-stu-id="807ec-122">Your .NET implementation choice is *.NET Framework* based on framework dependency.</span></span>
-    - <span data-ttu-id="807ec-123">Sie müssen aufgrund der Abhängigkeit von .NET Framework *Windows-Container* als Containerplattform auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-123">Your container platform choice must be *Windows containers* because of the .NET Framework dependency.</span></span>
-* <span data-ttu-id="807ec-124">Sie streben **Leistung und Skalierbarkeit der Spitzenklasse** als Entwurfsziel für Ihre Anwendung an.</span><span class="sxs-lookup"><span data-stu-id="807ec-124">Your application's design goal is **Best-in-class performance and scalability**.</span></span>
-    - <span data-ttu-id="807ec-125">Sie sollten *.NET Core* für die .NET-Implementierung auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-125">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="807ec-126">Sie können als Containerplattform entweder *Linux-Container* oder *Windows-Container* verwenden.</span><span class="sxs-lookup"><span data-stu-id="807ec-126">Your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-* <span data-ttu-id="807ec-127">Sie haben Ihre Anwendung mit **ASP.NET Core** erstellt.</span><span class="sxs-lookup"><span data-stu-id="807ec-127">You built your application using **ASP.NET Core**.</span></span>
-    - <span data-ttu-id="807ec-128">Sie sollten *.NET Core* für die .NET-Implementierung auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-128">Your .NET implementation choice should be *.NET Core*.</span></span>
-    - <span data-ttu-id="807ec-129">Sie können die Implementierung von *.NET Framework* verwenden, wenn Sie über andere Frameworkabhängigkeiten verfügen.</span><span class="sxs-lookup"><span data-stu-id="807ec-129">You can use the *.NET Framework* implementation, if you have other framework dependencies.</span></span>
-    - <span data-ttu-id="807ec-130">Wenn Sie sich für *.NET Core* entschieden haben, können Sie als Containerplattform entweder *Linux-Container* oder *Windows-Container* auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-130">If you have chosen *.NET Core*, your container platform choice can be either *Linux containers* or *Windows containers*.</span></span>
-    - <span data-ttu-id="807ec-131">Wenn Sie sich für *.NET Framework* entschieden haben, müssen Sie *Windows-Container* als Containerplattform auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-131">If you have chosen *.NET Framework*, your container platform choice must be *Windows containers*.</span></span>
-* <span data-ttu-id="807ec-132">Sie haben Ihre Anwendung mit **ASP.NET 4 (MVC 5, Web API 2 und Web Forms)** erstellt.</span><span class="sxs-lookup"><span data-stu-id="807ec-132">You built your application using **ASP.NET 4 (MVC 5, Web API 2, and Web Forms)**.</span></span>
-    - <span data-ttu-id="807ec-133">Sie entscheiden sich aufgrund der Frameworkabhängigkeiten für *.NET Framework* als .NET-Implementierung:</span><span class="sxs-lookup"><span data-stu-id="807ec-133">Your .NET implementation choice is *.NET Framework* based on framework dependency.</span></span>
-    - <span data-ttu-id="807ec-134">Sie müssen aufgrund der Abhängigkeit von .NET Framework *Windows-Container* als Containerplattform auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-134">Your container platform choice must be *Windows containers* because of the .NET Framework dependency.</span></span>
-* <span data-ttu-id="807ec-135">Ihre Anwendung verwendet **SignalR-Dienste**.</span><span class="sxs-lookup"><span data-stu-id="807ec-135">Your application uses **SignalR services**.</span></span>
-    - <span data-ttu-id="807ec-136">Sie können entweder *.NET Framework* oder *.NET Core 2.1 (wenn veröffentlicht) oder höher* für die .NET-Implementierung auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-136">Your .NET implementation choice can be *.NET Framework*, or *.NET Core 2.1 (when released) or later*.</span></span>
-    - <span data-ttu-id="807ec-137">Sie müssen *Windows-Container* als Containerplattform auswählen, wenn Sie sich für die SignalR-Implementierung in .NET Framework entschieden haben.</span><span class="sxs-lookup"><span data-stu-id="807ec-137">Your container platform choice must be *Windows containers* if you chose the SignalR implementation in .NET Framework.</span></span>
-    - <span data-ttu-id="807ec-138">Sie können als Containerplattform entweder Linux-Container oder Windows-Container auswählen, wenn Sie die SignalR-Implementierung in .NET Core 2.1 oder höher (wenn veröffentlicht) ausgewählt haben.</span><span class="sxs-lookup"><span data-stu-id="807ec-138">Your container platform choice can be either Linux containers or Windows containers if you chose the SignalR implementation in .NET Core 2.1 or later (when released).</span></span>  
-    - <span data-ttu-id="807ec-139">Wenn **SignalR-Dienste** auf *.NET Core* ausgeführt werden, können Sie *Linux-Container oder Windows-Container* verwenden.</span><span class="sxs-lookup"><span data-stu-id="807ec-139">When **SignalR services** run on *.NET Core*, you can use *Linux containers or Windows Containers*.</span></span>
-* <span data-ttu-id="807ec-140">Ihre Anwendung verwendet **WCF, WF und andere Legacyframeworks**.</span><span class="sxs-lookup"><span data-stu-id="807ec-140">Your application uses **WCF, WF, and other legacy frameworks**.</span></span>
-    - <span data-ttu-id="807ec-141">Sie haben sich für *.NET Framework* oder *.NET Core (in der Übersicht zu einem zukünftigen Release)* entschieden.</span><span class="sxs-lookup"><span data-stu-id="807ec-141">Your .NET implementation choice is *.NET Framework*, or *.NET Core (in the roadmap for a future release)*.</span></span>
-    - <span data-ttu-id="807ec-142">Sie müssen aufgrund der Abhängigkeit von .NET Framework *Windows-Container* als Containerplattform auswählen.</span><span class="sxs-lookup"><span data-stu-id="807ec-142">Your container platform choice must be *Windows containers* because of the .NET Framework dependency.</span></span>
-* <span data-ttu-id="807ec-143">Ihre Anwendung umfasst die **Nutzung von Azure-Diensten**.</span><span class="sxs-lookup"><span data-stu-id="807ec-143">Your application involves **Consumption of Azure services**.</span></span>
-    - <span data-ttu-id="807ec-144">Sie haben *.NET Framework* oder *.NET Core (irgendwann sollen alle Azure-Dienste Client SDKs für .NET Core bereitstellen)* für die .NET-Implementierung ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="807ec-144">Your .NET implementation choice is *.NET Framework*, or *.NET Core (eventually all Azure services will provide client SDKs for .NET Core)*.</span></span>
-    - <span data-ttu-id="807ec-145">Sie müssen *Windows-Container* als Containerplattform auswählen, wenn Sie .NET Framework-Client-APIs verwenden.</span><span class="sxs-lookup"><span data-stu-id="807ec-145">Your container platform choice must be *Windows containers* if you use .NET Framework client APIs.</span></span>
-    - <span data-ttu-id="807ec-146">Wenn Sie die für *.NET Core* verfügbaren Client-APIs verwenden, können Sie zwischen *Linux-Containern und Windows-Containern* entscheiden.</span><span class="sxs-lookup"><span data-stu-id="807ec-146">If you use client APIs available for *.NET Core*, you can also choose between *Linux containers and Windows containers*.</span></span>
+<table>
+<thead>
+<tr class="header">
+<th><span data-ttu-id="866cb-109"><strong>Architektur/App-Typ</strong></span><span class="sxs-lookup"><span data-stu-id="866cb-109"><strong>Architecture / App Type</strong></span></span></th>
+<th><span data-ttu-id="866cb-110"><strong>Linux-Container</strong></span><span class="sxs-lookup"><span data-stu-id="866cb-110"><strong>Linux containers</strong></span></span></th>
+<th><span data-ttu-id="866cb-111"><strong>Windows-Container</strong></span><span class="sxs-lookup"><span data-stu-id="866cb-111"><strong>Windows Containers</strong></span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span data-ttu-id="866cb-112">Microservices in Containern</span><span class="sxs-lookup"><span data-stu-id="866cb-112">Microservices on containers</span></span></td>
+<td><span data-ttu-id="866cb-113">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-113">.NET Core</span></span></td>
+<td><span data-ttu-id="866cb-114">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-114">.NET Core</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="866cb-115">Monolithische App</span><span class="sxs-lookup"><span data-stu-id="866cb-115">Monolithic app</span></span></td>
+<td><span data-ttu-id="866cb-116">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-116">.NET Core</span></span></td>
+<td><p><span data-ttu-id="866cb-117">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="866cb-117">.NET Framework</span></span></p>
+<p><span data-ttu-id="866cb-118">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-118">.NET Core</span></span></p></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="866cb-119">Klassenbeste Leistung und Skalierbarkeit</span><span class="sxs-lookup"><span data-stu-id="866cb-119">Best-in-class performance and scalability</span></span></td>
+<td><span data-ttu-id="866cb-120">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-120">.NET Core</span></span></td>
+<td><span data-ttu-id="866cb-121">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-121">.NET Core</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="866cb-122">Migration von Windows Server-Legacy-App („braunes Feld“) in Container</span><span class="sxs-lookup"><span data-stu-id="866cb-122">Windows Server legacy app ("brown-field") migration to containers</span></span></td>
+<td>--</td>
+<td><span data-ttu-id="866cb-123">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="866cb-123">.NET Framework</span></span></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="866cb-124">Neue containerbasierte Entwicklung („grünes Feld“)</span><span class="sxs-lookup"><span data-stu-id="866cb-124">New container-based development ("green-field")</span></span></td>
+<td><span data-ttu-id="866cb-125">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-125">.NET Core</span></span></td>
+<td><span data-ttu-id="866cb-126">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-126">.NET Core</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="866cb-127">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-127">ASP.NET Core</span></span></td>
+<td><span data-ttu-id="866cb-128">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-128">.NET Core</span></span></td>
+<td><p><span data-ttu-id="866cb-129">.NET Core (empfohlen)</span><span class="sxs-lookup"><span data-stu-id="866cb-129">.NET Core (recommended)</span></span></p>
+<p><span data-ttu-id="866cb-130">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="866cb-130">.NET Framework</span></span></p></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="866cb-131">ASP.NET 4 (MVC 5, Web-API 2 und Web Forms)</span><span class="sxs-lookup"><span data-stu-id="866cb-131">ASP.NET 4 (MVC 5, Web API 2, and Web Forms)</span></span></td>
+<td>--</td>
+<td><span data-ttu-id="866cb-132">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="866cb-132">.NET Framework</span></span></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="866cb-133">SignalR-Dienste</span><span class="sxs-lookup"><span data-stu-id="866cb-133">SignalR services</span></span></td>
+<td><span data-ttu-id="866cb-134">.NET Core 2.1 oder eine höhere Version</span><span class="sxs-lookup"><span data-stu-id="866cb-134">.NET Core 2.1 or higher version</span></span></td>
+<td><p><span data-ttu-id="866cb-135">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="866cb-135">.NET Framework</span></span></p>
+<p><span data-ttu-id="866cb-136">.NET Core 2.1 oder eine höhere Version</span><span class="sxs-lookup"><span data-stu-id="866cb-136">.NET Core 2.1 or higher version</span></span></p></td>
+</tr>
+<tr class="odd">
+<td><span data-ttu-id="866cb-137">WCF, WF und andere Legacyframeworks</span><span class="sxs-lookup"><span data-stu-id="866cb-137">WCF, WF, and other legacy frameworks</span></span></td>
+<td><span data-ttu-id="866cb-138">WCF in .NET Core (nur die WCF-Clientbibliothek)</span><span class="sxs-lookup"><span data-stu-id="866cb-138">WCF in .NET Core (only the WCF client library)</span></span></td>
+<td><p><span data-ttu-id="866cb-139">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="866cb-139">.NET Framework</span></span></p>
+<p><span data-ttu-id="866cb-140">WCF in .NET Core (nur die WCF-Clientbibliothek)</span><span class="sxs-lookup"><span data-stu-id="866cb-140">WCF in .NET Core (only the WCF client library)</span></span></p></td>
+</tr>
+<tr class="even">
+<td><span data-ttu-id="866cb-141">Nutzung von Azure-Diensten</span><span class="sxs-lookup"><span data-stu-id="866cb-141">Consumption of Azure services</span></span></td>
+<td><p><span data-ttu-id="866cb-142">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-142">.NET Core</span></span></p>
+<p><span data-ttu-id="866cb-143">(Auf lange Sicht werden alle Azure-Dienste Client-SDKs für .NET Core bereitstellen)</span><span class="sxs-lookup"><span data-stu-id="866cb-143">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
+<td><p><span data-ttu-id="866cb-144">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="866cb-144">.NET Framework</span></span></p>
+<p><span data-ttu-id="866cb-145">.NET Core</span><span class="sxs-lookup"><span data-stu-id="866cb-145">.NET Core</span></span></p>
+<p><span data-ttu-id="866cb-146">(Auf lange Sicht werden alle Azure-Dienste Client-SDKs für .NET Core bereitstellen)</span><span class="sxs-lookup"><span data-stu-id="866cb-146">(eventually all Azure services will provide client SDKs for .NET Core)</span></span></p></td>
+</tr>
+</tbody>
+</table>
 
 >[!div class="step-by-step"]
-<span data-ttu-id="807ec-147">[Zurück](net-framework-container-scenarios.md)
-[Weiter](net-container-os-targets.md)</span><span class="sxs-lookup"><span data-stu-id="807ec-147">[Previous](net-framework-container-scenarios.md)
+<span data-ttu-id="866cb-147">[Zurück](net-framework-container-scenarios.md)
+[Weiter](net-container-os-targets.md)</span><span class="sxs-lookup"><span data-stu-id="866cb-147">[Previous](net-framework-container-scenarios.md)
 [Next](net-container-os-targets.md)</span></span>
