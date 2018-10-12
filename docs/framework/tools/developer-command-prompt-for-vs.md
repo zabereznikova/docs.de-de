@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524715"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170008"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Developer-Eingabeaufforderung für Visual Studio.
 
-Die Developer-Eingabeaufforderung für Visual Studio legt die Umgebungsvariablen, die Ihnen die einfache Nutzung von .NET Framework-Tools ermöglichen, automatisch fest.
+Mithilfe der Developer-Eingabeaufforderung für Visual Studio können Sie .NET Framework-Tools komfortabler verwenden. Es handelt sich um eine Eingabeaufforderung, die automatisch bestimmte Umgebungsvariablen festlegt.
 
 > [!div class="button"]
 [Herunterladen von Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
-## <a name="searching-for-the-command-prompt-on-your-machine"></a>Suchen nach der Eingabeaufforderung auf Ihrem Computer
+## <a name="search-for-the-command-prompt-on-your-machine"></a>Suchen nach der Eingabeaufforderung auf Ihrem Computer
 
-Abhängig von der Version von Visual Studio und jeglichen zusätzlichen installierten SDKs verfügen Sie möglicherweise über mehrere Eingabeaufforderungen. Beispielsweise stellen 64-Bit-Versionen von Visual Studio sowohl 32-Bit- als auch 64-Bit-Eingabeaufforderungen bereit. (Die 32-Bit- und 64-Bit-Versionen der meisten Tools sind identisch. Möglicherweise nehmen jedoch einige Tools bestimmte Änderungen an der 32-Bit- bzw. der 64-Bit-Umgebung vor.) Wenn die folgenden Schritte nicht funktionieren, können Sie versuchen, [die Dateien manuell auf Ihrem Computer zu finden](#manually-locating-the-files-on-your-machine) oder [die Eingabeaufforderung innerhalb von Visual Studio auszuführen](#running-command-prompt-from-inside-visual-studio).
+Abhängig von der Version von Visual Studio und jeglichen zusätzlichen installierten SDKs verfügen Sie möglicherweise über mehrere Eingabeaufforderungen. Beispielsweise stellen 64-Bit-Versionen von Visual Studio sowohl 32-Bit- als auch 64-Bit-Eingabeaufforderungen bereit. (Die 32-Bit- und 64-Bit-Versionen der meisten Tools sind identisch. Möglicherweise nehmen jedoch einige Tools bestimmte Änderungen an der 32-Bit- bzw. der 64-Bit-Umgebung vor.) Wenn die folgenden Schritte nicht funktionieren, können Sie versuchen, [die Dateien manuell auf Ihrem Computer zu finden](#manually-locate-the-files-on-your-machine) oder [die Eingabeaufforderung innerhalb von Visual Studio auszuführen](#run-the-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>In Windows 10
 
@@ -40,7 +40,7 @@ Abhängig von der Version von Visual Studio und jeglichen zusätzlichen installi
 
 1. Wechseln Sie zum Bildschirm **Start**, indem Sie beispielsweise die Windows-Logo-Taste ![Windows-Logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") auf der Tastatur drücken.
 
-2. Drücken Sie auf dem Bildschirm **Start** `CTRL + TAB`, um die Liste **Apps** zu öffnen, und geben Sie anschließend `V` ein. Dadurch wird eine Liste angezeigt, die alle installierten Visual Studio-Eingabeaufforderungen enthält.
+2. Drücken Sie auf dem Bildschirm **Start** die Tastenkombination **STRG**+**TAB**, um die Liste **Apps** zu öffnen, und geben Sie dann `V` ein. Dadurch wird eine Liste angezeigt, die alle installierten Visual Studio-Eingabeaufforderungen enthält.
 
 3. Wählen Sie **Developer-Eingabeaufforderung** (oder die gewünschte Eingabeaufforderung) aus.
 
@@ -66,7 +66,7 @@ Wenn Sie andere SDKs installiert haben, z.B. das [Windows 10 SDK](https://develo
 
 In der Regel werden die Tastenkombinationen für die installierten Eingabeaufforderungen im Ordner **Start Menu** für Visual Studio platziert, beispielsweise in „C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools“. Wenn die Suche nach der Eingabeaufforderung jedoch nicht die erwarteten Ergebnisse liefert, können Sie versuchen, die Tastenkombination manuell auf Ihrem Computer zu finden. Suchen Sie z.B. den Namen der Eingabeaufforderungsdatei (z.B. *VsDevCmd.bat*), oder wechseln Sie zum Ordner „Tools“, z.B. unter „ C:\Programme (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools“ (der Pfad kann gemäß der Version, der Edition und des Speicherorts von Visual Studio von diesem Beispiel abweichen).
 
-## <a name="run-command-prompt-from-inside-visual-studio"></a>Ausführen der Eingabeaufforderung innerhalb von Visual Studio
+## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Ausführen der Eingabeaufforderung innerhalb von Visual Studio
 
 Für den einfacheren Zugriff können Sie die Developer-Eingabeaufforderung von Visual Studio oder eine beliebige andere Eingabeaufforderung zum Menü **Extras** in Visual Studio hinzufügen. Fügen Sie das Tool der Liste externer Tools hinzu, damit Sie auf dieses zugreifen können. Folgende Schritte müssen ausgeführt werden:
 
@@ -87,6 +87,8 @@ Für den einfacheren Zugriff können Sie die Developer-Eingabeaufforderung von V
 8. Klicken Sie auf die Schaltfläche **OK** .
 
    Das neue Menüelement wird hinzugefügt, und Sie können über das Menü **Extras** auf die Eingabeaufforderung zugreifen.
+
+   ![Menüelement „Eingabeaufforderung“ in Visual Studio](media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Siehe auch
 

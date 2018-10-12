@@ -1,5 +1,5 @@
 ---
-title: ref (C#-Referenz)
+title: ref-Schlüsselwort (C#-Referenz)
 ms.date: 03/06/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: a72624d5702ec12bfda98d49a16474cc84205ff0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245751"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200552"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -21,7 +21,7 @@ Das `ref`-Schlüsselwort gibt einen Wert an, der als Verweis übergeben wird. Es
 - In einer Methodensignatur und in einem Methodenaufruf, um ein Argument an eine Methode als Verweis zu übergeben. Weitere Informationen finden Sie unter [Passing an argument by reference](#passing-an-argument-by-reference) (Übergeben eines Arguments als Verweis).
 - In einer Methodensignatur, um einen Wert an den Aufrufer als Verweis zurückzugeben. Weitere Informationen finden Sie unter [Verweisrückgabewerte](#reference-return-values).
 - In einem Memberkörper, um anzugeben, dass ein Verweisrückgabewert, den der Aufrufer ändern möchte, lokal als Verweis gespeichert ist oder dass eine lokale Variable auf einen anderen Wert per Verweis zugreift. Weitere Informationen finden Sie unter [Lokale ref-Variablen](#ref-locals).
-- In einer `struct`-Deklaration, um `ref struct` oder `ref readonly struct` zu deklarieren. Weitere Informationen finden Sie unter [ref-Strukturdeklarationen](#ref-struct-declarations).
+- In einer `struct`-Deklaration, um `ref struct` oder `ref readonly struct` zu deklarieren. Weitere Informationen finden Sie unter [Verweissemantik mit Werttypen](../../reference-semantics-with-value-types.md).
 
 ## <a name="passing-an-argument-by-reference"></a>Übergeben eines Arguments als Verweis
 
@@ -32,7 +32,7 @@ In der Parameterliste einer Methode gibt das `ref`-Schlüsselwort an, dass ein A
 
 Um einen `ref`-Parameter zu verwenden, müssen sowohl die Methodendefinition als auch die aufrufende Methode explizit das Schlüsselwort `ref` verwenden, wie im folgenden Beispiel gezeigt.  
 
-[!code-csharp-interactive[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
+[!code-csharp-interactive[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
 
 Ein Argument, das an einen `ref`- oder `in`-Parameter übergeben wird, muss vor der Übergabe initialisiert werden. Dies unterscheidet sich von den [out](out-parameter-modifier.md)-Parametern, deren Argumente nicht explizit initialisiert werden müssen, bevor sie übergeben werden.
 
@@ -50,26 +50,24 @@ class CS0663_Example
 
 Allerdings können Methoden überladen werden, wenn eine Methode einen `ref`-, `in`- oder `out`-Parameter hat und die andere wie im folgenden Beispiel dargestellt über einen Werteparameter verfügt.
   
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
   
  In anderen Situationen, die eine Signaturabstimmung benötigen, z.B. beim Ausblenden oder Überschreiben, sind `in`, `ref` und `out` Bestandteil der Signatur und passen nicht zueinander.  
   
  Eigenschaften sind keine Variablen. Sie sind Methoden und können nicht an `ref`-Parameter übergeben werden.  
   
- Weitere Informationen zum Übergeben von Arrays finden Sie unter [Übergeben von Arrays mithilfe von „ref“ und „out“](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
-  
  Sie können keines der Schlüsselwörter `ref`, `in` und `out` für die folgenden Methodentypen verwenden:  
   
-- Asynchrone Methoden, die Sie mit dem [async](../../../csharp/language-reference/keywords/async.md)-Modifizierer definieren.  
-- Iterator-Methoden, die eine [yield return](../../../csharp/language-reference/keywords/yield.md)- oder `yield break`-Anweisung enthalten.  
+- Asynchrone Methoden, die Sie mit dem [async](async.md)-Modifizierer definieren.  
+- Iterator-Methoden, die eine [yield return](yield.md)- oder `yield break`-Anweisung enthalten.  
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Übergeben eines Arguments als Verweis: Beispiel
 
 In den vorherigen Beispielen wurden Werttypen als Verweis übergeben. Sie können das `ref`-Schlüsselwort auch verwenden, um Verweistypen als Verweis zu übergeben. Die Übergabe eines Verweistyps als Verweis ermöglicht es der aufgerufenen Methode, das Objekt, auf die der Verweisparameter im Aufrufer verweist, zu ersetzen. Der Speicherort des Objekts wird als Wert des Verweisparameters an die Methode übergeben. Wenn Sie den Wert am Speicherort des Parameters ändern (um auf ein neues Objekt zu verweisen), ändern Sie auch den Speicherort, auf den der Aufrufer verweist. Im folgenden Beispiel wird eine Instanz eines Verweistyps als ein `ref`-Parameter übergeben.
   
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
-Weitere Informationen zum Übergeben von Verweistypen durch einen Wert und durch einen Verweis finden Sie unter [Übergeben von Verweistypparametern](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
+Weitere Informationen zum Übergeben von Verweistypen durch einen Wert und durch einen Verweis finden Sie unter [Übergeben von Verweistypparametern](../../programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
 ## <a name="reference-return-values"></a>Verweisrückgabewerte
 
@@ -80,7 +78,7 @@ Ein Verweisrückgabewert wird definiert durch Verwenden des `ref`-Schlüsselwort
 - In der Methodensignatur. Die folgende Methodensignatur gibt z.B. an, dass die Methode `GetCurrentPrice` den Wert <xref:System.Decimal> nach Verweis zurückgibt.
 
 ```csharp
-public ref decimal GetCurrentValue()
+public ref decimal GetCurrentPrice()
 ```
 
 - Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Zum Beispiel:
@@ -95,7 +93,7 @@ Ein Beispiel finden Sie unter [Beispiel für ref-Rückgaben und lokale ref-Varia
 
 ## <a name="ref-locals"></a>Lokale ref-Variablen
 
-Eine lokale ref-Variable wird verwendet, um auf Werte zu verweisen, die mit `return ref` zurückgegeben werden.  Eine lokale ref-Variable muss initialisiert und einem ref-Rückgabewert zugewiesen werden. Jede Änderung am Wert der lokalen ref-Variable wird im Zustand des Objekts wiedergegeben, dessen Methode den Wert als Verweis zurückgegeben hat.
+Eine lokale ref-Variable wird verwendet, um auf Werte zu verweisen, die mit `return ref` zurückgegeben werden. Eine lokale ref-Variable kann nicht für einen nicht ref-Rückgabewert initialisiert werden. Das heißt, die rechte Seite der Initialisierung muss ein Verweis sein. Jede Änderung am Wert der lokalen ref-Variable wird im Zustand des Objekts wiedergegeben, dessen Methode den Wert als Verweis zurückgegeben hat.
 
 Eine lokale ref-Variable wird mithilfe des `ref`-Schlüsselworts vor der Variablendeklaration definiert sowie unmittelbar vor dem Aufruf der Methode, die den Wert als Verweis zurückgibt.
 
@@ -117,23 +115,21 @@ Beachten Sie, dass das `ref`-Schlüsselwort in beiden Beispielen an beiden Stell
 
 Im folgenden Beispiel wird eine `Book`-Klasse mit zwei <xref:System.String>-Feldern definiert: `Title` und `Author`. Außerdem wird eine `BookCollection`-Klasse definiert, die ein privates Array von `Book`-Objekten enthält. Einzelne Buchobjekte werden durch Aufrufen der `GetBookByTitle`-Methode als Verweis zurückgegeben.
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 
 Speichert der Aufrufer den von der `GetBookByTitle`-Methode zurückgegeben Wert als lokale ref-Variable, werden Änderungen, die der Aufrufer am Rückgabewert vornimmt, im `BookCollection`-Objekt wiedergegeben. Dies wird im folgenden Beispiel gezeigt:
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
-## <a name="ref-struct-declarations"></a>ref-Strukturdeklarationen
-
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
- [Verweissemantik mit Werttypen](../../reference-semantics-with-value-types.md)  
- [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)  
- [Methodenparameter](method-parameters.md)  
- [C#-Referenz](../index.md)  
- [C#-Programmierhandbuch](../../programming-guide/index.md)  
- [C#-Schlüsselwörter](index.md)
+- [Verweissemantik mit Werttypen](../../reference-semantics-with-value-types.md)  
+- [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)  
+- [Methodenparameter](method-parameters.md)  
+- [C#-Referenz](../index.md)  
+- [C#-Programmierhandbuch](../../programming-guide/index.md)  
+- [C#-Schlüsselwörter](index.md)

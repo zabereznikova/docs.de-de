@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798911"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424479"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -179,7 +179,10 @@ Weitere Informationen über TLS-Protokolle finden Sie unter [Migration: TLS-Prot
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Konfigurieren der Sicherheit über die Windows-Registrierung
 
-Wenn die Einstellung mindestens eines `AppContext`-Switches nicht möglich ist, können Sie die Sicherheitsprotokolle für Ihre App mit den in diesem Abschnitt beschriebenen Windows-Registrierungsschlüsseln steuern. Möglicherweise können Sie einen oder beide `AppContext`-Switches nicht verwenden, wenn Ihre App auf eine ältere .NET Framework-Version als 4.6 abzielt, oder Sie können die Konfigurationsdatei nicht bearbeiten. Wenn Sie die Sicherheit mit der Registrierung konfigurieren möchten, dann geben Sie keinen Sicherheitsprotokollwert in Ihrem Code an; dies würde die von der Registrierung vorgenommenen Einstellungen überschreiben.
+> [!WARNING]
+> Das Festlegen von Registrierungsschlüsseln betrifft alle Anwendungen auf dem System. Verwenden Sie diese Option nur, wenn Sie die vollständige Kontrolle über den Computer innehaben und die Änderungen an der Registrierung kontrollieren können.
+
+Wenn die Einstellung mindestens eines `AppContext`-Switches nicht möglich ist, können Sie die Sicherheitsprotokolle für Ihre App mit den in diesem Abschnitt beschriebenen Windows-Registrierungsschlüsseln steuern. Möglicherweise können Sie einen oder beide `AppContext`-Switches nicht verwenden, wenn Ihre App unter .NET Framework-Version 4.5.2 oder früheren Versionen ausgeführt wird oder Sie die Konfigurationsdatei nicht bearbeiten können. Wenn Sie die Sicherheit mit der Registrierung konfigurieren möchten, geben Sie keinen Sicherheitsprotokollwert in Ihrem Code an; dies würde die Registrierungseinstellung außer Kraft setzen.
 
 Die Namen der Registrierungsschlüssel ähneln den Namen der entsprechenden `AppContext`-Switches, jedoch ohne `DontEnable` vor dem Namen. Der `AppContext`-Switch `DontEnableSchUseStrongCrypto` ist beispielsweise der Registrierungsschlüssel [SchUseStrongCrypto](#schusestrongcrypto).
 

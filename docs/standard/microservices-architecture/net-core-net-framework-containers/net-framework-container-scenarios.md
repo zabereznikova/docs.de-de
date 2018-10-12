@@ -3,13 +3,13 @@ title: Wann sollte .NET Framework für Docker-Container verwendet werden?
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Wann sollte .NET Framework für Docker-Container verwendet werden?
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/07/2018
-ms.openlocfilehash: 2fdf0c24999891e48e1867e8fa7b4ba0f5302850
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: 9e1ff03421f1a5d23878c74f13423cec9625c4c5
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106709"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609967"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Wann sollte .NET Framework für Docker-Container verwendet werden?
 
@@ -23,23 +23,27 @@ In diesem Szenario müssen Sie Ihre vorhandenen Anwendungen in den meisten Fäll
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Verwenden von .NET-Bibliotheken von Drittanbietern oder NuGet-Paketen, die für .NET Core nicht verfügbar sind
 
-[.NET Standard](../../net-standard.md) kommt in Drittanbieterbibliotheken immer häufiger zum Einsatz und ermöglicht die Codefreigabe in allen .NET-Varianten, einschließlich .NET Core. In .NET Standard 2.0 und höher wurde die API-Oberflächenkompatibilität frameworkübergreifend deutlich erhöht, und Anwendungen können in .NET Core 2.x auch direkt auf vorhandene .NET Framework-Bibliotheken verweisen (siehe [Kompatibilitätsshim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+[.NET Standard](https://docs.microsoft.com/dotnet/articles/standard/library) kommt in Drittanbieterbibliotheken immer häufiger zum Einsatz und ermöglicht die Codefreigabe in allen .NET-Varianten, einschließlich .NET Core. In .NET Standard 2.0 und höher wurde die API-Oberflächenkompatibilität frameworkübergreifend deutlich erhöht, und Anwendungen können in .NET Core 2.x auch direkt auf vorhandene .NET Framework-Bibliotheken verweisen (siehe [Kompatibilitätsshim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
 
-Selbst bei diesen außergewöhnlichen Fortschritten seit .NET Standard 2.0 und .NET Core 2.0 können jedoch weiterhin Fälle auftreten, in denen bestimmte NuGet-Pakete nicht ohne Windows ausgeführt werden können und .NET Core nicht unterstützen. Wenn diese Pakete von entscheidender Bedeutung für die Anwendung sind, müssen Sie .NET Framework in Windows-Containern verwenden.
+Darüber hinaus wurde das [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) im November 2017 veröffentlicht, um die für .NET Standard 2.0 unter Windows verfügbare API-Oberfläche zu erweitern. Mit diesem Paket kann der größte Teil des vorhandenen Codes mit nur geringen oder ganz ohne Änderungen für .NET Standard 2.x neu kompiliert und unter Windows ausgeführt werden.
+
+Selbst bei diesen außergewöhnlichen Fortschritten seit .NET Standard 2.0 und .NET Core 2.1 können jedoch weiterhin Fälle auftreten, in denen bestimmte NuGet-Pakete nicht ohne Windows ausgeführt werden können und .NET Core nicht unterstützen. Wenn diese Pakete von entscheidender Bedeutung für die Anwendung sind, müssen Sie .NET Framework in Windows-Containern verwenden.
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>Verwenden von .NET-Technologien, die für .NET Core nicht verfügbar sind 
 
 Einige .NET Framework-Technologien sind nicht in der aktuellen Version von .NET Core verfügbar (Version 2.1 bei Redaktionsschluss). Einige werden in höheren .NET Core-Versionen verfügbar sein (.NET Core 2.x). Andere können jedoch nicht für die neuen Anwendungsmuster verwendet werden, auf die .NET Core ausgelegt ist, und werden möglicherweise nie verfügbar sein.
 
-In der folgenden Liste wird der Großteil der Technologien aufgezählt, die in .NET Core 2.1 nicht verfügbar sind:
+In der folgenden Liste wird der Großteil der Technologien aufgezählt, die in .NET Core 2.x nicht verfügbar sind:
 
 -   ASP.NET Web Forms: Diese Technologie ist nur in .NET Framework verfügbar. Eine Integration von ASP.NET Web Forms in .NET Core ist zurzeit nicht geplant.
 
--   WCF-Dienste: Selbst wenn eine [WCF-Clientbibliothek](https://github.com/dotnet/wcf) für die Nutzung von WCF-Dienste aus .NET Core verfügbar war, ist die WCF-Implementierung zumindest bis Mitte 2017 nur für .NET Framework verfügbar gewesen. Dieses Szenario kann bei zukünftigen .NET Core-Releases berücksichtigt werden.
+-   WCF-Dienste: Auch wenn eine [WCF-Clientbibliothek](https://github.com/dotnet/wcf) für die Nutzung durch WCF-Dienste von .NET Core verfügbar ist, ist die WCF-Serverimplementierung seit Mitte 2017 nur in .NET Framework verfügbar. Dieses Szenario kann für zukünftige Versionen von .NET Core eine Rolle spielen, es gibt sogar Erwägungen, bestimmte APIs in das [Windows Compatibility Pack](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack) aufzunehmen.
 
 -   Workflow-bezogene Dienste: Windows Workflow Foundation (WF), die Workflow-Dienste (WCF + WF in einem einzigen Dienst) und WCF Data Services (früher ADO.NET Data Services) sind nur in .NET Framework verfügbar. Es ist zurzeit nicht vorgesehen, sie in .NET Core zu integrieren.
 
 Zusätzlich zu den in der offiziellen [Roadmap für .NET Core](https://github.com/aspnet/Home/wiki/Roadmap) aufgeführten Technologien werden möglicherweise andere Features zu .NET Core portiert. Eine vollständige Liste finden Sie auf der GitHub-CoreFX-Website. Die Elemente sind jeweils mit dem Tag [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) versehen. Beachten Sie, dass diese Liste keine Zusage von Microsoft darstellt, dass diese Komponenten in .NET Core integriert werden. In dieser Liste werden lediglich Anregungen der Community erfasst. Wenn Sie sich für eine der oben aufgeführten Komponenten interessieren, können Sie sich gern auf GitHub an den Diskussionen beteiligen. Wenn Ihrer Ansicht nach noch etwas fehlt, [eröffnen Sie im CoreFX Repository ein neues „Issue“](https://github.com/dotnet/corefx/issues/new).
+
+Zwar wird .NET Core 3 (zum Zeitpunkt der Erstellung dieses Texts in Arbeit) Unterstützung für eine große Zahl vorhandener .NET Framework-APIs beinhalten, diese sind aber desktoporientiert und bieten daher zurzeit keinen Nutzen in der Welt der Container.
 
 ## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>Verwenden einer Plattform oder API, die .NET Core nicht unterstützt
 
@@ -49,16 +53,16 @@ Wenn eine der Plattformen oder einer der Dienste in Azure .NET Core weiterhin ni
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **.NET Core Guide (Leitfaden für .NET Core)**
-    [*https://docs.microsoft.com/dotnet/core/index*](../../../core/index.md)
+-   **Leitfaden für .NET Core**  
+    [https://docs.microsoft.com/dotnet/articles/core/index](https://docs.microsoft.com/dotnet/articles/core/index)
 
--   **Porting from .NET Framework to .NET Core (Portieren von .NET Framework zu .NET Core)**
-    [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
+-   **Portieren von .NET Framework zu .NET Core**  
+    [https://docs.microsoft.com/dotnet/articles/core/porting/index](https://docs.microsoft.com/dotnet/articles/core/porting/index)
 
--   **.NET Framework on Docker Guide (Leitfaden zu .NET Framework in Docker)**
-    [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
+-   **Leitfaden zu .NET Framework in Docker**  
+    [https://docs.microsoft.com/dotnet/articles/framework/docker/](https://docs.microsoft.com/dotnet/articles/framework/docker/)
 
--   **.NET Components Overview (Übersicht zu .NET-Komponenten)**
+-   **.NET-Komponenten – Übersicht**  
     [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
 
 

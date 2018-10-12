@@ -4,18 +4,18 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Test
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792412"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195620"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
 Controller sind ein zentraler Bestandteil jedes ASP.NET Core API-Diensts und jeder ASP.NET MVC-Webanwendung. Daher sollten Sie auch darauf vertrauen, dass sie in Ihrer Anwendung wie beabsichtigt funktionieren. Automatisierte Tests können Ihnen dieses Vertrauen vermitteln. Sie können zudem dabei helfen, Fehler aufzudecken, bevor diese die Produktion erreichen.
 
-Sie müssen testen, wie der Controller sich auf Grundlage von gültigen bzw. ungültigen Eingaben verhält, und wie die Testcontroller abhängig vom Ergebnis des durchgeführten Geschäftsvorgangs antworten. Allerdings sollten Sie über diese Art von Tests in Ihren Microservices verfügen:
+Sie müssen testen, wie der Controller sich auf Grundlage von gültigen bzw. ungültigen Eingaben verhält, und wie die Testcontroller abhängig vom Ergebnis des durchgeführten Geschäftsvorgangs antworten. Allerdings sollten Sie über diese Arten von Tests für Ihre Microservices verfügen:
 
 -   Komponententests. Diese stellen sicher, dass die einzelnen Komponenten der Anwendung erwartungsgemäß funktionieren. Assertionstests für die Komponenten-API.
 
@@ -31,9 +31,9 @@ Ein Komponententest beinhaltet das Testen einer Anwendungskomponente isoliert vo
 
 Konzentrieren Sie sich bei der Durchführung eines Komponententests für Ihre Controlleraktionen daher nur auf deren Verhalten. Bei einem Komponententest des Controllers werden z.B. Filter, Routing oder Modellbindung vermieden. Durch die Fokussierung auf nur einen Aspekt sind Komponententests in der Regel einfach zu schreiben und schnell in der Ausführung. Gut geschriebene Komponententests können häufig ohne großen Mehraufwand ausgeführt werden.
 
-Komponententests werden basierend auf Testframeworks wie xUnit.net, MSTest, Moq oder NUnit implementiert. Für die Beispielanwendung eShopOnContainers verwenden wir XUnit.
+Komponententests werden basierend auf Testframeworks wie xUnit.net, MSTest, Moq oder NUnit implementiert. Für die Beispielanwendung eShopOnContainers wird xUnit verwendet.
 
-Wenn Sie einen Komponententest für einen Web-API-Controller schreiben, instanziieren Sie die Controllerklasse, und verwenden Sie direkt das New-Schlüsselwort in C\#, damit der Test so schnell wie möglich ausgeführt wird. Das folgende Beispiel zeigt die Vorgehensweise bei Verwendung von [XUnit](https://xunit.github.io/) als Testframework.
+Wenn Sie einen Komponententest für einen Web-API-Controller schreiben, instanziieren Sie die Controllerklasse, und verwenden Sie direkt das New-Schlüsselwort in C\#, damit der Test so schnell wie möglich ausgeführt wird. Im folgenden Beispiel wird gezeigt, wie dies unter Verwendung von [xUnit](https://xunit.github.io/) als Testframework erfolgt.
 
 ```csharp
 [Fact]

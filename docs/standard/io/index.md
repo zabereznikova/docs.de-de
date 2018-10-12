@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685711"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025596"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -41,6 +41,8 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
   
 -   <xref:System.IO.Path> – stellt Methoden und Eigenschaften für die plattformübergreifende Verarbeitung von Verzeichniszeichenfolgen zur Verfügung.  
   
+ Beim Aufrufen von Methoden des Dateisystems sollten Sie immer eine robuste Ausnahmebehandlung zur Verfügung stellen. Weitere Informationen hierzu finden Sie unter [Behandeln von E/A-Fehlern](handling-io-errors.md).
+ 
  Neben der Verwendung dieser Klassen können Benutzer von Visual Basic die von der <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType>-Klasse für Datei-E/A-Vorgänge bereitgestellten Methoden und Eigenschaften verwenden.  
   
  Weitere Informationen finden Sie unter [Gewusst wie: Kopieren von Verzeichnissen](../../../docs/standard/io/how-to-copy-directories.md), [Gewusst wie: Erstellen einer Verzeichnisauflistung](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) und [Gewusst wie: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  

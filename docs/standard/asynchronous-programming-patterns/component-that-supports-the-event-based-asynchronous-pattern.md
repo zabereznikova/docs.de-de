@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003814"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt
 Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen verursachen können, sollten Sie die Klasse mit einer asynchronen Funktionalität ausstatten, indem Sie das ereignisbasierte asynchrone Muster implementieren. Informationen zu diesem Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -58,7 +58,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 -   Erstellen Sie eine Klasse namens `PrimeNumberCalculator`, die von <xref:System.ComponentModel.Component> erbt.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definieren von öffentlichen asynchronen Ereignissen und Delegaten  
- Die Komponente kommuniziert mit Clients mithilfe von Ereignissen. Das Ereignis *MethodName***Completed** warnt Clients bei Abschluss eines asynchronen Tasks, und das Ereignis *MethodName***ProgressChanged** informiert Clients über den Fortschritt eines asynchronen Tasks.  
+ Die Komponente kommuniziert mit Clients mithilfe von Ereignissen. Das Ereignis _MethodName_**Completed** warnt Clients bei Abschluss eines asynchronen Tasks, und das Ereignis _MethodName_**ProgressChanged** informiert Clients über den Fortschritt eines asynchronen Tasks.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>So definieren Sie asynchrone Ereignisse für Clients der Komponente  
   

@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc3c23b277b233efba9f32cc49b29ac905f3abc8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480155"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227258"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -37,7 +37,7 @@ Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur
 Nach dem Wiederherstellen der Pakete führen Sie `dotnet build` aus. Hiermit wird die Build-Engine ausgeführt und Ihre Anwendung erstellt. Abschließend führen Sie `dotnet run` aus, um Ihre Anwendung zu starten.
 
 ## <a name="adding-new-dependencies"></a>Hinzufügen von neuen Abhängigkeiten
-Eines der wichtigsten Entwurfsziele für .NET Core ist die Minimierung der Größe der .NET Framework-Installation. Das .NET Core-Anwendungsframework enthält nur die am häufigsten verwendeten Elemente der vollständigen .NET Framework-Version. Wenn eine Anwendung zusätzliche Bibliotheken für bestimmte Features benötigt, fügen Sie diese abhängigen Komponenten Ihrer C#-Projektdatei (\*.csproj) hinzu. Beispielweise müssen Sie das `System.Runtime.Serialization.Json`-Paket hinzufügen, damit Ihre Anwendung JSON-Antworten verarbeiten kann.
+Eines der wichtigsten Entwurfsziele für .NET Core ist die Minimierung der Größe der .NET-Installation. Wenn eine Anwendung zusätzliche Bibliotheken für bestimmte Features benötigt, fügen Sie diese abhängigen Komponenten Ihrer C#-Projektdatei (\*.csproj) hinzu. Beispielweise müssen Sie das `System.Runtime.Serialization.Json`-Paket hinzufügen, damit Ihre Anwendung JSON-Antworten verarbeiten kann.
 
 Öffnen Sie Ihre `csproj`-Projektdatei. Die erste Zeile der Datei sollte so aussehen:
 

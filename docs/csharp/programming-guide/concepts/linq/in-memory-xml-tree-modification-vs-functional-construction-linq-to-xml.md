@@ -2,17 +2,17 @@
 title: Änderung der XML-Struktur im Arbeitsspeicher und Funktionale Konstruktion (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-ms.openlocfilehash: 836141185629683106698cc9b505c063de6c445e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fb461d6730260f01f0439b7feb239d51b29ee3c7
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45597575"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47193101"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Änderung der XML-Struktur im Arbeitsspeicher und Funktionale Konstruktion (LINQ to XML) (C#)
 Zur Änderung der Form eines XML-Dokuments wird üblicherweise die XML-Struktur an Ort und Stelle geändert. Eine typische Anwendung lädt ein Dokument in einen Datenspeicher, z. B. DOM oder [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], verwendet eine Programmierschnittstelle, um Knoten einzufügen, zu löschen oder zu ändern, und speichert den XML-Code dann in einer Datei bzw. überträgt ihn über ein Netzwerk.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ermöglicht eine andere Herangehensweise, die sich in vielen Szenarios als hilfreich erweist *: die funktionale Konstruktion*. Bei der funktionalen Konstruktion wird das Ändern von Daten als ein Transformationsproblem und nicht als detaillierte Manipulation eines Datenspeichers angesehen. Wenn Sie eine Datendarstellung effizient von einer Form in eine andere Form transformieren können, sieht das Ergebnis genauso aus, als hätten Sie einen Datenspeicher so manipuliert, dass er eine andere Form erhalten hat. Ein entscheidender Punkt bei der funktionalen Konstruktion ist die Übergabe der Ergebnisse von Abfragen an die Konstruktoren <xref:System.Xml.Linq.XDocument> und <xref:System.Xml.Linq.XElement>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ermöglicht eine andere Herangehensweise, die sich in vielen Szenarios als hilfreich erweist: *die funktionale Konstruktion*. Bei der funktionalen Konstruktion wird das Ändern von Daten als ein Transformationsproblem und nicht als detaillierte Manipulation eines Datenspeichers angesehen. Wenn Sie eine Datendarstellung effizient von einer Form in eine andere Form transformieren können, sieht das Ergebnis genauso aus, als hätten Sie einen Datenspeicher so manipuliert, dass er eine andere Form erhalten hat. Ein entscheidender Punkt bei der funktionalen Konstruktion ist die Übergabe der Ergebnisse von Abfragen an die Konstruktoren <xref:System.Xml.Linq.XDocument> und <xref:System.Xml.Linq.XElement>.  
   
  Das Schreiben des Transformationscodes kostet Sie häufig nur einen Bruchteil der Zeit, die Sie für die Manipulation des Datenspeichers hätten aufwenden müssen, und der Code ist robuster und leichter zu unterhalten. In diesen Fällen ist die Verwendung von Transformationscode die effektivere Möglichkeit, Daten zu ändern, auch wenn die Transformation mehr CPU-Leistung beansprucht. Wenn ein Entwickler mit dem funktionalen Ansatz vertraut ist, ist der entstehende Code häufig einfacher zu verstehen. Es ist dann auch leichter, den Code zu finden, der die einzelnen Teile der Struktur ändert.  
   

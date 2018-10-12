@@ -1,24 +1,28 @@
 ---
 title: Parallele Programmierung in .NET
-ms.date: 03/30/2017
+ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802302"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112719"
 ---
 # <a name="parallel-programming-in-net"></a>Parallele Programmierung in .NET
 
-Viele Personalcomputer und Arbeitsstationen verfügen über mehrere Kerne (d. h. CPUs), die die gleichzeitige Ausführung mehrerer Threads ermöglichen. Schon in naher Zukunft werden Computer vermutlich über deutlich mehr Kerne verfügen. Um sowohl aktuelle als auch künftige Hardware nutzen zu können, kann der Code parallelisiert werden, um die Arbeit über mehrere Prozessoren zu verteilen. Früher erforderte die Parallelisierung Änderungen von Threads und Sperren auf niedriger Ebene. Visual Studio 2010 und .NET Framework 4 verbessern die Unterstützung für die parallele Programmierung, indem sie eine neue Laufzeit, neue Klassenbibliothekstypen und neue Diagnosetools bereitstellen. Durch diese Funktionen wird die parallele Entwicklung vereinfacht, sodass sie effizienten, differenzierten und skalierbaren parallelen Code in einer natürlichen Sprache schreiben können, ohne direkt mit Threads oder dem Threadpool arbeiten zu müssen. Die folgende Abbildung zeigt eine allgemeine Übersicht der parallelen Programmierarchitektur in .NET Framework 4.
+Viele Personalcomputer und Arbeitsstationen verfügen über mehrere CPU-Kerne, die die gleichzeitige Ausführung mehrerer Threads ermöglichen. Um die Hardware nutzen zu können, kann der Code parallelisiert werden, um die Arbeit über mehrere Prozessoren zu verteilen.
 
- ![.NET-Architektur für die parallele Programmierung](./media/tpl-architecture.png "TPL_Architecture")
+Früher erforderte die Parallelisierung Änderungen von Threads und Sperren auf niedriger Ebene. Visual Studio und .NET Framework verbessern die Unterstützung für die parallele Programmierung, indem sie eine Laufzeit, Klassenbibliothekstypen und Diagnosetools bereitstellen. Diese Features, die in .NET Framework 4 eingeführt wurden, vereinfachen die parallele Entwicklung. Sie können effizienten, differenzierten und skalierbaren parallelen Code in einer natürlichen Sprache schreiben, ohne direkt mit Threads oder dem Threadpool arbeiten zu müssen.
+
+Die folgende Abbildung zeigt eine allgemeine Übersicht der parallelen Programmierarchitektur in .NET Framework:
+
+![.NET-Architektur für die parallele Programmierung](./media/tpl-architecture.png)
 
 ## <a name="related-topics"></a>Verwandte Themen
 

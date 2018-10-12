@@ -3,13 +3,13 @@ title: .NET Core Runtime-ID-Katalog (RID)
 description: Erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/07/2017
-ms.openlocfilehash: 81f9e5f65385bbd81c7fdae7f75c62d11b6f6319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 07/19/2018
+ms.openlocfilehash: ff0449f7c6f878131f0ec4b16d685d2c02d26719
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215907"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517378"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -122,22 +122,24 @@ Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erfo
 - Debian
   - `debian-x64`
   - `debian.8-x64`
+  - `debian.9-x64` (.NET Core 1.1 oder höher)
 - Fedora
   - `fedora-x64`
-  - `fedora.24-x64`
-  - `fedora.25-x64` (.NET Core 2.0 oder höher)
-  - `fedora.26-x64` (.NET Core 2.0 oder höher)
+  - `fedora.27-x64`
+  - `fedora.28-x64` (.NET Core 1.1 oder höher)
 - Gentoo (.NET Core 2.0 oder höher)
   - `gentoo-x64`
 - openSUSE
   - `opensuse-x64`
-  - `opensuse.42.1-x64`
+  - `opensuse.42.3-x64`
 - Oracle Linux
   - `ol-x64`
   - `ol.7-x64`
   - `ol.7.0-x64`
   - `ol.7.1-x64`
   - `ol.7.2-x64`
+  - `ol.7.3-x64`
+  - `ol.7.4-x64`
 - Red Hat Enterprise Linux
   - `rhel-x64`
   - `rhel.6-x64` (.NET Core 2.0 oder höher)
@@ -148,21 +150,32 @@ Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Mac (Erfo
   - `rhel.7.4-x64` (.NET Core 2.0 oder höher)
 - Tizen (.NET Core 2.0 oder höher)
   - `tizen`
+  - `tizen.4.0.0`
+  - `tizen.5.0.0`
 - Ubuntu
   - `ubuntu-x64`
   - `ubuntu.14.04-x64`
-  - `ubuntu.14.10-x64`
-  - `ubuntu.15.04-x64`
-  - `ubuntu.15.10-x64`
   - `ubuntu.16.04-x64`
-  - `ubuntu.16.10-x64`
+  - `ubuntu.17.10-x64`
+  - `ubuntu.18.04-x64`
 - Ubuntu-Ableitungen
   - `linuxmint.17-x64`
   - `linuxmint.17.1-x64`
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64`
+  - `linuxmint.18-x64` (.NET Core 2.0 oder höher)
   - `linuxmint.18.1-x64` (.NET Core 2.0 oder höher)
+  - `linuxmint.18.2-x64` (.NET Core 2.0 oder höher)
+  - `linuxmint.18.3-x64` (.NET Core 2.0 oder höher)
+- SUSE Enterprise Linux (SLES) (.NET Core 2.0 oder höher)
+  - `sles-x64`
+  - `sles.12-x64`
+  - `sles.12.1-x64`
+  - `sles.12.2-x64`
+  - `sles.12.3-x64`
+- Alpine Linux (.NET Core 2.1 oder höher)
+  - `alpine-x64`
+  - `alpine.3.7-x64`
 
 Weitere Informationen finden Sie unter [Prerequisites for .NET Core on Linux (Erforderliche Komponenten für .NET Core unter Linux)](linux-prerequisites.md).
 
@@ -185,4 +198,4 @@ Weitere Informationen finden Sie unter [Prerequisites for .NET Core on macOS (Er
 
 ## <a name="see-also"></a>Siehe auch
 
-[Runtime-IDs](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+* [Runtime-IDs](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

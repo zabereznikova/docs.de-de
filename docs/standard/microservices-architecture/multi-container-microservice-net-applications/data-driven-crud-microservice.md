@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Ers
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512115"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45617142"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -252,7 +252,7 @@ catalog.api:
     - "5101:80"
 ```
 
-Die docker-compose.yml-Dateien auf der Lösungsebene sind nicht nur flexibler als Konfigurationsdateien auf der Projekt- oder Microservice-Ebene, sondern auch sicherer, wenn Sie die in den docker-compose-Dateien deklarierten Umgebungsvariablen mit Werten überschreiben, die von Ihren Bereitstellungstools (z.B. VSTS-Docker-Bereitstellungsaufgaben) festgelegt wurden. 
+Die docker-compose.yml-Dateien auf der Lösungsebene sind nicht nur flexibler als Konfigurationsdateien auf der Projekt- oder Microservice-Ebene, sondern auch sicherer, wenn Sie die in den docker-compose-Dateien deklarierten Umgebungsvariablen mit Werten überschreiben, die von Ihren Bereitstellungstools (z.B. Azure DevOps Services-Docker-Bereitstellungsaufgaben) festgelegt wurden. 
 
 Abschließend können Sie diesen Wert aus Ihrem Code abrufen, indem Sie Configuration\["ConnectionString"\] verwenden, wie es in der ConfigureServices-Methode in einem Codebeispiel weiter oben gezeigt wurde.
 

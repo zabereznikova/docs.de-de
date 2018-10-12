@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 70830b08f9be95422761e0c096071d726a3950c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d1fd290444bc7841e32d955a4e7f2134afdbd484
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517392"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47193618"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
 Die try-catch-Anweisung besteht aus einem `try`-Block gefolgt von einer oder mehreren `catch`-Klauseln, die Handler für verschiedene Ausnahmen angeben.  

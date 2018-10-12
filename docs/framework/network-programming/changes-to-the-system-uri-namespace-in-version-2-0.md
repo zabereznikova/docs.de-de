@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392447"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205983"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Änderungen am System.Uri-Namespace in Version 2.0
 Es wurden mehrere Änderungen an der <xref:System.Uri?displayProperty=nameWithType>-Klasse vorgenommen. Diese Änderungen korrigierten falsches Verhalten, verbesserten die Verwendbarkeit und Sicherheit.  
@@ -42,7 +42,7 @@ Es wurden mehrere Änderungen an der <xref:System.Uri?displayProperty=nameWithTy
   
 -   Für URI-Schemas, die bekanntermaßen nicht zwingend über einen Abfrageteil (Datei, ftp usw.) verfügen, ist das „?“-Zeichen immer mit Leerzeichen versehen und wird nicht als Anfang des <xref:System.Uri.Query%2A>-Teils angesehen.  
   
--   Für implizite URI-Dateien (im Format „c:\directory\file@name.txt“) wird das Fragmentzeichen („#“) immer mit einem Leerzeichen versehen, außer die Funktion für die Entfernung der Escapezeichen wird angefordert, oder <xref:System.Uri.LocalPath%2A> entspricht `true`.  
+-   Für implizite URI-Dateien (im Format `c:\directory\file@name.txt`) wird das Fragmentzeichen („#“) immer mit einem Leerzeichen versehen, außer die Funktion für die Entfernung der Escapezeichen wird angefordert, oder <xref:System.Uri.LocalPath%2A> entspricht `true`.  
   
 -   Die Unterstützung des UNC-Hostnames wurde entfernt. Die IDN-Spezifikation für die Darstellung internationaler Hostnamen wurde übernommen.  
   
@@ -56,9 +56,9 @@ Es wurden mehrere Änderungen an der <xref:System.Uri?displayProperty=nameWithTy
   
 -   <xref:System.Uri.IsLoopback%2A> erzeugt jetzt konsistente Ergebnisse.  
   
--   Der URI „`file:///path`“ wird nicht mehr in „file://path“ übersetzt.  
+-   Der URI „`file:///path`“ wird nicht mehr in `file://path` übersetzt.  
   
--   „#“ wird nun als Abschlusszeichen eines Hostnamen erkannt werden. D.h.: http://consoto.com#fragment wird jetzt in http://contoso.com/#fragment konvertiert.  
+-   „#“ wird nun als Abschlusszeichen eines Hostnamen erkannt werden. D.h.: `http://consoto.com#fragment` wird jetzt in `http://contoso.com/#fragment` konvertiert.  
   
 -   Ein Fehler bei der Kombination eines Basis-URI mit einem Fragment wurde behoben.  
   

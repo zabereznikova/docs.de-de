@@ -1,20 +1,20 @@
 ---
 title: 'Vorgehensweise: Identifizieren eines Nullable-Typs (C#-Programmierhandbuch)'
 description: Erfahren Sie, wie Sie ermitteln, ob ein Typ ein Nullable-Typ oder eine Instanz eines Nullable-Typs ist.
-ms.date: 08/06/2018
+ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: c65f80974154d81b5ddf239b617eeeda68434e09
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45624944"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47400542"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Vorgehensweise: Identifizieren eines Nullable-Typs (C#-Programmierhandbuch)
 
-Im folgenden Beispiel wird gezeigt, wie Sie ermitteln können, ob eine <xref:System.Type?displayProperty=nameWithType>-Instanz einen Nullable-Typ darstellt:
+Das folgende Beispiel zeigt, wie Sie bestimmen können, ob eine <xref:System.Type?displayProperty=nameWithType>-Instanz einen geschlossenen generischen Nullable-Typ darstellt, d.h. den <xref:System.Nullable%601?displayProperty=nameWithType>-Typ mit einem angegebenen Typparameter `T`:
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 

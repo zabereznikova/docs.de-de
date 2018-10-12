@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ae8fbb47986e5baaecb919ce79ae384a8427737a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911730"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231124"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshallen von Daten mit Plattformaufruf
 Zum Aufrufen von Funktionen, die aus einer unverwalteten Bibliothek exportiert wurden, erfordert eine .NET Framework-Anwendung einen Funktionsprototypen im verwalteten Code, der die unverwaltete Funktion darstellt. Gehen Sie zum Erstellen eines Prototypen, der den Aufruf der Plattform für das korrekte Marshalling von Daten ermöglicht, gehen Sie folgendermaßen vor:  
@@ -46,10 +46,10 @@ Zum Aufrufen von Funktionen, die aus einer unverwalteten Bibliothek exportiert w
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
-|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
-|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
-|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
+|**LPSTR**|**char &ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
+|**LPCSTR**|**Const char&ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|  
+|**LPWSTR**|**wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
+|**LPCWSTR**|**Const wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 Bit|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 Bit|  
   

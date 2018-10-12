@@ -1,6 +1,6 @@
 ---
 title: Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
-ms.date: 08/22/2018
+ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000150"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080337"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
 <a name="top"></a> .NET bietet umfangreiche Unterstützung für das Entwickeln von lokalisierten und globalisierten Anwendungen und erleichtert bei der Ausführung allgemeiner Vorgänge das Übernehmen von Konventionen der aktuellen oder einer anderen Kultur, beispielsweise bei der Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.  
@@ -123,10 +123,12 @@ ms.locfileid: "43000150"
  Zeichenfolgenvergleiche bilden den Kern zahlreicher Operationen, die sich auf Zeichenfolgen beziehen; dies gilt insbesondere für Sortierungen und Überprüfungen auf Gleichheit. Zeichenfolgen werden in einer bestimmten Reihenfolge sortiert: Wenn "my" in einer sortierten Zeichenfolgenliste vor "string" angezeigt wird, muss "my" bei einem Vergleich einen kleineren oder gleichen Wert wie "string" haben. Darüber hinaus wird beim Vergleich implizit Gleichheit definiert. Die Vergleichsoperation gibt 0 (null) für Zeichenfolgen zurück, die als gleich betrachtet werden. Dies kann so interpretiert werden, dass keine Zeichenfolge kleiner ist als die andere. Sinnvolle Operationen mit Zeichenfolgen schließen i. d. R. mindestens eines der folgenden Verfahren ein: Vergleich mit einer anderen Zeichenfolge und Ausführen eines genau definierten Sortiervorgangs.  
 
 > [!NOTE]
-> Sie können die aus mehreren Textdateien bestehenden [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) herunterladen. Diese Textdateien enthalten Informationen zur Gewichtung der Zeichen, die bei Sortierungs- und Vergleichsvorgängen unter Windows-Betriebssystemen verwendet werden.
+> Sie können die aus mehreren Textdateien bestehenden [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921) herunterladen. Diese Textdateien enthalten Informationen zur Gewichtung der Zeichen, die bei Sortier- und Vergleichsvorgängen unter Windows-Betriebssystemen verwendet werden, sowie die [Default Unicode Collation Element Table](https://www.unicode.org/Public/UCA/latest/allkeys.txt), die neueste Version der Sortiergewichtungstabelle für Linux und macOS. Die spezifische Version der Sortiergewichtungstabelle unter Linux und macOS hängt von der auf dem System installierten Version der [International Components for Unicode](http://site.icu-project.org/) ab. Informationen zu ICU-Versionen und den Unicode-Versionen, die durch sie implementiert werden, finden Sie unter [Downloading ICU](http://site.icu-project.org/download).
 
  Die Überprüfung der Sortierreihenfolge zweier Zeichenfolgen oder ihre Überprüfung auf Gleichheit ergibt jedoch nicht ein einzelnes richtiges Ergebnis. Das Ergebnis ist vielmehr abhängig von den Kriterien, die dem Zeichenfolgenvergleich zugrunde liegen. Insbesondere können Zeichenfolgenvergleiche zu unterschiedlichen Ergebnissen führen, die Ordinalvergleiche darstellen oder auf der Schreibweise und den Sortierungskonventionen der aktuellen oder der invarianten Kultur (eine auf der englischen Sprache basierende Kultur, die nicht von einem Gebietsschema abhängig ist) basieren.  
-  
+
+Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen oder .NET unter verschiedenen Betriebssystemen oder Betriebssystemversionen verwenden, unterschiedliche Ergebnisse zurückgeben. Weitere Informationen finden Sie unter [Zeichenfolgen und der Unicode-Standard](xref:System.String#Unicode). 
+
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>Zeichenfolgenvergleiche mit der aktuellen Kultur  
  Ein Kriterium für Zeichenfolgenvergleiche stellt die Verwendung der Konventionen der aktuellen Kultur dar. Vergleiche, die auf der aktuellen Kultur basieren, verwenden die aktuelle Kultur oder das aktuelle Gebietsschema des Threads. Wenn die Kultur nicht vom Benutzer festgelegt wird, wird standardmäßig die Einstellung im Fenster **Ländereinstellungen** in der Systemsteuerung verwendet. Vergleiche, die auf der aktuellen Kultur basieren, sollten immer dann verwendet werden, wenn Daten linguistisch relevant sind und kulturabhängige Interaktionen von Benutzern widerspiegeln.  
@@ -370,5 +372,6 @@ ms.locfileid: "43000150"
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Zeichenfolgen](../../../docs/standard/base-types/manipulating-strings.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Bearbeiten von Zeichenfolgen](../../../docs/standard/base-types/manipulating-strings.md)

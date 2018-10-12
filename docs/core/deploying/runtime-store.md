@@ -4,11 +4,12 @@ description: In diesem Thema werden der Laufzeitpaketspeicher und die Zielmanife
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: aba1939cda8459d8b0d9438a97545c19d3c1926d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511583"
 ---
 # <a name="runtime-package-store"></a>Laufzeitpaketspeicher
 
@@ -16,18 +17,20 @@ Ab .NET Core 2.0 ist es möglich, Apps mit einer bekannten Reihe von Paketen, di
 
 Dieses Feature wird als *Laufzeitpaketspeicher* implementiert. Dabei handelt es sich um ein Verzeichnis auf der Festplatte, in dem Pakete gespeichert werden (normalerweise unter */usr/local/share/dotnet/store* unter macOS/Linux und *C:/Programme/dotnet/store* unter Windows). In diesem Verzeichnis gibt es Unterverzeichnisse für Architekturen und [target frameworks (Zielframeworks)](../../standard/frameworks.md). Das Dateilayout ist ähnlich wie [NuGet assets are laid out on disk (die Anordnung von NuGet-Objekten auf der Festplatte)](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure):
 
-\dotnet   
-&nbsp;&nbsp;\store   
-&nbsp;&nbsp;&nbsp;&nbsp;\x64   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
-&nbsp;&nbsp;&nbsp;&nbsp;\x86   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+```
+\dotnet
+    \store
+        \x64
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+        \x86
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+```
 
 Die Pakete im Laufzeitpaketspeicher werden in einer *Zielmanifestdatei* aufgelistet. Entwickler können auf dieses Manifest abzielen, wenn sie ihre App veröffentlichen. Das Zielmanifest wird normalerweise vom Besitzer der als Ziel festgelegten Produktionsumgebung bereitgestellt.
 
@@ -119,6 +122,8 @@ Geben Sie die Zielmanifeste nur in der Projektdatei an, wenn die Zielumgebung f�
 
 ## <a name="aspnet-core-implicit-store"></a>Impliziter Speicher für ASP.NET Core
 
+Der implizite Speicher für ASP.NET Core gilt nur für ASP.NET Core 2.0. Es wird dringend empfohlen, ASP.NET Core 2.1 und höher für Anwendungen zu verwenden, die den impliziten Speicher **nicht** verwenden. ASP.NET Core 2.1 und höher verwenden das freigegebene Framework.
+
 Das Feature für den Laufzeitpaketspeicher wird implizit von einer ASP.NET Core-App verwendet, wenn die App als [Framework-abhängige Bereitstellung (FDD)](index.md#framework-dependent-deployments-fdd) bereitgestellt wird. Die Ziele in [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) beinhalten Manifeste, die auf implizite Paketspeicher auf dem Zielsystem verweisen. Darüber hinaus resultiert jede FDD-App, die vom Paket `Microsoft.AspNetCore.All` abhängig ist, in einer veröffentlichten App, die nur die App und ihre Objekte enthält, nicht aber die Pakete, die im Metapaket `Microsoft.AspNetCore.All` aufgelistet sind. Es wird davon ausgegangen, dass diese Pakete auf dem Zielsystem vorhanden sind.
 
 Der Laufzeitpaketspeicher wird bei der Installation des .NET Core SDK auf dem Host installiert. Andere Installationsprogramme stellen möglicherweise den Laufzeitpaketspeicher bereit, einschließlich der Zip-/Tarball-Installationen des .NET Core SDK, `apt-get`, Red Hat Yum, dem .NET Core Windows Server-Hostingpakets und manuellen Installationen des Laufzeitpaketspeichers.
@@ -131,7 +136,7 @@ Versichern Sie sich, dass das .NET Core SDK in der Zielumgebung installiert ist,
 </PropertyGroup>
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > Bei Apps für die [eigenständige Bereitstellung (SCD)](index.md#self-contained-deployments-scd) wird davon ausgegangen, dass das Zielsystem die erforderlichen Manifestpakete nicht unbedingt enthält. Deshalb kann **\<PublishWithAspNetCoreTargetManifest>** für eine SCD-App nicht auf `true` festgelegt werden.
 
 Wenn Sie eine Anwendung bereitstellen, die von einem in der Bereitstellung vorhandenen Manifest abhängig ist (die Assembly ist im Ordner *bin* enthalten), wird der Laufzeitpaketspeicher für diese Assembly auf dem Host *nicht verwendet*. Die Assembly im Ordner *bin* wird unabhängig von ihrem Vorhandensein im Laufzeitpaketspeicher auf dem Host verwendet.
@@ -141,5 +146,6 @@ Die Version der Abhängigkeit, die im Manifest angegeben ist, muss mit der Versi
 Wenn die Bereitstellung bei der Veröffentlichung *gekürzt* ist, werden nur die spezifischen Versionen der Manifestpakete, die Sie angeben, aus der veröffentlichten Ausgabe zurückbehalten. Die Pakete der angegebenen Versionen müssen auf dem Host vorhanden sein, damit die App starten kann.
 
 ## <a name="see-also"></a>Siehe auch
- [dotnet-publish](../tools/dotnet-publish.md)  
- [dotnet-store](../tools/dotnet-store.md)  
+
+* [dotnet-publish](../tools/dotnet-publish.md)  
+* [dotnet-store](../tools/dotnet-store.md)  

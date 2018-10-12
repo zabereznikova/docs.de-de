@@ -4,12 +4,12 @@ description: Erfahren Sie, welche Abhängigkeiten Ihr Windows-Computer aufweisen
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747467"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Voraussetzungen für .NET Core unter Windows
 
@@ -61,7 +61,7 @@ Die folgenden Artikel enthalten eine vollständige Liste der von .NET Core unter
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Voraussetzungen für Visual Studio 2017
 
-Sie können einen Editor zur .NET Core-Anwendungsentwicklung mit dem .NET Core SDK verwenden. [Visual Studio 2017](#visual-studio-2017) stellt eine integrierte Entwicklungsumgebung für .NET Core-Apps unter Windows bereit.
+Sie können einen Editor zur .NET Core-Anwendungsentwicklung mit dem .NET Core SDK verwenden. Visual Studio 2017 stellt eine integrierte Entwicklungsumgebung für .NET Core-Apps unter Windows bereit.
 
 Informationen zu den Änderungen in Visual Studio 2017 finden Sie in den [Anmerkungen zur Version](/visualstudio/releasenotes/vs2017-relnotes).
 

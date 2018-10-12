@@ -4,12 +4,12 @@ description: Informationen zu Dotnet-Installationsskripts zur Installation von .
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214379"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180042"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -27,7 +27,7 @@ Mac OS/Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--dry-run] [--no-path] [--azure-feed] [--verbose] [--help]`
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
 Die `dotnet-install`-Skripts werden verwendet, um eine Nicht-Administrator-Installation des .NET Core-SDK durchzuführen, die die .NET Core-CLI-Tools und die freigegebene Laufzeit enthält.
 
@@ -36,11 +36,11 @@ Sie sollten die stabile Version verwenden, die auf der [.NET Core-Hauptwebsite](
 * https://dot.net/v1/dotnet-install.sh (Bash, UNIX)
 * https://dot.net/v1/dotnet-install.ps1 (PowerShell, Windows)
 
-Diese Skripts sind vor allem in Szenarios für die Automatisierung und Nicht-Administrator-Installationen nützlich. Es gibt zwei Skripts: Das eine ist ein PowerShell-Skript, das unter Windows funktioniert. Das andere Skript ist ein Bash-Skript für Linux/macOS. Beide Skripts weisen das gleiche Verhalten auf. Das Bash-Skript liest auch PowerShell-Schalter, sodass Sie PowerShell-Schalter mit dem Skript auf Linux/macOS-Systemen verwenden können. 
+Diese Skripts sind vor allem in Szenarios für die Automatisierung und Nicht-Administrator-Installationen nützlich. Es gibt zwei Skripts: Das eine ist ein PowerShell-Skript, das unter Windows funktioniert. Das andere Skript ist ein Bash-Skript für Linux/macOS. Beide Skripts weisen das gleiche Verhalten auf. Das Bash-Skript liest auch PowerShell-Schalter, sodass Sie PowerShell-Schalter mit dem Skript auf Linux/macOS-Systemen verwenden können.
 
-Die Installationsskripts laden die ZIP/Tarball-Datei vom CLI-Build-Ablagespeicherort herunter und installieren sie entweder am Standardspeicherort oder an einem in `-InstallDir|--install-dir` angegebenen Speicherort. In der Standardeinstellung laden die Installationsskripts das SDK herunter und installieren es. Wenn Sie nur die freigegebene Laufzeit abrufen möchten, geben Sie das `--shared-runtime`-Argument an. 
+Die Installationsskripts laden die ZIP/Tarball-Datei vom CLI-Build-Ablagespeicherort herunter und installieren sie entweder am Standardspeicherort oder an einem in `-InstallDir|--install-dir` angegebenen Speicherort. In der Standardeinstellung laden die Installationsskripts das SDK herunter und installieren es. Wenn Sie nur die freigegebene Laufzeit abrufen möchten, geben Sie das `--shared-runtime`-Argument an.
 
-In der Standardeinstellung fügt das Skript den Installationsort dem $PATH für die aktuelle Sitzung hinzu. Überschreiben Sie dieses Standardverhalten, indem sie das `--no-path`-Argument angeben. 
+In der Standardeinstellung fügt das Skript den Installationsort dem $PATH für die aktuelle Sitzung hinzu. Überschreiben Sie dieses Standardverhalten, indem sie das `--no-path`-Argument angeben.
 
 Bevor Sie das Skript ausführen, installieren Sie die erforderlichen [Abhängigkeiten](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).
 
@@ -141,7 +141,7 @@ Rufen Sie das Skript ab, und installieren Sie die Beispiele für die .NET Core-C
 
 Windows:
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 Mac OS/Linux:
 
@@ -149,5 +149,5 @@ Mac OS/Linux:
 
 ## <a name="see-also"></a>Siehe auch
 
-[.NET Core-Versionen](https://github.com/dotnet/core/releases)   
-[Downloadarchiv von .NET Core Runtime und des SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+* [.NET Core-Releases](https://github.com/dotnet/core/releases)
+* [Downloadarchiv von .NET Core Runtime und des SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

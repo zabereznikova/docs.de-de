@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 47f8e978d81b4aec94482f0a295691b830c3698c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199159"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857679"
 ---
 # <a name="properties-c-programming-guide"></a>Eigenschaften (C#-Programmierhandbuch)
 
@@ -73,8 +73,9 @@ Wenn eine Eigenschaft jeweils 체ber einen `get`- und `set`-Accessor verf체gt, m�
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
- [get-Schl체sselwort](../../../csharp/language-reference/keywords/get.md)    
- [set-Schl체sselwort](../../../csharp/language-reference/keywords/set.md)    
+
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [get-Schl체sselwort](../../../csharp/language-reference/keywords/get.md)    
+- [set-Schl체sselwort](../../../csharp/language-reference/keywords/set.md)    

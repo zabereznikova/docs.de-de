@@ -3,12 +3,12 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956408"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237383"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -159,7 +159,7 @@ Das folgende Beispiel definiert eine `QueryCityDataForYears`-Methode, die ein 6-
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 Weitere Informationen finden Sie unter [Ausschuss](../discards.md).
- 
+
 ## <a name="pattern-matching"></a>Musterabgleich
 
 *Mustervergleich* ist ein Funktion, mit der Sie Methodenverteilung für andere Eigenschaften als den Typ eines Objekts implementieren können. Sie sind wahrscheinlich bereits vertraut mit Methodenverteilung, die auf dem Typ eines Objekts basiert. In der objektorientierten Programmierung bieten virtuelle und Überschreibungsmethoden Sprachsyntax, um Methodenverteilung basierend auf dem Typ eines Objekts zu implementieren. Basis- und abgeleitete Klassen stellen verschiedene Implementierungen bereit. Mustervergleichsausdrücke erweitern dieses Konzept, sodass Sie ähnliche Verteilungsmuster für Typen und Datenelemente, die nicht durch eine Vererbungshierarchie verknüpft sind, einfach implementieren können. 
@@ -277,7 +277,9 @@ Die C#-Sprache verfügt über drei weitere Regeln, die Sie vor der falschen Verw
 * Lokale `ref`-Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
     - Der Compiler kann nicht feststellen, ob die Variable, auf die verwiesen wird, bei der Rückgabe der asynchronen Methode auf ihren endgültigen Wert festgelegt ist.
 
-Das Hinzufügen von lokalen ref-Variablen und ref-Rückgaben ermöglicht effizientere Algorithmen, da Werte nicht kopiert und dereferenzierende Vorgänge nicht mehrmals ausgeführt werden. 
+Das Hinzufügen von lokalen ref-Variablen und ref-Rückgaben ermöglicht effizientere Algorithmen, da Werte nicht kopiert und dereferenzierende Vorgänge nicht mehrmals ausgeführt werden.
+
+Das Hinzufügen von `ref` zum Rückgabewert stellt eine [quellkompatible Änderung](version-update-considerations.md#source-compatible-changes) dar. Vorhandener Code lässt sich kompilieren, der ref-Rückgabewert wird aber bei der Zuweisung kopiert. Aufrufer müssen den Speicher für den Rückgabewert in eine lokale `ref`-Variable aktualisieren, um die Rückgabe als Verweis zu speichern.
 
 ## <a name="local-functions"></a>Lokale Funktionen
 
@@ -327,6 +329,8 @@ In C# 6 wurden [Ausdruckskörpermember](csharp-6.md#expression-bodied-function-m
 
 Diese neuen Speicherorte für Ausdruckskörpermember sind ein wichtiger Meilenstein für C#: Diese Funktionen wurden von Community-Mitgliedern implementiert, die am Open-Source-Projekt [Roslyn](https://github.com/dotnet/Roslyn) arbeiten.
 
+Das Ändern einer Methode in ein Ausdruckskörpermember ist eine [binärkompatible](version-update-considerations.md#binary-compatible-changes) Änderung.
+
 ## <a name="throw-expressions"></a>Throw-Ausdrücke
 
 In C# ist `throw` schon immer eine Anweisung. Da `throw` eine Anweisung und kein Ausdruck ist, gab es C#-Konstrukte, in denen diese nicht verwendet werden konnte. Darunter waren bedingte Ausdrücke, NULL-Sammelausdrücke und einige Lambdaausdrücke. Das Hinzufügen von Ausdruckskörpermembern fügt mehr Speicherorte hinzu, bei denen `throw`-Ausdrücke nützlich wären. Damit Sie diese Konstrukte schreiben können, führt C# 7.0 *Throw-Ausdrücke* ein.
@@ -362,8 +366,10 @@ Die neue Sprachfunktion bedeutet, dass asynchrone Methoden zusätzlich zu `Task`
 Eine einfache Optimierung wäre es, `ValueTask` da zu verwenden, wo zuvor `Task` verwendet wurde. Wenn Sie jedoch zusätzliche Optimierungen manuell ausführen möchten, können Sie Ergebnisse asynchroner Arbeit zwischenspeichern und bei späteren Aufrufen wiederverwenden. Die `ValueTask`-Struktur verfügt über einen Konstruktor mit einem `Task`-Parameter, sodass Sie einen `ValueTask` aus dem Rückgabewert einer beliebigen vorhandenen asynchronen Methode konstruieren können:
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 Wie bei allen Leistungsempfehlungen sollte Sie für beide Versionen einen Vergleichstest durchführen, bevor Sie an Ihrem Code große Veränderungen vornehmen.
+
+Wenn der Rückgabewert das Ziel einer `await`-Anweisung ist, ist das Ändern einer API aus einer <xref:System.Threading.Tasks.Task%601> in eine <xref:System.Threading.Tasks.ValueTask%601> eine [quellkompatible Änderung](version-update-considerations.md#source-compatible-changes). Im Allgemeinen trifft das auf eine Änderung in `ValueTask` nicht zu.
 
 ## <a name="numeric-literal-syntax-improvements"></a>Verbesserung der numerischen literalen Syntax
 

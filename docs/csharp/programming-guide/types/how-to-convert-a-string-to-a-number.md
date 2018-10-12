@@ -7,17 +7,17 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 55ff87ef51f00a803276083052d4d86960e702e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332854"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521752"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Gewusst wie: Konvertieren einer Zeichenfolge in eine Zahl (C#-Programmierhandbuch)
 Sie können eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) mithilfe von Methoden in der <xref:System.Convert>-Klasse oder durch die Verwendung der `TryParse`-Methode, die in verschiedenen numerischen Typen (int, long, float usw.) Anwendung findet, in eine Zahl umwandeln.  
   
- Wenn Sie über eine Zeichenfolge verfügen, ist es etwas effizienter und einfacher, eine `TryParse`-Methode (beispielsweise `int.TryParse("11")`) aufzurufen.  Die Verwendung einer `Convert`-Methode eignet sich eher für allgemeine Objekte, die <xref:System.IConvertible> implementieren.  
+ Wenn Sie über eine Zeichenfolge verfügen, ist es etwas effizienter und einfacher, eine `TryParse`-Methode (beispielsweise [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) aufzurufen.  Die Verwendung einer <xref:System.Convert>-Methode eignet sich eher für allgemeine Objekte, die <xref:System.IConvertible> implementieren.  
   
  Sie können die Methode `Parse` oder `TryParse` für den numerischen Typ verwenden, den Sie in der Zeichenfolge erwarten, beispielsweise den <xref:System.Int32?displayProperty=nameWithType>-Typ.  Die <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType>-Methode verwendet <xref:System.Int32.Parse%2A> intern.  Wenn die Zeichenfolge in keinem gültigen Format vorliegt, löst `Parse` eine Ausnahme aus, während `TryParse` [false](../../../csharp/language-reference/keywords/false.md) zurückgibt.  
   
@@ -53,7 +53,8 @@ Sie können eine [Zeichenfolge](../../../csharp/language-reference/keywords/stri
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Typen](../../../csharp/programming-guide/types/index.md)  
- [Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
- [.NET Framework 4-Hilfsprogramm zur Formatierung](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Siehe auch
+
+- [Typen](../../../csharp/programming-guide/types/index.md)  
+- [Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [.NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

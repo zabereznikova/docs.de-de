@@ -3,13 +3,13 @@ title: dotnet new Befehl – .NET Core-CLI
 description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512554"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,28 +22,34 @@ ms.locfileid: "36207781"
 ## <a name="synopsis"></a>Übersicht
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
 Der Befehl `dotnet new` bietet eine praktische Möglichkeit, ein gültiges .NET Core-Projekt zu initialisieren.
 
@@ -284,9 +290,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 **web**
 
-`--use-launch-settings`: enthält *launchSettings.json* in der generierten Vorlagenausgabe.
+`--exclude-launch-settings`: schließt *launchSettings.json* aus der generierten Vorlage aus.
 
 `--no-restore`: führt keine implizite Wiederherstellung während der Projekterstellung durch.
+
+`--no-https`: Für das Projekt ist HTTPS nicht erforderlich. Diese Option gilt nur, wenn `IndividualAuth` oder `OrganizationalAuth` nicht verwendet werden.
 
 **webapi**
 
@@ -309,13 +317,15 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 `--tenant-id <ID>`: Die Mandanten-ID der Verzeichnis, mit dem eine Verbindung hergestellt werden soll Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`.
 
-`-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung
+`-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
 
-`--use-launch-settings`: enthält *launchSettings.json* in der generierten Vorlagenausgabe.
+`--exclude-launch-settings`: schließt *launchSettings.json* aus der generierten Vorlage aus.
 
 `-uld|--use-local-db`: gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung.
 
 `--no-restore`: führt keine implizite Wiederherstellung während der Projekterstellung durch.
+
+`--no-https`: Für das Projekt ist HTTPS nicht erforderlich. `app.UseHsts` und `app.UseHttpsRedirection` werden nicht in `Startup.Configure` eingefügt. Diese Option gilt nur, wenn `Individual`, `IndividualB2C`, `SingleOrg` oder `MultiOrg` nicht verwendet werden.
 
 **mvc, razor**
 
@@ -346,15 +356,17 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 `--callback-path <PATH>`: der Anforderungspfad innerhalb des Basispfads des Umleitungs-URIs der Anwendung. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `/signin-oidc`.
 
-`-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung
+`-r|--org-read-access`: erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`- oder `MultiOrg`-Authentifizierung.
 
-`--use-launch-settings`: enthält *launchSettings.json* in der generierten Vorlagenausgabe.
+`--exclude-launch-settings`: schließt *launchSettings.json* aus der generierten Vorlage aus.
 
 `--use-browserlink`: enthält BrowserLink im Projekt
 
 `-uld|--use-local-db`: gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung.
 
 `--no-restore`: führt keine implizite Wiederherstellung während der Projekterstellung durch.
+
+`--no-https`: Für das Projekt ist HTTPS nicht erforderlich. `app.UseHsts` und `app.UseHttpsRedirection` werden nicht in `Startup.Configure` eingefügt. Diese Option gilt nur, wenn `Individual`, `IndividualB2C`, `SingleOrg` oder `MultiOrg` nicht verwendet werden.
 
 **page**
 
@@ -524,7 +536,7 @@ Erstellen Sie eine *global.json* im aktuellen Verzeichnis, und legen Sie die SDK
 
 ## <a name="see-also"></a>Siehe auch
 
-[Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](custom-templates.md)  
-[Erstellen eines benutzerdefinierten Vorlagen-Assistenten](~/docs/core/tutorials/create-custom-template.md)  
-[dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)  
-[Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+* [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](custom-templates.md)  
+* [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](~/docs/core/tutorials/create-custom-template.md)  
+* [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)  
+* [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

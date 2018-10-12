@@ -4,12 +4,12 @@ description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210081"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835391"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Portieren von .NET Framework auf .NET Core
 
@@ -27,7 +27,7 @@ Die empfohlene Vorgehensweise für das Portieren ist in den folgenden Schritten 
 
    Dadurch wird sichergestellt, dass Sie API-Alternativen für bestimmte .NET Framework-Ziele in Fällen verwenden können, in denen .NET Core eine bestimmte API nicht unterstützen kann.
    
-3. Verwenden Sie das [Tool zum Analysieren der API-Portabilität](https://github.com/Microsoft/dotnet-apiport/), um Ihre Assemblys zu analysieren, und um einen Plan zum Portieren auf Grundlage der Ergebnisse zu entwickeln.
+3. Verwenden Sie das [Analysetool für .NET-Portierbarkeit](../../standard/analyzers/portability-analyzer.md), um Ihre Assemblys zu analysieren, und um einen Plan zum Portieren auf Grundlage der Ergebnisse zu entwickeln.
 
    Das Tool zum Analysieren der API-Portabilität analysiert Ihre kompilierten Assemblys und generiert einen Bericht, der eine allgemeine Zusammenfassung über die Portabilität sowie einen Strukturplan jeder API anzeigt, die Sie verwenden, und die nicht auf .NET Core verfügbar ist.  Sie können diesen Bericht zusammen mit einer Analyse Ihrer Codebase verwenden, um einen Plan zum Portieren Ihres Codes zu entwickeln.
    

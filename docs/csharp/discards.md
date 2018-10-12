@@ -4,12 +4,12 @@ description: Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: 9688ea596fa3d534c6c48d5874b04bb257d0dbce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219231"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524202"
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
 
@@ -54,7 +54,7 @@ Im folgenden Beispiel wird die Methode `ProvidesFormatInfo` definiert, die [is](
 
 ## <a name="calls-to-methods-with-out-parameters"></a>Aufrufe von Methoden mit out-Parametern
 
-Wenn die Methode `Deconstruct` aufgerufen wird, um einen benutzerdefinierten Typ (eine Instanz einer Klasse, Struktur oder Schnittstelle) zu dekonstruieren, können Sie die Werte einzelner `out`-Argumente verwerfen. Sie können ebenfalls den Wert von `out`-Argumenten verwerfen, wenn Sie eine Methode mit einem out-Parameter aufrufen. 
+Wenn die Methode `Deconstruct` aufgerufen wird, um einen benutzerdefinierten Typ (eine Instanz einer Klasse, Struktur oder Schnittstelle) zu dekonstruieren, können Sie die Werte einzelner `out`-Argumente verwerfen. Sie können ebenfalls den Wert von `out`-Argumenten verwerfen, wenn Sie eine Methode mit einem out-Parameter aufrufen.
 
 Im folgenden Beispiel wird die Methode [DateTime.TryParse(String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) aufgerufen, um zu bestimmen, ob die Zeichenfolgendarstellung eines Datums in der aktuellen Kultur gültig ist. Da das Beispiel darauf beschränkt ist, die Datumszeichenfolge zu überprüfen und diese nicht analysiert wird, um das Datum zu extrahieren, ist das Argument `out` der Methode ein Ausschuss.
 
@@ -71,16 +71,17 @@ Beachten Sie, dass `_` auch ein gültiger Bezeichner ist. Bei der Verwendung au�
 - Versehentliche Änderung des Werts der im Bereich befindlichen Variable `_`, indem dieser der Wert eines beabsichtigten Ausschusses zugewiesen wird. Zum Beispiel:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
- 
+
 - Ein Compilerfehler wegen Verletzung der Typsicherheit. Zum Beispiel:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
- 
-- Compilerfehler CS0136, „Eine lokale Variable oder ein Parameter mit dem Namen ‚_‘ kann in diesem Bereich nicht deklariert werden, da der Name in einem einschließenden lokalen Bereich verwendet wird, um eine lokale Variable oder einen Parameter zu definieren.“ Zum Beispiel:
+
+- Compilerfehler CS0136: „A local or parameter named '\_' cannot be declared in this scope because that name is used in an enclosing local scope to define a local or parameter.“ (Eine lokale Variable oder ein Parameter mit dem Namen „_“ kann in diesem Bereich nicht deklariert werden, da der Name in einem einschließenden lokalen Bereich verwendet wird, um eine lokale Variable oder einen Parameter zu definieren.) Zum Beispiel:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>Siehe auch
-[Dekonstruieren von Tupeln und anderen Typen](deconstruct.md)   
-[`is`Schlüsselwort](language-reference/keywords/is.md)   
-[`switch`Schlüsselwort](language-reference/keywords/switch.md)   
+
+- [Dekonstruieren von Tupeln und anderen Typen](deconstruct.md)
+- [`is`Schlüsselwort](language-reference/keywords/is.md)
+- [`switch`Schlüsselwort](language-reference/keywords/switch.md)

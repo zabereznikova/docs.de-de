@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 3924d070ea012faf33f1d808b92b1328626ef567
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96de5601c60dd309fe5467414affd20b8bc93d87
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805454"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584198"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Wenn Sie einen Delegaten instanziieren, können Sie jeder Methode seine Instanz mit einer kompatiblen Signatur und dem Rückgabetyp zuordnen. Sie können die Methode über die Delegatinstanz aufrufen.  
@@ -29,7 +29,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
 ## <a name="delegates-overview"></a>Übersicht über Delegaten  
  Delegaten verfügen über folgende Eigenschaften:  
   
--   Delegaten ähneln C++-Funktionszeigern, sind aber typsicher.  
+-   Delegaten ähneln C++-Funktionszeigern, sind aber vollständig objektorientiert, und im Gegensatz zu C++-Zeigern auf Memberfunktionen kapseln Delegaten sowohl eine Objektinstanz als auch eine Methode.
   
 -   Delegaten ermöglichen es, Methoden als Parameter zu übergeben.  
   

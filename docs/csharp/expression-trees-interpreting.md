@@ -3,12 +3,12 @@ title: Interpretieren von Ausdrücken
 description: Weitere Informationen zum Schreiben von Code, um die Struktur einer Ausdrucksbaumstruktur zu untersuchen.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 04622c0aa7323ac4cf16af94e31f1ef6987f87c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219309"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506418"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -514,7 +514,7 @@ Erstens behandelt der Besucher nur Konstanten, die ganze Zahlen sind. Konstante 
 
 Sogar das letzte Beispiel erkennt eine Teilmenge der möglichen Knotentypen.
 Sie können weiterhin viele Ausdrücke eingeben, die Fehler verursachen werden.
-Eine vollständige Implementierung befindet sich in .NET Standard unter dem Namen [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) und kann die möglichen Knotentypen behandeln.
+Eine vollständige Implementierung ist in .NET Standard unter dem Namen <xref:System.Linq.Expressions.ExpressionVisitor> enthalten und kann alle möglichen Knotentypen verarbeiten.
 
 Schließlich wurde die Bibliothek, die ich in diesem Artikel verwendet habe, für Demo- und Lernzwecke erstellt. Sie ist nicht optimiert. Ich habe sie geschrieben, um die verwendeten Strukturen klar zu machen und um die verwendeten Techniken für den Zugriff auf die Knoten hervorzuheben und zu analysieren, was sich dort befindet. Eine Produktionsimplementierung würde mehr Aufmerksamkeit auf die Leistung legen, als ich es habe.
 

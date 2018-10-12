@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 974e0c3ab29da582e7b22c909650a61d179ec3f7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e4103f8e71858ec74c348ee1f675828e6468eb2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523938"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170586"
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz) #
 
@@ -128,6 +128,16 @@ Der konstante Ausdruck wird wie folgt ausgewertet:
 Im folgenden Beispiel werden Typ- und Konstantenmuster miteinander vereint, um zu prüfen, ob ein Objekt eine `Dice`-Instanz ist; ist dem so, wird geprüft, ob der Wert eines Würfelvorgangs 6 ist.
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+
+Die Überprüfung auf `null` kann mithilfe des Konstantenmusters erfolgen. Das Schlüsselwort `null` wird von der `is`-Anweisung unterstützt. Die Syntax lautet:
+
+```csharp 
+   expr is null
+```
+
+Das folgende Beispiel zeigt einen Vergleich von `null`-Überprüfungen:
+
+[!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
  
 ### <a name="var" />Variablenmuster</a>
 

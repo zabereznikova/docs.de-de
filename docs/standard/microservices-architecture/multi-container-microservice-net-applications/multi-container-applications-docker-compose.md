@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Defi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: 0c4eda54fbb1f48095d52fa798ea839eb509a636
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754728"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937604"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml 
 
@@ -126,7 +126,7 @@ Dieser Containerdienst verfügt über die folgende grundlegende Konfiguration:
 
 -   Der SQL Server-Name lautet „sql.data“. Dies ist derselbe Name, der für den Container verwendet wird, der die SQL Server-Instanz für Linux ausführt. Das ist wirklich praktisch, denn die Möglichkeit, diese Namensauflösung (intern für den Docker-Host) zu verwenden, löst die Netzwerkadresse auf. Sie müssen die interne IP-Adresse für die Container also nicht kennen, auf die Sie von anderen Container aus zugreifen.
 
-Da die Verbindungszeichenfolge von einer Umgebungsvariable definiert ist, können Sie die Variable über einen anderen Mechanismus und zu einer anderen Zeit festlegen. Sie können beispielsweise eine andere Verbindungszeichenfolge festlegen, wenn Sie eine Bereitstellung zur Produktion in den finalen Hosts durchführen, oder von Ihren CI/CD-Pipelines in VSTS bzw. von Ihrem bevorzugten DevOps-System aus.
+Da die Verbindungszeichenfolge von einer Umgebungsvariable definiert ist, können Sie die Variable über einen anderen Mechanismus und zu einer anderen Zeit festlegen. Sie können beispielsweise eine andere Verbindungszeichenfolge festlegen, wenn Sie eine Bereitstellung zur Produktion in den finalen Hosts durchführen, oder von Ihren CI/CD-Pipelines in Azure DevOps Services bzw. von Ihrem bevorzugten DevOps-System aus.
 
 -   Er stellt Port 80 für den internen Zugriff auf den catalog.api-Dienst im Docker-Host zur Verfügung. Der Host ist derzeit eine Linux-VM, da er auf einem Docker-Image für Linux basiert. Sie können den Container jedoch auch so konfigurieren, dass er stattdessen auf einem Windows-Image ausgeführt wird.
 
@@ -180,7 +180,7 @@ Wenn unterschiedliche Umgebungen angezielt werden sollen, verwenden Sie mehrere 
 
 Sie können eine einzelne docker-compose-Datei verwenden. Dies wird in den vorherigen Abschnitten in vereinfachten Beispielen dargestellt. Diese Verfahren sind jedoch für die meisten Anwendungen nicht empfehlenswert.
 
-Standardmäßig liest Compose zwei Dateien: eine docker-compose.yml- und eine optionale docker-compose.override.yml-Datei. Wie in Abbildung 8-11 dargestellt ist, erstellt Visual Studio, wenn Sie Visual Studio verwenden und Docker-Support aktivieren, eine zusätzliche docker-compose.ci.build.yml-Datei für Sie, die Sie aus Ihren CI/CD-Pipelines wie VSTS verwenden können.
+Standardmäßig liest Compose zwei Dateien: eine docker-compose.yml- und eine optionale docker-compose.override.yml-Datei. Wie in Abbildung 8-11 dargestellt ist, erstellt Visual Studio, wenn Sie Visual Studio verwenden und Docker-Support aktivieren, eine zusätzliche docker-compose.ci.build.yml-Datei für Sie, die Sie aus Ihren CI/CD-Pipelines wie Azure DevOps Services verwenden können.
 
 ![](./media/image12.png)
 

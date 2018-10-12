@@ -1,38 +1,60 @@
 ---
 title: Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
-ms.date: 07/20/2015
+description: Erfahren Sie mehr über numerische Standardformatzeichenfolgen in C#
+ms.date: 09/20/2018
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
-- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508198"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47203890"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
-Sie können numerische Ergebnisse mithilfe der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode, durch die Methoden <xref:System.Console.Write%2A?displayProperty=nameWithType> und <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, die `String.Format` aufrufen, oder durch die [Zeichenfolgeninterpolation](../tokens/interpolated.md) formatieren. Das Format wird mithilfe von Formatzeichenfolgen angegeben. Die folgende Tabelle enthält die unterstützen Standardformatzeichenfolgen. Die Formatzeichenfolge nimmt die folgende Form an: `Axx`, wobei `A` der Formatbezeichner und `xx` die Genauigkeitsangabe ist. Der Formatbezeichner steuert den Formatierungstyp, der auf den numerischen Wert angewendet wird. Die Genauigkeitsangabe steuert die Anzahl signifikanter Stellen oder Dezimalstellen der formatierten Ausgabe. Der Wert der Genauigkeitsangabe liegt im Bereich 0–99.  
-  
- Weitere Informationen zu standardmäßigen und benutzerdefinierten Formatierungszeichenfolgen finden Sie unter [Formatierung von Typen](../../../standard/base-types/formatting-types.md).
-  
-|Formatbezeichner|Beschreibung |Beispiele|Ausgabe|  
+
+Die folgende Tabelle weist die unterstützten Formatbezeichner zum Formatieren von numerischen Ergebnissen aus. Das formatierte Ergebnis in der letzten Spalte entspricht dem „en-US“ <xref:System.Globalization.CultureInfo>.
+
+|Formatbezeichner|Beschreibung |Beispiele|Ergebnis|  
 |----------------------|-----------------|--------------|------------|  
-|C oder c|Währung|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", -2.5);|$2.50<br /><br /> ($2.50)|  
-|D oder d|Decimal|Console.Write("{0:D5}", 25);|00025|  
-|E oder e|Wissenschaftlich|Console.Write("{0:E}", 250000);|2.500000E+005|  
-|F oder f|Festkomma|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G oder g|Allgemein|Console.Write("{0:G}", 2.5);|2.5|  
-|N oder n|Anzahl|Console.Write("{0:N}", 2500000);|2,500,000.00|  
-|X oder x|Hexadezimal|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
-  
+|C oder c|Währung|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|D oder d|Decimal|`string s = $"{25:D5}";`|00025|  
+|E oder e|Exponentiell|`string s = $"{250000:E2}";`|2.50E + 005|  
+|F oder f|Festkomma|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G oder g|Allgemein|`string s = $"{2.5:G}";`|2.5|  
+|N oder n|Numeric|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P oder p|Prozent|`string s = $"{0.25:P}";`|25.00%|  
+|R oder r|Schleife|`string s = $"{2.5:R}";`|2.5|  
+|X oder x|Hexadezimal|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
+
+## <a name="remarks"></a>Hinweise
+
+Ein Formatbezeichner wird zum Erstellen einer Formatzeichenfolge verwendet. Die Formatzeichenfolge weist die folgende Form auf: `Axx`, wobei
+
+- `A` der Formatbezeichner ist, der die Art der Formatierung steuert, die auf den numerischen Wert angewendet wird.
+- `xx` der Genauigkeitsbezeichner ist, der sich auf die Anzahl der Stellen in der formatierten Ausgabe auswirkt. Der Wert der Genauigkeitsangabe liegt im Bereich 0–99.
+
+Die Dezimal- („D“ oder „d“) und Hexadezimal- („X“ oder „x“) Formatbezeichner werden nur für integrale Typen unterstützt. Der Round-Trip-Formatbezeichner („R“ oder „r“) wird nur für die Typen <xref:System.Single>, <xref:System.Double> und <xref:System.Numerics.BigInteger> unterstützt.
+
+Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
+
+- Einigen Überladungen der `ToString`-Methode aller numerischen Typen. Sie können z.B. eine numerische Formatzeichenfolge an die <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType>-Methode und <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>-Methode übergeben.
+
+- Beispielsweise das [zusammengesetzte Formatierungsfeature](../../../standard/base-types/composite-formatting.md) von .NET, das von der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode unterstützt wird.
+
+- [Interpolierte Zeichenfolgen](../tokens/interpolated.md).
+
+Weitere Informationen finden Sie unter [Numerische Standard-Formatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md).
+
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [Referenztabellen für Typen](reference-tables-for-types.md)
+- [Formatierung von Typen](../../../standard/base-types/formatting-types.md)
+- [Kombinierte Formatierung](../../../standard/base-types/composite-formatting.md)
+- [Zeichenfolgeninterpolation](../tokens/interpolated.md)
+- [string](string.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591398"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192215"
 ---
 # <a name="-c-reference"></a>@ (C#-Referenz)
 
@@ -33,46 +33,9 @@ Das Sonderzeichen `@` dient als ausführlicher Bezeichner. Er wird wie folgt ver
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Zum Zulassen, dass der Compiler im Fall eines Namenskonflikts zwischen Attributen unterscheiden kann. Ein Attribut ist ein von <xref:System.Attribute> abgeleiteter Typ. Der Name des Typs enthält normalerweise das Suffix **Attribute**, obwohl der Compiler diese Konvention nicht erzwingt. Auf das Attribut kann dann im Code entweder über den vollständigen Typnamen (z.B. `[InfoAttribute]`) oder über den gekürzten Namen (z.B. `[Info]`) verwiesen werden. Allerdings tritt ein Namenskonflikt auf, wenn zwei gekürzte Typnamen des Attributs identisch sind und ein Typname das Suffix **Attribute** enthält, der andere jedoch nicht. Der folgende Code kann z.B. nicht kompiliert werden, da der Compiler nicht bestimmen kann, ob das Attribut `Info` oder `InfoAttribute` auf die Klasse `Example` angewendet wird.
+1. Zum Zulassen, dass der Compiler im Fall eines Namenskonflikts zwischen Attributen unterscheiden kann. Ein Attribut ist eine von <xref:System.Attribute> abgeleitete Klasse. Der Name des Typs enthält normalerweise das Suffix **Attribute**, obwohl der Compiler diese Konvention nicht erzwingt. Auf das Attribut kann dann im Code entweder über den vollständigen Typnamen (z.B. `[InfoAttribute]`) oder über den gekürzten Namen (z.B. `[Info]`) verwiesen werden. Allerdings tritt ein Namenskonflikt auf, wenn zwei gekürzte Typnamen des Attributs identisch sind und ein Typname das Suffix **Attribute** enthält, der andere jedoch nicht. Der folgende Code kann z.B. nicht kompiliert werden, da der Compiler nicht bestimmen kann, ob das Attribut `Info` oder `InfoAttribute` auf die Klasse `Example` angewendet wird. Weitere Informationen finden Sie unter [CS1614](../compiler-messages/cs1614.md).
 
-   ```csharp
-   using System;
-
-   [AttributeUsage(AttributeTargets.Class)]
-   public class Info : Attribute
-   {
-      private string information;
-      
-      public Info(string info)
-      {
-          information = info;
-      }
-   }
-
-   [AttributeUsage(AttributeTargets.Method)]
-   public class InfoAttribute : Attribute
-   {
-      private string information;
-      
-      public InfoAttribute(string info)
-      {
-          information = info;
-      }
-   }
-
-   [Info("A simple executable.")]
-   public class Example
-   {
-      [InfoAttribute("The entry point.")]
-      public static void Main()
-      {
-      }
-   }
-   ```  
-
-   Wenn der ausführliche Bezeichner zum Identifizieren des Attributs `Info` verwendet wird, kann das Beispiel erfolgreich kompiliert werden.
-
-   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
+   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
 ## <a name="see-also"></a>Siehe auch
 

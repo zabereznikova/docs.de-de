@@ -3,13 +3,13 @@ title: Allgemeine Anleitung
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Allgemeine Anleitung
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104078"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537825"
 ---
 # <a name="general-guidance"></a>Allgemeine Anleitung
 
@@ -27,7 +27,7 @@ Kurz gesagt sollte Ihre Wahl standardmäßig auf .NET Core fallen, wenn Sie neue
 
 Ein zusätzlicher Vorteil bei der Verwendung von .NET Core besteht darin, dass Sie verschiedene Versionen von .NET für Anwendungen auf dem gleichen Computer parallel ausführen können. Dieser Vorteil ist wichtiger für Server oder virtuelle Computer, die keine Container verwenden, da durch Container die Versionen von .NET isoliert werden, die für die App erforderlich sind. (Solange diese mit dem zugrunde liegenden Betriebssystem kompatibel sind)
 
-Sie sollten .NET Framework mit Windows-Containern für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
+Sie sollten .NET Framework für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
 
 -   Ihre Anwendung derzeit .NET Framework verwendet und starke Abhängigkeiten von Windows aufweist
 
@@ -35,15 +35,15 @@ Sie sollten .NET Framework mit Windows-Containern für Ihre containerisierte Doc
 
 -   Sie .NET-Bibliotheken von Drittanbietern oder NuGet-Pakete verwenden müssen, die für .NET Core nicht verfügbar sind
 
-Das Verwenden von .NET Framework auf Docker kann Ihre Bereitstellungen verbessern, indem Bereitstellungsprobleme reduziert werden. Dieses [*Lift & Shift-Szenario*](https://aka.ms/liftandshiftwithcontainersebook) ist wichtig für das Containerisieren von veralteten Anwendungen, die ursprünglich mit dem herkömmlichen .NET Framework entwickelt wurden, z.B. mit ASP.NET WebForms, MVC-Web-Apps oder WCF-Diensten (Windows Communication Foundation).
+Das Verwenden von .NET Framework auf Docker kann Ihre Bereitstellungen verbessern, indem Bereitstellungsprobleme reduziert werden. Dieses [Lift & Shift-Szenario](https://aka.ms/liftandshiftwithcontainersebook) ist wichtig für das Containerisieren von veralteten Anwendungen, die ursprünglich mit dem herkömmlichen .NET Framework entwickelt wurden, z.B. mit ASP.NET WebForms, MVC-Web-Apps oder WCF-Diensten (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **e-book: Modernize existing .NET Framework applications with Azure and Windows Containers (E-Book: Modernisieren vorhandener .NET Framework-Anwendungen mit Azure und Windows-Containern)**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
+-   **eBook: Modernize existing .NET Framework applications with Azure and Windows Containers** (E-Book: Modernisieren vorhandener .NET Framework-Anwendungen mit Azure und Windows-Containern)  
+    https://aka.ms/liftandshiftwithcontainersebook
 
--   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
+-   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)  
+    https://aka.ms/eshopmodernizing
 
 
 >[!div class="step-by-step"]

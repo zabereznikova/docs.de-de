@@ -3,12 +3,12 @@ title: Standardereignismuster in .NET
 description: Erfahren Sie etwas über Ereignismuster in .NET und wie Sie standardmäßige Ereignisquellen erstellen und Standardereignisse in Ihrem Code abonnieren und verarbeiten können.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827247"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47399949"
 ---
 # <a name="standard-net-event-patterns"></a>Standardereignismuster in .NET
 
@@ -49,7 +49,7 @@ Füllen wir die FileSearcher-Klasse aus, um nach Dateien mit dem Muster zu suche
 
 [!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
-## <a name="definining-and-raising-field-like-events"></a>Definieren und Auslösen von feldähnlichen Ereignissen
+## <a name="defining-and-raising-field-like-events"></a>Definieren und Auslösen von feldähnlichen Ereignissen
 
 Die einfachste Möglichkeit, Ihrer Klasse ein Ereignis hinzuzufügen, ist das Deklarieren des Ereignisses als öffentliches Feld, wie im vorherigen Beispiel:
 

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: d95fe29aa7ffab9938e8edc57999445268fe41a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 999df9db0819a5f33e21a29b892de0a8854dd5d8
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085704"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46706147"
 ---
 # <a name="-operator-c-reference"></a>Operator | (C#-Referenz)
 Binäre `|`-Operatoren sind für integrale Typen und `bool` vordefiniert. Für integrale Typen berechnet `|` die bitweise OR-Operation der Operanden. Für `bool` Operanden berechnet `|` die logische OR-Operator seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `false` ist, wenn beide Operanden `false` sind.  
   
 ## <a name="remarks"></a>Hinweise  
- Im Gegensatz zum [bedingten OR-Operator] (conditional-or-operator.md) `||` wertet der binäre `|`-Operator beide Operatoren unabhängig vom Wert des ersten Operators aus.
+ Im Gegensatz zum [bedingten OR-Operator](conditional-or-operator.md) `||` wertet der binäre `|`-Operator beide Operanden unabhängig vom Wert des ersten Operanden aus.
  
  Benutzerdefinierte Typen können den Operator `|` überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)).  
   

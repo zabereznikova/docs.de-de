@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
 ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188988"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47231111"
 ---
 # <a name="build-net-core-from-source"></a>Erstellen von .NET Core aus einer Quelle
 
@@ -67,7 +67,7 @@ Der Build platziert alle seine generierten Dateien in das `bin`-Verzeichnis an d
 Es gibt ein *bin\Log*-Verzeichnis, das während des Erstellungsvorgangs generierte Protokolldateien enthält (besonders hilfreich, wenn der Buildvorgang scheitert).
 Die tatsächliche Ausgabe befindet sich in einem Verzeichnis *bin\Product\[Plattform].[CPU-Architektur].[Buildtyp]*, z.B. *bin\Product\Windows_NT.x64.Release*.
 
-Während die „rohe“ Ausgabe des Builds in einigen Fällen nützlich ist, sind  normalerweise nur die NuGet-Paketen für Sie von Interesse, die sich im Unterverzeichnis `.nuget\pkg` des vorherigen Ausgabeverzeichnisses befinden.
+Während die „rohe“ Ausgabe des Builds in einigen Fällen nützlich ist, sind normalerweise nur die NuGet-Paketen für Sie von Interesse, die sich im Unterverzeichnis `.nuget\pkg` des vorherigen Ausgabeverzeichnisses befinden.
 
 Es gibt zwei grundlegende Verfahren für die Verwendung der neuen Runtime:
 
@@ -86,7 +86,7 @@ Den Quellcode für die .NET Core-CLI finden Sie im Repository [dotnet/cli](https
 
 Um die .NET Core-CLI zu erstellen, müssen Sie Folgendes auf dem Computer installiert haben.
 
-* Windows & Linux:
+* Windows und Linux:
   * Git auf dem Pfad
 * macOS:
   * Git auf dem Pfad

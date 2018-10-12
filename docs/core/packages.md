@@ -4,12 +4,12 @@ description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472801"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597668"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
@@ -56,7 +56,7 @@ In der Regel ist es einfacher, ein *Metapaket* in Ihr Projekt einzuschließen, a
 
 Metapakete sind eine NuGet-Paket-Konvention zur Beschreibung einer Reihe von Paketen, die zusammen sinnvoll sind. Sie stellen diese Reihe von Paketen dar, indem Sie sie zu Abhängigkeiten machen. Sie können optional ein Framework für diesen Satz von Paketen einrichten, indem Sie ein Framework angeben. 
 
-Frühere Versionen von .NET Core-Tools („project.json“ und csproj-basierte Tools) geben standardmäßig ein Framework und ein Metapaket an. Derzeit verweist das Zielframework jedoch implizit auf das Metapaket, damit jedes Metapaket mit einem Zielframework verknüpft ist. Zum Beispiel verweist das `netstandard1.6`-Framework auf die NetStandard.Library-Version 1.6.0 des Metapakets. Das `netcoreapp1.1`-Framework verweist in ähnlicher Art und Weise auf das Metapaket der Version 1.1.0 der Microsoft.NETCore.App. Weitere Informationen finden Sie unter [Impliziter Metapaketverweis in .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
+Frühere Versionen von .NET Core-Tools („project.json“ und csproj-basierte Tools) geben standardmäßig ein Framework und ein Metapaket an. Derzeit verweist das Zielframework jedoch implizit auf das Metapaket, damit jedes Metapaket mit einem Zielframework verknüpft ist. Zum Beispiel verweist das `netstandard1.6`-Framework auf die NetStandard.Library-Version 1.6.0 des Metapakets. Das `netcoreapp2.1`-Framework verweist in ähnlicher Art und Weise auf das Metapaket der Version 2.1.0 der Microsoft.NETCore.App. Weitere Informationen finden Sie unter [Impliziter Metapaketverweis in .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
 
 Durch das Abzielen auf ein Framework und das implizite Verweisen auf ein Metapaket fügen Sie tatsächlich in einer einzigen Geste einen Verweis auf jedes einzelne abhängige Paket hinzu. Alle Bibliotheken in diesen Paketen sind für IntelliSense (oder ähnliches) und für die Veröffentlichung Ihrer Anwendung verfügbar.  
 

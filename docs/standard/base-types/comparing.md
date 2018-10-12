@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577816"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264674"
 ---
 # <a name="comparing-strings-in-net"></a>Vergleichen von Zeichenfolgen in .NET
 .NET stellt mehrere Methoden bereit, um Werte von Zeichenfolgen zu vergleichen. In der folgenden Tabelle werden die Methoden zum Vergleichen von Werten aufgeführt und beschrieben.  
@@ -150,6 +150,8 @@ ms.locfileid: "33577816"
   
  Beide Methoden sind hilfreich, wenn sie in Verbindung mit der **String.Remove** -Methode verwendet werden. Sie können die **IndexOf** -Methode oder die **LastIndexOf** -Methode verwenden, um die Position eines Zeichens abzurufen, und diese Position dann an die **Remove** -Methode übergeben, um ein Zeichen oder ein Wort zu entfernen, das mit diesem Zeichen beginnt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

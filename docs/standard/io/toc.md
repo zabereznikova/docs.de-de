@@ -14,6 +14,7 @@
 ### [Erstellen von Streams](composing-streams.md)
 ### [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [Asynchrone Datei-E/A](asynchronous-file-i-o.md)
+## [Behandeln von E/A-Fehlern](handling-io-errors.md)
 ## [Isolierter Speicher](isolated-storage.md)
 ### [Isolationstypen](types-of-isolation.md)
 ### [Gewusst wie: Erhalten von Speichern für isolierten Speicher](how-to-obtain-stores-for-isolated-storage.md)

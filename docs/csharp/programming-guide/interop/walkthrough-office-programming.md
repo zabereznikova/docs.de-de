@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 718be7e201788906fa0fad829922eb5b77b48aed
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 997affa2f4cc5332339a49450d68ab3aaadffc4b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857309"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084799"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
 Visual Studio bietet Funktionen in C# und Visual Basic, die die Microsoft Office-Programmierung verbessern. Zu nützlichen C#-Funktionen gehören benannte und optionale Argumente und Rückgabewerte des Typs `dynamic`. Bei der COM-Programmierung können Sie das `ref`-Schlüsselwort weglassen und Zugriff auf indizierte Eigenschaften erhalten. Funktionen in Visual Basic umfassen automatisch implementierte Eigenschaften, Anweisungen in Lambdaausdrücken sowie Auflistungsinitialisierer.

@@ -2,12 +2,12 @@
 title: Neues in C# 7.2
 description: Eine Übersicht der neuen Funktionen in C# 7.2
 ms.date: 08/16/2017
-ms.openlocfilehash: a74afd7f073daa46328d60149e2dd90207420a80
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566188"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47400802"
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
 
@@ -33,10 +33,10 @@ Die neuen Sprachfeatures in diesem Release umfassen:
 
 In 7.2 eingeführte Sprachfeatures ermöglichen das Arbeiten mit Werttypen bei Verwendung der Verweissemantik. Sie dienen dazu, die Leistung durch Minimieren des Kopierens von Werttypen zu steigern, ohne die Speicherzuweisungen nach sich zu ziehen, die eine Verwendung von Verweistypen mit sich bringen würde. Das Feature beinhaltet:
 
- - Den `in`-Modifizierer für Parameter zur Angabe, dass ein Argument durch Verweis übergeben, von der aufgerufenen Methode aber nicht verändert wird.
- - Der `ref readonly`-Modifizierer für die Methodenrückgabe, um anzugeben, dass eine Methode ihren Wert als Verweis zurückgibt und keinen Schreibzugriff auf dieses Objekt zulässt.
- - Die `readonly struct`-Deklaration, um anzugeben, dass eine Struktur unveränderlich ist und ihren Membermethoden als `in`-Parameter übergeben werden sollte.
- - Die `ref struct`-Deklaration, um anzugeben, dass ein Strukturtyp direkt auf verwalteten Arbeitsspeicher zugreift und immer per Stapel zugeordnet werden muss.
+ - Den `in`-Modifizierer für Parameter zur Angabe, dass ein Argument durch Verweis übergeben, von der aufgerufenen Methode aber nicht verändert wird. Das Hinzufügen des Modifizierers `in` zu einem Argument ist eine [quellkompatible Änderung](version-update-considerations.md#source-compatible-changes).
+ - Der `ref readonly`-Modifizierer für die Methodenrückgabe, um anzugeben, dass eine Methode ihren Wert als Verweis zurückgibt und keinen Schreibzugriff auf dieses Objekt zulässt. Das Hinzufügen des Modifizierers `ref readonly` ist eine [quellkompatible Änderung](version-update-considerations.md#source-compatible-changes), wenn die Rückgabe einem Wert zugewiesen wird. Das Hinzufügen des Modifizierers `readonly` zu einer vorhandenen `ref`-Rückgabeanweisung ist eine [inkompatible Änderung](version-update-considerations.md#incompatible-changes). Es verlangt von Aufrufern das Aktualisieren der lokalen `ref`-Variablen, um den `readonly`-Modifizierer einzuschließen.
+ - Die `readonly struct`-Deklaration, um anzugeben, dass eine Struktur unveränderlich ist und ihren Membermethoden als `in`-Parameter übergeben werden sollte. Das Hinzufügen des Modifizierers `readonly` zu einer vorhandenen Strukturdeklaration ist eine [binärkompatible Änderung](version-update-considerations.md#binary-compatible-changes).
+ - Die `ref struct`-Deklaration, um anzugeben, dass ein Strukturtyp direkt auf verwalteten Arbeitsspeicher zugreift und immer per Stapel zugeordnet werden muss. Das Hinzufügen des Modifizierers `ref` zu einer vorhandenen `struct`-Deklaration ist eine [inkompatible Änderung](version-update-considerations.md#incompatible-changes). Ein `ref struct` kann kein Mitglied einer Klasse sein oder an anderen Stellen verwendet werden, wo es auf dem Heap zugewiesen werden könnte.
 
 Weitere Informationen zu allen diesen Änderungen finden Sie unter [Verwenden von Werttypen mit Verweissemantik](../reference-semantics-with-value-types.md).
 

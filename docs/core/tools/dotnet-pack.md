@@ -4,12 +4,12 @@ description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Pro
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47231166"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -43,7 +43,7 @@ NuGet-Abhängigkeiten des gepackten Projekts werden der Datei *nuspec* hinzugef�
 
 `dotnet pack` erstellt standardmäßig zuerst das Projekt. Wenn Sie dieses Verhalten vermeiden möchten, übergeben Sie die Option `--no-build`. Diese Option ist bei Buildszenarios der Continuous Integration (CI) oft hilfreich, bei denen Sie wissen, dass der Code kürzlich erstellt wurde.
 
-Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang bereitstellen. Weitere Informationen finden Sie in den [NuGet-Metadateneigenschaften](csproj.md#nuget-metadata-properties) und in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). Der Abschnitt [Beispiele](#examples) enthält Informationen darüber, wie die MSBuild-Eigenschaft „/p“ für verschiedene Szenarien verwendet wird.
+Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang bereitstellen. Weitere Informationen finden Sie in den [NuGet-Metadateneigenschaften](csproj.md#nuget-metadata-properties) und in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). Der Abschnitt [Beispiele](#examples) enthält Informationen darüber, wie der MSBuild-Schalter „-p“ für verschiedene Szenarien verwendet wird.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -109,6 +109,14 @@ Definiert den Wert für die `$(VersionSuffix)`-MSBuild-Eigenschaft im Projekt.
 
 Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
+> [!NOTE]
+> Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhalten zu überschreiben, fügen Sie Ihrer *.csproj*-Datei die folgende Eigenschaft hinzu:
+> ```xml
+> <PropertyGroup>
+>    <IsPackable>true</IsPackable>
+> </PropertyGroup>
+> ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
@@ -173,11 +181,11 @@ Mit dem Versionssuffix des Projekts, das als `<VersionSuffix>$(VersionSuffix)</V
 
 Legen Sie die Paketversion auf `2.1.0` mithilfe der MSBuild-Eigenschaft `PackageVersion` fest.
 
-`dotnet pack /p:PackageVersion=2.1.0`
+`dotnet pack -p:PackageVersion=2.1.0`
 
 Packen Sie das Projekt für ein bestimmtes [Zielframework](../../standard/frameworks.md):
 
-`dotnet pack /p:TargetFrameworks=net45`
+`dotnet pack -p:TargetFrameworks=net45`
 
 Packen Sie das Projekt, und verwenden Sie eine bestimmte Runtime (Windows 10) für den Wiederherstellungsvorgang (.NET Core SDK 2.0 und spätere Versionen):
 

@@ -3,12 +3,12 @@ title: Konsolenanwendung
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961416"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937591"
 ---
 # <a name="console-application"></a>Konsolenanwendung
 
@@ -20,7 +20,7 @@ In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache
 - Grundlagen der Datei-E/A-APIs in .NET
 - Grundlagen des taskbasierten asynchronen Programmiermodells in .NET
 
-Sie erstellen eine Anwendung, die eine Textdatei einliest und die Inhalte dieser Textdatei an die Konsole ausgibt. Das Tempo der Ausgabe in der Konsole ist so festgelegt, dass ein lautes Mitlesen möglich ist. Sie können die Ausgabe beschleunigen oder verlangsamen, indem Sie die Tasten < oder > drücken.
+Sie erstellen eine Anwendung, die eine Textdatei einliest und die Inhalte dieser Textdatei an die Konsole ausgibt. Das Tempo der Ausgabe in der Konsole ist so festgelegt, dass ein lautes Mitlesen möglich ist. Sie können die Ausgabe beschleunigen oder verlangsamen, indem Sie die Tasten „<“ (kleiner als) oder „>“ (größer als) drücken.
 
 In diesem Tutorial werden viele Features abgedeckt. Gehen wir sie einzeln an.
 
@@ -190,7 +190,7 @@ Hier führt der Code in `Main` einen asynchronen Wartevorgang aus. Sie sollten n
 > [!NOTE]
 > Wenn Sie C# 7.1 oder höher verwenden, können Sie Konsolenanwendungen mit der [`async` `Main`-Methode](../whats-new/csharp-7-1.md#async-main) erstellen.
 
-Als Nächstes müssen Sie die zweite asynchrone Methode schreiben, um Inhalte aus der Konsole zu lesen und auf die Tasteneingaben < und > zu überwachen. Hier ist die Methode, die Sie für diesen Task hinzufügen:
+Als Nächstes müssen Sie die zweite asynchrone Methode schreiben, um Inhalte aus der Konsole zu lesen und auf die Tasteneingaben „<“ (kleiner als) und „>“ (größer als) zu überwachen. Hier ist die Methode, die Sie für diesen Task hinzufügen:
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-Hiermit wird ein Lambda-Ausdruck zur Darstellung eines <xref:System.Action>-Delegaten erstellt. Mit diesem wird ein Schlüssel aus der Konsole gelesen und eine lokale Variable geändert, die die Verzögerung beim Drücken der Tasten < oder > durch den Benutzer repräsentiert. Diese Methode verwendet <xref:System.Console.ReadKey> zum Blockieren und wartet darauf, dass der Benutzer eine Taste drückt.
+Hiermit wird ein Lambda-Ausdruck zur Darstellung eines <xref:System.Action>-Delegaten erstellt. Mit diesem wird ein Schlüssel aus der Konsole gelesen und eine lokale Variable geändert, die die Verzögerung beim Drücken der Tasten „<“ (kleiner als) oder „>“ (größer als) durch den Benutzer repräsentiert. Diese Methode verwendet <xref:System.Console.ReadKey> zum Blockieren und wartet darauf, dass der Benutzer eine Taste drückt.
 
 Um dieses Feature abzuschließen, müssen Sie eine neue `async Task`-Rückgabemethode erstellen, die beide Tasks (`GetInput` und `ShowTeleprompter`) startet und außerdem die von diesen Tasks gemeinsam verwendeten Daten verwaltet.
 
@@ -277,10 +277,10 @@ Im nächsten Schritt müssen Sie die `ShowTeleprompter`- und `GetInput`-Methoden
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933604"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861301"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -117,7 +117,7 @@ Die meisten Pfade, die an Windows-APIs übergeben werden, werden normalisiert. W
 - Relative Verzeichniskomponenten werden ausgewertet (`.` für das aktuelle Verzeichnis und `..` für das übergeordnete Verzeichnis).
 - Bestimmte Zeichen werden gekürzt.
 
-Diese Normalisierung erfolgt implizit, Sie können sie jedoch explizit ausführen, indem Sie die Methode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> aufrufen, die einen Aufruf der [GetFullPathName()-Funktion](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) umschließt. Sie können die Windows-Funktion [GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) auch aufrufen, indem Sie „P/Invoke“ verwenden . 
+Diese Normalisierung erfolgt implizit, Sie können sie jedoch explizit ausführen, indem Sie die Methode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> aufrufen, die einen Aufruf der [GetFullPathName()-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) umschließt. Sie können die Windows-Funktion [GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) auch aufrufen, indem Sie „P/Invoke“ verwenden . 
 
 ### <a name="identifying-the-path"></a>Identifizieren des Pfads
 

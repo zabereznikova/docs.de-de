@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961468"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170651"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -64,7 +64,7 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 |\U|Unicode-Escapesequenz für Ersatzzeichenpaare|\Unnnnnnnn|  
 |\u|Unicode-Escapesequenz|\u0041 = "A"|  
 |\v|Vertikaler Tabulator|0x000B|  
-|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|\x0041 = "A"|  
+|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|\x0041 oder \x41 = "A"|  
   
 > [!NOTE]
 >  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge @"C:\files.txt" wird im Überwachungsfenster z.B. als „C:\\\files.txt“ angezeigt.  

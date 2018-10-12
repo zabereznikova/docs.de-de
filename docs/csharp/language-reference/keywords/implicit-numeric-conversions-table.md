@@ -1,53 +1,61 @@
 ---
 title: Tabelle für implizite numerische Konvertierungen (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 09/05/2018
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43417595"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213263"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabelle für implizite numerische Konvertierungen (C#-Referenz)
-Folgende Tabelle veranschaulicht vordefinierte implizite numerische Konvertierungen. Implizite Konvertierungen können in vielen Situationen auftreten, einschließlich methodenaufrufender und Zuweisungsansweisungen.  
+
+Folgende Tabelle veranschaulicht vordefinierte implizite Konvertierungen zwischen numerischen .NET-Typen.
   
 |Von|Beschreibung|  
 |----------|--------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`short`, `int`, `long`, `float`, `double` oder `decimal`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`int`, `long`, `float`, `double` oder `decimal`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`long`, `float`, `double` oder `decimal`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`long`, `ulong`, `float`, `double` oder `decimal`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`float`, `double`oder `decimal`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`float`, `double`oder `decimal`|  
+|[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double` oder `decimal`|  
+|[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|  
+|[short](short.md)|`int`, `long`, `float`, `double` oder `decimal`|  
+|[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|  
+|[int](int.md)|`long`, `float`, `double` oder `decimal`|  
+|[uint](uint.md)|`long`, `ulong`, `float`, `double` oder `decimal`|  
+|[long](long.md)|`float`, `double`oder `decimal`|  
+|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` oder `decimal`|  
+|[float](float.md)|`double`|  
+|[ulong](ulong.md)|`float`, `double`oder `decimal`|  
   
 ## <a name="remarks"></a>Hinweise  
-  
--   Präzision, aber keine Größe, geht möglicherweise bei der Konvertierung von `int`, `uint`, `long` oder `ulong` in `float` und von `long` oder `ulong` in `double` verloren.  
-  
--   Es gibt keine impliziten Konvertierungen für den Typ `char`.  
-  
--   Es gibt keine impliziten Konvertierungen zwischen Gleitkommatypen und dem Typ `decimal`.  
-  
--   Ein konstanter Ausdruck des Typs `int` kann in `sbyte`, `byte`, `short`, `ushort`, `uint` oder `ulong` konvertiert werden, gesetzt dem Fall der konstante Ausdruck befindet sich im Bereich des Zieltyps.  
-  
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Siehe auch  
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- Jeder [integrale Typ](integral-types-table.md) kann implizit in einen beliebigen [Gleitkommatyp](floating-point-types-table.md) konvertiert werden.
+
+- Bei der Konvertierung von `int`, `uint`, `long` oder `ulong` in `float` und von `long` oder `ulong` in `double` kann Präzision verloren gehen, aber keine Größe.  
+  
+- Es gibt keine impliziten Konvertierungen für den Typ `char`.  
+  
+- Es gibt keine impliziten Konvertierungen zwischen den Typen `float` und `double` und dem Typ `decimal`.  
+  
+- Ein Wert eines konstanten Ausdrucks vom Typ `int` (z.B. ein Wert, der von einem integralen Literal dargestellt wird) kann in `sbyte`, `byte`, `short`, `ushort`, `uint` oder `ulong` konvertiert werden, solange er sich innerhalb des Bereichs des Zieltyps befindet:
+
+  ```csharp
+  byte a = 13;    // Compiles
+  byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
+  ```
+
+Weitere Informationen über implizite Konvertierungen finden Sie im Abschnitt [Implicit conversions (Implizite Konvertierungen)](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions) der [C#-Sprachspezifikation](../language-specification/index.md).
+  
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [Tabelle ganzzahliger Typen](integral-types-table.md)
+- [Tabelle für Gleitkommatypen](floating-point-types-table.md)
+- [Tabelle integrierter Typen](built-in-types-table.md)
+- [Tabelle für explizite numerische Konvertierungen](explicit-numeric-conversions-table.md)
+- [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)

@@ -4,12 +4,12 @@ description: Informationen zum dotnet-Befehl (generischer Treiber für die .NET 
 author: mairaw
 ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805658"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44079815"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -17,7 +17,7 @@ ms.locfileid: "34805658"
 
 ## <a name="name"></a>name
 
-`dotnet`: Allgemeiner Treiber für das Ausführen der Befehlszeilenbefehle.
+`dotnet`: Ein Tool für das Verwalten von .NET-Quellcode und Binärdateien.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -38,13 +38,11 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 ```
 ---
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
-`dotnet` ist ein generischer Treiber für die Befehlszeilenschnittstellen-Toolkette (CLI). Bietet bei eigenständigem Aufruf kurze Anweisungen.
+`dotnet` ist ein Tool für das Verwalten von .NET-Quellcode und Binärdateien. Es stellt Befehle zur Verfügung, die bestimmte Aufgaben erfüllen, z.B. [`dotnet build`](dotnet-build.md) und [`dotnet run`](dotnet-run.md). Jeder Befehl definiert seine eigenen Argumente. Geben Sie nach jedem Befehl `--help` ein, um auf eine kurze Hilfsdokumentation zuzugreifen.
 
-Jede bestimmte Funktion ist als Befehl implementiert. Um die Funktion zu verwenden, wird der Befehl nach `dotnet` angegeben, wie z.B. [`dotnet build`](dotnet-build.md). Alle Argumente nach dem Befehl sind die eigenen Argumente.
-
-Nur bei [Framework-abhängigen Apps](../deploying/index.md) wird `dotnet` als eigenständiger Befehl verwendet. Geben Sie eine Anwendungs-DLL nach dem Verb `dotnet` an, um die Anwendung auszuführen (zum Beispiel `dotnet myapp.dll`).
+`dotnet` kann zum Ausführen von Anwendungen verwendet werden, indem eine Anwendungs-DLL angegeben wird, z.B. `dotnet myapp.dll`. Weitere Informationen über Bereitstellungsoptionen finden Sie unter [.NET Core-Anwendungsbereitstellung](../deploying/index.md).
 
 ## <a name="options"></a>Optionen
 
@@ -64,15 +62,15 @@ Ermöglicht die diagnostische Ausgabe.
 
 `--fx-version <VERSION>`
 
-Version der installierten .NET Core-Laufzeit, die für die Ausführung der Anwendung verwendet werden soll.
+Version der .NET Core-Runtime, die zum Ausführen der Anwendung verwendet werden soll.
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl. Bei Verwendung mit `dotnet` wird auch eine Liste der verfügbaren Befehle gedruckt.
+Gibt Dokumentation für einen bestimmten Befehl aus, z.B. `dotnet build --help`. `dotnet --help` gibt eine Liste der verfügbaren Befehle zurück.
 
 `--info`
 
-Druckt nähere Informationen zu den CLI-Tools und der Umgebung, z.B. das aktuelle Betriebssystem, den Commit-SHA für die Version und weitere Informationen.
+Gibt ausführliche Informationen über eine .NET Core-Installation und die Computerumgebung aus, z.B. das aktuelle Betriebssystem und den Commit-SHA für die .NET Core-Version.
 
 `--list-runtimes`
 
@@ -84,7 +82,7 @@ Zeigt die installierten .NET Core-SDKs an.
 
 `--roll-forward-on-no-candidate-fx`
 
- Führt ein Rollforward auf ein geteiltes Framework ohne Kandidaten durch.
+ Deaktiviert Rollforward der Nebenversion, wenn `0` festgelegt ist. Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
@@ -110,19 +108,19 @@ Ermöglicht die diagnostische Ausgabe.
 
 `--fx-version <VERSION>`
 
-Version der installierten .NET Core-Laufzeit, die für die Ausführung der Anwendung verwendet werden soll.
+Version der .NET Core-Runtime, die zum Ausführen der Anwendung verwendet werden soll.
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl. Bei Verwendung mit `dotnet` wird auch eine Liste der verfügbaren Befehle gedruckt.
+Gibt Dokumentation für einen bestimmten Befehl aus, z.B. `dotnet build --help`. `dotnet --help` gibt eine Liste der verfügbaren Befehle zurück.
 
 `--info`
 
-Druckt nähere Informationen zu den CLI-Tools und der Umgebung, z.B. das aktuelle Betriebssystem, den Commit-SHA für die Version und weitere Informationen.
+Gibt ausführliche Informationen über eine .NET Core-Installation und die Computerumgebung aus, z.B. das aktuelle Betriebssystem und den Commit-SHA für die .NET Core-Version.
 
 `--roll-forward-on-no-candidate-fx`
 
- Führt ein Rollforward auf ein geteiltes Framework ohne Kandidaten durch.
+ Deaktiviert Rollforward der Nebenversion, wenn `0` festgelegt ist. Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
@@ -144,15 +142,15 @@ Ermöglicht die diagnostische Ausgabe.
 
 `--fx-version <VERSION>`
 
-Version der installierten .NET Core-Laufzeit, die für die Ausführung der Anwendung verwendet werden soll.
+Version der .NET Core-Runtime, die zum Ausführen der Anwendung verwendet werden soll.
 
 `-h|--help`
 
-Druckt eine kurze Hilfe für den Befehl. Bei Verwendung mit `dotnet` wird auch eine Liste der verfügbaren Befehle gedruckt.
+Gibt Dokumentation für einen bestimmten Befehl aus, z.B. `dotnet build --help`. `dotnet --help` gibt eine Liste der verfügbaren Befehle zurück.
 
 `--info`
 
-Druckt nähere Informationen zu den CLI-Tools und der Umgebung, z.B. das aktuelle Betriebssystem, den Commit-SHA für die Version und weitere Informationen.
+Gibt ausführliche Informationen über eine .NET Core-Installation und die Computerumgebung aus, z.B. das aktuelle Betriebssystem und den Commit-SHA für die .NET Core-Version.
 
 `-v|--verbosity <LEVEL>`
 
@@ -259,7 +257,7 @@ Befehl | Funktion
 
 ### <a name="additional-tools"></a>Zusätzliche Tools
 
-Beginnend mit .NET Core SDK 2.1.300 steht eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von `DotnetCliToolReference` verfügbar waren, jetzt als Teil des .NET Core SDK zur Verfügung. Zu diesen Tools gehören:
+Beginnend mit .NET Core SDK 2.1.300 steht eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von `DotnetCliToolReference` verfügbar waren, jetzt als Teil des .NET Core SDK zur Verfügung. Diese Tools werden in der folgenden Tabelle aufgeführt:
 
 | Tool                                              | Funktion                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -269,7 +267,7 @@ Beginnend mit .NET Core SDK 2.1.300 steht eine Reihe von Tools, die nur auf Proj
 | [user-secrets](/aspnet/core/security/app-secrets) | Verwaltet die Entwicklung von Benutzergeheimnissen.                            |
 | [watch](/aspnet/core/tutorials/dotnet-watch)      | Startet einen Datei-Watcher, der einen Befehl ausführt, wenn sich Dateien ändern. |
 
-Weitere Informationen zu den einzelnen Tools finden Sie unter `dotnet <tool-name> --help`.
+Geben Sie `dotnet <tool-name> --help` ein, um weitere Informationen zu den einzelnen Tools zu erhalten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -287,7 +285,7 @@ Erstellen eines Projekts und seiner Abhängigkeiten in einem vorgegebenen Verzei
 
 `dotnet build`
 
-Führen Sie eine Framework-abhängige Anwendung mit dem Namen `myapp.dll` aus:
+Führen Sie eine Anwendungs-DLL aus, z.B. `myapp.dll`:
 
 `dotnet myapp.dll`
 
@@ -313,7 +311,7 @@ Gibt an, ob die .NET Core-Runtime, das freigegebene Framework oder das SDK vom g
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
-Deaktiviert Rollforward der Nebenversion. Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
+Deaktiviert Rollforward der Nebenversion, wenn `0` festgelegt ist. Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

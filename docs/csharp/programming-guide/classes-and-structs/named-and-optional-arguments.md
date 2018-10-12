@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932041"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857981"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Benannte und optionale Argumente (C#-Programmierhandbuch)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
@@ -101,7 +101,7 @@ Optionale Parameter in ExampleMethod
 ## <a name="com-interfaces"></a>COM-Schnittstellen  
  Benannte und optionale Argumente verbessern zusammen mit der Unterstützung von dynamischen Objekten und anderen Verbesserungen deutlich die Interoperabilität mit COM-APIs wie Office-Automatisierungs-APIs.  
   
- Die Methode [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) hat z.B. in der Schnittstelle [Bereich](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) von Microsoft Office Excel sieben Parameter, von denen alle optional sind. Diese Parameter sind in der folgenden Abbildung dargestellt.  
+ Beispielsweise verfügt die Methode <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> in der <xref:Microsoft.Office.Interop.Excel.Range>-Schnittstelle von Microsoft Office Excel über sieben Parameter, von denen alle optional sind. Diese Parameter sind in der folgenden Abbildung dargestellt.  
   
  ![IntelliSense-QuickInfo für die AutoFormat-Methode.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 AutoFormat-Parameter  
@@ -128,8 +128,9 @@ AutoFormat-Parameter
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
- [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [Verwenden von Indexern](../../../csharp/programming-guide/indexers/using-indexers.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [Verwenden von Indexern](../../../csharp/programming-guide/indexers/using-indexers.md)

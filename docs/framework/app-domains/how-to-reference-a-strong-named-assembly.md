@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f78fff50d1a227061076790ad77f17debe3f690
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abc53381bf6cc8458b83edf5586b76fe7ed5f303
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743315"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199889"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Gewusst wie: Verweisen auf eine Assembly mit starkem Namen
 Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  
@@ -68,7 +68,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  Wenn Sie eine öffentliche Schlüsseldatei haben, können Sie stattdessen den folgenden Befehl verwenden. Beachten Sie aber den Unterschied bei der Groß- und Kleinschreibung bei der Befehlszeilenoption:  
   
- **sn -tp \<** *Assembly* **>**  
+ **sn -tp \<** *öffentliche Schlüsseldatei* **>**  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

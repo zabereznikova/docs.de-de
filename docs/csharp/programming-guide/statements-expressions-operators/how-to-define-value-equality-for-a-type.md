@@ -8,25 +8,25 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339604"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042620"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Gewusst wie: Definieren von Wertgleichheit für einen Typ (C#-Programmierhandbuch)
 Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll ist, eine benutzerdefinierte Definition der Wertgleichheit (oder Äquivalenz) für den Typ zu erstellen. In der Regel implementieren Sie Wertgleichheit, wenn Objekte des Typs zu einer Auflistung hinzugefügt werden sollen oder wenn ihr Hauptzweck im Speichern einer Reihe von Feldern oder Eigenschaften besteht. Sie können die Definition der Wertgleichheit auf einem Vergleich aller Felder und Eigenschaften im Typ oder auf einer Teilmenge aufbauen. Ihre Implementierung in Klassen und Strukturen sollte in beiden Fällen die fünf Äquivalenzgarantien befolgen:  
   
-1.  x`Equals`(x) gibt `true.` zurück. Dies wird als reflexive Eigenschaft bezeichnet.  
+1.  `x.Equals(x)` gibt `true` zurück. Dies wird als reflexive Eigenschaft bezeichnet.  
   
-2.  x.`Equals`(y) gibt denselben Wert wie y.`Equals`(x) zurück. Die wird als symmetrische Eigenschaft bezeichnet.  
+2.  `x.Equals(y)` gibt denselben Wert zurück wie `y.Equals(x)`. Die wird als symmetrische Eigenschaft bezeichnet.  
   
-3.  Wenn (x.`Equals`(y) && y.`Equals`(z)) `true` zurückgibt, dann gibt x.`Equals`(z) `true` zurück. Dies wird als transitive Eigenschaft bezeichnet.  
+3.  Wenn `true` von `(x.Equals(y) && y.Equals(z))` zurückgegeben wird, wird `true` von `x.Equals(z)` zurückgegeben. Dies wird als transitive Eigenschaft bezeichnet.  
   
-4.  Aufeinander folgende Aufrufe von x.`Equals`(y) geben immer denselben Wert zurück, es sei denn, die Objekte, auf die x und y verweisen, werden geändert.  
+4.  Aufeinander folgende Aufrufe von `x.Equals(y)` geben immer denselben Wert zurück, es sei denn, die Objekte, auf die x und y verweisen, werden geändert.  
   
-5.  x`Equals`(null) gibt `false` zurück. null.Equals(null) löst allerdings eine Ausnahme aus, da es Regel Nummer 2 oben nicht befolgt.  
+5.  `x.Equals(null)` gibt `false` zurück. `null.Equals(null)` löst allerdings eine Ausnahme aus, da die obige Regel Nummer 2 nicht befolgt wird.  
   
  Jede Struktur, die Sie definieren, besitzt bereits eine Standardimplementierung der Wertgleichheit, die von der <xref:System.ValueType?displayProperty=nameWithType>-Außerkraftsetzung der <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>-Methode geerbt wurde. Diese Implementierung verwendet Reflektion, um alle Felder und Eigenschaften im Typ zu untersuchen. Obwohl diese Implementierung richtige Ergebnisse produziert, ist sie relativ langsam im Vergleich zu einer benutzerdefinierten Implementierung, die Sie speziell für den Typ schreiben.  
   
@@ -62,6 +62,7 @@ Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll i
   
  Die Operatoren [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) und [!=](../../../csharp/language-reference/operators/not-equal-operator.md) können nicht auf Strukturen operieren, es sei denn, die Struktur überlädt sie explizit.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übereinstimmungsvergleiche](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Übereinstimmungsvergleiche](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)

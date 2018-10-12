@@ -2,12 +2,12 @@
 title: Neuerungen in C# 7.3
 description: Eine Übersicht der neuen Features in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511610"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235230"
 ---
 # <a name="whats-new-in-c-73"></a>Neuerungen in C# 7.3
 
@@ -36,7 +36,7 @@ Die neuen Compileroptionen lauten:
 
 Der übrige Teil dieses Artikels enthält Informationen und Links, über die Sie mehr zu den einzelnen Verbesserungen erfahren.
 
-## <a name="enabling-more-performant-safe-code"></a>Ermöglichen von leistungsstärkerem sicheren Code
+## <a name="enabling-more-efficient-safe-code"></a>Ermöglichen von effizienterem sicherem Code
 
 Sie sollten C#-Code sicher schreiben können, der so leistungsstark ist wie unsicherer Code. Sicherer Code vermeidet Fehlerklassen, z.B. Pufferüberläufe, verirrte Zeiger und andere Fehler beim Arbeitsspeicherzugriff. Diese neuen Features erweitern die Funktionen des überprüfbaren sicheren Codes. Schreiben Sie mithilfe sicherer Konstrukte mehr Code. Diese Features erleichtern dies.
 
@@ -127,6 +127,8 @@ Sie können jetzt Typ <xref:System.Enum?displayProperty=nameWithType> oder <xref
 Sie können auch die neue `unmanaged`-Einschränkung nutzen, um anzugeben, dass der Typparameter ein **nicht verwalteter Typ** sein muss. Ein **nicht verwalteter Typ** ist ein Typ, der kein Verweistyp ist und keinen Verweistyp auf Schachtelungsebenen aufweist.
 
 Weitere Informationen finden Sie in den Artikeln zu generischen [`where`-Einschränkungen](../language-reference/keywords/where-generic-type-constraint.md) und [Einschränkungen für Typparameter](../programming-guide/generics/constraints-on-type-parameters.md).
+
+Das Hinzufügen dieser Einschränkungen zu vorhandenen Typen ist eine [inkompatible Änderung](version-update-considerations.md#incompatible-changes). Geschlossene generische Typen erfüllen diese neuen Einschränkungen möglicherweise nicht mehr.
 
 ## <a name="make-existing-features-better"></a>Vorhandene Features besser machen
 

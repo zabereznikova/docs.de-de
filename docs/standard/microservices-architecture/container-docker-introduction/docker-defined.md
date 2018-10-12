@@ -3,59 +3,84 @@ title: Was ist Docker?
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Was ist Docker?
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 08/31/2018
+ms.openlocfilehash: b79e687d75f133b64e6e7dcb8dc78cce98e8b175
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106800"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47233193"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
-[Docker](https://www.docker.com/) ist ein [Open Source-Projekt](https://github.com/docker/docker) zur Automatisierung der Bereitstellung von Apps als mobile, eigenständige Container, die in der Cloud oder lokal ausgeführt werden können. Docker ist außerdem ein [Unternehmen](https://www.docker.com/), das diese Technologie weiterentwickelt. Docker arbeitet mit Cloud-, Linux- und Windows-Herstellern einschließlich Microsoft zusammen.
+[Docker](https://www.docker.com/) ist ein [Open Source-Projekt](https://github.com/docker/docker) zur Automatisierung der Bereitstellung von Apps als mobile, eigenständige Container, die in der Cloud oder lokal ausgeführt werden können. Docker ist darüber hinaus ein [Unternehmen](https://www.docker.com/), das diese Technologie fördert und weiterentwickelt und mit Cloud-, Linux- und Windows-Anbietern zusammenarbeitet, einschließlich Microsoft.
 
-![](./media/image2.png)
+![Docker-Container können überall ausgeführt werden, lokal im Rechenzentrum des Kunden, bei einem externen Dienstanbieter oder in der Cloud auf Azure.](./media/image2.png)
 
 **Abbildung 2-2:** Docker stellt Container auf allen Ebenen der hybriden Cloud bereit
 
-Docker-Imagecontainer werden nativ unter Linux und Windows ausgeführt, wobei Windows-Images nur auf Windows-Hosts und Linux-Images nur auf Linux-Hosts ausgeführt werden. Der Host wiederum ist ein Server oder ein virtueller Computer.
+Docker-Imagecontainer können nativ unter Linux und Windows ausgeführt werden. Allerdings können Windows-Images nur auf Windows-Hosts ausgeführt werden, während Linux-Images sowohl auf Linux-Hosts als auch auf Windows-Hosts ausgeführt werden können (bis dato mithilfe einer Hyper-V-Linux-VM), wobei Host einen Server oder eine VM bedeutet.
 
-Sie können unter Windows, Linux oder macOS entwickeln. Auf dem Entwicklungscomputer wird dabei ein Docker-Host ausgeführt, in dem Docker-Images bereitgestellt werden, einschließlich der App und ihrer Abhängigkeiten. Unter Linux oder macOS verwenden Sie stattdessen einen Linux-basierten Docker-Host, der nur Images für Linux-Container erstellt. Unter macOS können Sie zwar Code bearbeiten oder die Docker-Befehlszeilenschnittstelle ausführen, zum Zeitpunkt der Erstellung dieses Dokuments konnten Container jedoch nicht direkt unter macOS ausgeführt werden. Unter Windows können Sie Images für Linux- oder Windows-Container erstellen.
+Entwickler können Entwicklungsumgebungen unter Windows, Linux oder macOS verwenden. Der Entwickler führt auf dem Entwicklungscomputer einen Docker-Host aus, in dem Docker-Images bereitgestellt werden, einschließlich der App und ihrer Abhängigkeiten. Entwickler, die unter Linux oder auf dem Mac arbeiten, verwenden einen Linux-basierten Docker-Host und können nur Images für Linux-Container erstellen. (Entwickler, die auf dem Mac arbeiten, können Code bearbeiten oder das Docker-CLI unter macOS ausführen, aber zum Entstehungszeitpunkt dieses Texts können Container nicht direkt unter macOS ausgeführt werden.) Entwickler, die unter Windows arbeiten, können Images wahlweise für Linux- oder für Windows-Container erstellen.
 
-Unter Windows oder macOS werden Container in der [Docker Community Edition (CE)](https://www.docker.com/community-edition) in einer Entwicklungsumgebung gehostet. In dieser Edition werden außerdem zusätzliche Entwicklertools bereitgestellt. Die [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition) wurde für IT-Teams entworfen, die große geschäftskritische Anwendungen erstellen, bereitstellen und ausführen. ~Beide Produkte installieren die erforderliche VM (den Docker-Host) zum Hosten der Container.~ 
+Um Container in Entwicklungsumgebungen zu hosten und zusätzliche Entwicklertools bereitzustellen, vertreibt Docker die [Docker Community Edition (CE)](https://www.docker.com/community-edition) für Windows oder für macOS. Diese Produkte installieren die erforderliche VM (den Docker-Host) zum Hosten der Container. Docker stellt außerdem [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition) zur Verfügung, das für die Entwicklung in Unternehmen vorgesehen ist und von IT-Teams verwendet wird, die große, unternehmenswichtige Anwendungen im Produktionsbetrieb erstellen, ausliefern und ausführen.
 
-[Windows-Container](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) funktionieren mit zwei Typen von Runtimes:
+Es gibt zwei Typen von Runtimes zum Ausführen von [Windows-Containern](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview):
 
--   Windows Server-Container bieten dank der Isolation von Prozessen und Namespaces auch Anwendungsisolierung. Ein Windows Server-Container teilt sich einen Kernel mit dem Containerhost und allen Containern, die auf dem Host ausgeführt werden.
+- Windows Server-Container bieten dank der Isolation von Prozessen und Namespaces auch Anwendungsisolierung. Ein Windows Server-Container teilt sich einen Kernel mit dem Containerhost und allen Containern, die auf dem Host ausgeführt werden.
 
--   Hyper-V-Container erweitern die durch Windows Server-Container bereitgestellte Isolierung, indem jeder Container in einem hochgradig optimierten virtuellen Computer ausgeführt wird. In dieser Konfiguration wird der Kernel des Containerhosts nicht für den Hyper-V-Container freigegeben, was die Isolierung verbessert. Hyper-V-Container lassen als nicht vertrauenswürdig eingestufte und *schädliche Anwendungen mit mehreren Mandanten* auf demselben Host zu. Hyper-V-Container sind, was die Startzeit und die Dichte betrifft, etwas weniger effizient als Windows Server-Container.
+- Hyper-V-Container erweitern die durch Windows Server-Container bereitgestellte Isolierung, indem jeder Container in einem hochgradig optimierten virtuellen Computer ausgeführt wird. In dieser Konfiguration wird der Kernel des Containerhosts nicht für den Hyper-V-Container freigegeben, was die Isolierung verbessert.
 
-Die Images für diese Container werden genauso erstellt und funktionieren auch so. Der Unterschied besteht darin, wie der Container erstellt wird. Weitere Informationen finden Sie unter [Windows-Container](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview).
+Die Images für diese Container werden auf die gleiche Weise erstellt und funktionieren auch gleich. Der Unterschied besteht darin, wie der Container aus dem Image erstellt wird: Für das Ausführen eines Hyper-V-Containers ist ein Zusatzparameter erforderlich. Weitere Informationen finden Sie unter [Windows-Container](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container).
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>Vergleichen von Docker-Containern mit virtuellen Computern
 
 In Abbildung 2-3 wird einen Vergleich zwischen virtuellen Computern und die Docker Container dargestellt.
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  **Virtuelle Computer****Docker-Container** 
-                                                                                                                                                                                        
-  ![](./media/image3.png)                                                                                                                                ![](./media/image4.png)
-                                                                                                                                                                                        
-  Virtuelle Computer enthalten die Anwendung, die erforderlichen Bibliotheken oder Binärdateien und ein vollständiges Gastbetriebssystem. Eine vollständige Virtualisierung erfordert mehr Ressourcen als die Containerisierung. Container enthalten die Anwendung und alle ihre Abhängigkeiten. Sie teilen sich jedoch den Betriebssystemkernel mit anderen Containern. Container werden als isolierte Prozesse im Benutzerbereich des Hostbetriebssystems ausgeführt. Die einzige Ausnahme stellen Hyper-V-Container dar, wo jeder Container in einem speziellen virtuellen Computer pro Container ausgeführt wird.
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Virtuelle Computer | Docker-Container |
+| -----------------| ------------------|
+|![Bei VMs gibt es drei Basisebenen auf dem Host-Server. Unten beginnend sind dies: Infrastruktur, Hostbetriebssystem und Hypervisor, und auf all dem aufsetzend weist jede VM ihr eigenes Betriebssystem und alle erforderlichen Bibliotheken auf.](./media/image3.png)|![Bei Docker bietet der Hostserver nur die Infrastruktur und das Betriebssystem, und darüber arbeitet das Containermodul, das die Container isoliert, aber die grundlegenden Betriebssystemdienste teilt.](./media/image4.png)|
+|Virtuelle Computer enthalten die Anwendung, die erforderlichen Bibliotheken oder Binärdateien und ein vollständiges Gastbetriebssystem. Eine vollständige Virtualisierung erfordert mehr Ressourcen als die Containerisierung. | Container enthalten die Anwendung und alle ihre Abhängigkeiten. Sie teilen den Betriebssystemkernel jedoch mit anderen Containern, die als isolierte Prozesse im Benutzerbereich des Hostbetriebssystems ausgeführt werden. (Die einzige Ausnahme stellen Hyper-V-Container dar, wo jeder Container auf einem speziellen virtuellen Computer pro Container ausgeführt wird.) |
 
 **Abbildung 2-3:** Vergleichen der herkömmlichen virtuellen Computer mit Docker-Containern
 
-Da Container wesentlich weniger Ressourcen benötigen (z.B. keine Vollversion des Betriebssystems), lassen sie sich schnell hochfahren und einfach bereitstellen. Eine geringe Ressourcennutzung ermöglicht eine höhere Dichte. Aus diesem Grund können Sie verschiedene Dienste auf derselben Hardware-Einheit ausführen und so die Kosten senken.
+Da Container wesentlich weniger Ressourcen benötigen (z.B. keine Vollversion des Betriebssystems), lassen sie sich einfach bereitstellen und schnell hochfahren. Das ermöglicht eine höhere Dichte, d.h. es erlaubt Ihnen, mehr Dienste auf der gleichen Hardwareeinheit auszuführen, was geringere Kosten verursacht.
 
-Da Container auf demselben Kernel ausgeführt werden, gibt es weniger Isolierung, als virtuelle Computer bereitstellen können.
+Als Nebenwirkung der Ausführung auf dem gleichen Kernel erhalten Sie weniger Isolation als bei VMs.
 
 Der Hauptzweck eines Images ist, die Umgebung (Abhängigkeiten) in verschiedene Bereitstellungen anzugleichen. Das bedeutet, dass Sie sie auf Ihrem Computer debuggen und sie dann auf einem anderen Computer bereitstellen können, wenn dieselbe Umgebung gewährleistet ist.
 
 Mit einem Containerimage können Sie eine Anwendung oder einen Dienst packen und beides auf zuverlässige und reproduzierbare Weise bereitstellen. Docker ist also nicht bloß eine Technologie, sondern eine Philosophie und ein Prozess.
 
-Docker-Entwickler würden niemals sagen: „Es funktioniert auf meinem Computer. Warum also nicht auch in der Produktion?“ Sie würden eher folgenden Satz hören: „Es wird unter Docker ausgeführt.“ Von Docker gepackte Apps können in allen unterstützten Docker-Umgebungen ausgeführt werden. Von Docker gepackte Apps werden konsistent auf allen Bereitstellungszielen ausgeführt (Entwicklung, Qualitätssicherung, Staging, Produktion).
+Wenn Docker eingesetzt wird, hören Sie von Entwicklern nie: „Es funktioniert auf meinem Computer. Warum also nicht auch in der Produktion?“ Sie können einfach sagen : „Es funktioniert in Docker“, da die verpackte Docker-Anwendung in jeder unterstützten Docker-Umgebung ausgeführt werden kann, und sie funktioniert auf allen Bereitstellungszielen (wie Dev, QA, Staging und Produktion) wie vorgesehen.
+
+## <a name="a-simple-analogy"></a>Eine einfache Analogie
+
+Vielleicht kann eine einfache Analogie beim Verständnis des Kernkonzepts von Docker hilfreich sein.
+
+Gehen wir einen Augenblick lang zurück in die 1950-er Jahre. Es gab keine Textverarbeitungsprogramme, und überall (naja, fast überall) wurden Fotokopierer benutzt.
+
+Angenommen, Sie wären dafür zuständig gewesen, stapelweise Briefe nach Bedarf per Post an Kunden zu verschicken, auf richtigem Papier und in Umschlägen für die physische Zustellung an die Adresse jedes einzelnen Kunden (damals gab es noch keine E-Mail).
+
+An einem bestimmten Punkt fällt Ihnen auf, dass die Briefe nur eine Zusammenstellung einer großen Sammlung von Absätzen sind, die nach Bedarf ausgewählt und angeordnet werden, je nach dem Zweck des Briefs, also denken Sie sich ein System aus, Briefe schnell fertigzustellen, und erwarten eine üppige Gehaltserhöhung.
+
+Das System ist einfach:
+
+1. Sie beginnen mit einem Satz Transparentfolien, die jeweils einen Absatz enthalten.
+
+2. Um einen Satz Briefe fertigzustellen, wählen Sie die Folien mit den benötigten Absätzen aus, dann stapeln Sie sie und richten sie aus, so dass sie gut aussehen und sich einwandfrei lesen lassen.
+
+3. Schließlich platzieren Sie den Stapel im Fotokopierer und drücken den Startknopf, um so viele Briefe wie nötig zu erstellen.
+
+Vereinfacht ist das der Kerngedanke von Docker.
+
+In Docker ist jede Schicht die sich ergebende Menge von Änderungen, die im Dateisystem nach dem Ausführen eines Befehls auftreten, etwa beim Installieren eines Programms.
+
+Wenn Sie sich das Dateisystem nach dem Kopieren der Schicht „ansehen“, sehen Sie alle Dateien, einschließlich der Schicht, auf der das Programm installiert wurde.
+
+Sie können sich ein Image als eine schreibgeschützte Behelfsfestplatte vorstellen, die zur Installation auf einem „Computer“ bereit ist, der bereits ein Betriebssystem enthält.
+
+In ähnlicher Weise stellt ein Container diesen „Computer“ dar, mit angeschlossener Image-„Festplatte“. Der Container kann ein- und ausgeschaltet werden, ganz wie ein Computer.
 
 >[!div class="step-by-step"]
 [Zurück](index.md)

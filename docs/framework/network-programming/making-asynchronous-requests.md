@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 27860feed5fbb33fb007120d082599c8f80b240d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1770ba69be537ccbe1c5ec26150428a3618b21a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395907"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47209976"
 ---
 # <a name="making-asynchronous-requests"></a>Vornehmen von asynchronen Anforderungen
 Die <xref:System.Net>-Klassen verwenden das .NET Framework-Standardmodell für asynchrones Programmieren für den asynchronen Zugriff auf Internetressourcen. Die Methoden <xref:System.Net.WebRequest.BeginGetResponse%2A> und <xref:System.Net.WebRequest.EndGetResponse%2A> der Klasse <xref:System.Net.WebRequest> starten asynchrone Anforderungen für eine Internetressource und schließen diese ab.  

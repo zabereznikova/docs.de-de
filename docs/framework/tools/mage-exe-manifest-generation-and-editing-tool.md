@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856178"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46009774"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 
@@ -30,7 +30,7 @@ Mage [commands] [commandOptions]
 
 ### <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angezeigt. Weitere Informationen zu den Optionen, die diese Befehle unterstützen, finden Sie unter [Befehlsoptionen für "New" und "Update"](#NewUpdate) und ["Sign"-Befehlsoptionen](#Sign).
+In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angezeigt. Weitere Informationen zu den Optionen, die diese Befehle unterstützen, finden Sie unter [Befehlsoptionen für "New" und "Update"](#new-and-update-command-options) und ["Sign"-Befehlsoptionen](#sign-command-options).
 
 |Befehl|Beschreibung |
 |-------------|-----------------|
@@ -40,7 +40,6 @@ In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angeze
 |**-s, -Sign** `[signOptions]`|Verwendet ein Schlüsselpaar oder ein X509-Zertifikat, um eine Datei zu signieren. Signaturen werden als XML-Elemente in die Dateien eingefügt.<br /><br /> Beim Signieren eines Manifests, das einen **-TimestampUri** -Wert angibt, müssen Sie mit dem Internet verbunden sein.|
 |**-h, -?, -Help** *[ausführlich]*|Beschreibt alle verfügbaren Befehle und die zugehörigen Optionen. Geben Sie `verbose` an, um ausführliche Hilfe aufzurufen.|
 
-<a name="NewUpdate"></a>
 ## <a name="new-and-update-command-options"></a>Befehlsoptionen für "New" und "Update"
 
 In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `-New` und `-Update` unterstützt werden:
@@ -70,9 +69,9 @@ In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `
 |**-v, -Version** `versionNumber`|1.0.0.0|Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Die Version der Bereitstellung. Das Argument muss eine gültige Versionszeichenfolge im Format „*N.N.N.N*“ sein, wobei „*N*“ eine ganze 32-Bit-Zahl ohne Vorzeichen sein muss.|
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Verwenden Sie dieses Flag nur für Windows Presentation Foundation-Anwendungen (WPF), die in Internet Explorer gehostet werden, nicht für eigenständig ausführbare Dateien. Gültige Werte sind "true" oder "t" und "false" oder "f".<br /><br /> Fügt für Anwendungsmanifeste das `hostInBrowser` -Attribut unter dem `entryPoint` -Element des Anwendungsmanifests ein.<br /><br /> Legt für Bereitstellungsmanifeste für das `install` -Attribut im `deployment` -Element den Wert "false" fest und speichert das Bereitstellungsmanifest mit der Erweiterung ".xbap". Wenn dieses Argument zusammen mit dem Argument **-Install** angeben wird, wird ein Fehler ausgelöst, da eine im Browser gehostete Anwendung keine installierte Offlineanwendung sein darf.|
 
-<a name="Sign"></a>
-## <a name="sign-command-options"></a>"Sign"-Befehlsoptionen
- In der folgenden Tabelle werden die Optionen angezeigt, die von dem Befehl `-Sign` unterstützt werden und für alle Dateitypen gelten.
+## <a name="sign-command-options"></a>Sign-Befehlsoptionen
+
+In der folgenden Tabelle werden die Optionen angezeigt, die von dem Befehl `-Sign` unterstützt werden und für alle Dateitypen gelten.
 
 |Optionen|Beschreibung |
 |-------------|-----------------|
@@ -105,7 +104,11 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 
  Anwendungsmanifeste unterstützen zudem benutzerdefinierte Trust-Abschnitte. Auf diese Weise kann die Anwendung das Sicherheitsprinzip der geringsten Berechtigung einhalten, da Sie das Manifest so konfigurieren können, dass nur genau die Berechtigungen angefordert werden, die zum Ausführen der Anwendung erforderlich sind. *Mage.exe* bietet keine direkte Unterstützung für das Hinzufügen eines benutzerdefinierten Trust-Abschnitts. Sie können einen solchen Abschnitt mit einem Text-Editor, einem XML-Parser oder dem grafischen Tool *MageUI.exe* hinzufügen. Weitere Informationen zum Hinzufügen benutzerdefinierter Trust-Abschnitte mit *MageUI.exe* finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, grafischer Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
- Neue Manifeste, die mit der in Visual Studio 2010 enthaltenen Version 4 von *Mage.exe* erstellt werden, sind für [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] vorgesehen. Für die Verwendung früherer Versionen von .NET Framework müssen Sie eine frühere Version von *Mage.exe* verwenden. Beim Hinzufügen oder Entfernen von Assemblys aus einem vorhandenen Manifest oder beim erneuten Signieren eines vorhandenen Manifests wird das Manifest nicht von *Mage.exe* für die Verwendung von [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] aktualisiert. In den folgenden Tabellen werden diese Funktionen und Einschränkungen aufgeführt.
+Visual Studio 2017 enthält Version 4.6.1 von *Mage.exe*. Manifeste, die mit dieser Version von *Mage.exe* erstellt werden, sind an .NET Framework 4 ausgerichtet. Für die Verwendung früherer Versionen von .NET Framework verwenden Sie eine frühere Version von *Mage.exe*.
+
+Beim Hinzufügen oder Entfernen von Assemblys aus einem vorhandenen Manifest oder beim erneuten Signieren eines vorhandenen Manifests wird das Manifest nicht von *Mage.exe* für die Verwendung von .NET Framework 4 aktualisiert.
+
+In den folgenden Tabellen werden diese Funktionen und Einschränkungen aufgeführt:
 
 |Manifestversion|Vorgang|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
@@ -131,7 +134,9 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ||Hinzufügen einer Assembly|Nicht unterstützt|OK|
 ||Entfernen einer Assembly|Nicht unterstützt|OK|
 
- "Mage.exe" erstellt neue Manifeste, für die als Ziel [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]verwendet wird. ClickOnce-Anwendungen, die [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] als Ziel verwenden, können sowohl mit [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] als auch mit der Vollversion von [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]ausgeführt werden. Wenn für die Anwendung als Ziel die Vollversion von [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] verwendet wird und eine Ausführung unter [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]nicht möglich ist, entfernen Sie das Clientelement `<framework>` mit einem Text-Editor, und signieren Sie das Manifest erneut. Nachfolgend wird ein Beispiel für ein `<framework>` -Element dargestellt, für das als Ziel [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]festgelegt ist.
+ "Mage.exe" erstellt neue Manifeste, für die als Ziel [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]verwendet wird. ClickOnce-Anwendungen, die [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] als Ziel verwenden, können sowohl mit [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] als auch mit der Vollversion von .NET Framework 4 ausgeführt werden. Wenn für die Anwendung als Ziel die Vollversion von .NET Framework 4 verwendet wird und eine Ausführung unter [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] nicht möglich ist, entfernen Sie das Clientelement `<framework>` mit einem Text-Editor, und signieren Sie das Manifest erneut.
+
+Nachfolgend wird ein Beispiel für ein `<framework>` -Element dargestellt, für das als Ziel [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]festgelegt ist:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

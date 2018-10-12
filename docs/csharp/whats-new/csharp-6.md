@@ -3,12 +3,12 @@ title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565877"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208184"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
@@ -45,7 +45,7 @@ Der Gesamteffekt dieser Features ist es, dass Sie präziseren Code schreiben, de
 
 Im weiteren Verlauf dieses Themas werden die einzelnen Features detailliert erklärt.
 
-## <a name="auto-property-enhancements"></a>Verbesserungen der Auto-Eigenschaft 
+## <a name="auto-property-enhancements"></a>Verbesserungen der Auto-Eigenschaft
 
 Die Syntax für automatisch implementierte Eigenschaften (in der Regel als „Auto-Eigenschaften“ bezeichnet) hat es stark vereinfacht, Eigenschaften zu erstellen, die einfache Get- und Set-Accessoren hatten.
 
@@ -88,6 +88,8 @@ public class Student
 
 Diese Feature ermöglicht wahrhaftige Sprachenunterstützung zum Erstellen unveränderlicher Typen und zum Verwenden der präziseren und einfacheren Auto-Eigenschaft-Syntax
 
+Wenn durch das Hinzufügen dieser Syntax eine zugängliche Methode nicht entfernt wird, handelt es sich um eine [binärkompatible Änderung](version-update-considerations.md#binary-compatible-changes).
+
 ### <a name="auto-property-initializers"></a>Auto-Eigenschaft-Initialisierer
 
 Mit *Auto-Eigenschaft-Initialisierer* können Sie den ursprünglichen Wert für eine Auto-Eigenschaft als Teil der Eigenschaftendeklaration deklarieren.  In früheren Versionen mussten diese Eigenschaften über Setter verfügen und Sie müssten diesen Setter verwenden, um den vom Unterstützungsfeld verwendeten Datenspeicher zu initialisieren. Betrachten Sie diese Klasse als für einen Studenten, die den Namen sowie eine Liste der Noten des Studenten enthält:
@@ -115,6 +117,9 @@ Der Text von vielen Member, die wir schreiben, besteht aus nur einer Anweisung, 
 Sie können auch Ausdruckskörpermember in schreibgeschützten Eigenschaften verwenden:
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+Das Ändern eines vorhandenen Members in ein Ausdruckskörpermember ist eine [binärkompatible Änderung](version-update-considerations.md#binary-compatible-changes).
+
 
 ## <a name="using-static"></a>verwendet statische
 
@@ -398,4 +403,3 @@ Die Option `-deterministic` weist den Compiler an, eine Byte für Byte identisch
 Jede Kompilierung erzeugt standardmäßig eine eindeutige Ausgabe. Der Compiler fügt einen Zeitstempel und eine aus zufälligen Zahlen generierte GUID hinzu. Sie können diese Option verwenden, wenn Sie die Byte für Byte Ausgabe vergleichen möchten, um die Konsistenz über Builds hinweg sicherzustellen.
 
 Weitere Informationen finden Sie im Artikel zur Compileroption [-deterministic](../language-reference/compiler-options/deterministic-compiler-option.md).
-

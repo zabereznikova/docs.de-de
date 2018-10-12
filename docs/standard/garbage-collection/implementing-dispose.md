@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 36526da1fc678e933a75e19bac9c8e1d0a40909c
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44186187"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45743387"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementieren einer Dispose-Methode
 
@@ -107,7 +107,7 @@ Im Folgenden finden Sie das allgemeine Muster für die Implementierung des Dispo
 
 Eine Klasse, die von einer Klasse abgeleitet ist, die die <xref:System.IDisposable>-Schnittstelle implementiert, sollte <xref:System.IDisposable> nicht implementieren, da die Basisklassenimplementierung von <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> von den abgeleiteten Klassen geerbt wird. Stattdessen müssen Sie Folgendes bereitstellen, um das Dispose-Muster für eine abgeleitete Klasse zu implementieren:  
   
-* Eine `protected Dispose(Boolean)`-Methode, die die Basisklassenmethode überschreibt und die eigentliche Freigabe der Ressourcen der abgeleiteten Klasse durchführt. Diese Methode sollte auch die `Dispose(Boolean)`-Methode der Basisklasse aufrufen und ihr den Wert `true` für das *disposing*-Argument übergeben.  
+* Eine `protected Dispose(Boolean)`-Methode, die die Basisklassenmethode überschreibt und die eigentliche Freigabe der Ressourcen der abgeleiteten Klasse durchführt. Diese Methode sollte auch die `Dispose(Boolean)`-Methode der Basisklasse aufrufen und ihren disposing-Status für das Argument übergeben.  
   
 * Entweder eine von <xref:System.Runtime.InteropServices.SafeHandle> abgeleitete Klasse, die die nicht verwaltete Ressource einschließt (empfohlen) oder eine Überschreibung der <xref:System.Object.Finalize%2A?displayProperty=nameWithType>-Methode. Die <xref:System.Runtime.InteropServices.SafeHandle>-Klasse stellt einen Finalizer bereit, wodurch Sie keinen programmieren müssen. Wenn Sie einen Finalizer bereitstellen, sollte er die `Dispose(Boolean)`-Überladung mit einem *disposing*-Argument mit dem Wert `false` aufrufen.  
   

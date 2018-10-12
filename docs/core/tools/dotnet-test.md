@@ -4,12 +4,12 @@ description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in e
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 2bee78ca44026f28c51fac3bcf87d976b53e48a7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390689"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44137199"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -251,6 +251,10 @@ Führen Sie die Tests im Projekt im aktuellen Verzeichnis durch:
 Führen Sie die Tests im Projekt `test1` durch:
 
 `dotnet test ~/projects/test1/test1.csproj`
+
+Führen Sie die Tests im aktuellen Verzeichnis aus, und generieren Sie eine Testergebnisdatei im TRX-Format:
+
+`dotnet test --logger:trx`
 
 ## <a name="filter-option-details"></a>Details zu Filteroptionen
 

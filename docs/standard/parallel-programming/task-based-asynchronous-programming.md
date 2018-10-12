@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592588"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171373"
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasierte asynchrone Programmierung
 Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die einen asynchronen Vorgang darstellt. In einigen Dingen ist eine Aufgabe vergleichbar mit einer <xref:System.Threading.ThreadPool>, weist jedoch eine höhere Abstraktionsebene auf. Der Begriff *Aufgabenparallelität* bezeichnet eine oder mehrere eigenständige Aufgaben, die gleichzeitig ausgeführt werden. Aufgaben bieten zwei Hauptvorteile:  
@@ -59,10 +59,10 @@ Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die ein
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- Sie können auch die <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>-Methode verwenden, um eine Aufgabe in einem Schritt zu erstellen und zu starten. Verwenden Sie diese Methode, wenn Erstellung und Planung nicht getrennt werden müssen, zusätzliche Aufgabenerstellungsoptionen oder die Nutzung eines bestimmten Planers erforderlich sind oder der Aufgabe über deren <xref:System.Threading.Tasks.Task.AsyncState%2A>-Eigenschaft zusätzliche Zustände übergeben werden müssen, wie im folgenden Beispiel dargestellt.  
+ Sie können auch die <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>-Methode verwenden, um eine Aufgabe in einem Schritt zu erstellen und zu starten. Verwenden Sie diese Methode, wenn Erstellung und Planung nicht getrennt werden müssen, zusätzliche Aufgabenerstellungsoptionen oder die Nutzung eines bestimmten Planers erforderlich sind oder der Aufgabe zusätzliche Zustände übergeben werden müssen, die über deren <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>-Eigenschaft abgerufen werden können, wie im folgenden Beispiel dargestellt.  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> machen jeweils eine statische <xref:System.Threading.Tasks.Task.Factory%2A>-Eigenschaft verfügbar, von der eine Standardinstanz von <xref:System.Threading.Tasks.TaskFactory> zurückgegeben wird, sodass Sie die Methode als `Task.Factory.StartNew()` aufrufen können. Darüber hinaus verfügen die Aufgaben im Beispiel, da sie vom <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Typ sind, jeweils über eine öffentliche <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>-Eigenschaft, die das Ergebnis der Berechnung enthält. Die Aufgaben werden asynchron ausgeführt und können in einer beliebigen Reihenfolge abgeschlossen werden. Wenn auf die <xref:System.Threading.Tasks.Task%601.Result%2A>-Eigenschaft zugegriffen wird, ehe die Berechnung beendet wurde, sperrt die Eigenschaft den aufrufenden Thread, bis der Wert verfügbar ist.  
   
@@ -92,7 +92,7 @@ Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die ein
 ## <a name="task-creation-options"></a>Aufgabenerstellungsoptionen  
  Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die einen <xref:System.Threading.Tasks.TaskCreationOptions>-Parameter akzeptieren. Durch Angabe einer dieser Optionen teilen Sie dem Aufgabenplaner mit, wie die Aufgabe im Threadpool geplant werden soll. In der folgenden Tabelle sind die verschiedenen Aufgabenerstellungsoptionen aufgeführt.  
   
-|<xref:System.Threading.Tasks.TaskCreationOptions>-Parameterwert|description|  
+|<xref:System.Threading.Tasks.TaskCreationOptions>-Parameterwert|Beschreibung |  
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Dies ist die Standardoption, wenn keine Option angegeben wurde. Der Planer verwendet zum Planen der Aufgabe seine Standardheuristik.|  
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Gibt an, dass die Aufgabe so geplant werden soll, dass früher erstellte Aufgaben mit großer Wahrscheinlichkeit auch früher ausgeführt werden als Aufgaben, die später erstellt wurden.|  
@@ -252,7 +252,7 @@ Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die ein
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung |  
 |-|-|  
 |[Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|Beschreibt die Funktionsweise von Fortsetzungen.|  
 |[Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Beschreibt den Unterschied zwischen angefügten und getrennten untergeordneten Aufgaben.|  
@@ -267,6 +267,7 @@ Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die ein
 |[Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Beschreibt, wie Sie mithilfe von <xref:System.Threading.Tasks.Parallel.For%2A> und <xref:System.Threading.Tasks.Parallel.ForEach%2A> parallele Schleifen für Daten erstellen.|  
 |[Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)|Der Knoten auf oberster Ebene für die parallele .NET Framework-Programmierung.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
- [Beispiele für die parallele Programmierung mit .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>Siehe auch
+
+- [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)  
+- [Beispiele für die parallele Programmierung mit .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

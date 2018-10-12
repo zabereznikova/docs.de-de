@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: 68b376d00762238b810f6463463aa78c492a1a1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e11bf8af6f56cbdcdcc920cafe145edcf744efed
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003398"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Gewusst wie: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen
 Viele Komponenten bieten Ihnen die Möglichkeit, ihre Arbeit asynchron auszuführen. Mit den Komponenten <xref:System.Media.SoundPlayer> und <xref:System.Windows.Forms.PictureBox> können Sie beispielsweise Sounds und Bilder „im Hintergrund“ laden, während Ihr Hauptthread ohne Unterbrechung weiterläuft.  
   
- Die Verwendung von asynchronen Methoden in einer Klasse, die die [Übersicht für ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) unterstützt, kann so einfach sein, indem Sie einen Ereignishandler an das Ereignis *MethodName***Completed** der Komponente wie bei jedem anderen Ereignis anhängen. Beim Aufrufen der *MethodName***Async**-Methode wird Ihre Anwendung weiterhin ohne Unterbrechung ausgeführt, bis das *MethodName***Completed**-Ereignis ausgelöst wird. In Ihrem Ereignishandler können Sie anhand des Parameters <xref:System.ComponentModel.AsyncCompletedEventArgs> festzustellen, ob der asynchrone Vorgang erfolgreich beendet oder abgebrochen wurde.  
+ Die Verwendung von asynchronen Methoden in einer Klasse, die die [Übersicht für ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) unterstützt, kann so einfach sein, indem Sie einen Ereignishandler an das Ereignis _MethodName_**Completed** der Komponente wie bei jedem anderen Ereignis anhängen. Beim Aufrufen der _MethodName_**Async**-Methode wird Ihre Anwendung weiterhin ohne Unterbrechung ausgeführt, bis das _MethodName_**Completed**-Ereignis ausgelöst wird. In Ihrem Ereignishandler können Sie anhand des Parameters <xref:System.ComponentModel.AsyncCompletedEventArgs> festzustellen, ob der asynchrone Vorgang erfolgreich beendet oder abgebrochen wurde.  
   
  Weitere Informationen zur Verwendung von Ereignishandlern finden Sie unter [Übersicht über Ereignishandler](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   

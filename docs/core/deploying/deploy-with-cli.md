@@ -4,12 +4,12 @@ description: Erfahren Sie mehr zur .NET Core-App-Bereitstellung mit CLI-Tools
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244750"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855021"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
 
@@ -26,7 +26,7 @@ Wenn Sie über die Befehlszeile arbeiten, können Sie einen Programm-Editor Ihre
 
 ## <a name="framework-dependent-deployment"></a>Framework-abhängige Bereitstellung
 
-Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst nur das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess. 
+Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter-Abhängigkeiten umfasst nur das Erstellen, Testen und Veröffentlichen der Anwendung. Ein einfaches, in C# geschriebenes Beispiel veranschaulicht den Prozess.
 
 1. Erstellen Sie ein Projektverzeichnis.
 
@@ -43,7 +43,7 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Aktualisieren Sie die Abhängigkeiten und Tools des Projekts.
- 
+
    Führen Sie den Befehl [dotnet restore](../tools/dotnet-restore.md) aus ([siehe Hinweis](#dotnet-restore-note)), um die im Projekt angegebenen Abhängigkeiten wiederherzustellen.
 
 1. Erstellen Sie ein Debugbuild Ihrer App.
@@ -105,7 +105,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
 1. Definieren Sie die Zielplattformen für Ihre App.
 
-   Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei *CSPROJ*, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID für jede Zielplattform angibt. Beachten Sie, dass Sie auch ein Semikolon hinzufügen müssen, um die RIDs trennen. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md). 
+   Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei *CSPROJ*, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID für jede Zielplattform angibt. Beachten Sie, dass Sie auch ein Semikolon hinzufügen müssen, um die RIDs trennen. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md).
 
    Der folgende Abschnitt `<PropertyGroup>` gibt z.B. an, dass die Anwendung unter den Betriebssystemen Windows 10 (64-Bit) und OS X 10.11 (64-Bit) ausgeführt wird.
 
@@ -188,8 +188,7 @@ Beachten Sie, dass Sie eine eigenständige Bereitstellung mit einer Drittanbiete
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Siehe auch
 
-[.NET Core Anwendungsbereitstellung](index.md)   
-[.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)   
-
+* [.NET Core-Anwendungsbereitstellung](index.md)
+* [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

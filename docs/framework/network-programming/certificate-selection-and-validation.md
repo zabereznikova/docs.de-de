@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931049"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269396"
 ---
 # <a name="certificate-selection-and-validation"></a>Zertifikatauswahl und -überprüfung
 Die <xref:System.Net>-Klassen unterstützen mehrere Möglichkeiten zur Auswahl und Überprüfung von <xref:System.Security.Cryptography.X509Certificates> für SSL-Verbindungen (Secure Socket Layer). Ein Client kann ein oder mehrere Zertifikate zur Authentifizierung gegenüber eines Servers wählen. Ein Server kann fordern, dass ein Clientzertifikat ein oder mehrere bestimmte Attribute für die Authentifizierung aufweist.  
@@ -41,13 +41,13 @@ Die <xref:System.Net>-Klassen unterstützen mehrere Möglichkeiten zur Auswahl u
 ## <a name="tools-for-certificate-configuration"></a>Tools für die Zertifikatkonfiguration  
  Eine Reihe von Tools stehen für die Zertifikatkonfiguration für Client und Server zur Verfügung.  
   
- Das *Winhttpcertcfg.exe*-Tool kann zur Konfiguration von Clientzertifikaten verwendet werden. Das *Winhttpcertcfg.exe*-Tool wird als eines der Tools im Windows Server 2003 Resource Kit bereitgestellt. Dieses Tool ist auch als Teil der Windows Server 2003 Resource Kit-Tools, die unter www.microsoft.com zum Download zur Verfügung stehen.  
+ Das *Winhttpcertcfg.exe*-Tool kann zur Konfiguration von Clientzertifikaten verwendet werden. Das *Winhttpcertcfg.exe*-Tool wird als eines der Tools im Windows Server 2003 Resource Kit bereitgestellt. Dieses Tool steht auch als Teil der Windows Server 2003 Ressource Kit-Tools unter [www.microsoft.com](https://www.microsoft.com) zum Download zur Verfügung.  
   
 Das *HttpCfg.exe*-Tool kann verwendet werden, um Serverzertifikate für die <xref:System.Net.HttpListener>-Klasse zu konfigurieren. Das *HttpCfg.exe*-Tool dient als eines der Supporttools für Windows Server 2003 und Windows XP Service Pack 2. *HttpCfg.exe* und die anderen Supporttools werden standardmäßig unter Windows Server 2003 oder Windows XP installiert. Unter Windows Server 2003 werden die Supporttools separat vom folgenden Ordner und der Datei auf der Windows Server 2003-CD-ROM installiert:  
   
  \Support\Tools\Suptools.msi  
   
- Für die Verwendung mit Windows XP Service Pack 2 stehen Windows XP-Supporttools unter www.microsoft.com zum Download zur Verfügung.  
+ Für die Verwendung mit Windows XP Service Pack 2 stehen Windows XP-Supporttools unter [www.microsoft.com](https://www.microsoft.com) zum Download zur Verfügung.  
   
  Der Quellcode für eine Version des *HttpCfg.exe*-Tools wird auch als ein Beispiel mit dem Windows Server SDK bereitgestellt. Der Quellcode des *HttpCfg.exe*-Beispiels wird standardmäßig mit den Netzwerkbeispielen als Teil der Windows SDK unter folgendem Ordner installiert:  
   

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457360"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208659"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
 Einschränkungen informieren den Compiler über die Funktionen, über die ein Typargument verfügen muss. Ohne Einschränkungen könnte das Typargument jedes beliebige Argument sein. Der Compiler kann nur die <xref:System.Object?displayPropety=nameWithType>-Elemente annehmen. Dies ist die übergeordnete Basisklasse für jeden beliebigen .NET-Typ. Weitere Informationen finden Sie unter [Weshalb Einschränkungen?](#why-use-constraints). Wenn Clientcode versucht, Ihre Klasse zu instanziieren, indem er einen Typ verwendet, der durch Ihre Einschränkung nicht erlaubt ist, kommt es zu einem Kompilierzeitfehler. Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben. In der folgenden Tabelle werden die sieben verschiedenen Einschränkungstypen aufgelistet:
 
-|Constraint|description|
+|Constraint|Beschreibung |
 |----------------|-----------------|
-|`where T : struct`|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable> kann angegeben werden. Weitere Informationen finden Sie unter [Using Nullable Types (Verwenden von Nullable-Typen)](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|Das Typargument muss ein Werttyp sein. Jeder Werttyp außer <xref:System.Nullable%601> kann angegeben werden. Weitere Informationen zu Typen, die NULL-Werte zulassen, finden Sie unter [Nullable-Typen (C#-Programmierhandbuch)](../nullable-types/index.md).|
 |`where T : class`|Das Typargument muss ein Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
 |`where T : unmanaged`|Das Typargument darf kein Verweistyp sein und darf keine Verweistypmitglieder auf einer Schachtelungsebene enthalten.|
 |`where T : new()`|Das Typargument muss einen öffentlichen, parameterlosen Konstruktor aufweisen. Beim gemeinsamen Verwenden anderen Constraints muss der `new()`-Constraint zuletzt angegeben werden.|
@@ -111,7 +111,8 @@ Sie könnten dies wie im folgenden Beispiel gezeigt verwenden, um eine Enumerati
 
 ## <a name="see-also"></a>Siehe auch
 
- <xref:System.Collections.Generic> [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)  
- [new-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [new-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)  

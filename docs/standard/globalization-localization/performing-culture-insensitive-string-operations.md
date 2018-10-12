@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77269cd9cdb922c1f9576afa93d6599ec7a834e4
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199946"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562121"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen
 Die meisten .NET Framework-Methoden, die standardmäßig kulturabhängige Zeichenfolgenoperationen durchführen, stellen Methodenüberladungen bereit, für die Sie die zu verwendende Kultur explizit angeben können, indem Sie einen <xref:System.Globalization.CultureInfo>-Parameter übergeben. Diese Überladungen ermöglichen es Ihnen, kulturelle Variationen in Groß-/Kleinschreibungszuordnungen und Sortierregeln zu eliminieren und kulturunabhängige Ergebnisse zu gewährleisten.  
@@ -44,4 +44,5 @@ Die meisten .NET Framework-Methoden, die standardmäßig kulturabhängige Zeiche
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Sortieren von Weight-Tabellen](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Sortiergewichtungstabellen (für .NET auf Windows-Systemen)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Default Unicode Collation Element Table (für .NET Core unter Linux und macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

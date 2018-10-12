@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220736"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207238"
 ---
 # <a name="c-features-that-support-linq"></a>C#-Funktionen mit LINQ-Unterstützung
 Im folgenden Abschnitt werden neue Sprachkonstrukte, die in C# 3.0 eingeführt werden, vorgestellt. Obwohl diese neuen Funktionen zu einem gewissen Grad mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen verwendet werden, sind sie nicht beschränkt auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] und können in jedem Kontext, in dem Sie sie nützlich finden, verwendet werden.  
@@ -17,7 +17,7 @@ Im folgenden Abschnitt werden neue Sprachkonstrukte, die in C# 3.0 eingeführt w
 ## <a name="query-expressions"></a>Abfrageausdrücke  
  Abfrageausdrücke verwenden eine deklarative Syntax wie SQL oder XQuery, um eine Abfrage über IEnumerable-Sammlungen zu erstellen. Zur Kompilierzeit wird die Abfragesyntax in Methodenaufrufe an eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Implementierung des Anbieters der Erweiterungsmethode des Standardabfrageoperators kompiliert. Applikationen steuern die Standardabfrageoperatoren, die sich durch Angabe des entsprechenden Namespace mit einer `using`-Anweisung innerhalb des Bereichs befinden. Der folgende Abfrageausdruck nimmt ein Array von Zeichenfolgen, gruppiert sie nach dem ersten Zeichen in der Zeichenfolge und sortiert die Gruppen.  
   
-```  
+```csharp  
 var query = from str in stringArray  
             group str by str[0] into stringGroup  
             orderby stringGroup.Key  
@@ -29,7 +29,7 @@ var query = from str in stringArray
 ## <a name="implicitly-typed-variables-var"></a>Implizit typisierte Variablen (var)  
  Anstatt beim Deklarieren und Initialisieren einer Variablen einen Typ explizit anzugeben, können Sie den [var](../../../../csharp/language-reference/keywords/var.md)-Modifizierer verwenden, um den Compiler zum Ableiten und Zuweisen des Typs anzuweisen, wie hier gezeigt:  
   
-```  
+```csharp  
 var number = 5;  
 var name = "Virginia";  
 var query = from str in stringArray  
@@ -37,14 +37,14 @@ var query = from str in stringArray
             select str;  
 ```  
   
- Variablen, die als `var` deklariert werden, sind ebenso stark typisiert wie Variablen, deren Typ Sie explizit angeben. Die Verwendung von `var` macht es möglich, anonyme Typen zu erstellen, aber es kann für jede lokale Variable verwendet werden. Arrays können auch mit impliziter Typisierung deklariert werden.  
+ Variablen, die als `var` deklariert werden, sind ebenso stark typisiert wie Variablen, deren Typ Sie explizit angeben. Die Verwendung von `var` macht es möglich, anonyme Typen zu erstellen, dies ist jedoch nur für lokale Variablen möglich. Arrays können auch mit impliziter Typisierung deklariert werden.  
   
  Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="object-and-collection-initializers"></a>Objekt- und Auflistungsinitialisierer  
  Objekt- und Auflistungsinitialisierer ermöglichen das Initialisieren von Objekten ohne expliziten Aufruf eines Konstruktors für das Objekt. Initialisierer werden in der Regel in Abfrageausdrücken verwendet, wenn sie die Quelldaten in einen neuen Datentyp projizieren. In einer Klasse namens `Customer` mit öffentlichen `Name`- und `Phone`-Eigenschaften können Objektinitialisierer wie im folgenden Code verwendet werden:  
   
-```  
+```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
@@ -78,11 +78,12 @@ select new {name = cust.Name, phone = cust.Phone};
 ## <a name="auto-implemented-properties"></a>Automatisch implementierte Eigenschaften  
  Automatisch implementierte Eigenschaften machen die Eigenschaftendeklaration präziser. Wenn Sie eine Eigenschaft wie im folgenden Beispiel gezeigt deklarieren, wird der Compiler ein privates, anonymes Unterstützungsfeld erstellen, auf das nur durch die Getter und Setter der Eigenschaft zugegriffen werden kann.  
   
-```  
+```csharp  
 public string Name {get; set;}  
 ```  
   
  Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Language-Integrated Query (LINQ) (Sprachintegrierte Abfrage (LINQ))](../../../../csharp/programming-guide/concepts/linq/index.md)

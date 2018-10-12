@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393210"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213714"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C#-Compileroptionen)
 Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../../../csharp/language-reference/keywords/public.md) Typinformationen in der angegebenen Datei in das aktuelle Projekt zu importieren, sodass die Verweismetadaten aus den angegebenen Assemblydateien aktiviert werden.  
@@ -66,11 +66,13 @@ Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../../../
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Verwendung der Funktion [extern-Alias](../../../csharp/language-reference/keywords/extern-alias.md).  
   
- Kompilieren Sie die Quelldatei und importieren Sie Metadaten aus `grid.dll` und `grid20.dll`, die bereits zuvor kompiliert wurden. Die beiden DLLs enthalten separate Versionen derselben Komponente, und Sie verwenden zwei **-reference**-Parameter mit Aliasoptionen, um die Quelldatei zu kompilieren. Die Optionen sehen folgendermaßen aus:  
+ Kompilieren Sie die Quelldatei, und importieren Sie Metadaten aus `grid.dll` und `grid20.dll`, die bereits zuvor kompiliert wurden. Die beiden DLLs enthalten separate Versionen derselben Komponente, und Sie verwenden zwei **-reference**-Parameter mit Aliasoptionen, um die Quelldatei zu kompilieren. Die Optionen sehen folgendermaßen aus:  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- -reference:GridV1=grid.dll und -reference:GridV2=grid20.dll  
-  
- Dadurch werden die externen Aliase „GridV1“ und „GridV2“ eingerichtet, die Sie in Ihrem Programm über eine extern-Anweisung verwenden:  
+ Dadurch werden die externen Aliase `GridV1` und `GridV2` eingerichtet, die Sie in Ihrem Programm über eine `extern`-Anweisung verwenden:  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- Sobald dies geschehen ist, können Sie auf das Grid-Steuerelement von „grid.dll“ verweisen, indem Sie dem Namen des Steuerelements wie folgt ein „GridV1“ voranstellen:  
+ Sobald dies geschehen ist, können Sie auf das Grid-Steuerelement von `grid.dll` verweisen, indem Sie dem Namen des Steuerelements wie folgt `GridV1` voranstellen:  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Darüber hinaus können Sie auf das Grid-Steuerelement aus „grid20.dll“ verweisen, indem Sie dem Namen des Steuerelements wie folgt ein „GridV2“ voranstellen:  
+ Darüber hinaus können Sie auf das Grid-Steuerelement von `grid20.dll` verweisen, indem Sie dem Namen des Steuerelements wie folgt `GridV2` voranstellen:  
   
 ```csharp  
 GridV2::Grid   

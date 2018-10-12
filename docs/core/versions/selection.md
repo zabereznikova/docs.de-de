@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie .NET Core Laufzeitversionen fü
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204863"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47233197"
 ---
 # <a name="net-core-version-selection"></a>.NET Core-Versionsauswahl
 
@@ -31,7 +31,12 @@ Im Folgenden erläutert dieses Dokument diese vier Szenarios.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>SDK verwendet die neueste installierte Version
 
-SDK-Befehle enthalten `dotnet new` oder `dotnet run`. Die `dotnet`-CLI muss für jeden Befehl eine SDK-Version auswählen. Die .NET Core-CLI verwendet das neueste SDK, das standardmäßig auf dem Computer installiert ist. Sie verwenden .NET Core SDK v2.1.301, wenn es installiert ist, auch wenn das Projekt, mit dem Sie arbeiten, die .NET Core 2.0-Laufzeit als Ziel festlegt. Sie verwenden die aktuellen Vorschauversionen sowie die Hauptversionen. Sie können die Vorteile der neuesten SDK-Funktionen und -Verbesserungen nutzen, während Sie frühere .NET Core-Laufzeitversionen als Ziel festlegen. Sie können mehrere Laufzeitversionen für verschiedene Projekte festlegen, indem Sie die gleichen SDK-Tools für alle Projekte verwenden.
+Zu den SDK-Befehlen zählen `dotnet new` oder `dotnet run`. Das `dotnet`-CLI muss für jeden dotnet-Befehl eine SDK-Version auswählen. Das .NET Core-CLI verwendet das neueste SDK, das standardmäßig auf dem Computer installiert ist, auch wenn Folgendes zutrifft:
+
+* Das Projekt zielt auf eine frühere Version ab.
+* Die neueste Version ist eine Vorschauversion.
+
+Apps können die Vorteile der neuesten SDK-Funktionen und -Verbesserungen nutzen und zugleich auf frühere Versionen der .NET Core Runtime ausgerichtet sein. Sie können mehrere Laufzeitversionen für verschiedene Projekte festlegen, indem Sie die gleichen SDK-Tools für alle Projekte verwenden.
 
 In seltenen Fällen werden Sie eine frühere SDK-Version benötigen. Sie geben die Version in einer [*global.json*-Datei](../tools/global-json.md) an. Die Richtlinie zum Verwenden der neuesten Version bedeutet, dass Sie *global.json* nur verwenden, um eine .NET Core SDK-Version vor der zuletzt installierten Version anzugeben.
 

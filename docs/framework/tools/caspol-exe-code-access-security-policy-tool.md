@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410097"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748427"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Richtlinientool für die Codezugriffssicherheit)
 Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.  
@@ -45,7 +45,7 @@ caspol [options]
   
 #### <a name="parameters"></a>Parameter  
   
-|Option|description|  
+|Option|Beschreibung |  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> oder<br /><br /> **-af** *assembly_file*|Fügt eine Assembly, die ein benutzerdefiniertes Sicherheitsobjekt implementiert, z. B. eine benutzerdefinierte Berechtigung oder Mitgliedschaftsbedingung, zur Liste der vollständig vertrauenswürdigen Assemblys einer bestimmten Richtlinienebene hinzu. Das Argument *assembly_file* gibt die hinzuzufügende Assembly an. Diese Datei muss mit einem [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md) signiert werden. Sie können eine Assembly mit dem [Strong Name-Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) mit einem starken Namen signieren.<br /><br /> Wenn ein Berechtigungssatz, der eine benutzerdefinierte Berechtigung enthält, einer Richtlinie hinzugefügt wird, muss außerdem die Assembly, die diese Berechtigung implementiert, zur Liste der vollständig vertrauenswürdigen Assemblys dieser Richtlinienebene hinzugefügt werden. Assemblys, die benutzerdefinierte Sicherheitsobjekte implementieren, z. B. benutzerdefinierte Codegruppen oder Mitgliedschaftsbedingungen, die in Sicherheitsrichtlinien wie der Computerrichtlinie angewendet werden, sollten generell zur Liste der vollständig vertrauenswürdigen Assemblys hinzugefügt werden. **Achtung:** Wenn die Assembly, die das benutzerdefinierte Sicherheitsobjekt implementiert, auf andere Assemblys verweist, müssen Sie zur Liste der vollständig vertrauenswürdigen Assemblys zunächst die Assemblys hinzufügen, auf die verwiesen wird. Benutzerdefinierte Sicherheitsobjekte, die mit Visual Basic, C++ und JScript erstellt wurden, verweisen entweder auf Microsoft.VisualBasic.dll, Microsoft.VisualC.dll oder Microsoft.JScript.dll. In der Standardeinstellung befinden sich diese Assemblys nicht in der Liste der vollständig vertrauenswürdigen Assemblys. Sie müssen die entsprechende Assembly zur Liste der vollständig vertrauenswürdigen Assemblys hinzufügen, bevor Sie ein benutzerdefiniertes Sicherheitsobjekt hinzufügen. Wenn Sie dies unterlassen, wird das Sicherheitssystem beschädigt, und sämtliche Assemblys können nicht mehr geladen werden. In diesem Fall wird die Sicherheit nicht durch die Option **-all -reset** von Caspol.exe repariert. Zum Wiederherstellen der Sicherheit müssen Sie die Sicherheitsdateien manuell bearbeiten und das benutzerdefinierte Sicherheitsobjekt entfernen.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> oder<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Fügt der Hierarchie der Codegruppen eine neue Codegruppe hinzu. Es kann entweder *parent_label* oder *parent_name* angegeben werden. Das Argument *parent_label* gibt die Bezeichnung der Codegruppe an (z.B. 1 oder 1.1), die der hinzuzufügenden Codegruppe übergeordnet ist. Das Argument *parent_name* gibt den Namen der Codegruppe an, die der hinzuzufügenden Codegruppe übergeordnet ist. Da sich *parent_label* und *parent_name* synonym verwenden lassen, müssen sie von Caspol.exe unterschieden werden können. Aus diesem Grund darf *parent_name* nicht mit einer Zahl beginnen. Außerdem kann *parent_name* nur die Zeichen A-Z, 0-9 und den Unterstrich enthalten.<br /><br /> Das Argument *mship* gibt die Mitgliedschaftsbedingung für die neue Codegruppe an. Weitere Informationen zu *mship*-Argumenten finden Sie in der Tabelle weiter unten in diesem Abschnitt.<br /><br /> Das Argument *pset_name* stellt den Namen des Berechtigungssatzes dar, der der neuen Codegruppe zugeordnet wird. Darüber hinaus können ein oder mehrere *Flags* für die neue Gruppe festgelegt werden. Weitere Informationen zu *flags*-Argumenten finden Sie in der Tabelle weiter unten in diesem Abschnitt.|  
@@ -81,31 +81,31 @@ caspol [options]
   
  Das Argument *mship*, das die Mitgliedschaftsbedingung für eine Codegruppe angibt, kann mit der Option **-addgroup** und der Option **-chggroup** verwendet werden. Jedes *mship*-Argument wird als .NET Framework-Klasse implementiert. *mship* wird mit einem der folgenden Argumente angegeben:  
   
-|Argument|description|  
+|Argument|Beschreibung |  
 |--------------|-----------------|  
-|**-allcode**|Gibt den gesamten Code an. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.AllMembershipCondition>.|  
-|**-appdir**|Gibt das Anwendungsverzeichnis an. Wenn Sie **-appdir** als Mitgliedschaftsbedingung angeben, wird der URL-Beweis des Codes mit dem Anwendungsverzeichnisbeweis dieses Codes verglichen. Wenn die Beweiswerte identisch sind, ist die Mitgliedschaftsbedingung erfüllt. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
+|**-allcode**|Gibt den gesamten Code an. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
+|**-appdir**|Gibt das Anwendungsverzeichnis an. Wenn Sie **-appdir** als Mitgliedschaftsbedingung angeben, wird der URL-Beweis des Codes mit dem Anwendungsverzeichnisbeweis dieses Codes verglichen. Wenn die Beweiswerte identisch sind, ist die Mitgliedschaftsbedingung erfüllt. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom** *xmlfile*|Fügt eine benutzerdefinierte Mitgliedschaftsbedingung hinzu. Das obligatorische *xmlfile*-Argument gibt die XML-Datei an, die die XML-Serialisierung der benutzerdefinierten Mitgliedschaftsbedingung enthält.|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Gibt Code an, der über den angegebenen Assemblyhash verfügt. Um einen Hash als Codegruppen-Mitgliedschaftsbedingung verwenden zu können, muss entweder der Hashwert oder die Assemblydatei angegeben werden. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex** *hex_string* }|Gibt Code an, der über den angegebenen Softwareherausgeber verfügt. Dieser wird anhand einer Zertifikatsdatei, der Signatur einer Datei oder der hexadezimalen Darstellung eines X509-Zertifikats bestimmt. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.PublisherMembershipCondition>.|  
-|**-site** *website*|Gibt Code an, der über die entsprechende Ursprungssite verfügt. Zum Beispiel:<br /><br /> **-site** www.proseware.com<br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.SiteMembershipCondition>.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Gibt Code mit einem spezifischen starken Namen an, wie er vom Dateinamen, dem Assemblynamen als Zeichenfolge und der Assemblyversion im Format *major*.*minor*.*build*.*revision* bestimmt wird. Zum Beispiel:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
-|**-url** *URL*|Gibt Code an, der von der angegebenen URL stammt. Die URL muss ein Protokoll wie http:// oder ftp:// enthalten. Außerdem kann ein Platzhalterzeichen (\*) verwendet werden, um mehrere Assemblys von einer bestimmten URL anzugeben. **Hinweis:** Da eine URL anhand mehrerer Namen gekennzeichnet werden kann, kann durch Verwenden einer URL als Mitgliedschaftsbedingung die Identität von Code nicht sicher festgestellt werden. Verwenden Sie nach Möglichkeit Mitgliedschaftsbedingungen mit einem starken Namen, Herausgebermitgliedschaftsbedingungen oder Hashmitgliedschaftsbedingungen. <br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.UrlMembershipCondition>.|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Gibt Code an, der über den angegebenen Assemblyhash verfügt. Um einen Hash als Codegruppen-Mitgliedschaftsbedingung verwenden zu können, muss entweder der Hashwert oder die Assemblydatei angegeben werden. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex** *hex_string* }|Gibt Code an, der über den angegebenen Softwareherausgeber verfügt. Dieser wird anhand einer Zertifikatsdatei, der Signatur einer Datei oder der hexadezimalen Darstellung eines X509-Zertifikats bestimmt. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
+|**-site** *website*|Gibt Code an, der über die entsprechende Ursprungssite verfügt. Zum Beispiel:<br /><br /> `-site** www.proseware.com`<br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Gibt Code mit einem spezifischen starken Namen an, wie er vom Dateinamen, dem Assemblynamen als Zeichenfolge und der Assemblyversion im Format *major*.*minor*.*build*.*revision* bestimmt wird. Zum Beispiel:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Gibt Code an, der von der angegebenen URL stammt. Die URL muss ein Protokoll wie http:// oder ftp:// enthalten. Außerdem kann ein Platzhalterzeichen (\*) verwendet werden, um mehrere Assemblys von einer bestimmten URL anzugeben. **Hinweis:** Da eine URL anhand mehrerer Namen gekennzeichnet werden kann, kann durch Verwenden einer URL als Mitgliedschaftsbedingung die Identität von Code nicht sicher festgestellt werden. Verwenden Sie nach Möglichkeit Mitgliedschaftsbedingungen mit einem starken Namen, Herausgebermitgliedschaftsbedingungen oder Hashmitgliedschaftsbedingungen. <br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Gibt Code mit der angegebenen Ursprungszone an. Das Argument *zonename* kann einen der folgenden Werte annehmen: **MyComputer**, **Intranet**, **Trusted**, **Internet** oder **Untrusted**. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.ZoneMembershipCondition>-Klasse.|  
   
  Das Argument *flags*, das mit der Option **-addgroup** und der Option **-chggroup** verwendet werden kann, wird wie folgt angegeben:  
   
-|Argument|description|  
+|Argument|Beschreibung |  
 |--------------|-----------------|  
-|**-description "** *Beschreibung* **"**|Gibt bei Verwendung mit der Option **-addgroup** die Beschreibung für eine hinzuzufügende Codegruppe an. Gibt bei Verwendung mit der Option **-chggroup** die Beschreibung für eine zu bearbeitende Codegruppe an. Das Argument *description* muss in doppelte Anführungszeichen eingeschlossen sein.|  
+|**-description** „*Beschreibung*“|Gibt bei Verwendung mit der Option **-addgroup** die Beschreibung für eine hinzuzufügende Codegruppe an. Gibt bei Verwendung mit der Option **-chggroup** die Beschreibung für eine zu bearbeitende Codegruppe an. Das Argument *description* muss in doppelte Anführungszeichen eingeschlossen sein.|  
 |**-exclusive** {**on**&#124;**off**}|**on** gibt an, dass lediglich der Berechtigungssatz berücksichtigt wird, der der hinzuzufügenden bzw. zu ändernden Codegruppe zugeordnet ist, wenn ein Code die Mitgliedschaftsbedingung der Codegruppe erfüllt. Wenn für diese Option **off** festgelegt ist, berücksichtigt Caspol.exe die Berechtigungssätze aller auf der Richtlinienebene übereinstimmenden Codegruppen.|  
 |**-levelfinal** {**on**&#124;**off**}|**on** gibt an, dass keine Richtlinienebene unterhalb der Ebene der hinzugefügten bzw. geänderten Codegruppe berücksichtigt wird. In der Regel wird diese Option auf Ebene der Computerrichtlinie verwendet. Wenn dieses Flag z. B. auf Computerebene für eine Codegruppe festgelegt wird und ein Code die Mitgliedschaftsbedingung dieser Codegruppe erfüllt, wird die Benutzerebenenrichtlinie für diesen Code von Caspol.exe nicht berechnet oder auf diesen angewendet.|  
-|**-name "** *Name* **"**|Gibt bei Verwendung mit der Option **-addgroup** den Skriptnamen für eine hinzuzufügende Codegruppe an. Gibt bei Verwendung mit der Option **-chggroup** den Skriptnamen für eine zu bearbeitende Codegruppe an. Das *name*-Argument muss in doppelten Anführungszeichen stehen. Das Argument *name* darf nicht mit einer Zahl beginnen und kann nur die Zeichen A-Z, 0-9 und den Unterstrich enthalten. Bei einem Verweis auf Codegruppen kann dieser *Name* anstelle ihrer numerischen Bezeichnung verwendet werden. *name* empfiehlt sich besonders für Scripting-Zwecke.|  
+|**-name** „*Name*“|Gibt bei Verwendung mit der Option **-addgroup** den Skriptnamen für eine hinzuzufügende Codegruppe an. Gibt bei Verwendung mit der Option **-chggroup** den Skriptnamen für eine zu bearbeitende Codegruppe an. Das *name*-Argument muss in doppelten Anführungszeichen stehen. Das Argument *name* darf nicht mit einer Zahl beginnen und kann nur die Zeichen A-Z, 0-9 und den Unterstrich enthalten. Bei einem Verweis auf Codegruppen kann dieser *Name* anstelle ihrer numerischen Bezeichnung verwendet werden. *name* empfiehlt sich besonders für Scripting-Zwecke.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Sicherheitsrichtlinie teilt sich in drei Richtlinienebenen auf: Computerrichtlinie, Benutzerrichtlinie und Organisationsrichtlinie. Der Satz von Berechtigungen, den eine Assembly erhält, wird von der Schnittmenge der auf diesen drei Richtlinienebenen zulässigen Berechtigungssätze bestimmt. Jede Richtlinienebene wird durch eine hierarchische Codegruppenstruktur dargestellt. Jede Codegruppe verfügt über eine Mitgliedschaftsbedingung, die bestimmt, welcher Code ein Element dieser Gruppe darstellt. Außerdem wird jeder Codegruppe ein benannter Berechtigungssatz zugeordnet. Dieser Berechtigungssatz gibt die Berechtigungen an, die dem Code, der die Mitgliedschaftsbedingung erfüllt, von der Laufzeit erteilt werden. Jede Ebene der Sicherheitsrichtlinie wird von einer Hierarchie der Codegruppen und dem zugehörigen benannten Berechtigungssatz definiert und verwaltet. Die Ebene der Sicherheitsrichtlinie wird mit den Optionen **-user**, **-customuser**, **-machine** und **-enterprise** festgelegt.  
   
- Weitere Informationen zu Sicherheitsrichtlinien und die Bestimmung der Berechtigungszuteilung an Codes durch die Laufzeit finden Sie unter [Sicherheitsrichtlinienverwaltung](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Weitere Informationen zu Sicherheitsrichtlinien und die Bestimmung der Berechtigungszuteilung an Codes durch die Laufzeit finden Sie unter [Sicherheitsrichtlinienverwaltung](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Verweise auf Codegruppen und Berechtigungssätze  
  Für das vereinfachte Erstellen von Verweisen auf Codegruppen in einer Hierarchie wird mit der Option **-list** eine Liste mit Einzügen angezeigt. In dieser sind die Codegruppen und deren numerische Bezeichnungen (1, 1.1, 1.1.1 usw.) aufgeführt. Die anderen Befehlszeilenoperationen bzgl. Codegruppen verwenden für Verweise auf bestimmte Codegruppen ebenfalls die numerischen Bezeichnungen.  
@@ -132,13 +132,13 @@ caspol [options]
   
  Angenommen, ein Berechtigungssatz wurde mit einer benutzerdefinierten Berechtigung der Computerrichtlinie hinzugefügt. Diese benutzerdefinierte Berechtigung ist in `MyPerm.exe` implementiert. `MyPerm.exe` verweist wiederum auf Klassen in `MyOther.exe`. Beide Assemblys müssen der vollständig vertrauenswürdigen Assemblyliste hinzugefügt werden. Mit dem folgenden Befehl wird die `MyPerm.exe`-Assembly der Liste der vollständig vertrauenswürdigen Assemblys für die Computerrichtlinie hinzugefügt.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  Mit dem folgenden Befehl wird die `MyOther.exe`-Assembly der Liste der vollständig vertrauenswürdigen Assemblys für die Computerrichtlinie hinzugefügt.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  Der folgende Befehl fügt dem Stamm der Codegruppenhierarchie für die Computerrichtlinie eine untergeordnete Codegruppe hinzu. Die neue Codegruppe ist ein Element der Zone **Internet** und wird dem Berechtigungssatz **Ausführung** zugeordnet.  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  Durch den folgenden Befehl wird eine untergeordnete Codegruppe hinzugefügt, die der Freigabe „\\\netserver\netshare“ Berechtigungen für das lokale Intranet gewährt.  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  Der folgende Befehl fügt der Benutzerrichtlinie den Berechtigungssatz `Mypset` hinzu.  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  Mit dem folgenden Befehl wird der Berechtigungssatz in der Benutzerrichtlinie der mit 1.2. bezeichneten Codegruppe in den Berechtigungssatz **Ausführung** geändert.  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  Der folgende Befehl ändert die Mitgliedschaftsbedingungen in der Standardrichtlinie der Codegruppe mit der Bezeichnung 1.2.1. und ändert die Einstellungen des **exclusive**-Flags. Die Mitgliedschaftsbedingung wird mit Code definiert, der aus der Zone **Internet** stammt und dessen **exclusive**-Flag aktiviert ist.  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  Durch den folgenden Befehl wird der Berechtigungssatz mit dem Namen `Mypset` in einen anderen Berechtigungssatz geändert, der in `newpset.xml` enthalten ist. Beachten Sie, dass das Ändern von Berechtigungssätzen, die von der Codegruppenhierarchie verwendet werden, vom aktuellen Release nicht unterstützt wird.  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  Der folgende Befehl verknüpft die Stammcodegruppe der Benutzerrichtlinie (die Gruppe mit der Bezeichnung 1) mit dem benannten Berechtigungssatz **Nichts**. Dadurch wird das Ausführen von Caspol.exe verhindert.  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  Der folgende Befehl stellt die zuletzt gespeicherte Computerrichtlinie wieder her.  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  Der folgende Befehl entfernt die Codegruppe mit der Bezeichnung 1.1. Untergeordnete Codegruppen dieser Codegruppe werden ebenfalls gelöscht.  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  Der folgende Befehl entfernt den Berechtigungssatz **Ausführung** aus der Benutzerrichtlinie.  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  Der folgende Befehl entfernt `Mypset` auf der Ebene der Benutzerrichtlinie.  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  Der folgende Befehl zeigt alle Codegruppen der Computerrichtlinie an, denen `myassembly` angehört.  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  Der folgende Befehl zeigt alle Codegruppen der Computerrichtlinie, der Organisationsrichtlinie und der angegebenen benutzerdefinierten Benutzerrichtlinie an, denen `myassembly` angehört.  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  Der folgende Befehl berechnet die Berechtigungen für `testassembly` anhand der Ebene der Computer- und der Benutzerrichtlinie.  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Extras](../../../docs/framework/tools/index.md)  
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Extras](index.md)  
+ [Eingabeaufforderungen](developer-command-prompt-for-vs.md)
