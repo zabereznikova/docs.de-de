@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838233"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086387"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Verwenden von Visual Studio-Tools für Docker (Visual Studio unter Windows)
 
@@ -76,12 +76,15 @@ Abbildung 4-30: Optionen für Docker Tools
 
 In der folgende Tabelle können Sie entscheiden, wie Sie diese Optionen festlegen können.
 
-| name | Standardeinstellung | Beschreibung |
-| -----|:---------------:| ----------- |
-| Ziehen Sie erforderlichen Docker-Images automatisch beim Laden von Projekten | Ein | Zur Steigerung der Leistung beim Laden von Projekten wird Visual Studio einen Docker Pull-Vorgang im Hintergrund starten, damit das Bild, wenn Sie bereit zum Ausführen des Codes sind, bereits heruntergeladen wurde oder gerade heruntergeladen werden. Wenn Sie nur Projekte laden und Durchsuchen von Code, können Sie diese deaktivieren, um zu vermeiden, Herunterladen von containerimages, die Sie nicht benötigen. |
-| Container im Hintergrund automatisch starten | Ein | Erneut zur Steigerung der Leistung Visual Studio erstellt einen Container mit volumebereitstellungen bereit für die beim Erstellen und Ausführen Ihrer Container. Wenn Sie möchten steuern, wenn Ihr Container erstellt wird, deaktivieren Sie diese Option aus. |
-| Kill Lösung Container schließen automatisch | Ein | Deaktivieren Sie diese Option, wenn Sie Container für Ihre Lösung, um anzugeben, dass nach dem Schließen der Projektmappe oder das Schließen von Visual Studio ausführen möchten. |
-| Fordert nicht zur vertrauenden Localhost-SSL-Zertifikat | Aus | Visual Studio weiterhin für neue Projekte aufgefordert werden, auch auf, nachdem das SSL-Zertifikat für einen früheren Projekt als vertrauenswürdig eingestuft wurde. Sie können festlegen, dass dieses Kontrollkästchen, um zu vermeiden, die Eingabeaufforderung abrufen, wenn Sie andere Projekte öffnen. |
+| name | Standardeinstellung | Gilt für | Beschreibung |
+| -----|:---------------:|:----------:| ----------- |
+| Ziehen Sie erforderlichen Docker-Images automatisch beim Laden von Projekten | Ein | Docker Compose | Zur Steigerung der Leistung beim Laden von Projekten wird Visual Studio einen Docker Pull-Vorgang im Hintergrund starten, damit das Bild, wenn Sie bereit zum Ausführen des Codes sind, bereits heruntergeladen wurde oder gerade heruntergeladen werden. Wenn Sie nur Projekte laden und Durchsuchen von Code, können Sie diese deaktivieren, um zu vermeiden, Herunterladen von containerimages, die Sie nicht benötigen. |
+| Container im Hintergrund automatisch starten | Ein | Docker Compose | Erneut zur Steigerung der Leistung Visual Studio erstellt einen Container mit volumebereitstellungen bereit für die beim Erstellen und Ausführen Ihrer Container. Wenn Sie möchten steuern, wenn Ihr Container erstellt wird, deaktivieren Sie diese Option aus. |
+| Kill Lösung Container schließen automatisch | Ein | Docker Compose | Deaktivieren Sie diese Option, wenn Sie Container für Ihre Lösung, um anzugeben, dass nach dem Schließen der Projektmappe oder das Schließen von Visual Studio ausführen möchten. |
+| Fordert nicht zur vertrauenden Localhost-SSL-Zertifikat | Aus | ASP.NET Core 2.1-Projekten | Wenn die Localhost-SSL-Zertifikat nicht vertrauenswürdig ist, wird ein Visual Studio aufgefordert, jedes Mal, wenn Sie das Projekt auszuführen, wenn dieses Kontrollkästchen aktiviert ist. |
+
+> [!WARNING]
+> Wenn die Localhost-SSL-Zertifikat nicht vertrauenswürdig ist, und Sie das Kontrollkästchen zum Unterdrücken der eingabeaufforderungen, können der HTTPS-webanforderungen zur Laufzeit in Ihrer app oder Ihres Diensts fehlschlagen. In diesem Fall deaktivieren Sie die **keine Aufforderung** aktiviert, führen Sie das Projekt, und vertrauen an der Eingabeaufforderung angeben.
 
 **Weitere Informationen:** finden Sie weitere Informationen zu den Dienste-Implementierung und Verwendung von Visual Studio-Tools für Docker, in den folgenden Artikeln:
 
