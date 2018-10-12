@@ -1,13 +1,13 @@
 ---
 title: Asynchrone Programmierung
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504974"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123656"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -23,15 +23,16 @@ In diesem Thema erläutert die Unterstützung für asynchrone Programmierung in 
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  Diese Funktion ist weiterhin in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] enthalten.  
-  
- Ab [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] muss für diese Methoden nicht mehr `Asynchronous Processing=true` in der Verbindungszeichenfolge angegeben werden.  
+
+> [!TIP]
+> Ab der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], diese älteren Methoden nicht mehr benötigen `Asynchronous Processing=true` in der Verbindungszeichenfolge.  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Funktionen für asynchrone Programmierung, die in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] hinzugefügt wurden  
  Die neue Funktion für asynchrone Programmierung bietet eine einfache Möglichkeit, Code asynchron ausführen.  
   
  Weitere Informationen zu der in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] eingeführten Funktion für asynchrone Programmierung finden Sie unter:  
   
-- [Asynchrone Programmierung in c#](../../../csharp/async.md)
+- [Asynchrone Programmierung in C#](../../../csharp/async.md)
 
 - [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -43,7 +44,7 @@ In diesem Thema erläutert die Unterstützung für asynchrone Programmierung in 
   
  Sie können nun Aufrufe in asynchrone Methoden ohne Rückrufe ausführen, und ohne Code auf mehrere Methoden oder Lambda-Ausdrücke zu verteilen.  
   
- Der `async`-Modifizierer gibt an, dass eine Methode asynchron ist. Wenn eine `async`-Methode aufgerufen wird, wird ein Task zurückgegeben. Wenn die `await` -Operator auf eine Aufgabe angewendet wird, die aktuelle Methode sofort beendet. Nach Beendigung der Aufgabe wird die Ausführung in derselben Methode fortgesetzt.
+ Der `async`-Modifizierer gibt an, dass eine Methode asynchron ist. Wenn eine `async`-Methode aufgerufen wird, wird eine Aufgabe zurückgegeben. Wenn die `await` -Operator auf eine Aufgabe angewendet wird, die aktuelle Methode sofort beendet. Nach Beendigung der Aufgabe wird die Ausführung in derselben Methode fortgesetzt.
   
 > [!WARNING]
 >  Asynchrone Aufrufe werden nicht unterstützt, wenn eine Anwendung auch das `Context Connection`-Schlüsselwort für Verbindungszeichenfolgen verwendet.  
@@ -87,6 +88,9 @@ In diesem Thema erläutert die Unterstützung für asynchrone Programmierung in 
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  Weitere asynchrone Member wurden zur Unterstützung hinzugefügt [SqlClient Streaming unterstützen](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+
+> [!TIP]
+> Die neuen asynchronen Methoden erfordern keine `Asynchronous Processing=true` in der Verbindungszeichenfolge.  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>„Synchron-zu-Asynchron-Verbindung“ geöffnet  
  Sie können eine vorhandene Anwendung für die Verwendung der neuen asynchronen Funktion aktualisieren. Angenommen, eine Anwendung verfügt über einen synchronen Verbindungsalgorithmus und blockiert den Benutzeroberflächenthread bei jeder Verbindung mit der Datenbank. Außerdem ruft die Anwendung, sobald sie verbunden ist, eine gespeicherte Prozedur auf, die anderen Benutzern den gerade angemeldeten Benutzer signalisiert.  

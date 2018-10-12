@@ -2,15 +2,15 @@
 title: Hilfeseite zum WCF-Web-HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195991"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121206"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Hilfeseite zum WCF-Web-HTTP-Dienst
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Klicken Sie bei-Benutzer an einen WCF-WEB-HTTP-Dienst durchsucht und fügt "/ Help" an das Ende der URL, z. B. http://localhost:8000/Customers/Help, einer Hilfeseite ein, wie die folgende angezeigt wird.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Klicken Sie bei-Benutzer an einen WCF-WEB-HTTP-Dienst durchsucht und fügt "/ Help" an das Ende der URL, z. B. `http://localhost:8000/Customers/Help`, einer Hilfeseite ein, wie die folgende angezeigt wird.  
   
  ![WCF-REST-Hilfeseite](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   

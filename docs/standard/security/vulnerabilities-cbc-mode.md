@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie erkennen und Minimieren von Sicherheitsrisike
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840522"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123643"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zeitliche Steuerung Sicherheitsrisiken CBC-Modus symmetrische Entschlüsselung mithilfe von Abständen
 
@@ -65,7 +65,7 @@ In der Vergangenheit gab es Konsens, die es wichtig ist, Verschlüsselung und wi
 
 Eine Klasse von Sicherheitslücken bekannt als "Auffüllung von Oracle-Angriffen" bekanntermaßen sich 10 Jahre lang vorhanden sind. Diese Sicherheitsrisiken Angreifer ein zum Entschlüsseln von Daten, die nicht mehr als 4096 versuchen pro Block von Daten mithilfe von symmetrischer Blöcke Algorithmen, wie z. B. AES und 3DES verschlüsselt. Stellen Sie diese Sicherheitsrisiken verwenden die Tatsache, die eine Blockierung Verschlüsselungen werden am häufigsten verwendet, mit überprüfbare Auffüllung Daten am Ende. Es wurde gefunden, wenn ein Angreifer verschlüsselten Text manipulieren und finden Sie heraus, ob die Manipulation einen Fehler im Format der Abstand am Ende verursacht, der Angreifer die Daten entschlüsselt werden kann.
 
-Praktische Angriffe zunächst basieren auf Diensten, die verschiedenen Fehlercodes, je nachdem ob Auffüllung gültig sind, beispielsweise das Sicherheitsrisiko ASP.NET war zurückgibt [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Allerdings ist der Auffassung Microsoft jetzt, dass es sehr praktisch, führen Sie ähnliche Angriffe. hierfür wird nur die Unterschiede beim Timing zwischen der Verarbeitung von gültigen und ungültigen Auffüllung handelt.
+Praktische Angriffe zunächst basieren auf Diensten, die verschiedenen Fehlercodes, je nachdem ob Auffüllung gültig sind, beispielsweise das Sicherheitsrisiko ASP.NET war zurückgibt [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Allerdings ist der Auffassung Microsoft jetzt, dass es sehr praktisch, führen Sie ähnliche Angriffe. hierfür wird nur die Unterschiede beim Timing zwischen der Verarbeitung von gültigen und ungültigen Auffüllung handelt.
 
 Vorausgesetzt, dass das Verschlüsselungsschema eine Signatur setzt und, die die Überprüfung der Signatur mit einer festen Runtime für eine bestimmte Länge der Daten (unabhängig von der der Inhalt) ausgeführt wird, kann die Integrität der Daten überprüft werden, alle Informationen zu verlassen, ohne ein Angreifer über eine [Seite Kanal](https://en.wikipedia.org/wiki/Side-channel_attack). Da die integritätsprüfung von manipulierten Nachrichten ablehnt, wird die Auffüllung Oracle Bedrohung verringert.
 

@@ -4,18 +4,18 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586037"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123227"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
 Ein primitiver Typ, der Container ist Unveränderlichkeit. Im Vergleich zu einem virtuellen Computer keine Container als häufiger eintreten nicht mehr angezeigt. Ein virtuellen Computer möglicherweise in verschiedenen Formen von inaktiver Prozesse, überladene CPU oder einen vollständigen oder fehlerhaften Datenträger. Noch wir erwarten, dass des virtuelle Computers verfügbar sein und RAID-Laufwerke sind in aller Munde, um sicherzustellen, dass Laufwerksfehlern Daten zu verwalten.
 
-Allerdings sind Container vorstellen, Prozesse Instanzen sein. Ein Prozess verwalten nicht permanenten Status. Auch wenn ein Container für den lokalen Speicher schreiben kann, wäre vorausgesetzt, dass diese Instanz auf unbestimmte Zeit vorhanden ist gleichwertig, vorausgesetzt, dass eine einzelnen Kopie Arbeitsspeicher dauerhaft ist. Sie sollten davon ausgehen, dass der Container, z.B. Prozesse, dupliziert werden, wird abgebrochen, oder, wenn mit einem containerorchestrator verwaltet werden, sie verschoben werden können.
+Allerdings sind Container vorstellen, Prozesse Instanzen sein. Ein Prozess verwalten nicht permanenten Status. Auch wenn ein Container für den lokalen Speicher schreiben kann, wäre vorausgesetzt, dass die Instanz auf unbestimmte Zeit vorhanden ist gleichwertig, vorausgesetzt, dass eine einzelnen Kopie Arbeitsspeicher dauerhaft ist. Sie sollten davon ausgehen, dass der Container, z.B. Prozesse, dupliziert werden, wird abgebrochen, oder, wenn mit einem containerorchestrator verwaltet werden, sie verschoben werden können.
 
 Docker verwendet die Funktion-ein *Dateisystem überlagern* einen Kopie-bei-Schreibvorgang-Prozess zu implementieren, die alle speichert Informationen auf dem Stammdateisystem der einen Container im Vergleich zum ursprünglichen Image auf dem es basiert aktualisiert. Diese Änderungen gehen verloren, wenn der Container anschließend aus dem System gelöscht wird. Ein Container, muss daher nicht beständigen Speicher benötigen standardmäßig. Obwohl es möglich, den Zustand eines Containers zu speichern, wäre in Konflikt mit dem Prinzip der Container-Architektur Entwerfen eines Systems Umgehung dieses Problems.
 

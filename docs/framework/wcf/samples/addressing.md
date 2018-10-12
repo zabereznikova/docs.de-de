@@ -2,12 +2,12 @@
 title: Adressierung
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468364"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123201"
 ---
 # <a name="addressing"></a>Adressierung
 Im Beispiel für die Adressierung werden verschiedene Aspekte und Funktionen von Endpunktadressen veranschaulicht. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). In diesem Beispiel ist der Dienst selbst gehostet. Sowohl der Dienst als auch der Client sind Konsolenanwendungen. Der Dienst definiert mehrere Endpunkte mithilfe einer Kombination aus relativen und absoluten Endpunktadressen.  
@@ -40,7 +40,7 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Funktionen von
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- In diesem Fall ist die relative Adresse leer (""); folglich entspricht die Endpunktadresse der Basisadresse. Die tatsächliche Endpunktadresse lautet http://localhost:8000/servicemodelsamples/service.  
+ In diesem Fall ist die relative Adresse leer (""); folglich entspricht die Endpunktadresse der Basisadresse. Die tatsächliche Endpunktadresse lautet `http://localhost:8000/servicemodelsamples/service`.
   
  Die zweite Endpunktdefinition gibt ebenfalls eine relative Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.  
   
@@ -53,7 +53,7 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Funktionen von
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Die relative Adresse "test" ist an die Basisadresse angefügt. Die tatsächliche Endpunktadresse lautet http://localhost:8000/servicemodelsamples/service/test.  
+ Die relative Adresse "test" ist an die Basisadresse angefügt. Die tatsächliche Endpunktadresse lautet `http://localhost:8000/servicemodelsamples/service/test`.
   
  Die dritte Endpunktdefinition gibt eine absolute Adresse an, wie in der folgenden Beispielkonfiguration dargestellt.  
   
@@ -63,9 +63,9 @@ Im Beispiel für die Adressierung werden verschiedene Aspekte und Funktionen von
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse lautet http://localhost:8001/hello/servicemodelsamples.  
+ Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse lautet `http://localhost:8001/hello/servicemodelsamples`.
   
- Die vierte Endpunktadresse gibt eine absolute Adresse und einen anderen Transport an, nämlich TCP. Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse lautet net.tcp://localhost:9000/servicemodelsamples/service.  
+ Die vierte Endpunktadresse gibt eine absolute Adresse und einen anderen Transport an, nämlich TCP. Die Basisadresse spielt bei der Adresse keine Rolle. Die tatsächliche Endpunktadresse lautet `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

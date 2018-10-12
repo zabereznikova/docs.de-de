@@ -2,43 +2,60 @@
 title: '&lt;states&gt; von WCF, &lt;workflowInstanceQuery&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: ef3d8d05dad684b07ee527dbd34ae6269ae57657
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a6c54f0903f30b5a7c3147cf4b874516a766c2b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749487"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121943"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>&lt;states&gt; von WCF, &lt;workflowInstanceQuery&gt;
+
 Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.  
   
- Weitere Informationen zu nachverfolgungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel>  
-\<Nachverfolgen von >  
+\<system.serviceModel > \<tracking >  
+\<Profile >  
 \<trackingProfile>  
 \<Workflow >  
 \<workflowInstanceQueries>  
 \<WorkflowInstanceQuery >  
-\<Zustände >  
+\<Status >  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml
-<tracking>   <trackingProfile name="Name">       <workflow>          <workflowInstanceQueries>             <workflowInstanceQuery>                <states>                   <state name="Name"/>                </states>            </workflowInstanceQuery>         </workflowInstanceQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <workflowInstanceQueries>
+          <workflowInstanceQuery>
+            <states>
+              <state name="Name"/>
+            </states>
+          </workflowInstanceQuery>
+        </workflowInstanceQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
+</tracking>
 ```
   
-## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+## <a name="attributes-and-elements"></a>Attribute und Elemente
+
+In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+
+Keine  
   
-### <a name="child-elements"></a>Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Zustände >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Ein abonnierter Zustand der verfolgten Workflowinstanz, wenn der Nachverfolgungsdatensatz erstellt wird.|  
+|[\<Status >](state-of-wcf-workflowinstancequery.md)|Ein abonnierter Zustand der verfolgten Workflowinstanz, wenn der Nachverfolgungsdatensatz erstellt wird.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -46,10 +63,11 @@ Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonni
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Eine Abfrage, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgt, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.|  
   
-## <a name="remarks"></a>Hinweise  
- Die zurückgegebenen Datensätze werden entsprechend den Zuständen in dieser Auflistung gefiltert.  
+## <a name="remarks"></a>Hinweise
+
+Die zurückgegebenen Datensätze werden entsprechend den Zuständen in dieser Auflistung gefiltert.  
   
- Eine Beschreibung der möglichen Zustandswerte finden Sie in der folgenden Tabelle.  
+Eine Beschreibung der möglichen Zustandswerte finden Sie in der folgenden Tabelle.  
   
 |Zustand|Beschreibung|  
 |-----------|-----------------|  
@@ -67,8 +85,9 @@ Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonni
 |Terminated|Die Workflowinstanz wurde beendet.|  
 |Unsuspended|Die Workflowinstanz wurde fortgesetzt.|  
   
-## <a name="example"></a>Beispiel  
- In der folgende Konfiguration werden mithilfe einer Abfrage Workflownachverfolgungsdatensätze auf Instanzebene für den `Started`-Instanzzustand abonniert.  
+## <a name="example"></a>Beispiel
+
+In der folgende Konfiguration werden mithilfe einer Abfrage Workflownachverfolgungsdatensätze auf Instanzebene für den `Started`-Instanzzustand abonniert.  
   
 ```xml  
 <workflowInstanceQueries>  
@@ -81,8 +100,9 @@ Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonni
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

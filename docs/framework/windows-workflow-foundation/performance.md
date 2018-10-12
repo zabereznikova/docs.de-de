@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873692"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123812"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Sogar mit komplexen Workflows mit viel Tiefe und einer hohen Anzahl Aktivitäten sind die Leistungsergebnisse mit anderen, weiter oben in diesem Artikel angezeigten Durchsatzzahlen konsistent.  Der Durchsatz von WF4 ist größer und muss auf einer logarithmischen Skala verglichen werden.
 
 ### <a name="memory"></a>Arbeitsspeicher
- Der Arbeitsspeicheraufwand von Windows Workflow Foundation wird in zwei Hauptbereichen gemessen: Workflowkomplexität und Anzahl von Workflowdefinitionen.  Arbeitsspeichermessungen wurden auf einem Windows 7-64-Bit-PC vorgenommen.  Es gibt viele Möglichkeiten zum Messen der Workingsetgröße wie z. B. das Überwachen von Leistungsindikatoren, Abrufen von Environment.WorkingSet oder verwenden ein Tool wie VMMap verfügbar [VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx). Eine Kombination von Methoden wurde verwendet, um die Ergebnisse aller Tests abzurufen und zu überprüfen.
+ Der Arbeitsspeicheraufwand von Windows Workflow Foundation wird in zwei Hauptbereichen gemessen: Workflowkomplexität und Anzahl von Workflowdefinitionen.  Arbeitsspeichermessungen wurden auf einem Windows 7-64-Bit-PC vorgenommen.  Es gibt viele Möglichkeiten zum Messen der Workingsetgröße wie z. B. das Überwachen von Leistungsindikatoren, Abrufen von Environment.WorkingSet oder verwenden ein Tool wie VMMap verfügbar [VMMap](/sysinternals/downloads/vmmap). Eine Kombination von Methoden wurde verwendet, um die Ergebnisse aller Tests abzurufen und zu überprüfen.
 
 ### <a name="workflow-complexity-test"></a>Workflowkomplexitätstest
  Der Workflowkomplexitätstest misst den Workingsetunterschied auf Grundlage der Komplexität des Workflows.  Zusätzlich zu den komplexen, im vorherigen Abschnitt verwendeten Workflows werden neue Variationen hinzugefügt, die zwei grundlegende Fälle abdecken: ein einzelner Aktivitätsworkflow und eine Sequenz mit 1000 Aktivitäten.  Für diese Tests werden die Workflows initialisiert und zum Abschluss eine Minute lang in einer einzelnen seriellen Schleife ausgeführt.  Jede Testvariation wird dreimal ausgeführt, und die aufgezeichneten Daten sind der Durchschnitt dieser drei Ausführungen.

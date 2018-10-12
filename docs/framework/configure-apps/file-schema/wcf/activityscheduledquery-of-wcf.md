@@ -2,20 +2,22 @@
 title: '&lt;activityScheduledQuery&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: a3c4c8b338921c9d949edd83deb4d6073eb26b55
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087764"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123370"
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>&lt;activityScheduledQuery&gt; von WCF
+
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um eine Aktivität zu verfolgen, deren Ausführung von einer übergeordneten Aktivität geplant wurde. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer die Datensätze der geplanten Aktivität abonnieren kann.  
   
- Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel>  
+\<system.serviceModel>  
 \<Nachverfolgen von >  
+\<Profile >  
 \<trackingProfile>  
 \<Workflow >  
 \<ActivityScheduledQueries >  
@@ -25,38 +27,43 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um eine Aktivitä
   
 ```xml
 <tracking>
-  <trackingProfile name="Name">
-    <workflow>
-      <activityScheduledQueries>
-        <activityScheduledQuery activityName="String"   
-                                childActivityName="String"/>
-      </activityScheduledQueries>
-    </workflow>
-  </trackingProfile>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <activityScheduledQueries>
+          <activityScheduledQuery activityName="String"   
+                                  childActivityName="String"/>
+        </activityScheduledQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
 </tracking> 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+
+In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|activityName|Eine Zeichenfolge, die den Namen der Aktivität angibt, die den Abbruch anfordert.|  
-|childActivityName|Eine Zeichenfolge, die den Namen der untergeordneten Aktivität angibt, für die der Abbruch angefordert wurde.|  
+|`activityName`|Eine Zeichenfolge, die den Namen der Aktivität angibt, die den Abbruch anfordert.|  
+|`childActivityName`|Eine Zeichenfolge, die den Namen der untergeordneten Aktivität angibt, für die der Abbruch angefordert wurde.|  
   
-### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+### <a name="child-elements"></a>Untergeordnete Elemente
+
+Keine
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<ActivityScheduledQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|Eine Abfrage, die verwendet wird, um eine Aktivität zu verfolgen, deren Ausführung von einer übergeordneten Aktivität geplant wurde.|  
+|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|Eine Auflistung von Abfragen, die verwendet werden, um eine Aktivität, die für die Ausführung eingeplant, von einer übergeordneten Aktivität zu verfolgen.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>     
- <xref:System.Activities.Tracking.ActivityScheduledQuery>     
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
+- <xref:System.Activities.Tracking.ActivityScheduledQuery>
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
