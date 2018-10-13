@@ -2,12 +2,12 @@
 title: '&lt;workflow&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: a9c3f8a4910c3cad28ae8b06b24b74782abec037
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7f6e648b98f436074c7fc5c563b4b5879158bcc3
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756968"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308308"
 ---
 # <a name="ltworkflowgt-of-wcf"></a>&lt;workflow&gt; von WCF
 Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit ausgegebenen Nachverfolgungsdatensätzen lauscht und sie entsprechend der Weise verarbeitet, wie er konfiguriert wurde. Dies umfasst das Schreiben in ein bestimmtes Ausgabemedium (z. B. Datei, Konsole, ETW), das Verarbeiten/Aggregieren der Datensätze oder eine beliebige andere Kombination, die erforderlich sein könnte.  
@@ -22,7 +22,13 @@ Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit au
 ## <a name="syntax"></a>Syntax  
   
 ```xml
-   <tracking>    <participants>       <add name="String"            profileName="String"           type="String" />    </participants> </tracking>   
+  <tracking>
+    <participants>
+      <add name="String"
+            profileName="String"
+            type="String" />
+    </participants>
+  </tracking>   
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

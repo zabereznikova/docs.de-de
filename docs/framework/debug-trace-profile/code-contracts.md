@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649212"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308551"
 ---
 # <a name="code-contracts"></a>Codeverträge
 Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Objektinvarianten im Code festzulegen. Vorbedingungen sind Anforderungen, die beim Eingeben einer Methode oder Eigenschaft erfüllt werden müssen. Nachbedingungen beschreiben Erwartungen zu dem Zeitpunkt, zu dem die Methode oder der Eigenschaftencode beendet wird. Objektinvarianten beschreiben den erwarteten Zustand für eine Klasse, die in einem einwandfreien Zustand ist.  
@@ -33,7 +33,7 @@ Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Obje
   
  Alle .NET Framework-Sprachen können umgehend Verträge nutzen. Sie müssen keinen speziellen Parser oder Compiler schreiben. Mit einem Visual Studio-Add-In können Sie die Ebene der auszuführenden Codevertragsanalyse angeben. Durch die Analysen kann überprüft werden, ob die Verträge wohlgeformt sind (Typüberprüfung und Namensauflösung), und es kann eine kompilierte Form der Verträge im Microsoft Intermediate Language(MSIL)-Format erzeugt werden. Die Erstellung von Verträgen in Visual Studio ermöglicht die Nutzung der vom Tool bereitgestellten IntelliSense-Standardfunktionen.  
   
- Die meisten Methoden in der Vertragsklasse werden bedingt kompiliert. Das heißt, dass der Compiler nur dann Aufrufe dieser Methoden ausgibt, wenn Sie mithilfe der `#define`-Direktive ein Sonderzeichen (CONTRACTS_FULL) definieren. CONTRACTS_FULL ermöglicht das Schreiben von Verträgen in den Code ohne Verwendung von `#ifdef`-Direktiven. Sie können unterschiedliche Builds erstellen, von denen einige Verträge enthalten und andere keine Verträge enthalten.  
+ Die meisten Methoden in der Vertragsklasse werden bedingt kompiliert. Das heißt, dass der Compiler nur dann Aufrufe dieser Methoden ausgibt, wenn Sie mithilfe der `#define`-Direktive ein Sonderzeichen (CONTRACTS_FULL) definieren. CONTRACTS_FULL ermöglicht das Schreiben von Verträgen in den Code ohne Verwendung von `#ifdef`-Anweisungen. Sie können unterschiedliche Builds erstellen, von denen einige Verträge enthalten und andere keine Verträge enthalten.  
   
  Tools und detaillierte Anweisungen zur Verwendung von Codeverträgen finden Sie auf der MSDN DevLabs-Website unter [Codeverträge](https://go.microsoft.com/fwlink/?LinkId=152461).  
   
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   Ein prestate-Wert in einer Nachbedingung verweist auf den Wert eines Ausdrucks am Anfang einer Methode oder Eigenschaft. Er verwendet den Ausdruck `Contract.OldValue<T>(e)`, wobei `T` der Typ von `e` ist. Sie können das generische Typargument weglassen, wenn der Compiler den Typ ableiten kann. (Zum Beispiel leitet der C#-Compiler immer den Typ ab, weil er ein Argument erhält.) Es gibt mehrere Einschränkungen in Bezug darauf, was in `e` und in den Kontexten auftreten kann, in denen möglicherweise ein alter Ausdruck angezeigt wird. Ein alter Ausdruck darf keinen anderen alten Ausdruck enthalten. Vor allem muss ein alter Ausdruck auf einen Wert verweisen, der im Vorbedingungszustand der Methode vorhanden war. Es muss sich also um einen Ausdruck handeln, der ausgewertet werden kann, solange die Vorbedingung der Methode `true` ist. Nachfolgend finden Sie mehrere Instanzen dieser Regel.  
   
-    -   Der Wert muss im Vorbedingungszustand der Methode vorhanden sein. Um auf ein Feld in einem Objekt verweisen zu können, muss durch die Vorbedingungen gewährleistet sein, dass das Objekt immer ungleich NULL ist.  
+    -   Der Wert muss im Vorbedingungszustand der Methode vorhanden sein. Um ein Feld in einem Objekt zu verweisen, müssen die Vorbedingungen gewährleistet sein, dass das Objekt immer ungleich Null ist.  
   
     -   Sie können nicht auf den Rückgabewert der Methode in einem alten Ausdruck verweisen:  
   
