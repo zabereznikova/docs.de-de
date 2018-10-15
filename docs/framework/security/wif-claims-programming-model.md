@@ -3,12 +3,12 @@ title: WIF-Claims-Programmiermodell
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197557"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316505"
 ---
 # <a name="wif-claims-programming-model"></a>WIF-Claims-Programmiermodell
 Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden normalerweise die IIdentity- und IPrincipal-Schnittstellen zum Arbeiten mit Identitätsinformationen des Benutzers. Windows Identity Foundation (WIF) wurde in .NET 4.5 integriert, sodass Ansprüche jetzt immer für jeden Prinzipal vorhanden sind, wie in der folgenden Abbildung dargestellt:
@@ -23,7 +23,7 @@ Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden norm
 
 - <xref:System.Security.Claims.Claim.Value%2A> enthält den Wert des Anspruchs und wird als Zeichenfolge dargestellt. Beispielsweise die e-Mail-Adresse als dargestellt werden kann "someone@contoso.com".
 
-- <xref:System.Security.Claims.Claim.ValueType%2A> stellt den Typ des Anspruchswerts dar und ist in der Regel ein URI. Der Zeichenfolgentyp wird z.B. durch `http://www.w3.org/2001/XMLSchema#string` dargestellt. Gemäß dem XML-Schema muss der Werttyp ein QName sein. Der Wert muss im Format `namespace#format` vorhanden sein, um WIF zur Ausgabe eines gültigen QName-Werts zu aktivieren. Ist der Namespace kein klar definierter Namespace, kann die generierte XML-Datei möglicherweise nicht vom Schema überprüft werden, da keine veröffentlichte XSD-Datei für diesen Namespace vorhanden sein wird. Der Standardwert ist `http://www.w3.org/2001/XMLSchema#string`. Informieren Sie sich [ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155) für bekannten Werttypen, die Sie sicher verwenden können.
+- <xref:System.Security.Claims.Claim.ValueType%2A> stellt den Typ des Anspruchswerts dar und ist in der Regel ein URI. Der Zeichenfolgentyp wird z.B. durch `http://www.w3.org/2001/XMLSchema#string` dargestellt. Gemäß dem XML-Schema muss der Werttyp ein QName sein. Der Wert muss im Format `namespace#format` vorhanden sein, um WIF zur Ausgabe eines gültigen QName-Werts zu aktivieren. Ist der Namespace kein klar definierter Namespace, kann die generierte XML-Datei möglicherweise nicht vom Schema überprüft werden, da keine veröffentlichte XSD-Datei für diesen Namespace vorhanden sein wird. Der Standardwert ist `http://www.w3.org/2001/XMLSchema#string`. Weitere Informationen zu bekannten Werttypen, die Sie bedenkenlos einsetzen können, finden Sie unter den [W3C XML-Schema](https://www.w3.org/2001/XMLSchema) Seite.
 
 - <xref:System.Security.Claims.Claim.Issuer%2A> ist der Bezeichner für den Sicherheitstokendienst (STS), der den Anspruch ausgestellt hat. Dies kann als URL des STS dargestellt werden, oder als Name, der den STS darstellt, beispielsweise `https://sts1.contoso.com/sts`.
 

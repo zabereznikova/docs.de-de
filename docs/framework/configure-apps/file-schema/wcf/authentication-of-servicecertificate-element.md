@@ -2,12 +2,12 @@
 title: '&lt;authentication&gt; des &lt;serviceCertificate&gt;-Elements'
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811d54b49d8cd4fddbf196dbb524c5d303805c4f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752545"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316453"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; des &lt;serviceCertificate&gt;-Elements
 Gibt die vom Clientproxy zum Authentifizieren von Dienstzertifikaten verwendeten Einstellungen an, die mittels SSL/TLS-Verhandlung abgerufen werden.  
@@ -38,7 +38,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |customCertificateValidatorType|Zeichenfolge. Ein Typ und eine Assembly, die zum Überprüfen eines benutzerdefinierten Typs verwendet werden.|  
 |certificateValidationMode|Gibt einen der drei für die Überprüfung von Anmeldeinformationen verwendeten Modi an. Ist dies auf `Custom` festgelegt, muss außerdem ein customCertificateValidator zur Verfügung gestellt werden. Die Standardeinstellung ist `ChainTrust`.|  
 |revocationMode|Einer der Modi zum Prüfen auf eine Liste gesperrter Zertifikate. Die Standardeinstellung ist `Online`.|  
-|trustedStoreLocation|Einer der beiden Systemspeicherorte: `LocalMachine` oder `CurrentUser`. Dieser Wert wird verwendet, wenn ein Dienstzertifikat mit dem Client ausgehandelt wird. Validierung gegen das **vertrauenswürdige Personen** am angegebenen Speicherort zu speichern. Die Standardeinstellung ist `CurrentUser`.|  
+|trustedStoreLocation|Einer der beiden Systemspeicherorte: `LocalMachine` oder `CurrentUser`. Dieser Wert wird verwendet, wenn ein Dienstzertifikat mit dem Client ausgehandelt wird. Validierung wird ausgeführt, für die **vertrauenswürdige Personen** am angegebenen Speicherort zu speichern. Die Standardeinstellung ist `CurrentUser`.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator-Attribut  
   
@@ -79,7 +79,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  Das `revocationMode`-Attribut gibt an, wie Zertifikate auf eine Sperre hin überprüft werden. Der Standardwert ist `online`, wodurch angegeben wird, dass Zertifikate automatisch auf eine Sperre hin überprüft werden. Weitere Informationen finden Sie unter [arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="example"></a>Beispiel  
- In folgendem Beispiel werden zwei Aufgaben ausgeführt. Das folgende Beispiel gibt zunächst ein Dienstzertifikat für den Client an, das bei der Kommunikation mit Endpunkten, deren Domänenname www.contoso.com ist, über das HTTP-Protokoll verwendet wird. Danach gibt es den Sperrmodus und den Speicherort für die Authentifizierung an.  
+ In folgendem Beispiel werden zwei Aufgaben ausgeführt. Es gibt zunächst ein Dienstzertifikat für den Client zu verwenden, wenn die Kommunikation mit Endpunkten, deren Domänenname `www.contoso.com` über das HTTP-Protokoll. Danach gibt es den Sperrmodus und den Speicherort für die Authentifizierung an.  
   
 ```xml  
 <serviceCertificate>  
@@ -105,6 +105,6 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Vorgehensweise: Erstellen eines Diensts, der ein benutzerdefiniertes Zertifikatvalidierungssteuerelement verwendet](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [\<Authentifizierung >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
+ [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)  
  [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

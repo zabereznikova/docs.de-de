@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7802a64716f8bde278fe3f8ed8214f6ac01eadbc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839467"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316518"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Deaktivieren Sie&gt; -Element für ConnectionManagement (Netzwerkeinstellungen)
 Löscht der Verbindungsverwaltungsliste an.  
@@ -55,7 +55,7 @@ Löscht der Verbindungsverwaltungsliste an.
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel löscht der Verbindungsverwaltungsliste und fügt dann die neue Verbindung Management-Einträge für den Server www.contoso.com und alle anderen Netzwerkhosts hinzu.  
+ Im folgenden Beispiel löscht der Verbindungsverwaltungsliste und fügt dann die neue Verbindung Management-Einträge für den Server `www.contoso.com` und alle anderen Netzwerkhosts.  
   
 ```xml  
 <configuration>  

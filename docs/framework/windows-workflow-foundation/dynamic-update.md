@@ -2,12 +2,12 @@
 title: Dynamisches Update
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076718"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323122"
 ---
 # <a name="dynamic-update"></a>Dynamisches Update
 Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieses Thema enthält eine Übersicht über die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführte dynamische Updatefunktionalität.  
@@ -24,7 +24,7 @@ Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, 
 4.  [Anwenden der updatezuordnung auf die gewünschten persistenten Workflowinstanzen](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  Beachten Sie, dass die Schritte 1 bis 3, die die Erstellung der Updatezuordnung umfassen, unabhängig davon ausgeführt werden können, ob das Update angewendet wird. Ein häufiges Szenario besteht darin, dass der Workflowentwickler die Updatezuordnung offline erstellt und dass das Update später von einem Administrator angewendet wird.  
+>  Beachten Sie, dass die Schritte 1 bis 3, die die Erstellung der Updatezuordnung umfassen, unabhängig davon ausgeführt werden können, ob das Update angewendet wird. Ein häufiges Szenario, dass der Workflowentwickler die updatezuordnung offline erstellen, und klicken Sie dann ein Administrator das Update zu einem späteren Zeitpunkt angewendet wird.  
   
  Dieses Thema bietet eine Übersicht über den dynamischen Updateprozess, in dem einer persistenten Instanz eines kompilierten XAML-Workflows eine neue Aktivität hinzugefügt wird.  
   

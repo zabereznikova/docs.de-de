@@ -2,12 +2,12 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cbd375652a2051c22e12e12e7650077e56ed2d7d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ddce1053a7494a84d0266c7ad14f6b1937365fa5
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086413"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316427"
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Gibt einen HTTP-Transport zur Übertragung von SOAP-Nachrichten für eine benutzerdefinierte Bindung an.  
@@ -47,7 +47,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |allowCookies|Ein boolescher Wert, der angibt, ob der Client Cookies akzeptiert und bei zukünftigen Anforderungen propagiert. Die Standardeinstellung ist `false`.<br /><br /> Sie können dieses Attribut verwenden, wenn Sie mit ASMX-Webdiensten interagieren, die Cookies verwenden. Auf diese Weise können Sie sicherstellen, dass die vom Server zurückgegebenen Cookies automatisch bei allen zukünftigen Clientanforderungen für diesen Dienst kopiert werden.|  
 |authenticationScheme|Gibt das Protokoll an, mit dem Clientanforderungen authentifiziert werden, die von einem HTTP-Listener verarbeitet werden. Folgende Werte sind gültig:<br /><br /> -Hashwert: Gibt die hashwertauthentifizierung an.<br />– Negotiate: Handelt mit dem Client das Authentifizierungsschema. Wenn sowohl Client als auch Server Kerberos unterstützen, wird dieses Schema verwendet. Andernfalls wird NTLM verwendet.<br />-Ntlm: Gibt die NTLM-Authentifizierung.<br />– Basic: Gibt die Standardauthentifizierung an.<br />– Anonymous: Gibt die anonyme Authentifizierung.<br /><br /> Die Standardeinstellung ist Anonymous. Dieses Attribut ist vom Typ <xref:System.Net.AuthenticationSchemes>. Dieses Attribut kann nur einmal festgelegt werden.|  
 |bypassProxyOnLocal|Ein boolescher Wert, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll. Die Standardeinstellung ist `false`.<br /><br /> Eine lokale Adresse ist eine, die sich im lokalen LAN oder Intranet befindet.<br /><br /> Windows Communication Foundation (WCF) ignoriert immer den Proxy, wenn die Dienstadresse mit beginnt `http://localhost`.<br /><br /> Sie sollten den Hostnamen anstatt localhost verwenden, wenn die Clients bei der Kommunikation mit Diensten auf demselben Computer einen Proxy nutzen sollen.|  
-|hostnameComparisonMode|Gibt den HTTP-Hostnamen-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren. Folgende Werte sind gültig:<br /><br /> -StrongWildcard: ("+") entspricht allen möglichen Hostnamen im Kontext der angegebenen Schemas, Anschlusses und relativen URI.<br />-Genauer: keine Platzhalter<br />-WeakWildcard: ("*") entspricht allen möglichen Hostnamen im Kontext des angegebenen Schemas, Anschlusses und URIS, die nicht explizit zugeordnet wurde oder durch den StrongWildcard-Mechanismus.<br /><br /> Die Standardeinstellung ist StrongWildcard. Dieses Attribut ist vom Typ `System.ServiceModel.HostnameComparisonMode`.|  
+|hostnameComparisonMode|Gibt den HTTP-Hostnamen-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren. Folgende Werte sind gültig:<br /><br /> -StrongWildcard: ("+") entspricht allen möglichen Hostnamen im Kontext der angegebenen Schemas, Anschlusses und relativen URI.<br />-Genauer: keine Platzhalter<br />-WeakWildcard: ("\*") entspricht allen möglichen Hostnamen im Kontext des angegebenen Schemas, Anschlusses und URIS, die nicht explizit zugeordnet wurde oder durch den StrongWildcard-Mechanismus.<br /><br /> Die Standardeinstellung ist StrongWildcard. Dieses Attribut ist vom Typ `System.ServiceModel.HostnameComparisonMode`.|  
 |keepAliveEnabled|Ein boolescher Wert, der angibt, ob eine permanente Verbindung mit der Internetressource hergestellt werden soll.|  
 |maxBufferSize|Eine positive ganze Zahl, die die maximale Puffergröße angibt. Der Standardwert ist 524288.|  
 |proxyAddress|Ein URI, der die Adresse des HTTP-Proxys angibt. Wenn `useSystemWebProxy` `true` ist, muss diese Einstellung `null` lauten. Die Standardeinstellung ist `null`.|  
