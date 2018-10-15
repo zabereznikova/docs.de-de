@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: ef3af4663462ff2bb93622e128e58a3ac039dcf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50cc8fdbf175a7148795078e4d243df21d34a40e
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353210"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308512"
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
-Dieser Konfigurationsabschnitt enthält alle Windows Communication Foundation (WCF)-ServiceModel-Konfigurationselemente.  
+Dieser Konfigurationsabschnitt enthält alle Elemente der Windows Communication Foundation (WCF)-ServiceModel-Konfiguration.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,9 @@ Dieser Konfigurationsabschnitt enthält alle Windows Communication Foundation (W
   <services>  
   </services>
   <standardEndpoints>  
-  </standardEndpoints>  
+  </standardEndpoints>
+  <tracking>
+  </tracking>
 </system.serviceModel>  
 ```  
   
@@ -63,15 +65,16 @@ Dieser Konfigurationsabschnitt enthält alle Windows Communication Foundation (W
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieser Abschnitt enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen. Jeder Eintrag wird durch seinen eindeutigen `name` identifiziert. Dienste verwenden Bindungen, indem sie sie mithilfe des `name` verknüpfen.|  
 |[\<Client >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Dieser Abschnitt enthält eine Liste mit Endpunkten, die ein Client für die Verbindungsherstellung mit einem Dienst verwendet.|  
 |[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|Dieser Abschnitt definiert für WCF und COM-Interop aktivierte COM-Verträge.|  
-|[\<CommonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Dieser Abschnitt kann nur in der Datei machine.config definiert werden. Er definiert zwei untergeordnete Auflistungen mit den Namen `endpointBehaviors` und `serviceBehaviors`.  Jede Auflistung definiert verhaltenselemente durch alle WCF-Endpunkten und Diensten auf dem Computer.  Wenn ein Verhalten in beiden definiert ist `<commonBehaviors>` und `<behaviors>` Abschnitte, die das Verhalten in der \<Verhalten >-Abschnitt Priorität eingeräumt.|  
-|[\<Erweiterungen >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Dieser Abschnitt enthält eine Auflistung von Erweiterungen, mit deren Hilfe der Benutzer benutzerdefinierte Bindungen, Verhalten und andere Aspekte von Erweiterungen erstellen kann.|  
+|[\<CommonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|Dieser Abschnitt kann nur in der Datei machine.config definiert werden. Er definiert zwei untergeordnete Auflistungen mit den Namen `endpointBehaviors` und `serviceBehaviors`.  Jede Auflistung definiert verhaltenselemente für alle WCF-Endpunkten und-Dienste auf dem Computer bzw.  Wenn ein Verhalten in beiden definiert ist `<commonBehaviors>` und `<behaviors>` Abschnitten, die das Verhalten in der \<Behaviors >-Abschnitt Priorität eingeräumt.|  
 |[\<Diagnose >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|Dieser Abschnitt enthält Einstellungen für die Diagnosefunktionen von WCF. Der Benutzer kann Ablaufverfolgung, Leistungsindikatoren und den WMI-Anbieter aktivieren/deaktivieren und benutzerdefinierte Meldungsfilter hinzufügen.|  
+|[\<Erweiterungen >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|Dieser Abschnitt enthält eine Auflistung von Erweiterungen, mit deren Hilfe der Benutzer benutzerdefinierte Bindungen, Verhalten und andere Aspekte von Erweiterungen erstellen kann.|  
 |[\<ProtocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Dieser Abschnitt definiert einen Satz von standardprotokollzuordnungen zwischen transportprotokollschemas (z. B. http, net.tcp, net.pipe usw.) und WCF-Bindungen.|  
-|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|In diesem Abschnitt definiert einen Satz von routingfiltern, die den Typ der Windows Communication Foundation (WCF) zu bestimmen<xref:System.ServiceModel.Dispatcher.MessageFilter> verwendet werden, bei der Auswertung eingehender Nachrichten sowie das routing Tabellen, die definieren, die Zielendpunkte zum Senden von Nachrichten, wenn ein Filter übereinstimmt.|  
+|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|In diesem Abschnitt definiert einen Satz von routingfiltern, die den Typ der Windows Communication Foundation (WCF) bestimmen<xref:System.ServiceModel.Dispatcher.MessageFilter> verwendet werden, bei der Auswertung eingehender Nachrichten sowie das routing, Tabellen, die definieren, die Zielendpunkte zum Senden von Nachrichten, wenn ein Filter übereinstimmt.|  
 |[\<ServiceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Dieser Abschnitt definiert den Typ, der von der Diensthostumgebung für einen besonderen Transport instanziiert wird. Wenn dieser Abschnitt leer ist, wird der Standardtyp verwendet.|  
 |[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Der Abschnitt enthält eine Auflistung von Diensten. Für jeden in der Assembly definierten Dienst enthält dieses Element ein `service`-Element mit den Einstellungen für den Dienst.|  
-|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Dieser Abschnitt definiert eine Auflistung von Standardendpunkten, bei denen es sich um wiederverwendbare vorkonfigurierte Endpunkte handelt. Bei einem Standardendpunkt werden eines oder mehrere der Attribute für Adresse, Bindung und Vertrag vorab festgelegt. Zum Beispiel ist der Vertrag im Ermittlungsendpunkt ein fester Wert. Sie können Standardendpunkte auch verwenden, um Dienstendpunkte mit neuen Eigenschaften zu erweitern, ähnlich wie bei der Definition benutzerdefinierter Bindungen.|  
-  
+|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Dieser Abschnitt definiert eine Auflistung von Standardendpunkten, bei denen es sich um wiederverwendbare vorkonfigurierte Endpunkte handelt. Bei einem Standardendpunkt werden eines oder mehrere der Attribute für Adresse, Bindung und Vertrag vorab festgelegt. Zum Beispiel ist der Vertrag im Ermittlungsendpunkt ein fester Wert. Sie können Standardendpunkte auch verwenden, um Dienstendpunkte mit neuen Eigenschaften zu erweitern, ähnlich wie bei der Definition benutzerdefinierter Bindungen.|
+|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|Dieser Abschnitt definiert die überwachungseinstellungen für einen Workflowdienst.|
+
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  

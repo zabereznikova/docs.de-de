@@ -1,17 +1,16 @@
-# .NET Docs
+# <a name="net-docs"></a>.NET-Dokumentation
 
-This repo contains work-in-progress documentation for .NET. To contribute, see the [Contributing Guide](https://docs.microsoft.com/de-de/contribute/) and the [issues list](https://github.com/dotnet/docs/issues). 
+Dieses Repository enthält die konzeptionelle Dokumentation zu .NET. Die [.NET-Dokumentation](https://docs.microsoft.com/dotnet) besteht aus diesem Repository sowie den folgenden Repositorys:
 
-We welcome contributions to help us improve and complete the .NET docs. Feel free to copy/paste documentation from [.NET Framework docs](https://msdn.microsoft.com/library/w0x726c2.aspx) as a starting point for .NET docs. We anticipate that [Xamarin](http://developer.xamarin.com/api/root/classlib/), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) and [Unity](http://docs.unity3d.com/Manual/index.html) will also use this documentation.
+- [Codebeispiele und -ausschnitte](https://github.com/dotnet/samples)
+- [API-Referenz](https://github.com/dotnet/dotnet-api-docs)
+- [Referenz: .NET Compiler Platform-SDK](https://github.com/dotnet/roslyn-api-docs)
 
-This project has adopted the code of conduct defined by the Contributor Covenant
-to clarify expected behavior in our community.
-For more information, see the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct).
+Issues und Aufgaben für diese drei Repositorys werden hier verfolgt. Diese Ressourcen werden von sehr vielen Benutzern der Community verwendet. Wir sind bemüht, Issues immer zeitnah zu bearbeiten. In unserer [Issuerichtlinie](issues-policy.md) erfahren Sie mehr zu unserer Vorgehensweise beim Klassifizieren und Beheben von Issues.
 
-Samples Build Status
-===
+Wir freuen uns immer über Beiträge, die die .NET-Dokumentation verbessern und vervollständigen. Wenn Sie einen Beitrag leisten möchten, sehen Sie sich [Projects for .NET Community Contributors (Projekte für .NET-Communitymitwirkende)](https://github.com/dotnet/docs/projects/35) an, um sich inspirieren zu lassen. Im [Leitfaden für Mitwirkende](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) finden Sie Anweisungen zu bewährten Vorgehensweisen. Sehen Sie sich alternativ die [Liste der Issues](https://github.com/dotnet/docs/issues) an, um für Sie interessante Aufgaben zu finden.
 
-| Samples | Ubuntu 16.04<br/>_.NET Core 1.1.0_ | Ubuntu 16.04<br/>_.NET Core 2.0.0-preview_  |
-| ------------- |------------| -----|
-| `/samples/core` | ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/56/badge)| ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/57/badge) |
-|`/samples/csharp`| ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/54/badge)| ![](https://constructors.visualstudio.com/_apis/public/build/definitions/3186585f-1677-4c9e-a8b2-baac48a4032a/55/badge) |
+Wahrscheinlich wird diese Dokumentation auch für [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) und [Unity](http://docs.unity3d.com/Manual/index.html) verwendet.
+
+Dieses Projekt verwendet die Verhaltensregeln der Mitwirkendenvereinbarung, in denen das gewünschte Verhalten in der Community festgehalten wird.
+Weitere Informationen finden Sie unter [.NET Foundation Code of Conduct (.NET Foundation-Verhaltensregeln)](https://dotnetfoundation.org/code-of-conduct).
