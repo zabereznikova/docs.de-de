@@ -129,7 +129,7 @@
     },
     {
       "path_to_root": "_vblang",
-      "url": "https://github.com/dotnet/vblang.de-de",
+      "url": "https://github.com/dotnet/vblang.de-de", 
       "branch": "master"
     },
     {
