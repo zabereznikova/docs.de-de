@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Test
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195620"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47232858"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -121,7 +121,7 @@ Wie bereits erwähnt: Wenn Sie Multicontaineranwendungen testen, müssen alle Mi
 
 Es gibt einige Ansätze, die Sie verwenden können. In der Datei „Docker-compose.yml“, die Sie verwenden, um die Anwendung (oder ähnliche wie Docker-compose.ci.build.yml) bereitzustellen, können Sie auf Projektmappenebene den Eingangspunkt erweitern, um [dotnet test](../../../core/tools/dotnet-test.md) zu verwenden. Sie können auch eine andere Compose-Datei verwenden, die Ihre Tests im Image Ihrer Zielgruppe ausführen würde. Durch Verwendung einer anderen Compose-Datei für Integrationstests, die Ihre Microservices und Datenbanken für Container enthält, können Sie sicherstellen, dass die verwandten Daten vor dem Ausführen der Tests immer auf den ursprünglichen Zustand zurückgesetzt werden.
 
-Sobald die Compose-Anwendung ausgeführt wird, können Sie Haltepunkte und Ausnahmen nutzen, wenn Sie Visual Studio ausführen. Oder Sie können die Integrationstests automatisch in der CI-Pipeline in Visual Studio Team Services oder in jedem anderen CI/CD-System ausführen, das Docker-Container unterstützt.
+Sobald die Compose-Anwendung ausgeführt wird, können Sie Haltepunkte und Ausnahmen nutzen, wenn Sie Visual Studio ausführen. Alternativ können Sie die Integrationstests automatisch in der CI-Pipeline in Azure DevOps Services oder in jedem anderen CI/CD-System ausführen, das Docker-Container unterstützt.
 
 >[!div class="step-by-step"]
 [Zurück](subscribe-events.md)

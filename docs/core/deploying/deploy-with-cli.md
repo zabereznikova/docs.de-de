@@ -3,13 +3,16 @@ title: Bereitstellung der .NET Core-App mit CLI-Tools
 description: Erfahren Sie mehr zur .NET Core-App-Bereitstellung mit CLI-Tools
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855021"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208249"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
 
@@ -34,13 +37,14 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
 
 1. Erstellen eines Projekts
 
-   Geben Sie über die Befehlszeile [dotnet new console](../tools/dotnet-new.md) ein, um ein neues C#-Konsolenprojekt in diesem Verzeichnis zu erstellen.
+   Geben Sie [dotnet new console](../tools/dotnet-new.md) über die Befehlszeile ein, um ein neues C#-Konsolenprojekt zu erstellen. Geben Sie alternativ [dotnet new console -lang vb](../tools/dotnet-new.md) ein, um ein neues Visual Basic-Konsolenprojekt in diesem Verzeichnis zu erstellen.
 
-1. Überprüfen Sie den Quellcode der Anwendung.
+1. Fügen Sie den Quellcode der Anwendung hinzu.
 
-   Öffnen Sie die *Program.cs*-Datei in Ihrem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
+   Öffnen Sie die Datei *Program.cs* oder *Program.vb* in Ihrem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Aktualisieren Sie die Abhängigkeiten und Tools des Projekts.
 
@@ -55,7 +59,7 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
    Nachdem Sie das Programm debuggt und getestet haben, erstellen Sie die Bereitstellung, indem Sie folgenden Befehl verwenden:
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung. Die resultierenden Dateien werden in ein Verzeichnis namens *publish* platziert, das sich in einem Unterverzeichnis des *bin*-Verzeichnisses Ihres Projekts befindet.
 
@@ -101,8 +105,8 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Öffnen Sie die *Program.cs*-Datei in Ihrem Editor, und ersetzen Sie den automatisch generierten Code durch den folgenden Code. Der Benutzer wird zur Texteingabe aufgefordert, und die einzelnen Wörter, die vom Benutzer eingegeben wurden, werden angezeigt. Der reguläre Ausdruck `\w+` wird verwendet, um Wörter im Eingabetext zu trennen.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. Definieren Sie die Zielplattformen für Ihre App.
 
    Erstellen Sie das Tag `<RuntimeIdentifiers>` im Abschnitt `<PropertyGroup>` Ihrer Datei *CSPROJ*, der die Plattformen Ihrer Anwendungsziele definiert und die Runtime-ID für jede Zielplattform angibt. Beachten Sie, dass Sie auch ein Semikolon hinzufügen müssen, um die RIDs trennen. Sie finden eine RID-Liste im [RID-Katalog](../rid-catalog.md).
@@ -121,6 +125,14 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
 
    Führen Sie den Befehl [dotnet restore](../tools/dotnet-restore.md) aus ([siehe Hinweis](#dotnet-restore-note)), um die im Projekt angegebenen Abhängigkeiten wiederherzustellen.
 
+1. Bestimmen Sie, ob Sie den invarianten Globalisierungsmodus verwenden möchten.
+
+   Insbesondere, wenn Ihre Anwendung für Linux konzipiert ist, können Sie die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den [invarianten Globalisierungsmodus](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) verwenden. Der invariante Globalisierungsmodus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können.
+
+   Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf Ihr Projekt (nicht auf die Projektmappe), und klicken Sie auf **SCD.csproj bearbeiten** oder **SCD.vbproj bearbeiten**. Fügen Sie der Datei dann die folgenden hervorgehobenen Zeilen hinzu:
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. Erstellen Sie ein Debugbuild Ihrer App.
 
    Verwenden Sie den Befehl [dotnet build](../tools/dotnet-build.md) aus der Befehlszeile.
@@ -134,7 +146,7 @@ Das Bereitstellen einer eigenständigen Bereitstellung ohne Abhängigkeiten von 
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens *publish* platziert, das sich in einem Unterverzeichnis des *\bin\Release\netcoreapp1.1\<runtime_identifier>*-Unterverzeichnis Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
+   Dies erstellt eine Releaseversion (anstatt einer Debugversion) Ihrer Anwendung für jede Zielplattform. Die resultierenden Dateien werden in ein Unterverzeichnis namens *publish* platziert, das sich in einem Unterverzeichnis des *.\bin\Release\netcoreapp2.1\<runtime_identifier>*-Unterverzeichnisses Ihres Projekts befindet. Beachten Sie, dass jedes Unterverzeichnis den vollständigen Dateisatz enthält (Dateien Ihrer Anwendung und alle .NET Core-Dateien), der zum Starten Ihrer Anwendung erforderlich ist.
 
 Der Veröffentlichungsprozess gibt zusammen mit den Dateien Ihrer Anwendung eine Programmdatenbankdatei (.pdb) aus, die Debuginformationen über Ihre Anwendung enthält. Die Datei ist vornehmlich für das Debuggen von Ausnahmen nützlich. Sie können sich auch dazu entschließen, sie nicht mit den Dateien Ihrer Anwendung zu packen. Jedoch sollten Sie sie für den Fall speichern, dass Sie das Releasebuild Ihrer App debuggen möchten.
 
@@ -146,7 +158,7 @@ Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ Es folgt die vollständige *CSPROJ*-Datei dieses Projekts:
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
