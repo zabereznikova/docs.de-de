@@ -2,15 +2,15 @@
 title: Verwenden von WorkflowInvoker und WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
-ms.openlocfilehash: 6cbfca14eddeb82fc2d88b70703cae0fe59d63ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc315013ce50539eb4b72d26848a99164bb6b2d0
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519625"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347980"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Verwenden von WorkflowInvoker und WorkflowApplication
-Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflows. <xref:System.Activities.WorkflowInvoker> stellt eine einfache Möglichkeit zum Aufrufen eines Workflows bereit, so als handelte es sich um einen Methodenaufruf, und kann nur für Workflows verwendet werden, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, Ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. <xref:System.ServiceModel.Activities.WorkflowServiceHost> umfasst die Unterstützung von Messagingaktivitäten und wird hauptsächlich in Verbindung mit Workflowdiensten verwendet. In diesem Thema wird das Workflowhosting mit <xref:System.Activities.WorkflowInvoker> und <xref:System.Activities.WorkflowApplication> erläutert. Weitere Informationen zum Hosten von Workflows mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>, finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md) und [Hosting Übersicht über Workflowdienste](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
+Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflows. <xref:System.Activities.WorkflowInvoker> stellt eine einfache Möglichkeit zum Aufrufen eines Workflows bereit, so als handelte es sich um einen Methodenaufruf, und kann nur für Workflows verwendet werden, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, Ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. <xref:System.ServiceModel.Activities.WorkflowServiceHost> umfasst die Unterstützung von Messagingaktivitäten und wird hauptsächlich in Verbindung mit Workflowdiensten verwendet. In diesem Thema wird das Workflowhosting mit <xref:System.Activities.WorkflowInvoker> und <xref:System.Activities.WorkflowApplication> erläutert. Weitere Informationen zum Hosten von Workflows mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>, finden Sie unter [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md) und [Übersicht über Hosting von Workflowdiensten](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
   
 ## <a name="using-workflowinvoker"></a>Verwenden von WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker> bietet ein Modell zum Ausführen eines Workflows, als ob es sich dabei um einen Methodenaufruf handeln würde. Um einen Workflow mit <xref:System.Activities.WorkflowInvoker> aufzurufen, rufen Sie die <xref:System.Activities.WorkflowInvoker.Invoke%2A>-Methode auf, und übergeben Sie die Workflowdefinition des Workflows, der aufgerufen werden soll. In diesem Beispiel wird eine <xref:System.Activities.Statements.WriteLine>-Aktivität mit dem <xref:System.Activities.WorkflowInvoker>-Objekt aufgerufen.  
@@ -60,7 +60,7 @@ Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflow
  [!code-csharp[CFX_WorkflowApplicationExample#30](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>Abrufen der Ausgabeargumente eines Workflows  
- Wenn ein Workflow abgeschlossen wird, können alle Ausgabeargumente in den <xref:System.Activities.WorkflowApplication.Completed%2A>-Handler abgerufen werden, indem auf das <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>-Wörterbuch zugegriffen wird. Im folgenden Beispiel wird ein Workflow mit <xref:System.Activities.WorkflowApplication> gehostet. Eine <xref:System.Activities.WorkflowApplication>-Instanz wird mithilfe einer Workflowdefinition erstellt, die aus einer einzelnen `DiceRoll`-Aktivität besteht. Die `DiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden die Ausgaben im <xref:System.Activities.WorkflowApplication.Completed%2A>-Handler abgerufen.  
+ Wenn ein Workflow abgeschlossen wird, können alle Ausgabeargumente in den <xref:System.Activities.WorkflowApplication.Completed%2A>-Handler abgerufen werden, indem auf das <xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType>-Wörterbuch zugegriffen wird. Im folgenden Beispiel wird ein Workflow mit <xref:System.Activities.WorkflowApplication> gehostet. Ein <xref:System.Activities.WorkflowApplication> Instanz erstellt wird, mithilfe einer Workflowdefinition, die aus einer einzelnen `DiceRoll` Aktivität. Die `DiceRoll`-Aktivität verfügt über zwei Ausgabeargumente, die die Ergebnisse des Würfelvorgangs darstellen. Wenn der Workflow abgeschlossen ist, werden die Ausgaben im <xref:System.Activities.WorkflowApplication.Completed%2A>-Handler abgerufen.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
@@ -85,13 +85,13 @@ Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflow
  Das folgende Codebeispiel ähnelt dem vorherigen Beispiel, bis auf die Tatsache, dass die aktiven Lesezeichen aufgelistet werden, bevor das Lesezeichen wieder aufgenommen wird. Der Workflow wird gestartet, und sobald das <xref:System.Activities.Bookmark> erstellt wurde und der Workflow in den Leerlauf übergeht, wird <xref:System.Activities.WorkflowApplication.GetBookmarks%2A> aufgerufen. Wenn der Workflow abgeschlossen ist, wird die folgende Ausgabe in der Konsole angezeigt.  
   
  **Wie heißen Sie?**  
-**BookmarkName: UserName - OwnerDisplayName: ReadLine**   
+**BookmarkName: Benutzername - OwnerDisplayName: "ReadLine"**   
 **Steve**   
 **Hallo, Steve**
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- Im folgenden Codebeispiel werden die in den <xref:System.Activities.WorkflowApplicationIdleEventArgs>-Handler einer <xref:System.Activities.WorkflowApplication.Idle%2A>-Instanz übergebenen <xref:System.Activities.WorkflowApplication> überprüft. In diesem Beispiel geht der Workflow in den Leerlauf über und verfügt über ein <xref:System.Activities.Bookmark> mit dem Namen `EnterGuess`, das sich im Besitz einer Aktivität mit dem Namen `ReadInt` befindet. Dieses Codebeispiel basiert [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), ist Teil der [Lernprogramm für erste Schritte](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md). Wenn der <xref:System.Activities.WorkflowApplication.Idle%2A>-Handler in diesem Schritt geändert wird, um den Code aus diesem Beispiel zu enthalten, wird die folgende Ausgabe angezeigt.  
+ Im folgenden Codebeispiel werden die in den <xref:System.Activities.WorkflowApplicationIdleEventArgs>-Handler einer <xref:System.Activities.WorkflowApplication.Idle%2A>-Instanz übergebenen <xref:System.Activities.WorkflowApplication> überprüft. In diesem Beispiel geht der Workflow in den Leerlauf über und verfügt über ein <xref:System.Activities.Bookmark> mit dem Namen `EnterGuess`, das sich im Besitz einer Aktivität mit dem Namen `ReadInt` befindet. Dieses Codebeispiel basiert auf [wie: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md), diese ist Teil der [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md). Wenn der <xref:System.Activities.WorkflowApplication.Idle%2A>-Handler in diesem Schritt geändert wird, um den Code aus diesem Beispiel zu enthalten, wird die folgende Ausgabe angezeigt.  
   
  **BookmarkName: EnterGuess - OwnerDisplayName: ReadInt**
  

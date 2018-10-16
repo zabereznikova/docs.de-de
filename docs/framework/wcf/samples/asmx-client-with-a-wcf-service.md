@@ -2,12 +2,12 @@
 title: ASMX-Client mit einem WCF-Dienst
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 3465954cc937e1611634c8cd13a9264173e71817
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507198"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347837"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>ASMX-Client mit einem WCF-Dienst
 Dieses Beispiel veranschaulicht das Erstellen eines Diensts mithilfe von Windows Communication Foundation (WCF), und klicken Sie dann auf den Dienst zugreifen, von einem nicht-WCF-Client, z. B. eine ASMX-Client.  
@@ -19,7 +19,7 @@ Dieses Beispiel veranschaulicht das Erstellen eines Diensts mithilfe von Windows
   
  Der Dienst implementiert einen `ICalculator`-Vertrag, wie im folgenden Code definiert.  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface ICalculator  
 {  
@@ -83,7 +83,7 @@ wsdl /n:Microsoft.ServiceModel.Samples /o:generatedClient.cs /urlkey:CalculatorS
   
  Die Clientimplementierung erstellt eine Instanz des typisierten Proxys, um die Kommunikation mit dem Dienst zu beginnen.  
   
-```  
+```csharp
 // Create a client to the CalculatorService.  
 using (CalculatorService client = new CalculatorService())  
 {  
@@ -120,7 +120,7 @@ Console.ReadLine();
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console 
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

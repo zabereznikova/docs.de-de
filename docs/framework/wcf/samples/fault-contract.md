@@ -2,12 +2,12 @@
 title: Fehlervertrag
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003931"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347769"
 ---
 # <a name="fault-contract"></a>Fehlervertrag
 Im Fehlervertragsbeispiel wird veranschaulicht, wie Fehlerinformationen von einem Dienst zu einem Client übermittelt werden. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), wurde dabei zusätzlicher Code hinzugefügt, mit dem Dienst um eine interne Ausnahme in einen Fehler zu konvertieren. Der Client versucht, eine Division durch 0 (null) auszuführen, um einen Fehlerzustand beim Dienst zu erzwingen.  
@@ -17,7 +17,7 @@ Im Fehlervertragsbeispiel wird veranschaulicht, wie Fehlerinformationen von eine
   
  Der Rechnervertrag wurde geändert, um ein <xref:System.ServiceModel.FaultContractAttribute> einzuschließen, wie im folgenden Beispielcode gezeigt.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  Das <xref:System.ServiceModel.FaultContractAttribute>-Attribut gibt an, dass der `Divide`-Vorgang möglicherweise einen Fehler vom Typ `MathFault` zurückgibt. Ein Fehler kann von jedem Typ sein, der serialisiert werden kann. In diesem Fall ist der `MathFault` ein Datenvertrag, wie im Folgenden dargestellt:  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
 {      
@@ -60,7 +60,7 @@ public class MathFault
   
  Die `Divide`-Methode löst eine <xref:System.ServiceModel.FaultException%601>-Ausnahme aus, wenn eine Ausnahme durch Division durch 0 (null) auftritt, wie im folgenden Beispielcode dargestellt. Diese Ausnahme führt dazu, dass ein Fehler an den Client gesendet wird.  
   
-```  
+```csharp
 public int Divide(int n1, int n2)  
 {  
     try  
@@ -79,7 +79,7 @@ public int Divide(int n1, int n2)
   
  Der Clientcode erzwingt einen Fehler, indem eine Division durch 0 (null) angefordert wird. Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Sie sehen, dass die Division durch 0 (null) als Fehler gemeldet wird. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -90,7 +90,7 @@ Press <ENTER> to terminate client.
   
  Der Client fängt hierzu die entsprechende `FaultException<MathFault>`-Ausnahme ab:  
   
-```  
+```csharp
 catch (FaultException<MathFault> e)  
 {  
     Console.WriteLine("FaultException<MathFault>: Math fault while doing " + e.Detail.operation + ". Problem: " + e.Detail.problemType);  

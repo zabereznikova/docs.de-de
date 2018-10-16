@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6a05abec36f97094adaac7572f6015b10874442
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862218"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347889"
 ---
 # <a name="option-infer-statement"></a>Option Infer-Anweisung
 Ermöglicht die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen.  
@@ -50,7 +50,7 @@ IntelliSense, wenn die Option Infer aktiviert ist.
 IntelliSense, wenn Option Infer deaktiviert ist  
   
 > [!NOTE]
->  Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird. Visual Basic führt Operationen mit Bezeichnung *Boxing* und *unboxing* für die Konvertierung zwischen einer `Object` und ein Werttyp, der Ausführung langsamer macht. Weitere Informationen zu Boxing und unboxing finden Sie unter den [Visual Basic-Sprachspezifikation](../../../visual-basic/reference/language-specification/index.md).
+>  Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird. Visual Basic führt Operationen mit Bezeichnung *Boxing* und *unboxing* für die Konvertierung zwischen einer `Object` und ein Werttyp, der Ausführung langsamer macht. Weitere Informationen zu Boxing und unboxing finden Sie unter den [Visual Basic-Sprachspezifikation](~/_vblang/spec/conversions.md#value-type-conversions).
   
  Typrückschluss findet auf Prozedurebene Anwendung und nicht außerhalb einer Prozedur in einer Klasse, Struktur, Modul oder Schnittstelle.  
   

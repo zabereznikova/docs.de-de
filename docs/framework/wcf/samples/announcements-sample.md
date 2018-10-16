@@ -2,12 +2,12 @@
 title: Beispiel für Ankündigungen
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d03f22b7dd4d9886151e61a2a846f2dc64e661c3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865721"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347509"
 ---
 # <a name="announcements-sample"></a>Beispiel für Ankündigungen
 In diesem Beispiel wird die Verwendung der Ankündigungsfunktionalität der Discovery-Funktion erläutert. Ankündigungen ermöglichen es Diensten, Ankündigungsmeldungen mit Metadaten zum Dienst zu senden. Standardmäßig wird als Ankündigung "hello" gesendet, wenn der Dienst startet, und "bye", wenn der Dienst beendet wird. Diese Ankündigungen können per Multicast oder von Punkt zu Punkt gesendet werden. Das folgende Beispiel besteht aus zwei Projekten, Service und Client.  
@@ -15,7 +15,7 @@ In diesem Beispiel wird die Verwendung der Ankündigungsfunktionalität der Disc
 ## <a name="service"></a>Dienst  
  Dieses Projekt enthält einen selbst gehosteten Rechnerdienst. In der `Main`-Methode wird ein Diensthost erstellt, dem ein Dienstendpunkt hinzugefügt wird. Danach wird ein <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> erstellt. Um Ankündigungen zu aktivieren, muss dem <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ein Ankündigungsendpunkt hinzugefügt werden. In diesem Fall wird als Ankündigungsendpunkt ein Standardendpunkt mithilfe von UDP-Multicast hinzugefügt. Dadurch werden die Ankündigungen über eine bekannte UDP-Adresse übertragen.  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
   
 // Create a ServiceHost for the CalculatorService type.  
@@ -39,7 +39,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ## <a name="client"></a>Client  
  Beachten Sie in diesem Projekt, dass der Client einen <xref:System.ServiceModel.Discovery.AnnouncementService> hostet. Darüber hinaus werden zwei Delegaten bei Ereignissen registriert. Diese Ereignisse geben vor, wie der Client vorgeht, wenn Online- und Offlineankündigungen empfangen werden.  
   
-```  
+```csharp
 // Create an AnnouncementService instance  
 AnnouncementService announcementService = new AnnouncementService();  
   
@@ -50,7 +50,7 @@ announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
   
  Die `OnOnlineEvent`-Methode und die `OnOfflineEvent`-Methode behandeln die entsprechenden Ankündigungen "hello" und "bye".  
   
-```  
+```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
 {  
     Console.WriteLine();              

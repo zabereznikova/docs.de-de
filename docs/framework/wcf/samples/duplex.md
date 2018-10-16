@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 54b941541ae0da4900608e61f08f4ed99c9ea472
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 45a5584a082c4b274614b8fd55be8be4b87945b3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969979"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347785"
 ---
 # <a name="duplex"></a>Duplex
 Im Duplexbeispiel wird das Definieren und Implementieren eines Duplexvertrags veranschaulicht. Duplexkommunikation findet statt, wenn ein Client eine Sitzung mit einem Dienst einrichtet und dem Dienst einen Kanal bereitstellt, über den der Dienst Nachrichten zurück an den Client senden kann. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ein Duplexvertrag wird als Paar von Schnittstellen definiert: eine primäre Schnittstelle vom Client zum Dienst und eine Rückrufschnittstelle vom Dienst zum Client. In diesem Beispiel kann der Client durch die `ICalculatorDuplex`-Schnittstelle mathematische Operationen ausführen (Berechnen eines Ergebnisses über eine Sitzung). Der Dienst gibt Ergebnisse auf der `ICalculatorDuplexCallback`-Schnittstelle zurück. Ein Duplexvertrag erfordert eine Sitzung, da ein Kontext eingerichtet werden muss, um die zwischen dem Client und dem Dienst gesendeten Nachrichten in Beziehung zu setzen.  
@@ -19,7 +19,7 @@ Im Duplexbeispiel wird das Definieren und Implementieren eines Duplexvertrags ve
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet. Der Duplexvertrag wird wie folgt definiert:  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required,  
                  CallbackContract=typeof(ICalculatorDuplexCallback))]  
 public interface ICalculatorDuplex  
@@ -47,7 +47,7 @@ public interface ICalculatorDuplexCallback
   
  Die `CalculatorService`-Klasse implementiert die primäre `ICalculatorDuplex`-Schnittstelle. Der Dienst verwendet den <xref:System.ServiceModel.InstanceContextMode.PerSession>-Instanzmodus, um die Ergebnisse für die einzelnen Sitzungen zu pflegen. Die private `Callback`-Eigenschaft wird zum Zugriff auf den Rückrufkanal zum Client verwendet. Der Dienst verwendet den Rückruf, um über die Rückrufschnittstelle Nachrichten zurück an den Client zu senden.  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorDuplex  
 {  
@@ -71,7 +71,9 @@ public class CalculatorService : ICalculatorDuplex
         equation += " + " + n.ToString();  
         Callback.Result(result);  
     }  
-    ...  
+    
+    //...  
+    
     ICalculatorDuplexCallback Callback  
     {  
         get  
@@ -84,7 +86,7 @@ public class CalculatorService : ICalculatorDuplex
   
  Damit Nachrichten vom Dienst empfangen werden können, muss der Client eine Klasse bereitstellen, die die Rückrufschnittstelle des Duplexvertrags implementiert. Im Beispiel wird eine `CallbackHandler`-Klasse definiert, um die `ICalculatorDuplexCallback`-Schnittstelle zu implementieren.  
   
-```  
+```csharp 
 public class CallbackHandler : ICalculatorDuplexCallback  
 {  
    public void Result(double result)  
@@ -101,7 +103,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
   
  Für den für einen Duplexvertrag erzeugten Proxy muss ein <xref:System.ServiceModel.InstanceContext> bei der Erstellung bereitgestellt werden. Dieser <xref:System.ServiceModel.InstanceContext> wird als Standort für ein Objekt verwendet, das die Rückrufschnittstelle implementiert und die vom Dienst zurückgesendeten Nachrichten verarbeitet. Ein <xref:System.ServiceModel.InstanceContext> wird mit einer Instanz der `CallbackHandler`-Klasse erstellt. Dieses Objekt verarbeitet die vom Dienst über die Rückrufschnittstelle an den Client gesendeten Nachrichten.  
   
-```  
+```csharp
 // Construct InstanceContext to handle messages on callback interface.  
 InstanceContext instanceContext = new InstanceContext(new CallbackHandler());  
   
@@ -172,14 +174,14 @@ client.Close();
   
     ```xml  
     <client>  
-    <endpoint name = ""  
-    address="http://service_machine_name/servicemodelsamples/service.svc"  
-    ... />  
+        <endpoint name = ""  
+        address="http://service_machine_name/servicemodelsamples/service.svc"  
+        ... />  
     </client>  
     ...  
     <wsDualHttpBinding>  
-    <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
-    </binding>  
+        <binding name="DuplexBinding" clientBaseAddress="http://client_machine_name:8000/myClient/">  
+        </binding>  
     </wsDualHttpBinding>  
     ```  
   
