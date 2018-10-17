@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 9e92c253aa1981065274dc3413f9b8888b5f8849
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a0ec7b1a91dc701093131b8807b25e66d291a746
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500662"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371917"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Ausnahmen und Ausnahmebehandlung (C#-Programmierhandbuch)
 Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder außergewöhnliche Situationen zu verarbeiten, die beim Ausführen von Programmen auftreten können. Die Ausnahmebehandlung verwendet die Schlüsselwörter `try`, `catch` und `finally`, um Aktionen zu testen, die möglicherweise nicht erfolgreich sind, um Fehler zu behandeln, wenn Sie entscheiden, dass dies vernünftig ist, und um später Ressourcen zu bereinigen. Ausnahmen können von der Common Language Runtime (CLR), vom .NET Framework bzw. anderen Drittanbieterbibliotheken oder vom Anwendungscode generiert werden. Ausnahmen werden mit dem Schlüsselwort `throw` erstellt.  
@@ -43,7 +43,7 @@ Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder au
   
 -   Code in einem `finally`-Block wird auch dann ausgeführt, wenn eine Ausnahme ausgelöst wurde. Verwenden Sie einen `finally`-Block, um Ressourcen freizugeben, beispielsweise um Streams oder Dateien zu schließen, die im `try`-Block geöffnet wurden.  
   
--   Zusätzlich zum strukturierten Win32-Mechanismus zur Ausnahmebehandlung wurden im .NET Framework verwaltete Ausnahmen implementiert. Weitere Informationen finden Sie unter [Structured Exception Handling (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (Strukturierte Ausnahmebehandlung [C/C++]) und [A Crash Course on the Depths of Win32 Structured Exception Handling](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Schnellkurs zu den Details der strukturierten Win32-Ausnahmebehandlung).  
+-   Zusätzlich zum strukturierten Win32-Mechanismus zur Ausnahmebehandlung wurden im .NET Framework verwaltete Ausnahmen implementiert. Weitere Informationen finden Sie unter [Structured Exception Handling (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (Strukturierte Ausnahmebehandlung [C/C++]) und [A Crash Course on the Depths of Win32 Structured Exception Handling](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Schnellkurs zu den Details der strukturierten Win32-Ausnahmebehandlung).  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen zu Ausnahmen und zur Ausnahmebehandlung finden Sie in den folgenden Themen:  
