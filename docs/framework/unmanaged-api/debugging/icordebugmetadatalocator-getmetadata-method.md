@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521353"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373883"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData-Methode
 Fordert den Debugger auf, den vollständigen Pfad eines Moduls zurückzugeben, dessen Metadaten benötigt werden, um einen vom Debugger angeforderten Vorgang abzuschließen.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Eine mit NULL endende Zeichenfolge, die den vollständigen Pfad zu der Datei darstellt. Wenn der vollständige Pfad nicht verfügbar ist, ist der Name und Erweiterung der Datei (*Filename*. *Erweiterung*).  
   
  `dwImageTimeStamp`  
- [in] Der Zeitstempel aus den PE-Dateiheadern des Bilds. Dieser Parameter kann potenziell für einen Symbolserver verwendet werden ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) nachschlagen.  
+ [in] Der Zeitstempel aus den PE-Dateiheadern des Bilds. Dieser Parameter kann potenziell für einen Symbolserver verwendet werden ([SymSrv](/windows/desktop/debug/using-symsrv)) nachschlagen.  
   
  `dwImageSize`  
  [in] Die Bildgröße aus PE-Dateiheadern. Dieser Parameter kann potenziell für eine SymSrv-Suche verwendet werden.  

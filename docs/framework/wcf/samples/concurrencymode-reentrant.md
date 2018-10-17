@@ -2,19 +2,19 @@
 title: ConcurrencyMode Reentrant
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: c5fa690ca3b8ffe14eb9f19f0bb096b867ab992f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 94ea62d18fec202a099c2797602224eab43299b4
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740528"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372167"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
 In diesem Beispiel werden die Notwendigkeit und Auswirkungen der Verwendung von ConcurrencyMode.Reentrant in einer Dienstimplementierung veranschaulicht. ConcurrencyMode.Reentrant impliziert, dass der Dienst (oder Rückruf) nur jeweils eine Nachricht verarbeitet (analog zu `ConcurencyMode.Single`). Um Threadsicherheit zu gewährleisten, Windows Communication Foundation (WCF) sperrt die `InstanceContext` eine Nachricht verarbeitet, sodass keine weiteren Nachrichten verarbeitet werden können. Im Reentrant-Modus wird der `InstanceContext` entsperrt, kurz bevor der Dienst einen ausgehenden Aufruf ausführt. So kann der folgende Aufruf (der wie in diesem Beispiel dargestellt wiedereintrittsfähig sein kann) beim nächsten Mal gesperrt werden, wenn er den Dienst erreicht. Zum Veranschaulichen des Verhaltens wird im Beispiel gezeigt, wie ein Client und ein Dienst untereinander Nachrichten mit einem Duplexvertrag senden können.  
   
  Bei dem definierten Vertrag handelt es sich um einen Duplexvertrag, bei dem die `Ping`-Methode vom Dienst und die Rückrufmethode `Pong` vom Client implementiert wird. Ein Client ruft die `Ping`-Methode des Servers mit einer Tickanzahl auf und initiiert so den Aufruf. Der Dienst überprüft, ob die Anzahl der Ticks ungleich 0 (null) ist, und ruft dann die `Pong`-Methode des Rückrufs auf, während die Tickanzahl verringert wird. Dies wird im Beispiel mit dem folgenden Code ausgeführt.  
   
-```  
+```csharp
 public void Ping(int ticks)  
 {  
      Console.WriteLine("Ping: Ticks = " + ticks);  
@@ -28,7 +28,7 @@ public void Ping(int ticks)
   
  Die `Pong`-Implementierung des Rückrufs weist die gleiche Logik wie die `Ping`-Implementierung auf. Das heißt, es wird überprüft, ob die Anzahl der Ticks ungleich 0 (null) ist, und dann wird die `Ping`-Methode über den Rückrufkanal aufgerufen, wobei die Anzahl der Ticks um 1 reduziert wird. (in diesem Fall ist der Rückrufkanal der Kanal, über den die ursprüngliche `Ping`-Meldung gesendet wurde.) Wenn die Anzahl der Ticks 0 erreicht, kehrt die Methode zurück und entpackt dabei alle Antworten auf den ersten Aufruf, der vom Client getätigt wurde, der den Aufruf initiiert hat. Dies wird in der Rückrufimplementierung gezeigt.  
   
-```  
+```csharp
 public void Pong(int ticks)  
 {  
     Console.WriteLine("Pong: Ticks = " + ticks);  
@@ -55,7 +55,7 @@ public void Pong(int ticks)
 ## <a name="demonstrates"></a>Veranschaulicht  
  Erstellen Sie zum Ausführen des Beispiels das Client- und Serverprojekt. Klicken Sie dann zwei Befehlsfenster öffnen, und wechseln Sie in der \<Beispiel > \CS\Service\bin\debug und \<Beispiel > \CS\Client\bin\debug Verzeichnisse. Starten Sie den Dienst durch Eingabe `service.exe` und rufen Sie dann die Client.exe mit der Anfangswert von Ticks, die als Eingabeargument übergeben. Es wird eine Beispielausgabe für 10 Ticks veranschaulicht.  
   
-```  
+```console  
 Prompt>Service.exe  
 ServiceHost Started. Press Enter to terminate service.  
 Ping: Ticks = 10  

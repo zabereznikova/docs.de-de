@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 09ead071c5d8320452724edbb1c7f7f5e0124421
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 499d3e9824ede493043b996d581b079ec23938f8
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857968"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371991"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 Im OperationContextScope-Beispiel wird veranschaulicht, wie zusätzliche Informationen für einen Windows Communication Foundation (WCF)-Aufruf verwenden von Headern gesendet werden. In diesem Beispiel sind Server und Client Konsolenanwendungen.  
@@ -20,7 +20,7 @@ Im OperationContextScope-Beispiel wird veranschaulicht, wie zusätzliche Informa
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
  Dies ist der Beispieldienst, der eine Nachricht vom Client empfängt und den Header in der <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>-Auflistung sucht. Der Client übergibt die im Header gesendete GUID, und der Dienst ruft den benutzerdefinierten Header ab und vergleicht ihn, falls vorhanden, mit der vom Client als Argument übergebenen GUID.  
   
-```  
+```csharp
 public bool RetrieveHeader(string guid)  
 {  
      MessageHeaders messageHeaderCollection =   
@@ -57,7 +57,7 @@ public bool RetrieveHeader(string guid)
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
  Dies ist die Clientimplementierung, die die vom generierten Proxy verwendet [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) für die Kommunikation mit dem Remotedienst. Zuerst werden zwei Proxyobjekte von `MessageHeaderReaderClient` erstellt.  
   
-```  
+```csharp
 //Create two clients to the remote service.  
 MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();  
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
@@ -65,7 +65,7 @@ MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();
   
  Der Client erstellt dann OperationContextScope und bewertet ihn zu `client1`. <xref:System.ServiceModel.Channels.MessageHeader> wird ein <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> hinzugefügt, und es wird ein Aufruf auf beiden Clients aufgerufen. Wird sichergestellt, dass die Header gesendet wird, nur auf `client1` und nicht in `client2` durch Überprüfen des Rückgabewerts aus den `RetrieveHeader` aufrufen.  
   
-```  
+```csharp
 using (new OperationContextScope(client1.InnerChannel))  
 {  
     //Create a new GUID that is sent as the header.  
@@ -92,7 +92,7 @@ using (new OperationContextScope(client1.InnerChannel))
   
  Dieses Beispiel ist selbst gehostet. Es wird die folgende Beispielausgabe vom Ausgeben des Beispiels bereitgestellt:  
   
-```  
+```console  
 Prompt> Service.exe  
 The service is ready.  
 Press <ENTER> to terminate service.  

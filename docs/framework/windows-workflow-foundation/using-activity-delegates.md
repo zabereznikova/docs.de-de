@@ -3,11 +3,11 @@ title: Verwenden von Aktivitätsdelegaten
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580873"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374234"
 ---
 # <a name="using-activity-delegates"></a>Verwenden von Aktivitätsdelegaten
 Aktivitätsdelegaten ermöglichen es Aktivitätsautoren, Rückrufe mit bestimmten Signaturen verfügbar zu machen, für die Benutzer der Aktivität aktivitätsbasierte Handler bereitstellen können. Es sind zwei Typen von Aktivitätsdelegaten verfügbar: <xref:System.Activities.ActivityAction%601> wird verwendet, um Aktivitätsdelegaten zu definieren, die keinen Rückgabewert haben, und <xref:System.Activities.ActivityFunc%601> wird verwendet, um Aktivitätsdelegaten zu definieren, die einen Rückgabewert aufweisen.  
@@ -44,7 +44,7 @@ In den Beispielen in diesem Thema wird die Syntax zur Objektinitialisierung verw
  Es gibt mehrere generische Versionen von <xref:System.Activities.Statements.InvokeAction%601> und <xref:System.Activities.ActivityAction%601> zum Übergeben von einem oder mehreren Argumenten.  
   
 ## <a name="using-activityfunc"></a>Verwenden von ActivityFunc  
- <xref:System.Activities.ActivityAction%601> ist nützlich, wenn es keinen Ergebniswert der Aktivität gibt, und <xref:System.Activities.ActivityFunc%601> wird verwendet, wenn ein Ergebniswert zurückgegeben wird. Verwenden Sie beim Erstellen einer benutzerdefinierten Aktivität, die ein <xref:System.Activities.ActivityFunc%601>-Element definiert, ein <xref:System.Activities.Expressions.InvokeFunc%601>-Element, um das Aufrufen dieses <xref:System.Activities.ActivityFunc%601>-Elements zu modellieren. Im folgenden Beispiel wird eine `WriteFillerText`-Aktivität definiert. Um den Füllzeichentext anzugeben, wird ein <xref:System.Activities.Expressions.InvokeFunc%601>-Element angegeben, das ein ganzzahliges Argument verwendet und über ein Zeichenfolgenergebnis verfügt. Nachdem der Füllzeichentext abgerufen wurde, wird er mit einer <xref:System.Activities.Statements.WriteLine>-Aktivität auf der Konsole angezeigt.  
+ <xref:System.Activities.ActivityAction%601> ist nützlich, wenn es keinen Ergebniswert der Aktivität gibt, und <xref:System.Activities.ActivityFunc%601> wird verwendet, wenn ein Ergebniswert zurückgegeben wird. Verwenden Sie beim Erstellen einer benutzerdefinierten Aktivität, die ein <xref:System.Activities.ActivityFunc%601>-Element definiert, ein <xref:System.Activities.Expressions.InvokeFunc%601>-Element, um das Aufrufen dieses <xref:System.Activities.ActivityFunc%601>-Elements zu modellieren. Im folgenden Beispiel wird eine `WriteFillerText` -Aktivität definiert. Um den Füllzeichentext anzugeben, wird ein <xref:System.Activities.Expressions.InvokeFunc%601>-Element angegeben, das ein ganzzahliges Argument verwendet und über ein Zeichenfolgenergebnis verfügt. Nachdem der Füllzeichentext abgerufen wurde, wird er mit einer <xref:System.Activities.Statements.WriteLine>-Aktivität auf der Konsole angezeigt.  
   
  [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004350"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372055"
 ---
 # <a name="ltpropertygt-element-net-native"></a>&lt;Eigenschaft&gt; Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.  
@@ -75,7 +75,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
  Die Datei wendet den Wert `All` auf die `Activate`-Richtlinie für die `Book`-Klasse an, die den Zugriff auf Klassenkonstruktoren über Reflektion ermöglicht. Die `Browse`-Richtlinie für die `Book`-Klasse wird vom übergeordneten Namespace geerbt. Diese wird auf `Required Public` festgelegt, wodurch Metadaten zur Laufzeit verfügbar werden.  
   
- Der Quellcode für das Beispiel lautet wie folgt. Die `outputBlock`-Variable stellt ein [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx)-Steuerelement dar.  
+ Der Quellcode für das Beispiel lautet wie folgt. Die `outputBlock` Variable steht für eine <xref:Windows.UI.Xaml.Controls.TextBlock> Steuerelement.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

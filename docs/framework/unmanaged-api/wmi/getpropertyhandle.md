@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837438"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371003"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle-Funktion
 Gibt ein eindeutiges Handle zurück, das eine Eigenschaft identifiziert.
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in] Eine Null-terminierte Zeichenfolge des UTF16-codierte Zeichen enthalten, die den Eigenschaftennamen enthält.   
 
 `pType`  
-[out] Ein Zeiger auf eine [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) -Enumerationsmember, der den CIM-Typ der Eigenschaft darstellt.
+[out] Ein Zeiger auf eine [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) -Enumerationsmember, der den CIM-Typ der Eigenschaft darstellt.
 
 `pHandle`   
 [out] Ein Zeiger auf eine ganze Zahl, die das Eigenschaftshandle enthält.

@@ -2,12 +2,12 @@
 title: WCF-Dienste und Ereignisablaufverfolgung für Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086582"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372471"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF-Dienste und Ereignisablaufverfolgung für Windows
 In diesem Beispiel wird veranschaulicht, wie die analytische Ablaufverfolgung in Windows Communication Foundation (WCF) verwendet, um Ereignisse im Event Tracing for Windows (ETW) auszugeben. Die analytische Ablaufverfolgung werden Ereignisse an wichtigen Punkten im WCF-Stapel, mit denen die Problembehandlung für die WCF-Dienste in der produktionsumgebung ausgegeben.
@@ -26,11 +26,11 @@ In diesem Beispiel wird veranschaulicht, wie die analytische Ablaufverfolgung in
 
      Klicken Sie im Webbrowser auf **Calculator.svc**. Der URI des WSDL-Dokuments für den Dienst wird daraufhin im Browser angezeigt. Kopieren Sie diesen URI.
 
-     In der Standardeinstellung der Dienst gestartet wird Lauscht auf Anforderungen auf Port 1378 (http://localhost:1378/Calculator.svc).
+     In der Standardeinstellung der Dienst gestartet wird Lauscht auf Anforderungen auf Port 1378 `http://localhost:1378/Calculator.svc`.
 
 4.  Führen Sie den WCF-Testclient (WcfTestClient.exe).
 
-     WCF-Testclient (WcfTestClient.exe) befindet sich in der \<Visual Studio 2012-Installationsverzeichnis > \Common7\IDE\ WcfTestClient.exe (standardmäßige Installationsverzeichnis für Visual Studio 2012 ist c:\Programme\Microsoft c:\Programme\Microsoft Visual Studio 10.0).
+     WCF-Testclient (WcfTestClient.exe) befindet sich unter `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  Der standardmäßige Visual Studio 2012 ist `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5.  Fügen Sie innerhalb der WCF-Testclient den Dienst dazu **Datei**, und klicken Sie dann **Dienst hinzufügen**.
 

@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 499311f4db9d36f9f95d20c6ef0441ff42f0029b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 141505eed8e76bb5f9811b5d2bdc166885905cde
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529381"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371965"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist eine Komponente von [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] Version 3.5, die eine Laufzeitinfrastruktur für die Verwaltung relationaler Daten als Objekte bereitstellt.  
@@ -19,7 +19,7 @@ ms.locfileid: "43529381"
   
  Entwickler, die in der Regel mithilfe von Visual Studio verwenden, die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], die bietet eine Benutzeroberfläche zur Implementierung zahlreicher Funktionen von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Die Dokumentation zu dieser Version von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] beschreibt die grundlegenden Bausteine, Verfahren und Techniken zur Erstellung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen. Sie können auch Microsoft Docs nach speziellen Themen suchen und Sie können teilnehmen, der [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren. Zum Schluss die [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) Whitepaper Details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie sowie Beispiele für Visual Basic und C#-Code.  
+ Die Dokumentation zu diesem Release von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] beschreibt die grundlegenden Bausteine, Verfahren und Techniken zur Erstellung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen. Sie können auch Microsoft Docs nach speziellen Themen suchen und Sie können teilnehmen, der [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren. Zum Schluss die [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205) Whitepaper Details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie sowie Beispiele für Visual Basic und C#-Code.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -28,7 +28,7 @@ ms.locfileid: "43529381"
  [Programmierhandbuch](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
  Bietet schrittweise Anleitungen für Zuordnung, Abfrage, Update, Debugging und ähnlichen Aufgaben.  
   
- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  Enthält Referenzinformationen zu verschiedenen Aspekten der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Programmierung. Die Themen umfassen SQL-CLR-Typzuordnung, Übersetzung von Standardabfrageoperatoren und mehr.  
   
  [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "43529381"
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Beschreibt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Technologien für die Visual Basic-Benutzer.  
   
- [LINQ to ADO.NET](https://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [LINQ und ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Links zum [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]-Portal.  
   
  [LINQ to SQL Walkthroughs (Exemplarische Vorgehensweisen für LINQ to SQL)](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  

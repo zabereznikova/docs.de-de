@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3955329903af0d4c27bc7228c7c9025cb03e00f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394312"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371835"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException-Klasse (.NET Native)
 **.NET für Windows-Apps für Windows 10, nur [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -64,7 +64,7 @@ ms.locfileid: "33394312"
   
 ## <a name="events"></a>Ereignisse  
   
-|Ereignis|Beschreibung|  
+|event|Beschreibung|  
 |-----------|-----------------|  
 |`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Tritt auf, wenn eine Ausnahme serialisiert wird, um ein Ausnahmezustandsobjekt mit serialisierten Daten über die Ausnahme zu erstellen. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
   
@@ -76,8 +76,8 @@ ms.locfileid: "33394312"
 > [!IMPORTANT]
 >  Da diese Ausnahme anzeigt, dass von der Anwendung benötigte Metadaten zur Laufzeit nicht verfügbar sind, sollten Sie diese Ausnahme nicht in einem `try`/`catch`-Block behandeln. Stattdessen sollten Sie die Ursache der Ausnahme ermitteln und mithilfe einer Laufzeitanweisungsdatei beseitigen. Um den Eintrag zu erhalten, den Sie zur Laufzeitanweisungsdatei hinzufügen können, um die Ausnahme zu beseitigen, können Sie eine der beiden Problembehandlungen verwenden:  
 >   
->  -   Die [MissingMetadataException-Problembehandlung](http://dotnet.github.io/native/troubleshooter/type.html) für Typen.  
-> -   Die [MissingMetadataException-Problembehandlung](http://dotnet.github.io/native/troubleshooter/method.html) für Methoden.  
+>  -   Die [MissingMetadataException-Problembehandlung](https://dotnet.github.io/native/troubleshooter/type.html) für Typen.  
+> -   Die [MissingMetadataException-Problembehandlung](https://dotnet.github.io/native/troubleshooter/method.html) für Methoden.  
   
  Die `MissingMetadataException`-Klasse enthält keine speziellen Elemente. Sie erbt alle Member von ihrer Basisklasse <xref:System.TypeAccessException>.  
   

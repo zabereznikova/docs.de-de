@@ -2,12 +2,12 @@
 title: Anzeigen von Nachrichtenprotokollen
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 025d4020002a56deb9d5b8a2fe628f50cabad4d3
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912087"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374832"
 ---
 # <a name="viewing-message-logs"></a>Anzeigen von Nachrichtenprotokollen
 In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können.  
@@ -33,7 +33,7 @@ In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können
   
 -   Wenn Sie alle drei Protokolle anzeigen, müssen die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zur gleichen Zeit, können Sie den Relaydienst ändern, indem Sie beim Erstellen eines neuen <xref:System.ServiceModel.Channels.Message> Instanz. Bei dieser Instanz sollte es sich um eine Kopie des Textes der eingehenden Nachricht handeln und zusätzlich um alle Header mit Ausnahme des `ActivityId`-Headers und des `Action`-Headers. Der folgende Beispielcode veranschaulicht, wie Sie dabei vorgehen:  
   
-```  
+```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
   
 for (int i = 0; i < incomingMessage.Headers.Count; i++)  

@@ -2,19 +2,19 @@
 title: Operation-Klasse
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: d9256915afe9fdb8e4c91d186131fe41a7094c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487567"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371588"
 ---
 # <a name="operation-class"></a>Operation-Klasse
 Vorgang  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```csharp
 class Operation  
 {  
   string Action;  
@@ -50,7 +50,7 @@ class Operation
   
  Zugriffstyp: Schreibgeschützt  
   
- Gibt an, dass ein Vorgang implementiert wird asynchron mit einem `Begin`[spitze Klammern öffnen/schließen] und `End`[Klammern öffnen/schließen]-Methodenpaar in einem Dienstvertrag.  
+ Gibt an, dass ein Vorgang asynchron implementiert wird eine `Begin`[spitze Klammern öffnen/schließen] und `End`[Winkelklammern öffnen/schließen]-Methodenpaar in einem Dienstvertrag.  
   
 ### <a name="behaviors"></a>Verhalten  
  Datentyp: Behavior-Array  

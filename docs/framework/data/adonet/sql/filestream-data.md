@@ -2,12 +2,12 @@
 title: FILESTREAM-Daten
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176798"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374195"
 ---
 # <a name="filestream-data"></a>FILESTREAM-Daten
 Das FILESTREAM-Speicherattribut wird für Binärdaten (BLOBs) verwendet, die in einer varbinary(max)-Spalte gespeichert sind. Vor FILESTREAM erforderte das Speichern von Binärdaten besondere Maßnahmen. Unstrukturierte Daten wie z. B. Textdokumente, Bilder und Videos werden häufig außerhalb der Datenbank gespeichert und sind daher schwieriger zu verwalten.  
@@ -167,17 +167,15 @@ namespace FileStreamTest
 }
 ```  
   
- Ein weiteres Beispiel finden Sie unter [speichern und Abrufen von Binärdaten in einer FileStream-Spalte](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
+ Ein weiteres Beispiel finden Sie unter [speichern und Abrufen von Binärdaten in einer FileStream-Spalte](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
 ## <a name="resources-in-sql-server-books-online"></a>Ressourcen in der SQL Server-Onlinedokumentation.  
  Die vollständige Dokumentation für FILESTREAM befindet sich in den folgenden Abschnitten in SQL Server-Onlinedokumentation.  
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Entwerfen und Implementieren der FILESTREAM-Speicherung](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Stellt Links zur FILESTREAM-Dokumentation und verwandten Themen bereit.|  
-|[Übersicht über FILESTREAM](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|Beschreibt, in welchen Fällen die FILESTREAM-Speicherung verwendet werden sollte und wie diese die SQL Server-Datenbank-Engine mit einem NTFS-Dateisystem integriert.|  
-|[Erste Schritte mit FILESTREAM-Speicherung](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Beschreibt, wie FILESTREAM für eine Instanz von SQL Server aktiviert wird, wie eine Datenbank und eine Tabelle zum Speichern von FILESTREAM-Daten erstellt werden und wie Zeilen mit FILESTREAM-Daten bearbeitet werden.|  
-|[Verwenden von FILESTREAM-Speicherung in Clientanwendungen](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|Beschreibt die Win32 API-Funktionen zum Arbeiten mit FILESTREAM-Daten.|  
+|[FILESTREAM (SQLServer)](/sql/relational-databases/blob/filestream-sql-server)|Beschreibt, in welchen Fällen die FILESTREAM-Speicherung verwendet werden sollte und wie diese die SQL Server-Datenbank-Engine mit einem NTFS-Dateisystem integriert.|  
+|[Erstellen von Clientanwendungen für FILESTREAM-Daten](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Beschreibt die Win32 API-Funktionen zum Arbeiten mit FILESTREAM-Daten.|  
 |[FILESTREAM und andere SQL Server-Funktionen](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Enthält Überlegungen, Richtlinien und Einschränkungen zur Verwendung von FILESTREAM-Daten mit anderen Funktionen von SQL Server.|  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -185,4 +183,4 @@ namespace FileStreamTest
  [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [Übersicht über ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486153"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372213"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ## <a name="error-handling-in-windows-communication-foundation"></a>Fehlerbehandlung in Windows Communication Foundation  
@@ -30,7 +30,7 @@ ms.locfileid: "43486153"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Behandeln von unerwarteten Ausnahmen mit einem IErrorHandler  
  Um unerwartete Ausnahmen zu beheben, ist die empfohlene Vorgehensweise "Einen" ierrorhandler "verknüpfen" aus. Fehlerhandler fangen nur Ausnahmen, die WCF-Laufzeitebene (der "" dienstmodellebene), nicht auf Kanalebene. Die einzige Möglichkeit, einen "IErrorHandler" auf Kanalebene zu verknüpfen, ist das Erstellen eines benutzerdefinierten Kanals, und dies wird in den meisten Szenarien nicht empfohlen.  
   
- Eine "unerwartete"Ausnahme ist im Allgemeinen weder eine nicht behebbare Ausnahme noch eine Verarbeitungsausnahme; Es ist, stattdessen eine unerwartete Benutzerausnahme. Eine nicht behebbare Ausnahme (z. B. eine Out-of-Memory-Ausnahme) – eine in der Regel anhand der [Dienstmodell-Ausnahmehandler](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automatisch kann nicht in der Regel nicht erfolgreich behandelt werden, und der einzige Grund, eine Ausnahme zu behandeln Alle möglicherweise zusätzliche Protokollierung oder eine Standardausnahme an den Client zurückgegeben. Eine Verarbeitungsausnahme tritt meist beim Verarbeiten der Nachricht auf, beispielsweise auf Serialisierungs-, Encoder- oder Formatiererebene, und kann im Allgemeinen nicht von einem "IErrorHandler" behandelt werden, weil die Fehlerbehandlung noch nicht oder nicht mehr eingreifen kann, wenn diese Ausnahmen auftreten. Ebenso können Transportausnahmen nicht von einem IErrorHandler behandelt werden.  
+ Eine "unerwartete"Ausnahme ist im Allgemeinen weder eine nicht behebbare Ausnahme noch eine Verarbeitungsausnahme; Es ist, stattdessen eine unerwartete Benutzerausnahme. Eine nicht behebbare Ausnahme (z. B. eine Out-of-Memory-Ausnahme) – eine in der Regel anhand der [Dienstmodell-Ausnahmehandler](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automatisch kann nicht in der Regel nicht erfolgreich behandelt werden, und der einzige Grund, eine Ausnahme zu behandeln Alle möglicherweise zusätzliche Protokollierung oder eine Standardausnahme an den Client zurückgegeben. Eine Verarbeitungsausnahme tritt meist beim Verarbeiten der Nachricht auf, beispielsweise auf Serialisierungs-, Encoder- oder Formatiererebene, und kann im Allgemeinen nicht von einem "IErrorHandler" behandelt werden, weil die Fehlerbehandlung noch nicht oder nicht mehr eingreifen kann, wenn diese Ausnahmen auftreten. Ebenso können Transportausnahmen nicht von einem IErrorHandler behandelt werden.  
   
  Mit einem IErrorHandler können Sie das Verhalten der Anwendung explizit steuern, wenn eine Ausnahme ausgelöst wird. Sie haben folgende Möglichkeiten:  
   

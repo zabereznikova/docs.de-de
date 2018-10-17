@@ -2,12 +2,12 @@
 title: Übersicht über den Nachrichtenfluss
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 73ad66389d8458c0508c7a8cae28f54ca38ed574
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841981"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372784"
 ---
 # <a name="message-flow-overview"></a>Übersicht über den Nachrichtenfluss
 In einem verteilten System mit untereinander verbundenen Diensten müssen kausale Beziehungen zwischen den Diensten bestimmt werden. Es ist unerlässlich, die verschiedenen Komponenten eines Anforderungsflusses zu verstehen, wenn kritische Szenarien wie Systemüberwachung, Fehlerbehebung und Fehlerursachenanalyse unterstützt werden sollen. Um eine Korrelation der Ablaufverfolgungen verschiedener Dienste zu ermöglichen, wurde in .NET Framework 4 eine entsprechende Unterstützung über folgende Funktionen hinzugefügt:
@@ -52,13 +52,13 @@ In einem verteilten System mit untereinander verbundenen Diensten müssen kausal
 
 8.  Fügen Sie in Program.cs auf dem Client die folgende Using-Anweisung hinzu.
 
-    ```
+    ```csharp
     using System.Diagnostics;
     ```
 
 9. Legen Sie in der Main-Methode in der Datei program.cs im Clientprojekt die Ablaufverfolgungs-GUID fest, die im Ereignisprotokoll weitergegeben werden soll.
 
-    ```
+    ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```

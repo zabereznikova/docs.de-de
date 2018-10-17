@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395527"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372387"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native und Kompilierung
 Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Desktop-Anwendungen sind in einer bestimmten Programmiersprache geschrieben und in eine Zwischensprache (Intermediate Language, IL) kompiliert. Zur Laufzeit ist ein JIT-Compiler (Just-In-Time) dafür zuständig, die Zwischensprache für den lokalen Computer in nativen Code zu kompilieren, unmittelbar bevor eine Methode zum ersten Mal ausgeführt wird. Im Gegensatz dazu konvertiert die .NET Native-Toolkette den Quellcode zur Kompilierzeit in systemeigenen Code. In diesem Abschnitt wird .NET Native mit anderen Kompilierungsverfahren verglichen, die für .NET Framework-Apps verfügbar sind. Zudem enthält dieser Abschnitt einen konkreten Überblick über die Erzeugung von systemeigenen Code mit .NET Native, der Ihnen dabei helfen kann zu verstehen, warum Ausnahmen nicht im JIT-kompilierten Code auftreten, die hingegen in Code auftreten, der mit .NET Native kompiliert wurde.  
@@ -102,6 +102,6 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
   
 ## <a name="see-also"></a>Siehe auch  
  [Metadaten und selbstbeschreibende Komponenten](../../../docs/standard/metadata-and-self-describing-components.md)  
- [Inside .NET Native (Channel 9-Video)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [Inside .NET Native (Channel 9-Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
  [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET Native Allgemeine Problembehandlung](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

@@ -2,12 +2,12 @@
 title: AJAX-Dienst mit HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041108"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372050"
 ---
 # <a name="ajax-service-using-http-post"></a>AJAX-Dienst mit HTTP POST
 Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) zum Erstellen einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Asynchronous JavaScript and XML (AJAX)-Diensts, der HTTP-POST verwendet. Bei einem AJAX-Dienst handelt es sich um einen Dienst, auf den Sie mit einfachem JavaScript-Code von einem Webbrowserclient aus zugreifen können. Dieses Beispiel baut auf den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel; der einzige Unterschied zwischen den beiden Beispielen wird die Verwendung von HTTP-POST anstelle von HTTP GET.  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  Erstellen Sie im Dienst mithilfe von <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> einen AJAX-Endpunkt wie im Beispiel "Einfacher AJAX-Dienst".  
   
- Im Gegensatz zu GET-Anforderungen können Sie POST-Dienste nicht aus dem Browser aufrufen. Navigieren Sie z.B. auf http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 führt zu einem Fehler, da der POST-Dienst erwartet, dass die `n1` und `n2` Parameter im Text Nachricht gesendet werden – in das JSON-Format – und nicht in der URL.  
+ Im Gegensatz zu GET-Anforderungen können Sie POST-Dienste nicht aus dem Browser aufrufen. Navigieren Sie z.B. zum `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` führt zu einem Fehler, da der POST-Dienst erwartet, dass die `n1` und `n2` Parameter im Text Nachricht im JSON-Format, und nicht in der URL gesendet werden.  
   
  Die Clientwebseite "PostAjaxClientPage.aspx" enthält ASP.NET-Code zum Aufrufen des Diensts, wenn der Benutzer auf eine der Vorgangsschaltflächen auf der Seite klickt. Der Dienst antwortet auf die gleiche Weise wie in der [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel mit der GET-Anforderung.  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  Erstellen Sie die Projektmappe "postajaxservice.sln", siehe [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Navigieren Sie zu http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (Öffnen Sie "postajaxclientpage.aspx" nicht aus dem Projektverzeichnis im Browser).  
-  
-## <a name="see-also"></a>Siehe auch
+3.  Navigieren Sie zu `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (Öffnen Sie "postajaxclientpage.aspx" nicht aus dem Projektverzeichnis im Browser).

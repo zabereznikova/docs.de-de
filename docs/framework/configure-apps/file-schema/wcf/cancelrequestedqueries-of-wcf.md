@@ -2,21 +2,21 @@
 title: '&lt;cancelRequestedQueries&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 4d746290f01e702979d1dd0165ad3fc5299e1b75
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 40fbcafd641e93be6ba21635f4f6e6428be62c12
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087751"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373321"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>&lt;cancelRequestedQueries&gt; von WCF
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen nachzuverfolgen, mit denen die übergeordnete Aktivität den Abbruch einer untergeordneten Aktivität verlangt. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte mit Abbruchanforderungen abonnieren kann.  
   
- Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel>  
+\<system.serviceModel>  
 \<Nachverfolgen von >  
-\<trackingProfile>  
+\<Profile > \<TrackingProfile >  
 \<Workflow >  
 \<cancelRequestedQueries>  
   
@@ -24,28 +24,32 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen 
   
 ```xml
 <tracking>
-  <trackingProfile name="Name">
-    <workflow>
-      <cancelRequestQueries>
-        <cancelRequestQuery activityName="String"
-                            childActivityName="String"/>
-      </cancelRequestQueries>
-    </workflow>
-  </trackingProfile>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <cancelRequestQueries>
+          <cancelRequestQuery activityName="String"
+                              childActivityName="String"/>
+        </cancelRequestQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
 </tracking>  
 ```
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
+
+In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
- Keine  
+### <a name="attributes"></a>Attribute
+
+Keine
   
-### <a name="child-elements"></a>Untergeordnete Elemente  
+### <a name="child-elements"></a>Untergeordnete Elemente
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<cancelRequestedQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|Eine Abfrage, die verwendet wird, um Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachzuverfolgen.|  
+|[\<cancelRequestedQuery>](cancelrequestedquery-of-wcf.md)|Eine Abfrage, die verwendet wird, um Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachzuverfolgen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -53,7 +57,8 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen 
 |-------------|-----------------|  
 |[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Ein Konfigurationselement, das alle Abfragen für einen bestimmten Workflow enthält, der durch die <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId>-Eigenschaft identifiziert wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Activities.Tracking.CancelRequestedQuery>  
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.Activities.Tracking.CancelRequestedQuery>
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

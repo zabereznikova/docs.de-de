@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 02d151ee322cb2793df6f31e5e4b72dfb1027aec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d17ded99e08fa4fb99fd87e220045c2869a35805
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522855"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372407"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 In diesem Beispiel wird veranschaulicht, wie die Serialisierungs- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>-Klasse angepasst werden können. In diesem Beispiel wird gezeigt, wie bekannte Typen während der Serialisierung und Deserialisierung dynamisch hinzugefügt werden.  
@@ -15,7 +15,7 @@ In diesem Beispiel wird veranschaulicht, wie die Serialisierungs- und Deserialis
 ## <a name="sample-details"></a>Beispieldetails  
  Dieses Beispiel besteht aus vier Projekten. Eines davon entspricht dem Dienst, der von IIS gehostet werden soll und im folgenden Dienstvertrag definiert ist.  
   
-```  
+```csharp
 // Definition of a service contract.  
 [ServiceContract(Namespace = "http://Microsoft.Samples.KAA")]  
 [KnownAssembly("Types")]  
@@ -40,7 +40,7 @@ public interface IDataContractCalculator
   
  Der Dienstvertrag wird wie im folgenden Code gezeigt implementiert.  
   
-```  
+```csharp
 // Service class that implements the service contract.  
  public class DataContractCalculatorService : IDataContractCalculator  
  {  
@@ -86,7 +86,7 @@ public interface IDataContractCalculator
   
  Ein anderes Projekt entspricht dem Client, der mit dem Server kommuniziert und die Methoden aufruft, die damit verfügbar gemacht werden. Die Definition des Clients wird im folgenden Beispiel dargestellt.  
   
-```  
+```csharp  
  // Client implementation code.  
  class Client  
  {  
@@ -193,7 +193,7 @@ public interface IDataContractCalculator
   
  Im folgenden Beispiel wird der in diesem Beispiel definierte `DataContractResolver` dargestellt.  
   
-```  
+```csharp
 public class MyDataContractResolver : DataContractResolver  
     {  
        Dictionary<string, XmlDictionaryString> dictionary = new Dictionary<string, XmlDictionaryString>();  
@@ -277,7 +277,7 @@ public class MyDataContractResolver : DataContractResolver
   
  Die Bibliothek von Typen, die in diesem Beispiel verwendet wurde, wird im folgenden Beispiel dargestellt.  
   
-```  
+```csharp 
  [DataContract]  
  public class ComplexNumber  
  {  
@@ -324,7 +324,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  Bei der Erstellung und Ausführung des Beispiels wird die folgende Ausgabe im Client erwartet:  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
   

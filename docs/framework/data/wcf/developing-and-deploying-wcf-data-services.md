@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: cf1782eaf54701f0cf93576325b3d46e8bc4d3f1
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261510"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372428"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
 
@@ -80,9 +80,9 @@ Beachten Sie beim Entwickeln eines Datendiensts die folgenden Hinweise:
 
 -   Ein HTTP-Überprüfungsprogramm kann beim Debuggen eines Datendiensts hilfreich sein, da es Ihnen die Möglichkeit bietet, den Inhalt von Anforderungs- und Antwortnachrichten zu überprüfen. Zum Überprüfen von HTTP-Anforderungen an den Datendienst und HTTP-Antworten vom Datendienst kann eine beliebige Netzwerkpaketanalyse verwendet werden, die die Anzeige von Rohpaketen unterstützt.
 
--   Beim Debuggen eines Datendiensts möchten Sie möglicherweise mehr Informationen zu einem Fehler vom Datendienst erhalten als während der normalen Ausführung. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. Weitere Informationen finden Sie im Beitrag [Debuggen von WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Sie können auch die Ablaufverfolgung in WCF an, die in der HTTP-Messagingebene ausgelöste Ausnahmen anzeigen aktivieren. Weitere Informationen finden Sie unter [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
+-   Wenn Sie einen Datendienst zu debuggen, empfiehlt es sich um weitere Informationen zu einem Fehler vom Datendienst als während des normalen Betriebs zu erhalten. Sie können zusätzliche Fehlerinformationen vom Datendienst abrufen, indem Sie die <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> -Eigenschaft in der <xref:System.Data.Services.DataServiceConfiguration> auf `true` festlegen und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> -Eigenschaft des <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Attributs der Datendienstklasse auf `true`festlegen. Weitere Informationen finden Sie im Beitrag [Debuggen von WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Sie können auch die Ablaufverfolgung in WCF an, die in der HTTP-Messagingebene ausgelöste Ausnahmen anzeigen aktivieren. Weitere Informationen finden Sie unter [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
--   Ein Datendienst wird in der Regel als entwickelt eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendungsprojekt, aber Sie können außerdem erstellen Sie Data Service als ein [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Websiteprojekt in Visual Studio. Weitere Informationen zu den Unterschieden zwischen den zwei Projekttypen finden Sie unter [NIB: von Webanwendungsprojekten und Websiteprojekten in Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
+-   Ein Datendienst wird in der Regel als entwickelt eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendungsprojekt, aber Sie können außerdem erstellen Sie Data Service als ein [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Websiteprojekt in Visual Studio. Informationen über die Unterschiede zwischen den zwei Projekttypen finden Sie unter [NIB: Vergleich von Webanwendungsprojekten und Websiteprojekten in Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
 
 -   Wenn Sie einen Datendienst erstellen, mit der **neues Element hinzufügen** Dialogfeld in Visual Studio den Datendienst gehostet wird [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] in IIS. Dies ( [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] und IIS) ist zwar der Standardhost für einen Datendienst, es werden jedoch auch andere Hostingoptionen unterstützt. Weitere Informationen finden Sie unter [Hosting des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
@@ -102,11 +102,11 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
     -   **Bereitstellungstechnologien für ASP.NET-Websites**
 
-        -   [Tool zum Kopieren von Websites](https://msdn.microsoft.com/library/b819aed4-014b-427e-be80-02317b1bb003)
+        -   [Tool "Website kopieren"](https://msdn.microsoft.com/library/b819aed4-014b-427e-be80-02317b1bb003)
 
-        -   [Website-Tool "Veröffentlichen"](https://msdn.microsoft.com/library/d0a1a20f-15be-4940-9485-cb8e4aa8181b)
+        -   [Tool "Website veröffentlichen"](https://msdn.microsoft.com/library/d0a1a20f-15be-4940-9485-cb8e4aa8181b)
 
-        -   [Mithilfe von XCopy](https://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)
+        -   [XCopy](https://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)
 
      Weitere Informationen zu den Optionen für die Bereitstellung einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung finden Sie unter [Web-Bereitstellungsübersicht für Visual Studio und ASP.NET](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).
 
@@ -121,7 +121,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
 Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:
 
--   Wenn Sie einen Datendienst bereitstellen, der den [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] -Anbieter verwendet, um auf eine SQL Server-Datenbank zuzugreifen, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienstbereitstellung weitergeben. Visual Studio kann automatisch Skripts (SQL-Dateien) klicken Sie hierzu in der Zieldatenbank erstellen und diese Skripts eingefügt werden können, in das Webbereitstellungspaket einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendung. Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen einer Datenbank mit einem Webanwendungsprojekt](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Für eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Website Sie hierzu mit der **Datenbankveröffentlichungs-Assistent** in Visual Studio. Weitere Informationen finden Sie unter [Bereitstellen einer Datenbank mit dem Datenbankveröffentlichungs-Assistenten](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).
+-   Wenn Sie einen Datendienst bereitstellen, der den [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] -Anbieter verwendet, um auf eine SQL Server-Datenbank zuzugreifen, müssen Sie möglicherweise auch Datenstrukturen, Daten oder beides mit der Datendienstbereitstellung weitergeben. Visual Studio kann automatisch Skripts (SQL-Dateien) klicken Sie hierzu in der Zieldatenbank erstellen und diese Skripts eingefügt werden können, in das Webbereitstellungspaket einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendung. Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen einer Datenbank mit einem Webanwendungsprojekt](https://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Für eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Website Sie hierzu mit der **Datenbankveröffentlichungs-Assistent** in Visual Studio. Weitere Informationen finden Sie unter [Deploying a Database by Using the Database Publishing Wizard](https://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).
 
 -   Da WCF Data Services eine einfache WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen unter Windows Server unter IIS bereitgestellten Datendienst zu überwachen. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Datendiensts finden Sie im Beitrag [nachverfolgung von WCF Data Services mit Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

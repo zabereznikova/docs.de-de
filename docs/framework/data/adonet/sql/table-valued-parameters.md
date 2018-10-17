@@ -1,16 +1,16 @@
 ---
 title: Tabellenwertparameter
-ms.date: 03/30/2017
+ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042581"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374650"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus einer Clientanwendung nach SQL Server zu marshallen, ohne dass mehrere Roundtrips oder eine besondere serverseitige Logik für die Verarbeitung der Daten notwendig ist. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und diese Daten in einem einzelnen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die anschließend mit [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] bearbeitet werden kann.  
@@ -87,7 +87,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 ## <a name="configuring-a-sqlparameter-example"></a>Konfigurieren eines SqlParameter-Beispiels  
  <xref:System.Data.SqlClient> unterstützt das Auffüllen von Tabellenwertparametern aus <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> oder <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> Objekte. Mithilfe der <xref:System.Data.SqlClient.SqlParameter.TypeName%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlParameter> muss ein Typname für den Tabellenwertparameter angegeben werden. Der `TypeName` muss dem Namen eines kompatiblen Typs entsprechen, der zuvor auf dem Server erstellt wurde. Das folgende Codefragment zeigt, wie <xref:System.Data.SqlClient.SqlParameter> konfiguriert werden kann, um Daten einzufügen:  
-  
+ 
+Im folgenden Beispiel die `addedCategories` Variable enthält einen <xref:System.Data.DataTable>. Wie die Variable aufgefüllt wird, finden Sie unter den Beispielen in den nächsten Abschnitt [ein Table-Valued Parameter übergeben wird, an eine gespeicherte Prozedur](#passing).
+
 ```csharp  
 // Configure the command and parameter.  
 SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);  
@@ -126,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a>Übergeben eines Tabellenwertparameters an eine gespeicherte Prozedur  
+## <a name="passing"></a> Übergeben einen Tabellenwertparameter an einer gespeicherten Prozedur  
  In diesem Beispiel wird veranschaulicht, wie Daten eines Tabellenwertparameters an eine gespeicherte Prozedur übergeben werden. Der Code ruft hinzugefügte Zeilen mithilfe der <xref:System.Data.DataTable>-Methode in eine neue <xref:System.Data.DataTable.GetChanges%2A> ab. Anschließend definiert der Code einen <xref:System.Data.SqlClient.SqlCommand>, mit dem die <xref:System.Data.SqlClient.SqlCommand.CommandType%2A>-Eigenschaft auf <xref:System.Data.CommandType.StoredProcedure> festgelegt wird. Der <xref:System.Data.SqlClient.SqlParameter> wird mit der <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A>-Methode aufgefüllt, und der <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> wird auf `Structured` festgelegt. Der <xref:System.Data.SqlClient.SqlCommand> wird dann mithilfe der <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>-Methode ausgeführt.  
   
 ```csharp  

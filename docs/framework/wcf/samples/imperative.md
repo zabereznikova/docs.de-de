@@ -2,12 +2,12 @@
 title: Imperativ
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: 9039e2f0d13baefb8b0c2abcfb63dd11ce15ffd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7547e3ed3d573cccce068aec239710e76d29bf38
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510725"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370938"
 ---
 # <a name="imperative"></a>Imperativ
 In diesem Beispiel wird veranschaulicht, wie zum Definieren einer <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> für einen Dienst mithilfe von Code, anstatt die `wsHttpBinding` -Bindung in der Konfiguration. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert.  
@@ -17,7 +17,7 @@ In diesem Beispiel wird veranschaulicht, wie zum Definieren einer <<!--zz xref:S
   
  Der folgende Code zeigt, wie eine Bindung imperativ im Code definiert wird.  
   
-```  
+```csharp
 public static void Main()  
 {  
     WSHttpBinding binding = new WSHttpBinding();  
@@ -52,7 +52,7 @@ public static void Main()
   
  Der Client erstellt einen Kanal, um mit dem Dienst zu kommunizieren, wie im folgenden Beispielcode gezeigt.  
   
-```  
+```csharp
 WSHttpBinding binding = new WSHttpBinding();  
 binding.Name = "binding1";  
 binding.HostNameComparisonMode = HostNameComparisonMode.StrongWildcard;  
@@ -68,7 +68,7 @@ ICalculator channel = channelFactory.CreateChannel();
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

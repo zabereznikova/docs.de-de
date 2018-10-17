@@ -1,32 +1,33 @@
 ---
-title: Verbindungszeichenfolgen
-ms.date: 03/30/2017
+title: Verbindungszeichenfolgen in ADO.NET Entity Framework
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842177"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372485"
 ---
-# <a name="connection-strings"></a>Verbindungszeichenfolgen
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>Verbindungszeichenfolgen in ADO.NET Entity Framework
 Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Parameter von einem Datenanbieter an eine Datenquelle übergeben werden. Die Syntax ist abhängig vom Datenanbieter, und die Verbindungszeichenfolge wird beim Versuch analysiert, eine Verbindung herzustellen. Von Entity Framework verwendete Verbindungszeichenfolgen enthalten Informationen zum Herstellen einer Verbindung mit dem zugrunde liegenden ADO.NET-Datenanbieter, der Entity Framework unterstützt. Sie enthalten auch Informationen zu den erforderlichen Modell- und Zuordnungsdateien.  
   
  Der EntityClient-Anbieter verwendet die Verbindungszeichenfolge für den Zugriff auf Modell- und Zuordnungsmetadaten sowie zum Herstellen einer Verbindung mit der Datenquelle. Mithilfe der <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>-Eigenschaft der <xref:System.Data.EntityClient.EntityConnection> kann auf die Verbindungszeichenfolge zugegriffen und diese festgelegt werden. Mit der <xref:System.Data.EntityClient.EntityConnectionStringBuilder>-Klasse können Parameter in der Verbindungszeichenfolge programmgesteuert erstellt werden, sie ermöglicht auch den Zugriff auf diese Parameter. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer EntityConnection-Verbindungszeichenfolge](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  Die [Entity Data Model-Tools](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) generieren eine Verbindungszeichenfolge, die in der Konfigurationsdatei der Anwendung gespeichert ist. <xref:System.Data.Objects.ObjectContext> ruft diese Verbindungsinformationen beim Erstellen von Objektabfragen automatisch ab. Auf die <xref:System.Data.EntityClient.EntityConnection>, die von einer <xref:System.Data.Objects.ObjectContext>-Instanz verwendet wird, kann von der <xref:System.Data.Objects.ObjectContext.Connection%2A>-Eigenschaft aus zugegriffen werden. Weitere Informationen finden Sie unter [Verwalten von Verbindungen und Transaktionen](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
-  
+
+## <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
+
+Über die allgemeine Syntax für Verbindungszeichenfolgen finden Sie unter [Verbindungszeichenfolgensyntax | Verbindungszeichenfolgen in ADO.NET](../connection-strings.md#connection-string-syntax).
+
 ## <a name="connection-string-parameters"></a>Parameter der Verbindungszeichenfolge  
- Das Format einer Verbindungszeichenfolge besteht aus einer durch Semikolons getrennten Liste mit Schlüssel-Wert-Parameterpaaren:  
-  
- `keyword1=value; keyword2=value;`  
-  
- Ein Gleichheitszeichen (=) verbindet jedes Schlüsselwort mit seinem Wert. Bei den Schlüsselwörtern spielt die Groß- und Kleinschreibung keine Rolle, und Leerzeichen zwischen den Schlüssel-Wert-Paaren werden ignoriert. Je nach Datenquelle ist jedoch bei den Werten auf die Groß-/Kleinschreibung zu achten. Alle Werte, die ein Semikolon, ein einfaches oder ein doppeltes Anführungszeichen enthalten, müssen in doppelte Anführungszeichen eingeschlossen werden. Die folgende Tabelle enthält die gültigen Namen für Schlüsselwortwerte im <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+
+Die folgende Tabelle enthält die gültigen Namen für Schlüsselwortwerte im <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
 |Schlüsselwort|Beschreibung|  
 |-------------|-----------------|  
 |`Provider`|Erforderlich, wenn das Schlüsselwort `Name` nicht angegeben ist. Der Anbietername, mit dem das <xref:System.Data.Common.DbProviderFactory>-Objekt für den zugrunde liegenden Anbieter abgerufen wird. Dieser Wert ist konstant.<br /><br /> Wenn in einer Entitätsverbindungszeichenfolge nicht das Schlüsselwort `Name` eingefügt wurde, ist für das Schlüsselwort `Provider` ein nicht leerer Wert erforderlich. Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.|  
-|`Provider Connection String`|Dies ist optional. Gibt die anbieterspezifische Verbindungszeichenfolge an, die an die zugrunde liegende Datenquelle übergeben wird. Diese Verbindungszeichenfolge wird mithilfe gültiger Schlüsselwort-Wert-Paare für den Datenanbieter ausgedrückt. Eine ungültige `Provider Connection String` löst bei der Auswertung durch die Datenquelle einen Laufzeitfehler aus.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.<br /><br /> Der Wert der `Provider Connection String` muss durch Anführungszeichen eingeschlossen sein. Im Folgenden finden Sie ein Beispiel dazu:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> Das folgende Beispiel ist nicht funktionsfähig:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|Dies ist optional. Gibt die anbieterspezifische Verbindungszeichenfolge an, die an die zugrunde liegende Datenquelle übergeben wird. Diese Verbindungszeichenfolge enthält gültige Schlüsselwort-Wert-Paare für den Datenanbieter an. Eine ungültige `Provider Connection String` löst bei der Auswertung durch die Datenquelle einen Laufzeitfehler aus.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.<br /><br /> Stellen Sie sicher, dass den Wert entsprechend die allgemeine Syntax von Escapezeichen [ADO.NET Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/connection-strings.md). Betrachten Sie beispielsweise die folgende Verbindungszeichenfolge: `Server=serverName; User ID = userID`. Sie müssen mit Escapezeichen versehen, da sie ein Semikolon enthält. Da es keine doppelten Anführungszeichen enthält, können sie für das Escapezeichen verwendet werden:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|Erforderlich, wenn das Schlüsselwort `Name` nicht angegeben ist. Eine durch senkrechte Striche getrennte Liste von Verzeichnissen, Dateien und Ressourcenspeicherorten, die nach Metadaten und Mappinginformationen durchsucht werden sollen. Im Folgenden finden Sie ein Beispiel dazu:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Leerzeichen zu beiden Seiten des senkrechten Strichs werden ignoriert.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.|  
 |`Name`|Der Verbindungsname kann von der Anwendung optional in einer Anwendungskonfigurationsdatei angegeben werden, die die erforderlichen Verbindungszeichenfolgen-Werte mit den Schlüsselwort-Wert-Paaren enthält. In diesem Fall können diese nicht direkt in der Verbindungszeichenfolge bereitgestellt werden. Das Schlüsselwort `Name` ist in einer Konfigurationsdatei nicht zulässig.<br /><br /> Wenn das Schlüsselwort `Name` in der Verbindungszeichenfolge nicht eingefügt wurde, ist für das Provider-Schlüsselwort ein nicht leerer Wert erforderlich.<br /><br /> Dieses Schlüsselwort und alle anderen Schlüsselwörter für Verbindungszeichenfolgen schließen sich gegenseitig aus.|  
   
