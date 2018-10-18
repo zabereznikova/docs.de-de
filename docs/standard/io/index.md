@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025596"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372030"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -122,7 +122,7 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
 ## <a name="isolated-storage"></a>Isolierte Speicherung  
  Isolierte Speicherung ist ein Mechanismus zur Datenspeicherung, der Isolation und Sicherheit gewährleistet. Dies wird durch die Definition standardisierter Verknüpfungen von Code mit gespeicherten Daten ermöglicht. Der Speicher enthält ein virtuelles Dateisystem, das nach Benutzer, Assembly und Domäne (optional) isoliert ist. Ein isolierter Speicher ist besonders nützlich, wenn Ihre Anwendung keine Berechtigung für den Zugriff auf Benutzerdateien hat. Sie können die Einstellungen oder Dateien für die Anwendung so speichern, dass eine Kontrolle durch die Sicherheitsrichtlinien des Computers gewährleistet ist.  
   
- Die isolierte Speicherung ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im [Windows.Storage](/uwp/api/Windows.Storage)-Namespace. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
+ Isolierter Speicher ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace. Weitere Informationen finden Sie unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917%28v=win.10%29).  
   
  Die folgenden Klassen werden häufig zum Implementieren isolierter Speicher verwendet:  
   
@@ -139,13 +139,13 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
   
  Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden:  
   
--   Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx)-Namespace der [!INCLUDE[wrt](../../../includes/wrt-md.md)], z. B. [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) und [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Typen, mit speziellem Bezug auf Dateivorgänge, z. B. <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> und <xref:System.IO.DirectoryInfo>, sind im [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] nicht enthalten. Verwenden Sie stattdessen die Typen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace von [!INCLUDE[wrt](../../../includes/wrt-md.md)], wie z.B. <xref:Windows.Storage.StorageFile> und <xref:Windows.Storage.StorageFolder>.  
   
 -   Die isolierte Speicherung ist nicht verfügbar. Verwenden Sie stattdessen [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Verwenden Sie asynchrone Methoden, wie <xref:System.IO.Stream.ReadAsync%2A> und <xref:System.IO.Stream.WriteAsync%2A>, um zu verhindern, dass UI-Threads blockiert werden.  
   
--   Die auf einem Pfad basierenden Komprimierungstypen <xref:System.IO.Compression.ZipFile> und <xref:System.IO.Compression.ZipFileExtensions> sind nicht verfügbar. Verwenden Sie stattdessen die Typen im [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx)-Namespace.  
+-   Die auf einem Pfad basierenden Komprimierungstypen <xref:System.IO.Compression.ZipFile> und <xref:System.IO.Compression.ZipFileExtensions> sind nicht verfügbar. Verwenden Sie stattdessen die Typen im <xref:Windows.Storage.Compression?displayProperty=nameWithType>-Namespace.  
   
  Sie können .NET Framework-Streams in Windows-Runtime-Streams konvertieren und umgekehrt, falls erforderlich. Weitere Informationen finden Sie unter [Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) oder [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
@@ -164,7 +164,7 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
   
  Stellt eine Liste von E/A-Aufgaben bereit, die Dateien, Verzeichnissen und Streams zugeordnet sind, und verknüpft jede Aufgabe mit relevanten Inhalten und Beispielen.  
   
--   [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)  
+-   [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
   
  Beschreibt die Leistungsvorteile und den grundlegenden Ablauf der asynchronen E/A.  
   

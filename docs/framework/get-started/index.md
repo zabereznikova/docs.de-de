@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522329"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349068"
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
@@ -67,7 +67,7 @@ Wenn Sie ein Entwickler sind, können Sie Apps in jeder beliebigen Programmiersp
 
 Gehen Sie beim Entwickeln von .NET Framework-Apps oder -Komponenten folgendermaßen vor:
 
-1. Wenn sie nicht bereits auf dem Betriebssystem vorinstalliert ist, installieren Sie die für die App erforderliche Version von .NET Framework. Die neueste Produktionsversion ist .NET Framework 4.7.2, die mit dem Windows 10-Update vom 10. April 2018 vorinstalliert wird und in älteren Versionen des Windows-Betriebssystems zum Download verfügbar ist. Informationen zu den Systemanforderungen von .NET Framework finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md). Informationen zum Installieren anderer Versionen von .NET Framework finden Sie im [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md). Zusätzliche .NET Framework-Pakete werden Out-of-Band freigegeben, das bedeutet, dass sie auf fortlaufender Basis außerhalb aller regulären oder geplanten Freigabezyklen freigegeben werden. Weitere Informationen zu diesen Paketen finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Wenn sie nicht bereits auf dem Betriebssystem vorinstalliert ist, installieren Sie die für die App erforderliche Version von .NET Framework. Die neueste Produktionsversion ist .NET Framework 4.7.2. Diese Version ist bei den Windows 10-Updates vom April 2018 und Oktober 2018 vorinstalliert und steht für ältere Versionen des Windows-Betriebssystems zum Download zur Verfügung. Informationen zu den Systemanforderungen von .NET Framework finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md). Informationen zum Installieren anderer Versionen von .NET Framework finden Sie im [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md). Zusätzliche .NET Framework-Pakete werden Out-of-Band freigegeben, das bedeutet, dass sie auf fortlaufender Basis außerhalb aller regulären oder geplanten Freigabezyklen freigegeben werden. Weitere Informationen zu diesen Paketen finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und C++/CLI von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=199862).)
 
