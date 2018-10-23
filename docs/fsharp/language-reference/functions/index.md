@@ -1,6 +1,6 @@
 ---
 title: Funktionen (F#)
-description: Informationen Sie zu Funktionen in f# und wie f# gemeinsamen Konstrukte der funktionalen Programmierung unterstützt.
+description: Informationen Sie zu Funktionen in F# und wie F# gemeinsamen Konstrukte der funktionalen Programmierung unterstützt.
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
 ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
