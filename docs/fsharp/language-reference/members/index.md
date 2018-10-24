@@ -1,6 +1,6 @@
 ---
 title: Member (F#)
-description: Erfahren Sie Member des Objekts in der Programmiersprache f#.
+description: Erfahren Sie Member des Objekts in der Programmiersprache F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6dcdb1d7fa061fb838d4aa8f7a2912fd168c3781
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d

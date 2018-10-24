@@ -1,6 +1,6 @@
 ---
 title: Symbol- und Operatorenreferenz (F#)
-description: Informationen Sie zu den Symbolen und Operatoren, die in der Programmiersprache f# verwendet werden.
+description: Informationen Sie zu den Symbolen und Operatoren, die in der Programmiersprache F# verwendet werden.
 ms.date: 04/04/2018
 ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
 ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933

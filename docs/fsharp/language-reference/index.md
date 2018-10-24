@@ -11,7 +11,7 @@ ms.locfileid: "45646414"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
-Dieser Abschnitt ist ein Verweis auf die Sprache f#, eine Multi-Paradigma-Programmiersprache für .NET. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
+Dieser Abschnitt ist ein Verweis auf die Sprache F#, eine Multi-Paradigma-Programmiersprache für .NET. Die Sprache F# unterstützt funktionale, objektorientierte und imperative Programmiermodelle.
 
 ## <a name="f-tokens"></a>F#-Token
 
@@ -59,7 +59,7 @@ Die folgende Tabelle enthält verfügbare Referenzthemen, die von F# unterstütz
 |Titel|Beschreibung|
 |-----|-----------|
 |[Werte](values/index.md)|Beschreibt Werte, die unveränderliche Mengen darstellen und einen bestimmten Typ aufweisen. Werte können Ganzzahlen oder Gleitkommazahlen, Zeichen oder Text, Listen, Sequenzen, Arrays, Tupeln, Unterscheidungs-Unions, Datensätze, Klassentypen oder Funktionswerte sein.|
-|[Grundlegende Typen](basic-types.md)|Beschreibt die grundlegenden grundlegenden Typen, die in der Sprache f# verwendet werden. Darüber hinaus werden die entsprechenden Typen in .NET und die minimalen und maximalen Werte für jeden Typ bereitgestellt.|
+|[Grundlegende Typen](basic-types.md)|Beschreibt die grundlegenden grundlegenden Typen, die in der Sprache F# verwendet werden. Darüber hinaus werden die entsprechenden Typen in .NET und die minimalen und maximalen Werte für jeden Typ bereitgestellt.|
 |[Unit-Typ](unit-type.md)|Beschreibt den `unit`-Typ, der ein Typ ist, der das Fehlen eines bestimmten Werts beschreibt; der `unit`-Typ verfügt nur über einen einzigen Wert, der als Platzhalter fungiert, wenn kein anderer Wert vorhanden oder erforderlich ist.|
 |[Zeichenfolgen](strings.md)|Beschreibt Zeichenfolgen in F#. Die `string`-Typ stellt unveränderlichen Text als eine Sequenz von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET Framework.|
 |[Tupel](tuples.md)|Beschreibt Tupel, die Gruppierungen unbenannter aber sortierter Werte möglicher unterschiedlicher Typen sind.|

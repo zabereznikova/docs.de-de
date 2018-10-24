@@ -1,6 +1,6 @@
 ---
 title: F# Interactive-Referenz (fsi.exe)
-description: Erfahren Sie, wie f# Interactive (fsi.exe) interaktiv Ausführungsintervall f#-Code in der Konsole oder zum Ausführen von F#-Skripts verwendet wird.
+description: Erfahren Sie, wie F# Interactive (fsi.exe) interaktiv Ausführungsintervall F#-Code in der Konsole oder zum Ausführen von F#-Skripts verwendet wird.
 ms.date: 05/16/2016
 ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
@@ -91,5 +91,5 @@ test
 
 |Titel|Beschreibung|
 |-----|-----------|
-|[F# Interactive-Optionen](../../language-reference/fsharp-interactive-options.md)|Beschreibt die Befehlszeilensyntax und Optionen für f# Interactive, fsi.exe.|
+|[F# Interactive-Optionen](../../language-reference/fsharp-interactive-options.md)|Beschreibt die Befehlszeilensyntax und Optionen für F# Interactive, fsi.exe.|
 |[Referenz zur F# Interactive-Bibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Beschreibt die beim Ausführen von Code in F# Interactive verfügbare Bibliotheksfunktion.|

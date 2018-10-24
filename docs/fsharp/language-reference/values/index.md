@@ -1,6 +1,6 @@
 ---
 title: Werte (F#)
-description: Erfahren Sie, wie Werte in f# Mengen sind, die einen bestimmten Typ aufweisen.
+description: Erfahren Sie, wie Werte in F# Mengen sind, die einen bestimmten Typ aufweisen.
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
 ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
