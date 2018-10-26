@@ -3,8 +3,9 @@
   "need_preview_pull_request": true,
   "need_pr_comments": false,
   "need_generate_pdf_url_template": false,
+  "git_repository_branch_open_to_public_contributors": "live",
   "need_generate_pdf": false,
- "continue_with_document_error": true,
+  "continue_with_document_error": true,
   "contribution_branch_mappings": {
     "live-sxs": "live"
   },
@@ -123,12 +124,12 @@
     {
       "path_to_root": "_csharplang",
       "url": "https://github.com/dotnet/csharplang.de-de",
-      "branch": "master"
+      "branch": "live"
     },
     {
       "path_to_root": "_vblang",
       "url": "https://github.com/dotnet/vblang.de-de",
-      "branch": "master"
+      "branch": "live"
     },
     {
       "path_to_root": "_repo.en-us",
