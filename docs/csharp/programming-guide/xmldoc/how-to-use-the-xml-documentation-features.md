@@ -14,7 +14,7 @@ ms.locfileid: "45514442"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="4feff-102">Vorgehensweise: Verwenden der XML-Dokumentationsfeatures</span><span class="sxs-lookup"><span data-stu-id="4feff-102">How to: Use the XML documentation features</span></span>
 
-<span data-ttu-id="4feff-103">Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der dokumentierten wurde.</span><span class="sxs-lookup"><span data-stu-id="4feff-103">The following sample provides a basic overview of a type that has been documented.</span></span>
+<span data-ttu-id="4feff-103">Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der dokumentiert wurde.</span><span class="sxs-lookup"><span data-stu-id="4feff-103">The following sample provides a basic overview of a type that has been documented.</span></span>
 
 ## <a name="example"></a><span data-ttu-id="4feff-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="4feff-104">Example</span></span>
 
@@ -112,7 +112,7 @@ ms.locfileid: "45514442"
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-<span data-ttu-id="4feff-108">Mit diesem Befehl wird die XML-Datei *XMLsample.xml* erstellt, den Sie in Ihrem Browser oder mithilfe des TYPE-Befehls anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="4feff-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
+<span data-ttu-id="4feff-108">Mit diesem Befehl wird die XML-Datei *XMLsample.xml* erstellt, die Sie in Ihrem Browser oder mithilfe des TYPE-Befehls anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="4feff-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
 
 ## <a name="robust-programming"></a><span data-ttu-id="4feff-109">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="4feff-109">Robust programming</span></span>
 
