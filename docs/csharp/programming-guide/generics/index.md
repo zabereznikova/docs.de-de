@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 638612a0ece8e701b088c97e5dfc49362e6d6419
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9aa57fd31b8d969bbbbf4329a028007f42d3e097
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506080"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042310"
 ---
 # <a name="generics-c-programming-guide"></a>Generika (C#-Programmierhandbuch)
 Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (CLR) hinzugefügt. Generika führen in .NET Framework das Konzept der Typparameter ein, wodurch Sie Klassen und Methoden entwerfen können, die die Spezialisierung einer oder mehr Typen verzögern können, bis die Klasse oder Methode vom Clientcode deklariert und instanziiert wird. Indem Sie z.B. einen generischen Parameter „T“ verwenden, können Sie eine einzelne Klasse schreiben, die anderer Clientcode verwenden kann, ohne die Kosten und Risiken von Umwandlungen zur Laufzeit oder Boxingvorgängen einzugehen, wie folgendermaßen gezeigt wird:  
@@ -57,7 +57,7 @@ Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (
 -   [Generika zur Laufzeit](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- Weitere Informationen erhalten Sie unter [C#-Sprachspezifikation](../../../csharp/language-reference/language-specification/index.md).  
+ Weitere Informationen erhalten Sie unter [C#-Sprachspezifikation](~/_csharplang/spec/types.md#constructed-types).  
   
 ## <a name="see-also"></a>Siehe auch
 

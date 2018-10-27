@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 4452ad2445f81659d04bca3d64885148895aeb88
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372030"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046748"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.  
@@ -122,7 +122,7 @@ Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Wi
 ## <a name="isolated-storage"></a>Isolierte Speicherung  
  Isolierte Speicherung ist ein Mechanismus zur Datenspeicherung, der Isolation und Sicherheit gewährleistet. Dies wird durch die Definition standardisierter Verknüpfungen von Code mit gespeicherten Daten ermöglicht. Der Speicher enthält ein virtuelles Dateisystem, das nach Benutzer, Assembly und Domäne (optional) isoliert ist. Ein isolierter Speicher ist besonders nützlich, wenn Ihre Anwendung keine Berechtigung für den Zugriff auf Benutzerdateien hat. Sie können die Einstellungen oder Dateien für die Anwendung so speichern, dass eine Kontrolle durch die Sicherheitsrichtlinien des Computers gewährleistet ist.  
   
- Isolierter Speicher ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace. Weitere Informationen finden Sie unter [Anwendungsdaten](/previous-versions/windows/apps/hh464917%28v=win.10%29).  
+ Isolierter Speicher ist für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps nicht verfügbar. Verwenden Sie stattdessen Anwendungsdatenklassen im <xref:Windows.Storage?displayProperty=nameWithType>-Namespace. Weitere Informationen finden Sie unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).  
   
  Die folgenden Klassen werden häufig zum Implementieren isolierter Speicher verwendet:  
   

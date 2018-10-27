@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Micr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047697"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices: Architektur für .NET-Containeranwendungen
 
@@ -27,9 +27,9 @@ Um den Einstieg einfacher zu gestalten, konzentriert sich der Leitfaden auf eine
 
 * Klonen/forken Sie die Referenzanwendung [eShopOnContainers on GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
  
-* Sehen Sie das [Einführungsvideo auf Channel 9](http://aka.ms/microservices-video) an.
+* Sehen Sie das [Einführungsvideo auf Channel 9](https://aka.ms/microservices-video) an.
 
-* Lernen Sie die [Microservicearchitektur](http://aka.ms/MicroservicesArchitecture) unmittelbar kennen.
+* Lernen Sie die [Microservicearchitektur](https://aka.ms/MicroservicesArchitecture) unmittelbar kennen.
 
 ## <a name="introduction"></a>Einführung
 

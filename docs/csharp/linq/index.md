@@ -3,12 +3,12 @@ title: Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) in C#
 description: Einführung in die Language Integrated Query (LINQ) in C#
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 89630245a33c03851c7607b3b299eb7b9c477177
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404579"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038421"
 ---
 # <a name="language-integrated-query-linq"></a>Sprachintegrierte Abfrage (Language-Integrated Query, LINQ)
 
@@ -30,7 +30,7 @@ Das folgende Beispiel zeigt den vollständigen Abfragevorgang. Der vollständige
 
 - Eine Abfrage wird erst ausgeführt, wenn Sie die Abfragevariable durchlaufen, z.B. in einer `foreach`-Anweisung. Weitere Informationen finden Sie unter [Einführung in LINQ-Abfragen](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
-- Zur Kompilierzeit werden Abfrageausdrücke gemäß den in der C#-Spezifikation festgelegten Regeln in Methodenaufrufe des Standardabfrageoperators konvertiert. Jede Abfrage, die mithilfe der Abfragesyntax ausgedrückt werden kann, kann auch mithilfe der Methodensyntax ausgedrückt werden. In den meisten Fällen ist aber die Abfragesyntax präziser und besser lesbar. Weitere Informationen finden Sie unter [Spezifikation für die Sprache C#](../language-reference/language-specification/index.md) und [Übersicht über Standardabfrageoperatoren](../programming-guide/concepts/linq/standard-query-operators-overview.md).
+- Zur Kompilierzeit werden Abfrageausdrücke gemäß den in der C#-Spezifikation festgelegten Regeln in Methodenaufrufe des Standardabfrageoperators konvertiert. Jede Abfrage, die mithilfe der Abfragesyntax ausgedrückt werden kann, kann auch mithilfe der Methodensyntax ausgedrückt werden. In den meisten Fällen ist aber die Abfragesyntax präziser und besser lesbar. Weitere Informationen finden Sie unter [Spezifikation für die Sprache C#](~/_csharplang/spec/expressions.md#query-expressions) und [Übersicht über Standardabfrageoperatoren](../programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 - Beim Schreiben von LINQ-Abfragen empfiehlt sich diese Faustregel: Verwenden Sie die Abfragesyntax, wann immer es möglich ist, und verwenden Sie die Methodensyntax nur, wenn es nötig ist. Zwischen den beiden Formen gibt es keine semantischen oder leistungsbezogenen Unterschiede. Abfrageausdrücke sind oft besser lesbar als die entsprechenden in der Methodensyntax geschriebenen Ausdrücke.
 

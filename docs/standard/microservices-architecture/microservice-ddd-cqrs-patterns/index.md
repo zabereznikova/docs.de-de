@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Umg
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/06/2018
-ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 1af53f8f37e516219767fdde49eb7da9927d9e29
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874386"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50047266"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Umgang mit komplexen Geschäftsabläufen in einem Microservice mit DDD- und CQRS-Mustern
 
@@ -66,7 +66,7 @@ DDD ist ein umfangreiches Thema, bei dem es einen umfangreichen Satz von Ressour
 DDD-Training
 
 -   **Julie Lerman and Steve Smith. Domain-Driven Design Fundamentals (Grundlagen des domänengesteuerten Designs)**
-    [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
+    [*https://bit.ly/PS-DDD*](https://bit.ly/PS-DDD)
 
 
 >[!div class="step-by-step"]

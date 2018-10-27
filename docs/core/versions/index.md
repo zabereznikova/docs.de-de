@@ -4,12 +4,12 @@ description: Informationen zur Versionierung in .NET Core
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518601"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047435"
 ---
 # <a name="net-core-versioning"></a>.NET Core-Versionskontrolle
 
@@ -43,7 +43,7 @@ Weitere Details finden Sie im ursprünglichen Vorschlag im Repository [dotnet/de
 
 ## <a name="semantic-versioning"></a>Semantische Versionierung
 
-Die .NET Core *Runtime* verwendet im Großen und Ganzen die [semantische Versionierung (SemVer)](http://semver.org/) und übernimmt die Verwendung der `MAJOR.MINOR.PATCH`-Versionierung mithilfe der verschiedenen Teile der Versionsnummer, um den Grad und den Typ der Änderung zu beschreiben.
+Die .NET Core *Runtime* verwendet im Großen und Ganzen die [semantische Versionierung (SemVer)](https://semver.org/) und übernimmt die Verwendung der `MAJOR.MINOR.PATCH`-Versionierung mithilfe der verschiedenen Teile der Versionsnummer, um den Grad und den Typ der Änderung zu beschreiben.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]

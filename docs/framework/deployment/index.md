@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509653"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453228"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
 Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit Ihrer Anwendung zu beginnen. Die meisten der Informationen sind für Entwickler, OEM- und Organisationsadministratoren vorgesehen. Benutzer, die .NET Framework auf ihren Computern installieren möchten, sollten die Informationen unter [Installieren von .NET Framework](~/docs/framework/install/index.md) lesen.  
@@ -167,4 +167,4 @@ Dieser Artikel hilft Ihnen dabei, mit der Bereitstellung des .NET Framework mit 
 |[Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Beschreibt, wie der .NET Framework-Setupvorgang automatisch gestartet und nachverfolgt und dabei eine eigene Ansicht des Setupstatus angezeigt werden kann.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
+- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
