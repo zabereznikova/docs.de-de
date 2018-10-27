@@ -3,24 +3,24 @@ title: Leitfaden für F#
 description: Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für F#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird.
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480677"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188364"
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 
-Leitfaden für F# enthält zahlreiche Ressourcen für die Sprache F# erlernen.
+Leitfaden für f# enthält zahlreiche Ressourcen für die Sprache f# erlernen.
 
-## <a name="learning-f"></a>Erlernen von F# #
+## <a name="learning-f"></a>Erlernen von f# #
 
-[F#-neuerungen](what-is-fsharp.md) wird beschrieben, was die F#-Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit F# vertraut sind.
+[F#-neuerungen](what-is-fsharp.md) wird beschrieben, was die F#-Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit f# vertraut sind.
 
 Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Dies wird empfohlen, wenn Sie Core F#-Funktionen in Aktion sehen möchten.
 
-[Erste Schritte mit F# in Visual Studio](get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
+[Erste Schritte mit f# in Visual Studio](get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
 
 Lesen Sie [Erste Schritte mit F# in Visual Studio für Mac](get-started/get-started-with-visual-studio-for-mac.md), wenn Sie MacOS nutzen und eine Visual Studio-IDE verwenden möchten.
 
@@ -56,7 +56,7 @@ Das [Tutorial zu F# auf YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) (i
 
 Auf der [Website mit F#-Codeausschnitten](http://www.fssnip.net) (in englischer Sprache) werden vielfältige Codeausschnitte zu allen Aspekten von F# bereitgestellt. Interessant sowohl für F#-Einsteiger als auch für Fortgeschrittene.
 
-Die [F# Software Foundation Slack](http://fsharp.org/guides/slack/) (in englischer Sprache) ist für Einsteiger und Experten gleichermaßen hervorragend geeignet. Sie ist sehr aktiv und bietet die Möglichkeit zum Chat mit einigen der weltweit besten F#-Programmierer. Teilnahme dringend empfohlen!
+Die [F# Software Foundation Slack](https://fsharp.org/guides/slack/) (in englischer Sprache) ist für Einsteiger und Experten gleichermaßen hervorragend geeignet. Sie ist sehr aktiv und bietet die Möglichkeit zum Chat mit einigen der weltweit besten F#-Programmierer. Teilnahme dringend empfohlen!
 
 ## <a name="the-f-software-foundation"></a>Die F# Software Foundation
 
@@ -64,4 +64,4 @@ Wenngleich die Programmiersprache F# und alle zugehörigen Tools in Visual Studi
 
 Das Ziel der F# Software Foundation ist, die Programmiersprache F# zu fördern, zu schützen und weiterzuentwickeln sowie das Wachstum einer vielfältigen und internationalen Community von F#-Programmierern zu unterstützen.
 
-Um mehr zu erfahren und mitzumachen, besuchen Sie [fsharp.org](http://fsharp.org). Mitmachen ist kostenlos, und das Netzwerk der F#-Entwickler der Foundation ist etwas, das Sie garantiert nicht verpassen möchten!
+Um mehr zu erfahren und mitzumachen, besuchen Sie [fsharp.org](https://fsharp.org). Mitmachen ist kostenlos, und das Netzwerk der F#-Entwickler der Foundation ist etwas, das Sie garantiert nicht verpassen möchten!

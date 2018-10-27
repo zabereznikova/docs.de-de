@@ -2,14 +2,12 @@
 title: 'Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643064"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188320"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (Visual Basic)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwenden.  
@@ -18,7 +16,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
   
 1.  Öffnen Sie eine Eingabeaufforderung.  
   
-2.  Erstellen Sie eine Visual Basic-Datei mit dem Namen `friend_signed_A.` , den folgenden Code enthält. Der Code verwendet das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, um „friend_signed_B“ als Friend-Assembly zu deklarieren.  
+2.  Erstellen Sie eine Visual Basic-Datei mit dem Namen `friend_signed_A.` , die den folgenden Code enthält. Der Code verwendet das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, um „friend_signed_B“ als Friend-Assembly zu deklarieren.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -50,7 +48,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Erstellen Sie eine Visual Basic-Datei mit dem Namen `friend_unsigned_B` , den folgenden Code enthält. Da friend_unsigned_A friend_unsigned_B als Friend-Assembly angibt, kann der Code in friend_unsigned_B auf `Friend`-Typen und -Member aus friend_unsigned_A zugreifen.  
+4.  Erstellen Sie eine Visual Basic-Datei mit dem Namen `friend_unsigned_B` , die den folgenden Code enthält. Da friend_unsigned_A friend_unsigned_B als Friend-Assembly angibt, kann der Code in friend_unsigned_B auf `Friend`-Typen und -Member aus friend_unsigned_A zugreifen.  
   
     ```vb  
     ' friend_unsigned_B.vb  

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208580"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190748"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Entfernen Sie&gt; -Element für WebRequestModules (Netzwerkeinstellungen)
 Entfernt ein benutzerdefinierte Webanforderungsmodul aus der Anwendung an.  
@@ -56,13 +54,14 @@ Entfernt ein benutzerdefinierte Webanforderungsmodul aus der Anwendung an.
 ## <a name="remarks"></a>Hinweise  
  Die `remove` -Element entfernt die eingetragene Webanforderungsmodul für das angegebene URI-Präfix.  
   
- Der Wert für die `prefix` Attribut sollte sein, dass die führenden Zeichen eine gültige URI sein – z. B. "http", oder "`http://www.contoso.com` ".  
+ Der Wert für die `prefix` Attribut muss die führenden Zeichen eine gültige URI sein – z. B. "`http`", oder "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel entfernt die vorhandene Webanforderungsmodul für HTTP und registriert dann ein neues benutzerdefinierte Webanforderungsmodul für HTTP-Anforderungen mit www.contoso.com.  
+
+Im folgenden Beispiel wird das vorhandene Webanforderungsmodul für HTTP und registriert dann ein neues benutzerdefinierte Webanforderungsmodul für HTTP-Anforderungen an `www.contoso.com`.
   
 ```xml  
 <configuration>  
@@ -79,5 +78,5 @@ Entfernt ein benutzerdefinierte Webanforderungsmodul aus der Anwendung an.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.WebRequest>  
- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

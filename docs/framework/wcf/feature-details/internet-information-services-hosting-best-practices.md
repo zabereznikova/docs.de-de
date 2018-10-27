@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840744"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187569"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für Windows Communication Foundation (WCF).  
@@ -35,7 +35,7 @@ Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für 
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF in Szenarien mit mehreren Adressen oder mehreren Namen  
  Können Sie WCF-Dienste innerhalb einer IIS-Webfarm, die einen gemeinsamen externen Namen zum Weiterleiten von einer Gruppe von Computern bereitstellen (z. B. `http://www.contoso.com`) jedoch einzeln mithilfe der verschiedenen Hostnamen adressiert sind (z. B. `http://www.contoso.com` möglicherweise Weiterleitung von Datenverkehr an zwei verschiedenen Computern mit dem Namen `http://machine1.internal.contoso.com` und `http://machine2.internal.contoso.com`). Bei diesem Bereitstellungsszenario wird vollständig von WCF unterstützt, erfordert jedoch spezielle Konfiguration der IIS-Website Hosten von WCF-Dienste, um die richtige (externe) Hostname in den Dienstmetadaten (Web Services Description Language) anzuzeigen.  
   
- Um sicherzustellen, dass der richtige Hostname in den Metadaten des WCF wird generiert, konfigurieren die Standardidentität für die IIS-Website, die WCF-Diensten für die Verwendung eines expliziten Hostnamens hostet. Beispielsweise Computer, die innerhalb der Farm www.contoso.com befinden sollte verwenden, ein IIS-sitebindung *: 80: www.contoso.com für HTTP und \*: 443:www.contoso.com für HTTPS.  
+ Um sicherzustellen, dass der richtige Hostname in den Metadaten des WCF wird generiert, konfigurieren die Standardidentität für die IIS-Website, die WCF-Diensten für die Verwendung eines expliziten Hostnamens hostet. Z. B. Computer, die sich innerhalb des befinden die `www.contoso.com` Farm sollte verwenden Sie eine IIS-sitebindung *: 80: www.contoso.com für HTTP und \*: 443:www.contoso.com für HTTPS.  
   
  Sie können IIS-Websitebindungen konfigurieren, indem Sie das IIS-Snap-In der Microsoft Management Console (MMC) verwenden.  
   

@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-author: BrucePerlerMS
-ms.openlocfilehash: 3ae41e10a51ba0e4c27bcfbb1eb812e0015e5178
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2d2f1997534a33f246c85501e66b6aa8a684445f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397155"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190696"
 ---
 # <a name="extending-security"></a>Erweitern der Sicherheit
 Um neue Anspruchstypen und benutzerdefinierte Token aufnehmen zu können, können Sie die Sicherheitsinfrastruktur von Windows Communication Foundation (WCF) erweitern. Die Themen dieses Abschnitts erläutern die entsprechende Vorgehensweise.  

@@ -2,12 +2,12 @@
 title: Stream
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861113"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191180"
 ---
 # <a name="stream"></a>Stream
 Das Streambeispiel zeigt die Verwendung des Kommunikationsstream-Übertragungsmodus. Der Dienst macht mehrere Vorgänge verfügbar, die Streams senden und empfangen. Dieses Beispiel ist selbst gehostet. Sowohl der Client als auch der Dienst sind Konsolenprogramme.  
@@ -20,7 +20,7 @@ Das Streambeispiel zeigt die Verwendung des Kommunikationsstream-Übertragungsmo
 ## <a name="streaming-and-service-contracts"></a>Streaming und Dienstverträge  
  Streaming ist es wert, beim Entwerfen eines Dienstvertrags in Betracht gezogen zu werden. Wenn ein Vorgang Daten in großem Umfang empfängt oder zurückgibt, sollte man in Betracht ziehen, diese Daten zu streamen, um eine übermäßige Auslastung des Arbeitsspeichers durch das Puffern ein- oder ausgehender Nachrichten zu vermeiden. Zum Übertragen von Daten im Streamingmodus muss der Parameter, der die Daten enthält, der einzige Parameter in der Nachricht sein. Wenn beispielsweise die Eingabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang genau einen Eingabeparameter haben. Ebenso gilt, wenn die Ausgabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang entweder genau einen Ausgabeparameter oder einen Rückgabewert haben. In beiden Fällen muss der Parameter- oder Rückgabewerttyp `Stream`, `Message` oder `IXmlSerializable` sein. Nachfolgend ist der in diesem Streamingbeispiel verwendete Dienstvertrag aufgeführt.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` erstellt eine neue Instanz der `ReverseStream`-Klasse und gibt eine Instanz dieser Klasse zurück. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus diesem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Implementierung liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Sie invertiert nicht den gesamten Dateiinhalt, sondern immer nur eine Gruppe von Bytes auf einmal. Dieses Beispiel zeigt, wie Sie das Verarbeiten eines Streams durchführen können, wenn der Inhalt aus dem Stream gelesen oder in den Stream geschrieben wird.  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  Dienstausgabe:  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  Clientausgabe:  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

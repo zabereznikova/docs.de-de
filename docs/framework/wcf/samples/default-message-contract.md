@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 23ab534ef31773efc69b6a68e73ec30bde4f6e61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f5a7eff25fb202ba84f0bd49893748b507326fd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502658"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188169"
 ---
 # <a name="default-message-contract"></a>Standardnachrichtenvertrag
 Das Beispiel zum Standardnachrichtenvertrag zeigt einen Dienst, bei dem eine benutzerdefinierte Nachricht an und aus Dienstvorgängen übergeben wird. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das eine Rechnerschnittstelle als einen typisierten Dienst implementiert. Statt die einzelnen Dienstvorgänge für Addition, Subtraktion, Multiplikation und Division verwendet die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), in diesem Beispiel übergibt eine benutzerdefinierte Meldung, die enthält sowohl die Operanden und den Operator aus, und gibt zurück Das Ergebnis der arithmetischen Berechnung.  
@@ -21,7 +21,7 @@ Das Beispiel zum Standardnachrichtenvertrag zeigt einen Dienst, bei dem eine ben
   
  In dem Dienst ist ein Dienstvorgang definiert, der benutzerdefinierte Nachrichten vom Typ `MyMessage` entgegennimmt und zurückgibt. Auch wenn im vorliegenden Beispiel die Anforderung- und Antwortnachrichten vom selben Typ sind, können sie natürlich auch unterschiedliche Nachrichtenverträge sein, falls erforderlich.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -33,7 +33,7 @@ public interface ICalculator
   
  Die benutzerdefinierte `MyMessage`-Nachricht wird in einer mit <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute>- und <xref:System.ServiceModel.MessageBodyMemberAttribute>-Attributen kommentierten Klasse definiert. In diesem Beispiel wird nur der dritte Konstruktor verwendet. Mithilfe von Nachrichtenverträgen können Sie die volle Kontrolle über die SOAP-Nachricht ausüben. In diesem Beispiel wird mit dem <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut `Operation` in einem SOAP-Header platziert. Die Operanden `N1` und `N2` sowie das `Result` werden im SOAP-Text angezeigt, da auf sie das <xref:System.ServiceModel.MessageBodyMemberAttribute>-Attribut angewendet ist.  
   
-```  
+```csharp
 [MessageContract]  
 public class MyMessage  
 {  
@@ -99,7 +99,7 @@ public class MyMessage
   
  Die Implementierungsklasse enthält den Code für den `Calculate`-Dienstvorgang. Die `CalculateService`-Klasse ermittelt die Operanden und den Operator aus der Anforderungsnachricht und erstellt eine Antwortnachricht, die das Ergebnis der angeforderten Berechnung enthält, wie im folgenden Code dargestellt.  
   
-```  
+```csharp
 // Service class which implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -133,29 +133,31 @@ public class CalculatorService : ICalculator
   
  Der generierte Clientcode für den Client wurde erstellt, mit der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool. Wenn erforderlich, erstellt das Tool automatisch Nachrichtenvertragstypen im generierten Clientcode. Die `/messageContract`-Befehlsoption kann angegeben werden, um die Generierung von Nachrichtenverträgen zu erzwingen.  
   
-```  
+```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
  Das folgende Codebeispiel zeigt den Client mit der `MyMessage`-Nachricht.  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   
 // Perform addition using a typed message.  
   
-MyMessage request = new MyMessage();  
-request.N1 = 100D;  
-request.N2 = 15.99D;  
-request.Operation = "+";  
+MyMessage request = new MyMessage() 
+                    {  
+                        N1 = 100D,  
+                        N2 = 15.99D,  
+                        Operation = "+"  
+                    };
 MyMessage response = ((ICalculator)client).Calculate(request);  
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
  Wenn Sie das Beispiel ausführen, werden die Berechnungen im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
