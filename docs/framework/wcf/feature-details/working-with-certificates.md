@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201113"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453462"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.  
@@ -42,7 +42,7 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
   
 -   **Persönlich** Dieser Speicher wird für Zertifikate verwendet, die dem Benutzer eines Computers zugeordnet sind. Dieser Speicher wird normalerweise für Zertifikate verwendet, die von einem der Zertifikate der Zertifizierungsstelle im Speicher vertrauenswürdiger Stammzertifizierungsstellen stammen. Darüber hinaus können in diesem Speicher auch selbst ausgestellte Zertifikate abgelegt werden, die von einer Anwendung als vertrauenswürdig eingestuft werden.  
   
- Weitere Informationen zu den Zertifikatformaten finden Sie unter [Certificate Stores (Zertifikatspeicher)](https://go.microsoft.com/fwlink/?LinkId=88912).  
+ Weitere Informationen zu den Zertifikatformaten finden Sie unter [Certificate Stores (Zertifikatspeicher)](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Auswählen eines Speichers  
  Die Auswahl des Speichers für ein Zertifikat hängt davon ab, wie und wann der Dienst oder Client ausgeführt wird. Dabei gelten folgende allgemeine Regeln:  

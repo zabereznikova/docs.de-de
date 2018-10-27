@@ -2,12 +2,12 @@
 title: WCF-Dienstpublishing
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: b62b2616233eb81e64945e997a2efe17973dedd2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781504"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452986"
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 
@@ -21,7 +21,7 @@ Veröffentlichen von WCF-Dienst unterstützt die WCF-Dienste erstellt, aus dem S
 
 -   Syndication-Dienstbibliothek
 
-Sie können diese Dienstvorlagen auswählen **Datei** > **neues Projekt** > [**Visual Basic** oder **Visual C#-**] > **WCF**. Für die anderen WCF-Vorlagen an diesem Speicherort (einschließlich WCF Workflow Service Application "und" WCF-Dienstanwendung), können Sie veröffentlichen, mit [One-Click-Veröffentlichung für Webanwendungen](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
+Sie können diese Dienstvorlagen auswählen **Datei** > **neues Projekt** > [**Visual Basic** oder **Visual C#** ] > **WCF**. Für die anderen WCF-Vorlagen an diesem Speicherort (einschließlich WCF Workflow Service Application "und" WCF-Dienstanwendung), können Sie veröffentlichen, mit [One-Click-Veröffentlichung für Webanwendungen](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
 
 Der Dienst kann an den folgenden Zielorten veröffentlicht werden:
 
@@ -41,9 +41,9 @@ Führen Sie zum Bereitstellen einer Dienstimplementierung die folgenden Schritte
 
 3.  Die **veröffentlichen** Fenster wird angezeigt. Klicken Sie auf die **...** . um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, um die Anwendung auf lokale IIS, Dateisystem oder FTP-Site bereitzustellen. Wenn die Anwendung für IIS lokal bereitstellen, können Sie wählen Sie Ihre Website und Ihre Webanwendung darunter erstellen, indem Sie auf die **neue Webanwendung erstellen** Symbol in der oberen rechten Ecke.
 
-4.  Nachdem Sie auf **veröffentlichen** in im Hauptfenster von Visual Studio die Anwendung an den angegebenen Zielort bereitgestellt und die Datei "Web.config", SVC-Datei und Assembly-Dateien in das Zielverzeichnis kopiert. sein. Der Name der SVC werden "ProjectName.ServiceName.svc". Nachdem der Dienst erfolgreich veröffentlicht wurde, können Sie einen Hotlink suchen, im Ausgabefenster von Visual Studio-Fenster, das "Herstellen einer Verbindung zu HYPERLINK" ähnelt "http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName ...". Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.
+4.  Nachdem Sie auf **veröffentlichen** in im Hauptfenster von Visual Studio die Anwendung an den angegebenen Zielort bereitgestellt und die Datei "Web.config", SVC-Datei und Assembly-Dateien in das Zielverzeichnis kopiert. sein. Der Name der SVC werden "ProjectName.ServiceName.svc". Nachdem der Dienst wurde erfolgreich veröffentlicht wurde, finden Sie einen Hotlink in das Ausgabefenster von Visual Studio-Fenster, die so aussieht wie "Herstellen einer Verbindung mit `http://localhost/WebApplicationFolderName...`". Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.
 
-     Wenn die Website nicht geöffnet werden kann, liegt dies möglicherweise daran, dass der Verzeichnisbrowser in IIS nicht aktiviert ist. Befolgen Sie die Tipps im Abschnitt "Mögliche Vorgehensweise", um ihn zu aktivieren. Sie können auch direkt eingeben"HYPERLINK"http://localhost/WebApplicationFolderName" http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc" an die Dienstseite anzuzeigen.
+     Wenn die Website nicht geöffnet werden kann, liegt dies möglicherweise daran, dass der Verzeichnisbrowser in IIS nicht aktiviert ist. Befolgen Sie die Tipps im Abschnitt "Mögliche Vorgehensweise", um ihn zu aktivieren. Sie können auch direkt eingeben `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` an die Dienstseite anzuzeigen.
 
 Sie können **veröffentlichen** angeben, wenn die Assembly, Konfiguration und SVC-Datei für alle Dienste, die definiert, die im Projekt an den Zielspeicherort kopiert werden soll, und überschreiben vorhandene Dateien am Ziel.
 

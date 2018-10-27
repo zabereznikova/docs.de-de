@@ -2,12 +2,12 @@
 title: NamedPipe-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
+ms.openlocfilehash: 05dea4e4faa91e4df9fdde8bdafc29473e49214e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873361"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170496"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe-Aktivierung
 In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Process Activation Services (WAS) zum Aktivieren eines Diensts verwendet, der über benannte Pipes kommuniziert. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und erfordert [!INCLUDE[wv](../../../../includes/wv-md.md)] ausgeführt.  
@@ -29,7 +29,7 @@ In diesem Beispiel wird das Hosten eines Diensts veranschaulicht, der Windows Pr
   
  Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `ICalculator`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht, wie im folgenden Beispielcode dargestellt.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -46,7 +46,7 @@ public interface ICalculator
   
  Der Client stellt synchrone Anforderungen an eine gegebene mathematische Operation, und die Dienstimplementierung gibt das entsprechende Ergebnis zurück.  
   
-```  
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -146,7 +146,7 @@ public class CalculatorService : ICalculator
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.  
   
-```  
+```console
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -155,7 +155,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
+### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
 1.  Stellen Sie sicher, dass [!INCLUDE[iisver](../../../../includes/iisver-md.md)] installiert ist. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ist für die WAS-Aktivierung erforderlich.  
   
@@ -222,5 +222,6 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Dieser Befehl muss als eine Textzeile eingegeben werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Siehe auch
+
+- [AppFabric-Hosting- und-persistenzbeispiele](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

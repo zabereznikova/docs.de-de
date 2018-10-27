@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741879"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452952"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor-Klasse
 
-Benutzeroberfläche für die Bearbeitung der Eigenschaften von Objekten von datengebundenen durch Auflisten aller Eigenschaften eines bietet die `DataSource` -Objekt, wählen Sie die Quelle aus.  
+Bietet Benutzeroberfläche zum Bearbeiten der Eigenschaften von datengebundenen Objekten durch das Auflisten aller Eigenschaften der `DataSource` Objekt, das die Wertquelle von auswählen.  
   
 ## <a name="syntax"></a>Syntax
   
@@ -32,7 +32,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Die `DataMemberFieldEditor` -Klasse ist intern und nicht direkt im Code verwendet werden sollen.
+> Die `DataMemberFieldEditor` -Klasse ist intern und nicht direkt in Ihrem Code verwendet werden sollen.
 > 
 > Microsoft unterstützt nicht die Verwendung dieser Klasse in einer produktionsanwendung unter keinen Umständen.
 
@@ -40,10 +40,10 @@ internal class DataMemberFieldEditor : UITypeEditor
 
 **Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System.Design (in "System.Design.dll")  
+**Assembly:** "System.Design" (in "System.Design.dll")  
   
 **.NET Framework-Versionen:** verfügbar seit 2.0.  
   
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

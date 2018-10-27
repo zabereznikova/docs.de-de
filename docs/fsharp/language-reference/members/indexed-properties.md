@@ -1,58 +1,48 @@
 ---
 title: Indizierte Eigenschaften (F#)
-description: Informationen Sie zu F#-indizierte Eigenschaften, die Eigenschaften sind, die arrayähnlichen Zugriff auf sortierte Daten bereitstellen.
-ms.date: 05/16/2016
-ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+description: Erfahren Sie mehr über indizierte Eigenschaften in F#, das arrayähnlichen Zugriff auf die sortierten Daten ermöglichen.
+ms.date: 10/17/2018
+ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321365"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452247"
 ---
 # <a name="indexed-properties"></a>Indizierte Eigenschaften
 
-*Indizierte Eigenschaften* sind Eigenschaften, die arrayähnlichen Zugriff auf bereitstellen sortiert Daten. Sie gibt drei Arten:
-
-* `Item`
-* `Ordinal`
-* `Cardinal`
-
-Ein F#-Element muss einen dieser drei Namen arrayähnlichen Zugriff bereitstellen benannt werden. `IndexerName` wird verwendet, um jeden der drei folgenden Optionen darstellen:
+Beim Definieren einer Klasse, die für sortierte Daten abstrahiert, kann es manchmal hilfreich, indizierten Zugriff auf diese Daten bereitstellen, ohne die zugrunde liegende Implementierung verfügbar zu machen sein. Dies erfolgt mit der `Index` Member.
 
 ## <a name="syntax"></a>Syntax
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.IndexerName
-    with get(index-variable) =
-        get-function-body
-    and set index-variablesvalue-variables =
-        set-function-body
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
+    and set index-values values-to-set =
+        set-member-body
 
-// Indexed property that has get only.
-member self-identifier.IndexerName(index-variable) =
-    get-function-body
-
-// Alternative syntax for indexed property with get only
-member self-identifier.IndexerName
-    with get(index-variables) =
-        get-function-body
+// Indexed property with get only
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
 
 // Indexed property that has set only.
-member self-identifier.IndexerName
-    with set index-variablesvalue-variables = 
-        set-function-body
+member self-identifier.Index
+    with set index-values values-to-set =
+        set-member-body
 ```
 
 ## <a name="remarks"></a>Hinweise
 
 Die Formen der vorherigen Syntax zeigen, wie Sie indizierte Eigenschaften definiert, die sowohl eine `get` und ein `set` -Methode, haben eine `get` Methode nur oder über eine `set` Methode nur. Sie können auch kombiniert sowohl die Syntax für nur Get- und die Syntax für die Gruppe nur und erzeugen eine Eigenschaft, die sowohl get- und Set hat. Diese Form können Sie verschiedene Zugriffsmodifizierer und Attribute für die Get-und set-Methoden.
 
-Wenn die *IndexerName* ist `Item`, behandelt der Compiler die Eigenschaft als eine indizierte Standardeigenschaft. Ein *indizierte Standardeigenschaft* ist eine Eigenschaft, die Sie zugreifen können, mithilfe einer arrayähnlichen Syntax in der Objektinstanz. Z. B. wenn `obj` ist ein Objekt des Typs, der diese Eigenschaft, die Syntax definiert `obj.[index]` wird verwendet, um die Eigenschaft zugreifen.
+Mit dem Namen `Item`, behandelt der Compiler die Eigenschaft als eine indizierte Standardeigenschaft. Ein *indizierte Standardeigenschaft* ist eine Eigenschaft, die Sie zugreifen können, mithilfe einer arrayähnlichen Syntax in der Objektinstanz. Z. B. wenn `o` ist ein Objekt des Typs, der diese Eigenschaft, die Syntax definiert `o.[index]` wird verwendet, um die Eigenschaft zugreifen.
 
-Die Syntax für den Zugriff auf eine nicht standardmäßige indizierte Eigenschaft ist auf den Namen der Eigenschaft und der Index in Klammern angeben. Wenn die Eigenschaft ist z. B. `Ordinal`, Sie schreiben `obj.Ordinal(index)` , darauf zuzugreifen.
+Die Syntax für den Zugriff auf eine nicht standardmäßige indizierte Eigenschaft ist zum Bereitstellen des Namens der Eigenschaft und der Index in Klammern ein, wie ein reguläres Element. Z. B. wenn die Eigenschaft `o` heißt `Ordinal`, Sie schreiben `o.Ordinal(index)` , darauf zuzugreifen.
 
-Unabhängig davon, welche Form, die Sie verwenden, Sie immer die Curry-Form verwenden sollten die `set` Methode für eine indizierte Eigenschaft. Weitere Informationen zu Funktionen mit Currying, finden Sie unter [Funktionen](../functions/index.md).
+Unabhängig davon, welche Form, die Sie verwenden, sollten Sie immer die Curry-Form für die Set-Methode für eine indizierte Eigenschaft verwenden. Weitere Informationen zu Funktionen mit Currying, finden Sie unter [Funktionen](../functions/index.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -60,9 +50,9 @@ Das folgende Codebeispiel veranschaulicht die Definition und Verwendung von Stan
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
-```
+```console
 ONE two three four five six seven eight nine ten
 ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth

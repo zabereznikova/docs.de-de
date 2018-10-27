@@ -1,31 +1,36 @@
 ---
 title: Verschiedene Operatoren (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 10/18/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 - operators [Visual Basic], miscellaneous
 ms.assetid: 2423b3c5-fc3f-479c-bcd2-2c6ebe92814f
-ms.openlocfilehash: 97a6612b1dddda17c2200a0073e5c1baa16cf0a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac01bf81926fcf8068d1d648486cfb61fba52cf0
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598253"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453095"
 ---
 # <a name="miscellaneous-operators-visual-basic"></a>Verschiedene Operatoren (Visual Basic)
 Es folgen verschiedene Operatoren in Visual Basic definiert.  
   
- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+[?. NULL-bedingten operator](null-conditional-operators.md)
+
+[? die Null-bedingten Operator)](null-conditional-operators.md)
+
+ [AddressOf-operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
- [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [Await-operator](../../../visual-basic/language-reference/operators/await-operator.md)  
   
- [GetType-Operator](../../../visual-basic/language-reference/operators/gettype-operator.md)  
+ [GetType-operator](../../../visual-basic/language-reference/operators/gettype-operator.md)  
   
- [Function Expression](../../../visual-basic/language-reference/operators/function-expression.md)  
+ [Funktionsausdruck](../../../visual-basic/language-reference/operators/function-expression.md)  
+
+ [Wenn Operator](../../../visual-basic/language-reference/operators/if-operator.md)  
   
- [If-Operator](../../../visual-basic/language-reference/operators/if-operator.md)  
+ [TypeOf-operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
   
- [TypeOf-Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
-  
-## <a name="see-also"></a>Siehe auch  
- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a>Siehe auch
+
+ [Operatoren sortiert nach Funktionalität](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
