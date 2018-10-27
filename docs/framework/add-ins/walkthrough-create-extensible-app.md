@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591950"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183892"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen
 In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline für ein Add-in erstellen, die einfachen Taschenrechner Funktionen ausführt. Es wird nicht auf einem realen Szenario veranschaulicht; Stattdessen zeigt es die grundlegende Funktionen einer Pipeline und wie ein Add-In-Dienste für einen Host bereitstellen kann.  
@@ -49,7 +49,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline 
   
  Version 2 von der Rechner-add-in bietet mehr berechnen Möglichkeiten und versionsverwaltung veranschaulicht. Es wird beschrieben, [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als der Host-Änderungen](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese exemplarische Vorgehensweise wird Folgendes benötigt:  
   
 -   Visual Studio.  
@@ -195,7 +195,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline 
   
  In dieser Pipeline bietet das Add-in einen Dienst auf dem Host und den Fluss von Typen aus dem Add-in auf den Host. Da keine Typen zwischen dem Host und Add-In-fließen, müssen Sie keinen Ansicht-zu-Vertrag-Adapter enthalten.  
   
- Verwenden Sie zum Implementieren der Verwaltung der Lebensdauer einer <xref:System.AddIn.Pipeline.ContractHandle> Lebensdauertoken für den Vertrag anzufügendes Objekt. Sie müssen einen Verweis auf dieses Handle in der Reihenfolge für die Verwaltung der Prozesslebensdauer funktioniert beibehalten. Nachdem das Token angewendet wird, ist keine zusätzliche Programmierung erforderlich, da es sich bei der Add-in-System Objekte freigeben kann, wenn sie nicht mehr verwendet werden und für die Garbagecollection zur Verfügung stellen. Weitere Informationen finden Sie unter [Lebensdauerverwaltung](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Verwenden Sie zum Implementieren der Verwaltung der Lebensdauer einer <xref:System.AddIn.Pipeline.ContractHandle> Lebensdauertoken für den Vertrag anzufügendes Objekt. Sie müssen einen Verweis auf dieses Handle in der Reihenfolge für die Verwaltung der Prozesslebensdauer funktioniert beibehalten. Nachdem das Token angewendet wird, ist keine zusätzliche Programmierung erforderlich, da es sich bei der Add-in-System Objekte freigeben kann, wenn sie nicht mehr verwendet werden und für die Garbagecollection zur Verfügung stellen. Weitere Informationen finden Sie unter [Verwaltung der Lebensdauer](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
 #### <a name="to-create-the-host-side-adapter"></a>Den hostseitige Adapter erstellen  
   
@@ -355,8 +355,8 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline 
 4.  Typ **beenden** , und drücken Sie die **EINGABETASTE** Taste, um die Anwendung zu schließen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität bei geändertem Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [Exemplarische Vorgehensweise: Übergeben von Auflistungen zwischen Hosts und -Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Anforderungen für die pipelineentwicklung](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Verträge, Ansichten und Adapter](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
- [Pipelineentwicklung](../../../docs/framework/add-ins/pipeline-development.md)
+- [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität bei geändertem Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-  [Exemplarische Vorgehensweise: Übergeben von Auflistungen zwischen Hosts und -Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-  [Anforderungen für die pipelineentwicklung](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+-  [Verträge, Ansichten und Adapter](https://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
+-  [Pipelineentwicklung](../../../docs/framework/add-ins/pipeline-development.md)

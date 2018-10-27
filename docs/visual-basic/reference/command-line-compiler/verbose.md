@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5f257fce67d8e348b69404411c12ded785cfd68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70496b552ced8e07cbe3cde34cda377d94da9f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652128"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188416"
 ---
 # <a name="-verbose"></a>-verbose
-Weist den Compiler an, um ausführliche Status- und Fehlermeldungen zu erstellen.  
+Veranlasst den Compiler an, um ausführliche Status- und Fehlermeldungen zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,10 +27,10 @@ Weist den Compiler an, um ausführliche Status- und Fehlermeldungen zu erstellen
  Dies ist optional. Angeben von `-verbose` ist derselbe, als wenn `-verbose+`, die bewirkt, dass der Compiler ausführliche Meldungen ausgegeben. Der Standardwert für diese Option ist `-verbose-`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-verbose` Option zeigt Informationen über die Gesamtanzahl von Fehlern, die vom Compiler ausgegeben, meldet, welche Assemblys geladen werden von einem Modul und zeigt an, welche Dateien gerade kompiliert werden.  
+ Die `-verbose` Option zeigt Informationen über die Gesamtanzahl von Fehlern, die vom Compiler ausgegeben, meldet, welche Assemblys von einem Modul geladen werden und zeigt an, welche Dateien gerade kompiliert werden.  
   
 > [!NOTE]
->  Die `-verbose` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
+>  Die `-verbose` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `In.vb` und weist den Compiler an, um ausführliche Statusinformationen anzuzeigen.  

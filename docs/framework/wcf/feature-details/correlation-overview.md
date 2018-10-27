@@ -2,12 +2,12 @@
 title: Übersicht über die Korrelation
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372641"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185861"
 ---
 # <a name="correlation-overview"></a>Übersicht über die Korrelation
 Die Korrelation ist der Mechanismus zum Verknüpfen von Workflowdienstnachrichten miteinander oder mit dem Anwendungsinstanzzustand. Dies kann z. B. eine Antwort auf eine ursprüngliche Anforderung oder eine bestimmte Bestell-ID mit dem beibehaltenen Zustand eines Workflows zur Bestellverarbeitung sein. Dieses Thema enthält eine Übersicht über die Korrelation: Die anderen Themen in diesem Abschnitt enthalten weitere Informationen zu den einzelnen Korrelationstypen.  
@@ -21,7 +21,7 @@ Die Korrelation ist der Mechanismus zum Verknüpfen von Workflowdienstnachrichte
 
 Die protokollbasierte Korrelation verwendet den Transportmechanismus, um Nachrichten miteinander und mit der entsprechenden Instanz zu verknüpfen. Einige vom System bereitgestellte Protokollkorrelationen enthalten die Anforderung-Antwort-Korrelation und die kontextbasierte Korrelation. Eine Anforderung-Antwort-Korrelation zum Korrelieren eines einzelnen Paars von Messagingaktivitäten verwendet, um einen bidirektionalen Vorgang zu erstellen. Beispiele hierfür sind <xref:System.ServiceModel.Activities.Send> gepaart mit <xref:System.ServiceModel.Activities.ReceiveReply> oder <xref:System.ServiceModel.Activities.Receive> gepaart mit <xref:System.ServiceModel.Activities.SendReply>. Die Workflow-Designer von Visual Studio bietet auch eine Reihe von Vorlagen für runbookautomatisierungsaktivitäten dieses Muster schnell implementiert. Eine kontextbasierte Korrelation basiert auf dem kontextaustauschmechanismus, der in beschrieben die [.NET Context Exchange Protocol Specification](https://go.microsoft.com/fwlink/?LinkID=166059). Zum Verwenden der kontextbasierten Korrelation muss auf dem Endpunkt eine kontextbasierte Bindung wie <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> oder <xref:System.ServiceModel.NetTcpContextBinding> verwendet werden.  
   
-Weitere Informationen zu Protokoll Korrelation, finden Sie unter [permanenter Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) und [Anforderung-Antwort](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Weitere Informationen zur Verwendung der Aktivitätsvorlagen des Visual Studio Workflow-Designer finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Beispielcode, finden Sie unter den [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) Beispiel.  
+Weitere Informationen zu Protokoll Korrelation, finden Sie unter [permanenter Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) und [Anforderung-Antwort](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Weitere Informationen zur Verwendung der Aktivitätsvorlagen des Visual Studio Workflow-Designer finden Sie unter [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Beispielcode, finden Sie unter den [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) Beispiel.  
   
 ## <a name="content-based-correlation"></a>Inhaltsbasierte Korrelation
 
@@ -29,4 +29,4 @@ Bei der inhaltsbasierten Korrelation wird ein bestimmtes Informationselement in 
   
 ## <a name="see-also"></a>Siehe auch  
 
-- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

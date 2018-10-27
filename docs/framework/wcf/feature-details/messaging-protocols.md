@@ -2,12 +2,12 @@
 title: Messagingprotokolle
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703010"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183853"
 ---
 # <a name="messaging-protocols"></a>Messagingprotokolle
 
@@ -47,7 +47,7 @@ Dieses Thema enthält Details zur WCF-Implementierung für die folgenden Protoko
 
 In diesem Thema werden die folgenden XML-Namespaces und zugeordneten Präfixe verwendet:
 
-| Präfix | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope`| | s12 | `http://www.w3.org/2003/05/soap-envelope`| | Wsa | `http://www.w3.org/2004/08/addressing`| | Wsam | `http://www.w3.org/2007/05/addressing/metadata`| | Wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 | `http://www.w3.org/2005/08/addressing`| | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl`| | Xop | `http://www.w3.org/2004/08/xop/include`| | Xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+| Präfix | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` || s12 | `http://www.w3.org/2003/05/soap-envelope` || Wsa | `http://www.w3.org/2004/08/addressing` || Wsam | `http://www.w3.org/2007/05/addressing/metadata` || Wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` || wsa10 | `http://www.w3.org/2005/08/addressing` || wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` || Xop | `http://www.w3.org/2004/08/xop/include` || Xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | DP |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 und SOAP 1.2
 
@@ -190,20 +190,20 @@ Wenn ein WCF-Endpunkt konfiguriert ist, für eine Nachricht mit einer angegebene
 ### <a name="web-services-addressing-faults"></a>Fehler bei Web Services Addressing
 R3411: WCF erzeugt die folgenden von WS-Adressierung 2004/08 definierten Fehler.
 
-|Code|Ursache|
+| Code | Ursache |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|Die Nachricht ist mit `ReplyTo` angekommen, das sich von der Antwortadresse, die für diesen Kanal festgelegt ist, unterscheidet; für die in der To-Headerzeile angegebene Adresse gibt es kein Endpunkt-Listening.|
-|`wsa:ActionNotSupported`|Die Infrastrukturkanäle und -verteiler, die mit dem Endpunkt verbunden sind, erkennen die Aktion, die in der Headerzeile `Action` angegeben ist, nicht.|
+| `wsa:DestinationUnreachable` | Die Nachricht ist mit `ReplyTo` angekommen, das sich von der Antwortadresse, die für diesen Kanal festgelegt ist, unterscheidet; für die in der To-Headerzeile angegebene Adresse gibt es kein Endpunkt-Listening. |
+| `wsa:ActionNotSupported` | Die Infrastrukturkanäle und -verteiler, die mit dem Endpunkt verbunden sind, erkennen die Aktion, die in der Headerzeile `Action` angegeben ist, nicht. |
 
 R3412: WCF erzeugt die folgenden von WS-Adressierung 1.0 definierten Fehler.
 
-|Code|Ursache|
+| Code | Ursache |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|Doppelte `wsa:To`, `wsa:ReplyTo`, `wsa:From` oder `wsa:MessageID`. Doppelte `wsa:RelatesTo` mit dem gleichen `RelationshipType`.|
-|`wsa10:MessageAddressingHeaderRequired`|Der erforderliche Adressierungsheader fehlt.|
-|`wsa10:DestinationUnreachable`|Die Nachricht ist mit `ReplyTo` angekommen, das sich von der Antwortadresse, die für diesen Kanal eingeführt wurde, unterscheidet. An der Adresse, die im To-Header angegeben ist, gibt es kein Endpunkt-Listening.|
-|`wsa10:ActionNotSupported`|Eine Aktion, die im `Action`-Header angegeben ist, wird von den Infrastrukturkanälen oder dem Verteiler, die/der mit dem Endpunkt verbunden sind/ist, nicht erkannt.|
-|`wsa10:EndpointUnavailable`|Der RM-Kanal schickt diesen Fehler zurück und gibt an, dass der Endpunkt die Sequenz basierend auf einer Untersuchung der Adressheader der Nachricht `CreateSequence` nicht verarbeiten wird.|
+| `wsa10:InvalidAddressingHeader` | Doppelte `wsa:To`, `wsa:ReplyTo`, `wsa:From` oder `wsa:MessageID`. Doppelte `wsa:RelatesTo` mit dem gleichen `RelationshipType`. |
+| `wsa10:MessageAddressingHeaderRequired` | Der erforderliche Adressierungsheader fehlt. |
+| `wsa10:DestinationUnreachable` | Die Nachricht ist mit `ReplyTo` angekommen, das sich von der Antwortadresse, die für diesen Kanal eingeführt wurde, unterscheidet. An der Adresse, die im To-Header angegeben ist, gibt es kein Endpunkt-Listening. |
+| `wsa10:ActionNotSupported` | Eine Aktion, die im `Action`-Header angegeben ist, wird von den Infrastrukturkanälen oder dem Verteiler, die/der mit dem Endpunkt verbunden sind/ist, nicht erkannt. |
+| `wsa10:EndpointUnavailable` | Der RM-Kanal schickt diesen Fehler zurück und gibt an, dass der Endpunkt die Sequenz basierend auf einer Untersuchung der Adressheader der Nachricht `CreateSequence` nicht verarbeiten wird. |
 
 Code in den vorangehenden Tabellen wird auf `FaultCode` in SOAP 1.1 und `SubCode` (mit Code=Sender) in SOAP 1.2 abgebildet.
 

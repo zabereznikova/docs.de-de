@@ -1,22 +1,20 @@
 ---
-title: -deterministisch
+title: -deterministic
 ms.date: 04/11/2018
 helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffb1d27f614afc3b07f9d663831fc2071535236f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dde79ca9ce6e77102c05fce7c507784457af4a4b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653207"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187935"
 ---
-# <a name="-deterministic"></a>-deterministisch
+# <a name="-deterministic"></a>-deterministic
 
-Bewirkt, dass der Compiler eine Assembly zu erzeugen, deren Ausgabe Byte für Byte über Kompilierungen für identische Eingaben identisch ist. 
+Bewirkt, dass der Compiler eine Assembly erstellt, deren Byte-für-Byte-Ausgabe über Kompilierungen identisch ist, wenn die Eingaben identisch sind. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,31 +24,31 @@ Bewirkt, dass der Compiler eine Assembly zu erzeugen, deren Ausgabe Byte für By
 
 ## <a name="remarks"></a>Hinweise
 
-Standardmäßig ist Compilerausgabe aus einem vorhandenen Satz von Eingaben eindeutig, da der Compiler Fügt einen Zeitstempel und eine GUID, die Zufallszahlen generiert wird. Verwenden Sie die `-deterministic` Option zum Erzeugen einer *deterministisch Assembly*, ein, deren Inhalt im Binärformat über Kompilierungen identisch ist, solange die Eingabe identisch ist.
+Standardmäßig ist die Compilerausgabe aus einem vorhandenen Satz von Eingaben eindeutig, da der Compiler einen Zeitstempel und eine GUID hinzufügt, die aus Zufallszahlen generiert wird. Verwenden Sie die `-deterministic`-Option zum Erzeugen einer *deterministischen Assembly*. Deren Inhalt im Binärformat muss über Kompilierungen identisch sein, solange die Eingabe identisch ist.
 
-Der Compiler berücksichtigt die folgenden Eingaben zum Determinismus:
+Der Compiler berücksichtigt die folgenden Eingaben für den Determinismus:
 
-- Die Reihenfolge der Befehlszeilenparameter.
-- Der Inhalt des Compilers rsp-Antwortdatei.
-- Die genaue Version des verwendeten Compilers und Assemblys, auf die verwiesen wird.
+- Die Sequenz der Befehlszeilenparameter.
+- Der Inhalt der rsp-Antwortdatei des Compilers.
+- Die genaue Version des verwendeten Compilers und seiner verwiesenen Assemblys.
 - Der aktuelle Verzeichnispfad.
-- Der binäre Inhalt aller Dateien explizit an den Compiler übergeben entweder direkt oder indirekt, einschließlich: 
+- Die binären Inhalte aller Dateien, die explizit und entweder direkt oder indirekt an den Compiler übergeben werden, einschließlich: 
     - Quelldateien
-    - Assemblys verwiesen wird
-    - Module verwiesen wird
+    - Assemblys, auf die verwiesen wird
+    - Module, auf die verwiesen wird
     - Ressourcen
     - Die Schlüsseldatei mit starkem Namen
     - @ Antwortdateien
     - Analyzer
-    - Regelsätze
-    - Zusätzliche Dateien, die möglicherweise vom Analyzer verwendet werden
-- Die aktuelle Kultur (für die Sprache, in der Diagnose, die und die Ausnahme Nachrichten erstellt werden).
-- Die standardcodierung (oder der aktuellen Codepage) Wenn die Codierung nicht angegeben ist.
-- Das Vorhandensein, Nichtvorhandensein und Inhalt der Dateien auf den Compiler Suchpfade (angegeben, z. B. durch `/lib` oder `/recurse`).
+    - RuleSets
+    - Zusätzliche Dateien, die möglicherweise von Analyzern verwendet werden
+- Die aktuelle Kultur (für die Sprache, in der die Diagnose und die Ausnahmenachrichten erstellt werden).
+- Die Standardcodierung (oder die aktuelle Codeseite), wenn die Codierung nicht angegeben ist.
+- Das Vorhandensein, Nichtvorhandensein und die Inhalte der Dateien auf den Suchpfaden des Compilers (z.B. von `/lib` oder `/recurse` angegeben).
 - Die CLR-Plattform, auf der der Compiler ausgeführt wird.
-- Der Wert des `%LIBPATH%`, kann der Analyzer Abhängigkeit laden beeinträchtigen.
+- Der Wert von `%LIBPATH%`, der das Abhängigkeitsladen des Analyzers beeinträchtigen kann.
 
-Wenn Quellen öffentlich verfügbar sind, kann deterministisch Kompilierung verwendet werden, zur Feststellung, ob eine Binärdatei aus einer vertrauenswürdigen Quelle kompiliert wird. Sie können auch nützlich sein in einem fortlaufenden Buildsystem zu bestimmen, ob Buildschritte, die abhängig von den Änderungen in einen binären sind ausgeführt werden müssen. 
+Wenn Quellen öffentlich verfügbar sind, kann die deterministische Kompilierung verwendet werden, um festzustellen, ob eine Binärdatei aus einer vertrauenswürdigen Quelle kompiliert wird. Sie kann auch in einem fortlaufenden Buildsystem verwendet werden, um zu bestimmen, ob Buildschritte, die von den Änderungen einer Binärdatei abhängig sind, ausgeführt werden müssen. 
 
 ## <a name="see-also"></a>Siehe auch
 [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  

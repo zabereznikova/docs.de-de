@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd5dde46cdea67825b14a6f5fa96a82c8bab8d3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1edb648ec574c0052b7b8314f4ada710c8b0fe01
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652421"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183333"
 ---
 # <a name="-recurse"></a>-Recurse
-Kompiliert Quellcode Dateien in allen untergeordneten Verzeichnissen des angegebenen Verzeichnis oder das Projektverzeichnis.  
+Kompiliert Quellcode-Dateien in allen untergeordneten Verzeichnissen im angegebenen Verzeichnis oder dem Projektverzeichnis.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,25 +24,25 @@ Kompiliert Quellcode Dateien in allen untergeordneten Verzeichnissen des angegeb
   
 ## <a name="arguments"></a>Argumente  
  `dir`  
- Dies ist optional. Das Verzeichnis, in dem die Suche beginnen soll. Wenn nicht angegeben wird, beginnt die Suche im Projektverzeichnis.  
+ Dies ist optional. Das Verzeichnis, in dem die Suche beginnen soll. Wenn nicht angegeben ist, beginnt die Suche, im Projektverzeichnis.  
   
  `file`  
  Erforderlich. Die Datei(en), nach der oder denen gesucht werden soll. Platzhalterzeichen sind zulässig.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können Platzhalter in einem Dateinamen verwenden, kompilieren Sie alle entsprechende Dateien im Projektverzeichnis ohne `-recurse`. Wenn kein Dateiname der Ausgabe angegeben wird, basiert der Compiler den Namen der Ausgabedatei für den ersten Eingabedatei verarbeitet. Dies ist normalerweise die erste Datei in der Liste der Dateien, die kompiliert wird, wenn Sie in alphabetischer Reihenfolge angezeigt. Aus diesem Grund ist es am besten, geben Sie eine Ausgabe mit der `-out` Option.  
+ Sie können Platzhalter in einem Dateinamen verwenden, um alle übereinstimmenden Dateien im Projektverzeichnis zu kompilieren, ohne mit `-recurse`. Wenn kein Dateiname für die Ausgabe angegeben wird, basiert der Compiler den Ausgabedateinamen auf der ersten Eingabedatei verarbeitet. Dies ist in der Regel die erste Datei in der Liste der Dateien, die kompiliert, wenn alphabetisch angezeigt. Aus diesem Grund ist es am besten, geben Sie eine Ausgabe mit der `-out` Option.  
   
 > [!NOTE]
->  Die `-recurse` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
+>  Die `-recurse` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Befehl kompiliert alle Visual Basic-Dateien im aktuellen Verzeichnis.  
+ Der folgende Befehl kompiliert, alle Visual Basic-Dateien im aktuellen Verzeichnis.  
   
 ```console
 vbc *.vb  
 ```  
   
- Der folgende Befehl kompiliert alle Visual Basic-Dateien in den `Test\ABC` Verzeichnis und alle Verzeichnisse darunter und generiert dann `Test.ABC.dll`.  
+ Der folgende Befehl kompiliert, alle Visual Basic-Dateien in die `Test\ABC` Verzeichnis und allen Verzeichnisse darunter, und generiert dann `Test.ABC.dll`.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

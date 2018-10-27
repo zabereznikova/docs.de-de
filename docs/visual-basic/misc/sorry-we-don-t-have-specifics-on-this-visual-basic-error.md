@@ -1,5 +1,5 @@
 ---
-title: Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem Visual Basic-Fehler
+title: Wir leider&#39;wurden Einzelheiten zu diesem Visual Basic-Fehler
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,29 +3044,29 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231462"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192784"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem Visual Basic-Fehler
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Wir leider&#39;wurden Einzelheiten zu diesem Visual Basic-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
   
  [Visual Basic-Sprache](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu der Visual Basic-Sprachsyntax und des Compilers.  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zu der Sprache Visual Basic-Syntax und des Compilers.  
   
  [Visual Basic-Interop und -Upgrade](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Bietet ein Forum für Fragen und Probleme mit einem Upgrade auf Visual Basic und die Arbeit mit Interoperabilitätsfunktionen.  
   
  [Visual Basic-IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
- Bietet ein Forum für Fragen zum Arbeiten in der Visual Studio-Umgebung.  
+ Bietet ein Forum für Fragen dazu, wie Sie in Visual Studio-Umgebung arbeiten.  
   
  [Allgemeines zu Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
- Bietet ein Forum für Fragen und Probleme mit Visual Basic, die in anderen Foren nicht diskutiert werden.  
+ Bietet ein Forum für Fragen und Probleme mit Visual Basic, der in anderen Foren nicht erläutert werden.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
+ [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
  Bietet ein Forum für Fragen und Probleme mit Visual Basic.  
   
  Siehe auch:  

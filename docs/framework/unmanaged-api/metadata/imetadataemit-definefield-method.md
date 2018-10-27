@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b54ceb099df15855b6b30b8c28d7d8917a9c71eb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446573"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184948"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField-Methode
-Erstellt eine Definition für ein Feld mit der angegebenen Metadatensignatur und ruft ein Token, Field-Definition ab.  
+Erstellt eine Definition für ein Feld mit der angegebenen Metadaten-Signatur und ruft ein Token, Field-Definition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,13 +54,13 @@ HRESULT DefineField (
  [in] Die Attribute des Felds. Dies ist eine Bitmaske der `CorFieldAttr` Werte.  
   
  `pvSigBlob`  
- [in] Die Feldsignatur hat wie ein BLOB.  
+ [in] Die Feldsignatur als BLOB.  
   
  `cbSigBlob`  
  [in] Die Anzahl der Bytes im `pvSigBlob`.  
   
- `dwCPlusTypeFlage`  
- [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist ein `CorElementType` Wert. Wenn einen konstanten Wert für das Feld nicht definieren, verwenden Sie `ELEMENT_TYPE_END`.  
+ `dwCPlusTypeFlag`  
+ [in] Die `ELEMENT_TYPE_` *\** für den konstanten Wert. Dies ist eine `CorElementType` Wert. Wenn einen konstanten Wert für das Feld nicht zu definieren, verwenden Sie `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Der Konstante Wert für das Feld.  
@@ -69,10 +69,10 @@ HRESULT DefineField (
  [in] Die Größe in Zeichen (Unicode) der `pValue`.  
   
  `pmd`  
- [out] Die `mdFieldDef` Token zugewiesen.  
+ [out] Die `mdFieldDef` zugewiesene Token.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   

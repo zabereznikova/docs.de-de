@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b16ad5b3426316197d69fc137e2da7f96e7ab49
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525761"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185640"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Language Runtime (CLR)-Ereignisse aufzeichnen. Sie können Ablaufverfolgungen mit den folgenden Tools erstellen und anzeigen:  
   
--   Die Befehlszeilentools [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) und [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) sind im Windows-Betriebssystem enthalten.  
+-   Die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) sind im Windows-Betriebssystem enthalten.  
   
--   Die [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx)-Tools im [Windows Performance Toolkit](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509).  
+-   Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Wenn Sie CLR-Ereignisinformationen erfassen möchten, muss der CLR-Anbieter auf dem Computer installiert werden. Geben Sie an der Eingabeaufforderung `logman query providers` ein, um festzustellen, ob der Anbieter installiert ist. Eine Anbieterliste wird angezeigt. Diese Liste sollte wie folgt einen Eintrag für den CLR-Anbieter enthalten.  
   
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabeaufforderungsverzeichnis in den Ordner [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET-Version>\ ). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:  
+ Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabeaufforderungsverzeichnis in den Ordner [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET-Version>\ ). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>Erfassen von CLR-ETW-Ereignissen  
- Sie können die Befehlszeilentools [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) und [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) verwenden, um ETW-Ereignisse zu erfassen. Mit den Tools [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) und [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) können Sie die Ablaufverfolgungsereignisse dekodieren.  
+ Sie können die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) verwenden, um ETW-Ereignisse zu erfassen. Mit den Tools [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) und [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) können Sie die Ablaufverfolgungsereignisse dekodieren.  
   
  Zum Aktivieren der Protokollierung müssen Benutzer drei Informationen angeben:  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      Dieser Befehl bewirkt, dass XPerf die Ereignisse als CSV-Datei (CSV) sichert, die Sie anzeigen können. Da für unterschiedliche Ereignisse auch unterschiedliche Felder verfügbar sind, enthält diese CSV-Datei vor den Daten mehrere Headerzeilen. Das erste Feld jeder Zeile ist für den Ereignistyp vorgesehen, der den Header angibt, der zum Ermitteln der weiteren Felder verwendet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Windows Performance Toolkit](https://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Windows Performance Toolkit](/windows-hardware/test/wpt/)  
  [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
