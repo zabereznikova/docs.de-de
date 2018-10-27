@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: 80d8fc48141c0d23b93445bdfec02b95ba4a589f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: 83449aa2df2b0442f5ba5e1f152232b007bcdc15
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032529"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193707"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Entfernen Sie&gt; -Element für Bypasslist (Netzwerkeinstellungen)
 Entfernt eine IP-Adresse oder DNS-Namen, aus der Proxyumgehungsliste enthalten.  
@@ -79,5 +79,5 @@ Entfernt eine IP-Adresse oder DNS-Namen, aus der Proxyumgehungsliste enthalten.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

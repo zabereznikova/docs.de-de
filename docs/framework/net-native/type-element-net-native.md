@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9359d196ecdaa83d7f5f14c3570392d54691be73
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037468"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195631"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Typ&gt; Element (.NET Native)
 Wendet eine Laufzeitrichtlinie auf einen bestimmten Typ an, z. B. eine Klasse oder Struktur.  
@@ -95,14 +95,14 @@ Wendet eine Laufzeitrichtlinie auf einen bestimmten Typ an, z. B. eine Klasse od
   
  Ein `<Type>`-Element eines generischen Typs wendet seine Richtlinie auf alle Instanziierungen an, die keine eigene Richtlinie haben. Die Richtlinie der konstruierten generischen Typen wird durch das [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Element definiert.  
   
- Wenn der Typ ein generischer Typ ist, wird sein Name mit einem Gravis-Akzentsymbol (\`) gefolgt von der Anzahl der generischen Parameter versehen. Das `Name`-Attribut eines `<Type>`-Elements wird für die <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>-Klasse beispielsweise als `Name="System.Collections.Generic.List`1"` angezeigt.  
+ Wenn der Typ ein generischer Typ ist, wird sein Name mit einem Gravis-Akzentsymbol (\`) gefolgt von der Anzahl der generischen Parameter versehen. Das `Name`-Attribut eines `<Type>`-Elements wird für die <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>-Klasse beispielsweise als ``Name="System.Collections.Generic.List`1"`` angezeigt.
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird Reflektion zum Anzeigen von Informationen zu den Feldern, Eigenschaften und Methoden der <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>-Klasse verwendet. Die Variable `b` im Beispiel ist ein [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Steuerelement. Da im Beispiel einfach Typinformationen abgerufen werden, wird die Verfügbarkeit von Metadaten über die `Browse`-Richtlinieneinstellung gesteuert.  
+ Im folgenden Beispiel wird Reflektion zum Anzeigen von Informationen zu den Feldern, Eigenschaften und Methoden der <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>-Klasse verwendet. Die Variable `b` in diesem Beispiel ist eine <xref:Windows.UI.Xaml.Controls.TextBlock> Steuerelement. Da im Beispiel einfach Typinformationen abgerufen werden, wird die Verfügbarkeit von Metadaten über die `Browse`-Richtlinieneinstellung gesteuert.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- Da Metadaten für die <xref:System.Collections.Generic.List%601>-Klasse nicht automatisch von der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette eingeschlossen werden, können im Beispiel keine angeforderten Memberinformationen zur Laufzeit angezeigt werden. Um die erforderlichen Metadaten bereitzustellen, fügen Sie das folgende `<Type>`-Element der Laufzeitdirektivendatei hinzu. Beachten Sie, dass wir, da wir ein übergeordnetes [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md)-Element bereitgestellt haben, keinen vollqualifizierten Typnamen im `<Type>`-Element bereitstellen müssen.  
+ Da Metadaten für die <xref:System.Collections.Generic.List%601>-Klasse nicht automatisch von der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette eingeschlossen werden, können im Beispiel keine angeforderten Memberinformationen zur Laufzeit angezeigt werden. Um die erforderlichen Metadaten bereitzustellen, fügen Sie das folgende `<Type>`-Element der Laufzeitanweisungsdatei hinzu. Beachten Sie, dass wir, da wir ein übergeordnetes [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md)-Element bereitgestellt haben, keinen vollqualifizierten Typnamen im `<Type>`-Element bereitstellen müssen.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -116,11 +116,11 @@ Wendet eine Laufzeitrichtlinie auf einen bestimmten Typ an, z. B. eine Klasse od
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird Reflektion zum Abrufen eines <xref:System.Reflection.PropertyInfo>-Objekts verwendet, das die <xref:System.String.Chars%2A?displayProperty=nameWithType>-Eigenschaft darstellt. Anschließend wird mithilfe der <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode der Wert des siebten Zeichens in einer Zeichenfolge abgerufen, und alle Zeichen in der Zeichenfolge werden angezeigt. Die Variable `b` im Beispiel ist ein [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx)-Steuerelement.  
+ Im folgenden Beispiel wird Reflektion zum Abrufen eines <xref:System.Reflection.PropertyInfo>-Objekts verwendet, das die <xref:System.String.Chars%2A?displayProperty=nameWithType>-Eigenschaft darstellt. Anschließend wird mithilfe der <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode der Wert des siebten Zeichens in einer Zeichenfolge abgerufen, und alle Zeichen in der Zeichenfolge werden angezeigt. Die Variable `b` in diesem Beispiel ist eine <xref:Windows.UI.Xaml.Controls.TextBlock> Steuerelement.  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Da keine Metdaten für das <xref:System.String>-Objekt verfügbar sind, löst der Aufruf der <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode eine <xref:System.NullReferenceException>-Ausnahme zur Laufzeit aus, wenn die Kompilierung mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette erfolgt. Fügen Sie folgendes `<Type>`-Element zur Laufzeitdirektivendatei hinzu, um die Ausnahme zu eliminieren und die erforderlichen Metadaten bereitzustellen:  
+ Da keine Metdaten für das <xref:System.String>-Objekt verfügbar sind, löst der Aufruf der <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode eine <xref:System.NullReferenceException>-Ausnahme zur Laufzeit aus, wenn die Kompilierung mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette erfolgt. Fügen Sie folgendes `<Type>`-Element zur Laufzeitanweisungsdatei hinzu, um die Ausnahme zu eliminieren und die erforderlichen Metadaten bereitzustellen:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

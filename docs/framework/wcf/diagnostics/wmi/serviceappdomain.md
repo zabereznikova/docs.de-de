@@ -3,11 +3,11 @@ title: ServiceAppDomain
 ms.date: 03/30/2017
 ms.assetid: f28e5186-a66d-46c1-abe9-b50e07f8cb4f
 ms.openlocfilehash: 05be495dbfe87e7dd14b0cfbb38b30c6f8278e6d
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49479523"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192238"
 ---
 # <a name="serviceappdomain"></a>ServiceAppDomain
 Ordnet einer Anwendungsdomäne einen Dienst zu.  

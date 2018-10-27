@@ -2,12 +2,12 @@
 title: Erste Schritte mit f# in Visual Studio Code
 description: Erfahren Sie, wie Sie f# mit Visual Studio Code und Ionide-Plug-Ins Suite verwenden.
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874350"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192667"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Erste Schritte mit f# in Visual Studio Code
 
@@ -19,7 +19,7 @@ Um zu beginnen, stellen Sie sicher, dass man [f# und Ionide-Plug-in ordnungsgem�
 
 Um ein neues F#-Projekt zu erstellen, öffnen Sie Visual Studio Code in einem neuen Ordner (Sie können diese Namen beliebig).
 
-Öffnen Sie als Nächstes den Befehl dem vorgangsergebnis (**Ansicht >-Befehl dem Vorgangsergebnis**) und geben Sie Folgendes:
+Öffnen Sie als Nächstes die befehlspalette (**Ansicht > Befehlspalette**) und geben Sie Folgendes:
 
 ```
 > F# new project
@@ -122,7 +122,7 @@ In den Text der Funktion sehen Sie zwei Teile:
 
    [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
-2. Ein [`if..then..else`](../language-reference/conditional-expressions-if-then-else.md) -Ausdruck, der prüft, ob das erste Zeichen ist ein Vokal Konstrukte, die einen Rückgabewert aus der Eingabezeichen abhängig, ob das erste Zeichen wurde ein Vokal oder nicht:
+2. Ein [ `if..then..else` ](../language-reference/conditional-expressions-if-then-else.md) -Ausdruck, der prüft, ob das erste Zeichen ist ein Vokal Konstrukte, die einen Rückgabewert aus der Eingabezeichen abhängig, ob das erste Zeichen wurde ein Vokal oder nicht:
 
    [!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L8-L11)]
 

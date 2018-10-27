@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: 0539f2144c85fe20a440f8b99425936025a186c0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50045417"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192914"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle
 Windows Communication Foundation (WCF) wird erstellt, um die Interoperation mit Webdiensten, die eine Reihe von Spezifikationen, die Webdienstspezifikationen genannt unterstützen. Um die Dienstkonfiguration für bewährte Methoden für Interoperabilität zu vereinfachen, stellt WCF drei interoperable vom System bereitgestellten Bindungen: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, und <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Für die Interoperabilität mit Organisation für die Advancement of Structured Information Standards (OASIS)-Standards, WCF umfasst eine interoperable vom System bereitgestellte Bindung: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Für Metadatenveröffentlichung WCF umfasst zwei interoperable vom System bereitgestellten Bindungen: [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) und [ \<MexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Dieses Thema listet Spezifikationen auf, die von interoperablen, vom System bereitgestellten Bindungen unterstützt werden.  

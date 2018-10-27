@@ -2,12 +2,12 @@
 title: '&lt;URI&gt; -Elements (Netzwerkeinstellungen)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 3663fdc995be216351a1ce49ae86e5067d64144f
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.openlocfilehash: 2ca5592bd0a66ded25c7da8f0b42367af990aa7a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50035865"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192186"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; -Elements (Netzwerkeinstellungen)
 Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilfe von uniform Resource Identifier (URIs) ausgedrückt verarbeitet.  
@@ -68,4 +68,4 @@ Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilf
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

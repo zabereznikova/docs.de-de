@@ -3,11 +3,11 @@ title: Nachrichtensicherheitsbindung
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 ms.openlocfilehash: 5c8f1cd9135f48d06beb19317910a1c13bac78ff
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50047721"
+ms.locfileid: "50194435"
 ---
 # <a name="message-security-binding"></a>Nachrichtensicherheitsbindung
 Dieser Abschnitt enthält Beispiele, in denen nachrichtensicherheitsbindung in Windows-Diensten in WCF.  

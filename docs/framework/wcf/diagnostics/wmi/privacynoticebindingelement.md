@@ -3,11 +3,11 @@ title: PrivacyNoticeBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0cf110b1-e25b-4d67-986b-10cb04dc4826
 ms.openlocfilehash: fdaf30e78b1a74a733753542acd6a41f15f176bd
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50135263"
+ms.locfileid: "50194825"
 ---
 # <a name="privacynoticebindingelement"></a>PrivacyNoticeBindingElement
 PrivacyNoticeBindingElement  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848308"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194084"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 In der Regel beim Erstellen von Windows Communication Foundation (WCF)-Anwendungen, Entwickler Achten Sie besonders auf die Datenstrukturen und serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -145,8 +145,8 @@ public class BankingTransaction
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Kontrolle, ob die SOAP-Textteile umbrochen werden  
  Standardmäßig sind die SOAP-Textteile in einem umbrochenen Element serialisiert. Beispielsweise zeigt der folgende Code das `HelloGreetingMessage`-Wrapperelement, das aus dem Namen des <xref:System.ServiceModel.MessageContractAttribute>-Typs im Nachrichtenvertrag für die `HelloGreetingMessage`-Nachricht generiert wird.  
   
- [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
- [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
+[!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
+[!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
  Um das Wrapperelement zu unterdrücken, legen Sie die <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>-Eigenschaft auf `false` fest. Um den Namen und den Namespace des Wrapperelements zu kontrollieren, verwenden Sie die Eigenschaften <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> und <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A>.  
   
