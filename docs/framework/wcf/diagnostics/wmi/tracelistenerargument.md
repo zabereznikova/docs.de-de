@@ -1,31 +1,20 @@
 ---
 title: TraceListenerArgument
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6c84090-bf96-43f4-9fb0-1ce8fd9c8efe
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f603d421ed15e67d61a9e76e6cc451e683f00a53
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bae82a42163e2194eea468a24ec6deceef49a0
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454329"
 ---
-# <a name="tracelistenerargument"></a><span data-ttu-id="365b9-102">TraceListenerArgument</span><span class="sxs-lookup"><span data-stu-id="365b9-102">TraceListenerArgument</span></span>
-<span data-ttu-id="365b9-103">TraceListenerArgument</span><span class="sxs-lookup"><span data-stu-id="365b9-103">TraceListenerArgument</span></span>  
+# <a name="tracelistenerargument"></a><span data-ttu-id="3088f-102">TraceListenerArgument</span><span class="sxs-lookup"><span data-stu-id="3088f-102">TraceListenerArgument</span></span>
+<span data-ttu-id="3088f-103">TraceListenerArgument</span><span class="sxs-lookup"><span data-stu-id="3088f-103">TraceListenerArgument</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="365b9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="365b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3088f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3088f-104">Syntax</span></span>  
   
-```  
+```csharp
 class TraceListenerArgument  
 {  
   string Name;  
@@ -33,28 +22,28 @@ class TraceListenerArgument
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="365b9-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="365b9-105">Methods</span></span>  
- <span data-ttu-id="365b9-106">Die TraceListenerArgument-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="365b9-106">The TraceListenerArgument class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="3088f-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="3088f-105">Methods</span></span>  
+ <span data-ttu-id="3088f-106">Die TraceListenerArgument-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="3088f-106">The TraceListenerArgument class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="365b9-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="365b9-107">Properties</span></span>  
- <span data-ttu-id="365b9-108">Die TraceListenerArgument-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="365b9-108">The TraceListenerArgument class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="3088f-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="3088f-107">Properties</span></span>  
+ <span data-ttu-id="3088f-108">Die TraceListenerArgument-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="3088f-108">The TraceListenerArgument class has the following properties:</span></span>  
   
-### <a name="name"></a><span data-ttu-id="365b9-109">Name</span><span class="sxs-lookup"><span data-stu-id="365b9-109">Name</span></span>  
- <span data-ttu-id="365b9-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="365b9-110">Data type: string</span></span>  
+### <a name="name"></a><span data-ttu-id="3088f-109">Name</span><span class="sxs-lookup"><span data-stu-id="3088f-109">Name</span></span>  
+ <span data-ttu-id="3088f-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="3088f-110">Data type: string</span></span>  
   
- <span data-ttu-id="365b9-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="365b9-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="3088f-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="3088f-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="365b9-112">Der Name des Arguments.</span><span class="sxs-lookup"><span data-stu-id="365b9-112">The name of the argument.</span></span>  
+ <span data-ttu-id="3088f-112">Der Name des Arguments.</span><span class="sxs-lookup"><span data-stu-id="3088f-112">The name of the argument.</span></span>  
   
-### <a name="value"></a><span data-ttu-id="365b9-113">Wert</span><span class="sxs-lookup"><span data-stu-id="365b9-113">Value</span></span>  
- <span data-ttu-id="365b9-114">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="365b9-114">Data type: string</span></span>  
+### <a name="value"></a><span data-ttu-id="3088f-113">Wert</span><span class="sxs-lookup"><span data-stu-id="3088f-113">Value</span></span>  
+ <span data-ttu-id="3088f-114">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="3088f-114">Data type: string</span></span>  
   
- <span data-ttu-id="365b9-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="365b9-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="3088f-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="3088f-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="365b9-116">Der Wert des Arguments.</span><span class="sxs-lookup"><span data-stu-id="365b9-116">The value of the argument.</span></span>  
+ <span data-ttu-id="3088f-116">Der Wert des Arguments.</span><span class="sxs-lookup"><span data-stu-id="3088f-116">The value of the argument.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="365b9-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="365b9-117">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3088f-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3088f-117">Requirements</span></span>  
   
-|<span data-ttu-id="365b9-118">MOF</span><span class="sxs-lookup"><span data-stu-id="365b9-118">MOF</span></span>|<span data-ttu-id="365b9-119">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="365b9-119">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="3088f-118">MOF</span><span class="sxs-lookup"><span data-stu-id="3088f-118">MOF</span></span>|<span data-ttu-id="3088f-119">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="3088f-119">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="365b9-120">Namespace</span><span class="sxs-lookup"><span data-stu-id="365b9-120">Namespace</span></span>|<span data-ttu-id="365b9-121">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="365b9-121">Defined in root\ServiceModel</span></span>|
+|<span data-ttu-id="3088f-120">Namespace</span><span class="sxs-lookup"><span data-stu-id="3088f-120">Namespace</span></span>|<span data-ttu-id="3088f-121">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="3088f-121">Defined in root\ServiceModel</span></span>|
