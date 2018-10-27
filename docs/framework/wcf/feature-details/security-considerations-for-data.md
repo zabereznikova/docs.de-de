@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201152"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037294"
 ---
 # <a name="security-considerations-for-data"></a>Sicherheitsüberlegungen zu Daten
 Beim Umgang mit Daten in der Windows Communication Foundation (WCF), müssen Sie eine Reihe verschiedener Bedrohungen berücksichtigen. In der folgenden Tabelle werden die wichtigsten Bedrohungskategorien der Datenverarbeitung aufgeführt. WCF bietet Tools zu deren Abwehr.  
@@ -202,11 +201,11 @@ Beim Umgang mit Daten in der Windows Communication Foundation (WCF), müssen Sie
   
  <xref:System.Runtime.Serialization.DataContractSerializer> darf stets einen Typ laden, der in Übereinstimmung mit dem Vertrag gerade erwartet wird. Wenn z. B. ein Datenvertrag einen Datenmember vom Typ `Customer`enthält, darf <xref:System.Runtime.Serialization.DataContractSerializer> den `Customer` -Typ beim Deserialisieren dieses Datenmembers laden.  
   
- Darüber hinaus unterstützt <xref:System.Runtime.Serialization.DataContractSerializer> Polymorphie. Ein Datenmember kann als <xref:System.Object>deklariert werden, die eingehenden Daten können jedoch eine `Customer` -Instanz enthalten. Das ist nur möglich, wenn der `Customer` -Typ für das Deserialisierungsprogramm anhand einer der folgenden Mechanismen "bekannt" gemacht wurde:  
+ Darüber hinaus unterstützt <xref:System.Runtime.Serialization.DataContractSerializer> Polymorphie. Ein Datenmember kann als <xref:System.Object>deklariert werden, die eingehenden Daten können jedoch eine `Customer` -Instanz enthalten. Das ist nur möglich, wenn der `Customer`-Typ für das Deserialisierungsprogramm anhand einer der folgenden Mechanismen "bekannt" gemacht wurde:  
   
 -   <xref:System.Runtime.Serialization.KnownTypeAttribute> -Attribut wird auf einen Typ angewendet.  
   
--   `KnownTypeAttribute` -Attribut gibt eine Methode an, die eine Liste mit Typen zurückgibt.  
+-   `KnownTypeAttribute`-Attribut gibt eine Methode an, die eine Liste mit Typen zurückgibt.  
   
 -   `ServiceKnownTypeAttribute` -Attribut.  
   

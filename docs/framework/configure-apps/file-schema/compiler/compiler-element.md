@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: a26fc0bda341e85ca54f3dee4addd14e4164209c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: e8c5021b00de503783adb3f1b1dc11964639afbf
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193956"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048267"
 ---
 # <a name="ltcompilergt-element"></a>&lt;Compilerfehler&gt; Element
 
@@ -105,5 +105,5 @@ Das folgende Beispiel veranschaulicht ein typisches Compilerkonfigurationselemen
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<Compiler > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [Angeben vollqualifizierter vollqualifizierte Typnamen]-(.. /.. /.. /.. /.. / docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
 - [Compiler-Element für Compilers für Compilation ((ASP.NET Einstellungsschema)](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e(v=vs.100))

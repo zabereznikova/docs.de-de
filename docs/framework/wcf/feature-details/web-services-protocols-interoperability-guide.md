@@ -2,12 +2,12 @@
 title: Handbuch für die Interoperabilität von Webdienstprotokollen
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842154"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995398"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
 Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste von Webdienstprotokollen, die von die WCF implementiert. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  
@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen i
 |W3C Web Services Addressing 1.0 - Core|[Webdienste-Adressierung 1.0 - Core](https://go.microsoft.com/fwlink/?LinkId=96688)|  
 |W3C Web Services Addressing 1.0 - SOAP-Bindung|[Web Services Addressing 1.0 – SOAP-Bindung](https://go.microsoft.com/fwlink/?LinkId=96689)|  
 |W3C Web Services Addressing 1.0 - WSDL-Bindung*|[Web Services Addressing 1.0 – WSDL-Bindung](https://go.microsoft.com/fwlink/?LinkId=96690)|  
-|W3C Web Services Addressing 1.0 – Metadaten|[Web Services Addressing 1.0 – Metadaten](http://www.w3.org/TR/ws-addr-metadata/)|  
+|W3C Web Services Addressing 1.0 – Metadaten|[Web Services Addressing 1.0 – Metadaten](https://www.w3.org/TR/ws-addr-metadata/)|  
 |WSDL SOAP1.1-Bindung|[Web Services Description Language (WSDL) 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)|  
 |WSDL SOAP1.2-Bindung|[WSDL 1.1-Bindungserweiterung für SOAP 1.2](https://go.microsoft.com/fwlink/?LinkId=96691)|  
   

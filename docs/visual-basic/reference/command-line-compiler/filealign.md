@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf9c854060e5254cedc6c1004ac3e4f25fbdbbd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db70749f28592ae6711b6d9544f8704af9416490
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650666"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181721"
 ---
 # <a name="-filealign"></a>-filealign
 Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.  
@@ -32,14 +30,14 @@ Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.
  Erforderlich. Ein Wert, der die Ausrichtung der Abschnitte in der Ausgabedatei angibt. Gültige Werte sind 512, 1024, 2048, 4096 und 8192. Diese Werte sind in Bytes angegeben.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können die `-filealign` Option, um die Ausrichtung der Abschnitte in der Ausgabedatei anzugeben. Abschnitte sind Blöcke zusammenhängender Arbeitsspeicher in einer PE (Portable Executable)-Datei, die entweder Code oder Daten enthält. Die `-filealign` Option können Sie Ihre Anwendung mit einer nicht standardmäßigen Ausrichtung kompilieren, d. h. die meisten Entwickler müssen nicht auf diese Option verwenden.  
+ Sie können die `-filealign` Option aus, um die Ausrichtung der Abschnitte in Ihrer Ausgabedatei angeben. Abschnitte sind zusammenhängende Speicherblöcke in einer PE (Portable Executable)-Datei, die entweder Code oder Daten enthält. Die `-filealign` Option können Sie Ihre Anwendung mit einer nicht standardmäßigen Ausrichtung kompilieren; die meisten Entwickler müssen sich nicht auf diese Option verwenden.  
   
- Jeder Abschnitt ist an einer Grenze, die ein Vielfaches von ausgerichtet der `-filealign` Wert. Es gibt keinen festen Standardwert. Wenn `-filealign` nicht angegeben wird, wählt der Compiler einen Standardwert zum Zeitpunkt der Kompilierung.  
+ Jeder Abschnitt orientiert sich an einer Grenze, die ein Vielfaches von ist das `-filealign` Wert. Es gibt keinen festen Standardwert. Wenn `-filealign` nicht angegeben wird, wählt der Compiler einen Standardwert zum Zeitpunkt der Kompilierung.  
   
- Indem Sie den Abschnittsgröße angeben, können Sie die Größe der Ausgabedatei ändern. Das Ändern der Größe kann möglicherweise für Programme hilfreich sein, die auf kleineren Geräten ausgeführt werden.  
+ Durch Angeben der Abschnittsgröße, können Sie die Größe der Ausgabedatei ändern. Das Ändern der Größe kann möglicherweise für Programme hilfreich sein, die auf kleineren Geräten ausgeführt werden.  
   
 > [!NOTE]
->  Die `-filealign` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
+>  Die `-filealign` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)

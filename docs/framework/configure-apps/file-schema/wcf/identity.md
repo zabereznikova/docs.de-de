@@ -2,12 +2,12 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: c77f60badd80973f0eeb36f6195b1d4b7617c386
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 74c88df867efa82d48693a3df86b4c7813c40eba
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047045"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwartete Identität des Diensts angeben. Während des handshakevorgangs zwischen Client und Dienst die Windows Communication Foundation (WCF)-Infrastruktur stellt sicher, dass die Identität des erwarteten Diensts mit den Werten dieses Elements übereinstimmt, und daher kann authentifiziert werden kann. Weitere Informationen finden Sie unter [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -23,7 +23,7 @@ Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwart
     <certificate encodedValue="String"/>  
     <certificateReference findValue="String"   
        isChainIncluded="Boolean"  
-       storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"storeName="  
+       storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
        storeLocation="LocalMachine/CurrentUser"  
        X509FindType= Enumeration./>  
     <dns value="String"/>  

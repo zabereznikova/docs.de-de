@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047526"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerzeichen in XAML verarbeitet
 Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet werden müssen, indem eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung. In diesem Thema werden diese XAML-Sprachregeln erläutert. Er dokumentiert auch zusätzliche Leerzeichen behandeln, die von definiert ist die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor und der XAML-Writer für die Serialisierung.  
@@ -59,7 +59,7 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Ostasiatische Zeichen  
- Unter „ostasiatischen Zeichen“ versteht man einen Satz von [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] -Zeichen in den Bereichen von U+20000 bis U+2FFFD und U+30000 bis U+3FFFD. Diese Teilmenge wird manchmal auch als „CJK-Ideogramme“ bezeichnet. Weitere Informationen finden Sie unter [http://www.unicode.org](http://www.unicode.org/).  
+ Unter „ostasiatischen Zeichen“ versteht man einen Satz von [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] -Zeichen in den Bereichen von U+20000 bis U+2FFFD und U+30000 bis U+3FFFD. Diese Teilmenge wird manchmal auch als „CJK-Ideogramme“ bezeichnet. Weitere Informationen finden Sie unter <https://www.unicode.org>.  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>Leerzeichen und Textinhaltsmodelle  

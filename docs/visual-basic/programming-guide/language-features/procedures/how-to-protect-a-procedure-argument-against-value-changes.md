@@ -14,20 +14,20 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: d2e131b770d8498a634d946a5900f9b373ca7e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 393127353a020c1db5df3011b2a97b1c53097f27
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651517"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50035643"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen (Visual Basic)
-Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic Code der Prozedur bietet einen direkten Verweis auf das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Dies ermöglicht das Verfahren zum Ändern des Werts, der dem Argument im aufrufenden Code zugrunde liegt. In einigen Fällen kann der aufrufende Code eine solche Änderung schützen möchten.  
+Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic bietet der Code der Prozedur einen direkten Verweis auf das Programmierelement zugrunde liegenden Arguments im aufrufenden Code. Dies ermöglicht das Verfahren zum Ändern des Werts, der dem Argument im aufrufenden Code zugrunde liegt. In einigen Fällen kann der aufrufende Code eine solche Änderung schützen möchten.  
   
- Sie können ein Argument immer vor Änderung schützen, indem der entsprechende Parameter deklarieren [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in der Prozedur. Wenn Sie ein bestimmtes Argument in einigen Fällen ändern möchten, deklarieren Sie es `ByRef` , sodass den aufrufenden Code, der den Übergabemechanismus bei jedem Aufruf zu bestimmen. Dies geschieht durch das entsprechende Argument in Klammern für die Übergabe nach Wert einschließen oder schließen Sie es nicht in Klammern einschließen, um ihn als Verweis übergeben. Weitere Informationen finden Sie unter [wie: erzwingen, dass ein Argument als Wert übergeben werden](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ Sie können immer ein Argument aus schützen, indem der entsprechende Parameter deklarieren [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) in der Prozedur. Wenn Sie ein bestimmtes Argument in einigen Fällen aber in anderen ändern möchten, deklarieren Sie es `ByRef` und lassen Sie den aufrufenden Code, der den Übergabemechanismus bei jedem Aufruf zu bestimmen. Hierzu setzen Sie das entsprechende Argument in Klammern einschließen, um es als Wert übergeben, oder setzt ihn nicht in Klammern einschließen, um es als Verweis zu übergeben. Weitere Informationen finden Sie unter [Vorgehensweise: erzwingen, dass ein Argument als Wert übergeben werden](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt zwei Prozeduren, die eine Arrayvariable und ausgeführt werden, auf deren Elemente. Die `increase` Verfahren einfach zu jedem Element hinzufügt. Die `replace` -Prozedur weist den Parameter ein neues Array `a()` , und klicken Sie dann auf jedes Element hinzugefügt. Die erneute Zuweisung wirkt sich jedoch nicht auf die zugrunde liegende Arrayvariable im aufrufenden Code aus.  
+ Das folgende Beispiel zeigt zwei Verfahren, die eine Arrayvariable und ausgeführt werden, die Elemente. Die `increase` Verfahren einfach zu jedem Element hinzufügt. Die `replace` Prozedur weist ein neues Array, an den Parameter `a()` , und klicken Sie dann auf die einzelnen Elemente hinzugefügt. Die neuzuweisung wirkt sich jedoch nicht auf die zugrunde liegende Arrayvariable im aufrufenden Code aus.  
   
  [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
   
@@ -35,12 +35,12 @@ Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language
   
  [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
- Die erste `MsgBox` -Aufruf zeigt "After increase(n):: 11, 21, 31, 41". Da das Array `n` ist ein Verweistyp `replace` seiner Elemente, können geändert werden, obwohl der Übergabemechanismus ist `ByVal`.  
+ Die erste `MsgBox` aufrufen, zeigt "nach increase(n):: 11", "21", "31", "41". Da das Array `n` ist ein Verweistyp, `increase` können ihre Member, ändern, auch wenn der Übergabemechanismus ist `ByVal`.  
   
- Die zweite `MsgBox` -Aufruf zeigt "After replace(n):: 11, 21, 31, 41". Da `n` übergeben `ByVal`, `replace` die Variable kann nicht geändert werden `n` im aufrufenden Code, indem Sie ein neues Array zuweisen. Wenn `replace` die Instanz des neuen Arrays erstellt `k` und weist sie auf die lokale Variable `a`, geht den Verweis auf `n` vom aufrufenden Code übergeben. Wenn sie die Mitglieder der ändert `a`, nur die lokale Array `k` betroffen ist. Aus diesem Grund `replace` erhöht sich die Werte des Arrays nicht `n` im aufrufenden Code.  
+ Die zweite `MsgBox` aufrufen, zeigt "nach Replace(n):: 11", "21", "31", "41". Da `n` übergeben `ByVal`, `replace` die Variable kann nicht geändert werden `n` im aufrufenden Code, indem Sie ein neues Array zuweisen. Wenn `replace` neuen Arrayinstanz erstellt `k` und weist sie auf die lokale Variable `a`, er verliert den Verweis auf `n` vom aufrufenden Code übergeben. Wenn sie die Mitglieder der ändert `a`, nur das lokale Array `k` betroffen ist. Aus diesem Grund `replace` erhöht sich die Werte des Arrays nicht `n` im aufrufenden Code.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Der Standardwert in Visual Basic ist Argumenten als Wert übergeben. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
+ Der Standardwert in Visual Basic ist, Argumente als Wert übergeben. Allerdings ist es guter Programmierstil, auch die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort für jeden deklarierten Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Verfahren](./index.md)  
@@ -52,4 +52,4 @@ Wenn eine Prozedur einen Parameter als [ByRef](../../../../visual-basic/language
  [Gewusst wie: Ändern des Werts eines Prozedurarguments](./how-to-change-the-value-of-a-procedure-argument.md)  
  [Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird](./how-to-force-an-argument-to-be-passed-by-value.md)  
  [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)  
- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+ [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

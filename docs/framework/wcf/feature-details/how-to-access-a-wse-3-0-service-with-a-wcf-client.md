@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698444"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50037151"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client
 Windows Communication Foundation (WCF)-Clients sind auf niedriger Ebene kompatibel mit Web Services Enhancements (WSE) 3.0 für Microsoft .NET Services aus, wenn WCF-Clients konfiguriert werden, um die Version vom August 2004 von WS-Addressing-Spezifikation. WSE 3.0-Dienste unterstützen jedoch nicht des metadatenaustauschprotokolls (MEX), also bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) um einen WCF-Clientklasse zu erstellen, die Sicherheitseinstellungen gelten nicht auf die generierte WCF-Client. Aus diesem Grund müssen Sie die Sicherheitseinstellungen angeben, dass der WSE 3.0-Dienst erforderlich ist, nachdem der WCF-Client generiert wurde.  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF)-Clients sind auf niedriger Ebene kompatib
   
 2.  Erstellen Sie eine Klasse, die eine Bindung darstellt, die mit WSE 3.0-Webdiensten kommunizieren kann.  
   
-     Die folgende Klasse ist Teil der [interoperieren mit WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) Beispiel:  
+     Die folgende Klasse ist Teil der [interoperieren mit WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) Beispiel:  
   
     1.  Erstellen Sie eine von der <xref:System.ServiceModel.Channels.Binding>-Klasse abgeleitete Klasse.  
   
@@ -64,4 +64,4 @@ Windows Communication Foundation (WCF)-Clients sind auf niedriger Ebene kompatib
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Channels.Binding>  
- [Interoperieren mit WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [Interoperieren mit WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

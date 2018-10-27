@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 047cd7a2b8a6d315c6cadb9b535b84f744fd2d09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504884"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135438"
 ---
 # <a name="pipeline-development"></a>Pipeline-Entwicklung
 Die Add-in-Pipeline ist der Pfad der Pipelinesegmente, die die hostanwendung und der Add-in verwenden müssen, um miteinander zu kommunizieren.  
@@ -89,5 +89,5 @@ Aktivierungspfad aus dem Add-in auf dem host
      Beschreibt, wie datenauflistungen über die Pipeline basierend auf einem Buch Store übergeben.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Add-In-Pipeline-Szenarios](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
- [Add-Ins und Erweiterbarkeit](../../../docs/framework/add-ins/index.md)
+- [Add-In-Pipeline-Szenarios](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+- [Add-Ins und Erweiterbarkeit](../../../docs/framework/add-ins/index.md)

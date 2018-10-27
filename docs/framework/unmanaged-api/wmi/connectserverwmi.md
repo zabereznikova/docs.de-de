@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049281"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi-Funktion
 Erstellt über DCOM eine Verbindung mit einem WMI-Namespace auf einem angegebenen Computer.  
@@ -70,7 +70,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*Domänennamen* | NT LAN Manager-Authentifizierung wird verwendet, und dieser Parameter enthält einen NTLM-Domänennamen. |
 
 `pCtx`   
-[in] In der Regel ist dieser Parameter ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) Objekt durch eine oder mehrere dynamische Klasse Anbieter erforderlich. 
+[in] Dieser Parameter in der Regel ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) Objekt durch eine oder mehrere dynamische Klasse Anbieter erforderlich. 
 
 `ppNamespace`  
 [out] Wenn die Funktion zurückgibt, erhält einen Zeiger auf ein [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Objekt an den angegebenen Namespace gebunden. Festgelegt auf zeigen `null` , wenn ein Fehler auftritt.
@@ -94,7 +94,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) Methode.
+Diese Funktion umschließt einen Aufruf der [IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) Methode.
 
  Für den lokalen Zugriff auf den Standardnamespace `strNetworkResource` kann ein einfaches Objekt-Pfad: "Root\default" oder "\\.\root\default". Für den Zugriff auf den Standardnamespace auf einem Remotecomputer mithilfe der COM- oder Microsoft-kompatiblen-Netzwerken, den Namen des Computers enthalten: "\\Myserver\root\default". Den Namen des Computers kann auch einen DNS-Namen oder die IP-Adresse sein. Die `ConnectServerWmi` Funktion kann auch eine Verbindung herstellen mit IPv6-Computern mit einer IPv6-Adresse.
 

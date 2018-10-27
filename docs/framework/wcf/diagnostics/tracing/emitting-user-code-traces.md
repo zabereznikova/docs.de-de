@@ -2,22 +2,22 @@
 title: Ausgeben von Benutzercode-Ablaufverfolgungen
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807120"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049164"
 ---
 # <a name="emitting-user-code-traces"></a>Ausgeben von Benutzercode-Ablaufverfolgungen
-Zusätzlich zum Aktivieren der Ablaufverfolgung in der Konfiguration zum Sammeln von Instrumentationsdaten, die von der Windows Communication Foundation (WCF) generiert, können Sie auch programmgesteuert in Benutzercode Ausgeben von ablaufverfolgungen. Auf diese Weise können proaktiv Instrumentierungsdaten zur späteren Analyse erstellt werden. Die entsprechende Vorgehensweise wird in diesem Thema erläutert.  
+Zusätzlich zum Aktivieren der Ablaufverfolgung in der Konfiguration zum Sammeln von instrumentierungsdaten, die von Windows Communication Foundation (WCF) generiert, können Sie auch programmgesteuert in Benutzercode Ausgeben von ablaufverfolgungen. Auf diese Weise können proaktiv Instrumentierungsdaten zur späteren Analyse erstellt werden. Die entsprechende Vorgehensweise wird in diesem Thema erläutert.  
   
- Darüber hinaus die [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel enthält den Code, die in den folgenden Abschnitten veranschaulicht.  
+ Darüber hinaus die [erweitern Ablaufverfolgung](../../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel enthält alle in den folgenden Abschnitten gezeigten Code.  
   
 ## <a name="creating-a-trace-source"></a>Erstellen einer Ablaufverfolgungsquelle  
  Mithilfe des folgenden Codes können Sie eine Ablaufverfolgungsquelle für Benutzer erstellen:  
   
-```  
+```csharp
 TraceSource ts = new TraceSource("myUserTraceSource");  
 ```  
   
@@ -32,7 +32,7 @@ TraceSource ts = new TraceSource("myUserTraceSource");
   
  Im folgenden Codebeispiel wird die hierfür erforderliche Vorgehensweise veranschaulicht:  
   
-```  
+```csharp
 Guid oldID = Trace.CorrelationManager.ActivityId;  
 Guid traceID = Guid.NewGuid();  
 ts.TraceTransfer(0, "transfer", traceID);  
@@ -43,7 +43,7 @@ ts.TraceEvent(TraceEventType.Start, 0, "Add request");
 ## <a name="emitting-traces-within-a-user-activity"></a>Ausgeben von Ablaufverfolgungen innerhalb einer Benutzeraktivität  
  Der folgende Code dient zum Ausgeben von Ablaufverfolgungen innerhalb einer Benutzeraktivität:  
   
-```  
+```csharp
 double value1 = 100.00D;  
 double value2 = 15.99D;  
 ts.TraceInformation("Client sends message to Add " + value1 + ", " + value2);  
@@ -56,7 +56,7 @@ ts.TraceInformation("Client receives Add response '" + result + "'");
   
  Im folgenden Codebeispiel wird die hierfür erforderliche Vorgehensweise veranschaulicht:  
   
-```  
+```csharp
 ts.TraceTransfer(0, "transfer", oldID);  
 ts.TraceEvent(TraceEventType.Stop, 0, "Add request");  
 Trace.CorrelationManager.ActivityId = oldID;  
@@ -66,11 +66,11 @@ Trace.CorrelationManager.ActivityId = oldID;
  Wird das `propagateActivity`-Attribut für die `true`-Ablaufverfolgungsquelle sowohl in der Konfigurationsdatei des Clients als auch in der Konfigurationsdatei des Diensts auf `System.ServiceModel` festgelegt, erfolgt die Dienstverarbeitung für die Add-Anforderung in der Aktivität, die auch für den Client definiert ist. Werden vom Dienst eigene Aktivitäten und Übertragungen definiert, erscheinen die Dienstablaufverfolgungen nicht in der vom Client weitergegebenen Aktivität. Stattdessen erscheinen sie in einer Aktivität, die anhand von Übertragungsablaufverfolgungen mit der Aktivität korreliert wird, deren ID vom Client weitergegeben wird.  
   
 > [!NOTE]
->  Wenn die `propagateActivity` -Attributsatz zur `true` auf dem Client und Dienst die umgebungsaktivität im Vorgangsbereich des Diensts von WCF festgelegt ist.  
+>  Wenn die `propagateActivity` -Attributsatz auf `true` auf dem Client und Dienst die umgebungsaktivität im Vorgangsbereich des Diensts von WCF festgelegt ist.  
   
  Sie können den folgenden Code verwenden, um zu überprüfen, ob eine Aktivität im Bereich von WCF festgelegt wurde.  
   
-```  
+```csharp
 // Check if an activity was set in scope by WCF, if it was   
 // propagated from the client. If not, ( ambient activity is   
 // equal to Guid.Empty), create a new one.  
@@ -96,18 +96,18 @@ ts.TraceEvent(TraceEventType.Stop, 0, "Add Activity");
 ## <a name="tracing-exceptions-thrown-in-code"></a>Verfolgen von im Code ausgelösten Ausnahmen  
  Wird im Code eine Ausnahme ausgelöst, kann diese Ausnahme mithilfe des folgenden Codes auch ab der Warnstufe verfolgt werden:  
   
-```  
+```csharp
 ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessage");  
 ```  
   
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Anzeigen von Benutzerablaufverfolgungen im Service Trace Viewer-Tool  
- Dieser Abschnitt enthält Screenshots von ablaufverfolgungen, die durch die Ausführung generiert der [erweitern Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel, bei der Anzeige mithilfe der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ Dieser Abschnitt enthält Screenshots von ablaufverfolgungen, die durch die Ausführung generiert der [erweitern Ablaufverfolgung](../../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel, bei der Anzeige mit den [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
- In der folgenden Abbildung wird die zuvor erstellte "Add Request"-Aktivität im linken Bereich ausgewählt. Sie wird zusammen mit drei anderen mathematischen Operationen (Divide, Subtract, Multiply) aufgeführt. Diese stellen das Anwendungsclientprogramm dar. Durch den Benutzercode wurde für jede Operation eine neue Aktivität definiert, um potenzielle Fehler in verschiedenen Anforderungen zu isolieren.  
+ Im folgenden Diagramm wird die zuvor erstellte Aktivität von "Add Request" im linken Bereich ausgewählt. Sie wird zusammen mit drei anderen mathematischen Operationen (Divide, Subtract, Multiply) aufgeführt. Diese stellen das Anwendungsclientprogramm dar. Durch den Benutzercode wurde für jede Operation eine neue Aktivität definiert, um potenzielle Fehler in verschiedenen Anforderungen zu isolieren.  
   
- Zur Veranschaulichung der Verwendung von Übertragungen in die [Tracing erweitern](../../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel eine Calculator-Aktivität, die die vier vorgangsanforderungen kapselt wird auch erstellt werden. Für jede Anforderung findet eine Übertragung von der Berechnungsaktivität zur Anforderungsaktivität und umgekehrt statt (die Ablaufverfolgung ist im rechten oberen Bereich der Abbildung hervorgehoben).  
+ Zur Veranschaulichung der Verwendung von Übertragungen in den [Erweitern von Ablaufverfolgung](../../../../../docs/framework/wcf/samples/extending-tracing.md) Beispiel eine Calculator-Aktivität, die die vier vorgangsanforderungen enthält, wird ebenfalls erstellt. Für jede Anforderung findet eine Übertragung von der Berechnungsaktivität zur Anforderungsaktivität und umgekehrt statt (die Ablaufverfolgung ist im rechten oberen Bereich der Abbildung hervorgehoben).  
   
- Wird im linken Bereich eine Aktivität ausgewählt, werden die in dieser Aktivität enthaltenen Ablaufverfolgungen im rechten oberen Bereich angezeigt. Wenn `propagateActivity` ist `true` an jedem Endpunkt des anforderungspfads, werden die ablaufverfolgungen in der Anforderungsaktivität von allen Prozessen, die in der Anforderung beteiligt sind. In diesem Beispiel sind sowohl Ablaufverfolgungen vom Client als auch vom Dienst enthalten (siehe 4. Spalte des Bereichs).  
+ Wird im linken Bereich eine Aktivität ausgewählt, werden die in dieser Aktivität enthaltenen Ablaufverfolgungen im rechten oberen Bereich angezeigt. Wenn `propagateActivity` ist `true` an jedem Endpunkt im Anforderungspfad, der ablaufverfolgungen in der Anforderungsaktivität werden von allen Prozessen, die in der Anforderung beteiligt sind. In diesem Beispiel sind sowohl Ablaufverfolgungen vom Client als auch vom Dienst enthalten (siehe 4. Spalte des Bereichs).  
   
  Diese Aktivität weist die folgende Verarbeitungsreihenfolge auf:  
   
@@ -123,10 +123,10 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  Im folgenden Diagramm sind auch Übertragungsablaufverfolgungen von der und zur Berechnungsaktivität sowie zwei Paare von Start- und Stop-Ablaufverfolgungen pro Anforderungsaktivität enthalten (eins für den Client, eins für den Dienst, also jeweils eins für jede Ablaufverfolgungsquelle).  
   
- ![Trace Viewer: Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Ablaufverfolgungs-Viewer: Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Liste der Aktivitäten nach Erstellungszeit (linker Bereich) und deren geschachtelter Aktivitäten (Bereich rechts oben)  
   
- Wird vom Dienstcode eine Ausnahme ausgelöst, durch die auch vom Client eine Ausnahme ausgelöst wird (beispielsweise bei Ausbleiben einer Antwort auf eine Anforderung), erscheinen sowohl die Warn- oder Fehlermeldung des Diensts als auch die des Clients in der gleichen Aktivität, um das Herstellen eines direkten Zusammenhangs zu ermöglichen. Im folgenden Diagramm ist eine Ausnahme, die besagt, "der Dienst zum Verarbeiten dieser Anforderung im Benutzercode verweigert." löst der Dienst aus. Der Client löst eine Ausnahme, die besagt, "der Server die Anforderung aufgrund eines internen Fehlers nicht verarbeiten konnte." auch aus.  
+ Wird vom Dienstcode eine Ausnahme ausgelöst, durch die auch vom Client eine Ausnahme ausgelöst wird (beispielsweise bei Ausbleiben einer Antwort auf eine Anforderung), erscheinen sowohl die Warn- oder Fehlermeldung des Diensts als auch die des Clients in der gleichen Aktivität, um das Herstellen eines direkten Zusammenhangs zu ermöglichen. Im folgenden Diagramm löst der Dienst eine Ausnahme aus die Meldung "der Dienst zum Verarbeiten dieser Anforderung im Benutzercode verweigert." Der Client löst auch eine Ausnahme, die besagt "der Server nicht zum Verarbeiten der Anforderung aufgrund eines internen Fehlers konnte."  
   
  ![Verwenden von Trace Viewer zum Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Endpunktübergreifende Fehler für eine bestimmte Anforderung erscheinen in der gleichen Aktivität, wenn die Anforderungsaktivitäts-ID weitergegeben wurde.  
@@ -136,7 +136,7 @@ Endpunktübergreifende Fehler für eine bestimmte Anforderung erscheinen in der 
  ![Verwenden von Trace Viewer zum Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Diagrammansicht der Fehlerkorrelation  
   
- Zum Abrufen der vorherigen Ablaufverfolgungen wird `ActivityTracing` für die Benutzerablaufverfolgungsquellen und `propagateActivity=true` für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt. `ActivityTracing` wurde nicht für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt, um die Aktivitätsweitergabe von Benutzercode an Benutzercode zu ermöglichen. (Wenn ServiceModel-aktivitätsablaufverfolgung aktiviert ist, wird die auf dem Client definierte Aktivitäts-ID nicht ganz nach den Dienstcode Benutzer weitergegeben; Übertragungen korrelieren jedoch der Client und Dienst benutzercodeaktivitäten an die intermediate WCF-Aktivitäten.)  
+ Zum Abrufen der vorherigen Ablaufverfolgungen wird `ActivityTracing` für die Benutzerablaufverfolgungsquellen und `propagateActivity=true` für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt. `ActivityTracing` wurde nicht für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt, um die Aktivitätsweitergabe von Benutzercode an Benutzercode zu ermöglichen. (Wenn die ServiceModel-aktivitätsablaufverfolgung aktiviert ist, die auf dem Client definierte Aktivitäts-ID nicht ganz an den Benutzercode für den Dienst weitergegeben; Datenübertragung, Korrelieren jedoch den Client und Dienst benutzercodeaktivitäten, zwischen WCF-Aktivitäten.)  
   
  Das Definieren von Aktivitäten und das Weitergeben der Aktivitäts-ID ermöglicht das endpunktübergreifende Herstellen eines direkten Fehlerzusammenhangs. Dadurch lässt sich die Grundursache eines Fehlers schneller ermitteln.  
   

@@ -2,12 +2,12 @@
 title: Hello World mit dem Routingdienst
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 52b5c3b167cbbfb032d8e6104a118c5c9384938e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 25d0ce0663b60410912be94780fe8e89f6bf0d39
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845774"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182541"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World mit dem Routingdienst
 Diesem Beispiel wird der Windows Communication Foundation (WCF)-Routingdienst veranschaulicht. Der Routingdienst ist eine WCF-Komponente, die es einfach macht, ein inhaltsbasierten Routers in Ihre Anwendung einbinden. In diesem Beispiel wird der standardmäßigen WCF-Rechnerbeispiel für die Kommunikation über den Routingdienst angepasst. In diesem Beispiel ist der Rechnerclient so konfiguriert, dass er Nachrichten an einen vom Router verfügbar gemachten Endpunkt sendet. Der Routingdienst ist so konfiguriert, dass er alle gesendeten Nachrichten akzeptiert und diese an einen Endpunkt weiterleitet, der dem Rechnerdienst entspricht. Somit werden vom Client gesendete Nachrichten vom Router empfangen und zum eigentlichen Rechnerdienst umgeleitet. Nachrichten vom Rechnerdienst werden an den Router zurückgesendet, der sie dann zurück an den Rechnerclient übergibt.
@@ -29,6 +29,7 @@ Diesem Beispiel wird der Windows Communication Foundation (WCF)-Routingdienst ve
 
      Die folgende Ausgabe wird angezeigt:
 
+    ```console
      Add(100,15.99) = 115.99
 
      Subtract(145,76.54) = 68.46
@@ -36,6 +37,7 @@ Diesem Beispiel wird der Windows Communication Foundation (WCF)-Routingdienst ve
      Multiply(9,81.25) = 731.25
 
      Divide(22,7) = 3.14285714285714
+    ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>Konfigurierbar über Code oder App.Config
  Das Beispiel wird so konfiguriert geliefert, dass die Datei App.config das Verhalten des Routers definiert. Sie können außerdem den Namen der Datei App.config ändern, damit er nicht erkannt wird, und die Auskommentierung des Methodenaufrufs von ConfigureRouterViaCode() aufheben. Beide Methoden führen zum gleichen Routerverhalten.

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656099"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044813"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Definiert Konstanten für die bedingte Kompilierung.  
@@ -34,12 +32,12 @@ Definiert Konstanten für die bedingte Kompilierung.
 |Begriff|Definition|  
 |---|---|  
 |`symbol`|Erforderlich. Das zu definierende Symbol.|  
-|`value`|Dies ist optional. Der Wert, der `symbol` zugewiesen werden soll. Wenn `value` ist eine Zeichenfolge, muss Sie von Sequenzen von umgekehrtem Schrägstrich/Anführungszeichen eingeschlossen sein (\\") anstelle von Anführungszeichen. Wurde kein Wert festgelegt, dann wird er als True angenommen.|  
+|`value`|Dies ist optional. Der Wert, der `symbol` zugewiesen werden soll. Wenn `value` ist eine Zeichenfolge, es muss durch den umgekehrten Schrägstrich/Anführungszeichen eingeschlossen sein (\\") anstelle von Anführungszeichen. Wurde kein Wert festgelegt, dann wird er als True angenommen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-define` Option wirkt sich ähnlich wie die Verwendung einer `#Const` -Präprozessordirektive in der Quelldatei, außer diese mit definierte Konstanten `-define` öffentlich sind und auf alle Dateien im Projekt gelten.  
+ Die `-define` Option wirkt sich ähnlich wie die Verwendung einer `#Const` -präprozessoranweisung in der Quelldatei, außer diese mit definierten Konstanten `-define` öffentlich sind und auf alle Dateien im Projekt gelten.  
   
- Sie können Symbole, die mit dieser Option erstellt wurden, mit der `#If`...`Then`...`#Else`-Direktive verwenden, um Quelldateien bedingt zu kompilieren.  
+ Sie können Symbole, die mit dieser Option erstellt wurden, mit der `#If`...`Then`...`#Else`-Anweisung verwenden, um Quelldateien bedingt zu kompilieren.  
   
  `-d` ist die Kurzform der `-define`.  
   

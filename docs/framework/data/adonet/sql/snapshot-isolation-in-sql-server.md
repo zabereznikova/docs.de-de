@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970071"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034298"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Momentaufnahmenisolation in SQL Server
 Die Momentaufnahmeisolation erweitert die Parallelität für OLTP-Anwendungen.  
@@ -24,7 +24,7 @@ Die Momentaufnahmeisolation erweitert die Parallelität für OLTP-Anwendungen.
   
  Die Snapshot-Isolation muss durch das Festlegen der ALLOW_SNAPSHOT_ISOLATION ON-Datenbankoption aktiviert werden, bevor sie in Transaktionen verwendet wird. Dies aktiviert den Mechanismus zum Speichern von Zeilenversionen in der temporären Datenbank (**Tempdb**). Die Snapshot-Isolation muss in jeder Datenbank, die diese verwendet, mit der ALTER DATABASE-Transact-SQL-Anweisung aktiviert werden. In diesem Punkt unterscheidet sich die Snapshot-Isolation von den herkömmlichen Isolationsstufen READ COMMITTED, REPEATABLE READ, SERIALIZABLE und READ UNCOMMITTED, für die keine Konfiguration erforderlich ist. Die folgenden Anweisungen aktivieren die Snapshot-Isolation und ersetzen das READ COMMITTED-Standardverhalten durch SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   SERIALIZABLE ist die restriktivste Isolationsstufe, da sie bis zum Abschluss der Transaktion vollständige Schlüsselbereiche sperrt und die Sperren beibehält. Er umfasst REPEATABLE READ und fügt die Einschränkung hinzu, dass andere Transaktionen bis zum Abschluss der Transaktion keine neuen Zeilen in Bereiche einfügen können, die von der Transaktion gelesen wurden.  
   
- Weitere Informationen finden Sie in der Onlinedokumentation zu SQL Server unter "Isolation Levels".  
+ Weitere Informationen finden Sie in der [Transaktion Sperren Handbuch und Zeilenversionsverwaltung](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Snapshot-Isolationsstufenerweiterungen  
  In SQL Server wurden mit der SNAPSHOT-Isolationsstufe und einer zusätzlichen READ COMMITTED-Implementierung Erweiterungen zu den SQL-92-Isolationsstufen eingeführt. Die READ_COMMITTED_SNAPSHOT-Isolationsstufe kann READ COMMITTED für alle Transaktionen auf transparente Weise ersetzen.  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Verwenden von Sperrhinweisen mit der Snapshot-Isolation  
  Im vorigen Beispiel wählt die erste Transaktion Daten aus, und eine zweite Transaktion aktualisiert die Daten, bevor die erste Transaktion beendet werden kann, wodurch ein Updatekonflikt entsteht, wenn die erste Transaktion versucht, dieselbe Zeile zu aktualisieren. Sie können die Gefahr von Updatekonflikten in Snapshot-Transaktionen mit langen Laufzeiten reduzieren, indem Sie zu Beginn der Transaktionen Sperrhinweise bereitstellen. In der folgenden SELECT-Anweisung wird der UPDLOCK-Hinweis zum Sperren der ausgewählten Zeilen verwendet:  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [ADO.NET Managed Provider und DataSet-Entwicklercenter](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [Transaktionssperren Handbuch und Zeilenversionsverwaltung](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

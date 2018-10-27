@@ -6,14 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51a527dfddd2b78ac1c0559420298a66eb4b63f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652921"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180231"
 ---
 # <a name="-main"></a>-main
 Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.  
@@ -26,14 +24,14 @@ Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.
   
 ## <a name="arguments"></a>Argumente  
  `location`  
- Erforderlich. Der Name der Klasse oder des Moduls, enthält die `Sub Main` Prozedur aufgerufen werden, wenn das Programm gestartet wird. Dies ist möglicherweise im Formular **-Main: Module** oder **-main:namespace.module**.  
+ Erforderlich. Der Name der Klasse oder Modul, enthält die `Sub Main` Prozedur aufgerufen werden, wenn das Programm gestartet wird. Dies ist möglicherweise im Formular **-Main: Module** oder **-main:namespace.module**.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Option, wenn Sie eine ausführbare Datei oder ein ausführbares Windows-Programm erstellen. Wenn die **-main** Option ausgelassen wird, wird der Compiler sucht nach einer gültigen gemeinsam genutzten `Sub Main` in alle öffentlichen Klassen und Module.  
+ Verwenden Sie diese Option, wenn Sie eine ausführbare Datei oder ein ausführbares Windows-Programm erstellen. Wenn die **-main** Option ausgelassen wird, wird der Compiler sucht nach einer gültigen gemeinsam genutzten `Sub Main` in allen öffentlichen Klassen und Modulen.  
   
- Finden Sie unter [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) für eine Erläuterung zu den verschiedenen Formen von der `Main` Prozedur.  
+ Finden Sie unter [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) eine Erläuterung der verschiedenen Formen von der `Main` Verfahren.  
   
- Wenn `location` ist eine Klasse, die von erben <xref:System.Windows.Forms.Form>, gibt der Compiler eine `Main` Prozedur, die die Anwendung gestartet wird, wenn die Klasse keine enthält `Main` Prozedur. Dadurch können Sie den Code über die Befehlszeile kompilieren, die in der Entwicklungsumgebung erstellt wurde.  
+ Wenn `location` ist eine Klasse, die von erbt <xref:System.Windows.Forms.Form>, der Compiler stellt eine Standardimplementierung `Main` Prozedur, die die Anwendung gestartet wird, wenn die Klasse keine `Main` Verfahren. Dadurch können Sie den Code in der Befehlszeile kompilieren, die in der Entwicklungsumgebung erstellt wurde.  
   
  [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
@@ -48,7 +46,7 @@ Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.
 4.  Ändern Sie den Wert in der **Startobjekt** Feld.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende code kompiliert `T2.vb` und `T3.vb`, und geben, die die `Sub Main` Prozedur befinden sich der `Test2` Klasse.  
+ Der folgende code kompiliert `T2.vb` und `T3.vb`, geben Sie dabei, die die `Sub Main` Prozedur befindet sich in der `Test2` Klasse.  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
@@ -56,6 +54,6 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Siehe auch  
  [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-Ziel (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

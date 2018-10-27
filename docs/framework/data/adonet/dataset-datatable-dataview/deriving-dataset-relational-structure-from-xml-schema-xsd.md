@@ -2,17 +2,17 @@
 title: Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504946"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033622"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 Dieser Abschnitt enthält eine Übersicht über das Erstellen des relationalen Schemas eines `DataSet` aus einem XSD-Schemadokument (XML Schema Definition Language). Im Allgemeinen für die einzelnen `complexType` untergeordnetes Element eines Schemaelements eine Tabelle wird generiert, der `DataSet`. Die Tabellenstruktur wird durch die Definition des komplexen Typs festgelegt. Tabellen werden erstellt, der `DataSet` für Elemente der obersten Ebene im Schema. Eine Tabelle wird jedoch nur erstellt, für die ein auf oberster Ebene `complexType` Element bei der `complexType` in einem anderen Element geschachtelt ist `complexType` Element, in dem Fall wird das geschachtelte `complexType` -Element zugeordnet ist eine `DataTable` innerhalb der `DataSet`.  
   
- Weitere Informationen zu XSD finden Sie unter World Wide Web Consortium (W3C) XML Schema Part 0: "Primer Recommendation", das XML Schema Part 1: Structures Recommendation und der XML Schema Part 2: Datatypes Recommendation, am [ http://www.w3.org/ ](http://www.w3.org/TR/).  
+ Weitere Informationen zu XSD finden Sie unter der World Wide Web Consortium (W3C) [XML Schema Part 0: Primer Recommendation](https://www.w3.org/TR/xmlschema-0/), [XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/), und die [XML Schemateil 2: "Datatypes Recommendation"](https://www.w3.org/TR/xmlschema-2/).  
   
  Im folgenden Beispiel wird ein XML-Schema, in denen `customers` ist das untergeordnete Element von der `MyDataSet` Element, das eine **DataSet** Element.  
   

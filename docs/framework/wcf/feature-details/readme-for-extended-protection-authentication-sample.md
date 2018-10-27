@@ -2,13 +2,12 @@
 title: Infodatei für das Beispiel zum erweiterten Schutz für die Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-author: BrucePerlerMS
-ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
+ms.openlocfilehash: 19fe961e346874346485442bd0ba90badab5f79f
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047279"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Infodatei für das Beispiel zum erweiterten Schutz für die Authentifizierung
 Erweiterter Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-in-the-Middle (MITM)-Angriffen, in dem ein Angreifer (der "Man-in-the-Middle"), fängt die Anmeldeinformationen eines Clients, und verwendet, um den Zugriff auf sichere Ressourcen auf dem Client vorgesehenen Server.  

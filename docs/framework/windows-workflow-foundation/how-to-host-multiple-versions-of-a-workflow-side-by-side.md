@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316466"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181617"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Vorgehensweise: Paralleles Hosten mehrerer Workflowversionen
 `WorkflowIdentity` bietet Entwicklern von Workflowanwendungen die Möglichkeit, einer Worfklowdefinition einen Namen und eine Version zuzuordnen und diese Informationen mit einer persistenten Workflowinstanz zu verknüpfen. Entwickler von Workflowanwendungen können diese Identitätsinformationen verwenden, um Szenarien wie die parallele Ausführung mehrerer Versionen einer Workflowdefinition umzusetzen. Darüber hinaus bilden sie die Grundlage für andere Funktionen wie dynamische Updates. In diesem Schritt des Lernprogramms wird veranschaulicht, wie mit `WorkflowIdentity` mehrere Versionen eines Workflows gleichzeitig gehostet werden.
@@ -555,14 +555,15 @@ ms.locfileid: "49316466"
 
 2.  Starten Sie einen neuen Workflow, indem Sie auf **neues Spiel**. Die Version des Workflows wird unter dem Statusfenster angezeigt und gibt die aktualisierte Version der zugeordneten `WorkflowIdentity` an. Notieren Sie die `InstanceId`, sodass Sie beim Abschluss des Workflows dessen Nachverfolgungsdatei anzeigen können. Geben Sie dann Schätzwerte ein, bis das Spiel abgeschlossen ist. Beachten Sie, wie sich der Schätzwert des Benutzers gemäß den Updates der `WriteLine`-Aktivitäten in den Informationen im Statusfenster verändert.
 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**5 ist zu hoch.** 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**3 ist zu hoch.** 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**1 ist zu niedrig.** 
- **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**Herzlichen Glückwunsch, Sie erraten die Anzahl in 4 deaktiviert.**
+ **Bitte geben Sie eine Zahl zwischen 1 und 10**  
+**5 ist zu hoch.**  
+**Bitte geben Sie eine Zahl zwischen 1 und 10**  
+**3 ist zu hoch.**  
+**Bitte geben Sie eine Zahl zwischen 1 und 10**  
+**1 ist zu niedrig.**  
+**Bitte geben Sie eine Zahl zwischen 1 und 10**  
+**Herzlichen Glückwunsch, Sie die Zahl 4 wiederum erraten.**  
+
     > [!NOTE]
     >  Der aktualisierte Text aus den `WriteLine`-Aktivitäten wird angezeigt, die Ausgabe der endgültigen, in diesem Thema hinzugefügten `WriteLine`-Aktivität jedoch nicht. Das liegt daran, dass das Statusfenster vom `PersistableIdle`-Handler aktualisiert wird. Da der Workflow abgeschlossen wird, statt nach der letzten Aktivität in den Leerlauf zu wechseln, wird der `PersistableIdle`-Handler nicht aufgerufen. Im Statusfenster wird jedoch eine ähnliche Meldung vom `Completed`-Handler angezeigt. Bei Bedarf kann Code dem `Completed`-Handler hinzugefügt werden, um den Text aus `StringWriter` zu extrahieren und ihn im Statusfenster anzuzeigen.
 

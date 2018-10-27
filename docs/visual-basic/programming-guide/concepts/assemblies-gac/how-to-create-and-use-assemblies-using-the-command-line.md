@@ -2,14 +2,12 @@
 title: 'Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643288"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50036930"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)
 Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft. Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:  
@@ -83,7 +81,7 @@ End Module
   
  Diese Datei enthält den Algorithmus, der die DLL-Methoden `Add` und `Multiply` verwendet. Zuerst werden die über die Befehlszeile eingegebenen Argumente `num1` und `num2` analysiert. Anschließend wird die Summe mithilfe der Methode `Add` für die `AddClass`-Klasse und das Produkt mit der Methode `Multiply` für die `MultiplyClass`-Klasse berechnet.  
   
- Beachten Sie, dass die `Imports` Anweisung am Anfang der Datei ermöglicht es Ihnen, die nicht qualifizierten Klassennamen verwenden, um die DLL-Methoden wie folgt zum Zeitpunkt der Kompilierung zu verweisen:  
+ Beachten Sie, dass die `Imports` -Anweisung am Anfang der Datei können Sie nicht qualifizierte Klassennamen verwenden, um die DLL-Methoden wie folgt zum Zeitpunkt der Kompilierung zu verweisen:  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
@@ -107,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- Die [-Ziel (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) Compileroption teilt dem Compiler mit einer DLL-Datei anstelle einer EXE-Datei auszugeben. Die [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) gefolgt von einem Dateinamen (Compileroption) wird verwendet, um den DLL-Dateinamen angeben. Andernfalls verwendet der Compiler die erste Datei (`Add.vb`) als Name der DLL.  
+ Die [-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) -Compileroption informiert den Compiler, eine DLL-statt einer EXE-Datei auszugeben. Die [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) Compileroption, gefolgt von einem Dateinamen wird verwendet, um den Namen der DLL anzugeben. Andernfalls verwendet der Compiler die erste Datei (`Add.vb`) als Name der DLL.  
   
  Um die ausführbare Datei `TestCode.exe` zu erstellen, verwenden Sie die folgende Befehlszeile:  
   
@@ -115,9 +113,9 @@ vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- Die **-out** -Compileroption teilt dem Compiler mit eine EXE-Datei ausgeben und gibt den Namen der Ausgabedatei (`TestCode.exe`). Diese Compileroption ist optional. Die [-Verweis (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) (Compileroption) gibt an, die DLL-Dateien, die dieses Programm verwendet.  
+ Die **-out** Compiler-Option weist den Compiler, eine EXE-Datei auszugeben, und gibt den Namen der Ausgabedatei (`TestCode.exe`). Diese Compileroption ist optional. Die [-Referenz (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) Compileroption gibt an, die DLL-Dateien, die dieses Programm verwendet.  
   
- Weitere Informationen zum Erstellen von der Befehlszeile finden Sie unter und [erstellen über die Befehlszeile](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Weitere Informationen zum Erstellen von Builds über die Befehlszeile finden Sie unter und [erstellen über die Befehlszeile](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)  

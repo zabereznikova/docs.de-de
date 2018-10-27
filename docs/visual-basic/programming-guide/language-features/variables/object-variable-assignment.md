@@ -13,15 +13,15 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656057"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995363"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Zuweisen von Objektvariablen (Visual Basic)
-Sie verwenden eine normale zuweisungsanweisung Objektvariable ein Objekt zuweisen. Sie können ein Objektausdrücke zuweisen oder die [nichts](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort, wie im folgenden Beispiel veranschaulicht.  
+Sie verwenden eine normale Anweisung ein Objekt einer Objektvariablen zugewiesen. Sie können den Objektausdruck ein zuweisen oder die ["Nothing"](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort, wie im folgenden Beispiel veranschaulicht.  
   
 ```  
 Dim thisObject As Object  
@@ -31,20 +31,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` bedeutet, es wurde kein Objekt, das der Variablen zugewiesen.  
+ `Nothing` bedeutet, dass es kein Objekt, das derzeit auf die Variable zugewiesen.  
   
 ## <a name="initialization"></a>Initialisierung  
- Wenn Ihr Code beginnt die Ausführung, Ihr Objekts Variablen werden initialisiert, um `Nothing`. Diejenigen, deren Deklarationen Initialisierung enthalten, sind, die Werte erneut initialisiert, die Sie angeben, wenn die deklarationsanweisungen ausgeführt werden.  
+ Wenn Ihr Code beginnt, ausgeführt wird, wird das Objekt, das Variablen werden initialisiert, um `Nothing`. Diejenigen, deren Deklarationen Initialisierung enthalten, sind, die Werte erneut initialisiert, die Sie angeben, wenn die deklarationsanweisungen ausgeführt werden.  
   
- Sie können die Initialisierung in der Deklaration einschließen, mit der [neu](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort. Die folgende deklarationsanweisungen deklarieren Objektvariablen `testUri` und `ver` und bestimmte Objekte zuzuweisen. Jede verwendet eine der überladenen Konstruktoren der entsprechenden Klasse zum Initialisieren des Objekts.  
+ Sie können die Initialisierung in der Deklaration einschließen, mithilfe der [neu](../../../../visual-basic/language-reference/operators/new-operator.md) Schlüsselwort. Die folgende deklarationsanweisungen deklarieren Sie Objektvariablen `testUri` und `ver` und Ihnen bestimmte Objekte zugeordnet werden. Jede verwendet eine der überladenen Konstruktoren der entsprechenden Klasse zum Initialisieren des Objekts.  
   
 ```  
-Dim testUri As New System.Uri("http://www.microsoft.com")  
+Dim testUri As New System.Uri("https://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## <a name="disassociation"></a>Disassocation  
- Festlegen einer Objektvariablen auf `Nothing` reagiert nicht mehr, die Zuordnung der Variablen mit bestimmten Objekts. Dies verhindert, dass Sie fälschlicherweise das Objekt durch Ändern der Variablen ändert. Zudem können Sie zum Überprüfen, ob die Objektvariable auf ein gültiges Objekt, wie im folgenden Beispiel gezeigt verweist.  
+## <a name="disassociation"></a>Durch das Aufheben  
+ Festlegen einer Objektvariablen auf `Nothing` beendet die Zuordnung der Variablen zu einem bestimmten Objekt. Dies verhindert, dass Sie fälschlicherweise das Objekt durch Ändern der Variablen ändert. Außerdem können Sie zum Überprüfen, ob die Objektvariable auf ein gültiges Objekt, wie im folgenden Beispiel gezeigt zeigt.  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -52,16 +52,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- Wenn das Objekt, auf dem die Variable verweist in einer anderen Anwendung, kann nicht diesen Test bestimmen, ob die Anwendung beendet wurde, oder das Objekt nur für ungültig zu erklären.  
+ Wenn das Objekt, auf die, dem die Variable verweist, in einer anderen Anwendung ist, kann nicht diesen Test bestimmen, ob die Anwendung beendet wurde, oder das Objekt nur für ungültig zu erklären.  
   
- Ein Object-Variablen mit einem Wert von `Nothing` steht eine *null-Verweis*.  
+ Eine Objektvariable mit einem Wert von `Nothing` steht für eine *null-Verweis*.  
   
 ## <a name="current-instance"></a>Aktuelle Instanz  
- Die *aktuelle Instanz* eines Objekts wird in dem der Code derzeit ausgeführt wird. Da der gesamte Code innerhalb einer Prozedur ausgeführt wird, wird die aktuelle Instanz in der die Prozedur aufgerufen wurde.  
+ Die *kurveninstanz* eines Objekts wird in der der Code derzeit ausgeführt wird. Da der gesamte Code innerhalb einer Prozedur ausgeführt wird, wird die aktuelle Instanz in dem die Prozedur aufgerufen wurde.  
   
- Die `Me` -Schlüsselwort fungiert als eine Objektvariable verweist auf die aktuelle Instanz. Eine Prozedur ist nicht [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), kann die `Me` Schlüsselwort, um einen Zeiger auf die aktuelle Instanz. Freigegebene Prozeduren können nicht mit einer bestimmten Instanz einer Klasse zugeordnet werden.  
+ Die `Me` -Schlüsselwort dient als eine Objektvariable verweist auf die aktuelle Instanz. Eine Prozedur ist nicht [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), kann die `Me` Schlüsselwort, um einen Zeiger auf die aktuelle Instanz abzurufen. Freigegebene Prozeduren können nicht mit einer bestimmten Instanz einer Klasse zugeordnet werden.  
   
- Mithilfe von `Me` ist besonders nützlich für die aktuelle Instanz an eine Prozedur in einem anderen Modul übergeben. Nehmen wir beispielsweise an, Sie verfügen über eine Reihe von XML-Dokumenten und einige standard-Text hinzufügen möchten. Das folgende Beispiel definiert eine Prozedur zu diesem Zweck.  
+ Mithilfe von `Me` ist besonders nützlich für die aktuelle Instanz an eine Prozedur in einem anderen Modul übergeben. Nehmen wir beispielsweise an, Sie verfügen über eine Anzahl von XML-Dokumenten und alle dieser standard Text hinzufügen möchten. Das folgende Beispiel definiert eine Prozedur zu diesem Zweck.  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -69,7 +69,7 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Jedes XML-Dokumentobjekt kann dann rufen Sie die Prozedur und die aktuelle Instanz als Argument übergeben. Dies wird im folgenden Beispiel veranschaulicht:  
+ Jedes XML-Dokument-Objekt kann dann rufen Sie die Prozedur und die aktuelle Instanz als Argument übergeben. Dies wird im folgenden Beispiel veranschaulicht:  
   
 ```  
 addStandardText(Me)  

@@ -7,14 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 011c9499eaa728588e6181e33a96dd75b4a7b84b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21c708ef632cc0ed923713cd49e22d44848b4db3
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648540"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037281"
 ---
 # <a name="-nologo-visual-basic"></a>-Nologo (Visual Basic)
 Unterdr체ckt die Anzeige der Copyrightinformationen und informationsmeldungen w채hrend der Kompilierung.  
@@ -26,10 +24,10 @@ Unterdr체ckt die Anzeige der Copyrightinformationen und informationsmeldungen w�
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Bei Angabe von `-nologo`, der Compiler eine Copyrightinformationen nicht angezeigt. In der Standardeinstellung ist `-nologo` nicht aktiv.  
+ Bei Angabe von `-nologo`, der Compiler nicht Copyrightinformationen angezeigt. In der Standardeinstellung ist `-nologo` nicht aktiv.  
   
 > [!NOTE]
->  Die `-nologo` Option ist nicht in der Visual Studio-Entwicklungsumgebung verf체gbar; er ist nur bei verf체gbar 체ber die Befehlszeile kompilieren.  
+>  Die `-nologo` Option ist nicht in der Visual Studio-Entwicklungsumgebung verf체gbar, sondern nur, wenn Sie 체ber die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `T2.vb` und Copyrightinformationen nicht angezeigt.  

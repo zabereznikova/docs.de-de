@@ -19,18 +19,18 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208573"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183112"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Codierung und die Globalisierung von Windows Forms
-Windows Forms-Anwendungen sind vollständig Unicode-aktiviert, was bedeutet, dass jedes Zeichen durch eine eindeutige Nummer, unabhängig von Plattform, Programm oder Sprache, dargestellt wird. Weitere Informationen zu Unicode finden Sie unter der [Website des Unicode Consortium](http://www.unicode.org).  
+Windows Forms-Anwendungen sind vollständig Unicode-aktiviert, was bedeutet, dass jedes Zeichen durch eine eindeutige Nummer, unabhängig von Plattform, Programm oder Sprache, dargestellt wird. Weitere Informationen zu Unicode finden Sie unter den [Website des Unicode Consortium](https://www.unicode.org).  
   
 ## <a name="benefits-of-unicode"></a>Vorteile von Unicode  
- Zu den Vorteilen von Unicode-aktivierten Formularen zählt die Möglichkeit, mit Skripts zu arbeiten, die nur aus Unicode bestehen, z. B. Hindi. Außerdem können Sie in einem Formular mehrere Sprachen verwenden. In Unicode sind alle Zeichen zwei Byte lang. Doppelbyte-Zeichen können also ohne besonderen Aufwand dargestellt werden. Sie können zudem einen einzigen Codesatz schreiben, der auf allen Plattformen funktioniert. Dies ist eine Änderung gegenüber früheren Versionen von Visual Basic, in dem Sie hatten unterschiedlichen Code für verschiedene Plattformtypen, beispielsweise Windows NT und [!INCLUDE[win98](../../../../includes/win98-md.md)].  
+ Zu den Vorteilen von Unicode-aktivierten Formularen zählt die Möglichkeit, mit Skripts zu arbeiten, die nur aus Unicode bestehen, z. B. Hindi. Außerdem können Sie in einem Formular mehrere Sprachen verwenden. In Unicode sind alle Zeichen zwei Byte lang. Doppelbyte-Zeichen können also ohne besonderen Aufwand dargestellt werden. Sie können zudem einen einzigen Codesatz schreiben, der auf allen Plattformen funktioniert. Dies ist eine Änderung gegenüber früheren Versionen von Visual Basic, in dem Sie die unterschiedlichen Code für verschiedene Plattformen, z. B. Windows NT schreiben musste und [!INCLUDE[win98](../../../../includes/win98-md.md)].  
   
  Bestimmte Steuerelemente unterstützen jedoch Unicode in [!INCLUDE[win98](../../../../includes/win98-md.md)] und Windows Millennium Edition nicht. Diese Steuerelemente, die allesamt dem allgemeinen Steuerelement untergeordnet sind, verarbeiten Daten mit den Windows-Codepages als [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)]. Diese Steuerelemente sind: <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.DateTimePicker>, <xref:System.Windows.Forms.MonthCalendar>, <xref:System.Windows.Forms.TrackBar>, <xref:System.Windows.Forms.ProgressBar>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolBar> und <xref:System.Windows.Forms.StatusBar>. Sie können daher in diesen Steuerelementen auf den aufgeführten Plattformen keine Unicode-Daten anzeigen. Sie können z. B. japanische Zeichen nicht auf einem englischen [!INCLUDE[win98](../../../../includes/win98-md.md)]-Betriebssystem anzeigen.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.openlocfilehash: 947e443fc1561e86cf9c5fe7c19d4290cc364bd5
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041654"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170379"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler.  
@@ -23,8 +23,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
   
  Wenn Ihre Endbenutzer mit der App interagieren, erwarten sie, dass die App reaktionsfähig ist.  Eingaben oder Befehlsverarbeitung sollten nie blockiert sein.  Die Hilfe sollte schnell angezeigt oder geschlossen werden, wenn der Benutzer die Eingabe fortsetzt.  Ihre App sollte vermeiden, den UI-Thread mit langen Berechnungen zu blockieren, die Ihre App langsam machen.  
   
- Weitere Informationen zu Roslyn-Compiler, finden Sie auf die [Dotnet/Roslyn](https://github.com/dotnet/roslyn) -Repository auf GitHub.
- <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
+ Weitere Informationen zu Roslyn-Compiler, finden Sie unter [der .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md).
   
 ## <a name="just-the-facts"></a>Reine Tatsachen  
  Berücksichtigen Sie die folgenden Tatsachen, wenn Sie die Leistung optimieren und reaktionsfähige .NET Framework-Apps erstellen.  
@@ -40,7 +39,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Tatsache 3: Gute Tools machen einen großen Unterschied.  
  Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht.  Microsoft bietet eine Reihe von Leistungstools wie [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) und [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).  
   
- PerfView ist ein kostenloses und erstaunlich leistungsstarkes Tool, mit dem Sie sich auf tiefliegende Probleme wie Datenträger-E/A, GC-Ereignisse und Arbeitsspeicher konzentrieren können.  Sie erfassen leistungsrelevante Ereignisse der [Ereignisablaufverfolgung für Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (Event Tracing for Windows, ETW) und zeigen auf einfache Weise Informationen pro App, pro Prozess, pro Stapel und pro Thread an.  PerfView zeigt Ihnen, wie viel und welche Art von Speicher Ihre App zuweist und welche Funktionen oder Aufrufstapel zu welchem Anteil der Speicherbelegungen beitragen. Einzelheiten finden Sie in den umfassenden Hilfethemen, Demos und Videos, die mit dem Tool ausgeliefert werden (zum Beispiel die [PerfView-Tutorials](http://channel9.msdn.com/Series/PerfView-Tutorial) auf Channel 9).  
+ PerfView ist ein kostenloses und erstaunlich leistungsstarkes Tool, mit dem Sie sich auf tiefliegende Probleme wie Datenträger-E/A, GC-Ereignisse und Arbeitsspeicher konzentrieren können.  Sie erfassen leistungsrelevante Ereignisse der [Ereignisablaufverfolgung für Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (Event Tracing for Windows, ETW) und zeigen auf einfache Weise Informationen pro App, pro Prozess, pro Stapel und pro Thread an.  PerfView zeigt Ihnen, wie viel und welche Art von Speicher Ihre App zuweist und welche Funktionen oder Aufrufstapel zu welchem Anteil der Speicherbelegungen beitragen. Einzelheiten finden Sie in den umfassenden Hilfethemen, Demos und Videos, die mit dem Tool ausgeliefert werden (zum Beispiel die [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) auf Channel 9).  
   
 ### <a name="fact-4-its-all-about-allocations"></a>Tatsache 4: Es dreht sich alles um Zuordnungen.  
  Möglicherweise denken Sie, dass es beim Erstellen einer reaktionsfähigen .NET Framework-App vor allem um Algorithmen wie die Verwendung von QuickSort anstelle von BubbleSort geht, aber das ist nicht der Fall.  Der größte Faktor bei der Erstellung einer reaktionsfähigen App ist die Speicherbelegung, insbesondere wenn Ihre App sehr groß ist oder große Datenmengen verarbeitet.  
@@ -461,13 +460,14 @@ class Compilation { /*...*/
   
 -   Es dreht sich alles um Zuordnungen: Hier hat das Compilerplattformteam die meiste Zeit mit der Optimierung der Leistung der neuen Compiler verbracht.  
   
-## <a name="see-also"></a>Siehe auch  
- [Video der Präsentation zu diesem Thema](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
- [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
- [Leistung](../../../docs/framework/performance/index.md)  
- [Leistungstipps für .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone-Leistungsanalysetools](https://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Channel 9 PerfView-tutorials](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Allgemeine Leistungstipps](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [Dotnet/Roslyn-Repositorys auf GitHub](https://github.com/dotnet/roslyn)
+## <a name="see-also"></a>Siehe auch
+
+- [Video der Präsentation zu diesem Thema](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+- [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+- [Leistung](../../../docs/framework/performance/index.md)  
+- [Leistungstipps für .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
+- [Windows Phone-Leistungsanalysetools](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+- [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
+- [Channel 9 PerfView-tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [Das .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
+- [Dotnet/Roslyn-Repositorys auf GitHub](https://github.com/dotnet/roslyn)

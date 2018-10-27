@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-author: BrucePerlerMS
-ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c47539e0c614992efd74296171034b8091ba3f15
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123409"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183320"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen
 In diesem Thema veranschaulicht, wie transportsicherheit für einen Windows Communication Foundation (WCF)-Dienst zu ermöglichen, sich in einer Windows-Domäne befindet und von Clients in der gleichen Domäne aufgerufen wird. Weitere Informationen zu diesem Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine beispielanwendung finden Sie unter den [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  

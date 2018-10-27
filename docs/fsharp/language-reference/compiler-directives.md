@@ -2,12 +2,12 @@
 title: Compileranweisungen (F#)
 description: Informationen Sie zu F#-Sprache präprozessoranweisungen, Anweisungen für bedingte Kompilierung, Line-Anweisungen und Compiler-Direktiven.
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042456"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181367"
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 
@@ -33,7 +33,7 @@ Die Auswirkungen der Deaktivierung einer Warnung, die auf die gesamte Datei, ein
 
 ## <a name="conditional-compilation-directives"></a>Anweisungen für die bedingte Kompilierung
 
-Code, der durch eine dieser Anweisungen deaktiviert wird, die im Editor von Visual StudioCode abgeblendet angezeigt.
+Code, der durch eine dieser Anweisungen deaktiviert wird, die im Visual Studio Code-Editor abgeblendet angezeigt.
 
 >[!NOTE]
 Das Verhalten der Anweisungen für die bedingte Kompilierung entspricht nicht dem in anderen Sprachen. Beispielsweise können Sie keine booleschen Ausdrücke mit Symbolen verwenden, zudem verfügen `true` und `false` über keine besondere Bedeutung. In der `if`-Direktive von Ihnen verwendete Symbole müssen über die Befehlszeile oder in den Projekteinstellungen definiert werden. Es steht keine `define`-Präprozessordirektive zur Verfügung.
@@ -42,7 +42,7 @@ Im folgenden Code wird die Verwendung der Direktiven `#if`, `#else` und `#endif`
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
-Es gibt keine `#define`-Präprozessordirektive in F#. Sie müssen die Compileroption oder Projekteinstellungen verwenden, um die durch die `#if`-Direktive verwendeten Symbole zu definieren.
+Es gibt keine `#define`-Präprozessoranweisung in F#. Sie müssen die Compileroption oder Projekteinstellungen verwenden, um die durch die `#if`-Direktive verwendeten Symbole zu definieren.
 
 Direktiven für die bedingte Kompilierung können geschachtelt werden. Der Einzug ist für Präprozessordirektiven nicht entscheidend.
 
@@ -50,7 +50,7 @@ Direktiven für die bedingte Kompilierung können geschachtelt werden. Der Einzu
 
 Beim Erstellen meldet der Compiler Fehler im F#-Code durch das Referenzieren von Zeilennummern, in denen die jeweiligen Fehler auftreten. Diese Zeilennummern beginnen bei 1 für die erste Zeile in einer Datei. Wenn Sie jedoch F#-Quellcode aus einem anderen Tool generieren, sind die Zeilennummern im generierten Code im Allgemeinen nicht relevant, da die Fehler im generierten F#-Code höchstwahrscheinlich auf eine andere Quelle zurückgehen. Mit der `#line`-Direktive können Autoren von Tools, die F#-Quellcode generieren, Informationen über die ursprünglichen Zeilennummern und Quelldateien an den generierten F#-Code weitergeben.
 
-Beim Verwenden der `#line`-Direktive müssen Dateinamen in Anführungszeichen gesetzt werden. Sofern das verbatim-Token (`@`) nicht am Anfang der Zeichenfolge angezeigt wird, müssen Sie umgekehrte Schrägstriche durch die Verwendung von zwei (und nicht nur einem) umgekehrten Schrägstrichen escapen, um sie im Pfad zu verwenden. Im Folgenden finden Sie gültige Zeilentoken. In diesen Beispielen wird davon ausgegangen, dass die ursprüngliche `Script1`-Datei in einer automatisch generierten F#-Codedatei resultiert, wenn er über ein Tool ausgeführt wird, und dass der Code am Speicherort dieser Direktiven aus einigen Token in Zeile 25 in der Datei `Script1` generiert wird.
+Beim Verwenden der `#line`-Direktive müssen Dateinamen in Anführungszeichen gesetzt werden. Sofern das verbatim-Token (`@`) nicht am Anfang der Zeichenfolge angezeigt wird, müssen Sie umgekehrte Schrägstriche durch die Verwendung von zwei (und nicht nur einem) umgekehrten Schrägstrichen escapen, um sie im Pfad zu verwenden. Im Folgenden finden Sie gültige Zeilentoken. In diesen Beispielen wird davon ausgegangen, dass die ursprüngliche `Script1`-Datei in einer automatisch generierten F#-Codedatei resultiert, wenn er über ein Tool ausgeführt wird, und dass der Code am Speicherort dieser Anweisungen aus einigen Token in Zeile 25 in der Datei `Script1` generiert wird.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
 

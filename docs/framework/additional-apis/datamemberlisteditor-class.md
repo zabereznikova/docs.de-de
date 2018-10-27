@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742048"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50046084"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor-Klasse
 
-Bietet eine Dropdown-Benutzeroberfläche zum Bearbeiten der Eigenschaften von Objekten von datengebundenen (Objekte, die ungleich Null haben `DataSource` Eigenschaft) durch das Auflisten aller Eigenschaften eines der `DataSource` -Objekt, wählen Sie die Quelle aus.  
+Bietet eine Dropdown-Benutzeroberfläche zum Bearbeiten der Eigenschaften von datengebundenen Objekten (Objekte, die ungleich Null verfügen `DataSource` Eigenschaft) durch das Auflisten aller Eigenschaften der `DataSource` Objekt, das die Wertquelle von auswählen.  
   
 ## <a name="syntax"></a>Syntax
   
@@ -32,7 +32,7 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Die `DataMemberListEditor` -Klasse ist intern und nicht direkt im Code verwendet werden sollen.
+> Die `DataMemberListEditor` -Klasse ist intern und nicht direkt in Ihrem Code verwendet werden sollen.
 > 
 > Microsoft unterstützt nicht die Verwendung dieser Klasse in einer produktionsanwendung unter keinen Umständen.
   
@@ -40,10 +40,10 @@ internal class DataMemberListEditor : UITypeEditor
 
 **Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System.Design (in "System.Design.dll")  
+**Assembly:** "System.Design" (in "System.Design.dll")  
   
 **.NET Framework-Versionen:** verfügbar seit 2.0.  
   
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

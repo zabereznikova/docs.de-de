@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-author: BrucePerlerMS
-ms.openlocfilehash: cbedab4064173186251defead8394735de033cf7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2a6fc82b21d8530214923bdadcad7f52da947c82
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196576"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50088818"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Gewusst wie: erstellen ein benutzerdefinierten sicherheitstokenauthentifizierers
 In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitstokenauthentifizierer erstellen und in einen benutzerdefinierten Sicherheitstoken-Manager integrieren. Ein Sicherheitstokenauthentifizierer überprüft den Inhalt eines Sicherheitstokens, das mit einer eingehenden Nachricht bereitgestellt wird. Bei erfolgreicher Validierung gibt der Authentifizierer eine Sammlung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück, die nach der Auswertung einen Satz von Ansprüchen zurückgeben.  
@@ -26,9 +25,9 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
   
 1.  Definieren Sie eine neue von der <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>-Klasse abgeleitete Klasse.  
   
-2.  Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A>-Methode. Die Methode gibt `true` oder `false` zurück, je nachdem, ob der benutzerdefinierte Authentifizierer den eingehenden Tokentyp auswerten kann oder nicht.  
+2.  Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.CanValidateTokenCore%2A> -Methode. Die Methode gibt `true` oder `false` zurück, je nachdem, ob der benutzerdefinierte Authentifizierer den eingehenden Tokentyp auswerten kann oder nicht.  
   
-3.  Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A>-Methode. Diese Methode muss den Tokeninhalt entsprechend überprüfen. Wenn das Token den Validierungsschritt übergibt, gibt es eine Auflistung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück. Im folgenden Beispiel wird eine benutzerdefinierte Autorisierungsrichtlinienimplementierung, die in der nächsten Prozedur erstellt wird, verwendet.  
+3.  Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> -Methode. Diese Methode muss den Tokeninhalt entsprechend überprüfen. Wenn das Token den Validierungsschritt übergibt, gibt es eine Auflistung von <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Instanzen zurück. Im folgenden Beispiel wird eine benutzerdefinierte Autorisierungsrichtlinienimplementierung, die in der nächsten Prozedur erstellt wird, verwendet.  
   
      [!code-csharp[C_CustomTokenAuthenticator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#1)]
      [!code-vb[C_CustomTokenAuthenticator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#1)]  

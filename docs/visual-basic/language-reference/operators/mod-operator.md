@@ -12,14 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424401"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170808"
 ---
 # <a name="mod-operator-visual-basic"></a>MOD-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt nur den Restwert zurück.  
@@ -90,7 +88,7 @@ End Module
  Beim Arbeiten mit Gleitkommazahlen, denken Sie daran, dass sie nicht immer eine genaue dezimale Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, über bestimmte Vorgänge, z. B. den Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Überladen  
- Die `Mod` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann. Wenn Ihr Code gilt `Mod` mit einer Instanz einer Klasse oder Struktur, die solche eine Überladung umfasst, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Die `Mod` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann. Wenn Ihr Code gilt `Mod` mit einer Instanz einer Klasse oder Struktur, die solche eine Überladung umfasst, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Mod` Operator, um zwei Zahlen dividiert, und nur den Rest zurückzugeben. Wenn entweder Anzahl eine Gleitkommazahl ist, ist das Ergebnis eine Gleitkommazahl, die den Rest darstellt.  
