@@ -2,84 +2,84 @@
 title: Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: b86ac822e7ce7f0b18962fe48adbb1c26d7259dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a2efa9f66e4053b94dc85b3bbe73400630fa84d1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394298"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184519"
 ---
-# <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a><span data-ttu-id="811e1-102">Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="811e1-102">Using DataContractSerializer and DataContractResolver to Provide the Functionality of NetDataContractSerializer</span></span>
-<span data-ttu-id="811e1-103">In diesem Beispiel wird veranschaulicht, wie die Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> mit einem entsprechenden <xref:System.Runtime.Serialization.DataContractResolver> die gleiche Funktionalität wie der <xref:System.Runtime.Serialization.NetDataContractSerializer> bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="811e1-103">This sample demonstrates how the use of <xref:System.Runtime.Serialization.DataContractSerializer> with an appropriate <xref:System.Runtime.Serialization.DataContractResolver> provides the same functionality as <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span> <span data-ttu-id="811e1-104">In diesem Beispiel wird gezeigt, wie der entsprechende <xref:System.Runtime.Serialization.DataContractResolver> erstellt und dem <xref:System.Runtime.Serialization.DataContractSerializer> hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="811e1-104">This sample shows how to create the appropriate <xref:System.Runtime.Serialization.DataContractResolver> and how to add it to the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
-  
-## <a name="sample-details"></a><span data-ttu-id="811e1-105">Beispieldetails</span><span class="sxs-lookup"><span data-stu-id="811e1-105">Sample details</span></span>  
- <span data-ttu-id="811e1-106"><xref:System.Runtime.Serialization.NetDataContractSerializer> unterscheidet sich von <xref:System.Runtime.Serialization.DataContractSerializer> in einem wichtigen Punkt: <xref:System.Runtime.Serialization.NetDataContractSerializer> enthält im Gegensatz zu <xref:System.Runtime.Serialization.DataContractSerializer> CLR-Typinformationen im serialisierten XML.</span><span class="sxs-lookup"><span data-stu-id="811e1-106"><xref:System.Runtime.Serialization.NetDataContractSerializer> differs from <xref:System.Runtime.Serialization.DataContractSerializer> in one important way: <xref:System.Runtime.Serialization.NetDataContractSerializer> includes CLR type information in the serialized XML, whereas <xref:System.Runtime.Serialization.DataContractSerializer> does not.</span></span> <span data-ttu-id="811e1-107"><xref:System.Runtime.Serialization.NetDataContractSerializer> kann daher nur verwendet werden, wenn sowohl der Endpunkt für die Serialisierung als auch der Endpunkt für die Deserialisierung den gleichen CLR-Typ aufweisen.</span><span class="sxs-lookup"><span data-stu-id="811e1-107">Therefore, <xref:System.Runtime.Serialization.NetDataContractSerializer> can be used only if both the serializing and deserializing ends share the same CLR types.</span></span> <span data-ttu-id="811e1-108">Es wird jedoch empfohlen, <xref:System.Runtime.Serialization.DataContractSerializer> zu verwenden, da er eine höhere Leistung bietet als <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="811e1-108">However, it is recommended to use <xref:System.Runtime.Serialization.DataContractSerializer> because its performance is better than <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span> <span data-ttu-id="811e1-109">Sie können die Informationen ändern, die in <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert sind, indem Sie einen <xref:System.Runtime.Serialization.DataContractResolver> hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="811e1-109">You can change the information that is serialized in <xref:System.Runtime.Serialization.DataContractSerializer> by adding a <xref:System.Runtime.Serialization.DataContractResolver> to it.</span></span>  
-  
- <span data-ttu-id="811e1-110">Dieses Beispiel besteht aus zwei Projekten.</span><span class="sxs-lookup"><span data-stu-id="811e1-110">This sample consists of two projects.</span></span> <span data-ttu-id="811e1-111">Das erste Projekt verwendet <xref:System.Runtime.Serialization.NetDataContractSerializer> für das Serialisieren eines Objekts.</span><span class="sxs-lookup"><span data-stu-id="811e1-111">The first project uses <xref:System.Runtime.Serialization.NetDataContractSerializer> to serialize an object.</span></span> <span data-ttu-id="811e1-112">Das zweite Projekt verwendet <xref:System.Runtime.Serialization.DataContractSerializer> mit einem <xref:System.Runtime.Serialization.DataContractResolver>, um die gleiche Funktionalität wie das erste Projekt bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="811e1-112">The second project uses <xref:System.Runtime.Serialization.DataContractSerializer> with a <xref:System.Runtime.Serialization.DataContractResolver> to provide the same functionality as the first project.</span></span>  
-  
- <span data-ttu-id="811e1-113">Im folgenden Codebeispiel wird die Implementierung von einem benutzerdefinierten <xref:System.Runtime.Serialization.DataContractResolver> mit dem Namen `MyDataContractResolver` veranschaulicht, der dem <xref:System.Runtime.Serialization.DataContractSerializer> im DCSwithDCR-Projekt hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="811e1-113">The following code example shows the implementation of a custom <xref:System.Runtime.Serialization.DataContractResolver> named `MyDataContractResolver` that is added to the <xref:System.Runtime.Serialization.DataContractSerializer> in the DCSwithDCR project.</span></span>  
-  
-```  
-class MyDataContractResolver : DataContractResolver  
-{  
-    private XmlDictionary dictionary = new XmlDictionary();  
-  
-    public MyDataContractResolver()  
-    {  
-    }  
-  
-    // Used at deserialization  
-    // Allows users to map xsi:type name to any Type   
-    public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)  
-    {  
-        Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);  
-        if (type == null)  
-        {  
-            type = Type.GetType(typeName + ", " + typeNamespace);  
-        }  
-        return type;  
-    }  
-  
-    // Used at serialization  
-    // Maps any Type to a new xsi:type representation  
-    public override void ResolveType(Type dataContractType, DataContractResolver knownTypeResolver, out XmlDictionaryString typeName, out XmlDictionaryString typeNamespace)  
-    {  
-        knownTypeResolver.ResolveType(dataContractType, null, out typeName, out typeNamespace);  
-        if (typeName == null || typeNamespace == null)  
-        {  
-            XmlDictionary dictionary = new XmlDictionary();  
-            typeName = dictionary.Add(dataContractType.FullName);  
-            typeNamespace = dictionary.Add(dataContractType.Assembly.FullName);  
-        }  
-    }  
-}  
-```  
-  
-#### <a name="to-use-this-sample"></a><span data-ttu-id="811e1-114">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="811e1-114">To use this sample</span></span>  
-  
-1.  <span data-ttu-id="811e1-115">Öffnen Sie mit [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] die Projektmappendatei DCRSample.sln.</span><span class="sxs-lookup"><span data-stu-id="811e1-115">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the DCRSample.sln solution file.</span></span>  
-  
-2.  <span data-ttu-id="811e1-116">Mit der rechten Maustaste in der Projektmappendatei, und wählen Sie **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="811e1-116">Right-click the solution file and choose **Properties**.</span></span>  
-  
-3.  <span data-ttu-id="811e1-117">In der **Eigenschaftenseiten für Projektmappen** Dialogfeld unter **allgemeine Eigenschaften**, **Startprojekt**Option **mehrere Startprojekte:**.</span><span class="sxs-lookup"><span data-stu-id="811e1-117">In the **Solution Property Pages** dialog, under **Common Properties**, **Startup Project**, select **Multiple startup projects:**.</span></span>  
-  
-4.  <span data-ttu-id="811e1-118">Neben der **DCSwithDCR** -Projekt, wählen **starten** aus der **Aktion** Dropdownliste.</span><span class="sxs-lookup"><span data-stu-id="811e1-118">Next to the **DCSwithDCR** project, select **Start** from the **Action** dropdown.</span></span>  
-  
-5.  <span data-ttu-id="811e1-119">Neben der **NetDCS** -Projekt, wählen **starten** aus der **Aktion** Dropdownliste.</span><span class="sxs-lookup"><span data-stu-id="811e1-119">Next to the **NetDCS** project, select **Start** from the **Action** dropdown.</span></span>  
-  
-6.  <span data-ttu-id="811e1-120">Klicken Sie auf **OK** um das Dialogfeld zu schließen.</span><span class="sxs-lookup"><span data-stu-id="811e1-120">Click **OK** to close the dialog.</span></span>  
-  
-7.  <span data-ttu-id="811e1-121">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="811e1-121">To build the solution, press CTRL+SHIFT+B.</span></span>  
-  
-8.  <span data-ttu-id="811e1-122">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="811e1-122">To run the solution, press CTRL+F5.</span></span>  
-  
+# <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a><span data-ttu-id="23c56-102">Bereitstellen der Funktionen für NetDataContractSerializer mit DataContractSerializer und DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="23c56-102">Using DataContractSerializer and DataContractResolver to Provide the Functionality of NetDataContractSerializer</span></span>
+<span data-ttu-id="23c56-103">In diesem Beispiel wird veranschaulicht, wie die Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> mit einem entsprechenden <xref:System.Runtime.Serialization.DataContractResolver> die gleiche Funktionalität wie der <xref:System.Runtime.Serialization.NetDataContractSerializer> bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="23c56-103">This sample demonstrates how the use of <xref:System.Runtime.Serialization.DataContractSerializer> with an appropriate <xref:System.Runtime.Serialization.DataContractResolver> provides the same functionality as <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span> <span data-ttu-id="23c56-104">In diesem Beispiel wird gezeigt, wie der entsprechende <xref:System.Runtime.Serialization.DataContractResolver> erstellt und dem <xref:System.Runtime.Serialization.DataContractSerializer> hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="23c56-104">This sample shows how to create the appropriate <xref:System.Runtime.Serialization.DataContractResolver> and how to add it to the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>
+
+## <a name="sample-details"></a><span data-ttu-id="23c56-105">Beispieldetails</span><span class="sxs-lookup"><span data-stu-id="23c56-105">Sample details</span></span>
+ <span data-ttu-id="23c56-106"><xref:System.Runtime.Serialization.NetDataContractSerializer> unterscheidet sich von <xref:System.Runtime.Serialization.DataContractSerializer> in einem wichtigen Punkt: <xref:System.Runtime.Serialization.NetDataContractSerializer> enthält im Gegensatz zu <xref:System.Runtime.Serialization.DataContractSerializer> CLR-Typinformationen im serialisierten XML.</span><span class="sxs-lookup"><span data-stu-id="23c56-106"><xref:System.Runtime.Serialization.NetDataContractSerializer> differs from <xref:System.Runtime.Serialization.DataContractSerializer> in one important way: <xref:System.Runtime.Serialization.NetDataContractSerializer> includes CLR type information in the serialized XML, whereas <xref:System.Runtime.Serialization.DataContractSerializer> does not.</span></span> <span data-ttu-id="23c56-107"><xref:System.Runtime.Serialization.NetDataContractSerializer> kann daher nur verwendet werden, wenn sowohl der Endpunkt für die Serialisierung als auch der Endpunkt für die Deserialisierung den gleichen CLR-Typ aufweisen.</span><span class="sxs-lookup"><span data-stu-id="23c56-107">Therefore, <xref:System.Runtime.Serialization.NetDataContractSerializer> can be used only if both the serializing and deserializing ends share the same CLR types.</span></span> <span data-ttu-id="23c56-108">Es wird jedoch empfohlen, <xref:System.Runtime.Serialization.DataContractSerializer> zu verwenden, da er eine höhere Leistung bietet als <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="23c56-108">However, it is recommended to use <xref:System.Runtime.Serialization.DataContractSerializer> because its performance is better than <xref:System.Runtime.Serialization.NetDataContractSerializer>.</span></span> <span data-ttu-id="23c56-109">Sie können die Informationen ändern, die in <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert sind, indem Sie einen <xref:System.Runtime.Serialization.DataContractResolver> hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="23c56-109">You can change the information that is serialized in <xref:System.Runtime.Serialization.DataContractSerializer> by adding a <xref:System.Runtime.Serialization.DataContractResolver> to it.</span></span>
+
+ <span data-ttu-id="23c56-110">Dieses Beispiel besteht aus zwei Projekten.</span><span class="sxs-lookup"><span data-stu-id="23c56-110">This sample consists of two projects.</span></span> <span data-ttu-id="23c56-111">Das erste Projekt verwendet <xref:System.Runtime.Serialization.NetDataContractSerializer> für das Serialisieren eines Objekts.</span><span class="sxs-lookup"><span data-stu-id="23c56-111">The first project uses <xref:System.Runtime.Serialization.NetDataContractSerializer> to serialize an object.</span></span> <span data-ttu-id="23c56-112">Das zweite Projekt verwendet <xref:System.Runtime.Serialization.DataContractSerializer> mit einem <xref:System.Runtime.Serialization.DataContractResolver>, um die gleiche Funktionalität wie das erste Projekt bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="23c56-112">The second project uses <xref:System.Runtime.Serialization.DataContractSerializer> with a <xref:System.Runtime.Serialization.DataContractResolver> to provide the same functionality as the first project.</span></span>
+
+ <span data-ttu-id="23c56-113">Im folgenden Codebeispiel wird die Implementierung von einem benutzerdefinierten <xref:System.Runtime.Serialization.DataContractResolver> mit dem Namen `MyDataContractResolver` veranschaulicht, der dem <xref:System.Runtime.Serialization.DataContractSerializer> im DCSwithDCR-Projekt hinzugefügt wird.</span><span class="sxs-lookup"><span data-stu-id="23c56-113">The following code example shows the implementation of a custom <xref:System.Runtime.Serialization.DataContractResolver> named `MyDataContractResolver` that is added to the <xref:System.Runtime.Serialization.DataContractSerializer> in the DCSwithDCR project.</span></span>
+
+```csharp
+class MyDataContractResolver : DataContractResolver
+{
+    private XmlDictionary dictionary = new XmlDictionary();
+
+    public MyDataContractResolver()
+    {
+    }
+
+    // Used at deserialization
+    // Allows users to map xsi:type name to any Type
+    public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
+    {
+        Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
+        if (type == null)
+        {
+            type = Type.GetType(typeName + ", " + typeNamespace);
+        }
+        return type;
+    }
+
+    // Used at serialization
+    // Maps any Type to a new xsi:type representation
+    public override void ResolveType(Type dataContractType, DataContractResolver knownTypeResolver, out XmlDictionaryString typeName, out XmlDictionaryString typeNamespace)
+    {
+        knownTypeResolver.ResolveType(dataContractType, null, out typeName, out typeNamespace);
+        if (typeName == null || typeNamespace == null)
+        {
+            XmlDictionary dictionary = new XmlDictionary();
+            typeName = dictionary.Add(dataContractType.FullName);
+            typeNamespace = dictionary.Add(dataContractType.Assembly.FullName);
+        }
+    }
+}
+```
+
+#### <a name="to-use-this-sample"></a><span data-ttu-id="23c56-114">So verwenden Sie dieses Beispiel</span><span class="sxs-lookup"><span data-stu-id="23c56-114">To use this sample</span></span>
+
+1.  <span data-ttu-id="23c56-115">Öffnen Sie die Projektmappendatei dcrsample.sln mit Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="23c56-115">Using Visual Studio 2012, open the DCRSample.sln solution file.</span></span>
+
+2.  <span data-ttu-id="23c56-116">Mit der rechten Maustaste in der Projektmappendatei, und wählen Sie **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="23c56-116">Right-click the solution file and choose **Properties**.</span></span>
+
+3.  <span data-ttu-id="23c56-117">In der **Eigenschaftenseiten für Projektmappen** Dialogfeld unter **allgemeine Eigenschaften**, **Startprojekt**Option **mehrere Startprojekte:**.</span><span class="sxs-lookup"><span data-stu-id="23c56-117">In the **Solution Property Pages** dialog, under **Common Properties**, **Startup Project**, select **Multiple startup projects:**.</span></span>
+
+4.  <span data-ttu-id="23c56-118">Neben der **DCSwithDCR** -Projekt, wählen **starten** aus der **Aktion** Dropdownliste.</span><span class="sxs-lookup"><span data-stu-id="23c56-118">Next to the **DCSwithDCR** project, select **Start** from the **Action** dropdown.</span></span>
+
+5.  <span data-ttu-id="23c56-119">Neben der **NetDCS** -Projekt, wählen **starten** aus der **Aktion** Dropdownliste.</span><span class="sxs-lookup"><span data-stu-id="23c56-119">Next to the **NetDCS** project, select **Start** from the **Action** dropdown.</span></span>
+
+6.  <span data-ttu-id="23c56-120">Klicken Sie auf **OK** um das Dialogfeld zu schließen.</span><span class="sxs-lookup"><span data-stu-id="23c56-120">Click **OK** to close the dialog.</span></span>
+
+7.  <span data-ttu-id="23c56-121">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="23c56-121">To build the solution, press CTRL+SHIFT+B.</span></span>
+
+8.  <span data-ttu-id="23c56-122">Drücken Sie STRG+F5, um die Projektmappe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="23c56-122">To run the solution, press CTRL+F5.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="811e1-123">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="811e1-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="811e1-124">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="811e1-124">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="23c56-123">Die Beispiele sind möglicherweise bereits auf dem Computer installiert.</span><span class="sxs-lookup"><span data-stu-id="23c56-123">The samples may already be installed on your machine.</span></span> <span data-ttu-id="23c56-124">Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.</span><span class="sxs-lookup"><span data-stu-id="23c56-124">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="811e1-125">Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele.</span><span class="sxs-lookup"><span data-stu-id="811e1-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="811e1-126">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="811e1-126">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="23c56-125">Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele.</span><span class="sxs-lookup"><span data-stu-id="23c56-125">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="23c56-126">Dieses Beispiel befindet sich im folgenden Verzeichnis.</span><span class="sxs-lookup"><span data-stu-id="23c56-126">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
   
-## <a name="see-also"></a><span data-ttu-id="811e1-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="811e1-127">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23c56-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="23c56-127">See Also</span></span>
