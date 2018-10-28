@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 ms.openlocfilehash: 1d35951aef3692d82bdfa648df48eb8c1bca88ff
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50045125"
+ms.locfileid: "50188078"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
