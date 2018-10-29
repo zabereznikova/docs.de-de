@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663e7456337a2d9c413b15236e7ba1de33fbfa9b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743185"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041101"
 ---
 # <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly
 Um den vollqualifizierten Namen einer Assembly im globalen Assemblycache zu ermitteln, verwenden Sie das GAC-Tool ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Siehe [Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
@@ -43,9 +43,9 @@ Um den vollqualifizierten Namen einer Assembly im globalen Assemblycache zu ermi
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblynamen](../../../docs/framework/app-domains/assembly-names.md)  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
- [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Assemblynamen](../../../docs/framework/app-domains/assembly-names.md)  
+- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
+- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

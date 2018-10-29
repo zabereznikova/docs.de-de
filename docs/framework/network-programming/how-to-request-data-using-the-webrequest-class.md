@@ -11,14 +11,12 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8928ce8790f58b6920c16cbfd9fc8d9aa6644a44
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8a740d2eecd4d866fd3042985f1f6f3194a12ec5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197824"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192758"
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Gewusst wie: Anfordern von Daten mithilfe der WebRequest-Klasse
 Das folgende Verfahren beschreibt die Schritte zum Anfordern einer Ressource von einem Server, z.B. einer Webseite oder Webdatei. Die Ressource muss von einem URI identifiziert werden.  

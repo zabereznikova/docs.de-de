@@ -5,20 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004048"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839025"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Zuordnen von XML-Datentypen zu CLR-Typen
-In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>In der folgenden Tabelle werden die Standardzuordnungen eines XML-Datentyps zu einem CLR-Typ beschrieben.  
+
+In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.
   
 > [!NOTE]
->  Die Präfixe `xs` und `xdt` sind den Namespace-URIs http://www.w3.org/2001/XMLSchema bzw. http://www.w3.org/2003/05/xpath-datatypes zugeordnet.  
+> Die Präfixe `xs` und `xdt` sind den Namespace-URIs <https://www.w3.org/2001/XMLSchema> bzw. <https://www.w3.org/2003/05/xpath-datatypes> zugeordnet.
   
 |XML-Typ|CLR-Typ|  
 |--------------|--------------|  

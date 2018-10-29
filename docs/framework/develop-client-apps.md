@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 987f8e25014e8ce6413c998f6eb78d821558ecec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 27bd71d4caf59a44a45c70217aa351cf43a5c1c7
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518663"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349120"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Entwickeln von Clientanwendungen mit .NET Framework
 
@@ -55,7 +55,7 @@ Führt die .NET Framework-APIs auf, mit denen Sie Apps mit Windows Phone Silverl
 [Entwickeln für mehrere Plattformen](../../docs/standard/cross-platform/index.md)  
 Beschreibt die verschiedenen Methoden, mit denen Sie .NET Framework verwenden können, um für mehrere Client-App-Typen zu entwickeln.
 
-[Erste Schritte mit ASP.NET-Websites](http://www.asp.net/get-started/websites)  
+[Erste Schritte mit ASP.NET-Websites](https://www.asp.net/get-started/websites)  
 Beschreibt die Arten, auf die Sie mit ASP.NET Web-Apps entwickeln können.
 
 ## <a name="see-also"></a>Siehe auch

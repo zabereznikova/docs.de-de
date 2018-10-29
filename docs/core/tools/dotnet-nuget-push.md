@@ -4,12 +4,12 @@ description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server u
 author: karann-msft
 ms.author: mairaw
 ms.date: 09/04/2018
-ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45610001"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50200021"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -179,9 +179,9 @@ Gibt das Timeout für die Übertragung auf einen Server in Sekunden an. Der Stan
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-Überträgt *foo.nupkg* an die benutzerdefinierte Pushquelle `http://customsource` und gibt einen API-Schlüssel an:
+Überträgt *foo.nupkg* an die benutzerdefinierte Pushquelle `https://customsource` und gibt einen API-Schlüssel an:
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
 
 Überträgt *foo.nupkg* an die standardmäßige Pushquelle:
 

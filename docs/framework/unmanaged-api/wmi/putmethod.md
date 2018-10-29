@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516749"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191039"
 ---
 # <a name="putmethod-function"></a>PutMethod-Funktion
 Erstellt eine Methode.
@@ -53,7 +53,7 @@ HRESULT PutMethod (
 [in] Der Name der Methode zu erstellen. 
 
 `lFlags`  
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `pSignatureIn`  
 [in] Ein Zeiger auf eine Kopie der [__Parameters Systemklasse](/windows/desktop/WmiSdk/--parameters) , enthält die `in` Parameter für die Methode. Dieser Parameter wird ignoriert, wenn auf festgelegt `null`.  
@@ -80,11 +80,11 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 Diese Funktion umschließt einen Aufruf der [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) Methode.
 
-Dieser Methodenaufruf wird nur unterstützt, wenn `ptr` ist die Definition einer CIM-Klasse. Bearbeitung der Methode ist nicht verfügbar [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) Zeigern, die auf das CIM-Instanzen verweisen.
+Dieser Methodenaufruf wird nur unterstützt, wenn `ptr` ist die Definition einer CIM-Klasse. Bearbeitung der Methode ist nicht verfügbar [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf das CIM-Instanzen verweisen.
 
 Benutzer können keine Methoden mit Namen erstellen, die mit einem Unterstrich beginnen oder enden. Dies ist für die Systemklassen und Eigenschaften reserviert.
 
-Für eine Methode die `in` und `out` Parameter werden als Eigenschaften in beschrieben [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) Objekte.
+Für eine Methode die `in` und `out` Parameter werden als Eigenschaften in beschrieben [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Objekte.
 
 Ein `[in/out]` Parameter definiert werden, indem Sie die gleiche Eigenschaft hinzufügen, auf beide Objekte verweist die `pInSignature` und `pOutSignature` Parameter. In diesem Fall die Eigenschaften verwenden dieselbe **ID** Wert des Qualifizierers.
 

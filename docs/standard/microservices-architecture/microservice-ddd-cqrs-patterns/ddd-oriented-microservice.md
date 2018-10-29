@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entw
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105770"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183502"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Entwerfen eines DDD-orientierten Microservices
 
@@ -57,7 +57,7 @@ Im Buch [Domain-Driven Design](https://domainlanguage.com/ddd/) von Eric Evan st
 
 Auf der Domänenmodellebene wird das Geschäft zum Ausdruck gebracht. Wenn Sie die Domänenmodellebene eines Microservices in .NET implementieren, wird diese Ebene als Klassenbibliothek mit den Domänenentitäten codiert, die Daten und Verhalten (Methoden mit Logik) erfassen.
 
-Nach den Grundsätzen [Ignorieren der Persistenz](http://deviq.com/persistence-ignorance/) und [Ignorieren der Infrastruktur](https://ayende.com/blog/3137/infrastructure-ignorance) muss diese Ebene Details zur Datenpersistenz komplett ignorieren. Diese Persistenzaufgaben sollten auf der Infrastrukturebene durchgeführt werden. Daher sollte diese Ebene keine direkten Abhängigkeiten für die Infrastruktur berücksichtigen. Dies bedeutet, dass eine wichtige Regel vorsieht, dass es sich bei den Entitätsklassen Ihres Domänenmodells um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln sollte.
+Nach den Grundsätzen [Ignorieren der Persistenz](https://deviq.com/persistence-ignorance/) und [Ignorieren der Infrastruktur](https://ayende.com/blog/3137/infrastructure-ignorance) muss diese Ebene Details zur Datenpersistenz komplett ignorieren. Diese Persistenzaufgaben sollten auf der Infrastrukturebene durchgeführt werden. Daher sollte diese Ebene keine direkten Abhängigkeiten für die Infrastruktur berücksichtigen. Dies bedeutet, dass eine wichtige Regel vorsieht, dass es sich bei den Entitätsklassen Ihres Domänenmodells um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln sollte.
 
 Domänenentitäten sollten in keiner direkten Abhängigkeit (z.B. durch Ableitung von einer Basisklasse) zu einem Infrastrukturframework für den Datenzugriff wie Entity Framework oder NHibernate stehen. Im Idealfall sollten Ihre Domänenentitäten von keinem Typ abgeleitet werden bzw. keinen Typen implementieren, der in einem Infrastrukturframework definiert ist.
 
@@ -83,7 +83,7 @@ Ziel ist, dass die Domänenlogik auf der Domänenmodellebene sowie die zugehöri
 
 Auf der Infrastrukturebene wird dargestellt, wie die Daten, die anfangs in Domänenentitäten (im Arbeitsspeicher) enthalten waren, dauerhaft in Datenbanken oder einem anderen permanenten Speicher gespeichert werden. Ein Beispiel ist die Verwendung von Entity Framework Core-Code für die Implementierung der Repository-Musterklassen, in denen DBContext für die Speicherung von Daten in einer relationalen Datenbank verwendet wird.
 
-Gemäß den oben genannten Grundsätzen [Ignorieren der Persistenz](http://deviq.com/persistence-ignorance/) und [Ignorieren der Infrastruktur](https://ayende.com/blog/3137/infrastructure-ignorance) darf die Infrastrukturebene die Domänenmodellebene nicht „kontaminieren“. Die Entitätsklassen des Domänenmodells müssen von der Infrastruktur unabhängig sein, in der Sie Daten speichern (EF oder ein anderes Framework), indem keine harten Abhängigkeiten für Frameworks berücksichtigt werden. Ihre Klassenbibliothek auf der Domänenmodellebene sollte nur Ihren Domänencode enthalten und nur [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Entitätsklassen, die das Kernstück Ihrer Software implementieren und komplett entkoppelt von Infrastrukturtechnologien sind.
+Gemäß den oben genannten Grundsätzen [Ignorieren der Persistenz](https://deviq.com/persistence-ignorance/) und [Ignorieren der Infrastruktur](https://ayende.com/blog/3137/infrastructure-ignorance) darf die Infrastrukturebene die Domänenmodellebene nicht „kontaminieren“. Die Entitätsklassen des Domänenmodells müssen von der Infrastruktur unabhängig sein, in der Sie Daten speichern (EF oder ein anderes Framework), indem keine harten Abhängigkeiten für Frameworks berücksichtigt werden. Ihre Klassenbibliothek auf der Domänenmodellebene sollte nur Ihren Domänencode enthalten und nur [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Entitätsklassen, die das Kernstück Ihrer Software implementieren und komplett entkoppelt von Infrastrukturtechnologien sind.
 
 Daher sollten Ihre Ebenen bzw. Klassenbibliotheken und Projekte letztlich wie in Abbildung 9-7 dargestellt von Ihrer Domänenmodellebene (Bibliothek) abhängen, nicht umgekehrt.
 
@@ -96,7 +96,7 @@ Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie ber
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 -   **DevIQ. Persistence Ignorance principle (Das Prinzip „Ignorieren der Persistenz“)**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur)**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)

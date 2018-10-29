@@ -9,17 +9,17 @@ ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81d0ce4f697935908b8ad7084560bd1adacbdf2d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456076"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "47863490"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Implementierung des XSLT-Prozessors durch die XslTransform-Klasse
 > [!NOTE]
 >  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
- Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist ein XSLT-Prozessor, der die W3C-Empfehlung zu XSL-Transformationen (XSLT), Version 1.0, implementiert. Die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methode wird zum Auffinden und Lesen von Stylesheets verwendet, und mit der <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode wird das angegebene Quelldokument umgewandelt. Jeder Speicher, der die Schnittstelle <xref:System.Xml.XPath.IXPathNavigable> implementiert, kann als Quelldokument für <xref:System.Xml.Xsl.XslTransform> dienen. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementiert gegenwärtig die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle für das <xref:System.Xml.XmlDocument>, das <xref:System.Xml.XmlDataDocument> und das <xref:System.Xml.XPath.XPathDocument>. Diese können daher alle als Eingabequelldokumente für eine Transformation verwendet werden.  
+ Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist ein XSLT-Prozessor, der die W3C-Empfehlung zu XSL-Transformationen (XSLT), Version 1.0, implementiert. Die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methode wird zum Auffinden und Lesen von Stylesheets verwendet, und mit der <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode wird das angegebene Quelldokument transformiert. Jeder Speicher, der die Schnittstelle <xref:System.Xml.XPath.IXPathNavigable> implementiert, kann als Quelldokument für <xref:System.Xml.Xsl.XslTransform> dienen. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] implementiert gegenwärtig die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle für das <xref:System.Xml.XmlDocument>, das <xref:System.Xml.XmlDataDocument> und das <xref:System.Xml.XPath.XPathDocument>. Diese können daher alle als Eingabequelldokumente für eine Transformation verwendet werden.  
   
  Das <xref:System.Xml.Xsl.XslTransform>-Objekt in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] unterstützt nur die XSLT 1.0-Spezifikation, die mit dem folgenden Namespace definiert sind:  
   

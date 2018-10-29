@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Imp
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106475"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205294"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -39,7 +39,7 @@ Da in der Microsoft-Dokumentation bereits eine Einführung in EF Core verfügbar
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Die Infrastruktur in Entity Framework Core aus DDD-Sicht
 
-Aus DDD-Sicht besteht eine wichtige Funktion von EF in der Möglichkeit, POCO-Domänenentitäten zu verwenden. Diese werden in der EF-Terminologie auch als POCO-*Code First-Entitäten* bezeichnet. Wenn Sie POCO-Domänenentitäten verwenden, sind Ihre Domänenmodellklassen gemäß den Grundsätzen der [Persistenzignoranz](http://deviq.com/persistence-ignorance/) und der [Infrastrukturignoranz](https://ayende.com/blog/3137/infrastructure-ignorance) persistenzignorant.
+Aus DDD-Sicht besteht eine wichtige Funktion von EF in der Möglichkeit, POCO-Domänenentitäten zu verwenden. Diese werden in der EF-Terminologie auch als POCO-*Code First-Entitäten* bezeichnet. Wenn Sie POCO-Domänenentitäten verwenden, sind Ihre Domänenmodellklassen gemäß den Grundsätzen der [Persistenzignoranz](https://deviq.com/persistence-ignorance/) und der [Infrastrukturignoranz](https://ayende.com/blog/3137/infrastructure-ignorance) persistenzignorant.
 
 Den DDD-Mustern zufolge sollten Sie das Domänenverhalten und die Domänenregeln in der Entitätsklasse selbst einschließen, damit es beim Zugriff auf eine beliebige Auflistung Invarianten, Validierungen und Regeln steuern kann. Daher ist es in DDD nicht empfehlenswert, einen öffentlichen Zugriff auf Auflistungen untergeordneter Entitäten oder Wertobjekte zu erlauben. Stattdessen sollten Sie Methoden verfügbar machen, die steuern, wie und wann die Felder und Eigenschaftenauflistungen aktualisiert werden können und welches Verhalten und welche Aktionen in diesem Fall erfolgen sollen.
 
@@ -400,7 +400,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-Die folgende Spezifikation lädt eine einzelne Warenkorb-Entität entweder anhand der ID des Warenkorbs oder der ID des Käufers, zu dem der Warenkorb gehört. Sie wird die Elementauflistung des Warenkorbs [vorzeitig laden](https://docs.microsoft.com/en-us/ef/core/querying/related-data).
+Die folgende Spezifikation lädt eine einzelne Warenkorb-Entität entweder anhand der ID des Warenkorbs oder der ID des Käufers, zu dem der Warenkorb gehört. Sie wird die Elementauflistung des Warenkorbs [vorzeitig laden](https://docs.microsoft.com/ef/core/querying/related-data).
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -467,7 +467,7 @@ Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, 
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **The Specification pattern (Das Spezifikationsmuster)**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
     
 
 >[!div class="step-by-step"]

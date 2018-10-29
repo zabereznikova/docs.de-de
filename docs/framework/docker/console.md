@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine vorhandene .NET Framework-Konsolenanwend
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193329"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200573"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ausführen von Konsolenanwendungen in Windows-Containern
 
@@ -46,7 +46,7 @@ Die Verlagerung Ihrer Konsolenanwendung erfordert nur einige wenige Schritte.
 Windows-Container werden unter [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) oder [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) unterstützt.
 
 > [!NOTE]
->Wenn Sie Windows Server 2016 verwenden, müssen Sie Container manuell aktivieren, da das Installationsprogramm für Docker für Windows die Funktion nicht aktiviert. Stellen Sie sicher, dass alle Updates für das Betriebssystem ausgeführt wurden, und folgen Sie dann den Anweisungen des Artikels [Containerhostbereitstellung](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment), um die Container und Docker-Funktionen zu installieren.
+>Wenn Sie Windows Server 2016 verwenden, müssen Sie Container manuell aktivieren, da das Installationsprogramm für Docker für Windows die Funktion nicht aktiviert. Stellen Sie sicher, dass alle Updates für das Betriebssystem ausgeführt wurden, und folgen Sie dann den Anweisungen des Artikels [Containerhostbereitstellung](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server), um die Container und Docker-Funktionen zu installieren.
 
 Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfügen, um Windows-Container zu unterstützen. Standardmäßig arbeitet Docker mit Linux-basierten Containern. Wechseln Sie zu Windows-Containern, indem Sie in der Taskleiste mit der rechten Maustaste auf das Docker-Symbol klicken und **Zu Windows-Containern wechseln** auswählen. Docker führt den Änderungsprozess aus. Möglicherweise ist ein Neustart erforderlich.
 

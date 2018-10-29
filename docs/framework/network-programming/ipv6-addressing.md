@@ -26,14 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47194008"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183411"
 ---
 # <a name="ipv6-addressing"></a>IPv6-Adressierung
 Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund für solch einen großen Adressbereich ist das Unterteilen der verfügbaren Adressen in eine Hierarchie von Routingdomänen, die die Topologie des Internets widerspiegeln. Ein weiterer Grund ist das Zuordnen der Adressen des Netzwerkadapters (oder der Netzwerkschnittstellen), die Geräte mit dem Netzwerk verbinden. IPv6 verfügt über die inhärente Funktion, Adressen auf ihrer niedrigsten Ebene aufzulösen, bei der es sich um die Ebene der Netzwerkschnittstelle handelt. Weiterhin verfügt es über Funktionen zur automatischen Konfiguration.  
@@ -54,7 +52,7 @@ Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund
   
  Das folgende Beispiel enthält eine Adresse mit einem 64-Bit-Präfix.  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
   
  Das Präfix in diesem Beispiel ist `3FFE:FFFF:0:CD30`. Die Adresse kann auch in einem komprimierten Format (`3FFE:FFFF:0:CD30::/64`) geschrieben werden.  
   

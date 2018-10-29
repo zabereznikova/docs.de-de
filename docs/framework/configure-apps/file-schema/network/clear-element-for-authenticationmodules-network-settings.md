@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ef12a475dde103023d3411fb68efb3bdb4f6d116
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 42fa6a44891e012300f61f1a11a47537c6739e2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235912"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205190"
 ---
 # <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Deaktivieren Sie&gt; -Element für AuthenticationModules (Netzwerkeinstellungen)
 Löscht alle Authentifizierungsmodule aus der Anwendung an.  
@@ -68,6 +66,6 @@ Löscht alle Authentifizierungsmodule aus der Anwendung an.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.IAuthenticationModule>  
- <xref:System.Net.AuthenticationManager>  
- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.IAuthenticationModule>  
+- <xref:System.Net.AuthenticationManager>  
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

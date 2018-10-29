@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208249"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454446"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
 
@@ -77,7 +77,7 @@ Die Bereitstellung einer Framework-abhängigen Bereitstellung ohne Drittanbieter
 
 Die Bereitstellung einer Framework-abhängigen Bereitstellung mit mindestens einer Drittanbieterabhängigkeit erfordert, dass diese Abhängigkeiten für Ihr Projekt verfügbar sind. Es sind noch zwei zusätzliche Schritte nötig, bevor Sie den `dotnet restore`-Befehl ausführen können ([siehe Hinweis](#dotnet-restore-note)):
 
-1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `<ItemGroup>`-Teil Ihrer *CSPROJ*-Datei hinzu. Der folgende `<ItemGroup>`-Abschnitt verwendet [Json.NET](http://www.newtonsoft.com/json) als Drittanbieter-Bibliothek:
+1. Fügen Sie Verweise auf Drittanbieter-Bibliotheken zum `<ItemGroup>`-Teil Ihrer *CSPROJ*-Datei hinzu. Der folgende `<ItemGroup>`-Abschnitt verwendet [Json.NET](https://www.newtonsoft.com/json) als Drittanbieter-Bibliothek:
 
       ```xml
       <ItemGroup>

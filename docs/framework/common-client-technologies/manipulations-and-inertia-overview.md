@@ -2,12 +2,12 @@
 title: Überblick über Manipulationen und Trägheit
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6396c174b341b5ae937fa931488ee1bd3a5fcbd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521238"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187818"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Überblick über Manipulationen und Trägheit
 Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche (User Interface, UI) mithilfe von *Manipulatoren* zu verschieben, zu drehen und in der Größe zu ändern. Ein Manipulator kann eine Maus oder (in einem Touchscreen-Szenario) ein Stift oder ein Finger sein.  
@@ -25,7 +25,7 @@ Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche
   
  Ein Bild, das mit zwei Manipulatoren manipuliert wird.  
   
- Die Manipulationsverarbeitung stellt ein Framework bereit, das eine Teilmenge der Manipulatoren überwacht und diese so interpretiert, als würden sie zusammen und nicht unabhängig voneinander agieren. Sie können mehrere Manipulationsprozessor-Objekte gleichzeitig erstellen, eines für jedes UI-Element, das in einer Anwendung manipuliert werden soll. Ein Manipulationsprozessor wird darüber informiert, welche Eingabegeräte beobachtet werden sollen, und er meldet Manipulationen über [.NET-Ereignisse](https://msdn.microsoft.com/library/17sde2xt.aspx).  
+ Die Manipulationsverarbeitung stellt ein Framework bereit, das eine Teilmenge der Manipulatoren überwacht und diese so interpretiert, als würden sie zusammen und nicht unabhängig voneinander agieren. Sie können mehrere Manipulationsprozessor-Objekte gleichzeitig erstellen, eines für jedes UI-Element, das in einer Anwendung manipuliert werden soll. Ein Manipulationsprozessor wird darüber informiert, welche Eingabegeräte beobachtet werden sollen, und er meldet Manipulationen über [.NET-Ereignisse](../../../docs/standard/events/index.md).  
   
  Ein Manipulationsprozessor hat keine Informationen zu dem speziellen Element, das manipuliert wird. Eine Anwendung wendet die Änderungen separat auf ein anwendungsspezifisches Element an. So wendet eine Anwendung beispielsweise Transformationen auf ein Bild an oder zeichnet es neu, um es an seiner neuen Position oder mit einer neuen Größe oder Ausrichtung darzustellen.  
   
@@ -41,7 +41,7 @@ Mit *Manipulationen* sind Benutzer in der Lage, Elemente der Benutzeroberfläche
  Wenn für ein UI-Element Manipulatoren hinzugefügt, verschoben oder entfernt werden, aktualisiert die Anwendung das <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D>-Objekt, indem sie die <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>-Methode aufruft. Zu Beginn der Manipulation wird das <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started>-Ereignis ausgelöst.  
   
 > [!NOTE]
->  Die Manipulationsverarbeitung ist effizienter, wenn sie in einer framebasierten Updateumgebung ausgeführt wird. Bei Verwendung der Manipulationsverarbeitung in einer Microsoft XNA-Anwendung ist dies kein Problem, da XNA-Framework framebasierte Updates mithilfe der [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)-Methode ermöglicht. In einer anderen Umgebung (wie WinForms) müssen Sie ggf. Ihre eigene framebasierte Logik bereitstellen, um Manipulationen zu sammeln und diese regelmäßig im Batch an die <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>-Methode senden.  
+> Die Manipulationsverarbeitung ist effizienter, wenn sie in einer framebasierten Updateumgebung ausgeführt wird. Bei Verwendung der Manipulationsverarbeitung in einer Microsoft XNA-Anwendung ist dies kein Problem, da XNA-Framework framebasierte Updates mithilfe der [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29)-Methode ermöglicht. In einer anderen Umgebung (wie WinForms) müssen Sie ggf. Ihre eigene framebasierte Logik bereitstellen, um Manipulationen zu sammeln und diese regelmäßig im Batch an die <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>-Methode senden.  
   
  Wenn sich die Anzahl der Manipulatoren oder deren Position ändert, wird das <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta>-Ereignis ausgelöst. Eigenschaften des <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs>-Objekts, die an den <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta>-Ereignishandler übergeben werden, geben Änderungen am Ursprungspunkt, an der Skalierung, Drehung und Umsetzung an, die seit dem letzten Ereignis aufgetreten sind. Der Ursprung der Manipulation ändert sich, wenn Manipulatoren verschoben und wenn Manipulatoren hinzugefügt oder entfernt werden. Die Umsetzungswerte geben an, wie viel X- oder Y-Verschiebung die Manipulation umfasst.  
   

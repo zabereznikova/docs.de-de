@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123812"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202288"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 Dustin Metzgar
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  WF4 verfügt über keinen SQL-Nachverfolgungsanbieter, AppFabric jedoch schon.  Der SQL-Nachverfolgungsansatz von AppFabric ist, ETW-Ereignisse mit einem Windows-Dienst zu abonnieren, der die Ereignisse stapelweise verarbeitet und sie in eine SQL-Tabelle schreibt, die für schnelle Einfügungen entworfen wurde.  Ein separater Auftrag entnimmt die Daten aus dieser Tabelle und ordnet sie in Berichtstabellen neu an, die auf dem AppFabric-Dashboard angezeigt werden können.  Dies bedeutet, dass ein Batch von Nachverfolgungsereignissen unabhängig vom Workflow behandelt wird, von dem er stammt, und daher vor dem Aufzeichnen nicht auf einen Persistenzpunkt warten muss.
 
- ETW-Ereignisse können mit Tools, wie z. B. logman oder xperf, aufgezeichnet werden.  Die kompakte ETL-Datei kann mit einem Tool wie xperfview angezeigt oder mit tracerpt in ein besser lesbares Format, wie z. B. XML, konvertiert werden.  In WF3 ist die einzige Option zum Abrufen von Nachverfolgungsereignissen ohne SQL-Datenbank das Erstellen eines benutzerdefinierten Überwachungsdiensts. Weitere Informationen zu ETW finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisablaufverfolgung für Windows-Ereignis](https://msdn.microsoft.com/library/ff190903.aspx\)).
+ ETW-Ereignisse können mit Tools, wie z. B. logman oder xperf, aufgezeichnet werden.  Die kompakte ETL-Datei kann mit einem Tool wie xperfview angezeigt oder mit tracerpt in ein besser lesbares Format, wie z. B. XML, konvertiert werden.  In WF3 ist die einzige Option zum Abrufen von Nachverfolgungsereignissen ohne SQL-Datenbank das Erstellen eines benutzerdefinierten Überwachungsdiensts. Weitere Informationen zu ETW finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisablaufverfolgung für Windows-Ereignis](https://msdn.microsoft.com/library/ff190903.aspx).
 
  Die Aktivierung der Workflownachverfolgung wirkt sich unterschiedlich auf die Leistung aus.  Der folgende Vergleichstest verwendet das logman-Tool, um die ETW-Nachverfolgungsereignisse zu verarbeiten und sie in einer ETL-Datei aufzuzeichnen.  Die Kosten für die SQL-Nachverfolgung in AppFabric liegen außerhalb des Rahmens dieses Artikels.  Das grundlegende Nachverfolgungsprofil, das auch in AppFabric verwendet wurde, wird in diesem Vergleichstest angezeigt.  Ebenfalls enthalten sind die Kosten für die Nachverfolgung von Systemüberwachungsereignissen.  Diese Ereignisse sind für das Beheben von Problemen und Bestimmen des durchschnittlichen Durchsatzes des Systems hilfreich.
 

@@ -17,14 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9880766641be618a6a0f54ded501cf6f6e95e128
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47398549"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50034332"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Verwenden eines synchronen Serversockets
 Synchrone Serversockets halten die Ausführung der Anwendung an, bis eine Verbindungsanforderung für den Socket empfangen wird. Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können für einfache Netzwerkanwendungen geeignet sein.  

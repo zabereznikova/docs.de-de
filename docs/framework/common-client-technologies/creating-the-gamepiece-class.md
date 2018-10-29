@@ -2,12 +2,12 @@
 title: Erstellen der GamePiece-Klasse
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9f08437cda685d2ec1d2d0c8d54d370d9d38341
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857900"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195878"
 ---
 # <a name="creating-the-gamepiece-class"></a>Erstellen der GamePiece-Klasse
 Die **GamePiece**-Klasse kapselt die gesamte Funktionalität, die für folgende Schritte erforderlich ist: Laden eines Microsoft XNA-Spielsteinbilds, Nachverfolgen des Mauszustands im Verhältnis zum Spielstein, Erfassen der Maus, Bereitstellen der Manipulations- und Trägheitsverarbeitung und Bereitstellen der Funktion zum Abprallen, wenn der Spielstein die Viewportgrenze erreicht.  
@@ -25,7 +25,7 @@ Die **GamePiece**-Klasse kapselt die gesamte Funktionalität, die für folgende 
 ## <a name="class-constructor"></a>Klassenkonstruktor  
  Der Konstruktor für die **GamePiece**-Klasse akzeptiert die folgenden Parameter:  
   
--   Einen [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx)-Typ. Der hier übergebene Verweis wird dem privaten `spriteBatch`-Member zugewiesen und zum Zugreifen auf die [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx)-Methode verwendet, wenn sich der Spielstein selbst rendert. Zusätzlich wird die [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx)-Eigenschaft verwendet, um das [Texture](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx)-Objekt zu erstellen, das mit dem Spielstein verknüpft ist, und um die Größe des Viewports abzurufen, um zu erkennen, wann der Spielstein auf die Grenzen des Fensters stößt, damit der Stein abprallen kann.  
+-   Einen [SpriteBatch](https://docs.microsoft.com/previous-versions/windows/xna/bb199034%28v%3dxnagamestudio.41%29)-Typ. Der hier übergebene Verweis wird dem privaten `spriteBatch`-Member zugewiesen und zum Zugreifen auf die [SpriteBatch.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196426%28v%3dxnagamestudio.41%29)-Methode verwendet, wenn sich der Spielstein selbst rendert. Zusätzlich wird die [GraphicsDevice](https://docs.microsoft.com/previous-versions/windows/xna/bb197338%28v%3dxnagamestudio.41%29)-Eigenschaft verwendet, um das [Texture](https://docs.microsoft.com/previous-versions/windows/xna/bb199375%28v%3xnagamestudio.41%29)-Objekt zu erstellen, das mit dem Spielstein verknüpft ist, und um die Größe des Viewports abzurufen, um zu erkennen, wann der Spielstein auf die Grenzen des Fensters stößt, damit der Stein abprallen kann.  
   
 -   Eine Zeichenfolge, die den Dateinamen des Bilds angibt, das für den Spielstein verwendet werden soll.  
   
@@ -78,11 +78,11 @@ Die **GamePiece**-Klasse kapselt die gesamte Funktionalität, die für folgende 
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- Keine der bisher beschriebenen Logiken bewirkt das Auftreten der Trägheitsextrapolierung. Dies wird mithilfe der **ProcessInertia**-Methode erreicht. Diese Methode, die von der Aktualisierungsschleife des Spiels ([Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)-Methode) wiederholt aufgerufen wird, überprüft, ob das *processInertia*-Flag auf `true` festgelegt ist. Wenn das zutrifft, wird die <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A>-Methode aufgerufen. Das Aufrufen dieser Methode bewirkt, dass die Extrapolierung durchgeführt und das <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta>-Ereignis ausgelöst wird.  
+ Keine der bisher beschriebenen Logiken bewirkt das Auftreten der Trägheitsextrapolierung. Dies wird mithilfe der **ProcessInertia**-Methode erreicht. Diese Methode, die von der Aktualisierungsschleife des Spiels ([Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29)-Methode) wiederholt aufgerufen wird, überprüft, ob das *processInertia*-Flag auf `true` festgelegt ist. Wenn das zutrifft, wird die <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A>-Methode aufgerufen. Das Aufrufen dieser Methode bewirkt, dass die Extrapolierung durchgeführt und das <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta>-Ereignis ausgelöst wird.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- Der Spielstein wird erst gerendert, wenn eine der Überladungen der Draw-Methode aufgerufen wird. Die erste Überladung dieser Methode wird wiederholt von der Spielzeichenschleife aufgerufen (die [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx)-Methode). Der Spielstein wird dann mit den aktuellen Positions-, Drehungs- und Skalierungsfaktoren gerendert.  
+ Der Spielstein wird erst gerendert, wenn eine der Überladungen der Draw-Methode aufgerufen wird. Die erste Überladung dieser Methode wird wiederholt von der Spielzeichenschleife aufgerufen (die [Game.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29)-Methode). Der Spielstein wird dann mit den aktuellen Positions-, Drehungs- und Skalierungsfaktoren gerendert.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

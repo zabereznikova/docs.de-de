@@ -5,15 +5,15 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589036"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842692"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Gewusst wie: Asynchrones Aufrufen eines Webdiensts (Visual Basic)
-Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Webdiensts an, sodass dieses das Ergebnis eines asynchronen Methodenaufrufs abrufen kann. Dieses Beispiel verwendet den Webdienst DemoTemperatureService unter http://www.xmethods.net.  
+Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Webdiensts an, sodass dieses das Ergebnis eines asynchronen Methodenaufrufs abrufen kann. Dieses Beispiel verwendet den Webdienst DemoTemperatureService unter `http://www.xmethods.net`.  
   
  Wenn Sie im Projekt in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio auf einen Webdienst verweisen, wird dieser dem `My.WebServices`-Objekt hinzugefügt und die IDE generiert eine Client-Proxyklasse für den Zugriff auf einen festgelegten Webdienst.  
   
@@ -24,7 +24,7 @@ Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Web
   
 ### <a name="to-call-a-web-service-asynchronously"></a>Asynchroner Aufruf eines Webdiensts  
   
-1.  Referenzieren Sie den Webdienst DemoTemperatureService unter http://www.xmethods.net. Die Adresse lautet  
+1.  Referenzieren Sie den Webdienst DemoTemperatureService unter `http://www.xmethods.net`. Die Adresse lautet  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

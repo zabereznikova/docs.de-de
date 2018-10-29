@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388377"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195241"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Verwenden nicht verwalteter DLL-Funktionen
 Der Plattformaufruf ist ein Dienst, der es verwaltetem Code ermöglicht, nicht verwaltete Funktionen aufzurufen, die in DLLs (Dynamic Link Library) implementiert sind, z. B. die in der Win32-API enthaltenen Funktionen. Es sucht eine exportierte Funktion, ruft diese auf und marshallt ihre Argumente (ganze Zahlen, Zeichenfolgen, Arrays, Strukturen usw.) bei Bedarf über die Grenzen des dialogfähigen Betriebs hinaus.  
@@ -70,8 +70,8 @@ Plattformaufruf für eine nicht verwaltete DLL-Funktion
   
 4.  Übertragen der Kontrolle an die nicht verwaltete Funktion.  
   
- Der Plattformaufruf löst Ausnahmen aus, die von der nicht verwalteten Funktion für den verwalteten Aufrufer generiert wurden.  
-  
+ Der Plattformaufruf löst Ausnahmen aus, die von der nicht verwalteten Funktion für den verwalteten Aufrufer generiert wurden.
+
 ## <a name="see-also"></a>Siehe auch  
  [Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)  
  [Beispiele für Plattformaufrufe](../../../docs/framework/interop/platform-invoke-examples.md)  

@@ -11,11 +11,11 @@ ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47206410"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121930"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Potenzielle Fehler bei PLINQ
 In vielen Fällen kann PLINQ erhebliche Leistungssteigerungen gegenüber sequenziellen LINQ to Objects-Abfragen bieten. Die Parallelisierung der Abfragenausführung erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen. In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von PLINQ-Abfragen vermieden werden sollten.  
@@ -71,7 +71,7 @@ a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
   
  Das Gleiche gilt für <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Mit anderen Worten, `source.AsParallel().Where().ForAll(...)` sollte stark bevorzugt werden gegenüber  
   
- `Parallel.ForEach(source.AsParallel().Where(), ...)`  
+ `Parallel.ForEach(source.AsParallel().Where(), ...)`.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Beachten Sie Threadaffinitätsprobleme.  
  Einige Technologien, z. B. COM-Interoperabilität für STA-Komponenten (Singlethread-Apartment), Windows Forms und Windows Presentation Foundation (WPF), erzeugen Threadaffinitätseinschränkungen, aufgrund derer Code in einem bestimmten Thread ausgeführt werden muss. Beispielsweise kann sowohl in Windows Forms als auch in WPF nur in einem Thread auf ein Steuerelement zugegriffen werden, in dem es erstellt wurde. Wenn Sie versuchen, in einer PLINQ-Abfrage auf den Freigabezustand eines Windows Forms-Steuerelements zuzugreifen, wird eine Ausnahme ausgelöst, wenn Sie den Debugger ausführen. (Diese Einstellung kann deaktiviert werden.) Wenn die Abfrage jedoch im Benutzeroberflächenthread verarbeitet wird, können Sie über die `foreach`-Schleife, die die Abfrageergebnisse aufzählt, auf das Steuerelement zugreifen, weil dieser Code in nur einem Thread ausgeführt wird.  

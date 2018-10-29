@@ -2,12 +2,12 @@
 title: Durchlaufen von Sammlungen in C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436263"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191193"
 ---
 # <a name="iterators-c"></a>Iteratoren (C#)
 
@@ -342,7 +342,7 @@ In jeder aufeinanderfolgenden Iteration der `foreach`-Schleife (oder im direkten
 
 Iteratoren unterstützen die <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>-Methode nicht. Wenn der Prozess erneut von Anfang an durchlaufen werden soll, müssen Sie einen neuen Iterator erstellen. Durch das Aufrufen von <xref:System.Collections.IEnumerator.Reset%2A> für den von einer Iteratormethode zurückgegebenen Iterator wird <xref:System.NotSupportedException> ausgelöst.
 
-Weitere Informationen finden Sie unter [C#-Programmiersprachenspezifikation](../../../csharp/language-reference/language-specification/index.md).
+Weitere Informationen finden Sie unter [C#-Programmiersprachenspezifikation](~/_csharplang/spec/classes.md#iterators).
 
 ## <a name="use-of-iterators"></a>Verwendung von Iteratoren
 

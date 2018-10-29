@@ -7,12 +7,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3c0153a0ae3e07839822c8bb978b1a09277bd53
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213263"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188702"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabelle für implizite numerische Konvertierungen (C#-Referenz)
 
@@ -48,7 +48,7 @@ Folgende Tabelle veranschaulicht vordefinierte implizite Konvertierungen zwische
   byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
   ```
 
-Weitere Informationen über implizite Konvertierungen finden Sie im Abschnitt [Implicit conversions (Implizite Konvertierungen)](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions) der [C#-Sprachspezifikation](../language-specification/index.md).
+Weitere Informationen über implizite Konvertierungen finden Sie im Abschnitt [Implicit conversions (Implizite Konvertierungen)](~/_csharplang/spec/conversions.md#implicit-conversions) der [C#-Sprachspezifikation](../language-specification/index.md).
   
 ## <a name="see-also"></a>Siehe auch
 

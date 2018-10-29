@@ -4,12 +4,12 @@ description: Informationen zu Dotnet-Installationsskripts zur Installation von .
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004009"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837075"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -33,8 +33,8 @@ Die `dotnet-install`-Skripts werden verwendet, um eine Nicht-Administrator-Insta
 
 Sie sollten die stabile Version verwenden, die auf der [.NET Core-Hauptwebsite](https://dot.net) gehostet wird. Die direkten Pfade zu den Skripts sind:
 
-* https://dot.net/v1/dotnet-install.sh (Bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (PowerShell, Windows)
+* <https://dot.net/v1/dotnet-install.sh> (Bash, UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (PowerShell, Windows)
 
 Diese Skripts sind vor allem in Szenarios für die Automatisierung und Nicht-Administrator-Installationen nützlich. Es gibt zwei Skripts: Das eine ist ein PowerShell-Skript, das unter Windows funktioniert. Das andere Skript ist ein Bash-Skript für Linux/macOS. Beide Skripts weisen das gleiche Verhalten auf. Das Bash-Skript liest auch PowerShell-Schalter, sodass Sie PowerShell-Schalter mit dem Skript auf Linux/macOS-Systemen verwenden können.
 

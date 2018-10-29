@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Das 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198682"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183606"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -84,13 +84,13 @@ Beim Implementieren des API-Gatewaymusters müssen Sie Vorsicht walten lassen. I
 
 Aus diesem Grund sollten die API-Gateways basierend auf Geschäftsbereichsgrenzen aufgeteilt werden, und es sollte nicht ein einzelnes Gateway als Aggregator für alle internen Microservices agieren.
 
-Wenn Ihre Anwendung über mehrere Client-Apps verfügt, ist dies der Hauptaspekt beim Ermitteln der verschiedenen API-Gatewaytypen, sodass Sie für die Anforderungen jeder Client-App eine andere Fassade einrichten können. Hier handelt es sich um ein Muster namens „Backend For Frontend“ ([BFF](http://samnewman.io/patterns/architectural/bff/)), in dem jedes API-Gateway eine andere API bereitstellen kann, die auf den jeweiligen Client-App-Typ zugeschnitten ist und möglicherweise sogar auf dem Formfaktor des Clients basiert. Das Muster implementiert einen bestimmten Adaptercode, der im Hintergrund mehrere interne Microservices aufruft, wie in der folgenden Abbildung dargestellt:
+Wenn Ihre Anwendung über mehrere Client-Apps verfügt, ist dies der Hauptaspekt beim Ermitteln der verschiedenen API-Gatewaytypen, sodass Sie für die Anforderungen jeder Client-App eine andere Fassade einrichten können. Hier handelt es sich um ein Muster namens „Backend For Frontend“ ([BFF](https://samnewman.io/patterns/architectural/bff/)), in dem jedes API-Gateway eine andere API bereitstellen kann, die auf den jeweiligen Client-App-Typ zugeschnitten ist und möglicherweise sogar auf dem Formfaktor des Clients basiert. Das Muster implementiert einen bestimmten Adaptercode, der im Hintergrund mehrere interne Microservices aufruft, wie in der folgenden Abbildung dargestellt:
 
 ![Diagramm mit mehreren benutzerdefinierten API-Gateways](./media/image13.1.png)
 
 **Abbildung 4-13.1**. Verwenden von mehreren benutzerdefinierten API-Gateways
 
-Die obige Abbildung zeigt eine vereinfachte Architektur mit mehreren differenzierten API-Gateways. In diesem Fall basieren die Grenzen, die für jedes API-Gateway ermittelt werden, allein auf dem Muster „Backend For Frontend“ ([BFF](http://samnewman.io/patterns/architectural/bff/)) und damit genau auf der API, die pro Client-App benötigt wird. In größeren Anwendungen sollten Sie jedoch einen Schritt weiter gehen zusätzliche API-Gateways erstellen. Dabei verwenden Sie Geschäftsbereichsgrenzen als zweiten Dreh- und Angelpunkt für den Entwurf.
+Die obige Abbildung zeigt eine vereinfachte Architektur mit mehreren differenzierten API-Gateways. In diesem Fall basieren die Grenzen, die für jedes API-Gateway ermittelt werden, allein auf dem Muster „Backend For Frontend“ ([BFF](https://samnewman.io/patterns/architectural/bff/)) und damit genau auf der API, die pro Client-App benötigt wird. In größeren Anwendungen sollten Sie jedoch einen Schritt weiter gehen zusätzliche API-Gateways erstellen. Dabei verwenden Sie Geschäftsbereichsgrenzen als zweiten Dreh- und Angelpunkt für den Entwurf.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Die wichtigsten Funktionen im API-Gatewaymuster
 
@@ -168,7 +168,7 @@ Nachdem wir Architektur und Muster beschrieben haben, wird in den nächsten Absc
 
 - **API-Gatewaymuster** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Aggregation and composition pattern** (Aggregations- und Kompositionsmuster) [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Aggregation and composition pattern** (Aggregations- und Kompositionsmuster) [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Azure API Management** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231556"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198483"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
 Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifikatvertrauenslisten (Certificate Trust Lists, CTLs) und Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) verwalten.  
@@ -54,7 +54,7 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
 |Option|Beschreibung |  
 |------------|-----------------|  
 |**/add**|Fügt einem Zertifikatsspeicher Zertifikate, CTLs und CRLs hinzu.|  
-|**/all**|Fügt bei der Verwendung mit **/add** alle Einträge hinzu. Löscht bei der Verwendung mit **/del** alle Einträge. Zeigt bei der Verwendung ohne die Option **/add** oder **/del** alle Einträge an. Die Option **/all** kann nicht mit **/put** verwendet werden.|  
+|**/all**|Fügt bei der Verwendung mit **/add** alle Einträge hinzu. Löscht bei der Verwendung mit **/del** alle Einträge. Zeigt bei der Verwendung ohne die Option /add oder **/del** alle Einträge an. Die Option **/all** kann nicht mit **/put** verwendet werden.|  
 |**/c**|Fügt bei der Verwendung mit **/add** Zertifikate hinzu. Löscht Zertifikate bei der Verwendung mit **/del**. Speichert Zertifikate bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Optionen **/add**, **/del** und **/put** Zertifikate an.|  
 |**/CRL**|Fügt bei der Verwendung mit **/add** CRLs hinzu. Löscht CRLs bei der Verwendung mit **/del**. Speichert CRLs bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Optionen **/add**, **/del** und **/put** CRLs an.|  
 |**/CTL**|Fügt bei der Verwendung mit **/add** CTLs hinzu. Löscht CTLs bei der Verwendung mit **/del**. Speichert CTLs bei der Verwendung mit **/put**. Zeigt bei der Verwendung ohne die Option **/add**, **/del** oder **/put** CTLs an.|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Siehe auch  
  [Extras](../../../docs/framework/tools/index.md)  
- [Makecert.exe (Tool für die Zertifikaterstellung)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (Tool für die Zertifikaterstellung)](/windows/desktop/SecCrypto/makecert)  
  [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

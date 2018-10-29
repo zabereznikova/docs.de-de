@@ -9,13 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-manager: douge
-ms.openlocfilehash: 27acdac5d34b96dd04fec1bb763edec9077ff928
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46493606"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123669"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung
 
@@ -87,7 +86,7 @@ Suchen Sie im Code-Editor die Methode <xref:System.ServiceProcess.ServiceBase.On
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Eine Dienstanwendung soll eine lange Laufzeit haben, damit sie in der Regel etwas abfragt oder etwas im System überwacht. Die Überwachung wird in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode eingerichtet. Allerdings erfolgt die Überwachung jedoch nicht durch <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Die <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode muss zum Betriebssystem zurückkehren, sobald die Ausführung des Dienstes begonnen hat. Sie darf keine Endlosschleife oder Blöcke ausführen. Wenn Sie einen einfachen Abrufmechanismus einrichten, können Sie die Komponente <xref:System.Timers.Timer?displayProperty=nameWithType> wie folgt verwenden: Klicken Sie In der Methode <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, legen Sie Parameter in der Komponente fest, und setzen Sie dann die Eigenschaft <xref:System.Timers.Timer.Enabled%2A>auf `true`. Der Zeitgeber löst dann regelmäßig zu der Zeit Ereignisse im Code aus, zu der der Dienst seine Überwachung ausführen könnte. Sie können hierfür den folgenden Code verwenden:
+Eine Dienstanwendung soll eine lange Laufzeit haben, damit sie in der Regel etwas abfragt oder etwas im System überwacht. Die Überwachung wird in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode eingerichtet. Allerdings erfolgt die Überwachung jedoch nicht durch <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Die <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode muss zum Betriebssystem zurückkehren, sobald die Ausführung des Dienstes begonnen hat. Sie darf keine Endlosschleife oder Blöcke ausführen. Wenn Sie einen einfachen Abrufmechanismus einrichten, können Sie die Komponente <xref:System.Timers.Timer?displayProperty=nameWithType> wie folgt verwenden: Legen Sie in der Methode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> die Parameter für die Komponente fest, und legen Sie dann die Eigenschaft <xref:System.Timers.Timer.Enabled%2A> auf `true`. Der Zeitgeber löst dann regelmäßig zu der Zeit Ereignisse im Code aus, zu der der Dienst seine Überwachung ausführen könnte. Sie können hierfür den folgenden Code verwenden:
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -288,14 +287,14 @@ Bevor Sie einen Windows-Dienst ausführen können, müssen Sie ihn bei der Insta
 
 7. Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> -Eigenschaft auf den Text fest, der im Fenster Dienste in der Spalte **Name** angezeigt werden soll. Beispielsweise können Sie "MyNewService Display Name" eingeben. Dieser Name kann sich von der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> -Eigenschaft unterscheidet, die dem Namen entspricht, der vom System verwendet wird (z. B. bei Verwendung des `net start` -Befehls zum Starten des Dienstes).
 
-8. Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft auf <xref:System.ServiceProcess.ServiceStartMode.Automatic> fest.
+8. Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> -Eigenschaft auf <xref:System.ServiceProcess.ServiceStartMode.Automatic>fest.
 
      ![Installer-Eigenschaften für einen Windows-Dienst](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_Installereigenschaften")
 
-9. Klicken Sie im Designer auf **ServiceProcessInstaller1** , wenn es sich um ein Visual Basic#-Projekt handelt, bzw. auf **serviceProcessInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt. Legen Sie die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>-Eigenschaft auf <xref:System.ServiceProcess.ServiceAccount.LocalSystem> fest. Dies bewirkt, dass der Dienst installiert und mit dem lokalen Systemkonto ausgeführt wird.
+9. Klicken Sie im Designer auf **ServiceProcessInstaller1** , wenn es sich um ein Visual Basic#-Projekt handelt, bzw. auf **serviceProcessInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt. Legen Sie die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> -Eigenschaft auf <xref:System.ServiceProcess.ServiceAccount.LocalSystem>fest. Dies bewirkt, dass der Dienst installiert und mit dem lokalen Systemkonto ausgeführt wird.
 
     > [!IMPORTANT]
-    > Das Konto <xref:System.ServiceProcess.ServiceAccount.LocalSystem> verfügt über ein breites Berechtigungsspektrum, einschließlich der Berechtigung zum Schreiben in das Ereignisprotokoll. Bei der Verwendung dieses Kontos ist allerdings Vorsicht geboten, da sich dadurch das Risiko von Malware-Angriffen erhöhen kann. Für andere Aufgaben sollten Sie das Konto <xref:System.ServiceProcess.ServiceAccount.LocalService> verwenden, das auf dem lokalen Computer als Benutzer ohne Berechtigungen fungiert. Remoteservern werden anonyme Anmeldeinformationen übergeben. Dieses Beispiel schlägt fehl, wenn Sie versuchen, das <xref:System.ServiceProcess.ServiceAccount.LocalService>-Konto zu verwenden, da zum Schreiben in das Ereignisprotokoll eine Genehmigung benötigt wird.
+    > Das Konto <xref:System.ServiceProcess.ServiceAccount.LocalSystem> verfügt über ein breites Berechtigungsspektrum, einschließlich der Berechtigung zum Schreiben in das Ereignisprotokoll. Bei der Verwendung dieses Kontos ist allerdings Vorsicht geboten, da sich dadurch das Risiko von Malware-Angriffen erhöhen kann. Für andere Aufgaben sollten Sie das Konto <xref:System.ServiceProcess.ServiceAccount.LocalService> verwenden, das auf dem lokalen Computer als Benutzer ohne Berechtigungen fungiert. Remoteservern werden anonyme Anmeldeinformationen übergeben. Dieses Beispiel schlägt fehl, wenn Sie versuchen, das <xref:System.ServiceProcess.ServiceAccount.LocalService> -Konto zu verwenden, da zum Schreiben in das Ereignisprotokoll eine Genehmigung benötigt wird.
 
 Weitere Informationen zu Installern finden Sie unter [Gewusst wie: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 

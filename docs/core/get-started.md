@@ -4,12 +4,12 @@ description: Suchen Sie Ressourcen, um zu erfahren, wie Sie .NET Core-Anwendunge
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: fa5deb46b64e1a09c9ad6582486a993a24336b42
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792399"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121253"
 ---
 # <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 

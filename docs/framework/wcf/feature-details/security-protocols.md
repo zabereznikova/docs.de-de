@@ -5,11 +5,11 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50045888"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200978"
 ---
 # <a name="security-protocols"></a>Sicherheitsprotokolle
 Die Webdienste-Sicherheitsprotokolle bieten Webdiensten Sicherheitsmechanismen, die alle vorhandenen Nachrichtensicherheitsanforderungen eines Unternehmens abdecken. In diesem Abschnitt wird beschrieben, die Windows Communication Foundation (WCF)-Details (implementiert der <xref:System.ServiceModel.Channels.SecurityBindingElement>) die folgenden Webdienste-Sicherheitsprotokolle.  

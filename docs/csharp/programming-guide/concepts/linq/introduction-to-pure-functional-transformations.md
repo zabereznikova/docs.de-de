@@ -3,11 +3,11 @@ title: Einführung in reine funktionale Transformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193852"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087260"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Einführung in reine funktionale Transformationen (C#)
 Dieser Abschnitt führt Sie in das Thema "funktionale Transformationen" ein und bietet eine Übersicht über die zugrunde liegenden Konzepte und die zugehörigen Sprachkonstrukte. Es werden die Unterschiede zwischen dem Programmieren mit dem objektorientierten Ansatz und dem Programmieren mit der funktionalen Transformation erläutert und Empfehlungen für die Umstellung auf die funktionale Transformation gegeben. In diesem Abschnitt wird die XML-Transformation zu Illustrationszwecken verwendet, funktionale Transformationen können aber auch in vielen anderen Programmierszenarios verwendet werden.  

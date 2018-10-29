@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392507"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453390"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Übersicht über das Modell der attributierten Programmierung (MEF)
 Im Managed Extensibility Framework (MEF) ist ein *Programmiermodell* eine besondere Methode, den Satz der konzeptionellen Objekte zu definieren, mit denen MEF ausgeführt wird. Diese konzeptionellen Objekte umfassen Teile, Importe und Exporte. MEF verwendet diese Objekte, gibt jedoch nicht an, wie sie dargestellt werden sollen. Daher ist eine Vielzahl von Programmiermodellen möglich, einschließlich benutzerdefinierter Programmiermodelle.  
@@ -144,7 +144,7 @@ End Class
 public class MyAddin  
 {  
     //Explicitly specifying a generic type.  
-    [Export(typeof(Func<int, string>)]  
+    [Export(typeof(Func<int, string>))]  
     public string DoSomething(int TheParam);  
 }  
 ```  
@@ -729,7 +729,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- Wenn Sie das `InheritedExport` -Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn sie sich unterscheiden und nicht überschrieben werden, erstellt das zweite Attribut einen zweiten, unabhängigen Export des Teils. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport`-Attribut überschreiben (siehe vorheriges Beispiel).  
+ Wenn Sie das `InheritedExport`-Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn sie sich unterscheiden und nicht überschrieben werden, erstellt das zweite Attribut einen zweiten, unabhängigen Export des Teils. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport`-Attribut überschreiben (siehe vorheriges Beispiel).  
   
  Da Schnittstellen nicht direkt instanziiert werden können, können sie im Allgemeinen nicht mit `Export` -Attributen oder `Import` -Attribut ergänzt werden. Allerdings kann eine Schnittstelle mit einem `InheritedExport` -Attribut auf der Schnittstellenebene ergänzt werden. Dieser Export wird zusammen mit allen zugeordneten Metadaten von jeder beliebigen implementierenden Klasse geerbt. Die Schnittstelle selbst ist jedoch nicht als ein Teil verfügbar.  
   
@@ -957,5 +957,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` enthält eine Methode mit dem Namen `OnImportsSatisfied`. Diese Methode wird vom Kompositionscontainer für alle Teile aufgerufen, die die Schnittstelle implementieren, wenn die Komposition abgeschlossen wurde und die Importe des Teils verwendet werden können. Teile werden von der Kompositions-Engine erstellt, um die Importe anderer Teilen auszufüllen. Vor dem Festlegen der Importe eines Teils können Sie keine Initialisierung ausführen, die importierte Werte im Teilkonstruktor verwendet oder bearbeitet, sofern diese Werte nicht mithilfe des `ImportingConstructor` -Attributs als Voraussetzung angegeben wurden. Dies ist normalerweise die bevorzugte Methode, doch in einigen Fällen ist die Konstruktoreinfügung möglicherweise nicht verfügbar. In diesen Fällen kann die Initialisierung in `OnImportsSatisfied`ausgeführt werden, und der Teil sollte `IPartImportsSatisfiedNotification`implementieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Channel 9-Video: Öffnen Ihrer Anwendungen mit dem Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Channel 9-Video: Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [Channel 9-Video: Öffnen Ihrer Anwendungen mit dem Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Channel 9-Video: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

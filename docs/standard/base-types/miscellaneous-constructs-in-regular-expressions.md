@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47205122"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836283"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Verschiedene Konstrukte in regulären Ausdrücken
 Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer ermöglicht Ihnen das Aktivieren oder Deaktivieren bestimmter Vergleichsoptionen mitten in einem Muster für reguläre Ausdrücke. Mithilfe der beiden anderen können Sie Kommentare in einen regulären Ausdruck aufnehmen.  
@@ -42,7 +42,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
  Alle Änderungen in Optionen für reguläre Ausdrücke, die über das Konstrukt `(?imnsx-imnsx)` definiert werden, bleiben bis zum Ende der einschließenden Gruppe gültig.  
   
 > [!NOTE]
->  Das Gruppierungskonstrukt `(?imnsx-imnsx:`*subexpression*`)` bietet identische Funktionen für einen Teilausdruck. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  Das Gruppierungskonstrukt `(?imnsx-imnsx:`*subexpression*`)` bietet identische Funktionen für einen Teilausdruck. Weitere Informationen finden Sie unter [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  Im folgenden Beispiel werden die Optionen `i`, `n` und `x` verwendet, um die Groß-/Kleinschreibung zu ignorieren, explizite Erfassungen zu ermöglichen und Leerzeichen im Muster für reguläre Ausdrücke in der Mitte eines regulären Ausdrucks zu ignorieren.  
   

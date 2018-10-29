@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861623"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846512"
 ---
 # <a name="how-to-configure-client-application-services"></a>Gewusst wie: Konfigurieren von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie Sie den Visual Studio-**Projekt-Designer** zum Aktivieren und Konfigurieren von Clientanwendungsdiensten verwenden. Sie können Clientanwendungsdienste verwenden, um Benutzer zu überprüfen sowie um Benutzerrollen und Einstellungen von einem vorhandenen [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdienst abzurufen. Nach der Konfiguration können Sie auf die aktivierten Dienste im Anwendungscode zugreifen, wie unter [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md) beschrieben. Weitere Informationen zu den [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]-Anwendungsdiensten finden Sie unter [Übersicht über ASP.NET-Anwendungsdienste](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
- Sie können die Clientanwendungsdienste auf der Seite **Dienste** im **Projekt-Designer** aktivieren und konfigurieren. Die Seite **Dienste** aktualisiert die Werte in der Datei „App.config“ des Projekts. Verwenden Sie den Befehl **Eigenschaften** im Menü **Projekt**, um den **Projekt-Designer** zu öffnen. Weitere Informationen zur Seite **Dienste** finden Sie unter [Services-Seite, Projekt-Designer](https://msdn.microsoft.com/library/bb398109).  
+ Sie können die Clientanwendungsdienste auf der Seite **Dienste** im **Projekt-Designer** aktivieren und konfigurieren. Die Seite **Dienste** aktualisiert die Werte in der Datei „App.config“ des Projekts. Verwenden Sie den Befehl **Eigenschaften** im Menü **Projekt**, um den **Projekt-Designer** zu öffnen. Weitere Informationen zur Seite **Dienste** finden Sie unter [Services-Seite, Projekt-Designer](/visualstudio/ide/reference/services-page-project-designer).  
   
  Das folgende Verfahren beschreibt die grundlegende Konfiguration für Clientanwendungsdienste. Erweiterte Konfigurationsoptionen werden in späteren Abschnitten beschrieben.  
   
@@ -143,7 +143,7 @@ In diesem Thema wird beschrieben, wie Sie den Visual Studio-**Projekt-Designer**
 ## <a name="see-also"></a>Siehe auch  
  [Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Übersicht über Clientanwendungsdienste](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Seite „Services“, Projekt-Designer](https://msdn.microsoft.com/library/bb398109)  
+ [Seite „Services“, Projekt-Designer](/visualstudio/ide/reference/services-page-project-designer)  
  [Dialogfeld „Erweiterte Einstellungen für Dienste“](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Gewusst wie: Implementieren einer Benutzeranmeldung mit Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

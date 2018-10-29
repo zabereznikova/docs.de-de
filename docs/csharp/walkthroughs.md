@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae29c8fbe8d5d87ccee4d6a43a3c9285f0c41ee1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47202234"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192563"
 ---
 # <a name="c-walkthroughs"></a>Exemplarische Vorgehensweisen für C#
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -23,7 +23,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  [Zugreifen auf das Web mit Async und Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  Veranschaulicht das Erstellen einer asynchronen Lösung mithilfe von [Async](../csharp/language-reference/keywords/async.md) und [Await](../csharp/language-reference/keywords/await.md).  
   
- [Erstellen einer Windows-Runtime-Komponente in C# oder Visual Basic und Aufrufen dieser Komponente über JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
+ [Erstellen einer Windows-Runtime-Komponente in C# oder Visual Basic und Aufrufen dieser Komponente über JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Veranschaulicht das Erstellen eines [!INCLUDE[wrt](~/includes/wrt-md.md)]-Typs, das Verpacken in einer [!INCLUDE[wrt](~/includes/wrt-md.md)]-Komponente und den anschließenden Aufruf der Komponente aus einer [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]-App, die mithilfe von JavaScript für Windows erstellt wurde.  
   
  [Office-Programmierung (C# und Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  

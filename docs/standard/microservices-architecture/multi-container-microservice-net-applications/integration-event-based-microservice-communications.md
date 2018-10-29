@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Impl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5d8ba76caab39db222c2ceba36a4d67cab3e8a3f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6a365c284d66ea24a9bb4caae51c63f22c79877b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105793"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194045"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 
@@ -29,7 +29,7 @@ Wie im Abschnitt über die Architektur bereits erwähnt, haben Sie bei der Imple
 
 Für die Implementierung von nur einem Ereignisbus-Proof-of-Concepts für die Entwicklungsumgebung wie im eShopOnContainers-Beispiel ist eine einfache Implementierung zusätzlich zu einer als Container ausgeführten RabbitMQ-Installation möglicherweise ausreichend. Für unternehmenskritische Systeme und Produktionssysteme, für die eine hohe Skalierbarkeit erforderlich ist, sollten Sie jedoch Azure Service Bus testen und verwenden.
 
-Wenn Sie allgemeine Abstraktionen und umfangreichere Features wie [Sagas](https://docs.particular.net/nservicebus/sagas/) für Prozesse mit langer Ausführungsdauer benötigen, die eine verteilte Entwicklung erleichtern, lohnt es sich, andere kommerzielle und Open-Source-Service Busse wie NServiceBus, MassTransit und Brighter zu testen. In diesem Fall sind die zu verwendenden Abstraktionen und die zu verwendende API diejenigen, die von diesen allgemeinen Service Bussen bereitgestellt werden, und nicht Ihre eigenen Abstraktionen (wie die [unter eShopOnContainers bereitgestellten einfachen Ereignisbusabstraktionen](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Was das betrifft, können Sie die [verzweigten eShopOnContainers mithilfe von NServiceBus](http://go.particular.net/eShopOnContainers) (zusätzliches abgeleitetes Beispiel, durch Particular Software implementiert) untersuchen.
+Wenn Sie allgemeine Abstraktionen und umfangreichere Features wie [Sagas](https://docs.particular.net/nservicebus/sagas/) für Prozesse mit langer Ausführungsdauer benötigen, die eine verteilte Entwicklung erleichtern, lohnt es sich, andere kommerzielle und Open-Source-Service Busse wie NServiceBus, MassTransit und Brighter zu testen. In diesem Fall sind die zu verwendenden Abstraktionen und die zu verwendende API diejenigen, die von diesen allgemeinen Service Bussen bereitgestellt werden, und nicht Ihre eigenen Abstraktionen (wie die [unter eShopOnContainers bereitgestellten einfachen Ereignisbusabstraktionen](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Was das betrifft, können Sie die [verzweigten eShopOnContainers mithilfe von NServiceBus](https://go.particular.net/eShopOnContainers) (zusätzliches abgeleitetes Beispiel, durch Particular Software implementiert) untersuchen.
 
 Natürlich können Sie zusätzlich zu Technologien auf unterer Ebene wie RabbitMQ und Docker immer auch eigene Service Bus-Features erstellen. Jedoch wird der Aufwand für die „Neuerfindung des Rades“ wohl zu groß sein für eine benutzerdefinierte Unternehmensanwendung.
 

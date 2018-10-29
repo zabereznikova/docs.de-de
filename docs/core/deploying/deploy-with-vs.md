@@ -9,11 +9,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47204296"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584384"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
@@ -144,7 +144,7 @@ Um eine Veröffentlichung Ihrer App über Visual Studio durchzuführen, tun Sie 
 
       1. Wählen Sie auf der Registerkarte **Veröffentlichen** **Veröffentlichen** aus. Visual Studio schreibt die Dateien, die Ihre Anwendung enthalten, in das lokale Dateisystem.
 
-      1. Die Registerkarte **Veröffentlichen** zeigt nun ein einzelnes Profil an: **FolderProfile**. Die Konfigurationseinstellungen des Profils werden im Abschnitt **Zusammenfassung** der Registerkarte gezeigt. **Ziellaufzeit** identifiziert, welche Laufzeit veröffentlicht wurde; **Zielort** identifiziert, wo die Dateien für die eigenständige Bereitstellung geschrieben wurden.
+      1. Die Registerkarte **Veröffentlichen** zeigt nun ein einzelnes Profil an: **FolderProfile**. Die Konfigurationseinstellungen des Profils werden im Abschnitt **Zusammenfassung** der Registerkarte gezeigt. Ziellaufzeit identifiziert, welche Laufzeit veröffentlicht wurde; **Zielort** identifiziert, wo die Dateien für die eigenständige Bereitstellung geschrieben wurden.
 
       1. Visual Studio schreibt standardmäßig alle veröffentlichten Dateien in ein einzelnes Verzeichnis. Der Einfachheit halber ist es am besten, separate Profile für jede Ziellaufzeit zu erstellen und veröffentlichte Dateien in einem plattformspezifischen Verzeichnis zu platzieren. Dafür muss ein separates Veröffentlichungsprofil für jede Zielplattform erstellt werden. Erstellen Sie nun die Anwendung für jede Plattform neu, indem Sie Folgendes tun:
 

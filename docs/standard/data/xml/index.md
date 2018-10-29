@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576089"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202958"
 ---
 # <a name="xml-documents-and-data"></a>XML-Dokumente und XML-Daten
 .NET Framework bietet eine umfangreiche und integrierte Gruppe von Klassen, mit denen auf einfache Weise XML-fähige Apps erstellt werden können. Die Klassen in den folgenden Namespaces unterstützen das Analysieren und Schreiben von XML, das Bearbeiten von XML-Daten im Arbeitsspeicher, die Datenvalidierung und die XSLT-Transformation.  
@@ -35,7 +35,7 @@ ms.locfileid: "33576089"
   
 -   Schemas in der <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType>-Klasse unterstützen die W3C-Empfehlungen [XML Schema Part 1: Structures (XML-Schema Teil 1: Strukturen)](https://www.w3.org/TR/xmlschema-1/) und [XML Schema Part 2: Datatypes (XML-Schema Teil 2: Datentypen)](https://www.w3.org/TR/xmlschema-2/).  
   
--   Klassen im <xref:System.Xml.Xsl?displayProperty=nameWithType>-Namespace unterstützen XSLT-Transformationen, die der W3C-Empfehlung [XSLT 1.0](http://www.w3.org/TR/xslt) entsprechen.  
+-   Klassen im <xref:System.Xml.Xsl?displayProperty=nameWithType>-Namespace unterstützen XSLT-Transformationen, die der W3C-Empfehlung [XSLT 1.0](https://www.w3.org/TR/xslt) entsprechen.  
   
  Die XML-Klassen in .NET Framework bieten folgende Vorteile:  
   

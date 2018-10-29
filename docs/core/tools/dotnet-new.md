@@ -3,13 +3,13 @@ title: dotnet new Befehl – .NET Core-CLI
 description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208632"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188200"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -65,27 +65,27 @@ Die Vorlage, die instanziiert werden soll, wenn der Befehl aufgerufen wird. Jede
 
 Der Befehl enthält eine Standardliste mit Vorlagen. Verwenden Sie `dotnet new -l`, um eine Liste der verfügbaren Vorlagen abzurufen. In der folgenden Tabelle werden die Vorlagen gezeigt, die bereits mit dem .NET Core SDK 2.1.300 vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt.
 
-|Vorlagenbeschreibung                          | Vorlagenname   | Sprachen     |
-|----------------------------------------------|-----------------|---------------|
-| Konsolenanwendung                          | `console`       | [C#], F#, VB  |
-| Klassenbibliothek                                | `classlib`      | [C#], F#, VB  |
-| Unittestprojekt                            | `mstest`        | [C#], F#, VB  |
-| xUnit-Testprojekt                           | `xunit`         | [C#], F#, VB  |
-| Seite „Razor“                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| ASP.NET Core leer                           | `web`           | [C#], F#      |
-| ASP.NET Core-Web-App (Model-View-Controller) | `mvc`           | [C#], F#      |
-| ASP.NET Core-Web-App                         | `razor`         | [C#]          |
-| ASP.NET Core mit Angular                    | `angular`       | [C#]          |
-| ASP.NET Core mit React.js                   | `react`         | [C#]          |
-| ASP.NET Core mit React.js und Redux         | `reactredux`    | [C#]          |
-| ASP.NET Core-Web-API                         | `webapi`        | [C#], F#      |
-| Razor-Klassenbibliothek                          | `razorclasslib` | [C#]          |
-| global.json-Datei                             | `globaljson`    |               |
-| NuGet-Konfiguration                                 | `nugetconfig`   |               |
-| Web-Konfiguration                                   | `webconfig`     |               |
-| Projektmappendatei                                | `sln`           |               |
+|Vorlagenbeschreibung                          | Vorlagenname    | Sprachen     |
+|----------------------------------------------|------------------|---------------|
+| Konsolenanwendung                          | `console`        | [C#], F#, VB  |
+| Klassenbibliothek                                | `classlib`       | [C#], F#, VB  |
+| Unittestprojekt                            | `mstest`         | [C#], F#, VB  |
+| xUnit-Testprojekt                           | `xunit`          | [C#], F#, VB  |
+| Seite „Razor“                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| ASP.NET Core leer                           | `web`            | [C#], F#      |
+| ASP.NET Core-Web-App (Model-View-Controller) | `mvc`            | [C#], F#      |
+| ASP.NET Core-Web-App                         | `razor`, `webapp`| [C#]          |
+| ASP.NET Core mit Angular                    | `angular`        | [C#]          |
+| ASP.NET Core mit React.js                   | `react`          | [C#]          |
+| ASP.NET Core mit React.js und Redux         | `reactredux`     | [C#]          |
+| ASP.NET Core-Web-API                         | `webapi`         | [C#], F#      |
+| Razor-Klassenbibliothek                          | `razorclasslib`  | [C#]          |
+| global.json-Datei                             | `globaljson`     |               |
+| NuGet-Konfiguration                                 | `nugetconfig`    |               |
+| Web-Konfiguration                                   | `webconfig`      |               |
+| Projektmappendatei                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270421"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50088792"
 ---
 # <a name="assembly-security-considerations"></a>Überlegungen zur Assemblysicherheit
 <a name="top"></a> Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben, die erforderlich sind, um die Assembly auszuführen. Das Erteilen bestimmter Berechtigungen für eine Assembly beruht auf Beweisen.  
@@ -63,6 +63,6 @@ ms.locfileid: "36270421"
  Da starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) die Integrität garantieren, können Sie der Sicherheitsrichtlinie für den Codezugriff diese beiden Formen von Assemblybeweisen zugrunde legen. Starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) garantieren die Integrität durch digitale Signaturen und Zertifikate. Alle genannten Technologien (Hashüberprüfung, starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md)) gewährleisten gemeinsam, dass die Assembly in keiner Weise geändert werden kann.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md)
+- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md)

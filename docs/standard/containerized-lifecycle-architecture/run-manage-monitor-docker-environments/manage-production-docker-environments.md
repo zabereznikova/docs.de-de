@@ -1,48 +1,48 @@
 ---
-title: Verwalten Sie Docker produktionsumgebungen
+title: Verwalten von Docker-produktionsumgebungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 169ffa7ba61fa5dff09229410adb534f8e34a35c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104584"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202854"
 ---
-# <a name="manage-production-docker-environments"></a>Verwalten Sie Docker produktionsumgebungen
+# <a name="manage-production-docker-environments"></a>Verwalten von Docker-produktionsumgebungen
 
-Die Clusterverwaltungs- und Orchestrierung versteht man eine Gruppe von Hosts zu steuern. Dies kann umfassen, hinzufügen und Entfernen von Hosts in einem Cluster, Abrufen von Informationen zu den aktuellen Status des Hosts und -Container starten und Beenden von Prozessen. Clusterverwaltung und Orchestrierung sind eng mit der Planung, da das Zeitplanungsmodul Zugriff auf jedem Host im Cluster benötigen, um Dienste zu planen. Aus diesem Grund wird häufig die gleichen Konfigurationstool für beide Zwecke verwendet.
+Clusterverwaltung und Orchestrierung ist der Prozess, eine Gruppe von Hosts zu steuern. Dies kann beinhalten, hinzufügen und Entfernen von Hosts in einem Cluster, das Abrufen von Informationen zu den aktuellen Zustand des Hosts und Containern, und starten und Beenden von Prozessen. Clusterverwaltung und Orchestrierung sind eng mit planen, da der Scheduler den Zugriff auf jedem Host im Cluster benötigen, um Dienste zu planen. Aus diesem Grund wird das gleiche Tool häufig für beide Zwecke verwendet.
 
-## <a name="container-service-and-management-tools"></a>Container-Dienst und Verwaltungstools
+## <a name="container-service-and-management-tools"></a>Container Service und Verwaltungstools
 
-Containerdienst bietet eine schnelle Bereitstellung von Lösungen für beliebte Open Source-Container clustering und Orchestrierung. Docker-Images verwendet, um sicherzustellen, dass die Anwendungscontainer vollständig portabel sind. Mit Containerdienst, können Sie DC/OS (mit Unterstützung von Mesosphere und Apache Mesos) bereitstellen und Docker Containerhostclustern-Clustern mit Vorlagen für Azure-Ressourcen-Manager oder Azure-Portal um sicherzustellen, dass diese Anwendungen auf Tausende skaliert werden können – sogar Tausenden von – von Container.
+Container Service bietet eine schnelle Bereitstellung von Lösungen für beliebte Open-Source-Container clustering und die Orchestrierung. Docker-Images verwendet, um sicherzustellen, dass Ihre Anwendungscontainer vollständig portierbar sind. Mithilfe von Container Service können Sie DC/OS (unterstützt von Mesosphere und Apache Mesos) bereitstellen und Docker Swarm-Clustern mit Azure Resource Manager-Vorlagen oder im Azure-Portal um sicherzustellen, dass Sie diese Anwendungen auf Tausende skalieren können – sogar Tausende – von Container.
 
-Sie diesen Clustern mithilfe von Azure VM-Skalierungsgruppen bereitstellen und die Cluster Nutzen der Azure-Netzwerk und Speicher-Angebote. Für den Zugriff auf die Container-Dienst benötigen Sie ein Azure-Abonnement. Mit Containerdienst können Sie der Unternehmensklasse Funktionen von Azure nutzen und gleichzeitig die Anwendungsportabilität, einschließlich der auf die Orchestrierung Ebenen.
+Sie diesen Clustern mit Azure Virtual Machine Scale Sets bereitstellen, und die Cluster profitieren Sie von Azure-Netzwerk und Speicher-Angebote. Für den Zugriff auf Container Service benötigen Sie ein Azure-Abonnement. Mit Container Service können Sie professionelle Funktionen von Azure nutzen und gleichzeitig die Anwendungsportabilität, einschließlich der auf den orchestrierungsebenen.
 
-Tabelle 6 – 1 listet allgemeiner Verwaltungstools, die im Zusammenhang mit ihren Orchestrators, Planern und clustering-Plattform.
+Tabelle 6 – 1 listet allgemeiner Verwaltungstools, die im Zusammenhang mit ihrer orchestratoren, Planer und clustering-Plattform.
 
 Tabelle 6 – 1: Docker-Verwaltungstools
 
 
-| Verwaltungstools      | Beschreibung           | Verwandte orchestrators |
+| Verwaltungstools      | Beschreibung           | Verwandte orchestratoren |
 |-----------------------|-----------------------|-----------------------|
-| Containerdienst\(UI-Verwaltung in Azure-Portal) | [Containerdienst](https://azure.microsoft.com/en-us/services/container-service/) bietet eine lassen sich leichter ermitteln können gestartet [ein Container-Clusters in Azure bereitstellen](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) basierend auf beliebte Orchestrators wie Mesosphere DC/OS, Kubernetes und Docker Containerhostclustern. <br /><br /> Containerdienst wird die Konfiguration von diesen Plattformen optimiert. Sie müssen nur auswählen, die Größe, die Anzahl der Hosts und die Auswahl der Orchestrator-Tools, und Containerdienst behandelt alles andere. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
-| Universelle Steuerungsebene Docker\(einer lokalen oder Cloud) | [Universelle Steuerungsebene Docker](https://docs.docker.com/v1.11/ucp/overview/) der Unternehmensklasse Cluster Management-Lösung von Docker ist. Sie hilft bei der gesamte Cluster aus einer einzelnen Stelle zu verwalten. <br /><br /> Universelle Steuerungsebene Docker ist Bestandteil des kommerziellen Produkts, die mit dem Namen Docker Rechenzentrum ein, der Docker Containerhostclustern, universelle Steuerungsebene Docker und Docker Trusted Registry bereitstellt. <br /><br /> Docker Datacenter installierten lokalen sein oder von einer öffentlichen Cloud wie Azure bereitgestellt. | Docker Containerhostclustern\(von Containerdienst unterstützt) |
-| Docker Cloud\(auch bekannt als Tutum, Cloud SaaS) | [Docker Cloud](https://docs.docker.com/docker-cloud/) ist ein gehosteter Verwaltungsdienst (SaaS), die Funktionen der Orchestrierung und einen Docker-Registrierung mit Builds und Tests Einrichtungen für Dockerized Anwendungsbilder, Tools helfen Ihnen beim Einrichten und Verwalten der Hostinfrastruktur des bereitstellt und Bereitstellungsfeatures zum Automatisieren der Bilder für Ihre konkrete Infrastruktur bereitstellen. Sie können Ihr Konto SaaS Docker Cloud für Ihre Infrastruktur in Container-Dienst mit einem Docker Containerhostclustern Cluster verbinden. | Docker Containerhostclustern\(von Containerdienst unterstützt) |
-| Mesosphere Marathon\(einer lokalen oder Cloud) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) ist eine Plattform für das Container Produktions-Grade der Orchestrierung und der Planer für Mesosphere des DC/OS und Apache Mesos. <br /><br /> Generische Vergleich funktioniert mit Mesos (DC/OS basiert auf Apache Mesos) steuern lang ausgeführte Dienste und stellt eine [Weboberfläche für die Verwaltung von Prozess- und Container](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Es bietet ein Web-UI-Verwaltungstool | Mesosphere DC/OS\(basierend auf Apache Mesos; vom Containerdienst unterstützt) |
-| Google-Kubernetes | [Kubernetes](http://kubernetes.io/docs/user-guide/ui/#dashboard-access) orchestriert, plant und -Cluster-Infrastruktur umfasst. Es ist eine Open-Source-Plattform für die Automatisierung der Bereitstellung, Skalierung und Vorgänge des Anwendungscontainer über Clustern der Hosts, Container-orientierte Infrastruktur bereitgestellt. | Google Kubernetes\(von Containerdienst unterstützt) |
+| Container Service\(UI-Verwaltung in Azure-Portal) | [Containerdienst](https://azure.microsoft.com/services/container-service/) bietet eine schnelle abzurufenden Schritte können [Bereitstellen eines Container-Clusters in Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) basierend auf beliebte orchestratoren wie Mesosphere DC/OS, Kubernetes und Docker Swarm. <br /><br /> Container Service optimiert die Konfiguration dieser Plattformen. Sie müssen nur die Größe, die Anzahl der Hosts und Auswahl der orchestrationstools und Container Service übernimmt den Rest. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
+| Docker Universal Control Plane\(lokal oder in der Cloud) | [Docker Universal Control Plane](https://docs.docker.com/v1.11/ucp/overview/) ist die professionelle Unternehmens-Cluster-verwaltungslösung von Docker. Sie können Sie Ihren gesamten Cluster von einem zentralen Ort zu verwalten. <br /><br /> Docker Universal Control Plane ist Bestandteil der kommerziellen Produkt Docker Datacenter bietet Docker Swarm, Docker Universal Control Plane und Docker Trusted Registry. <br /><br /> Docker Datacenter kann lokal installiert oder von einer öffentlichen Cloud wie Azure bereitgestellt. | Docker Swarm\(von Container Service unterstützt) |
+| Docker Cloud\(auch bekannt als Tutum; SaaS-Cloud) | [Docker Cloud](https://docs.docker.com/docker-cloud/) ist ein gehosteter Dienst (SaaS), das Erstellen und Testen Funktionen für die in docker bereitgestellte Anwendungsbilder, Tools zum Einrichten und Verwalten Ihrer Hostinfrastruktur bietet Orchestrierungsfunktionen und eine Docker-Registrierung und von Bereitstellungsfunktionen zum Automatisieren Ihrer Images für Ihre konkrete Infrastruktur bereitstellen. Sie können Ihr Konto SaaS Docker Cloud für Ihre Infrastruktur in Container Service mit Docker Swarm-Cluster verbinden. | Docker Swarm\(von Container Service unterstützt) |
+| Mesosphere Marathon\(lokal oder in der Cloud) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) ist eine Plattform für das Container Produktionsniveau der Orchestrierung und der Scheduler von Mesosphere DC/OS und Apache Mesos. <br /><br /> Es funktioniert mit Mesos (DC/OS basiert auf Apache Mesos) steuern lang ausgeführte Dienste eine [-web-UI für die Verwaltung von Prozess und Container](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Es bietet ein Web-UI-Verwaltungstool | Mesosphere DC/OS\(basierend auf Apache Mesos; von Container Service unterstützt) |
+| Google-Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access) umfasst die Orchestrierung, Planung und -Cluster-Infrastruktur. Es ist ein Open Source-Plattform für die Automatisierung von Bereitstellung, Skalierung und Betrieb von anwendungscontainern für Hostcluster, Container ausgerichtete Infrastruktur bereitstellen. | Google Kubernetes\(von Container Service unterstützt) |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-Eine andere Auswahl für die Cluster-Bereitstellung und Verwaltung wird Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/) ist eine Microsoft-Microservices-Plattform, die Container-Orchestrierung als auch für Entwickler enthält-Programmiermodelle, hochgradig skalierbare Microservices Anwendungen zu erstellen. Service Fabric unterstützt Docker in aktuellen Versionen von Linux-Vorschau an, wie in der [Service Fabric-Vorschau unter Linux](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere), und für Windows-Container [in der nächsten Version](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
+Eine weitere Option für die Cluster-Bereitstellung und Verwaltung ist Azure Service Fabric. [Service Fabric](https://azure.microsoft.com/services/service-fabric/) ist eine Microservices-Plattform von Microsoft, die containerorchestrierung als auch für Entwickler enthält Programmiermodelle nutzen, um hochgradig skalierbare microserviceanwendungen erstellen. Service Fabric unterstützt Docker in den aktuellen Linux Preview-Versionen, wie in der [Service Fabric-Vorschauversion unter Linux](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere), und für Windows-Container [in der nächsten Version](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview).
 
-Service Fabric-Verwaltungstools für folgen:
+Service Fabric-Management-Tools für folgen:
 
--   [Azure-Portal für Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) clusterbezogene Vorgänge (erstellen/aktualisieren/löschen) einen Cluster oder Konfigurieren der Infrastruktur (VMs, Lastenausgleich, Netzwerke usw.).
+-   [Azure-Portal für Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) clusterbezogenen Vorgänge (erstellen/aktualisieren/löschen) einen Cluster oder konfigurieren die Infrastruktur (virtuelle Computer, Load Balancer, Netzwerke usw.)
 
--   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) ist eine spezielle Web-UI-Tool, die Einblicke und bestimmte Vorgänge in der Service Fabric-Cluster aus Sicht der Knoten-VMs und aus der Sicht Anwendung und Dienste bereitstellt.
+-   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) ist eine spezielle Web-Benutzeroberflächentool, die Einblicke und bestimmte Operationen mit Service Fabric-Cluster aus Sicht der Knoten/VMs und aus der Sicht Anwendungen und Dienste bereitstellt.
 
 
 >[!div class="step-by-step"]

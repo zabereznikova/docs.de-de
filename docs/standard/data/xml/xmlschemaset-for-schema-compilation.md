@@ -9,11 +9,11 @@ ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400737"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582553"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -238,7 +238,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 ## <a name="schema-resolution-and-xsimport"></a>Schemaauflösung und "xs:import"  
  In den folgenden Beispielen wird die Verhaltensweise des <xref:System.Xml.Schema.XmlSchemaSet> beim Importieren von Schemata beschrieben, wenn in einem <xref:System.Xml.Schema.XmlSchemaSet> mehrere Schemata für einen angegebenen Namespace vorhanden sind.  
   
- Betrachten Sie beispielsweise ein <xref:System.Xml.Schema.XmlSchemaSet>, das mehrere Schemata für den `http://www.contoso.com`-Namespace enthält. Ein Schema mit der folgenden `xs:import`-Richtlinie wird dem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt.  
+ Betrachten Sie beispielsweise ein <xref:System.Xml.Schema.XmlSchemaSet>, das mehrere Schemata für den `http://www.contoso.com`-Namespace enthält. Ein Schema mit der folgenden `xs:import`-Anweisung wird dem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt.  
   
 ```xml  
 <xs:import namespace="http://www.contoso.com" schemaLocation="http://www.contoso.com/schema.xsd" />  

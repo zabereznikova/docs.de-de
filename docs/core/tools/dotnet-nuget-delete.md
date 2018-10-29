@@ -4,12 +4,12 @@ description: Der dotnet-nuget-delete-Befehl löscht ein Paket vom Server oder he
 author: karann-msft
 ms.author: mairaw
 ms.date: 06/01/2018
-ms.openlocfilehash: 1b58136d0bc04947f0a5baba320e5e6b3e45e2f1
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f4aa027a465c4adea1de13853063d03e8e295411
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728413"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180878"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -41,7 +41,7 @@ dotnet nuget delete [-h|--help]
 ```
 ---
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
 Der `dotnet nuget delete`-Befehl löscht ein Paket vom Server oder hebt dessen Auflistung auf. Für [nuget.org](https://www.nuget.org/) wird die Auflistung des Pakets aufgehoben.
 
@@ -79,7 +79,7 @@ Fordert nicht zu Eingaben oder Bestätigungen des Benutzers auf.
 
 `-s|--source <SOURCE>`
 
-Gibt die Server-URL an. Unterstützte URLs für „nuget.org“ sind u.a. `http://www.nuget.org`, `http://www.nuget.org/api/v3` und `http://www.nuget.org/api/v2/package`. Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).
+Gibt die Server-URL an. Unterstützte URLs für „nuget.org“ sind u.a. `https://www.nuget.org`, `https://www.nuget.org/api/v3` und `https://www.nuget.org/api/v2/package`. Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -101,7 +101,7 @@ Fordert nicht zu Eingaben oder Bestätigungen des Benutzers auf.
 
 `-s|--source <SOURCE>`
 
-Gibt die Server-URL an. Unterstützte URLs für „nuget.org“ sind u.a. `http://www.nuget.org`, `http://www.nuget.org/api/v3` und `http://www.nuget.org/api/v2/package`. Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).
+Gibt die Server-URL an. Unterstützte URLs für „nuget.org“ sind u.a. `https://www.nuget.org`, `https://www.nuget.org/api/v3` und `https://www.nuget.org/api/v2/package`. Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -123,7 +123,7 @@ Fordert nicht zu Eingaben oder Bestätigungen des Benutzers auf.
 
 `-s|--source <SOURCE>`
 
-Gibt die Server-URL an. Unterstützte URLs für „nuget.org“ sind u.a. `http://www.nuget.org`, `http://www.nuget.org/api/v3` und `http://www.nuget.org/api/v2/package`. Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).
+Gibt die Server-URL an. Unterstützte URLs für „nuget.org“ sind u.a. `https://www.nuget.org`, `https://www.nuget.org/api/v3` und `https://www.nuget.org/api/v2/package`. Ersetzen Sie für private Feeds den Hostnamen (z.B. `%hostname%/api/v3`).
 
 ---
 

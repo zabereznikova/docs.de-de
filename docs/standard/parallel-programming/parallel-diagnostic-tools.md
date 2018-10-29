@@ -8,11 +8,11 @@ ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47236029"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123110"
 ---
 # <a name="parallel-diagnostic-tools"></a>Diagnosetools für die parallele Ausführung
 Visual Studio bietet umfangreiche Unterstützung für das Debuggen und die Profilerstellung in Multithreadanwendungen.  

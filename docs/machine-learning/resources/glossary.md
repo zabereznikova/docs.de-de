@@ -1,16 +1,14 @@
 ---
 title: Maschinelles Lernen – Glossar
 description: Ein Glossar von Begriffen aus dem Bereich des maschinellen Lernens.
-author: jralexander
-ms.author: johalex
 ms.date: 05/31/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6b175a8e89479dae81a7e5769e8d10c09a193898
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081097"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453202"
 ---
 # <a name="machine-learning-glossary"></a>Maschinelles Lernen – Glossar
 
@@ -20,13 +18,13 @@ Die folgende Liste ist eine Zusammenstellung wichtiger Begriffe aus dem Bereich 
 
 Bei der [Klassifizierung](#classification) ist die Genauigkeit die Anzahl der korrekt klassifizierten Elemente dividiert durch die Gesamtzahl der Elemente in der Testgruppe. Sie reicht von 0 (ungenau) bis 1 (am genauesten). Die Genauigkeit ist eine der Auswertungsmetriken für die Leistung Ihres Modells. Betrachten Sie sie in Verbindung mit [Präzision](#precision), [Wiedererkennung](#recall) und [F-Wertung](#f-score).
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Fläche unter der Kurve (Area under the curve, AUC)
 
 Bei der [binären Klassifizierung](#binary-classification) ist diese Auswertungsmetrik der Wert der Fläche unter der Kurve, der das Verhältnis der richtig positiven Ergebnisse (auf der Y-Achse) zu den falsch positiven Ergebnissen (auf der X-Achse) darstellt. Er reicht von 0,5 (schlechteste) bis 1 (beste). Auch bekannt als die Fläche unter der ROC-Kurve, d.h. unter der Grenzwertoptimierungskurve (Receiver Operating Characteristic Curve). Weitere Informationen finden Sie auf Wikipedia im Artikel zu [Receiver Operating Characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
 
 ## <a name="binary-classification"></a>Binäre Klassifizierung
 
@@ -40,7 +38,7 @@ Wenn die Daten zur Vorhersage einer Kategorie verwendet werden, wird der [überw
 
 Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten in ein Modell passen. Die Werte liegen zwischen 0 und 1. Ein Wert von 0 bedeutet, dass die Daten zufällig sind oder nicht an das Modell angepasst werden können. Ein Wert von 1 bedeutet, dass das Modell exakt mit den Daten übereinstimmt. Dies wird oft als r<sup>2</sup>, R<sup>2</sup> oder R-Quadrat bezeichnet.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Feature
 
@@ -54,7 +52,7 @@ Als Funktionsentwicklung wird der Prozess bezeichnet, bei dem eine Reihe von [Fu
 
 Bei der [Klassifizierung](#classification) ist dies eine Auswertungsmetrik, die [Präzision](#precision) und [Wiedererkennung](#recall) ausgleicht.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
 
 ## <a name="hyperparameter"></a>Hyperparameter
 
@@ -68,13 +66,13 @@ Das Element, das mit dem Modell für maschinelles Lernen vorhergesagt werden sol
 
 Bei der [Klassifizierung](#classification) charakterisiert diese Auswertungsmetrik die Genauigkeit eines Klassifikators. Je geringer der Protokollverlust, desto genauer ist ein Klassifikator.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
 
 ## <a name="mean-absolute-error-mae"></a>Mittlerer absoluter Fehler (Mean Absolute Error, MAE)
 
 Bei der [Regression](#regression) ist dies eine Auswertungsmetrik, die den Durchschnitt aller Modellfehler angibt, wobei ein Modellfehler die Differenz zwischen dem vorhergesagten Wert für die [Bezeichnung](#label) und dem korrekten Wert für die Bezeichnung ist.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Modell
 
@@ -100,13 +98,13 @@ Alle Vorgänge, die zur Anpassung eines Modells an einen Datensatz erforderlich 
 
 Bei der [Klassifizierung](#classification) steht die Genauigkeit für eine Klasse für die Anzahl der Elemente, die korrekt als zu dieser Klasse gehörend vorhergesagt werden, geteilt durch die Gesamtzahl der Elemente, die als zu dieser Klasse gehörend vorhergesagt werden.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Wiedererkennung
 
 Bei der [Klassifizierung](#classification) steht die Wiedererkennung für eine Klasse für die Anzahl der Elemente, die korrekt als zu dieser Klasse gehörend vorhergesagt werden, geteilt durch die Gesamtzahl der Elemente, die tatsächlich zu dieser Klasse gehören.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
 
 ## <a name="regression"></a>Regression
 
@@ -124,7 +122,7 @@ Bei der [Regression](#regression) steht diese Auswertungsmetrik für die Summe a
 
 Bei der [Regression](#regression) steht diese Auswertungsmetrik für die Quadratwurzel aus dem Durchschnitt der Quadrate der Fehler.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
+Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Überwachtes maschinelles Lernen
 

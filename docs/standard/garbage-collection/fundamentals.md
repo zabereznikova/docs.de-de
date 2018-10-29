@@ -13,11 +13,11 @@ ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47216980"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582748"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 <a name="top"></a> In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager. Der Garbage Collector bietet folgende Vorteile:  
@@ -78,7 +78,7 @@ ms.locfileid: "47216980"
   
  Die Auslagerungsdatei wird auch dann verwendet, wenn der tatsächliche physische Speicherbedarf insgesamt eher niedrig ist. Wenn das erste Mal eine hohe physische Speicherauslastung auftritt, muss das Betriebssystem im physischen Speicher freien Platz für die Datenspeicherung schaffen. Zu diesem Zweck werden einige Daten aus dem physischen Speicher in die Auslagerungsdatei verschoben. Für diese Daten erfolgt solange keine neue Speicherzuordnung, bis sie tatsächlich benötigt werden. Daher können Situationen entstehen, in denen auch bei einer geringen physischen Speicherauslastung Daten in der Auslagerungsdatei abgelegt sind. 
  
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="conditions_for_a_garbage_collection"></a>   
 ## <a name="conditions-for-a-garbage-collection"></a>Bedingungen für eine Garbage Collection  
@@ -88,9 +88,9 @@ ms.locfileid: "47216980"
   
 -   Der Speicher, der von Objekten belegt wird, die dem verwalteten Heap zugeordnet sind, übersteigt einen akzeptablen Schwellenwert. Dieser Schwellenwert wird während der Prozessausführung kontinuierlich angepasst.  
   
--   Die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode wird aufgerufen. In fast allen Fällen müssen Sie diese Methode nicht aufrufen, da der Garbage Collector kontinuierlich ausgeführt wird. Diese Methode wird hauptsächlich für eindeutige Situationen und für Tests verwendet.  
+-   Die <xref:System.GC.Collect%2A?displayProperty=nameWithType> -Methode wird aufgerufen. In fast allen Fällen müssen Sie diese Methode nicht aufrufen, da der Garbage Collector kontinuierlich ausgeführt wird. Diese Methode wird hauptsächlich für eindeutige Situationen und für Tests verwendet.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="the_managed_heap"></a>   
 ## <a name="the-managed-heap"></a>Der verwaltete Heap  
@@ -98,7 +98,7 @@ ms.locfileid: "47216980"
   
  Es gibt einen verwalteten Heap für jeden verwalteten Prozess. Alle Threads im Prozess ordnen Speicher zu, für Objekte auf dem gleichen Heap.  
   
- Zum Reservieren von Speicher ruft der Garbage Collector die [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx)-Win32-Funktion auf und reserviert jeweils ein Segment des Speichers für verwaltete Anwendungen. Zudem reserviert der Garbage Collector nach Bedarf weitere Segmente und gibt Segmente wieder für das Betriebssystem frei (nachdem alle Objekte aus diesen entfernt wurden), indem er die [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx)-Win32-Funktion aufruft.  
+ Zum Reservieren von Speicher ruft der Garbage Collector die [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) -Win32-Funktion auf und reserviert jeweils ein Segment des Speichers für verwaltete Anwendungen. Zudem reserviert der Garbage Collector nach Bedarf weitere Segmente und gibt Segmente wieder für das Betriebssystem frei (nachdem alle Objekte aus diesen entfernt wurden), indem er die [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) -Win32-Funktion aufruft.  
   
 > [!IMPORTANT]
 >  Die Größe der Segmente, die vom Garbage Collector zugeordnet werden, ist implementierungsspezifisch und kann jederzeit, auch in regelmäßigen Updates, geändert werden. Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen noch darf in ihr versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.  
@@ -113,7 +113,7 @@ ms.locfileid: "47216980"
   
  Der große Objektheap enthält sehr große Objekte, die mindestens 85.000 Bytes groß sind. Die Objekte auf dem großen Objektheap sind normalerweise Arrays. Ein Instanzobjekt ist meistens nicht sehr groß.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="generations"></a>   
 ## <a name="generations"></a>Generationen  
@@ -154,7 +154,7 @@ ms.locfileid: "47216980"
   
  Die Menge an Speicher, der bei einer kurzlebigen Garbage Collection freigegeben wird, ist auf die Größe des kurzlebigen Segments beschränkt. Der Umfang des freigegebenen Speichers ist proportional zum Speicherplatz, der von den inaktiven Objekten belegt wurde.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="what_happens_during_a_garbage_collection"></a>   
 ## <a name="what-happens-during-a-garbage-collection"></a>Was geschieht während einer Garbage Collection  
@@ -168,7 +168,7 @@ ms.locfileid: "47216980"
   
      Da Auflistungen der Generation 2 mehrere Segmente belegen können, können Objekte, die auf Generation 2 höher gestuft werden, in ein älteres Segment verschoben werden. Objekte, die sowohl Generation 1 als auch Generation 2 überlebt haben, können in ein anderes Segment verschoben werden, da sie auf Generation 2 höher gestuft werden.  
   
-     Normalerweise wird der große Objektheap nicht komprimiert, da das Kopieren großer Objekte Leistungseinbußen zur Folge hat. Ab [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] können Sie jedoch die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>-Eigenschaft verwenden, um bei Bedarf einen großen Objektheap zu komprimieren.  
+     Normalerweise wird der große Objektheap nicht komprimiert, da das Kopieren großer Objekte Leistungseinbußen zur Folge hat. Ab [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]können Sie jedoch die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> -Eigenschaft verwenden, um bei Bedarf einen großen Objektheap zu komprimieren.  
   
  Der Garbage Collector bestimmt anhand folgender Informationen, ob Objekte aktiv sind:  
   
@@ -185,7 +185,7 @@ ms.locfileid: "47216980"
  ![Garbage Collection, die durch einen Thread ausgelöst wird](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
 Ein Thread, der eine Garbage Collection auslöst  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="manipulating_unmanaged_resources"></a>   
 ## <a name="manipulating-unmanaged-resources"></a>Bearbeiten von nicht verwalteten Ressourcen  
@@ -195,7 +195,7 @@ Ein Thread, der eine Garbage Collection auslöst
   
  Wenn festgestellt wird, dass ein abzuschließendes Objekt inaktiv ist, wird der Finalizer des Objekts in eine Warteschlange eingereiht, damit die dazugehörigen Bereinigungsaktionen ausgeführt werden. Das Objekt selbst wird jedoch auf die nächste Generation höher gestuft. Daher müssen Sie bis zur nächsten Garbage Collection warten, die für diese Generation stattfindet (dies ist nicht notwendigerweise die nächste Garbage Collection), um zu bestimmen, ob das Objekt freigegeben wurde.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="workstation_and_server_garbage_collection"></a>   
 ## <a name="workstation-and-server-garbage-collection"></a>Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server  
@@ -244,7 +244,7 @@ Garbage Collection für Server
   
  Wenn Sie Hunderte von Instanzen einer Anwendung ausführen, sollten Sie erwägen, eine Garbage Collection für die Arbeitsstation mit deaktivierter gleichzeitiger Garbage Collection zu verwenden. Dies führt zu weniger Kontextwechseln, wodurch die Leistung verbessert werden kann.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="concurrent_garbage_collection"></a>   
 ## <a name="concurrent-garbage-collection"></a>Concurrent garbage collection  
@@ -265,7 +265,7 @@ Garbage Collection für Server
  ![Threads für parallele Garbage Collection](../../../docs/standard/garbage-collection/media/gc-concurrent.png "GC_Concurrent")  
 Concurrent garbage collection  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="background_garbage_collection"></a>   
 ## <a name="background-workstation-garbage-collection"></a>Garbage Collection auf Arbeitsstationen im Hintergrund  
@@ -285,7 +285,7 @@ Concurrent garbage collection
  ![Garbage Collection auf Arbeitsstationen im Hintergrund](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
 Garbage Collection auf Arbeitsstationen im Hintergrund  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Garbage Collection auf dem Server im Hintergrund  

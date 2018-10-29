@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af1db244f02701e6da1604ec406f4fb2940f8f78
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e1ed022193b4896f91f1096a0bb16c21f5374868
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752196"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201425"
 ---
 # <a name="setting-assembly-attributes"></a>Festlegen von Assemblyattributen
 Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Die Attribute sind in die folgenden Gruppen von Informationen unterteilt:  
@@ -35,7 +35,7 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
   
  In der folgenden Tabelle werden das version- und das culture-Attribut beschrieben.  
   
-|Attribut für Assemblyidentität|description|  
+|Attribut für Assemblyidentität|Beschreibung |  
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|Ein aufgelistetes Feld, das die von der Assembly unterstützte Kultur angibt. Eine Assembly kann auch eine Kulturunabhängigkeit angeben. In diesem Fall enthält sie die Ressourcen für die Standardkultur. **Hinweis**: Die Runtime behandelt jede Assembly, für die das culture-Attribut nicht auf NULL festgelegt ist, als Satellitenassembly. Solche Assemblys unterliegen den Bindungsregeln für Satellitenassemblys. Weitere Informationen finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)(Seite möglicherweise auf Englisch).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Ein Wert, der Assemblyattribute festlegt, etwa ob die Assembly parallel ausgeführt werden kann.|  
@@ -50,7 +50,7 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
 ## <a name="informational-attributes"></a>Informationsattribute  
  Mit Informationsattributen können Sie zusätzliche Firmen- oder Produktinformationen für eine Assembly bereitstellen. Die folgende Tabelle beschreibt die verschiedenen Informationsattribute, die auf eine Assembly angewendet werden können.  
   
-|Informationsattribut|description|  
+|Informationsattribut|Beschreibung |  
 |-----------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Ein Zeichenfolgenwert, der einen Firmennamen angibt.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Ein Zeichenfolgenwert, der Copyright-Informationen angibt.|  
@@ -64,7 +64,7 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
 ## <a name="assembly-manifest-attributes"></a>Attribute für Assemblymanifeste  
  Mit Attributen für Assemblymanifeste können Informationen im Assemblymanifest angegeben werden, einschließlich Titel, Beschreibung, Standardalias und Konfiguration. In der folgenden Tabelle werden die Attribute für Assemblymanifeste beschrieben.  
   
-|Attribut für Assemblymanifeste|description|  
+|Attribut für Assemblymanifeste|Beschreibung |  
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Ein Zeichenfolgenwert, der die Assemblykonfiguration angibt, beispielsweise "Einzelhandel" oder "Debuggen". Dieser Wert wird zur Laufzeit nicht verwendet.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Ein Zeichenfolgenwert, der einen Standardalias angibt, der von Assemblys mit einem Verweis verwendet werden soll. Dieser Wert stellt einen Anzeigenamen zur Verfügung, wenn der eigentliche Name der Assembly nicht angezeigt wird (zum Beispiel ein GUID-Wert). Dieser Wert kann auch als Kurzform des vollen Assemblynamens verwendet werden.|  
@@ -74,7 +74,7 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
 ## <a name="strong-name-attributes"></a>Attribute für starke Namen  
  Sie können Attribute für starke Namen verwenden, um einen starken Namen für eine Assembly festzulegen. In der folgenden Tabelle werden die Attribute für starke Namen beschrieben.  
   
-|Attribute für starke Namen|description|  
+|Attribute für starke Namen|Beschreibung |  
 |----------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|Ein boolescher Wert, der angibt, dass die verzögerte Signierung verwendet wird|  
 |<xref:System.Reflection.AssemblyKeyFileAttribute>|Ein Zeichenfolgenwert, der den Namen der Datei angibt, die entweder den öffentlichen Schlüssel (bei verzögerter Signierung) oder öffentliche und private Schlüssel enthält, die an den Konstruktor dieses Attributs als Parameter übergeben werden. Beachten Sie, dass der Dateiname relativ zum Pfad der Ausgabedatei ist (die .exe oder .dll) und nicht zum Pfad zur Quelldatei.|  
@@ -87,5 +87,5 @@ Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen.
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
