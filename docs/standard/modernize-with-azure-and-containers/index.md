@@ -4,12 +4,12 @@ description: Informationen Sie zum übertragen und verschieben und modernisieren
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413936"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200084"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern (2. Auflage)
 
@@ -25,7 +25,7 @@ Copyright © 2018 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieser Veröffentlichung dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert werden.
 
-Dieses Buch ist kostenlos in Form eines elektronischen Buchs (e-Book) über mehrere Kanäle bei Microsoft zur Verfügung wie z. B. <http://dot.net/architecture>.
+Dieses Buch ist kostenlos in Form eines elektronischen Buchs (e-Book) über mehrere Kanäle bei Microsoft zur Verfügung wie z. B. <https://dot.net/architecture>.
 
 Wenn Sie Fragen im Zusammenhang mit dieser Veröffentlichung haben, senden Sie eine E-Mail an [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
@@ -72,7 +72,7 @@ Für moderne Anwendungen mit den am besten geeignete langfristige Flexibilität 
 
 Abbildung 1-1 zeigt die möglichen Pfade, die Sie einschlagen können, wenn Sie vorhandene .NET-Anwendungen in inkrementellen Phasen in die Cloud verschieben.
 
- ![Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste](./media/image1-1.png)
+ ![Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste](./media/image1-1.png)
 
 > **(Abbildung 1-1)**. Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste
 

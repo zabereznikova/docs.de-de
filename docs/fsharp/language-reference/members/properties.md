@@ -3,11 +3,11 @@ title: Eigenschaften (F#)
 description: Informationen Sie zu F#-Eigenschaften, die Mitglieder sind, die einem Objekt zugeordneten Werte darstellen.
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50043646"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197924"
 ---
 # <a name="properties"></a>Eigenschaften
 

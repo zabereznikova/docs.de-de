@@ -2,12 +2,12 @@
 title: Listen (F#)
 description: Informationen Sie zu F#-Listen, die eine geordnete, unveränderliche Reihe von Elementen des gleichen Typs.
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210161"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201623"
 ---
 # <a name="lists"></a>Listen
 
@@ -48,7 +48,7 @@ Sie können Elemente mithilfe des Operators `::` (Cons) zu einer Liste hinzufüg
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-Sie können Listen, die kompatible Typen aufweisen, wie im folgenden Code mithilfe des Operators `@` verketten. Wenn `list1` den Werten `[2; 3; 4]` und `list2` den Werten `[100; 2; 3; 4 ]` entspricht, erstellt dieser Code für `list3` die Werte `[2; 3; 4; 100; 2; 3; 4]`.
+Sie können Listen, die kompatible Typen aufweisen, wie im folgenden Code mithilfe des Operators `@` verketten. Wenn `list1` den Werten `[2; 3; 4]` und `list2` den Werten `[100; 2; 3; 4]` entspricht, erstellt dieser Code für `list3` die Werte `[2; 3; 4; 100; 2; 3; 4]`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 
