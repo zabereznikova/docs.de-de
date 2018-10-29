@@ -2,34 +2,34 @@
 title: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e809ea3c2b2bcc0f547dd53280835a83f52e079b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260242"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188039"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a><span data-ttu-id="3ebc6-102">Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)</span><span class="sxs-lookup"><span data-stu-id="3ebc6-102">How to: Extend the async Walkthrough by Using Task.WhenAll (C#)</span></span>
-<span data-ttu-id="3ebc6-103">Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) verbessern, indem Sie die <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>-Methode verwenden.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-103">You can improve the performance of the async solution in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) by using the <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="3ebc6-104">Diese Methode wartet auf mehrere asynchrone Vorgänge, die als Auflistung von Aufgaben dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-104">This method asynchronously awaits multiple asynchronous operations, which are represented as a collection of tasks.</span></span>  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a><span data-ttu-id="c9a5a-102">Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)</span><span class="sxs-lookup"><span data-stu-id="c9a5a-102">How to: Extend the async Walkthrough by Using Task.WhenAll (C#)</span></span>
+<span data-ttu-id="c9a5a-103">Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) verbessern, indem Sie die <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>-Methode verwenden.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-103">You can improve the performance of the async solution in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) by using the <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="c9a5a-104">Diese Methode wartet auf mehrere asynchrone Vorgänge, die als Auflistung von Aufgaben dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-104">This method asynchronously awaits multiple asynchronous operations, which are represented as a collection of tasks.</span></span>  
   
- <span data-ttu-id="3ebc6-105">Sie haben möglicherweise in der exemplarischen Vorgehensweise bemerkt, dass die Websites Downloads in verschiedenen Geschwindigkeiten anbieten.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-105">You might have noticed in the walkthrough that the websites download at different rates.</span></span> <span data-ttu-id="3ebc6-106">Manchmal ist eine Website sehr langsam und verzögert alle verbleibenden Downloads.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-106">Sometimes one of the websites is very slow, which delays all the remaining downloads.</span></span> <span data-ttu-id="3ebc6-107">Wenn Sie die asynchronen Projektmappen ausführen, die Sie in der exemplarischen Vorgehensweise erstellt haben, können Sie das Programm einfach beenden, wenn Sie nicht warten möchten. Eine bessere Option wäre jedoch, alle Downloads gleichzeitig zu starten und schnellere Downloads einfach fortfahren, ohne auf langsamere zu warten.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-107">When you run the asynchronous solutions that you build in the walkthrough, you can end the program easily if you don't want to wait, but a better option would be to start all the downloads at the same time and let faster downloads continue without waiting for the one that’s delayed.</span></span>  
+ <span data-ttu-id="c9a5a-105">Sie haben möglicherweise in der exemplarischen Vorgehensweise bemerkt, dass die Websites Downloads in verschiedenen Geschwindigkeiten anbieten.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-105">You might have noticed in the walkthrough that the websites download at different rates.</span></span> <span data-ttu-id="c9a5a-106">Manchmal ist eine Website sehr langsam und verzögert alle verbleibenden Downloads.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-106">Sometimes one of the websites is very slow, which delays all the remaining downloads.</span></span> <span data-ttu-id="c9a5a-107">Wenn Sie die asynchronen Projektmappen ausführen, die Sie in der exemplarischen Vorgehensweise erstellt haben, können Sie das Programm einfach beenden, wenn Sie nicht warten möchten. Eine bessere Option wäre jedoch, alle Downloads gleichzeitig zu starten und schnellere Downloads einfach fortfahren, ohne auf langsamere zu warten.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-107">When you run the asynchronous solutions that you build in the walkthrough, you can end the program easily if you don't want to wait, but a better option would be to start all the downloads at the same time and let faster downloads continue without waiting for the one that’s delayed.</span></span>  
   
- <span data-ttu-id="3ebc6-108">Sie wenden die `Task.WhenAll`-Methode auf eine Aufgabenauflistung an.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-108">You apply the `Task.WhenAll` method to a collection of tasks.</span></span> <span data-ttu-id="3ebc6-109">Die Anwendung von `WhenAll` gibt eine einzelne Aufgabe zurück, die nicht abgeschlossen ist, bevor jede Aufgabe in der Auflistung abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-109">The application of `WhenAll` returns a single task that isn’t complete until every task in the collection is completed.</span></span> <span data-ttu-id="3ebc6-110">Die Aufgaben scheinen parallel ausgeführt zu werden, es werden jedoch keine weiteren Threads erstellt.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-110">The tasks appear to run in parallel, but no additional threads are created.</span></span> <span data-ttu-id="3ebc6-111">Die Aufgaben können in jeder Reihenfolge abschließen.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-111">The tasks can complete in any order.</span></span>  
+ <span data-ttu-id="c9a5a-108">Sie wenden die `Task.WhenAll`-Methode auf eine Aufgabenauflistung an.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-108">You apply the `Task.WhenAll` method to a collection of tasks.</span></span> <span data-ttu-id="c9a5a-109">Die Anwendung von `WhenAll` gibt eine einzelne Aufgabe zurück, die nicht abgeschlossen ist, bevor jede Aufgabe in der Auflistung abgeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-109">The application of `WhenAll` returns a single task that isn’t complete until every task in the collection is completed.</span></span> <span data-ttu-id="c9a5a-110">Die Aufgaben scheinen parallel ausgeführt zu werden, es werden jedoch keine weiteren Threads erstellt.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-110">The tasks appear to run in parallel, but no additional threads are created.</span></span> <span data-ttu-id="c9a5a-111">Die Aufgaben können in jeder Reihenfolge abschließen.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-111">The tasks can complete in any order.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="3ebc6-112">Die folgenden Prozeduren beschreiben Erweiterungen zu asynchronen Anwendungen, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt werden.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-112">The following procedures describe extensions to the async applications that are developed in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="3ebc6-113">Sie können die Anwendungen entwickeln, indem Sie entweder die exemplarische Vorgehensweise durcharbeiten oder den Code von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) herunterladen.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-113">You can develop the applications by either completing the walkthrough or downloading the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>  
+>  <span data-ttu-id="c9a5a-112">Die folgenden Prozeduren beschreiben Erweiterungen zu asynchronen Anwendungen, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt werden.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-112">The following procedures describe extensions to the async applications that are developed in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="c9a5a-113">Sie können die Anwendungen entwickeln, indem Sie entweder die exemplarische Vorgehensweise durcharbeiten oder den Code von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) herunterladen.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-113">You can develop the applications by either completing the walkthrough or downloading the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>  
 >   
->  <span data-ttu-id="3ebc6-114">Für die Ausführung des Beispiels muss Visual Studio 2012 oder höher auf dem Computer installiert sein.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-114">To run the example, you must have Visual Studio 2012 or later installed on your computer.</span></span>  
+>  <span data-ttu-id="c9a5a-114">Für die Ausführung des Beispiels muss Visual Studio 2012 oder höher auf dem Computer installiert sein.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-114">To run the example, you must have Visual Studio 2012 or later installed on your computer.</span></span>  
   
-### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a><span data-ttu-id="3ebc6-115">So fügen Sie der GetURLContentsAsync-Lösung Task.WhenAll hinzu</span><span class="sxs-lookup"><span data-stu-id="3ebc6-115">To add Task.WhenAll to your GetURLContentsAsync solution</span></span>  
+### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a><span data-ttu-id="c9a5a-115">So fügen Sie der GetURLContentsAsync-Lösung Task.WhenAll hinzu</span><span class="sxs-lookup"><span data-stu-id="c9a5a-115">To add Task.WhenAll to your GetURLContentsAsync solution</span></span>  
   
-1.  <span data-ttu-id="3ebc6-116">Fügen Sie die `ProcessURLAsync`-Methode der ersten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt wurde.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-116">Add the `ProcessURLAsync` method to the first application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
+1.  <span data-ttu-id="c9a5a-116">Fügen Sie die `ProcessURLAsync`-Methode der ersten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt wurde.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-116">Add the `ProcessURLAsync` method to the first application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-    -   <span data-ttu-id="3ebc6-117">Wenn Sie die [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) heruntergeladen haben, öffnen Sie das „AsyncWalkthrough“-Projekt, und fügen Sie dann `ProcessURLAsync` der Datei „MainWindow.xaml.cs“ hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-117">If you downloaded the code from  [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>  
+    -   <span data-ttu-id="c9a5a-117">Wenn Sie die [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) heruntergeladen haben, öffnen Sie das „AsyncWalkthrough“-Projekt, und fügen Sie dann `ProcessURLAsync` der Datei „MainWindow.xaml.cs“ hinzu.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-117">If you downloaded the code from  [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>  
   
-    -   <span data-ttu-id="3ebc6-118">Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `GetURLContentsAsync`-Methode enthält.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-118">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that includes the `GetURLContentsAsync` method.</span></span> <span data-ttu-id="3ebc6-119">Die Datei „MainWindow.xaml.cs“ für diese Anwendung ist das erste Beispiel im Abschnitt „Vollständige Codebeispiele der exemplarischen Vorgehensweise“.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-119">The MainWindow.xaml.cs file for this application is the first example in the "Complete Code Examples from the Walkthrough" section.</span></span>  
+    -   <span data-ttu-id="c9a5a-118">Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `GetURLContentsAsync`-Methode enthält.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-118">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that includes the `GetURLContentsAsync` method.</span></span> <span data-ttu-id="c9a5a-119">Die Datei „MainWindow.xaml.cs“ für diese Anwendung ist das erste Beispiel im Abschnitt „Vollständige Codebeispiele der exemplarischen Vorgehensweise“.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-119">The MainWindow.xaml.cs file for this application is the first example in the "Complete Code Examples from the Walkthrough" section.</span></span>  
   
-     <span data-ttu-id="3ebc6-120">Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `foreach`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-120">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="3ebc6-121">Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-121">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>  
+     <span data-ttu-id="c9a5a-120">Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `foreach`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-120">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="c9a5a-121">Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-121">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>  
   
     ```csharp  
     private async Task<int> ProcessURLAsync(string url)  
@@ -40,7 +40,7 @@ ms.locfileid: "44260242"
     }  
     ```  
   
-2.  <span data-ttu-id="3ebc6-122">Kommentieren Sie die Schleife `foreach` in `SumPageSizesAsync` aus, oder löschen Sie sie, wie der folgenden Code zeigt.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-122">Comment out or delete the `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>  
+2.  <span data-ttu-id="c9a5a-122">Kommentieren Sie die Schleife `foreach` in `SumPageSizesAsync` aus, oder löschen Sie sie, wie der folgenden Code zeigt.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-122">Comment out or delete the `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>  
   
     ```csharp  
     //var total = 0;  
@@ -61,9 +61,9 @@ ms.locfileid: "44260242"
     //}  
     ```  
   
-3.  <span data-ttu-id="3ebc6-123">Erstellen Sie eine Auflistung von Aufgaben.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-123">Create a collection of tasks.</span></span> <span data-ttu-id="3ebc6-124">Der folgende Code definiert eine [Abfrage](../../../../csharp/programming-guide/concepts/linq/index.md), die beim Ausführen durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode eine Aufgabenauflistung erstellt, die die Inhalte jeder Website herunterlädt.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-124">The following code defines a [query](../../../../csharp/programming-guide/concepts/linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="3ebc6-125">Die Aufgaben werden beim Auswerten der Abfrage gestartet.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-125">The tasks are started when the query is evaluated.</span></span>  
+3.  <span data-ttu-id="c9a5a-123">Erstellen Sie eine Auflistung von Aufgaben.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-123">Create a collection of tasks.</span></span> <span data-ttu-id="c9a5a-124">Der folgende Code definiert eine [Abfrage](../../../../csharp/programming-guide/concepts/linq/index.md), die beim Ausführen durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode eine Aufgabenauflistung erstellt, die die Inhalte jeder Website herunterlädt.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-124">The following code defines a [query](../../../../csharp/programming-guide/concepts/linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="c9a5a-125">Die Aufgaben werden beim Auswerten der Abfrage gestartet.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-125">The tasks are started when the query is evaluated.</span></span>  
   
-     <span data-ttu-id="3ebc6-126">Fügen Sie nach der Deklaration von `SumPageSizesAsync` den folgenden Code der `urlList`-Methode hinzu:</span><span class="sxs-lookup"><span data-stu-id="3ebc6-126">Add the following code to method `SumPageSizesAsync` after the declaration of `urlList`.</span></span>  
+     <span data-ttu-id="c9a5a-126">Fügen Sie nach der Deklaration von `SumPageSizesAsync` den folgenden Code der `urlList`-Methode hinzu:</span><span class="sxs-lookup"><span data-stu-id="c9a5a-126">Add the following code to method `SumPageSizesAsync` after the declaration of `urlList`.</span></span>  
   
     ```csharp  
     // Create a query.   
@@ -74,9 +74,9 @@ ms.locfileid: "44260242"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  <span data-ttu-id="3ebc6-127">Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben `downloadTasks` an.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-127">Apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="3ebc6-128">`Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-128">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>  
+4.  <span data-ttu-id="c9a5a-127">Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben `downloadTasks` an.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-127">Apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="c9a5a-128">`Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-128">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>  
   
-     <span data-ttu-id="3ebc6-129">Im folgenden Beispiel erwartet der `await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-129">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="3ebc6-130">Der Ausdruck wird gegen ein Array mit ganzen Zahlen ausgewertet, wobei jede ganze Zahl die Länge einer heruntergeladenen Website ist.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-130">The expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="3ebc6-131">Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-131">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>  
+     <span data-ttu-id="c9a5a-129">Im folgenden Beispiel erwartet der `await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-129">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="c9a5a-130">Der Ausdruck wird gegen ein Array mit ganzen Zahlen ausgewertet, wobei jede ganze Zahl die Länge einer heruntergeladenen Website ist.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-130">The expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="c9a5a-131">Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-131">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>  
   
     ```csharp  
     // Await the completion of all the running tasks.  
@@ -87,26 +87,26 @@ ms.locfileid: "44260242"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  <span data-ttu-id="3ebc6-132">Abschließend verwenden Sie die <xref:System.Linq.Enumerable.Sum%2A>-Methode, um die Summe der Größen aller Websites zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-132">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to calculate the sum of the lengths of all the websites.</span></span> <span data-ttu-id="3ebc6-133">Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-133">Add the following line to `SumPageSizesAsync`.</span></span>  
+5.  <span data-ttu-id="c9a5a-132">Abschließend verwenden Sie die <xref:System.Linq.Enumerable.Sum%2A>-Methode, um die Summe der Größen aller Websites zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-132">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to calculate the sum of the lengths of all the websites.</span></span> <span data-ttu-id="c9a5a-133">Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-133">Add the following line to `SumPageSizesAsync`.</span></span>  
   
     ```csharp  
     int total = lengths.Sum();  
     ```  
   
-### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a><span data-ttu-id="3ebc6-134">So fügen Sie der HttpClient.GetByteArrayAsync-Lösung Task.WhenAll hinzu</span><span class="sxs-lookup"><span data-stu-id="3ebc6-134">To add Task.WhenAll to the HttpClient.GetByteArrayAsync solution</span></span>  
+### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a><span data-ttu-id="c9a5a-134">So fügen Sie der HttpClient.GetByteArrayAsync-Lösung Task.WhenAll hinzu</span><span class="sxs-lookup"><span data-stu-id="c9a5a-134">To add Task.WhenAll to the HttpClient.GetByteArrayAsync solution</span></span>  
   
-1.  <span data-ttu-id="3ebc6-135">Fügen Sie die folgende Version von `ProcessURLAsync` der zweiten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt wurde.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-135">Add the following version of `ProcessURLAsync` to the second application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
+1.  <span data-ttu-id="c9a5a-135">Fügen Sie die folgende Version von `ProcessURLAsync` der zweiten Anwendung hinzu, die in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entwickelt wurde.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-135">Add the following version of `ProcessURLAsync` to the second application that's developed in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-    -   <span data-ttu-id="3ebc6-136">Wenn Sie den Code von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) heruntergeladen haben, öffnen Sie das „AsyncWalkthrough_HttpClient“-Projekt und fügen dann `ProcessURLAsync` entweder der „MainWindow.xaml.cs“-Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-136">If you downloaded the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough_HttpClient project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>  
+    -   <span data-ttu-id="c9a5a-136">Wenn Sie den Code von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) heruntergeladen haben, öffnen Sie das „AsyncWalkthrough_HttpClient“-Projekt und fügen dann `ProcessURLAsync` entweder der „MainWindow.xaml.cs“-Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-136">If you downloaded the code from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f), open the AsyncWalkthrough_HttpClient project, and then add `ProcessURLAsync` to the MainWindow.xaml.cs file.</span></span>  
   
-    -   <span data-ttu-id="3ebc6-137">Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `HttpClient.GetByteArrayAsync`-Methode verwendet.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-137">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that uses the `HttpClient.GetByteArrayAsync` method.</span></span> <span data-ttu-id="3ebc6-138">Die „MainWindow.xaml.cs“-Datei für diese Anwendung ist das zweite Beispiel im Abschnitt „Vollständige Codebeispiele der exemplarischen Vorgehensweise“.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-138">The MainWindow.xaml.cs file for this application is the second example in the "Complete Code Examples from the Walkthrough" section.</span></span>  
+    -   <span data-ttu-id="c9a5a-137">Wenn Sie den Code innerhalb der exemplarische Vorgehensweise entwickelt haben, fügen Sie `ProcessURLAsync` der Anwendung hinzu, die die `HttpClient.GetByteArrayAsync`-Methode verwendet.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-137">If you developed the code by completing the walkthrough, add `ProcessURLAsync` to the application that uses the `HttpClient.GetByteArrayAsync` method.</span></span> <span data-ttu-id="c9a5a-138">Die „MainWindow.xaml.cs“-Datei für diese Anwendung ist das zweite Beispiel im Abschnitt „Vollständige Codebeispiele der exemplarischen Vorgehensweise“.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-138">The MainWindow.xaml.cs file for this application is the second example in the "Complete Code Examples from the Walkthrough" section.</span></span>  
   
-     <span data-ttu-id="3ebc6-139">Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `foreach`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-139">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="3ebc6-140">Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-140">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>  
+     <span data-ttu-id="c9a5a-139">Die `ProcessURLAsync`-Methode konsolidiert die Aktionen im Text der `foreach`-Schleife in `SumPageSizesAsync` in der ersten exemplarischen Vorgehensweise.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-139">The `ProcessURLAsync` method consolidates the actions in the body of the `foreach` loop in `SumPageSizesAsync` in the original walkthrough.</span></span> <span data-ttu-id="c9a5a-140">Die Methode lädt asynchron den angegebenen Inhalt einer Website als Bytearray und gibt dann die Länge des Bytearrays zurück.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-140">The method asynchronously downloads the contents of a specified website as a byte array, and then displays and returns the length of the byte array.</span></span>  
   
-     <span data-ttu-id="3ebc6-141">Der einzige Unterschied der `ProcessURLAsync`-Methode in der vorherigen Prozedur ist die Verwendung der <xref:System.Net.Http.HttpClient>-Instanz, `client`.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-141">The only difference from the `ProcessURLAsync` method in the previous procedure is the use of the <xref:System.Net.Http.HttpClient> instance, `client`.</span></span>  
+     <span data-ttu-id="c9a5a-141">Der einzige Unterschied der `ProcessURLAsync`-Methode in der vorherigen Prozedur ist die Verwendung der <xref:System.Net.Http.HttpClient>-Instanz, `client`.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-141">The only difference from the `ProcessURLAsync` method in the previous procedure is the use of the <xref:System.Net.Http.HttpClient> instance, `client`.</span></span>  
   
     ```csharp  
-    async Task<int> ProcessURL(string url, HttpClient client)  
+    async Task<int> ProcessURLAsync(string url, HttpClient client)  
     {  
         byte[] byteArray = await client.GetByteArrayAsync(url);  
         DisplayResults(url, byteArray);  
@@ -114,7 +114,7 @@ ms.locfileid: "44260242"
     }  
     ```  
   
-2.  <span data-ttu-id="3ebc6-142">Kommentieren Sie die Schleife `For Each` oder `foreach` in `SumPageSizesAsync` aus oder löschen Sie sie, wie der folgenden Code zeigt.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-142">Comment out or delete the `For Each` or `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>  
+2.  <span data-ttu-id="c9a5a-142">Kommentieren Sie die Schleife `For Each` oder `foreach` in `SumPageSizesAsync` aus oder löschen Sie sie, wie der folgenden Code zeigt.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-142">Comment out or delete the `For Each` or `foreach` loop in `SumPageSizesAsync`, as the following code shows.</span></span>  
   
     ```csharp  
     //var total = 0;  
@@ -136,22 +136,22 @@ ms.locfileid: "44260242"
     //}  
     ```  
   
-3.  <span data-ttu-id="3ebc6-143">Definieren Sie eine [Abfrage](../../../../csharp/programming-guide/concepts/linq/index.md), die beim Ausführen durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode eine Aufgabenauflistung erstellt, die die Inhalte jeder Website herunterlädt.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-143">Define a [query](../../../../csharp/programming-guide/concepts/linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="3ebc6-144">Die Aufgaben werden beim Auswerten der Abfrage gestartet.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-144">The tasks are started when the query is evaluated.</span></span>  
+3.  <span data-ttu-id="c9a5a-143">Definieren Sie eine [Abfrage](../../../../csharp/programming-guide/concepts/linq/index.md), die beim Ausführen durch die <xref:System.Linq.Enumerable.ToArray%2A>-Methode eine Aufgabenauflistung erstellt, die die Inhalte jeder Website herunterlädt.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-143">Define a [query](../../../../csharp/programming-guide/concepts/linq/index.md) that, when executed by the <xref:System.Linq.Enumerable.ToArray%2A> method, creates a collection of tasks that download the contents of each website.</span></span> <span data-ttu-id="c9a5a-144">Die Aufgaben werden beim Auswerten der Abfrage gestartet.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-144">The tasks are started when the query is evaluated.</span></span>  
   
-     <span data-ttu-id="3ebc6-145">Fügen Sie nach der Deklaration von `SumPageSizesAsync` und `client` den folgenden Code der `urlList`-Methode hinzu:</span><span class="sxs-lookup"><span data-stu-id="3ebc6-145">Add the following code to method `SumPageSizesAsync` after the declaration of `client` and `urlList`.</span></span>  
+     <span data-ttu-id="c9a5a-145">Fügen Sie nach der Deklaration von `SumPageSizesAsync` und `client` den folgenden Code der `urlList`-Methode hinzu:</span><span class="sxs-lookup"><span data-stu-id="c9a5a-145">Add the following code to method `SumPageSizesAsync` after the declaration of `client` and `urlList`.</span></span>  
   
     ```csharp  
     // Create a query.  
     IEnumerable<Task<int>> downloadTasksQuery =   
-        from url in urlList select ProcessURL(url, client);  
+        from url in urlList select ProcessURLAsync(url, client);  
   
     // Use ToArray to execute the query and start the download tasks.  
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  <span data-ttu-id="3ebc6-146">Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben an, `downloadTasks`.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-146">Next, apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="3ebc6-147">`Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-147">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>  
+4.  <span data-ttu-id="c9a5a-146">Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben an, `downloadTasks`.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-146">Next, apply `Task.WhenAll` to the collection of tasks, `downloadTasks`.</span></span> <span data-ttu-id="c9a5a-147">`Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-147">`Task.WhenAll` returns a single task that finishes when all the tasks in the collection of tasks have completed.</span></span>  
   
-     <span data-ttu-id="3ebc6-148">Im folgenden Beispiel erwartet der `await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-148">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="3ebc6-149">Wenn vollständig, wertet der `await`-Ausdruck als Ergebnis ein Array von ganzen Zahlen aus, wobei jede ganze Zahl die Länge einer heruntergeladenen Website hat.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-149">When complete, the `await` expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="3ebc6-150">Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-150">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>  
+     <span data-ttu-id="c9a5a-148">Im folgenden Beispiel erwartet der `await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-148">In the following example, the `await` expression awaits the completion of the single task that `WhenAll` returns.</span></span> <span data-ttu-id="c9a5a-149">Wenn vollständig, wertet der `await`-Ausdruck als Ergebnis ein Array von ganzen Zahlen aus, wobei jede ganze Zahl die Länge einer heruntergeladenen Website hat.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-149">When complete, the `await` expression evaluates to an array of integers, where each integer is the length of a downloaded website.</span></span> <span data-ttu-id="c9a5a-150">Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-150">Add the following code to `SumPageSizesAsync`, just after the code that you added in the previous step.</span></span>  
   
     ```csharp  
     // Await the completion of all the running tasks.  
@@ -162,18 +162,18 @@ ms.locfileid: "44260242"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  <span data-ttu-id="3ebc6-151">Abschließend verwenden Sie die <xref:System.Linq.Enumerable.Sum%2A>-Methode, um die Summe der Größen aller Websites zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-151">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to get the sum of the lengths of all the websites.</span></span> <span data-ttu-id="3ebc6-152">Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-152">Add the following line to `SumPageSizesAsync`.</span></span>  
+5.  <span data-ttu-id="c9a5a-151">Abschließend verwenden Sie die <xref:System.Linq.Enumerable.Sum%2A>-Methode, um die Summe der Größen aller Websites zu berechnen.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-151">Finally, use the <xref:System.Linq.Enumerable.Sum%2A> method to get the sum of the lengths of all the websites.</span></span> <span data-ttu-id="c9a5a-152">Fügen Sie `SumPageSizesAsync` die folgende Zeile hinzu.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-152">Add the following line to `SumPageSizesAsync`.</span></span>  
   
     ```csharp  
     int total = lengths.Sum();
     ```  
   
-### <a name="to-test-the-taskwhenall-solutions"></a><span data-ttu-id="3ebc6-153">So testen Sie die Task.WhenAll-Lösungen</span><span class="sxs-lookup"><span data-stu-id="3ebc6-153">To test the Task.WhenAll solutions</span></span>  
+### <a name="to-test-the-taskwhenall-solutions"></a><span data-ttu-id="c9a5a-153">So testen Sie die Task.WhenAll-Lösungen</span><span class="sxs-lookup"><span data-stu-id="c9a5a-153">To test the Task.WhenAll solutions</span></span>  
   
--   <span data-ttu-id="3ebc6-154">Drücken Sie in beiden Projektmappen F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-154">For either solution, choose the F5 key to run the program, and then choose the **Start** button.</span></span> <span data-ttu-id="3ebc6-155">Die Ausgabe sollte in etwa der Ausgabe der async-Lösungen in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entsprechen.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-155">The output should resemble the output from the async solutions in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="3ebc6-156">Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-156">However, notice that the websites appear in a different order each time.</span></span>  
+-   <span data-ttu-id="c9a5a-154">Drücken Sie in beiden Projektmappen F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten**.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-154">For either solution, choose the F5 key to run the program, and then choose the **Start** button.</span></span> <span data-ttu-id="c9a5a-155">Die Ausgabe sollte in etwa der Ausgabe der async-Lösungen in [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) entsprechen.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-155">The output should resemble the output from the async solutions in [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span> <span data-ttu-id="c9a5a-156">Beachten Sie jedoch, dass die Websites in einer jeweils anderen Reihenfolge angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-156">However, notice that the websites appear in a different order each time.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3ebc6-157">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3ebc6-157">Example</span></span>  
- <span data-ttu-id="3ebc6-158">Der folgende Code zeigt die Erweiterungen des Projekts, das die `GetURLContentsAsync`-Methode verwendet, um Inhalt aus dem Web herunterladen.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-158">The following code shows the extensions to the project that uses the `GetURLContentsAsync` method to download content from the web.</span></span>  
+## <a name="example"></a><span data-ttu-id="c9a5a-157">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c9a5a-157">Example</span></span>  
+ <span data-ttu-id="c9a5a-158">Der folgende Code zeigt die Erweiterungen des Projekts, das die `GetURLContentsAsync`-Methode verwendet, um Inhalt aus dem Web herunterladen.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-158">The following code shows the extensions to the project that uses the `GetURLContentsAsync` method to download content from the web.</span></span>  
   
 ```csharp  
 // Add the following using directives, and add a reference for System.Net.Http.  
@@ -253,16 +253,16 @@ namespace AsyncExampleWPF_WhenAll
         {  
             List<string> urls = new List<string>   
             {   
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
-                "http://msdn.microsoft.com/library/hh290136.aspx",  
-                "http://msdn.microsoft.com/library/ee256749.aspx",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
+                "https://msdn.microsoft.com/library/hh290136.aspx",  
+                "https://msdn.microsoft.com/library/ee256749.aspx",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             };  
             return urls;  
         }  
@@ -305,8 +305,8 @@ namespace AsyncExampleWPF_WhenAll
             // is designed to be used with a monospaced font, such as  
             // Lucida Console or Global Monospace.  
             var bytes = content.Length;  
-            // Strip off the "http://".  
-            var displayURL = url.Replace("http://", "");  
+            // Strip off the "https://".  
+            var displayURL = url.Replace("https://", "");  
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
   
         }  
@@ -314,8 +314,8 @@ namespace AsyncExampleWPF_WhenAll
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="3ebc6-159">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3ebc6-159">Example</span></span>  
- <span data-ttu-id="3ebc6-160">Der folgende Code zeigt die Erweiterungen des Projekts, das die `HttpClient.GetByteArrayAsync`-Methode verwendet, um Inhalt aus dem Web herunterladen.</span><span class="sxs-lookup"><span data-stu-id="3ebc6-160">The following code shows the extensions to the project that uses method `HttpClient.GetByteArrayAsync` to download content from the web.</span></span>  
+## <a name="example"></a><span data-ttu-id="c9a5a-159">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c9a5a-159">Example</span></span>  
+ <span data-ttu-id="c9a5a-160">Der folgende Code zeigt die Erweiterungen des Projekts, das die `HttpClient.GetByteArrayAsync`-Methode verwendet, um Inhalt aus dem Web herunterladen.</span><span class="sxs-lookup"><span data-stu-id="c9a5a-160">The following code shows the extensions to the project that uses method `HttpClient.GetByteArrayAsync` to download content from the web.</span></span>  
   
 ```csharp  
 // Add the following using directives, and add a reference for System.Net.Http.  
@@ -357,7 +357,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
   
             // Create a query.  
             IEnumerable<Task<int>> downloadTasksQuery =   
-                from url in urlList select ProcessURL(url, client);  
+                from url in urlList select ProcessURLAsync(url, client);  
   
             // Use ToArray to execute the query and start the download tasks.  
             Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
@@ -400,21 +400,21 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
         {  
             List<string> urls = new List<string>   
             {   
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290136.aspx",  
-                "http://msdn.microsoft.com/library/ee256749.aspx",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290136.aspx",  
+                "https://msdn.microsoft.com/library/ee256749.aspx",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             };  
             return urls;  
         }  
   
         // The actions from the foreach loop are moved to this async method.  
-        async Task<int> ProcessURL(string url, HttpClient client)  
+        async Task<int> ProcessURLAsync(string url, HttpClient client)  
         {  
             byte[] byteArray = await client.GetByteArrayAsync(url);  
             DisplayResults(url, byteArray);  
@@ -427,15 +427,15 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
             // is designed to be used with a monospaced font, such as  
             // Lucida Console or Global Monospace.  
             var bytes = content.Length;  
-            // Strip off the "http://".  
-            var displayURL = url.Replace("http://", "");  
+            // Strip off the "https://".  
+            var displayURL = url.Replace("https://", "");  
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
         }  
     }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3ebc6-161">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3ebc6-161">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c9a5a-161">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c9a5a-161">See Also</span></span>
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="3ebc6-162">Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)</span><span class="sxs-lookup"><span data-stu-id="3ebc6-162">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [<span data-ttu-id="c9a5a-162">Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)</span><span class="sxs-lookup"><span data-stu-id="c9a5a-162">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
