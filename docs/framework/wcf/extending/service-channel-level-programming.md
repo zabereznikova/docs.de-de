@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805859"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197196"
 ---
 # <a name="service-channel-level-programming"></a>Dienst-Kanalebenenprogrammierung
-In diesem Thema wird beschrieben, wie eine Windows Communication Foundation (WCF)-Dienst-Anwendung ohne Schreiben der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> und der zugehörigen Objektmodelle.  
+In diesem Thema wird beschrieben, wie Sie eine Windows Communication Foundation (WCF)-Dienst-Anwendung ohne schreiben die <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> und der zugehörigen Objektmodelle.  
   
 ## <a name="receiving-messages"></a>Empfangen von Meldungen  
  Um bereit zu sein, Meldungen zu empfangen und zu verarbeiten, sind die folgenden Schritte erforderlich:  
@@ -29,12 +29,12 @@ In diesem Thema wird beschrieben, wie eine Windows Communication Foundation (WCF
 5.  Schließen Sie alle Kanalobjekte.  
   
 #### <a name="creating-a-binding"></a>Erstellen einer Bindung  
- Der erste Schritt beim Lauschen und Empfangen von Meldungen ist das Erstellen einer Bindung. Im Lieferumfang von WCF sind verschiedenen integrierter und vom System bereitgestellte Bindungen, die direkt durch Instanziierung verwendet werden können. Außerdem können Sie eigene benutzderdefinierte Bindungen durch Instanziieren einer CustomBinding-Klasse erstellen. Diese Aufgabe übernimmt beispielsweise der Code im Programmbeispiel 1.  
+ Der erste Schritt beim Lauschen und Empfangen von Meldungen ist das Erstellen einer Bindung. Im Lieferumfang von WCF sind mehrere integrierte und vom System bereitgestellten Bindungen, die direkt durch Instanziierung verwendet werden können. Außerdem können Sie eigene benutzderdefinierte Bindungen durch Instanziieren einer CustomBinding-Klasse erstellen. Diese Aufgabe übernimmt beispielsweise der Code im Programmbeispiel 1.  
   
  Das Codebeispiel unten erstellt eine Instanz von <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> und fügt ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> zur Elementesammlung hinzu, die einer Sammlung von Bindungselementen entspricht, die zum Erstellen des Kanalstapels verwendet werden. Da die Elementesammlung in diesem Beispiel nur das <xref:System.ServiceModel.Channels.HttpTransportBindingElement> aufweist, hat der resultierende Kanalstapel nur einen HTTP-Transportkanal.  
   
 #### <a name="building-a-channellistener"></a>Erstellen eines Kanallisteners.  
- Rufen Sie nach dem Erstellen einer Bindung, wir <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` zum Erstellen des kanallisteners, wobei der Typparameter der zu erstellenden kanalform ist. In diesem Beispiel wird <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> verwendet, da eingehende Meldungen in einem Anforderungs-/Antwort-Meldungsaustauschmuster abgehört werden sollen.  
+ Nach dem Erstellen einer Bindung wird <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> aufgerufen, um den Kanallistener zu erstellen, wobei der Typparameter der zu erstellenden Kanalform entspricht. In diesem Beispiel wird <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> verwendet, da eingehende Meldungen in einem Anforderungs-/Antwort-Meldungsaustauschmuster abgehört werden sollen.  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> wird zum Empfangen von Anforderungsmeldungen und Senden von Antwortnachrichten verwendet. Durch das Aufrufen von <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> wird ein <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> zurückgegeben, der zum Empfang der Anforderungsmeldung und zum Senden einer Antwortmeldung verwendet werden kann.  
   

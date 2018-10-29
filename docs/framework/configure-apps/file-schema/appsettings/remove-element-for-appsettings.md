@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752116"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199694"
 ---
-# <a name="remove-element-for-appsettings"></a>\<Entfernen Sie >-Element für \<"appSettings" >
+# <a name="remove-element-for-appsettings"></a>\<Entfernen Sie >-Element für \<AppSettings >
 
 Entfernt die benutzerdefinierte Anwendungseinstellungen.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Entfernen >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Entfernen Sie >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ Entfernt die benutzerdefinierte Anwendungseinstellungen.
 
 |         | Beschreibung |
 | ------- | ----------- |
-| **key** | Erforderliches Attribut.<br><br>Gibt den Namen des Schlüssels zu entfernen. |
+| **key** | Erforderliches Attribut.<br><br>Gibt den Namen des zu entfernenden Schlüssels. |
 
 ### <a name="parent-element"></a>Übergeordnetes Element
 
@@ -60,4 +60,4 @@ Das folgende Beispiel zeigt die Vorgehensweise beim Entfernen einer benutzerdefi
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
