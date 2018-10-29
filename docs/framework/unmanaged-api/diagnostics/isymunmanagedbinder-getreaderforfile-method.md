@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4f896dcd78061284416468968ba5a9a5fbbda2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: df6a35dcaebc681aa5463a014d3283c81efea617
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428539"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199863"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>ISymUnmanagedBinder::GetReaderForFile-Methode
-Gibt bei Angabe einer Metadaten-Schnittstelle und einen Dateinamen ein, den richtigen <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> Struktur, die die dem Modul zugeordneten Debugsymbole liest.  
+Gibt bei Angabe einer Metadaten-Schnittstelle und einen Dateinamen ein, den richtigen [ISymUnmanagedReader](isymunmanagedreader-interface.md) Schnittstelle, die die Debugsymbole, die dem Modul zugeordneten gelesen wird.  
   
- Diese Methode wird die Programmdatenbankdatei (PDB) geöffnet, nur dann, wenn es neben der ausführbaren Datei ist. Aus Sicherheitsgründen wurde diese Änderung vorgenommen wurde. Wenn Sie eine ausführliche Suche für die PDB-Datei, verwenden die [ISymUnmanagedBinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) Methode.  
+ Diese Methode öffnet die Programmdatenbankdatei (PDB), nur dann, wenn es neben der ausführbaren Datei ist. Aus Sicherheitsgründen wurde diese Änderung vorgenommen wurde. Wenn Sie eine ausführliche Suche für die PDB-Datei benötigen, verwenden Sie die [ISymUnmanagedBinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,18 +39,18 @@ HRESULT GetReaderForFile(
     [out, retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `importer`  
  [in] Ein Zeiger auf die Metadatenimport-Schnittstelle.  
   
  `fileName`  
- [in] Ein Zeiger auf den Dateinamen an.  
+ [in] Ein Zeiger auf den Dateinamen.  
   
  `searchPath`  
  [in] Ein Zeiger auf den Suchpfad.  
   
  `pRetVal`  
- [out] Ein Zeiger, der festgelegt wird, wird auf das zurückgegebene <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> Schnittstelle.  
+ [out] Ein Zeiger, der festgelegt ist auf das zurückgegebene [ISymUnmanagedReader](isymunmanagedreader-interface.md) Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  

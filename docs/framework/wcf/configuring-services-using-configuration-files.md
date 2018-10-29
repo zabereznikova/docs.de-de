@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374806"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200861"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität für die Bereitstellung von Endpunkt und die Daten zum Dienst zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
@@ -186,9 +186,9 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 ## <a name="behavior-merge"></a>Verhaltenszusammenführung  
  Die Funktion der Verhaltenszusammenführung erleichtert die Verwaltung von Verhalten, wenn eine Reihe allgemeiner Verhalten einheitlich verwendet werden soll. Mithilfe dieser Funktion können Sie Verhalten auf verschiedenen Ebenen der Konfigurationshierarchie angeben und festlegen, dass Dienste Verhalten von verschiedenen Ebenen der Konfigurationshierarchie erben sollen. Dies soll im Folgenden veranschaulicht werden. Angenommen, in IIS ist das folgende Layout virtueller Verzeichnisse gegeben:  
   
- ~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc  
+ `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- Die Datei ~\Web.config hat folgenden Inhalt:  
+ Und Ihre `~\Web.config` Datei hat den folgenden Inhalt:  
   
 ```xml  
 <configuration>  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028432"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201353"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;NameEntry&gt; Element
 Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann eine Klasse über viele Anzeigenamen verfügen.  
@@ -78,7 +78,7 @@ Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann ei
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)  
- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
