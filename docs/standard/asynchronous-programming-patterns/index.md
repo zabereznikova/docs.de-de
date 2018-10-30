@@ -1,33 +1,33 @@
 ---
 title: Muster für die asynchrone Programmierung
-ms.date: 03/30/2017
+ms.date: 10/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- asynchronous design patterns, .NET Framework
+- asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e399a512d2bee636aec35e008c0632ce9c5fa781
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 50d76aef201fead37923a65cfeead16638b09842
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44249035"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452783"
 ---
-# <a name="asynchronous-programming-patterns"></a><span data-ttu-id="cfd9b-102">Muster für die asynchrone Programmierung</span><span class="sxs-lookup"><span data-stu-id="cfd9b-102">Asynchronous Programming Patterns</span></span>
+# <a name="asynchronous-programming-patterns"></a><span data-ttu-id="1319d-102">Muster für die asynchrone Programmierung</span><span class="sxs-lookup"><span data-stu-id="1319d-102">Asynchronous programming patterns</span></span>
 
-<span data-ttu-id="cfd9b-103">Das.NET Framework bietet drei Muster für das Durchführen asynchroner Vorgänge:</span><span class="sxs-lookup"><span data-stu-id="cfd9b-103">The .NET Framework provides three patterns for performing asynchronous operations:</span></span>  
-  
-- <span data-ttu-id="cfd9b-104">**APM-Muster (Asynchronous Programming Model**, auch <xref:System.IAsyncResult>-Muster genannt), in dem asynchrone Vorgänge `Begin`- und `End`-Methoden erfordern (z.B. `BeginWrite` und `EndWrite` für asynchrone Schreibvorgänge).</span><span class="sxs-lookup"><span data-stu-id="cfd9b-104">**Asynchronous Programming Model (APM)** pattern (also called the <xref:System.IAsyncResult> pattern), where asynchronous operations require `Begin` and `End` methods (for example, `BeginWrite` and `EndWrite` for asynchronous write operations).</span></span> <span data-ttu-id="cfd9b-105">Dieses Muster ist für neue Entwicklungen nicht mehr empfehlenswert.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-105">This pattern is no longer recommended for new development.</span></span> <span data-ttu-id="cfd9b-106">Weitere Informationen finden Sie unter [Asynchronous Programming Model (APM) (Asynchrones Programmiermodell (APM))](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).</span><span class="sxs-lookup"><span data-stu-id="cfd9b-106">For more information, see [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).</span></span>  
-  
-- <span data-ttu-id="cfd9b-107">Das **ereignisbasierte asynchrone Muster (EAP)**, das eine Methode mit einem `Async`-Suffix und mindestens ein Ereignis, einen Ereignishandler-Delegattypen und von `EventArg` abgeleitete Typen erfordert.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-107">**Event-based Asynchronous Pattern (EAP)**, which requires a method that has the `Async` suffix, and also requires one or more events, event handler delegate types, and `EventArg`-derived types.</span></span> <span data-ttu-id="cfd9b-108">EAP wurde in .NET Framework 2.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-108">EAP was introduced in the .NET Framework 2.0.</span></span> <span data-ttu-id="cfd9b-109">Es für neue Entwicklungen nicht mehr empfehlenswert.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-109">It is no longer recommended for new development.</span></span> <span data-ttu-id="cfd9b-110">Weitere Informationen finden Sie unter [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span><span class="sxs-lookup"><span data-stu-id="cfd9b-110">For more information, see [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span></span>  
-  
-- <span data-ttu-id="cfd9b-111">Das **Taskbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP)** verwendet eine einzelne Methode, um die Initiierung und den Abschluss eines asynchronen Vorgangs darzustellen.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-111">**Task-based Asynchronous Pattern (TAP)**, which uses a single method to represent the initiation and completion of an asynchronous operation.</span></span> <span data-ttu-id="cfd9b-112">TAP wurde in .NET Framework 4 eingeführt und ist die empfohlene Vorgehensweise für die asynchrone Programmierung im .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-112">TAP was introduced in the .NET Framework 4 and is the recommended approach to asynchronous programming in the .NET Framework.</span></span> <span data-ttu-id="cfd9b-113">Die Schlüsselwörter [async](~/docs/csharp/language-reference/keywords/async.md) und [await](~/docs/csharp/language-reference/keywords/await.md) in C# und die Operatoren [Async](~/docs/visual-basic/language-reference/modifiers/async.md) und [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in Visual Basic Language fügen Sprachunterstützung für TAP hinzu.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-113">The [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) keywords in C# and the [Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) operators in Visual Basic Language add language support for TAP.</span></span> <span data-ttu-id="cfd9b-114">Weitere Informationen finden Sie unter [Task-based Asynchronous Pattern (TAP) (Aufgabenbasiertes asynchrones Muster (TAP))](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).</span><span class="sxs-lookup"><span data-stu-id="cfd9b-114">For more information, see [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).</span></span>  
-  
-## <a name="comparing-patterns"></a><span data-ttu-id="cfd9b-115">Vergleichen von Mustern</span><span class="sxs-lookup"><span data-stu-id="cfd9b-115">Comparing Patterns</span></span>  
+<span data-ttu-id="1319d-103">In .NET werden drei Muster für das Ausführen asynchroner Vorgänge bereitgestellt:</span><span class="sxs-lookup"><span data-stu-id="1319d-103">.NET provides three patterns for performing asynchronous operations:</span></span>  
 
-<span data-ttu-id="cfd9b-116">Für einen schnellen Vergleich dazu, wie die drei Muster asynchrone Vorgänge modellieren, sollten Sie eine `Read`-Methode verwenden, die eine angegebene Datenmenge in einen bereitgestellten Puffer beginnend an einem angegebenen Offset liest:</span><span class="sxs-lookup"><span data-stu-id="cfd9b-116">For a quick comparison of how the three patterns model asynchronous operations, consider a `Read` method that reads a specified amount of data into a provided buffer starting at a specified offset:</span></span>  
+- <span data-ttu-id="1319d-104">Das **Taskbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP)** verwendet eine einzelne Methode, um die Initiierung und den Abschluss eines asynchronen Vorgangs darzustellen.</span><span class="sxs-lookup"><span data-stu-id="1319d-104">**Task-based Asynchronous Pattern (TAP)**, which uses a single method to represent the initiation and completion of an asynchronous operation.</span></span> <span data-ttu-id="1319d-105">TAP wurde in .NET Framework 4 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="1319d-105">TAP was introduced in the .NET Framework 4.</span></span> <span data-ttu-id="1319d-106">**TAP ist das empfohlene Muster für die asynchrone Programmierung in .NET.**</span><span class="sxs-lookup"><span data-stu-id="1319d-106">**It's the recommended approach to asynchronous programming in .NET.**</span></span> <span data-ttu-id="1319d-107">Die Schlüsselwörter [async](~/docs/csharp/language-reference/keywords/async.md) und [await](~/docs/csharp/language-reference/keywords/await.md) in C# und die Operatoren [Async](~/docs/visual-basic/language-reference/modifiers/async.md) und [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) in Visual Basic fügen Sprachunterstützung für TAP hinzu.</span><span class="sxs-lookup"><span data-stu-id="1319d-107">The [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) keywords in C# and the [Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) operators in Visual Basic add language support for TAP.</span></span> <span data-ttu-id="1319d-108">Weitere Informationen finden Sie unter [Task-based Asynchronous Pattern (TAP) (Aufgabenbasiertes asynchrones Muster (TAP))](task-based-asynchronous-pattern-tap.md).</span><span class="sxs-lookup"><span data-stu-id="1319d-108">For more information, see [Task-based Asynchronous Pattern (TAP)](task-based-asynchronous-pattern-tap.md).</span></span>  
+
+- <span data-ttu-id="1319d-109">Das **Ereignisbasierte asynchrones Muster (Event-based Asynchronous Pattern, EAP)**, das das ereignisbasierte Legacymodell für die Bereitstellung des asynchronen Verhaltens ist.</span><span class="sxs-lookup"><span data-stu-id="1319d-109">**Event-based Asynchronous Pattern (EAP)**, which is the event-based legacy model for providing asynchronous behavior.</span></span> <span data-ttu-id="1319d-110">Dieses Muster erfordert eine Methode, die das `Async`-Suffix und mindestens ein Ereignis, einen Ereignishandler-Delegattypen und aus `EventArg` abgeleitete Typen hat.</span><span class="sxs-lookup"><span data-stu-id="1319d-110">It requires a method that has the `Async` suffix and one or more events, event handler delegate types, and `EventArg`-derived types.</span></span> <span data-ttu-id="1319d-111">EAP wurde in .NET Framework 2.0 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="1319d-111">EAP was introduced in the .NET Framework 2.0.</span></span> <span data-ttu-id="1319d-112">EAP ist für neue Entwicklungen nicht mehr empfehlenswert.</span><span class="sxs-lookup"><span data-stu-id="1319d-112">It's no longer recommended for new development.</span></span> <span data-ttu-id="1319d-113">Weitere Informationen finden Sie unter [Ereignisbasiertes asynchrones Muster (EAP)](event-based-asynchronous-pattern-eap.md).</span><span class="sxs-lookup"><span data-stu-id="1319d-113">For more information, see [Event-based Asynchronous Pattern (EAP)](event-based-asynchronous-pattern-eap.md).</span></span>  
+
+- <span data-ttu-id="1319d-114">Das Muster für das **Asynchrone Programmiermodell (APM)** (wird auch als <xref:System.IAsyncResult>-Muster bezeichnet), das das Legacymodell ist, in dem die <xref:System.IAsyncResult>-Schnittstelle verwendet wird, um asynchrones Verhalten bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="1319d-114">**Asynchronous Programming Model (APM)** pattern (also called the <xref:System.IAsyncResult> pattern), which is the legacy model that uses the <xref:System.IAsyncResult> interface to provide asynchronous behavior.</span></span> <span data-ttu-id="1319d-115">In diesem Muster sind für synchrone Vorgänge eine `Begin`- und eine `End`-Methode erforderlich (z. B. `BeginWrite` und `EndWrite`), um einen asynchronen Schreibvorgang zu implementieren).</span><span class="sxs-lookup"><span data-stu-id="1319d-115">In this pattern, synchronous operations require `Begin` and `End` methods (for example, `BeginWrite` and `EndWrite` to implement an asynchronous write operation).</span></span> <span data-ttu-id="1319d-116">Dieses Muster ist für neue Entwicklungen nicht mehr empfehlenswert.</span><span class="sxs-lookup"><span data-stu-id="1319d-116">This pattern is no longer recommended for new development.</span></span> <span data-ttu-id="1319d-117">Weitere Informationen finden Sie unter [Asynchronous Programming Model (APM) (Asynchrones Programmiermodell (APM))](asynchronous-programming-model-apm.md).</span><span class="sxs-lookup"><span data-stu-id="1319d-117">For more information, see [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md).</span></span>  
+  
+## <a name="comparison-of-patterns"></a><span data-ttu-id="1319d-118">Vergleich der Muster</span><span class="sxs-lookup"><span data-stu-id="1319d-118">Comparison of patterns</span></span>
+
+<span data-ttu-id="1319d-119">Für einen schnellen Vergleich dazu, wie die drei Muster asynchrone Vorgänge modellieren, sollten Sie eine `Read`-Methode verwenden, die eine angegebene Datenmenge in einen bereitgestellten Puffer beginnend an einem angegebenen Offset liest:</span><span class="sxs-lookup"><span data-stu-id="1319d-119">For a quick comparison of how the three patterns model asynchronous operations, consider a `Read` method that reads a specified amount of data into a provided buffer starting at a specified offset:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -35,8 +35,27 @@ public class MyClass
     public int Read(byte [] buffer, int offset, int count);  
 }  
 ```  
+
+<span data-ttu-id="1319d-120">Das TAP-Gegenstück zu dieser Methode würde die folgende einzelne `ReadAsync` Methode verfügbar machen:</span><span class="sxs-lookup"><span data-stu-id="1319d-120">The TAP counterpart of this method would expose the following single `ReadAsync` method:</span></span>  
   
-<span data-ttu-id="cfd9b-117">Das APM-Gegenstück dieser Methode würde die Methoden `BeginRead` und `EndRead` verfügbar machen:</span><span class="sxs-lookup"><span data-stu-id="cfd9b-117">The APM counterpart of this method would expose the `BeginRead` and `EndRead` methods:</span></span>  
+```csharp
+public class MyClass  
+{  
+    public Task<int> ReadAsync(byte [] buffer, int offset, int count);  
+}  
+```
+
+<span data-ttu-id="1319d-121">Das EAP-Gegenstück würde den folgenden Satz von Typen und Membern verfügbar machen:</span><span class="sxs-lookup"><span data-stu-id="1319d-121">The EAP counterpart would expose the following set of types and members:</span></span>  
+  
+```csharp  
+public class MyClass  
+{  
+    public void ReadAsync(byte [] buffer, int offset, int count);  
+    public event ReadCompletedEventHandler ReadCompleted;  
+}  
+```  
+  
+<span data-ttu-id="1319d-122">Das APM-Gegenstück würde die Methoden `BeginRead` und `EndRead` verfügbar machen:</span><span class="sxs-lookup"><span data-stu-id="1319d-122">The APM counterpart would expose the `BeginRead` and `EndRead` methods:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -47,38 +66,10 @@ public class MyClass
     public int EndRead(IAsyncResult asyncResult);  
 }  
 ```  
-  
-<span data-ttu-id="cfd9b-118">Das EAP-Gegenstück würde den folgenden Satz von Typen und Membern verfügbar machen:</span><span class="sxs-lookup"><span data-stu-id="cfd9b-118">The EAP counterpart would expose the following set of types and members:</span></span>  
-  
-```csharp  
-public class MyClass  
-{  
-    public void ReadAsync(byte [] buffer, int offset, int count);  
-    public event ReadCompletedEventHandler ReadCompleted;  
-}  
-```  
-  
-<span data-ttu-id="cfd9b-119">Das TAP-Gegenstück würde die folgende einzelne `ReadAsync`-Methode verfügbar machen:</span><span class="sxs-lookup"><span data-stu-id="cfd9b-119">The TAP counterpart would expose the following single `ReadAsync` method:</span></span>  
-  
-```csharp  
-public class MyClass  
-{  
-    public Task<int> ReadAsync(byte [] buffer, int offset, int count);  
-}  
-```  
-  
-<span data-ttu-id="cfd9b-120">Eine umfassende Erörterung von TAP, APM und EAP finden Sie unter den Links im nächsten Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-120">For a comprehensive discussion of TAP, APM, and EAP, see the links provided in the next section.</span></span>  
-  
-## <a name="related-topics"></a><span data-ttu-id="cfd9b-121">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="cfd9b-121">Related topics</span></span>
 
-| <span data-ttu-id="cfd9b-122">Titel</span><span class="sxs-lookup"><span data-stu-id="cfd9b-122">Title</span></span> | <span data-ttu-id="cfd9b-123">Beschreibung </span><span class="sxs-lookup"><span data-stu-id="cfd9b-123">Description</span></span> |
-| ----- | ----------- |
-| [<span data-ttu-id="cfd9b-124">Asynchronous Programming Model (APM) (Asynchrones Programmiermodell (APM))</span><span class="sxs-lookup"><span data-stu-id="cfd9b-124">Asynchronous Programming Model (APM)</span></span>](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | <span data-ttu-id="cfd9b-125">Beschreibt das Legacymodell, das die <xref:System.IAsyncResult>-Schnittstelle verwendet, um asynchrones Verhalten bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-125">Describes the legacy model that uses the <xref:System.IAsyncResult> interface to provide asynchronous behavior.</span></span> <span data-ttu-id="cfd9b-126">Dieses Modell ist für neue Entwicklungen nicht mehr empfehlenswert.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-126">This model is no longer recommended for new development.</span></span> |
-| [<span data-ttu-id="cfd9b-127">Ereignisbasiertes asynchrones Muster (EAP)</span><span class="sxs-lookup"><span data-stu-id="cfd9b-127">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | <span data-ttu-id="cfd9b-128">Beschreibt das ereignisbasierte Legacymodell für die Bereitstellung des asynchronen Verhaltens.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-128">Describes the event-based legacy model for providing asynchronous behavior.</span></span> <span data-ttu-id="cfd9b-129">Dieses Modell ist für neue Entwicklungen nicht mehr empfehlenswert.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-129">This model is no longer recommended for new development.</span></span> |
-| <span data-ttu-id="cfd9b-130">[Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Aufgabenbasiertes asynchrones Muster)</span><span class="sxs-lookup"><span data-stu-id="cfd9b-130">[Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)</span></span> | <span data-ttu-id="cfd9b-131">Beschreibt das neue asynchrone Muster basierend auf dem <xref:System.Threading.Tasks>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-131">Describes the new asynchronous pattern based on the <xref:System.Threading.Tasks> namespace.</span></span> <span data-ttu-id="cfd9b-132">Dieses Modell ist der empfohlene Ansatz für die asynchrone Programmierung in .NET Framework 4 und höheren Versionen.</span><span class="sxs-lookup"><span data-stu-id="cfd9b-132">This model is the recommended approach to asynchronous programming in the .NET Framework 4 and later versions.</span></span> |
+## <a name="see-also"></a><span data-ttu-id="1319d-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1319d-123">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="cfd9b-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cfd9b-133">See also</span></span>
-
-- [<span data-ttu-id="cfd9b-134">Asynchrone Programmierung in C#</span><span class="sxs-lookup"><span data-stu-id="cfd9b-134">Asynchronous programming in C#</span></span>](~/docs/csharp/async.md)   
-- [<span data-ttu-id="cfd9b-135">Asynchrone Programmierung in F#</span><span class="sxs-lookup"><span data-stu-id="cfd9b-135">Async Programming in F#</span></span>](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
-- [<span data-ttu-id="cfd9b-136">Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cfd9b-136">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="1319d-124">Async ausführlich</span><span class="sxs-lookup"><span data-stu-id="1319d-124">Async in depth</span></span>](../async-in-depth.md)
+- [<span data-ttu-id="1319d-125">Asynchrone Programmierung in C#</span><span class="sxs-lookup"><span data-stu-id="1319d-125">Asynchronous programming in C#</span></span>](~/docs/csharp/async.md)
+- [<span data-ttu-id="1319d-126">Asynchrone Programmierung in F#</span><span class="sxs-lookup"><span data-stu-id="1319d-126">Async Programming in F#</span></span>](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [<span data-ttu-id="1319d-127">Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1319d-127">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/concepts/async/index.md)
