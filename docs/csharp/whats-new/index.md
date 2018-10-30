@@ -3,16 +3,16 @@ title: Neues in C# – Leitfaden für C#
 description: Wie sich die C#-Programmiersprache weiterentwickelt
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314671"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047253"
 ---
 # <a name="whats-new-in-c"></a>Neues in C# #
 
-Diese Seite enthält eine Roadmap zu den neuen Funktionen in jeder Hauptversion der C#-Sprache. Die folgenden Links bieten ausführliche Informationen zu den wichtigsten Funktionen, die in jedem Release hinzugefügt wurden.
+Diese Seite enthält eine Roadmap zu den neuen Funktionen in jeder Hauptversion der C#-Sprache. Die verlinkten Artikel enthalten ausführliche Informationen zu den wichtigsten Funktionen, die in jeder Version hinzugefügt wurden. Sie finden Informationen zu neuen Funktionen, die entweder in einer allgemeinen Version oder in der öffentlichen Vorschau veröffentlicht wurden. Informationen zu den Status von Programmiersprachenfunktionen, so auch Funktionen, die für zukünftige Versionen geplant sind, finden Sie im [dotnet/roslyn-Repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) auf GitHub.
 
 > [!IMPORTANT]
 > Für einige der Funktionen ist die C#-Sprache von Typen und Methoden in einer *Standardbibliothek* abhängig. Ein Beispiel ist die Ausnahmeverarbeitung. Alle `throw`-Anweisungen oder -Ausdrücke werden überprüft, um sicherzustellen, dass das ausgelöste Objekt von <xref:System.Exception> abgeleitet ist. Auf ähnliche Weise wird jedes `catch` überprüft, um sicherzustellen, dass der abgefangen Typ von <xref:System.Exception> abgeleitet ist. Jede Version kann neue Anforderungen hinzufügen. Um die neuesten Sprachfunktionen in älteren Umgebungen verwenden zu können, müssen Sie vielleicht bestimmte Bibliotheken installieren. Diese Abhängigkeiten werden auf der jeweiligen Seite für eine spezifische Version dokumentiert. Sie können mehr über die [Beziehungen zwischen Sprache und Bibliothek](relationships-between-language-and-library.md) erfahren, um Hintergrundinformationen zu dieser Abhängigkeit zu erhalten. 

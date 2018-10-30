@@ -3,17 +3,17 @@ title: Portieren von .NET Framework auf .NET Core
 description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen beim Portieren eines .NET Framework-Projekts zu .NET Core behilflich sein können.
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835391"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192771"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Portieren von .NET Framework auf .NET Core
 
-Wenn Code auf .NET Framework ausgeführt wird, sind Sie vielleicht interessiert daran, Ihren Code auf .NET Core 1.0 auszuführen.  Dieser Artikel enthält eine Übersicht über den Portiervorgang und eine Liste der Tools, die während des Portierens auf .NET Core hilfreich sein können.
+Wenn Code auf .NET Framework ausgeführt wird, sind Sie vielleicht interessiert daran, Ihren Code auf .NET Core auszuführen.  Dieser Artikel enthält eine Übersicht über den Portiervorgang und eine Liste der Tools, die während des Portierens auf .NET Core hilfreich sein können.
 
 ## <a name="overview-of-the-porting-process"></a>Übersicht über den Portiervorgang
 
@@ -23,7 +23,7 @@ Die empfohlene Vorgehensweise für das Portieren ist in den folgenden Schritten 
 
    Sie müssen verstehen, was Ihre Drittanbieter-Abhängigkeiten sind, wie Sie von diesen abhängig sind, wie Sie überprüfen können, ob sie ebenso auf .NET Core ausgeführt werden, und welche Schritte Sie durchführen können, falls sie es nicht tun.
    
-2. Legen Sie .NET Framework 4.6.2 als neues Ziel für alle Projekte fest, die Sie portieren möchten.
+2. Legen Sie die neueste Version von .NET Framework als neues Ziel für alle Projekte fest, die Sie portieren möchten.
 
    Dadurch wird sichergestellt, dass Sie API-Alternativen für bestimmte .NET Framework-Ziele in Fällen verwenden können, in denen .NET Core eine bestimmte API nicht unterstützen kann.
    
@@ -33,7 +33,7 @@ Die empfohlene Vorgehensweise für das Portieren ist in den folgenden Schritten 
    
 4. Portieren Sie Ihre Testcodes.
 
-   Da das Portieren auf .NET Core solch eine große Änderung für Ihre Codebase darstellt, wird empfohlen, Ihre Tests zu portieren, damit Sie Tests ausführen können, wenn Sie Code portieren.  MSTest, xUnit und NUnit unterstützen derzeit alle .NET Core 1.0.
+   Da das Portieren auf .NET Core solch eine große Änderung für Ihre Codebase darstellt, wird empfohlen, Ihre Tests zu portieren, damit Sie Tests ausführen können, wenn Sie Code portieren.  MSTest, xUnit und NUnit unterstützen derzeit alle .NET Core.
    
 6. Führen Sie Ihren Plan zum Portieren aus!
 

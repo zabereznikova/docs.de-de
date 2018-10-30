@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 2f888fbc063799e258040edf5116fc02e3f9a668
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512337"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195839"
 ---
 # <a name="c-guide"></a>Leitfaden für C#
 
 Der Leitfaden für C# enthält viele Ressourcen zu C#. Diese Site weist viele verschiedene Zielgruppen auf. Je nach Ihrer Erfahrung mit der Programmierung bzw. mit der Programmiersprache C# und .NET können Sie auch andere Abschnitte dieses Handbuchs erkunden.
 
 * Für gänzlich unerfahrene Entwickler:
-  * Beginnen Sie mit dem Abschnitt [Schnellstarts](quick-starts/index.md). Mit diesen Schnellstarts können Sie C# in Ihrem Browser interaktiv kennenlernen. Anschließend können Sie mit dem Abschnitt [Tutorials](tutorials/index.md) fortfahren. Diese Tutorials zeigen Ihnen, wie Sie C#-Programme von Grund auf neu erstellen. Die Tutorials enthalten einen detaillierten Prozess zum Erstellen von Programmen. Die Konzepte der Programmiersprache und das eigenständige Erstellen von C#-Programmen werden in diesen Tutorials erklärt. Wenn Sie zunächst lieber allgemeine Informationen lesen möchten, sehen Sie sich die [Einführung in C#](tour-of-csharp/index.md) an. Sie erläutert die Konzepte der C#-Sprache. Danach verfügen Sie über grundlegende Kenntnisse der Sprache und sind bereit, die Tutorials zu testen oder selbst etwas zu erstellen.
+  * Beginnen Sie mit der [Einführung in die C#-Tutorials](tutorials/intro-to-csharp/index.md). Mit diesen Tutorials können Sie die C#-Sprache in Ihrem Browser interaktiv untersuchen. Daran anschließend können Sie zu anderen [Tutorials](tutorials/index.md) wechseln. Diese Tutorials zeigen Ihnen, wie Sie C#-Programme von Grund auf neu erstellen. Die Tutorials enthalten einen detaillierten Prozess zum Erstellen von Programmen. Die Konzepte der Programmiersprache und das eigenständige Erstellen von C#-Programmen werden in diesen Tutorials erklärt. Wenn Sie zunächst lieber allgemeine Informationen lesen möchten, sehen Sie sich die [Einführung in C#](tour-of-csharp/index.md) an. Sie erläutert die Konzepte der C#-Sprache. Danach verfügen Sie über grundlegende Kenntnisse der Sprache und sind bereit, die Tutorials zu testen oder selbst etwas zu erstellen.
 
 * Für neue C#-Entwickler:
   * Wenn Sie vorher schon entwickelt haben, aber neu bei C# sind, lesen Sie einfach die [Einführung in C#](tour-of-csharp/index.md). Sie umfasst die grundlegende Syntax und Struktur der Sprache, und Sie können die Einführung verwenden, um die Unterschiede zwischen C# und anderen von Ihnen verwendeten Sprachen kennenzulernen. Sie können auch die [Tutorials](tutorials/index.md) durchsuchen, um grundlegende C#-Programme zu testen.
@@ -35,8 +35,8 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
 * [Erste Schritte](getting-started/index.md)
   * In diesem Abschnitt wird beschrieben, was Sie für die Installation einer C#-Entwicklungsumgebung auf Ihrer bevorzugten Plattform benötigen. In den verschiedenen Themen in diesem Abschnitt wird erläutert, wie Sie das erste C#-Programm in unterschiedlichen unterstützten Umgebungen erstellen.
 
-* [C#-Schnellstarts](quick-starts/index.md):
-  * C#-Schnellstarts sind interaktive Tutorials, die eine REPL-Schnittstelle (Read-Eval-Print-Loop) verwenden, damit neue Entwickler C# im Browser entdecken und erlernen können. Nachdem Sie diese interaktiven Übungen durchgearbeitet haben, können Sie ihre Programmierkenntnisse verbessern, indem Sie die gleichen Übungen auf Ihrem Computer durchführen.
+* [Einführung in die C#-Tutorials](tutorials/intro-to-csharp/index.md):
+  * In „Einführung in die C#-Tutorials“ werden interaktive Tutorials vorgestellt, für die eine REPL-Schnittstelle (Read-Eval-Print-Loop) verwendet wird, damit neue Entwickler C# im Browser entdecken und erlernen können. Nachdem Sie diese interaktiven Übungen durchgearbeitet haben, können Sie ihre Programmierkenntnisse verbessern, indem Sie die gleichen Übungen auf Ihrem Computer durchführen.
 
 * [Tutorials](tutorials/index.md)
   * Dieser Abschnitt enthält eine Reihe von End-to-End-Szenarios, einschließlich Beschreibungen und Code. Er erläutert, warum bestimmte Ausdrücke bevorzugt werden, welche C#-Features am besten in verschiedenen Situationen funktionieren und zeigt Referenzimplementierungen für allgemeine Aufgaben. Wenn Sie am besten anhand des Codes lernen, beginnen Sie in diesem Abschnitt. Sie können auch den gesamten Code herunterladen und in Ihrer eigenen Umgebung experimentieren.

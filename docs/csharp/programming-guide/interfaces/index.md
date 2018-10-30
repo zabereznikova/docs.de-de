@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454433"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181513"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -42,7 +42,7 @@ Im folgenden Beispiel wird eine Implementierung der <xref:System.IEquatable%601>
   
 Eigenschaften und Indexer einer Klasse können zusätzliche Accessors für eine Eigenschaft oder einen in einer Schnittstelle definierten Indexer definieren. Beispielsweise kann eine Schnittstelle eine Eigenschaft deklarieren, die einen [Get](../../language-reference/keywords/get.md)-Accessor aufweist. Die Klasse zur Implementierung der Schnittstelle kann dieselbe Eigenschaft mit einem `get`- und einem [set](../../language-reference/keywords/set.md)-Accessor deklarieren. Wenn die Eigenschaft oder der Indexer jedoch die explizite Implementierung verwendet, müssen die Accessors übereinstimmen. Weitere Informationen zur expliziten Implementierung finden Sie unter [Explizite Schnittstellenimplementierung](explicit-interface-implementation.md) und unter [Schnittstelleneigenschaften](../classes-and-structs/interface-properties.md).  
 
-Schnittstellen können andere Schnittstellen implementieren. Eine Klasse kann eine Schnittstelle mehrfach über geerbte Basisklassen einbeziehen, die sie erbt, oder über Schnittstellen, die von anderen Schnittstellen implementiert werden. Die Klasse kann jedoch nur einmal eine Implementierung einer Schnittstelle bereitstellen und auch nur dann, wenn die Klasse die Schnittstelle als Bestandteil der Definition der Klasse (`class ClassName : InterfaceName`) deklariert. Wenn die Schnittstelle geerbt wurde, da Sie eine Basisklasse geerbt haben, die die Schnittstelle implementiert, bietet die Basisklasse die Implementierung der Member der Schnittstelle. Die abgeleitete Klasse kann jedoch anstelle der Verwendung der geerbten Implementierung die Schnittstellenmember erneut implementieren.  
+Schnittstellen können von anderen Schnittstellen erben. Eine Klasse kann eine Schnittstelle mehrfach über geerbte Basisklassen einbeziehen, die sie erbt, oder über Schnittstellen, die von anderen Schnittstellen geerbt werden. Die Klasse kann jedoch nur einmal eine Implementierung einer Schnittstelle bereitstellen und auch nur dann, wenn die Klasse die Schnittstelle als Bestandteil der Definition der Klasse (`class ClassName : InterfaceName`) deklariert. Wenn die Schnittstelle geerbt wurde, da Sie eine Basisklasse geerbt haben, die die Schnittstelle implementiert, bietet die Basisklasse die Implementierung der Member der Schnittstelle. Die abgeleitete Klasse kann jedoch anstelle der Verwendung der geerbten Implementierung jegliche virtuellen Schnittstellenmember erneut implementieren.  
   
 Eine Basisklasse kann zudem Schnittstellenmember mithilfe von virtuellen Membern implementieren. In diesem Fall kann eine abgeleitete Klasse das Schnittstellenverhalten durch das Überschreiben der virtuellen Member ändern. Weitere Informationen über virtuelle Member finden Sie unter [Polymorphie](../classes-and-structs/polymorphism.md).  
   

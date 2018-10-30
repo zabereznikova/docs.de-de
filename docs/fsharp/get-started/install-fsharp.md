@@ -3,11 +3,11 @@ title: Installieren von f#
 description: Erfahren Sie, wie Sie F#-basierend auf Ihrer Umgebung installieren.
 ms.date: 08/28/2018
 ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: HT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/27/2018
-ms.locfileid: "50044644"
+ms.locfileid: "50193902"
 ---
 # <a name="install-f"></a>Installieren von f# #
 

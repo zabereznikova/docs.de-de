@@ -3,13 +3,13 @@ title: Leitfaden für die Open Source-Bibliothek
 description: Empfehlungen für bewährte Methoden für Entwickler zum Erstellen von qualitativ hochwertigen .NET-Bibliotheken
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 50fb745f7eb65abcaca76cebaf9991c48f559e59
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.date: 10/17/2018
+ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374900"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188624"
 ---
 # <a name="open-source-library-guidance"></a>Leitfaden für die Open Source-Bibliothek
 
@@ -18,7 +18,7 @@ Dieser Leitfaden bietet Empfehlungen für Entwickler zum Erstellen von qualitati
 Aspekte hochqualitativer Open Source-Bibliotheken für .NET:
 
 > [!div class="checklist"]
-> * **Inklusiv:** Gute .NET-Bibliotheken sind dafür ausgelegt, viele Plattformen und Anwendungen zu unterstützen.
+> * **Inklusiv:** Gute .NET-Bibliotheken sind dafür ausgelegt, viele Plattformen, Programmiersprachen und Anwendungen zu unterstützen.
 > * **Stabil:** Gute .NET-Bibliotheken existieren im .NET-Ökosystem nebeneinander und werden in Anwendungen ausgeführt, die mit vielen Bibliotheken erstellt wurden.
 > * **Für die Weiterentwickelung entworfen:** .NET-Bibliotheken sollten sich im Laufe der Zeit verbessern und weiterentwickeln, während Sie vorhandene Benutzer unterstützen.
 > * **Debugfähig:** .NET-Bibliotheken sollten die neuesten Tools verwenden, um für Benutzer eine gute Debugleistung bereitzustellen.
@@ -27,11 +27,11 @@ Aspekte hochqualitativer Open Source-Bibliotheken für .NET:
 > [!div class="nextstepaction"]
 > [Erste Schritte](./get-started.md)
 
-## <a name="recommendations"></a>Empfehlungen
+## <a name="types-of-recommendations"></a>Empfehlungstypen
 
-Mit jedem Artikel wird eine Liste der Empfehlungen für Ihre .NET-Bibliothek mit Aktionen veröffentlicht, die Sie **tun**, **erwägen**, **vermeiden** und **keinesfalls tun** sollten. Der Wortlaut jeder Empfehlung lässt darauf schließen, wie streng diese befolgt werden sollte.
+Jeder Artikel enthält vier Empfehlungstypen: **Do**, **Erwägen**, **Vermeiden** und **Do not**. Der Empfehlungstyp kennzeichnet, wie streng die Empfehlung befolgt werden sollte.
 
-Eine **DO**-Empfehlung sollten Sie so gut wie immer befolgen:
+Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Zum Beispiel:
 
 **✔️ DO** Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
 
@@ -39,11 +39,11 @@ Andererseits gibt es Empfehlungen, die Sie **erwägen** sollten. Berechtigte Aus
 
 **✔️ ERWÄGEN** Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
 
-Empfehlungen zur **Vermeidung** stehen für Dinge, die allgemein als keine gute Idee angesehen werden, jedoch kann das Brechen dieser Regel manchmal auch sinnvoll sein:
+Empfehlungen hinsichtlich **Vermeiden** geben Dinge an, die allgemein als keine gute Idee angesehen werden, jedoch kann das Brechen dieser Regel manchmal auch sinnvoll sein:
 
 **❌ VERMEIDEN** Sie NuGet-Paketverweise, die eine exakte Version erfordern.
 
-Schließlich gibt es noch Dinge, die Sie **keinesfalls tun sollten**:
+Schließlich kennzeichnen **Do not**-Empfehlungen Vorgänge, die Sie niemals ausführen sollten:
 
 **❌ DON‘T** Veröffentlichen Sie keine Versionen mit starkem Namen oder nicht starkem Namen Ihrer Bibliothek. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
 
