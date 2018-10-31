@@ -21,11 +21,11 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47210122"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836296"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen
 Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeichenfolge ein gültiges E-Mail-Format aufweist.  
@@ -33,7 +33,7 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
 ## <a name="example"></a>Beispiel  
  Im Beispiel wird eine `IsValidEmail` -Methode definiert, die `true` zurückgibt, wenn die Zeichenfolge eine gültige E-Mail-Adresse enthält und andernfalls `false` ; es wird jedoch keine andere Aktion ausgeführt.  
   
- Um die Gültigkeit der E-Mail-Adresse zu überprüfen ruft die `IsValidEmail`-Methode die <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType>-Methode mit dem regulären Ausdruck `(@)(.+)$` auf, um den Domänennamen von der E-Mail-Adresse zu trennen. Der dritte Parameter ist ein <xref:System.Text.RegularExpressions.MatchEvaluator> -Delegat, der die Methode darstellt, die den gefundenen Text verarbeitet und ersetzt. Das Muster des regulären Ausdrucks wird wie folgt interpretiert:  
+ Um die Gültigkeit der E-Mail-Adresse zu überprüfen ruft die `IsValidEmail` -Methode die <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> -Methode mit dem regulären Ausdruck `(@)(.+)$` auf, um den Domänennamen von der E-Mail-Adresse zu trennen. Der dritte Parameter ist ein <xref:System.Text.RegularExpressions.MatchEvaluator> -Delegat, der die Methode darstellt, die den gefundenen Text verarbeitet und ersetzt. Das Muster des regulären Ausdrucks wird wie folgt interpretiert:  
   
 |Muster|Beschreibung |  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ csc /t:library RegexUtilities.cs
 vbc /t:library RegexUtilities.vb  
 ```  
   
- Sie können auch die <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>-Methode verwenden, um diesen regulären Ausdruck in eine Bibliothek für reguläre Ausdrücke einzuschließen.  
+ Sie können auch die <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> -Methode verwenden, um diesen regulären Ausdruck in eine Bibliothek für reguläre Ausdrücke einzuschließen.  
   
  Wenn sie in einer Bibliothek für reguläre Ausdrücke verwendet werden, können Sie die Methoden mit dem folgenden Code aufrufen:  
   
