@@ -14,7 +14,7 @@ ms.locfileid: "45514442"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Vorgehensweise: Verwenden der XML-Dokumentationsfeatures
 
-Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der dokumentierten wurde.
+Das folgende Beispiel bietet eine grundlegende Übersicht über einen Typ, der dokumentiert wurde.
 
 ## <a name="example"></a>Beispiel
 
@@ -112,7 +112,7 @@ Geben Sie die folgende Befehlszeile ein, um das Beispiel zu kompilieren:
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-Mit diesem Befehl wird die XML-Datei *XMLsample.xml* erstellt, den Sie in Ihrem Browser oder mithilfe des TYPE-Befehls anzeigen können.
+Mit diesem Befehl wird die XML-Datei *XMLsample.xml* erstellt, die Sie in Ihrem Browser oder mithilfe des TYPE-Befehls anzeigen können.
 
 ## <a name="robust-programming"></a>Stabile Programmierung
 
