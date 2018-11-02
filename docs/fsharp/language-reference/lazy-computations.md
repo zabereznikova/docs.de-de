@@ -3,37 +3,37 @@ title: Verzögerte Berechnungen (F#)
 description: Erfahren Sie, wie f# verzögerte Berechnungen auf die Leistung Ihrer apps und Bibliotheken verbessern können.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45698207"
 ---
-# <a name="lazy-computations"></a><span data-ttu-id="e3b81-103">Verzögerte Berechnungen</span><span class="sxs-lookup"><span data-stu-id="e3b81-103">Lazy Computations</span></span>
+# <a name="lazy-computations"></a><span data-ttu-id="3f010-103">Verzögerte Berechnungen</span><span class="sxs-lookup"><span data-stu-id="3f010-103">Lazy Computations</span></span>
 
-<span data-ttu-id="e3b81-104">*Verzögerte Berechnungen* sind Berechnungen, die nicht sofort ausgewertet, aber stattdessen ausgewertet, wenn das Ergebnis benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="e3b81-104">*Lazy computations* are computations that are not evaluated immediately, but are instead evaluated when the result is needed.</span></span> <span data-ttu-id="e3b81-105">Dies kann helfen, um die Leistung Ihres Codes zu verbessern.</span><span class="sxs-lookup"><span data-stu-id="e3b81-105">This can help to improve the performance of your code.</span></span>
+<span data-ttu-id="3f010-104">*Verzögerte Berechnungen* sind Berechnungen, die nicht sofort ausgewertet, aber stattdessen ausgewertet, wenn das Ergebnis benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="3f010-104">*Lazy computations* are computations that are not evaluated immediately, but are instead evaluated when the result is needed.</span></span> <span data-ttu-id="3f010-105">Dies kann helfen, um die Leistung Ihres Codes zu verbessern.</span><span class="sxs-lookup"><span data-stu-id="3f010-105">This can help to improve the performance of your code.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="e3b81-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="e3b81-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3f010-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="3f010-106">Syntax</span></span>
 
 ```fsharp
 let identifier = lazy ( expression )
 ```
 
-## <a name="remarks"></a><span data-ttu-id="e3b81-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e3b81-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="3f010-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3f010-107">Remarks</span></span>
 
-<span data-ttu-id="e3b81-108">In der vorherigen Syntax *Ausdruck* ist Code, der ausgewertet wird, nur, wenn das Ergebnis erforderlich ist, und *Bezeichner* ist ein Wert, der das Ergebnis speichert.</span><span class="sxs-lookup"><span data-stu-id="e3b81-108">In the previous syntax, *expression* is code that is evaluated only when a result is required, and *identifier* is a value that stores the result.</span></span> <span data-ttu-id="e3b81-109">Der Wert ist vom Typ [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), in dem Typ, der tatsächlich dient zur `'T` wird aus dem Ergebnis des Ausdrucks bestimmt.</span><span class="sxs-lookup"><span data-stu-id="e3b81-109">The value is of type [`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), where the actual type that is used for `'T` is determined from the result of the expression.</span></span>
+<span data-ttu-id="3f010-108">In der vorherigen Syntax *Ausdruck* ist Code, der ausgewertet wird, nur, wenn das Ergebnis erforderlich ist, und *Bezeichner* ist ein Wert, der das Ergebnis speichert.</span><span class="sxs-lookup"><span data-stu-id="3f010-108">In the previous syntax, *expression* is code that is evaluated only when a result is required, and *identifier* is a value that stores the result.</span></span> <span data-ttu-id="3f010-109">Der Wert ist vom Typ [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), in dem Typ, der tatsächlich dient zur `'T` wird aus dem Ergebnis des Ausdrucks bestimmt.</span><span class="sxs-lookup"><span data-stu-id="3f010-109">The value is of type [`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), where the actual type that is used for `'T` is determined from the result of the expression.</span></span>
 
-<span data-ttu-id="e3b81-110">Verzögerte Berechnungen können Sie zur Verbesserung der Leistung durch Einschränken der Ausführung einer Berechnung auf nur die Fälle, in denen ein Ergebnis benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="e3b81-110">Lazy computations enable you to improve performance by restricting the execution of a computation to only those situations in which a result is needed.</span></span>
+<span data-ttu-id="3f010-110">Verzögerte Berechnungen können Sie zur Verbesserung der Leistung durch Einschränken der Ausführung einer Berechnung auf nur die Fälle, in denen ein Ergebnis benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="3f010-110">Lazy computations enable you to improve performance by restricting the execution of a computation to only those situations in which a result is needed.</span></span>
 
-<span data-ttu-id="e3b81-111">Um die Berechnung ausgeführt werden zu erzwingen, rufen Sie die Methode `Force`.</span><span class="sxs-lookup"><span data-stu-id="e3b81-111">To force the computation to be performed, you call the method `Force`.</span></span> <span data-ttu-id="e3b81-112">`Force` bewirkt, dass die Ausführung nur einmal ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e3b81-112">`Force` causes the execution to be performed only one time.</span></span> <span data-ttu-id="e3b81-113">Nachfolgende Aufrufe von `Force` zurückgegeben werden, dieselben dazu führen, jedoch keinen Code nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="e3b81-113">Subsequent calls to `Force` return the same result, but do not execute any code.</span></span>
+<span data-ttu-id="3f010-111">Um die Berechnung ausgeführt werden zu erzwingen, rufen Sie die Methode `Force`.</span><span class="sxs-lookup"><span data-stu-id="3f010-111">To force the computation to be performed, you call the method `Force`.</span></span> <span data-ttu-id="3f010-112">`Force` bewirkt, dass die Ausführung nur einmal ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="3f010-112">`Force` causes the execution to be performed only one time.</span></span> <span data-ttu-id="3f010-113">Nachfolgende Aufrufe von `Force` zurückgegeben werden, dieselben dazu führen, jedoch keinen Code nicht ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="3f010-113">Subsequent calls to `Force` return the same result, but do not execute any code.</span></span>
 
-<span data-ttu-id="e3b81-114">Der folgende Code veranschaulicht die Verwendung von verzögerten Berechnungen und die Verwendung von `Force`.</span><span class="sxs-lookup"><span data-stu-id="e3b81-114">The following code illustrates the use of lazy computation and the use of `Force`.</span></span> <span data-ttu-id="e3b81-115">In diesem Code wird der Typ des `result` ist `Lazy<int>`, und die `Force` Methode gibt ein `int`.</span><span class="sxs-lookup"><span data-stu-id="e3b81-115">In this code, the type of `result` is `Lazy<int>`, and the `Force` method returns an `int`.</span></span>
+<span data-ttu-id="3f010-114">Der folgende Code veranschaulicht die Verwendung von verzögerten Berechnungen und die Verwendung von `Force`.</span><span class="sxs-lookup"><span data-stu-id="3f010-114">The following code illustrates the use of lazy computation and the use of `Force`.</span></span> <span data-ttu-id="3f010-115">In diesem Code wird der Typ des `result` ist `Lazy<int>`, und die `Force` Methode gibt ein `int`.</span><span class="sxs-lookup"><span data-stu-id="3f010-115">In this code, the type of `result` is `Lazy<int>`, and the `Force` method returns an `int`.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-<span data-ttu-id="e3b81-116">Verzögerte Auswertung, aber nicht die `Lazy` eingeben, wird auch für Sequenzen verwendet.</span><span class="sxs-lookup"><span data-stu-id="e3b81-116">Lazy evaluation, but not the `Lazy` type, is also used for sequences.</span></span> <span data-ttu-id="e3b81-117">Weitere Informationen finden Sie unter [Sequenzen](sequences.md).</span><span class="sxs-lookup"><span data-stu-id="e3b81-117">For more information, see [Sequences](sequences.md).</span></span>
+<span data-ttu-id="3f010-116">Verzögerte Auswertung, aber nicht die `Lazy` eingeben, wird auch für Sequenzen verwendet.</span><span class="sxs-lookup"><span data-stu-id="3f010-116">Lazy evaluation, but not the `Lazy` type, is also used for sequences.</span></span> <span data-ttu-id="3f010-117">Weitere Informationen finden Sie unter [Sequenzen](sequences.md).</span><span class="sxs-lookup"><span data-stu-id="3f010-117">For more information, see [Sequences](sequences.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e3b81-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3b81-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f010-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f010-118">See also</span></span>
 
-- [<span data-ttu-id="e3b81-119">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="e3b81-119">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="e3b81-120">LazyExtensions-Modul</span><span class="sxs-lookup"><span data-stu-id="e3b81-120">LazyExtensions module</span></span>](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
+- [<span data-ttu-id="3f010-119">F#-Sprachreferenz</span><span class="sxs-lookup"><span data-stu-id="3f010-119">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="3f010-120">LazyExtensions-Modul</span><span class="sxs-lookup"><span data-stu-id="3f010-120">LazyExtensions module</span></span>](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
