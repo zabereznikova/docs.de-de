@@ -3,10 +3,10 @@ title: Zitieren von Code (F#)
 description: Erfahren Sie mehr über f# Codezitate, eine Sprachfunktion, die Ihnen zum Generieren von und arbeiten programmgesteuert mit F#-Codeausdrücken ermöglicht.
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "47397201"
 ---
 # <a name="code-quotations"></a>Zitieren von Code

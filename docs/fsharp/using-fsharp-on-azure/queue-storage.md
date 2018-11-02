@@ -1,143 +1,143 @@
 ---
-title: Erste Schritte mit Azure-Warteschlangenspeicher mit f#
-description: Azure-Warteschlangen bieten zuverlässige, asynchrone messaging zwischen Anwendungskomponenten. Cloud-messaging ermöglicht Ihre Anwendungskomponenten, die unabhängig voneinander skalieren.
+title: Erste Schritte mit Azure Queue Storage mit f#
+description: Azure-Warteschlangen bieten zuverlässiges, asynchrones messaging zwischen Anwendungskomponenten. Cloud-messaging ermöglicht Ihren Anwendungskomponenten die unabhängige Skalierung.
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569413"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Erste Schritte mit Azure-Warteschlangenspeicher mit f# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Erste Schritte mit Azure Queue Storage mit f# #
 
-Azure-Warteschlangenspeicher bietet Cloud messaging zwischen Anwendungskomponenten. Anwendungskomponenten werden im Entwerfen von Anwendungen für Skalierung, häufig entkoppelt, so, dass sie unabhängig voneinander skaliert werden können. Warteschlangenspeicher bietet asynchrones messaging für die Kommunikation zwischen Komponenten der Anwendung, ob sie in der Cloud, auf dem Desktop, auf einem lokalen Server oder auf einem mobilen Gerät ausgeführt werden. Warteschlangenspeicher unterstützt auch die Verwaltung von asynchronen Aufgaben und zum Erstellen von Arbeitsabläufe.
+Azure Queue Storage ermöglicht cloudmessaging zwischen Anwendungskomponenten. Beim Entwerfen von Anwendungen für umfangreiche Skalierung, werden häufig einzelne Anwendungskomponenten entkoppelt, damit sie unabhängig voneinander skaliert werden können. Queue Storage bietet asynchrones messaging für die Kommunikation zwischen Komponenten einer Anwendung, ob sie in der Cloud, auf dem Desktop, auf einem lokalen Server oder auf einem mobilen Gerät ausgeführt werden. Queue Storage unterstützt auch die Verwaltung asynchroner Aufgaben und Aufbau von Prozessworkflows.
 
-### <a name="about-this-tutorial"></a>Zu diesem Lernprogramm
+### <a name="about-this-tutorial"></a>Informationen zu diesem Lernprogramm
 
-Dieses Lernprogramm veranschaulicht das Schreiben von F#-Code für einige häufig auszuführende Aufgaben mithilfe von Azure-Warteschlangenspeicher. Erstellen und Löschen von Warteschlangen und hinzufügen, lesen und Löschen von Warteschlangennachrichten u. a. folgende Aufgaben behandelt.
+In diesem Tutorial wird gezeigt, wie zum Schreiben F# Code für einige allgemeinen Aufgaben, die mit Azure Queue Storage. Behandelten Aufgaben umfassen das Erstellen und Löschen von Warteschlangen und hinzufügen, lesen und Löschen von Warteschlangennachrichten.
 
-Eine konzeptionelle Übersicht über Warteschlangenspeicher finden Sie unter [im Handbuch .NET Warteschlangenspeicher](/azure/storage/storage-dotnet-how-to-use-queues).
+Eine grundlegende Übersicht von Queue Storage finden Sie unter [.NET Guide für Queue Storage](/azure/storage/storage-dotnet-how-to-use-queues).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
-Um dieser Anleitung zu verwenden, müssen Sie zuerst [Azure Storage-Konto erstellen](/azure/storage/storage-create-storage-account).
-Sie benötigen auch Ihr speicherzugriffsschlüssel für dieses Konto.
+Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account).
+Sie benötigen für dieses Konto auch Ihren speicherzugriffsschlüssel.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie ein f#-Skript und Start f# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten f# Interactive
 
-Die Beispiele in diesem Artikel können in einer f#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit der `.fsx` Erweiterung, z. B. `queues.fsx`, in der f#-Entwicklungsumgebung.
+In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `queues.fsx`, in der F#-Entwicklungsumgebung.
 
-Verwenden Sie als Nächstes eine [Paket-Manager](package-management.md) wie z. B. [Paket](https://fsprojects.github.io/Paket/) oder [NuGet](https://www.nuget.org/) zum Installieren der `WindowsAzure.Storage` Paket und Verweis `WindowsAzure.Storage.dll` in Ihrem Skript mithilfe einer `#r`Richtlinie.
+Verwenden Sie als Nächstes eine [-Paket-Manager](package-management.md) wie z. B. [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) oder [NuGet](https://www.nuget.org/) zum Installieren der `WindowsAzure.Storage` Paket und Verweis `WindowsAzure.Storage.dll` in Ihrem Skript mithilfe einer `#r`Richtlinie.
 
-### <a name="add-namespace-declarations"></a>Fügen Sie Namespacedeklarationen hinzu
+### <a name="add-namespace-declarations"></a>Hinzufügen von Namespacedeklarationen
 
-Fügen Sie die folgenden `open` Anweisungen am oberen Rand der `queues.fsx` Datei:
+Fügen Sie die folgenden `open` Anweisungen am Anfang der `queues.fsx` Datei:
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L1-L3)]
 
-### <a name="get-your-connection-string"></a>Abrufen der Verbindungszeichenfolge
+### <a name="get-your-connection-string"></a>Die Verbindungszeichenfolge abzurufen
 
-Sie benötigen eine Azure-Speicher-Verbindungszeichenfolge für dieses Lernprogramm. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Speicherverbindungs-Zeichenfolgen konfigurieren](/azure/storage/storage-configure-connection-string).
+Sie benötigen eine Azure Storage-Verbindungszeichenfolge für dieses Tutorial. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Konfigurieren von Speicher-Verbindungszeichenfolgen](/azure/storage/storage-configure-connection-string).
 
-Für das Lernprogramm Geben Sie die Verbindungszeichenfolge in Ihrem Skript wie folgt ein:
+Für das Lernprogramm Geben Sie die Verbindungszeichenfolge in Ihrem Skript wie folgt:
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L9-L9)]
 
-Dies ist jedoch **nicht empfohlen,** für tatsächliche Projekte. Schlüssel für das Speicherkonto ähnelt das Stammkennwort für Ihr Speicherkonto. Achten Sie stets darauf zum Schützen der Schlüssel für das Speicherkonto. Vermeiden Sie verteilen an andere Benutzer, die eine feste Programmierung, oder speichern es in einer nur-Text-Datei, die an andere Personen zugänglich ist. Sie können erneut zu generieren Ihres Schlüssels im Azure-Portal verwenden, wenn Sie glauben, dass er gefährdet sein kann.
+Dies ist jedoch **nicht empfohlen,** für echte Projekte. Ihr speicherkontoschlüssel ähnelt das Stammkennwort für Ihr Speicherkonto. Achten Sie immer darauf zum Schützen der Schlüssel Ihres Speicherkontos. Vermeiden sie zu anderen Benutzern oder fest zu programmieren, oder speichern es in einer nur-Text-Datei, die an andere Personen zugänglich ist. Sie können Ihren Schlüssel mithilfe von Azure-Portal, wenn Sie glauben, dass es unter Umständen kompromittiert wurden neu generieren.
 
-Für echten Anwendungen ist die beste Methode zum Verwalten Ihrer speicherverbindungs-Zeichenfolge in einer Konfigurationsdatei. Um die Verbindungszeichenfolge aus einer Konfigurationsdatei abzurufen, können Sie dies tun:
+Für reale Anwendungen, ist die beste Methode zum Verwalten Ihrer Speicher-Verbindungszeichenfolge in einer Konfigurationsdatei. Um die Verbindungszeichenfolge aus einer Konfigurationsdatei abzurufen, können Sie so vorgehen:
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L11-L13)]
 
-Mit Azure-Konfigurations-Manager ist optional. Sie können auch eine API wie das .NET Framework `ConfigurationManager` Typ.
+Verwenden von Azure Configuration Manager ist optional. Sie können auch eine API wie die .NET Framework `ConfigurationManager` Typ.
 
 ### <a name="parse-the-connection-string"></a>Analysieren der Verbindungszeichenfolge
 
-Verwenden Sie, um die Verbindungszeichenfolge zu analysieren:
+Um die Verbindungszeichenfolge zu analysieren, verwenden Sie:
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L19-L20)]
 
-Dadurch wird zurückgegeben, eine `CloudStorageAccount`.
+Dies ergibt eine `CloudStorageAccount`.
 
-### <a name="create-the-queue-service-client"></a>Erstellen Sie den Warteschlangen-Dienstclient
+### <a name="create-the-queue-service-client"></a>Erstellen des warteschlangendienstclients
 
-Die `CloudQueueClient` -Klasse ermöglicht es Ihnen, zum Abrufen von Warteschlangen in Warteschlange-Speicher gespeichert. Dies ist eine Methode zum Erstellen des Service-Clients:
+Die `CloudQueueClient` -Klasse ermöglicht Ihnen, die im Warteschlangenspeicher gespeicherte Warteschlangen abrufen. Hier ist eine Möglichkeit zum Erstellen des Dienstclients:
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L26-L26)]
 
-Jetzt können Sie Code schreiben, der Daten liest und schreibt Daten in Warteschlangenspeicher.
+Jetzt können Sie Code schreiben, liest Daten aus, und Daten an den Warteschlangenspeicher schreibt.
 
 ## <a name="create-a-queue"></a>Erstellen Sie eine Warteschlange
 
-Dieses Beispiel zeigt, wie eine Warteschlange zu erstellen, wenn er nicht bereits vorhanden:
+Dieses Beispiel zeigt, wie Sie eine Warteschlange zu erstellen, wenn er nicht bereits vorhanden:
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L32-L36)]
 
-## <a name="insert-a-message-into-a-queue"></a>Legen Sie eine Nachricht in eine Warteschlange
+## <a name="insert-a-message-into-a-queue"></a>Einfügen einer Nachricht in eine Warteschlange
 
-Um eine Nachricht in eine vorhandene Warteschlange einzufügen, erstellen Sie zunächst ein neues `CloudQueueMessage`. Rufen Sie als Nächstes die `AddMessage` Methode. Ein `CloudQueueMessage` können erstellt werden, entweder eine Zeichenfolge (in UTF-8-Format) oder ein `byte` Array ist, wie folgt:
+Um eine Nachricht in eine vorhandene Warteschlange einzufügen, erstellen Sie zunächst ein neues `CloudQueueMessage`. Rufen Sie als Nächstes die `AddMessage` Methode. Ein `CloudQueueMessage` können erstellt werden entweder aus eine Zeichenfolge (im UTF-8-Format) oder ein `byte` Array wie folgt:
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
-## <a name="peek-at-the-next-message"></a>Die nächste Nachricht einsehen
+## <a name="peek-at-the-next-message"></a>Einsehen der nächsten Nachricht
 
-Sie können die Nachricht an eine Warteschlange der Vorderseite einsehen, ohne es zu entfernen aus der Warteschlange durch Aufrufen der `PeekMessage` Methode.
+Sie können einen Blick auf die Nachricht am Anfang einer Warteschlange, ohne sie aus der Warteschlange zu entfernen, durch den Aufruf der `PeekMessage` Methode.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L50-L52)]
 
-## <a name="get-the-next-message-for-processing"></a>Die nächste Meldung für die Verarbeitung
+## <a name="get-the-next-message-for-processing"></a>Die nächste Nachricht zur Verarbeitung abgerufen.
 
-Sie können die Nachricht an den Anfang einer Warteschlange für die Verarbeitung durch den Aufruf Abrufen der `GetMessage` Methode.
+Sie können die Nachricht am Anfang einer Warteschlange zur Verarbeitung abzurufen, durch Aufrufen der `GetMessage` Methode.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L58-L59)]
 
-Sie später erfolgreiche Verarbeitung der Nachricht angeben, mit `DeleteMessage`.
+Sie erfolgreiche Verarbeitung der Nachricht später mithilfe von angeben `DeleteMessage`.
 
-## <a name="change-the-contents-of-a-queued-message"></a>Ändern Sie den Inhalt einer Nachricht in der Warteschlange
+## <a name="change-the-contents-of-a-queued-message"></a>Ändern Sie den Inhalt der Nachricht in einer Warteschlange
 
-Sie können den Inhalt des eine abgerufene Nachricht direkt in der Warteschlange ändern. Wenn die Meldung eine Aufgabe darstellt, können Sie diese Funktion verwenden, um den Status des Tasks "Arbeit" aktualisieren. Der folgende Code warteschlangennachricht durch neuen Inhalt aktualisiert, und legt das sichtbarkeitstimeout einer anderen 60 Sekunden zu erweitern. Dies speichert den Zustand der Arbeit mit der Meldung zugeordnet ist, und ermöglicht dem Client, einem anderen Minute der Nachricht um weiter zu bearbeiten. Diese Technik können Sie mit mehreren Schritten Workflows auf Warteschlangennachrichten, ohne über vom Anfang starten, schlägt ein Verarbeitungsschritt aufgrund von Hardware-oder Softwarefehlers nachverfolgen. In der Regel würden Sie eine Wiederholungsanzahl auch beibehalten, und wenn mehr als einige Anzahl, wie oft die Nachricht wiederholt wird, würde Sie ihn löschen. Dies schützt gegen eine Meldung, die einen Fehler wird jedes Mal ausgelöst, wenn es verarbeitet wird.
+Sie können den Inhalt des eine abgerufene Nachricht direkt in der Warteschlange ändern. Wenn die Nachricht eine Arbeitsaufgabe darstellt, können Sie dieses Feature verwenden, um den Status der Aufgabe aktualisieren. Der folgende Code wird die warteschlangennachricht mit neuem Inhalt aktualisiert und das Sichtbarkeits-Zeitlimit um weitere 60 Sekunden verlängert. Dies speichert den Zustand der Arbeit mit der Meldung zugeordnet ist, und ermöglicht es dem Client eine weitere Minute zum Fortsetzen der Arbeit für die Nachricht. Sie können diese Technik verwenden, das Nachverfolgen von Workflows mit mehreren Schritten in Warteschlangennachrichten, ohne sich über von vorn zu beginnen, wenn ein Verarbeitungsschritt aufgrund von Hardware- oder Softwarefehlers fehlschlägt. In der Regel behalten Sie die Anzahl der Wiederholungen sowie ein, und wenn die Nachricht mehr als einige Male wiederholt wird, würden Sie es löschen. Dies schützt eine Nachricht, die einen Anwendungsfehler jedes Mal ausgelöst, die sie verarbeitet wird.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L65-L69)]
 
-## <a name="de-queue-the-next-message"></a>Die nächste Nachricht Warteschlange
+## <a name="de-queue-the-next-message"></a>Entfernen die nächste Nachricht aus der Warteschlange
 
-Der Code Warteschlange eine Nachricht aus einer Warteschlange in zwei Schritten entfernt. Beim Aufruf `GetMessage`, erhalten Sie die nächste Meldung in einer Warteschlange. Eine Nachricht vom zurückgegebenen `GetMessage` für anderen Code, die Lesen von Nachrichten aus dieser Warteschlange nicht sichtbar ist. Standardmäßig bleibt diese Meldung 30 Sekunden nicht sichtbar. Sie müssen auch aufrufen, um abgeschlossen haben, wobei die Nachricht aus der Warteschlange entfernt, `DeleteMessage`. Diesen Schritten entfernen Sie eine Nachricht wird sichergestellt, dass wenn Codes ein Fehler beim Verarbeiten einer Nachricht aufgrund von Hardware-oder Softwarefehler auftritt, eine andere Instanz des Codes kann dieselbe Nachricht erhalten, und wiederholen. Der Code ruft `DeleteMessage` direkt nach die Nachricht verarbeitet wurde.
+Ihr Code Holt eine Nachricht aus einer Warteschlange in zwei Schritten. Beim Aufruf `GetMessage`, erhalten Sie die nächste Nachricht in eine Warteschlange. Zurückgegebene Nachricht `GetMessage` ist für anderen Code Lesen von Nachrichten aus dieser Warteschlange nicht mehr sichtbar. Standardmäßig bleibt die Nachricht 30 Sekunden lang unsichtbar. Sie müssen auch aufrufen, um die Nachricht aus der Warteschlange entfernen abzuschließen, `DeleteMessage`. Dieser zweistufige Prozess zum Entfernen von Nachrichten sichergestellt, dass Ihr Code nicht Verarbeitung aufgrund eines Hardware- oder Softwarefehlers, eine andere Instanz des Codes kann dieselbe Nachricht zu erhalten und versuchen Sie es erneut. Der Code ruft `DeleteMessage` direkt nach der Verarbeitung der Nachricht.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
-## <a name="use-async-workflows-with-common-queue-storage-apis"></a>Verwenden Sie asynchrone Workflows mit allgemeinen Warteschlangenspeicher APIs
+## <a name="use-async-workflows-with-common-queue-storage-apis"></a>Verwenden von Async-Workflows mit allgemeinen Warteschlangenspeicher-APIs
 
-Dieses Beispiel zeigt, wie einen asynchronen Workflow mit allgemeinen Warteschlangenspeicher APIs verwendet wird.
+Dieses Beispiel zeigt, wie Sie mit einem asynchronen Workflow mit allgemeinen Warteschlangenspeicher-APIs.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L82-L91)]
 
-## <a name="additional-options-for-de-queuing-messages"></a>Zusätzliche Optionen für die Warteschlange Nachrichten
+## <a name="additional-options-for-de-queuing-messages"></a>Zusätzliche Optionen für Nachrichten aus der Warteschlange
 
-Es gibt zwei Möglichkeiten, die Sie beim Abruf der Nachricht aus einer Warteschlange anpassen können.
-Erstens können Sie einen Nachrichtenbatch (bis zu 32) abrufen. Zweitens können Sie eine längere oder kürzere unsichtbarkeitstimeout festlegen, sodass Ihr Code mehr oder weniger Zeit für die vollständige Verarbeitung aller Nachrichten. Im folgenden Codebeispiel wird mit `GetMessages` zum Abrufen von 20 Nachrichten in einem aufrufen, und klicken Sie dann jede Nachricht verarbeitet. Außerdem wird das unsichtbarkeitstimeout auf fünf Minuten für jede Nachricht festgelegt. Beachten Sie, die 5 Minuten starten, damit alle Nachrichten zum gleichen Zeitpunkt übergeben nach fünf Minuten wurden seit dem Aufruf von `GetMessages`, alle Nachrichten, die nicht gelöscht wurden werden erneut angezeigt werden.
+Es gibt zwei Möglichkeiten, die Sie beim Abruf der Nachricht aus der Warteschlange anpassen können.
+Zunächst erhalten Sie einen Batch von Nachrichten (bis zu 32). Zweitens können Sie einen längeren oder kürzeren unsichtbarkeits-Zeitlimit, festlegen, sodass Ihr Code mehr oder weniger Zeit zur vollständigen Verarbeitung jeder Nachricht benötigt. Das folgende Codebeispiel verwendet `GetMessages` zum Abrufen von 20 Nachrichten in einer aufrufen, und klicken Sie dann jede Nachricht verarbeitet. Außerdem wird das unsichtbarkeits-Zeitlimit auf fünf Minuten für jede Nachricht festgelegt. Beachten Sie, dass die letzten 5 Minuten für alle Nachrichten gleichzeitig, sodass nach fünf Minuten übergeben wird, seit dem Aufruf von `GetMessages`, alle Nachrichten, die nicht gelöscht wurden werden erneut angezeigt werden.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 
 ## <a name="get-the-queue-length"></a>Abrufen der Warteschlangenlänge
 
-Sie können eine Schätzung der Anzahl der Nachrichten in einer Warteschlange abrufen. Die `FetchAttributes` Methode fragt den Warteschlangendienst zum Abrufen der Warteschlange-Attribute, einschließlich der Nachrichtenanzahl. Die `ApproximateMessageCount` Eigenschaft gibt den letzten Wert abgerufen, indem die `FetchAttributes` Methode ohne Aufrufen des warteschlangendiensts.
+Sie können eine Schätzung der Anzahl der Nachrichten in einer Warteschlange abrufen. Die `FetchAttributes` -Methode fordert den Warteschlangendienst auf, die warteschlangenattribute einschließlich der Nachrichtenanzahl abzurufen. Die `ApproximateMessageCount` -Eigenschaft gibt den letzten Wert abgerufen, indem die `FetchAttributes` Methode, ohne den Warteschlangendienst aufzurufen.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L105-L106)]
 
 ## <a name="delete-a-queue"></a>Löschen einer Warteschlange
 
-Um eine Warteschlange und alle darin enthaltenen Nachrichten zu löschen, rufen Sie die `Delete` Methode auf dem Queue-Objekt.
+Zum Löschen einer Warteschlange und alle darin enthaltenen Nachrichten rufen die `Delete` Methode für das Queue-Objekt.
 
 [!code-fsharp[QueueStorage](../../../samples/snippets/fsharp/azure/queue-storage.fsx#L112-L113)]
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, dass Sie die Grundlagen der Warteschlangenspeicher gelernt haben, führen Sie die folgenden Links, um weitere Informationen zu komplexeren Speicheraufgaben.
+Nachdem Sie die Grundlagen des Warteschlangenspeichers vertraut gemacht haben, folgen Sie diesen Links, um Informationen zu komplexeren Speicheraufgaben.
 
-- [Azure-Speicher-APIs für .NET](/dotnet/api/overview/azure/storage)
+- [Azure Storage-APIs für .NET](/dotnet/api/overview/azure/storage)
 - [Azure-Speicher-Typanbieter](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Azure-Speicher-Teamblog](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Konfigurieren von Verbindungszeichenfolgen für Azure-Speicher](/azure/storage/common/storage-configure-connection-string)
-- [Azure-Speicherdienste REST-API-Referenz](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [Azure Storage-Teamblog](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Konfigurieren von Azure Storage-Verbindungszeichenfolgen](/azure/storage/common/storage-configure-connection-string)
+- [Azure Storage-Dienst-REST-API-Referenz](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

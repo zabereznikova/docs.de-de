@@ -1,15 +1,15 @@
 ---
-title: Einführung in F#
+title: Einführung in f#
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924520"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235712"
 ---
-# <a name="tour-of-f"></a>Einführung in F# #
+# <a name="tour-of-f"></a>Einführung in f# #
 
 Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben.  Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können.  Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
 
@@ -193,6 +193,6 @@ Klassen eignen sich hervorragend für eine Vielzahl von Gründen, z. B. Wenn Sie
 
 Nun, da Sie einige der wichtigsten Funktionen der Sprache gesehen haben, sollten Sie Ihre erste F#-Programme zu schreiben sein!  Sehen Sie sich [Einstieg](tutorials/getting-started/index.md) zu erfahren, wie Sie Ihre Entwicklungsumgebung einrichten, und Schreiben von Code.
 
-Die nächsten Schritte für weitere können beliebig sein, aber es wird empfohlen [Funktionen als erstrangige Werte](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> abzurufenden mit Core Konzepte der funktionalen Programmierung vertraut.  Dieser werden wichtige bei der Erstellung von robusten Programme in F#.
+Die nächsten Schritte für weitere können beliebig sein, aber es wird empfohlen [Einführung in die funktionale Programmierung in F# ](introduction-to-functional-programming/index.md) abzurufenden mit Core Konzepte der funktionalen Programmierung vertraut.  Dieser werden wichtige bei der Erstellung von robusten Programme in F#.
 
 Darüber hinaus sehen Sie sich die [F#-Sprachreferenz](language-reference/index.md) eine umfangreiche Sammlung von konzeptionellen Inhalten in F# angezeigt.

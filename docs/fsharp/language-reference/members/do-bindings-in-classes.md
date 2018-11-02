@@ -3,10 +3,10 @@ title: do-Bindungen in Klassen (F#)
 description: Erfahren Sie, wie mit einer F#-'-Bindung in einer Klassendefinition Aktionen ausgeführt werden, wenn das Objekt erstellt wird, oder wenn der Typ zuerst verwendet wird do'.
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43801526"
 ---
 # <a name="do-bindings-in-classes"></a>do-Bindungen in Klassen

@@ -3,10 +3,10 @@ title: F#-Code Formatieren von Richtlinien
 description: Erfahren Sie, Richtlinien zur Formatierung von F#-Code.
 ms.date: 05/14/2018
 ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43858004"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#-Code Formatieren von Richtlinien

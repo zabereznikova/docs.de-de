@@ -4,10 +4,10 @@ description: Store strukturierte Daten in der Cloud mit Azure Table Storage oder
 author: sylvanc
 ms.date: 03/26/2018
 ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519534"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit f# # 
@@ -32,7 +32,7 @@ Weitere Informationen finden Sie unter [Einführung in die Table-API von Azure C
 
 In diesem Tutorial veranschaulicht, wie F#-Code dazu durchführen allgemeinen Aufgaben mit Azure Table Storage oder Azure Cosmos DB Table API, einschließlich erstellen und Löschen einer Tabelle und einfügen, aktualisieren, löschen und Abfragen von Tabellendaten zu schreiben.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account) oder [Azure Cosmos DB-Konto](https://azure.microsoft.com/try/cosmosdb/).
 

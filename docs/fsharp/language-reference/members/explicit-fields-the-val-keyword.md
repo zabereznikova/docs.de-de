@@ -3,10 +3,10 @@ title: 'Explizite Felder: Das val-Schlüsselwort (F#)'
 description: Erfahren Sie mehr über die F#-'Wert'-Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs deklarieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45746371"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das val-Schlüsselwort
@@ -67,7 +67,7 @@ Die Ausgabe lautet `11 xyz`.
 
 Explizite Felder sind nicht für die routinemäßige Verwendung gedacht. Im Allgemeinen sollten Sie möglichst eine `let`-Bindung in einer Klasse verwenden, statt eines expliziten Felds. Explizite Felder sind in bestimmten Interoperabilitätsszenarios hilfreich, wenn Sie z. B. eine Struktur definieren müssen, die in einem Plattformaufruf einer systemeigenen API oder in COM-Interop-Szenarien verwendet wird. Weitere Informationen finden Sie unter [externe Funktionen](../functions/external-functions.md). Eine andere Situation, in der ein explizites Feld möglicherweise erforderlich, besteht dann, wenn Sie mit einem F#-Codegenerator arbeiten, der Klassen ohne primären Konstruktor ausgibt. Explizite Felder sind auch für threadstatische Variablen oder ähnliche Konstrukte sinnvoll. Weitere Informationen finden Sie unter `System.ThreadStaticAttribute`.
 
-Wenn die Schlüsselwörter `member val` zusammen in einer Typdefinition angezeigt werden, handelt es sich um eine Definition einer automatisch implementierten Eigenschaft. Weitere Informationen finden Sie unter [Eigenschaften](properties.md).
+Wenn die Schlüsselwörter `member val` zusammen in einer Typdefinition angezeigt werden, handelt es sich um eine Definition einer automatisch implementierten Eigenschaft. Weitere Informationen finden Sie unter [Eigenschaften](properties.md)definiert sind.
 
 ## <a name="see-also"></a>Siehe auch
 

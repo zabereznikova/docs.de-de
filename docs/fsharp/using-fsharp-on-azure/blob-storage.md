@@ -4,10 +4,10 @@ description: Store unstrukturierte Daten in der Cloud mit Azure Blob Storage.
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037281"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Erste Schritte mit Azure Blob Storage mit f# #
@@ -18,7 +18,7 @@ In diesem Artikel veranschaulicht das Ausführen von häufigen Aufgaben mit BLOB
 
 Eine grundlegende Übersicht von Blob Storage finden Sie unter [.NET Guide für Blob Storage](/azure/storage/storage-dotnet-how-to-use-blobs).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account). Für dieses Konto benötigen Sie auch Ihren speicherzugriffsschlüssel.
 
@@ -72,7 +72,7 @@ Die `CloudBlobClient` des Typs können Sie zum Abrufen von im Blob-Speicher gesp
 
 Jetzt können Sie Code schreiben, liest Daten aus und schreibt Daten in Blob Storage.
 
-## <a name="create-a-container"></a>Erstellen Sie einen container
+## <a name="create-a-container"></a>Erstellen eines Containers
 
 Dieses Beispiel zeigt, wie Sie einen Container zu erstellen, wenn es nicht bereits vorhanden ist:
 

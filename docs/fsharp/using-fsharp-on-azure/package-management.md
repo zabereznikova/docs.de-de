@@ -1,84 +1,84 @@
 ---
-title: Verwenden des Paketverwaltung mit f# für Azure
-description: Verwenden von Paket "oder" NuGet-zum Verwalten der F#-Azure-Abhängigkeiten
+title: Mit der Paketverwaltung mit F# für Azure
+description: Verwenden Sie zum Verwalten von Paket-Abhängigkeits oder Nuget F# Azure-Abhängigkeiten
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fd9c4a15ab0741d44d6d5cf909b7219d310affb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33566969"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Verwalten von Paketen für F#-Azure-Abhängigkeiten
 
-Abrufen von Paketen für die Azure-Entwicklung ist einfach, wenn Sie einen Paket-Manager verwenden. Die beiden Optionen sind [Paket](https://fsprojects.github.io/Paket/) und [NuGet](https://www.nuget.org/).
+Abrufen von Paketen für Azure-Entwicklung ist einfach, wenn Sie einen Paket-Manager verwenden. Die beiden Optionen sind [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) und [NuGet](https://www.nuget.org/).
 
-## <a name="using-paket"></a>Paket verwenden
+## <a name="using-paket"></a>Mithilfe der Paket-Abhängigkeits
 
-Bei Verwendung von [Paket](https://fsprojects.github.io/Paket/) als der Abhängigkeit-Managers können Sie die `paket.exe` Tool zum Hinzufügen von Azure-Abhängigkeiten. Zum Beispiel:
+Bei Verwendung von [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) als Ihre Abhängigkeits-Manager können Sie mit der `paket.exe` Tool, um die Azure-Abhängigkeiten hinzufügen. Zum Beispiel:
 
     > paket add nuget WindowsAzure.Storage
 
-Oder, bei Verwendung von [Mono](https://www.mono-project.com/) für die plattformübergreifende .NET-Entwicklung:
+Oder, bei Verwendung von [Mono](https://www.mono-project.com/) für die .NET-Entwicklung Cross-Platform:
 
     > mono paket.exe add nuget WindowsAzure.Storage
 
-Dadurch wird hinzugefügt `WindowsAzure.Storage` für Ihren Abhängigkeiten des Pakets für das Projekt im aktuellen Verzeichnis ändern die `paket.dependencies` Datei, und Laden Sie das Paket. Wenn Sie Abhängigkeiten zuvor eingerichtet haben, oder Arbeiten mit einem Projekt, in denen Abhängigkeiten von anderen Entwicklern wurden eingerichtet sind, können Sie beheben und Installieren von Abhängigkeiten lokal wie folgt:
+Hiermit wird `WindowsAzure.Storage` zu Ihren paketabhängigkeiten für das Projekt im aktuellen Verzeichnis, Ändern der `paket.dependencies` Datei, und Laden Sie das Paket. Wenn Sie Abhängigkeiten bereits eingerichtet haben, oder Arbeiten mit einem Projekt, in denen Abhängigkeiten von anderen Entwicklern wurden eingerichtet sind, können zu beheben und installieren Sie die Abhängigkeiten lokal wie folgt:
 
     > paket install
 
-Oder für den Mono-Entwicklung:
+Oder, für die Mono-Entwicklung:
 
     > mono paket.exe install
 
-Sie können alle Ihre Abhängigkeiten des Pakets auf die neueste Version wie folgt aktualisieren:
+Sie können alle Ihre paketabhängigkeiten auf die neueste Version wie folgt aktualisieren:
 
     > paket update
 
-Oder für den Mono-Entwicklung:
+Oder, für die Mono-Entwicklung:
 
     > mono paket.exe update
 
 ## <a name="using-nuget"></a>Mithilfe von Nuget
 
-Bei Verwendung von [NuGet](https://www.nuget.org/) als der Abhängigkeit-Managers können Sie die `nuget.exe` Tool zum Hinzufügen von Azure-Abhängigkeiten. Zum Beispiel:
+Bei Verwendung von [NuGet](https://www.nuget.org/) als Ihre Abhängigkeits-Manager können Sie mit der `nuget.exe` Tool, um die Azure-Abhängigkeiten hinzufügen. Zum Beispiel:
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
-Oder für den Mono-Entwicklung:
+Oder, für die Mono-Entwicklung:
 
     > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 
-Dadurch wird hinzugefügt `WindowsAzure.Storage` für Ihren Abhängigkeiten des Pakets für das Projekt im aktuellen Verzeichnis und der Download des Pakets. Wenn Sie Abhängigkeiten zuvor eingerichtet haben, oder Arbeiten mit einem Projekt, in denen Abhängigkeiten von anderen Entwicklern wurden eingerichtet sind, können Sie beheben und Installieren von Abhängigkeiten lokal wie folgt:
+Hiermit wird `WindowsAzure.Storage` der Gruppe der paketabhängigkeiten für das Projekt in das aktuelle Verzeichnis und das Herunterladen des Pakets. Wenn Sie Abhängigkeiten bereits eingerichtet haben, oder Arbeiten mit einem Projekt, in denen Abhängigkeiten von anderen Entwicklern wurden eingerichtet sind, können zu beheben und installieren Sie die Abhängigkeiten lokal wie folgt:
 
     > nuget restore 
 
-Oder für den Mono-Entwicklung:
+Oder, für die Mono-Entwicklung:
 
     > mono nuget.exe restore
 
-Sie können alle Ihre Abhängigkeiten des Pakets auf die neueste Version wie folgt aktualisieren:
+Sie können alle Ihre paketabhängigkeiten auf die neueste Version wie folgt aktualisieren:
 
     > nuget update
 
-Oder für den Mono-Entwicklung:
+Oder, für die Mono-Entwicklung:
 
     > mono nuget.exe update
 
 ## <a name="referencing-assemblies"></a>Referenzierende Assemblys
 
-Um die Pakete in Ihrem f#-Skript verwenden, müssen Sie die in den Paketen, die mit enthaltenen Assemblys verweisen eine `#r` Richtlinie. Zum Beispiel:
+Um verwenden Ihre Pakete in Ihre F# Skript müssen Sie auf die Assemblys enthalten, die in den Paketen, die mit einem `#r` Richtlinie. Zum Beispiel:
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 
-Wie Sie sehen können, müssen Sie den relativen Pfad zur DLL und den vollständigen DLL-Namen, der nicht genau identisch mit den Paketnamen möglicherweise angeben. Der Pfad wird ein Framework, Version und möglicherweise eine Paket-Versionsnummer enthalten. Um die installierten Assemblys zu suchen, können Sie etwa wie folgt in einer Windows-Befehlszeile verwenden:
+Wie Sie sehen können, müssen Sie geben den relativen Pfad der DLL und der vollständige Name der DLL, der genau identisch mit den Paketnamen möglicherweise nicht. Der Pfad wird eine Framework-Version und ggf. eine Versionsnummer des Pakets enthalten. Um alle installierten Assemblys zu suchen, können Sie etwa wie folgt in einer Windows-Befehlszeile verwenden:
 
     > cd packages/WindowsAzure.Storage
     > dir /s/b *.dll
 
-Oder in einer Unix-Shell, etwa wie folgt:
+Oder in einer Unix-Shell, dann etwa wie folgt:
 
     > find packages/WindowsAzure.Storage -name "*.dll"
 
-Sie erhalten die Pfade zu den installierten Assemblys. Von dort aus können Sie den richtigen Pfad für die Framework-Version auswählen.
+Dadurch erhalten die Pfade zu den installierten Assemblys Sie. Von dort aus können Sie den richtigen Pfad für Ihre Frameworkversion auswählen.

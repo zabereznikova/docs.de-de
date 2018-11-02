@@ -3,10 +3,10 @@ title: Asynchrone Workflows (F#)
 description: Erfahren Sie mehr über Unterstützung für in die F#-Programmiersprache zum Ausführen von Berechnungen asynchron, die ausgeführt werden, ohne dass die Ausführung weiterer Aufgaben blockiert.
 ms.date: 05/16/2016
 ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43861561"
 ---
 # <a name="asynchronous-workflows"></a>Asynchrone Workflows
