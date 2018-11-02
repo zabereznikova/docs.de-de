@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>Hinweise
 
-Rekursive Funktionen, Funktionen, die selbst aufrufen, werden in der Sprache f# explizit identifiziert. Dadurch wird den Bezeichner, der definiert wird im Rahmen der Funktion verfügbar.
+Rekursive Funktionen, Funktionen, die selbst aufrufen, werden in der Sprache F# explizit identifiziert. Dadurch wird den Bezeichner, der definiert wird im Rahmen der Funktion verfügbar.
 
 Der folgende Code zeigt eine rekursive Funktion, die berechnet die *n*<sup>th</sup> Fibonacci-Zahl.
 

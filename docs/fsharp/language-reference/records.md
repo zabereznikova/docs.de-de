@@ -1,6 +1,6 @@
 ---
 title: Datensätze (F#)
-description: Erfahren Sie, wie f#-Datensätzen für einfache Aggregate benannter Werte, optional mit Membern darstellen.
+description: Erfahren Sie, wie F#-Datensätzen für einfache Aggregate benannter Werte, optional mit Membern darstellen.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48261289"
 ---
 # <a name="records"></a>Datensätze
 
-Datensätze stellen einfache Aggregate benannter Werte dar, optional mit Membern.  Ab f# 4.1, können sie entweder den Strukturen oder Verweistypen sein.  Sie sind Verweistypen standardmäßig.
+Datensätze stellen einfache Aggregate benannter Werte dar, optional mit Membern.  Ab F# 4.1, können sie entweder den Strukturen oder Verweistypen sein.  Sie sind Verweistypen standardmäßig.
 
 ## <a name="syntax"></a>Syntax
 

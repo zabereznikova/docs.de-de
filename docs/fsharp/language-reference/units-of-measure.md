@@ -1,6 +1,6 @@
 ---
 title: Maßeinheiten (F#)
-description: Erfahren Sie, wie für Gleitkommawerte und signierten Integer-Werte in f# können Einheiten, die in der Regel verwendet werden, Länge, Volumen und die Masse an verknüpft haben.
+description: Erfahren Sie, wie für Gleitkommawerte und signierten Integer-Werte in F# können Einheiten, die in der Regel verwendet werden, Länge, Volumen und die Masse an verknüpft haben.
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45972516"
 ---
 # <a name="units-of-measure"></a>Maßeinheiten
 
-Gleitkomma- und signierten Integer-Werte in f# kann Maßeinheiten zugeordnet haben die in der Regel an Länge, Volumen, Masse usw. verwendet werden. Mengen mit Einheiten verwenden, aktivieren Sie den Compiler an, überprüfen Sie, ob arithmetische Beziehungen die richtigen Einheiten, die verhindert, dass Programmierfehler.
+Gleitkomma- und signierten Integer-Werte in F# kann Maßeinheiten zugeordnet haben die in der Regel an Länge, Volumen, Masse usw. verwendet werden. Mengen mit Einheiten verwenden, aktivieren Sie den Compiler an, überprüfen Sie, ob arithmetische Beziehungen die richtigen Einheiten, die verhindert, dass Programmierfehler.
 
 ## <a name="syntax"></a>Syntax
 

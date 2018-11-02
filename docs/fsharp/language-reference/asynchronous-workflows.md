@@ -14,7 +14,7 @@ ms.locfileid: "43861561"
 > [!NOTE]
 Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
-Dieses Thema beschreibt die Unterstützung in f# zum Ausführen von Berechnungen asynchron, d. h. ohne Ausführung weiterer Aufgaben zu blockieren. Beispielsweise können asynchrone Berechnungen verwendet werden, zum Schreiben von Anwendungen mit Benutzeroberflächen, die für Benutzer reaktionsfähig bleiben, wie die Anwendung andere Aufgaben ausführt.
+Dieses Thema beschreibt die Unterstützung in F# zum Ausführen von Berechnungen asynchron, d. h. ohne Ausführung weiterer Aufgaben zu blockieren. Beispielsweise können asynchrone Berechnungen verwendet werden, zum Schreiben von Anwendungen mit Benutzeroberflächen, die für Benutzer reaktionsfähig bleiben, wie die Anwendung andere Aufgaben ausführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Mehrere primitiven für asynchrone e/a-Vorgänge sind enthalten die [ `Microsoft
 
 Sie können auch eigene asynchrone Primitive Typen schreiben, durch die Definition einer Funktion, deren vollständiger Text in einen asynchronen Block eingeschlossen ist.
 
-Um verwenden asynchrone Methoden in .NET Framework, die entwickelt wurden, für andere asynchrone Modelle mit dem asynchronen F#-Programmiermodell, erstellen Sie eine Funktion, einen f#-zurückgibt `Async` Objekt. Die F#-Bibliothek verfügt über Funktionen, die dies leicht zu bewerkstelligen ist.
+Um verwenden asynchrone Methoden in .NET Framework, die entwickelt wurden, für andere asynchrone Modelle mit dem asynchronen F#-Programmiermodell, erstellen Sie eine Funktion, einen F#-zurückgibt `Async` Objekt. Die F#-Bibliothek verfügt über Funktionen, die dies leicht zu bewerkstelligen ist.
 
 Ein Beispiel für die Verwendung von asynchronen Workflows ist hier enthalten. Es gibt viele andere in der Dokumentation für die Methoden der [Async-Klasse](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).
 

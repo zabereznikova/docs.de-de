@@ -1,6 +1,6 @@
 ---
 title: Referenzzellen (F#)
-description: Erfahren Sie, wie f# Referenzzellen Speicherorte sind, die Ihnen ermöglichen, änderbare Werte mit Verweissemantik zu erstellen.
+description: Erfahren Sie, wie F# Referenzzellen Speicherorte sind, die Ihnen ermöglichen, änderbare Werte mit Verweissemantik zu erstellen.
 ms.date: 05/16/2016
 ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ Die Ausgabe lautet wie folgt.
 
 Das Feld `contents` wird für die Kompatibilität mit anderen Versionen von ML bereitgestellt und gibt während der Kompilierung eine Warnung aus. Verwenden Sie die `--mlcompatibility`-Compileroption, um die Warnung zu deaktivieren. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).
 
-C#-Programmierer sollten wissen, dass `ref` in c# ist nicht dasselbe wie `ref` in F# erläutert werden. Die entsprechende Konstrukte in f# sind [Byrefs](byrefs.md), die ein anderes Konzept als Referenzzellen sind.
+C#-Programmierer sollten wissen, dass `ref` in c# ist nicht dasselbe wie `ref` in F# erläutert werden. Die entsprechende Konstrukte in F# sind [Byrefs](byrefs.md), die ein anderes Konzept als Referenzzellen sind.
 
 Werte gekennzeichnet, als `mutable`automatisch auf heraufgestuft werden `'a ref` ; Closure erfasst finden Sie unter [Werte](values/index.md).
 

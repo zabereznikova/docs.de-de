@@ -1,5 +1,5 @@
 ---
-title: Vergleichsausdrücke (f#)
+title: Vergleichsausdrücke (F#)
 description: Erfahren Sie, wie der F#-Vergleichsausdruck verzweigungssteuerung bereitstellt, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59

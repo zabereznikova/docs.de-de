@@ -1,6 +1,6 @@
 ---
 title: 'Ausnahmen: Die failwith-Funktion (F#)'
-description: Erfahren Sie, wie die Funktion "Failwith" f#-Ausnahme generiert.
+description: Erfahren Sie, wie die Funktion "Failwith" F#-Ausnahme generiert.
 ms.date: 05/16/2016
 ms.openlocfilehash: 69a2eb69e0157d3bde8cb8884cb0ae960634dddc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

@@ -90,7 +90,7 @@ Die folgende Tabelle zeigt alle F#-Schlüsselwörter in alphabetischer Reihenfol
 |`yield`|[Sequenzen](sequences.md)|In einem Sequenzausdruck verwendet, um einen Wert für eine Sequenz zu erzeugen.|
 |`yield!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|In einem Berechnungsausdruck verwendet zum fügen Sie des Ergebnis eines Ausdrucks für die angegebene Berechnung auf eine Auflistung von Ergebnissen für den enthaltenden Ausdruck für die Berechnung.|
 
-Die folgenden Token sind in f# reserviert werden, da sie in der Sprache mit OCaml Schlüsselwörter sind:
+Die folgenden Token sind in F# reserviert werden, da sie in der Sprache mit OCaml Schlüsselwörter sind:
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Die folgenden Token sind in f# reserviert werden, da sie in der Sprache mit OCam
 
 Bei Verwendung der `--mlcompatibility` -Compileroption verwenden, die oben aufgeführten Schlüsselwörter stehen zur Verwendung als Bezeichner.
 
-Die folgenden Token werden als Schlüsselwörter für die zukünftige Erweiterung der Sprache f# reserviert:
+Die folgenden Token werden als Schlüsselwörter für die zukünftige Erweiterung der Sprache F# reserviert:
 
 * `atomic`
 * `break`

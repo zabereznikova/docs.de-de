@@ -1,6 +1,6 @@
 ---
 title: Operatoren, die NULL-Werte zulassen (F#)
-description: Informationen Sie zu den Nullwert-Operatoren, die in der Programmiersprache f# verfügbar sind.
+description: Informationen Sie zu den Nullwert-Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 05/16/2016
 ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

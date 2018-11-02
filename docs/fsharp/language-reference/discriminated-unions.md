@@ -84,7 +84,7 @@ Normalerweise können die Fallbezeichner verwendet werden, ohne sie durch den Na
 
 ### <a name="unwrapping-discriminated-unions"></a>Zum Entpacken Unterscheidungs-Unions
 
-In f# Unterscheidungs-Unions werden häufig verwendet in objektorientierten domänenmodellierung für das Umschließen eines einzelnen Typs. Es ist einfach, um den zugrunde liegenden Wert über den Musterabgleich sowie zu extrahieren. Sie müssen nicht für einen einzelnen Fall einen Vergleichsausdruck zu verwenden:
+In F# Unterscheidungs-Unions werden häufig verwendet in objektorientierten domänenmodellierung für das Umschließen eines einzelnen Typs. Es ist einfach, um den zugrunde liegenden Wert über den Musterabgleich sowie zu extrahieren. Sie müssen nicht für einen einzelnen Fall einen Vergleichsausdruck zu verwenden:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -103,7 +103,7 @@ let someMethodUsingShaderProgram shaderProgram =
 
 ## <a name="struct-discriminated-unions"></a>Diskriminierte Unions
 
-Ab f# 4.1, können Sie auch Unterscheidungs-Unions als Strukturen darstellen.  Dies erfolgt mit der `[<Struct>]` Attribut.
+Ab F# 4.1, können Sie auch Unterscheidungs-Unions als Strukturen darstellen.  Dies erfolgt mit der `[<Struct>]` Attribut.
 
 ```fsharp
 [<Struct>]

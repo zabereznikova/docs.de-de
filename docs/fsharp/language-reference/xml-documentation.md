@@ -1,6 +1,6 @@
 ---
 title: XML-Dokumentation (F#)
-description: Erfahren Sie mehr über Unterstützung für in f#, zum Generieren von Dokumentation aus Kommentaren.
+description: Erfahren Sie mehr über Unterstützung für in F#, zum Generieren von Dokumentation aus Kommentaren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a4cb132e65b630821e5eb2b39276c1de99aff80
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "45641624"
 ---
 # <a name="xml-documentation"></a>XML-Dokumentation
 
-Sie können die Dokumentation von drei Schrägstrichen (/ / /) erstellen code in f#. XML-Kommentaren können Deklarationen in Codedateien (sein) oder Signaturdateien (".FSI") vorangestellt sein.
+Sie können die Dokumentation von drei Schrägstrichen (/ / /) erstellen code in F#. XML-Kommentaren können Deklarationen in Codedateien (sein) oder Signaturdateien (".FSI") vorangestellt sein.
 
 ## <a name="generating-documentation-from-comments"></a>Generieren von Dokumentation aus Kommentaren
 
-Die Unterstützung in f# für das Generieren von Dokumentation aus Kommentaren ist identisch, die in anderen .NET Framework-Sprachen. Wie in anderen .NET Framework-Sprachen die [-Doc-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) ermöglicht es Ihnen, eine XML-Datei zu erzeugen, die Informationen enthält, die Sie zur Dokumentation mithilfe eines Tools wie Sandcastle konvertieren können. Die Dokumentation mithilfe von Tools, sind für die Verwendung mit Assemblys, die in anderen .NET Framework-Sprachen, in der Regel geschrieben wurden generiert erzeugen einen Überblick über die APIs, die basierend auf der kompilierten Form eines f#-Konstrukte. Wenn Tools speziell F#-Unterstützung entspricht Dokumentation, die von diesen Tools generiert die F#-Ansicht einer API nicht.
+Die Unterstützung in F# für das Generieren von Dokumentation aus Kommentaren ist identisch, die in anderen .NET Framework-Sprachen. Wie in anderen .NET Framework-Sprachen die [-Doc-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) ermöglicht es Ihnen, eine XML-Datei zu erzeugen, die Informationen enthält, die Sie zur Dokumentation mithilfe eines Tools wie Sandcastle konvertieren können. Die Dokumentation mithilfe von Tools, sind für die Verwendung mit Assemblys, die in anderen .NET Framework-Sprachen, in der Regel geschrieben wurden generiert erzeugen einen Überblick über die APIs, die basierend auf der kompilierten Form eines F#-Konstrukte. Wenn Tools speziell F#-Unterstützung entspricht Dokumentation, die von diesen Tools generiert die F#-Ansicht einer API nicht.
 
 Weitere Informationen zum Generieren von Dokumentation aus XML finden Sie unter [XML-Dokumentationskommentare &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
 

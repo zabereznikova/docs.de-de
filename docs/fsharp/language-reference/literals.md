@@ -1,6 +1,6 @@
 ---
 title: Literale (F#)
-description: Erfahren Sie, bis die Literaltypen in der Programmiersprache f#.
+description: Erfahren Sie, bis die Literaltypen in der Programmiersprache F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,7 +47,7 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 
 Unicode-Zeichenfolgen können explizite Codierungen, die Sie angeben können, indem Sie mithilfe von enthalten `\u` gefolgt von einem hexadezimalen 16-Bit-Code oder UTF-32-Codierungen, die Sie angeben können, indem Sie mithilfe von `\U` gefolgt von eine hexadezimale 32-Bit-Code, der eine Unicode-darstellt das Ersatzzeichenpaar.
 
-Ab f# 3.1, können Sie die `+` melden Sie beim Kombinieren von Zeichenfolgenliteralen. Sie können auch das bitweise verwenden oder (`|||`) Operator, um Enumerationsflags zu kombinieren. In F# 3.1 ist beispielsweise der folgende Code zulässig:
+Ab F# 3.1, können Sie die `+` melden Sie beim Kombinieren von Zeichenfolgenliteralen. Sie können auch das bitweise verwenden oder (`|||`) Operator, um Enumerationsflags zu kombinieren. In F# 3.1 ist beispielsweise der folgende Code zulässig:
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Unterstriche in numerischen Literalen
 
-Ab f# 4.1, können Sie Ziffern mit einem Unterstrich trennen (`_`).
+Ab F# 4.1, können Sie Ziffern mit einem Unterstrich trennen (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF

@@ -1,5 +1,5 @@
 ---
-title: Kopieren und Aktualisieren von Datensatzausdrücken (f#)
+title: Kopieren und Aktualisieren von Datensatzausdrücken (F#)
 description: Informationen Sie zum Schreiben von 'kopieren und aktualisieren Datensatz Ausdruck', die einen vorhandenen Datensatz, Updates kopiert Felder angegeben und gibt den aktualisierten Datensatz zurück.
 author: ChrSteinert
 ms.date: 06/04/2016

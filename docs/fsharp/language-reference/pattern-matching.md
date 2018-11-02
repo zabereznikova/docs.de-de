@@ -1,6 +1,6 @@
 ---
 title: Musterabgleich (F#)
-description: Erfahren Sie, wie Muster werden in f# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
+description: Erfahren Sie, wie Muster werden in F# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

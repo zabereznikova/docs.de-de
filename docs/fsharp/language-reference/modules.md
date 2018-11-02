@@ -1,6 +1,6 @@
 ---
 title: Module (F#)
-description: Erfahren Sie, wie eine f#-Modul eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm.
+description: Erfahren Sie, wie eine F#-Modul eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm.
 ms.date: 04/24/2017
 ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45528525"
 ---
 # <a name="modules"></a>Module
 
-Im Rahmen der Sprache f# eine *Modul* ist eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm. Das Gruppieren von Code in Modulen hilft dabei, verwandten Code zusammen zu halten und Namenskonflikte in Ihrem Programm zu vermeiden.
+Im Rahmen der Sprache F# eine *Modul* ist eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm. Das Gruppieren von Code in Modulen hilft dabei, verwandten Code zusammen zu halten und Namenskonflikte in Ihrem Programm zu vermeiden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Hinweise
 
-Eine f#-Modul ist eine Gruppierung von F#-Code-Konstrukte wie Typen, Werte, Werte von Funktionen und -Code in `do` Bindungen. Es wird als eine common Language Runtime (CLR)-Klasse implementiert, die nur statische Member verfügt. Es gibt zwei Arten von Moduldeklarationen, je nachdem, ob die gesamte Datei im Modul enthalten ist: eine Moduldeklaration der obersten Ebene und einem lokalen Modul-Deklaration. Eine Deklaration Modul auf oberster Ebene enthält die gesamte Datei im Modul an. Eine Moduldeklaration auf oberster Ebene kann nur als die erste Deklaration in einer Datei angezeigt werden.
+Eine F#-Modul ist eine Gruppierung von F#-Code-Konstrukte wie Typen, Werte, Werte von Funktionen und -Code in `do` Bindungen. Es wird als eine common Language Runtime (CLR)-Klasse implementiert, die nur statische Member verfügt. Es gibt zwei Arten von Moduldeklarationen, je nachdem, ob die gesamte Datei im Modul enthalten ist: eine Moduldeklaration der obersten Ebene und einem lokalen Modul-Deklaration. Eine Deklaration Modul auf oberster Ebene enthält die gesamte Datei im Modul an. Eine Moduldeklaration auf oberster Ebene kann nur als die erste Deklaration in einer Datei angezeigt werden.
 
 In der Syntax für die Deklaration Modul auf oberster Ebene, die den optionalen *qualifizierter Namespace* ist die Sequenz der geschachtelten Namespace-Namen, die das Modul enthält. Die vollqualifizierten Namespace muss nicht zuvor deklariert werden.
 
@@ -128,9 +128,9 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die Klasse `Banana` beide sich aufeinander beziehen.  Darüber hinaus das Modul `BananaHelpers` und die Klasse `Banana` auch sich aufeinander beziehen.  Dies ist nicht möglich, die in f# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `RecursiveModule` Modul.
+Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die Klasse `Banana` beide sich aufeinander beziehen.  Darüber hinaus das Modul `BananaHelpers` und die Klasse `Banana` auch sich aufeinander beziehen.  Dies ist nicht möglich, die in F# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `RecursiveModule` Modul.
 
-Diese Funktion ist auch möglich, im [Namespaces](namespaces.md) mit f# 4.1.
+Diese Funktion ist auch möglich, im [Namespaces](namespaces.md) mit F# 4.1.
 
 ## <a name="see-also"></a>Siehe auch
 

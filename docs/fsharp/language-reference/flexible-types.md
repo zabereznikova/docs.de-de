@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-In f# sind wie in anderen objektorientierten Sprachen Kontexte, die in denen abgeleiteten Typen oder Typen, die Schnittstellen implementieren automatisch in einem Basistyp oder der Schnittstellentyp konvertiert werden. Diesen automatischen Konvertierungen erfolgen in direkten Argumente, jedoch nicht, wenn der Typ in eine untergeordnete Position, als Teil einer komplexeren Typ wie einen Rückgabetyp eines Funktionstyps oder als ein Argument vom Typ ist. Daher ist die flexiblen Typ Notation vor allem nützlich, wenn der Typ, die, dem Sie sie anwenden können, sind, Teil eines komplexen Typs ist.
+In F# sind wie in anderen objektorientierten Sprachen Kontexte, die in denen abgeleiteten Typen oder Typen, die Schnittstellen implementieren automatisch in einem Basistyp oder der Schnittstellentyp konvertiert werden. Diesen automatischen Konvertierungen erfolgen in direkten Argumente, jedoch nicht, wenn der Typ in eine untergeordnete Position, als Teil einer komplexeren Typ wie einen Rückgabetyp eines Funktionstyps oder als ein Argument vom Typ ist. Daher ist die flexiblen Typ Notation vor allem nützlich, wenn der Typ, die, dem Sie sie anwenden können, sind, Teil eines komplexen Typs ist.
 
 ## <a name="see-also"></a>Siehe auch
 

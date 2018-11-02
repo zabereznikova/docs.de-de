@@ -1,6 +1,6 @@
 ---
-title: Grundlegende Typen (f#)
-description: Entdecken Sie die grundlegenden, einfachen Typen, die in der Sprache f# verwendet werden.
+title: Grundlegende Typen (F#)
+description: Entdecken Sie die grundlegenden, einfachen Typen, die in der Sprache F# verwendet werden.
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48026935"
 ---
 # <a name="basic-types"></a>Grundlegende Typen
 
-Dieses Thema enthält die grundlegenden Typen, die in der F#-Sprache definiert sind. Diese Typen sind der wichtigste in f#, bilden die Grundlage für fast jede f#-Programm. Sie sind eine Obermenge von primitiven .NET-Typen.
+Dieses Thema enthält die grundlegenden Typen, die in der F#-Sprache definiert sind. Diese Typen sind der wichtigste in F#, bilden die Grundlage für fast jede F#-Programm. Sie sind eine Obermenge von primitiven .NET-Typen.
 
 |Typ|.NET-Typ|Beschreibung|
 |----|---------|-----------|

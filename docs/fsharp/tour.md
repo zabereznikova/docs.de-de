@@ -1,5 +1,5 @@
 ---
-title: Einführung in f#
+title: Einführung in F#
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
 ms.date: 02/28/2018
 ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "50235712"
 ---
-# <a name="tour-of-f"></a>Einführung in f# #
+# <a name="tour-of-f"></a>Einführung in F# #
 
 Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben.  Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können.  Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
 

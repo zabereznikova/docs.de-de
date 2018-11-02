@@ -1,77 +1,77 @@
 ---
-title: Cross-Plattform-Ausrichtung
+title: Plattformübergreifende Ziele
 description: Empfehlungen für bewährte Methoden zum Erstellen von plattformübergreifenden .NET Bibliotheken.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374892"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202815"
 ---
-# <a name="cross-platform-targeting"></a>Cross-Plattform-Ausrichtung
+# <a name="cross-platform-targeting"></a>Plattformübergreifende Ziele
 
-Moderne .NET unterstützt mehrere Betriebssysteme und Geräte. Es ist wichtig für .NET Open Source-Bibliotheken, um so viele Entwickler wie möglich zu unterstützen, erstellen sie eine ASP.NET-Website in Azure oder ein .NET-Spiels in Unity gehostet.
+Modernes .NET unterstützt mehrere Betriebssysteme und Geräte. Es ist wichtig, dass .NET-Open-Source-Bibliotheken so viele Entwickler wie möglich unterstützen, unabhängig davon, ob sie eine in Azure gehostete ASP.NET-Website oder ein .NET-Spiel in Unity erstellen.
 
-## <a name="net-standard"></a>.NET-Standard
+## <a name="net-standard"></a>.NET Standard
 
-.NET standard ist die beste Möglichkeit, plattformübergreifende Unterstützung einer .NET Bibliothek hinzufügen. [.NET standard](../net-standard.md) ist eine Spezifikation von .NET-APIs, die in allen .NET-Implementierungen verfügbar sind. Von .NET Standard können Sie die Bibliotheken zu erstellen, die darauf beschränkt sind, die APIs verwenden, die in einer bestimmten Version von .NET Standard sind. Dies bedeutet, dass er kann verwendet werden von allen Plattformen, die diese Version von .NET Standard zu implementieren.
+.NET Standard ist die beste Möglichkeit, plattformübergreifenden Support zu einer .NET-Bibliothek hinzuzufügen. [.NET Standard](../net-standard.md) ist eine Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sind. Mit dem Targeting von .NET Standard können Sie Bibliotheken erstellen, die nur APIs verwenden dürfen, die sich in einer bestimmten Version von .NET Standard befinden. Das bedeutet, dass es von allen Plattformen verwendet werden kann, die diese Version von .NET Standard implementieren.
 
 ![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
-Auf .NET Standard abzielen und Ihrem Projekt erfolgreich zu kompilieren garantiert, dass die Bibliothek erfolgreich ausgeführt wird, auf allen Plattformen nicht:
+Das Targeting von .NET Standard und die erfolgreiche Kompilierung Ihres Projekts garantieren nicht, dass die Bibliothek auf allen Plattformen erfolgreich läuft:
 
-1. Plattformspezifische APIs fehl auf anderen Plattformen. Z. B. <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> erfolgreich auf Windows und löst <xref:System.PlatformNotSupportedException> bei allen anderen Betriebssystemen.
-2. APIs können sich unterschiedlich Verhalten. Beispielsweise verfügen über Reflektion APIs unterschiedliche Leistungsmerkmale, wenn eine Anwendung verwendet die ahead-of-Time-Kompilierung auf iOS oder UWP.
+1. Bei plattformspezifischen APIs tritt auf anderen Plattformen ein Fehler auf. Beispielsweise wird <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> unter Windows erfolgreich ausgeführt, gibt jedoch unter anderen Betriebssystemen <xref:System.PlatformNotSupportedException> aus.
+2. APIs können sich unterschiedlich verhalten. Beispielsweise haben Reflektions-APIs unterschiedliche Leistungsmerkmale, wenn eine Anwendung eine Ahead-of-time-Kompilierung auf iOS oder UWP verwendet.
 
 > [!TIP]
-> Das .NET Team [bietet ein Roslyn-Analysetool](../analyzers/api-analyzer.md) können Sie mögliche Probleme zu ermitteln.
+> Das .NET-Team [bietet ein Roslyn-Analysetool](../analyzers/api-analyzer.md) zur Erkennung möglicher Probleme.
 
-**✔️ FÜHREN** beginnen Sie mit, einschließlich einer `netstandard2.0` Ziel.
+**✔️ DO** Beginnen Sie, indem Sie ein `netstandard2.0`-Ziel einschließen.
 
-> Die meisten Bibliotheken für allgemeine Zwecke sollte die APIs außerhalb von .NET Standard 2.0 nicht erforderlich. .NET standard 2.0 wird von allen modernen Plattformen unterstützt und ist die empfohlene Methode zur Unterstützung mehrerer Plattformen mit einem Ziel.
+> Die meisten Bibliotheken für allgemeine Zwecke sollte außerhalb von .NET Standard 2.0 keine APIs erfordern. .NET Standard 2.0 wird von allen modernen Plattformen unterstützt und ist der empfohlene Weg, um mehrere Plattformen mit einem Ziel zu unterstützen.
 
-**❌ Vermeiden** einschließlich einer `netstandard1.x` Ziel.
+**❌ VERMEIDEN** Sie ein `netstandard1.x`-Ziel.
 
-> .NET standard 1.x als präzise Satz von NuGet-Pakete, die ein großes Paket Abhängigkeitsdiagramm erstellt und führt zu viele Pakete herunterladen, beim Erstellen von Entwicklern verteilt wird. Moderne .NET-Plattformen, einschließlich .NET Framework 4.6.1, UWP und Xamarin unterstützen .NET Standard 2.0. Sie sollten nur .NET Standard abzielen 1.x, wenn Sie explizit eine ältere Plattform müssen.
+> .NET Standard 1.x wird als ein granularer Satz von NuGet-Paketen verteilt, der ein großes Abhängigkeitsdiagramm erstellt und dazu führt, dass Entwickler beim Erstellen viele Pakete herunterladen. Moderne .NET-Plattformen, einschließlich .NET Framework 4.6.1, UWP und Xamarin unterstützen .NET Standard 2.0. Sie sollten.NET Standard 1.x nur dann als Ziel verwenden, wenn Sie speziell auf eine ältere Plattform abzielen müssen.
 
-**✔️ FÜHREN** enthalten eine `netstandard2.0` abzielen, wenn Sie benötigen eine `netstandard1.x` Ziel.
+**✔️ DO** Schließen Sie ein `netstandard2.0`-Ziel ein, wenn Sie ein `netstandard1.x`-Ziel benötigen.
 
-> Alle Plattformen unterstützen .NET Standard 2.0 verwenden die `netstandard2.0` abzielen und davon profitieren, müssen eine kleinere Paketdiagramm während ältere Plattformen werden weiterhin funktionieren und alternative der `netstandard1.x` Ziel.
+> Alle Plattformen, die .NET Standard 2.0 unterstützen, verwenden das `netstandard2.0`-Ziel und profitieren von einem kleineren Paketdiagramm, während ältere Plattformen noch funktionieren und auf die Verwendung des `netstandard1.x`-Ziels zurückgreifen.
 
-**❌ NICHT** fügen Sie ein .NET Standard-Ziel aus, wenn die Bibliothek in einem plattformspezifischen app-Modell basiert.
+**❌ DON‘T** Fügen Sie kein .NET Standard-Ziel ein, wenn die Bibliothek auf einem plattformspezifischen Appmodell basiert.
 
-> Beispielsweise ist eine UWP-Steuerelement-Toolkit-Bibliothek auf eine app-Modell, das nur in UWP verfügbar ist. App-Modell-spezifische APIs werden nicht in .NET Standard verfügbar sein.
+> Beispielsweise hängt eine Bibliothek eines UWP-Steuerelemente-Toolkit von einem Appmodell ab, das nur in UWP verfügbar ist. Appmodell-spezifische APIs sind nicht in .NET Standard verfügbar.
 
 ## <a name="multi-targeting"></a>Festlegung von Zielversionen
 
-Manchmal müssen Sie Framework-spezifische APIs aus Ihren Bibliotheken zuzugreifen. Die beste Möglichkeit, Framework-spezifischen APIs aufzurufen verwendet die Festlegung von Zielversionen, der das Projekt erstellt wurde für viele [Zielframeworks für .NET](../frameworks.md) statt auf nur einen.
+Manchmal müssen über Ihre Bibliotheken auf Framework-spezifische APIs zugreifen. Der beste Weg, Framework-spezifische APIs aufzurufen, ist die Verwendung der Festlegung von Zielversionen, das Ihr Projekt für viele [.NET-Zielframeworks](../frameworks.md) und nicht nur für eines erstellt.
 
-Zum schützen Ihre Kunden für die einzelnen Frameworks erstellen müssen, sollten Sie sich bemühen, um eine .NET Standard-Ausgabe und eine oder mehrere frameworkspezifische Ausgaben zu erhalten. Mit der Festlegung von Zielversionen werden alle Assemblys in einem einzelnen NuGet-Paket verpackt. Kunden können dann das gleiche Paket verweisen, und wählt NuGet die entsprechende Implementierung. .NET Standard-Bibliothek fungiert, wie die fallback-Bibliothek, die überall, mit Ausnahme der Fälle, in denen Ihr NuGet-Paket für eine Framework-spezifische Implementierung bietet. Festlegung von Zielversionen, können Sie für die bedingte Kompilierung in Ihrem Code verwenden und frameworkspezifische-APIs aufrufen.
+Um Ihre Kunden davor zu schützen, Bibliotheken für einzelne Frameworks erstellen zu müssen, sollten Sie eine .NET Standard-Ausgabe sowie eine oder mehrere Framework-spezifische Ausgaben anstreben. Bei der Festlegung von Zielversionen werden alle Assemblys in einem einzigen NuGet-Paket verpackt. Die Benutzer können dann auf das gleiche Paket zurückgreifen, und NuGet wählt die passende Implementierung aus. Ihre .NET Standard-Bibliothek dient als Fallbackbibliothek, die überall verwendet wird, mit Ausnahme der Fälle, in denen Ihr NuGet-Paket eine Framework-spezifische Implementierung bietet. Die Festlegung von Zielversionen ermöglicht es Ihnen, die bedingte Kompilierung in Ihrem Code zu verwenden und Framework-spezifische APIs aufzurufen.
 
 ![NuGet-Paket mit mehreren Assemblys](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "NuGet-Paket mit mehreren Assemblys")
 
-**✔️ GGF.** für Implementierungen von .NET zusätzlich zu .NET Standard.
+**✔️ ERWÄGEN.** Sie das Targeting von .NET-Implementierungen zusätzlich zu .NET Standard.
 
-> Implementierungen von .NET Zielframework ist, können Sie plattformspezifische APIs aufrufen, die außerhalb von .NET Standard sind.
+> Das Targeting von .NET-Implementierungen ermöglichen es Ihnen, plattformspezifische APIs aufzurufen, die sich außerhalb von .NET-Standard befinden.
 >
-> Unterstützung für .NET Standard kann nicht gelöscht werden, wenn Sie dies tun. Stattdessen lösen Sie, die von der Implementierung und bieten Sie die Möglichkeit, APIs. Auf diese Weise Ihre Bibliothek kann überall verwendet werden und unterstützt die Common Language Runtime-Light-Up Features.
+> Dabei muss weiterhin der Support für .NET Standard gewährleistet sein. Lösen Sie sich stattdessen von der Implementierung und bieten Sie Funktions-APIs. Auf diese Weise kann Ihre Bibliothek überall verwendet werden und unterstützt die Runtimehervorhebung von Funktionen.
 
-**❌ Vermeiden** mit Festlegung von Zielversionen mit .NET Standard, wenn Sie Ihren Quellcode, die für alle Ziele identisch ist.
+**❌ VERMEIDEN** Sie die Festlegung von Zielversionen mit .NET Standard, wenn Ihr Quellcode für alle Ziele identisch ist.
 
-> Die .NET Standard-Assembly wird automatisch von NuGet verwendet werden. Ziel der einzelnen Implementierungen von .NET steigt die `*.nupkg` für keinen Vorteil.
+> Die .NET Standard-Assembly wird von NuGet automatisch verwendet. Das Targeting einzelner .NET-Implementierungen erhöht die `*.nupkg`-Größe, ohne dass sich daraus Vorteil ergeben.
 
-**✔️ GGF.** Hinzufügen eines Ziels für `net461` bieten Sie bei einem `netstandard2.0` Ziel. 
+**✔️ ERWÄGEN** Sie, ein Ziel für `net461` hinzuzufügen, wenn Sie ein `netstandard2.0`-Ziel anbieten. 
 
-> Mit .NET Standard 2.0 von .NET Framework weist einige Probleme, die in .NET Framework 4.7.2 behoben wurden. Sie können die Oberfläche für Entwickler verbessern, die auf .NET Framework 4.6.1 – 4.7.1, indem sie eine Binärdatei, die für .NET Framework 4.6.1 basiert anbieten.
+> Bei der Verwendung von .NET Standard 2.0 aus .NET Framework gibt es einige Probleme, die in .NET Framework 4.7.2 behoben wurden. Sie können das Erlebnis für Entwickler, die noch mit .NET Framework 4.6.1 bis 4.7.1 arbeiten, verbessern, indem Sie ihnen eine Binärdatei anbieten, die für .NET Framework 4.6.1 erstellt wurde.
 
-**Führen Sie ✔️** Ihre Bibliothek mithilfe von NuGet-Paket verteilen.
+**✔️ DO** Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
 
-> NuGet wird wählen Sie das beste Ziel für den Entwickler und geschützt werden, müssen Sie die entsprechende Implementierung auswählen.
+> NuGet wählt das beste Ziel für den Entwickler aus und schützt ihn davor, die passende Implementierung auswählen zu müssen.
 
-**Führen Sie ✔️** verwenden eine Projektdatei `TargetFrameworks` -Eigenschaft bei der Festlegung von Zielversionen.
+**✔️ DO** Verwenden Sie bei der Festlegung von Zielversionen die `TargetFrameworks`-Eigenschaft der Projektdatei.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -82,17 +82,17 @@ Zum schützen Ihre Kunden für die einzelnen Frameworks erstellen müssen, sollt
 </Project>
 ```
 
-**✔️ GGF.** mit [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras) bei der Festlegung von Zielversionen für UWP und Xamarin, wie sie Ihre Projektdatei vereinfacht.
+**✔ ERWÄGEN** Sie bei der Festlegung von Zielversionen für UWP und Xamarin die Verwendung von [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras), da es Ihre Projektdatei stark vereinfacht.
 
 ## <a name="older-targets"></a>Ältere Ziele
 
-.NET unterstützt die Zielgruppenadressierung anhand bestimmter Versionen von .NET Framework, die sind lange Out-of-Support als auch für Plattformen, die nicht mehr häufig verwendet werden. Während bei der Erstellung Ihrer Bibliothek Arbeit auf wie viele Ziele wie möglich erfolgt, müssen zur Umgehung fehlender APIs hinzufügen können erheblichen Aufwand Wert vorhanden ist. Wir glauben sicher, dass Frameworks nicht mehr lohnt, abzielen, sind in Betracht ziehen, ihre Reichweite und Einschränkungen.
+.NET unterstützt die Festlegung von Versionen des .NET Frameworks, die seit langem nicht mehr unterstützt werden, sowie Plattformen, die selten verwendet werden. Es ist zwar sinnvoll, Ihre Bibliothek mit so vielen Zielen wie möglich arbeiten zu lassen, aber die Notwendigkeit, fehlende APIs zu umgehen, kann zu einem erheblichen Aufwand führen. Wir glauben, dass bestimmte Frameworks angesichts ihrer Reichweite und Grenzen nicht mehr als Ziel genutzt werden sollten.
 
-**❌ NICHT** fügen Sie ein Ziel für die Portable Klassenbibliothek (PCL). Beispielsweise `portable-net45+win8+wpa81+wp8`.
+**❌ DON‘T** Schließen Sie keine portable Klassenbibliothek (PCL) als Ziel ein. Beispielsweise `portable-net45+win8+wpa81+wp8`.
 
-> .NET standard ist die moderne Möglichkeit zur Unterstützung von Cross-Platform-Bibliotheken für .NET und ersetzt PCLs.
+> .NET Standard ist die moderne Möglichkeit, um plattformübergreifende .NET-Bibliotheken zu unterstützen und ist der Ersatz für PCLs.
 
-**❌ NICHT** schließt Ziele für .NET-Plattformen, die nicht mehr unterstützt werden. Platzhalter in einer derartigen Schreibweise sind z.B. `SL4` und `WP`.
+**❌ DON‘T** Schließen Sie keine Ziele für .NET-Plattformen ein, die nicht mehr unterstützt werden. Platzhalter in einer derartigen Schreibweise sind z.B. `SL4` und `WP`.
 
 >[!div class="step-by-step"]
 [Zurück](./get-started.md)

@@ -56,7 +56,7 @@ Funktionen zum Ausführen von Operationen mit Listen finden Sie in der [listenmo
 
 Da Listen in F# unveränderlich sind, erstellen alle modifizierenden Operationen neue Listen, anstatt die vorhandenen Listen zu verändern.
 
-Listen in f# als einfach verknüpfte Listen, was bedeutet, dass Vorgänge, die nur der Anfang der Liste zugreifen, O(1) sind, implementiert und Elementzugriff ist O (*n*).
+Listen in F# als einfach verknüpfte Listen, was bedeutet, dass Vorgänge, die nur der Anfang der Liste zugreifen, O(1) sind, implementiert und Elementzugriff ist O (*n*).
 
 ## <a name="properties"></a>Eigenschaften
 

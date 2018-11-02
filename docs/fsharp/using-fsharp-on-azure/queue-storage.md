@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit Azure Queue Storage mit f#
+title: Erste Schritte mit Azure Queue Storage mit F#
 description: Azure-Warteschlangen bieten zuverlässiges, asynchrones messaging zwischen Anwendungskomponenten. Cloud-messaging ermöglicht Ihren Anwendungskomponenten die unabhängige Skalierung.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569413"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Erste Schritte mit Azure Queue Storage mit f# #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Erste Schritte mit Azure Queue Storage mit F# #
 
 Azure Queue Storage ermöglicht cloudmessaging zwischen Anwendungskomponenten. Beim Entwerfen von Anwendungen für umfangreiche Skalierung, werden häufig einzelne Anwendungskomponenten entkoppelt, damit sie unabhängig voneinander skaliert werden können. Queue Storage bietet asynchrones messaging für die Kommunikation zwischen Komponenten einer Anwendung, ob sie in der Cloud, auf dem Desktop, auf einem lokalen Server oder auf einem mobilen Gerät ausgeführt werden. Queue Storage unterstützt auch die Verwaltung asynchroner Aufgaben und Aufbau von Prozessworkflows.
 
@@ -25,7 +25,7 @@ Eine grundlegende Übersicht von Queue Storage finden Sie unter [.NET Guide für
 Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account).
 Sie benötigen für dieses Konto auch Ihren speicherzugriffsschlüssel.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten f# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
 In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `queues.fsx`, in der F#-Entwicklungsumgebung.
 

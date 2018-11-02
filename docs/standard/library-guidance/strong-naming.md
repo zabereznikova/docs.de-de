@@ -1,21 +1,21 @@
 ---
-title: Starke Namen und Bibliotheken für .NET
-description: Best Practice-Empfehlungen für starke Benennung Bibliotheken für .NET.
+title: Starke Namen und .NET-Bibliotheken
+description: Empfehlungen für bewährte Methoden für starke Namen für .NET-Bibliotheken.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: e3f7d443eb9acc84c800ea2611b803733085391c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372805"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201451"
 ---
 # <a name="strong-naming"></a>Starke Namen
 
-Starke Namen verweist, auf das Signieren einer Assembly mit einem Schlüssel erzeugt eine [Assembly mit starkem Namen](../../framework/app-domains/strong-named-assemblies.md). Wenn eine Assembly mit starkem Namen handelt, erstellt eine eindeutige Identität, die basierend auf den Namen und die Assembly-Versionsnummer, und es verhindert assemblykonflikte.
+Starke Namen bezieht sich auf das Signieren einer Assembly mit einem Schlüssel, wodurch eine [Assembly mit starkem Namen](../../framework/app-domains/strong-named-assemblies.md) entsteht. Wenn eine Assembly einen starken Namen hat, erzeugt sie eine eindeutige Identität basierend auf dem Namen und der Versionsnummer der Assembly, und dies kann helfen, Konflikte in der Assembly zu vermeiden.
 
-Starke Namen in der Nachteil ist, dass .NET Framework unter Windows ermöglicht strict Laden von Assemblys aus, sobald eine Assembly einen starken Namen besitzt. Ein Assemblyverweis mit starkem Namen muss genau die Version, die auf die verwiesen wird von einer Assembly, die Entwickler zu zwingen [konfigurieren bindungsumleitungen](../../framework/configure-apps/redirect-assembly-versions.md) , wenn die Assembly verwenden:
+Der Nachteil eines starken Namens ist, dass das .NET Framework unter Windows ein striktes Laden von Assemblys ermöglicht, sobald eine Assembly einen starken Namen hat. Eine Referenz auf eine Assembly mit starkem Namen muss genau der Version entsprechen, auf die eine Assembly verweist. Dadurch sind Entwickler gezwungen, [Bindungsumleitungen](../../framework/configure-apps/redirect-assembly-versions.md) zu konfigurieren, wenn sie die Assembly verwenden:
 
 ```xml
 <configuration>
@@ -30,43 +30,45 @@ Starke Namen in der Nachteil ist, dass .NET Framework unter Windows ermöglicht 
 </configuration>
 ```
 
-Wenn starke Namen in .NET Entwickler der Adresssyntax, ist was sie in der Regel zu beschweren sind strenge beim Laden von Assemblys. Glücklicherweise wird dieses Problem isoliert auf .NET Framework. .NET Core, Xamarin, UWP und die meisten anderen Implementierungen von .NET keine strenge beim Laden von Assemblys und den wichtigsten Nachteil von starken Namen entfernt.
+Wenn sich .NET-Entwickler über starke Namen beschweren, geht es in der Regel um das strikte Laden einer Assembly. Dieses Problem wurde im .NET Framework isoliert. .NET Core, Xamarin, UWP und die meisten anderen .NET-Implementierungen haben kein striktes Laden von Assemblys und weisen so den wesentlichen Nachteil eines starken Namens nicht auf.
 
-Ein wichtiger Aspekt der starke Namen ist, dass es viraler handelt: einen starken Namen Assembly können nur auf anderen starken Namens Assemblys. Wenn Ihre Bibliothek nicht sichere mit dem Namen ist, haben Sie Entwickler ausgeschlossen, die eine Anwendung oder Bibliothek, die benötigt wird, verwenden sie starke Namen erstellen.
+Ein wichtiger Aspekt eines starken Namens ist, dass sie viral ist: eine Assembly mit einem starken Namen kann nur auf andere Assemblys mit einem starken Namen verweisen. Wenn Ihre Bibliothek keinen starken Namen hat, dann haben Sie Entwickler, die eine Anwendung oder Bibliothek erstellen, die einen starken Namen benötigt, von der Verwendung ausgeschlossen.
 
 Die Vorteile der starken Namen sind:
 
-1. Die Assembly auf die verwiesen wird, und von anderen Assemblys mit starkem Namen verwendet werden kann.
-2. Die Assembly kann in den globalen Assemblycache (GAC) gespeichert werden.
-3. Die Assembly kann parallel mit anderen Versionen der Assembly geladen werden. Laden von Assemblys für Seite-an-Seite ist im Allgemeinen von Anwendungen mit Plug-in-Architekturen erforderlich.
+1. Die Assembly kann nur von anderen Assemblys mit starkem Namen referenziert und verwendet werden.
+2. Die Assembly kann im globalen Assemblycache (GAC) gespeichert werden.
+3. Die Assembly kann parallel mit anderen Versionen der Assembly geladen werden. Das parallele Laden von Assemblys ist häufig für Anwendungen mit Plug-in-Architekturen erforderlich.
 
-## <a name="create-strong-named-net-libraries"></a>Erstellen Sie sichere mit dem Namen Bibliotheken für .NET
+## <a name="create-strong-named-net-libraries"></a>Erstellen von .NET-Bibliotheken mit starkem Namen
 
-Sie sollten Ihre Open-Source-Bibliotheken .NET strong benennen. Starke Namen einer Assemblys wird sichergestellt, die meisten Personen Sie verwenden können, und nur strenge assamblys wirkt sich auf .NET Framework.
+Sie sollten Ihren .NET-Open-Source-Bibliotheken einen starken Namen geben. Der starke Name einer Assembly stellt sicher, dass die meisten Benutzer sie verwenden können, und das strikte Laden der Assembly betrifft nur das .NET Framework.
 
 > [!NOTE]
-> Diese Anleitung bezieht sich auf öffentlich verteilte Bibliotheken für .NET, wie z. B. Bibliotheken für .NET auf NuGet.org veröffentlicht. Starke Namen ist nicht von den meisten Anwendungen für .NET erforderlich und sollte nicht standardmäßig ausgeführt werden.
+> Diese Anleitung bezieht sich auf öffentlich verteilte .NET-Bibliotheken, wie z.B. auf NuGet.org veröffentlichte .NET-Bibliotheken. Ein starker Namen ist für die meisten .NET-Anwendungen nicht erforderlich und sollte nicht standardmäßig vorgenommen werden.
 
-**✔️ GGF.** starke Benennung Ihrer Bibliothek Assemblys.
+**✔️ ERWÄGEN** Sie, Ihren Bibliotheksassemblys einen starken Namen zu geben.
 
-**✔️ GGF.** der Schlüssel zum starken Namen in Ihr Quellcodeverwaltungssystem einchecken.
+**✔️ ERWÄGEN** Sie, den starken Namensschlüssel zu Ihrem Quellcodeverwaltungssystem hinzuzufügen.
 
-> Ein öffentlich verfügbarer Schlüssel ermöglicht Entwicklern das Ändern und Kompilieren Ihren Quellcode der Bibliothek mit dem gleichen Schlüssel.
+> Ein öffentlich verfügbarer Schlüssel ermöglicht es Entwicklern, den Quellcode Ihrer Bibliothek mit demselben Schlüssel zu ändern und neu zu kompilieren.
+> 
+> Sie sollten den starken Namensschlüssel nicht öffentlich machen, wenn er in der Vergangenheit zur Vergabe von Sonderrechten in [teilweise vertrauenswürdigen Szenarien](/dotnet/framework/misc/using-libraries-from-partially-trusted-code) verwendet wurde. Andernfalls können Sie vorhandene Umgebungen beeinträchtigen.
 
 > [!IMPORTANT]
-> Wenn eine kryptografische Identität gewünscht wird, [Authenticode](/windows-hardware/drivers/install/authenticode) und [NuGet-Paketsignierung](/nuget/create-packages/sign-a-package) werden empfohlen. Starke Namen sollten nicht für Überlegungen zur Sicherheit verwendet werden.
+> Wenn die Identität des Herausgebers des Codes erwünscht ist, werden [Authenticode](/windows-hardware/drivers/install/authenticode) und [NuGet-Paketsignierung](/nuget/create-packages/sign-a-package) empfohlen. Die Codezugriffssicherheit (Code Access Security, CAS) sollte nicht zur Risikominderung verwendet werden.
 
-**✔️ GGF.** erhöht die Assemblyversion nur Hauptversion geändert, damit die Benutzer zu reduzieren, bindungsumleitungen, und wie oft sie aktualisiert werden.
+**✔️ ERWÄGEN** Sie, die Assemblyversion nur bei größeren Versionsänderungen zu erhöhen, um Benutzern zu helfen, Bindungsumleitungen und die Häufigkeit ihrer Aktualisierung zu reduzieren.
 
-> Erfahren Sie mehr über [versionsverwaltung und die Version der Assembly](./versioning.md#assembly-version).
+> Erfahren Sie mehr über die [Versionsverwaltung und die Assemblyversion](./versioning.md#assembly-version).
 
-**❌ NICHT** hinzufügen, entfernen oder ändern Sie den Schlüssel für starke benennungen.
+**❌ DON‘T** Sie dürfen den starken Namensschlüssel nicht hinzufügen, entfernen oder ändern.
 
-> Ändern einer Assembly starke Benennung Schlüssel ändert sich der Identität der Assembly und unterbricht kompilierten Code, der verwendet wird. Weitere Informationen finden Sie unter [binäre wichtige Änderungen](./breaking-changes.md#binary-breaking-change).
+> Das Ändern des starken Namensschlüssels einer Assembly ändert die Identität der Assembly und zerlegt kompilierten Code, der ihn verwendet. Weitere Informationen finden Sie unter [Binäre Breaking Changes](./breaking-changes.md#binary-breaking-change).
 
-**❌ NICHT** starken Namen haben und ohne starken Namen Versionen Ihrer Bibliothek veröffentlichen. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
+**❌ DON‘T** Veröffentlichen Sie keine Versionen mit starkem Namen oder nicht starkem Namen Ihrer Bibliothek. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
 
-> Veröffentlichen zwei Pakete Forks umfassendes für Ihre Entwickler. Wenn eine Anwendung je nach beide Pakete am Ende kann Entwickler außerdem namenstypkonflikten auftreten. Als .NET betrifft, sind sie verschiedene Typen in anderen Assemblys.
+> Die Veröffentlichung von zwei Paketen verzweigt Ihr Entwicklerökosystem. Auch wenn eine Anwendung letztendlich von beiden Paketen abhängig ist, kann es bei dem Entwickler zu Typnamenskonflikten kommen. Was .NET betrifft, so sind sie verschiedene Typen in verschiedenen Assemblys.
 
 >[!div class="step-by-step"]
 [Zurück](./cross-platform-targeting.md)

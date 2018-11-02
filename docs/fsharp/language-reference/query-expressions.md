@@ -1,6 +1,6 @@
 ---
 title: Abfrageausdrücke (F#)
-description: Informationen Sie zu Abfrage-Ausdruck-Unterstützung für LINQ, in der Programmiersprache f#.
+description: Informationen Sie zu Abfrage-Ausdruck-Unterstützung für LINQ, in der Programmiersprache F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Hinweise
 
-Abfrageausdrücke sind eine Art von Ausdruck für die Berechnung Sequenzausdrücke ähnelt. Wie Sie eine Sequenz angeben, indem Sie Code in einem Sequenzausdruck bereitstellen, geben Sie einen Satz von Daten durch die Bereitstellung von Code in einem Abfrageausdruck. In einem Sequenzausdruck den `yield` -Schlüsselwort gibt, Daten, die als Teil der resultierenden Sequenz zurückgegeben werden. In Abfrageausdrücken die `select` Schlüsselwort Führt dieselbe Funktion aus. Zusätzlich zu den `select` Schlüsselwort f# unterstützt auch eine Anzahl von Abfrageoperatoren, die ähnlich wie die Teile einer SQL SELECT-Anweisung sind. Hier ist ein Beispiel für einen einfachen Abfrageausdruck, zusammen mit Code, der mit der Northwind-OData-Datenquelle verbunden ist.
+Abfrageausdrücke sind eine Art von Ausdruck für die Berechnung Sequenzausdrücke ähnelt. Wie Sie eine Sequenz angeben, indem Sie Code in einem Sequenzausdruck bereitstellen, geben Sie einen Satz von Daten durch die Bereitstellung von Code in einem Abfrageausdruck. In einem Sequenzausdruck den `yield` -Schlüsselwort gibt, Daten, die als Teil der resultierenden Sequenz zurückgegeben werden. In Abfrageausdrücken die `select` Schlüsselwort Führt dieselbe Funktion aus. Zusätzlich zu den `select` Schlüsselwort F# unterstützt auch eine Anzahl von Abfrageoperatoren, die ähnlich wie die Teile einer SQL SELECT-Anweisung sind. Hier ist ein Beispiel für einen einfachen Abfrageausdruck, zusammen mit Code, der mit der Northwind-OData-Datenquelle verbunden ist.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ Abfrageoperatoren ermöglichen es Ihnen, die Details der Abfrage, wie z. B. ange
 
 Nur Ausdrücke, die in SQL übersetzt werden können, sind in Abfrageausdrücken zulässig. Beispielsweise sind keine Funktionsaufrufe in den Ausdrücken zulässig, bei der Verwendung der `where` -Abfrage-Operator.
 
-Tabelle 1 zeigt die verfügbaren Abfrageoperatoren. Darüber hinaus finden Sie unter Table2, die SQL-Abfragen und den entsprechenden F#-Abfrageausdrücke weiter unten in diesem Thema werden verglichen. Einige Abfrageoperatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der OData-Typanbieter in die Abfrageoperatoren beschränkt, die aufgrund von Beschränkungen im OData unterstützt. Weitere Informationen finden Sie unter [ODataService-Typanbieter (f#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tabelle 1 zeigt die verfügbaren Abfrageoperatoren. Darüber hinaus finden Sie unter Table2, die SQL-Abfragen und den entsprechenden F#-Abfrageausdrücke weiter unten in diesem Thema werden verglichen. Einige Abfrageoperatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der OData-Typanbieter in die Abfrageoperatoren beschränkt, die aufgrund von Beschränkungen im OData unterstützt. Weitere Informationen finden Sie unter [ODataService-Typanbieter (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 In dieser Tabelle wird angenommen, eine Datenbank in der folgenden Form:
 
@@ -499,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Vergleich von Transact-SQL und F#-Abfrageausdrücken
-Die folgende Tabelle zeigt einige allgemeinen Transact-SQL-Abfragen und deren Entsprechungen in f#. Der Code in dieser Tabelle wird vorausgesetzt, die gleiche Datenbank wie die vorherige Tabelle und den gleichen anfänglichen Code, um den Typanbieter einzurichten.
+Die folgende Tabelle zeigt einige allgemeinen Transact-SQL-Abfragen und deren Entsprechungen in F#. Der Code in dieser Tabelle wird vorausgesetzt, die gleiche Datenbank wie die vorherige Tabelle und den gleichen anfänglichen Code, um den Typanbieter einzurichten.
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tabelle 2. Transact-SQL und F#-Abfrageausdrücke
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-Und hier ist die vollständige Ausgabe, wenn dieser Code in f# Interactive ausgeführt wird.
+Und hier ist die vollständige Ausgabe, wenn dieser Code in F# Interactive ausgeführt wird.
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

@@ -123,7 +123,7 @@ Im folgenden Code wird `makeGame` aufgerufen und der Wert `7` an `target` gesen
 
 ## <a name="curried-functions"></a>Funktionen mit Currying
 
-Viele der Beispiele im vorherigen Abschnitt können durch die Nutzung der impliziten präziser geschrieben werden *currying* in Funktionsdeklarationen in f#. Beim sogenannten Currying wird eine Funktion mit mehreren Parametern in eine Reihe eingebetteter Funktionen mit jeweils einem einzelnen Parameter transformiert. In F# wird Currying grundsätzlich auf Funktionen mit mehreren Parametern angewendet. Beispiel: `compose` aus dem vorherigen Abschnitt kann in dem folgenden kurz gefassten Format mit drei Parametern geschrieben werden.
+Viele der Beispiele im vorherigen Abschnitt können durch die Nutzung der impliziten präziser geschrieben werden *currying* in Funktionsdeklarationen in F#. Beim sogenannten Currying wird eine Funktion mit mehreren Parametern in eine Reihe eingebetteter Funktionen mit jeweils einem einzelnen Parameter transformiert. In F# wird Currying grundsätzlich auf Funktionen mit mehreren Parametern angewendet. Beispiel: `compose` aus dem vorherigen Abschnitt kann in dem folgenden kurz gefassten Format mit drei Parametern geschrieben werden.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -176,7 +176,7 @@ Die Beispiele in den vorherigen Abschnitten veranschaulichen, dass die Funktione
 - Sie können eine Funktion als Wert eines Funktionsaufrufs zurückgeben.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-Weitere Informationen zu f# finden Sie unter den [F#-Sprachreferenz](../language-reference/index.md).
+Weitere Informationen zu F# finden Sie unter den [F#-Sprachreferenz](../language-reference/index.md).
 
 ## <a name="example"></a>Beispiel
 

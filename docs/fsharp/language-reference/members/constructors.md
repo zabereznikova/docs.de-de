@@ -1,6 +1,6 @@
 ---
 title: Konstruktoren (F#)
-description: Informationen Sie zum Definieren und Verwenden von Konstruktoren in f# zu erstellen und initialisieren die Klasse und Struktur von Objekten.
+description: Informationen Sie zum Definieren und Verwenden von Konstruktoren in F# zu erstellen und initialisieren die Klasse und Struktur von Objekten.
 ms.date: 05/16/2016
 ms.openlocfilehash: ff2463f890034cce0bbaa85d9a5c93e50427cd03
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

@@ -33,7 +33,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="remarks"></a>Hinweise
 
-Klassen stellen die grundlegende Beschreibung von .NET Objekttypen dar; die Klasse ist das primäre Konzept, das objektorientierte Programmierung in f# unterstützt.
+Klassen stellen die grundlegende Beschreibung von .NET Objekttypen dar; die Klasse ist das primäre Konzept, das objektorientierte Programmierung in F# unterstützt.
 
 In der vorherigen Syntax wird die `type-name` ist gültige Bezeichner. Die `type-params` beschreibt optionale generische Typparameter. Es besteht aus Typparameternamen und Einschränkungen, die in spitze Klammern eingeschlossen (`<` und `>`). Weitere Informationen finden Sie unter [Generika](generics/index.md) und [Einschränkungen](generics/constraints.md). Die `parameter-list` Konstruktorparameter beschreibt. Der erste Zugriffsmodifizierer bezieht sich auf den Typ; die zweite bezieht sich auf den primären Konstruktor. In beiden Fällen ist die Standardeinstellung `public`.
 
@@ -104,7 +104,7 @@ Typargumente abgeleitet werden, wenn der Typ verwendet wird. Im folgenden Code w
 
 ## <a name="specifying-inheritance"></a>Angeben von Vererbung
 
-Die `inherit` -Klausel kennzeichnet die direkte Basisklasse aus, sofern vorhanden. In f# ist nur eine direkte Basisklasse zulässig. Eine Klasse implementierten Schnittstellen werden Basisklassen nicht berücksichtigt werden. Schnittstellen werden in erläutert die [Schnittstellen](Interfaces.md) Thema.
+Die `inherit` -Klausel kennzeichnet die direkte Basisklasse aus, sofern vorhanden. In F# ist nur eine direkte Basisklasse zulässig. Eine Klasse implementierten Schnittstellen werden Basisklassen nicht berücksichtigt werden. Schnittstellen werden in erläutert die [Schnittstellen](Interfaces.md) Thema.
 
 Sie können die Methoden und Eigenschaften der Basisklasse aus der abgeleiteten Klasse zugreifen, mit dem Programmiersprachen-Schlüsselwort `base` als Bezeichner an, gefolgt von einem Punkt (.) und den Namen des Members.
 
@@ -112,7 +112,7 @@ Weitere Informationen finden Sie unter [Vererbung](inheritance.md).
 
 ## <a name="members-section"></a>Abschnitt "Mitglieder"
 
-Sie können statische oder Instanzmethoden, Eigenschaften, schnittstellenimplementierungen, abstrakte Member, Ereignisdeklarationen und zusätzliche Konstruktoren definieren, in diesem Abschnitt. Können und werden Bindungen können nicht angezeigt, in diesem Abschnitt. Da Mitglieder mit einer Vielzahl von f#-Typen, zusätzlich zu den Klassen hinzugefügt werden können, werden diese in einem separaten Thema behandelt [Mitglieder](members/index.md).
+Sie können statische oder Instanzmethoden, Eigenschaften, schnittstellenimplementierungen, abstrakte Member, Ereignisdeklarationen und zusätzliche Konstruktoren definieren, in diesem Abschnitt. Können und werden Bindungen können nicht angezeigt, in diesem Abschnitt. Da Mitglieder mit einer Vielzahl von F#-Typen, zusätzlich zu den Klassen hinzugefügt werden können, werden diese in einem separaten Thema behandelt [Mitglieder](members/index.md).
 
 ## <a name="mutually-recursive-types"></a>Wechselseitig rekursive Typen
 

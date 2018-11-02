@@ -1,6 +1,6 @@
 ---
 title: Boolesche Operatoren (F#)
-description: Erfahren Sie, bis die booleschen Operatoren, die in der Programmiersprache f# verfügbar sind.
+description: Erfahren Sie, bis die booleschen Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 05/16/2016
 ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "45638479"
 ---
 # <a name="boolean-operators"></a>Boolesche Operatoren
 
-Dieses Thema beschreibt die Unterstützung für boolesche Operatoren in der Sprache f#.
+Dieses Thema beschreibt die Unterstützung für boolesche Operatoren in der Sprache F#.
 
 ## <a name="summary-of-boolean-operators"></a>Zusammenfassung der booleschen Operatoren
 
-Die folgende Tabelle enthält die booleschen Operatoren, die in f# verfügbar sind. Ist der einzige Typ, der von diesen unterstützt die `bool` Typ.
+Die folgende Tabelle enthält die booleschen Operatoren, die in F# verfügbar sind. Ist der einzige Typ, der von diesen unterstützt die `bool` Typ.
 
 |Operator|Beschreibung|
 |--------|-----------|

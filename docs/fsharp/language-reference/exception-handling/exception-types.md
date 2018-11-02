@@ -11,7 +11,7 @@ ms.locfileid: "43858820"
 ---
 # <a name="exception-types"></a>Ausnahmetypen
 
-Es gibt zwei Kategorien von Ausnahmen in f#: Ausnahmetypen in .NET und F#-Typen. Dieses Thema beschreibt, wie Sie definieren und Verwenden von F#-Typen.
+Es gibt zwei Kategorien von Ausnahmen in F#: Ausnahmetypen in .NET und F#-Typen. Dieses Thema beschreibt, wie Sie definieren und Verwenden von F#-Typen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,7 +35,7 @@ Können Sie direkt in den Filtern in einer F#-Typ der Ausnahme eine `try...with`
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
 
-Der Typ der Ausnahme, die Sie definieren, mit der `exception` Schlüsselwort in f# ist eine neue Art, die von erbt `System.Exception`.
+Der Typ der Ausnahme, die Sie definieren, mit der `exception` Schlüsselwort in F# ist eine neue Art, die von erbt `System.Exception`.
 
 ## <a name="see-also"></a>Siehe auch
 

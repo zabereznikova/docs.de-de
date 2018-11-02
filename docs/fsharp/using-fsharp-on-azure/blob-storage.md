@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit Azure Blob Storage mit f#
+title: Erste Schritte mit Azure Blob Storage mit F#
 description: Store unstrukturierte Daten in der Cloud mit Azure Blob Storage.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037281"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Erste Schritte mit Azure Blob Storage mit f# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Erste Schritte mit Azure Blob Storage mit F# #
 
 Azure Blob Storage ist ein Dienst, der unstrukturierte Daten in der Cloud als Objekte/Blobs speichert. Blob Storage kann beliebige Typen von Text oder Binärdaten speichern, z.B. Dokumente, Mediendateien oder Installationsprogramme für Anwendungen. Blob Storage wird auch als Objektspeicher bezeichnet.
 
-In diesem Artikel veranschaulicht das Ausführen von häufigen Aufgaben mit BLOB-Speicher. Die Beispiele wurden mit f# mit der Azure-Speicherclientbibliothek für .NET. Die Aufgaben, abgedeckte enthalten wie hochladen, auflisten, herunterladen und Löschen von Blobs.
+In diesem Artikel veranschaulicht das Ausführen von häufigen Aufgaben mit BLOB-Speicher. Die Beispiele wurden mit F# mit der Azure-Speicherclientbibliothek für .NET. Die Aufgaben, abgedeckte enthalten wie hochladen, auflisten, herunterladen und Löschen von Blobs.
 
 Eine grundlegende Übersicht von Blob Storage finden Sie unter [.NET Guide für Blob Storage](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,7 +22,7 @@ Eine grundlegende Übersicht von Blob Storage finden Sie unter [.NET Guide für 
 
 Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account). Für dieses Konto benötigen Sie auch Ihren speicherzugriffsschlüssel.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten f# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
 In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `blobs.fsx`, in der F#-Entwicklungsumgebung.
 

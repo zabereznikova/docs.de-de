@@ -1,6 +1,6 @@
 ---
 title: Zugriffssteuerung (F#)
-description: Informationen Sie zum Steuern des Zugriffs auf Programmierelemente wie Typen, Methoden und Funktionen, die in der Programmiersprache f#.
+description: Informationen Sie zum Steuern des Zugriffs auf Programmierelemente wie Typen, Methoden und Funktionen, die in der Programmiersprache F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ ms.locfileid: "43803973"
 
 ## <a name="basics-of-access-control"></a>Grundlagen der Zugriffssteuerung
 
-In f#, Steuern der Zugriff Spezifizierer `public`, `internal`, und `private` kann auf Module, Typen, Methoden, wertedefinitionen, Funktionen, Eigenschaften und explizite Felder angewendet werden.
+In F#, Steuern der Zugriff Spezifizierer `public`, `internal`, und `private` kann auf Module, Typen, Methoden, wertedefinitionen, Funktionen, Eigenschaften und explizite Felder angewendet werden.
 
 - `public` Gibt an, dass die Entität, die von allen Aufrufern zugegriffen werden kann.
 
@@ -24,13 +24,13 @@ In f#, Steuern der Zugriff Spezifizierer `public`, `internal`, und `private` kan
 - `private` Gibt an, dass die Entität nur aus dem einschließenden Typ oder Modul zugegriffen werden kann.
 
 >[!NOTE]
-Der Zugriffsspezifizierer `protected` wird nicht in f# verwendet, obwohl es akzeptabel ist, bei Verwendung von Typen, die in Sprachen, unterstützen erstellte `protected` Zugriff. Wenn Sie eine geschützte Methode überschreiben, bleibt die Methode aus diesem Grund nur innerhalb der Klasse und ihrer untergeordneten Klassen zugegriffen werden kann.
+Der Zugriffsspezifizierer `protected` wird nicht in F# verwendet, obwohl es akzeptabel ist, bei Verwendung von Typen, die in Sprachen, unterstützen erstellte `protected` Zugriff. Wenn Sie eine geschützte Methode überschreiben, bleibt die Methode aus diesem Grund nur innerhalb der Klasse und ihrer untergeordneten Klassen zugegriffen werden kann.
 
 Der Bezeichner wird in der Regel vor dem Namen der Entität, außer wenn versetzt einen `mutable` oder `inline` Bezeichner verwendet wird, die nach dem Zugriffsspezifizierer-Steuerelement angezeigt werden.
 
 Wenn keine Zugriffsspezifizierer verwendet wird, wird der Standardwert ist `public`, mit Ausnahme von `let` Bindungen in einem Typ, der immer `private` in den Typ.
 
-Signaturen in F#-Geben Sie einen anderen Mechanismus zur Steuerung des Zugriffs auf Programmelemente in f#. Signaturen sind nicht erforderlich, für die Zugriffssteuerung. Weitere Informationen finden Sie unter [Signaturen](signatures.md).
+Signaturen in F#-Geben Sie einen anderen Mechanismus zur Steuerung des Zugriffs auf Programmelemente in F#. Signaturen sind nicht erforderlich, für die Zugriffssteuerung. Weitere Informationen finden Sie unter [Signaturen](signatures.md).
 
 ## <a name="rules-for-access-control"></a>Regeln für die Zugriffssteuerung
 

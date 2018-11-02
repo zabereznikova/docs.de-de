@@ -1,6 +1,6 @@
 ---
 title: Optionen (F#)
-description: Erfahren Sie, wie Sie ein f#-Option, die Typen, wenn ein tatsächlicher Wert möglicherweise nicht vorhanden. für ein benannter Wert oder eine Variable.
+description: Erfahren Sie, wie Sie ein F#-Option, die Typen, wenn ein tatsächlicher Wert möglicherweise nicht vorhanden. für ein benannter Wert oder eine Variable.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -33,7 +33,7 @@ Optionen werden häufig verwendet, wenn eine Suche kein entsprechendes Ergebnis 
 
 Im vorherigen Code ist eine Liste rekursiv durchsucht. Die Funktion `tryFindMatch` nimmt eine Prädikatfunktion `pred` , die einen booleschen Wert und eine zu durchsuchende Liste zurückgibt. Wenn ein Element, das das Prädikat erfüllt gefunden wird, die Rekursion endet und die Funktion gibt den Wert als eine Option im Ausdruck `Some(head)`. Die Rekursion endet, wenn es sich bei die leere Liste verglichen wird. An diesem Punkt Wert `head` nicht gefunden wurde, und `None` zurückgegeben wird.
 
-Viele f# Library-Funktionen, die eine Auflistung für einen Wert zu suchen, die möglicherweise nicht in der Rückgabe der `option` Typ. Diese Funktionen beginnen immer mit der `try` Präfix, z. B. [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Viele F# Library-Funktionen, die eine Auflistung für einen Wert zu suchen, die möglicherweise nicht in der Rückgabe der `option` Typ. Diese Funktionen beginnen immer mit der `try` Präfix, z. B. [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
 Optionen können auch nützlich sein, wenn ein Wert nicht vorhanden, z. B. sein kann wenn es möglich ist, dass eine Ausnahme ausgelöst wird, wenn Sie versuchen, einen Wert erstellen. Dies wird im folgenden Codebeispiel veranschaulicht.
 

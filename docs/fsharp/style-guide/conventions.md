@@ -11,7 +11,7 @@ ms.locfileid: "49087387"
 ---
 # <a name="f-coding-conventions"></a>F#-Programmierung Konventionen
 
-Die folgenden Konventionen aus Erfahrung, die Arbeit mit großen f# formuliert werden Codebasen. Die [fünf Prinzipien guten F#-Code](index.md#five-principles-of-good-f-code) bilden die Grundlage jeder Empfehlung. Sie beziehen sich auf die [Entwurfsrichtlinien für F#-Komponente](component-design-guidelines.md), jedoch gelten für alle F#-Code, nicht nur Komponenten wie Bibliotheken.
+Die folgenden Konventionen aus Erfahrung, die Arbeit mit großen F# formuliert werden Codebasen. Die [fünf Prinzipien guten F#-Code](index.md#five-principles-of-good-f-code) bilden die Grundlage jeder Empfehlung. Sie beziehen sich auf die [Entwurfsrichtlinien für F#-Komponente](component-design-guidelines.md), jedoch gelten für alle F#-Code, nicht nur Komponenten wie Bibliotheken.
 
 ## <a name="organizing-code"></a>Organisieren von code
 
@@ -90,9 +90,9 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Sortierung `open` Anweisungen topologisch
 
-In f# wird die Reihenfolge der Deklarationen von Bedeutung ist, einschließlich mit `open` Anweisungen. Dies ist anders als bei c#, wobei die Auswirkungen der `using` und `using static` ist unabhängig von der Reihenfolge dieser Anweisungen in einer Datei.
+In F# wird die Reihenfolge der Deklarationen von Bedeutung ist, einschließlich mit `open` Anweisungen. Dies ist anders als bei c#, wobei die Auswirkungen der `using` und `using static` ist unabhängig von der Reihenfolge dieser Anweisungen in einer Datei.
 
-In f# können Elemente in einem Bereich geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass diese Neuordnung `open` Anweisungen können die Bedeutung des Codes ändern. Als Ergebnis jeden beliebigen aller sortieren `open` Anweisungen (z. B. alphanumerisch) wird im Allgemeinen nicht empfohlen, damit ein anderes Verhalten zu generieren, die Sie möglicherweise erwarten.
+In F# können Elemente in einem Bereich geöffnet Shadowing für andere bereits vorhanden. Dies bedeutet, dass diese Neuordnung `open` Anweisungen können die Bedeutung des Codes ändern. Als Ergebnis jeden beliebigen aller sortieren `open` Anweisungen (z. B. alphanumerisch) wird im Allgemeinen nicht empfohlen, damit ein anderes Verhalten zu generieren, die Sie möglicherweise erwarten.
 
 Stattdessen empfehlen wir, dass Sie diese sortieren [topologisch](https://en.wikipedia.org/wiki/Topological_sorting); sortieren, also Ihr `open` Anweisungen in der Reihenfolge, in der _Ebenen_ des Systems definiert sind. Alphanumerische in Schichten topologische Sortierung durchführen kann ebenfalls berücksichtigt werden.
 
@@ -190,7 +190,7 @@ Fehlerverwaltung in großen Systemen ist ein komplexer und facettenreichen Unter
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Darstellen Sie Fehlerfälle und ungültigen Status in Ihrer Domäne systeminterne Typen
 
-Mit [Unterscheidungs-Unions](../language-reference/discriminated-unions.md), f# gibt Ihnen die Möglichkeit, fehlerhafte Programmstatus in Ihrem Typsystem darstellen. Zum Beispiel:
+Mit [Unterscheidungs-Unions](../language-reference/discriminated-unions.md), F# gibt Ihnen die Möglichkeit, fehlerhafte Programmstatus in Ihrem Typsystem darstellen. Zum Beispiel:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -219,11 +219,11 @@ Im Allgemeinen, wenn Sie die verschiedenen Möglichkeiten modellieren können, d
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Verwenden Sie Ausnahmen aus, wenn der Fehler nicht mit Typen dargestellt werden kann
 
-Nicht alle Fehler können in einer Problemdomäne dargestellt werden. Diese Art von Fehlern werden *außergewöhnliche* Natur, daher die Möglichkeit, auslösen und Abfangen von Ausnahmen in f#.
+Nicht alle Fehler können in einer Problemdomäne dargestellt werden. Diese Art von Fehlern werden *außergewöhnliche* Natur, daher die Möglichkeit, auslösen und Abfangen von Ausnahmen in F#.
 
-Zunächst wird empfohlen, Sie lesen die [Ausnahme Entwurfsrichtlinien](../../standard/design-guidelines/exceptions.md). Diese gelten auch für f#.
+Zunächst wird empfohlen, Sie lesen die [Ausnahme Entwurfsrichtlinien](../../standard/design-guidelines/exceptions.md). Diese gelten auch für F#.
 
-Im Rahmen der Auslösen von Ausnahmen in f# verfügbar mit die wichtigen Konstrukten sollten in der folgenden Reihenfolge ihrer Priorität berücksichtigt werden:
+Im Rahmen der Auslösen von Ausnahmen in F# verfügbar mit die wichtigen Konstrukten sollten in der folgenden Reihenfolge ihrer Priorität berücksichtigt werden:
 
 | Funktion | Syntax | Zweck |
 |----------|--------|---------|
@@ -317,7 +317,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 Statt als ein Catch-All funktioniert, wird diese Funktion jetzt ordnungsgemäß den Fall handhaben, eine Datei wurde nicht gefunden und eine Rückgabe, Bedeutung zuweisen. Dieser Rückgabewert kann zu diesem Fehlerfall bei der nicht verwerfen alle Kontextinformationen oder erzwingen Aufrufe an einen Fall verarbeiten, die möglicherweise nicht relevant ist an diesem Punkt im Code zuordnen.
 
-Typen wie `Result<'Success, 'Error>` eignen sich für grundlegende Vorgänge, in dem sie geschachtelt sind nicht und optionale f#-Typen sind ideal für darstellen, wenn etwas entweder zurückgeben könnte *etwas* oder *nichts*. Sie sind kein Ersatz für Ausnahmen, allerdings und sollte nicht versuchen, Ersetzen von Ausnahmen verwendet werden. Stattdessen sollten sie mit Bedacht auf Aspekte der Adresse der Ausnahme und die Richtlinie für die Verwaltung in die entsprechenden Methoden angewendet werden.
+Typen wie `Result<'Success, 'Error>` eignen sich für grundlegende Vorgänge, in dem sie geschachtelt sind nicht und optionale F#-Typen sind ideal für darstellen, wenn etwas entweder zurückgeben könnte *etwas* oder *nichts*. Sie sind kein Ersatz für Ausnahmen, allerdings und sollte nicht versuchen, Ersetzen von Ausnahmen verwendet werden. Stattdessen sollten sie mit Bedacht auf Aspekte der Adresse der Ausnahme und die Richtlinie für die Verwaltung in die entsprechenden Methoden angewendet werden.
 
 ## <a name="partial-application-and-point-free-programming"></a>Teilweise Anwendung "und" Punkt-free-Programmierung
 
@@ -426,7 +426,7 @@ F# weist mehrere Optionen für [Zugriffssteuerung](../language-reference/access-
 
 ## <a name="type-inference-and-generics"></a>Typrückschluss und Generika
 
-Typrückschluss können Sie über die Eingabe viele häufig speichern. Und automatische Verallgemeinerung in f#-Compiler können Sie generischen Code mit fast kein zusätzlicher Aufwand ihrerseits zu schreiben. Diese Funktionen sind jedoch nicht universell gut.
+Typrückschluss können Sie über die Eingabe viele häufig speichern. Und automatische Verallgemeinerung in F#-Compiler können Sie generischen Code mit fast kein zusätzlicher Aufwand ihrerseits zu schreiben. Diese Funktionen sind jedoch nicht universell gut.
 
 * Betrachten Sie die Argumentnamen mit expliziter Typen in öffentlichen APIs, die Bezeichnung, und verlassen Sie sich nicht auf den Typrückschluss für diese.
 
@@ -440,13 +440,13 @@ Typrückschluss können Sie über die Eingabe viele häufig speichern. Und autom
 
     Dies ist die allgemeine Vorgehensweise Dinge in .NET ist die Verwendung von PascalCase anstelle von Snake_case oder CamelCase empfohlen.
 
-Schließlich ist automatische Verallgemeinerung nicht immer ein Segen für Personen gedacht, die f#- oder einer großen Codebasis. Mithilfe von Komponenten, die generisch sind ist cognitive Aufwand. Wenn automatisch darüber hinaus die generalisierte Funktionen werden nicht verwendet, mit verschiedenen Eingabetypen (Let nur, wenn sie z. B. verwendet werden sollen), dann keinen echten Vorteil, sie generisch zu diesem Zeitpunkt. Berücksichtigen Sie immer, wenn der Code, den Sie schreiben tatsächlich profitieren von der generischen.
+Schließlich ist automatische Verallgemeinerung nicht immer ein Segen für Personen gedacht, die F#- oder einer großen Codebasis. Mithilfe von Komponenten, die generisch sind ist cognitive Aufwand. Wenn automatisch darüber hinaus die generalisierte Funktionen werden nicht verwendet, mit verschiedenen Eingabetypen (Let nur, wenn sie z. B. verwendet werden sollen), dann keinen echten Vorteil, sie generisch zu diesem Zeitpunkt. Berücksichtigen Sie immer, wenn der Code, den Sie schreiben tatsächlich profitieren von der generischen.
 
 ## <a name="performance"></a>Leistung
 
-F#-Werte sind unveränderlich, standardmäßig die Ihnen ermöglicht, bestimmte Klassen von Fehlern (insbesondere die im Zusammenhang mit Parallelität und Konkurrenz) zu vermeiden. Allerdings kann in bestimmten Fällen um eine optimale (oder sogar sinnvoll) Effizienz Ausführungszeit oder speicherbelegungen, eine Spanne der Arbeit am besten implementiert werden mithilfe des direktes Veränderung des Zustands. Dies ist möglich, in einer Basis Opt-in mit f# mit der `mutable` Schlüsselwort.
+F#-Werte sind unveränderlich, standardmäßig die Ihnen ermöglicht, bestimmte Klassen von Fehlern (insbesondere die im Zusammenhang mit Parallelität und Konkurrenz) zu vermeiden. Allerdings kann in bestimmten Fällen um eine optimale (oder sogar sinnvoll) Effizienz Ausführungszeit oder speicherbelegungen, eine Spanne der Arbeit am besten implementiert werden mithilfe des direktes Veränderung des Zustands. Dies ist möglich, in einer Basis Opt-in mit F# mit der `mutable` Schlüsselwort.
 
-Allerdings verwenden der `mutable` in f# echtzeiteinschränkungen funktionale Reinheit fühlen. Dies ist in Ordnung, wenn Sie anpassen, dass die Erwartungen Reinheit zu [referenzieller Transparenz](https://en.wikipedia.org/wiki/Referential_transparency). Referenzieller Transparenz - nicht Reinheit – ist das Ziel beim Schreiben von f#-Funktionen. Dadurch können Sie eine funktionsfähige-Schnittstelle über eine Mutation-basierte Implementierung für die Leistung kritischen Code zu schreiben.
+Allerdings verwenden der `mutable` in F# echtzeiteinschränkungen funktionale Reinheit fühlen. Dies ist in Ordnung, wenn Sie anpassen, dass die Erwartungen Reinheit zu [referenzieller Transparenz](https://en.wikipedia.org/wiki/Referential_transparency). Referenzieller Transparenz - nicht Reinheit – ist das Ziel beim Schreiben von F#-Funktionen. Dadurch können Sie eine funktionsfähige-Schnittstelle über eine Mutation-basierte Implementierung für die Leistung kritischen Code zu schreiben.
 
 ### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Umschließen Sie änderbare Code in der unveränderlichen Schnittstellen
 

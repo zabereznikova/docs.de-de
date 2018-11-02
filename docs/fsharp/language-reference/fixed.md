@@ -1,5 +1,5 @@
 ---
-title: Das Fixed-Schlüsselwort (f#)
+title: Das Fixed-Schlüsselwort (F#)
 description: Erfahren Sie, wie Sie "anheften" wird eine lokale im Stapel, um zu verhindern, dass bei der Sammlung mit den F#-'Schlüsselwort fixed".
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c

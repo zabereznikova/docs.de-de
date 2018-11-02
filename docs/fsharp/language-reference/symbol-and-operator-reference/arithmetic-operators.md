@@ -1,6 +1,6 @@
 ---
 title: Arithmetische Operatoren (F#)
-description: Erfahren Sie, bis die arithmetischen Operatoren, die in der Programmiersprache f# verfügbar sind.
+description: Erfahren Sie, bis die arithmetischen Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 04/04/2018
 ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45597427"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 
-Dieses Thema beschreibt die arithmetische Operatoren, die in f# verfügbar sind.
+Dieses Thema beschreibt die arithmetische Operatoren, die in F# verfügbar sind.
 
 ## <a name="summary-of-binary-arithmetic-operators"></a>Zusammenfassung der binären arithmetische Operatoren
 

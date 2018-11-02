@@ -19,7 +19,7 @@ Der Begriff *Ressource* auf mehr als eine Weise verwendet wird. Ja, Ressourcen k
 
 ## <a name="managing-resources"></a>Verwalten von Ressourcen
 
-Um effizient und bittet um Ressourcen in einer Anwendung verwalten, müssen Sie Ressourcen umgehend und in einer vorhersagbaren Weise freigeben. .NET Framework unterstützt dies durch die Bereitstellung der `System.IDisposable` Schnittstelle. Ein Typ, der implementiert `System.IDisposable` hat die `System.IDisposable.Dispose` -Methode, die korrekt Ressourcen freigibt. Gut geschriebene Anwendungen zu garantieren, dass `System.IDisposable.Dispose` wird sofort aufgerufen, wenn ein Objekt, das eine eingeschränkte Ressource enthält, nicht mehr benötigt wird. Glücklicherweise unterstützen die meisten zur Vereinfachung und f# ist keine Ausnahme. Es gibt zwei hilfreiche Sprachkonstrukte, die das Dispose-Muster unterstützen: die `use` Bindung und die `using` Funktion.
+Um effizient und bittet um Ressourcen in einer Anwendung verwalten, müssen Sie Ressourcen umgehend und in einer vorhersagbaren Weise freigeben. .NET Framework unterstützt dies durch die Bereitstellung der `System.IDisposable` Schnittstelle. Ein Typ, der implementiert `System.IDisposable` hat die `System.IDisposable.Dispose` -Methode, die korrekt Ressourcen freigibt. Gut geschriebene Anwendungen zu garantieren, dass `System.IDisposable.Dispose` wird sofort aufgerufen, wenn ein Objekt, das eine eingeschränkte Ressource enthält, nicht mehr benötigt wird. Glücklicherweise unterstützen die meisten zur Vereinfachung und F# ist keine Ausnahme. Es gibt zwei hilfreiche Sprachkonstrukte, die das Dispose-Muster unterstützen: die `use` Bindung und die `using` Funktion.
 
 ## <a name="use-binding"></a>Verwenden der Bindung
 

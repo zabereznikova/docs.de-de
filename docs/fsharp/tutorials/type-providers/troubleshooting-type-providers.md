@@ -1,6 +1,6 @@
 ---
 title: Problembehandlung bei Typanbietern
-description: Ermitteln Sie potenzielle Lösungen für Probleme, die Sie häufig auftreten, wenn Sie Typanbieter in f# verwenden.
+description: Ermitteln Sie potenzielle Lösungen für Probleme, die Sie häufig auftreten, wenn Sie Typanbieter in F# verwenden.
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

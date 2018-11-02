@@ -1,5 +1,5 @@
 ---
-title: Wertoptionen (f#)
+title: Wertoptionen (F#)
 description: Erfahren Sie, bis des F#-Option "Value"-Typs, der eine Version der Struktur des Typs Option ist.
 ms.date: 06/16/2018
 ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
@@ -11,9 +11,9 @@ ms.locfileid: "50185835"
 ---
 # <a name="value-options"></a>Wertoptionen
 
-Die Option "Value"-Typ in f# wird verwendet, wenn halten die folgenden Fällen:
+Die Option "Value"-Typ in F# wird verwendet, wenn halten die folgenden Fällen:
 
-1. Ein Szenario eignet sich für ein [f#-Option](options.md).
+1. Ein Szenario eignet sich für ein [F#-Option](options.md).
 2. Verwenden eine Struktur bietet einen Leistungsvorteil in Ihrem Szenario.
 
 Nicht alle Szenarien die Leistung "gelöst" werden Strukturen. Berücksichtigen Sie die zusätzliche Kosten der kopieren, wenn sie anstelle von Verweistypen mit ein. Große F#-Programmen instanziiert jedoch häufig viele optionale Typen, die langsamsten Pfad durchlaufen werden, weil Strukturen manchmal eine bessere gesamtleistung während der Lebensdauer eines Programms führen können.

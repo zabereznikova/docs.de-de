@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit f# in Visual Studio
-description: Erfahren Sie, wie Sie f# in Visual Studio verwenden.
+title: Erste Schritte mit F# in Visual Studio
+description: Erfahren Sie, wie Sie F# in Visual Studio verwenden.
 ms.date: 07/03/2018
 ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,11 +9,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43872850"
 ---
-# <a name="get-started-with-f-in-visual-studio"></a>Erste Schritte mit f# in Visual Studio
+# <a name="get-started-with-f-in-visual-studio"></a>Erste Schritte mit F# in Visual Studio
 
 F# und Visual F#-Tools werden in Visual Studio-IDE unterstützt.
 
-Um zu beginnen, stellen Sie sicher, dass man [Visual Studio installiert, die mit f#](install-fsharp.md#install-f-with-visual-studio).
+Um zu beginnen, stellen Sie sicher, dass man [Visual Studio installiert, die mit F#](install-fsharp.md#install-f-with-visual-studio).
 
 ## <a name="creating-a-console-application"></a>Erstellen einer Konsolenanwendung
 
@@ -25,7 +25,7 @@ Eine der grundlegendsten Projekte in Visual Studio ist die Konsolenanwendung.  U
 
 3. Wählen Sie entweder **.NET Core-Konsolen-app** oder **Konsolen-app**.
 
-3. Wählen Sie die **OK** klicken, um den f#-Projekt zu erstellen!  Eine f#-Projekt im Projektmappen-Explorer sollte nun angezeigt werden.
+3. Wählen Sie die **OK** klicken, um den F#-Projekt zu erstellen!  Eine F#-Projekt im Projektmappen-Explorer sollte nun angezeigt werden.
 
 ## <a name="writing-your-code"></a>Das Schreiben von code
 
@@ -33,7 +33,7 @@ Erste Schritte zunächst, Code zu schreiben.  Stellen Sie sicher, dass die `Prog
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Im vorherigen Beispiel, eine Funktion `square` wurde der Eingabe mit dem Namen akzeptiert definiert `x` und von sich selbst multipliziert.  Da f# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  F#-Compiler erkennt die Typen, in denen Multiplikation gültig ist, und weist einen Typ `x` basieren, wie `square` aufgerufen wird.  Wenn Sie darauf zeigen `square`, sollte Folgendes angezeigt:
+Im vorherigen Beispiel, eine Funktion `square` wurde der Eingabe mit dem Namen akzeptiert definiert `x` und von sich selbst multipliziert.  Da F# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  F#-Compiler erkennt die Typen, in denen Multiplikation gültig ist, und weist einen Typ `x` basieren, wie `square` aufgerufen wird.  Wenn Sie darauf zeigen `square`, sollte Folgendes angezeigt:
 
 ```
 val square: x:int -> int
@@ -59,7 +59,7 @@ Herzlichen Glückwunsch!  Sie haben Ihr erste F#-Projekt in Visual Studio erstel
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in f#](../tour.md), die behandelt einige der wichtigsten Funktionen der Sprache f#.  Es wird bieten Ihnen einen Überblick über einige der Funktionen von f# und bieten reichlich Codebeispiele, die Sie in Visual Studio kopieren und ausführen können.  Es gibt auch einige hervorragenden externe Ressourcen, die Sie verwenden können, im gerätekatalog dargestellt die [Leitfaden für f#](../index.md).
+Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in F#](../tour.md), die behandelt einige der wichtigsten Funktionen der Sprache F#.  Es wird bieten Ihnen einen Überblick über einige der Funktionen von F# und bieten reichlich Codebeispiele, die Sie in Visual Studio kopieren und ausführen können.  Es gibt auch einige hervorragenden externe Ressourcen, die Sie verwenden können, im gerätekatalog dargestellt die [Leitfaden für F#](../index.md).
 
 ## <a name="see-also"></a>Siehe auch
 

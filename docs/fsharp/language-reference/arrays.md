@@ -1,6 +1,6 @@
 ---
 title: Arrays (F#)
-description: Informationen Sie zum Erstellen und Verwenden von Arrays in der Programmiersprache f#.
+description: Informationen Sie zum Erstellen und Verwenden von Arrays in der Programmiersprache F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

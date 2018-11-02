@@ -1,6 +1,6 @@
 ---
 title: Einstiegspunkt (F#)
-description: Erfahren Sie, wie eine f#-Programm Einstiegspunkt fest, die als ausführbare Datei kompiliert wird, in dem Ausführung formal beginnt.
+description: Erfahren Sie, wie eine F#-Programm Einstiegspunkt fest, die als ausführbare Datei kompiliert wird, in dem Ausführung formal beginnt.
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

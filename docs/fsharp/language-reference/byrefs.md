@@ -1,6 +1,6 @@
 ---
-title: Parametry (f#)
-description: Informationen Sie zu Byref und Byref-ähnlichen Typen in f#, die für die Low-Level-Programmierung verwendet werden.
+title: Parametry (F#)
+description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -107,7 +107,7 @@ Der Zweck der `outref<'T>` ist, um anzugeben, dass der Zeiger nur aus gelesen we
 
 ### <a name="interop-with-c"></a>Interoperabilität mit c# #
 
-C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den `ref` zurückgibt. Die folgende Tabelle zeigt, wie f# interpretiert wie c# ausgibt:
+C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den `ref` zurückgibt. Die folgende Tabelle zeigt, wie F# interpretiert wie c# ausgibt:
 
 |C#-Konstrukt|F#-leitet|
 |------------|---------|
@@ -116,7 +116,7 @@ C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den
 |`in ref` Parameter|`inref<'T>`|
 |`out ref` Parameter|`outref<'T>`|
 
-Die folgende Tabelle zeigt, was f# ausgibt:
+Die folgende Tabelle zeigt, was F# ausgibt:
 
 |F#-Konstrukts|Ausgegebene-Konstrukt|
 |------------|-----------------|
@@ -165,7 +165,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` impliziert nicht `Struct`. Beide müssen für den Typ vorhanden sein.
 
-Ein "`byref`-wie" "Struct" in f# ist ein Stack gebundene Wert. Sie wird nie auf dem verwalteten Heap zugewiesen. Ein `byref`-Struktur für Hochleistungs-Programmierung nützlich ist, wie sie mit leistungsfähiger Prüfungen zur Lebensdauer und nicht-Capture erzwungen wird. Die Regeln sind:
+Ein "`byref`-wie" "Struct" in F# ist ein Stack gebundene Wert. Sie wird nie auf dem verwalteten Heap zugewiesen. Ein `byref`-Struktur für Hochleistungs-Programmierung nützlich ist, wie sie mit leistungsfähiger Prüfungen zur Lebensdauer und nicht-Capture erzwungen wird. Die Regeln sind:
 
 * Sie können verwendet werden Methodenrückgabe als Funktionsparameter, Methodenparameter, lokale Variablen.
 * Sie können nicht statisch sein oder Instanzmember einer Klasse oder einer normalen Struktur.
@@ -178,7 +178,7 @@ Obwohl diese Regeln sehr stark Nutzung einzuschränken, werden diese zur Erfüll
 
 ## <a name="byref-returns"></a>ByRef-Rückgaben
 
-ByRef-Rückgaben von f#-Funktionen oder Elemente erstellt und verwendet werden können. Bei der Nutzung einer `byref`-Rückgabemethode, der Wert ist implizit keine Referenz. Zum Beispiel:
+ByRef-Rückgaben von F#-Funktionen oder Elemente erstellt und verwendet werden können. Bei der Nutzung einer `byref`-Rückgabemethode, der Wert ist implizit keine Referenz. Zum Beispiel:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

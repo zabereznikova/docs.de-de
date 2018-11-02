@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit Azure Table Storage mit f#
+title: Erste Schritte mit Azure Table Storage mit F#
 description: Store strukturierte Daten in der Cloud mit Azure Table Storage oder Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
@@ -10,7 +10,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519534"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit f# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit F# # 
 
 Azure Table Storage ist ein Dienst, der strukturierte NoSQL-Daten in der Cloud gespeichert. Table Storage ist ein Schlüssel-/Attributspeicher mit einem schemalosen Design. Da der Tabellenspeicher schemalos ist, ist es einfach, Daten anzupassen, wenn sich die Anforderungen Ihrer Anwendung ändern. Zugriff auf Daten ist schnell und kostengünstig für alle Arten von Anwendungen. Table Storage ist in der Regel deutlich niedriger Kosten als herkömmliche SQL für ähnliche Datenmengen.
 
@@ -37,7 +37,7 @@ In diesem Tutorial veranschaulicht, wie F#-Code dazu durchführen allgemeinen Au
 Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account) oder [Azure Cosmos DB-Konto](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten f# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
 In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `tables.fsx`, in der F#-Entwicklungsumgebung.
 

@@ -105,7 +105,7 @@ In einem Aufruf für einen Klassenkonstruktor können Sie die Werte der Eigensch
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Weitere Informationen finden Sie unter [Konstruktoren (f#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
+Weitere Informationen finden Sie unter [Konstruktoren (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Optionale Parameter
 
@@ -186,11 +186,11 @@ Sie können ein Tupel als Rückgabewert einer speichern `out` Parameter in .NET-
 
 Gelegentlich ist es erforderlich, eine Funktion zu definieren, die eine beliebige Anzahl von Parametern heterogenen Typs akzeptiert. Es wäre nicht sehr praktisch, erstellen alle möglichen überladenen Methoden um für alle Typen zu berücksichtigen, die verwendet werden können. Die .NET Implementierungen bieten Unterstützung für solche Methoden über die Parameter-Array-Funktion. Eine Methode, die ein Parameterarray in der Signatur verwendet, werden, kann mit einer beliebigen Anzahl von Parametern angegeben werden. Die Parameter werden in ein Array eingefügt. Der Typ der Elemente des Arrays bestimmt die Parametertypen, die an die Funktion übergeben werden können. Wenn Sie das Parameterarray mit definieren `System.Object` als Typ des Elements, klicken Sie dann Clientcode kann Werte übergeben eines beliebigen Typs.
 
-In f# können Parameterarrays nur in Methoden definiert werden. Sie können nicht verwendet werden, in der eigenständigen oder Funktionen, die in Modulen definiert sind.
+In F# können Parameterarrays nur in Methoden definiert werden. Sie können nicht verwendet werden, in der eigenständigen oder Funktionen, die in Modulen definiert sind.
 
 Sie definieren ein Parameterarray mithilfe der `ParamArray` Attribut. Die `ParamArray` Attribut kann nur auf den letzten Parameter angewendet werden.
 
-Der folgende Code veranschaulicht beide eine .NET-Methode übergeben wird, die ein Parameterarray und die Definition eines Typs in f# verwendet wird, die eine Methode, die akzeptiert ein Parameterarray aufrufen.
+Der folgende Code veranschaulicht beide eine .NET-Methode übergeben wird, die ein Parameterarray und die Definition eines Typs in F# verwendet wird, die eine Methode, die akzeptiert ein Parameterarray aufrufen.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

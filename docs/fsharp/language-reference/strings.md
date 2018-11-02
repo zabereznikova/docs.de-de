@@ -1,6 +1,6 @@
 ---
 title: Zeichenfolgen (F#)
-description: Erfahren Sie, wie der f#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
+description: Erfahren Sie, wie der F#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -78,7 +78,7 @@ Das folgende Beispiel veranschaulicht die Verkettung von Zeichenfolgen.
 
 ## <a name="string-class"></a>String-Klasse
 
-Da der Zeichenfolgentyp in f# tatsächlich eine .NET Framework ist `System.String` eingeben, die alle die `System.String` Member verfügbar sind. Dies schließt die `+` -Operator, der zum Verketten von Zeichenfolgen verwendet wird, die `Length` -Eigenschaft, und die `Chars` -Eigenschaft, die die Zeichenfolge als ein Array von Unicode-Zeichen zurückgibt. Weitere Informationen zu Zeichenfolgen finden Sie unter `System.String`.
+Da der Zeichenfolgentyp in F# tatsächlich eine .NET Framework ist `System.String` eingeben, die alle die `System.String` Member verfügbar sind. Dies schließt die `+` -Operator, der zum Verketten von Zeichenfolgen verwendet wird, die `Length` -Eigenschaft, und die `Chars` -Eigenschaft, die die Zeichenfolge als ein Array von Unicode-Zeichen zurückgibt. Weitere Informationen zu Zeichenfolgen finden Sie unter `System.String`.
 
 Mithilfe der `Chars` Eigenschaft `System.String`, Sie können die einzelnen Zeichen in einer Zeichenfolge zugreifen, indem Sie einen Index angeben, wie im folgenden Code gezeigt.
 

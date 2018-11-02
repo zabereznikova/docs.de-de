@@ -1,6 +1,6 @@
 ---
 title: 'Importdeklarationen: Das open-Schlüsselwort (F#)'
-description: Erfahren Sie mehr über f# Importdeklarationen und wie sie ein Modul oder einen Namespace angeben, dessen Elemente Sie ohne Verwendung eines vollqualifizierten Namens verweisen können.
+description: Erfahren Sie mehr über F# Importdeklarationen und wie sie ein Modul oder einen Namespace angeben, dessen Elemente Sie ohne Verwendung eines vollqualifizierten Namens verweisen können.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -36,7 +36,7 @@ Der folgende Code zeigt die Verwendung der `open` Schlüsselwort, um Code zu ver
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F#-Compiler wird eine Fehlermeldung oder Warnung nicht ausgeben, wenn es sich bei Mehrdeutigkeiten auftreten, bei der gleiche Namen in mehr als ein open-Modul oder einen Namespace. Wenn Mehrdeutigkeiten auftreten, bevorzugt f# die mehr zuletzt geöffneten Modul oder einen Namespace. In den folgenden Code, z. B. `empty` bedeutet, dass `Seq.empty`, auch wenn `empty` befindet sich in beiden die `List` und `Seq` Module.
+F#-Compiler wird eine Fehlermeldung oder Warnung nicht ausgeben, wenn es sich bei Mehrdeutigkeiten auftreten, bei der gleiche Namen in mehr als ein open-Modul oder einen Namespace. Wenn Mehrdeutigkeiten auftreten, bevorzugt F# die mehr zuletzt geöffneten Modul oder einen Namespace. In den folgenden Code, z. B. `empty` bedeutet, dass `Seq.empty`, auch wenn `empty` befindet sich in beiden die `List` und `Seq` Module.
 
 ```fsharp
 open List

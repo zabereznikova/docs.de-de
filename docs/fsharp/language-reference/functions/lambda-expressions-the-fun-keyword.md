@@ -42,7 +42,7 @@ Die *Ausdruck* ist der Text der Funktion, von denen der letzte Ausdruck einen We
 
 ## <a name="using-lambda-expressions"></a>Verwenden von Lambdaausdrücken
 
-Lambda-Ausdrücke sind besonders nützlich, wenn Sie die Vorgänge auf eine Liste oder einer anderen Sammlung aus, und Definieren einer Funktion den zusätzlichen Aufwand vermeiden möchten, verwenden möchten. Viele f# Library-Funktionen nehmen die Werte von Funktionen als Argumente ein, und es kann sein, insbesondere dann hilfreich, einen Lambda-Ausdruck in diesen Fällen zu verwenden. Der folgende Code gilt einen Lambda-Ausdruck, für die Elemente einer Liste. In diesem Fall wird die anonyme Funktion 1 auf jedes Element einer Liste hinzugefügt.
+Lambda-Ausdrücke sind besonders nützlich, wenn Sie die Vorgänge auf eine Liste oder einer anderen Sammlung aus, und Definieren einer Funktion den zusätzlichen Aufwand vermeiden möchten, verwenden möchten. Viele F# Library-Funktionen nehmen die Werte von Funktionen als Argumente ein, und es kann sein, insbesondere dann hilfreich, einen Lambda-Ausdruck in diesen Fällen zu verwenden. Der folgende Code gilt einen Lambda-Ausdruck, für die Elemente einer Liste. In diesem Fall wird die anonyme Funktion 1 auf jedes Element einer Liste hinzugefügt.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 

@@ -11,7 +11,7 @@ ms.locfileid: "44042165"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Ausnahmen: Der try...with-Ausdruck
 
-In diesem Thema wird beschrieben, die `try...with` Ausdruck, der Ausdruck, der für die Ausnahmebehandlung in der Sprache f# verwendet wird.
+In diesem Thema wird beschrieben, die `try...with` Ausdruck, der Ausdruck, der für die Ausnahmebehandlung in der Sprache F# verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 

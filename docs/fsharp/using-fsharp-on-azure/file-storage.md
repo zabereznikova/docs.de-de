@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit Azure File Storage mit f#
+title: Erste Schritte mit Azure File Storage mit F#
 description: Store Dateidaten in der Cloud mit Azure File Storage, und binden Sie Ihre clouddateifreigabe von einem virtuellen Azure-Computer (VM) oder aus einer lokalen Anwendung Windows.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,7 +10,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "33569342"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Erste Schritte mit Azure File Storage mit f# #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Erste Schritte mit Azure File Storage mit F# #
 
 Azure File Storage ist ein Dienst, der bietet Dateifreigaben in der Cloud mit dem Standard [Server Message Block (SMB) Protokoll](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Es werden sowohl SMB 2.1 als auch SMB 3.0 unterstützt. Mit Azure File Storage können Sie ältere Anwendungen migrieren, die Dateifreigaben in Azure schnell und ohne teures abhängen. Anwendungen, die in Azure Virtual Machines oder Cloud Services oder von lokalen Clients ausgeführt, können eine Dateifreigabe in der Cloud bereitstellen, ebenso wie eine Desktopanwendung eine typische SMB-Freigabe einbindet. Eine beliebige Anzahl von Komponenten der Anwendung kann dann bereitstellen und gleichzeitig Zugriff auf die File Storage-Freigabe.
 
@@ -21,7 +21,7 @@ Eine grundlegende Übersicht von File Storage finden Sie unter [.NET Guide für 
 Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account).
 Sie benötigen für dieses Konto auch Ihren speicherzugriffsschlüssel.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten f# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
 In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `files.fsx`, in der F#-Entwicklungsumgebung.
 

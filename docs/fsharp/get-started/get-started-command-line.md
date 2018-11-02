@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sehen sie sich [Einführung in f#](../tour.md) an für weitere Informationen zu verschiedenen F#-Funktionen.
+Sehen sie sich [Einführung in F#](../tour.md) an für weitere Informationen zu verschiedenen F#-Funktionen.

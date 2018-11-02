@@ -1,6 +1,6 @@
 ---
 title: Statisch aufgelöste Typparameter (F#)
-description: Informationen zum Verwenden von f#-Statisch aufgelöste Typparameter, der durch einen tatsächlichen Typ zur Kompilierzeit statt zur Laufzeit ersetzt wurde.
+description: Informationen zum Verwenden von F#-Statisch aufgelöste Typparameter, der durch einen tatsächlichen Typ zur Kompilierzeit statt zur Laufzeit ersetzt wurde.
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -57,7 +57,7 @@ Die Ausgabe lautet wie folgt.
 1.500000
 ```
 
-Ab f# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache der Typname kann tatsächlich vom Compiler abgeleitet werden, aber konnte nicht tatsächlich in der Signatur angegeben werden.  Ab f# 4.1 können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
+Ab F# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache der Typname kann tatsächlich vom Compiler abgeleitet werden, aber konnte nicht tatsächlich in der Signatur angegeben werden.  Ab F# 4.1 können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
 
 ```fsharp
 let inline konst x _ = x

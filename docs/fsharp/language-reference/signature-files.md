@@ -1,5 +1,5 @@
 ---
-title: Signaturdateien (f#)
+title: Signaturdateien (F#)
 description: Erfahren Sie, wie Sie mit F#-Signaturdateien, zum Speichern von Informationen zu den öffentlichen Signaturen einer Reihe von F#-Programmelementen, z. B. Typen, Namespaces und Modulen.
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615

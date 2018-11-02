@@ -1,6 +1,6 @@
 ---
 title: Überladen von Operatoren (F#)
-description: Erfahren Sie, wie arithmetische Operatoren in einer Klasse oder einem Datensatztyp sowie auf globaler Ebene in f# zu überladen.
+description: Erfahren Sie, wie arithmetische Operatoren in einer Klasse oder einem Datensatztyp sowie auf globaler Ebene in F# zu überladen.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,7 +47,7 @@ Das Operatorzeichen `.` wirkt sich nicht auf die Rangfolge aus. Wenn Sie eine ei
 
 Nur die Operatoren `?` und `?<-` integritätsdienststatus mit `?`.
 
-Eine Tabelle mit der Rangfolge aller Operatoren in f# finden Sie im [Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md).
+Eine Tabelle mit der Rangfolge aller Operatoren in F# finden Sie im [Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Namen von überladenen Operatoren
 

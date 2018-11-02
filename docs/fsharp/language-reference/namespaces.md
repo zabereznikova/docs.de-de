@@ -115,9 +115,9 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die Klasse `Banana` beide sich aufeinander beziehen.  Darüber hinaus das Modul `BananaHelpers` und die Klasse `Banana` auch sich aufeinander beziehen.  Dies ist nicht möglich, die in f# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `MutualReferences` Namespace.
+Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die Klasse `Banana` beide sich aufeinander beziehen.  Darüber hinaus das Modul `BananaHelpers` und die Klasse `Banana` auch sich aufeinander beziehen.  Dies ist nicht möglich, die in F# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `MutualReferences` Namespace.
 
-Dieses Feature ist auch verfügbar für die obersten Ebene [Module](modules.md) in f# 4.1 oder höher.
+Dieses Feature ist auch verfügbar für die obersten Ebene [Module](modules.md) in F# 4.1 oder höher.
 
 ## <a name="see-also"></a>Siehe auch
 

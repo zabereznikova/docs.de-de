@@ -25,7 +25,7 @@ __SOURCE_FILE__
 
 Jeder dieser Werte weist den Typ `string`.
 
-Die Quellzeile, Datei, und Pfadbezeichner, die in f# verfügbar sind, werden in der folgende Tabelle zusammengefasst. Diese Bezeichner sind keine Präprozessormakros; Sie sind integrierte Werte, die vom Compiler erkannt werden.
+Die Quellzeile, Datei, und Pfadbezeichner, die in F# verfügbar sind, werden in der folgende Tabelle zusammengefasst. Diese Bezeichner sind keine Präprozessormakros; Sie sind integrierte Werte, die vom Compiler erkannt werden.
 
 |Vordefinierte Bezeichner|Beschreibung|
 |---------------------|-----------|

@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Erstellen eines Typanbieters (f#)'
-description: Erfahren Sie, wie Sie eigene F#-Typanbieter in f# 3.0 zu erstellen, indem Sie mehrere einfache Typanbieter zur Veranschaulichung der grundlegenden Konzepte untersucht.
+title: 'Tutorial: Erstellen eines Typanbieters (F#)'
+description: Erfahren Sie, wie Sie eigene F#-Typanbieter in F# 3.0 zu erstellen, indem Sie mehrere einfache Typanbieter zur Veranschaulichung der grundlegenden Konzepte untersucht.
 ms.date: 05/16/2016
 ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,15 +11,15 @@ ms.locfileid: "50183918"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Erstellen eines Typanbieters
 
-Der typanbietermechanismus in f# ist ein Großteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zu den typanbietermechanismus in F# erläutert werden, finden Sie unter [Typanbieter](index.md).
+Der typanbietermechanismus in F# ist ein Großteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zu den typanbietermechanismus in F# erläutert werden, finden Sie unter [Typanbieter](index.md).
 
-Das f#-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet und Enterprise Data Services. Zum Beispiel:
+Das F#-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet und Enterprise Data Services. Zum Beispiel:
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) Typanbieter enthält, für die JSON, XML, CSV und HTML-Formaten zu dokumentieren.
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) stellt stark typisierten Zugriff auf die SQL-Datenbanken über einen Objekt-Zuordnung und f# LINQ-Abfragen für diese Datenquellen.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) stellt stark typisierten Zugriff auf die SQL-Datenbanken über einen Objekt-Zuordnung und F# LINQ-Abfragen für diese Datenquellen.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) hat eine Reihe von Typanbieter für zur Kompilierzeit überprüft Einbetten von T-SQL-Code in f#.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) hat eine Reihe von Typanbieter für zur Kompilierzeit überprüft Einbetten von T-SQL-Code in F#.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) ist eine ältere Typanbieter für die Verwendung nur mit .NET Framework-Programmierung für den Zugriff auf SQL, Entity Framework, OData und WSDL-Datendienste.
 
@@ -175,7 +175,7 @@ In diesem Abschnitt werden die wichtigsten Schritte bei der Implementierung eine
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Dieser Typ muss öffentlich sein und müssen Sie markieren Sie sie mit der [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) Attribut, damit der Compiler den Typanbieter erkannt wird, wenn ein separates F#-Projekt die Assembly verweist, die den Typ enthält. Die *Config* Parameter ist optional, und, falls vorhanden, enthält Sie kontextkonfigurationsinformationen für die typanbieterinstanz, die f#-Compiler erstellt.
+Dieser Typ muss öffentlich sein und müssen Sie markieren Sie sie mit der [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) Attribut, damit der Compiler den Typanbieter erkannt wird, wenn ein separates F#-Projekt die Assembly verweist, die den Typ enthält. Die *Config* Parameter ist optional, und, falls vorhanden, enthält Sie kontextkonfigurationsinformationen für die typanbieterinstanz, die F#-Compiler erstellt.
 
 Anschließend implementieren Sie die [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) Schnittstelle. In diesem Fall verwenden Sie den `TypeProviderForNamespaces`-Typ aus der `ProvidedTypes`-API als Basistyp. Dieser Hilfstyp kann eine endliche Auflistung vorzeitig bereitgestellter Namespaces bereitstellen, von denen jeder direkt eine begrenzte Zahl fester, vorzeitig bereitgestellter Typen enthält. In diesem Kontext, den Anbieter *Eager Loading* Typen generiert, selbst wenn sie nicht benötigt oder verwendet werden.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Beim Abrufen dieser Eigenschaft wird immer die Zeichenfolge "Hello!" zurückgegeben. Der `GetterCode` für die Eigenschaft verwendet ein F#-Zitat, das den Code darstellt, den der Hostcompiler zum Abrufen der Eigenschaft generiert. Weitere Informationen zu Zitaten finden Sie unter [Zitieren von Code (f#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Beim Abrufen dieser Eigenschaft wird immer die Zeichenfolge "Hello!" zurückgegeben. Der `GetterCode` für die Eigenschaft verwendet ein F#-Zitat, das den Code darstellt, den der Hostcompiler zum Abrufen der Eigenschaft generiert. Weitere Informationen zu Zitaten finden Sie unter [Zitieren von Code (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
 
 Fügen Sie der Eigenschaft eine XML-Dokumentation hinzu.
 
@@ -469,7 +469,7 @@ Beachten Sie die folgenden Punkte:
 
 - Für jede benannte Gruppe wird eine bereitgestellte Eigenschaft erzeugt, und bei einem Zugriff auf die Eigenschaft wird ein Indexer verwendet, um eine `Groups`-Auflistung der Übereinstimmungen abzurufen.
 
-Der folgende Code enthält die Kernlogik für die Implementierung eines solchen Anbieters, wobei in diesem Beispiel allerdings das Hinzufügen der Member zum bereitgestellten Typ ausgelassen wird. Weitere Informationen über die hinzugefügten Member finden Sie im entsprechenden Abschnitt weiter unten in diesem Thema. Für den vollständigen Code, laden Sie das Beispiel aus der [f# 3.0 Sample Pack](https://fsharp3sample.codeplex.com) auf der Codeplex-Website.
+Der folgende Code enthält die Kernlogik für die Implementierung eines solchen Anbieters, wobei in diesem Beispiel allerdings das Hinzufügen der Member zum bereitgestellten Typ ausgelassen wird. Weitere Informationen über die hinzugefügten Member finden Sie im entsprechenden Abschnitt weiter unten in diesem Thema. Für den vollständigen Code, laden Sie das Beispiel aus der [F# 3.0 Sample Pack](https://fsharp3sample.codeplex.com) auf der Codeplex-Website.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

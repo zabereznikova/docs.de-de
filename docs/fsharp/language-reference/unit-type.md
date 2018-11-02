@@ -1,6 +1,6 @@
 ---
 title: Unit-Typ (F#)
-description: Erfahren Sie, wie der f#-Typ "Unit" häufig verwendet wird, um die Stelle zu speichern, in dem ein Wert durch die Syntax der erforderlich ist, wenn kein Wert erforderlich oder gewünscht ist.
+description: Erfahren Sie, wie der F#-Typ "Unit" häufig verwendet wird, um die Stelle zu speichern, in dem ein Wert durch die Syntax der erforderlich ist, wenn kein Wert erforderlich oder gewünscht ist.
 ms.date: 05/16/2016
 ms.openlocfilehash: c3dfa5f63c25a1e8abc0f75b905c129b311479af
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

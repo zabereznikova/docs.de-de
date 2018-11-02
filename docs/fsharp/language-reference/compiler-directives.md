@@ -65,7 +65,7 @@ Die folgende Tabelle enthält die Compilerdirektive, die in F# verfügbar ist.
 |Direktive|Beschreibung|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Aktiviert oder deaktiviert die einfache Syntax für die Kompatibilität mit anderen MK-Versionen. Standardmäßig ist die einfache Syntax aktiviert. Die ausführliche Syntax ist immer aktiviert. Daher können Sie die einfache und ausführliche Syntax verwenden. Die Direktive `#light` an sich entspricht `#light "on"`. Beim Angeben von `#light "off"` müssen Sie die ausführliche Syntax für alle Sprachkonstrukte verwenden. Bei der in der Dokumentation für F# gezeigten Syntax wird davon ausgegangen, dass Sie die einfache Syntax verwenden. Weitere Informationen finden Sie unter [ausführliche Syntax](verbose-syntax.md).|
-Interpreter (fsi.exe)-Anweisungen finden Sie unter [Interaktive Programmierung mit f#](../tutorials/fsharp-interactive/index.md).
+Interpreter (fsi.exe)-Anweisungen finden Sie unter [Interaktive Programmierung mit F#](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 

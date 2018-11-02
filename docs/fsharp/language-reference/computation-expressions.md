@@ -1,6 +1,6 @@
 ---
 title: Berechnungsausdrücke (F#)
-description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in f#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
+description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in F#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 07/27/2018
 ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48839868"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
-Berechnungsausdrücke in f# bieten eine bequeme Syntax für das Schreiben von Berechnungen, die sequenziert werden können und mithilfe von ablaufsteuerungskonstrukten und Bindungen kombiniert. Abhängig von der Art des Berechnungsausdrucks können sie als eine Möglichkeit, Monaden, Monoids, Monad Transformatoren und applicative Funktionselemente auszudrücken betrachtet werden. Anders als bei anderen Sprachen (z. B. *-Notation* in Haskell), sie sind nicht an eine einzelne Abstraktion gebunden, und verlassen Sie sich nicht in Makros oder anderen Formen der Metaprogrammierung, um eine praktische und kontextbezogene Syntax zu erreichen.
+Berechnungsausdrücke in F# bieten eine bequeme Syntax für das Schreiben von Berechnungen, die sequenziert werden können und mithilfe von ablaufsteuerungskonstrukten und Bindungen kombiniert. Abhängig von der Art des Berechnungsausdrucks können sie als eine Möglichkeit, Monaden, Monoids, Monad Transformatoren und applicative Funktionselemente auszudrücken betrachtet werden. Anders als bei anderen Sprachen (z. B. *-Notation* in Haskell), sie sind nicht an eine einzelne Abstraktion gebunden, und verlassen Sie sich nicht in Makros oder anderen Formen der Metaprogrammierung, um eine praktische und kontextbezogene Syntax zu erreichen.
 
 ## <a name="overview"></a>Übersicht
 
@@ -22,7 +22,7 @@ Berechnungen können viele Formen annehmen. Die häufigste Form der Berechnung i
 * Effectful Berechnungen
 * Produktive Berechnungen
 
-Allgemeiner gesagt, es gibt *kontextbezogene* Berechnungen, die Sie in bestimmten Teilen einer Anwendung ausführen müssen. Schreiben von kontextbezogenen Code kann schwierig sein wie "Speicherverlusten" Berechnungen außerhalb von einem bestimmten Kontext ohne Abstraktionen, um zu verhindern, dass Sie auf diese Weise einfach ist. Diese Abstraktionen sind oft schwierig, selbst zu schreiben, die Grund f# eine verallgemeinerte Vorgehensweise hat sogenannte **Berechnungsausdrücke**.
+Allgemeiner gesagt, es gibt *kontextbezogene* Berechnungen, die Sie in bestimmten Teilen einer Anwendung ausführen müssen. Schreiben von kontextbezogenen Code kann schwierig sein wie "Speicherverlusten" Berechnungen außerhalb von einem bestimmten Kontext ohne Abstraktionen, um zu verhindern, dass Sie auf diese Weise einfach ist. Diese Abstraktionen sind oft schwierig, selbst zu schreiben, die Grund F# eine verallgemeinerte Vorgehensweise hat sogenannte **Berechnungsausdrücke**.
 
 Berechnungsausdrücke bieten ein einheitliches Syntax und Abstraktion Modell für die Codierung von kontextbezogener Berechnungen.
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-Ab f# 4.5, den `match!` Schlüsselwort ermöglicht Sie Inline einen Aufruf an eine andere Berechnung Ausdruck und das Muster abzugleichen, das Ergebnis:
+Ab F# 4.5, den `match!` Schlüsselwort ermöglicht Sie Inline einen Aufruf an eine andere Berechnung Ausdruck und das Muster abzugleichen, das Ergebnis:
 
 ```fsharp
 let doThingsAsync url =

@@ -1,6 +1,6 @@
 ---
 title: Automatische Verallgemeinerung (F#)
-description: Erfahren Sie, wie f# automatisch die Argumente und Funktionstypen verallgemeinert, damit sie mit mehreren Typen nach Möglichkeit funktionieren.
+description: Erfahren Sie, wie F# automatisch die Argumente und Funktionstypen verallgemeinert, damit sie mit mehreren Typen nach Möglichkeit funktionieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "43855776"
 ---
 # <a name="automatic-generalization"></a>Automatische Verallgemeinerung
 
-F#-verwendet den Typrückschluss, um die Arten von Funktionen und Ausdrücke zu bewerten. In diesem Thema wird beschrieben, wie f# automatisch die Argumente und Funktionstypen verallgemeinert, damit sie mit mehreren Arten funktionieren, wenn dies möglich ist.
+F#-verwendet den Typrückschluss, um die Arten von Funktionen und Ausdrücke zu bewerten. In diesem Thema wird beschrieben, wie F# automatisch die Argumente und Funktionstypen verallgemeinert, damit sie mit mehreren Arten funktionieren, wenn dies möglich ist.
 
 ## <a name="automatic-generalization"></a>Automatische Verallgemeinerung
 

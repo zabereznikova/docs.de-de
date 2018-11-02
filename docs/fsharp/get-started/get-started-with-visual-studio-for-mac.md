@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit f# in Visual Studio für Mac
-description: Erfahren Sie, wie f# in Visual Studio für Mac verwenden.
+title: Erste Schritte mit F# in Visual Studio für Mac
+description: Erfahren Sie, wie F# in Visual Studio für Mac verwenden.
 ms.date: 07/03/2018
 ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44042323"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Erste Schritte mit f# in Visual Studio für Mac
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Erste Schritte mit F# in Visual Studio für Mac
 
 F# und Visual F#-Tools werden in der Visual Studio für Mac-IDE unterstützt. Stellen Sie sicher, dass man [Visual Studio für Mac installiert](install-fsharp.md#install-f-with-visual-studio-for-mac).
 
@@ -21,11 +21,11 @@ Eine der grundlegendsten Projekte in Visual Studio für Mac ist die Konsolenanwe
 
 2.  Klicken Sie im Dialogfeld "Neues Projekt" gibt es unterschiedliche 2-Vorlagen für die Konsolenanwendung.  Es gibt einen anderen -> .NET und .NET Framework ausgerichtet ist.  Die andere Vorlage befindet sich unter .NET Core >, das auf .NET Core-App.  Entweder Vorlage sollte im Rahmen dieses Artikels funktionieren.
 
-3. Unter Konsolen-app c#, f# bei Bedarf ändern.  Wählen Sie die **Weiter** Schaltfläche, um den Vorgang fortzusetzen.  
+3. Unter Konsolen-app c#, F# bei Bedarf ändern.  Wählen Sie die **Weiter** Schaltfläche, um den Vorgang fortzusetzen.  
 
 4. Geben Sie Ihrem Projekt einen Namen ein, und wählen Sie die Optionen, die Sie für die app verwenden möchten.  Beachten Sie, dass im Vorschaufenster auf der Seite des Bildschirms, der die Verzeichnisstruktur angezeigt wird, die erstellt werden, basierend auf den ausgewählten Optionen.  
 
-5. Klicken Sie auf **Erstellen**.  Eine f#-Projekt im Projektmappen-Explorer sollte nun angezeigt werden.
+5. Klicken Sie auf **Erstellen**.  Eine F#-Projekt im Projektmappen-Explorer sollte nun angezeigt werden.
 
 ## <a name="writing-your-code"></a>Das Schreiben von code
 
@@ -33,7 +33,7 @@ Erste Schritte zunächst, Code zu schreiben.  Stellen Sie sicher, dass die `Prog
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Im vorherigen Beispiel, eine Funktion `square` wurde der Eingabe mit dem Namen akzeptiert definiert `x` und von sich selbst multipliziert.  Da f# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  F#-Compiler erkennt die Typen, in denen Multiplikation gültig ist, und weist einen Typ `x` basieren, wie `square` aufgerufen wird.  Wenn Sie darauf zeigen `square`, sollte Folgendes angezeigt:
+Im vorherigen Beispiel, eine Funktion `square` wurde der Eingabe mit dem Namen akzeptiert definiert `x` und von sich selbst multipliziert.  Da F# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  F#-Compiler erkennt die Typen, in denen Multiplikation gültig ist, und weist einen Typ `x` basieren, wie `square` aufgerufen wird.  Wenn Sie darauf zeigen `square`, sollte Folgendes angezeigt:
 
 ```
 val square: x:int -> int
@@ -57,11 +57,11 @@ Sie sollten jetzt sehen, dass die folgenden im Konsolenfenster anzuzeigen, die V
 
 Herzlichen Glückwunsch!  Sie haben Ihr erste F#-Projekt in Visual Studio für Mac erstellten, geschrieben, dass eine F#-Funktion die Ergebnisse des Aufrufs dieser Funktion ausgegeben und führen Sie das Projekt aus, um einige Ergebnisse anzuzeigen.
 
-## <a name="using-f-interactive"></a>Verwenden von f# Interactive
+## <a name="using-f-interactive"></a>Verwenden von F# Interactive
 
-Eine der besten Features von der Visual F#-Tools in Visual Studio für Mac ist die f# Interactive-Fenster.  Sie können Code über an einen Prozess zu senden, können Sie rufen diesen Code und zeigen Sie das Ergebnis interaktiv.
+Eine der besten Features von der Visual F#-Tools in Visual Studio für Mac ist die F# Interactive-Fenster.  Sie können Code über an einen Prozess zu senden, können Sie rufen diesen Code und zeigen Sie das Ergebnis interaktiv.
 
-Um mit der Nutzung beginnen, markieren Sie die `square` Funktion, die in Ihrem Code definiert.  Klicken Sie anschließend auf **bearbeiten** Menü der obersten Ebene.  Wählen Sie als Nächstes **Auswahl an f# Interactive senden**.  Dadurch wird den Code in die f# Interactive-Fenster ausgeführt.  Alternativ können Sie klicken Sie mit der rechten Maustaste auf die Auswahl und wählen Sie **Auswahl an f# Interactive senden**.  F# Interactive-Fenster mit den folgenden darin angezeigt werden sollte:
+Um mit der Nutzung beginnen, markieren Sie die `square` Funktion, die in Ihrem Code definiert.  Klicken Sie anschließend auf **bearbeiten** Menü der obersten Ebene.  Wählen Sie als Nächstes **Auswahl an F# Interactive senden**.  Dadurch wird den Code in die F# Interactive-Fenster ausgeführt.  Alternativ können Sie klicken Sie mit der rechten Maustaste auf die Auswahl und wählen Sie **Auswahl an F# Interactive senden**.  F# Interactive-Fenster mit den folgenden darin angezeigt werden sollte:
 
 ```
 >
@@ -71,7 +71,7 @@ val square : x:int -> int
 >
 ```
 
-Dies zeigt die gleiche Funktionssignatur für die `square` -Funktion, die Sie zuvor gesehen haben, wenn Sie über die Funktion gezeigt.  Da `square` ist nun im f# Interactive-Prozess definiert wird, können Sie ihn mit anderen Werten aufrufen:
+Dies zeigt die gleiche Funktionssignatur für die `square` -Funktion, die Sie zuvor gesehen haben, wenn Sie über die Funktion gezeigt.  Da `square` ist nun im F# Interactive-Prozess definiert wird, können Sie ihn mit anderen Werten aufrufen:
 
 ```
 > square 12;;
@@ -80,7 +80,7 @@ val it : int = 144
 val it : int = 169
 ```
 
-Dies führt die Funktion, bindet das Ergebnis an einen neuen Namen `it`, und zeigt den Typ und Wert des `it`.  Beachten Sie, dass Sie jede Zeile mit dem Beenden müssen `;;`.  Dies ist wie f# Interactive weiß, wenn der Funktionsaufruf abgeschlossen ist.  Sie können auch neue Funktionen in f# Interactive definieren:
+Dies führt die Funktion, bindet das Ergebnis an einen neuen Namen `it`, und zeigt den Typ und Wert des `it`.  Beachten Sie, dass Sie jede Zeile mit dem Beenden müssen `;;`.  Dies ist wie F# Interactive weiß, wenn der Funktionsaufruf abgeschlossen ist.  Sie können auch neue Funktionen in F# Interactive definieren:
 
 ```
 > let isOdd x = x % 2 <> 0;;
@@ -107,11 +107,11 @@ val it : bool = true
 
 Der Pipe-Forward-Operator und vieles mehr, werden in späteren Tutorials behandelt.
 
-Dies ist nur ein kurzer Einblick in die Verwendungsmöglichkeiten mit f# Interactive.  Weitere Informationen finden Sie [Interaktive Programmierung mit f#](../tutorials/fsharp-interactive/index.md).
+Dies ist nur ein kurzer Einblick in die Verwendungsmöglichkeiten mit F# Interactive.  Weitere Informationen finden Sie [Interaktive Programmierung mit F#](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in f#](../tour.md), die behandelt einige der wichtigsten Funktionen der Sprache f#.  Es wird bieten Ihnen einen Überblick über einige der Funktionen von f# und bieten reichlich Codebeispiele, die Sie in Visual Studio für Mac kopieren und ausführen können.  Es gibt auch einige hervorragenden externe Ressourcen, die Sie verwenden können, im gerätekatalog dargestellt die [Leitfaden für f#](../index.md).
+Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in F#](../tour.md), die behandelt einige der wichtigsten Funktionen der Sprache F#.  Es wird bieten Ihnen einen Überblick über einige der Funktionen von F# und bieten reichlich Codebeispiele, die Sie in Visual Studio für Mac kopieren und ausführen können.  Es gibt auch einige hervorragenden externe Ressourcen, die Sie verwenden können, im gerätekatalog dargestellt die [Leitfaden für F#](../index.md).
 
 ## <a name="see-also"></a>Siehe auch
 

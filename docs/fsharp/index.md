@@ -12,15 +12,15 @@ ms.locfileid: "50188364"
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 
-Leitfaden für f# enthält zahlreiche Ressourcen für die Sprache f# erlernen.
+Leitfaden für F# enthält zahlreiche Ressourcen für die Sprache F# erlernen.
 
-## <a name="learning-f"></a>Erlernen von f# #
+## <a name="learning-f"></a>Erlernen von F# #
 
-[F#-neuerungen](what-is-fsharp.md) wird beschrieben, was die F#-Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit f# vertraut sind.
+[F#-neuerungen](what-is-fsharp.md) wird beschrieben, was die F#-Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit F# vertraut sind.
 
 Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Dies wird empfohlen, wenn Sie Core F#-Funktionen in Aktion sehen möchten.
 
-[Erste Schritte mit f# in Visual Studio](get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
+[Erste Schritte mit F# in Visual Studio](get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
 
 Lesen Sie [Erste Schritte mit F# in Visual Studio für Mac](get-started/get-started-with-visual-studio-for-mac.md), wenn Sie MacOS nutzen und eine Visual Studio-IDE verwenden möchten.
 

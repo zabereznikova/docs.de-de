@@ -59,7 +59,7 @@ Nicht-Inline-Methoden können rekursiv innerhalb des Typs verwendet werden; best
 
 ## <a name="instance-methods"></a>Instanzmethoden
 
-Instanzmethoden werden mit der `member` Schlüsselwort und *Selbstbezeichner*, gefolgt von einem Punkt (.) und dem Methodennamen und Parameter. Wie bei der Fall ist `let` Bindungen, die *Parameterliste* kann ein Muster sein. In der Regel setzen Sie Methode, die Parameter in Klammern in einem Formular handelt es sich die Methoden wie Tupel werden angezeigt in f#, wenn sie in anderen .NET Framework-Sprachen erstellt werden. Allerdings wird die Curry-Form (Parameter durch Leerzeichen getrennt) ist auch üblich, und andere Muster werden ebenfalls unterstützt.
+Instanzmethoden werden mit der `member` Schlüsselwort und *Selbstbezeichner*, gefolgt von einem Punkt (.) und dem Methodennamen und Parameter. Wie bei der Fall ist `let` Bindungen, die *Parameterliste* kann ein Muster sein. In der Regel setzen Sie Methode, die Parameter in Klammern in einem Formular handelt es sich die Methoden wie Tupel werden angezeigt in F#, wenn sie in anderen .NET Framework-Sprachen erstellt werden. Allerdings wird die Curry-Form (Parameter durch Leerzeichen getrennt) ist auch üblich, und andere Muster werden ebenfalls unterstützt.
 
 Das folgende Beispiel veranschaulicht die Definition und Verwendung einer nicht abstrakten Instanzmethode.
 
@@ -97,11 +97,11 @@ Im folgende Beispiel wird veranschaulicht, eine abgeleitete Klasse, die eine Bas
 
 ## <a name="overloaded-methods"></a>Überladene Methoden
 
-Überladene Methoden sind Methoden, die über identische Namen in einem bestimmten Typ verfügen jedoch über unterschiedliche Argumente. In f# sind optionale Argumente in der Regel überladene Methoden verwendet. Überladene Methoden sind jedoch in der Sprache zulässig, vorausgesetzt, dass die Argumente in Tupelform und nicht Curry-Form sind.
+Überladene Methoden sind Methoden, die über identische Namen in einem bestimmten Typ verfügen jedoch über unterschiedliche Argumente. In F# sind optionale Argumente in der Regel überladene Methoden verwendet. Überladene Methoden sind jedoch in der Sprache zulässig, vorausgesetzt, dass die Argumente in Tupelform und nicht Curry-Form sind.
 
 ## <a name="optional-arguments"></a>Optionale Argumente
 
-Ab f# 4.1, können Sie auch optionale Argumente hat den Standardwert des Parameters in Methoden verfügen.  Dadurch wird die Interoperation mit C#-Code zu vereinfachen.  Im folgende Beispiel wird die Syntax veranschaulicht:
+Ab F# 4.1, können Sie auch optionale Argumente hat den Standardwert des Parameters in Methoden verfügen.  Dadurch wird die Interoperation mit C#-Code zu vereinfachen.  Im folgende Beispiel wird die Syntax veranschaulicht:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.

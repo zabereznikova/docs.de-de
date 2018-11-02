@@ -1,6 +1,6 @@
 ---
 title: Bitweise Operatoren (F#)
-description: Erfahren Sie, bis die bitweisen Operatoren, die in der Programmiersprache f# verfügbar sind.
+description: Erfahren Sie, bis die bitweisen Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "48581507"
 ---
 # <a name="bitwise-operators"></a>Bitweise Operatoren
 
-In diesem Thema wird beschrieben, bitweise Operatoren, die in f# verfügbar sind.
+In diesem Thema wird beschrieben, bitweise Operatoren, die in F# verfügbar sind.
 
 ## <a name="summary-of-bitwise-operators"></a>Zusammenfassung der Operatoren zur Bitmanipulation
 
-Die folgende Tabelle beschreibt die bitweisen Operatoren, die für Unboxing integrale Typen in der Sprache f# unterstützt werden.
+Die folgende Tabelle beschreibt die bitweisen Operatoren, die für Unboxing integrale Typen in der Sprache F# unterstützt werden.
 
 |Operator|Hinweise|
 |--------|-----|

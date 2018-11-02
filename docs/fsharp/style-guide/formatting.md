@@ -195,7 +195,7 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 F#-erbt sowohl den Postfix ML Stil für die Benennung von generischer Typen (z. B. `int list`) sowie das Präfix .NET Stil (z. B. `list<int>`). Bevorzugen Sie das .NET-Format, mit Ausnahme von vier bestimmte Typen:
 
-1. Für f#-Listen, verwenden Sie die Postfix-Form: `int list` statt `list<int>`.
+1. Für F#-Listen, verwenden Sie die Postfix-Form: `int list` statt `list<int>`.
 2. Für die F#-Optionen verwenden Sie die Postfix-Form: `int option` statt `option<int>`.
 3. Verwenden Sie für F#-Arrays, die syntaktischen Namen `int[]` statt `int array` oder `array<int>`.
 4. Verwenden Sie für Referenzzellen, `int ref` statt `ref<int>` oder `Ref<int>`.
@@ -591,7 +591,7 @@ let comparer =
 
 ### <a name="formatting-white-space-in-expressions"></a>Formatieren von Leerzeichen in Ausdrücken
 
-Vermeiden Sie die überflüssigen Leerzeichen in f#-Ausdrücke.
+Vermeiden Sie die überflüssigen Leerzeichen in F#-Ausdrücke.
 
 ```fsharp
 // OK

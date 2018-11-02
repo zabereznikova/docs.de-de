@@ -22,7 +22,7 @@ Ein *sequenzieren Ausdruck* ist ein Ausdruck, der eine Sequenz ergibt. Sequence-
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Sequence-Ausdrücke bestehen aus einer f#-Ausdrücke, die Werte der Sequenz zu erzeugen. Sie können die `yield` Schlüsselwort, um die Werte erzeugen, werden Teil der Sequenz.
+Sequence-Ausdrücke bestehen aus einer F#-Ausdrücke, die Werte der Sequenz zu erzeugen. Sie können die `yield` Schlüsselwort, um die Werte erzeugen, werden Teil der Sequenz.
 
 Es folgt ein Beispiel.
 
@@ -62,7 +62,7 @@ Das folgende Beispiel zeigt die Verwendung von `yield!` einzelne Sequenzen zu ei
 
 Sequenzen unterstützen viele derselben Funktionen wie [listet](lists.md). Sequenzen unterstützen auch Vorgänge wie das Gruppieren und mit der Generierung von Funktionen zählen. Sequenzen unterstützen auch vielfältiger Funktionen zum Extrahieren von Untersequenzen.
 
-Viele Datentypen, z. B. Listen, Arrays, Gruppen und Zuordnungen sind Sequenzen implizit, da sie aufzählbare Sammlungen sind. Eine Funktion, die eine Sequenz akzeptiert, da ein Argument mit einem allgemeinen f#-Datentypen, darüber hinaus in einen .NET Framework-Datentyp verwendet werden kann, die implementiert `System.Collections.Generic.IEnumerable<'T>`. Vergleichen Sie dies auf eine Funktion, die eine Liste als Argument akzeptiert, der nur Listen dauern kann. Der Typ `seq<'T>` ist eine typabkürzung für `IEnumerable<'T>`. Dies bedeutet, dass jeder Typ, die generische implementiert `System.Collections.Generic.IEnumerable<'T>`festlegt einschließlich Arrays, Listen und Zuordnungen in f# und auch die meisten .NET Framework-Auflistungstypen, ist kompatibel mit der `seq` geben und kann verwendet werden, wo eine Sequenz erwartet wird.
+Viele Datentypen, z. B. Listen, Arrays, Gruppen und Zuordnungen sind Sequenzen implizit, da sie aufzählbare Sammlungen sind. Eine Funktion, die eine Sequenz akzeptiert, da ein Argument mit einem allgemeinen F#-Datentypen, darüber hinaus in einen .NET Framework-Datentyp verwendet werden kann, die implementiert `System.Collections.Generic.IEnumerable<'T>`. Vergleichen Sie dies auf eine Funktion, die eine Liste als Argument akzeptiert, der nur Listen dauern kann. Der Typ `seq<'T>` ist eine typabkürzung für `IEnumerable<'T>`. Dies bedeutet, dass jeder Typ, die generische implementiert `System.Collections.Generic.IEnumerable<'T>`festlegt einschließlich Arrays, Listen und Zuordnungen in F# und auch die meisten .NET Framework-Auflistungstypen, ist kompatibel mit der `seq` geben und kann verwendet werden, wo eine Sequenz erwartet wird.
 
 ## <a name="module-functions"></a>Modulfunktionen
 
