@@ -3,10 +3,10 @@ title: Aufruferinformationen (f#)
 description: Beschreibt die Attribute "Callerinfo"-Argument zu verwenden, um von einer Methode memberaufruferinformationen zu erhalten.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "47216369"
 ---
 # <a name="caller-information"></a>Aufruferinformationen
@@ -51,7 +51,7 @@ Aufrufer-Informationswerte werden zur Kompilierzeit als Literale in Intermediate
 
 Sie können die optionalen Argumente explizit angeben, um die Aufruferinformationen zu steuern oder auszublenden.
 
-## <a name="member-names"></a>Elementnamen
+## <a name="member-names"></a>Membernamen
 
 Können Sie die [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) Attribut, um zu vermeiden, den Namen des Members als Angabe einer `String` Argument an die aufgerufene Methode. Mit diesem Verfahren, umgehen Sie das Problem, die Umgestaltung mit Umbenennung ändern nicht die `String` Werte. Dieser Vorteil ist für die folgenden Aufgaben besonders hilfreich:
 
