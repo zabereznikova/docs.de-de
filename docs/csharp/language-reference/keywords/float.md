@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: da697aa6f1f429418a69d9f58a13f46a3da9ac74
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157703"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187178"
 ---
 # <a name="float-c-reference"></a>float (C#-Referenz)
 
@@ -21,7 +21,7 @@ Das `float`-Schlüsselwort kennzeichnet einen einfachen Typ, der 32-Bit-Gleitkom
 
 |Typ|Ungefährer Bereich|Genauigkeit|.NET-Typ|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|±1.5 × 10<sup>−45</sup> zu ±3.4 × 10<sup>38</sup>|7 Stellen|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|±1.5 × 10<sup>−45</sup> zu ±3.4 × 10<sup>38</sup>|~6–9 Stellen|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Literale
 
@@ -51,7 +51,7 @@ Ein Gleitkomma-Ausdruck kann die folgenden Sätze von Werten enthalten:
 
 - Die begrenzte Menge von Werten ungleich Null
 
-Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre Gleitkommaarithmetik auf der [IEEE](http://www.ieee.org)-Website.
+Weitere Informationen zu diesen Werten finden Sie im IEEE-Standard für binäre Gleitkommaarithmetik auf der [IEEE](https://www.ieee.org)-Website.
 
 ## <a name="example"></a>Beispiel
 

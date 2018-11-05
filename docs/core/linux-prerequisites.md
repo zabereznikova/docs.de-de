@@ -4,12 +4,12 @@ description: Unterstützte Versionen von Linux-Versionen und .NET Core-Abhängig
 author: jralexander
 ms.author: johalex
 ms.date: 08/20/2018
-ms.openlocfilehash: d0e5b203dc8e1ec6807f28de7d910c74a2ffe665
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4939dfb642c2aef9da593a193f42334f1d57e067
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506848"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842267"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Voraussetzungen für .NET Core unter Linux
 
@@ -35,8 +35,8 @@ Dieser Artikel erläutert die notwendigen Abhängigkeiten zum Entwickeln von .NE
 * CentOS 7 – 64-Bit (`x86_64` oder `amd64`) 
 * Oracle Linux 7 – 64-Bit (`x86_64` oder `amd64`) 
 * Fedora 28, 27 – 64-Bit (`x86_64` oder `amd64`) 
-* Debian 9 (64-Bit, ARM32), Version 8.7 oder höher – 64-Bit (`x86_64` oder `amd64`)
-* Ubuntu 18.04 (64-Bit, ARM32), 16.04, 14.04 – 64-Bit (`x86_64` oder `amd64`)
+* Debian 9 (64 Bit, `arm32`), 8.7 oder höher – 64 Bit (`x86_64` oder `amd64`)
+* Ubuntu 18.04 (64 Bit, `arm32`), 16.04, 14.04 – 64 Bit (`x86_64` oder `amd64`)
 * Linux Mint 18, 17 – 64-Bit (`x86_64` oder `amd64`)
 * openSUSE 42.3 oder höhere Versionen – 64-Bit (`x86_64` oder `amd64`)
 * SUSE Enterprise Linux (SLES) 12 Service Pack 2 oder höher – 64-Bit (`x86_64` oder `amd64`)

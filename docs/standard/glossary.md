@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698483"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840270"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -38,7 +38,7 @@ Siehe [ASP.NET Core-Dokumentation](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>Assembly
 
-Eine *.dll*/*.exe*-Datei, die eine Sammlung von APIs enthält, die von Apps oder anderen Assemblys aufgerufen werden können.
+Eine *DLL*/*EXE*-Datei, die eine Sammlung von APIs enthalten kann, die von Anwendungen oder anderen Assemblys aufgerufen werden können.
 
 Eine Assembly kann Typen wie Schnittstellen, Klassen, Strukturen, Enumerationen und Delegaten enthalten. Assemblys im Ordner *bin* eines Projekts werden manchmal als *Binärdateien* bezeichnet. Siehe auch [Bibliotheken](#library).
 
@@ -46,13 +46,13 @@ Eine Assembly kann Typen wie Schnittstellen, Klassen, Strukturen, Enumerationen 
 
 Common Language Runtime
 
-Die genaue Bedeutung hängt vom Kontext ab, normalerweise wird damit jedoch die Runtime des .NET Framework bezeichnet. Die CLR behandelt die Speicherbelegung und -verwaltung. Bei der CLR handelt es sich auch um einen virtuellen Computer, der nicht nur Apps ausführt, sondern auch mithilfe eines JIT-Compilers dynamisch Code generiert und kompiliert. Die aktuelle Microsoft CLR-Implementierung ist nur unter Windows möglich.
+Die genaue Bedeutung hängt vom Kontext ab, normalerweise wird damit jedoch die Runtime des .NET Framework bezeichnet. Die CLR behandelt die Speicherbelegung und -verwaltung. Bei der CLR handelt es sich auch um einen virtuellen Computer, der nicht nur Apps ausführt, sondern auch mithilfe eines [JIT](#jit)-Compilers dynamisch Code generiert und kompiliert. Die aktuelle Microsoft CLR-Implementierung ist nur unter Windows möglich.
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET Core Common Language Runtime
 
-Die CoreCLR basiert auf demselben Code wie die CLR. rsprünglich war CoreCLR die Runtime von Silverlight und wurde entworfen, um auf mehreren Plattformen ausgeführt zu werden, besonders unter Windows und OS X. CoreCLR ist nun Teil von .NET Core und stellt eine vereinfachte Version der CLR dar. Es handelt sich dabei immer noch um eine plattformübergreifende Runtime, die nun viele Linux-Verteilungen unterstützt. CoreCLR ist auch ein virtueller Computer mit JIT und Funktionen für die Codeausführung.
+Die CoreCLR basiert auf demselben Code wie die CLR. Ursprünglich war CoreCLR die Runtime von Silverlight und wurde für die Ausführung auf mehreren Plattformen entworfen, besonders unter Windows und OS X. CoreCLR ist nun Teil von .NET Core und stellt eine vereinfachte Version der CLR dar. Es handelt sich dabei immer noch um eine [plattformübergreifende](#cross-platform) Runtime, die nun viele Linux-Distributionen unterstützt. CoreCLR ist auch ein virtueller Computer mit JIT und Funktionen für die Codeausführung.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ Eine Reihe von Bibliotheken, aus denen die Systemnamespaces (und in beschränkte
 Im Gegensatz zu CLR und CoreCLR handelt es sich bei CoreRT nicht um einen virtuellen Computer. Das bedeutet, dass die Funktionen zum dynamischen Generieren und Ausführen von Code nicht enthalten sind, da kein [JIT](#jit) enthalten ist. Es ist jedoch ein [GC](#gc) enthalten sowie die Möglichkeit zur Identifikation und Reflektion des Laufzeittyps (RTTI). Das Typsystem wurde jedoch so entwickelt, dass keine Metadaten für die Reflektion erforderlich sind. Dadurch wird eine [AOT](#aot)-Toolkette ermöglicht, die die Verknüpfung zu überflüssigen Metadaten aufheben und (was noch wichtiger ist) Code identifizieren kann, der von der App nicht verwendet wird. CoreRT befindet sich in der Entwicklung.
 
 Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+
+## <a name="cross-platform"></a>plattformübergreifend
+
+Die Möglichkeit, eine Anwendung zu entwickeln und auszuführen, die unter vielen verschiedenen Betriebssystemen wie Linux, Windows und iOS verwendet werden kann, ohne dass für jedes Betriebssystem Code neu geschrieben werden muss. Dies ermöglicht die Wiederverwendung von Code und Konsistenz zwischen Anwendungen auf verschiedenen Plattformen.
 
 ## <a name="ecosystem"></a>Umgebung
 
@@ -136,7 +140,7 @@ Siehe [Pakete, Metapakete und Frameworks](../core/packages.md).
 
 ## <a name="mono"></a>Mono
 
-Bei Mono handelt es sich um eine .NET-Implementierung, die in erster Linie verwendet wird, wenn eine kleine Runtime erforderlich ist. Mono ist die Runtime für Xamarin-Anwendungen unter Android, Mac, iOS, tvOS und watchOS und ist hauptsächlich auf Apps mit geringem Ressourcenbedarf ausgelegt.
+Bei Mono handelt es sich um eine [plattformübergreifend](#cross-platform) Open Source-.NET-Implementierung, die in erster Linie verwendet wird, wenn eine kleine Runtime erforderlich ist. Mono ist die Runtime für Xamarin-Anwendungen unter Android, Mac, iOS, tvOS und watchOS und ist hauptsächlich auf Apps mit geringem Ressourcenbedarf ausgelegt.
 
 Außerdem unterstützt Mono alle derzeit veröffentlichten Versionen des .NET Standards.
 

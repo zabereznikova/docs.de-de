@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937165"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453189"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Tutorial: Verwenden von ML.NET für das Iris-Clustering
 
@@ -86,7 +86,7 @@ Entfernen Sie die vorhandene Klassendefinition, und fügen Sie der Datei *IrisDa
 
 `IrisData` ist die Eingabedatenklasse und verfügt über Definitionen für jedes Merkmal im Dataset. Verwenden Sie das Attribut [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute), um die Indizes der Quellspalten in der Datasetdatei festzulegen.
 
-Die Klasse `ClusterPrediction` repräsentiert die Ausgabe des Clusteringmodells, das auf eine `IrisData`-Instanz angewendet wird. Verwenden Sie das Attribut [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute), um die Felder `PredictedClusterId` und `Distances` an die Spalten **PredictedLabel** bzw. **Score** zu binden. Bei der Clusteringaufgabe haben die Spalten die folgende Bedeutung:
+Die Klasse `ClusterPrediction` repräsentiert die Ausgabe des Clusteringmodells, das auf eine `IrisData`-Instanz angewendet wird. Verwenden Sie das Attribut [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute), um die Felder `PredictedClusterId` und `Distances` an die Spalten **PredictedLabel** bzw. **Score** zu binden. Bei der Clusteringaufgabe haben diese Spalten die folgende Bedeutung:
 
 - Die Spalte **PredictedLabel** enthält die ID des vorhergesagten Clusters.
 - Die Spalte **Score** enthält ein Array mit den quadratischen euklidischen Abständen zum Clusterschwerpunkt. Die Arraylänge ist gleich der Anzahl von Clustern.
@@ -138,19 +138,19 @@ Laden Sie zuerst das Trainingsdataset. In diesem Fall wird das Trainingsdataset 
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-Im nächsten Schritt werden alle Spalten mit Merkmalen mithilfe der Transformationsklasse <xref:Microsoft.ML.Transforms.ColumnConcatenator> in der Spalte **Features** zusammengefasst. Standardmäßig verarbeitet ein Lernalgorithmus nur Merkmale aus der Spalte **Features**. Fügen Sie den folgenden Code hinzu:
+Im nächsten Schritt werden alle Spalten mit Merkmalen mithilfe der Transformationsklasse <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> in der Spalte **Features** zusammengefasst. Standardmäßig verarbeitet ein Lernalgorithmus nur Merkmale aus der Spalte **Features**. Fügen Sie den folgenden Code hinzu:
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>Auswählen eines Lernalgorithmus
 
-Nach dem Hinzufügen von Daten zur Pipeline und dem Transformieren in das richtige Eingabeformat wählen Sie einen Lernalgorithmus (**Lernmodul**) aus. Das Lernmodul trainiert das Modell. ML.NET bietet ein Lernmodul <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer>, das den [k-Means-Algorithmus](https://en.wikipedia.org/wiki/K-means_clustering) mit einer verbesserten Methode zur Auswahl der anfänglichen Clusterschwerpunkte implementiert.
+Nach dem Hinzufügen von Daten zur Pipeline und dem Transformieren in das richtige Eingabeformat wählen Sie einen Lernalgorithmus (**Lernmodul**) aus. Das Lernmodul trainiert das Modell. ML.NET bietet ein Lernmodul <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer>, das den [k-Means-Algorithmus](https://en.wikipedia.org/wiki/K-means_clustering) mit einer verbesserten Methode zur Auswahl der anfänglichen Clusterschwerpunkte implementiert.
 
 Fügen Sie den folgenden Code nach dem im vorherigen Schritt hinzugefügten Datenverarbeitungscode in die `Train`-Methode ein:
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-Verwenden Sie die Eigenschaft <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType>, um die Anzahl von Clustern anzugeben. Der obige Code gibt an, dass das Dataset in drei Cluster aufgeteilt wird.
+Verwenden Sie die Eigenschaft <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType>, um die Anzahl von Clustern anzugeben. Der obige Code gibt an, dass das Dataset in drei Cluster aufgeteilt wird.
 
 ## <a name="train-the-model"></a>Trainieren des Modells
 

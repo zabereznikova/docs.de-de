@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404644"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308590"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -290,7 +290,7 @@ Weitere Informationen zum Implementieren von Filtern und ein Arbeitsbeispiel zum
 
 ## <a name="security"></a>Sicherheit
 
-Das Sichern von Webanwendungen stellt ein umfangreiches und komplexes Thema dar. Im Grunde genommen geht es beim Thema Sicherheit darum, sicherzustellen, dass Sie wissen, wer eine Anforderung sendet, und Sie dann sicherstellen, dass die Anforderung nur Zugriff auf die Ressourcen hat, auf die sie Zugriff haben sollte. Im Rahmen der Authentifizierung werden Anmeldeinformationen miteinander verglichen, die zusammen mit einer Anforderung an die Anmeldeinformationen in einem vertrauenswürdigen Datenspeicher bereitgestellt werden, um zu überprüfen, ob die Anforderung behandelt werden soll, als würde sie von einer bekannten Entität gesendet werden. Bei der Autorisierung wird auf der Grundlage der Benutzeridentität der Zugriff auf bestimmte Ressourcen eingeschränkt. Ein weiterer Punkt im Hinblick auf die Sicherheit ist das Schützen von Anforderungen vor Lauschangriffen durch Drittanbieter. Dafür sollten Sie sicherstellen, dass [Ihre Anwendung zumindest SSL verwendet](/aspnet/core/security/enforcing-ssl).
+Das Sichern von Webanwendungen stellt ein umfangreiches und komplexes Thema dar. Im Grunde genommen müssen Sie beim Thema Sicherheit sicherstellen, dass Sie wissen, wer eine Anforderung sendet. Dann müssen Sie sicherstellen, dass die Anforderung nur Zugriff auf die Ressourcen hat, auf die sie Zugriff haben sollte. Im Rahmen der Authentifizierung werden Anmeldeinformationen miteinander verglichen, die zusammen mit einer Anforderung an die Anmeldeinformationen in einem vertrauenswürdigen Datenspeicher bereitgestellt werden, um zu überprüfen, ob die Anforderung behandelt werden soll, als würde sie von einer bekannten Entität gesendet werden. Bei der Autorisierung wird auf der Grundlage der Benutzeridentität der Zugriff auf bestimmte Ressourcen eingeschränkt. Ein weiterer Punkt im Hinblick auf die Sicherheit ist das Schützen von Anforderungen vor Lauschangriffen durch Drittanbieter. Dafür sollten Sie sicherstellen, dass [Ihre Anwendung zumindest SSL verwendet](/aspnet/core/security/enforcing-ssl).
 
 ### <a name="authentication"></a>Authentifizierung
 

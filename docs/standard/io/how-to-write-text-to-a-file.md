@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677148"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181237"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Gewusst wie: Schreiben von Text in eine Datei
 Dieses Thema veranschaulicht verschiedene Arten, wie Sie Text in eine Datei für .NET Framework-Anwendungen oder [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps schreiben können. Die folgenden Klassen und Methoden werden in der Regel zum Schreiben von Text in eine Datei verwendet:  
@@ -27,7 +27,7 @@ Dieses Thema veranschaulicht verschiedene Arten, wie Sie Text in eine Datei für
   
 -   <xref:System.IO.File> wird für .NET Framework-Anwendungen verwendet. Sie stellt statische Methoden zum Schreiben von Text in eine Datei ( <xref:System.IO.File.WriteAllLines%2A> und <xref:System.IO.File.WriteAllText%2A>) oder zum Anfügen von Text an eine Datei (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> oder <xref:System.IO.File.AppendText%2A>) bereit.  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) wird mit [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps verwendet. Sie enthält asynchrone Methoden zum Schreiben von Text in eine Datei ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) oder [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) bzw. zum Anfügen von Text an eine Datei ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) oder [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
+-   <xref:Windows.Storage.FileIO> wird mit [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwendet. Sie enthält asynchrone Methoden zum Schreiben von Text in eine Datei ( <xref:Windows.Storage.FileIO.WriteLinesAsync%2A> oder <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) oder zum Anfügen von Text an eine Datei (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> oder <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).  
 
 - <xref:System.IO.Path> wird auf Zeichenfolgen angewendet, die Datei- oder Verzeichnispfadinformationen enthalten. Diese Klasse enthält die <xref:System.IO.Path.Combine%2A>-Methode, mit der die Verkettung von Zeichenfolgen zum Erstellen eines Datei- oder Verzeichnispfads ermöglicht wird.
 
@@ -59,7 +59,7 @@ Dieses Thema veranschaulicht verschiedene Arten, wie Sie Text in eine Datei für
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie Benutzereingaben asynchron in eine Textdatei in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -App geschrieben werden. Aus Sicherheitsgründen muss in der Regel ein [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx)-Steuerelement verwendet werden, wenn eine Datei von einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App geöffnet wird. In diesem Beispiel wird `FileOpenPicker` nach Textdateien gefiltert.  
+ Im folgenden Beispiel wird veranschaulicht, wie Benutzereingaben asynchron in eine Textdatei in einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -App geschrieben werden. Aus Sicherheitsgründen muss in der Regel ein <xref:Windows.Storage.Pickers.FileOpenPicker>-Steuerelement verwendet werden, wenn eine Datei von einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App geöffnet wird. In diesem Beispiel wird `FileOpenPicker` nach Textdateien gefiltert.  
   
 ```xaml  
 <Page  

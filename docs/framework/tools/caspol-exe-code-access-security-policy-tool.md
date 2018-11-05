@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201139"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086855"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Richtlinientool für die Codezugriffssicherheit)
 Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex** *hex_string* }|Gibt Code an, der über den angegebenen Softwareherausgeber verfügt. Dieser wird anhand einer Zertifikatsdatei, der Signatur einer Datei oder der hexadezimalen Darstellung eines X509-Zertifikats bestimmt. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Gibt Code an, der über die entsprechende Ursprungssite verfügt. Zum Beispiel:<br /><br /> `-site** www.proseware.com`<br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Gibt Code mit einem spezifischen starken Namen an, wie er vom Dateinamen, dem Assemblynamen als Zeichenfolge und der Assemblyversion im Format *major*.*minor*.*build*.*revision* bestimmt wird. Zum Beispiel:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Gibt Code an, der von der angegebenen URL stammt. Die URL muss ein Protokoll wie http:// oder ftp:// enthalten. Außerdem kann ein Platzhalterzeichen (\*) verwendet werden, um mehrere Assemblys von einer bestimmten URL anzugeben. **Hinweis:** Da eine URL anhand mehrerer Namen gekennzeichnet werden kann, kann durch Verwenden einer URL als Mitgliedschaftsbedingung die Identität von Code nicht sicher festgestellt werden. Verwenden Sie nach Möglichkeit Mitgliedschaftsbedingungen mit einem starken Namen, Herausgebermitgliedschaftsbedingungen oder Hashmitgliedschaftsbedingungen. <br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Gibt Code an, der von der angegebenen URL stammt. Die URL muss ein Protokoll wie `http://` oder`ftp://` enthalten. Außerdem kann ein Platzhalterzeichen (\*) verwendet werden, um mehrere Assemblys von einer bestimmten URL anzugeben. **Hinweis:** Da eine URL anhand mehrerer Namen gekennzeichnet werden kann, kann durch Verwenden einer URL als Mitgliedschaftsbedingung die Identität von Code nicht sicher festgestellt werden. Verwenden Sie nach Möglichkeit Mitgliedschaftsbedingungen mit einem starken Namen, Herausgebermitgliedschaftsbedingungen oder Hashmitgliedschaftsbedingungen. <br /><br /> Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Gibt Code mit der angegebenen Ursprungszone an. Das Argument *zonename* kann einen der folgenden Werte annehmen: **MyComputer**, **Intranet**, **Trusted**, **Internet** oder **Untrusted**. Weitere Informationen zu dieser Mitgliedschaftsbedingung finden Sie unter <xref:System.Security.Policy.ZoneMembershipCondition>-Klasse.|  
   
  Das Argument *flags*, das mit der Option **-addgroup** und der Option **-chggroup** verwendet werden kann, wird wie folgt angegeben:  

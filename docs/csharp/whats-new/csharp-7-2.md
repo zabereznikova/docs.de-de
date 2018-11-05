@@ -2,12 +2,12 @@
 title: Neues in C# 7.2
 description: Eine Übersicht der neuen Funktionen in C# 7.2
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400802"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181172"
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
 
@@ -20,7 +20,7 @@ C# 7.2 verwendet das Konfigurationselement [Sprachversionsauswahl](../language-r
 
 Die neuen Sprachfeatures in diesem Release umfassen:
 
-* [Verweissemantik mit Werttypen](#reference-semantics-with-value-types)
+* [Techniken zum Schreiben von sicherem, effizientem Code](#safe-efficient-code-enhancements)
   - Eine Kombination aus Verbesserungen der Syntax, die das Arbeiten mit Werttypen mithilfe von Verweissemantik ermöglichen.
 * [Nicht schließende benannte Argumente](#non-trailing-named-arguments)
   - Positionelle Argumente können auf benannte Argumente folgen.
@@ -29,7 +29,7 @@ Die neuen Sprachfeatures in diesem Release umfassen:
 * [`private protected`-Zugriffsmodifizierer](#private-protected-access-modifier)
   - Der `private protected`-Zugriffsmodifizierer ermöglicht den Zugriff für abgeleitete Klassen innerhalb der gleichen Assembly.
 
-## <a name="reference-semantics-with-value-types"></a>Verweissemantik mit Werttypen
+## <a name="safe-efficient-code-enhancements"></a>Erweiterungen von sicherem, effizientem Code
 
 In 7.2 eingeführte Sprachfeatures ermöglichen das Arbeiten mit Werttypen bei Verwendung der Verweissemantik. Sie dienen dazu, die Leistung durch Minimieren des Kopierens von Werttypen zu steigern, ohne die Speicherzuweisungen nach sich zu ziehen, die eine Verwendung von Verweistypen mit sich bringen würde. Das Feature beinhaltet:
 
@@ -38,7 +38,7 @@ In 7.2 eingeführte Sprachfeatures ermöglichen das Arbeiten mit Werttypen bei V
  - Die `readonly struct`-Deklaration, um anzugeben, dass eine Struktur unveränderlich ist und ihren Membermethoden als `in`-Parameter übergeben werden sollte. Das Hinzufügen des Modifizierers `readonly` zu einer vorhandenen Strukturdeklaration ist eine [binärkompatible Änderung](version-update-considerations.md#binary-compatible-changes).
  - Die `ref struct`-Deklaration, um anzugeben, dass ein Strukturtyp direkt auf verwalteten Arbeitsspeicher zugreift und immer per Stapel zugeordnet werden muss. Das Hinzufügen des Modifizierers `ref` zu einer vorhandenen `struct`-Deklaration ist eine [inkompatible Änderung](version-update-considerations.md#incompatible-changes). Ein `ref struct` kann kein Mitglied einer Klasse sein oder an anderen Stellen verwendet werden, wo es auf dem Heap zugewiesen werden könnte.
 
-Weitere Informationen zu allen diesen Änderungen finden Sie unter [Verwenden von Werttypen mit Verweissemantik](../reference-semantics-with-value-types.md).
+Weitere Informationen zu all diesen Änderungen finden Sie unter [Schreiben von sicherem und effizientem Code](../write-safe-efficient-code.md).
 
 ## <a name="non-trailing-named-arguments"></a>Nicht schließende benannte Argumente
 

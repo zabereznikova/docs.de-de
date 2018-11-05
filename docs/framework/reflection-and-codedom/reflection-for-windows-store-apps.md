@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47233139"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197053"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflektion in .NET Framework für Windows Store-Apps
 Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt .NET Framework eine Reihe von Reflektionstypen und -membern für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps zur Verfügung. Diese Typen und Member sind im vollständigen .NET Framework sowie im [.NET für Windows Store-Apps](https://go.microsoft.com/fwlink/?LinkID=225700) verfügbar. In diesem Dokument werden die Hauptunterschiede zwischen ihnen und ihren Entsprechungen in .NET Framework 4 und früheren Versionen erklärt.  
@@ -36,7 +36,7 @@ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt .NET Framework e
  In einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App wird der Zugriff auf einige .NET Framework-Typen und -Member eingeschränkt. Sie können beispielsweise .NET Framework-Methoden, die nicht in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] enthalten sind, nicht mit einem <xref:System.Reflection.MethodInfo>-Objekt aufrufen. Darüber hinaus werden bestimmte Typen und Member, die innerhalb einer [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-App als nicht sicher eingestuft werden, sowie <xref:System.Runtime.InteropServices.Marshal>-Member und <xref:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal>-Member blockiert. Diese Einschränkung betrifft nur .NET Framework-Typen und -Member. Sie können Ihren Code oder Code von Drittanbietern wie gewohnt aufrufen.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel werden die Reflektionstypen und -member in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] verwendet, um die Methoden und Eigenschaften des <xref:System.Globalization.Calendar>-Typs abzurufen (einschließlich geerbter Methoden und Eigenschaften). Um diesen Code auszuführen, fügen Sie ihn in eine Codedatei für eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Seite ein, die ein Steuerelement [Windows.UI.Xaml.Controls.Textblock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen `textblock1` in einem Projekt mit dem Namen „Reflektion“ enthält. Wenn Sie diesen Code in einem Projekt mit einem anderen Namen einfügen, müssen Sie darauf achten, dass Sie den Namespacenamen entsprechend Ihrem Projekt ändern.  
+ In diesem Beispiel werden die Reflektionstypen und -member in [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] verwendet, um die Methoden und Eigenschaften des <xref:System.Globalization.Calendar>-Typs abzurufen (einschließlich geerbter Methoden und Eigenschaften). Um diesen Code auszuführen, fügen Sie ihn in eine Codedatei für eine [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Seite ein, die ein Steuerelement <xref:Windows.UI.Xaml.Controls.TextBlock?displayProperty=nameWithType> mit dem Namen `textblock1` in einem Projekt mit dem Namen „Reflektion“ enthält. Wenn Sie diesen Code in einem Projekt mit einem anderen Namen einfügen, müssen Sie darauf achten, dass Sie den Namespacenamen entsprechend Ihrem Projekt ändern.  
   
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  

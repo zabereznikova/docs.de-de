@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199764"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199486"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
 Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt ein benanntes (systemweites) oder lokales Semaphor dar. Dabei handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Win32-Semaphoren sind zählende Semaphoren, die zum Steuern des Zugriffs auf einen Ressourcenpool verwendet werden können.  
@@ -25,7 +25,7 @@ Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt
  Die <xref:System.Threading.SemaphoreSlim>-Klasse stellt ein einfaches, schnelles Semaphor dar, das zum Warten innerhalb eines einzelnen Prozesses verwendet werden kann, wenn die Wartezeiten voraussichtlich sehr kurz sind. <xref:System.Threading.SemaphoreSlim> basiert im möglichst hohen Maße auf Synchronisierungsprimitiven, die von Common Language Runtime (CLR) bereitgestellt werden. Es stellt jedoch auch verzögert initialisierte, Kernel-basierte Wait-Handles zur Unterstützung des Wartens auf mehrere Semaphoren bereit. <xref:System.Threading.SemaphoreSlim> unterstützt auch die Verwendung von Abbruchtoken, unterstützt aber keine benannten Semaphoren oder die Verwendung eines Wait-Handles für die Synchronisierung.  
   
 ## <a name="managing-a-limited-resource"></a>Verwalten einer beschränkten Ressource  
- Threads wechseln in das Semaphor durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode, die von der <xref:System.Threading.WaitHandle>-Klasse geerbt wird, wenn es sich um ein <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Objekt handelt, oder der <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType>-Methode, wenn es sich um ein <xref:System.Threading.SemaphoreSlim>-Objekt handelt. Wenn der Aufruf zurückgegeben wird, wird der Zähler des Semaphors dekrementiert. Wenn ein Thread den Zugang anfordert und die Anzahl null ist, wird der Thread blockiert. Da Threads das Semaphor durch Aufrufen von Freigeben der <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>-Methode freigeben, erhalten blockierte Threads Zugang. Für die Aufnahme von blockierten Threads in das Semaphor gibt es keine festgelegte Reihenfolge, z. B. First in, First Out (FIFO) oder Last in, First Out (LIFO).  
+ Threads wechseln in den Semaphor durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode, die von der <xref:System.Threading.WaitHandle>-Klasse geerbt wird, wenn es sich um ein <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Objekt handelt, bzw. von der <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType>-Methode, wenn es sich um ein <xref:System.Threading.SemaphoreSlim>-Objekt handelt. Wenn der Aufruf zurückgegeben wird, wird der Zähler des Semaphors dekrementiert. Wenn ein Thread den Zugang anfordert und die Anzahl null ist, wird der Thread blockiert. Da Threads das Semaphor durch Aufrufen von Freigeben der <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>-Methode freigeben, erhalten blockierte Threads Zugang. Für die Aufnahme von blockierten Threads in das Semaphor gibt es keine festgelegte Reihenfolge, z. B. First in, First Out (FIFO) oder Last in, First Out (LIFO).  
   
  Ein Thread kann in das Semaphor mehrfach durch wiederholtes Aufrufen der <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Methode des <xref:System.Threading.WaitHandle.WaitOne%2A>-Objekts oder der <xref:System.Threading.SemaphoreSlim>-Methode des <xref:System.Threading.SemaphoreSlim.Wait%2A>-Objekts wechseln. Um das Semaphor freizugeben, kann der Thread entweder die <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType>-Methodenüberladung aufrufen oder die <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType>-Methodenüberladung aufrufen und die Anzahl der freizugebenden Einträge angeben.  
   

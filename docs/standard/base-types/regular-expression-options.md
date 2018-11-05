@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 612550dd2e3cda4e3549bfc14c9ada712c6653bf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235886"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197560"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 <a name="Top"></a> Standardmäßig wird beim Vergleich einer Eingabezeichenfolge mit Literalzeichen in einem Muster eines regulären Ausdrucks die Groß-/Kleinschreibung beachtet, Leerstellen in einem Muster eines regulären Ausdrucks werden als literale Leerstellenzeichen interpretiert, und Erfassungsgruppen in einem regulären Ausdruck werden implizit sowie explizit benannt. Sie können diese und andere Aspekte des Standardverhaltens regulärer Ausdrücke ändern, indem Sie Optionen für reguläre Ausdrücke angeben. Diese Optionen, die in der folgenden Tabelle aufgeführt sind, können inline als Teil des Musters eines regulären Ausdrucks enthalten sein, oder sie können für einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Mustervergleichsmethode als <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Enumerationswert angegeben werden.  
@@ -42,7 +42,7 @@ ms.locfileid: "47235886"
   
 -   Im `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktors oder einer statischen (`Shared` in Visual Basic) Mustervergleichsmethode, z. B. <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> oder <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Der `options`-Parameter ist eine bitweise OR-Kombination von aufgezählten <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Werten.  
   
-     Wenn Optionen an eine <xref:System.Text.RegularExpressions.Regex>-Instanz mithilfe des `options`-Parameters eines Klassenkonstruktors übergeben werden, werden die Optionen der <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft zugewiesen. Die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft gibt jedoch nicht die Inlineoptionen des eigentlichen Musters des regulären Ausdrucks wieder.  
+     Wenn Optionen mit dem `options`-Parameter eines Klassenkonstruktors an eine <xref:System.Text.RegularExpressions.Regex>-Instanz übergeben werden, werden die Optionen der <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft zugewiesen. Die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft gibt jedoch nicht die Inlineoptionen des eigentlichen Musters des regulären Ausdrucks wieder.  
   
      Dies wird im folgenden Beispiel veranschaulicht. Es verwendet den `options`-Parameter der <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.  
   
@@ -337,7 +337,7 @@ ms.locfileid: "47235886"
 > [!NOTE]
 >  ECMAScript-kompatibles Verhalten ist nur verfügbar, wenn der <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Wert an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder einer statischen Mustervergleichsmethode übergeben wird. Es besteht keine Verfügbarkeit als Inlineoption.  
   
- Die <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Option kann nur mit den Optionen <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> und <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> kombiniert werden. Die Verwendung einer die oft ausgegebene Befehlszeilen  anderen Option in einem regulären Ausdruck führt zu einer <xref:System.ArgumentOutOfRangeException>.  
+ Die <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType>-Option kann nur mit den Optionen <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> und <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> kombiniert werden. Die Verwendung einer anderen Option in einem regulären Ausdruck führt zu einer <xref:System.ArgumentOutOfRangeException>.  
   
  Das Verhalten von ECMAScript und kanonischen regulären Ausdrücke unterscheidet sich in drei Bereichen: Zeichenklassensyntax, bei Selbstverweisen von Erfassungsgruppen sowie bei der Interpretation von Oktalwerten und Rückverweisen.  
   

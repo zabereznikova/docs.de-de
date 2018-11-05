@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595556"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186069"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -49,6 +49,8 @@ Im Allgemeinen sollten Sie als Zielversion die *niedrigste* mögliche Version vo
 
 1. Wählen Sie die nächst niedrigere .NET Standard-Version als Zielversion, und erstellen Sie Ihr Projekt.
 2. Wenn das Projekt erfolgreich erstellt wurde, wiederholen Sie Schritt 1. Andernfalls wählen Sie die nächst höhere Version als Zielversion aus, und das ist die Version, die Sie verwenden sollten.
+
+Das Auswählen niedrigerer .NET Standard-Versionen führt jedoch zu mehreren Unterstützungsabhängigkeiten. Wenn Sie für Ihr Projekt .NET Standard 1.x auswählen, empfehlen wir *auch* .NET Standard 2.0 auszuwählen. Dies vereinfacht das Abhängigkeitsdiagramm für Benutzer Ihrer Bibliothek, die .NET Standard 2.0-kompatible Frameworks verwenden, und reduziert die Anzahl von Paketen, die heruntergeladen werden müssen.
 
 ### <a name="net-standard-versioning-rules"></a>Regeln für die .NET Standard-Versionskontrolle
 

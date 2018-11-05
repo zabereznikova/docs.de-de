@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47643dfa6eda67c93c54d19da41d705a78c27d8c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484752"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453475"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version des .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -51,13 +51,13 @@ Downloadlinks finden Sie im Abschnitt [Verteilbare Pakete](#redistributable-pack
 
 - Sie müssen über Administratorrechte verfügen, um [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und die Punktversionen zu installieren.
 
-- Das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ist in [!INCLUDE[win8](../../../includes/win8-md.md)] und [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]enthalten. Daher müssen Sie für diese Betriebssysteme .NET Framework nicht mit Ihrer App bereitstellen. Entsprechend ist [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] in [!INCLUDE[win81](../../../includes/win81-md.md)] und Windows Server 2012 R2 enthalten. .NET Framework 4.5.2 ist in keinem Betriebssystem enthalten. Das [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ist in Windows 10 enthalten, das [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ist im November-Update von Windows 10 enthalten, und das [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ist im Windows 10 Anniversary Update enthalten.  .NET Framework 4.7 ist in Windows 10 Creators Update enthalten, .NET Framework 4.7.1 in Windows 10 Fall Creators Update und .NET Framework 4.7.2 im Windows 10-Update für April 2018. Eine vollständige Liste der Hardware- und Softwareanforderungen finden Sie unter [Systemanforderungen für .NET Framework](../../../docs/framework/get-started/system-requirements.md).
+- Das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ist in [!INCLUDE[win8](../../../includes/win8-md.md)] und [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]enthalten. Daher müssen Sie für diese Betriebssysteme .NET Framework nicht mit Ihrer App bereitstellen. Entsprechend ist [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] in [!INCLUDE[win81](../../../includes/win81-md.md)] und Windows Server 2012 R2 enthalten. .NET Framework 4.5.2 ist in keinem Betriebssystem enthalten. Das [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ist in Windows 10 enthalten, das [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] ist im November-Update von Windows 10 enthalten, und das [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ist im Windows 10 Anniversary Update enthalten.  .NET Framework 4.7 ist im Windows 10 Creators Update enthalten, .NET Framework 4.7.1 im Windows 10 Fall Creators Update und .NET Framework 4.7.2 in den Windows 10-Updates von April 2018 und Oktober 2018. Eine vollständige Liste der Hardware- und Softwareanforderungen finden Sie unter [Systemanforderungen für .NET Framework](../../../docs/framework/get-started/system-requirements.md).
 
 - Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können die Benutzer während des Setups eine Liste der aktiven .NET Framework-Apps anzeigen und diese Apps einfach schließen. Dies hilft möglicherweise, durch .NET Framework-Installationen verursachte Systemneustarts zu vermeiden. Informationen hierzu finden Sie unter [Reduzieren von Systemneustarts](../../../docs/framework/deployment/reducing-system-restarts.md).
 
 - Durch das Deinstallieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder einer entsprechenden Punktversion werden auch bereits vorhandene [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] -Dateien entfernt. Wenn Sie wieder [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]verwenden möchten, müssen Sie diese Version und alle Updates für sie neu installieren. (Siehe den Artikel zum [Installieren von .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
 
-- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das .NET Framework 4.5 Redistributable Package vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten verteilbaren Pakets aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484)zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](https://technet.microsoft.com/security/advisory/2749655).
+- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das .NET Framework 4.5 Redistributable Package vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten verteilbaren Pakets aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484)zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 
  Informationen zum Bereitstellen von .NET Framework und den Systemabhängigkeiten in einem Netzwerk durch einen Systemadministrator finden Sie im [Deployment Guide for Administrators (Handbuch für die Bereitstellung für Administratoren)](../../../docs/framework/deployment/guide-for-administrators.md).
 
@@ -247,8 +247,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Version|Wert des Versions-DWORD|
 |-------------|--------------------------------|
+|.NET Framework 4.7.2, installiert unter dem Windows 10-Update von April 2018|461814|
 |.NET Framework 4.7.2, installiert im Windows 10-Update von April 2018 und in Windows Server Version 1803|461808|
-|.NET Framework 4.7.2, installiert in allen Betriebssystemversionen, abgesehen vom Windows 10-Update von April 2018 und Windows Server Version 1803|461814|
+|.NET Framework 4.7.2, installiert in allen Betriebssystemversionen, mit Ausnahme von Windows 10-Update von Oktober 2018, Windows 10-Update von April 2018 und Windows Server, Version 1803|461814|
 |.NET Framework 4.7.1, installiert im Windows 10 Fall Creators Update und Windows Server Version 1709|461308|
 |.NET Framework 4.7.1, installiert in allen Betriebssystemversionen, abgesehen vom Windows 10 Fall Creators Update und Windows Server Version 1709|461310|
 |.NET Framework 4.7 installiert unter Windows 10 Creators Update|460798|
@@ -287,7 +288,7 @@ Type: DWORD
 
 - [.NET Framework 4.7 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [.NET Framework 4.6.2 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [.NET Framework 4.6.2-Sprachpakete](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
 - [.NET Framework 4.6.1 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
@@ -403,9 +404,9 @@ In der folgenden Tabelle sind die .NET Framework Sprachpakete aufgeführt, die f
 |3082|Spanisch – Spanien (Moderne Sortierreihenfolge)|es|
 
 ## <a name="see-also"></a>Siehe auch
- [Bereitstellungshandbuch für Administratoren](../../../docs/framework/deployment/guide-for-administrators.md)  
- [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)  
- [Installieren von .NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)  
- [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
- [Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](../../../docs/framework/deployment/reducing-system-restarts.md)  
- [Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Bereitstellungshandbuch für Administratoren](../../../docs/framework/deployment/guide-for-administrators.md)  
+- [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)  
+- [Installieren von .NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)  
+- [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+- [Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

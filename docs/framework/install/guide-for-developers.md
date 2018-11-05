@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502921"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199889"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -37,7 +37,7 @@ Verwenden Sie die folgende Tabelle für Quicklinks, oder lesen Sie weiter, um Ge
 
 |.NET Framework-Version|Entwicklerinstallation|Installation des Redistributable-Pakets|Plattformunterstützung|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Webinstaller für Center 4.7.2 herunterladen](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Offlineinstaller für Center 4.7.2 herunterladen](https://go.microsoft.com/fwlink/?LinkId=863265)|Enthalten in: <br/>Windows 10-Update vom April 2018<br /><br /> Installation auch möglich unter:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server Version 1709 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Webinstaller für Center 4.7.2 herunterladen](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Offlineinstaller für Center 4.7.2 herunterladen](https://go.microsoft.com/fwlink/?LinkId=863265)|Enthalten in: <br/>Windows 10-Update von Oktober 2018<br/>Windows 10-Update vom April 2018<br /><br /> Installation auch möglich unter:<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server Version 1709 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[.NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Downloadseite für den 4.7.1-Webinstaller](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Downloadseite für den 4.7.1-Offlineinstaller](https://go.microsoft.com/fwlink/?LinkId=852107)|Enthalten in: <br/>Windows 10 Fall Creators Update<br/>Windows Server, Version 1709<br /><br /> Installation auch möglich unter:<br/> Windows 10 Creators Update <br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server 2016 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Downloadseite für 4.7-Webinstaller](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Downloadseite für 4.7-Offlineinstaller](https://go.microsoft.com/fwlink/?LinkId=825303)|Enthalten in: <br/>Windows 10 Creators Update<br /><br /> Installation auch möglich unter:<br /> Windows 10 Anniversary Update<br /> Windows 8.1 und früher<br /> Windows Server 2016 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[Downloadseite für 4.6.2-Webinstaller](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Downloadseite für 4.6.2-Offlineinstaller](https://go.microsoft.com/fwlink/?LinkId=780601)|Enthalten in: <br /> Windows 10 Anniversary Update<br /><br /> Installation auch möglich unter:<br /> Windows 10-Update von November <br/> Windows 10 <br /> Windows 8.1 und früher<br /> Windows Server 2012 SP2 und früher<br /> (eine vollständige Liste finden Sie unter [Systemanforderungen](~/docs/framework/get-started/system-requirements.md))|
@@ -154,7 +154,7 @@ Die Web- und Offlineinstaller sind für x86-basierte und x64-basierte Computer (
 
 - Sie benötigen Administratoranmeldeinformationen, um [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und zugehörige Punktreleases, .NET Framework 4.6 und zugehörige Punktreleases sowie .NET Framework 4.7 und zugehörige Punktreleases zu installieren.
 
-- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das .NET Framework 4.5 Redistributable Package vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten verteilbaren Pakets aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484) zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](https://technet.microsoft.com/security/advisory/2749655) und im [Knowledge Base-Artikel 2770445](https://support.microsoft.com/kb/2770445).
+- Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das .NET Framework 4.5 Redistributable Package vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten verteilbaren Pakets aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484) zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) und im [Knowledge Base-Artikel 2770445](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>So installieren Sie Language Packs
 
@@ -171,7 +171,7 @@ Language Packs sind ausführbare Dateien, die die lokalisierten Ressourcen (z. 
 
     - [.NET Framework 4.7 Language Packs](https://go.microsoft.com/fwlink/?LinkID=825306)
 
-    - [.NET Framework 4.6.2 Language Packs](https://go.microsoft.com/fwlink/?LinkID=780604)
+    - [.NET Framework 4.6.2-Sprachpakete](https://go.microsoft.com/fwlink/?LinkID=780604)
 
     - [.NET Framework 4.6.1 Language Packs](https://go.microsoft.com/fwlink/?LinkID=671747)
 

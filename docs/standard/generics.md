@@ -3,27 +3,25 @@ title: Generische Typen (Generika) – Übersicht
 description: Erfahren Sie, wie Generika als Codevorlagen fungieren, mit denen Sie typsichere Datenstrukturen definieren können, ohne sich auf einen Datentyp festlegen zu müssen.
 author: kuhlenh
 ms.author: wiwagn
-ms.date: 06/20/2016
-ms.technology: dotnet-standard
-ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: ad6216998dff70ca7e36b52b374c5ffb9fd0cd45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 10/09/2018
+ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575478"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121180"
 ---
-# <a name="generic-types-generics-overview"></a>Generische Typen (Generika) – Übersicht
+# <a name="generic-types-overview"></a>Generische Typen – Übersicht
 
-Generika werden andauernd in C# verwendet, entweder implizit oder explizit. Wenn Sie LINQ in C# verwenden, haben Sie schon einmal bemerkt, dass Sie mit IEnumerable<T> arbeiten? Oder haben Sie in einem Onlinebeispiel eines „generischen Repositorys“ zur Kommunikation mit Datenbanken über Entity Framework festgestellt, dass die meisten Methoden IQueryable<T> zurückgeben? Haben Sie sich gefragt, wofür das **T** in diesen Beispielen steht und warum es dort ist?
+Entwickler verwenden generische Typen sehr häufig in .NET, entweder implizit oder explizit. Wenn Sie LINQ in .NET verwenden: Ist Ihnen schon aufgefallen, dass Sie mit <xref:System.Collections.Generic.IEnumerable%601> arbeiten? Oder haben Sie in einem Onlinebeispiel eines „generischen Repositorys“ zur Kommunikation mit Datenbanken über Entity Framework festgestellt, dass die meisten Methoden IQueryable<T> zurückgeben? Möglicherweise haben Sie sich gefragt, wofür das **T** in diesen Beispielen steht und warum es dort ist.
 
-Generika wurden zum ersten Mal in .NET Framework 2.0 eingeführt und umfassten Änderungen sowohl an der Sprache C# als auch an der Common Language Runtime (CLR). **Generika** sind im Grunde eine „Codevorlage“, mit der Entwickler [typsichere](https://msdn.microsoft.com/library/hbzz1a9a.aspx) Datenstrukturen definieren können, ohne sich tatsächlich auf einen Datentyp festlegen zu müssen. `List<T>` ist beispielsweise eine [generische Auflistung](xref:System.Collections.Generic), die deklariert und mit beliebigen Typen verwendet werden kann: `List<int>`, `List<string>`, `List<Person>` usw.
+**Generika** wurden in .NET Framework 2.0 eingeführt und sind im Grunde eine „Codevorlage“, mit der Entwickler [typsichere](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) Datenstrukturen definieren können, ohne sich tatsächlich auf einen Datentyp festlegen zu müssen. <xref:System.Collections.Generic.List%601> ist beispielsweise eine [generische Auflistung](xref:System.Collections.Generic), die deklariert und mit beliebigen Typen wie `List<int>`, `List<string>` oder `List<Person>` verwendet werden kann.
 
-Worum liegt also der Sinn? Warum sind Generika nützlich? Um dies zu verstehen, müssen wir uns eine bestimmte Klasse ansehen, und zwar vor und nach dem Hinzufügen von Generika. Wir sehen uns `ArrayList` an. In C# 1.0 wiesen die `ArrayList`-Elemente den Typ `object` auf. Dies bedeutete, dass jedes hinzugefügte Element im Hintergrund in ein `object` konvertiert wurde. Das Gleiche passierte beim Lesen der Elemente aus der Liste (dieser Prozess wird als [Boxing](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) bzw. Unboxing bezeichnet). Boxing und Unboxing wirken sich auf die Leistung aus. Schlimmer noch: Zum Zeitpunkt der Kompilierung lässt sich nicht mitteilen, welchen Typ die Daten in der Liste tatsächlich aufweisen. Dies beeinträchtigt die Stabilität des Codes. Generika lösen dieses Problem, indem sie zusätzliche Informationen zum Datentyp bereitstellen, die in jeder Instanz der Liste enthalten sind. Einfach gesagt: Zu `List<int>` können Sie nur Ganzzahlen hinzufügen, zu `List<Person>` nur Personen usw.
+Um zu verstehen, warum Generika nützlich sind, sehen wir uns eine bestimmte Klasse an, und zwar vor und nach dem Hinzufügen von Generika: <xref:System.Collections.ArrayList>. In .NET Framework 1.0 wiesen die -`ArrayList` den Typ <xref:System.Object> auf. Das bedeutete, das jedes hinzugefügte Element im Hintergrund in ein `Object`-Element konvertiert wurde. Das Gleiche passierte beim Lesen der Elemente aus der Liste. Dieser Vorgang wird als [Boxing und Unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md) bezeichnet und wirkt sich auf die Leistung aus. Wichtiger ist allerdings, dass es keine Möglichkeit gibt, den Datentyp in der Liste zur Kompilierzeit zu bestimmen. Dies beeinträchtigt die Stabilität des Codes. Generika lösen dieses Problem, indem sie den Datentyp definieren, der in jeder Instanz der Liste enthalten sind. Beispielsweise können Sie zu `List<int>` nur Ganzzahlen hinzufügen, zu `List<Person>` nur Personen.
 
-Generika sind auch zur Laufzeit verfügbar und werden **konkretisiert**. Dies bedeutet, dass die Runtime weiß, welche Art Datenstruktur Sie verwenden, und die Daten effizienter im Arbeitsspeicher speichern kann.
+Generika sind auch zur Laufzeit verfügbar. Dies bedeutet, dass die Runtime weiß, welche Art Datenstruktur Sie verwenden, und die Daten effizienter im Arbeitsspeicher speichern kann.
 
-Das folgende Programm zeigt, wie effizient es ist, wenn die Art der Datenstruktur zur Laufzeit bekannt ist:
+Das folgende Beispiel ist ein kleines Beispiel, das veranschaulicht, wie effizient es ist, wenn die Art der Datenstruktur zur Laufzeit bekannt ist:
 
 ```csharp
   using System;
@@ -55,18 +53,20 @@ Das folgende Programm zeigt, wie effizient es ist, wenn die Art der Datenstruktu
   }
 ```
 
-Das Programm erzeugt die folgende Ausgabe:
+Dieses Programm erzeugt eine Ausgabe ähnlich der folgenden:
 
 ```console
-Generic Sort: System.Collections.Generic.List\`1[System.Int32] Time taken: 0.0789ms
-Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
+Generic Sort: System.Collections.Generic.List`1[System.Int32]
+ Time taken: 0.0034ms
+Non-Generic Sort: System.Collections.ArrayList
+ Time taken: 0.2592ms
 ```
 
-Als erstes bemerken Sie, dass das Sortieren der generischen Liste erheblich schneller ist als bei der nicht generischen Liste. Sie stellen vermutlich auch fest, dass der Typ für die generische Liste eindeutig ([System.Int32]), der Typ für die nicht generische Liste dagegen generalisiert ist. Da der Runtime bekannt ist, dass die generische `List<int>` den Typ „int“ aufweist, kann sie die Listenelemente in einem zugrunde liegenden ganzzahligen Array im Arbeitsspeicher speichern. Die nicht generische `ArrayList` dagegen muss jedes Listenelement in ein Objekt umwandeln, das in einem Objektarray im Arbeitsspeicher gespeichert wird. Wie in diesem Beispiel gezeigt, beanspruchen die Umwandlungen Zeit und verlangsamen den Sortiervorgang für die Liste.
+Als Erstes können Sie feststellen, dass das Sortieren der generischen Liste erheblich schneller erfolgt als bei der nicht generischen Liste. Sie werden vermutlich auch bemerken, dass der Typ für die generische Liste eindeutig ([System.Int32]), der Typ für die nicht generische Liste dagegen generalisiert ist. Da der Runtime bekannt ist, dass die generische `List<int>` den Typ <xref:System.Int32> aufweist, kann sie die Listenelemente in einem zugrunde liegenden Ganzzahlarray im Arbeitsspeicher speichern. Die nicht generische `ArrayList` dagegen muss jedes Listenelement in ein Objekt umwandeln. Wie dieses Beispiel zeigt, beanspruchen die zusätzlichen Umwandlungen Zeit und verlangsamen den Sortiervorgang für die Liste.
 
-Ein weiterer nützlicher Vorteil: Wenn die Runtime den Typ der Generika kennt, wird das Debuggen vereinfacht. Wenn Sie Generika in C# debuggen, wissen Sie, welchen Typ jedes Element in Ihrer Datenstruktur aufweist. Ohne Generika wüssten Sie dies nicht.
+Ein weiterer Vorteil: Wenn die Runtime den Typ der Generika kennt, wird das Debuggen vereinfacht. Wenn Sie Generika in C# debuggen, wissen Sie, welchen Typ jedes Element in Ihrer Datenstruktur aufweist. Ohne Generika wüssten Sie dies nicht.
 
-## <a name="further-reading-and-resources"></a>Weitere Informationen und Ressourcen
+## <a name="see-also"></a>Siehe auch
 
-*   [Einführung in Generika in C#](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [C#-Programmierhandbuch – Generika](../../docs/csharp/programming-guide/generics/index.md)
+- [Einführung in Generika in C#](https://msdn.microsoft.com/library/ms379564.aspx)
+- [C#-Programmierhandbuch – Generika](../../docs/csharp/programming-guide/generics/index.md)

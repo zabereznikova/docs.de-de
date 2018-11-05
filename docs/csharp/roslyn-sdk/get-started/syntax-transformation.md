@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxtransformation (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400789"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122572"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Erste Schritte mit der Syntaxtransformation
 
@@ -120,7 +120,7 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> Viele der Roslyn-APIs deklarieren Rückgabetypen, die Basisklassen der tatsächlich zurückgegebenen Runtimetypen sind. In vielen Szenarien kann eine Art von Knoten durch eine andere Art von Knoten ersetzt oder sogar entfernt werden. In diesem Beispiel gibt die <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)>-Methode, anstelle des abgeleiteten Typs von <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, ein <xref:Microsoft.CodeAnalysis.SyntaxNode>-Element zurück. Dieser Rewriter gibt einen neuen <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>-Knoten zurück, der auf dem vorhandenen Knoten basiert.
+> Viele der Roslyn-APIs deklarieren Rückgabetypen, die Basisklassen der tatsächlich zurückgegebenen Runtimetypen sind. In vielen Szenarien kann eine Art von Knoten vollständig durch eine andere Art von Knoten ersetzt werden. Manchmal ist es sogar möglich, eine Art von Knoten zu entfernen. In diesem Beispiel gibt die <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)>-Methode, anstelle des abgeleiteten Typs von <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, ein <xref:Microsoft.CodeAnalysis.SyntaxNode>-Element zurück. Dieser Rewriter gibt einen neuen <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>-Knoten zurück, der auf dem vorhandenen Knoten basiert.
 
 In diesem Schnellstart werden lokale Variablendeklarationen behandelt. Die diesbezüglichen Informationen können Sie auch für andere Deklarationen wie `foreach`-Schleifen, `for`-Schleifen, LINQ-Ausdrücke und Lambdaausdrücke nutzen. Außerdem transformiert der hier gezeigte Rewriter nur Deklarationen der einfachsten Form:
 

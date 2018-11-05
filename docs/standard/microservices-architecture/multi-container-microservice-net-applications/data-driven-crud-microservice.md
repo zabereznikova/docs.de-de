@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Ers
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45617142"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873496"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -393,7 +393,7 @@ Anschließend können Sie Ihre Anwendung starten und die folgenden JSON- und UI-
   http://<your-root-url>/swagger/
 ```
 
-Die von Swashbuckle generierte UI für eine URL wie http://&lt;your-root-url&gt;/swagger/ui wurde bereits oben gezeigt. In Abbildung 8-9 sehen Sie nun auch, wie Sie eine beliebige API-Methode testen können.
+Die von Swashbuckle generierte UI für eine URL wie `http://<your-root-url>/swagger/ui` wurde bereits oben gezeigt. In Abbildung 8-9 sehen Sie nun auch, wie Sie eine beliebige API-Methode testen können.
 
 ![](./media/image10.png)
 

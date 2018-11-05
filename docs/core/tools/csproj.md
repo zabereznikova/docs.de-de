@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPRO
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216915"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203955"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -72,7 +72,7 @@ Diese Änderung ändert die Hauptfunktionsweise anderer Aufnahmen nicht. Wenn Si
 Sie können die `<EnableDefaultItems>`-Eigenschaft wie im folgenden Beispiel auf `false` festlegen, um **alle impliziten Globmuster** zu deaktivieren:
 ```xml
 <PropertyGroup>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
 
@@ -92,10 +92,11 @@ Wenn das Projekt mehrere Zielframeworks umfasst, sollten nur Ergebnisse für ein
 ## <a name="additions"></a>Erweiterungen
 
 ### <a name="sdk-attribute"></a>SDK-Attribut 
-Das `<Project>`-Element der *.csproj*-Datei hat ein neues Attribut namens `Sdk`. `Sdk` gibt an, welches SDK vom Projekt verwendet wird. Das SDK ist, wie das [Schichtendokument](cli-msbuild-architecture.md) beschreibt, ein Satz von MSBuild-[Aufgaben](/visualstudio/msbuild/msbuild-tasks) und -[Zielen](/visualstudio/msbuild/msbuild-targets), die .NET Core-Code erstellen können. Wir liefern zwei Haupt-SDKs mit .NET Core-Tools:
+Das `<Project>`-Element der *.csproj*-Datei hat ein neues Attribut namens `Sdk`. `Sdk` gibt an, welches SDK vom Projekt verwendet wird. Das SDK ist, wie das [Schichtendokument](cli-msbuild-architecture.md) beschreibt, ein Satz von MSBuild-[Aufgaben](/visualstudio/msbuild/msbuild-tasks) und -[Zielen](/visualstudio/msbuild/msbuild-targets), die .NET Core-Code erstellen können. Wir liefern drei Haupt-SDKs mit .NET Core-Tools:
 
 1. Das .NET Core SDK mit der `Microsoft.NET.Sdk`-ID
 2. Das .NET Core Web-SDK mit der `Microsoft.NET.Sdk.Web`-ID
+3. Das .NET Core Razor-Klassenbibliothek SDK mit der ID von `Microsoft.NET.Sdk.Razor`
 
 Das `Sdk`-Attribut muss auf eine dieser IDs auf dem `<Project>`-Element festgelegt werden, um die .NET Core-Tools nutzen und Codes erstellen zu können. 
 

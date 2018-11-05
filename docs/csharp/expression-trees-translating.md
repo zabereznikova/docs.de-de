@@ -3,12 +3,12 @@ title: Übersetzen von Ausdrucksbaumstrukturen
 description: Hier erfahren Sie, wie Sie auf jeden Knoten in einer Ausdrucksbaumstruktur zugreifen, während eine geänderte Kopie dieser Ausdrucksbaumstruktur erstellt wird.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971891"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200534"
 ---
 # <a name="translating-expression-trees"></a>Übersetzen von Ausdrucksbaumstrukturen
 

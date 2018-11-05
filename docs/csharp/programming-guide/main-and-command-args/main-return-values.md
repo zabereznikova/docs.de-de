@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44184927"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205209"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main()-Rückgabewerte (C#-Programmierhandbuch)
 
@@ -25,7 +25,7 @@ Wenn der Rückgabewert von `Main` nicht verwendet wird, ermöglicht die Rückgab
 
 ## <a name="example"></a>Beispiel
 
-Dieses Beispiel verwendet [.NET Core](../../../core/index.md) -Befehlszeilentools. Wenn Sie mit den .NET Core-Befehlszeilentools nicht vertraut sind, finden Sie weitere Informationen darüber im [Get started topic (Thema Erste Schritte)](../../../core/tutorials/using-with-xplat-cli.md).
+Dieses Beispiel verwendet [.NET Core](../../../core/index.md) -Befehlszeilentools. Wenn Sie mit den .NET Core-Befehlszeilentools nicht vertraut sind, finden Sie weitere Informationen darüber in diesem [Artikel zu den ersten Schritten](../../../core/tutorials/using-with-xplat-cli.md).
 
 Ändern Sie die Methode `Main` in *program.cs* folgendermaßen:
 

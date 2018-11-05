@@ -4,12 +4,12 @@ description: .NET Microservices-Architektur für .NET-Containeranwendungen | Ent
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106251"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50048475"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Entwerfen eines Domänenmodells für Microservices
 
@@ -58,7 +58,7 @@ Manche bezeichnen das anämische Domänenmodell als „Antimuster“. Dies häng
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 -   **DevIQ. Domänenentität**
-    [*http://deviq.com/entity/*](http://deviq.com/entity/)
+    [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
 -   **Martin Fowler. Das Domänenmodell**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
@@ -85,7 +85,7 @@ Die Verwaltung von Wertobjekten in relationalen Datenbanken und ORMs wie EF ist 
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 -   **Value Object (Das Wertobjekt)**
-    [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
+    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
 -   **Value Objects in Test-Driven Development (Wertobjekte in der testgesteuerten Entwicklung)**
     [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
@@ -133,14 +133,14 @@ Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfa
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Vaughn Vernon. Effective Aggregate Design – Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung, Teil 1: Modellieren eines einzelnen Aggregats)**
+-   **Vaughn Vernon. Effective Aggregate Design Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung, Teil 1: Modellieren eines einzelnen Aggregats)**
     [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung – Teil II: Kooperation von Aggregaten)**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
+-   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf) (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)
 
--   **Vaughn Vernon. Effective Aggregate Design – Part III: Gaining Insight Through Discovery (Effektive Aggregatentwicklung – Teil III: Eindrücke durch Entdeckungen gewinnen)**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
+-   **Vaughn Vernon. Effective Aggregate Design Part III: Gaining Insight Through Discovery**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf) (Effektive Aggregatentwicklung – Teil III: Gewinnen von Erkenntnissen durch Ermittlung)
 
 -   **Sergey Grybniak. DDD Tactical Design Patterns (Taktische DDD-Entwurfsmuster)**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
@@ -149,8 +149,7 @@ Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfa
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 -   **DevIQ. The Aggregate pattern (Das Aggregatmuster)**
-    [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
-
+    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
 [Zurück](ddd-oriented-microservice.md)

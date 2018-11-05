@@ -5,12 +5,12 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515279"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188572"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C\#
 
@@ -45,7 +45,7 @@ um einen Vergleich ohne Beachtung der Groß-/Kleinschreibung durchzuführen. Alt
 ## <a name="linguistic-comparisons"></a>Linguistische Vergleiche
 
 Zeichenfolgen können auch mit linguistischen Regeln für die aktuelle Kultur sortiert werden.
-Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen eine bestimmte Gewichtung zugeordnet. Beispielsweise wird dem Bindestrich („-“) ggf. eine sehr geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz alphanumerischer Zeichen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, wobei „Straße“ einmal mit „ss“ und einmal mit „ß“ geschrieben wird. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ dem scharfen S („ß“).
+Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen bestimmte Gewichtungen zugewiesen. Beispielsweise wird dem Bindestrich („-“) ggf. eine sehr geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz alphanumerischer Zeichen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, wobei „Straße“ einmal mit „ss“ und einmal mit „ß“ geschrieben wird. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ dem scharfen S („ß“).
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

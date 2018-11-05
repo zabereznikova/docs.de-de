@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 069a95656e7ceaf454c01c47d61ff391bcbed2fe
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6f96286da84e41e79fb0b6253d6f20eea89da21a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538884"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201352"
 ---
 # <a name="interlocked-operations"></a>Interlocked-Vorgänge
 
@@ -37,7 +37,7 @@ Die <xref:System.Threading.Interlocked?displayProperty=nameWithType>-Klasse stel
   
  Bei modernen Prozessoren können die Methoden der <xref:System.Threading.Interlocked>-Klasse oft durch eine einzige Anweisung implementiert werden. Sie bieten folglich eine Hochleistungssynchronisierung und können verwendet werden, um Mechanismen für höherstufige Synchronisierung zu erstellen (z.B. Spinlocks).  
   
- Ein Beispiel, in dem die <xref:System.Threading.Monitor>- und <xref:System.Threading.Interlocked>-Klasse in Kombination verwendet werden, finden Sie unter [Monitor-Klasse](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Ein Beispiel, in dem die <xref:System.Threading.Monitor>- und <xref:System.Threading.Interlocked>-Klasse in Kombination verwendet werden, finden Sie unter <xref:System.Threading.Monitor>.  
   
 ## <a name="compareexchange-example"></a>CompareExchange-Beispiel
 

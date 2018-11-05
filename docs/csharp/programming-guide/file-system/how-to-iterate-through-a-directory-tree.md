@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 1aac40793fabe152e18a1bf1b634058e85b31481
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6725463b042d51e20e5b293d7177903d2d35956
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515760"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123630"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Gewusst wie: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)
 Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede Datei in jedem verschachtelten Unterverzeichnis in einem angegebenen Stammordner in einer beliebigen Tiefe zugegriffen wird. Sie müssen nicht unbedingt jede Datei öffnen. Sie können einfach den Namen der Datei oder dem Unterverzeichnis als `string` abrufen, oder Sie können zusätzliche Informationen eines <xref:System.IO.FileInfo?displayProperty=nameWithType> oder <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>-Objekts abrufen.  
@@ -54,7 +54,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Wenn Sie den Inhalt einer Verzeichnisstruktur entweder im Arbeitsspeicher oder auf dem Datenträger speichern müssen, speichern Sie am besten nur die <xref:System.IO.FileSystemInfo.FullName%2A>-Eigenschaft (vom Typ `string`) für jede Datei. Anschließend können Sie diese Zeichenfolge nach Bedarf zum Erstellen eines neuen <xref:System.IO.FileInfo>- oder <xref:System.IO.DirectoryInfo>-Objekts verwenden, oder eine beliebige Datei öffnen, für die zusätzliche Verarbeitung erforderlich ist.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Bei stabilem Dateiiterationscode müssen viele komplexe Zusammenhänge des Dateisystems berücksichtigt werden. Weitere Informationen zum Windows-Dateisystem finden Sie in der [technischen Referenz zu NTFS](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
+ Bei stabilem Dateiiterationscode müssen viele komplexe Zusammenhänge des Dateisystems berücksichtigt werden. Weitere Informationen zum Windows-Dateisystem finden Sie in der [Übersicht zu NTFS](/windows-server/storage/file-server/ntfs-overview).  
   
 ## <a name="see-also"></a>Siehe auch
 

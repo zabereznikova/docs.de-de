@@ -4,16 +4,16 @@ description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e69e9707d3984f37ebc2c1103f9d89f3cbdf5cbd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597668"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195280"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
-.NET Core ist eine Plattform, die aus NuGet-Paketen besteht. Einige Produkte profitieren von differenzierten Paketdefinitionen während andere von undifferenzierten profitieren. Um dieser Dualität entgegenzukommen, wird dieses Produkt als eine Gruppe von differenzierten Paketen verteilt und dann in undifferenzierteren Blöcken mit einem Pakettyp beschrieben, der informell als „Metapaket“ bekannt ist.
+.NET Core ist eine Plattform, die aus NuGet-Paketen besteht. Einige Produkte profitieren von differenzierten Paketdefinitionen während andere von undifferenzierten profitieren. Um dieser Dualität entgegenzukommen, wird dieses Produkt zunächst als eine Gruppe von differenzierten Paketen und dann in undifferenzierteren Blöcken mit einem Pakettyp verteilt, der informell als [Metapaket](#metapackages) bezeichnet wird.
 
 Jedes .NET Core-Paket unterstützt die Ausführung in mehreren als Framework dargestellten .NET-Implementierungen. Einige dieser Frameworks sind traditionelle Frameworks, wie z.B. `net46`, das das .NET Framework darstellt. Eine andere Gruppe sind neue Frameworks, die man sich als „paketbasierte Frameworks“ vorstellen kann, die ein neues Modell zum Definieren von Frameworks einführen. Diese paketbasierten Frameworks sind vollständig als Pakete formuliert und definiert, und bilden dadurch eine starke Beziehung zwischen Paketen und Frameworks.
 
@@ -39,7 +39,7 @@ Im Folgenden werden die Haupt-NuGet-Pakete für .NET Core aufgelistet:
 - [System.Linq](https://www.nuget.org/packages/System.Linq): eine Reihe von Typen zur Abfrage von Objekten, einschließlich `Enumerable` und <xref:System.Linq.ILookup%602>.
 - [System.Reflection](https://www.nuget.org/packages/System.Reflection): eine Reihe von Typen für das Laden, Untersuchen und Aktivieren von Typen, einschließlich <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> und <xref:System.Reflection.MethodInfo>.
 
-In der Regel ist es einfacher, ein *Metapaket* in Ihr Projekt einzuschließen, als einzelne Pakete. Ein Metapaket ist eine Gruppe von Paketen, die häufig zusammen verwendet werden. (Weitere Informationen zu Metapaketen finden Sie im folgenden Abschnitt.) Wenn Sie ein einzelnes Paket benötigen, können Sie es wie im folgenden Beispiel gezeigt einschließen. Das Beispiel verweist auf das [System.Runtime](https://www.nuget.org/packages/System.Runtime/)-Paket. 
+In der Regel ist es einfacher und stabiler, ein [Metapaket](#metapackages) einzubinden – als ein Paket. Wenn Sie ein einzelnes Paket benötigen, können Sie es wie im folgenden Beispiel einschließen. Das Beispiel verweist auf das [System.Runtime](https://www.nuget.org/packages/System.Runtime/)-Paket. 
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -72,6 +72,7 @@ Das .NET-Standard-Metapaket lautet:
 Das sind die .NET Core-Hauptmetapakete:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – beschreibt die Bibliotheken, die Teil der .NET Core Verteilung sind. Richtet das[`.NETCoreApp` Framework](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj) ein. Dies ist abhängig von der kleineren `NETStandard.Library`.
+- [Microsoft.AspNetCore.App](https://www.nuget.org/packages/Microsoft.AspNetCore.App): Enthält alle unterstützten Pakete von ASP.NET Core und Entity Framework Core mit Ausnahme derjenigen, die Drittanbieterabhängigkeiten aufweisen. Weitere Informationen finden Sie unter [Microsoft.AspNetCore.App-Metapaket für ASP.NET Core](/aspnet/core/fundamentals/metapackage).
 - [Microsoft.AspNetCore.All:](https://www.nuget.org/packages/Microsoft.AspNetCore.All) Enthält alle unterstützten Pakete von ASP.NET Core, Entity Framework Core und interne Abhängigkeiten sowie Drittanbieterabhängigkeiten, die von ASP.NET Core und Entity Framework Core verwendet werden. Weitere Informationen finden Sie unter [Das Metapaket „Microsoft.AspNetCore.All“ für ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage).
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – eine Reihe von Kompatibilitätsfassaden, mit denen mscorlib-basierte Portable Klassenbibliotheken (Portable Class Libraries, PCLs) auf .NET Core ausgeführt werden können.
 
@@ -109,7 +110,7 @@ Die beiden primären paketbasierten Frameworks, die innerhalb .NET Core verwende
 
 ### <a name="net-standard"></a>.NET-Standard
 
-Das .NET Standard-Framework (TFM: `netstandard`) repräsentiert die APIs, die über den [.NET-Standard](../standard/net-standard.md) definiert werden und auf diesem basieren. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Sie werden auf jeder mit .NET Standard kompatiblen Laufzeit, z.B. .NET Core, .NET Framework und Mono/Xamarin unterstützt. Jede dieser Laufzeiten unterstützt eine Reihe von .NET Standardversionen, je nachdem, welche APIs sie implementieren.
+Das .NET Standard-Framework ([Zielframeworkmoniker (TFM)](../standard/frameworks.md): `netstandard`) repräsentiert die APIs, die von [.NET Standard](../standard/net-standard.md) definiert werden und darauf basieren. Bibliotheken, die auf mehreren Laufzeiten ausgeführt werden sollen, sollten dieses Framework als Ziel haben. Sie werden auf jeder mit .NET Standard kompatiblen Laufzeit, z.B. .NET Core, .NET Framework und Mono/Xamarin unterstützt. Jede dieser Laufzeiten unterstützt eine Reihe von .NET Standardversionen, je nachdem, welche APIs sie implementieren.
 
 Das `netstandard`-Framework verweist implizit auf die Metapakete [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Die folgende MSBuild-Projektdatei gibt beispielsweise an, dass das Projekt auf `netstandard1.6` abzielt, das auf das Metapaket [`NETStandard.Library` Version 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0) verweist.
 
@@ -138,7 +139,7 @@ Das Gegenteil wäre nicht gültig: `netstandard1.6` mit der 1.3.0 Version von `N
 
 ### <a name="net-core-application"></a>.NET Core-Anwendung
 
-Das Framework der .NET Core-Anwendung (TFM: `netcoreapp`) stellt die Pakete und die zugehörigen APIs dar, die in der .NET Core-Verteilung enthalten sind, sowie das Konsolenanwendungsmodell, das es bereitstellt. .NET Core-Anwendungen müssen dieses Framework verwenden, da Sie das Konsolenanwendungsmodell als Ziel haben. Bibliotheken, die nur für die Ausführung auf .NET Core vorgesehen waren, sollten dies ebenfalls tun. Die Verwendung dieser Frameworks schränkt Apps und Bibliotheken so ein, dass Sie nur noch auf .NET Core ausgeführt werden können. 
+Das .NET Core-Framework ([TFM](../standard/frameworks.md): `netcoreapp`) stellt die Pakete und die zugehörigen APIs dar, die in der .NET Core-Verteilung enthalten sind, sowie das Konsolenanwendungsmodell, das es bereitstellt. .NET Core-Anwendungen müssen dieses Framework verwenden, da Sie das Konsolenanwendungsmodell als Ziel haben. Bibliotheken, die nur für die Ausführung auf .NET Core vorgesehen waren, sollten dies ebenfalls tun. Die Verwendung dieser Frameworks schränkt Apps und Bibliotheken so ein, dass Sie nur noch auf .NET Core ausgeführt werden können. 
 
 Das Metapaket `Microsoft.NETCore.App` hat das Framework `netcoreapp` als Ziel. Es bietet Zugriff auf ~60-Bibliotheken, ~40 werden durch das `NETStandard.Library`-Paket bereitgestellt, und ~20 weitere werden zusätzlich bereitgestellt. Sie können auf zusätzliche Bibliotheken verweisen, die `netcoreapp` oder kompatible Frameworks wie z.B. `netstandard` als Ziel haben, um den Zugriff auf zusätzliche APIs zu erhalten. 
 

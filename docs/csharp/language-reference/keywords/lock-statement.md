@@ -1,23 +1,23 @@
 ---
 title: lock-Anweisung (C#-Referenz)
 description: Verwenden Sie die lock-Anweisung von C#, um den Threadzugriff auf eine freigegebene Ressource zu synchronisieren.
-ms.date: 08/28/2018
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858355"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850100"
 ---
 # <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
 
-Mit der `lock`-Anweisung wird die Sperre für gegenseitigen Ausschluss für ein bestimmtes Objekt abgerufen, ein Anweisungsblock ausgeführt und die Sperre anschließend aufgehoben. Während eine Sperre aufrechterhalten wird, kann der Thread, der die Sperre aufrechterhält, die Sperre abrufen und aufheben. Für jeden anderen Thread wird das Abrufen der Sperre blockiert, und die Sperre wartet auf die Aufhebung.
+Die `lock`-Anweisung ruft die Sperre für gegenseitigen Ausschluss für ein bestimmtes Objekt ab, führt einen Anweisungsblock aus und hebt die Sperre anschließend auf. Während eine Sperre aufrechterhalten wird, kann der Thread, der die Sperre aufrechterhält, die Sperre abrufen und aufheben. Für jeden anderen Thread wird das Abrufen der Sperre blockiert, und die Sperre wartet auf die Aufhebung.
 
 Die `lock`-Anweisung weist folgendes Format auf:
 
@@ -50,13 +50,11 @@ Sie können das Schlüsselwort [await](await.md) nicht im Text einer `lock`-Anwe
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Threadzugriff auf freigegebene Ressourcen synchronisieren, sperren Sie eine dedizierte Objektinstanz (z.B. `private readonly object balanceLock = new object();`) oder eine andere Instanz, für die es unwahrscheinlich ist, dass sie von anderen Teilen des Codes als lock-Objekt verwendet wird. Vermeiden Sie, die gleiche lock-Objektinstanz für verschiedene freigegebene Ressourcen zu verwenden, da dies zu einem Deadlock oder Sperrkonflikt führen kann. Vermeiden Sie insbesondere die Verwendung von
+Wenn Sie den Threadzugriff auf eine freigegebene Ressource synchronisieren, sperren Sie eine dedizierte Objektinstanz (z.B. `private readonly object balanceLock = new object();`) oder eine andere Instanz, die wahrscheinlich nicht von anderen Teilen des Codes als lock-Objekt verwendet wird. Vermeiden Sie, die gleiche lock-Objektinstanz für verschiedene freigegebene Ressourcen zu verwenden, da dies zu einem Deadlock oder Sperrkonflikt führen kann. Vermeiden Sie insbesondere die Verwendung der folgenden Objekte als Sperre:
 
-- `this` (kann von den Aufrufern als Sperre verwendet werden),
-- <xref:System.Type>-Instanzen (kann vom [typeof](typeof.md)-Operator oder der Reflektion abgerufen werden),
-- Zeichenfolgeninstanzen, die Zeichenfolgenliterale enthalten,
-
-als lock-Objekte.
+- `this` – kann von den Aufrufern als Sperre verwendet werden.
+- <xref:System.Type>-Instanzen – können vom [typeof](typeof.md)-Operator oder der Reflektion abgerufen werden.
+- Zeichenfolgeninstanzen, einschließlich Zeichenfolgenliteralen – können [internalisiert](/dotnet/api/system.string.intern#remarks) sein.
 
 ## <a name="example"></a>Beispiel
 

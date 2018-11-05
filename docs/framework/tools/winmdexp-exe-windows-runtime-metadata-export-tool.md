@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47237175"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121388"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
 Das [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Metadatenexport-Tool (Winmdexp.exe) transformiert ein .NET Framework-Modul in eine Datei, die [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Metadaten enthält. Obwohl .NET Framework-Assemblys und [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Metadatendateien dasselbe physische Format verwenden, gibt es Unterschiede bezüglich des Inhalts der Metadatentabellen, d. h. dass .NET Framework-Assemblys nicht automatisch als [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponenten verwendet werden können. Der Prozess des Konvertierens eines .NET Framework-Moduls in eine [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponente wird als *Exportieren* bezeichnet. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] enthält die resultierende Windows-Metadatendatei (.winmd) sowohl Metadaten als auch Implementierung.  
   
- Wenn Sie die Vorlage **[!INCLUDE[wrt](../../../includes/wrt-md.md)]Komponente**, die im **Windows Store** zu finden ist, für C# und Visual Basic in [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] oder [!INCLUDE[vs_dev11_ext](../../../includes/vs-dev11-ext-md.md)] verwenden, ist das Compilerziel eine WINMDOBJ-Datei, und ein darauf folgender Buildschritt ruft „Winmdexp.exe“ auf, um die WINMDOBJ-Datei in eine WINMD-Datei zu exportieren. Dies ist die empfohlene Methode, eine Komponente für [!INCLUDE[wrt](../../../includes/wrt-md.md)] zu erstellen. Verwenden Sie "Winmdexp.exe" direkt, wenn Sie mehr Kontrolle über den Buildvorgang möchten, als Visual Studio bietet.  
+ Wenn Sie die Vorlage **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component**, die im **Windows Store** zu finden ist, für C# und Visual Basic in Visual Studio 2013 oder Visual Studio 2012 verwenden, ist das Compilerziel eine WINMDOBJ-Datei, und ein nachfolgender Buildschritt ruft „Winmdexp.exe“ auf, um die WINMDOBJ-Datei in eine WINMD-Datei zu exportieren. Dies ist die empfohlene Methode, eine Komponente für [!INCLUDE[wrt](../../../includes/wrt-md.md)] zu erstellen. Verwenden Sie "Winmdexp.exe" direkt, wenn Sie mehr Kontrolle über den Buildvorgang möchten, als Visual Studio bietet.  
   
  Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   

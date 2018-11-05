@@ -3,16 +3,16 @@ title: Versionierung in C# – Leitfaden für C#
 description: Informationen zur Versionierung in C# und .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585932"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183229"
 ---
 # <a name="versioning-in-c"></a>Versionierung in C# #
 
-In diesem Tutorial erfahren Sie, welche Rolle die Versionierung in .NET spielt. Außerdem erfahren Sie, welche Faktoren Sie berücksichtigen müssen, wenn Sie die Versionen Ihrer Bibliothek verwalten oder ein Upgrade auf eine neue Version der Bibliothek durchführen.
+In diesem Tutorial erfahren Sie, welche Rolle die Versionierung in .NET spielt. Außerdem erfahren Sie, welche Faktoren Sie berücksichtigen müssen, wenn Sie Ihre Bibliothek versionieren oder ein Upgrade auf eine neue Version einer Bibliothek durchführen.
 
 ## <a name="authoring-libraries"></a>Erstellen von Bibliotheken
 
@@ -20,7 +20,7 @@ Als Entwickler, der bereits .NET-Bibliotheken für die öffentliche Verwendung e
 
 ### <a name="semantic-versioning"></a>Semantische Versionskontrolle
 
-[Semantic versioning](http://semver.org/) (Semantische Versionierung, kurz SemVer) ist eine Namenskonvention, die auf Versionen Ihrer Bibliothek angewendet wird, um bestimmte Meilensteinereignisse zu kennzeichnen.
+[Semantic versioning](https://semver.org/) (Semantische Versionierung, kurz SemVer) ist eine Namenskonvention, die auf Versionen Ihrer Bibliothek angewendet wird, um bestimmte Meilensteinereignisse zu kennzeichnen.
 Im Idealfall sollten es die Versionsinformationen Ihrer Bibliothek Entwicklern erleichtern, festzustellen, ob ihre Projekte, die ältere Versionen dieser Bibliothek verwenden, kompatibel sind.
 
 Die einfachste Herangehensweise an SemVer ist das Format `MAJOR.MINOR.PATCH` mit drei Komponenten, bei dem:

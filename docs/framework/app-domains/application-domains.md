@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698314"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192615"
 ---
 # <a name="application-domains"></a>Anwendungsdomänen
+
 Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isolierung der Anwendungen voneinander. Windows verwendet beispielsweise Prozesse, um Anwendungen zu isolieren. Diese Isolierung ist erforderlich, um sicherzustellen, dass der in einer Anwendung ausgeführte Code andere, unabhängig davon ausgeführte Anwendungen nicht beeinträchtigt.  
   
  Anwendungsdomänen stellen eine Isolationsbegrenzung aus Gründen der Sicherheit, Zuverlässigkeit und Versionszuweisung sowie zum Entladen von Assemblys bereit. Anwendungsdomänen werden meist von Laufzeithosts erstellt, die vor dem Ausführen einer Anwendung als Bootstrapper für die Common Language Runtime fungieren.  
   
- In den Themen in diesem Abschnitt der Dokumentation wird erklärt, wie Anwendungsdomänen verwendet werden, um Isolation zwischen Assemblys zu bieten.  
-  
- Diese Übersicht enthält folgende Abschnitte:  
-  
--   [Die Vorteile der Isolation von Anwendungen](#benefits)  
-  
--   [Verweis](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>Die Vorteile der Isolation von Anwendungen  
+## <a name="the-benefits-of-isolating-applications"></a>Vorteile der Isolation von Anwendungen
+
  Traditionell werden auf dem gleichen Computer ausgeführte Anwendungen durch Prozessgrenzen isoliert. Jede Anwendung wird in einen eigenen Prozess geladen, wodurch die Anwendung von anderen auf dem gleichen Computer ausgeführten Anwendungen isoliert wird.  
   
  Die Anwendungen sind isoliert, da Speicheradressen prozessabhängig sind. Ein von einem Prozess an einen anderen Prozess übergebener Speicherzeiger kann im Zielprozess nicht sinnvoll verwendet werden. Außerdem können Sie keine direkten Aufrufe zwischen zwei Prozessen durchführen. Stattdessen müssen Sie Proxys verwenden, die eine Dereferenzierungsebene bieten.  
@@ -61,9 +54,9 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
 -   Berechtigungen für Code können durch die Anwendungsdomäne gesteuert werden, in der dieser ausgeführt wird.  
   
-  
-## <a name="application-domains-and-assemblies"></a>Anwendungsdomänen und Assemblys  
- In diesem Thema wird die Beziehung zwischen Anwendungsdomänen und Assemblys beschrieben. Sie müssen eine Assembly in eine Anwendungsdomäne laden, bevor Sie den darin enthaltenen Code ausführen können. Durch das Ausführen einer typischen Anwendung werden mehrere Assemblys in eine Anwendungsdomäne geladen.  
+## <a name="application-domains-and-assemblies"></a>Anwendungsdomänen und Assemblys
+
+ In diesem Abschnitt wird die Beziehung zwischen Anwendungsdomänen und Assemblys beschrieben. Sie müssen eine Assembly in eine Anwendungsdomäne laden, bevor Sie den darin enthaltenen Code ausführen können. Durch das Ausführen einer typischen Anwendung werden mehrere Assemblys in eine Anwendungsdomäne geladen.  
   
  Die Art und Weise, wie eine Assembly geladen wird, legt fest, ob der zugehörige JIT-kompilierte (Just-In-Time) Code von mehreren Anwendungsdomänen im Prozess gemeinsam genutzt und ob die Assembly aus dem Prozess entladen werden kann.  
   
@@ -95,21 +88,24 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
 -   Alle Abhängigkeiten einer Assembly müssen beim domänenneutralen Laden der Assembly gefunden und geladen werden, denn eine Abhängigkeit, die nicht domänenneutral geladen werden kann, verhindert das domänenneutrale Laden der Assembly.  
   
-## <a name="application-domains-and-threads"></a>Anwendungsdomänen und Threads  
+## <a name="application-domains-and-threads"></a>Anwendungsdomänen und Threads
+
  Eine Anwendungsdomäne bildet eine Isolationsbegrenzung aus Gründen der Sicherheit, Versionszuweisung und Zuverlässigkeit sowie zum Entladen von verwaltetem Code. Ein Thread wird vom Betriebssystem bereitgestellt und von der Common Language Runtime zum Ausführen von Code verwendet. Zur Laufzeit wird der gesamte verwaltete Code in eine Anwendungsdomäne geladen und von einem oder mehreren verwalteten Threads ausgeführt.  
   
  Es gibt keine eindeutige Korrelation zwischen Anwendungsdomänen und Threads. Es können jederzeit mehrere Threads in einer Anwendungsdomäne ausgeführt werden, wobei ein bestimmter Thread nicht auf eine einzelne Anwendungsdomäne beschränkt ist. Das heißt, dass Threads über die Grenzen von Anwendungsdomänen hinweg verwendet werden können. Es wird nicht für jede Anwendungsdomäne ein neuer Thread erstellt.  
   
- Zu jedem Zeitpunkt werden alle Threads in einer Anwendungsdomäne ausgeführt. In jeder angegebenen Anwendungsdomäne können 0 (null), ein oder mehrere Threads ausgeführt werden. Die Laufzeit verfolgt, welche Threads in welchen Anwendungsdomänen ausgeführt werden. Sie können jederzeit bestimmen, in welcher Domäne ein Thread ausgeführt wird, indem Sie die <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>-Methode aufrufen.  
-  
-### <a name="application-domains-and-cultures"></a>Anwendungsdomänen und Kulturen  
+ Zu jedem Zeitpunkt werden alle Threads in einer Anwendungsdomäne ausgeführt. In jeder angegebenen Anwendungsdomäne können 0 (null), ein oder mehrere Threads ausgeführt werden. Die Laufzeit verfolgt, welche Threads in welchen Anwendungsdomänen ausgeführt werden. Sie können jederzeit bestimmen, in welcher Domäne ein Thread ausgeführt wird, indem Sie die <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>-Methode aufrufen.
+
+### <a name="application-domains-and-cultures"></a>Anwendungsdomänen und Kulturen
+
  Die Kultur, die durch ein <xref:System.Globalization.CultureInfo>-Objekt dargestellt wird, ist Threads zugeordnet. Sie können die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen, indem Sie die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft verwenden. Mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft können Sie die dem aktuell ausgeführten Thread zugeordnete Kultur abrufen oder festlegen. Wenn die einem Thread zugeordnete Kultur durch Verwendung der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft explizit festgelegt wurde, bleibt sie diesem Thread zugeordnet, wenn der Thread Anwendungsdomänengrenzen überschreitet. Andernfalls wird die Kultur, die dem Thread jeweils zugeordnet ist, durch den Wert der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft in der Anwendungsdomäne bestimmt, in der der Thread ausgeführt wird:  
   
 -   Wenn der Wert der Eigenschaft nicht `null` ist, wird die Kultur, die von der Eigenschaft zurückgegeben wird, dem Thread zugeordnet (und daher durch die <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben).  
   
 -   Wenn der Wert der Eigenschaft `null` ist, wird die aktuelle Systemkultur dem Thread zugeordnet.  
   
-## <a name="programming-with-application-domains"></a>Programmieren mit Anwendungsdomänen  
+## <a name="programming-with-application-domains"></a>Programmieren mit Anwendungsdomänen
+
  Anwendungsdomänen werden normalerweise programmgesteuert durch Laufzeithosts erstellt und geändert. In einigen Fällen arbeiten aber auch Anwendungsprogramme mit Anwendungsdomänen. Beispielsweise kann ein Anwendungsprogramm eine Anwendungskomponente in eine Domäne laden, um die Domäne (und die Komponente) entladen zu können, ohne dass die gesamte Anwendung angehalten werden muss.  
   
  Die <xref:System.AppDomain> ist die programmgesteuerte Schnittstelle zu Anwendungsdomänen. Diese Klasse enthält Methoden zum Erstellen und Entladen von Domänen, zum Erstellen von Instanzen von Typen in Domänen und zum Registrieren von verschiedenen Benachrichtigungen wie das Entladen von Domänen. In der folgenden Tabelle werden häufig verwendete <xref:System.AppDomain>-Methoden aufgelistet.  
@@ -126,7 +122,8 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
   
  Auch die in der Spezifikation zu den Hostingschnittstellen der Common Language Runtime beschriebenen nicht verwalteten Schnittstellen bieten Zugriff auf Anwendungsdomänen. Mit Schnittstellen von nicht verwaltetem Code können Laufzeithosts Anwendungsdomänen in einem Prozess erstellen und Zugriff auf diese erlangen.  
   
-## <a name="complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization-Umgebungsvariable  
+## <a name="the-complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization-Umgebungsvariable
+
  Eine Umgebungsvariable, die die Standardladeprogramm-Optimierungsrichtlinie einer ausführbaren Anwendung festgelegt.  
   
 ### <a name="syntax"></a>Syntax  
@@ -135,7 +132,8 @@ Betriebssysteme und Laufzeitumgebungen sorgen i. d. R. für eine gewisse Isoli
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Hinweise
+
  Eine typische Anwendung lädt mehrere Assemblys in eine Anwendungsdomäne, bevor der Code, den sie enthalten, ausgeführt werden kann.  
   
  Die Methode, mit der die Assembly geladen wird, bestimmt, ob ihr Just-In-Time-(JIT)-kompilierter Code von mehreren Anwendungsdomänen im Prozess gemeinsam genutzt werden kann.  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  Das COMPLUS_LoaderOptimizations-Umgebungsflag wurde für die Verwendung bei Diagnosen und Testszenarien entworfen. Eine Aktivierung des Flags kann zu erheblichem Leistungsabfall führen und die Speicherauslastung erhöhen.  
   
-### <a name="code-example"></a>Codebeispiel  
+### <a name="code-example"></a>Codebeispiel
+
  Durch den Anhang von `COMPLUS_LoaderOptimization=1` an den Multi-Zeichenfolgen-Wert der Umgebung im HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN-Schlüssel kann erzwungen werden, dass keine Assemblys für den IISADMIN-Dienst als domänenneutral geladen werden.  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>Referenz  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>Siehe auch
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [Programmieren mit Anwendungsdomänen und Assemblys](index.md)
+- [Verwenden von Anwendungsdomänen](use.md)

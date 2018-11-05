@@ -1,15 +1,18 @@
 ---
 title: Neuigkeiten in .NET Core 2.1
 description: Informationen zu den neuen Features in .NET Core 2.1.
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400066"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120946"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -166,9 +169,11 @@ Zum Aktivieren der mehrstufigen Kompilierung können Sie zwischen zwei Arten wä
 
 Ohne diese Typen müssen Sie bei der Übergabe solcher Elemente als Teil eines Arrays oder Abschnitt eines Arbeitsspeicherpuffers eine Kopie eines Teils der Daten anfertigen, bevor Sie sie einer Methode übergeben. Diese Typen bieten eine virtuelle Sicht der Daten, die die zusätzliche Speicherzuweisung und Kopiervorgänge überflüssig macht.
 
-Im folgenden Beispiel wird anhand einer <xref:System.Span%601>-Instanz eine virtuelle Sicht mit 10 Elementen eines Arrays dargestellt.
+Das folgende Beispiel verwendet eine <xref:System.Span%601>- und eine <xref:System.Memory%601>-Instanz, um eine virtuelle Ansicht von 10 Elementen eines Arrays bereitzustellen.
 
 [!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!CODE-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli-Komprimierung
 

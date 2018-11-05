@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788927"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194318"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Exemplarische Vorgehensweise: Verwenden von Clientanwendungsdiensten
 In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clientanwendungsdienste zum Authentifizieren von Benutzern und zum Abrufen von Benutzerrollen und Einstellungen verwendet wird.  
@@ -35,9 +35,8 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
 -   Aktivieren Sie den Offline-Modus. Sie stellen ein Kontrollkästchen bereit, damit Benutzer ihren Verbindungsstatus angeben können. Anschließend verwenden Sie diesen Wert, um anzugeben, ob die Anbieter von Clientanwendungsdiensten lokal zwischengespeicherte Daten verwenden, anstatt auf ihre Webdienste zuzugreifen. Schließlich authentifizieren Sie den aktuellen Benutzer erneut, wenn die Anwendung zurück in den Onlinemodus wechselt.  
   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 ## <a name="creating-the-client-application"></a>Erstellen der Clientanwendung  
  Zunächst erstellen Sei ein Windows Forms-Projekt. In dieser exemplarischen Vorgehensweise wird Windows Forms verwendet, da damit mehr Benutzer vertraut sind. Der Vorgang ist jedoch bei Windows Presentation Foundation (WPF)-Projekten ähnlich.  
@@ -328,7 +327,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
-9. Stellen Sie sicher, dass sich der Cursor hinter `IClientformsAuthenticationCredentialsProvider`befindet, und drücken Sie dann die EINGABETASTE, um die `GetCredentials` -Methode zu generieren.  
+9. Stellen Sie sicher, dass sich der Cursor hinter `IClientformsAuthenticationCredentialsProvider` befindet, und drücken Sie dann die EINGABETASTE, um die `GetCredentials`-Methode zu generieren.  
   
 10. Suchen Sie die <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> Implementierung, und ersetzten Sie sie durch den folgenden Code.  
   
@@ -389,7 +388,7 @@ In diesem Thema wird beschrieben, wie eine Windows-Anwendung erstellen, die Clie
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- Wenn die Authentifizierung erfolgreich ist, legt der Client-Authentifizierungsanbieter die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft auf eine Instanz der <xref:System.Web.ClientServices.ClientRolePrincipal>-Klasse fest. Diese Klasse implementiert die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> -Methode, damit die Arbeit an den konfigurierten Rollenanbieter delegiert werden kann. Wie zuvor erfordert Ihr Anwendungscode keinen direkten Verweis auf den Dienstanbieter.  
+ Wenn die Authentifizierung erfolgreich ist, legt der Client-Authentifizierungsanbieter die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> -Eigenschaft auf eine Instanz der <xref:System.Web.ClientServices.ClientRolePrincipal> -Klasse fest. Diese Klasse implementiert die <xref:System.Security.Principal.IPrincipal.IsInRole%2A> -Methode, damit die Arbeit an den konfigurierten Rollenanbieter delegiert werden kann. Wie zuvor erfordert Ihr Anwendungscode keinen direkten Verweis auf den Dienstanbieter.  
   
  Sie können die Anwendung jetzt ausführen und sich als Mitarbeiter anmelden, um festzustellen, dass die Schaltfläche nicht eingeblendet wird. Dann melden Sie sich als Manager an,  um festzustellen, dass die Schaltfläche nun angezeigt wird.  
   

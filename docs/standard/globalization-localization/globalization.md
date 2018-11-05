@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44221908"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453358"
 ---
 # <a name="globalization"></a>Globalisierung
 Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Benutzeroberflächen und regionale Daten für Benutzer verschiedener Kulturen unterstützen. Bevor Sie mit der Entwurfsphase beginnen, sollten Sie festlegen, welche Kulturen die App unterstützen soll. Auch wenn eine App standardmäßig auf eine einzige Kultur oder Region ausgerichtet ist, kann Sie so entworfen und geschrieben werden, dass sie leicht auf Benutzer in anderen Kulturen oder Regionen ausgeweitet werden kann.  
@@ -116,7 +116,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
  Vergleiche auf Gleichheit umfassen gelegentlich Suchen oder Teilzeichenfolgenvergleiche anstelle von Aufrufen der <xref:System.String.Equals%2A?displayProperty=nameWithType>-Methode. In einigen Fällen können Sie eine Teilzeichenfolgensuche verwenden, um zu bestimmen, ob diese Teilzeichenfolge einer anderen Zeichenfolge entspricht. Wenn der Zweck dieses Vergleiches nicht linguistisch ist, sollte die Suche ebenfalls ordinal anstatt kulturabhängig sein.  
   
- Das folgende Beispiel veranschaulicht das Risiko einer kulturabhängigen Suche bei nicht linguistischen Daten. Die `AccessesFileSystem`-Methode wurde entworfen, um den Dateisystemzugriff für URIs zu verweigern, die mit der Teilzeichenfolge "FILE" beginnen. Hierzu wird ein kulturabhängiger Vergleich unter Beachtung von Groß- und Kleinschreibung zwischen dem Anfang des URI und der Zeichenfolge "FILE" durchgeführt. Da ein URI, der auf das Dateisystem zugreift, mit "FILE:" oder mit "file:" beginnen kann, ist die implizite Annahme, dass "i" (U+0069) immer die Kleinbuchstabenentsprechung von "I" (U+0049) ist. Auf Türkisch und Aserbaidschanisch ist die Großbuchstabenversion von "i" jedoch "İ" (U+0130). Aufgrund dieser Diskrepanz gewährt der kulturabhängige Vergleich den Dateisystemzugriff, wenn er eigentlich verhindert werden soll.  
+ Das folgende Beispiel veranschaulicht das Risiko einer kulturabhängigen Suche bei nicht linguistischen Daten. Die `AccessesFileSystem`-Methode wurde entworfen, um den Dateisystemzugriff für URIs zu verweigern, die mit der Teilzeichenfolge "FILE" beginnen. Hierzu wird ein kulturabhängiger Vergleich unter Beachtung von Groß- und Kleinschreibung zwischen dem Anfang des URI und der Zeichenfolge "FILE" durchgeführt. Da ein URI, der auf das Dateisystem zugreift, mit „FILE:“ oder „file:“ beginnen kann, wird implizit angenommen, dass „i“ (U+0069) immer die Kleinbuchstabenentsprechung von „I“ (U+0049) ist. Auf Türkisch und Aserbaidschanisch ist die Großbuchstabenversion von "i" jedoch "İ" (U+0130). Aufgrund dieser Diskrepanz gewährt der kulturabhängige Vergleich den Dateisystemzugriff, wenn er eigentlich verhindert werden soll.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  

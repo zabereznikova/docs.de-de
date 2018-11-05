@@ -1,6 +1,6 @@
 ---
-title: Numerische Ausdrücke in .NET Framework
-ms.date: 03/30/2017
+title: Numerische Ausdrücke in .NET
+ms.date: 10/18/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - SIMD
@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209486"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191148"
 ---
-# <a name="numerics-in-the-net-framework"></a>Numerische Ausdrücke in .NET Framework
-.NET Framework unterstützt die standardmäßigen numerischen Ganzzahlen und Gleitkomma-Primitive sowie <xref:System.Numerics.BigInteger>, ein ganzzahliger Typ ohne theoretische obere oder untere Grenze, <xref:System.Numerics.Complex>, einen komplexe Zahlen darstellenden Typ, und eine Reihe von SIMD-fähigen Vektortypen im <xref:System.Numerics>-Namespace.  
+# <a name="numerics-in-net"></a>Numerische Ausdrücke in .NET
+
+.NET stellt zahlreiche numerische Ganzzahl- und Gleitkomma-Grundtypen sowie <xref:System.Numerics.BigInteger?displayProperty=nameWithType> (Ganzzahltyp ohne theoretische Ober- oder Untergrenze), <xref:System.Numerics.Complex?displayProperty=nameWithType> (komplexe Zahlen darstellender Typ) und eine Reihe von SIMD-fähigen Typen im <xref:System.Numerics>-Namespace zur Verfügung.
   
- Darüber hinaus wurde „System.Numerics.Vectors“, die Bibliothek SIMD-fähiger Vektortypen, als NuGet-Paket veröffentlicht.  
+## <a name="integer-types"></a>Ganzzahltypen
+
+.NET unterstützt 8-, 16-, 32- und 64-Bit-Ganzzahltypen mit und ohne Vorzeichen, die in der folgenden Tabelle aufgeführt sind:
   
-## <a name="integral-types"></a>Ganzzahlige Typen  
- Das .NET Framework unterstützt Ganzzahlen mit und ohne Vorzeichen mit Längen von einem bis zu acht Byte. In der folgenden Tabelle werden die ganzzahligen Typen und deren Größen aufgelistet, es wird angegeben oder sie Vorzeichen aufweisen, und der Bereich wird dokumentiert. Alle Ganzzahlen sind Werttypen.  
-  
-|Typ|Mit/ohne Vorzeichen|Größe (Byte)|Minimalwert|Maximalwert|  
+|Typ|Mit/ohne Vorzeichen|Größe (in Bytes)|Minimalwert|Maximalwert|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Ohne Vorzeichen|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Signiert|2|-32,768|32,767|  
@@ -39,44 +39,63 @@ ms.locfileid: "44209486"
 |<xref:System.UInt32?displayProperty=nameWithType>|Ohne Vorzeichen|4|0|4,294,967,295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|Ohne Vorzeichen|8|0|18,446,744,073,709,551,615|  
   
- Jeder ganzzahlige Typ unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung). Jede Ganzzahl weist darüber hinaus auch Methoden für die Durchführung von Gleichheitsvergleichen und relativen Vergleichen auf, um die Zeichenfolgendarstellung einer Zahl in diese Ganzzahl und eine Ganzzahl in die entsprechende Zeichenfolgendarstellung konvertieren zu können. Einige zusätzliche mathematische Operationen über diejenigen hinaus, die von den Standardoperatoren verarbeitet werden, wie Runden oder Erkennen des kleineren oder größeren Werts zweier Ganzzahlen stehen über die <xref:System.Math>-Klasse bereit. Sie können auch mit den einzelnen Bit in einem ganzzahligen Wert arbeiten, indem Sie die <xref:System.BitConverter>-Klasse verwenden.  
+Jeder Ganzzahltyp unterstützt eine Reihe von arithmetischen Standardoperatoren. Die Klasse <xref:System.Math?displayProperty=nameWithType> stellt Methoden für mehrere mathematische Funktionen bereit.
+
+Sie können auch mit den einzelnen Bit in einem ganzzahligen Wert arbeiten, indem Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse verwenden.  
+
+> [!NOTE]  
+> Die Ganzzahltypen ohne Vorzeichen sind nicht CLS-kompatibel. Weitere Informationen finden Sie unter [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md).
+
+## <a name="biginteger"></a>BigInteger
+
+Die <xref:System.Numerics.BigInteger?displayProperty=nameWithType>-Struktur ist ein unveränderlicher Typ, der eine beliebig große ganze Zahl darstellt, dessen Wert theoretisch keine Ober- und Untergrenze hat. Die Methoden des <xref:System.Numerics.BigInteger>-Typs ähneln im Wesentlichen denen der anderen ganzzahligen Typen.
   
- Beachten Sie das ganzzahlige Typen ohne Vorzeichen nicht CLS-kompatibel sind. Weitere Informationen finden Sie unter [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md).  
+## <a name="floating-point-types"></a>Gleitkommatypen
+
+.NET enthält drei grundlegende Gleitkommatypen, die in der folgenden Tabelle aufgeführt sind:
   
-## <a name="floating-point-types"></a>Gleitkommatypen  
- Das .NET Framework enthält drei primitive Gleitkommatypen, die in der folgenden Tabelle aufgeführt sind.  
+|Typ|Größe (in Bytes)|Ungefährer Bereich|Genauigkeit|  
+|----------|--------|---------------------|--------------------|  
+|<xref:System.Single?displayProperty=nameWithType>|4|±1.5 × 10<sup>−45</sup> zu ±3.4 × 10<sup>38</sup>|~6–9 Stellen|  
+|<xref:System.Double?displayProperty=nameWithType>|8|±5,0 × 10<sup>−324</sup> bis ±1,7 × 10<sup>308</sup>|~15-17 Stellen|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|±1.0 × 10<sup>-28</sup> to ±7.9228 × 10<sup>28</sup>|28-29 Stellen|  
   
-|Typ|Größe (in Bytes)|Minimum|Maximum|  
-|----------|-----------------------|-------------|-------------|  
-|<xref:System.Double?displayProperty=nameWithType>|8|-1.79769313486232e308|1.79769313486232e308|  
-|<xref:System.Single?displayProperty=nameWithType>|4|-3.402823e38|3.402823e38|  
-|<xref:System.Decimal?displayProperty=nameWithType>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
+Die beiden Typen <xref:System.Single> und <xref:System.Double> unterstützen spezielle Werte, die „nicht numerisch“ und „unendlich“ darstellen. Der Typ <xref:System.Double> liefert beispielsweise die folgenden Werte: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> und <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Mit den Methoden <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> und <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> können Sie Tests für diese speziellen Werte ausführen.
+
+Jeder Gleitkommatyp unterstützt eine Reihe von arithmetischen Standardoperatoren. Die Klasse <xref:System.Math?displayProperty=nameWithType> stellt Methoden für mehrere mathematische Funktionen bereit. .NET Core 2.0 und höher enthält die Klasse <xref:System.MathF?displayProperty=nameWithType>, die Methoden bereitstellt, die Argumente vom Typ <xref:System.Single> akzeptieren.
+
+Sie können auch mit den einzelnen Bit in <xref:System.Double>- und <xref:System.Single>-Werten arbeiten, indem Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse verwenden. Die <xref:System.Decimal?displayProperty=nameWithType>-Struktur verfügt über eigene Methoden, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> und <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, um mit den einzelnen Bit eines Dezimalwerts zu arbeiten, und sie verfügt über einen eigenen Satz an Methoden für die Durchführung einiger zusätzlicher mathematischer Operationen.
   
- Jeder Gleitkommatyp unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung). Jeder Typ weist darüber hinaus auch Methoden für die Durchführung von Gleichheitsvergleichen und relativen Vergleichen auf, um die Zeichenfolgendarstellung einer Zahl in eine Gleitkommazahl und eine Gleitkommazahl in die entsprechende Zeichenfolgendarstellung konvertieren zu können. Einige weitere mathematische, algebraische und trigonometrische Operationen werden von der <xref:System.Math>-Klasse bereitgestellt. Sie können auch mit den einzelnen Bit in <xref:System.Double>- und <xref:System.Single>-Werten arbeiten, indem Sie die <xref:System.BitConverter>-Klasse verwenden. Die <xref:System.Decimal?displayProperty=nameWithType>-Struktur verfügt über eigene Methoden, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> und <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, um mit den einzelnen Bit eines Dezimalwerts zu arbeiten, und sie verfügt über einen eigenen Satz an Methoden für die Durchführung einiger zusätzlicher mathematischer Operationen.  
+Die Typen <xref:System.Double> und <xref:System.Single> sind dazu gedacht, für Werte verwendet zu werden, die per se unpräzise sind (wie der Abstand zwischen zwei Sternen), und für Anwendungen, in denen kein hoher Genauigkeitsgrad erforderlich ist und geringe Rundungsfehler auftreten dürfen. Verwenden Sie den <xref:System.Decimal?displayProperty=nameWithType>-Typ in Fällen, in denen eine höhere Genauigkeit erforderlich ist und Rundungsfehler minimiert werden sollen.
+
+> [!NOTE]
+> Der Typ <xref:System.Decimal> ersetzt nicht die Notwendigkeit der Rundung. Stattdessen reduziert er Fehler, die beim Runden auftreten.
   
- Die Typen <xref:System.Double> und <xref:System.Single> sind dazu gedacht, für Werte verwendet zu werden, die von Natur aus unpräzise sind (wie der Abstand zwischen zwei Sternen im Sonnensystem), und für Anwendungen, in denen kein hoher Genauigkeitsgrad mit geringen Rundungsfehlern nicht erforderlich ist. Sie sollten den <xref:System.Decimal?displayProperty=nameWithType>-Typ in Fällen verwenden, in denen eine höhere Genauigkeit erforderlich ist und Rundungsfehler unerwünscht sind.  
+## <a name="complex"></a>Komplex
+
+Die <xref:System.Numerics.Complex?displayProperty=nameWithType>-Struktur steht für eine komplexe Zahl, d.h., für eine Zahl mit einem reellen und einem imaginären Teil. Sie unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung) sowie mathematische, algebraische und trigonometrische Methoden.  
   
-## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=nameWithType> ist ein unveränderlicher Typ, der eine beliebig große ganze Zahl darstellt, dessen Wert theoretisch keine oberen und unteren Grenzen hat. Die Methoden des <xref:System.Numerics.BigInteger>-Typs ähneln im Wesentlichen denen der anderen ganzzahligen Typen.  
+## <a name="simd-enabled-types"></a>SIMD-fähige Typen
+
+Der <xref:System.Numerics>-Namespace umfasst einen Satz von SIMD-fähigen .NET-Typen. SIMD-Vorgänge (Single Instruction Multiple Data) lassen sich auf Hardwareebene parallelisieren. Das erhöht den Durchsatz der vektorisierten Berechnungen, die in mathematischen, wissenschaftlichen und grafischen Apps üblich sind.
   
-## <a name="complex"></a>Komplex  
- Der Typ <xref:System.Numerics.Complex> steht für eine komplexe Zahl, d. h., für eine Zahl mit einem reellen und einem imaginären Teil. Er unterstützt einen Standardsatz an Operatoren (arithmetisch, Vergleich, Gleichheit, explizite Konvertierung und implizite Konvertierung) sowie mathematische, algebraische und trigonometrische Methoden.  
+Die SIMD-fähigen .NET-Typen umfassen Folgendes:
+
+- Die Typen <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> und <xref:System.Numerics.Vector4>, die Vektoren mit 2, 3 und 4 <xref:System.Single>-Werten darstellen.
+
+- Die zwei Matrixtypen <xref:System.Numerics.Matrix3x2> und <xref:System.Numerics.Matrix4x4>. Der erste Typ stellt eine 3x2-Matrix und der zweite eine 4x4-Matrix dar.
+
+- Den <xref:System.Numerics.Plane>-Typ, der eine Ebene im dreidimensionalen Raum darstellt.
+
+- Den <xref:System.Numerics.Quaternion>-Typ, der einen Vektor darstellt, der zum Codieren von dreidimensionalen physischen Drehungen verwendet wird.
+
+- Den <xref:System.Numerics.Vector%601>-Typ, der einen Vektor eines bestimmten numerischen Typs darstellt und mehrere Operatoren bereitstellt, die von der SIMD-Unterstützung profitieren. Die Anzahl von <xref:System.Numerics.Vector%601>-Instanzen ist fest, aber ihr Wert <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> hängt von der CPU des Computers ab, auf dem der Code ausgeführt wird.
+  > [!NOTE]
+  > Der <xref:System.Numerics.Vector%601>-Typ ist nicht in .NET Framework enthalten. Sie müssen das NuGet-Paket [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) installieren, um Zugriff auf diesen Typ zu erhalten.
   
-## <a name="simd-enabled-vector-types"></a>SIMD-fähige Vektortypen  
- Der <xref:System.Numerics>-Namespace umfasst einen Satz an SIMD-fähigen Vektortypen für .NET Framework. SIMD-Operationen (Single Instruction Multiple Data) ermöglichen es, einige Operationen auf der Hardwareebene zu parallelisieren, was in mathematischen, wissenschaftlichen und grafischen Apps, die Berechnungen über Vektoren ausführen, zu einer enormen Leistungsverbesserung führt.  
-  
- Die SIMD-fähigen Vektortypen in .NET Framework umfassen Folgendes:.  Darüber hinaus enthält „System.Numerics.Vectors“ einen Plane- und einen Quaternion-Typ.  
-  
--   <xref:System.Numerics.Vector2>-, <xref:System.Numerics.Vector3>- und <xref:System.Numerics.Vector4>-Typen, die zwei-, drei- und vierdimensionale Vektoren vom Typ <xref:System.Single> sind.  
-  
--   Zwei Matrixtypen: <xref:System.Numerics.Matrix3x2>, das eine 3x2-Matrix darstellt, und <xref:System.Numerics.Matrix4x4>, das eine 4x4-Matrix darstellt.  
-  
--   Die <xref:System.Numerics.Plane>- und <xref:System.Numerics.Quaternion>-Typen.  
-  
- Die SIMD-fähigen Vektortypen werden in IL implementiert, wodurch es möglich ist, sie auch auf nicht SIMD-fähiger Hardware und in Verbindung mit JIT-Compilern zu verwenden. Um SIMD-Anweisungen nutzen zu können, müssen die 64-Bit-Apps mit dem neuen 64-Bit-JIT-Compiler für verwalteten Code kompiliert werden, der in .NET Framework 4.6 enthalten ist. Er fügt die SIMD-Unterstützung hinzu, wenn x64-Prozessoren das Ziel sind.  
-  
- SIMD kann auch als [NuGet-Paket](https://www.nuget.org/packages/System.Numerics.Vectors) heruntergeladen werden.  Das NuGET-Paket umfasst auch eine generische <xref:System.Numerics.Vector%601>-Struktur, mit der Sie einen Vektor eines beliebigen primitiven numerischen Typs erstellen können. (Zu den primitiven numerischen Typen gehören alle numerischen Typen im <xref:System>-Namespace außer <xref:System.Decimal>). Darüber hinaus stellt die <xref:System.Numerics.Vector%601>-Struktur eine Bibliothek von Hilfsmethoden bereit, die Sie bei der Arbeit mit Vektoren aufrufen können.  
-  
+Die SIMD-fähigen Typen sind so implementiert, dass sie mit nicht-SIMD-fähiger Hardware oder JIT-Compilern verwendet werden können. Um die Vorteile von SIMD-Anweisungen zu nutzen, müssen Ihre 64-Bit-Apps von der Runtime ausgeführt werden, die den RyuJIT-Compiler verwendet, der in .NET Core und in .NET Framework 4.6 und höher enthalten ist. Sie fügt SIMD-Unterstützung hinzu, wenn 64-Bit-Prozessoren verwendet werden.
+
 ## <a name="see-also"></a>Siehe auch
 
-- [Grundlagen der Anwendung](../../docs/standard/application-essentials.md)
+- [Grundlagen der Anwendung](application-essentials.md)
+- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)

@@ -4,12 +4,12 @@ description: Reduzieren Sie beim Erstellen von Bibliotheken, die auf project.jso
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193607"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040880"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzieren von Paketabhängigkeiten mit „project.json“
 
@@ -36,7 +36,7 @@ Derzeit gibt es keinen offiziellen `dotnet`-Befehl, der Paketverweise beschränk
 Auf eine der folgenden Weisen können Sie herausfinden, welche Pakete Sie nicht benötigen:
 
 1. Ausprobieren:  Bei dieser Methode entfernen Sie ein Paket, stellen es wieder her, nehmen zur Kenntnis, ob Ihre Bibliothek immer noch kompiliert, und wiederholen diesen Prozess.
-2. Verwenden eines Tools zum Ansehen von Verweisen wie z.B. [ILSpy](http://ilspy.net) oder [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector), um zu sehen, was Ihr Code tatsächlich verwendet.  Anschließend können Sie Pakete entfernen, die nicht den Typen entsprechen, die Sie verwenden.
+2. Verwenden eines Tools zum Ansehen von Verweisen wie z.B. [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) oder [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector), um zu sehen, was Ihr Code tatsächlich verwendet.  Anschließend können Sie Pakete entfernen, die nicht den Typen entsprechen, die Sie verwenden.
 
 ## <a name="example"></a>Beispiel 
 
@@ -127,7 +127,7 @@ Kopieren Sie als Nächstes die Paketverweise in den `dependencies`-Abschnitt der
 }
 ```
 
-Das sind ziemlich viele Pakete, die sicherlich nicht zum Erweitern von Sammlungstypen benötigt werden.  Sie können Pakete entweder manuell entfernen oder ein Tool wie z.B. [ILSpy](http://ilspy.net) oder [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) verwenden, um zu bestimmen, welche Pakete Ihr Code tatsächlich verwendet.
+Das sind ziemlich viele Pakete, von denen viele zum Erweitern von Sammlungstypen sicherlich nicht benötigt werden.  Sie können Pakete entweder manuell entfernen oder ein Tool wie z.B. [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) oder [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) verwenden, um zu bestimmen, welche Pakete Ihr Code tatsächlich verwendet.
 
 So könnte ein eingeschränktes Paket aussehen:
 

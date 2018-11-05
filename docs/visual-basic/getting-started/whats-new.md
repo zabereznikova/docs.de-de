@@ -1,6 +1,6 @@
 ---
 title: Neues in Visual Basic
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,18 +8,16 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925610"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194058"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
-In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von Visual Basic mit ausführlichen Beschreibungen der neuen und verbesserten Funktionen in der neuesten Version der Sprache aufgelistet.
+In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von Visual Basic mit ausführlichen Beschreibungen der neuen und verbesserten Funktionen in der aktuellen Version der Sprache aufgelistet.
   
 ## <a name="current-version"></a>Aktuelle Version
 
@@ -69,6 +67,10 @@ Der folgende Methodenaufruf hat beispielsweise zwei positionelle Argumente zwisc
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[Zugriffsmodifizierer `Private Protected` für Member](../language-reference/modifiers/private-protected.md)
+
+Diese neue Schlüsselwortkombination definiert einen Member, auf den alle Member seiner enthaltenden Klasse sowie Typen, die von der enthaltenden Klasse abgeleitet sind, zugreifen können, wenn sie sich auch in der enthaltenden Assembly befinden. Da Strukturen nicht geerbt werden können, kann `Private Protected` nur auf die Member einer Klasse angewendet werden.
 
 **Führendes Hexadezimal-/Binär-/Oktaltrennzeichen**
 
@@ -153,7 +155,7 @@ Weitere Informationen finden Sie unter [Verweisrückgabewerte](../programming-gu
 [Zeichenfolgeninterpolation](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Sie können Ausdrücke für die Zeichenfolgeninterpolierung zum Erstellen von Zeichenfolgen verwenden.  Ein Ausdruck für eine interpolierte Zeichenfolge sieht wie eine Vorlagenzeichenfolge aus, die Ausdrücke enthält.  Eine interpolierte Zeichenfolge ist in Bezug auf die Argumente leichter zu verstehen als eine [Zusammengesetzte Formatierung](../../standard/base-types/composite-format.md).  
   
-[Memberzugriff und Indizierung mit NULL-Bedingung](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Memberzugriff und Indizierung mit NULL-Bedingung](../language-reference/operators/null-conditional-operators.md)  
 Sie können eine Prüfung auf null auf sehr einfache syntaktische Weise vornehmen, bevor Sie eine Operation für den Memberzugriff (`?.`) oder die Indizierung (`?[]`) ausführen.  Mithilfe dieser Operatoren müssen Sie für die Prüfung auf null weniger Code schreiben, insbesondere beim tieferen Eindringen in Datenstrukturen.  Wenn der linke Operand oder Objektverweis NULL ist, geben die Operationen NULL zurück.  
   
 [Multi-line string literals (Mehrzeilige Zeichenfolgenliterale)](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

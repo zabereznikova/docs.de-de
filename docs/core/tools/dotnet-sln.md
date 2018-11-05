@@ -4,12 +4,12 @@ description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu ei
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207796"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121219"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -30,7 +30,7 @@ dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung 
 
 Der Befehl `dotnet sln` bietet eine praktische Möglichkeit, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
 
@@ -95,3 +95,6 @@ Fügen Sie mehrere C#-Projekte zu einer Projektmappe hinzu, indem Sie ein Globmu
 Entfernen Sie mehrere C#-Projekte aus einer Projektmappe, indem Sie ein Globmuster verwenden:
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> Globbing ist kein Feature der CLI, sondern der Befehlsshell. Um die Dateien erfolgreich zu erweitern, müssen Sie eine Shell verwenden, die Globbing unterstützt. Weitere Informationen zum Globbing finden Sie bei [Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)).

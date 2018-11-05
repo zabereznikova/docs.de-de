@@ -1,13 +1,13 @@
 ---
 title: Elementvorgänge (C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dbae8c0b3d98fe9674fbbeb432c1e42763e81026
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856889"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836776"
 ---
 # <a name="element-operations-c"></a>Elementvorgänge (C#)
 
@@ -25,8 +25,8 @@ Bei Elementvorgängen werden einzelne, spezifische Elemente aus einer Sequenz zu
 |FirstOrDefault|Gibt das erste Element einer Auflistung oder das erste Element, das eine Bedingung erfüllt, zurück. Gibt einen Standardwert zurück, wenn kein solches Element vorhanden ist.|Nicht zutreffend.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |Letzter|Gibt das letzte Element einer Auflistung oder das letzte Element, das eine Bedingung erfüllt, zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|Gibt das letzte Element einer Auflistung oder das letzte Element, das eine Bedingung erfüllt, zurück. Gibt einen Standardwert zurück, wenn kein solches Element vorhanden ist.|Nicht zutreffend.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|Gibt das einzige Element einer Auflistung oder das einzige Element, das eine Bedingung erfüllt, zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|Gibt das einzige Element einer Auflistung oder das einzige Element, das eine Bedingung erfüllt, zurück. Gibt einen Standardwert zurück, wenn kein solches Element vorhanden ist oder die Auflistung nicht genau ein Element enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Single|Gibt das einzige Element einer Auflistung oder das einzige Element, das eine Bedingung erfüllt, zurück. Löst eine <xref:System.InvalidOperationException> aus, wenn kein oder mehr als ein Element für die Rückgabe vorhanden ist. |Nicht zutreffend.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|Gibt das einzige Element einer Auflistung oder das einzige Element, das eine Bedingung erfüllt, zurück. Gibt einen Standardwert zurück, wenn kein Element zurückgegeben werden kann. Löst eine <xref:System.InvalidOperationException> aus, wenn mehr als ein Element für die Rückgabe vorhanden ist. |Nicht zutreffend.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e848b079d2c665052d8a5b5cfcd8fe379333b4b9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44197101"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192381"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installieren von .NET Framework unter Windows Vista und Windows Server 2008
 
@@ -18,7 +18,7 @@ ms.locfileid: "44197101"
 
 ![Diese Anwendung konnte nicht gestartet werden](./media/this-application-could-not-be-started.png)
 
-Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) ist die aktuelle Version. Sie wird unter Windows Vista und Windows Server 2008 nicht unterstützt. Sie ist im Lieferumfang vom [Windows 10-Update für April 2018](https://www.microsoft.com/software-download/windows10) enthalten.
+Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) ist die aktuelle Version. Sie wird unter Windows Vista und Windows Server 2008 nicht unterstützt. Sie ist im Lieferumfang des [Windows 10 Updates von Oktober 2018](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) und des [Windows 10 Updates von April 2018](https://www.microsoft.com/software-download/windows10) enthalten.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5049ed1b44155f3c21c53bef24a13006fe97a3fa
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188539"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452585"
 ---
 # <a name="threads-and-threading"></a>Threads und Threading
 Betriebssysteme verwenden Prozesse, um die verschiedenen ausgeführten Anwendungen voneinander zu trennen. Threads sind die Grundeinheit, der ein Betriebssystem Prozessorzeit zuweist, und mehrere Threads können gleichzeitig Code innerhalb dieses Prozesses ausführen. Jeder Thread unterhält Ausnahmehandler, eine Planungspriorität und eine Reihe von Strukturen, mit denen das System den Threadkontext speichert, bis er eingeplant ist. Der Threadkontext enthält alle Informationen, die der Thread benötigt, um die Ausführung nahtlos fortzusetzen. Dies schließt auch seine CPU-Register und seinen Stapel im Adressraum des Hostprozesses vom Thread ein.  
@@ -26,7 +26,7 @@ Betriebssysteme verwenden Prozesse, um die verschiedenen ausgeführten Anwendung
  Die Länge des Zeitsegments hängt vom Betriebssystem und vom Prozessor ab. Da jedes Zeitsegment relativ klein ist, scheinen mehrere Threads gleichzeitig ausgeführt zu werden, selbst wenn es nur einen Prozessor gibt. Dies ist tatsächlich bei Multiprozessorsystemen der Fall, bei denen die ausführbaren Threads auf die verfügbaren Prozessoren verteilt sind.  
   
 ## <a name="when-to-use-multiple-threads"></a>Verwendung mehrerer Threads  
- Bei Software, mit der Benutzer interagieren, muss diese für ein optimales Benutzererlebnis schnellstmöglich auf die Aktivitäten des Benutzers reagieren. Gleichzeitig muss die Software aber auch die notwendigen Berechnungen durchführen, um dem Benutzer die Daten so schnell wie möglich zur Verfügung zu stellen. Wenn Ihre Anwendung nur einen einzigen Ausführungsthread verwendet, können Sie [asynchrone Programmierung](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) mit [.NET Framework-Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) oder [XML-Webdiensten](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) kombinieren, die mit ASP.NET erstellt wurden. So können Sie die Verarbeitungszeit anderer Computer zusätzlich zu der Ihres eigenen Computers nutzen, um die Reaktionsfähigkeit gegenüber dem Benutzer zu erhöhen und die Datenverarbeitungszeit Ihrer Anwendung zu verringern. Wenn Sie intensive Eingabe-/Ausgabeprozesse ausführen, können Sie auch E/A-Abschlussports verwenden, um die Reaktionsfähigkeit Ihrer Anwendung zu erhöhen.  
+ Bei Software, mit der Benutzer interagieren, muss diese für ein optimales Benutzererlebnis schnellstmöglich auf die Aktivitäten des Benutzers reagieren. Gleichzeitig muss die Software aber auch die notwendigen Berechnungen durchführen, um dem Benutzer die Daten so schnell wie möglich zur Verfügung zu stellen. Wenn Ihre Anwendung nur einen einzigen Ausführungsthread verwendet, können Sie [asynchrone Programmierung](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) mit [.NET Framework-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100)) oder [XML-Webdiensten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100)) kombinieren, die mit ASP.NET erstellt wurden. So können Sie die Verarbeitungszeit anderer Computer zusätzlich zu der Ihres eigenen Computers nutzen, um die Reaktionsfähigkeit gegenüber dem Benutzer zu erhöhen und die Datenverarbeitungszeit Ihrer Anwendung zu verringern. Wenn Sie intensive Eingabe-/Ausgabeprozesse ausführen, können Sie auch E/A-Abschlussports verwenden, um die Reaktionsfähigkeit Ihrer Anwendung zu erhöhen.  
   
 ### <a name="advantages-of-multiple-threads"></a>Vorteile von mehreren Threads  
  Die Verwendung von mehr als einem Thread ist die leistungsfähigste verfügbare Technik, um die Reaktionsfähigkeit gegenüber dem Benutzer zu erhöhen und fast gleichzeitig die erforderliche Datenverarbeitung zu erledigen. Auf einem Computer mit einem Prozessor können mehrere Threads diesen Effekt erzielen, indem sie die kurzen Zeiträume zwischen den Benutzerereignissen nutzen, um die Daten im Hintergrund zu verarbeiten. Beispielsweise kann ein Benutzer eine Tabellenkalkulation bearbeiten, während ein anderer Thread andere Teile der Tabellenkalkulation innerhalb derselben Anwendung neu berechnet.  

@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbe
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7209789eb36dc717823625c0ae67357ee332086b
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404657"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49122850"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -281,7 +281,7 @@ Bei der DocumentDB-Abfragesprache handelt es sich um eine einfache, aber leistun
 
 **Ressourcen: DocumentDB**
 
-- Einführung in DocumentDB
+- Einführung in DocumentDB  
   <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Andere Persistenzoptionen
@@ -298,7 +298,7 @@ Neben relationalen Speicheroptionen und NoSQL-Optionen können ASP.NET Core-Anwe
 
 **Ressourcen: Azure Storage**
 
-- Einführung in Azure Storage
+- Einführung in Azure Storage  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Zwischenspeicherung

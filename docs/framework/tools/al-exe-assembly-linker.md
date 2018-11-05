@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399716"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848011"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker-Tool)
 
 Der Assemblylinker generiert eine Datei mit einem Assemblymanifest aus einer oder mehreren Dateien, bei denen es sich um Module oder Ressourcendateien handelt. Ein Modul ist eine IL-Datei (Intermediate Language, Zwischensprache), die nicht über ein Assemblymanifest verfügt.
 
 > [!NOTE]
-> Ab [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] wird sowohl vom C#- als auch vom Visual Basic-Compiler automatisch ein Win32-Manifest in die Assembly eingebettet. Weitere Informationen finden Sie unter [/win32manifest (C#-Compileroptionen)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Ab Visual Studio 2008 wird sowohl vom C#- als auch vom Visual Basic-Compiler automatisch ein Win32-Manifest in die Assembly eingebettet. Weitere Informationen finden Sie unter [/win32manifest (C#-Compileroptionen)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -37,7 +37,7 @@ al sources options
 
 Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
-| Quelle | description |
+| Quelle | Beschreibung  |
 | ------ | ----------- |
 |`file`[,`target`]|Kopiert den Inhalt von `file` (ein Modul) in die als `target` angegebene Datei. Nach dem Kopieren wird `target` von *Al.exe* in eine Assembly kompiliert.|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|Bettet die durch `file` angegebene Ressource in das Image ein, das das Assemblymanifest enthält. Der Inhalt von `file` wird von *Al.exe* in das portierbare ausführbare Image (PE, Portable Executable) kopiert.<br /><br /> Der `name`-Parameter ist ein interner Bezeichner für die Ressource. Standardmäßig sind Ressourcen in der Assembly öffentlich (d. h. für andere Assemblys sichtbar). Durch Angeben von `private` können Sie verhindern, dass die Ressource für andere Assemblys sichtbar ist.<br /><br /> Wenn es sich bei `file` um eine .NET Framework-Ressourcendatei handelt, die beispielsweise durch den [Resource File Generator (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) oder in der Entwicklungsumgebung erstellt wurde, ist der Zugriff mit Membern in <xref:System.Resources> möglich. Weitere Informationen finden Sie unter <xref:System.Resources.ResourceManager>. Verwenden Sie für alle anderen Ressourcen die `GetManifestResource`*-Methoden in <xref:System.Reflection.Assembly>, um zur Laufzeit auf die Ressource zuzugreifen.<br /><br /> Wenn nur Ressourcendateien an *Al.exe* übergeben werden, handelt es sich bei der Ausgabedatei um eine Satellitenressourcenassembly.|
@@ -45,7 +45,7 @@ Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
 Sie können die folgenden Optionen (`options`) angeben. Die Angabe von **/out** ist obligatorisch.
 
-| Option | description |
+| Option | Beschreibung  |
 | ------ | ----------- |
 |**/algid:** `id`|Legt einen Algorithmus zum Hashen aller Dateien in einer Mehrfachdateiassembly mit Ausnahme der Datei, die das Assemblymanifest enthält, fest. Standardmäßig wird der Algorithmus "CALG_SHA1" verwendet. Informationen zu anderen Algorithmen finden Sie unter "ALG_ID" in der Platform SDK-Dokumentation. Für das erste Release von .NET Framework sind nur "CALG_SHA1" und "CALG_MD5" gültig.<br /><br /> Die Hashwerte werden in der Dateitabelle des Assemblymanifests gespeichert. Bei der Installation und beim Laden werden die Dateien der Assembly anhand ihrer Hashwerte überprüft.<br /><br /> Sie können diese Option auch als benutzerdefiniertes Attribut (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) im Quellcode für ein beliebiges Modul angeben.|
 |**/base[address]:** `addr`|Legt die Adresse fest, an der eine DLL zur Laufzeit auf dem Computer des Benutzers geladen wird. Das Laden von Anwendungen kann beschleunigt werden, wenn nicht das Betriebssystem die DLLs im Prozessbereich verschiebt, sondern die Basisadresse der DLLs angegeben wird.|
@@ -89,7 +89,7 @@ Verwenden Sie das [Global Assembly Cache-Tool (*Gacutil.exe*)](../../../docs/fra
 
 In der folgende Tabelle werden die durch *Al.exe* generierten Fehler aufgelistet.
 
-| Fehler | description |
+| Fehler | Beschreibung  |
 | ----- | ----------- |
 |al1001|Interner Compilerfehler.<br /><br /> Versuchen Sie festzustellen, ob *Al.exe* einen Fehler verursacht, weil unerwartete Syntax nicht analysiert werden kann. Wenden Sie sich dann an Produktsupport von Microsoft.|
 |al1002|Nicht genügend Arbeitsspeicher<br /><br /> *Al.exe* steht nicht genügend Arbeitsspeicher zur Verfügung. Die Anwendung wurde beendet. Vergrößern Sie den verfügbaren Arbeitsspeicher.|
@@ -174,9 +174,9 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
 ## <a name="see-also"></a>Siehe auch
- 
-[Extras](../../../docs/framework/tools/index.md)  
-[*Sn.exe* (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-[*Gacutil.exe* (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
-[Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+- [Extras](../../../docs/framework/tools/index.md)
+- [*Sn.exe* (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [*Gacutil.exe* (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

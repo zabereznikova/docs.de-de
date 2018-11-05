@@ -4,12 +4,12 @@ description: Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524202"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045651"
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
 
@@ -38,7 +38,7 @@ Ausschüsse sind besonders nützlich, wenn mit Tupeln gearbeitet wird und Ihr An
 
 Weitere Informationen zum Dekonstruieren von Tupeln mit Ausschüssen finden Sie unter [Deconstructing tuples and other types (Dekonstruieren von Tupeln und anderen Typen)](deconstruct.md#deconstructing-tuple-elements-with-discards).
 
-Die Methode `Deconstruct` einer Klasse, Struktur oder Schnittstelle ermöglicht es Ihnen ebenfalls, einen bestimmten Satz von Daten aus einem Objekt abzurufen und zu dekonstruieren. Sie können Ausschüsse verwenden, wenn Sie nur mit einer Teilmenge der dekonstruierten Werte arbeiten möchten. Im folgenden Beispiel wird ein `Person`-Objekt in vier Zeichenfolgen (den Vor- und Nachnamen, die Stadt und den Staat) dekonstruiert, der Nachname und der Staat werden jedoch verworfen.
+Die Methode `Deconstruct` einer Klasse, Struktur oder Schnittstelle ermöglicht es Ihnen ebenfalls, einen bestimmten Satz von Daten aus einem Objekt abzurufen und zu dekonstruieren. Sie können Ausschüsse verwenden, wenn Sie nur mit einer Teilmenge der dekonstruierten Werte arbeiten möchten. Im folgenden Beispiel wird ein `Person`-Objekt in vier Zeichenfolgen (Vor- und Nachname, Ort und Staat) dekonstruiert, Nachname und Staat werden jedoch verworfen.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 

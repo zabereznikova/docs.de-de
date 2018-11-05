@@ -2,23 +2,21 @@
 title: Peer-to-Peer-Zusammenarbeit
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c81300d160e2ec175f61f286047fa92015345942
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a7d382006921487ea91f82ee830c75b6355a01f3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198149"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50180786"
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
+
 Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (Personalcomputer), die am Rand des Internets für mehr als nur clientbasierte Rechenaufgaben vorhanden sind. Der moderne Personalcomputer (PC) verfügt über einen sehr schnellen Prozessor, einen beträchtlichen Arbeitsspeicher und eine große Festplatte, die beim Ausführen von allgemeinen Rechenaufgaben, wie z.B. E-Mail und Webbrowsen allesamt nicht voll ausgelastet werden. Der moderne PC kann einfach sowohl als Client als auch als Server (kein Peer) für viele Arten von Anwendungen fungieren.  
   
--   Die Peer-zu-Peer-Kollaborationsinfrastruktur ist eine vereinfachte Implementierung der Microsoft Windows-Peer-zu-Peer-Infrastruktur, die den Dienst „Personen in meiner Umgebung“ in Windows Vista und späteren Plattformen nutzt. Sie wird am besten für Peer-fähige Anwendungen innerhalb eines Subnetzes verwendet, für die der „Personen in meiner Umgebung“-Dienst ausgeführt wird, obwohl sie auch Internetendpunkte oder Kontakte bedienen kann. Sie beinhaltet den gängigen Contact Manager, der vom Live Messenger und anderen Live-fähigen Anwendungen verwendet wird, um die Kontaktendpunkte, die Verfügbarkeit und die Präsenz zu bestimmen.  
+Die Peer-zu-Peer-Kollaborationsinfrastruktur ist eine vereinfachte Implementierung der Microsoft Windows-Peer-zu-Peer-Infrastruktur, die den Dienst „Personen in meiner Umgebung“ in Windows Vista und späteren Plattformen nutzt. Sie wird am besten für Peer-fähige Anwendungen innerhalb eines Subnetzes verwendet, für die der „Personen in meiner Umgebung“-Dienst ausgeführt wird, obwohl sie auch Internetendpunkte oder Kontakte bedienen kann. Sie beinhaltet den gängigen Contact Manager, der vom Live Messenger und anderen Live-fähigen Anwendungen verwendet wird, um die Kontaktendpunkte, die Verfügbarkeit und die Präsenz zu bestimmen.  
   
--  
-  
-## <a name="collaboration-applications"></a>Kollaborationsanwendungen  
+## <a name="collaboration-applications"></a>Anwendungen für die Zusammenarbeit
+
  Eine typische Peer-zu-Peer-Kollaborationsanwendung umfasst die folgenden Schritte:  
   
 -   Der Peer bestimmt die Identität eines Peers, der sich für das Hosten einer Kollaborationssitzung interessiert.  
@@ -37,11 +35,10 @@ Peer-zu-Peer Networking ist die Verwendung relativ leistungsfähiger Computer (P
   
 -   An diesem Punkt kann der Hostpeer eine Kollaborationssitzung mit allen eingeladenen Peers starten oder eine Anwendung mit der Kollaborationsinfrastruktur registrieren.  P2P-Anwendungen verwenden die Infrastruktur für die Peer-zu-Peer-Kollaboration und den <xref:System.Net.PeerToPeer.Collaboration>-Namespace, um die Kommunikation für Spiele, Bulletin Boards, Konferenzen und andere serverlose Anwendungen zu koordinieren.  
   
--  
-  
-## <a name="peer-to-peer-networking-security"></a>Peer-zu-Peer-Netzwerksicherheit  
+## <a name="peer-to-peer-networking-security"></a>Sicherheit von Peer-to-Peer-Netzwerken  
+
  In einer Active Directory-Domäne bieten Domänencontroller Kerberos-Authentifizierungsdienste an. In einer serverlosen Peer-Umgebung müssen die Peers ihre eigene Authentifizierung bereitstellen. Für das Peer-zu-Peer-Netzwerk kann jeder beliebige Knoten als Zertifizierungsstelle fungieren, wobei die Anforderung für ein Stammzertifikat in jedem vertrauenswürdigen Stammspeicher des Peers wegfällt. Die Authentifizierung wird unter Verwendung selbstsignierter Zertifikate, formatiert als x. 509-Zertifikate, bereitgestellt. Hierbei handelt es sich um Zertifikate, die von jedem Peer erstellt werden, der den öffentlichen Schlüssel/das private Schlüsselpaar und das Zertifikat, das mit dem privaten Schlüssel signiert ist, generiert. Das selbstsignierte Zertifikat wird zur Authentifizierung und zum Bereitstellen von Informationen über die Peer-Entität verwendet. Wie bei der X.509-Authentifizierung, verlässt sich die Peer-Netzwerkauthentifizierung auf eine Kette von Zertifikaten, die auf einen öffentlichen Schlüssel zurückführen, der als vertrauenswürdig eingestuft wird.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.PeerToPeer.Collaboration>  
- [About the System.Net.PeerToPeer.Collaboration Namespace (Informationen zum System.NET.PeerToPeer.Kollaborations-Namespace)](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.PeerToPeer.Collaboration>  
+- [About the System.Net.PeerToPeer.Collaboration Namespace (Informationen zum System.NET.PeerToPeer.Kollaborations-Namespace)](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

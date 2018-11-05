@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925843"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038304"
 ---
 # <a name="methods"></a>Methoden #
 
@@ -114,7 +114,7 @@ Im folgenden Beispiel wird eine Klasse (die ein Verweistyp ist) mit dem Namen `S
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Übergeben von Parametern durch einen Verweis ###
 
-Sie übergeben einen Parameter durch einen Verweis, wenn Sie den Wert eines Arguments in einer Methode ändern möchten und diese Änderung berücksichtigen wollen, wenn das Steuerelement der aufrufenden Methode zurückgegeben wird. Verwenden Sie das Schlüsselwort [`ref`](language-reference/keywords/ref.md) oder [`out`](language-reference/keywords/out-parameter-modifier.md), um einen Parameter pro Verweis zu übergeben. Außerdem können Sie einen Wert pro Verweis übergeben, um das Kopieren und Änderungen zu vermeiden, wenn Sie das Schlüsselwort [`in`](language-reference/keywords/in-parameter-modifier.md) verwenden.
+Sie übergeben einen Parameter durch einen Verweis, wenn Sie den Wert eines Arguments in einer Methode ändern und diese Änderung berücksichtigen möchten, wenn die Steuerung an die aufrufende Methode zurückgegeben wird. Verwenden Sie das Schlüsselwort [`ref`](language-reference/keywords/ref.md) oder [`out`](language-reference/keywords/out-parameter-modifier.md), um einen Parameter pro Verweis zu übergeben. Außerdem können Sie einen Wert pro Verweis übergeben, um das Kopieren und Änderungen zu vermeiden, wenn Sie das Schlüsselwort [`in`](language-reference/keywords/in-parameter-modifier.md) verwenden.
 
 Das folgende Beispiel ist identisch mit dem vorherigen Beispiel, außer dass der Wert durch einen Verweis an die `ModifyValue`-Methode übergeben wird. Wenn der Wert des Parameters in der `ModifyValue`-Methode verändert wird, wird die Wertänderung berücksichtigt, wenn das Steuerelement dem Aufrufer zurückgegeben wird.
 

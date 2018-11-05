@@ -2,28 +2,27 @@
 title: Peernamenveröffentlichung und -auflösung
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193550"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184555"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Peernamenveröffentlichung und -auflösung
+
 ## <a name="publishing-a-peer-name"></a>Veröffentlichen eines Peernamens  
+
  Ein Peer geht folgendermaßen vor, um eine neue PNRP-ID (Peer Name Resolution Protocol) zu veröffentlichen:  
   
 -   Er sendet PNRP-Veröffentlichungsnachrichten an seine Cachenachbarn (die Peers, die PNRP-IDs in der untersten Ebene des Caches registriert haben), um deren Caches zu starten.  
   
 -   Er wählt zufällige Knoten in der Cloud aus, die nicht seine Nachbarn sind, und sendet ihnen PNRP-Namensauflösungsanforderungen für seine eigene P2P-ID. Der damit gestartete Endpunktbestimmungsprozess startet die Caches von zufälligen Knoten in der Cloud mit der PNRP-ID des Veröffentlichungspeers.  
   
--  
+Knoten der Version 2 von PNRP veröffentlichen keine PNRP-IDs, wenn diese nur andere P2P-IDs auflösen. Der Registrierungswert „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1“ (Typ „REG_DWORD“) gibt an, dass Peers PNRP nur für die Namensauflösung und niemals für die Namensveröffentlichung verwenden. Dieser Registrierungswert kann auch über die Gruppenrichtlinien konfiguriert werden.  
   
- Knoten der Version 2 von PNRP veröffentlichen keine PNRP-IDs, wenn diese nur andere P2P-IDs auflösen. Der Registrierungswert „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1“ (Typ „REG_DWORD“) gibt an, dass Peers PNRP nur für die Namensauflösung und niemals für die Namensveröffentlichung verwenden. Dieser Registrierungswert kann auch über die Gruppenrichtlinien konfiguriert werden.  
-  
-## <a name="resolving-a-peer-name"></a>Auflösen eines Peernamens  
+## <a name="resolving-a-peer-name"></a>Auflösen eines Peernamens
+
  Der Suchvorgang nach anderen Peers in einem PNRP-Netzwerk oder einer PNRP-Cloud besteht aus zwei Phasen:  
   
 1.  Endpunktbestimmung  
@@ -44,11 +43,9 @@ ms.locfileid: "47193550"
   
 -   Wird die PNRP-ID nicht gefunden und befindet sich im Cache keine PNRP-ID, die stärker mit der Ziel-PNRP-ID übereinstimmt, sendet der angeforderte Peer dem anfordernden Peer eine Antwort, in der diese Bedingung angegeben wird. Der anfordernde Peer wählt anschließend die nächstgelegene PNRP-ID aus.  
   
--  
-  
- Der anfordernde Peer wiederholt diesen Vorgang mit aufeinanderfolgenden Iterationen, bis er den Knoten, der die PNRP-ID registriert hat, gefunden hat.  
+Der anfordernde Peer wiederholt diesen Vorgang mit aufeinanderfolgenden Iterationen, bis er den Knoten, der die PNRP-ID registriert hat, gefunden hat.  
   
  Innerhalb des <xref:System.Net.PeerToPeer>-Namespaces besteht eine m:n-Beziehung zwischen den <xref:System.Net.PeerToPeer.PeerName>- Datensätzen, die Endpunkte enthalten, und den PNRP-Clouds oder -Meshs, in denen sie kommunizieren. Bei doppelten oder veralteten Einträgen sowie bei mehreren Knoten mit demselben Peernamen können PNRP-Knoten aktuelle Informationen mithilfe der <xref:System.Net.PeerToPeer.PeerNameResolver>-Klasse abrufen. Die <xref:System.Net.PeerToPeer.PeerNameResolver>-Methoden verwenden einen einzelnen Peernamen, um die Perspektive für die Peernamendatensätze und Clouds auf eine 1:n-Beziehung zu vereinfachen. Diese Methode ähnelt einer Abfrage, die mit einer relationalen Tabellenverknüpfung ausgeführt wird. Nach erfolgreichem Abschluss gibt das Resolverobjekt eine <xref:System.Net.PeerToPeer.PeerNameRecordCollection> für den angegebenen Peernamen zurück.  Ein Peername kommt z.B. in allen Peernamendatensätzen der Sammlung nach Cloud geordnet vor. Dies sind die Instanzen des Peernamens, dessen Daten von einer PNRP-basierten Anwendung angefordert werden können.  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.PeerToPeer>
+- <xref:System.Net.PeerToPeer>

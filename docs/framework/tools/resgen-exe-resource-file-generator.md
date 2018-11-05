@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410032"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122774"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
 Der Resource File Generator (Resgen.exe) konvertiert Textdateien (TXT- oder RESTEXT-Dateien) und Dateien im XML-basierten Ressourcenformat (RESX-Dateien) in binäre Common Language Runtime-Dateien (RESOURCES-Dateien), die in ausführbare Laufzeit-Binärdateien oder Satellitenassemblys eingebettet werden können. (Weitere Informationen finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -71,7 +71,7 @@ resgen filename.extension [outputDirectory]
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter oder Schalter|description|  
+|Parameter oder Schalter|Beschreibung |  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird bedingte Kompilierung in textbasierten Ressourcendateien (TXT- oder RESTEXT-Dateien) unterstützt. Wenn *symbol* einem Symbol entspricht, das innerhalb eines `#ifdef`-Konstrukts in der Eingabetextdatei enthalten ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen. Wenn die Eingabetextdatei eine `#if !`-Anweisung mit einem Symbol enthält, das nicht durch den `/define`-Schalter definiert ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen.<br /><br /> Bei Verwendung mit Nicht-Textdateien wird `/define` ignoriert. Bei Symbolen wird die Groß-/Kleinschreibung berücksichtigt.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Bedingte Kompilierung von Ressourcen](#Conditional).|  
 |`useSourcePath`|Gibt an, dass das aktuelle Verzeichnis der Eingabedatei zum Auflösen relativer Dateipfade verwendet werden soll.|  
@@ -319,7 +319,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
 -   Eine `static`-Eigenschaft (C#) oder `Shared`-Eigenschaft (Visual Basic) und eine schreibgeschützte `ResourceManager`-Eigenschaft, von der die <xref:System.Resources.ResourceManager>-Instanz zum Verwalten der Ressource mit starker Typisierung zurückgegeben wird.  
   
--   Eine statische `Culture`-Eigenschaft zum Festlegen der Kultur für das Abrufen von Ressourcen. In der Standardeinstellung lautet deren Wert `null`, sodass die aktuelle Benutzeroberflächenkultur verwendet wird.  
+-   Eine statische `Culture`-Eigenschaft zum Festlegen der Kultur für das Abrufen von Ressourcen. Standardmäßig lautet deren Wert `null`, was bedeutet, dass die aktuelle Benutzeroberflächenkultur verwendet wird.  
   
 -   Ein `static`-Eigenschaft (C#) oder `Shared`-Eigenschaft (Visual Basic) und eine schreibgeschützte Eigenschaft für jede Ressource in der RESOURCES-Datei. Der Eigenschaftsname stellt den Namen der Ressource dar.  
   

@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193147"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50199434"
 ---
 # <a name="cache-policy"></a>Cacherichtlinie
 Eine Cacherichtlinie definiert die Regeln, die verwendet werden, um zu bestimmen, ob eine Anforderung mit der zwischengespeicherten Kopie der angeforderten Ressource erfüllt werden kann. Anwendungen geben Cache-Clientanforderungen für die Aktualität an, aber die effektive Cacherichtlinie richtet sich nach den Cache-Clientanforderungen, den Inhaltsablaufanforderungen des Servers sowie den Anforderungen zur erneuten Überprüfung des Servers. Die Interaktion der Cacherichtlinie und des Cacheservers für Clients resultiert immer in der konservativsten Cacherichtlinie, um sicherzustellen, dass die aktuellsten Inhalten an die Clientanwendung zurückgegeben werden.  
   
- Cacherichtlinien sind speicherortbasiert oder zeitbasiert. Eine speicherortbasierte Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge auf Grundlage der Speicherorte der angeforderten Ressource. Eine zeitbasierte Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge mithilfe der Uhrzeit, zu der die Ressource abgerufen wurde, des Headers, der mit der Ressource zurückgegeben wurde und mit der aktuellen Uhrzeit. Die meisten Anwendungen können die zeitbasierte Standardcacherichtlinie verwenden, die die in RFC 2616 angegebene Cacherichtlinie implementiert, verfügbar unter [http://www.ietf.org](http://www.ietf.org/).  
+ Cacherichtlinien sind speicherortbasiert oder zeitbasiert. Eine speicherortbasierte Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge auf Grundlage der Speicherorte der angeforderten Ressource. Eine zeitbasierte Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge mithilfe der Uhrzeit, zu der die Ressource abgerufen wurde, des Headers, der mit der Ressource zurückgegeben wurde und mit der aktuellen Uhrzeit. Die meisten Anwendungen können die zeitbasierte Standardcacherichtlinie verwenden, die die in RFC 2616 angegebene Cacherichtlinie implementiert (verfügbar auf der Website der [Internet Engineering Task Force (IETF)](https://www.ietf.org/).  
   
  Die in der folgenden Tabelle beschriebenen Klassen werden verwendet, um Cacherichtlinien anzugeben.  
   

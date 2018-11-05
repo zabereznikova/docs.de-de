@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615312"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123578"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regeln zum Herleiten einfacher Typen
 Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.  
   
- Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet den Datentyp für Attribute und Elemente als einfache Typen her. In diesem Abschnitt werden die möglichen hergeleiteten Typen, das Zusammenführen mehrerer unterschiedlicher Werte zu einem einzelnen Typ und die Behandlung von schemadefinierten `xsi`-Attributen beschrieben.  
+ Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet den Datentyp für Attribute und Elemente als einfache Typen her. In diesem Abschnitt werden die möglichen hergeleiteten Typen, das Abstimmen mehrerer unterschiedlicher Werte zu einem einzelnen Typ und die Behandlung von schemadefinierten `xsi`-Attributen beschrieben.  
   
 ## <a name="inferred-types"></a>Hergeleitete Typen  
  Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet Elemente und Attribute als einfache Typen her und fügt im resultierenden Schema einen Attributtyp ein. Bei allen hergeleiteten Typen handelt es sich um einfache Typen. Basistypen oder Facets sind keine Bestandteile des resultierenden Schemas.  
@@ -65,8 +65,9 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
   
  Wenn der erste `attr2`-Wert festgestellt wird, wird der Typ von `attr2` auf der Grundlage des Werts `unsignedByte` als `0` hergeleitet. Wenn der zweite `attr2`-Wert festgestellt wird, wird der Typ auf der Grundlage des aktuell hergeleiteten Typs `string` und des aktuellen Werts `unsignedByte` auf `true` heraufgestuft, da die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse beim Heraufstufen des hergeleiteten Typs vorherige Werte berücksichtigt. Wenn jedoch beide Instanzen von `attr2` im selben XML-Dokument und nicht, wie im Beispiel oben dargestellt, in zwei unterschiedlichen Dokumenten festgestellt worden wären, wäre `attr2` als `boolean` hergeleitet worden.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Vom http://www.w3.org/2001/XMLSchema-instance-Namespace ignorierte Attribute  
- Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die während der Schemaherleitung ignoriert werden.  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Vom <https://www.w3.org/2001/XMLSchema-instance>-Namespace ignorierte Attribute
+
+Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die während der Schemaherleitung ignoriert werden.  
   
 |Attribut|Beschreibung |  
 |---------------|-----------------|  

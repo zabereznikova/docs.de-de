@@ -1,7 +1,7 @@
 ---
 title: Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 description: Beschreibt bewährte Methoden für die Verwendung von Transport Layer Security (TLS) mit .NET Framework.
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424479"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194136"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
-Das TLS-Protokoll (Transport Layer Security) ist ein Industriestandard zum Schutz von Daten, die über das Internet übertragen werden. [TLS 1.2](https://tools.ietf.org/html/rfc5246) ist der neueste freigegebene Standard und bietet Sicherheitsverbesserungen gegenüber früheren Versionen. TLS 1.2 wird schließlich durch [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22) ersetzt. Dieser Artikel enthält Empfehlungen zur Sicherung von .NET Framework-Anwendungen, die das TLS-Protokoll verwenden.
+Das TLS-Protokoll (Transport Layer Security) ist ein Industriestandard zum Schutz von Daten, die über das Internet übertragen werden. [TLS 1.2](https://tools.ietf.org/html/rfc5246) ist ein Standard, der Sicherheitsverbesserungen gegenüber früheren Versionen umfasst. TLS 1.2 wird schließlich durch den neuesten freigegebenen Standard [TLS 1.3](https://tools.ietf.org/html/rfc8446) ersetzt, der schneller ist und eine erhöhte Sicherheit bietet. Dieser Artikel enthält Empfehlungen zur Sicherung von .NET Framework-Anwendungen, die das TLS-Protokoll verwenden.
 
 Um die Sicherheit von .NET Framework-Anwendungen zu gewährleisten, sollte die TLS-Version **nicht** hartcodiert sein. .NET Framework-Anwendungen sollten die vom Betriebssystem unterstützte TLS-Version verwenden.
 
@@ -278,7 +277,7 @@ Um TLS 1.2 und/oder TLS 1.1 auf einem System, das sie unterstützt, zu aktiviere
 | Windows Server 2008 | Für Unterstützung für TLS 1.2 und TLS 1.1 ist ein Update erforderlich. Siehe [Update zum Hinzufügen der Unterstützung von TLS 1.1 und TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Wird nicht unterstützt. |
 
-Informationen darüber, welche TLS/SSL-Protokolle auf den einzelnen Windows-Version standardmäßig aktiviert sind, finden Sie unter [Protokolle in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159).
+Informationen darüber, welche TLS/SSL-Protokolle auf den einzelnen Windows-Version standardmäßig aktiviert sind, finden Sie unter [Protokolle in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
 
 **Anforderungen zur Unterstützung von TLS 1.2 mit .NET Framework 3.5**
 
@@ -305,6 +304,6 @@ Wenn Ihre App auf eine .NET Framework-Version abzielt, die in der Azure-Gastbetr
 
 ### <a name="azure-guest-os-registry-settings"></a>Registrierungseinstellungen für das Azure-Gastbetriebssystem
 
-Das Azure-Gastbetriebssystemimage für [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) hat bereits den Registrierungsschlüssel `SchUseStrongCrypto` auf den Wert 1 gesetzt. Weitere Informationen finden Sie unter [SchUseStrongCrypto](#schusestrongcrypto).
+Das Image der Azure-Gastbetriebssystem-Familie 5 für [Azure Cloud Services](https://azure.microsoft.com/services/cloud-services/) hat bereits den Registrierungsschlüssel `SchUseStrongCrypto` auf den Wert „1“ festgelegt. Weitere Informationen finden Sie unter [SchUseStrongCrypto](#schusestrongcrypto).
 
 Legen Sie den Registrierungsschlüssel [SystemDefaultTlsVersions](#systemdefaulttlsversions) auf 1 fest. Siehe [Konfigurieren der Sicherheit über die Windows-Registrierung](#configuring-security-via-the-windows-registry).

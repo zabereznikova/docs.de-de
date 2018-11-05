@@ -2,12 +2,12 @@
 title: Aufruferinformationen (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46586455"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185273"
 ---
 # <a name="caller-information-c"></a>Aufruferinformationen (C#)
 
@@ -76,7 +76,7 @@ Im folgenden Diagramm sind die Membernamen aufgeführt, die beim Verwenden des `
 |Statischer Konstruktor|Die Zeichenfolge ".cctor"|
 |Destruktor|Die Zeichenfolge "Finalize"|
 |Benutzerdefinierte Operatoren oder Konvertierungen|Der generierte Name für den Member, beispielsweise "op_Addition".|
-|Attributkonstruktor|Der Name des Members, auf den das Attribut angewendet wird. Wenn das Attribut ein beliebiges Element in einem Member ist (z. B. ein Parameter, ein Rückgabewert oder ein generischer Typparameter), wird als Ergebnis der Name des Members ausgegeben, der diesem Element zugeordnet ist.|
+|Attributkonstruktor|Der Name der Methode oder Eigenschaft, auf die das Attribut angewendet wird. Wenn das Attribut ein beliebiges Element in einem Member ist (z. B. ein Parameter, ein Rückgabewert oder ein generischer Typparameter), wird als Ergebnis der Name des Members ausgegeben, der diesem Element zugeordnet ist.|
 |Kein enthaltender Member (z. B. auf Assemblyebene oder Attribute, die auf Typen angewendet werden)|Der Standardwert des optionalen Parameters.|
 
 ## <a name="see-also"></a>Siehe auch

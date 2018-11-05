@@ -15,80 +15,82 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aa39671da519ebf54dad52638ab940897209517
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fff84266dd99b84cc99c1996a3063dc962fa2e94
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744316"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841137"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Gewusst wie: Erstellen einer Einzeldateiassembly
-Eine Einzeldateiassembly, die den einfachsten Assemblytyp darstellt, enthält eine Typinformation und Implementierung sowie das [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md). Sie können Befehlszeilencompiler oder [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] verwenden, um eine Einzeldateiassembly zu erstellen. Standardmäßig erstellt der Compiler eine Assemblydatei mit einer „.exe“-Erweiterung.  
-  
+
+Eine Einzeldateiassembly, die den einfachsten Assemblytyp darstellt, enthält eine Typinformation und Implementierung sowie das [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md). Sie können Befehlszeilencompiler oder Visual Studio verwenden, um eine Einzeldateiassembly zu erstellen. Standardmäßig erstellt der Compiler eine Assemblydatei mit einer „.exe“-Erweiterung.
+
 > [!NOTE]
->  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] für C# und Visual Basic kann nur genutzt werden, um Einzeldateiassemblys zu erstellen. Wenn Sie Mehrfachdateiassemblys erstellen möchten, müssen Sie Befehlszeilencompiler oder [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] für Visual C++ verwenden.  
-  
- Das folgende Verfahren zeigt Ihnen, wie Sie Einzeldateiassemblys mithilfe von Befehlszeilencompiler erstellen.  
-  
-### <a name="to-create-an-assembly-with-an-exe-extension"></a>So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung  
-  
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
-  
-     \<*compilerbefehl*> \<*modulname*>  
-  
-     In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren.  
-  
- Das folgende Beispiel erstellt eine Assembly namens `myCode.exe` aus einem Codemodul namens `myCode`.  
-  
-```console
-csc myCode.cs  
-```  
+> Mit Visual Studio für C# und Visual Basic können nur Einzeldateiassemblys erstellt werden. Wenn Sie Mehrfachdateiassemblys erstellen möchten, müssen Sie Befehlszeilencompiler oder Visual C++ verwenden.
+
+Das folgende Verfahren zeigt Ihnen, wie Sie Einzeldateiassemblys mithilfe von Befehlszeilencompiler erstellen.
+
+## <a name="to-create-an-assembly-with-an-exe-extension"></a>So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung
+
+1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+
+     \<*compilerbefehl*> \<*modulname*>
+
+     In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren.
+
+ Das folgende Beispiel erstellt eine Assembly namens `myCode.exe` aus einem Codemodul namens `myCode`.
 
 ```console
-vbc myCode.vb  
-```  
-  
-#### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung und geben den Namen der Ausgabedatei an  
-  
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
-  
-     \<*compilerbefehl*> **/out:**\<*dateiname*> \<*modulname*>  
-  
-     In diesem Befehl ist *compilerbefehl* der Compilerbefehl für die in Ihrem Codemodul verwendete Sprache, *dateiname* ist der Name der Ausgabedatei und *modulname* der Name des Codemodul, das in die Assembly kompiliert wird.  
-  
- Das folgende Beispiel erstellt eine Assembly namens `myAssembly.exe` aus einem Codemodul namens `myCode`.  
-  
-```console  
-csc -out:myAssembly.exe myCode.cs  
-```  
-  
+csc myCode.cs
+```
+
 ```console
-vbc -out:myAssembly.exe myCode.vb  
-```  
-  
-## <a name="creating-library-assemblies"></a>Erstellen von Bibliothekassemblys  
- Eine Bibliotheksassembly ist ähnlich wie eine Klassenbibliothek. Sie enthält Typen, die von anderen Assemblys verwiesen werden, jedoch besitzt sie keinen Einstiegspunkt zum Starten der Ausführung.  
-  
-#### <a name="to-create-a-library-assembly"></a>So erstellen Sie eine Bibliotheksassembly  
-  
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
-  
-     \<*Compilerbefehl*> **/t:library** \<*Modulname*>  
-  
-     In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren. Sie können auch andere Compileroptionen verwenden, z.B. die Option **-out:**.  
-  
- Das folgende Beispiel erstellt eine Bibliotheksassembly namens `myCodeAssembly.dll` aus einem Codemodul namens `myCode`.  
-  
-```console  
-csc -out:myCodeLibrary.dll -t:library myCode.cs  
-```  
-  
+vbc myCode.vb
+```
+
+### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung und geben den Namen der Ausgabedatei an
+
+1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+
+     \<*compilerbefehl*> **/out:**\<*dateiname*> \<*modulname*>
+
+     In diesem Befehl ist *compilerbefehl* der Compilerbefehl für die in Ihrem Codemodul verwendete Sprache, *dateiname* ist der Name der Ausgabedatei und *modulname* der Name des Codemodul, das in die Assembly kompiliert wird.
+
+ Das folgende Beispiel erstellt eine Assembly namens `myAssembly.exe` aus einem Codemodul namens `myCode`.
+
 ```console
-vbc -out:myCodeLibrary.dll -t:library myCode.vb  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
- [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)  
- [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+csc -out:myAssembly.exe myCode.cs
+```
+
+```console
+vbc -out:myAssembly.exe myCode.vb
+```
+
+## <a name="creating-library-assemblies"></a>Erstellen von Bibliothekassemblys
+ Eine Bibliotheksassembly ist ähnlich wie eine Klassenbibliothek. Sie enthält Typen, die von anderen Assemblys verwiesen werden, jedoch besitzt sie keinen Einstiegspunkt zum Starten der Ausführung.
+
+### <a name="to-create-a-library-assembly"></a>So erstellen Sie eine Bibliotheksassembly
+
+1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+
+     \<*Compilerbefehl*> **/t:library** \<*Modulname*>
+
+     In diesem Befehl ist *compilername* der Compilerbefehl für die Sprache, die in Ihrem Codemodul verwendet wird, und *modulname* ist der Name des Codemoduls, um in die Assembly zu kompilieren. Sie können auch andere Compileroptionen verwenden, z.B. die Option **-out:**.
+
+ Das folgende Beispiel erstellt eine Bibliotheksassembly namens `myCodeAssembly.dll` aus einem Codemodul namens `myCode`.
+
+```console
+csc -out:myCodeLibrary.dll -t:library myCode.cs
+```
+
+```console
+vbc -out:myCodeLibrary.dll -t:library myCode.vb
+```
+
+## <a name="see-also"></a>Siehe auch
+
+- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Mehrfachdateiassemblys](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

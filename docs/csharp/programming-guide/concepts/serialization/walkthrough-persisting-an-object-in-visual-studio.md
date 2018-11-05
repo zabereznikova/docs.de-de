@@ -1,12 +1,12 @@
 ---
 title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231491"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086076"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C# #
 
@@ -28,6 +28,8 @@ In dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches `Loan`-Objek
 
 > [!TIP]
 > Benötigen Sie einen Code-Editor? Testen Sie [Visual Studio](https://visualstudio.com/downloads).
+
+* Dieses Beispiel erfordert C# 7.3. Siehe [Auswählen der C#-Sprachversion](../../../language-reference/configure-language-version.md). 
 
 Sie können den Beispielcode online im [GitHub-Repository für .NET-Beispiele](https://github.com/dotnet/samples/tree/master/csharp/serialization) untersuchen.
 

@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523524"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183126"
 ---
 # <a name="lambda-expressions"></a>Lambdaausdrücke #
 
@@ -52,7 +52,7 @@ Für gewöhnlich verwendet der Compiler den Typrückschluss, um Parametertypen z
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
-Beachten Sie im vorherigen Beispiel, dass der Text eines Ausdruckslambdas ein Methodenaufruf sein kann. Wenn Sie allerdings Ausdrucksbaumstrukturen erstellen, die außerhalb des .NET Frameworks ausgewertet werden, wie z.B. in SQL Server oder Entity Framework (EF), sollten Sie davon absehen, Methodenaufrufe in Lambdaausdrücken zu verwenden, da die Methoden möglicherweise außerhalb des Kontexts der .NET-Implementierung bedeutungslos sind. Falls Sie dennoch Methodenaufrufe verwenden möchten, prüfen Sie diese gründlich, um sicherzustellen, dass die Methodenaufrufe erfolgreich aufgelöst werden können.
+Beachten Sie im vorherigen Beispiel, dass der Text eines Ausdruckslambdas ein Methodenaufruf sein kann. Wenn Sie allerdings Ausdrucksbaumstrukturen erstellen, die außerhalb des .NET Frameworks ausgewertet werden, wie z.B. in SQL Server oder Entity Framework (EF), sollten Sie davon absehen, Methodenaufrufe in Lambdaausdrücken zu verwenden, da die Methoden möglicherweise außerhalb des Kontexts der .NET-Implementierung bedeutungslos sind. Falls Sie dennoch Methodenaufrufe verwenden möchten, prüfen Sie diese gründlich, um sicherzustellen, dass sie erfolgreich aufgelöst werden können.
 
 ## <a name="statement-lambdas"></a>Anweisungslambdas ##
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502365"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195683"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -37,16 +37,16 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 ## <a name="the-deployment-process"></a>Bereitstellungsprozess  
  Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das verteilbare .NET Framework-Paket mit System Center 2012 Configuration Manager auf Computern im Netzwerk bereit. Der Aufbau der Infrastruktur umfasst das Erstellen und Definieren von fünf primären Bereichen: Sammlungen, ein Paket und ein Programm für die Software, Verteilungspunkte und Bereitstellungen.  
   
--   Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen, z.B. Benutzer, Benutzergruppen oder Computer, für die das .NET Framework bereitgestellt wird. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Sammlungen in Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx).  
+-   Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen, z.B. Benutzer, Benutzergruppen oder Computer, für die das .NET Framework bereitgestellt wird. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).  
   
--   **Pakete und Programme** stellen in der Regel Softwareanwendungen dar, die auf einem Clientcomputer installiert werden, sie können jedoch auch einzelne Dateien, Updates oder sogar einzelne Befehle enthalten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Pakete und Programme in Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx).  
+-   **Pakete und Programme** stellen in der Regel Softwareanwendungen dar, die auf einem Clientcomputer installiert werden, sie können jedoch auch einzelne Dateien, Updates oder sogar einzelne Befehle enthalten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Pakete und Programme in System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs).  
   
--   **Verteilungspunkte** sind Configuration Manager-Standortsystemrollen, die zum Ausführen von Software auf Clientcomputern erforderliche Dateien speichern. Wenn der Configuration Manager-Client eine Softwarebereitstellung empfängt und verarbeitet, stellt er eine Verbindung mit einem Verteilungspunkt her, um den mit der Software verbundenen Inhalt herunterzuladen und den Installationsvorgang zu starten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in die Inhaltsverwaltung in Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx).  
+-   **Verteilungspunkte** sind Configuration Manager-Standortsystemrollen, die zum Ausführen von Software auf Clientcomputern erforderliche Dateien speichern. Wenn der Configuration Manager-Client eine Softwarebereitstellung empfängt und verarbeitet, stellt er eine Verbindung mit einem Verteilungspunkt her, um den mit der Software verbundenen Inhalt herunterzuladen und den Installationsvorgang zu starten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Grundlegende Konzepte für die Inhaltsverwaltung in Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management).  
   
--   **Bereitstellungen** weisen zutreffende Member der angegebenen Zielsammlung an, das Softwarepaket zu installieren. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Bereitstellen von Anwendungen in Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx).  
+-   **Bereitstellungen** weisen zutreffende Member der angegebenen Zielsammlung an, das Softwarepaket zu installieren. 
   
 > [!IMPORTANT]
->  Die Prozeduren in diesem Thema enthalten typische Einstellungen für das Erstellen und Bereitstellen eines Pakets und Programms und umfassen möglicherweise nicht alle möglichen Einstellungen. Weitere Bereitstellungsoptionen im Configuration Manager finden Sie in der [Dokumentationsbibliothek zum Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
+>  Die Prozeduren in diesem Thema enthalten typische Einstellungen für das Erstellen und Bereitstellen eines Pakets und Programms und umfassen möglicherweise nicht alle möglichen Einstellungen. Weitere Bereitstellungsoptionen im Configuration Manager finden Sie in der [Dokumentationsbibliothek zum Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework  
@@ -62,7 +62,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Erstellen einer Sammlung  
- In diesem Schritt wählen Sie die Computer aus, auf denen Sie das Paket und Programm bereitstellen, und gruppieren sie in einer Gerätesammlung. Zum Erstellen einer Sammlung im Configuration Manager können Sie Regeln für die direkte Mitgliedschaft verwenden (wobei Sie die Sammlungsmitglieder manuell angeben). Alternativ können Sie Abfrageregeln verwenden (wobei die Sammlungsmitglieder vom Configuration Manager auf der Grundlage von Kriterien bestimmt werden, die Sie angegeben haben). Weitere Informationen zu abfragebezogenen und direkten Mitgliedschaftsregeln finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Introduction to Collections in Configuration Manager (Einführung in die Sammlungen in Configuration Manager)](https://technet.microsoft.com/library/gg682177.aspx).  
+ In diesem Schritt wählen Sie die Computer aus, auf denen Sie das Paket und Programm bereitstellen, und gruppieren sie in einer Gerätesammlung. Zum Erstellen einer Sammlung im Configuration Manager können Sie Regeln für die direkte Mitgliedschaft verwenden (wobei Sie die Sammlungsmitglieder manuell angeben). Alternativ können Sie Abfrageregeln verwenden (wobei die Sammlungsmitglieder vom Configuration Manager auf der Grundlage von Kriterien bestimmt werden, die Sie angegeben haben). Weitere Informationen zu Mitgliedschaftsregeln, einschließlich abfragebezogenen und direkten Regeln, finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections).  
   
  So erstellen Sie eine Sammlung  
   
@@ -83,8 +83,6 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 8.  Aktivieren Sie auf der Seite **Ressourcen auswählen** das Kontrollkästchen für jeden Computer, für den Sie .NET Framework bereitstellen möchten. Wählen Sie **Weiter** aus, und schließen Sie den Assistenten.  
   
 9. Wählen Sie auf der Seite **Mitgliedschaftsregeln** im **Assistent zum Erstellen von Gerätesammlungen** die Option **Weiter** aus, und schließen Sie den Assistenten ab.  
-  
- Weitere Informationen zu Sammlungen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Sammlungen in Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx).  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Erstellen eines Pakets und Programms für das verteilbare .NET Framework-Paket  
@@ -154,7 +152,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
 8.  Durchlaufen Sie den Assistenten.  
   
- Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Stellen Sie vor dem Bereitstellen des Pakets und Programms sicher, dass es auf dem Verteilungspunkt installiert wurde. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek im Abschnitt „Überwachen von Inhalt“ unter [Vorgänge und Wartungstasks für die Inhaltsverwaltung in Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent).  
+ Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Überprüfen Sie vor dem Bereitstellen des Pakets und Programms, ob die Installation auf dem Verteilungspunkt ausgeführt wurde. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek [Überwachen von mit System Center Configuration Manager verteilten Inhalten](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) im Abschnitt „Überwachen von Inhalten“.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Bereitstellen des Pakets  
@@ -193,27 +191,27 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  **Active Directory, DNS, DHCP:**  
   
--   [Active Directory-Domänendienste für Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
--   [DNS-Server](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)  
   
--   [DHCP-Server](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [Dynamic Host Configuration-Protokoll (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   
--   [Installieren von SQL Server 2008 (SQL Server-Video)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [Installieren von SQL Server 2008 (SQL Server-Video)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [SQL Server 2008-Sicherheit: Übersicht für Datenbankadministratoren](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (Verwaltungspunkt, Verteilungspunkt):**  
   
--   [Standortverwaltung für System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [Standortverwaltung für System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Planen und Bereitstellen einzelner Standorte mit Configuration Manager](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **System Center 2012 Configuration Manager-Client für Windows-Computer:**  
   
--   [Bereitstellen von Clients für System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [Bereitstellen von Clients für System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Problembehandlung  
@@ -248,18 +246,18 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Downloadfehlercodes  
   
--   [Fehlercodes für BITS (Background Intelligent Transfer Service)](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Fehlercodes für BITS (Background Intelligent Transfer Service)](/windows/desktop/Bits/bits-return-values)  
   
--   [Fehlercodes für URL-Moniker](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Fehlercodes für URL-Moniker](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [Fehlercodes für WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Sonstige Fehlercodes  
   
--   [Fehlercodes für Windows Installer](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Fehlercodes für Windows Installer](/windows/desktop/msi/error-codes)  
   
--   [Ergebniscodes für Windows Update Agent](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Ergebniscodes für Windows Update Agent](/security-updates/WindowsUpdateServices/18127055)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)
+- [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)

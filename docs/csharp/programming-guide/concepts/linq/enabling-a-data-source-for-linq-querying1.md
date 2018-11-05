@@ -2,12 +2,12 @@
 title: Aktivieren einer Datenquelle für LINQ-Abfragen1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253181"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122696"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Aktivieren einer Datenquelle für LINQ-Abfragen
 Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zu erweitern, um die Abfrage einer beliebigen Datenquelle im [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster zu ermöglichen. Bei der Datenquelle kann es sich u. a. um eine Datenstruktur, einen Webdienst, ein Dateisystem oder eine Datenbank handeln. Das [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster erleichtert Clients das Ausführen von Abfragen für eine Datenquelle mit aktivierter [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage, da die Syntax und das Muster der Abfrage unverändert bleiben. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kann u.a. auf folgende Weisen für die Verwendung dieser Datenquellen erweitert werden:  
@@ -28,7 +28,7 @@ Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-m
  Es gibt zwei Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen von Daten im Arbeitsspeicher zu aktivieren. Wenn die Daten über einen Typ verfügen, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie sie mithilfe von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects abfragen. Wenn es nicht sinnvoll ist, die Enumeration des Typs durch Implementierung der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle zu aktivieren, können Sie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Standardabfrageoperator-Methoden in diesem Typ definieren oder [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Standardabfrageoperator-Methoden erstellen, die den Typ erweitern. Benutzerdefinierte Implementierungen der Standardabfrageoperatoren sollten zur Rückgabe der Ergebnisse eine verzögerte Ausführung verwenden.  
   
 ### <a name="remote-data"></a>Remotedaten  
- Die beste Möglichkeit zur Aktivierung von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen für eine Remotedatenquelle besteht darin, die <xref:System.Linq.IQueryable%601>-Schnittstelle zu implementieren. Dieser Ansatz unterscheidet sich jedoch vom Erweitern eines Anbieters wie [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] für eine Datenquelle. Es stehen keine Anbietermodelle zum Erweitern vorhandener [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Technologien, wie [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], auf andere Datenquellentypen in [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)] zur Verfügung.  
+ Die beste Möglichkeit zur Aktivierung von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen für eine Remotedatenquelle besteht darin, die <xref:System.Linq.IQueryable%601>-Schnittstelle zu implementieren. Dieser Ansatz unterscheidet sich jedoch vom Erweitern eines Anbieters wie [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] für eine Datenquelle. Es stehen keine Anbietermodelle zum Erweitern vorhandener [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Technologien, wie z.B. [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], auf andere Datenquellentypen in Visual Studio 2008 zur Verfügung.
   
 ## <a name="iqueryable-linq-providers"></a>LINQ-Anbieter "IQueryable"  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter, die <xref:System.Linq.IQueryable%601> implementieren, können in ihrer Komplexität große Unterschiede aufweisen. In diesem Abschnitt werden die verschiedenen Komplexitätsstufen erläutert.  

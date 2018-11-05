@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237045"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197235"
 ---
 # <a name="configuring-internet-applications"></a>Konfigurieren von Internetanwendungen
 Das Konfigurationselement [\<system.Net> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) enthält Informationen zur Netzwerkkonfiguration von Anwendungen. Mit dem Element [\<system.Net> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) können Sie Proxyserver und Parameter zur Verbindungsverwaltung festlegen sowie benutzerdefinierte Authentifizierung und Anforderungsmodule in Ihre Anwendung einfügen.  
@@ -37,7 +35,7 @@ Das Konfigurationselement [\<system.Net> (Netzwerkeinstellungen)](../../../docs/
   
  Beachten Sie, dass die Microsoft Internet Explorer-Einstellungen mit den Konfigurationseinstellungen kombiniert werden, wobei letztere Vorrang haben.  
   
- Im folgenden Beispiel wird die Standard-Proxyserveradresse auf http://proxyserver festgelegt. Es wird angegeben, dass der Proxy nicht für lokale Adressen verwendet werden soll und dass alle Anforderungen an Server, die sich in der Domäne „contoso.com“ befinden, den Proxy umgehen sollen.  
+ Im folgenden Beispiel wird die Standard-Proxyserveradresse auf `http://proxyserver` festgelegt. Es wird angegeben, dass der Proxy nicht für lokale Adressen verwendet werden soll und dass alle Anforderungen an Server, die sich in der Domäne „contoso.com“ befinden, den Proxy umgehen sollen.  
   
 ```xml  
 <configuration>  
@@ -56,7 +54,7 @@ Das Konfigurationselement [\<system.Net> (Netzwerkeinstellungen)](../../../docs/
 </configuration>  
 ```  
   
- Verwenden Sie das Element [\<connectionManagement> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md), um die Anzahl von permanenten Verbindungen, die mit einem bestimmten Server oder mit allen anderen Servern hergestellt werden können, zu konfigurieren. Im folgenden Beispiel wird die Anwendung so konfiguriert, dass zwei permanente Verbindungen mit dem Server www.contoso.com, vier permanente Verbindungen mit dem Server mit der IP-Adresse 192.168.1.2 und eine permanente Verbindung mit allen anderen Servern verwendet werden.  
+ Verwenden Sie das Element [\<connectionManagement> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md), um die Anzahl von permanenten Verbindungen, die mit einem bestimmten Server oder mit allen anderen Servern hergestellt werden können, zu konfigurieren. Im folgenden Beispiel wird die Anwendung so konfiguriert, dass zwei permanente Verbindungen mit dem Server `www.contoso.com`, vier permanente Verbindungen mit dem Server mit der IP-Adresse 192.168.1.2 und eine permanente Verbindung mit allen anderen Servern verwendet werden.  
   
 ```xml  
 <configuration>  

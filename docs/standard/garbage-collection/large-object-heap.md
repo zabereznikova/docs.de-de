@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003086"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202906"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -74,7 +74,7 @@ Im Allgemeinen wird eine Garbage Collection durchgeführt, wenn eine der folgend
 
   Dies ist der Normalfall. Die meisten Garbage Collections werden aufgrund von Zuordnungen im verwalteten Heap ausgelöst.
 
-- Die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode wird aufgerufen.
+- Die <xref:System.GC.Collect%2A?displayProperty=nameWithType> -Methode wird aufgerufen.
 
   Wenn die parameterlose <xref:System.GC.Collect?displayProperty=nameWithType>-Methode aufgerufen wird oder eine andere Überladung als Argument an <xref:System.GC.MaxGeneration?displayProperty=nameWithType> übergeben wird, wird der große Objektheap zusammen mit dem restlichen verwalteten Heap bereinigt.
 
@@ -164,7 +164,7 @@ Leistungsindikatoren können auch programmgesteuert abgefragt werden. Viele Benu
 > [!NOTE]
 > Es wird empfohlen, ETW-Ereignisse statt Leistungsindikatoren zu verwenden, da ETW umfangreichere Informationen bereitstellt.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>ETW-Ereignisse
 
 Der Garbage Collector bietet viele ETW-Ereignisse, mit denen Sie besser nachvollziehen können, welche Aktionen der Heap durchführt und warum. In folgenden Blogbeiträgen wird das Erfassen und Verstehen von GC-Ereignissen mit ETW veranschaulicht:
 
@@ -204,7 +204,7 @@ Wie Sie sehen können, handelt es sich hierbei um einen einfachen Test, der nur 
 
 ### <a name="a-debugger"></a>Debugger
 
-Wenn Sie nur ein Speicherabbild besitzen und untersuchen müssen, welche Objekte sich im großen Objektheap befinden, können Sie die von .NET bereitgestellte [SOS-Debugerweiterung](http://msdn2.microsoft.com/ms404370.aspx) verwenden.
+Wenn Sie nur ein Speicherabbild besitzen und untersuchen müssen, welche Objekte sich im großen Objektheap befinden, können Sie die von .NET bereitgestellte [SOS-Debugerweiterung](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) verwenden.
 
 > [!NOTE]
 > Die in diesem Abschnitt erwähnten Debuggingbefehle gelten für die [Windows-Debugger](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

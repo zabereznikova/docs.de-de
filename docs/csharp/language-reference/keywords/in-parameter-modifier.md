@@ -4,16 +4,16 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512014"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199408"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modifizierer für in-Parameter (C#-Verweis)
 
-Das Schlüsselwort `in` bewirkt, dass Argumente per Verweis übergeben werden. Es verhält sich ähnlich wie die Schlüsselwörter [ref](ref.md) und [out](out-parameter-modifier.md). Der einzige Unterschied besteht darin, dass `in`-Argumente nicht von der aufgerufenen Methode modifiziert werden können. Obwohl `ref`-Argumente modifiziert werden können, müssen `out`-Argumente vom Aufrufer modifiziert werden. Diese Veränderungen sind im aufrufenden Kontext sichtbar.
+Das Schlüsselwort `in` bewirkt, dass Argumente per Verweis übergeben werden. Es verhält sich ähnlich wie die Schlüsselwörter [ref](ref.md) und [out](out-parameter-modifier.md). Der einzige Unterschied besteht darin, dass `in`-Argumente nicht von der aufgerufenen Methode modifiziert werden können. Obwohl `ref`-Argumente modifiziert werden können, müssen `out`-Argumente von der aufgerufenen Methode geändert werden. Die Änderungen werden im Aufrufkontext angezeigt.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -124,4 +124,4 @@ Sie können keines der Schlüsselwörter `in`, `ref` und `out` für die folgende
 - [C#-Programmierhandbuch](../../programming-guide/index.md)  
 - [C#-Schlüsselwörter](index.md)  
 - [Methodenparameter](method-parameters.md)  
-- [Verweissemantik mit Werttypen](../../reference-semantics-with-value-types.md)  
+- [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)  

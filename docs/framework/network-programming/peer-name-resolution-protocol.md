@@ -2,14 +2,12 @@
 title: Peer Name Resolution-Protokoll (PNRP)
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f17c5e7e2fa7a5eba66f0b9dd8c950a7464eea8e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f04b0b2e27c03ed477c6ceb10a5cbe41e1c7ce7c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196749"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185156"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution-Protokoll (PNRP)
 In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, um Namen oder andere Arten von Bezeichner in die Netzwerkadressen des jeweils anderen Peers (Adressen, Protokolle und Ports) aufzulösen. In der Vergangenheit ist die Peernamensauflösung durch die grundsätzlich flüchtige Konnektivität sowie andere Mängel im Domänennamenserver (DNS) erschwert worden.  
@@ -20,7 +18,7 @@ In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, u
   
  Im Hinblick auf die Sicherheit können Peernamen als gesichert (geschützt) oder unsicher (ungeschützt) veröffentlicht werden. PNRP verwendet die Kryptografie mit öffentlichem Schlüssel, um Peernamen gegen Spoofing zu schützen. Computer sowie Dienste können mit PNRP benannt werden.  
   
--   Das Peer Name Resolution-Protokoll hat die folgenden Eigenschaften:  
+Das Peer Name Resolution-Protokoll hat die folgenden Eigenschaften:  
   
 -   Verteilt und nahezu serverlos. Server werden nur in der Bootstrapping-Phase benötigt.  
   
@@ -30,21 +28,13 @@ In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, u
   
 -   Die Auflösung von Namen per PNRP erstreckt sich über Computer hinaus, indem die Namensauflösung für Dienste zugelassen wird.  
   
--  
-  
 ## <a name="the-systemnetpeertopeer-namespace"></a>Der System.Net.PeerToPeer-Namespace  
   
 -   Die PNRP-Funktionalität wird durch den <xref:System.Net.PeerToPeer>-Namespace in .NET Framework, Version 3.5 definiert. Sie stellt eine Reihe von Typen zur Verfügung, die zum Registrieren und Auflösen von Peernamen mit einem verfügbaren PNRP-Dienst verwendet werden können.  
   
--  
-  
 -   (PNRP und benutzerdefinierte PeerResolver können mithilfe der im <xref:System.ServiceModel.PeerResolvers>-Namespace zur Verfügung gestellten Typen instanziiert und erstellt werden.)  
   
--  
-  
 -   Die grundlegenden Typen, die zum Registrieren und Auflösen von Namen mit einem verfügbaren PNRP-Dienst verwendet werden, sind wie folgt:  
-  
--  
   
 -   <xref:System.Net.PeerToPeer.Cloud>: Definiert die Informationen, die eine verfügbare PNRP-Cloud, einschließlich ihres Bereichs beschreiben.  
   
@@ -56,12 +46,8 @@ In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, u
   
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>: Definiert den Prozess zum Auflösen eines Peernamens in den/die zugehörigen Netzwerk-Endpunkt(e), einschließlich der synchronen und asynchronen Methoden für die Auflösung.  
   
--  
-  
--  
-  
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.PeerResolvers>  
- <xref:System.Net.PeerToPeer>  
- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Beispiele für die PeerToPeer-Technologie](https://go.microsoft.com/fwlink/?LinkID=179571)
+- <xref:System.ServiceModel.PeerResolvers>  
+- <xref:System.Net.PeerToPeer>  
+- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Beispiele für die PeerToPeer-Technologie](https://go.microsoft.com/fwlink/?LinkID=179571)

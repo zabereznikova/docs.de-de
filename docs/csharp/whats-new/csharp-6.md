@@ -3,36 +3,36 @@ title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208184"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194032"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
 Die Version 6.0 von C# enthält zahlreiche Features, die die Produktivität für Entwickler verbessern. Features in dieser Version sind:
 
-* [Schreibgeschützte Auto-Eigenschaften](#read-only-auto-properties):
+* [Schreibgeschützte automatische Eigenschaften:](#read-only-auto-properties)
     - Sie können schreibgeschützte automatische Eigenschaften erstellen, die nur in Konstruktoren festgelegt werden können.
-* [Auto-Eigenschaft-Initialisierer](#auto-property-initializers):
+* [Initialisierer für automatische Eigenschaften:](#auto-property-initializers)
     - Sie können Initialisierungsausdrücke zum Festlegen des Anfangswerts einer Auto-Eigenschaft schreiben.
 * [Ausdruckskörper-Funktionsmember](#expression-bodied-function-members):
     - Sie können einzeilige Methoden mithilfe von Lambdaausdrücken erstellen.
 * [verwendet statische](#using-static):
     - Sie können alle Methoden einer einzelnen Klasse in den aktuellen Namespace importieren.
-* [Bedingte NULL-Operatoren](#null-conditional-operators):
+* [NULL-bedingte Operatoren:](#null-conditional-operators)
     - Sie können präzise und sicher auf Member eines Objekts zugreifen, während Sie noch nach NULL mit dem bedingten NULL-Operator suchen.
-* [Zeichenfolgeninterpolierung](#string-interpolation):
+* [Zeichenfolgeninterpolation:](#string-interpolation)
     - Sie können die Zeichenfolgenformatierungsausdrücke mithilfe von Inlineausdrücken anstatt mit positionellen Argumenten schreiben.
 * [Ausnahmefilter](#exception-filters):
     - Sie können Ausdrücke basierend auf den Eigenschaften der Ausnahme oder basierend auf anderen Programmstatus abfangen. 
-* [„nameof“-Ausdrücke](#nameof-expressions):
+* [`nameof`-Ausdruck:](#the-nameof-expression)
     - Sie können den Compiler Zeichenfolgendarstellungen von Symbolen generieren lassen.
 * [„Await“ in Catch- und Finally-Blöcken](#await-in-catch-and-finally-blocks)
     - Sie können `await`-Ausdrücke an Orten verwenden, die diese zuvor als unzulässig deklariert haben.
-* [Indexinitialisierer](#index-initializers)
+* [Indexinitialisierer:](#index-initializers)
     - Sie können Initialisierungsausdrücke für assoziative Container sowie Sequenzcontainer erstellen.
 * [Erweiterungsmethoden für Auflistungsinitialisierer](#extension-add-methods-in-collection-initializers):
     - Auflistungsinitialisierer können neben Membermethoden zugängliche Erweiterungsmethoden verwenden.
@@ -45,7 +45,7 @@ Der Gesamteffekt dieser Features ist es, dass Sie präziseren Code schreiben, de
 
 Im weiteren Verlauf dieses Themas werden die einzelnen Features detailliert erklärt.
 
-## <a name="auto-property-enhancements"></a>Verbesserungen der Auto-Eigenschaft
+## <a name="auto-property-enhancements"></a>Verbesserungen von automatischen Eigenschaften
 
 Die Syntax für automatisch implementierte Eigenschaften (in der Regel als „Auto-Eigenschaften“ bezeichnet) hat es stark vereinfacht, Eigenschaften zu erstellen, die einfache Get- und Set-Accessoren hatten.
 
@@ -92,7 +92,7 @@ Wenn durch das Hinzufügen dieser Syntax eine zugängliche Methode nicht entfern
 
 ### <a name="auto-property-initializers"></a>Auto-Eigenschaft-Initialisierer
 
-Mit *Auto-Eigenschaft-Initialisierer* können Sie den ursprünglichen Wert für eine Auto-Eigenschaft als Teil der Eigenschaftendeklaration deklarieren.  In früheren Versionen mussten diese Eigenschaften über Setter verfügen und Sie müssten diesen Setter verwenden, um den vom Unterstützungsfeld verwendeten Datenspeicher zu initialisieren. Betrachten Sie diese Klasse als für einen Studenten, die den Namen sowie eine Liste der Noten des Studenten enthält:
+Mit *Initialisierern für automatische Eigenschaften* können Sie den ursprünglichen Wert für eine automatische Eigenschaft als Teil der Eigenschaftendeklaration deklarieren.  In früheren Versionen mussten diese Eigenschaften über Setter verfügen und Sie müssten diesen Setter verwenden, um den vom Unterstützungsfeld verwendeten Datenspeicher zu initialisieren. Betrachten Sie diese Klasse als für einen Studenten, die den Namen sowie eine Liste der Noten des Studenten enthält:
 
 [!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
  
@@ -209,29 +209,29 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 Wenn gewährleistet werden kann, dass die linke Seite nur einmal ausgewertet wird, dann können Sie beliebige Ausdrücke verwenden. Dazu gehören Methodenaufrufe auf der linken Seite von `?.` Auch wenn diese Nebeneffekte haben, werden sie nur einmal ausgewertet, sodass der Nebeneffekt nur einmal auftritt. Ein Beispiel dazu finden Sie unter [Introduction to Events (Einführung in Ereignisse)](../events-overview.md#language-support-for-events).
 
-## <a name="string-interpolation"></a>Zeichenfolgeninterpolierung
+## <a name="string-interpolation"></a>Zeichenfolgeninterpolation
 
-C# 6 enthält eine neue Syntax für die Zusammensetzung von Zeichenfolgen aus einer Formatzeichenfolge und aus Ausdrücken, die mit dem Ziel evaluiert werden, andere Zeichenfolgenwerte auszugeben.
+C# 6 enthält eine neue Syntax zum Zusammensetzen von Zeichenfolgen aus einer Zeichenfolge und eingebetteten Ausdrücken, die mit dem Ziel evaluiert werden, andere Zeichenfolgenwerte auszugeben.
 
-In der Vergangenheit mussten Sie positionelle Parameter in einer Methode wie `string.Format` verwenden:
+In der Vergangenheit mussten Sie positionelle Parameter in einer Methode wie <xref:System.String.Format%2A?displayProperty=nameWithType> verwenden:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Ab C# 6 hilft Ihnen das neue Feature [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) dabei, die Ausdrücke in die Formatzeichenfolge einzubetten. Stellen sie ganz einfach `$` vor die Zeichenfolge:
+Ab C# 6 können Sie mit dem neuen Feature [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) die Ausdrücke in eine Zeichenfolge einbetten. Stellen sie ganz einfach `$` vor die Zeichenfolge:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-In diesem ersten Beispiel werden Eigenschaftsausdrücke für die ersetzten Ausdrücke verwendet. Sie können diese Syntax erweitern, damit Sie jeden beliebigen Ausdruck verwenden können Sie können z.B. den Notendurchschnitt eines Studenten als Teil der Interpolation berechnen:
+In diesem Beispiel werden Eigenschaftsausdrücke für die ersetzten Ausdrücke verwendet. Sie können diese Syntax erweitern, damit Sie jeden beliebigen Ausdruck verwenden können Sie können z.B. den Notendurchschnitt eines Studenten als Teil der Interpolation berechnen:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-Sie bemerken vielleicht, dass die Ausgabe von `Grades.Average()`, die im vorherigen Beispiel ausgeführt wird, womöglich mehr Dezimalstellen hat, als Ihnen lieb ist. Die Zeichenfolgen-Interpolationssyntax unterstützt alle verfügbaren Formatzeichenfolgen mithilfe der vorherigen Formatierungsmethoden. Sie fügen die Formatzeichenfolgen innerhalb der geschweiften Klammern ein. Fügen Sie ein `:` nach dem zu formatierenden Ausdruck ein:
+Sie bemerken vielleicht, dass die Ausgabe von `Grades.Average()`, die im vorherigen Beispiel ausgeführt wird, womöglich mehr Dezimalstellen hat, als Ihnen lieb ist. Die Zeichenfolgen-Interpolationssyntax unterstützt alle verfügbaren Formatzeichenfolgen mithilfe der vorherigen Formatierungsmethoden. Geben Sie die Formatzeichenfolge innerhalb der Klammern an. Fügen Sie ein `:` nach dem zu formatierenden Ausdruck ein:
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 Die vorherige Codezeile formatiert den Wert für `Grades.Average()` als Gleitkommazahl mit zwei Dezimalstellen.
 
-Der `:` wird immer als Trennlinie zwischen dem Ausdruck, der formatiert wird, und der Formatzeichenfolge interpretiert. Dies kann zu Problemen führen, wenn Ihr Ausdruck einen `:` anders verwendet, z.B. ein bedingter Operator:
+Der `:` wird immer als Trennlinie zwischen dem Ausdruck, der formatiert wird, und der Formatzeichenfolge interpretiert. Dies kann zu Problemen führen, wenn Ihr Ausdruck `:` anders verwendet, z.B. als [bedingten Operator](../language-reference/operators/conditional-operator.md):
 
 ```csharp
 public string GetGradePointPercentages() =>
@@ -249,19 +249,21 @@ Es gibt keine Einschränkungen für Ausdrücke, die Sie zwischen die geschweifte
 Sie können in diesem Beispiel sehen, dass Sie sogar eine Zeichenfolgeninterpolation in ein andere Zeichenfolgeninterpolation verschachteln können. Dieses Beispiel ist sicherlich viel komplexer, als wie Sie es im Produktionscode haben möchten.
 Es ist viel mehr zur Veranschaulichung der Breite der Funktion gedacht. Jeder C#-Ausdruck kann zwischen die geschweiften Klammern einer interpolierten Zeichenfolge platziert werden.
 
+Wie Sie die Zeichenfolgeninterpolation verwenden, erfahren Sie im interaktiven Tutorial [Zeichenfolgeninterpolation in C#](../tutorials/intro-to-csharp/interpolated-strings.yml).
+
 ### <a name="string-interpolation-and-specific-cultures"></a>Zeichenfolgeninterpolation und bestimmte Kulturen
 
-Alle Beispiele aus dem vorherigen Abschnitt formatieren die Zeichenfolgen mithilfe der aktuellen Kultur und Sprache auf dem Computer, auf dem der Code ausgeführt wird. Häufig müssen Sie die Zeichenfolge formatieren, die unter Verwendung einer bestimmten Kultur erstellt wurde.
-Hierbei nutzen Sie die Tatsache, dass das Objekt, das durch die Zeichenfolgeninterpolation erstellt wurde, implizit in <xref:System.FormattableString> konvertiert werden kann.
+Alle Beispiele aus dem vorherigen Abschnitt formatieren die Zeichenfolgen mit der aktuellen Kultur auf dem Computer, auf dem der Code ausgeführt wird. Häufig müssen Sie die Zeichenfolge formatieren, die unter Verwendung einer bestimmten Kultur erstellt wurde.
+Hierbei nutzen Sie die Tatsache, dass das Objekt, das durch die Zeichenfolgeninterpolation erstellt wurde, implizit in <xref:System.FormattableString?displayProperty=nameWithType> konvertiert werden kann.
 
-Die <xref:System.FormattableString>-Instanz enthält die Formatzeichenfolge sowie die Ergebnisse der Auswertung der Ausdrücke, bevor sie in Zeichenfolgen konvertiert werden. Sie können öffentliche Methoden von <xref:System.FormattableString> verwenden, um die Kultur anzugeben, wenn Sie eine Zeichenfolge formatieren. Im folgenden Beispiel wird mit der deutschen Kultur eine Zeichenfolge erstellt. Dazu wird das Zeichen „,“ für das Dezimaltrennzeichen sowie das Zeichen „.“ als Tausendertrennzeichen verwendet.
+Die <xref:System.FormattableString>-Instanz enthält die zusammengesetzte Formatzeichenfolge sowie die Ergebnisse der Auswertung der Ausdrücke, bevor sie in Zeichenfolgen konvertiert werden. Verwenden Sie die <xref:System.FormattableString.ToString(System.IFormatProvider)>-Methode, um die Kultur anzugeben, wenn Sie eine Zeichenfolge formatieren. Im folgenden Beispiel wird mit der deutschen Kultur eine Zeichenfolge erstellt. Dazu wird das Zeichen „,“ für das Dezimaltrennzeichen sowie das Zeichen „.“ als Tausendertrennzeichen verwendet.
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Weitere Informationen finden Sie unter [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md).
+Weitere Informationen finden Sie im Artikel [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md) und im Tutorial [Zeichenfolgeninterpolation in C#](../tutorials/string-interpolation.md).
 
 ## <a name="exception-filters"></a>Ausnahmefilter
 
@@ -311,7 +313,7 @@ Fügen Sie in ihrem Code einen Ausnahmefilter hinzu, damit jeder Wiederherstellu
 Nachdem Sie diesen in den Code hinzugefügt haben, richten Sie Ihren Debugger so ein, dass er alle Ausnahmefehler unterbrechen soll. Führen Sie das Programm unter dem Debugger aus, und der Debugger unterbricht jedes Mal, wenn `PerformFailingOperation()` eine `RecoverableException` auslöst.
 Der Debugger unterbricht das Programm, da aufgrund des falsch zurückgegebenen Ausnahmefilters die Catch-Klausel nicht ausgeführt werden würde.
 
-## <a name="nameof-expressions"></a>`nameof`-Ausdrücke
+## <a name="the-nameof-expression"></a>Der `nameof`-Ausdruck
 
 Der `nameof`-Ausdruck wertet den Namen des Symbols aus. Es ist eine hervorragende Möglichkeit, Tools zum Arbeiten zu bringen, wenn Sie den Namen einer Variable, Eigenschaften oder eines Memberfelds benötigen.
 
