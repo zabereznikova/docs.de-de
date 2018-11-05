@@ -3,10 +3,10 @@ title: Einschränkungen (F#)
 description: Informationen Sie zu F#-Einschränkungen, die für generische Typparameter an die Anforderungen für die ein Typargument in einer generischen Typ oder eine Funktion gelten.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48837355"
 ---
 # <a name="constraints"></a>Einschränkungen
@@ -40,7 +40,7 @@ Sie müssen eine Einschränkung hinzufügen, wenn Ihr Code muss eine Funktion ve
 
 Angeben von Einschränkungen ist manchmal erforderlich, wenn Typparameter explizit zu schreiben, da ohne Einschränkung, der Compiler kann nicht überprüft haben, dass die Funktionen, die Sie verwenden in einen beliebigen Typ verfügbar sein werden, der zur Laufzeit für den Typ angegeben werden kann der Parameter.
 
-Die am häufigsten verwendeten Einschränkungen, die Sie in F#-Code verwenden, sind die typeinschränkungen, die angeben, Basisklassen oder Schnittstellen. Die anderen Einschränkungen werden entweder von der F#-Bibliothek verwendet, um bestimmte Funktionen, z. B. die Einschränkung explizites Mitglied zu implementieren, die zum Implementieren von arithmetischen Operatoren überladen verwendet oder dienen hauptsächlich deshalb, weil f# die vollständige unterstützt Reihe von Einschränkungen, die von der common Language Runtime unterstützt wird.
+Die am häufigsten verwendeten Einschränkungen, die Sie in F#-Code verwenden, sind die typeinschränkungen, die angeben, Basisklassen oder Schnittstellen. Die anderen Einschränkungen werden entweder von der F#-Bibliothek verwendet, um bestimmte Funktionen, z. B. die Einschränkung explizites Mitglied zu implementieren, die zum Implementieren von arithmetischen Operatoren überladen verwendet oder dienen hauptsächlich deshalb, weil F# die vollständige unterstützt Reihe von Einschränkungen, die von der common Language Runtime unterstützt wird.
 
 Beim Rückschlussprozess geben sind einige Einschränkungen automatisch vom Compiler abgeleitet. Angenommen, Sie verwenden die `+` Operator in einer Funktion, leitet der Compiler eine explizite Mitglieder-Einschränkung auf Variablen Typen, die im Ausdruck verwendet werden.
 
