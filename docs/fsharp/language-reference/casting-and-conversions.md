@@ -1,17 +1,17 @@
 ---
 title: Umwandlung und Konvertierungen (F#)
-description: Erfahren Sie, wie die Programmiersprache f# Konvertierungsoperatoren für arithmetische Konvertierungen zwischen primitiven Typen von verschiedenen bereitstellt.
+description: Erfahren Sie, wie die Programmiersprache F# Konvertierungsoperatoren für arithmetische Konvertierungen zwischen primitiven Typen von verschiedenen bereitstellt.
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45677928"
 ---
 # <a name="casting-and-conversions-f"></a>Umwandlung und Konvertierungen (F#)
 
-Dieses Thema beschreibt die Unterstützung für Typumwandlungen in f#.
+Dieses Thema beschreibt die Unterstützung für Typumwandlungen in F#.
 
 ## <a name="arithmetic-types"></a>Arithmetische Typen
 
@@ -21,7 +21,7 @@ Die einzelnen Operatoren verfügt über den gleichen Namen wie der Name des Ziel
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4401.fs)]
 
-Die folgende Tabelle zeigt die Konvertierungsoperatoren, die in f# definiert.
+Die folgende Tabelle zeigt die Konvertierungsoperatoren, die in F# definiert.
 
 |Operator|Beschreibung|
 |--------|-----------|
@@ -71,7 +71,7 @@ F# stellt Operatoren für diese Arten von Konvertierungen bereit. Die `:>` -Oper
 
 ### <a name="upcasting"></a>Umwandeln
 
-In vielen objektorientierten Sprachen erfolgt die Upcasting implizit. in f# sind die Regeln unterscheiden. Umwandeln wird automatisch angewendet, wenn Sie auf einen Objekttyp Argumente an Methoden übergeben. Allerdings erfolgt umwandeln für Let gebundenen-Funktionen in einem Modul nicht automatisch, es sei denn, der der Parametertyp als einen flexiblen Typ deklariert ist. Weitere Informationen finden Sie unter [Flexible Typen](flexible-Types.md).
+In vielen objektorientierten Sprachen erfolgt die Upcasting implizit. in F# sind die Regeln unterscheiden. Umwandeln wird automatisch angewendet, wenn Sie auf einen Objekttyp Argumente an Methoden übergeben. Allerdings erfolgt umwandeln für Let gebundenen-Funktionen in einem Modul nicht automatisch, es sei denn, der der Parametertyp als einen flexiblen Typ deklariert ist. Weitere Informationen finden Sie unter [Flexible Typen](flexible-Types.md).
 
 Die `:>` -Operator führt eine statische Umwandlung, was bedeutet, dass der Erfolg der Umwandlung zur Kompilierzeit bestimmt ist. Wenn eine Umwandlung mit `:>` erfolgreich kompiliert, es ist keine zulässige Umwandlung und zur Laufzeit kein Fehler auftreten kann.
 

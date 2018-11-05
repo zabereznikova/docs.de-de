@@ -3,10 +3,10 @@ title: Typerweiterungen (F#)
 description: Erfahren Sie, wie F#-Erweiterungen ermöglichen, dass Sie einen zuvor definierten Objekttyp neue Member hinzufügen.
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43874978"
 ---
 # <a name="type-extensions"></a>Erweiterungen des Typs
@@ -127,7 +127,7 @@ Erwünscht sind statische Methoden, die "im Bereich" float"und können angezeigt
 
 ## <a name="extension-methods"></a>Erweiterungsmethoden
 
-Schließlich können Erweiterungsmethoden (manchmal als "Erweiterungsmember des C#-Stil" bezeichnet) in f# als statische Membermethode in einer Klasse deklariert werden.
+Schließlich können Erweiterungsmethoden (manchmal als "Erweiterungsmember des C#-Stil" bezeichnet) in F# als statische Membermethode in einer Klasse deklariert werden.
 
 Erweiterungsmethoden sind nützlich für, wenn Sie Erweiterungen für einen generischen Typ definieren, die die Variable vom Typ eingeschränkt werden möchten. Zum Beispiel:
 
@@ -163,7 +163,7 @@ Die folgenden Einschränkungen gelten auch für Erweiterungen des Typs:
 * Erweiterungen des Typs können nicht definiert werden [typabkürzungen](type-abbreviations.md).
 * Erweiterungen des Typs gelten nicht für `byref<'T>` (auch wenn sie deklariert werden können).
 * Erweiterungen des Typs gelten nicht für Attribute (auch wenn sie deklariert werden können).
-* Sie können definieren, Erweiterungen, die andere Methoden, mit dem gleichen Namen zu überladen, aber f#-Compiler bevorzugt nicht-Erweiterungsmethoden gibt es ist ein Mehrdeutiger Aufruf.
+* Sie können definieren, Erweiterungen, die andere Methoden, mit dem gleichen Namen zu überladen, aber F#-Compiler bevorzugt nicht-Erweiterungsmethoden gibt es ist ein Mehrdeutiger Aufruf.
 
 Schließlich, wenn für einen Typ mehrere systeminterne typerweiterungen vorhanden ist, müssen alle Member eindeutig sein. Bei optionalen Typerweiterungen können Member in unterschiedlichen Typerweiterungen, die auf den gleichen Typ erweitert werden, die gleichen Namen aufweisen. Mehrdeutigkeitsfehler treten nur auf, wenn Clientcode zwei unterschiedliche Gültigkeitsbereiche öffnet, die die gleichen Membernamen definieren.
 
