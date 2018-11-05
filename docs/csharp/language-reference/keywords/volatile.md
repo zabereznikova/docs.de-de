@@ -1,56 +1,58 @@
 ---
 title: volatile (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526218"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199967"
 ---
-# <a name="volatile-c-reference"></a><span data-ttu-id="ec5e5-102">volatile (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ec5e5-102">volatile (C# Reference)</span></span>
-<span data-ttu-id="ec5e5-103">Das Schlüsselwort `volatile` gibt an, dass ein Feld von mehreren Threads geändert werden kann, die zur gleichen Zeit ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="ec5e5-104">Felder, die als `volatile` deklariert sind, unterliegen keinen Compileroptimierungen, die von Zugriff durch einen einzelnen Thread ausgehen.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-104">Fields that are declared `volatile` are not subject to compiler optimizations that assume access by a single thread.</span></span> <span data-ttu-id="ec5e5-105">Diese Einschränkungen stellen sicher, dass alle Threads volatile-Schreibvorgänge, die von einem anderen Thread ausgeführt werden, in der Reihenfolge ihrer Ausführung berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-105">These restrictions ensure that all threads will observe volatile writes performed by any other thread in the order in which they were performed.</span></span> <span data-ttu-id="ec5e5-106">Es gibt keine Garantie für eine einzelne Gesamtsortierung von volatile-Schreibvorgängen aus der Sicht aller ausgeführten Threads.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-106">There is no guarantee of a single total ordering of volatile writes as seen from all threads of execution.</span></span>  
-  
- <span data-ttu-id="ec5e5-107">Der `volatile`-Modifizierer wird normalerweise für Felder verwendet, auf die von mehreren Threads ohne die [lock](../../../csharp/language-reference/keywords/lock-statement.md)-Anweisung zugegriffen wird, um den Zugriff zu serialisieren.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-107">The `volatile` modifier is usually used for a field that is accessed by multiple threads without using the [lock](../../../csharp/language-reference/keywords/lock-statement.md) statement to serialize access.</span></span>  
-  
- <span data-ttu-id="ec5e5-108">Das Schlüsselwort `volatile` kann auf Felder der folgenden Typen angewendet werden:</span><span class="sxs-lookup"><span data-stu-id="ec5e5-108">The `volatile` keyword can be applied to fields of these types:</span></span>  
-  
--   <span data-ttu-id="ec5e5-109">Verweistypen.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-109">Reference types.</span></span>  
-  
--   <span data-ttu-id="ec5e5-110">Zeigertypen (in unsicherem Kontext).</span><span class="sxs-lookup"><span data-stu-id="ec5e5-110">Pointer types (in an unsafe context).</span></span> <span data-ttu-id="ec5e5-111">Beachten Sie, dass der Zeiger selbst als „volatile“ deklariert sein kann, das Objekt, auf das er zeigt aber nicht.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-111">Note that although the pointer itself can be volatile, the object that it points to cannot.</span></span> <span data-ttu-id="ec5e5-112">Anders ausgedrückt können Sie keinen „Zeiger auf ‚volatile‘“ deklarieren.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-112">In other words, you cannot declare a "pointer to volatile."</span></span>  
-  
--   <span data-ttu-id="ec5e5-113">Typen wie sbyte, byte, short, ushort, int, uint, char, float und bool.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-113">Types such as sbyte, byte, short, ushort, int, uint, char, float, and bool.</span></span>  
-  
--   <span data-ttu-id="ec5e5-114">Ein Enumerationstyp mit einem der folgenden Basistypen: byte, sbyte, short, ushort, int oder uint.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-114">An enum type with one of the following base types: byte, sbyte, short, ushort, int, or uint.</span></span>  
-  
--   <span data-ttu-id="ec5e5-115">Generische Typparameter, die als Verweistypen bekannt sind.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-115">Generic type parameters known to be reference types.</span></span>  
-  
--   <span data-ttu-id="ec5e5-116"><xref:System.IntPtr> und <xref:System.UIntPtr>.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-116"><xref:System.IntPtr> and <xref:System.UIntPtr>.</span></span>  
-  
- <span data-ttu-id="ec5e5-117">Das Schlüsselwort „volatile“ kann nur auf Felder einer Klasse oder Struktur angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-117">The volatile keyword can only be applied to fields of a class or struct.</span></span> <span data-ttu-id="ec5e5-118">Lokale Variablen können nicht als `volatile` deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-118">Local variables cannot be declared `volatile`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="ec5e5-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ec5e5-119">Example</span></span>  
- <span data-ttu-id="ec5e5-120">Im folgenden Beispiel wird die Deklaration einer öffentlichen Feldvariable als `volatile` dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-120">The following example shows how to declare a public field variable as `volatile`.</span></span>  
-  
- [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="ec5e5-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ec5e5-121">Example</span></span>  
- <span data-ttu-id="ec5e5-122">Im folgenden Beispiel wird veranschaulicht, wie ein Hilfs- oder Arbeitsthread erstellt wird und für das Ausführen der Verarbeitung parallel mit dem primären Thread verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="ec5e5-122">The following example demonstrates how an auxiliary or worker thread can be created and used to perform processing in parallel with that of the primary thread.</span></span> <span data-ttu-id="ec5e5-123">Hintergrundinformationen zum Multithreading finden Sie unter [Verwaltetes Threading](../../../standard/threading/index.md) und [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="ec5e5-123">For background information about multithreading, see [Managed Threading](../../../standard/threading/index.md) and [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span></span>  
-  
- [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="ec5e5-124">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="ec5e5-124">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="ec5e5-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ec5e5-125">See Also</span></span>
+# <a name="volatile-c-reference"></a><span data-ttu-id="fd5ed-102">volatile (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="fd5ed-102">volatile (C# Reference)</span></span>
 
-- [<span data-ttu-id="ec5e5-126">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="ec5e5-126">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ec5e5-127">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="ec5e5-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="ec5e5-128">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="ec5e5-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="ec5e5-129">Modifizierer</span><span class="sxs-lookup"><span data-stu-id="ec5e5-129">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)
+<span data-ttu-id="fd5ed-103">Das Schlüsselwort `volatile` gibt an, dass ein Feld von mehreren Threads geändert werden kann, die zur gleichen Zeit ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-103">The `volatile` keyword indicates that a field might be modified by multiple threads that are executing at the same time.</span></span> <span data-ttu-id="fd5ed-104">Der Compiler, das Runtimesystem und sogar die Hardware können aus Leistungsgründen die Lese- und Schreibvorgänge in den Speicherorten neu anordnen.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-104">The compiler, the runtime system, and even hardware may rearrange reads and writes to memory locations for performance reasons.</span></span> <span data-ttu-id="fd5ed-105">Felder, die als `volatile` deklariert sind, sind von dieser Optimierungen nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-105">Fields that are declared `volatile` are not subject to these optimizations.</span></span> <span data-ttu-id="fd5ed-106">Durch Hinzufügen des `volatile`-Modifizierers stellen Sie sicher, dass alle Threads volatile Schreibvorgänge, die von einem anderen Thread ausgeführt werden, in der Reihenfolge ihrer Ausführung berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-106">Adding the `volatile` modifier ensures that all threads will observe volatile writes performed by any other thread in the order in which they were performed.</span></span> <span data-ttu-id="fd5ed-107">Es gibt keine Garantie für eine einzelne Gesamtsortierung von volatile-Schreibvorgängen aus der Sicht aller ausgeführten Threads.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-107">There is no guarantee of a single total ordering of volatile writes as seen from all threads of execution.</span></span>
+  
+<span data-ttu-id="fd5ed-108">Das Schlüsselwort `volatile` kann auf Felder der folgenden Typen angewendet werden:</span><span class="sxs-lookup"><span data-stu-id="fd5ed-108">The `volatile` keyword can be applied to fields of these types:</span></span>  
+  
+- <span data-ttu-id="fd5ed-109">Verweistypen.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-109">Reference types.</span></span>  
+- <span data-ttu-id="fd5ed-110">Zeigertypen (in unsicherem Kontext).</span><span class="sxs-lookup"><span data-stu-id="fd5ed-110">Pointer types (in an unsafe context).</span></span> <span data-ttu-id="fd5ed-111">Beachten Sie, dass der Zeiger selbst als „volatile“ deklariert sein kann, das Objekt, auf das er zeigt aber nicht.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-111">Note that although the pointer itself can be volatile, the object that it points to cannot.</span></span> <span data-ttu-id="fd5ed-112">Anders ausgedrückt können Sie keinen „Zeiger auf ‚volatile‘“ deklarieren.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-112">In other words, you cannot declare a "pointer to volatile."</span></span>  
+- <span data-ttu-id="fd5ed-113">Einfacher Typen wie `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float` und `bool`.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-113">Simple types such as `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float`, and `bool`.</span></span>  
+- <span data-ttu-id="fd5ed-114">Ein `enum`-Typ mit einem der folgenden Basistypen: `byte`, `sbyte`, `short`, `ushort`, `int` oder `uint`.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-114">An `enum` type with one of the following base types: `byte`, `sbyte`, `short`, `ushort`, `int`, or `uint`.</span></span>  
+- <span data-ttu-id="fd5ed-115">Generische Typparameter, die als Verweistypen bekannt sind.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-115">Generic type parameters known to be reference types.</span></span>
+- <span data-ttu-id="fd5ed-116"><xref:System.IntPtr> und <xref:System.UIntPtr>.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-116"><xref:System.IntPtr> and <xref:System.UIntPtr>.</span></span>  
+
+<span data-ttu-id="fd5ed-117">Andere Typen, einschließlich `double` und `long`, können nicht mit `volatile` markiert werden, da Lese- und Schreibvorgänge in die Felder dieser Typen nicht unbedingt atomar sind.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-117">Other types, including `double` and `long`, cannot be marked `volatile` because reads and writes to fields of those types cannot be guaranteed to be atomic.</span></span> <span data-ttu-id="fd5ed-118">Um den Multithreadzugriff auf diese Feldtypen zu schützen, verwenden Sie die Klassenmitglieder <xref:System.Threading.Interlocked> oder schützen Sie den Zugriff mit der Anweisung [`lock`](lock-statement.md).</span><span class="sxs-lookup"><span data-stu-id="fd5ed-118">To protect multi-threaded access to those types of fields, use the <xref:System.Threading.Interlocked> class members or protect access using the [`lock`](lock-statement.md) statement.</span></span>
+
+<span data-ttu-id="fd5ed-119">Das Schlüsselwort „volatile“ kann nur auf Felder einer `class` oder `struct` angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-119">The volatile keyword can only be applied to fields of a `class` or `struct`.</span></span> <span data-ttu-id="fd5ed-120">Lokale Variablen können nicht als `volatile` deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-120">Local variables cannot be declared `volatile`.</span></span>
+  
+## <a name="example"></a><span data-ttu-id="fd5ed-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fd5ed-121">Example</span></span>
+
+<span data-ttu-id="fd5ed-122">Im folgenden Beispiel wird die Deklaration einer öffentlichen Feldvariable als `volatile` dargestellt.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-122">The following example shows how to declare a public field variable as `volatile`.</span></span>  
+  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
+
+<span data-ttu-id="fd5ed-123">Im folgenden Beispiel wird veranschaulicht, wie ein Hilfs- oder Arbeitsthread erstellt wird und für das Ausführen der Verarbeitung parallel mit dem primären Thread verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-123">The following example demonstrates how an auxiliary or worker thread can be created and used to perform processing in parallel with that of the primary thread.</span></span> <span data-ttu-id="fd5ed-124">Hintergrundinformationen zum Multithreading finden Sie unter [Verwaltetes Threading](../../../standard/threading/index.md) und [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="fd5ed-124">For background information about multithreading, see [Managed Threading](../../../standard/threading/index.md) and [Threading (C#)](../../programming-guide/concepts/threading/index.md).</span></span>  
+  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
+
+<span data-ttu-id="fd5ed-125">Wenn der `volatile`-Modifizierer der Deklaration von `_shouldStop` hinzugefügt wird, erhalten Sie immer die gleichen Ergebnisse (ähnlich dem Auszug aus dem vorhergehenden Code).</span><span class="sxs-lookup"><span data-stu-id="fd5ed-125">With the `volatile` modifier added to the declaration of `_shouldStop` in place, you'll always get the same results (similar to the excerpt shown in the preceding code).</span></span> <span data-ttu-id="fd5ed-126">Ohne diesen Modifizierer für das `_shouldStop`-Mitglied ist das Verhalten unvorhersehbar.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-126">However, without that modifier on the `_shouldStop` member, the behavior is unpredictable.</span></span> <span data-ttu-id="fd5ed-127">Die `DoWork`-Methode kann den Mitgliederzugriff optimieren, was zum Lesen veralteter Daten führt.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-127">The `DoWork` method may optimize the member access, resulting in reading stale data.</span></span> <span data-ttu-id="fd5ed-128">Aufgrund der Natur der Multithreadprogrammierung ist die Anzahl der veraltete Lesevorgänge unvorhersehbar.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-128">Because of the nature of multi-threaded programming, the number of stale reads is unpredictable.</span></span> <span data-ttu-id="fd5ed-129">Verschiedene Programmläufe führen zu etwas unterschiedlichen Ergebnissen.</span><span class="sxs-lookup"><span data-stu-id="fd5ed-129">Different runs of the program will produce somewhat different results.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="fd5ed-130">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="fd5ed-130">C# Language Specification</span></span>
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+  
+## <a name="see-also"></a><span data-ttu-id="fd5ed-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fd5ed-131">See Also</span></span>
+
+- [<span data-ttu-id="fd5ed-132">C#-Sprachspezifikation: Schlüsselwort „volatile“</span><span class="sxs-lookup"><span data-stu-id="fd5ed-132">C# language specification: volatile keyword</span></span>](../../../../_csharplang/spec/classes.md#volatile-fields)
+- [<span data-ttu-id="fd5ed-133">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="fd5ed-133">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="fd5ed-134">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="fd5ed-134">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="fd5ed-135">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="fd5ed-135">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="fd5ed-136">Modifizierer</span><span class="sxs-lookup"><span data-stu-id="fd5ed-136">Modifiers</span></span>](modifiers.md)
+- [<span data-ttu-id="fd5ed-137">lock-Anweisung</span><span class="sxs-lookup"><span data-stu-id="fd5ed-137">lock statement</span></span>](lock-statement.md)
+- <span data-ttu-id="fd5ed-138"><xref:System.Threading.Interlocked>-Klasse</span><span class="sxs-lookup"><span data-stu-id="fd5ed-138"><xref:System.Threading.Interlocked> class</span></span>

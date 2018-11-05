@@ -1,6 +1,6 @@
 ---
 title: as (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 10/11/2018
 f1_keywords:
 - as_CSharpKeyword
 - as
@@ -8,44 +8,46 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ce3163f7d957df96a5c0304adc0b3083d8e20104
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47216175"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122713"
 ---
-# <a name="as-c-reference"></a><span data-ttu-id="848ac-102">as (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="848ac-102">as (C# Reference)</span></span>
-<span data-ttu-id="848ac-103">Sie können den `as`-Operator verwenden, um bestimmte Arten von Konvertierungen zwischen kompatiblen Verweistypen oder [auf NULL festlegbaren Typen](../../../csharp/programming-guide/nullable-types/index.md) durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="848ac-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="848ac-104">Der folgende Code zeigt ein Beispiel.</span><span class="sxs-lookup"><span data-stu-id="848ac-104">The following code shows an example.</span></span>  
+# <a name="as-c-reference"></a><span data-ttu-id="2a095-102">as (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="2a095-102">as (C# Reference)</span></span>
+<span data-ttu-id="2a095-103">Sie können den `as`-Operator verwenden, um bestimmte Arten von Konvertierungen zwischen kompatiblen Verweistypen oder [auf NULL festlegbaren Typen](../../../csharp/programming-guide/nullable-types/index.md) durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="2a095-103">You can use the `as` operator to perform certain types of conversions between compatible reference types or [nullable types](../../../csharp/programming-guide/nullable-types/index.md).</span></span> <span data-ttu-id="2a095-104">Der folgende Code zeigt ein Beispiel.</span><span class="sxs-lookup"><span data-stu-id="2a095-104">The following code shows an example.</span></span>  
   
 [!code-csharp[csrefKeywordsOperator#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#1)]
+
+<span data-ttu-id="2a095-105">Wie das Beispiel zeigt, müssen Sie das Ergebnis des `as`-Ausdrucks mit `null` vergleichen, um zu überprüfen, ob eine Konvertierung erfolgreich war.</span><span class="sxs-lookup"><span data-stu-id="2a095-105">As the example shows, you need to compare the result of the `as` expression with `null` to check if a conversion is successful.</span></span> <span data-ttu-id="2a095-106">Ab C# 7.0 können Sie den [is](is.md)-Ausdruck verwenden, um zu testen, ob eine Konvertierung erfolgreich war. Wenn die Konvertierung erfolgreich war, können Sie den Ausdruck auch verwenden, um bedingt eine Variable zuzuweisen.</span><span class="sxs-lookup"><span data-stu-id="2a095-106">Beginning with C# 7.0, you can use the [is](is.md) expression both to test that a conversion succeeds and conditionally assign a variable when the conversion succeeds.</span></span> <span data-ttu-id="2a095-107">In vielen Szenarien ist dies präziser als die Verwendung des `as`-Operators.</span><span class="sxs-lookup"><span data-stu-id="2a095-107">In many scenarios, it's more concise than using the `as` operator.</span></span> <span data-ttu-id="2a095-108">Weitere Informationen finden Sie im Abschnitt [Typmuster](is.md#type) des Artikels zum [`is`-Operator](is.md).</span><span class="sxs-lookup"><span data-stu-id="2a095-108">For more information, see the [Type pattern](is.md#type) section of the [`is` operator](is.md) article.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="848ac-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="848ac-105">Remarks</span></span>  
- <span data-ttu-id="848ac-106">Der `as`-Operator kann mit einem Umwandlungsvorgang verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="848ac-106">The `as` operator is like a cast operation.</span></span> <span data-ttu-id="848ac-107">Wenn die Konvertierung jedoch nicht möglich ist, gibt `as` `null` zurück, statt eine Ausnahme auszulösen.</span><span class="sxs-lookup"><span data-stu-id="848ac-107">However, if the conversion isn't possible, `as` returns `null` instead of raising an exception.</span></span> <span data-ttu-id="848ac-108">Betrachten Sie das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="848ac-108">Consider the following example:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2a095-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2a095-109">Remarks</span></span>  
+ <span data-ttu-id="2a095-110">Der `as`-Operator kann mit einem Umwandlungsvorgang verglichen werden.</span><span class="sxs-lookup"><span data-stu-id="2a095-110">The `as` operator is like a cast operation.</span></span> <span data-ttu-id="2a095-111">Wenn die Konvertierung jedoch nicht möglich ist, gibt `as` `null` zurück, statt eine Ausnahme auszulösen.</span><span class="sxs-lookup"><span data-stu-id="2a095-111">However, if the conversion isn't possible, `as` returns `null` instead of raising an exception.</span></span> <span data-ttu-id="2a095-112">Betrachten Sie das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="2a095-112">Consider the following example:</span></span>  
   
 ```csharp  
 expression as type  
 ```  
   
- <span data-ttu-id="848ac-109">Der Code ist äquivalent zu folgendem Ausdruck, jedoch wird die `expression`-Variable nur einmal ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="848ac-109">The code is equivalent to the following expression except that the `expression` variable is evaluated only one time.</span></span>  
+ <span data-ttu-id="2a095-113">Der Code ist äquivalent zu folgendem Ausdruck, jedoch wird die `expression`-Variable nur einmal ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="2a095-113">The code is equivalent to the following expression except that the `expression` variable is evaluated only one time.</span></span>  
   
 ```csharp  
 expression is type ? (type)expression : (type)null  
 ```  
   
- <span data-ttu-id="848ac-110">Beachten Sie, dass der `as`-Operator nur Verweis- und Boxingkonvertierungen sowie Konvertierungen mit Nullwert durchführt.</span><span class="sxs-lookup"><span data-stu-id="848ac-110">Note that the `as` operator performs only reference conversions, nullable conversions, and boxing conversions.</span></span> <span data-ttu-id="848ac-111">Der `as`-Operator kann keine anderen Konvertierungen wie z.B. benutzerdefinierte Konvertierungen durchführen, die stattdessen mithilfe der Cast-Ausdrücke ausgeführt werden sollten.</span><span class="sxs-lookup"><span data-stu-id="848ac-111">The `as` operator can't perform other conversions, such as user-defined conversions, which should instead be performed by using cast expressions.</span></span>  
+ <span data-ttu-id="2a095-114">Beachten Sie, dass der `as`-Operator nur Verweis- und Boxingkonvertierungen sowie Konvertierungen mit Nullwert durchführt.</span><span class="sxs-lookup"><span data-stu-id="2a095-114">Note that the `as` operator performs only reference conversions, nullable conversions, and boxing conversions.</span></span> <span data-ttu-id="2a095-115">Der `as`-Operator kann keine anderen Konvertierungen wie z.B. benutzerdefinierte Konvertierungen durchführen, die stattdessen mithilfe der Cast-Ausdrücke ausgeführt werden sollten.</span><span class="sxs-lookup"><span data-stu-id="2a095-115">The `as` operator can't perform other conversions, such as user-defined conversions, which should instead be performed by using cast expressions.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="848ac-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="848ac-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="2a095-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2a095-116">Example</span></span>  
 
 [!code-csharp[csrefKeywordsOperator#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#2)]
   
-## <a name="c-language-specification"></a><span data-ttu-id="848ac-113">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="848ac-113">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="2a095-117">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="2a095-117">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="848ac-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="848ac-114">See Also</span></span>  
-- [<span data-ttu-id="848ac-115">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="848ac-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="848ac-116">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="848ac-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="848ac-117">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="848ac-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="848ac-118">is</span><span class="sxs-lookup"><span data-stu-id="848ac-118">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
-- [<span data-ttu-id="848ac-119">?:-Operator</span><span class="sxs-lookup"><span data-stu-id="848ac-119">?: Operator</span></span>](../../../csharp/language-reference/operators/conditional-operator.md)  
-- [<span data-ttu-id="848ac-120">Operatorschlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="848ac-120">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="2a095-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2a095-118">See Also</span></span>  
+- [<span data-ttu-id="2a095-119">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="2a095-119">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="2a095-120">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="2a095-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="2a095-121">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="2a095-121">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="2a095-122">is</span><span class="sxs-lookup"><span data-stu-id="2a095-122">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
+- [<span data-ttu-id="2a095-123">?:-Operator</span><span class="sxs-lookup"><span data-stu-id="2a095-123">?: Operator</span></span>](../../../csharp/language-reference/operators/conditional-operator.md)  
+- [<span data-ttu-id="2a095-124">Operatorschlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="2a095-124">Operator Keywords</span></span>](../../../csharp/language-reference/keywords/operator-keywords.md)
