@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399768"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202919"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework-Befehlszeilendebugger)
 Der .NET Framework-Befehlszeilendebugger unterstützt Anbieter von Tools und Anwendungsentwickler beim Suchen und Beheben von Fehlern in Programmen, die für die Common Language Runtime von .NET Framework entwickelt wurden. Dieses Tool stellt mithilfe der Debug-API Debugdienste bereit. Sie können mit "MDbg.exe" lediglich verwalteten Code debuggen. Das Debuggen von nicht verwaltetem Code wird nicht unterstützt.  
   
- Dieses Tool ist über NuGet verfügbar. Informationen zur Installation finden Sie unter [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0). Verwenden Sie die Paket-Manager-Konsole, um das Tool auszuführen. Weitere Informationen zum Verwenden der Paket-Manager-Konsole finden Sie unter [Paket-Manager-Konsole](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console).  
+Dieses Tool ist über NuGet verfügbar. Informationen zur Installation finden Sie unter [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0). Verwenden Sie die Paket-Manager-Konsole, um das Tool auszuführen. Weitere Informationen zum Verwenden der Paket-Manager-Konsole finden Sie im Artikel [Paket-Manager-Konsole](/nuget/tools/package-manager-console).
   
- Geben Sie an der Eingabeaufforderung des Paket-Managers Folgendes ein:  
+Geben Sie an der Eingabeaufforderung des Paket-Managers Folgendes ein:  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,11 +34,11 @@ MDbg [ProgramName[arguments]] [options]
   
  Bei Befehlen für "MDbg.exe" wird die Groß- und Kleinschreibung berücksichtigt.  
   
-|Befehl|description|  
+|Befehl|Beschreibung |  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*nummer*]|Wechselt zu einem anderen debuggten Prozess oder druckt verfügbare Prozesse. Die Zahlen sind keine echten Prozess-IDs (PID), sondern eine 0-indizierte Liste.|  
 |**a**[**ttach**] [*pid*]|Fügt an einen Prozess an oder druckt verfügbare Prozesse.|  
-|**b**[**reak**] [*klassenname.methode* &#124; *dateiname:zeilennr*]|Legt einen Haltepunkt bei der angegebenen Methode fest. Module werden nacheinander überprüft.<br /><br /> -   **break** *dateiname:zeilennr* legt einen Haltepunkt an einer Position in der Quelle fest.<br />-   **break** *~zahl* legt einen Haltepunkt an einem Symbol fest, das kurz vorher mit dem **x**-Befehl angezeigt wurde.<br />-   **break***modul!klassenname.methode+IlOffset* legt einen Haltepunkt am vollqualifizierten Speicherort fest.|  
+|**b**[**reak**] [*klassenname.methode* &#124; *dateiname:zeilennr*]|Legt einen Haltepunkt bei der angegebenen Methode fest. Module werden nacheinander überprüft.<br /><br /> -   **break** *dateiname:zeilennr* legt einen Haltepunkt an einer Position in der Quelle fest.<br />-   **break** *~zahl* legt einen Haltepunkt an einem Symbol fest, das kurz vorher mit dem **x**-Befehl angezeigt wurde.<br />-   **break** *modul!klassenname.methode+IlOffset* legt einen Haltepunkt am vollqualifizierten Speicherort fest.|  
 |**block**[**ingObjects**]|Zeigt Monitorsperren an, die blockierende Threads sind.|  
 |**ca**[**tch**] [*ausnahmentyp*]|Bewirkt, dass der Debugger nicht nur bei Ausnahmefehlern, sondern bei allen Ausnahmen unterbricht.|  
 |**cl**[**earException**]|Markiert die aktuelle Ausnahme als behandelt, sodass die Ausführung fortgesetzt werden kann. Wenn die Ursache der Ausnahme nicht behandelt wurde, kann die Ausnahme erneut schnell ausgelöst werden.|  
