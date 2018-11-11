@@ -7,11 +7,11 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 6a98cd9f2ff6f40a200a9e30fc65de717b6e788e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 405de22ea7e48a5964de48eb20becdaf5fc5ae01
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43503632"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexer (C#-Programmierhandbuch)
@@ -64,7 +64,8 @@ Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermembe
 -   [Einschränken des Zugriffsmethodenzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Weitere Informationen erhalten Sie unter [Indexer](~/_csharplang/spec/classes.md#indexers) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
 ## <a name="see-also"></a>Siehe auch
 

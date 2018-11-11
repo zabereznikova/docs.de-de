@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
+ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515133"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235738"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
   
- In diesem Abschnitt wird größtenteils davon ausgegangen, dass Sie bereits über einige Kenntnisse zu C# und allgemeinen Programmierkonzepten verfügen. Wenn Sie in Bezug auf das Programmieren oder mit C# ein Anfänger sind, sollten Sie sich die [C#-Schnellstarts](../quick-starts/index.md) oder das interaktive Tutorial [Erste Schritte mit C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) ansehen, bei dem keine vorherigen Programmierkenntnisse nötig sind.  
+ In diesem Abschnitt wird größtenteils davon ausgegangen, dass Sie bereits über einige Kenntnisse zu C# und allgemeinen Programmierkonzepten verfügen. Wenn Sie in Bezug auf das Programmieren oder mit C# noch nicht besonders vertraut sind, sollten Sie sich die [Tutorials zur Einführung in C#](../tutorials/intro-to-csharp/index.md) oder das interaktive Tutorial [Erste Schritte mit C#](https://www.microsoft.com/net/tutorials/csharp/getting-started) ansehen, bei dem keine vorherigen Programmierkenntnisse nötig sind.  
   
  Informationen zu bestimmten Schlüsselwörtern, Operatoren und Präprozessordirektiven finden Sie in der [C#-Referenz](../../csharp/language-reference/index.md). Informationen zur Spezifikation für C# finden Sie unter [C#-Sprachspezifikation](../../csharp/language-reference/language-specification/index.md).  
   

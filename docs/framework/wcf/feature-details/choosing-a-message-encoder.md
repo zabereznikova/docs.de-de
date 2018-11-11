@@ -2,11 +2,11 @@
 title: Auswählen eines Nachrichtenencoders
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 061869704674206739d81be24e105fc87ce0f129
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44248929"
 ---
 # <a name="choosing-a-message-encoder"></a>Auswählen eines Nachrichtenencoders
@@ -25,14 +25,14 @@ In diesem Thema wird erläutert, Kriterien zum Wählen einer der Nachrichtenenco
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, der binäre Nachrichtenencoder, verwendet ein kompaktes binäres Format sind für WCF optimiert, für die WCF-Kommunikation und ist daher nicht interoperabel. Dies ist auch die meisten leistungsstärkste Encoder, der alle Encoder, die WCF bietet.  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>, das Bindungselement gibt an, das die zeichencodierung und Nachrichtenversion für Nachrichten mit MTOM-Codierung. MTOM ist eine effiziente Technologie zum Übertragen von Binärdaten in WCF-Nachrichten. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu schaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung. Im Hinblick auf Effizienz zwischen der Encoder, die WCF bietet, die ist die MTOM (dem langsamsten) zwischen Text und Binärdaten (dem schnellsten).  
+-   Das <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>-Bindungselement gibt die Zeichencodierung und die für MTOM verwendete Nachrichtenversionsverwaltung an. MTOM ist eine effiziente Technologie zum Übertragen von Binärdaten in WCF-Nachrichten. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu schaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung. Im Hinblick auf Effizienz zwischen der Encoder, die WCF bietet, die ist die MTOM (dem langsamsten) zwischen Text und Binärdaten (dem schnellsten).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>So wählen Sie einen Nachrichtenencoder aus  
  In der folgenden Tabelle werden allgemeine Faktoren beschrieben, die bei der Auswahl eines Nachrichtenencoders berücksichtigt werden. Priorisieren Sie die Faktoren, die für Ihre Anwendung wichtig sind, und wählen Sie dann die Nachrichtenencoder aus, die mit diesen Faktoren am besten funktionieren. Berücksichtigen Sie alle weiteren, in dieser Tabelle nicht aufgelisteten Faktoren sowie alle benutzerdefinierten Encoder, die eventuell für Ihre Anwendung erforderlich sind.  
   
 |Faktor|Beschreibung|Encoder, die diesen Faktor unterstützen|  
 |------------|-----------------|---------------------------------------|  
-|Unterstützte Zeichensätze|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> und <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> unterstützt nur die UTF8- und UTF16-Unicode (*big-Endian-* und *little-Endian-*) Codierungen. Sind andere Codierungen erforderlich (beispielsweise UTF7 oder ASCII), muss ein benutzerdefinierter Encoder verwendet werden. Ein Beispiel für benutzerdefinierte Encoder finden Sie unter [Custom Message Encoder](https://go.microsoft.com/fwlink/?LinkId=119857).|Text|  
+|Unterstützte Zeichensätze|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützen nur die UTF8- und UTF16-Unicode (*big-Endian-* und *little-Endian-*) Codierungen. Sind andere Codierungen erforderlich (beispielsweise UTF7 oder ASCII), muss ein benutzerdefinierter Encoder verwendet werden. Ein Beispiel für benutzerdefinierte Encoder finden Sie unter [Custom Message Encoder](https://go.microsoft.com/fwlink/?LinkId=119857).|Text|  
 |Inspektion|Inspektion ist die Fähigkeit, Nachrichten während der Übertragung zu untersuchen. Textcodierungem, entweder mit oder ohne die Verwendung von SOAP, ermöglichen die Inspektion und Analyse von Nachrichten mit vielen Anwendungen, ohne spezielle Tools zu verwenden. Beachten Sie, dass sich die Verwendung der Übertragungssicherheit, entweder auf Nachrichten- oder auf Transportebene, auf die Inspektionsfähigkeit der Nachrichten auswirkt. Vertraulichkeit schützt eine Nachricht davor, untersucht zu werden, und Integrität schützt eine Nachricht davor, geändert zu werden.|Text|  
 |Zuverlässigkeit|Zuverlässigkeit ist die Widerstandsfähigkeit eines Encoders gegen Übertragungsfehler. Zuverlässigkeit kann auch auf Nachrichten-, Transport- oder Anwendungsebene bereitgestellt werden. Allen die standard-WCF-Encoder wird davon ausgegangen, dass eine andere Ebene Zuverlässigkeit bereitstellt. Der Encoder hat wenige Möglichkeiten, nach einem Übertragungsfehler eine Wiederherstellung durchzuführen.|Keiner|  
 |Einfachheit|Einfachheit stellt die Leichtigkeit dar, mit der Sie Encoder und Decoder für eine Codierungsspezifikation erstellen können. Textcodierungen sind besonders vorteilhaft für die Einfachheit. Die POX-Textcodierung hat den zusätzlichen Vorteil, dass keine Unterstützung der SOAP-Verarbeitung erforderlich ist.|Text (POX)|  

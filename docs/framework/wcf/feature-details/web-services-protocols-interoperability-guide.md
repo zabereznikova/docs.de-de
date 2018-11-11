@@ -3,11 +3,11 @@ title: Handbuch für die Interoperabilität von Webdienstprotokollen
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995398"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744547"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
 Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste von Webdienstprotokollen, die von die WCF implementiert. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  

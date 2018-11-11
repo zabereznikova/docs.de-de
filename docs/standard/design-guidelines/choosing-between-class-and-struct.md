@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865552"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757425"
 ---
 # <a name="choosing-between-class-and-struct"></a>Auswählen zwischen Klasse und Struktur
 Eine der grundlegenden entwurfsentscheidungen, die alle Framework-Designer zeigt ist, ob einen Typ als eine Klasse (Referenztyp) oder als eine Struktur (Werttyp) entwerfen. Die Kenntnis der Unterschiede im Verhalten von Verweistypen und Werttypen ist in dieser Auswahl entscheidend.  
@@ -28,7 +28,7 @@ Eine der grundlegenden entwurfsentscheidungen, die alle Framework-Designer zeigt
   
  Als Nächstes Arrays von Verweisen auf Typen werden Out-of-Line, d. h. das Array die Elemente sind nur die Verweise auf Instanzen des Referenztyps auf dem Heap zugeordnet. Wert Typ Arrays werden Inline, was bedeutet, dass die Elemente des Arrays, die eigentlichen Instanzen des Werttyps sind zugeordnet. Aus diesem Grund werden speicherzuordnungen und Aufhebungen von Typ Wertarrays wesentlich günstiger als speicherzuordnungen und Aufhebungen von Verweistyparrays. Darüber hinaus eine Wertarrays-Typ in der Mehrheit der Fälle viel bessere Positionierung von Verweisen auf.  
   
- Nächste Unterschied bezieht sich auf die speicherauslastung. Werttypen erste geschachtelt beim Konvertieren in ein Verweistyp oder eine der Schnittstellen, die sie implementieren. Sie erhalten nicht geschachtelte beim Konvertieren in den Werttyp zurück. Da Felder Objekte sind, die auf dem Heap reserviert sind und Garbage Collection zu viel Boxing und unboxing können sich negativ auf dem Heap der Garbage Collector und letztlich die Leistung der Anwendung haben.  Im Gegensatz dazu tritt auf, keine solche Boxing-Konvertierung, da Verweistypen umgewandelt werden.  
+ Nächste Unterschied bezieht sich auf die speicherauslastung. Werttypen erste geschachtelt beim Konvertieren in ein Verweistyp oder eine der Schnittstellen, die sie implementieren. Sie erhalten nicht geschachtelte beim Konvertieren in den Werttyp zurück. Da Felder Objekte sind, die auf dem Heap reserviert sind und Garbage Collection zu viel Boxing und unboxing können sich negativ auf dem Heap der Garbage Collector und letztlich die Leistung der Anwendung haben.  Im Gegensatz dazu tritt auf, keine solche Boxing-Konvertierung, da Verweistypen umgewandelt werden. (Weitere Informationen finden Sie unter [Boxing und Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
  Kopieren Sie anschließend den Verweis-Typ-Zuweisungen die Referenz während der Wert bei typzuweisungen kopieren Sie den gesamten Wert. Aus diesem Grund sind Zuweisungen von großen Verweistypen günstiger als Zuweisungen von Typen mit umfangreichen Werten.  
   

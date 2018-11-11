@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183892"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744612"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen
 In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline für ein Add-in erstellen, die einfachen Taschenrechner Funktionen ausführt. Es wird nicht auf einem realen Szenario veranschaulicht; Stattdessen zeigt es die grundlegende Funktionen einer Pipeline und wie ein Add-In-Dienste für einen Host bereitstellen kann.  
