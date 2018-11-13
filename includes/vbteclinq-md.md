@@ -1,1 +1,1 @@
-<span data-ttu-id="a75dc-101">LINQ</span><span class="sxs-lookup"><span data-stu-id="a75dc-101">LINQ</span></span>
+<span data-ttu-id="32a11-101">LINQ</span><span class="sxs-lookup"><span data-stu-id="32a11-101">LINQ</span></span>

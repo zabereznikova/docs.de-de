@@ -9,22 +9,22 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45973104"
 ---
-# <a name="external-functions"></a><span data-ttu-id="65f7e-103">Externe Funktionen</span><span class="sxs-lookup"><span data-stu-id="65f7e-103">External Functions</span></span>
+# <a name="external-functions"></a><span data-ttu-id="8bc67-103">Externe Funktionen</span><span class="sxs-lookup"><span data-stu-id="8bc67-103">External Functions</span></span>
 
-<span data-ttu-id="65f7e-104">Dieses Thema beschreibt die F#-sprachunterstützung für das Aufrufen von Funktionen in systemeigenen Code.</span><span class="sxs-lookup"><span data-stu-id="65f7e-104">This topic describes F# language support for calling functions in native code.</span></span>
+<span data-ttu-id="8bc67-104">Dieses Thema beschreibt die F#-sprachunterstützung für das Aufrufen von Funktionen in systemeigenen Code.</span><span class="sxs-lookup"><span data-stu-id="8bc67-104">This topic describes F# language support for calling functions in native code.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="65f7e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="65f7e-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8bc67-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="8bc67-105">Syntax</span></span>
 
 ```fsharp
 [<DllImport( arguments )>]
 extern declaration
 ```
 
-## <a name="remarks"></a><span data-ttu-id="65f7e-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="65f7e-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8bc67-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8bc67-106">Remarks</span></span>
 
-<span data-ttu-id="65f7e-107">In der vorherigen Syntax wird *Argumente* stellt die Argumente, die an sind die `System.Runtime.InteropServices.DllImportAttribute` Attribut.</span><span class="sxs-lookup"><span data-stu-id="65f7e-107">In the previous syntax, *arguments* represents arguments that are supplied to the `System.Runtime.InteropServices.DllImportAttribute` attribute.</span></span> <span data-ttu-id="65f7e-108">Das erste Argument ist eine Zeichenfolge mit dem Namen der DLL, die dieser Funktion, ohne die .dll-Erweiterung enthält.</span><span class="sxs-lookup"><span data-stu-id="65f7e-108">The first argument is a string that represents the name of the DLL that contains this function, without the .dll extension.</span></span> <span data-ttu-id="65f7e-109">Zusätzliche Argumente angegeben werden können, für alle öffentlichen Eigenschaften des der `System.Runtime.InteropServices.DllImportAttribute` Klasse, z. B. die Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="65f7e-109">Additional arguments can be supplied for any of the public properties of the `System.Runtime.InteropServices.DllImportAttribute` class, such as the calling convention.</span></span>
+<span data-ttu-id="8bc67-107">In der vorherigen Syntax wird *Argumente* stellt die Argumente, die an sind die `System.Runtime.InteropServices.DllImportAttribute` Attribut.</span><span class="sxs-lookup"><span data-stu-id="8bc67-107">In the previous syntax, *arguments* represents arguments that are supplied to the `System.Runtime.InteropServices.DllImportAttribute` attribute.</span></span> <span data-ttu-id="8bc67-108">Das erste Argument ist eine Zeichenfolge mit dem Namen der DLL, die dieser Funktion, ohne die .dll-Erweiterung enthält.</span><span class="sxs-lookup"><span data-stu-id="8bc67-108">The first argument is a string that represents the name of the DLL that contains this function, without the .dll extension.</span></span> <span data-ttu-id="8bc67-109">Zusätzliche Argumente angegeben werden können, für alle öffentlichen Eigenschaften des der `System.Runtime.InteropServices.DllImportAttribute` Klasse, z. B. die Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="8bc67-109">Additional arguments can be supplied for any of the public properties of the `System.Runtime.InteropServices.DllImportAttribute` class, such as the calling convention.</span></span>
 
-<span data-ttu-id="65f7e-110">Angenommen Sie, Sie haben eine systemeigene C++-DLL, die die folgende exportierte Funktion enthält.</span><span class="sxs-lookup"><span data-stu-id="65f7e-110">Assume you have a native C++ DLL that contains the following exported function.</span></span>
+<span data-ttu-id="8bc67-110">Angenommen Sie, Sie haben eine systemeigene C++-DLL, die die folgende exportierte Funktion enthält.</span><span class="sxs-lookup"><span data-stu-id="8bc67-110">Assume you have a native C++ DLL that contains the following exported function.</span></span>
 
 ```cpp
 #include <stdio.h>
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-<span data-ttu-id="65f7e-111">Sie können diese Funktion von F#-aufrufen, mit dem folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="65f7e-111">You can call this function from F# by using the following code.</span></span>
+<span data-ttu-id="8bc67-111">Sie können diese Funktion von F#-aufrufen, mit dem folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="8bc67-111">You can call this function from F# by using the following code.</span></span>
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,8 +46,8 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-<span data-ttu-id="65f7e-112">Interoperabilität mit systemeigenem Code wird als bezeichnet *Plattformaufruf* ist ein Feature der CLR.</span><span class="sxs-lookup"><span data-stu-id="65f7e-112">Interoperability with native code is referred to as *platform invoke* and is a feature of the CLR.</span></span> <span data-ttu-id="65f7e-113">Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="65f7e-113">For more information, see [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md).</span></span> <span data-ttu-id="65f7e-114">Die Informationen in diesem Abschnitt gilt für F#-zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="65f7e-114">The information in that section is applicable to F#.</span></span>
+<span data-ttu-id="8bc67-112">Interoperabilität mit systemeigenem Code wird als bezeichnet *Plattformaufruf* ist ein Feature der CLR.</span><span class="sxs-lookup"><span data-stu-id="8bc67-112">Interoperability with native code is referred to as *platform invoke* and is a feature of the CLR.</span></span> <span data-ttu-id="8bc67-113">Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="8bc67-113">For more information, see [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md).</span></span> <span data-ttu-id="8bc67-114">Die Informationen in diesem Abschnitt gilt für F#-zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="8bc67-114">The information in that section is applicable to F#.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="65f7e-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="65f7e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8bc67-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8bc67-115">See also</span></span>
 
-- [<span data-ttu-id="65f7e-116">Funktionen</span><span class="sxs-lookup"><span data-stu-id="65f7e-116">Functions</span></span>](index.md)
+- [<span data-ttu-id="8bc67-116">Funktionen</span><span class="sxs-lookup"><span data-stu-id="8bc67-116">Functions</span></span>](index.md)

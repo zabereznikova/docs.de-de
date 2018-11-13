@@ -1,6 +1,6 @@
 ---
 title: Operator || (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925539"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="043a7-102">Operator || (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="043a7-102">|| Operator (C# Reference)</span></span>
-<span data-ttu-id="043a7-103">Der bedingte Operator OR (`||`) führt ein logisches „Oder“ seiner `bool`-Operanden aus.</span><span class="sxs-lookup"><span data-stu-id="043a7-103">The conditional-OR operator (`||`) performs a logical-OR of its `bool` operands.</span></span> <span data-ttu-id="043a7-104">Wenn der erste Operand als `true` ausgewertet wird, wird der zweite Operand nicht ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="043a7-104">If the first operand evaluates to `true`, the second operand isn't evaluated.</span></span> <span data-ttu-id="043a7-105">Wenn der erste Operand als `false` ausgewertet wird, wird durch den zweiten Operanden bestimmt, ob der ODER-Ausdruck als Ganzes als `true` oder `false` ausgewertet wird.</span><span class="sxs-lookup"><span data-stu-id="043a7-105">If the first operand evaluates to `false`, the second operator determines whether the OR expression as a whole evaluates to `true` or `false`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="043a7-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="043a7-106">Remarks</span></span>  
- <span data-ttu-id="043a7-107">Der Vorgang</span><span class="sxs-lookup"><span data-stu-id="043a7-107">The operation</span></span>  
-  
-```csharp  
-x || y  
-```  
-  
- <span data-ttu-id="043a7-108">entspricht dem Vorgang</span><span class="sxs-lookup"><span data-stu-id="043a7-108">corresponds to the operation</span></span>  
-  
-```csharp  
-x | y  
-```  
-  
- <span data-ttu-id="043a7-109">mit folgender Ausnahme: Wenn `x` `true` ist, wird `y` nicht ausgewertet, da der ODER-Vorgang unabhängig des Werts von `y` `true` ist.</span><span class="sxs-lookup"><span data-stu-id="043a7-109">except that if `x` is `true`, `y` is not evaluated because the OR operation is `true` regardless of the value of `y`.</span></span> <span data-ttu-id="043a7-110">Dieses Konzept wird als „Kurzschlussauswertung“ bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="043a7-110">This concept is known as "short-circuit" evaluation.</span></span>  
-  
- <span data-ttu-id="043a7-111">Der bedingte ODER-Operator kann nicht überladen werden, aber Überladungen der regulären logischen Operatoren und der Operatoren [TRUE](../../../csharp/language-reference/keywords/true.md) und [FALSE](../../../csharp/language-reference/keywords/false.md) gelten mit gewissen Einschränkungen auch als Überladungen der bedingten logischen Operatoren.</span><span class="sxs-lookup"><span data-stu-id="043a7-111">The conditional-OR operator cannot be overloaded, but overloads of the regular logical operators and the [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md) operators are, with certain restrictions, also considered to be overloads of the conditional logical operators.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="043a7-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="043a7-112">Example</span></span>  
- <span data-ttu-id="043a7-113">In den folgenden Beispielen wertet der Ausdruck, der `||` verwendet, nur den ersten Operanden aus.</span><span class="sxs-lookup"><span data-stu-id="043a7-113">In the following examples, the expression that uses `||` evaluates only the first operand.</span></span> <span data-ttu-id="043a7-114">Der Ausdruck, der `|` verwendet, wertet beide Operanden aus.</span><span class="sxs-lookup"><span data-stu-id="043a7-114">The expression that uses `|` evaluates both operands.</span></span> <span data-ttu-id="043a7-115">Im zweiten Beispiel tritt eine Laufzeitausnahme auf, wenn beide Operanden ausgewertet werden.</span><span class="sxs-lookup"><span data-stu-id="043a7-115">In the second example, a run-time exception occurs if both operands are evaluated.</span></span>  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="043a7-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="043a7-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="809a2-102">Operator || (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="809a2-102">|| Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="043a7-117">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="043a7-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="043a7-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="043a7-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="043a7-119">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="043a7-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="809a2-103">Der bedingte logische OR-Operator `||`, auch bekannt als der "kurzschließender" logischer OR-Operator bezeichnet, berechnet die logische OR-Operation der [bool](../keywords/bool.md)-Operanden.</span><span class="sxs-lookup"><span data-stu-id="809a2-103">The conditional logical OR operator `||`, also known as the "short-circuiting" logical OR operator, computes the logical OR of its [bool](../keywords/bool.md) operands.</span></span> <span data-ttu-id="809a2-104">Das Ergebnis von `x || y` ist `true`, wenn entweder `x` oder `y` `true` ergibt.</span><span class="sxs-lookup"><span data-stu-id="809a2-104">The result of `x || y` is `true` if either `x` or `y` evaluates to `true`.</span></span> <span data-ttu-id="809a2-105">Andernfalls ist das Ergebnis `false`.</span><span class="sxs-lookup"><span data-stu-id="809a2-105">Otherwise, the result is `false`.</span></span> <span data-ttu-id="809a2-106">Wenn der erste Operand als `true` ausgewertet wird, wird der zweite Operand nicht ausgewertet, und das Ergebnis der Operation ist `true`.</span><span class="sxs-lookup"><span data-stu-id="809a2-106">If the first operand evaluates to `true`, the second operand is not evaluated and the result of operation is `true`.</span></span> <span data-ttu-id="809a2-107">Das folgende Beispiel veranschaulicht dieses Verhalten:</span><span class="sxs-lookup"><span data-stu-id="809a2-107">The following example demonstrates that behavior:</span></span>
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+<span data-ttu-id="809a2-108">Der [logische OR-Operator](or-operator.md) `|` berechnet auch die logische OR-Operation der `bool`-Operanden, es werden jedoch immer beide Operanden ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="809a2-108">The [logical OR operator](or-operator.md) `|` also computes the logical OR of its `bool` operands, but always evaluates both operands.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="809a2-109">Operatorüberladbarkeit</span><span class="sxs-lookup"><span data-stu-id="809a2-109">Operator overloadability</span></span>
+
+<span data-ttu-id="809a2-110">Ein benutzerdefinierter Typ kann den bedingten logischen OR-Operator nicht überladen.</span><span class="sxs-lookup"><span data-stu-id="809a2-110">A user-defined type cannot overload the conditional logical OR operator.</span></span> <span data-ttu-id="809a2-111">Wenn ein benutzerdefinierter Typ die [logischen OR](or-operator.md)-, [true](../keywords/true-operator.md)- und [false](../keywords/false-operator.md)-Operatoren jedoch in einer bestimmten Weise überlädt, kann die `||`-Operation für die Operanden dieses Typs ausgewertet werden.</span><span class="sxs-lookup"><span data-stu-id="809a2-111">However, if a user-defined type overloads the [logical OR](or-operator.md), [true](../keywords/true-operator.md), and [false](../keywords/false-operator.md) operators in a certain way, the `||` operation can be evaluated for the operands of that type.</span></span> <span data-ttu-id="809a2-112">Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="809a2-112">For more information, see the [User-defined conditional logical operators](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="809a2-113">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="809a2-113">C# language specification</span></span>
+
+<span data-ttu-id="809a2-114">Weitere Informationen finden Sie im Abschnitt [Bedingte logische Operatoren](~/_csharplang/spec/expressions.md#conditional-logical-operators) der [C#-Sprachspezifikation](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="809a2-114">For more information, see the [Conditional logical operators](~/_csharplang/spec/expressions.md#conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="809a2-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="809a2-115">See also</span></span>
+
+- [<span data-ttu-id="809a2-116">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="809a2-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="809a2-117">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="809a2-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="809a2-118">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="809a2-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="809a2-119">&&-Operator </span><span class="sxs-lookup"><span data-stu-id="809a2-119">&& operator</span></span>](conditional-and-operator.md)
+- [!-Operator]<span data-ttu-id="809a2-120">(logical-negation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="809a2-120">(logical-negation-operator.md)</span></span>
+- [<span data-ttu-id="809a2-121">|-Operator</span><span class="sxs-lookup"><span data-stu-id="809a2-121">| operator</span></span>](or-operator.md)
