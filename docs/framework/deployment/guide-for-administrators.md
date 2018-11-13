@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195683"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744586"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -176,8 +176,8 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
 9. Verwenden Sie auf der Seite **Benutzerfreundlichkeit** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.  
   
-    > [!WARNING]
-    >  Möglicherweise gelten in Ihrer Produktionsumgebung Richtlinien, die eine andere Auswahl für den Bereitstellungszeitplan erfordern. Weitere Informationen zu diesen Optionen finden Sie in der Microsoft TechNet-Bibliothek unter [Eigenschaften von „Ankündigungsname“: Registerkarte „Zeitplan“](https://technet.microsoft.com/library/bb694016.aspx).  
+> [!WARNING]
+> Möglicherweise gelten in Ihrer Produktionsumgebung Richtlinien, die eine andere Auswahl für den Bereitstellungszeitplan erfordern. Informationen zu diesen Optionen finden Sie unter [Eigenschaften von „Ankündigungsname“: Registerkarte „Zeitplan“](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
   
 10. Verwenden Sie auf der Seite **Verteilungspunkte** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.  
   
@@ -207,7 +207,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
 -   [Standortverwaltung für System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Planen und Bereitstellen einzelner Standorte mit Configuration Manager](https://technet.microsoft.com/library/bb680961.aspx)  
+-   [Planen und Bereitstellen einzelner Standorte mit Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  **System Center 2012 Configuration Manager-Client für Windows-Computer:**  
   

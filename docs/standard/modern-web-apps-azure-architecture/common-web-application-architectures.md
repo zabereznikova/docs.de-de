@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häu
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404631"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757451"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -97,7 +97,7 @@ Der einfachste Ansatz zum Skalieren einer Webanwendung in Azure ist das manuelle
 
 ## <a name="clean-architecture"></a>Clean Architecture
 
-Anwendungen, die den Prinzipien der Abhängigkeitsumkehr und des domänengesteuerten Entwurfs (DDD) folgen, weisen alle eine ähnliche Architektur auf. Diese Architektur wurde in den vergangenen Jahren unterschiedlich benannt. Zuerst wurde diese Architektur als „Hexagonal Architecture“ bezeichnet. Darauf folgte der Begriff „Ports-and-Adapters“. Heutzutage spricht man aber eher von [Onion Architecture](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) bzw. [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Der zweite Name, „Clean Architecture“, wird in diesem E-Book als Name dieser Architektur verwendet.
+Anwendungen, die den Prinzipien der Abhängigkeitsumkehr und des domänengesteuerten Entwurfs (DDD) folgen, weisen alle eine ähnliche Architektur auf. Diese Architektur wurde in den vergangenen Jahren unterschiedlich benannt. Zuerst wurde diese Architektur als „Hexagonal Architecture“ bezeichnet. Darauf folgte der Begriff „Ports-and-Adapters“. Heutzutage spricht man aber eher von [Onion Architecture](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) bzw. [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Der zweite Name, „Clean Architecture“, wird in diesem E-Book als Name dieser Architektur verwendet.
 
 > [!NOTE]
 > Die Clean Architecture kann sowohl für Anwendungen erstellt werden, die dem DDD-Prinzip folgen, als auch für Anwendungen, die diesem nicht entsprechen. Wenn das DDD-Prinzip angewendet wird, kann die Architektur als „Clean DDD Architecture“ bezeichnet werden.
@@ -307,7 +307,7 @@ Wenn Sie Ihrer Anwendung mithilfe von Visual Studio Docker-Unterstützung hinzuf
 > - **Clean Architecture**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Onion Architecture**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **The Repository Pattern (Das Muster „Repository“)**  
 >   <https://deviq.com/repository-pattern/>
 > - **Clean Architecture Solution Sample (Projektmappenbeispiel unter Verwendung von Clean Architecture)**  

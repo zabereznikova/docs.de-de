@@ -10,10 +10,10 @@ ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "45698340"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Einfügen von XML-Daten mit XPathNavigator
@@ -273,7 +273,7 @@ navigator.SetTypedValue(DateTime.Now);
   
 -   Dem XML-Dokument werden von <xref:System.Xml.XmlWriter>-Objekten geschriebene XML-Fragmente hinzugefügt, wenn die <xref:System.Xml.XmlWriter.Close%2A>-Methode eines jeden <xref:System.Xml.XmlWriter>-Objekts aufgerufen wird. Bis zu diesem Zeitpunkt schreibt das <xref:System.Xml.XmlWriter>-Objekt ein nicht verbundenes Fragment. Das Ausführen eines Vorgangs für das XML-Dokument wirkt sich nicht auf Fragmente aus, die vor dem Aufrufen von <xref:System.Xml.XmlWriter> von einem <xref:System.Xml.XmlWriter.Close%2A>-Objekt geschrieben wurden.  
   
--   Wenn sich auf einer bestimmten XML-Teilstruktur ein offenes <xref:System.Xml.XmlWriter>-Objekt befindet und diese Teilstruktur gelöscht wird, könnte das <xref:System.Xml.XmlWriter>-Objekt der Teilstrukur noch hinzugefügt werden. Aus der Teilstruktur wird einfach ein gelöschtes Fragment.  
+-   Wenn sich auf einer bestimmten XML-Unterstruktur ein offenes <xref:System.Xml.XmlWriter>-Objekt befindet und diese Unterstruktur gelöscht wird, könnte das <xref:System.Xml.XmlWriter>-Objekt der Unterstruktur noch hinzugefügt werden. Aus der Teilstruktur wird einfach ein gelöschtes Fragment.  
   
 -   Wenn an der gleichen Stelle im XML-Dokument mehrere <xref:System.Xml.XmlWriter>-Objekte geöffnet sind, werden sie dem XML-Dokument in der Reihenfolge hinzugefügt, in der die <xref:System.Xml.XmlWriter>-Objekte geschlossen werden, und nicht in der Reihenfolge, in der sie geöffnet wurden.  
   

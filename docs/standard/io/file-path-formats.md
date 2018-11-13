@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424388"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214193"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -202,7 +202,7 @@ Beachten Sie, dass Sie Pfade mit mehr Zeichen als `MAX_PATH` verwenden können, 
 Dass Pfad- und Verzeichnisnamen die Groß-/Kleinschreibung ignorieren, ist eine Besonderheit vom Windows-Dateisystem, was viele Benutzer und Entwickler verwirrt, die Windows nicht verwenden. Das bedeutet, dass Verzeichnis- und Dateinamen die Schreibweise der Zeichenfolgen darstellen, mit der sie erstellt wurden. Zum Beispiel erstellt der Methodenaufruf
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 ein Verzeichnis namens TeStDiReCtOrY. Wenn Sie ein Verzeichnis oder eine Datei umbenennen, um die Groß-/Kleinschreibung zu ändern, wird die entsprechende Zeichenfolge angezeigt, die Sie beim Umbenennen eingegeben haben. Der folgende Code benennt beispielweise eine Datei namens „test.txt“ in „Test.txt“ um:
 

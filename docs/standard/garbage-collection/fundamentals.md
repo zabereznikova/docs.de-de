@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582748"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982866"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 <a name="top"></a> In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager. Der Garbage Collector bietet folgende Vorteile:  
@@ -172,7 +172,7 @@ ms.locfileid: "48582748"
   
  Der Garbage Collector bestimmt anhand folgender Informationen, ob Objekte aktiv sind:  
   
--   **Stapelstämme**. Vom Just-In-Time (JIT)-Compiler bereitgestellte Stapelvariablen und Stackwalker.  
+-   **Stapelstämme**. Vom Just-In-Time (JIT)-Compiler bereitgestellte Stapelvariablen und Stackwalker. Beachten Sie, dass durch JIT-Optimierungen Bereiche des Codes verlängert oder verkürzt werden können, in denen Stapelvariablen dem Garbage Collector gemeldet werden.
   
 -   **Garbage Collection-Handles**. Diese Handles zeigen auf verwaltete Objekte und können vom Benutzercode oder der Common Language Runtime zugeordnet werden.  
   
