@@ -36,5 +36,5 @@ Weitere Informationen finden Sie im Abschnitt [Bedingte logische Operatoren](~/_
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [||-Operator](conditional-or-operator.md)
-- [!-Operator](logical-negation-operator.md)
+- [\!-Operator](logical-negation-operator.md)
 - [&-Operator](and-operator.md)
