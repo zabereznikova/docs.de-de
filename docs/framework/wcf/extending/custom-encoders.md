@@ -2,11 +2,11 @@
 title: Benutzerdefinierte Encoder
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034345"
 ---
 # <a name="custom-encoders"></a>Benutzerdefinierte Encoder
@@ -60,7 +60,7 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
  Zusätzlich zum Verarbeiten dynamischer Wörterbuchschlüssel erfolgt der Empfang sitzungsbasierter Meldungen auf eindeutige Weise. Anstatt einen Reader über das Dokument zu erstellen und dieses anschließend zu verarbeiten, wird der binäre Stream bei der Binärcodierung mithilfe der internen `MessagePatterns`-Klasse zerlegt. Die Idee ist, dass die meisten Nachrichten ein bestimmten Satzes von Headern, die in einer bestimmten Reihenfolge beim Generieren von WCF angezeigt werden. Die Nachricht wird vom Mustersystem auf Basis der jeweiligen Erwartung zerlegt. Ist der Vorgang erfolgreich, wird ohne XML-Analyse ein <xref:System.ServiceModel.Channels.MessageHeaders>-Objekt erstellt. Andernfalls wird wieder die Standardmethode verwendet.  
   
 ### <a name="mtom-encoding"></a>MTOM-Codierung  
- Die <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> -Klasse verfügt über eine zusätzliche Konfigurationseigenschaft, die Namen <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2A>. Hierdurch wird eine Obergrenze für die Menge der Daten festgelegt, die beim Lesen einer Nachricht gepuffert werden dürfen. Das XML Information Set (Infoset) sowie andere MIME-Teile müssen möglicherweise gepuffert werden, um MIME-Teile wieder zu einer einzelnen Nachricht zusammenzufügen.  
+ Die <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>-Klasse verfügt über eine zusätzliche Konfigurationseigenschaft mit der Bezeichnung <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>. Hierdurch wird eine Obergrenze für die Menge der Daten festgelegt, die beim Lesen einer Nachricht gepuffert werden dürfen. Das XML Information Set (Infoset) sowie andere MIME-Teile müssen möglicherweise gepuffert werden, um MIME-Teile wieder zu einer einzelnen Nachricht zusammenzufügen.  
   
  Für das ordnungsgemäße Funktionieren mit HTTP werden vom internen MTOM-Nachrichtenencoder einige interne APIs für `GetContentType` (ebenfalls intern) und `WriteMessage` bereitgestellt. Letzteres Element ist öffentlich und kann außer Kraft gesetzt werden. Damit sichergestellt ist, dass die Werte in den HTTP-Headern mit den Werten in den MIME-Headern übereinstimmen, ist ein höheres Kommunikationsaufkommen erforderlich.  
   
