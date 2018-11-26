@@ -1,13 +1,13 @@
 ---
 title: 'Ressourcenverwaltung: Das use-Schlüsselwort (F#)'
-description: Informationen Sie zu den F#-Schlüsselwort "Use" und die "using"-Funktion, die die Initialisierung und Freigabe von Ressourcen steuern kann.
+description: Erfahren Sie mehr über die F# 'verwendet'-Schlüsselwort und die "using"-Funktion, die die Initialisierung und Freigabe von Ressourcen steuern kann.
 ms.date: 05/16/2016
-ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45616061"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296879"
 ---
 # <a name="resource-management-the-use-keyword"></a>Ressourcenverwaltung: Das use-Schlüsselwort
 
@@ -33,8 +33,8 @@ Das folgende Beispiel zeigt, wie Sie eine Datei automatisch mit schließen die `
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
->[!NOTE]
-Können Sie `use` in Berechnungsausdrücken, in diesem Fall, dass eine angepasste Version von der `use` Ausdruck wird verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Berechnungsausdrücke](computation-expressions.md).
+> [!NOTE]
+> Können Sie `use` in Berechnungsausdrücken, in diesem Fall, dass eine angepasste Version von der `use` Ausdruck wird verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Berechnungsausdrücke](computation-expressions.md).
 
 ## <a name="using-function"></a>Mithilfe der Funktion
 

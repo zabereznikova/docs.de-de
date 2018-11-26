@@ -1,13 +1,13 @@
 ---
 title: Compileranweisungen (F#)
-description: Informationen Sie zu F#-Sprache präprozessoranweisungen, Anweisungen für bedingte Kompilierung, Line-Anweisungen und Compiler-Direktiven.
+description: Erfahren Sie mehr über F# Sprache präprozessoranweisungen, Anweisungen für bedingte Kompilierung, Line-Anweisungen und Compiler-Direktiven.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50181367"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296502"
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 
@@ -35,8 +35,8 @@ Die Auswirkungen der Deaktivierung einer Warnung, die auf die gesamte Datei, ein
 
 Code, der durch eine dieser Anweisungen deaktiviert wird, die im Visual Studio Code-Editor abgeblendet angezeigt.
 
->[!NOTE]
-Das Verhalten der Anweisungen für die bedingte Kompilierung entspricht nicht dem in anderen Sprachen. Beispielsweise können Sie keine booleschen Ausdrücke mit Symbolen verwenden, zudem verfügen `true` und `false` über keine besondere Bedeutung. In der `if`-Direktive von Ihnen verwendete Symbole müssen über die Befehlszeile oder in den Projekteinstellungen definiert werden. Es steht keine `define`-Präprozessordirektive zur Verfügung.
+> [!NOTE]
+> Das Verhalten der Anweisungen für die bedingte Kompilierung entspricht nicht dem in anderen Sprachen. Beispielsweise können Sie keine booleschen Ausdrücke mit Symbolen verwenden, zudem verfügen `true` und `false` über keine besondere Bedeutung. In der `if`-Direktive von Ihnen verwendete Symbole müssen über die Befehlszeile oder in den Projekteinstellungen definiert werden. Es steht keine `define`-Präprozessordirektive zur Verfügung.
 
 Im folgenden Code wird die Verwendung der Direktiven `#if`, `#else` und `#endif` veranschaulicht. In diesem Beispiel enthält der Code zwei Versionen der Definition von `function1`. Wenn `VERSION1` wird definiert, mit der [-define-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), den Code zwischen die `#if` Richtlinie und die `#else` aktiviert. Andernfalls wird der Code zwischen `#else` und `#endif` aktiviert.
 

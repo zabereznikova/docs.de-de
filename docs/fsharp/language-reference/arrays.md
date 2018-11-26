@@ -2,17 +2,17 @@
 title: Arrays (F#)
 description: Informationen Sie zum Erstellen und Verwenden von Arrays in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032725"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297191"
 ---
 # <a name="arrays"></a>Arrays
 
 > [!NOTE]
-Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
+> Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
 Arrays sind nullbasierte, änderbare Sequenzen fester Größe von aufeinander folgenden Datenelementen, die alle den gleichen Typ aufweisen.
 

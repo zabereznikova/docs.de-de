@@ -2,19 +2,18 @@
 title: Formate von Dateipfaden unter Windows-Systemen
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214193"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296827"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -90,8 +89,8 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
 
    Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Zum Beispiel:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     Für UNC-Pfade für Geräte bildet der Abschnitt „server/share“ das Volume. Zum Beispiel entspricht der Abschnitt „server/share“ bei `\\?\server1\e:\utilities\\filecomparer\` „server1\utilities“. Dies ist beim Aufrufen einer Methode mit relativen Verzeichnissegmenten wie <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> wichtig. Es ist nicht möglich, weiter als zum Volume zu navigieren. 
 
@@ -114,7 +113,7 @@ Die meisten Pfade, die an Windows-APIs übergeben werden, werden normalisiert. W
 - Relative Verzeichniskomponenten werden ausgewertet (`.` für das aktuelle Verzeichnis und `..` für das übergeordnete Verzeichnis).
 - Bestimmte Zeichen werden gekürzt.
 
-Diese Normalisierung erfolgt implizit, Sie können sie jedoch explizit ausführen, indem Sie die Methode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> aufrufen, die einen Aufruf der [GetFullPathName()-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) umschließt. Sie können die Windows-Funktion [GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) auch aufrufen, indem Sie „P/Invoke“ verwenden . 
+Diese Normalisierung erfolgt implizit, Sie können sie jedoch explizit ausführen, indem Sie die Methode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> aufrufen, die einen Aufruf der [GetFullPathName()-Funktion](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) umschließt. Sie können die Windows-Funktion [GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) auch aufrufen, indem Sie „P/Invoke“ verwenden
 
 ### <a name="identifying-the-path"></a>Identifizieren des Pfads
 

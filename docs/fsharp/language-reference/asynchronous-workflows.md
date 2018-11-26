@@ -1,18 +1,18 @@
 ---
 title: Asynchrone Workflows (F#)
-description: Erfahren Sie mehr über Unterstützung für in die F#-Programmiersprache zum Ausführen von Berechnungen asynchron, die ausgeführt werden, ohne dass die Ausführung weiterer Aufgaben blockiert.
+description: Erfahren Sie mehr über die Unterstützung in den F# Programmiersprache zum Ausführen von Berechnungen asynchron, die ausgeführt werden, ohne die Ausführung weiterer Aufgaben zu blockieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861561"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297074"
 ---
 # <a name="asynchronous-workflows"></a>Asynchrone Workflows
 
 > [!NOTE]
-Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
+> Mit dem API-Referenz-Link gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
 Dieses Thema beschreibt die Unterstützung in F# zum Ausführen von Berechnungen asynchron, d. h. ohne Ausführung weiterer Aufgaben zu blockieren. Beispielsweise können asynchrone Berechnungen verwendet werden, zum Schreiben von Anwendungen mit Benutzeroberflächen, die für Benutzer reaktionsfähig bleiben, wie die Anwendung andere Aufgaben ausführt.
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-Zusätzlich zu `let!`, können Sie `use!` zum Ausführen von asynchroner Bindungen. Der Unterschied zwischen `let!` und `use!` ist identisch mit den Unterschied zwischen `let` und `use`. Für `use!`, das Objekt am Ende des aktuellen Bereichs verworfen wird. Beachten Sie, dass in der aktuellen Version der F#-Sprache, `use!` lässt sich nicht auf einen Wert auf null initialisiert werden, obwohl `use` ist.
+Zusätzlich zu `let!`, können Sie `use!` zum Ausführen von asynchroner Bindungen. Der Unterschied zwischen `let!` und `use!` ist identisch mit den Unterschied zwischen `let` und `use`. Für `use!`, das Objekt am Ende des aktuellen Bereichs verworfen wird. Beachten Sie, dass der in der aktuellen Version der F# Sprache `use!` lässt sich nicht auf einen Wert auf null initialisiert werden, obwohl `use` ist.
 
 ## <a name="asynchronous-primitives"></a>Asynchrone primitiven
 
-Eine Methode, die einen einzelnen asynchronen Vorgang ausführt, und gibt das Ergebnis wird aufgerufen, eine *asynchrone Primitive*, und diese sind darauf ausgelegt, insbesondere für die Verwendung mit `let!`. Mehrere asynchrone Primitive Typen werden in der F#-Kernbibliothek definiert. Werden zwei Methoden für Webanwendungen im Modul definierten [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) und [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Beide primitive herunterladen Daten von einer Webseite, wenn eine URL. `AsyncGetResponse` erzeugt eine `System.Net.WebResponse` Objekt und `AsyncDownloadString` erzeugt eine Zeichenfolge, die den HTML-Code für eine Webseite darstellt.
+Eine Methode, die einen einzelnen asynchronen Vorgang ausführt, und gibt das Ergebnis wird aufgerufen, eine *asynchrone Primitive*, und diese sind darauf ausgelegt, insbesondere für die Verwendung mit `let!`. Mehrere asynchrone primitiven werden definiert, der F# -Kernbibliothek. Werden zwei Methoden für Webanwendungen im Modul definierten [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) und [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Beide primitive herunterladen Daten von einer Webseite, wenn eine URL. `AsyncGetResponse` erzeugt eine `System.Net.WebResponse` Objekt und `AsyncDownloadString` erzeugt eine Zeichenfolge, die den HTML-Code für eine Webseite darstellt.
 
 Mehrere primitiven für asynchrone e/a-Vorgänge sind enthalten die [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) Modul. Diese Erweiterungsmethoden die `System.IO.Stream` -Klasse sind [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) und [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
 Sie können auch eigene asynchrone Primitive Typen schreiben, durch die Definition einer Funktion, deren vollständiger Text in einen asynchronen Block eingeschlossen ist.
 
-Um verwenden asynchrone Methoden in .NET Framework, die entwickelt wurden, für andere asynchrone Modelle mit dem asynchronen F#-Programmiermodell, erstellen Sie eine Funktion, einen F#-zurückgibt `Async` Objekt. Die F#-Bibliothek verfügt über Funktionen, die dies leicht zu bewerkstelligen ist.
+Um verwenden asynchrone Methoden in .NET Framework, die entwickelt wurden, für andere asynchrone Modelle mit dem asynchronen F#-Programmiermodell, erstellen Sie eine Funktion, einen F#-zurückgibt `Async` Objekt. Die F# Bibliothek verfügt über Funktionen, die dies leicht zu bewerkstelligen ist.
 
 Ein Beispiel für die Verwendung von asynchronen Workflows ist hier enthalten. Es gibt viele andere in der Dokumentation für die Methoden der [Async-Klasse](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).
 

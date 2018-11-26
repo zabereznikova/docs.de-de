@@ -2,23 +2,23 @@
 title: Zeichenfolgen (F#)
 description: Erfahren Sie, wie der F#-Typ "String" unveränderlichen Text als Sequenz von Unicode-Zeichen darstellt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799342"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296787"
 ---
 # <a name="strings"></a>Zeichenfolgen
 
 > [!NOTE]
-Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
+> Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
 Die `string` stellt unveränderlichen Text als Sequenz von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET Framework.
 
 ## <a name="remarks"></a>Hinweise
 
-Trennzeichen für Zeichenfolgenliterale dient das Anführungszeichen ("). Der umgekehrte Schrägstrich ( \\ ) wird verwendet, um bestimmte Sonderzeichen codiert. Der umgekehrte Schrägstrich und das nächste Zeichen, die zusammen als bekanntermaßen eine *Escapesequenz*. Escape-Zeichensequenzen in F#-Zeichenfolge, die Literale in der folgenden Tabelle gezeigt werden unterstützt.
+Trennzeichen für Zeichenfolgenliterale dient das Anführungszeichen ("). Der umgekehrte Schrägstrich ( \\ ) wird verwendet, um bestimmte Sonderzeichen codiert. Der umgekehrte Schrägstrich und das nächste Zeichen, die zusammen als bekanntermaßen eine *Escapesequenz*. Escape-Zeichensequenzen in unterstützt F# Zeichenfolgenliterale werden in der folgenden Tabelle angezeigt.
 
 |Zeichen|Escapesequenz|
 |---------|---------------|

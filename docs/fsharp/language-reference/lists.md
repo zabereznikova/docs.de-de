@@ -1,18 +1,18 @@
 ---
 title: Listen (F#)
-description: Informationen Sie zu F#-Listen, die eine geordnete, unveränderliche Reihe von Elementen des gleichen Typs.
+description: Erfahren Sie mehr über F# aufgeführt sind, handelt es sich bei eine geordnete, unveränderliche Reihe von Elementen des gleichen Typs.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50201623"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297503"
 ---
 # <a name="lists"></a>Listen
 
 > [!NOTE]
-Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
+> Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
 Eine Liste in F# stellt eine geordnete, unveränderliche Reihe von Elementen desselben Typs dar. Um grundlegende Operationen mit Listen durchzuführen, verwenden Sie die Funktionen in der [listenmodul](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 

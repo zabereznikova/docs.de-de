@@ -2,19 +2,19 @@
 title: Abfrageausdrücke (F#)
 description: Informationen Sie zu Abfrage-Ausdruck-Unterstützung für LINQ, in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033492"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297152"
 ---
 # <a name="query-expressions"></a>Abfrageausdrücke
 
 > [!NOTE]
-Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
+> Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
-Abfrageausdrücke können Sie Abfragen einer Datenquelle und die Daten in eine gewünschte Form einfügen. Abfrageausdrücke unterstützen LINQ in F# erläutert werden.
+Abfrageausdrücke können Sie Abfragen einer Datenquelle und die Daten in eine gewünschte Form einfügen. Abfrageausdrücke bieten Unterstützung für LINQ in F#.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,7 +56,7 @@ Abfrageoperatoren ermöglichen es Ihnen, die Details der Abfrage, wie z. B. ange
 
 Nur Ausdrücke, die in SQL übersetzt werden können, sind in Abfrageausdrücken zulässig. Beispielsweise sind keine Funktionsaufrufe in den Ausdrücken zulässig, bei der Verwendung der `where` -Abfrage-Operator.
 
-Tabelle 1 zeigt die verfügbaren Abfrageoperatoren. Darüber hinaus finden Sie unter Table2, die SQL-Abfragen und den entsprechenden F#-Abfrageausdrücke weiter unten in diesem Thema werden verglichen. Einige Abfrageoperatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der OData-Typanbieter in die Abfrageoperatoren beschränkt, die aufgrund von Beschränkungen im OData unterstützt. Weitere Informationen finden Sie unter [ODataService-Typanbieter (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tabelle 1 zeigt die verfügbaren Abfrageoperatoren. Darüber hinaus können Sie Table2, das SQL-Abfragen und die entsprechende vergleicht F# -Abfrageausdrücken weiter unten in diesem Thema. Einige Abfrageoperatoren werden von einigen typanbietern nicht unterstützt. Insbesondere wird der OData-Typanbieter in die Abfrageoperatoren beschränkt, die aufgrund von Beschränkungen im OData unterstützt. Weitere Informationen finden Sie unter [ODataService-Typanbieter (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 In dieser Tabelle wird angenommen, eine Datenbank in der folgenden Form:
 
@@ -508,7 +508,7 @@ Die folgende Tabelle zeigt einige allgemeinen Transact-SQL-Abfragen und deren En
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (ohne Beachtung von Groß-/Kleinschreibung)</th>
-    <th>F#-Abfrageausdruck (Groß-/ Kleinschreibung)</th>
+    <th>F#Der Abfrageausdruck ist (Groß-/ Kleinschreibung)</th>
   </tr>
 <tr><td>
 Wählen Sie aus der Tabelle alle Felder ein.</br>
