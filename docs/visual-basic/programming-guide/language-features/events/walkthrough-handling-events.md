@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191994"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297165"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereignissen zu arbeiten. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie behandeln Ereignisse aus, wenn sie auftreten.  
@@ -45,7 +45,7 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
     > [!NOTE]
     >  Die **Code-Editor** ist nützlich, aber nicht erforderlich, für das Einfügen von neuen Ereignishandler. In dieser exemplarischen Vorgehensweise ist es direktere Ereignishandler nur direkt in Ihren Code zu kopieren.  
   
-3.  Fügen Sie dem `mWidget_PercentDone`-Ereignishandler folgenden Code hinzu:  
+3.  Fügen Sie dem `mWidget_PercentDone` -Ereignishandler folgenden Code hinzu:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
@@ -76,7 +76,7 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
   
 #### <a name="to-call-the-longtask-method"></a>Zum Aufrufen der Methode von LongTask  
   
--   Fügen Sie dem `Button1_Click`-Ereignishandler folgenden Code hinzu:  
+-   Fügen Sie dem `Button1_Click` -Ereignishandler folgenden Code hinzu:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
@@ -95,7 +95,7 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
 3.  Klicken Sie auf die **Abbrechen** Schaltfläche, um den Vorgang zu beenden. Beachten Sie, dass die Darstellung der **Abbrechen** Schaltfläche nicht direkt ändert, wenn Sie darauf klicken. Die `Click` Ereignis kann nicht ausgeführt, bis die `My.Application.DoEvents` -Anweisung können die Verarbeitung von Ereignissen.  
   
     > [!NOTE]
-    >  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht in die gleiche Weise wie das Formular. Klicken Sie beispielsweise in dieser exemplarischen Vorgehensweise, Sie müssen auf die **Abbrechen** Schaltfläche zweimal. Damit das Formular, um die Ereignisse direkt verarbeiten kann, können Sie multithreading. Weitere Informationen finden Sie unter [Threading](../../../../visual-basic/programming-guide/concepts/threading/index.md).
+    >  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht in die gleiche Weise wie das Formular. Klicken Sie beispielsweise in dieser exemplarischen Vorgehensweise, Sie müssen auf die **Abbrechen** Schaltfläche zweimal. Damit das Formular, um die Ereignisse direkt verarbeiten kann, können Sie multithreading. Weitere Informationen finden Sie unter [Managed Threading](../../../../standard/threading/index.md).
   
  Möglicherweise ist es lehrreich, führen Sie das Programm durch Drücken von F11 und den Code zu einem Zeitpunkt durchlaufen. Klar erkennbar, wie die Ausführung beginnt `LongTask`, und klicken Sie dann kurz erneut eingegeben `Form1` jedes Mal die `PercentDone` Ereignis wird ausgelöst.  
   

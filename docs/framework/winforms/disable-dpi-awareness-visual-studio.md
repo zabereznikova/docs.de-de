@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847578"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296736"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deaktivieren Sie die DPI--Unterstützung in Visual Studio
 
@@ -51,10 +51,10 @@ Es ist wichtig, wenn Sie die Arbeit in fertig sind, starten Sie Visual Studio al
 
 Sie können Visual Studio als DPI-Wert ohne markieren, durch Ändern der Registrierung. Open **Registrierungs-Editor** und einen Eintrag hinzufügen die **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** Unterschlüssel:
 
-**Eintrag**: % ProgramFiles% (x86) %\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Eintrag**: c:\Programme\Microsoft Dateien (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
-   > Wenn Sie die Professional bzw. Enterprise Edition von Visual Studio 2017 verwenden, ersetzen Sie **Community** mit **Professional** oder **Enterprise** im Eintrag.
+   > Wenn Sie die Professional bzw. Enterprise Edition von Visual Studio 2017 verwenden, ersetzen Sie **Community** mit **Professional** oder **Enterprise** im Eintrag. Ersetzen Sie außerdem den Buchstaben des Laufwerks nach Bedarf.
 
 **Typ**: REG_SZ
 
