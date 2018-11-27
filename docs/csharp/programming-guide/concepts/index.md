@@ -2,12 +2,12 @@
 title: Programmierkonzepte (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615923"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296567"
 ---
 # <a name="programming-concepts-c"></a>Programmierkonzepte (C#)
 Dieser Abschnitt erläutert die Programmierkonzepte der Sprache C#.  
@@ -28,7 +28,6 @@ Dieser Abschnitt erläutert die Programmierkonzepte der Sprache C#.
 |[Objektorientierte Programmierung (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Beschreibt allgemeine objektorientierte Konzepte, einschließlich Kapselung, Vererbung und Polymorphie.|  
 |[Reflektion (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Erläutert, wie Sie mithilfe von Reflektion Instanzen von Typen dynamisch erzeugen, Typen an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen können. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann.|  
 |[Serialisierung (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|Beschreibt wichtige Konzepte der binären, XML- und SOAP-Serialisierung.|  
-|[Threading (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|Bietet einen Überblick über das .NET-Threadingmodell und veranschaulicht das Schreiben von Code, mit dem mehrere Aufgaben gleichzeitig ausgeführt werden können, um die Leistung und die Reaktionsgeschwindigkeit der Anwendung zu verbessern.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
