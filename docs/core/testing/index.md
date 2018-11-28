@@ -1,38 +1,48 @@
 ---
 title: Unittests in .NET Core
-description: Komponententests waren nie einfacher. Erfahren Sie, wie Komponententests in .NET Core- und .NET Standard-Projekten verwendet werden.
+description: Unittests in .NET Core- und .NET Standard-Projekten
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 5b54e7936fb19a94fad9585c00904ae67a59e064
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: fe0807f93396466df7ed7d01dbb7a83e39c67770
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49314852"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297425"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 
-.NET Core wurde mit Prüfbarkeit als Hintergedanke entwickelt, sodass das Erstellen von Unittests für Ihre Anwendung einfacher als je zuvor ist. Dieser Artikel gibt eine kurze Einführung zu Unittests (und wie sich diese von anderen Arten von Tests unterscheiden). Verknüpfte Ressourcen zeigen, wie ein Testprojekt einer Lösung zugeordnet wird und anschließend Komponententests mithilfe der Befehlszeile oder Visual Studio ausgeführt werden.
+Mit .NET Core können Sie im Handumdrehen Komponententests erstellen. Dieser Artikel gibt eine kurze Einführung zu Komponententests (und wie sich diese von anderen Arten von Tests unterscheiden). Über die am Ende der Seite verlinkten Ressourcen erfahren Sie, wie Sie einer Projektmappe ein neues Testprojekt hinzufügen. Nachdem Sie Ihre Testprojekte erstellt haben, können Sie Ihre Komponententests über die Befehlszeile oder Visual Studio durchführen.
 
-.NET Core 2.0 unterstützt [.NET Standard 2.0](../../standard/net-standard.md). Die zur Demonstration der Komponententests in diesem Abschnitt verwendeten Bibliotheken basieren auf .NET Standard und funktionieren auch in anderen Projekttypen.
+.NET Core 2.0 und höher unterstützt [.NET Standard 2.0](../../standard/net-standard.md). Wir verwenden die dazugehörigen Bibliotheken, um Komponententests zu veranschaulichen.
 
-Ab .NET Core 2.0 sind Projektvorlagen für Komponententest sowohl für C#, F# und Visual Basic verfügbar.
+Sie können in .NET Core 2.0 oder höher integrierte Vorlagen für Komponententestprojekte für C#, F# und Visual Basic als Ausgangspunkt für Ihr eigenes Projekt verwenden.
 
-## <a name="getting-started-with-testing"></a>Erste Schritte mit Tests
+## <a name="what-are-unit-tests"></a>Was sind Komponententests?
 
-Eine Suite von automatisierten Tests ist eine der besten Möglichkeiten, um sicherzustellen, dass eine Softwareanwendung das tut, was von den Autoren verlangt wurde. Es gibt verschiedene Arten von Tests für Softwareanwendungen, einschließlich Integrationstests, Webtests, Auslastungstests und Sonstige. Komponententests, die einzelne Softwarekomponenten oder Methoden testen, sind Tests auf der untersten Ebene. Unittests sollen nur Code im Steuerelement des Entwicklers testen und nicht Infrastrukturprobleme wie z.B. Datenbanken, Dateisysteme oder Netzwerkressourcen. Unittests können mithilfe der [testgesteuerten Entwicklung](https://deviq.com/test-driven-development/) (Test Driven Development, TDD) geschrieben werden, oder sie können einem vorhandenen Code hinzugefügt werden, um dessen Richtigkeit zu bestätigen. In beiden Fällen sollten sie klein, gut benannt und schnell sein, da Sie im Idealfall hunderte davon ausführen möchten, bevor Sie Ihre Änderungen dem freigegebenen Coderepository des Projekts übergeben.
+Mit automatisierten Tests können Sie sicherstellen, dass eine Softwareanwendung das tut, was die Autoren möchten. Es gibt mehrere Arten von Tests für Softwareanwendungen. Dazu zählen u.a. Integrationstests, Webtests und Auslastungstests. **Komponententests** testen einzelne Softwarekomponenten und Methoden. Komponententests sollten nur den Code testen, für den der Entwickler zuständig ist. Sie sollten keine Aspekte der Infrastruktur testen. Aspekte der Infrastruktur sind z.B. Datenbanken, Dateisysteme und Netzwerkressourcen. 
+
+Beachten Sie, dass es bewährte Methode für das Schreiben von Tests gibt. Bei der [testgesteuerten Entwicklung (Test Driven Development, TDD)](https://deviq.com/test-driven-development/) wird ein Komponententest vor dem Code geschrieben, den er prüfen soll. Stellen Sie sich die TDD wie eine Gliederung für ein Buch vor, bevor dieses geschrieben wird. Dadurch sollen Entwickler einfacheren, lesbareren und effizienteren Code schreiben können. 
 
 > [!NOTE]
-> Entwickler haben oft Probleme bei der Benennung für ihre Testklassen und Methoden. Als Ausgangspunkt befolgt das ASP.NET-Produktteam [diesen Konventionen](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
+> Das ASP.NET-Team hält sich an [diese Konventionen](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests), um Entwicklern das Festlegen von aussagekräftigen Namen für Testklassen und -methoden zu erleichtern.
 
-Wenn Sie Unittests schreiben, achten Sie darauf, dass Sie nicht versehentlich Abhängigkeiten der Infrastruktur einführen. Dies führt in der Regel dazu, dass Tests langsamer und anfälliger sind und sollten deshalb für Integrationstests reserviert werden. Sie können diese versteckten Abhängigkeiten in Ihrem Anwendungscode vermeiden, indem Sie das [Explicit Dependencies Principle (Explizites Abhängigkeitsprinzip)](https://deviq.com/explicit-dependencies-principle/) befolgen und [Dependency Injection (Abhängigkeitseinfügung)](/aspnet/core/fundamentals/dependency-injection) verwenden, um Ihre Abhängigkeiten vom Framework anzufordern. Sie können Ihre Komponententest auch auf ein von Ihren Integrationstests getrenntes Projekt beschränken, und sicherstellen, dass Ihr Komponententestprojekt keine Verweise auf oder Abhängigkeiten von Infrastrukturpaketen aufweist.
+Achten Sie beim Schreiben von Komponententests darauf, dass diese nicht von der Infrastruktur abhängig sind. Dadurch werden die Tests langsam und fehleranfällig. Diese Abhängigkeiten sollten nur bei Integrationstests bestehen. Sie können diese Abhängigkeiten in Ihrem Code vermeiden, indem Sie das [Prinzip der expliziten Abhängigkeit](https://deviq.com/explicit-dependencies-principle/) und [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) einsetzen. Sie können die Komponententests und die Integrationstests in unterschiedlichen Projekten erstellen. Dadurch wird sichergestellt, dass Ihr Komponententestprojekt keine Verweise auf oder Abhängigkeiten von Infrastrukturpaketen aufweist.
 
-Möchten Sie mehr über Unittests in .NET Core-Projekten erfahren?
+Mehr Informationen zu Unittests in .NET Core-Projekten:
 
-Komponententestprojekte für .NET Core werden für [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und [Visual Basic](../../visual-basic/index.md) unterstützt. Sie können außerdem zwischen [xUnit](https://xunit.github.io), [NUnit](https://nunit.org) und [MSTest](https://github.com/Microsoft/vstest-docs) wählen.
+.NET Core-Komponententestprojekte werden für folgende Programmiersprachen unterstützt:
+* [C#](../../csharp/index.md)
+* [F#](../../fsharp/index.md)
+* [Visual Basic](../../visual-basic/index.md) 
 
-Sie können sich anhand dieser exemplarischen Vorgehensweisen über diese Kombinationen informieren:
+Sie können außerdem zwischen folgenden Frameworks wählen:
+* [xUnit](https://xunit.github.io) 
+* [NUnit](https://nunit.org)
+* [MSTest](https://github.com/Microsoft/vstest-docs)
+
+In den folgenden exemplarischen Vorgehensweisen erfahren Sie mehr:
 
 * Erstellen von Komponententests mit [*xUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-dotnet-test.md).
 * Erstellen von Komponententests mit [*NUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-nunit.md).
@@ -44,8 +54,8 @@ Sie können sich anhand dieser exemplarischen Vorgehensweisen über diese Kombin
 * Erstellen von Komponententests mit [*NUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-nunit.md).
 * Erstellen von Komponententests mit [*MSTest* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-mstest.md).
 
-Sie können verschiedene Sprachen für Ihre Klassenbibliotheken und Komponententestbibliotheken auswählen. Durch Mischen und Abstimmen der oben beschriebenen exemplarischen Vorgehensweisen können Sie Erfahrungen sammeln.
+In den folgenden Artikeln erfahren Sie mehr:
 
 * Visual Studio Enterprise bietet nützliche Testtools für .NET Core. Weitere Informationen finden Sie in den Artikel zu [Live Unit Testing](/visualstudio/test/live-unit-testing) und [Codeabdeckung](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
-* Weitere Informationen und Beispiele für die Verwendung der selektiven Komponententestfilterung finden Sie unter [Ausführen von selektiven Komponententests](selective-unit-tests.md) oder [Including and excluding test projects and test methods](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods) (Einbeziehen und Ausschließen von Testprojekten und Testmethoden).
-* Das xUnit-Team hat ein Tutorial geschrieben, das zeigt, [wie xUnit mit .NET Core und Visual Studio verwendet werden (in englischer Sprache)](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Weitere Informationen zum Durchführen selektiver Komponententests finden Sie unter [Ausführen von selektiven Komponententests](selective-unit-tests.md) und [Including and excluding test projects and test methods](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods) (Einbeziehen und Ausschließen von Testprojekten und Testmethoden).
+* [Verwenden von XUnit mit .NET Core und Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html)
