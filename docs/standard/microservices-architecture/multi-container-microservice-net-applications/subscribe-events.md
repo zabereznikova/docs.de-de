@@ -1,15 +1,15 @@
 ---
 title: Abonnieren von Ereignissen
-description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Abonnieren von Ereignissen
+description: '.NET Microservices: Architektur für .NET-Containeranwendungen | Details verstehen zum Veröffentlichen und Abonnieren von Integrationsereignissen.'
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/02/2018
+ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194071"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297310"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -61,7 +61,7 @@ public class CatalogController : ControllerBase
 Danach verwenden Sie es wie in der UpdateProduct-Methode von den Methoden des Controllers aus:
 
 ```csharp
-[Route("update")]
+[Route("items")]
 [HttpPost]
 public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 {
@@ -91,14 +91,13 @@ In diesem Fall wird dieser Code in einen Web-API-Controller eingefügt, da der u
  
 In komplexeren Microservices (wenn Sie z.B. CQRS-Ansätze verwenden) kann er in der `CommandHandler`-Klasse in der `Handle()`-Methode implementiert werden. 
 
-
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Entwerfen von Unteilbarkeit und Stabilität beim Veröffentlichen im Ereignisbus
 
-Wenn Sie Integrationsereignisse über ein verteiltes Meldungssystem wie Ihren Ereignisbus veröffentlichen, besteht das Problem des unteilbaren Aktualisierens der ursprünglichen Datenbank und Veröffentlichens eines Ereignisses. Im vereinfachten Codebeispiel von oben committet der Code Daten in der Datenbank, wenn der Produktpreis geändert wird, und veröffentlicht anschließend eine ProductPriceChangedIntegrationEvent-Meldung. Zunächst erscheint es möglicherweise so, als sei es notwendig, dass diese beiden Vorgänge unteilbar durchgeführt werden. Wenn Sie jedoch eine verteilte Transaktion mit der Datenbank und dem Meldungsbroker verwenden, wie auch in älteren Systemen wie [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx), wird dies nicht empfohlen. Die Gründe werden im [CAP-Theorem](https://www.quora.com/What-Is-CAP-Theorem-1) beschrieben.
+Wenn Sie Integrationsereignisse über ein verteiltes Messaging-System wie Ihren Ereignisbus veröffentlichen, besteht das Problem des unteilbaren Aktualisierens der ursprünglichen Datenbank und Veröffentlichens eines Ereignisses (d.h. entweder beide Vorgänge schließen ab oder keiner von beiden). Im vereinfachten Codebeispiel von oben committet der Code Daten in der Datenbank, wenn der Produktpreis geändert wird, und veröffentlicht anschließend eine ProductPriceChangedIntegrationEvent-Meldung. Zunächst erscheint es möglicherweise so, als sei es notwendig, dass diese beiden Vorgänge unteilbar durchgeführt werden. Wenn Sie jedoch eine verteilte Transaktion mit der Datenbank und dem Meldungsbroker verwenden, wie auch in älteren Systemen wie [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx), wird dies nicht empfohlen. Die Gründe werden im [CAP-Theorem](https://www.quora.com/What-Is-CAP-Theorem-1) beschrieben.
 
-Sie verwenden Microservices, um skalierbare und hochverfügbare Systeme zu erstellen. Einfach ausgedrückt besagt das CAP-Theorem, dass es nicht möglich ist, eine Datenbank (oder einen Microservice, der das Modell besitzt) zu erstellen, die gleichzeitig fortlaufend verfügbar, stark konsistent *und* ausfalltolerant ist. Sie müssen sich für zwei dieser drei Eigenschaften entscheiden.
+Sie verwenden Microservices, um skalierbare und hochverfügbare Systeme zu erstellen. Einfach ausgedrückt besagt das CAP-Theorem, dass es nicht möglich ist, eine (verteilte) Datenbank (oder einen Microservice, der das Modell besitzt) zu erstellen, die gleichzeitig fortlaufend verfügbar, stark konsistent *und* ausfalltolerant ist. Sie müssen sich für zwei dieser drei Eigenschaften entscheiden.
 
-In microservices-basierten Architekturen sollten Sie sich für Verfügbarkeit und Toleranz entscheiden und die starke Konsistenz vernachlässigen. Deshalb sollten Sie in modernen, microservice-basierten Anwendungen keine verteilten Transaktionen beim Messaging verwenden, wie Sie es tun würden, wenn Sie [verteilte Transaktionen](https://msdn.microsoft.com/library/ms978430.aspx#bdadotnetasync2_topic3c) auf Grundlage von Microsoft Distributed Transaction Coordinator (DTC) mit [MSMQ](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx) implementieren.
+In microservices-basierten Architekturen sollten Sie sich für Verfügbarkeit und Toleranz entscheiden und die starke Konsistenz vernachlässigen. Deshalb sollten Sie in modernen, microservice-basierten Anwendungen keine verteilten Transaktionen beim Messaging verwenden, wie Sie es tun würden, wenn Sie [verteilte Transaktionen](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx) auf Grundlage von Microsoft Distributed Transaction Coordinator (DTC) mit [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx) implementieren.
 
 Kehren wir nun zum ursprünglichen Problem und dem dazugehörigen Beispiel zurück. Wenn der Dienst abstürzt, nachdem die Datenbank aktualisiert wurde (in diesem Fall nach der Codezeile mit \_context.SaveChangesAsync()), aber bevor das Integrationsereignis veröffentlich wurde, besteht die Möglichkeit, dass das Gesamtsystem inkonsistent wird. Dies ist möglicherweise unternehmenskritisch, je nachdem, um welche Unternehmensvorgänge es sich handelt.
 
@@ -110,7 +109,7 @@ Wie bereits im Abschnitt zur Architektur erwähnt, können Sie dieses Problem au
 
 -   Sie können das [Muster „Postausgang“](http://gistlabs.com/2014/05/the-outbox/) verwenden. Dabei handelt es sich um eine Transaktionstabelle, die die Integrationsereignisse speichert (und so die lokale Transaktion erweitert).
 
-Für dieses Szenario ist das vollständige Muster „Ereignissourcing“ (ES) einer der besten, wenn nicht *der* beste Ansatz. Es gibt jedoch viele Anwendungsszenarios, in denen das Implementieren des vollständigen ES-Systems nicht möglich ist. ES bedeutet, dass nur Domänenereignisse und keine aktuellen Statusdatendaten in Ihrer Transaktionsdatenbank gespeichert werden. Wenn nur Domänenereignisse gespeichert werden, kann dies viele Vorteile haben, wie z.B. die Verfügbarkeit des Systemverlaufs, wodurch Sie den Status Ihres Systems zu jedem zurückliegenden Zeitpunkt nachverfolgen können. Das Implementieren eines vollständigen ES-Systems erfordert jedoch das Neustrukturieren eines Großteils Ihres Systems und geht mit vielen anderen Komplexitäten und Anforderungen einher. Beispielsweise sollten Sie dann eine Datenbank speziell zum Ereignissourcing verwenden, wie z.B. [Event Store](https://geteventstore.com/) oder dokumentorientierte Datenbanken wie Azure Cosmos DB, MongoDB, Cassandra, CouchDB oder RavenDB. ES ist eine sinnvolle Herangehensweise an dieses Problem, aber nicht die einfachste Lösung, wenn Sie sich noch nicht mit Ereignissourcing auskennen.
+Für dieses Szenario ist das vollständige Muster „Ereignissourcing“ (ES) einer der besten, wenn nicht *der* beste Ansatz. Es gibt jedoch viele Anwendungsszenarios, in denen das Implementieren des vollständigen ES-Systems nicht möglich ist. ES bedeutet, dass nur Domänenereignisse und keine aktuellen Statusdatendaten in Ihrer Transaktionsdatenbank gespeichert werden. Wenn nur Domänenereignisse gespeichert werden, kann dies viele Vorteile haben, wie z.B. die Verfügbarkeit des Systemverlaufs, wodurch Sie den Status Ihres Systems zu jedem zurückliegenden Zeitpunkt nachverfolgen können. Das Implementieren eines vollständigen ES-Systems erfordert jedoch das Neustrukturieren eines Großteils Ihres Systems und geht mit vielen anderen Komplexitäten und Anforderungen einher. Beispielsweise sollten Sie dann eine Datenbank speziell zum Ereignissourcing verwenden, wie z.B. [Event Store](https://eventstore.org/) oder dokumentorientierte Datenbanken wie Azure Cosmos DB, MongoDB, Cassandra, CouchDB oder RavenDB. ES ist eine sinnvolle Herangehensweise an dieses Problem, aber nicht die einfachste Lösung, wenn Sie sich noch nicht mit Ereignissourcing auskennen.
 
 Die Option „Transaktionsprotokollmining“ wirkt zunächst sehr transparent. Wenn Sie diesen Ansatz verwenden, muss der Microservice allerdings mit Ihrem RDBMS-Transaktionsprotokoll verknüpft werden, wie z.B. mit dem SQL Server-Transaktionsprotokoll. Dies ist keine ideale Lösung. Ein weiterer Nachteil besteht darin, dass Updates auf niedriger Ebene,die im Transaktionsprotokoll erfasst werden, sich möglicherweise nicht auf der gleichen Ebene wie die allgemeinen Integrationsereignisse befinden. Wenn dies der Fall ist, kann sich der Prozess des Reverse Engineering (Zurückentwicklung) schwierig gestalten.
 
@@ -124,7 +123,15 @@ Aus diesem Grund ist dieser ausgewogene Ansatz ein vereinfachtes ES-System. Sie 
 
 Wenn Sie bereits eine relationale Datenbank verwenden, können Sie eine Transaktionstabelle verwenden, um Integrationsereignisse zu speichert. Um die Unteilbarkeit in Ihrer Anwendung zu erreichen, gibt es einen Prozess in zwei Schritten, der auf lokalen Transaktionen basiert. Dabei gibt es eine IntegrationEvent-Tabelle in der gleichen Datenbank, in der sich auch Ihre Domänenentitäten befinden. Diese Tabelle stellt sicher, dass Sie die Unteilbarkeit gewährleisten können, damit Sie gespeicherte Integrationsereignisse in den gleichen Transaktionen einbeziehen können, die Ihre Domänendateien committen.
 
-Die Schritte des Prozesses sind die folgenden: Die Anwendung startet eine Transaktion der lokalen Datenbank. Anschließend aktualisiert sie den Status Ihrer Domänenentitäten und fügt ein Ereignis in der Integrationsereignistabelle ein. Zum Schluss committet sie die Transaktion. So erhalten Sie die gewünschte Unteilbarkeit.
+Der Prozess läuft wie folgt ab:
+
+1.  Die Anwendung startet eine lokale Datenbanktransaktion.
+
+2.  Anschließend aktualisiert sie den Status Ihrer Domänenentitäten und fügt ein Ereignis in der Integrationsereignistabelle ein.
+
+3.  Schließlich wird die Transaktion von der Anwendung committet, und die gewünschte Unteilbarkeit wird erreicht.
+
+4.  Nun veröffentlichen Sie das Ereignis auf eine beliebige Weise (Weiter).
 
 Wenn Sie die Schritte zum Veröffentlichen von Ereignissen implementieren, haben Sie die folgenden Wahlmöglichkeiten:
 
@@ -132,21 +139,21 @@ Wenn Sie die Schritte zum Veröffentlichen von Ereignissen implementieren, haben
 
 -   Sie können die Tabelle als eine Art Warteschlange verwenden. Ein separater Anwendungsthread oder -prozess fragt die Integrationsereignistabelle ab, veröffentlicht die Ereignisse im Ereignisbus und verwendet anschließend eine lokale Transaktion, um das Ereignis als „Veröffentlicht“ zu kennzeichnen.
 
-In Abbildung 8-22 wird der Aufbau des ersten Ansatzes veranschaulicht.
+In Abbildung 6-22 wird der Aufbau des ersten Ansatzes veranschaulicht.
 
-![](./media/image23.png)
+![Ein Ansatz zum Umgang mit Unteilbarkeit beim Veröffentlichen von Ereignissen: Verwenden Sie eine Transaktion, um das Ereignis in eine EventLog-Tabelle zu committen, und dann eine weitere zur Veröffentlichung (verwendet in eShopOnContainers)](./media/image23.png)
 
-**Abbildung 8-22.** Unteilbarkeit beim Veröffentlichen von Ereignissen im Ereignisbus
+**Abbildung 6-22**. Unteilbarkeit beim Veröffentlichen von Ereignissen im Ereignisbus
 
-Dem in Abbildung 8-22 dargestellten Ansatz fehlt ein zusätzlicher Workermicroservice, der dafür zuständig ist, den Erfolg des veröffentlichten Integrationsereignisses zu überprüfen und zu bestätigen. Falls das Veröffentlichen fehlschlägt, kann dieser zusätzliche prüfende Workermicroservice Ereignisse aus der Tabelle lesen und erneut veröffentlichen.
+Dem in Abbildung 6-22 dargestellten Ansatz fehlt ein zusätzlicher Workermicroservice, der dafür zuständig ist, den Erfolg des veröffentlichten Integrationsereignisses zu überprüfen und zu bestätigen. Falls das Veröffentlichen fehlschlägt, kann dieser zusätzliche prüfende Workermicroservice Ereignisse aus der Tabelle lesen und erneut veröffentlichen. Wiederholen Sie hierzu den zweiten Schritt.
 
-Beim zweiten Ansatz verwenden Sie die EventLog-Tabelle als Warteschlange und zusätzlich immer einen Workermicroservice zum Veröffentlichen von Meldungen. In diesem Fall sieht der Prozess wie in Abbildung 8-23 dargestellt aus. Hier sehen Sie einen zusätzlichen Microservice. Die Tabelle ist die einzige Quelle beim Veröffentlichen von Ereignissen.
+Beim zweiten Ansatz verwenden Sie die EventLog-Tabelle als Warteschlange und zusätzlich immer einen Workermicroservice zum Veröffentlichen von Meldungen. In diesem Fall sieht der Prozess wie in Abbildung 6-23 dargestellt aus. Hier sehen Sie einen zusätzlichen Microservice. Die Tabelle ist die einzige Quelle beim Veröffentlichen von Ereignissen.
 
-![](./media/image24.png)
+![Ein anderer Ansatz zum Umgang mit Unteilbarkeit: Veröffentlichen Sie das Ereignis in einer Ereignisprotokokolltabelle, und veröffentlichen Sie es dann durch einen weiteren Microservice (Worker im Hintergrund).](./media/image24.png)
 
-**Abbildung 8-23.** Unteilbarkeit beim Veröffentlichen von Ereignissen im Ereignisbus mit einem Workermicroservice
+**Abbildung 6-23**. Unteilbarkeit beim Veröffentlichen von Ereignissen im Ereignisbus mit einem Workermicroservice
 
-Der Einfachheit halber wird im eShopOnContainers-Beispiel der erste Ansatz (ohne zusätzlichen Prozess oder einen prüfenden Microservice) mit einem Ereignisbus verwendet. Allerdings werden nicht alle möglichen Fehlerfälle behandelt. In einer echten in der Cloud bereitgestellten Anwendung müssen Sie davon ausgehen, dass früher oder später Probleme auftreten werden und dass Sie Logik zum Überprüfen und erneuten Senden implementieren müssen. Das Verwenden der Tabelle als Warteschlange kann effektiver als der erste Ansatz sein, wenn Sie diese Tabelle als einzige Ereignisquelle beim Veröffentlichen von Ereignissen im Ereignisbus verwenden.
+Der Einfachheit halber wird im eShopOnContainers-Beispiel der erste Ansatz (ohne zusätzlichen Prozess oder einen prüfenden Microservice) mit einem Ereignisbus verwendet. Allerdings werden nicht alle möglichen Fehlerfälle behandelt. In einer echten in der Cloud bereitgestellten Anwendung müssen Sie davon ausgehen, dass früher oder später Probleme auftreten werden und dass Sie Logik zum Überprüfen und erneuten Senden implementieren müssen. Das Verwenden der Tabelle als Warteschlange kann effektiver sein als der erste Ansatz, wenn Sie diese Tabelle als einzige Ereignisquelle beim Veröffentlichen von Ereignissen (mit dem Worker) im Ereignisbus verwenden.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implementieren von Unteilbarkeit beim Veröffentlichen von Integrationsereignissen im Ereignisbus
 
@@ -217,7 +224,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
 
 Nachdem das Integrationsereignis ProductPriceChangedIntegrationEvent erstellt wurde, beinhaltet die Transaktion, die den ursprünglichen Domänenvorgang (das Aktualisieren des Katalogelements) speichert, auch das Speichern des Ereignisses in der EventLog-Tabelle. Dadurch wird es zu einer einzelnen Transaktion, und Sie können immer überprüfen, ob Ereignismeldungen gesendet wurden.
 
-Die EventLog-Tabelle wird unteilbar mit dem ursprünglichen Datenbankvorgang aktualisiert. Dafür wird eine lokale Transaktion mit der gleichen Datenbank verwendet. Wenn einer der Vorgänge fehlschlägt, wird eine Ausnahme ausgelöst und die Transaktion führt einen Rollback für abgeschlossene Vorgänge aus, sodass die Konsistenz zwischen Domänenvorgängen und den gesendeten Ereignismeldungen gewährleistet wird.
+Die EventLog-Tabelle wird unteilbar mit dem ursprünglichen Datenbankvorgang aktualisiert. Dafür wird eine lokale Transaktion mit der gleichen Datenbank verwendet. Wenn einer der Vorgänge fehlschlägt, wird eine Ausnahme ausgelöst und die Transaktion führt einen Rollback für abgeschlossene Vorgänge aus, sodass die Konsistenz zwischen Domänenvorgängen und den in der Tabelle gespeicherten Ereignismeldungen gewährleistet wird.
 
 ### <a name="receiving-messages-from-subscriptions-event-handlers-in-receiver-microservices"></a>Empfangen von Abonnementmeldungen: Ereignishandler in empfangenden Microservices
 
@@ -272,11 +279,11 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 }
 ```
 
-Der Ereignishandler muss überprüfen, ob das Produkt in einer Warenkorbinstanz vorhanden ist. Außerdem aktualisiert er den Preis für jeden verknüpften Warenkorbartikel. Zum Schluss erstellt er eine Warnung, die dem Benutzer bezüglich der Preisänderung angezeigt wird. Dies wird in Abbildung 8-24 veranschaulicht.
+Der Ereignishandler muss überprüfen, ob das Produkt in einer Warenkorbinstanz vorhanden ist. Außerdem aktualisiert er den Preis für jeden verknüpften Warenkorbartikel. Zum Schluss erstellt er eine Warnung, die dem Benutzer bezüglich der Preisänderung angezeigt wird. Dies wird in Abbildung 6-24 veranschaulicht.
 
-![](./media/image25.png)
+![Browseransicht der Benachrichtigung zur Preisänderung im Einkaufswagen des Benutzers.](./media/image25.png)
 
-**Abbildung 8-24.** Preisänderung in einem Warenkorb wie von Integrationsereignissen gemeldet
+**Abbildung 6-24**. Preisänderung in einem Warenkorb wie von Integrationsereignissen gemeldet
 
 ## <a name="idempotency-in-update-message-events"></a>Idempotenz bei Updatemeldungsereignissen
 
@@ -286,7 +293,7 @@ Wie bereits erwähnt bedeutet Idempotenz, dass ein Vorgang mehrmals durchgeführ
 
 Eine SQL-Anweisung, die Daten nur dann in eine Tabelle einfügt, wenn diese noch nicht in der Tabelle vorhanden sind, ist ein Beispiel für einen idempotenten Vorgang. Es ist unerheblich, wie oft Sie diese SQL-Anweisung zum Einfügen ausführen, das Ergebnis ist immer das gleiche: die Tabelle enthält die entsprechenden Daten. Derartige Idempotenz kann auch nötig sein, wenn Sie Meldungen behandeln müssen und diese Meldungen theoretisch mehrmals gesendet und deshalb auch mehrmals verarbeitet werden können. Wenn z.B. RETRY-Logik dazu führt, dass ein Sender die gleiche Meldung mehr als einmal verschickt, müssen Sie sicherstellen, dass sie idempotent ist.
 
-Es ist möglich, idempotente Meldungen zu erstellen. Sie können z.B. ein Ereignis erstellen, das „Produktpreis auf \$25 festlegen“ statt „Produktpreis plus \$5“ festlegt. Die erste Meldung können Sie ohne Bedenken beliebig oft verarbeiten, ohne dass sich das Ergebnis verändert. Dies trifft nicht auf die zweite Meldung zu. Aber selbst im zweiten Fall sollten Sie auch nicht das erste Ereignis verarbeiten, da das System möglicherweise schon ein neueres Ereignis zur Preisänderung gesendet hat und Sie so den neuen Preis überschreiben würden.
+Es ist möglich, idempotente Meldungen zu erstellen. Sie können z.B. ein Ereignis erstellen, das „Produktpreis auf $25 festlegen“ statt „Produktpreis plus $5“ festlegt. Die erste Meldung können Sie ohne Bedenken beliebig oft verarbeiten, ohne dass sich das Ergebnis verändert. Dies trifft nicht auf die zweite Meldung zu. Aber selbst im zweiten Fall sollten Sie auch nicht das erste Ereignis verarbeiten, da das System möglicherweise schon ein neueres Ereignis zur Preisänderung gesendet hat und Sie so den neuen Preis überschreiben würden.
 
 Ein weiteres Beispiel ist ein Ereignis zum Abschluss der Bestellung, das an mehrere Abonnenten übermittelt wird. Es ist wichtig, dass Informationen in anderen Systemen nur einmal aktualisiert werden, auch wenn es Meldungsereignisduplikate für das gleiche Ereignis zum Abschluss der Bestellung gibt.
 
@@ -296,7 +303,8 @@ Es gibt Meldungsverarbeitungen, die von sich aus idempotent sind. Wenn ein Syste
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Honoring message idempotency (Berücksichtigen der Idempotenz von Nachrichten)** (Unterüberschrift auf dieser Seite) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **Honoring message idempotency (Berücksichtigen der Idempotenz von Nachrichten)** <br/>
+    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplizieren von Integrationsereignismeldungen
 
@@ -304,7 +312,7 @@ Sie können sicherstellen, dass Meldungsereignisse gesendet werden und dann nur 
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Deduplizieren von Meldungsereignissen auf Ereignishandlerebene
 
-Sie können sicherstellen, dass ein Ereignis nur einmal von einem beliebigen Empfänger verarbeitet wird, indem Sie bestimmte Logik implementieren, wenn Meldungsereignisse in Ereignishandlern verarbeitet werden. Dies ist der Ansatz, der in der eShopOnContainers-Anwendung verwendet wird, wie Sie am [Quellcode](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Controllers/OrdersController.cs) der OrdersController-Klasse sehen können, wenn diese einen CreateOrderCommand-Befehl empfängt. In diesem Fall verwenden wir einen HTTP-Anforderungsbefehl und keinen meldungsbasierten Befehl. Wenn Sie einen meldungsbasierten Befehl idempotent machen möchten, ist die Logik jedoch ähnlich.
+Sie können sicherstellen, dass ein Ereignis nur einmal von einem beliebigen Empfänger verarbeitet wird, indem Sie bestimmte Logik implementieren, wenn Meldungsereignisse in Ereignishandlern verarbeitet werden. Dies ist z.B. der in der eShopOnContainers-App verwendete Ansatz, wie Sie im [Quellcode der UserCheckoutAcceptedIntegrationEventHandler-Klasse](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) beim Erhalt eines UserCheckoutAcceptedIntegrationEvent-Integrationsereignisses sehen können. (In diesem Fall umschließen wir die CreateOrderCommand mit einer IdentifiedCommand und verwenden die eventMsg.RequestId als Bezeichner vor dem Senden an den Befehlshandler).
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>Deduplizieren von Meldungen mit RabbitMQ
 
@@ -316,63 +324,71 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Forked eShopOnContainers using NServiceBus (Particular Software) (Forken von eShopOnContainers mit NServiceBus (Bestimmte Software))**
+-   **Forked eShopOnContainers using NServiceBus (Particular Software) (Forken von eShopOnContainers mit NServiceBus (Bestimmte Software))** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging (Ereignisgesteuertes Messaging)**
+-   **Event Driven Messaging (Ereignisgesteuertes Messaging)** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)**
+-   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel (Publish-Subscribe-Kanal)**
+-   **Publish-Subscribe channel (Publish-Subscribe-Kanal)** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communicating Between Bounded Contexts (Kommunizieren zwischen gebundenen Kontexten)**
+-   **Communicating Between Bounded Contexts (Kommunizieren zwischen gebundenen Kontexten)** <br/>
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency (Letztliche Konsistenz)**
+-   **Eventual Consistency (Letztliche Konsistenz)** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Strategies for Integrating Bounded Contexts (Strategien zur Integration gebundener Kontexte)**
-    [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+-   **Philip Brown. Strategies for Integrating Bounded Contexts (Strategien zur Integration gebundener Kontexte)** <br/>
+    [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Entwickeln von Transaktionsmicroservices mit Aggregaten, Ereignissourcing und CQRS: Teil 2)**
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Entwickeln von Transaktionsmicroservices mit Aggregaten, Ereignissourcing und CQRS: Teil 2)** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Event Sourcing pattern (Muster: Ereignissourcing)**
+-   **Chris Richardson. Event Sourcing pattern (Muster: Ereignissourcing)** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducing Event Sourcing (Einführung in Ereignissourcing)**
+-   **Introducing Event Sourcing (Einführung in Ereignissourcing)** <br/>
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
--   **Event Store-Datenbank**. Offizielle Website.
+-   **Event Store-Datenbank**. Offizielle Website. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Event-Driven Data Management for Microservices (Ereignisgesteuerte Datenverwaltung für Microservices)**
-    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1>*
+-   **Patrick Nommensen. Event-Driven Data Management for Microservices (Ereignisgesteuerte Datenverwaltung für Microservices)** <br/>
+    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **The CAP theorem (Das CAP-Theorem)**
+-   **The CAP theorem (Das CAP-Theorem)** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What is CAP Theorem? (Was ist das CAP-Theorem?)**
+-   **What is CAP Theorem? (Was ist das CAP-Theorem?)** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer (Einführung in die Datenkonsistenz)**
+-   **Data Consistency Primer (Einführung in die Datenkonsistenz)** <br/>
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)**
+-   **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP zwölf Jahre später: So haben sich die „Regeln“ verändert)**
+-   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP zwölf Jahre später: So haben sich die „Regeln“ verändert)** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions (Externe (DTC-)Transaktionen)** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
-
--   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)**
+-   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation)* <br/>
+    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
+
+-   **Participating in External (DTC) Transactions (Externe (DTC-)Transaktionen)** (MSMQ) <br/>
+    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+
+-   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)** <br/>
+    [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+
+-   **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) <br/>
+    [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

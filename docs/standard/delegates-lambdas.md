@@ -6,41 +6,43 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fb926683de90516bcf67d99026a0134d82cb683
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574558"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296944"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 
 Delegaten definieren einen Typ, der eine bestimmte Methodensignatur angibt. Eine Methode (statische Methode oder Instanzmethode), die dieser Signatur entspricht, kann einer Variablen dieses Typs zugewiesen werden. Anschließend kann sie (mit den entsprechenden Argumenten) direkt aufgerufen oder selbst als Argument an eine andere Methode übergeben und dann aufgerufen werden. Das folgende Beispiel veranschaulicht die Verwendung von Delegaten.
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    public delegate string Reverse(string s);
 
-  public delegate string Reverse(string s);
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Reverse rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Reverse rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-*   In Zeile 4 erstellen wir einen Delegattyp mit einer bestimmten Signatur – in diesem Fall eine Methode, die einen Zeichenfolgenparameter akzeptiert und dann einen Zeichenfolgenparameter zurückgibt.
-*   In Zeile 6 definieren wir die Implementierung des Delegaten, indem wir eine Methode bereitstellen, die exakt die gleiche Signatur aufweist.
-*   In Zeile 13 wird die Methode einem Typ zugewiesen, der dem `Reverse`-Delegaten entspricht.
-*   In Zeile 15 rufen wir schließlich den Delegaten auf, indem wir eine Zeichenfolge übergeben, die umgekehrt werden soll.
+* In Zeile `public delegate string Reverse(string s);` wird ein Delegattyp mit einer bestimmten Signatur erstellt – in diesem Fall eine Methode, die einen Zeichenfolgenparameter akzeptiert und dann einen Zeichenfolgenparameter zurückgibt.
+* Die Methode `static string ReverseString(string s)`, die über die gleiche Signatur wie der definierte Delegattyp verfügt, implementiert den Delegaten.
+* Die Zeile `Reverse rev = ReverseString;` zeigt, dass Sie eine Methode einer Variable des entsprechenden Delegattyps zuweisen können.
+* Die Zeile `Console.WriteLine(rev("a string"));` zeigt, wie eine Variable eines Delegattyps benutzt wird, um den Delegaten aufzurufen.
 
 Um den Entwicklungsprozess zu optimieren, enthält .NET eine Reihe von Delegattypen, die Programmierer verwenden können, damit sie keine neuen Typen erstellen müssen. Dies sind `Func<>`, `Action<>` und `Predicate<>`. Sie können an verschiedenen Stellen in den .NET-APIs verwendet werden, ohne dass neue Delegattypen definiert werden müssen. Natürlich gibt es Unterschiede zwischen den drei Typen, wie Sie in ihren Signaturen erkennen können. Hierbei handelt es sich meist um Unterschiede in der Art und Weise der Verwendung dieser Typen:
 
@@ -51,56 +53,60 @@ Um den Entwicklungsprozess zu optimieren, enthält .NET eine Reihe von Delegatty
 Wir schreiben jetzt das obige Beispiel neu, indem wir den `Func<>`-Delegaten anstelle eines benutzerdefinierten Typs verwenden. Das Programm wird weiterhin genau gleich ausgeführt.
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Func<string, string> rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Func<string, string> rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-In diesem einfachen Beispiel erscheint es überflüssig, eine Methode außerhalb der Main()-Methode zu definieren. Aus diesem Grund wurde in .NET Framework 2.0 das Konzept der **anonymen Delegaten** eingeführt. Damit können Sie „Inlinedelegaten“ erstellen, ohne einen weiteren Typ oder eine zusätzliche Methode angeben zu müssen. Sie fügen einfach die Definition des Delegaten inline dort ein, wo Sie sie benötigen.
+In diesem einfachen Beispiel erscheint es überflüssig, eine Methode außerhalb der `Main`-Methode zu definieren. Aus diesem Grund wurde in .NET Framework 2.0 das Konzept der **anonymen Delegaten** eingeführt. Damit können Sie „Inlinedelegaten“ erstellen, ohne einen weiteren Typ oder eine zusätzliche Methode angeben zu müssen. Sie fügen einfach die Definition des Delegaten inline dort ein, wo Sie sie benötigen.
 
 Als Beispiel verwenden wir unseren anonymen Delegaten, um eine Liste mit gerade Zahlen herauszufiltern und diese Zahlen in der Konsole auszugeben.
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(
-      delegate(int no)
-      {
-          return (no%2 == 0);
-      }
-    );
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(
+          delegate (int no)
+          {
+              return (no % 2 == 0);
+          }
+        );
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-Beachten Sie die markierten Zeilen. Wie Sie sehen, besteht der Haupttext des Delegaten einfach nur aus einer Reihe von Ausdrücken, wie bei jedem anderen Delegaten auch. Anstatt aber eine separate Definition zu erstellen, haben wir ihn _ad hoc_ in den Aufruf der `FindAll()`-Methode des `List<T>`-Typs eingeführt.
+Wie Sie sehen, besteht der Haupttext des Delegaten einfach nur aus einer Reihe von Ausdrücken, wie bei jedem anderen Delegaten auch. Anstatt aber eine separate Definition zu erstellen, haben wir ihn _ad hoc_ in den Aufruf der Methode <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> eingeführt.
 
 Selbst bei dieser Vorgehensweise bleibt immer noch zu viel Code übrig, den wir nicht benötigen. Hier kommen **Lambdaausdrücke** ins Spiel.
 
@@ -109,29 +115,31 @@ Lambdaausdrücke (sogenannte Lambdas) wurden zum ersten Mal in C# 3.0 eingeführ
 Da ein Lambdaausdruck einfach nur eine weitere Möglichkeit ist, einen Delegaten anzugeben, können wir das obige Beispiel neu schreiben und einen Lambdaausdruck anstelle eines anonymen Delegaten verwenden.
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(i => i % 2 == 0);
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(i => i % 2 == 0);
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-In den markierten Zeilen sehen Sie, wie ein Lambdaausdruck aussieht. Das ist einfach eine **sehr** praktische Syntax für die Verwendung von Delegaten. Hinter den Kulissen passiert das Gleiche wie bei anonymen Delegaten.
+Im vorherigen Beispiel wird der Lambdaausdruck `i => i % 2 == 0` verwendet. Das ist einfach eine **sehr** praktische Syntax für die Verwendung von Delegaten. Hinter den Kulissen passiert das Gleiche wie bei anonymen Delegaten.
 
 Noch einmal: Lambdas sind einfach Delegaten. Das bedeutet, dass sie problemlos als Ereignishandler verwendet werden können, wie im folgenden Codeausschnitt veranschaulicht.
 

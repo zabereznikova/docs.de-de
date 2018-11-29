@@ -3,12 +3,12 @@ title: Standardereignismuster in .NET
 description: Erfahren Sie etwas über Ereignismuster in .NET und wie Sie standardmäßige Ereignisquellen erstellen und Standardereignisse in Ihrem Code abonnieren und verarbeiten können.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266766"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297035"
 ---
 # <a name="standard-net-event-patterns"></a>Standardereignismuster in .NET
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>Hinzufügen einer anderen Ereignisdeklaration
 
-Fügen wir eine weitere Funktion hinzu, und zeigen andere Sprachausdrücke für Ereignisse. Fügen wir eine Überladung der `Search()`-Methode, die alle Unterverzeichnisse auf der Suche nach Dateien durchsucht.
+Fügen wir eine weitere Funktion hinzu, und zeigen andere Sprachausdrücke für Ereignisse. Fügen wir eine Überladung der `Search`-Methode, die alle Unterverzeichnisse auf der Suche nach Dateien durchsucht.
 
 In einem Verzeichnis mit vielen Unterverzeichnisse könnte dies ein längerer Vorgang werden. Fügen wir ein Ereignis hinzu, das zu Beginn jeder neuen Verzeichnissuche ausgelöst wird. Dies ermöglicht es Abonnenten, den Fortschritt zu verfolgen und den Benutzer während des Fortschritts zu aktualisieren. Die Beispiele, die Sie bisher erstellt haben, sind öffentlich. Dieses erstellen wir als internes Ereignis. Das bedeutet, dass Sie auch die Typen für die Argumente intern erstellen können.
 
@@ -133,7 +133,7 @@ Definieren Sie als Nächstes das Ereignis. Dieses Mal werden Sie eine andere Syn
 
 In vielerlei Hinsicht spiegelt der Code, den Sie hier schreiben, den vom Compiler generierten Code für die Feldereignisdefinitionen wider, die Sie zuvor gesehen haben. Sie erstellen das Ereignis mithilfe der Syntax ähnlich der für [Eigenschaften](properties.md). Beachten Sie, dass die Handler unterschiedliche Namen haben: `add` und `remove`. Diese werden aufgerufen, um das Ereignis zu abonnieren oder sich vom Ereignis abzumelden. Beachten Sie, dass Sie auch ein privates Unterstützungsfeld zum Speichern der Ereignisvariable deklarieren müssen. Es wird mit NULL initialisiert.
 
-Als Nächstes fügen wir die Überladung der Search()-Methode hinzu, die Unterverzeichnisse durchsucht und beide Ereignisse auslöst. Die einfachste Möglichkeit besteht darin, ein Standardargument zu verwenden, um anzugeben, dass alle Verzeichnisse durchsucht werden sollen:
+Als Nächstes fügen wir die Überladung der `Search`-Methode hinzu, die Unterverzeichnisse durchsucht und beide Ereignisse auslöst. Die einfachste Möglichkeit besteht darin, ein Standardargument zu verwenden, um anzugeben, dass alle Verzeichnisse durchsucht werden sollen:
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 

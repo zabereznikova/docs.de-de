@@ -1,15 +1,15 @@
 ---
 title: Logische und physische Architektur im Vergleich
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Logische und physische Architektur im Vergleich
+description: Unterschiede verstehen zwischen logischer und physischer Architektur
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.date: 09/20/2018
+ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213341"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296125"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Logische und physische Architektur im Vergleich
 
@@ -27,14 +27,13 @@ Aus diesem Grund handelt es sich bei einem Unternehmensmicroservice oder bei ein
 
 Wie in der Abbildung 4-8 dargestellt, kann der Katalogunternehmensmicroservice ggf. aus mehreren Diensten oder Prozessen bestehen. Dabei kann es sich um mehrere ASP.NET-Web-API-Dienste oder um beliebige Dienste handeln, die HTTP oder ein beliebiges anderes Protokoll verwenden. Vor allem können die Dienste ggf. alle auf dieselben Daten zugreifen, solange sie sich eine Geschäftsdomäne teilen.
 
-![](./media/image8.png)
+![Diagramm des Katalogunternehmensmicroservice, der einen API-Dienst, einen Suchdienst und eine SQL Server-Datenbank enthält.](./media/image8.png)
 
 **Abbildung 4-8**. Unternehmensmicroservice mit mehreren physischen Diensten
 
 Die Dienste in diesem Beispiel verfügen alle über dasselbe Datenmodell, da der Web-API-Dienst auf dieselben Daten ausgerichtet ist wie der Suchdienst. D.h., Sie teilen diese Funktion für die physische Implementierung des Unternehmensmicroservices auf, damit Sie diese internen Dienste nach Belieben zentral hoch- oder herunterskalieren können. Es kann sein, dass der Web-API-Dienst mehr Instanzen benötigt als der Suchdienst – oder umgekehrt.
 
-Zusammenfassend lässt sich sagen, dass sich die logische Architektur von Microservices sich nicht immer mit der physischen Bereitstellungsarchitektur überschneiden muss. In diesem Handbuch ist mit dem Begriff „Microservice“ immer ein logischer Microservice oder ein Unternehmensmicroservice gemeint, der mindestens einem Dienst zugeordnet werden kann. In den meisten Fällen handelt es sich nur um einen einzelnen Dienst. Es können aber auch mehr Dienste zugeordnet werden.
-
+Zusammenfassend lässt sich sagen, dass sich die logische Architektur von Microservices nicht immer mit der physischen Bereitstellungsarchitektur überschneiden muss. In diesem Handbuch ist mit dem Begriff „Microservice“ immer ein logischer Microservice oder ein Unternehmensmicroservice gemeint, der mindestens einem (physischen) Dienst zugeordnet werden kann. In den meisten Fällen handelt es sich nur um einen einzelnen Dienst. Es können aber auch mehr Dienste zugeordnet werden.
 
 >[!div class="step-by-step"]
 [Zurück](data-sovereignty-per-microservice.md)

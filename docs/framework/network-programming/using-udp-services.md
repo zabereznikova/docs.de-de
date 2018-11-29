@@ -17,164 +17,146 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 8f0c34b2226863bc04800ac4558c07e969f02154
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50191128"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296814"
 ---
 # <a name="using-udp-services"></a>Verwenden von UDP-Diensten
-Die <xref:System.Net.Sockets.UdpClient>-Klasse kommuniziert über UDP-Netzwerkdienste. Die Eigenschaften und Methoden der <xref:System.Net.Sockets.UdpClient>-Klasse abstrahieren Details zum Erstellen einer <xref:System.Net.Sockets.Socket> zum Anfordern und Empfangen von Daten mithilfe von UDP.  
-  
- User Datagram Protocol (UDP) ist ein einfaches Protokoll, das Daten an einen Remotehost übermittelt. Da das UDP-Protokoll ein verbindungsloses Protokoll ist, kann jedoch nicht garantiert werden, dass die an den Remoteendpunkt gesendeten UDP-Datagramme eingehen oder dass sie in der Reihenfolge eintreffen, in der sie gesendet werden. Anwendungen, die UDP verwenden, müssen darauf vorbereitet sein, fehlende, doppelte und ungeordnete Datagramme zu behandeln.  
-  
- Um ein Datagramm über UDP zu senden, müssen Sie die Netzwerkadresse des Netzwerkgeräts kennen, das den Dienst hostet und die UDP-Portnummer, die vom Dienst zum Kommunizieren verwendet wird. Die Internet Assigned Numbers Authority (IANA) definiert Portnummern für gemeinsame Dienste. Weitere Informationen finden Sie unter [Registrierung von Portnummern für Dienstnamen und Transportprotokolle](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) (in englischer Sprache). Dienste, die sich nicht auf der Iana-Liste befinden, können Portnummern im Bereich von 1.024 bis 65.535 aufweisen.  
-  
- Spezielle Netzwerkadressen dienen zur Unterstützung von UDP-Broadcastmeldungen auf IP-basierten Netzwerken. Die folgende Darstellung verwendet die IPv4-Adressfamilie im Internet als Beispiel.  
-  
- IPv4-Adressen verwenden 32 Bits zur Angabe einer Netzwerkadresse. Bei C-Adressen der Klasse, die eine Netzmaske 255.255.255.0 verwenden, werden diese Bits in vier Oktette aufgeteilt. Als Dezimalzahlen ausgedrückt, bilden die vier Oktette die vertraute Punktnotation, z.B. 192.168.100.2. Die ersten beiden Oktette (in diesem Beispiel 192.168.) bilden die Netzwerknummer, das dritte Oktett (100) definiert das Subnetz, und das letzte Oktett (2) ist der Hostbezeichner.  
-  
- Wenn alle Bits einer IP-Adresse auf einem oder 255.255.255.255 festgelegt werden, wird die begrenzte Broadcastadresse gebildet. Das Senden eines UDP-Datagramms an diese Adresse übermittelt die Nachricht an jeden Host im LAN-Segment. Da Router an diese Adresse gesendete Nachrichten nie weiterleiten, erhalten nur die Hosts im Netzwerksegment die Broadcastmeldung.  
-  
- Broadcasts können auf bestimmte Teile eines Netzwerks geleitet werden, indem alle Bits des Hostbezeichners festgelegt werden. Um einen Broadcast an alle Hosts im Netzwerk zu senden, die eine IP-Adresse beginnend mit 192.168.1 aufweisen, verwenden Sie beispielsweise die Adresse 192.168.1.255.  
-  
- Das folgende Codebeispiel verwendet <xref:System.Net.Sockets.UdpClient> zum Abhören von UDP-Datagrammen, die an die gesteuerte Broadcastadresse 192.168.1.255 auf Port 11.000 gesendet werden. Der Client empfängt eine Meldungszeichenfolge und schreibt die Nachricht in die Konsole.  
-  
-```vb  
-Imports System  
-Imports System.Net  
-Imports System.Net.Sockets  
-Imports System.Text  
-  
-Public Class UDPListener  
-   Private Const listenPort As Integer = 11000  
-  
-   Private Shared Sub StartListener()  
-      Dim done As Boolean = False  
-      Dim listener As New UdpClient(listenPort)  
-      Dim groupEP As New IPEndPoint(IPAddress.Any, listenPort)  
-      Try  
-         While Not done  
-            Console.WriteLine("Waiting for broadcast")  
-            Dim bytes As Byte() = listener.Receive(groupEP)  
-            Console.WriteLine("Received broadcast from {0} :", _  
-                groupEP.ToString())   
-            Console.WriteLine( _  
-                Encoding.ASCII.GetString(bytes, 0, bytes.Length))  
-            Console.WriteLine()  
-         End While  
-      Catch e As Exception  
-         Console.WriteLine(e.ToString())  
-      Finally  
-         listener.Close()  
-      End Try  
-   End Sub 'StartListener  
-  
-   Public Shared Function Main() As Integer  
-      StartListener()  
-      Return 0  
-   End Function 'Main  
-End Class 'UDPListener  
-```  
-  
-```csharp  
-using System;  
-using System.Net;  
-using System.Net.Sockets;  
-using System.Text;  
-  
-public class UDPListener   
-{  
-    private const int listenPort = 11000;  
-  
-    private static void StartListener()   
-    {  
-        bool done = false;  
-  
-        UdpClient listener = new UdpClient(listenPort);  
-        IPEndPoint groupEP = new IPEndPoint(IPAddress.Any,listenPort);  
-  
-        try   
-        {  
-            while (!done)   
-            {  
-                Console.WriteLine("Waiting for broadcast");  
-                byte[] bytes = listener.Receive( ref groupEP);  
-  
-                Console.WriteLine("Received broadcast from {0} :\n {1}\n",  
-                    groupEP.ToString(),  
-                    Encoding.ASCII.GetString(bytes,0,bytes.Length));  
-            }  
-  
-        }   
-        catch (Exception e)   
-        {  
-            Console.WriteLine(e.ToString());  
-        }  
-        finally  
-        {  
-            listener.Close();  
-        }  
-    }  
-  
-    public static int Main()   
-    {  
-        StartListener();  
-  
-        return 0;  
-    }  
-}  
-```  
-  
- Das folgende Codebeispiel verwendet <xref:System.Net.Sockets.UdpClient> zum Senden von UDP-Datagrammen an die gesteuerte Broadcastadresse 192.168.1.255 auf Port 11.000. Der Client sendet die Meldungszeichenfolge, die in der Befehlszeile angegeben ist.  
-  
-```vb  
-Imports System  
-Imports System.Net  
-Imports System.Net.Sockets  
-Imports System.Text  
-  
-Public Class Program  
-  
-    Overloads Public Shared Function Main(args() As [String]) As Integer  
-      Dim s As New Socket(AddressFamily.InterNetwork, SocketType.Dgram,  
-          ProtocolType.Udp)  
-      Dim broadcast As IPAddress = IPAddress.Parse("192.168.1.255")  
-      Dim sendbuf As Byte() = Encoding.ASCII.GetBytes(args(0))  
-      Dim ep As New IPEndPoint(broadcast, 11000)  
-      s.SendTo(sendbuf, ep)  
-      Console.WriteLine("Message sent to the broadcast address")  
-   End Function 'Main  
-End Class   
-```  
-  
-```csharp  
-using System;  
-using System.Net;  
-using System.Net.Sockets;  
-using System.Text;  
-  
-class Program   
-{  
-    static void Main(string[] args)   
-    {  
-        Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram,  
-            ProtocolType.Udp);  
-  
-        IPAddress broadcast = IPAddress.Parse("192.168.1.255");  
-  
-        byte[] sendbuf = Encoding.ASCII.GetBytes(args[0]);  
-        IPEndPoint ep = new IPEndPoint(broadcast, 11000);  
-  
-        s.SendTo(sendbuf, ep);  
-  
-        Console.WriteLine("Message sent to the broadcast address");  
-    }  
-}  
-```  
-  
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.Sockets.UdpClient>  
- <xref:System.Net.IPAddress>  
- 
+Die <xref:System.Net.Sockets.UdpClient>-Klasse kommuniziert über UDP-Netzwerkdienste. Die Eigenschaften und Methoden der <xref:System.Net.Sockets.UdpClient>-Klasse abstrahieren Details zum Erstellen einer <xref:System.Net.Sockets.Socket> zum Anfordern und Empfangen von Daten mithilfe von UDP.
+
+User Datagram Protocol (UDP) ist ein einfaches Protokoll, das Daten an einen Remotehost übermittelt. Da das UDP-Protokoll ein verbindungsloses Protokoll ist, kann jedoch nicht garantiert werden, dass die an den Remoteendpunkt gesendeten UDP-Datagramme eingehen oder dass sie in der Reihenfolge eintreffen, in der sie gesendet werden. Anwendungen, die UDP verwenden, müssen darauf vorbereitet sein, fehlende, doppelte und ungeordnete Datagramme zu behandeln.
+
+Um ein Datagramm über UDP zu senden, müssen Sie die Netzwerkadresse des Netzwerkgeräts kennen, das den Dienst hostet und die UDP-Portnummer, die vom Dienst zum Kommunizieren verwendet wird. Die Internet Assigned Numbers Authority (IANA) definiert Portnummern für gemeinsame Dienste. Weitere Informationen finden Sie unter [Registrierung von Portnummern für Dienstnamen und Transportprotokolle](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) (in englischer Sprache). Dienste, die sich nicht auf der Iana-Liste befinden, können Portnummern im Bereich von 1.024 bis 65.535 aufweisen.
+
+Spezielle Netzwerkadressen dienen zur Unterstützung von UDP-Broadcastmeldungen auf IP-basierten Netzwerken. Die folgende Darstellung verwendet die IPv4-Adressfamilie im Internet als Beispiel.
+
+IPv4-Adressen verwenden 32 Bits zur Angabe einer Netzwerkadresse. Bei C-Adressen der Klasse, die eine Netzmaske 255.255.255.0 verwenden, werden diese Bits in vier Oktette aufgeteilt. Als Dezimalzahlen ausgedrückt, bilden die vier Oktette die vertraute Punktnotation, z.B. 192.168.100.2. Die ersten beiden Oktette (in diesem Beispiel 192.168.) bilden die Netzwerknummer, das dritte Oktett (100) definiert das Subnetz, und das letzte Oktett (2) ist der Hostbezeichner.
+
+Wenn alle Bits einer IP-Adresse auf einem oder 255.255.255.255 festgelegt werden, wird die begrenzte Broadcastadresse gebildet. Das Senden eines UDP-Datagramms an diese Adresse übermittelt die Nachricht an jeden Host im LAN-Segment. Da Router an diese Adresse gesendete Nachrichten nie weiterleiten, erhalten nur die Hosts im Netzwerksegment die Broadcastmeldung.
+
+Broadcasts können auf bestimmte Teile eines Netzwerks geleitet werden, indem alle Bits des Hostbezeichners festgelegt werden. Um einen Broadcast an alle Hosts im Netzwerk zu senden, die eine IP-Adresse beginnend mit 192.168.1 aufweisen, verwenden Sie beispielsweise die Adresse 192.168.1.255.
+
+In dem folgenden Codebeispiel wird ein <xref:System.Net.Sockets.UdpClient> verwendet, um UDP-Datagramme auf Port 11.000 abzuhören. Der Client empfängt eine Meldungszeichenfolge und schreibt die Nachricht in die Konsole.
+
+```vb
+Imports System.Net
+Imports System.Net.Sockets
+Imports System.Text
+
+Public Class UDPListener
+   Private Const listenPort As Integer = 11000
+   
+   Private Shared Sub StartListener()
+      Dim listener As New UdpClient(listenPort)
+      Dim groupEP As New IPEndPoint(IPAddress.Any, listenPort)
+      Try
+         While True
+            Console.WriteLine("Waiting for broadcast")
+            Dim bytes As Byte() = listener.Receive(groupEP)
+            Console.WriteLine("Received broadcast from {0} :", groupEP)
+            Console.WriteLine(Encoding.ASCII.GetString(bytes, 0, bytes.Length))
+         End While
+      Catch e As SocketException
+         Console.WriteLine(e)
+      Finally
+         listener.Close()
+      End Try
+   End Sub 'StartListener
+   
+   Public Shared Sub Main()
+      StartListener()
+   End Sub 'Main
+End Class 'UDPListener
+```
+
+```csharp
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+
+public class UDPListener
+{
+    private const int listenPort = 11000;
+    
+    private static void StartListener()
+    {
+        UdpClient listener = new UdpClient(listenPort);
+        IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, listenPort);
+        
+        try
+        {
+            while (true)
+            {
+                Console.WriteLine("Waiting for broadcast");
+                byte[] bytes = listener.Receive(ref groupEP);
+                
+                Console.WriteLine($"Received broadcast from {groupEP} :");
+                Console.WriteLine($" {Encoding.ASCII.GetString(bytes, 0, bytes.Length)}");
+            }
+        }
+        catch (SocketException e)
+        {
+            Console.WriteLine(e);
+        }
+        finally
+        {
+            listener.Close();
+        }
+    }
+    
+    public static void Main()
+    {
+        StartListener();
+    }
+}
+```
+
+Das folgende Codebeispiel verwendet <xref:System.Net.Sockets.Socket> zum Senden von UDP-Datagrammen an die gesteuerte Broadcastadresse 192.168.1.255 auf Port 11.000. Der Client sendet die Meldungszeichenfolge, die in der Befehlszeile angegeben ist.
+
+```vb
+Imports System.Net
+Imports System.Net.Sockets
+Imports System.Text
+
+Public Class Program
+    Public Shared Sub Main(args() As [String])
+      Dim s As New Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp)
+      Dim broadcast As IPAddress = IPAddress.Parse("192.168.1.255")
+      Dim sendbuf As Byte() = Encoding.ASCII.GetBytes(args(0))
+      Dim ep As New IPEndPoint(broadcast, 11000)
+      s.SendTo(sendbuf, ep)
+      Console.WriteLine("Message sent to the broadcast address")
+   End Sub 'Main
+End Class
+```
+
+```csharp
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+        
+        IPAddress broadcast = IPAddress.Parse("192.168.1.255");
+        
+        byte[] sendbuf = Encoding.ASCII.GetBytes(args[0]);
+        IPEndPoint ep = new IPEndPoint(broadcast, 11000);
+        
+        s.SendTo(sendbuf, ep);
+        
+        Console.WriteLine("Message sent to the broadcast address");
+    }
+}
+```
+
+## <a name="see-also"></a>Siehe auch
+ <xref:System.Net.Sockets.UdpClient> <xref:System.Net.IPAddress>

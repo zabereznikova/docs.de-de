@@ -5,17 +5,17 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: fb5d11ed43246f2c4dd67ef35b71e899ab978fc4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cdd90685985b4a48b8fb98451eba0d4ebbbbc6bf
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837905"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297204"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Gewusst wie: Implementieren einer einfachen Klasse mit automatisch implementierten Eigenschaften (C#-Programmierhandbuch)
 In diesem Beispiel wird das Erstellen einer unveränderlichen einfachen Klasse gezeigt, die nur zum Kapseln einer Reihe von automatisch implementierten Eigenschaften dient. Verwenden Sie diese Konstruktart anstelle einer Struktur, wenn Sie eine Verweistypsemantik verwenden müssen.  
   
- Für das Erstellen einer unveränderlichen Eigenschaft gibt es zwei Möglichkeiten.  Sie können deklarieren, dass die [Set](../../../csharp/language-reference/keywords/set.md)-Zugriffsmethode [privat](../../../csharp/language-reference/keywords/private.md) ist.  Die Eigenschaft kann nur im Typ festgelegt werden. Kunden können sie jedoch nicht verändern.  Sie können stattdessen einfach die [Get](../../../csharp/language-reference/keywords/get.md)-Zugriffsmethode deklarieren. Dieser macht die Eigenschaft mit Ausnahme im Konstruktor des Typs überall unveränderlich.  
+ Für das Erstellen einer unveränderlichen Eigenschaft gibt es zwei Möglichkeiten.  Sie können deklarieren, dass die [set](../../../csharp/language-reference/keywords/set.md)-Zugriffsmethode [privat](../../../csharp/language-reference/keywords/private.md) ist.  Die Eigenschaft kann nur im Typ festgelegt werden. Kunden können sie jedoch nicht verändern.  Sie können stattdessen einfach die [Get](../../../csharp/language-reference/keywords/get.md)-Zugriffsmethode deklarieren. Dieser macht die Eigenschaft mit Ausnahme im Konstruktor des Typs überall unveränderlich.  
   
  Beim Deklarieren eines privaten `set`-Accessors können Sie einen Objektinitialisierer nicht verwenden, um die Eigenschaft zu initialisieren. Sie müssen eine Konstruktor oder eine Factorymethode verwenden.  
   
