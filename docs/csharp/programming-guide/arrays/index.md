@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2c3f22cb2a011aea9f0fff9ef49d1fd780d6d832
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111112"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671967"
 ---
 # <a name="arrays-c-programming-guide"></a>Arrays (C#-Programmierhandbuch)
 
@@ -54,6 +54,5 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Sammlungen](../../../csharp/programming-guide/concepts/collections.md)  
-- [Array-Auflistungstyp](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Sammlungen](../../../csharp/programming-guide/concepts/collections.md)
