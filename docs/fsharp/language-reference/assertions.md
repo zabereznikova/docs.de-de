@@ -2,12 +2,12 @@
 title: Assertionen (F#)
 description: Erfahren Sie, wie Sie mit der Ausdruck "assert" als eine Debugfunktion zum Testen von Ausdrücken in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842475"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671905"
 ---
 # <a name="assertions"></a>Assertionen
 
@@ -27,10 +27,10 @@ In der vorherigen Syntax *Bedingung* stellt einen booleschen Ausdruck, der getes
 
 Assertionsüberprüfung ist aktiviert, nur beim Kompilieren im Debugmodus befindet. d.h., wenn die Konstante `DEBUG` definiert ist. Im Projektsystem, standardmäßig die `DEBUG` Konstante wird definiert, in der Debug-Konfiguration jedoch nicht in der Releasekonfiguration.
 
-Der Assertionsfehler kann nicht abgefangen werden, mithilfe von F#-Ausnahmebehandlung.
+Der Assertionsfehler kann nicht abgefangen werden, mithilfe von F# Ausnahmebehandlung.
 
->[!NOTE]
-Die `assert` Funktion löst in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
+> [!NOTE]
+> Die `assert` Funktion löst in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Beispiel
 

@@ -2,11 +2,12 @@
 title: Programmierkonzepte (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672055"
 ---
 # <a name="programming-concepts-visual-basic"></a>Programmierkonzepte (Visual Basic)
 Dieser Abschnitt erläutert die Programmierkonzepte der Sprache Visual Basic.  
@@ -27,7 +28,6 @@ Dieser Abschnitt erläutert die Programmierkonzepte der Sprache Visual Basic.
 |[Objektorientierte Programmierung (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Beschreibt allgemeine objektorientierte Konzepte, einschließlich Kapselung, Vererbung und Polymorphie.|  
 |[Reflektion (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Erläutert, wie Sie mithilfe von Reflektion Instanzen von Typen dynamisch erzeugen, Typen an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen können. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann.|
 |[Serialisierung (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|Beschreibt wichtige Konzepte der binären, XML- und SOAP-Serialisierung.|  
-|[Threading (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|Bietet einen Überblick über das .NET-Threadingmodell und veranschaulicht das Schreiben von Code, mit dem mehrere Aufgaben gleichzeitig ausgeführt werden können, um die Leistung und die Reaktionsgeschwindigkeit der Anwendung zu verbessern.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   

@@ -2,12 +2,12 @@
 title: Gewähren zeilenspezifischer Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873704"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671971"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Gewähren zeilenspezifischer Berechtigungen in SQL Server
 Es gibt Szenarien, in denen der Zugriff auf Daten genauer gesteuert werden muss, als dies durch einfaches Gewähren, Widerrufen oder Ablehnen von Berechtigungen möglich ist. Eine Anwendung für eine Krankenhausdatenbank kann z. B. für einzelne Ärzte erfordern, dass diese jeweils nur auf Daten der eigenen Patienten zugreifen dürfen. Ähnliche Anforderungen gibt es in vielen Umgebungen, vom Finanzwesen über die Justiz und die Behörden bis hin zum militärischen Bereich. SQL Server 2016 bietet ein Feature für die [zeilenbasierte Sicherheit](https://msdn.microsoft.com/library/dn765131.aspx) , die die zeilenbasierte Zugriffslogik in einer Sicherheitsrichtlinie vereinfacht und zentralisiert, um diese Szenarien besser zu unterstützen. Frühere Versionen von SQL Server können mithilfe von Ansichten eine ähnliche Funktionalität erreichen, um die Filterung auf Zeilenebene zu ermöglichen.  
@@ -21,7 +21,7 @@ Es gibt Szenarien, in denen der Zugriff auf Daten genauer gesteuert werden muss,
   
 -   Aktivieren der zeilenbasierten Filterung:  
   
-    -   Wenn Sie SQLServer 2016 oder höher verwenden oder [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/), erstellen Sie eine Sicherheitsrichtlinie, die hinzugefügt wird, ein Prädikat für die Tabelle aus, das die Zeilen zurückgegeben, die entweder entspricht dem aktuellen Datenbankbenutzer (mithilfe der CURRENT_USER() integrierte Funktion) oder dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion)):  
+    -   Bei Verwendung von SQL Server 2016 oder höher oder [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/)erstellen Sie eine Sicherheitsrichtlinie, die der Tabelle ein Prädikat hinzufügt, das die Zeilen auf diejenigen einschränkt, die entweder mit dem aktuellen Datenbankbenutzer (mithilfe der integrierten CURRENT_USER()-Funktion) oder mit dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion) übereinstimmen:  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -58,13 +58,6 @@ Es gibt Szenarien, in denen der Zugriff auf Daten genauer gesteuert werden muss,
 -   Verweigern Sie der Rolle `public` alle Berechtigungen für die Tabellen (und Sichten, falls zutreffend). Die Benutzer können keine Berechtigungen aus anderen Datenbankrollen erben, weil das Filterprädikat nicht auf Rollen, sondern auf Benutzer- oder Anmeldenamen basiert.  
   
 -   Gewähren Sie den Datenbankrollen die Berechtigung EXECUTE für die gespeicherten Prozeduren. Die Benutzer können nur auf Daten zugreifen, die über die gespeicherten Prozeduren bereitgestellt werden.  
-  
-## <a name="external-resources"></a>Externe Ressourcen  
- Weitere Informationen finden Sie in der folgenden Ressource:  
-  
-|||  
-|-|-|  
-|[Implementieren Zeilen- und Zellenbasierter Sicherheit in klassifizierten Datenbanken unter Verwendung von SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) auf der SQL Server-TechCenter-Website.|Beschreibt, wie Sie mithilfe von zeilen- und zellenbasierter Sicherheit die Sicherheitsanforderungen für klassifizierte Datenbanken erfüllen können.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit auf Zeilenebene](https://msdn.microsoft.com/library/dn765131.aspx)  

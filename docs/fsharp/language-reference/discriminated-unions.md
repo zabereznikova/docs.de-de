@@ -1,13 +1,13 @@
 ---
 title: Unterscheidungs-Union (F#)
-description: Informationen zum Verwenden von F#-Unterscheidungs-Unions.
+description: Erfahren Sie, wie Sie mit F# Unterscheidungs-Unions.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788122"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672244"
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
@@ -95,10 +95,18 @@ Dies wird im folgenden Beispiel veranschaulicht:
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+Musterabgleich ist ebenfalls direkt in die Funktionsparameter zulässig, damit Sie es für einen einzelnen Fall Entpacken können:
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>Diskriminierte Unions

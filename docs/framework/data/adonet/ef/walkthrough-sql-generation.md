@@ -2,15 +2,15 @@
 title: 'Exemplarische Vorgehensweise: SQL-Generierung'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510499"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672016"
 ---
 # <a name="walkthrough-sql-generation"></a>Exemplarische Vorgehensweise: SQL-Generierung
-In diesem Thema veranschaulicht die SQL-Generierung in der [Beispielanbieter](https://go.microsoft.com/fwlink/?LinkId=180616). Die folgende Entity SQL-Abfrage verwendet das im Beispielanbieter enthaltene Modell:  
+In diesem Thema veranschaulicht die SQL-Generierung in der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). Die folgende Entity SQL-Abfrage verwendet das im Beispielanbieter enthaltene Modell:  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
