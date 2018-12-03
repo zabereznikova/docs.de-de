@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181458"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672003"
 ---
 # <a name="string-c-reference"></a>string (C#-Referenz)
 
@@ -108,7 +108,6 @@ Weitere Informationen zu Zeichenfolgen in C# finden Sie unter [Zeichenfolgen](..
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../standard/base-types/best-practices-strings.md)
 - [C#-Schlüsselwörter](index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [Verweistypen](reference-types.md)
 - [Werttypen](value-types.md)
 - [Grundlegende Zeichenfolgenoperationen](../../../standard/base-types/basic-string-operations.md)
