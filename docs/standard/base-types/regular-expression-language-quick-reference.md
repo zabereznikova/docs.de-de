@@ -68,7 +68,7 @@ ms.locfileid: "44041615"
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Zeichenklassen  
- Eine Zeichenklasse entspricht einer beliebigen Reihe von Zeichen. Zeichenklassen verwenden die in der folgenden Tabelle aufgeführten Sprachelemente. Weitere Informationen finden Sie unter [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+ Eine Zeichenklasse entspricht einer beliebigen Reihe von Zeichen. Zeichenklassen verwenden die in der folgenden Tabelle aufgeführten Sprachelemente. Weitere Informationen finden Sie unter [Zeichenklassen in regulären Ausdrücken](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
 |Zeichenklasse|Beschreibung |Muster|Übereinstimmungen|  
 |---------------------|-----------------|-------------|-------------|  
@@ -106,15 +106,15 @@ ms.locfileid: "44041615"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Gruppierungskonstrukte  
- Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und zeichnen gewöhnlich Teilzeichenfolgen einer Eingabezeichenfolge auf. Gruppierungskonstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
+ Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und zeichnen gewöhnlich Teilzeichenfolgen einer Eingabezeichenfolge auf. Gruppierungskonstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](grouping-constructs-in-regular-expressions.md).  
   
 |Gruppierungskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck auf und weist diesem eine einsbasierte Ordinalzahl zu.|`(\w)\1`|"aa" in "paarweise"|  
 |`(?<` *Name* `>` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|"aa" in "paarweise"|  
-|`(?<` *name1* `-` *name2* `>` *Teilausdruck* `)`|Definiert eine Ausgleichsgruppendefinition. Weitere Informationen finden Sie im Abschnitt „Ausgleichen von Gruppendefinitionen“ in [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" in "3+2^((1-3)\*(3-1))"|  
+|`(?<` *name1* `-` *name2* `>` *Teilausdruck* `)`|Definiert eine Ausgleichsgruppendefinition. Weitere Informationen finden Sie im Abschnitt „Ausgleichen von Gruppendefinitionen“ in [Gruppierungskonstrukte in regulären Ausdrücken](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" in "3+2^((1-3)\*(3-1))"|  
 |`(?:` *Teilausdruck* `)`|Definiert eine Nicht-Erfassungsgruppe.|`Write(?:Line)?`|"WriteLine" in "Console.WriteLine()"<br /><br /> "Write" in "Console.Write(value)"|  
-|`(?imnsx-imnsx:` *Teilausdruck* `)`|Aktiviert oder deaktiviert die angegebenen Optionen in *subexpression*. Weitere Informationen finden Sie unter [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" in "A12xl A12XL a12xl"|  
+|`(?imnsx-imnsx:` *Teilausdruck* `)`|Aktiviert oder deaktiviert die angegebenen Optionen in *subexpression*. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" in "A12xl A12XL a12xl"|  
 |`(?=` *Teilausdruck* `)`|Positive Lookaheadassertion mit einer Breite von Null.|`\w+(?=\.)`|"is", "ren" und "weg" in "Er isst. Der Hund rennt. Die Sonne ist weg."|  
 |`(?!` *Teilausdruck* `)`|Negative Lookaheadassertion mit einer Breite von Null.|`\b(?!un)\w+\b`|"sicher", "mischt" in "unsicher sicher unter mischt"|  
 |`(?<=` *Teilausdruck* `)`|Positive Lookbehindassertion mit einer Breite von Null.|`(?<=19)\d{2}\b`|"99", "50", "05" in "1851 1999 1950 1905 2003"|  
@@ -125,7 +125,7 @@ ms.locfileid: "44041615"
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Quantifizierer  
- Quantifizierer geben an, wie viele Instanzen des vorherigen Elements (bei dem es sich um ein Zeichen, eine Gruppe oder eine Zeichenklasse handeln kann) in der Eingabezeichenfolge vorhanden sein müssen, damit eine Entsprechung gefunden wird. Quantifizierer verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Quantifiers](quantifiers-in-regular-expressions.md).  
+ Quantifizierer geben an, wie viele Instanzen des vorherigen Elements (bei dem es sich um ein Zeichen, eine Gruppe oder eine Zeichenklasse handeln kann) in der Eingabezeichenfolge vorhanden sein müssen, damit eine Entsprechung gefunden wird. Quantifizierer verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](quantifiers-in-regular-expressions.md).  
   
 |Quantifizierer|Beschreibung |Muster|Übereinstimmungen|  
 |----------------|-----------------|-------------|-------------|  
@@ -146,7 +146,7 @@ ms.locfileid: "44041615"
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Rückverweiskonstrukte  
- Ein Rückverweis ermöglicht es, einen zuvor gefundenen Teilausdruck später im gleichen regulären Ausdruck zu identifizieren. In der folgenden Tabelle sind die Rückverweiskonstrukte aufgeführt, die von regulären .NET-Ausdrücken unterstützt werden. Weitere Informationen finden Sie unter [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
+ Ein Rückverweis ermöglicht es, einen zuvor gefundenen Teilausdruck später im gleichen regulären Ausdruck zu identifizieren. In der folgenden Tabelle sind die Rückverweiskonstrukte aufgeführt, die von regulären .NET-Ausdrücken unterstützt werden. Weitere Informationen finden Sie unter [Rückverweiskonstrukte in regulären Ausdrücken](backreference-constructs-in-regular-expressions.md).  
   
 |Rückverweiskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |-----------------------------|-----------------|-------------|-------------|  
@@ -157,7 +157,7 @@ ms.locfileid: "44041615"
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Alternierungskonstrukte  
- Alternierungskonstrukte ändern einen regulären Ausdruck, um entweder/oder-Vergleiche zuzulassen. Diese Konstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
+ Alternierungskonstrukte ändern einen regulären Ausdruck, um entweder/oder-Vergleiche zuzulassen. Diese Konstrukte verwenden die Sprachelemente in der folgenden Tabelle. Weitere Informationen finden Sie unter [Alternierungskonstrukte in regulären Ausdrücken](alternation-constructs-in-regular-expressions.md).  
   
 |Alternierungskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |---------------------------|-----------------|-------------|-------------|  
@@ -169,7 +169,7 @@ ms.locfileid: "44041615"
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>Ersetzungen  
- Ersetzungen sind Sprachelemente regulärer Ausdrücke, die in Ersetzungsmustern unterstützt werden. Weitere Informationen finden Sie unter [Substitutions](substitutions-in-regular-expressions.md). Die Metazeichen in der folgenden Tabelle sind atomare Assertionen mit einer Breite von Null.  
+ Ersetzungen sind Sprachelemente regulärer Ausdrücke, die in Ersetzungsmustern unterstützt werden. Weitere Informationen finden Sie unter [Ersetzungen in regulären Ausdrücken](substitutions-in-regular-expressions.md). Die Metazeichen in der folgenden Tabelle sind atomare Assertionen mit einer Breite von Null.  
   
 |Zeichen|Beschreibung |Muster|Ersetzungsmuster|Eingabezeichenfolge|Ergebniszeichenfolge|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
@@ -186,22 +186,22 @@ ms.locfileid: "44041615"
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke  
- Sie können Optionen angeben, die steuern, wie die Engine für reguläre Ausdrücke ein Muster des regulären Ausdrucks interpretiert. Viele dieser Optionen können entweder inline (im Muster des regulären Ausdrucks) oder als eine oder mehrere <xref:System.Text.RegularExpressions.RegexOptions> -Konstanten angegeben werden. Diese Kurzübersicht enthält nur Inlineoptionen. Weitere Informationen zu Inlineoptionen und <xref:System.Text.RegularExpressions.RegexOptions> -Optionen finden Sie im Artikel [Regular Expression Options](regular-expression-options.md).  
+ Sie können Optionen angeben, die steuern, wie die Engine für reguläre Ausdrücke ein Muster des regulären Ausdrucks interpretiert. Viele dieser Optionen können entweder inline (im Muster des regulären Ausdrucks) oder als eine oder mehrere <xref:System.Text.RegularExpressions.RegexOptions> -Konstanten angegeben werden. Diese Kurzübersicht enthält nur Inlineoptionen. Weitere Informationen zu Inlineoptionen und <xref:System.Text.RegularExpressions.RegexOptions> -Optionen finden Sie im Artikel [Optionen für reguläre Ausdrücke](regular-expression-options.md).  
   
  Sie können eine Inlineoption auf zwei Arten angeben:  
   
--   Mit [, einem der](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, where a minus sign (-) before an option or set of options turns those options off. Zum Beispiel aktiviert `(?i-mn)` Übereinstimmungen ohne Berücksichtigung der Groß-/Kleinschreibung (`i`), deaktiviert Mehrzeilenmodus (`m`) und deaktiviert unbenannte Gruppenerfassungen (`n`). Die Option gilt für das Muster des regulären Ausdrucks ab dem Punkt, an dem die Option definiert ist, und ist entweder bis zum Ende des Musters oder bis zu dem Punkt gültig, an dem ein anderes Konstrukt die Option umkehrt.  
+-   Mit [dem Konstrukt](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, wobei ein vor einer Option oder Optionsgruppe stehendes Minuszeichen (-) die betreffenden Optionen deaktiviert. Zum Beispiel aktiviert `(?i-mn)` Übereinstimmungen ohne Berücksichtigung der Groß-/Kleinschreibung (`i`), deaktiviert Mehrzeilenmodus (`m`) und deaktiviert unbenannte Gruppenerfassungen (`n`). Die Option gilt für das Muster des regulären Ausdrucks ab dem Punkt, an dem die Option definiert ist, und ist entweder bis zum Ende des Musters oder bis zu dem Punkt gültig, an dem ein anderes Konstrukt die Option umkehrt.  
   
--   Mit [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*Teilausdruck*`)`, das die Optionen nur für die angegebene Gruppe definiert.  
+-   Mit [Gruppierungskonstrukte in regulären Ausdrücken](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*Teilausdruck*`)`, das die Optionen nur für die angegebene Gruppe definiert.  
   
  Die .NET-Engine für reguläre Ausdrücke unterstützt die folgenden Inlineoptionen.  
   
 |Option|Beschreibung |Muster|Übereinstimmungen|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Groß-/Kleinschreibung bei der Suche ignorieren|`\b(?i)a(?-i)a\w+\b`|"Aale" und "Aasblumen" in "Aale essen Aasblumen roh"|  
-|`m`|Mehrzeilenmodus verwenden. `^` und `$` entsprechen dem Anfang und Ende einer Zeile anstatt dem Anfang und Ende einer Zeichenfolge.|Ein Beispiel finden Sie im Abschnitt zum Mehrzeilenmodus in [Regular Expression Options](regular-expression-options.md).||  
-|`n`|Unbenannte Gruppen nicht erfassen|Ein Beispiel finden Sie im Abschnitt zu ausschließlich expliziten Erfassungen in [Regular Expression Options](regular-expression-options.md).||  
-|`s`|Einzeilenmodus verwenden|Ein Beispiel finden Sie im Abschnitt zum Einzeilenmodus in [Regular Expression Options](regular-expression-options.md).||  
+|`m`|Mehrzeilenmodus verwenden. `^` und `$` entsprechen dem Anfang und Ende einer Zeile anstatt dem Anfang und Ende einer Zeichenfolge.|Ein Beispiel finden Sie im Abschnitt zum Mehrzeilenmodus in [Optionen für reguläre Ausdrücke](regular-expression-options.md).||  
+|`n`|Unbenannte Gruppen nicht erfassen|Ein Beispiel finden Sie im Abschnitt zu ausschließlich expliziten Erfassungen in [Optionen für reguläre Ausdrücke](regular-expression-options.md).||  
+|`s`|Einzeilenmodus verwenden|Ein Beispiel finden Sie im Abschnitt zum Einzeilenmodus in [Optionen für reguläre Ausdrücke](regular-expression-options.md).||  
 |`x`|Leerraum ohne Escapezeichen im Muster eines regulären Ausdrucks ignorieren|`\b(?x) \d+ \s \w+`|"1 Erdferkel", "2 Katzen" in "1 Erdferkel 2 Katzen IV Zenturionen"|  
   
  [Zurück zum Anfang](#top)  
