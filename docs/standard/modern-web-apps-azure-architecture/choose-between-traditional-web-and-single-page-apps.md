@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie beim Erstellen von Webanwen
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404145"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745302"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Auswählen zwischen herkömmlichen Webanwendungen und Single-Page-Webanwendungen (SPAs)
 
@@ -73,7 +73,7 @@ Das Schreiben von SPAs erfordert Erfahrung mit JavaScript und bzw. oder TypeScri
 > - **Angular**  
 >   <https://angular.io>
 > - **Vergleich von JavaScript-Frameworks**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **Ihre Anwendung muss bereits eine API für andere (interne oder öffentliche) Clients zur Verfügung stellen**
 
@@ -91,5 +91,5 @@ In der folgenden Entscheidungstabelle werden einige der grundlegenden Faktoren z
 | Umfangreiche und komplexe Anforderungen für die Benutzeroberfläche            | **Eingeschränkt**             | **Gut geeignet**             |
 
 >[!div class="step-by-step"]
-[Zurück](modern-web-applications-characteristics.md)
-[Weiter](architectural-principles.md)
+>[Zurück](modern-web-applications-characteristics.md)
+>[Weiter](architectural-principles.md)
