@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615325"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672032"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder eine Teilzeichenfolge innerhalb einer Zeichenfolge zu identifizieren. Wenn z.B. die Eingabezeichenfolge mehrere Vorkommen einer beliebigen Teilzeichenfolge enthält, können Sie das erste Vorkommen mit einer Erfassungsgruppe abgleichen und dann mit einem Rückverweis nachfolgende Vorkommen der Teilzeichenfolge abgleichen.  
@@ -64,7 +64,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  oder:  
   
- `\k'` *name* `'`  
+ `\k'` *Name* `'`  
   
  wobei *Name* der Name einer Erfassungsgruppe ist, die im Muster eines regulären Ausdrucks definiert ist. Wenn *name* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus.  
   
@@ -114,7 +114,7 @@ Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassung
   
 2.  Es wird zum zweiten Zeichen gewechselt, und die Zeichenfolge „ab“ wird erfolgreich mit dem Ausdruck `\1b` bzw. „ab“ abgeglichen. Anschließend wird `\1` das Ergebnis „ab“ zugewiesen.  
   
-3.  Es wird zum vierten Zeichen gewechselt. Der Ausdruck `(?<1>\1b)` muss nullmal oder mehrfach abgeglichen werden, damit er der Zeichenfolge „abb“ mit dem Ausdruck `\1b` entspricht. Das Ergebnis „abb“ wird wieder `\1` zugewiesen.  
+3.  Es wird zum vierten Zeichen gewechselt. Der Ausdruck `(?<1>\1b)*` muss nullmal oder mehrfach abgeglichen werden, damit er der Zeichenfolge „abb“ mit dem Ausdruck `\1b` entspricht. Das Ergebnis „abb“ wird wieder `\1` zugewiesen.  
   
  In diesem Beispiel ist `*` ein Schleifenquantifizierer – er wird wiederholt ausgewertet, bis die Engine für reguläre Ausdrücke keine Entsprechung für das Muster finden kann, das sie definiert. Quantifizierer, die in Schleifen durchlaufen werden, löschen keine Gruppendefinitionen.  
   

@@ -1,15 +1,15 @@
 ---
 title: Resilienz und Hochverfügbarkeit bei Microservices
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Resilienz und Hochverfügbarkeit bei Microservices
+description: Microservices müssen so entworfen werden, dass sie vorübergehende Netzwerk- und Abhängigkeitsfehler aushalten. Zudem müssen sie resilient sein, um Hochverfügbarkeit zu gewährleisten.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106316"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745328"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -19,7 +19,7 @@ Ein Microservice muss ausfallsicher sein. Zudem muss es zur Gewährleistung der 
 
 Die Probleme der Resilienz werden in anderen Szenarios noch verschärft, beispielsweise wenn Fehler bei einem Anwendungsupgrade auftreten. Der mit dem Bereitstellungssystem verwendete Microservice muss erkennen, ob die neuere Version installiert werden kann und der Zustand dabei konsistent bleibt oder ob zur Erhaltung des konsistenten Zustands ein Rollback zu einer früheren Version ausgeführt werden muss. Fragen wie die, ob genügend Computer vorhanden sind, um die neuere Version zu installieren, und wie frühere Versionen des Microservices wiederhergestellt werden können, müssen berücksichtigt werden. Dazu muss der Microservice Integritätsinformationen ausgeben, sodass diese Entscheidungen von der Anwendung und dem Orchestrator insgesamt getroffen werden können.
 
-Ferner bezieht sich Resilienz darauf, wie sich cloudbasierte Systeme verhalten müssen. Wie bereits erwähnt, muss ein cloudbasiertes System Fehler aufgreifen und versuchen, sich automatisch wiederherzustellen. Bei einem Netzwerk- oder Containerfehler müssen Clientanwendungen bzw. Clientdienste beispielsweise über eine Strategie zum wiederholten Senden von Nachrichten oder Anforderungen verfügen, da Fehler in der Cloud häufig nur partiell auftreten. Im Abschnitt [Implementing Resilient Applications (Implementieren von stabilen Anwendungen)](#implementing_resilient_apps) in diesem Handbuch wird die Behandlung von partiellen Fehlern thematisiert. Hier werden Techniken wie Wiederholungen mit exponentiellem Backoff oder das Schaltkreisunterbrechermuster in .NET Core durch Verwendung von Bibliotheken wie [Polly](https://github.com/App-vNext/Polly) beschrieben, die eine Vielzahl von Richtlinien zur Behandlung dieses Problems bereitstellen.
+Ferner bezieht sich Resilienz darauf, wie sich cloudbasierte Systeme verhalten müssen. Wie bereits erwähnt, muss ein cloudbasiertes System Fehler aufgreifen und versuchen, sich automatisch wiederherzustellen. Bei einem Netzwerk- oder Containerfehler müssen Clientanwendungen bzw. Clientdienste beispielsweise über eine Strategie zum wiederholten Senden von Nachrichten oder Anforderungen verfügen, da Fehler in der Cloud häufig nur partiell auftreten. Im Abschnitt [Implementing Resilient Applications (Implementieren von stabilen Anwendungen)](../implement-resilient-applications/index.md) in diesem Handbuch wird die Behandlung von partiellen Fehlern thematisiert. Hier werden Techniken wie Wiederholungen mit exponentiellem Backoff oder das Schaltkreisunterbrechermuster in .NET Core durch Verwendung von Bibliotheken wie [Polly](https://github.com/App-vNext/Polly) beschrieben, die eine Vielzahl von Richtlinien zur Behandlung dieses Problems bereitstellen.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Integritätsverwaltung und Diagnose in Microservices
 
@@ -29,7 +29,12 @@ Es mag offensichtlich erscheinen und wird häufig übersehen, aber ein Microserv
 
 Integritätsprüfungen und Diagnosen sind nicht dasselbe. Bei der Integrität geht es darum, dass der Microservice seinen aktuellen Zustand meldet, damit entsprechende Maßnahmen ergriffen werden können. Ein gutes Beispiel hierfür ist die Verwendung von Upgrade- und Bereitstellungsmechanismen zur Gewährleistung der Verfügbarkeit. So kann ein Dienst beispielsweise aufgrund eines Prozessabsturzes oder aufgrund des Neustarts eines Computers vorübergehend fehlerhaft, aber dennoch funktionstüchtig sein. In diesem Fall würde die Ausführung eines Upgrades die Situation noch verschlimmern. Daher sollte am besten zunächst eine Untersuchung durchgeführt oder dem Microservice Zeit für die Wiederherstellung eingeräumt werden. Integritätsereignisse von einem Microservice helfen uns, fundierte Entscheidungen zu treffen und Services für die Selbstreparatur zu erstellen.
 
-Im Abschnitt Implementieren von Integritätsprüfungen in ASP.NET Core-Diensten in diesem Handbuch wird erläutert, wie in den Microservices eine ASP.NET HealthChecks-Bibliothek so verwendet werden kann, dass die Microservices ihren Zustand an einen Überwachungsdienst senden, damit entsprechende Maßnahmen ergriffen werden können.
+Im Abschnitt [Implementieren von Integritätsprüfungen in ASP.NET Core-Diensten](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) in diesem Leitfaden wird erläutert, wie in den Microservices eine ASP.NET HealthChecks-Bibliothek so verwendet werden kann, dass die Microservices ihren Zustand an einen Überwachungsdienst senden, damit entsprechende Maßnahmen ergriffen werden können.
+
+Sie haben auch die Möglichkeit, eine ausgezeichnete Open Source-Bibliothek namens „Beat Pulse“ zu verwenden. Diese ist auf [GitHub](https://github.com/Xabaril/BeatPulse) und als [NuGet-Paket](https://www.nuget.org/packages/BeatPulse/) verfügbar. Diese Bibliothek führt ebenfalls Integritätsprüfungen durch. Jedoch gibt es einen kleinen Unterschied: sie führt zwei unterschiedliche Arten von Überprüfungen durch:
+
+- **Livetest:** Es wird überprüft, ob der Microservice aktiv ist, also ob er Anforderungen akzeptieren und auf diese reagieren kann. 
+- **Bereitschaft:** Es wird überprüft, ob die Abhängigkeiten des Microservices (Datenbank, Warteschlangendienste usw.) selbst bereit sind, damit der Microservice das tun kann, was er soll. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Verwenden von Diagnose- und Protokollereignisdatenströmen
 
@@ -43,7 +48,7 @@ Eine auf Microservices basierende Anwendung sollte nicht versuchen, den Ausgabed
 
 Beim Erstellen einer auf Microservices basierenden Anwendung müssen Sie mit Komplexität umgehen können. Der Umgang mit einem einzelnen Microservice ist natürlich einfach. Aber Dutzende oder Hunderte Arten und Tausende Instanzen von Microservices stellen ein komplexes Problem dar. Dabei geht es nicht nur um die Erstellung der Microservicearchitektur. Gefragt sind auch Hochverfügbarkeit, eine gute Adressierbarkeit, Resilienz, Integrität und Diagnosefunktionen, wenn Sie ein stabiles und kohäsives System erstellen möchten.
 
-![](./media/image22.png)
+![Orchestratoren stellen eine Supportplattform zum Ausführen Ihrer Microservices bereit.](./media/image22.png)
 
 **Abbildung 4-22.** Microserviceplattformen sind für die Integritätsverwaltung einer Anwendung entscheidend
 
@@ -53,30 +58,27 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **The Twelve-Factor App. XI. Protokolle: Protokolle als Strom von Ereignissen behandeln**
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+- **The Twelve-Factor App. XI. Protokolle: Protokolle als Strom von Ereignissen behandeln** \
+  [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Microsoft.Diagnostics.EventFlow-Bibliothek.** GitHub repo (Scrutor. GitHub-Reporitory).
+- GitHub-Repository **Microsoft.Diagnostics.EventFlow-Bibliothek**. \
+  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- **Was ist die Azure-Diagnose?** \
+  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Was ist die Azure-Diagnose?**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Verbinden von Windows-Computern mit dem Log Analytics-Dienst in Azure** \
+  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Verbinden von Windows-Computern mit dem Log Analytics-Dienst in Azure**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Logging What You Mean: Using the Semantic Logging Application Block (Protokollieren: Verwenden des Semantic Logging Application Block)** \
+  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
--   **Logging What You Mean: Using the Semantic Logging Application Block (Protokollieren: Verwenden des Semantic Logging Application Block)**
-    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- Die offizielle Website von **Splunk**. \
+  [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Splunk.** Offizielle Website.
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **EventSource-Klasse**. API for events tracing for Windows (ETW) (API für die Ereignisablaufverfolgung für Windows (ETW))[*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- **EventSource-Klasse** API for events tracing for Windows (ETW) (API für die Ereignisablaufverfolgung für Windows (ETW))
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 >[!div class="step-by-step"]
-[Zurück](microservice-based-composite-ui-shape-layout.md)
-[Weiter](scalable-available-multi-container-microservice-applications.md)
+>[Zurück](microservice-based-composite-ui-shape-layout.md)
+>[Weiter](scalable-available-multi-container-microservice-applications.md)

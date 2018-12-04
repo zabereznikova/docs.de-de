@@ -4,16 +4,16 @@ description: Leitfaden für die serverlose Architektur Erfahren Sie, wann, warum
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404811"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745315"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Serverlose Apps: Architektur, Muster und Azure-Implementierung
+
+![](./media/Cover.jpg)
 
 > DOWNLOAD verfügbar unter: <https://aka.ms/serverless-ebook>
 
@@ -61,7 +61,7 @@ Teilnehmer und Prüfer:
 
 ## <a name="introduction"></a>Einführung
 
-Durch die serverlose Architektur entwickeln sich Cloudplattformen in Richtung von cloudnativem Code weiter. Dadurch kommen Entwickler der Geschäftslogik näher, während sie diese von Infrastrukturproblemen isolieren. Dieses Muster impliziert nicht, dass kein Server mehr vorhanden ist, sondern dass weniger Server vorhanden sind. Serverloser Code ist ereignisgesteuert. Code kann beispielsweise von einer HTTP-Webanforderung für einen Timer oder vom Ergebnis eines Dateiuploads ausgelöst werden. Mithilfe der serverlosen Architektur kann eine sofortige Skalierung durchgeführt werden, um elastischen Anforderungen nachzukommen. Außerdem bietet sie Microbilling, sodass Sie nur das bezahlen, was Sie auch nutzen. Die serverlose Architektur erfordert eine neue Denkweise und Herangehensweise bei der Anwendungserstellung. Sie ist aber keineswegs die Universallösung für jedes Problem. Als Entwickler müssen Sie Folgendes entscheiden:
+Durch die [serverlose Architektur](https://azure.microsoft.com/solutions/serverless/) entwickeln sich Cloudplattformen in Richtung von cloudnativem Code weiter. Dadurch kommen Entwickler der Geschäftslogik näher, während sie diese von Infrastrukturproblemen isolieren. Dieses Muster impliziert nicht, dass kein Server mehr vorhanden ist, sondern dass weniger Server vorhanden sind. Serverloser Code ist ereignisgesteuert. Code kann beispielsweise von einer HTTP-Webanforderung für einen Timer oder vom Ergebnis eines Dateiuploads ausgelöst werden. Mithilfe der serverlosen Architektur kann eine sofortige Skalierung durchgeführt werden, um elastischen Anforderungen nachzukommen. Außerdem bietet sie Microbilling, sodass Sie nur das bezahlen, was Sie auch nutzen. Die serverlose Architektur erfordert eine neue Denkweise und Herangehensweise bei der Anwendungserstellung. Sie ist aber keineswegs die Universallösung für jedes Problem. Als Entwickler müssen Sie Folgendes entscheiden:
 
 * Was sind die Vor- und Nachteile der serverlosen Architektur?
 * Warum sollten Sie die serverlose Architektur für Ihre eigenen Anwendungen in Betracht ziehen?
@@ -138,4 +138,4 @@ Der erste Teil dieses Leitfadens befasst sich damit, warum die serverlose Archit
 Dieser Leitfaden und die dazugehörigen Beispiele werden ständig weiterentwickelt, deshalb freuen wir uns über Ihr Feedback. Wenn Sie Anmerkungen zur Verbesserung dieses Leitfadens haben, nutzen Sie den Feedbackabschnitt, der unten auf jeder Seite zu finden ist und über den [GitHub-Issues](https://github.com/dotnet/docs/issues) erstellt werden.
 
 >[!div class="step-by-step"]
-[Nächste](architecture-approaches.md)
+>[Nächste](architecture-approaches.md)
