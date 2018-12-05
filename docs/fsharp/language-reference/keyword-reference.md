@@ -1,21 +1,21 @@
 ---
 title: Schlüsselwortreferenz (F#)
-description: Links zu Informationen über alle von der F#-Schlüsselwörter.
+description: Hier finden Sie Links zu Informationen über alle der F# Programmiersprachen-Schlüsselwörter.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/05/2018
 ms.locfileid: "43856023"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
-Dieses Thema enthält Links zu Informationen über alle F#-Schlüsselwörter.
+Dieses Thema enthält Links zu Informationen über alle F# Programmiersprachen-Schlüsselwörter.
 
-## <a name="f-keyword-table"></a>Tabelle der F#-Schlüsselwort
+## <a name="f-keyword-table"></a>F#Table-Schlüsselwort
 
-Die folgende Tabelle zeigt alle F#-Schlüsselwörter in alphabetischer Reihenfolge, sowie kurze Beschreibungen und Links zu relevanten Themen, die Informationen enthalten.
+Die folgende Tabelle zeigt alle F# Schlüsselwörter in alphabetischer Reihenfolge, sowie kurze Beschreibungen und Links zu relevanten Themen, die Informationen enthalten.
 
 |Stichwort|Link|Beschreibung|
 |-------|----|-----------|
