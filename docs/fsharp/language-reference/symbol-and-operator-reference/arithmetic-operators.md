@@ -2,11 +2,11 @@
 title: Arithmetische Operatoren (F#)
 description: Erfahren Sie, bis die arithmetischen Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 04/04/2018
-ms.openlocfilehash: 008aa84b8736bb3a734ce8bb9713d34c17f1b76e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2c0e2e25a4f79d00455d978e235e4bef16b52586
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "45597427"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
@@ -34,6 +34,7 @@ Die folgende Tabelle enthält die unären arithmetischen Operatoren, die für ga
 |--------------|-----|
 |`+` (positiv)|Kann auf alle arithmetischen Ausdruck angewendet werden. Die Vorzeichen des Werts wird nicht geändert werden.|
 |`-` (Negation, negativ)|Kann auf alle arithmetischen Ausdruck angewendet werden. Ändert das Vorzeichen des Werts.|
+
 Das Verhalten bei einem Überlauf oder Unterlauf für ganzzahlige Typen ist um fließen. Dies führt zu ein falsches Ergebnis. Ganzzahlüberlauf ist eine ernsthafte Probleme verursachen, die für Sicherheitsprobleme verursachen können, wenn die Software nicht geschrieben wird, um es zu berücksichtigen. Ist dies ein Problem für Ihre Anwendung, erwägen Sie die Verwendung der überprüften Operatoren in `Microsoft.FSharp.Core.Operators.Checked`.
 
 ## <a name="summary-of-binary-comparison-operators"></a>Zusammenfassung der binäre Vergleichsoperatoren
@@ -53,13 +54,13 @@ Gleitkommazahlen sollten nie direkt für gleich, verglichen werden, da der IEEE-
 
 ## <a name="overloaded-and-generic-operators"></a>Überladene und generische Operatoren
 
-Alle Operatoren in diesem Thema erläutert werden definiert, der **Microsoft.FSharp.Core.Operators** Namespace. Einige der Operatoren werden mithilfe von Statisch aufgelöste Typparameter definiert. Dies bedeutet, dass es einzelnen Definitionen für den jeweiligen, die mit dieser Operator funktioniert. Alle unären und binären arithmetische und bitweise Operatoren werden in dieser Kategorie. Die Vergleichsoperatoren sind generisch und funktioniert daher mit einem beliebigen Typ, nicht nur mit primitiven arithmetischen Typen. Unterscheidungs-Union "und" Record-Typen müssen ihre eigenen benutzerdefinierten Implementierungen, die von der F#-Compiler generiert werden. Verwenden Sie die Methode, Klassentypen <xref:System.Object.Equals%2A>.
+Alle Operatoren in diesem Thema erläutert werden definiert, der **Microsoft.FSharp.Core.Operators** Namespace. Einige der Operatoren werden mithilfe von Statisch aufgelöste Typparameter definiert. Dies bedeutet, dass es einzelnen Definitionen für den jeweiligen, die mit dieser Operator funktioniert. Alle unären und binären arithmetische und bitweise Operatoren werden in dieser Kategorie. Die Vergleichsoperatoren sind generisch und funktioniert daher mit einem beliebigen Typ, nicht nur mit primitiven arithmetischen Typen. Unterscheidungs-Union und Datensatztypen haben ihre eigenen benutzerdefinierten Implementierungen, die vom generierten der F# Compiler. Verwenden Sie die Methode, Klassentypen <xref:System.Object.Equals%2A>.
 
 Die generische Operatoren können angepasst werden. Informationen zum Anpassen der Vergleichsfunktionen überschreiben <xref:System.Object.Equals%2A> Ihre eigenen benutzerdefinierten Gleichheitsvergleich bereitstellen und implementieren Sie anschließend <xref:System.IComparable>. Die <xref:System.IComparable?displayProperty=nameWithType> Schnittstelle verfügt über eine einzelne Methode, die <xref:System.IComparable.CompareTo%2A> Methode.
 
 ## <a name="operators-and-type-inference"></a>Operatoren und Typrückschluss
 
-Die Verwendung eines Operators in einem Ausdruck schränkt den Typrückschluss auf diesen Operator. Außerdem wird verhindert, dass die Verwendung Operatoren automatische Verallgemeinerung, da die Verwendung Operatoren einen arithmetischen Typ impliziert. In anderen Informationen vorhanden ist, leitet der F#-Compiler `int` als Typ des arithmetischen Ausdrücken. Sie können dieses Verhalten überschreiben, indem Sie einen anderen Typ angeben. Daher den Argumenttypen und der Rückgabetyp der `function1` in den folgenden Code werden als abgeleitet `int`, aber die Typen für `function2` abgeleitet werden, um werden `float`.
+Die Verwendung eines Operators in einem Ausdruck schränkt den Typrückschluss auf diesen Operator. Außerdem wird verhindert, dass die Verwendung Operatoren automatische Verallgemeinerung, da die Verwendung Operatoren einen arithmetischen Typ impliziert. In Ermangelung andere Informationen die F# leitet der Compiler `int` als Typ des arithmetischen Ausdrücken. Sie können dieses Verhalten überschreiben, indem Sie einen anderen Typ angeben. Daher den Argumenttypen und der Rückgabetyp der `function1` in den folgenden Code werden als abgeleitet `int`, aber die Typen für `function2` abgeleitet werden, um werden `float`.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3501.fs)]
 
