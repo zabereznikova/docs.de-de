@@ -4,12 +4,12 @@ description: Unterschiede verstehen zwischen logischer und physischer Architektu
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296125"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129921"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Logische und physische Architektur im Vergleich
 
@@ -36,5 +36,5 @@ Die Dienste in diesem Beispiel verfügen alle über dasselbe Datenmodell, da der
 Zusammenfassend lässt sich sagen, dass sich die logische Architektur von Microservices nicht immer mit der physischen Bereitstellungsarchitektur überschneiden muss. In diesem Handbuch ist mit dem Begriff „Microservice“ immer ein logischer Microservice oder ein Unternehmensmicroservice gemeint, der mindestens einem (physischen) Dienst zugeordnet werden kann. In den meisten Fällen handelt es sich nur um einen einzelnen Dienst. Es können aber auch mehr Dienste zugeordnet werden.
 
 >[!div class="step-by-step"]
-[Zurück](data-sovereignty-per-microservice.md)
-[Weiter](distributed-data-management.md)
+>[Zurück](data-sovereignty-per-microservice.md)
+>[Weiter](distributed-data-management.md)

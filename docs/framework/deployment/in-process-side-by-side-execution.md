@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143843"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzelnen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -90,7 +90,7 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
   
  Um das folgende Beispiel auszuführen, kompilieren und registrieren Sie die folgende verwaltete COM-Komponente mithilfe von [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Um die Komponente zu registrieren, klicken Sie im **Projekt**-Menü auf **Eigenschaften**, auf die Registerkarte **Erstellen**, und aktivieren Sie dann das Kontrollkästchen **Für COM-Interop registrieren**.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -115,7 +115,7 @@ namespace BasicComObject
   
  Kompilieren Sie die folgende nicht verwaltete C++-Anwendung, die das COM-Objekt aktiviert, das durch das vorherige Beispiel erstellt wurde.  
   
-```  
+```cpp
 #include "stdafx.h"  
 #include <string>  
 #include <iostream>  

@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Allg
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537825"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128478"
 ---
 # <a name="general-guidance"></a>Allgemeine Anleitung
 
@@ -45,7 +45,6 @@ Das Verwenden von .NET Framework auf Docker kann Ihre Bereitstellungen verbesser
 -   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)  
     https://aka.ms/eshopmodernizing
 
-
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](net-core-container-scenarios.md)
+>[Zurück](index.md)
+>[Weiter](net-core-container-scenarios.md)

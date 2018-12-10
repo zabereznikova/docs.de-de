@@ -4,12 +4,12 @@ description: Empfehlungen für bewährte Methoden für starke Namen für .NET-Bi
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128998"
 ---
 # <a name="strong-naming"></a>Starke Namen
 
@@ -71,5 +71,5 @@ Sie sollten Ihren .NET-Open-Source-Bibliotheken einen starken Namen geben. Der s
 > Die Veröffentlichung von zwei Paketen verzweigt Ihr Entwicklerökosystem. Auch wenn eine Anwendung letztendlich von beiden Paketen abhängig ist, kann es bei dem Entwickler zu Typnamenskonflikten kommen. Was .NET betrifft, so sind sie verschiedene Typen in verschiedenen Assemblys.
 
 >[!div class="step-by-step"]
-[Zurück](./cross-platform-targeting.md)
-[Weiter](./nuget.md)
+>[Zurück](cross-platform-targeting.md)
+>[Weiter](nuget.md)

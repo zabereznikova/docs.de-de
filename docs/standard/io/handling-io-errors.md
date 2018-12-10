@@ -2,7 +2,9 @@
 title: Behandeln von E/A-Fehlern in .NET
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,24 +13,24 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696416"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126874"
 ---
 # <a name="handling-io-errors-in-net"></a>Behandeln von E/A-Fehlern in .NET
 
 Über die Ausnahmen hinaus, die bei jedem Methodenaufruf ausgelöst werden können (wie etwa eine <xref:System.OutOfMemoryException>, wenn ein System unter Stress steht, oder eine <xref:System.NullReferenceException> aufgrund eines Programmierfehlers), können Methoden des .NET-Dateisystems die folgenden Ausnahmen auslösen:
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>, die Basisklasse aller <xref:System.IO>-Ausnahmetypen. Sie wird für Fehler ausgelöst, deren Rückgabecodes aus dem Betriebssystem sich nicht direkt anderen Ausnahmetypen zuordnen lassen.
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
 - <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>
 - <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>
 - <xref:System.IO.PathTooLongException?displayProperty=nameWithType>
 - <xref:System.OperationCanceledException?displayProperty=nameWithType>
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
 - <xref:System.ArgumentException?displayProperty=nameWithType>, die für ungültige Zeichen in Pfaden für .NET Framework und .NET Core 2.0 sowie frühere Versionen ausgelöst wird.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, die für ungültige Doppelpunkte in .NET Framework ausgelöst wird.
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>, die für Anwendungen ausgelöst wird, die mit eingeschränkter Vertrauenswürdigkeit ausgeführt werden und denen lediglich die erforderlichen Berechtigungen für .NET Framework fehlen. (Volle Vertrauenswürdigkeit stellt in .NET Framework den Standard dar.)
@@ -71,7 +73,7 @@ Beachten Sie, dass Sie in Ihrem Fehlerbehandlungscode die <xref:System.IO.IOExce
 
 Im Fall einer <xref:System.IO.IOException> können Sie zusätzliche Fehlerinformationen aus der Eigenschaft [IOException.HResult](xref:System.Exception.HResult) abrufen. Um den HResult-Wert in einen Win32-Fehlercode zu konvertieren, entfernen Sie die oberen 16 Bits des 32-Bit-Werts. In der folgenden Tabelle sind Fehlercodes aufgelistet, die von einer <xref:System.IO.IOException> umschlossen werden können.
 
-| HResult | Konstante | Beschreibung  |
+| HResult | Konstante | Beschreibung |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Der Dateiname fehlt, oder die Datei oder das Verzeichnis wird verwendet. |
 | ERROR_FILE_EXISTS | 80 | Die Datei ist bereits vorhanden. |

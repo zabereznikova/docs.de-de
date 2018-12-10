@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häu
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129934"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -316,5 +316,5 @@ Wenn Sie Ihrer Anwendung mithilfe von Visual Studio Docker-Unterstützung hinzuf
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[Zurück](architectural-principles.md)
-[Weiter](common-client-side-web-technologies.md)
+>[Zurück](architectural-principles.md)
+>[Weiter](common-client-side-web-technologies.md)

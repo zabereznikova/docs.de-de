@@ -4,25 +4,25 @@ description: Dieses Dokument bietet einen Überblick über die Schritte und den 
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 0e089ff093ee76dbf9c1accda4145bd8b8fc82e6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245587"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127588"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter Mac OS
 
 Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe für macOS. Erfahren Sie, wie Projekte und Unittests erstellt, die Debuggingtools verwendet und Bibliotheken von Drittanbietern über [NuGet](https://www.nuget.org/) eingebunden werden.
 
 > [!NOTE]
-> In diesem Artikel wird [Visual Studio Code](http://code.visualstudio.com) unter macOS verwendet.
+> In diesem Artikel wird [Visual Studio Code](https://code.visualstudio.com) unter macOS verwendet.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Installieren Sie das [.NET Core SDK](https://www.microsoft.com/net/core). Das .NET Core SDK umfasst die neueste Version von .NET Core-Framework und -Runtime.
 
-Installieren Sie [Visual Studio Code](http://code.visualstudio.com). Im Rahmen dieses Artikels installieren Sie auch Visual Studio Code-Erweiterungen, die den .NET Core-Entwicklungsprozess verbessern.
+Installieren Sie [Visual Studio Code](https://code.visualstudio.com). Im Rahmen dieses Artikels installieren Sie auch Visual Studio Code-Erweiterungen, die den .NET Core-Entwicklungsprozess verbessern.
 
 Installieren Sie die C#-Erweiterung für Visual Studio Code, indem Sie Visual Studio Code öffnen und <kbd>F1</kbd> drücken, um die Visual Studio Code-Palette zu öffnen. Geben Sie **ext install** ein, um die Liste mit Erweiterungen anzuzeigen. Wählen Sie die C#-Erweiterung aus. Starten Sie Visual Studio Code neu, um die Erweiterung zu aktivieren. Weitere Informationen finden Sie unter [Dokumentation zur C#-Erweiterung von Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 

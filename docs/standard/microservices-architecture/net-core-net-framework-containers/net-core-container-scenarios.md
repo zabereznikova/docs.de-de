@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wann
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873374"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143403"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Wann sollte .NET Core für Docker-Container verwendet werden?
 
@@ -53,7 +53,6 @@ Wenn Sie für Ihr containerbasiertes System die bestmögliche Dichte, Granularit
 
 Dies betrifft insbesondere Microservicearchitekturen, in denen Hunderte von Microservices (Container) ausgeführt werden können. Mit ASP.NET Core-Images unter Linux oder Windows Nano, die auf der .NET Core-Runtime basieren, können Sie Ihr System mit einer wesentlich geringeren Anzahl von Servern oder virtuellen Computern ausführen und so Kosten für Infrastruktur und das Hosting sparen.
 
-
 >[!div class="step-by-step"]
-[Zurück](general-guidance.md)
-[Weiter](net-framework-container-scenarios.md)
+>[Zurück](general-guidance.md)
+>[Weiter](net-framework-container-scenarios.md)

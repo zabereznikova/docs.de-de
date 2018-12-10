@@ -3,12 +3,12 @@ title: C#-Enumerationen – Überblick über C#
 description: Hier lernen Sie Enumerationen kennen, separate benannte Konstanten in C#.
 ms.date: 08/10/2016
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d55462f0360b6896c398d581918a9c17a87583be
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353353"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126653"
 ---
 # <a name="enums"></a>Enumerationen
 
@@ -35,5 +35,5 @@ Der Standardwert eines beliebigen `enum`-Typs ist der ganzzahlige Wert 0 (null) 
 [!code-csharp[EnumZero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
 
 >[!div class="step-by-step"]
-[Zurück](interfaces.md)
-[Weiter](delegates.md)
+>[Zurück](interfaces.md)
+>[Weiter](delegates.md)

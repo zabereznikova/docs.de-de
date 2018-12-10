@@ -3,12 +3,12 @@ title: Einführung in C# - Leitfaden für C#
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359006"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150393"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#  
 
@@ -76,4 +76,4 @@ Es gibt noch viel mehr über C# zu erfahren.  Die folgenden Themen bieten eine �
     * ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
 
 >[!div class="step-by-step"]
-[Nächste](program-structure.md)
+>[Nächste](program-structure.md)

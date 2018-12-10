@@ -9,11 +9,11 @@ ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21dd9926684f51412384235d7b3af1aac280957a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50035747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155170"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit
 Das Aktivierungssystem der CLR (Common Language Runtime) bestimmt die Version der CLR, die verwendet wird, um verwalteten Anwendungscode auszuführen. In einigen Fällen ist das Aktivierungssystem eventuell nicht in der Lage, eine Version der CLR zu suchen und zu laden. Diese Situation tritt in der Regel auf, wenn eine Anwendung eine CLR-Version erfordert, die ungültig oder nicht auf einem Computer installiert ist. Wenn die angeforderte Version nicht gefunden wird, gibt das CLR-Aktivierungssystem einen HRESULT-Fehlercode von der aufgerufenen Funktion oder Schnittstelle zurück und zeigt dem Benutzer, der die Anwendung ausführt, eventuell eine Fehlermeldung an. Dieser Artikel enthält eine Liste von HRESULT-Codes und beschreibt, wie Sie die Anzeige der Fehlermeldung verhindern können.  
@@ -66,7 +66,7 @@ Typische Fehlermeldung bei Initialisierungsfehlern
 ## <a name="ui-policy-for-clr-provided-hosts"></a>UI-Richtlinie für von der CLR bereitgestellte Hosts  
  Die CLR bietet eine Reihe von Hosts für verschiedene Szenarien, und alle diese Hosts zeigen eine Fehlermeldung an, wenn Probleme beim Laden der erforderlichen Laufzeitversion auftreten. Die folgende Tabelle enthält eine Liste von Hosts und deren Fehlermeldungsrichtlinien.  
   
-|CLR-Host|Beschreibung |Fehlermeldungsrichtlinie|Kann die Fehlermeldung deaktiviert werden?|  
+|CLR-Host|Beschreibung|Fehlermeldungsrichtlinie|Kann die Fehlermeldung deaktiviert werden?|  
 |--------------|-----------------|--------------------------|------------------------------------|  
 |Verwalteter EXE-Host|Startet verwaltete EXE-Dateien.|Wird im Fall von fehlender .NET Framework-Version angezeigt|Nein|  
 |Verwalteter COM-Host|Lädt verwalteten COM-Komponenten in einen Prozess.|Wird im Fall von fehlender .NET Framework-Version angezeigt|Ja, durch Festlegen des SEM_FAILCRITICALERRORS-Flags|  

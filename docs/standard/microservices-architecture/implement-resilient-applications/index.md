@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Imp
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875120"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130793"
 ---
 # <a name="implementing-resilient-applications"></a>Implementieren von widerstandsfähigen Anwendungen
 
@@ -21,7 +21,6 @@ Es ist schwierig genug, eine auf Microservices basierende Anwendung zu entwerfen
 
 In die vielen einzelnen Komponenten Ihrer Anwendung sollten auch Features für die Systemüberwachung integriert werden. Wenn Sie die Richtlinien in diesem Kapitel befolgen, können Sie eine Anwendung erstellen, die trotz vorübergehender Ausfallzeiten oder den normalen Unterbrechungen, die in komplexen und cloudbasierten Bereitstellungen auftreten, reibungslos funktioniert.
 
-
 >[!div class="step-by-step"]
-[Zurück](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[Weiter](handle-partial-failure.md)
+>[Zurück](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Weiter](handle-partial-failure.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
 ms.openlocfilehash: b51239be8da8c45aa2d7f1ff0700884c43c07299
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671956"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130839"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Zugreifen auf einen Member mit einem Zeiger (C#-Programmierhandbuch)
 Um auf einen Member einer Struktur zuzugreifen, die in einem unsicheren Kontext deklariert ist, können Sie den Memberzugriffsoperator verwenden, wie im folgenden Beispiel gezeigt. Dabei ist `p` ein Zeiger auf eine [Struktur](../../../csharp/language-reference/keywords/struct.md), die den Member `x` enthält.  

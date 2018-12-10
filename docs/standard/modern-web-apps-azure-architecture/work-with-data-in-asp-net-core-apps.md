@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbe
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122850"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147173"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 Die Zwischenspeicherung kann die Leistung von Webseiten drastisch verbessern, die immer wieder die gleichen Werte von der Datenbank anfordern. Stellen Sie sicher, dass Sie den Datenzugriff und die Seitenleistung messen, bevor Sie die Zwischenspeicherung hinzufügen. Wenden Sie die Zwischenspeicherung nur für notwendige Verbesserungen an. Das Zwischenspeichern verbraucht Arbeitsspeicherressourcen des Webservers, und die Anwendung wird komplexer, weshalb es wichtig ist, dass Sie diese Art von Optimierung nicht voreilig durchführen.
 
 >[!div class="step-by-step"]
-[Zurück](develop-asp-net-core-mvc-apps.md)
-[Weiter](test-asp-net-core-mvc-apps.md)
+>[Zurück](develop-asp-net-core-mvc-apps.md)
+>[Weiter](test-asp-net-core-mvc-apps.md)

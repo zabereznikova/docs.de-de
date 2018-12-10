@@ -3,12 +3,12 @@ title: C#-Strukturen – Überblick über C#
 description: Lernen Sie die Grundlagen der als Strukturen bezeichneten C#-Werttypen kennen.
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323096"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142735"
 ---
 # <a name="structs"></a>Strukturen
 
@@ -35,5 +35,5 @@ Wenn `Point` eine Klasse ist, ist die Ausgabe 20, da „a“ und „b“ auf das
 Im vorherigen Beispiel werden zwei der Einschränkungen von Strukturen hervorgehoben. Erstens ist das Kopieren einer gesamten Struktur in der Regel weniger effizient als das Kopieren eines Objektverweises, sodass Zuweisung und Wertparameterübergabe mit Strukturen aufwändiger sein kann als mit Verweistypen. Zweitens ist es mit Ausnahme der `in`-, `ref`- und `out`-Parameter nicht möglich, Verweise auf Strukturen zu erstellen, was ihre Verwendung in einer Reihe von Situationen ausschließt.
 
 >[!div class="step-by-step"]
-[Zurück](classes-and-objects.md)
-[Weiter](arrays.md)
+>[Zurück](classes-and-objects.md)
+>[Weiter](arrays.md)

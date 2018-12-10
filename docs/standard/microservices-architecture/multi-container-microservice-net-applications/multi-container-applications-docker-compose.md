@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Fest
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297178"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145253"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml 
 
@@ -86,7 +86,7 @@ services:
 
 Der Stammschlüssel in dieser Datei ist „services“. Unter diesem Schlüssel definieren Sie die Dienste, die Sie bereitstellen und ausführen möchten, wenn Sie den Befehl `docker-compose up` ausführen, oder wenn Sie von Visual Studio aus mithilfe dieser docker-compose.yml-Datei bereitstellen. In diesem Fall sind wie in der folgenden Tabelle beschrieben mehrere Dienste für die docker-compose.yml-Datei definiert.
 
-| Dienstname | Beschreibung  |
+| Dienstname | Beschreibung |
 |--------------|-------------|
 | webmvc       | Container, einschließlich der ASP.NET Core-MVC-Anwendung, die die Microservices der serverseitigen Programmiersprache C\# verwendet|
 | catalog.api  | Container, einschließlich des Katalogmicroservice für die ASP.NET Core-Web-API |
@@ -471,5 +471,5 @@ Runtime-Images bieten außerdem die automatische Einstellung von aspnetcore\_url
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[Zurück](data-driven-crud-microservice.md)
-[Weiter](database-server-container.md)
+>[Zurück](data-driven-crud-microservice.md)
+>[Weiter](database-server-container.md)

@@ -2,18 +2,21 @@
 title: Formate von Dateipfaden unter Windows-Systemen
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296827"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144857"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -29,7 +32,7 @@ Ein standardmäßiger DOS-Pfad kann aus drei Komponenten bestehen:
 
 Wenn alle drei Komponenten vorhanden sind, ist der Pfad absolut. Wenn kein Volume oder Laufwerkbuchstabe angegeben ist, und der Name des Verzeichnisses mit dem [Verzeichnistrennzeichen](<xref:System.IO.Path.DirectorySeparatorChar>) beginnt, ist der Pfad relativ zum Stamm des aktuellen Laufwerks. Andernfalls ist der Pfad relativ zum aktuellen Verzeichnis. In der folgenden Tabelle werden mögliche Verzeichnis- und Dateipfade veranschaulicht.
 
-|Pfad  |Beschreibung   |
+|Pfad  |Beschreibung  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Ein absoluter Dateipfad aus dem Stamm vom Laufwerk „C:“ |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Ein absoluter Pfad aus dem Stamm des aktuellen Laufwerks |
@@ -59,7 +62,7 @@ UNC-Pfade (Universal Naming Convention), die für den Zugriff auf Netzwerkressou
 
 Im Folgenden werden einige Beispiele für UNC-Pfade aufgeführt:
 
-|Pfad  |Beschreibung   |
+|Pfad  |Beschreibung  |
 | -- | -- |
 | `\\system07\C$\` | Das Stammverzeichnis des Laufwerks „C:“ auf `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | Die Datei „Foo.txt“ im Testverzeichnis des Volume „\\\\Server2\\Share“.|
@@ -87,7 +90,7 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
 
    Das erste Segment des DOS-Gerätepfads, nachdem der Gerätepfadbezeichner das Volume oder Laufwerk identifiziert. (Zum Beispiel `\\?\C:\` und `\\.\BootPartition\`.)
 
-   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Zum Beispiel:
+   Es gibt eine spezifische Verknüpfung für UNC-Pfade mit dem unverwechselbaren Namen `UNC`. Beispiel:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`  
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -203,30 +206,14 @@ Dass Pfad- und Verzeichnisnamen die Groß-/Kleinschreibung ignorieren, ist eine 
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 ein Verzeichnis namens TeStDiReCtOrY. Wenn Sie ein Verzeichnis oder eine Datei umbenennen, um die Groß-/Kleinschreibung zu ändern, wird die entsprechende Zeichenfolge angezeigt, die Sie beim Umbenennen eingegeben haben. Der folgende Code benennt beispielweise eine Datei namens „test.txt“ in „Test.txt“ um:
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 Allerdings berücksichtigen Vergleiche von Verzeichnis- und Dateinamen die Groß-/Kleinschreibung nicht. Wenn Sie nach einer Datei namens „test.txt“ suchen, ignorieren .NET-Dateisystem-APIs die Groß-/Kleinschreibung für Vergleiche. „Test.txt“, „TEST.TXT“, „test.TXT“ und beliebige andere Kombinationen aus Groß- und Kleinbuchstaben entsprechen „test.txt“.

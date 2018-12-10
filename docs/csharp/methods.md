@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038304"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127445"
 ---
 # <a name="methods"></a>Methoden #
 
@@ -40,7 +40,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 Methoden werden in `class` oder `struct` durch folgende Angaben deklariert:
 
-- Eine optionale Zugriffsebene, z.B. `public` oder `private`. Die Standardeinstellung ist `private`.
+- Eine optionale Zugriffsebene, z.B. `public` oder `private`. Der Standardwert ist `private`.
 - Optionale Modifizierer, z.B. `abstract` oder `sealed`.
 - Der Rückgabewert oder `void`, wenn die Methode keinen besitzt.
 - Der Methodenname.
@@ -158,7 +158,7 @@ Im folgenden Beispiel wird eine `ExampleMethod`-Methode definiert, die aus einem
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Wenn eine Methode mit mehreren optionalen Argumenten mithilfe von Positionsargumenten aufgerufen wird, muss der Aufrufer ein Argument für alle optionalen Parameter, vom ersten bis zum letzten, bereitstellen, für die ein Argument bereitgestellt wird. Bei der `ExampleMethod`-Methode muss der Parameter z.B. auch ein Argument für den `description`-Parameter bereitstellen, wenn er ein Argument für den `optionalInt`-Parameter bereitstellt. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` ist ein gültiger Methodenaufruf; `opt.ExampleMethod(2, , "Addition of 2 and 0);` erzeugt einen Compilerfehler: „Argument fehlt“.
+Wenn eine Methode mit mehreren optionalen Argumenten mithilfe von Positionsargumenten aufgerufen wird, muss der Aufrufer ein Argument für alle optionalen Parameter, vom ersten bis zum letzten, bereitstellen, für die ein Argument bereitgestellt wird. Bei der `ExampleMethod`-Methode muss der Parameter z.B. auch ein Argument für den `description`-Parameter bereitstellen, wenn er ein Argument für den `optionalInt`-Parameter bereitstellt. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` ist ein gültiger Methodenaufruf; `opt.ExampleMethod(2, , "Addition of 2 and 0");` erzeugt einen Compilerfehler: „Argument fehlt“.
 
 Wenn eine Methode durch ein benanntes Argument oder einer Mischung aus benannten und Positionsargumenten aufgerufen wird, kann der Aufrufer Argumente auslassen, die dem letzten Positionsargument im Methodenaufruf folgen.
 

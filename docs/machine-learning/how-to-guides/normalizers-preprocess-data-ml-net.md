@@ -4,11 +4,11 @@ description: Erfahren Sie, wie Sie Normalisierungsfunktionen verwenden, um Train
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c8b959904705e996c97bdcd8b3444e754d14d046
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297617"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148833"
 ---
 # <a name="preprocess-training-data-with-normalizers-to-use-in-data-processing---mlnet"></a>Vorverarbeiten von Trainingsdaten mit Normalisierungsfunktionen zur Nutzung in der Datenverarbeitung: ML.NET
 

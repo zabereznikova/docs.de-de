@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Wiederholungen von HTTP-Aufrufen von Grund au
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: c323b8c4e783ed18c601562cfb25e1ca4986d499
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878670"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145097"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Untersuchen benutzerdefinierter Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff
 
@@ -116,7 +116,6 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 Bedenken Sie jedoch, dass dieser Code nur als Proof of Concept geeignet ist. Im nächsten Abschnitt wird erklärt, wie Sie optimierte und einfachere Ansätze (z.B. HttpClientFactory) verwenden können.
 HttpClientFactory ist seit .NET Core 2.1 verfügbar und enthält bewährte stabile Bibliotheken wie Polly. 
 
-
 >[!div class="step-by-step"]
-[Zurück](implement-resilient-entity-framework-core-sql-connections.md)
-[Weiter](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[Zurück](implement-resilient-entity-framework-core-sql-connections.md)
+>[Weiter](use-httpclientfactory-to-implement-resilient-http-requests.md)

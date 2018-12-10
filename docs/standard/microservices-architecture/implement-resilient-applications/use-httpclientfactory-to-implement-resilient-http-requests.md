@@ -4,12 +4,12 @@ description: HttpClientFactory ist eine Factory, die seit .NET Core 2.1 für das
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347928"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145110"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Verwenden von HttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 
@@ -87,7 +87,7 @@ Für jeden typisierten und benannten Client kann ein eigener Wert für die Leben
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Implementieren von typisierten Clientklassen, die das injizierte und konfigurierte HttpClient-Objekt verwenden
 
-Zuvor müssen Sie Ihre typisierten Clientklassen definieren, z.B. die Klassen im Beispielcode („BasketService“, „CatalogService“, „OrderingService“ usw.). Bei einem typisierten Client handelt es sich um eine Klasse, die ein `HttpClient`-Objekt akzeptiert (das über deren Konstruktor injiziert wird) und dieses verwendet, um HTTP-Remotedienste aufzurufen. Zum Beispiel:
+Zuvor müssen Sie Ihre typisierten Clientklassen definieren, z.B. die Klassen im Beispielcode („BasketService“, „CatalogService“, „OrderingService“ usw.). Bei einem typisierten Client handelt es sich um eine Klasse, die ein `HttpClient`-Objekt akzeptiert (das über deren Konstruktor injiziert wird) und dieses verwendet, um HTTP-Remotedienste aufzurufen. Beispiel:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -162,7 +162,6 @@ Bis zu diesem Punkt führt der Code nur reguläre HTTP-Anforderungen aus. In den
 
     [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
 
-
-
 >[!div class="step-by-step"]
-[Zurück] (explore-custom-http-call-retries-exponential-backoff.md) [Weiter] (implement-http-call-retries-exponential-backoff-polly.md)
+>[Zurück](explore-custom-http-call-retries-exponential-backoff.md)
+>[Weiter](implement-http-call-retries-exponential-backoff-polly.md)

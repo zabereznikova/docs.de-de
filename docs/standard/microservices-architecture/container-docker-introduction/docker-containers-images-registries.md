@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Dock
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678268"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130233"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker-Container, -Images und -Registrierungen
 
@@ -34,5 +34,5 @@ Private Imageregistrierungen, die lokal oder in der Cloud gehostet werden, werde
 -   Sie eine minimale Netzwerklatenz zwischen Ihren Images und der ausgewählten Bereitstellungsumgebung erzielen möchten Wenn Ihre Produktionsumgebung beispielsweise die Azure-Cloud ist, möchten Sie Ihre Images wahrscheinlich in [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) speichern, um eine minimale Netzwerklatenz zu erzielen. Ähnliches gilt, wenn Ihre Produktionsumgebung lokal ist: Dann Sie möchten vermutlich sicherstellen, dass ein lokaler Docker Trusted Registry-Dienst innerhalb desselben lokalen Netzwerks verfügbar ist.
 
 >[!div class="step-by-step"]
-[Zurück](docker-terminology.md)
-[Weiter](../net-core-net-framework-containers/index.md)
+>[Zurück](docker-terminology.md)
+>[Weiter](../net-core-net-framework-containers/index.md)

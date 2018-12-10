@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definiere
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: ca518b124bc95a5bc3a2910d9c3d9e5338e1b464
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6399079e17a53ac5bf283eaa5c799964360350f4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193759"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146065"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -125,4 +125,4 @@ Diese zweite Version ist durch längere Sequenzen in Szenarios, in denen die ges
 ## <a name="see-also"></a>Siehe auch
 
 - [ref (C#-Referenz)](../../language-reference/keywords/ref.md)  
-- [Schreiben von sicherem und effizientem Code](../../../csharp/write-safe-efficient-code.md)
+- [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)

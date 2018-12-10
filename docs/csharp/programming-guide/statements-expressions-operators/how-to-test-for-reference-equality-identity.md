@@ -6,11 +6,11 @@ helpviewer_keywords:
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
 ms.openlocfilehash: 4faa674f3f3d65b7c555d7feb9789637f39e9bd7
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296529"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125470"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Gewusst wie: Überprüfen auf Verweisgleichheit (Identität) (C#-Programmierhandbuch)
 Sie müssen zur Unterstützung von Verweisgleichheitsprüfungen in Ihren Typen keine benutzerdefinierte Logik implementieren. Diese Funktionalität wird für alle Typen mit der statischen <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>-Methode bereitgestellt.  

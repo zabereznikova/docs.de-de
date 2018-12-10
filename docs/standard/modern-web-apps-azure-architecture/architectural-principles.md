@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arch
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 675ecc0dc6a90f3a4ab42861d850ed43a6c10bad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404437"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146601"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -116,5 +116,5 @@ Anstatt eine Datenbank mit anderen Anwendungen zu teilen, sollten einzelne Weban
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
 >[!div class="step-by-step"]
-[Zurück](choose-between-traditional-web-and-single-page-apps.md)
-[Weiter](common-web-application-architectures.md)
+>[Zurück](choose-between-traditional-web-and-single-page-apps.md)
+>[Weiter](common-web-application-architectures.md)

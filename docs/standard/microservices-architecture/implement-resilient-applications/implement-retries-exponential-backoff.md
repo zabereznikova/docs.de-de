@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Impl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: a5ab15299ecb501691c26bbc6d377e22a38ee51e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e0758ee8fe28cb45ecd35ad07ddc738c12614973
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874363"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148768"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>Implementieren von Wiederholungen mit exponentiellem Backoff
 
@@ -17,7 +17,6 @@ Bei [*Wiederholungen mit exponentiellem Backoff*](https://docs.microsoft.com/azu
 
 Es gibt viele Ansätze, um Wiederholungen mit exponentiellem Backoff zu implementieren.
 
-
 >[!div class="step-by-step"]
-[Zurück](partial-failure-strategies.md)
-[Weiter](implement-resilient-entity-framework-core-sql-connections.md)
+>[Zurück](partial-failure-strategies.md)
+>[Weiter](implement-resilient-entity-framework-core-sql-connections.md)

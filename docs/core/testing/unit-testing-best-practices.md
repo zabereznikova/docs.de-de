@@ -4,12 +4,12 @@ description: Informationen zu den bewährten Methoden zum Schreiben von Komponen
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 69fe0cae141d1ed1e1281eecd78bf03e6e8be961
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527732"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143408"
 ---
 # <a name="unit-testing-best-practices"></a>Bewährte Methoden für Komponententests
 
@@ -328,7 +328,7 @@ public interface IDateTimeProvider
     DayOfWeek DayOfWeek();
 }
 
-public bool GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
+public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
     if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
     {

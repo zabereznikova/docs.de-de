@@ -8,11 +8,11 @@ ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e192266aa7b98637cb05f400901f51afd3046a72
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "49415199"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142714"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Assemblys und parallele Ausführung
 Als parallele Ausführung wird die Möglichkeit bezeichnet, mehrere Versionen einer Anwendung oder einer Komponente auf demselben Computer zu speichern und auszuführen. Das bedeutet, dass Sie gleichzeitig mehrere Versionen der Common Language Runtime sowie mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausführen können. Durch die parallele Ausführung können Sie besser steuern, an welche Version einer Komponente eine Anwendung gebunden wird und welche Version der Common Language Runtime eine Anwendung verwendet.  
