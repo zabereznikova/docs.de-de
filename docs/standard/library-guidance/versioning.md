@@ -4,12 +4,12 @@ description: Empfehlungen f체r bew채hrte Methoden f체r die Versionsverwaltung f�
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187857"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144558"
 ---
 # <a name="versioning"></a>Versionskontrolle
 
@@ -97,5 +97,5 @@ Die Assemblyinformationsversion wird verwendet, um zus채tzliche Versionsinformat
 > Erlauben Sie SourceLink, die Version automatisch zu generieren, die NuGet- und Metadaten der Quellcodeverwaltung enth채lt.
 
 >[!div class="step-by-step"]
-[Zur체ck](./publish-nuget-package.md)
-[Weiter](./breaking-changes.md)
+>[Zur체ck](publish-nuget-package.md)
+>[Weiter](breaking-changes.md)

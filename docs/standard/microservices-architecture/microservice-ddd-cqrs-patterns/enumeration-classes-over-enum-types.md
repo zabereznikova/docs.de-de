@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für Containerized .NET-Anwendungen |
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 57c4af55bab9b17da5809f912d7c2d0b76eba40b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296710"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149496"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 
@@ -125,8 +125,6 @@ public abstract class CardType : Enumeration
 - **SmartEnum**. Ardalis: Klassen zum Erzeugen von stark typisierten intelligenteren Enumerationen in .NET \
   [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
 
-
 >[!div class="step-by-step"]
-[Zurück](implement-value-objects.md)
-[Weiter](domain-model-layer-validations.md)
-
+>[Zurück](implement-value-objects.md)
+>[Weiter](domain-model-layer-validations.md)

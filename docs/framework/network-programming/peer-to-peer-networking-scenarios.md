@@ -3,11 +3,11 @@ title: Peer-to-Peer-Netzwerkszenarien
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 ms.openlocfilehash: 46e0be29d367db0d36b87c063779d55d1338b39e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129570"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>Peer-to-Peer-Netzwerkszenarien
 Peer-to-Peer-Netzwerke ermöglichen oder erweitern die folgenden Szenarios:  

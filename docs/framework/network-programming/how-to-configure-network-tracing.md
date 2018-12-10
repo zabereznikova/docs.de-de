@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50192446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143362"
 ---
 # <a name="how-to-configure-network-tracing"></a>Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung
 Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die das Format und die Inhalte von Netzwerkablaufverfolgungen bestimmen. Bevor Sie diese Verfahren ausführen, stellen Sie sicher, dass die Ablaufverfolgung aktiviert ist. Weitere Informationen zur Aktivierung der Netzwerkablaufverfolgung finden Sie unter [Enabling Network Tracing (Aktivieren der Netzwerkablaufverfolgung)](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -69,7 +69,8 @@ Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die
         <sharedListeners>  
           <add name="System.Net"  
             type="System.Diagnostics.TextWriterTraceListener"  
-            initializeData="network.log"  
+            initializeData="network.log"
+            traceOutputOptions="ProcessId, DateTime" 
           />  
         </sharedListeners>  
         <trace autoflush="true"/>  
@@ -94,7 +95,7 @@ Die Anwendungs- oder Computerkonfigurationsdatei enthält die Einstellungen, die
 |--------------------|---------------------|  
 |`Value`|Erforderliches <xref:System.String>-Attribut. Legt den Ausführlichkeitsgrad der Ausgabe fest. Zulässige Werte sind `Critical`, `Error`, `Verbose`, `Warning` und `Information`.<br /><br /> Dieses Attribut muss für das Element \<add name> des \<switches>-Elements wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn das Attribut für das \<source>-Element festgelegt wird.|  
 |`maxdatasize`|Optionales <xref:System.Int32>-Attribut. Legt die maximale Anzahl von Netzwerkdatenbytes für jede Ablaufverfolgungszeile fest. Der Standardwert ist 1024.<br /><br /> Dieses Attribut muss für das Element \<source> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<switches>-Element festgelegt wird.|  
-|`Tracemode`|Optionales <xref:System.String>-Attribut. Mit dem Wert `includehex` werden Protokollablaufverfolgungen im Hexadezimalformat und im Textformat angezeigt. Mit dem Wert `protocolonly` wird nur Text angezeigt. Der Standardwert ist `includehex`.<br /><br /> Dieses Attribut muss für das Element \<switches> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<source>-Element festgelegt wird.|  
+|`Tracemode`|Optionales <xref:System.String>-Attribut. Mit dem Wert `includehex` werden Protokollablaufverfolgungen im Hexadezimalformat und im Textformat angezeigt. Mit dem Wert `protocolonly` wird nur Text angezeigt. Der Standardwert ist `includehex`sein.<br /><br /> Dieses Attribut muss für das Element \<switches> wie im Beispiel festgelegt werden. Eine Ausnahme wird ausgelöst, wenn dieses Attribut für ein Element unter dem \<source>-Element festgelegt wird.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Interpretieren von Netzwerkablaufverfolgung](../../../docs/framework/network-programming/interpreting-network-tracing.md)  

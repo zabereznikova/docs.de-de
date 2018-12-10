@@ -11,17 +11,17 @@ helpviewer_keywords:
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
 ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672003"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153123"
 ---
 # <a name="string-c-reference"></a>string (C#-Referenz)
 
 Der Typ `string` stellt eine Sequenz von Null oder mehr Unicode-Zeichen dar. `string` ist ein Alias für <xref:System.String> in .NET.
 
-Obwohl `string` ein Verweistyp ist, werden die Gleichheitsoperatoren (`==` und `!=`) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert. Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver. Zum Beispiel:
+Obwohl `string` ein Verweistyp ist, werden die Gleichheitsoperatoren (`==` und `!=`) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert. Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver. Beispiel:
 
 ```csharp
 string a = "hello";
@@ -72,7 +72,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > Der Escapecode `\udddd` (wobei `dddd` eine vierstellige Zahl ist) stellt das Unicode-Zeichen U+`dddd` dar. Escapecodes aus achtstelligen Unicode werden auch erkannt: `\Udddddddd`.
 
-Wörtliche Zeichenfolgenliterale beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen. Zum Beispiel:
+Wörtliche Zeichenfolgenliterale beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen. Beispiel:
 
 ```csharp
 @"good morning"  // a string literal

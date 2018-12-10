@@ -3,12 +3,12 @@ title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352134"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129518"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
@@ -116,5 +116,5 @@ Es gibt mehrere Arten von *Variablen* in C#, einschließlich Feldern, Arrayeleme
     - Ein `null`-Verweis oder ein Verweis auf eine Instanz eines kompatiblen Delegattyp
 
 >[!div class="step-by-step"]
-[Zurück](program-structure.md)
-[Weiter](expressions.md)
+>[Zurück](program-structure.md)
+>[Weiter](expressions.md)

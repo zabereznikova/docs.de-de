@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 2cac07c8eb02465334af47fd46702b60f1371c68
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43745322"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154078"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)
 Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücke verwendet werden.  
@@ -87,7 +87,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 1.  Sie können mehrere boolesche Bedingungen in der `where`-Klausel kombinieren, um eine Abfrage weiter zu optimieren. Der folgende Code fügt eine Bedingung hinzu, sodass die Abfrage die Studenten zurückgibt, deren erstes Ergebnis höher als 90 und das letzte Ergebnis niedriger als 80 war. Die `where`-Klausel sollte in etwa dem folgenden Code entsprechen.  
   
-    ```  
+    ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
@@ -99,19 +99,19 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 1.  Es ist einfacher, die Ergebnisse zu überprüfen, wenn sie geordnet dargestellt werden. Sie können die zurückgegebene Sequenz nach einem beliebigen zugänglichen Feld in den Quellelementen sortieren. Die folgende `orderby`-Klausel ordnet die Ergebnisse z.B. in alphabetischer Reihenfolge (A bis Z) nach dem Nachnamen jedes Studenten. Fügen Sie die folgende `orderby`-Klausel direkt nach der `where`-Anweisung und vor der `select`-Anweisung zu Ihrer Abfrage hinzu:  
   
-    ```  
+    ```csharp
     orderby student.Last ascending  
     ```  
   
 2.  Ändern Sie nun die `orderby`-Klausel so, dass sie die Ergebnisse in umgekehrter Reihenfolge gemäß dem Ergebnis im ersten Test sortiert, vom höchsten zum niedrigsten Ergebnis.  
   
-    ```  
+    ```csharp
     orderby student.Scores[0] descending  
     ```  
   
 3.  Ändern Sie die `WriteLine`-Formatzeichenfolge so, dass die Ergebnisse angezeigt werden:  
   
-    ```  
+    ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
@@ -157,7 +157,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>So verwenden Sie die Methodensyntax in einem Abfrageausdruck  
   
-1.  Wie unter [Abfragesyntax und Methodensyntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) beschrieben, können einige Abfrageoperationen nur durch Verwendung der Methodensyntax ausgedrückt werden. Der folgende Code berechnet das Gesamtergebnis für jeden `Student` in der Quellsequenz und ruft dann die `Average()`-Methode für die Ergebnisse der Abfrage auf, um die durchschnittliche Punktzahl der Klasse zu berechnen. Beachten Sie die Platzierung von Klammern um den Abfrageausdruck.  
+1.  Wie unter [Abfragesyntax und Methodensyntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) beschrieben, können einige Abfrageoperationen nur durch Verwendung der Methodensyntax ausgedrückt werden. Der folgende Code berechnet das Gesamtergebnis für jeden `Student` in der Quellsequenz und ruft dann die `Average()`-Methode für die Ergebnisse der Abfrage auf, um die durchschnittliche Punktzahl der Klasse zu berechnen.
   
      [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
@@ -184,6 +184,6 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ) (C#) (Language-Integrated Query (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/index.md)  
+- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
 - [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
 - [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)

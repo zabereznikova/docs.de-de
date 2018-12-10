@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Allg
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404605"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153890"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
@@ -165,5 +165,5 @@ JavaScript-Frameworks entwickeln sich in Rekordgeschwindigkeit weiter. Entscheid
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Zurück](common-web-application-architectures.md)
-[Weiter](develop-asp-net-core-mvc-apps.md)
+>[Zurück](common-web-application-architectures.md)
+>[Weiter](develop-asp-net-core-mvc-apps.md)

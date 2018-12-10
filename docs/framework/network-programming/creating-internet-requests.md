@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 ms.openlocfilehash: ff346c5b4241f7ac037088adbe068bab2232d12f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52295999"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145987"
 ---
 # <a name="creating-internet-requests"></a>Erstellen von Internetanforderungen
 Anwendungen erstellen mithilfe der <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>-Methode <xref:System.Net.WebRequest>-Instanzen. Diese statische Methode erstellt eine von **WebRequest** abgeleitete Klasse basierend auf dem URI-Schema, das an sie übergeben wurde.  

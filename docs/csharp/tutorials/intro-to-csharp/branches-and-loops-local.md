@@ -3,12 +3,12 @@ title: Verzweigungen und Schleifen – Einführung in das C#-Tutorial
 description: In diesem Tutorial über Verzweigungen und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Verzweigungen und Schleifen zum wiederholten Ausführen von Anweisungen unterstützt.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186136"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153773"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Bedingungen für Verzweigungs- und Schleifenanweisungen
 
@@ -223,7 +223,7 @@ for(int index = 0; index < 10; index++)
 
 Dieser funktioniert auf dieselbe Weise wie die `while`-Schleife und die `do`-Schleife, die Sie bereits verwendet haben. Die `for`-Anweisung besteht aus drei Teilen, die steuern, wie sie ausgeführt wird.
 
-Der erste Teil ist der **for-Initialisierer**: `for index = 0;` deklariert, dass `index` die Schleifenvariable ist, und legt den Anfangswert auf `0` fest.
+Der erste Teil ist der **for-Initialisierer**: `int index = 0;` deklariert, dass `index` die Schleifenvariable ist, und legt den Anfangswert auf `0` fest.
 
 Der mittlere Teil ist die **for-Bedingung**: `index < 10` deklariert, dass diese `for`-Schleife ausgeführt wird, solange der Wert des Zählers kleiner als 10 ist.
 

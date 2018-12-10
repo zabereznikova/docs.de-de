@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wich
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 3366fa2494615db841b768f9149a070a65da58ee
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: d6e09b9856396e99c9b03d595c1896e2451724fe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105513"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152258"
 ---
 # <a name="key-takeaways"></a>Wichtige Erkenntnisse
 
@@ -38,4 +38,4 @@ In diesem Artikel werden die wichtigsten Erkenntnisse dieses Leitfadens zusammen
 **Orchestratoren.** Containerbasierte Orchestratoren wie die, die in Azure Container Service bereitgestellt werden (Kubernetes, Mesos DC/OS und Docker Swarm), und Azure Service Fabric sind unentbehrlich für jede produktionsbereite Anwendung, die auf Microservices basiert, und jede Anwendung mit mehreren Containern mit erheblichen Anforderungen, Skalierbarkeitsanforderungen und konstanter Weiterentwicklung. In diesem Leitfaden wurden Orchestratoren und deren Rolle in Ansätzen eingeführt, die auf Microservices und Containern basieren. Wenn Sie sich aufgrund der Anforderungen Ihrer Anwendung auf komplexere Containeranwendungen zu bewegen, kann das Suchen zusätzlicher Ressourcen für weitere Informationen über Orchestratoren sich als nützlich erweisen.
 
 >[!div class="step-by-step"]
-[Vorherige](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+>[Vorherige](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

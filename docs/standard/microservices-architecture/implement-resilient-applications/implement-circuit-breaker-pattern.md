@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Impl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453150"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147261"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
@@ -146,14 +146,11 @@ Sie können unterschiedliche Logiken für das Fortsetzen oder Unterbrechen der K
 
 Eine weitere Möglichkeit für `CircuitBreakerPolicy` ist die Verwendung von `Isolate` (dadurch wird das Fortsetzen der Kommunikation erzwungen und dafür gesorgt, dass diese bestehen bleibt) und `Reset` (dadurch wird die Kommunikation wieder unterbrochen). Diese können für die Erstellung eines Hilfs-HTTP-Endpunkts verwendet werden, der Isolate und Reset direkt in der Richtlinie aufruft.  Ein derartiger HTTP-Endpunkt kann auch, falls er entsprechend gesichert ist, in einer Produktionsumgebung verwendet werden, um ein Downstreamsystem beispielsweise bei einem Upgrade vorübergehend zu isolieren. Alternativ könnte er den Trennschalter manuell auslösen, um ein Downstreamsystem zu schützen, das möglicherweise fehlerhaft ist.
 
-
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
-
 
 -   **Circuit Breaker pattern (Muster „Trennschalter“)**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Zurück](implement-http-call-retries-exponential-backoff-polly.md)
-[Weiter](monitor-app-health.md)
+>[Zurück](implement-http-call-retries-exponential-backoff-polly.md)
+>[Weiter](monitor-app-health.md)

@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
 ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671929"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143597"
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
 
@@ -76,7 +76,7 @@ Beachten Sie, dass `_` auch ein gültiger Bezeichner ist. Bei der Verwendung au�
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- Compilerfehler CS0136: „A local or parameter named '\_' cannot be declared in this scope because that name is used in an enclosing local scope to define a local or parameter.“ (Eine lokale Variable oder ein Parameter mit dem Namen „_“ kann in diesem Bereich nicht deklariert werden, da der Name in einem einschließenden lokalen Bereich verwendet wird, um eine lokale Variable oder einen Parameter zu definieren.) Zum Beispiel:
+- Compilerfehler CS0136: „A local or parameter named '\_' cannot be declared in this scope because that name is used in an enclosing local scope to define a local or parameter.“ (Eine lokale Variable oder ein Parameter mit dem Namen „_“ kann in diesem Bereich nicht deklariert werden, da der Name in einem einschließenden lokalen Bereich verwendet wird, um eine lokale Variable oder einen Parameter zu definieren.) Beispiel:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 

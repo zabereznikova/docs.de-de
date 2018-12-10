@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: be15acb98c20a61be2d88133ee3070fb1c09d70e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003725"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155326"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath-Abfragen und Namespaces
 XPath-Abfragen unterstützen Namespaces in einem XML-Dokument und können Namespacepräfixe zum Kennzeichnen von Element- und Attributnamen verwenden. Durch das Kennzeichnen von Element- und Attributnamen mit einem Namespacepräfix wird die Anzahl der von einer XPath-Abfrage zurückgegebenen Knoten auf die Knoten beschränkt, die zu einem bestimmten Namespace gehören.  
@@ -41,7 +41,7 @@ XPath-Abfragen unterstützen Namespaces in einem XML-Dokument und können Namesp
  Im folgenden XML-Dokument wird der Standardnamespace mit einem leeren Präfix für die Deklaration des `http://www.contoso.com/books`-Namespaces verwendet.  
   
 ```xml  
-<books xmlns="http://www.example.com/books">  
+<books xmlns="http://www.contoso.com/books">  
     <book>  
         <title>Title</title>  
         <author>Author Name</author>  

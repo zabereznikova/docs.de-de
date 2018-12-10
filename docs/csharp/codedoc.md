@@ -3,12 +3,12 @@ title: Dokumentieren von Code mit XML-Kommentaren
 description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationskommentaren und zum Erstellen einer XML-Dokumentationsdatei zum Zeitpunkt der Kompilierung.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453267"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129662"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -20,7 +20,7 @@ XML-Dokumentationskommentare werden wie alle anderen Kommentare vom Compiler ign
 
 Sie können die XML-Datei zur Kompilierzeit generieren, indem Sie eine der folgenden Aktionen durchführen:
 
-- Wenn Sie eine Anwendung mit .NET Core über die Befehlszeile entwickeln, können Sie im Abschnitt `<PropertyGroup>` der CSPROJ-Projektdatei ein [DocumentationFile-Element](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) hinzufügen. Im folgenden Beispiel wird eine XML-Datei im Projektverzeichnis mit dem gleichen Stammdateinamen wie die Assembly generiert:
+- Wenn Sie eine Anwendung mit .NET Core über die Befehlszeile entwickeln, können Sie im Abschnitt `<PropertyGroup>` der CSPROJ-Projektdatei ein [DocumentationFile-Element](/visualstudio/msbuild/common-msbuild-project-properties) hinzufügen. Im folgenden Beispiel wird eine XML-Datei im Projektverzeichnis mit dem gleichen Stammdateinamen wie die Assembly generiert:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -36,7 +36,7 @@ Sie können die XML-Datei zur Kompilierzeit generieren, indem Sie eine der folge
 
 - Wenn Sie eine .NET Framework-Anwendung über die Befehlszeile kompilieren, fügen Sie beim Kompilieren die [/doc-Compileroption](language-reference/compiler-options/doc-compiler-option.md) hinzu.  
 
-XML-Dokumentationskommentare verwenden dreifache Schrägstriche (`///`) und einen Kommentartext im XML-Format. Zum Beispiel:
+XML-Dokumentationskommentare verwenden dreifache Schrägstriche (`///`) und einen Kommentartext im XML-Format. Beispiel:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
@@ -196,7 +196,7 @@ Nun ist der Code wieder gut lesbar, und es sind keine Dokumentationsinformatione
 
 Das `filename`-Attribut stellt den Namen der XML-Datei dar, die die Dokumentation enthält.
 
-Das `path`-Attribut stellt eine [XPath](https://msdn.microsoft.com/library/ms256115.aspx)-Abfrage an den vorhandenen `tag name` im angegebenen `filename` dar.
+Das `path`-Attribut stellt eine [XPath](../standard/data/xml/xpath-queries-and-namespaces.md)-Abfrage an den vorhandenen `tag name` im angegebenen `filename` dar.
 
 Das `name`-Attribut stellt den Namensbezeichner in dem Tag dar, das sich vor den Kommentaren befindet.
 

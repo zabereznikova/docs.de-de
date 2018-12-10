@@ -7,11 +7,11 @@ ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296723"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149730"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Gewusst wie: Debuggen von CLR-Aktivierungsproblemen
 Wenn Sie Probleme beim Ausführen Ihrer Anwendung mit Ihrer korrekten Version der Common Language Runtime (CLR) haben, können Sie CLR-Aktivierungsprotokolle anzeigen und debuggen. Diese Protokolle können sehr nützlich beim Bestimmen der zugrunde liegenden Ursache für Probleme bei der Aktivierung sein, wenn Ihre Anwendung entweder eine andere CLR-Version als erwartet lädt oder die CLR überhaupt nicht lädt. Der [.NET Framework-Initialisierungsfehler: Verwalten der Benutzerfreundlichkeit](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) behandelt die Erfahrung, wenn keine CLR für eine Anwendung gefunden wird.  

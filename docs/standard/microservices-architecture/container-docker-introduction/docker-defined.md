@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Was 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0493e7c08a742abed26ff00ce84b9d77da73ea63
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185926"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153864"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -83,5 +83,5 @@ Sie können sich ein Image als eine schreibgeschützte Behelfsfestplatte vorstel
 In ähnlicher Weise stellt ein Container diesen „Computer“ dar, mit angeschlossener Image-„Festplatte“. Der Container kann ein- und ausgeschaltet werden, ganz wie ein Computer.
 
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](docker-terminology.md)
+>[Zurück](index.md)
+>[Weiter](docker-terminology.md)

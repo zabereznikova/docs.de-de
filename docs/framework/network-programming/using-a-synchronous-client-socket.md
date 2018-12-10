@@ -18,11 +18,11 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
 ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192433"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147228"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Verwenden eines synchronen Clientsockets
 Ein synchroner Clientsocket hält das Anwendungsprogramm an, während der Netzwerkvorgang abgeschlossen wird. Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können einfachen Zugang zu Netzwerkdiensten für andere Anwendungen ermöglichen.  

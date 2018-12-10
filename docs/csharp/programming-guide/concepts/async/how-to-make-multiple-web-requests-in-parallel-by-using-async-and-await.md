@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: b366b43cf1c6114f02f026da25aeb5e30dc91c6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 527cca572e48cd4b6b895c828327a5770ac83d89
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453423"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125599"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (C#)
 In einer asynchronen Methode werden Aufgaben gestartet, wenn sie erstellt werden. Der [await](../../../../csharp/language-reference/keywords/await.md)-Operator wird auf die Aufgabe an dem Punkt in der Methode angewendet, an dem die Verarbeitung nicht fortgesetzt werden kann, bis die Aufgabe abgeschlossen ist. Häufig wird eine Aufgabe erwartet, sobald sie erstellt wird, wie das folgende Beispiel zeigt.  
@@ -89,7 +89,7 @@ var result = await myTask;
         var bytes = content.Length;  
         // Strip off the "https://".  
         var displayURL = url.Replace("https://", "");  
-        resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
+        resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
     }  
     ```  
   
@@ -130,8 +130,7 @@ var result = await myTask;
         int total = length1 + length2 + length3;  
   
         // Display the total count for the downloaded websites.  
-        resultsTextBox.Text +=  
-            string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+        resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
     }  
     ```  
   
@@ -201,8 +200,7 @@ namespace AsyncExample_MultipleTasks
             int total = length1 + length2 + length3;  
   
             // Display the total count for the downloaded websites.  
-            resultsTextBox.Text +=  
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+            resultsTextBox.Text += $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }  
   
         async Task<int> ProcessURLAsync(string url, HttpClient client)  
@@ -220,8 +218,8 @@ namespace AsyncExample_MultipleTasks
             var bytes = content.Length;  
             // Strip off the "https://".  
             var displayURL = url.Replace("https://", "");  
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
-        }  
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
+        }
     }  
 }  
 ```  
@@ -229,5 +227,5 @@ namespace AsyncExample_MultipleTasks
 ## <a name="see-also"></a>Siehe auch
 
 - [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
-- [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
 - [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

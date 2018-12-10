@@ -2,12 +2,12 @@
 title: Verarbeiten asynchroner Aufgaben nach Abschluss
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 9380be1dc24d7c147c22dbb1a362777f56a32358
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202041"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152361"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)
 
@@ -75,7 +75,7 @@ Nehmen Sie in der Datei „MainWindow.xaml.cs“ des Projekts die folgenden Änd
 
         ```csharp
         int length = await firstFinishedTask;
-        resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+        resultsTextBox.Text += $"\r\nLength of the download:  {length}";
         ```
 
 Führen Sie das Programm mehrmals aus, um zu bestätigen, dass die heruntergeladenen Längen nicht immer in der gleichen Reihenfolge angezeigt werden.
@@ -181,7 +181,7 @@ namespace ProcessTasksAsTheyFinish
 
                     // Await the completed task.
                     int length = await firstFinishedTask;
-                    resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+                    resultsTextBox.Text += $"\r\nLength of the download:  {length}";
             }
         }
 
@@ -229,5 +229,5 @@ namespace ProcessTasksAsTheyFinish
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Asynchronous Programming with async and await (C#) (Asynchrone Programmierung mit Async und Await (C#))](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung der Anwendung)

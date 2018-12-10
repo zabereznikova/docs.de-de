@@ -8,11 +8,11 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744586"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129817"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -122,7 +122,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoptionen beschrieben.  
   
-|Option|Beschreibung |  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**/q**|Legt den stillen Modus fest. Es sind keine Benutzereingaben erforderlich, und es wird keine Ausgabe angezeigt.|  
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|  
@@ -234,7 +234,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  Links zu ausführlichen Informationen finden Sie im nächsten Abschnitt [Downloadfehlercodes](#additional_error_codes).  
   
-|Rückgabecode|Beschreibung |  
+|Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Die Installation wurde erfolgreich abgeschlossen.|  
 |1602|Der Benutzer hat die Installation abgebrochen.|  

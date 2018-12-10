@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ab533bc6b8bcff54774d849510c66ec3436ad3b5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844903"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146951"
 ---
  # <a name="when-c-reference"></a>when (C#-Referenz)
 
@@ -23,10 +23,10 @@ Sie können das kontextabhängige Schlüsselwort `when` verwenden, um eine Filte
 
 ## <a name="when-in-a-catch-statement"></a>`when` in einer `catch`-Anweisung
 
-Ab mit C# 6 kann `When` in einer `catch`-Anweisung verwendet werden, um eine Bedingung mit dem Wert „TRUE“ für den Handler anzugeben, damit eine spezifische Ausnahme ausgeführt werden kann. Die Syntax lautet:
+Ab mit C# 6 kann `when` in einer `catch`-Anweisung verwendet werden, um eine Bedingung mit dem Wert „TRUE“ für den Handler anzugeben, damit eine spezifische Ausnahme ausgeführt werden kann. Die Syntax lautet:
 
 ```csharp
-catch ExceptionType [e] when (expr)
+catch (ExceptionType [e]) when (expr)
 ```
 where *expr* ist ein Ausdruck, der einen booleschen Wert ergibt. Wenn `true` zurückgegeben wird, wird der Ausnahmehandler ausgeführt; wenn `false` zurückgegeben wird, nicht. 
 

@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Grun
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9429f5616c5dbab59638cfc3b11d4b0f9ea8d28d
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: c6316717f78dffb672afdf79e919fd1bd7874b52
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297332"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149574"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -431,7 +431,6 @@ Es ist wirklich so einfach. Und da die Generierung automatisch erfolgt, wachsen 
 - **Erste Schritte mit NSwag und ASP.NET Core** \
   [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-2.1\&tabs=visual-studio%2Cvisual-studio-xml)
 
-
 >[!div class="step-by-step"]
-[Zurück](microservice-application-design.md)
-[Weiter](multi-container-applications-docker-compose.md)
+>[Zurück](microservice-application-design.md)
+>[Weiter](multi-container-applications-docker-compose.md)

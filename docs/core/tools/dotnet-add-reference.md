@@ -3,13 +3,13 @@ title: Verweisbefehl „dotnet-add“ – .NET Core-CLI
 description: Der dotnet add-Verweisbefehl bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 3398d4dc7bf70eaadcdd92269dbd3b784079c22d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 33c5e532baf23cc8fe2b3a5084bff029caece842
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129544"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add-Verweis
 
@@ -23,7 +23,7 @@ ms.locfileid: "34696961"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung
 
 Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen von Projektverweisen auf ein Projekt. Nach dem Ausführen des Befehls werden die [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items)-Elemente zur Projektdatei hinzugefügt.
 
@@ -37,34 +37,40 @@ Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen 
 
 ## <a name="arguments"></a>Argumente
 
-`PROJECT`
+* **`PROJECT`**
 
-Gibt die Projektdatei an. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei.
+  Gibt die Projektdatei an. Wenn keine angegeben ist, sucht der Befehl im aktuellen Verzeichnis nach einer Projektdatei.
 
-`PROJECT_REFERENCES`
+* **`PROJECT_REFERENCES`**
 
-Hinzuzufügende Projekt-zu-Projekt (P2P)-Verweise. Geben Sie ein oder mehrere Projekte an. [Globmuster](https://en.wikipedia.org/wiki/Glob_(programming)) werden auf Unix/Linux-basierten Systemen unterstützt.
+  Hinzuzufügende Projekt-zu-Projekt (P2P)-Verweise. Geben Sie ein oder mehrere Projekte an. [Globmuster](https://en.wikipedia.org/wiki/Glob_(programming)) werden auf Unix/Linux-basierten Systemen unterstützt.
 
 ## <a name="options"></a>Optionen
 
-`-h|--help`
+* **`-h|--help`**
 
-Druckt eine kurze Hilfe für den Befehl.
+  Druckt eine kurze Hilfe für den Befehl.
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-Fügt Projektverweise nur hinzu, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
+  Fügt Projektverweise nur hinzu, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Projektverweis hinzufügen:
+* Projektverweis hinzufügen:
 
-`dotnet add app/app.csproj reference lib/lib.csproj`
+  ```console
+  dotnet add app/app.csproj reference lib/lib.csproj
+  ```
 
-Fügen Sie dem Projekt im aktuellen Verzeichnis mehrere Projektverweise hinzu:
+* Fügen Sie dem Projekt im aktuellen Verzeichnis mehrere Projektverweise hinzu:
 
-`dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
+  ```console
+  dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
+  ```
 
-Mehrere Projektverweise mithilfe eines Globmusters unter Linux/Unix hinzufügen:
+* Mehrere Projektverweise mithilfe eines Globmusters unter Linux/Unix hinzufügen:
 
-`dotnet add app/app.csproj reference **/*.csproj`
+  ```console
+  dotnet add app/app.csproj reference **/*.csproj
+  ```

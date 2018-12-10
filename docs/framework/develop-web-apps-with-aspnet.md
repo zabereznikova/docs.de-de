@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 51cc54d67d5b68e07f1dcfcb4c62f32cd509d51a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 80b1d5496aeaf99008062299ac41b53eee167c61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580510"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144324"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>Entwickeln von Web-Apps mit ASP.NET
 
@@ -22,7 +22,7 @@ ASP.NET ist eine .NET Framework-Technologie zum Erstellen von Web-Apps. Weitere 
 - [ASP.NET-Webseiten 2](https://go.microsoft.com/fwlink/p/?LinkId=251040)
 - [ASP.NET-Web-API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
 - [Erstellen einer ASP.NET Framework-App in Azure](/azure/app-service/app-service-web-get-started-dotnet-framework)
-- 
+
 ## <a name="developing-web-apps-with-aspnet-core"></a>Entwickeln von Web-Apps mit ASP.NET Core
 
 ASP.NET Core ist eine Neugestaltung von ASP.NET 4.x. Einige der Vorteile von ASP.NET Core im Vergleich zu ASP.NET:

@@ -2,20 +2,19 @@
 title: Erstellen einer App für eine Spielerrangliste anhand der Auswertung von Spielpartien mit Infer.NET und probabilistischer Programmierung
 description: Finden Sie heraus, wie Sie die probabilistische Programmierung mit Infer.NET verwenden können, um eine App für eine Spielerrangliste anhand der Auswertung von Spielpartien zu erstellen, die auf einer vereinfachten Version von TrueSkill basiert.
 ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: mvc,how-to
+ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "49401696"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152466"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Erstellen einer App für eine Spielerrangliste anhand der Auswertung von Spielpartien mit Infer.NET und probabilistischer Programmierung
 
 In dieser Schrittanleitung erfahren Sie mehr zur probabilistischen Programmierung mithilfe von Infer.NET. Die probabilistische Programmierung ist ein Ansatz des maschinellen Lernens, bei dem benutzerdefinierte Modelle als Computerprogramme ausgedrückt werden. Dieser Ansatz ermöglicht es, Wissen auf einem bestimmten Fachgebiet in die Modelle zu integrieren, und sorgt dafür, dass sich das System für maschinelles Lernen besser interpretieren lässt. Der Ansatz unterstützt auch direkte Rückschlüsse – also den Prozess des Lernens beim Eintreffen neuer Daten. Infer.NET wird in verschiedenen Microsoft-Produkten in Azure, Xbox und Bing eingesetzt.
 
-## <a name="what-is-probabilistic-programming"></a>Was ist die probabilistische Programmierung? 
+## <a name="what-is-probabilistic-programming"></a>Was ist die probabilistische Programmierung?
 
 Mit der probabilistischen Programmierung können wir statistische Modelle aus Prozessen der realen Welt erstellen. 
 

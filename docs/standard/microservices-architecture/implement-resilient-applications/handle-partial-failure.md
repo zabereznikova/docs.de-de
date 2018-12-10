@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Beha
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 94239fc30292760b2bb28849f8c6ab72c7ceb33d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875182"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144727"
 ---
 # <a name="handling-partial-failure"></a>Behandeln von Teilfehlern
 
@@ -39,7 +39,6 @@ Zur Minimierung dieses Problems wird im Abschnitt *Asynchronous microservice int
 
 Darüber hinaus ist es wichtig, dass Sie Ihre Microservices und Clientanwendungen dafür entwerfen, Teilfehler zu behandeln – d.h. robuste Microservices und Clientanwendungen zu erstellen.
 
-
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](partial-failure-strategies.md)
+>[Zurück](index.md)
+>[Weiter](partial-failure-strategies.md)

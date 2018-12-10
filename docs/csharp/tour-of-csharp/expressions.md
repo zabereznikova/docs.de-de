@@ -3,12 +3,12 @@ title: C#-Ausdrücke – Überblick über C#
 description: Ausdrücke, Operanden und Operatoren sind Bausteine der Sprache C#.
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352298"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154933"
 ---
 # <a name="expressions"></a>Ausdrücke
 
@@ -92,5 +92,5 @@ In der folgenden Übersicht der C#-Operatoren werden die Operatorkategorien gem�
     - `(T x) => y`: Anonyme Funktion (Lambdaausdruck)
 
 >[!div class="step-by-step"]
-[Zurück](types-and-variables.md)
-[Weiter](statements.md)
+>[Zurück](types-and-variables.md)
+>[Weiter](statements.md)

@@ -4,12 +4,12 @@ description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Ein
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658430"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147939"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Einführung in Container und Docker
 
@@ -29,7 +29,6 @@ Ein weiterer Vorteil der Containerisierung ist die Skalierbarkeit. Ein schnelles
 
 Kurz gesagt bieten Container die Vorteile der Isolation, Portabilität, Agilität, Skalierbarkeit und Steuerung des gesamten Workflows des Lebenszyklus der Anwendung. Der wichtigste Vorteil ist die Isolation der Umgebung zwischen Entwicklung und Betrieb (Dev and Ops).
 
-
 >[!div class="step-by-step"]
-[Zurück](../index.md)
-[Weiter](docker-defined.md)
+>[Zurück](../index.md)
+>[Weiter](docker-defined.md)

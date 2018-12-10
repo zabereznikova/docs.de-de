@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-ms.openlocfilehash: ffade286882608f98c8771c0bdf2c70803769e38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bca8fc1cb3a54be9c329dc02aa27057ad839b3d3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50183567"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127861"
 ---
 # <a name="how-to-ping-a-host"></a>Gewusst wie: Pingen eines Hosts
 In diesem Beispiel wird gezeigt, wie Sie einen Ping für einen Remotehost durchführen können.  
   
 ## <a name="example"></a>Beispiel  
   
-```  
+```csharp
 using System;  
 using System.Text;  
 using System.Net;  

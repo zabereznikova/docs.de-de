@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung mit „async“ und „await“ (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 482b77c7dd151dc454082b0def7843fdb0798260
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: edf3f8f7e6623b6b0f041de7eb76a5e6bac1f06b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297438"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126927"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Asynchrone Programmierung mit Async und Await (C#)
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.  
@@ -235,7 +235,7 @@ Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden
   
 ##  <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele (Visual Studio)  
   
-|Titel|Beschreibung |Beispiel|  
+|Titel|Beschreibung|Beispiel|  
 |-----------|-----------------|------------|  
 |[Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|Zeigt, wie eine synchrone WPF-Projektmappe in eine asynchrone WPF-Projektmappe konvertiert wird. Die Anwendung lädt eine Reihe von Websites herunter.|[Async Sample: Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (Asynchrones Beispiel: Aufrufen der exemplarischen Vorgehensweise)|  
 |[Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|Fügt der vorherigen exemplarischen Vorgehensweise <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> hinzu. Bei Verwendung von `WhenAll` werden alle Downloads gleichzeitig gestartet.||  
@@ -286,8 +286,8 @@ namespace AsyncFirstExample
   
             int contentLength = await AccessTheWebAsync();  
   
-            resultsTextBox.Text +=  
-                String.Format("\r\nLength of the downloaded string: {0}.\r\n", contentLength);  
+            resultsTextBox.Text +=
+                $"\r\nLength of the downloaded string: {contentLength}.\r\n";
         }  
   
         // Three things to note in the signature:  

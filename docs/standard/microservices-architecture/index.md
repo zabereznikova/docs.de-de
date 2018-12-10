@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Micr
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193915"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152681"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET Microservices: Architektur für .NET-Containeranwendungen
 
@@ -179,6 +179,5 @@ Das Logo des Docker-Wals ist eine registrierte Marke von Docker, Inc. Verwendet 
 
 Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.
 
-
 >[!div class="step-by-step"]
-[Nächste](container-docker-introduction/index.md)
+>[Nächste](container-docker-introduction/index.md)

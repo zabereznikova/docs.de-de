@@ -4,12 +4,12 @@ description: '.NET Microservices: Architektur für .NET-Containeranwendungen | D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297310"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128952"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -390,9 +390,6 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 -   **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
-
-
-
 >[!div class="step-by-step"]
-[Zurück](rabbitmq-event-bus-development-test-environment.md)
-[Weiter](test-aspnet-core-services-web-apps.md)
+>[Zurück](rabbitmq-event-bus-development-test-environment.md)
+>[Weiter](test-aspnet-core-services-web-apps.md)

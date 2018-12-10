@@ -3,11 +3,11 @@ title: PNRP-Caches
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147186"
 ---
 # <a name="pnrp-caches"></a>PNRP-Caches
 PNRP-Caches (Peer Name Resolution-Protokoll) sind lokale Sammlungen algorithmisch ausgewählter Peerendpunkte, die auf dem Peer verwaltet werden.  
