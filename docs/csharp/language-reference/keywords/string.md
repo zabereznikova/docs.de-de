@@ -11,17 +11,17 @@ helpviewer_keywords:
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
 ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672003"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153123"
 ---
-# <a name="string-c-reference"></a><span data-ttu-id="ec55d-102">string (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ec55d-102">string (C# Reference)</span></span>
+# <a name="string-c-reference"></a><span data-ttu-id="97d84-102">string (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="97d84-102">string (C# Reference)</span></span>
 
-<span data-ttu-id="ec55d-103">Der Typ `string` stellt eine Sequenz von Null oder mehr Unicode-Zeichen dar.</span><span class="sxs-lookup"><span data-stu-id="ec55d-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="ec55d-104">`string` ist ein Alias für <xref:System.String> in .NET.</span><span class="sxs-lookup"><span data-stu-id="ec55d-104">`string` is an alias for <xref:System.String> in .NET.</span></span>
+<span data-ttu-id="97d84-103">Der Typ `string` stellt eine Sequenz von Null oder mehr Unicode-Zeichen dar.</span><span class="sxs-lookup"><span data-stu-id="97d84-103">The `string` type represents a sequence of zero or more Unicode characters.</span></span> <span data-ttu-id="97d84-104">`string` ist ein Alias für <xref:System.String> in .NET.</span><span class="sxs-lookup"><span data-stu-id="97d84-104">`string` is an alias for <xref:System.String> in .NET.</span></span>
 
-<span data-ttu-id="ec55d-105">Obwohl `string` ein Verweistyp ist, werden die Gleichheitsoperatoren (`==` und `!=`) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert.</span><span class="sxs-lookup"><span data-stu-id="ec55d-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="ec55d-106">Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver.</span><span class="sxs-lookup"><span data-stu-id="ec55d-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="ec55d-107">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="ec55d-107">For example:</span></span>
+<span data-ttu-id="97d84-105">Obwohl `string` ein Verweistyp ist, werden die Gleichheitsoperatoren (`==` und `!=`) zum Vergleichen der Werte von `string`-Objekten, nicht von Verweisen, definiert.</span><span class="sxs-lookup"><span data-stu-id="97d84-105">Although `string` is a reference type, the equality operators (`==` and `!=`) are defined to compare the values of `string` objects, not references.</span></span> <span data-ttu-id="97d84-106">Dadurch wird das Testen auf Zeichenfolgengleichheit intuitiver.</span><span class="sxs-lookup"><span data-stu-id="97d84-106">This makes testing for string equality more intuitive.</span></span> <span data-ttu-id="97d84-107">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="97d84-107">For example:</span></span>
 
 ```csharp
 string a = "hello";
@@ -32,37 +32,37 @@ Console.WriteLine(a == b);
 Console.WriteLine((object)a == (object)b);
 ```
 
-<span data-ttu-id="ec55d-108">Dies zeigt TRUE und anschließend FALSE an, weil der Inhalt der Zeichenfolgen gleich sind. Jedoch verweisen `a` und `b` nicht auf die gleiche Zeichenfolgeninstanz.</span><span class="sxs-lookup"><span data-stu-id="ec55d-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>
+<span data-ttu-id="97d84-108">Dies zeigt TRUE und anschließend FALSE an, weil der Inhalt der Zeichenfolgen gleich sind. Jedoch verweisen `a` und `b` nicht auf die gleiche Zeichenfolgeninstanz.</span><span class="sxs-lookup"><span data-stu-id="97d84-108">This displays "True" and then "False" because the content of the strings are equivalent, but `a` and `b` do not refer to the same string instance.</span></span>
 
-<span data-ttu-id="ec55d-109">Der Operator „+“ verkettet Zeichenfolgen:</span><span class="sxs-lookup"><span data-stu-id="ec55d-109">The + operator concatenates strings:</span></span>
+<span data-ttu-id="97d84-109">Der Operator „+“ verkettet Zeichenfolgen:</span><span class="sxs-lookup"><span data-stu-id="97d84-109">The + operator concatenates strings:</span></span>
 
 ```csharp
 string a = "good " + "morning";
 ```
 
-<span data-ttu-id="ec55d-110">Dadurch wird ein Zeichenfolgenobjekt erstellt, das „Guten Morgen“ enthält.</span><span class="sxs-lookup"><span data-stu-id="ec55d-110">This creates a string object that contains "good morning".</span></span>
+<span data-ttu-id="97d84-110">Dadurch wird ein Zeichenfolgenobjekt erstellt, das „Guten Morgen“ enthält.</span><span class="sxs-lookup"><span data-stu-id="97d84-110">This creates a string object that contains "good morning".</span></span>
 
-<span data-ttu-id="ec55d-111">Zeichenfolgen sind *unveränderlich*. Die Inhalte eines Zeichenfolgenobjekts können nicht geändert werden, nachdem ein Objekt erstellt wurde, obwohl die Syntax den Eindruck erweckt, dass es machbar wäre.</span><span class="sxs-lookup"><span data-stu-id="ec55d-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="ec55d-112">Wenn Sie z.B. diesen Code schreiben, erstellt der Compiler tatsächlich ein neues Zeichenfolgenobjekt, um die neue Zeichensequenz zu speichern. Das neue Objekt wird b zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="ec55d-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="ec55d-113">Die Zeichenfolge „h“ ist anschließend für die automatische Speicherbereinigung auswählbar.</span><span class="sxs-lookup"><span data-stu-id="ec55d-113">The string "h" is then eligible for garbage collection.</span></span>
+<span data-ttu-id="97d84-111">Zeichenfolgen sind *unveränderlich*. Die Inhalte eines Zeichenfolgenobjekts können nicht geändert werden, nachdem ein Objekt erstellt wurde, obwohl die Syntax den Eindruck erweckt, dass es machbar wäre.</span><span class="sxs-lookup"><span data-stu-id="97d84-111">Strings are *immutable*--the contents of a string object cannot be changed after the object is created, although the syntax makes it appear as if you can do this.</span></span> <span data-ttu-id="97d84-112">Wenn Sie z.B. diesen Code schreiben, erstellt der Compiler tatsächlich ein neues Zeichenfolgenobjekt, um die neue Zeichensequenz zu speichern. Das neue Objekt wird b zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="97d84-112">For example, when you write this code, the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b.</span></span> <span data-ttu-id="97d84-113">Die Zeichenfolge „h“ ist anschließend für die automatische Speicherbereinigung auswählbar.</span><span class="sxs-lookup"><span data-stu-id="97d84-113">The string "h" is then eligible for garbage collection.</span></span>
 
 ```csharp
 string b = "h";
 b += "ello";
 ```
 
-<span data-ttu-id="ec55d-114">Der []-Operator kann für schreibgeschützten Zugriff auf einzelne Zeichen eines `string` verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="ec55d-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>
+<span data-ttu-id="97d84-114">Der []-Operator kann für schreibgeschützten Zugriff auf einzelne Zeichen eines `string` verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="97d84-114">The [] operator can be used for readonly access to individual characters of a `string`:</span></span>
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-<span data-ttu-id="ec55d-115">Zeichenfolgenliterale sind Typ `string` und können in zwei Formaten geschrieben werden: in Anführungszeichen und @-quoted.</span><span class="sxs-lookup"><span data-stu-id="ec55d-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="ec55d-116">Zeichenfolgenliterale in Anführungszeichen werden in doppelte Anführungszeichen (") eingeschlossen:</span><span class="sxs-lookup"><span data-stu-id="ec55d-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>
+<span data-ttu-id="97d84-115">Zeichenfolgenliterale sind Typ `string` und können in zwei Formaten geschrieben werden: in Anführungszeichen und @-quoted.</span><span class="sxs-lookup"><span data-stu-id="97d84-115">String literals are of type `string` and can be written in two forms, quoted and @-quoted.</span></span> <span data-ttu-id="97d84-116">Zeichenfolgenliterale in Anführungszeichen werden in doppelte Anführungszeichen (") eingeschlossen:</span><span class="sxs-lookup"><span data-stu-id="97d84-116">Quoted string literals are enclosed in double quotation marks ("):</span></span>
 
 ```csharp
 "good morning"  // a string literal
 ```
 
-<span data-ttu-id="ec55d-117">Zeichenfolgenliterale können jeden Zeichenliteral enthalten.</span><span class="sxs-lookup"><span data-stu-id="ec55d-117">String literals can contain any character literal.</span></span> <span data-ttu-id="ec55d-118">Escapesequenzen sind enthalten.</span><span class="sxs-lookup"><span data-stu-id="ec55d-118">Escape sequences are included.</span></span> <span data-ttu-id="ec55d-119">Im folgenden Beispiel wird die Escapesequenz `\\` für den umgekehrten Schrägstrich, `\u0066` für den Buchstaben „f“ und `\n` für den Zeilenumbruch verwendet.</span><span class="sxs-lookup"><span data-stu-id="ec55d-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>
+<span data-ttu-id="97d84-117">Zeichenfolgenliterale können jeden Zeichenliteral enthalten.</span><span class="sxs-lookup"><span data-stu-id="97d84-117">String literals can contain any character literal.</span></span> <span data-ttu-id="97d84-118">Escapesequenzen sind enthalten.</span><span class="sxs-lookup"><span data-stu-id="97d84-118">Escape sequences are included.</span></span> <span data-ttu-id="97d84-119">Im folgenden Beispiel wird die Escapesequenz `\\` für den umgekehrten Schrägstrich, `\u0066` für den Buchstaben „f“ und `\n` für den Zeilenumbruch verwendet.</span><span class="sxs-lookup"><span data-stu-id="97d84-119">The following example uses escape sequence `\\` for backslash, `\u0066` for the letter f, and `\n` for newline.</span></span>
 
 ```csharp
 string a = "\\\u0066\n";
@@ -70,46 +70,46 @@ Console.WriteLine(a);
 ```
 
 > [!NOTE]
-> <span data-ttu-id="ec55d-120">Der Escapecode `\udddd` (wobei `dddd` eine vierstellige Zahl ist) stellt das Unicode-Zeichen U+`dddd` dar.</span><span class="sxs-lookup"><span data-stu-id="ec55d-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="ec55d-121">Escapecodes aus achtstelligen Unicode werden auch erkannt: `\Udddddddd`.</span><span class="sxs-lookup"><span data-stu-id="ec55d-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>
+> <span data-ttu-id="97d84-120">Der Escapecode `\udddd` (wobei `dddd` eine vierstellige Zahl ist) stellt das Unicode-Zeichen U+`dddd` dar.</span><span class="sxs-lookup"><span data-stu-id="97d84-120">The escape code `\udddd` (where `dddd` is a four-digit number) represents the Unicode character U+`dddd`.</span></span> <span data-ttu-id="97d84-121">Escapecodes aus achtstelligen Unicode werden auch erkannt: `\Udddddddd`.</span><span class="sxs-lookup"><span data-stu-id="97d84-121">Eight-digit Unicode escape codes are also recognized: `\Udddddddd`.</span></span>
 
-<span data-ttu-id="ec55d-122">Wörtliche Zeichenfolgenliterale beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen.</span><span class="sxs-lookup"><span data-stu-id="ec55d-122">Verbatim string literals start with `@` and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="ec55d-123">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="ec55d-123">For example:</span></span>
+<span data-ttu-id="97d84-122">Wörtliche Zeichenfolgenliterale beginnen mit `@` und sind ebenfalls in doppelte Anführungszeichen eingeschlossen.</span><span class="sxs-lookup"><span data-stu-id="97d84-122">Verbatim string literals start with `@` and are also enclosed in double quotation marks.</span></span> <span data-ttu-id="97d84-123">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="97d84-123">For example:</span></span>
 
 ```csharp
 @"good morning"  // a string literal
 ```
 
-<span data-ttu-id="ec55d-124">Der Vorteil von wörtlichen Zeichenfolgen besteht darin, dass Escapesequenzen *nicht* verarbeitet werden, wodurch z.B. das Schreiben eines vollqualifizierten Dateinamens erleichtert wird:</span><span class="sxs-lookup"><span data-stu-id="ec55d-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>
+<span data-ttu-id="97d84-124">Der Vorteil von wörtlichen Zeichenfolgen besteht darin, dass Escapesequenzen *nicht* verarbeitet werden, wodurch z.B. das Schreiben eines vollqualifizierten Dateinamens erleichtert wird:</span><span class="sxs-lookup"><span data-stu-id="97d84-124">The advantage of verbatim strings is that escape sequences are *not* processed, which makes it easy to write, for example, a fully qualified file name:</span></span>
 
 ```csharp
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
 ```
 
-<span data-ttu-id="ec55d-125">Verdoppeln Sie das doppelte Anführungszeichen, um es in einer @-quoted-Zeichenfolge aufzunehmen:</span><span class="sxs-lookup"><span data-stu-id="ec55d-125">To include a double quotation mark in an @-quoted string, double it:</span></span>
+<span data-ttu-id="97d84-125">Verdoppeln Sie das doppelte Anführungszeichen, um es in einer @-quoted-Zeichenfolge aufzunehmen:</span><span class="sxs-lookup"><span data-stu-id="97d84-125">To include a double quotation mark in an @-quoted string, double it:</span></span>
 
 ```csharp
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.
 ```
 
-<span data-ttu-id="ec55d-126">Informationen zu anderen Verwendungsmöglichkeiten des Sonderzeichens `@` finden Sie unter [@ -- verbatim identifier (@ (wörtlicher Bezeichner))](../tokens/verbatim.md).</span><span class="sxs-lookup"><span data-stu-id="ec55d-126">For other uses of the `@` special character, see [@ -- verbatim identifier](../tokens/verbatim.md).</span></span>
+<span data-ttu-id="97d84-126">Informationen zu anderen Verwendungsmöglichkeiten des Sonderzeichens `@` finden Sie unter [@ -- verbatim identifier (@ (wörtlicher Bezeichner))](../tokens/verbatim.md).</span><span class="sxs-lookup"><span data-stu-id="97d84-126">For other uses of the `@` special character, see [@ -- verbatim identifier](../tokens/verbatim.md).</span></span>
 
-<span data-ttu-id="ec55d-127">Weitere Informationen zu Zeichenfolgen in C# finden Sie unter [Zeichenfolgen](../../programming-guide/strings/index.md).</span><span class="sxs-lookup"><span data-stu-id="ec55d-127">For more information about strings in C#, see [Strings](../../programming-guide/strings/index.md).</span></span>
+<span data-ttu-id="97d84-127">Weitere Informationen zu Zeichenfolgen in C# finden Sie unter [Zeichenfolgen](../../programming-guide/strings/index.md).</span><span class="sxs-lookup"><span data-stu-id="97d84-127">For more information about strings in C#, see [Strings](../../programming-guide/strings/index.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="ec55d-128">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ec55d-128">Example</span></span>
+## <a name="example"></a><span data-ttu-id="97d84-128">Beispiel</span><span class="sxs-lookup"><span data-stu-id="97d84-128">Example</span></span>
 
 [!code-csharp[csrefKeywordsTypes#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#17)]  
 
-## <a name="c-language-specification"></a><span data-ttu-id="ec55d-129">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="ec55d-129">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="97d84-129">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="97d84-129">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="ec55d-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ec55d-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97d84-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97d84-130">See also</span></span>
 
-- [<span data-ttu-id="ec55d-131">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="ec55d-131">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="ec55d-132">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="ec55d-132">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="ec55d-133">Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="ec55d-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)
-- [<span data-ttu-id="ec55d-134">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="ec55d-134">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="ec55d-135">Verweistypen</span><span class="sxs-lookup"><span data-stu-id="ec55d-135">Reference Types</span></span>](reference-types.md)
-- [<span data-ttu-id="ec55d-136">Werttypen</span><span class="sxs-lookup"><span data-stu-id="ec55d-136">Value Types</span></span>](value-types.md)
-- [<span data-ttu-id="ec55d-137">Grundlegende Zeichenfolgenoperationen</span><span class="sxs-lookup"><span data-stu-id="ec55d-137">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)
-- [<span data-ttu-id="ec55d-138">Erstellen neuer Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="ec55d-138">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)
-- [<span data-ttu-id="ec55d-139">Tabelle zur Formatierung numerischer Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="ec55d-139">Formatting Numeric Results Table</span></span>](formatting-numeric-results-table.md)
+- [<span data-ttu-id="97d84-131">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="97d84-131">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="97d84-132">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="97d84-132">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="97d84-133">Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="97d84-133">Best Practices for Using Strings</span></span>](../../../standard/base-types/best-practices-strings.md)
+- [<span data-ttu-id="97d84-134">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="97d84-134">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="97d84-135">Verweistypen</span><span class="sxs-lookup"><span data-stu-id="97d84-135">Reference Types</span></span>](reference-types.md)
+- [<span data-ttu-id="97d84-136">Werttypen</span><span class="sxs-lookup"><span data-stu-id="97d84-136">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="97d84-137">Grundlegende Zeichenfolgenoperationen</span><span class="sxs-lookup"><span data-stu-id="97d84-137">Basic String Operations</span></span>](../../../standard/base-types/basic-string-operations.md)
+- [<span data-ttu-id="97d84-138">Erstellen neuer Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="97d84-138">Creating New Strings</span></span>](../../../standard/base-types/creating-new.md)
+- [<span data-ttu-id="97d84-139">Tabelle zur Formatierung numerischer Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="97d84-139">Formatting Numeric Results Table</span></span>](formatting-numeric-results-table.md)
