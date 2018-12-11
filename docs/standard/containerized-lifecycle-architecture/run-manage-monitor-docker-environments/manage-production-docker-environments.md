@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202854"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147293"
 ---
 # <a name="manage-production-docker-environments"></a>Verwalten von Docker-produktionsumgebungen
 
@@ -44,7 +44,6 @@ Service Fabric-Management-Tools für folgen:
 
 -   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) ist eine spezielle Web-Benutzeroberflächentool, die Einblicke und bestimmte Operationen mit Service Fabric-Cluster aus Sicht der Knoten/VMs und aus der Sicht Anwendungen und Dienste bereitstellt.
 
-
 >[!div class="step-by-step"]
-[Zurück](run-microservices-based-applications-in-production.md)
-[Weiter](monitor-containerized-application-services.md)
+>[Zurück](run-microservices-based-applications-in-production.md)
+>[Weiter](monitor-containerized-application-services.md)
