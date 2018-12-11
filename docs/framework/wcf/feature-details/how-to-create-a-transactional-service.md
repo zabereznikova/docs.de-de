@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines Transaktionsdiensts'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: bba3a1f9c1d08e882cd5e4117c97f9f84d0c2be8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4d2db0ca912be8840788bc363f86d621fa76e34
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509866"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245638"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Vorgehensweise: Erstellen eines Transaktionsdiensts
 In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiensts und die Nutzung einer von einem Client initiierten Transaktion für die Koordinierung von Dienstvorgängen veranschaulicht.  
@@ -16,7 +16,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 1.  Erstellen Sie einen Dienstvertrag, und fügen Sie den Vorgängen die gewünschte Einstellung aus der <xref:System.ServiceModel.TransactionFlowOption>-Enumeration hinzu, um die Anforderungen für eingehende Transaktionen festzulegen. Beachten Sie, dass Sie auch das <xref:System.ServiceModel.TransactionFlowAttribute> auf die zu implementierende Dienstklasse platzieren können. Hierdurch wird die Einzelimplementierung einer Schnittstelle, die diese Transaktionseinstellungen nutzt, anstelle von allen Implementierungen ermöglicht.  
   
-    ```  
+    ```csharp
     [ServiceContract]  
     public interface ICalculator  
     {  
@@ -33,7 +33,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 2.  Erstellen Sie eine Implementierungsklasse, und verwenden Sie <xref:System.ServiceModel.ServiceBehaviorAttribute>, um optional ein <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> und einen <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> anzugeben. Beachten Sie, dass in vielen Fällen der standardmäßige <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> von 60 Sekunden und die standardmäßige <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> mit dem Wert `Unspecified` angemessen sind. Für jeden Vorgang können Sie das <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribut nutzen, um festzulegen, ob die innerhalb der Methode durchgeführte Arbeit innerhalb des Umfangs eines Transaktionsumfangs gemäß dem Wert des <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>-Attributs erfolgen soll. In diesem Fall stimmt die für die `Add`-Methode verwendete Transaktion mit der obligatorischen eingehenden Transaktionen überein, die vom Client kommt, und die für die `Subtract`-Methode verwendete Transaktion entspricht entweder der eingehenden Transaktion, wenn eine solche vom Client übergeben wurde, oder einer neuen implizit oder lokal erstellten Transaktion.  
   
-    ```  
+    ```csharp
     [ServiceBehavior(  
         TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
         TransactionTimeout = "00:00:45")]  
@@ -43,7 +43,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
         public double Add(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n1, n2));  
+            RecordToLog($"Adding {n1} to {n2}");
             return n1 + n2;  
         }  
   
@@ -51,7 +51,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
         public double Subtract(double n1, double n2)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n2, n1));  
+            RecordToLog($"Subtracting {n2} from {n1}");
             return n1 - n2;  
         }  
   
@@ -128,7 +128,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 1.  Standardmäßig führen WCF-Vorgänge automatisch Transaktionen, wenn keine nicht behandelten Ausnahmen ausgelöst werden. Sie können dieses Verhalten ändern, indem Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft und die <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>-Methode verwenden. Wenn es erforderlich ist, dass ein Vorgang innerhalb derselben Transaktion erfolgt wie ein anderer Vorgang (Beispiel: ein Debit- und Kredit-Vorgang), können Sie das automatische Verhalten für den Abschluss deaktivieren, indem Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft auf `false` festlegen (wie in folgendem `Debit`-Vorgangsbeispiel gezeigt). Die Transaktion, die der `Debit`-Vorgang nutzt, wird nicht abgeschlossen, bevor eine Methode mit der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft auf `true` aufgerufen wird (wie in Vorgang `Credit1` gezeigt) oder wenn die <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>-Methode aufgerufen wird, um explizit die Transaktion als abgeschlossen zu kennzeichnen (wie in Vorgang `Credit2` gezeigt). Beachten Sie, dass die beiden Kreditvorgänge zu Illustrationszwecken angeführt werden und dass ein einzelner Kreditvorgang üblicher wäre.  
   
-    ```  
+    ```csharp
     [ServiceBehavior]  
     public class CalculatorService : IAccount  
     {  
@@ -164,7 +164,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 2.  Zum Zwecke der Transaktionskorrelation erfordert ein Festlegen der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft auf `false` die Verwendung einer sitzungsbasierten Bindung. Die Anforderung wird mit der `SessionMode`-Eigenschaft auf <xref:System.ServiceModel.ServiceContractAttribute> festgelegt.  
   
-    ```  
+    ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
     public interface IAccount  
     {  
@@ -184,7 +184,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 1.  WCF verwendet die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> Eigenschaft, um anzugeben, ob die zugrunde liegende Dienstinstanz beim Abschluss einer Transaktion freigegeben wird. Da hier der Standardwert `true`, sofern nicht anders, Anhänge ein effizientes und vorhersehbares "just-in-Time" WCF-Verhalten konfiguriert. Aufrufe an einen Dienst bei einer nachfolgenden Transaktion erhalten ohne Auswirkung des Status der vorherigen Transaktion garantiert eine neue Dienstinstanz. Obwohl dies oft nützlich sein kann, möchten Sie eventuell den Status innerhalb der Dienstinstanz bis über den Transaktionsabschluss hinaus beibehalten. Beispielsweise könnte dies der Fall sein, wenn erforderliche Status oder Handle zu Ressourcen in der Anschaffung oder Wiederherstellung teuer sind. Sie können dies vornehmen, indem Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>-Eigenschaft auf `false` festlegen. Mit dieser Einstellung stehen die Instanz und alle zugehörigen Status bei folgenden Aufrufen zur Verfügung. Achten Sie hierbei insbesondere darauf, wann und wie der Zustand und die Transaktion gelöscht und abgeschlossen werden. Das folgende Beispiel veranschaulicht die Vorgehensweise, indem die Instanz mit der `runningTotal`-Variablen beibehalten wird.  
   
-    ```  
+    ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
         ReleaseServiceInstanceOnTransactionComplete = false)]  
     public class CalculatorService : ICalculator  
@@ -195,7 +195,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
         public double Add(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Adding {0} to {1}", n, runningTotal));  
+            RecordToLog($"Adding {n} to {runningTotal}");
             runningTotal = runningTotal + n;  
             return runningTotal;  
         }  
@@ -204,7 +204,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
         public double Subtract(double n)  
         {  
             // Perform transactional operation  
-            RecordToLog(String.Format("Subtracting {0} from {1}", n, runningTotal));  
+            RecordToLog($"Subtracting {n} from {runningTotal}");
             runningTotal = runningTotal - n;  
             return runningTotal;  
         }  

@@ -2,12 +2,12 @@
 title: 'Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 39f09fd2ca58bfe7eb38afe536194ecad104d394
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192679"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236543"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder
 In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierter textnachrichtenencoder mit Windows Communication Foundation (WCF) implementiert wird.  
@@ -65,8 +65,7 @@ public class CustomTextMessageEncoder : MessageEncoder
   
         this.writerSettings = new XmlWriterSettings();  
         this.writerSettings.Encoding = Encoding.GetEncoding(factory.CharSet);  
-        this.contentType = string.Format("{0}; charset={1}",   
-            this.factory.MediaType, this.writerSettings.Encoding.HeaderName);  
+        this.contentType = $"{this.factory.MediaType}; charset={this.writerSettings.Encoding.HeaderName}";
     }  
   
     public override string ContentType  
@@ -214,7 +213,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
  Für dieses Beispiel wird die Clientkonfiguration per Hand konfiguriert. Sie können Svcutil.exe nicht zur Generierung der Clientkonfiguration verwenden, da `CustomTextMessageBindingElement` keine Richtlinienassertion zur Beschreibung seines Verhaltens exportiert. Sie sollten im Allgemeinen die <xref:System.ServiceModel.Description.IPolicyExportExtension>-Schnittstelle auf einem benutzerdefinierten Bindungselement implementieren, um eine benutzerdefinierte Richtlinienassertion zu exportieren, die das Verhalten oder die Funktion beschreibt, die vom Bindungselement implementiert wurde. Ein Beispiel eine Richtlinienassertion für ein benutzerdefiniertes Bindungselement zu exportieren, finden Sie unter den [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>Bindungskonfigurationshandler zur Nachrichtencodierung  
- Im vorherigen Abschnitt wird gezeigt, wie der benutzerdefinierte Textnachrichtenencoder programmgesteuert verwendet wird. `CustomTextMessageEncodingBindingSection` implementiert einen Konfigurationshandler, der es Ihnen ermöglicht, die Verwendung eines benutzerdefinierten Textnachrichtenencoders innerhalb einer Konfigurationsdatei festzulegen. Die `CustomTextMessageEncodingBindingSection`-Klasse wird aus der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse abgeleitet. Die `BindingElementType`-Eigenschaft informiert das Konfigurationssystem über den Typ des für diesen Abschnitt zu erstellenden Bindungselements.  
+ Im vorherigen Abschnitt wird gezeigt, wie der benutzerdefinierte Textnachrichtenencoder programmgesteuert verwendet wird. `CustomTextMessageEncodingBindingSection` implementiert einen Konfigurationshandler, der es Ihnen ermöglicht, die Verwendung eines benutzerdefinierten Textnachrichtenencoders innerhalb einer Konfigurationsdatei festzulegen. Die `CustomTextMessageEncodingBindingSection` -Klasse wird aus der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> -Klasse abgeleitet. Die `BindingElementType`-Eigenschaft informiert das Konfigurationssystem über den Typ des für diesen Abschnitt zu erstellenden Bindungselements.  
   
  Alle von `CustomTextMessageBindingElement` definierten Einstellungen werden als Eigenschaften in `CustomTextMessageEncodingBindingSection` verfügbar gemacht. Wenn <xref:System.Configuration.ConfigurationPropertyAttribute> nicht festgelegt wird, hilft dieses Attribut bei der Zuordnung der Konfigurationselementattribute zu den Eigenschaften und Einstellungsstandardwerten. Nachdem die Werte aus der Konfiguration geladen und auf die Eigenschaften des Typs angewendet wurden, wird die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>-Methode aufgerufen, die die Eigenschaften in eine konkrete Instanz eines Bindungselements konvertiert.  
   

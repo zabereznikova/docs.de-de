@@ -2,12 +2,12 @@
 title: Unterstützende Token
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: b5834a0ae8fa987f243617fdf291223725ed5f6d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b1fda39903c39811187fe3701d2a4c143b637544
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261601"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237700"
 ---
 # <a name="supporting-tokens"></a>Unterstützende Token
 Im Beispiel für unterstützende Token wird veranschaulicht, wie einer Nachricht, die WS-Sicherheit verwendet, zusätzliche Token hinzugefügt werden. Das Beispiel fügt zusätzlich zu einem Sicherheitstoken für den Benutzernamen ein binäres X.509-Sicherheitstoken hinzu. Das Token wird in einem WS-Sicherheit-Nachrichtenkopf vom Client zum Dienst übergeben, und ein Teil der Nachricht wird mit dem privaten Schlüssel signiert, der dem X.509-Sicherheitstoken zugeordnet ist, um dem Empfänger den Besitz des X.509-Zertifikats nachzuweisen. Dies ist nützlich, wenn die Anforderung besteht, dass einer Nachricht mehrere Ansprüche zugeordnet sein müssen, um den Absender zu authentifizieren oder zu autorisieren. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.
@@ -27,7 +27,7 @@ Im Beispiel für unterstützende Token wird veranschaulicht, wie einer Nachricht
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Client wird mit Benutzernamentoken und dem unterstützenden X.509-Sicherheitstoken authentifiziert
  Der Dienst macht einen einzelnen Endpunkt für die Kommunikation verfügbar, der programmgesteuert mithilfe der `BindingHelper`-Klasse und der `EchoServiceHost`-Klasse erstellt wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer benutzerdefinierten Bindung unter Verwendung von `SymmetricSecurityBindingElement` und `HttpTransportBindingElement` konfiguriert. In diesem Beispiel wird `SymmetricSecurityBindingElement` so eingestellt, dass es ein X.509-Zertifikat für den Dienst verwendet, um den symmetrischen Schlüssel während der Übertragung zu schützen und um in einem WS-Sicherheit-Nachrichtenkopf zusammen mit dem unterstützenden `UserNameToken` ein `X509SecurityToken` zu übergeben. Der symmetrische Schlüssel wird verwendet, um den Nachrichtentext und das Sicherheitstoken für den Benutzernamen zu verschlüsseln. Das unterstützende Token wird im WS-Sicherheit-Nachrichtenkopf als zusätzliches binäres Sicherheitstoken übergeben. Der Nachweis für die Authentizität des unterstützenden Tokens wird durch Signieren eines Teils der Nachricht mit dem privaten Schlüssel erbracht, der dem unterstützenden X.509-Sicherheitstoken zugeordnet ist.
 
-```
+```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
 {
     HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
@@ -55,7 +55,7 @@ public static Binding CreateMultiFactorAuthenticationBinding()
 
  Das Verhalten legt die Dienstanmeldeinformationen fest, die zur Clientauthentifizierung verwendet werden sollen, sowie Informationen über das X.509-Zertifikat des Diensts. Im Beispiel wird `CN=localhost` als Betreffname im X.509-Zertifikat für den Dienst verwendet.
 
-```
+```csharp
 override protected void InitializeRuntime()
 {
     // Extract the ServiceCredentials behavior or create one.
@@ -88,7 +88,7 @@ This setting is less secure than the default, ChainTrust. The security implicati
 
  Dienstcode:
 
-```
+```csharp
 [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
 public class EchoService : IEchoService
 {
@@ -100,8 +100,7 @@ public class EchoService : IEchoService
             OperationContext.Current.ServiceSecurityContext,
             out userName,
             out certificateSubjectName);
-            return String.Format("Hello {0}, {1}",
-                    userName, certificateSubjectName);
+            return $"Hello {userName}, {certificateSubjectName}";
     }
 
     public void Dispose()
@@ -174,7 +173,7 @@ public class EchoService : IEchoService
 
  Der Clientendpunkt wird auf ähnliche Weise wie der Dienstendpunkt konfiguriert. Der Client verwendet die gleiche `BindingHelper`-Klasse, um eine Bindung zu erstellen. Der Rest des Setups befindet sich in der `Client`-Klasse. Der Client legt Informationen über das Sicherheitstoken für den Benutzernamen und das unterstützende X.509-Sicherheitstoken sowie Informationen über das X.509-Zertifikat für den Dienst im Setupcode für die Auflistung der Clientendpunkt-Verhaltensweisen fest.
 
-```
+```csharp
  static void Main()
  {
      // Create the custom binding and an endpoint address for
@@ -285,7 +284,7 @@ public class EchoService : IEchoService
 ## <a name="displaying-callers-information"></a>Anzeigen von Aufruferinformationen
  Um die Informationen zu den Aufrufern anzuzeigen, können Sie `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` verwenden, wie im folgenden Code gezeigt. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` enthält dem aktuellen Aufrufer zugeordnete Autorisierungsansprüche. Diese Ansprüche werden automatisch von Windows Communication Foundation (WCF) für jedes in der Nachricht empfangene Token bereitgestellt.
 
-```
+```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
                          claimType, out TClaimResource resourceValue)
     where TClaimResource : class
@@ -430,7 +429,7 @@ iisreset
   
 2.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-3.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ##### <a name="to-run-the-sample-across-machines"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -458,13 +457,13 @@ iisreset
   
 12. Führen Sie auf dem Server "ImportClientCert.bat" aus. Dadurch wird das Clientzertifikat von der Datei "Client.cer" in den LocalMachine &#8211; TrustedPeople-Speicher importiert.  
   
-13. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ##### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 -   Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
 > [!NOTE]
->  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie einen WCF-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+>  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie einen WCF-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="see-also"></a>Siehe auch

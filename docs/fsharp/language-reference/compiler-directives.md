@@ -1,13 +1,13 @@
 ---
 title: Compileranweisungen (F#)
 description: Erfahren Sie mehr über F# Sprache präprozessoranweisungen, Anweisungen für bedingte Kompilierung, Line-Anweisungen und Compiler-Direktiven.
-ms.date: 05/16/2016
-ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: 7344785e37454d367aa4dfcfa1bacd01b68363d5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126951"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239695"
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 
@@ -21,7 +21,7 @@ In der folgenden Tabelle werden die Präprozessordirektiven aufgelistet, die in 
 
 |Direktive|Beschreibung|
 |---------|-----------|
-|`#if` *Symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` enthalten ist, wenn die *Symbol* definiert ist.|
+|`#if` *Symbol*|Unterstützt die bedingte Kompilierung. Code im Abschnitt nach der `#if` enthalten ist, wenn die *Symbol* definiert ist. Das Symbol kann auch mit negiert `!`.|
 |`#else`|Unterstützt die bedingte Kompilierung. Markiert einen einzubeziehenden Codeabschnitt, wenn das mit dem vorherigen verwendeten `#if` nicht definiert ist.|
 |`#endif`|Unterstützt die bedingte Kompilierung. Markiert das Ende eines bedingten Codeabschnitts.|
 |`#`[Zeile] *Int*,<br/>`#`[Zeile] *Int* *Zeichenfolge*,<br/>`#`[Zeile] *Int* *wörtliche Zeichenfolge*|Gibt die ursprüngliche Quellcodezeile und den Dateinamen für das Debuggen an. Diese Funktion wird für Tools bereitgestellt, die F#-Quellcode generieren.|
@@ -46,6 +46,16 @@ Es gibt keine `#define`-Präprozessoranweisung in F#. Sie müssen die Compilerop
 
 Direktiven für die bedingte Kompilierung können geschachtelt werden. Der Einzug ist für Präprozessordirektiven nicht entscheidend.
 
+Sie können ein Symbol mit Vorgangskategorien `!`. In diesem Beispiel ist der Wert einer Zeichenfolge etwas nur, wenn _nicht_ Debuggen:
+
+```fsharp
+#if !DEBUG
+let str = "Not debugging!"
+#else
+let str = "Debugging!"
+#endif
+```
+
 ## <a name="line-directives"></a>Line-Direktiven
 
 Beim Erstellen meldet der Compiler Fehler im F#-Code durch das Referenzieren von Zeilennummern, in denen die jeweiligen Fehler auftreten. Diese Zeilennummern beginnen bei 1 für die erste Zeile in einer Datei. Wenn Sie jedoch F#-Quellcode aus einem anderen Tool generieren, sind die Zeilennummern im generierten Code im Allgemeinen nicht relevant, da die Fehler im generierten F#-Code höchstwahrscheinlich auf eine andere Quelle zurückgehen. Mit der `#line`-Direktive können Autoren von Tools, die F#-Quellcode generieren, Informationen über die ursprünglichen Zeilennummern und Quelldateien an den generierten F#-Code weitergeben.
@@ -65,6 +75,7 @@ Die folgende Tabelle enthält die Compilerdirektive, die in F# verfügbar ist.
 |Direktive|Beschreibung|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Aktiviert oder deaktiviert die einfache Syntax für die Kompatibilität mit anderen MK-Versionen. Standardmäßig ist die einfache Syntax aktiviert. Die ausführliche Syntax ist immer aktiviert. Daher können Sie die einfache und ausführliche Syntax verwenden. Die Direktive `#light` an sich entspricht `#light "on"`. Beim Angeben von `#light "off"` müssen Sie die ausführliche Syntax für alle Sprachkonstrukte verwenden. Bei der in der Dokumentation für F# gezeigten Syntax wird davon ausgegangen, dass Sie die einfache Syntax verwenden. Weitere Informationen finden Sie unter [ausführliche Syntax](verbose-syntax.md).|
+
 Interpreter (fsi.exe)-Anweisungen finden Sie unter [Interaktive Programmierung mit F#](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Siehe auch
