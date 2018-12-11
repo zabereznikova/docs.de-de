@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170223"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127081"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Anwendungsdomäneninformationen  
@@ -55,26 +55,26 @@ class AppDomainInfo
 ### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Datentyp: Boolesch  
   
- Zugriffstyp: Lesen/Schreiben  
+ Zugriffstyp: Lese-/Schreibzugriff  
   
  Ein Wert, der angibt, ob fehlerhafte Nachrichten protokolliert werden.  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Datentyp: Boolesch  
   
- Zugriffstyp: Lesen/Schreiben  
+ Zugriffstyp: Lese-/Schreibzugriff  
   
  Ein Wert, der angibt, ob Nachrichten auf Dienstebene (vor Verschlüsselung und transportbezogenen Transformationen) verfolgt werden.  
   
 ### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  Datentyp: Boolesch  
   
- Zugriffstyp: Lesen/Schreiben  
+ Zugriffstyp: Lese-/Schreibzugriff  
   
  Ein Wert, der angibt, ob Nachrichten auf der Transportebene verfolgt werden.  
   
 ### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
- Datentyp: TraceListener-Array  
+ Datentyp: TraceListener-array  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -111,12 +111,12 @@ class AppDomainInfo
 ### <a name="tracelevel"></a>TraceLevel  
  Datentyp: string (Zeichenfolge)  
   
- Zugriffstyp: Lesen/Schreiben  
+ Zugriffstyp: Lese-/Schreibzugriff  
   
  Die Ablaufverfolgungsebene der Ablaufverfolgungsquelle System.Wmi.  
   
 ### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
- Datentyp: TraceListener-Array  
+ Datentyp: TraceListener-array  
   
  Zugriffstyp: Schreibgeschützt  
   

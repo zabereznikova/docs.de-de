@@ -4,12 +4,12 @@ description: Azure Functions bietet serverlose Funktionen in mehreren Sprachen (
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f08ba20b485197acd3bb5cdfe5699cd6be991d7c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369950"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145162"
 ---
 # <a name="azure-functions"></a>Überprüfung auf
 
@@ -17,13 +17,13 @@ Azure Functions bietet eine serverlosen computeoberfläche. Eine Funktion wird a
 
 ![Azure Functions-logo](./media/azure-functions-logo.png)
 
-Es gibt zwei Versionen von Azure Functions-Framework. Die ältere Version unterstützt das vollständige .NET Framework und die neue Runtime unterstützt die plattformübergreifende .NET Core-Anwendungen. Weitere Sprachen neben c# z. B. JavaScript, F#- und Java werden unterstützt. Im Portal erstellte Funktionen bieten eine umfangreiche Syntax für die Skripterstellung. Funktionen, die als eigenständige Projekte erstellt werden, können mit vollständiger Unterstützung und Funktionen bereitgestellt werden.
+Es gibt zwei Versionen von Azure Functions-Framework. Die ältere Version unterstützt das vollständige .NET Framework und die neue Runtime unterstützt die plattformübergreifende .NET Core-Anwendungen. Weitere Sprachen neben C# wie z.B. JavaScript F#, und Java werden unterstützt. Im Portal erstellte Funktionen bieten eine umfangreiche Syntax für die Skripterstellung. Funktionen, die als eigenständige Projekte erstellt werden, können mit vollständiger Unterstützung und Funktionen bereitgestellt werden.
 
 Weitere Informationen finden Sie unter [Dokumentation zu Azure Functions](https://docs.microsoft.com/azure/azure-functions).
 
 ## <a name="functions-v1-vs-v2"></a>Funktionen von v1 und v2
 
-Es gibt zwei Versionen der Azure Functions-Runtime: 1.x und 2.x. Version 1.x ist allgemein verfügbar (GA). Es unterstützt die Entwicklung von .NET über das Portal oder die Windows-Computer und verwendet die .NET Framework. 1.x unterstützt c#, JavaScript und f# mit experimentelle Unterstützung für Python, PHP, TypeScript, Batch, Bash und PowerShell.
+Es gibt zwei Versionen von Azure Functions-Laufzeit: 1.x und 2.x. Version 1.x ist allgemein verfügbar (GA). Es unterstützt die Entwicklung von .NET über das Portal oder die Windows-Computer und verwendet die .NET Framework. 1.x unterstützt C#, JavaScript und F#, experimentelle Unterstützung für Python, PHP, TypeScript, Batch, Bash und PowerShell.
 
 Version 2.x ist in der Vorschau. Es nutzt die .NET Core und unterstützt die plattformübergreifende Entwicklung unter Windows, MacOS und Linux-Computer. 2.x bietet erstklassige Unterstützung für Java, aber noch direkt unterstützt keine experimentellen Sprachen. Version 2.x verwendet ein neues Erweiterbarkeitsmodell von Bindung, die Erweiterungen von Drittanbietern für die Plattform, Bindungen, voneinander unabhängige Versionen ermöglicht und eine optimierte ausführungsumgebung.
 
@@ -175,10 +175,10 @@ Die `Domain Redirect` Proxy akzeptiert eine verkürzte Route und ordnet es zu l�
 
 Die `Root` Proxy wird alles gesendet, um die Stamm-URL (`https://--shorturl--/`) und leitet ihn an der Dokumentationswebsite.
 
-Ein Beispiel der Verwendung von Proxys im Video [Azure: bringen Sie Ihre app in die Cloud mit serverlosen Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102). In Echtzeit wird eine ASP.NET Core-Anwendung, die auf lokalen SQL Server ausgeführt wird mit der Azure Cloud migriert. Proxys werden verwendet, um zu ein herkömmlichen Web-API-Projekt zum Verwenden der Funktionen Umgestalten.
+Ein Beispiel der Verwendung von Proxys im Video [Azure: Bringen Sie Ihre app in die Cloud mit serverlosen Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102). In Echtzeit wird eine ASP.NET Core-Anwendung, die auf lokalen SQL Server ausgeführt wird mit der Azure Cloud migriert. Proxys werden verwendet, um zu ein herkömmlichen Web-API-Projekt zum Verwenden der Funktionen Umgestalten.
 
 Weitere Informationen zu Proxys finden Sie unter [arbeiten mit Azure Functions-Proxys](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 
 >[!div class="step-by-step"]
-[Zurück](azure-serverless-platform.md)
-[Weiter](application-insights.md)
+>[Zurück](azure-serverless-platform.md)
+>[Weiter](application-insights.md)

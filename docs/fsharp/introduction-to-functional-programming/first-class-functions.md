@@ -2,12 +2,12 @@
 title: Funktionen
 description: Erfahren Sie mehr über Funktionen, sowie die wichtig für die funktionale Programmierung in F#.
 ms.date: 10/29/2018
-ms.openlocfilehash: 1459049c9c1c77f4eefd2a83945335b33ca22ab9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744633"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148631"
 ---
 # <a name="first-class-functions"></a>Funktionen
 
@@ -27,7 +27,7 @@ Die letzten beiden Measures zu definieren, so genannten *Operationen höherer Or
 
 ## <a name="give-the-value-a-name"></a>Zuweisen eines Namens zu einem Wert
 
-Einem erstrangigen Funktionswert muss wie ganzen Zahlen, Zeichenfolgen und anderen integrierten Typen ein Name zugewiesen werden können. Bei der funktionalen Programmierung wird dies als Bindung eines Bezeichners an einen Wert ausgedrückt. F#-verwendet [ `let` Bindungen](../language-reference/functions/let-bindings.md) zur Bindung von Namen an Werte: `let <identifier> = <value>`. Der folgende Code enthält zwei Beispiele.
+Einem erstrangigen Funktionswert muss wie ganzen Zahlen, Zeichenfolgen und anderen integrierten Typen ein Name zugewiesen werden können. Bei der funktionalen Programmierung wird dies als Bindung eines Bezeichners an einen Wert ausgedrückt. F#verwendet [ `let` Bindungen](../language-reference/functions/let-bindings.md) zur Bindung von Namen an Werte: `let <identifier> = <value>`. Der folgende Code enthält zwei Beispiele.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -69,7 +69,7 @@ Die Funktion `applyIt` im folgenden Beispiel verfügt über die beiden Parameter
 
 Die Fähigkeit, eine Funktion als Argument an eine andere Funktion zu übergeben, unterliegt in funktionalen Programmiersprachen allgemeinen Abstraktionen, wie z. B. Zuordnungs- und Filteroperationen. Um eine Zuordnungsoperation handelt es sich z. B. bei einer Funktion höherer Ordnung, mit der die Berechnung von Funktionen erfasst wird, die eine Liste durchlaufen, eine bestimmte Aktion für jedes Element ausführen und dann eine Liste mit den Ergebnissen zurückgeben. Auf diese Weise können Sie z. B. die einzelnen Element in einer Liste mit ganzen Zahlen um einen bestimmten Wert erhöhen oder quadrieren oder die Elemente in einer Liste mit Zeichenfolgen in Großschreibung ändern. Der fehleranfällige Teil dieser Berechnung ist der rekursive Prozess, mit dem die Liste durchlaufen und eine Liste der zurückzugebenden Ergebnisse erstellt wird. Dieser Teil wird von der Zuordnungsfunktion ausgeführt. Sie müssen für eine bestimmte Anwendung lediglich die Funktion schreiben, die auf jedes einzelne Element in der Liste angewendet werden soll (Addieren, Quadrieren, in Großschreibung ändern). Diese Funktion wird als Argument an die Zuordnungsfunktion gesendet, wie im vorangehenden Beispiel, in dem `squareIt` an `applyIt` gesendet wird.
 
-F# stellt Zuordnungsmethoden für die meisten Auflistungstypen, einschließlich [listet](../language-reference/lists.md), [Arrays](../language-reference/arrays.md), und [Sequenzen](../language-reference/sequences.md). In den folgenden Beispielen werden Listen verwendet. Die Syntax lautet `List.map <the function> <the list>`.
+F#Stellt Zuordnungsmethoden für die meisten Auflistungstypen, einschließlich [listet](../language-reference/lists.md), [Arrays](../language-reference/arrays.md), und [Sequenzen](../language-reference/sequences.md). In den folgenden Beispielen werden Listen verwendet. Die Syntax lautet `List.map <the function> <the list>`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -103,15 +103,15 @@ Im folgenden Beispiel wird der erstrangige Funktionsstatus in F# verwendet, um d
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
 
->[!NOTE]
-Eine noch kürzere Version finden Sie im folgenden Abschnitt, "Funktionen mit Currying".
+> [!NOTE]
+> Eine noch kürzere Version finden Sie im folgenden Abschnitt, "Funktionen mit Currying".
 
 Mit dem folgenden Code werden zwei Funktionen als Argumente an `compose` gesendet, die beide ein einzelnes Argument desselben Typs erfordern. Der Rückgabewert ist eine neue Funktion, bei der es sich um eine Zusammensetzung der beiden Funktionsargumente handelt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
 
->[!NOTE]
-F# bietet zwei Operatoren zum Zusammensetzen von Funktionen: `<<` und `>>`. `let squareAndDouble2 = doubleIt << squareIt` entspricht im vorangehenden Beispiel `let squareAndDouble = compose doubleIt squareIt`.
+> [!NOTE]
+> F# bietet zwei Operatoren zum Zusammensetzen von Funktionen: `<<` und `>>`. `let squareAndDouble2 = doubleIt << squareIt` entspricht im vorangehenden Beispiel `let squareAndDouble = compose doubleIt squareIt`.
 
 Im folgenden Beispiel zur Rückgabe einer Funktion als Wert eines Funktionsaufrufs wird ein einfaches Ratespiel erstellt. Rufen Sie zum Erstellen eines Spiels `makeGame` auf, und senden Sie den Wert, der erraten werden soll, an `target`. Der Rückgabewert der Funktion `makeGame` ist eine Funktion, die ein Argument erfordert (den zu erratenden Wert) und zurückgibt, ob richtig geraten wurde.
 
@@ -139,8 +139,8 @@ Um zu überprüfen, ob die Funktion wie gehabt funktioniert, verwenden Sie die u
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet41.fs)]
 
->[!NOTE]
-Zur Einschränkung von Currying können Sie die Parameter in Tupeln einschließen. Weitere Informationen finden Sie unter "Parametermuster" in [Parameter und Argumente](../language-reference/parameters-and-arguments.md).
+> [!NOTE]
+> Zur Einschränkung von Currying können Sie die Parameter in Tupeln einschließen. Weitere Informationen finden Sie unter "Parametermuster" in [Parameter und Argumente](../language-reference/parameters-and-arguments.md).
 
 Im folgenden Beispiel wird mit implizitem Currying eine kürzere Version von `makeGame` geschrieben. Wie `makeGame` die `game`-Funktion erstellt und zurückgibt, ist in diesem Format weniger explizit, Sie können das Ergebnis aber mit den ursprünglichen Testsituationen überprüfen.
 
@@ -194,4 +194,4 @@ Der folgende Code enthält alle Beispiele aus diesem Thema.
 - [Tupel](../language-reference/tuples.md)
 - [Funktionen](../language-reference/functions/index.md)
 - [`let` Bindungen](../language-reference/functions/let-bindings.md)
-- [Lambdaausdrücke: Das `fun` Schlüsselwort](../language-reference/functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda-Ausdrücke: Die `fun` Schlüsselwort](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

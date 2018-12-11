@@ -1,40 +1,40 @@
 ---
-title: Wenn zum Bereitstellen von Windows-Containern Service Fabric
-description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Wenn zum Bereitstellen von Windows-Containern Service Fabric
+title: Beim Bereitstellen von Windows-Containern in Service Fabric
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Beim Bereitstellen von Windows-Containern in Service Fabric
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c41db8b37c883f9369a6b8d1f8bccbc0535f504c
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957910"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129505"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Wenn zum Bereitstellen von Windows-Containern Service Fabric
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Beim Bereitstellen von Windows-Containern in Service Fabric
 
-Anwendungen, die abhängig von Windows-Containern müssen schnell Plattformen zu verwenden, mit dessen Hilfe noch weiter entfernt vom virtuellen IaaS-Computern. Dies ist für verbesserte automatische Skalierung und hohe Skalierbarkeit, und um erhebliche Verbesserungen in eine vollständige Benutzeroberfläche für Bereitstellungen zu gewinnen aktualisiert, Versionskontrolle, Rollbacks und Systemüberwachung. Sie können diese Ziele erreichen, mit dem Orchestrator Azure Service Fabric, in der Microsoft Azure-Cloud, sondern auch einer lokalen oder sogar in einer anderen Cloud verfügbar.
+Anwendungen, die auf Windows-Containern basieren müssen schnell Plattformen verwenden, die noch einen Schritt weiter entfernt vom virtuellen IaaS-Computern verschieben. Dies ist für die verbesserte automatische Skalierbarkeit und hohe Skalierbarkeit, und um wesentliche Verbesserungen in eine umfassende Verwaltungsoberfläche für Bereitstellungen zu erhalten. upgrades, Versionskontrolle, Rollbacks und Überwachung der Integrität. Sie können diese Ziele erreichen, mit der Orchestrator-Azure Service Fabric, in der Microsoft Azure-Cloud, sondern auch auf lokale oder sogar in einer anderen Cloud verfügbar.
 
-Viele Organisationen sind Aufhebung und verschieben vorhandene monolithische Anwendungen mit Containern für gibt es zwei Gründe:
+Viele Organisationen sind Lift & Shift bestehende monolithische Anwendungen in Container aus zwei Gründen:
 
--   Kosten verwendet werden, entweder aufgrund der Konsolidierung und Entfernen von vorhandener Hardware oder Anwendungen auf eine höhere Dichte ausgeführt wird.
+-   Kostensenkungen, entweder durch die Konsolidierung und Entfernung der vorhandenen Hardware oder das Ausführen von Anwendungen mit einer höheren Dichte.
 
--   Eine konsistente Bereitstellung Vertrag zwischen Entwicklungs- und Vorgänge.
+-   Ein konsistenter bereitstellungvertrag zwischen Entwicklung und Betrieb.
 
-Verfolgen die Reduzierung der Kosten verständlich ist, und es ist wahrscheinlich, dass alle Organisationen das Ziel nachjagen sind. Konsistente Bereitstellung ist schwieriger zu bewerten, aber es ebenso wichtig ist. Ein konsistente Bereitstellung Vertrag besagt, dass Entwickler frei sind, um die Technologie verwenden, die sie am besten entspricht, und das Betriebsteam Ruft eine einzige Möglichkeit zur Bereitstellung und Verwaltung von Anwendungen ab. Dieser Vertrag entfällt im Bereich mit der Vorgänge, die mit der Komplexität von vielen anderen Technologien verarbeiten müssen oder erzwingen, dass Entwickler arbeiten nur mit bestimmten Technologien. Im Wesentlichen wird jede Anwendung in eine geschlossene Bereitstellungsabbild Container verwendet.
+Verfolgen kosteneinsparungen verständlich ist und ist es wahrscheinlich, dass alle Unternehmen dieses Ziel referenzauswertung sind. Konsistente Bereitstellung ist schwieriger zu bewerten, aber es ist genauso wichtig. Ein konsistenter bereitstellungvertrag besagt, dass Entwickler können auch die Technologie verwenden, die ihnen passt, und das Betriebsteam Ruft eine einzelne Möglichkeit zum Bereitstellen und Verwalten von Anwendungen ab. Diese Vereinbarung behebt das Problem der Vorgänge, die die Komplexität der viele verschiedene Technologien verarbeiten müssen oder erzwingen, dass Entwickler arbeiten nur mit bestimmten Technologien. Im Wesentlichen wird jede Anwendung in einem eigenständigen Bereitstellungsabbild Container verwendet.
 
-Einige Organisationen Modernisierung durch Hinzufügen von Microservices (Cloud-systemeigenen Anwendungen) fortgesetzt, aber viele andere Organisationen werden hier beendet (Cloudoptimiertes Anwendungen). Wie in Abbildung 4 – 8 gezeigt, wird nicht diesen Organisationen Microservices Architekturen verschoben werden, da sie nicht auf eventuell. In jedem Fall erhalten sie bereits die Vorteile aufgeführt, die mithilfe von Containern plus Service Fabric bietet eine umfassende Verwaltungsoberfläche, die Bereitstellung enthält aktualisiert, versionsverwaltung Rollbacks und Systemüberwachung.
+Einige Unternehmen modernisieren, die durch das Hinzufügen von Microservices (Native Cloud-Anwendungen) fortgesetzt, aber viele andere Organisationen werden hier beendet (Cloudoptimierte Anwendungen). Wie in Abbildung 4-8 dargestellt, wird nicht diese Organisationen auf Microservices-Architekturen verschoben werden, da Sie nicht, müssen sie gegebenenfalls. In jedem Fall erhalten sie bereits die Vorteile, die mithilfe von Containern und Service Fabric bietet eine umfassende Verwaltungsoberfläche, die Bereitstellung, enthält ein Upgrade, versionsverwaltung, Rollbacks und Integritätsüberwachung.
 
-> ![Heben Sie und verschieben Sie eine Anwendung zum Service Fabric](./media/image8.png)
+> ![Lift & shift von einer Anwendung in Service Fabric](./media/image8.png)
 >
-> **Abbildung 4 – 8.** Heben Sie und verschieben Sie eine Anwendung zum Service Fabric
+> **Abbildung 4. – 8..** Lift & shift von einer Anwendung in Service Fabric
 
-Ein Schlüssel Ansatz zum Service Fabric ist Wiederverwenden von vorhandenem Code, und heben und verschieben. Aus diesem Grund können Sie migrieren die aktuellen .NET Framework-Anwendungen mithilfe von Windows-Containern und Weitergabe an die Service Fabric. Es wird einfacher zu behalten beabsichtigen Modernisierung, schließlich durch Hinzufügen von neuen Microservices sein.
+Ein wichtiger Ansatz in Service Fabric ist zum Wiederverwenden von vorhandenen Codes und Lift & shift. Aus diesem Grund können Sie migrieren Ihre aktuellen .NET Framework-Anwendungen mithilfe von Windows-Containern und für Service Fabric bereitstellen. Es wird einfacher zu halten, also modernisieren, schließlich durch Hinzufügen neuer Microservices sein.
 
-Beim Vergleichen von Service Fabric zu anderen Orchestrators ist es wichtig zu markieren, dass Service Fabric ausgereifte zur Ausführung von Windows-basierten Anwendungen und Diensten ist. Service Fabric wurde Windows-basierte Dienste und Anwendungen, einschließlich der Ebene 1, unternehmenswichtige Produkte von Microsoft für Jahre ausgeführt. Es wurde die erste Orchestrator, allgemeinen Verfügbarkeit für Windows-Container zu verwenden. Andere Container, z. B. Kubernetes, DC/OS und Docker Containerhostclustern, sind ausgereiftere unter Linux, aber weniger ausgereiften als Service Fabric für Windows-basierte Anwendungen und Windows-Containern.
+Beim Vergleichen von Service Fabric für andere orchestratoren ist es wichtig, hervorzuheben, dass Service Fabric zum Ausführen von Windows-basierte Anwendungen und Dienste ausgereift ist. Service Fabric wurde Windows-basierte Dienste und Anwendungen, einschließlich von Ebene-1, wichtige Produkte von Microsoft seit Jahren ausgeführt. Es war der erste Orchestrator, allgemeinen Verfügbarkeit für die Windows-Container zu verwenden. Andere Container wie Kubernetes, DC/OS und Docker Swarm, sind unter Linux deutlich ausgereifter aber ausgereifter als Service Fabric für Windows-basierte Anwendungen und Windows-Containern.
 
-Das eigentliche Ziel von Service Fabric ist die Komplexität der Erstellung von Anwendungen anhand eines Ansatzes Microservices zu reduzieren. Sie möchten schließlich eine Microservices für bestimmte Anwendungstypen zu teuer Redesigns zu vermeiden. Sie können klein anzufangen, bei Bedarf zu skalieren, als veraltet markiert Services, Hinzufügen von neuen Diensten und entwickeln Ihre Anwendung mit Kunden. Es gibt viele andere Probleme, die noch gelöst werden, um Microservices für die meisten Entwickler vereinfacht wird. Wenn Sie derzeit sind nur Aufhebung und verschieben Sie eine Anwendung mit Windows-Container, aber denken Sie zum Hinzufügen von Microservices basierend auf den Container in der Zukunft, ist der Service Fabric-Wiederherstellungszeiten.
+Das ultimative Ziel von Service Fabric ist die Komplexität der Erstellung von Anwendungen mit einem microservice-Ansatz zu reduzieren. Sie möchten schließlich einen microservice für bestimmte Arten von Anwendungen, um kostspielige neuentwürfe zu vermeiden. Sie können klein anfangen, bei Bedarf zu skalieren, Dienste beenden, neue Dienste hinzufügen und entwickeln Ihre Anwendung mit der Nutzung durch Kunden. Es gibt viele andere Probleme, die noch gelöst werden, um die Microservices für die meisten Entwickler besser zugänglich zu machen. Wenn Sie derzeit werden nur Lift & Shift eine Anwendung mit Windows-Containern, aber denken Sie zum Hinzufügen von Microservices auf Containern basierenden in der Zukunft, ist die kritische Zahl der Service Fabric.
 
 >[!div class="step-by-step"]
-[Zurück](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-[Weiter](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[Zurück](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[Weiter](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

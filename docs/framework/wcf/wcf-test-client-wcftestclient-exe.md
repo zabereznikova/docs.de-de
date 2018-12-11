@@ -3,11 +3,11 @@ title: WCF-Testclient (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181591"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149002"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF-Testclient (WcfTestClient.exe)
 Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GUI-Tool, das kann Benutzer Testparameter eingeben, die Eingabe an den Dienst senden, und zeigen die Antwort, die der Dienst zurücksendet. Es bietet eine nahtlose diensttest mit WCF-Diensthost kombiniert.  
@@ -136,7 +136,7 @@ Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GU
 ## <a name="features-supported-by-wcf-test-client"></a>Vom WCF-Testclient unterstützte Funktionen  
  Im folgenden finden eine Liste von WCF-Testclient unterstützten Funktionen:  
   
--   Dienstaufruf: Anforderung/Antwort und unidirektionale Nachricht.  
+-   Aufrufen von Diensten: Anforderung/Antwort und unidirektionale Nachricht.  
   
 -   Bindungen: alle von Svcutil.exe unterstützten Bindungen.  
   
@@ -156,7 +156,7 @@ Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GU
   
 -   Sicherheit: [!INCLUDE[infocard](../../../includes/infocard-md.md)], Zertifikat und Benutzername/Kennwort.  
   
--   Bindungen: WSFederationbinding, beliebige Kontextbindungen und HTTPS-Bindung, WebHttpbinding (Unterstützung von JSON-Antwortnachrichten).  
+-   Bindungen: WSFederationbinding, beliebige kontextbindungen und Https-Bindung, WebHttpbinding (Unterstützung für Json-Antwort-Nachrichten).  
   
 ## <a name="closing-wcf-test-client"></a>Schließen des WCF-Testclients  
  Sie können WCF-Testclient schließen, es gibt folgende Möglichkeiten:  

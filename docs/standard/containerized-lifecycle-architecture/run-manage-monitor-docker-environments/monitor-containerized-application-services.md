@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232923"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153920"
 ---
 # <a name="monitor-containerized-application-services"></a>Überwachen von containeranwendungsdiensten
 
@@ -60,7 +60,7 @@ Zusätzlich zur Bereitstellung wertvoller Dienste selbst an, die Operations Mana
 
 ![](./media/image2.png)
 
-Abbildung 6-2: Informationen zu Docker-Container angezeigt, die von Operations Management Suite
+Abbildung 6 – 2: Informationen zu Docker-Container angezeigt, die von Operations Management Suite
 
 Application Insights und Operations Management Suite zum Überwachen von Aktivitäten zu konzentrieren, allerdings der Application Insights Schwerpunkt liegt auf Überwachung die apps selbst Dank dem SDK in der app ausgeführt wird. Allerdings Operations Management Suite konzentriert sich viel besser, auf die Infrastruktur für die Hosts, außerdem bietet umfassende Analyse die Protokolle nach Maß und gleichzeitig eine äußerst flexible datengesteuerte/Suchabfrage System.
 
@@ -97,5 +97,5 @@ Speichern von Abfragen ist auch ein Standardfeature in Operations Management Sui
 **Weitere Informationen** nach Informationen zu installieren und Konfigurieren von Docker containerlösung in [Operations Management Suite](https://microsoft.com/oms), wechseln Sie zu <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Zurück](manage-production-docker-environments.md)
-[Weiter](../key-takeaways/index.md)
+>[Zurück](manage-production-docker-environments.md)
+>[Weiter](../key-takeaways/index.md)

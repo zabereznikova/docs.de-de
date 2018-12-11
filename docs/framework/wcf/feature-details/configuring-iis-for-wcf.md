@@ -2,12 +2,12 @@
 title: Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 13fd068f7a058a0fbf4e15fc99a8de91671fb2d5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1cbc11e65453cb9aeb020f3f12e3ca0156a6d6d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664617"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127653"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation
 
@@ -56,23 +56,19 @@ Internetinformationsdienste (IIS) 7.0 weist einen modularen Aufbau auf, der es I
 ## <a name="request-limits"></a>Anforderungsbeschränkungen
  Unter [!INCLUDE[wv](../../../../includes/wv-md.md)] mit IIS 7 wurden der Standardwert von `maxUri` und die `maxQueryStringSize`-Einstellungen geändert. Standardmäßig sind in Anforderungsfiltern in IIS 7.0 eine URL-Länge von 4096 Zeichen und Abfragezeichenfolgen mit einer Länge von 2048 Zeichen zulässig. Um diese Standardwerte zu ändern, fügen Sie das folgende XML der Datei App.config hinzu.
 
- `<system.webServer>`
-
- `<security>`
-
- `<requestFiltering>`
-
- `<requestLimits maxUrl="8192" maxQueryString="8192" />`
-
- `</requestFiltering>`
-
- `</security>`
-
- `</system.webServer>`
+```xml
+ <system.webServer>
+    <security>
+        <requestFiltering>
+            <requestLimits maxUrl="8192" maxQueryString="8192" />
+        </requestFiltering>
+    </security>
+ </system.webServer>
+ ```
 
 ## <a name="see-also"></a>Siehe auch
 
 - [WAS-Aktivierungsarchitektur](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Konfigurieren von WAS für die Verwendung mit WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [So wird es gemacht: Installieren und Konfigurieren von WCF-Aktivierungskomponenten](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)

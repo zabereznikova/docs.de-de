@@ -2,12 +2,12 @@
 title: Berechnungsausdrücke (F#)
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in F#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839868"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169845"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Jedes dieser Schlüsselwörter und andere standard F#-Schlüsselwörter sind nur in einem Berechnungsausdruck verfügbar, wenn sie in den unterstützenden-Generator-Typ definiert wurden. Die einzige Ausnahme hierbei ist `match!`, dies ist selbst die Syntax-Zuckerguss für die Verwendung von `let!` gefolgt von einer Musterübereinstimmung auf dem Ergebnis.
+Jedes dieser Schlüsselwörter und andere Standard F# Schlüsselwörter sind nur in einem Berechnungsausdruck verfügbar, wenn sie in den unterstützenden-Generator-Typ definiert wurden. Die einzige Ausnahme hierbei ist `match!`, dies ist selbst die Syntax-Zuckerguss für die Verwendung von `let!` gefolgt von einer Musterübereinstimmung auf dem Ergebnis.
 
-Der Generator kann ein Objekt, das spezielle Methoden definiert, die steuern, die Möglichkeit, die die Fragmente des Berechnungsausdrucks kombiniert werden. d. h. seine Methoden Berechnungsausdrucks Verhalten steuern. Eine weitere Möglichkeit zum Beschreiben einer Zeichenfolgengenerator-Klasse ist zu sagen, dass Sie den Vorgang, der viele F#-Konstrukte, beispielsweise Schleifen und Bindungen anpassen können.
+Der Generator kann ein Objekt, das spezielle Methoden definiert, die steuern, die Möglichkeit, die die Fragmente des Berechnungsausdrucks kombiniert werden. d. h. seine Methoden Berechnungsausdrucks Verhalten steuern. Eine weitere Möglichkeit zum Beschreiben einer Zeichenfolgengenerator-Klasse ist zu sagen, dass Sie den Vorgang von vielen anpassen können F# erstellt werden, beispielsweise Schleifen und Bindungen.
 
 ### `let!`
 
@@ -194,7 +194,7 @@ Beim Aufrufen von eines Berechnungsausdrucks mit `match!`, sie werden feststelle
 
 ## <a name="built-in-computation-expressions"></a>Integrierte Berechnungsausdrücke
 
-Die F#-Kernbibliothek definiert drei integrierte Berechnungsausdrücke: [Sequenzausdrücke](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Abfrageausdrücke](query-expressions.md).
+Die F# drei integrierte Berechnungsausdrücke definiert: [Sequence Expressions](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [-Abfrageausdrücken](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Erstellen eine neue Art von Ausdruck für die Berechnung
 
@@ -227,7 +227,7 @@ Der geschachtelte Ausdruck ist im folgenden Format:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Im obigen Code, die Aufrufe an `Run` und `Delay` werden ausgelassen, wenn sie nicht in der Berechnung Ausdrucks-Generator-Klasse definiert sind. Der Text des Berechnungsausdrucks, hier bezeichnet als `{| cexpr |}`, durch die Übersetzungen, die in der folgenden Tabelle beschrieben in Aufrufe, die im Zusammenhang mit den Methoden der Builder-Klasse übersetzt. Der Ausdruck für die Berechnung `{| cexpr |}` wird definierten rekursiv nach diese Übersetzungen, in denen `expr` ist ein F#-Ausdruck und `cexpr` ist ein Ausdruck für die Berechnung.
+Im obigen Code, die Aufrufe an `Run` und `Delay` werden ausgelassen, wenn sie nicht in der Berechnung Ausdrucks-Generator-Klasse definiert sind. Der Text des Berechnungsausdrucks, hier bezeichnet als `{| cexpr |}`, durch die Übersetzungen, die in der folgenden Tabelle beschrieben in Aufrufe, die im Zusammenhang mit den Methoden der Builder-Klasse übersetzt. Der Ausdruck für die Berechnung `{| cexpr |}` wird definierten rekursiv nach diese Übersetzungen, in denen `expr` ist ein F# Ausdruck und `cexpr` ist ein Ausdruck für die Berechnung.
 
 |Ausdruck|Übersetzung|
 |----------|-----------|
@@ -251,6 +251,7 @@ Im obigen Code, die Aufrufe an `Run` und `Delay` werden ausgelassen, wenn sie ni
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 In der vorherigen Tabelle `other-expr` wird beschrieben, einen Ausdruck, der andernfalls nicht in der Tabelle aufgeführt ist. Eine Zeichenfolgengenerator-Klasse muss nicht alle Methoden zu implementieren und unterstützen alle die Übersetzungen, die in der vorherigen Tabelle aufgeführt. Diese Konstrukte, die nicht implementiert werden, sind nicht verfügbar ist, im Berechnungsausdrücke dieses Typs. Angenommen, Sie nicht möchten, zur Unterstützung der `use` -Schlüsselwort in Berechnungsausdrücken, können Sie die Definition der weglassen `Use` in Ihre Zeichenfolgengenerator-Klasse.
 
 Das folgende Codebeispiel zeigt einen Ausdruck für die Berechnung, der eine Berechnung kapselt, eine Reihe von Schritten, die sein können nur einem Schritt zu einem Zeitpunkt ausgewertet. Eine Unterscheidungs-union-Typs `OkOrException`, den Fehlerstatus des Ausdrucks codiert, wie bisher ausgewertet. Dieser Code zeigt einige typische Muster, die Sie in Ihrer Berechnungsausdrücken, z. B. Codebausteine Implementierung einiger der-Generator-Methoden verwenden können.
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 Ein Ausdruck für die Berechnung hat einen zugrunde liegenden Typ, der der Ausdruck zurückgibt. Der zugrunde liegende Typ kann eine berechnete Ergebnis oder eine verzögerte Berechnung, die ausgeführt werden kann oder darstellen kann es eine Möglichkeit zum iterieren durch eine Art von Auflistung bereitstellen. Im vorherigen Beispiel wurde der zugrunde liegende Typ **schließlich**. Für einen Sequenzausdruck der zugrunde liegenden Typ ist <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bei einem Abfrageausdruck, der zugrunde liegende Typ ist <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Ist ein asynchroner Workflow, der zugrunde liegenden Typ [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Die `Async` Objekt darstellt, die Arbeit ausgeführt werden, um das Ergebnis zu berechnen. Rufen Sie z. B. [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) führen eine Berechnung, und geben das Ergebnis zurück.

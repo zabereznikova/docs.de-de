@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer WPF-Anwendung in Visual Studio
-ms.date: 04/12/2018
+ms.date: 10/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007255"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150744"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung
 
-In diesem Artikel erfahren Sie, wie Sie eine einfache Windows Presentation Foundation (WPF)-Anwendung entwickeln, die die Elemente enthält, die für die meisten WPF-Anwendungen gelten: Extensible Application Markup Language (XAML)-Markup, CodeBehind, Anwendungsdefinitionen, Steuerelemente, Layout, Datenbindung und Stile.
+In diesem Artikel erfahren Sie, wie Sie eine einfache Windows Presentation Foundation (WPF)-Anwendung entwickeln, die die Elemente enthält, die für die meisten WPF-Anwendungen gelten: Extensible Application Markup Language (XAML) Markup, CodeBehind, Anwendungsdefinitionen, Steuerelemente, Layout, Datenbindung und Stile.
 
 Diese exemplarische Vorgehensweise umfasst die folgenden Schritte aus:
 
@@ -41,9 +41,9 @@ Am Ende dieser exemplarischen Vorgehensweise werden Sie eine eigenständigen Win
 > [!TIP]
 > Der Beispielcode, der verwendet wird, in dieser exemplarischen Vorgehensweise steht für Visual Basic und c# in [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
-- Visual Studio 2012 oder höher (dieser Artikel basiert auf Visual Studio 2017)
+- Visual Studio 2017 oder höher
 
    Weitere Informationen zum Installieren der neuesten Version von Visual Studio finden Sie unter [Installieren von Visual Studio](/visualstudio/install/install-visual-studio).
 
@@ -57,7 +57,7 @@ Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine A
 
       Die **neues Projekt** Dialogfeld wird geöffnet.
 
-   2. Unter den **installiert** (Kategorie), erweitern Sie entweder die **Visual C#-** oder **Visual Basic** Knoten, und wählen Sie dann **Klassischer Windows-Desktop**.
+   2. Unter den **installiert** (Kategorie), erweitern Sie entweder die **Visual C#**  oder **Visual Basic** Knoten, und wählen Sie dann **Windows Desktop**.
 
    3. Wählen Sie die **WPF-App ((.NET Framework)** Vorlage. Geben Sie den Namen **`ExpenseIt`** und wählen Sie dann **OK**.
 
@@ -254,7 +254,7 @@ Klicken Sie im Abschnitt erstellen Sie eine einspaltige Tabelle mit drei Zeilen 
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    Die <xref:System.Windows.Controls.RowDefinition.Height%2A> zwei Zeilen wird festgelegt <xref:System.Windows.GridLength.Auto%2A>, d. h., die Größe der Zeilen werden als Grundlage für den Inhalt in den Zeilen. Der Standardwert <xref:System.Windows.Controls.RowDefinition.Height%2A> ist <xref:System.Windows.GridUnitType.Star> größenanpassung, was bedeutet, dass die Zeilenhöhe eine gewichtete Proportion des verfügbaren Platzes ist. Wenn z. B. zwei Zeilen jeweils eine <xref:System.Windows.Controls.RowDefinition.Height%2A> von "*", sie verfügen jeweils über eine Höhe von der Hälfte des verfügbaren Platzes ist.
+    Die <xref:System.Windows.Controls.RowDefinition.Height%2A> zwei Zeilen wird festgelegt <xref:System.Windows.GridLength.Auto%2A>, was bedeutet, dass die Größe der Zeilen basierend auf dem Inhalt in den Zeilen. Der Standardwert <xref:System.Windows.Controls.RowDefinition.Height%2A> ist <xref:System.Windows.GridUnitType.Star> größenanpassung, was bedeutet, dass die Zeilenhöhe eine gewichtete Proportion des verfügbaren Platzes ist. Wenn z. B. zwei Zeilen jeweils eine <xref:System.Windows.Controls.RowDefinition.Height%2A> von "*", sie verfügen jeweils über eine Höhe von der Hälfte des verfügbaren Platzes ist.
 
     Ihre <xref:System.Windows.Controls.Grid> sollte jetzt aussehen wie der folgende XAML:
 
@@ -375,13 +375,13 @@ Die Darstellung verschiedener Elemente ist häufig für alle Elemente des gleich
 
     Durch diese XAML werden folgende Stile hinzugefügt:
 
-    - `headerTextStyle`: Zum Formatieren des Seitentitels für <xref:System.Windows.Controls.Label>.
+    - `headerTextStyle`: Zum Formatieren des Seitentitels <xref:System.Windows.Controls.Label>.
 
-    - `labelStyle`: Zum Formatieren der <xref:System.Windows.Controls.Label> -Steuerelemente.
+    - `labelStyle`: Zum Formatieren der <xref:System.Windows.Controls.Label> Steuerelemente.
 
-    - `columnHeaderStyle`: Zum Formatieren von <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
+    - `columnHeaderStyle`: Zum Formatieren der <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
 
-    - `listHeaderStyle`: Zum Formatieren der <xref:System.Windows.Controls.Border> -Kopfzeilensteuerelemente.
+    - `listHeaderStyle`: Zum Formatieren der Kopfzeile <xref:System.Windows.Controls.Border> Steuerelemente.
 
     - `listHeaderTextStyle`: Zum Formatieren der Kopfzeile <xref:System.Windows.Controls.Label>.
 

@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086387"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151212"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Verwenden von Visual Studio-Tools für Docker (Visual Studio unter Windows)
 
@@ -41,7 +41,7 @@ Sie können Docker-Unterstützung zu einem vorhandenen .NET Core Web-app-Projekt
 
 ![Aktivieren von Docker-Unterstützung für neue ASP.NET Core-Web-app in Visual Studio](./media/enable-docker-support-visual-studio.png)
 
-Abbildung 4-27: Aktivieren von Docker-Unterstützung während der projekterstellung in Visual Studio 2017
+Abbildung 4-27: Aktivieren Sie Docker-Unterstützung, während der projekterstellung in Visual Studio 2017
 
 Wenn Sie hinzufügen oder Docker-Unterstützung aktivieren, fügt Visual Studio eine *dockerfile-Datei* Datei zum Projekt.
 
@@ -72,7 +72,7 @@ Wählen Sie im Hauptmenü **Tools** > **Optionen**, und erweitern Sie **Containe
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-Abbildung 4-30: Optionen für Docker Tools
+Abbildung 4-30: Optionen für Docker-Tools
 
 In der folgende Tabelle können Sie entscheiden, wie Sie diese Optionen festlegen können.
 
@@ -93,5 +93,5 @@ Erstellen, Debuggen, aktualisieren und Aktualisieren von apps in einem lokalen D
 Bereitstellen eines ASP.NET Core-Docker-Containers in einer containerregistrierung an: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
-[Zurück](docker-apps-inner-loop-workflow.md)
-[Weiter](set-up-windows-containers-with-powershell.md)
+>[Zurück](docker-apps-inner-loop-workflow.md)
+>[Weiter](set-up-windows-containers-with-powershell.md)

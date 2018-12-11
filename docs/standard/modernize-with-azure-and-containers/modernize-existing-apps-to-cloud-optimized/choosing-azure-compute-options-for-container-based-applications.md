@@ -1,42 +1,41 @@
 ---
-title: Auswählen von Azure Compute-Plattformen für Container-basierte Anwendungen
-description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Auswählen von Azure Compute-Plattformen für Container-basierte Anwendungen
+title: Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: ebf022a52aaaf95ae335976f5e097921b0ac8006
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33958010"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125495"
 ---
-# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure Compute-Plattformen für Container-basierte Anwendungen
+# <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
 
-Wie Sie bemerkt haben, nachdem Sie die vorherigen Abschnitten gelesen haben, ist Azure ein Öffnen Cloud, die mehrere Möglichkeiten bietet. Können Sie für Ihre Anforderungen am besten passenden, allerdings Flächen es auch Fragen dazu, welche Produkt/Sie für Ihre Sammelartikeleinheit verwenden sollten.
+Wie Sie nach dem Lesen in den vorherigen Abschnitten bemerkt haben, ist Azure eine offene Cloud, die mehrere Auswahlmöglichkeiten bietet. Können Sie für Ihre Anforderungen am besten geeignet, jedoch gibt es auch Fragen zu welchem Produkt/Technologie Sie für Ihre containeranwendungen verwenden sollten.
 
-Als eine *standardmäßig* Empfehlung, im folgenden finden Sie die wichtigsten Kriterien, die in diesem Handbuch empfohlen:
+Als eine *standardmäßig* Empfehlungen zu erstellen, die folgenden ist das Hauptkriterium, die in diesem Handbuch empfohlen:
 
-  - **Einzelne monolithischen app:** -Azure App Service auswählen
-  - **N-Tier-app:** Orchestrators z. B. Azure Kubernetes Service (so), die Service Fabric (SF) oder die App Service auswählen, wenn Sie ein einzelnes oder einige Back-End-Diensten haben
-  - **Linux-Microservices:** so/Kubernetes auswählen
-  - **Windows-Microservices:** Service Fabric auswählen
-  - **Serverlose Funktionen & Ereignishandler:** auswählen von Azure-Funktionen
-  - **Umfangreiche Batch:** Azure Batch auswählen
+  - **Einzelne monolithischen app:** Wählen Sie Azure App Service
+  - **N-schichtigen Anwendung:** Wählen Sie orchestratoren wie z. B. Azure Kubernetes Service (AKS), Service Fabric (AE) oder App Service aus, wenn Sie eine einzelne oder einige Back-End-Dienste verfügen
+  - **Microservices für Linux:** Wählen Sie ACS/Kubernetes
+  - **Windows-Microservices:** Wählen Sie Service Fabric
+  - **Serverlose Funktionen & Ereignishandler:** Wählen Sie die Azure-Funktionen
+  - **Umfangreiche Batch:** Wählen Sie mit Azure Batch
 
-Diese Empfehlung muss jedoch mit Salt-Wert, eine Prise ergriffen werden, wie das Produkt Auswahl von Anforderungen und die Merkmale der jeweiligen Anwendungsverzeichnis abhängig ist. Nicht alle Anwendungen sind identisch, selbst wenn zunächst sie ähnliche Pakettypen aussehen könnte.
+Allerdings sollten diese Empfehlung mit Salt-Wert, eine Prise ausgeführt werden, wie Ihre Anwendung die Anforderungen und Merkmale des Produkts Auswahl abhängig ist. Nicht alle Anwendungen sind identisch, auch wenn Anfangs sie ähnliche Typen aussehen könnte.
 
-Nach einem eine tiefer gehende Analyse der die Anforderungen der Anwendung konnte die ausgewählten Produkts unterscheiden. Allerdings als Ausgangspunkt, ist es gut, haben die erste Anleitung von auf der Auswertung starten können, und Testen basierend auf bestimmten Priorität.
+Nach der eine detailliertere Analyse der die Anforderungen der Anwendung konnte das ausgewählte Produkt unterscheiden. Allerdings als Ausgangspunkt, es ist ratsam, steht eine erste Anleitung aus, in dem Sie Ihre Evaluierung von starten können, und Tests basierend auf bestimmten Priorität.
 
-In der nächsten Abbildung können Sie einen umfassenderen beim ausführliches Tabelle analysieren.
+In der nächsten Abbildung können Sie einen umfassenderen beim ausführliche Entscheidungstabelle analysieren.
 
 ![](./media/image8.5.png)
 
-Beachten Sie, dass wie die zugrunde liegende Betriebssystem (Windows im Vergleich zu Linux) kann auch ein Entscheidungsfaktor für die sein, da einige Orchestrators ausgereifte auf Linux-Containern und andere für Windows-Container sind. Linux-Container sind z. B. sehr ausgereifte in Kubernetes (so in Azure) aber weniger ausgereiften auf Service Fabric. Andererseits, sind Windows-Containern ausgereiftere in Service Fabric (Freigabe im Mai 2017) und weniger ausgereiften in so.
+Beachten Sie, dass die zugrunde liegende Betriebssystem (im Vergleich zu Windows. Linux) kann auch ein Entscheidungsfaktor sein, da einige orchestratoren ausgereifte auf Linux-Container und andere auf Windows-Container sind. Beispielsweise sind die Linux-Container in Kubernetes (AKS in Azure) sehr ausgereiften aber ausgereifter als unter Service Fabric. Sind auf der anderen Seite Windows-Container auf, umso reifer in Service Fabric (veröffentlicht im Mai 2017) und ausgereifter als unter AKS.
 
-Jedoch berücksichtigt diese Unterschiede im Betriebssystem Reife zukünftig zur menüausblendung und mehrere Plattformen müssen vergleichbar sein, OS Maturity und die Entscheidung werden weitere Informationen zur Voreinstellungen basierend auf bestimmte Funktionen, die Ihre Anwendung möglicherweise oder basierend auf jeder Plattform Ökosystem liegen. Gründe.
-
+Jedoch diese Unterschiede im Betriebssystem Maturity in der Zukunft eingeblendet werden und mehrere Plattformen vergleichbar OS Reife und die Entscheidung wird mehr über Einstellungen, die basierend auf bestimmten Features, die Ihre Anwendung möglicherweise oder basierend auf jeder Plattform Ökosystem anordnen Gründe.
 
 >[!div class="step-by-step"]
-[Zurück](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
-[Weiter](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+>[Zurück](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[Weiter](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

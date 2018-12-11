@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts'
+title: 'Vorgehensweise: Hosten Sie und führen Sie einer grundlegenden Windows Communication Foundation-Diensts aus'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562293"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129375"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Gewusst wie: Hosten und Ausführen eines grundlegenden Windows Communication Foundation-Diensts
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Vorgehensweise: Hosten Sie und führen Sie einer grundlegenden Windows Communication Foundation-Diensts aus
 
 Dies ist die Dritte von sechs Aufgaben, die zum Erstellen einer WCF-Anwendung erforderlich sind. Eine Übersicht über alle sechs Aufgaben finden Sie im Artikel [Getting Started Tutorial (Tutorial: Erste Schritte)](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -149,7 +149,7 @@ End Module
 
 **Schritt 4** – Aktivieren des Metadatenaustauschs. Clients verwenden den Metadatenaustausch, um Proxys zu generieren, die zum Aufrufen von Dienstvorgängen verwendet werden. Erstellen Sie zum Aktivieren von Metadatenaustausch eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Instanz, legen Sie ihre <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>-Eigenschaft auf `true` fest, und fügen Sie das Verhalten der <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A`-Auflistung der <xref:System.ServiceModel.ServiceHost>-Instanz hinzu.
 
-**Schritt 5** : Öffnen der <xref:System.ServiceModel.ServiceHost> zum Lauschen auf eingehender Nachrichten. Der Code wartet darauf, dass der Benutzer die EINGABETASTE drückt. Wenn dies nicht erfolgt, wird die App sofort geschlossen und der Dienst heruntergefahren. Beachten Sie auch, dass ein try/catch-Block verwendet wird. Nachdem der <xref:System.ServiceModel.ServiceHost> instanziiert wurde, wird der gesamte sonstige Code in einen try/catch-Block eingefügt. Weitere Informationen zum sicheren Abfangen von Ausnahmen, die von <xref:System.ServiceModel.ServiceHost> ausgelöst werden, finden Sie unter [Avoiding Problems with the Using Statement (Umgehen von Problemen mit der Using-Anweisung)](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).
+**Schritt 5** : Öffnen der <xref:System.ServiceModel.ServiceHost> zum Lauschen auf eingehender Nachrichten. Der Code wartet darauf, dass der Benutzer die EINGABETASTE drückt. Wenn dies nicht erfolgt, wird die App sofort geschlossen und der Dienst heruntergefahren. Beachten Sie auch, dass ein try/catch-Block verwendet wird. Nachdem der <xref:System.ServiceModel.ServiceHost> instanziiert wurde, wird der gesamte sonstige Code in einen try/catch-Block eingefügt. Weitere Informationen zum sicheren Abfangen von Ausnahmen durch <xref:System.ServiceModel.ServiceHost>, finden Sie unter [verwenden schließen "und" Abort, WCF-Client-Ressourcen freizugeben.](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > Bearbeiten Sie die Datei "App.config" im GettingStartedLib entsprechend die Änderungen im Code vorgenommen:
@@ -403,7 +403,7 @@ End Module
 Der Dienst wird nun ausgeführt. In der nächsten Aufgabe erstellen Sie einen WCF-Client.
 
 > [!div class="nextstepaction"]
-> [Gewusst wie: Erstellen eines WCF-Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [So wird es gemacht: Erstellen Sie einen WCF-client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 Informationen zur Problembehandlung finden Sie unter [Troubleshooting the Getting Started Tutorial (Problembehandlung für das Tutorial „Erste Schritte“)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
 

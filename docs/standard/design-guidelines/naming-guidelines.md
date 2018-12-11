@@ -1,6 +1,6 @@
 ---
 title: Richtlinien für die Benennung
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], about naming guidelines
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+author: KrzysztofCwalina
+ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120907"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127705"
 ---
 # <a name="naming-guidelines"></a>Richtlinien für die Benennung
 Befolgen einen konsistenten Satz von Benennungskonventionen in die Entwicklung eines Frameworks kann einen wichtigen Beitrag zum die Framework benutzerfreundlichkeit sein. Sie können das Framework von vielen Entwicklern häufig separate Projekte verwendet werden. Über die Konsistenz des Formulars Namen von Frameworkelementen leicht verstanden werden müssen und müssen die Funktion jedes Elements zu vermitteln.  
@@ -38,7 +37,7 @@ Befolgen einen konsistenten Satz von Benennungskonventionen in die Entwicklung e
  [Benennen von Ressourcen](../../../docs/standard/design-guidelines/naming-resources.md)  
  *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
+ *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
   
 ## <a name="see-also"></a>Siehe auch
 

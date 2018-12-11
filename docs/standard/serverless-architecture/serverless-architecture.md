@@ -4,12 +4,12 @@ description: Die Auswertung von verschiedenen Architekturen und apps, die durch 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369956"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150302"
 ---
 # <a name="serverless-architecture"></a>Serverlose Architektur
 
@@ -42,9 +42,9 @@ Eine gängige Herausforderung ist eine vorhandene monolithische Anwendung in die
 
 ![Serverlose Monolith-migration](./media/serverless-monolith-migration.png)
 
-Weitere Informationen zu diesem Ansatz wird das Video ansehen: [bringen Sie Ihre app in die Cloud mit serverlosen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
+Weitere Informationen zu diesem Ansatz wird das Video: [Bringen Sie Ihre app in die Cloud mit serverlosen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
 
-## <a name="web-apps"></a>Web-apps
+## <a name="web-apps"></a>Web-Apps
 
 Web-apps sind gute Kandidaten für die serverlose Anwendungen. Heutzutage werden zwei allgemeine Ansätze zum Web-apps: Server, keysetgesteuerte und Client-gesteuerte (z. B. Single Page Application oder SPA). Servergesteuerte Web-apps verwenden eine Middleware-Ebene in der Regel zum Ausstellen von API-Aufrufe an die Web-Benutzeroberfläche zu rendern. SPA-Anwendungen Aufrufe von REST-API direkt über den Browser. In beiden Szenarien serverlose das Middleware oder die REST-API-Anforderung durch die Bereitstellung der erforderlichen Geschäftslogik aufnehmen kann. Eine allgemeine Architektur ist zum Einrichten eines einfachen Webservers für statisch. Die Single-Page Application (SPA) dient, HTML, CSS, JavaScript und andere Browser-Objekte. Die Web-app wird dann mit einer Microservices-Back-End verbunden.
 
@@ -74,5 +74,5 @@ Die schiere Menge der Geräte und häufig Informationen bestimmt eine ereignisge
 Die Verbreitung von IoT führt zur Anzeige mehrerer serverlose Produkte, deren Schwerpunkt liegt insbesondere auf IoT-Anforderungen, wie z. B. [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Serverless automatisiert Aufgaben wie z. B. Registrierung von Geräten, richtlinienerzwingung, nachverfolgen und sogar-Bereitstellung des Codes auf Geräte in *am Rand*. Der Rand bezieht sich auf Geräte wie Sensoren und stellantrieben, die mit verbunden sind, jedoch keiner aktiven Teil des Internets.
 
 >[!div class="step-by-step"]
-[Zurück](architecture-approaches.md)
-[Weiter](serverless-architecture-considerations.md)
+>[Zurück](architecture-approaches.md)
+>[Weiter](serverless-architecture-considerations.md)

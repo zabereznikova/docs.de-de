@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106631"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148820"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Einführung in Container und Docker
 
@@ -23,14 +23,13 @@ Jeder Container kann wie in Abbildung 1-1 gezeigt eine gesamte Webanwendung oder
 
 ![](./media/image1.png)
 
-Abbildung 1-1: Mehrere Container, die auf einem Containerhost ausgeführt werden
+Abbildung 1 – 1: Mehrere Container, die auf einem Containerhost ausgeführt werden
 
 In diesem Beispiel ist Docker-Host ein Containerhost und App1, App2, Svc1 und Svc2 sind die Containeranwendungen oder -dienste.
 
-Ein weiterer Vorteil, den Containerisierung mit sich bringt, ist die Skalierbarkeit. Ein schnelles Skalieren ist möglich, indem Sie neue Container für kurzfristige Aufgaben erstellen. Aus der Sicht einer Anwendung ähnelt das *Instanziieren eines Images* (Erstellen eines Containers) dem Instanziieren eines Prozesses wie ein Dienst oder eine Web-App. Für die Zuverlässigkeit beim Ausführen von mehreren Instanzen desselben Images auf mehreren Hostservern sollte jedoch jeder Container (Instanz des Images) auf einem anderen Hostserver oder virtuellen Computer in verschiedenen Fehlerdomänen ausgeführt werden.
+Ein weiterer Vorteil, den Containerisierung mit sich bringt, ist die Skalierbarkeit. Ein schnelles Skalieren ist möglich, indem Sie neue Container für kurzfristige Aufgaben erstellen. Aus der Sicht einer Anwendung ähnelt das *Instanziieren eines Images* (Erstellen eines Containers) dem Instanziieren eines Prozesses wie ein Dienst oder eine Web-App. Aus Gründen der Zuverlässigkeit beim Ausführen von mehreren Instanzen desselben Images auf mehreren Hostservern, empfiehlt sich jedoch, in der Regel jeder Container (Instanz) zum Ausführen in einem anderen Hostserver oder virtuellen Computer in verschiedenen Fehlerdomänen.
 
 Kurz gesagt bieten Container die Vorteile der Isolation, Portabilität, Agilität, Skalierbarkeit und Steuerung des gesamten Workflows des Lebenszyklus der Anwendung. Der wichtigste Vorteil ist die Isolation zwischen Entwicklung und Vorgängen.
 
-
 >[!div class="step-by-step"]
-[Nächste](what-is-docker.md)
+>[Nächste](what-is-docker.md)

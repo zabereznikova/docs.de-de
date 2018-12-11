@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197677"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152709"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197677"
 
 ![](./media/image2.png)
 
-Abbildung 1 – 2: Docker stellt Container auf allen Ebenen der hybridcloud bereit.
+Abbildung 1 – 2: Docker stellt Container auf allen Ebenen der hybriden Cloud bereit
 
 Docker-Imagecontainer können nativ unter Linux und Windows ausgeführt werden. Allerdings können Windows-Images nur auf Windows-Hosts ausführen und Linux-Images können nur auf Linux-Hosts, d. h. einen Hostserver oder einen virtuellen Computer ausgeführt.
 
@@ -49,9 +49,8 @@ Mithilfe von Docker nicht hören Sie Entwickler sagen, "Es auf meinem Computer f
 
 ![](./media/image3.png)
 
-Abbildung 1 – 3: Vergleich der herkömmlichen für die Docker-Container
-
+Abbildung 1 – 3: Vergleich der herkömmlichen virtuellen Computern in Docker-Containern
 
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](docker-terminology.md)
+>[Zurück](index.md)
+>[Weiter](docker-terminology.md)

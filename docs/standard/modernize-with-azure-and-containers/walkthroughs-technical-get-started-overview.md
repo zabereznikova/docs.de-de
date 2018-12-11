@@ -4,12 +4,12 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372850"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150588"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 
@@ -36,7 +36,7 @@ Jede der folgenden exemplarischen Vorgehensweisen verwendet die neue Beispiel eS
 - **Bereitstellen Sie Windows-Containern basierenden apps in Azure Service Fabric**
 
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Exemplarische Vorgehensweise 1: Überblick über Shopping-legacy-apps
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Exemplarische Vorgehensweise 1: Überblick über die Shopping-legacy-apps
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung Verfügbarkeit
 
@@ -79,7 +79,7 @@ Die folgende Abbildung zeigt das einfache Szenario die ursprünglichen ältere 3
 
 ### <a name="benefits"></a>Vorteile
 
-Die Vorteile der in dieser exemplarischen Vorgehensweise sind einfach: nur mit dem Code und die ersten apps vertraut machen.
+Die Vorteile der in dieser exemplarischen Vorgehensweise sind einfach: Erhalten Sie nur mit dem Code und die ersten apps vertraut.
 
 ### <a name="next-steps"></a>Nächste Schritte
 
@@ -89,7 +89,7 @@ Erkunden Sie diese ausführlichere Inhalte im GitHub-Wiki:
   - [Tour auf die Baseline-WCF-Dienst und WinForms (3-Ebenen) "legacy"-app](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Exemplarische Vorgehensweise 2: Packen Ihrer vorhandenen .NET-Anwendungen verwenden können mit Windows-Containern in Container.
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Exemplarische Vorgehensweise 2: Packen Sie Ihre vorhandenen Anwendungen für .NET mit Windows-Containern in Container
 
 ### <a name="overview"></a>Übersicht
 
@@ -115,7 +115,7 @@ Die folgende Abbildung zeigt das Szenario für Container eShop ältere apps Weba
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>Szenario 2: Container-WCF-Dienst
+### <a name="scenario-2-containerized-wcf-service"></a>Szenario 2: WCF-containerdienst
 
 Die folgende Abbildung zeigt das Szenario für eine 3-Tier-app mit WCF-Dienst in einem Container. 
 
@@ -141,7 +141,7 @@ Erkunden Sie diese ausführlichere Inhalte im GitHub-Wiki:
 
 
 
-## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Exemplarische Vorgehensweise 3: Bereitstellen Sie Ihrer Windows-Container-basierten app in Azure-VMs
+## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Exemplarische Vorgehensweise 3: Bereitstellen Sie Ihrer Windows-Containern basierenden-app für Azure-VMs
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung Verfügbarkeit
 
@@ -159,19 +159,19 @@ Das Ziel dieser exemplarischen Vorgehensweise ist die mehrere alternativen besch
 
 In dieser exemplarischen Vorgehensweise werden verschiedene Szenarien behandelt.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Szenario A:-Bereitstellung in einer Azure-VM aus ein Entwickler-PC über Docker-Engine-Verbindung
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Szenario A: Bereitstellen Sie in einer Azure-VM aus ein Entwickler-PC über Docker-Engine-Verbindung
 
 ![Bereitstellen Sie in einer Azure-VM aus ein Entwickler-PCs über eine Docker-Engine-Verbindung](./media/image5-4.png)
 
 > **Abbildung 5-4.** Bereitstellen Sie in einer Azure-VM aus ein Entwickler-PCs über eine Docker-Engine-Verbindung
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Szenario B: Bereitstellen Sie für eine Azure-VM über eine Docker-Registrierung
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Szenario B: Bereitstellen Sie in einer Azure-VM über eine Docker-Registrierung
 
 ![Bereitstellen Sie in einer Azure-VM über eine Docker-Registrierung](./media/image5-5.png)
 
 > **Abbildung 5-5.** Bereitstellen Sie in einer Azure-VM über eine Docker-Registrierung
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Szenario "c:" Bereitstellen in einer Azure-VM über CI/CD-Pipelines in Azure DevOps-Dienste
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Szenario "c:" Bereitstellen Sie in einer Azure-VM über CI/CD-Pipelines in Azure DevOps-Dienste
 
 ![Bereitstellen Sie in einer Azure-VM über CI/CD-Pipelines in Azure DevOps-Dienste](./media/image5-6.png)
 
@@ -232,7 +232,7 @@ Erkunden Sie diese ausführlichere Inhalte im GitHub-Wiki:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
 
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Exemplarische Vorgehensweise 5: Bereitstellen Sie Ihrer Windows-Containern basierende apps in Kubernetes in Azure Container Service
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Exemplarische Vorgehensweise 5: Bereitstellen Sie die Windows-Containern basierende apps in Kubernetes in Azure Container Service
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung Verfügbarkeit
 
@@ -254,13 +254,13 @@ Das Ziel dieser exemplarischen Vorgehensweise erfahren, wie zum Bereitstellen ei
 
 ### <a name="scenarios"></a>Szenarien
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Szenario A: direkt in einem Kubernetes-Cluster aus einer Entwicklungsumgebung bereitstellen
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Szenario A: Direkt in einem Kubernetes-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung
 
 ![Direkt in einem Kubernetes-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung](./media/image5-7.png)
 
 > **Abbildung 5-7.** Direkt in einem Kubernetes-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Szenario B: in einem Kubernetes-Cluster bereitstellen, von CI/CD-pipelines in Azure DevOps-Dienste
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Szenario B: Bereitstellen Sie in einem Kubernetes-Cluster über CI/CD-Pipelines in Azure DevOps-Dienste
 
 ![Bereitstellen Sie in einem Kubernetes-Cluster über CI/CD-Pipelines in Azure DevOps-Dienste](./media/image5-8.png)
 
@@ -292,7 +292,7 @@ Mit Kubernetes können Entwickler Gedanken über physische und virtuelle Compute
 
 Erkunden Sie diese ausführlichere Inhalte im GitHub-Wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Exemplarische Vorgehensweise 6: Bereitstellen Sie Ihrer Windows-Containern basierende apps in Azure Service Fabric
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Exemplarische Vorgehensweise 6: Bereitstellen Sie Windows-Containern basierenden apps in Azure Service Fabric
 
 ### <a name="technical-walkthrough-availability"></a>Technische Anleitung Verfügbarkeit
 
@@ -314,13 +314,13 @@ Das Ziel dieser exemplarischen Vorgehensweise ist, wie Sie eine Windows-Containe
 
 ### <a name="scenarios"></a>Szenarien
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Szenario A: direkt in Service Fabric-Cluster aus einer Entwicklungsumgebung bereitstellen
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Szenario A: Direkt in Service Fabric-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung
 
 ![Direkt in Service Fabric-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung](./media/image5-9.png)
 
 > **Abbildung 5-9.** Direkt in Service Fabric-Cluster bereitgestellt wird, aus einer Entwicklungsumgebung
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Szenario B: in einem Service Fabric-Cluster bereitstellen, von CI/CD-pipelines in Azure DevOps-Dienste
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Szenario B: Bereitstellen Sie in Service Fabric-Cluster über CI/CD-Pipelines in Azure DevOps-Dienste
 
 ![Bereitstellen Sie in Service Fabric-Cluster über CI/CD-Pipelines in Azure DevOps-Dienste](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Erkunden Sie diese ausführlichere Inhalte im GitHub-Wiki:
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[Zurück](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[Weiter](conclusions.md)
+>[Zurück](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[Weiter](conclusions.md)

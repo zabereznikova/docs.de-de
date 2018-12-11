@@ -2,16 +2,16 @@
 title: Grundlegende Typen (F#)
 description: Entdecken Sie die grundlegenden, einfachen Typen, die in der Sprache F# verwendet werden.
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026935"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145123"
 ---
 # <a name="basic-types"></a>Grundlegende Typen
 
-Dieses Thema enthält die grundlegenden Typen, die in der F#-Sprache definiert sind. Diese Typen sind der wichtigste in F#, bilden die Grundlage für fast jede F#-Programm. Sie sind eine Obermenge von primitiven .NET-Typen.
+Dieses Thema enthält die grundlegenden Typen, die definiert sind die F# Sprache. Diese Typen sind der wichtigste in F#, bilden die Grundlage für fast jede F#-Programm. Sie sind eine Obermenge von primitiven .NET-Typen.
 
 |Typ|.NET-Typ|Beschreibung|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ Dieses Thema enthält die grundlegenden Typen, die in der F#-Sprache definiert s
 |`float32`, `single`|<xref:System.Single>|Eine 32-Bit-Gleitkommatyp.|
 |`float`, `double`|<xref:System.Double>|Eine 64-Bit-Gleitkommatyp.|
 
->[!NOTE]
-Sie können Berechnungen mit ganzen Zahlen zu groß für den 64-Bit-Ganzzahl-Typ ausführen, indem Sie mit der [Bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) Typ. `bigint` ein Basistyp wurde nicht betrachtet werden. Es ist eine Abkürzung für `System.Numerics.BigInteger`.
+> [!NOTE]
+> Sie können Berechnungen mit ganzen Zahlen zu groß für den 64-Bit-Ganzzahl-Typ ausführen, indem Sie mit der [Bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) Typ. `bigint` ein Basistyp wurde nicht betrachtet werden. Es ist eine Abkürzung für `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Siehe auch
 

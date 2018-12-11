@@ -12,11 +12,11 @@ ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135438"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151342"
 ---
 # <a name="pipeline-development"></a>Pipeline-Entwicklung
 Die Add-in-Pipeline ist der Pfad der Pipelinesegmente, die die hostanwendung und der Add-in verwenden müssen, um miteinander zu kommunizieren.  

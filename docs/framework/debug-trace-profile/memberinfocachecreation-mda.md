@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20a04e76fb26409396a4f0b9fbfc7d86f253e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ebc449985a8e2617b278f04c91d243ca11b637e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392085"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145201"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation-MDA
 Der `memberInfoCacheCreation`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein <xref:System.Reflection.MemberInfo>-Cache erstellt wird. Dies ist ein starkes Anzeichen für ein Programm, das ressourcenintensive Reflektionsfunktionen verwendet.  
@@ -36,7 +36,7 @@ Der `memberInfoCacheCreation`-MDA (Assistent für verwaltetes Debuggen) wird akt
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA wird für jeden <xref:System.Reflection.MemberInfo>-Cache aktiviert, das erstellt wird. Die Auswirkungen auf die Leistung sind geringfügig.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Der MDA gibt eine Meldung aus, die anzeigt, dass der <xref:System.Reflection.MemberInfo>-Cache erstellt wurde. Verwenden Sie einen Debugger, um eine Stapelüberwachung zu erhalten, die anzeigt, wann Ihr Programm Reflektion verwendet.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -52,7 +52,7 @@ Der `memberInfoCacheCreation`-MDA (Assistent für verwaltetes Debuggen) wird akt
 ## <a name="example"></a>Beispiel  
  Dieser Beispielcode aktiviert den `memberInfoCacheCreation`-MDA.  
   
-```  
+```csharp
 using System;  
   
 public class Exe  

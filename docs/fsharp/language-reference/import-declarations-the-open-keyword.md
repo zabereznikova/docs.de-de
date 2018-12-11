@@ -2,17 +2,17 @@
 title: 'Importdeklarationen: Das open-Schlüsselwort (F#)'
 description: Erfahren Sie mehr über F# Importdeklarationen und wie sie ein Modul oder einen Namespace angeben, dessen Elemente Sie ohne Verwendung eines vollqualifizierten Namens verweisen können.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1f6fa791f993459178646687195037563da82540
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46586622"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127302"
 ---
-# <a name="import-declarations-the-open-keyword"></a>Importdeklarationen: Das `open` Schlüsselwort
+# <a name="import-declarations-the-open-keyword"></a>Importdeklarationen: Die `open` Schlüsselwort
 
 > [!NOTE]
-Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
+> Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
 Ein *Importdeklaration* gibt ein Modul oder der Namespace, dessen Elemente Sie ohne Verwendung eines vollqualifizierten Namens verweisen können.
 
@@ -36,7 +36,7 @@ Der folgende Code zeigt die Verwendung der `open` Schlüsselwort, um Code zu ver
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F#-Compiler wird eine Fehlermeldung oder Warnung nicht ausgeben, wenn es sich bei Mehrdeutigkeiten auftreten, bei der gleiche Namen in mehr als ein open-Modul oder einen Namespace. Wenn Mehrdeutigkeiten auftreten, bevorzugt F# die mehr zuletzt geöffneten Modul oder einen Namespace. In den folgenden Code, z. B. `empty` bedeutet, dass `Seq.empty`, auch wenn `empty` befindet sich in beiden die `List` und `Seq` Module.
+Die F# Compiler gibt keine Fehler oder Warnung, wenn Mehrdeutigkeiten auftreten, bei der gleiche Namen in mehr als ein open-Modul oder einen Namespace. Wenn Mehrdeutigkeiten auftreten, bevorzugt F# die mehr zuletzt geöffneten Modul oder einen Namespace. In den folgenden Code, z. B. `empty` bedeutet, dass `Seq.empty`, auch wenn `empty` befindet sich in beiden die `List` und `Seq` Module.
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ Daher vorsichtig, wenn Sie Module oder Namespaces wie z. B. Öffnen `List` oder 
 
 ## <a name="namespaces-that-are-open-by-default"></a>Namespaces, die standardmäßig geöffnet werden.
 
-Einige Namespaces werden häufig in F#-Code verwendet, sie ohne eine explizite Importdeklaration implizit geöffnet sind. Die folgende Tabelle zeigt die Namespaces, die standardmäßig geöffnet werden.
+Einige Namespaces dienen häufig in F# Code, dass sie ohne eine explizite Importdeklaration implizit geöffnet werden. Die folgende Tabelle zeigt die Namespaces, die standardmäßig geöffnet werden.
 
 |Namespace|Beschreibung|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Enthält grundlegende F#-Typdefinitionen für integrierte Typen wie z. B. `int` und `float`.|
+|`Microsoft.FSharp.Core`|Enthält grundlegende F# Typdefinitionen für integrierte Typen wie `int` und `float`.|
 |`Microsoft.FSharp.Core.Operators`|Enthält grundlegende arithmetische Operationen, z. B. `+` und `*`.|
 |`Microsoft.FSharp.Collections`|Enthält die unveränderlichen Auflistungsklassen wie `List` und `Array`.|
 |`Microsoft.FSharp.Control`|Enthält Typen zum Steuerelement-Konstrukten, z. B. verzögerte Auswertung und asynchronen Workflows.|

@@ -2,12 +2,12 @@
 title: Verteilen nach Textelement
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396377"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143154"
 ---
 # <a name="dispatch-by-body-element"></a>Verteilen nach Textelement
 Dieses Beispiel veranschaulicht, wie ein alternativer Algorithmus zum Zuweisen eingehender Nachrichten zu Vorgängen implementiert wird.  
@@ -20,7 +20,7 @@ Dieses Beispiel veranschaulicht, wie ein alternativer Algorithmus zum Zuweisen e
   
  Der Konstruktor erwartet ein mit Paaren von `XmlQualifiedName` und Zeichenketten gefülltes Wörterbuch, dabei geben die qualifizierten Namen den Namen des ersten untergeordneten Elements des SOAP-Nachrichtentexts an, und die Zeichenketten geben den entsprechenden Vorgangsnamen an. Der `defaultOperationName` ist der Name des Vorgangs, der alle Nachrichten empfängt, die nicht mit diesem Wörterbuch abgeglichen werden können.  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Implementierungen sind sehr einfach zu erstellen, da die Schnittstelle nur eine Methode besitzt: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Die Aufgabe dieser Methode ist, eingehende Nachrichten zu überprüfen und eine Zeichenkette zurückzugeben, die dem Namen einer Methode auf dem Dienstvertrag für den aktuellen Endpunkt entspricht.  
   
  In diesem Beispiel ruft die Vorgangsauswahl mithilfe von <xref:System.Xml.XmlDictionaryReader> einen <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> für den Text der eingehenden Nachricht ab. Diese Methode setzt den Leser bereits auf das erste untergeordnete Element des Nachrichtentexts, sodass es ausreicht, den aktuellen Namen des Elements und den Namespace-URI abzurufen und diese zu einem `XmlQualifiedName` zu kombinieren, der dann für die Suche nach dem entsprechenden Vorgang aus dem Wörterbuch der Vorgangsauswahl verwendet wird.  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  Wenn mit <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> oder einer der anderen Methoden, die Zugriff auf den Nachrichtentext haben, auf den Nachrichtentext zugegriffen wird, wird die Nachricht als "gelesen" markiert, was bedeutet, dass die Nachricht für weitere Verarbeitung nicht mehr zur Verfügung steht. Daher erstellt die Vorgangsauswahl mithilfe der im folgenden Code dargestellten Methode eine Kopie der eingehenden Nachricht. Da die Position des Lesers während der Überprüfung nicht geändert wurde, kann auf diesen durch die neu erstellte Nachricht verwiesen werden, in die auch die Nachrichteneigenschaften und die Nachrichtenheader kopiert werden, sodass eine exakte Kopie der ursprünglichen Nachricht entsteht.  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  Der Kürze wegen zeigt der folgende Codeauszug nur die Implementierung der Methode <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, die die Konfigurationsänderung für den Verteiler in diesem Beispiel bewirkt. Die anderen Methoden werden nicht dargestellt, da sie zum Aufrufer zurückkehren, ohne eine Aufgabe auszuführen.  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  Nachdem das Wörterbuch gefüllt wurde, wird eine neue `DispatchByBodyElementOperationSelector` mit diesen Informationen erstellt und als Vorgangsauswahl der Verteilungslaufzeit festgelegt:  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  Da die Vorgangsauswahl die Verteilung nur auf der Grundlage des Nachrichtentexts ausführt und die "Aktion" ignoriert, muss der Laufzeit mitgeteilt werden, nicht die Aktionsheader in den zurückgegebenen Antworten zu überprüfen. Weisen Sie dazu der `ReplyAction`-Eigenschaft von <xref:System.ServiceModel.OperationContractAttribute> den Platzhalter "*" zu. Darüber hinaus ist es erforderlich, um ein Standardvorgang vorhanden sein, die die "Action"-Eigenschaft auf den Platzhalter "\*". Der Standardvorgang empfängt alle Nachrichten, die nicht verteilt werden können und kein `DispatchBodyElementAttribute` besitzen:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  

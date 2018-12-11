@@ -1,49 +1,49 @@
 ---
-title: Migrieren Sie zu Hybrid Cloud-Szenarien
-description: Aktualisieren von vorhandenen .NET Anwendungen mit Azure-Cloud und Windows-Containern | Migrieren Sie zu Hybrid Cloud-Szenarien
+title: Migrieren Sie zu hybridcloudszenarien
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Migrieren Sie zu hybridcloudszenarien
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 8885ee8fce4f8c11c14ee8936f3ee0ffd89ece04
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957890"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147345"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren Sie zu Hybrid Cloud-Szenarien
+# <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren Sie zu hybridcloudszenarien
 
-Einige Organisationen und Unternehmen können nicht einige ihrer Anwendungen auf Öffentliche Clouds wie Microsoft Azure oder anderen öffentlichen Cloud aufgrund von Vorschriften oder ihre eigenen Richtlinien migriert. Allerdings ist es wahrscheinlich, dass jedes Unternehmen müssen einige ihrer Anwendungen in der öffentlichen Cloud sowie andere Anwendungen lokal profitieren könnten. Aber eine gemischte Umgebung kann dazu führen, dass Übermäßige Komplexität in Umgebungen, die aufgrund von verschiedenen Plattformen und in öffentlichen Clouds im Vergleich zu lokalen Umgebungen verwendeten Technologien.
+Einige Organisationen und Unternehmen können nicht einige seiner Anwendungen in öffentlichen Clouds wie Microsoft Azure oder jede andere öffentliche Cloud, die aufgrund von Bestimmungen oder ihre eigenen Richtlinien migriert. Allerdings ist es wahrscheinlich, dass jedes Unternehmen davon profitieren kann, dass einige seiner Anwendungen in der öffentlichen Cloud und andere Anwendungen vor Ort. Eine gemischte Umgebung kann jedoch zu führen Übermäßige Komplexität in Umgebungen, die aufgrund von verschiedenen Plattformen und Technologien, die in öffentlichen Clouds und lokale Umgebungen.
 
-Microsoft bietet die beste Hybrid Cloud-Lösung, eine in der Sie Ihre vorhandenen Ressourcen optimieren können lokal und in der öffentlichen Cloud, während Sie sicherstellen, dass die Konsistenz in einer Azure hybridcloud. Sie können vorhandene Fähigkeiten zu maximieren und erhalten einen flexiblen, einheitlichen Ansatz zum Erstellen von apps, die in der Cloud oder lokal, aufgrund der Azure-Stack (lokal) und Azure (öffentliche Cloud) ausgeführt werden können.
+Microsoft bietet die beste Hybrid Cloud-Lösung, eine in der Sie Ihre vorhandenen Assets optimieren können lokal und in der öffentlichen Cloud, während Sie Konsistenz in einer Azure hybridcloud zu gewährleisten. Sie können vorhandene Fähigkeiten zu maximieren und erhalten einen flexibel und einheitlichen Ansatz zum Erstellen von apps, die in der Cloud oder lokal, Dank der Azure Stack (lokal) und Azure (öffentliche Cloud) ausgeführt werden können.
 
-Bei der Sicherheit, können Sie die Verwaltungs- und Sicherheitsfunktionen über Ihre hybridcloud zentralisieren. Sie können Kontrolle über alle Objekte aus Ihrem Datencenter in die Cloud durch einmaliges Anmelden für den Zugriff auf lokale Bereitstellung abrufen und cloud-apps. Sie erreichen dies durch das Erweitern des Active Directory in einer hybridcloud und mithilfe von Identitätsmanagement.
+Wenn es um Sicherheit geht, können Sie die Verwaltung und Sicherheit in Ihre hybridcloud zentralisieren. Sie können gewinnen, Kontrolle über alle Ressourcen aus Ihrem Datencenter in die Cloud, indem einmaligen Anmeldung mit lokalen und cloud-apps. Sie erreichen dies durch das Erweitern des Active Directory in einer hybridcloud, und mit der identitätsverwaltung.
 
-Sie können schließlich verteilen und nahtlos Analysieren von Daten, Abfragesprachen für Cloud- und lokalen Ressourcen verwenden und Anwenden von Analysen und umfassende learning in Azure, um Ihre Daten, unabhängig von der Updatequelle optimal zu nutzen.
+Sie können schließlich verteilen und analysieren Sie Daten nahtlos, verwenden dieselben Abfragesprachen für Cloud- und lokalen Ressourcen und Anwenden von Analytics und Deep learning in Azure, um Ihre Daten unabhängig von der Quelle zu erweitern.
 
-## <a name="azure-stack"></a>Azure-Stapel
+## <a name="azure-stack"></a>Azure Stack
 
-Azure Stapel ist ein Hybrid-Cloud-Plattform, mit der Azure-Dienste von Ihrer Organisation Datacenter übermitteln kann. Azure-Stapel dient zur Unterstützung der neuer Optionen für modernen Anwendungen in der wichtigsten Szenarien, z. B. Rand und nicht verbundenen Umgebungen oder Besprechung bestimmte Sicherheits- und Compliance-Anforderungen.
+Azure Stack ist eine Hybrid Cloud-Plattform, die Sie Azure-Dienste über das Rechenzentrum Ihrer Organisation bereitstellen kann. Azure Stack dient zur Unterstützung von neuer Options für Ihre modernen Anwendungen in gängigen Szenarien, z. B. Rand, und nicht verbundenen Umgebungen oder bestimmte Sicherheits- und Compliance-Anforderungen erfüllen.
 
-Abbildung 4 – 13 zeigt eine Übersicht der "true" Hybrid Cloud-Plattform, die Microsoft anbietet.
+Abbildung 4-13 zeigt eine Übersicht über die hybride Cloud-Plattform, die Microsoft anbietet.
 
-![Microsoft Hybrid Cloud-Plattform mit Azure-Stapel und Azure](./media/image13.jpg)
+![Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure](./media/image13.jpg)
 
-> **Abbildung 4-13.** Microsoft Hybrid Cloud-Plattform mit Azure-Stapel und Azure
+> **Abbildung 4-13.** Microsoft Hybrid Cloud-Plattform mit Azure Stack und Azure
 
-Azure-Stapel ist in zwei Bereitstellungsoptionen für Ihre Anforderungen angeboten:
+Azure Stack wird in zwei Bereitstellungsoptionen zur Erfüllung Ihrer Anforderungen angeboten:
 
--   Azure-Stapel integrierte Systeme
+-   Azure Stack integrierte Systeme
 
--   Azure-Stapel Development Kits
+-   Azure Stack Development Kits
 
-### <a name="azure-stack-integrated-systems"></a>Azure-Stapel integrierte Systeme
+### <a name="azure-stack-integrated-systems"></a>Azure Stack integrierte Systeme
 
-Azure Stapel integriert Systeme werden durch eine Partnerschaft Partner von Microsoft und Hardware angeboten. Die Partnerschaft erstellt eine Projektmappe, in der Cloud paced Innovation angeboten, die mit der Einfachheit halber in der Verwaltungsgruppe ausgeglichen wird. Da Azure Stapel als integrierte System von Hardware und Software angeboten wird, erhalten Sie die richtige Menge an Flexibilität und Kontrolle, während noch einführen Innovation aus der Cloud. Azure Stapel integriert Systeme in der Größe von 4 bis 12 Knoten im Bereich und werden gemeinsam von der Hardware-Partner und Microsoft unterstützt. Verwenden Sie Systeme von Azure-Stapel integriert, um neue Szenarien für die produktive Arbeitslast zu implementieren.
+Azure Stack integrierte Systeme werden im Rahmen einer Partnerschaft zwischen Microsoft und Hardwarepartnern angeboten. Die Partnerschaft erstellt eine Lösung, die von cloudbasierten Innovationen und komfortabler bietet, die Verwaltung ausgeglichen ist. Da es sich bei Azure Stack als integriertes System von Hardware und Software angeboten wird, erhalten Sie das richtige Maß an Flexibilität und Kontrolle bei der Einführung von Innovationen in der Cloud weiterhin. Azure Stack integrierte Systeme Größe von 4 bis zu 12 Knoten liegen, und Support wird vom Hardwarepartner und von Microsoft. Verwenden Sie Azure Stack integrierte Systeme, um neue Szenarien für Ihre produktionsworkloads zu implementieren.
 
-### <a name="azure-stack-development-kit"></a>Azure-Stapel Development Kits
+### <a name="azure-stack-development-kit"></a>Azure Stack Development Kits
 
-Microsoft Azure Stapel Development Kit ist ein Einzelknoten-Bereitstellung von Azure-Stapel, die Sie verwenden können, um auszuwerten, und erfahren Sie mehr über Azure-Stapel. Sie können auch Azure Stapel Development Kit als entwicklerumgebung verwenden, in denen Sie können mithilfe von APIs und Tools, die mit Azure konsistent sind. Azure Stapel Development Kit ist nicht als einer produktiven Umgebung verwendet werden soll.
+Microsoft Azure Stack Development Kit ist eine einzelknotenbereitstellung von Azure Stack, die Sie zum Evaluieren und Kennenlernen von Azure Stack verwenden können. Sie können auch Azure Stack Development Kit als entwicklerumgebung verwenden, verwenden, wobei können Sie entwickeln, mithilfe von APIs und Tools, die mit Azure konsistent sind. Azure Stack Development Kit ist nicht als produktionsumgebung verwendet werden soll.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -55,7 +55,7 @@ Microsoft Azure Stapel Development Kit ist ein Einzelknoten-Bereitstellung von A
 
     [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
--   **Active Directory-Dienstkonten für Windows-Containern**
+-   **Active Directory-Dienstkonten für Windows-Container**
 
     [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
@@ -63,10 +63,10 @@ Microsoft Azure Stapel Development Kit ist ein Einzelknoten-Bereitstellung von A
 
     [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
--   **Lizenzierung von Azure Hybrid-Vorteil**
+-   **Lizenzieren von Azure-Hybridvorteil**
 
     [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
-[Zurück](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
-[Weiter](../walkthroughs-technical-get-started-overview.md)
+>[Zurück](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
+>[Weiter](../walkthroughs-technical-get-started-overview.md)

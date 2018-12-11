@@ -2,12 +2,12 @@
 title: Übersicht über Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216941"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145792"
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 
@@ -26,11 +26,11 @@ Mithilfe von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] kön
 
  Bei der Arbeit mit den Entity Data Model-Tools werden das konzeptionelle Modell, das Speichermodell und die Zuordnungen zwischen beiden in XML-basierten Schemas ausgedrückt und in Dateien mit entsprechenden Namenserweiterungen definiert:
 
--   Die konzeptionelle Schemadefinitionssprache (Conceptual Schema Definition Language, CSDL) definiert das konzeptionelle Modell. CSDL ist die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]die Implementierung der [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md). Die Dateierweiterung ist CSDL.
+- Die konzeptionelle Schemadefinitionssprache (Conceptual Schema Definition Language, CSDL) definiert das konzeptionelle Modell. CSDL ist die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]die Implementierung der [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md). Die Dateierweiterung ist CSDL.
 
--   Die Datenspeicherschema-Definitionssprache (Store Schema Definition Language, SSDL) definiert das Speichermodell, das auch als logisches Modell bezeichnet wird. Die Dateierweiterung ist SSDL.
+- Die Datenspeicherschema-Definitionssprache (Store Schema Definition Language, SSDL) definiert das Speichermodell, das auch als logisches Modell bezeichnet wird. Die Dateierweiterung ist SSDL.
 
--   Die Mapping-Spezifikationssprache (Mapping Specification Language, MSL) definiert die Zuordnungen zwischen Speichermodell und konzeptionellem Modell. Die Dateierweiterung ist MSL.
+- Die Mapping-Spezifikationssprache (Mapping Specification Language, MSL) definiert die Zuordnungen zwischen Speichermodell und konzeptionellem Modell. Die Dateierweiterung ist MSL.
 
 Das Speichermodell und die Zuordnungen können sich bei Bedarf ändern, ohne dass Änderungen am konzeptionellen Modell, den Datenklassen oder dem Anwendungscode erforderlich werden. Da Speichermodelle anbieterspezifisch sind, können Sie mit einem konsistenten konzeptionellen Modell bei verschiedenen Datenquellen arbeiten.
 
@@ -45,9 +45,9 @@ Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet die
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ist mehr als nur eine weitere objektrelationale Mappinglösung. Es dient im Wesentlichen dazu, Anwendungen den Zugriff auf und die Änderung von Daten zu ermöglichen, die als Entitäten und Beziehungen im konzeptionellen Modell dargestellt werden. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwendet die Informationen in den Modell- und Zuordnungsdateien, um Objektabfragen von Entitätstypen, die im konzeptionellen Modell dargestellt werden, in datenquellenspezifische Abfragen zu übersetzen. Abfrageergebnisse werden in Objekte umgesetzt, die die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verwaltet. Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bietet die folgenden Möglichkeiten, ein konzeptionelles Modell abzufragen und Objekte zurückzugeben:
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] Bietet Language-Integrated Query (LINQ)-Unterstützung zum Abfragen von Entitätstypen, die in einem konzeptionellen Modell definiert sind. Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Bietet Language-Integrated Query (LINQ)-Unterstützung zum Abfragen von Entitätstypen, die in einem konzeptionellen Modell definiert sind. Weitere Informationen finden Sie unter [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)] Ein speicherunabhängiger Dialekt von SQL, die direkt mit Entitäten im konzeptionellen Modell arbeitet und unterstützt [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Konzepte. [!INCLUDE[esql](../../../../../includes/esql-md.md)] wird verwendet, sowohl mit Objektabfragen und Abfragen, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Übersicht über Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Ein speicherunabhängiger Dialekt von SQL, die direkt mit Entitäten im konzeptionellen Modell arbeitet und unterstützt [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] Konzepte. [!INCLUDE[esql](../../../../../includes/esql-md.md)] wird verwendet, sowohl mit Objektabfragen und Abfragen, die mit dem EntityClient-Anbieter ausgeführt werden. Weitere Informationen finden Sie unter [Übersicht über Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enthält den EntityClient-Datenanbieter. Dieser Anbieter verwaltet Verbindungen, übersetzt Entitätsabfragen in datenquellenspezifische Abfragen und gibt einen Datenleser zurück, mit dem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Entitätsdaten in Objekte umsetzt. Bei der Objektmaterialisierung nicht erforderlich ist, der EntityClient-Anbieter kann auch verwendet werden wie ein [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Datenanbieter Anwendungen auszuführende [!INCLUDE[esql](../../../../../includes/esql-md.md)] -Abfragen und die Verarbeitung des zurückgegebenen Daten für nur-Lese Readers. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
@@ -71,7 +71,7 @@ Zusammen mit den [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 
 
 Erfahren Sie mehr über die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], finden Sie unter:
 
-[Erste Schritte](../../../../../docs/framework/data/adonet/ef/getting-started.md) – bietet Informationen zum Einrichten und ausführen, schnell in die Verwendung der [Schnellstart](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), erfahren, wie zum Erstellen eines einfachen [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anwendung.
+[Erste Schritte](../../../../../docs/framework/data/adonet/ef/getting-started.md) – bietet Informationen zum Einrichten und ausführen, schnell in die Verwendung der [Schnellstart](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)), erfahren, wie zum Erstellen eines einfachen [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Anwendung.
 
 [Entity Framework-Terminologie](../../../../../docs/framework/data/adonet/ef/terminology.md) -definiert viele Begriffe, die durch das Entity Data Model eingeführt werden und die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] und dienen, die in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Dokumentation.
 

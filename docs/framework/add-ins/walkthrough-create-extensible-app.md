@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744612"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155076"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen
 In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline für ein Add-in erstellen, die einfachen Taschenrechner Funktionen ausführt. Es wird nicht auf einem realen Szenario veranschaulicht; Stattdessen zeigt es die grundlegende Funktionen einer Pipeline und wie ein Add-In-Dienste für einen Host bereitstellen kann.  
@@ -43,11 +43,11 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline 
   
 -   Die hostanwendung wird ausgeführt.  
   
- Diese Pipeline übergibt nur serialisierbare Typen (<xref:System.Double> und <xref:System.String>), zwischen dem Host und das Add-in. Ein Beispiel, wie Auflistungen von komplexen Datentypen übergeben werden, finden Sie unter [Exemplarische Vorgehensweise: Übergeben von Auflistungen zwischen Hosts und Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Diese Pipeline übergibt nur serialisierbare Typen (<xref:System.Double> und <xref:System.String>), zwischen dem Host und das Add-in. Ein Beispiel, wie Auflistungen von komplexen Datentypen übergeben werden, finden Sie unter [Exemplarische Vorgehensweise: Übergeben von Auflistungen zwischen Hosts und -Add-Ins](https://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Der Vertrag für die Pipeline definiert ein Objektmodell der vier arithmetischen Operationen: hinzufügen, subtrahieren, Multiplizieren und Dividieren. Der Host stellt das Add-in mit einer Formel zum Berechnen, wie z. B. 2 + 2, und gibt Sie das Ergebnis des Add-Ins auf den Host zurück.  
   
- Version 2 von der Rechner-add-in bietet mehr berechnen Möglichkeiten und versionsverwaltung veranschaulicht. Es wird beschrieben, [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als der Host-Änderungen](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ Version 2 von der Rechner-add-in bietet mehr berechnen Möglichkeiten und versionsverwaltung veranschaulicht. Es wird beschrieben, [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität bei geändertem Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese exemplarische Vorgehensweise wird Folgendes benötigt:  
@@ -86,7 +86,7 @@ In dieser exemplarischen Vorgehensweise wird beschrieben, wie Sie eine Pipeline 
      Es ist nicht erforderlich, platzieren Sie die Ordnerstruktur für die Pipeline in Ihrem Anwendungsordner; Diese erfolgt hier nur aus praktischen Gründen. Zu gegebener Zeit wird in der exemplarischen Vorgehensweise erläutert, wie den Code ändern, ist die Ordnerstruktur für die Pipeline an einem anderen Speicherort. Finden Sie in den Ausführungen der Pipeline verzeichnisanforderungen in [Anforderungen für die Pipelineentwicklung](https://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  Die `CalcV2` Ordner wird in dieser exemplarischen Vorgehensweise nicht verwendet; es ist ein Platzhalter für [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität als der Host-Änderungen](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  Die `CalcV2` Ordner wird in dieser exemplarischen Vorgehensweise nicht verwendet; es ist ein Platzhalter für [Exemplarische Vorgehensweise: Aktivieren der Abwärtskompatibilität bei geändertem Host](https://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Erstellen des Vertrags und Ansichten  
  Das Vertragssegment für diese Pipeline definiert die `ICalc1Contract` -Schnittstelle, die vier Methoden definiert: `add`, `subtract`, `multiply`, und `divide`.  

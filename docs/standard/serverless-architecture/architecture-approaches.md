@@ -4,12 +4,12 @@ description: Eine Einführung in die Architektur Ansätzen für das Erstellen vo
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "49370021"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126744"
 ---
 # <a name="architecture-approaches"></a>Architekturansätze
 
@@ -97,5 +97,5 @@ Microservices verfügen über eigene Herausforderungen, darunter:
 Letzten Endes sind Lösungen, behandeln all diese Herausforderungen, einschließlich der auf der die Vorteile des serverlosen, die weiter unten erläutert werden.
 
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](architecture-deployment-approaches.md)
+>[Zurück](index.md)
+>[Weiter](architecture-deployment-approaches.md)

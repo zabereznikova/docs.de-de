@@ -3,11 +3,11 @@ title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
 ms.openlocfilehash: 84e304f3dedcbd785d6238e6cb5eb142c288b995
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198888"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149704"
 ---
 # <a name="binding"></a>Bindung
 wmi-Bindung  
@@ -35,7 +35,7 @@ class Binding
  Die Bindungsklasse verfügt über die folgenden Eigenschaften.  
   
 ### <a name="bindingelements"></a>BindingElements  
- Datentyp: BindingElement-Array  
+ Datentyp: BindingElement-array  
   
  Zugriffstyp: Schreibgeschützt  
   

@@ -2,17 +2,17 @@
 title: Literale (F#)
 description: Erfahren Sie, bis die Literaltypen in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131338"
 ---
 # <a name="literals"></a>Literale
 
 > [!NOTE]
-Die API-Referenz-Links in diesem Artikel gelangen Sie zu MSDN (für den Moment).
+> Die API-Referenz-Links in diesem Artikel gelangen Sie zu MSDN (für den Moment).
 
 Dieses Thema enthält eine Tabelle, die erläutert, wie in F# der Typ eines Literals angegeben wird.
 
@@ -51,16 +51,16 @@ Ab F# 3.1, können Sie die `+` melden Sie beim Kombinieren von Zeichenfolgenlite
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Die Verwendung anderer bitweiser Operatoren ist nicht zulässig.
@@ -85,11 +85,11 @@ let Numbers = (0x9F, 0o77, 0b1010)
 Ab F# 4.1, können Sie Ziffern mit einem Unterstrich trennen (`_`).
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>Siehe auch

@@ -4,12 +4,12 @@ description: Verstehen Sie die Herausforderungen beim Entwerfen von serverloser 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "49370015"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155063"
 ---
 # <a name="serverless-architecture-considerations"></a>Überlegungen für eine serverlose Architektur
 
@@ -82,5 +82,5 @@ Weitere Informationen finden Sie unter [Implementieren des trennschaltermusters]
 Ein großer Vorteil von serverlosen ist die Möglichkeit, eine bestimmte Funktion aktualisieren, ohne dass die gesamte Anwendung erneut bereitstellen. Für Upgrades erfolgreich ist müssen Funktionen mit Versionsangabe sein, damit die richtige Version des Codes die aufrufenden Dienste gedrosselt, weitergeleitet werden. Eine Strategie für das Bereitstellen neuer Versionen ist auch wichtig. Eine gängige Methode ist die Verwendung von "Bereitstellungen Grün/Blau." Die grüne Bereitstellung ist die aktuelle Funktion. Eine neue Version für "blaue" ist in der produktionsumgebung bereitgestellt und getestet. Beim Testen von Pass werden die grünen und blauen Versionen ausgetauscht, damit die neue Version live stammt. Wenn Probleme auftreten, können sie wieder ausgetauscht werden. Unterstützung der versionsverwaltung und Grün/Blau-Bereitstellungen erfordert eine Kombination von Funktionen zur Aufnahme von Änderungen an der Typsystemversion erstellen und Arbeiten mit der serverlosen Plattform Bereitstellungen verarbeiten. Ein möglicher Ansatz ist die Verwendung von Proxys, die in beschrieben werden die [serverlose Azure-Plattform](azure-functions.md#proxies) Kapitel.
 
 >[!div class="step-by-step"]
-[Zurück](serverless-architecture.md)
-[Weiter](serverless-design-examples.md)
+>[Zurück](serverless-architecture.md)
+>[Weiter](serverless-design-examples.md)

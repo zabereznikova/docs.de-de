@@ -2,12 +2,12 @@
 title: Symbol- und Operatorenreferenz (F#)
 description: Informationen Sie zu den Symbolen und Operatoren, die in der Programmiersprache F# verwendet werden.
 ms.date: 04/04/2018
-ms.openlocfilehash: f6f99f8fa563b71c935122c6f8597599c59b5c7f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297327"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169871"
 ---
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
@@ -50,8 +50,8 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`-`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Subtrahiert die rechte Seite von der linken, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
 |`->`|[Funktionen](../functions/index.md)<br /><br />[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Begrenzt bei Funktionstypen die Argumente und Rückgabewerte.<br /></li><li>Ergibt einen Ausdruck (in Sequenzausdrücken); entspricht dem `yield`-Schlüsselwort.<br /></li><li>Wird in Übereinstimmungsausdrücken verwendet.<br /></li></ul>|
 |`.`|[Mitglieder](../members/index.md)<br /><br />[Primitive Typen](../primitive-types.md)|<ul><li>Greift auf einen Member zu und trennt einzelne Namen in einem vollqualifizierten Namen.<br /></li><li>Gibt ein Dezimaltrennzeichen in Gleitkommazahlen an.<br /></li></ul>|
-|`..`|[Schleifen: `for...in`-Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich an.<br /></li></ul>|
-|`.. ..`|[Schleifen: `for...in`-Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich zusammen mit einem Inkrement an.<br /></li></ul>|
+|`..`|[Schleifen: `for...in` Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich an.<br /></li></ul>|
+|`.. ..`|[Schleifen: `for...in` Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich zusammen mit einem Inkrement an.<br /></li></ul>|
 |`.[...]`|[Arrays](../arrays.md)|<ul><li>Greift auf ein Arrayelement zu.<br /></li></ul>|
 |`/`|[Arithmetische Operatoren](arithmetic-operators.md)<br /><br />[Maßeinheiten](../units-of-measure.md)|<ul><li>Dividiert die linke Seite (Zähler) durch die rechte Seite (Nenner).<br /></li><li>Wird in Maßeinheittypen verwendet.<br /></li></ul>|
 |`/?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Dividiert die linke Seite durch die rechte, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
@@ -61,7 +61,7 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`::`|[Listen](../lists.md)<br /><br />[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Erstellt eine Liste. Das Element auf der linken Seite wird der Liste auf der rechten Seite vorangestellt.<br /></li><li>Wird im Musterabgleich verwendet, um die Teile einer Liste zu trennen.<br /></li></ul>|
 |`:=`|[Referenzzellen](../reference-cells.md)|<ul><li>Weist einer Verweiszelle einen Wert zu.<br /></li></ul>|
 |`:>`|[Umwandlung und Konvertierungen](../casting-and-conversions.md)|<ul><li>Konvertiert einen Typen in einen Typen, der in der Hierarchie höher ist.<br /></li></ul>|
-|`:?`|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Gibt `true` zurück, wenn der Wert dem angegebenen Typen entspricht; andernfalls wird `false` zurückgegeben (Typtestoperator).<br /></li></ul>|
+|`:?`|[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Gibt `true` Wenn der Wert entspricht den angegebenen Typ (einschließlich ist dies ein Untertyp); andernfalls `false` (Typtestoperator).<br /></li></ul>|
 |`:?>`|[Umwandlung und Konvertierungen](../casting-and-conversions.md)|<ul><li>Konvertiert einen Typen in einen Typen, der in der Hierarchie weiter unten ist.<br /></li></ul>|
 |`;`|[Ausführliche Syntax](../verbose-syntax.md)<br /><br />[Listen](../lists.md)<br /><br />[Datensätze](../records.md)|<ul><li>Trennt Ausdrücke (meist in ausführlicher Syntax verwendet).<br /></li><li>Trennt Elemente einer Liste.<br /></li><li>Trennt Felder eines Datensatzes.<br /></li></ul>|
 |`<`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Berechnet die Kleiner-als-Operation.<br /></li></ul>|
@@ -146,6 +146,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |`.`|Links|
 |`f(x)`|Links|
 |`f<`*Typen*`>`|Links|
+
 F# unterstützt die benutzerdefinierte Operatorüberladung. Dies bedeutet, dass Sie eigene Operatoren definieren können. In der vorherigen Tabelle kann *op* eine beliebige gültige (möglicherweise leere) Sequenz von integrierten oder benutzerdefinierten Operatorzeichen sein. Mit dieser Tabelle können Sie daher bestimmen, welche Sequenz von Zeichen für einen benutzerdefinierten Operator verwendet werden muss, um die gewünschte Rangfolge zu erhalten. Vorangestellte `.`-Zeichen werden ignoriert, wenn der Compiler die Rangfolge bestimmt.
 
 ## <a name="see-also"></a>Siehe auch

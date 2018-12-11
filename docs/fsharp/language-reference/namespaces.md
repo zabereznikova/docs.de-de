@@ -1,31 +1,33 @@
 ---
 title: Namespaces (F#)
-description: Erfahren Sie, wie ein Namespace F#-Code in Bereichen verwandter Funktionalität organisieren, indem Sie einen Namen für die Gruppierung von Programmelementen anfügen kann.
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: Erfahren Sie, wie ein F# Namespace können Sie Code in Bereichen verwandter Funktionalität organisieren, indem Sie einen Namen für die Gruppierung von Programmelementen anfügen.
+ms.date: 12/08/2018
+ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178252"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169022"
 ---
 # <a name="namespaces"></a>Namespaces
 
-Mit einem Namespace können Sie Code in Bereichen verwandter Funktionalität organisieren, indem Sie einen Namen an eine Gruppierung von Programmelementen anfügen.
+Mit einem Namespace können Sie den Code in Bereichen verwandter Funktionalität organisieren, indem Sie einen Namen für die Gruppierung von Anfügen F# Programmelemente. Namespaces sind in der Regel auf oberster Ebene von Elementen in F# Dateien.
 
 ## <a name="syntax"></a>Syntax
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie Code in einem Namespace einfügen möchten, muss die erste Deklaration in der Datei den Namespace deklarieren. Der Inhalt der gesamten Datei werden dann Teil des Namespace.
+Wenn Sie Code in einem Namespace einfügen möchten, muss die erste Deklaration in der Datei den Namespace deklarieren. Der Inhalt der gesamten Datei dann Teil des Namespace, sofern keine andere Namespacedeklaration vorhanden ist. weiter in der Datei. Wenn dies der Fall ist, klicken Sie dann der gesamte Code, bis die nächste Namespacedeklaration gilt in den ersten Namespace auf.
 
 Namespaces können nicht direkt als Werte und Funktionen enthalten. Stattdessen Werte und Funktionen in Modulen enthalten sein müssen, und Module in Namespaces enthalten sind. Namespaces kann es sich um Typen, Module enthalten.
 
-Namespaces können explizit mit dem Schlüsselwort "Namespace" oder implizit deklariert werden, wenn ein Modul zu deklarieren. Um einen Namespace explizit deklarieren, verwenden Sie das Schlüsselwort "Namespace" gefolgt vom Namespacenamen ein. Das folgende Beispiel zeigt eine Codedatei, die einen Namespace Widgets mit einem Typ und einem Modul in diesem Namespace deklariert.
+XML-Dok-Kommentare können über einen Namespace deklariert werden, aber sie werden ignoriert. Compiler-Direktiven können auch über ein Namespace deklariert werden.
+
+Namespaces können explizit mit dem Schlüsselwort "Namespace" oder implizit deklariert werden, wenn ein Modul zu deklarieren. Um einen Namespace explizit deklarieren, verwenden Sie das Schlüsselwort "Namespace" gefolgt vom Namespacenamen ein. Das folgende Beispiel zeigt eine Codedatei, die einen Namespace deklariert `Widgets` mit einem Typ und ein Modul, das in diesem Namespace enthalten.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ Sie können auch globale verwenden, z. B. den Namespace der obersten Ebene .NET 
 
 ## <a name="recursive-namespaces"></a>Rekursive-namespaces
 
-F# 4.1 führt das Konzept von Namespaces, die für alle enthaltenen Code gegenseitig rekursiver zu ermöglichen.  Dies erfolgt über `namespace rec`.  Verwenden von `namespace rec` können einige Probleme, nicht mehr zum Schreiben von Code für sich gegenseitig referenzielle Typen und Module verringern.  Im folgenden finden ein Beispiel hierfür:
+Namespaces können auch als rekursiv, um alle enthaltenen Code gegenseitig rekursiver ermöglichen deklariert werden.  Dies erfolgt über `namespace rec`. Verwenden von `namespace rec` können einige Probleme, nicht mehr zum Schreiben von Code für sich gegenseitig referenzielle Typen und Module verringern. Im folgenden finden ein Beispiel hierfür:
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die Klasse `Banana` beide sich aufeinander beziehen.  Darüber hinaus das Modul `BananaHelpers` und die Klasse `Banana` auch sich aufeinander beziehen.  Dies ist nicht möglich, die in F# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `MutualReferences` Namespace.
+Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die Klasse `Banana` beide sich aufeinander beziehen.  Darüber hinaus das Modul `BananaHelpers` und die Klasse `Banana` auch sich aufeinander beziehen. Wäre dies nicht möglich, die in Ausdrücken F# , wenn Sie entfernt die `rec` -Schlüsselwort aus der `MutualReferences` Namespace.
 
-Dieses Feature ist auch verfügbar für die obersten Ebene [Module](modules.md) in F# 4.1 oder höher.
+Dieses Feature ist auch verfügbar für die obersten Ebene [Module](modules.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [F#-Sprachreferenz](index.md)
 - [Module](modules.md)
-- [F#-RFC-FS-1009 – lassen Sie sich gegenseitig referenzielle Typen und Module über größere Bereiche in Dateien](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC-FS-1009 – lassen Sie sich gegenseitig referenzielle Typen und Module über größere Bereiche in Dateien](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

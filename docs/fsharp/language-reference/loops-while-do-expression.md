@@ -2,12 +2,12 @@
 title: 'Schleifen: while...do-Ausdruck (F#)'
 description: Finden Sie unter wie beim... führen Ausdruck wird verwendet, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte testbedingung erfüllt ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45664708"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127276"
 ---
 # <a name="loops-whiledo-expression"></a>Schleifen: while...do-Ausdruck
 
@@ -35,11 +35,11 @@ Die Ausgabe des obigen Codes ist es sich um einen Stream von Zufallszahlen zwisc
 Found a 10!
 ```
 
->[!NOTE]
-Können Sie `while...do` in Sequenzausdrücken und anderen Berechnungsausdrücken in diesem Fall, dass eine angepasste Version von der `while...do` Ausdruck wird verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Berechnungsausdrücke](computation-expressions.md).
+> [!NOTE]
+> Können Sie `while...do` in Sequenzausdrücken und anderen Berechnungsausdrücken in diesem Fall, dass eine angepasste Version von der `while...do` Ausdruck wird verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Berechnungsausdrücke](computation-expressions.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [F#-Sprachreferenz](index.md)
-- [Schleifen: `for...in`-Ausdruck](loops-for-in-expression.md)
-- [Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)
+- [Schleifen: `for...in` Ausdruck](loops-for-in-expression.md)
+- [Schleifen: `for...to` Ausdruck](loops-for-to-expression.md)

@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123227"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154176"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -49,7 +49,6 @@ Daher sind die regulären Datenvolumes gute Mechanismen für die Arbeit mit Abla
 
 Remotedatenquellen und-Caches wie SQL-Datenbank, DocumentDB oder ein Remotecache wie Redis wäre identisch mit der Entwicklung ohne Container. Dies ist einer der bevorzugten und bewährten Methoden zum Speichern von Geschäftsanwendungsdaten.
 
-
 >[!div class="step-by-step"]
-[Zurück](monolithic-applications.md)
-[Weiter](soa-applications.md)
+>[Zurück](monolithic-applications.md)
+>[Weiter](soa-applications.md)

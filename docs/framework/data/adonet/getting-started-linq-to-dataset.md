@@ -2,12 +2,12 @@
 title: Erste Schritte (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: 1bf91b511c1954effb53f30dd32729660f73aa35
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: bc6e54e3b665b330177dec9e5d953378d6a9a23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452756"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154059"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Erste Schritte (LINQ to DataSet)
 Dieser Abschnitt enthält einführende Informationen über das Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -22,7 +22,7 @@ Dieser Abschnitt enthält einführende Informationen über das Programmieren mit
  [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
  Enthält Informationen zum Herunterladen der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank, die in den Beispielen im Abschnitt [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] verwendet wird.  
   
- [Vorgehensweise: Erstellen eines LINQ to DataSet-Projekts in Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
+ [So wird es gemacht: Erstellen Sie eine LINQ to DataSet-Projekt In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
  Enthält Informationen über das Erstellen eines [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Projekts in Visual Studio.  
   
 ## <a name="reference"></a>Referenz  
@@ -34,5 +34,4 @@ Dieser Abschnitt enthält einführende Informationen über das Programmieren mit
   
 ## <a name="see-also"></a>Siehe auch  
  [LINQ und ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [Erste Schritte mit LINQ](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+ [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

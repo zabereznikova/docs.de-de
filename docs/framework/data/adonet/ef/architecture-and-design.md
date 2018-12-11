@@ -2,17 +2,17 @@
 title: Architektur und Entwurf
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530469"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154261"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
-Das SQL-Generierungsmodul im der [Beispielanbieter](https://go.microsoft.com/fwlink/?LinkId=180616) wird implementiert, als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
+Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) wird implementiert, als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
   
- Die Knoten der Struktur werden von unten nach oben verarbeitet. Zuerst wird eine Zwischenstruktur erzeugt: SqlSelectStatement oder SqlBuilder, die beide ISqlFragment implementieren. Danach wird die SQL-Zeichenfolgenanweisung aus dieser Struktur erzeugt. Es gibt zwei Gründe für die Zwischenstruktur:  
+ Die Knoten der Struktur werden von unten nach oben verarbeitet. Zunächst wird eine Zwischenstruktur erzeugt: SqlSelectStatement oder SqlBuilder, die beide ISqlFragment. Danach wird die SQL-Zeichenfolgenanweisung aus dieser Struktur erzeugt. Es gibt zwei Gründe für die Zwischenstruktur:  
   
 -   Logisch wird eine SQL SELECT-Anweisung der Reihenfolge nach gefüllt. Auf die Knoten, die in der FROM-Klausel verwendet werden, wird vor den Knoten zugegriffen, die in den WHERE-, GROUP BY- und ORDER BY-Klauseln verwendet werden.  
   
@@ -25,7 +25,7 @@ Das SQL-Generierungsmodul im der [Beispielanbieter](https://go.microsoft.com/fwl
  In der zweiten Phase, während die tatsächliche Zeichenfolge erzeugt wird, werden Aliase umbenannt.  
   
 ## <a name="data-structures"></a>Datenstrukturen  
- In diesem Abschnitt wird erläutert, die Typen in der [Beispielanbieter](https://go.microsoft.com/fwlink/?LinkId=180616) , zum Erstellen einer SQL­Anweisung zu verwenden.  
+ In diesem Abschnitt wird erläutert, die Typen in der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) , zum Erstellen einer SQL­Anweisung zu verwenden.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  In diesem Abschnitt werden die Klassen behandelt, die die ISqlFragment-Schnittstelle implementieren. Diese dient zwei Zwecken:  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  Im Abschnitt mit dem Titel "DbPropertyExpression" wird beschrieben, wie beim Zugriff auf einen DbPropertyExpression die Joinaliasvereinfachung erreicht wird.  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>Spaltennamen- und Blockaliasumbenennung  
- Das Problem der Spaltennamen- und Blockaliasumbenennung wird durch die Verwendung von Symbolen gelöst, die erst in der zweiten Phase der Generierung durch Aliase ersetzt werden, wie im Abschnitt mit dem Titel "Zweite Phase der SQL-Generierung: Generieren des Zeichenfolgenbefehls" beschrieben wird.  
+ Das Problem der Spaltenname und blockaliasumbenennung wird behoben, unter Verwendung von Symbolen, die nur ersetzt werden mit Aliasen in der zweiten Phase der Generierung in der zweiten Phase der SQL-Generierung für Abschnitt beschrieben: Generieren des Zeichenfolgenbefehls an.  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Erste Phase der SQL-Generierung: Zugriff auf die Ausdrucksstruktur  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Erste Phase der SQL-Generierung: Zugriff auf die Ausdrucksbaumstruktur  
  In diesem Abschnitt wird die erste Phase der SQL-Generierung beschrieben, wenn auf den Ausdruck zugegriffen wird, der die Abfrage darstellt, und eine Zwischenstruktur (entweder ein SqlSelectStatement oder ein SqlBuilder) erzeugt wird.  
   
  In diesem Abschnitt werden die Prinzipien des Zugriffs auf unterschiedliche Kategorien von Ausdrucksknoten und Details des Zugriffs auf bestimmte Ausdruckstypen beschrieben.  

@@ -2,12 +2,12 @@
 title: Generika (F#)
 description: Erfahren Sie, wie Sie mithilfe generischer F#-Funktionen und Typen, die Sie Code schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code wiederholen zu ermöglichen.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147004"
 ---
 # <a name="generics"></a>Generika
 
@@ -71,8 +71,8 @@ Der folgende Code zeigt die Verwendung der Funktionen, die in den vorherigen Abs
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-Es gibt zwei Möglichkeiten zum Verweisen auf einen generischen Typ anhand des Namens. Beispielsweise sind `list<int>` und `int list` zwei Methoden zum Verweisen auf einen generischen Typ `list`, der über ein einzelnes Typargument `int` verfügt. Die letztgenannte Form wird konventionell nur mit integrierten F#-Typen verwendet, wie z.B. `list` und `option`. Wenn mehrere Typargumente vorhanden sind, verwenden Sie normalerweise die Syntax `Dictionary<int, string>`, aber Sie können auch die Syntax `(int, string) Dictionary` verwenden.
+> [!NOTE]
+> Es gibt zwei Möglichkeiten zum Verweisen auf einen generischen Typ anhand des Namens. Beispielsweise sind `list<int>` und `int list` zwei Methoden zum Verweisen auf einen generischen Typ `list`, der über ein einzelnes Typargument `int` verfügt. Die letztgenannte Form wird konventionell nur mit integrierten F#-Typen verwendet, wie z.B. `list` und `option`. Wenn mehrere Typargumente vorhanden sind, verwenden Sie normalerweise die Syntax `Dictionary<int, string>`, aber Sie können auch die Syntax `(int, string) Dictionary` verwenden.
 
 ## <a name="wildcards-as-type-arguments"></a>Platzhalter als Typargumente
 

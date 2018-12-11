@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845371"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151160"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Hinzufügen&gt; -Element für &lt;SharedListeners&gt;
 Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` eine Sammlung von Listenern, die von jedem ist [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) verweisen können.  Standardmäßig werden von Listenern in der `sharedListeners` Auflistung befinden sich keine `Listeners` Auflistung. Sie müssen hinzugefügt werden, anhand des Namens der [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Es ist nicht möglich, um die Listener in der `sharedListeners` Auflistung im Code zur Laufzeit.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<SharedListeners >-Element  
-\<add>  
+&nbsp;&nbsp;\<System.Diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<SharedListeners >-Element  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Hinzufügen >  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
@@ -43,7 +45,8 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` 
 |`name`|Erforderliches Attribut.<br /><br /> Gibt den Namen des Listeners, mit dem den freigegebenen Listener zum Hinzufügen, einer `Listeners` Auflistung.|  
 |`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Listeners. Sie müssen eine Zeichenfolge, die die in angegebenen Anforderungen erfüllt verwenden [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die für die angegebene Klasse an den Konstruktor übergeben werden.|  
-  
+|`traceOutputOptions`|Optionales Attribut.<br/><br/>Die Zeichenfolgendarstellung von einem oder mehreren <xref:System.Diagnostics.TraceOptions> Enumerationsmember, der die Daten in die Ablaufverfolgungsausgabe geschrieben werden angibt. Mehrere Elemente werden durch Kommas getrennt. Der Standardwert ist "None".|
+
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  

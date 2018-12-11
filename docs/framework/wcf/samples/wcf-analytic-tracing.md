@@ -3,11 +3,11 @@ title: Analytische Ablaufverfolgung von WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181656"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147423"
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
 In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in ETW in schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. Dieses Beispiel zeigt, wie Sie mit der <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, um Ereignisse zu schreiben, die in WCF-Dienste integrieren.  
@@ -106,7 +106,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
 4.  Klicken Sie auf **löschen** um die Ereignisse zu löschen.  
   
 ## <a name="known-issue"></a>Bekanntes Problem  
- Es ist ein bekanntes Problem in der **Ereignisanzeige** , in denen es möglicherweise nicht Decodierung von ETW-Ereignissen. Möglicherweise eine Fehlermeldung angezeigt: "die Beschreibung für Ereigniskennung \<Id > aus der Quelle Microsoft Windows-Anwendungsserver-Anwendungen wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können installieren oder reparieren Sie die Komponente auf dem lokalen Computer." Wenn dieser Fehler auftritt, wählen Sie **aktualisieren** aus der **Aktionen** Menü. Das Ereignis sollte dann ordnungsgemäß decodiert werden.  
+ Es ist ein bekanntes Problem in der **Ereignisanzeige** , in denen es möglicherweise nicht Decodierung von ETW-Ereignissen. Sie können eine Fehlermeldung angezeigt, die besagt: "Die Beschreibung für Ereigniskennung \<Id > aus der Quelle Microsoft Windows-Anwendungsserver-Anwendungen wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können installieren oder reparieren Sie die Komponente auf dem lokalen Computer." Wenn dieser Fehler auftritt, wählen Sie **aktualisieren** aus der **Aktionen** Menü. Das Ereignis sollte dann ordnungsgemäß decodiert werden.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

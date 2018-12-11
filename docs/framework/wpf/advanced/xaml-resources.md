@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199543"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126399"
 ---
 # <a name="xaml-resources"></a>XAML-Ressourcen
 Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. Beispiele für Ressourcen sind Pinsel und Stile. In dieser Übersicht wird beschrieben, wie Ressourcen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sie können auch Zugriff auf Ressourcen mithilfe von Code oder abwechselnd zwischen Code und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Ressourcen und Code](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -147,7 +147,7 @@ Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung
   
  Dieser Stil verfügt tatsächlich über einen Schlüssel: den impliziten Schlüssel `typeof(` <xref:System.Windows.Controls.Button> `)`. Im Markup können Sie angeben einer <xref:System.Windows.Style.TargetType%2A> direkt als Typ benannt (oder Sie können optional [{X: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) Zurückgeben einer <xref:System.Type>.  
   
- Mithilfe der standardmäßigen Design Stil Mechanismen ein, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], dass der Stil angewendet wird, als der Stil für die Laufzeit von ein <xref:System.Windows.Controls.Button> auf der Seite, obwohl die <xref:System.Windows.Controls.Button> selbst wird nicht versucht, an die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft oder eine bestimmte Ressource Ein Verweis auf das Format. Ihr auf dieser Seite definierter Stil wird unter der Verwendung des selben Schlüssels in der Suchsequenz früher als der Stil des Designverzeichnisses gefunden. Geben Sie einfach `<Button>Hello</Button>` an einer beliebigen Stelle in der Seite und den Stil, die Sie mit definiert <xref:System.Windows.Style.TargetType%2A> von `Button` würde auf diese Schaltfläche angewendet. Wenn Sie möchten, können Sie dennoch einen expliziten Schlüssel für den Stil mit demselben Typwert wie <xref:System.Windows.Style.TargetType%2A>für Klarheit in das Markup, aber dies optional ist.  
+ Mithilfe der standardmäßigen Design Stil Mechanismen ein, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], dass der Stil angewendet wird, als der Stil für die Laufzeit von ein <xref:System.Windows.Controls.Button> auf der Seite, obwohl die <xref:System.Windows.Controls.Button> selbst wird nicht versucht, an die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft oder eine bestimmte Ressource Ein Verweis auf das Format. Die Formatvorlage definiert wird, auf der Seite befindet sich weiter oben in der Suchsequenz als Wörterbuch Designstil, mit dem gleichen Schlüssel, den dem Wörterbuch Designstil verfügt. Geben Sie einfach `<Button>Hello</Button>` an einer beliebigen Stelle in der Seite und den Stil, die Sie mit definiert <xref:System.Windows.Style.TargetType%2A> von `Button` würde auf diese Schaltfläche angewendet. Wenn Sie möchten, können Sie dennoch einen expliziten Schlüssel für den Stil mit demselben Typwert wie <xref:System.Windows.Style.TargetType%2A>für Klarheit in das Markup, aber dies optional ist.  
   
  Implizite Schlüssel für Stile werden nicht auf ein Steuerelement angewendet, wenn <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> ist `true` (Beachten Sie, dass <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> möglicherweise als Teil des nativen Verhaltens für die Control-Klasse, und nicht explizit in einer Instanz des Steuerelements festgelegt werden). Darüber hinaus um implizite Schlüssel für Szenarios mit abgeleiteten Klassen zu unterstützen, das Steuerelement muss außer Kraft setzen <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (alle existierenden Steuerelemente als Teil des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dazu). Weitere Informationen zu Stilen, Designs und Entwurf von Steuerelementen finden Sie unter [Richtlinien zum Entwerfen formatierbarer Steuerelemente](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: bcf218efeb7bff5f7457164411efed796314ba82
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702906"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129479"
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 
@@ -60,7 +60,7 @@ Das häufigste Szenario, in denen WPF eine angefügte Eigenschaft definiert, ist
 
 ## Angefügte Eigenschaften in Code <a name="attached_properties_code"></a>
 
-Angefügte Eigenschaften in WPF haben nicht die typische [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "Wrapper"-Methoden für den einfachen Get/Set-Zugriff. Dies ist deshalb so, weil die angefügte Eigenschaft nicht unbedingt Teil der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Namespace für Instanzen ist, in denen die Eigenschaft festgelegt ist. Allerdings muss ein XAML-Prozessor in der Lage sein, diese Werte festzulegen, wenn XAML analysiert wird. Zur Unterstützung der Verwendung einer effektiven angefügten Eigenschaft muss der Besitzertyp der angefügten Eigenschaft dedizierte Accessormethoden im Formular implementieren **erhalten * PropertyName*** und **festgelegt*PropertyName ***. Diese dedizierten Accessormethoden eignen sich auch zum Abrufen oder Festlegen der angefügten Eigenschaft im Code. Im Hinblick auf Code ist eine angefügte Eigenschaft einem dahinter liegenden Feld ähnlich, das Methodenaccessoren anstelle von Eigenschaftenaccessoren besitzt, und das dahinter liegende Feld kann in jedem Objekt vorhanden sein, anstatt explizit definiert werden zu müssen.
+Angefügte Eigenschaften in WPF haben nicht die typische [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "Wrapper"-Methoden für den einfachen Get/Set-Zugriff. Dies ist deshalb so, weil die angefügte Eigenschaft nicht unbedingt Teil der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Namespace für Instanzen ist, in denen die Eigenschaft festgelegt ist. Allerdings muss ein XAML-Prozessor in der Lage sein, diese Werte festzulegen, wenn XAML analysiert wird. Zur Unterstützung der Verwendung einer effektiven angefügten Eigenschaft muss der Besitzertyp der angefügten Eigenschaft dedizierte Accessormethoden im Formular implementieren **Get_PropertyName_** und **Set_PropertyName_**. Diese dedizierten Accessormethoden eignen sich auch zum Abrufen oder Festlegen der angefügten Eigenschaft im Code. Im Hinblick auf Code ist eine angefügte Eigenschaft einem dahinter liegenden Feld ähnlich, das Methodenaccessoren anstelle von Eigenschaftenaccessoren besitzt, und das dahinter liegende Feld kann in jedem Objekt vorhanden sein, anstatt explizit definiert werden zu müssen.
 
 Das folgende Beispiel zeigt, wie Sie eine angefügte Eigenschaft im Code festlegen können. In diesem Beispiel `myCheckBox` ist eine Instanz der <xref:System.Windows.Controls.CheckBox> Klasse.
 
@@ -91,14 +91,14 @@ Wie bereits erwähnt, sollten Sie als eine angefügte Eigenschaft registrieren, 
 
 Wenn Ihre Klasse ist die angefügte Eigenschaft nur für die Verwendung auf anderen Typen definieren, die Klasse keine Ableitung von <xref:System.Windows.DependencyObject>. Aber Sie benötigen für die Ableitung <xref:System.Windows.DependencyObject> Wenn Sie das WPF-Gesamtmodell, müssen Sie die angefügte Eigenschaft auch eine Abhängigkeitseigenschaft sein folgen.
 
-Definieren Sie die angefügte Eigenschaft als Abhängigkeitseigenschaft, indem Sie deklarieren eine `public static readonly` -Feld des Typs <xref:System.Windows.DependencyProperty>. Sie definieren dieses Feld den Rückgabewert mit dem <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode. Der Name des Felds muss die Namen der angefügten Eigenschaft, angefügt mit der Zeichenfolge übereinstimmen `Property`, um das folgende Namensgebungsmuster eingerichteten WPF für die Benennung der identifizierenden Felder im Vergleich zu den Eigenschaften, die sie darstellen. Der angefügte Eigenschaftenanbieter muss auch statische bereitstellen **erhalten * PropertyName*** und **festgelegt * PropertyName*** Methoden als Accessoren für die angefügte Eigenschaft ist; andernfalls führt dies dazu führt in der Eigenschaft das System nicht auf die angefügte Eigenschaft zu verwenden.
+Definieren Sie die angefügte Eigenschaft als Abhängigkeitseigenschaft, indem Sie deklarieren eine `public static readonly` -Feld des Typs <xref:System.Windows.DependencyProperty>. Sie definieren dieses Feld den Rückgabewert mit dem <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode. Der Name des Felds muss die Namen der angefügten Eigenschaft, angefügt mit der Zeichenfolge übereinstimmen `Property`, um das folgende Namensgebungsmuster eingerichteten WPF für die Benennung der identifizierenden Felder im Vergleich zu den Eigenschaften, die sie darstellen. Der angefügte Eigenschaftenanbieter muss auch statische bereitstellen **Get_PropertyName_** und **Set_PropertyName_** Methoden als Accessoren für die angefügte Eigenschaft ist; andernfalls führt dies dazu führt in der Eigenschaft das System nicht auf die angefügte Eigenschaft zu verwenden.
 
 > [!NOTE]
 > Wenn Sie Get-Accessor der angefügten Eigenschaft auslassen, funktioniert die Datenbindung für die Eigenschaft in Entwurfstools wie Visual Studio und Expression Blend nicht.
 
 #### <a name="the-get-accessor"></a>Der Get-Accessor
 
-Die Signatur für die **erhalten * PropertyName*** Accessor muss:
+Die Signatur für die **Get_PropertyName_** Accessor muss:
 
 `public static object GetPropertyName(object target)`
 
@@ -108,7 +108,7 @@ Die Signatur für die **erhalten * PropertyName*** Accessor muss:
 
 #### <a name="the-set-accessor"></a>Der Set-Accessor
 
-Die Signatur für die **festgelegt * PropertyName*** Accessor muss:
+Die Signatur für die **Set_PropertyName_** Accessor muss:
 
 `public static void SetPropertyName(object target, object value)`
 
@@ -116,7 +116,7 @@ Die Signatur für die **festgelegt * PropertyName*** Accessor muss:
 
 -   Das `value`-Objekt kann als spezifischerer Typ in Ihrer Implementierung angegeben werden. Z. B. die <xref:System.Windows.Controls.DockPanel.SetDock%2A> Methode Typen als <xref:System.Windows.Controls.Dock>, da der Wert nur für diese Enumeration festgelegt werden kann. Denken Sie daran, dass der Wert für diese Methode die Eingabe des XAML-Loaders ist, wenn sie Ihre angefügte Eigenschaft in einer Verwendung der angefügten Eigenschaft im Markup erkennt. Diese Eingabe ist der Wert, der als XAML-Attributwert im Markup angegeben wird. Aus diesem Grund muss die Typkonvertierung, das Wertserialisierungsprogramm oder die Unterstützung von Markuperweiterungen für den verwendeten Typ vorhanden sein, damit der entsprechende Typ aus dem Attributwert (der letztendlich nur eine Zeichenfolge ist) erstellt werden kann.
 
-Das folgende Beispiel zeigt die Registrierung der Abhängigkeitseigenschaft (mithilfe der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode), als auch die **erhalten * PropertyName*** und **festgelegt * PropertyName*** Accessoren. Im Beispiel ist der Name der angefügten Eigenschaft `IsBubbleSource`. Deshalb müssen die Accessoren `GetIsBubbleSource` und `SetIsBubbleSource` genannt werden.
+Das folgende Beispiel zeigt die Registrierung der Abhängigkeitseigenschaft (mithilfe der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode), als auch die **Get_PropertyName_** und **Set_PropertyName_** Accessoren. Im Beispiel ist der Name der angefügten Eigenschaft `IsBubbleSource`. Deshalb müssen die Accessoren `GetIsBubbleSource` und `SetIsBubbleSource` genannt werden.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

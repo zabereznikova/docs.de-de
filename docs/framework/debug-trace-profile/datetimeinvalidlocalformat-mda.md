@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb5777e275fd7c48f7125b9e0315b08d3095c373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ce0f75ddfbf9f3b62917aa67f4d97140bbdc42
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357805"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153338"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>DateTimeInvalidLocalFormat-MDA
 Der `dateTimeInvalidLocalFormat`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine als UTC (Universal Coordinated Time, koordinierte Weltzeit) gespeicherte <xref:System.DateTime>-Instanz mit einem Format formatiert wird, das nur für lokale <xref:System.DateTime>-Instanzen verwendet werden soll. Dieser MDA wird nicht für nicht angegebene oder <xref:System.DateTime>-Standardinstanzen aktiviert.  
@@ -27,7 +27,7 @@ Der `dateTimeInvalidLocalFormat`-MDA (Managed Debugging Assistant, Assistent fü
 ## <a name="symptom"></a>Symptom  
  Eine Anwendung führt für eine <xref:System.DateTime>-UTC-Instanz eine manuelle Serialisierung mit einem lokalen Format durch:  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));  
 ```  
@@ -38,14 +38,14 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ### <a name="resolution"></a>Auflösung  
  <xref:System.DateTime>-UTC-Instanzen sollten so formatiert werden, dass sie als UTC erkennbar sind. Es wird empfohlen, für die Angabe von UTC-Zeiten ein „Z“ zu verwenden:  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
  Zudem existiert ein „o“-Format, mit dem eine <xref:System.DateTime> mithilfe der <xref:System.DateTime.Kind%2A>-Eigenschaft serialisiert werden kann. Diese Eigenschaft führt unabhängig davon, ob die Instanz lokal, UTC oder nicht angegeben ist, eine korrekte Serialisierung durch:  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
@@ -53,7 +53,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die Laufzeit.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Das Aktivieren dieses MDA erzeugt keine besondere Ausgabe. Die Aufrufliste kann jedoch zur Bestimmung des Speicherorts für den <xref:System.DateTime.ToString%2A>-Aufruf verwendet werden, der den MDA aktiviert hat.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -69,7 +69,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="example"></a>Beispiel  
  In einer Anwendung wird wie im Folgenden gezeigt eine indirekte Serialisierung für einen <xref:System.DateTime>-UTC-Wert mithilfe der Klasse <xref:System.Xml.XmlConvert> oder <xref:System.Data.DataSet> durchgeführt:  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
@@ -80,7 +80,7 @@ String serialized = XMLConvert.ToString(myDateTime);
   
  Bei Verwendung von <xref:System.Data.DataSet> legen Sie die <xref:System.Data.DataColumn.DateTimeMode%2A>-Eigenschaft des <xref:System.Data.DataColumn>-Objekts auf <xref:System.Data.DataSetDateTime.Utc> fest.  
   
-```  
+```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XmlConvert.ToString(myDateTime,   
     XmlDateTimeSerializationMode.RoundtripKind);  

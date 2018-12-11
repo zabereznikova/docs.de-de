@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850875"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155183"
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
 Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]können solche Listen mithilfe von Arrays oder einer Vielzahl anderer Typen (generische Liste, generische <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>oder <xref:System.Collections.ArrayList>) dargestellt werden. Eine Sammlung kann z. B. eine Liste von Adressen für einen bestimmten Kunden enthalten. Solche Sammlungen werden – unabhängig von ihrem tatsächlichen Typ – als *Listensammlungen*bezeichnet.  
@@ -87,7 +87,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
 -   Wenn das <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut nicht angewendet wird, hängen der Standardname und der Standardnamespace für Sammlungstypen von den Namen und Namespaces der Typen ab, die in der Sammlung enthalten sind. Sie werden nicht vom Namen und dem Namespace des Sammlungstyps selbst beeinflusst. Ein Beispiel finden Sie in den folgenden Typen:  
   
-    ```  
+    ```csharp  
     public CustomerList1 : Collection<string> {}  
     public StringList1 : Collection<string> {}  
     ```  
@@ -226,7 +226,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
  Standardmäßig werden Typen nicht für nicht benutzerdefinierte Sammlungen in importiertem Code generiert. Datenmember von Listensammlungstypen werden als Arrays importiert, und Datenmember von Wörterbuchsammlungstypen werden als generisches Wörterbuch importiert.  
   
- Für benutzerdefinierte Sammlungen werden jedoch separate Typen generiert, die mit dem <xref:System.Runtime.Serialization.CollectionDataContractAttribute> -Attribut gekennzeichnet sind. (Ein benutzerdefinierter Sammlungstyp im Schema ist ein Typ, der keinen standardmäßigen Namespace und keine standardmäßigen Namen, sich wiederholende Elementnamen oder Namen für Schlüssel-/Wertelemente verwendet.) Bei diesen Typen handelt es sich um leere Typen, die von der generischen <xref:System.Collections.Generic.List%601> für Listentypen und vom generischen Wörterbuch für Wörterbuchtypen abgeleitet werden.  
+ Für benutzerdefinierte Sammlungen werden jedoch separate Typen generiert, die mit dem <xref:System.Runtime.Serialization.CollectionDataContractAttribute>-Attribut gekennzeichnet sind. (Ein benutzerdefinierter Sammlungstyp im Schema ist ein Typ, der keinen standardmäßigen Namespace und keine standardmäßigen Namen, sich wiederholende Elementnamen oder Namen für Schlüssel-/Wertelemente verwendet.) Bei diesen Typen handelt es sich um leere Typen, die von der generischen <xref:System.Collections.Generic.List%601> für Listentypen und vom generischen Wörterbuch für Wörterbuchtypen abgeleitet werden.  
   
  Es können z. B. folgende Typen auf dem Server vorliegen:  
   
@@ -249,7 +249,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
  Beispielsweise, um zu bewirken, dass alle Listen als generische <xref:System.Collections.Generic.List%601>importiert werden.  
   
-```  
+```console  
 svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
 ```  
   
@@ -262,7 +262,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Sie können Sammlungsschnittstellentypen als Teil Ihrer referenzierten Sammlungstypen angeben, jedoch können Sie keine ungültigen Sammlungstypen angeben (wie diejenigen ohne `Add` -Methode oder öffentlichen Konstruktor).  
   
- Ein geschlossener generischer Typ wird als beste Übereinstimmung betrachtet. (Nicht generische Typen werden als äquivalent zu geschlossenen Generika von `Object`betrachtet). Wenn beispielsweise die Typen "Generische <xref:System.Collections.Generic.List%601> von <xref:System.DateTime>", "Generische <xref:System.ComponentModel.BindingList%601> " (offener generischer Typ) und " <xref:System.Collections.ArrayList> " die referenzierten Sammlungstypen sind, wird Folgendes generiert:  
+ Ein geschlossener generischer Typ wird als beste Übereinstimmung betrachtet. (Nicht generische Typen werden als äquivalent zu geschlossenen Generika von `Object` betrachtet). Wenn beispielsweise die Typen "Generische <xref:System.Collections.Generic.List%601> von <xref:System.DateTime>", "Generische <xref:System.ComponentModel.BindingList%601> " (offener generischer Typ) und " <xref:System.Collections.ArrayList> " die referenzierten Sammlungstypen sind, wird Folgendes generiert:  
   
  [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
  [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
@@ -287,9 +287,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Referenzierter Typ|Vom referenzierten Typ implementierte Schnittstelle|Beispiel|Typ behandelt als|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Nicht generisch oder geschlossen generisch (beliebige Anzahl von Parametern)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> oder<br /><br /> `MyType<T> : IDictionary` , wobei T=`int`|Geschlossenes generisches `IDictionary<object,object>`|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|<xref:System.Collections.Generic.IDictionary%602>, geschlossen|`MyType<T> : IDictionary<string, bool>` wobei T =`int`|Geschlossen generisch (z. B. `IDIctionary<string,bool>`)|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType<T,U,V> : IDictionary<string,V>` wobei T =`int`, U =`float`, V =`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary<Z,bool>` wobei Z =`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, sowohl Schlüssel als auch Wert sind geöffnet und verwenden beide jeweils einen Parameter des Typs|`MyType<T,U,V> : IDictionary<V,U>`, wobei T=`int`, U=`bool`, V=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|<xref:System.Collections.Generic.IDictionary%602>, geschlossen|`MyType<T> : IDictionary<string, bool>` , wobei T=`int`|Geschlossen generisch (z. B. `IDIctionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType<T,U,V> : IDictionary<string,V>` , wobei T=`int`, U=`float`, V=`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary<Z,bool>` , wobei Z=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, sowohl Schlüssel als auch Wert sind geöffnet und verwenden beide jeweils einen Parameter des Typs|`MyType<T,U,V> : IDictionary<V,U>`, wobei T=`int`, U=`bool`, V=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
 |Offen generisch (zwei Parameter)|Generisches <xref:System.Collections.Generic.IDictionary%602>, offen, verwendet beide generischen Parametern des Typs in der Reihenfolge, in der sie angezeigt werden.|`MyType<K,V> : IDictionary<K,V>`, K und V beide offen|Offen generisch (z. B. `IDictionary<K,V>`)|  
   
  Wenn der Typ sowohl das <xref:System.Collections.IDictionary> als auch das generische <xref:System.Collections.Generic.IDictionary%602>implementiert, wird nur das generische <xref:System.Collections.Generic.IDictionary%602> betrachtet.  
@@ -326,7 +326,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Generisches <xref:System.Collections.Generic.IList%601>|Generischer <xref:System.Collections.Generic.IList%601> -Indexer|Generisches Hinzufügen|  
 |Generisches <xref:System.Collections.Generic.ICollection%601>|Enumerator|Generisches Hinzufügen|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> -Indexer|`Add`|  
-|Generisches <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Eine nicht statische Methode mit dem Namen `Add` , die einen Parameter des entsprechenden Typs annimmt (den Typ des generischen Parameters oder einen der Basistypen). Eine solche Methode ist erforderlich, damit das Serialisierungsprogramm einen Sammlungstyp sowohl während der Serialisierung als auch während der Deserialisierung als Sammlung behandelt.|  
+|Generisches <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Eine nicht statische Methode mit dem Namen `Add`, die einen Parameter des entsprechenden Typs annimmt (den Typ des generischen Parameters oder einen der Basistypen). Eine solche Methode ist erforderlich, damit das Serialisierungsprogramm einen Sammlungstyp sowohl während der Serialisierung als auch während der Deserialisierung als Sammlung behandelt.|  
 |<xref:System.Collections.IEnumerable> (und daher <xref:System.Collections.ICollection>, die sich daraus ableitet)|`GetEnumerator`|Eine nicht statische Methode namens `Add` , die einen Parameter des Typs `Object`annimmt. Eine solche Methode ist erforderlich, damit das Serialisierungsprogramm einen Sammlungstyp sowohl während der Serialisierung als auch während der Deserialisierung als Sammlung behandelt.|  
   
  In der vorangehenden Tabelle werden in absteigender Reihenfolge Sammlungsschnittstellen aufgelistet. Das bedeutet beispielsweise, dass die Sammlung gemäß den <xref:System.Collections.IList> -Regeln serialisiert und deserialisiert wird, wenn ein Typ sowohl die <xref:System.Collections.Generic.IEnumerable%601>als auch das generische <xref:System.Collections.IList> implementiert:  

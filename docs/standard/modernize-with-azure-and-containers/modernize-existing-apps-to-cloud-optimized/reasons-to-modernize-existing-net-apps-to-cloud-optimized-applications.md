@@ -4,12 +4,12 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151061"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für Cloudoptimierte Anwendungen vorhandene .NET apps modernisieren
 
@@ -23,7 +23,7 @@ Das Fazit ist, wenn eine Organisation erstellt und verwaltet Anwendungen, die Cl
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Cloud-optimierte Anwendung-Prinzipien und Grundsätze 
 
-Verbesserungen in der Cloud vor allem liegt der Schwerpunkt auf zwei Ziele erfüllt: Kosten zu senken und Ihr Wachstum zu verbessern, indem Sie höhere Flexibilität. Diese Ziele werden erreicht, indem Prozesse vereinfachen, und die reibungslosere benutzereinladung, wenn Sie Version, und liefern von Anwendungen.
+Verbesserungen in der Cloud vor allem liegt der Schwerpunkt auf zwei Ziele erfüllen: Senken Sie Kosten, und verbessern Sie Ihr Wachstum zu, indem Sie höhere Flexibilität. Diese Ziele werden erreicht, indem Prozesse vereinfachen, und die reibungslosere benutzereinladung, wenn Sie Version, und liefern von Anwendungen.
 
 Ihre Anwendung ist Cloud optimiert sein, wenn Sie kann in einem flexiblen Weise – entwickeln Sie Ihre app unabhängig von anderen lokalen apps, und veröffentlichen, automatische Skalierung, bereitstellen, überwachen und Problembehandlung für Ihre app in der Cloud.
 
@@ -68,5 +68,5 @@ All diese Vorteile bieten letztlich Key kosteneinsparungen für den End-to-End-A
 In den folgenden Abschnitten diese Vorteile ausführlicher erklärt werden, und zu bestimmten Technologien verknüpft sind.
 
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Zurück](index.md)
+>[Weiter](microsoft-technologies-in-cloud-optimized-applications.md)

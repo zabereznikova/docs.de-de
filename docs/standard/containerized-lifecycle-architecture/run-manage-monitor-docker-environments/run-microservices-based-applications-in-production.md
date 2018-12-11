@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123149"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126301"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Ausführen von zusammengesetzten und auf Microservices basierende Anwendungen in produktionsumgebungen
 
@@ -33,7 +33,6 @@ Wenn Anwendungen über mehrere Hostsysteme hinweg horizontal sind, wird die Mög
 
 Die Funktionen von orchestratoren und Planer sind sehr komplex, entwickeln und Erstellen von Grund auf neu, und daher in der Regel möchten stellen Verwendung Orchestrierung Lösungen, die von Lieferanten angeboten werden.
 
-
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](manage-production-docker-environments.md)
+>[Zurück](index.md)
+>[Weiter](manage-production-docker-environments.md)

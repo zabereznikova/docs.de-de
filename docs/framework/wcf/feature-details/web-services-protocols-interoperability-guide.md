@@ -3,11 +3,11 @@ title: Handbuch für die Interoperabilität von Webdienstprotokollen
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744547"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154345"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
 Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste von Webdienstprotokollen, die von die WCF implementiert. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen i
 |-----------------------------|----------|  
 |HTTP 1.1|[RFC 2616](https://go.microsoft.com/fwlink/?LinkId=90372)|  
 |SOAP 1.1 HTTP-Bindung|[Simple Object Access Protocol (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=90520), Abschnitt 7|  
-|SOAP 1,2 HTTP-Bindung|[SOAP-Version 1.2, Teil 2: Zusätze (zweite Ausgabe)](https://go.microsoft.com/fwlink/?LinkId=95329), Abschnitt 7|  
+|SOAP 1,2 HTTP-Bindung|[SOAP Version 1.2, Teil 2: Zusätze (zweite Ausgabe)](https://go.microsoft.com/fwlink/?LinkId=95329), Abschnitt 7|  
   
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützen die in der folgenden Tabelle aufgeführten Spezifikationen:  
   
@@ -53,14 +53,14 @@ Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen i
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
-|WSS: SOAP-Nachrichtensicherheit 1,0|[Webdienstesicherheit: SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
-|WSS: Username Token Profile 1.0|[Web Services Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
-|WSS: X.509 Token Profile 1.0|[Web Services Security x. 509-Zertifikatstokenprofil](https://go.microsoft.com/fwlink/?LinkId=95335)|  
+|WSS: SOAP-Nachrichtensicherheit 1.0|[Webdienstesicherheit: SOAP-Nachrichtensicherheit 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS: UserName Token Profile 1.0|[Web Services Security UsernameToken Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
+|WSS: X. 509 Token Profile 1.0|[Web Services Security x. 509-Zertifikatstokenprofil](https://go.microsoft.com/fwlink/?LinkId=95335)|  
 |WSS: SAML 1.1 Token Profile 1,0|[Webdienstesicherheit: SAML-Tokenprofil](https://go.microsoft.com/fwlink/?LinkId=96693)|  
 |WSS: SOAP-Nachrichtensicherheit 1.1|[Webdienstesicherheit: SOAP-Nachrichtensicherheit 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |WSS: Username Token Profile 1.1|[Web Services Security-Tokenprofil 1.1](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Implementieren Sie keine kennwortbasierte Schlüsselableitung;<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
-|WSS: X509 Token Profile 1.1|[Web Services Security x. 509-Zertifikatstokenprofil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
-|WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
+|WSS: X509 token Profile 1,1|[Web Services Security x. 509-Zertifikatstokenprofil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS: Kerberos-Tokenprofil 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
 |WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML Token Profile 1,1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure Conversation|[Webdienste sichere Konversationssprache](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4 (möglicherweise in englischer Sprache)|[Webdienste: Trust-Sprache](https://go.microsoft.com/fwlink/?LinkId=169514)|  
@@ -76,9 +76,9 @@ Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen i
   
  Die Klassen <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter> und <xref:System.ServiceModel.Description.MetadataResolver> bieten Unterstützung für die folgenden Metadatenspezifikationen:  
   
--   [XML-Schemateil 1: Strukturen 2. Ausgabe](https://go.microsoft.com/fwlink/?LinkId=3536)  
+-   [XML-Schemateil 1: Zweite Auflage von Strukturen](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML-Schemateil 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML-Schemateil 2: Datentypen, Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   

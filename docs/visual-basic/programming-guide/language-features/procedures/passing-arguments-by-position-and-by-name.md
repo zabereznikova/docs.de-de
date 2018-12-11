@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296450"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151309"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Übergeben von Argumenten nach Position und Name (Visual Basic)
 Beim Aufruf einer `Sub` oder `Function` Verfahren können Sie Argumente übergeben *anhand der Position* – in der Reihenfolge, in dem sie in der Definition der Prozedur angezeigt werden, oder Sie übergeben diese *anhand des Namens*, ohne Bezug zum Positionieren.  
@@ -64,7 +64,7 @@ Sie können Argumente nach Position und Name in einem einzelnen Prozeduraufruf, 
   
  Im vorherigen Beispiel kein zusätzliches Komma ist erforderlich, um die Stelle der ausgelassenen aufzunehmen `age` -Argument, da `birth` wird anhand des Namens übergeben.  
   
-In Versionen vor Version 15.5 von Visual Basic Wenn Sie Argumente, indem eine Mischung von Position und Name, die positionellen Argumente angeben müssen alle zuerst aufgeführt werden. Nachdem Sie ein Argument nach Namen angeben, müssen alle übrigen Argumente alle anhand des Namens übergeben werden.  Beispielsweise der folgende Aufruf von der `Display` Methode zeigt Compilerfehler [BC30241: benanntes Argument erwartet](../../../misc/bc30241.md).
+In Versionen vor Version 15.5 von Visual Basic Wenn Sie Argumente, indem eine Mischung von Position und Name, die positionellen Argumente angeben müssen alle zuerst aufgeführt werden. Nachdem Sie ein Argument nach Namen angeben, müssen alle übrigen Argumente alle anhand des Namens übergeben werden.  Beispielsweise der folgende Aufruf von der `Display` Methode zeigt Compilerfehler [BC30241: Benanntes Argument erwartet](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ Sie können nicht anhand des Namens ein Parameterarray übergeben. Dies ist dara
 ## <a name="see-also"></a>Siehe auch  
  [Verfahren](./index.md)  
  [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)  
+ [So wird es gemacht: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)  
  [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)  
  [Optionale Parameter](./optional-parameters.md)  
  [Parameterarrays](./parameter-arrays.md)  

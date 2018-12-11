@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 721693166c561babb9d7825f480e92d14a5f347c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308551"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154436"
 ---
 # <a name="code-contracts"></a>Codeverträge
 Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Objektinvarianten im Code festzulegen. Vorbedingungen sind Anforderungen, die beim Eingeben einer Methode oder Eigenschaft erfüllt werden müssen. Nachbedingungen beschreiben Erwartungen zu dem Zeitpunkt, zu dem die Methode oder der Eigenschaftencode beendet wird. Objektinvarianten beschreiben den erwarteten Zustand für eine Klasse, die in einem einwandfreien Zustand ist.  
@@ -23,13 +23,13 @@ Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Obje
   
  Codeverträge bieten folgende Vorteile:  
   
--   Verbessertes Testen: Codeverträge ermöglichen eine statische Vertragsüberprüfung, Laufzeitüberprüfung und Dokumentationsgenerierung.  
+-   Verbesserte testen: Codeverträge ermöglichen eine statische vertragsüberprüfung, laufzeitüberprüfung und dokumentationsgenerierung.  
   
--   Automatische Testtools: Sie können mithilfe von Codeverträgen aussagekräftigere Komponententests generieren, indem bedeutungslose Testargumente, die die Vorbedingungen nicht erfüllen, herausgefiltert werden.  
+-   Automatische TestTools: Sie können die Codeverträge verwenden, um aussagekräftigere Komponententests generieren, durch die Filterung bedeutungslose testargumente, die Vorbedingungen nicht erfüllen.  
   
--   Statische Überprüfung: Mit der statischen Prüfung kann bestimmt werden, ob Vertragsverletzungen vorliegen, ohne das Programm auszuführen. Es wird nach impliziten Verträgen (wie NULL-Dereferenzierungen und Arraygrenzen) sowie nach expliziten Verträgen gesucht.  
+-   Statische Überprüfung: Die statische Prüfung kann entscheiden, ob vertragsverletzungen vorliegen, ohne die Ausführung des Programms vorhanden sind. Es wird nach impliziten Verträgen (wie NULL-Dereferenzierungen und Arraygrenzen) sowie nach expliziten Verträgen gesucht.  
   
--   Referenzdokumentation: Der Dokumentations-Generator erweitert vorhandene XML-Dokumentationsdateien um Vertragsinformationen. Es gibt auch Stylesheets, die mit [Sandcastle](https://github.com/EWSoftware/SHFB) verwendet werden können, sodass die generierten Dokumentationsseiten Vertragsabschnitte enthalten können.  
+-   Referenzdokumentation: Der Dokumentations-Generator erweitert vorhandene XML-Dokumentationsdateien Vertragsinformationen. Es gibt auch Stylesheets, die mit [Sandcastle](https://github.com/EWSoftware/SHFB) verwendet werden können, sodass die generierten Dokumentationsseiten Vertragsabschnitte enthalten können.  
   
  Alle .NET Framework-Sprachen können umgehend Verträge nutzen. Sie müssen keinen speziellen Parser oder Compiler schreiben. Mit einem Visual Studio-Add-In können Sie die Ebene der auszuführenden Codevertragsanalyse angeben. Durch die Analysen kann überprüft werden, ob die Verträge wohlgeformt sind (Typüberprüfung und Namensauflösung), und es kann eine kompilierte Form der Verträge im Microsoft Intermediate Language(MSIL)-Format erzeugt werden. Die Erstellung von Verträgen in Visual Studio ermöglicht die Nutzung der vom Tool bereitgestellten IntelliSense-Standardfunktionen.  
   
@@ -42,11 +42,15 @@ Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Obje
   
  Die folgende Vorbedingung drückt z. B. aus, dass der Parameter `x` nicht NULL sein darf.  
   
- `Contract.Requires( x != null );`  
+ ```csharp
+ Contract.Requires(x != null);
+ ```
   
  Wenn im Code bei Verletzung einer Vorbedingung eine bestimmte Ausnahme ausgelöst werden soll, können Sie die generische Überladung von <xref:System.Diagnostics.Contracts.Contract.Requires%2A> wie folgt verwenden:  
   
- `Contract.Requires<ArgumentNullException>( x != null, "x" );`  
+ ```csharp
+ Contract.Requires<ArgumentNullException>(x != null, "x");
+ ```
   
 ### <a name="legacy-requires-statements"></a>Ältere "Requires"-Anweisungen  
  Der Großteil des Codes enthält einige Parametervalidierungsfunktionen in Form des `if`-`then`-`throw`-Codes. Die Vertragstools erkennen diese Anweisungen in den folgenden Fällen als Vorbedingungen:  
@@ -57,12 +61,12 @@ Codeverträge bieten eine Möglichkeit, Vorbedingungen, Nachbedingungen und Obje
   
  Wenn `if`-`then`-`throw`-Anweisungen in dieser Form angezeigt werden, erkennen die Tools sie als ältere `requires`-Anweisungen. Wenn keine anderen Verträge auf die `if`-`then`-`throw`-Sequenz folgen, beenden Sie den Code mit der <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType>-Methode.  
   
-```  
-if ( x == null ) throw new ...  
-Contract.EndContractBlock(); // All previous "if" checks are preconditions  
-```  
+```csharp
+if (x == null) throw new ...
+Contract.EndContractBlock(); // All previous "if" checks are preconditions
+```
   
- Beachten Sie, dass die Bedingung im vorangehenden Test eine negierte Vorbedingung ist. (Die tatsächliche Vorbedingung wäre `x != null`.) Eine negierte Vorbedingung unterliegt starken Einschränkungen: Sie muss wie im vorherigen Beispiel geschrieben werden, das heißt, sie darf keine `else`-Klauseln enthalten, und der Text der `then`-Klausel muss eine einzelne `throw`-Anweisung sein. Der `if`-Test unterliegt Reinheits- und Sichtbarkeitsregeln (siehe [Verwendungsrichtlinien](#usage_guidelines)), aber der `throw`-Ausdruck unterliegt nur Reinheitsregeln. Der Typ der ausgelösten Ausnahme muss jedoch genauso sichtbar sein wie die Methode, in der der Vertrag vorkommt.  
+ Beachten Sie, dass die Bedingung im vorangehenden Test eine negierte Vorbedingung ist. (Die tatsächliche Vorbedingung wäre `x != null`.) Eine negierte Vorbedingung unterliegt starken Einschränkungen: Sie muss wie im vorherigen Beispiel gezeigt geschrieben werden; also sollte keine enthalten `else` -Klauseln und in den Hauptteil der `then` Klausel muss es sich um eine einzelne `throw` Anweisung. Der `if`-Test unterliegt Reinheits- und Sichtbarkeitsregeln (siehe [Verwendungsrichtlinien](#usage_guidelines)), aber der `throw`-Ausdruck unterliegt nur Reinheitsregeln. Der Typ der ausgelösten Ausnahme muss jedoch genauso sichtbar sein wie die Methode, in der der Vertrag vorkommt.  
   
 ## <a name="postconditions"></a>Nachbedingungen  
  Nachbedingungen sind Verträge für den Zustand einer Methode, wenn diese beendet wird. Die Nachbedingung wird unmittelbar vor dem Beenden einer Methode überprüft. Das Laufzeitverhalten fehlerhafter Nachbedingungen wird durch die Laufzeitanalyse bestimmt.  
@@ -72,12 +76,16 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="standard-postconditions"></a>Standardmäßige Nachbedingungen  
  Sie können standardmäßige Nachbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>-Methode ausdrücken. Nachbedingungen drücken eine Bedingung aus, die bei normaler Beendigung der Methode `true` sein muss.  
   
- `Contract.Ensures( this.F > 0 );`  
+ ```csharp
+ Contract.Ensures(this.F > 0);
+ ```
   
 ### <a name="exceptional-postconditions"></a>Ausnahmenachbedingungen  
  Ausnahmenachbedingungen sind Nachbedingungen, die `true` sein sollten, wenn eine bestimmte Ausnahme von einer Methode ausgelöst wird. Sie können diese Nachbedingungen mit der <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType>-Methode (wie im folgenden Beispiel gezeigt) angeben.  
   
- `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
+ ```csharp
+ Contract.EnsuresOnThrow<T>(this.F > 0);
+ ```
   
  Das Argument ist die Bedingung, die `true` sein muss, wenn eine Ausnahme ausgelöst wird, bei der es sich um einen Untertyp von `T` handelt.  
   
@@ -86,7 +94,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="special-postconditions"></a>Besondere Nachbedingungen  
  Die folgenden Methoden können nur innerhalb von Nachbedingungen verwendet werden:  
   
--   Mit dem Ausdruck `Contract.Result<T>()`, in dem `T` durch den Rückgabetyp der Methode ersetzt wird, können Sie auf Methodenrückgabewerte in Nachbedingungen verweisen. Wenn der Compiler den Typ nicht ableiten kann, müssen Sie ihn explizit angeben. Der C#-Compiler kann beispielsweise keine Typen für Methoden ableiten, die keine Argumente akzeptieren. Daher ist die folgende Nachbedingung erforderlich: `Contract.Ensures(0 <Contract.Result<int>())`-Methoden mit dem Rückgabetyp `void` können in ihren Nachbedingungen nicht auf `Contract.Result<T>()` verweisen.  
+-   Mit dem Ausdruck `Contract.Result<T>()`, in dem `T` durch den Rückgabetyp der Methode ersetzt wird, können Sie auf Methodenrückgabewerte in Nachbedingungen verweisen. Wenn der Compiler den Typ nicht ableiten kann, müssen Sie ihn explizit angeben. Z. B. die C# Compiler wird mit der Typen für Methoden ableiten, die keine Argumente akzeptieren. damit sie die folgende nachbedingung erforderlich: `Contract.Ensures(0 <Contract.Result<int>())` Methoden mit einem Rückgabetyp von `void` kann nicht auf verweisen `Contract.Result<T>()` in ihren nachbedingungen.  
   
 -   Ein prestate-Wert in einer Nachbedingung verweist auf den Wert eines Ausdrucks am Anfang einer Methode oder Eigenschaft. Er verwendet den Ausdruck `Contract.OldValue<T>(e)`, wobei `T` der Typ von `e` ist. Sie können das generische Typargument weglassen, wenn der Compiler den Typ ableiten kann. (Zum Beispiel leitet der C#-Compiler immer den Typ ab, weil er ein Argument erhält.) Es gibt mehrere Einschränkungen in Bezug darauf, was in `e` und in den Kontexten auftreten kann, in denen möglicherweise ein alter Ausdruck angezeigt wird. Ein alter Ausdruck darf keinen anderen alten Ausdruck enthalten. Vor allem muss ein alter Ausdruck auf einen Wert verweisen, der im Vorbedingungszustand der Methode vorhanden war. Es muss sich also um einen Ausdruck handeln, der ausgewertet werden kann, solange die Vorbedingung der Methode `true` ist. Nachfolgend finden Sie mehrere Instanzen dieser Regel.  
   
@@ -94,7 +102,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   Sie können nicht auf den Rückgabewert der Methode in einem alten Ausdruck verweisen:  
   
-        ```  
+        ```csharp
         Contract.OldValue(Contract.Result<int>() + x) // ERROR  
         ```  
   
@@ -102,30 +110,31 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   Ein alter Ausdruck kann nicht von der gebundenen Variablen eines Quantifizierers abhängen, wenn der Bereich des Quantifizierers vom Rückgabewert der Methode abhängt:  
   
-        ```  
-        Contract. ForAll (0,Contract. Result<int>(),  
-        i => Contract.OldValue(xs[i]) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, Contract.Result<int>(), i => Contract.OldValue(xs[i]) > 3); // ERROR
         ```  
   
     -   Ein alter Ausdruck kann nur auf den Parameter des anonymen Delegaten in einem <xref:System.Diagnostics.Contracts.Contract.ForAll%2A>- oder <xref:System.Diagnostics.Contracts.Contract.Exists%2A>-Aufruf verweisen, wenn er als Indexer oder Argument für einen Methodenaufruf verwendet wird:  
   
-        ```  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(xs[i]) > 3); // OK  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(i) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(xs[i]) > 3); // OK
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(i) > 3); // ERROR
         ```  
   
     -   Ein alter Ausdruck kann nicht im Text eines anonymen Delegaten auftreten, wenn der Wert des alten Ausdrucks von einem der Parameter des anonymen Delegaten abhängt, sofern der anonyme Delegat kein Argument für die <xref:System.Diagnostics.Contracts.Contract.ForAll%2A>- oder <xref:System.Diagnostics.Contracts.Contract.Exists%2A>-Methode ist:  
   
-        ```  
-        Method( ... (T t) => Contract.OldValue(... t ...) ... ); // ERROR  
+        ```csharp
+        Method(... (T t) => Contract.OldValue(... t ...) ...); // ERROR
         ```  
   
     -   `Out`-Parameter stellen ein Problem dar, weil Verträge vor dem Text der Methode angezeigt werden und die meisten Compiler keine Verweise auf `out`-Parameter in Nachbedingungen zulassen. Zur Lösung dieses Problems steht in der <xref:System.Diagnostics.Contracts.Contract>-Klasse die <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>-Methode zur Verfügung, die eine Nachbedingung auf Grundlage eines `out`-Parameters zulässt.  
   
-        ```  
-        public void OutParam(out int x) f  
-        Contract.Ensures(Contract.ValueAtReturn(out x) == 3);  
-        x = 3;  
+        ```csharp
+        public void OutParam(out int x)
+        {
+            Contract.Ensures(Contract.ValueAtReturn(out x) == 3);
+            x = 3;
+        }
         ```  
   
          Wie bei der <xref:System.Diagnostics.Contracts.Contract.OldValue%2A>-Methode können Sie den generischen Typparameter weglassen, wenn der Compiler den Typ ableiten kann. Der Vertrags-Rewriter ersetzt den Methodenaufruf durch den Wert des `out`-Parameters. Die <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A>-Methode kann nur in Nachbedingungen angezeigt werden. Das Argument für die Methode muss ein `out`-Parameter oder ein Feld eines strukturbezogenen `out`-Parameters sein. Letzteres ist auch hilfreich, wenn auf Felder in der Nachbedingung eines Strukturkonstruktors verwiesen wird.  
@@ -138,14 +147,14 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
  Die invarianten Methoden werden identifiziert, indem sie mit dem <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute>-Attribut markiert werden. Die invarianten Methoden dürfen keinen Code enthalten. Eine Ausnahme bildet eine Sequenz von Aufrufen der <xref:System.Diagnostics.Contracts.Contract.Invariant%2A>-Methode, bei denen (wie im folgenden Beispiel gezeigt) jeweils eine einzelne Invariante angegeben wird.  
   
-```  
+```csharp
 [ContractInvariantMethod]  
 protected void ObjectInvariant ()   
 {  
-Contract.Invariant(this.y >= 0);  
-Contract.Invariant(this.x > this.y);  
-...  
-}  
+    Contract.Invariant(this.y >= 0);
+    Contract.Invariant(this.x > this.y);
+    ...
+}
 ```  
   
  Invarianten werden durch das CONTRACTS_FULL-Präprozessorsymbol bedingt definiert. Bei der Laufzeitüberprüfung werden die Invarianten am Ende jeder öffentlichen Methode überprüft. Wenn eine Invariante eine öffentliche Methode in der gleichen Klasse erwähnt, wird die Invariantenüberprüfung, die normalerweise am Ende dieser öffentlichen Methode erfolgt, deaktiviert. Stattdessen wird die Überprüfung nur am Ende des äußersten Methodenaufrufs dieser Klasse ausgeführt. Dies geschieht auch, wenn die Klasse wegen eines Aufrufs einer Methode in einer anderen Klasse erneut eingegeben wird. Invarianten sind nicht auf einen Finalizer des Objekts überprüft und ein <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> Implementierung.  

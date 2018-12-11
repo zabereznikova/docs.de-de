@@ -1,19 +1,23 @@
 ---
 title: Einführung in F#
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
-ms.date: 02/28/2018
-ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 11/06/2018
+ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50235712"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143740"
 ---
 # <a name="tour-of-f"></a>Einführung in F# #
 
-Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben.  Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können.  Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
+Der beste Weg zum Kennenlernen von F# besteht darin, F#-Code zu lesen und zu schreiben. Dieser Artikel bietet eine Tour durch einige der wichtigsten Funktionen der Programmiersprache F# und stellt einige Codebeispiele bereit, die Sie selbst ausführen können. Weitere Informationen zum Einrichten einer Entwicklungsumgebung finden Sie unter [Erste Schritte](tutorials/getting-started/index.md).
 
 Es gibt zwei primäre Konzepte in F#: Funktionen und Typen.   In dieser Tour werden Features der Sprache vorgestellt, die unter diese beiden Konzepte fallen.
+
+## <a name="executing-the-code-online"></a>Ausführen des Codes online
+
+Wenn Ihnen keine F# auf Ihrem Computer installiert ist, können Sie ausführen, alle Beispiele online mit den [Fable REPL](http://fable.io/repl/). Fable ist ein Dialekt von F# , die direkt in Ihrem Browser ausgeführt wird. Sehen Sie sich zum Anzeigen der Beispiele, in denen führen Sie in der REPL **Beispiele > erfahren Sie mehr > Überblick F#**  in der linken Menüleiste, der die Fable eine Repl
 
 ## <a name="functions-and-modules"></a>Funktionen und Module
 
@@ -63,7 +67,7 @@ Im vorherigen Beispiel vorgenommen verwenden viele der Features von F#, einschli
 
 ## <a name="lists-arrays-and-sequences"></a>Listen, Arrays und Sequenzen
 
-Listen, Arrays und Sequenzen sind drei primäre Auflistungstypen in der F#-Kernbibliothek.
+Listen, Arrays und Sequenzen sind drei primäre Auflistungstypen in der F# -Kernbibliothek.
 
 [Listet](language-reference/lists.md) geordnete, unveränderliche Auflistungen von Elementen des gleichen Typs.  Sie sind einfach verknüpften Listen, was bedeutet, dass sie für die Enumeration, aber eine schlechte Wahl für wahlfreien Zugriff und Verkettung vorgesehen sind, wenn sie groß sind.  Dies ist im Gegensatz zu Listen in andere beliebten Sprachen an, die zur Darstellung von Listen in der Regel keine einfach verknüpften Liste verwenden.
 
@@ -79,18 +83,18 @@ Listen, Arrays und Sequenzen sind drei primäre Auflistungstypen in der F#-Kernb
 
 ## <a name="recursive-functions"></a>Rekursive Funktionen
 
-Verarbeiten von Auflistungen oder Sequenzen von Elementen erfolgt in der Regel mit [Rekursion](language-reference/functions/index.md#recursive-functions) in F# erläutert werden.  Obwohl F#-Unterstützung für Schleifen und imperative Programmierung verfügt, ist die Rekursion bevorzugte, da sie einfacher sicherstellen der Korrektheit ist.
+Verarbeiten von Auflistungen oder Sequenzen von Elementen erfolgt in der Regel mit [Rekursion](language-reference/functions/index.md#recursive-functions) in F#.  Obwohl F# verfügt über Unterstützung für Schleifen und imperative Programmierung, Rekursion wird bevorzugt, da sie einfacher sicherstellen der Korrektheit ist.
 
->[!NOTE]
-Das folgende Beispiel verwendet den Musterabgleich über die `match` Ausdruck.  Diese grundlegenden Konstrukt wird weiter unten in diesem Artikel behandelt.
+> [!NOTE]
+> Das folgende Beispiel verwendet den Musterabgleich über die `match` Ausdruck.  Diese grundlegenden Konstrukt wird weiter unten in diesem Artikel behandelt.
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 
-F# bietet außerdem vollständige Unterstützung für Tail aufrufen, Optimierung, dies ist eine Möglichkeit, rekursive Aufrufe optimieren, damit sie ebenso schnell als eine Schleifenkonstruktion sind.
+F#verfügt außerdem über vollständige Unterstützung für Ende aufrufen, Optimierung, dies ist eine Möglichkeit, rekursive Aufrufe optimieren, damit sie ebenso schnell als eine Schleifenkonstruktion sind.
 
 ## <a name="record-and-discriminated-union-types"></a>Datensatz- und Unterscheidungs-Union-Typen
 
-Datensatz und Union-Typen werden zwei grundlegende Datentypen in F#-Code verwendet und sind im Allgemeinen die beste Möglichkeit, Daten in einem F#-Programm darstellen.  Auch wenn sie ähneln Klassen in anderen Sprachen dadurch, ist ihre primäre Unterschied, dass sie die strukturelle Gleichheitssemantik aufweisen.  Dies bedeutet, dass sie "nativ" vergleichbar und Gleichheit einfach ist: nur überprüfen, ob eine gleich dem anderem ist.
+Datensatz- und Union-Typen werden zwei grundlegende Datentypen in verwendet F# code, und sind im Allgemeinen die beste Möglichkeit zum Darstellen der Daten in eine F# Programm.  Auch wenn sie ähneln Klassen in anderen Sprachen dadurch, ist ihre primäre Unterschied, dass sie die strukturelle Gleichheitssemantik aufweisen.  Dies bedeutet, dass sie "nativ" vergleichbar und Gleichheit einfach ist: nur überprüfen, ob eine gleich dem anderem ist.
 
 [Datensätze](language-reference/records.md) sind ein Aggregat benannter Werte, mit optionalen Elementen (z. B. Methoden).  Wenn Sie mit c# oder Java vertraut sind, sollten klicken Sie dann diese Poco-Klassen oder POJOs - ähnelt nur mit strukturelle Gleichheit und weniger Aufwand können.
 
@@ -159,11 +163,11 @@ Eine einzigartige Funktion des F# Typsystem ist die Möglichkeit, den Kontext f�
 
 [!code-fsharp[UnitsOfMeasure](../../samples/snippets/fsharp/tour.fs#L817-L842)]
 
-Die F#-Kernbibliothek definiert viele SI-Typen und einheitenkonvertierungen.  Weitere Informationen finden Sie die [Microsoft.FSharp.Data.UnitSystems.SI-Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d).
+Die F# viele SI-Typen und einheitenkonvertierungen definiert.  Weitere Informationen finden Sie die [Microsoft.FSharp.Data.UnitSystems.SI-Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.data.unitsystems.si-namespace-%5bfsharp%5d).
 
 ## <a name="classes-and-interfaces"></a>Klassen und Schnittstellen
 
-F# bietet außerdem vollständige Unterstützung für .NET-Klassen, [Schnittstellen](language-reference/interfaces.md), [abstrakte Klassen](language-reference/abstract-classes.md), [Vererbung](language-reference/inheritance.md)und so weiter.
+F#Außerdem bietet vollständige Unterstützung für .NET-Klassen, [Schnittstellen](language-reference/interfaces.md), [abstrakte Klassen](language-reference/abstract-classes.md), [Vererbung](language-reference/inheritance.md)und so weiter.
 
 [Klassen](language-reference/classes.md) sind Typen, die .NET Objekte darstellen. die Eigenschaften, Methoden und Ereignisse wie stehen die [Mitglieder](language-reference/members/index.md).
 
@@ -191,7 +195,7 @@ Klassen eignen sich hervorragend für eine Vielzahl von Gründen, z. B. Wenn Sie
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, da Sie einige der wichtigsten Funktionen der Sprache gesehen haben, sollten Sie Ihre erste F#-Programme zu schreiben sein!  Sehen Sie sich [Einstieg](tutorials/getting-started/index.md) zu erfahren, wie Sie Ihre Entwicklungsumgebung einrichten, und Schreiben von Code.
+Nun, Sie, dass einige der wichtigsten Funktionen der Sprache gesehen haben, sollten Sie Ihre erste schreiben werden F# Programme!  Sehen Sie sich [Einstieg](tutorials/getting-started/index.md) zu erfahren, wie Sie Ihre Entwicklungsumgebung einrichten, und Schreiben von Code.
 
 Die nächsten Schritte für weitere können beliebig sein, aber es wird empfohlen [Einführung in die funktionale Programmierung in F# ](introduction-to-functional-programming/index.md) abzurufenden mit Core Konzepte der funktionalen Programmierung vertraut.  Dieser werden wichtige bei der Erstellung von robusten Programme in F#.
 

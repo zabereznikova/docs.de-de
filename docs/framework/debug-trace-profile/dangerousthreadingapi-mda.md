@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02f16bd9560346cca9b24d4e5b8e760fdb3afd18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bfc3aa2bb7d1819f5f6221154ba1d276e0c202c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357312"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149366"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI-MDA
 Der `dangerousThreadingAPI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>-Methode für einen anderen Thread als den aktuellen Thread aufgerufen wird.  
@@ -38,7 +38,7 @@ Der `dangerousThreadingAPI`-MDA (Managed Debugging Assistant, Assistent für ver
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben über problematische Threadoperationen gemeldet.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Der MDA identifiziert die problematische Threadmethode, die zu seiner Aktivierung führte.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -54,7 +54,7 @@ Der `dangerousThreadingAPI`-MDA (Managed Debugging Assistant, Assistent für ver
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel veranschaulicht einen Aufruf der <xref:System.Threading.Thread.Suspend%2A>-Methode, der zur Aktivierung des `dangerousThreadingAPI` führt.  
   
-```  
+```csharp
 using System.Threading;  
 void FireMda()  
 {  

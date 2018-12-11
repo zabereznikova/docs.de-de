@@ -4,38 +4,38 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3da7816127982c3657129561975eed6d1f5aad5a
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104506"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152410"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entwicklungsumgebung für Docker-Apps
 
-## <a name="development-tools-choices-ide-or-editor"></a>Auswahlmöglichkeiten für das Entwicklungstool: IDE oder Editor
+## <a name="development-tools-choices-ide-or-editor"></a>Größere Auswahl an Entwicklungstools: IDE oder Ihrem editor
 
-Unabhängig davon Wunsch eine vollständige und leistungsfähige IDE oder eine einfache und agile-Editor, hat Microsoft Sie beim Entwickeln von Docker-Anwendungen behandelt.
+Unabhängig davon, wenn Sie eine vollständige und leistungsstarke IDE oder einen einfachen und flexiblen Editor bevorzugen hat Microsoft Sie bei der Entwicklung von Docker-Anwendungen.
 
-### <a name="visual-studio-code-and-docker-cli-cross-platform-tools-for-mac-linux-and-windows"></a>Visual Studio-Code und Docker-Befehlszeilenschnittstelle (plattformübergreifenden Tools für Windows, Mac und Linux)
+### <a name="visual-studio-code-and-docker-cli-cross-platform-tools-for-mac-linux-and-windows"></a>Visual Studio Code und Docker-CLI (Cross-Platform-Tools für Mac, Linux und Windows)
 
-Wenn Sie einen einfachen, plattformübergreifende-Editor unterstützt Entwicklungssprache bevorzugen, können Sie Visual Studio-Code und Docker-Befehlszeilenschnittstelle verwenden. Diese Produkte bieten eine einfache, aber robuste erzielen Sie, die für die Optimierung von des Developer-Workflows entscheidender Bedeutung ist. Installieren Sie "Docker für Mac" oder "Docker für Windows" (Development Environment), können Docker-Entwickler eine einzelne Docker-Befehlszeilenschnittstelle Sie um apps für Windows oder Linux (Common Language Runtime Environment) zu erstellen. Darüber hinaus Visual Studio Code unterstützt Erweiterungen für Docker mit IntelliSense für dockerfile-Dateien und Verknüpfung Aufgaben zum Docker-Befehle aus dem Editor ausführen.
+Wenn Sie einen einfachen, plattformübergreifenden Editor, die jede beliebige Entwicklungssprache unterstützt bevorzugen, können Sie Visual Studio Code und Docker-CLI. Diese Produkte bieten eine einfachen aber widerstandsfähigen Prozess, der für den Entwicklungsworkflow optimiert von entscheidender Bedeutung ist. Durch die Installation von "Docker for Mac" oder "Docker für Windows" (Development Environment), können Docker-Entwickler eine einzelne Docker-CLI verwenden, um apps für Windows und Linux (Common Language Runtime Environment) zu erstellen. Darüber hinaus Visual Studio Code unterstützt Erweiterungen für Docker mit IntelliSense für die dockerfile-Dateien und Verknüpfungsaufgaben Docker-Befehle aus dem Editor ausführen.
 
 > [!NOTE]
-> Um Visual Studio Code herunterzuladen, wechseln Sie zu <https://code.visualstudio.com/download>.
+> Informationen zum Herunterladen von Visual Studio Code finden Sie unter <https://code.visualstudio.com/download>.
 
-Um Docker für Macintosh- und Windows herunterzuladen, wechseln Sie zu <https://www.docker.com/products/docker>.
+Um Docker für Mac und Windows herunterzuladen, wechseln Sie zu <https://www.docker.com/products/docker>.
 
-### <a name="visual-studio-with-docker-tools"></a>Visual Studio mit Docker-Tools
+### <a name="visual-studio-with-docker-tools"></a>Visual Studio mit der Docker-Tools
 
-Wenn Sie Visual Studio 2015 verwenden, können Sie das Add-on-Tools "Docker-Tools für Visual Studio." installieren Für Visual Studio 2017 stammen Docker-Tools bereits integrierten. In beiden Fällen können Sie entwickeln, ausführen und überprüfen Ihre Anwendungen direkt in der ausgewählten Docker-Umgebung. F5 Ihrer Anwendung (einzelne Container oder mehrere Container) direkt in ein Docker hosten beim Debuggen oder drücken Sie STRG + F5, bearbeiten und aktualisieren Sie die app ohne den Container neu erstellt wird. Dies ist die einfachste und leistungsfähiger Wahl für Windows-Entwickler, die Docker-Container für Linux- oder Windows erstellen.
+Wenn Sie Visual Studio 2015 verwenden, können Sie "Docker-Tools für Visual Studio". die Add-on-Tools installieren Für Visual Studio 2017 werden Docker-Tools bereits integrierten. In beiden Fällen können Sie entwickeln, ausführen und überprüfen Ihre Anwendungen direkt in der ausgewählten Docker-Umgebung. F5 Ihrer Anwendung (einzelne oder mehrere Container) direkt in Docker hosten, die beim Debuggen oder drücken Sie STRG + F5 zum Bearbeiten und aktualisieren Sie die app ohne den Container erneut erstellen. Dies ist die einfachste und leistungsfähigere Wahl für Windows-Entwickler, die Docker-Container für Linux oder Windows erstellen.
 
 > [!NOTE]
 > Um Docker-Tools für Visual Studio herunterzuladen, wechseln Sie zu <https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4>.
 
 ## <a name="language-and-framework-choices"></a>Sprache und Framework-Optionen
 
-Sie können die Docker-Anwendungen und Microsoft-Tools für die meisten modernen Sprachen entwickeln. Im folgenden finden eine anfängliche Liste, aber Sie sind nicht darauf beschränkt:
+Sie können Docker-Anwendungen und Microsoft-Tools mit den meisten modernen Sprachen entwickeln. Im folgenden ist eine anfängliche Liste, aber Sie sind nicht darauf beschränkt:
 
 -   .NET Core und ASP.NET Core
 -   Node.js
@@ -44,9 +44,8 @@ Sie können die Docker-Anwendungen und Microsoft-Tools für die meisten modernen
 -   Ruby
 -   Python
 
-Grundsätzlich können Sie eine moderne Sprache, die von Docker unter Linux oder Windows unterstützt.
-
+Im Grunde genommen können Sie alle modernen Sprache, die von Docker unter Linux oder Windows unterstützt werden.
 
 >[!div class="step-by-step"]
-[Zurück](orchestrate-high-scalability-availability.md)
-[Weiter](docker-apps-inner-loop-workflow.md)
+>[Zurück](orchestrate-high-scalability-availability.md)
+>[Weiter](docker-apps-inner-loop-workflow.md)

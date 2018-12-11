@@ -1,16 +1,15 @@
 ---
 title: Richtlinien für Auflistungen
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964835"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145581"
 ---
 # <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
 Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten, die einige gemeinsame Merkmale haben, kann eine Auflistung betrachtet werden. Es ist fast immer für solche Typen implementieren <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>, sodass in diesem Abschnitt nur Typen, die Implementierung einer oder beide dieser Schnittstellen, die Sammlungen sein betrachten wir.  
@@ -109,7 +108,7 @@ Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten, die ein
  **X DO NOT** erben von nicht generischen Basisklasse Auflistungen wie z. B. `CollectionBase`. Verwendung `Collection<T>`, `ReadOnlyCollection<T>`, und `KeyedCollection<TKey,TItem>` stattdessen.  
   
 ### <a name="naming-custom-collections"></a>Benennen benutzerdefinierte Sammlungen  
- Auflistungen (Typen implementiert `IEnumerable`) werden hauptsächlich aus zwei Gründen erstellt: (1), um eine neue Datenstruktur mit Vorgängen Struktur und oft unterschiedliche Leistungsmerkmale als vorhandenen Datenstrukturen zu erstellen (z. B. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>), und (2) erstellen Sie eine spezielle Auflistung für einen bestimmten Satz von Elementen enthält (z. B. <xref:System.Collections.Specialized.StringCollection>). Datenstrukturen werden am häufigsten in der internen Implementierung von Anwendungen und Bibliotheken verwendet. Spezialisierte Auflistungen sind in erster Linie zum in-APIs (als Eigenschaft und Parametertypen) verfügbar gemacht werden.  
+ Auflistungen (Typen implementiert `IEnumerable`) werden hauptsächlich aus zwei Gründen erstellt: (1), erstellen Sie eine neue Datenstruktur mit Vorgängen Struktur und oft unterschiedliche Leistungsmerkmale als vorhandenen Datenstrukturen (z. B. <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>), und (2) eine spezielle Sammlung erstellen enthält eine bestimmte Gruppe von Elementen (z. B. <xref:System.Collections.Specialized.StringCollection>). Datenstrukturen werden am häufigsten in der internen Implementierung von Anwendungen und Bibliotheken verwendet. Spezialisierte Auflistungen sind in erster Linie zum in-APIs (als Eigenschaft und Parametertypen) verfügbar gemacht werden.  
   
  **✓ DO** verwenden Sie das Suffix "Wörterbuch" in Namen von Abstraktionen implementieren `IDictionary` oder `IDictionary<TKey,TValue>`.  
   
@@ -127,7 +126,7 @@ Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten, die ein
   
  *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   
- *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*  
+ *Pearson Education, Inc. über Rechte vorbehalten [Framework-Entwurfsrichtlinien vorgestellt: Aufrufkonventionen, Ausdrücke und Muster für die Wiederverwendbare Bibliotheken für .NET, 2. Auflage](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina und Brad Abrams, 22. Oktober 2008 von Addison-Wesley Professional als Teil der Microsoft Windows Development-Reihe veröffentlicht.*  
   
 ## <a name="see-also"></a>Siehe auch
 

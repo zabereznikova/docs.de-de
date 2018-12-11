@@ -1,22 +1,33 @@
 ---
 title: Erste Schritte mitF#
-description: Weitere Informationen zum Einstieg in die F# Programmiersprache in .NET.
-ms.date: 09/06/2016
-ms.openlocfilehash: 6c419ce8f05096566012b7b6a0b8601350c938a8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: Weitere Informationen zum Einstieg in die F# Programmiersprache.
+ms.date: 12/08/2018
+ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33562543"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170820"
 ---
-# <a name="getting-started-with-f"></a>Erste Schritte mitF# #
+# <a name="get-started-with-f"></a>Erste Schritte mitF# #
 
-Es gibt mehrere Möglichkeiten zum Einstieg in F#.  Es sind mehrere Artikel geschrieben, um eine Anleitung für jede diesjährigen bereitzustellen.  Sie können in der folgende Tabelle verwenden, bei der Entscheidung helfen.
+Sie können beginnen, mit F# auf Ihrem Computer oder online.
 
-| Betriebssystem | Bevorzugen Sie Visual Studio | Bevorzugen Sie Visual Studio-Code | Möchten Sie eine Befehlszeile |
+## <a name="get-started-on-your-machine"></a>Erste Schritte auf Ihrem Computer
+
+Es gibt mehrere Anleitungen zum Installieren und Verwenden von F# zum ersten Mal auf Ihrem Computer.  Sie können in der folgende Tabelle verwenden, um Sie bei der Entscheidung:
+
+| Betriebssystem | Bevorzugen Sie Visual Studio | Bevorzugen Sie Visual Studio-Code | Über die Befehlszeile bevorzugen |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Erste Schritte mit Visual Studio](get-started-visual-studio.md) | [Erste Schritte mit VSCode und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
-| macOS | [Erste Schritte mit Visual Studio für Mac](get-started-with-visual-studio-for-mac.md) | [Erste Schritte mit VSCode und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
-| Linux | Nicht zutreffend | [Erste Schritte mit VSCode und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
+| Windows | [Erste Schritte mit Visual Studio](get-started-visual-studio.md) | [Erste Schritte mit Visual Studio Code und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
+| macOS | [Erste Schritte mit Visual Studio für Mac](get-started-with-visual-studio-for-mac.md) | [Erste Schritte mit Visual Studio Code und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
+| Linux | Nicht zutreffend | [Erste Schritte mit Visual Studio Code und Ionide](get-started-vscode.md) | [Erste Schritte mit .NET Core-CLI](get-started-command-line.md) |
 
-Im Allgemeinen besteht keine bestimmte Möglichkeit für den Einstieg die bessere Leistung als der Rest ist.  Es wird empfohlen, alle Möglichkeiten zum Verwenden F# auf Ihrem Computer aus, um festzustellen, wie Sie die besten!
+Es gibt im Allgemeinen keine spezielle, das besser als der Rest ist. Es wird empfohlen, alle Möglichkeiten zum Verwenden F# auf Ihrem Computer aus, um festzustellen, wie Sie die besten!
+
+## <a name="get-started-online"></a>Beginnen Sie online
+
+Wenn Sie nicht installieren möchten F# und .NET auf dem Computer, Sie können auch Einstieg F# im Browser:
+
+* [Einführung in die F# für Azure-Notebooks](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb) ist eine [Jupyter-Notebook](https://jupyter.org/) auf dem kostenlosen Azure Notebooks-Dienst. Melden Sie sich ein Microsoft-Konto, und Sie können sofort direkt im Browser hack!
+* [Die REPL Fable](https://fable.io/repl/) ist eine interaktive, in einem Browser REPL, die verwendet [Fable](https://fable.io/) übersetzen F# Code in JavaScript. Sehen Sie sich die zahlreichen Beispiele zwischen F# Grundlagen zu einer vollwertigen Videospiel, die alle zurzeit ausgeführten in Ihrem Browser!

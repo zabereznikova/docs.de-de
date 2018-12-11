@@ -4,12 +4,12 @@ description: Erfahren Sie durch den Zugriff auf Beispiele, in denen reichen von 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153786"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Serverlose Business-Szenarien und Anwendungsfälle
 
@@ -27,7 +27,7 @@ Eine separate einzelseitenanwendung (SPA) Ruft eine serverlose Funktion, um eine
 
 ![Automatisierte Image-Katalog](./media/automated-image-gallery.png)
 
-Die vollständige Repository und die Anweisungen zum Erstellen der Logik-app finden Sie hier: [Event Grid "Klebstoff"](https://github.com/JeremyLikness/Event-Grid-Glue).
+Die vollständige Repository und die Anweisungen zum Erstellen der Logik-app sind hier verfügbar: [Event Grid "Klebstoff"](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Plattformübergreifende mobile-Client mithilfe von Xamarin.Forms und Funktionen
 
@@ -55,7 +55,7 @@ Die Anwendung verwendet die Proxys-Funktion von Azure Functions, um einen Endpun
 
 Der Proxy bietet einen einzigen API-Endpunkt, der aktualisiert wird, um einzelne Anforderungen umgeleitet wird, wie sie serverlose Funktionen in Einzelschritten verschoben werden.
 
-Sehen Sie ein Video, das durch die gesamte Migration führt: [Lift & Shift mit serverlosen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102). Zugriff auf den Beispielcode: [bringen Sie Ihre eigene app](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Sie können ein Video anzeigen, das durch die gesamte Migration führt: [Lift & shift mit serverlosen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102). Zugriff auf den Beispielcode: [Bringen Sie Ihre eigene app](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analysieren einer CSV-Datei, und fügen Sie in einer Datenbank
 
@@ -77,7 +77,7 @@ Sie können dann ein Power BI-Dashboard, um Einblicke zu den gesammelten Daten e
 
 ![Power BI-Beispiel](./media/power-bi-example.png)
 
-Repository-verkürzer vollständiger Link wird mit einer Anleitung ist hier verfügbar: [serverloser URL-verkürzer](https://github.com/jeremylikness/serverless-url-shortener). Informieren Sie sich über eine vereinfachte Version hier: [Azure Storage für serverlose .NET apps in wenigen Minuten](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Repository-verkürzer vollständiger Link wird mit einer Anleitung ist hier verfügbar: [Serverloser URL-verkürzer](https://github.com/jeremylikness/serverless-url-shortener). Sie können über eine vereinfachte Version hier lesen: [Azure-Speicher für serverlose .NET apps in wenigen Minuten](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Überprüfen Sie die Verbindung von Geräten mit dem Befehl ping
 
@@ -98,5 +98,5 @@ Weitere Informationen finden Sie unter [Azure IoT Hub – Ping](https://azure.mi
 * [Serverloser URL-verkürzer](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[Zurück](orchestration-patterns.md)
-[Weiter](serverless-conclusion.md)
+>[Zurück](orchestration-patterns.md)
+>[Weiter](serverless-conclusion.md)

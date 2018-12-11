@@ -1,18 +1,18 @@
 ---
 title: Sequenzen (F#)
-description: Erfahren Sie, wie Sie F#-Sequenzen zu verwenden, wenn Sie eine große Sammlung von Daten sortiert haben, aber nicht unbedingt erwartet, dass alle Elemente zu verwenden.
+description: Erfahren Sie, wie Sie mit F# Sequenzen, wenn Sie eine große haben geordnete Auflistung von Daten kann aber nicht unbedingt alle Elemente zu verwenden.
 ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 835aa5fdc32f98efdc7e1795efd09541a5f1b791
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838902"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129206"
 ---
 # <a name="sequences"></a>Sequenzen
 
 > [!NOTE]
-Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
+> Mit dem API-Referenz-Link in diesem Artikel gelangen Sie auf MSDN.  Die docs.microsoft.com-API-Referenz ist nicht abgeschlossen.
 
 Ein *Sequenz* ist eine logische Reihe von Elementen eines einzigen Typs. Sequenzen sind besonders nützlich, wenn Sie über eine große geordnete Auflistung von Daten, aber unbedingt erwarten nicht alle Elemente zu verwenden. Einzelne Sequenzelemente werden nur als Elemente berechnet werden erforderlich, damit eine bessere Leistung als eine Liste in Situationen eine Sequenz bereitstellen kann, wenn in dem möglicherweise nicht alle Elemente verwendet werden. Sequenzen werden dargestellt, durch die `seq<'T>` Typ, der einen Alias für `System.Collections.Generic.IEnumerable`. Aus diesem Grund alle .NET Framework-Typ, der implementiert `System.IEnumerable` kann als Sequenz verwendet werden. Die [Seq-Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) bietet Unterstützung für Manipulationen mit Sequenzen.
 
@@ -120,7 +120,7 @@ Der folgende Code ist ein Beispiel, das viele der hier beschriebenen zum Generie
 
 ## <a name="searching-and-finding-elements"></a>Suchen und Suchen von Elementen
 
-Sequenzen unterstützen Funktionen zur Verfügung, mit Listen: [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq. exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [ Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), und [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Die Versionen dieser Funktionen, die für Sequenzen verfügbar sind, bewerten die Sequenz nur bis zu das Element, das nach der gesucht werden. Beispiele finden Sie in [listet](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
+Sequenzen unterstützen Funktionen, die mit Listen zur Verfügung: [Seq.Exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq. exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq.tryFind ](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47), und [Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Die Versionen dieser Funktionen, die für Sequenzen verfügbar sind, bewerten die Sequenz nur bis zu das Element, das nach der gesucht werden. Beispiele finden Sie in [listet](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
 
 ## <a name="obtaining-subsequences"></a>Abrufen von Untersequenzen
 

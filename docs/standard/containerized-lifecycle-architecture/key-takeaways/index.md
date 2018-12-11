@@ -4,16 +4,16 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646245"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148629"
 ---
 # <a name="key-takeaways"></a>Wichtige Erkenntnisse
 
--   Containerbasierte Lösungen bieten wichtige Vorteile bei der Kosteneinsparung, da Container eine Lösung für Bereitstellungsprobleme darstellen, die durch das Fehlen von Abhängigkeiten in Produktionsumgebungen verursacht werden, wodurch DevOps und Produktionsabläufe erheblich verbessert werden.
+-   Containerbasierte Lösungen bieten wichtige Vorteile bei der kosteneinsparung, da Container eine Lösung für Bereitstellungsprobleme darstellen, die durch das Fehlen von Abhängigkeiten in produktionsumgebungen aus diesem Grund verursacht, DevOps und Produktionsabläufe erheblich verbessert werden. .
 
 -   Docker entwickelt sich praktisch zum Standard in der Containerindustrie und wird von den meisten wichtigen Anbietern in den Linux- und Windows-Ökosystemen unterstützt. In Zukunft wird Docker in jedem lokalen oder Clouddatencenter allgegenwärtig sein.
 
@@ -26,4 +26,4 @@ ms.locfileid: "45646245"
 Azure DevOps-Dienste vereinfacht Ihre DevOps-Umgebung, die für Docker-Umgebungen über Ihre Continuous Deployment-Pipelines, einschließlich einfacher Docker-Umgebungen oder erweiterte microservice- und containerorchestratoren, die auf Basis von Azure festgelegt.
 
 >[!div class="step-by-step"]
-[Vorherige](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Vorherige](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

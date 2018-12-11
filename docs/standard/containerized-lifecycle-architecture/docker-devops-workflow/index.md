@@ -4,12 +4,12 @@ description: 'Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Pla
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128439"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 
@@ -21,7 +21,7 @@ Microsoft-Tools können die Pipeline für spezifische Implementierungen von cont
 
 Entwickler und Tester können einfach und schnell produktionsähnliche Entwicklungs- und Testumgebungen basierend auf Docker bereitstellen, indem sie Vorlagen in Microsoft Azure verwenden.
 
-Die Komplexität der Entwicklung von Containanwendungen nimmt abhängig von der Komplexität und Skalierbarkeit des Unternehmens stetig zu. Ein gutes Beispiel hierfür sind Anwendungen auf der Grundlage von Microservicesarchitekturen. Um in einer solchen Umgebung erfolgreich zu sein, muss Ihr Projekt den gesamten Lebenszyklus automatisieren: nicht nur die Erstellung und Bereitstellung, sondern auch die Versionsverwaltung und die Erfassung von Telemetriedaten. Azure DevOps-Dienste und Azure bieten die folgenden Funktionen:
+Die Komplexität der Entwicklung von Containanwendungen nimmt abhängig von der Komplexität und Skalierbarkeit des Unternehmens stetig zu. Ein gutes Beispiel hierfür sind Anwendungen auf der Grundlage von Microservicesarchitekturen. Um in einer solchen Umgebung erfolgreich ausgeführt werden, muss das Projekt den gesamten Lebenszyklus automatisieren – nicht nur die Erstellung und Bereitstellung, sondern auch müssen Versionen verwalten und die Erfassung von Telemetriedaten. Azure DevOps-Dienste und Azure bieten die folgenden Funktionen:
 
 -   Azure DevOps-Services-Team Foundation Server quellcodeverwaltung (basierend auf Git oder Team Foundation Version Control), Agile Planung (Agile, Scrum und CMMI werden unterstützt), CI, Release Management und andere Tools für Agile-Teams.
 
@@ -33,7 +33,6 @@ Die Komplexität der Entwicklung von Containanwendungen nimmt abhängig von der 
 
 -   Organisationen können Docker-Container aus privaten Images, die in der Azure Container Registry gespeichert sind, zusammen mit allen Abhängigkeiten von Azure-Komponenten (Daten, PaaS usw.) mithilfe von Azure Resource Manager-Vorlagen und -Tools bereitstellen, die schon jetzt problemlos eingesetzt werden.
 
-
 >[!div class="step-by-step"]
-[Zurück](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
-[Weiter](docker-application-outer-loop-devops-workflow.md)
+>[Zurück](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[Weiter](docker-application-outer-loop-devops-workflow.md)

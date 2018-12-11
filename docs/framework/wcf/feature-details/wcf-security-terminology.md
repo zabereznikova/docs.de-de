@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297061"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126821"
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
@@ -120,7 +120,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Zertifizierungsstelle an der Spitze der Zertifizierungsstellenhierarchie. Die Stammzertifizierungsstelle zertifiziert Zertifizierungsstellen in der nächsten Hierarchieebene.  
   
  Secure Hash Algorithm (SHA)  
- Ein Hashalgorithmus, der einen Nachrichtenhash generiert. Der SHA wird u. a. zusammen mit dem Digital Signature Algorithm (DSA) im Digital Signature Standard (DSS) verwendet. Es gibt vier Arten von SHAs: SHA-1, SHA-256, SHA-384 und SHA-512. SHA-1 generiert einen 160-Bit-Nachrichtenhash. SHA-256, SHA-384 und SHA-512 generieren 256-Bit-, 384-Bit- bzw. 512-Bit-Nachrichtenhashes. Der SHA wurde vom National Institute of Standards and Technology (NIST) und von der National Security Agency (NSA) entwickelt.  
+ Ein Hashalgorithmus, der einen Nachrichtenhash generiert. Der SHA wird u. a. zusammen mit dem Digital Signature Algorithm (DSA) im Digital Signature Standard (DSS) verwendet. Es gibt vier Arten von SHAS: SHA-1, SHA-256, SHA-384 und SHA-512. SHA-1 generiert einen 160-Bit-Nachrichtenhash. SHA-256, SHA-384 und SHA-512 generieren 256-Bit-, 384-Bit- bzw. 512-Bit-Nachrichtenhashes. Der SHA wurde vom National Institute of Standards and Technology (NIST) und von der National Security Agency (NSA) entwickelt.  
   
  Secure Sockets Layer (SSL)  
  Ein Protokoll für die sichere Netzwerkkommunikationen mit einer Kombination aus öffentlicher und privater Schlüsseltechnologie.  

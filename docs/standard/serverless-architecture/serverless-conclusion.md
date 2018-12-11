@@ -4,12 +4,12 @@ description: Serverless bietet viele Vorteile und verfügt über eine eigene Her
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369829"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128842"
 ---
 # <a name="conclusion"></a>Schlussbemerkung
 
@@ -30,4 +30,4 @@ Die folgende wesentliche Punkte sind die wichtigsten Erkenntnisse dieses Leitfad
 **Serverlose als ein Tool, das nicht in der Toolbox.** Serverlose Konzepte ist nicht in die Projektmappe auf die Anwendungsarchitektur exklusive. Es ist ein Tool, das als Teil einer hybridanwendung genutzt werden kann, die traditionell Ebenen, monolithische Anwendung-Back-Ends und Container enthalten können. Serverless kann verwendet werden, um vorhandene Lösungen erweitern, und ist keiner nichts Ansatz zur Anwendungsentwicklung.
 
 >[!div class="step-by-step"]
-[Vorherige](serverless-business-scenarios.md)
+>[Vorherige](serverless-business-scenarios.md)

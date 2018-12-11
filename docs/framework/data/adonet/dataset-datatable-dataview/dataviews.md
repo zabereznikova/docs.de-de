@@ -2,17 +2,17 @@
 title: "\"DataViews\""
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 93789cf64653af863cbedbf1caeea886afb713f5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514751"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129388"
 ---
 # <a name="dataviews"></a>"DataViews"
 Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in einer <xref:System.Data.DataTable> gespeicherten Daten erstellen. Diese Funktion wird oft in Datenbindungsanwendungen verwendet. Mit einem **DataView**, können Sie die Daten in einer Tabelle mit verschiedenen Sortierreihenfolgen verfügbar machen, und Sie können die Daten nach Zeilenstatus oder basierend auf einem Filterausdruck filtern.  
   
- Ein **DataView** enthält eine dynamische Ansicht von Daten in der zugrunde liegenden **DataTable**: Inhalt, Reihenfolge und Mitgliedschaft spiegeln vorgenommene Änderungen eintreten. Dieses Verhalten unterscheidet sich von der **wählen** -Methode der der **DataTable**, gibt eine <xref:System.Data.DataRow> ein Array aus einer Tabelle basierend auf einer bestimmten Filters und/oder einer Sortierreihenfolge Reihenfolge: Thiscontent enthält Änderungen an der zugrunde liegende Tabelle, jedoch die Mitgliedschaft und Reihenfolge bleiben statisch. Die dynamischen Funktionen von der **DataView** ideal für datenbindungsanwendungen.  
+ Ein **DataView** enthält eine dynamische Ansicht von Daten in der zugrunde liegenden **DataTable**: Inhalt, Reihenfolge und Mitgliedschaft spiegeln vorgenommene Änderungen eintreten. Dieses Verhalten unterscheidet sich von der **wählen** -Methode der der **DataTable**, gibt eine <xref:System.Data.DataRow> ein Array aus einer Tabelle basierend auf einer bestimmten Filters und/oder einer Sortierreihenfolge die Reihenfolge: Dieser Inhalt berücksichtigt Änderungen in der zugrunde liegende Tabelle, jedoch die Mitgliedschaft und Reihenfolge bleiben statisch. Die dynamischen Funktionen von der **DataView** ideal für datenbindungsanwendungen.  
   
  Ein **DataView** bietet Ihnen eine dynamische Ansicht einen Satz von Daten, ähnlich wie eine Ansicht, auf die Sie verschiedene Sortier- und Filterkriterien anwenden können. Im Gegensatz zu einer Datenbankansicht, jedoch eine **DataView** nicht als Tabelle behandelt werden kann und keine Ansicht der verknüpften Tabellen. Außerdem können Sie keine Spalten ausschließen, die in der Quelltabelle vorhanden sind, und auch keine Spalten (z. B. berechnete Spalten) anhängen, die nicht in der Quelltabelle vorliegen.  
   

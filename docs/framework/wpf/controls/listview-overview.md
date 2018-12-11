@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562280"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148911"
 ---
 # <a name="listview-overview"></a>Übersicht über ListView
 Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastruktur, um einen Satz von Datenelementen in verschiedenen Layouts oder Ansichten anzuzeigen. Benutzer können damit z.B. die Datenelemente in einer Tabelle anzeigen und die Spalten sortieren.  
@@ -75,13 +75,11 @@ Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastrukt
 ## <a name="sharing-the-same-view-mode"></a>Gemeinsame Nutzung des gleichen Anzeigemodus  
  Zwei <xref:System.Windows.Controls.ListView> -Steuerelemente können nicht den gleichen Anzeigemodus verwenden, zur gleichen Zeit. Wenn Sie versuchen, den gleichen Anzeigemodus mit mehr als einem <xref:System.Windows.Controls.ListView> zu steuern, eine Ausnahme auftritt.  
   
- Um einen Anzeigemodus anzugeben, die gleichzeitig von mehreren verwendet werden kann <xref:System.Windows.Controls.ListView>, verwenden Sie Vorlagen oder Stile. Ein Beispiel zum Definieren von Ansichten als <xref:System.Windows.FrameworkElement.Resources%2A>, finden Sie unter [ListView mit mehreren Ansichten Beispiel](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Um einen Anzeigemodus anzugeben, die gleichzeitig von mehreren verwendet werden kann <xref:System.Windows.Controls.ListView>, verwenden Sie Vorlagen oder Stile.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Erstellen eines benutzerdefinierten Ansichtsmodus  
- Angepasste Ansichten wie <xref:System.Windows.Controls.GridView> stammen von der <xref:System.Windows.Controls.ViewBase> abstrakte Klasse, die stellt die Tools zum Anzeigen von Datenelementen, die als dargestellt werden <xref:System.Windows.Controls.ListViewItem> Objekte.  
-  
- Ein Beispiel für einen benutzerdefinierten Ansichtsmodus finden Sie unter [Beispiel für eine ListView mit mehreren Ansichten](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Angepasste Ansichten wie <xref:System.Windows.Controls.GridView> stammen von der <xref:System.Windows.Controls.ViewBase> abstrakte Klasse, die stellt die Tools zum Anzeigen von Datenelementen, die als dargestellt werden <xref:System.Windows.Controls.ListViewItem> Objekte.    
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Windows.Controls.GridView>  

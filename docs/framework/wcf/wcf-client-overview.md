@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 03a9580bee6308ef53c7d2bc6e9dbe619c2048f7
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808431"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152629"
 ---
 # <a name="wcf-client-overview"></a>Übersicht über den WCF-Client
-In diesem Abschnitt wird beschrieben, was Clientanwendungen ausgeführten Aktionen, wie Sie konfigurieren, erstellen und Verwenden eines Windows Communication Foundation (WCF)-Clients und zum Sichern von Clientanwendungen.  
+Dieser Abschnitt beschreibt das vorgehen, Client-Anwendungen, wie Sie konfigurieren, erstellen und verwenden Sie einen Windows Communication Foundation (WCF)-Client und Client-Anwendungen zu sichern.  
   
 ## <a name="using-wcf-client-objects"></a>Verwenden von WCF-Clientobjekten  
- Eine Clientanwendung ist eine verwaltete Anwendung, die einen WCF-Client verwendet, um die Kommunikation mit einer anderen Anwendung. Zum Erstellen von eines Clients erfordert die Anwendung für einen WCF-Dienst die folgenden Schritte aus:  
+ Eine Clientanwendung ist eine verwaltete Anwendung, die einen WCF-Client, die für die Kommunikation mit einer anderen Anwendung verwendet. Erstellen einer Clientanwendung erfordert die Anwendung für einen WCF-Dienst die folgenden Schritte aus:  
   
 1.  Abrufen des Dienstvertrags, der Bindungen und der Adressinformationen für einen Dienstendpunkt.  
   
@@ -26,7 +26,7 @@ In diesem Abschnitt wird beschrieben, was Clientanwendungen ausgeführten Aktion
   
 3.  Aufrufen von Vorgängen.  
   
-4.  Schließen Sie den WCF-Clientobjekts.  
+4.  Schließen Sie das WCF-Client-Objekt.  
   
  In den folgenden Abschnitten finden Sie eine Erläuterung dieser Schritte und kurze Einführungen in die folgenden Probleme:  
   
@@ -41,18 +41,18 @@ In diesem Abschnitt wird beschrieben, was Clientanwendungen ausgeführten Aktion
 -   Aufrufen von Diensten mithilfe von Clientkanälen.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Abrufen von Dienstvertrag, Bindungen und Adressen  
- In WCF modellieren Dienste und Clients Verträge mit verwalteten Attributen, Schnittstellen und Methoden. Soll eine Verbindung zu einem Dienst in einer Clientanwendung hergestellt werden, muss der Informationstyp für den Dienstvertrag abgerufen werden. In der Regel wird Sie zu diesem Zweck die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), konvertiert es in eine verwaltete Quellcodedatei in der Sprache Ihrer Wahl der Metadaten vom Dienst heruntergeladen, und erstellt einen Client Anwendungskonfigurationsdatei, die Sie zum Konfigurieren des WCF-Clientobjekts verwenden können. Z. B., wenn Sie beabsichtigen, erstellen Sie einen WCF-Clientobjekts zum Aufrufen einer `MyCalculatorService`, und Sie wissen, dass die Metadaten für diesen Dienst an veröffentlicht wird `http://computerName/MyCalculatorService/Service.svc?wsdl`, und dann das folgende Codebeispiel zeigt, wie von Svcutil.exe zum Abrufen einer `ClientCode.vb` -Datei mit enthält den Dienstvertrag in verwaltetem Code.  
+ In WCF Modellieren Sie Dienste und Clients Verträge, die über verwaltete Attribute, Schnittstellen und Methoden. Soll eine Verbindung zu einem Dienst in einer Clientanwendung hergestellt werden, muss der Informationstyp für den Dienstvertrag abgerufen werden. In der Regel Sie dazu die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), konvertiert es in eine verwaltete Quellcodedatei in der Sprache Ihrer Wahl der Metadaten vom Dienst heruntergeladen, und erstellt einen Client Konfigurationsdatei der Anwendung, die Sie zum Konfigurieren des WCF-Clientobjekts verwenden können. Z. B., wenn Sie beabsichtigen, zum Erstellen eines WCF-Clientobjekts zum Aufrufen einer `MyCalculatorService`, und Sie wissen, dass die Metadaten für diesen Dienst an veröffentlicht werden `http://computerName/MyCalculatorService/Service.svc?wsdl`, wird im folgenden Codebeispiel wird veranschaulicht, wie von Svcutil.exe zum Abrufen einer `ClientCode.vb` Datei, enthält den Dienstvertrag in verwaltetem Code.  
   
 ```  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
- Dieser Vertragscode kann entweder kompiliert werden, in der Clientanwendung oder einer anderen Assembly, die die Clientanwendung anschließend zum Erstellen eines WCF-Client-Objekts verwenden können. Sie können die Konfigurationsdatei zum Konfigurieren des Clientobjekts verwenden, um eine ordnungsgemäße Verbindung zum Dienst herzustellen.  
+ Sie können entweder diese Contract-Code kompilieren, in die Clientanwendung oder einer anderen Assembly, die die Clientanwendung dann zum Erstellen eines WCF-Client-Objekts verwenden können. Sie können die Konfigurationsdatei zum Konfigurieren des Clientobjekts verwenden, um eine ordnungsgemäße Verbindung zum Dienst herzustellen.  
   
- Ein Beispiel dieses Prozesses finden Sie unter [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Weitere Informationen zu Verträgen, finden Sie unter [Verträge](../../../docs/framework/wcf/feature-details/contracts.md).  
+ Ein Beispiel hierzu finden Sie unter [Vorgehensweise: Erstellen Sie einen Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Ausführlichere Informationen zu Verträgen finden Sie unter [Verträge](../../../docs/framework/wcf/feature-details/contracts.md).  
   
 ## <a name="create-a-wcf-client-object"></a>Erstellen eines WCF-Clientobjekts  
- Ein WCF-Client ist ein lokales Objekt, das einen WCF-Dienst in einer Form darstellt, die der Client zur Kommunikation mit dem Remotedienst verwenden können. WCF-Clienttypen implementieren den Vertrag, damit beim Erstellen und konfigurieren Sie dann das Clientobjekt verwenden können direkt, um Dienstvorgänge aufzurufen. Der WCF-Laufzeit konvertiert die Methodenaufrufe in Nachrichten, sendet diese an den Dienst, hört die Antwort und gibt diese Werte mit dem WCF-Client-Objekt als Rückgabewerte oder `out` oder `ref` Parameter.  
+ Ein WCF-Client ist ein lokales Objekt, das einen WCF-Dienst in einer Form, die der Client verwenden kann darstellt, für die Kommunikation mit dem Remotedienst. WCF-Clienttypen implementieren den Zieldienst Vertrag, sodass bei dem Erstellen und konfigurieren Sie ihn, Sie dann das Clientobjekt verwenden können direkt, um Dienstvorgänge aufzurufen. Der WCF-Laufzeit konvertiert die Methodenaufrufe in Nachrichten, sendet sie an den Dienst, hört die Antwort und gibt diese Werte an das WCF-Clientobjekt als Rückgabewerte oder `out` oder `ref` Parameter.  
   
  Sie können auch WCF-clientkanalobjekten herstellen und diese Dienste verwenden. Weitere Informationen finden Sie unter [WCF-Clientarchitektur](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
@@ -60,7 +60,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  Wenn Sie die Verwendung einer <xref:System.ServiceModel.ClientBase%601>-Klasse darstellen möchten, nehmen Sie an, dass der folgende einfache Dienstvertrag von einer Dienstanwendung generiert wurde.  
   
 > [!NOTE]
->  Wenn Sie Visual Studio zum Erstellen von WCF-Client verwenden, werden Objekte beim Hinzufügen eines Dienstverweises zum Projekt automatisch in den Objektkatalog geladen.  
+>  Wenn Sie Visual Studio zum Erstellen des WCF-Clients verwenden, werden Objekte automatisch in den Objektkatalog geladen, wenn Sie einen Dienstverweis auf Ihrem Projekt hinzufügen.  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
@@ -70,19 +70,19 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Diese Klasse kann als lokales Objekt mithilfe eines der Konstruktoren erstellt, konfiguriert und anschließend zum Herstellen einer Verbindung zu einem Dienst vom Typ `ISampleService` verwendet werden.  
   
- Es wird empfohlen, dass Sie Ihre WCF-Clientobjekts zunächst erstellen, und klicken Sie dann verwenden, und in einem einzelnen Try/Catch-Block zu schließen. Verwenden Sie nicht die `using` Anweisung (`Using` in Visual Basic) da Ausnahmen in bestimmten Fehlermodi möglicherweise. Weitere Informationen finden Sie unter den folgenden Abschnitten sowie [Vermeiden von Problemen mit der Using-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Es wird empfohlen, dass Sie Ihre WCF-Clientobjekt zuerst erstellen, und klicken Sie dann verwenden, und schließen Sie sie in einem einzelnen Try/Catch-Block. Verwenden Sie nicht die `using` Anweisung (`Using` in Visual Basic) da Ausnahmen in bestimmten Fehlermodi möglicherweise. Weitere Informationen finden Sie unter den folgenden Abschnitten als auch [verwenden schließen "und" Abort, um WCF-Client-Ressourcen freizugeben](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Verträge, Bindungen und Adressen  
- Bevor Sie einen WCF-Clientobjekts erstellen können, müssen Sie das Clientobjekt konfigurieren. Insbesondere benötigen sie einen Dienst *Endpunkt* verwenden. Ein Endpunkt ist die Kombination eines Dienstvertrags, einer Bindung und einer Adresse. (Weitere Informationen über Endpunkte finden Sie unter [Endpunkte: Adressen, Bindungen und Verträge](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) In der Regel befindet sich diese Informationen den [ \<Endpunkt >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) Element in einer Konfigurationsdatei der Clientanwendung, beispielsweise das Tool "Svcutil.exe" generiert und wird automatisch geladen, wenn Sie Ihren Client erstellen -Objekt. Beide WCF-Clienttypen verfügen auch Überladungen, die Ihnen ermöglichen, das programmgesteuerte angeben dieser Informationen.  
+ Bevor Sie einen WCF-Clientobjekt erstellen können, müssen Sie das Clientobjekt konfigurieren. Insbesondere benötigen sie einen Dienst *Endpunkt* verwenden. Ein Endpunkt ist die Kombination eines Dienstvertrags, einer Bindung und einer Adresse. (Weitere Informationen zu Endpunkten finden Sie unter [Endpunkte: Adressen, Bindungen und Verträge](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) In der Regel befindet sich diese Informationen in den [ \<Endpunkt >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) Element in einer Konfigurationsdatei der Clientanwendung, wie das Tool Svcutil.exe generiert und wird automatisch geladen, wenn Sie einen Client erstellen -Objekt. Beide Arten der WCF-Client haben auch Überladungen, mit die Sie programmgesteuert auf diese Informationen angeben können.  
   
  Beispielsweise beinhaltet eine generierte Konfigurationsdatei für einen in den vorherigen Beispielen verwendeten `ISampleService` die folgenden Endpunktinformationen.  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- Mit dieser Konfigurationsdatei wird ein Zielendpunkt im `<client>`-Element angegeben. Weitere Informationen zum Verwenden mehrerer Zielendpunkte finden Sie unter der <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> Konstruktoren.  
+ Mit dieser Konfigurationsdatei wird ein Zielendpunkt im `<client>`-Element angegeben. Weitere Informationen zum Verwenden mehrerer Zielendpunkte finden Sie unter den <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> Konstruktoren.  
   
 ## <a name="calling-operations"></a>Aufrufen von Vorgängen  
- Nach Sie verfügen über eine Clientobjekt erstellt und konfiguriert ist, erstellen Sie einen Try/Catch-Block, Aufrufen von Vorgängen auf die gleiche Weise, die Sie auch, wenn das Objekt lokal wären und schließen Sie die WCF-Clientobjekts. Wenn die Clientanwendung den ersten Vorgang aufgerufen wird, WCF öffnet automatisch den zugrunde liegenden Kanal und der zugrunde liegenden Kanal wird geschlossen, wenn das Objekt wiederverwendet wird. (Es besteht auch die Möglichkeit, den Kanal vor oder nach dem Aufruf anderer Vorgänge explizit zu öffnen und zu schließen.)  
+ Sobald Sie haben ein Clientobjekt erstellt und konfiguriert haben, erstellen Sie einen Try/Catch-Block-Vorgänge aufrufen, auf die gleiche Weise, die bei der das Objekt eine lokale Datei und schließen Sie das WCF-Client-Objekt. Wenn die Clientanwendung den ersten Vorgang aufruft, WCF automatisch den zugrunde liegenden Kanal geöffnet, und der zugrunde liegenden Kanal geschlossen wird, wenn das Objekt wiederverwendet wird. (Es besteht auch die Möglichkeit, den Kanal vor oder nach dem Aufruf anderer Vorgänge explizit zu öffnen und zu schließen.)  
   
  Beispiel: Sie verfügen über den folgenden Dienstvertrag:  
   
@@ -127,17 +127,17 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Sie können Vorgänge durch Erstellen eines WCF-Client-Objekts aufrufen, und ihre Methoden aufrufen, wie im folgenden Codebeispiel wird veranschaulicht. Beachten Sie, dass das Öffnen, aufrufen, und Schließen des WCF-Clientobjekts erfolgt innerhalb eines einzelnen Try/Catch-Blocks. Weitere Informationen finden Sie unter [beim Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) und [Vermeiden von Problemen mit der Using-Anweisung](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Sie können Vorgänge durch Erstellen eines WCF-Client-Objekts aufrufen und ihre Methoden aufrufen, wie im folgenden Codebeispiel wird veranschaulicht. Beachten Sie, dass das Öffnen, aufrufen, und Schließen des WCF-Clientobjekts erfolgt innerhalb eines einzelnen Try/Catch-Blocks. Weitere Informationen finden Sie unter [Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) und [verwenden schließen "und" Abort, um WCF-Client-Ressourcen freizugeben](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>Behandeln von Fehlern  
- Ausnahmen können in einer Clientanwendung unter folgenden Bedingungen auftreten: beim Öffnen des zugrunde liegenden Kanals (entweder explizit oder automatisch durch Aufrufen eines Vorgangs), beim Aufrufen von Vorgängen mit dem Client- oder Kanalobjekt oder beim Schließen des zugrunde liegenden Clientkanals. Anwendungen sollten zumindest erwarten, mögliche <xref:System.TimeoutException?displayProperty=nameWithType>-Ausnahmen und <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>-Ausnahmen sowie jegliche <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekte zu behandeln, die infolge von durch Vorgänge zurückgegebenen SOAP-Fehlern ausgelöst werden. Im Vorgangsvertrag angegebene SOAP-Fehler werden als <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> zu Clientanwendungen heraufgestuft, wobei der Typparameter der Detailtyp des SOAP-Fehlers ist. Weitere Informationen zur Behandlung von fehlerbedingungen in einer Clientanwendung finden Sie unter [senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md). Ein vollständiges Beispiel für das Behandeln von Fehlern in einem Client, finden Sie unter [Ausnahmen erwartet](../../../docs/framework/wcf/samples/expected-exceptions.md).  
+ Ausnahmen können in einer Clientanwendung unter folgenden Bedingungen auftreten: beim Öffnen des zugrunde liegenden Kanals (entweder explizit oder automatisch durch Aufrufen eines Vorgangs), beim Aufrufen von Vorgängen mit dem Client- oder Kanalobjekt oder beim Schließen des zugrunde liegenden Clientkanals. Anwendungen sollten zumindest erwarten, mögliche <xref:System.TimeoutException?displayProperty=nameWithType>-Ausnahmen und <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>-Ausnahmen sowie jegliche <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Objekte zu behandeln, die infolge von durch Vorgänge zurückgegebenen SOAP-Fehlern ausgelöst werden. Im Vorgangsvertrag angegebene SOAP-Fehler werden als <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> zu Clientanwendungen heraufgestuft, wobei der Typparameter der Detailtyp des SOAP-Fehlers ist. Weitere Informationen zur Behandlung von fehlerbedingungen in einer Clientanwendung finden Sie unter [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Ein vollständiges Beispiel für das Behandeln von Fehlern in einem Client, finden Sie unter [Ausnahmen erwartet](../../../docs/framework/wcf/samples/expected-exceptions.md).  
   
 ## <a name="configuring-and-securing-clients"></a>Konfigurieren und Sichern von Clients  
  Das Konfigurieren eines Clients beginnt mit dem erforderlichen Laden von Zielendpunktinformationen für das Client- oder Kanalobjekt (in der Regel von einer Konfigurationsdatei), obwohl diese Informationen auch programmgesteuert mithilfe der Clientkonstruktoren und -eigenschaften geladen werden können. Allerdings sind zusätzliche Konfigurationsschritte erforderlich, um ein bestimmtes Clientverhalten zu ermöglichen und zahlreichen Sicherheitsszenarien gerecht zu werden.  
   
- Beispielsweise werden Sicherheitsanforderungen für Dienstverträge in der Dienstvertragschnittstelle deklariert, und falls mit Svcutil.exe eine Konfigurationsdatei erstellt wurde, beinhaltet diese Datei normalerweise eine Bindung, die den Sicherheitsanforderungen des Diensts entspricht. In einigen Fällen sind jedoch möglicherweise zusätzliche Sicherheitskonfigurationen erforderlich, zum Beispiel die Konfiguration von Clientanmeldeinformationen. Vollständige Informationen zur Konfiguration der Sicherheit für WCF-Clients finden Sie unter [Sichern von Clients](../../../docs/framework/wcf/securing-clients.md).  
+ Beispielsweise werden Sicherheitsanforderungen für Dienstverträge in der Dienstvertragschnittstelle deklariert, und falls mit Svcutil.exe eine Konfigurationsdatei erstellt wurde, beinhaltet diese Datei normalerweise eine Bindung, die den Sicherheitsanforderungen des Diensts entspricht. In einigen Fällen sind jedoch möglicherweise zusätzliche Sicherheitskonfigurationen erforderlich, zum Beispiel die Konfiguration von Clientanmeldeinformationen. Vollständige Informationen zur Konfiguration der Sicherheit für WCF-Clients finden Sie [Schützen von Clients](../../../docs/framework/wcf/securing-clients.md).  
   
  Zudem können einige benutzerdefinierte Änderungen in Clientanwendungen aktiviert werden, zum Beispiel benutzerdefiniertes Laufzeitverhalten. Weitere Informationen zum Konfigurieren eines benutzerdefinierten Clientverhaltens finden Sie unter [Konfigurieren von Clientverhalten](../../../docs/framework/wcf/configuring-client-behaviors.md).  
   
@@ -148,11 +148,11 @@ End Interface
   
 -   Eine Rückrufvertragsklasse implementieren.  
   
--   Eine Instanz der Implementierungsklasse Rückrufvertrags erstellen und verwenden sie zum Erstellen der <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> -Objekt, das Sie für den WCF-Client-Konstruktor übergeben.  
+-   Erstellen Sie eine Instanz der Implementierung der rückrufvertragsklasse und erstellen die <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> -Objekt, das Sie für den WCF-Client-Konstruktor übergeben.  
   
 -   Vorgänge aufrufen und Vorgangsrückrufe behandeln.  
   
- Duplex WCF Client Objekte funktionieren wie ihre Gegenstücke, mit der Ausnahme, dass sie die erforderlichen Funktionen zur Unterstützung von Rückrufen, einschließlich der Konfiguration des rückrufdiensts verfügbar machen.  
+ Duplex WCF Objekte Clientfunktion wie ihre Gegenstücke, mit der Ausnahme, dass sie die erforderlichen Funktionen zur Unterstützung von Rückrufen, einschließlich der Konfiguration des rückrufdiensts verfügbar machen.  
   
  Beispielsweise können verschiedene Aspekte des Laufzeitverhaltens des Rückrufobjekts mithilfe der Eigenschaften des <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType>-Attributs in der Rückrufklasse gesteuert werden. Ein weiteres Beispiel ist die Verwendung der <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType>-Klasse, um die Rückgabe von Ausnahmeinformationen an Dienste, die das Rückrufobjekt aufrufen, zu ermöglichen. Weitere Informationen finden Sie unter [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md). Ein vollständiges Beispiel finden Sie unter [Duplex](../../../docs/framework/wcf/samples/duplex.md).  
   
@@ -166,10 +166,10 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Asynchrones Aufrufen von Diensten  
- Die Art und Weise eines Vorgangsaufrufs ist ausschließlich Angelegenheit des Cliententwicklers. Dies liegt daran, dass die Nachrichten, aus denen sich ein Vorgang zusammensetzt, bei der Darstellung in verwaltetem Code entweder synchronen oder asynchronen Methoden zugeordnet werden können. Wenn Sie einen Client erstellen möchten, mit dem Vorgänge asynchron aufgerufen werden, können Sie daher mit Svcutil.exe und der Option `/async` asynchronen Clientcode generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Aufrufen Service Vorgänge asynchron](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Die Art und Weise eines Vorgangsaufrufs ist ausschließlich Angelegenheit des Cliententwicklers. Dies liegt daran, dass die Nachrichten, aus denen sich ein Vorgang zusammensetzt, bei der Darstellung in verwaltetem Code entweder synchronen oder asynchronen Methoden zugeordnet werden können. Wenn Sie einen Client erstellen möchten, mit dem Vorgänge asynchron aufgerufen werden, können Sie daher mit Svcutil.exe und der Option `/async` asynchronen Clientcode generieren. Weitere Informationen finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Aufrufen von Diensten mithilfe der WCF-Clientkanäle.  
- WCF-Clienttypen erweitern <xref:System.ServiceModel.ClientBase%601>, die selbst leitet sich von <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> Schnittstelle, um die zugrunde liegende kanalsystem verfügbar zu machen. Sie können Dienste aufrufen, indem Sie den Zieldienstvertrag mit der <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>-Klasse verwenden. Weitere Informationen finden Sie unter [WCF-Clientarchitektur](../../../docs/framework/wcf/feature-details/client-architecture.md).  
+ WCF-Clienttypen erweitern <xref:System.ServiceModel.ClientBase%601>, die wiederum leitet sich von <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> Schnittstelle, um das zugrunde liegende kanalsystem verfügbar zu machen. Sie können Dienste aufrufen, indem Sie den Zieldienstvertrag mit der <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>-Klasse verwenden. Weitere Informationen finden Sie unter [WCF-Clientarchitektur](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

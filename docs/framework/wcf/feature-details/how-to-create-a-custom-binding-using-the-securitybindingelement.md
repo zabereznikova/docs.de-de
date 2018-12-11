@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181133"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155248"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
 Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestellten Bindungen, die konfiguriert werden können, jedoch bieten keine vollständige Flexibilität, wenn die Sicherheitsoptionen zu konfigurieren, die von WCF unterstützt. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestell
   
  Im Gegensatz dazu werden zum Erstellen einer benutzerdefinierten Bindung Bindungselemente erstellt und konfiguriert, und aus den Bindungselementen wird eine <xref:System.ServiceModel.Channels.CustomBinding> erstellt.  
   
- Fügen Sie hierzu die einzelnen Bindungselemente einer Auflistung hinzu, die durch eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse repräsentiert wird, und legen Sie anschließend die `Elements`-Eigenschaft der `CustomBinding` auf dieses Objekt fest. Die Bindungselemente müssen in der folgenden Reihenfolge hinzugefügt werden: Transaktionsfluss, zuverlässige Sitzung, Sicherheit, Composite Duplex, Unidirektional, Streamsicherheit, Nachrichtencodierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind.  
+ Fügen Sie hierzu die einzelnen Bindungselemente einer Auflistung hinzu, die durch eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse repräsentiert wird, und legen Sie anschließend die `Elements`-Eigenschaft der `CustomBinding` auf dieses Objekt fest. Sie müssen die Bindungselemente in der folgenden Reihenfolge hinzufügen: Transaktionsfluss, zuverlässige Sitzung, Sicherheit, Composite Duplex, unidirektional, Stream Security, Nachrichtencodierung und Transport. Beachten Sie, dass nicht alle aufgelisteten Bindungselemente in jeder Bindung erforderlich sind.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  Drei Bindungselemente beziehen sich auf die Sicherheit auf Nachrichtenebene, wobei alle von der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse abgeleitet werden. Die drei sind <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> und <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Das <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> wird für Sicherheit im gemischten Modus verwendet. Die anderen beiden Elemente werden verwendet, wenn die Nachrichtenebene Sicherheit bereitstellt.  

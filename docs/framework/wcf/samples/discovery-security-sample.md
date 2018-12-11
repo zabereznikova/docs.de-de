@@ -3,11 +3,11 @@ title: Beispiel für Ermittlungssicherheit
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50041205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129349"
 ---
 # <a name="discovery-security-sample"></a>Beispiel für Ermittlungssicherheit
 Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang beteiligt sind, sicher sein müssen. Die Erweiterung der Sicherheit von Suchmeldungen mindert das Risiko für verschiedene Angriffe (Meldungsänderung, Denial of Service, Wiederholung, Spoofing). In diesem Beispiel werden benutzerdefinierte Kanäle implementiert, die Meldungssignaturen mit dem kompakten Signaturformat berechnen und verifizieren. (Dies wird in Abschnitt 8.2 der WS-Discovery-Spezifikation beschrieben.) Das Beispiel unterstützt die [Discovery-Spezifikation von 2005](https://go.microsoft.com/fwlink/?LinkId=177912) und [Version 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
 ## <a name="sample-details"></a>Beispieldetails  
  Das Beispiel enthält eine Bibliothek und 4 Konsolenanwendungen:  
   
--   **DiscoverySecurityChannels**: eine Bibliothek, die die sichere Bindung verfügbar macht. Die Bibliothek berechnet und überprüft die kompakte Signatur für ausgehende/eingehende Meldungen.  
+-   **DiscoverySecurityChannels**: Eine Bibliothek, die die sichere Bindung verfügbar macht. Die Bibliothek berechnet und überprüft die kompakte Signatur für ausgehende/eingehende Meldungen.  
   
--   **Dienst**: einen Dienst verfügbar machen ICalculatorService-Vertrag selbst gehostet. Der Dienst wird als erkennbar markiert. Der Benutzer gibt die Details des Zertifikats an, mit dem Meldungen signiert werden. Dazu werden Speicherort, Name und Antragsstellername oder andere eindeutige Bezeichner für das Zertifikat sowie der Speicher, in dem sich die Clientzertifikate befinden, angegeben. (Clientzertifikate sind Zertifikate, mit denen die Signatur auf eingehende Meldungen überprüft werden.) Auf Grundlage dieser Details wird ein UdpDiscoveryEndpoint mit zusätzlicher Sicherheit erstellt und verwendet.  
+-   **Dienst**: Ein Dienst verfügbar machen ICalculatorService-Vertrag kann selbst gehostet. Der Dienst wird als erkennbar markiert. Der Benutzer gibt die Details des Zertifikats an, mit dem Meldungen signiert werden. Dazu werden Speicherort, Name und Antragsstellername oder andere eindeutige Bezeichner für das Zertifikat sowie der Speicher, in dem sich die Clientzertifikate befinden, angegeben. (Clientzertifikate sind Zertifikate, mit denen die Signatur auf eingehende Meldungen überprüft werden.) Auf Grundlage dieser Details wird ein UdpDiscoveryEndpoint mit zusätzlicher Sicherheit erstellt und verwendet.  
   
 -   **Client**: Diese Klasse versucht, einen ICalculatorService zu ermitteln und Aufrufen von Methoden für den Dienst. Es wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> mit erweiterter Sicherheit erstellt, mit dem die Meldungen signiert und überprüft werden.  
   
--   **AnnouncementListener**: ein selbst gehosteter Dienst, der auf Online- und offlineankündigungen lauscht und den sicheren ankündigungsendpunkt verwendet.  
+-   **AnnouncementListener**: Ein selbst gehosteter Dienst, der auf Online- und offlineankündigungen lauscht und den sicheren ankündigungsendpunkt verwendet.  
   
 > [!NOTE]
 >  Wenn Setup.bat mehrmals ausgeführt wird, werden Sie vom Zertifikat-Manager dazu aufgefordert, ein Zertifikat auszuwählen, das hinzugefügt werden soll, da es doppelte Zertifikate gibt. In diesem Fall muss Setup.bat abgebrochen und Cleanup.bat aufgerufen werden, da die Duplikate bereits erstellt wurden. Sie werden außerdem von Cleanup.bat dazu aufgefordert, ein Zertifikat auszuwählen, das gelöscht werden soll. Wählen Sie ein Zertifikat aus der Liste aus, und führen Sie weiterhin Cleanup.bat aus, bis keine Zertifikate mehr verbleiben.  
