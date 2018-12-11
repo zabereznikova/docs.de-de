@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a913de0ff20fba51295fd8282b58e3953be9bba2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 133e056663b208f2a0d12f05f31daaca95676dc5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773958"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152317"
 ---
-# <a name="getmethod-function"></a><span data-ttu-id="f8956-103">GetMethod-Funktion</span><span class="sxs-lookup"><span data-stu-id="f8956-103">GetMethod function</span></span>
-<span data-ttu-id="f8956-104">Ruft Informationen zur angegebenen Methode ab.</span><span class="sxs-lookup"><span data-stu-id="f8956-104">Retrieves information about the specified method.</span></span>
+# <a name="getmethod-function"></a><span data-ttu-id="eb8cb-103">GetMethod-Funktion</span><span class="sxs-lookup"><span data-stu-id="eb8cb-103">GetMethod function</span></span>
+<span data-ttu-id="eb8cb-104">Ruft Informationen zur angegebenen Methode ab.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-104">Retrieves information about the specified method.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="f8956-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="f8956-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eb8cb-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="eb8cb-105">Syntax</span></span>  
   
 ```  
 HRESULT GetMethod (
@@ -41,50 +41,50 @@ HRESULT GetMethod (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="f8956-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="f8956-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="eb8cb-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="eb8cb-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="f8956-107">[in] Dieser Parameter wird nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="f8956-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="eb8cb-107">[in] Dieser Parameter wird nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="f8956-108">[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.</span><span class="sxs-lookup"><span data-stu-id="f8956-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="eb8cb-108">[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="f8956-109">[in] Name der Methode.</span><span class="sxs-lookup"><span data-stu-id="f8956-109">[in] The method name.</span></span> <span data-ttu-id="f8956-110">Dieser Parameter darf nicht sein `null` und muss auf einen gültigen zeigen `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="f8956-110">This parameter cannot be `null` and must point to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="eb8cb-109">[in] Name der Methode.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-109">[in] The method name.</span></span> <span data-ttu-id="eb8cb-110">Dieser Parameter darf nicht sein `null` und muss auf einen gültigen zeigen `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-110">This parameter cannot be `null` and must point to a valid `LPCWSTR`.</span></span>
 
 `lFlags`  
-<span data-ttu-id="f8956-111">[in] Reserviert.</span><span class="sxs-lookup"><span data-stu-id="f8956-111">[in] Reserved.</span></span> <span data-ttu-id="f8956-112">Dieser Parameter muss 0 sein.</span><span class="sxs-lookup"><span data-stu-id="f8956-112">This parameter must be 0.</span></span>
+<span data-ttu-id="eb8cb-111">[in]: Reserviert</span><span class="sxs-lookup"><span data-stu-id="eb8cb-111">[in] Reserved.</span></span> <span data-ttu-id="eb8cb-112">Dieser Parameter muss 0 sein.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-112">This parameter must be 0.</span></span>
 
 `ppInSignature`   
-<span data-ttu-id="f8956-113">[out] Ein Zeiger auf die Adresse einer [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz, die in Paramteers an die Methode beschreibt.</span><span class="sxs-lookup"><span data-stu-id="f8956-113">[out] A pointer to the address of an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance that describes the in paramteers to the method.</span></span> <span data-ttu-id="f8956-114">Dieser Parameter wird ignoriert, wenn sie, um festgelegt ist `null`.</span><span class="sxs-lookup"><span data-stu-id="f8956-114">This parameter is ignored if it is set to `null`.</span></span> 
+<span data-ttu-id="eb8cb-113">[out] Ein Zeiger auf die Adresse einer [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz, die in Paramteers an die Methode beschreibt.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-113">[out] A pointer to the address of an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance that describes the in paramteers to the method.</span></span> <span data-ttu-id="eb8cb-114">Dieser Parameter wird ignoriert, wenn sie, um festgelegt ist `null`.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-114">This parameter is ignored if it is set to `null`.</span></span> 
 
 `ppOutSignature`  
-<span data-ttu-id="f8956-115">[out] Ein Zeiger auf die Adresse einer [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz, die Out-Parameter an die Methode beschreibt.</span><span class="sxs-lookup"><span data-stu-id="f8956-115">[out] A pointer to the address of an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance that describes the out parameters to the method.</span></span> <span data-ttu-id="f8956-116">Dieser Parameter wird ignoriert, wenn sie, um festgelegt ist `null`.</span><span class="sxs-lookup"><span data-stu-id="f8956-116">This parameter is ignored if it is set to `null`.</span></span> 
+<span data-ttu-id="eb8cb-115">[out] Ein Zeiger auf die Adresse einer [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz, die Out-Parameter an die Methode beschreibt.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-115">[out] A pointer to the address of an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance that describes the out parameters to the method.</span></span> <span data-ttu-id="eb8cb-116">Dieser Parameter wird ignoriert, wenn sie, um festgelegt ist `null`.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-116">This parameter is ignored if it is set to `null`.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="f8956-117">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="f8956-117">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="eb8cb-117">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="eb8cb-117">Return value</span></span>
 
-<span data-ttu-id="f8956-118">Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:</span><span class="sxs-lookup"><span data-stu-id="f8956-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="eb8cb-118">Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:</span><span class="sxs-lookup"><span data-stu-id="eb8cb-118">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="f8956-119">Konstante</span><span class="sxs-lookup"><span data-stu-id="f8956-119">Constant</span></span>  |<span data-ttu-id="f8956-120">Wert</span><span class="sxs-lookup"><span data-stu-id="f8956-120">Value</span></span>  |<span data-ttu-id="f8956-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f8956-121">Description</span></span>  |
+|<span data-ttu-id="eb8cb-119">Konstante</span><span class="sxs-lookup"><span data-stu-id="eb8cb-119">Constant</span></span>  |<span data-ttu-id="eb8cb-120">Wert</span><span class="sxs-lookup"><span data-stu-id="eb8cb-120">Value</span></span>  |<span data-ttu-id="eb8cb-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="eb8cb-121">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="f8956-122">0x80041002</span><span class="sxs-lookup"><span data-stu-id="f8956-122">0x80041002</span></span> | <span data-ttu-id="f8956-123">Die angegebene Eigenschaft wurde nicht gefunden.</span><span class="sxs-lookup"><span data-stu-id="f8956-123">The specified property was not found.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="f8956-124">0x80041006</span><span class="sxs-lookup"><span data-stu-id="f8956-124">0x80041006</span></span> | <span data-ttu-id="f8956-125">Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="f8956-125">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="f8956-126">0</span><span class="sxs-lookup"><span data-stu-id="f8956-126">0</span></span> | <span data-ttu-id="f8956-127">Der Funktionsaufruf war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="f8956-127">The function call was successful.</span></span>  |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="eb8cb-122">0x80041002</span><span class="sxs-lookup"><span data-stu-id="eb8cb-122">0x80041002</span></span> | <span data-ttu-id="eb8cb-123">Die angegebene Eigenschaft wurde nicht gefunden.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-123">The specified property was not found.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="eb8cb-124">0x80041006</span><span class="sxs-lookup"><span data-stu-id="eb8cb-124">0x80041006</span></span> | <span data-ttu-id="eb8cb-125">Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-125">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="eb8cb-126">0</span><span class="sxs-lookup"><span data-stu-id="eb8cb-126">0</span></span> | <span data-ttu-id="eb8cb-127">Der Funktionsaufruf war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-127">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="f8956-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f8956-128">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="eb8cb-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="eb8cb-128">Remarks</span></span>
 
-<span data-ttu-id="f8956-129">Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) Methode.</span><span class="sxs-lookup"><span data-stu-id="f8956-129">This function wraps a call to the [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) method.</span></span>
+<span data-ttu-id="eb8cb-129">Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) Methode.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-129">This function wraps a call to the [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) method.</span></span>
 
-<span data-ttu-id="f8956-130">Windows-Verwaltung können festlegen, die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeiger auf `null` Wenn die Methode keine in-Parameter.</span><span class="sxs-lookup"><span data-stu-id="f8956-130">Windows Management can set the [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointer to `null` if the method has no in parameters.</span></span>
+<span data-ttu-id="eb8cb-130">Windows-Verwaltung können festlegen, die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeiger auf `null` Wenn die Methode keine in-Parameter.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-130">Windows Management can set the [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointer to `null` if the method has no in parameters.</span></span>
 
-<span data-ttu-id="f8956-131">In `ppInSignature` und `ppOutSignature` beschreiben in- und out-Parameter als Eigenschaften in einem `IWbemClassObject` Instanz der Systemklasse [_Parameters](/windows/desktop/WmiSdk/--parameters).</span><span class="sxs-lookup"><span data-stu-id="f8956-131">In `ppInSignature` and `ppOutSignature` describe in and out parameters, respectively, as properties in a `IWbemClassObject` instance of the system class [_Parameters](/windows/desktop/WmiSdk/--parameters).</span></span> <span data-ttu-id="f8956-132">Die Eigenschaften im `ppInsignature` heißen \**Param \*\*\* n*, wobei *n* ist die Position des Parameters in der Methodensignatur (z. B. `Param1`, `Param2`usw..).</span><span class="sxs-lookup"><span data-stu-id="f8956-132">The properties in `ppInsignature` are named \**Param\*\*\*n*, where *n* is the position of the parameter in the method signature (such as `Param1`, `Param2`, etc.).</span></span> <span data-ttu-id="f8956-133">Die Eigenschaften im `ppOutSignature` werden auch als \**Param \*\*\* n*, und der Rückgabewert ist mit dem Namen **ReturnValue**.</span><span class="sxs-lookup"><span data-stu-id="f8956-133">The properties in `ppOutSignature` are also named \**Param\*\*\*n*, and the return value is named **ReturnValue**.</span></span> <span data-ttu-id="f8956-134">Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject::GetMethod Methode](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).</span><span class="sxs-lookup"><span data-stu-id="f8956-134">For more information and an example, see [IWbemClassObject::GetMethod method](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).</span></span>
+<span data-ttu-id="eb8cb-131">In `ppInSignature` und `ppOutSignature` beschreiben in- und out-Parameter als Eigenschaften in einem `IWbemClassObject` Instanz der Systemklasse [_Parameters](/windows/desktop/WmiSdk/--parameters).</span><span class="sxs-lookup"><span data-stu-id="eb8cb-131">In `ppInSignature` and `ppOutSignature` describe in and out parameters, respectively, as properties in a `IWbemClassObject` instance of the system class [_Parameters](/windows/desktop/WmiSdk/--parameters).</span></span> <span data-ttu-id="eb8cb-132">Die Eigenschaften im `ppInsignature` heißen `Param` *n*, wobei *n* ist die Position des Parameters in der Methodensignatur (z. B. `Param1`, `Param2`usw..).</span><span class="sxs-lookup"><span data-stu-id="eb8cb-132">The properties in `ppInsignature` are named `Param`*n*, where *n* is the position of the parameter in the method signature (such as `Param1`, `Param2`, etc.).</span></span> <span data-ttu-id="eb8cb-133">Die Eigenschaften im `ppOutSignature` werden auch als `Param` *n*, und der Rückgabewert ist mit dem Namen `ReturnValue`.</span><span class="sxs-lookup"><span data-stu-id="eb8cb-133">The properties in `ppOutSignature` are also named `Param`*n*, and the return value is named `ReturnValue`.</span></span> <span data-ttu-id="eb8cb-134">Weitere Informationen und ein Beispiel finden Sie unter [IWbemClassObject::GetMethod Methode](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).</span><span class="sxs-lookup"><span data-stu-id="eb8cb-134">For more information and an example, see [IWbemClassObject::GetMethod method](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f8956-135">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8956-135">Requirements</span></span>  
-<span data-ttu-id="f8956-136">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8956-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eb8cb-135">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eb8cb-135">Requirements</span></span>  
+<span data-ttu-id="eb8cb-136">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb8cb-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8956-137">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="f8956-137">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="eb8cb-137">**Header:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="eb8cb-137">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="f8956-138">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f8956-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="eb8cb-138">**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="eb8cb-138">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8956-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8956-139">See also</span></span>  
-[<span data-ttu-id="f8956-140">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="f8956-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="eb8cb-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eb8cb-139">See also</span></span>  
+[<span data-ttu-id="eb8cb-140">WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)</span><span class="sxs-lookup"><span data-stu-id="eb8cb-140">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
