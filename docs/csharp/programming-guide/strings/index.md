@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170651"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143921"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -70,11 +70,21 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 >  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge @"C:\files.txt" wird im Überwachungsfenster z.B. als „C:\\\files.txt“ angezeigt.  
   
 ## <a name="format-strings"></a>Formatzeichenfolgen  
- Eine Formatzeichenfolge ist eine Zeichenfolge, deren Inhalt zur Laufzeit dynamisch bestimmt werden kann. Sie erstellen eine Zeichenfolge mithilfe der statischen <xref:System.String.Format%2A>-Methode und betten Platzhalter in geschweiften Klammern ein, die durch andere Werte zur Laufzeit ersetzt werden. Das folgende Beispiel verwendet eine Formatzeichenfolge, um das Ergebnis jeder Iteration einer Schleife auszugeben:  
+ Eine Formatzeichenfolge ist eine Zeichenfolge, deren Inhalt zur Laufzeit dynamisch bestimmt wird. Formatzeichenfolgen werden erstellt, indem *interpolierte Ausdrücke* oder Platzhalter in geschweifte Klammern innerhalb einer Zeichenfolge eingebettet werden. Der in den Klammern (`{...}`) eingeschlossene Inhalt wird in einen Wert aufgelöst und zur Laufzeit als formatierte Zeichenfolge ausgegeben. Es gibt zwei Methoden zum Erstellen von Formatzeichenfolgen: Zeichenfolgeninterpolation und kombinierte Formatierung.
+
+### <a name="string-interpolation"></a>Zeichenfolgeninterpolation
+In C# 6.0 und höheren Versionen werden [*interpolierte Zeichenfolgen*](../../language-reference/tokens/interpolated.md) durch das Sonderzeichen `$` identifiziert und interpolierte Ausdrücke in geschweifte Klammern eingeschlossen. Wenn Sie noch nicht mit der Zeichenfolgeninterpolation vertraut sind, erhalten Sie im interaktiven Tutorial [Zeichenfolgeninterpolation in C#](../../tutorials/intro-to-csharp/interpolated-strings.yml) eine kurze Übersicht.
+
+Verwenden Sie die Zeichenfolgeninterpolation, um die Lesbarkeit und die Wartungsfähigkeit Ihres Codes zu verbessern. Mit der Zeichenfolgeninterpolation werden die gleichen Ergebnisse erzielt wie mit der `String.Format`-Methode, es wird jedoch die Benutzerfreundlichkeit und Übersichtlichkeit verbessert.
+
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
+
+### <a name="composite-formatting"></a>Kombinierte Formatierung
+<xref:System.String.Format%2A?displayProperty=nameWithType> verwendet Platzhalter in geschweiften Klammern, um eine Formatzeichenfolge zu erstellen. Dieses Beispiel liefert als Ergebnis eine ähnliche Ausgabe wie die oben verwendete Methode zur Zeichenfolgeninterpolation.
   
- [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
-  
- Eine Überladung der <xref:System.Console.WriteLine%2A>-Methode übernimmt eine Formatzeichenfolge als Parameter. Aus diesem Grund können Sie nur ein Formatzeichenfolgenliteral ohne den expliziten Aufruf der Methode einbetten. Wenn Sie jedoch die <xref:System.Diagnostics.Trace.WriteLine%2A>-Methode zum Anzeigen der Debugausgabe im **Ausgabefenster** von Visual Studio verwenden, müssen Sie explizit die <xref:System.String.Format%2A>-Methode aufrufen, da <xref:System.Diagnostics.Trace.WriteLine%2A> nur eine Zeichenfolge und keine Formatzeichenfolge akzeptiert. Weitere Informationen zu Formatzeichenfolgen finden Sie unter [Formatierung von Typen](../../../standard/base-types/formatting-types.md).  
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
+
+Weitere Informationen zum Formatieren von .NET-Typen finden Sie unter [Formatieren von Typen in .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Teilzeichenfolgen  
  Eine Teilzeichenfolge ist eine beliebige Sequenz von Zeichen, die in einer Zeichenfolge enthalten ist. Verwenden Sie die <xref:System.String.Substring%2A>-Methode, um eine neue Zeichenfolge aus einem Teil der ursprünglichen Zeichenfolge zu erstellen. Sie können nach einem oder mehreren Vorkommnissen einer Teilzeichenfolge suchen, indem Sie die <xref:System.String.IndexOf%2A>-Methode verwenden. Verwenden Sie die <xref:System.String.Replace%2A>-Methode, um alle Vorkommnisse einer angegebenen Teilzeichenfolge mit einer neuen Zeichenfolge zu ersetzen. Genauso wie die <xref:System.String.Substring%2A>-Methode gibt <xref:System.String.Replace%2A> tatsächlich eine neue Zeichenfolge zurück und ändert nicht die ursprüngliche Zeichenfolge. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen von Zeichenfolgen mithilfe von Zeichenfolgenmethoden](../../how-to/search-strings.md) und [Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md).  
@@ -115,7 +125,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Thema|Beschreibung |  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Gewusst wie: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md)|Veranschaulicht Methoden zum Transformieren von Zeichenfolgen und Modifizieren von Zeichenfolgeninhalten.|  
 |[Gewusst wie: Vergleichen von Zeichenfolgen](../../how-to/compare-strings.md)|So führen Sie ordinale und kulturspezifische Zeichenfolgenvergleiche durch.|  
@@ -125,7 +135,7 @@ string s = String.Empty;
 |[Gewusst wie: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Zeigt, wie Sie sicher eine Zeichenfolge analysieren, um zu sehen, ob diese über einen gültigen numerischen Wert verfügt|  
 |[Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md)|Beschreibt die Funktion zur Zeichenfolgeninterpolation, die eine zweckmäßige Syntax zum Formatieren von Zeichenfolgen bietet.|
 |[Grundlegende Zeichenfolgenoperationen](../../../../docs/standard/base-types/basic-string-operations.md)|Stellt Links zu Themen bereit, die <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Methoden verwenden, um grundlegende Zeichenfolgenoperationen durchzuführen|  
-|[Analysieren von Zeichenfolgen](../../../standard/base-types/parsing-strings.md)|Beschreibt das Konvertieren von Zeichenfolgendarstellungen der .NET-Basistypen in Instanzen der entsprechenden Typen.|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Beschreibt das Konvertieren von Zeichenfolgendarstellungen der .NET-Basistypen in Instanzen der entsprechenden Typen.|  
 |[Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET](../../../standard/base-types/parsing-datetime.md)|Zeigt, wie eine Zeichenfolge wie "01/24/2008" in ein <xref:System.DateTime?displayProperty=nameWithType>-Objekt konvertiert wird|  
 |[Vergleichen von Zeichenfolgen](../../../../docs/standard/base-types/comparing.md)|Enthält Informationen, wie Zeichenfolgen verglichen werden, und gibt Beispiele in C# und Visual Basic|  
 |[Verwenden der StringBuilder-Klasse](../../../standard/base-types/stringbuilder.md)|Beschreibt das Erstellen und Ändern dynamischer Zeichenfolgenobjekte mithilfe der <xref:System.Text.StringBuilder>-Klasse|  

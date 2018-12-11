@@ -5,12 +5,12 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ec153b8fed08ef245a3a0f58970b4e3955dfacb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567262"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154332"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Die auf Roslyn basierenden Analysetools
 
@@ -33,5 +33,6 @@ Sie installieren auf Roslyn basierende Analysetools in Ihrem Projekt als NuGet-P
 
 In diesem Abschnitt werden die folgenden Analysetools behandelt:
 
-[API Analyzer](api-analyzer.md): Dieses Analysetool untersucht Ihren Code auf potentielle Kompatibilitätsrisiken oder die Verwendung veralteter APIs.    
-[Framework Analyzer](framework-analyzer.md): Dieses Analysetool untersucht Ihren Code, um sicherzustellen, dass dieser die Richtlinien für .NET Framework-Anwendungen befolgt. Diese Regeln umfassen mehrere sicherheitsbasierte Empfehlungen.
+* [API Analyzer](api-analyzer.md): Dieses Analysetool untersucht Ihren Code auf potentielle Kompatibilitätsrisiken oder die Verwendung veralteter APIs.    
+* [Framework Analyzer](framework-analyzer.md): Dieses Analysetool untersucht Ihren Code, um sicherzustellen, dass dieser die Richtlinien für .NET Framework-Anwendungen befolgt. Diese Regeln umfassen mehrere sicherheitsbasierte Empfehlungen.
+* [.NET Portability Analyzer](portability-analyzer.md): Dieses Analysetool untersucht, wie hoch der Aufwand ist, um Ihre Anwendung mit anderen .NET-Implementierungen und -Profilen, wie z.B. .NET Core, .NET Standard, UWP und Xamarin für iOS, Android und Mac, kompatibel zu machen. 

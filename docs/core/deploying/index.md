@@ -1,27 +1,30 @@
 ---
 title: .NET Core Anwendungsbereitstellung
-description: Bereitstellen einer .NET Core-Anwendung.
+description: Erfahren Sie mehr über die Möglichkeiten zum Bereitstellen einer .NET Core-Anwendung.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836627"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144714"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
-Sie können zwei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen:
+Sie können drei Arten von Bereitstellungen für .NET Core-Anwendungen erstellen:
 
 - Framework-abhängige Bereitstellung. Wie der Name schon sagt, benötigt eine Framework-abhängige Bereitstellung (Framework-Dependent Deployment, FDD) eine gemeinsame systemweite Version von .NET Core auf dem Zielsystem. Da .NET Core bereits vorhanden ist, ist Ihre Anwendung auch zwischen .NET Core-Installationen übertragbar. Ihre Anwendung enthält nur ihren eigenen Code und Drittanbieter-Abhängigkeiten, die außerhalb von .NET Core-Bibliotheken bestehen. FDDs enthalten *DLL*-Dateien, die mithilfe des [dotnet-Hilfsprogramms](../tools/dotnet.md) über die Befehlszeile gestartet werden können. `dotnet app.dll` führt z.B. eine Anwendung namens `app` aus.
 
 - Eigenständige Bereitstellung. Im Gegensatz zu FDD müssen bei einer eigenständigen Bereitstellung (Self-Contained Deployment, SCD) die freigegebenen Komponenten nicht auf dem Zielsystem vorhanden sein. Alle Komponenten, einschließlich .NET Core-Bibliotheken und .NET Core Runtime, sind in der Anwendung enthalten und von anderen .NET Core-Anwendungen isoliert. SCDs enthalten eine ausführbare Datei (z.B. *app.exe* auf Windows-Plattformen für eine Anwendung namens `app`), die eine umbenannte Version des plattformspezifischen .NET Core-Hosts darstellt, und eine *DLL*-Datei (z.B. *app.dll*), bei der es sich um die eigentliche Anwendung handelt.
 
+- Framework-abhängige ausführbare Dateien. Hierbei wird eine ausführbare Datei erzeugt, die auf einer Zielplattform ausgeführt wird. Ähnlich wie die FDDs sind Framework-abhängige ausführbare Dateien (Framework-Dependent Executables, FDEs) plattformspezifisch und stellen keine eigenständige Bereitstellung dar. Diese Bereitstellungen hängen zur Ausführung weiterhin von dem Vorhandensein einer systemweiten Version von .NET Core ab. Im Gegensatz zu einer SCD enthält Ihre App nur ihren eigenen Code und Drittanbieterabhängigkeiten, die außerhalb der .NET Core-Bibliotheken vorliegen. FDEs erzeugen eine ausführbare Datei, die auf der Zielplattform ausgeführt wird.
+
 ## <a name="framework-dependent-deployments-fdd"></a>Framework-abhängige Bereitstellungen (FDD)
 
-Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten bereit. Sie müssen .NET Core nicht bereitstellen, da Ihre Anwendung die .NET Core- Version verwendet, die auf dem Zielsystem vorhanden ist. Dies ist das Standardbereitstellungsmodell für .NET Core- und ASP.NET Core-Apps, die für .NET Core vorgesehen sind.
+Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten bereit. Ihre App verwendet die .NET Core- Version, die auf dem Zielsystem vorhanden ist. Dies ist das Standardbereitstellungsmodell für .NET Core- und ASP.NET Core-Apps, die für .NET Core vorgesehen sind.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Warum eine Framework-abhängige Bereitstellung erstellen?
 
@@ -31,11 +34,13 @@ Die Bereitstellung einer FDD hat eine Reihe von Vorteilen:
 
 - Ihr Bereitstellungspaket ist klein. Sie müssen nur Ihre Anwendung und deren Abhängigkeiten bereitstellen, nicht .NET Core selbst.
 
+- Sofern keine Außerkraftsetzung durchgeführt wird, verwenden FDDs die neueste gewartete Runtime, die auf dem Zielsystem installiert ist. Auf diese Weise kann Ihre Anwendung die aktuelle gepatchte Version der .NET Core-Runtime nutzen. 
+
 - Mehrere Anwendungen verwenden die gleiche .NET Core-Installation, die Speicherplatz und Arbeitsspeicher auf dem Hostsystem verringert.
 
 Es gibt auch einige Nachteile:
 
-- Ihre Anwendung kann nur ausgeführt werden, wenn die .NET Core-Version die Sie anvisieren oder eine höhere Version bereits auf dem Hostsystem installiert ist.
+- Ihre App kann nur ausgeführt werden, wenn die anvisierte .NET Core-Version [oder eine höhere Version](../versions/selection.md#framework-dependent-apps-roll-forward) bereits auf dem Hostsystem installiert ist.
 
 - Es ist möglich, dass die .NET Core Runtime und die Bibliotheken ohne Ihr Wissen in zukünftigen Versionen geändert werden. In seltenen Fällen kann dies das Verhalten Ihrer Anwendung ändern.
 
@@ -65,9 +70,31 @@ Es hat auch einige Nachteile:
 
 - Das Bereitstellen von zahlreichen eigenständigen .NET Core-Anwendungen auf ein System kann viel Speicherplatz verbrauchen, da jede Anwendung .NET Core-Dateien dupliziert.
 
+## <a name="framework-dependent-executables-fde"></a>Framework-abhängige ausführbare Dateien (FDEs)
+
+Ab .NET Core 2.2 können Sie Ihre App als FDE bereitstellen, gemeinsam mit erforderlichen Drittanbieterabhängigkeiten. Ihre App verwendet die .NET Core- Version, die auf dem Zielsystem installiert ist.
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>Was spricht für eine Framework-abhängige ausführbare Datei?
+
+Die Bereitstellung einer FDE hat eine Reihe von Vorteilen:
+
+- Ihr Bereitstellungspaket ist klein. Sie müssen nur Ihre Anwendung und deren Abhängigkeiten bereitstellen, nicht .NET Core selbst.
+
+- Mehrere Anwendungen verwenden die gleiche .NET Core-Installation, die Speicherplatz und Arbeitsspeicher auf dem Hostsystem verringert.
+
+- Ihre App kann durch Aufrufen der veröffentlichten ausführbaren Datei ausgeführt werden, ohne das Hilfsprogramm `dotnet` direkt aufzurufen.
+
+Es gibt auch einige Nachteile:
+
+- Ihre App kann nur ausgeführt werden, wenn die anvisierte .NET Core-Version [oder eine höhere Version](../versions/selection.md#framework-dependent-apps-roll-forward) bereits auf dem Hostsystem installiert ist.
+
+- Es ist möglich, dass die .NET Core Runtime und die Bibliotheken ohne Ihr Wissen in zukünftigen Versionen geändert werden. In seltenen Fällen kann dies das Verhalten Ihrer Anwendung ändern.
+
+- Sie müssen Ihre App für jede Zielplattform veröffentlichen.
+
 ## <a name="step-by-step-examples"></a>Beispiele mit Schrittanleitungen
 
-Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Bereitstellen von .NET Core-Apps mit Visual Studio). Jedes Thema enthält Beispiele der folgenden Bereitstellungen:
+Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Bereitstellen von .NET Core-Apps mit Visual Studio). Jeder Artikel enthält Beispiele zu den folgenden Bereitstellungen:
 
 - Framework-abhängige Bereitstellung
 - Framework-abhängige Bereitstellung mit Drittanbieterabhängigkeiten
@@ -76,7 +103,7 @@ Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit 
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Deploying .NET Core Apps with CLI Tools (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools)](deploy-with-cli.md)
-* [Deploying .NET Core Apps with Visual Studio (Bereitstellen von .NET Core-Apps mit Visual Studio)](deploy-with-vs.md)
+* [Bereitstellen von .NET Core-Apps mit CLI-Tools](deploy-with-cli.md)
+* [Bereitstellen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md)
 * [Pakete, Metapakete und Frameworks](../packages.md)
-* [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
+* [.NET Core-RID-Katalog](../rid-catalog.md)

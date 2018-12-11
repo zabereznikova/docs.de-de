@@ -1,17 +1,17 @@
 ---
-title: .NET Core-Versionskontrolle
-description: Informationen zur Versionierung in .NET Core
+title: Versionsverwaltung für .NET Core-Runtime und SDK
+description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188468"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170716"
 ---
-# <a name="net-core-versioning"></a>.NET Core-Versionskontrolle
+# <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 
 .NET Core bezieht sich auf die .NET Core Runtime und das .NET Core SDK, das die Tools enthält, die Sie für die Entwicklung von Anwendungen benötigen. .NET Core SDKs sind so konzipiert, dass sie mit jeder früheren Version der .NET Core Runtime funktionieren. Dieser Artikel beschreibt die Runtime und die SDK-Versionsstrategie. Eine Erläuterung der Versionsnummern für .NET Standard finden Sie in dem Artikel, der [.NET Standard](../../standard/net-standard.md#net-implementation-support) vorstellt.
 

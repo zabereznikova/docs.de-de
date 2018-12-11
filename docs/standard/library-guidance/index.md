@@ -1,15 +1,15 @@
 ---
-title: Leitfaden für die Open Source-Bibliothek
+title: Leitfaden zur Open Source-Bibliothek für .NET
 description: Empfehlungen für bewährte Methoden für Entwickler zum Erstellen von qualitativ hochwertigen .NET-Bibliotheken
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128069"
 ---
 # <a name="open-source-library-guidance"></a>Leitfaden für die Open Source-Bibliothek
 
@@ -31,7 +31,7 @@ Aspekte hochqualitativer Open Source-Bibliotheken für .NET:
 
 Jeder Artikel enthält vier Empfehlungstypen: **Do**, **Erwägen**, **Vermeiden** und **Do not**. Der Empfehlungstyp kennzeichnet, wie streng die Empfehlung befolgt werden sollte.
 
-Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Zum Beispiel:
+Eine **Do**-Empfehlung sollten Sie fast immer befolgen. Beispiel:
 
 **✔️ DO** Verteilen Sie Ihre Bibliothek mithilfe eines NuGet-Pakets.
 
@@ -48,4 +48,4 @@ Schließlich kennzeichnen **Do not**-Empfehlungen Vorgänge, die Sie niemals aus
 **❌ DON‘T** Veröffentlichen Sie keine Versionen mit starkem Namen oder nicht starkem Namen Ihrer Bibliothek. Beispiel: `Contoso.Api` und `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
-[Nächste](./get-started.md)
+>[Nächste](get-started.md)

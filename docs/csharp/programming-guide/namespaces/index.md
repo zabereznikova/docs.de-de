@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002813"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151109"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 
@@ -38,8 +38,8 @@ Namespaces verfügen über die folgenden Eigenschaften:
   
 - Sie organisieren umfangreiche Codeprojekte.  
 - Sie werden durch den `.`-Operator getrennt.  
-- Durch `using directive` besteht keine Notwendigkeit, den Namen des Namespace für jede Klasse anzugeben.  
-- Der `global`-Namespace ist der Stammnamespace: `global::System` verweist immer auf den `System`-Namespace des .NET Framework.  
+- Durch die `using`-Direktive besteht keine Notwendigkeit, den Namen des Namespace für jede Klasse anzugeben.  
+- Der `global`-Namespace ist der Stammnamespace: `global::System` verweist immer auf den .NET-Namespace <xref:System>.  
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
@@ -55,5 +55,4 @@ Namespaces verfügen über die folgenden Eigenschaften:
 - [Namespaceschlüsselwörter](../../language-reference/keywords/namespace-keywords.md)  
 - [using-Direktive](../../language-reference/keywords/using-directive.md)  
 - [::-Operator](../../language-reference/operators/namespace-alias-qualifer.md)  
-- [ Operator](../../language-reference/operators/member-access-operator.md)
->>>>>>> Benennungsregeln für Bezeichner hinzufügen
+- [. Operator](../../language-reference/operators/member-access-operator.md)

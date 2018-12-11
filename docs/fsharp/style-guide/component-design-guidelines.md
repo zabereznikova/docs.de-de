@@ -74,7 +74,7 @@ In der folgende Tabelle werden die .NET benennen und Groß-/Kleinschreibung-Konv
 |-----------|------|------|----------|-------|
 | Konkrete Typen | PascalCase | Nomen / adjektivische | Liste, Double, komplexe | Konkrete Typen sind Strukturen, Klassen, Enumerationen, Delegaten, Datensätze und Unions. Obwohl Typnamen traditionell in mit OCaml Kleinbuchstaben sind, hat F# das Benennungsschema für .NET für Typen übernommen.
 | DLLs           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Union-tags     | PascalCase | Nomen | Einige hinzuzufügen, Erfolg | Verwenden Sie ein Präfix nicht in öffentlichen APIs aus. Verwenden Sie optional ein Präfix, bei der internen, z. B. "Teams geben TAlpha = | TBeta | TDelta. " |
+| Union-tags     | PascalCase | Nomen | Einige hinzuzufügen, Erfolg | Verwenden Sie ein Präfix nicht in öffentlichen APIs aus. Verwenden Sie optional ein Präfix, bei der internen, z. B. `Teams geben = TAlpha  | TBeta | TDelta. ` |
 | event          | PascalCase | Verb | ValueChanged / ValueChanging |  |
 | Ausnahmen     | PascalCase |      | WebException | Name sollte mit "Exception" enden. |
 | Feld          | PascalCase | Nomen | CurrentName  | |

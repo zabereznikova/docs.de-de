@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192482"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127926"
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
 Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell folgt dem Beobachter-Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann. Von einem Ereignissender wird eine Benachrichtigung erstellt, die angibt, dass ein Ereignis aufgetreten ist. Diese Benachrichtigung wird dann vom Ereignisempfänger empfangen, und eine Antwort wird definiert. In diesem Artikel werden die Hauptkomponenten des Delegatmodells, das Verwenden von Ereignissen in Anwendungen und das Implementieren von Ereignissen im Code beschrieben.  
@@ -80,7 +80,7 @@ Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell 
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Title|Beschreibung|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Vorgehensweise: Auslösen und Behandeln von Ereignissen](../../../docs/standard/events/how-to-raise-and-consume-events.md)|In diesem Abschnitt sind Beispiele zum Auslösen und Verarbeiten von Ereignissen enthalten.|  
 |[Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|In diesem Abschnitt wird die Verwendung von Ereigniseigenschaften zum Behandeln mehrerer Ereignisse veranschaulicht.|  

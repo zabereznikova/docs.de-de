@@ -1,39 +1,51 @@
 ---
-title: Leitfaden für ML.NET
+title: Leitfaden zu ML.NET-Inhalt
 description: Erfahren Sie mehr über das Erstellen von benutzerdefinierten KI-Lösungen, und integrieren Sie sie mithilfe von ML.NET in Ihre .NET-Anwendungen.
-author: aditidugar
-ms.date: 05/07/2018
-ms.openlocfilehash: a5be91283d8b8d00b727ec43d1137a0a245175d3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.date: 11/06/2018
+ms.custom: seodec18
+ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34862317"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126249"
 ---
-# <a name="mlnet-guide"></a>Leitfaden für ML.NET
+# <a name="mlnet-content-guide"></a>Leitfaden zu ML.NET-Inhalt
 
-ML.NET ist ein kostenloses, plattformübergeifendes Open Source-Framework für maschinelles Lernen, das Ihnen das Erstellen von benutzerdefinierten Lösungen für maschinelles Lernen und das Integrieren derselben in Ihre .NET-Anwendungen ermöglicht. Der Leitfaden für enthält viele Ressourcen zum Arbeiten mit ML.NET.
+Dieser Leitfaden erläutert grundlegende Konzepte und stellt Tutorials und eine API-Referenz zur Arbeit mit ML.NET bereit.
 
-Weitere Informationen zu ML.NET finden Sie im .NET-Blogbeitrag [Introducing ML.NET: Cross-platform, Proven and Open Source Machine Learning Framework (Einführung von ML.NET, dem bewährten, plattformübergeifenden Open Source-Framework für maschinelles Lernen)](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/).
+> [!NOTE]
+> Diese Dokumentation bezieht sich auf ML.NET, das sich zurzeit in der Vorschau befindet. Änderungen am Material vorbehalten. Weitere Informationen finden Sie in der [ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="get-started"></a>Erste Schritte
 
-Weitere Informationen zu den ersten Schritten mit ML.NET finden Sie in diesem [Schnellstart](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started) oder in den ausführlicheren [Tutorials](tutorials/index.md).
+Bearbeiten Sie zur Installation und zum Einstieg in ML.NET das [Tutorial: Erste Schritte](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial).
 
-Wenn Sie noch keine Erfahrung mit maschinellem Lernen haben, können Sie ebenfalls den Artikel [Maschinelles Lernen (Grundlagen)](resources/basics.md) lesen, in dem Ressourcen für maschinelles Lernen vorhanden sind, um Sie zu unterstützen.
+Weitere Informationen zu ML.NET erhalten Sie unter [Was ist ML.NET?](what-is-mldotnet.md)
 
-## <a name="how-the-mlnet-guide-is-organized"></a>Aufbau des Leitfadens für ML.NET
+Grundlegende Informationen finden Sie unter [Basiskonzepte für das Modelltraining in ML.NET](basic-concepts-model-training-in-mldotnet.md).
 
-Der Leitfaden für ML.NET ist in mehrere Abschnitte unterteilt. Sie können diese nacheinander lesen oder direkt zu den interessantesten Themen springen.
+## <a name="tutorials"></a>Tutorials
 
-**[Tutorials](tutorials/index.md)**
+[Standpunktanalyse mit einem Modell zur binären Klassifizierung](tutorials/sentiment-analysis.md): Hier wird gezeigt, wie Sie eine App entwickeln, die ermittelt, ob eine Stimmung positiv oder negativ ist.
 
-In diesem Abschnitt finden Sie ausführliche Tutorials, die Sie durch das Erstellen von benutzerdefinierten Modellen für maschinelles Lernen führen, die für gängige Szenarios beim Entwickeln geeignet sind.
+[Vorhersage von Taxifahrtpreisen mit einem Regressionsmodell](tutorials/taxi-fare.md): Hier wird gezeigt, wie Sie eine Vorhersage-App erstellen, die zum Bestimmen der Antwort verschiedene Faktoren aus Verlaufsdaten nutzt.
 
-**[Glossar](resources/glossary.md)**
+[Klassifizierung nach Merkmalen unter Verwendung des Iris-Beispiels](tutorials/iris-clustering.md): Hier wird gezeigt, wie Sie ein Clusteringmodell zum Analysieren des Iris-Datasets verwenden. 
 
-Hier finden Sie eine Liste der Terminologie (inklusive Definitionen) für maschinelles Lernen.
+## <a name="how-to-guide"></a>Schrittanleitung
 
-## <a name="api-reference"></a>API-Verweis
+[Erstellen einer App für eine Spielerrangliste mit Infer.NET und probabilistischer Programmierung](how-to-guides/matchup-app-infer-net.md): Hier wird gezeigt, wie Sie eine vereinfachte Version einer Spielerrangliste erstellen, wie sie in einem Xbox-Spiel angezeigt wird.
+
+## <a name="resources"></a>Ressourcen
+
+[Machine Learning-Glossar](resources/glossary.md): Definition der Schlüsselterminologie.
+
+[Machine Learning-Aufgaben](resources/tasks.md): Beschreibt Aufgaben wie z.B. Klassifizierung und Anomalieerkennung. 
+
+[Datentransformationen](resources/transforms.md): Beschreiben die Funktionen zur Datenvorbereitung in ML.NET.
+
+
+## <a name="api-reference"></a>API-Referenz
 
 In der [ML.NET-API-Referenz](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) finden Sie die gesamte Auswahl verfügbarer APIs.
