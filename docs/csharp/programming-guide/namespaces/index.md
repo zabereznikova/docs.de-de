@@ -5,55 +5,54 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002813"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151109"
 ---
-# <a name="namespaces-c-programming-guide"></a><span data-ttu-id="146b9-102">Namespaces (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="146b9-102">Namespaces (C# Programming Guide)</span></span>
+# <a name="namespaces-c-programming-guide"></a><span data-ttu-id="31b19-102">Namespaces (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="31b19-102">Namespaces (C# Programming Guide)</span></span>
 
-<span data-ttu-id="146b9-103">Namespaces werden beim Programmieren mit C# häufig und auf zwei verschiedene Arten verwendet.</span><span class="sxs-lookup"><span data-stu-id="146b9-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="146b9-104">Erstens: Das .NET Framework verwendet Namespaces, um seine vielen Klassen folgendermaßen zu organisieren:</span><span class="sxs-lookup"><span data-stu-id="146b9-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  
+<span data-ttu-id="31b19-103">Namespaces werden beim Programmieren mit C# häufig und auf zwei verschiedene Arten verwendet.</span><span class="sxs-lookup"><span data-stu-id="31b19-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="31b19-104">Erstens: Das .NET Framework verwendet Namespaces, um seine vielen Klassen folgendermaßen zu organisieren:</span><span class="sxs-lookup"><span data-stu-id="31b19-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  
   
 [!code-csharp[csProgGuide#22](../inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
-<span data-ttu-id="146b9-105">`System` ist ein Namespace, und `Console` ist eine Klasse in diesem Namespace.</span><span class="sxs-lookup"><span data-stu-id="146b9-105">`System` is a namespace and `Console` is a class in that namespace.</span></span> <span data-ttu-id="146b9-106">Das `using`-Schlüsselwort kann verwendet werden, sodass der vollständige Name nicht erforderlich ist, wie im folgenden Beispiel:</span><span class="sxs-lookup"><span data-stu-id="146b9-106">The `using` keyword can be used so that the complete name is not required, as in the following example:</span></span>  
+<span data-ttu-id="31b19-105">`System` ist ein Namespace, und `Console` ist eine Klasse in diesem Namespace.</span><span class="sxs-lookup"><span data-stu-id="31b19-105">`System` is a namespace and `Console` is a class in that namespace.</span></span> <span data-ttu-id="31b19-106">Das `using`-Schlüsselwort kann verwendet werden, sodass der vollständige Name nicht erforderlich ist, wie im folgenden Beispiel:</span><span class="sxs-lookup"><span data-stu-id="31b19-106">The `using` keyword can be used so that the complete name is not required, as in the following example:</span></span>  
   
 [!code-csharp[csProgGuide#1](../inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
 [!code-csharp[csProgGuide#25](../inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
-<span data-ttu-id="146b9-107">Weitere Information finden Sie unter der [using-Anweisung](../../language-reference/keywords/using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="146b9-107">For more information, see the [using Directive](../../language-reference/keywords/using-directive.md).</span></span>  
+<span data-ttu-id="31b19-107">Weitere Information finden Sie unter der [using-Anweisung](../../language-reference/keywords/using-directive.md).</span><span class="sxs-lookup"><span data-stu-id="31b19-107">For more information, see the [using Directive](../../language-reference/keywords/using-directive.md).</span></span>  
   
-<span data-ttu-id="146b9-108">Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.</span><span class="sxs-lookup"><span data-stu-id="146b9-108">Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects.</span></span> <span data-ttu-id="146b9-109">Verwenden Sie das [Namespace](../../language-reference/keywords/namespace.md)-Schlüsselwort, um einen Namespace wie im folgenden Beispiel zu deklarieren:</span><span class="sxs-lookup"><span data-stu-id="146b9-109">Use the [namespace](../../language-reference/keywords/namespace.md) keyword to declare a namespace, as in the following example:</span></span>  
+<span data-ttu-id="31b19-108">Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.</span><span class="sxs-lookup"><span data-stu-id="31b19-108">Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects.</span></span> <span data-ttu-id="31b19-109">Verwenden Sie das [Namespace](../../language-reference/keywords/namespace.md)-Schlüsselwort, um einen Namespace wie im folgenden Beispiel zu deklarieren:</span><span class="sxs-lookup"><span data-stu-id="31b19-109">Use the [namespace](../../language-reference/keywords/namespace.md) keyword to declare a namespace, as in the following example:</span></span>  
   
 [!code-csharp[csProgGuideNamespaces#6](codesnippet/CSharp/index_4.cs)]
 
-<span data-ttu-id="146b9-110">Der Name des Namespace muss ein gültiger C#- [Bezeichnername](../inside-a-program/identifier-names.md) sein.</span><span class="sxs-lookup"><span data-stu-id="146b9-110">The name of the namespace must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span>
+<span data-ttu-id="31b19-110">Der Name des Namespace muss ein gültiger C#- [Bezeichnername](../inside-a-program/identifier-names.md) sein.</span><span class="sxs-lookup"><span data-stu-id="31b19-110">The name of the namespace must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span>
 
-## <a name="namespaces-overview"></a><span data-ttu-id="146b9-111">Übersicht über Namespaces</span><span class="sxs-lookup"><span data-stu-id="146b9-111">Namespaces Overview</span></span>  
+## <a name="namespaces-overview"></a><span data-ttu-id="31b19-111">Übersicht über Namespaces</span><span class="sxs-lookup"><span data-stu-id="31b19-111">Namespaces Overview</span></span>  
 
-<span data-ttu-id="146b9-112">Namespaces verfügen über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="146b9-112">Namespaces have the following properties:</span></span>  
+<span data-ttu-id="31b19-112">Namespaces verfügen über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="31b19-112">Namespaces have the following properties:</span></span>  
   
-- <span data-ttu-id="146b9-113">Sie organisieren umfangreiche Codeprojekte.</span><span class="sxs-lookup"><span data-stu-id="146b9-113">They organize large code projects.</span></span>  
-- <span data-ttu-id="146b9-114">Sie werden durch den `.`-Operator getrennt.</span><span class="sxs-lookup"><span data-stu-id="146b9-114">They are delimited by using the `.` operator.</span></span>  
-- <span data-ttu-id="146b9-115">Durch `using directive` besteht keine Notwendigkeit, den Namen des Namespace für jede Klasse anzugeben.</span><span class="sxs-lookup"><span data-stu-id="146b9-115">The `using directive` obviates the requirement to specify the name of the namespace for every class.</span></span>  
-- <span data-ttu-id="146b9-116">Der `global`-Namespace ist der Stammnamespace: `global::System` verweist immer auf den `System`-Namespace des .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="146b9-116">The `global` namespace is the "root" namespace: `global::System` will always refer to the .NET Framework namespace `System`.</span></span>  
+- <span data-ttu-id="31b19-113">Sie organisieren umfangreiche Codeprojekte.</span><span class="sxs-lookup"><span data-stu-id="31b19-113">They organize large code projects.</span></span>  
+- <span data-ttu-id="31b19-114">Sie werden durch den `.`-Operator getrennt.</span><span class="sxs-lookup"><span data-stu-id="31b19-114">They are delimited by using the `.` operator.</span></span>  
+- <span data-ttu-id="31b19-115">Durch die `using`-Direktive besteht keine Notwendigkeit, den Namen des Namespace für jede Klasse anzugeben.</span><span class="sxs-lookup"><span data-stu-id="31b19-115">The `using` directive obviates the requirement to specify the name of the namespace for every class.</span></span>  
+- <span data-ttu-id="31b19-116">Der `global`-Namespace ist der Stammnamespace: `global::System` verweist immer auf den .NET-Namespace <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="31b19-116">The `global` namespace is the "root" namespace: `global::System` will always refer to the .NET <xref:System> namespace.</span></span>  
 
-## <a name="c-language-specification"></a><span data-ttu-id="146b9-117">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="146b9-117">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="31b19-117">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="31b19-117">C# Language Specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="146b9-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="146b9-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31b19-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="31b19-118">See Also</span></span>
 
-- [<span data-ttu-id="146b9-119">Using-Namespaces</span><span class="sxs-lookup"><span data-stu-id="146b9-119">Using Namespaces</span></span>](using-namespaces.md)
-- [<span data-ttu-id="146b9-120">Gewusst wie: Verwenden des globalen Namespacealias</span><span class="sxs-lookup"><span data-stu-id="146b9-120">How to: Use the Global Namespace Alias</span></span>](how-to-use-the-global-namespace-alias.md)
-- [<span data-ttu-id="146b9-121">Gewusst wie: Verwenden des My-Namespaces</span><span class="sxs-lookup"><span data-stu-id="146b9-121">How to: Use the My Namespace</span></span>](how-to-use-the-my-namespace.md)
-- [<span data-ttu-id="146b9-122">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="146b9-122">C# Programming Guide</span></span>](../index.md)  
-- [<span data-ttu-id="146b9-123">Bezeichnernamen</span><span class="sxs-lookup"><span data-stu-id="146b9-123">Identifier names</span></span>](../inside-a-program/identifier-names.md)
-- [<span data-ttu-id="146b9-124">Namespaceschlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="146b9-124">Namespace Keywords</span></span>](../../language-reference/keywords/namespace-keywords.md)  
-- [<span data-ttu-id="146b9-125">using-Direktive</span><span class="sxs-lookup"><span data-stu-id="146b9-125">using Directive</span></span>](../../language-reference/keywords/using-directive.md)  
-- [<span data-ttu-id="146b9-126">::-Operator</span><span class="sxs-lookup"><span data-stu-id="146b9-126">:: Operator</span></span>](../../language-reference/operators/namespace-alias-qualifer.md)  
-- [<span data-ttu-id="146b9-127"> Operator</span><span class="sxs-lookup"><span data-stu-id="146b9-127">. Operator</span></span>](../../language-reference/operators/member-access-operator.md)
->>>>>>> <span data-ttu-id="146b9-128">Benennungsregeln für Bezeichner hinzufügen</span><span class="sxs-lookup"><span data-stu-id="146b9-128">add identifier naming rules</span></span>
+- [<span data-ttu-id="31b19-119">Using-Namespaces</span><span class="sxs-lookup"><span data-stu-id="31b19-119">Using Namespaces</span></span>](using-namespaces.md)
+- [<span data-ttu-id="31b19-120">Gewusst wie: Verwenden des globalen Namespacealias</span><span class="sxs-lookup"><span data-stu-id="31b19-120">How to: Use the Global Namespace Alias</span></span>](how-to-use-the-global-namespace-alias.md)
+- [<span data-ttu-id="31b19-121">Gewusst wie: Verwenden des My-Namespaces</span><span class="sxs-lookup"><span data-stu-id="31b19-121">How to: Use the My Namespace</span></span>](how-to-use-the-my-namespace.md)
+- [<span data-ttu-id="31b19-122">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="31b19-122">C# Programming Guide</span></span>](../index.md)  
+- [<span data-ttu-id="31b19-123">Bezeichnernamen</span><span class="sxs-lookup"><span data-stu-id="31b19-123">Identifier names</span></span>](../inside-a-program/identifier-names.md)
+- [<span data-ttu-id="31b19-124">Namespaceschlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="31b19-124">Namespace Keywords</span></span>](../../language-reference/keywords/namespace-keywords.md)  
+- [<span data-ttu-id="31b19-125">using-Direktive</span><span class="sxs-lookup"><span data-stu-id="31b19-125">using Directive</span></span>](../../language-reference/keywords/using-directive.md)  
+- [<span data-ttu-id="31b19-126">::-Operator</span><span class="sxs-lookup"><span data-stu-id="31b19-126">:: Operator</span></span>](../../language-reference/operators/namespace-alias-qualifer.md)  
+- [<span data-ttu-id="31b19-127">. Operator</span><span class="sxs-lookup"><span data-stu-id="31b19-127">. Operator</span></span>](../../language-reference/operators/member-access-operator.md)
