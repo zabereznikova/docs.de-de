@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453176"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144870"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -23,7 +23,7 @@ ms.locfileid: "49453176"
  Die CLR ermöglicht es Code, nur die Vorgänge auszuführen, zu denen er berechtigt ist. Code kann Berechtigungen anfordern, und diese Berechtigungen werden entsprechend der von einem Administrator festgelegten Sicherheitsrichtlinie gewährt.  
   
 > [!NOTE]
->  Code, der in der CLR ausgeführt wird, kann sich nicht selbst Berechtigungen erteilen. So kann Code z. B. weniger Berechtigungen anfordern und gewährt bekommen, als in einer Sicherheitsrichtlinie festgelegt sind, mehr als die darin festgelegten Berechtigungen werden aber auf keinen Fall gewährt. Beim Gewähren von Berechtigungen hat es sich bewährt, zunächst ganz ohne Berechtigungen zu beginnen und immer nur die geringstmöglichen Berechtigungen für die konkrete auszuführende Aufgabe hinzuzufügen. Wenn man stattdessen zu Beginn alle Berechtigungen gewährt und dann nur einzelne Berechtigungen wieder entzieht, entstehen unsichere Anwendungen, die unbeabsichtigte Sicherheitslücken enthalten können, weil mehr Berechtigungen als notwendig gewährt wurden. Weitere Informationen finden Sie unter [NIB: Konfigurieren der Sicherheitsrichtlinien](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) und [NIB: Sicherheitsrichtlinienverwaltung](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  Code, der in der CLR ausgeführt wird, kann sich nicht selbst Berechtigungen erteilen. So kann Code z. B. weniger Berechtigungen anfordern und gewährt bekommen, als in einer Sicherheitsrichtlinie festgelegt sind, mehr als die darin festgelegten Berechtigungen werden aber auf keinen Fall gewährt. Beim Gewähren von Berechtigungen hat es sich bewährt, zunächst ganz ohne Berechtigungen zu beginnen und immer nur die geringstmöglichen Berechtigungen für die konkrete auszuführende Aufgabe hinzuzufügen. Wenn man stattdessen zu Beginn alle Berechtigungen gewährt und dann nur einzelne Berechtigungen wieder entzieht, entstehen unsichere Anwendungen, die unbeabsichtigte Sicherheitslücken enthalten können, weil mehr Berechtigungen als notwendig gewährt wurden. Weitere Informationen finden Sie unter [NIB: Konfigurieren von Sicherheitsrichtlinien](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) und [NIB: Serversicherheits-richtlinienverwaltung](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
  Es gibt die folgenden drei Arten von Codezugriffsberechtigungen:  
   
@@ -71,8 +71,8 @@ ms.locfileid: "49453176"
 |-----------------------------------|-----------------|  
 |`Action`|Ruft eine Sicherheitsaktion ab oder legt diese fest. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
 |`AllowBlankPassword`|Aktiviert oder deaktiviert die Verwendung von leeren Kennwörtern in einer Verbindungszeichenfolge. Gültige Werte sind `true` (zum Aktivieren der Verwendung von leeren Kennwörtern) und `false` (zum Deaktivieren der Verwendung von leeren Kennwörtern). Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis:** eine Benutzer-ID oder ein Kennwort nicht in der Verbindungszeichenfolge enthalten. In diesem Release können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`KeyRestrictions`|Gibt zulässige oder unzulässige Parameter für Verbindungszeichenfolgen an. Parameter für Verbindungszeichenfolgen werden in der Form identifiziert  *\<Parametername > =*. Es können mehrere durch Semikolon (;) getrennte Parameter angegeben werden. **Hinweis:** , wenn Sie keinen angeben `KeyRestrictions`, Sie jedoch festlegen, `KeyRestrictionBehavior` Eigenschaft `AllowOnly` oder `PreventUsage`, es sind keine zusätzlichen Verbindungszeichenfolgenparameter zulässig. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis**:  Die Verbindungszeichenfolge darf keine Benutzer-ID und kein Kennwort enthalten. In dieser Version können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`KeyRestrictions`|Gibt zulässige oder unzulässige Parameter für Verbindungszeichenfolgen an. Parameter für Verbindungszeichenfolgen werden in der Form identifiziert  *\<Parametername > =*. Es können mehrere durch Semikolon (;) getrennte Parameter angegeben werden. **Hinweis**:  Wenn Sie keine `KeyRestrictions` angeben, die `KeyRestrictionBehavior`-Eigenschaft aber auf `AllowOnly` oder `PreventUsage` festlegen, sind keine zusätzlichen Verbindungszeichenfolgenparameter zulässig. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
 |`KeyRestrictionBehavior`|Legt die Verbindungszeichenfolgenparameter als die einzigen zulässigen zusätzlichen Parameter fest (`AllowOnly`) oder gibt die nicht zulässigen zusätzlichen Parameter an (`PreventUsage`). Standardmäßig ist `AllowOnly` festgelegt. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
 |`TypeID`|Ruft bei Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. Wird von <xref:System.Attribute> geerbt.|  
 |`Unrestricted`|Gibt an, ob für die Ressource uneingeschränkte Berechtigungen deklariert wurden. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Überprüfen des ADO.NET-Codezugriffs mit Sicherheitsberechtigungen  
- In teilweise vertrauenswürdigen Szenarien können durch Angabe eines <xref:System.Data.SqlClient.SqlClientPermissionAttribute> für bestimmte Methoden im Code CAS-Berechtigungen verlangt werden. Wenn diese Berechtigung aufgrund einer eingeschränkten Sicherheitsrichtlinie nicht gewährt wird, wird vor dem Ausführen des Codes eine Ausnahme ausgelöst. Weitere Informationen zu Sicherheitsrichtlinien finden Sie unter [NIB: Sicherheitsrichtlinienverwaltung](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) und [NIB: Security Policy Best Practices](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ In teilweise vertrauenswürdigen Szenarien können durch Angabe eines <xref:System.Data.SqlClient.SqlClientPermissionAttribute> für bestimmte Methoden im Code CAS-Berechtigungen verlangt werden. Wenn diese Berechtigung aufgrund einer eingeschränkten Sicherheitsrichtlinie nicht gewährt wird, wird vor dem Ausführen des Codes eine Ausnahme ausgelöst. Weitere Informationen zu Sicherheitsrichtlinien finden Sie unter [NIB: Serversicherheits-richtlinienverwaltung](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) und [NIB: Bewährte Sicherheitsmethoden für Richtlinie](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird das Schreiben von Code gezeigt, durch den eine bestimmte Verbindungszeichenfolge verlangt wird. Der Code simuliert das Verweigern uneingeschränkter Berechtigungen für <xref:System.Data.SqlClient>. Unter Praxisbedingungen würde dies durch eine CAS-Richtlinie implementiert werden.  
@@ -197,6 +197,5 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>Siehe auch  
  [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Codezugriffssicherheit](../../../../docs/framework/misc/code-access-security.md)  
  [Rollenbasierte Sicherheit](../../../../docs/standard/security/role-based-security.md)  
  [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

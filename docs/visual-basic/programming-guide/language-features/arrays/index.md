@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149899"
 ---
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
 
@@ -126,7 +126,7 @@ Ebenso wie für eindimensionale Arrays, können Sie auf den Typrückschluss verl
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Weitere Beispiele finden Sie unter [How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariablen in Visual Basic).
+Weitere Beispiele finden Sie unter [Vorgehensweise: Initialisieren einer Arrayvariablen in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Durchlaufen eines Arrays
 
@@ -299,9 +299,9 @@ Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](../../c
 |Begriff|Definition|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Erläutert Rang und Dimensionen in Arrays.|
-|[How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)|Beschreibt das Auffüllen von Arrays mit Anfangswerten.|
-|[How to: Sort An Array in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md) (Gewusst wie: Sortieren eines Arrays in Visual Basic)|Erläutert, wie die Elemente eines Arrays alphabetisch sortiert werden.|
-|[Gewusst wie: Zuweisen eines Arrays zu einem anderen Array](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Beschreibt die Regeln und Schritte zum Zuweisen eines Arrays an eine andere Arrayvariable.|
+|[So wird es gemacht: Initialisieren einer Arrayvariablen in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Beschreibt das Auffüllen von Arrays mit Anfangswerten.|
+|[So wird es gemacht: Sortieren eines Arrays in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Erläutert, wie die Elemente eines Arrays alphabetisch sortiert werden.|
+|[So wird es gemacht: Zuweisen eines Arrays zu einem anderen Array](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Beschreibt die Regeln und Schritte zum Zuweisen eines Arrays an eine andere Arrayvariable.|
 |[Problembehandlung bei Arrays](../../language-features/arrays/troubleshooting-arrays.md)|Erörtert einige allgemeine Probleme, die beim Arbeiten mit Arrays auftreten.|
 
 ## <a name="see-also"></a>Siehe auch

@@ -1,15 +1,16 @@
 ---
-title: Unittests in .NET Core
+title: Komponententests in .NET Core und .NET Standard
 description: Unittests in .NET Core- und .NET Standard-Projekten
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: fe0807f93396466df7ed7d01dbb7a83e39c67770
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131273"
+ms.locfileid: "53170014"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 

@@ -2,14 +2,14 @@
 title: Erstellen von .NET Core aus einer Quelle
 description: Erfahren Sie, wie Sie .NET Core und .NET Core-CLI aus dem Quellcode erstellen.
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47231111"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170066"
 ---
 # <a name="build-net-core-from-source"></a>Erstellen von .NET Core aus einer Quelle
 
