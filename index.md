@@ -6,12 +6,12 @@ title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127341"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240254"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -27,7 +27,7 @@ ms.locfileid: "53127341"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Erste Schritte mit C#</h3>
+                                    <h3>Erlernen von C#</h3>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ ms.locfileid: "53127341"
         <h1>.NET-Dokumentation</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Dokumentation</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">Erste Schritte</a>
@@ -91,7 +91,7 @@ ms.locfileid: "53127341"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/standard/">Leitfaden für .NET</a></h3>
+                                                <h3><a href="/dotnet/standard/">.NET Guide (Leitfaden für .NET)</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/standard/tour">Einführung in .NET</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET-Architekturkonzepte</a></p>
@@ -172,9 +172,9 @@ ms.locfileid: "53127341"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Leitfaden für C#</a></h3>
-                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Erlernen von C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Einführung in C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">Neues in C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C#-Programmiersprachenreferenz</a></p>
                                             </div>
                                         </div>
@@ -241,8 +241,8 @@ ms.locfileid: "53127341"
                             </li>
                             <li class="fullSpan">
                                 <div class="container footer">
-                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Beitragen zu .NET-Dokumentationen und Beispielen</a></p>
-                                    <p><a href="/dotnet/project-json">Suchen der Visual Studio 2015/project.json-Version der Dokumentation</a></p>
+                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribute to .NET docs and samples (Zu .NET-Dokumentationen und Beispielen beitragen)</a></p>
+                                    <p><a href="/dotnet/project-json">Find Visual Studio 2015/project.json version of the documentation (Suchen der Visual Studio 2015/project.json-Version der Dokumentation)</a></p>
                                 </div>
                             </li>
                         </ul>

@@ -1,17 +1,18 @@
 ---
-title: Ausnahmen und Ausnahmebehandlung (C#-Programmierhandbuch)
+title: Ausnahmen und Ausnahmebehandlung – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 6cacf3cc613ffb23c6656d5d5718064a91b777a6
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a617e8921bed3bb4513ecce738064d502af7995b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744222"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236842"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Ausnahmen und Ausnahmebehandlung (C#-Programmierhandbuch)
 Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder außergewöhnliche Situationen zu verarbeiten, die beim Ausführen von Programmen auftreten können. Die Ausnahmebehandlung verwendet die Schlüsselwörter `try`, `catch` und `finally`, um Aktionen zu testen, die möglicherweise nicht erfolgreich sind, um Fehler zu behandeln, wenn Sie entscheiden, dass dies vernünftig ist, und um später Ressourcen zu bereinigen. Ausnahmen können von der Common Language Runtime (CLR), vom .NET Framework bzw. anderen Drittanbieterbibliotheken oder vom Anwendungscode generiert werden. Ausnahmen werden mit dem Schlüsselwort `throw` erstellt.  
@@ -56,9 +57,9 @@ Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder au
   
 -   [Vom Compiler generierte Ausnahmen](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Gewusst wie: Behandeln einer Ausnahme mit try/catch (C#-Programmierhandbuch)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+-   [Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ (C#-Programmierhandbuch)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [Gewusst wie: Ausführen von Bereinigungscode mit finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+-   [Vorgehensweise: Ausführen von Bereinigungscode mit „finally“](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 

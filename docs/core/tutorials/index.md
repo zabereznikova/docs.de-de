@@ -1,16 +1,16 @@
 ---
 title: .NET Core-Tutorials
-description: Bearbeiten Sie die Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen.
+description: Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen.
 author: richlander
-ms.author: mairaw
 ms.date: 03/16/2017
+titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130732"
+ms.locfileid: "53168742"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Lernen Sie mit diesen Tutorials .NET Core und die .NET Core SDK-Tools kennen.
 

@@ -1,16 +1,17 @@
 ---
-title: Schnittstellen (C#-Programmierhandbuch)
+title: Schnittstellen – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181513"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245440"
 ---
 # <a name="interfaces-c-programming-guide"></a>Schnittstellen (C#-Programmierhandbuch)
 
@@ -61,17 +62,17 @@ Eine Schnittstelle verfügt über die folgenden Eigenschaften:
 [Explizite Schnittstellenimplementierung](explicit-interface-implementation.md)  
  Erläutert das Erstellen eines für eine Schnittstelle spezifischen Klassenmembers.  
   
- [Gewusst wie: Explizites Implementieren von Schnittstellenmembern](how-to-explicitly-implement-interface-members.md)  
+ [Vorgehensweise: Explizites Implementieren von Schnittstellenmembern](how-to-explicitly-implement-interface-members.md)  
  Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern.  
   
- [Gewusst wie: Explizites Implementieren von Membern zweier Schnittstellen](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern mit Vererbung.  
   
 ##  <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte
 
 - [Schnittstelleneigenschaften](../classes-and-structs/interface-properties.md)  
 - [Indexer in Schnittstellen](../indexers/indexers-in-interfaces.md)  
-- [Gewusst wie: Implementieren von Schnittstellenereignissen](../events/how-to-implement-interface-events.md)  
+- [Vorgehensweise:  Implementieren von Schnittstellenereignissen](../events/how-to-implement-interface-events.md)  
 - [Klassen und Strukturen](../classes-and-structs/index.md)  
 - [Vererbung](../classes-and-structs/inheritance.md)  
 - [Methoden](../classes-and-structs/methods.md)  
@@ -83,7 +84,7 @@ Eine Schnittstelle verfügt über die folgenden Eigenschaften:
   
 ## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel
 
-[Interfaces (Schnittstellen)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) in [Learning C# 3.0: Master the Fundamentals of C# 3.0 (C# 3.0 lernen: Die Grundlagen von C# 3.0 meistern)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
+[Interfaces](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) (Schnittstellen) in [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29) (Erlernen von C# 3.0: Die Grundlagen von C# 3.0)
 
 ## <a name="see-also"></a>Siehe auch
 

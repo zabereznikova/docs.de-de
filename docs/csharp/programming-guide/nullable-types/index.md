@@ -1,5 +1,6 @@
 ---
-title: Nullable-Typen (C#-Programmierhandbuch)
+title: Nullable-Typen – C#-Programmierhandbuch
+ms.custom: seodec18
 description: Informationen zu Nullable-Typen in C# und der Verwendung dieser Typen
 ms.date: 07/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658703"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245122"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Nullable-Typen (C#-Programmierhandbuch)
 
@@ -52,7 +53,7 @@ Nullable-Typen weisen die folgenden Eigenschaften auf:
   
 - Geschachtelte Nullable-Typen sind nicht zulässig. Die folgende Zeile wird nicht kompiliert: `Nullable<Nullable<int>> n;`  
 
-Weitere Informationen finden Sie unter [Verwenden von auf NULL festlegbaren Typen](using-nullable-types.md) und [Vorgehensweise: Identifizieren eines Typs, der NULL-Werte zulässt](how-to-identify-a-nullable-type.md).
+Weitere Informationen finden Sie in den Themen [Verwenden von Nullable-Typen](using-nullable-types.md) und [Vorgehensweise: Identifizieren eines Nullable-Typs](how-to-identify-a-nullable-type.md).
   
 ## <a name="see-also"></a>Siehe auch
 
