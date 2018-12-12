@@ -1,27 +1,27 @@
 ---
-title: F#-Code Formatieren von Richtlinien
-description: Erfahren Sie, Richtlinien zur Formatierung von F#-Code.
-ms.date: 05/14/2018
-ms.openlocfilehash: 0d7d2d1771710db55bf990f3a06079b2aec48fd7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: F#Richtlinien für die codeformatierung
+description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
+ms.date: 11/26/2018
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43858004"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286545"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#-Code Formatieren von Richtlinien
+# <a name="f-code-formatting-guidelines"></a>F#Richtlinien für die codeformatierung
 
-Dieser Artikel bietet Richtlinien zum Code zu formatieren, damit Ihre F#-Code ist:
+Dieser Artikel bietet Richtlinien für Ihren Code zu formatieren, damit Ihre F# Code ist:
 
 * In der Regel als besser lesbar angezeigt.
 * In Übereinstimmung mit Konventionen formatiert-Tools in Visual Studio und andere Editoren angewendet wird
 * Ähnlich wie bei anderen Code online
 
-Diese Leitlinien basieren auf [ein umfassendes Handbuch zum F#-Formatierungskonventionen](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) von [Anh-Dung Phan](https://github.com/dungpa).
+Diese Leitlinien basieren auf [ein umfassendes Handbuch zum F# Formatierungskonventionen](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) von [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Allgemeine Regeln für den Einzug
 
-F#-signifikanten Leerraum wird standardmäßig verwendet. Die folgenden Richtlinien dienen bieten eine Anleitung, wie einige Herausforderungen unter einen Hut bringen, die diese darstellen kann.
+F#signifikanten Leerraum wird standardmäßig verwendet. Die folgenden Richtlinien dienen bieten eine Anleitung, wie einige Herausforderungen unter einen Hut bringen, die diese darstellen kann.
 
 ### <a name="using-spaces"></a>Mithilfe von Speicherplätzen
 
@@ -30,6 +30,63 @@ Wenn der Einzug erforderlich ist, müssen Sie Leerzeichen nicht Registerkarten v
 **Es wird empfohlen, 4 Leerzeichen pro Einzug.**
 
 Dies bedeutet, dass der Einzug der Programme eine subjektive Angelegenheit ist. Variationen sind in Ordnung, aber die erste Regel, die Sie befolgen sollten ist *Konsistenz des Einzugs*. Wählen Sie ein allgemein anerkannten Format des Einzugs und systematisch in Ihrer gesamten Codebasis verwenden.
+
+## <a name="formatting-white-space"></a>Formatieren von Leerraum
+
+F#wird Sie Leerzeichen beachtet. Obwohl die meisten Semantik von Leerzeichen durch richtige Einzugs abgedeckt werden, gibt es einige andere Dinge zu beachten.
+
+### <a name="formatting-operators-in-arithmetic-expressions"></a>Formatieren von Operatoren in arithmetischen Ausdrücken
+
+Verwenden Sie immer Leerzeichen um binäre arithmetische Ausdrücke:
+
+```fsharp
+let subtractThenAdd x = x - 1 + 3
+```
+
+Unäre `-` Operatoren müssen immer den Wert, der sie negiert werden unmittelbar folgen:
+
+```fsharp
+// OK
+let negate x = -x
+
+// Bad
+let negateBad x = - x
+```
+
+Ein Leerzeichen nach dem Hinzufügen der `-` Operator kann zu Verwirrung führen, für andere Benutzer.
+
+Zusammenfassend lässt sich sagen ist es wichtig, immer:
+
+* Binäre Operatoren mit Leerraum umgeben
+* Müssen Sie keine nachfolgenden Leerstellen nach dem unäroperator
+
+Die binäre arithmetischen Operator-Richtlinie ist besonders wichtig. Fehler beim Umschließen eines binäres `-` -Operator, in Kombination mit bestimmten Formatierungsoptionen zur Verfügung gestellt, zu interpretieren sie als ein unäres führen `-`.
+
+### <a name="surround-a-custom-operator-definition-with-white-space"></a>Setzen Sie eine Definition benutzerdefinierter Operator mit einem Leerzeichen
+
+Verwenden Sie immer Leerzeichen, um eine Operatordefinition umschließen:
+
+```fsharp
+// OK
+let ( !> ) x f = f x
+
+// Bad
+let (!>) x f = f x
+```
+
+Für jeden benutzerdefinierten Operator an, die mit beginnt `*`, Sie müssen eine durch Leerraum am Anfang der Definition, die ein Compiler Mehrdeutigkeiten zu vermeiden, hinzufügen. Aus diesem Grund empfiehlt es sich, dass Sie einfach die Definitionen aller Operatoren mit einem einzelnen Leerzeichen umschließen.
+
+### <a name="surround-function-parameter-arrows-with-white-space"></a>Setzen Sie die Funktion Parameter Pfeile mit einem Leerzeichen
+
+Wenn die Signatur einer Funktion zu definieren, verwenden Sie Leerraum um den `->` Symbol:
+
+```fsharp
+// OK
+type MyFun = int -> int -> string
+
+// Bad
+type MyFunBad = int->int->string
+```
 
 ## <a name="formatting-blank-lines"></a>Formatieren von Leerzeilen
 
@@ -62,7 +119,7 @@ let f x = x + 1 // Increment by one.
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Verwenden Sie CamelCase für die Klasse, ausdrucksgebundenen als auch Muster – gebunden Werte und Funktionen
 
-Es ist üblich und akzeptierte F#-Stil verwenden Sie CamelCase für alle Namen gebunden, als lokale Variablen oder in musterübereinstimmungen und Funktionsdefinitionen.
+Es ist häufig und akzeptierte F# Stil, CamelCase für alle Namen als lokale Variablen oder in musterübereinstimmungen gebunden und Funktion Definitionen zu verwenden.
 
 ```fsharp
 // OK
@@ -165,13 +222,13 @@ Namespaces, Ausnahmen, Ereignisse und Projekt /`.dll` Namen sollten auch PascalC
 
 ### <a name="avoid-underscores-in-names"></a>Vermeiden Sie die Unterstriche im Namen
 
-In der Vergangenheit haben einige F#-Bibliotheken Unterstriche im Namen verwendet. Allerdings wird dies häufig nicht mehr akzeptiert, teilweise daran, dass sie mit .NET Benennungskonventionen verursacht einen Konflikt. Allerdings einige F#-Programmierer verwenden Unterstriche stark, teilweise historisch bedingt und Fehlertoleranz und Respekt ist wichtig. Bedenken Sie jedoch, dass der Stil häufig von anderen gefällt mir nicht ist, die eine Wahl darüber, ob sie verwendet haben.
+In der Vergangenheit einige F# Bibliotheken Unterstriche im Namen verwendet haben. Allerdings wird dies häufig nicht mehr akzeptiert, teilweise daran, dass sie mit .NET Benennungskonventionen verursacht einen Konflikt. Dies bedeutet, dass einige F# Programmierer verwenden Unterstriche stark, teilweise historisch bedingt und Fehlertoleranz und Respekt ist wichtig. Bedenken Sie jedoch, dass der Stil häufig von anderen gefällt mir nicht ist, die eine Wahl darüber, ob sie verwendet haben.
 
 Einige Ausnahmen umfasst die Interaktion mit nativen Komponenten, in denen Unterstriche sind sehr häufig.
 
-### <a name="use-standard-f-operators"></a>Verwenden Sie die standardmäßige F#-Operatoren
+### <a name="use-standard-f-operators"></a>Verwenden F# Operatoren
 
-Die folgenden Operatoren werden in der F#-Standardbibliothek definiert und sollte verwendet werden, anstatt Entsprechungen. Mit diesen Operatoren wird empfohlen, wie sie Code besser lesbar und idiomatische machen ist. Entwickler mit einem Hintergrund mit OCaml oder andere funktionale Programmiersprache ggf. daran gewöhnt, Idiome zu sein. Die folgende Liste enthält die empfohlenen F#-Operatoren.
+Die folgenden Operatoren werden definiert, der F# standard-Bibliothek und sollte verwendet werden, anstatt Entsprechungen. Mit diesen Operatoren wird empfohlen, wie sie Code besser lesbar und idiomatische machen ist. Entwickler mit einem Hintergrund mit OCaml oder andere funktionale Programmiersprache ggf. daran gewöhnt, Idiome zu sein. Die folgende Liste enthält die empfohlenen F# Operatoren.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -193,11 +250,11 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Verwenden Sie Generika Präfix-Syntax (`Foo<T>`) statt Postfix-Syntax (`T Foo`)
 
-F#-erbt sowohl den Postfix ML Stil für die Benennung von generischer Typen (z. B. `int list`) sowie das Präfix .NET Stil (z. B. `list<int>`). Bevorzugen Sie das .NET-Format, mit Ausnahme von vier bestimmte Typen:
+F#erbt sowohl den Postfix ML Stil für die Benennung von generischer Typen (z. B. `int list`) sowie das Präfix .NET Stil (z. B. `list<int>`). Bevorzugen Sie das .NET-Format, mit Ausnahme von vier bestimmte Typen:
 
 1. Für F#-Listen, verwenden Sie die Postfix-Form: `int list` statt `list<int>`.
-2. Für die F#-Optionen verwenden Sie die Postfix-Form: `int option` statt `option<int>`.
-3. Verwenden Sie für F#-Arrays, die syntaktischen Namen `int[]` statt `int array` oder `array<int>`.
+2. Für F# ausprobiert haben, verwenden die Postfix-Form: `int option` statt `option<int>`.
+3. Für F# Arrays, verwenden Sie den syntaktischen Namen `int[]` statt `int array` oder `array<int>`.
 4. Verwenden Sie für Referenzzellen, `int ref` statt `ref<int>` oder `Ref<int>`.
 
 Verwenden Sie für alle anderen Dateitypen die Präfix-Form.
@@ -286,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-Das öffnendes-Token auf der gleichen Zeile und dem schließenden-Token in einer neuen Zeile platziert ist ebenfalls in Ordnung, aber beachten Sie, dass Sie benötigen die [ausführliche Syntax](../language-reference/verbose-syntax.md) um Elemente zu definieren (die `with` Schlüsselwort):
+Das öffnendes-Token auf eine neue Zeile und dem schließenden-Token in einer neuen Zeile platziert ist vorzuziehen, wenn Sie für den Datensatz schnittstellenimplementierungen oder Member deklarieren:
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>Formatieren von Datensätzen
@@ -314,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Es ist auch in Ordnung, das öffnendes-Token auf der gleichen Zeile und dem schließenden-Token in einer neuen Zeile platziert:
+Platzieren das öffnende token in einer neuen Zeile, mit dem Inhalt Registerkarten über einen Bereich, und das Schließen-Token in einer neuen Zeile ist vorzuziehen, wenn Sie sich befinden:
+
+* Einträge im Code mit anderen Einzug Bereichen verschieben
+* Übergeben sie in einer Funktion
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 Die gleichen Regeln gelten für Listen- und Elemente.
 
 ## <a name="formatting-lists-and-arrays"></a>Formatieren von Listen und arrays
 
-Schreiben von `x :: l` mit Leerzeichen vor und hinter der `::` Operator (`::` ist ein Infix-Operator, daher Leerzeichen enthaltender) und `[1; 2; 3]` (`;` ein Trennzeichen, daher gefolgt von einem Leerzeichen).
+Schreiben von `x :: l` mit Leerzeichen vor und hinter der `::` Operator (`::` ist ein Infix-Operator, und daher von Leerzeichen eingeschlossen).
+
+Listen- und Arrays, die in einer einzelnen Zeile deklariert werden. sollte ein Leerzeichen nach der öffnenden Klammer und vor der schließenden Klammer aufweisen:
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 Verwenden Sie immer mindestens ein Leerzeichen zwischen zwei unterschiedlichen geschweifte Klammer-Like-Operatoren. Lassen Sie beispielsweise einem Leerzeichen zwischen einem `[` und `{`.
 
@@ -357,18 +445,21 @@ Verwenden Sie immer mindestens ein Leerzeichen zwischen zwei unterschiedlichen g
 Listen und Arrays, die über mehrere Zeilen aufgeteilt. Führen Sie eine ähnliche Regel, wie Datensätze:
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+Und wie mithilfe von Datensätzen, deklarieren die öffnenden und schließenden Klammern in einer eigenen Zeile Verschieben von Code um und Piping in Funktionen einfacher.
 
 ## <a name="formatting-if-expressions"></a>Formatierung-If-Ausdrücke
 
@@ -411,13 +502,13 @@ Verwenden einer `|` für jede Klausel einer Übereinstimmung mit ohne Einzug. We
 ```fsharp
 // OK
 match l with
-| { him = x; her = "Posh" } :: tail -> _
+| { him = x; her = "Posh" } :: tail -> x
 | _ :: tail -> findDavid tail
 | [] -> failwith "Couldn't find David"
 
 // Not OK
 match l with
-    | { him = x; her = "Posh" } :: tail -> _
+    | { him = x; her = "Posh" } :: tail -> x
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
 ```
@@ -610,3 +701,59 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
+
+## <a name="formatting-attributes"></a>Formatierungsattribute
+
+[Attribute](../language-reference/attributes.md) werden über ein Konstrukt platziert:
+
+```fsharp
+[<SomeAttribute>]
+type MyClass() = ...
+
+[<RequireQualifiedAccess>]
+module M =
+    let f x = x
+
+[<Struct>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+### <a name="formatting-attributes-on-parameters"></a>Formatieren die Attribute für Parameter
+
+Attribute können auch Parameter stellen sein. In diesem Fall platzieren Sie diese in der gleichen Zeile, die als Parameter und vor dem Namen:
+
+```fsharp
+// Defines a class that takes an optional value as input defaulting to false.
+type C() =
+    member __.M([<Optional; DefaultParameterValue(false)>] doSomething: bool)
+```
+
+### <a name="formatting-multiple-attributes"></a>Formatieren von mehreren Attributen
+
+Wenn mehrere Attribute für ein Konstrukt, die nicht auf einen Parameter ist angewendet werden, sollten sie, dass es ein Attribut pro Zeile ist platziert werden:
+
+```fsharp
+[<Struct>]
+[<IsByRefLike>]
+type MyRecord =
+    { Label1: int
+      Label2: string }
+```
+
+Wenn für einen Parameter angewendet wird, sie muss in der gleichen Zeile und getrennt durch ein `;` Trennzeichen.
+
+## <a name="formatting-literals"></a>Formatieren von literalen
+
+[F#Literale](../language-reference/literals.md) mithilfe der `Literal` Attribut sollte sollte das Attribut in einer eigenen Zeile platzieren, und benennen CamelCase:
+
+```fsharp
+[<Literal>]
+let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+
+[<Literal>]
+let myUrl = "www.mywebsitethatiamworkingwith.com"
+```
+
+Verhindert, dass das Attribut auf derselben Zeile wie der Wert platziert.

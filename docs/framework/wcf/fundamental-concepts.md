@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: c19169d61a96314e9fcfad94b013af18440e1ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503613"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286558"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Wesentliche Windows Communication Foundation-Begriffe
 Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communication Foundation (WCF)-Architektur. Es ist dafür vorgesehen, Hauptkonzepte zu erklären und zu erläutern, wie diese zusammenpassen. Ein Tutorial zum Erstellen der einfachsten Version eines WCF-Dienst und Client finden Sie unter [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). WCF-Programmierung finden Sie unter [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -55,7 +55,7 @@ Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communicat
  Ein Konstrukt, das einen oder mehrere Endpunkte verfügbar macht, wobei jeder Endpunkt wiederum einen oder mehrere Dienstvorgänge verfügbar macht.  
   
  Endpunkt (endpoint)  
- Ein Konstrukt, von dem Nachrichten gesendet oder empfangen werden (oder beides). Er besteht aus einem Ort (einer Adresse), der definiert, wohin die Nachrichten gesendet werden können, einer Spezifikation des Kommunikationsmechanismus (einer Bindung), die beschreibt, wie die Nachrichten gesendet werden sollen, und einer Definition eines Satzes von Nachrichten, die an diesen Ort gesendet oder dort empfangen werden können (oder beides), sowie aus einem Dienstvertrag, der beschreibt, welche Nachricht gesendet werden kann.  
+ Ein Konstrukt, von dem Nachrichten gesendet oder empfangen werden (oder beides). Es umfasst einen Speicherort (eine Adresse), der definiert, in denen Nachrichten, eine Spezifikation des Kommunikationsmechanismus (einer Bindung) gesendet werden können, die beschreibt, wie die Nachrichten gesendet werden sollen, und eine Definition für eine Gruppe von Nachrichten, die gesendet oder empfangen werden können (oder beides) an Speicherort (einen Dienstvertrag), die beschreibt, welche Nachricht gesendet werden kann.  
   
  Ein WCF-Dienst wird allgemein als eine Auflistung von Endpunkten verfügbar gemacht.  
   
@@ -144,7 +144,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Legt fest, dass Vertraulichkeit, Integrität und Authentifizierung über die Transportschichtmechanismen (wie HTTPS) gewährleistet werden. Bei Nutzung eines Transports wie HTTPS hat dieser Modus den Vorteil, dass er effizient und aufgrund seiner weiten Verbreitung im Internet gut verständlich ist. Der Nachteil ist, dass diese Art von Sicherheit auf jeden Hop im Kommunikationspfad einzeln angewendet wird, was die Kommunikation anfällig für einen Man-In-The-Middle-Angriff (MITM-Angriff, Janusangriff) macht.  
   
  Nachrichtensicherheitsmodus  
- Gibt an, dass Sicherheit durch die Implementierung einer oder mehrerer der Sicherheitsspezifikationen bereitgestellt wird, wie z. B. die Spezifikation, mit dem Namen [Webdienstsicherheit: SOAP Message Security](https://go.microsoft.com/fwlink/?LinkId=94684). Jede Nachricht enthält die erforderlichen Mechanismen, um während ihrer Übertragung Sicherheit zu gewährleisten, und um den Empfängern die Möglichkeit zu bieten, Manipulationen zu erkennen und die Nachrichten zu entschlüsseln. So ist die Sicherheit in jeder einzelnen Nachricht integriert, sodass End-to-End-Sicherheit über mehrere Hops gewährleistet ist. Da Sicherheitsinformationen Teil der Nachricht ist, es ist auch möglich, mehrere Arten von Anmeldeinformationen in die Nachricht aufzunehmen (diese werden als bezeichnet *Ansprüche*). Dieser Ansatz hat außerdem den Vorteil, dass die Nachricht sicher über jeden Transport übermittelt werden kann, u.&#160;a. auch über mehrere Transporte zwischen Ursprungs- und Zielort. Der Nachteil dieses Ansatzes ist die Komplexität der eingesetzten kryptografischen Mechanismen, die zu Leistungsbeeinträchtigungen führen.  
+ Gibt an, dass Sicherheit durch die Implementierung einer oder mehrerer der Sicherheitsspezifikationen bereitgestellt wird, wie z. B. die Spezifikation, mit dem Namen [Web Services Security: SOAP-Nachrichtensicherheit](https://go.microsoft.com/fwlink/?LinkId=94684). Jede Nachricht enthält die erforderlichen Mechanismen, um während ihrer Übertragung Sicherheit zu gewährleisten, und um den Empfängern die Möglichkeit zu bieten, Manipulationen zu erkennen und die Nachrichten zu entschlüsseln. So ist die Sicherheit in jeder einzelnen Nachricht integriert, sodass End-to-End-Sicherheit über mehrere Hops gewährleistet ist. Da Sicherheitsinformationen Teil der Nachricht ist, es ist auch möglich, mehrere Arten von Anmeldeinformationen in die Nachricht aufzunehmen (diese werden als bezeichnet *Ansprüche*). Dieser Ansatz hat außerdem den Vorteil, dass die Nachricht sicher über jeden Transport übermittelt werden kann, u.&#160;a. auch über mehrere Transporte zwischen Ursprungs- und Zielort. Der Nachteil dieses Ansatzes ist die Komplexität der eingesetzten kryptografischen Mechanismen, die zu Leistungsbeeinträchtigungen führen.  
   
  Modus "Transport mit Nachrichtenanmeldeinformationen"  
  Gibt die Verwendung der Transportschicht an, um Vertraulichkeit, Authentifizierung und Integrität der Nachrichten sicherzustellen, während jede der Nachrichten mehrere Anmeldeinformationen (Ansprüche) enthalten kann, die von den Empfängern der Nachricht benötigt werden.  
