@@ -35,7 +35,7 @@ Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen C
 |Es kann nur ein Schema für einen bestimmten Zielnamespace in der Auflistung vorhanden sein.|Es können mehrere Schemata für denselben Zielnamespace hinzugefügt werden, wenn keine Typenkonflikte auftreten.|  
   
 ## <a name="migrating-to-the-xmlschemaset"></a>Migrieren zum "XmlSchemaSet"  
- Im folgenden Codebeispiel ist eine Anleitung zum Migrieren aus der veralteten <xref:System.Xml.Schema.XmlSchemaSet>-Klasse zur neuen <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse enthalten. Im Codebeispiel werden die folgenden Hauptunterschiede zwischen den beiden Klassen veranschaulicht.  
+ Im folgenden Codebeispiel ist eine Anleitung zum Migrieren von der veralteten <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse zur neuen <xref:System.Xml.Schema.XmlSchemaSet>-Klasse enthalten. Im Codebeispiel werden die folgenden Hauptunterschiede zwischen den beiden Klassen veranschaulicht.  
   
 -   Im Gegensatz zur <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Methode der <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse werden die Schemata beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> nicht kompiliert. Die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> wird im Beispielcode explizit aufgerufen.  
   
