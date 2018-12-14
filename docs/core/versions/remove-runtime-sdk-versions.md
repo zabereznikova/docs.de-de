@@ -1,23 +1,32 @@
 ---
-title: Entfernen von .NET-Laufzeit und SDK
-description: Anweisungen zum Entfernen von .NET Core-Runtime und SDK-Komponenten unter Windows, Mac und Linux
+title: Entfernen von .NET Core Runtime und SDK
+description: In diesem Artikel wird beschrieben, wie Sie feststellen können, welche Versionen von .NET Core Runtime und SDK derzeit installiert sind, und wie Sie sie unter Windows, Mac und Linux entfernen.
 ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
-ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989812"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129700"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Entfernen von .NET Core-Runtime und SDK
 
 Wenn Sie im Laufe der Zeit aktualisierte Versionen der .NET Core-Runtime und des SDK installieren, sollten Sie veraltete .NET Core-Versionen von Ihrem Computer entfernen. Durch das Entfernen älterer Runtime-Versionen ändert sich möglicherweise die für die Ausführung der freigegebenen Frameworkanwendungen ausgewählte Runtime. Dies wird im Artikel zu [Auswahl von .NET Core-Versionen](selection.md) ausführlich beschrieben.
 
+## <a name="should-i-remove-a-version"></a>Sollte ich eine Version entfernen?
+
+Durch das Verhalten bei der [.NET Core-Versionsauswahl](selection.md) und die Laufzeitkompatibilität von .NET Core zwischen Updates können frühere Versionen sicher entfernt werden. Updates für die .NET Core-Runtime sind innerhalb des „Bereichs“ einer Hauptversion kompatibel, wie z.B. 1.x und 2.x. Darüber hinaus können in neueren Versionen des .NET Core SDK in der Regel Anwendungen erstellt werden, die mit früheren Versionen der Laufzeit kompatibel sind.
+
+Im Allgemeinen benötigen Sie nur das neueste SDK und die neueste Patchversion der Laufzeiten, die für Ihre Anwendung erforderlich sind. Instanzen mit älteren SDK- oder Runtime-Versionen beinhalten die Verwaltung von auf **project.json** basierenden Anwendungen. Sie können ältere Versionen sicher entfernen, wenn Ihre Anwendung keine bestimmten Gründe für frühere SDKs oder Laufzeiten aufweist.
+
+## <a name="determine-what-is-installed"></a>Feststellen, was installiert ist
+
 Ab .NET Core 2.1 verfügt die .NET-CLI über Optionen, mit denen Sie die auf Ihrem Computer installierten Versionen des SDK und der Runtime auflisten können.  Verwenden Sie [`dotnet --list-sdks`](../tools/dotnet.md#options) zum Anzeigen der Liste der auf Ihrem Computer installierten SDKs. Verwenden Sie [`dotnet --list-runtimes`](../tools/dotnet.md#options) zum Anzeigen der Liste der auf Ihrem Computer installierten Runtimes. Der folgende Text zeigt eine typische Ausgabe für Windows, macOS oder Linux:
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 ```console
 C:\> dotnet --list-sdks
@@ -55,7 +64,7 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 ```console
 $ dotnet --list-sdks
@@ -89,7 +98,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 ```console
 $ dotnet --list-sdks
@@ -127,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstalling-net-core"></a>Deinstallieren von .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 .NET Core entfernt über das Windows-Dialogfeld **Programme hinzufügen/entfernen** Versionen der .NET Core-Runtime und des SDK. Die folgende Abbildung zeigt das Dialogfeld **Programme hinzufügen/entfernen** mit mehreren installierten Versionen der .NET-Runtime und des SDK.
 
@@ -135,7 +144,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 Wählen Sie sämtliche Versionen aus, die Sie von Ihrem Computer entfernen möchten, und klicken Sie auf **Deinstallieren**.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 Für die Deinstallation von .NET Core (Runtime oder SDK) unter Linux gibt es weitere Optionen. Die beste Möglichkeit zur Deinstallation von .NET Core besteht in der Spiegelung der für die Installation von .NET Core verwendeten Aktion. Die Details hängen davon ab, welche Verteilung und Installationsmethode Sie auswählen.
 
@@ -178,7 +187,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 Die übergeordneten Verzeichnisse für das SDK und die Runtime werden in der Ausgabe des Befehls `dotnet --list-sdks` und `dotnet --list-runtimes` aufgeführt, wie in der obigen Tabelle dargestellt.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 Unter Mac müssen die SDKs und Runtimes separat entfernt werden, indem das Verzeichnis entfernt wird, das diese Version enthält. Zum Entfernen des SDK und der Runtime von Version 1.0.1 würden Sie beispielsweise die folgenden Bash-Befehle verwenden:
 
@@ -190,7 +199,5 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 ```
 
 Die übergeordneten Verzeichnisse für das SDK und die Runtime werden in der Ausgabe des Befehls `dotnet --list-sdks` und `dotnet --list-runtimes` aufgeführt, wie in der obigen Tabelle dargestellt.
-
-Ab .NET Core 2.1 muss das .NET Core SDK nicht mehr deinstalliert werden, wenn mithilfe eines Paket-Managers ein Upgrade durchgeführt wird. Mit dem Befehl `update` oder `refresh` des Paket-Managers werden die älteren Versionen nach erfolgreicher Installation einer neueren Version automatisch entfernt.
 
 ---

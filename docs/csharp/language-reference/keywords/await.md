@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511944"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147384"
 ---
 # <a name="await-c-reference"></a>await (C#-Referenz)
 Der Operator `await` wird auf eine Aufgabe in einer asynchronen Methode angewendet, um einen Unterbrechungspunkt in die Ausführung der Methode einzufügen, bis die Aufgabe abgeschlossen ist. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  
@@ -65,7 +65,7 @@ Im folgenden Beispiel wird die Gesamtzahl der Zeichen auf den Seiten zurückgege
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Da die Verwendung von `async` und `await` an einem Anwendungseinstiegspunkt nicht unterstützt wird, kann das `async`-Attribut nicht auf die `Main`-Methode angewendet werden und es kann auch nicht auf den Methodenaufruf `GetPageLengthsAsync` gewartet werden. Es kann sichergestellt werden, dass die `Main`-Methode auf den Abschluss des asynchronen Vorgangs wartet, indem der Wert der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> abgerufen wird. Bei Aufgaben, die keinen Wert zurückgeben, wird die Methode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> aufgerufen. 
+Im vorhergehenden Beispiel wird C# 7.1 verwendet, was die [`async` `Main`-Methode unterstützt](../../programming-guide/main-and-command-args/index.md). Da frühere C#-Versionen keine Anwendungseinstiegspunkte unterstützen, die <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgeben, können Sie den `async`-Modifikator nicht auf die `Main`-Methode anwenden und auf den Aufruf der `GetPageLengthsAsync`-Methode warten. In diesem Fall können Sie sicherstellen, dass die `Main`-Methode auf den Abschluss des asynchronen Vorgangs wartet, indem der Wert der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> abgerufen wird. Bei Aufgaben, die keinen Wert zurückgeben, wird die Methode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> aufgerufen. Informationen zum Auswählen der Sprachversion finden Sie unter [Auswählen der C#-Sprachversion](../configure-language-version.md).
 
 ## <a name="see-also"></a>Siehe auch  
 - [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)   

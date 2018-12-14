@@ -1,19 +1,20 @@
 ---
-title: Rollforward der eigenständigen Runtimebereitstellung
+title: Runtimebereitstellung für eigenständige .NET Core-App-Bereitstellungen.
 description: Erfahren Sie mehr über die Änderungen an „dotnet publish“ für eigenständige Bereitstellungen.
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.custom: seodec18
+ms.openlocfilehash: dde00cf71f0d67c8c4380748e01a4ef5c17ebb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071031"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126678"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Rollforward der eigenständigen Runtimebereitstellung
 
-[Eigenständige Anwendungsbereitstellungen](index.md) von .NET Core enthalten sowohl die .NET Core-Bibliotheken als auch die .NET Core-Runtime. Beginnend mit .NET Core SDK 2.1.300 (.NET Core 2.1) veröffentlicht eine eigenständige Anwendungsbereitstellung [ die höchste Patch-Runtime auf Ihrem Computer](https://github.com/dotnet/designs/pull/36). [`dotnet publish`](../tools/dotnet-publish.md) wählt für eine eigenständige Bereitstellung standardmäßig die aktuellste installierte Version als Teil des SDK auf dem veröffentlichenden Computer aus. Dadurch kann Ihre bereitgestellte Anwendung während `publish` mit Problembehebungen der Sicherheit (und anderen Problembehebungen) ausgeführt werden. Die Anwendung muss neu veröffentlicht werden, um einen neuen Patch abzurufen. Eigenständige Anwendungen werden durch Angabe von `-r <RID>` auf dem Befehl `dotnet publish` oder durch Angabe des [Runtime-Bezeichners (RID)](../rid-catalog.md) in der Projektdatei (CSPROJ/VBPROJ) oder der Befehlszeile erstellt.
+[Eigenständige Anwendungsbereitstellungen](index.md) von .NET Core enthalten sowohl die .NET Core-Bibliotheken als auch die .NET Core-Runtime. Beginnend mit .NET Core SDK 2.1 (Version 2.1.300) veröffentlicht eine eigenständige Anwendungsbereitstellung [die höchste Patch-Runtime auf Ihrem Computer](https://github.com/dotnet/designs/pull/36). [`dotnet publish`](../tools/dotnet-publish.md) wählt für eine eigenständige Bereitstellung standardmäßig die aktuellste installierte Version als Teil des SDK auf dem veröffentlichenden Computer aus. Dadurch kann Ihre bereitgestellte Anwendung während `publish` mit Problembehebungen der Sicherheit (und anderen Problembehebungen) ausgeführt werden. Die Anwendung muss neu veröffentlicht werden, um einen neuen Patch abzurufen. Eigenständige Anwendungen werden durch Angabe von `-r <RID>` auf dem Befehl `dotnet publish` oder durch Angabe des [Runtime-Bezeichners (RID)](../rid-catalog.md) in der Projektdatei (CSPROJ/VBPROJ) oder der Befehlszeile erstellt.
 
 ## <a name="patch-version-roll-forward-overview"></a>Übersicht über Rollforward der Patchversion
 
@@ -29,7 +30,7 @@ ms.locfileid: "37071031"
 Das Ausführen von `restore` als Teil des `publish`-Vorgangs kann für Ihr Szenario unangebracht sein. Führen Sie die folgenden Schritte aus, um `restore` während `publish` beim Erstellen eigenständiger Anwendungen zu vermeiden:
 
 * Legen Sie die Eigenschaft `RuntimeIdentifiers` auf eine durch Semikolons getrennte Liste aller zu veröffentlichenden [RIDs](../rid-catalog.md) fest.
-* Legen Sie die `TargetLatestRuntimePatch`-Eigenschaft auf `true` fest.
+* Legen Sie die `TargetLatestRuntimePatch` -Eigenschaft auf `true`fest.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>No-restore-Argument mit dotnet publish-Optionen
 

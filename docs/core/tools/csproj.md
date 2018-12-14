@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPRO
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203955"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143700"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -75,9 +75,6 @@ Sie können die `<EnableDefaultItems>`-Eigenschaft wie im folgenden Beispiel auf
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>Empfehlung
-Für csproj empfehlen wir, dass Sie die Standardglobs aus Ihrem Projekt entfernen und nur Dateipfade mit Globs für die Artefakte hinzufügen, die Ihre App/Bibliothek für verschiedene Szenarios benötigt (z.B. Runtime und NuGet-Paket).
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Anzeige des gesamten Projekts wie in MSBuild
 
@@ -181,7 +178,7 @@ Im folgenden Beispiel werden nur die Fallbacks für das `netcoreapp2.1`-Ziel ang
 Mit dem Wechsel zu MSBuild haben wir die Eingabemetadaten, die beim Packen eines NuGet-Pakets verwendet werden, aus *project.json* in *.csproj*-Dateien verschoben. Die Eingaben sind MSBuild-Eigenschaften, sodass sie in eine `<PropertyGroup>`-Gruppe wechseln müssen. In der folgenden Liste sind die Eigenschaften aufgeführt, die als Eingaben für den Packvorgang verwendet werden, wenn der Befehl `dotnet pack` oder das MSBuild-Ziel `Pack` verwendet wird, das Bestandteil des SDKs ist. 
 
 ### <a name="ispackable"></a>IsPackable
-Ein Boolescher Wert, der angibt, ob das Projekt verpackt werden kann. Der Standardwert ist `true`. 
+Ein Boolescher Wert, der angibt, ob das Projekt verpackt werden kann. Der Standardwert ist `true`sein. 
 
 ### <a name="packageversion"></a>PackageVersion
 Gibt die Version an, die das resultierende Paket haben wird. Akzeptiert alle Arten von NuGet-Versionszeichenfolgen. Standardmäßig beträgt der Wert `$(Version)` der Eigenschaft `Version` im Projekt. 
@@ -195,14 +192,18 @@ Ein benutzerfreundlicher Titel des Pakets, der in der Regel in der Benutzeroberf
 ### <a name="authors"></a>Authors
 Eine durch Semikolons getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Diese werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete von den gleichen Autoren zu geben.
 
-### <a name="description"></a>Beschreibung 
+### <a name="packagedescription"></a>PackageDescription
+
 Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche.
+
+### <a name="description"></a>Beschreibung
+Eine lange Beschreibung für die Assembly. Wenn `PackageDescription` nicht angegeben ist, wird diese Eigenschaft auch als Beschreibung des Pakets verwendet.
 
 ### <a name="copyright"></a>Copyright
 Copyright-Informationen für das Paket.
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
-Ein Boolescher Wert, der angibt, ob der Client den Verbraucher dazu auffordern muss, die Paketlizenz vor der Installation des Pakets zu akzeptieren. Die Standardeinstellung ist `false`.
+Ein Boolescher Wert, der angibt, ob der Client den Verbraucher dazu auffordern muss, die Paketlizenz vor der Installation des Pakets zu akzeptieren. Der Standardwert ist `false`.
 
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 Eine URL für die Lizenz, die auf das Paket angewendet werden kann.
@@ -296,7 +297,7 @@ Notizen:
 * `Configuration` wird vom gesamten Buildprozess gemeinsam verwendet und über den `--configuration`-Parameter von `dotnet`-Befehlen festgelegt.
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo 
-Ein boolescher Wert zum Aktivieren oder Deaktivieren der AssemblyInfo-Erstellung insgesamt. Der Standardwert ist `true`. 
+Ein boolescher Wert zum Aktivieren oder Deaktivieren der AssemblyInfo-Erstellung insgesamt. Der Standardwert ist `true`sein. 
 
 ### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile 
 Der Pfad der generierten Assembly-Infodatei. Standardmäßig eine Datei im `$(IntermediateOutputPath)` (obj)-Verzeichnis.

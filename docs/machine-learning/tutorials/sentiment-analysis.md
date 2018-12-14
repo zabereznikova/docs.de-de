@@ -1,15 +1,15 @@
 ---
 title: Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung
 description: Erfahren Sie, wie Sie ML.NET in einem Szenario mit binärer Klassifizierung verwenden, um zu erfahren, wie Sie die Standpunktvorhersage verwenden, um die geeignete Aktion auszuführen.
-ms.date: 06/04/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: mvc, seodec18
+ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453163"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149652"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung
 
@@ -27,7 +27,8 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > * Laden eines Klassifizierers
 > * Trainieren des Modells
 > * Auswerten des Modells mit einem anderen Dataset
-> * Vorhersagen der Testdatenergebnisse mit dem Modell
+> * Vorhersagen einer einzelnen Instanz an Testdatenergebnissen mit dem Modell
+> * Vorhersagen der Testdatenergebnisse mit einem geladenen Modell
 
 ## <a name="sentiment-analysis-sample-overview"></a>Übersicht über das Standpunktanalyse-Beispiel
 
@@ -47,11 +48,14 @@ Dieses Tutorial folgt einem Machine Learning-Workflow, der den geordneten Ablauf
 Die Workflowphasen lauten wie folgt:
 
 1. **Verstehen des Problems**
-2. **Erfassen der Daten**
-3. **Vorverarbeitung der Daten und Feature Engineering**
-4. **Trainieren und Vorhersagen des Modells**
-5. **Evaluieren des Modells**
-6. **Operationalisierung des Modells**
+2. **Vorbereiten Ihrer Daten**
+   * **Laden der Daten**
+   * **Extrahieren von Funktionen (Transformieren von Daten)**
+3. **Erstellen und trainieren** 
+   * **Trainieren des Modells**
+   * **Evaluieren des Modells**
+4. **Ausführen**
+   * **Modellverbrauch**
 
 ### <a name="understand-the-problem"></a>Das Problem verstehen
 
@@ -67,8 +71,8 @@ Sie müssen dann den Standpunkt **bestimmen**, was Ihnen die Auswahl der Machine
 
 Von diesem Problem kennen Sie die folgenden Fakten:
 
-Trainingsdaten: Websitekommentare können positiv oder negativ sein (**Standpunkt**).
-Sagen Sie den **Standpunkt** eines neuen Websitekommentars voraus, positiv oder negativ, wie in den folgenden Beispielen:
+Trainingsdaten: Websitekommentare können schädlich (1) oder unschädlich (0) sein (**Standpunkt**).
+Sagen Sie den **Standpunkt** eines neuen Websitekommentars voraus, schädlich oder unschädlich, wie in den folgenden Beispielen:
 
 * Bitte schreiben Sie keinen Unsinn in Wikipedia.
 * Er ist der beste, und das müsste der Artikel hervorheben.
@@ -113,15 +117,16 @@ Fügen Sie am Anfang der Datei *Program.cs* folgende zusätzliche `using`-Anweis
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Sie müssen drei globale Felder erstellen, die den Pfad zu den zuletzt heruntergeladenen Dateien enthalten:
+Sie müssen drei globale Felder erstellen, die die Pfade zu den zuletzt heruntergeladenen Dateien enthalten, und eine globale Variable für den `TextLoader`:
 
-* `_dataPath` enthält den Pfad zu dem Dataset, das zum Trainieren des Modells verwendet wird.
+* `_trainDataPath` enthält den Pfad zu dem Dataset, das zum Trainieren des Modells verwendet wird.
 * `_testDataPath` enthält den Pfad zu dem Dataset, das zum Evaluieren des Modells verwendet wird.
 * `_modelPath` enthält den Pfad zu dem Speicherort, in dem das trainierte Modell gespeichert ist.
+* `_reader` ist der zum Laden und Transformieren der Datasets verwendete <xref:Microsoft.ML.Runtime.Data.TextLoader>.
 
-Fügen Sie den folgenden Code der Zeile direkt über der `Main`-Methode hinzu, um diese Pfade anzugeben:
+Fügen Sie den folgenden Code der Zeile direkt über der `Main`-Methode hinzu, um diese Pfade und die `_textLoader`-Variable anzugeben:
 
-[!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
+[!code-csharp[Declare global variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare global variables")]
 
 Sie müssen einige Klassen für die Eingabedaten und Vorhersagen erstellen. Fügen Sie dem Projekt eine neue Klasse hinzu:
 
@@ -139,69 +144,79 @@ Entfernen Sie die vorhandene Klassendefinition, und fügen Sie den folgenden Cod
 
 `SentimentData` ist die Klasse des Eingabedatasets und verfügt über eine `float`-Variable (`Sentiment`), die einen entweder positiven oder negativen Wert für den Standpunkt enthält, und eine String-Variable für den Kommentar (`SentimentText`). Beiden Feldern sind `Column`-Attribute angefügt. Dieses Attribut beschreibt die Reihenfolge der Felder in der Datendatei, und welches das `Label`-Feld ist. Die `SentimentPrediction`-Klasse wird für die Vorhersage verwendet, nachdem das Modell trainiert wurde. Er verfügt über einen einzelnen booleschen Wert (`Sentiment`) und ein `PredictedLabel` `ColumnName`-Attribut. Das `Label` dient zum Erstellen und Trainieren des Modells, und es wird auch mit einem zweiten Dataset verwendet, um das Modell zu evaluieren. Das `PredictedLabel` wird während der Vorhersage und Evaluierung verwendet. Für die Evaluierung werden eine Eingabe mit Trainingsdaten, die vorhergesagten Werte und das Modell verwendet.
 
-Ändern Sie in der Datei *Program.cs* die Signatur der `Main`-Methode durch Ersetzen von `void` mit `async Task`, wie im folgenden Beispiel gezeigt:
+Beim Erstellen eines Modells mit ML.NET erstellen Sie zunächst einen `MLContext`. Dies ist im Prinzip vergleichbar mit der Verwendung von `DbContext` in Entity Framework. Die Umgebung bietet einen Kontext für Ihren ML-Job, der für die Verfolgung und Protokollierung von Ausnahmen verwendet werden kann.
 
-```csharp
-static async Task Main(string[] args) 
-{
+### <a name="initialize-variables-in-main"></a>Initialisieren von Variablen in Main
 
-}
-```
+Erstellen Sie eine Variable namens `mlContext` und initialisieren Sie sie mit einer neuen `MLContext`-Instanz.  Ersetzen Sie die Zeile `Console.WriteLine("Hello World!")` mit dem folgenden Code in der `Main`-Methode:
 
-Fügen Sie `async` zu `Main` mit einem <xref:System.Threading.Tasks.Task>-Rückgabetyp hinzu, da Sie das Modell später in einer ZIP-Datei speichern, und das Programm warten muss, bis diese externe Aufgabe abgeschlossen ist.
+[!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-> [!NOTE]
-> Mithilfe einer *async main*-Methode können Sie `await` in Ihrer `Main`-Methode verwenden. Weitere Informationen finden Sie im C#-Programmierhandbuch im Thema [Main() und Befehlszeilenargumente (C#-Programmierhandbuch)](../../../docs/csharp/programming-guide/main-and-command-args/index.md) .
+Als nächstes initialisieren Sie zum Laden der Daten die globale Variable `_textLoader`, um sie wiederzuverwenden.  Beachten Sie, die Sie einen `TextReader` verwenden. Wenn Sie einen `TextLoader` mithilfe eines `TextReader` erstellen, übergeben Sie den erforderlichen Kontext und die <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments>-Klasse, um eine Anpassung zu ermöglichen.
 
-Ersetzen Sie die Zeile `Console.WriteLine("Hello World!")` mit dem folgenden Code in der `Main`-Methode:
+ Geben Sie das Datenschema an, indem Sie ein Array von <xref:Microsoft.ML.Runtime.Data.TextLoader.Column>-Objekten an das Ladeprogramm übergeben, das alle Spaltennamen und deren Typen enthält. Das Datenschema wurde bereits beim Erstellen der `SentimentData`-Klasse definiert. Für unser Schema ist die erste Spalte (Bezeichnung) ein <xref:System.Boolean> (die Vorhersage) und die zweite Spalte (SentimentText) ist die Eigenschaft des Typs „Text/Zeichenfolge“, der für die Vorhersage des Standpunkts verwendet wird.
+Die `TextReader`-Klasse gibt einen vollständig initialisierten <xref:Microsoft.ML.Runtime.Data.TextLoader> zurück.  
 
-[!code-csharp[Train](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Train your model")]
+Um die globale Variable `_textLoader` zu initialisieren, um sie für die benötigten Datasets wiederzuverwenden, fügen Sie nach der Initialisierung von `mlContext` den folgenden Code hinzu:
+
+[!code-csharp[initTextReader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextReader")]
+
+Fügen Sie den folgenden Text als nächste Codezeile in die `Main`-Methode ein:
+
+[!code-csharp[Train](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Train your model")]
 
 Die `Train`-Methode führt die folgenden Aufgaben aus:
 
-* Laden oder Erfassen der Daten.
-* Vorverarbeitung und Featurebereitstellung der Daten.
+* Laden der Daten.
+* Extrahieren und Transformieren der Daten.
 * Trainieren des Modells.
 * Vorhersagen des Standpunkts anhand der Testdaten.
+* Zurückgeben des Modells.
 
-Erstellen Sie die `Train`-Methode direkt nach der `Main`-Methode mit dem folgenden Code:
+Erstellen Sie die `Train`-Methode mit dem folgenden Code direkt nach der `Main`-Methode:
 
 ```csharp
-public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Train()
+ public static ITransformer Train(MLContext mlContext, string dataPath)
 {
 
 }
 ```
 
-## <a name="ingest-the-data"></a>Erfassen der Daten
+Beachten Sie, dass zwei Parameter an die Train-Methode übergeben werden; ein `MLContext` für den Kontext (`mlContext`) und eine <xref:System.String> für den Datensetpfad (`dataPath`). Sie werden diese Methode mehr als einmal zum Trainieren und Testen verwenden.
 
-Initialisieren Sie eine neue Instanz der <xref:Microsoft.ML.Legacy.LearningPipeline>, die das Laden von Daten, Datenverarbeitung/-featurebereitstellung und Modell enthält. Fügen Sie den folgenden Code am Ende der ersten Zeile der `Train`-Methode hinzu.
+## <a name="load-the-data"></a>Laden der Daten
 
-[!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
+Sie laden die Daten mithilfe der globalen Variablen `_textLoader` mit dem `dataPath`-Parameter. Zurückgegeben wird ein <xref:Microsoft.ML.Runtime.Data.IDataView>. Als Ein- und Ausgabe von `Transforms` ist ein `DataView` der grundlegende Datenpipelinetyp, vergleichbar mit `IEnumerable` für `LINQ`.
 
-Das <xref:Microsoft.ML.Legacy.Data.TextLoader>-Objekt ist der erste Teil der Pipeline und lädt die Trainingsdateidaten.
+In ML.NET ähneln die Daten einer SQL-Ansicht. Sie werden verzögert ausgewertet, sind schematisiert und heterogen. Das Objekt ist der erste Teil der Pipeline und lädt die Daten. Für dieses Tutorial lädt es ein Dataset mit Kommentaren und entsprechend schädlichen oder unschädlichen Standpunkten. Damit wird das Modell erstellt und trainiert.
 
-[!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
+ Fügen Sie den folgenden Code am Ende der ersten Zeile der `Train`-Methode hinzu.
 
-## <a name="data-preprocess-and-feature-engineering"></a>Vorverarbeitung der Daten und Feature Engineering
+[!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "loading training dataset")]
 
-Vorverarbeitung und Bereinigung von Daten sind wichtige Aufgaben, die durchgeführt werden, bevor ein Dataset effektiv für Machine Learning verwendet wird. Rohdaten sind häufig verunreinigt und unzuverlässig, und es können darin Werte fehlen. Die Verwendung von Daten ohne diese Modellierungsaufgaben kann irreführende Ergebnisse erzeugen. Mit den Transformationspipelines von ML.NET können Sie einen benutzerdefinierten Satz von Transformationen erstellen, die vor dem Trainieren oder Testen auf Ihre Daten angewendet werden. Die Transformationen dienen in erster Linie der Datenfeaturebereitstellung. Der Vorteil einer Transformationspipeline besteht darin, dass Sie sie nach der Transformationspipeline-Definition speichern können, um sie auf Testdaten anzuwenden.
+## <a name="extract-and-transform-the-data"></a>Extrahieren und Transformieren der Daten
 
-Wenden Sie einen <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> an, um die `SentimentText`-Spalte in einen [numerischen Vektor](../resources/glossary.md#numerical-feature-vector) namens `Features` zu konvertieren, den der Machine Learning-Algorithmus verwendet. Dies ist der Vorverarbeitungs-/Featurebereitstellungsschritt. Die Verwendung zusätzlicher in ML.NET verfügbarer Komponenten kann bessere Ergebnisse mit dem Modell ermöglichen. Fügen Sie der Pipeline `TextFeaturizer` als nächste Codezeile hinzu:
+Vorverarbeitung und Bereinigung von Daten sind wichtige Aufgaben, die durchgeführt werden, bevor ein Dataset effektiv für Machine Learning verwendet wird. Rohdaten sind häufig verunreinigt und unzuverlässig, und es können darin Werte fehlen. Die Verwendung von Daten ohne diese Modellierungsaufgaben kann irreführende Ergebnisse erzeugen.
 
-[!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
+Mit den Transformationspipelines von ML.NET können Sie einen benutzerdefinierten Satz von Transformationen erstellen, die vor dem Trainieren oder Testen auf Ihre Daten angewendet werden. Die Transformationen dienen in erster Linie der [Datenfeaturebereitstellung](../resources/glossary.md#feature-engineering). Machine Learning-Algorithmen verstehen die mit [Features ausgestatteten](../resources/glossary.md#feature) Daten, sodass der nächste Schritt darin besteht, unsere Textdaten in ein Format zu transformieren, das unsere ML-Algorithmen erkennen. Dieses Format ist ein [numerischer Vektor](../resources/glossary.md#numerical-feature-vector).
+
+Rufen Sie anschließend `mlContext.Transforms.Text.FeaturizeText` auf, wodurch die Textspalte (`SentimentText`) in einen numerischen Vektor namens `Features` konvertiert wird, den der Machine Learning-Algorithmus verwendet. Dies ist ein Wrapperaufruf, der <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601> zurückgibt, das effektiv eine Pipeline ist. Geben Sie den Namen `pipeline` ein, da Sie den Trainer an die `EstimatorChain` anfügen. Fügen Sie das zur nächsten Codezeile hinzu:
+
+[!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
+
+Dies ist der Vorverarbeitungs-/Featurebereitstellungsschritt. Die Verwendung zusätzlicher in ML.NET verfügbarer Komponenten kann bessere Ergebnisse mit dem Modell ermöglichen.
 
 ## <a name="choose-a-learning-algorithm"></a>Auswählen eines Lernalgorithmus
 
-Das <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier>-Objekt ist ein Entscheidungsstruktur-Lernmodul, das Sie in dieser Pipeline verwenden. Ähnlich wie der Featurebereitstellungsschritt führt das Ausprobieren verschiedener in ML.NET verfügbarer Lernmodule und Ändern ihrer Parameter zu unterschiedlichen Ergebnissen. Bei der Optimierung können Sie [Hyperparameter](../resources/glossary.md#hyperparameter) wie <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves> und <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs> festlegen. Diese Hyperparameter werden vor jeglichen Auswirkungen auf das Modell festgelegt und sind modellspezifisch. Sie werden zur Optimierung der Entscheidungsstrukturleistung verwendet, sodass größere Werte sich negativ auf die Leistung auswirken können.
+Um die Trainer hinzuzufügen, rufen Sie die `mlContext.Transforms.Text.FeaturizeText`-Wrappermethode auf, die ein <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer>-Objekt zurückgibt. Das ist ein Entscheidungsstruktur-Lernmodul, das Sie in dieser Pipeline verwenden. Der `FastTreeBinaryClassificationTrainer` wird an die `pipeline` angefügt, und akzeptiert den mit Features ausgestatteten `SentimentText` (`Features`) und die `Label`-Eingabeparameter, um aus den historischen Daten zu lernen.
 
 Fügen Sie der `Train`-Methode folgenden Code hinzu:
 
-[!code-csharp[BinaryClassifier](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#8 "Add a fast binary tree classifier")]
+[!code-csharp[FastTreeBinaryClassificationTrainer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#8 "Add a FastTreeBinaryClassificationTrainer")]
 
 ## <a name="train-the-model"></a>Trainieren des Modells
 
-Sie trainieren das Modell <xref:Microsoft.ML.Legacy.PredictionModel%602> basierend auf dem Dataset, das geladen und transformiert worden ist. `pipeline.Train<SentimentData, SentimentPrediction>()` trainiert die Pipeline (lädt die Daten, trainiert den Featurebereitsteller und das Lernmodul). Das Experiment wird erst ausgeführt, wenn dies geschieht.
+Sie trainieren das Modell <xref:Microsoft.ML.Runtime.Data.TransformerChain%601> basierend auf dem Dataset, das geladen und transformiert worden ist. Sobald die Schätzung definiert ist, trainieren Sie Ihr Modell mit <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> und stellen die bereits geladenen Trainingsdaten zur Verfügung. Damit wird ein Modell zurückgegeben, das für Vorhersagen verwendet werden kann. `pipeline.Fit()` trainiert die Pipeline und gibt einen `Transformer` basierend auf der eingegebenen `DataView` zurück. Das Experiment wird erst ausgeführt, wenn dies geschieht.
 
 Fügen Sie der `Train`-Methode folgenden Code hinzu:
 
@@ -209,20 +224,16 @@ Fügen Sie der `Train`-Methode folgenden Code hinzu:
 
 ### <a name="save-and-return-the-model-trained-to-use-for-evaluation"></a>Speichern und Zurückgeben des trainierten Modells zur Verwendung für die Evaluierung
 
-An diesem Punkt haben Sie ein Modell, das in eine der vorhandenen oder neuen .NET-Anwendungen integriert werden kann. Fügen Sie den folgenden Code der nächsten Zeile in `Train` hinzu, um das Modell vor der Rückgabe in einer ZIP-Datei zu speichern:
+An diesem Punkt haben Sie ein Modell vom Typ <xref:Microsoft.ML.Data.TransformerChain%601>, das in eine der vorhandenen oder neuen .NET-Anwendungen integriert werden kann. Geben Sie das Modell am Ende der `Train`-Methode zurück.
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#10 "Save the model")]
-
-Geben Sie das Modell am Ende der `Train`-Methode zurück.
-
-[!code-csharp[ReturnModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#11 "Return the model")]
+[!code-csharp[ReturnModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#10 "Return the model")]
 
 ## <a name="evaluate-the-model"></a>Evaluieren des Modells
 
 Da Sie nun das Modell erstellt und trainiert haben, müssen Sie es zur Qualitätssicherung und Validierung mit einem anderen Dataset evaluieren. In der `Evaluate`-Methode wird das in `Train` erstellte Modell zur Evaluierung übergeben. Erstellen Sie die `Evaluate`-Methode direkt nach `Train` wie im folgenden Code:
 
 ```csharp
-public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> model)
+public static void Evaluate(MLContext mlContext, ITransformer model)
 {
 
 }
@@ -237,32 +248,61 @@ Die `Evaluate`-Methode führt die folgenden Aufgaben aus:
 
 Fügen Sie einen Aufruf der neuen Methode aus der `Main`-Methode mit dem folgenden Code direkt unter dem `Train`-Methodenaufruf hinzu:
 
-[!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
+[!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#11 "Call the Evaluate method")]
 
-Die <xref:Microsoft.ML.Legacy.Data.TextLoader>-Klasse lädt das neue Testdataset mit dem gleichen Schema. Sie können das Modell unter Verwendung dieses Datasets in Form einer Qualitätsüberprüfung evaluieren. Fügen Sie der `Evaluate`-Methode folgenden Code hinzu:
+Sie laden das Testdatenset mit der zuvor initialisierten globalen Variablen `_textLoader` und dem globalen Feld `_testDataPath`. Sie können das Modell unter Verwendung dieses Datasets in Form einer Qualitätsüberprüfung evaluieren. Fügen Sie der `Evaluate`-Methode folgenden Code hinzu:
 
-[!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
+[!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Load the test dataset")]
 
-Das <xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator>-Objekt berechnet die Qualitätsmetriken für das `PredictionModel` mit dem angegebenen Dataset. Fügen Sie zur Anzeige dieser Metriken den Auswerter als nächste Zeile mit folgendem Code der `Evaluate`-Methode hinzu:
+Als nächstes verwenden Sie den Machine Learning-Parameter `model` (einen Transformator), um die Features einzugeben und die Vorhersagen zurückzugeben. Fügen Sie der `Evaluate`-Methode folgenden Code als nächste Zeile hinzu:
 
-[!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
+[!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Predict using the Transformer")]
 
-Die <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> enthält alle von Auswertern der binären Klassifizierung berechneten Metriken. Um diese zur Bestimmung der Qualität des Modells anzuzeigen, müssen Sie die Metriken zuerst abzurufen. Fügen Sie den folgenden Code hinzu:
+Die `BinaryClassificationContext.Evaluate`-Methode berechnet die Qualitätsmetriken für das `PredictionModel` mit dem angegebenen Dataset. Das zurückgegebene `BinaryClassificationEvaluator.CalibratedResult`-Objekt enthält alle von Auswertern der binären Klassifizierung berechneten Metriken. Um diese zur Bestimmung der Qualität des Modells anzuzeigen, müssen Sie die Metriken zuerst abzurufen. Fügen Sie der `Evaluate`-Methode folgenden Code als nächste Zeile hinzu:
 
-[!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
+[!code-csharp[ComputeMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Compute Metrics")]
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Anzeigen der Metriken zur Modellvalidierung
 
 Verwenden Sie den folgenden Code, um die Metriken anzuzeigen, die Ergebnisse freizugeben und dann mit ihnen zu arbeiten:
 
-[!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Display selected metrics")]
+[!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Display selected metrics")]
 
-## <a name="predict-the-test-data-outcomes-with-the-model"></a>Vorhersagen der Testdatenergebnisse mit dem Modell
+Um das Modell vor der Rückgabe in einer ZIP-Datei zu speichern, fügen Sie den folgenden Code als nächste Zeile in `TrainFinalModel` hinzu, um die `SaveModelAsFile`-Methode aufzurufen:
+
+[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#23 "Save the model")]
+
+## <a name="save-the-model-as-azip-file"></a>Speichern des Modells als ZIP-Datei
+
+Erstellen Sie die `SaveModelAsFile`-Methode mit dem folgenden Code direkt nach der `Evaluate`-Methode:
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
+{
+
+}
+```
+
+Die `SaveModelAsFile`-Methode führt die folgenden Aufgaben aus:
+
+* Speichern Sie das Modells als ZIP-Datei.
+
+Erstellen Sie anschließend eine Methode zum Speichern des Modells, damit es wiederverwendet und in anderen Anwendungen integriert werden kann. Der `ITransformer` enthält eine <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)>-Methode mit dem globalen Feld `_modelPath` und einem <xref:System.IO.Stream>. Um die als ZIP-Datei zu speichern, erstellen Sie den `FileStream` unmittelbar vor dem Aufruf der `SaveTo`-Methode. Fügen Sie der `SaveModelAsFile`-Methode folgenden Code als nächste Zeile hinzu:
+
+[!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
+
+Sie können auch anzeigen, wo die Datei geschrieben wurde, indem Sie mit dem folgenden Code eine Konsolenmeldung mit dem `_modelPath` schreiben:
+
+```csharp
+Console.WriteLine("The model is saved to {0}", _modelPath);
+```
+
+## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>Vorhersagen der Testdatenergebnissen mit dem Modell und einem einzelnen Kommentar
 
 Erstellen Sie die `Predict`-Methode mit dem folgenden Code direkt nach der `Evaluate`-Methode:
 
 ```csharp
-public static void Predict(PredictionModel<SentimentData, SentimentPrediction> model)
+private static void Predict(MLContext mlContext, ITransformer model)
 {
 
 }
@@ -270,36 +310,79 @@ public static void Predict(PredictionModel<SentimentData, SentimentPrediction> m
 
 Die `Predict`-Methode führt die folgenden Aufgaben aus:
 
-* Erstellen von Testdaten.
+* Erstellen eines einzelnen Kommentars aus Testdaten.
 * Vorhersagen des Standpunkts anhand der Testdaten.
 * Kombinieren von Testdaten und Vorhersagen für die Berichterstattung.
 * Anzeigen der vorhergesagten Ergebnisse.
 
 Fügen Sie einen Aufruf der neuen Methode aus der `Main`-Methode mit dem folgenden Code direkt unter dem `Evaluate`-Methodenaufruf hinzu:
 
-[!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Call the Predict method")]
+[!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Fügen Sie einige Kommentare zum Testen der Vorhersagen des trainierten Modells in der `Predict`-Methode hinzu:
+Das `model` ist ein `transformer`, der auf vielen Datenzeilen arbeitet, wohingegen ein sehr gängiges Produktionsszenario die Notwendigkeit von Vorhersagen für einzelne Beispiele ist. <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> ist ein Wrapper, der von der `MakePredictionFunction`-Methode zurückgegeben wird. Fügen wir den folgenden Code hinzu, um die PredictionFunction als erste Zeile in der `Predict`-Methode zu erstellen:
 
-[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
+[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+  
+Fügen Sie einen Kommentar hinzu, um die Vorhersage des trainierten Modells in der `Predict`-Methode zu testen, indem Sie eine `SentimentData`-Instanz erstellen:
 
-Nun besitzen Sie ein Modell, mit dem Sie den positiven oder negative Standpunkt der Kommentardaten unter Verwendung der <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType>-Methode vorhersagen können. Verwenden Sie zum Abrufen einer Vorhersage `Predict` mit neuen Daten. Beachten Sie, dass die Eingabedaten eine Zeichenfolge sind und das Modell die Featurebereitstellungsschritt umfasst. Die Pipeline ist während Training und Vorhersage synchronisiert. Sie mussten keinen Vorverarbeitungs-/Featurebereitstellungscode speziell für Vorhersagen schreiben, und die gleiche API wird sowohl für Batch- als auch einmalige Vorhersagen eingesetzt.
+[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
 
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
+
+ Damit können Sie den schädlichen oder unschädlichen Standpunkt einer einzelnen Instanz der Kommentardaten vorhersagen. Verwenden Sie zum Abrufen einer Vorhersage <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> für die Daten. Beachten Sie, dass die Eingabedaten eine Zeichenfolge sind und das Modell die Featurebereitstellungsschritt umfasst. Die Pipeline ist während Training und Vorhersage synchronisiert. Sie mussten keinen Vorverarbeitungs-/Featurebereitstellungscode speziell für Vorhersagen schreiben, und die gleiche API wird sowohl für Batch- als auch einmalige Vorhersagen eingesetzt.
+
+[!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
+
+### <a name="model-operationalization-prediction"></a>Operationalisierung des Modells: Vorhersage
+
+Anzeigen von `SentimentText` und entsprechender Standpunktvorhersage, um die Ergebnisse freizugeben und entsprechend mit ihnen zu agieren. Dies wird als Operationalisierung bezeichnet, wobei die zurückgegebenen Daten als Teil der Betriebsrichtlinien verwendet werden. Erstellen Sie mit dem folgenden <xref:System.Console.WriteLine?displayProperty=nameWithType>-Code eine Anzeige für die Ergebnisse:
+
+[!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction output")]
+
+## <a name="predict-the-test-data-outcomes-with-the-saved-model"></a>Vorhersagen der Testdatenergebnisse mit dem gespeicherten Modell
+
+Erstellen Sie die `PredictWithModelLoadedFromFile`-Methode mit dem folgenden Code direkt vor der `SaveModelAsFile`-Methode:
+
+```csharp
+public static void PredictWithModelLoadedFromFile(MLContext mlContext)
+{
+
+}
+```
+
+Die `PredictWithModelLoadedFromFile`-Methode führt die folgenden Aufgaben aus:
+
+* Erstellen von Batchtestdaten.
+* Vorhersagen des Standpunkts anhand der Testdaten.
+* Kombinieren von Testdaten und Vorhersagen für die Berichterstattung.
+* Anzeigen der vorhergesagten Ergebnisse.
+
+Fügen Sie einen Aufruf der neuen Methode aus der `Main`-Methode mit dem folgenden Code direkt unter dem `Predict`-Methodenaufruf hinzu:
+
+[!code-csharp[CallPredictModelLoaded](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#25 "Call the PredictWithModelLoadedFromFile method")]
+
+Fügen Sie einige Kommentare zum Testen der Vorhersagen des trainierten Modells in der `PredictWithModelLoadedFromFile`-Methode hinzu:
+
+[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#26 "Create test data for predictions")]
+
+Das des Modells [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
+
+Nun besitzen Sie ein Modell, mit dem Sie den schädlichen oder nicht schädlichen Standpunkt der Kommentardaten unter Verwendung der <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)>-Methode vorhersagen können. Verwenden Sie zum Abrufen einer Vorhersage `Predict` mit neuen Daten. Beachten Sie, dass die Eingabedaten eine Zeichenfolge sind und das Modell die Featurebereitstellungsschritt umfasst. Die Pipeline ist während Training und Vorhersage synchronisiert. Sie mussten keinen Vorverarbeitungs-/Featurebereitstellungscode speziell für Vorhersagen schreiben, und die gleiche API wird sowohl für Batch- als auch einmalige Vorhersagen eingesetzt. Fügen Sie für die Vorhersage den folgenden Code zur `PredictWithModelLoadedFromFile`-Methode hinzu:
+
+[!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
 ### <a name="model-operationalization-prediction"></a>Operationalisierung des Modells: Vorhersage
 
 Anzeigen von `SentimentText` und entsprechender Standpunktvorhersage, um die Ergebnisse freizugeben und entsprechend mit ihnen zu agieren. Dies wird als Operationalisierung bezeichnet, wobei die zurückgegebenen Daten als Teil der Betriebsrichtlinien verwendet werden. Erstellen Sie mit dem folgenden <xref:System.Console.WriteLine?displayProperty=nameWithType>-Code eine Kopfzeile für die Ergebnisse:
 
-[!code-csharp[OutputHeaders](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction outputs")]
+[!code-csharp[OutputHeaders](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#29 "Display prediction outputs")]
 
 Kombinieren Sie vor der Anzeige der vorhergesagten Ergebnisse Standpunkt und Vorhersage, um den ursprünglichen Kommentar mit dem vorhergesagten Standpunkt anzuzeigen. Der folgende Code verwendet hierzu die <xref:System.Linq.Enumerable.Zip%2A>-Methode, darum fügen Sie diesen Code als Nächstes hinzu:
 
-[!code-csharp[BuildTuples](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#21 "Build the pairs of sentiment data and predictions")]
+[!code-csharp[BuildTuples](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#30 "Build the pairs of sentiment data and predictions")]
 
 Da Sie nun `SentimentText` und `Sentiment` in einer Klasse kombiniert haben, können Sie die Ergebnisse mithilfe der <xref:System.Console.WriteLine?displayProperty=nameWithType>-Methode anzeigen:
 
-[!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#22 "Display the predictions")]
+[!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#31 "Display the predictions")]
 
 Da abgeleitete Tupelelementnamen ein neues Feature in C# 7.1 sind und die Standardsprachversion des Projekts C# 7.0 ist, müssen Sie die Sprachversion auf C# 7.1 oder höher ändern.
 Klicken Sie hierzu im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Eigenschaften** aus. Wählen Sie die Registerkarte **Build** aus, und klicken Sie auf **Erweitert**. Wählen Sie in der Dropdownliste **C# 7.1** (oder eine höhere Version) aus. Klicken Sie auf die Schaltfläche **OK**.
@@ -308,18 +391,30 @@ Klicken Sie hierzu im **Projektmappen-Explorer** mit der rechten Maustaste auf d
 
 Die Ergebnisse sollten den unten dargestellten ähneln. Während der Pipelineverarbeitung werden Meldungen angezeigt. Sie können Warnungen oder Verarbeitungsmeldungen sehen. Diese wurden der Übersichtlichkeit halber aus den folgenden Ergebnissen entfernt.
 
-```
+```console
+Model quality metrics evaluation
+--------------------------------
+Accuracy: 94.44%
+Auc: 98.77%
+F1Score: 94.74%
+=============== End of model evaluation ===============
 
-PredictionModel quality metrics evaluation
-------------------------------------------
-Accuracy: 66.67%
-Auc: 94.44%
-F1Score: 75.00%
+=============== Prediction Test of model with a single sample and test dataset ===============
 
-Sentiment Predictions
----------------------
-Sentiment: Please refrain from adding nonsense to Wikipedia. | Prediction: Negative
-Sentiment: He is the best, and the article should say that. | Prediction: Positive
+Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.5297049
+=============== End of Predictions ===============
+
+=============== New iteration of Model ===============
+=============== Create and Train the Model ===============
+=============== End of training ===============
+
+
+The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
+
+=============== Prediction Test of loaded model with a multiple samples ===============
+
+Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
+Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
 
 ```
 

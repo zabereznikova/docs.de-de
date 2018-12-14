@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399593"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144883"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Global Assembly Cache-Tool)
 Das Global Assembly Cache-Tool ermöglicht das Anzeigen und Bearbeiten vom Inhalt des globalen Assemblycaches und des Downloadcaches.  
@@ -41,13 +41,13 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
 #### <a name="parameters"></a>Parameter  
   
-|Argument|description|  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |*assemblyName*|Der Name einer Assembly. Sie können entweder einen teilweise angegebenen Assemblynamen, z. B. `myAssembly`, oder einen vollständig angegebenen Assemblynamen, z B. `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`, verwenden.|  
 |*assemblyPath*|Der Name einer Datei, die ein Assemblymanifest enthält.|  
 |*assemblyListFile*|Der Pfad zu einer ANSI-Textdatei, in der zu installierende oder zu deinstallierende Assemblys aufgeführt sind. Wenn Sie zum Installieren von Assemblys eine Textdatei verwenden möchten, geben Sie den Pfad zu den einzelnen Assemblys in der Datei jeweils in eigenen Zeilen an. Das Tool interpretiert relative Pfade als relativ zum Speicherort von *assemblyListFile*. Wenn Sie zum Deinstallieren von Assemblys eine Textdatei verwenden möchten, geben Sie den vollqualifizierten Namen der einzelnen Assemblys jeweils in eigenen Zeilen in der Datei an. Weitere Informationen hierzu finden Sie in den Beispielen zum Inhalt von *assemblyListFile* weiter unten in diesem Thema.|  
   
-|Option|description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**/cdl**|Löscht den Inhalt des Downloadcaches.|  
 |**/f**|Geben Sie zum Erzwingen der Neuinstallation einer Assembly diese Option mit der **/i**-Option oder der **/il**-Option an. Wenn im globalen Assemblycache bereits eine Assembly mit demselben Namen vorhanden ist, wird diese vom Tool überschrieben.|  
@@ -93,7 +93,23 @@ myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  Bei dem Versuch, eine Assembly mit einem Dateinamen zu installieren, der länger als 79 und 91 Zeichen ist (Dateierweiterung ausgenommen), kann der folgende Fehler auftreten:
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> Dies liegt daran, dass „Gacutil.exe“ intern einen Pfad von bis zu MAX_PATH Zeichen erstellt, der aus den folgenden Elementen besteht:
+> - GAC Root – 34 Zeichen (d.h. `C:\Windows\Microsoft.NET\assembly\`)
+> - Architecture – 7 oder 9 Zeichen (d.h. `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
+> - AssemblyName – bis zu 91 Zeichen, abhängig von der Größe der anderen Elemente (z.B. `System.Xml.Linq\`)
+> - AssemblyInfo – 31 bis 48 Zeichen oder mehr bestehend aus:
+>   - Framework – 5 Zeichen (z.B. `v4.0_`)
+>   - AssemblyVersion – 8 bis 24 Zeichen (z.B. `9.0.1000.0_`)
+>   - AssemblyLanguage – 1 bis 8-Zeichen (z.B. `de_`, `sr-Cyrl_`)
+>   - PublicKey – 17 Zeichen (z.B. `31bf3856ad364e35\`)
+> - DllFileName – bis zu 91 + 4 Zeichen (d.h. `<AssemblyName>.dll`)
+
 ## <a name="examples"></a>Beispiele  
  Mit dem folgenden Befehl wird die Assembly `mydll.dll` im globalen Assemblycache installiert.  
   

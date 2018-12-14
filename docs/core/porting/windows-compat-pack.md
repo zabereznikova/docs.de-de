@@ -1,19 +1,20 @@
 ---
-title: 'Portieren auf .NET Core: Verwenden von Windows Compatibility Pack'
+title: Verwenden des Windows Compatibility Pack zum Portieren auf .NET Core
 description: Erfahren Sie mehr über Windows Compatibility Pack und die Verwendungsmöglichkeiten, um vorhandenen .NET Framework-Code auf .NET Core zu portieren
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 42c2c2a0b9b00436fa5c17d3825c720561b3f122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566172"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144610"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Verwenden von Windows Compatibility Pack
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Verwenden des Windows Compatibility Pack zum Portieren auf .NET Core
 
-Zu den häufigsten Problemen, auf die Entwickler beim Portieren von vorhandenem Code zu .NET Core stoßen, zählt die Abhängigkeit von APIs und Technologien, die nur in .NET Framework vorhanden sind. Durch *Windows Compatibility Pack* werden viele dieser Technologien bereitgestellt, sodass das Erstellen von .NET Core-Anwendungen und .NET Standard-Bibliotheken für vorhandenen Code besser umsetzbar ist.
+Einige der beim Portieren vorhandenen Codes zu .NET Core am häufigsten auftretenden Probleme sind Abhängigkeiten von APIs und Technologien, die nur in .NET Framework vorliegen. Das *Windows Compatibility Pack* bietet viele dieser Technologien, daher ist es viel einfacher, .NET Core-Anwendungen und .NET Standard-Bibliotheken zu erstellen.
 
 Bei diesem Paket handelt es sich um eine logische [Erweiterung von .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support), durch die der API-Satz erheblich erhöht wird und vorhandener Code nahezu ohne Änderungen kompiliert wird. Damit das Versprechen von .NET Standard („der API-Satz, den alle .NET-Implementierungen bereitstellen“) eingehalten werden kann, gilt dies nicht für Technologien, die nicht auf allen Plattformen funktionieren können, z.B. die Registrierung, Windows-Verwaltungsinstrumentation (WMI) oder APIs für die Reflektionsausgabe.
 

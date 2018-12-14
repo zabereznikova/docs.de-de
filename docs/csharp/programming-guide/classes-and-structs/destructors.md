@@ -1,20 +1,20 @@
 ---
 title: Finalizer (C#-Programmierhandbuch)
-ms.date: 05/10/2017
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b24884d2650a5e799eda630bc65f3c5a5c2508a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526034"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127263"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
-Finalizer werden zur Zerstörung von Klasseninstanzen verwendet.  
+Mit Finalizern (die auch als **Destruktoren** bezeichnet werden) werden alle erforderlichen endgültigen Bereinigungen durchgeführt, wenn eine Klasseninstanz vom Garbage Collector gesammelt wird.  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -82,8 +82,9 @@ protected override void Finalize()
   
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C#-Sprachspezifikation  
+
+Weitere Informationen finden Sie im Abschnitt [Destruktoren](~/_csharplang/spec/classes.md#destructors) der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md).
   
 ## <a name="see-also"></a>Siehe auch
 

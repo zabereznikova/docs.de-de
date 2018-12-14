@@ -1,18 +1,18 @@
 ---
-title: Microsoft WCF Web Service Reference Provider-Tool
+title: Hinzufügen des WCF-Webdienstverweises – .NET Core
 description: Übersicht zum Microsoft WCF Web Service Reference Provider-Tool, über das Funktionen für .NET Core- und ASP.NET Core-Projekte hinzugefügt werden, z.B. das Hinzufügen von Dienstverweisen für .NET Framework-Projekte.
 author: mlacouture
 ms.author: johalex
 ms.date: 04/19/2018
-ms.custom: mvc
-ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: a1c5f389a5928a34ce1cbf13b2ef27a95b18d031
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215377"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148781"
 ---
-# <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider-Tool
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>Verwenden des Provider-Tools für den WCF-Webdienstverweis
 
 Im Laufe der Jahre konnten viele Visual Studio-Entwickler von dem [**Dienstverweis hinzufügen**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)-Tool profitieren und ihre Produktivität steigern, wenn sie für ihre .NET Framework-Projekte Zugriff auf Webdienste benötigten.  Bei dem **WCF Web Service Reference**-Tool handelt es sich um eine mit Visual Studio verknüpfte Diensterweiterung, die Funktionen wie „Dienstverweis hinzufügen“ für .NET Core und ASP.NET Core-Projekte bereitstellt. Dieses Tool ruft Metadaten von einem Webdienst in der aktuellen Projektmappe, von einer Netzwerkadresse oder aus einer WSDL-Datei ab und generiert eine mit .NET Core kompatible Quelldatei. Diese enthält den Proxycode des WCF-Clients (Windows Communication Foundation), den Sie verwenden können, um auf einen Webdienst zuzugreifen.
 
@@ -37,11 +37,11 @@ In diesem Artikel wird die Projektvorlage **ASP.NET Core-Webanwendung** als Beis
 
 Die Seite **Verbundene Dienste** wird wie in der folgenden Abbildung dargestellt angezeigt:
 
-![Registerkarte „Verbundene Dienste“](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+![Registerkarte „Verbundene Dienste in Visual Studio“ für .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
 2. Klicken Sie auf der Seite **Verbundene Dienste** auf **Microsoft WCF Web Service Reference Provider**. Dann wird der Assistent **zum Konfigurieren von WCF-Webdienstverweisen** angezeigt:
 
-![Registerkarte „Dienstendpunkt“](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+![Registerkarte „Dienstendpunkt in Visual Studio“ für .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. Wählen Sie einen Dienst aus.
 
@@ -58,7 +58,7 @@ Die Seite **Verbundene Dienste** wird wie in der folgenden Abbildung dargestellt
 
 4. Mithilfe des Formulars **Datentypoptionen** können Sie die generierten Einstellungen für die Dienstverweise einschränken:
 
-![Registerkarte „Datentypoptionen“](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+![Registerkarte „Datentypoptionen in Visual Studio“ für .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
 > [!NOTE]
 > Die Kontrollkästchenoption **Typen in Assemblys, auf die verwiesen wird, wiederverwenden** ist nützlich, wenn Datentypen, die für die Codegenerierung für Dienstverweise benötigt werden, in einer der Assemblys definiert werden, auf die Ihr Projekt verweist.  Es ist wichtig, dass Sie die vorhandenen Datentypen wiederverwenden, um Typkollisionen oder Probleme mit der Runtime zur Kompilierzeit zu vermeiden.
@@ -74,7 +74,7 @@ Das Tool führt folgende Schritte aus, während es den Fortschritt anzeigt:
 * Der Dienstverweiscode in einer Datei mit dem Namen *reference.cs* wird generiert und Ihrem Projekt unter dem Knoten **Verbundene Dienste** hinzugefügt. 
 * Aktualisiert die Projektdatei (.csproj) mit NuGet-Paketverweisen, die erforderlich sind, damit diese Datei auf der Zielplattform kompiliert und ausgeführt werden kann.
 
-![Statusfenster](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Visual Studio-Fortschrittsfenster](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
 Nachdem die Prozesse abgeschlossen sind, können Sie eine Instanz des generierten WCF-Clienttyps generieren und die Dienstvorgänge ausrufen.
 

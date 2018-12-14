@@ -5,17 +5,18 @@ helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: 39cefc5dcebf1331a5e0ac0fadb8284e9041eb27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c75432d88a1e96742573a6e69a4e035066a387c4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44206470"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128335"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Gewusst wie: Inkrementieren und Dekrementieren von Zeigern (C#-Programmierhandbuch)
-Verwenden Sie die Inkrement- und Dekrementoperatoren `++` und `--`, um die Zeigerposition durch [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) für einen Zeiger auf den Typ „pointer-type*“ zu ändern. Die Inkrement- und Dekrementausdrücke haben das folgende Format:  
+
+Verwenden Sie die Inkrement- und Dekrementoperatoren `++` und `--`, um die Zeigerposition durch `sizeof(pointer-type)` für einen Zeiger auf den Typ `pointer-type*` zu ändern. Die Inkrement- und Dekrementausdrücke haben das folgende Format:  
   
-```  
+```csharp
 ++p;  
 p++;  
 --p;  
@@ -24,9 +25,9 @@ p--;
   
  Die Inkrement- und Dekrementoperatoren können auf Zeiger eines beliebigen Typs außer den Typ `void*` angewendet werden.  
   
- Die Auswirkungen der Anwendung des Inkrementoperators auf einen Zeiger des Typs `pointer-type` besteht im Hinzufügen von [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) an die Adresse, die in der Zeigervariable enthalten ist.  
+ Bei Anwendung des Inkrementoperators auf einen Zeiger des Typs `pointer-type*` wird `sizeof(pointer-type)` zu der Adresse addiert, die in der Zeigervariablen enthalten ist.  
   
- Die Auswirkungen der Anwendung des Dekrementoperators auf einen Zeiger des Typs `pointer-type` besteht im Hinzufügen von `sizeof` (`pointer-type`) an die Adresse, die in der Zeigervariable enthalten ist.  
+ Bei Anwendung des Dekrementoperators auf einen Zeiger des Typs `pointer-type*` wird `sizeof(pointer-type)` von der Adresse subtrahiert, die in der Zeigervariablen enthalten ist.  
   
  Es werden keine Ausnahmen generiert, wenn die Operation die Domänengrenzen des Zeigers überläuft, und das Ergebnis hängt von der Implementierung ab.  
   
@@ -54,3 +55,4 @@ p--;
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
 - [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)  
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+- [sizeof](../../../csharp/language-reference/keywords/sizeof.md)

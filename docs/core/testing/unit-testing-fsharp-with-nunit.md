@@ -5,19 +5,20 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8088dadbe92c10e2aad9cd5c3ce289612bd1a28
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308407"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131507"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Unittests für F#-Bibliotheken in .NET Core mit „dotnet test“ und NUnit
 
 Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen einer Beispielprojektmappe, um die Konzepte von Unittests zu erlernen. Wenn Sie dem Tutorial lieber mit einer vorgefertigten Projektmappe folgen, [zeigen Sie den Beispielcode an, oder laden Sie ihn herunter](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/), bevor Sie beginnen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten 
-- [.NET Core SDK 2.1 (Version 2.1.400)](https://www.microsoft.com/net/download) oder höhere Versionen. 
+## <a name="prerequisites"></a>Erforderliche Komponenten
+
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) oder höhere Versionen.
 - Ein Text-Editor oder Code-Editor Ihrer Wahl.
 
 ## <a name="creating-the-source-project"></a>Erstellen des Quellprojekts

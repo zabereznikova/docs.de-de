@@ -1,21 +1,21 @@
 ---
-title: .NET Core-App-Bereitstellung mit Visual Studio
-description: Erfahren Sie mehr zur .NET Core-App-Bereitstellung mit Visual Studio
+title: Bereitstellen von .NET Core-Apps mit Visual Studio
+description: Erfahren Sie, wie Sie eine .NET Core-App mit Visual Studio bereitstellen.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 095c0f02df0de0b276c3677095e224316ac76cff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584384"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127107"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
+# <a name="deploy-net-core-apps-with-visual-studio"></a>Bereitstellen von .NET Core-Apps mit Visual Studio
 
 Sie können eine .NET Core-Anwendung entweder als *Framework-abhängige Bereitstellung* bereitstellen, was die Binärdateien Ihrer Anwendung einschließt, jedoch von Präsenz von .NET Core auf dem Zielsystem abhängt, oder als *eigenständige Bereitstellung*,die jeweils Ihre Anwendung sowie .NET Core-Binärdateien einschließt. Einen Überblick über die Bereitstellung von .NET Core-Anwendungen finden Sie unter [.NET Core Anwendungsbereitstellung](index.md).
 
@@ -144,7 +144,7 @@ Um eine Veröffentlichung Ihrer App über Visual Studio durchzuführen, tun Sie 
 
       1. Wählen Sie auf der Registerkarte **Veröffentlichen** **Veröffentlichen** aus. Visual Studio schreibt die Dateien, die Ihre Anwendung enthalten, in das lokale Dateisystem.
 
-      1. Die Registerkarte **Veröffentlichen** zeigt nun ein einzelnes Profil an: **FolderProfile**. Die Konfigurationseinstellungen des Profils werden im Abschnitt **Zusammenfassung** der Registerkarte gezeigt. Ziellaufzeit identifiziert, welche Laufzeit veröffentlicht wurde; **Zielort** identifiziert, wo die Dateien für die eigenständige Bereitstellung geschrieben wurden.
+      1. Die Registerkarte **Veröffentlichen** zeigt nun ein einzelnes Profil an: **FolderProfile**. Die Konfigurationseinstellungen des Profils werden im Abschnitt **Zusammenfassung** der Registerkarte gezeigt. **Ziellaufzeit** identifiziert, welche Laufzeit veröffentlicht wurde; **Zielort** identifiziert, wo die Dateien für die eigenständige Bereitstellung geschrieben wurden.
 
       1. Visual Studio schreibt standardmäßig alle veröffentlichten Dateien in ein einzelnes Verzeichnis. Der Einfachheit halber ist es am besten, separate Profile für jede Ziellaufzeit zu erstellen und veröffentlichte Dateien in einem plattformspezifischen Verzeichnis zu platzieren. Dafür muss ein separates Veröffentlichungsprofil für jede Zielplattform erstellt werden. Erstellen Sie nun die Anwendung für jede Plattform neu, indem Sie Folgendes tun:
 

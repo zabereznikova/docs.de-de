@@ -1,6 +1,6 @@
 ---
 title: Operator ~ (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 11/05/2018
 f1_keywords:
 - ~_CSharpKeyword
 helpviewer_keywords:
@@ -9,28 +9,41 @@ helpviewer_keywords:
 - ~ [C#], bitwise complement operator
 - bitwise complement operator [C#]
 ms.assetid: 11bc078a-50e2-4d7e-9896-67ef669dc602
-ms.openlocfilehash: 8af25217f9e7e66796192783a0b8e3415604dc90
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1bcb07c5639a098e3a8c566e92083ca0d48efb81
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510110"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153214"
 ---
 # <a name="-operator-c-reference"></a>Operator ~ (C#-Referenz)
-Der `~`-Operator führt einen bitweisen komplementären Vorgang für seinen Operanden durch, wodurch jedes Bit umgekehrt wird. Bitweiser Komplementoperatoren sind für [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) und [ulong](../../../csharp/language-reference/keywords/ulong.md) vordefiniert.  
-  
+
+Der bitweise Komplementoperator `~` ist ein unärer Operator, der ein bitweises Komplement seines Operanden erzeugt, indem jedes Bit umgekehrt wird. Alle Integertypen unterstützen den `~` Operator.
+
 > [!NOTE]
->  Das `~`-Symbol wird auch für das Deklarieren von Finalizern verwendet. Weitere Informationen finden Sie unter [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md).  
-  
-## <a name="remarks"></a>Hinweise  
- Benutzerdefinierte Typen können den Operator `~` überladen. Weitere Informationen finden Sie unter [Operator](../../../csharp/language-reference/keywords/operator.md). Operationen mit Ganzzahltypen sind grundsätzlich auch für Aufzählungen (enum) zulässig.  
-  
-## <a name="example"></a>Beispiel  
- [!code-csharp[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]  
-  
+> Das `~`-Symbol wird auch für das Deklarieren von Finalizern verwendet. Weitere Informationen finden Sie unter [Finalizer](../../programming-guide/classes-and-structs/destructors.md).
+
+Im folgenden Beispiel wird die Verwendung des `~`-Operators veranschaulicht:
+
+[!code-csharp-interactive[bitwise NOT](~/samples/snippets/csharp/language-reference/operators/BitwiseComplementExamples.cs#Example)]
+
+> [!NOTE]
+> Im Beispiel oben werden die [in C# 7.0 eingeführten](../../whats-new/csharp-7.md#numeric-literal-syntax-improvements) und [in C# 7.2 erweiterten](../../whats-new/csharp-7-2.md#leading-underscores-in-numeric-literals) binären Literale verwendet.
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
+Benutzerdefinierte Typen können den Operator `~` [überladen](../keywords/operator.md).
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie im Abschnitt [Bitweiser Komplementoperator](~/_csharplang/spec/expressions.md#bitwise-complement-operator) der [C#-Sprachspezifikation](../language-specification/index.md).
+
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)  
-- [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Operatoren](index.md)
+- [Finalizer](../../programming-guide/classes-and-structs/destructors.md)
+- [&-Operator](and-operator.md)
+- [|-Operator](or-operator.md)
+- [^-Operator](xor-operator.md)

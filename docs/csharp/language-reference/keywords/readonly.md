@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397542"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146169"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
 
@@ -44,7 +44,7 @@ public readonly int y = 5;
 Diese Konstruktorkontexte sind auch die einzigen Kontexte, in denen es gültig ist, ein `readonly`-Feld als [out](out-parameter-modifier.md)- oder [ref](ref.md)-Parameter zu übergeben.
 
 > [!NOTE]
-> Das Schlüsselwort `readonly` unterscheidet sich vom Schlüsselwort [const](const.md). Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann entweder bei der Deklaration oder in einem Konstruktor initialisiert werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld wie im folgenden Beispiel für Laufzeitkonstanten verwendet werden kann:
+> Das Schlüsselwort `readonly` unterscheidet sich vom Schlüsselwort [const](const.md). Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann mehrere Male entweder in der Felddeklaration oder in einem Konstruktor zugewiesen werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld wie im folgenden Beispiel für Laufzeitkonstanten verwendet werden kann:
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;

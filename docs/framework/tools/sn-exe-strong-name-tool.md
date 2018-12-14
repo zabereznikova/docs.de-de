@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270473"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151134"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
@@ -28,9 +28,9 @@ Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [star
  Weitere Informationen zu starken Namen und Assemblys mit starken Namen finden Sie unter [Strong-Named Assemblies (Assemblys mit starken Namen)](../../../docs/framework/app-domains/strong-named-assemblies.md) und [How to: Sign an Assembly with a Strong Name (Vorgehensweise: Signieren einer Assembly mit einem starken Namen)](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
  Das Strong Name-Tool wird automatisch mit Visual Studio installiert. Zum Starten des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
 > [!NOTE]
->  Auf 64-Bit-Computern können die 32-Bit-Version von SN.EXE (über die Eingabeaufforderung von Visual Studio) und auch die 64-Bit-Version (über die Eingabeaufforderung von Visual Studio x64 Win64) ausgeführt werden.  
+>  Auf 64-Bit-Computern können die 32-Bit-Version von SN.EXE (über die Eingabeaufforderung von Visual Studio) und auch die 64-Bit-Version (über die Eingabeaufforderung von Visual Studio x64 Win64) ausgeführt werden. 
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 #### <a name="parameters"></a>Parameter  
   
-|Option|description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**-a** *identitätschlüsselpaardatei* *öffentlichersignaturschlüsseldatei*|Generiert <xref:System.Reflection.AssemblySignatureKeyAttribute>-Daten zum Migrieren des Identitätsschlüssels zum Signaturschlüssel aus einer Datei.|  
 |**-ac** *öffentlicheridentitätschlüsseldatei* *identitätsschlüsselpaarcontainer* *öffentlicherSignaturschlüsseldatei*|Generiert <xref:System.Reflection.AssemblySignatureKeyAttribute>-Daten zum Migrieren des Identitätsschlüssels zum Signaturschlüssel aus einem Schlüsselcontainer.|  
@@ -85,6 +85,8 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Bei Parametern (wie –**Vr)**, die Schreibzugriffe auf geschützte Ressourcen (z.B. die Registrierung) durchführen, müssen Sie „sn.exe“ als Administrator ausführen.  
   
+Das Strong Name-Tool geht davon aus, dass die Paaren aus öffentlichen und privaten Schlüsseln mit dem `AT_SIGNATURE`-Algorithmusbezeichner generiert werden. Mit dem `AT_KEYEXCHANGE`-Algorithmus erstellte Paare aus öffentlichen und privaten Schlüsseln verursachen einen Fehler. 
+
 ## <a name="examples"></a>Beispiele  
  Mit dem folgenden Befehl wird ein neues, nach dem Zufallsprinzip erzeugtes Schlüsselpaar erstellt und in `keyPair.snk` gespeichert.  
   

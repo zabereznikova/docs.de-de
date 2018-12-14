@@ -1,19 +1,21 @@
 ---
 title: Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
-description: Erfahren Sie, wie Sie eine in C# geschriebene Klassenbibliothek mithilfe von Visual Studio 2017 testen.
+description: Erstellen Sie ein Komponententestprojekt für Ihre .NET Core-Klassenbibliothek. Stellen Sie sicher, dass Ihre .NET Core-Klassenbibliothek mit Komponententests funktioniert.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 04fef4f84658b3a8b82e4e71b62c3bab8537424d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom:
+- vs-dotnet
+- seodoc18
+ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144896"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
@@ -52,7 +54,7 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 1. Erweitern Sie im Dialogfeld **Reference Manager** den Knoten **Projekte** und aktivieren Sie das Feld neben **StringLibrary**. Das Hinzufügen eines Verweises auf die `StringLibrary`-Assembly ermöglicht dem Compiler, **StringLibrary**-Methoden zu finden. Klicken Sie auf die Schaltfläche **OK**. Dadurch wird ein Verweis auf Ihr Klassenbibliotheksprojekt, `StringLibrary`, hinzugefügt.
 
    ![Verweis-Manager](./media/testing-library-with-visual-studio/referencemanager.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü des Projektmappenknotens **ClassLibraryProject**, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
 1. Klicken Sie auf den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
@@ -116,7 +118,7 @@ So erstellen Sie die Testmethoden:
 1. Wählen Sie in der Menüleiste **Datei** > **UnitTest1.cs speichern unter** aus. Wählen Sie im Dialogfeld **Datei speichern unter** den Pfeil neben der Schaltfläche **Speichern**, und wählen Sie dann **Mit Codierung speichern...** aus.
 
    ![Dialogfeld „Datei speichern unter“](./media/testing-library-with-visual-studio/savefileas.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Ersetzen Sie den Code im Codefenster *UnitTest1.vb* durch den folgenden Code:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]

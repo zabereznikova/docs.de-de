@@ -1,15 +1,13 @@
 ---
 title: dotnet build-Befehl – .NET Core-CLI
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 5d47fdfca14d20b3f2a134a8e734f76b1c86c498
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200550"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149158"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -37,7 +35,7 @@ dotnet build [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Beschreibung 
+## <a name="description"></a>Beschreibung
 
 Der `dotnet build`-Befehl erstellt das Projekt und die zugehörigen Abhängigkeiten in einen Satz von Binärdateien. Die Binärdateien enthalten den Projektcode in Intermediate Language-Dateien (IL) mit einer *.dll*-Erweiterung und Symboldateien, die zum Debuggen mit einer *.pdb*-Erweiterung verwendet werden. Eine JSON-Datei für Abhängigkeiten (*\*.deps.json*) wird erstellt, die Abhängigkeiten der Anwendung aufführt. Eine *\*.runtimeconfig.json*-Datei wird erstellt, die die gemeinsam genutzte Laufzeit und deren Version für die Anwendung anzeigt.
 
@@ -46,10 +44,6 @@ Verfügt das Projekt über Abhängigkeiten von Drittanbietern, z.B. Bibliotheken
 Das Erstellen erfordert die *project.assets.json*-Datei, die die Abhängigkeiten Ihrer Anwendung aufführt. Die Datei wird erstellt, wenn [`dotnet restore`](dotnet-restore.md) ausgeführt wird. Ohne die vorhandenen Ressourcendateien kann das Tool die Verweisassemblys nicht auflösen, was zu Fehlern führt. Mit dem .NET Core 1.x SDK müssen Sie `dotnet restore` explizit ausführen, bevor Sie `dotnet build` ausführen. Ab dem .NET Core 2.0 SDK wird `dotnet restore` implizit ausgeführt, wenn Sie `dotnet build` ausführen. Wenn Sie das implizite Wiederherstellen deaktivieren möchten, wenn Sie den Buildbefehl ausführen, können Sie die `--no-restore`-Option übergeben.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
-
-`dotnet build` verwendet MSBuild zum Erstellen des Projekts und unterstützt daher parallele und inkrementelle Builds. Weitere Informationen finden Sie unter [Incremental Builds](/visualstudio/msbuild/incremental-builds) (Inkrementelle Builds).
-
-Zusätzlich zu diesen Optionen akzeptiert der `dotnet build`-Befehl MSBuild-Optionen, wie z.B. `-p` zum Festlegen von Eigenschaften oder `-l` zum Definieren eines Protokolls. Weitere Informationen zu diesen Optionen finden Sie in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference).
 
 Ob das Projekt ausführbar ist oder nicht, richtet sich nach der `<OutputType>`-Eigenschaft in der Projektdatei. Das folgende Beispiel zeigt ein Projekt, das ausführbaren Code erzeugt:
 
@@ -61,6 +55,14 @@ Ob das Projekt ausführbar ist oder nicht, richtet sich nach der `<OutputType>`-
 
 Lassen Sie die `<OutputType>`-Eigenschaft weg, um eine Bibliothek zu erstellen. Der Hauptunterschied in der Buildausgabe ist, dass die IL-DLL für eine Bibliothek keine Einstiegspunkte enthält und nicht ausgeführt werden kann.
 
+### <a name="msbuild"></a>MSBuild
+
+`dotnet build` verwendet MSBuild zum Erstellen des Projekts und unterstützt daher parallele und inkrementelle Builds. Weitere Informationen finden Sie unter [Incremental Builds](/visualstudio/msbuild/incremental-builds) (Inkrementelle Builds).
+
+Zusätzlich zu diesen Optionen akzeptiert der `dotnet build`-Befehl MSBuild-Optionen, wie z.B. `-p` zum Festlegen von Eigenschaften oder `-l` zum Definieren eines Protokolls. Weitere Informationen zu diesen Optionen finden Sie in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). Sie können auch den Befehl [dotnet msbuild](dotnet-msbuild.md) verwenden.
+
+Die Ausführung von `dotnet build` entspricht `dotnet msbuild -restore -target:Build`.
+
 ## <a name="arguments"></a>Argumente
 
 `PROJECT | SOLUTION`
@@ -71,104 +73,118 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie kein Projekt- oder
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-Kompiliert für ein bestimmtes [Framework](../../standard/frameworks.md). Das Framework muss in der [Projektdatei](csproj.md) definiert werden.
+  Kompiliert für ein bestimmtes [Framework](../../standard/frameworks.md). Das Framework muss in der [Projektdatei](csproj.md) definiert werden.
 
-`--force`
+* **`--force`**
 
-Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
+  Erzwingt das Auflösen aller Abhängigkeiten, auch wenn die letzte Wiederherstellung erfolgreich war. Dieses Flag anzugeben, entspricht dem Löschen der Datei *project.assets.json*.
 
-`-h|--help`
+* **`-h|--help`**
 
-Druckt eine kurze Hilfe für den Befehl.
+  Druckt eine kurze Hilfe für den Befehl.
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das angegebene Stammprojekt.
+  Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das angegebene Stammprojekt.
 
-`--no-incremental`
+* **`--no-incremental`**
 
-Markiert den Build als unsicher für inkrementelle Builds. Das Flag deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
+  Markiert den Build als unsicher für inkrementelle Builds. Das Flag deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
 
-`--no-restore`
+* **`--no-restore`**
 
-Führt keine implizite Wiederherstellung während der Projekterstellung durch.
+  Führt keine implizite Wiederherstellung während der Projekterstellung durch.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Verzeichnis, in dem die erstellten Binärdateien platziert werden. Sie müssen außerdem `--framework` definieren, wenn Sie diese Option angeben.
+  Verzeichnis, in dem die erstellten Binärdateien platziert werden. Sie müssen außerdem `--framework` definieren, wenn Sie diese Option angeben. Wenn nicht angegeben, ist der Standardpfad `./bin/<configuration>/<framework>/`.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-Legt die Ziellaufzeit fest. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
+  Legt die Ziellaufzeit fest. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Definiert das Versionssuffix für ein Sternchen (`*`) im Versionsfeld der Projektdatei. Das Format entspricht den NuGet-Versionsrichtlinien.
+  Definiert das Versionssuffix für ein Sternchen (`*`) im Versionsfeld der Projektdatei. Das Format entspricht den NuGet-Versionsrichtlinien.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-Kompiliert für ein bestimmtes [Framework](../../standard/frameworks.md). Das Framework muss in der [Projektdatei](csproj.md) definiert werden.
+  Kompiliert für ein bestimmtes [Framework](../../standard/frameworks.md). Das Framework muss in der [Projektdatei](csproj.md) definiert werden.
 
-`-h|--help`
+* **`-h|--help`**
 
-Druckt eine kurze Hilfe für den Befehl.
+  Druckt eine kurze Hilfe für den Befehl.
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das angegebene Stammprojekt.
+  Ignoriert Verweise zwischen Projekten (P2P) und erstellt nur das angegebene Stammprojekt.
 
-`--no-incremental`
+* **`--no-incremental`**
 
-Markiert den Build als unsicher für inkrementelle Builds. Das Flag deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
+  Markiert den Build als unsicher für inkrementelle Builds. Das Flag deaktiviert die inkrementelle Kompilierung und erzwingt eine komplette Neuerstellung des Abhängigkeitsdiagramms des Projekts.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Verzeichnis, in dem die erstellten Binärdateien platziert werden. Sie müssen außerdem `--framework` definieren, wenn Sie diese Option angeben.
+  Verzeichnis, in dem die erstellten Binärdateien platziert werden. Sie müssen außerdem `--framework` definieren, wenn Sie diese Option angeben.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-Legt die Ziellaufzeit fest. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
+  Legt die Ziellaufzeit fest. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md).
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Definiert das Versionssuffix für ein Sternchen (`*`) im Versionsfeld der Projektdatei. Das Format entspricht den NuGet-Versionsrichtlinien.
+  Definiert das Versionssuffix für ein Sternchen (`*`) im Versionsfeld der Projektdatei. Das Format entspricht den NuGet-Versionsrichtlinien.
 
 ---
 
 ## <a name="examples"></a>Beispiele
 
-Erstellt ein Projekt und seine Abhängigkeiten:
+* Erstellt ein Projekt und seine Abhängigkeiten:
 
-`dotnet build`
+  ```console
+  dotnet build
+  ```
 
-Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguration:
+* Erstellt ein Projekt und seine Abhängigkeiten mithilfe der Release-Konfiguration:
 
-`dotnet build --configuration Release`
+  ```console
+  dotnet build --configuration Release
+  ```
 
-Erstellt ein Projekt und seine Abhängigkeiten für eine bestimmte Laufzeit (in diesem Beispiel Ubuntu 16.04):
+* Erstellt ein Projekt und seine Abhängigkeiten für eine bestimmte Laufzeit (in diesem Beispiel Ubuntu 16.04):
 
-`dotnet build --runtime ubuntu.16.04-x64`
+  ```console
+  dotnet build --runtime ubuntu.16.04-x64
+  ```
 
-Erstellt ein Projekt und verwendet die angegebene NuGet-Paketquelle während des Wiederherstellungsvorgangs (.NET Core SDK 2.0 und spätere Versionen):
+* Erstellt ein Projekt und verwendet die angegebene NuGet-Paketquelle während des Wiederherstellungsvorgangs (.NET Core 2.0 SDK und spätere Versionen):
 
-`dotnet build --source c:\packages\mypackages`
+  ```console
+  dotnet build --source c:\packages\mypackages
+  ```
+
+* Erstellen Sie das Projekt, und legen Sie die 1.2.3.4-Version als Buildparameter fest:
+
+  ```console
+  dotnet build -p:Version=1.2.3.4
+  ```

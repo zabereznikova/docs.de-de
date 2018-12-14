@@ -2,12 +2,12 @@
 title: Einführung in C# – sich mit den Entwicklungstools vertraut machen
 description: Dieser Artikel bietet eine grundlegende Einführung in die Werkzeuge, die Sie zum Entwickeln von C#- und.NET-Anwendungen auf Ihrem Computer verwenden werden.
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200161"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129986"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Einführung in .NET-Entwicklungstools
 
@@ -22,7 +22,7 @@ Sie erstellen Anwendungen mit dem Befehl [`dotnet new`](../../../core/tools/dotn
 
 Darüber hinaus werden Sie die Befehle [`dotnet build`](../../../core/tools/dotnet-build.md) zum Erstellen der ausführbaren Datei und [`dotnet run`](../../../core/tools/dotnet-run.md) zum Ausführen der ausführbaren Datei verwenden.
 
-## <a name="pick-your-turorial"></a>Auswählen Ihres Tutorials
+## <a name="pick-your-tutorial"></a>Auswählen Ihres Tutorials
 
 Sie können mit einem der folgenden Tutorials beginnen:
 

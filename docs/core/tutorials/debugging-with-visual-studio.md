@@ -1,20 +1,18 @@
 ---
-title: Debuggen einer „Hallo Welt“-Anwendung in C# oder Visual Basic mit .NET Core in Visual Studio 2017
+title: Debuggen Ihrer „Hallo Welt“-.NET Core-Anwendung mit Visual Studio 2017
 description: Sie erfahren, wie Sie eine in C# oder Visual Basic geschriebene „Hallo Welt“-App mit Visual Studio 2017 debuggen.
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200123"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147527"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Debuggen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017
 
-Bisher haben Sie die Schritte unter [Building a C# Hello World Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](.\with-visual-studio.md)) oder [Build a Visual Basic Hallo Welt Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017)](vb-with-visual-studio.md) zum Erstellen und Ausführen einer einfachen Konsolenanwendung befolgt. Sobald Sie Ihre Anwendung kompiliert und geschrieben haben, können Sie beginnen, sie zu testen. Visual Studio enthält einen umfassenden Satz von Debugtools, die Sie beim Testen Ihrer Anwendung und der Problembehandlung verwenden können.
+Bisher haben Sie die Schritte unter [Building a C# Hello World Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hello World“-Anwendung in C# mit .NET Core in Visual Studio 2017](with-visual-studio.md)) oder [Build a Visual Basic Hallo Welt Application with .NET Core in Visual Studio 2017 (Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017)](vb-with-visual-studio.md) zum Erstellen und Ausführen einer einfachen Konsolenanwendung befolgt. Sobald Sie Ihre Anwendung kompiliert und geschrieben haben, können Sie beginnen, sie zu testen. Visual Studio enthält einen umfassenden Satz von Debugtools, die Sie beim Testen Ihrer Anwendung und der Problembehandlung verwenden können.
 
 ## <a name="debugging-in-debug-mode"></a>Debuggen im Debugmodus
 
@@ -228,4 +226,4 @@ Nachdem Sie den Debugbuild der Anwendung getestet haben, sollten Sie auch die en
 
 Wenn Sie F5 drücken oder **Projektmappe erstellen** im Menü **Build** auswählen, kompiliert Visual Studio die endgültige Releaseversion der Konsolenanwendung zum Testen. Sie können sie dann wie die Debugversion der Anwendung testen.
 
-Nachdem Sie das Debuggen der Anwendung abgeschlossen haben, ist der nächste Schritt das Veröffentlichen einer verteilbare Version der Anwendung. Informationen hierzu finden Sie unter [Publish the Hello World application with Visual Studio 2017 (Veröffentlichen der „Hallo Welt“-Anwendung mit Visual Studio 2017)](./publishing-with-visual-studio.md).
+Nachdem Sie das Debuggen der Anwendung abgeschlossen haben, ist der nächste Schritt das Veröffentlichen einer verteilbare Version der Anwendung. Informationen hierzu finden Sie unter [Publish the Hello World application with Visual Studio 2017 (Veröffentlichen der „Hallo Welt“-Anwendung mit Visual Studio 2017)](publishing-with-visual-studio.md).

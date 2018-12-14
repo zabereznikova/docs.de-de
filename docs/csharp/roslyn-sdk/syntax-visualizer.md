@@ -3,12 +3,12 @@ title: Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio
 description: Die Syntaxschnellansicht bietet ein visuelles Tool, um die Modelle zu untersuchen, die das .NET Compiler Platform SDK für Code generiert.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143562"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code
 
@@ -32,7 +32,7 @@ Erstellen Sie ein neues Projekt mit dem Befehl **Datei** > **Neues Projekt**. Si
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualisieren einer C#-Syntaxstruktur](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![Visualisieren einer VB-Syntaxstruktur](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -62,7 +62,7 @@ Klicken Sie mit der rechten Maustaste auf ein beliebiges Element in der Struktur
 Die Schnellansicht zeigt eine grafische Darstellung des Teilbaums, der von dem ausgewählten Element abstammt. Versuchen Sie diese Schritte für den **MethodDeclaration**-Knoten, der der `Main()`-Methode im C#-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
 ![C#-Syntaxdiagramm](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 Versuchen Sie das Gleiche für den **SubBlock**-Knoten, der der `Main()`-Methode im vorangehenden VB-Beispiel entspricht. Die Schnellansicht zeigt ein Syntaxdiagramm an, das wie folgt aussieht:
 
@@ -128,7 +128,7 @@ Untersuchen Sie das Symbol auf deklarierten Typ, Methode, Eigenschaft. Wählen S
 
 Die obengenannten Beispiele können problemlos in C# nachgestellt werden. Geben Sie `using C = System.Console;` anstelle von `Imports C = System.Console` für den Alias ein. Die vorhergehenden Schritte in C# ergeben identische Ergebnisse im Schnellansichtsfenster.
 
-Semantische Überprüfungsvorgänge sind nur an Knoten verfügbar. Sie sind nicht an Tokens oder Trivia verfügbar. Nicht alle Knoten haben relevante semantische Informationen, die überprüft werden können. Wenn ein Knoten keine relevanten semantischen Informationen hat, wird beim Klicken auf **Symbol anzeigen (sofern vorhanden)** ein leeres Eigenschaftenraster angezeigt.
+Semantische Überprüfungsvorgänge sind nur an Knoten verfügbar. Sie sind nicht an Tokens oder Trivia verfügbar. Nicht alle Knoten haben relevante semantische Informationen, die überprüft werden können. Wenn ein Knoten keine relevanten semantischen Informationen hat, wird beim Klicken auf **Symbol \* anzeigen (sofern vorhanden)** ein leeres Eigenschaftenraster angezeigt.
 
 Sie können mehr über APIs für die semantische Analyse im Übersichtsdokument [Arbeiten mit der Semantik](work-with-semantics.md) erfahren.
 

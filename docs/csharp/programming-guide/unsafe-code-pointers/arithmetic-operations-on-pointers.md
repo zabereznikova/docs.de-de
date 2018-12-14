@@ -4,26 +4,26 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862302"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129947"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Arithmetische Operationen für Zeiger (C#-Programmierhandbuch)
-In diesem Thema wird die Verwendung der arithmetischen Operatoren `+` und **-** zur Bearbeitung von Zeigern erläutert.  
+In diesem Thema wird die Verwendung der arithmetischen Operatoren `+` und `-` zur Bearbeitung von Zeigern erläutert.  
   
 > [!NOTE]
 >  Das Durchführen arithmetischer Operationen auf void-Zeigern ist nicht möglich.  
   
 ## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Addieren und Subtrahieren von numerischen Werten zu bzw. von Zeigern  
- Sie können einen Wert `n` des Typs [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) oder [ulong](../../../csharp/language-reference/keywords/ulong.md) zu einem Zeiger `p` eines beliebigen Typs außer `void*` hinzufügen. Das Ergebnis `p+n` ist der Zeiger, der aus dem Hinzufügen von `n * sizeof(p) to the address of p` resultiert. Auf ähnliche Weise ist `p-n` der Zeiger aus der Subtraktion von `n * sizeof(p)` von der Adresse von `p`.  
+ Sie können einen Wert `n` des Typs [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) oder [ulong](../../../csharp/language-reference/keywords/ulong.md) einem Zeiger hinzufügen. Wenn `p` ein Zeiger des Typs `pointer-type*` ist, dann ist das Ergebnis `p+n` der Zeiger, der aus dem Addieren von `n * sizeof(pointer-type)` zur Adresse von `p` resultiert. Auf ähnliche Weise ist `p-n` der Zeiger aus der Subtraktion von `n * sizeof(pointer-type)` von der Adresse von `p`.  
   
 ## <a name="subtracting-pointers"></a>Subtrahieren von Zeigern  
  Sie können auch Zeiger des gleichen Typs subtrahieren. Das Ergebnis hat immer den Typ `long`. Wenn z.B. `p1` und `p2` Zeiger des Typs `pointer-type*` sind, dann führt der `p1-p2`-Ausdruck zu:  
   
- `((long)p1 - (long)p2)/sizeof(pointer_type)`  
+ `((long)p1 - (long)p2)/sizeof(pointer-type)`  
   
  Es werden keine Ausnahmen generiert, wenn die arithmetische Operation die Domänengrenzen des Zeigers überläuft, und das Ergebnis hängt von der Implementierung ab.  
   
@@ -32,7 +32,7 @@ In diesem Thema wird die Verwendung der arithmetischen Operatoren `+` und **-** 
   
  [!code-csharp[csProgGuidePointers#15](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/arithmetic-operations-on-pointers_2.cs)]  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a>C#-Sprachspezifikation  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch

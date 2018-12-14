@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122717"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125992"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
 Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse ist im Grunde identisch mit einer nicht statischen Klasse, aber es gibt einen Unterschied: Eine statische Klasse kann nicht instanziiert werden. Das heißt, Sie können das Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) nicht verwenden, um eine Variable des Klassentyps zu erstellen. Da keine Instanzvariable vorhanden ist, greifen Sie auf die Member einer statischen Klasse mit dem Klassennamen selbst zu. Wenn Sie z.B: eine statische Klasse haben, die `UtilityClass` heißt, die eine öffentliche Methode mit dem Namen `MethodA` besitzt, rufen Sie die Methode auf, wie im folgenden Beispiel gezeigt wird:  
@@ -39,7 +39,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Wie auch bei allen Klassentypen werden die Typinformationen für eine statische Klasse von der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Common Language Runtime (CLR) geladen, wenn das Programm, das auf die Klasse verweist, geladen wird. Das Programm kann nicht genau angeben, wann die Klasse geladen wird. Jedoch wird sichergestellt, dass es geladen wird, und dass seine Felder initialisiert sowie seine statischen Konstruktoren aufgerufen sind, bevor zum ersten Mal auf die Klasse in Ihrem Programm verwiesen wird. Ein statischer Konstruktor wird nur einmal aufgerufen, und eine statische Klasse verbleibt im Speicher für die Lebensdauer der Anwendungsdomäne, in der sich das Programm befindet.  
   
 > [!NOTE]
->  Wie Sie eine nicht statische Klasse erstellen, die es erlaubt, dass nur eine Instanz von ihr selbst erstellt wird, finden Sie unter [Implementierung von Singleton in C#](https://msdn.microsoft.com/library/ms998558.aspx).  
+>  Wie Sie eine nicht statische Klasse erstellen, die es erlaubt, dass nur eine Instanz von ihr selbst erstellt wird, finden Sie unter [Implementierung von Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
   
  Die folgende Liste stellt die Haupteigenschaften einer statischen Klasse dar:  
   
@@ -84,7 +84,8 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Ein Aufruf einer statischen Methode erzeugt eine Aufrufanweisung in Microsoft Intermediate Language (MSIL), während ein Aufruf einer Instanzmethode eine Anweisung `callvirt` erzeugt, die auch auf Verweise auf ein NULL-Objekt überprüft. Jedoch ist in den meisten Fällen der Leistungsunterschied zwischen den beiden nicht bedeutend genug.  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Weitere Informationen erhalten Sie unter [Statische Klassen](~/_csharplang/spec/classes.md#static-classes) und [Statische und Instanzmember](~/_csharplang/spec/classes.md#static-and-instance-members) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
 ## <a name="see-also"></a>Siehe auch
 

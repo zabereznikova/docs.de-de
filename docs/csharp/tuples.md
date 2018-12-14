@@ -3,12 +3,12 @@ title: Tupeltypen | C#-Leitfaden
 description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186030"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155131"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen #
 
@@ -88,7 +88,7 @@ Diese Situationen verursachen keine Compilerfehler, da diese eine grundlegende �
 
 ## <a name="equality-and-tuples"></a>Gleichheit und Tupel
 
-Ab C# 7.3 unterstützen Tupeltypen die Operatoren `==` und `!=`. Diese Operatoren arbeiten durch Vergleichen jedes Members des linken Arguments mit jedem Member des rechten Arguments in der Reihenfolge. Diese Vergleiche können verkürzt werden. Der Operator `==` beendet die Auswertung von Membern, sobald ein Paar nicht gleich ist. Der Operator `!=` beendet die Auswertung von Membern, sobald ein Paar gleich ist. In folgendem Codebeispiel wird `==` verwendet, die Vergleichsregeln gelten jedoch alle für `!=`. Das folgende Codebeispiel stellt einen Gleichheitsvergleich für zwei Paare ganzer Zahlen dar:
+Ab C# 7.3 unterstützen Tupeltypen die Operatoren `==` und `!=`. Diese Operatoren arbeiten durch Vergleichen jedes Members des linken Arguments mit jedem Member des rechten Arguments in der Reihenfolge. Diese Vergleiche können verkürzt werden. Sie beenden die Auswertung von Membern, sobald ein Paar nicht gleich ist. In folgendem Codebeispiel wird `==` verwendet, die Vergleichsregeln gelten jedoch alle für `!=`. Das folgende Codebeispiel stellt einen Gleichheitsvergleich für zwei Paare ganzer Zahlen dar:
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 

@@ -1,18 +1,18 @@
 ---
-title: Erstellen einer „Hallo Welt“-Anwendung mit .NET Core und C# in Visual Studio 2017
+title: Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017
 description: Erfahren Sie, wie Sie mithilfe von Visual Studio 2017 eine einfache .NET Core-Konsolenanwendung mit C# erstellen.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 031c0a433391fbe4cdd40f6ce648f476787baf48
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 9b28c1523196650c30a54ccaa86fe23ed60e96f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003021"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129622"
 ---
-# <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in C# mit .NET Core in Visual Studio 2017
+# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in C# mit dem .NET Core SDK in Visual Studio 2017
 
 Dieses Thema ist eine grundlegende Einführung in das Erstellen, Debuggen und Veröffentlichen einer einfachen .NET Core-Konsolenanwendung in C# mithilfe von Visual Studio 2017. Visual Studio 2017 bietet eine Entwicklungsumgebung mit vollem Funktionsumfang für die Erstellung von .NET Core-Anwendungen. Sofern die Anwendung keine plattformspezifischen Abhängigkeiten aufweist, kann sie auf jeder von .NET Core unterstützten Plattform und in jedem System mit installiertem .NET Core ausgeführt werden.
 

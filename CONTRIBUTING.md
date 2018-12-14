@@ -1,4 +1,4 @@
-# <a name="contributing"></a>Mitwirken
+# <a name="contributing"></a>Beitragen
 
 Vielen Dank für Ihr Interesse und Ihre Bereitschaft, an der .NET-Dokumentation mitzuwirken!
 

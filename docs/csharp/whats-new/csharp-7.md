@@ -3,12 +3,12 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237383"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155287"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -22,7 +22,7 @@ C# 7.0 bietet eine Reihe von neuen Features für die C#-Programmiersprache:
 * [Mustervergleich](#pattern-matching)
     - Sie können Verzweigungslogik basierend auf beliebigen Typen und Werten der Member dieser Typen erstellen.
 * [Lokale `ref`-Variablen und Rückgabetypen](#ref-locals-and-returns)
-    - Methodenargumente und lokale Variablen können Verweise auf andere Speicher sein.
+    - Lokale Variablen und Rückgabewerte von Methoden können Verweise auf andere Speicher sein.
 * [Lokale Funktionen](#local-functions)
     - Sie können Funktionen innerhalb von anderen Funktionen verschachteln, um deren Bereich und Sichtbarkeit zu beschränken.
 * [Mehr Ausdruckskörpermember](#more-expression-bodied-members)
@@ -280,6 +280,8 @@ Die C#-Sprache verfügt über drei weitere Regeln, die Sie vor der falschen Verw
 Das Hinzufügen von lokalen ref-Variablen und ref-Rückgaben ermöglicht effizientere Algorithmen, da Werte nicht kopiert und dereferenzierende Vorgänge nicht mehrmals ausgeführt werden.
 
 Das Hinzufügen von `ref` zum Rückgabewert stellt eine [quellkompatible Änderung](version-update-considerations.md#source-compatible-changes) dar. Vorhandener Code lässt sich kompilieren, der ref-Rückgabewert wird aber bei der Zuweisung kopiert. Aufrufer müssen den Speicher für den Rückgabewert in eine lokale `ref`-Variable aktualisieren, um die Rückgabe als Verweis zu speichern.
+
+Weitere Informationen finden Sie im Artikel [Schlüsselwort „ref“](../language-reference/keywords/ref.md).
 
 ## <a name="local-functions"></a>Lokale Funktionen
 

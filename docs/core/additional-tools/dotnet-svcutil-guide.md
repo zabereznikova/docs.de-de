@@ -1,17 +1,18 @@
 ---
-title: Microsoft-WCF-Tool „dotnet-svcutil“
+title: Übersicht zum WCF-svcutil-Tool – .NET Core
 description: Übersicht zum Microsoft-WCF-Tool „dotnet-svcutil“, über das Funktionen für .NET Core- und ASP.NET Core-Projekte hinzugefügt werden, z.B. das WCF-Tool „svcutil“ für .NET Framework-Projekte.
 author: mlacouture
 ms.author: jralexander
 ms.date: 08/20/2018
-ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 7372d88a9c1d77ec0b77e9d82fe5b24ebc357a74
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511885"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126015"
 ---
-# <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Microsoft-WCF-Tool „dotnet-svcutil“
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF-Tool „dotnet-svcutil“ für .NET Core
 
 Das Windows Communication Foundation-Tool (WCF) **dotnet-svcutil** ist ein .NET Core-CLI-Tool, das Metadaten von einem Webdienst aus einem Netzwerkspeicherort oder einer WSDL-Datei abruft und eine WCF-Klasse mit Clientproxymethoden generiert, die Sie verwenden können, um auf die Webdienstvorgänge zuzugreifen.
 
@@ -24,7 +25,7 @@ Das Tool **dotnet-svcutil** ist eine alternative Option zum mit Visual Studio ve
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [.NET Core SDK](https://www.microsoft.com/net/download), Version 1.0.4 oder höher
+* [.NET Core SDK](https://dotnet.microsoft.com/download), Version 1.0.4 oder höher
 * Ihr bevorzugter Code-Editor
 
 ## <a name="getting-started"></a>Erste Schritte

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194019"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146913"
 ---
 # <a name="introducing-pluggable-protocols"></a>Einführung in austauschbare Protokolle
 Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Ihre Anwendungen integriert werden. Die Internetzugriffsklassen in den Namespaces <xref:System.Net> und <xref:System.Net.Sockets> können zur Implementierung von sowohl webbasierten als auch internetbasierten Anwendungen verwendet werden.  
@@ -40,7 +40,7 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
  Die Clientanwendung sendet eine Anforderung durch Identifizieren der angeforderten Internetressource und des Kommunikationsprotokolls, die dann für die Anforderung und die Antwort verwendet werden. Der Client stellt bei Bedarf auch alle zusätzlichen Daten bereit, die zum Abschließen der Anforderung erforderlich sind, wie z.B. Informationen zum Proxystandort oder der Authentifizierung (Benutzername, Kennwort usw.). Sobald die Anforderung formuliert ist, kann sie an den Server gesendet werden.  
   
 ## <a name="identifying-resources"></a>Identifizieren von Ressourcen  
- .NET Framework verwendet zum Identifizieren der angeforderten Internetressource und des Kommunikationsprotokolls einen Uniform Resource Identifier (URI). Der URI besteht aus mindestens drei, eventuell vier Fragmenten: dem Schemabezeichner, der das Kommunikationsprotokoll für Anforderung und Antwort identifiziert; dem Serverbezeichner, der entweder aus einem DNS-Hostnamen (Domain Name System) oder einer TCP-Adresse zur eindeutigen Identifizierung des Servers im Internet besteht; dem Pfadbezeichner, der die angeforderte Information auf dem Server sucht; sowie der optionalen Abfragezeichenfolge, die Informationen vom Client an den Server übergibt. Der URI `http://www.contoso.com/whatsnew.aspx?date=today` besteht beispielsweise aus dem Schemabezeichner „http“, dem Serverbezeichner „www.contoso.com“, dem Pfad „/ whatsnew.aspx“ und der Abfragezeichenfolge „?date=today“.  
+ .NET Framework verwendet zum Identifizieren der angeforderten Internetressource und des Kommunikationsprotokolls einen Uniform Resource Identifier (URI). Der URI besteht aus mindestens drei, eventuell vier Fragmenten: dem Schemabezeichner, der das Kommunikationsprotokoll für Anforderung und Antwort identifiziert; dem Serverbezeichner, der entweder aus einem DNS-Hostnamen (Domain Name System) oder einer TCP-Adresse zur eindeutigen Identifizierung des Servers im Internet besteht; dem Pfadbezeichner, der die angeforderte Information auf dem Server sucht; sowie der optionalen Abfragezeichenfolge, die Informationen vom Client an den Server übergibt. Der URI `http://www.contoso.com/whatsnew.aspx?date=today` besteht beispielsweise aus dem Schemabezeichner `http`, dem Serverbezeichner `www.contoso.com`, dem Pfad `/whatsnew.aspx` und der Abfragezeichenfolge `?date=today`.  
   
  Nachdem der Server die Anforderung empfangen und die Antwort verarbeitet hat, gibt er die Antwort an die Clientanwendung zurück. Die Antwort enthält zusätzliche Informationen, wie etwa den Inhaltstyp (z.B. unformatierter Text oder XML-Daten).  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994467"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129024"
 ---
 # <a name="do-c-reference"></a>do (C#-Referenz)
 
@@ -32,13 +32,12 @@ Im folgenden Beispiel wird die Verwendung der `do`-Anweisung veranschaulicht. Kl
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Weitere Informationen finden Sie im Abschnitt [Die do-Anweisung](~/_csharplang/spec/statements.md#the-do-statement) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../index.md)  
-- [C#-Programmierhandbuch](../../programming-guide/index.md)  
-- [C#-Schlüsselwörter](index.md)  
-- [do-while-Anweisung (C++)](/cpp/cpp/do-while-statement-cpp)  
-- [Iterationsanweisungen](iteration-statements.md)  
-- [while-Anweisung](while.md)  
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [Iterationsanweisungen](iteration-statements.md)
+- [while-Anweisung](while.md)

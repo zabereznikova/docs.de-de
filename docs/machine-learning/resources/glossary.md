@@ -1,18 +1,18 @@
 ---
-title: Maschinelles Lernen – Glossar
-description: Ein Glossar von Begriffen aus dem Bereich des maschinellen Lernens.
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: Machine Learning-Glossar – ML.NET
+description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
+ms.custom: seodec18
+ms.date: 12/06/2018
+ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453202"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150575"
 ---
-# <a name="machine-learning-glossary"></a>Maschinelles Lernen – Glossar
+# <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
-Die folgende Liste ist eine Zusammenstellung wichtiger Begriffe aus dem Bereich des maschinellen Lernens, die Ihnen bei der Erstellung benutzerdefinierter Modelle nützlich sind.
+Die folgende Liste ist eine Zusammenstellung wichtiger Begriffe aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle in ML.NET unterstützen.
 
 ## <a name="accuracy"></a>Genauigkeit
 

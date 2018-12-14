@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: c81332307542608e2c7a3f3a5fa89900862f1e84
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "44260070"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145594"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Erstellen und Auslösen von Ausnahmen (C#-Programmierhandbuch)
 Ausnahmen werden verwendet, um anzugeben, dass während der Ausführung des Programms ein Fehler aufgetreten ist. Ausnahmeobjekte, die einen Fehler beschreiben, werden erstellt und dann mit dem Schlüsselwort [throw](../../../csharp/language-reference/keywords/throw.md) (auslösen) *ausgelöst*. Die Laufzeit sucht dann nach dem kompatibelsten Ausnahmehandler.  
@@ -41,7 +41,7 @@ Ausnahmen werden verwendet, um anzugeben, dass während der Ausführung des Prog
   
  Alle Ausnahmen enthalten eine Eigenschaft mit dem Namen <xref:System.Exception.Message%2A>. Diese Zeichenfolge sollte festgelegt werden, um die Gründe für die Ausnahme zu erklären. Beachten Sie, dass vertrauliche Informationen aus Sicherheitsgründen nicht im E-Mail-Text eingefügt werden dürfen. Zusätzlich zu <xref:System.Exception.Message%2A> enthält <xref:System.ArgumentException> eine Eigenschaft mit dem Namen <xref:System.ArgumentException.ParamName%2A>, die auf den Namen des Arguments festgelegt werden sollte, das die Ausnahme ausgelöst hat. Im Falle eines Eigenschaftensetters sollte <xref:System.ArgumentException.ParamName%2A> auf `value` festgelegt werden.  
   
- Öffentliche und geschützte Methodenmember sollten Ausnahmen auslösen, wann immer sie ihre beabsichtigten Funktionen nicht auslösen können. Die Ausnahmeklasse, die ausgelöst wird, muss die möglichst genaueste verfügbare Ausnahme sein, die zu den Fehlerbedingungen passt. Diese Ausnahmen sollten als Teil der Klassenfunktionalität dokumentiert werden, und abgeleitete Klassen oder Updates an der ursprünglichen Klasse müssen das gleiche Verhalten für die Abwärtskompatibilität beibehalten.  
+ Öffentliche und geschützte Methoden sollten Ausnahmen auslösen, wann immer sie ihre beabsichtigten Funktionen nicht auslösen können. Die Ausnahmeklasse, die ausgelöst wird, muss die möglichst genaueste verfügbare Ausnahme sein, die zu den Fehlerbedingungen passt. Diese Ausnahmen sollten als Teil der Klassenfunktionalität dokumentiert werden, und abgeleitete Klassen oder Updates an der ursprünglichen Klasse müssen das gleiche Verhalten für die Abwärtskompatibilität beibehalten.  
   
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Was Sie beim Auslösen von Ausnahmen vermeiden sollten  
  Die folgende Liste enthält Vorgehensweisen, die beim Auslösen von Ausnahmen zu vermeiden sind:  
@@ -55,7 +55,7 @@ Ausnahmen werden verwendet, um anzugeben, dass während der Ausführung des Prog
 -   Erstellen Sie keine Ausnahmen, die im Debugmodus, aber nicht im Releasemodus ausgelöst werden können. Um Laufzeitfehler während der Entwicklungsphase zu identifizieren, verwenden Sie stattdessen die Debugassertion.  
   
 ## <a name="defining-exception-classes"></a>Definieren von Ausnahmeklassen  
- Programme können eine zuvor definierte Ausnahmeklasse im <xref:System>-Namespace auslösen (mit Ausnahme der eben beschriebenen Fälle) oder ihre eigenen Ausnahmeklassen durch Ableitung von <xref:System.Exception> erstellen. Die abgeleiteten Klassen müssen zumindest vier Konstruktoren definieren: einen Standardkonstruktor, einen, der die message-Eigenschaft festlegt, und einen, der jeweils die Eigenschaften <xref:System.Exception.Message%2A> und <xref:System.Exception.InnerException%2A> festlegt. Der vierte Konstruktor wird verwendet, um die Ausnahme zu serialisieren. Neue Ausnahmeklassen sollten serialisierbar sein. Zum Beispiel:  
+ Programme können eine zuvor definierte Ausnahmeklasse im <xref:System>-Namespace auslösen (mit Ausnahme der eben beschriebenen Fälle) oder ihre eigenen Ausnahmeklassen durch Ableitung von <xref:System.Exception> erstellen. Die abgeleiteten Klassen müssen zumindest vier Konstruktoren definieren: einen Standardkonstruktor, einen, der die message-Eigenschaft festlegt, und einen, der jeweils die Eigenschaften <xref:System.Exception.Message%2A> und <xref:System.Exception.InnerException%2A> festlegt. Der vierte Konstruktor wird verwendet, um die Ausnahme zu serialisieren. Neue Ausnahmeklassen sollten serialisierbar sein. Beispiel:  
   
  [!code-csharp[csProgGuideExceptions#15](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_4.cs)]  
   

@@ -1,21 +1,21 @@
 ---
-title: Erstellen von .NET Core Docker-Images
-description: Grundlegendes zu Docker-Images und .NET Core
+title: Übersicht zu Docker-Images – .NET Core
+description: Erfahren Sie, wie Sie veröffentlichte .NET Core-Docker-Images aus der Docker-Registrierung verwenden können. Außerdem lernen Sie, wie Sie Pull für Images ausführen und Ihre eigenen Images erstellen.
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841163"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145831"
 ---
-# <a name="building-docker-images-for-net-core-applications"></a>Erstellen von Docker-Images für .NET Core-Anwendungen
+# <a name="learn-about-docker-images-for-net-core"></a>Informationen zu Docker-Images für .NET Core
 
- In diesem Tutorial liegt der Schwerpunkt auf der Verwendung von .NET Core in Docker. Zunächst werden die unterschiedlichen Docker-Images erläutert, die von Microsoft angeboten und verwaltet werden, sowie einige Anwendungsfälle. Sie erfahren, wie eine ASP.NET Core-App erstellt und in Docker bereitgestellt wird.
+In diesem Tutorial liegt der Schwerpunkt auf der Verwendung von .NET Core in Docker. Zunächst werden die unterschiedlichen Docker-Images erläutert, die von Microsoft angeboten und verwaltet werden, sowie einige Anwendungsfälle. Sie erfahren, wie eine ASP.NET Core-App erstellt und in Docker bereitgestellt wird.
 
 Im Verlauf dieses Tutorials lernen Sie Folgendes:
 > [!div class="checklist"]
@@ -115,7 +115,7 @@ Installieren Sie zum Erstellen und Ausführen folgende Elemente:
 
 #### <a name="net-core-21-sdk"></a>.NET Core 2.1 SDK
 
-* Installieren Sie das [.NET Core SDK 2.1](https://www.microsoft.com/net/core).
+* Installieren Sie [.NET Core SDK 2.1](https://www.microsoft.com/net/core).
 
 * Installieren Sie Ihren bevorzugten Code-Editor, wenn Sie dies nicht bereits erledigt haben.
 

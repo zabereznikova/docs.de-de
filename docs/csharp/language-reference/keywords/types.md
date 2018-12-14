@@ -5,35 +5,34 @@ helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5a3ad9fef108c1eec2ba63d68bc5015d2f6c430
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506320"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142956"
 ---
 # <a name="types-c-reference"></a>Typen (C#-Referenz)
-Das C#-Typensystem enthält die folgenden Kategorien:  
-  
--   [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
-  
--   [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
-  
--   [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-  
- Variablen, die Werttypen sind speichern Daten, und solche, die Verweistypen sind, verweisen auf die tatsächlichen Daten. Verweistypen werden auch als Objekte bezeichnet. Zeigertypen können nur im [unsafe](../../../csharp/language-reference/keywords/unsafe.md)-Modus genutzt werden.  
-  
- Es ist möglich, einen Werttyp in einen Verweistyp zu konvertieren und wieder zurück in einen Werttyp, mithilfe von [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md). Mit Ausnahme eines geschachtelten Werttyps, können Verweistypen nicht in einen Werttyp konvertiert werden.  
-  
- Dieser Abschnitt beschreibt auch den [void](../../../csharp/language-reference/keywords/void.md)-Datentyp:  
-  
- Werttypen sind auch NULL-Werte, d.h. sie können einen zusätzlichen Zustand ohne Wert speichern. Weitere Informationen finden Sie unter [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md).  
-  
+
+Das C#-Typensystem enthält die folgenden Kategorien:
+
+- [Werttypen](value-types.md)
+
+- [Verweistypen](reference-types.md)
+
+- [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+
+ Variablen, die Werttypen sind speichern Daten, und solche, die Verweistypen sind, verweisen auf die tatsächlichen Daten. Instanzen von Verweistypen werden auch als Objekte bezeichnet. Zeigertypen können nur im [unsafe](unsafe.md)-Modus genutzt werden.
+
+ Mithilfe von [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md) kann ein Werttyp in einen Verweistyp und wieder zurück in einen Werttyp konvertiert werden. Mit Ausnahme eines geschachtelten Werttyps, können Verweistypen nicht in einen Werttyp konvertiert werden.
+
+ Dieser Abschnitt beschreibt auch den [void](void.md)-Datentyp:
+
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
-- [Typen](../../../csharp/programming-guide/types/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [Referenztabellen für Typen](reference-tables-for-types.md)
+- [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)
+- [Typen](../../programming-guide/types/index.md)

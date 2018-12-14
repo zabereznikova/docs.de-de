@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120946"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127549"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -69,7 +69,7 @@ Eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von [`DotnetCliT
 
 .NET Core 2.1 unterstützt *globale Tools* – d.h. benutzerdefinierte Tools, die global über die Befehlszeile verfügbar sind. Das Erweiterbarkeitsmodell in früheren Versionen von benutzerdefinierten .NET Core-Tools ist auf Projektbasis nur mithilfe von [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) verfügbar.
 
-Verwenden Sie den [dotnet tool install](../tools/dotnet-tool-install.md)-Befehl, um ein globales Tool zu installieren. Zum Beispiel:
+Verwenden Sie den [dotnet tool install](../tools/dotnet-tool-install.md)-Befehl, um ein globales Tool zu installieren. Beispiel:
 
 ```console
 dotnet tool install -g dotnetsay
@@ -79,7 +79,7 @@ Nach Abschluss der Installation kann das Tool durch Angeben seines Namens in der
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>Toolverwaltung mit dem `dotnet tool`-Befehl
 
-In .NET Core SDK 2.1 (Version 2.1.300) verwenden alle Toolsvorgänge den `dotnet tool`-Befehl. Die folgenden Optionen sind verfügbar:
+In .NET Core SDK 2.1 verwenden alle Toolsvorgänge den `dotnet tool`-Befehl. Die folgenden Optionen sind verfügbar:
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md) zum Installieren eines Tools.
 

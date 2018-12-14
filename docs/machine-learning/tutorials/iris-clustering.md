@@ -1,19 +1,19 @@
 ---
-title: Verwenden von ML.NET für das Iris-Clustering
+title: Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET
 description: Hier erfahren Sie, wie Sie ML.NET in einem Clusteringszenario verwenden.
 author: pkulikov
 ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5bd73c774f60466daaf52215c34e7e17b5f5cc9c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453189"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145626"
 ---
-# <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Tutorial: Verwenden von ML.NET für das Iris-Clustering
+# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET
 
 > [!NOTE]
 > Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie in der [ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).

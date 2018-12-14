@@ -1,19 +1,20 @@
 ---
-title: Organisieren Ihres Projekts zur Unterstützung von .NET Framework und .NET Core
+title: Organisieren von Projekten für .NET Framework und .NET Core
 description: Dieser Artikel soll Projektbesitzern dabei helfen, Ihre eigene Lösung parallel für .NET Framework und .NET Core zu kompilieren.
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512265"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146926"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von .NET Framework und .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von sowohl .NET Framework als auch .NET Core
 
-Dieser Artikel hilft Projektbesitzern, Ihre eigene Lösung parallel für .NET Framework und .NET Core zu kompilieren. Es werden mehrere Optionen zum Organisieren von Projekten behandelt, die Entwickler beim Erreichen dieses Ziels unterstützen sollen. Im Folgenden finden Sie eine Liste mit typischen Szenarios, die Sie bei der Entscheidung bedenken sollten, wie Sie Ihr Projektlayout mit .NET Core einrichten. Die Liste deckt möglicherweise nicht alle Punkte ab, die Sie benötigen. Sie können abhängig von den Anforderungen Ihrer Projekte priorisieren.
+Erfahren Sie, wie Sie eine Lösung erstellen, die .NET Framework und .NET Core parallel kompiliert. Es gibt mehrere Optionen zum Organisieren von Projekten, um dieses Ziel zu erreichen. Im Folgenden finden Sie einige Szenarios, die Sie bei der Entscheidung bedenken sollten, wie Sie Ihr Projektlayout mit .NET Core einrichten. Die Liste deckt möglicherweise nicht alle Punkte ab, die Sie benötigen. Sie können abhängig von den Anforderungen Ihrer Projekte priorisieren.
 
 * [**Combine existing projects and .NET Core projects into single projects**][option-csproj] (Kombinieren von vorhandenen Projekten und .NET Core-Projekten in einzelnen Projekten)
 

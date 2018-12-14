@@ -1,19 +1,19 @@
 ---
 title: Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
-description: Erfahren Sie, wie Sie die Elemente in einer Klassenbibliothek mit Visual Studio 2017 aufrufen.
+description: Erstellen Sie eine .NET Core-Anwendung, die Member einer anderen Klassenbibliothek mit Visual Studio 2017 aufruft.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518164"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147319"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Verwenden einer .NET Standard-Bibliothek in Visual Studio 2017
 
@@ -57,7 +57,7 @@ Ebenso wie Sie Komponententests in dieselbe Projektmappe eingeschlossen haben wi
 1. Ändern Sie ggf. die Symbolleiste, um das**Debugrelease** des `ShowCase`-Projekts zu kompilieren. Kompilieren Sie das Programm, und führen Sie es anschließend aus, indem Sie auf den grünen Pfeil auf der Schaltfläche **ShowCase** klicken.
 
    ![Bild](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Öffnen Sie die Projektmappe `ClassLibraryProjects`, die Sie im Thema [Building a class Library with Visual Basic and .NET Core in Visual Studio 2017 (Erstellen einer C#-Klassenbibliothek mit Visual Basic und .NET Core in Visual Studio 2017)](vb-library-with-visual-studio.md). Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf die Projektmappe **ClassLibraryProjects**, und wählen Sie im Kontextmenü **Hinzufügen** > **Neues Projekt** aus.
 
 1. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen**, erweitern Sie den Knoten **Visual Basic**, und klicken Sie auf den Knoten .**NET Core** und anschließend auf die Projektvorlage **Konsolen-App (.NET Core)**. Geben Sie im Textfeld **Name** „ShowCase“ ein, und klicken Sie auf die Schaltfläche **OK**.

@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195969"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
@@ -82,7 +82,7 @@ Ein Verweisrückgabewert wird definiert durch Verwenden des `ref`-Schlüsselwort
 public ref decimal GetCurrentPrice()
 ```
 
-- Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Zum Beispiel:
+- Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Beispiel:
 
 ```csharp
 return ref DecimalArray[0];
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 Beachten Sie, dass das `ref`-Schlüsselwort in beiden Beispielen an beiden Stellen verwendet werden muss. Andernfalls generiert der Compiler den Fehler CS8172 "Cannot initialize a by-reference variable with a value." (Eine by-reference-Variable kann nicht mit einem Wert initialisiert werden).
+
+Beginnend mit C# 7.3 kann die Iterationsvariable der `foreach`-Anweisung eine lokale ref-Variable oder schreibgeschützte lokale ref-Variable sein. Weitere Informationen finden Sie im Artikel zur [foreach-Anweisung](foreach-in.md).
 
 ## <a name="ref-readonly-locals"></a>Lokale schreibgeschützte ref-Variable
 
@@ -152,6 +154,9 @@ Sie können Modifizierer zum Deklarieren einer Struktur als `readonly ref` kombi
 ## <a name="see-also"></a>Siehe auch
 
 - [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)  
+- [Ref-Rückgabetypen und lokale ref-Variablen](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Bedingter ref-Ausdruck](../operators/conditional-operator.md#conditional-ref-expression)
+- [ref-Zuweisungsoperator](../operators/assignment-operator.md#ref-assignment-operator)
 - [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Methodenparameter](method-parameters.md)  
 - [C#-Referenz](../index.md)  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514184"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150967"
 ---
 # <a name="operators-c-programming-guide"></a>Operatoren (C#-Programmierhandbuch)
 In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operanden* in einem Ausdruck oder einer Anweisung angewendet wird. Operatoren mit einem Operanden, z. B. der Inkrementoperator (`++`) oder `new`, werden als *unäre* Operatoren bezeichnet. Operatoren mit zwei Operanden, z. B. arithmetische Operatoren (`+`,`-`,`*`,`/`), werden als *binäre* Operatoren bezeichnet. Der bedingte Operator (`?:`) verfügt über drei Operanden. Er ist der einzige ternäre Operator in C#.  
@@ -37,7 +37,7 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
   
  **Primäre Operatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|Memberzugriff<br /><br /> Bedingter Memberzugriff|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Methoden- und Delegataufruf|  
@@ -56,7 +56,7 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
   
  **Unäre Operatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Identität|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negation|  
@@ -68,7 +68,7 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
   
  **Multiplikative Operatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Multiplikation|  
 |[/](../../../csharp/language-reference/operators/division-operator.md)|Division|  
@@ -76,21 +76,21 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
   
  **Additive Operatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Addition, Zeichenfolgenverkettung, Delegatkombination|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Subtraktion, Delegatentfernung|  
   
  **Schiebeoperatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|Linksverschiebung|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|Rechtsverschiebung|  
   
  **Relationale Operatoren und Typoperatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|Kleiner als|  
 |x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|Größer als|  
@@ -101,14 +101,14 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
   
  **Gleichheitsoperatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Gleich|  
 |x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|Ungleich|  
   
  **Logische, bedingte und NULL-Operatoren**  
   
-|Kategorie|Ausdruck|Beschreibung |  
+|Kategorie|Ausdruck|Beschreibung|  
 |--------------|----------------|-----------------|  
 |Logisches AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Ganzzahliges bitweises AND, boolesches logisches AND|  
 |Logisches XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Ganzzahliges bitweises XOR, boolesches logisches XOR|  
@@ -120,7 +120,7 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
   
  **Zuweisungsoperatoren und anonyme Operatoren**  
   
-|Ausdruck|Beschreibung |  
+|Ausdruck|Beschreibung|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Zuweisung|  
 |x op= y|Verbundzuweisung. Unterstützt diese Operatoren: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  

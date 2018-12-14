@@ -1,15 +1,16 @@
 ---
-title: Ausführen von selektiven Komponententests
-description: Zeigt, wie Sie einen Filterausdruck zum Ausführen selektiver Komponententests mit dem dotnet-Testbefehl verwenden.
+title: Ausführen von selektiven Komponententests – .NET Core
+description: Es wird erläutert, wie Sie einen Filterausdruck zum Ausführen selektiver Komponententests mit dem dotnet-Testbefehl in .NET Core verwenden.
 author: smadala
 ms.author: mairaw
 ms.date: 03/22/2017
-ms.openlocfilehash: 428e31014f5d8d487deb7c4b4317ebcef13c294d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 3c24fb8cc5024399ae523801373b0fd8eff85f45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517219"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151745"
 ---
 # <a name="running-selective-unit-tests"></a>Ausführen von selektiven Komponententests
 

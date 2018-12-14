@@ -1,18 +1,18 @@
 ---
-title: Erstellen einer .NET Standard-Klassenbibliothek mit C# und .NET Core in Visual Studio 2017
+title: Erstellen einer .NET Standard-Klassenbibliothek mit C# mit Visual Studio 2017
 description: Erfahren Sie, wie Sie eine in C# geschriebene .NET Standard-Klassenbibliothek mithilfe von Visual Studio 2017 erstellen.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 101cb8b9134f7e64e5489f5bc7abb6a9570d2131
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638820"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144573"
 ---
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Erstellen einer Klassenbibliothek mit C# und .NET Core in Visual Studio 2017
+# <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer .NET Standard-Klassenbibliothek mit C# und .NET Core SDK in Visual Studio 2017
 
 Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Eine Klassenbibliothek, die sich auf .NET Standard 2.0 bezieht, ermöglicht das Aufrufen der Bibliothek aus jeder .NET-Implementierung, die diese Version von .NET Standard unterstützt. Wenn Sie die Klassenbibliothek fertig stellen, können Sie entscheiden, ob Sie sie als Drittanbieterkomponente verteilen oder als Komponente mit einer oder mehreren Anwendungen in ein Paket einbeziehen möchten.
 

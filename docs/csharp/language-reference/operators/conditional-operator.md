@@ -1,6 +1,6 @@
 ---
 title: 'Operator ?: (C#-Referenz)'
-ms.date: 07/20/2015
+ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -9,76 +9,83 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 3e45ff6eaaefa5829c3ed9415abe1a12b7a1d069
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "50980621"
 ---
 # <a name="-operator-c-reference"></a>Operator ?: (C#-Referenz)
 
-Der bedingte Operator (`?:`), gemeinhin als ternärer bedingter Operator bekannt, gibt abhängig vom Wert eines booleschen Ausdrucks einen von zwei Werten zurück. Nachfolgend ist die Syntax für den bedingten Operator aufgeführt.  
+Der bedingte Operator `?:`, häufig als ternärer bedingter Operator bekannt, wertet einen booleschen Ausdruck aus und gibt das Ergebnis der Auswertung von einem oder zwei Ausdrücken zurück, abhängig davon, ob der boolesche Ausdruck `true` oder `false` ergibt. Beginnend mit C# 7.2 gibt der [bedingte Ref-Ausdruck](#conditional-ref-expression) den Verweis auf das Ergebnis eines der beiden Ausdrücke zurück.
+
+Die Syntax für den bedingten Operator lautet:
 
 ```csharp
-condition ? first_expression : second_expression;  
+condition ? consequence : alternative
 ```
 
-Beginnend mit C# 7.2 können `first_expression` und `second_expression` [`ref`-Ausdrücke sein](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md):
+Der `condition`-Ausdruck muss als `true` oder `false` ausgewertet werden. Wenn `condition` `true` ergibt, wird der `consequence`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Wenn `condition` `false` ergibt, wird der `alternative`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Nur `consequence` oder `alternative` wird ausgewertet.
+
+Der Typ von `consequence` und `alternative` muss identisch sein, oder es muss eine implizite Konvertierung von einem Typ in einen anderen vorhanden sein.
+
+Der bedingte Operator ist rechtsassoziativ, d.h. ein Ausdruck der Form
 
 ```csharp
-ref condition ? ref first_expression : ref second_expression;  
+a ? b : c ? d : e
 ```
 
-Das Ergebnis kann einer `ref`- oder `ref readonly`-Variablen oder einer Variable mit keinem der beiden Modifizierer zugewiesen werden.
-
-## <a name="remarks"></a>Hinweise
-
-`condition` muss mit `true` oder `false` ausgewertet werden. Wenn `condition` den Wert `true` hat, wird `first_expression` ausgewertet. Wenn `condition` den Wert `false` hat, wird `second_expression` ausgewertet. Nur einer der beiden Ausdrücke wird ausgewertet. Dies ist besonders wichtig für Ausdrücke, deren Ergebnis ein `ref` ist, da Folgendes gilt:
+wird als ausgewertet,
 
 ```csharp
-ref (storage != null) ? ref storage[3] : ref defaultValue;
+a ? b : (c ? d : e)
 ```
 
-Der Verweis auf `storage` wird nicht ausgewertet, wenn `storage` null ist.
+Im folgenden Beispiel wird die Verwendung des bedingten Operators veranschaulicht:
 
-Wenn das Ergebnis ein Wert ist, muss der Typ von `first_expression` und `second_expression` identisch sein, oder es muss eine implizite Konvertierung von einem Typ in einen anderen vorhanden sein. Wenn das Ergebnis ein `ref` ist, muss der Typ von `first_expression` und `second_expression` identisch sein.
+[!code-csharp[non ref condtional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
 
-Sie können mithilfe des bedingten Operators Berechnungen präziser ausdrücken, die andernfalls möglicherweise eine `if-else`-Konstruktion benötigen. Im folgenden Code wird z. B. zuerst eine `if`-Anweisung und anschließend ein bedingter Operator verwendet, um eine ganze Zahl als positiv oder negativ zu klassifizieren.
+## <a name="conditional-ref-expression"></a>Bedingter ref-Ausdruck
+
+Beginnend mit C# 7.2 können Sie mit dem bedingten ref-Ausdruck den Verweis auf das Ergebnis eines der beiden Ausdrücke zurückgeben. Sie können diesen Verweis einer [lokalen Ref-Variablen](../keywords/ref.md#ref-locals) oder [schreibgeschützten lokalen Ref-Variablen](../keywords/ref.md#ref-readonly-locals) zuweisen bzw. als [Verweisrückgabewert](../keywords/ref.md#reference-return-values) oder [`ref`-Methodenparameter](../keywords/ref.md#passing-an-argument-by-reference) verwenden.
+
+Die Syntax für den bedingten ref-Ausdruck lautet:
 
 ```csharp
-int input = Convert.ToInt32(Console.ReadLine());  
-string classify;  
-  
-// if-else construction.  
-if (input > 0)  
-    classify = "positive";  
-else  
-    classify = "negative";  
-  
-// ?: conditional operator.  
-classify = (input > 0) ? "positive" : "negative";  
+condition ? ref consequence : ref alternative
 ```
 
-Der bedingte Operator ist rechtsassoziativ. Der Ausdruck `a ? b : c ? d : e` wird als `a ? b : (c ? d : e)` und nicht als `(a ? b : c) ? d : e` ausgewertet.  
-  
+Wie der ursprüngliche bedingte Operator wertet der bedingte ref-Ausdruck nur einen von zwei Ausdrücken aus: entweder `consequence` oder `alternative`.
+
+Im Fall des bedingten ref-Ausdrucks muss der Typ von `consequence` und `alternative` identisch sein.
+
+Im folgenden Beispiel wird die Verwendung des bedingten ref-Ausdrucks veranschaulicht:
+
+[!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+
+Weitere Informationen finden Sie unter [Hinweis zum Featurevorschlag](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md).
+
+## <a name="conditional-operator-and-an-ifelse-statement"></a>Bedingter Operator und eine `if..else`-Anweisung
+
+Die Verwendung des bedingten Operators über einer [if-else](../keywords/if-else.md)-Anweisung könnte in Fällen, in denen Sie einen Wert bedingt berechnen müssen, präziseren Code zur Folge haben. Das folgende Beispiel zeigt zwei Möglichkeiten, eine ganze Zahl als negativ oder nicht negativ zu klassifizieren:
+
+[!code-csharp[conditional and if-else](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#CompareWithIf)]
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
 Der bedingte Operator kann nicht überladen werden.
-  
-## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt den bedingten Operator, dessen Ergebnis ein Wert ist:
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-[!code-csharp[csRefOperators?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
-
-Die folgende Alternative zeigt den bedingten Operator, dessen Ergebnis ein Verweis ist:
-
-[!code-csharp[csRefOperatorsRef?:](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
+Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang/spec/expressions.md#conditional-operator) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)  
-- [if-else](../../../csharp/language-reference/keywords/if-else.md)  
-- [?.- und ?[]-Operatoren](../../../csharp/language-reference/operators/null-conditional-operators.md)  
-- [?? Operator](../../../csharp/language-reference/operators/null-coalescing-operator.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Operatoren](index.md)
+- [if-else-Anweisung](../keywords/if-else.md)
+- [?.- und ?[]-Operatoren](null-conditional-operators.md)
+- [?? Operator](null-coalescing-operator.md)
+- [ref (C#-Referenz)](../keywords/ref.md)

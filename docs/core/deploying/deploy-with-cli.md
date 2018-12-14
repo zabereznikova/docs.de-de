@@ -1,20 +1,21 @@
 ---
-title: Bereitstellung der .NET Core-App mit CLI-Tools
-description: Erfahren Sie mehr zur .NET Core-App-Bereitstellung mit CLI-Tools
+title: Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
+description: Erfahren Sie, wie Sie NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle) bereitstellen.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151095"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Bereitstellen von .NET Core-Apps mit CLI-Tools (command-line interface, Befehlszeilenschnittstelle)
 
 Sie können eine .NET Core-Anwendung entweder als *Framework-abhängige Bereitstellung* bereitstellen, was die Binärdateien Ihrer Anwendung einschließt, jedoch von Präsenz von .NET Core auf dem Zielsystem abhängt, oder als *eigenständige Bereitstellung*,die jeweils Ihre Anwendung sowie die .NET Core-Binärdateien einschließt. Eine Übersicht finden Sie unter [.NET Core-Anwendungsbereitstellung](index.md).
 

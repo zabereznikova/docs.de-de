@@ -1,6 +1,6 @@
 ---
 title: Werttypen (C#-Referenz)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -8,51 +8,55 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baf0db751cd70d50d4cf440626dd405b01c8d7ad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526462"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147716"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
-Die Werttypen sind in zwei Hauptkategorien unterteilt:  
+
+Es gibt zwei Werttypen:
+
+- [Strukturen](struct.md)
+
+- [Enumerationen](enum.md)
+
+## <a name="main-features-of-value-types"></a>Hauptfunktionen von Werttypen
+
+Eine Variable eines Werttyps enthält einen Wert des Typs. Beispielsweise kann eine Variable von Typ `int` den `42`-Wert enthalten. Dies unterscheidet sich von einer Variablen eines Referenztyps, die eine Referenz auf eine Instanz des Typs enthält, auch bekannt als Objekt. Wenn Sie einer Variablen eines Werttyps einen neuen Wert zuweisen, wird der Wert kopiert. Wenn Sie einer Variablen eines Referenztyps einen neuen Wert zuweisen, wird die Referenz kopiert, nicht das Objekt selbst.
+
+Alle Werttypen werden implizit von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet.  
   
--   [Strukturen](../../../csharp/language-reference/keywords/struct.md)  
+Im Gegensatz zu Verweistypen können Sie von Werttypen keinen neuen ableiten. Strukturen können aber wie Verweistypen Schnittstellen implementieren.  
   
--   [Enumerationen](../../../csharp/language-reference/keywords/enum.md)  
+Werttypvariablen können nicht standardmäßig `null` sein. Variablen der entsprechenden [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md) können jedoch `null` sein.
   
- Strukturen werden in diese Kategorien eingeteilt:  
+Jeder Werttyp hat einen impliziten Standardkonstruktor, der den Standardwert dieses Typs initialisiert. Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](default-values-table.md).  
   
--   Numerische Typen  
+## <a name="simple-types"></a>Einfache Typen
+
+Die *einfachen Typen* sind eine Reihe von vordefinierten Strukturtypen, die von C# bereitgestellt werden, und umfassen die folgenden Typen:
+
+- [Ganzzahltypen](integral-types-table.md): ganzzahlige numerische Typen und der [char](char.md)-Typ
+- [Gleitkommatypen](floating-point-types-table.md)
+- [bool](bool.md)
+
+Die einfachen Typen werden durch Schlüsselwörter identifiziert, aber diese Schlüsselwörter sind einfach Aliase für vordefinierte Strukturtypen im Namespace <xref:System>. [int](int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](built-in-types-table.md).
+
+Die einfachen Typen unterscheiden sich von anderen Strukturtypen dadurch, dass sie bestimmte zusätzliche Vorgänge ermöglichen:
+
+- Einfache Typen können mithilfe von Literalen initialisiert werden. `'A'` ist beispielsweise ein Literal vom Typ `char`, und `2001` ist ein Literal vom Typ `int`.
+
+- Konstanten der einfachen Typen können Sie mit dem Schlüsselwort [const](const.md) deklarieren. Es ist nicht möglich, Konstanten anderer Strukturtypen zu haben.
+
+- Konstante Ausdrücke, deren Operanden alle einfache Typkonstanten sind, werden zur Kompilierzeit ausgewertet.
+
+Weitere Informationen finden Sie im Abschnitt [Einfache Typen](~/_csharplang/spec/types.md#simple-types) der [C#-Sprachspezifikation](../language-specification/index.md).
   
-    -   [Integrale Typen](../../../csharp/language-reference/keywords/integral-types-table.md)  
-  
-    -   [Gleitkommatypen](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
--   [bool](../../../csharp/language-reference/keywords/bool.md)  
-  
--   Benutzerdefinierte Strukturen  
-  
-## <a name="main-features-of-value-types"></a>Hauptfunktionen von Werttypen  
- Variablen, die auf Werttypen basieren, enthalten Werte direkt. Durch das Zuweisen einer Werttypvariablen zu einer anderen wird der enthaltene Wert kopiert. Dies unterscheidet sich von der Zuweisung von Verweistypvariablen. Dabei wird ein Verweis auf das Objekt, aber nicht das Objekt selbst kopiert.  
-  
- Alle Werttypen werden implizit von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet.  
-  
- Im Gegensatz zu Verweistypen können Sie von Werttypen keinen neuen ableiten. Strukturen können aber wie Verweistypen Schnittstellen implementieren.  
-  
- Im Gegensatz zu Verweistypen können Werttypen nicht den Wert `null` enthalten. Allerdings ermöglicht es die Funktion [Nullable-Typ](../../../csharp/programming-guide/nullable-types/index.md), dass Werttypen `null` zugewiesen werden können.  
-  
- Jeder Werttyp hat einen impliziten Standardkonstruktor, der den Standardwert dieses Typs initialisiert. Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  
-  
-## <a name="main-features-of-simple-types"></a>Hauptfunktionen von einfachen Typen  
- Alle einfachen Typen, die für C# wesentlichen Typen, sind Aliasse der Systemtypen aus dem .NET Framework. [int](../../../csharp/language-reference/keywords/int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md).  
-  
- Konstante Ausdrücke, deren Operanden alle einfache Typkonstanten sind, werden zur Kompilierzeit ausgewertet.  
-  
- Einfache Typen können mithilfe von Literalen initialisiert werden. „A“ ist beispielsweise ein Literal vom Typ `char`, und 2001 ist ein Literal vom Typ `int`.  
-  
-## <a name="initializing-value-types"></a>Initialisieren von Werttypen  
+## <a name="initializing-value-types"></a>Initialisieren von Werttypen
+
  Lokale Variablen in C# müssen vor ihrer Verwendung initialisiert werden. Sie könnten eine lokale Variable beispielsweise ohne Initialisierung wie im folgenden Beispiel deklarieren:  
   
 ```csharp  
@@ -83,9 +87,9 @@ int myInt = new int();
 int myInt = 0;  
 ```  
   
- Durch die Verwendung des Operators [new](../../../csharp/language-reference/keywords/new.md) wird der Standardkonstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen. Im vorherigen Beispiel hat der Standardkonstruktor `myInt` den Wert `0` zugewiesen. Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](../../../csharp/language-reference/keywords/default-values-table.md).  
+ Durch die Verwendung des Operators [new](new.md) wird der Standardkonstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen. Im vorherigen Beispiel hat der Standardkonstruktor `myInt` den Wert `0` zugewiesen. Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](default-values-table.md).  
   
- Verwenden Sie bei benutzerdefinierten Typen [new](../../../csharp/language-reference/keywords/new.md) zum Aufrufen des Standardkonstruktors. Die folgende Anweisung ruft z.B. den Standardkonstruktor der `Point`-Struktur auf:  
+ Verwenden Sie bei benutzerdefinierten Typen [new](new.md) zum Aufrufen des Standardkonstruktors. Die folgende Anweisung ruft z.B. den Standardkonstruktor der `Point`-Struktur auf:  
   
 ```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
@@ -93,16 +97,16 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Nach diesem Aufruf gilt die Struktur als definitiv zugewiesen. Das bedeutet, dass alle ihre Member mit ihren Standardwerten initialisiert werden.  
   
- Weitere Informationen zum Operator „new“ finden Sie unter [new](../../../csharp/language-reference/keywords/new.md).  
+ Weitere Informationen zum `new`-Operator finden Sie unter [neu](new.md).  
   
- Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-- [Typen](../../../csharp/language-reference/keywords/types.md)  
-- [Referenztabellen für Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
+- [C#-Referenz](../index.md)  
+- [C#-Programmierhandbuch](../../programming-guide/index.md)  
+- [C#-Schlüsselwörter](index.md)  
+- [Typen](types.md)  
+- [Referenztabellen für Typen](reference-tables-for-types.md)  
+- [Verweistypen](reference-types.md)  
 - [Nullable-Typen](../../programming-guide/nullable-types/index.md)  

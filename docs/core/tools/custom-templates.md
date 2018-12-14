@@ -4,12 +4,12 @@ description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten v
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126262"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
@@ -43,7 +43,7 @@ In der Vorlage gespeicherte Dateien und Ordner sind auf formelle .NET-Projekttyp
 
 Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichnis der Vorlage platziert. Die Datei bietet der Vorlagen-Engine Konfigurationsinformationen. Die Mindestkonfiguration erfordert die in der folgenden Tabelle aufgelisteten Member, was zum Erstellen einer funktionsfähigen Vorlage ausreicht.
 
-| Member            | Typ          | Beschreibung  |
+| Member            | Typ          | Beschreibung |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Das JSON-Schema für die Datei *template.json*. Editor, die JSON-Schemas unterstützen, ermöglichen Features zum Bearbeiten von JSON-Dateien, wenn das Schema angegeben ist. [Visual Studio-Code](https://code.visualstudio.com/) erfordert z.B., dass dieser Member IntelliSense aktiviert. Verwenden Sie den Wert `http://json.schemastore.org/template`. |
 | `author`          | Zeichenfolge        | Der Autor der Vorlage. |
@@ -81,7 +81,7 @@ Aktuell wird eine benutzerdefinierte Vorlage unter Windows mit der Datei [nuget.
 
 Der Inhalt des Projektordners wird gemeinsam mit seiner Datei *.template.config/template.json* in den Ordner *content* eingefügt. Fügen Sie neben dem *content*-Ordner eine [*NUSPEC*-Datei](/nuget/create-packages/creating-a-package) hinzu, die eine XML-Manifestdatei ist, die den Inhalt eines Paktes beschreibt und den Erstellungsprozess des NuGet-Pakets vorantreibt. Fügen Sie im **\<packageTypes>**-Element einer *NUSPEC*-Datei ein **\<packageType>** mit einem `name`-Attributwert von `Template` ein. Der Ordner *content* und die Datei *NUSPEC* sollten sich im gleichen Verzeichnis befinden. In der Tabelle werden die *NUSPEC*-Dateielemente gezeigt, die mindestens erforderlich sind, um eine Vorlage als NuGet-Paket zu erstellen.
 
-| Element            | Typ   | Beschreibung  |
+| Element            | Typ   | Beschreibung |
 | ------------------ | ------ | ----------- |
 | **\<authors>**     | Zeichenfolge | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
 | **\<description>** | Zeichenfolge | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
@@ -129,7 +129,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>So deinstallieren Sie eine Vorlage aus einer lokalen NUPKG-Datei
 
-Wenn Sie eine Vorlage deinstallieren möchten, versuchen Sie dies nicht mit dem Pfad der *NUPKG*-Datei. *Die Deinstallation der Vorlage mit `dotnet new -u <PATH_TO_NUPKG_FILE>` schlägt fehl.* Verweisen Sie mit der entsprechenden `id` auf das Paket.
+Wenn Sie eine Vorlage deinstallieren möchten, versuchen Sie dies nicht mit dem Pfad der *NUPKG*-Datei. Beim Versuch, eine Vorlage mit `dotnet new -u <PATH_TO_NUPKG_FILE>` zu deinstallieren, tritt ein Fehler auf. Verweisen Sie mit der entsprechenden `id` auf das Paket:
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>So deinstallieren Sie eine Vorlage aus einem Dateisystemverzeichnis
 
-Das `FILE_SYSTEM_DIRECTORY` ist der Projektordner, der das Projekt und den Ordner *.template.config* enthält:
+Das `FILE_SYSTEM_DIRECTORY` ist der Projektordner, der das Projekt und den Ordner *.template.config* enthält. Der angegebene Pfad muss der absolute Pfad sein. Beim Versuch, eine Vorlage mit einem relativen Pfad zu deinstallieren, tritt ein Fehler auf. Weitere Informationen finden Sie im Artikel [dotnet new](dotnet-new.md).
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Create a custom template for dotnet new (tutorial) (Erstellen einer benutzerdefinierten Vorlage für dotnet new (Tutorial))](../tutorials/create-custom-template.md)  
-* [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)  
-* [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)  
-* [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template)  
+* [Create a custom template for dotnet new (tutorial) (Erstellen einer benutzerdefinierten Vorlage für dotnet new (Tutorial))](../tutorials/create-custom-template.md)
+* [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)
+* [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
+* [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template)

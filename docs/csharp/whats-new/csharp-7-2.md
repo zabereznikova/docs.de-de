@@ -2,12 +2,12 @@
 title: Neues in C# 7.2
 description: Eine Übersicht der neuen Funktionen in C# 7.2
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181172"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148174"
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
 
@@ -28,6 +28,8 @@ Die neuen Sprachfeatures in diesem Release umfassen:
   - Numerische Literale dürfen jetzt führende Unterstriche vor aufgeführten Stellen aufweisen.
 * [`private protected`-Zugriffsmodifizierer](#private-protected-access-modifier)
   - Der `private protected`-Zugriffsmodifizierer ermöglicht den Zugriff für abgeleitete Klassen innerhalb der gleichen Assembly.
+* [Bedingte`ref` Ausdrücke](#conditional-ref-expressions)
+  - Das Ergebnis eines bedingten Ausdrucks (`?:`) kann jetzt ein Verweis sein.
 
 ## <a name="safe-efficient-code-enhancements"></a>Erweiterungen von sicherem, effizientem Code
 
@@ -48,7 +50,7 @@ Methodenaufrufe dürfen jetzt benannte Argumente verwenden, die positionellen Ar
 
 Die Implementierung der Unterstützung für Stellentrennzeichen in C# 7.0 ließ den Unterstrich `_` nicht als erstes Zeichen von Literalwerten zu. Hexadezimale und binäre numerische Literale dürfen jetzt mit einem `_` beginnen. 
 
-Zum Beispiel:
+Beispiel:
 
 ```csharp
 int binaryValue = 0b_0101_0101;
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>Zugriffsmodifizierer _private protected_
 
-Schließlich zeigt der neue, zusammengesetzte Zugriffsmodifizierer `private protected` an, dass auf ein Element durch eine es enthaltende Klasse oder durch innerhalb der gleichen Assembly deklarierte abgeleitete Klassen zugegriffen werden darf. Während `protected internal` den Zugriff durch abgeleitete Klassen oder Klassen, die sich in der gleichen Assembly befinden, erlaubt, schränkt `private protected` den Zugriff auf innerhalb der gleichen Assembly deklarierte abgeleitete Typen ein.
+Ein neuer zusammengesetzter Zugriffsmodifizierer: `private protected` zeigt an, dass auf ein Element durch eine es enthaltende Klasse oder durch innerhalb der gleichen Assembly deklarierte abgeleitete Klassen zugegriffen werden darf. Während `protected internal` den Zugriff durch abgeleitete Klassen oder Klassen, die sich in der gleichen Assembly befinden, erlaubt, schränkt `private protected` den Zugriff auf innerhalb der gleichen Assembly deklarierte abgeleitete Typen ein.
 
 Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../language-reference/keywords/access-modifiers.md) in der Sprachreferenz.
+
+## <a name="conditional-ref-expressions"></a>Bedingte `ref` Ausdrücke
+
+Schließlich kann ein bedingter Ausdruck als Ergebnis einen Verweis anstatt eines Werts erzeugen. Beispielsweise würden Sie folgendes schreiben, um einen Verweis auf das erste Element in einem von zwei Arrays abzurufen:
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+Die Variable `r` ist ein Verweis auf den ersten Wert in `arr` oder `otherArr`.
+
+Weitere Informationen finden Sie unter [conditional-Operator (?:)](../language-reference/operators/conditional-operator.md) in der Sprachreferenz.

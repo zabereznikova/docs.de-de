@@ -5,12 +5,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 8ef875aee8c40f60472df52c19d1c1f2c73e95e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c9ab5c3ca1dd49f011bf9c980945fa9da0d8cfc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515436"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148352"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Verwenden von Nullable-Typen (C#-Programmierleitfaden)
 
@@ -20,7 +20,7 @@ Sie können mit `Nullable<T>` oder `T?` auf einen Nullable-Typ verweisen. Die be
   
 ## <a name="declaration-and-assignment"></a>Deklaration und Zuweisung
 
-Da ein Werttyp implizit in den entsprechenden Nullable-Typ konvertiert werden kann, können Sie dem Nullable-Typ genauso einen Wert zuweisen, wie Sie es auch für dessen zugrunde liegenden Werttyp tun würden. Sie können auch den `null`-Wert zuweisen.  Zum Beispiel:
+Da ein Werttyp implizit in den entsprechenden Nullable-Typ konvertiert werden kann, können Sie dem Nullable-Typ genauso einen Wert zuweisen, wie Sie es auch für dessen zugrunde liegenden Werttyp tun würden. Sie können auch den `null`-Wert zuweisen.  Beispiel:
   
 [!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
 
@@ -52,7 +52,7 @@ Wenn Sie einem Nicht-Nullable-Typ den Wert eines Nullable-Typs zuweisen müssen,
 
 Verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>-Methode, wenn der Wert, der im Fall eines NULL-Werts des Nullable-Typs verwendet werden soll, der Standardwert des zugrunde liegenden Werttyps sein soll.
   
-Sie können einen Nullable-Typ explizit in einen Nicht-Nullable-Typ umwandeln. Zum Beispiel:  
+Sie können einen Nullable-Typ explizit in einen Nicht-Nullable-Typ umwandeln. Beispiel:  
   
 [!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
 
@@ -62,7 +62,7 @@ Ein Nicht-Nullable-Werttyp wird implizit in den entsprechenden Nullable-Typ konv
   
 ## <a name="operators"></a>Operatoren
 
-Die vordefinierten unären und binären Operatoren und alle benutzerdefinierten Operatoren für Werttypen können auch von auf NULL festlegbaren Typen verwende werden. Durch die Operatoren wird ein NULL-Wert erzeugt, wenn ein oder beide Operanden NULL sind. Andernfalls verwenden die Operatoren die enthaltenen Werte zur Berechnung eines Ergebnisses. Zum Beispiel:  
+Die vordefinierten unären und binären Operatoren und alle benutzerdefinierten Operatoren für Werttypen können auch von auf NULL festlegbaren Typen verwende werden. Durch die Operatoren wird ein NULL-Wert erzeugt, wenn ein oder beide Operanden NULL sind. Andernfalls verwenden die Operatoren die enthaltenen Werte zur Berechnung eines Ergebnisses. Beispiel:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
@@ -88,7 +88,7 @@ Sie können den Werttyp, für den das Boxing durchgeführt wurde, mittels Unboxi
 
 ## <a name="the-bool-type"></a>Der „bool?“-Typ
 
-Der `bool?`-Typ, der NULL-Werte zulässt, kann drei verschiedene Werte enthalten: [TRUE](../../language-reference/keywords/true-literal.md), [FALSE](../../language-reference/keywords/false-literal.md) und [NULL](../../language-reference/keywords/null.md). Der `bool?`-Typ verhält sich wie der in SQL verwendete boolesche Variablentyp. Folgende vordefinierte Operatoren stehen zur Verfügung, um sicherzustellen, dass die von den Operatoren `&` und `|` erzeugten Ergebnisse zu dem dreiwertigen Booleschen Typ in SQL passen:
+Der Nullable-Typ `bool?` kann drei verschiedene Werte enthalten: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) und [null](../../language-reference/keywords/null.md). Der `bool?`-Typ verhält sich wie der in SQL verwendete boolesche Variablentyp. Folgende vordefinierte Operatoren stehen zur Verfügung, um sicherzustellen, dass die von den Operatoren `&` und `|` erzeugten Ergebnisse zu dem dreiwertigen Booleschen Typ in SQL passen:
 
 - `bool? operator &(bool? x, bool? y)`  
 - `bool? operator |(bool? x, bool? y)`  

@@ -4,12 +4,12 @@ description: Erfahren Sie mehr zu .NET Core.
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197651"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126977"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 

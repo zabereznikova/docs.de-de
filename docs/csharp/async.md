@@ -4,12 +4,12 @@ description: Informationen zum asynchronen Programmiermodell auf C#-Sprachebene,
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349094"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126496"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -108,7 +108,7 @@ Hier sind zwei Fragen, die Sie stellen sollten, bevor Sie Code schreiben:
     
 Falls Ihre Arbeit **E/A-gebunden** ist, verwenden Sie `async` und `await` *ohne* `Task.Run`.  Sie *sollten nicht* die Task Parallel Library verwenden.  Der Grund dafür ist im Artikel [Async ausführlich](../standard/async-in-depth.md) dargestellt.
 
-Falls Ihre Arbeit **CPU-gebunden** ist und Sie sich für Reaktionsfähigkeit interessieren, dann verwenden Sie `async` und `await`, aber übertragen Sie die Arbeit auf einen anderen Thread *mit* `Task.Run`.  Wenn die Arbeit für Parallelität und Konkurrenz geeignet ist, sollten Sie auch über die Verwendung der Task Parallel Library nachdenken.
+Falls Ihre Arbeit **CPU-gebunden** ist und Sie sich für Reaktionsfähigkeit interessieren, dann verwenden Sie `async` und `await`, aber übertragen Sie die Arbeit auf einen anderen Thread *mit* `Task.Run`.  Wenn die Arbeit für Parallelität und Konkurrenz geeignet ist, sollten Sie auch über die Verwendung der [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md) nachdenken.
 
 Darüber hinaus sollten Sie immer die Ausführung Ihres Codes messen.  Sie könnten z.B. in eine Situation geraten, in der Ihre CPU-gebundene Arbeit im Vergleich zum Aufwand der Kontextwechsel beim Multithreading nicht kostspielig genug ist.  Jede Entscheidung hat Nachteile, und Sie sollten die Nachteile je nach Ihrer Situation auswählen.
 

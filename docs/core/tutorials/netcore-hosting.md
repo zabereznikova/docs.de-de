@@ -1,17 +1,18 @@
 ---
-title: Hosten von .NET Core
-description: Hosten der .NET Core-Laufzeit aus nativem Code
+title: Schreiben eines benutzerdefinierten .NET Core-Laufzeithosts
+description: Erfahren Sie, wie Sie die.NET Core-Runtime vom nativen Code aus hosten können, um erweiterte Szenarien zu unterstützen, die eine Kontrolle der Funktionsweise der.NET Core-Runtime erfordern.
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218605"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146950"
 ---
-# <a name="hosting-net-core"></a>Hosten von .NET Core
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Schreiben Sie einen benutzerdefinierten .NET Core-Host, um die .NET-Runtime über den systemeigenen Code zu steuern.
 
 Wie alle verwalteten Codes werden .NET Core-Anwendungen von einem Host ausgeführt. Der Host ist verantwortlich für das Starten der Laufzeit (einschließlich Komponenten wie die JIT und Garbage Collector), das Erstellen der AppDomains und das Aufrufen von verwalteten Einstiegspunkten.
 
@@ -82,7 +83,6 @@ Allgemeine AppDomain-Eigenschaften beinhalten:
 *  `APP_NI_PATHS` Diese Liste ist APP_PATHS sehr ähnlich, außer dass es Pfade sein sollten, in denen nach nativen Images gesucht werden sollen.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Diese Eigenschaft ist eine Liste der Pfade, die das Ladeprogramm durchsuchen sollte, wenn es nach nativen DLLs sucht, die über p/invoke aufgerufen werden.
 *  `PLATFORM_RESOURCE_ROOTS` Diese Liste enthält die Pfade, in denen nach Assemblys der Ressourcensatelliten (in kulturspezifischen Unterverzeichnissen) gesucht wird.
-*  `AppDomainCompatSwitch` Diese Zeichenfolge gibt an, welche Kompatibilitätsquirks für Assemblys ohne eine explizite Zielframeworkmoniker (ein Attribut auf Assemblyebene, das angibt, welches Framework eine Assembly ausführen soll) verwendet werden sollen. Dies sollte in der Regel auf `"UseLatestBehaviorWhenTFMNotSpecified"` festgelegt werden, aber einige Hosts möchten stattdessen ältere Silverlight- oder Windows Phone-Kompatibilitätsquirks abrufen.
 
 In unserem [einfache Beispielhost](https://github.com/dotnet/samples/tree/master/core/hosting) sind diese Eigenschaften wie folgt eingerichtet:
 

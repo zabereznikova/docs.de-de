@@ -3,12 +3,12 @@ title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6aa070d54bb1b571d4fa51538b0521a554073cbc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146739"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
@@ -94,9 +94,9 @@ Wenn durch das Hinzufügen dieser Syntax eine zugängliche Methode nicht entfern
 
 Mit *Initialisierern für automatische Eigenschaften* können Sie den ursprünglichen Wert für eine automatische Eigenschaft als Teil der Eigenschaftendeklaration deklarieren.  In früheren Versionen mussten diese Eigenschaften über Setter verfügen und Sie müssten diesen Setter verwenden, um den vom Unterstützungsfeld verwendeten Datenspeicher zu initialisieren. Betrachten Sie diese Klasse als für einen Studenten, die den Namen sowie eine Liste der Noten des Studenten enthält:
 
-[!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
+[!code-csharp[Student](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Student)]
  
-Mit zunehmender Größe der Klasse, können Sie andere Konstruktoren einschließen. Jeder Konstruktor muss dieses Feld initialisieren, andernfalls werden Fehler verursacht.
+Mit zunehmender Größe der Klasse, können Sie andere Konstruktoren einschließen. Jeder Konstruktor muss die Eigenschaft „Grades“ initialisieren, andernfalls werden Fehler verursacht.
 
 Mit C# 6 können Sie einen Anfangswert für den von einer Auto-Eigenschaft verwendeten Speicher in der Auto-Eigenschaft-Deklaration zuweisen:
 
@@ -104,7 +104,7 @@ Mit C# 6 können Sie einen Anfangswert für den von einer Auto-Eigenschaft verwe
 
 Der `Grades`-Member wird initialisiert, wo er deklariert ist. Dies erleichtert die einmalige Ausführung der Initialisierung. Die Initialisierung ist Teil der Eigenschaftendeklaration, was es einfacher macht, die Speicherzuweisung mit der öffentlichen Schnittstelle für `Student`-Objekte gleichzustellen.
 
-Eigenschafteninitialisierer können wie im Folgenden dargestellt mit Lese-/Schreibeigenschaften sowie mit schreibgeschützten Eigenschaften verwendet werden.
+Eigenschafteninitialisierer können mit schreibgeschützten Eigenschaften verwendet werden, wie oben dargestellt, und darüber hinaus mit Lese-/Schreibeigenschaften.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 

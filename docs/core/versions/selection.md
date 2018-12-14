@@ -1,17 +1,18 @@
 ---
-title: .NET Core-Versionsauswahl
-description: In diesem Artikel erfahren Sie, wie .NET Core Laufzeitversionen für Ihr Programm sucht und auswählt.
+title: Auswählen der zu verwendenden .NET Core-Version
+description: In diesem Artikel erfahren Sie, wie .NET Core automatisch Laufzeitversionen für Ihr Programm sucht und auswählt. Außerdem erfahren Sie in diesem Artikel, wie Sie eine bestimmte Version erzwingen.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841539"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127237"
 ---
-# <a name="net-core-version-selection"></a>.NET Core-Versionsauswahl
+# <a name="select-the-net-core-version-to-use"></a>Auswählen der zu verwendenden .NET Core-Version
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ Ein bestimmtes SDK unterstützt einen festen Satz von Frameworks, der auf das Zi
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Von Frameworks abhängige Apps führen einen Rollforward aus
 
-Sie führen mit [`dotnet run`](../tools/dotnet-run.md) eine Anwendung von der Quelle aus. Mit `dotnet run` kann eine Anwendung sowohl erstellt als auch ausgeführt werden. Die ausführbare Datei `dotnet` ist der **Host** der Anwendung in Entwicklungsumgebungen.
+Wenn Sie eine Anwendung von der Quelle aus mit [`dotnet run`](../tools/dotnet-run.md) ausführen, von einer [**Framework-abhängigen Bereitstellung**](../deploying/index.md#framework-dependent-deployments-fdd) aus mit [`dotnet myapp.dll`](../tools/dotnet.md#description) oder von einer [**Framework-abhängigen ausführbaren Datei**](../deploying/index.md#framework-dependent-executables-fde) aus mit `myapp.exe`, ist die ausführbare `dotnet`-Datei der **Host** für die Anwendung.
 
 Der Host wählt die neueste Patchversion aus, die auf dem Computer installiert ist. Wenn Sie beispielsweise `netcoreapp2.0` in Ihrer Projektdatei angegeben haben und `2.0.4` die zuletzt installierte .NET-Laufzeit ist, wird die Laufzeit `2.0.4` verwendet.
 

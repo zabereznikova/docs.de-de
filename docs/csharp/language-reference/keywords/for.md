@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511727"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149236"
 ---
 # <a name="for-c-reference"></a>for (C#-Referenz)
 
@@ -105,14 +105,12 @@ Im folgenden Beispiel wird die Endlosschleife `for` definiert:
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Weitere Informationen finden Sie im Abschnitt [Die for-Anweisung](~/_csharplang/spec/statements.md#the-for-statement) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Die for-Anweisung (C#-Spezifikation)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [foreach, in](foreach-in.md)
-- [for-Anweisung (C++)](/cpp/cpp/for-statement-cpp)
 - [Iterationsanweisungen](iteration-statements.md)
+- [foreach, in](foreach-in.md)

@@ -1,15 +1,16 @@
 ---
 title: Laufzeitpaketspeicher
-description: In diesem Thema werden der Laufzeitpaketspeicher und die Zielmanifeste erläutert, die von .NET Core verwendet werden.
+description: Erfahren Sie, wie Sie den Laufzeitpaketspeicher für Manifeste nutzen, die von .NET Core verwendet werden.
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: b9daac6f50008bf661ae0c727d3a3e0e53a0d6b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511583"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145214"
 ---
 # <a name="runtime-package-store"></a>Laufzeitpaketspeicher
 

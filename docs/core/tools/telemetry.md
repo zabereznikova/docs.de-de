@@ -4,12 +4,12 @@ description: Entdecken Sie die Telemetriefunktionen des .NET Core SDK, die Nutzu
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c8c6688b7b29c7e65c723e1f1ff31b3bd4c8c1ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841616"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129141"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK-Telemetrie
 
@@ -52,7 +52,7 @@ Die Funktion sammelt die folgenden Daten:
 
 &#8224;Diese Metrik wird veröffentlicht.
 
-Ab dem .NET Core SDK 2.0 werden neue Datenpunkte gesammelt:
+Ab dem .NET Core 2.0 SDK werden neue Datenpunkte gesammelt:
 
 - Argumente und Optionen des Befehls `dotnet`: nur bekannte Argumente und Optionen werden gesammelt (keine beliebigen Zeichenfolgen).
 - Ob das SDK in einem Container ausgeführt wird.

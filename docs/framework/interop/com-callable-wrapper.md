@@ -1,6 +1,6 @@
 ---
 title: COM Callable Wrapper (CCW)
-ms.date: 03/30/2017
+ms.date: 10/23/2018
 dev_langs:
 - csharp
 - vb
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394965"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145175"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper (CCW)
 Wenn ein COM-Client ein .NET-Objekt aufruft, erstellt Common Language Runtime das verwaltete Objekt sowie einen CCW (COM Callable Wrapper) für dieses Objekt. COM-Clients verwenden den CCW als Proxy für das verwaltete Objekt, da sie nicht direkt auf ein .NET-Objekt verweisen können.  
@@ -48,7 +48,7 @@ COM-Schnittstellen und der COM Callable Wrapper
   
  Neben der Offenlegung von Schnittstellen, die explizit mit einer Klasse in der verwalteten Umgebung implementiert wird, stellt .NET Framework für das Objekt Implementierungen der COM-Schnittstellen bereit, die in der folgenden Tabelle aufgeführt sind. Eine .NET-Klasse kann das Standardverhalten überschreiben, indem sie eigene Implementierungen dieser Schnittstellen bereitstellt. Zur Laufzeit stehen jedoch immer die Implementierungen der **IUnknown**- und **IDispatch**-Schnittstellen bereit.  
   
-|Interface|description|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |**Idispatch**|Stellt einen Mechanismus für die späte Bindung an den Typ bereit.|  
 |**IerrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|  
@@ -59,10 +59,10 @@ COM-Schnittstellen und der COM Callable Wrapper
   
  Eine verwaltete Klasse kann zudem die COM-Schnittstellen bereitstellen, die in der folgenden Tabelle beschrieben werden.  
   
-|Interface|description|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |Die Klassenschnittstelle (\_*Klassenname*)|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|  
-|**IConnectionPoint** und **IconnectionPointContainer**|Schnittstelle für Objekte, die delegatbasierende Ereignisse bedienen (eine Schnittstelle für die Registrierung von Ereignisabonnenten).|  
+|**IConnectionPoint** und **IConnectionPointContainer**|Schnittstelle für Objekte, die delegatbasierende Ereignisse bedienen (eine Schnittstelle für die Registrierung von Ereignisabonnenten).|  
 |**IdispatchEx**|Schnittstelle, die von der Laufzeit bereitgestellt wird, wenn die Klasse **IExpando** implementiert. Die **IDispatchEx**-Schnittstelle ist eine Erweiterung der **IDispatch**-Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|  
 |**IEnumVARIANT**|Schnittstelle für Klassen von Typ „Auflistung“, die die Objekte in der Auflistung enumeriert, wenn die Klasse **IEnumerable** implementiert.|  
   
@@ -84,19 +84,19 @@ Public Class Mammal
 End Class  
 ```  
   
-```csharp  
-// Applies the ClassInterfaceAttribute to set the interface to dual.  
-[ClassInterface(ClassInterfaceType.AutoDual)]  
-// Implicitly extends System.Object.  
-public class Mammal  
-{  
-    void  Eat();  
-    void  Breathe():  
-    void  Sleep();  
-}  
-```  
+```csharp
+// Applies the ClassInterfaceAttribute to set the interface to dual.
+[ClassInterface(ClassInterfaceType.AutoDual)]
+// Implicitly extends System.Object.
+public class Mammal
+{
+    public void Eat() {}
+    public void Breathe() {}
+    public void Sleep() {}
+}
+```
   
- Der COM-Client kann einen Zeiger auf die Klassenschnittstelle mit Namen `_Mammal` abrufen, Diese wird in der Typbibliothek beschrieben, die vom Tool [Type Library Exporter (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) generiert wird. Wenn die `Mammal`-Klasse eine oder mehrere Schnittstellen implementiert hat, werden die Schnittstellen unter der Coklasse angezeigt.  
+ Der COM-Client kann einen Zeiger auf die Klassenschnittstelle mit Namen `_Mammal` abrufen, Diese wird in der Typbibliothek beschrieben, die vom Tool [Type Library Exporter (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) generiert wird. Wenn die `Mammal`-Klasse eine oder mehrere Schnittstellen implementiert hat, werden die Schnittstellen unter der Co-Klasse angezeigt.  
   
 ```  
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]  
@@ -139,12 +139,13 @@ coclass Mammal
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.None)]  
-public class LoanApp : IExplicit {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.None)]
+public class LoanApp : IExplicit
+{
+    int IExplicit.M() { return 0; }
+}
+```
   
  Der Wert **ClassInterfaceType.None** verhindert, dass die Klassenschnittstelle generiert wird, wenn die Metadaten der Klassen in eine Typbibliothek exportiert werden. Im vorstehenden Beispiel können COM-Clients nur über die `IExplicit`-Schnittstelle auf die `LoanApp`-Klasse zugreifen.  
   
@@ -163,20 +164,31 @@ public class LoanApp : IExplicit {
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.AutoDispatch]  
-public class LoanApp : IAnother {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.AutoDispatch)]
+public class LoanApp
+{
+    public int M() { return 0; }
+}
+```
   
  Um die DispId eines Schnittstellenmembers zur Laufzeit abzurufen, können COM-Clients **IDispatch.GetIdsOfNames** aufrufen. Zum Aufrufen einer Methode auf der Schnittstelle, übergeben Sie die zurückgegebene DispId als Argument an **IDispatch.Invoke**.  
   
 ### <a name="restrict-using-the-dual-interface-option-for-the-class-interface"></a>Beschränken Sie die Nutzung der dualen Schnittstellenoption für die Klassenschnittstelle.  
  Duale Schnittstellen ermöglichen ein frühes und spätes Binden an Schnittstellenmember durch COM-Clients. Während der Entwurfszeit und beim Testen finden Sie es möglicherweise hilfreich, die Klassenschnittstelle auf dual festzulegen. Bei einer verwalteten Klasse (und deren Basisklassen), die nie geändert wird, ist diese Option ebenfalls akzeptabel. In allen anderen Fällen sollten Sie vermeiden, die Klassenschnittstelle auf dual festzulegen.  
   
- Eine automatisch generierte duale Schnittstelle kann in seltenen Fällen die geeignete Lösung sein, aber häufiger werden hiermit versionsbezogene Komplexitäten erzeugt. So können COM-Clients, die die Klassenschnittstelle einer abgeleiteten Klasse verwenden, beispielsweise schnell unterbrochen werden, wenn Änderungen an der Basisklasse vorgenommen werden. Wenn die Basisklasse von einem Drittanbieter bereitgestellt wird, liegt das Layout der Klassenschnittstelle außerhalb Ihrer Kontrolle. Darüber hinaus stellt eine duale Schnittstelle (**ClassInterface.AutoDual**) im Gegensatz zu einer auf Dispatch beschränkten Schnittstelle eine Beschreibung der Klassenschnittstelle in der exportierten Typbibliothek bereit. Eine solche Beschreibung kann dafür sorgen, dass spät gebundene Clients DispIds zur Laufzeit zwischenspeichern.  
+ Eine automatisch generierte duale Schnittstelle kann in seltenen Fällen die geeignete Lösung sein, aber häufiger werden hiermit versionsbezogene Komplexitäten erzeugt. So können COM-Clients, die die Klassenschnittstelle einer abgeleiteten Klasse verwenden, beispielsweise schnell unterbrochen werden, wenn Änderungen an der Basisklasse vorgenommen werden. Wenn die Basisklasse von einem Drittanbieter bereitgestellt wird, liegt das Layout der Klassenschnittstelle außerhalb Ihrer Kontrolle. Darüber hinaus stellt eine duale Schnittstelle (**ClassInterfaceType.AutoDual**) im Gegensatz zu einer auf Dispatch beschränkten Schnittstelle eine Beschreibung der Klassenschnittstelle in der exportierten Typbibliothek bereit. Eine solche Beschreibung kann dafür sorgen, dass spät gebundene Clients DispIds zur Laufzeit zwischenspeichern.  
   
+### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Stellen Sie sicher, dass alle COM-Ereignisbenachrichtigungen spät gebunden sind.
+
+Standardmäßig werden COM-Typinformationen direkt in verwaltete Assemblys eingebettet, sodass primäre Interopassemblys (PIAs) überflüssig sind. Eine der Einschränkungen von eingebetteten Typinformationen ist jedoch, dass sie nicht die Bereitstellung von COM-Ereignisbenachrichtigungen durch früh gebundene Vtable-Aufrufe unterstützen, sondern nur spät gebundene `IDispatch::Invoke`-Aufrufe.
+
+Wenn Ihre Anwendung früh gebundene Aufrufe von COM-Ereignisschnittstellenmethoden erfordert, können Sie für die Eigenschaft **Interoptypen einbetten** in Visual Studio `true` festlegen, oder schließen Sie das folgende Element in Ihre Projektdatei ein:
+
+```xml
+<EmbedInteropTypes>True</EmbedInteropTypes>
+```
+
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [COM-Wrapper](com-wrappers.md)  

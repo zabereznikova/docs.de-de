@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd81c0c36cb88b971539e843e3e1f2096a73d40e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199967"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152778"
 ---
 # <a name="volatile-c-reference"></a>volatile (C#-Referenz)
 
@@ -29,7 +29,7 @@ Das Schlüsselwort `volatile` kann auf Felder der folgenden Typen angewendet wer
 
 Andere Typen, einschließlich `double` und `long`, können nicht mit `volatile` markiert werden, da Lese- und Schreibvorgänge in die Felder dieser Typen nicht unbedingt atomar sind. Um den Multithreadzugriff auf diese Feldtypen zu schützen, verwenden Sie die Klassenmitglieder <xref:System.Threading.Interlocked> oder schützen Sie den Zugriff mit der Anweisung [`lock`](lock-statement.md).
 
-Das Schlüsselwort „volatile“ kann nur auf Felder einer `class` oder `struct` angewendet werden. Lokale Variablen können nicht als `volatile` deklariert werden.
+Das Schlüsselwort `volatile` kann nur auf Felder einer `class` oder `struct` angewendet werden. Lokale Variablen können nicht als `volatile` deklariert werden.
   
 ## <a name="example"></a>Beispiel
 
@@ -37,7 +37,7 @@ Im folgenden Beispiel wird die Deklaration einer öffentlichen Feldvariable als 
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Hilfs- oder Arbeitsthread erstellt wird und für das Ausführen der Verarbeitung parallel mit dem primären Thread verwendet werden kann. Hintergrundinformationen zum Multithreading finden Sie unter [Verwaltetes Threading](../../../standard/threading/index.md) und [Threading (C#)](../../programming-guide/concepts/threading/index.md).  
+Im folgenden Beispiel wird veranschaulicht, wie ein Hilfs- oder Arbeitsthread erstellt wird und für das Ausführen der Verarbeitung parallel mit dem primären Thread verwendet werden kann. Weitere Informationen zum Multithreading finden Sie unter [Verwaltetes Threading](../../../standard/threading/index.md).
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 

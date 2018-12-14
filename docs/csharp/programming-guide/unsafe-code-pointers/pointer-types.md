@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124cc98b6f73b6014ab845ce5b9331e9f5292757
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509277"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146836"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -33,7 +33,7 @@ Der Typ, der vor `*` in einem Zeigertyp angegeben wird, wird als **Verweistyp** 
 
 Zeigertypen erben nicht von [object`object`, und es ist keine Konvertierung zwischen Zeigertypen und ](../../language-reference/keywords/object.md) möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.
 
-Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Zum Beispiel:
+Wenn Sie mehrere Zeiger innerhalb ein- und derselben Deklaration deklarieren, wird das Sternchen (*) nur einmal mit dem zugrunde liegenden Typ notiert und nicht als Präfix für jeden Zeigernamen verwendet. Beispiel:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -44,7 +44,7 @@ Ein Zeiger kann nicht auf einen Verweis oder eine [Struktur](../../language-refe
 
 Der Wert der Zeigervariablen vom Typ `myType*` ist die Adresse einer Variablen vom Typ `myType`. Im Folgenden finden Sie Beispiele für Zeigertypdeklarationen:
 
-|Beispiel|Beschreibung |
+|Beispiel|Beschreibung|
 |-------------|-----------------|
 |`int* p`|`p` ist ein Zeiger auf einen ganzzahligen Wert.|
 |`int** p`|`p` ist ein Zeiger auf einen Zeiger auf einen ganzzahligen Wert.|
