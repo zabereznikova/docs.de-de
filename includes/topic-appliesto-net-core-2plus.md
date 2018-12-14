@@ -1,1 +1,1 @@
-<span data-ttu-id="3af5e-101">**Dieses Thema gilt für: ✓** .NET Core SDK 2.0 und spätere Versionen</span><span class="sxs-lookup"><span data-stu-id="3af5e-101">**This topic applies to: ✓** .NET Core SDK 2.0 and later versions</span></span>
+<span data-ttu-id="e30ef-101">**Dieses Thema gilt für: ✓**.NET Core 2.0 SDK und spätere Versionen</span><span class="sxs-lookup"><span data-stu-id="e30ef-101">**This topic applies to: ✓** .NET Core 2.0 SDK and later versions</span></span>
