@@ -1,5 +1,6 @@
 ---
-title: Grundlegende Zeichenfolgenoperationen in .NET Framework
+title: Grundlegende Zeichenfolgenvorgänge in .NET
+description: Erfahren Sie mehr über die grundlegenden Funktionen, die Sie für Zeichenfolgen verwenden können.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,41 +9,42 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seadec18
+ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567483"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150679"
 ---
-# <a name="basic-string-operations-in-net"></a><span data-ttu-id="b7904-102">Grundlegende Zeichenfolgenvorgänge in .NET</span><span class="sxs-lookup"><span data-stu-id="b7904-102">Basic String Operations in .NET</span></span>
-<span data-ttu-id="b7904-103">Anwendungen antworten Benutzern oft durch Erstellen von Nachrichten auf Grundlage der Benutzereingabe.</span><span class="sxs-lookup"><span data-stu-id="b7904-103">Applications often respond to users by constructing messages based on user input.</span></span> <span data-ttu-id="b7904-104">Beispielsweise ist es nicht ungewöhnlich, dass Websites neu angemeldeten Benutzern mit einer speziellen Begrüßung antworten, die den Namen des Benutzers enthält.</span><span class="sxs-lookup"><span data-stu-id="b7904-104">For example, it is not uncommon for Web sites to respond to a newly logged-on user with a specialized greeting that includes the user's name.</span></span> <span data-ttu-id="b7904-105">Mit einigen Methoden in den <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klassen können Sie dynamisch benutzerdefinierte Zeichenfolgen für die Anzeige auf Ihrer Benutzeroberfläche erstellen.</span><span class="sxs-lookup"><span data-stu-id="b7904-105">Several methods in the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes allow you to dynamically construct custom strings to display in your user interface.</span></span> <span data-ttu-id="b7904-106">Mit diesen Methoden können Sie auch eine Reihe grundlegender Zeichenfolgenoperationen wie das Erstellen neuer Zeichenfolgen aus Bytearrays, das Vergleichen der Werte von Zeichenfolgen und das Ändern vorhandener Zeichenfolgen durchführen.</span><span class="sxs-lookup"><span data-stu-id="b7904-106">These methods also help you perform a number of basic string operations like creating new strings from arrays of bytes, comparing the values of strings, and modifying existing strings.</span></span>  
+# <a name="basic-string-operations-in-net"></a><span data-ttu-id="a526e-103">Grundlegende Zeichenfolgenvorgänge in .NET</span><span class="sxs-lookup"><span data-stu-id="a526e-103">Basic String Operations in .NET</span></span>
+<span data-ttu-id="a526e-104">Anwendungen antworten Benutzern oft durch Erstellen von Nachrichten auf Grundlage der Benutzereingabe.</span><span class="sxs-lookup"><span data-stu-id="a526e-104">Applications often respond to users by constructing messages based on user input.</span></span> <span data-ttu-id="a526e-105">Beispielsweise ist es nicht ungewöhnlich, dass Websites neu angemeldeten Benutzern mit einer speziellen Begrüßung antworten, die den Namen des Benutzers enthält.</span><span class="sxs-lookup"><span data-stu-id="a526e-105">For example, it is not uncommon for Web sites to respond to a newly logged-on user with a specialized greeting that includes the user's name.</span></span> <span data-ttu-id="a526e-106">Mit einigen Methoden in den <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klassen können Sie dynamisch benutzerdefinierte Zeichenfolgen für die Anzeige auf Ihrer Benutzeroberfläche erstellen.</span><span class="sxs-lookup"><span data-stu-id="a526e-106">Several methods in the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes allow you to dynamically construct custom strings to display in your user interface.</span></span> <span data-ttu-id="a526e-107">Mit diesen Methoden können Sie auch eine Reihe grundlegender Zeichenfolgenoperationen wie das Erstellen neuer Zeichenfolgen aus Bytearrays, das Vergleichen der Werte von Zeichenfolgen und das Ändern vorhandener Zeichenfolgen durchführen.</span><span class="sxs-lookup"><span data-stu-id="a526e-107">These methods also help you perform a number of basic string operations like creating new strings from arrays of bytes, comparing the values of strings, and modifying existing strings.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b7904-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b7904-107">In This Section</span></span>  
- [<span data-ttu-id="b7904-108">Erstellen neuer Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="b7904-108">Creating New Strings</span></span>](../../../docs/standard/base-types/creating-new.md)  
- <span data-ttu-id="b7904-109">Beschreibt grundlegende Verfahren, um Objekte in Zeichenfolgen zu konvertieren und Zeichenfolgen zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="b7904-109">Describes basic ways to convert objects into strings and to combine strings.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a526e-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a526e-108">In This Section</span></span>  
+ [<span data-ttu-id="a526e-109">Erstellen neuer Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="a526e-109">Creating New Strings</span></span>](../../../docs/standard/base-types/creating-new.md)  
+ <span data-ttu-id="a526e-110">Beschreibt grundlegende Verfahren, um Objekte in Zeichenfolgen zu konvertieren und Zeichenfolgen zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="a526e-110">Describes basic ways to convert objects into strings and to combine strings.</span></span>  
   
- [<span data-ttu-id="b7904-110">Herausnehmen und Entfernen von Zeichen</span><span class="sxs-lookup"><span data-stu-id="b7904-110">Trimming and Removing Characters</span></span>](../../../docs/standard/base-types/trimming.md)  
- <span data-ttu-id="b7904-111">Beschreibt, wie Zeichen aus einer Zeichenfolge herausgenommen oder daraus entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="b7904-111">Describes how to trim or remove characters in a string.</span></span>  
+ [<span data-ttu-id="a526e-111">Herausnehmen und Entfernen von Zeichen</span><span class="sxs-lookup"><span data-stu-id="a526e-111">Trimming and Removing Characters</span></span>](../../../docs/standard/base-types/trimming.md)  
+ <span data-ttu-id="a526e-112">Beschreibt, wie Zeichen aus einer Zeichenfolge herausgenommen oder daraus entfernt werden.</span><span class="sxs-lookup"><span data-stu-id="a526e-112">Describes how to trim or remove characters in a string.</span></span>  
   
- [<span data-ttu-id="b7904-112">Auffüllen von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="b7904-112">Padding Strings</span></span>](../../../docs/standard/base-types/padding.md)  
- <span data-ttu-id="b7904-113">Beschreibt, wie Zeichen oder Leerzeichen in eine Zeichenfolge eingefügt werden</span><span class="sxs-lookup"><span data-stu-id="b7904-113">Describes how to insert characters or empty spaces into a string.</span></span>  
+ [<span data-ttu-id="a526e-113">Auffüllen von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="a526e-113">Padding Strings</span></span>](../../../docs/standard/base-types/padding.md)  
+ <span data-ttu-id="a526e-114">Beschreibt, wie Zeichen oder Leerzeichen in eine Zeichenfolge eingefügt werden</span><span class="sxs-lookup"><span data-stu-id="a526e-114">Describes how to insert characters or empty spaces into a string.</span></span>  
   
- [<span data-ttu-id="b7904-114">Vergleichen von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="b7904-114">Comparing Strings</span></span>](../../../docs/standard/base-types/comparing.md)  
- <span data-ttu-id="b7904-115">Beschreibt, wie Sie den Inhalt von mindestens zwei Zeichenfolgen vergleichen.</span><span class="sxs-lookup"><span data-stu-id="b7904-115">Describes how to compare the contents of two or more strings.</span></span>  
+ [<span data-ttu-id="a526e-115">Vergleichen von Zeichenfolgen</span><span class="sxs-lookup"><span data-stu-id="a526e-115">Comparing Strings</span></span>](../../../docs/standard/base-types/comparing.md)  
+ <span data-ttu-id="a526e-116">Beschreibt, wie Sie den Inhalt von mindestens zwei Zeichenfolgen vergleichen.</span><span class="sxs-lookup"><span data-stu-id="a526e-116">Describes how to compare the contents of two or more strings.</span></span>  
   
- [<span data-ttu-id="b7904-116">Ändern der Groß-/Kleinschreibung</span><span class="sxs-lookup"><span data-stu-id="b7904-116">Changing Case</span></span>](../../../docs/standard/base-types/changing-case.md)  
- <span data-ttu-id="b7904-117">Beschreibt, wie Sie die Groß-/Kleinschreibung von Zeichen in einer Zeichenfolge ändern.</span><span class="sxs-lookup"><span data-stu-id="b7904-117">Describes how to change the case of characters within a string.</span></span>  
+ [<span data-ttu-id="a526e-117">Ändern der Groß-/Kleinschreibung</span><span class="sxs-lookup"><span data-stu-id="a526e-117">Changing Case</span></span>](../../../docs/standard/base-types/changing-case.md)  
+ <span data-ttu-id="a526e-118">Beschreibt, wie Sie die Groß-/Kleinschreibung von Zeichen in einer Zeichenfolge ändern.</span><span class="sxs-lookup"><span data-stu-id="a526e-118">Describes how to change the case of characters within a string.</span></span>  
   
- [<span data-ttu-id="b7904-118">Verwenden der StringBuilder-Klasse</span><span class="sxs-lookup"><span data-stu-id="b7904-118">Using the StringBuilder Class</span></span>](../../../docs/standard/base-types/stringbuilder.md)  
- <span data-ttu-id="b7904-119">Beschreibt das Erstellen und Ändern dynamischer Zeichenfolgenobjekte mithilfe der <xref:System.Text.StringBuilder>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="b7904-119">Describes how to create and modify dynamic string objects with the <xref:System.Text.StringBuilder> class.</span></span>  
+ [<span data-ttu-id="a526e-119">Verwenden der StringBuilder-Klasse</span><span class="sxs-lookup"><span data-stu-id="a526e-119">Using the StringBuilder Class</span></span>](../../../docs/standard/base-types/stringbuilder.md)  
+ <span data-ttu-id="a526e-120">Beschreibt das Erstellen und Ändern dynamischer Zeichenfolgenobjekte mithilfe der <xref:System.Text.StringBuilder>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="a526e-120">Describes how to create and modify dynamic string objects with the <xref:System.Text.StringBuilder> class.</span></span>  
   
- [<span data-ttu-id="b7904-120">Ausführen von grundlegenden Zeichenfolgenbearbeitungen</span><span class="sxs-lookup"><span data-stu-id="b7904-120">How to: Perform Basic String Manipulations</span></span>](../../../docs/standard/base-types/basic-manipulations.md)  
- <span data-ttu-id="b7904-121">Veranschaulicht die Verwendung von grundlegenden Zeichenfolgenvorgängen.</span><span class="sxs-lookup"><span data-stu-id="b7904-121">Demonstrates the use of basic string operations.</span></span>  
+ [<span data-ttu-id="a526e-121">Ausführen von grundlegenden Zeichenfolgenbearbeitungen</span><span class="sxs-lookup"><span data-stu-id="a526e-121">How to: Perform Basic String Manipulations</span></span>](../../../docs/standard/base-types/basic-manipulations.md)  
+ <span data-ttu-id="a526e-122">Veranschaulicht die Verwendung von grundlegenden Zeichenfolgenvorgängen.</span><span class="sxs-lookup"><span data-stu-id="a526e-122">Demonstrates the use of basic string operations.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="b7904-122">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="b7904-122">Related Sections</span></span>  
- [<span data-ttu-id="b7904-123">Typkonvertierung in .NET</span><span class="sxs-lookup"><span data-stu-id="b7904-123">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)  
- <span data-ttu-id="b7904-124">Beschreibt, wie Sie einen Typ in einen anderen Typ konvertieren.</span><span class="sxs-lookup"><span data-stu-id="b7904-124">Describes how to convert one type into another type.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="a526e-123">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="a526e-123">Related Sections</span></span>  
+ [<span data-ttu-id="a526e-124">Typkonvertierung in .NET</span><span class="sxs-lookup"><span data-stu-id="a526e-124">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)  
+ <span data-ttu-id="a526e-125">Beschreibt, wie Sie einen Typ in einen anderen Typ konvertieren.</span><span class="sxs-lookup"><span data-stu-id="a526e-125">Describes how to convert one type into another type.</span></span>  
   
- [<span data-ttu-id="b7904-125">Formatierung von Typen</span><span class="sxs-lookup"><span data-stu-id="b7904-125">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
- <span data-ttu-id="b7904-126">Beschreibt, wie Zeichenfolgen über Formatbezeichner formatiert werden.</span><span class="sxs-lookup"><span data-stu-id="b7904-126">Describes how to format strings using format specifiers.</span></span>
+ [<span data-ttu-id="a526e-126">Formatierung von Typen</span><span class="sxs-lookup"><span data-stu-id="a526e-126">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ <span data-ttu-id="a526e-127">Beschreibt, wie Zeichenfolgen über Formatbezeichner formatiert werden.</span><span class="sxs-lookup"><span data-stu-id="a526e-127">Describes how to format strings using format specifiers.</span></span>
