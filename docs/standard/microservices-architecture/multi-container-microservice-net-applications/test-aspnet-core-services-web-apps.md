@@ -1,15 +1,15 @@
 ---
 title: Testen von ASP.NET Core-Diensten und -Webanwendungen
-description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Testen von ASP.NET Core-Diensten und -Webanwendungen
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Architektur zum Testen von ASP.NET Core-Diensten und -Webanwendungen in Containern
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/02/2018
+ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232858"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148027"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -29,7 +29,7 @@ Sie müssen testen, wie der Controller sich auf Grundlage von gültigen bzw. ung
 
 Ein Komponententest beinhaltet das Testen einer Anwendungskomponente isoliert von ihrer Infrastruktur und ihren Abhängigkeiten. Bei einem Komponententest der Controllerlogik werden nur die Inhalte einer einzelnen Aktion oder Methode getestet, nicht das Verhalten ihrer Abhängigkeiten oder des Frameworks selbst. Komponententests erkennen keine Probleme bei der Interaktion zwischen den Komponenten. Dazu dienen Integrationstests.
 
-Konzentrieren Sie sich bei der Durchführung eines Komponententests für Ihre Controlleraktionen daher nur auf deren Verhalten. Bei einem Komponententest des Controllers werden z.B. Filter, Routing oder Modellbindung vermieden. Durch die Fokussierung auf nur einen Aspekt sind Komponententests in der Regel einfach zu schreiben und schnell in der Ausführung. Gut geschriebene Komponententests können häufig ohne großen Mehraufwand ausgeführt werden.
+Konzentrieren Sie sich bei der Durchführung eines Komponententests für Ihre Controlleraktionen daher nur auf deren Verhalten. Ein Controllerkomponententest vermeidet beispielsweise Filter, Routing oder Modellbindung, das ist die Zuordnung von Anforderungsdaten an ein ViewModel- oder Datentransferobjekt (DTO). Durch die Fokussierung auf nur einen Aspekt sind Komponententests in der Regel einfach zu schreiben und schnell in der Ausführung. Gut geschriebene Komponententests können häufig ohne großen Mehraufwand ausgeführt werden.
 
 Komponententests werden basierend auf Testframeworks wie xUnit.net, MSTest, Moq oder NUnit implementiert. Für die Beispielanwendung eShopOnContainers wird xUnit verwendet.
 
@@ -37,19 +37,26 @@ Wenn Sie einen Komponententest für einen Web-API-Controller schreiben, instanzi
 
 ```csharp
 [Fact]
-public void Add_new_Order_raises_new_event()
+public async Task Get_order_detail_success()
 {
-    // Arrange
-    var street = " FakeStreet ";
-    var city = "FakeCity";
-    // Other variables omitted for brevity ...
-    // Act
-    var fakeOrder = new Order(new Address(street, city, state, country, zipcode),
-        cardTypeId, cardNumber,
-        cardSecurityNumber, cardHolderName,
-        cardExpiration);
-    // Assert
-    Assert.Equal(fakeOrder.DomainEvents.Count, expectedResult);
+    //Arrange
+    var fakeOrderId = "12";
+    var fakeOrder = GetFakeOrder();
+ 
+    //...
+
+    //Act
+    var orderController = new OrderController(
+        _orderServiceMock.Object, 
+        _basketServiceMock.Object, 
+        _identityParserMock.Object);
+
+    orderController.ControllerContext.HttpContext = _contextMock.Object;
+    var actionResult = await orderController.Detail(fakeOrderId);
+ 
+    //Assert
+    var viewResult = Assert.IsType<ViewResult>(actionResult);
+    Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
 }
 ```
 
@@ -63,7 +70,7 @@ Im Gegensatz zu Komponententests umfassen Integrationstests häufig Infrastruktu
 
 Da Integrationstests größere Codesegmente ausführen als Komponententests, und da Integrationstests von Infrastrukturelementen abhängig sind, sind sie tendenziell erheblich langsamer als Komponententests. Daher ist es ratsam, die Anzahl der Integrationstests, die Sie schreiben und ausführen, zu beschränken.
 
-ASP.NET Core enthält einen integrierte Testwebhost, der zum Verarbeiten von HTTP-Anforderungen ohne Netzwerkmehraufwand verwendet werden kann. Dies bedeutet, dass Sie diese Tests schneller ausführen können als bei der Verwendung eines echten Webhosts. Der Testwebhost ist als Microsoft.AspNetCore.TestHost in einer NuGet-Komponenten verfügbar. Er kann zu den Integrationstestprojekten hinzugefügt und zum Hosten von ASP.NET Core-Anwendungen verwendet werden.
+ASP.NET Core enthält einen integrierte Testwebhost, der zum Verarbeiten von HTTP-Anforderungen ohne Netzwerkmehraufwand verwendet werden kann. Dies bedeutet, dass Sie diese Tests schneller ausführen können als bei der Verwendung eines echten Webhosts. Der Testwebhost (TestServer) ist als Microsoft.AspNetCore.TestHost in einer NuGet-Komponente verfügbar. Er kann zu den Integrationstestprojekten hinzugefügt und zum Hosten von ASP.NET Core-Anwendungen verwendet werden.
 
 Wie Sie im folgenden Code sehen können, instanziieren Sie die Controller durch den Testhost, wenn Sie Integrationstest für ASP.NET Core-Controller erstellen. Dies ist vergleichbar mit einer HTTP-Anforderung, aber es wird schneller ausgeführt.
 
@@ -96,33 +103,111 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Steve Smith. Testing controllers (Testen von Controllern)** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Testen von Controllern** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Integration testing (Integrationstests)** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
+-   **Steve Smith. Integrationstests** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **Unit testing in .NET Core using dotnet test (Komponententests in .NET Core mit dotnet-test)**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
+-   **Komponententests in .NET Core mit dotnet-test** <br/>
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
--   **xUnit.net**. Offizielle Website.
+-   **xUnit.net**. Offizielle Website. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Unit Test Basics (Grundlagen zu Komponententests)**
+-   **Grundlagen zum Komponententest** <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. GitHub repo (Scrutor. GitHub-Reporitory).
+-   **Moq**. GitHub repo (Scrutor. GitHub-Reporitory). <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**. Offizielle Website.
+-   **NUnit**. Offizielle Website. <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementieren von Diensttests in einer Anwendung mit mehreren Containern 
 
 Wie bereits erwähnt: Wenn Sie Multicontaineranwendungen testen, müssen alle Microservices innerhalb des Docker-Hosts oder Containerclusters ausgeführt werden. End-to-End-Diensttests, die mehrere Vorgänge im Zusammenhang mit mehreren Microservices enthalten, erfordern die Bereitstellung und den Start der gesamten Anwendung im Docker-Host durch Ausführen des Befehls „docker-compose up“ (oder eines vergleichbaren Mechanismus bei Verwendung eines Orchestrators). Nachdem die gesamte Anwendung und alle zugehörigen Dienste ausgeführt werden, können Sie die End-to-End-Integration und Funktionstests ausführen.
 
-Es gibt einige Ansätze, die Sie verwenden können. In der Datei „Docker-compose.yml“, die Sie verwenden, um die Anwendung (oder ähnliche wie Docker-compose.ci.build.yml) bereitzustellen, können Sie auf Projektmappenebene den Eingangspunkt erweitern, um [dotnet test](../../../core/tools/dotnet-test.md) zu verwenden. Sie können auch eine andere Compose-Datei verwenden, die Ihre Tests im Image Ihrer Zielgruppe ausführen würde. Durch Verwendung einer anderen Compose-Datei für Integrationstests, die Ihre Microservices und Datenbanken für Container enthält, können Sie sicherstellen, dass die verwandten Daten vor dem Ausführen der Tests immer auf den ursprünglichen Zustand zurückgesetzt werden.
+Es gibt einige Ansätze, die Sie verwenden können. In der Datei „docker-compose.yml“, mit der Sie die Anwendung bereitstellen, können Sie auf Projektmappenebene den Eingangspunkt erweitern, um [dotnet test](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test) zu verwenden. Sie können auch eine andere Compose-Datei verwenden, die Ihre Tests im Image Ihrer Zielgruppe ausführen würde. Durch Verwendung einer anderen Compose-Datei für Integrationstests, die Ihre Microservices und Datenbanken für Container enthält, können Sie sicherstellen, dass die verwandten Daten vor dem Ausführen der Tests immer auf den ursprünglichen Zustand zurückgesetzt werden.
 
 Sobald die Compose-Anwendung ausgeführt wird, können Sie Haltepunkte und Ausnahmen nutzen, wenn Sie Visual Studio ausführen. Alternativ können Sie die Integrationstests automatisch in der CI-Pipeline in Azure DevOps Services oder in jedem anderen CI/CD-System ausführen, das Docker-Container unterstützt.
 
+## <a name="testing-in-eshoponcontainers"></a>Testen in eShopOnContainers
+
+Die Tests der Referenzanwendung (eShopOnContainers) wurden kürzlich neu strukturiert. Nun gibt es vier Kategorien:
+
+1.  **Komponententests** sind simple alte reguläre Komponententests, die in **{MicroserviceName}.UnitTests**-Projekten enthalten sind.
+
+2.  **Funktions-/Integrationstests von Microservices** umfassen Testsituationen, die die Infrastruktur für jeden Microservice betreffen, aber voneinander isoliert und in **{MicroserviceName}.FunctionalTests**-Projekten enthalten sind.
+
+3.  **Funktions-/Integrationstests von Anwendungen** konzentrieren sich auf die Integration von Microservices und umfassen Testsituationen, die sich auf mehrere Microservices beziehen. Diese Tests befinden sich im **Anwendung.FunctionalTests**-Projekt.
+
+4.  **Auslastungstests** konzentrieren sich auf die Antwortzeiten für jeden Microservice. Diese Tests befinden sich im Projekt **LoadTest** und setzen die Edition Visual Studio Enterprise 2017 voraus.
+
+Komponenten- und Integrationstest pro Microservice sind in jedem Microservice in einem Testordner enthalten. Anwendungs- und Auslastungstests befinden sich im Testordner des Projektmappenordners (s. Abbildung 6-25).
+
+![Struktur von Tests in eShopOnContainers: Jeder Dienst verfügt über einen Ordner „Test“, der Komponenten- und Funktionstests enthält. Im Projektmappenordner „Test“ befinden sich alle Funktions- und Auslastungstests der Anwendung.](./media/image42.png)
+
+**Abbildung 6-25**. Struktur des Testordners in eShopOnContainers
+
+Funktions- und Integrationstests von Microservices und Anwendungen werden über Visual Studio mit dem regulären Test Runner ausgeführt. Zuerst müssen Sie allerdings die erforderlichen Infrastrukturdienste mithilfe einer Gruppe von „docker-compose“-Dateien starten, die im Testordner der Projektmappe enthalten sind:
+
+**docker-compose-test.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    image: redis:alpine
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+  nosql.data:
+    image: mongo
+```
+
+**docker-compose-test.override.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672" 
+  sql.data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+  nosql.data:
+    ports:
+      - "27017:27017"
+```
+
+Zum Testen von Funktionen und Integrationen müssen Sie also zunächst diesen Befehl aus dem Testordner der Projektmappe ausführen:
+
+``` console
+docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
+```
+
+Wie Sie sehen können, starten diese „docker-compose“-Dateien nur die Redis-, RabitMQ-, SQL Server- und MongoDB-Microservices.
+
+### <a name="additionl-resources"></a>Weitere Ressourcen
+
+-   **Infodatei für Tests** im GitHub-Repository „eShopOnContainers“ <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+
+-   **Infodatei für Auslastungstests** im GitHub-Repository „eShopOnContainers“ <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+
 >[!div class="step-by-step"]
-[Zurück](subscribe-events.md)
-[Weiter](../microservice-ddd-cqrs-patterns/index.md)
+>[Zurück](subscribe-events.md)
+>[Weiter](background-tasks-with-ihostedservice.md)

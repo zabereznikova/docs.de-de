@@ -1,5 +1,6 @@
 ---
-title: Ändern der Groß-/Kleinschreibung in .NET Framework
+title: Ändern der Groß-/Kleinschreibung in .NET
+description: Erfahren Sie, wie Sie die Groß-/Kleinschreibung in Zeichenfolgen in .NET ändern können.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 480e9a3f7d32bb891b54c7d2529affb45368545b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003671"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128647"
 ---
 # <a name="changing-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
 Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie nicht sicher sein, ob die Daten in Groß- oder Kleinschreibung eingegeben werden. Häufig möchten Sie, dass Zeichenfolgen in einheitlicher Schreibung vorliegen, insbesondere, wenn sie in der Benutzeroberfläche angezeigt werden. In der folgenden Tabelle sind drei Methoden zur Änderung der Groß-/Kleinschreibung beschrieben. Die ersten beiden Methoden stellen eine Überladung bereit, die eine Kultur akzeptiert.  

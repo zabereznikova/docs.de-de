@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Offi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075568"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131377"
 ---
 # <a name="official-net-docker-images"></a>Offizielle .NET-Docker-Images
 
@@ -41,7 +41,7 @@ In der Produktion ist wichtig, wie schnell Sie bereitstellen und die Container b
 
 In diesem optimierten Image werden nur die Binärdateien und andere Inhalte platziert, die zum Ausführen der Anwendung erforderlich sind. Der von „dotnet publish“ erstellte Inhalt enthält z.B. nur die kompilierten .NET-Binärdateien, Images sowie JS- und CSS-Dateien. Im Lauf der Zeit werden Sie Images bemerken, die vorab JIT-kompiliert wurden (die Kompilierung von IL zu nativ, die zur Laufzeit erfolgt).
 
-Obwohl mehrere Versionen der .NET Core- und ASP.NET Core-Images verfügbar sind, haben sie alle mindestens eine Ebene gemeinsam, einschließlich der Grundebene. Aus diesem Grund ist wenig Speicherplatz erforderlich, um ein Image zu speichern, denn es besteht nur aus dem Delta zwischen dem benutzerdefinierten Image und dem Basis-Image. So können Sie das Image schnell aus der Registrierung abrufen.
+Obwohl mehrere Versionen der .NET Core- und ASP.NET Core-Images verfügbar sind, haben sie alle mindestens eine Ebene gemeinsam, einschließlich der Grundebene. Aus diesem Grund ist wenig Speicherplatz erforderlich, um ein Image zu speichern, denn es besteht nur aus dem Delta zwischen dem benutzerdefinierten Image und dem Basisimage. So können Sie das Image schnell aus der Registrierung abrufen.
 
 Wenn Sie sich die .NET-Image-Repositorys im Docker-Hub ansehen, werden Sie mehrere Imageversionen finden, die klassifiziert oder mit Tags versehen sind. Diese Tags helfen dabei, je nach benötigter Version zu entscheiden, welches Image verwendet werden sollte, so wie in der folgenden Tabelle:
 
@@ -50,7 +50,6 @@ Wenn Sie sich die .NET-Image-Repositorys im Docker-Hub ansehen, werden Sie mehre
 | microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core mit Optimierungen nur für die Runtime und ASP.NET Core unter Linux und Windows (Mehrfacharchitektur) |
 | microsoft/dotnet:**2.1-sdk**                | .NET Core mit enthaltenen SDKs unter Linux und Windows (Mehrfacharchitektur)                                  |
 
-
 >[!div class="step-by-step"]
-[Zurück](net-container-os-targets.md)
-[Weiter](../architect-microservice-container-applications/index.md)
+>[Zurück](net-container-os-targets.md)
+>[Weiter](../architect-microservice-container-applications/index.md)

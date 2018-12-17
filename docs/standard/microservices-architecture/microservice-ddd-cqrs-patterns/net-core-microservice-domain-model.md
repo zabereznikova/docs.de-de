@@ -1,45 +1,45 @@
 ---
 title: Implementieren eines Microservicedomänenmodells mit .NET Core
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren eines Microservicedomänenmodells mit. NET Core
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierungsdetails eines DDD-orientierten Domänenmodells
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: bb11d87cacf5bb6cbc980c879b0c42fae76f6246
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.date: 10/08/2018
+ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46577531"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127133"
 ---
-# <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
 
 Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die grundlegend für das Erstellen eines Domänenmodells sind. Jetzt soll dargestellt werden, wie Sie das Domänenmodell mithilfe von .NET Core (einfacher C\#-Code) und EF Core implementieren. Beachten Sie dass das Domänenmodell in diesem Beispiel nur aus Ihrem Code besteht. Es enthält nur die EF Core-Modellanforderungen, aber keine echten Abhängigkeiten von EF. Es sollten keine festen Abhängigkeiten oder Verweise auf EF Core auf eine objektrelationale Abbildung (Object-relational Mapping, ORM) in Ihrem Domänenmodell enthalten sein.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Domänenmodellstruktur in einer benutzerdefinierten .NET Standard-Bibliothek
 
-Die Ordnerorganisation, die für die Referenzanwendung „eShopOnContainers“ verwendet wird, stellt das Modell für das domänengesteuerte Design für die Anwendung dar. Möglicherweise stellen Sie fest, dass die Ordnerorganisation Ihren Überlegungen zum Anwendungsentwurf angepasst werden muss. Wie in Abbildung 9-10 dargestellt, gibt es im Domänenmodell für Bestellungen zwei Aggregate: das Aggregat „Order“ und das Aggregat „Buyer“. Jedes Aggregat besteht aus einer Gruppe von Domänenentitäten und Wertobjekten. Sie können aber auch über ein Aggregat verfügen, das aus genau einer Domänenentität besteht (dem Aggregatstamm oder der Stammentität).
+Die Ordnerorganisation, die für die Referenzanwendung „eShopOnContainers“ verwendet wird, stellt das Modell für das domänengesteuerte Design für die Anwendung dar. Möglicherweise stellen Sie fest, dass die Ordnerorganisation Ihren Überlegungen zum Anwendungsentwurf angepasst werden muss. Wie in Abbildung 7-10 dargestellt, gibt es im Domänenmodell für Bestellungen zwei Aggregate: das Aggregat „Order“ und das Aggregat „Buyer“. Jedes Aggregat besteht aus einer Gruppe von Domänenentitäten und Wertobjekten. Sie können aber auch über ein Aggregat verfügen, das aus genau einer Domänenentität besteht (dem Aggregatstamm oder der Stammentität).
 
-![](./media/image11.png)
+![Ansicht im Projektmappen-Explorer: Projekt Ordering.Domain mit dem Ordner „AggregatesModel“, der die Ordner „BuyerAggregate“ und „OrderAggregate“ enthält, die jeweils ihre Entitätsklassen, Wertobjektdateien und so weiter enthalten ](./media/image11.png)
 
-**Abbildung 9-10.** Domänenmodellstruktur für den Microservice für Bestellungen in eShopOnContainers
+**Abbildung 7-10**. Domänenmodellstruktur für den Microservice für Bestellungen in eShopOnContainers
 
-Außerdem umfasst die Ebene des Domänenmodells Repositoryverträge (Schnittstellen), die die Infrastrukturanforderungen Ihres Domänemodells ausmachen. Anders gesagt: Diese Schnittstellen legen fest, welche Repositorys die Infrastrukturebene implementieren muss und auf welche Weise dies geschehen soll. Es ist wichtig, dass die Implementierung der Repositorys außerhalb der Domänemodellebene in der Bibliothek auf Infrastruktureben platziert wird, damit die Domänenmodellebene nicht durch die APIs oder Klassen der Infrastrukturtechnologien wie Entity Framework verunreinigt wird.
+Außerdem umfasst die Ebene des Domänenmodells Repositoryverträge (Schnittstellen), die die Infrastrukturanforderungen Ihres Domänemodells ausmachen. Anders gesagt: Diese Schnittstellen drücken aus, welche Repositorys und Methoden die Infrastrukturebene implementieren muss. Es ist wichtig, dass die Implementierung der Repositorys außerhalb der Domänemodellebene in der Bibliothek auf Infrastruktureben platziert wird, damit die Domänenmodellebene nicht durch die APIs oder Klassen der Infrastrukturtechnologien wie Entity Framework verunreinigt wird.
 
 Außerdem wird ein [SeedWork](https://martinfowler.com/bliki/Seedwork.html)-Ordner angezeigt, der benutzerbasierte Basisklassen enthält, die Sie als Grundlage für Ihre Domänenentitäten und Wertobjekte verwenden können, sodass redundanter Code in den Objektklassen der einzelnen Domänen vermieden wird.
 
-## <a name="structuring-aggregates-in-a-custom-net-standard-library"></a>Strukturieren von Aggregaten in einer benutzerdefinierten .NET Standard-Bibliothek
+## <a name="structure-aggregates-in-a-custom-net-standard-library"></a>Strukturieren von Aggregaten in einer benutzerdefinierten .NET Standard-Bibliothek
 
 Ein Aggregat bezieht sich auf einen Cluster von Domänenobjekten, die entsprechend der Transaktionskonsistenz gruppiert sind. Bei diesen Objekten kann es sich um Instanzen von Entitäten (wobei eine der Entitäten der Aggregatstamm oder die Stammentität ist) einschließlich zusätzlicher Wertobjekte handeln.
 
-Der Begriff „Transaktionskonsistenz“ bedeutet, dass ein Aggregat am Ende einer geschäftlichen Transaktion garantiert konsistent und aktuell ist. Das Aggregat „Order“ aus dem Domänenmodell für den Microservice für Bestellungen ist wie in Abbildung 9-11 dargestellt zusammengesetzt.
+Der Begriff „Transaktionskonsistenz“ bedeutet, dass ein Aggregat am Ende einer geschäftlichen Transaktion garantiert konsistent und aktuell ist. Das Aggregat „Order“ aus dem Domänenmodell des Microservices für Bestellungen setzt sich wie in Abbildung 7-11 dargestellt zusammen.
 
-![](./media/image12.png)
+![Detailansicht des Ordners „OrderAggregate“: „Address.cs“ ist ein Wertobjekt, „IOrderRepository“ eine Repositoryschnittstelle, „Order.cs“ ein Aggregatstamm, „OrderItem.cs“ eine untergeordnete Entität und „OrderStatus.cs“ eine Enumerationsklasse.](./media/image12.png)
 
-**Abbildung 9-11.** Das Aggregat „Order“ in einer Visual Studio-Projektmappe
+**Abbildung 7-11**. Das Aggregat „Order“ in einer Visual Studio-Projektmappe
 
 Wenn Sie eine der Dateien in einem Aggregatordner öffnen, sehen Sie, dass diese entweder als benutzerdefinierte Basisklasse oder als benutzerdefinierte Schnittstelle markiert ist. Dies gilt z.B. für Entitäten oder Wertobjekte, die in den [SeedWork](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Services/Ordering/Ordering.Domain/SeedWork)-Ordner implementiert wurden.
 
-## <a name="implementing-domain-entities-as-poco-classes"></a>Implementieren von Domänenentitäten als POCO-Klassen
+## <a name="implement-domain-entities-as-poco-classes"></a>Implementieren von Domänenentitäten als POCO-Klassen
 
 Domänenmodelle werden in .NET implementiert, indem POCO-Klassen erstellt werden, die Domänenentitäten implementieren. Im folgenden Beispiel ist die Klasse „Order“ als Entität und als Aggregatstamm definiert. Da die Klasse „Order“ von der Basisklasse „Entity“ abgeleitet wird, kann diese häufig verwendeten Code wiederverwenden, der in Zusammenhang mit den Entitäten steht. Denken Sie daran, dass diese Basisklassen und Schnittstellen von Ihnen im Domänenmodellprojekt definiert werden. Es handelt sich also um Ihren Code und nicht um Infrastrukturcode aus einer ORM wie EF.
 
@@ -101,13 +101,13 @@ Markierugsschnittstellen werden gelegentlich zwar als Antimuster bezeichnet, jed
 
 Wenn ein Aggregatstamm vorhanden ist, bedeutet dies, dass der meiste Code, der im Zusammenhang mit der Konsistenz und den Geschäftsregeln der Entitäten des Aggregats steht, als Methoden in der Aggregatstammklasse „Order“ implementiert werden soll (z.B. AddOrderItem beim Hinzufügen eines OrderItem-Objekts zum Aggregat). Sie sollten OrderItems-Objekte nicht unabhängig oder direkt erstellen oder aktualisieren. Stattdessen sollte die AggregateRoot-Klasse die Kontrolle und Konsistenz jedes Aktualisierungsvorgangs gegenüber der untergeordneten Entitäten behalten.
 
-## <a name="encapsulating-data-in-the-domain-entities"></a>Kapseln von Daten in Domänenentitäten
+## <a name="encapsulate-data-in-the-domain-entities"></a>Kapseln von Daten in Domänenentitäten
 
 Ein häufiges Problem im Zusammenhang mit Entitätsmodellen ist, dass sie Navigationseigenschaften für Auflistungen als öffentlich zugängliche Listentypen zur Verfügung stellen. Dadurch kann jedes Mitglied des Entwicklerteams die Inhalte dieser Auflistungstypen ändern. Dabei können möglicherweise wichtige Geschäftsregeln umgangen werden, die im Zusammenhang mit der Auflistung stehen, wodurch das Objekt im Status „ungültig“ hinterlassen wird. Zur Lösung dieses Problems können Sie den Zugriff auf verwandte Auslistungen auf „schreibgeschützt“ beschränken und explizit Methoden zur Verfügung stellen, über die Clients Änderungen vornehmen können.
 
-Beachten Sie, dass viele Attribute im vorherigen Code schreibgeschützt oder privat sind und nur von Klassenmethoden aktualisiert werden können. Dadurch berücksichtigt jedes Update Invarianten der Geschäftsdomäne und die Logik, die in der Klassenmethode angegeben ist.
+Beachten Sie, dass viele Attribute im vorherigen Code schreibgeschützt oder privat sind und nur von Klassenmethoden aktualisiert werden können. So berücksichtigt jedes Update Invarianten der Geschäftsdomäne und die Logik, die in der Klassenmethode angegeben ist.
 
-Wenn Sie sich z.B. an die Muster des domänengesteuerten Designs halten, sollten Sie den folgenden Vorgang *nicht* über eine Befehlshandlermethode oder Anwendungsschichtklasse ausführen:
+Wenn Sie sich z.B. an die Muster des domänengesteuerten Designs halten, **sollten Sie den folgenden Vorgang *nicht*** über eine Befehlshandlermethode oder Anwendungsschichtklasse ausführen (genau genommen, sollten Sie dazu gar nicht berechtigt sein):
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -152,33 +152,31 @@ Zudem wird der neue OrderItem(params)-Vorgang ebenfalls über die AddOrderItem-M
 
 Wenn Sie Entity Framework Core 1.1 oder höher verwenden, kann besser eine Entität des domänengesteuerten Designs festgelegt werden, da diese neben Eigenschaften auch die [Zuordnung zu Feldern](https://docs.microsoft.com/ef/core/modeling/backing-field) zulässt. Dies ist nützlich, wenn Auflistungen von untergeordneten Entitäten oder Wertobjekten geschützt werden sollen. Mit dieser Erweiterung können Sie einfache private Felder anstelle von Eigenschaften nutzen, und Sie können jedes Update für die Feldauflistung in öffentlichen Methoden ausführen und schreibgeschützten Zugriff über die AsReadOnly-Methode bereitstellen.
 
-Wenn Sie das domänengesteuerte Design verwenden, sollten Sie nur über die Methoden in der Entität (oder den Konstruktor) ein Update für diese ausführen, sodass Eigenschaften nur mit einem get-Accessor definiert werden. Die Eigenschaften werden über private Felder gesichert. Auf private Members kann nur innerhalb einer Klasse zugegriffen werden. Es gibt jedoch eine Ausnahme: EF Core muss diese Felder ebenfalls festlegen.
+Wenn Sie das domänengesteuerte Design verwenden, sollten Sie nur über die Methoden in der Entität (oder den Konstruktor) ein Update für diese ausführen, sodass Eigenschaften nur mit einem get-Accessor definiert werden. Die Eigenschaften werden über private Felder gesichert. Auf private Members kann nur innerhalb einer Klasse zugegriffen werden. Es gibt jedoch eine Ausnahme: EF Core muss auch diese Felder festlegen, damit das Objekt mit den richtigen Werten zurückgegeben werden kann.
 
-
-### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Zuordnen von Eigenschaften zu Feldern in der Datenbanktabelle über get-Accessors
+### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Zuordnen von Eigenschaften zu Feldern in der Datenbanktabelle mit get-Accessors
 
 Das Zuordnen von Eigenschaften zu Datenbanktabellen ist nicht allein Aufgabe der Domäne, sondern Teil der Infrastruktur und der Persistenzebene. Das wird an dieser Stelle erwähnt, damit Sie die neuen Funktionen von EF Core 1.1 oder höher kennen lernen, die mit der Vorgehensweise beim Modellieren von Entitäten im Zusammenhang stehen. Ausführliche Informationen zu diesem Thema finden Sie in dem Abschnitt zur Infrastruktur und Persistenz.
 
-Wenn Sie EF Core 1.0 verwenden, müssen Sie im Zusammenhang mit DbContext die Eigenschaften zuordnen, die nur über Getter den Feldern in der Datenbanktabelle zugeordnet sind. Diesen Vorgang führen Sie mit der HasField-Methode der PropertyBuilder-Klasse aus.
+Wenn Sie EF Core 1.0 oder höher verwenden, müssen Sie im Zusammenhang mit DbContext die Eigenschaften zuordnen, die nur über Getter den Feldern in der Datenbanktabelle zugeordnet sind. Diesen Vorgang führen Sie mit der HasField-Methode der PropertyBuilder-Klasse aus.
 
-### <a name="mapping-fields-without-properties"></a>Zuordnen von Feldern ohne Eigenschaften
+### <a name="map-fields-without-properties"></a>Zuordnen von Feldern ohne Eigenschaften
 
 Mit dem Feature in EF Core 1.1 oder höher, über das Sie Feldern Spalten zuordnen, müssen Sie nicht unbedingt Eigenschaften verwenden. Stattdessen reicht es aus, wenn Sie den Feldern nur Spalten aus einer Tabelle zuordnen. Dies ist ein häufiger auftretender Anwendungsfall, da es sich dabei um private Felder für einen internen Zustand handelt, auf den außerhalb der Entität nicht zugegriffen werden muss.
 
-Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere private Felder wie das `_paymentMethodId`-Feld, denen keine Eigenschaften für den Setter oder Getter zugeordnet sind. Dieses Feld könnte außerdem innerhalb der Geschäftslogik der Bestellung berechnet und über die Methoden der Bestellung verwendet werden. Es muss allerdings in der Datenbank beibehalten werden. In EF Core gibt es (ab Version 1.1) die Möglichkeit, ein Feld zuzuordnen, wenn keine passende Eigenschaft der Spalte in der Datenbank zugeordnet wird. Dies wird ebenfalls in diesem Handbuch im Abschnitt [Infrastrukturebene](#the-infrastructure-layer) erläutert.
+Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere private Felder wie das `_paymentMethodId`-Feld, denen keine Eigenschaften für den Setter oder Getter zugeordnet sind. Dieses Feld könnte außerdem innerhalb der Geschäftslogik der Bestellung berechnet und über die Methoden der Bestellung verwendet werden. Es muss allerdings in der Datenbank beibehalten werden. In EF Core gibt es (ab Version 1.1) die Möglichkeit, ein Feld zuzuordnen, wenn keine passende Eigenschaft der Spalte in der Datenbank zugeordnet wird. Dies wird ebenfalls in diesem Handbuch im Abschnitt [Infrastrukturebene](ddd-oriented-microservice.md#the-infrastructure-layer) erläutert.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework (Modellieren von Aggregaten mit dem domänengesteuerten Design und Entity Framework).** Hinweis: Dieser Artikel gilt *nicht* für Entity Framework Core.
-    [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
+- **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework (Modellieren von Aggregaten mit dem domänengesteuerten Design und Entity Framework).** Hinweis: Dieser Artikel gilt *nicht* für Entity Framework Core. \
+  [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman. Coding for Domain-Driven Design: Tips for Data-Focused Devs (Codieren für Domain Driven Design: Tipps für Entwickler mit einem Fokus auf Daten)**
-    [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+- **Julie Lerman. Codierung für Domain-Driven Design: Tipps für Entwickler mit Datenschwerpunkt** \
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
-
+- **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)** \
+  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 >[!div class="step-by-step"]
-[Zurück](microservice-domain-model.md)
-[Weiter](seedwork-domain-model-base-classes-interfaces.md)
+>[Zurück](microservice-domain-model.md)
+>[Weiter](seedwork-domain-model-base-classes-interfaces.md)

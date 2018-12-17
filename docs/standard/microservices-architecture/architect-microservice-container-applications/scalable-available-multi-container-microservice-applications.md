@@ -1,23 +1,23 @@
 ---
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
+description: Entdecken Sie die Optionen zum Orchestrieren von Microservices und Anwendungen mit mehreren Containern, um hohe Skalierbarkeit und Verfügbarkeit zu erzielen, sowie die Möglichkeiten von Azure Dev Spaces für die Entwicklung des Lebenszyklus von Kubernetes-Anwendungen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.date: 09/20/2018
+ms.openlocfilehash: c3a40d5a9229ec754f5a5c2e2637af964f25ba08
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982775"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152719"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
-Falls Ihre Anwendung auf Microservices beruht oder über mehrere Container verteilt ist, ist die Nutzung von Orchestratoren für Anwendungen auf Produktionsniveau von entscheidender Bedeutung. Wie bereits in einem vorherigen Artikel erwähnt, ist jeder Microservice Besitzer seines Modells und seiner Daten, damit er von der Entwicklung und Bereitstellung unabhängig ist. Selbst wenn Sie aber eine herkömmliche Anwendung besitzen, die aus mehreren Diensten besteht (z.B. im Fall einer SOA-Anwendung), sind für eine einzelne Geschäftsanwendung mehrere Container oder Dienste vorhanden, die als verteiltes System bereitgestellt werden müssen. Derartige Systeme lassen sich nur schwer horizontal hochskalieren und verwalten. Wenn Sie also eine skalierbare Anwendung mit mehreren Containern auf Produktionsniveau bereitstellen möchten, ist die Nutzung eines Orchestrators unumgänglich.
+Falls Ihre Anwendung auf Microservices beruht oder über mehrere Container verteilt ist, ist die Nutzung von Orchestratoren für Anwendungen auf Produktionsniveau von entscheidender Bedeutung. Wie bereits in einem vorherigen Artikel erwähnt, ist jeder Microservice Besitzer seines Modells und seiner Daten, damit er von der Entwicklung und Bereitstellung unabhängig ist. Auch wenn Sie eine herkömmliche Anwendung aus mehreren Diensten besitzen (z.B. eine SOA-Anwendung), besteht eine einzelne Geschäftsanwendung aus mehreren Containern oder Diensten, die als verteiltes System bereitgestellt werden müssen. Derartige Systeme lassen sich nur schwer horizontal hochskalieren und verwalten. Wenn Sie also eine skalierbare Anwendung mit mehreren Containern auf Produktionsniveau bereitstellen möchten, ist die Nutzung eines Orchestrators unumgänglich.
 
 Abbildung 4-23 veranschaulicht die Bereitstellung einer aus mehreren Microservices (Containern) bestehenden Anwendung in einem Cluster.
 
-![](./media/image23.PNG)
+![Zusammengesetzte Docker-Anwendungen in einem Cluster: Sie verwenden einen Container für jede Dienstinstanz. Docker-Container sind Bereitstellungseinheiten, und ein Container ist eine Instanz eines Dockers. Ein Host verarbeitet viele Container.](./media/image23.png)
 
 **Abbildung 4-23.** Ein Cluster mit Containern
 
@@ -29,111 +29,131 @@ Um anstelle von einzelnen Containern oder einfach zusammengesetzten Anwendungen 
 
 Wenn Sie große, auf Microservices basierende Unternehmensanwendungen erstellen möchten, sollten Sie sich hinsichtlich der Architektur und Entwicklung mit den folgenden Plattformen und Produkten vertraut machen, die für komplexere Szenarios geeignet sind:
 
-**Cluster und Orchestratoren.** Wenn es erforderlich ist, Anwendungen für mehrere Docker-Hosts oder große, auf Microservices basierende Anwendungen horizontal hochzuskalieren, müssen sich sämtliche Hosts in einem einzelnen Cluster verwalten lassen, was durch die Abstraktion der Komplexität der zugrunde liegenden Plattform erreicht wird. Genau das wird durch Containercluster und Orchestratoren ermöglicht. Beispiele für Orchestratoren sind Azure Service Fabric, Kubernetes, Docker Swarm und Mesosphere DC/OS. Die drei letztgenannten Open Source-Orchestratoren sind in Azure über Azure Container Service verfügbar.
+**Cluster und Orchestratoren**. Wenn es erforderlich ist, Anwendungen für mehrere Docker-Hosts oder große, auf Microservices basierende Anwendungen horizontal hochzuskalieren, müssen sich sämtliche Hosts als einzelner Cluster verwalten lassen, was durch die Abstraktion der Komplexität der zugrunde liegenden Plattform erreicht wird. Dafür sorgen die Containercluster und Orchestratoren. Azure Service Fabric und Kubernetes sind Beispiele für Orchestratoren. Kubernetes ist in Azure über den Azure Kubernetes Service verfügbar.
 
-**Planer.** Durch *Planung* können Administratoren Container so in einem Cluster starten, dass sie auch eine Benutzeroberfläche bereitstellen. Ein Clusterplaner ist für mehrere Aufgaben verantwortlich. Neben der effizienten Verwaltung von Ressourcen müssen auch die vom Benutzer vorgegebenen Einschränkungen festgelegt und der Lastenausgleich wirksam für Container für unterschiedliche Knoten oder Hosts vorgenommen werden. Zusätzlich muss der Cluster auch bei Fehlern stabil sein und gleichzeitig Hochverfügbarkeit gewährleisten.
+**Planer**. Durch *Planung* können Administratoren Container so in einem Cluster starten, dass sie auch eine Benutzeroberfläche bereitstellen. Ein Clusterplaner ist für mehrere Aufgaben zuständig: Neben der effizienten Verwaltung von Ressourcen müssen auch die vom Benutzer vorgegebenen Einschränkungen festgelegt und der Lastenausgleich wirksam für Container für unterschiedliche Knoten oder Hosts vorgenommen werden. Zusätzlich muss der Cluster auch bei Fehlern stabil sein und gleichzeitig Hochverfügbarkeit gewährleisten.
 
 Das Clusterkonzept ist eng mit dem Konzept eines Planers verbunden. Produkte von unterschiedlichen Anbietern stellen daher oft beide Funktionen zur Verfügung. Die folgende Liste enthält die wichtigsten Plattformen und Softwareprodukte für Cluster und Planer. Diese Orchestratoren werden häufig in öffentlichen Clouds wie Azure zur Verfügung gestellt.
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Softwareplattformen für Containerclustering, Orchestrierung und Planung
 
-Kubernetes
+### <a name="kubernetes"></a>Kubernetes
 
 ![Kubernetes-Logo](./media/image24.png)
 
-> Kubernetes ist ein Open Source-Produkt, das unterschiedliche Funktionalitäten bereitstellt. Diese umfassen u.a. die Bereitstellung einer Clusterinfrastruktur, die Containerplanung und die Orchestrierung. Mit dieser Plattform können Sie die Bereitstellung, die Skalierung und die Vorgänge von Anwendungscontainern für Hostcluster automatisieren.
+> [*Kubernetes*](https://kubernetes.io/) ist ein Open Source-Produkt, das unterschiedliche Funktionen bereitstellt, von der Bereitstellung einer Clusterinfrastruktur über die Containerplanung bis hin zur Orchestrierung. Mit dieser Plattform können Sie die Bereitstellung, die Skalierung und die Vorgänge von Anwendungscontainern für Hostcluster automatisieren.
 >
-> Kubernetes stellt eine auf Container ausgerichtete Infrastruktur bereit, die Anwendungscontainer so in logischen Einheiten gruppiert, dass diese leicht verwaltet und ermittelt werden können.
+> *Kubernetes* stellt eine auf Container ausgerichtete Infrastruktur bereit, die Anwendungscontainer so in logischen Einheiten gruppiert, dass diese leicht verwaltet und ermittelt werden können.
 >
-> Kubernetes ist unter Linux deutlich ausgereifter als unter Windows.
+> *Kubernetes* ist unter Linux ausgereifter als unter Windows.
 
-Docker Swarm
+### <a name="azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS)
 
-![Docker Swarm-Logo](./media/image25.png)
+![Azure Kubernetes Service-Logo](./media/image41.png)
 
-> Docker Swarm ermöglicht das Clustering und die Planung von Docker-Containern. Dadurch lässt sich ein Pool von Docker-Hosts in einem einzelnen, virtuellen Docker-Host zusammenfassen. Clients können API-Anforderungen in der gleichen Weise an Swarm stellen, wie dies auch bei Hosts der Fall ist. Hierdurch können Anwendungen leicht auf mehrere Hosts skaliert werden.
->
-> Docker Swarm ist ein Produkt des Unternehmens Docker.
->
-> Docker v1.12 oder höher kann nativ und im integrierten Swarm-Modus ausgeführt werden.
+> [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) ist ein verwalteter Dienst für die Kubernetes-Containerorchestrierung in Azure, der Verwaltung, Bereitstellung und Vorgänge für Kubernetes-Cluster vereinfacht.
 
-Mesosphere DC/OS
-
-![Mesosphere DC/OS-Logo](./media/image26.png)
-
-> Die auf Apache Mesos basierende Lösung Mesosphere Enterprise DC/OS ist eine produktionsfähige Plattform zur Ausführung von Containern und verteilten Anwendungen.
->
-> DC/OS abstrahiert eine im Cluster verfügbare Ressourcensammlung und stellt diese übergeordneten Komponenten zur Verfügung. Als Planer wird in der Regel Marathon verwendet und in DC/OS integriert.
->
-> DC/OS ist unter Linux deutlich ausgereifter als unter Windows.
-
-Azure Service Fabric
+### <a name="azure-service-fabric"></a>Azure Service Fabric
 
 ![Azure Service Fabric-Logo](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) ist eine Microsoft-Microservicesplattform zum Erstellen von Anwendungen. Es handelt sich um einen  [Orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)  von Diensten, der Computercluster erstellt. Service Fabric kann Dienste als Container oder einfache Prozesse bereitstellen. Innerhalb derselben Anwendung und desselben Clusters können darüber hinaus Dienste in Prozessen mit Diensten in Containern kombiniert werden.
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) ist eine Microsoft-Microservicesplattform zum Erstellen von Anwendungen. Es handelt sich um einen [Dienstorchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction), der Computercluster erstellt. Service Fabric kann Dienste als Container oder einfache Prozesse bereitstellen. Innerhalb derselben Anwendung und desselben Clusters können darüber hinaus Dienste in Prozessen mit Diensten in Containern kombiniert werden.
 >
-> Zusätzlich stellt Service Fabric optional normative  [Service Fabric-Programmiermodelle  ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) wie [zustandsbehaftete Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) und [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) zur Verfügung.
+> *Service Fabric*-Cluster können in Azure, lokal oder in einer beliebigen Cloud bereitgestellt werden. Die Bereitstellung in Azure wird durch einen verwalteten Ansatz vereinfacht.
 >
-> Service Fabric ist nach Jahren der Entwicklung unter Windows auf diesem Betriebssystem deutlich ausgereifter als unter Linux. 
+> Zusätzlich stellt *Service Fabric* optional normative [Service Fabric-Programmiermodelle](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) wie [zustandsbehaftete Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) und [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction) zur Verfügung.
+>
+> *Service Fabric* ist nach vielen Jahren der Entwicklung unter Windows ausgereifter als unter Linux.
+>
 > Seit 2017 werden in Service Fabric sowohl Linux- als auch Windows-Container unterstützt.
+
+### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric Mesh
+
+![Azure Service Fabric Mesh-Logo](./media/image35.png)
+
+> [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) bietet die gleiche Zuverlässigkeit, unternehmenskritische Leistung und Skalierbarkeit wie Service Fabric, ist jedoch eine vollständig verwaltete, serverlose Plattform. Sie müssen weder Cluster noch virtuelle Computer, Speicher oder Netzwerkkonfiguration verwalten. Stattdessen konzentrieren Sie sich einfach auf die Entwicklung Ihrer Anwendung.
+>
+> *Service Fabric Mesh* unterstützt sowie Windows- als auch Linux-Container, sodass Sie Ihre Anwendungen mit jeder Programmiersprache und jedem Framework Ihrer Wahl entwickeln können.
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Verwenden von containerbasierten Orchestratoren in Microsoft Azure
 
-Mehrere Cloudanbieter wie Microsoft Azure, Amazon EC2 Container Service und Google Container Engine unterstützen Docker-Container, Docker-Cluster und Orchestrierung. Microsoft Azure unterstützt Docker-Cluster und Orchestratoren in Azure Container Service (ACS) (s. nächster Abschnitt).
+Mehrere Cloudanbieter wie Microsoft Azure, Amazon EC2 Container Service und Google Container Engine unterstützen Docker-Container, Docker-Cluster und Orchestrierung. Microsoft Azure stellt Unterstützung für Docker-Cluster und -Orchestratoren über Azure Kubernetes Service (AKS) und Azure Service Fabric sowie Azure Service Fabric Mesh bereit.
 
-Eine Alternative ist die Lösung Microsoft Azure Service Fabric (eine Microservicesplattform), die ebenfalls das auf Linux basierende Produkt Docker und Windows-Container unterstützt. Service Fabric kann in Azure oder anderen Cloudumgebungen und auch [lokal](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere) genutzt werden.
+## <a name="using-azure-kubernetes-service"></a>Verwenden von Azure Kubernetes Service
 
-## <a name="using-azure-container-service"></a>Verwenden von ACS
+Ein Kubernetes-Cluster fasst mehrere Docker-Hosts in einem Pool zusammen und macht sie als einen einzelnen virtuellen Docker-Host verfügbar, sodass Sie mehrere Container im Cluster bereitstellen und auf eine beliebige Anzahl von Containerinstanzen horizontal skalieren können. Der Cluster übernimmt komplexe Verwaltungsaufgaben und gewährleistet dabei z.B. Skalierbarkeit und Integrität.
 
-Ein Docker-Cluster fasst mehrere Docker-Hosts zusammen und macht sie als einen einzelnen, virtuellen Docker-Host verfügbar, wodurch sich mehrere Container im Cluster bereitstellen lassen. Der Cluster übernimmt komplexe Verwaltungsaufgaben und gewährleistet dabei z.B. Skalierbarkeit und Integrität. In Abbildung 4-24 wird dargestellt, welcher Zusammenhang zwischen einem Docker-Cluster für zusammengesetzte Anwendungen und ACS besteht.
+AKS vereinfacht die Erstellung, Konfiguration und Verwaltung eines Clusters mit virtuellen Computern in Azure, die zur Ausführung von Containeranwendungen vorkonfiguriert werden. Mit einer optimierten Konfiguration für Open Source-Planungs- und -Orchestrierungstools unterstützt AKS Sie dabei, Ihr eigenes Know-how anzuwenden oder auf das Fachwissen einer wachsenden Community zuzugreifen, damit Sie containerbasierte Anwendungen in Microsoft Azure bereitstellen und verwalten können.
 
-ACS vereinfacht die Erstellung, Konfiguration und Verwaltung eines Clusters mit virtuellen Computern, die zur Ausführung von Containeranwendungen vorkonfiguriert werden. ACS nutzt für Open Source-Planungs- und -Orchestrierungstools eine optimierte Konfiguration und unterstützt Sie dabei, Ihr eigenes Know-how anzuwenden oder auf das Fachwissen einer wachsenden Community zuzugreifen, damit Sie in Microsoft Azure containerbasierte Anwendungen bereitstellen und verwalten können.
+Azure Kubernetes Service optimiert die Azure-spezifische Konfiguration bekannter Open Source-Clusteringtools und -technologien von Docker. Dadurch erhalten Sie eine offene Lösung, die die Portabilität der Container und der Anwendungskonfiguration garantiert. Sie müssen nur die Größe, die Anzahl von Hosts und die Orchestratortools auswählen. Alles Weitere erledigt AKS.
 
-Des Weiteren optimiert ACS speziell für Azure die Konfiguration bekannter Open Source-Tools und -Technologien für das Clustering von Docker-Containern. Dadurch erhalten Sie eine offene Lösung, die die Portabilität der Container und der Anwendungskonfiguration garantiert. Erforderlich ist nur die Angabe der Größe, Anzahl der Hosts und Orchestratortools. Alles Weitere erledigt ACS.
+![Kubernetes-Clusterstruktur: Es gibt einen Masterknoten, der DNS, Planer, Proxy usw. verarbeitet, sowie mehrere Workerknoten zum Hosten der Container.](media/image36.png)
 
-![](./media/image28.png)
+**Abbildung 4-24.** Vereinfachte Struktur und Topologie von Kubernetes-Clustern
 
-**Abbildung 4-24.** Clusteringoptionen in ACS
+In Abbildung 4-24 sehen Sie die Struktur eines Kubernetes-Clusters, in dem ein Masterknoten (virtueller Computer) den größten Teil der Koordinierung des Clusters steuert. Sie können Container auf den verbleibenden Knoten bereitstellen, die aus Sicht der Anwendung als ein einziger Pool verwaltet werden und Ihnen die Skalierung auf Tausende oder sogar Zehntausende von Containern ermöglichen.
 
-ACS nutzt Docker-Images, um sicherzustellen, dass Anwendungscontainer vollständig portabel sind. Der Dienst unterstützt Open Source-Orchestrierungsplattformen wie DC/OS (Apache Mesos), Kubernetes (ursprünglich von Google entwickelt) und Docker Swarm und ermöglicht Ihnen auf diese Weise, Anwendungen auf mehrere Tausend oder Zehntausend Container zu skalieren.
+## <a name="development-environment-for-kubernetes"></a>Entwicklungsumgebung für Kubernetes
 
-Zusätzlich können Sie mit ACS Azure-Features nutzen, die für den Unternehmenseinsatz geeignet sind, während gleichzeitig die Anwendungsportabilität (auch auf Orchestrierungsebene) gewährleistet wird.
+In der Entwicklungsumgebung [kündigte Docker im Juli 2018 an](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/), dass Kubernetes auch auf einem einzelnen Entwicklungscomputer (Windows 10 oder macOS) ausgeführt werden kann, indem Sie einfach [Docker Desktop](https://docs.docker.com/install/) installieren. Sie können die Bereitstellung später in die Cloud (AKS) ausweiten, um weitere Integrationstests auszuführen, wie in Abbildung 4-25 gezeigt.
 
-![](./media/image29.png)
+![Docker kündigte im Juli 2018 mit Docker Desktop Unterstützung für Entwicklungscomputer für Kubernetes-Cluster an.](media/image37.png) 
 
-**Abbildung 4-25.** Orchestratoren in ACS
+**Abbildung 4-25.** Ausführen von Kubernetes auf einem Entwicklungscomputer und in der Cloud
 
-Wie in Abbildung 4-25 dargestellt, ist ACS die von Azure bereitgestellte Infrastruktur, mit der sich DC/OS, Kubernetes oder Docker Swarm bereitstellen lässt. Dabei ist zu beachten, dass ACS keine zusätzlichen Orchestratoren implementiert. ACS ist daher kein Orchestrator im eigentlichen Sinn, sondern nur eine Infrastruktur, die vorhandene Open Source-Orchestratoren für Container nutzt.
+## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Erste Schritte mit Azure Kubernetes Service (AKS) 
 
-Aus Benutzersicht besteht das Ziel von ACS darin, eine Containerhostingumgebung mit gängigen Open Source-Tools und -Technologien bereitzustellen. Hierzu macht der Dienst Standard-API-Endpunkte für den verwendeten Orchestrator verfügbar. Auf diese Weise können Sie alle Softwaretools nutzen, die in der Lage sind, mit den Endpunkten zu kommunizieren. Im Fall eines Docker Swarm-Endpunkts haben Sie beispielsweise die Möglichkeit, die Docker-Befehlszeilenschnittstelle (CLI) zu verwenden. Für DC/OS können Sie die DC/OS-CLI verwenden.
+Um mit der Nutzung von AKS zu beginnen, stellen Sie über das Azure-Portal oder mithilfe der CLI einen AKS-Cluster bereit. Weitere Informationen zum Bereitstellen eines Azure Container Service-Clusters finden Sie unter [Bereitstellen eines Azure Kubernetes Service-Clusters (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-### <a name="getting-started-with-azure-container-service"></a>Erste Schritte mit ACS 
+Für die durch AKS standardmäßig installierte Software fallen keine Gebühren an. Alle Standardoptionen werden mit Open Source-Software implementiert. AKS ist für viele virtuelle Computer in Azure verfügbar. Sie zahlen nur für die von Ihnen ausgewählten Compute-Instanzen und den Verbrauch von Ressourcen der zugrunde liegenden Infrastruktur, wie z.B. Netzwerkfunktionen und Speicher. Für AKS selbst fallen keine zusätzlichen Gebühren an.
 
-Um ACS verwenden zu können, ist es zuerst erforderlich, dass Sie einen ACS-Cluster über das Azure-Portal bereitstellen. Dazu können Sie eine Azure Resource Manager-Vorlage oder die [CLI](https://docs.microsoft.com/cli/azure/install-azure-cli) nutzen. Vorlagen sind für [Docker Swarm](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-swarm), [Kubernetes](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-kubernetes) und [DC/OS](https://github.com/Azure/azure-quickstart-templates/tree/master/101-acs-dcos) verfügbar. Die Schnellstartvorlagen lassen sich so anpassen, dass zusätzliche oder erweiterte Azure-Konfigurationseinstellungen hinzugefügt werden können. Weitere Informationen finden Sie unter [Bereitstellen eines ACS-Clusters](https://docs.microsoft.com/azure/container-service/container-service-deployment) auf der Azure-Website.
+Weitere Implementierungsinformationen zur Bereitstellung in Kubernetes basierend auf kubectl und Original-YAML-Dateien finden Sie im Beitrag unter [Setting eShopOnContainers up in AKS (Azure Kubernetes Service)](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)) (Einrichten von eShopOnContainers in AKS).
 
-Für die durch ACS installierte Standardsoftware fallen keine Gebühren an. Alle Standardoptionen werden mit Open Source-Software implementiert.
+## <a name="deploying-with-helm-charts-into-kubernetes-clusters"></a>Bereitstellen von Helm-Charts in Kubernetes-Clustern
 
-ACS steht derzeit für virtuelle Linux-Computer des Standardtyps für die Größen A, D, DS, G und GS in Azure zur Verfügung. Sie zahlen nur für die von Ihnen ausgewählten Compute-Instanzen und den Verbrauch von Speicher- und Netzwerkressourcen, die im Zusammenhang mit der zugrunde liegenden Infrastruktur stehen. Für ACS selbst fallen keine zusätzlichen Gebühren an.
+Wenn Sie eine Anwendung in einem Kubernetes-Cluster bereitstellen, können Sie das Original-CLI-Tool „kubectl.exe“ mit Bereitstellungsdateien verwenden, die auf dem nativen Format (YAML-Dateien) basieren, wie bereits im vorherigen Abschnitt erwähnt. Für komplexere Kubernetes-Anwendungen, z.B. die Bereitstellung komplexer microservicebasierter Anwendungen, empfiehlt sich die Verwendung von [Helm](https://helm.sh/).
+
+Mit Helm-Charts können Sie auch hochkomplexe Kubernetes-Anwendungen definieren, versionieren, installieren, freigeben oder Upgrades oder Rollbacks durchführen.
+
+Darüber hinaus wird die Verwendung von Helm empfohlen, weil zusätzliche Kubernetes-Umgebungen in Azure wie etwa [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) ebenfalls auf Helm-Charts basieren.
+
+Helm wird von der [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) in Zusammenarbeit mit Microsoft, Google, Bitnami und der Helm-Community verwaltet.
+
+Weitere Informationen zur Implementierung in Helm-Charts und Kubernetes finden Sie im Beitrag unter [Using Helm Charts to deploy eShopOnContainers to AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts) (Verwenden von Helm-Charts zum Bereitstellen von eShopOnContainers in AKS).
+
+## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>Verwenden von Azure Dev Spaces für den Lebenszyklus Ihrer Kubernetes-Anwendungen
+
+[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) stellt eine schnelle, iterative Kubernetes-Entwicklungsoberfläche für Teams bereit. Mit einem minimalen Setup der Entwicklungscomputer können Sie Container direkt in Azure Kubernetes Service (AKS) iterativ ausführen und debuggen. Führen Sie Ihre Entwicklungsaufgaben unter Windows, Mac oder Linux mit bekannten Tools wie Visual Studio, Visual Studio Code oder der Befehlszeile aus.
+
+Wie bereits erwähnt, verwendet Azure Dev Spaces Helm-Charts bei der Bereitstellung der containerbasierten Anwendungen.
+
+Azure Dev Spaces hilft Entwicklungsteams dabei, in Kubernetes produktiver zu arbeiten, da es ihnen ermöglicht, Code schnell direkt in einem globalen Kubernetes-Cluster in Azure zu durchlaufen und zu debuggen, indem sie ganz einfach Visual Studio 2017 oder Visual Studio Code verwenden. Dieser Kubernetes-Cluster in Azure ist ein freigegebener verwalteter Kubernetes-Cluster, sodass Ihr Team nahtlos zusammenarbeiten kann. Sie können Ihren Code isoliert entwickeln und dann im globalen Cluster bereitstellen und End-to-End-Tests mit anderen Komponenten durchführen, ohne Abhängigkeiten replizieren oder imitieren zu müssen.
+
+Wie in Abbildung 4-26 gezeigt, ist das bemerkenswerteste Feature in Azure Dev Spaces die Möglichkeit, „Bereiche“ zu erstellen, die integriert in den Rest der globalen Bereitstellung im Cluster ausgeführt werden.
+
+![Azure Dev Spaces kann Produktionsmicroservices transparent mit Entwicklungscontainerinstanzen kombinieren, um das Testen neuer Versionen zu erleichtern.](media/image38.png)
+
+**Abbildung 4-26.** Verwenden mehrerer Bereiche in Azure Dev Spaces
+
+Sie können einen freigegebenen Entwicklungsbereich in Azure einrichten. Jeder Entwickler kann sich auf seinen Teil der Anwendung konzentrieren und Code vor dem Committen in einem Entwicklungsbereich iterativ entwickeln, der bereits alle anderen Dienste und Cloudressourcen enthält, die ihre Szenarios benötigen. Abhängigkeiten sind immer aktuell, und die Entwickler arbeiten auf eine Weise, die die Produktion spiegelt.
+
+Azure Dev Spaces stellt das Konzept eines Bereichs bereit, das Ihnen ermöglicht, isoliert zu arbeiten, ohne die Arbeit Ihrer Teammitglieder zu beeinträchtigen. Dieses Feature basiert auf URL-Präfixen. Wenn Sie also ein Präfix für einen Entwicklungsbereich in der URL angeben, wird für die Anforderungen jedes Containers eine bestimmte Version des Containers für den Bereich ausgeführt, in dem dieser vorhanden ist. Andernfalls wird die globale/konsolidierte Version ausgeführt.
+
+Auf der [Wiki-Seite für eShopOnContainers in Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS) finden Sie eine praktische Ansicht eines konkreten Beispiels.
+
+Weitere Informationen finden Sie im Artikel zur [Teamentwicklung mit Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Einführung in Docker-Container-Hostinglösungen mit Azure Container Service**
-    [*https://docs.microsoft.com/azure/container-service/container-service-intro*](https://docs.microsoft.com/azure/container-service/container-service-intro)
+- **Erste Schritte mit Azure Kubernetes Service (AKS)** \
+  [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
--   **Docker Swarm overview (Übersicht über Docker Swarm)**
-    [*https://docs.docker.com/swarm/overview/*](https://docs.docker.com/swarm/overview/)
+- **Azure Dev Spaces** \
+  [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
--   **Swarm mode overview (Übersicht über den Swarm-Modus)**
-    [*https://docs.docker.com/engine/swarm/*](https://docs.docker.com/engine/swarm/)
-
--   **Mesosphere DC/OS Overview (Übersicht über Mesosphere DC/OS)**
-    [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
-
--   **Kubernetes.** Offizielle Website.
-    [*https://kubernetes.io/*](https://kubernetes.io/)
-
+- **Kubernetes** (offizielle Website). \
+  [*https://kubernetes.io/*](https://kubernetes.io/)
 
 >[!div class="step-by-step"]
-[Zurück](resilient-high-availability-microservices.md)
-[Weiter](using-azure-service-fabric.md)
+>[Zurück](resilient-high-availability-microservices.md)
+>[Weiter](using-azure-service-fabric.md)

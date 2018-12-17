@@ -1,21 +1,21 @@
 ---
 title: Asynchrone nachrichtenbasierte Kommunikation
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Asynchrone nachrichtenbasierte Kommunikation
+description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 865966a70f18c9023e4c733d82ea90aba9478753
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 09/20/2018
+ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757438"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148898"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
 Asynchrone nachrichtenbasierte und ereignisgesteuerte Kommunikation ist von entscheidender Bedeutung, wenn Änderungen an mehrere Microservices und ihre zugehörigen Domänenmodelle weitergegeben werden. Wie bereits in einem anderen Artikel über Microservices und begrenzte Kontexte erwähnt wurde, können Modelle (Benutzer, Kunde, Produkt, Konto usw.) unterschiedliche Auswirkungen auf verschiedene Microservices oder begrenzte Kontexte haben. Wenn also Änderungen auftreten, muss ihre Umsetzung in den unterschiedlichen Modellen abgestimmt werden. Eine Lösung für dieses Problem besteht in letztlicher Konsistenz und ereignisgesteuerter Kommunikation, die auf asynchronem Messaging beruht.
 
-Bei der Verwendung von Messaging kommunizieren Prozesse durch den asynchronen Nachrichtenaustausch. Ein Client sendet über eine Nachricht einen Befehl oder eine Anforderung an einen Dienst. Wenn der Dienst antworten muss, sendet er eine andere Nachricht zurück an den Client. Da es sich um nachrichtenbasierte Kommunikation handelt, nimmt der Client an, dass die Antwort nicht sofort empfangen wird und dass möglicherweise überhaupt keine Antwort zurückgegeben wird.
+Bei der Verwendung von Messaging kommunizieren Prozesse durch den asynchronen Nachrichtenaustausch. Ein Client sendet über eine Nachricht einen Befehl oder eine Anforderung an einen Dienst. Wenn der Dienst antworten muss, sendet er eine andere Nachricht zurück an den Client. Da es sich um nachrichtenbasierte Kommunikation handelt, nimmt der Client an, dass die Antwort nicht sofort empfangen und möglicherweise überhaupt keine Antwort zurückgegeben wird.
 
 Eine Nachricht setzt sich aus einem Header (Metadaten zur Identifizierung und Sicherheit) und dem Nachrichtentext zusammen. Nachrichten werden in der Regel über asynchrone Protokolle wie AMQP gesendet.
 
@@ -23,23 +23,23 @@ Die bevorzugte Infrastruktur für diese Art der Kommunikation ist in der Microse
 
 Sie sollten außerdem versuchen, für die Kommunikation zwischen internen Diensten nur asynchrones Messaging und für Nachrichten von Clientanwendungen an Front-End-Dienste (API-Gateways und zusätzlich die erste Ebene von Microservices) ausschließlich die synchrone Kommunikation (z.B. über HTTP) zu verwenden.
 
-Unterschieden wird bei asynchronem Messaging zwischen nachrichtenbasierter Kommunikation mit einem Empfänger und nachrichtenbasierte Kommunikation mit mehreren Empfängern. In den folgenden Abschnitten erfahren Sie mehr über diese beiden Ansätze.
+Unterschieden wird bei asynchronem Messaging zwischen nachrichtenbasierter Kommunikation mit einem Empfänger und nachrichtenbasierte Kommunikation mit mehreren Empfängern. In den folgenden Abschnitten erfahren Sie mehr darüber.
 
-## <a name="single-receiver-message-based-communication"></a>Nachrichtenbasierte Kommunikation mit einem Empfänger 
+## <a name="single-receiver-message-based-communication"></a>Nachrichtenbasierte Kommunikation mit einem Empfänger
 
-Bei der asynchronen nachrichtenbasierten Kommunikation mit einem Empfänger wird eine Punkt-zu-Verbindung hergestellt, bei der genau ein Consumer, der den Kanal liest, die Nachricht erhält. Dabei wird die Nachricht nur einmal verarbeitet. Es gibt jedoch Situationen, in denen dies anders ist. In einem Cloudsystem, das automatisch versucht, Fehler zu beheben, könnte dieselbe Nachricht z.B. mehrere Male gesendet werden. Aufgrund von Netzwerkfehlern oder anderen Fehlern muss der Client in der Lage sein, Nachrichten erneut zu senden. Der Server muss außerdem einen idempotenten Vorgang implementieren, um eine bestimmte Nachricht nur einmal verarbeiten zu müssen.
+Die asynchrone nachrichtenbasierte Kommunikation mit einem Empfänger ist eine Punkt-zu-Punkt-Kommunikation: Eine Nachricht wird an genau einen Consumer gesendet, der den Kanal liest. Dabei wird die Nachricht nur einmal verarbeitet. Es gibt jedoch Situationen, in denen dies anders ist. In einem Cloudsystem, das automatisch versucht, Fehler zu beheben, könnte dieselbe Nachricht z.B. mehrere Male gesendet werden. Aufgrund von Netzwerkfehlern oder anderen Fehlern muss der Client in der Lage sein, Nachrichten erneut zu senden. Der Server muss außerdem einen idempotenten Vorgang implementieren, um eine bestimmte Nachricht nur einmal verarbeiten zu müssen.
 
 Wie in Abbildung 4-18 dargestellt wird, eigent sich die nachrichtenbasierte Kommunikation mit einem Empfänger besonders gut für das Senden asynchroner Befehle von einem Microservice zu einem anderen.
 
 Nachdem Sie die nachrichtenbasierte Kommunikation mithilfe von Befehlen oder Ereignissen gestartet haben, sollten Sie sie nicht zusammen mit der synchronen HTTP-Kommunikation verwenden.
 
-![](./media/image18.PNG)
+![Ein einzelner Microservice empfängt eine asynchrone Nachricht](./media/image18.png)
 
 **Abbildung 4-18.** Ein einzelner Microservice empfängt eine asynchrone Nachricht
 
 Beachten Sie, dass Befehle, die von Clientanwendungen ausgehen, als synchrone HTTP-Befehle implementiert werden können. Nachrichtenbasierte Befehle empfehlen sich, wenn Sie auf höhere Skalierbarkeit angewiesen sind oder bereits über einen nachrichtenbasierten Geschäftsprozess verfügen.
 
-## <a name="multiple-receivers-message-based-communication"></a>Nachrichtenbasierte Kommunikation mit mehreren Empfängern 
+## <a name="multiple-receivers-message-based-communication"></a>Nachrichtenbasierte Kommunikation mit mehreren Empfängern
 
 Wenn Sie einen flexibleren Ansatz benötigen, können Sie auch einen Veröffentlichen/Abonnieren-Vorgang verwenden, damit die Nachrichten des Senders zusätzlichen Abonnentenmicroservices oder externen Anwendungen zur Verfügung gestellt werden. Es empfiehlt sich daher, dem [Offen/Geschlossen-Prinzip](https://en.wikipedia.org/wiki/Open/closed_principle) im sendenden Dienst zu folgen. Auf diese Weise können später zusätzliche Abonnenten hinzugefügt werden, ohne dass der sendende Dienst geändert wird.
 
@@ -47,15 +47,15 @@ Wenn Sie die Veröffentlichen/Abonnieren-Kommunikation verwenden, können Sie z.
 
 ## <a name="asynchronous-event-driven-communication"></a>Asynchrone ereignisgesteuerte Kommunikation
 
-Bei Verwendung der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice ein Integrationsereignis, wenn eine Änderung in der zugehörigen Domäne eintritt und ein anderer Microservice darüber informiert werden muss (beispielsweise im Fall einer Preisänderung in einem Microservice für einen Produktkatalog). Zusätzliche Microservices abonnieren die Ereignisse, damit sie sie asynchron empfangen können. In diesem Fall aktualisieren die Empfänger möglicherweise ihre eigenen Domänenentitäten, was dazu führen kann, dass weitere Integrationsereignisse veröffentlicht werden. Dieses System des Veröffentlichens/Abonnierens erfolgt in der Regel über die Implementierung eines Ereignisbusses. Der Ereignisbus kann als Abstraktion oder Schnittstelle entworfen werden und verfügt über eine API, die für das Abonnieren oder Abbestellen und für das Veröffentlichen von Ereignissen benötigt wird. Des Weiteren kann der Ereignisbus über mindestens eine Implementierung verfügen, die auf einem Nachrichtenbroker für die prozessübergreifende Kommunikation basiert. Beispiele hierfür sind Nachrichtenwarteschlangen oder Service Busse, die die asynchrone Kommunikation und ein Veröffentlichen/Abonnieren-Modell unterstützen.
+Bei Verwendung der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice ein Integrationsereignis, wenn eine Änderung in der zugehörigen Domäne eintritt und ein anderer Microservice darüber informiert werden muss (beispielsweise im Fall einer Preisänderung in einem Microservice für einen Produktkatalog). Zusätzliche Microservices abonnieren die Ereignisse, damit sie sie asynchron empfangen können. In diesem Fall aktualisieren die Empfänger möglicherweise ihre eigenen Domänenentitäten, was dazu führen kann, dass weitere Integrationsereignisse veröffentlicht werden. Dieses System des Veröffentlichens/Abonnierens erfolgt in der Regel über die Implementierung eines Ereignisbusses. Der Ereignisbus kann als Abstraktion oder Schnittstelle entworfen werden und verfügt über eine API, die für das Abonnieren bzw. Abbestellen und das Veröffentlichen von Ereignissen benötigt wird. Des Weiteren kann der Ereignisbus über mindestens eine Implementierung verfügen, die auf einem Nachrichtenbroker für die prozessübergreifende Kommunikation basiert. Beispiele hierfür sind Nachrichtenwarteschlangen oder Service Busse, die die asynchrone Kommunikation und ein Veröffentlichen/Abonnieren-Modell unterstützen.
 
-Wenn ein System letztliche Konsistenz verwendet, die durch Integrationsereignisse gesteuert wird, sollte dieser Ansatz dem Endbenutzer verdeutlicht werden. Das System sollten keinen Ansatz verwenden, der Integrationsereignisse imitiert (wie etwa im Fall von SignalR oder beim Abruf von Clientsystemen). Sowohl der Endbenutzer als auch der Geschäftsinhaber müssen die letztliche Konsistenz im System akzeptieren und erkennen, dass dieser Ansatz in Unternehmen häufig kein Problem darstellt, solange er explizit dargelegt wird.
+Wenn ein System letztliche Konsistenz verwendet, die durch Integrationsereignisse gesteuert wird, sollte dieser Ansatz für den Endbenutzer transparent gestaltet werden. Das System sollte keinen Ansatz verwenden, der Integrationsereignisse wie im Fall von SignalR oder beim Abrufen von Systemen vom Client imitiert. Sowohl der Endbenutzer als auch der Geschäftsinhaber müssen die letztliche Konsistenz im System explizit berücksichtigen und erkennen, dass dieser Ansatz in Unternehmen oft kein Problem darstellt, solange er explizit dargelegt wird. Das ist wichtig, weil Benutzer erwarten, dass einige Ergebnisse sofort angezeigt werden, und dies bei letztlicher Konsistenz ggf. nicht der Fall ist.
 
-Wie bereits unter [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für die verteilte Datenverwaltung)](#challenges-and-solutions-for-distributed-data-management) beschrieben wurde, können Sie Integrationsereignisse dazu nutzen, microserviceübergreifende Geschäftsaufgaben zu implementieren. Dadurch kommt es zu letztlicher Konsistenz zwischen diesen Diensten. Eine letztlich konsistente Transaktion besteht aus einer Reihe von verteilten Aktionen. Bei jeder Aktion aktualisiert der zugehörige Microservice eine Domänenentität und veröffentlicht ein weiteres Integrationsereignis, das die nächste Aktion innerhalb derselben End-to-End-Geschäftsaufgabe auslöst.
+Wie bereits unter [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für die verteilte Datenverwaltung)](distributed-data-management.md) beschrieben wurde, können Sie Integrationsereignisse dazu nutzen, microserviceübergreifende Geschäftsaufgaben zu implementieren. So kommt es zu letztlicher Konsistenz zwischen diesen Diensten. Eine letztlich konsistente Transaktion besteht aus einer Reihe von verteilten Aktionen. Bei jeder Aktion aktualisiert der zugehörige Microservice eine Domänenentität und veröffentlicht ein weiteres Integrationsereignis, das die nächste Aktion innerhalb derselben End-to-End-Geschäftsaufgabe auslöst.
 
-Zu beachten ist, dass Sie möglicherweise mit mehreren Microservices kommunizieren müssen, die für dasselbe Ereignis abonniert sind. Dazu können Sie das Veröffentlichen/Abonnieren-Messaging verwenden, das auf ereignisgesteuerter Kommunikation basiert, wie in Abbildung 4-19 gezeigt wird. Dieser Veröffentlichen/Abonnieren-Ansatz kann nicht nur für die Microservicearchitektur genutzt werden. Vergleichbar ist die Funktionsweise dieses Ansatzes damit, wie [begrenzte Kontexte](https://martinfowler.com/bliki/BoundedContext.html) in DDD kommunizieren sollten oder wie Änderungen von der Schreibdatenbank zur Lesedatenbank im Architekturmuster [CQRS (Command and Query Responsibility Segregation; Zuständigkeitstrennung für Befehle und Abfragen)](https://martinfowler.com/bliki/CQRS.html) weitergegeben werden. Das Ziel ist letztliche Konsistenz zwischen mehreren Datenquellen im verteilten System.
+Zu beachten ist, dass Sie möglicherweise mit mehreren Microservices kommunizieren müssen, die für dasselbe Ereignis abonniert sind. Dazu können Sie das Veröffentlichen/Abonnieren-Messaging verwenden, das auf ereignisgesteuerter Kommunikation basiert, wie in Abbildung 4-19 gezeigt wird. Dieser Veröffentlichen/Abonnieren-Mechanismus kann nicht nur für die Microservicearchitektur genutzt werden. Vergleichbar ist die Funktionsweise dieses Ansatzes damit, wie [begrenzte Kontexte](https://martinfowler.com/bliki/BoundedContext.html) in DDD kommunizieren sollte, oder wie Änderungen von der Schreibdatenbank zur Lesedatenbank im Architekturmuster [CQRS (Command and Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html) weitergegeben werden. Das Ziel ist letztliche Konsistenz zwischen mehreren Datenquellen im verteilten System.
 
-![](./media/image19.png)
+![Bei der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice Ereignisse auf einem Ereignisbus. Viele Microservices können diesen dann abonnieren, um Benachrichtigungen zu erhalten und damit zu interagieren.](./media/image19.png)
 
 **Abbildung 4-19.** Asynchrone ereignisgesteuerte Nachrichtenkommunikation
 
@@ -73,40 +73,39 @@ Für unternehmenskritische Systeme und Produktionssysteme, für die eine sehr ho
 
 Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur für mehrere Microservices besteht darin, den Zustand durch einen unteilbaren Vorgang im ursprünglichen Microservice zu aktualisieren, während das zugehörige Integrationsereignis auf der Grundlage von Transaktionen resilient im Ereignisbus veröffentlicht wird. Die folgende Liste, die allerdings nicht zwangsläufig vollständig ist, enthält mehrere Ansätze zur Lösung dieses Problems:
 
--   Verwenden einer Transaktionswarteschlange wie MSMQ, die auf DTC basiert (dieser Ansatz ist allerdings bereits älter und wird nicht mehr empfohlen).
+- Verwenden einer Transaktionswarteschlange wie MSMQ, die auf DTC basiert (dieser Ansatz ist allerdings bereits älter und wird nicht mehr empfohlen).
 
--   Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Verwenden des [Musters „Ereignissourcing“](https://msdn.microsoft.com/library/dn589792.aspx).
+- Verwenden des [Musters „Ereignissourcing“](https://msdn.microsoft.com/library/dn589792.aspx).
 
--   Verwenden des [Musters „Postausgang“](http://gistlabs.com/2014/05/the-outbox/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
+- Verwenden des [Musters „Postausgang“](http://gistlabs.com/2014/05/the-outbox/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
 
-Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Idempotenz und die Deduplizierung von Nachrichten berücksichtigt werden. Diese Themen werden an anderer Stelle in diesem Leitfaden unter [Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignissen)](#implementing_event_based_comms_microserv) behandelt.
+Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Idempotenz und die Deduplizierung von Nachrichten berücksichtigt werden. Diese Themen werden an anderer Stelle in diesem Leitfaden unter [Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignissen)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) behandelt.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Event Driven Messaging (Ereignisgesteuertes Messaging)**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+- **Event Driven Messaging (Ereignisgesteuertes Messaging)** \
+  [*http://soapatterns.org/design_patterns/event_driven_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Publish/Subscribe Channel (Veröffentlichungs-/Abonnementkanal)**
-    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+- **Publish/Subscribe Channel (Veröffentlichungs-/Abonnementkanal)** \
+  [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Command and Query Responsibility Segregation (CQRS) (Zuständigkeitstrennung für Befehle und Abfragen (CQRS))**
-    [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- **Command and Query Responsibility Segregation (CQRS)** \
+  [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Communicating Between Bounded Contexts (Kommunizieren zwischen gebundenen Kontexten)**
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+- **Kommunizieren zwischen gebundenen Kontexten** \
+  [*https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
 
--   **Eventual consistency (Letztliche Konsistenz)**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+- **Letztliche Konsistenz** \
+  [*https://en.wikipedia.org/wiki/Eventual_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)**
-    [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
-
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)** \
+  [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 >[!div class="step-by-step"]
-[Zurück](communication-in-microservice-architecture.md)
-[Weiter](maintain-microservice-apis.md)
+>[Zurück](communication-in-microservice-architecture.md)
+>[Weiter](maintain-microservice-apis.md)

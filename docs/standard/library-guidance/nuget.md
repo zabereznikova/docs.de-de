@@ -4,12 +4,12 @@ description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliot
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185619"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129609"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -38,8 +38,6 @@ Der ältere Ansatz zum Erstellen eines NuGet-Pakets erfordert eine `*.nuspec`-Da
 
 **✔️ Verwenden** Sie eine SDK-Projektdatei zum Erstellen des NuGet-Pakets.
 
-**✔️ Richten** Sie SourceLink ein, um Ihren Assemblys und dem NuGet-Paket Metadaten der Quellcodeverwaltung hinzuzufügen.
-
 ## <a name="package-dependencies"></a>Paketabhängigkeiten
 
 Abhängigkeiten von NuGet-Paketen werden im Artikel [Abhängigkeiten](./dependencies.md) ausführlich erläutert.
@@ -48,7 +46,7 @@ Abhängigkeiten von NuGet-Paketen werden im Artikel [Abhängigkeiten](./dependen
 
 Ein NuGet-Paket unterstützt viele [Metadateneigenschaften](/nuget/reference/nuspec). Die folgende Tabelle enthält die wichtigsten Metadaten, die jedes Open Source-Projekt bereitstellen sollte:
 
-| MSBuild-Eigenschaftenname              | NUSPEC-Name              | Beschreibung   |
+| MSBuild-Eigenschaftenname              | NUSPEC-Name              | Beschreibung  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Der Paketbezeichner. Ein Präfix aus dem Bezeichner kann reserviert werden, wenn es die [Kriterien](/nuget/reference/id-prefix-reservation) erfüllt. |
 | `PackageVersion`                   | `version`                  | Die NuGet-Paketversion. Weitere Informationen finden Sie unter [NuGet-Paketversion](./versioning.md#nuget-package-version).             |
@@ -73,6 +71,12 @@ Ein NuGet-Paket unterstützt viele [Metadateneigenschaften](/nuget/reference/nus
 
 **✔️ Verwenden** Sie ein Paketsymbolbild, das 64x64 groß ist und einen transparenten Hintergrund für die ideale Darstellung hat.
 
+**✔️ Richten** Sie [SourceLink](./sourcelink.md) ein, um Ihren Assemblys und dem NuGet-Paket Metadaten der Quellcodeverwaltung hinzuzufügen.
+
+> SourceLink fügt dem NuGet-Paket automatisch `RepositoryUrl`- und `RepositoryType`-Metadaten hinzu.
+> SourceLink fügt auch Informationen zum genauen Quellcode hinzu, mit dem das Paket erstellt wurde.
+> Beispielsweise wird einem Paket, das aus einem Git-Repository erstellt wurde, der Commithash als Metadaten hinzugefügt.
+
 ## <a name="pre-release-packages"></a>Vorabversionen von Paketen
 
 NuGet-Pakete mit einem Versionssuffix gelten als [Vorabversion](/nuget/create-packages/prerelease-packages). Standardmäßig zeigt die Benutzeroberfläche des NuGet-Paket-Managers stabile Versionen an, es sei denn, ein Benutzer veröffentlicht Pakete vorab – Vorabversionspakete eignen sich ideal für eingeschränkte Benutzertests.
@@ -92,9 +96,14 @@ NuGet-Pakete mit einem Versionssuffix gelten als [Vorabversion](/nuget/create-pa
 
 ## <a name="symbol-packages"></a>Symbolpakete
 
-Symboldateien (`*.pdb`) werden vom .NET-Compiler neben Assemblys erstellt. Symboldateien ordnen Ausführungsstandorte dem ursprünglichen Quellcode zu, sodass Sie den Quellcode bei der Ausführung mit einem Debugger durchgehen können. NuGet unterstützt das [Generieren eines separaten Symbolpakets](/nuget/create-packages/symbol-packages) mit Symboldateien neben dem Hauptpaket mit .NET-Assemblys. Die Idee von Symbolpaketen ist, dass sie auf einem Symbolserver gehostet und nur bei Bedarf von einem Tool wie Visual Studio heruntergeladen werden.
+Symboldateien (`*.pdb`) werden vom .NET-Compiler neben Assemblys erstellt. Symboldateien ordnen Ausführungsstandorte dem ursprünglichen Quellcode zu, sodass Sie den Quellcode bei der Ausführung mit einem Debugger durchgehen können. NuGet unterstützt das [Generieren eines separaten Symbolpakets (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg) mit Symboldateien neben dem Hauptpaket mit .NET-Assemblys. Die Idee von Symbolpaketen ist, dass sie auf einem Symbolserver gehostet und nur bei Bedarf von einem Tool wie Visual Studio heruntergeladen werden.
 
-Derzeit unterstützt der öffentliche Haupthost für Symbole – [SymbolSource](http://www.symbolsource.org/) – nicht die neuen [portablen Symboldateien](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`), die von SDK-Projekten erstellt wurden. Das bedeutet, Symbolpakete sind nicht nützlich. Bis es einen empfohlenen Host für Symbolpakete gibt, können Symboldateien in das Hauptpaket von NuGet eingebettet werden. Wenn Sie Ihr NuGet-Paket mit einem SDK-Projekt erstellen, können Sie Symboldateien einbetten, indem Sie die Eigenschaft `AllowedOutputExtensionsInPackageBuildOutputFolder` festlegen: 
+NuGet.org hostet sein eigenes [Symbolserverrepository](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Entwickler können die auf dem NuGet.org-Symbolserver veröffentlichten Symbole verwenden, indem sie ihren [-Symbolquellen in Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger) `https://symbols.nuget.org/download/symbols` hinzufügen.
+
+> [!IMPORTANT]
+> Der NuGet.org-Symbolserver unterstützt nur die neuen [portierbaren Symboldateien](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`), die von SDK-Projekten erstellt wurden.
+
+Eine Alternative zum Erstellen eines Symbolpakets ist das Einbetten von Symboldateien in das NuGet-Hauptpaket. Das NuGet-Hauptpaket ist zwar größer, doch da die Symboldateien eingebettet sind, müssen Entwickler den NuGet.org-Symbolserver nicht konfigurieren. Wenn Sie Ihr NuGet-Paket mit einem SDK-Projekt erstellen, können Sie Symboldateien einbetten, indem Sie die Eigenschaft `AllowedOutputExtensionsInPackageBuildOutputFolder` festlegen:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -107,8 +116,10 @@ Derzeit unterstützt der öffentliche Haupthost für Symbole – [SymbolSource](
 
 **✔️ Betten** Sie Symboldateien in das NuGet-Hauptpaket ein.
 
-**❌ Erstellen** Sie kein Symbolpaket mit Symboldateien.
+> Durch das Einbetten von Symboldateien in das NuGet-Hauptpaket lässt sich der Debugvorgang für Entwickler standardmäßig optimieren. Sie müssen den NuGet-Symbolserver in ihrer IDE nicht suchen und konfigurieren, um Symboldateien abzurufen.
+>
+> Der Nachteil von eingebetteten Symboldateien ist, dass sie die Paketgröße für .NET-Bibliotheken, die mit SDK-Projekten kompiliert wurden, um etwa 30 % erhöhen. Wenn die Paketgröße ein Problem darstellt, sollten Sie Symbole stattdessen in einem Symbolpaket veröffentlichen.
 
 >[!div class="step-by-step"]
-[Zurück](./strong-naming.md)
-[Weiter](./dependencies.md)
+>[Zurück](strong-naming.md)
+>[Weiter](dependencies.md)

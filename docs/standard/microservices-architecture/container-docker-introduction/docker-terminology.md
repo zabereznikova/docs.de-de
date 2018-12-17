@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Dock
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 39a3c0e0aac2980e67a1c87a472d1a77baed6113
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8bf26087564e4f592d5f89afc6da211c5d1cff57
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216850"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150653"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -51,7 +51,6 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Orchestrator**: Ein Tool, das die Verwaltung von Clustern und Docker-Hosts vereinfacht. Orchestratoren ermöglichen es Ihnen, Ihre Images, Container und Hosts über eine Befehlszeilenschnittstelle (CLI) oder eine grafische Benutzeroberfläche zu verwalten. Sie können u.a. Containernetzwerke, Konfigurationen, den Lastenausgleich, die Dienstermittlung, die Hochverfügbarkeit und die Konfiguration des Docker-Hosts verwalten. Ein Orchestrator ist verantwortlich für die Ausführung, Verteilung, Skalierung und Reparatur von Workloads in einer Knotensammlung. Orchestratorprodukte sind in der Regel die gleichen Produkte, die Clusterinfrastruktur bereitstellen, wie Kubernetes und Azure Service Fabric, nebst anderen Angeboten am Markt. 
 
-
 >[!div class="step-by-step"]
-[Zurück](docker-defined.md)
-[Weiter](docker-containers-images-registries.md)
+>[Zurück](docker-defined.md)
+>[Weiter](docker-containers-images-registries.md)

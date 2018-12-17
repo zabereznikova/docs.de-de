@@ -1,35 +1,35 @@
 ---
 title: Identifizieren von Domänenmodellgrenzen für Microservices
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Identifizieren von Domänenmodellgrenzen für Microservices
+description: Lernen Sie die wesentlichen Grundlagen der Partitionierung einer großen Anwendung in Microservices kennen, um eine stabile Architektur zu erzielen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: bb02d2102659abd910f9a7e62652511c65574ab7
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 9142c5abbbd3839caac377876ba54258cdf916b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106235"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152493"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identifizieren von Domänenmodellgrenzen für Microservices
 
-Beim Identifizieren von Modellgrenzen und -größen für einzelne Microservices geht es nicht so sehr darum, eine möglichst kleinteilige Gliederung zu finden, wenngleich Sie sich um möglichst kleine Microservices bemühen sollten. Vielmehr geht es darum, dass Sie geleitet von Ihrem Wissen über die Domäne eine möglichst sinnvolle Gliederung vornehmen. Dabei liegt der Schwerpunkt nicht auf der Größe, sondern auf Unternehmensfunktionen. Ferner ist für einen bestimmten Bereich der Anwendung aufgrund einer großen Anzahl von Abhängigkeiten möglicherweise eine klare Kohäsion gefordert, was einen einzelnen Microservice erforderlich macht. Kohäsion stellt eine Möglichkeit der Gliederung oder Gruppierung von Microservices dar. Letztlich sollten Sie die Größe Ihres Microservices immer wieder anpassen, je mehr Wissen über die Domäne Sie erlangen. Die Suche nach der richtigen Größe ist kein einmaliger Vorgang.
+Beim Identifizieren von Modellgrenzen und -größen für die einzelnen Microservices geht es nicht so sehr darum, eine möglichst kleinteilige Gliederung zu finden, wenngleich Sie sich um möglichst kleine Microservices bemühen sollten. Vielmehr geht es darum, dass Sie geleitet von Ihrem Wissen über die Domäne eine möglichst sinnvolle Gliederung vornehmen. Der Schwerpunkt liegt nicht auf der Größe, sondern auf den geschäftlichen Funktionen. Ferner ist für einen bestimmten Bereich der Anwendung aufgrund einer großen Anzahl von Abhängigkeiten möglicherweise eine klare Kohäsion gefordert, sodass nur ein einziger Microservice erstellt werden sollte. Kohäsion stellt eine Möglichkeit der Gliederung oder Gruppierung von Microservices dar. Letztlich sollten Sie die Größe Ihres Microservices immer wieder anpassen, je mehr Wissen über die Domäne Sie erlangen. Die Suche nach der richtigen Größe ist kein einmaliger Vorgang.
 
 [Sam Newman](https://samnewman.io/), ein anerkannter Befürworter von Microservices und Autor von [Microservices: Konzeption und Design](https://samnewman.io/books/building_microservices/), weist darauf hin, dass Microservices auf Basis des bereits vorgestellten Konzepts von Kontextgrenzen (Teil des domänengesteuertes Designs) konzipiert und entworfen werden sollten. Eine Kontextgrenze kann aus mehreren physischen Diensten bestehen, aber nicht umgekehrt.
 
 Ein Domänenmodell mit bestimmten Domänenentitäten kommt in einer konkreten Kontextgrenze oder in einem konkreten Microservice zum Tragen. Eine Kontextgrenze schränkt die Anwendbarkeit eines Domänenmodells ein und vermittelt den Mitgliedern des Entwicklerteams ein klares und einheitliches Verständnis davon, welche Teile kohäsiv sein müssen und welche unabhängig voneinander entwickelt werden können. Dieselben Ziele gelten für Microservices.
 
-Ein weiteres Mittel zur Anregung beim Entwurf von Microservices ist das [Gesetz von Conway](https://en.wikipedia.org/wiki/Conway%27s_law), das besagt, dass Anwendungen durch die sozialen Grenzen der Organisationen vorbestimmt sind, die sie erstellen. Manchmal verhält es sich jedoch genau umgekehrt, d.h. die Organisation eines Unternehmens wird durch die Software bestimmt. Möglicherweise müssen Sie das Gesetz von Conway umkehren und die Grenzen entsprechend der gewünschten Organisation eines Unternehmens in Anlehnung an die Geschäftsprozessberatung definieren.
+Ein weiterer Faktor, der Ihre Entwurfsentscheidung beeinflusst, ist das [Gesetz von Conway](https://en.wikipedia.org/wiki/Conway%27s_law), das besagt, dass eine Anwendung die sozialen Grenzen der Organisation widerspiegelt, die sie erstellt. Manchmal verhält es sich jedoch genau umgekehrt: Die Organisation eines Unternehmens wird durch die Software bestimmt. Möglicherweise müssen Sie das Gesetz von Conway umkehren und die Grenzen, in Anlehnung an Beratungsergebnisse hinsichtlich der Geschäftsprozesse, entsprechend der gewünschten Organisation Ihres Unternehmens definieren.
 
-Zur Identifizierung von Kontextgrenzen kann das [Konzept der Kontextzuordnung](https://www.infoq.com/articles/ddd-contextmapping), ein Konzept des domänenorientierten Designs, verwendet werden. Bei der Kontextzuordnung geht es um die Identifizierung von verschiedenen Kontexten und deren Grenzen in der Anwendung. Üblicherweise wird für jedes kleine Subsystem ein eigener Kontext und eine eigene Grenze definiert. Dabei stellt die Kontextzuordnung ein Mittel zum Definieren und Verdeutlichen der Grenzen zwischen Domänen dar. Eine Kontextgrenze ist autonom, enthält die Details einer einzelnen Domäne, wie etwa die Domänenentitäten, und definiert Integrationsverträge mit anderen Kontextgrenzen. Dies ist mit der Definition eines Microservices vergleichbar: Ein Microservice ist autonom, er implementiert bestimmte Domänenfunktionen und muss Schnittstellen bereitstellen. Daher sind Kontextzuordnung und das Konzept der Kontextgrenze gute Methoden für die Identifizierung der Domänenmodellgrenzen von Microservices.
+Um Kontextgrenzen zu identifizieren, können Sie ein DDD-Muster (Domain Driven Design) verwenden, das als [Kontextzuordnungsmuster](https://www.infoq.com/articles/ddd-contextmapping) bezeichnet wird. Bei der Kontextzuordnung geht es um die Identifizierung von verschiedenen Kontexten und deren Grenzen in der Anwendung. Üblicherweise werden für jedes kleine Subsystem ein eigener Kontext und eine eigene Grenze definiert. Dabei stellt die Kontextzuordnung ein Mittel zum Definieren und Verdeutlichen der Grenzen zwischen Domänen dar. Eine Kontextgrenze ist autonom, enthält die Details einer einzelnen Domäne, wie etwa die Domänenentitäten, und definiert Integrationsverträge mit anderen Kontextgrenzen. Dies ist mit der Definition eines Microservice vergleichbar: Ein Microservice ist autonom, implementiert bestimmte Domänenfunktionen und muss Schnittstellen bereitstellen. Daher sind Kontextzuordnung und das Konzept der Kontextgrenze gute Methoden für die Identifizierung der Domänenmodellgrenzen von Microservices.
 
-Beim Entwickeln einer großen Anwendung werden Sie sehen, wie das Domänenmodell fragmentiert werden kann: Ein Domänenexperte aus der Katalogdomäne wird Entitäten in Katalog- und Bestandsdomänen anders nennen als beispielsweise ein Versanddomänenexperte. Die Benutzerdomänenentität weist beispielsweise bei einem CRM-Experten, der alle Details zum Kunden speichern möchte, eine andere Größe und Attributzahl auf, als bei einem Bestelldomänenexperten, der nur bestimmte Kundendaten benötigt. Es ist sehr schwierig, alle Domänenbegriffe über alle Domänen in einer großen Anwendung hinweg eindeutig zu definieren. Besonders wichtig dabei ist jedoch, dass Sie nicht versuchen sollten, die Begriffe zu vereinheitlichen. Akzeptieren Sie vielmehr die Unterschiede und die Vielfalt der einzelnen Domänen. Wenn Sie versuchen, für die gesamte Anwendung eine einheitliche Datenbank zu entwickeln, entsteht unbeholfenes Vokabular, das für keinen der vielen Domänenexperten richtig klingt. Daher helfen (in Form von Microservices implementierte) Kontextgrenzen bei der Klärung, an welchen Stellen bestimmte Domänenbegriffe verwendet werden können und an welchen Stellen das System aufgeteilt und zusätzliche Kontextgrenzen mit anderen Domänen erstellt werden müssen.
+Beim Entwickeln einer großen Anwendung werden Sie erkennen, wie das Domänenmodell fragmentiert werden kann – ein Domänenexperte aus der Katalogdomäne wird Entitäten in Katalog- und Bestandsdomänen anders nennen als beispielsweise ein Versanddomänenexperte. Die Benutzerdomänenentität weist beispielsweise bei einem CRM-Experten, der alle Details zum Kunden speichern möchte, eine andere Größe und Attributzahl auf, als bei einem Bestelldomänenexperten, der nur bestimmte Kundendaten benötigt. Es ist sehr schwierig, alle Domänenbegriffe über alle Domänen in einer großen Anwendung hinweg eindeutig zu definieren. Das Wichtigste ist jedoch, dass Sie nicht versuchen sollten, die Begriffe zu vereinheitlichen. Akzeptieren Sie die Unterschiede und die Vielfalt, die jede Domäne einbringt. Wenn Sie versuchen, für die gesamte Anwendung eine einheitliche Datenbank zu entwickeln, führt der Versuch, ein einheitliches Vokabular zu erstellen, zu merkwürdigen Begriffen, die für keinen der vielen Domänenexperten richtig klingen. Daher helfen (in Form von Microservices implementierte) Kontextgrenzen bei der Klärung, an welchen Stellen bestimmte Domänenbegriffe verwendet werden können und an welchen Stellen das System aufgeteilt und zusätzliche Kontextgrenzen mit anderen Domänen erstellt werden müssen.
 
-Sie erkennen, dass Sie die richtigen Grenzen und Größen für die einzelnen Kontextgrenzen und Domänenmodelle gefunden haben, wenn nur wenige enge Beziehungen zwischen Domänenmodellen vorhanden sind und Sie beim Durchführen typischer Anwendungsvorgänge keine Informationen aus mehreren Domänenmodellen zusammenführen müssen.
+Sie wissen, dass Sie die richtigen Grenzen und Größen für die einzelnen Kontextgrenzen und Domänenmodelle gefunden haben, wenn wenige starke Beziehungen zwischen Domänenmodellen vorhanden sind und Sie beim Durchführen typischer Anwendungsvorgänge keine Informationen aus mehreren Domänenmodellen zusammenführen müssen.
 
-Die vielleicht beste Antwort auf die Frage, wie groß ein Domänenmodell für einzelne Microservices sein muss, ist folgende: Es sollte eine autonome, möglichst isolierte Kontextgrenzen aufweisen und Ihnen die Arbeit ohne ständiges Wechseln zu anderen Kontexten (Modellen anderer Microservices) ermöglichen. In Abbildung 4-10 ist dargestellt, wie für mehrere Microservices (mehrere Kontextgrenzen) je nach Anforderungen der einzelnen, in Ihrer Anwendung identifizierten Domänen eigene Modelle und Entitäten definiert werden können.
+Die vielleicht beste Antwort auf die Frage, wie groß ein Domänenmodell für einzelne Microservices sein muss, ist folgende: Es sollte autonome, möglichst isolierte Kontextgrenzen aufweisen und Ihnen die Arbeit ohne ständiges Wechseln zu anderen Kontexten (Modellen anderer Microservices) ermöglichen. Abbildung 4-10 zeigt, wie für mehrere Microservices (mehrere Kontextgrenzen) je nach Anforderungen der einzelnen, in Ihrer Anwendung identifizierten Domänen eigene Modelle und Entitäten definiert werden können.
 
-![](./media/image10.png)
+![Entitäten in verschiedenen Modellgrenzen (Kontextgrenzen), wobei die gleiche Entität je nach Kontextgrenze als „Benutzer“, „Käufer“, „Zahler“ und „Kunden“ angezeigt wird](./media/image10.png)
 
 **Abbildung 4-10**. Identifizieren von Entitäten und Microservice-Modellgrenzen
 
@@ -39,11 +39,11 @@ Es können jedoch auch Entitäten vorhanden sein, die eine andere Form aufweisen
 
 Ein ähnliches Konzept ist in Abbildung 4-11 dargestellt.
 
-![](./media/image11.png)
+![Wenn Sie in herkömmliches Datenmodell auf verschiedene Kontextgrenzen aufteilen, können Sie verschiedene Entitäten mit der gleichen Identität einrichten (ein Käufer ist gleichzeitig ein Benutzer), die in den einzelnen Kontextgrenzen unterschiedliche Attribute aufweisen.](./media/image11.png)
 
 **Abbildung 4-11**. Zerlegen von herkömmlichen Datenmodellen in mehrere Domänenmodelle
 
-Wie Sie sehen, ist der Benutzer im Microservicemodell „Konferenzenmanagement“ als Entität „Benutzer“ und im Microservice „Preise“ als Entität „Käufer“ mit jeweils anderen Attributen oder Details vorhanden. Nicht für jeden Microservice bzw. für jede Kontextgrenze sind alle Daten einer Benutzerentität erforderlich. Welche Daten erforderlich sind, hängt von dem zu lösenden Problem oder vom Kontext ab. Im Microservicemodell „Preise“ wird beispielsweise nur die ID (als Identität) und der Status, nicht jedoch die Adresse oder die ID des Benutzers benötigt, was sich auf Rabatte bei den Preisen für die Lizenzen pro Käufer auswirkt.
+Wie Sie sehen, ist der Benutzer im Microservicemodell „Konferenzenmanagement“ als Entität „Benutzer“ und im Microservice „Preise“ als Entität „Käufer“ mit jeweils anderen Attributen oder Details vorhanden. Nicht für jeden Microservice bzw. für jede Kontextgrenze sind alle Daten einer Benutzerentität erforderlich. Welche Daten erforderlich sind, hängt von dem zu lösenden Problem oder vom Kontext ab. Im Microservicemodell „Preise“ werden beispielsweise Adresse und Name des Benutzers nicht benötigt, sondern nur die ID (als Identität) und der Status, was sich bei der Preisgestaltung für die Lizenzen pro Käufer auf Rabatte auswirkt.
 
 Die Entität „Lizenz“ hat zwar in allen Domänenmodellen denselben Namen, weist jedoch unterschiedliche Attribute auf. „Lizenz“ nutzt „Identität“ basierend auf derselben ID wie „Benutzer“ und „Käufer“.
 
@@ -51,7 +51,6 @@ Grundsätzlich gibt es in verschiedenen Diensten (Domänen), die alle die Identi
 
 Es hat verschiedene Vorteile, eine Benutzerentität nicht mit derselben Anzahl von Attributen in allen Domänen zu verwenden. Ein Vorteil ist der, dass weniger Duplikate vorhanden sind, sodass Microservicemodelle nur über die tatsächlich benötigten Daten verfügen. Ein weiterer Vorteil besteht darin, dass ein Mastermicroservice vorhanden ist, der pro Entität einen bestimmten Datentyp aufweist, sodass Updates und Abfragen für diesen Datentyp nur von diesem Microservice unterstützt werden.
 
-
 >[!div class="step-by-step"]
-[Zurück](distributed-data-management.md)
-[Weiter](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Zurück](distributed-data-management.md)
+>[Weiter](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

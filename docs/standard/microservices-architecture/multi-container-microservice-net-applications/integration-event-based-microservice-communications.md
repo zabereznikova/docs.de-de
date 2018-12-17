@@ -1,27 +1,27 @@
 ---
 title: Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Integrationsereignisse zum Implementieren ereignisbasierter Kommunikation zwischen Microservices
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 6a365c284d66ea24a9bb4caae51c63f22c79877b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/02/2018
+ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194045"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147256"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 
-Wie bereits erwähnt, veröffentlicht ein Microservice bei Verwendung ereignisbasierter Kommunikation ein Ereignis, wenn etwas Nennenswertes geschieht, beispielsweise wenn eine Geschäftseinheit aktualisiert wird. Andere Microservices abonnieren diese Ereignisse. Wenn ein Microservice ein Ereignis empfängt, kann er die eigenen Geschäftseinheiten aktualisieren, was dazu führen kann, dass weitere Ereignisse veröffentlicht werden. Dieses System des Veröffentlichens/Abonnierens erfolgt in der Regel über die Implementierung eines Ereignisbusses. Der Ereignisbus kann als Schnittstelle ausgelegt sein, die die API enthält, die zum Abonnieren von Ereignissen, zum Kündigen des Abonnements von Ereignissen sowie zum Veröffentlichen von Ereignissen erforderlich ist. Er kann auch über eine oder mehrere Implementierungen verfügen, die auf prozessübergreifender Kommunikation oder Messaging-Kommunikation beruhen. Beispiele hierfür sind Nachrichtenwarteschlangen oder Service Busse, die die asynchrone Kommunikation und ein auf Veröffentlichen/Abonnieren basierendes Modell unterstützen.
+Wie bereits erwähnt, veröffentlicht ein Microservice bei Verwendung ereignisbasierter Kommunikation ein Ereignis, wenn etwas Nennenswertes geschieht, beispielsweise wenn eine Geschäftseinheit aktualisiert wird. Andere Microservices abonnieren diese Ereignisse. Wenn ein Microservice ein Ereignis empfängt, kann er die eigenen Geschäftseinheiten aktualisieren, was dazu führen kann, dass weitere Ereignisse veröffentlicht werden. Das ist die Grundidee des Konzepts der letztlichen Konsistenz. Dieses System des Veröffentlichens/Abonnierens erfolgt in der Regel über die Implementierung eines Ereignisbusses. Der Ereignisbus kann als Schnittstelle ausgelegt sein, die die API enthält, die zum Abonnieren von Ereignissen, zum Kündigen des Abonnements von Ereignissen sowie zum Veröffentlichen von Ereignissen erforderlich ist. Er kann auch über eine oder mehrere Implementierungen verfügen, die auf prozessübergreifender Kommunikation oder Messaging-Kommunikation beruhen. Beispiele hierfür sind Nachrichtenwarteschlangen oder Service Busse, die die asynchrone Kommunikation und ein auf Veröffentlichen/Abonnieren basierendes Modell unterstützen.
 
 Sie können Ereignisse verwenden, um Geschäftstransaktionen zu implementieren, die sich über mehrere Dienste erstrecken. Dadurch werden diese Dienste im Laufe der Zeit konsistent. Eine letztendlich konsistente Transaktion besteht aus einer Reihe von verteilten Aktionen. Bei jeder Aktion aktualisiert der Microservice eine Geschäftseinheit und veröffentlicht ein Ereignis, das die nächste Aktion auslöst.
 
-![](./media/image19.PNG)
+![Der Katalogmicroservice verwendet ereignisgesteuerte Kommunikation über einen Ereignisbus, um eine letztliche Konsistenz mit dem Warenkorbmicroservice und zusätzlichen Microservices zu erreichen.](./media/image19.png)
 
-**Abbildung 8-18.** Ereignisgesteuerte Kommunikation basierend auf einem Ereignisbus
+**Abbildung 6-18**. Ereignisgesteuerte Kommunikation basierend auf einem Ereignisbus
 
-In diesem Abschnitt wird beschrieben, wie Sie diese Art von Kommunikation mit .NET mithilfe einer generischen Ereignisbusschnittstelle implementieren können (siehe Abbildung 8-18). Es gibt mehrere mögliche Implementierungen, bei denen jeweils eine andere Technologie oder Infrastruktur wie etwa RabbitMQ, Azure Service Bus oder eine andere Open Source von einem Drittanbieter oder ein kommerzieller Service Bus zum Einsatz kommt.
+In diesem Abschnitt wird beschrieben, wie Sie diese Art von Kommunikation mit .NET mithilfe einer generischen Ereignisbusschnittstelle implementieren können (siehe Abbildung 6-18). Es gibt mehrere mögliche Implementierungen, bei denen jeweils eine andere Technologie oder Infrastruktur wie RabbitMQ, Azure Service Bus oder ein anderer Drittanbieter-Open Source- oder kommerzieller Servicebus zum Einsatz kommt.
 
 ## <a name="using-message-brokers-and-services-buses-for-production-systems"></a>Verwendung von Nachrichtenbrokern und Dienstbussen für Produktionssysteme
 
@@ -32,6 +32,8 @@ Für die Implementierung von nur einem Ereignisbus-Proof-of-Concepts für die En
 Wenn Sie allgemeine Abstraktionen und umfangreichere Features wie [Sagas](https://docs.particular.net/nservicebus/sagas/) für Prozesse mit langer Ausführungsdauer benötigen, die eine verteilte Entwicklung erleichtern, lohnt es sich, andere kommerzielle und Open-Source-Service Busse wie NServiceBus, MassTransit und Brighter zu testen. In diesem Fall sind die zu verwendenden Abstraktionen und die zu verwendende API diejenigen, die von diesen allgemeinen Service Bussen bereitgestellt werden, und nicht Ihre eigenen Abstraktionen (wie die [unter eShopOnContainers bereitgestellten einfachen Ereignisbusabstraktionen](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Was das betrifft, können Sie die [verzweigten eShopOnContainers mithilfe von NServiceBus](https://go.particular.net/eShopOnContainers) (zusätzliches abgeleitetes Beispiel, durch Particular Software implementiert) untersuchen.
 
 Natürlich können Sie zusätzlich zu Technologien auf unterer Ebene wie RabbitMQ und Docker immer auch eigene Service Bus-Features erstellen. Jedoch wird der Aufwand für die „Neuerfindung des Rades“ wohl zu groß sein für eine benutzerdefinierte Unternehmensanwendung.
+
+Als Erinnerung: Die im eShopOnContainers-Beispiel vorgestellten Beispielereignisbus-Abstraktionen und -Implementierungen sind nur als Proof of Concept zu verwenden. Wenn Sie sich für eine asynchrone und ereignisgesteuerte Kommunikation entschieden haben, wählen Sie (wie in diesem Abschnitt erläutert) das Servicebusprodukt aus, das Ihren Anforderungen an die Produktion am besten entspricht.
 
 ## <a name="integration-events"></a>Integrationsereignisse
 
@@ -62,11 +64,11 @@ Es gibt nur sehr wenige Arten von Bibliotheken, die Sie in mehreren Microservice
 
 ## <a name="the-event-bus"></a>Der Ereignisbus
 
-Der Ereignisbus ermöglicht eine auf Veröffentlichen/Abonnieren basierende Kommunikation zwischen Microservices ohne die Komponenten für eine ausdrückliche Sensibilisierung für einander (siehe Abbildung 8-19).
+Ein Ereignisbus ermöglicht eine auf Veröffentlichen/Abonnieren basierende Kommunikation zwischen Microservices, ohne dass sich die Komponenten ausdrücklich berücksichtigen müssen (siehe Abbildung 6-19).
 
-![](./media/image20.png)
+![Grundlegendes Muster „Veröffentlichen/Abonnieren“: Microservice A veröffentlicht ein Ereignis im Ereignisbus, der dieses an die abonnierenden Microservices B und C verteilt, ohne dass der Herausgeber die Abonnenten kennen muss.](./media/image20.png)
 
-**Abbildung 8-19.** Veröffentlichen/Abonnieren mit einem Ereignisbus
+**Abbildung 6-19**. Veröffentlichen/Abonnieren mit einem Ereignisbus
 
 Der Ereignisbus steht in Zusammenhang mit dem Observer-Muster und dem Publish-Subscribe-Muster.
 
@@ -74,9 +76,9 @@ Der Ereignisbus steht in Zusammenhang mit dem Observer-Muster und dem Publish-Su
 
 Beim [Observer-Muster](https://en.wikipedia.org/wiki/Observer_pattern) versorgt das primäre Objekt (als „Observable“ bezeichnet) andere interessierte Objekte (als „Observer“ bezeichnet) mit wichtigen Informationen (Ereignissen).
 
-### <a name="publish-subscribe-pubsub-pattern"></a>Publish-Subscribe-Muster (Pub/Sub-Muster) 
+### <a name="publishsubscribe-pubsub-pattern"></a>Muster „Veröffentlichen/Abonnieren“ 
 
-Das [Pub/Sub-Muster](https://msdn.microsoft.com/library/ff649664.aspx) dient demselben Zweck wie das Observer-Muster: andere Dienste sollen bei bestimmten Ereignissen informiert werden. Es gibt jedoch einen wichtigen Unterschied zwischen dem Observer-Muster und dem Pub/Sub-Muster. Beim Observer-Muster erfolgt die Übertragung direkt vom Observable an die Observer, d.h. sie „kennen“ einander. Beim Pub/Sub-Muster gibt es jedoch eine dritte Komponente, den Broker oder Nachrichtenbroker bzw. Ereignisbus, den sowohl der Herausgeber als auch der Abonnent kennt. Wenn Sie also das Pub/Sub-Muster verwenden, sind Herausgeber und Abonnenten dank dem erwähnten Ereignisbus oder Nachrichtenbroker präzise entkoppelt.
+Das [Muster „Veröffentlichen/Abonnieren“](https://msdn.microsoft.com/library/ff649664.aspx) dient demselben Zweck wie das Beobachtermuster: andere Dienste sollen über bestimmte Ereignisse informiert werden. Es gibt jedoch einen wichtigen Unterschied zwischen dem Observer-Muster und dem Pub/Sub-Muster. Beim Observer-Muster erfolgt die Übertragung direkt vom Observable an die Observer, d.h. sie „kennen“ einander. Beim Pub/Sub-Muster gibt es jedoch eine dritte Komponente, den Broker oder Nachrichtenbroker bzw. Ereignisbus, den sowohl der Herausgeber als auch der Abonnent kennt. Wenn Sie also das Pub/Sub-Muster verwenden, sind Herausgeber und Abonnenten dank dem erwähnten Ereignisbus oder Nachrichtenbroker präzise entkoppelt.
 
 ### <a name="the-middleman-or-event-bus"></a>Der Vermittler oder Ereignisbus 
 
@@ -88,15 +90,15 @@ Ein Ereignisbus besteht in der Regel aus zwei Teilen:
 
 -   aus einer oder mehreren Implementierungen
 
-In Abbildung 8-19 wird deutlich, dass der Ereignisbus aus der Sicht der Anwendung lediglich einen Pub/Sub-Kanal darstellt. Sie können diesen asynchronen Code auf verschiedene Weisen implementieren. Er kann mehrere Implementierungen aufweisen, sodass je nach Umgebungsanforderungen (z.B. Produktions- oder Entwicklungsumgebung) zwischen diesen gewechselt werden kann.
+In Abbildung 6-19 wird deutlich, dass der Ereignisbus aus der Sicht der Anwendung lediglich einen Veröffentlichen/Abonnieren-Kanal darstellt. Sie können diesen asynchronen Code auf verschiedene Weisen implementieren. Er kann mehrere Implementierungen aufweisen, sodass je nach Umgebungsanforderungen (z.B. Produktions- oder Entwicklungsumgebung) zwischen diesen gewechselt werden kann.
 
-In Abbildung 8-20 ist eine Abstraktion eines Ereignisbusses mit mehreren Implementierungen basierend auf Infrastrukturmessagingtechnologien wie RabbitMQ, Azure Service Bus oder andere Ereignis-/Nachrichtenbroker dargestellt. 
+In Abbildung 6-20 ist eine Abstraktion eines Ereignisbusses mit mehreren Implementierungen basierend auf Infrastrukturmessagingtechnologien wie RabbitMQ, Azure Service Bus oder andere Ereignis-/Nachrichtenbroker dargestellt.
 
-![](./media/image21.png)
+![Es wird empfohlen, den Ereignisbus über eine Schnittstelle zu definieren, damit er mit verschiedenen Technologien wie RabbitMQ Azure Service Bus usw. implementiert werden kann.](./media/image21.png)
 
-**Abbildung 8-20.** Mehrere Implementierungen eines Ereignisbusses
+**Abbildung 6-20**. Mehrere Implementierungen eines Ereignisbusses
 
-Wie bereits erwähnt sollten Sie eine eigene Abstraktion (die Ereignisbusschnittstelle) jedoch nur verwenden, wenn Sie grundlegende Ereignisbusfunktionen benötigen, die von Ihren Abstraktionen unterstützt werden. Wenn Sie umfangreichere Service Bus-Features benötigen, sollten Sie anstelle der eigenen Abstraktionen die API und die Abstraktionen verwenden, die von Ihrem bevorzugten kommerziellen Service Bus bereitgestellt werden. 
+Wie bereits erwähnt sollten Sie eine eigene Abstraktion (die Ereignisbusschnittstelle) jedoch nur verwenden, wenn Sie grundlegende Ereignisbusfunktionen benötigen, die von Ihren Abstraktionen unterstützt werden. Wenn Sie umfangreichere Service Bus-Features benötigen, sollten Sie anstelle der eigenen Abstraktionen die API und die Abstraktionen verwenden, die von Ihrem bevorzugten kommerziellen Service Bus bereitgestellt werden.
 
 ### <a name="defining-an-event-bus-interface"></a>Definieren einer Ereignisbusschnittstelle
 
@@ -127,7 +129,6 @@ Die `Publish`-Methode ist einfach. Der Ereignisbus sendet das an ihn weitergelei
 
 Die `Subscribe`-Methoden (abhängig von den Argumenten können mehrere Implementierungen verwendet werden) werden von den Microservices verwendet, die Ereignisse empfangen möchten. Diese Methode weist zwei Argumente auf. Beim ersten Argument handelt es sich um das Integrationsereignis, das abonniert werden kann (`IntegrationEvent`). Beim zweiten Argument handelt es sich um den Integrationsereignishandler (oder die Rückrufmethode) mit dem Namen `IIntegrationEventHandler<T>`. Dieses Argument wird ausgeführt, wenn der Empfängermicroservice diese Integrationsereignisnachricht empfängt.
 
-
 >[!div class="step-by-step"]
-[Zurück](database-server-container.md)
-[Weiter](rabbitmq-event-bus-development-test-environment.md)
+>[Zurück](database-server-container.md)
+>[Weiter](rabbitmq-event-bus-development-test-environment.md)

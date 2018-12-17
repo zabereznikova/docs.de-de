@@ -1,5 +1,6 @@
 ---
-title: Grundlegende Zeichenfolgenoperationen in .NET Framework
+title: Grundlegende Zeichenfolgenvorgänge in .NET
+description: Erfahren Sie mehr über die grundlegenden Funktionen, die Sie für Zeichenfolgen verwenden können.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seadec18
+ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567483"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150679"
 ---
 # <a name="basic-string-operations-in-net"></a>Grundlegende Zeichenfolgenvorgänge in .NET
 Anwendungen antworten Benutzern oft durch Erstellen von Nachrichten auf Grundlage der Benutzereingabe. Beispielsweise ist es nicht ungewöhnlich, dass Websites neu angemeldeten Benutzern mit einer speziellen Begrüßung antworten, die den Namen des Benutzers enthält. Mit einigen Methoden in den <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klassen können Sie dynamisch benutzerdefinierte Zeichenfolgen für die Anzeige auf Ihrer Benutzeroberfläche erstellen. Mit diesen Methoden können Sie auch eine Reihe grundlegender Zeichenfolgenoperationen wie das Erstellen neuer Zeichenfolgen aus Bytearrays, das Vergleichen der Werte von Zeichenfolgen und das Ändern vorhandener Zeichenfolgen durchführen.  

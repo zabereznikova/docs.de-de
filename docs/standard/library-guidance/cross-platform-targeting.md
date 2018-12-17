@@ -1,21 +1,21 @@
 ---
-title: Plattformübergreifende Ziele
+title: Plattformübergreifende Ziele für .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Erstellen von plattformübergreifenden .NET Bibliotheken.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202815"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129713"
 ---
 # <a name="cross-platform-targeting"></a>Plattformübergreifende Ziele
 
 Modernes .NET unterstützt mehrere Betriebssysteme und Geräte. Es ist wichtig, dass .NET-Open-Source-Bibliotheken so viele Entwickler wie möglich unterstützen, unabhängig davon, ob sie eine in Azure gehostete ASP.NET-Website oder ein .NET-Spiel in Unity erstellen.
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a>.NET-Standard
 
 .NET Standard ist die beste Möglichkeit, plattformübergreifenden Support zu einer .NET-Bibliothek hinzuzufügen. [.NET Standard](../net-standard.md) ist eine Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sind. Mit dem Targeting von .NET Standard können Sie Bibliotheken erstellen, die nur APIs verwenden dürfen, die sich in einer bestimmten Version von .NET Standard befinden. Das bedeutet, dass es von allen Plattformen verwendet werden kann, die diese Version von .NET Standard implementieren.
 
@@ -59,7 +59,7 @@ Um Ihre Kunden davor zu schützen, Bibliotheken für einzelne Frameworks erstell
 >
 > Dabei muss weiterhin der Support für .NET Standard gewährleistet sein. Lösen Sie sich stattdessen von der Implementierung und bieten Sie Funktions-APIs. Auf diese Weise kann Ihre Bibliothek überall verwendet werden und unterstützt die Runtimehervorhebung von Funktionen.
 
-**❌ VERMEIDEN** Sie die Festlegung von Zielversionen mit .NET Standard, wenn Ihr Quellcode für alle Ziele identisch ist.
+**❌ Vermeiden** Sie das Festlegen von mehreren Zielen sowie das Verwenden von .NET Standard als Ziel, wenn Ihr Quellcode für alle Ziele identisch ist.
 
 > Die .NET Standard-Assembly wird von NuGet automatisch verwendet. Das Targeting einzelner .NET-Implementierungen erhöht die `*.nupkg`-Größe, ohne dass sich daraus Vorteil ergeben.
 
@@ -95,5 +95,5 @@ Um Ihre Kunden davor zu schützen, Bibliotheken für einzelne Frameworks erstell
 **❌ DON‘T** Schließen Sie keine Ziele für .NET-Plattformen ein, die nicht mehr unterstützt werden. Platzhalter in einer derartigen Schreibweise sind z.B. `SL4` und `WP`.
 
 >[!div class="step-by-step"]
-[Zurück](./get-started.md)
-[Weiter](./strong-naming.md)
+>[Zurück](get-started.md)
+>[Weiter](strong-naming.md)

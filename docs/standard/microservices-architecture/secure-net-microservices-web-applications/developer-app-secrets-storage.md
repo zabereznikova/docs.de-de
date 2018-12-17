@@ -4,12 +4,12 @@ description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Sich
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 560120db35ae190bdef1f95d72ac1e5de697124e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6f5dfbb53b99fec4d7cc66c528fe866c71c2172f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105945"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143869"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>Sicheres Speichern von Anwendungsgeheimnissen während der Entwicklung
 
@@ -53,5 +53,5 @@ Sie können mit Secret Manager gespeicherte Geheimnisse in einer Anwendung verwe
 
 
 >[!div class="step-by-step"]
-[Zurück](authorization-net-microservices-web-applications.md)
-[Weiter](azure-key-vault-protects-secrets.md)
+>[Zurück](authorization-net-microservices-web-applications.md)
+>[Weiter](azure-key-vault-protects-secrets.md)

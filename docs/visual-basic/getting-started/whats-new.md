@@ -1,6 +1,6 @@
 ---
 title: Neues in Visual Basic
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194058"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146156"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -21,10 +21,13 @@ In diesem Thema sind die Namen der wichtigsten Funktionen für jede Version von 
   
 ## <a name="current-version"></a>Aktuelle Version
 
-Visual Basic 15.5/Visual Studio 2017 Version 15.5  
-Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155)
+Die aktuelle Version ist Visual Basic 15.8/Visual Studio 2017, Version 15.8.  
+Weitere Informationen zu neuen Features finden Sie unter [Visual Basic 15.8](#visual-basic-158).
 
 ## <a name="previous-versions"></a>Frühere Versionen
+
+Visual Basic 15.5/Visual Studio 2017 Version 15.5  
+Informationen zu neuen Features finden Sie unter [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3/Visual Studio 2017 Version 15.3  
 Informationen zu neuen Features finden Sie unter [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Bitschiebeoperatoren, Deklaration von Schleifenvariablen
 
 Visual Basic / Visual Studio .NET 2002   
 Die erste Version von Visual Basic .NET
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**Optimierte Konvertierung von Gleitkommazahlen in ganze Zahlen**
+
+Frühere Visual Basic-Versionen erzielten beim Konvertieren von [doppelten](../language-reference/data-types/double-data-type.md) und [einzelnen](../language-reference/data-types/single-data-type.md) Werten in ganze Zahlen eine relativ schlechte Leistung. Visual Basic 15.8 weist eine deutlich verbesserte Leistung beim Konvertieren von Gleitkomma- in ganze Zahlen auf, wenn Sie den Wert, der durch eine der folgenden Methoden zurückgegeben wird, an eine [intrinsische Visual Basic-Konvertierungsfunktion für ganze Zahlen](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) übergeben, oder wenn der durch eine der folgenden Methoden zurückgegebene Wert implizit in einen integralen Typ umgewandelt wird, wenn [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) auf `Off` festgelegt ist:
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Dank dieser Optimierung kann Code schneller ausgeführt werden. Code, der viele Ganzzahltypen konvertiert, wird bis zu doppelt so schnell ausgeführt. Das folgende Beispiel veranschaulicht einige einfache Methodenaufrufe, die von dieser Optimierung betroffen sind:
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+Beachten Sie, dass diese Option die Gleitkommawerte kürzt und nicht rundet.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

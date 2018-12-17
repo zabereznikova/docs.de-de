@@ -1,23 +1,23 @@
 ---
 title: Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Anwenden einfacher CQRS- und DDD-Muster in einem Microservice
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die allgemeine Beziehung zwischen CQRS- und DDD-Mustern
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 5557a3d83d1f5f3016ff411157db1652d3ac50e2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106083"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148066"
 ---
-# <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
+# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
 
 CQRS ist ein Architekturkonzept, in dem die Modelle zum Lesen und Schreiben von Daten getrennt sind. Der verwandte Begriff [Command Query Separation (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) wurde ursprünglich von Bertrand Meyer in seinem Buch *Objektorientierte Softwareentwicklung* geprägt. Die Grundidee ist, dass die Systemvorgänge in zwei vollständig getrennte Kategorien aufgeteilt werden:
 
--   Abfragen: Sie geben ein Ergebnis zurück und ändern nicht den Zustand des Systems. Außerdem haben sie keine Nebenwirkungen.
+- Abfragen: Sie geben ein Ergebnis zurück und ändern nicht den Zustand des Systems. Außerdem haben sie keine Nebenwirkungen.
 
--   Befehle: Sie ändern den Zustand eines Systems.
+- Befehle: Sie ändern den Zustand eines Systems.
 
 CQS ist ein einfaches Konzept, in dem die Methoden innerhalb desselben Objekts entweder Abfragen oder Befehle sein können. Jede Methode gibt entweder einen Zustand zurück oder ändert ihn, jedoch nicht beides. Selbst ein einzelnes Repositorymusterobjekt kann mit CQS kompatibel sein. CQS ist das grundlegende Prinzip von CQRS.
 
@@ -27,15 +27,14 @@ Die Trennung wird in CQRS erzielt, indem Abfragevorgänge auf einer Ebene und Be
 
 In CQRS gibt es zwei Objekte für einen Lese-/Schreibvorgang, während es in anderen Kontexten nur eines gibt. Es gibt gute Gründe für eine nicht normalisierte Datenbank für Lesevorgänge, die Sie in der weiterführenden CQRS-Literatur nachlesen können. Da unser Ziel darin besteht, die Flexibilität der Abfragen zu erhöhen, statt die Abfragen mit Einschränkungen aus DDD-Mustern wie Aggregaten zu beschränken, wird dieser Ansatz hier jedoch nicht verwendet.
 
-Ein Beispiel für diese Art von Dienst ist der Microservice für Bestellungen aus der Referenzanwendung „eShopOnContainers“. Er basiert auf einem vereinfachten CQRS-Ansatz und verwendet eine einzelne Datenquelle oder Datenbank, aber zwei logische Modelle sowie außerdem DDD-Muster für die Transaktionsdomäne, wie in Abbildung 9-2 dargestellt.
+Ein Beispiel für diese Art von Dienst ist der Microservice für Bestellungen aus der Referenzanwendung „eShopOnContainers“. Er basiert auf einem vereinfachten CQRS-Ansatz und verwendet eine einzelne Datenquelle oder Datenbank, aber zwei logische Modelle sowie DDD-Muster für die Transaktionsdomäne (s. Abbildung 7-2).
 
-![](./media/image2.png)
+![Der logische Microservice für Bestellungen enthält die Datenbank „Ordering“ (Bestellungen), die sich im selben Docker-Host befinden kann. Es eignet sich für die Entwicklung, aber nicht für die Produktion, wenn sich die Datenbank im selben Docker-Host befindet.](./media/image2.png)
 
-**Abbildung 9-2:** Vereinfachter auf CQRS und DDD basierender Microservice
+**Abbildung 7-2**. Vereinfachter auf CQRS und DDD basierender Microservice
 
 Die Anwendungsebene kann aus der Web-API selbst bestehen. Das Wichtige am Architekturentwurf ist dabei, dass der Microservice die Abfragen und ViewModels (speziell für die Clientanwendungen erstellte Datenmodelle) nach dem CQRS-Muster von den Befehlen, Domänenmodellen und Transaktionen trennt. Dadurch bleiben die Abfragen unabhängig von den Einschränkungen der DDD-Muster, die nur für Transaktionen und Updates sinnvoll sind. Dies wird in späteren Abschnitten erläutert.
 
-
 >[!div class="step-by-step"]
-[Zurück](index.md)
-[Weiter](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Zurück](index.md)
+>[Weiter](eshoponcontainers-cqrs-ddd-microservice.md)

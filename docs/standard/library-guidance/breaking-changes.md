@@ -1,45 +1,45 @@
 ---
-title: Wichtige Änderungen und Bibliotheken für .NET
-description: Empfehlungen für bewährte Methoden navigieren, wichtige Änderungen, wenn Sie Bibliotheken für .NET zu erstellen.
+title: Breaking Changes und .NET-Bibliotheken
+description: Empfehlungen für bewährte Methoden zum Umgang mit Breaking Changes beim Erstellen von .NET-Bibliotheken.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 83c01fdad7d836877bf692b87eeb0230219ded36
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
-ms.translationtype: MT
+ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49370063"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148505"
 ---
-# <a name="breaking-changes"></a>Wichtige Änderungen
+# <a name="breaking-changes"></a>Breaking Changes
 
-Es ist wichtig für die eine .NET-Bibliothek finden Sie ein Gleichgewicht zwischen Stabilität für vorhandene Benutzer und Innovationen für die Zukunft. Autoren von Klassenbibliotheken erfahren Sie, für die Umgestaltung und neuer Ansatz für Code, bis er sich hervorragend eignet, aber Ihre vorhandenen Benutzer wichtige negative Auswirkungen, insbesondere für Low-Level-Bibliotheken hat.
+Es ist wichtig für eine .NET-Bibliothek, ein Gleichgewicht zwischen Stabilität für bestehende Benutzer und Innovation für die Zukunft zu finden. Ersteller von Bibliotheken verändern Code gelegentlich, bis er ihren Ansprüchen entspricht. Allerdings haben Unterbrechungen negative Auswirkungen auf Ihre Benutzer, besonders bei Bibliotheken auf niedriger Ebene.
 
-## <a name="project-types-and-breaking-changes"></a>Projekttypen und wichtige Änderungen
+## <a name="project-types-and-breaking-changes"></a>Projekttypen und Breaking Changes
 
-Die Auswirkungen der Änderungen für endbenutzerentwickler, die durch den ändert sich wie eine Bibliothek von der .NET-Community zuzog verwendet wird.
+Wie eine Bibliothek von der .NET-Community verwendet wird, ändert die Auswirkungen von Breaking Changes auf die Endbenutzerentwickler.
 
-* **Niedrig und mittleren Stufe Bibliotheken** wie ein Serialisierungsprogramm, HTML-Parser, objektrelationale Zuordnung Datenbank oder Web-Framework sind die betroffenen wichtige Änderungen.
+* **Bibliotheken auf niedriger und mittlerer Ebene** wie Serialisierungsmodule, HTML-Parser, datenbankobjektrelationale Mapper oder Webframeworks sind am stärksten von Breaking Changes betroffen.
 
-  Baustein-Pakete werden als NuGet-Abhängigkeiten von Endbenutzer-Entwicklern zum Erstellen von Anwendungen und von anderen Bibliotheken verwendet werden. Z. B. Sie eine Anwendung entwickeln und einen Open-Source-Client auf einen Webdienst aufzurufen. Eine wichtige-Update für eine Abhängigkeit, die der Client verwendet, nicht, die Sie beheben können. Es ist der Open-Source-Client, der geändert werden muss, und Sie haben keine Kontrolle darüber. Sie müssen kompatible Versionen der Bibliotheken finden oder senden eine Lösung für die Clientbibliothek, und warten, bis eine neue Version. Den schlimmsten Fall ist, sollten Sie zwei Bibliotheken verwenden, die auf inkompatible Versionen von einer dritten-Bibliothek abhängig sind.
+  Bausteinpakete werden von Endbenutzerentwicklern zum Erstellen von Anwendungen und von anderen Bibliotheken für NuGet-Abhängigkeiten verwendet. Angenommen, Sie erstellen eine Anwendung und verwenden einen Open Source-Client zum Aufrufen eines Webdiensts. Sie können kein wichtiges Update für eine Abhängigkeit korrigieren, die der Client verwendet. Der Open Source-Client muss nämlich geändert werden, und das können Sie nicht steuern. Sie müssen kompatible Bibliotheksversionen finden oder einen Fix an die Clientbibliothek übermitteln und auf eine neue Version warten. Der schlimmste Fall ist, wenn Sie zwei Bibliotheken verwenden wollen, die von gegenseitig inkompatiblen Versionen einer dritten Bibliothek abhängen.
 
-* **Allgemeine Bibliotheken** wie eine Sammlung von UI-Steuerelemente sind weniger anfällig für wichtige Änderungen.
+* **Bibliotheken auf hoher Ebene** wie eine Sammlung von Steuerelementen der Benutzeroberfläche sind weniger anfällig für Breaking Changes.
 
-  Allgemeine Bibliotheken werden direkt in einer endbenutzeranwendung auf die verwiesen wird. Wenn Änderungen auftreten, wird der Entwickler kann auch auf die neueste Version zu aktualisieren, oder Ändern ihrer Anwendung zur Zusammenarbeit mit der grundlegenden Änderungen.
+  Bibliotheken auf hoher Ebene werden direkt in einer Endbenutzeranwendung referenziert. Wenn Breaking Changes auftreten, kann der Entwickler ein Update auf die neueste Version ausführen oder seine Anwendung ändern, um die Breaking Changes zu verwenden.
 
-**Führen Sie ✔️** überlegen, wie die Bibliothek verwendet werden soll. Welche Auswirkungen haben wichtige Änderungen auf Anwendungen und Bibliotheken, die sie verwenden?
+**✔️️ Überlegen** Sie, wie Ihre Bibliothek verwendet wird. Welche Auswirkungen haben Breaking Changes auf Anwendungen und Bibliotheken, die diese verwenden?
 
-**Führen Sie ✔️** Änderungen minimiert werden, wenn eine .NET-Bibliothek auf niedriger Ebene zu entwickeln.
+**✔️ Minimieren** Sie Breaking Changes beim Entwickeln einer .NET-Bibliothek auf niedriger Ebene.
 
-**✔️ GGF.** veröffentlichen eine größere schreiben, einer Bibliothek als neue NuGet-Paket.
+**✔️ Veröffentlichen** Sie ggf. ein größeres Rewrite einer Bibliothek als neues NuGet-Paket.
 
-## <a name="types-of-breaking-changes"></a>Arten von Änderungen
+## <a name="types-of-breaking-changes"></a>Arten von Breaking Changes
 
-Wichtige Änderungen in verschiedene Kategorien fallen, und es sind nicht gleichmäßig eindrucksvolle.
+Breaking Changes lassen sich in unterschiedliche Kategorien unterteilen und sind nicht gleichermaßen wirkungsvoll.
 
-### <a name="source-breaking-change"></a>Wichtige Änderung an der Datenquelle
+### <a name="source-breaking-change"></a>Breaking Changes in der Quelle
 
-Eine Quelle, die wichtige Änderung führt betrifft keine Ausführung des Programms aber zu Kompilierungsfehler das nächste Mal, die, das die Anwendung erneut kompiliert wird. Z. B. eine neue Überladung kann eine Mehrdeutigkeit in Methodenaufrufe, die eindeutig früher erstellen, oder ein umbenannter Parameter unterbricht Aufrufer, mit denen benannte Parameter.
+Breaking Changes in der Quelle wirken sich nicht auf die Programmausführung aus, verursachen allerdings Kompilierungsfehler, wenn die Anwendung das nächste Mal erneut kompiliert wird. Beispielsweise kann eine neue Überladung eine Mehrdeutigkeit bei Methodenaufrufen erzeugen, die zuvor eindeutig waren, oder aber ein umbenannter Parameter unterbricht Aufrufer, die benannte Parameter verwenden.
 
 ```csharp
 public class Task
@@ -48,35 +48,35 @@ public class Task
 }
 ```
 
-Da es sich bei eine Quelle, die wichtige Änderung nur schädlich ist, wenn Entwickler ihre Anwendungen neu kompilieren, ist es am wenigsten störenden wichtige Änderung. Entwickler können ihre eigenen unterbrochen Quellcode einfach beheben.
+Da Breaking Changes in der Quelle nur dann schädlich sind, wenn Entwickler ihre Anwendungen erneut kompilieren, handelt es sich dabei um die harmlosesten Breaking Changes. Entwickler können ihren eigenen fehlerhaften Quellcode einfach reparieren.
 
-### <a name="behavior-breaking-change"></a>Wichtige verhaltensänderung
+### <a name="behavior-breaking-change"></a>Behavior Breaking Changes
 
-Verändertes Programmverhalten sind der am häufigsten verwendeten wichtige Änderung: nahezu jede Änderung im Verhalten kann ein Benutzer unterbrochen. Änderungen an Ihrer Bibliothek, z. B. Methodensignaturen Ausnahmen ausgelöst oder Eingabe oder Ausgabe Datenformate, könnten alle beeinträchtigt Ihre Consumer. Als fehlerhafte Änderung können sogar eine Programmfehlerbehebung qualifizieren, wenn Benutzer auf das zuvor fehlerhaften Verhalten beruhte.
+Änderungen am Verhalten sind die häufigste Art von Breaking Changes: Fast jeder Behavior Change wirkt sich negativ auf die Benutzer aus. Änderungen an Ihrer Bibliothek, z.B. Methodensignaturen, ausgelöste Ausnahmen oder Ein- bzw. Ausgabedatenformaten, können sich negativ auf Ihre Bibliotheksnutzer auswirken. Sogar eine Fehlerbehebung kann ein Breaking Change sein, wenn sich Benutzer auf das ehemals fehlerhafte Verhalten verlassen haben.
 
-Hinzufügen von Funktionen und schlechte Verhaltensweisen verbessern, ist eine gute Sache, aber ohne Sorgfalt können erleichtern es sehr schwierig für vorhandene Benutzer aktualisieren. Ein Ansatz zum Schutz von Entwicklern, die Behandlung von Verhalten, die wichtige Änderungen werden hinter Einstellungen ausblenden. Einstellungen können Entwickler auf die neueste Version Ihrer Bibliothek, während gleichzeitig auswählen, aktivieren oder deaktivieren die Änderungen zu aktualisieren. Diese Strategie ermöglicht Entwicklern, die auf dem neuesten Stand zu bleiben, während ihre verwendeten Code im Laufe der Zeit anpassen lassen.
+Das Hinzufügen von Funktionen und Verbessern von schlechtem Verhalten wird empfohlen. Wenn diese Vorgänge jedoch nicht richtig ausgeführt werden, können vorhandene Benutzer Schwierigkeiten mit Upgrades haben. Ein Entwickler unterstützender Ansatz beim Umgang mit Behavior Breaking Changes besteht darin, sie hinter Einstellungen zu verstecken. Mithilfe von Einstellungen können Entwickler auf die neueste Version Ihrer Bibliothek aktualisieren und dabei entscheiden, ob sie Änderungen vornehmen oder nicht. Diese Strategie ermöglicht es Entwicklern, auf dem neuesten Stand zu bleiben und zugleich ihren genutzten Code mit der Zeit anzupassen.
 
-Beispielsweise ASP.NET Core MVC hat das Konzept einer [Kompatibilitätsversion](/aspnet/core/mvc/compatibility-version) , ändert es sich um die Funktionen aktiviert und deaktiviert auf `MvcOptions`.
+So umfasst ASP.NET Core MVC beispielsweise das Konzept einer [Kompatibilitätsversion](/aspnet/core/mvc/compatibility-version), die die unter `MvcOptions` aktivierten und deaktivierten Funktionen ändert.
 
-**✔️ GGF.** neue Features in der Standardeinstellung deaktiviert verlassen, wenn sie die Auswirkungen auf vorhandene Benutzer, und Entwicklern, die ermöglichen sich auf die Funktion mit einer Einstellung entscheiden.
+**✔️ Deaktivieren**  Sie neue Features ggf. standardmäßig, wenn sie vorhandene Benutzer beeinträchtigen. Geben Sie Entwicklern die Möglichkeit, diese Features mit einer Einstellung auszuwählen.
 
-### <a name="binary-breaking-change"></a>Binäre unterbrechende Änderung
+### <a name="binary-breaking-change"></a>Binäre Breaking Changes
 
-Eine wichtige Änderung Binärdatei tritt auf, wenn Sie die öffentliche API Ihrer Bibliothek ändern, damit Assemblys kompiliert ältere Versionen Ihrer Bibliothek können nicht mehr zum Aufrufen der API. Beispielsweise ändern die Signatur einer Methode, durch Hinzufügen eines neuen Parameters führt dazu, dass Assemblys, die für die ältere Version der Bibliothek kompiliert, um auszulösen, eine <xref:System.MissingMethodException>.
+Ein binärer Breaking Change tritt auf, wenn Sie die öffentliche API Ihrer Bibliothek ändern, sodass Assemblys, die mit älteren Versionen Ihrer Bibliothek kompiliert wurden, die API nicht mehr aufrufen können. Wenn Sie beispielsweise die Signatur einer Methode durch Hinzufügen eines neuen Parameters ändern, werden Assemblys, die mit einer älteren Bibliotheksversion kompiliert wurden, ein <xref:System.MissingMethodException>-Ausnahme auslösen.
 
-Eine wichtige Änderung Binärdatei kann auch unterbrochen. eine **gesamte Assembly**. Umbenennen einer Assembly mit `AssemblyName` ändert sich der Identität der Assembly, wie hinzufügen, entfernen oder ändern den Schlüssel der Assembly starke Benennung. Eine Änderung der Identität einer Assembly werden alle kompilierten Code unterbrochen, der verwendet wird.
+Eine binärer Breaking Change kann auch eine **ganze Assembly** unterbrechen. Das Umbenennen einer Assembly mit `AssemblyName` ändert die Identität der Assembly ebenso wie das Hinzufügen, Entfernen oder Ändern des starken Namensschlüssels der Assembly. Eine Änderung der Identität einer Assembly unterbricht alle kompilierten Codes, die diese verwenden.
 
-**❌ NICHT** Namen einer Assembly zu ändern.
+**❌ Sie dürfen nicht** Assemblynamen ändern.
 
-**❌ NICHT** hinzufügen, entfernen oder ändern Sie den Schlüssel für starke benennungen.
+**❌ Sie dürfen nicht** den starken Namensschlüssel hinzufügen, entfernen oder ändern.
 
-**✔️ GGF.** anstelle Schnittstellen von abstrakten Basisklassen.
+**✔️ Verwenden Sie** abstrakte Basisklassen anstelle von Schnittstellen.
 
-> Nichts hinzufügen, um eine Schnittstelle bewirkt vorhandene Typen, die Fehler zu implementieren. Eine abstrakte Basisklasse, können Sie eine Standardimplementierung für den virtuellen hinzufügen.
+> Wenn Sie einer Schnittstelle etwas hinzufügen, tritt ein Fehler für vorhandene Typen auf, die diese implementieren. Mit einer abstrakten Basisklasse können Sie eine standardmäßige virtuelle Implementierung hinzufügen.
 
-**✔️ GGF.** Platzieren der <xref:System.ObsoleteAttribute> für Typen und Member, die Sie entfernen möchten. Das Attribut müssen Anweisungen zum Aktualisieren von Code aus, um die veraltete API nicht mehr verwenden.
+**✔️ Platzieren** Sie ggf. <xref:System.ObsoleteAttribute> auf Typen und Membern, die Sie entfernen möchten. Das Attribut muss Anweisungen zum Aktualisieren des Codes enthalten, damit die veraltete API nicht mehr verwendet wird.
 
-> Code, der Aufrufe von Typen und Methoden mit dem <xref:System.ObsoleteAttribute> wird eine Buildwarnung generiert, mit der Meldung, die für das Attribut angegebenen. Warnungen bieten Personen, die beim veraltet-API-Oberfläche verwenden, migrieren, damit beim Entfernen der veralteten API die meisten nicht mehr sind Verwendung.
+> Code, der Typen und Methoden mit <xref:System.ObsoleteAttribute> aufruft, generiert eine Buildwarnung mit der Meldung, die an das Attribut übergeben wird. Warnungen geben Personen, die die veraltete API verwenden, Zeit zum Migrieren, sodass die meisten Benutzer, wenn die veraltete API entfernt wird, diese nicht mehr verwenden.
 
 ```csharp
 public class Document
@@ -94,11 +94,15 @@ public class Document
 }
 ```
 
+**✔️ Behalten** Sie Typen und Methoden mit <xref:System.ObsoleteAttribute> auf unbestimmte Zeit in Bibliotheken auf niedriger und mittlerer Ebene bei.
+
+> Das Entfernen von APIs ist eine binärer Breaking Change. Erwägen Sie, veraltete Typen und Methoden beizubehalten, falls ihre Verwaltung keinen kostspieligen und großen technischen Aufwand für die Bibliothek bedeutet. Wenn Sie Typen und Methoden nicht entfernen, können Sie so die obigen Worst-Case-Szenarios vermeiden.
+
 ## <a name="see-also"></a>Siehe auch
 
-* [Überlegungen zur Version und Updates für C#-Entwickler](../../csharp/whats-new/version-update-considerations.md)
-* [Endgültiger Leitfaden zur API-Änderungen in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-* [CoreFX wichtige Ändern der Regeln](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+* [Versions- und Updateüberlegungen für C#-Entwickler](../../csharp/whats-new/version-update-considerations.md)
+* [Umfassendes Handbuch für API-Breaking Changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
+* [Regeln von Breaking Changes in CoreFX ](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
-[Vorherige](./versioning.md)
+>[Vorherige](versioning.md)

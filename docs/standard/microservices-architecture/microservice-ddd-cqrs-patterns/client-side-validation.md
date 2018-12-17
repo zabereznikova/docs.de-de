@@ -1,19 +1,19 @@
 ---
 title: Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über wichtige Konzepte für clientseitige Validierungen
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582423"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130077"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 
-Obwohl alle Daten aus dem Domänenmodell stammen und dort auch geprüft werden müssen (Serverseite), kann die Prüfung auch gleichzeitig auf der Clientseite passieren.
+Obwohl alle Daten aus dem Domänenmodell stammen und dort auch geprüft werden müssen, kann die Prüfung sowohl auf Domänenmodellebene (serverseitig) als auch auf Benutzeroberflächenebene (clientseitig) ausgeführt werden.
 
 Die Prüfung auf Clientseite ist ein für Benutzer sehr praktisches Feature, denn sie spart Zeit, die andernfalls verloren gehen würde, während Sie auf einen Roundtrip auf den Server warten, der ggf. Prüfungsfehler zurückgibt. In Unternehmen reicht es schon aus, wenn täglich Hundert Male Bruchteile von Sekunden verloren gehen, denn so summieren sich Kosten, Aufwand und Frustration. Wenn die Prüfung unkompliziert und ohne Umschweife ausgeführt wird, können Benutzer effizienter arbeiten und Eingaben und Ausgaben von besserer Qualität produzieren.
 
@@ -29,27 +29,27 @@ Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von 
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Prüfung von mobilen Xamarin-Apps
 
--   **Validate Text Input and Show Errors (Validieren von Texteingaben und Anzeigen von Validierungsfehlern)**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+- **Überprüfen von Texteingaben und Anzeigen von Fehlern** \
+  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback (Überprüfungsrückruf)**
-    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **Validation Callback (Überprüfungsrückruf)** \
+  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Prüfung in ASP.NET Core-Apps
 
--   **Rick Anderson. Adding validation (Hinzufügen der Überprüfung)**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson. Hinzufügen der Validierung** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Prüfung in SPA-Web-Apps (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation (Formularüberprüfung von Angular 2)**
-    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+- **Ado Kukic. Angular 2 Form Validation (Formularüberprüfung von Angular 2)** \
+  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation (Überprüfung von Formularen)**
-    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **Form Validation (Formularüberprüfung)** \
+  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Prüfung** Breeze-Dokumentation
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **Prüfung** Breeze-Dokumentation \
+  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 Dies sind die wichtigsten Konzepte in Bezug auf die Prüfung:
 
@@ -59,10 +59,8 @@ Dies sind die wichtigsten Konzepte in Bezug auf die Prüfung:
 
 - Wenn Sie mehrere verwandte Objekte wie ein Aggregat erstellen müssen und diese nur gültig sind, wenn alle von ihnen erstellt wurden, sollten Sie die Verwendung des Factorymusters erwägen.
 
-- Prüfungsframeworks funktionieren am besten in bestimmten Ebenen, z.B. in der Darstellungs- oder in der Anwendungs- bzw. Dienstebene, üblicherweise jedoch nicht auf der Domänenmodellebene, da dafür eine starke Abhängigkeit vom Infrastrukturframework notwendig wäre.
-
 - In vielen Fällen ist eine redundante Prüfung auf Clientseite von Vorteil, da die Anwendung so proaktiv sein kann.
 
 >[!div class="step-by-step"]
-[Zurück](domain-model-layer-validations.md)
-[Weiter](domain-events-design-implementation.md)
+>[Zurück](domain-model-layer-validations.md)
+>[Weiter](domain-events-design-implementation.md)

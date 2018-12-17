@@ -1,5 +1,6 @@
 ---
-title: Alternierungskonstrukte in regulären Ausdrücken
+title: Alternierungskonstrukte in regulären .NET-Ausdrücken
+description: Erfahren Sie, wie Sie Alternierungskonstrukte für den bedingten Abgleich in regulären Ausdrücken verwenden können.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839750"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142924"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Alternierungskonstrukte in regulären Ausdrücken
 <a name="top"></a> Alternierungskonstrukte ändern einen regulären Ausdruck, um Entweder-Oder-Vergleiche oder eine bedingte Übereinstimmung zuzulassen. .NET unterstützt drei Alternierungskonstrukte:  
@@ -43,7 +45,7 @@ ms.locfileid: "48839750"
   
  Der reguläre Ausdruck, der das `|` -Zeichen verwendet, `\bgr(a|e)y\b`, wird wie in der folgenden Tabelle dargestellt interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`gr`|Übereinstimmung mit den Zeichen "gr".|  
@@ -57,7 +59,7 @@ ms.locfileid: "48839750"
   
  Der reguläre Ausdruck `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Eine der folgenden Varianten muss übereinstimmen: zwei Dezimalstellen gefolgt von einem Bindestrich gefolgt von sieben Dezimalstellen; oder drei Dezimalstellen, ein Bindestrich, zwei Dezimalstellen, ein weiterer Bindestrich und vier Dezimalstellen.|  
@@ -87,7 +89,7 @@ ms.locfileid: "48839750"
   
  Das Muster für reguläre Ausdrücke `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(?(\d{2}-)`|Bestimmen, ob die nächsten drei Zeichen aus zwei Ziffern gefolgt von einem Bindestrich bestehen.|  
@@ -118,7 +120,7 @@ ms.locfileid: "48839750"
   
  Das Muster für reguläre Ausdrücke `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`(?<n2>\d{2}-)?`|Entspricht 0 (Null) oder einem Vorkommen von zwei Ziffern gefolgt von einem Bindestrich. Geben Sie für die Erfassungsgruppe `n2`als Namen an.|  

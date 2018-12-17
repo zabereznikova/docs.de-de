@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: b6c881a445f5848829ab5ccc6ce8547a390d89f3
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 96a004cc49773346eeb8f88e2ba99beebf8598bf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404618"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154202"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -219,7 +219,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 Die TestServer-Klasse macht das Schreiben von Funktionstests für ASP.NET Core-Anwendungen relativ einfach. Sie konfigurieren eine TestServer-Klasse direkt mithilfe von WebHostBuilder (wie Sie es normalerweise für Ihre Anwendung tun) oder mit dem Typ „WebApplicationFactory“ (in Version 2.1 verfügbar). Sie sollten versuchen, einen Testhost zu verwenden, der dem Produktionshost so ähnlich wie möglich ist, damit das Verhalten der Tests dem Verhalten der App in der Produktion ähnelt. Die Klasse „WebApplicationFactory“ ist hilfreich für die ContentRoot-Konfiguration für der TestServer-Klasse, die von ASP.NET Core verwendet wird, um statische Ressourcen wie Ansichten zu finden.
 
-Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die IClassFixture<WebApplicationFactory<TEntry>> implementiert, wobei „TEntry“ der Startklasse Ihrer Webanwendung entspricht. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
+Sie können einfache Funktionstests erstellen, indem Sie eine Testklasse erstellen, die IClassFixture\<WebApplicationFactory\<TEntry>> implementiert, wobei es sich bei „TEntry“ um die Startklasse Ihrer Webanwendung handelt. Mit diesen Vorkehrungen kann Ihre Testfixture einen Client mithilfe der CreateClient-Methode der Zuordnungsinstanz erstellen:
 
 ```cs
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -347,5 +347,5 @@ namespace FunctionalTests.WebRazorPages
 Dieser Funktionstest führt den gesamten ASP.NET Core MVC/Razor Pages-Anwendungsstapel aus, einschließlich aller Middleware, Filter, Binder usw., die verfügbar sind. Er überprüft, ob eine bestimmte Route („/“) den erwarteten Erfolgsstatuscode und die HTML-Ausgabe zurückgibt. Das funktioniert, ohne dass ein echter Webserver eingerichtet werden muss, und vermeidet deshalb einen Großteil der Fehleranfälligkeit, die bei einem echten Webserver auftreten kann (z.B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden. Sie sollten Funktionstests verwenden, um sicherzustellen, dass der Front-End-Stapel Ihrer Anwendung wie erwartet funktioniert. Diese Tests sind besonders hilfreich, wenn Sie Duplizierung in Ihren Controllern oder Seiten finden und Sie diese durch Hinzufügen von Filtern behandeln. Im Idealfall ändert dieses Refactoring nicht das Verhalten der Anwendung, und eine Reihe von Funktionstests überprüft, ob dies der Fall ist.
 
 >[!div class="step-by-step"]
-[Zurück](work-with-data-in-asp-net-core-apps.md)
-[Weiter](development-process-for-azure.md)
+>[Zurück](work-with-data-in-asp-net-core-apps.md)
+>[Weiter](development-process-for-azure.md)

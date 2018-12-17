@@ -4,11 +4,11 @@ description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung 
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400527"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
@@ -92,10 +92,12 @@ Pakete mit freigegebenen Quellen weisen einige Einschränkungen auf. Auf sie kan
 
 > Pakettypen mit freigegebenen Quellen werden in die verweisende Assembly kompiliert und können nicht über Assemblygrenzen hinweg ausgetauscht werden. Ein `IRepository`-Typ mit freigegebenen Quellen in einem Projekt ist ein anderer Typ als der gleiche `IRepository`-Typ mit freigegebenen Quellen in einem anderen Projekt. Für Typen in Paketen mit freigegebenen Quellen sollte die Sichtbarkeit auf `internal` festgelegt werden.
 
-**❌ VERÖFFENTLICHEN SIE KEINE** Pakete mit freigegebenen Quellen in nuget.org.
+**❌ VERÖFFENTLICHEN SIE KEINE** Pakete mit freigegebenen Quellen in NuGet.org.
 
 > Pakete mit freigegebenen Quellen enthalten Quellcode und können nur von Projekten mit dem gleichen Sprachtyp verwendet werden. Ein in C# geschriebenes Paket mit freigegebenen Quellen kann z.B. nicht von einer F#-Anwendung verwendet werden.
+>
+> Veröffentlichen Sie Pakete mit freigegebenen Quellen in einem [lokalen Feed oder in MyGet](./publish-nuget-package.md), um sie intern in Ihrem Projekt zu verwenden.
 
 >[!div class="step-by-step"]
-[Zurück](./nuget.md)
-[Weiter](./sourcelink.md)
+>[Zurück](nuget.md)
+>[Weiter](sourcelink.md)

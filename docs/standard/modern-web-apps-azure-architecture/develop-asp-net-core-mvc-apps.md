@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308590"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152777"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -79,11 +79,11 @@ Im Hinblick auf Web-APIs unterstützt ASP.NET Core MVC die [_Inhaltsaushandlung_
 
 ## <a name="working-with-dependencies"></a>Arbeiten mit Abhängigkeiten
 
-Die Technik [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) wird von ASP.NET Core unterstützt und intern verwendet. Es handelt sich dabei um eine Technik, die die lose Kopplung von unterschiedlichen Teilen einer Anwendung ermöglicht. Eine losere Kopplung stellt einen Vorteil dar, da dadurch verschiedene Teile der Anwendung besser isoliert voneinander getestet oder ersetzt werden können. Außerdem wird es dadurch unwahrscheinlicher, dass eine Änderung eines Teils der Anwendung zu unerwarteten Auswirkungen auf die restliche Anwendung führen kann. Dependency Injection basiert auf dem Prinzip der Dependency Inversion und stellt häufig ein wichtiges Mittel dar, um das Offen/Geschlossen-Prinzip durchzusetzen. Wenn Sie auswerten, wie die Anwendung mit ihren Abhängigkeiten funktioniert, sollten Sie schlecht strukturierten Code im [statischen Zusammenhang](https://deviq.com/static-cling/) vermeiden und den Leitsatz [New is Glue](https://ardalis.com/new-is-glue) („New“ ist klebrig) beachten.
+Die Technik [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) wird von ASP.NET Core unterstützt und intern verwendet. Es handelt sich dabei um eine Technik, die die lose Kopplung von unterschiedlichen Teilen einer Anwendung ermöglicht. Eine losere Kopplung stellt einen Vorteil dar, da dadurch verschiedene Teile der Anwendung besser isoliert voneinander getestet oder ersetzt werden können. Außerdem wird es dadurch unwahrscheinlicher, dass eine Änderung eines Teils der Anwendung zu unerwarteten Auswirkungen auf die restliche Anwendung führen kann. Dependency Injection basiert auf dem Prinzip der Dependency Inversion und stellt häufig ein wichtiges Mittel dar, um das Offen/Geschlossen-Prinzip durchzusetzen. Wenn Sie auswerten, wie die Anwendung mit ihren Abhängigkeiten funktioniert, sollten Sie schlecht strukturierten Code im [statischen Zusammenhang](https://deviq.com/static-cling/) vermeiden und den Leitsatz [new is glue](https://ardalis.com/new-is-glue) („new“ fungiert als Klebstoff) beachten.
 
 Es entsteht ein statischer Zusammenhang, wenn Ihre Klassen statische Methoden aufrufen oder auf statische Eigenschaften zugreifen, die Nebenwirkungen oder Abhängigkeiten von der Infrastruktur umfassen. Wenn Sie z.B. über eine Methode verfügen, die eine statische Methode aufruft, die wiederum in eine Datenbank schreibt, wird Ihre Methode eng an die Datenbank gekoppelt. Jegliches Element, das den Datenbankaufruf unterbricht, unterbricht auch die Methode. Es ist bekannt, dass es sehr schwierig ist, diese Methode zu testen, da dafür entweder kommerzielle Testbibliotheken erforderlich sind, die statische Aufrufe testen, oder die Tests nur mit einer aktiven Testdatenbank ausgeführt werden können. Statische Aufrufe, bei denen keine Abhängigkeiten von der Infrastruktur bestehen, insbesondere die vollständig zustandslosen, können ohne Bedenken aufgerufen werden und haben (abgesehen von Kopplungscode und statischen Aufrufen an sich) keine Auswirkung auf die Kopplung oder Testfähigkeit.
 
-Viele Entwickler kennen zwar das Risiko von statischen Zusammenhängen und globalen Status, koppeln ihren Code aber dennoch über direkte Instanziierung eng an bestimmte Implementierungen. Der Leitsatz „New is glue“ („New“ ist klebrig) soll an diese Kopplung erinnern und stellt keine generelle Verurteilung der Verwendung des Schlüsselworts „New“ dar. Genauso wie statische Methodenaufrufe koppeln neue Instanzen von Typen ohne externe Abhängigkeiten Code nicht eng an die Implementierungsdetails, und sie erschweren auch nicht den Testvorgang. Sie sollten aber jedes Mal, wenn eine Klasse instanziiert wird, überlegen, ob es sinnvoll ist, vordefinierten Code für diese Instanz an einem bestimmten Ort zu verwenden, oder ob Sie besser festlegen sollten, dass diese Instanz als eine Abhängigkeit abgefragt wird.
+Viele Entwickler kennen zwar das Risiko von statischen Zusammenhängen und globalen Status, koppeln ihren Code aber dennoch über direkte Instanziierung eng an bestimmte Implementierungen. Der Leitsatz „new is glue“ („new“ fungiert als Klebstoff) soll an diese Kopplung erinnern und stellt keine generelle Verurteilung der Verwendung des Schlüsselworts `new` dar. Genauso wie statische Methodenaufrufe koppeln neue Instanzen von Typen ohne externe Abhängigkeiten Code nicht eng an die Implementierungsdetails, und sie erschweren auch nicht den Testvorgang. Sie sollten aber jedes Mal, wenn eine Klasse instanziiert wird, überlegen, ob es sinnvoll ist, vordefinierten Code für diese Instanz an einem bestimmten Ort zu verwenden, oder ob Sie besser festlegen sollten, dass diese Instanz als eine Abhängigkeit abgefragt wird.
 
 ### <a name="declare-your-dependencies"></a>Deklarieren Ihrer Abhängigkeiten
 
@@ -559,5 +559,5 @@ _Weitere Informationen zu den Bereitstellungsoptionen für Azure finden Sie in [
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Zurück](common-client-side-web-technologies.md)
-[Weiter](work-with-data-in-asp-net-core-apps.md)
+>[Zurück](common-client-side-web-technologies.md)
+>[Weiter](work-with-data-in-asp-net-core-apps.md)

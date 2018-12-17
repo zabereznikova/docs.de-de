@@ -1,5 +1,6 @@
 ---
-title: Anker in regulären Ausdrücken
+title: Anker in regulären .NET-Ausdrücken
+description: Erfahren Sie, wie Sie Anker in Mustern für reguläre Ausdrücke verwenden.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085185"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155037"
 ---
 # <a name="anchors-in-regular-expressions"></a>Anker in regulären Ausdrücken
 <a name="top"></a> Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position in der Zeichenfolge an, an der eine Übereinstimmung auftreten muss. Wenn Sie im Suchausdruck einen Anker verwenden, durchsucht die Engine für reguläre Ausdrücke nicht die Zeichenfolge oder durchläuft Zeichen, sondern sucht nur an der angegebenen Position nach einer Übereinstimmung. Beispielsweise gibt `^` an, dass die Übereinstimmung am Anfang einer Zeile oder Zeichenfolge beginnen muss. Daher stimmt der reguläre Ausdruck `^http:` nur mit "http:" überein, wenn dies am Anfang einer Zeile steht. In der folgenden Tabelle werden die von den regulären .NET-Ausdrücken unterstützten Anker aufgeführt.  
   
-|Anker|Beschreibung |  
+|Anker|Beschreibung|  
 |------------|-----------------|  
 |`^`|Die Übereinstimmung muss standardmäßig zu Beginn der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie zu Beginn der Zeile erfolgen. Weitere Informationen finden Sie unter [Anfang der Zeichenfolge oder Zeile](#Start).|  
 |`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen. Weitere Informationen finden Sie unter [Ende der Zeichenfolge oder Zeile](#End).|  
@@ -46,14 +48,14 @@ ms.locfileid: "44085185"
   
 -   Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> -Überladung sucht nur die erste Teilzeichenfolge in der Eingabezeichenfolge, die mit dem Muster des regulären Ausdrucks übereinstimmt.  
   
--   Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29>-Überladung sucht bei Festlegung des `options`-Parameters auf <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> alle fünf Teilzeichenfolgen.  
+-   Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> -Überladung sucht bei Festlegung des `options` -Parameters auf <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> alle fünf Teilzeichenfolgen.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
   
  Das Muster für reguläre Ausdrücke `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Suchen Sie nach einer Übereinstimmung am Anfang der Eingabezeichenfolge (oder am Anfang der Zeile, wenn die Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option aufgerufen wird).|  
 |`((\w+(\s?)){2,}`|Suchen Sie nach einer Übereinstimmung mit mindestens einem Wortzeichen, auf das genau zwei Mal eine 0 (Null) oder ein Leerzeichen folgt. Dies ist die erste Erfassungsgruppe. Durch diesen Ausdruck werden auch eine zweite und dritte Erfassungsgruppe definiert: Die zweite Gruppe besteht aus dem erfassten Wort, die dritte aus den erfassten Leerzeichen.|  
@@ -65,7 +67,7 @@ ms.locfileid: "44085185"
 |`,?`|Suchen Sie nach einer Übereinstimmung mit 0 (null) oder einem Komma.|  
 |<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Suchen Sie nach einer Übereinstimmung mit mindestens einem Vorkommen der folgenden Elemente: ein Leerzeichen, vier Dezimalzahlen, 0 (Null) oder ein Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present" sowie 0 (Null) oder ein Komma. Dies ist die fünfte Erfassungsgruppe.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="End"></a>   
 ## <a name="end-of-string-or-line-"></a>Ende der Zeichenfolge oder Zeile: $  
@@ -73,23 +75,23 @@ ms.locfileid: "44085185"
   
  Wenn Sie `$` mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option verwenden, kann die Übereinstimmung auch am Ende einer Zeile vorliegen. Beachten Sie, dass `$` mit `\n` übereinstimmt, nicht jedoch mit `\r\n` (der Kombination aus Wagenrücklauf- und Zeilenumbruchzeichen oder CR/LF). Zum Suchen einer Übereinstimmung mit der CR/LF-Zeichenkombination schließen Sie `\r?$` in das Muster des regulären Ausdrucks ein.  
   
- Im folgenden Beispiel wird der `$` -Anker zum Muster des regulären Ausdrucks hinzugefügt, der im Beispiel im Abschnitt [Anfang der Zeichenfolge oder Zeile](#Start) verwendet wurde. Bei Verwendung mit der ursprünglichen Eingabezeichenfolge von fünf Textzeilen wird von der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType>-Methode keine Übereinstimmung gefunden, da das Ende der ersten Zeile nicht mit dem `$`-Muster übereinstimmt. Wenn die ursprüngliche Eingabezeichenfolge in ein Zeichenfolgenarray geteilt wird, findet die <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType>-Methode eine Übereinstimmung mit jeder der fünf Zeilen. Wenn die <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode mit dem auf `options` festgelegten <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Parameter aufgerufen wird, werden keine Übereinstimmungen gefunden, da das Wagenrücklaufelement (\u+000D) nicht Teil des Musters des regulären Ausdrucks ist. Wenn das Muster des regulären Ausdrucks jedoch geändert wird, indem `$` durch `\r?$` ersetzt wird, ergibt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, sofern der `options`-Parameter auf <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> festgelegt ist, wieder fünf Übereinstimmungen.  
+ Im folgenden Beispiel wird der `$` -Anker zum Muster des regulären Ausdrucks hinzugefügt, der im Beispiel im Abschnitt [Anfang der Zeichenfolge oder Zeile](#Start) verwendet wurde. Bei Verwendung mit der ursprünglichen Eingabezeichenfolge von fünf Textzeilen wird von der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> -Methode keine Übereinstimmung gefunden, da das Ende der ersten Zeile nicht mit dem `$` -Muster übereinstimmt. Wenn die ursprüngliche Eingabezeichenfolge in ein Zeichenfolgenarray geteilt wird, findet die <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> -Methode eine Übereinstimmung mit jeder der fünf Zeilen. Wenn die <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode mit dem auf `options` festgelegten <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Parameter aufgerufen wird, werden keine Übereinstimmungen gefunden, da das Wagenrücklaufelement (\u+000D) nicht Teil des Musters des regulären Ausdrucks ist. Wenn das Muster des regulären Ausdrucks jedoch geändert wird, indem `$` durch `\r?$`ersetzt wird, ergibt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> -Methode, sofern der `options` -Parameter auf <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> festgelegt ist, wieder fünf Übereinstimmungen.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="StartOnly"></a>   
 ## <a name="start-of-string-only-a"></a>Nur Anfang der Zeichenfolge: \A  
- Der `\A`-Anker gibt an, dass eine Übereinstimmung am Anfang der Eingabezeichenfolge vorliegen muss. Dies ist mit dem `^`-Anker identisch, jedoch wird die <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option von `\A` ignoriert. Daher kann hiermit in einer mehrzeiligen Eingabezeichenfolge nur eine Übereinstimmung nur am Anfang der ersten Zeile gesucht werden.  
+ Der `\A`-Anker gibt an, dass eine Übereinstimmung am Anfang der Eingabezeichenfolge vorliegen muss. Dies ist mit dem `^` -Anker identisch, jedoch wird die `\A` -Option von <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ignoriert. Daher kann hiermit in einer mehrzeiligen Eingabezeichenfolge nur eine Übereinstimmung nur am Anfang der ersten Zeile gesucht werden.  
   
  Das folgende Beispiel ähnelt den Beispielen für den `^` -Anker und den `$` -Anker. Der `\A` -Anker wird in einem regulären Ausdruck verwendet, der Informationen zu den Jahren extrahiert, in denen es bestimmte professionelle Baseballteams gab. Die Eingabezeichenfolge weist fünf Zeilen auf. Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode sucht nur die erste Teilzeichenfolge in der Eingabezeichenfolge, die mit dem Muster des regulären Ausdrucks übereinstimmt. Wie im Beispiel dargestellt, hat die <xref:System.Text.RegularExpressions.RegexOptions.Multiline> -Option keine Auswirkungen.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring2.cs#3)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>Ende der Zeichenfolge oder vor dem abschließenden Zeilenumbruch: \Z  
@@ -102,7 +104,7 @@ ms.locfileid: "44085185"
  [!code-csharp[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring2.cs#4)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>Nur Ende der Zeichenfolge: \z  
@@ -113,7 +115,7 @@ ms.locfileid: "44085185"
  [!code-csharp[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring3.cs#5)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="Contiguous"></a>   
 ## <a name="contiguous-matches-g"></a>Aufeinander folgende Übereinstimmungen: \G  
@@ -126,7 +128,7 @@ ms.locfileid: "44085185"
   
  Der reguläre Ausdruck `\G(\w+\s?\w*),?` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\G`|Beginnt die Übereinstimmung am Ende der vorherigen.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -135,7 +137,7 @@ ms.locfileid: "44085185"
 |`(\w+\s?\w*)`|Übereinstimmung mit mindestens einem Wortzeichen gefolgt von 0 (Null) oder einem Leerzeichen, gefolgt von 0 (Null) oder weiteren Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
 |`,?`|Übereinstimmung mit 0 (Null) oder einem Literal-Kommazeichen.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="WordBoundary"></a>   
 ## <a name="word-boundary-b"></a>Wortgrenze: \b  
@@ -148,14 +150,14 @@ ms.locfileid: "44085185"
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`are`|Übereinstimmung mit der Teilzeichenfolge "are".|  
 |`\w*`|Übereinstimmung mit keinem oder mehreren Wortzeichen.|  
 |`\b`|Der Vergleich endet an einer Wortgrenze.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="NonwordBoundary"></a>   
 ## <a name="non-word-boundary-b"></a>Nicht-Wortgrenze: \B  
@@ -168,7 +170,7 @@ ms.locfileid: "44085185"
   
  Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\B`|Übereinstimmung beginnt nicht an einer Wortgrenze.|  
 |`qu`|Übereinstimmung mit der Teilzeichenfolge "qu".|  

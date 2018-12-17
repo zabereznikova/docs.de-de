@@ -1,5 +1,6 @@
 ---
 title: Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
+description: Erfahren Sie, wie Sie Zeichenfolgen effektiv in .NET-Anwendungen verwenden können.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080337"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150972"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
 <a name="top"></a> .NET bietet umfangreiche Unterstützung für das Entwickeln von lokalisierten und globalisierten Anwendungen und erleichtert bei der Ausführung allgemeiner Vorgänge das Übernehmen von Konventionen der aktuellen oder einer anderen Kultur, beispielsweise bei der Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.  
@@ -59,11 +61,11 @@ ms.locfileid: "47080337"
   
 -   Verwenden Sie Zeichenfolgenoperationen, die auf <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> basieren, um die Ausgabe für Benutzer anzuzeigen.  
   
--   Verwenden Sie den nicht linguistischen <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>-Wert oder den nicht linguistischen <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>-Wert anstelle von Zeichenfolgenoperationen, die auf <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> basieren, wenn der Vergleich linguistisch nicht relevant (z. B. symbolisch) ist.  
+-   Verwenden Sie den nicht linguistischen <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> -Wert oder den nicht linguistischen <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> -Wert anstelle von Zeichenfolgenoperationen, die auf <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> basieren, wenn der Vergleich linguistisch nicht relevant (z. B. symbolisch) ist.  
   
--   Verwenden Sie die <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType>-Methode anstelle der <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType>-Methode, wenn Sie Zeichenfolgen für einen Vergleich normalisieren.  
+-   Verwenden Sie die <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> -Methode anstelle der <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> -Methode, wenn Sie Zeichenfolgen für einen Vergleich normalisieren.  
   
--   Verwenden Sie eine Überladung der <xref:System.String.Equals%2A?displayProperty=nameWithType>-Methode, um zu überprüfen, ob zwei Zeichenfolgen übereinstimmen.  
+-   Verwenden Sie eine Überladung der <xref:System.String.Equals%2A?displayProperty=nameWithType> -Methode, um zu überprüfen, ob zwei Zeichenfolgen übereinstimmen.  
   
 -   Verwenden Sie die <xref:System.String.Compare%2A?displayProperty=nameWithType>- und <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methoden zum Sortieren von Zeichenfolgen, und nicht, um eine Überprüfung auf Gleichheit durchzuführen.  
   
@@ -79,13 +81,13 @@ ms.locfileid: "47080337"
   
 -   Verwenden Sie nicht kulturabhängige Formatierung, um numerische Daten oder Datums-/Uhrzeitdaten im Zeichenfolgenformat beizubehalten.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="specifying_string_comparisons_explicitly"></a>   
 ## <a name="specifying-string-comparisons-explicitly"></a>Explizites Angeben von Zeichenfolgenvergleichen  
  Die Methoden zum Bearbeiten von Zeichenfolgen in .NET werden i.d.R. überladen. Während einige Überladungen normalerweise Standardwerte akzeptieren, geben andere Überladungen exakt an, wie Zeichenfolgen verglichen oder bearbeitet werden sollen. Methoden, die keine Standardwerte verwenden, enthalten i. d. R einen Parameter vom Typ <xref:System.StringComparison>. Dabei handelt es sich um eine Enumeration, die explizit Regeln für Zeichenfolgenvergleiche anhand von Kultur und Schreibweise angibt. In der folgenden Tabelle werden die Member der <xref:System.StringComparison> -Enumeration beschrieben.  
   
-|StringComparison-Member|Beschreibung |  
+|StringComparison-Member|Beschreibung|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Führt einen Vergleich mit der aktuellen Kultur unter Beachtung der Groß- und Kleinschreibung durch.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Führt einen Vergleich mit der aktuellen Kultur ohne Beachtung der Groß- und Kleinschreibung durch.|  
@@ -116,7 +118,7 @@ ms.locfileid: "47080337"
  [!code-csharp[Conceptual.Strings.BestPractices#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#2)]
  [!code-vb[Conceptual.Strings.BestPractices#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#2)]  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Details zum Zeichenfolgenvergleich  
@@ -142,17 +144,17 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
   
  Vergleiche mit der Semantik der aktuellen Kultur werden standardmäßig für folgende Methoden verwendet:  
   
--   <xref:System.String.Compare%2A?displayProperty=nameWithType>-Überladungen, die keinen <xref:System.StringComparison>-Parameter enthalten.  
+-   <xref:System.String.Compare%2A?displayProperty=nameWithType> -Überladungen, die keinen <xref:System.StringComparison> -Parameter enthalten.  
   
--   <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Überladungen.  
+-   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> -Überladungen.  
   
--   Die <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType>-Standardmethode und die <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode mit einem `null`<xref:System.Globalization.CultureInfo>-Parameter  
+-   Die <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> -Standardmethode und die <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> -Methode mit einem `null`<xref:System.Globalization.CultureInfo> -Parameter enthalten.  
   
--   Die <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType>-Standardmethode und die <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode mit einem `null`<xref:System.Globalization.CultureInfo>-Parameter  
+-   Die <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> -Standardmethode und die <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> -Methode mit einem `null`<xref:System.Globalization.CultureInfo> -Parameter enthalten.  
   
--   <xref:System.String.IndexOf%2A?displayProperty=nameWithType>-Überladungen, die eine <xref:System.String> als Suchparameter akzeptieren und keinen <xref:System.StringComparison>-Parameter aufweisen.  
+-   <xref:System.String.IndexOf%2A?displayProperty=nameWithType> -Überladungen, die eine <xref:System.String> als Suchparameter akzeptieren und keinen <xref:System.StringComparison> -Parameter aufweisen.  
   
--   <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>-Überladungen, die eine <xref:System.String> als Suchparameter akzeptieren und keinen <xref:System.StringComparison>-Parameter aufweisen.  
+-   <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> -Überladungen, die eine <xref:System.String> als Suchparameter akzeptieren und keinen <xref:System.StringComparison> -Parameter aufweisen.  
   
  In jedem Fall wird empfohlen, eine Überladung mit einem <xref:System.StringComparison> -Parameter aufzurufen, um den Zweck des Methodenaufrufs eindeutig anzugeben.  
   
@@ -183,7 +185,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
  Zeichenfolgen in .NET können eingebettete NULL-Zeichen aufweisen. Einer der auffälligsten Unterschiede zwischen einem ordinalen und einem kulturabhängigen Vergleich (einschließlich Vergleichen, die die invariante Kultur verwenden) betrifft die Behandlung von eingebetteten NULL-Zeichen in einer Zeichenfolge. Wenn Sie die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode und die <xref:System.String.Equals%2A?displayProperty=nameWithType>-Methode verwenden, um kulturabhängige Vergleiche (einschließlich Vergleichen, die die invariante Kultur verwenden) durchzuführen, werden diese Zeichen ignoriert. Bei kulturabhängigen Vergleichen können Zeichenfolgen mit eingebetteten NULL-Zeichen daher als gleichwertig mit Zeichenfolgen ohne diese Zeichen angesehen werden.  
   
 > [!IMPORTANT]
->  Auch wenn eingebettete NULL-Zeichen von Zeichenfolgenvergleichsmethoden ignoriert werden, ist dies bei Zeichenfolgensuchmethoden wie <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> und <xref:System.String.StartsWith%2A?displayProperty=nameWithType> nicht der Fall.  
+>  Auch wenn eingebettete NULL-Zeichen von Zeichenfolgenvergleichsmethoden ignoriert werden, ist dies bei Zeichenfolgensuchmethoden wie <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>und <xref:System.String.StartsWith%2A?displayProperty=nameWithType> nicht der Fall.  
   
  Im folgenden Beispiel wird ein kulturabhängiger Vergleich der Zeichenfolge "Aa" mit einer ähnlichen Zeichenfolge durchgeführt, die mehrere eingebettete NULL-Zeichen zwischen "A" und "a" enthält, und es wird angezeigt, inwieweit die beiden Zeichenfolgen als gleich betrachtet werden.  
   
@@ -212,7 +214,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> und <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> verwenden die Binärwerte direkt und eignen sich am besten für Vergleiche. Wenn Sie nicht sicher über die Vergleichseinstellungen sind, verwenden Sie einen dieser beiden Werte. Da hier jedoch ein Vergleich auf Byteebene durchgeführt wird, erfolgt die Sortierung nicht anhand einer linguistischen Sortierreihenfolge (analog zu einem englischen Wörterbuch), sondern anhand einer binären Rangfolge. Die Ergebnisse erscheinen Benutzern möglicherweise in den meisten Kontexten seltsam.  
   
- Ordinalemantik ist die Standardeinstellung für <xref:System.String.Equals%2A?displayProperty=nameWithType>-Überladungen, die kein <xref:System.StringComparison>-Argument (einschließlich des Gleichheitsoperators) enthalten. In jedem Fall wird empfohlen, eine Überladung mit einem <xref:System.StringComparison> -Parameter aufzurufen.  
+ Ordinalemantik ist die Standardeinstellung für <xref:System.String.Equals%2A?displayProperty=nameWithType> -Überladungen, die kein <xref:System.StringComparison> -Argument (einschließlich des Gleichheitsoperators) enthalten. In jedem Fall wird empfohlen, eine Überladung mit einem <xref:System.StringComparison> -Parameter aufzurufen.  
   
 ### <a name="string-operations-that-use-the-invariant-culture"></a>Zeichenfolgenoperationen mit der invarianten Kultur  
  Vergleiche mit der invarianten Kultur verwenden die <xref:System.Globalization.CultureInfo.CompareInfo%2A>-Eigenschaft, die von der statischen <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. Dieses Verhalten ist in allen Systemen gleich: Zeichen außerhalb des Bereichs werden in Zeichen übersetzt, von denen angenommen wird, dass es sich um die invarianten Entsprechungen handelt. Diese Richtlinie kann für das kulturübergreifende Beibehalten eines Satzes von Zeichenfolgenverhalten hilfreich sein, führt jedoch oftmals zu unerwarteten Ergebnissen.  
@@ -232,7 +234,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
   
  Insgesamt verfügt die invariante Kultur nur über sehr wenige Eigenschaften, die für einen Vergleich hilfreich sind. Sie führt Vergleiche mit linguistischer Relevanz durch und kann daher keine vollständige symbolische Äquivalenz garantieren, eignet sich jedoch nicht unbedingt für die Anzeige in einer beliebigen Kultur. Einer der wenigen Gründe, <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> für Vergleiche zu verwenden, besteht darin, sortierte Daten für die kulturübergreifend einheitliche Anzeige beizubehalten. Wenn beispielsweise eine große Datendatei mit einer Liste sortierter Anzeigebezeichner einer Anwendung angehört, würde das Hinzufügen von Elementen zu dieser Liste einen Einfügevorgang mit invarianter Sortierung erfordern.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="choosing_a_stringcomparison_member_for_your_method_call"></a>   
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Auswählen eines StringComparison-Members für den Methodenaufruf  
@@ -245,7 +247,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
 |Einige beibehaltene, linguistisch relevante Daten.<br /><br /> Anzeige von linguistischen Daten, die eine feste Sortierreihenfolge erfordern.|Kulturunabhängige Daten, die dennoch linguistisch relevant sind.|<xref:System.StringComparison.InvariantCulture><br /><br /> - oder - <br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
 |Daten, die dem Benutzer angezeigt werden.<br /><br /> Die meisten Benutzereingaben.|Daten, die lokale linguistische Regeln erfordern.|<xref:System.StringComparison.CurrentCulture><br /><br /> - oder - <br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="common_string_comparison_methods_in_the_net_framework"></a>   
 ## <a name="common-string-comparison-methods-in-net"></a>Allgemeine Methoden zum Zeichenfolgenvergleich in .NET  
@@ -254,7 +256,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
 ### <a name="stringcompare"></a>String.Compare  
  Standardinterpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Der Aufruf dieser Methode stellt die zentrale Operation für Zeichenfolgeninterpretation dar. Aus diesem Grund sollten alle Instanzen von Methodenaufrufen untersucht werden, um zu bestimmen, ob Zeichenfolgen anhand der aktuellen Kultur oder unabhängig von der Kultur (symbolisch) interpretiert werden sollen. Üblicherweise handelt es sich um eine symbolische Interpretation, und stattdessen sollte ein <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>-Vergleich verwendet werden.  
+ Der Aufruf dieser Methode stellt die zentrale Operation für Zeichenfolgeninterpretation dar. Aus diesem Grund sollten alle Instanzen von Methodenaufrufen untersucht werden, um zu bestimmen, ob Zeichenfolgen anhand der aktuellen Kultur oder unabhängig von der Kultur (symbolisch) interpretiert werden sollen. Üblicherweise handelt es sich um eine symbolische Interpretation, und stattdessen sollte ein <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> -Vergleich verwendet werden.  
   
  Die <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>-Klasse, die von der <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird, enthält auch eine <xref:System.Globalization.CompareInfo.Compare%2A>-Methode, die zahlreiche Vergleichsoptionen (ordinal, ohne Leerraumzeichen, ohne Zeichen vom Typ Kana usw.) über die <xref:System.Globalization.CompareOptions>-Flagenumeration zur Verfügung stellt.  
   
@@ -285,7 +287,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
 ### <a name="chartoupper-and-chartolower"></a>Char.ToUpper und Char.ToLower  
  Standardinterpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Diese Methoden funktionieren ähnliche wie die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>-Methode und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode, die im vorherigen Abschnitt beschrieben werden.  
+ Diese Methoden funktionieren ähnliche wie die <xref:System.String.ToUpper%2A?displayProperty=nameWithType> -Methode und die <xref:System.String.ToLower%2A?displayProperty=nameWithType> -Methode, die im vorherigen Abschnitt beschrieben werden.  
   
 ### <a name="stringstartswith-and-stringendswith"></a>String.StartsWith und String.EndsWith  
  Standardinterpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
@@ -297,30 +299,30 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
   
  Die Durchführung von Vergleichen durch die Standardüberladungen dieser Methoden ist nicht konsistent. Alle <xref:System.String.IndexOf%2A?displayProperty=nameWithType>- und <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>-Methoden mit einem <xref:System.Char>-Parameter führen einen Ordinalvergleich durch. Die <xref:System.String.IndexOf%2A?displayProperty=nameWithType>- und die <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>-Standardmethode mit einem <xref:System.String>-Parameter führen dagegen einen kulturabhängigen Vergleich durch.  
   
- Wenn Sie die <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>-Methode oder die <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>-Methode aufrufen und eine Zeichenfolge übergeben, die in der aktuellen Instanz gesucht werden soll, empfiehlt es sich, eine Überladung aufrufen, die den <xref:System.StringComparison>-Typ explizit angibt. Mit den Überladungen, die ein <xref:System.Char> -Argument enthalten, können Sie keinen <xref:System.StringComparison> -Typ angeben.  
+ Wenn Sie die <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> -Methode oder die <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> -Methode aufrufen und eine Zeichenfolge übergeben, die in der aktuellen Instanz gesucht werden soll, empfiehlt es sich, eine Überladung aufrufen, die den <xref:System.StringComparison> -Typ explizit angibt. Mit den Überladungen, die ein <xref:System.Char> -Argument enthalten, können Sie keinen <xref:System.StringComparison> -Typ angeben.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="methods_that_perform_string_comparison_indirectly"></a>   
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Methoden für den indirekten Zeichenfolgenvergleich  
  Einige Methoden, die keine Zeichenfolgenmethoden darstellen und deren zentrale Operation ein Zeichenfolgenvergleich ist, verwenden den <xref:System.StringComparer> -Typ. Die <xref:System.StringComparer>-Klasse enthält sechs statische Eigenschaften, die <xref:System.StringComparer>-Instanzen zurückgeben, deren <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType>-Methoden folgende Arten von Zeichenfolgenvergleichen durchführen:  
   
--   Kulturabhängige Zeichenfolgenvergleiche mit der aktuellen Kultur. Dieses <xref:System.StringComparer>-Objekt wird von der <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben.  
+-   Kulturabhängige Zeichenfolgenvergleiche mit der aktuellen Kultur. Dieses <xref:System.StringComparer> -Objekt wird von der <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben.  
   
--   Vergleiche mit der aktuellen Kultur ohne Beachtung der Groß- und Kleinschreibung. Dieses <xref:System.StringComparer>-Objekt wird von der <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben.  
+-   Vergleiche mit der aktuellen Kultur ohne Beachtung der Groß- und Kleinschreibung. Dieses <xref:System.StringComparer> -Objekt wird von der <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben.  
   
--   Kulturunabhängige Vergleiche mit den Wortvergleichsregeln der invarianten Kultur. Dieses <xref:System.StringComparer>-Objekt wird von der <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben.  
+-   Kulturunabhängige Vergleiche mit den Wortvergleichsregeln der invarianten Kultur. Dieses <xref:System.StringComparer> -Objekt wird von der <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben.  
   
 -   Kulturunabhängige Vergleiche mit den Wortvergleichsregeln der invarianten Kultur ohne Beachtung der Groß- und Kleinschreibung. Dieses <xref:System.StringComparer>-Objekt wird von der <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben.  
   
--   Ordinalvergleich. Dieses <xref:System.StringComparer>-Objekt wird von der <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben.  
+-   Ordinalvergleich. Dieses <xref:System.StringComparer> -Objekt wird von der <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben.  
   
--   Ordinalvergleich ohne Beachtung der Groß- und Kleinschreibung. Dieses <xref:System.StringComparer>-Objekt wird von der <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben.  
+-   Ordinalvergleich ohne Beachtung der Groß- und Kleinschreibung. Dieses <xref:System.StringComparer> -Objekt wird von der <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben.  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort und Array.BinarySearch  
  Standardinterpretation: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Wenn Sie Daten in einer Auflistung speichern oder beibehaltene Daten aus einer Datei oder einer Datenbank in eine Auflistung lesen, können die Invarianten in der Auflistung durch einen Wechsel der aktuellen Kultur ungültig werden. Die <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>-Methode geht davon aus, dass die Elemente im zu durchsuchenden Array bereits sortiert wurden. Um die einzelnen Zeichenfolgenelemente im Array zu sortieren, ruft die <xref:System.Array.Sort%2A?displayProperty=nameWithType>-Methode die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode auf. Kulturabhängige Vergleich bergen ein gewisses Risiko, falls sich die Kultur zwischen dem Zeitpunkt der Sortierung des Arrays und dem Durchsuchen des Inhalts ändert. Im folgenden Code beispielsweise wird das Speichern und Abrufen für den Comparer ausgeführt, der implizit von der `Thread.CurrentThread.CurrentCulture` -Eigenschaft zurückgegeben wird. Wenn sich die Kultur zwischen dem Aufruf von `StoreNames` und dem Aufruf von `DoesNameExist`möglicherweise ändert, kann bei der binären Suche ein Fehler auftreten; dies gilt insbesondere, wenn der Arrayinhalt zwischen den beiden Methodenaufrufen beibehalten wird.  
+ Wenn Sie Daten in einer Auflistung speichern oder beibehaltene Daten aus einer Datei oder einer Datenbank in eine Auflistung lesen, können die Invarianten in der Auflistung durch einen Wechsel der aktuellen Kultur ungültig werden. Die <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> -Methode geht davon aus, dass die Elemente im zu durchsuchenden Array bereits sortiert wurden. Um die einzelnen Zeichenfolgenelemente im Array zu sortieren, ruft die <xref:System.Array.Sort%2A?displayProperty=nameWithType>-Methode die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode auf. Kulturabhängige Vergleich bergen ein gewisses Risiko, falls sich die Kultur zwischen dem Zeitpunkt der Sortierung des Arrays und dem Durchsuchen des Inhalts ändert. Im folgenden Code beispielsweise wird das Speichern und Abrufen für den Comparer ausgeführt, der implizit von der `Thread.CurrentThread.CurrentCulture` -Eigenschaft zurückgegeben wird. Wenn sich die Kultur zwischen dem Aufruf von `StoreNames` und dem Aufruf von `DoesNameExist`möglicherweise ändert, kann bei der binären Suche ein Fehler auftreten; dies gilt insbesondere, wenn der Arrayinhalt zwischen den beiden Methodenaufrufen beibehalten wird.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#7)]
  [!code-vb[Conceptual.Strings.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#7)]  
@@ -343,11 +345,11 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
  [!code-csharp[Conceptual.Strings.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect2.cs#10)]
  [!code-vb[Conceptual.Strings.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect2.vb#10)]  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="Formatted"></a>   
 ## <a name="displaying-and-persisting-formatted-data"></a>Anzeigen und Beibehalten von formatierten Daten  
- Wenn Sie Benutzern Daten anzeigen, die keine Zeichenfolge sind, z. B. Zahlen sowie Datumsangaben und Zeitangaben, formatieren Sie diese den Kultureinstellungen des Benutzers entsprechend. Standardmäßig verwenden die <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und die `ToString`-Methoden der numerischen Typen und der Datums- und Uhrzeittypen die aktuelle Threadkultur für Formatierungsvorgänge. Um explizit anzugeben, dass die Formatierungsmethode die aktuelle Kultur verwenden soll, können Sie eine Überladung einer Formatierungsmethode mit einem `provider`-Parameter, z. B. <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> oder <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, aufrufen und der Methode die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft übergeben.  
+ Wenn Sie Benutzern Daten anzeigen, die keine Zeichenfolge sind, z. B. Zahlen sowie Datumsangaben und Zeitangaben, formatieren Sie diese den Kultureinstellungen des Benutzers entsprechend. Standardmäßig verwenden die <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und die `ToString`-Methoden der numerischen Typen und der Datums- und Uhrzeittypen die aktuelle Threadkultur für Formatierungsvorgänge. Um explizit anzugeben, dass die Formatierungsmethode die aktuelle Kultur verwenden soll, können Sie eine Überladung einer Formatierungsmethode mit einem `provider` -Parameter, z. B. <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> oder <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, aufrufen und der Methode die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft übergeben.  
   
  Sie können Daten, die keine Zeichenfolge sind, entweder als Binärdaten oder als formatierte Daten beibehalten. Wenn Sie möchten, dass sie als formatierte Daten gespeichert werden, sollten Sie eine Überladung einer Formatierungsmethode aufrufen, die einen `provider`-Parameter einschließt, und dabei die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft übergeben. Die invariante Kultur stellt ein konsistentes Format für formatierte Daten bereit, das unabhängig von der Kultur und dem Computers ist. Im Gegensatz dazu bringt das Beibehalten von Daten, die mit anderen Kulturen als der invarianten Kultur formatiert werden, einige Einschränkungen mit sich:  
   
@@ -362,7 +364,7 @@ Ferner können Zeichenfolgenvergleiche, die verschiedene .NET-Versionen nutzen o
  [!code-csharp[Conceptual.Strings.BestPractices#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
  [!code-vb[Conceptual.Strings.BestPractices#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]  
   
- Wenn Sie jedoch die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft mit <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ersetzen in den Aufrufen von <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> und <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, werden die beibehaltenen Datums- und Uhrzeitdaten erfolgreich wiederhergestellt, wie die folgende Ausgabe zeigt.  
+ Wenn Sie jedoch die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft mit <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ersetzen in den Aufrufen von <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> und <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, werden die beibehaltenen Datums- und Uhrzeitdaten erfolgreich wiederhergestellt, wie die folgende Ausgabe zeigt.  
   
 ```  
 06.05.1758 21:26  

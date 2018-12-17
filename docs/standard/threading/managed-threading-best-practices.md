@@ -1,6 +1,6 @@
 ---
 title: Empfohlene Vorgehensweise für das verwaltete Threading
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562371"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150614"
 ---
-# <a name="managed-threading-best-practices"></a>Empfohlene Vorgehensweise für das verwaltete Threading
+# <a name="managed-threading-best-practices"></a>Best Practices für verwaltetes Threading
 Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforderlich. Für die meisten Aufgaben können Sie die Komplexität reduzieren, indem Sie Ausführungsanforderungen mithilfe von Threadpoolthreads in Warteschlangen einfügen. Dieses Thema behandelt problematische Situationen wie die Koordinierung der Verarbeitung von mehreren Threads oder die Behandlung von blockierenden Threads.  
   
 > [!NOTE]
@@ -70,37 +70,18 @@ else {
   
  Racebedingungen können auch auftreten, wenn Sie die Aktivitäten von mehreren Threads synchronisieren. Bei jeder Codezeile, die Sie schreiben, müssen Sie sich überlegen, was passieren kann, wenn ein Thread vor der Ausführung der Zeile (oder jeder einzelnen Anweisung, aus denen die Zeile besteht) präemptiv unterbrochen und die Ausführung von einem anderen Thread fortgesetzt wird.  
   
-## <a name="number-of-processors"></a>Anzahl der Prozessoren  
- Die meisten Computer verfügen jetzt über mehrere Prozessoren (auch als Kerne bezeichnet), selbst kleine Geräte wie Tablets und Telefone. Wenn Sie wissen, dass Sie Software entwickeln, die auch auf Computern mit nur einem Prozessor ausgeführt wird, sollten Sie beachten, dass Multithreading auf Computern mit einem Prozessor andere Probleme löst, als auf Computern mit mehreren Prozessoren.  
-  
-### <a name="multiprocessor-computers"></a>Multiprozessorcomputer  
- Multithreading ermöglicht einen höheren Durchsatz. Zehn Prozessoren können das Zehnfache von einem Prozessor leisten. Dies ist jedoch nur möglich, wenn die Aufgaben so verteilt werden, dass alle zehn gleichzeitig Verarbeitungsschritte ausführen können. Threads stellen eine einfache Methode dar, um die Aufgaben aufzuteilen und die zusätzliche Verarbeitungsleistung auszunutzen. Bei Verwendung von Multithreading auf einem Multiprozessorcomputer gelten die folgenden Grundsätze:  
-  
--   Die Anzahl der gleichzeitig ausführbaren Threads ist begrenzt auf die Anzahl der Prozessoren.  
-  
--   Ein Hintergrundthread wird nur dann ausgeführt, wenn die Anzahl der ausgeführten Vordergrundthreads kleiner als die Anzahl der Prozessoren ist.  
-  
--   Wenn Sie für einen Thread die <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>-Methode aufrufen, hängt es von der Anzahl der Prozessoren und der Anzahl der aktuell auf ihre Ausführung wartenden Threads ab, ob dieser Thread sofort ausgeführt wird oder nicht.  
-  
--   Racebedingungen können nicht nur auftreten, weil Threads in einem nicht erwarteten Moment präemptiv unterbrochen werden, sondern auch weil zwei mit verschiedenen Prozessoren ausgeführte Threads miteinander konkurrieren können, um denselben Codeblock zu erreichen.  
-  
-### <a name="single-processor-computers"></a>Computer mit einem Prozessor  
- Durch Multithreading sorgen Sie für eine höhere Ansprechempfindlichkeit für den Benutzer und nutzen Leerlaufzeiten für Hintergrundaufgaben. Bei Verwendung von Multithreading auf einem Computer mit einem Prozessor gelten die folgenden Grundsätze:  
-  
--   Zu jedem Zeitpunkt wird immer nur ein Thread ausgeführt.  
-  
--   Ein Hintergrundthread wird nur dann ausgeführt, wenn sich der Hauptbenutzerthread im Leerlauf befindet. Ein Vordergrundthread, der konstant ausgeführt wird, entzieht den Hintergrundthreads Prozessorzeit.  
-  
--   Wenn Sie für einen Thread die <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>-Methode aufrufen, wird die Ausführung des Threads erst dann gestartet, wenn der aktuelle Thread die Ausführung beendet oder vom Betriebssystem präemptiv unterbrochen wird.  
-  
--   Racebedingungen treten in der Regel auf, weil der Programmierer nicht bedacht hat, dass ein Thread in einem ungeeigneten Moment präemptiv unterbrochen werden kann, wodurch u. U. ein anderer Thread einen Codeblock zuerst erreicht.  
-  
 ## <a name="static-members-and-static-constructors"></a>Statische Member und statische Konstruktoren  
  Eine Klasse wird erst dann initialisiert, wenn ihr Klassenkonstruktor (`static`-Konstruktor in C#, `Shared Sub New` in Visual Basic) nicht mehr ausgeführt wird. Um die Codeausführung für einen nicht initialisierten Typ zu verhindern, blockiert die Common Language Runtime alle Aufrufe von anderen Threads an `static`-Member der Klasse (`Shared`-Member in Visual Basic), bis der Klassenkonstruktor nicht mehr ausgeführt wird.  
   
  Wenn ein Klassenkonstruktor zum Beispiel einen neuen Thread startet und die Threadprozedur einen `static`-Member der Klasse aufruft, wird der neue Thread blockiert, bis der Klassenkonstruktor beendet wird.  
   
  Dies gilt für jeden Typ, der über einen `static`-Konstruktor verfügen kann.  
+
+## <a name="number-of-processors"></a>Anzahl von Prozessoren
+
+Die Multithreadarchitektur kann davon beeinflusst werden, ob das System mehrere Prozessoren oder nur einen Prozessor enthält. Weitere Informationen finden Sie unter [Anzahl von Prozessoren](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+
+Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayProperty=nameWithType>, um die zur Laufzeit verfügbare Anzahl von Prozessoren zu bestimmen.
   
 ## <a name="general-recommendations"></a>Allgemeine Empfehlungen  
  Beachten Sie bei Verwendung von mehreren Threads die folgenden Richtlinien:  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  In .NET Framework, Version 2.0, stellt die <xref:System.Threading.Interlocked.Add%2A>-Methode atomare Aktualisierungen in Schrittweiten bereit, die größer als 1 sind.  
+    > Verwenden Sie im .NET Framework 2.0 und höher die <xref:System.Threading.Interlocked.Add%2A>-Methode für unteilbare Inkremente größer als 1.  
   
      Im zweiten Beispiel wird eine Referenztypvariable nur aktualisiert, wenn es sich um einen NULL-Verweis (`Nothing` in Visual Basic) handelt.  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  In .NET Framework, Version 2.0, verfügt die <xref:System.Threading.Interlocked.CompareExchange%2A>-Methode über eine generische Überladung, die als typsicherer Ersatz für jeden Referenztyp verwendet werden kann.  
+    > Ab .NET Framework 2.0 bietet die Überladung der <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>-Methoden eine typsichere Alternative für Verweistypen.
   
 ## <a name="recommendations-for-class-libraries"></a>Empfehlungen für Klassenbibliotheken  
  Beachten Sie die folgenden Richtlinien, wenn Sie Klassenbibliotheken für Multithreading entwerfen:  

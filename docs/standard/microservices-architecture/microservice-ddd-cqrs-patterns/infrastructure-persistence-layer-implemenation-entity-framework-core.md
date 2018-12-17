@@ -1,17 +1,17 @@
 ---
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
-description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e0e7adad7ad2d679ccff2f1c6a421922ce2523d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205294"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151017"
 ---
-# <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
+# <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
 Bei der Verwendung von relationalen Datenbanken wie SQL Server, Oracle oder PostgreSQL wird empfohlen, die Persistenzebene auf Entity Framework (EF) basierend zu implementieren. EF unterstützt LINQ und stellt stark typisierte Objekte für Ihr Modell sowie eine vereinfachte Persistenz für Ihre Datenbank bereit.
 
@@ -25,17 +25,17 @@ Da in der Microsoft-Dokumentation bereits eine Einführung in EF Core verfügbar
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Entity Framework Core**
-    [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
+- **Entity Framework Core** \
+  [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **Erste Schritte mit ASP.NET Core MVC und Entity Framework Core mithilfe von Visual Studio**
-    [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
+- **Erste Schritte mit ASP.NET Core MVC und Entity Framework Core mithilfe von Visual Studio** \
+  [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext-Klasse**
-    [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
+- **DbContext-Klasse** \
+  [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **Vergleichen von EF Core und EF 6.x**
-    [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
+- **Vergleichen von EF Core und EF 6.x** \
+  [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Die Infrastruktur in Entity Framework Core aus DDD-Sicht
 
@@ -82,7 +82,7 @@ public class Order : Entity
 
 Beachten Sie, dass auf die Eigenschaft `OrderItems` mit `IReadOnlyCollection<OrderItem>` nur schreibgeschützt zugegriffen werden kann. Dieser Typ ist schreibgeschützt, damit er vor regelmäßigen externen Aktualisierungen geschützt ist. 
 
-EF Core bietet eine Möglichkeit, das Domänenmodell der physischen Datenbank zuzuordnen, ohne das Domänenmodell zu „verunreinigen“. Dabei handelt es sich um reinen .NET-POCO-Code, da die Zuordnungsaktion in der Persistenzebene implementiert wird. Bei dieser Zuordnungsaktion müssen Sie die Zuordnung zwischen den Feldern und der Datenbank konfigurieren. Im folgenden Beispiel einer OnModelCreating-Methode weist der hervorgehobene Code EF Core an, über sein Feld auf die OrderItems-Eigenschaft zuzugreifen.
+EF Core bietet eine Möglichkeit, das Domänenmodell der physischen Datenbank zuzuordnen, ohne das Domänenmodell zu „verunreinigen“. Dabei handelt es sich um reinen .NET-POCO-Code, da die Zuordnungsaktion in der Persistenzebene implementiert wird. Bei dieser Zuordnungsaktion müssen Sie die Zuordnung zwischen den Feldern und der Datenbank konfigurieren. Im folgenden Beispiel der `OnModelCreating`-Methode von `OrderingContext` und der `OrderEntityTypeConfiguration`Klasse weist der Aufruf von `SetPropertyAccessMode` EF Core an, über ein Feld auf die Eigenschaft `OrderItems` zuzugreifen.
 
 ```csharp
 // At OrderingContext.cs from eShopOnContainers
@@ -112,9 +112,9 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Bei Verwendung von Feldern anstelle von Eigenschaften wird die OrderItem-Entität so beibehalten, als weise sie eine List&lt;OrderItem&gt;-Eigenschaft auf. Sie hat jedoch einen einzelnen Accessor, die `AddOrderItem`-Methode für das Hinzufügen neuer Elemente zur Bestellung. Daher sind das Verhalten und die Daten miteinander verknüpft und innerhalb eines Anwendungscodes, der das Domänenmodell verwendet, konsistent.
+Bei Verwendung von Feldern anstelle von Eigenschaften wird die `OrderItem`-Entität so beibehalten, als weise sie eine `List<OrderItem>`-Eigenschaft auf. Sie hat jedoch einen einzelnen Accessor, die `AddOrderItem`-Methode zum Hinzufügen neuer Elemente zur Bestellung. Daher sind das Verhalten und die Daten miteinander verknüpft und innerhalb eines Anwendungscodes, der das Domänenmodell verwendet, konsistent.
 
-## <a name="implementing-custom-repositories-with-entity-framework-core"></a>Implementieren von benutzerdefinierten Repositorys mit Entity Framework Core
+## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementieren von benutzerdefinierten Repositorys mit Entity Framework Core
 
 Auf der Implementierungsebene ist ein Repository lediglich eine Klasse mit Datenpersistenzcode, die bei Aktualisierungen von einer Arbeitseinheit (DBContext in EF Core) koordiniert wird. Dies wird anhand der folgenden Klasse gezeigt:
 
@@ -158,11 +158,11 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
 Beachten Sie, dass die IBuyerRepository-Schnittstelle von der Domänenmodellebene als Vertrag übernommen wird. Die Repository-Implementierung erfolgt jedoch auf der Persistenz- und Infrastrukturebene.
 
-Der EF-DbContext stammt mittels Abhängigkeitseinfügung aus dem Konstruktor. Aufgrund seiner Standardlebensdauer (ServiceLifetime.Scoped) im IoC-Container (die auch explizit mit services.AddDbContext&lt;&gt; festgelegt werden kann) wird er von mehreren Repositorys innerhalb desselben HTTP-Anforderungsbereichs verwendet.
+Der EF-DbContext stammt mittels Abhängigkeitseinfügung aus dem Konstruktor. Aufgrund seiner Standardlebensdauer (`ServiceLifetime.Scoped`) im IoC-Container (die auch explizit mit `services.AddDbContext<>` festgelegt werden kann) wird er von mehreren Repositorys innerhalb desselben HTTP-Anforderungsbereichs verwendet.
 
 ### <a name="methods-to-implement-in-a-repository-updates-or-transactions-versus-queries"></a>Methoden für die Implementierung in einem Repository (Aktualisierungen oder Transaktionen vs. Abfragen)
 
-In jeder Repository-Klasse sollten Sie die Persistenzmethoden vorsehen, die den Zustand der Entitäten aktualisieren, die in seinem zugehörigen Aggregat enthalten sind. Denken Sie daran, dass zwischen einem Aggregat und dem zugehörigen Repository eine 1:1-Beziehung besteht. Berücksichtigen Sie, dass ein aggregiertes Stammentitätsobjekt in seinem EF-Diagramm eingebettete untergeordnete Entitäten aufweisen kann. Ein Käufer könnte beispielsweise mehrere Zahlungsmethoden als verknüpfte untergeordnete Entitäten aufweisen.
+In jeder Repository-Klasse sollten Sie die Persistenzmethoden vorsehen, die den Zustand der Entitäten aktualisieren, die in seinem zugehörigen Aggregat enthalten sind. Denken Sie daran, dass zwischen einem Aggregat und dem zugehörigen Repository eine 1:1-Beziehung besteht. Berücksichtigen Sie, dass ein aggregiertes Stammentitätsobjekt in seinem EF-Graph eingebettete untergeordnete Entitäten aufweisen kann. Ein Käufer könnte beispielsweise mehrere Zahlungsmethoden als verknüpfte untergeordnete Entitäten aufweisen.
 
 Da der Ansatz für den Microservice Bestellung in eShopOnContainers auch auf CQS/CQRS basiert, sind die meisten Abfragen nicht in benutzerdefinierten Repositorys implementiert. Entwickler können die Abfragen und Verknüpfungen, die sie für die Darstellungsschicht benötigen, ohne die Einschränkungen von Aggregaten, benutzerdefinierten Repositorys pro Aggregat und generell DDD erstellen. Die meisten der in diesem Leitfaden vorgeschlagenen benutzerdefinierten Repositorys weisen mehrere Aktualisierungs- oder Transaktionsmethoden, aber nur die für das Abrufen der zu aktualisierenden Daten benötigten Abfragemethoden auf. Das Repository BuyerRepository implementiert beispielsweise eine FindAsync-Methode, da die Anwendung wissen muss, ob ein bestimmter Käufer vorhanden ist, bevor im Zusammenhang mit der Bestellung ein neuer Käufer angelegt wird.
 
@@ -174,11 +174,11 @@ Die DbContext-Klasse von Entity Framework basiert auf den Mustern Arbeitseinheit
 
 Das Implementieren benutzerdefinierter Repositorys bietet jedoch mehrere Vorteile, wenn komplexere Microservices oder Anwendungen umgesetzt werden. Die Muster Arbeitseinheit und Repository sollen die Infrastrukturpersistenzebene kapseln, damit sie von den Anwendungs- und Domänenmodellebenen entkoppelt wird. Die Implementierung dieser Muster kann eine Verwendung von Modell-Repositorys ermöglichen, die den Zugriff auf die Datenbank simulieren.
 
-Abbildung 9-18 zeigt die Unterschiede zwischen einer Vorgehensweise ohne Repositorys (d.h. direkte Verwendung von EF-DbContext) im Vergleich zu einer Verwendung von Repositorys, welche das Modellieren dieser Repositorys erleichtert.
+Abbildung 7-18 zeigt die Unterschiede zwischen einer Vorgehensweise ohne Repositorys (d.h. direkte Verwendung von EF-DbContext) im Vergleich zu einer Verwendung von Repositorys, die das Modellieren dieser Repositorys erleichtert.
 
-![](./media/image19.png)
+![Vergleich zwischen der Verwendung eines benutzerdefinierten Repositorys und eines einfachen DbContext: Das benutzerdefinierte Repository fügt eine Abstraktionsebene hinzu, mit der Tests durch das Modellieren des Repositorys vereinfacht werden können.](./media/image19.png)
 
-**Abbildung 9-18.** Verwenden von benutzerdefinierten Repositorys im Vergleich zu einfachem DbContext
+**Abbildung 7-18**. Verwenden von benutzerdefinierten Repositorys im Vergleich zu einfachem DbContext
 
 Es gibt mehrere Alternativen für die Modellierung. Sie können lediglich Repositorys oder eine vollständige Arbeitseinheit modellieren. Üblicherweise reicht es aus, nur die Repositorys zu modellieren. Das komplexe Abstrahieren und Modellieren einer vollständigen Arbeitseinheit ist in der Regel nicht erforderlich.
 
@@ -186,13 +186,13 @@ Wenn wir uns weiter unten mit der Anwendungsebene befassen, werden Sie sehen, wi
 
 Mithilfe benutzerdefinierter Repositorys können Sie also Code leichter mit Komponententests prüfen, auf die der Datenschichtzustand keine Auswirkungen hat. Wenn Sie Tests ausführen, die auch über Entity Framework auf die eigentliche Datenbank zugreifen, handelt es sich hierbei nicht um Komponententests, sondern um Integrationstests, die deutlich langsamer sind.
 
-Wenn Sie DbContext direkt verwenden, können Sie Komponententests nur mithilfe eines In-Memory-SQL Servers mit vorhersagbaren Daten für Komponententests ausführen. Sie könnten keine Pseudoobjekte und falschen Daten auf dieselbe Weise auf der Repository-Ebene steuern. Sie könnten natürlich jederzeit die MVC-Controller testen.
+Wenn Sie DbContext direkt verwenden, können Sie Komponententests nur mithilfe einer In-Memory-Instanz von SQL Server mit vorhersagbaren Daten für Komponententests ausführen. Doch das Modellieren von DbContext oder das Steuern falscher Daten erfordern mehr Arbeit als das Modellieren auf Repositoryebene. Sie könnten natürlich jederzeit die MVC-Controller testen.
 
 ## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>EF-DbContext und IUnitOfWork-Instanzlebensdauer in Ihrem IoC-Container
 
-Das DbContext-Objekt (das als IUnitOfWork-Objekt verfügbar gemacht wird) muss möglicherweise von mehreren Repositorys innerhalb desselben HTTP-Anforderungsbereichs gemeinsam genutzt werden. Dies ist beispielsweise der Fall, wenn von dem ausgeführten Vorgang mehrere Aggregate betroffen sind oder wenn Sie mehrere Repository-Instanzen verwenden. Erwähnenswert ist auch die Tatsache, dass die IUnitOfWork-Schnittstelle Teil Ihrer Domänenebene ist und es sich dabei nicht um den Typ EF Core handelt.
+Das `DbContext`-Objekt (verfügbar als `IUnitOfWork`-Objekt) muss von mehreren Repositorys innerhalb desselben HTTP-Anforderungsbereichs gemeinsam genutzt werden. Dies ist beispielsweise der Fall, wenn von dem ausgeführten Vorgang mehrere Aggregate betroffen sind oder wenn Sie mehrere Repository-Instanzen verwenden. Beachten Sie, dass die `IUnitOfWork`-Schnittstelle Teil Ihrer Domänenebene ist. Es handelt sich dabei nicht um den EF Core-Typ.
 
-Hierzu muss für die Instanz des DbContext-Objekts die Servicelebensdauer auf ServiceLifetime.Scoped festgelegt sein. Dies ist die Standardlebensdauer bei der Registrierung eines DbContext mit services.AddDbContext in Ihrem IoC-Container mit der Methode ConfigureServices der Datei „Startup.cs“ in Ihrem ASP.NET Core-Web-API-Projekt. Dies wird im folgenden Code veranschaulicht.
+Damit mehrere Repositorys im selben HTTP-Anforderungsbereichs das Objekt gemeinsam nutzen können, muss für die Instanz des `DbContext`-Objekts die Dienstlebensdauer auf „ServiceLifetime.Scoped“ festgelegt sein. Dies ist die Standardlebensdauer beim Registrieren eines `DbContext`-Objekts mit `services.AddDbContext` in Ihrem IoC-Container mit der Methode ConfigureServices der `Startup.cs`-Datei in Ihrem ASP.NET Core-Web-API-Projekt. Dies wird im folgenden Code veranschaulicht.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -234,20 +234,20 @@ Beachten Sie, dass eine Verwendung der Singleton-Lebensdauer für das Repository
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (Implementieren der Muster „Repository“ und „Arbeitseinheit“ in eine ASP.NET MVC-Anwendung)**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+- **Implementieren der Muster Repository und Arbeitseinheit in eine ASP.NET MVC-Anwendung** \
+  [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain (Implementierungsstrategien für das Muster „Repository“ mit Entity Framework, Dapper und Chain**
-    [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
+- **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain (Implementierungsstrategien für das Repositorymuster mit Entity Framework, Dapper und Chain)** \
+  [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes (Vergleichen der Lebensdauer von Containerdiensten mit ASP.NET Core IoC und von Autofac IoC-Containerinstanzbereichen**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+- **Cesar de la Torre. Vergleich der Lebensdauer: ASP.NET Core-IoC-Containerdienste vs. Autofac-IoC-Containerinstanzbereiche** \
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Tabellenzuordnung
 
 Bei der Tabellenzuordnung werden die Tabellendaten identifiziert, die aus der Datenbank abgerufen und in dieser gespeichert werden sollen. Sie haben bereits gesehen, wie Domänenentitäten (z.B. eine Produkt- oder Bestellungsdomäne) verwendet werden können, um ein zugehöriges Datenbankschema zu generieren. Bei der Entwicklung von EF spielte das Konzept der *Konventionen* eine wichtige Rolle. Konventionen behandeln Fragen wie „Wie wird der Name der Tabelle lauten?“ oder „Welche Eigenschaft hat der Primärschlüssel?“. Konventionen basieren üblicherweise auf konventionellen Namen. Beim Primärschlüssel handelt es sich z.B. in der Regel um eine auf ID endende Eigenschaft.
 
-Gemäß der Konvention ist jede Entität so eingerichtet, dass sie einer Tabelle mit dem gleichen Namen wie die DbSet&lt;TEntity&gt;-Eigenschaft zugeordnet ist, die die Entität für den abgeleiteten Kontext verfügbar macht. Wenn kein DbSet&lt;TEntity&gt;-Wert für die betreffende Entität bereitgestellt wird, wird der Klassenname verwendet.
+Gemäß der Konvention ist jede Entität so eingerichtet, dass sie einer Tabelle mit dem gleichen Namen wie die `DbSet<TEntity>`-Eigenschaft zugeordnet ist, die die Entität für den abgeleiteten Kontext verfügbar macht. Wenn kein `DbSet<TEntity>`-Wert für die betreffende Entität bereitgestellt wird, wird der Klassenname verwendet.
 
 ### <a name="data-annotations-versus-fluent-api"></a>Datenanmerkungen im Vergleich zu Fluent-API
 
@@ -257,7 +257,7 @@ Datenanmerkungen müssen für die Entitätsmodellklassen selbst verwendet werden
 
 ### <a name="fluent-api-and-the-onmodelcreating-method"></a>Fluent-API und die OnModelCreating-Methode
 
-Wie bereits erwähnt wurde, können Sie die OnModelCreating-Methode in der DbContext-Klasse verwenden, um Konventionen und Zuordnungen zu ändern. 
+Wie bereits erwähnt wurde, können Sie die OnModelCreating-Methode in der DbContext-Klasse verwenden, um Konventionen und Zuordnungen zu ändern.
 
 Der Microservice Bestellung in eShopOnContainers implementiert bei Bedarf explizit die Zuordnung und Konfiguration, wie der folgende Code zeigt.
 
@@ -294,7 +294,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
             orderConfiguration.Property<string>("Description").IsRequired(false);
 
             var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
-            
+
             // DDD Patterns comment:
             //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
             navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
@@ -321,39 +321,39 @@ Sie könnten alle Fluent-API-Zuordnungen innerhalb derselben OnModelCreating-Met
 
 Der Code im Beispiel zeigt einige explizite Deklarationen und Zuordnungen. EF Core-Konventionen führen viele dieser Zuordnungen jedoch automatisch aus, sodass der von Ihnen tatsächlich benötigte Code einen geringeren Umfang hätte.
 
-
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Der Hi/Lo-Algorithmus in EF Core
 
 Ein interessanter Aspekt des Codes im vorherigen Beispiel ist die Tatsache, dass er den [Hi/Lo-Algorithmus](https://vladmihalcea.com/the-hilo-algorithm/) als Schlüsselgenerierungsstrategie verwendet.
 
-Der Hi/Lo-Algorithmus ist nützlich, wenn Sie eindeutige Schlüssel benötigen. Der Hi/Lo-Algorithmus weist im Wesentlichen Tabellenzeilen eindeutige Bezeichner zu, muss die Zeile aber nicht unverzüglich in der Datenbank speichern. Dadurch können Sie die Bezeichner sofort verwenden – wie bei regulären sequenziellen Datenbank-IDs.
+Der Hi/Lo-Algorithmus ist nützlich, wenn Sie eindeutige Schlüssel benötigen, bevor Sie Änderungen committen. Der Hi/Lo-Algorithmus weist im Wesentlichen Tabellenzeilen eindeutige Bezeichner zu, muss die Zeile aber nicht unverzüglich in der Datenbank speichern. Dadurch können Sie die Bezeichner sofort verwenden – wie bei regulären sequenziellen Datenbank-IDs.
 
-Der Hi/Lo-Algorithmus beschreibt einen Mechanismus für das Generieren sicherer IDs auf der Clientseite und nicht in der Datenbank. *Sicher* bedeutet in diesem Kontext „ohne Konflikte“. Dieser Algorithmus ist aus den folgenden Gründen interessant:
+Der Hi/Lo-Algorithmus beschreibt einen Mechanismus zum Abrufen eines Batches von eindeutigen IDs aus einer zugehörigen Datenbanksequenz. Die Verwendung dieser IDs gilt als sicher, da die Datenbank die Eindeutigkeit garantiert, sodass keine Konflikte zwischen Benutzern auftreten. Dieser Algorithmus ist aus den folgenden Gründen interessant:
 
--   Das Arbeitseinheitsmuster wird nicht unterbrochen.
+- Das Arbeitseinheitsmuster wird nicht unterbrochen.
 
--   Es sind keine Roundtrips erforderlich (wie bei Sequenzgeneratoren in anderen DBMS-Systemen).
+- Sequenz-IDs werden batchweise abgerufen, um Roundtrips zur Datenbank zu minimieren.
 
--   Er generiert einen visuell lesbaren Bezeichner (im Gegensatz zu Techniken, die GUIDs zu verwenden).
+- Er generiert einen visuell lesbaren Bezeichner (im Gegensatz zu Techniken, die GUIDs zu verwenden).
 
 EF Core unterstützt wie im vorigen Beispiel gezeigt [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) mit der ForSqlServerUseSequenceHiLo-Methode.
 
-### <a name="mapping-fields-instead-of-properties"></a>Zuordnen von Feldern anstelle von Eigenschaften
+### <a name="map-fields-instead-of-properties"></a>Zuordnen von Feldern anstelle von Eigenschaften
 
-Mit diesem seit EF Core 1.1 verfügbaren Features können Sie direkt Spalten zu Feldern zuordnen. Es ist möglich,in der Entitätsklasse keine Eigenschaften zu verwenden und lediglich Spalten einer Tabelle zu Feldern zuzuordnen. Ein typischer Anwendungsfall hierfür wären private Felder für einen internen Zustand, auf die nicht von außerhalb der Entität zugegriffen werden muss. 
+Mit diesem seit EF Core 1.1 verfügbaren Features können Sie direkt Spalten zu Feldern zuordnen. Es ist möglich,in der Entitätsklasse keine Eigenschaften zu verwenden und lediglich Spalten einer Tabelle zu Feldern zuzuordnen. Ein typischer Anwendungsfall hierfür wären private Felder für einen internen Zustand, auf die nicht von außerhalb der Entität zugegriffen werden muss.
 
 Hierzu können Sie einzelne Felder oder auch Auflistungen wie z.B. ein `List<>`-Feld verwenden. Dieser Punkt wurde bereits oben in Zusammenhang mit dem Modellieren der Domänenmodellklassen erwähnt, aber hier können Sie sehen, wie die Zuordnung mit der `PropertyAccessMode.Field`-Konfiguration ausgeführt wird, die im vorherigen Code gekennzeichnet ist.
 
-### <a name="using-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Verwenden von Schatteneigenschaften in EF Core, die auf der Infrastrukturebene verborgen sind
+### <a name="use-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Verwenden von auf Infrastrukturebene verborgenen Schatteneigenschaften in EF Core
 
 Schatteneigenschaften in EF Core sind Eigenschaften, die nicht in Ihren Entitätsklassenmodell vorhanden sind. Die Werte und Zustände dieser Eigenschaften werden ausschließlich in der [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker)-Klasse auf der Infrastrukturebene verwaltet.
 
+## <a name="implement-the-query-specification-pattern"></a>Implementieren des Abfragespezifikationsmusters
 
-## <a name="implementing-the-specification-pattern"></a>Implementieren des Spezifikationsmusters
+Wie weiter oben bereits erläutert, ist das Abfragespezifikationsmuster ein domänengesteuertes Entwurfsmuster, das als der Ort konzipiert wurde, an dem Sie die Definition einer Abfrage mit optionaler Sortier- und Auslagerungslogik ablegen können.
 
-Wie bereits oben im Abschnitt über die Muster erläutert wurde, ist das Spezifikationsmuster (dessen vollständiger Name Abfragespezifikationsmuster lauten müsste) ein domänengesteuertes Entwurfsmuster, das als Ort dient, an dem Sie die Definition einer Abfrage mit optionaler Sortier- und Auslagerungslogik ablegen können. Das Spezifikationsmuster definiert eine Abfrage in einem Objekt. Um beispielsweise eine ausgelagerte Abfrage, die nach bestimmten Produkten sucht, zu kapseln, können Sie eine PagedProduct-Spezifikation erstellen, die die erforderlichen Eingabeparameter (pageNumber, pageSize, Filter usw.) verwendet. Anschließend würde die Methode eines beliebigen Repositorys (üblicherweise eine List()-Überladung) eine ISpecification akzeptieren und die erwartete Abfrage anhand dieser Spezifikation ausführen.
+Das Abfragespezifikationsmuster definiert eine Abfrage in einem Objekt. Um beispielsweise eine ausgelagerte Abfrage, die nach bestimmten Produkten sucht, zu kapseln, können Sie eine PagedProduct-Spezifikation erstellen, die die erforderlichen Eingabeparameter (pageNumber, pageSize, Filter usw.) verwendet. Anschließend würde ein IQuerySpecification-Objekt innerhalb einer Repositorymethode (in der Regel eine List()-Überladung) akzeptiert und die erwartete Abfrage anhand dieser Spezifikation ausgeführt werden.
 
-Ein Beispiel für eine generische Spezifikationsschnittstelle ist der folgende Code aus [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb). 
+Ein Beispiel für eine generische Spezifikationsschnittstelle ist der folgende Code aus [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb).
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
@@ -400,7 +400,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-Die folgende Spezifikation lädt eine einzelne Warenkorb-Entität entweder anhand der ID des Warenkorbs oder der ID des Käufers, zu dem der Warenkorb gehört. Sie wird die Elementauflistung des Warenkorbs [vorzeitig laden](https://docs.microsoft.com/ef/core/querying/related-data).
+Die folgende Spezifikation lädt eine einzelne Warenkorb-Entität entweder anhand der ID des Warenkorbs oder der ID des Käufers, zu dem der Warenkorb gehört. Sie wird die Artikelauflistung des Warenkorbs [vorzeitig laden](https://docs.microsoft.com/ef/core/querying/related-data).
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -444,32 +444,30 @@ public IEnumerable<T> List(ISpecification<T> spec)
                     .AsEnumerable();
 }
 ```
-Zusätzlich zum Kapseln der Filterlogik kann die Spezifikation die Form der zurückzugebenden Daten angeben, einschließlich der aufzufüllenden Eigenschaften. 
+Zusätzlich zum Kapseln der Filterlogik kann die Spezifikation die Form der zurückzugebenden Daten angeben, einschließlich der aufzufüllenden Eigenschaften.
 
-Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, ist es vollkommen in Ordnung, sie innerhalb des Repositorys zu verwenden, um einen Ergebnissatz zu erstellen. Sie können die Verwendung dieses Ansatzes oben bei der List-Methode sehen, die intermediäre IQueryable-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
-
+Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, ist es in Ordnung, sie innerhalb des Repositorys zum Erstellen eines Ergebnissatzes zu verwenden. Sie können die Verwendung dieses Ansatzes oben bei der List-Methode sehen, die intermediäre IQueryable-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Tabellenzuordnung**
-    [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
+- **Tabellenzuordnung** \
+  [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Use HiLo to generate keys with Entity Framework Core (Verwenden von HiLo zum Generieren von Schlüsseln mit Entity Framework Core)**
-    [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+- **Use HiLo to generate keys with Entity Framework Core (Verwenden von Hi/Lo zum Generieren von Schlüsseln mit Entity Framework Core)** \
+  [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **Backing Fields (Unterstützungsfelder)**
-    [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
+- **Unterstützungsfelder** \
+  [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith. Encapsulated Collections in Entity Framework Core (Gekapselte Auflistungen in Entity Framework Core)**
-    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
+- **Steve Smith. Encapsulated Collections in Entity Framework Core (Gekapselte Auflistungen in Entity Framework Core)** \
+  [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **Shadow Properties (Schatteneigenschaften)**
-    [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **Shadow Properties (Schatteneigenschaften)** \
+  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **The Specification pattern (Das Spezifikationsmuster)**
-    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
-    
+- **The Specification pattern (Spezifikationsmuster)** \
+  [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
 >[!div class="step-by-step"]
-[Zurück](infrastructure-persistence-layer-design.md)
-[Weiter](nosql-database-persistence-infrastructure.md)
+>[Zurück](infrastructure-persistence-layer-design.md)
+>[Weiter](nosql-database-persistence-infrastructure.md)

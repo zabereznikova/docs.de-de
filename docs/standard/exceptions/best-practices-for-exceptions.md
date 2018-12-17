@@ -1,6 +1,6 @@
 ---
 title: Best Practices für Ausnahmen
-ms.date: 03/30/2017
+ms.date: 12/05.2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199629"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149587"
 ---
 # <a name="best-practices-for-exceptions"></a>Bewährte Methoden für Ausnahmen
 
 Eine ausgereifte App behandelt Ausnahmen und Fehler, um App-Abstürze zu verhindern. In diesem Abschnitt werden bewährte Methoden für die Behandlung und Erstellung von Ausnahmen beschrieben.
 
-## <a name="use-trycatchfinally-blocks"></a>Verwenden von try/catch/finally-Blöcken
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Verwenden Sie Try/Catch/Final-Blöcke zum Beheben von Fehlern oder zum Freigeben von Ressourcen.
 
-Verwenden Sie `try`/`catch`/`finally`-Blöcke bei Code, der möglicherweise eine Ausnahme generieren kann. 
+Betten Sie Code, der Ausnahmen erzeugen kann, in `try`/`catch`-Blöcke ein, ***damit*** ihr Code nach diesen Ausnahmen wiederhergestellt werden kann. Ordnen Sie Ausnahmen in `catch`-Blöcken immer von der am stärksten abgeleiteten bis zur am wenigsten abgeleiteten. Alle Ausnahmen werden von <xref:System.Exception> abgeleitet. Stärker abgeleitete Ausnahmen werden nicht durch eine Catch-Klausel verarbeitet, der eine Catch-Klausel für eine Basisausnahmeklasse vorangestellt ist. Wenn Ihr Code nicht aus einer Ausnahme wiederhergestellt werden kann, erfassen Sie diese Ausnahme nicht. Aktivieren Sie Methoden weiter oben in der Aufrufliste, um nach Möglichkeit eine Wiederherstellung auszuführen.
 
-Ordnen Sie Ausnahmen in `catch`-Blöcken immer von der spezifischsten bis zur allgemeinsten an.
-
-Verwenden Sie einen `finally`-Block, um Ressourcen zu bereinigen, unabhängig davon, ob eine Wiederherstellung möglich ist oder nicht.
+Bereinigen Sie die Ressourcen, die mit `using`-Anweisungen oder `finally`-Blöcken zugeordnet wurden. Bevorzugen Sie `using`-Anweisungen, um Ressourcen automatisch zu bereinigen, wenn Ausnahmen ausgelöst werden. Verwenden Sie `finally`-Blöcke, um Ressourcen zu bereinigen, die <xref:System.IDisposable> nicht implementieren. Code in einer `finally`-Klausel wird fast immer ausgeführt – auch wenn Ausnahmen ausgelöst werden.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Behandeln von allgemeinen Bedingungen ohne Auslösen von Ausnahmen
 
@@ -58,15 +54,15 @@ Eine Klasse kann Methoden oder Eigenschaften bereitstellen, mit deren Hilfe ein 
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
 
-Eine andere Möglichkeit zum Vermeiden von Ausnahmen ist es, bei sehr häufig auftretenden Fehlern „null“ zurückzugeben, anstatt eine Ausnahme auszulösen. Ein sehr häufig auftretender Fehler kann als normale Ablaufsteuerung betrachtet werden. Indem Sie in diesen Fällen NULL zurückgeben, minimieren Sie die Auswirkungen auf die Leistung einer App.
+Eine andere Möglichkeit zum Vermeiden von Ausnahmen besteht darin, `null` für sehr häufig auftretende Fehler zurückzugeben, anstatt eine Ausnahme auszulösen. Ein sehr häufig auftretender Fehler kann als normale Ablaufsteuerung betrachtet werden. Indem Sie in diesen Fällen `null` zurückgeben, minimieren Sie die Auswirkungen auf die Leistung einer App.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Auslösen von Ausnahmen statt Zurückgeben eines Fehlercodes
 
-Ausnahmen stellen sicher, dass Fehler nicht unbemerkt bleiben, weil der aufrufende Code einen Rückgabecode nicht überprüft hat. 
+Ausnahmen stellen sicher, dass Fehler nicht unbemerkt bleiben, weil der aufrufende Code einen Rückgabecode nicht überprüft hat.
 
 ## <a name="use-the-predefined-net-exception-types"></a>Verwenden der vordefinierten .NET-Ausnahmetypen
 
-Führen Sie eine neue Ausnahmenklasse nur ein, wenn keine vordefinierte zutrifft. Zum Beispiel:
+Führen Sie eine neue Ausnahmenklasse nur ein, wenn keine vordefinierte zutrifft. Beispiel:
 
 - Lösen Sie eine <xref:System.InvalidOperationException>-Ausnahme aus, wenn eine festgelegte Eigenschaft oder ein Methodenaufruf aufgrund des aktuellen Status des Objekts nicht geeignet ist.
 
@@ -124,7 +120,7 @@ Die Stapelüberwachung beginnt mit der Anweisung, bei der die Ausnahme ausgelös
 
 ## <a name="use-exception-builder-methods"></a>Verwenden von Methoden zum Generieren von Ausnahmen
 
-Es ist üblich, dass eine Klasse von unterschiedlichen Punkten in der Implementierung aus die gleiche Ausnahme auslöst. Verwenden Sie Hilfsmethoden, die eine Ausnahme erstellen und zurückgeben, um ausufernden Code zu vermeiden. Zum Beispiel:
+Es ist üblich, dass eine Klasse von unterschiedlichen Punkten in der Implementierung aus die gleiche Ausnahme auslöst. Verwenden Sie Hilfsmethoden, die eine Ausnahme erstellen und zurückgeben, um ausufernden Code zu vermeiden. Beispiel:
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -132,7 +128,7 @@ Es ist üblich, dass eine Klasse von unterschiedlichen Punkten in der Implementi
   
 In einigen Fällen ist es besser, den Konstruktor einer Ausnahme zu verwenden, um die Ausnahme zu generieren. Ein Beispiel hierfür ist eine globale Ausnahmeklasse wie etwa <xref:System.ArgumentException>.
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Löschen von Zwischenergebnissen beim Auslösen von Ausnahmen
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Wiederherstellen des Status, wenn Methoden aufgrund von Ausnahmen nicht abgeschlossen werden
 
 Aufrufer sollten davon ausgehen können, dass keine Nebeneffekte auftreten, wenn eine Ausnahme von einer Methode ausgelöst wird. Ein Beispiel: Sie haben Code für Geldüberweisungen geschrieben. Ihr Code bucht Geld von einem Konto ab und zahlt es auf ein anderes Konto ein. Wenn nun beim Ausführen der Einzahlung eine Ausnahme ausgelöst wird, sollte die Abbuchung natürlich nicht in Kraft bleiben.
 
@@ -144,6 +140,8 @@ public void TransferFunds(Account from, Account to, decimal amount)
     to.Deposit(amount);
 }
 ```
+
+Die obige Methode löst keine Ausnahmen direkt aus, sondern muss defensiv geschrieben werden, sodass beim Fehlschlagen der Einzahlung die Abbuchung rückgängig gemacht wird.
 
 In dieser Situation besteht eine Möglichkeit darin, alle Ausnahmen abzufangen, die von der Einzahlungstransaktion ausgelöst wurden, und für die Abbuchung ein Rollback auszuführen.
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

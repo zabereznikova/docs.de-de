@@ -1,6 +1,6 @@
 ---
 title: Kombinierte Formatierung
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397932"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126860"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
+
 Die Funktion für die kombinierte Formatierung in .NET verwendet als Eingabe eine Liste von Objekten und eine kombinierte Formatzeichenfolge. Eine kombinierte Formatzeichenfolge besteht aus festgelegtem Text mit indizierten Platzhaltern, so genannten Formatelementen, die den Objekten in der Liste entsprechen. Der Formatierungsvorgang liefert eine Ergebniszeichenfolge, die sich aus dem ursprünglichen festgelegten Text und der Zeichenfolgendarstellung der Objekte in der Liste zusammensetzt.  
   
- Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Methoden unterstützt:  
+> [!IMPORTANT]
+> Anstelle kombinierter Formatzeichenfolgen können Sie *interpolierte Zeichenfolgen* verwenden, wenn die von Ihnen verwendete Sprache und Sprachversion diese unterstützen. Eine interpolierte Zeichenfolge ist eine Zeichenfolge, die *interpolierte Ausdrücke* enthält. Jeder interpolierte Ausdruck wird mit dem Wert des Ausdrucks aufgelöst und in die Ergebniszeichenfolge aufgenommen, wenn die Zeichenfolge zugewiesen wird. Weitere Informationen finden Sie unter [Zeichenfolgeninterpolation (C#-Referenz)](../../csharp/language-reference/tokens/interpolated.md) und [Interpolierte Zeichenfolgen (Visual Basic-Referenz)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Methoden unterstützt:  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>, die eine formatierte Ergebniszeichenfolge zurückgibt.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, die eine formatierte Ergebniszeichenfolge zurückgibt.  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, die eine formatierte Ergebniszeichenfolge an ein <xref:System.Text.StringBuilder>-Objekt anfügt.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, die eine formatierte Ergebniszeichenfolge an ein <xref:System.Text.StringBuilder>-Objekt anfügt.   
+- Einige Überladungen der <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>-Methode, die eine formatierte Ergebniszeichenfolge in der Konsole anzeigen.  
   
--   Einige Überladungen der <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>-Methode, die eine formatierte Ergebniszeichenfolge in der Konsole anzeigen.  
+- Einige Überladungen <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>-Methode, die die formatierte Ergebniszeichenfolge in einen Stream oder eine Datei schreiben. Die von <xref:System.IO.TextWriter> abgeleiteten Klassen wie <xref:System.IO.StreamWriter> und <xref:System.Web.UI.HtmlTextWriter> verwenden auch diese Funktionen.  
   
--   Einige Überladungen <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>-Methode, die die formatierte Ergebniszeichenfolge in einen Stream oder eine Datei schreiben. Die von <xref:System.IO.TextWriter> abgeleiteten Klassen wie <xref:System.IO.StreamWriter> und <xref:System.Web.UI.HtmlTextWriter> verwenden auch diese Funktionen.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, die eine formatierte Meldung an Ablaufverfolgungslistener ausgibt.  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, die eine formatierte Meldung an Ablaufverfolgungslistener ausgibt.  
+- Die Methoden <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, die formatierte Meldungen an Ablaufverfolgungslistener ausgeben.  
   
--   Die Methoden <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, die formatierte Meldungen an Ablaufverfolgungslistener ausgeben.  
-  
--   Die <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode, die eine Informationsmethode in Ablaufverfolgungslistener schreibt.  
+- Die <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode, die eine Informationsmethode in Ablaufverfolgungslistener schreibt.  
   
 ## <a name="composite-format-string"></a>Kombinierte Formatzeichenfolge  
  Eine kombinierte Formatzeichenfolge und eine Objektliste dienen als Argumente von Methoden, die das Feature für die kombinierte Formatierung unterstützen. Die Quellzeichenfolge besteht aus 0 (null) oder mehreren Einheiten festgelegten Texts mit mindestens einem Formatelement. Der festgelegte Text ist eine von Ihnen ausgewählte beliebige Zeichenfolge. Jedes Formatelement entspricht einem Objekt oder einer geschachtelten Struktur in der Liste. Die Funktion für die kombinierte Formatierung gibt eine neue Ergebniszeichenfolge zurück, in der jedes Formatelement durch die Zeichenfolgendarstellung des entsprechenden Objekts in der Liste ersetzt wird.  

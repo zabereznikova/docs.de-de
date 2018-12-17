@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e5f683ff123652e312d4d8dacc614f8a451ccd91
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582878"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127393"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 
@@ -46,7 +46,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 
  Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit und zeigt eine Ergebniszeichenfolge an, die von den einzelnen Formatbezeichnern erstellt wird. Standardmäßig entsprechen Ergebniszeichenfolgen den Formatierungskonventionen der Kultur "en-US". Wenn ein bestimmter Formatbezeichner eine lokalisierte Ergebniszeichenfolge erzeugt, wird im Beispiel auch die Kultur angegeben, für die die Ergebniszeichenfolge gilt. Weitere Informationen zum Verwenden von benutzerdefinierten Formatzeichenfolgen für Datum und Uhrzeit finden Sie im Abschnitt Hinweise.
 
-| Formatbezeichner | Beschreibung  | Beispiele |
+| Formatbezeichner | Beschreibung | Beispiele |
 | ---------------------- | ----------------- | -------------- |
 |"d"|Der Tag des Monats, von 1 bis 31.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "d"](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|Der Tag des Monats, von 01 bis 31.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "dd"](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -94,7 +94,7 @@ Eine Formatzeichenfolge für Datum und Uhrzeit definiert die Textdarstellung ein
 |"/"|Das Datumstrennzeichen.<br /><br /> Weitere Informationen finden Sie unter [Der benutzerdefinierte Formatbezeichner "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
 |"*Zeichenfolge*"<br /><br /> '*Zeichenfolge*'|Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|Definiert das nächste Zeichen als benutzerdefinierten Formatbezeichner.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von einzelnen benutzerdefinierten Formatbezeichnern](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|
-|\\|Das Escapezeichen<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals) und [Verwenden des Escapezeichens](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
+|&#92;|Das Escapezeichen.<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals) und [Verwenden des Escapezeichens](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|
 |Jedes andere Zeichen|Das Zeichen wird unverändert in die Ergebniszeichenfolge kopiert.<br /><br /> Weitere Informationen finden Sie unter [Zeichenliterale](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
  In den folgenden Abschnitten finden Sie weitere Informationen zu den einzelnen benutzerdefinierten Formatbezeichnern für Datum- und Uhrzeit. Sofern nicht anders angegeben, erzeugen die einzelnen Bezeichner eine identische Zeichenfolgendarstellung, unabhängig davon, ob sie mit einem <xref:System.DateTime>-Wert oder einem <xref:System.DateTimeOffset>-Wert verwendet wird.

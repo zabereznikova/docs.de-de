@@ -1,17 +1,17 @@
 ---
 title: Entwerfen eines DDD-orientierten Microservices
-description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen eines DDD-orientierten Microservices
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Design DDD-orientierter Microservices für Bestellungen und die entsprechenden Anwendungsschichten
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/06/2017
-ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183502"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145607"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>Entwerfen eines DDD-orientierten Microservices
+# <a name="design-a-ddd-oriented-microservice"></a>Erstellen eines DDD-orientierten Microservices
 
 Durch domänengesteuertes Design (Domain-Driven Design, DDD) wird die Modellierung von den wirtschaftlichen Gegebenheiten beeinflusst, die für Ihre Anwendungsfälle relevant sind. Im Zusammenhang mit der Erstellung von Anwendungen bezeichnet DDD Domänen als Probleme. Unabhängige Problembereiche werden als Kontextgrenzen beschrieben (jede Kontextgrenze korreliert mit einem Microservice). Zudem wird die Verwendung einer gemeinsamen Sprache zur Erörterung dieser Probleme hervorgehoben. DDD schlägt auch viele technische Konzepte und Muster vor, z.B. Domänenentitäten mit umfangreichen Modellen (kein [anämisches Domänenmodell](https://martinfowler.com/bliki/AnemicDomainModel.html)), Wertobjekte, Aggregate und Regeln für Aggregatstämme (bzw. Stammentitäten) zur Unterstützung der internen Implementierung. Dieser Abschnitt bietet eine Einführung in den Entwurf und die Implementierung dieser internen Muster.
 
@@ -33,21 +33,21 @@ Die meisten Unternehmensanwendungen mit erheblicher geschäftlicher und technisc
 
 Beispielsweise könnte eine Entität aus der Datenbank geladen werden. Ein Teil dieser Informationen, oder eine Aggregation von Informationen einschließlich zusätzlicher Daten aus anderen Entitäten, kann dann über eine REST-Web-API an die Clientbenutzeroberfläche gesendet werden. Der entscheidende Punkt hierbei ist, dass die Entität in der Domänenmodellebene enthalten ist und nicht an andere Bereiche weitergegeben werden sollte, zu denen sie nicht gehört, wie z.B. die Darstellungsebene.
 
-Darüber hinaus müssen Sie über Entitäten verfügen, die immer gültig sind (siehe Abschnitt [Designing validations in the domain model layer (Entwerfen von Validierungen in der Domänenmodellebene)](#designing-validations-in-the-domain-model-layer)) und von Aggregatstämmen (Stammentitäten) gesteuert werden. Daher sollten Entitäten nicht an Clientansichten gebunden werden, da auf der Benutzeroberflächenebene einige Daten möglicherweise noch nicht überprüft wurden. Dies ist Aufgabe von ViewModel. Bei ViewModel handelt es sich um ein Datenmodell, das sich ausschließlich mit den Anforderungen auf der Darstellungsebene befasst. Die Domänenentitäten gehören nicht direkt zu ViewModel. Stattdessen müssen Sie zwischen ViewModel-Modellen und Domänenentitäten und umgekehrt übersetzen.
+Darüber hinaus müssen Sie über Entitäten verfügen, die immer gültig sind (siehe Abschnitt [Designing validations in the domain model layer (Entwerfen von Validierungen in der Domänenmodellebene)](domain-model-layer-validations.md)) und von Aggregatstämmen (Stammentitäten) gesteuert werden. Daher sollten Entitäten nicht an Clientansichten gebunden werden, da auf der Benutzeroberflächenebene einige Daten möglicherweise noch nicht überprüft wurden. Dies ist Aufgabe von ViewModel. Bei ViewModel handelt es sich um ein Datenmodell, das sich ausschließlich mit den Anforderungen auf der Darstellungsebene befasst. Die Domänenentitäten gehören nicht direkt zu ViewModel. Stattdessen müssen Sie zwischen ViewModel-Modellen und Domänenentitäten und umgekehrt übersetzen.
 
 Bei der Komplexität ist es wichtig, über ein Domänenmodell zu verfügen, das von Aggregatstämmen gesteuert wird, durch die sichergestellt wird, dass alle Invarianten und Regeln, die sich auf diese Gruppe von Entitäten (Aggregat) beziehen, über einen einzigen Einstiegspunkt bzw. ein einziges Gate durchgeführt werden: den Aggregatstamm.
 
-In Abbildung 9-5 wird gezeigt, wie ein Entwurf mit mehreren Ebenen in die eShopOnContainers-Anwendung implementiert wird.
+In Abbildung 7-5 wird gezeigt, wie ein Entwurf mit mehreren Ebenen in die eShopOnContainers-Anwendung implementiert wird.
 
-![](./media/image6.png)
+![Die drei Ebenen in einem DDD-Microservice wie dem für Bestellungen Jede Ebene ist ein VS-Projekt: Die Anwendungsschicht ist „Ordering.API“, die Domänenebene „Ordering.Domain“ und die Infrastrukturebene „Ordering.Infrastructure“.](./media/image6.png)
 
-**Abbildung 9-5**. DDD-Ebenen für den Microservice für Bestellungen in eShopOnContainers
+**Abbildung 7-5**. DDD-Ebenen für den Microservice für Bestellungen in eShopOnContainers
 
-Das System soll so entworfen werden, dass die einzelnen Ebenen nur mit bestimmten anderen Ebenen kommunizieren. Dies kann möglicherweise leichter durchgesetzt werden, wenn Ebenen als unterschiedliche Klassenbibliotheken implementiert werden, da Sie deutlich erkennen können, welche Abhängigkeiten zwischen Bibliotheken festgelegt wurden. Auf der Domänenmodellebene sollte beispielsweise keine Abhängigkeit für eine andere Ebene ausgewählt werden (bei den Domänenmodellklassen sollte es sich um Plain Old CLR Objects- bzw. um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln). Wie in Abbildung 9-6 zu sehen ist, weist die Bibliothek der Ebene **Ordering.Domain** nur Abhängigkeiten für die .NET Core-Bibliotheken oder NuGet-Pakete auf, jedoch zu keiner anderen benutzerdefinierten Bibliothek, wie z.B. einer Datenbibliothek oder einer Persistenzbibliothek.
+Das System soll so entworfen werden, dass die einzelnen Ebenen nur mit bestimmten anderen Ebenen kommunizieren. Dies kann möglicherweise leichter durchgesetzt werden, wenn Ebenen als unterschiedliche Klassenbibliotheken implementiert werden, da Sie deutlich erkennen können, welche Abhängigkeiten zwischen Bibliotheken festgelegt wurden. Auf der Domänenmodellebene sollte beispielsweise keine Abhängigkeit für eine andere Ebene ausgewählt werden (bei den Domänenmodellklassen sollte es sich um Plain Old CLR Objects- bzw. um [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Klassen handeln). Wie in Abbildung 7-6 dargestellt, weist die Bibliothek der Ebene **Ordering.Domain** nur Abhängigkeiten für die .NET Core-Bibliotheken oder NuGet-Pakete auf – jedoch keine Abhängigkeiten zu anderen benutzerdefinierten Bibliothek, z.B. zu einer Daten- oder Persistenzbibliothek.
 
-![](./media/image7.PNG)
+![Ansicht im Projektmappen-Explorer: Ordering.Domain-Abhängigkeiten, die nur von .NET Core-Bibliotheken abhängen](./media/image7.png)
 
-**Abbildung 9-6**. Als Bibliotheken implementierte Ebenen lassen eine bessere Kontrolle der Abhängigkeiten zwischen Ebenen zu
+**Abbildung 7-6**. Als Bibliotheken implementierte Ebenen lassen eine bessere Kontrolle der Abhängigkeiten zwischen Ebenen zu
 
 ### <a name="the-domain-model-layer"></a>Die Domänenmodellebene
 
@@ -85,26 +85,25 @@ Auf der Infrastrukturebene wird dargestellt, wie die Daten, die anfangs in Domä
 
 Gemäß den oben genannten Grundsätzen [Ignorieren der Persistenz](https://deviq.com/persistence-ignorance/) und [Ignorieren der Infrastruktur](https://ayende.com/blog/3137/infrastructure-ignorance) darf die Infrastrukturebene die Domänenmodellebene nicht „kontaminieren“. Die Entitätsklassen des Domänenmodells müssen von der Infrastruktur unabhängig sein, in der Sie Daten speichern (EF oder ein anderes Framework), indem keine harten Abhängigkeiten für Frameworks berücksichtigt werden. Ihre Klassenbibliothek auf der Domänenmodellebene sollte nur Ihren Domänencode enthalten und nur [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)-Entitätsklassen, die das Kernstück Ihrer Software implementieren und komplett entkoppelt von Infrastrukturtechnologien sind.
 
-Daher sollten Ihre Ebenen bzw. Klassenbibliotheken und Projekte letztlich wie in Abbildung 9-7 dargestellt von Ihrer Domänenmodellebene (Bibliothek) abhängen, nicht umgekehrt.
+Deswegen sollten Ihre Ebenen bzw. Klassenbibliotheken und Projekte wie in Abbildung 7-7 dargestellt von Ihrer Domänenmodellebene (Bibliothek) abhängen, nicht umgekehrt.
 
-![](./media/image8.png)
+![Abhängigkeiten in einem DDD-Dienst: Die Anwendungsschicht hängt von der Domäne und der Infrastruktur ab, die Infrastruktur von der Domäne – doch die Domäne hängt von keiner Ebene ab.](./media/image8.png)
 
-**Abbildung 9-7**. Abhängigkeiten zwischen Ebenen in DDD
+**Abbildung 7-7**. Abhängigkeiten zwischen Ebenen in DDD
 
 Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie bereits erwähnt wurde, können Sie die komplexesten Microservices nach den DDD-Mustern implementieren, während einfachere datengesteuerte Microservices (einfacher CRUD-Vorgang auf einer einzelnen Ebene) auf einfachere Weise implementiert werden können.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **DevIQ. Persistence Ignorance principle (Das Prinzip „Ignorieren der Persistenz“)**
-    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+- **DevIQ. Persistence Ignorance principle (Prinzip „Ignorieren der Persistenz“)** \
+  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur)**
-    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+- **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur)** \
+  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Layered Architecture In Domain-Driven Design (Architektur mit Ebenen im domänengesteuerten Design)**
-    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
-
+- **Angel Lopez. Layered Architecture In Domain-Driven Design (Architektur mit Ebenen im domänengesteuerten Design)** \
+  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
-[Zurück](cqrs-microservice-reads.md)
-[Weiter](microservice-domain-model.md)
+>[Zurück](cqrs-microservice-reads.md)
+>[Weiter](microservice-domain-model.md)

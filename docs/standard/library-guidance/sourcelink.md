@@ -1,36 +1,44 @@
 ---
-title: Bibliotheken SourceLink und .NET
-description: Empfehlungen für bewährte Methoden mit, dass die SourceLink verbessertes debugging für .NET-Bibliotheken.
+title: SourceLink und .NET-Bibliotheken
+description: Empfehlungen für bewährte Methoden zum Verwenden von SourceLink zur Verbesserung des Debuggens für .NET-Bibliotheken.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: fa4af47eaa5dd1510640c2bf0ebb2187b56efae0
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49370045"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128926"
 ---
 # <a name="sourcelink"></a>SourceLink
 
-SourceLink ist eine Technologie, die es ermöglicht, Debuggen von Quellcode von .NET-Assemblys aus NuGet von Entwicklern. SourceLink ausgeführt wird, wenn das NuGet-Paket zu erstellen und Datenquellen-Steuerelement-Metadaten in Assemblys und das Paket eingebettet. Entwickler, die das Paket herunterladen und SourceLink in Visual Studio aktiviert haben, können deren Quellcode schrittweise. SourceLink enthält Datenquellen-Steuerelement-Metadaten um eine gute Debugleistung zu erstellen.
+SourceLink ist eine Technologie, mit der Entwickler Quellcode aus .NET-Assemblys über NuGet debuggen können. SourceLink wird beim Erstellen des NuGet-Pakets ausgeführt und bettet Metadaten der Quellcodeverwaltung in Assemblys und das Paket ein. Entwickler, die das Paket herunterladen und SourceLink in Visual Studio aktiviert haben, können den Quellcode schrittweise ausführen. SourceLink bietet Metadaten zur Quellcodeverwaltung, um das Debuggen zu optimieren.
 
-## <a name="sourcelink-demo"></a>SourceLink-demo
+## <a name="sourcelink-demo"></a>SourceLink-Demo
 
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
-## <a name="using-sourcelink"></a>Verwenden die SourceLink
+## <a name="using-sourcelink"></a>Verwenden von SourceLink
 
-Anweisungen zur Verwendung von SourceLink finden Sie auf die [Dotnet/SourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub-Repository.
+Anweisungen zum Verwenden von SourceLink finden Sie im GitHub-Repository [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md).
 
-Sie können [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) zu bestätigen, dass die SourceLink-Metadaten in das Paket erfolgreich eingebettet wurde. Überprüfen Sie die `Repository` Metadaten mit einem Kommentar Bezeichner vorhanden ist und dass PDB-Dateien sich auf die DLL-Datei des Ziels.
+Sie können mit dem [NuGet-Paket-Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) bestätigen, dass die SourceLink-Metadaten erfolgreich in das Paket eingebettet wurden. Überprüfen Sie, ob die `Repository`-Metadaten über einen Kommentarbezeichner verfügen, und ob sich PDB-Dateien in der jeweiligen DLL-Zieldatei befinden.
 
 ![SourceLink im NuGet-Paket-Explorer](./media/sourcelink/nuget-package-explorer-sourcelink.png "SourceLink im NuGet-Paket-Explorer")
 
-**✔️ GGF.** mit SourceLink Quell-Steuerelement-Metadaten für Ihre Assemblys und NuGet-Paket hinzu.
+**✔️ Fügen** Sie mit SourceLink ggf. Metadaten der Quellcodeverwaltung Ihren Assemblys und NuGet-Paketen hinzu.
 
-**✔️ GGF.** PDB-Dateien in das NuGet-Paket einschließen.
+> [!TIP]
+> Sie können für Entwickler den Debugvorgang weiter verbessern, indem Sie Ihren Typen Debuggerattribute hinzufügen.
+> * <xref:System.Diagnostics.DebuggerDisplayAttribute> kann anpassen, wie eine Klasse oder ein Feld in den Variablenfenstern des Debuggers angezeigt wird.
+> * <xref:System.Diagnostics.DebuggerStepThroughAttribute> weist den Debugger an, schrittweise durch den Code zu laufen, anstatt ihn schrittweise auszuführen.
+> * <xref:System.Diagnostics.DebuggerBrowsableAttribute> bestimmt, ob und wie ein Member in Debuggervariablenfenstern angezeigt wird.
+
+**✔️ Betten** Sie Symboldateien (`*.pdb`) in das NuGet-Paket ein.
+
+> Normalerweise werden Symboldateien in einem [Symbolpaket](./nuget.md#symbol-packages) veröffentlicht. Derzeit unterstützt der öffentliche Haupthost für Symbole nicht die portierbaren Symboldateien (`*.pdb`), die von SDK-Projekten erstellt wurden. Das bedeutet, Symbolpakete sind nicht nützlich.
 
 >[!div class="step-by-step"]
-[Zurück](./dependencies.md)
-[Weiter](./publish-nuget-package.md)
+>[Zurück](dependencies.md)
+>[Weiter](publish-nuget-package.md)

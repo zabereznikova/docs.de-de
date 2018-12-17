@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 7da86cfe483a2355c53206f4c491fbd07e4c3046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591923"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143181"
 ---
 # <a name="native-interoperability"></a>Native Interoperabilität
 
@@ -260,7 +260,7 @@ Beide oben aufgeführten Beispiele hängen von Parametern ab, und in beiden Fäl
 
 Das **Marshallen** bezeichnet den Vorgang zum Umwandeln von Typen, wenn diese die verwaltete Grenze zu nativem Code und umgekehrt überschreiten.
 
-Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit NULL endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem, die richtige Aktion basierend auf dem Standardverhalten durchzuführen, das in [MSDN](../../docs/framework/interop/default-marshaling-behavior.md) beschrieben wird. In Situationen, in denen Sie eine zusätzliche Kontrolle benötigen, können Sie jedoch das `MarshalAs`-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn die Zeichenfolge beispielsweise als nicht mit Null endende ANSI-Zeichenfolge gesendet werden soll, können wir dies folgendermaßen erreichen:
+Das Marshallen ist erforderlich, weil sich die Typen in verwaltetem und nicht verwaltetem Code unterscheiden. In verwaltetem Code verwenden Sie z.B. einen `String`-Typ, während Zeichenfolgen im nicht verwalteten Bereich Unicode (Breitzeichen), Nicht-Unicode, mit NULL endend, ASCII usw. sein können. Standardmäßig versucht das P/Invoke-Subsystem basierend auf dem [Standardverhalten](../../docs/framework/interop/default-marshaling-behavior.md) die richtige Aktion auszuführen. In Situationen, in denen Sie zusätzliche Kontrolle benötigen, können Sie das [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs)-Attribut verwenden, um anzugeben, welcher Typ auf der nicht verwalteten Seite erwartet wird. Wenn die Zeichenfolge beispielsweise als nicht mit Null endende ANSI-Zeichenfolge gesendet werden soll, können wir dies folgendermaßen erreichen:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

@@ -1,29 +1,29 @@
 ---
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
-description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Abhängigkeitsinjektion, das Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 1af8d0290eea26d57f4744bbd6d9819d886d4db4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106553"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151186"
 ---
-# <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
+# <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
-## <a name="using-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>Verwenden der Dependency Injection beim Einfügen von Infrastrukturobjekten in Ihre Anwendungsschicht
+## <a name="use-dependency-injection-to-inject-infrastructure-objects-into-your-application-layer"></a>Einfügen von Infrastrukturobjekten in die Anwendungsschicht mithilfe der Abhängigkeitsinjektion
 
-Wie bereits erwähnt, kann die Anwendungsschicht als Teil des Artefakts implementiert werden, das Sie erstellen, etwa innerhalb eines Web-API-Projekts oder eines MVC-Web-App-Projekts. Im Falle eines mit ASP.NET Core erstellten Microservice ist die Anwendungsschicht in der Regel Ihre Web-API-Bibliothek. Wenn Sie das, was von ASP.NET Core stammt (dessen Infrastruktur und Ihren Domänencontroller) von Ihrem benutzerdefinierten Anwendungsschichtcode trennen möchten, können Sie Ihre Anwendungsschicht auch in einer separaten Klassenbibliothek platzieren. Dies ist jedoch optional.
+Wie bereits erwähnt, kann die Anwendungsschicht als Teil des Artefakts (der Assembly) implementiert werden, das Sie erstellen, etwa innerhalb eines Web-API-Projekts oder eines MVC-Web-App-Projekts. Im Falle eines mit ASP.NET Core erstellten Microservice ist die Anwendungsschicht in der Regel Ihre Web-API-Bibliothek. Wenn Sie das, was von ASP.NET Core stammt (dessen Infrastruktur und Ihren Domänencontroller) von Ihrem benutzerdefinierten Anwendungsschichtcode trennen möchten, können Sie Ihre Anwendungsschicht auch in einer separaten Klassenbibliothek platzieren. Dies ist jedoch optional.
 
-Der Anwendungsschichtcode des Microservice für Bestellung ist beispielsweise direkt als Teil des **Ordering.API**-Projekts (ein ASP.NET Core-Web-API-Projekt) implementiert, was Abbildung 9-23 veranschaulicht.
+Der Anwendungsschichtcode des Microservices für Bestellungen ist beispielsweise direkt als Teil des **Ordering.API**-Projekts (ein ASP.NET Core-Web-API-Projekt) implementiert (s. Abbildung 7-23).
 
-![](./media/image20.png)
+![Ansicht im Projektmappen-Explorer: Microservice Ordering.API mit den Unterordnern des Ordners „Anwendung“: Verhalten, Befehle, DomainEventHandlers, IntegrationEvents, Modelle, Abfragen und Prüfungen](./media/image20.png)
 
-**Abbildung 9-23**. Die Anwendungsschicht im Projekt Ordering.API-Projekt (ASP.NET Core-Web-API-Projekt)
+**Abbildung 7-23**. Die Anwendungsschicht im Projekt Ordering.API-Projekt (ASP.NET Core-Web-API-Projekt)
 
-ASP.NET Core enthält einen einfachen [integrierten Container](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (dargestellt durch die IServiceProvider-Schnittstelle), der die Constructor Injection standardmäßig unterstützt. Zudem stellt ASP.NET bestimmte Dienste über Dependency Injection zur Verfügung. ASP.NET Core verwendet den Begriff *Dienst* für alle Typen, die Sie registrieren und die über DI eingefügt werden. Sie konfigurieren die integrierten Containerdienste in der ConfigureServices-Methode in der Startup-Klasse Ihrer Anwendung. Ihre Abhängigkeiten werden in den Diensten implementiert, die ein Typ benötigt.
+ASP.NET Core enthält einen einfachen [integrierten Container](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (dargestellt durch die IServiceProvider-Schnittstelle), der die Constructor Injection standardmäßig unterstützt. Zudem stellt ASP.NET bestimmte Dienste über Dependency Injection zur Verfügung. ASP.NET Core verwendet den Begriff *Dienst* für alle Typen, die Sie registrieren und die über DI eingefügt werden. Sie konfigurieren die integrierten Containerdienste in der ConfigureServices-Methode in der Startup-Klasse Ihrer Anwendung. Ihre Abhängigkeiten werden in den Diensten implementiert, die ein Typ benötigt und die Sie im IoC-Container registrieren.
 
 In der Regel fügen Sie Abhängigkeiten ein, die Infrastrukturobjekte implementieren. Eine sehr typische einzufügende Abhängigkeit ist ein Repository. Sie können jedoch auch jede andere Infrastrukturabhängigkeit einfügen, die verfügbar ist. Für einfachere Implementierungen können Sie Ihr Arbeitseinheitsmuster-Objekt (EF DbContext-Objekt) direkt einfügen, da der DBContext auch die Implementierung Ihrer Infrastrukturpersistenzobjekte ist.
 
@@ -78,11 +78,11 @@ public class CreateOrderCommandHandler
 
 Die Klasse verwendet die eingefügten Repositorys zum Ausführen der Transaktion und Beibehalten der Zustandsänderungen. Es spielt keine Rolle, ob diese Klasse ein Befehlshandler, eine Web-API-Controller-Methode von ASP.NET Core oder ein [DDD-Anwendungsdienst](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/) ist. Letztlich handelt es sich um eine einfache Klasse, die Repositorys, Domänenentitäten und die sonstige Anwendungskoordinierung auf eine mit einem Befehlshandler vergleichbare Art und Weise verwendet. Die Dependency Injection funktioniert auf die gleiche Weise für alle erwähnten Klassen, wie etwa im Beispiel, in dem die DI basierend auf dem Konstruktor verwendet wird.
 
-### <a name="registering-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>Registrieren von Abhängigkeitsimplementierungstypen und Schnittstellen oder Abstraktionen
+### <a name="register-the-dependency-implementation-types-and-interfaces-or-abstractions"></a>Registrieren von Abhängigkeitsimplementierungstypen und Schnittstellen oder Abstraktionen
 
 Bevor Sie die Objekte verwenden, die über Konstruktoren eingefügt werden, müssen Sie wissen, wo Sie die Schnittstellen und Klassen registrieren, die die über die DI in Ihre Anwendungsklassen eingefügten Objekte erstellen. (Wie DI basierend auf den Konstruktor, wie weiter oben dargestellt.)
 
-#### <a name="using-the-built-in-ioc-container-provided-by-aspnet-core"></a>Verwenden des integrierten IoC-Containers, der von ASP.NET Core bereitgestellt wird
+#### <a name="use-the-built-in-ioc-container-provided-by-aspnet-core"></a>Verwenden des integrierten und von ASP.NET Core bereitgestellten IoC-Containers
 
 Bei Verwendung des integrierten IoC-Containers, der von ASP.NET Core bereitgestellt wird, registrieren Sie die Typen, die Sie in die ConfigureServices-Methode in der Datei Startup.cs wie im folgenden Code einfügen möchten:
 
@@ -105,21 +105,19 @@ public void ConfigureServices(IServiceCollection services)
 
 Das bekannteste Muster beim Registrieren von Typen in einem IoC-Container ist die Registrierung eines Typenpaars, d.h. eine Schnittstelle und die zugehörige Implementierungsklasse. Wenn Sie ein Objekt aus dem IoC-Container über einen beliebigen anderen Konstruktor anfordern, fordern Sie ein Objekt eines bestimmten Schnittstellentyps an. Beispielsweise gibt die letzte Zeile aus dem vorherigen Beispiel an, dass der IoC-Container eine Instanz der MyCustomSQLServerRepository-Implementierungsklasse einfügt, wenn Ihre Konstruktoren eine Abhängigkeit von IMyCustomRepository (Schnittstellen oder Abstraktion) aufweisen.
 
-#### <a name="using-the-scrutor-library-for-automatic-types-registration"></a>Verwenden der Scrutor-Bibliothek zur automatischen Typenregistrierung
+#### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>Verwenden der Scrutor-Bibliothek zur automatischen Typenregistrierung
 
 Bei Verwendung der DI in .NET Core empfiehlt es sich, eine Assembly zu überprüfen und ihre Typen automatisch gemäß Konvention zu registrieren. Dieses Feature ist in ASP.NET Core derzeit nicht verfügbar. Sie können jedoch die [Scrutor](https://github.com/khellang/Scrutor)-Bibliothek zu diesem Zweck verwenden. Dieser Ansatz eignet sich, wenn Sie Dutzende von Typen haben, die im IoC-Container registriert werden müssen.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Matthew King. Registering services with Scrutor**
-    [*https://mking.net/blog/registering-services-with-scrutor*](https://mking.net/blog/registering-services-with-scrutor)
+- **Matthew King. Registering services with Scrutor (Registrieren von Diensten mit Scrutor)** \
+  [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
 
-<!-- -->
+- **Kristian Hellang. Scrutor.** GitHub repo (Scrutor. GitHub-Reporitory). \
+  [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
 
--   **Kristian Hellang. Scrutor.** GitHub repo (Scrutor. GitHub-Reporitory).
-    [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
-
-#### <a name="using-autofac-as-an-ioc-container"></a>Verwenden von Autofac als IoC-Container
+#### <a name="use-autofac-as-an-ioc-container"></a>Verwenden von Autofac als IoC-Container
 
 Sie können auch zusätzliche IoC-Container verwenden und diese direkt an die Pipeline von ASP.NET Core anschließen, wie z.B. im Microservice für Bestellung in eShopOnContainers, der [Autofac](https://autofac.org/) verwendet. Bei Verwendung von Autofac werden in der Regel die Typen über Module registriert, die ermöglichen, die Registrierungstypen zwischen mehreren Dateien je nachdem zu teilen, wo sich die Typen befinden. Die Anwendungstypen können aber auch über mehrere Klassenbibliotheken verteilt sein.
 
@@ -152,40 +150,42 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
+Autofac hat auch eine Funktion, um [Assemblys und Registertypen auf Namenskonventionen](https://autofac.readthedocs.io/en/latest/register/scanning.html) zu überprüfen.
+
 Der Registrierungsvorgang und die Konzepte ähneln stark der Methode für die Typenregistrierung mit dem integrierten ASP.NET Core-IoC-Container, aber die Syntax unterscheidet sich geringfügig bei der Verwendung von Autofac.
 
 Im Beispielcode wird die Abstraktion IOrderRepository zusammen mit der Implementierungsklasse OrderRepository registriert. Dies bedeutet, dass IoC-Container eine Instanz der OrderRepository-Klasse einfügen, wenn ein Konstruktor eine Abhängigkeit über die IOrderRepository-Abstraktion oder -Schnittstelle deklariert.
 
 Der Instanzbereichstyp bestimmt, wie eine Instanz von Anforderungen für den gleichen Dienst oder die gleiche Abhängigkeit gemeinsam genutzt wird. Wenn eine Anforderung für eine Abhängigkeit gestellt wird, kann der IoC-Container Folgendes zurückgeben:
 
--   Eine einzelne Instanz pro Lebensdauerbereich (gemäß dem ASP.NET Core-IoC-Container *bereichsbezogen*).
+- Eine einzelne Instanz pro Lebensdauerbereich (gemäß dem ASP.NET Core-IoC-Container *bereichsbezogen*).
 
--   Eine neue Instanz pro Abhängigkeit (gemäß dem ASP.NET Core-IoC-Container *vorübergehend*).
+- Eine neue Instanz pro Abhängigkeit (gemäß dem ASP.NET Core-IoC-Container *vorübergehend*).
 
--   Eine einzelne Instanz, die von allen Objekten gemeinsam genutzt wird, die den IoC-Container verwenden (gemäß dem ASP.NET Core IoC-Container *Singleton*).
+- Eine einzelne Instanz, die von allen Objekten gemeinsam genutzt wird, die den IoC-Container verwenden (gemäß dem ASP.NET Core IoC-Container *Singleton*).
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Introduction to Dependency Injection in ASP.NET Core**
-    [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+- **Einführung in Abhängigkeitsinjektion in ASP.NET Core** \
+  [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
--   **Autofac.** Offizielle Dokumentation.
-    [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
+- **Autofac.** Offizielle Dokumentation. \
+  [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes – Cesar de la Torre.**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+- **Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes – Cesar de la Torre (Vergleichen der Lebensdauer von Containerdiensten mit ASP.NET Core IoC und Autofac IoC-Containerinstanzbereichen – Cesar de la Torre** \
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
-## <a name="implementing-the-command-and-command-handler-patterns"></a>Implementieren der Befehls- und Befehlshandlermuster
+## <a name="implement-the-command-and-command-handler-patterns"></a>Implementieren von Befehls- und Befehlshandlermustern
 
-Im Beispiel DI-über-Konstruktor im vorherigen Abschnitt hat der IoC-Container Repositorys über einen Konstruktor in einer Klasse eingefügt. Aber wo genau wurden diese eingefügt? In einer einfachen Web-API (z.B. Katalog-Microservice in eShopOnContainers) fügen Sie sie auf der Ebene des MVC-Controllers in einem Controller-Konstruktor ein. Allerdings erfolgt die Einfügung von Abhängigkeiten im anfänglichen Code in diesem Abschnitt ([CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)-Klasse aus dem Ordering.API-Dienst in eShopOnContainers) über den Konstruktor eines bestimmten Befehlshandlers. Lassen Sie uns erklären, was ein Befehlshandler ist und weshalb Sie ihn verwenden sollten.
+Im Beispiel DI-über-Konstruktor im vorherigen Abschnitt hat der IoC-Container Repositorys über einen Konstruktor in einer Klasse eingefügt. Aber wo genau wurden diese eingefügt? In einer einfachen Web-API (z.B. Katalogmicroservice in eShopOnContainers) fügen Sie sie auf der Ebene des MVC-Controllers als Teil der Anforderungspipeline von ASP.NET Core in einen Controllerkonstruktor ein. Allerdings erfolgt die Einfügung von Abhängigkeiten im anfänglichen Code in diesem Abschnitt ([CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)-Klasse aus dem Ordering.API-Dienst in eShopOnContainers) über den Konstruktor eines bestimmten Befehlshandlers. Lassen Sie uns erklären, was ein Befehlshandler ist und weshalb Sie ihn verwenden sollten.
 
 Das Befehlsmuster bezieht sich systemintern auf das CQRS-Muster, das weiter oben in dieser Anleitung erläutert wurde. CQRS verfügt über zwei Seiten. Der erste Bereich sind Abfragen unter Verwendung vereinfachter Abfragen mit der [Dapper](https://github.com/StackExchange/dapper-dot-net)-micro-ORM, der zuvor erläutert wurde. Der zweite Bereich sind Befehle, die der Ausgangspunkt für Transaktionen sind, und der Eingabekanal außerhalb des Diensts.
 
-Wie in Abbildung 9-24 dargestellt, basiert das Muster auf der Annahme von Befehlen von der Clientseite, deren Verarbeitung auf der Grundlage von Domänenmodellregeln und schließlich der Beibehaltung der Status mit Transaktionen.
+Wie in Abbildung 7-24 dargestellt, basiert das Muster auf der clientseitigen Annahme von Befehlen und ihre Verarbeitung auf Grundlage von Domänenmodellregeln und schließlich der Beibehaltung der Status mit Transaktionen.
 
-![](./media/image21.png)
+![Der Überblick über die Schreibseite in CQRS: Die Benutzeroberflächen-App sendet einen Befehl über die API, der zu einem CommandHandler gelangt, der vom Domänenmodell und der Infrastruktur abhängt, um die Datenbank zu aktualisieren.](./media/image21.png)
 
-**Abbildung 9-24**. Überblick über die Befehle oder die „Transaktionsseite“ in einem CQRS-Muster
+**Abbildung 7-24**. Überblick über die Befehle oder die „Transaktionsseite“ in einem CQRS-Muster
 
 ### <a name="the-command-class"></a>Die Befehlsklasse
 
@@ -201,7 +201,7 @@ Darüber hinaus ist es wichtig, dass ein Befehl für den Fall, dass er nicht ide
 
 Es wird empfohlen, Befehle und Updates, sofern dies nach den Geschäftsregeln und Invarianten Ihrer Domäne sinnvoll erscheint, idempotent zu machen. Um das gleiche Beispiel zu verwenden: Wenn der gleiche CreateOrder-Befehl aus einem beliebigen Grund (Wiederholungslogik, Hacker usw.) Ihr System mehrmals erreicht, sollten Sie in der Lage sein, ihn zu identifizieren und sicherzustellen, dass nicht mehrere Bestellungen erstellt werden. Zu diesem Zweck müssen Sie ein Art von Identität in den Vorgängen anfügen und feststellen, ob der Befehl oder das Update bereits verarbeitet wurde.
 
-Sie senden einen Befehl an einen einzelnen Empfänger, d.h. Sie veröffentlichen einen Befehl nicht. Die Veröffentlichung wendet sich an Integrationsereignisse, die einen Fakt anführen, z.B. dass etwas passiert ist und dass dies für Ereignisempfänger interessant sein kann. Im Fall von Ereignissen spielt es für den Verleger keine Rolle, welche Empfänger das Ereignis erhalten oder wie sie es verwenden. Mit Integrationsereignissen, die ja bereits in vorherigen Abschnitten vorgestellt wurden, verhält es sich jedoch anders.
+Sie senden einen Befehl an einen einzelnen Empfänger, d.h. Sie veröffentlichen einen Befehl nicht. Die Veröffentlichung wendet sich an Ereignisse, die einen Fakt anführen, z.B. dass etwas passiert ist und dass dies für Ereignisempfänger interessant sein kann. Im Fall von Ereignissen spielt es für den Verleger keine Rolle, welche Empfänger das Ereignis erhalten oder wie sie es verwenden. Mit Domänen- oder Integrationsereignissen verhält es sich jedoch anders, wie bereits in vorherigen Abschnitten vorgestellt.
 
 Ein Befehl ist mit einer Klasse implementiert, die Datenfelder oder Sammlungen mit allen Informationen enthält, die benötigt werden, um diesen Befehl auszuführen. Ein Befehl ist eine besondere Art von Data Transfer Object (DTO), das speziell zum Anfordern von Änderungen oder Transaktionen verwendet wird. Der Befehl selbst basiert auf genau den Informationen, die für die Verarbeitung des Befehls erforderlich sind.
 
@@ -252,13 +252,13 @@ public class CreateOrderCommand
         _orderItems = new List<OrderItemDTO>();
     }
 
-    public CreateOrderCommand(List<OrderItemDTO> orderItems, string city,
+    public CreateOrderCommand(List<BasketItem> basketItems, string city,
         string street,
         string state, string country, string zipcode,
         string cardNumber, string cardHolderName, DateTime cardExpiration,
         string cardSecurityNumber, int cardTypeId) : this()
     {
-        _orderItems = orderItems;
+        _orderItems = MapToOrderItems(basketItems);
         City = city;
         Street = street;
         State = state;
@@ -287,6 +287,8 @@ Die Befehlsklasse enthält im Grunde die zum Ausführen einer Geschäftstransakt
 
 Befehle haben eine zusätzliche Eigenschaft, d.h. sie sind unveränderlich, da erwartet wird, dass sie direkt vom Domänenmodell verarbeitet werden. Sie müssen während ihrer projizierten Lebensdauer nicht geändert werden. In einer C\#-Klasse kann Unveränderlichkeit dadurch erreicht werden, dass keine Setter oder andere Methoden verwendet werden, die den internen Status ändern.
 
+Beachten Sie, dass zum Durchlaufen des Serialisierungs-/Deserialisierungsprozesses durch Befehle die Eigenschaften den Setter „privat“ und das Attribut `[DataMemeber]` (oder `[JsonProperty]`) erfordern. Andernfalls kann der Deserialisierer das Zielobjekt nicht mit den notwendigen Werten rekonstruieren.
+
 Die Befehlsklasse zum Erstellen einer Bestellung beispielsweise ist möglicherweise im Hinblick auf Daten der Bestellung ähnlich, die Sie erstellen möchten, aber Sie benötigen wahrscheinlich nicht die gleichen Attribute. Beispielsweise verfügt CreateOrderCommand nicht über eine Bestell-ID, da die Bestellung noch nicht erstellt wurde.
 
 Viele Befehlsklassen können einfach sein und nur wenige Felder über einen Zustand erfordern, der geändert werden muss. Das wäre der Fall, wenn Sie nur den Status einer Bestellung aus „In Bearbeitung“ in „Bezahlt“ oder „Geliefert“ ändern, indem Sie einen Befehl wie den Folgenden verwenden:
@@ -313,19 +315,21 @@ Einige Entwickler trennen ihre Benutzeroberflächen-Anforderungsobjekte von den 
 
 Sie sollten für jeden Befehl eine bestimmte Befehlshandler-Klasse implementieren. Sie gibt vor, wie das Muster funktioniert, und ist der Ort, an dem Sie das Befehlsobjekt, die Domänenobjekte und die Infrastruktur-Repositoryobjekte verwenden. Der Befehlshandler ist das Herzstück der Anwendungsschicht im Hinblick auf CQRS und DDD. Allerdings sollte die Domänenlogik in den Domänenklassen enthalten sein – in den aggregierten Stämmen (Stammentitäten), untergeordneten Entitäten oder [Domänendiensten](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), aber nicht im Befehlshandler, der eine Klasse der Anwendungsschicht ist.
 
+Die Befehlshandlerklasse eignet sich ideal zum Erreichen bereits erwähnten Prinzips der einzigen Verantwortung.
+
 Ein Befehlshandler empfängt einen Befehl und erhält ein Ergebnis aus dem Aggregat, das verwendet wird. Das Ergebnis sollte die erfolgreiche Ausführung des Befehls oder eine Ausnahme sein. Im Falle einer Ausnahme sollte der Systemstatus nicht geändert werden.
 
 In den Befehlshandler fließen normalerweise die folgenden Schritte ein:
 
--   Er empfängt das Befehlsobjekt wie ein DTO (aus dem [Vermittler](https://en.wikipedia.org/wiki/Mediator_pattern)- oder einem anderen Infrastrukturobjekt).
+- Er empfängt das Befehlsobjekt wie ein DTO (aus dem [Vermittler](https://en.wikipedia.org/wiki/Mediator_pattern)- oder einem anderen Infrastrukturobjekt).
 
--   Er überprüft, ob der Befehl (sofern nicht durch den Vermittler überprüft) gültig ist.
+- Er überprüft, ob der Befehl (sofern nicht durch den Vermittler überprüft) gültig ist.
 
--   Er instanziiert die Aggregatstamminstanz, die das Ziel des aktuellen Befehls ist.
+- Er instanziiert die Aggregatstamminstanz, die das Ziel des aktuellen Befehls ist.
 
--   Sie führt die Methode für die Aggregatsstamminstanz aus und erhält dabei die erforderlichen Daten vom Befehl.
+- Sie führt die Methode für die Aggregatsstamminstanz aus und erhält dabei die erforderlichen Daten vom Befehl.
 
--   Sie behält den neuen Zustand des Aggregats in Bezug auf die zugehörige Datenbank bei. Dieser letzte Vorgang ist die eigentliche Transaktion.
+- Sie behält den neuen Zustand des Aggregats in Bezug auf die zugehörige Datenbank bei. Dieser letzte Vorgang ist die eigentliche Transaktion.
 
 Normalerweise befasst sich der Befehlshandler mit einem einzelnen Aggregat, das von seinem Aggregatstamm (Stammentität) gesteuert wird. Wenn mehrere Aggregate vom Empfang eines einzelnen Befehls betroffen sein sollen, können Sie mit den Domänenereignissen Status oder Aktionen über mehrere Aggregate weitergeben.
 
@@ -384,28 +388,28 @@ public class CreateOrderCommandHandler
 
 Hierbei handelt es sich um zusätzliche Schritte, die ein Befehlshandler ausführen sollte:
 
--   Verwenden Sie die Daten des Befehls für Arbeit mit den Methoden und dem Verhalten des Aggregatstamms.
+- Verwenden Sie die Daten des Befehls für Arbeit mit den Methoden und dem Verhalten des Aggregatstamms.
 
--   Lösen Sie intern in den Domänenobjekten Domänenereignisse aus, während die Transaktion ausgeführt wird, was aus der Sicht des Befehlshandlers transparent ist.
+- Lösen Sie intern in den Domänenobjekten Domänenereignisse aus, während die Transaktion ausgeführt wird, was aus der Sicht des Befehlshandlers transparent ist.
 
--   Wenn das Vorgangsergebnis des Aggregats erfolgreich und die Transaktion beendet ist, lösen Sie den Befehlshandler von Integrationsereignissen aus. (Diese können auch von Infrastrukturklassen wie Repositorys ausgelöst werden.)
+- Wenn das Vorgangsergebnis des Aggregats erfolgreich und die Transaktion beendet ist, lösen Sie Integrationsereignisse aus. (Diese können auch von Infrastrukturklassen wie Repositorys ausgelöst werden.)
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+- **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented (An den Grenzen sind Anwendungen nicht objektorientiert)** \
+  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **Commands and events**
-    [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
+- **Commands and events (Befehle und Ereignisse)** \
+  [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **What does a command handler do?**
-    [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
+- **What does a command handler do? (Wie funktioniert ein Befehlshandler?)** \
+  [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard. Domain Command Patterns – Handlers**
-    [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
+- **Jimmy Bogard. Domain Command Patterns – Handlers (Domänenbefehlsmuster – Handler)** \
+  [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
--   **Jimmy Bogard. Domain Command Patterns – Validation**
-    [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
+- **Jimmy Bogard. Domain Command Patterns – Validation (Domänenbefehlsmuser – Prüfung)** \
+  [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Die Befehlsprozesspipeline: So wird ein Befehlshandler ausgelöst
 
@@ -413,17 +417,17 @@ Die nächste Frage lautet, wie ein Befehlshandler aufgerufen wird. Sie können i
 
 Die anderen beiden Hauptoptionen, die empfohlen werden, lauten:
 
--   Über ein In-Memory-Vermittlermusterartefakt.
+- Über ein In-Memory-Vermittlermusterartefakt.
 
--   Mit einer asynchronen Nachrichtenwarteschlange zwischen Controllern und Handlern.
+- Mit einer asynchronen Nachrichtenwarteschlange zwischen Controllern und Handlern.
 
-### <a name="using-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>Mithilfe des Vermittlermusters (In-Memory) in der Befehlspipeline
+### <a name="use-the-mediator-pattern-in-memory-in-the-command-pipeline"></a>Verwenden von Vermittlermustern (In-Memory) in der Befehlspipeline
 
-Wie in Abbildung 9-25 dargestellt, verwenden Sie in einem CQRS Ansatz einen intelligenten Vermittler, ähnlich einem In-Memory-Bus. Dieser ist ausreichend intelligent, um den richtigen Befehlshandler basierend auf dem empfangenen Befehlstyp oder DTO umzuleiten. Die schwarzen Pfeile zwischen Komponenten stellen die Abhängigkeiten zwischen Objekten (in vielen Fällen mit DI eingefügt) mit den zugehörigen Interaktionen dar.
+Wie in Abbildung 7-25 dargestellt, verwenden Sie in einem CQRS-Ansatz einen intelligenten Vermittler, ähnlich einem In-Memory-Bus. Dieser ist ausreichend intelligent, um den richtigen Befehlshandler basierend auf dem empfangenen Befehlstyp oder dem DTO (Datentransferobjekt) umzuleiten. Die schwarzen Pfeile zwischen Komponenten stellen die Abhängigkeiten zwischen Objekten (in vielen Fällen mit DI eingefügt) mit den zugehörigen Interaktionen dar.
 
-![](./media/image22.png)
+![Zoom aus dem vorherigen Bild: Der ASP.NET Core-Controller sendet den Befehl an die Befehlspipeline von MediatR, damit er zum entsprechenden Handler gelangt.](./media/image22.png)
 
-**Abbildung 9-25**. Verwenden des Vermittlermusters in einem CQRS-Microservice
+**Abbildung 7-25**. Verwenden des Vermittlermusters in einem CQRS-Microservice
 
 Die Verwendung des Vermittlermusters ist sinnvoll, da Verarbeitungsanforderungen in Unternehmensanforderungen kompliziert sein können. Sie möchten eine offene Anzahl von querschnittlichen Belangen wie Protokollierung, Überprüfungen, Überwachung und Sicherheit hinzufügen können. In diesen Fällen können Sie auf eine Vermittlerpipeline zurückgreifen (weitere Informationen finden Sie unter [Vermittlermuster](https://en.wikipedia.org/wiki/Mediator_pattern)), um ein Mittel für diese zusätzlichen Verhaltensweisen oder querschnittlichen Belange bereitzustellen.
 
@@ -431,17 +435,17 @@ Ein Vermittler ist ein Objekt, dass das „wie“ dieses Prozesses kapselt: Er k
 
 Decorator-Elemente und Verhaltensweisen ähneln der [Aspect Oriented Programming (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming), werden aber nur auf eine bestimmte Prozesspipeline angewendet, die von der Vermittlerkomponente verwaltet wird. Aspekte in AOP, die übergreifende Anliegen implementieren, werden basierend auf *Aspect Weavers* angewendet, die zum Zeitpunkt der Kompilierung oder basierend auf einer Objektaufruf-Interception eingefügt werden. Über die beiden typischen AOP-Ansätze wird gesagt, dass sie wie „Zauberei“ funktionieren, da es nicht einfach ist nachzuvollziehen, wie AOP seine Aufgabe erledigt. Beim Umgang mit schwerwiegenden Problemen oder Fehlern kann das Debuggen von AOP schwierig sein. Da diese Decorator-Elemente/Verhaltensweisen andererseits explizit sind und nur im Rahmen des Vermittlers angewendet werden, ist das Debuggen wesentlich besser vorhersagbar und einfach.
 
-Im Microservice für Bestellung von eShopOnContainers werden beispielsweise zwei Musterverhalten implementiert, eine [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs)-Klasse und eine [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs)-Klasse. Die Implementierung von Verhalten wird im nächsten Abschnitt erläutert, in dem Sie erfahren, wie eShopOnContainers [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)-[Verhalten](https://github.com/jbogard/MediatR/wiki/Behaviors) implementiert.
+Im Microservice für Bestellung von eShopOnContainers werden beispielsweise zwei Musterverhalten implementiert, eine [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs)-Klasse und eine [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs)-Klasse. Die Implementierung von Verhalten wird im nächsten Abschnitt erläutert. Dort wird erklärt, wie eShopOnContainers [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)-[Verhalten](https://github.com/jbogard/MediatR/wiki/Behaviors) verwendet.
 
-### <a name="using-message-queues-out-of-proc-in-the-commands-pipeline"></a>Verwenden von Nachrichtenwarteschlangen (Out-of-Proc) in der Pipeline des Befehls
+### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Verwenden von Nachrichtenwarteschlangen (prozessextern) in der Befehlspipeline
 
-Eine andere Möglichkeit ist die Verwendung asynchroner Nachrichten basierend auf Brokern oder Nachrichtenwarteschlagen, was in Abbildung 9-26 veranschaulicht wird. Diese Option kann auch mit der Vermittlerkomponente direkt vor dem Befehlshandler kombiniert werden.
+Eine andere Möglichkeit ist die Verwendung asynchroner Nachrichten basierend auf Brokern oder Nachrichtenwarteschlagen (s. Abbildung 7-26). Diese Option kann auch mit der Vermittlerkomponente direkt vor dem Befehlshandler kombiniert werden.
 
-![](./media/image23.png)
+![Die Befehlspipeline kann auch über eine hochverfügbare Nachrichtenwarteschlange verarbeitet werden, um die Befehle an den entsprechenden Handler zu übergeben.](./media/image23.png)
 
-**Abbildung 9-26**. Verwenden von Nachrichtenwarteschlangen (prozessexterne und prozessübergreifende Kommunikation) mit CQRS-Befehlen
+**Abbildung 7-26**. Verwenden von Nachrichtenwarteschlangen (prozessexterne und prozessübergreifende Kommunikation) mit CQRS-Befehlen
 
-Wenn Nachrichtenwarteschlangen verwendet werden, um die Befehle zu akzeptieren, kann die Pipeline des Befehls noch komplexer werden, da Sie sie wahrscheinlich in zwei über die externe Warteschlange verbundene Prozesse aufteilen müssen. Die Verwendung ist jedoch sinnvoll, wenn Sie Skalierbarkeit und Leistung basierend auf asynchronem Messaging verbessern müssen. Beachten Sie, dass im Fall von Abbildung 9-26 der Controller nur die Befehlsnachricht in die Warteschlange sendet und zurückgibt. Die Befehlshandler verarbeiten die Nachrichten in ihrem eigenen Tempo. Dies ist ein großer Vorteil von Warteschlangen: Die Nachrichtenwarteschlange kann als Puffer fungieren, wenn Hyperskalierbarkeit erforderlich ist, z.B. für Lager oder jedes andere Szenario mit einem hohen eingehenden Datenaufkommen.
+Wenn Nachrichtenwarteschlangen verwendet werden, um die Befehle zu akzeptieren, kann die Pipeline des Befehls noch komplexer werden, da Sie sie wahrscheinlich in zwei über die externe Warteschlange verbundene Prozesse aufteilen müssen. Die Verwendung ist jedoch sinnvoll, wenn Sie Skalierbarkeit und Leistung basierend auf asynchronem Messaging verbessern müssen. Beachten Sie, dass im Fall von Abbildung 7-26 der Controller nur die Befehlsnachricht in die Warteschlange sendet und zurückgibt. Die Befehlshandler verarbeiten die Nachrichten in ihrem eigenen Tempo. Dies ist ein großer Vorteil von Warteschlangen: Die Nachrichtenwarteschlange kann als Puffer fungieren, wenn Hyperskalierbarkeit erforderlich ist, z.B. für Lager oder jedes andere Szenario mit einem hohen eingehenden Datenaufkommen.
 
 Da die Nachrichtenwarteschlangen asynchron sind, müssen Sie herausfinden, wie mit der Clientanwendung über den Erfolg oder Misserfolg des Prozesses des Befehls kommuniziert werden soll. Im Allgemeinen sollten Sie nie „Fire and Forget“-Befehle verwenden. Jede Geschäftsanwendung muss wissen, ob ein Befehl erfolgreich verarbeitet oder zumindest überprüft und akzeptiert wurde.
 
@@ -449,9 +453,9 @@ Die Komplexität Ihres Systems wird erhöht, da nach dem Validieren einer Befehl
 
 Darüber hinaus sind asynchrone Befehle unidirektionale Befehle, die jedoch in vielen Fällen möglicherweise nicht benötigt werden, was in der folgenden interessanten [Online-Unterhaltung](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ) zwischen Burtsev Alexey und Greg Young erläutert wird:
 
-\[Burtsev Alexey\] Ich finde häufig Code, in dem grundlos asynchrone Befehlsbehandlung oder unidirektionales Befehlsmessaging verwendet wird (es handelt sich nicht um einen langen Vorgang, es wird kein externer asynchroner Code ausgeführt, es handelt sich noch nicht einmal um anwendungsübergreifende Grenzen für die Verwendung des Nachrichtenbusses). Wozu diese unnötige Komplexität? Und ich habe bisher noch kein CQRS-Codebeispiel mit blockierendem Befehlshandler gesehen, obwohl dieser in den meisten Fällen gut geeignet ist.
-
-\[Greg Young\] \[...\] ein asynchroner Befehl ist nicht vorhanden. Es handelt sich eigentlich um ein anderes Ereignis. Wenn ich das annehmen muss, was man mir sendet, und ein Ereignis auslösen muss, wenn ich nicht zustimme, sagt man mir nicht mehr, dass ich etwas tun muss. Man informiert mich vielmehr darüber, dass etwas getan wurde. Auf den ersten Blick scheint es sich um einen geringfügigen Unterschied zu handeln, aber er hat viele Auswirkungen.
+> \[Burtsev Alexey\] Ich finde häufig Code, in dem grundlos asynchrone Befehlsbehandlung oder unidirektionales Befehlsmessaging verwendet wird (es handelt sich nicht um einen langen Vorgang, es wird kein externer asynchroner Code ausgeführt, es handelt sich noch nicht einmal um anwendungsübergreifende Grenzen für die Verwendung des Nachrichtenbusses). Wozu diese unnötige Komplexität? Und ich habe bisher noch kein CQRS-Codebeispiel mit blockierendem Befehlshandler gesehen, obwohl dieser in den meisten Fällen gut geeignet ist.
+>
+> \[Greg Young\] \[...\] ein asynchroner Befehl ist nicht vorhanden. Es handelt sich eigentlich um ein anderes Ereignis. Wenn ich das annehmen muss, was man mir sendet, und ein Ereignis auslösen muss, wenn ich nicht zustimme, sagt man \[d.h. der Befehl\] mir nicht mehr, dass ich etwas tun muss. Man informiert mich vielmehr darüber, dass etwas getan wurde. Auf den ersten Blick scheint es sich um einen geringfügigen Unterschied zu handeln, aber er hat viele Auswirkungen.
 
 Asynchrone Befehle erhöhen die Komplexität eines Systems entscheidend, da es keine einfache Möglichkeit gibt, Fehler anzuzeigen. Daher werden asynchrone Befehle nur dann empfohlen, wenn Skalierungsanforderungen erforderlich sind, oder aber in besonderen Fällen für die Kommunikation von internen Microservices über Messaging. In diesen Fällen müssen Sie ein eigenes Reporting- und Wiederherstellungssystem für Fehler entwickeln.
 
@@ -459,7 +463,7 @@ Bei der ursprünglichen Version von eShopOnContainers haben wir uns für die Ver
 
 In jedem Fall sollte diese Entscheidung auf der Grundlage der geschäftlichen Anforderung Ihrer Anwendung oder des Microservices getroffen werden.
 
-## <a name="implementing-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementieren der Befehlsprozesspipeline mit einem Vermittlermuster (MediatR)
+## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementieren der Befehlsprozesspipeline mit einem Vermittlermuster (MediatR)
 
 Als Beispielimplementierung wird in dieser Anleitung die Verwendung der prozessinternen Pipeline basierend auf dem Vermittlermuster vorgeschlagen, um im Speicher die Befehlserfassung zu steuern und Befehle an die richtigen Befehlshandler weiterzuleiten. In der Anleitung wird außerdem die Anwendung von [Verhaltensweisen](https://github.com/jbogard/MediatR/wiki/Behaviors) vorgeschlagen, um querschnittliche Belange abzutrennen.
 
@@ -469,7 +473,7 @@ Mithilfe des Vermittlermusters können Sie die Kopplung reduzieren und mit den a
 
 Ein weiterer guter Grund für die Verwendung des Musters wurde von Jimmy Bogard erläutert, als er die vorliegende Anleitung überprüfte:
 
-An dieser Stelle sollten auch Tests erwähnt werden. Sie bieten einen interessanten und konsistenten Einblick in das Verhalten des Systems. Eingabe der Anforderung , Ausgabe der Antwort. Der Aspekt war für uns eine wichtige Voraussetzung für die Entwicklung von Tests mit durchgängigem Verhalten.
+> An dieser Stelle sollten auch Tests erwähnt werden. Sie bieten einen interessanten und konsistenten Einblick in das Verhalten des Systems. Eingabe der Anforderung , Ausgabe der Antwort. Der Aspekt war für uns eine wichtige Voraussetzung für die Entwicklung von Tests mit durchgängigem Verhalten.
 
 Betrachten wir zunächst einen WebAPI-Beispielcontroller, auf dem Sie normalerweise das Vermittlerobjekt verwenden. Wenn Sie das Vermittlerobjekt nicht verwenden, müssen Sie alle Abhängigkeiten für diesen Controller einfügen, etwa ein Protokollierungsobjekt usw. Das Ergebnis ist ein ziemlich komplizierter Konstruktor. Wenn Sie jedoch das Vermittlerobjekt verwenden, kann der Konstruktor des Controllers wesentlich einfacher sein, mit einigen wenigen Abhängigkeiten anstelle von vielen Abhängigkeiten, z.B. eine pro querschnittlichen Vorgang, was im folgenden Beispiel veranschaulicht wird:
 
@@ -495,9 +499,9 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 }
 ```
 
-### <a name="implementing-idempotent-commands"></a>Implementieren von idempotenten Befehlen
+### <a name="implement-idempotent-commands"></a>Implementieren von idempotenten Befehlen
 
-eShopOnContainers enthalten ein komplexeres Beispiel als das oben aufgeführte. Es veranschaulicht die Übermittlung eines CreateOrderCommand-Objekts aus dem Microservice für Bestellung. Aber da der Bestellgeschäftsprozess etwas komplexer ist und im vorliegenden Fall am Warenkorbmicroservice beginnt, wird die Aktion Übermittlung des CreateOrderCommand-Objekts von einem Integrationsereignishandler namens [UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) und nicht von einem einfachen WebAPIController ausgeführt, der wie in dem vorherigen, einfacheren Verfahren von der Client-App aufgerufen wird. 
+**eShopOnContainers** enthält ein komplexeres Beispiel als das oben aufgeführte. Es veranschaulicht die Übermittlung eines CreateOrderCommand-Objekts aus dem Microservice für Bestellungen. Aber da der Bestellgeschäftsprozess etwas komplexer ist und im vorliegenden Fall am Warenkorbmicroservice beginnt, wird die Aktion „Übermittlung“ des CreateOrderCommand-Objekts von einem Integrationsereignishandler namens >UserCheckoutAcceptedIntegrationEvent.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)) und nicht von einem einfachen WebAPI-Controller ausgeführt, der wie in dem vorherigen, einfacheren Verfahren von der Client-App aufgerufen wird.
 
 Die Aktion der Übermittlung des Befehls an MediatR ist, wie im folgenden Code veranschaulicht, relativ ähnlich.
 
@@ -519,7 +523,7 @@ result = await _mediator.Send(requestCreateOrder);
 
 Dieser Fall ist jedoch auch etwas anspruchsvoller, da idempotente Befehle implementiert werden. Der CreateOrderCommand-Prozess sollte idempotent sein. Wenn eine Nachricht aus einem beliebigen Grund, z.B. bei Neuversuchen, dupliziert im Netzwerk übermittelt wird, wird der gleiche Geschäftsauftrag nur einmal verarbeitet.
 
-Dies wird durch Umschließen des Geschäftsbefehls (in diesem Fall CreateOrderCommand) und Einbettung in einen generischen IdentifiedCommand implementiert, der von einer ID jeder Nachricht über das Netzwerk verfolgt wird, das idempotent muss.
+Dies wird durch Umschließen des Geschäftsbefehls (hier CreateOrderCommand) und Einbettung in einen generischen IdentifiedCommand implementiert, der von einer ID jeder Nachricht über das Netzwerk verfolgt wird, das idempotent sein muss.
 
 Im folgenden Code können Sie sehen, dass der IdentifiedCommand nichts weiter als eine DTO mit ID sowie das umschlossene Geschäftsbefehlsobjekt ist.
 
@@ -583,7 +587,7 @@ public class IdentifiedCommandHandler<T, R> :
 
 Der IdentifiedCommand verhält sich wie der Umschlag eines Geschäftsbefehls. Wenn der Geschäftsbefehl verarbeitet werden muss, da er keine wiederholte ID ist, wird der innere Geschäftsbefehl erneut an den Vermittler übermittelt – wie im letzten Teil des oben stehenden Codes bei Ausführung von `_mediator.Send(message.Command)` über [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
-Dabei wird der Geschäftsbefehlshandler verlinkt und ausgeführt. In diesem Fall handelt es sich um den CreateOrderCommandHandler, der – wie im folgenden Code gezeigt – Transaktionen gegen die Bestellungsdatenbank ausführt.
+Dabei wird der Geschäftsbefehlshandler verlinkt und ausgeführt. In diesem Fall handelt es sich um den [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), der – wie im folgenden Code gezeigt – Transaktionen für die Bestellungsdatenbank ausführt.
 
 ```csharp
 // CreateOrderCommandHandler.cs
@@ -630,7 +634,7 @@ public class CreateOrderCommandHandler
 }
 ```
 
-### <a name="registering-the-types-used-by-mediatr"></a>Registrieren der von MediatR verwendeten Typen
+### <a name="register-the-types-used-by-mediatr"></a>Registrieren der von MediatR verwendeten Typen
 
 Damit MediatR Ihre Befehlshandlerklassen erkennt, müssen Sie die Vermittlerklassen und die Befehlshandlerklassen in Ihrem IoC-Container registrieren. MediatR verwendet standardmäßig Autofac als IoC-Container, aber Sie können auch den integrierten ASP.NET Core-IoC-Container oder einen anderen von MediatR unterstützten Container verwenden.
 
@@ -655,9 +659,9 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-Dies ist sozusagen der Zauberstab von MediatR. 
+Dies ist sozusagen der Zauberstab von MediatR.
 
-Jeder Befehlshandler implementiert die generische IAsyncRequestHandler&lt;T&gt;-Schnittstelle. Beim Registrieren der Assemblys registriert der Code deshalb mit RegisteredAssemblyTypes alle als RequestHandler markierten Typen, während die CommandHandler dank der in der CommandHandler-Klasse angegebenen Beziehung ihren Befehlen zugeordnet werden, was im folgenden Beispiel dargestellt ist:
+Jeder Befehlshandler implementiert die generische `IAsyncRequestHandler<T>`-Schnittstelle. Beim Registrieren der Assemblys registriert der Code mit `RegisteredAssemblyTypes` alle als `IAsyncRequestHandler` markierten Typen, während die `CommandHandlers` dank der in der `CommandHandler`-Klasse angegebenen Beziehung ihren `Commands` zugeordnet werden:
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -665,11 +669,11 @@ public class CreateOrderCommandHandler
 {
 ```
 
-Das ist der Code, der Befehle mit Befehlshandlern korreliert. Der Handler nur eine einfache Klasse, aber er erbt vom RequestHandler&lt;T&gt;, und MediatR stellt sicher, dass sichergestellt, die er mit der richtigen Nutzlast aufgerufen wird.
+Das ist der Code, der Befehle mit Befehlshandlern korreliert. Der Handler ist nur eine einfache Klasse, aber er erbt vom `RequestHandler<T>` (<T> steht für den Befehlstyp), und MediatR stellt sicher, dass er mit der richtigen Nutzlast aufgerufen wird.
 
-## <a name="applying-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Anwenden von übergreifenden Belangen, wenn Befehle mit Verhalten in MediatR verarbeitet werden
+## <a name="apply-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Anwenden von übergreifenden Belangen beim Verarbeiten von Befehlen mit Verhalten in MediatR
 
-Es gibt zudem die Möglichkeit, querschnittliche Belange auf die Vermittlerpipeline anzuwenden. Sie können auch am Ende des Autofac-Registrierungsmodulcodes sehen, wie ein Verhaltenstyp registriert wird, insbesondere eine benutzerdefinierte LoggingBehavior-Klasse und eine ValidatorBehavior-Klasse. Sie können jedoch auch andere benutzerdefinierten Verhaltensweisen hinzufügen.
+Es gibt zudem die Möglichkeit, querschnittliche Belange auf die Vermittlerpipeline anzuwenden. Sie können auch am Ende des Autofac-Registrierungsmodulcodes sehen, wie ein Verhaltenstyp registriert wird, insbesondere eine benutzerdefinierte LoggingBehavior-Klasse und eine ValidatorBehavior-Klasse. Sie können jedoch auch anderes benutzerdefiniertes Verhalten hinzufügen.
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -715,46 +719,9 @@ public class LoggingBehavior<TRequest, TResponse>
 }
 ```
 
-Durch Implementierung dieser Decorator-Klasse und deren Anwendung auf die Pipeline protokollieren alle über MediatR verarbeiteten Befehle Informationen über die Ausführung.
+Durch die Implementierung dieser Verhaltensklasse und ihre Registrierung in der Pipeline (im obigen Vermittlermodul) protokollieren alle über MediatR verarbeiteten Befehle Informationen zur Ausführung.
 
 Der Microservice für Bestellung von eShopOnContainers wendet auch ein zweites Verhalten für grundlegende Validierungen an, und zwar die [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs)-Klasse, die auf der Bibliothek [FluentValidation](https://github.com/JeremySkinner/FluentValidation) basiert, wie im folgenden Code dargestellt:
-
-```csharp
-public class ValidatorDecorator<TRequest, TResponse>
-    : IAsyncRequestHandler<TRequest, TResponse>
-    where TRequest : IAsyncRequest<TResponse>
-{
-    private readonly IAsyncRequestHandler<TRequest, TResponse> _inner;
-    private readonly IValidator<TRequest>[] _validators;
-
-    public ValidatorDecorator(
-        IAsyncRequestHandler<TRequest, TResponse> inner,
-        IValidator<TRequest>[] validators)
-    {
-        _inner = inner;
-        _validators = validators;
-    }
-
-    public async Task<TResponse> Handle(TRequest message)
-    {
-        var failures = _validators
-            .Select(v => v.Validate(message))
-            .SelectMany(result => result.Errors)
-            .Where(error => error != null)
-            .ToList();
-            if (failures.Any())
-            {
-                throw new OrderingDomainException(
-                $"Command Validation Errors for type {typeof(TRequest).Name}",
-                new ValidationException("Validation exception", failures));
-            }
-            var response = await _inner.Handle(message);
-        return response;
-    }
-}
-```
-
-Anschließend wurde auf der Grundlage der [FluentValidation](https://github.com/JeremySkinner/FluentValidation)-Bibliothek eine Validierung für die mit CreateOrderCommand übergebenen Daten erstellt, was im folgenden Code veranschaulicht wird:
 
 ```csharp
 public class ValidatorBehavior<TRequest, TResponse> 
@@ -786,7 +753,9 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-Anschließend wurde auf der Grundlage der FluentValidation-Bibliothek eine Validierung für die mit CreateOrderCommand übergebenen Daten erstellt, was im folgenden Code veranschaulicht wird:
+Das Verhalten hier löst eine Ausnahme aus, wenn die Prüfung fehlschlägt. Allerdings können Sie auch ein Ergebnisobjekt zurückgeben, das das Befehlsergebnis enthält, wenn es erfolgreich war, oder die Prüfungsnachrichten, wenn es nicht erfolgreich war. Dies würde es wahrscheinlich einfacher machen, dem Benutzer die Prüfungsergebnisse anzuzeigen.
+
+Anschließend wurde auf der Grundlage der [FluentValidation](https://github.com/JeremySkinner/FluentValidation)-Bibliothek eine Validierung für die mit CreateOrderCommand übergebenen Daten erstellt, was im folgenden Code veranschaulicht wird:
 
 ```csharp
 public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
@@ -827,45 +796,45 @@ Auf ähnliche Weise könnten Sie andere Verhaltensweisen für zusätzliche Aspek
 
 ##### <a name="the-mediator-pattern"></a>Das Vermittlermuster
 
--   **Vermittlermuster**
-    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
+- **Vermittlermuster** \
+  [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Das Decorator-Muster
 
--   **Decorator-Muster**
-    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
+- **Decoratormuster** \
+  [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
--   **MediatR.** GitHub repo (Scrutor. GitHub-Reporitory).
-    [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
+- **MediatR.** GitHub repo (Scrutor. GitHub-Reporitory). \
+  [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **CQRS with MediatR and AutoMapper**
-    [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+- **CQRS with MediatR and AutoMapper (CQRS mit MediatR und AutoMapper)** \
+  [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Put your controllers on a diet: POSTs and commands.**
-    [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+- **Put your controllers on a diet: POSTs and commands. (Effiziente Controller: POSTs und Befehle)** \
+  [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Tackling cross-cutting concerns with a mediator pipeline**
-    [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+- **Tackling cross-cutting concerns with a mediator pipeline (Umgang mit übergreifenden Belangen mithilfe einer Vermittlerpipeline)** \
+  [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS and REST: the perfect match**
-    [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+- **CQRS and REST: the perfect match (CQRS und REST: das ideale Paar)** \
+  [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **MediatR Pipeline Examples**
-    [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+- **MediatR Pipeline Examples (Beispiele für MediatR-Pipelines)** \
+  [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Vertical Slice Test Fixtures for MediatR and ASP.NET Core**
-    *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
+- **Vertical Slice Test Fixtures for MediatR and ASP.NET Core (Vertikale Segmenttestfixtures für MediatR und ASP.NET Core)** \
+  [*https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/*](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
 
--   **MediatR Extensions for Microsoft Dependency Injection Released**
-    [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+- **MediatR Extensions for Microsoft Dependency Injection Released (Release: MediatR-Erweiterungen für die Microsoft-Abhängigkeitsinjektion)** \
+  [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Fluent-Überprüfung
 
--   **Jeremy Skinner. FluentValidation.** GitHub repo (Scrutor. GitHub-Reporitory).
-    [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
+- **Jeremy Skinner. FluentValidation.** GitHub repo (Scrutor. GitHub-Reporitory). \
+  [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]
-[Zurück](microservice-application-layer-web-api-design.md)
-[Weiter](../implement-resilient-applications/index.md)
+>[Zurück](microservice-application-layer-web-api-design.md)
+>[Weiter](../implement-resilient-applications/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332953"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155024"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
 Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
@@ -32,7 +32,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
 ## <a name="stream-operations"></a>Streamoperationen  
  Die im Stream enthaltenen Daten stammen möglicherweise aus dem Arbeitsspeicher, einer Datei oder einem TCP/IP-Socket. Streams verfügen über grundlegende Operationen, die auf sie angewendet werden können.  
   
--   Lesen. Sie können aus einem Stream lesen und Daten vom Stream in eine Datenstruktur übertragen, z.B. eine Zeichenfolge oder ein Bytearray.  
+-   **Lesen**. Sie können aus einem Stream lesen und Daten vom Stream in eine Datenstruktur übertragen, z.B. eine Zeichenfolge oder ein Bytearray.  
   
 -   **Schreiben**. Sie können in einen Stream schreiben und Daten aus einer Datenquelle in den Stream übertragen.  
   
@@ -51,7 +51,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 -   <xref:System.IO.MemoryStream>  
   
--   <xref:System.Net.Sockets.NetworkStream>  
+-   <xref:System.Net.Sockets.NetworkStream>.  
   
  In der nachstehenden Tabelle werden Aufgaben aufgeführt, die häufig mit einem Stream durchgeführt werden:  
   
@@ -101,5 +101,5 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von Streams](../../../../standard/io/composing-streams.md)  
  [Datei- und Stream-E/A](../../../../standard/io/index.md)  
- [Asynchrone Datei-E/A](../../../../standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

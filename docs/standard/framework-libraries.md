@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743962"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143375"
 ---
 # <a name="framework-libraries"></a>Frameworkbibliotheken
 
@@ -53,7 +53,8 @@ Basisklassenbibliotheken stellen die meisten grundlegenden Typen und Hilfsprogra
 
 *   <xref:System.Net.Http.HttpClient>: Eine API zum Senden von HTTP-Anforderungen und Empfangen von HTTP-Antworten aus einer Ressource, die durch einen URI identifiziert wird.
 *   <xref:System.Xml.Linq.XDocument>: Eine API zum Laden und Abfragen von XML-Dokumenten mit LINQ.
-*   <xref:System.IO.StreamReader>: Eine API zum Lesen von Dateien (<xref:System.IO.StringWriter>). Kann zum Schreiben von Dateien verwendet werden.
+*   <xref:System.IO.StreamReader>: Eine API zum Lesen von Dateien. 
+*   <xref:System.IO.StreamWriter>: Eine API zum Schreiben von Dateien.
 
 ## <a name="app-model-apis"></a>App-Modell-APIs
 

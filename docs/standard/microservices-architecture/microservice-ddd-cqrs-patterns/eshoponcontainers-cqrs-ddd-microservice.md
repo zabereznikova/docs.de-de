@@ -1,17 +1,17 @@
 ---
 title: Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
+description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung von CQRS im Microservice für Bestellungen in eShopOnContainers
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106748"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143635"
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
 Die Struktur des Microservices für Bestellungen in der Referenzanwendung „eShopOnContainers“ basiert auf CQRS-Prinzipien. Allerdings wird darin der einfachste Ansatz verwendet, bei dem Abfragen von Befehlen getrennt werden und dieselbe Datenbank für beide Aktionen dient.
 
@@ -23,7 +23,7 @@ Die in diesem Leitfaden vorgestellten DDD-Muster sollten nicht universell angewe
 
 Ein solches Muster ist das Aggregatmuster, das wir in späteren Abschnitten kennenlernen. Beim Aggregatmuster werden viele Domänenobjekte aufgrund ihrer Beziehung zur Domäne als eine einzelne Einheit behandelt. In Abfragen ist dieses Muster nicht immer vorteilhaft, da es die Komplexität der Abfragelogik verkomplizieren kann. Bei schreibgeschützten Abfragen werden viele Objekte nicht als einzelnes Aggregat behandelt. In diesem Fall erhöht sich nur die Komplexität.
 
-Wie in Abbildung 9-2 dargestellt, empfiehlt dieser Leitfaden, DDD-Muster nur im Bereich der Transaktionen/Updates Ihres Microservices zu verwenden, d.h. in dem Bereich, in dem Befehle ausgelöst werden. Abfragen können einem einfacheren Ansatz folgen und sollten im Sinne des CQRS-Ansatzes von Befehlen getrennt werden.
+Wie in Abbildung 7-2 dargestellt, empfiehlt dieser Leitfaden, DDD-Muster nur im Transaktions-/Updatebereich Ihres Microservices zu verwenden, d.h. durch Befehle ausgelöst. Abfragen können einem einfacheren Ansatz folgen und sollten im Sinne des CQRS-Ansatzes von Befehlen getrennt werden.
 
 Bei der Implementierung der Abfrageseite können Sie zwischen vielen Ansätzen wählen, z.B. ein vollständiger ORM wie EF Core, AutoMapper-Projektionen, gespeicherte Prozeduren, Ansichten, materialisierte Sichten oder ein Mikro-ORM.
 
@@ -33,7 +33,7 @@ Hinweis: Wenn Sie so vorgehen, erfordern alle Updates für das Modell, die in ei
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS und DDD-Muster sind keine Architekturen oberster Ebene
 
-CQRS und die meisten DDD-Muster (z.B. DDD-Ebenen oder ein Domänenmodell mit Aggregaten) sind keine Architekturstile, sondern nur Architekturmuster. Microservices, SOA und ereignisgesteuerte Architekturen (Event-Driven Architecture, EDA) sind Beispiele für Architekturstile, denn Sie beschreiben ein System mit vielen Komponenten, z.B. viele Microservices. CQRS und DDD-Muster beschreiben etwas innerhalb eines einzelnen Systems oder einer einzelnen Komponente, in diesem Fall etwas in einem Microservice.
+CQRS und die meisten DDD-Muster (z.B. DDD-Ebenen oder ein Domänenmodell mit Aggregaten) sind keine Architekturstile, sondern lediglich Architekturmuster. Microservices, SOA und ereignisgesteuerte Architekturen (Event-Driven Architecture, EDA) sind Beispiele für Architekturstile, denn Sie beschreiben ein System mit vielen Komponenten, z.B. viele Microservices. CQRS und DDD-Muster beschreiben etwas innerhalb eines einzelnen Systems oder einer einzelnen Komponente, in diesem Fall etwas in einem Microservice.
 
 Unterschiedliche Kontextgrenzen (Bounded Contexts, BCs) wenden außerdem verschiedene Muster an. Sie haben unterschiedliche Aufgaben, und das führt häufig zu unterschiedlichen Lösungen. Wenn überall dasselbe Muster erzwungen wird, führt das jedoch zu einem Fehler. Daher sollten Sie dies auf keinen Fall tun. Viele Teilsysteme, BCs oder Microservices sind einfacher und können leichter mithilfe einfacher CRUD-Dienste oder einer anderen Lösung implementiert werden kann.
 
@@ -41,28 +41,27 @@ Es gibt nur eine Anwendungsarchitektur: die Architektur der System- oder der End
 
 ####  <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Martin Fowler. CQRS**
-    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+- **Martin Fowler. CQRS** \
+  [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young. CQS vs. CQRS**
-    [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+- **Greg Young. CQS vs. CQRS** \
+  [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS-Dokumente**
-    [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
+- **Greg Young. CQRS Documents (CQRS-Dokumente)** \
+  [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young. CQRS, aufgabenbasierte Benutzeroberflächen und Event Sourcing**
-    [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+- **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS: aufgabenbasierte Benutzeroberflächen und Ereignissourcing)** \
+  [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Event Sourcing**
-    [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
-
+- **Event-Sourcing (ES) (Ereignissourcing)** \
+  [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 >[!div class="step-by-step"]
-[Zurück](apply-simplified-microservice-cqrs-ddd-patterns.md)
-[Weiter](cqrs-microservice-reads.md)
+>[Zurück](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Weiter](cqrs-microservice-reads.md)

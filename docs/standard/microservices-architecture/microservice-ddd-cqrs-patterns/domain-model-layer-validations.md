@@ -1,31 +1,31 @@
 ---
 title: Entwerfen von Validierungen auf der Domänenmodellebene
-description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Entwerfen von Validierungen auf der Domänenmodellebene
+description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wichtige Konzepte für Validierungen von Domänenmodellen
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: f348e1dbb65f37f625c1dec243364af683c99b8a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188052"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153682"
 ---
-# <a name="designing-validations-in-the-domain-model-layer"></a>Entwerfen von Validierungen auf der Domänenmodellebene
+# <a name="design-validations-in-the-domain-model-layer"></a>Entwerfen von Validierungen auf der Domänenmodellebene
 
 In DDD können Validierungsregeln als Invarianten betrachtet werden. Die wichtigste Verantwortung eines Aggregats besteht darin, Invarianten für Zustandsänderungen für alle Entitäten innerhalb dieses Aggregats zu erzwingen.
 
 Domänenentitäten sollten immer gültige Entitäten sein. Es gibt eine bestimmte Anzahl an Invarianten für ein Objekt, die immer zutreffen sollten. Beispielsweise muss ein Bestellelementobjekt immer über eine Menge mit einer positiven ganzen Zahl plus Artikelnamen und Artikelpreis verfügen. Aus diesem Grund liegt die Erzwingung von Invarianten in der Verantwortung der Domänenentitäten (insbesondere des Aggregatstamms) und ein Entitätsobjekt sollte nicht existieren können, wenn es nicht gültig ist. Invariante Regeln werden einfach als Verträge angegeben, und Ausnahmen oder Benachrichtigungen werden ausgelöst, wenn sie verletzt werden.
 
-Die Überlegung dahinter ist, dass viele Fehler auftreten, weil sich Objekte in einem Zustand befinden, in dem sie nie sein sollten. Im Folgenden finden Sie eine übersichtliche Erläuterung von Greg Young in einer [Onlinediskussion](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/):
+Die Überlegung dahinter ist, dass viele Fehler auftreten, weil sich Objekte in einem Zustand befinden, in dem sie nie sein sollten. Im Folgenden finden Sie eine übersichtliche Erläuterung von Greg Young in einer [Onlinediskussion](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/):
 
 Nehmen wir an, dass wir SendUserCreationEmailService haben, der ein UserProfile akzeptiert... Wie können wir innerhalb dieses Diensts begründen, dass Name nicht NULL ist? Überprüfen wir ihn erneut? Oder wahrscheinlicher... Sie kümmern sich einfach nicht darum und „hoffen auf das Beste“ – Sie hoffen, dass jemand die Validierung durchführt, bevor es an Sie gesendet wird. Natürlich sollten wir bei der Verwendung von TDD einen der ersten Tests schreiben, bei dem ein Fehler ausgelöst wird, wenn ich einen Kunden mit einem Namen mit einem Wert von NULL schicke. Aber sobald wir diese Art von Tests immer wieder schreiben, erkennen wir: „Moment mal, wenn Namen nie NULL sein könnten, hätten wir nicht alle diese Tests“
 
-## <a name="implementing-validations-in-the-domain-model-layer"></a>Implementieren von Validierungen auf der Domänenmodellebene
+## <a name="implement-validations-in-the-domain-model-layer"></a>Implementieren von Validierungen auf der Domänenmodellebene
 
 Validierungen werden in der Regel in Domänenentitätskonstruktoren oder in Methoden implementiert, die die Entität aktualisieren können. Es gibt mehrere Möglichkeiten zum Implementieren von Validierungen, z.B. das Validieren von Daten und Auslösen von Ausnahmen, wenn die Validierung fehlschlägt. Es gibt auch erweiterte Muster wie die Verwendung des Spezifikationsmusters für Validierungen und die Benachrichtigungsmuster zum Zurückgeben einer Auflistung von Fehlern, anstatt eine Ausnahme für jede auftretende Validierung zurückzugeben.
 
-### <a name="validating-conditions-and-throwing-exceptions"></a>Validieren von Bedingungen und Auslösen von Ausnahmen
+### <a name="validate-conditions-and-throw-exceptions"></a>Validieren von Bedingungen und Auslösen von Ausnahmen
 
 Das folgende Codebeispiel zeigt die einfachste Vorgehensweise zur Validierung in einer Domänenentität durch Auslösen einer Ausnahme. In der Verweistabelle am Ende dieses Abschnitts sehen Sie Links zu fortgeschritteneren Implementierungen, die auf den zuvor besprochenen Mustern basieren.
 
@@ -53,51 +53,29 @@ Wenn der Wert des Zustands ungültig ist, wurden die erste Adresszeile und der O
 
 Ein ähnlicher Ansatz kann im Entitätskonstruktor verwendet werden, wodurch eine Ausnahme ausgelöst wird, um sicherzustellen, dass die Entität gültig ist, sobald sie erstellt wird.
 
-### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>Verwenden von Validierungsattributen im Modell anhand von Datenanmerkungen
+### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Verwenden von Validierungsattributen im Modell anhand von Datenanmerkungen
 
-Ein anderer Ansatz ist die Verwendung von Validierungsattributen anhand von Datenanmerkungen. Mithilfe von Validierungsattributen können Sie die Modellvalidierung konfigurieren. Dies ist mit der Validierung von Feldern in Datenbanktabellen zu vergleichen. Dies beinhaltet Einschränkungen wie das Zuweisen von Datentypen oder erforderlichen Feldern. Andere Arten der Validierung umfassen die Anwendung von Mustern auf Daten, um Geschäftsregeln zu erzwingen – z.B. das Angeben einer Kreditkartenummer, einer Telefonnummer oder einer E-Mail-Adresse. Validierungsattribute erleichtern das Erzwingen von Anforderungen.
+Datenanmerkungen können ähnlich wie die Required- oder MaxLength-Attribute zum Konfigurieren von EF Core-Datenbankfeld-Eigenschaften verwendet werden, wie im Abschnitt [Tabellenzuordnung](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) detailliert erläutert. Allerdings [können sie nicht mehr für die Entitätsvalidierung EF Core verwendet werden](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (Gleiches gilt für die <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>-Methode), wie dies seit EF 4.x in .NET Framework der Fall war.
 
-Wie jedoch im folgenden Code gezeigt wird, greift dieser Ansatz in einem DDD-Modell möglicherweise zu sehr ein, da er eine Abhängigkeit auf ModelState.IsValid von Microsoft.AspNetCore.Mvc.ModelState abruft, die Sie von Ihren MVC-Controllern aufrufen müssen. Die Modellvalidierung wird vor jeder ausgelösten Controlleraktion ausgelöst. Die Controllermethode ist dafür verantwortlich, das Ergebnis des Aufrufs von ModelState.IsValid zu untersuchen und darauf angemessen zu reagieren. Die Entscheidung zur Verwendung hängt davon ab, wie eng das Modell mit dieser Infrastruktur gekoppelt werden soll.
+Datenanmerkungen und die <xref:System.ComponentModel.DataAnnotations.IValidatableObject>-Schnittstelle können weiterhin für die Modellvalidierung während der Modellbindung verwendet werden – wie gewohnt vor dem Aufruf der Controlleraktionen. Bei diesem Modell handelt sich aber um ein ViewModel- bzw. DTO-Konzept, das im MVC oder der API und nicht im Domänenmodell umgesetzt werden muss.
 
-```csharp
-using System.ComponentModel.DataAnnotations;
-// Other using statements ...
-// Entity is a custom base class which has the ID
-public class Product : Entity
-{
-    [Required]
-    [StringLength(100)]
-    public string Title { get; private set; }
+Nachdem die Unterschiede in den Konzepten nun klar sind, können Sie Datenanmerkungen und `IValidatableObject` in der Entitätsklasse weiterhin für die Validierung verwenden, wenn Ihre Aktionen einen Objektparameter der Entitätsklasse empfangen. Dies wird aber nicht empfohlen. In diesem Fall erfolgt die Validierung bei der Modellbindung, vor dem Aufrufen der Aktion, und Sie können das Ergebnis in der ModelState.IsValid-Eigenschaft des Controllers überprüfen. Aber auch hier gilt: Die Validierung erfolgt im Controller, nicht vor dem Persistieren des Entitätsobjekts im DbContext, wie es seit EF 4.x der Fall war.
 
-    [Required]
-    [Range(0, 999.99)]
-    public decimal Price { get; private set; }
+Sie können weiterhin in der Entitätsklasse eine benutzerdefinierte Validierung mithilfe von Datenanmerkungen und der `IValidatableObject.Validate`-Methode implementieren, indem Sie die SaveChanges-Methode von DbContext überschreiben.
 
-    [Required]
-    [VintageProduct(1970)]
-    [DataType(DataType.Date)]
-    public DateTime ReleaseDate { get; private set; }
+Eine Beispielimplementierung für die Validierung von `IValidatableObject`-Elementen finden Sie in [diesem Kommentar auf GitHub](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539). Dieses Beispiel führt keine attributbasierten Validierungen durch. Diese lassen sich jedoch durch Reflektion in der gleichen Überschreibung implementieren.
 
-    [Required]
-    [StringLength(1000)]
-    public string Description { get; private set; }
-
-    // Constructor...
-    // Additional methods for entity logic and constructor...
-}
-```
-
-Allerdings bleibt das Domänenmodell aus DDD-Sicht am besten schlank, mit der Verwendung von Ausnahmen in den Verhaltensmethoden Ihrer Entität, oder durch die Implementierung der Spezifikations- und Benachrichtigungsmuster, um Validierungsregeln zu erzwingen. Validierungsframeworks wie Datenanmerkungen in ASP.NET Core oder andere Validierungsframeworks wie FluentValidation erfordern die Auslösung des Anwendungsframeworks. Beispielsweise müssen Sie beim Aufrufen der Methode ModelState.IsValid in Datenanmerkungen ASP.NET-Controller aufrufen.
+Allerdings bleibt das Domänenmodell aus DDD-Sicht am besten schlank, mit der Verwendung von Ausnahmen in den Verhaltensmethoden Ihrer Entität, oder durch die Implementierung der Spezifikations- und Benachrichtigungsmuster, um Validierungsregeln zu erzwingen.
 
 Es kann sich als sinnvoll erweisen, Datenanmerkungen auf Anwendungsebene in ViewModel-Klassen (statt Domänenentitäten) zu verwenden, die Eingaben zur Modellvalidierung in der Benutzeroberflächenebene akzeptieren. Dies sollte jedoch nicht unter Ausschluss der Validierung innerhalb des Domänenmodells ausgeführt werden.
 
-### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Validieren von Entitäten durch Implementieren der Spezifikations- und Benachrichtigungsmuster
+### <a name="validate-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Validieren von Entitäten durch Implementieren der Spezifikations- und Benachrichtigungsmuster
 
 Es gibt einen komplexeren Ansatz zum Implementieren von Validierungen im Domänenmodell. Hierbei wird das Spezifikationsmuster in Verbindung mit dem Benachrichtigungsmuster implementiert, wie in einigen der unten aufgeführten zusätzlichen Ressourcen beschrieben wird.
 
 Es ist erwähnenswert, dass Sie auch nur eines dieser Muster verwenden können – z.B. das manuelle Validieren mit Steueranweisungen und das Verwenden des Benachrichtigungsmusters zum Stapeln und Zurückgeben einer Liste von Validierungsfehlern.
 
-### <a name="using-deferred-validation-in-the-domain"></a>Verwenden der verzögerten Validierung in der Domäne
+### <a name="use-deferred-validation-in-the-domain"></a>Verwenden der verzögerten Validierung in der Domäne
 
 Es gibt verschiedene Ansätze für den Umgang mit verzögerten Validierungen in der Domäne. In seinem Buch [Implementing Domain-Driven Design (Implementieren von domänengesteuertem Design)](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577) erläutert Vaughn Vernon dies im Abschnitt zur Validierung.
 
@@ -109,28 +87,27 @@ Wenn Sie z.B. die Feldvalidierung mit Datenanmerkungen verwenden, duplizieren Si
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Rachel Appel. Einführung in die Modellvalidierung im ASP.NET Core MVC**
-    [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+- **Rachel Appel. Introduction to model validation in ASP.NET Core MVC** \ (Einführung in die Modellvalidierung im ASP.NET Core MVC)
+  [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
--   **Rick Anderson. Adding validation (Hinzufügen der Überprüfung)**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson. Adding validation** \ (Hinzufügen der Validierung)
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler. Ersetzen des Auslösens von Ausnahmen durch Benachrichtigungen in Validierungen**
-    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+- **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Ersetzen des Auslösens von Ausnahmen durch Benachrichtigungen in Validierungen)
+  [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
--   **Spezifikation und Benachrichtigungsmuster**
-    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+- **Specification and Notification Patterns** \ (Spezifikations- und Benachrichtigungsmuster)
+  [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Lev Gorodinski. Validierung in Domain-Driven-Design (DDD)**
-    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+- **Lev Gorodinski. Validation in Domain-Driven Design (DDD)** \ (Validierung in Domain-Driven-Design [DDD])
+  [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin Jack. Überprüfung des Domänenmodells**
-    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+- **Colin Jack. Domain Model Validation** \ (Validierung des Domänenmodells)
+  [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard. Validierung in einer DDD-Welt**
-    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
-
+- **Jimmy Bogard. Validation in a DDD world** \ (Validierung in einer DDD-Welt)
+  [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 >[!div class="step-by-step"]
-[Zurück](enumeration-classes-over-enum-types.md)
-[Weiter](client-side-validation.md)
+>[Zurück](enumeration-classes-over-enum-types.md)
+>[Weiter](client-side-validation.md)

@@ -1,5 +1,6 @@
 ---
-title: Rückverweiskonstrukte in regulären Ausdrücken
+title: Rückverweiskonstrukte in regulären .NET-Ausdrücken
+desription: Learn how to identify repeated text elements by using backreference constructs in a regular expression.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.custom: seodec18
+ms.openlocfilehash: 0b3de774159e528ea782d8b450f9e596aeb0daca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672032"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144779"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder eine Teilzeichenfolge innerhalb einer Zeichenfolge zu identifizieren. Wenn z.B. die Eingabezeichenfolge mehrere Vorkommen einer beliebigen Teilzeichenfolge enthält, können Sie das erste Vorkommen mit einer Erfassungsgruppe abgleichen und dann mit einem Rückverweis nachfolgende Vorkommen der Teilzeichenfolge abgleichen.  
   
 > [!NOTE]
->  Eine separate Syntax wird verwendet, um auf benannte und nummerierte Erfassungsgruppen in Ersetzungszeichenfolgen zu verweisen. Weitere Informationen finden Sie unter [Substitutions](substitutions-in-regular-expressions.md).  
+>  Eine separate Syntax wird verwendet, um auf benannte und nummerierte Erfassungsgruppen in Ersetzungszeichenfolgen zu verweisen. Weitere Informationen finden Sie unter [Ersetzungen in regulären Ausdrücken](substitutions-in-regular-expressions.md).  
   
  .NET definiert separate Sprachelemente, um auf nummerierte und benannte Erfassungsgruppen zu verweisen. Weitere Informationen zu Erfassungsgruppen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
@@ -49,7 +51,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(\w)\1` wird definiert, der aus den folgenden Elementen besteht.  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`(\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zur ersten Erfassungsgruppe.|  
 |`\1`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der ersten Erfassungsgruppe identisch ist.|  
@@ -70,7 +72,7 @@ Rückverweise bieten eine einfache Möglichkeit, ein wiederholtes Zeichen oder e
   
  Im folgenden Beispiel werden doppelte Wortzeichen in einer Zeichenfolge gesucht. Ein regulärer Ausdruck `(?<char>\w)\k<char>` wird definiert, der aus den folgenden Elementen besteht.  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`(?<char>\w)`|Übereinstimmung mit einem Wortzeichen und dessen Zuweisung zu einer Erfassungsgruppe mit dem Namen `char`|  
 |`\k<char>`|Übereinstimmung mit dem nächsten Zeichen, das mit dem Wert der `char`-Erfassungsgruppe identisch ist|  
@@ -100,7 +102,7 @@ Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassung
   
  Das folgende Beispiel enthält ein Muster für reguläre Ausdrücke, `(?<1>a)(?<1>\1b)*`, das die Gruppe namens „\1“ neu definiert. Die folgende Tabelle beschreibt jedes Muster im regulären Ausdruck.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(?<1>a)`|Übereinstimmung mit dem Zeichen „a“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|  
 |`(?<1>\1b)*`|Übereinstimmung mit null oder einem Vorkommen der Gruppe `1` zusammen mit einem „b“ und Zuweisen des Ergebnisses zur Erfassungsgruppe `1`|  
@@ -120,7 +122,7 @@ Wenn jedoch *name* die Zeichenfolgendarstellung einer Zahl ist und der Erfassung
   
  Wurden durch eine Gruppe keine Teilzeichenfolgen gefunden, ist der Rückverweis auf diese Gruppe nicht definiert und führt niemals zu einer Übereinstimmung. Dies wird durch das Muster des regulären Ausdrucks `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` veranschaulicht, das folgendermaßen definiert ist:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Vergleich an einer Wortgrenze.|  
 |`(\p{Lu}{2})`|Übereinstimmung mit zwei Großbuchstaben. Dies ist die erste Erfassungsgruppe.|  
