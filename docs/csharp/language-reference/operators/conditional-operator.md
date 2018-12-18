@@ -1,5 +1,6 @@
 ---
-title: 'Operator ?: (C#-Referenz)'
+title: '?: Operator – C#-Referenz'
+ms.custom: seodec18
 ms.date: 11/20/2018
 f1_keywords:
 - ?:_CSharpKeyword
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: cc9bde1d60a3272e2f24cfc05761171a31029c75
-ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
+ms.openlocfilehash: ca61ee323d98ece1236d9072e14d02385fbdf9f8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "50980621"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241787"
 ---
-# <a name="-operator-c-reference"></a>Operator ?: (C#-Referenz)
+# <a name="-operator-c-reference"></a>?: Operator (C#-Referenz)
 
 Der bedingte Operator `?:`, häufig als ternärer bedingter Operator bekannt, wertet einen booleschen Ausdruck aus und gibt das Ergebnis der Auswertung von einem oder zwei Ausdrücken zurück, abhängig davon, ob der boolesche Ausdruck `true` oder `false` ergibt. Beginnend mit C# 7.2 gibt der [bedingte Ref-Ausdruck](#conditional-ref-expression) den Verweis auf das Ergebnis eines der beiden Ausdrücke zurück.
 

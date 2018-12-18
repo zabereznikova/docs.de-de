@@ -1,5 +1,6 @@
 ---
-title: Operator -- (C#-Referenz)
+title: Operator „-“- – C#-Referenz
+ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
 - --_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -- operator [C#]
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
-ms.openlocfilehash: 0858321d6fe192a55bc548f169c558542238a981
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4fba014e8dabc13cd874e17f23515dc29d93f24b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153335"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236920"
 ---
 # <a name="---operator-c-reference"></a>Operator -- (C#-Referenz)
 
@@ -50,4 +51,4 @@ Weitere Informationen finden Sie in den Abschnitten [Postfix-Inkrement- und Dekr
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [++-Operator](increment-operator.md)
-- [Gewusst wie: Inkrementieren und Dekrementieren von Zeigern](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)
+- [Vorgehensweise: Inkrementieren und Dekrementieren von Zeigern](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)

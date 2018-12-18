@@ -3,18 +3,18 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126317"
+ms.locfileid: "53170807"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
 ## <a name="introduction"></a>Einführung
 
-In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
+In diesem Tutorial lernen Sie Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
 *   Generieren von Sequenzen mit LINQ
 *   Schreiben von Methoden, die sich problemlos in LINQ-Abfragen verwenden lassen

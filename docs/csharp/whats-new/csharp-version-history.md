@@ -3,16 +3,28 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145331"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245599"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C# #
 
-Wie sah die Sprache in ihren ersten Versionen aus? Und wie hat sie sich im Laufe der Jahre verändert?
+Dieser Artikel erläutert den Verlauf jeder Hauptversion der Sprache C#. Das C#-Team entwickelt und ergänzt immer neue und innovative Features. Informationen zu den Status von Programmiersprachenfunktionen, so auch Funktionen, die für zukünftige Versionen geplant sind, finden Sie im [dotnet/roslyn-Repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) auf GitHub.
+
+> [!IMPORTANT]
+> Für einige der Features nutzt die Sprache C# Typen und Methoden in einer Struktur, die in der C#-Spezifikation als *Standardbibliothek* bezeichnet wird. Die .NET-Plattform stellt diese Typen und Methoden in verschiedenen Paketen bereit. Ein Beispiel ist die Ausnahmeverarbeitung. Alle `throw`-Anweisungen oder -Ausdrücke werden überprüft, um sicherzustellen, dass das ausgelöste Objekt von <xref:System.Exception> abgeleitet ist. Auf ähnliche Weise wird jedes `catch` überprüft, um sicherzustellen, dass der abgefangen Typ von <xref:System.Exception> abgeleitet ist. Jede Version kann neue Anforderungen hinzufügen. Um die neuesten Sprachfunktionen in älteren Umgebungen verwenden zu können, müssen Sie vielleicht bestimmte Bibliotheken installieren. Diese Abhängigkeiten werden auf der jeweiligen Seite für eine spezifische Version dokumentiert. Sie können mehr über die [Beziehungen zwischen Sprache und Bibliothek](relationships-between-language-and-library.md) erfahren, um Hintergrundinformationen zu dieser Abhängigkeit zu erhalten.
+
+Die C#-Buildtools berücksichtigen die neueste Hauptversion der Standardsprachversion. Zwischen den Hauptversionen kann es Nebenversionen geben, die in anderen Artikeln in diesem Abschnitt erläutert werden. Sie müssen [die Sprachversion des Compilers konfigurieren](../language-reference/configure-language-version.md) und die Version auswählen, um die neuesten Features in einer Punktversion zu verwenden. Seit C# 7.0 gab es drei Nebenversionen:
+
+* [C# 7.3](csharp-7-3.md):
+  - C# 7.3 steht aktuell in [Visual Studio 2017 Version 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) und im [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) zur Verfügung.
+* [C# 7.2](csharp-7-2.md):
+  - C# 7.2 steht aktuell in [Visual Studio 2017 Version 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) und im [.NET Core 2.0 SDK](../../core/whats-new/index.md) zur Verfügung.
+* [C# 7.1](csharp-7-1.md):
+  - Diese Features wurden in [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) und im [.NET Core 2.0 SDK](../../core/whats-new/index.md) hinzugefügt.
 
 ## <a name="c-version-10"></a>C# Version 1.0
 
@@ -106,14 +118,14 @@ Die dynamische Bindung kann zu Fehlern führen, bietet aber gleichzeitig eine ho
 
 ## <a name="c-version-50"></a>C# Version 5.0
 
-C# Version 5.0 war eine fokussierte Version der Sprache. Beinahe die gesamten Mühen für diese Version flossen in ein weiteres bahnbrechendes Sprachkonzept: Die Modelle `async` und `await` für die asynchrone Programmierung.  Hier ist die Liste der wichtigsten Features:
+C# Version 5.0 war eine fokussierte Version der Sprache. Nahezu die gesamte Arbeit für diese Version war einem weiteren bahnbrechenden Sprachkonzept gewidmet: den Modellen `async` und `await` für die asynchrone Programmierung.  Hier ist die Liste der wichtigsten Features:
 
 - [Asynchrone Member](../async.md)
 - [Attribute „CallerInfo“](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>Siehe auch
 
-* [Codeprojekt: Aufruferinfoattribute in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Aufruferinformationsattribute in C# 5.0)
 
 Mit dem Attribut „CallerInfo“ können Sie leicht Informationen über den Kontext erhalten, in dem Sie ausführen, ohne auf Dutzende Reflektionscodebausteine zurückzugreifen. Es gibt viele Verwendungsmöglichkeiten für Diagnose- und Protokollierungsaufgaben.
 

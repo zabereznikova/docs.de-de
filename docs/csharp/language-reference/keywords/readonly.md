@@ -1,5 +1,6 @@
 ---
-title: Schlüsselwort „readonly“ (C#-Referenz)
+title: readonly-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e2fdb92ad2f044aa74201676ed8cb89bb51de5f5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146169"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239838"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
 
@@ -80,7 +81,7 @@ public readonly struct Point
 }
 ```
 
-Das Hinzufügen eines Felds, das nicht mit `readonly` markiert ist, erzeugt den Compilerfehler `CS8340`: „Instanzfelder oder schreibgeschützten Strukturen müssen schreibgeschützt sein.“
+Das Hinzufügen eines nicht als `readonly` markierten Felds generiert den Compilerfehler `CS8340`: Instanzfelder von schreibgeschützten Strukturen müssen schreibgeschützt sein.
 
 ## <a name="ref-readonly-return-example"></a>Rückgabebeispiel für ref readonly
 

@@ -1,5 +1,6 @@
 ---
-title: Schlüsselwort „unsafe“ (C#-Referenz)
+title: unsafe-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unsafe_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 79cb246c4094f02d1319d28fcc94d0d3d5bd9cb5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 81a293a6922a71f7428167c50aed064d7387a099
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128426"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236621"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C#-Referenz)
 
@@ -33,7 +34,7 @@ Der unsichere Kontext erstreckt sich von der Parameterliste bis zum Ende der Met
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-Sie können auch einen unsafe-Block verwenden, um die Verwendung von unsicherem Code in diesem Block zu aktivieren. Beispiel:
+Sie können auch einen unsafe-Block verwenden, um die Verwendung von unsicherem Code in diesem Block zu aktivieren. Zum Beispiel:
 
 ```csharp
 unsafe

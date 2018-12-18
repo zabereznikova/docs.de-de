@@ -1,5 +1,6 @@
 ---
-title: ref-Schlüsselwort (C#-Referenz)
+title: ref-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50195969"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236322"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -62,7 +63,7 @@ Allerdings können Methoden überladen werden, wenn eine Methode einen `ref`-, `
 - Asynchrone Methoden, die Sie mit dem [async](async.md)-Modifizierer definieren.  
 - Iterator-Methoden, die eine [yield return](yield.md)- oder `yield break`-Anweisung enthalten.  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>Übergeben eines Arguments als Verweis: Beispiel
+## <a name="passing-an-argument-by-reference-an-example"></a>Übergeben eines Arguments per Verweis: Beispiel
 
 In den vorherigen Beispielen wurden Werttypen als Verweis übergeben. Sie können das `ref`-Schlüsselwort auch verwenden, um Verweistypen als Verweis zu übergeben. Die Übergabe eines Verweistyps als Verweis ermöglicht es der aufgerufenen Methode, das Objekt, auf die der Verweisparameter im Aufrufer verweist, zu ersetzen. Der Speicherort des Objekts wird als Wert des Verweisparameters an die Methode übergeben. Wenn Sie den Wert am Speicherort des Parameters ändern (um auf ein neues Objekt zu verweisen), ändern Sie auch den Speicherort, auf den der Aufrufer verweist. Im folgenden Beispiel wird eine Instanz eines Verweistyps als ein `ref`-Parameter übergeben.
   
@@ -82,7 +83,7 @@ Ein Verweisrückgabewert wird definiert durch Verwenden des `ref`-Schlüsselwort
 public ref decimal GetCurrentPrice()
 ```
 
-- Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Beispiel:
+- Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Zum Beispiel:
 
 ```csharp
 return ref DecimalArray[0];

@@ -1,5 +1,6 @@
 ---
-title: from-Klausel (C#-Referenz)
+title: from-Klausel – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - from_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: 9af24d9c2a99a9c763c6ad3aac9895e7dddcf8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ab0602f9ed353cf3959516e285086ab5af98c9f8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129037"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236803"
 ---
 # <a name="from-clause-c-reference"></a>from-Klausel (C#-Referenz)
 
@@ -31,7 +32,7 @@ Im folgenden Beispiel `numbers` ist die Datenquelle und `num` ist die Bereichsva
 
 ## <a name="the-range-variable"></a>Die Bereichsvariable
 
-Der Compiler leitet den Typ der Bereichsvariablen ab, wenn die Datenquelle <xref:System.Collections.Generic.IEnumerable%601> implementiert. Wenn die Quelle beispielsweise vom Typ `IEnumerable<Customer>` ist, wird die Bereichsvariable als `Customer` abgeleitet. Sie müssen den Typ nur explizit angeben, wenn die Quelle ein nicht-generischer `IEnumerable`-Typ wie z.B. <xref:System.Collections.ArrayList> ist. Weitere Informationen finden Sie unter [How to: Query an ArrayList with LINQ (Vorgehensweise: Abfragen von ArrayList mit LINQ)](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
+Der Compiler leitet den Typ der Bereichsvariablen ab, wenn die Datenquelle <xref:System.Collections.Generic.IEnumerable%601> implementiert. Wenn die Quelle beispielsweise vom Typ `IEnumerable<Customer>` ist, wird die Bereichsvariable als `Customer` abgeleitet. Sie müssen den Typ nur explizit angeben, wenn die Quelle ein nicht-generischer `IEnumerable`-Typ wie z.B. <xref:System.Collections.ArrayList> ist. Weitere Informationen finden Sie unter [Vorgehensweise: Abfragen von ArrayList mit LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
 Im vorherigen Beispiel wird `num` als Typ `int` abgeleitet. Da die Bereichsvariable stark typisiert ist, können Sie für sie Methoden aufrufen oder sie in anderen Vorgängen verwenden. Anstatt z.B. `select num` zu schreiben, könnten Sie `select num.ToString()` schreiben, sodass der Abfrageausdruck eine Sequenz von Zeichenfolgen anstelle von Ganzzahlen zurückgibt. Sie könnten auch `select num + 10` schreiben, damit der Ausdruck die Sequenz „14, 11, 13, 12, 10“ zurückgibt. Weitere Informationen finden Sie unter [select clause (select-Klausel)](select-clause.md).
 
