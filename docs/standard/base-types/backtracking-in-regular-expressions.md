@@ -1,5 +1,6 @@
 ---
-title: Backtracking in regulären Ausdrücken
+title: Rückverfolgung in regulären .NET-Ausdrücken
+description: Erfahren Sie, wie Sie die Rückverfolgung beim Musterabgleich regulärer Ausdrücke steuern.
 ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.custom: seodec18
+ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297360"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130090"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 <a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
@@ -133,7 +135,7 @@ ms.locfileid: "52297360"
 > [!IMPORTANT]
 >  Es wird empfohlen, immer ein Timeoutintervall festzulegen, wenn ein regulärer Ausdruck auf Rückverfolgung angewiesen ist.  
   
- Eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> -Ausnahme gibt an, dass die Engine für reguläre Ausdrücke keine Übereinstimmung innerhalb des angegebenen Timeoutintervalls finden konnte, sie gibt aber nicht an, warum die Ausnahme ausgelöst wurde. Der Grund kann eine übermäßige Rückverfolgung sein. Es ist jedoch auch möglich, dass das Timeoutintervall angesichts der Systembelastung zum Zeitpunkt, als die Ausnahme ausgelöst wurde, zu niedrig festgelegt wurde. Wenn Sie die Ausnahme behandeln, können Sie entweder weitere Übereinstimmungen mit der Eingabezeichenfolge abbrechen oder das Timeoutintervall erhöhen und den Vergleichsvorgang erneut ausführen.  
+ Eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>-Ausnahme gibt an, dass die Engine für reguläre Ausdrücke keine Übereinstimmung innerhalb des angegebenen Timeoutintervalls finden konnte. Allerdings gibt sie nicht an, warum die Ausnahme ausgelöst wurde. Der Grund kann eine übermäßige Rückverfolgung sein. Es ist jedoch auch möglich, dass das Timeoutintervall angesichts der Systembelastung zum Zeitpunkt, als die Ausnahme ausgelöst wurde, zu niedrig festgelegt wurde. Wenn Sie die Ausnahme behandeln, können Sie entweder weitere Übereinstimmungen mit der Eingabezeichenfolge abbrechen oder das Timeoutintervall erhöhen und den Vergleichsvorgang erneut ausführen.  
   
  Im folgenden Code wird beispielsweise der <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> -Konstruktor aufgerufen, um ein <xref:System.Text.RegularExpressions.Regex> -Objekt mit einem Timeoutwert von einer Sekunde zu instanziieren. Das Muster des regulären Ausdrucks `(a+)+$`, das mit mindestens einer Sequenz von einem oder mehreren "a"-Zeichen am Ende einer Zeile übereinstimmt, unterliegt übermäßiger Rückverfolgung. Wenn <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ausgelöst wird, wird der Timeoutwert im Beispiel bis zu einem maximalen Intervall von drei Sekunden erhöht. Danach wird der Versuch, das Muster abzugleichen, abgebrochen.  
   
@@ -162,7 +164,7 @@ ms.locfileid: "52297360"
   
  Das erste Muster für reguläre Ausdrücke `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -173,7 +175,7 @@ ms.locfileid: "52297360"
   
  Das zweite Muster für reguläre Ausdrücke `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`verwendet eine positive Lookbehindassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  
@@ -194,7 +196,7 @@ ms.locfileid: "52297360"
   
  Das erste Muster für reguläre Ausdrücke `^(([A-Z]\w*)+\.)*[A-Z]\w*$`ist wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`([A-Z]\w*)+\.`|Übereinstimmung mit einem Buchstaben (A-Z), gefolgt von keinem oder mehreren Wortzeichen (einmaliges oder mehrmaliges Vorkommen), gefolgt von einem Punkt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  
@@ -204,7 +206,7 @@ ms.locfileid: "52297360"
   
  Das zweite Muster für reguläre Ausdrücke `^((?=[A-Z])\w+\.)*[A-Z]\w*$`verwendet eine positive Lookaheadassertion. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
 |`(?=[A-Z])`|Lookahead zum ersten Zeichen und die Suche nach Übereinstimmungen fortsetzen, wenn es sich um einen Buchstaben (A-Z) handelt. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  

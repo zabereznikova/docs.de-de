@@ -1,5 +1,6 @@
 ---
-title: Zeichenklassen in regulären Ausdrücken
+title: Zeichenklassen in regulären .NET-Ausdrücken
+description: Erfahren Sie, wie Sie mit Zeichenklassen einen Zeichensatz in regulären .NET-Ausdrücken darstellen.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: c82d4aac75fb31ec7741338fde046daefc754394
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180149"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131468"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 <a name="Top"></a> Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung vorliegt. Die Sprache für reguläre Ausdrücke in .NET unterstützt die folgenden Zeichenklassen:  
@@ -70,7 +72,7 @@ ms.locfileid: "44180149"
   
  In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit positiven Zeichenklassen aufgeführt.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`[aeiou]`|Übereinstimmung mit allen Vokalen.|  
 |`[\p{P}\d]`|Übereinstimmung mit allen Interpunktions- und Dezimalzeichen.|  
@@ -83,7 +85,7 @@ ms.locfileid: "44180149"
   
  Der reguläre Ausdruck `gr[ae]y\s\S+?[\s|\p{P}]` ist wie folgt definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`gr`|Übereinstimmung mit den Literalzeichen"gr".|  
 |`[ae]`|Übereinstimmung mit entweder "a" oder "e".|  
@@ -98,7 +100,7 @@ ms.locfileid: "44180149"
   
  Der reguläre Ausdruck `\b[A-Z]\w*\b` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`[A-Z]`|Übereinstimmung mit einem die oft ausgegebene Befehlszeilen  Großbuchstaben von A bis Z.|  
@@ -132,7 +134,7 @@ ms.locfileid: "44180149"
   
  In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit negativen Zeichengruppen aufgeführt.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`[^aeiou]`|Übereinstimmung mit allen Zeichen mit Ausnahme von Vokalen.|  
 |`[^\p{P}\d]`|Übereinstimmung mit allen Zeichen mit Ausnahme von Interpunktions- und Dezimalzeichen.|  
@@ -144,7 +146,7 @@ ms.locfileid: "44180149"
   
  Der reguläre Ausdruck `\bth[^o]\w+\b` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`th`|Übereinstimmung mit den Literalzeichen"th".|  
@@ -174,7 +176,7 @@ ms.locfileid: "44180149"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Aufgrund der Übereinstimmung des `.`-Sprachelements mit jedem Zeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung eines bestimmten Zeichens ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Aufgrund der Übereinstimmung des `.`-Sprachelements mit jedem Zeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn von einem Muster für einen regulären Ausdruck mehrere Versuche bezüglich der Übereinstimmung eines bestimmten Zeichens ausgeführt werden. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Zurück zum Anfang](#Top)  
   
@@ -195,7 +197,7 @@ ms.locfileid: "44180149"
   
  Der reguläre Ausdruck `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|An einer Wortgrenze beginnen.|  
 |`\p{IsGreek}+`|Übereinstimmung mit mindestens einem griechischen Zeichen.|  
@@ -232,7 +234,7 @@ ms.locfileid: "44180149"
 ## <a name="word-character-w"></a>Wortzeichen: \w  
  `\w` entspricht einem beliebigen Wortzeichen. Ein Wortzeichen gehört einer der in der folgenden Tabelle aufgeführten Unicode-Kategorien an.  
   
-|Kategorie|Beschreibung |  
+|Kategorie|Beschreibung|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
 |Lu|Letter, Uppercase (Buchstabe, Großschreibung)|  
@@ -246,11 +248,11 @@ ms.locfileid: "44180149"
  Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\w` dem `[a-zA-Z_0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Aufgrund der Übereinstimmung des `\w`-Sprachelements mit jedem Wortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Wortzeichen, gefolgt von einem bestimmten Wortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Aufgrund der Übereinstimmung des `\w`-Sprachelements mit jedem Wortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Wortzeichen, gefolgt von einem bestimmten Wortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Im folgenden Beispiel werden mit dem `\w`-Sprachelement übereinstimmende doppelte Zeichen innerhalb eines Worts ermittelt. Im Beispiel wird ein Muster für reguläre Ausdrücke definiert (`(\w)\1`), das wie folgt interpretiert werden kann.  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |(\w)|Übereinstimmung mit einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
 |\1|Übereinstimmung mit dem Wert der ersten Erfassung.|  
@@ -270,7 +272,7 @@ ms.locfileid: "44180149"
   
  Anders ausgedrückt: Mit Ausnahme der Zeichen, die in den Unicode-Kategorien enthalten sind, die in der folgenden Tabelle aufgelistet werden, liegt eine Übereinstimmung mit jedem Zeichen vor.  
   
-|Kategorie|Beschreibung |  
+|Kategorie|Beschreibung|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
 |Lu|Letter, Uppercase (Buchstabe, Großschreibung)|  
@@ -284,11 +286,11 @@ ms.locfileid: "44180149"
  Bei Angabe von ECMAScript-kompatiblem Verhalten entspricht `\W` dem `[^a-zA-Z_0-9]`-Ausdruck. Weitere Informationen zu regulären ECMAScript-Ausdrücken finden Sie im Abschnitt „ECMAScript-Vergleichsverhalten“ unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Aufgrund der Übereinstimmung des `\W`-Sprachelements mit jedem Nichtwortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Nichtwortzeichen, gefolgt von einem bestimmten Nichtwortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Aufgrund der Übereinstimmung des `\W`-Sprachelements mit jedem Nichtwortzeichen wird es häufig mit einem verzögerten Quantifizierer verwendet, wenn ein Muster für einen regulären Ausdruck mehrmals versucht, eine Übereinstimmung mit einem beliebigen Nichtwortzeichen, gefolgt von einem bestimmten Nichtwortzeichen, herzustellen. Weitere Informationen finden Sie unter [Quantifizierer in regulären Ausdrücken](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  Das folgende Beispiel veranschaulicht die `\W`-Zeichenklasse.  Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b(\w+)(\W){1,2}`), das mit einem von einem oder zwei Nichtwortzeichen (z. B. Leer- oder Interpunktionszeichen) gefolgten Wort übereinstimmt. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |\b|Der Vergleich beginnt an einer Wortgrenze.|  
 |(\w+)|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -305,7 +307,7 @@ ms.locfileid: "44180149"
 ## <a name="white-space-character-s"></a>Leerzeichen: \s  
  `\s` stimmt mit jedem Leerzeichen überein. Dies ist zu den in der folgenden Tabelle aufgeführten Escapesequenzen und Unicode-Kategorien äquivalent.  
   
-|Kategorie|Beschreibung |  
+|Kategorie|Beschreibung|  
 |--------------|-----------------|  
 |`\f`|Seitenvorschubzeichen, "\u000C".|  
 |`\n`|Zeilenumbruchzeichen, "\u000A".|  
@@ -319,7 +321,7 @@ ms.locfileid: "44180149"
   
  Das folgende Beispiel veranschaulicht die `\s`-Zeichenklasse. Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b\w+(e)?s(\s|$)`), das mit einem entweder auf "s" oder "es" endenden Wort übereinstimmt. Auf dieses Wort muss ein Leerzeichen oder das Ende der Eingabezeichenfolge folgen. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |\b|Der Vergleich beginnt an einer Wortgrenze.|  
 |\w+|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -340,7 +342,7 @@ ms.locfileid: "44180149"
   
  Im folgenden Beispiel wird das `\S`-Sprachelement veranschaulicht. Das Muster für den regulären Ausdruck `\b(\S+)\s?` stimmt mit durch Leerzeichen getrennten Zeichenfolgen überein. Das zweite Element im <xref:System.Text.RegularExpressions.GroupCollection>-Objekt der Übereinstimmung enthält die entsprechende Zeichenfolge. Der reguläre Ausdruck kann wie in der folgenden Tabelle dargestellt interpretiert werden.  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\S+)`|Übereinstimmung mit mindestens einem Nicht-Leerzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -359,7 +361,7 @@ ms.locfileid: "44180149"
   
  Im folgenden Beispiel wird das `\d`-Sprachelement veranschaulicht. Anhand eines Tests soll ermittelt werden, ob eine Eingabezeichenfolge eine gültige Telefonnummer in den USA und Kanada darstellt. Das Muster für reguläre Ausdrücke `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Beginnt den Vergleich am Anfang der Eingabezeichenfolge.|  
 |`\(?`|Übereinstimmung mit null oder einem Literalzeichen ("(").|  
@@ -383,7 +385,7 @@ ms.locfileid: "44180149"
   
  Im folgenden Beispiel wird das "\D"-Sprachelement veranschaulicht. Anhand eines Tests wird ermittelt, ob eine Zeichenfolge (z. B. eine Teilenummer) aus der gewünschten Kombination von Dezimalzahlen und Nicht-Dezimalzahlen besteht. Das Muster für reguläre Ausdrücke `^\D\d{1,5}\D*$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Beginnt den Vergleich am Anfang der Eingabezeichenfolge.|  
 |`\D`|Übereinstimmung mit jedem Zeichen außer Zahlen.|  
@@ -400,7 +402,7 @@ ms.locfileid: "44180149"
 ## <a name="supported-unicode-general-categories"></a>Unterstützte allgemeine Unicode-Kategorien  
  In der folgenden Tabelle werden die allgemeinen, in Unicode definierten Kategorien aufgeführt. Weitere Informationen finden Sie in den Unterthemen „UCD File Format“ (UCD-Dateiformat) und „General Category Values“ (Allgemeine Kategorienwerte) der [Unicode Character Database](https://www.unicode.org/reports/tr44/).  
   
-|Kategorie|Beschreibung |  
+|Kategorie|Beschreibung|  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase (Buchstabe, Großschreibung)|  
 |`Ll`|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
@@ -581,7 +583,7 @@ ms.locfileid: "44180149"
   
  Im folgenden Beispiel wird ein regulärer Ausdruck definiert (`^[0-9-[2468]]+$`), der in einer Eingabezeichenfolge Übereinstimmungen für Null und ungerade Zahlen ergibt.  Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|Beschreibung |  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |^|Beginnt am Anfang der Eingabezeichenfolge mit der Übereinstimmung.|  
 |`[0-9-[2468]]+`|Mindestens eine Übereinstimmung mit einem Zeichen von 0 bis 9 (mit Ausnahme von 2, 4, 6 und 8) liegt vor. Anders ausgedrückt: Es liegt mindestens eine Übereinstimmung mit Null oder einer ungeraden Zahl vor.|  

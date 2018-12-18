@@ -1,5 +1,6 @@
 ---
-title: Escapezeichen in regulären Ausdrücken
+title: Escapezeichen in regulären .NET-Ausdrücken
+description: Erfahren Sie mehr über Sonderzeichen und Escapezeichen in regulären .NET-Ausdrücken.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837166"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152362"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
@@ -36,7 +38,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 ## <a name="character-escapes-in-net"></a>Escapezeichen in .NET  
  In der folgenden Tabelle sind die Escapezeichen aufgeführt, die von regulären Ausdrücken in .NET unterstützt werden.  
   
-|Zeichen oder Sequenz|Beschreibung |  
+|Zeichen oder Sequenz|Beschreibung|  
 |---------------------------|-----------------|  
 |Alle Zeichen außer Folgenden:<br /><br /> sein. $ ^ { [ ( &#124; ) * + ? \ |Andere als die in der Spalte **Zeichen oder Sequenz** aufgelistete Zeichen haben keine spezielle Bedeutung in regulären Ausdrücken, sie stehen für sich selbst.<br /><br /> Die in der Spalte **Zeichen oder Sequenz** enthaltenen Zeichen sind spezielle Sprachelemente regulärer Ausdrücke. Um diese in einem regulären Ausdruck abzugleichen, müssen sie mit Escapezeichen versehen oder in eine [positive Zeichengruppe](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) einbezogen werden. Der reguläre Ausdruck `\$\d+` oder `[$]\d+` entspricht z. B. "$1200".|  
 |`\a`|Entspricht dem Klingelzeichen (Warnsignal) `\u0007`.|  
@@ -61,7 +63,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
   
  Der reguläre Ausdruck `\G(.+)[\t|\u007c](.+)\r?\n` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\G`|Beginnen Sie den Abgleich an der Stelle, wo der letzte Abgleich geendet hat.|  
 |`(.+)`|Entspricht einem oder mehreren die oft ausgegebene Befehlszeilen  Zeichen. Dies ist die erste Erfassungsgruppe.|  
