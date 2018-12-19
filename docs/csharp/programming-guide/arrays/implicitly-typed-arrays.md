@@ -1,42 +1,43 @@
 ---
-title: Implizit typisierte Arrays (C#-Programmierhandbuch)
+title: Implizit typisierte Arrays – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], implicity-typed
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 879955a7362af7dceda5767923c5e872cd0f6b5c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c235b6084238917c2cb3f2cd745aef0264f82ce
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522588"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238272"
 ---
-# <a name="implicitly-typed-arrays-c-programming-guide"></a><span data-ttu-id="74d7a-102">Implizit typisierte Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="74d7a-102">Implicitly Typed Arrays (C# Programming Guide)</span></span>
+# <a name="implicitly-typed-arrays-c-programming-guide"></a><span data-ttu-id="2ccfe-102">Implizit typisierte Arrays (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="2ccfe-102">Implicitly Typed Arrays (C# Programming Guide)</span></span>
 
-<span data-ttu-id="74d7a-103">Sie können ein implizit typisiertes Array erstellen, in dem der Typ der Arrayinstanz von den im Arrayinitialisierer angegebenen Elementen abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="74d7a-103">You can create an implicitly-typed array in which the type of the array instance is inferred from the elements specified in the array initializer.</span></span> <span data-ttu-id="74d7a-104">Die Regeln für implizit typisierte Variablen gelten auch für implizit typisierte Arrays.</span><span class="sxs-lookup"><span data-stu-id="74d7a-104">The rules for any implicitly-typed variable also apply to implicitly-typed arrays.</span></span> <span data-ttu-id="74d7a-105">Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="74d7a-105">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
+<span data-ttu-id="2ccfe-103">Sie können ein implizit typisiertes Array erstellen, in dem der Typ der Arrayinstanz von den im Arrayinitialisierer angegebenen Elementen abgeleitet wird.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-103">You can create an implicitly-typed array in which the type of the array instance is inferred from the elements specified in the array initializer.</span></span> <span data-ttu-id="2ccfe-104">Die Regeln für implizit typisierte Variablen gelten auch für implizit typisierte Arrays.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-104">The rules for any implicitly-typed variable also apply to implicitly-typed arrays.</span></span> <span data-ttu-id="2ccfe-105">Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="2ccfe-105">For more information, see [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
   
- <span data-ttu-id="74d7a-106">Implizit typisierte Arrays werden in der Regel in Abfrageausdrücken zusammen mit anonymen Typen sowie Objekt- und Auflistungsinitialisierern verwendet.</span><span class="sxs-lookup"><span data-stu-id="74d7a-106">Implicitly-typed arrays are usually used in query expressions together with anonymous types and object and collection initializers.</span></span>  
+ <span data-ttu-id="2ccfe-106">Implizit typisierte Arrays werden in der Regel in Abfrageausdrücken zusammen mit anonymen Typen sowie Objekt- und Auflistungsinitialisierern verwendet.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-106">Implicitly-typed arrays are usually used in query expressions together with anonymous types and object and collection initializers.</span></span>  
   
- <span data-ttu-id="74d7a-107">Die folgenden Beispiele zeigen, wie ein implizit typisiertes Array erstellt wird:</span><span class="sxs-lookup"><span data-stu-id="74d7a-107">The following examples show how to create an implicitly-typed array:</span></span>  
+ <span data-ttu-id="2ccfe-107">Die folgenden Beispiele zeigen, wie ein implizit typisiertes Array erstellt wird:</span><span class="sxs-lookup"><span data-stu-id="2ccfe-107">The following examples show how to create an implicitly-typed array:</span></span>  
   
  [!code-csharp[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
   
- <span data-ttu-id="74d7a-108">Beachten Sie im vorherigen Beispiel, dass bei implizit typisierten Arrays auf der linken Seite der Initialisierungsanweisung keine eckigen Klammern verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="74d7a-108">In the previous example, notice that with implicitly-typed arrays, no square brackets are used on the left side of the initialization statement.</span></span> <span data-ttu-id="74d7a-109">Beachten Sie auch, dass verzweigte Arrays ebenso wie eindimensionale Arrays mithilfe von `new []` initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="74d7a-109">Note also that jagged arrays are initialized by using `new []` just like single-dimension arrays.</span></span>  
+ <span data-ttu-id="2ccfe-108">Beachten Sie im vorherigen Beispiel, dass bei implizit typisierten Arrays auf der linken Seite der Initialisierungsanweisung keine eckigen Klammern verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-108">In the previous example, notice that with implicitly-typed arrays, no square brackets are used on the left side of the initialization statement.</span></span> <span data-ttu-id="2ccfe-109">Beachten Sie auch, dass verzweigte Arrays ebenso wie eindimensionale Arrays mithilfe von `new []` initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-109">Note also that jagged arrays are initialized by using `new []` just like single-dimension arrays.</span></span>  
   
-## <a name="implicitly-typed-arrays-in-object-initializers"></a><span data-ttu-id="74d7a-110">Implizit typisierte Arrays in Objektinitialisierern</span><span class="sxs-lookup"><span data-stu-id="74d7a-110">Implicitly-typed Arrays in Object Initializers</span></span>
+## <a name="implicitly-typed-arrays-in-object-initializers"></a><span data-ttu-id="2ccfe-110">Implizit typisierte Arrays in Objektinitialisierern</span><span class="sxs-lookup"><span data-stu-id="2ccfe-110">Implicitly-typed Arrays in Object Initializers</span></span>
 
- <span data-ttu-id="74d7a-111">Beim Erstellen eines anonymen Typs, der ein Array enthält, muss das Array im Objektinitialisierer des Typs implizit typisiert werden.</span><span class="sxs-lookup"><span data-stu-id="74d7a-111">When you create an anonymous type that contains an array, the array must be implicitly typed in the type's object initializer.</span></span> <span data-ttu-id="74d7a-112">Im folgenden Beispiel ist `contacts` ein implizit typisiertes Array aus anonymen Typen, von denen jeder ein Array mit dem Namen `PhoneNumbers` enthält.</span><span class="sxs-lookup"><span data-stu-id="74d7a-112">In the following example, `contacts` is an implicitly-typed array of anonymous types, each of which contains an array named `PhoneNumbers`.</span></span> <span data-ttu-id="74d7a-113">Beachten Sie, dass das Schlüsselwort `var` nicht in den Objektinitialisierern verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="74d7a-113">Note that the `var` keyword is not used inside the object initializers.</span></span>  
+ <span data-ttu-id="2ccfe-111">Beim Erstellen eines anonymen Typs, der ein Array enthält, muss das Array im Objektinitialisierer des Typs implizit typisiert werden.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-111">When you create an anonymous type that contains an array, the array must be implicitly typed in the type's object initializer.</span></span> <span data-ttu-id="2ccfe-112">Im folgenden Beispiel ist `contacts` ein implizit typisiertes Array aus anonymen Typen, von denen jeder ein Array mit dem Namen `PhoneNumbers` enthält.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-112">In the following example, `contacts` is an implicitly-typed array of anonymous types, each of which contains an array named `PhoneNumbers`.</span></span> <span data-ttu-id="2ccfe-113">Beachten Sie, dass das Schlüsselwort `var` nicht in den Objektinitialisierern verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="2ccfe-113">Note that the `var` keyword is not used inside the object initializers.</span></span>  
   
  [!code-csharp[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="74d7a-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="74d7a-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ccfe-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ccfe-114">See Also</span></span>
 
-- [<span data-ttu-id="74d7a-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="74d7a-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="74d7a-116">Implizit typisierte lokale Variablen</span><span class="sxs-lookup"><span data-stu-id="74d7a-116">Implicitly Typed Local Variables</span></span>](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)  
-- [<span data-ttu-id="74d7a-117">Arrays</span><span class="sxs-lookup"><span data-stu-id="74d7a-117">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="74d7a-118">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="74d7a-118">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [<span data-ttu-id="74d7a-119">Objekt- und Auflistungsinitialisierer</span><span class="sxs-lookup"><span data-stu-id="74d7a-119">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [<span data-ttu-id="74d7a-120">var</span><span class="sxs-lookup"><span data-stu-id="74d7a-120">var</span></span>](../../../csharp/language-reference/keywords/var.md)  
-- [<span data-ttu-id="74d7a-121">LINQ-Abfrageausdrücke</span><span class="sxs-lookup"><span data-stu-id="74d7a-121">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [<span data-ttu-id="2ccfe-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="2ccfe-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="2ccfe-116">Implizit typisierte lokale Variablen</span><span class="sxs-lookup"><span data-stu-id="2ccfe-116">Implicitly Typed Local Variables</span></span>](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)  
+- [<span data-ttu-id="2ccfe-117">Arrays</span><span class="sxs-lookup"><span data-stu-id="2ccfe-117">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
+- [<span data-ttu-id="2ccfe-118">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="2ccfe-118">Anonymous Types</span></span>](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [<span data-ttu-id="2ccfe-119">Objekt- und Auflistungsinitialisierer</span><span class="sxs-lookup"><span data-stu-id="2ccfe-119">Object and Collection Initializers</span></span>](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [<span data-ttu-id="2ccfe-120">var</span><span class="sxs-lookup"><span data-stu-id="2ccfe-120">var</span></span>](../../../csharp/language-reference/keywords/var.md)  
+- [<span data-ttu-id="2ccfe-121">LINQ-Abfrageausdrücke</span><span class="sxs-lookup"><span data-stu-id="2ccfe-121">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)

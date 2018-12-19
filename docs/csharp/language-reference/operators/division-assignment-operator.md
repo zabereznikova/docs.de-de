@@ -1,44 +1,54 @@
 ---
-title: Operator /= (C#-Referenz)
-ms.date: 07/20/2015
+title: /=-Operator – C#-Referenz
+ms.custom: seodec18
+ms.date: 12/13/2018
 f1_keywords:
 - /=_CSharpKeyword
 helpviewer_keywords:
 - division assignment operator (/=) [C#]
 - /= (division assignment operator) [C#]
 ms.assetid: 50fc02b0-ee9c-4c3e-b58d-d591282caf1c
-ms.openlocfilehash: 8fff048cc441181aa3f0e3c0c638d501aaf9de3f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed4dd6c0c944b77543aae4de8d51534b4df4f4ef
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526307"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286519"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="d4fe2-102">Operator /= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d4fe2-102">/= Operator (C# Reference)</span></span>
-<span data-ttu-id="d4fe2-103">Der Divisionszuweisungsoperator</span><span class="sxs-lookup"><span data-stu-id="d4fe2-103">The division assignment operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="d4fe2-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d4fe2-104">Remarks</span></span>  
- <span data-ttu-id="d4fe2-105">Ein Ausdruck mit dem Zuweisungsoperator `/=`, z.B.</span><span class="sxs-lookup"><span data-stu-id="d4fe2-105">An expression using the `/=` assignment operator, such as</span></span>  
-  
-```csharp  
-x /= y  
-```  
-  
- <span data-ttu-id="d4fe2-106">für die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="d4fe2-106">is equivalent to</span></span>  
-  
-```csharp  
-x = x / y  
-```  
-  
- <span data-ttu-id="d4fe2-107">außer dass `x` nur einmal überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="d4fe2-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="d4fe2-108">Die [/ operator](../../../csharp/language-reference/operators/division-operator.md) ist für numerische Typen vordefiniert, um Division auszuführen.</span><span class="sxs-lookup"><span data-stu-id="d4fe2-108">The [/ operator](../../../csharp/language-reference/operators/division-operator.md) is predefined for numeric types to perform division.</span></span>  
-  
- <span data-ttu-id="d4fe2-109">Der Operator `/=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[/ operator](../../../csharp/language-reference/operators/division-operator.md) überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="d4fe2-109">The `/=` operator cannot be overloaded directly, but user-defined types can overload the [/ operator](../../../csharp/language-reference/operators/division-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="d4fe2-110">Bei allen Zusammensetzungszuweisungsoperatoren wird die entsprechende Verbundzuweisung durch das Überladen des binären Operators implizit überladen.</span><span class="sxs-lookup"><span data-stu-id="d4fe2-110">On all compound assignment operators, overloading the binary operator implicitly overloads the equivalent compound assignment.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="d4fe2-111">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d4fe2-111">Example</span></span>  
- [!code-csharp[csRefOperators#5](codesnippet/CSharp/division-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="d4fe2-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d4fe2-112">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="bf296-102">Operator /= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="bf296-102">/= Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="d4fe2-113">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="d4fe2-113">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="d4fe2-114">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="d4fe2-114">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="d4fe2-115">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="d4fe2-115">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="bf296-103">Der Divisionszuweisungsoperator</span><span class="sxs-lookup"><span data-stu-id="bf296-103">The division assignment operator.</span></span>
+
+<span data-ttu-id="bf296-104">Ein Ausdruck mit dem Operator `/=`, z.B.</span><span class="sxs-lookup"><span data-stu-id="bf296-104">An expression using the `/=` operator, such as</span></span>
+
+```csharp
+x /= y
+```
+
+<span data-ttu-id="bf296-105">für die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="bf296-105">is equivalent to</span></span>
+
+```csharp
+x = x / y
+```
+
+<span data-ttu-id="bf296-106">außer dass `x` nur einmal überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="bf296-106">except that `x` is only evaluated once.</span></span>
+
+<span data-ttu-id="bf296-107">Der [Divisionsoperator](division-operator.md) `/` dividiert den ersten Operanden durch den zweiten Operanden.</span><span class="sxs-lookup"><span data-stu-id="bf296-107">The [division operator](division-operator.md) `/` divides its first operand by its second operand.</span></span> <span data-ttu-id="bf296-108">Er wird von allen numerischen Typen unterstützt.</span><span class="sxs-lookup"><span data-stu-id="bf296-108">It's supported by all numeric types.</span></span>
+
+<span data-ttu-id="bf296-109">Im folgenden Beispiel wird die Verwendung des `/=`-Operators veranschaulicht:</span><span class="sxs-lookup"><span data-stu-id="bf296-109">The following example demonstrates the usage of the `/=` operator:</span></span>
+
+[!code-csharp-interactive[divide and assign](~/samples/snippets/csharp/language-reference/operators/DivisionExamples.cs#DivisionAssignment)]
+
+## <a name="operator-overloadability"></a><span data-ttu-id="bf296-110">Operatorüberladbarkeit</span><span class="sxs-lookup"><span data-stu-id="bf296-110">Operator overloadability</span></span>
+
+<span data-ttu-id="bf296-111">Wenn ein benutzerdefinierter Typ den [Divisionsoperator](division-operator.md) `/` [überlädt](../keywords/operator.md), wird auch der Divisionszuweisungsoperator `/=` implizit überladen.</span><span class="sxs-lookup"><span data-stu-id="bf296-111">If a user-defined type [overloads](../keywords/operator.md) the [division operator](division-operator.md) `/`, the division assignment operator `/=` is implicitly overloaded.</span></span> <span data-ttu-id="bf296-112">Ein benutzerdefinierter Typ kann den Divisionszuweisungsoperator nicht explizit überladen.</span><span class="sxs-lookup"><span data-stu-id="bf296-112">A user-defined type cannot explicitly overload the division assignment operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="bf296-113">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="bf296-113">C# language specification</span></span>
+
+<span data-ttu-id="bf296-114">Weitere Informationen finden Sie im Abschnitt [Verbundzuweisung](~/_csharplang/spec/expressions.md#compound-assignment) der [C#-Sprachspezifikation](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="bf296-114">For more information, see the [Compound assignment](~/_csharplang/spec/expressions.md#compound-assignment) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="bf296-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bf296-115">See also</span></span>
+
+- [<span data-ttu-id="bf296-116">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="bf296-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="bf296-117">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="bf296-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="bf296-118">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="bf296-118">C# Operators</span></span>](index.md)

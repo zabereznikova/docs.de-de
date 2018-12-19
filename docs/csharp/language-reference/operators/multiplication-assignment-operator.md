@@ -1,5 +1,6 @@
 ---
-title: Operator *= (C#-Referenz)
+title: '*=-Operator – C#-Referenz'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '*=_CSharpKeyword'
@@ -7,38 +8,38 @@ helpviewer_keywords:
 - '*= operator [C#]'
 - binary multiplication assignment operator (*=) [C#]
 ms.assetid: 2e472155-59db-4dbf-bb94-bcccfa1a794d
-ms.openlocfilehash: e47bc5c681c94ac3fc5c345c56b3814350ffa5ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f8604cdadeda14a5761bc923bd966186fd258a6d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517167"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245349"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="d4ec2-102">Operator \*= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="d4ec2-102">\*= Operator (C# Reference)</span></span>
-<span data-ttu-id="d4ec2-103">Der binäre Multiplikationszuweisungsoperator</span><span class="sxs-lookup"><span data-stu-id="d4ec2-103">The binary multiplication assignment operator.</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="1e1c9-102">Operator \*= (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="1e1c9-102">\*= Operator (C# Reference)</span></span>
+<span data-ttu-id="1e1c9-103">Der binäre Multiplikationszuweisungsoperator</span><span class="sxs-lookup"><span data-stu-id="1e1c9-103">The binary multiplication assignment operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d4ec2-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d4ec2-104">Remarks</span></span>  
- <span data-ttu-id="d4ec2-105">Ein Ausdruck mit dem Zuweisungsoperator `*=`, z.B.</span><span class="sxs-lookup"><span data-stu-id="d4ec2-105">An expression using the `*=` assignment operator, such as</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1e1c9-104">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1e1c9-104">Remarks</span></span>  
+ <span data-ttu-id="1e1c9-105">Ein Ausdruck mit dem Zuweisungsoperator `*=`, z.B.</span><span class="sxs-lookup"><span data-stu-id="1e1c9-105">An expression using the `*=` assignment operator, such as</span></span>  
   
 ```csharp  
 x *= y  
 ```  
   
- <span data-ttu-id="d4ec2-106">für die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="d4ec2-106">is equivalent to</span></span>  
+ <span data-ttu-id="1e1c9-106">für die folgende Syntax:</span><span class="sxs-lookup"><span data-stu-id="1e1c9-106">is equivalent to</span></span>  
   
 ```csharp  
 x = x * y  
 ```  
   
- <span data-ttu-id="d4ec2-107">außer dass `x` nur einmal überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="d4ec2-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="d4ec2-108">Der [Operator \*](../../../csharp/language-reference/operators/multiplication-operator.md) ist für numerische Typen und Multiplikationen vordefiniert.</span><span class="sxs-lookup"><span data-stu-id="d4ec2-108">The [\* operator](../../../csharp/language-reference/operators/multiplication-operator.md) is predefined for numeric types to perform multiplication.</span></span>  
+ <span data-ttu-id="1e1c9-107">außer dass `x` nur einmal überprüft wird.</span><span class="sxs-lookup"><span data-stu-id="1e1c9-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="1e1c9-108">Der [Operator \*](../../../csharp/language-reference/operators/multiplication-operator.md) ist für numerische Typen und Multiplikationen vordefiniert.</span><span class="sxs-lookup"><span data-stu-id="1e1c9-108">The [\* operator](../../../csharp/language-reference/operators/multiplication-operator.md) is predefined for numeric types to perform multiplication.</span></span>  
   
- <span data-ttu-id="d4ec2-109">Der Operator `*=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den [Operator \*](../../../csharp/language-reference/operators/multiplication-operator.md) überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="d4ec2-109">The `*=` operator cannot be overloaded directly, but user-defined types can overload the [\* operator](../../../csharp/language-reference/operators/multiplication-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="1e1c9-109">Der Operator `*=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den [Operator \*](../../../csharp/language-reference/operators/multiplication-operator.md) überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="1e1c9-109">The `*=` operator cannot be overloaded directly, but user-defined types can overload the [\* operator](../../../csharp/language-reference/operators/multiplication-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d4ec2-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d4ec2-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1e1c9-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1e1c9-110">Example</span></span>  
  [!code-csharp[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="d4ec2-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d4ec2-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e1c9-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1e1c9-111">See Also</span></span>
 
-- [<span data-ttu-id="d4ec2-112">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="d4ec2-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="d4ec2-113">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="d4ec2-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="d4ec2-114">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="d4ec2-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="1e1c9-112">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="1e1c9-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="1e1c9-113">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="1e1c9-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="1e1c9-114">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="1e1c9-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

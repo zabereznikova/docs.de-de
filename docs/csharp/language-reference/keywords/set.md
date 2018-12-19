@@ -1,5 +1,6 @@
 ---
-title: Schlüsselwort „set“ (C#-Referenz)
+title: set-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - set
@@ -7,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 66f0b7a709c6474b5428fe2e8faec4f068020066
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3020badc8b7873d7feb0b8133d3a181e1c051cbd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243737"
 ---
-# <a name="set-c-reference"></a><span data-ttu-id="496f2-102">set (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="496f2-102">set (C# Reference)</span></span>
+# <a name="set-c-reference"></a><span data-ttu-id="014b9-102">set (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="014b9-102">set (C# Reference)</span></span>
 
-<span data-ttu-id="496f2-103">Das Schlüsselwort `set` definiert eine *Accessor*-Methode in einer Eigenschaft oder einem Indexer, die der Eigenschaft oder dem Indexer-Element einen Wert zuweist.</span><span class="sxs-lookup"><span data-stu-id="496f2-103">The `set` keyword defines an *accessor* method in a property or indexer that assigns a value to the property or the indexer element.</span></span> <span data-ttu-id="496f2-104">Weitere Informationen und Beispiele finden Sie unter [Eigenschaften](../../programming-guide/classes-and-structs/properties.md), [Automatisch implementierte Eigenschaften](../../programming-guide/classes-and-structs/auto-implemented-properties.md) und [Indexers](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="496f2-104">For more information and examples, see [Properties](../../programming-guide/classes-and-structs/properties.md), [Auto-Implemented Properties](../../programming-guide/classes-and-structs/auto-implemented-properties.md), and [Indexers](../../programming-guide/indexers/index.md).</span></span>
+<span data-ttu-id="014b9-103">Das Schlüsselwort `set` definiert eine *Accessor*-Methode in einer Eigenschaft oder einem Indexer, die der Eigenschaft oder dem Indexer-Element einen Wert zuweist.</span><span class="sxs-lookup"><span data-stu-id="014b9-103">The `set` keyword defines an *accessor* method in a property or indexer that assigns a value to the property or the indexer element.</span></span> <span data-ttu-id="014b9-104">Weitere Informationen und Beispiele finden Sie unter [Eigenschaften](../../programming-guide/classes-and-structs/properties.md), [Automatisch implementierte Eigenschaften](../../programming-guide/classes-and-structs/auto-implemented-properties.md) und [Indexers](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="014b9-104">For more information and examples, see [Properties](../../programming-guide/classes-and-structs/properties.md), [Auto-Implemented Properties](../../programming-guide/classes-and-structs/auto-implemented-properties.md), and [Indexers](../../programming-guide/indexers/index.md).</span></span>
 
-<span data-ttu-id="496f2-105">Im folgenden Beispiel werden ein `get`- und ein `set`-Accessor für eine Eigenschaft namens `Seconds` definiert.</span><span class="sxs-lookup"><span data-stu-id="496f2-105">The following example defines both a `get` and a `set` accessor for a property named `Seconds`.</span></span> <span data-ttu-id="496f2-106">Im Beispiel wird ein privates Feld mit dem Namen `_seconds` verwendet, um den Eigenschaftswert zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="496f2-106">It uses a private field named `_seconds` to back the property value.</span></span>
+<span data-ttu-id="014b9-105">Im folgenden Beispiel werden ein `get`- und ein `set`-Accessor für eine Eigenschaft namens `Seconds` definiert.</span><span class="sxs-lookup"><span data-stu-id="014b9-105">The following example defines both a `get` and a `set` accessor for a property named `Seconds`.</span></span> <span data-ttu-id="014b9-106">Im Beispiel wird ein privates Feld mit dem Namen `_seconds` verwendet, um den Eigenschaftswert zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="014b9-106">It uses a private field named `_seconds` to back the property value.</span></span>
 
 [!code-csharp[set#1](~/samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]
 
-<span data-ttu-id="496f2-107">Der `set`-Accessor besteht häufig aus einer einzelnen Anweisung, die einen Wert zurückgibt (wie im vorherigen Beispiel gezeigt).</span><span class="sxs-lookup"><span data-stu-id="496f2-107">Often, the `set` accessor consists of a single statement that returns a value, as it did in the previous example.</span></span> <span data-ttu-id="496f2-108">Ab C# 7.0 können Sie die `set`-Zugriffsmethode als Ausdruckskörpermember implementieren.</span><span class="sxs-lookup"><span data-stu-id="496f2-108">Starting with C# 7.0, you can implement the `set` accessor as an expression-bodied member.</span></span> <span data-ttu-id="496f2-109">Im folgenden Beispiel wird sowohl der `get`- als auch der `set`-Accessor als Ausdruckskörpermember implementiert.</span><span class="sxs-lookup"><span data-stu-id="496f2-109">The following example implements both the `get` and the `set` accessors as expression-bodied members.</span></span>
+<span data-ttu-id="014b9-107">Der `set`-Accessor besteht häufig aus einer einzelnen Anweisung, die einen Wert zurückgibt (wie im vorherigen Beispiel gezeigt).</span><span class="sxs-lookup"><span data-stu-id="014b9-107">Often, the `set` accessor consists of a single statement that returns a value, as it did in the previous example.</span></span> <span data-ttu-id="014b9-108">Ab C# 7.0 können Sie die `set`-Zugriffsmethode als Ausdruckskörpermember implementieren.</span><span class="sxs-lookup"><span data-stu-id="014b9-108">Starting with C# 7.0, you can implement the `set` accessor as an expression-bodied member.</span></span> <span data-ttu-id="014b9-109">Im folgenden Beispiel wird sowohl der `get`- als auch der `set`-Accessor als Ausdruckskörpermember implementiert.</span><span class="sxs-lookup"><span data-stu-id="014b9-109">The following example implements both the `get` and the `set` accessors as expression-bodied members.</span></span>
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   
-<span data-ttu-id="496f2-110">In einfachen Fällen, in denen der `get`- und der `set`-Accessor einer Eigenschaft nichts anderes durchführen als das Festlegen oder Abrufen eines Wertes in einem privaten Unterstützungsfeld, können Sie die Vorteile der Unterstützung von automatisch implementierten Eigenschaften durch einen C#-Compiler nutzen.</span><span class="sxs-lookup"><span data-stu-id="496f2-110">For simple cases in which a property's `get` and `set` accessors perform no other operation than setting or retrieving a value in a private backing field, you can take advantage of the C# compiler's support for auto-implemented properties.</span></span> <span data-ttu-id="496f2-111">Im folgenden Beispiel wird `Hours` als automatisch implementierte Eigenschaft implementiert.</span><span class="sxs-lookup"><span data-stu-id="496f2-111">The following example implements `Hours` as an auto-implemented property.</span></span> 
+<span data-ttu-id="014b9-110">In einfachen Fällen, in denen der `get`- und der `set`-Accessor einer Eigenschaft nichts anderes durchführen als das Festlegen oder Abrufen eines Wertes in einem privaten Unterstützungsfeld, können Sie die Vorteile der Unterstützung von automatisch implementierten Eigenschaften durch einen C#-Compiler nutzen.</span><span class="sxs-lookup"><span data-stu-id="014b9-110">For simple cases in which a property's `get` and `set` accessors perform no other operation than setting or retrieving a value in a private backing field, you can take advantage of the C# compiler's support for auto-implemented properties.</span></span> <span data-ttu-id="014b9-111">Im folgenden Beispiel wird `Hours` als automatisch implementierte Eigenschaft implementiert.</span><span class="sxs-lookup"><span data-stu-id="014b9-111">The following example implements `Hours` as an auto-implemented property.</span></span> 
 
 [!code-csharp[set#2](~/samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]
   
-## <a name="c-language-specification"></a><span data-ttu-id="496f2-112">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="496f2-112">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="014b9-112">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="014b9-112">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="496f2-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="496f2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="014b9-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="014b9-113">See also</span></span>
 
-- [<span data-ttu-id="496f2-114">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="496f2-114">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="496f2-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="496f2-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="496f2-116">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="496f2-116">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="496f2-117">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="496f2-117">Properties</span></span>](../../programming-guide/classes-and-structs/properties.md)
+- [<span data-ttu-id="014b9-114">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="014b9-114">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="014b9-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="014b9-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="014b9-116">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="014b9-116">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="014b9-117">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="014b9-117">Properties</span></span>](../../programming-guide/classes-and-structs/properties.md)

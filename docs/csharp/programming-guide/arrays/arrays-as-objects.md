@@ -1,34 +1,35 @@
 ---
-title: Arrays als Objekte (C#-Programmierhandbuch)
+title: Arrays als Objekte – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: f1abe10839c30d48f56ac6044d75d290a59b4cce
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0bbbf7ecc5eff650f7a2edc73546833afd2be094
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505558"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242333"
 ---
-# <a name="arrays-as-objects-c-programming-guide"></a><span data-ttu-id="3be21-102">Arrays als Objekte (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="3be21-102">Arrays as Objects (C# Programming Guide)</span></span>
+# <a name="arrays-as-objects-c-programming-guide"></a><span data-ttu-id="cc428-102">Arrays als Objekte (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="cc428-102">Arrays as Objects (C# Programming Guide)</span></span>
 
-<span data-ttu-id="3be21-103">In C# sind Arrays tatsächlich Objekte und nicht nur adressierbare Regionen zusammenhängender Speicher wie in C und C++.</span><span class="sxs-lookup"><span data-stu-id="3be21-103">In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++.</span></span> <span data-ttu-id="3be21-104"><xref:System.Array> ist der abstrakte Basistyp aller Typen von Arrays.</span><span class="sxs-lookup"><span data-stu-id="3be21-104"><xref:System.Array> is the abstract base type of all array types.</span></span> <span data-ttu-id="3be21-105">Sie können die Eigenschaften und die anderen Klassenmember verwenden, über die <xref:System.Array> verfügt.</span><span class="sxs-lookup"><span data-stu-id="3be21-105">You can use the properties, and other class members, that <xref:System.Array> has.</span></span> <span data-ttu-id="3be21-106">Ein Beispiel dafür wäre die Verwendung der <xref:System.Array.Length%2A>-Eigenschaft, um die Länge eines Arrays zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="3be21-106">An example of this would be using the <xref:System.Array.Length%2A> property to get the length of an array.</span></span> <span data-ttu-id="3be21-107">Der folgende Code weist die Länge des `numbers`-Arrays, die `5` beträgt, einer Variablen mit dem Namen `lengthOfNumbers` zu:</span><span class="sxs-lookup"><span data-stu-id="3be21-107">The following code assigns the length of the `numbers` array, which is `5`, to a variable called `lengthOfNumbers`:</span></span>  
+<span data-ttu-id="cc428-103">In C# sind Arrays tatsächlich Objekte und nicht nur adressierbare Regionen zusammenhängender Speicher wie in C und C++.</span><span class="sxs-lookup"><span data-stu-id="cc428-103">In C#, arrays are actually objects, and not just addressable regions of contiguous memory as in C and C++.</span></span> <span data-ttu-id="cc428-104"><xref:System.Array> ist der abstrakte Basistyp aller Typen von Arrays.</span><span class="sxs-lookup"><span data-stu-id="cc428-104"><xref:System.Array> is the abstract base type of all array types.</span></span> <span data-ttu-id="cc428-105">Sie können die Eigenschaften und die anderen Klassenmember verwenden, über die <xref:System.Array> verfügt.</span><span class="sxs-lookup"><span data-stu-id="cc428-105">You can use the properties, and other class members, that <xref:System.Array> has.</span></span> <span data-ttu-id="cc428-106">Ein Beispiel dafür wäre die Verwendung der <xref:System.Array.Length%2A>-Eigenschaft, um die Länge eines Arrays zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="cc428-106">An example of this would be using the <xref:System.Array.Length%2A> property to get the length of an array.</span></span> <span data-ttu-id="cc428-107">Der folgende Code weist die Länge des `numbers`-Arrays, die `5` beträgt, einer Variablen mit dem Namen `lengthOfNumbers` zu:</span><span class="sxs-lookup"><span data-stu-id="cc428-107">The following code assigns the length of the `numbers` array, which is `5`, to a variable called `lengthOfNumbers`:</span></span>  
   
  [!code-csharp[csProgGuideArrays#3](../../../csharp/programming-guide/arrays/codesnippet/CSharp/arrays-as-objects_1.cs)]  
   
- <span data-ttu-id="3be21-108">Die <xref:System.Array>-Klasse bietet viele weitere nützliche Methoden und Eigenschaften zum Sortieren, Durchsuchen und Kopieren von Arrays.</span><span class="sxs-lookup"><span data-stu-id="3be21-108">The <xref:System.Array> class provides many other useful methods and properties for sorting, searching, and copying arrays.</span></span>  
+ <span data-ttu-id="cc428-108">Die <xref:System.Array>-Klasse bietet viele weitere nützliche Methoden und Eigenschaften zum Sortieren, Durchsuchen und Kopieren von Arrays.</span><span class="sxs-lookup"><span data-stu-id="cc428-108">The <xref:System.Array> class provides many other useful methods and properties for sorting, searching, and copying arrays.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3be21-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3be21-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="cc428-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="cc428-109">Example</span></span>
 
- <span data-ttu-id="3be21-110">In diesem Beispiel wird die <xref:System.Array.Rank%2A>-Eigenschaft verwendet, um die Anzahl der Dimensionen eines Arrays anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="3be21-110">This example uses the <xref:System.Array.Rank%2A> property to display the number of dimensions of an array.</span></span>  
+ <span data-ttu-id="cc428-110">In diesem Beispiel wird die <xref:System.Array.Rank%2A>-Eigenschaft verwendet, um die Anzahl der Dimensionen eines Arrays anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="cc428-110">This example uses the <xref:System.Array.Rank%2A> property to display the number of dimensions of an array.</span></span>  
   
  [!code-csharp[csProgGuideArrays#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/arrays-as-objects_2.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="3be21-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3be21-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cc428-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cc428-111">See Also</span></span>
 
-- [<span data-ttu-id="3be21-112">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="3be21-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3be21-113">Arrays</span><span class="sxs-lookup"><span data-stu-id="3be21-113">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
-- [<span data-ttu-id="3be21-114">Eindimensionale Arrays</span><span class="sxs-lookup"><span data-stu-id="3be21-114">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
-- [<span data-ttu-id="3be21-115">Mehrdimensionale Arrays</span><span class="sxs-lookup"><span data-stu-id="3be21-115">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
-- [<span data-ttu-id="3be21-116">Verzweigte Arrays</span><span class="sxs-lookup"><span data-stu-id="3be21-116">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+- [<span data-ttu-id="cc428-112">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="cc428-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="cc428-113">Arrays</span><span class="sxs-lookup"><span data-stu-id="cc428-113">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
+- [<span data-ttu-id="cc428-114">Eindimensionale Arrays</span><span class="sxs-lookup"><span data-stu-id="cc428-114">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [<span data-ttu-id="cc428-115">Mehrdimensionale Arrays</span><span class="sxs-lookup"><span data-stu-id="cc428-115">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [<span data-ttu-id="cc428-116">Verzweigte Arrays</span><span class="sxs-lookup"><span data-stu-id="cc428-116">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)

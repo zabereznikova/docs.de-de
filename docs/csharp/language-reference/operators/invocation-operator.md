@@ -1,5 +1,6 @@
 ---
-title: Operator () (C#-Referenz)
+title: ()-Operator – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ()_CSharpKeyword
@@ -8,38 +9,38 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 29097dc4aa0bf712b9b2beda4450820a66472ba7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179668"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236452"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="65f66-102">Operator () (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="65f66-102">() Operator (C# Reference)</span></span>
-<span data-ttu-id="65f66-103">Zusätzlich zur Angabe der Reihenfolge von Vorgängen in einem Ausdruck werden Klammern verwendet, um folgende Aufgaben auszuführen:</span><span class="sxs-lookup"><span data-stu-id="65f66-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>  
+# <a name="-operator-c-reference"></a><span data-ttu-id="2f428-102">()-Operator (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="2f428-102">() Operator (C# Reference)</span></span>
+<span data-ttu-id="2f428-103">Zusätzlich zur Angabe der Reihenfolge von Vorgängen in einem Ausdruck werden Klammern verwendet, um folgende Aufgaben auszuführen:</span><span class="sxs-lookup"><span data-stu-id="2f428-103">In addition to being used to specify the order of operations in an expression, parentheses are used to perform the following tasks:</span></span>  
   
-1.  <span data-ttu-id="65f66-104">Das Angeben von Umwandlungen oder Typkonvertierungen.</span><span class="sxs-lookup"><span data-stu-id="65f66-104">Specify casts, or type conversions.</span></span>  
+1.  <span data-ttu-id="2f428-104">Das Angeben von Umwandlungen oder Typkonvertierungen.</span><span class="sxs-lookup"><span data-stu-id="2f428-104">Specify casts, or type conversions.</span></span>  
   
      [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
   
-2.  <span data-ttu-id="65f66-105">Aufrufen von Methoden oder Delegaten.</span><span class="sxs-lookup"><span data-stu-id="65f66-105">Invoke methods or delegates.</span></span>  
+2.  <span data-ttu-id="2f428-105">Aufrufen von Methoden oder Delegaten.</span><span class="sxs-lookup"><span data-stu-id="2f428-105">Invoke methods or delegates.</span></span>  
   
      [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
   
-## <a name="remarks"></a><span data-ttu-id="65f66-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="65f66-106">Remarks</span></span>  
- <span data-ttu-id="65f66-107">Eine Umwandlung ruft implizit den Konvertierungsoperator von einem Typ in einen anderen auf; die Umwandlung schlägt fehl, wenn der Konvertierungsoperator nicht definiert ist.</span><span class="sxs-lookup"><span data-stu-id="65f66-107">A cast explicitly invokes the conversion operator from one type to another; the cast fails if no such conversion operator is defined.</span></span> <span data-ttu-id="65f66-108">Weitere Informationen zu Konvertierungsoperatoren erhalten Sie unter [explizit](../../../csharp/language-reference/keywords/explicit.md) und [implizit](../../../csharp/language-reference/keywords/implicit.md).</span><span class="sxs-lookup"><span data-stu-id="65f66-108">To define a conversion operator, see [explicit](../../../csharp/language-reference/keywords/explicit.md) and [implicit](../../../csharp/language-reference/keywords/implicit.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2f428-106">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2f428-106">Remarks</span></span>  
+ <span data-ttu-id="2f428-107">Eine Umwandlung ruft implizit den Konvertierungsoperator von einem Typ in einen anderen auf; die Umwandlung schlägt fehl, wenn der Konvertierungsoperator nicht definiert ist.</span><span class="sxs-lookup"><span data-stu-id="2f428-107">A cast explicitly invokes the conversion operator from one type to another; the cast fails if no such conversion operator is defined.</span></span> <span data-ttu-id="2f428-108">Weitere Informationen zu Konvertierungsoperatoren erhalten Sie unter [explizit](../../../csharp/language-reference/keywords/explicit.md) und [implizit](../../../csharp/language-reference/keywords/implicit.md).</span><span class="sxs-lookup"><span data-stu-id="2f428-108">To define a conversion operator, see [explicit](../../../csharp/language-reference/keywords/explicit.md) and [implicit](../../../csharp/language-reference/keywords/implicit.md).</span></span>  
   
- <span data-ttu-id="65f66-109">Operator `()` kann nicht überladen werden.</span><span class="sxs-lookup"><span data-stu-id="65f66-109">The `()` operator cannot be overloaded.</span></span>  
+ <span data-ttu-id="2f428-109">Operator `()` kann nicht überladen werden.</span><span class="sxs-lookup"><span data-stu-id="2f428-109">The `()` operator cannot be overloaded.</span></span>  
   
- <span data-ttu-id="65f66-110">Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="65f66-110">For more information, see [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span></span>  
+ <span data-ttu-id="2f428-110">Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="2f428-110">For more information, see [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span></span>  
   
- <span data-ttu-id="65f66-111">Weitere Informationen zu Methodenaufrufen finden Sie unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="65f66-111">For more information about method invocation, see [Methods](../../../csharp/programming-guide/classes-and-structs/methods.md).</span></span>  
+ <span data-ttu-id="2f428-111">Weitere Informationen zu Methodenaufrufen finden Sie unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md).</span><span class="sxs-lookup"><span data-stu-id="2f428-111">For more information about method invocation, see [Methods](../../../csharp/programming-guide/classes-and-structs/methods.md).</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="65f66-112">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="65f66-112">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="2f428-112">C#-Programmiersprachenspezifikation</span><span class="sxs-lookup"><span data-stu-id="2f428-112">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="65f66-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="65f66-113">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f428-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2f428-113">See Also</span></span>
 
-- [<span data-ttu-id="65f66-114">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="65f66-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="65f66-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="65f66-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="65f66-116">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="65f66-116">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="2f428-114">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="2f428-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="2f428-115">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="2f428-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="2f428-116">C#-Operatoren</span><span class="sxs-lookup"><span data-stu-id="2f428-116">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
