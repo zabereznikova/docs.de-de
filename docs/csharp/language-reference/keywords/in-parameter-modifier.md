@@ -1,15 +1,16 @@
 ---
-title: Modifizierer für in-Parameter (C#-Verweis)
+title: Modifizierer für in-Parameter – C#-Verweis
+ms.custom: seodec18
 ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d08b135c92cab176e402fec73999083fe4309362
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199408"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236296"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modifizierer für in-Parameter (C#-Verweis)
 
@@ -54,7 +55,7 @@ Die Angabe von `in` für Argumente an der Aufrufstelle ist üblicherweise option
 
 Erstens wird der Compiler durch die Angabe von `in` an der Aufrufstelle dazu gezwungen, die Methode mit dem übereinstimmenden `in`-Parameter auszuwählen. Wenn dies nicht der Fall ist und sich zwei Methoden nur durch die Angabe von `in` unterscheiden, wird die Methode überladen, für die Argumente als Wert übergeben werden.
 
-Zweitens wird durch `in` festgelegt, dass ein Argument als Verweis übergeben wird. Das mit `in` verwendete Argument muss einen Speicherort darstellen, auf den direkt verwiesen werden kann. Es gelten dieselben Regeln wie für `out`- und `ref`-Argumente: Sie können keine Konstanten, normale Eigenschaften oder andere Ausdrücke, die Werte erzeugen, verwenden. Wird `in` an der Aufrufstelle weggelassen, wird der Compiler darüber informiert, dass die Erstellung einer temporären Variable und deren Übergabe als schreibgeschützter Verweis an die Methode zulässig ist. Der Compiler erstellt in diesem Fall eine temporäre Variable, um mehrere Einschränkungen im Zusammenhang mit `in`-Argumenten zu umgehen:
+Zweitens wird durch `in` festgelegt, dass ein Argument als Verweis übergeben wird. Das mit `in` verwendete Argument muss einen Speicherort darstellen, auf den direkt verwiesen werden kann. Es gelten die gleichen allgemeinen Regeln für `out`- und `ref`-Argumente: Sie können keine Konstanten, normale Eigenschaften oder andere Ausdrücke, die Werte erzeugen, verwenden. Wird `in` an der Aufrufstelle weggelassen, wird der Compiler darüber informiert, dass die Erstellung einer temporären Variable und deren Übergabe als schreibgeschützter Verweis an die Methode zulässig ist. Der Compiler erstellt in diesem Fall eine temporäre Variable, um mehrere Einschränkungen im Zusammenhang mit `in`-Argumenten zu umgehen:
 
 - Eine temporäre Variable ermöglicht als Konstanten zur Kompilierzeit `in`-Parameter.
 - Eine temporäre Variable ermöglicht Eigenschaften oder andere Ausdrücke für `in`-Parameter.

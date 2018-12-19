@@ -1,5 +1,6 @@
 ---
-title: Operator += (C#-Referenz)
+title: +=-Operator – C#-Referenz
+ms.custom: seodec18
 ms.date: 10/29/2018
 f1_keywords:
 - +=_CSharpKeyword
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - addition assignment operator (+=) [C#]
 - event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: ac9330e283cb58ae4e0ee7b644aa2c22bdf64c46
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 5d48f2fe53a9bb6f781f8d35f1e0983bcaa30f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50192030"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240930"
 ---
-# <a name="-operator-c-reference"></a>Operator += (C#-Referenz)
+# <a name="-operator-c-reference"></a>+=-Operator (C#-Referenz)
 
 Der Additionszuweisungsoperator.
 

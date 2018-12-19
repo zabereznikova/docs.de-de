@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile'
+title: 'Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile'
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 77375e428fe0563c0b533ca97abd21070e850682
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3563f668dfd4610e1c5cd7d7f8633943c654f193
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857848"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286441"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile
 
-Die Umgebungsvariablen, die für Befehlszeilenbuilds erforderlich sind, werden durch die Datei VSDevCmd.bat festgelegt. Weitere Informationen zu VsDevCmd.bat finden Sie im [Knowledge Base-Artikel Q248802](https://support.microsoft.com/help/248802/you-receive-the-out-of-environment-space-error-message-when-you-execut).  
+Die Umgebungsvariablen, die für Befehlszeilenbuilds erforderlich sind, werden durch die Datei VSDevCmd.bat festgelegt.
 
 > [!NOTE]
 > Bei der Datei VsDevCmd.bat handelt es sich um eine neue Datei, die im Lieferumfang von Visual Studio 2017 enthalten ist. In Visual Studio 2015 und früheren Versionen wurde für den gleichen Zweck VSVARS32.bat verwendet. Diese Datei wurde unter „\Programme\Microsoft Visual Studio\\*Version*\Common7\Tools“ oder „Programme (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools“ gespeichert.
@@ -41,7 +41,14 @@ Falls die aktuelle Version von Visual Studio auf einem Computer installiert ist
   
     > [!CAUTION]
     >  VsDevCmd.bat kann auf verschiedenen Computern unterschiedlich sein. Falls die Datei VsDevCmd.bat nicht vorhanden oder beschädigt ist, sollten Sie sie nicht durch die VsDevCmd.bat-Datei eines anderen Computers ersetzen. Führen Sie stattdessen Setup erneut aus, um die fehlende Datei zu ersetzen.  
-  
+
+### <a name="available-options-for-vsdevcmdbat"></a>Verfügbare Optionen für „VsDevCmd.BAT“
+
+Um die verfügbaren Optionen für „VsDevCmd.BAT“ anzuzeigen, führen Sie den Befehl mit der `-help`-Option aus:
+```console
+VsDevCmd.bat -help
+```
+
 ## <a name="see-also"></a>Siehe auch  
 
 - [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

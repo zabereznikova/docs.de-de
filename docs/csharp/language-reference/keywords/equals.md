@@ -1,5 +1,6 @@
 ---
-title: Kontextabhängiges Schlüsselwort „equals“ (C#-Referenz)
+title: Kontextabhängiges equals-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - equals_CSharpKeyword
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
-ms.openlocfilehash: 30a8be7e81bae65e565d2a3ed28e225ac3094f13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6026cbe606ff80f5ae1bc13435c67eaa3f57330
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208090"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237830"
 ---
 # <a name="equals-c-reference"></a>equals (C#-Referenz)
 
-Das kontextabhängige Schlüsselwort `equals` wird in einer `join`-Klausel in einem Abfrageausdruck verwendet, um die Elemente zweier Sequenzen zu vergleichen. Weitere Informationen finden Sie unter [Join-Klausel](join-clause.md).
+Das kontextabhängige Schlüsselwort `equals` wird in einer `join`-Klausel in einem Abfrageausdruck verwendet, um die Elemente zweier Sequenzen zu vergleichen. Weitere Informationen finden Sie unter [join-Klausel](join-clause.md).
 
 ## <a name="example"></a>Beispiel
 

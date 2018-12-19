@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)'
+title: 'Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen – C#-Programmierhandbuch'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 9d07f8e7b2f4c31af572829256065cf6aa3383bb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 803c3bd4099b838ddc71fea530565f26bd4142df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260216"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236569"
 ---
-# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Gewusst wie: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)
+# <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)
 Visual C# verfügt über Funktionen, die den Zugriff auf Office-API-Objekte vereinfachen. Zu den neuen Funktionen zählen benannte und optionale Argumente, ein neuer Typ namens `dynamic` und die Möglichkeit, Argumente an Verweisparameter in COM-Methoden zu übergeben, als handele es sich um Werteparameter.  
   
  In diesem Thema verwenden Sie die neuen Funktionen, um Code zu schreiben, mit dem ein Microsoft Office Excel-Arbeitsblatt erstellt und angezeigt wird. Dann schreiben Sie Code, um ein Office Word-Dokument hinzuzufügen, das ein Symbol enthält, das mit dem Excel-Arbeitsblatt verknüpft ist.  
@@ -49,7 +50,7 @@ Visual C# verfügt über Funktionen, die den Zugriff auf Office-API-Objekte vere
   
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Verweis hinzufügen**. Das Dialogfeld **Verweis hinzufügen** wird angezeigt.  
   
-2.  Wählen Sie auf der Seite **Assemblys** in der Liste **Komponentenname** den Eintrag **Microsoft.Office.Interop.Word** aus, und wählen Sie bei gedrückter STRG-Taste **Microsoft.Office.Interop.Excel** aus.  Wenn keine Assemblys sichtbar sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden (siehe [Vorgehensweise: Installieren von primären Interopassemblys für Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  Wählen Sie auf der Seite **Assemblys** in der Liste **Komponentenname** den Eintrag **Microsoft.Office.Interop.Word** aus, und wählen Sie bei gedrückter STRG-Taste **Microsoft.Office.Interop.Excel** aus.  Wenn keine Assemblys sichtbar sind, müssen Sie unter Umständen sicherstellen, dass sie installiert sind und angezeigt werden (siehe [Vorgehensweise: Installieren von primären Office-Interop-Assemblys](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Klicken Sie auf **OK**.  
   
@@ -178,4 +179,4 @@ Visual C# verfügt über Funktionen, die den Zugriff auf Office-API-Objekte vere
 - [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
 - [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)  
 - [Benannte und optionale Argumente](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
-- [Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

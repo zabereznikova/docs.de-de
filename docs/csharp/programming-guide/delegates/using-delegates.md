@@ -1,22 +1,23 @@
 ---
-title: Verwenden von Delegaten (C#-Programmierhandbuch)
+title: Verwenden von Delegaten – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042204"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238844"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) als Argument übernimmt und [void](../../../csharp/language-reference/keywords/void.md) zurückgibt:  
   
  [!code-csharp[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
   
- Ein Delegatobjekt wird normalerweise durch Angabe des Namens der Methode, die der Delegat umschließt, oder mit einer [anonymen Methode](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) erstellt. Sobald ein Delegat instanziiert ist, wird vom Delegaten ein Methodenaufruf an den Delegaten an diese Methode übergeben. Die vom Aufrufer an den Delegaten übergebenen Parameter werden an die Methode übergeben, und der Rückgabewert von der Methode wird ggf. durch den Delegaten an den Aufrufer zurückgegeben. Dies wird als Aufrufen des Delegaten bezeichnet. Ein instanziierter Delegat kann wie die eingeschlossene Methode selbst aufgerufen werden. Zum Beispiel:  
+ Ein Delegatobjekt wird normalerweise durch Angabe des Namens der Methode, die der Delegat umschließt, oder mit einer [anonymen Methode](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) erstellt. Sobald ein Delegat instanziiert ist, wird vom Delegaten ein Methodenaufruf an den Delegaten an diese Methode übergeben. Die vom Aufrufer an den Delegaten übergebenen Parameter werden an die Methode übergeben, und der Rückgabewert von der Methode wird ggf. durch den Delegaten an den Aufrufer zurückgegeben. Dies wird als Aufrufen des Delegaten bezeichnet. Ein instanziierter Delegat kann wie die eingeschlossene Methode selbst aufgerufen werden. Beispiel:  
   
  [!code-csharp[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
   
@@ -48,7 +49,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
   
- Zu diesem Zeitpunkt enthält `allMethodsDelegate` drei Methoden in der Aufrufliste: `Method1`, `Method2` und `DelegateMethod`. Die ursprünglichen drei Delegaten, `d1`, `d2` und `d3`, bleiben unverändert. Wenn `allMethodsDelegate` aufgerufen wird, werden alle drei Methoden nacheinander aufgerufen. Wenn der Delegat Verweisparameter verwendet, wird der Verweis wiederum nacheinander an jede der drei Methoden übergeben, und alle Änderungen einer Methode sind für die nächste Methode sichtbar. Wenn eine der Methoden eine Ausnahme auslöst, die nicht innerhalb der Methode abgefangen wird, wird diese Ausnahme an den Aufrufer des Delegaten übergeben und keine der nachfolgenden Methoden in der Aufrufliste wird aufgerufen. Wenn der Delegat über einen Rückgabewert und/oder out-Parameter verfügt, gibt er den Rückgabewert und die Parameter der letzten aufgerufenen Methode zurück. Entfernen Sie eine Methode aus der Aufrufliste, indem Sie den Subtraktions- oder Subtraktionszuweisungsoperator ('-' oder '-=') verwenden. Zum Beispiel:  
+ Zu diesem Zeitpunkt enthält `allMethodsDelegate` drei Methoden in der Aufrufliste: `Method1`, `Method2` und `DelegateMethod`. Die ursprünglichen drei Delegaten, `d1`, `d2` und `d3`, bleiben unverändert. Wenn `allMethodsDelegate` aufgerufen wird, werden alle drei Methoden nacheinander aufgerufen. Wenn der Delegat Verweisparameter verwendet, wird der Verweis wiederum nacheinander an jede der drei Methoden übergeben, und alle Änderungen einer Methode sind für die nächste Methode sichtbar. Wenn eine der Methoden eine Ausnahme auslöst, die nicht innerhalb der Methode abgefangen wird, wird diese Ausnahme an den Aufrufer des Delegaten übergeben und keine der nachfolgenden Methoden in der Aufrufliste wird aufgerufen. Wenn der Delegat über einen Rückgabewert und/oder out-Parameter verfügt, gibt er den Rückgabewert und die Parameter der letzten aufgerufenen Methode zurück. Entfernen Sie eine Methode aus der Aufrufliste, indem Sie den Subtraktions- oder Subtraktionszuweisungsoperator ('-' oder '-=') verwenden. Beispiel:  
   
  [!code-csharp[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
   
@@ -60,7 +61,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  Multicastdelegaten werden ausgiebig bei der Ereignisbehandlung verwendet. Ereignisquellobjekte senden Ereignisbenachrichtigungen an Empfängerobjekte, die für den Erhalt dieses Ereignisses registriert wurden. Um sich für ein Ereignis zu registrieren, erstellt der Empfänger eine Methode zur Behandlung des Ereignisses, dann erstellt er einen Delegaten für die Methode und übergibt den Delegaten an die Ereignisquelle. Die Quelle ruft den Delegaten auf, wenn das Ereignis eintritt. Der Delegat ruft dann die Ereignisbehandlungsmethode für den Empfänger auf und übermittelt die Ereignisdaten. Der Delegattyp für ein bestimmtes Ereignis wird von der Ereignisquelle definiert. Weitere Informationen finden Sie unter [Ereignisse](../../../csharp/programming-guide/events/index.md).  
   
- Beim Vergleichen von zwei unterschiedlichen zugewiesenen Typen zur Kompilierzeit kommt es zu einem Kompilierungsfehler. Falls die Delegatinstanzen statisch vom Typ `System.Delegate` sind, dann ist der Vergleich zulässig, gibt jedoch zur Laufzeit "False" zurück. Zum Beispiel:  
+ Beim Vergleichen von zwei unterschiedlichen zugewiesenen Typen zur Kompilierzeit kommt es zu einem Kompilierungsfehler. Falls die Delegatinstanzen statisch vom Typ `System.Delegate` sind, dann ist der Vergleich zulässig, gibt jedoch zur Laufzeit "False" zurück. Beispiel:  
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   

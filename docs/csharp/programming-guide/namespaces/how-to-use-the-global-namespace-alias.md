@@ -1,19 +1,20 @@
 ---
-title: 'Gewusst wie: Verwenden des globalen Namespacealias (C#-Programmierhandbuch)'
+title: 'Vorgehensweise: Verwenden des globalen Namespacealias – C#-Programmierhandbuch'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "44514617"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236607"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Gewusst wie: Verwenden des globalen Namespacealias (C#-Programmierhandbuch)
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Vorgehensweise: Verwenden des globalen Namespacealias (C#-Programmierhandbuch)
 Die Möglichkeit, auf einen Member im globalen [Namespace](../../../csharp/language-reference/keywords/namespace.md) zuzugreifen, ist nützlich, wenn der Member möglicherweise von einer anderen Entität mit dem gleichen Namen verdeckt wird.  
   
  Im folgenden Code wird `Console` z.B. zu `TestApp.Console` statt zum `Console`-Typ im <xref:System>-Namespace aufgelöst.  
@@ -49,6 +50,6 @@ Die Möglichkeit, auf einen Member im globalen [Namespace](../../../csharp/langu
 
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
-- [ Operator](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::-Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -1,5 +1,6 @@
 ---
-title: Schlüsselwort „decimal“ (C#-Referenz)
+title: decimal-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - decimal_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239458"
 ---
 # <a name="decimal-c-reference"></a>decimal (C#-Referenz)
 
@@ -42,7 +43,7 @@ Die ganzzahligen Typen werden implizit in `decimal` konvertiert, und das Ergebni
 decimal myMoney = 300;
 ```
 
-Es findet keine implizite Konvertierung zwischen anderen Gleitkommatypen und dem `decimal`-Typ statt. Folglich muss die Konvertierung zwischen diesen beiden Typen mittels einer Typumwandlung durchgeführt werden. Zum Beispiel:
+Es findet keine implizite Konvertierung zwischen anderen Gleitkommatypen und dem `decimal`-Typ statt. Folglich muss die Konvertierung zwischen diesen beiden Typen mittels einer Typumwandlung durchgeführt werden. Beispiel:
 
 ```csharp
 decimal myMoney = 99.9m;
@@ -104,4 +105,4 @@ In diesem Beispiel wird die Ausgabe mit der Währungsformatzeichenfolge formatie
 - [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
 - [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
 - [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Standardmäßige Zahlenformatzeichenfolgen](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

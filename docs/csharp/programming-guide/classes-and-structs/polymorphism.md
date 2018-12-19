@@ -1,16 +1,17 @@
 ---
-title: Polymorphismus (C#-Programmierhandbuch)
+title: Polymorphismus – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523392"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286454"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
@@ -92,12 +93,11 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
 -   [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Gewusst wie: Überschreiben der ToString-Methode](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Vorgehensweise: Überschreiben der ToString-Methode](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
 - [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  

@@ -1,17 +1,18 @@
 ---
-title: '#pragma-Prüfsumme (C#-Referenz)'
+title: '#pragma-Prüfsumme – C#-Referenz'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024544"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235620"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (C#-Referenz)
 Erstellt für Quelldateien Prüfsummen, um beim Debuggen von [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]-Seiten zu helfen.  
@@ -27,7 +28,7 @@ Erstellt für Quelldateien Prüfsummen, um beim Debuggen von [!INCLUDE[vstecasp]
  Der Name der Datei, die die Überwachung von Änderungen oder Updates erfordert  
   
  `"{guid}"`  
- GUID (Globally Unique Identifier, globaler eindeutiger Bezeichner) für den Hashalgorithmus.  
+ GUID (Globally Unique Identifier, globaler eindeutiger Bezeichner) für den Hashalgorithmus.  
   
  `"checksum_bytes"`  
  Die Zeichenfolge von hexadezimalen Ziffern, die die Bytes der Prüfsumme darstellt. Dabei muss es sich um eine gerade Anzahl hexadezimaler Ziffern handeln. Eine ungerade Anzahl von Ziffern führt zu einer Warnung zur Kompilierzeit, und die Anweisung wird ignoriert.  

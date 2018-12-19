@@ -1,16 +1,17 @@
 ---
-title: Modifizierer (C#-Referenz)
+title: Modifizierer – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 645fc4bf4a64443c3816dbaec1904e08fd8dde41
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524827"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237325"
 ---
 # <a name="modifiers-c-reference"></a>Modifizierer (C#-Referenz)
 Modifizierer werden zum Ändern von Typ- und Typmemberdeklarationen verwendet. In diesem Abschnitt werden die C#-Modifizierer beschrieben.  

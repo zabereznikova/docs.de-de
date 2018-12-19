@@ -1,16 +1,17 @@
 ---
-title: Abfrageschlüsselwörter (C#-Referenz)
+title: Abfrageschlüsselwörter – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 9ec163e1de018bd87348a5b39a1f34654d7d6d84
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028731"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239484"
 ---
 # <a name="query-keywords-c-reference"></a>Abfrageschlüsselwörter (C#-Referenz)
 
@@ -18,7 +19,7 @@ Dieser Abschnitt enthält die kontextabhängigen Schlüsselwörter, die in Abfra
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-|Klausel|Beschreibung |
+|Klausel|Beschreibung|
 |------------|-----------------|
 |[from](from-clause.md)|Gibt eine Datenquelle und eine Bereichsvariable (ähnlich einer Iterationsvariable) an|
 |[where](where-clause.md)|Filtert Quellelemente basierend auf einem oder mehreren boolschen Ausdrücken, die durch logische AND- und OR-Operatoren (`&&` oder <code>&#124;&#124;</code>) getrennt sind|

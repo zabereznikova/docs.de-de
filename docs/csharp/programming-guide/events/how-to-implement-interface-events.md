@@ -1,18 +1,19 @@
 ---
-title: 'Gewusst wie: Implementieren von Schnittstellenereignissen (C#-Programmierhandbuch)'
+title: 'Vorgehensweise: Implementieren von Schnittstellenereignissen – C#-Programmierhandbuch'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 3620a3e11553bdd6878126388b612113b5722e89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863660"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236439"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Gewusst wie: Implementieren von Schnittstellenereignissen (C#-Programmierhandbuch)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Vorgehensweise: Implementieren von Schnittstellenereignissen (C#-Programmierhandbuch)
 Eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) kann ein [Ereignis](../../../csharp/language-reference/keywords/event.md) deklarieren. Das folgende Beispiel zeigt, wie Schnittstellenereignisse in einer Klasse implementiert werden. Die Regeln sind mit den Regeln zum Implementieren von Schnittstellenmethoden oder -eigenschaften weitestgehend identisch.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>So implementieren Sie Schnittstellenereignisse in einer Klasse  
@@ -63,4 +64,4 @@ Durch das Bereitstellen Ihrer eigenen Accessoren können Sie festlegen, ob die b
 - [Ereignisse](../../../csharp/programming-guide/events/index.md)  
 - [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
 - [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
-- [Gewusst wie: Auslösen von Basisklassenereignissen in abgeleiteten Klassen](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [Vorgehensweise: Auslösen von Basisklassenereignissen in abgeleiteten Klassen](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

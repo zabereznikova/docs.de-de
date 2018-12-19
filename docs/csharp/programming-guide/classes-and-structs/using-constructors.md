@@ -1,15 +1,16 @@
 ---
-title: Verwenden von Konstruktoren (C#-Programmierhandbuch)
+title: Verwenden von Konstruktoren – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: d10b0de0a3811e615297b31d2d9c8934c9338078
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1924e218f151a86b0524df6f3c91bdbe78131922
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43529019"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236166"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Verwenden von Konstruktoren (C#-Programmierhandbuch)
 Wenn eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) erstellt wird, wird deren Konstruktor aufgerufen. Konstruktoren haben den gleichen Namen wie die Klasse oder Struktur, und sie initialisieren normalerweise die Datenmember des neuen Objekts.  
@@ -53,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Es ist also nicht erforderlich, einen Standardkonstruktor für einen Werttyp aufzurufen.  
   
- Sowohl Klassen als auch `structs` können Konstruktoren definieren, die Parameter annehmen. Konstruktoren, die Parameter annehmen, müssen über eine `new`- oder [base](../../../csharp/language-reference/keywords/base.md)-Anweisung aufgerufen werden. Klassen und `structs` können also mehrere Konstruktoren definieren, und keine von beiden wird zum Definieren eines Standardkonstruktors benötigt. Zum Beispiel:  
+ Sowohl Klassen als auch `structs` können Konstruktoren definieren, die Parameter annehmen. Konstruktoren, die Parameter annehmen, müssen über eine `new`- oder [base](../../../csharp/language-reference/keywords/base.md)-Anweisung aufgerufen werden. Klassen und `structs` können also mehrere Konstruktoren definieren, und keine von beiden wird zum Definieren eines Standardkonstruktors benötigt. Beispiel:  
   
  [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   

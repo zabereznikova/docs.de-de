@@ -1,19 +1,20 @@
 ---
-title: Operator ^= (C#-Referenz)
+title: ^=-Operator – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ^=_CSharpKeyword
 helpviewer_keywords:
 - ^= operator [C#]
 ms.assetid: 3658ff9a-61cd-467e-ad6b-8fbf1cfbaae4
-ms.openlocfilehash: d6546f23ffb6dee792339a7e3863bf58ae668d58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cf39c8e8586e9d4f537fe38d8b28f55542db6ab8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857231"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237154"
 ---
-# <a name="-operator-c-reference"></a>Operator ^= (C#-Referenz)
+# <a name="-operator-c-reference"></a>^=-Operator (C#-Referenz)
 Der XOR-Zuweisungsoperator („exklusives Oder“)  
   
 ## <a name="remarks"></a>Hinweise  

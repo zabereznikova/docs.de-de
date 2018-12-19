@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)'
+title: 'Vorgehensweise: Erstellen einer Datei oder eines Ordners – C#-Programmierhandbuch'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: aa5c6782b11ac89b418ac84faafaa8409ad65049
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207459"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240202"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Gewusst wie: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Vorgehensweise: Erstellen einer Datei oder eines Ordners (C#-Programmierhandbuch)
 Sie können einen Ordner auf dem Computer programmgesteuert erstellen, einen Unterordner erstellen, eine Datei im Unterordner erstellen und Daten in die Datei schreiben.  
   
 ## <a name="example"></a>Beispiel  

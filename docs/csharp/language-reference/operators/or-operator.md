@@ -1,5 +1,6 @@
 ---
-title: Operator | (C#-Referenz)
+title: '|-Operator – C#-Referenz'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '|_CSharpKeyword'
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 999df9db0819a5f33e21a29b892de0a8854dd5d8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 19a37bbb54d2ef3e15e4465df05c9b6df705206c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028165"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240358"
 ---
-# <a name="-operator-c-reference"></a>Operator | (C#-Referenz)
+# <a name="-operator-c-reference"></a>|-Operator (C#-Referenz)
 Binäre `|`-Operatoren sind für integrale Typen und `bool` vordefiniert. Für integrale Typen berechnet `|` die bitweise OR-Operation der Operanden. Für `bool` Operanden berechnet `|` die logische OR-Operator seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `false` ist, wenn beide Operanden `false` sind.  
   
 ## <a name="remarks"></a>Hinweise  

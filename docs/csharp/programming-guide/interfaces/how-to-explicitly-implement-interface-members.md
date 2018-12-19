@@ -1,17 +1,18 @@
 ---
-title: 'Gewusst wie: Explizites Implementieren von Schnittstellenmembern (C#-Programmierhandbuch)'
+title: 'Vorgehensweise: Explizites Implementieren von Schnittstellenmembern – C#-Programmierhandbuch'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 30ea58b7ef3edd757c450b9fca1cc810ff9d17c1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11ef4eb3e4da0166ae4753b8028edb217f2a487e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861022"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236927"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Gewusst wie: Explizites Implementieren von Schnittstellenmembern (C#-Programmierhandbuch)
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Vorgehensweise: Explizites Implementieren von Schnittstellenmembern (C#-Programmierhandbuch)
 Dieses Beispiel deklariert eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md), `IDimensions`, und eine Klasse, `Box`, die explizit die Schnittstellenmember `getLength` und `getWidth` implementiert. Die Member werden über eine Schnittstelleninstanz, `dimensions`, erreicht.  
   
 ## <a name="example"></a>Beispiel  
@@ -32,4 +33,4 @@ Dieses Beispiel deklariert eine [Schnittstelle](../../../csharp/language-referen
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
 - [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)  
-- [Gewusst wie: Explizites Implementieren von Membern zweier Schnittstellen](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)
+- [Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)

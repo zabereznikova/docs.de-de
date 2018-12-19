@@ -1,16 +1,17 @@
 ---
-title: Eindimensionale Arrays (C#-Programmierhandbuch)
+title: Eindimensionale Arrays – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e9243ff8b55970ebab6ecbe42cb3ed8ebcaecfe3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027127"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238571"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Eindimensionale Arrays (C#-Programmierhandbuch)
 
@@ -20,13 +21,13 @@ Sie können ein eindimensionales Array aus fünf ganzen Zahlen deklarieren, wie 
   
  Dieses Array enthält die Elemente `array[0]` bis `array[4]`. Der [neue](../../../csharp/language-reference/keywords/new.md) Operator wird verwendet, um das Array zu erstellen und die Arrayelemente mit ihren Standardwerten zu initialisieren. In diesem Beispiel werden alle Arrayelemente mit null initialisiert.  
   
- Ein Array, das Zeichenfolgenelemente speichert, kann auf die gleiche Weise deklariert werden. Zum Beispiel:  
+ Ein Array, das Zeichenfolgenelemente speichert, kann auf die gleiche Weise deklariert werden. Beispiel:  
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
 ## <a name="array-initialization"></a>Arrayinitialisierung
 
- Arrays können nach der Deklaration initialisiert werden. In diesem Fall ist kein Rangbezeichner erforderlich, da er bereits durch die Anzahl der Elemente in der Initialisierungsliste bereitgestellt wird. Zum Beispiel:  
+ Arrays können nach der Deklaration initialisiert werden. In diesem Fall ist kein Rangbezeichner erforderlich, da er bereits durch die Anzahl der Elemente in der Initialisierungsliste bereitgestellt wird. Beispiel:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   

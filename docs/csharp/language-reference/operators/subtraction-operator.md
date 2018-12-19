@@ -1,5 +1,6 @@
 ---
-title: '- Operator (C#-Referenz)'
+title: '- Operator – C#-Referenz'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - -_CSharpKeyword
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - '- operator [C#]'
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: bd852f96ece9c8d5d5e2ec42e802596e795ce04a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5a467e8383d7510260ad3044976601deca7cafdb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210103"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242229"
 ---
-# <a name="--operator-c-reference"></a>Operator - (C#-Referenz)
+# <a name="--operator-c-reference"></a>Operator „-“ (C#-Referenz)
 Der `-`-Operator kann entweder als unärer oder als binärer Operator funktionieren.  
   
 ## <a name="remarks"></a>Hinweise  

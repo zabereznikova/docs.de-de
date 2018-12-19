@@ -1,19 +1,20 @@
 ---
-title: 'Vorgehensweise: Behandeln einer Ausnahme mit try/catch (C#-Programmierhandbuch)'
+title: 'Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ – C#-Programmierhandbuch'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: 74503c510007b132a7bbb14da7eade4c379b2179
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db83eca52b204df1bb8273e94ae8664e61175aa7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856577"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244928"
 ---
-# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Gewusst wie: Behandeln einer Ausnahme mit try/catch (C#-Programmierhandbuch)
+# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ (C#-Programmierhandbuch)
 Ein [try/catch](../../../csharp/language-reference/keywords/try-catch.md)-Block soll von Arbeitscode generierte Ausnahmen abfangen und verarbeiten. Einige Ausnahmen können in einem `catch`-Block verarbeitet werden, und das Problem kann behoben werden, ohne dass die Ausnahme erneut ausgelöst wird. Allerdings können Sie meistens nur sicherstellen, dass die passende Ausnahme ausgelöst wird.  
   
 ## <a name="example"></a>Beispiel  

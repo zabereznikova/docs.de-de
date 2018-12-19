@@ -1,44 +1,54 @@
 ---
-title: Operator /= (C#-Referenz)
-ms.date: 07/20/2015
+title: /=-Operator – C#-Referenz
+ms.custom: seodec18
+ms.date: 12/13/2018
 f1_keywords:
 - /=_CSharpKeyword
 helpviewer_keywords:
 - division assignment operator (/=) [C#]
 - /= (division assignment operator) [C#]
 ms.assetid: 50fc02b0-ee9c-4c3e-b58d-d591282caf1c
-ms.openlocfilehash: 8fff048cc441181aa3f0e3c0c638d501aaf9de3f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed4dd6c0c944b77543aae4de8d51534b4df4f4ef
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526307"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286519"
 ---
 # <a name="-operator-c-reference"></a>Operator /= (C#-Referenz)
-Der Divisionszuweisungsoperator  
-  
-## <a name="remarks"></a>Hinweise  
- Ein Ausdruck mit dem Zuweisungsoperator `/=`, z.B.  
-  
-```csharp  
-x /= y  
-```  
-  
- für die folgende Syntax:  
-  
-```csharp  
-x = x / y  
-```  
-  
- außer dass `x` nur einmal überprüft wird. Die [/ operator](../../../csharp/language-reference/operators/division-operator.md) ist für numerische Typen vordefiniert, um Division auszuführen.  
-  
- Der Operator `/=` kann nicht direkt überladen werden, jedoch können benutzerdefinierte Typen den[/ operator](../../../csharp/language-reference/operators/division-operator.md) überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)). Bei allen Zusammensetzungszuweisungsoperatoren wird die entsprechende Verbundzuweisung durch das Überladen des binären Operators implizit überladen.  
-  
-## <a name="example"></a>Beispiel  
- [!code-csharp[csRefOperators#5](codesnippet/CSharp/division-assignment-operator_1.cs)]  
-  
+
+Der Divisionszuweisungsoperator
+
+Ein Ausdruck mit dem Operator `/=`, z.B.
+
+```csharp
+x /= y
+```
+
+für die folgende Syntax:
+
+```csharp
+x = x / y
+```
+
+außer dass `x` nur einmal überprüft wird.
+
+Der [Divisionsoperator](division-operator.md) `/` dividiert den ersten Operanden durch den zweiten Operanden. Er wird von allen numerischen Typen unterstützt.
+
+Im folgenden Beispiel wird die Verwendung des `/=`-Operators veranschaulicht:
+
+[!code-csharp-interactive[divide and assign](~/samples/snippets/csharp/language-reference/operators/DivisionExamples.cs#DivisionAssignment)]
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
+Wenn ein benutzerdefinierter Typ den [Divisionsoperator](division-operator.md) `/` [überlädt](../keywords/operator.md), wird auch der Divisionszuweisungsoperator `/=` implizit überladen. Ein benutzerdefinierter Typ kann den Divisionszuweisungsoperator nicht explizit überladen.
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie im Abschnitt [Verbundzuweisung](~/_csharplang/spec/expressions.md#compound-assignment) der [C#-Sprachspezifikation](../language-specification/index.md).
+
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Operatoren](index.md)

@@ -1,5 +1,6 @@
 ---
-title: Operator ^ (C#-Referenz)
+title: ^-Operator – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ^_CSharpKeyword
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: b1333f9d06e2804029550e6364a225558e096431
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f6f09f197502af1bc38bcdef97dd1db0ad9c7c08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925297"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236946"
 ---
-# <a name="-operator-c-reference"></a>Operator ^ (C#-Referenz)
+# <a name="-operator-c-reference"></a>^-Operator (C#-Referenz)
 Binäre `^`-Operatoren sind für integrale Typen und `bool` vordefiniert. Für integrale Typen berechnet `^` die bitweise XOR-Operation der Operanden. Für `bool`-Operanden berechnet `^` den XOR-Operator seiner Operanden. Das bedeutet, dass das Ergebnis nur dann `true` ist, wenn einer und nur einer der Operanden `true` ist.  
   
 ## <a name="remarks"></a>Hinweise  

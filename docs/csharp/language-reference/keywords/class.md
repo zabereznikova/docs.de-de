@@ -1,5 +1,6 @@
 ---
-title: Schlüsselwort „class“ (C#-Referenz)
+title: class-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: d436dee14280d86062834ac131bbe4775705d748
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086063"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286493"
 ---
 # <a name="class-c-reference"></a>class (C#-Referenz)
 
@@ -93,7 +94,7 @@ Zugriff auf private Member der `Child` von `Main` wäre nur möglich, wenn `Main
 
 Typen, die innerhalb einer Klasse ohne Zugriffsmodifizierer deklariert werden, sind standardmäßig `private`, sodass die Datenmember in diesem Beispiel dennoch `private` wären, wenn das Schlüsselwort entfernt worden wäre.
 
-Beachten Sie schließlich, dass für das Objekt, das mit dem Standardkonstruktor (`child3`) erstellt wurde, das Altersfeld standardmäßig auf 0 initialisiert wurde.
+Beachten Sie schließlich, dass für das Objekt, das mit dem Standardkonstruktor (`child3`) erstellt wurde, das Feld `age` standardmäßig auf Null (0) initialisiert wurde.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

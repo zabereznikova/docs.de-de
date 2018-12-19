@@ -1,36 +1,53 @@
 ---
-title: Operator / (C#-Referenz)
-ms.date: 04/04/2018
+title: /-Operator – C#-Referenz
+ms.custom: seodec18
+ms.date: 12/13/2018
 f1_keywords:
 - /_CSharpKeyword
 helpviewer_keywords:
 - / operator [C#]
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
-ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 45bcd64b60e7d13f389064faefeda815ea1f32c9
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800754"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286532"
 ---
 # <a name="-operator-c-reference"></a>Operator / (C#-Referenz)
-Der Divisionsoperator (`/`) dividiert seinen ersten Operanden durch den zweiten Operanden. Alle numerischen Typen besitzen vordefinierte Divisionsoperatoren.
-  
-## <a name="remarks"></a>Hinweise  
- Benutzerdefinierte Typen können den Operator `/` überladen (weitere Informationen unter [operator](../../../csharp/language-reference/keywords/operator.md)). Eine Überladung des `/`-Operator überlädt implizit den [/= Operator](division-assignment-operator.md).  
-  
- Wenn Sie zwei ganze Zahlen teilen, ist das Ergebnis immer eine ganze Zahl. Z.B. das Ergebnis von 7 / 3 ist 2. Dies ist nicht zu verwechseln mit der ganzzahligen Division, weil der Operator `/` nach 0 rundet: Das Ergebnis von -7 / 3 ist -2.  
-  
- Verwenden Sie die Typen `float`, `double` oder `decimal`, um als Quotienten eine rationale Zahl zu erhalten. Es gibt viele Möglichkeiten für die Konvertierung zwischen [integrierten numerischen Typen](../../../csharp/language-reference/keywords/reference-tables-for-types.md).  
-  
- Bestimmen Sie den Rest mithilfe des [Restoperators](../../../csharp/language-reference/operators/remainder-operator.md) `%`.  
-  
-## <a name="example"></a>Beispiel  
- [!code-csharp[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
-  
+
+Der Divisionsoperator `/` dividiert den ersten Operanden durch den zweiten Operanden. Alle numerischen Typen unterstützen den Divisionsoperator.
+
+## <a name="integer-division"></a>Ganzzahldivision
+
+Für die Operanden von Ganzzahltypen weist das Ergebnis des `/`-Operators einen Ganzzahltyp auf und ist gleich dem Quotienten der beiden Operanden, gerundet auf Null:
+
+[!code-csharp-interactive[integer division](~/samples/snippets/csharp/language-reference/operators/DivisionExamples.cs#Integer)]
+
+Um den Quotienten der beiden Operanden als Gleitkommazahl abzurufen, verwenden Sie den Typ `float`, `double` oder `decimal`:
+
+[!code-csharp-interactive[integer as floating-point division](~/samples/snippets/csharp/language-reference/operators/DivisionExamples.cs#IntegerAsFloatingPoint)]
+
+## <a name="floating-point-division"></a>Gleitkommadivision
+
+Für die Typen `float`, `double` oder `decimal` ist das Ergebnis des `/`-Operators der Quotient der beiden Operanden:
+
+[!code-csharp-interactive[floating-point division](~/samples/snippets/csharp/language-reference/operators/DivisionExamples.cs#FloatingPoint)]
+
+Wenn einer der Operanden `decimal` lautet, kann ein anderer Operand weder `float` noch `double` sein, weil weder `float` noch `double` implizit zu `decimal` konvertiert werden können. Sie müssen den Operanden `float` oder `double` explizit zum Typ `decimal` konvertieren. Weitere Informationen zu impliziten Konvertierungen zwischen numerischen Typen finden Sie unter [Tabelle für implizite numerische Konvertierungen](../keywords/implicit-numeric-conversions-table.md).
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
+Benutzerdefinierte Typen können den Operator `/` [überladen](../keywords/operator.md). Wenn der `/`-Operator überladen ist, wird der [Divisionszuweisungsoperator](division-assignment-operator.md) `/=` auch implizit überladen.
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie im Abschnitt [Divisionsoperator](~/_csharplang/spec/expressions.md#division-operator) der [C#-Sprachspezifikation](../language-specification/index.md).
+
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Operatoren](index.md)
+- [%-Operator](remainder-operator.md)

@@ -1,16 +1,17 @@
 ---
-title: Instanzkonstruktoren (C#-Programmierhandbuch)
+title: Instanzkonstruktoren – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: cd7105ec61e5c878dc148c30b27706b1eda3ae72
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5cc7c06a763c4b274b154afc581e495a7e2aa09b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530378"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241654"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Instanzkonstruktoren (C#-Programmierhandbuch)
 Instanzkonstruktoren werden zum Erstellen und Initialisieren von Instanzmembervariablen verwendet, wenn Sie die Ausdruck [new](../../../csharp/language-reference/keywords/new.md) verwenden, um ein Objekt einer [Klasse](../../../csharp/language-reference/keywords/class.md) zu erstellen. Sie müssen einen statischen Konstruktor definieren um eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse oder eine statische Variable in einer nicht statischen Klasse zu initialisieren. Weitere Informationen finden Sie unter [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  

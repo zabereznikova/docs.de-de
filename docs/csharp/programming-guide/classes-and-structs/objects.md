@@ -1,16 +1,17 @@
 ---
-title: Objekte (C#-Programmierhandbuch)
+title: Objekte – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: e5e537d239bd69cb7a95ae82edbdb82144c700a1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 439f001450d51885f943cb28752de1689dd4a748
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683085"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235097"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  
@@ -45,7 +46,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
  Die Implementierung <xref:System.ValueType?displayProperty=nameWithType> von `Equals` verwendet Reflektion, da sie bestimmen muss, was die Felder in jeder Struktur sind. Wenn Sie eigene Strukturen erstellen, überschreiben Sie die Methode `Equals`, um einen effizienten Gleichheitsalgorithmus bereitzustellen, der spezifisch für Ihren Typ ist.  
   
--   Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../../csharp/language-reference/operators/equality-comparison-operator.md) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse kann auch die Schnittstelle <xref:System.IEquatable%601> oder die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die Richtlinien zu befolgen, die in [Vorgehensweise: Definieren von Wertgleichheit für einen Typ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> aufgeführt sind.  
+-   Sie können möglicherweise die Methode <xref:System.Object.Equals%2A> oder den [==-Operator](../../../csharp/language-reference/operators/equality-comparison-operator.md) verwenden, um zu bestimmen, ob die Werte des Felds in zwei Klasseninstanzen gleich sind. Verwenden Sie sie jedoch nur, wenn die Klasse die Werte überschrieben oder überladen hat, um eine benutzerdefinierte Definition von „Gleichheit“ für Objekte dieses Typs bereitzustellen. Die Klasse kann auch die Schnittstelle <xref:System.IEquatable%601> oder die Schnittstelle <xref:System.Collections.Generic.IEqualityComparer%601> implementieren. Beide Schnittstellen bieten Methoden, die zum Testen der Wertgleichheit verwendet werden können. Wenn Sie Ihre eigenen Klassen entwickeln, die `Equals` überschreiben, achten Sie darauf, die hier beschriebenen Richtlinien zu befolgen: [Vorgehensweise: Definieren von Wertgleichheit für einen Typ ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) und <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:   

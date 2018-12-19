@@ -1,5 +1,6 @@
 ---
-title: + Operator (C#-Referenz)
+title: + +-Operator – C#-Referenz
+ms.custom: seodec18
 ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 27ea47d698b20f112880750ec0bc931f1917f142
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 92e20dad8ae6358f71137e955bb80e3641a66a54
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50192297"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237752"
 ---
-# <a name="-operator-c-reference"></a>Operator + (C#-Referenz)
+# <a name="-operator-c-reference"></a>+-Operator (C#-Referenz)
 
 Der Operator `+` wird in zwei Formen unterstützt: als unärer Plusoperator oder als binärer Additionsoperator.
 
@@ -61,6 +62,6 @@ Weitere Informationen finden Sie unter [C#-Sprachspezifikation](../language-spec
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [Zeichenfolgeninterpolation](../tokens/interpolated.md)
-- [Gewusst wie: Verketten von mehreren Zeichenfolgen](../../how-to/concatenate-multiple-strings.md)
+- [Vorgehensweise: Verketten von mehreren Zeichenfolgen](../../how-to/concatenate-multiple-strings.md)
 - [Delegaten](../../programming-guide/delegates/index.md)
 - [Checked und unchecked](../keywords/checked-and-unchecked.md)

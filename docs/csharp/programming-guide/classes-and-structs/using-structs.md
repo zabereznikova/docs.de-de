@@ -1,15 +1,16 @@
 ---
-title: Verwenden von Strukturen (C#-Programmierhandbuch)
+title: Verwenden von Strukturen – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: ed21bf44ebcc84a20bb228f9ba152e7348abc015
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1e1405941cf9076e88aee5689ed933724727bb2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521436"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237102"
 ---
 # <a name="using-structs-c-programming-guide"></a>Verwenden von Strukturen (C#-Programmierhandbuch)
 Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B. `Point`, `Rectangle`und `Color`. Obwohl es ebenso einfach ist, einen Punkt als [Klasse](../../../csharp/language-reference/keywords/class.md) mit [automatisch implementierten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)darzustellen, kann eine [Struktur](../../../csharp/language-reference/keywords/struct.md) in verschiedenen Szenarien effizienter sein. Bei der Deklaration eines Arrays mit 1.000 `Point` -Objekten belegen Sie z. B. zusätzlichen Arbeitsspeicher, damit auf jedes Objekt verwiesen werden kann. In diesem Fall wäre eine Struktur weniger speicherintensiv. Da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ein Objekt mit dem Namen <xref:System.Drawing.Point>enthält, wird die Struktur in diesem Beispiel stattdessen „CoOrds“ genannt.  
@@ -32,7 +33,7 @@ Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B.
   
 ## <a name="example-1"></a>Beispiel 1  
   
-### <a name="description"></a>Beschreibung   
+### <a name="description"></a>Beschreibung  
  In diesem Beispiel wird die `struct` -Initialisierung sowohl unter Verwendung von Standardkonstruktoren als auch unter Verwendung von parametrisierten Konstruktoren veranschaulicht.  
   
 ### <a name="code"></a>Code  
@@ -42,7 +43,7 @@ Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B.
   
 ## <a name="example-2"></a>Beispiel 2  
   
-### <a name="description"></a>Beschreibung   
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel veranschaulicht ein Feature, das ausschließlich auf Strukturen anwendbar ist. Es wird ein CoOrds-Objekt ohne Verwendung des Operators `new` erstellt. Wenn Sie den Begriff `struct` durch `class`ersetzen, wird das Programm nicht kompiliert.  
   
 ### <a name="code"></a>Code  

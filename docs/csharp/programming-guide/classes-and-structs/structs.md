@@ -1,16 +1,17 @@
 ---
-title: Strukturen (C#-Programmierhandbuch)
+title: Strukturen – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 27d4b0d7edf1b5e89e84ac1df5783d68ebb4efe0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259486"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240384"
 ---
 # <a name="structs-c-programming-guide"></a>Strukturen (C#-Programmierhandbuch)
 
@@ -37,8 +38,8 @@ Weitere Informationen finden Sie unter:
 - [Verwenden von Strukturen](using-structs.md)
 - [Konstruktoren](constructors.md)
 - [Typen mit Nullwert](../nullable-types/index.md)
-- [Gewusst wie: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
-- [Gewusst wie: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Vorgehensweise: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
+- [Vorgehensweise: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 
 ## <a name="see-also"></a>Siehe auch
 

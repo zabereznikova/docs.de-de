@@ -1,5 +1,6 @@
 ---
-title: Schlüsselwort „enum“ (C#-Referenz)
+title: enum-Schlüsselwort – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - enum
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: de11a306937626a7dbbb184e509a9f89e63dbae5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2439bb955f821b58acc818ede308c379d5b68a6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187805"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243555"
 ---
 # <a name="enum-c-reference"></a>enum (C#-Referenz)
 

@@ -1,5 +1,6 @@
 ---
-title: event (C#-Referenz)
+title: event – C#-Referenz
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -9,18 +10,18 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: a0729324131c5b3d5c49618c715fc4081af40964
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259700"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240527"
 ---
 # <a name="event-c-reference"></a>event (C#-Referenz)
 Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Klasse zu deklarieren.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt das Deklarieren und Auslösen eines Ereignisses, das <xref:System.EventHandler> als zugrunde liegenden Delegattyp verwendet. Für das vollständige Codebeispiel, das auch veranschaulicht, wie der generische Delegattyp <xref:System.EventHandler%601> verwendet wird und wie man ein Ereignis abonniert und eine Ereignishandlermethode erstellt, finden Sie unter [Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
+ Das folgende Beispiel zeigt das Deklarieren und Auslösen eines Ereignisses, das <xref:System.EventHandler> als zugrunde liegenden Delegattyp verwendet. Das vollständige Codebeispiel, das auch veranschaulicht, wie Sie den generischen Delegattyp <xref:System.EventHandler%601> verwenden, ein Ereignis abonnieren und eine Ereignishandlermethode erstellen, finden Sie unter [Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
  [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
@@ -31,7 +32,7 @@ Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Kl
 ## <a name="keywords-and-events"></a>Schlüsselwörter und Ereignisse  
  Die folgenden Schlüsselwörter gelten für Ereignisse.  
   
-|Stichwort|Beschreibung |Weitere Informationen|  
+|Stichwort|Beschreibung|Weitere Informationen|  
 |-------------|-----------------|--------------------------|  
 |[static](../../../csharp/language-reference/keywords/static.md)|Stellt das Ereignis Aufrufern jederzeit zur Verfügung, auch wenn keine Instanz der Klasse vorhanden ist.|[Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|Ermöglicht abgeleiteten Klassen, das Ereignisverhalten mithilfe des [override](../../../csharp/language-reference/keywords/override.md)-Schlüsselworts zu überschreiben.|[Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
@@ -53,4 +54,4 @@ Das `event`-Schlüsselwort wird verwendet, um ein Ereignis in einer Publisher-Kl
 - [add](../../../csharp/language-reference/keywords/add.md)  
 - [remove](../../../csharp/language-reference/keywords/remove.md)  
 - [Modifizierer](../../../csharp/language-reference/keywords/modifiers.md)  
-- [How to: Combine Delegates (Multicast Delegates) (Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten))](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

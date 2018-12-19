@@ -1,17 +1,18 @@
 ---
-title: Klassen (C#-Programmierhandbuch)
+title: Klassen – C#-Programmierhandbuch
+ms.custom: seodec18
 description: Erfahren Sie mehr über die Klassentypen und wie diese erstellt werden
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 656e16352e8a88cc2c95483551dd71600f3fec0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 614b70562954fee99c6de3e66b54bbdd1134f553
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126288"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242287"
 ---
 # <a name="classes-c-programming-guide"></a>Klassen (C#-Programmierhandbuch)
 

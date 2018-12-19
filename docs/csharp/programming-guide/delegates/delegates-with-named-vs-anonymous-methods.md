@@ -1,16 +1,17 @@
 ---
-title: Delegaten mit benannten im Vergleich zu Anonyme Methoden (C#-Programmierhandbuch)
+title: Delegaten mit benannten im Vergleich zu Anonyme Methoden – C#-Programmierhandbuch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 6d7dcb3c7c6fa8f1d55237504c23cf468aa0e79d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 586ad5a59eebb03ed9ed6bea68d232a6b249c3c9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678521"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241487"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegaten mit benannten im Vergleich zu Anonyme Methoden (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) kann einer benannten Methode zugeordnet werden. Wenn Sie einen Delegaten mit einer benannten Methode instanziieren, wird die Methode als Parameter übergeben:  
@@ -41,5 +42,5 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) kann eine
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
 - [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
 - [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [How to: Combine Delegates (Multicast Delegates) (Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten))](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
 - [Ereignisse](../../../csharp/programming-guide/events/index.md)
