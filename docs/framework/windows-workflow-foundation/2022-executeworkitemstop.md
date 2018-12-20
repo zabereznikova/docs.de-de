@@ -9,24 +9,24 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 05/04/2018
 ms.locfileid: "33511435"
 ---
-# <a name="2022---executeworkitemstop"></a><span data-ttu-id="72e1f-102">2022 - ExecuteWorkItemStop</span><span class="sxs-lookup"><span data-stu-id="72e1f-102">2022 - ExecuteWorkItemStop</span></span>
-## <a name="properties"></a><span data-ttu-id="72e1f-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="72e1f-103">Properties</span></span>  
+# <a name="2022---executeworkitemstop"></a><span data-ttu-id="5d5ab-102">2022 - ExecuteWorkItemStop</span><span class="sxs-lookup"><span data-stu-id="5d5ab-102">2022 - ExecuteWorkItemStop</span></span>
+## <a name="properties"></a><span data-ttu-id="5d5ab-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="5d5ab-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="72e1f-104">ID</span><span class="sxs-lookup"><span data-stu-id="72e1f-104">ID</span></span>|<span data-ttu-id="72e1f-105">2022</span><span class="sxs-lookup"><span data-stu-id="72e1f-105">2022</span></span>|  
-|<span data-ttu-id="72e1f-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="72e1f-106">Keywords</span></span>|<span data-ttu-id="72e1f-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="72e1f-107">WFRuntime</span></span>|  
-|<span data-ttu-id="72e1f-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="72e1f-108">Level</span></span>|<span data-ttu-id="72e1f-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="72e1f-109">Verbose</span></span>|  
-|<span data-ttu-id="72e1f-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="72e1f-110">Channel</span></span>|<span data-ttu-id="72e1f-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="72e1f-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="5d5ab-104">ID</span><span class="sxs-lookup"><span data-stu-id="5d5ab-104">ID</span></span>|<span data-ttu-id="5d5ab-105">2022</span><span class="sxs-lookup"><span data-stu-id="5d5ab-105">2022</span></span>|  
+|<span data-ttu-id="5d5ab-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="5d5ab-106">Keywords</span></span>|<span data-ttu-id="5d5ab-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="5d5ab-107">WFRuntime</span></span>|  
+|<span data-ttu-id="5d5ab-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="5d5ab-108">Level</span></span>|<span data-ttu-id="5d5ab-109">Ausführlich</span><span class="sxs-lookup"><span data-stu-id="5d5ab-109">Verbose</span></span>|  
+|<span data-ttu-id="5d5ab-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="5d5ab-110">Channel</span></span>|<span data-ttu-id="5d5ab-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="5d5ab-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="72e1f-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="72e1f-112">Description</span></span>  
- <span data-ttu-id="72e1f-113">Gibt an, dass ein ExecuteWorkItem abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="72e1f-113">Indicates an ExecuteWorkItem has completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="5d5ab-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5d5ab-112">Description</span></span>  
+ <span data-ttu-id="5d5ab-113">Gibt an, dass ein ExecuteWorkItem abgeschlossen wurde.</span><span class="sxs-lookup"><span data-stu-id="5d5ab-113">Indicates an ExecuteWorkItem has completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="72e1f-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="72e1f-114">Message</span></span>  
- <span data-ttu-id="72e1f-115">Ausführen der Arbeitsaufgabe beenden</span><span class="sxs-lookup"><span data-stu-id="72e1f-115">Execute work item stop</span></span>  
+## <a name="message"></a><span data-ttu-id="5d5ab-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="5d5ab-114">Message</span></span>  
+ <span data-ttu-id="5d5ab-115">Ausführen des Arbeitselements beenden</span><span class="sxs-lookup"><span data-stu-id="5d5ab-115">Execute work item stop</span></span>  
   
-## <a name="details"></a><span data-ttu-id="72e1f-116">Details</span><span class="sxs-lookup"><span data-stu-id="72e1f-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="5d5ab-116">Details</span><span class="sxs-lookup"><span data-stu-id="5d5ab-116">Details</span></span>  
   
-|<span data-ttu-id="72e1f-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="72e1f-117">Data Item Name</span></span>|<span data-ttu-id="72e1f-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="72e1f-118">Data Item Type</span></span>|<span data-ttu-id="72e1f-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="72e1f-119">Description</span></span>|  
+|<span data-ttu-id="5d5ab-117">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="5d5ab-117">Data Item Name</span></span>|<span data-ttu-id="5d5ab-118">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="5d5ab-118">Data Item Type</span></span>|<span data-ttu-id="5d5ab-119">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5d5ab-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="72e1f-120">AppDomain</span><span class="sxs-lookup"><span data-stu-id="72e1f-120">AppDomain</span></span>|<span data-ttu-id="72e1f-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="72e1f-121">xs:string</span></span>|<span data-ttu-id="72e1f-122">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="72e1f-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="5d5ab-120">AppDomain</span><span class="sxs-lookup"><span data-stu-id="5d5ab-120">AppDomain</span></span>|<span data-ttu-id="5d5ab-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="5d5ab-121">xs:string</span></span>|<span data-ttu-id="5d5ab-122">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="5d5ab-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
