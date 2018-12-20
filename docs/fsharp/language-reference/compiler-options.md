@@ -4,7 +4,7 @@ description: Verwendung F# Compilerbefehlszeilenoptionen zum Steuern der Kompili
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170872"
@@ -25,7 +25,7 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 |`--baseaddress:address`|Gibt die bevorzugte Basisadresse an, unter der eine DLL geladen werden soll.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;Baseaddress &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |`--codepage:id`|Gibt an, welche Codepage während der Kompilierung verwendet werden soll, wenn die erforderliche Seite nicht, die aktuelle Standardcodepage für das System ist.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;Codepages &#40;C&#35; Compileroptionen&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md).|
 |`--consolecolors`|Gibt an, dass Fehler und Warnungen farbkodierten Text in der Konsole verwenden.|
-|"--Crossoptimize [+|-]`|Aktiviert oder deaktiviert modulübergreifende Optimierungen.|
+|`--crossoptimize[+|-]`|Aktiviert oder deaktiviert modulübergreifende Optimierungen.|
 |<code>--delaysign[+&#124;-]</code>|Signiert das Assembly verzögert nur mit dem öffentlichen Teil des Schlüssels für einen starken Namen.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;Delaysign &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Aktiviert oder deaktiviert die Generierung von Überlaufprüfungen.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;überprüft &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Aktiviert oder deaktiviert die Generierung der Debuginformationen, oder gibt den Typ der zu generierenden Debuginformationen an. Der Standardwert ist full. Dieser lässt das Anhängen an ein in Ausführung befindliches Programm zu. Wählen Sie **"pdbonly"** um beschränkte Debuginformationen, die in einer Pdb (Programmdatenbank)-Datei gespeicherten zu erhalten.<br /><br />Entsprechung der C#-Compileroption mit demselben Namen. Weitere Informationen finden Sie unter<br /><br />[&#47;Debuggen von &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx).|
