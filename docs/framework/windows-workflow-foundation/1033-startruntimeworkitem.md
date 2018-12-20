@@ -23,7 +23,7 @@ ms.locfileid: "33510065"
  Gibt an, dass ein RuntimeWorkItem mit der Ausführung beginnt.  
   
 ## <a name="message"></a>Meldung  
- Die Ausführung einer Laufzeitarbeitsaufgabe für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wird gestartet.  
+ Die Ausführung eines Laufzeitarbeitselements für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wird gestartet.  
   
 ## <a name="details"></a>Details  
   

@@ -23,7 +23,7 @@ ms.locfileid: "33509690"
  Gibt an, dass ein RuntimeWorkItem abgeschlossen wurde.  
   
 ## <a name="message"></a>Meldung  
- Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde eine Laufzeitarbeitsaufgabe abgeschlossen.  
+ Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein Laufzeitarbeitselement abgeschlossen.  
   
 ## <a name="details"></a>Details  
   

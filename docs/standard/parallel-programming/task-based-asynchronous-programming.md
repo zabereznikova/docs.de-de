@@ -24,7 +24,7 @@ Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die ein
   
      Aufgaben werden im Hintergrund in <xref:System.Threading.ThreadPool> eingereicht, der mit Algorithmen verbessert wurde, durch die die Anzahl von Threads bestimmt und angepasst wird und die einen Lastenausgleich verfügbar machen, der den Durchsatz maximiert. Aufgaben sind hierdurch relativ einfach strukturiert, und Sie können für eine differenzierte Parallelität viele Aufgaben erstellen.  
   
--   Stärker programmgesteuerte Kontrolle als bei Threads oder Arbeitsaufgaben.  
+-   Stärker programmgesteuerte Kontrolle als bei Threads oder Arbeitselementen.  
   
      Aufgaben und das diese umgebende Framework stellen einen umfangreichen Satz von APIs bereit, die Warten, Abbruch, Fortsetzungen, robuste Ausnahmebehandlung, detaillierte Zustandsangaben, benutzerdefinierte Planung und Vieles mehr unterstützen.  
   

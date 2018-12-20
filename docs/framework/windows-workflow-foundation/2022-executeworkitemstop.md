@@ -23,7 +23,7 @@ ms.locfileid: "33511435"
  Gibt an, dass ein ExecuteWorkItem abgeschlossen wurde.  
   
 ## <a name="message"></a>Meldung  
- Ausführen der Arbeitsaufgabe beenden  
+ Ausführen des Arbeitselements beenden  
   
 ## <a name="details"></a>Details  
   

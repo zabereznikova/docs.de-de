@@ -23,7 +23,7 @@ ms.locfileid: "33510246"
  Gibt an, dass ein RuntimeWorkItem geplant wurde.  
   
 ## <a name="message"></a>Meldung  
- Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde eine Laufzeitarbeitsaufgabe geplant.  
+ Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein Laufzeitarbeitselement geplant.  
   
 ## <a name="details"></a>Details  
   
