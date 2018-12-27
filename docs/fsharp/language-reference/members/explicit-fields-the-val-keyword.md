@@ -1,15 +1,15 @@
 ---
-title: 'Explizite Felder: Das val-Schlüsselwort (F#)'
-description: Erfahren Sie mehr über die F#-'Wert'-Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs deklarieren.
+title: 'Explizite Felder: Das Val Schlüsselwort'
+description: Erfahren Sie mehr über die F# "Val"-Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs zu deklarieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746371"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773626"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das val-Schlüsselwort
+# <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das Val Schlüsselwort
 
 Das `val`-Schlüsselwort wird zum Deklarieren eines Speicherort zum Speichern eines Werts in einer Klasse oder einem Strukturtyp verwendet, ohne ihn zu initialisieren. Speicherorte, die auf diese Weise deklariert heißen *explizite Felder*. Das `val`-Schlüsselwort kann auch zusammen mit dem `member`-Schlüsselwort verwendet werden, um eine automatisch implementierte Eigenschaft zu deklarieren. Weitere Informationen zu automatisch implementierte Eigenschaften finden Sie unter [Eigenschaften](properties.md).
 
@@ -64,6 +64,10 @@ Der folgende Code zeigt die Verwendung von expliziten Feldern in einer Struktur.
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 Die Ausgabe lautet `11 xyz`.
+
+**Beachten Sie, dass**, wenn Sie beabsichtigen, initialisieren Sie die Struktur mit `mutable` Felder ohne `mutable` -Schlüsselwort, funktioniert Ihre Zuweisungen für eine Kopie der Struktur der direkt nach der Zuweisung verworfen wird. Aus diesem Grund wird nicht die Struktur ändern.
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 Explizite Felder sind nicht für die routinemäßige Verwendung gedacht. Im Allgemeinen sollten Sie möglichst eine `let`-Bindung in einer Klasse verwenden, statt eines expliziten Felds. Explizite Felder sind in bestimmten Interoperabilitätsszenarios hilfreich, wenn Sie z. B. eine Struktur definieren müssen, die in einem Plattformaufruf einer systemeigenen API oder in COM-Interop-Szenarien verwendet wird. Weitere Informationen finden Sie unter [externe Funktionen](../functions/external-functions.md). Eine andere Situation, in der ein explizites Feld möglicherweise erforderlich, besteht dann, wenn Sie mit einem F#-Codegenerator arbeiten, der Klassen ohne primären Konstruktor ausgibt. Explizite Felder sind auch für threadstatische Variablen oder ähnliche Konstrukte sinnvoll. Weitere Informationen finden Sie unter `System.ThreadStaticAttribute`.
 

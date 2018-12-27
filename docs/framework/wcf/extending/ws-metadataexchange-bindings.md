@@ -2,12 +2,12 @@
 title: WS-MetadataExchange-Bindungen
 ms.date: 03/30/2017
 ms.assetid: 10f8de5d-b81d-4ea7-b37e-7f2c00c39714
-ms.openlocfilehash: 384e5bb05ba4263f245f6901b84e2388ea19bd73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03e6e6d5ee7e69b397acd0f51b8037f02c1804ec
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488623"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53767347"
 ---
 # <a name="ws-metadataexchange-bindings"></a>WS-MetadataExchange-Bindungen
 In diesem Thema wird beschrieben, wie die Standardmetadatenaustausch-Bindungen für verschiedene Transporte erstellt werden.  
@@ -16,7 +16,7 @@ In diesem Thema wird beschrieben, wie die Standardmetadatenaustausch-Bindungen f
   
 |Standardbindungsname|Wie die Bindung erstellt wird|  
 |--------------------------|------------------------------------|  
-|MexHttpBinding|Eine <xref:System.ServiceModel.WSHttpBinding> mit deaktivierter Sicherheit auf Transportebene.|  
-|MexHttpsBinding|Eine <xref:System.ServiceModel.WSHttpBinding>, die Sicherheit auf Transportebene unterstützt.|  
-|MexNamedPipeBinding|Eine <xref:System.ServiceModel.Channels.CustomBinding> mit einem <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>, das die Standardwerte verwendet.|  
-|MexTcpBinding|Eine <xref:System.ServiceModel.Channels.CustomBinding> mit einem <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, das die Standardwerte verwendet.|
+|mexHttpBinding|Eine <xref:System.ServiceModel.WSHttpBinding> mit deaktivierter Sicherheit auf Transportebene.|  
+|mexHttpsBinding|Eine <xref:System.ServiceModel.WSHttpBinding>, die Sicherheit auf Transportebene unterstützt.|  
+|mexNamedPipeBinding|Eine <xref:System.ServiceModel.Channels.CustomBinding> mit einem <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>, das die Standardwerte verwendet.|  
+|mexTcpBinding|Eine <xref:System.ServiceModel.Channels.CustomBinding> mit einem <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, das die Standardwerte verwendet.|
