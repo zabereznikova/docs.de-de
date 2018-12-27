@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: 296f500532040aaebf0f6d7d37a7a9aae99a3451
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90661b4e8f13f0aa3e613bd99bf57dfacdc1eeae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491812"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773613"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Vorgehensweise: Erstellen eines Windows Communication Foundation-Vertrags mit einer Klasse
-Die bevorzugte Methode zum Erstellen eines Windows Communication Foundation (WCF)-Vertrags wird mithilfe einer Schnittstelle. Weitere Informationen finden Sie unter [wie: Definieren eines Dienstvertrags](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Eine Alternative besteht darin, eine Klasse zu erstellen und anschließend das <xref:System.ServiceModel.ServiceContractAttribute>-Attribut direkt auf die Klasse anzuwenden und das <xref:System.ServiceModel.OperationContractAttribute>-Attribut auf die einzelnen Methoden in der Klasse, die Teil des Vertrags sind, anzuwenden.  
+Die bevorzugte Methode zum Erstellen eines Windows Communication Foundation (WCF)-Vertrags ist mithilfe einer Schnittstelle. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren eines Dienstvertrags](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Eine Alternative besteht darin, eine Klasse zu erstellen und anschließend das <xref:System.ServiceModel.ServiceContractAttribute>-Attribut direkt auf die Klasse anzuwenden und das <xref:System.ServiceModel.OperationContractAttribute>-Attribut auf die einzelnen Methoden in der Klasse, die Teil des Vertrags sind, anzuwenden.  
   
 > [!WARNING]
->  `[ServiceContract]` und `[ServiceContractAttribute]` dienen dem gleichen Zweck. Dasselbe gilt für `[OperationContract]` und `[OperationContractAttribute]`. Dabei ist jeweils das Erstere die Kurznotation für das Letztere.  
+>  `[ServiceContract]` und `[ServiceContractAttribute]` dienen dem gleichen Zweck. Das gleiche gilt für `[OperationContract]` und `[OperationContractAttribute]`. In jedem Fall ist die erste Kurznotation für das Letztere.  
   
- Weitere Informationen zu Dienstverträge, finden Sie unter [Entwerfen von Dienstverträgen](../../../../docs/framework/wcf/designing-service-contracts.md).  
+ Weitere Informationen zu Dienstverträgen finden Sie unter [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>Erstellen eines Windows Communication Foundation-Vertrags mit einer Klasse  
   
-1.  Erstellen Sie eine neue Klasse, die mit Visual Basic, c# oder einer beliebigen anderen common Language Runtime-Sprache.  
+1.  Erstellen Sie eine neue Klasse, die mit Visual Basic, C#, oder einer beliebigen anderen common Language Runtime-Sprache.  
   
 2.  Wenden Sie die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse auf die Klasse an.  
   
 3.  Erstellen Sie Methoden in der Klasse.  
   
-4.  Anwenden der <xref:System.ServiceModel.OperationContractAttribute> -Klasse auf jede Methode, die als Teil des öffentlichen WCF-Dienstvertrags verfügbar gemacht werden muss.  
+4.  Anwenden der <xref:System.ServiceModel.OperationContractAttribute> -Klasse auf jede Methode, die als Teil des öffentlichen WCF-Vertrags verfügbar gemacht werden muss.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird eine Klasse dargestellt, die einen Dienstvertrag definiert.  
