@@ -1,15 +1,15 @@
 ---
-title: Datei&#39;s öffnen Modus Einzelbasis&#39;t in einen gültigen Wert festgelegt
+title: Der Öffnungsmodus der Datei wurde nicht auf einen gültigen Wert festgelegt.
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: be5c44def071577a82a648ee36935b69e5f00f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d4c12aaffad9be961f501ada75b5ea54e598bf3
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635905"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53761614"
 ---
-# <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Datei&#39;s öffnen Modus Einzelbasis&#39;t in einen gültigen Wert festgelegt
+# <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Der Öffnungsmodus der Datei wurde nicht auf einen gültigen Wert festgelegt.
 Der für den Öffnungsmodus der Datei angegebene Wert war ungültig. In der folgenden Tabelle sind gültige Werte für die <xref:Microsoft.VisualBasic.OpenMode> -Enumeration aufgeführt:  
   
 |Wert|Modus|  
