@@ -1,13 +1,13 @@
 ---
-title: Objektausdrücke (F#)
-description: Erfahren Sie, wie F#-Object-Ausdrücke verwenden, wenn Sie den zusätzlichen Code und zum Erstellen einer neuen erforderlichen Aufwand vermeiden möchten, mit dem Namen geben.
+title: Objektausdrücke
+description: Erfahren Sie, wie Sie mit F# Objektausdrücke, wenn Sie die zusätzlichen Code und den Aufwand vermeiden möchten, erforderlich zum Erstellen einer neuen benannten Typ.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cb15983543fde2459c589b3de2554575d73db686
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865461"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613920"
 ---
 # <a name="object-expressions"></a>Objektausdrücke
 

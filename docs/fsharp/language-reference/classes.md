@@ -1,13 +1,13 @@
 ---
-title: Klassen (F#)
-description: Erfahren Sie, wie Klassen F#-Typen sind, die Objekte darstellen, die Eigenschaften, Methoden und Ereignisse aufweisen können.
+title: Klassen
+description: Erfahren Sie, wie F# Klassen sind Typen, die Objekte darstellen, die Eigenschaften, Methoden und Ereignisse aufweisen können.
 ms.date: 05/16/2016
-ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845735"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611177"
 ---
 # <a name="classes"></a>Klassen
 
@@ -51,7 +51,7 @@ Wechselseitig rekursive-Typen, die Typen, die aufeinander verweisen sind, werden
 
 ## <a name="constructors"></a>Konstruktoren
 
-Der Konstruktor ist Code, der eine Instanz des Klassentyps erstellt wird. Konstruktoren für Klassen funktionieren etwas anders in F# erläutert werden, als Sie dies, in anderen .NET-Sprachen tun. In einer F#-Klasse ist immer ein primärer Konstruktor, deren Argumente finden Sie unter, den `parameter-list` , folgt den Typnamen, und, dessen Text besteht aus den `let` (und `let rec`) Bindungen am Anfang der Klassendeklaration und der `do`Bindungen, die folgen. Die Argumente des primären Konstruktors sind im Gültigkeitsbereich der Deklaration der Klasse.
+Der Konstruktor ist Code, der eine Instanz des Klassentyps erstellt wird. Konstruktoren für Klassen funktionieren etwas anders F# als mit deren in anderen .NET-Sprachen. In einer F# Klasse, gibt es immer ein primärer Konstruktor, deren Argumente finden Sie unter, der `parameter-list` , folgt den Typnamen, und, dessen Text besteht aus den `let` (und `let rec`) Bindungen am Anfang der Klassendeklaration und der `do` Bindungen, die folgen. Die Argumente des primären Konstruktors sind im Gültigkeitsbereich der Deklaration der Klasse.
 
 Sie können zusätzliche Konstruktoren hinzufügen, indem Sie mit der `new` Schlüsselwort, um ein Element wie folgt hinzufügen:
 
@@ -124,7 +124,7 @@ Die Ausgabe ist eine Liste aller Dateien im aktuellen Verzeichnis.
 
 ## <a name="when-to-use-classes-unions-records-and-structures"></a>Verwenden von Klassen, Unions, Datensätze und Strukturen
 
-Wenn die verschiedenen Arten von verbindungsanbietern, benötigen Sie einen fundierten Überblick darüber, was für jeden Typ entwickelt wurde, den entsprechenden Typ für eine bestimmte Situation auswählen. Klassen dienen zur Verwendung in der objektorientierten Programmierung Kontexte. Objektorientierte Programmierung ist das vorherrschende Paradigma in Anwendungen, die für .NET Framework geschrieben wurden verwendet. Wenn der F#-Code arbeiten eng mit .NET Framework oder einer anderen objektorientierten-Bibliothek zu und insbesondere dann, wenn man von einem System mit objektorientierten Typ wie z. B. eine UI-Bibliothek zu erweitern, sind Klassen vermutlich geeignet.
+Wenn die verschiedenen Arten von verbindungsanbietern, benötigen Sie einen fundierten Überblick darüber, was für jeden Typ entwickelt wurde, den entsprechenden Typ für eine bestimmte Situation auswählen. Klassen dienen zur Verwendung in der objektorientierten Programmierung Kontexte. Objektorientierte Programmierung ist das vorherrschende Paradigma in Anwendungen, die für .NET Framework geschrieben wurden verwendet. Wenn Ihre F# Code eng mit .NET Framework oder eine andere, objektorientierte Bibliothek zusammenarbeiten muss, und Klassen insbesondere dann, wenn Sie von einem System mit objektorientierten Typ wie z. B. eine UI-Bibliothek erweitert haben, vermutlich geeignet sind.
 
 Wenn Sie nicht eng mit objektorientiertem Code Zusammenwirken sind oder wenn Sie Code schreiben, die eigenständig und daher vor häufige Interaktion mit objektorientiertem Code geschützt ist, Sie sollten auf Datensätze und Unterscheidungs-Unions. Eine einzelne auch Überlegungen – Out Unterscheidungs-Union, zusammen mit den entsprechenden Code für den Musterabgleich häufig als eine einfachere Alternative zu einer Objekthierarchie verwendet werden kann. Weitere Informationen zu Unterscheidungs-Unions, finden Sie unter [Unterscheidungs-Unions](discriminated-unions.md).
 

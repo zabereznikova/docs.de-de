@@ -1,13 +1,13 @@
 ---
-title: Wertoptionen (F#)
-description: Erfahren Sie, bis des F#-Option "Value"-Typs, der eine Version der Struktur des Typs Option ist.
+title: Wertoptionen
+description: Erfahren Sie mehr über die F# Option "Value"-Typ, der ist eine Version der Struktur des Typs Option.
 ms.date: 06/16/2018
-ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50185835"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613426"
 ---
 # <a name="value-options"></a>Wertoptionen
 
@@ -16,7 +16,7 @@ Die Option "Value"-Typ in F# wird verwendet, wenn halten die folgenden Fällen:
 1. Ein Szenario eignet sich für ein [F#-Option](options.md).
 2. Verwenden eine Struktur bietet einen Leistungsvorteil in Ihrem Szenario.
 
-Nicht alle Szenarien die Leistung "gelöst" werden Strukturen. Berücksichtigen Sie die zusätzliche Kosten der kopieren, wenn sie anstelle von Verweistypen mit ein. Große F#-Programmen instanziiert jedoch häufig viele optionale Typen, die langsamsten Pfad durchlaufen werden, weil Strukturen manchmal eine bessere gesamtleistung während der Lebensdauer eines Programms führen können.
+Nicht alle Szenarien die Leistung "gelöst" werden Strukturen. Berücksichtigen Sie die zusätzliche Kosten der kopieren, wenn sie anstelle von Verweistypen mit ein. Allerdings große F# Programme häufig viele optionale Typen, die langsamsten Pfad durchlaufen instanziieren, da Strukturen manchmal eine bessere gesamtleistung während der Lebensdauer eines Programms führen können.
 
 ## <a name="definition"></a>Definition
 

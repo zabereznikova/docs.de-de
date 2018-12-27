@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147605"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396928"
 ---
 # <a name="framework-design-guidelines"></a>Frameworkentwurfsrichtlinien
 Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die zu erweitern, und interagieren mit .NET Framework. Ziel ist es, sicherzustellen, dass API-Konsistenz und benutzerfreundlichkeit durch die Bereitstellung eines einheitlichen Programmiermodell, das unabhängig von der Programmiersprache, die für die Entwicklung verwendet Bibliotheks-Designer-Hilfe. Es wird empfohlen, dass Sie diese Entwurfsrichtlinien halten, bei der Entwicklung von Klassen und Komponenten, die .NET Framework zu erweitern. Inkonsistente Bibliotheksentwurf negativ wirkt sich auf Entwicklerproduktivität und ungern.  
@@ -42,7 +42,7 @@ Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die zu erw
  Enthält Richtlinien zum verwenden allgemeine Typen wie Arrays, Attribute und Sammlungen, zur Unterstützung der Serialisierung und Überladen von Gleichheitsoperatoren.  
   
  [Allgemeine Entwurfsmuster](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Enthält Richtlinien zur Auswahl und Implementierung von Abhängigkeitseigenschaften und das Dispose-Muster.  
+ Enthält Richtlinien zur Auswahl und Implementierung von Abhängigkeitseigenschaften.  
   
  *Teile ©2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*  
   

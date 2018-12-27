@@ -1,13 +1,13 @@
 ---
-title: Attribute (F#)
-description: Erfahren Sie, wie F#--Attribute für Metadaten, die auf ein Programmierungskonstrukt angewendet werden können.
+title: Attribute
+description: Erfahren Sie, wie F# Attribute ermöglichen, Metadaten, die auf ein Programmierungskonstrukt angewendet werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 34223523efbb3bd89bb73f35fac3dfd8113d8611
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "49121753"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611841"
 ---
 # <a name="attributes"></a>Attribute
 
@@ -91,8 +91,15 @@ Obwohl Sie nicht in der Regel benötigen, geben Sie das Attributziel explizit g�
   <tr>
     <td>Typ</td>
     <td>
+
         ```
-        [<type: StructLayout(Sequential)>] MyStruct geben Struktur = X: Byte-y: Int-Ende ```
+        [<type: StructLayout(Sequential)>] 
+        type MyStruct = 
+        struct 
+        x : byte
+        y : int
+        end
+        ```
     </td> 
   </tr>
 </table>

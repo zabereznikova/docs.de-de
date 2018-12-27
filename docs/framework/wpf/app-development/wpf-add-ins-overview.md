@@ -12,21 +12,21 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 2e5d133a4744124723c0373e3d5974b505936190
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402100"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397032"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
-<a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] beinhaltet ein Add-In-Modell, mit dem Entwickler Anwendungen erstellen können, die Add-In-Erweiterbarkeit unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie durch [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] erweitert wird, um diese Szenarien sowie die zugrunde liegende Architektur, die Vorteile und die Einschränkungen zu ermöglichen.  
+<a name="Introduction"></a> .NET Framework enthält eine Add-In-Modell, mit denen Entwickler Anwendungen erstellen, die Add-in-Erweiterbarkeit zu unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch von Benutzeroberflächen anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie das .NET Framework-add-in-Modell zum Aktivieren dieser Szenarien, in der Architektur hinter, dessen Vorteile und Einschränkungen von WPF erweitert.  
   
 
   
 <a name="Requirements"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
- Kenntnisse des Add-In-Modells von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sind erforderlich. Weitere Informationen finden Sie unter [Add-Ins und Erweiterbarkeit](../../../../docs/framework/add-ins/index.md).  
+## <a name="prerequisites"></a>Vorraussetzungen  
+ Vertrautheit mit dem Add-In-Modell von .NET Framework ist erforderlich. Weitere Informationen finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="AddInsOverview"></a>   
 ## <a name="add-ins-overview"></a>Übersicht über Add-Ins  
@@ -48,48 +48,48 @@ ms.locfileid: "43402100"
   
  Damit Add-Ins verwendet werden können, müssen sie von Hostanwendungen gefunden und zur Laufzeit geladen werden. Daher sind Anwendungen, die Add-Ins unterstützen, zusätzlich für folgende Aufgaben verantwortlich:  
   
--   **Ermittlung**: Suchen nach Add-Ins, die von Hostanwendungen unterstützte Verträge einhalten.  
+-   **Ermittlung**: Suchen von Add-Ins, die von hostanwendungen unterstützte Verträge einhalten.  
   
--   **Aktivierung**: Laden, Ausführen und Herstellen der Kommunikation mit Add-Ins.  
+-   **Aktivierung**: Laden, ausführen und beim Herstellen der Kommunikation mit add-ins.  
   
--   **Isolation**: Verwenden von Anwendungsdomänen oder Prozessen zum Einrichten von Isolationsgrenzen, die Anwendungen vor möglichen Sicherheitsproblemen und Problemen bei der Ausführung von Add-Ins schützen.  
+-   **Isolation**: Verwenden von Anwendungsdomänen oder Prozessen zum Einrichten von Isolationsgrenzen, die Anwendungen vor potenziellen Sicherheits- und berichtsausführungsproblemen mit add-ins zu schützen.  
   
--   **Kommunikation**: Durch das Aufrufen von Methoden und Übergeben von Daten können Add-Ins und Hostanwendungen über Isolationsgrenzen hinweg miteinander kommunizieren.  
+-   **Kommunikation**: Können Add-Ins und hostanwendungen über Isolationsgrenzen hinweg miteinander kommunizieren, durch Aufrufen von Methoden und übergeben von Daten.  
   
--   **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungsdomänen und -prozessen auf eine klare, vorhersehbare Weise (siehe [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungsdomänen und Prozesse in eine klare, vorhersehbare Weise (finden Sie unter [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)).  
   
--   **Versionsverwaltung**: Sicherstellen, dass Hostanwendungen und Add-Ins auch dann noch kommunizieren können, wenn neue Versionen erstellt wurden.  
+-   **Versionsverwaltung**: Sicherstellen, dass hostanwendungen und Add-Ins trotzdem kommunizieren können, wenn neue Versionen erstellt werden.  
   
- Letztlich ist es eine wichtige Aufgabe, ein stabiles Add-In-Modell zu entwickeln. Aus diesem Grund stellt [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] eine Infrastruktur zum Erstellen von Add-In-Modellen bereit.  
+ Letztlich ist es eine wichtige Aufgabe, ein stabiles Add-In-Modell zu entwickeln. Aus diesem Grund stellt .NET Framework eine Infrastruktur zum Erstellen von Add-in-Modellen.  
   
 > [!NOTE]
->  Weitere Informationen zu Add-Ins finden Sie unter [Add-Ins und Erweiterbarkeit](../../../../docs/framework/add-ins/index.md).  
+>  Weitere Informationen zu Add-Ins finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 <a name="NETFrameworkAddInModelOverview"></a>   
 ## <a name="net-framework-add-in-model-overview"></a>Übersicht über das Add-In-Modell von .NET Framework  
- Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Add-In-Modell finden Sie in der <xref:System.AddIn> -Namespace enthält eine Reihe von Typen, die zur Vereinfachung der Entwicklung der Add-in-Erweiterbarkeit entworfen wurden. Das Fundament des Add-In-Modells von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] stellt der *Vertrag* dar. Dort ist festgelegt, wie eine Hostanwendung und ein Add-In miteinander kommunizieren. Ein Vertrag wird mit einer für Hostanwendungen spezifischen *Ansicht* des Vertrags für eine Hostanwendung verfügbar gemacht. Auf ähnliche Weise wird eine für Add-Ins spezifische *Ansicht* des Vertrags für das Add-In verfügbar gemacht. Ein *Adapter* ermöglicht es einer Hostanwendung und einem Add-In, zwischen ihren jeweiligen Ansichten des Vertrags miteinander zu kommunizieren. Verträge, Ansichten und Adapter werden als Segmente bezeichnet, und mehrere miteinander verbundene Segmente stellen eine *Pipeline* dar. Pipelines sind die Grundlage, wenn es für das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] darum geht, Aufgaben wie Ermittlung, Aktivierung, Sicherheitsisolation, Ausführungsisolation (unter Verwendung von Anwendungsdomänen und -prozessen), Kommunikation, Verwaltung der Lebensdauer und Versionsverwaltung zu unterstützen.  
+ Die Add-In-Modell von .NET Framework, finden Sie in der <xref:System.AddIn> -Namespace enthält eine Reihe von Typen, die zur Vereinfachung der Entwicklung der Add-in-Erweiterbarkeit entworfen wurden. Die grundlegende Einheit für die Add-In-Modell von .NET Framework ist die *Vertrag*, das definiert, wie eine hostanwendung und ein Add-in miteinander kommunizieren. Ein Vertrag wird mit einer für Hostanwendungen spezifischen *Ansicht* des Vertrags für eine Hostanwendung verfügbar gemacht. Auf ähnliche Weise wird eine für Add-Ins spezifische *Ansicht* des Vertrags für das Add-In verfügbar gemacht. Ein *Adapter* ermöglicht es einer Hostanwendung und einem Add-In, zwischen ihren jeweiligen Ansichten des Vertrags miteinander zu kommunizieren. Verträge, Ansichten und Adapter werden als Segmente bezeichnet, und mehrere miteinander verbundene Segmente stellen eine *Pipeline* dar. Pipelines sind die Grundlage, auf der das Add-In-Modell von .NET Framework-Ermittlung, Aktivierung, Sicherheitsisolation, Ausführungsisolation (unter Verwendung von Anwendungsdomänen und Prozessen), Kommunikation, Verwaltung der Lebensdauer und versionsverwaltung unterstützt.  
   
- Mit dieser Unterstützung können Entwickler Add-Ins erstellen, die mit den Funktionen einer Hostanwendung integriert werden. In einigen Szenarien müssen Hostanwendungen die von Add-Ins bereitgestellten [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s anzeigen. Da jede Präsentationstechnologie in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] über ein eigenes Modell zum Implementieren von [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s verfügt, unterstützt das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] keine bestimmte Präsentationstechnologie. Stattdessen erweitert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Unterstützung für Add-Ins.  
+ Mit dieser Unterstützung können Entwickler Add-Ins erstellen, die mit den Funktionen einer Hostanwendung integriert werden. Einige Szenarien erfordern jedoch hostanwendungen Benutzeroberflächen-add-ins gebotenen anzeigen. Da jede präsentationstechnologie in .NET Framework ein eigenes Modell für die Implementierung von Benutzeroberflächen verfügt, unterstützt das .NET Framework-add-in-Modell keine bestimmte präsentationstechnologie nicht. WPF-Formulare wird stattdessen das .NET Framework-add-in-Modell mit Benutzeroberflächenautomatisierungs-Unterstützung für add-ins erweitert.  
   
 <a name="WPFAddInModel"></a>   
 ## <a name="wpf-add-ins"></a>WPF-Add-Ins  
- Wenn Sie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in Verbindung mit dem Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] verwenden, können Sie den unterschiedlichsten Szenarien gerecht werden, in denen Hostanwendungen [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s aus Add-Ins anzeigen müssen. Für diese Szenarien eignet sich insbesondere [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] mit den folgenden zwei Programmiermodellen:  
+ WPF ermöglicht in Verbindung mit dem .NET Framework-add-in-Modell, eine Vielzahl von Szenarien abzudecken, auf die hostanwendungen Benutzeroberflächen aus Add-Ins anzeigen müssen. Diese Szenarien werden vor allem von WPF mit den folgenden zwei Programmiermodellen behandelt:  
   
-1.  **Das Add-In gibt eine Benutzeroberfläche zurück**. Wie im Vertrag definiert, gibt ein Add-In über einen Methodenaufruf eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] an die Hostanwendung zurück. Das Szenario wird in den folgenden Fällen verwendet:  
+1.  **Das Add-In gibt eine Benutzeroberfläche zurück**. Ein Add-in gibt eine Benutzeroberfläche zurück an die hostanwendung über einen Methodenaufruf wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
   
-    -   Die Darstellung einer vom Add-In zurückgegebenen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] hängt von den zur Laufzeit vorhandenen Daten oder Bedingungen ab, z. B. von dynamisch generierten Berichten.  
+    -   Die Darstellung einer Benutzeroberfläche, die von einem Add-In zurückgegeben wird, ist abhängig von entweder Daten oder Bedingungen, die nur zur Laufzeit, wie z.B. dynamisch generierte Berichte.  
   
-    -   Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für durch ein Add-In bereitgestellte Dienste unterscheidet sich von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] der Hostanwendungen, die das Add-In verwenden können.  
+    -   Die Benutzeroberfläche für die von einem Add-in bereitgestellte Dienste unterscheidet sich von der Benutzeroberfläche der hostanwendungen, die das Add-in verwenden können.  
   
-    -   Das Add-In führt in erster Linie einen Dienst für die Hostanwendung aus und meldet den Status an die Hostanwendung mit einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+    -   Das Add-in in erster Linie einen Dienst für die hostanwendung ausführt, und meldet den Status an die hostanwendung mit einer Benutzeroberfläche.  
   
-2.  **Das Add-In ist eine Benutzeroberfläche**. Ein Add-In ist eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
+2.  **Das Add-In ist eine Benutzeroberfläche**. Ein Add-in ist eine Benutzeroberfläche, wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
   
     -   Ein Add-In stellt ausschließlich die angezeigten Dienste bereit, z. B. eine Werbung.  
   
-    -   Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für von einem Add-In bereitgestellte Dienste wird von allen Hostanwendungen genutzt, die das Add-In verwenden können, z. B. Rechner oder Farbauswahl.  
+    -   Die Benutzeroberfläche für ein Add-in bereitgestellte Dienste ist häufig von allen hostanwendungen genutzt, die diese-Add-in, z. B. Rechner oder Farbauswahl verwenden können.  
   
- In diesen Szenarien ist es erforderlich, dass [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Objekte zwischen den Domänen der Hostanwendung und der Add-In-Anwendung übergeben werden können. Da beim Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für die Kommunikation zwischen Anwendungsdomänen Remoting erforderlich ist, müssen die übergebenen Objekte remotefähig sein.  
+ Diese Szenarien erfordern, dass die UI-Objekte zwischen der hostanwendung und Add-in-Anwendungsdomänen übergeben werden können. Seit .NET Framework, die Kommunikation zwischen Anwendungsdomänen Remoting-add-in-Modell basiert, müssen die Objekte, die dazwischen, übergeben werden remotefähig sein.  
   
  Ein remotefähiges Objekt stellt die Instanz einer Klasse dar, für die eine oder mehrere der folgenden Aussagen gelten:  
   
@@ -100,13 +100,13 @@ ms.locfileid: "43402100"
 -   Hat die <xref:System.SerializableAttribute> -Attribut.  
   
 > [!NOTE]
->  Weitere Informationen über das Erstellen von remotefähigen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten finden Sie unter [Erstellen remotefähiger Objekte](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Weitere Informationen über das Erstellen von remotefähigen .NET Framework-Objekten finden Sie unter [erstellen Remotefähiger Objekte](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
- Die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Typen von [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sind nicht remotefähig. Um das Problem zu beheben, erweitert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], damit die durch Add-Ins erstellte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von Hostanwendungen angezeigt werden kann. Diese Unterstützung erfolgt über [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] durch zwei Arten: die <xref:System.AddIn.Contract.INativeHandleContract> Schnittstelle und zwei statische Methoden implementiert, indem die <xref:System.AddIn.Pipeline.FrameworkElementAdapters> Klasse: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Im Allgemeinen werden diese Typen und Methoden wie folgt verwendet:  
+ Die WPF-UI-Typen sind nicht remotefähig. Um das Problem zu beheben, erweitert WPF das .NET Framework-add-in-Modell zum Aktivieren von WPF-UI-add-ins erstellt, die von hostanwendungen angezeigt werden. Diese Unterstützung wird durch WPF durch zwei Arten bereitgestellt: die <xref:System.AddIn.Contract.INativeHandleContract> Schnittstelle und zwei statische Methoden implementiert, indem die <xref:System.AddIn.Pipeline.FrameworkElementAdapters> Klasse: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Im Allgemeinen werden diese Typen und Methoden wie folgt verwendet:  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] erfordert, dass [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] gebotenen-add-ins sind Klassen, die direkt oder indirekt abgeleitet <xref:System.Windows.FrameworkElement>, z. B. Formen, Steuerelemente, Benutzersteuerelemente, Layoutbereiche und Seiten.  
+1.  WPF ist erforderlich, dass die Benutzeroberflächen-add-ins gebotenen Klassen, die direkt oder indirekt sind von abgeleitet <xref:System.Windows.FrameworkElement>, z. B. Formen, Steuerelemente, Benutzersteuerelemente, Layoutbereiche und Seiten.  
   
-2.  Wenn der Vertrag deklariert, dass eine Benutzeroberfläche zwischen den Add-in und der hostanwendung übergeben wird, muss es als deklariert werden ein <xref:System.AddIn.Contract.INativeHandleContract> (keinen <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> ist eine remotefähige Darstellung des Add-Ins [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , die über Isolationsgrenzen hinweg übergeben werden kann.  
+2.  Wenn der Vertrag deklariert, dass eine Benutzeroberfläche zwischen den Add-in und der hostanwendung übergeben wird, muss es als deklariert werden ein <xref:System.AddIn.Contract.INativeHandleContract> (keinen <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> ist eine remotefähige Darstellung der Benutzeroberfläche-Add-Ins, die über Isolationsgrenzen hinweg übergeben werden kann.  
   
 3.  Vor der Weitergabe von das Add-in die Anwendungsdomäne, einem <xref:System.Windows.FrameworkElement> als gepackt ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
@@ -116,27 +116,27 @@ ms.locfileid: "43402100"
   
 <a name="ReturnUIFromAddInContract"></a>   
 ## <a name="add-in-returns-a-user-interface"></a>Add-In gibt eine Benutzeroberfläche zurück  
- Damit ein Add-In eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] an eine Hostanwendung zurückgeben kann, müssen folgende Voraussetzungen erfüllt sein:  
+ Für ein Add-in eine Benutzeroberfläche an eine hostanwendung zurückgeben ist Folgendes erforderlich:  
   
-1.  Hostanwendung, Add-In und Pipeline müssen erstellt worden sein, wie in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Dokumentation unter [Add-Ins und Erweiterbarkeit](../../../../docs/framework/add-ins/index.md) beschrieben.  
+1.  Die hostanwendung, Add-in- und Pipeline müssen erstellt werden, wie .NET Framework beschrieben [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation.  
   
-2.  Der Vertrag implementieren muss <xref:System.AddIn.Contract.IContract> zum Zurückgeben einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], der Vertrag muss eine Methode mit einem Rückgabewert vom Typ deklarieren <xref:System.AddIn.Contract.INativeHandleContract>.  
+2.  Der Vertrag implementieren muss <xref:System.AddIn.Contract.IContract> und, um eine Benutzeroberfläche zurückzugeben, muss der Vertrag eine Methode mit einem Rückgabewert vom Typ deklarieren <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] übergebene zwischen das Add-in und dem Host Anwendung muss direkt oder indirekt von abgeleitet werden <xref:System.Windows.FrameworkElement>.  
+3.  Die Benutzeroberfläche, die zwischen des Add-Ins und der hostanwendung übergeben muss direkt oder indirekt von abgeleitet werden <xref:System.Windows.FrameworkElement>.  
   
-4.  Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von zurückgegebenen des Add-Ins muss von konvertiert werden eine <xref:System.Windows.FrameworkElement> auf eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze.  
+4.  Die Benutzeroberfläche, die durch das Add-In zurückgegeben wird, muss aus konvertiert werden eine <xref:System.Windows.FrameworkElement> auf eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze.  
   
-5.  Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zurückgegeben wird, muss eine Konvertierung von einer <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze.  
+5.  Die Benutzeroberfläche, die zurückgegeben wird, muss aus konvertiert werden ein <xref:System.AddIn.Contract.INativeHandleContract> zu einem <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze.  
   
 6.  Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
   
- Ein Beispiel dafür, wie ein Add-In, das eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zurückgibt, implementiert wird, finden Sie unter [Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche zurückgibt, finden Sie unter [Erstellen einer Add-In, das eine Benutzeroberfläche zurückgibt](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Add-In ist eine Benutzeroberfläche  
- Wenn ein Add-In eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ist, gelten die folgenden Voraussetzungen:  
+ Wenn ein Add-in eine Benutzeroberfläche ist, ist Folgendes erforderlich:  
   
-1.  Hostanwendung, Add-In und Pipeline müssen erstellt worden sein, wie in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Dokumentation unter [Add-Ins und Erweiterbarkeit](../../../../docs/framework/add-ins/index.md) beschrieben.  
+1.  Die hostanwendung, Add-in- und Pipeline müssen erstellt werden, wie .NET Framework beschrieben [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation.  
   
 2.  Die Vertragsschnittstelle für das Add-in muss implementieren <xref:System.AddIn.Contract.INativeHandleContract>.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "43402100"
   
 6.  Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
   
- Ein Beispiel, in dem das Implementieren eines Add-Ins veranschaulicht wird, bei dem es sich um eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] handelt, finden Sie unter [Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche ist, finden Sie unter [erstellen Sie ein Add-in-d. h. eine Benutzeroberfläche](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Zurückgeben mehrerer Benutzeroberflächen durch ein Add-In  
- Add-Ins stellen oft mehrere [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s zur Verfügung, die Hostanwendungen anzeigen können. Betrachten Sie beispielsweise ein Add-In, das eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ist, die auch Statusinformationen für die Hostanwendung bereitstellt, gleichzeitig als eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Sie können ein Add-In dieser Art implementieren, indem Sie eine Kombination der Verfahren aus den Modellen [Add-In gibt eine Benutzeroberfläche zurück](#ReturnUIFromAddInContract) und [Add-In ist eine Benutzeroberfläche](#AddInIsAUI) verwenden.  
+ -Add-ins bieten häufig mehrere Benutzeroberflächen für hostanwendungen angezeigt werden. Betrachten Sie beispielsweise ein Add-in, das eine Benutzeroberfläche ist, die auch Statusinformationen an die hostanwendung, auch als eine Benutzeroberfläche bereitstellt. Sie können ein Add-In dieser Art implementieren, indem Sie eine Kombination der Verfahren aus den Modellen [Add-In gibt eine Benutzeroberfläche zurück](#ReturnUIFromAddInContract) und [Add-In ist eine Benutzeroberfläche](#AddInIsAUI) verwenden.  
   
 <a name="AddInsAndXBAPs"></a>   
 ## <a name="add-ins-and-xaml-browser-applications"></a>Add-Ins und XAML-Browseranwendungen  
@@ -194,7 +194,7 @@ ms.locfileid: "43402100"
 2.  Legen Sie im Dialogfeld **Anwendungsdateien** den **Veröffentlichungsstatus** der einzelnen Pipeline- und Add-In-DLLs auf **Einschließen (Auto)** und die **Downloadgruppe** für die Pipeline- und Add-In-DLLs auf **(Erforderlich)** fest.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Verwenden der Pipeline und des Add-Ins von der Anwendungsbasis  
- Sind Pipeline und Add-In für die [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Bereitstellung konfiguriert, werden sie in denselben [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Cacheordner heruntergeladen wie die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Damit Pipeline und Add-In aus der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] verwendet werden können, müssen sie vom [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Code aus der Anwendungsbasis abgerufen werden. Die unterschiedlichen Typen und Member des Add-In-Modells von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], die zum Verwenden von Pipelines und Add-Ins verfügbar sind, bieten spezielle Unterstützung für dieses Szenario. Zuerst wird durch der Pfad identifiziert die <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> Enumerationswert. Diesen Wert verwenden Sie mit Überladungen der relevanten Add-In-Member, wenn Pipelines verwendet werden sollen, die Folgendes enthalten:  
+ Sind Pipeline und Add-In für die [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Bereitstellung konfiguriert, werden sie in denselben [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Cacheordner heruntergeladen wie die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Damit Pipeline und Add-In aus der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] verwendet werden können, müssen sie vom [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Code aus der Anwendungsbasis abgerufen werden. Die unterschiedlichen Typen und Member, der das .NET Framework-add-in-Modell für die Verwendung von Pipelines und Add-Ins, bieten besondere Unterstützung für dieses Szenario. Zuerst wird durch der Pfad identifiziert die <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> Enumerationswert. Diesen Wert verwenden Sie mit Überladungen der relevanten Add-In-Member, wenn Pipelines verwendet werden sollen, die Folgendes enthalten:  
   
 -   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
@@ -209,82 +209,82 @@ ms.locfileid: "43402100"
   
 <a name="WPFAddInModelArchitecture"></a>   
 ## <a name="wpf-add-in-architecture"></a>Architektur des WPF-Add-Ins  
- Auf der höchsten Ebene wie wir gesehen haben, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ermöglicht [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -add-ins implementieren [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] (ableiten, die direkt oder indirekt von <xref:System.Windows.FrameworkElement>) mit <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Das Ergebnis ist, dass die hostanwendung zurückgegeben wird ein <xref:System.Windows.FrameworkElement> , angezeigt wird, von [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] in der hostanwendung.  
+ Auf der höchsten Ebene, wie wir gesehen haben, mit WPF können .NET Framework-add-ins zum Implementieren von Benutzeroberflächen (ableiten, die direkt oder indirekt von <xref:System.Windows.FrameworkElement>) mit <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Das Ergebnis ist, dass die hostanwendung zurückgegeben wird ein <xref:System.Windows.FrameworkElement> , über die Benutzeroberfläche in der hostanwendung angezeigt wird.  
   
- Für einfache [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Add-In-Szenarien reichen diese Informationen für Entwickler aus. Für komplexere Szenarien, insbesondere solche, bei denen weitere [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dienste wie Layout, Ressourcen und Datenbindung zum Einsatz kommen, sind umfassendere Kenntnisse darüber erforderlich, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Unterstützung erweitert. Andernfalls können Sie die Vorteile und Einschränkungen nicht verstehen.  
+ Für einfache Benutzeroberflächen-add-in Szenarien ist dies so viele Details wie ein Entwickler benötigt. Für komplexere Szenarien, insbesondere solche, die versuchen, die zusätzliche WPF-Diensten wie z. B. Layout, Ressourcen und Datenbindung nutzen ist ausführlichere Kenntnisse wie WPF das .NET Framework-add-in-Modell mit UI-Unterstützung erweitert erforderlich, um dessen Vorteile zu verstehen. und Einschränkungen.  
   
- Im Wesentlichen ist es so, dass [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] keine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von einem Add-In an eine Hostanwendung übergibt, sondern dass [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] das Win32-Fensterhandle für die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] übergibt, und zwar unter Verwendung der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Interoperabilität. Daher geschieht Folgendes, wenn eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von einem Add-In an eine Hostanwendung übergeben wird:  
+ Im Grunde nicht WPF eine Benutzeroberfläche von einem Add-in an eine hostanwendung übergeben werden. Stattdessen übergibt WPF die Win32-Fensterhandle für die Benutzeroberfläche mithilfe von WPF-Interoperabilität. Tritt auf, wenn eine Benutzeroberfläche in einem Add-in an eine hostanwendung übergeben wird, Folgendes:  
   
--   Auf der Seite des Add-Ins ruft [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ein Fensterhandle für die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ab, die von der Hostanwendung angezeigt wird. Das Fensterhandle wird von einer internen gekapselt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] abgeleitete Klasse <xref:System.Windows.Interop.HwndSource> und implementiert <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> und, die das Add-in die Anwendungsdomäne zu Anwendungsdomäne der hostanwendung gemarshallt wird.  
+-   Auf der Add-in-Seite ruft WPF ein Fensterhandle, für die Benutzeroberfläche, die von der hostanwendung angezeigt wird. Das Fensterhandle wird durch eine interne abgeleitete Klasse WPF gekapselt <xref:System.Windows.Interop.HwndSource> und implementiert <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> und, die das Add-in die Anwendungsdomäne zu Anwendungsdomäne der hostanwendung gemarshallt wird.  
   
--   Klicken Sie auf der Seite der hostanwendung [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] packt neu die <xref:System.Windows.Interop.HwndSource> als interne [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] abgeleitete Klasse <xref:System.Windows.Interop.HwndHost> und nutzt <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> an die hostanwendung.  
+-   Klicken Sie auf der Seite der hostanwendung, WPF neu gepackt der <xref:System.Windows.Interop.HwndSource> als eine interne abgeleitete Klasse WPF <xref:System.Windows.Interop.HwndHost> und nutzt <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> an die hostanwendung.  
   
- <xref:System.Windows.Interop.HwndHost> zum Anzeigen vorhanden [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identifiziert durch Fensterhandles aus [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Weitere Informationen finden Sie unter [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> ist vorhanden, um Benutzeroberflächen, identifiziert durch Fensterhandles von WPF-Benutzeroberflächen anzuzeigen. Weitere Informationen finden Sie unter [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
- Zusammenfassend <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> vorhanden sein, damit das Fensterhandle für ein [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aus einem Add-in an eine hostanwendung übergeben werden, in dem sie durch gekapselt ist eine <xref:System.Windows.Interop.HwndHost> und den Host angezeigt Anwendung [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ Zusammenfassend <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> vorhanden sein, damit können das Fensterhandle für ein WPF-UI vom ein Add-in an eine hostanwendung übergeben werden, in dem sie durch gekapselt ist eine <xref:System.Windows.Interop.HwndHost> und der hostanwendung-Benutzeroberfläche angezeigt.  
   
 > [!NOTE]
 >  Da die hostanwendung Ruft eine <xref:System.Windows.Interop.HwndHost>, die hostanwendung das Objekt, das von zurückgegebene kann nicht konvertiert werden <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> in den Typ auf, die sie als durch das Add-in implementiert wird (z. B. eine <xref:System.Windows.Controls.UserControl>).  
   
- Naturgemäß <xref:System.Windows.Interop.HwndHost> unterliegt bestimmten Einschränkungen, die beeinflussen, wie Sie Hosten von Anwendungen verwendet werden können. Allerdings [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] erweitert <xref:System.Windows.Interop.HwndHost> mehrere Funktionen für Add-in-Szenarien. Diese Vorteile und die Einschränkungen werden nachstehend beschrieben.  
+ Naturgemäß <xref:System.Windows.Interop.HwndHost> unterliegt bestimmten Einschränkungen, die beeinflussen, wie Sie Hosten von Anwendungen verwendet werden können. Allerdings WPF erweitert <xref:System.Windows.Interop.HwndHost> mehrere Funktionen für Add-in-Szenarien. Diese Vorteile und die Einschränkungen werden nachstehend beschrieben.  
   
 <a name="WPFAddInModelBenefits"></a>   
 ## <a name="wpf-add-in-benefits"></a>Vorteile des WPF-Add-Ins  
- Da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -add-in [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] werden angezeigt, von hostanwendungen, die mithilfe einer internen Klasse, die von abgeleitet <xref:System.Windows.Interop.HwndHost>, die [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] sind eingeschränkt, durch die Funktionen der <xref:System.Windows.Interop.HwndHost> in Bezug auf [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Dienste wie Layout, Rendering, Datenbindung, Stile, Vorlagen und Ressourcen. Allerdings [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] erweitert die internen <xref:System.Windows.Interop.HwndHost> -Unterklasse um zusätzliche Funktionen, die Folgendes umfassen:  
+ Da WPF-add-in-Benutzeroberflächen angezeigt werden, von hostanwendungen, die mithilfe einer internen Klasse, die von abgeleitet <xref:System.Windows.Interop.HwndHost>, diese Benutzeroberflächen sind eingeschränkt, durch die Funktionen der <xref:System.Windows.Interop.HwndHost> in Bezug auf WPF-UI-Dienste wie Layout, Rendering, Datenbindung, Stile, Vorlagen und Ressourcen. Allerdings WPF erweitert die internen <xref:System.Windows.Interop.HwndHost> -Unterklasse um zusätzliche Funktionen, die Folgendes umfassen:  
   
--   Wechseln mit der TAB-TASTE zwischen der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] einer Hostanwendung und der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eines Add-Ins. Beachten Sie, dass die "Add-in ist eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" Programmiermodell erforderlich, dass den Add-In-seitige Adapter überschreibt <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> , ob das Add-in ist voll vertrauenswürdige als auch teilweise vertrauenswürdigen aktivieren TAB-Taste.  
+-   TAB-Taste zwischen einer hostanwendung-Benutzeroberfläche und ein Add-in-Benutzeroberfläche. Beachten Sie, dass das Programmiermodell "Add-in-ist eine Benutzeroberfläche" erforderlich, dass der Add-In-seitige Adapter überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> , ob das Add-in ist voll vertrauenswürdige als auch teilweise vertrauenswürdigen aktivieren TAB-Taste.  
   
--   Berücksichtigen der Anforderungen an Barrierefreiheit für Add-In-[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s, die von [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s für Hostanwendungen angezeigt werden.  
+-   Anforderungen zur Barrierefreiheit für Add-in-Benutzeroberflächen, die über Benutzeroberflächen für Host-Anwendung angezeigt werden, werden berücksichtigt.  
   
--   Ermöglichen, dass [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen in Szenarien mit mehreren Anwendungsdomänen sicher ausgeführt werden.  
+-   Aktivieren WPF-Anwendungen problemlos in Szenarien mit mehreren Anwendungsdomänen ausgeführt.  
   
--   Verhindern von unberechtigten Zugriffen auf Add-In-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]n-Fensterhandles, wenn Add-Ins mit Sicherheitsisolation ausgeführt werden (d. h. in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox)). Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> gewährleistet diese Sicherheit:  
+-   Verhindern von unberechtigten Zugriffen zum Hinzufügen-UI-Fensterhandles, wenn Add-Ins mit Sicherheitsisolation (d. h. in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox) ausgeführt. Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> gewährleistet diese Sicherheit:  
   
-    -   Für die "Add-Ins gibt eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" Programmiermodell, das die einzige Möglichkeit, die das Fensterhandle für ein Add-in zu übergeben [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] über die Isolationsgrenze hinweg werden, dass Aufrufen <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+    -   Beim Programmiermodell "Add-in gibt eine Benutzeroberfläche zurück", ist die einzige Möglichkeit, die das Fensterhandle für ein Add-in-Benutzeroberfläche über die Isolationsgrenze hinweg übergeben aufzurufende <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-    -   Für die "Add-in ist eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]" Programmierung überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> auf dem Add-In-seitige Adapter und der Aufruf <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (wie in den vorherigen Beispielen gezeigt) ist es erforderlich, die Add-In-seitige Adapter aufgerufen `QueryContract` Implementierung vom hostseitigen Adapter.  
+    -   Für das Programmiermodell "Add-in ist eine Benutzeroberfläche" überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> auf dem Add-In-seitige Adapter und der Aufruf <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> (wie in den vorherigen Beispielen gezeigt) ist es erforderlich, die Add-In-seitige Adapter aufgerufen `QueryContract` Implementierung von der hostseitiger Adapter.  
   
--   Bereitstellen von Ausführungsschutz für mehrere Anwendungsdomänen. Aufgrund von Einschränkungen bei Anwendungsdomänen führen unbehandelte Ausnahmen, die in Add-In-Anwendungsdomänen ausgelöst werden, zum Absturz der gesamten Anwendung, auch wenn eine Isolationsgrenze eingerichtet ist. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und das Add-In-Modell von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bieten jedoch eine einfache Möglichkeit, das Problem zu umgehen und die Anwendungsstabilität zu verbessern. Ein [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -add-in, das zeigt eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] erstellt eine <xref:System.Windows.Threading.Dispatcher> für den Thread, der die Anwendungsdomäne ausgeführt wird, wenn die hostanwendung ist eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendung. Sie können erkennen, dass alle nicht behandelte Ausnahmen, die in der Anwendungsdomäne, durch Behandeln auftreten der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -add-Ins <xref:System.Windows.Threading.Dispatcher>. Sie erhalten die <xref:System.Windows.Threading.Dispatcher> aus der <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> Eigenschaft.  
+-   Bereitstellen von Ausführungsschutz für mehrere Anwendungsdomänen. Aufgrund von Einschränkungen bei Anwendungsdomänen führen unbehandelte Ausnahmen, die in Add-In-Anwendungsdomänen ausgelöst werden, zum Absturz der gesamten Anwendung, auch wenn eine Isolationsgrenze eingerichtet ist. Allerdings bieten WPF und die Add-In-Modell von .NET Framework eine einfache Möglichkeit, dieses Problem zu umgehen und die Anwendungsstabilität zu verbessern. Erstellt ein WPF-add-in, das eine Benutzeroberfläche anzeigt eine <xref:System.Windows.Threading.Dispatcher> für den Thread, der die Anwendungsdomäne ausgeführt wird, wenn die hostanwendung eine WPF-Anwendung ist. Sie können erkennen, dass alle nicht behandelte Ausnahmen, die in der Anwendungsdomäne, durch Behandeln auftreten der <xref:System.Windows.Threading.Dispatcher.UnhandledException> Ereignis von der WPF-add-in des <xref:System.Windows.Threading.Dispatcher>. Sie erhalten die <xref:System.Windows.Threading.Dispatcher> aus der <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A> Eigenschaft.  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>Einschränkungen des WPF-Add-Ins  
- Über die Vorteile, die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hinzugefügt, das vom Standardverhalten <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>, und Fensterhandles, es gibt auch Einschränkungen für add-in [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] , die von hostanwendungen angezeigt werden:  
+ Über die Vorteile, die das Standardverhalten, die vom WPF hinzufügt <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost>, und Fensterhandles, es gibt auch Einschränkungen für Add-in-Benutzeroberflächen, die von hostanwendungen angezeigt werden:  
   
--   Das Ausschneideverhalten der Hostanwendung wird von den von einer Hostanwendung angezeigten Add-In-[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s nicht berücksichtigt.  
+-   -Add-in Benutzeroberflächen angezeigt, die von einer hostanwendung berücksichtigt Ausschneideverhalten der hostanwendung nicht.  
   
 -   Der Begriff *Airspace* in Interoperabilitätsszenarien gilt auch für Add-Ins (siehe [Übersicht über die Technologieregionen](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
   
--   Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Dienste einer Hostanwendung, z. B. Ressourcenvererbung, Datenbindung und Befehle sind für Add-In-[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]s nicht automatisch verfügbar. Um diese Dienste für das Add-In bereitzustellen, müssen Sie die Pipeline aktualisieren.  
+-   Eine hostanwendung UI-Dienste, wie Vererbung, Datenbindung und Befehle, nicht automatisch für die add-Ins verfügbar sind Benutzeroberflächen. Um diese Dienste für das Add-In bereitzustellen, müssen Sie die Pipeline aktualisieren.  
   
--   Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eines Add-Ins kann nicht gedreht, skaliert, verzerrt oder auf andere Weise durch eine Transformation geändert werden (siehe [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Ein Benutzeroberflächen-Add-in kann nicht werden gedreht, skaliert, verzerrt oder andernfalls durch eine Transformation geändert (finden Sie unter [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
   
--   Inhalte innerhalb von Add-in- [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] gerendert, die durch Zeichenvorgänge aus dem <xref:System.Drawing> Namespace kann Alphablending umfassen. Allerdings müssen sowohl die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eines Add-Ins als auch die sie enthaltende [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] der Hostanwendung zu 100 % deckend sein, d. h., die `Opacity`-Eigenschaft muss für beide auf 1 festgelegt sein.  
+-   Inhalte innerhalb von Add-in-Benutzeroberflächen, die gerendert wird, durch Zeichenvorgänge aus dem <xref:System.Drawing> Namespace kann Alphablending umfassen. Allerdings müssen sowohl eine Add-in-Benutzeroberfläche und der hostanwendung Benutzeroberfläche, die es enthält 100 % deckend sein; Das heißt, die `Opacity` sowohl Eigenschaft muss auf 1 festgelegt werden.  
   
--   Wenn die <xref:System.Windows.Window.AllowsTransparency%2A> Eigenschaft eines Fensters in der hostanwendung, die ein Add-in enthält [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nastaven NA hodnotu `true`, das Add-in nicht sichtbar ist. Dies gilt auch, wenn die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] des Add-Ins zu 100 % deckend ist (die `Opacity`-Eigenschaft also den Wert 1 hat).  
+-   Wenn die <xref:System.Windows.Window.AllowsTransparency%2A> eines Fensters in der hostanwendung, die ein Benutzeroberflächen-Add-in enthält-Eigenschaftensatz auf `true`, das Add-in nicht sichtbar ist. Dies gilt auch, wenn der Benutzeroberflächen-Add-in über 100 % deckend ist (d. h. die `Opacity` Eigenschaft hat den Wert 1).  
   
--   Die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eines Add-Ins muss über anderen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Elementen in demselben Fenster auf oberster Ebene angezeigt werden.  
+-   Ein Benutzeroberflächen-Add-in muss zusätzlich zu anderen WPF-Elemente im selben Fenster der obersten Ebene angezeigt werden.  
   
--   Kein Teil über ein Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mit gerendert werden kann eine <xref:System.Windows.Media.VisualBrush>. Stattdessen kann das Add-In eine Momentaufnahme der generierten [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] erstellen, um eine Bitmap zu erstellen, die mit vertraglich definierten Methoden an die Hostanwendung übergeben werden kann.  
+-   Kein Teil ein Add-in-Benutzeroberfläche kann gerendert werden, mithilfe einer <xref:System.Windows.Media.VisualBrush>. Stattdessen kann das Add-in eine Momentaufnahme der generierten Benutzeroberfläche um eine Bitmap zu erstellen, die an die hostanwendung, die mit vertraglich definierten Methoden übergeben werden kann.  
   
--   Mediendateien können nicht wiedergegeben werden, von einem <xref:System.Windows.Controls.MediaElement> in einem Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+-   Mediendateien können nicht wiedergegeben werden, von einem <xref:System.Windows.Controls.MediaElement> in einer Benutzeroberfläche-Add-in.  
   
--   Für die Add-In-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] generierte Mausereignisse werden von der Hostanwendung weder empfangen noch ausgelöst. Die `IsMouseOver`-Eigenschaft für die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] der Hostanwendung hat den Wert `false`.  
+-   Mausereignisse, die für die Add-in-Benutzeroberfläche generiert weder empfangen noch ausgelöst von der hostanwendung und dem `IsMouseOver` hostanwendung UI-Eigenschaft weist einen Wert von `false`.  
   
--   Wenn der Fokus zwischen Steuerelementen in einer Add-In-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wechselt, wird das `GotFocus`-Ereignis und das `LostFocus`-Ereignis von der Hostanwendung weder empfangen noch ausgelöst.  
+-   Wenn den Fokus zwischen Steuerelementen in einer Benutzeroberfläche-Add-in verlagert die `GotFocus` und `LostFocus` Ereignisse weder empfangen noch ausgelöst von der hostanwendung.  
   
--   Der Teil einer Hostanwendung, der eine Add-In-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] enthält, wird beim Drucken weiß angezeigt.  
+-   Der Teil einer hostanwendung, die ein Benutzeroberflächen-Add-in enthält, wird beim Drucken Weiß angezeigt.  
   
--   Alle Dispatcher (finden Sie unter <xref:System.Windows.Threading.Dispatcher>) durch das Add-in erstellt [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] müssen manuell beendet werden, bevor das Owner-Add-in entladen wird, wenn die hostanwendung die Ausführung wird fortgesetzt. Der Vertrag kann Methoden implementieren, die es der Hostanwendung ermöglichen, dem Add-In vor dem Entladen ein Signal zu übermitteln. Dadurch kann die Add-In-[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] die Dispatcher beenden.  
+-   Alle Dispatcher (finden Sie unter <xref:System.Windows.Threading.Dispatcher>) durch das Add-in erstellt Benutzeroberfläche muss manuell beendet werden, bevor das Owner-Add-in entladen wird, wenn die hostanwendung die Ausführung wird fortgesetzt. Der Vertrag kann Methoden implementieren, mit denen die hostanwendung das Add-in zu signalisieren, bevor das Add-In entladen wurde, wodurch die Add-in-Benutzeroberfläche die Dispatcher beenden wird.  
   
--   Wenn ein Add-in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ist ein <xref:System.Windows.Controls.InkCanvas> oder enthält ein <xref:System.Windows.Controls.InkCanvas>, Sie können nicht das Add-In entladen.  
+-   Ist ein Benutzeroberflächen-Add-in ein <xref:System.Windows.Controls.InkCanvas> oder enthält ein <xref:System.Windows.Controls.InkCanvas>, Sie können nicht das Add-In entladen.  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Leistungsoptimierung  
- Werden mehrere Anwendungsdomänen verwendet, werden die von den einzelnen Anwendungen benötigten verschiedenen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Assemblys standardmäßig alle in die Domäne dieser Anwendung geladen. Aufgrund der Zeit, die zum Erstellen neuer Anwendungsdomänen und für das Starten der darin enthaltenen Anwendungen erforderlich ist, kann die Leistung beeinträchtigt werden. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet allerdings die Möglichkeit, Startzeiten zu verkürzen. Dazu werden Anwendungen angewiesen, Assemblys in Anwendungsdomänen gemeinsam zu nutzen, wenn sie bereits geladen sind. Verwenden Sie hierzu die <xref:System.LoaderOptimizationAttribute> -Attribut, das auf die Einstiegspunktmethode angewendet werden muss (`Main`). In diesem Fall müssen Sie lediglich zum Implementieren Ihrer Anwendungsdefinition Code verwenden (siehe [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Standardmäßig Wenn mehrere Anwendungsdomänen verwendet werden, werden verschiedenen .NET Framework-Assemblys, die von jeder Anwendung benötigt werden alle in die Domäne dieser Anwendung geladen. Aufgrund der Zeit, die zum Erstellen neuer Anwendungsdomänen und für das Starten der darin enthaltenen Anwendungen erforderlich ist, kann die Leistung beeinträchtigt werden. .NET Framework bietet jedoch eine Möglichkeit, Startzeiten zu verkürzen von Anwendungen angewiesen, Assemblys in Anwendungsdomänen gemeinsam nutzen, wenn sie bereits geladen sind. Verwenden Sie hierzu die <xref:System.LoaderOptimizationAttribute> -Attribut, das auf die Einstiegspunktmethode angewendet werden muss (`Main`). In diesem Fall müssen Sie lediglich zum Implementieren Ihrer Anwendungsdefinition Code verwenden (siehe [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.LoaderOptimizationAttribute>  
- [Add-Ins und Erweiterbarkeit](../../../../docs/framework/add-ins/index.md)  
+ [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
  [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)  
  [Übersicht über .NET Framework-Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Erstellen Remotefähiger Objekte](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  

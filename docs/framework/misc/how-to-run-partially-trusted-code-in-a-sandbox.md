@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox'
+title: 'Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5728bac27ae7de649806a3e026bb16560fffefa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393272"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613218"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Unter einer Sandkastenumgebung versteht man das Ausführen von Code in einer beschränkten Sicherheitsumgebung, in der die dem Code gewährten Zugriffsrechte eingeschränkt sind. Wenn Sie beispielsweise über eine verwaltete Bibliothek aus einer nicht vollständig vertrauenswürdigen Quelle verfügen, sollten Sie diese nicht als vollständig vertrauenswürdig ausführen. Stattdessen sollten Sie den Code in eine Sandkastenumgebung setzen, in der die Berechtigungen des Codes auf diejenigen beschränkt sind, die er voraussichtlich benötigt (z. B. die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -30,7 +30,7 @@ ms.locfileid: "33393272"
   
  Die Überladung hat die folgende Signatur:  
   
-```  
+```csharp
 AppDomain.CreateDomain( string friendlyName,  
                         Evidence securityInfo,  
                         AppDomainSetup info,  
@@ -50,7 +50,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 1.  Erstellen Sie den Berechtigungssatz, der der nicht vertrauenswürdigen Anwendung gewährt werden soll. Die Mindestberechtigung, die Sie gewähren können, ist die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Sie können auch weitere Berechtigungen gewähren, von denen Sie annehmen, dass sie für nicht vertrauenswürdigen Code sicher sind, beispielsweise <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Mit dem folgenden Code wird ein neuer Berechtigungssatz erstellt, der nur die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> enthält.  
   
-    ```  
+    ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
     permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
     ```  
@@ -67,7 +67,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 2.  Signieren Sie die Assembly, die die Hostingklasse enthält (in diesem Beispiel `Sandboxer` genannt) und den nicht vertrauenswürdigen Code aufruft. Fügen Sie den <xref:System.Security.Policy.StrongName>, der zum Signieren der Assembly verwenden wird, zum <xref:System.Security.Policy.StrongName>-Array des `fullTrustAssemblies`-Parameters des <xref:System.AppDomain.CreateDomain%2A>-Aufrufs hinzu. Die Hostingklasse muss als vollständig vertrauenswürdig ausgeführt werden, um die Ausführung von teilweise vertrauenswürdigem Code zu ermöglichen oder um Dienste für die teilweise vertrauenswürdige Anwendung bereitzustellen. Und so lesen Sie den <xref:System.Security.Policy.StrongName> einer Assembly:  
   
-    ```  
+    ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
     ```  
   
@@ -75,7 +75,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 3.  Initialisieren Sie den <xref:System.AppDomainSetup>-Parameter der <xref:System.AppDomain.CreateDomain%2A>-Methode. Mit diesem Parameter können Sie viele der Einstellungen der neuen <xref:System.AppDomain> steuern. Die <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft ist eine wichtige Einstellung und sollte sich von der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft der <xref:System.AppDomain> der Hostanwendung unterscheiden. Wenn die <xref:System.AppDomainSetup.ApplicationBase%2A>-Einstellungen die gleichen sind, kann die teilweise vertrauenswürdige Anwendung bewirken, dass die Hostanwendung (als vollständig vertrauenswürdig) eine hiervon definierte Ausnahme lädt, wodurch sie angreifbar wird. Dies ist ein weiterer Grund warum ein Catch (Ausnahme) nicht zu empfehlen ist. Wird die Anwendungsbasis des Hosts anders als die Anwendungsbasis der Anwendung in der Sandboxumgebung eingestellt, verringert sich das Risiko von Angriffen.  
   
-    ```  
+    ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
@@ -84,7 +84,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      Die Signatur für diese Methode lautet:  
   
-    ```  
+    ```csharp
     public static AppDomain CreateDomain(string friendlyName,   
         Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
         params StrongName[] fullTrustAssemblies)  
@@ -102,7 +102,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Der Code zum Erstellen der Anwendungdomäne ist folgender:  
   
-    ```  
+    ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
@@ -118,7 +118,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Sie können die Erstellung unter einem <xref:System.Security.CodeAccessPermission.Assert%2A> für vollständige Vertrauenswürdigkeit (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) vornehmen, wodurch Sie in der Lage sind, eine Instanz einer kritischen Klasse zu erstellen. (Dies geschieht immer, wenn Ihre Assembly nicht über Transparenzattribute verfügt und als vollständig vertrauenswürdig geladen wird.) Daher müssen Sie darauf achten, mit dieser Funktion nur vertrauenswürdigen Code zu erstellen, und wir empfehlen, in der neuen Anwendungsdomäne nur Instanzen von vollständig vertrauenswürdigen Klassen zu erstellen.  
   
-    ```  
+    ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
     newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
            typeof(Sandboxer).FullName );  
@@ -126,53 +126,53 @@ AppDomain.CreateDomain( string friendlyName,
   
      Beachten Sie, dass die Klasse die <xref:System.MarshalByRefObject>-Klasse erweitern muss, damit eine Instanz einer Klasse in einer neuen Domäne erstellt werden kann.  
   
-    ```  
+    ```csharp
     class Sandboxer:MarshalByRefObject  
     ```  
   
 6.  Entpacken Sie die neue Domäneninstanz in einen Verweis in dieser Domäne. Dieser Verweis wird verwendet, um den nicht vertrauenswürdigen Code auszuführen.  
   
-    ```  
+    ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
 7.  Rufen Sie in der `ExecuteUntrustedCode`-Methode der Instanz der soeben erstellten `Sandboxer`-Klasse auf.  
   
-    ```  
+    ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     ```  
   
      Dieser Aufruf wird in der Anwendungsdomäne in der Sandkastenumgebung ausgeführt, in der es nur eingeschränkte Berechtigungen gibt.  
   
-    ```  
+    ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
+    {  
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //you can use Assembly.EntryPoint to get to the entry point in an executable.  
+        MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
+        try  
         {  
-            //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
-            //you can use Assembly.EntryPoint to get to the entry point in an executable.  
-            MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
-            try  
-            {  
-                // Invoke the method.  
-                target.Invoke(null, parameters);  
-            }  
-            catch (Exception ex)  
-            {  
-            //When information is obtained from a SecurityException extra information is provided if it is   
-            //accessed in full-trust.  
-                (new PermissionSet(PermissionState.Unrestricted)).Assert();  
-                Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
-    CodeAccessPermission.RevertAssert();  
-                Console.ReadLine();  
-            }  
+            // Invoke the method.  
+            target.Invoke(null, parameters);  
         }  
+        catch (Exception ex)  
+        {  
+        //When information is obtained from a SecurityException extra information is provided if it is   
+        //accessed in full-trust.  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
+            Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
+            CodeAccessPermission.RevertAssert();  
+            Console.ReadLine();  
+        }  
+    }  
     ```  
   
      <xref:System.Reflection> wird verwendet, um ein Handle von einer Methode in der teilweise vertrauenswürdigen Assembly zu erhalten. Das Handle kann verwendet werden, um Code auf sichere Weise mit minimalen Berechtigungen auszuführen.  
   
      Beachten Sie im vorherigen Code den <xref:System.Security.PermissionSet.Assert%2A> für die Berechtigung "Volle Vertrauenswürdigkeit", bevor Sie die <xref:System.Security.SecurityException> drucken.  
   
-    ```  
-    new PermissionSet(PermissionState.Unrestricted)).Assert()  
+    ```csharp
+    new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
      Der Assert "Volle Vertrauenswürdigkeit" wird verwendet, um erweiterte Informationen zu der <xref:System.Security.SecurityException> zu erhalten. Ohne den <xref:System.Security.PermissionSet.Assert%2A> erkennt die <xref:System.Security.SecurityException.ToString%2A>-Methode der <xref:System.Security.SecurityException>, dass sich teilweise vertrauenswürdiger Code im Stack befindet und schränkt die zurückgegebenen Informationen ein. Dies kann zu Sicherheitsproblemen führen, wenn der teilweise vertrauenswürdige Code auf die Informationen zugreifen kann, das Risiko wird jedoch reduziert, indem keine <xref:System.Security.Permissions.UIPermission> gewährt wird. Der Assert "Volle Vertrauenswürdigkeit" sollte sparsam und nur dann verwendet werden, wenn Sie sicher sind, dass Sie teilweise vertrauenswürdigem Code nicht gestatten, auf volle Vertrauenswürdigkeit zu erhöhen. Als Regel gilt: Rufen Sie keinen Code, dem Sie nicht vertrauen, in derselben Funktion auf und nachdem einen Assert für volle Vertrauenswürdigkeit aufgerufen haben. Es hat sich bewährt, den Assert immer zurückzusetzen, wenn Sie ihn nicht mehr benötigen.  
@@ -180,7 +180,7 @@ AppDomain.CreateDomain( string friendlyName,
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Prozedur aus dem vorherigen Abschnitt implementiert. Im Beispiel enthält ein Projekt mit Namen `Sandboxer` in einer Visual Studio-Lösung auch ein Projekt namens `UntrustedCode`, das die Klasse `UntrustedClass` implementiert. Bei diesem Szenario wird davon ausgegangen, dass Sie eine Bibliotheksassembly heruntergeladen haben, die eine Methode enthält, von der erwartet wird, dass sie `true` oder `false` zurückgibt, um anzugeben, ob es sich bei der von Ihnen eingegebenen Zahl um eine Fibonacci-Zahl handelt. Stattdessen versucht die Methode, eine Datei auf Ihrem Computer zu lesen. Das folgende Beispiel zeigt den nicht vertrauenswürdigen Code.  
   
-```  
+```csharp
 using System;  
 using System.IO;  
 namespace UntrustedCode  
@@ -200,7 +200,7 @@ namespace UntrustedCode
   
  Das folgende Beispiel zeigt den `Sandboxer`-Anwendungscode, der den nicht vertrauenswürdigen Code ausführt.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -264,7 +264,7 @@ class Sandboxer : MarshalByRefObject
         {  
             // When we print informations from a SecurityException extra information can be printed if we are   
             //calling it with a full-trust stack.  
-            (new PermissionSet(PermissionState.Unrestricted)).Assert();  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
             CodeAccessPermission.RevertAssert();  
             Console.ReadLine();  

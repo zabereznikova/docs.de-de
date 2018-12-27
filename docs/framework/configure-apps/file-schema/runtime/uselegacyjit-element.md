@@ -4,12 +4,12 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0ae1a44b41ddcae2149bcf685871a37dd01b06
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746773"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612191"
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;UseLegacyJit&gt; Element
 
@@ -25,7 +25,7 @@ Legt fest, ob die Runtime den 64-Bit-JIT-Legacycompiler für die Just-in-Time-Ko
 <useLegacyJit enabled=0|1 />
 ```
 
-Der Elementname `useLegacyJit` Groß-/Kleinschreibung beachtet.
+Der Elementname `useLegacyJit` Groß-/Kleinschreibung beachtet wird.
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
@@ -35,18 +35,18 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 | Attribut | Beschreibung                                                                                   |  
 | --------- | --------------------------------------------------------------------------------------------- |  
-| `enabled` | Erforderliches Attribut.<br><br>Gibt an, ob die Laufzeit den älteren 64-Bit-JIT-Compiler verwendet. |  
+| `enabled` | Erforderliches Attribut.<br><br>Gibt an, ob die Runtime die älteren 64-Bit-JIT-Compiler verwendet. |  
   
 ### <a name="enabled-attribute"></a>Enabled-Attribut  
   
 | Wert | Beschreibung                                                                                                         |  
 | ----- | ------------------------------------------------------------------------------------------------------------------- |  
-| 0     | Die common Language Runtime verwendet den neue 64-Bit-JIT-Compiler in der .NET Framework 4.6 und höher enthalten. |  
+| 0     | Die common Language Runtime verwendet, den neuen 64-Bit-JIT-Compiler in der .NET Framework 4.6 und höheren Versionen enthalten. |  
 | 1     | Die common Language Runtime verwendet die älteren 64-Bit-JIT-Compiler.                                                     |  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -57,28 +57,28 @@ Keiner
   
 ## <a name="remarks"></a>Hinweise  
 
-Beginnend mit .NET Framework 4.6, verwendet die common Language Runtime einen neuen 64-Bit-Compiler für Just-in-Time (JIT)-Kompilierung standardmäßig möglich werden. In einigen Fällen kann dies einen Unterschied im Verhalten von Anwendungscode haben, die von der vorherigen Version des 64-Bit-JIT-Compilers JIT-kompiliert wurde. Durch Festlegen der `enabled` Attribut von der `<useLegacyJit>` Element `1`, Sie können den neue 64-Bit-JIT-Compiler deaktivieren und stattdessen Ihre app mit der älteren 64-Bit-JIT-Compiler kompilieren.  
+Ab .NET Framework 4.6, verwendet die common Language Runtime einen neuen 64-Bit-Compiler für Just-in-Time (JIT)-Kompilierung standardmäßig möglich werden. In einigen Fällen kann dies einen Unterschied im Verhalten von Anwendungscode führen, die von der vorherigen Version des 64-Bit-JIT-Compilers JIT-kompiliert wurde. Durch Festlegen der `enabled` Attribut der `<useLegacyJit>` Element `1`, können Sie den neuen 64-Bit-JIT-Compiler zu deaktivieren und stattdessen Ihre app mit dem älteren 64-Bit-JIT-Compiler zu kompilieren.  
   
 > [!NOTE]
 > Die `<useLegacyJit>` Element betrifft nur 64-Bit-JIT-Kompilierung. Kompilierung mit der 32-Bit-JIT-Compiler ist nicht betroffen.  
   
-Anstatt Einstellung einer Konfigurationsdatei zu verwenden, können Sie die älteren 64-Bit-JIT-Compiler auf zwei andere Arten aktivieren:  
+Anstatt eine Konfigurationseinstellung für die Datei zu verwenden, können Sie den älteren 64-Bit-JIT-Compiler auf zwei weitere Arten aktivieren:  
   
-- Eine Umgebungsvariable festlegen
+- Festlegen von Umgebungsvariablen
 
-  Legen Sie die `COMPLUS_useLegacyJit` Umgebungsvariable entweder `0` (verwenden Sie die neuen 64-Bit-JIT-Compiler) oder `1` (verwenden Sie die älteren 64-Bit-JIT-Compiler):
+  Legen Sie die `COMPLUS_useLegacyJit` Umgebungsvariable entweder `0` (verwenden Sie den neuen 64-Bit-JIT-Compiler) oder `1` (verwenden Sie die älteren 64-Bit-JIT-Compiler):
   
   ```  
   COMPLUS_useLegacyJit=0|1  
   ```  
   
-  Die Umgebungsvariable weist *globalen Gültigkeitsbereich*, d. h., die sie wirkt sich auf alle Anwendungen auf dem Computer ausgeführt. Wenn festgelegt, es von der Anwendung der Konfigurationseinstellung überschrieben werden kann. Der Umgebungsvariablenname ist nicht in der Groß-/Kleinschreibung beachtet.
+  Die Umgebungsvariable hat *globalen Gültigkeitsbereich*, d. h., die sie wirkt sich auf alle Anwendungen auf dem Computer ausgeführt. Wenn festgelegt, es durch eine Einstellung der Anwendung Konfigurationsdatei überschrieben werden kann. Der Name der Umgebungsvariablen ist nicht in der Groß-/Kleinschreibung beachtet.
   
 - Hinzufügen eines Registrierungsschlüssels
 
-  Sie können die älteren 64-Bit-JIT-Compiler durch Hinzufügen von eine `REG_DWORD` Wert entweder die `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` oder `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` Schlüssel in der Registrierung. Der Wert lautet `useLegacyJit`. Wenn der Wert 0 ist, wird der neue Compiler verwendet. Wenn der Wert 1 ist, wird der ältere 64-Bit-JIT-Compiler aktiviert. Der Name des Registrierungsschlüssels ist nicht in der Groß-/Kleinschreibung beachtet.
+  Sie können die älteren 64-Bit-JIT-Compiler aktivieren, durch das Hinzufügen einer `REG_DWORD` Wert, der entweder die `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` oder `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` -Schlüssel in der Registrierung. Der Wert wird als `useLegacyJit`. Wenn der Wert 0 ist, wird der neue Compiler verwendet. Wenn der Wert 1 ist, ist der ältere 64-Bit-JIT-Compiler aktiviert. Der Name des Registrierungsschlüssels wird nicht beachtet.
   
-  Hinzufügen den Wert, der die `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` Schlüssel wirkt sich auf alle apps, die auf dem Computer ausgeführt. Hinzufügen den Wert, der die `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` Schlüssel wirkt sich auf alle apps, die vom aktuellen Benutzer ausgeführt. Wenn ein Computer mit mehreren Benutzerkonten konfiguriert ist, werden nur apps, die vom aktuellen Benutzer ausgeführt beeinflusst, wenn die Registrierungsschlüssel für andere Benutzer als auch der Wert hinzugefügt wird. Hinzufügen der `<useLegacyJit>` Element zu einer Konfigurationsdatei überschreibt die registrierungseinstellungen, wenn sie vorhanden sind.  
+  Hinzufügen des Werts, der die `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` Schlüssel wirkt sich auf alle apps, die auf dem Computer ausgeführt. Hinzufügen des Werts, der die `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` Schlüssel wirkt sich auf alle apps, die vom aktuellen Benutzer ausgeführt. Wenn ein Computer mit mehreren Benutzerkonten konfiguriert ist, sind nur apps, die vom aktuellen Benutzer ausgeführt betroffen, es sei denn, die Registrierungsschlüssel für andere Benutzer als auch der Wert hinzugefügt wird. Hinzufügen der `<useLegacyJit>` Elements zu einer Konfigurationsdatei überschreibt die registrierungseinstellungen aus, wenn sie vorhanden sind.  
   
 ## <a name="example"></a>Beispiel  
 
@@ -95,6 +95,6 @@ Die folgende Konfigurationsdatei deaktiviert die Kompilierung mit dem neuen 64-B
   
 ## <a name="see-also"></a>Siehe auch
 
-[\<Common Language Runtime >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-[\<Konfiguration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
-[Entschärfung: Neuer 64-Bit-JIT-Compiler](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)
+- [\<Common Language Runtime >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
+- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [Entschärfung: Neue 64-Bit-JIT-Compiler](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

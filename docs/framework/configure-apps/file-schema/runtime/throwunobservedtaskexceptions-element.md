@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edf3fd9a4561677813adbfb970a9d6be43d7c83d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749425"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612575"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt; Element
 Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden soll.  
@@ -38,14 +38,14 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob der Task nicht behandelten Ausnahmen den ausgeführten Prozess beendet werden soll.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob den ausgeführten Prozess nicht behandelte aufgabenausnahmen beendet werden soll.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Den ausgeführten Prozess für eine behandelte Ausnahme einer Aufgabe wird nicht beendet werden. Dies ist die Standardeinstellung.|  
-|`true`|Beendet den ausgeführten Prozess für eine Aufgabe nicht behandelte Ausnahme.|  
+|`false`|Den ausgeführten Prozess für eine nicht behandelte aufgabenausnahme wird nicht beendet werden. Dies ist die Standardeinstellung.|  
+|`true`|Beendet den ausgeführten Prozess für eine nicht behandelte Task-Ausnahme.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -59,22 +59,22 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
 |||  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Ausnahme, die mit zugeordnetem eine <xref:System.Threading.Tasks.Task> nicht festgestellt wurde, besteht keine <xref:System.Threading.Tasks.Task.Wait%2A> Vorgang, der das übergeordnete Element ist nicht angefügt, und die <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> Eigenschaft wurde nicht gelesen, gilt die Ausnahme einer Aufgabe nicht beachtet werden.  
+ Wenn eine Ausnahme, die zugeordnet ist eine <xref:System.Threading.Tasks.Task> nicht festgestellt wurde, gibt es keine <xref:System.Threading.Tasks.Task.Wait%2A> Vorgang, der das übergeordnete Element ist nicht angefügt, und die <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> Eigenschaft wurde nicht gelesen, die aufgabenausnahme gilt als nicht überwachte.  
   
- In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], von Standard, falls ein <xref:System.Threading.Tasks.Task> , besitzt eine nicht überwachte Ausnahme ist die Garbage Collection, der Finalizer löst eine Ausnahme aus und beendet den Prozess. Die Beendigung des Prozesses wird durch die zeitliche Abfolge der Garbagecollection und Finalisierung bestimmt.  
+ In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], Standard, falls ein <xref:System.Threading.Tasks.Task> , bei dem eine nicht überwachte Ausnahme ist die Garbage Collection, der Finalizer löst eine Ausnahme aus und beendet den Prozess. Die Beendigung des Prozesses wird durch die zeitplanung für die Garbagecollection und Finalization bestimmt.  
   
- Für Entwickler zum Schreiben von asynchronem Code auf Grundlage der Aufgaben, erleichtern die [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] ändert dieses Standardverhalten für nicht überwachte Ausnahmen. Nicht überwachte Ausnahmen, die dazu führen, dass immer noch die <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> Ereignis ausgelöst wurde, wird standardmäßig der Prozess beendet jedoch nicht. Stattdessen wird die Ausnahme ignoriert, nachdem das Ereignis ausgelöst wird, unabhängig davon, ob ein Ereignishandler für die Ausnahme berücksichtigt.  
+ Zu erleichtern Entwicklern das Schreiben von asynchronen Codes basierend auf Aufgaben, die [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] ändert dieses Standardverhalten für nicht überwachte Ausnahmen. Nicht überwachte Ausnahmen, die noch dazu führen, dass die <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> Ereignis ausgelöst wird, wird standardmäßig der Prozess beendet jedoch nicht. Stattdessen wird die Ausnahme ignoriert, nachdem das Ereignis ausgelöst wird, unabhängig davon, ob ein Ereignishandler für die Ausnahme beobachtet.  
   
- In der [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], können Sie die [ \<ThrowUnobservedTaskExceptions >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in einer Anwendungskonfigurationsdatei zu aktivieren die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Verhalten eine Ausnahme auszulösen.  
+ In der [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], können Sie die [ \<ThrowUnobservedTaskExceptions >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) in einer Anwendungskonfigurationsdatei zu aktivieren die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Verhalten optional eine Ausnahme ausgelöst.  
   
- Sie können auch das Ausnahmeverhalten in einem der folgenden Arten angeben:  
+ Sie können auch das Verhalten in einem der folgenden Arten angeben:  
   
 -   Durch Festlegen der Umgebungsvariablen `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   Durch Festlegen der Registrierungs DWORD-Wert ThrowUnobservedTaskExceptions = 1 in der HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework Schlüssel.  
+-   Durch Festlegen der Registrierung mit einem DWORD-Wert ThrowUnobservedTaskExceptions = 1 in der HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework-Schlüssel.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht das Auslösen von Ausnahmen in Aufgaben, die mithilfe einer Anwendungskonfigurationsdatei zu aktivieren.  
+ Das folgende Beispiel zeigt, wie Sie das Auslösen von Ausnahmen in Aufgaben, die mithilfe einer Anwendungskonfigurationsdatei zu aktivieren.  
   
 ```xml  
 <configuration>   
@@ -85,11 +85,11 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird veranschaulicht, wie eine nicht überwachte Ausnahme aus einer Aufgabe ausgelöst wird. Der Code muss als freigegebene Programm einwandfrei ausgeführt werden.  
+ Im folgende Beispiel wird veranschaulicht, wie eine nicht überwachte Ausnahme aus einem Task ausgelöst wird. Der Code muss als veröffentlichte Programm ordnungsgemäß funktioniert, ausgeführt werden.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

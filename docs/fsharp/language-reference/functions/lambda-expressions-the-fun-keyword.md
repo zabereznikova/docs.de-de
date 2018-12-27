@@ -1,15 +1,15 @@
 ---
-title: 'Lambdaausdrücke: Das fun-Schlüsselwort (F#)'
-description: Erfahren Sie, wie der F#-Schlüsselwort "Spaß" zu verwenden, um ein Lambda-Ausdruck definieren eine anonyme Funktion handelt.
+title: 'Lambda-Ausdrücke: Das Fun-Schlüsselwort'
+description: Erfahren Sie, wie Sie mit der F# "Fun"-Schlüsselwort, um ein Lambda-Ausdruck definieren, die eine anonyme Funktion ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231020"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614460"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambdaausdrücke: Das fun-Schlüsselwort (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Lambda-Ausdrücke: Das Fun-Schlüsselwort (F#)
 
 Die `fun` -Schlüsselwort wird verwendet, um einen Lambdaausdruck, d. h. eine anonyme Funktion zu definieren.
 
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>Hinweise
 
-Die *Parameterliste* mit Namen und optional die Typen der Parameter in der Regel besteht. Allgemeiner ausgedrückt, die *Parameterliste* bestehen keine F#-Muster. Eine vollständige Liste der möglichen Muster finden Sie unter [Musterabgleich](../pattern-matching.md). Liste der gültigen Parameter enthalten die folgenden Beispielen.
+Die *Parameterliste* mit Namen und optional die Typen der Parameter in der Regel besteht. Allgemeiner ausgedrückt, die *Parameterliste* bestehen alle F# Muster. Eine vollständige Liste der möglichen Muster finden Sie unter [Musterabgleich](../pattern-matching.md). Liste der gültigen Parameter enthalten die folgenden Beispielen.
 
 ```fsharp
 // Lambda expressions with parameter lists.

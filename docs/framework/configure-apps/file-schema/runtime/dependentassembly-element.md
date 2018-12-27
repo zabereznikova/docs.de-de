@@ -11,11 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54036baee6fc2d7af49e818a1c112dec8eac80aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613296"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;DependentAssembly&gt; Element
 Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie eine `dependentAssembly` -Element für jede Assembly.  
@@ -42,10 +43,10 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Enthält identifizierende Informationen über die Assembly an. Dieses Element muss enthalten sein, in den einzelnen `dependentAssembly` Element.|  
-|`codeBase`|Gibt an, in dem die Common Language Runtime eine freigegebene Assembly finden kann, wenn er nicht auf dem Computer installiert ist.|  
+|`assemblyIdentity`|Enthält identifizierende Informationen für die Assembly an. Dieses Element enthalten sein muss, in den einzelnen `dependentAssembly` Element.|  
+|`codeBase`|Gibt an, in dem die Runtime eine freigegebene Assembly finden kann, wenn es nicht auf dem Computer installiert ist.|  
 |`bindingRedirect`|Leitet eine Assemblyversion in eine andere um.|  
-|`publisherPolicy`|Gibt an, ob die Runtime die Herausgeberrichtlinie für diese Assembly anwendet.|  
+|`publisherPolicy`|Gibt an, ob für diese Assembly die Runtime die Herausgeberrichtlinie anwendet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -56,7 +57,7 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie zum Kapseln von Assemblyinformationen für zwei Assemblys.  
+ Das folgende Beispiel zeigt, wie Sie die Assemblyinformationen für zwei Assemblys zu kapseln.  
   
 ```xml  
 <configuration>  
@@ -80,6 +81,6 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

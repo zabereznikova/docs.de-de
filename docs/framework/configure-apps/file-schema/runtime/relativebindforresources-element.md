@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae5d1ca6403d84c9828dcf9550e9fbf40b28e1b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1933fad8ea87351a56fcc7dd4a4fd67e890b58f5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752298"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613894"
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a>&lt;RelativeBindForResources&gt; Element
 Optimiert den Test für Satellitenassemblys.  
   
- \<Konfiguration >-Element  
+ \<Configuration >-Element  
 \<Common Language Runtime >-Element  
 \<RelativeBindForResources >-Element  
   
@@ -35,14 +35,14 @@ Optimiert den Test für Satellitenassemblys.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die common Language Runtime die Überprüfung von Satellitenassemblys optimiert.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die common Language Runtime die Überprüfung auf Satellitenassemblys optimiert.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Die Common Language Runtime wird die Überprüfung für Satellitenassemblys nicht optimiert werden. Dies ist der Standardwert.|  
-|`true`|Die Common Language Runtime optimiert die Überprüfung Satellitenassemblys.|  
+|`false`|Die Runtime wird den Test für Satellitenassemblys nicht optimiert werden. Dies ist der Standardwert.|  
+|`true`|Die Laufzeit optimiert den Test für Satellitenassemblys.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -55,23 +55,23 @@ Optimiert den Test für Satellitenassemblys.
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Im Allgemeinen Ressourcen-Manager-Prüfpunkte für Ressourcen, wie beschrieben in der [Verpacken und Bereitstellen von Ressourcen](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) Thema. Dies bedeutet, dass beim Ressourcen-Manager für eine bestimmte lokalisierte Version einer Ressource Prüfpunkte, kann es suchen Sie im globalen Assemblycache, Satellitenassemblys in eine kulturspezifische Ordner in der Anwendung Code, Basisabfrage erstellt Windows Installer gesucht und Auslösen der <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis. Die `<relativeBindForResources>` Element optimiert die Möglichkeit, in dem Ressourcen-Manager-für Satellitenassemblys Prüfpunkte. Sie können die Leistung verbessern, bei der Suche nach Ressourcen in den folgenden Situationen:  
+ Im Allgemeinen Resource Manager-Tests für Ressourcen, wie in der [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) Thema. Dies bedeutet, dass bei der Ressourcen-Manager für eine bestimmte lokalisierte Version einer Ressource Tests, möglicherweise suchen Sie im globalen Assemblycache, Satellitenassemblys in einem kulturspezifischen Ordner, in der Anwendung Code-Basis, Abfrage Windows Installer gesucht und Auslösen der <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis. Die `<relativeBindForResources>` Element optimiert die Möglichkeit, die in der Resource Manager-für Satellitenassemblys Tests. Sie können die Leistung verbessert, wenn der Testvorgang für Ressourcen in den folgenden Situationen:  
   
--   Wenn die Satellitenassembly am gleichen Speicherort wie die Codeassembly bereitgestellt wird. Das heißt, wenn die Codeassembly im globalen Assemblycache installiert ist, müssen die Satellitenassemblys auch es installiert sein. Wenn die Codeassembly in die Codebasis der Anwendung installiert ist, müssen die Satellitenassemblys auch in einem kulturspezifischen Ordner, in die CodeBase installiert.  
+-   Wenn die Satellitenassembly am gleichen Speicherort wie die Codeassembly bereitgestellt wird. Das heißt, wenn die Code-Assembly im globalen Assemblycache installiert ist, müssen die Satellitenassemblys auch dort installiert werden. Wenn die Codeassembly in die Codebasis der Anwendung installiert ist, müssen auch die Satellitenassemblys in einem kulturspezifischen Ordner, in der Codebasis installiert werden.  
   
--   Wenn Windows Installer wird nicht verwendet oder nur selten verwendet für die Installation von Satellitenassemblys bei Bedarf.  
+-   Wenn Windows Installer nicht verwendet wird oder nur selten verwendet für die Installation von Satellitenassemblys bei Bedarf.  
   
 -   Wenn Anwendungscode behandelt nicht das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.  
   
- Festlegen der `enabled` Attribut des der `<relativeBindForResources>` Element `true` optimiert Ressourcen-Manager-Test für Satellitenassemblys wie folgt:  
+ Festlegen der `enabled` Attribut der `<relativeBindForResources>` Element `true` optimiert die Resource Manager Test für Satellitenassemblys wie folgt:  
   
--   Den Speicherort der übergeordneten Codeassembly verwendet, um für die Suche nach der Satellitenassembly.  
+-   Er verwendet den Speicherort der übergeordneten Codeassembly, um für die Satellitenassembly zu testen.  
   
--   Windows Installer ist nicht für Satellitenassemblys abgefragt werden.  
+-   Er fragt Windows Installer nicht für Satellitenassemblys.  
   
--   Es wird nicht ausgelöst. die <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.  
+-   Sie löst nicht die <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verpacken und Bereitstellen von Ressourcen](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Verpacken und Bereitstellen von Ressourcen](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

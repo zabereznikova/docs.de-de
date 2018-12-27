@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a515c3011905c4f5c18ed9d3e8edf489428c04d8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 15a86c1df3e7d6a9d8ddd102bd34aede46c08ba8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746084"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612087"
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt; Element
 Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwendungsdomäne berechnet.  
@@ -62,7 +62,7 @@ Bestimmt, ob die Common Language Runtime Hashcodes für Zeichenfolgen pro Anwend
   
  Die <xref:System.StringComparer>-Klasse und die <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>-Methode können auch einen anderen Hashalgorithmus verwenden, der Hashcodes pro Anwendungsdomäne berechnet. Dadurch variieren Hashcodes für identische Zeichenfolgen von Anwendungsdomäne zu Anwendungsdomäne. Dies ist eine Opt-In-Funktion; um sie zu nutzen, müssen Sie das `enabled`-Attribut des `<UseRandomizedStringHashAlgorithm>`-Elements auf `1` festlegen.  
   
- Die Zeichenfolgensuche in einer Hashtabelle ist in der Regel eine O(1)-Operation. Jedoch, wenn eine große Anzahl von Konflikten auftreten, die Suche kann auch eine o (n<sup>2</sup>) Vorgang. Sie können das `<UseRandomizedStringHashAlgorithm>`-Konfigurationselement verwenden, um einen zufälligen Hashalgorithmus pro Anwendungsdomäne zu generieren. Dadurch wird die Anzahl der potenziellen Konflikte beschränkt, insbesondere wenn die Schlüssel, aus denen die Hashcodes berechnet werden, auf Dateneingaben durch Benutzer basieren.  
+ Die Zeichenfolgensuche in einer Hashtabelle ist in der Regel eine O(1)-Operation. Aber wenn eine große Anzahl von Konflikten auftreten, die Suche kann auch eine o (n<sup>2</sup>) Vorgang. Sie können das `<UseRandomizedStringHashAlgorithm>`-Konfigurationselement verwenden, um einen zufälligen Hashalgorithmus pro Anwendungsdomäne zu generieren. Dadurch wird die Anzahl der potenziellen Konflikte beschränkt, insbesondere wenn die Schlüssel, aus denen die Hashcodes berechnet werden, auf Dateneingaben durch Benutzer basieren.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `DisplayString`-Klasse definiert, die die private Zeichenfolgenkonstante `s` enthält, deren Wert "Dies ist eine Zeichenfolge" lautet. Außerdem enthält sie eine `ShowStringHashCode`-Methode, die den Zeichenfolgenwert und dessen Hashcode zusammen mit dem Namen der Anwendungsdomäne anzeigt, in der die Methode ausgeführt wird.  
@@ -96,6 +96,6 @@ String 'This is a string.' in domain 'NewDomain': 75CC8236
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
+- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

@@ -1,17 +1,17 @@
 ---
-title: Die Länge des Arguments &#39; &lt;Argumentname&gt; &#39; muss größer als 0 (null) sein
+title: Länge des Arguments "&lt;Argumentname&gt;' muss größer als 0 (null) sein
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LengthGTZero1
 ms.assetid: 709bc232-f8fe-4864-9842-e064795da0f5
-ms.openlocfilehash: fcb7daa012056c7ebd277c3a4f0e8d1126f2de00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5ccadee5d918302bcc1bc46c9916bd2178f81f7
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635618"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53777630"
 ---
-# <a name="length-of-argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>Die Länge des Arguments &#39; &lt;Argumentname&gt; &#39; muss größer als 0 (null) sein
+# <a name="length-of-argument-ltargumentnamegt-must-be-greater-than-zero"></a>Länge des Arguments "&lt;Argumentname&gt;' muss größer als 0 (null) sein
 Ein Wert eines Arguments ist gleich oder kleiner als 0 (null).  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

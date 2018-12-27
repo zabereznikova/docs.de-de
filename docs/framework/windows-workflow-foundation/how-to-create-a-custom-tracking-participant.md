@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 0f8d21ca4f08ad4dc2e5f5e62695b9b14aff13d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156717"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611854"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Überwachungsteilnehmer
 Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführung. Die Workflowlaufzeit gibt Überwachungsdatensätze aus, die Ereignisse im Workflow- und Aktivitätslebenszyklus, Lesezeichenwiederaufnahmen und Fehler beschreiben. Diese Überwachungsdatensätze werden von den Überwachungsteilnehmern genutzt. Windows Workflow Foundation (WF) enthält einen standardmäßigen Überwachungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben. In diesem Schritt des Lernprogramms wird beschrieben, wie ein benutzerdefinierter Überwachungsteilnehmer und ein Nachverfolgungsprofil erstellt werden, die die Ausgabe von `WriteLine`-Aktivitäten aufzeichnen, damit sie dem Benutzer angezeigt werden können.  
@@ -18,17 +18,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
 > [!NOTE]
 >  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema abzuschließen, müssen Sie die vorherigen Themen abgeschlossen haben. Um den download einer vervollständigten Version oder eine Videodemonstration des Lernprogramms anzuzeigen, finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-## <a name="in-this-topic"></a>In diesem Thema  
-  
--   [Um den benutzerdefinierten Überwachungsteilnehmer erstellen](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_CustomTrackingParticipant)  
-  
--   [Erstellen das nachverfolgungsprofil und registrieren den Überwachungsteilnehmer](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile)  
-  
--   [Zum Anzeigen der Überwachungsinformationen](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_DisplayTracking)  
-  
--   [Zum Erstellen und Ausführen der Anwendungs](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
-  
-###  <a name="BKMK_CustomTrackingParticipant"></a> Um den benutzerdefinierten Überwachungsteilnehmer erstellen  
+## <a name="to-create-the-custom-tracking-participant"></a>So erstellen Sie den benutzerdefinierten Überwachungsteilnehmer  
   
 1.  Mit der rechten Maustaste **NumberGuessWorkflowHost** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **Klasse**. Typ `StatusTrackingParticipant` in die **Namen** ein, und klicken Sie auf **hinzufügen**.  
   
@@ -104,7 +94,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
   
      Wenn kein Nachverfolgungsprofil angegeben ist, wird das standardmäßige Nachverfolgungsprofil verwendet. Wenn das standardmäßige Nachverfolgungsprofil verwendet wird, werden Überwachungsdatensätze für alle `ActivityStates` ausgegeben. Da Text während des Lebenszyklus der `WriteLine`-Aktivität nur einmal aufgezeichnet werden muss, extrahieren wir nur den Text des `ActivityStates.Executing`-Zustands. In [erstellen das nachverfolgungsprofil und registrieren den Überwachungsteilnehmer](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), ein Überwachungsprofil erstellt, der angibt, dass nur `WriteLine` `ActivityStates.Executing` Nachverfolgungsdatensätze werden ausgegeben.  
   
-###  <a name="BKMK_TrackingProfile"></a> Erstellen das nachverfolgungsprofil und registrieren den Überwachungsteilnehmer  
+## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>So erstellen Sie das Nachverfolgungsprofil und registrieren den Überwachungsteilnehmer  
   
 1.  Mit der rechten Maustaste **WorkflowHostForm** in **Projektmappen-Explorer** , und wählen Sie **Ansichtscode**.  
   
@@ -225,7 +215,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a> Zum Anzeigen der Überwachungsinformationen  
+## <a name="to-display-the-tracking-information"></a>So zeigen Sie die Nachverfolgungsinformationen an  
   
 1.  Mit der rechten Maustaste **WorkflowHostForm** in **Projektmappen-Explorer** , und wählen Sie **Ansichtscode**.  
   
@@ -320,7 +310,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> So erstellen und führen Sie die Anwendung aus  
+## <a name="to-build-and-run-the-application"></a>So erstellen und führen Sie die Anwendung aus  
   
 1.  Drücken Sie STRG+UMSCHALT+B, um die Anwendung zu erstellen.  
   
@@ -329,21 +319,27 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
 3.  Wählen Sie einen Bereich für das Ratespiel und der Typ des Workflows zu starten, und klicken Sie auf **New Game**. Geben Sie eine Schätzung in die **Schätzung** ein, und klicken Sie auf **wechseln** Ihre Schätzung zu übermitteln. Beachten Sie, dass der Status des Workflows im Statusfenster angezeigt wird. Diese Ausgabe wird von den `WriteLine`-Aktivitäten aufgezeichnet. Wechseln Sie zu einem anderen Workflow, indem Sie einen Konverter auswählen der **Workflowinstanz-Id** Kombinationsfeld und beachten Sie, dass der Status des aktuellen Workflows entfernt wird. Wechseln Sie zurück zum vorherigen Workflow. Wie im folgenden Beispiel dargestellt, wird der Status wiederhergestellt.  
   
     > [!NOTE]
-    >  Wenn Sie zu einem Workflow wechseln, der vor dem Aktivieren der Nachverfolgung gestartet wurde, wird kein Status angezeigt. Wenn Sie zusätzliche Schätzwerte eingeben, wird deren Status jedoch gespeichert, da die Nachverfolgung jetzt aktiviert ist.  
+    > Wenn Sie zu einem Workflow wechseln, der vor dem Aktivieren der Nachverfolgung gestartet wurde, wird kein Status angezeigt. Wenn Sie zusätzliche Schätzwerte eingeben, wird deren Status jedoch gespeichert, da die Nachverfolgung jetzt aktiviert ist.  
   
- **Bitte geben Sie eine Zahl zwischen 1 und 10**  
-**Ihre Schätzung ist zu hoch.**   
-**Bitte geben Sie eine Zahl zwischen 1 und 10**    
-
+    ```output
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    ```
+    
     > [!NOTE]
-    >  Diese Informationen sind hilfreich, um den Bereich der Zufallszahl bestimmen. Sie sagen jedoch nichts darüber aus, welche Schätzwerte zuvor angegeben wurden. Diese Informationen sind im nächsten Schritt [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
-  
-     Notieren Sie sich die Workflowinstanz-ID, und durchlaufen Sie das Spiel bis zum Ende.  
+    > Diese Informationen sind hilfreich, um den Bereich der Zufallszahl bestimmen. Sie sagen jedoch nichts darüber aus, welche Schätzwerte zuvor angegeben wurden. Diese Informationen sind im nächsten Schritt [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+
+    Notieren Sie sich die Workflowinstanz-ID, und durchlaufen Sie das Spiel bis zum Ende.
   
 4.  Öffnen Sie Windows Explorer, und navigieren Sie zu der **NumberGuessWorkflowHost\bin\debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen). Zusätzlich zu den ausführbaren Projektdateien sehen Sie jetzt auch Dateien mit GUID-Dateinamen. Identifizieren Sie die Datei, die der Workflowinstanz-ID des im vorherigen Schritt abgeschlossenen Workflows entspricht, und öffnen Sie sie im Editor. Die Nachverfolgungsinformationen enthalten in etwa die folgenden Angaben.  
   
- **Bitte geben Sie eine Zahl zwischen 1 und 10**  
-**Ihre Schätzung ist zu hoch.**   
-**Bitte geben Sie eine Zahl zwischen 1 und 10**   
-**Ihre Schätzung ist zu hoch.**   
-**Bitte geben Sie eine Zahl zwischen 1 und 10** neben Schätzwerte des Benutzers vorhanden ist, diese Überwachungsdaten enthält keine Informationen über den endgültigen Schätzwert des Workflows. Das liegt daran, dass die Nachverfolgungsinformationen nur die `WriteLine`-Ausgabe des Workflows enthalten und die abschließend angezeigte Meldung nach Abschluss des Workflows vom `Completed`-Handler ausgegeben wird. Im nächsten Schritt des Tutorials [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), die vorhandene `WriteLine` Aktivitäten werden geändert, um die Anzeige Schätzwerte des Benutzers und eine zusätzliche `WriteLine` Aktivität hinzugefügt wird, die die Endergebnisse anzeigt. Nachdem diese Änderungen integriert sind, [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) wird veranschaulicht, wie mehrere Versionen eines Workflows gleichzeitig gehostet.
+    ```output
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    Your guess is too high.
+    Please enter a number between 1 and 10
+    ```
+
+    Abgesehen davon, dass Schätzwerte des Benutzers fehlen, enthalten diese Nachverfolgungsinformationen auch keine Angaben über den endgültigen Schätzwert des Workflows. Das liegt daran, dass die Nachverfolgungsinformationen nur die `WriteLine`-Ausgabe des Workflows enthalten und die abschließend angezeigte Meldung nach Abschluss des Workflows vom `Completed`-Handler ausgegeben wird. Im nächsten Schritt des Tutorials [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), die vorhandene `WriteLine` Aktivitäten werden geändert, um die Anzeige Schätzwerte des Benutzers und eine zusätzliche `WriteLine` Aktivität hinzugefügt wird, die die Endergebnisse anzeigt. Nachdem diese Änderungen integriert sind, [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) wird veranschaulicht, wie mehrere Versionen eines Workflows gleichzeitig gehostet.

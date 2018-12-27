@@ -1,13 +1,13 @@
 ---
-title: Compileranweisungen (F#)
+title: Compileranweisungen
 description: Erfahren Sie mehr über F# Sprache präprozessoranweisungen, Anweisungen für bedingte Kompilierung, Line-Anweisungen und Compiler-Direktiven.
 ms.date: 12/10/2018
-ms.openlocfilehash: 7344785e37454d367aa4dfcfa1bacd01b68363d5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239695"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614038"
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 

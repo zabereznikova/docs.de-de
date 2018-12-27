@@ -1,17 +1,17 @@
 ---
-title: let-Bindungen in Klassen (F#)
-description: Erfahren Sie, wie Sie private Felder und private Funktionen für F#-Klassen definieren, mit "let"-Bindungen in der Klassendefinition.
+title: let-Bindungen in Klassen
+description: Informationen zum Definieren der privaten Felder und private Funktionen für F# Klassen mit "let" Bindungen in der Klassendefinition.
 ms.date: 05/16/2016
-ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033219"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611125"
 ---
 # <a name="let-bindings-in-classes"></a>let-Bindungen in Klassen
 
-Sie können die privaten Felder und private Funktionen für F#-Klassen definieren, mit `let` Bindungen in der Klassendefinition.
+Sie können private Felder und private Funktionen für definieren F# Klassen mit `let` Bindungen in der Klassendefinition.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ Die Ausgabe lautet wie folgt.
 
 ## <a name="alternative-ways-to-create-fields"></a>Alternative Möglichkeiten zum Erstellen von Feldern
 
-Sie können auch die `val` Schlüsselwort, um ein privates Feld erstellen. Bei Verwendung der `val` -Schlüsselwort, das Feld ist kein Wert zugewiesen, wenn das Objekt wird erstellt, jedoch mit einem Standardwert initialisiert wird. Weitere Informationen finden Sie unter [explizite Felder: das Val Schlüsselwort](explicit-fields-the-val-keyword.md).
+Sie können auch die `val` Schlüsselwort, um ein privates Feld erstellen. Bei Verwendung der `val` -Schlüsselwort, das Feld ist kein Wert zugewiesen, wenn das Objekt wird erstellt, jedoch mit einem Standardwert initialisiert wird. Weitere Informationen finden Sie unter [explizite Felder: Das Val Schlüsselwort](explicit-fields-the-val-keyword.md).
 
 Sie können auch private Felder in einer Klasse definieren, indem Sie eine Elementdefinition und durch Hinzufügen des Schlüsselworts `private` der Definition. Dies kann nützlich sein, wenn Sie erwarten, um den Zugriff auf ein Element zu ändern, ohne den Code umzuschreiben. Weitere Informationen finden Sie unter [Zugriffssteuerung](../access-control.md).
 

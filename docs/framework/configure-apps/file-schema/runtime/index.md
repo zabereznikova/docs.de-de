@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 16090ff7a756757fd92474c036fea211904684ac
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742292"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614336"
 ---
 # <a name="runtime-settings-schema"></a>Schema für Laufzeiteinstellungen
 Laufzeiteinstellungen werden von der Common Language Runtime verwendet, um Anwendungen für das .NET Framework zu konfigurieren.  
@@ -132,6 +132,6 @@ Laufzeiteinstellungen werden von der Common Language Runtime verwendet, um Anwen
 |[\<UseSmallInternalThreadStacks>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|Fordert an, dass die Runtime beim Erstellen bestimmter intern verwendeter Threads explizite Stapelgrößen anstelle der Standardstapelgröße verwendet.|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Vorgehensweise: Deaktivieren von gleichzeitigen Garbagecollection](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Vorgehensweise: Deaktivieren von gleichzeitigen Garbagecollection](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

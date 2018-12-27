@@ -1,13 +1,13 @@
 ---
-title: 'Schleifen: for...to-Ausdruck (F#)'
-description: Finden Sie unter wie der F#-for..-Ausdruck wird verwendet, um einen Bereich der Werte einer Schleifenvariablen in einer Schleife zu durchlaufen.
+title: 'Schleifen: for...to-Ausdruck'
+description: Finden Sie unter wie die F# for..-Ausdruck wird verwendet, um einen Bereich der Werte einer Schleifenvariablen in einer Schleife zu durchlaufen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800468"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612321"
 ---
 # <a name="loops-forto-expression"></a>Schleifen: for...to-Ausdruck
 
@@ -39,5 +39,5 @@ Der obige Code gibt Folgendes aus.
 ## <a name="see-also"></a>Siehe auch
 
 - [F#-Sprachreferenz](index.md)
-- [Schleifen: `for...in`-Ausdruck](loops-for-in-expression.md)
-- [Schleifen: `while...do`-Ausdruck](loops-while-do-expression.md)
+- [Schleifen: `for...in` Ausdruck](loops-for-in-expression.md)
+- [Schleifen: `while...do` Ausdruck](loops-while-do-expression.md)

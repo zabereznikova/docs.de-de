@@ -1,13 +1,13 @@
 ---
-title: Überladen von Operatoren (F#)
+title: Operatorüberladung
 description: Erfahren Sie, wie arithmetische Operatoren in einer Klasse oder einem Datensatztyp sowie auf globaler Ebene in F# zu überladen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087298"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610761"
 ---
 # <a name="operator-overloading"></a>Operatorüberladung
 

@@ -1,13 +1,13 @@
 ---
-title: Operatoren, die NULL-Werte zulassen (F#)
+title: Operatoren, die NULL-Werte zulassen
 description: Informationen Sie zu den Nullwert-Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 05/16/2016
-ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44086282"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610592"
 ---
 # <a name="nullable-operators"></a>Operatoren, die NULL-Werte zulassen
 
@@ -15,7 +15,7 @@ Nullwert-Operatoren sind binäre Operatoren für den arithmetischen oder Verglei
 
 ## <a name="table-of-nullable-operators"></a>Tabelle mit Nullwert-Operatoren
 
-Die folgende Tabelle enthält die NULL-Werte zulässt, in der F#-Sprache unterstützte Operatoren.
+Die folgende Tabelle enthält Nullwert-Operatoren in unterstützt die F# Sprache.
 
 |Auf der linken Seite NULL-Werte zulässt|NULL-Werte zulässt, rechts|Beide Seiten NULL-Werte zulässt|
 |---|---|---|
@@ -55,7 +55,7 @@ Die Ausgabe lautet `10.000000`.
 
 Abfrageoperatoren Datenfelder NULL-Werte zulässt, wie z. B. `sumByNullable`, auch für die Verwendung in Abfrageausdrücken vorhanden sein. Die Abfrageoperatoren für nicht auf NULL festlegbare Typen sind nicht typkompatibel auf NULL festlegbare Typen können, Sie die auf NULL festlegbare Version des entsprechenden Abfrageoperators verwenden müssen bei der Arbeit mit NULL-Werte zulassen von Datenwerten. Weitere Informationen finden Sie unter [Abfrageausdrücke](../query-expressions.md).
 
-Das folgende Beispiel zeigt die Verwendung von Nullwert-Operatoren in einem F#-Abfrageausdruck. Die erste Abfrage zeigt, wie Sie eine Abfrage ohne ein NULL-Werte zulassen Operator schreiben; die zweite Abfrage zeigt eine entsprechende Abfrage, die einen NULL-Operator verwendet. Die vollständigen Kontext, einschließlich Informationen zum Einrichten der Datenbank mit diesem Beispielcode finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf einer SQL-Datenbank mithilfe von Typanbietern](../../tutorials/type-providers/accessing-a-sql-database.md).
+Das folgende Beispiel zeigt die Verwendung von Nullwert-Operatoren in einem F# Abfrageausdruck. Die erste Abfrage zeigt, wie Sie eine Abfrage ohne ein NULL-Werte zulassen Operator schreiben; die zweite Abfrage zeigt eine entsprechende Abfrage, die einen NULL-Operator verwendet. Die vollständigen Kontext, einschließlich Informationen zum Einrichten der Datenbank mit diesem Beispielcode finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf eine SQL-Datenbank mithilfe von Typanbietern](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System

@@ -1,13 +1,13 @@
 ---
-title: Enumerationen (F#)
-description: Erfahren Sie, wie Sie F#-Enumerationen anstelle von literalen verwenden, um den Code besser lesbar und verwaltbar zu gestalten.
+title: Enumerationen
+description: Erfahren Sie, wie Sie mit F# Enumerationen anstelle von Literalen, um den Code besser lesbar und verwaltbar zu gestalten.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46003164"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611730"
 ---
 # <a name="enumerations"></a>Enumerationen
 
@@ -40,7 +40,7 @@ Sie können problemlos Enumerationen in den zugrunde liegenden Typ konvertieren 
 
 Aufgelistete Typen können einen der folgenden zugrunde liegende Typen aufweisen: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, und `char`. Enumerationstypen werden in .NET Framework dargestellt, wie Typen, die von übernommenen `System.Enum`, die wiederum von geerbt `System.ValueType`. Daher sind sie Werttypen, die auf dem Stapel oder Inline in dem Objekt gespeichert sind, und jeder Wert des zugrunde liegenden Typs ist, einen gültigen Wert der Enumeration. Dies ist wichtig, beim Musterabgleich für Enumeration Werte, denn Sie müssen ein Muster bereit, die die unbenannte Werte abfängt.
 
-Die `enum` -Funktion in der F#-Bibliothek kann verwendet werden, um ein Enumerationswert, der auch einen anderen Wert als eine der vordefinierten, erstellen benannte Werte. Sie verwenden die `enum` -Funktion wie folgt.
+Die `enum` Funktion in der F# Bibliothek kann verwendet werden, generieren Sie einen Enumerationswert, der auch einen anderen Wert als eine der vordefinierten, benannte Werte. Sie verwenden die `enum` -Funktion wie folgt.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

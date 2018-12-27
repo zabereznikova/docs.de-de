@@ -1,13 +1,13 @@
 ---
-title: Compileroptionen (F#)
+title: Compileroptionen
 description: Verwendung F# Compilerbefehlszeilenoptionen zum Steuern der Kompilierung Ihrer F# apps und Bibliotheken.
 ms.date: 12/10/2018
-ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
+ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170872"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614492"
 ---
 # <a name="compiler-options"></a>Compileroptionen
 
@@ -67,10 +67,9 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 |`--warnon:warning-number-list`|Aktivieren Sie bestimmte Warnungen, die möglicherweise deaktiviert standardmäßig oder durch eine andere Befehlszeilenoption deaktiviert. In F# 3.0 ist nur die Warnung 1182 (nicht verwendete Variablen) standardmäßig deaktiviert.|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|Aktiviert oder deaktiviert die Option zum Ausgeben von Warnungen als Fehler. Sie können bestimmte Warnungsnummern angeben, die deaktiviert oder aktiviert werden sollen. Optionen, die später in der Befehlszeile stehen, überschreiben Optionen, die früher in der Befehlszeile stehen. Geben Sie beispielsweise Warnungen angeben, die nicht als Fehler gemeldet werden sollen, `--warnaserror+` `--warnaserror-:warning-number-list`.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;Warnaserror &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx).|
 |`--win32manifest:manifest-filename`|Fügt eine Win32-Manifestdatei zur Kompilierung hinzu. Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;win32manifest &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/bb545961.aspx).|
-|`--win32res:resource-filename`|Fügt eine Win32-Ressourcendatei zur Kompilierung hinzu.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;win32res (&#40;C & #35); Compileroptionen&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
+|`--win32res:resource-filename`|Fügt eine Win32-Ressourcendatei zur Kompilierung hinzu.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;win32res (&#40;C&#35;) Compileroptionen&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
 
 ## <a name="related-articles"></a>Verwandte Artikel
-
 
 |Titel|Beschreibung|
 |-----|-----------|

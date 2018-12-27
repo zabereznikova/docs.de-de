@@ -1,13 +1,13 @@
 ---
-title: Signaturdateien (F#)
-description: Erfahren Sie, wie Sie mit F#-Signaturdateien, zum Speichern von Informationen zu den öffentlichen Signaturen einer Reihe von F#-Programmelementen, z. B. Typen, Namespaces und Modulen.
+title: Signaturdateien
+description: Erfahren Sie, wie Sie mit F# Signaturdateien, um Informationen über die öffentlichen Signaturen einer Reihe von aufzunehmen F# Programmierelemente wie Typen, Namespaces und Modulen.
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991232"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613413"
 ---
 # <a name="signatures"></a>Signaturen
 
@@ -29,6 +29,7 @@ Wenn die Informationen in der Typsignatur nicht ausreichen, um anzugeben, ob ein
 |---------|-----------|
 |`[<Sealed>]`|Für einen Typ, der über keine abstrakten Member verfügt oder nicht erweitert werden darf.|
 |`[<Interface>]`|Für einen Typ, der eine Schnittstelle ist.|
+
 Der Compiler erzeugt einen Fehler, wenn die Attribute in der Signatur und der Deklaration in der Implementierungsdatei nicht konsistent sind.
 
 Erstellen Sie mithilfe des Schlüsselworts `val` eine Signatur für einen Wert oder einen Funktionswert. Mit dem Schlüsselwort `type` wird eine Typsignatur eingeführt.

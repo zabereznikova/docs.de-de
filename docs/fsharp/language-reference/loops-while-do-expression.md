@@ -1,13 +1,13 @@
 ---
-title: 'Schleifen: while...do-Ausdruck (F#)'
+title: 'Schleifen: while...do-Ausdruck'
 description: Finden Sie unter wie beim... führen Ausdruck wird verwendet, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte testbedingung erfüllt ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127276"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613010"
 ---
 # <a name="loops-whiledo-expression"></a>Schleifen: while...do-Ausdruck
 

@@ -1,13 +1,13 @@
 ---
-title: Module (F#)
+title: Module
 description: Erfahren Sie, wie eine F#-Modul eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm.
 ms.date: 04/24/2017
-ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9e5bef4ffe3301a69bbe32483625652d988f8a35
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45528525"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611112"
 ---
 # <a name="modules"></a>Module
 
@@ -44,7 +44,7 @@ Wenn Sie mehrere Module in einer Datei haben, müssen Sie eine lokale Moduldekla
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Wenn Sie mehrere Dateien in einem Projekt oder in einer einzigen Kompilierung haben oder wenn Sie eine Bibliothek erstellen, müssen Sie einen Standardnamespace-Deklaration oder Moduldeklaration am Anfang der Datei einschließen. F#-Compiler bestimmt einen Modulnamen nur implizit, wenn es nur eine Datei in einer Befehlszeile Projekt oder die Kompilierung, und Sie eine Anwendung erstellen.
+Wenn Sie mehrere Dateien in einem Projekt oder in einer einzigen Kompilierung haben oder wenn Sie eine Bibliothek erstellen, müssen Sie einen Standardnamespace-Deklaration oder Moduldeklaration am Anfang der Datei einschließen. Die F# Compiler nur bestimmt einen Modulnamen implizit Wenn es nur eine Datei in einer Befehlszeile Projekt oder die Kompilierung, und Sie eine Anwendung erstellen.
 
 Die *Zugriffsmodifizierer* kann einen der folgenden sein: `public`, `private`, `internal`. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md). Der Standardwert ist „öffentlich“.
 
@@ -54,7 +54,7 @@ Wenn Sie Funktionen, Typen und Werte aus einem anderen Modul verweisen, müssen 
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Öffnen Sie das Modul oder eine oder mehrere Namespaces auf den Code zu vereinfachen. Weitere Informationen zum Öffnen von Namespaces und Modulen finden Sie unter [Importdeklarationen: das `open` Schlüsselwort](import-declarations-the-open-keyword.md).
+Öffnen Sie das Modul oder eine oder mehrere Namespaces auf den Code zu vereinfachen. Weitere Informationen zum Öffnen von Namespaces und Modulen finden Sie unter [Importdeklarationen: Die `open` Schlüsselwort](import-declarations-the-open-keyword.md).
 
 Im folgenden Codebeispiel wird veranschaulicht, ein Modul auf oberster Ebene, die der gesamte Code bis zum Ende der Datei enthält.
 
@@ -88,7 +88,7 @@ Wenn Sie sich der gesamte Code in einer Datei in ein einzelnes Modul des äußer
 
 ## <a name="recursive-modules"></a>Rekursive Module
 
-F# 4.1 führt das Konzept der Module ein, die für alle enthaltenen Code gegenseitig rekursiver sein können.  Dies erfolgt über `module rec`.  Verwenden von `module rec` können einige Probleme, nicht mehr zum Schreiben von Code für sich gegenseitig referenzielle Typen und Module verringern.  Im folgenden finden ein Beispiel hierfür:
+F#4.1 führt das Konzept der Module ein, die für alle enthaltenen Code gegenseitig rekursiver sein können.  Dies erfolgt über `module rec`.  Verwenden von `module rec` können einige Probleme, nicht mehr zum Schreiben von Code für sich gegenseitig referenzielle Typen und Module verringern.  Im folgenden finden ein Beispiel hierfür:
 
 ```fsharp
 module rec RecursiveModule =
@@ -134,6 +134,6 @@ Diese Funktion ist auch möglich, im [Namespaces](namespaces.md) mit F# 4.1.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [F#-Sprachreferenz](index.md)  
-- [Namespaces](namespaces.md)  
-- [F#-RFC-FS-1009 – lassen Sie sich gegenseitig referenzielle Typen und Module über größere Bereiche in Dateien](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
+- [F#-Sprachreferenz](index.md)
+- [Namespaces](namespaces.md)
+- [F#RFC-FS-1009 – lassen Sie sich gegenseitig referenzielle Typen und Module über größere Bereiche in Dateien](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

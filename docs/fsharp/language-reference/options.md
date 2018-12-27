@@ -1,17 +1,17 @@
 ---
-title: Optionen (F#)
+title: Optionen
 description: Erfahren Sie, wie Sie ein F#-Option, die Typen, wenn ein tatsächlicher Wert möglicherweise nicht vorhanden. für ein benannter Wert oder eine Variable.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46479519"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613504"
 ---
 # <a name="options"></a>Optionen
 
-Der Optionstyp in F#-wird verwendet, wenn Sie ein tatsächlichen Wert für einen benannten Wert oder die Variable möglicherweise nicht vorhanden ist. Eine Option verfügt über einen zugrunde liegenden Typ und kann einen Wert dieses Typs enthalten, oder es kann keinen Wert.
+Der Typ in F# wird verwendet, wenn Sie ein tatsächlichen Wert für einen benannten Wert oder die Variable möglicherweise nicht vorhanden ist. Eine Option verfügt über einen zugrunde liegenden Typ und kann einen Wert dieses Typs enthalten, oder es kann keinen Wert.
 
 ## <a name="remarks"></a>Hinweise
 

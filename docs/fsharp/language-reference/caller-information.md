@@ -1,13 +1,13 @@
 ---
-title: Aufruferinformationen (F#)
+title: Aufruferinformationen
 description: Beschreibt die Attribute "Callerinfo"-Argument zu verwenden, um von einer Methode memberaufruferinformationen zu erhalten.
 ms.date: 04/25/2017
-ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216369"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613816"
 ---
 # <a name="caller-information"></a>Aufruferinformationen
 
@@ -72,6 +72,6 @@ Im folgende Diagramm sind die Membernamen aufgeführt, die zurückgegeben werden
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Attribute](attributes.md)  
-- [Benannte Argumente](parameters-and-arguments.md#named-arguments)  
-- [Optionale Parameter](parameters-and-arguments.md#optional-parameters)  
+- [Attribute](attributes.md)
+- [Benannte Argumente](parameters-and-arguments.md#named-arguments)
+- [Optionale Parameter](parameters-and-arguments.md#optional-parameters)

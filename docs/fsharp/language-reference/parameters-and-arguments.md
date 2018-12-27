@@ -1,13 +1,13 @@
 ---
-title: Parameter und Argumente (F#)
-description: Informationen Sie zu F#-sprachunterstützung zum Definieren von Parametern und übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
+title: Parameter und Argumente
+description: Erfahren Sie mehr über F# sprachunterstützung zum Definieren von Parametern und übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744456"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612477"
 ---
 # <a name="parameters-and-arguments"></a>Parameter und Argumente
 
@@ -109,7 +109,7 @@ Weitere Informationen finden Sie unter [Konstruktoren (F#)](https://msdn.microso
 
 ## <a name="optional-parameters"></a>Optionale Parameter
 
-Sie können einen optionalen Parameter für eine Methode mit einem Fragezeichen angegeben vor den Parameternamen angeben. Optionale Parameter wie der F#-Option-Typ, interpretiert werden, damit Sie auf die übliche Weise abgefragt werden können, dass Optionstypen, mithilfe abgefragt werden einer `match` Ausdruck mit `Some` und `None`. Optionale Parameter sind zulässig, nur für Elemente, die nicht auf Funktionen, die mithilfe von erstellt `let` Bindungen.
+Sie können einen optionalen Parameter für eine Methode mit einem Fragezeichen angegeben vor den Parameternamen angeben. Optionale Parameter werden als interpretiert die F# Typ option, damit Sie auf die übliche Weise abgefragt werden können, dass Optionstypen, mithilfe abgefragt werden einer `match` Ausdruck mit `Some` und `None`. Optionale Parameter sind zulässig, nur für Elemente, die nicht auf Funktionen, die mithilfe von erstellt `let` Bindungen.
 
 Sie können vorhandene optional Werte übergeben-Methode von Parameternamen, wie z. B. `?arg=None` oder `?arg=Some(3)` oder `?arg=arg`. Dies kann nützlich sein, wenn optionale Argumente Erstellen einer Methode, die an eine andere Methode übergeben werden.
 
@@ -151,7 +151,7 @@ In diesem Fall wird der Compiler eine Warnung generiert, und beide Attribute vol
 
 ## <a name="passing-by-reference"></a>Übergeben als Verweis
 
-Übergeben einen F#-Wert als Verweis umfasst [Byrefs](byrefs.md), die verwaltete Zeigertypen sind. Anleitung für die zu verwendende Typ wie folgt lautet:
+Übergeben einer F# Wert nach Verweis umfasst [Byrefs](byrefs.md), die verwaltete Zeigertypen sind. Anleitung für die zu verwendende Typ wie folgt lautet:
 
 * Verwendung `inref<'T>` , wenn Sie nur den Zeiger lesen müssen.
 * Verwendung `outref<'T>` , wenn Sie nur auf den Zeiger schreiben müssen.

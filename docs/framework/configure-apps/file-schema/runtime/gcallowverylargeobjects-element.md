@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 750b0dbc925ec484dd80e1796ba991435e354709
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5e0a443f86848a446a7233a2c2e80f693cae9be
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745226"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611411"
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;GcAllowVeryLargeObjects&gt; Element
 Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2 Gigabyte (GB).  
   
- \<Konfiguration >-Element  
+ \<Configuration >-Element  
 \<Common Language Runtime >-Element  
 \<GcAllowVeryLargeObjects >-Element  
   
@@ -78,5 +78,5 @@ Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

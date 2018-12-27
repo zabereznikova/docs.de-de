@@ -1,21 +1,21 @@
 ---
-title: Automatische Verallgemeinerung (F#)
+title: Automatische Verallgemeinerung
 description: Erfahren Sie, wie F# automatisch die Argumente und Funktionstypen verallgemeinert, damit sie mit mehreren Typen nach Möglichkeit funktionieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43855776"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611710"
 ---
 # <a name="automatic-generalization"></a>Automatische Verallgemeinerung
 
-F#-verwendet den Typrückschluss, um die Arten von Funktionen und Ausdrücke zu bewerten. In diesem Thema wird beschrieben, wie F# automatisch die Argumente und Funktionstypen verallgemeinert, damit sie mit mehreren Arten funktionieren, wenn dies möglich ist.
+F#verwendet die Typrückschluss um die Arten von Funktionen und Ausdrücke zu bewerten. In diesem Thema wird beschrieben, wie F# automatisch die Argumente und Funktionstypen verallgemeinert, damit sie mit mehreren Arten funktionieren, wenn dies möglich ist.
 
 ## <a name="automatic-generalization"></a>Automatische Verallgemeinerung
 
-Der F#-Compiler, bestimmt wenn er den Typrückschluss auf eine Funktion ausführt, ob es sich bei ein bestimmten Parameter generisch sein kann. Der Compiler untersucht jeden Parameter und bestimmt, ob die Funktion eine Abhängigkeit vom angegebenen Typ dieses Parameters hat. Wenn dies nicht der Fall ist, wird der Typ abgeleitet, generisch sein.
+Die F# -Compiler, wenn er den Typrückschluss auf eine Funktion ausführt bestimmt, ob für ein bestimmten Parameter generisch sein kann. Der Compiler untersucht jeden Parameter und bestimmt, ob die Funktion eine Abhängigkeit vom angegebenen Typ dieses Parameters hat. Wenn dies nicht der Fall ist, wird der Typ abgeleitet, generisch sein.
 
 Im folgenden Codebeispiel wird veranschaulicht, eine Funktion, die der Compiler leitet ab, um generisch sein.
 
@@ -58,7 +58,7 @@ In der Regel tritt auf, der Wert Einschränkung Fehler, wenn Sie möchten ein Ko
 
 - Die folgenden Codebeispiele veranschaulichen jedes dieser Szenarien.
 
-Fall 1: Zu komplex ist ein Ausdruck. In diesem Beispiel wird die Liste `counter` dient `int option ref`, aber es ist nicht definiert, wie ein einfacher, unveränderliche Wert.
+Fall 1: Zu komplex. ein Ausdruck ist. In diesem Beispiel wird die Liste `counter` dient `int option ref`, aber es ist nicht definiert, wie ein einfacher, unveränderliche Wert.
 
 ```fsharp
 let counter = ref None

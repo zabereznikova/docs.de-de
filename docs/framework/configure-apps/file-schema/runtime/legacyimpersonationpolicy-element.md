@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f90853a93b40eeb72f07ad9b1849aa99c8e8bf3d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c0d71bef4ad68c2fea63cec413e8bd17b78df1d0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745187"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614337"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;LegacyImpersonationPolicy&gt; Element
 Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, unabhängig von den Floweinstellungen für den Ausführungskontext im aktuellen Thread.  
@@ -38,14 +38,14 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, dass die <xref:System.Security.Principal.WindowsIdentity> nicht über asynchrone Punkte übergeben, unabhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, dass die <xref:System.Security.Principal.WindowsIdentity> fließen nicht über asynchrone Punkte verläuft, unabhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity> Arbeitsabläufe über asynchrone Punkte, die abhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread. Dies ist die Standardeinstellung.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity> nicht über asynchrone Punkte übergeben, unabhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> Flows über asynchrone Punkte, die abhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread. Dies ist die Standardeinstellung.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity> fließen nicht über asynchrone Punkte verläuft, unabhängig von der <xref:System.Threading.ExecutionContext> übertragen von Einstellungen für den aktuellen Thread.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -58,31 +58,31 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- In der .NET Framework-Versionen 1.0 und 1.1 kann die <xref:System.Security.Principal.WindowsIdentity> nicht über eine beliebige benutzerdefinierte asynchrone Punkte übergeben. Beginnend mit .NET Framework, Version 2.0, besteht eine <xref:System.Threading.ExecutionContext> -Objekt, das Informationen zu den gerade ausgeführten Thread, und es enthält, die über asynchrone Punkte innerhalb einer Anwendungsdomäne übergeben. Die <xref:System.Security.Principal.WindowsIdentity> ist in dieser Ausführungskontext enthalten und daher auch über die asynchrone Punkte übergeben, was bedeutet, dass der Kontext eines Identitätswechsels vorhanden ist, es ebenfalls übertragen wird.  
+ In den .NET Framework-Versionen 1.0 und 1.1 die <xref:System.Security.Principal.WindowsIdentity> nicht über benutzerdefinierte asynchrone Punkte übergeben. Ab .NET Framework, Version 2.0, es ist ein <xref:System.Threading.ExecutionContext> -Objekt, das Informationen zu den aktuell ausgeführten Thread und enthält, die über asynchrone Punkte innerhalb einer Anwendungsdomäne übergeben. Die <xref:System.Security.Principal.WindowsIdentity> in diesem Ausführungskontext enthalten ist, und daher auch über die asynchrone Punkte verläuft, was bedeutet, dass wenn der Kontext eines Identitätswechsels vorhanden ist, es auch fließt.  
   
- Beginnend mit .NET Framework 2.0, können Sie die `<legacyImpersonationPolicy>` Element angeben, dass <xref:System.Security.Principal.WindowsIdentity> nicht über asynchrone Punkte übergeben.  
+ Ab .NET Framework 2.0, können Sie die `<legacyImpersonationPolicy>` Element an, dass <xref:System.Security.Principal.WindowsIdentity> nicht über asynchrone Punkte übergeben.  
   
 > [!NOTE]
->  Die common Language Runtime (CLR) ist bekannt, des Identitätswechsels, die Operationen mit nur verwaltetem Code, nicht des Identitätswechsels, die außerhalb von verwaltetem Code, z. B. über Plattform ausgeführt zu nicht verwaltetem Code oder durch direkte Aufrufe für Win32-Funktionen aufrufen. Nur verwaltete <xref:System.Security.Principal.WindowsIdentity> Objekte können über asynchrone Punkte übergeben, es sei denn, die `alwaysFlowImpersonationPolicy` Element festgelegt wurde auf "true" (`<alwaysFlowImpersonationPolicy enabled="true"/>`). Festlegen der `alwaysFlowImpersonationPolicy` Element auf "true" gibt an, dass die Windows-Identität immer über asynchrone Punkte, unabhängig davon, wie Identitätswechsel durchgeführt wurde. Weitere Informationen finden Sie Informationen zur Übergabe von nicht verwaltetem Identitätswechsel über asynchrone Punkte [ \<AlwaysFlowImpersonationPolicy >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
+>  Die common Language Runtime (CLR) beachtet des Identitätswechsels, die für das Aufrufen von Vorgängen, die ausgeführt wird, verwenden nur verwalteter Code, nicht des Identitätswechsels, die außerhalb von verwaltetem Code, z. B. über Plattform ausgeführt, von nicht verwaltetem Code oder durch direkte Aufrufe für Win32-Funktionen zur Verfügung. Nur verwaltete <xref:System.Security.Principal.WindowsIdentity> -Objekte können über asynchrone Punkte übergeben, es sei denn, die `alwaysFlowImpersonationPolicy` Elements wurde festgelegt auf "true" (`<alwaysFlowImpersonationPolicy enabled="true"/>`). Festlegen der `alwaysFlowImpersonationPolicy` Element auf "true" gibt an, dass die Windows-Identität immer über asynchrone Punkte verläuft, unabhängig davon, wie der Identitätswechsel durchgeführt wurde. Weitere Informationen zur Übergabe von nicht verwaltetem Identitätswechsel über asynchrone Punkte, finden Sie unter [ \<AlwaysFlowImpersonationPolicy >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
   
- Sie können dieses Standardverhalten auf zwei andere Arten ändern:  
+ Sie können dieses Standardverhalten auf zwei weitere Arten ändern:  
   
-1.  In verwaltetem Code auf eine Threadbasis.  
+1.  In verwaltetem Code auf einer pro-Thread-Basis.  
   
-     Sie können den Fluss auf eine Threadbasis unterdrücken, indem Sie ändern die <xref:System.Threading.ExecutionContext> und <xref:System.Security.SecurityContext> Einstellungen mithilfe der <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> oder <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> Methode.  
+     Sie können den Fluss auf einer pro-Thread-Basis unterdrücken, indem Sie ändern die <xref:System.Threading.ExecutionContext> und <xref:System.Security.SecurityContext> Einstellungen mithilfe der <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> oder <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> Methode.  
   
 2.  Im Aufruf der nicht verwaltete Hostschnittstelle die common Language Runtime (CLR) geladen.  
   
-     Wenn eine nicht verwaltete Hostschnittstelle (statt einer einfachen verwalteten ausführbaren Datei) zum Laden der CLR verwendet wird, können Sie ein spezielles Flag angeben, in dem Aufruf der [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) Funktion. Um den Kompatibilitätsmodus für den gesamten Prozess zu aktivieren, legen Sie die `flags` -Parameter für [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) auf STARTUP_LEGACY_IMPERSONATION fest.  
+     Wenn eine nicht verwaltete Hostschnittstelle (anstatt eine einfache verwaltete ausführbare Datei) zum Laden der CLR verwendet wird, können Sie ein spezielles Flag angeben, in dem Aufruf der [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) Funktion. Legen Sie zum Aktivieren des Kompatibilitätsmodus für den gesamten Prozess der `flags` -Parameter für [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) auf STARTUP_LEGACY_IMPERSONATION fest.  
   
- Weitere Informationen finden Sie unter der [ \<AlwaysFlowImpersonationPolicy >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
+ Weitere Informationen finden Sie unter den [ \<AlwaysFlowImpersonationPolicy >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md).  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
  In einer .NET Framework-Anwendung kann dieses Element nur in der Anwendungskonfigurationsdatei verwendet werden.  
   
- Für eine ASP.NET-Anwendung der Identitätswechsel-Fluss kann in der Datei Aspnet.config-Datei im konfiguriert die \<Ordner "Windows" > \Microsoft.NET\Framework\vx.x.xxxx-Verzeichnis.  
+ Für eine ASP.NET-Anwendung kann der Identitätswechsel-Flow in der Datei "aspnet.config" finden Sie unter konfiguriert werden die \<Windows-Ordner > \Microsoft.NET\Framework\vx.x.xxxx-Verzeichnis.  
   
- ASP.NET standardmäßig deaktiviert den Ablauf Identitätswechsel in aspnet.config-Datei mit den folgenden Konfigurationseinstellungen:  
+ ASP.NET standardmäßig deaktiviert über die folgenden Konfigurationseinstellungen den Identitätswechsel-Flow in der Datei aspnet.config hinzu:  
   
 ``` xml
 <configuration>  
@@ -93,7 +93,7 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
 </configuration>  
 ```  
   
- In ASP.NET verwenden Wenn Sie zulassen, den Fluss des Identitätswechsels stattdessen möchten müssen Sie explizit die folgenden Konfigurationseinstellungen verwenden:  
+ In ASP.NET, wenn Sie zulassen, den Fluss des Identitätswechsels stattdessen möchten müssen Sie explizit die folgenden Konfigurationseinstellungen verwenden:  
   
 ```xml  
 <configuration>  
@@ -105,7 +105,7 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
 ```  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie die Legacyverhalten an, das nicht die Windows-Identität über asynchrone Punkte übergeben.  
+ Das folgende Beispiel zeigt, wie Sie das Legacyverhalten angeben, das nicht die Windows-Identität über asynchrone Punkte übergeben wird.  
   
 ```xml  
 <configuration>  
@@ -116,6 +116,6 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<AlwaysFlowImpersonationPolicy >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [\<AlwaysFlowImpersonationPolicy >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e78106c4df2e1c414d00f18871566dd5906c54f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9d505dd7433978e3a5908757a1d9569fe31f49b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614408"
 ---
 # <a name="ltcompatsortnlsversiongt-element"></a>&lt;CompatSortNLSVersion&gt; Element
 Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleichen von Zeichenfolgen verwenden soll.  
@@ -56,7 +57,7 @@ Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleic
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Da von Zeichenfolgenvergleich, Sortierung und Groß-Vorgänge durchgeführt der <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> -Klasse in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] entsprechen dem Unicode 5.1-standard, die Ergebnisse der Methoden zum Zeichenfolgenvergleich wie z. B. <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> und <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> unterscheidet sich möglicherweise von frühere Versionen von .NET Framework. Wenn Ihre Anwendung von Legacyverhalten abhängig ist, können Sie die Regeln für den Vergleich und die Sortierung von Zeichenfolgen aus [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] und früheren Versionen wiederherstellen, indem Sie das `<CompatSortNLSVersion>`-Element in der Konfigurationsdatei der Anwendung angeben.  
+ Da von Zeichenfolge vergleichen, Sortieren und Schreibweise Vorgänge ausgeführt der <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> -Klasse in der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] entsprechen dem Unicode 5.1-standard, die Ergebnisse der Methoden zum Zeichenfolgenvergleich wie z. B. <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> und <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> weicht möglicherweise von frühere Versionen von .NET Framework. Wenn Ihre Anwendung von Legacyverhalten abhängig ist, können Sie die Regeln für den Vergleich und die Sortierung von Zeichenfolgen aus [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] und früheren Versionen wiederherstellen, indem Sie das `<CompatSortNLSVersion>`-Element in der Konfigurationsdatei der Anwendung angeben.  
   
 > [!IMPORTANT]
 >  Zum Wiederherstellen von Zeichenfolgenvergleichs- und Zeichenfolgensortierregeln von Legacyversionen muss auch die sort00001000.dll-Dynamic Link Library auf dem lokalen System verfügbar sein.  
@@ -93,5 +94,5 @@ sta equals a in the sort order.
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

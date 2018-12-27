@@ -1,13 +1,13 @@
 ---
-title: 'Ausnahmen: Der try...finally-Ausdruck (F#)'
-description: Erfahren Sie, wie der F#-' try-finally "Ausdruck können Sie Bereinigungscode auszuführen, auch wenn Sie ein Codeblock eine Ausnahme auslöst.
+title: 'Ausnahmen: Der try...finally-Ausdruck'
+description: Erfahren Sie, wie die F# "try-finally' Ausdruck können Sie Bereinigungscode auszuführen, auch wenn Sie ein Codeblock eine Ausnahme auslöst.
 ms.date: 05/16/2016
-ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45970317"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611619"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Ausnahmen: Der try...finally-Ausdruck
 
@@ -50,4 +50,4 @@ Im Kontext des Berechnungsausdrücke, einschließlich der Sequence-Ausdrücke un
 ## <a name="see-also"></a>Siehe auch
 
 - [Ausnahmebehandlung](index.md)
-- [Ausnahmen: Der `try...with`-Ausdruck](the-try-with-expression.md)
+- [Ausnahmen: Die `try...with` Ausdruck](the-try-with-expression.md)

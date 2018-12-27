@@ -1,13 +1,13 @@
 ---
-title: Maßeinheiten (F#)
+title: Maßeinheiten
 description: Erfahren Sie, wie für Gleitkommawerte und signierten Integer-Werte in F# können Einheiten, die in der Regel verwendet werden, Länge, Volumen und die Masse an verknüpft haben.
 ms.date: 05/16/2016
-ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45972516"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610982"
 ---
 # <a name="units-of-measure"></a>Maßeinheiten
 
@@ -113,7 +113,7 @@ Um einen Wert ohne Einheiten auf einen Wert zu konvertieren, die Einheiten hat, 
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Maßeinheiten in der F#-Kernbibliothek
+## <a name="units-of-measure-in-the-f-core-library"></a>Maßeinheiten in das F# -Kernbibliothek
 
 Eine Einheitenbibliothek finden Sie in der `FSharp.Data.UnitSystems.SI` Namespace. Er enthält sowohl die Symbol-Form SI-Einheiten (wie `m` für Verbrauchseinheit) in der `UnitSymbols` Sub-Namespace und der vollständige Name (wie `meter` für Verbrauchseinheit) in der `UnitNames` Sub-Namespace.
 

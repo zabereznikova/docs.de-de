@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509482"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611398"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;LoadFromRemoteSources&gt; Element
 Gibt an, ob Assemblys aus Remotequellen geladen volle Vertrauenswürdigkeit in .NET Framework 4 und höher gewährt werden soll.
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 Zum Laden der Assembly und deren Code ausführen, müssen Sie entweder:
 
-- Erstellen Sie explizit einen Sandkasten für die Assembly (finden Sie unter [wie: Ausführen von teilweise vertrauenswürdigen Code in einer Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Erstellen Sie explizit einen Sandkasten für die Assembly (finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
 - Führen Sie Code von der Assembly mit voller Vertrauenswürdigkeit. Konfigurieren Sie dazu die `<loadFromRemoteSources>` Element. Sie können angeben, dass die Assemblys, die bei teilweiser Vertrauenswürdigkeit in früheren Versionen von .NET Framework ausgeführt werden jetzt als voll vertrauenswürdig in der .NET Framework 4 und höher ausführen.
 
@@ -117,8 +117,8 @@ Das folgende Beispiel zeigt, wie Sie Assemblys aus Remotequellen geladen volles 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Mehr impliziten verwendet der CAS-Richtlinie: LoadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[How to: Run Partially Trusted Code in a Sandbox (Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten)](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Mehr impliziten verwendet der CAS-Richtlinie: LoadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

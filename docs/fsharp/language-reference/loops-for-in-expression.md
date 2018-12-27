@@ -1,13 +1,13 @@
 ---
-title: 'Schleifen: for...in-Ausdruck (F#)'
-description: Finden Sie unter wie der F#-for... in Ausdruck Schleifenkonstrukt zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird.
+title: 'Schleifen: for...in-Ausdruck'
+description: Finden Sie unter wie die F# for... in Ausdruck Schleifenkonstrukt zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird.
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027233"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614405"
 ---
 # <a name="loops-forin-expression"></a>Schleifen: for...in-Ausdruck
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>Siehe auch
 
 - [F#-Sprachreferenz](index.md)
-- [Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)
-- [Schleifen: `while...do`-Ausdruck](loops-while-do-expression.md)
+- [Schleifen: `for...to` Ausdruck](loops-for-to-expression.md)
+- [Schleifen: `while...do` Ausdruck](loops-while-do-expression.md)

@@ -1,13 +1,13 @@
 ---
-title: Vergleichsausdrücke (F#)
-description: Erfahren Sie, wie der F#-Vergleichsausdruck verzweigungssteuerung bereitstellt, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
+title: Vergleichsausdrücke
+description: Erfahren Sie, wie die F# Vergleichsausdruck stellt verzweigungssteuerung, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221843"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611567"
 ---
 # <a name="match-expressions"></a>Vergleichsausdrücke
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda-Ausdrücke: der `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md).
+Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda-Ausdrücken: Die `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md).
 
 Die gesamte Gruppe von Mustern sollten alle möglichen Übereinstimmungen der Eingabevariablen abdecken. In vielen Fällen verwenden Sie das Platzhaltermuster (`_`) als das letzte Muster entsprechend alle zuvor nicht übereinstimmende Eingabewerte.
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Siehe auch
 
-- [F#-Sprachreferenz](index.md)  
-- [Aktive Muster](active-patterns.md)  
-- [Mustervergleich](pattern-matching.md)  
+- [F#-Sprachreferenz](index.md)
+- [Aktive Muster](active-patterns.md)
+- [Mustervergleich](pattern-matching.md)

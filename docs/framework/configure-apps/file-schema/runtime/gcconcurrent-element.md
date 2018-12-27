@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee00c3a307523d2cae831274630ad6828cd9daf6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745837"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612386"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;GcConcurrent&gt; Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf einem separaten Thread ausführt.  
@@ -76,7 +76,7 @@ Gibt an, ob die Common Language Runtime die Garbage Collection auf einem separat
   
  Gibt es eine `<gcConcurrentSetting>`-Einstellung in der Computerkonfigurationsdatei, legt diese den Standardwert für alle .NET Framework-Anwendungen fest. Die Einstellung in der Computerkonfigurationsdatei setzt die Einstellung in der Anwendungskonfigurationsdatei außer Kraft.  
   
- Weitere Informationen zur gleichzeitigen und Garbagecollection im Hintergrund finden Sie im Abschnitt "gleichzeitige Garbagecollection" in der [Grundlagen der Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) Thema.  
+ Weitere Informationen zur gleichzeitigen und Garbagecollection im Hintergrund, finden Sie im Abschnitt "gleichzeitige Garbagecollection" der [Grundlagen der Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) Thema.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die gleichzeitige Garbage Collection aktiviert.  
@@ -90,6 +90,6 @@ Gibt an, ob die Common Language Runtime die Garbage Collection auf einem separat
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Grundlagen der Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Grundlagen der Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195891"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613517"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler. 
@@ -28,20 +28,20 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
 ## <a name="just-the-facts"></a>Reine Tatsachen  
  Berücksichtigen Sie die folgenden Tatsachen, wenn Sie die Leistung optimieren und reaktionsfähige .NET Framework-Apps erstellen. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Tatsache 1: Vermeiden Sie eine vorzeitige Optimierung.  
+### <a name="fact-1-dont-prematurely-optimize"></a>Tatsache 1: Keine vorzeitige Optimierung  
  Das Schreiben von Code, der komplexer als notwendig ist, zieht Kosten für Wartung, Debugging und Verfeinerung nach sich. Erfahrene Programmierer verstehen intuitiv, wie sie Codierungsprobleme lösen und einen effizienteren Code schreiben. Dennoch optimieren Sie ihren Code manchmal vorzeitig. Sie verwenden beispielsweise eine Hashtabelle, wenn ein einfaches Array ausreichen würde, oder sie verwenden ein kompliziertes Zwischenspeichern, das möglicherweise Speicherverluste verursacht statt einfach Werte neu zu berechnen. Selbst wenn Sie ein erfahrener Programmierer sind, sollten Sie Ihren Code auf Leistung testen und analysieren, wenn Sie Probleme finden. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Tatsache 2: Wenn Sie nicht messen, raten Sie.  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Tatsache 2: Wenn Sie nicht messen, Raten Sie.  
  Profile und Messungen lügen nicht. Profile zeigen Ihnen, ob die CPU vollständig geladen ist oder Sie von Datenträger-E/A blockiert werden. Profile teilen Ihnen mit, welche Art und wie viel Speicher Sie zuweisen und ob Ihre CPU viel Zeit in der [Garbage Collection](../../../docs/standard/garbage-collection/index.md) (GC) verbringt. 
   
  Sie sollten Leistungsziele für wichtige Kundenerfahrungen oder -szenarien in Ihrer App festlegen und Tests schreiben, um die Leistung zu messen. Untersuchen Sie fehlschlagende Tests, indem Sie die wissenschaftliche Methode anwenden: Verwenden Sie Profile, um Ihnen die Richtung zu weisen, stellen Sie Hypothesen auf, worin das Problem bestehen könnte, und testen Sie Ihre Hypothese mit einem Experiment oder einer Codeänderung. Richten Sie Baselineleistungsmessungen über die Zeit mit regelmäßigen Tests ein, damit Sie Änderungen isolieren können, die Leistungsregressionen verursachen. Wenn Sie die Leistungsarbeit auf eine rigorose Weise angehen, verschwenden Sie keine Zeit mit Codeaktualisierungen, die Sie nicht benötigen. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Tatsache 3: Gute Tools machen einen großen Unterschied.  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Tatsache 3: Gute Tools machen einen großen Unterschied  
  Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht. Microsoft bietet eine Reihe von Leistungstools wie [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) und [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView ist ein kostenloses und erstaunlich leistungsstarkes Tool, mit dem Sie sich auf tiefliegende Probleme wie Datenträger-E/A, GC-Ereignisse und Arbeitsspeicher konzentrieren können. Sie erfassen leistungsrelevante Ereignisse der [Ereignisablaufverfolgung für Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (Event Tracing for Windows, ETW) und zeigen auf einfache Weise Informationen pro App, pro Prozess, pro Stapel und pro Thread an. PerfView zeigt Ihnen, wie viel und welche Art von Speicher Ihre App zuweist und welche Funktionen oder Aufrufstapel zu welchem Anteil der Speicherbelegungen beitragen. Einzelheiten finden Sie in den umfassenden Hilfethemen, Demos und Videos, die mit dem Tool ausgeliefert werden (zum Beispiel die [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) auf Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Tatsache 4: Es dreht sich alles um Zuordnungen.  
+### <a name="fact-4-its-all-about-allocations"></a>Tatsache 4: Alles dreht sich Zuordnungen  
  Möglicherweise denken Sie, dass es beim Erstellen einer reaktionsfähigen .NET Framework-App vor allem um Algorithmen wie die Verwendung von QuickSort anstelle von BubbleSort geht, aber das ist nicht der Fall. Der größte Faktor bei der Erstellung einer reaktionsfähigen App ist die Speicherbelegung, insbesondere wenn Ihre App sehr groß ist oder große Datenmengen verarbeitet. 
   
  Nahezu die gesamte Arbeit beim Erstellen reaktionsfähiger IDE-Erfahrungen mit den neuen Compiler-APIs beinhaltete das Vermeiden von Speicherbelegungen und das Verwalten von Zwischenspeicherstrategien. PerfView-Ablaufverfolgungen zeigen, dass die Leistung der neuen C#- und Visual Basic-Compiler selten CPU-gebunden ist. Die Compiler können E/A-gebunden sein, wenn Sie Hundertausende oder Millionen von Codezielen oder Metadaten lesen oder generierten Code ausgeben. Die UI-Threadverzögerungen erfolgen nahezu alle wegen der Garbage Collection. Die .NET Framework GC ist weitgehend für Leistung optimiert und führt einen großen Teil ihrer Arbeit parallel zur Ausführung von App-Code durch. Dennoch kann eine einzige Speicherbelegung eine teure [gen2](../../../docs/standard/garbage-collection/fundamentals.md)-Collection auslösen, die alle Threads anhält. 
@@ -197,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
   
  Die erste Version von `WriteFormattedDocComment()` hat ein Array, mehrere untergeordnete Zeichenfolgen und eine abgeschnittene Zeichenfolge zusammen mit einem leeren `params`-Array zugeordnet. Er überprüft auch für "/ / /". Der überarbeitete Code verwendet nur die Indizierung und ordnet nichts zu. Findet das erste Zeichen, das keine Leerzeichen und prüft dann Zeichen für Zeichen um festzustellen, ob die Zeichenfolge beginnt mit "/ / /". Der neue Code verwendet `IndexOfFirstNonWhiteSpaceChar` anstelle von <xref:System.String.TrimStart%2A> um den ersten Index (nach einem angegebenen Startindex) zurückzugeben, in dem ein nicht-Leerzeichen auftritt. Die Korrektur ist nicht vollständig, aber Sie können sehen, wie Sie ähnliche Korrekturen für eine vollständige Lösung anwenden können. Durch Anwendung dieses Ansatzes im gesamten Code können Sie alle Zuordnungen in `WriteFormattedDocComment()` entfernen. 
   
- **Beispiel 4: StringBuilder**  
+ **Beispiel 4: "StringBuilder"**  
   
  In diesem Beispiel wird ein <xref:System.Text.StringBuilder>-Objekt verwendet. Die folgende Funktion generiert einen vollständigen Typnamen für generische Typen:  
   
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ und Lambdas  
 Language Integrated Query (LINQ), zusammen mit Lambda-Ausdrücke, ist ein Beispiel für eine produktivitätsfunktion. Allerdings ihre Verwendung kann erhebliche Auswirkungen auf die Leistung im Laufe der Zeit haben, und möglicherweise, dass der Code neu geschrieben werden sollen.
   
- **Example 5: Lambdas, List\<T> und IEnumerable\<T>**  
+ **Beispiel 5: Lambdas, Liste\<T >, und "IEnumerable"\<T >**  
   
  Dieses Beispiel verwendet [LINQ und Funktionsformatcode](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx), um ein Symbol im Modell des Compilers anhand einer Namenszeichenfolge zu finden:  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  Dieser Code verwendet keine LINQ-Erweiterungsmethoden, Lambdas oder Enumeratoren und verursacht keine Zuordnungen. Es gibt keine Zuordnungen, weil der Compiler sehen kann, dass die `symbols`-Auflistung eine <xref:System.Collections.Generic.List%601> ist und den resultierenden Enumerator (eine Struktur) an eine lokale Variable des richtigen Typs binden kann, um ein Boxing zu vermeiden. Die ursprüngliche Version dieser Funktion war ein hervorragendes Beispiel für die Ausdrucksstärke von C# und die Produktivität von .NET Framework. Diese neue und effizientere Version behält diese Qualitäten bei, ohne komplexen Code hinzuzufügen, der gewartet werden muss. 
   
 ### <a name="async-method-caching"></a>Zwischenspeichern der Async-Methode  
- Das nächste Beispiel zeigt ein typisches Problem, wenn Sie versuchen, zwischengespeicherte Ergebnisse in einer [Async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)-Methode zu verwenden. 
+
+Das nächste Beispiel zeigt ein typisches Problem, wenn Sie versuchen, zwischengespeicherte Ergebnisse in einer [Async](../../csharp/programming-guide/concepts/async/index.md)-Methode zu verwenden.
   
  **Beispiel 6: Zwischenspeichern in Async-Methoden**  
   

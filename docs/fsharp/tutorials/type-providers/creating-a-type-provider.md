@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: Erstellen eines Typanbieters (F#)'
+title: 'Tutorial: Erstellen eines Typanbieters'
 description: Erfahren Sie, wie Sie eigene F#-Typanbieter in F# 3.0 zu erstellen, indem Sie mehrere einfache Typanbieter zur Veranschaulichung der grundlegenden Konzepte untersucht.
 ms.date: 05/16/2016
-ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50183918"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614531"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Erstellen eines Typanbieters
 
-Der typanbietermechanismus in F# ist ein Großteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zu den typanbietermechanismus in F# erläutert werden, finden Sie unter [Typanbieter](index.md).
+Der typanbietermechanismus in F# ist ein Großteil der Unterstützung für die informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zu den typanbietermechanismus in F#, finden Sie unter [Typanbieter](index.md).
 
 Das F#-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet und Enterprise Data Services. Zum Beispiel:
 
@@ -53,7 +53,7 @@ Typanbieter sind für Situationen geeignet, in denen das Schema zur Laufzeit und
 
 ## <a name="a-simple-type-provider"></a>Ein einfacher Typanbieter
 
-In diesem Beispiel wird Samples.HelloWorldTypeProvider, ähnlich wie in den Beispielen in den `examples` Verzeichnis der [F#-Typ-Anbieter-SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie unter [Details über bereitgestellte gelöschte Typen](#details-about-erased-provided-types) weiter unten in diesem Thema.
+In diesem Beispiel wird Samples.HelloWorldTypeProvider, ähnlich wie in den Beispielen in den `examples` Verzeichnis der [ F# Typ Anbieter-SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Der Anbieter stellt einen "Typenraum" mit 100 gelöschten Typen zur Verfügung, wie der folgenden Code zeigt, in dem F#-Signatursyntax verwendet wird und Details für alle Typen außer `Type1` weggelassen wurden. Weitere Informationen zu gelöschten Typen finden Sie unter [Details über bereitgestellte gelöschte Typen](#details-about-erased-provided-types) weiter unten in diesem Thema.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-Um diesen Anbieter verwenden möchten, öffnen Sie eine separate Instanz von Visual Studio, erstellen Sie ein F#-Skript und dann hinzuzufügen Sie einen Verweis auf den Anbieter in Ihrem Skript, mithilfe der #r wie im folgenden Code gezeigt:
+Um diesen Anbieter verwenden möchten, öffnen Sie eine separate Instanz von Visual Studio, erstellen Sie eine F# , und klicken Sie dann einen Verweis auf den Anbieter in Ihrem Skript mithilfe der #r wie im folgenden Code gezeigt:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -175,7 +175,7 @@ In diesem Abschnitt werden die wichtigsten Schritte bei der Implementierung eine
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Dieser Typ muss öffentlich sein und müssen Sie markieren Sie sie mit der [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) Attribut, damit der Compiler den Typanbieter erkannt wird, wenn ein separates F#-Projekt die Assembly verweist, die den Typ enthält. Die *Config* Parameter ist optional, und, falls vorhanden, enthält Sie kontextkonfigurationsinformationen für die typanbieterinstanz, die F#-Compiler erstellt.
+Dieser Typ muss öffentlich sein und müssen Sie markieren Sie sie mit der [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) Attribut, damit der Compiler den Typanbieter an, wenn ein separates erkennt F# Projekt verweist auf die Assembly, die den Typ enthält. Die *Config* Parameter ist optional, und, falls vorhanden, enthält Sie kontextkonfigurationsinformationen für die typanbieterinstanz, die F#-Compiler erstellt.
 
 Anschließend implementieren Sie die [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) Schnittstelle. In diesem Fall verwenden Sie den `TypeProviderForNamespaces`-Typ aus der `ProvidedTypes`-API als Basistyp. Dieser Hilfstyp kann eine endliche Auflistung vorzeitig bereitgestellter Namespaces bereitstellen, von denen jeder direkt eine begrenzte Zahl fester, vorzeitig bereitgestellter Typen enthält. In diesem Kontext, den Anbieter *Eager Loading* Typen generiert, selbst wenn sie nicht benötigt oder verwendet werden.
 

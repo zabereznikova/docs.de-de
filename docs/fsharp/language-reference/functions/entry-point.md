@@ -1,17 +1,17 @@
 ---
-title: Einstiegspunkt (F#)
+title: Einstiegspunkt
 description: Erfahren Sie, wie eine F#-Programm Einstiegspunkt fest, die als ausführbare Datei kompiliert wird, in dem Ausführung formal beginnt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45698381"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614347"
 ---
 # <a name="entry-point"></a>Einstiegspunkt
 
-In diesem Thema wird beschrieben, die Methode, die Sie verwenden, um den Einstiegspunkt auf einem F#-Programm festgelegt wird.
+In diesem Thema wird beschrieben, die Methode, die Sie verwenden, um den Einstiegspunkt festlegen, um eine F# Programm.
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,7 +24,7 @@ let-function-binding
 
 In der vorherigen Syntax *Let-Funktion-Bindung* ist die Definition einer Funktion in einer `let` Bindung.
 
-Der Einstiegspunkt an ein Programm, das kompiliert wird, wie eine ausführbare Datei handelt, in dem Ausführung formal beginnt. Sie geben den Einstiegspunkt für eine F#-Anwendung durch Anwenden der `EntryPoint` Attribut des Programms `main` Funktion. Diese Funktion (erstellt mit einem `let` Bindung) muss die letzte Funktion in der letzten kompilierten Datei. Die letzte kompilierte Datei ist die letzte Datei im Projekt oder die letzte Datei, die an der Befehlszeile übergeben wird.
+Der Einstiegspunkt an ein Programm, das kompiliert wird, wie eine ausführbare Datei handelt, in dem Ausführung formal beginnt. Geben Sie den Einstiegspunkt für eine F# Anwendung durch Anwenden der `EntryPoint` Attribut des Programms `main` Funktion. Diese Funktion (erstellt mit einem `let` Bindung) muss die letzte Funktion in der letzten kompilierten Datei. Die letzte kompilierte Datei ist die letzte Datei im Projekt oder die letzte Datei, die an der Befehlszeile übergeben wird.
 
 Die Einstiegspunktfunktion weist den Typ `string array -> int`. Die Argumente, die in der Befehlszeile angegeben werden übergeben die `main` -Funktion in das Array von Zeichenfolgen. Das erste Element des Arrays ist das erste Argument. der Name der ausführbaren Datei ist nicht im Array enthalten, da es in einigen anderen Sprachen ist. Der zurückgegebene Wert wird als Exitcode für den Prozess verwendet. 0 (null) gibt in der Regel Erfolg; ungleich NULL-Werte geben einen Fehler an. Es gibt keine Konvention für die spezifische Bedeutung des Rückgabecodes für ungleich NULL. die Bedeutung des Rückgabecodes sind anwendungsspezifisch.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cfd8c971edd4537de6e073c49f128f86eb8a042
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 49dc991fd1f30bce6c328725a794750c753145cd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748996"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613283"
 ---
 # <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt; Element
 Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automatisch korrigiert. Dies führt zu langsameren Übergängen zwischen verwaltetem und nicht verwaltetem Code.  
@@ -34,14 +34,14 @@ Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automa
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Laufzeit falsche Plattform erkennt Plattformaufrufdeklarationen und behebt den Stapel automatisch zur Laufzeit auf 32-Bit-Plattformen.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen erkennt Deklarationen und behebt automatisch auf 32-Bit-Plattformen zur Laufzeit den Stapel.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`0`|Die Common Language Runtime verwendet schnellere Interop-Marshalling-Architektur eingeführt, die der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], die nicht erkannt und Updates falscher Plattformaufrufdeklarationen. Dies ist die Standardeinstellung.|  
-|`1`|Die Common Language Runtime verwendet langsamer Übergänge, die erkennt und korrigiert falsche Plattform Plattformaufrufdeklarationen.|  
+|`0`|Die Common Language Runtime verwendet schneller Interop-Marshalling-Architektur eingeführt, die der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], die nicht erkannt und Korrektur falsche Plattformaufrufdeklarationen. Dies ist die Standardeinstellung.|  
+|`1`|Die Common Language Runtime verwendet langsameren Übergängen, die Erkennung und Behebung fehlerhafter Plattformaufrufdeklarationen.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,19 +54,19 @@ Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automa
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Element können Sie schneller Interop-Marshalling für Laufzeit-robusten Schutz vor falsche Plattform Plattformaufrufdeklarationen abwägen.  
+ Dieses Element können Sie eine Abstimmung zwischen schneller interop-Marshalling für Laufzeit resilienz gegen fehlerhafter Plattformaufruf Deklarationen.  
   
- Beginnend mit der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], eine optimierte Interop-Marshalling-Architektur bietet eine deutliche leistungsverbesserung für Übergänge von verwaltetem Code an nicht verwalteten Code. In früheren Versionen von .NET Framework die Marshalling Ebene erkannt falsche Plattformaufrufmethode Deklarationen auf 32-Bit-Plattformen und den Stapel automatisch korrigiert. Die neue Architektur Marshalling entfällt dieser Schritt. Daher sind Übergänge sehr schnell, aber eine falsche Plattformaufruf Deklaration können einen Anwendung Fehler verursachen.  
+ Beginnend mit der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], eine optimierte Interop-Marshalling-Architektur bietet eine deutliche leistungsverbesserung für Übergänge von verwaltetem Code an nicht verwalteten Code. In früheren Versionen von .NET Framework das Marshalling Ebene erkannt falsch Plattformaufrufmethode Deklarationen auf 32-Bit-Plattformen und automatisch korrigiert den Stapel. Die neue Architektur für Marshalling entfällt dieser Schritt. Daher sind Übergänge sehr schnell, aber es wird eine falsche Plattform aufrufen Deklaration einen Programmfehler verursachen können.  
   
- Um während der Entwicklung falsche Deklarationen erkennen zu erleichtern, wurde die Visual Studio debuggen verbessert. Die [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Assistent für verwaltetes Debuggen (MDA) benachrichtigt Sie falsche Plattform Deklarationen aufgerufen wird, wenn Ihre Anwendung mit dem angefügten Debugger ausgeführt wird.  
+ Um falsche Deklarationen zu erkennen, während der Entwicklung zu erleichtern, wurde der Visual Studio-Debuggingumgebung verbessert. Die [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) -Assistent für verwaltetes Debuggens (MDA) informiert Sie über falschen Deklarationen aufrufen, wenn Ihre Anwendung mit dem angefügten Debugger ausgeführt wird.  
   
- Adresse Szenarien, in denen Ihre Anwendung Komponenten verwendet, die nicht neu kompilieren und, dass wurden falsche Plattformaufrufdeklarationen, Sie können, die `NetFx40_PInvokeStackResilience` Element. Die Konfigurationsdatei der Anwendung mit diesem Element hinzugefügt `enabled="1"` "OPTS" in einem Kompatibilitätsmodus mit dem Verhalten früherer Versionen von .NET Framework, allerdings zum Preis einer langsameren Übergängen. Assemblys, die auf früheren Versionen von .NET Framework kompiliert wurden diesem Kompatibilitätsmodus werden automatisch festgelegt, und dieses Element ist nicht erforderlich.  
+ Szenarien, in denen Ihre Anwendung Komponenten verwendet, die Sie nicht neu kompilieren, und haben falsche Plattformaufrufdeklarationen, können Sie verwenden, die `NetFx40_PInvokeStackResilience` Element. Die Konfigurationsdatei der Anwendung mit diesem Element hinzugefügt `enabled="1"` "OPTS" in einem Kompatibilitätsmodus, mit dem Verhalten früherer Versionen von .NET Framework, was zu langsameren Übergängen. Assemblys, die auf früheren Versionen von .NET Framework kompiliert wurden, werden automatisch von der Teilnahme in diesem Kompatibilitätsmodus, und dieses Element ist nicht erforderlich.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel gezeigt ist wie erhöhte Stabilität gegen falsche aktiviert Plattformaufrufdeklarationen für eine Anwendung, allerdings zum Preis einer langsameren Übergänge zwischen verwalteten und nicht verwaltetem Code.  
+ Im folgenden Beispiel gezeigt ist wie für höhere resilienz gegen falsche optionale Plattformaufrufe Deklarationen für eine Anwendung, was zu langsameren Übergängen zwischen verwalteten und nicht verwaltetem Code.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Gibt an, ob die Runtime falsche Plattformaufrufdeklarationen zur Laufzeit automa
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

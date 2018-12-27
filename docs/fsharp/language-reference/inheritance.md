@@ -1,13 +1,13 @@
 ---
-title: Vererbung (F#)
-description: Erfahren Sie, wie Sie F#-vererbungsbeziehungen mithilfe des Schlüsselworts "inherit" angeben.
+title: Vererbung
+description: Erfahren Sie, wie an F# vererbungsbeziehungen, die mit dem Schlüsselwort "inherit".
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864468"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610137"
 ---
 # <a name="inheritance"></a>Vererbung
 
@@ -34,7 +34,7 @@ Das Schlüsselwort `base` steht in abgeleiteten Klassen aus, und verweist auf di
 
 ## <a name="virtual-methods-and-overrides"></a>Virtuelle Methoden und Außerkraftsetzungen
 
-Virtuelle Methoden (und Eigenschaften) funktionieren etwas anders als in F#-im Vergleich zu anderen. Um ein neuer virtueller Member zu deklarieren, verwenden Sie die `abstract` Schlüsselwort. Dies geschieht unabhängig davon, ob Sie eine Standardimplementierung für diese Methode bereitstellen. Eine vollständige Definition der eine virtuelle Methode in einer Basisklasse folgt daher diesem Muster:
+Virtuelle Methoden (und Eigenschaften) funktioniert etwas anders darüber F# im Vergleich zu anderen. Um ein neuer virtueller Member zu deklarieren, verwenden Sie die `abstract` Schlüsselwort. Dies geschieht unabhängig davon, ob Sie eine Standardimplementierung für diese Methode bereitstellen. Eine vollständige Definition der eine virtuelle Methode in einer Basisklasse folgt daher diesem Muster:
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -62,7 +62,7 @@ Der folgende Code zeigt eine Basisklasse und einer abgeleiteten Klasse, in denen
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-Im Fall von mehreren Konstruktoren kann der folgende Code verwendet werden. Die erste Zeile der abgeleiteten Klassenkonstruktoren ist die `inherit` -Klausel und die Felder angezeigt als explizite Felder, die mit deklariert werden die `val` Schlüsselwort. Weitere Informationen finden Sie unter [explizite Felder: das `val` Schlüsselwort](members/explicit-fields-the-val-keyword.md).
+Im Fall von mehreren Konstruktoren kann der folgende Code verwendet werden. Die erste Zeile der abgeleiteten Klassenkonstruktoren ist die `inherit` -Klausel und die Felder angezeigt als explizite Felder, die mit deklariert werden die `val` Schlüsselwort. Weitere Informationen finden Sie unter [explizite Felder: Die `val` Schlüsselwort](members/explicit-fields-the-val-keyword.md).
 
 ```fsharp
 type BaseClass =

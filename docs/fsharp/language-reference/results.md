@@ -1,13 +1,13 @@
 ---
-title: Ergebnisse (F#)
-description: Erfahren Sie, wie den F#-'Result' Typ zu verwenden, um Sie fehlertoleranten Code schreiben.
+title: Ergebnisse
+description: Erfahren Sie, wie Sie mit der F# "Result" Geben Sie fehlertoleranten Code schreiben können.
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213039"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612711"
 ---
 # <a name="results"></a>Ergebnisse
 
@@ -29,7 +29,7 @@ type Result<'T,'TError> =
 
 Beachten Sie, dass der Rückgabetyp einer [diskriminierte Union](discriminated-unions.md#struct-discriminated-unions), dies ist ein weiteres Feature, die in F# 4.1 eingeführt.  Strukturelle Gleichheitssemantik gelten hier.
 
-Die `Result` Typ wird normalerweise verwendet, bei der monadische-Fehlerbehandlung, die häufig als bezeichnet wird [Eisenbahn objektorientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) in der F#-Community.  Das folgende einfache Beispiel veranschaulicht diesen Ansatz.
+Die `Result` Typ wird normalerweise verwendet, bei der monadische-Fehlerbehandlung, die häufig als bezeichnet wird [Eisenbahn objektorientierte Programmierung](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) innerhalb der F# Community.  Das folgende einfache Beispiel veranschaulicht diesen Ansatz.
 
 ```fsharp
 // Define a simple type which has fields that can be validated

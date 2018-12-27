@@ -1,13 +1,13 @@
 ---
-title: Statisch aufgelöste Typparameter (F#)
+title: Statisch aufgelöste Typparameter
 description: Informationen zum Verwenden von F#-Statisch aufgelöste Typparameter, der durch einen tatsächlichen Typ zur Kompilierzeit statt zur Laufzeit ersetzt wurde.
 ms.date: 05/16/2016
-ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ad23a881e644dfe2bccd56fa04d3c219b51cf7d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032776"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614089"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statisch aufgelöste Typparameter
 

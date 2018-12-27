@@ -1,13 +1,13 @@
 ---
-title: Boolesche Operatoren (F#)
+title: Boolesche Operatoren
 description: Erfahren Sie, bis die booleschen Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 05/16/2016
-ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5353b6ec6a0bd610f3446761a1d28f01f0403302
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45638479"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612737"
 ---
 # <a name="boolean-operators"></a>Boolesche Operatoren
 

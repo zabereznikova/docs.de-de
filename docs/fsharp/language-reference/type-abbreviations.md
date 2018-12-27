@@ -1,13 +1,13 @@
 ---
-title: Typabkürzungen (F#)
+title: Typabkürzungen
 description: Informationen Sie zu F# typabkürzungen auf einem Typ einen aussagekräftigeren Namen geben, damit der um Code leichter lesbar zu machen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842423"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613348"
 ---
 # <a name="type-abbreviations"></a>Typabkürzungen
 
@@ -33,7 +33,7 @@ Typabkürzungen können es sich um generische Parameter, wie im folgenden Code e
 
 Im vorherigen Code `Transform` ist eine typabkürzung, die eine Funktion darstellt, die ein einzelnes Argument eines beliebigen Typs akzeptiert und einen einzelnen Wert desselben Typs zurückgibt.
 
-Typabkürzungen werden nicht in der .NET Framework-MSIL-Code beibehalten. Wenn Sie eine F#-Assembly von einer anderen .NET Framework-Sprache verwenden, müssen Sie daher den zugrunde liegenden Typnamen für eine typabkürzung verwenden.
+Typabkürzungen werden nicht in der .NET Framework-MSIL-Code beibehalten. Aus diesem Grund bei Verwendung einer F# Assembly von einer anderen .NET Framework-Sprache, müssen Sie den zugrunde liegenden Typnamen für eine typabkürzung verwenden.
 
 Typabkürzungen können auch auf Maßeinheiten verwendet werden. Weitere Informationen finden Sie unter [Einheiten](units-of-measure.md).
 

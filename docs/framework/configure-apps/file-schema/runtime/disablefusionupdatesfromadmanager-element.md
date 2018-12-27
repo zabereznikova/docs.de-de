@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e5e33cd3d250b26f0a83a87c4f7ce438af22e96
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d4189efbab9bfc85b6a992934604d5071a767163
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745889"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612542"
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;DisableFusionUpdatesFromADManager&gt; Element
 Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.  
   
- \<Konfiguration >-Element  
+ \<Configuration >-Element  
 \<Common Language Runtime >-Element  
 \<DisableFusionUpdatesFromADManager >  
   
@@ -34,14 +34,14 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob die Standard-Fähigkeit Fusion-Einstellungen außer Kraft gesetzt deaktiviert ist.|  
+|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob die Möglichkeit Standardwert zum Außerkraftsetzen von Fusion-Einstellungen deaktiviert ist.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|0|Deaktivieren Sie nicht die Möglichkeit, Fusion-Einstellungen außer Kraft gesetzt. Dies ist das Standardverhalten, beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
-|1|Deaktivieren Sie die Möglichkeit, Fusion-Einstellungen außer Kraft gesetzt. Dadurch wird das Verhalten von früheren Versionen von .NET Framework wieder.|  
+|0|Deaktivieren Sie nicht die Möglichkeit, die Fusion-Einstellungen außer Kraft gesetzt. Dies ist das Standardverhalten, beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|1|Deaktivieren Sie die Möglichkeit, die Fusion-Einstellungen außer Kraft gesetzt. Dadurch wird das Verhalten von früheren Versionen von .NET Framework wieder.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,18 +54,18 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], das Standardverhalten besteht, um zu ermöglichen die <xref:System.AppDomainManager> Objekt, das mit Konfigurationseinstellungen zu überschreiben die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft oder die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode der <xref:System.AppDomainSetup> Objekt, um Ihre Implementierung übergeben wird, von der <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> Methode in der Unterklasse von <xref:System.AppDomainManager>. Für die Standardanwendungsdomäne überschreiben die Einstellungen, die Sie ändern die Einstellungen, die von der Konfigurationsdatei der Anwendung angegeben wurden. Für andere Anwendungsdomänen, überschreiben sie die Konfigurationseinstellungen, die übergeben wurden, die <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> Methode.  
+ Beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], das Standardverhalten ist, können die <xref:System.AppDomainManager> Objekt, das mithilfe von Konfigurationseinstellungen zu überschreiben die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft oder der <xref:System.AppDomainSetup.SetConfigurationBytes%2A> -Methode der der <xref:System.AppDomainSetup> -Objekt, das für Ihre Implementierung übergeben wird von der <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> -Methode, in die Unterklasse von <xref:System.AppDomainManager>. Für die Standardanwendungsdomäne überschreiben die Einstellungen, die Sie ändern die Einstellungen, die von der Konfigurationsdatei der Anwendung angegeben wurden. Für andere Anwendungsdomänen, überschreiben sie die Konfigurationseinstellungen, die übergeben wurden, die <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> Methode.  
   
- Sie können neue Konfigurationsinformationen übergeben, oder übergeben Sie null (`Nothing` in Visual Basic) Konfigurationsinformationen zu vermeiden, die im übergeben wurde.  
+ Sie können neue Konfigurationsinformationen zu übergeben, oder übergeben Sie null (`Nothing` in Visual Basic), Konfigurationsinformationen zu beseitigen, die übergeben wurde.  
   
- Übergeben Sie Konfigurationsinformationen nicht sowohl die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft und die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode. Wenn Sie Konfigurationsinformationen für beide übergeben, die Informationen, übergeben die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft wird ignoriert, da die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode überschreibt die Konfigurationsinformationen aus der Anwendungskonfigurationsdatei. Bei Verwendung der <xref:System.AppDomainSetup.ConfigurationFile%2A> -Eigenschaft, Sie können null übergeben (`Nothing` in Visual Basic), die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode, um alle Konfigurationsbytes auszuschließen, die im Aufruf angegeben wurden die <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> Methode.  
+ Übergeben Sie Konfigurationsinformationen nicht an beide die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft und die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode. Wenn Sie Konfigurationsinformationen für beide übergeben, die Informationen, übergeben die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft wird ignoriert, da die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode überschreibt, Konfigurationsinformationen aus der Anwendungskonfigurationsdatei befindet. Bei Verwendung der <xref:System.AppDomainSetup.ConfigurationFile%2A> -Eigenschaft, Sie können null übergeben (`Nothing` in Visual Basic), die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode, um jede Konfigurationsbytes zu vermeiden, die im Aufruf angegeben wurden die <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> Methode.  
   
- Zusätzlich zu den Konfigurationsinformationen, können Sie die folgenden Einstellungen ändern, auf die <xref:System.AppDomainSetup> Objekt, auf Ihre Implementierung übergeben wird, die <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> Methode: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, und <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
+ Neben Informationen zu Konfigurationen können Sie die folgenden Einstellungen ändern, auf die <xref:System.AppDomainSetup> -Objekt, das für Ihre Implementierung der übergeben wird die <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> Methode: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, und <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
   
- Als Alternative zur Verwendung der `<disableFusionUpdatesFromADManager>` -Element, Sie können das Standardverhalten deaktivieren, erstellen Sie eine Einstellung in der Registrierung oder durch Festlegen einer Umgebungsvariablen. Erstellen Sie in der Registrierung einen DWORD-Wert, der mit dem Namen `COMPLUS_disableFusionUpdatesFromADManager` unter `HKCU\Software\Microsoft\.NETFramework` oder `HKLM\Software\Microsoft\.NETFramework`, und den Wert auf 1 festgelegt. Legen Sie in der Befehlszeile die Umgebungsvariable `COMPLUS_disableFusionUpdatesFromADManager` auf 1.  
+ Als Alternative zur Verwendung der `<disableFusionUpdatesFromADManager>` -Element, Sie können das standardmäßige Verhalten deaktivieren, durch das Erstellen einer registrierungseinstellung oder durch Festlegen einer Umgebungsvariablen. Erstellen Sie in der Registrierung einen DWORD-Wert, der mit dem Namen `COMPLUS_disableFusionUpdatesFromADManager` unter `HKCU\Software\Microsoft\.NETFramework` oder `HKLM\Software\Microsoft\.NETFramework`, und den Wert auf 1 festgelegt. Legen Sie in der Befehlszeile die Umgebungsvariable `COMPLUS_disableFusionUpdatesFromADManager` auf 1.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die Möglichkeit, mithilfe von Fusion-Einstellungen überschreiben Deaktivieren der `<disableFusionUpdatesFromADManager>` Element.  
+ Das folgende Beispiel zeigt, wie So deaktivieren Sie die Möglichkeit, Fusion-Einstellungen mithilfe der `<disableFusionUpdatesFromADManager>` Element.  
   
 ```xml  
 <configuration>  
@@ -76,6 +76,6 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

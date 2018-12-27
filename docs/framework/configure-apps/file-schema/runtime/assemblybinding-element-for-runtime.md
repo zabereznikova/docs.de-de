@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d84c134b8e2b048f39836bbc10af06039e96719e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 33900f40aab85fd67540ecd6004a46e13e8eb8c2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746175"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612035"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a>&lt;AssemblyBinding&gt; -Element für &lt;Common Language Runtime&gt;
 Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.  
@@ -40,7 +40,7 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |**xmlns**|Erforderliches Attribut.<br /><br /> Gibt den XML-Namespace an, der für die Assemblybindung erforderlich ist. Verwenden Sie die Zeichenfolge "urn:schemas-microsoft-com:asm.v1" als Wert.|  
-|**appliesTo**|Gibt die Laufzeitversion an, die für die .NET Framework-Assemblyumleitungen gilt. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das **\<assemblyBinding>**-Element für alle Versionen von .NET Framework. Die **AppliesTo** Attribut wurde in .NET Framework, Version 1.1 eingeführt; es wird von .NET Framework, Version 1.0, ignoriert. Dies bedeutet, dass alle **\<assemblyBinding>**-Elemente bei Verwendung von .NET Framework Version 1.0 angewendet werden, auch wenn das **appliesTo**-Attribut angegeben wurde.|  
+|**AppliesTo**|Gibt die Laufzeitversion an, die für die .NET Framework-Assemblyumleitungen gilt. Dieses optionale Attribut verwendet eine .NET Framework-Versionsnummer, um anzugeben, welche Version verwendet wird. Ohne Angabe eines **appliesTo**-Attributs gilt das **\<assemblyBinding>**-Element für alle Versionen von .NET Framework. Die **AppliesTo** Attribut wurde in .NET Framework, Version 1.1 eingeführt; es wird von .NET Framework, Version 1.0 ignoriert. Dies bedeutet, dass alle **\<assemblyBinding>**-Elemente bei Verwendung von .NET Framework Version 1.0 angewendet werden, auch wenn das **appliesTo**-Attribut angegeben wurde.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -79,7 +79,7 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 </configuration>  
 ```  
   
- Das folgende Beispiel zeigt, wie Sie die **AppliesTo** -Attribut zum Umleiten der Bindung einer .NET Framework-Assembly.  
+ Das folgende Beispiel zeigt, wie Sie mit der **AppliesTo** Attribut zum Umleiten der Bindung einer .NET Framework-Assembly.  
   
 ```xml  
 <runtime>  
@@ -93,6 +93,6 @@ Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte 
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

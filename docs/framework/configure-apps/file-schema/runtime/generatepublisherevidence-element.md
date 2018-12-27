@@ -1,5 +1,5 @@
 ---
-title: '&lt;"generatePublisherEvidence"&gt; Element'
+title: '&lt;GeneratePublisherEvidence&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f56bbef6ed6decf6be4246f649665db4cf0f766
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3b2cd047367820d249272ca220669835975dbf2d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746019"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611164"
 ---
-# <a name="ltgeneratepublisherevidencegt-element"></a>&lt;"generatePublisherEvidence"&gt; Element
+# <a name="ltgeneratepublisherevidencegt-element"></a>&lt;GeneratePublisherEvidence&gt; Element
 Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweis für die Codezugriffssicherheit (CAS).  
   
  \<configuration>  
 \<Common Language Runtime >  
-\<"generatePublisherEvidence" >  
+\<GeneratePublisherEvidence >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,14 @@ Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Pu
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweis.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweise.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Erstellt keine <xref:System.Security.Policy.Publisher> Beweis.|  
-|`true`|Erstellt <xref:System.Security.Policy.Publisher> Beweis. Dies ist die Standardeinstellung.|  
+|`false`|Erstellt keine <xref:System.Security.Policy.Publisher> Beweise.|  
+|`true`|Erstellt <xref:System.Security.Policy.Publisher> Beweise. Dies ist die Standardeinstellung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -57,18 +57,18 @@ Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Pu
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher, dieses Element hat keine Auswirkungen auf die Assembly Ladezeiten. Weitere Informationen finden Sie im Abschnitt "Security Policy Vereinfachung" [Sicherheitsänderungen](../../../../../docs/framework/security/security-changes.md).  
+>  In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher, dieses Element hat keine Auswirkungen auf die Assembly in den Ladezeiten. Weitere Informationen finden Sie im Abschnitt "Security Policy Vereinfachung" in [Sicherheitsänderungen](../../../../../docs/framework/security/security-changes.md).  
   
- Die common Language Runtime (CLR) versucht, beim Überprüfen der Authenticode-Signatur zur Ladezeit erstellen <xref:System.Security.Policy.Publisher> Beweis für die Assembly. Allerdings wird standardmäßig die meisten Anwendungen müssen nicht <xref:System.Security.Policy.Publisher> Beweis. Standard-CAS-Richtlinie nicht auf beruht die <xref:System.Security.Policy.PublisherMembershipCondition>. Vermeiden Sie die Kosten für unnötige Start bei der Überprüfung der Signatur des Herausgebers, wenn Ihre Anwendung auf einem Computer mit benutzerdefinierten CAS-Richtlinie ausgeführt wird oder Forderungen nach erfüllen beabsichtigt ist <xref:System.Security.Permissions.PublisherIdentityPermission> in einer teilweise vertrauenswürdigen Umgebung. (Anforderungen für Identitätsberechtigungen immer erfolgreich in einer vollständig vertrauenswürdigen Umgebung ausgeführt.)  
+ Die common Language Runtime (CLR) versucht zum Überprüfen der Authenticode-Signatur zur Ladezeit erstellen <xref:System.Security.Policy.Publisher> Beweis für die Assembly. Allerdings wird standardmäßig die meisten Anwendungen müssen nicht <xref:System.Security.Policy.Publisher> Beweise. Standard-CAS-Richtlinien beruht nicht auf die <xref:System.Security.Policy.PublisherMembershipCondition>. Vermeiden Sie die unnötige Start Kosten im Zusammenhang mit der Signatur des Herausgebers wird überprüft, es sei denn, Ihre Anwendung auf einem Computer mit benutzerdefinierten CAS-Richtlinie ausgeführt wird, oder zum Erfüllen der Anforderungen für die beabsichtigt ist <xref:System.Security.Permissions.PublisherIdentityPermission> in einer teilweise vertrauenswürdigen Umgebung. (Anforderungen für Identitätsberechtigungen immer erfolgreich in einer vollständig vertrauenswürdigen Umgebung.)  
   
 > [!NOTE]
->  Es wird empfohlen, dass Dienste verwenden die `<generatePublisherEvidence>` Element, um die startleistung zu verbessern.  Mit diesem Element können auch Verzögerungen zu vermeiden, die ein Timeout und den Abbruch des Dienststarts verursachen kann.  
+>  Es wird empfohlen, die Dienste verwenden die `<generatePublisherEvidence>` Element, um die startleistung zu verbessern.  Mit diesem Element können auch Verzögerungen zu vermeiden, die ein Timeout und den Abbruch des Dienststarts verursachen können.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
  Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie die `<generatePublisherEvidence>` -Element nach deaktivieren Verleger CAS-Richtlinie für eine Anwendung.  
+ Das folgende Beispiel zeigt, wie Sie mit der `<generatePublisherEvidence>` Element So deaktivieren Sie die Verleger-CAS-Richtlinie für eine Anwendung überprüfen.  
   
 ```xml  
 <configuration>  
@@ -79,5 +79,5 @@ Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Pu
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -7,11 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11e892d8ab9001d3670c801b43ba444aa24b2e41
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 32ffe48e7a65ab4ca2250eee65d188c0c7270c11
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611333"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a>&lt;AppDomainResourceMonitoring&gt; Element
 Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses an.  
@@ -34,14 +35,14 @@ Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Pr
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Common Language Runtime Statistiken für die ressourcenüberwachung der Anwendungsdomäne erfasst.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Runtime die Statistiken für die ressourcenüberwachung der Anwendungsdomäne erfasst.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`true`|Statistiken für die ressourcenüberwachung der Anwendungsdomäne werden gesammelt.|  
-|`false`|Statistiken für die ressourcenüberwachung der Anwendungsdomäne werden nicht erfasst.|  
+|`true`|Es werden Statistiken für die ressourcenüberwachung der Anwendungsdomäne gesammelt.|  
+|`false`|Statistiken für die ressourcenüberwachung der Anwendungsdomäne werden nicht gesammelt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,14 +55,14 @@ Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Pr
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ressourcenüberwachung der Anwendungsdomäne ist verfügbar, über die verwaltete Anwendung Domänenklasse, das hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) Schnittstelle und ereignisablaufverfolgung für Windows (ETW). Wenn die Überwachung aktiviert ist, werden Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses gesammelt.  
+ Ressourcenüberwachung der Anwendungsdomäne ist verfügbar, über die verwaltete Anwendung Domänenklasse, die das hosting [ICLRAppDomainResourceMonitor](../../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) Schnittstelle und ereignisablaufverfolgung für Windows (ETW). Wenn die Überwachung aktiviert ist, werden Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses erfasst.  
   
- Verwenden Sie zum Aktivieren der Überwachung von verwaltetem Code die <xref:System.AppDomain.MonitoringIsEnabled%2A> Eigenschaft.  
+ Verwenden Sie zum Überwachen von verwaltetem Code aktivieren die <xref:System.AppDomain.MonitoringIsEnabled%2A> Eigenschaft.  
   
  Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird gezeigt, wie die ressourcenüberwachung der Anwendungsdomäne aktiviert.  
+ Im folgende Beispiel veranschaulicht das Aktivieren der ressourcenüberwachung der Anwendungsdomäne.  
   
 ```xml  
 <configuration>  
@@ -72,6 +73,6 @@ Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Pr
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

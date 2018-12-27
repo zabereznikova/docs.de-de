@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71b4eb1dfb50774cea2f7a50d5e5350b0338f41e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745499"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612048"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;DevelopmentMode&gt; Element
 Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.  
@@ -44,8 +44,8 @@ Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch 
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**true**|Sucht nach Assemblys die DEVPATH-Umgebungsvariable angegebenen Verzeichnisse.|  
-|**false**|Sucht nicht nach Assemblys die DEVPATH-Umgebungsvariable angegebenen Verzeichnisse. Dies ist die Standardeinstellung|  
+|**true**|Sucht nach Assemblys in Verzeichnissen, die durch die DEVPATH-Umgebungsvariable angegeben.|  
+|**false**|Sucht nicht nach Assemblys in Verzeichnissen, die durch die DEVPATH-Umgebungsvariable angegeben. Dies ist der Standardwert|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -58,10 +58,10 @@ Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch 
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Einstellung nur zum Zeitpunkt der Entwicklung. Die Common Language Runtime überprüft nicht die Versionen auf Assemblys mit starkem Namen in die DEVPATH gefunden. Sie verwendet einfach die erste Assembly gefundenen.  
+ Verwenden Sie diese Einstellung nur zum Zeitpunkt der Entwicklung. Die Runtime überprüft nicht die Versionen auf Assemblys mit starkem Namen finden Sie in die DEVPATH. Sie verwendet einfach die erste Assembly gefundenen.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die dazu führen, dass die Common Language Runtime nach Assemblys die DEVPATH-Umgebungsvariable angegebenen Verzeichnisse suchen.  
+ Das folgende Beispiel zeigt, wie Sie dazu führen, dass die Runtime sucht nach Assemblys in Verzeichnissen, die durch die DEVPATH-Umgebungsvariable angegeben wird.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch 
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Gewusst wie: Suchen von Assemblys mit DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Vorgehensweise: Suchen von Assemblys mit DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

@@ -1,13 +1,13 @@
 ---
-title: Referenzzellen (F#)
+title: Referenzzellen
 description: Erfahren Sie, wie F# Referenzzellen Speicherorte sind, die Ihnen ermöglichen, änderbare Werte mit Verweissemantik zu erstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192255"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612763"
 ---
 # <a name="reference-cells"></a>Referenzzellen
 
@@ -57,6 +57,7 @@ Die folgende Tabelle enthält die Funktionen, die für die Referenzzelle verfüg
 |`ref` (Operator)|Kapselt einen Wert in einer neuen Referenzzelle.|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value` (Eigenschaft)|Ruft den zugrunde liegenden Wert ab oder legt diesen fest.|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents` (Datensatzfeld)|Ruft den zugrunde liegenden Wert ab oder legt diesen fest.|`'a`|`let ref x = { contents = x }`|
+
 Es gibt mehrere Möglichkeiten, auf den zugrunde liegenden Wert zuzugreifen. Der vom Dereferenzierungsoperator (`!`) zurückgegebene Wert ist kein zuweisbarer Wert. Wenn Sie den zugrunde liegenden Wert ändern, müssen Sie daher stattdessen den Zuweisungsoperator (`:=`) verwenden.
 
 Sowohl die `Value`-Eigenschaft als auch das `contents`-Feld sind zuweisbare Werte. Daher können Sie diese verwenden, um auf den zugrunde liegenden Wert zuzugreifen oder diesen zu ändern, wie im folgenden Code gezeigt.
@@ -74,7 +75,7 @@ Die Ausgabe lautet wie folgt.
 
 Das Feld `contents` wird für die Kompatibilität mit anderen Versionen von ML bereitgestellt und gibt während der Kompilierung eine Warnung aus. Verwenden Sie die `--mlcompatibility`-Compileroption, um die Warnung zu deaktivieren. Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).
 
-C#-Programmierer sollten wissen, dass `ref` in c# ist nicht dasselbe wie `ref` in F# erläutert werden. Die entsprechende Konstrukte in F# sind [Byrefs](byrefs.md), die ein anderes Konzept als Referenzzellen sind.
+C#Programmierer sollten wissen, dass `ref` in C# ist nicht dasselbe wie `ref` in F#. Die entsprechende Konstrukte in F# sind [Byrefs](byrefs.md), die ein anderes Konzept als Referenzzellen sind.
 
 Werte gekennzeichnet, als `mutable`automatisch auf heraufgestuft werden `'a ref` ; Closure erfasst finden Sie unter [Werte](values/index.md).
 

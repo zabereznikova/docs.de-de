@@ -1,21 +1,21 @@
 ---
-title: Typrückschluss (F#)
-description: Erfahren Sie, wie der F#-Compiler die Typen von Werten, Variablen, Parameter und Rückgabewerte herleitet.
+title: Typableitung
+description: Erfahren Sie, wie die F# leitet der Compiler die Typen von Werten, Variablen, Parameter und Rückgabewerte.
 ms.date: 05/16/2016
-ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3e61d5c81fde0a48af66a47745123a842dc04cb1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865695"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612789"
 ---
 # <a name="type-inference"></a>Typableitung
 
-In diesem Thema wird beschrieben, wie der F#-Compiler die Typen von Werten, Variablen, Parameter und Rückgabewerte herleitet.
+In diesem Thema wird beschrieben, wie die F# leitet der Compiler die Typen von Werten, Variablen, Parameter und Rückgabewerte.
 
 ## <a name="type-inference-in-general"></a>Im Allgemeinen den Typrückschluss
 
-Das Konzept der Typrückschluss ist, dass Sie keine geben die Art der F#-Konstrukte, außer wenn der Compiler allerdings den Typ hergeleitet werden kann. Explizite Typinformationen auslassen bedeutet nicht, dass F# einer dynamisch typisierten Sprache ist oder des typisierten, dass die Werte in F# sind. F# ist eine statisch typisierte Sprache, was bedeutet, dass der Compiler einen genauen Typ für jedes Konstrukt während der Kompilierung ableitet. Wenn nicht genügend Informationen, damit der Compiler die Typen von jedes Konstrukts Herleiten vorhanden ist, müssen Sie zusätzliche Typinformationen in der Regel angeben, indem Sie explizite Typen an einer beliebigen Stelle im Code hinzufügen.
+Das Konzept der Typrückschluss ist, dass Sie keine geben die Art der F#-Konstrukte, außer wenn der Compiler allerdings den Typ hergeleitet werden kann. Explizite Typinformationen auslassen bedeutet nicht, dass F# einer dynamisch typisierten Sprache ist oder des typisierten, dass die Werte in F# sind. F#ist eine statisch typisierte Sprache, was bedeutet, dass der Compiler einen genauen Typ für jedes Konstrukt während der Kompilierung ableitet. Wenn nicht genügend Informationen, damit der Compiler die Typen von jedes Konstrukts Herleiten vorhanden ist, müssen Sie zusätzliche Typinformationen in der Regel angeben, indem Sie explizite Typen an einer beliebigen Stelle im Code hinzufügen.
 
 ## <a name="inference-of-parameter-and-return-types"></a>Inferenz von Parameter- und Rückgabetypen
 
@@ -59,7 +59,7 @@ Der Typ wird abgeleitet werden
 
 ## <a name="additional-information"></a>Zusätzliche Informationen
 
-Typrückschluss wird in der F#-Sprachspezifikation ausführlicher beschrieben.
+Typrückschluss wird ausführlicher beschrieben. die F# -Sprachspezifikation.
 
 ## <a name="see-also"></a>Siehe auch
 

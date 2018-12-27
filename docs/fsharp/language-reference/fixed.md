@@ -1,17 +1,17 @@
 ---
-title: Das Fixed-Schlüsselwort (F#)
-description: Erfahren Sie, wie Sie "anheften" wird eine lokale im Stapel, um zu verhindern, dass bei der Sammlung mit den F#-'Schlüsselwort fixed".
+title: Das fixed-Schlüsselwort
+description: Erfahren Sie, wie Sie "pin" eine lokale im Stapel, um zu verhindern, dass bei der Sammlung mit den F# 'fixed'-Schlüsselwort.
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624508"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614338"
 ---
-# <a name="the-fixed-keyword"></a>Das Fixed-Schlüsselwort
+# <a name="the-fixed-keyword"></a>Das fixed-Schlüsselwort
 
-F# 4.1 führt die `fixed` -Schlüsselwort, das Ihnen ermöglicht, eine lokale im Stapel, um zu verhindern, dass es gesammelt oder während der Garbage Collection verschoben "anheften".  Sie wird für Low-Level Programmierszenarios verwendet.
+F#4.1 führt die `fixed` -Schlüsselwort, das Ihnen ermöglicht, eine lokale im Stapel, um zu verhindern, dass es gesammelt oder während der Garbage Collection verschoben "anheften".  Sie wird für Low-Level Programmierszenarios verwendet.
 
 ## <a name="syntax"></a>Syntax
 

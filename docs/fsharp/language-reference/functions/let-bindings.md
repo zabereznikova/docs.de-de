@@ -1,13 +1,13 @@
 ---
-title: let-Bindungen (F#)
-description: Erfahren Sie, wie Sie mit einer F#-'-Bindung, die einen Bezeichner mit einem Wert oder die Funktion ordnet let'.
+title: let-Bindungen
+description: Erfahren Sie, wie Sie mit einem F# "let" Bindung, die einen Bezeichner mit einem Wert oder einer Funktion verknüpft.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43777469"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612672"
 ---
 # <a name="let-bindings"></a>let-Bindungen
 
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-Einige Module verfügen über das Attribut [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), was bedeutet, dass die Funktionen, die sie verfügbar machen, die mit dem Namen des Moduls gekennzeichnet sein müssen. F#-List-Modul hat z. B. dieses Attribut.
+Einige Module verfügen über das Attribut [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), was bedeutet, dass die Funktionen, die sie verfügbar machen, die mit dem Namen des Moduls gekennzeichnet sein müssen. Z. B. die F# List-Modul hat dieses Attribut.
 
 Weitere Informationen zu Modulen und Access Control, finden Sie unter [Module](../modules.md) und [Zugriffssteuerung](../access-control.md).
 

@@ -1,13 +1,13 @@
 ---
-title: Funktionen (F#)
+title: Funktionen
 description: Informationen Sie zu Funktionen in F# und wie F# gemeinsamen Konstrukte der funktionalen Programmierung unterstützt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839569"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610917"
 ---
 # <a name="functions"></a>Funktionen
 
@@ -142,7 +142,7 @@ Ein *Lambdaausdruck* ist eine unbenannte Funktion. Im vorherigen Beispiel könnt
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Sie definieren Lambdaausdrücke mithilfe des `fun`-Schlüsselworts. Ein Lambdaausdruck ähnelt einer Funktionsdefinition, außer dass statt eines `=`-Tokens das `->`-Token zum Trennen der Argumentliste vom Funktionsrumpf verwendet wird. So wie in einer regulären Funktionsdefinition, können Argumenttypen explizit abgeleitet oder angegeben werden. Der Rückgabetyp des Lambdaausdrucks wird vom Typ des letzten Ausdrucks im Text abgeleitet. Weitere Informationen finden Sie unter [Lambda-Ausdrücke: Das `fun`-Schlüsselwort (F#)](../functions/lambda-expressions-the-fun-keyword.md).
+Sie definieren Lambdaausdrücke mithilfe des `fun`-Schlüsselworts. Ein Lambdaausdruck ähnelt einer Funktionsdefinition, außer dass statt eines `=`-Tokens das `->`-Token zum Trennen der Argumentliste vom Funktionsrumpf verwendet wird. So wie in einer regulären Funktionsdefinition, können Argumenttypen explizit abgeleitet oder angegeben werden. Der Rückgabetyp des Lambdaausdrucks wird vom Typ des letzten Ausdrucks im Text abgeleitet. Weitere Informationen finden Sie unter [Lambda-Ausdrücken: Die `fun` Schlüsselwort](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Funktionskomposition und Pipelining
 

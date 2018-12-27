@@ -2,12 +2,12 @@
 title: Typanbieter
 description: Erfahren Sie, wie ein F#-Typanbieter eine Komponente, die Typen, Eigenschaften und Methoden für die Verwendung in Ihren Programmen bereitstellt.
 ms.date: 04/02/2018
-ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46697762"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611632"
 ---
 # <a name="type-providers"></a>Typanbieter
 
@@ -19,7 +19,7 @@ Vorausgesetzt, dass die Typen von Eingabeparametern für ein Typanbieter abhäng
 
 ## <a name="generative-and-erased-type-providers"></a>Produktive und gelöschten Typanbietern
 
-Gibt zwei Arten von Typanbietern: Generative und gelöschten.
+Typanbieter gibt zwei Arten: Produktive und gelöschten.
 
 Produktive Typanbieter erzeugen, Typen, die als Typen in .NET in die Assembly geschrieben werden können in denen sie erstellt wurden. Dadurch können sie aus Code in anderen Assemblys verwendet werden. Dies bedeutet, dass die typisierte Darstellung der Datenquelle in der Regel eine sein muss, die mit .NET-Typen darstellen möglich ist.
 

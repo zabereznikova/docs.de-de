@@ -1,13 +1,13 @@
 ---
-title: Assertionen (F#)
+title: Assertionen
 description: Erfahren Sie, wie Sie mit der Ausdruck "assert" als eine Debugfunktion zum Testen von Ausdrücken in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2d97386e87e9b915da490a78fff9aedb9def616
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127250"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610202"
 ---
 # <a name="assertions"></a>Assertionen
 

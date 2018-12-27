@@ -1,13 +1,13 @@
 ---
-title: do-Bindungen (F#)
-description: Erfahren Sie, wie eine F#-"Bindung" do"verwendet wird, Code auszuführen, ohne die Definition einer Funktion oder einen Wert.
+title: do-Bindungen
+description: Erfahren Sie, wie ein F# 'do', Bindung werden verwendet, um Code auszuführen, ohne die Definition einer Funktion oder Wert.
 ms.date: 05/16/2016
-ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d29f8557fda06097d2e85748ab6286f0415730b3
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973143"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614518"
 ---
 # <a name="do-bindings"></a>do-Bindungen
 

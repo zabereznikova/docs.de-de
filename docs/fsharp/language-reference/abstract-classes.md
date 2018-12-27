@@ -1,13 +1,13 @@
 ---
-title: Abstrakte Klassen (F#)
-description: Erfahren Sie mehr über F#-abstrakte Klassen, die einige oder alle Member nicht implementiert lassen, und stellen Sie allgemeine Funktionalität einem unterschiedlichen Satz von Objekttypen dar.
+title: Abstrakte Klassen
+description: Erfahren Sie mehr über F# abstrakte Klassen, die einige oder alle Member nicht implementiert lassen, und stellen allgemeine Funktionen einem unterschiedlichen Satz von Objekttypen dar.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7e1bb9daca7e8a3b442cd7fb02ef99bb6a2085cb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fecd3b2d550c6b8f59fa614f5d00c5f730a4896a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43745449"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613478"
 ---
 # <a name="abstract-classes"></a>Abstrakte Klassen
 
@@ -30,7 +30,7 @@ abstract member member-name : type-signature
 
 In der objektorientierten Programmierung eine abstrakte Klasse dient als Basisklasse einer Hierarchie und einen unterschiedlichen Satz von Objekttypen häufig verwendeten Funktionen darstellt. Wie "abstrakt" der Name schon sagt, entsprechen abstrakte Klassen häufig nicht direkt auf konkrete Entitäten in der Problemdomäne. Allerdings bedeuten sie, wie viele unterschiedliche konkrete Entitäten Gemeinsamkeit aufweisen.
 
-Abstrakte Klassen müssen die `AbstractClass` Attribut. Sie können implementiert und nicht die Member implementiert haben. Die Verwendung des Begriffs *abstrakte* bei Anwendung auf eine Klasse ist der gleiche wie in anderen, jedoch die Verwendung des Begriffs *abstrakte* bei Anwendung auf Methoden (und Eigenschaften) ist ein wenig anders in F# von der Verwenden Sie in anderen .NET-Sprachen. In F# erläutert werden, wenn eine Methode gekennzeichnet ist, mit der `abstract` -Schlüsselwort, dies gibt an, dass ein Element auf einen Eintrag, bekannt als hat eine *virtueller Dispatch-Slot*, in die interne Tabelle der virtuellen Funktionen für diesen Typ. Das heißt, die Methode virtuell ist, obwohl die `virtual` -Schlüsselwort nicht in der Sprache F# verwendet. Das Schlüsselwort `abstract` wird verwendet, auf die virtuellen Methoden, unabhängig davon, ob die Methode implementiert wird. Die Deklaration ein virtueller Dispatch-Slot unterscheidet sich von der Definition einer Methode für diesen Slot verteilen. Aus diesem Grund F# eine virtuelle Methodendeklaration und Definition in einer anderen .NET-Sprache, entspricht einer Kombination aus einer abstrakten Methodendeklaration und eine separate Definition, entweder mit der `default` Schlüsselwort oder `override` Schlüsselwort. Weitere Informationen und Beispiele finden Sie unter [Methoden](members/methods.md).
+Abstrakte Klassen müssen die `AbstractClass` Attribut. Sie können implementiert und nicht die Member implementiert haben. Die Verwendung des Begriffs *abstrakte* bei Anwendung auf eine Klasse ist der gleiche wie in anderen, jedoch die Verwendung des Begriffs *abstrakte* bei Anwendung auf Methoden (und Eigenschaften) ist ein wenig anders in F# von der Verwenden Sie in anderen .NET-Sprachen. In F#, wenn eine Methode gekennzeichnet ist, mit der `abstract` -Schlüsselwort, dies gibt an, dass ein Element auf einen Eintrag, bekannt als hat eine *virtueller Dispatch-Slot*, in die interne Tabelle der virtuellen Funktionen für diesen Typ. Das heißt, die Methode virtuell ist, obwohl die `virtual` -Schlüsselwort nicht in der Sprache F# verwendet. Das Schlüsselwort `abstract` wird verwendet, auf die virtuellen Methoden, unabhängig davon, ob die Methode implementiert wird. Die Deklaration ein virtueller Dispatch-Slot unterscheidet sich von der Definition einer Methode für diesen Slot verteilen. Aus diesem Grund F# eine virtuelle Methodendeklaration und Definition in einer anderen .NET-Sprache, entspricht einer Kombination aus einer abstrakten Methodendeklaration und eine separate Definition, entweder mit der `default` Schlüsselwort oder `override` Schlüsselwort. Weitere Informationen und Beispiele finden Sie unter [Methoden](members/methods.md).
 
 Eine Klasse gilt als abstrakte nur, wenn es sind abstrakte Methoden, die deklariert, aber nicht definiert. Aus diesem Grund sind Klassen, die abstrakte Methoden verfügen über nicht zwangsläufig abstrakte Klassen. Es sei denn, eine Klasse, nicht die abstrakte Methoden definiert wurde, verwenden Sie nicht die **AbstractClass** Attribut.
 

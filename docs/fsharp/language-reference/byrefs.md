@@ -1,17 +1,17 @@
 ---
-title: Parametry (F#)
+title: Parametry
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 09/02/2018
-ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48836880"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611580"
 ---
 # <a name="byrefs"></a>Parametry
 
-F# verfügt über zwei Hauptfunktionen, die sich im Bereich der Programmierung auf unterer Ebene beschäftigen:
+F#verfügt über zwei Hauptfunktionen, die sich im Bereich der Programmierung auf unterer Ebene beschäftigen:
 
 * Die `byref` / `inref` / `outref` Typen, die einen verwalteten Zeiger. Sie haben Einschränkungen bei der Nutzung, sodass Sie ein Programm kompilieren nicht möglich, die zur Laufzeit ungültig ist.
 * Ein `byref`– wie Struktur, die ist eine [Struktur](structures.md) hat ähnliche Semantik und die gleichen Einschränkungen während der Kompilierung wie `byref<'T>`. Ein Beispiel ist die <xref:System.Span%601>.
@@ -97,7 +97,7 @@ Folgendes gilt auch:
 * Es gibt keine Auswirkung, die von anderen Threads, oder Aliase haben keinen Schreibzugriff auf `x`.
 * Es gibt keine Auswirkung, `SomeStruct` ist aufgrund des unveränderlich `x` wird ein `inref`.
 
-Allerdings Wert für F#-Typen, die **sind** unveränderlich, die `this` Zeiger wird davon ausgegangen werden ein `inref`.
+Beachten Sie jedoch bei F# Werttypen, die **sind** unveränderlich, die `this` Zeiger wird davon ausgegangen werden ein `inref`.
 
 Alle diese Regeln, die zusammen bedeuten, dass den Inhaber des ein `inref` Zeiger kann nicht den unmittelbaren Inhalt des Arbeitsspeichers auf das gezeigt wird nicht ändern.
 
@@ -109,7 +109,7 @@ Der Zweck der `outref<'T>` ist, um anzugeben, dass der Zeiger nur aus gelesen we
 
 C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den `ref` zurückgibt. Die folgende Tabelle zeigt, wie F# interpretiert wie c# ausgibt:
 
-|C#-Konstrukt|F#-leitet|
+|C#-Konstrukt|F#leitet ab|
 |------------|---------|
 |`ref` Rückgabewert|`outref<'T>`|
 |`ref readonly` Rückgabewert|`inref<'T>`|
@@ -118,7 +118,7 @@ C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den
 
 Die folgende Tabelle zeigt, was F# ausgibt:
 
-|F#-Konstrukts|Ausgegebene-Konstrukt|
+|F#Erstellen|Ausgegebene-Konstrukt|
 |------------|-----------------|
 |`inref<'T>` Argument|`[In]` Attribut für argument|
 |`inref<'T>` zurück|`modreq` Attribut nach Wert|
@@ -127,7 +127,7 @@ Die folgende Tabelle zeigt, was F# ausgibt:
 
 ### <a name="type-inference-and-overloading-rules"></a>Typrückschluss und Überladen von Regeln
 
-Ein `inref<'T>` Typ abgeleitet wird, vom F#-Compiler in den folgenden Fällen:
+Ein `inref<'T>` Typ abgeleitet wird, durch die F# Compiler in den folgenden Fällen:
 
 1. Ein .NET-Parameter oder Rückgabewert den Typ, der verfügt über eine `IsReadOnly` Attribut.
 2. Die `this` Zeiger auf einen Strukturtyp, die keine änderbaren Felder enthält.
@@ -172,7 +172,7 @@ Ein "`byref`-wie" "Struct" in F# ist ein Stack gebundene Wert. Sie wird nie auf 
 * Sie können nicht anhand des Konstrukte Closure erfasst werden (`async` Methoden oder Lambdaausdrücke).
 * Sie können nicht als generischer Parameter verwendet werden.
 
-Dieser letzte Punkt ist entscheidend für F#-Programmierung im Pipeline-Stil, als `|>` ist eine generische Funktion, die die Eingabetypen parametrisiert. Diese Einschränkung gelockert werden kann, für die `|>` in Zukunft wird Inline und macht keine Aufrufe von nicht-generische Inlinefunktionen in ihrem Text.
+Dieser letzte Punkt ist entscheidend für F# Programmierung im Pipeline-Stil, als `|>` ist eine generische Funktion, die die Eingabetypen parametrisiert. Diese Einschränkung gelockert werden kann, für die `|>` in Zukunft wird Inline und macht keine Aufrufe von nicht-generische Inlinefunktionen in ihrem Text.
 
 Obwohl diese Regeln sehr stark Nutzung einzuschränken, werden diese zur Erfüllung der Zusage von High Performance computing, auf sichere Weise.
 

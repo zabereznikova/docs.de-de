@@ -1,17 +1,17 @@
 ---
-title: Externe Funktionen (F#)
-description: Erfahren Sie mehr über die F#-sprachunterstützung für das Aufrufen von Funktionen in systemeigenen Code.
+title: Externe Funktionen
+description: Erfahren Sie mehr über die F# sprachunterstützung für das Aufrufen von Funktionen in systemeigenen Code.
 ms.date: 05/16/2016
-ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973104"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611725"
 ---
 # <a name="external-functions"></a>Externe Funktionen
 
-Dieses Thema beschreibt die F#-sprachunterstützung für das Aufrufen von Funktionen in systemeigenen Code.
+In diesem Thema wird beschrieben, F# sprachunterstützung für das Aufrufen von Funktionen in systemeigenen Code.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-Sie können diese Funktion von F#-aufrufen, mit dem folgenden Code.
+Sie können diese Funktion aus aufrufen F# mithilfe des folgenden Codes.
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-Interoperabilität mit systemeigenem Code wird als bezeichnet *Plattformaufruf* ist ein Feature der CLR. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md). Die Informationen in diesem Abschnitt gilt für F#-zur Verfügung.
+Interoperabilität mit systemeigenem Code wird als bezeichnet *Plattformaufruf* ist ein Feature der CLR. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md). Die Informationen in diesem Abschnitt gilt für F#.
 
 ## <a name="see-also"></a>Siehe auch
 
