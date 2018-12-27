@@ -1,13 +1,13 @@
 ---
-title: Ausführliche Syntax (F#)
+title: Ausführliche Syntax
 description: Erfahren Sie, den Unterschied zwischen ausführliche und einfache Syntax in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: e697c6fe619df7ffe12f7d4e2a234a5a5cb401ff
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 05b909d438e9844ad5adcb2a4087ce04f8999751
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50196764"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610891"
 ---
 # <a name="verbose-syntax"></a>Ausführliche Syntax
 
@@ -15,7 +15,7 @@ Es gibt zwei Formen der Syntax für viele Konstrukte in F# verfügbar: *ausführ
 
 ## <a name="table-of-constructs"></a>Tabelle der Konstrukte
 
-Die folgende Tabelle zeigt die einfache und ausführliche Syntax für F#-Konstrukte in Kontexten, ein Unterschied zwischen den beiden Formaten besteht. In dieser Tabelle spitze Klammern (&lt;&gt;) schließen Sie die benutzerdefinierte Syntaxelemente. Finden Sie in der Dokumentation für jede Sprachkonstrukt Weitere ausführliche Informationen zur Syntax, die innerhalb dieser Konstrukte verwendet.
+Die folgende Tabelle zeigt die einfache und ausführliche Syntax für F# Sprachkonstrukte in Kontexten, ein Unterschied zwischen den beiden Formaten besteht. In dieser Tabelle spitze Klammern (&lt;&gt;) schließen Sie die benutzerdefinierte Syntaxelemente. Finden Sie in der Dokumentation für jede Sprachkonstrukt Weitere ausführliche Informationen zur Syntax, die innerhalb dieser Konstrukte verwendet.
 
 <table>
 <tr>

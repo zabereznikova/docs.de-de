@@ -1,13 +1,13 @@
 ---
-title: Musterabgleich (F#)
+title: Musterabgleich
 description: Erfahren Sie, wie Muster werden in F# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991423"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613582"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -15,7 +15,7 @@ Muster sind Regeln zum Transformieren von Eingabedaten. Sie werden in F# stets v
 
 ## <a name="remarks"></a>Hinweise
 
-Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Vergleichsausdrücke](match-expressions.md), [let-Bindungen](functions/let-bindings.md), [Lambda-Ausdrücke: der `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md), und [Ausnahmen: die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
+Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Vergleichsausdrücke](match-expressions.md), [let-Bindungen](functions/let-bindings.md), [Lambda-Ausdrücken: Die `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md), und [Ausnahmen: Die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
 
 Z. B. in der `match` Ausdruck, der *Muster* ist, was dem Pipesymbol angegeben.
 
@@ -103,7 +103,7 @@ match shape with
 
 Mit aktiven Mustern können Sie komplexere benutzerdefinierte Musterabgleiche definieren. Weitere Informationen über aktive Muster finden Sie unter [mit aktiven Mustern](active-patterns.md).
 
-Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen über Mustervergleich bei der Behandlung von Ausnahmen finden Sie unter [Ausnahmen: die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
+Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen über Mustervergleich bei der Behandlung von Ausnahmen finden Sie unter [Ausnahmen: Die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Variablenmuster
 

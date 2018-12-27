@@ -1,13 +1,13 @@
 ---
-title: Datensätze (F#)
+title: Datensätze
 description: Erfahren Sie, wie F#-Datensätzen für einfache Aggregate benannter Werte, optional mit Membern darstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261289"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656140"
 ---
 # <a name="records"></a>Datensätze
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>Erstellen von sich gegenseitig rekursiver-Datensätzen
+
+Einige Zeit, wenn Sie einen Datensatz zu erstellen, empfiehlt es sich so, dass sie von einem anderen Typ abhängen, die Sie später definieren möchten. Dies ist ein Fehler während der Kompilierung, es sei denn, Sie definieren, dass der Record-Typen, um sich gegenseitig rekursiv sein.
+
+Definieren von sich gegenseitig rekursiver Datensätze erfolgt mit der `and` Schlüsselwort. Dadurch können Sie die Typen von 2 oder mehr Datensätze miteinander zu verknüpfen.
+
+Der folgende Code definiert z. B. eine `Person` und `Address` Typ als sich gegenseitig rekursiver:
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+Würden Sie im vorherige Beispiel ohne definieren die `and` -Schlüsselwort, und es wird nicht kompiliert werden. Die `and` -Schlüsselwort ist erforderlich, sich gegenseitig rekursiver Definitionen.
 
 ## <a name="pattern-matching-with-records"></a>Musterabgleich mit Datensätzen
 

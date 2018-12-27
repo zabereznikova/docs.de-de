@@ -1,13 +1,13 @@
 ---
-title: Quellzeilen-, Datei- und Pfadbezeichner (F#)
-description: Erfahren Sie, wie mit integrierten F#-ID-Werte, die Sie auf die Zeilennummer der Quelle, Verzeichnis und Dateinamen in Ihrem Code zugreifen können.
+title: Quellzeilen-, Datei- und Pfadbezeichner
+description: Erfahren Sie, wie integrierte F# -ID-Werte, mit denen Sie Zugriff auf die Quelle Zeile, das Verzeichnis, und die Dateinamen in Ihrem Code.
 ms.date: 05/16/2016
-ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865126"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656010"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Quellzeilen-, Datei- und Pfadbezeichner
 
@@ -32,6 +32,7 @@ Die Quellzeile, Datei, und Pfadbezeichner, die in F# verfügbar sind, werden in 
 |`__LINE__`|Ergibt die aktuelle Zeilennummer, in Betracht ziehen `#line` Anweisungen.|
 |`__SOURCE_DIRECTORY__`|Ergibt den aktuellen, vollständigen Pfad des Quellverzeichnisses, in Betracht ziehen `#line` Anweisungen.|
 |`__SOURCE_FILE__`|Ergibt den aktuellen Dateinamen für die Quelle und des Pfads, in Betracht ziehen `#line` Anweisungen.|
+
 Weitere Informationen zu den `#line` -Anweisung finden Sie unter [Compilerdirektiven](compiler-directives.md).
 
 ## <a name="example"></a>Beispiel
