@@ -1,13 +1,13 @@
 ---
-title: Umwandlung und Konvertierungen (F#)
+title: Umwandlung und Konvertierungen
 description: Erfahren Sie, wie die Programmiersprache F# Konvertierungsoperatoren für arithmetische Konvertierungen zwischen primitiven Typen von verschiedenen bereitstellt.
 ms.date: 05/16/2016
-ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 2a12d48106a267edfc67c9e7b3d3a7bd41d8261c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45677928"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655984"
 ---
 # <a name="casting-and-conversions-f"></a>Umwandlung und Konvertierungen (F#)
 
@@ -15,7 +15,7 @@ Dieses Thema beschreibt die Unterstützung für Typumwandlungen in F#.
 
 ## <a name="arithmetic-types"></a>Arithmetische Typen
 
-F# bietet Konvertierungsoperatoren für arithmetische Konvertierungen zwischen verschiedenen primitive Typen, z. B. zwischen ganzzahligen und Gleitkommatypen. Die integrale und Char-Konvertierungsoperatoren überprüft haben und die unchecked-Formulare der Gleitkommawert, Operatoren und die `enum` Konvertierungsoperator nicht der Fall. Die unchecked-Formen werden in definierten `Microsoft.FSharp.Core.Operators` und die checked-Formen in definiert `Microsoft.FSharp.Core.Operators.Checked`. Die checked-Formen Überlauf überprüfen und generieren eine Laufzeitausnahme aus, wenn der resultierende Wert die Grenzwerte des Zieltyps überschreitet.
+F#Stellt Konvertierungsoperatoren für arithmetische Konvertierungen zwischen verschiedenen primitive Typen, z. B. zwischen Ganzzahl- und Gleitkommatypen bereit. Die integrale und Char-Konvertierungsoperatoren überprüft haben und die unchecked-Formulare der Gleitkommawert, Operatoren und die `enum` Konvertierungsoperator nicht der Fall. Die unchecked-Formen werden in definierten `Microsoft.FSharp.Core.Operators` und die checked-Formen in definiert `Microsoft.FSharp.Core.Operators.Checked`. Die checked-Formen Überlauf überprüfen und generieren eine Laufzeitausnahme aus, wenn der resultierende Wert die Grenzwerte des Zieltyps überschreitet.
 
 Die einzelnen Operatoren verfügt über den gleichen Namen wie der Name des Zieltyps. In den folgenden Code, in denen die Typen explizit mit Anmerkungen versehen werden, z. B. `byte` wird mit zwei unterschiedliche Bedeutungen angezeigt. Das erste Vorkommen ist der Typ und der zweite Operator für die Konvertierung.
 
@@ -40,6 +40,7 @@ Die folgende Tabelle zeigt die Konvertierungsoperatoren, die in F# definiert.
 |`decimal`|Konvertieren in `System.Decimal`.|
 |`char`|Konvertieren in `System.Char`, ein Unicode-Zeichen.|
 |`enum`|Für einen enumerierten Typ zu konvertieren.|
+
 Zusätzlich zur integrierten primitiven Typen können Sie diese Operatoren mit Typen, die implementieren `op_Explicit` oder `op_Implicit` Methoden mit den geeigneten Signaturen. Z. B. die `int` Konvertierungsoperator funktioniert mit jeder Typ, der eine statische Methode enthält `op_Explicit` , die den Typ als Parameter akzeptiert und gibt `int`. Als eine spezielle Ausnahme als allgemeine Regel, dass Methoden, durch den Rückgabetyp überladen werden, hierzu können Sie für `op_Explicit` und `op_Implicit`.
 
 ## <a name="enumerated-types"></a>Enumerationstypen
@@ -67,7 +68,7 @@ Weitere Informationen finden Sie unter [Enumerationen](enumerations.md).
 
 Konvertierung zwischen Typen in einer Objekthierarchie ist elementar für objektorientierte Programmierung. Es gibt zwei grundlegende Arten von Konvertierungen: Typumwandlung nach oben (umwandeln) und nach unten (Downcasting) umwandeln. Typumwandlung, eine Hierarchie bedeutet, dass die Umwandlung von einer abgeleiteten Objektverweis auf ein Basisobjekt-Verweis. Eine solche Umwandlung ist garantiert funktioniert nur, wenn in der Vererbungshierarchie der abgeleiteten Klasse die Basisklasse ist. Umwandeln in eine Hierarchie, aus einem Basisobjekt-Verweis auf ein abgeleitetes Objekt-Verweis ist erfolgreich, nur dann, wenn das Objekt tatsächlich eine Instanz des Typs richtige Ziel (abgeleitete) oder ein Typ, der den Zieltyp abgeleitet ist.
 
-F# stellt Operatoren für diese Arten von Konvertierungen bereit. Die `:>` -Operator wandelt der Hierarchie, und die `:?>` Operator Abwärtsumwandlung in der Hierarchie.
+F#Stellt die Operatoren für diese Arten von Konvertierungen bereit. Die `:>` -Operator wandelt der Hierarchie, und die `:?>` Operator Abwärtsumwandlung in der Hierarchie.
 
 ### <a name="upcasting"></a>Umwandeln
 

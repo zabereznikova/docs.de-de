@@ -1,13 +1,13 @@
 ---
-title: Typerweiterungen (F#)
-description: Erfahren Sie, wie F#-Erweiterungen ermöglichen, dass Sie einen zuvor definierten Objekttyp neue Member hinzufügen.
+title: Typerweiterungen
+description: Erfahren Sie, wie F# typerweiterungen können Sie einen zuvor definierten Objekttyp neue Member hinzufügen.
 ms.date: 07/20/2018
-ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43874978"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614057"
 ---
 # <a name="type-extensions"></a>Erweiterungen des Typs
 
