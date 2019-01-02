@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201581"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397045"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Best Practices für das Laden von Assemblys
 In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können. In diesem Artikel werden folgende Empfehlungen besprochen:  
@@ -44,7 +44,7 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
   
 -   Der LoadFrom-Kontext enthält Assemblys, die von Speicherorten geladen werden, die vom Ladeprogramm nicht durchsucht wurden. Add-Ins können z.B. in einem Verzeichnis installiert sein, dass sich nicht im Anwendungspfad befindet. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> und <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> sind Beispiel für Methoden, die anhand des Pfads laden.  
   
--   Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [How to: Load Assemblies into the Reflection-Only Context (Vorgehensweise: Laden von Assemblys in den ReflectionOnly-Kontext)](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   Der ReflectionOnly-Kontext enthält Assemblys, die mit den Methoden <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> und <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> geladen wurden. Code, der sich in diesem Kontext befindet, kann nicht ausgeführt werden. Deshalb wird darauf hier nicht weiter eingegangen. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 -   Wenn Sie eine vorübergehende dynamische Assembly mit der Reflektionsausgabe erstellt haben, befindet die Assembly sich in keinem Kontext. Außerdem werden Assemblys, die mit der <xref:System.Reflection.Assembly.LoadFile%2A>-Methode geladen wurden, ohne Kontext geladen. Assemblys, die aus Bytearrays geladen werden, werden ohne Kontext geladen, es sei denn, ihre Identität (nachdem eine Richtlinie angewendet wurde) gibt an, dass sie sich im globalen Assemblycache befinden.  
   
@@ -154,7 +154,7 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
  Wenn Sie Ihre Assemblys nicht alle in den Suchpfad verschieben können, ziehen Sie Alternativen wie das Add-In-Modell von .NET Framework, das Platzieren von Assemblys in den globalen Assemblycache oder das Erstellen einer Anwendungsdomäne in Erwägung.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Ziehen Sie in Erwägung das Add-In-Modell von .NET Framework zu verwenden  
- Wenn Sie den LoadFrom-Kontext verwenden, um Add-Ins zu implementieren, die für gewöhnlich nicht in der Anwendungsbasis installiert sind, verwenden Sie das Add-In-Modell von .NET Framework. Dieses Modell ermöglicht die Isolation auf der Anwendungsdomänen- oder Prozessebene, ohne dass Sie die Anwendungsdomäne selbst verwalten müssen. Weiter Informationen zum Add-In-Modell finden Sie unter [Add-ins and Extensibility (Add-Ins und Erweiterbarkeit)](../../../docs/framework/add-ins/index.md).  
+ Wenn Sie den LoadFrom-Kontext verwenden, um Add-Ins zu implementieren, die für gewöhnlich nicht in der Anwendungsbasis installiert sind, verwenden Sie das Add-In-Modell von .NET Framework. Dieses Modell ermöglicht die Isolation auf der Anwendungsdomänen- oder Prozessebene, ohne dass Sie die Anwendungsdomäne selbst verwalten müssen. Weiter Informationen zum Add-In-Modell finden Sie unter [Add-ins and Extensibility (Add-Ins und Erweiterbarkeit)](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Ziehen Sie in Erwägung, den globalen Assemblycache zu verwenden  
  Platzieren Sie Assemblys in den globalen Assemblycache, um vom Pfad der freigegebenen Assembly zu profitieren, die sich außerhalb der Anwendungsbasis befindet. Dabei büßen Sie aber nichts an den Vorteilen des Standard-Load-Kontexts ein. Ebenso wenig müssen Sie sich mit den Nachteilen der anderen Kontexte auseinandersetzen.  
@@ -170,4 +170,3 @@ In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typ
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [Add-Ins und Erweiterbarkeit](../../../docs/framework/add-ins/index.md)

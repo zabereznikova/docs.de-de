@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149379"
+ms.locfileid: "53170027"
 ---
 # <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017
 
@@ -30,11 +30,11 @@ Beginnen Sie, indem Sie eine einfache „Hello World“-Konsolenanwendung erstel
 
 1. Starten Sie Visual Studio 2017. Wählen Sie **Datei** > **Neu** > **Projekt** aus der Menüleiste aus. Klicken Sie im Dialogfeld *Neues Projekt** auf den Knoten **Visual Basic** und anschließend auf den Knoten **.NET Core**. Klicken Sie dann auf die Projektvorlage **Konsolen-App (.NET Core)**. Geben Sie im Textfeld **Name** „HelloWorld“ ein. Klicken Sie auf die Schaltfläche **OK**.
 
-   ![Dialogfeld „Neues Projekt“, in dem die Konsolen-App ausgewählt ist](./media/vb-with-visual-studio/new-project.png)
+   ![Dialogfeld „Neues Projekt“, in dem die Konsolen-App ausgewählt ist](./media/vb-with-visual-studio/visual-studio-new-project.png)
    
 1. Visual Studio verwendet die Vorlage, um Ihr Projekt zu erstellen. Die Visual Basic-Konsolenanwendungsvorlage für .NET Core definiert automatisch die Klasse `Program` mit der einzelnen Methode `Main`, die ein <xref:System.String> Array als Argument akzeptiert. `Main` ist der Einstiegspunkt der Anwendung, die Methode, die automatisch von der Laufzeit aufgerufen wird, wenn diese die Anwendung startet. Alle Befehlszeilenargumente, die beim Start der Anwendung bereitgestellt werden, sind im *args*-Array verfügbar.
 
-   ![Visual Studio und das neue HelloWorld-Projekt](./media/vb-with-visual-studio/devenv.png)
+   ![Visual Studio und das neue HelloWorld-Projekt](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
    Die Vorlage erstellt eine einfache „Hello World“-Anwendung. Sie ruft die <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>-Methode auf, um die literale Zeichenfolge „Hello World!“ im Konsolenfenster anzuzeigen. Indem Sie auf der Symbolleiste die **HelloWorld**-Schaltfläche mit dem grünen Pfeil auswählen, können Sie das Programm im Debugmodus ausführen. In diesem Fall ist das Konsolenfenster nur sehr kurz zu sehen und wird wieder geschlossen. Dies liegt daran, dass die Methode `Main` beendet wird und die Anwendung endet, sobald die einzige Anweisung in der `Main`-Methode ausgeführt wurde.
 
@@ -50,7 +50,7 @@ Beginnen Sie, indem Sie eine einfache „Hello World“-Konsolenanwendung erstel
 
 1. Führen Sie das Programm aus, indem Sie auf der Symbolleiste die **HelloWorld**-Schaltfläche mit dem grünen Pfeil auswählen.
 
-   ![Konsolenfenster, das Hello World „Drücken Sie eine beliebige Taste, um fortzufahren...“ zeigt](./media/with-visual-studio/helloworld1.png)
+   ![Konsolenfenster, das Hello World „Drücken Sie eine beliebige Taste, um fortzufahren...“ zeigt](./media/with-visual-studio/hello-world-console.png)
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen.
 
@@ -64,7 +64,7 @@ Erweitern Sie Ihre Anwendung, um die Benutzer aufzufordern, seinen oder ihren Na
 
    Dieser Code ersetzt die bestehenden Anweisungen <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> und <xref:System.Console.ReadKey%2A?displayProperty=nameWithType>.
 
-   ![Visual Studio-Programmdatei mit aktualisierter Main-Methode](./media/vb-with-visual-studio/codewindow.png)
+   ![Visual Studio-Programmdatei mit aktualisierter Main-Methode](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
    Dieser Code zeigt „What is your name?“ im Konsolenfenster an und wartet, bis der Benutzer eine Zeichenfolge eingegeben und die EINGABETASTE gedrückt hat. Der Code speichert diese Zeichenfolge in einer Variablen namens `name`. Er ruft auch den Wert der <xref:System.DateTime.Now?displayProperty=nameWithType> Eigenschaft ab, der die aktuelle lokale Uhrzeit enthält, und weist den Wert einer Variablen namens `currentDate` zu. Schließlich verwendet der Code eine [interpolierte Zeichenfolge](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md), um diese Werte im Konsolenfenster anzuzeigen.
 
@@ -72,7 +72,7 @@ Erweitern Sie Ihre Anwendung, um die Benutzer aufzufordern, seinen oder ihren Na
 
 1. Führen Sie das Programm in Visual Studio im Debugmodus aus, indem Sie den grünen Pfeil auf der Symbolleiste auswählen, F5 drücken oder das Menüelement **Debuggen** > **Debuggen starten** auswählen. Reagieren Sie auf die Aufforderung, indem Sie einen Namen eingeben und die EINGABETASTE drücken.
 
-   ![Konsolenfenster mit veränderter Programmausgabe](./media/with-visual-studio/helloworld2.png)
+   ![Konsolenfenster mit veränderter Programmausgabe](./media/with-visual-studio/hello-world-update.png)
 
 1. Drücken Sie eine beliebige Taste, um das Konsolenfenster zu schließen.
 

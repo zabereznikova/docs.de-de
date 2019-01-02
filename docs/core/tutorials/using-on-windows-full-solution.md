@@ -2,15 +2,14 @@
 title: Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017
 description: Erfahren Sie, wie Sie eine vollständige .NET Core-Projektmappe in Visual Studio 2017 unter Windows erstellen.
 author: bleroy
-ms.author: mairaw
 ms.date: 11/16/2016
-ms.custom: vs-dotnet
-ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 0130ae10cc3bac445892faf0f9a18cf2f23dc036
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149951"
+ms.locfileid: "53170521"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017
 

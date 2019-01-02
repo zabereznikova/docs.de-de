@@ -2,13 +2,13 @@
 title: Machine Learning-Glossar – ML.NET
 description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
 ms.custom: seodec18
-ms.date: 12/06/2018
-ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/20/2018
+ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150575"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53760392"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -24,8 +24,6 @@ Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetri
 
 Bei der [binären Klassifizierung](#binary-classification) ist diese Auswertungsmetrik der Wert der Fläche unter der Kurve, der das Verhältnis der richtig positiven Ergebnisse (auf der Y-Achse) zu den falsch positiven Ergebnissen (auf der X-Achse) darstellt. Er reicht von 0,5 (schlechteste) bis 1 (beste). Auch bekannt als die Fläche unter der ROC-Kurve, d.h. unter der Grenzwertoptimierungskurve (Receiver Operating Characteristic Curve). Weitere Informationen finden Sie auf Wikipedia im Artikel zu [Receiver Operating Characteristic](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
-
 ## <a name="binary-classification"></a>Binäre Klassifizierung
 
 Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) nur eine von zwei Klassen ist. Weitere Informationen finden Sie im Abschnitt [Binäre Klassifizierung](tasks.md#binary-classification) des Artikels [Machine Learning-Aufgaben](tasks.md).
@@ -37,8 +35,6 @@ Wenn die Daten zur Vorhersage einer Kategorie verwendet werden, wird der [überw
 ## <a name="coefficient-of-determination"></a>Bestimmtheitsmaß
 
 Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten in ein Modell passen. Die Werte liegen zwischen 0 und 1. Ein Wert von 0 bedeutet, dass die Daten zufällig sind oder nicht an das Modell angepasst werden können. Ein Wert von 1 bedeutet, dass das Modell exakt mit den Daten übereinstimmt. Dies wird oft als r<sup>2</sup>, R<sup>2</sup> oder R-Quadrat bezeichnet.
-
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Feature
 
@@ -52,8 +48,6 @@ Als Funktionsentwicklung wird der Prozess bezeichnet, bei dem eine Reihe von [Fu
 
 Bei der [Klassifizierung](#classification) ist dies eine Auswertungsmetrik, die [Präzision](#precision) und [Wiedererkennung](#recall) ausgleicht.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
-
 ## <a name="hyperparameter"></a>Hyperparameter
 
 Ein Parameter eines Algorithmus für maschinelles Lernen. Beispiele sind die Anzahl der zu erlernenden Bäume in einem Entscheidungswald oder die Schrittgröße in einem Gradientenverfahrenalgorithmus. Werte von *Hyperparametern* werden vor dem Training des Modells festgelegt und regeln die Suche nach Parametern der Vorhersagefunktion, z.B. der Vergleichspunkte in einem Entscheidungsbaum oder der Gewichtungen in einem linearen Regressionsmodell. Weitere Informationen finden Sie auf Wikipedia im Artikel zum Thema [Hyperparameter](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)).
@@ -66,13 +60,9 @@ Das Element, das mit dem Modell für maschinelles Lernen vorhergesagt werden sol
 
 Bei der [Klassifizierung](#classification) charakterisiert diese Auswertungsmetrik die Genauigkeit eines Klassifikators. Je geringer der Protokollverlust, desto genauer ist ein Klassifikator.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
-
 ## <a name="mean-absolute-error-mae"></a>Mittlerer absoluter Fehler (Mean Absolute Error, MAE)
 
 Bei der [Regression](#regression) ist dies eine Auswertungsmetrik, die den Durchschnitt aller Modellfehler angibt, wobei ein Modellfehler die Differenz zwischen dem vorhergesagten Wert für die [Bezeichnung](#label) und dem korrekten Wert für die Bezeichnung ist.
-
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Modell
 
@@ -104,8 +94,6 @@ Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetri
 
 Bei der [Klassifizierung](#classification) steht die Wiedererkennung für eine Klasse für die Anzahl der Elemente, die korrekt als zu dieser Klasse gehörend vorhergesagt werden, geteilt durch die Gesamtzahl der Elemente, die tatsächlich zu dieser Klasse gehören.
 
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
-
 ## <a name="regression"></a>Regression
 
 Ein Task für [überwachtes maschinelles Lernen](#supervised-machine-learning), durch den ein reeller Wert, z.B. „double“, ausgegeben wird. Ein gutes Beispiel ist die Vorhersage von Aktienkursen. Weitere Informationen finden Sie im Abschnitt [Regression](tasks.md#regression) des Artikels [Machine Learning-Aufgaben](tasks.md).
@@ -121,8 +109,6 @@ Bei der [Regression](#regression) steht diese Auswertungsmetrik für die Summe a
 ## <a name="root-of-mean-squared-error-rmse"></a>Wurzel des mittleren quadratischen Fehlers (Root of mean squared error, RMSE)
 
 Bei der [Regression](#regression) steht diese Auswertungsmetrik für die Quadratwurzel aus dem Durchschnitt der Quadrate der Fehler.
-
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Überwachtes maschinelles Lernen
 

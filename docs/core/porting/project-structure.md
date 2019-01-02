@@ -2,15 +2,14 @@
 title: Organisieren von Projekten für .NET Framework und .NET Core
 description: Dieser Artikel soll Projektbesitzern dabei helfen, Ihre eigene Lösung parallel für .NET Framework und .NET Core zu kompilieren.
 author: conniey
-ms.author: mairaw
 ms.date: 04/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: cfb3670bda887792389c7cee3f65397e649304d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 97673e1ccaeb094bf8c7cb835a84ae9389fac502
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146926"
+ms.locfileid: "53169130"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von sowohl .NET Framework als auch .NET Core
 
