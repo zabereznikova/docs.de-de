@@ -212,7 +212,7 @@ Führen Sie die folgenden Schritte für jede Zielplattform der Anwendung durch:
 
    1. Klicken Sie auf **Aktionen** > **Profil umbenennen**, um das Profil zu benennen.
 
-   2. Geben Sie dem Profil einen Namen, mit dem die Zielplattform identifiziert werden kann, und klicken Sie dann auf *Speichern*.
+   2. Geben Sie dem Profil einen Namen, mit dem die Zielplattform identifiziert werden kann, und klicken Sie dann auf \**Speichern*.
 
 Wiederholen Sie diese Schritte, um die zusätzlichen Zielplattformen Ihrer Anwendung zu definieren.
 
