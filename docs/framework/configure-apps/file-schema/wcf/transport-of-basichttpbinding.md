@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: f4e37281539106fef93dc4ab566d94d781c39d29
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01fe2bc98326e3cef2b3df8bdf4aa03055df5e65
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845669"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030333"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; von &lt;basicHttpBinding&gt;
 Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport steuern.  
@@ -66,15 +66,15 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keiner|-Nachrichten werden während der Übertragung nicht gesichert.|  
-|Standard|Gibt die Standardauthentifizierung an, wie definiert in RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
-|Digest|Gibt die Digestauthentifizierung an, wie definiert in RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
+|Keine|-Nachrichten werden während der Übertragung nicht gesichert.|  
+|Standard|Gibt die Standardauthentifizierung gemäß RFC 2617 – HTTP Authentication: Grundlegende und Digest-Authentifizierung.|  
+|Digest|Gibt die hashwertauthentifizierung an, gemäß der RFC 2617 – HTTP Authentication: Grundlegende und Digest-Authentifizierung.|  
 |Ntlm|Gibt die NTLM-Authentifizierung an, wenn möglich, und ob die Windows-Authentifizierung fehlschlägt.|  
 |Windows|Gibt die integrierte Windows-Authentifizierung an.|  
 |Zertifikat|Führt die Clientauthentifizierung mit einem Zertifikat aus. Diese Option funktioniert nur, wenn das `Mode`-Attribut des übergeordneten `security`-Elements auf Transport gesetzt ist. Sie funktioniert nicht, wenn es auf TransportCredentialOnly gesetzt ist.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -99,8 +99,8 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
    </services>  
     <bindings>  
         <basicHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -- >  
-        <!-- mode and clientCredentialType set to None.-->  
+        <!-- Configure basicHttpBinding with Transport security -->  
+        <!-- mode and clientCredentialType set to None. -->  
            <binding name="Binding1">  
                <security mode="Transport">  
                    <transport clientCredentialType="None"  

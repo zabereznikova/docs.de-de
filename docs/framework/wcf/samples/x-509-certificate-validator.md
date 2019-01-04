@@ -2,17 +2,17 @@
 title: X.509-Zertifikats-Validierungssteuerelement
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ece96c04245434853169c458f8f0c0ebe91da724
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8bc5c1976e61cbb81d0bc8463a57cfad750a2a7
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123422"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030307"
 ---
 # <a name="x509-certificate-validator"></a>X.509-Zertifikats-Validierungssteuerelement
 In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zertifikats-Validierungssteuerelement implementiert wird. Dies ist nützlich, wenn keines der integrierten X.509-Zertifikats-Validierungsmodi den Anforderungen der Anwendung entspricht. Dieses Beispiel zeigt einen Dienst, der über ein benutzerdefiniertes Validierungssteuerelement verfügt, das selbst herausgegebene Zertifikate akzeptiert. Der Client verwendet solch ein Zertifikat, um den Dienst zu authentifizieren.
 
- Hinweis: Da jeder ein selbst herausgegebenes Zertifikat erstellen kann, ist das vom Dienst verwendete benutzerdefinierte Validierungssteuerelement unsicherer als das Standardverhalten vom ChainTrust X509CertificateValidationMode. Die daraus resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor diese Validierungslogik im Produktionscode verwendet wird.
+ Hinweis: Wie jeder ein selbst ausgestelltes Zertifikat erstellen kann ist das benutzerdefinierte Validierungssteuerelement, das vom Dienst verwendete weniger sicher als das Standardverhalten von den ChainTrust X509CertificateValidationMode. Die daraus resultierenden Sicherheitsauswirkungen sollten sorgfältig bedacht werden, bevor diese Validierungslogik im Produktionscode verwendet wird.
 
  Insgesamt zeigt dieses Beispiel Folgendes:
 
@@ -59,16 +59,16 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zerti
         <behavior name="CalculatorServiceBehavior">
           <serviceDebug includeExceptionDetailInFaults ="true"/>
           <serviceCredentials>
-            <!--The serviceCredentials behavior allows one -->
+            <!-- The serviceCredentials behavior allows one -->
             <!-- to specify authentication constraints on -->
             <!-- client certificates. -->
             <clientCertificate>
               <!-- Setting the certificateValidationMode to -->
               <!-- Custom means that if the custom -->
               <!-- X509CertificateValidator does NOT throw -->
-              <!-- an exception, then the provided certificate -- >
+              <!-- an exception, then the provided certificate -->
               <!-- will be trusted without performing any -->
-              <!-- validation beyond that performed by the custom-->
+              <!-- validation beyond that performed by the custom -->
               <!-- validator. The security implications of this -->
               <!-- setting should be carefully considered before -->
               <!-- using Custom in production code. -->
@@ -77,13 +77,13 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zerti
                  customCertificateValidatorType =
 "Microsoft.ServiceModel.Samples.CustomX509CertificateValidator, service" />
             </clientCertificate>
-            <!-- The serviceCredentials behavior allows one to -- >
-            <!--define a service certificate. -->
-            <!--A service certificate is used by a client to  -->
-            <!--authenticate the service and provide message  -->
-            <!--protection. This configuration references the  -->
-            <!--"localhost" certificate installed during the setup  -->
-            <!--instructions. -->
+            <!-- The serviceCredentials behavior allows one to -->
+            <!-- define a service certificate. -->
+            <!-- A service certificate is used by a client to -->
+            <!-- authenticate the service and provide message -->
+            <!-- protection. This configuration references the -->
+            <!-- "localhost" certificate installed during the setup -->
+            <!-- instructions. -->
             <serviceCertificate findValue="localhost"
                  storeLocation="LocalMachine"
                  storeName="My" x509FindType="FindBySubjectName" />
@@ -232,10 +232,10 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     <clientCertificate>
     <!-- Setting the certificateValidationMode to Custom means -->
     <!--that if the custom X509CertificateValidator does NOT -->
-    <!--throw an exception, then the provided certificate will-- >
-    <!-- be trusted without performing any validation beyond that-- >
-    <!-- performed by the custom validator. The security -- >
-    <!--implications of this setting should be carefully -- >
+    <!--throw an exception, then the provided certificate will -->
+    <!--be trusted without performing any validation beyond that -->
+    <!--performed by the custom validator. The security -->
+    <!--implications of this setting should be carefully -->
     <!--considered before using Custom in production code. -->
     <authentication certificateValidationMode="Custom"
        customCertificateValidatorType =
@@ -354,6 +354,6 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben. Dadurch werden die Server- und Clientzertifikate aus dem Zertifikatspeicher entfernt.  
   
 > [!NOTE]
->  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+>  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="see-also"></a>Siehe auch

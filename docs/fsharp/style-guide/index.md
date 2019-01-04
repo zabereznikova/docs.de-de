@@ -2,12 +2,12 @@
 title: F#Styleguide
 description: Erfahren Sie, die fünf Prinzipien guten F# Code.
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168955"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030268"
 ---
 # <a name="f-style-guide"></a>F#Styleguide
 
@@ -21,7 +21,7 @@ Bedenken Sie die folgenden Prinzipien jedes Mal, die Sie schreiben F# Code, vor 
 
 1. **Gute F# Code ist prägnante, aussagefähige und zusammensetzbar**
 
-    F#umfasst viele Features, mit denen Sie Aktionen in weniger Codezeilen express und generische Funktionen wiederverwenden. Die F# -Kernbibliothek enthält außerdem viele hilfreiche Typen und Funktionen zum Arbeiten mit gemeinsamen Auflistungen von Daten. Komposition mit Ihren eigenen Funktionen und in der F# -Kernbibliothek (oder andere Bibliotheken) ist ein Teil der Routine idiomatische F# programmieren. Als allgemeine Regel Wenn Sie eine Lösung für ein Problem in weniger Codezeilen Ausdrücken können werden andere Entwickler (oder Ihre zukünftige Self) wertschätzenden. Es wird auch dringend empfohlen, dass Sie eine Bibliothek, z. B. FSharp.Core vorgenommen, verwenden die [große Bibliotheken für .NET](https://docs.microsoft.com/dotnet/api/) , F# ausgeführt wird, oder ein Drittanbieter-Paket auf [NuGet](https://www.nuget.org/) Wenn müssen Sie eine komplexe Aufgabe.
+    F#umfasst viele Features, mit denen Sie Aktionen in weniger Codezeilen express und generische Funktionen wiederverwenden. Die F# -Kernbibliothek enthält außerdem viele hilfreiche Typen und Funktionen zum Arbeiten mit gemeinsamen Auflistungen von Daten. Komposition mit Ihren eigenen Funktionen und in der F# -Kernbibliothek (oder andere Bibliotheken) ist ein Teil der Routine idiomatische F# programmieren. Als allgemeine Regel Wenn Sie eine Lösung für ein Problem in weniger Codezeilen Ausdrücken können werden andere Entwickler (oder Ihre zukünftige Self) wertschätzenden. Es wird auch dringend empfohlen, dass Sie eine Bibliothek, z. B. FSharp.Core vorgenommen, verwenden die [große Bibliotheken für .NET](../../../api/index.md) , F# ausgeführt wird, oder ein Drittanbieter-Paket auf [NuGet](https://www.nuget.org/) Wenn müssen Sie eine komplexe Aufgabe.
 
 2. **Gute F# Code ist interoperabel**
 

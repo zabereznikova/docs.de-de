@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123617"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030126"
 ---
 # <a name="redirecting-assembly-versions"></a>Umleiten von Assemblyversionen
 
@@ -142,11 +142,11 @@ Sie können die automatische bindungsumleitung aktivieren, wenn Ihre app auf äl
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">
@@ -156,7 +156,7 @@ Sie können die automatische bindungsumleitung aktivieren, wenn Ihre app auf äl
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<BindingRedirect >-Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Sicherheitsberechtigung für die Umleitung der Assemblybindung](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
@@ -166,4 +166,4 @@ Sie können die automatische bindungsumleitung aktivieren, wenn Ihre app auf äl
 - [Konfigurieren von .NET Framework-Apps](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Gewusst wie: Erstellen einer Herausgeberrichtlinie](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)
+- [Vorgehensweise: Erstellen einer Herausgeberrichtlinie](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

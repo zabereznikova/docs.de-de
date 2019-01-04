@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3a35be198a4e60922861c49e911bd498d44c974f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842644"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030320"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;transport&gt; von &lt;netHttpBinding&gt;
 Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport steuern.  
@@ -64,15 +64,15 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keiner|-Nachrichten werden während der Übertragung nicht gesichert.|  
-|Standard|Gibt die Standardauthentifizierung an, wie definiert in RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
-|Digest|Gibt die Digestauthentifizierung an, wie definiert in RFC 2617 – HTTP Authentication: Basic and Digest Authentication.|  
+|Keine|-Nachrichten werden während der Übertragung nicht gesichert.|  
+|Standard|Gibt die Standardauthentifizierung gemäß RFC 2617 – HTTP Authentication: Grundlegende und Digest-Authentifizierung.|  
+|Digest|Gibt die hashwertauthentifizierung an, gemäß der RFC 2617 – HTTP Authentication: Grundlegende und Digest-Authentifizierung.|  
 |Ntlm|Gibt die NTLM-Authentifizierung an, wenn möglich, und ob die Windows-Authentifizierung fehlschlägt.|  
 |Windows|Gibt die integrierte Windows-Authentifizierung an.|  
 |Zertifikat|Führt die Clientauthentifizierung mit einem Zertifikat aus. Diese Option funktioniert nur, wenn das `Mode`-Attribut des übergeordneten `security`-Elements auf Transport gesetzt ist. Sie funktioniert nicht, wenn es auf TransportCredentialOnly gesetzt ist.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -96,8 +96,8 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
   </services>  
   <bindings>  
     <netHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
+      <!-- Configure basicHttpBinding with Transport security -->  
+      <!-- mode and clientCredentialType set to None. -->  
       <binding name="Binding1">  
         <security mode="Transport">  
           <transport clientCredentialType="None"  

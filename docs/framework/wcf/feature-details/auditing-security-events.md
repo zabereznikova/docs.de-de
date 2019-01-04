@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198081"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030567"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -28,7 +28,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
  Sie können beide Überwachungsstufen auf Erfolg oder Fehler, die so genannte überprüfen die *Überwachungsverhalten*.  
   
 ## <a name="audit-log-location"></a>Auswahl des Überwachungsprotokolls  
- Nachdem Überwachungsstufe und Überwachungsverhalten festgelegt wurden, können Sie (oder ein Administrator) angeben, in welches Überwachungsprotokoll geschrieben werden soll. Zur Auswahl stehen drei Optionen: Standard (Default), Anwendung (Application) und Sicherheit (Security). Wenn Sie Standard auswählen, ist das tatsächlich verwendete Protokoll vom verwendeten Betriebssystem abhängig und davon, ob auf diesem System in das Sicherheitsprotokoll geschrieben werden darf. Weitere Informationen finden Sie im Abschnitt "Betriebssystem" weiter unten in diesem Thema.  
+ Nachdem Überwachungsstufe und Überwachungsverhalten festgelegt wurden, können Sie (oder ein Administrator) angeben, in welches Überwachungsprotokoll geschrieben werden soll. Die drei Optionen sind: Standard, Anwendung und Sicherheit. Wenn Sie Standard auswählen, ist das tatsächlich verwendete Protokoll vom verwendeten Betriebssystem abhängig und davon, ob auf diesem System in das Sicherheitsprotokoll geschrieben werden darf. Weitere Informationen finden Sie im Abschnitt "Betriebssystem" weiter unten in diesem Thema.  
   
  Zum Schreiben in das Sicherheitsprotokoll ist die Berechtigungsstufe `SeAuditPrivilege` erforderlich. Standardmäßig verfügen nur die Konten "Lokales System" und "Netzwerkdienst" über diese Berechtigung. Zum Verwalten der Sicherheitsprotokollfunktionen `read` und `delete` ist die Berechtigungsstufe `SeSecurityPrivilege` erforderlich. Standardmäßig verfügen nur Administratoren über diese Berechtigung.  
   
@@ -61,7 +61,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  

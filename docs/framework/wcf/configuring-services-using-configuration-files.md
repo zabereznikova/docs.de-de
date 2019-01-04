@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200861"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029670"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität für die Bereitstellung von Endpunkt und die Daten zum Dienst zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
@@ -21,7 +21,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 > [!IMPORTANT]
 >  Beim Bereitstellen paralleler Szenarien, in denen zwei verschiedene Versionen eines Diensts bereitgestellt werden, müssen bei Verweisen in Konfigurationsdateien partielle Assemblynamen angegeben werden. Dies liegt daran, dass die Konfigurationsdatei gemeinsam von allen Versionen eines Diensts verwendet wird und dass diese Dienste ggf. unter unterschiedlichen Versionen von .NET Framework ausgeführt werden.  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config und App.config  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>"System.Configuration": "Web.config" und "App.config"  
  WCF verwendet das Konfigurationssystem System.Configuration über die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Wenn einen Dienst in Visual Studio zu konfigurieren, verwenden Sie entweder eine Datei "Web.config" oder eine Datei "App.config", um die Einstellungen anzugeben. Die Wahl der Konfigurationsdatei wird durch die Hostumgebung des Diensts bestimmt. Wenn Sie den Dienst in IIS hosten, verwenden Sie eine Web.config-Datei. Bei einer anderen Hostumgebung verwenden Sie eine App.config-Datei.  
@@ -37,7 +37,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 <system.ServiceModel>  
   
    <services>  
-   <!—- Define the service endpoints. This section is optional in the new  
+   <!-- Define the service endpoints. This section is optional in the new  
     default configuration model in .NET Framework 4. -->  
       <service>  
          <endpoint/>  
@@ -126,7 +126,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
     <basicHttpBinding>  
      <binding name="myBindingConfiguration1" closeTimeout="00:01:00" />  
      <binding name="myBindingConfiguration2" closeTimeout="00:02:00" />  
-     <binding closeTimeout="00:03:00" />  <!—- Default binding for basicHttpBinding -->  
+     <binding closeTimeout="00:03:00" />  <!-- Default binding for basicHttpBinding -->  
     </basicHttpBinding>  
      </bindings>  
      <services>  

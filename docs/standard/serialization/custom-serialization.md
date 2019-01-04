@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 6151bf670a455d4c9862e80fd06314e4e1621080
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0193112812aeccb7365526240b8e81d81abcd8a4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44225658"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030346"
 ---
 # <a name="custom-serialization"></a>Benutzerdefinierte Serialisierung
 Unter benutzerdefinierter Serialisierung wird die Steuerung der Serialisierung und Deserialisierung eines Typs verstanden. Durch die Steuerung der Serialisierung lässt sich die Serialisierungskompatibilität sicherstellen. Damit ist die Fähigkeit gemeint, Objekte unterschiedlicher Versionen eines Typs serialisieren und deserialisieren zu können, ohne die Kernfunktionalität des Typs zu beeinträchtigen. Zum Beispiel kann die erste Version eines Typs nur zwei Felder umfassen. In der nächsten Version des Typs werden mehrere weitere Felder hinzugefügt. Die zweite Version einer Anwendung muss jedoch fähig sein, beide Typen zu serialisieren und zu deserialisieren. In den folgenden Abschnitten wird beschrieben, wie Serialisierung gesteuert wird.
@@ -54,62 +54,59 @@ Unter benutzerdefinierter Serialisierung wird die Steuerung der Serialisierung u
   
  Die Implementierung von <xref:System.Runtime.Serialization.ISerializable> umfasst auch die Implementierung der `GetObjectData`-Methode und eines speziellen Konstruktors, der bei der Deserialisierung des Objekts verwendet wird. Der folgende Beispielcode zeigt, wie <xref:System.Runtime.Serialization.ISerializable> für die `MyObject`-Klasse aus einem vorherigen Abschnitt implementiert wird.  
   
-```csharp  
-[Serializable]  
-public class MyObject : ISerializable   
-{  
-  public int n1;  
-  public int n2;  
-  public String str;  
-  
-  public MyObject()  
-  {  
-  }  
-  
-  protected MyObject(SerializationInfo info, StreamingContext context)  
-  {  
-    n1 = info.GetInt32("i");  
-    n2 = info.GetInt32("j");  
-    str = info.GetString("k");  
-  }  
-[SecurityPermissionAttribute(SecurityAction.Demand,   
-SerializationFormatter =true)]  
-  
-public virtual void GetObjectData(SerializationInfo info, StreamingContext context)  
-  {  
-    info.AddValue("i", n1);  
-    info.AddValue("j", n2);  
-    info.AddValue("k", str);  
-  }  
-}  
-```  
-  
-```vb  
-<Serializable()>  _  
-Public Class MyObject  
-    Implements ISerializable  
-    Public n1 As Integer  
-    Public n2 As Integer  
-    Public str As String  
-  
-    Public Sub New()   
-    End Sub   
-  
-    Protected Sub New(ByVal info As SerializationInfo, _  
-    ByVal context As StreamingContext)   
-        n1 = info.GetInt32("i")  
-        n2 = info.GetInt32("j")  
-        str = info.GetString("k")  
-    End Sub 'New  
-  
-    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
-    Public Overridable Sub GetObjectData(ByVal info As _  
-    SerializationInfo, ByVal context As StreamingContext)   
-        info.AddValue("i", n1)  
-        info.AddValue("j", n2)  
-        info.AddValue("k", str)  
-    End Sub   
-End Class  
+```csharp
+[Serializable]
+public class MyObject : ISerializable
+{
+    public int n1;
+    public int n2;
+    public String str;
+
+    public MyObject()
+    {
+    }
+
+    protected MyObject(SerializationInfo info, StreamingContext context)
+    {
+      n1 = info.GetInt32("i");
+      n2 = info.GetInt32("j");
+      str = info.GetString("k");
+    }
+
+    [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+    public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+        info.AddValue("i", n1);
+        info.AddValue("j", n2);
+        info.AddValue("k", str);
+    }
+}
+```
+
+```vb
+<Serializable()>  _
+Public Class MyObject
+    Implements ISerializable
+    Public n1 As Integer
+    Public n2 As Integer
+    Public str As String
+
+    Public Sub New()
+    End Sub
+
+    Protected Sub New(ByVal info As SerializationInfo, ByVal context As StreamingContext)
+        n1 = info.GetInt32("i")
+        n2 = info.GetInt32("j")
+        str = info.GetString("k")
+    End Sub 'New
+
+    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)> _
+    Public Overridable Sub GetObjectData(ByVal info As SerializationInfo, ByVal context As StreamingContext)
+        info.AddValue("i", n1)
+        info.AddValue("j", n2)
+        info.AddValue("k", str)
+    End Sub
+End Class
 ```  
   
  Wenn **GetObjectData** während der Serialisierung aufgerufen wird, müssen Sie das mit dem Methodenaufruf bereitgestellte <xref:System.Runtime.Serialization.SerializationInfo> auffüllen. Fügen Sie die zu serialisierenden Variablen einfach als Name/Wert-Paar hinzu. Beliebiger Text kann als Name verwendet werden. Sie können frei entscheiden, welche Membervariablen <xref:System.Runtime.Serialization.SerializationInfo> hinzugefügt werden. Voraussetzung ist jedoch, dass genügend Daten serialisiert werden, um das Objekt während der Deserialisierung wiederherzustellen. Abgeleitete Klassen sollten die **GetObjectData**-Methode für das Basisobjekt aufrufen, wenn dieses <xref:System.Runtime.Serialization.ISerializable> implementiert.  
@@ -128,56 +125,54 @@ End Class
   
  Wenn Sie von einer Klasse, die <xref:System.Runtime.Serialization.ISerializable> implementiert, eine neue Klasse ableiten, muss die abgeleitete Klasse sowohl den Konstruktor als auch die **GetObjectData**-Methode implementieren, wenn sie über zu serialisierende Variablen verfügt. Im folgenden Codebeispiel wird dieser Vorgang unter Verwendung der bereits zuvor gezeigten `MyObject`-Klasse veranschaulicht.  
   
-```csharp  
-[Serializable]  
-public class ObjectTwo : MyObject  
-{  
-    public int num;  
-  
-    public ObjectTwo() : base()  
-    {  
-    }  
-  
-    protected ObjectTwo(SerializationInfo si,   
-    StreamingContext context) : base(si,context)  
-    {  
-        num = si.GetInt32("num");  
-    }  
-[SecurityPermissionAttribute(SecurityAction.Demand,  
-SerializationFormatter = true)]  
-    public override void GetObjectData(SerializationInfo si,   
-    StreamingContext context)  
-    {  
-        base.GetObjectData(si,context);  
-        si.AddValue("num", num);  
-    }  
-}  
-```  
-  
-```vb  
-<Serializable()>  _  
-Public Class ObjectTwo  
-    Inherits MyObject  
-    Public num As Integer  
-  
-    Public Sub New()   
-  
-    End Sub       
-  
-    Protected Sub New(ByVal si As SerializationInfo, _  
-    ByVal context As StreamingContext)   
-        MyBase.New(si, context)  
-        num = si.GetInt32("num")      
-    End Sub   
-  
-    <SecurityPermissionAttribute(SecurityAction.Demand, _  
-    SerializationFormatter := True)>  _  
-    Public Overrides Sub GetObjectData(ByVal si As _  
-    SerializationInfo, ByVal context As StreamingContext)   
-        MyBase.GetObjectData(si, context)  
-        si.AddValue("num", num)      
-    End Sub   
-End Class  
+```csharp
+[Serializable]
+public class ObjectTwo : MyObject
+{
+    public int num;
+
+    public ObjectTwo()
+      : base()
+    {
+    }
+
+    protected ObjectTwo(SerializationInfo si, StreamingContext context)
+      : base(si, context)
+    {
+        num = si.GetInt32("num");
+    }
+
+    [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+    public override void GetObjectData(SerializationInfo si, StreamingContext context)
+    {
+        base.GetObjectData(si,context);
+        si.AddValue("num", num);
+    }
+}
+```
+
+```vb
+<Serializable()>  _
+Public Class ObjectTwo
+    Inherits MyObject
+    Public num As Integer
+
+    Public Sub New()
+
+    End Sub
+
+    Protected Sub New(ByVal si As SerializationInfo, _
+    ByVal context As StreamingContext)
+        MyBase.New(si, context)
+        num = si.GetInt32("num")
+    End Sub
+
+    <SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)> _
+    Public Overrides Sub GetObjectData(ByVal si As SerializationInfo, ByVal context As StreamingContext)
+        MyBase.GetObjectData(si, context)
+        si.AddValue("num", num)
+    End Sub
+End Class
 ```  
   
  Vergessen Sie nicht, die Basisklasse im Deserialisierungskonstruktor aufzurufen. Andernfalls wird der Konstruktor für die Basisklasse nicht aufgerufen, und das Objekt wird nach der Deserialisierung nicht vollständig erstellt.  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485728"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030294"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der XAML-Syntax verwendet werden. Diese Begriffe werden häufig in den restlichen dieser Dokumentation wird sowohl für WPF-Dokumentation verwendet, insbesondere und für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte, die aktiviert, indem die XAML-sprachunterstützung auf der Ebene "System.xaml" verwenden. Dieses Thema baut auf die grundlegende Terminologie eingeführt, die im Thema [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -288,7 +288,7 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>Optional und auf XAML-Verwendungen  
- Die folgenden Abschnitte beschreiben die XAML-Verwendungen technisch von XAML-Prozessoren unterstützt werden, aber erzeugt Ausführlichkeit oder andere ästhetischen Probleme, die XAML-Dateien, die verbleibenden lesbare Wenn beeinträchtigen Ihrer Anwendungen entwickeln, die XAML-Quellen enthalten .  
+ Den folgenden Abschnitten werden die XAML-Verwendungen von XAML-Prozessoren aus technischer Sicht unterstützt werden, aber erzeugt Ausführlichkeit oder andere ästhetischen Probleme, die mit XAML-Dateien, die lesbare verbleiben, wenn Sie Anwendungen entwickeln, die XAML-Quellen enthalten beeinträchtigen.  
   
 ### <a name="optional-property-element-usages"></a>Optionale Eigenschaftenelementen  
  Optionale Eigenschaftenelementen gehört, explizit ausgeben Element Content-Eigenschaften, die XAML-Prozessor als implizit behandelt. Z. B. Wenn Sie deklarieren den Inhalt des eine <xref:System.Windows.Controls.Menu>, Sie können auch explizit deklarieren, die <xref:System.Windows.Controls.ItemsControl.Items%2A> Auflistung von der <xref:System.Windows.Controls.Menu> als eine `<Menu.Items>` Eigenschaftentag-Element, und Stelle jedes <xref:System.Windows.Controls.MenuItem> in `<Menu.Items>`, sondern als die Verwendung der impliziten XAML-Prozessor-Verhaltens, die alle untergeordneten Elemente des eine <xref:System.Windows.Controls.Menu> muss eine <xref:System.Windows.Controls.MenuItem> und befinden sich der <xref:System.Windows.Controls.ItemsControl.Items%2A> Auflistung. In einigen Fällen können die optionale Verwendung um visuell die Objektstruktur zu verdeutlichen, wie im Markup angegeben. Oder manchmal eine explizite Eigenschaftselementverwendung Markup, das aber visuell verwirrend ist, z. B. geschachtelte Markuperweiterungen in einem Attribut technisch funktionsfähig ist, vermeiden kann.  
@@ -317,7 +317,7 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
 ## <a name="see-also"></a>Siehe auch  
  [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Sprachfunktionen des XAML-Namespace (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [XAML-Namespace (x:)) Sprachfunktionen](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF-XAML-Erweiterungen](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverter und XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
