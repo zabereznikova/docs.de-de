@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4be232ab557d582f3521b8775108c004b5a3dd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fecd5af43f4b984a4ab626e9832b3318715c0516
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403304"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058359"
 ---
 # <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION-Struktur
 Definiert die Produktversion der Common Language Runtime (CLR) zu Debugzwecken.  
@@ -29,14 +29,14 @@ Definiert die Produktversion der Common Language Runtime (CLR) zu Debugzwecken.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-Typedef struct _CLR_DEBUGGING_VERSION  
+typedef struct _CLR_DEBUGGING_VERSION  
 {  
-WORD wStructVersion;  
-WORD wMajor;   
-WORD wMinor;  
-WORD wBuild;  
-WORD wRevision;  
-}  CLR_DEBUGGING_VERSION;  
+    WORD wStructVersion;
+    WORD wMajor;
+    WORD wMinor;
+    WORD wBuild;
+    WORD wRevision;
+} CLR_DEBUGGING_VERSION;
 ```  
   
 ## <a name="members"></a>Member  
@@ -46,14 +46,14 @@ WORD wRevision;
 |`wStructVersion`|Die Versionsnummer der Struktur|  
 |`wMajor`|Die Hauptversionsnummer.|  
 |`wMinor`|Die Nebenversionsnummer.|  
-|`wBuild`|Die Buildnummer.|  
+|`wBuild`|Die Nummer des Builds.|  
 |`wRevision`|Die Revisionsnummer.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CLR_DEBUGGING_VERSION` Struktur ist identisch mit der COR_VERSION-Struktur, jedoch die `CLR_DEBUGGING_VERSION` Struktur bietet eine zusätzliche Version Strukturfeld (`wStructVersion`). Derzeit muss dieses Feld auf NULL festgelegt werden.  
+ Die `CLR_DEBUGGING_VERSION` hat die gleiche Struktur wie COR_VERSION-Struktur, jedoch die `CLR_DEBUGGING_VERSION` Struktur bietet eine zusätzliche Strukturversionsfeld (`wStructVersion`). Derzeit muss dieses Feld auf NULL festgelegt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl  
   
