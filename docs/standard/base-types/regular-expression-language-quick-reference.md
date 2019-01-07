@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779385"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030398"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 <a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -176,7 +176,7 @@ ms.locfileid: "53779385"
 |`${` *Name* `}`|Ersetzt die untergeordnete Zeichenfolge, die dem genannten *name*der Gruppe entspricht.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|Ersetzt ein "$"-Literal.|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|Ersetzt eine Kopie der gesamten Entsprechung.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Ersetzt den gesamten Text der Eingabezeichenfolge vor der Entsprechung.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
+|``$` ``|Ersetzt den gesamten Text der Eingabezeichenfolge vor der Entsprechung.|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
 |`$'`|Ersetzt den gesamten Text der Eingabezeichenfolge nach der Entsprechung.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
 |`$+`|Ersetzt die zuletzt erfasste Gruppe.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Ersetzt die gesamte Eingabezeichenfolge.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  

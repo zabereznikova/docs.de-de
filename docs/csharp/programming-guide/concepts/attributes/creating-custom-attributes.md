@@ -2,12 +2,12 @@
 title: Erstellen benutzerdefinierter Attribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 5a846771eb26e3760e3f47458b862356f4da1ae6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a27924623cc462f6d3339149718a1b29999ac1d
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503705"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058268"
 ---
 # <a name="creating-custom-attributes-c"></a>Erstellen benutzerdefinierter Attribute (C#)
 Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren. Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat. Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:  
@@ -62,9 +62,6 @@ class SampleClass
     // R. Koch's code goes here...  
 }  
 ```  
-  
-> [!NOTE]
->  Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese- und Schreibberechtigung aufweisen.  
   
 ## <a name="see-also"></a>Siehe auch
 

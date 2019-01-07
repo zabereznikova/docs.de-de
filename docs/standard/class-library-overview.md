@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185848"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029871"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -86,7 +86,7 @@ ms.locfileid: "50185848"
   
  In der folgenden Tabelle sind die in .NET verfügbaren Basistypen mit einer Kurzbeschreibung der einzelnen Typen und den entsprechenden Typen in Visual Basic, C#, C++ und F# aufgeführt.  
   
-|Kategorie|Klassenname|Beschreibung |Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
+|Kategorie|Klassenname|Beschreibung|Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Ganze Zahl|<xref:System.Byte>|Eine 8-Bit-Ganzzahl ohne Vorzeichen.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> - oder - <br /> **char** **mit Vorzeichen**|**sbyte**|  
@@ -113,5 +113,5 @@ ms.locfileid: "50185848"
 ## <a name="see-also"></a>Siehe auch
 
 - [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)  
-- [.NET API-Browser](https://docs.microsoft.com/dotnet/api)  
+- [.NET API-Browser](../../api/index.md)  
 - [Übersicht](../../docs/framework/get-started/overview.md)

@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087329"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030153"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
-<a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode bereitgestellt, die über einen `replacement`-Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
+<a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
   
  .NET Framework definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
   
-|Substitution|Beschreibung |  
+|Substitution|Beschreibung|  
 |------------------|-----------------|  
 |`$` *number*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#Numbered).|  
 |`${` *Name* `}`|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).|  
 |`$$`|Schließt ein einzelnes "$"-Literal in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen eines "$"-Symbols](#DollarSign).|  
 |`$&`|Schließt eine Kopie der gesamten Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der gesamten Übereinstimmung](#EntireMatch).|  
-|<code>$\`</code>|Schließt den gesamten Text der Eingabezeichenfolge vor der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts vor der Übereinstimmung](#BeforeMatch).|  
+|``$` ``|Schließt den gesamten Text der Eingabezeichenfolge vor der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts vor der Übereinstimmung](#BeforeMatch).|  
 |`$'`|Schließt den gesamten Text der Eingabezeichenfolge nach der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts nach der Übereinstimmung](#AfterMatch).|  
 |`$+`|Schließt die letzte erfasste Gruppe in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der zuletzt erfassten Gruppe](#LastGroup).|  
 |`$_`|Schließt die gesamte Eingabezeichenfolge in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der ganzen Eingabezeichenfolge](#EntireString).|  
@@ -63,14 +63,14 @@ ms.locfileid: "47087329"
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
 |`[.,]?`|Übereinstimmung mit keinem oder einem Punkt oder Komma.|  
 |`\d*`|0 (null) oder mehr Dezimalstellen sollen übereinstimmen.|  
-|`(\s?\d+[.,]?\d*)`|Übereinstimmung mit einem Leerzeichen, gefolgt von mindestens einer Dezimalstelle, gefolgt von keinem oder einem Punkt oder Komma, gefolgt von keiner oder mehreren Dezimalstellen. Dies ist die erste Erfassungsgruppe. Da das Ersetzungsmuster `$1` ist, ersetzt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode die gesamte übereinstimmende Teilzeichenfolge durch diese erfasste Gruppe.|  
+|`(\s?\d+[.,]?\d*)`|Übereinstimmung mit einem Leerzeichen, gefolgt von mindestens einer Dezimalstelle, gefolgt von keinem oder einem Punkt oder Komma, gefolgt von keiner oder mehreren Dezimalstellen. Dies ist die erste Erfassungsgruppe. Da das Ersetzungsmuster `$1`ist, ersetzt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode die gesamte übereinstimmende Teilzeichenfolge durch diese erfasste Gruppe.|  
   
  [Zurück nach oben](#Top)  
   
@@ -89,14 +89,14 @@ ms.locfileid: "47087329"
   
  Das Muster für reguläre Ausdrücke `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Übereinstimmung mit keinem oder mehreren Währungssymbolzeichen.|  
 |`\s?`|Sucht nach einer Übereinstimmung mit keinem oder einem Leerzeichen.|  
 |`\d+`|Entsprechung für mindestens eine Dezimalstelle finden.|  
 |`[.,]?`|Übereinstimmung mit keinem oder einem Punkt oder Komma.|  
 |`\d*`|0 (null) oder mehr Dezimalstellen sollen übereinstimmen.|  
-|`(?<amount>\s?\d[.,]?\d*)`|Übereinstimmung mit einem Leerzeichen, gefolgt von mindestens einer Dezimalstelle, gefolgt von keinem oder einem Punkt oder Komma, gefolgt von keiner oder mehreren Dezimalstellen. Dies ist die Erfassungsgruppe mit dem Namen `amount`. Da das Ersetzungsmuster `${amount}` ist, ersetzt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode die gesamte übereinstimmende Teilzeichenfolge durch diese erfasste Gruppe.|  
+|`(?<amount>\s?\d[.,]?\d*)`|Übereinstimmung mit einem Leerzeichen, gefolgt von mindestens einer Dezimalstelle, gefolgt von keinem oder einem Punkt oder Komma, gefolgt von keiner oder mehreren Dezimalstellen. Dies ist die Erfassungsgruppe mit dem Namen `amount`. Da das Ersetzungsmuster `${amount}`ist, ersetzt der Aufruf der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode die gesamte übereinstimmende Teilzeichenfolge durch diese erfasste Gruppe.|  
   
  [Zurück nach oben](#Top)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47087329"
   
  Das Muster für reguläre Ausdrücke `\b(\d+)(\.(\d+))?` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Beginnt den Abgleich am Anfang einer Wortgrenze.|  
 |`(\d+)`|Entsprechung für mindestens eine Dezimalstelle finden. Dies ist die erste Erfassungsgruppe.|  
@@ -130,7 +130,7 @@ ms.locfileid: "47087329"
   
  Das Muster für reguläre Ausdrücke `^(\w+\s?)+$` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Beginnt den Abgleich am Anfang der Eingabezeichenfolge.|  
 |`(\w+\s?)+`|Übereinstimmung mit dem Muster mindestens eines Wortzeichens, ein- oder mehrmals gefolgt von einer Null oder einem Leerzeichen.|  
@@ -142,14 +142,14 @@ ms.locfileid: "47087329"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Ersetzen des Texts vor der Übereinstimmung  
- Die Ersetzung <code>$\`</code> ersetzt die übereinstimmende Zeichenfolge vor der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird bis zur Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text folgt, bleibt in der Ergebniszeichenfolge unverändert. Wenn mehrere Übereinstimmungen in einer Eingabezeichenfolge vorhanden sind, wird der Ersetzungstext von der ursprünglichen Eingabezeichenfolge abgeleitet und nicht von der Zeichenfolge, in der Text durch frühere Übereinstimmungen ersetzt wurde. \(Dies wird im Beispiel veranschaulicht.\) Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung <code>$\`</code> nicht aus.  
+ Die Ersetzung ``$` `` ersetzt die übereinstimmende Zeichenfolge vor der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird bis zur Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text folgt, bleibt in der Ergebniszeichenfolge unverändert. Wenn mehrere Übereinstimmungen in einer Eingabezeichenfolge vorhanden sind, wird der Ersetzungstext von der ursprünglichen Eingabezeichenfolge abgeleitet und nicht von der Zeichenfolge, in der Text durch frühere Übereinstimmungen ersetzt wurde. \(Dies wird im Beispiel veranschaulicht.\) Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung ``$` `` nicht aus.  
   
- Im folgenden Beispiel wird eine Sequenz von einer oder mehreren Dezimalstellen in der Eingabezeichenfolge mithilfe des Muster eines regulären Ausdrucks `\d+` abgeglichen. Die Ersetzungszeichenfolge <code>$`</code> ersetzt diese Ziffern durch den Text, der der Übereinstimmung vorausgeht.  
+ Im folgenden Beispiel wird eine Sequenz von einer oder mehreren Dezimalstellen in der Eingabezeichenfolge mithilfe des Muster eines regulären Ausdrucks `\d+` abgeglichen. Die Ersetzungszeichenfolge ``$` `` ersetzt diese Ziffern durch den Text, der der Übereinstimmung vorausgeht.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- In diesem Beispiel enthält die Eingabezeichenfolge `"aa1bb2cc3dd4ee5"` fünf Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung <code>$`</code> bewirkt, dass die Engine für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
+ In diesem Beispiel enthält die Eingabezeichenfolge `"aa1bb2cc3dd4ee5"` fünf Übereinstimmungen. Aus der folgenden Tabelle wird ersichtlich, wie die Ersetzung ``$` `` bewirkt, dass die Engine für reguläre Ausdrücke jede Übereinstimmung in der Eingabezeichenfolge ersetzt. Eingefügter Text wird in der Ergebnisspalte in Fettdruck angezeigt.  
   
 |Match|Position|Zeichenfolge vor Übereinstimmung|Ergebniszeichenfolge|  
 |-----------|--------------|-------------------------|-------------------|  
@@ -184,16 +184,16 @@ ms.locfileid: "47087329"
   
 <a name="LastGroup"></a>   
 ## <a name="substituting-the-last-captured-group"></a>Ersetzen der zuletzt erfassten Gruppe  
- Die Ersetzung `$+` ersetzt die übereinstimmende Zeichenfolge durch die zuletzt erfasste Gruppe. Wenn keine erfassten Gruppen vorhanden sind oder der Wert der zuletzt erfassten Gruppe <xref:System.String.Empty?displayProperty=nameWithType> ist, hat die Ersetzung `$+` keine Auswirkungen.  
+ Die Ersetzung `$+` ersetzt die übereinstimmende Zeichenfolge durch die zuletzt erfasste Gruppe. Wenn keine erfassten Gruppen vorhanden sind oder der Wert der zuletzt erfassten Gruppe <xref:System.String.Empty?displayProperty=nameWithType>ist, hat die Ersetzung `$+` keine Auswirkungen.  
   
- Im folgenden Beispiel werden doppelte Wörter in einer Zeichenfolge identifiziert, und es wird die Ersetzung `$+` verwendet, um sie durch ein einzelnes Vorkommen des Worts zu ersetzen. Die <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option wird verwendet, um sicherzustellen, dass Wörter, die sich ausschließlich in der Groß-/Kleinschreibung unterscheiden, als Duplikate betrachtet werden.  
+ Im folgenden Beispiel werden doppelte Wörter in einer Zeichenfolge identifiziert, und es wird die Ersetzung `$+` verwendet, um sie durch ein einzelnes Vorkommen des Worts zu ersetzen. Die <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option wird verwendet, um sicherzustellen, dass Wörter, die sich ausschließlich in der Groß-/Kleinschreibung unterscheiden, als Duplikate betrachtet werden.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/lastmatch1.cs#6)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/lastmatch1.vb#6)]  
   
  Das Muster für reguläre Ausdrücke `\b(\w+)\s\1\b` wird entsprechend der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  

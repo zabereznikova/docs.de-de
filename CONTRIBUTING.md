@@ -39,7 +39,7 @@ Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Bei
 
 Sie können sich auch die Liste [open issues](https://github.com/dotnet/docs/issues) (offene Tickets) anschauen und die Bearbeitung eines Tickets anbieten, das Sie interessiert. Wir verwenden die Bezeichnung [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (zu haben), um Tickets zu kennzeichnen, bei denen eine Mitwirkung möglich ist. 
 
-**Schritt 2:** Verzweigen Sie bei Bedarf das Repository `/dotnet/docs`, `dotnet/samples` oder `dotnet/dotnet-api-docs`, und erstellen Sie einen Branch für Ihre Änderungen.
+**Schritt 2:** Verzweigen Sie bei Bedarf das Repository `dotnet/docs`, `dotnet/samples` oder `dotnet/dotnet-api-docs`, und erstellen Sie einen Branch für Ihre Änderungen.
 
 Bei kleinen Änderungen können Sie die Weboberfläche von GitHub verwenden. Klicken Sie einfach bei der Datei, die Sie ändern möchten, auf **Edit the file in your fork of this project** (Datei in Ihrem Branch des Projekts bearbeiten). GitHub erstellt den neuen Branch für Sie, wenn Sie die Änderungen übermitteln.
 
@@ -101,7 +101,7 @@ Darüber hinaus sollten alle Beispiele in den Ordnern *core* und *standard* auf 
 Wir werden diese Verzeichnisse möglicherweise erweitern, wenn das Repository „docs“ neue Inhalte hinzufügt. Wir werden beispielsweise Xamarin-Verzeichnisse (z. B. `xamarin-ios` und `xamarin-android`) hinzufügen.
 
 Jedes vollständige Beispiel, das Sie erstellen, sollte eine Datei *readme.md* enthalten. Diese Datei sollte eine kurze Beschreibung des Beispiels (ein oder zwei Absätze) enthalten. Die Datei *readme.md* soll dem Leser erläutern, was er durch das Untersuchen dieses Beispiels lernt. Die Datei *readme.md* sollte auch einen Link zu dem Live-Dokument auf der Website [.NET-Dokumentation](https://docs.microsoft.com/dotnet/welcome) enthalten.
-Um zu bestimmen, wenn eine bestimmte Datei im Repository dieser Website zugeordnet ist, ersetzen Sie `/docs` im Repository-Pfad durch `http://docs.microsoft.com/dotnet/articles`.
+Um zu bestimmen, wenn eine bestimmte Datei im Repository dieser Website zugeordnet ist, ersetzen Sie `/docs` im Repository-Pfad durch `https://docs.microsoft.com/dotnet`.
 
 Ihr Thema enthält auch Links zum Beispiel. Erstellen Sie einen direkten Link zum Beispielordner auf GitHub.
 
