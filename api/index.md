@@ -17,5 +17,4 @@ ms.locfileid: "53146887"
 ---
 # <a name="net-api-browser"></a>.NET API-Browser
 
-Willkommen beim .NET API-Browser – Ihrer zentralen Anlaufstelle für alle .NET-basierten APIs von Microsoft.
-Suchen Sie nach beliebigen verwalteten APIs, indem Sie in das untere Feld Ihren Suchbegriff eingeben. Mehr über den API-Browser erfahren Sie [in unserem Blogbeitrag](https://aka.ms/apibrowser). Wenn Sie uns Feedback geben möchten, können Sie im [MicrosoftDocs/Feedback-Repository auf GitHub](https://github.com/MicrosoftDocs/feedback/issues) einen neuen Eintrag erstellen.
+Willkommen beim .NET API-Browser – Ihrer zentralen Anlaufstelle für alle .NET-basierten APIs von Microsoft. Suchen Sie nach beliebigen verwalteten APIs, indem Sie in das untere Feld Ihren Suchbegriff eingeben. Mehr über den API-Browser erfahren Sie [in unserem Blogbeitrag](https://aka.ms/apibrowser). Wenn Sie uns Feedback geben möchten, können Sie im [MicrosoftDocs/Feedback-Repository auf GitHub](https://github.com/MicrosoftDocs/feedback/issues) einen neuen Eintrag erstellen.
