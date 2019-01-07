@@ -1,16 +1,17 @@
 ---
-title: Unittests für F#-Bibliotheken in .NET Core mit „dotnet test“ und NUnit
+title: Komponententests für F# in .NET Core mit „dotnet test“ und NUnit
 description: Erfahren Sie mehr über die Konzepte von Komponententests für F# in .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Beispielprojektmappe mithilfe von „dotnet test“ und NUnit erstellen.
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: f8088dadbe92c10e2aad9cd5c3ce289612bd1a28
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131507"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241761"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Unittests für F#-Bibliotheken in .NET Core mit „dotnet test“ und NUnit
 

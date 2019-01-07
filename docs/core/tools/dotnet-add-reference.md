@@ -1,21 +1,19 @@
 ---
-title: Verweisbefehl „dotnet-add“ – .NET Core-CLI
-description: Der dotnet add-Verweisbefehl bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen.
-author: mairaw
-ms.author: mairaw
+title: Befehl „dotnet-add reference“
+description: Der Befehl „dotnet-add reference“ bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen.
 ms.date: 12/04/2018
-ms.openlocfilehash: 33c5e532baf23cc8fe2b3a5084bff029caece842
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129544"
+ms.locfileid: "53169761"
 ---
-# <a name="dotnet-add-reference"></a>dotnet-add-Verweis
+# <a name="dotnet-add-reference"></a>dotnet-add reference
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet add reference`: Fügt Projekt-zu-Projekt (P2P)-Verweise hinzu.
 

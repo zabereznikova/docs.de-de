@@ -3,13 +3,13 @@ title: Voraussetzungen für .NET Core unter Linux
 description: Unterstützte Versionen von Linux-Versionen und .NET Core-Abhängigkeiten, um .NET Core-Anwendungen auf Linux-Computern zu entwickeln, bereitzustellen und auszuführen.
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2018
-ms.openlocfilehash: e250158d10c6a03535f4e693e74954747f860a3c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148327"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656049"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Voraussetzungen für .NET Core unter Linux
 
@@ -60,6 +60,34 @@ Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 1.
 * openSUSE 42.3 oder höhere Versionen (.NET Core 1.1)
 
 Unter [.NET Core 1.x Supported OS Versions (Von .NET Core 1.x unterstützte Betriebssystemversionen)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) finden Sie die komplette Liste der Betriebssysteme, die von .NET Core 1.x unterstützt werden, außerdem nicht mehr unterstützte Betriebssystemversionen und Links zu Lebenszyklusrichtlinien.
+
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Vorschauversion 1](#tab/netcore30)
+
+.NET Core 3.0 Vorschauversion 1 behandelt Linux als ein einziges Betriebssystem. Es gibt einen Linux-Build (pro Chiparchitektur) für unterstützte Linux-Verteilungen. 
+
+Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 3.0-Downloads](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+
+.NET Core 3.0 Vorschauversion 1 wird unter den folgenden Linux-Verteilungen und -Versionen unterstützt. 
+
+Betriebssystem                            | Version               | Architekturen  
+------------------------------|-----------------------|----------------
+Red Hat Enterprise Linux      | 6                     | x64
+Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | x64
+Fedora                        | 28                    | x64
+Debian                        | 9                     | x64, ARM32\*, ARM64\*
+Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
+Linux Mint                    | 18                    | x64
+openSUSE                      | 42.3+                 | x64
+SUSE Enterprise Linux (SLES)  | 12 SP2+               | x64
+Alpine Linux                  | 3.8+                  | x64, ARM64
+
+\* ARM32 und ARM64 unterstützen das Starten mit Debian 9 und Ubuntu 16.04. Frühere Versionen dieser Distributionen werden auf ARM-Chips nicht unterstützt.
+
+Unter [.NET Core 3.0 Supported OS Versions (Von .NET Core 3.0 unterstützte Betriebssystemversionen)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) finden Sie die vollständige Liste der Betriebssysteme, Verteilungen und Versionen, die von .NET Core 3.0 unterstützt werden, außerdem nicht mehr unterstützte Betriebssystemversionen und Links zu Lebenszyklusrichtlinien.
+
+Weitere Informationen zum Installieren von .NET Core 3.0 unter ARM64 finden Sie unter [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (Installieren von .NET Core 3.0 unter Linux ARM64).
+
+
 
 ---
 

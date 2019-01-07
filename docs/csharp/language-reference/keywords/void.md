@@ -8,14 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: 87ccc3a18f0956ffe800ae97598e621e5ca72480
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce52e4d19335db0e21637b87bbd1589c86c06ae1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238376"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613127"
 ---
 # <a name="void-c-reference"></a>void (C#-Referenz)
+
 Wenn `void` als Rückgabetyp für eine Methode verwendet wird, wird angegeben, dass die Methode keinen Wert zurückgibt.
 
 `void` ist in der Parameterliste einer Methode unzulässig. Eine Methode, mit der keine Parameter übernommen und keine Werte zurückgegeben werden, wird wie folgt deklariert:
@@ -27,19 +28,20 @@ public void SampleMethod()
 }
 ```
 
-`void` wird auch in einem unsicheren Kontext verwendet, um einen Zeiger auf einen unbekannten Typ zu deklarieren. Weitere Informationen finden Sie unter [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).
+`void` wird auch in einem unsicheren Kontext verwendet, um einen Zeiger auf einen unbekannten Typ zu deklarieren. Weitere Informationen finden Sie unter [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 `void` ist ein Alias für den <xref:System.Void?displayProperty=nameWithType>-Typ aus dem .NET Framework.
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)  
-- [Werttypen](../../../csharp/language-reference/keywords/value-types.md)  
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Unsicherer Code und Zeiger](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [Verweistypen](reference-types.md)
+- [Werttypen](value-types.md)
+- [Methoden](../../programming-guide/classes-and-structs/methods.md)
+- [Unsicherer Code und Zeiger](../../programming-guide/unsafe-code-pointers/index.md)

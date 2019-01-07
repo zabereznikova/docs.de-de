@@ -1,17 +1,18 @@
 ---
-title: Komponententests für Visual Basic in .NET Core mithilfe von „dotnet test“ und MSTest
+title: Komponententests für Visual Basic in .NET Core mit „dotnet test“ und MSTest
 description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Visual Basic-Beispielprojektmappe mithilfe von MSTest erstellen.
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 dev_langs:
 - vb
-ms.openlocfilehash: 501bbedca28af1eaaadb0848bfcffc93a7aac92a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215150"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242463"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und MSTest
 

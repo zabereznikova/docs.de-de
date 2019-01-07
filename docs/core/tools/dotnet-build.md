@@ -1,19 +1,19 @@
 ---
-title: dotnet build-Befehl – .NET Core-CLI
-description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
+title: Befehl „dotnet build“
+description: Der Befehl „dotnet build“ erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 12/04/2018
-ms.openlocfilehash: 5d47fdfca14d20b3f2a134a8e734f76b1c86c498
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1e5e05d51f98394b2b77e3a8fc645cf9712b0a0f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149158"
+ms.locfileid: "53169695"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet build`: Erstellt ein Projekt und alle seine Abhängigkeiten
 
@@ -75,7 +75,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie kein Projekt- oder
 
 * **`-c|--configuration {Debug|Release}`**
 
-  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+  Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
 * **`-f|--framework <FRAMEWORK>`**
 

@@ -1,21 +1,19 @@
 ---
-title: dotnet restore-Befehl – .NET Core-CLI
-description: Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore.
-author: mairaw
-ms.author: mairaw
+title: Befehl „dotnet restore“
+description: Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl „dotnet restore“.
 ms.date: 05/29/2018
-ms.openlocfilehash: 504a0621beb8aea961133d2cc6d287ce17051c1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6f54671fcd1c17d2466d5a38027e02da5e7494e9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127328"
+ms.locfileid: "53170781"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet restore`: Stellt die Abhängigkeiten und Tools eines Projekts wieder her
 
@@ -164,6 +162,8 @@ Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu v
 `--verbosity <LEVEL>`
 
 Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`.
+
+---
 
 ## <a name="examples"></a>Beispiele
 

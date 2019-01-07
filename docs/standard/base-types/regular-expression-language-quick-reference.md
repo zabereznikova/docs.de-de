@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041615"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779385"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 <a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041615"
   
  [Escapezeichen](#character_escapes)  
  [Zeichenklassen](#character_classes)  
- [Anchor](#atomic_zerowidth_assertions)  
+ [Anchor](#anchors)  
  [Gruppierungskonstrukte](#grouping_constructs)  
  [Quantifizierer](#quantifiers)  
  [Rückverweiskonstrukte](#backreference_constructs)  
@@ -73,7 +73,7 @@ ms.locfileid: "44041615"
 |Zeichenklasse|Beschreibung |Muster|Übereinstimmungen|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *character_group* `]`|Entspricht einem beliebigen einzelnen Zeichen in *character_group*. Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|"a" in "wage"<br /><br /> "a", "e" in "klasse"|  
-|`[^` *character_group* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *character_group*enthalten ist. Standardmäßig wird bei Zeichen in *character_group* die Groß-/Kleinschreibung beachtet.|`[^aei]`|"r", "g", "n" in "ringen"|  
+|`[^` *character_group* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *character_group* enthalten ist. Standardmäßig wird bei Zeichen in *character_group* die Groß-/Kleinschreibung beachtet.|`[^aei]`|"r", "g", "n" in "ringen"|  
 |`[` *first* `-` *last* `]`|Zeichenbereich: Entspricht jedem beliebigen einzelnen Zeichen im Bereich von *first* bis *last*.|`[A-Z]`|"A", "B" in "AB123"|  
 |`.`|Platzhalterzeichen: Entspricht jedem beliebigen einzelnen Zeichen außer \n.<br /><br /> Damit es einem Punkt als Literalzeichen entspricht ("." oder oder `\u002E`, muss ihm ein Escapezeichen (`\.`) vorangestellt werden.|`a.e`|"ade" in "gerade"<br /><br /> "ase" in "klasse"|  
 |`\p{` *Name* `}`|Entspricht jedem beliebigen Zeichen, das sich in der allgemeinen Unicode-Kategorie oder einem von *name*angegebenen benannten Block befindet.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"S", "M" in "Staatliche Museen"<br /><br /> "Д", "Ж" in "ДЖem"|  
@@ -87,7 +87,6 @@ ms.locfileid: "44041615"
   
  [Zurück zum Anfang](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Anchor  
  Anchor oder atomare Assertionen mit einer Breite von Null bewirken, dass, in Abhängigkeit von der Position in der Zeichenfolge, eine Entsprechung gefunden oder nicht gefunden wird. Sie bewirken jedoch nicht, dass die Engine die Zeichenfolge durchläuft oder Zeichen verwendet. Die Metazeichen in der folgenden Tabelle sind Anchor. Weitere Informationen finden Sie unter [Anchor](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
@@ -179,7 +178,7 @@ ms.locfileid: "44041615"
 |`$&`|Ersetzt eine Kopie der gesamten Entsprechung.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Ersetzt den gesamten Text der Eingabezeichenfolge vor der Entsprechung.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|Ersetzt den gesamten Text der Eingabezeichenfolge nach der Entsprechung.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|Ersetzt die zuletzt erfasste Gruppe.|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|Ersetzt die zuletzt erfasste Gruppe.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Ersetzt die gesamte Eingabezeichenfolge.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [Zurück zum Anfang](#top)  

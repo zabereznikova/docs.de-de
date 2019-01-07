@@ -1,20 +1,19 @@
 ---
-title: Ausführen von selektiven Komponententests – .NET Core
+title: Ausführen von selektiven Komponententests
 description: Es wird erläutert, wie Sie einen Filterausdruck zum Ausführen selektiver Komponententests mit dem dotnet-Testbefehl in .NET Core verwenden.
 author: smadala
-ms.author: mairaw
 ms.date: 03/22/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c24fb8cc5024399ae523801373b0fd8eff85f45
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151745"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239942"
 ---
 # <a name="running-selective-unit-tests"></a>Ausführen von selektiven Komponententests
 
-Die folgenden Beispiele verwenden `dotnet test`. Wenn Sie `vstest.console.exe` verwenden, ersetzen Sie `--filter ` mit `--testcasefilter:`.
+Mit dem Befehl `dotnet test` in .NET Core können Sie einen Filterausdruck zum Ausführen selektiver Tests verwenden. In diesem Artikel wird gezeigt, wie Sie die auszuführenden Tests filtern. Die folgenden Beispiele verwenden `dotnet test`. Wenn Sie `vstest.console.exe` verwenden, ersetzen Sie `--filter ` mit `--testcasefilter:`.
 
 ## <a name="mstest"></a>MSTest
 
@@ -46,7 +45,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | Führt Tests aus, dessen `FullyQualifiedName` `Method` enthält. Verfügbar in `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Führt Tests aus, dessen Name `TestMethod1` enthält. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Führt Tests aus, die sich in der Klasse `MSTestNamespace.UnitTest1` befinden.<br>**Hinweis:** Der Wert `ClassName` muss einen Namespace besitzen, damit `ClassName=UnitTest1` nicht funktioniert. |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | Führt Tests aus, die sich in der Klasse `MSTestNamespace.UnitTest1` befinden.<br>**Hinweis**: Der Wert `ClassName` muss einen Namespace besitzen, damit `ClassName=UnitTest1` nicht funktioniert. |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | Führt alle Tests außer `MSTestNamespace.UnitTest1.TestMethod1` aus. |
 | `dotnet test --filter TestCategory=CategoryA` | Führt Tests aus, die mit `[TestCategory("CategoryA")]` kommentiert sind. |
 | `dotnet test --filter Priority=2` | Führt Tests aus, die mit `[Priority(2)]` kommentiert sind.<br>

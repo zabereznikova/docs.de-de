@@ -2,15 +2,14 @@
 title: Portieren von Bibliotheken auf .NET Core
 description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NET Core portieren.
 author: cartermp
-ms.author: mairaw
 ms.date: 07/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143583"
+ms.locfileid: "53169680"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 

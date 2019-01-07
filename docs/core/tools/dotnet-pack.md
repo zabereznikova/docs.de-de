@@ -1,19 +1,19 @@
 ---
-title: dotnet pack-Befehl – .NET Core-CLI
-description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
+title: Befehl „dotnet pack“
+description: Der Befehl „dotnet pack“ erstellt NuGet-Pakete für ein .NET Core-Projekt.
 ms.date: 12/04/2018
-ms.openlocfilehash: 77770e715ef11595e8c95bb40be960138cd7ec61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ca88dd4c7dfd45c9295043cd2352ba6bdf5464af
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149600"
+ms.locfileid: "53170092"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet pack`: Packt den Code in ein NuGet-Paket
 

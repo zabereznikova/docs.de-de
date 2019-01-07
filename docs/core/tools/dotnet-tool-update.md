@@ -1,21 +1,19 @@
 ---
-title: '.NET Core-CLI-Befehl: dotnet tool update'
+title: Befehl „dotnet tool update“
 description: Der Befehl „dotnet tool update“ aktualisiert die angegebenen globalen .NET Core-Tools auf Ihrem Computer.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 90b0dc91f74d890420dc7185642aa89100cadba8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2716f7f88ffe364bebacf970d7152f5509edc888
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069392"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169735"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet tool update`: Aktualisiert das angegebene [globale .NET Core-Tool](global-tools.md) auf Ihrem Computer.
 
@@ -27,7 +25,7 @@ dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v
 dotnet tool update <-h|--help>
 ```
 
-## <a name="description"></a>Beschreibung 
+## <a name="description"></a>Beschreibung
 
 Der Befehl `dotnet tool update` ermöglicht Ihnen das Aktualisieren der globalen .NET Core-Tools auf Ihrem Computer auf die neueste stabile Version des Pakets. Der Befehl deinstalliert und installiert ein Tool neu, sodass es aktualisiert wird. Zum Verwenden des Befehls müssen Sie entweder mit der Option `--global` angeben, dass Sie ein Tool einer benutzerweiten Installation aktualisieren möchten, oder mit der Option `--tool-path` einen Pfad zum installierten Tool angeben.
 

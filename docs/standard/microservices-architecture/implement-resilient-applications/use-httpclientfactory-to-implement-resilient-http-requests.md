@@ -4,12 +4,12 @@ description: HttpClientFactory ist eine Factory, die seit .NET Core 2.1 für das
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145110"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611034"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Verwenden von HttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 
@@ -71,7 +71,7 @@ Durch einfaches Hinzufügen Ihrer typisierten Clientklassen mit AddHttpClient() 
 
 ### <a name="httpclient-lifetimes"></a>HTTPClient-Lebensdauer
 
-Jedes Mal, wenn Sie ein `HttpClient`-Objekt von IHttpClientFactory abrufen, wird eine neue Instanz von `HttpClient` zurückgegeben. Es gibt ein HttpMessageHandler**-Objekt für jeden benannten oder typisierten Client. `IHttpClientFactory` fasst die von der Factory zum Reduzieren des Ressourcenverbrauchs erstellten HttpMessageHandler-Instanzen in einem Pool zusammen. Eine HttpMessageHandler-Instanz kann aus dem Pool wiederverwendet werden, wenn eine neue `HttpClient`-Instanz erstellt wird, sofern die Lebensdauer noch nicht abgelaufen ist.
+Jedes Mal, wenn Sie ein `HttpClient`-Objekt von IHttpClientFactory abrufen, wird eine neue Instanz von `HttpClient` zurückgegeben. Es gibt ein **HttpMessageHandler**-Objekt für jeden benannten oder typisierten Client. `IHttpClientFactory` fasst die von der Factory zum Reduzieren des Ressourcenverbrauchs erstellten HttpMessageHandler-Instanzen in einem Pool zusammen. Eine HttpMessageHandler-Instanz kann aus dem Pool wiederverwendet werden, wenn eine neue `HttpClient`-Instanz erstellt wird, sofern die Lebensdauer noch nicht abgelaufen ist.
 
 Das Zusammenlegen von Handlern ist wünschenswert, da jeder Handler in der Regel über seine eigenen HTTP-Verbindungen verfügt. Das Erstellen von mehr Handlern als notwendig kann zu Verzögerungen bei der Verbindung führen. Einige Handler halten Verbindungen auch unbegrenzt offen, was verhindert, dass der Handler auf DNS-Änderungen reagiert.
 

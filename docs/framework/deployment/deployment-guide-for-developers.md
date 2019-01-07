@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453475"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396993"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version des .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -192,7 +192,7 @@ InstallAware erstellt über eine einzige Quelle die Windows-App (APPX), den Wind
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- Sie können die Installation mit zusätzlichen Befehlszeilenoptionen anpassen. Zum Beispiel:
+ Sie können die Installation mit zusätzlichen Befehlszeilenoptionen anpassen. Beispiel:
 
 - Um Benutzern das Schließen aktiver .NET Framework-Apps zu ermöglichen und Systemneustarts zu minimieren, legen Sie den passiven Modus fest, und verwenden Sie die Option `/showrmui` wie folgt:
 
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Erkennen](#detecting-the-language-packs) , ob die Language Packs bereits auf dem Computer des Benutzers installiert sind.
 
-- Wenn Sie die Bereitstellung steuern möchten, lassen Sie den .NET Framework-Setupvorgang automatisch starten und nachverfolgen (weitere Informationen finden Sie unter [Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- Wenn Sie die Bereitstellung steuern möchten, lassen Sie den .NET Framework-Setupvorgang automatisch starten und nachverfolgen (weitere Informationen finden Sie unter [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Wenn Sie den Offlineinstaller bereitstellen, [verketten Sie die Language Packs separat](#chain_langpack).
 
@@ -247,9 +247,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Version|Wert des Versions-DWORD|
 |-------------|--------------------------------|
-|.NET Framework 4.7.2, installiert unter dem Windows 10-Update von April 2018|461814|
 |.NET Framework 4.7.2, installiert im Windows 10-Update von April 2018 und in Windows Server Version 1803|461808|
-|.NET Framework 4.7.2, installiert in allen Betriebssystemversionen, mit Ausnahme von Windows 10-Update von Oktober 2018, Windows 10-Update von April 2018 und Windows Server, Version 1803|461814|
+|.NET Framework 4.7.2, installiert in allen Betriebssystemversionen, abgesehen vom Windows 10-Update von April 2018 und Windows Server Version 1803. Dies umfasst das Windows 10-Update von Oktober 2018. |461814|
 |.NET Framework 4.7.1, installiert im Windows 10 Fall Creators Update und Windows Server Version 1709|461308|
 |.NET Framework 4.7.1, installiert in allen Betriebssystemversionen, abgesehen vom Windows 10 Fall Creators Update und Windows Server Version 1709|461310|
 |.NET Framework 4.7 installiert unter Windows 10 Creators Update|460798|
@@ -320,7 +319,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="return-codes"></a>Rückgabecodes
  In der folgenden Tabelle sind die häufigsten Rückgabecodes für das verteilbare Installationsprogramm für .NET Framework aufgeführt. Die Rückgabecodes sind für alle Versionen des Installationsprogramms identisch. Links zu ausführlichen Informationen finden Sie im nächsten Abschnitt.
 
-|Rückgabecode|Beschreibung |
+|Rückgabecode|Beschreibung|
 |-----------------|-----------------|
 |0|Die Installation wurde erfolgreich abgeschlossen.|
 |1602|Der Benutzer hat die Installation abgebrochen.|
@@ -356,11 +355,11 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>Befehlszeilenoptionen
  In der folgenden Tabelle sind die Optionen aufgeführt, die Sie einschließen können, wenn Sie das verteilbare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] -Paket mit dem Setup der App verketten.
 
-|Option|Beschreibung |
+|Option|Beschreibung|
 |------------|-----------------|
 |**/CEIPConsent**|Überschreibt das Standardverhalten und sendet anonymes Feedback an Microsoft, um die Bereitstellungsumgebung für die Zukunft zu verbessern. Diese Option kann nur verwendet werden, wenn vom Setupprogramm die Zustimmung angefordert wird und der Benutzer die Berechtigung erteilt, anonymes Feedback an Microsoft zu senden.|
 |**/chainingpackage** `packageName`|Gibt den Namen der ausführbaren Datei an, die das Verketten ausführt. Diese Informationen werden als anonymes Feedback an Microsoft gesendet, um zu helfen, die Bereitstellungsumgebung für die Zukunft zu verbessern.<br /><br /> Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Lucerne Publishing"**. Ein Beispiel für ein Verkettungspaket finden Sie in der MSDN Library unter [Abrufen von Statusinformationen aus einem Installationspaket](https://go.microsoft.com/fwlink/?LinkId=181926) .|
-|**/LCID**  `LCID`<br /><br /> wobei `LCID` einen Gebietsschemabezeichner angibt (siehe [Unterstützte Sprachen](#supported-languages))|Installiert das von `LCID` angegebene Language Pack und erzwingt die Anzeige der Benutzeroberfläche in dieser Sprache (sofern nicht der stille Modus festgelegt wird).<br /><br /> Bei Verwendung des Webinstallers wird mit dieser Option das Language Pack per Verkettung aus dem Web installiert. **Hinweis**: Verwenden Sie diese Option nur mit dem Webinstaller.|
+|**/LCID**  `LCID`<br /><br /> wobei `LCID` einen Gebietsschemabezeichner angibt (siehe [Unterstützte Sprachen](#supported-languages))|Installiert das von `LCID` angegebene Language Pack und erzwingt die Anzeige der Benutzeroberfläche in dieser Sprache (sofern nicht der stille Modus festgelegt wird).<br /><br /> Bei Verwendung des Webinstallers wird mit dieser Option das Language Pack per Verkettung aus dem Web installiert. **Hinweis**:  Verwenden Sie diese Option nur mit dem Webinstaller.|
 |**/log** `file` &#124; `folder`|Gibt den Speicherort der Protokolldatei an. Der Standardwert ist der temporäre Ordner für den Vorgang, und der Standarddateiname basiert auf dem Paket. Wenn die Dateierweiterung TXT lautet, wird ein Textprotokoll präsentiert. Wenn Sie eine andere Erweiterung oder keine Erweiterung angeben, wird ein HTML-Protokoll erstellt.|
 |**/msioptions**|Gibt Optionen an, die für MSI- und MSP-Elemente übergeben werden sollen. Beispiel: `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Wenn Sie diese Option verwenden, muss die verkettende App den Rückgabecode erfassen und den Neustart initiieren (siehe [Abrufen von Statusinformationen aus einem Installationspaket](https://go.microsoft.com/fwlink/?LinkId=179606) in der MSDN Library).|
@@ -409,4 +408,4 @@ In der folgenden Tabelle sind die .NET Framework Sprachpakete aufgeführt, die f
 - [Installieren von .NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)  
 - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
 - [Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](../../../docs/framework/deployment/reducing-system-restarts.md)  
-- [Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

@@ -1,15 +1,15 @@
 ---
-title: Verwenden von .NET Core SDK und Tools in Continuous Integration (CI) – .NET Core-CLI
+title: Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
 description: Hier erhalten Sie Informationen zur Verwendung des .NET Core SDK und der zugehörigen Tools auf dem Buildserver.
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7891430654b416a2b55fa837f276d991b56370cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131390"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611554"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Verwenden des .NET Core SDK und der zugehörigen Tools in Continuous Integration (CI)
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 [Travis CI](https://travis-ci.org/) kann so konfiguriert werden, dass das .NET Core SDK mit der Sprache `csharp` und dem Schlüssel `dotnet` installiert wird. Weitere Informationen zum [Erstellen eines C#-, F#- oder Visual Basic-Projekts](https://docs.travis-ci.com/user/languages/csharp/) finden Sie in der offiziellen Travis CI-Dokumentation. Beachten Sie beim Zugriff auf die Travis CI-Informationen, dass der von der Community verwaltet Sprachbezeichner `language: csharp` für alle .NET-Sprachen (einschließlich F# und Mono) funktioniert.
 
-Travis CI führt sowohl macOS- als auch Linux-Aufträge in einer *Buildmatrix* aus, wobei Sie eine Kombination aus Runtime, Umgebung und Einschlüssen/Ausschlüssen zur Abdeckung der Buildkombinationen für Ihre App angeben. Weitere Informationen finden Sie in der Datei [.travis.yml-Beispiel](https://github.com/dotnet/docs/blob/master/.travis.yml) und unter [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Anpassen des Builds) in der Travis CI-Dokumentation. Die MSBuild-basierten Tools enthalten die Runtimes LTS (1.0.x) und Current (1.1.x) im Paket. Deshalb verfügen Sie nach der Installation des SDK über alle benötigten Buildkomponenten.
+Travis CI führt sowohl macOS- als auch Linux-Aufträge in einer *Buildmatrix* aus, wobei Sie eine Kombination aus Runtime, Umgebung und Einschlüssen/Ausschlüssen zur Abdeckung der Buildkombinationen für Ihre App angeben. Weitere Informationen finden Sie im Artikel [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Anpassen des Builds) in der Travis CI-Dokumentation. Die MSBuild-basierten Tools enthalten die Runtimes LTS (1.0.x) und Current (1.1.x) im Paket. Deshalb verfügen Sie nach der Installation des SDK über alle benötigten Buildkomponenten.
 
 ### <a name="appveyor"></a>AppVeyor
 

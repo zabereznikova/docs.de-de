@@ -1,21 +1,19 @@
 ---
-title: dotnet migrate-Befehl – .NET Core-CLI
-description: Der dotnet migrate-Befehl migriert ein Projekt und alle seine Abhängigkeiten.
-author: mairaw
-ms.author: mairaw
+title: Befehl „dotnet migrate“
+description: Der Befehl „dotnet migrate“ migriert ein Projekt und alle seine Abhängigkeiten.
 ms.date: 05/25/2018
-ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 73e0169e64be4b55e10127ecca0101885061767e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697104"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170742"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet migrate`: Migriert ein .NET Core-Projekt von Preview 2 in ein .NET Core-Projekt von SDK 1.0.
 
@@ -26,7 +24,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--r
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung
 
 Der `dotnet migrate`-Befehl migriert ein gültiges *project.json*-basiertes Projekt von Preview 2 in ein gültiges *csproj*-Projekt von .NET Core SDK 1.0.
 

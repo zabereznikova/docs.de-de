@@ -1,23 +1,24 @@
 ---
 title: Bewährte Methoden zum Schreiben von Komponententests
-description: Informationen zu den bewährten Methoden zum Schreiben von Komponententests, die die Qualität und Stabilität von Code gewährleisten
+description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Komponententests, die die Qualität und Stabilität von Code für .NET Core- und .NET Standard-Projekte gewährleisten.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143408"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240722"
 ---
-# <a name="unit-testing-best-practices"></a>Bewährte Methoden für Komponententests
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
-Von [John Reese](http://reesespieces.io) mit besonderem Dank an [Roy Osherove](http://osherove.com/)
-
-Komponententests bringen zahlreiche Vorteile mit sich: Sie helfen bei der Regression, stellen Dokumentation bereit und unterstützen Sie beim Entwerfen guten Codes. Allerdings können Komponententest, die schwierig zu lesen und fehleranfällig sind, zu einer unübersichtlichen Codebasis führen.
+Komponententests bringen zahlreiche Vorteile mit sich: Sie helfen bei der Regression, stellen Dokumentation bereit und unterstützen Sie beim Entwerfen guten Codes. Allerdings können Komponententest, die schwierig zu lesen und fehleranfällig sind, zu einer unübersichtlichen Codebasis führen. In diesem Artikel werden einige bewährte Methoden in Bezug auf den Entwurf von Komponententests für Ihre .NET Core- und .NET Standard-Projekte beschrieben.
 
 In diesem Leitfaden lernen Sie die bewährten Methoden beim Schreiben von Komponententests kennen, mit denen Sie Ihre Tests resilient und leicht verständlich gestalten können.
+
+Von [John Reese](http://reesespieces.io) mit besonderem Dank an [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Weshalb sollte ich Komponententests durchführen?
 

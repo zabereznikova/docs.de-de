@@ -1,15 +1,16 @@
 ---
-title: Asynchrone Programmierung
+title: Asynchrone Programmierung – C#
 description: Informationen zum asynchronen Programmiermodell auf C#-Sprachebene, das von .NET Core bereitgestellt wird.
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126496"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612126"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -29,7 +30,7 @@ Das Schlüsselwort `await` ist sozusagen der Zauberstab. Es übergibt die Steuer
 
 Es gibt weitere Methoden als Ansatz für asynchronen Code als `async` und `await`, die im oben verknüpften TAP-Artikel beschriebenen sind, aber dieses Dokument konzentriert sich ab nun auf die Konstrukte auf Sprachebene.
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>E/A-Beispiel: Herunterladen von Daten von einem Webdienst
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>E/A-gebundenes Beispiel: Herunterladen von Daten von einem Webdienst
 
 Sie müssen möglicherweise einige Daten von einem Webdienst herunterladen, wenn auf eine Schaltfläche geklickt wird, möchten aber nicht den UI-Thread blockieren. Das kann einfach wie folgt erreicht werden:
 
@@ -264,5 +265,5 @@ Ein empfohlenes Ziel ist das vollständige oder nahezu vollständige Erreichen [
 ## <a name="other-resources"></a>Weitere Ressourcen
 
 * [Async ausführlich](../standard/async-in-depth.md) enthält weitere Informationen zur Funktionsweise von Aufgaben.
-* [Asynchrone Programmierung mit Async und Await (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Asynchrone Programmierung mit Async und Await (C#)](./programming-guide/concepts/async/index.md)
 * Lucian Wischiks [sechs wichtige Tipps für Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) ist eine hervorragende Ressource für asynchrone Programmierung

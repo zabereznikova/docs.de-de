@@ -2,14 +2,13 @@
 title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126977"
+ms.locfileid: "53170404"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -17,7 +16,7 @@ ms.locfileid: "53126977"
 
 - **Plattformübergreifend:** Ist unter den [Betriebssystemen](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS und Linux lauffähig.
 - **Architekturübergreifende Konsistenz:** Führt Ihren Code in unterschiedlichen Architekturen (z.B. x64, x86 und ARM) mit demselben Verhalten aus.
-- **Befehlszeilentools:** Umfasst benutzerfreundliche Befehlszeilentools, mit denen Sie lokal und in Continuous Integration-Szenarios entwickeln können.
+- **Befehlszeilentools:**  Umfasst benutzerfreundliche Befehlszeilentools, mit denen Sie lokal und in Continuous Integration-Szenarios entwickeln können.
 - **Flexible Bereitstellung:** Kann in Ihre App eingebunden oder parallel zu ihr installiert werden – auf Benutzer- oder Computerbasis. Kann mit [Docker-Containern](docker/index.md) verwendet werden.
 - **Kompatibel:** .NET Core ist über [.NET Standard](../standard/net-standard.md) mit .NET Framework, Xamarin und Mono kompatibel.
 - **Open Source:** Die .NET Core-Plattform ist eine Open Source-Plattform, die MIT- und Apache 2-Lizenzen verwendet. .NET Core ist ein [.NET Foundation](https://dotnetfoundation.org/)-Projekt.
@@ -76,7 +75,7 @@ Es wird häufig gefragt, wie .NET Core implementiert wird, um mehrere Betriebssy
 
 Sie sehen im Diagramm unten, dass die große Mehrheit der [CoreFX](https://github.com/dotnet/corefx) aus plattformneutralem Code sind, der auf allen Plattformen gemeinsam genutzt wird. Ein plattformneutraler Code kann als einzelne, tragbare Assembly implementiert werden, die auf allen Plattformen verwendet wird.
 
-![CoreFX: Zeilen-Code pro Plattform](../images/corefx-platforms-loc.png)
+![CoreFX: Codezeilen pro Plattform](../images/corefx-platforms-loc.png)
 
 Windows- und Unix-Implementierungen haben eine ähnliche Größe. Windows verfügt über eine größere Implementierung, da CoreFX einige Funktionen nur für Windows implementiert, wie z.B. [Microsoft.Win32.Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry), jedoch noch nicht viele Konzepte nur für Unix implementiert. Außerdem sehen Sie, dass die Mehrheit der Linux- und Mac OS-Implementierungen für mehrere Unix-Implementierungen verwendet werden, während die spezifischen Linux- und Mac OS-Implementierungen ungefähr gleich groß sind.
 

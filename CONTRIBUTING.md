@@ -66,7 +66,9 @@ Achten Sie darauf, die richtige Markdownsyntax einzuhalten. Weitere Informatione
             /porting-overview
                 portability_report.png
 
-**Schritt 4:** Übermitteln Sie einen Pull Request (PR) von dem Branch an `dotnet/docs/master`.
+**Schritt 4:** Übermitteln Sie einen Pull Request (PR) von Ihrem Branch an `dotnet/docs/master`.
+
+Der PR sollte *immer* den Master-Branch zum Ziel haben. Sie sollten *niemals* einen PR öffnen, der den Live-Branch zum Ziel hat.
 
 Jeder PR sollte sich in der Regel auf jeweils ein Ticket beziehen. Mit dem PR können auch mehrere Dateien geändert werden. Wenn Sie sich mit mehreren Korrekturen an verschiedenen Dateien befassen, werden separate PRs bevorzugt.
 

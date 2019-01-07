@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a94f9c650927aee0f120ee3c0b1199b6c977ef0e
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129817"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53776733"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  

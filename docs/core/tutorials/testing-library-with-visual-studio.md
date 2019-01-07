@@ -7,15 +7,13 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom:
-- vs-dotnet
-- seodoc18
-ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: vs-dotnet, seodoc18
+ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144896"
+ms.locfileid: "53170794"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testen einer Klassenbibliothek mit .NET Core in Visual Studio 2017
 
@@ -30,14 +28,14 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
 1. Klicken Sie auf den Knoten **Visual C#** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
 
-   ![Dialogfeld „Neues Projekt hinzufügen“](./media/testing-library-with-visual-studio/testproject.png)
+   ![Dialogfeld „Neues Projekt hinzufügen“ mit angezeigtem Komponententestprojekt – C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
    > Neben einem MSTest-Testprojekt können Sie auch Visual Studio verwenden, um ein xUnit-Testprojekt für .NET Core zu erstellen.
 
 1. Visual Studio erstellt das Projekt und öffnet die *UnitTest1.cs*-Datei im Codefenster.
 
-   ![Das Codefenster von Visual Studio zeigt das standardmäßige UnitTest1-Klasse und TestMethod1-Methode des Komponententestprojekts.](./media/testing-library-with-visual-studio/unittestwindow.png)
+   ![Visual Studio-Codefenster für die Klasse und Methode des Komponententests – C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
@@ -49,24 +47,24 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
-   ![Kontextmenü der StringLibraryTest-Abhängigkeiten](./media/testing-library-with-visual-studio/addreference.png)
+   ![Kontextmenü der StringLibraryTest-Abhängigkeiten – C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Erweitern Sie im Dialogfeld **Reference Manager** den Knoten **Projekte** und aktivieren Sie das Feld neben **StringLibrary**. Das Hinzufügen eines Verweises auf die `StringLibrary`-Assembly ermöglicht dem Compiler, **StringLibrary**-Methoden zu finden. Klicken Sie auf die Schaltfläche **OK**. Dadurch wird ein Verweis auf Ihr Klassenbibliotheksprojekt, `StringLibrary`, hinzugefügt.
 
-   ![Verweis-Manager](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio-Dialogfeld „Projektverweis hinzufügen“](./media/testing-library-with-visual-studio/project-reference-manager.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü des Projektmappenknotens **ClassLibraryProject**, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
 1. Klicken Sie auf den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
 
-   ![Dialogfeld „Neues Projekt hinzufügen“](./media/testing-library-with-visual-studio/vb-testproject.png)
+   ![Dialogfeld „Neues Projekt hinzufügen“ mit angezeigtem Komponententestprojekt – Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
    > [!NOTE]  
    > Neben einem MSTest-Testprojekt können Sie auch Visual Studio verwenden, um ein xUnit-Testprojekt für .NET Core zu erstellen.
 
 1. Visual Studio erstellt das Projekt und öffnet die *UnitTest1.vb*-Datei im Codefenster.
 
-   ![Das Codefenster von Visual Studio zeigt das standardmäßige UnitTest1-Klasse und TestMethod1-Methode des Komponententestprojekts.](./media/testing-library-with-visual-studio/vb-unittestwindow.png)
+   ![Visual Studio-Codefenster für die Klasse und Methode des Komponententests – Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
@@ -78,11 +76,11 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für den Knoten **Abhängigkeiten** des **StringLibraryTest**-Projekts, und wählen Sie **Verweis hinzufügen** aus.
 
-   ![Kontextmenü der StringLibraryTest-Abhängigkeiten](./media/testing-library-with-visual-studio/addreference.png)
+   ![Kontextmenü der StringLibraryTest-Abhängigkeiten](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Erweitern Sie im Dialogfeld **Reference Manager** den Knoten **Projekte** und aktivieren Sie das Feld neben **StringLibrary**. Das Hinzufügen eines Verweises auf die `StringLibrary`-Assembly ermöglicht dem Compiler, **StringLibrary**-Methoden zu finden. Klicken Sie auf die Schaltfläche **OK**. Dadurch wird ein Verweis auf Ihr Klassenbibliotheksprojekt, `StringLibrary`, hinzugefügt.
 
-   ![Verweis-Manager](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio-Dialogfeld „Projektverweis hinzufügen“ – Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Hinzufügen und Ausführen von Komponententestmethoden
@@ -117,7 +115,7 @@ So erstellen Sie die Testmethoden:
 
 1. Wählen Sie in der Menüleiste **Datei** > **UnitTest1.cs speichern unter** aus. Wählen Sie im Dialogfeld **Datei speichern unter** den Pfeil neben der Schaltfläche **Speichern**, und wählen Sie dann **Mit Codierung speichern...** aus.
 
-   ![Dialogfeld „Datei speichern unter“](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio-Dialogfeld „Datei speichern unter“ – C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Ersetzen Sie den Code im Codefenster *UnitTest1.vb* durch den folgenden Code:
 
@@ -127,20 +125,20 @@ So erstellen Sie die Testmethoden:
 
 1. Wählen Sie in der Menüleiste **Datei** > **UnitTest1.vb speichern unter** aus. Wählen Sie im Dialogfeld **Datei speichern unter** den Pfeil neben der Schaltfläche **Speichern**, und wählen Sie dann **Mit Codierung speichern...** aus.
 
-   ![Dialogfeld „Datei speichern unter“](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Visual Studio-Dialogfeld „Datei speichern unter“ – Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. Wählen Sie im Dialogfeld **Speichern unter bestätigen** die Schaltfläche **Ja**, um die Datei zu speichern.
 
 1. Wählen Sie im Dialogfeld **Erweiterte Speicheroptionen** **Unicode (UTF-8 mit Signatur) – Codepage 65001** aus der Dropdownliste **Codierung** aus, und klicken Sie auf **OK**.
 
-   ![Dialogfeld „Erweiterte Speicheroptionen“](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
+   ![Visual Studio-Dialogfeld „Erweiterte Speicheroptionen“](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    Wenn Sie den Quellcode nicht in einer UTF8-codierten Datei speichern, kann Visual Studio ihn als ASCII-Datei speichern. Wenn dies geschieht, decodiert die Laufzeit die UTF8-Zeichen außerhalb des ASCII-Bereichs nicht ordnungsgemäß, und die Testergebnisse sind nicht präzise.
 
 1. Wählen Sie auf der Menüleiste **Test** > **Ausführen** > **Alle Tests** aus. Das Fenster **Test-Explorer** wird geöffnet und zeigt, dass der Test erfolgreich ausgeführt wurde. Die drei Tests sind im Abschnitt **Bestandene Tests** aufgelistet, und im Abschnitt **Zusammenfassung** wird das Ergebnis des Testlaufs berichtet.
 
-   ![Fenster „Test-Explorer“](./media/testing-library-with-visual-studio/firsttest.png)
+   ![Test Explorer-Fenster mit erfolgreichen Tests](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
 ## <a name="handling-test-failures"></a>Behandeln von Testfehlern
 
@@ -159,11 +157,11 @@ In Ihrem Testlauf sind keine Fehler aufgetreten, darum verändern Sie ihn leicht
    ```
 1. Führen Sie den Test aus, indem Sie **Test** > **Ausführen** > **Alle Tests** aus der Menüleiste auswählen. Das Fenster **Test-Explorer** zeigt, dass zwei Tests erfolgreich ausgeführt wurden und einer nicht erfolgreich war.
 
-   ![Fenster „Test-Explorer“](./media/testing-library-with-visual-studio/failedtest.png)
+   ![Test Explorer-Fenster mit fehlschlagenden Tests](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. Wählen Sie den fehlerhaften Test, `TestDoesNotStartWith`, im Abschnitt **Fehlgeschlagene Tests** aus. Im Fenster **Test-Explorer** wird die Assert-Meldung angezeigt: „Fehler bei Assert.IsFalse. Für 'Error' erwartet False; tatsächlich: True“. Wegen des Fehlers wurden alle auf „Error“ folgenden Zeichenfolgen im Array nicht getestet.
+1. Wählen Sie den fehlerhaften Test, `TestDoesNotStartWith`, im Abschnitt **Fehlgeschlagene Tests** aus. Im Fenster **Test-Explorer** wird die Assert-Meldung angezeigt: „Fehler bei Assert.IsFalse. Für 'Error' erwartet: False; tatsächlich: True“. Wegen des Fehlers wurden alle auf „Error“ folgenden Zeichenfolgen im Array nicht getestet.
 
-   ![Fenster „Test-Explorer“, das den Assertionsfehler „Ist FALSE“ zeigt](./media/testing-library-with-visual-studio/failedtestdetail.png)
+   ![Fenster „Test-Explorer“, das den Assertionsfehler „Ist FALSE“ zeigt](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. Entfernen Sie den Code, der hinzugefügt wurde (`"Error", `), und führen den Test erneut aus. Die Tests werden erfolgreich ausgeführt.
 
@@ -175,11 +173,11 @@ So testen Sie die endgültige Produktversion:
 
 1. Ändern Sie in der Symbolleiste von Visual Studio die Buildkonfiguration von **Debuggen** zu **Freigabe**.
 
-   ![Visual Studio-Symbolleiste](./media/testing-library-with-visual-studio/toolbar.png)
+   ![Visual Studio-Symbolleiste mit hervorgehobenen Releasebuild](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **StringLibrary**-Projekt, und wählen Sie aus dem Kontextmenü **Erstellen** aus, um die Bibliothek erneut zu kompilieren.
 
-   ![Kontextmenü „StringLibrary“](./media/testing-library-with-visual-studio/buildlibrary.png)
+   ![StringLibrary-Kontextmenü mit Befehl „Build“](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. Führen Sie den Komponententest aus, indem Sie **Test** > **Ausführen** > **Alle Tests** aus der Menüleiste auswählen. Die Tests sind erfolgreich.
 

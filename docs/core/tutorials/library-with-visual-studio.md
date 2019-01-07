@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144573"
+ms.locfileid: "53168935"
 ---
 # <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer .NET Standard-Klassenbibliothek mit C# und .NET Core SDK in Visual Studio 2017
 
@@ -29,7 +29,7 @@ Zunächst erstellen Sie eine Projektmappe für Ihre Klassenbibliotheksprojekt un
 
 1. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Andere Projekttypen**, und wählen Sie **Visual Studio-Projektmappen** aus. Nennen Sie die Projektmappe „ClassLibraryProjects“, und wählen Sie die **OK**-Schaltfläche aus.
 
-   ![Dialogfeld "Neues Projekt"](./media/library-with-visual-studio/newproject.png)
+   ![Dialogfeld „Neues Projekt“ mit hervorgehobener neuer leerer Projektmappe](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Erstellen des Klassenbibliotheksprojekts
 
@@ -39,15 +39,15 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
 1. Erweitern Sie den Knoten **Visual C#** im Dialogfeld **Neues Projekt hinzufügen**, klicken Sie dann auf den Knoten **.NET Standard** und anschließend auf die Projektvorlage **Klassenbibliothek (.NET Standard)**. Geben Sie im Textfeld **Name** „StringLibrary“ als Namen des Projekts ein. Wählen Sie **OK**, um das Klassenbibliotheksprojekt zu erstellen.
 
-   ![Dialogfeld „Neues Projekt hinzufügen“](./media/library-with-visual-studio/libproject.png)
+   ![Dialogfeld „Neues Bibliotheksprojekt hinzufügen“](./media/library-with-visual-studio/add-new-library-project.png)
 
    Das Codefenster öffnet sich dann in der Visual Studio-Entwicklungsumgebung.
 
-   ![Visual Studio-Anwendungsfenster, das die den Standardvorlagencode der Klassenbibliothek zeigt](./media/library-with-visual-studio/stringlibrary.png)
+   ![Visual Studio-Anwendungsfenster, das die den Standardvorlagencode der Klassenbibliothek zeigt](./media/library-with-visual-studio/string-library-project.png)
 
 1. Stellen Sie sicher, dass die Bibliothek die richtige Version von .NET Standard als Ziel verwendet. Klicken Sie mit der rechten Maustaste auf das Bibliotheksprojekt im Fenster des **Projektmappen-Explorer**, und klicken Sie dann auf **Eigenschaften**. Das Textfeld **Zielframework** zeigt dann, dass .NET Standard 2.0 als Ziel verwendet wird.
 
-   ![Projekteigenschaften für die Klassenbibliothek](./media/library-with-visual-studio/properties.png)
+   ![Projekteigenschaften für die Klassenbibliothek](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Ersetzen Sie den Code im Codefenster durch den folgenden Code, und speichern Sie die Datei:
 
@@ -57,7 +57,7 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus. Das Projekt sollte fehlerfrei kompiliert werden.
 
-   ![Ausgabebereich, der zeigt, dass der Buildvorgang erfolgreich war](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Ausgabebereich, der zeigt, dass der Buildvorgang erfolgreich war](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>Nächster Schritt
 

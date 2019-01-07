@@ -1,21 +1,19 @@
 ---
-title: '.NET Core-CLI-Befehl: dotnet tool install'
+title: Befehl „dotnet tool install“
 description: Der Befehl „dotnet tool install“ installiert das angegebene globale .NET Core-Tool auf Ihrem Computer.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 251e7b04be96ac2340727fa03dbaa2d548110fa9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512194"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168714"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet tool install`: Installiert das angegebene [globale .NET Core-Tool](global-tools.md) auf Ihrem Computer.
 
@@ -27,7 +25,7 @@ dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a>Beschreibung 
+## <a name="description"></a>Beschreibung
 
 Der `dotnet tool install`-Befehl ermöglicht Ihnen das Installieren von globalen .NET Core-Tools auf Ihrem Computer. Zum Verwenden des Befehls müssen Sie entweder mit der Option `--global` angeben, dass Sie eine benutzerweite Installation durchführen möchten, oder mit der Option `--tool-path` einen Installationspfad angeben.
 

@@ -2,14 +2,13 @@
 title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 author: blackdwarf
-ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143700"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286571"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -203,7 +202,7 @@ Eine lange Beschreibung für die Assembly. Wenn `PackageDescription` nicht angeg
 Copyright-Informationen für das Paket.
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
-Ein Boolescher Wert, der angibt, ob der Client den Verbraucher dazu auffordern muss, die Paketlizenz vor der Installation des Pakets zu akzeptieren. Der Standardwert ist `false`.
+Ein Boolescher Wert, der angibt, ob der Client den Verbraucher dazu auffordern muss, die Paketlizenz vor der Installation des Pakets zu akzeptieren. Die Standardeinstellung ist `false`.
 
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 Eine URL für die Lizenz, die auf das Paket angewendet werden kann.

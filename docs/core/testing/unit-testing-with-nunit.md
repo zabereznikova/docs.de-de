@@ -3,12 +3,13 @@ title: Unittests für C# mit NUnit und .NET Core
 description: Erfahren Sie mehr über die Konzepte von Unittests in C# und .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Beispielprojektmappe mithilfe von „dotnet test“ und NUnit erstellen.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146949"
+ms.locfileid: "53169027"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Unittests für C# mit NUnit und .NET Core
 

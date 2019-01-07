@@ -1,17 +1,15 @@
 ---
-title: Übersicht zu Docker-Images – .NET Core
+title: Übersicht zu Docker-Images
 description: Erfahren Sie, wie Sie veröffentlichte .NET Core-Docker-Images aus der Docker-Registrierung verwenden können. Außerdem lernen Sie, wie Sie Pull für Images ausführen und Ihre eigenen Images erstellen.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 34ff6ce7d990412fa0ac4896d1e2e39b307681f0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd8c6c500dc2177768e6cba0c1e303950e20d4f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145831"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656036"
 ---
 # <a name="learn-about-docker-images-for-net-core"></a>Informationen zu Docker-Images für .NET Core
 
@@ -36,7 +34,7 @@ Beim Erstellen von Docker-Images für Entwickler standen drei wichtige Szenarios
 Warum drei Images?
 Beim Entwickeln, Erstellen und Ausführen von Containeranwendungen gibt es unterschiedliche Prioritäten.
 
-* **Entwicklung:** Die Priorität liegt hierbei auf dem schnellen Durchführen von Änderungen sowie auf dem Debuggen der Änderungen. Die Größe des Images ist nicht entscheidend, sondern ob Änderungen am Code vorgenommen und schnell angezeigt werden können.
+* **Entwicklung:**  Die Priorität liegt hierbei auf dem schnellen Durchführen von Änderungen sowie auf dem Debuggen der Änderungen. Die Größe des Images ist nicht entscheidend, sondern ob Änderungen am Code vorgenommen und schnell angezeigt werden können.
 
 * **Build:** Dieses Image enthält alle Bestandteile, die zum Kompilieren Ihrer App erforderlich sind. Dazu zählen der Compiler und alle anderen Abhängigkeiten, die zum Optimieren der Binärdateien verwendet werden.  Sie verwenden das Buildimage zum Erstellen der Objekte, die Sie in einem Produktionsimage platzieren. Dieses Image wird für die Continuous Integration oder in einer Buildumgebung verwendet. Dieser Ansatz ermöglicht einem Build-Agent das Kompilieren und Erstellen der Anwendung (mit allen erforderlichen Abhängigkeiten) in einer Instanz des Buildimages. Der Build-Agent muss nur wissen, wie dieses Docker-Image ausgeführt wird.
 

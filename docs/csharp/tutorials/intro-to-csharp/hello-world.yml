@@ -11,22 +11,119 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: 86c2226796d5632281f2b6b2cb533bfeacebd288
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53126535"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54030515"
 items:
 - durationInMinutes: 1
   content: >
     In diesem Tutorial lernen Sie interaktiv die Grundlagen von C# kennen, indem Sie mit Ihrem Browser einen C#-Code schreiben und die Ergebnisse der Kompilierung und Ausführung Ihres Codes sehen. Es enthält eine Reihe von Lektionen, die mit einem „Hello World“-Programm beginnen. In diesen Lektionen lernen Sie die Grundlagen der Programmiersprache C# kennen.
 - title: Ausführen des ersten C#-Programms
   durationInMinutes: 2
-  content: "Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den folgenden Codeblock in das interaktive Fenster ein, und klicken Sie auf die Schaltfläche **Ausführen**:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nHerzlichen Glückwunsch! Sie haben Ihr erstes C#-Programm ausgeführt. Hierbei handelt es sich um ein einfaches Programm, das die Meldung „Hello World!“ ausgibt. Diese Meldung wird anhand der <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>-Methode ausgegeben. Der `Console`-Typ stellt das Konsolenfenster dar. `WriteLine` ist eine Methode des `Console`-Typs, die eine Textzeile in dieser Textkonsole ausgibt.\n\nFahren wir fort, und sehen wir uns das einmal genauer an. In der restlichen Lektion wird die Arbeit mit dem `string`-Typ erklärt, der Text in C# darstellt. Wie der `Console`-Typ weist der `string`-Typ bestimmte Methoden auf. Bei den `string`-Methoden geht es um Text. \n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Führen Sie den folgenden Code im interaktiven Fenster aus. Geben Sie hierfür den folgenden Codeblock in das interaktive Fenster ein, und klicken Sie auf die Schaltfläche **Ausführen**:
+
+
+    ```csharp
+
+    Console.WriteLine("Hello World!");
+
+    ```
+
+
+    Herzlichen Glückwunsch! Sie haben Ihr erstes C#-Programm ausgeführt. Hierbei handelt es sich um ein einfaches Programm, das die Meldung „Hello World!“ ausgibt. Diese Meldung wird anhand der <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>-Methode ausgegeben. Der `Console`-Typ stellt das Konsolenfenster dar. `WriteLine` ist eine Methode des `Console`-Typs, die eine Textzeile in dieser Textkonsole ausgibt.
+
+
+    Fahren wir fort, und sehen wir uns das einmal genauer an. In der restlichen Lektion wird die Arbeit mit dem `string`-Typ erklärt, der Text in C# darstellt. Wie der `Console`-Typ weist der `string`-Typ bestimmte Methoden auf. Bei den `string`-Methoden geht es um Text.
+
+
+    > [!NOTE]
+
+    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Deklarieren und Verwenden von Variablen
   durationInMinutes: 3
-  content: "Ihr erstes Programm hat den Wert „Hello World!“ vom Typ `string` auf dem Bildschirm ausgegeben. \n\n> [!TIP]\n> Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Sollte die Ausgabe Fehlermeldungen enthalten, sehen Sie sich den Beispielcode und den Code im interaktiven Fenster an, um festzustellen, was behoben werden muss.\n> Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen. \n\nIhr erstes Programm gibt nur eine Meldung aus. Mithilfe von **Variablen** können Sie weitere nützliche Programme schreiben. Eine **Variable** ist ein Symbol, durch das Sie einen Code mit unterschiedlichen Werten ausführen können. Probieren Sie es aus! Ersetzen Sie den Code, den Sie in das interaktive Fenster geschrieben haben, durch den folgenden Code:\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\nDie erste Zeile deklariert die Variable `aFriend` und weist dieser den Wert „Bill“ zu. Die zweite Zeile gibt den Namen aus.\n\nSie können jeder Variable, die Sie deklarieren, unterschiedliche Werte zuweisen. Sie können den Namen in den Namen von einem Ihrer Freunde ändern. Fügen Sie im interaktiven Fenster nach dem Code, den Sie bereits hinzugefügt haben, die folgenden zwei Zeilen hinzu:\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\nBeachten Sie, dass die Codezeile abhängig von dem in der `aFriend`-Variable gespeicherten Wert zwei verschiedene Meldungen ausgibt.\n\nVielleicht haben Sie auch bemerkt, dass in den letzten beiden Meldungen das Wort „Hello“ fehlte. Korrigieren wir dies nun.  Ändern Sie die Zeilen, die die Meldung ausgeben, wie folgt:\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\nKlicken Sie erneut auf **Ausführen**, um die Ergebnisse anzuzeigen.\n\nSie haben `+` verwendet, um Zeichenfolgen aus **Variablen-** und **Konstanten**zeichenfolgen zu erstellen. Es gibt eine bessere Möglichkeit.\nSie können eine Variable zwischen `{`- und `}`-Zeichen platzieren, um C# anzuweisen, den betreffenden Text durch den Wert der Variablen zu ersetzen.\n\nDies wird als [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) bezeichnet.\n\nWenn Sie das `$`-Zeichen vor den öffnenden Anführungszeichen der Zeichenfolge einfügen, können Sie anschließend Variablen, wie etwa `aFriend` innerhalb der Zeichenfolge in geschweiften Klammern einfügen. Probieren Sie es aus:\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\nKlicken Sie erneut auf **Ausführen**, um die Ergebnisse anzuzeigen. Anstelle von „Hello {aFriend}“ sollte die Nachricht „Hello Maira“ lauten.\n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Ihr erstes Programm hat den Wert „Hello World!“ vom Typ `string` auf dem Bildschirm ausgegeben.
+
+
+    > [!TIP]
+
+    > Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Sollte die Ausgabe Fehlermeldungen enthalten, sehen Sie sich den Beispielcode und den Code im interaktiven Fenster an, um festzustellen, was behoben werden muss.
+
+    > Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.
+
+
+    Ihr erstes Programm gibt nur eine Meldung aus. Mithilfe von **Variablen** können Sie weitere nützliche Programme schreiben. Eine **Variable** ist ein Symbol, durch das Sie einen Code mit unterschiedlichen Werten ausführen können. Probieren Sie es aus! Ersetzen Sie den Code, den Sie in das interaktive Fenster geschrieben haben, durch den folgenden Code:
+
+
+    ```csharp
+
+    string aFriend = "Bill";
+
+    Console.WriteLine(aFriend);
+
+    ```
+
+
+    Die erste Zeile deklariert die Variable `aFriend` und weist dieser den Wert „Bill“ zu. Die zweite Zeile gibt den Namen aus.
+
+
+    Sie können jeder Variable, die Sie deklarieren, unterschiedliche Werte zuweisen. Sie können den Namen in den Namen von einem Ihrer Freunde ändern. Fügen Sie im interaktiven Fenster nach dem Code, den Sie bereits hinzugefügt haben, die folgenden zwei Zeilen hinzu:
+
+
+    ```csharp
+
+    aFriend = "Maira";
+
+    Console.WriteLine(aFriend);
+
+    ```
+
+
+    Beachten Sie, dass die Codezeile abhängig von dem in der `aFriend`-Variable gespeicherten Wert zwei verschiedene Meldungen ausgibt.
+
+
+    Vielleicht haben Sie auch bemerkt, dass in den letzten beiden Meldungen das Wort „Hello“ fehlte. Korrigieren wir dies nun.  Ändern Sie die Zeilen, die die Meldung ausgeben, wie folgt:
+
+
+    ```csharp
+
+    Console.WriteLine("Hello " + aFriend);
+
+    ```
+
+
+    Klicken Sie erneut auf **Ausführen**, um die Ergebnisse anzuzeigen.
+
+
+    Sie haben `+` verwendet, um Zeichenfolgen aus **Variablen-** und **Konstanten**zeichenfolgen zu erstellen. Es gibt eine bessere Möglichkeit.
+
+    Sie können eine Variable zwischen `{`- und `}`-Zeichen platzieren, um C# anzuweisen, den betreffenden Text durch den Wert der Variablen zu ersetzen.
+
+
+    Dies wird als [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) bezeichnet.
+
+
+    Wenn Sie das `$`-Zeichen vor den öffnenden Anführungszeichen der Zeichenfolge einfügen, können Sie anschließend Variablen, wie etwa `aFriend` innerhalb der Zeichenfolge in geschweiften Klammern einfügen. Probieren Sie es aus:
+
+
+
+    ```csharp
+
+    Console.WriteLine($"Hello {aFriend}");
+
+    ```
+
+
+    Klicken Sie erneut auf **Ausführen**, um die Ergebnisse anzuzeigen. Anstelle von „Hello {aFriend}“ sollte die Nachricht „Hello Maira“ lauten.
+
+
+    > [!NOTE]
+
+    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Arbeiten mit Zeichenfolgen
   durationInMinutes: 5
   content: >
@@ -69,10 +166,110 @@ items:
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Weitere Möglichkeiten zur Verwendung von Zeichenfolgen
   durationInMinutes: 5
-  content: "Sie haben mithilfe der **Methode** <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Meldungen ausgegeben. Eine **Methode** ist ein Codeblock, der eine bestimmte Aktion implementiert. Diesem ist ein Name zugewiesen, damit Sie auf diesen zugreifen können. \n\nNehmen wir an, Ihre Zeichenfolgen weisen führende oder schließende Leerzeichen auf, die Sie nicht anzeigen möchten. Sie möchten die Zeichenfolgen um die Leerzeichen **kürzen**.\nDie <xref:System.String.Trim%2A>-Methode und die verwandten <xref:System.String.TrimStart%2A>-Methoden und <xref:System.String.TrimEnd%2A> erledigen das für Sie. Sie können einfach diese Methoden verwenden, um führende und schließende Leerzeichen zu entfernen. Testen Sie den folgenden Code:\n\n```csharp\nstring greeting = \"      Hello World!       \";\nConsole.WriteLine($\"[{greeting}]\");\n\nstring trimmedGreeting = greeting.TrimStart();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.TrimEnd();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n\ntrimmedGreeting = greeting.Trim();\nConsole.WriteLine($\"[{trimmedGreeting}]\");\n```\n\nIn diesem Beispiel werden eine Reihe wichtiger Konzepte für die Arbeit mit Zeichenfolgen veranschaulicht. Die Methoden, die Zeichenfolgen bearbeiten, geben neue Zeichenfolgenobjekte zurück, statt die Änderungen zu implementieren. So können Sie erkennen, dass bei jedem Aufruf von einer der `Trim`-Methoden eine neue Zeichenkette zurückgegeben, die ursprüngliche Meldung jedoch nicht geändert wird.\n\nFür die Arbeit mit Zeichenfolgen stehen weitere Methoden zur Verfügung. Beispielsweise haben Sie sicher schon mal einen Befehl zum Suchen und Ersetzen in einem Editor oder Textverarbeitungsprogramm verwendet. Die <xref:System.String.Replace%2A>-Methode funktioniert bei einer Zeichenfolge auf ähnliche Weise. Sie sucht nach einer Teilzeichenfolge und ersetzt diese durch einen anderen Text. Die <xref:System.String.Replace%2A>-Methode enthält zwei **Parameter**, nämlich die Zeichenfolgen zwischen den Klammern. Die erste Zeichenfolge ist der Text, nach dem gesucht wird. Die zweite Zeichenfolge ist der Text, durch den die erste Zeichenfolge ersetzt werden soll. Versuchen Sie es selbst. Fügen Sie den folgenden Code hinzu: Geben Sie ihn ein, um die Hinweise zu sehen, während Sie mit der Eingabe von `.Re` nach der Variable `sayHello` beginnen:\n\n```csharp\nstring sayHello = \"Hello World!\";\nConsole.WriteLine(sayHello);\nsayHello = sayHello.Replace(\"Hello\", \"Greetings\");\nConsole.WriteLine(sayHello);\n```\n\nZwei andere nützliche Methoden bestehen darin, eine Zeichenfolge in vollständig in GROSSBUCHSTABEN oder kleinbuchstaben zu erstellen. Testen Sie den folgenden Code: Geben Sie ihn ein, um zu sehen, wie **IntelliSense** Hinweise bereitstellt, sobald Sie mit der Eingabe von `To` beginnen:\n\n```csharp\nConsole.WriteLine(sayHello.ToUpper());\nConsole.WriteLine(sayHello.ToLower());\n```\n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Sie haben mithilfe der **Methode** <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Meldungen ausgegeben. Eine **Methode** ist ein Codeblock, der eine bestimmte Aktion implementiert. Diesem ist ein Name zugewiesen, damit Sie auf diesen zugreifen können.
+
+
+    Nehmen wir an, Ihre Zeichenfolgen weisen führende oder schließende Leerzeichen auf, die Sie nicht anzeigen möchten. Sie möchten die Zeichenfolgen um die Leerzeichen **kürzen**.
+
+    Die <xref:System.String.Trim%2A>-Methode und die verwandten <xref:System.String.TrimStart%2A>-Methoden und <xref:System.String.TrimEnd%2A> erledigen das für Sie. Sie können einfach diese Methoden verwenden, um führende und schließende Leerzeichen zu entfernen. Testen Sie den folgenden Code:
+
+
+    ```csharp
+
+    string greeting = "      Hello World!       ";
+
+    Console.WriteLine($"[{greeting}]");
+
+
+    string trimmedGreeting = greeting.TrimStart();
+
+    Console.WriteLine($"[{trimmedGreeting}]");
+
+
+    trimmedGreeting = greeting.TrimEnd();
+
+    Console.WriteLine($"[{trimmedGreeting}]");
+
+
+    trimmedGreeting = greeting.Trim();
+
+    Console.WriteLine($"[{trimmedGreeting}]");
+
+    ```
+
+
+    In diesem Beispiel werden eine Reihe wichtiger Konzepte für die Arbeit mit Zeichenfolgen veranschaulicht. Die Methoden, die Zeichenfolgen bearbeiten, geben neue Zeichenfolgenobjekte zurück, statt die Änderungen zu implementieren. So können Sie erkennen, dass bei jedem Aufruf von einer der `Trim`-Methoden eine neue Zeichenkette zurückgegeben, die ursprüngliche Meldung jedoch nicht geändert wird.
+
+
+    Für die Arbeit mit Zeichenfolgen stehen weitere Methoden zur Verfügung. Beispielsweise haben Sie sicher schon mal einen Befehl zum Suchen und Ersetzen in einem Editor oder Textverarbeitungsprogramm verwendet. Die <xref:System.String.Replace%2A>-Methode funktioniert bei einer Zeichenfolge auf ähnliche Weise. Sie sucht nach einer Teilzeichenfolge und ersetzt diese durch einen anderen Text. Die <xref:System.String.Replace%2A>-Methode enthält zwei **Parameter**, nämlich die Zeichenfolgen zwischen den Klammern. Die erste Zeichenfolge ist der Text, nach dem gesucht wird. Die zweite Zeichenfolge ist der Text, durch den die erste Zeichenfolge ersetzt werden soll. Versuchen Sie es selbst. Fügen Sie den folgenden Code hinzu: Geben Sie ihn ein, um die Hinweise zu sehen, während Sie mit der Eingabe von `.Re` nach der Variable `sayHello` beginnen:
+
+
+    ```csharp
+
+    string sayHello = "Hello World!";
+
+    Console.WriteLine(sayHello);
+
+    sayHello = sayHello.Replace("Hello", "Greetings");
+
+    Console.WriteLine(sayHello);
+
+    ```
+
+
+    Zwei andere nützliche Methoden bestehen darin, eine Zeichenfolge in vollständig in GROSSBUCHSTABEN oder kleinbuchstaben zu erstellen. Testen Sie den folgenden Code: Geben Sie ihn ein, um zu sehen, wie **IntelliSense** Hinweise bereitstellt, sobald Sie mit der Eingabe von `To` beginnen:
+
+
+    ```csharp
+
+    Console.WriteLine(sayHello.ToUpper());
+
+    Console.WriteLine(sayHello.ToLower());
+
+    ```
+
+
+    > [!NOTE]
+
+    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Suchzeichenfolgen
   durationInMinutes: 10
-  content: "Der andere Teil eines Vorgangs zum *Suchen und Ersetzen* besteht darin, nach einem Text in einer Zeichenfolge zu suchen. Für die Suche können Sie die <xref:System.String.Contains%2A>-Methode verwenden. Diese gibt an, ob eine Zeichenfolge eine Teilzeichenfolge enthält. Verwenden Sie zum Experimentieren mit <xref:System.String.Contains%2A> den folgenden Code:\n\n```csharp\nstring songLyrics = \"You say goodbye, and I say hello\";\nConsole.WriteLine(songLyrics.Contains(\"goodbye\"));\nConsole.WriteLine(songLyrics.Contains(\"greetings\"));\n```\n\nDie <xref:System.String.Contains%2A>-Methode gibt einen Wert vom Typ **boolean** zurück, der angibt, ob die Zeichenfolge, nach der Sie gesucht haben, gefunden wurde. Ein **boolean**-Datentyp speichert entweder den Wert `true` oder `false`. In einer späteren Lektion erfahren Sie mehr über **boolean**-Werte.\n\n***Übung***\n\nEs gibt zwei ähnliche Methoden, <xref:System.String.StartsWith%2A> und <xref:System.String.EndsWith%2A>, die ebenfalls nach Teilzeichenfolgen in einer Zeichenfolge suchen. Diese suchen am Anfang oder am Ende der Zeichenfolge nach einer Teilzeichenfolge. Versuchen Sie, im vorherigen Beispiel <xref:System.String.StartsWith%2A> und <xref:System.String.EndsWith%2A> anstelle von <xref:System.String.Contains%2A> zu verwenden. Suchen Sie am Anfang einer Zeichenfolge nach „You“ oder „goodbye“. Suchen Sie am Ende einer Zeichenfolge nach „hello“ oder „goodbye“.\n\n> [!Note]\n> Achten Sie am Ende der Zeichenfolge auf die Interpunktion, wenn Sie probehalber nach einem Text suchen. Wenn die Zeichenfolge mit einem Punkt endet, müssen Sie nach einer Zeichenfolge suchen, die mit einem Punkt endet.\n\nSie sollten `true` erhalten, wenn die Eingabe mit „You“ beginnt und mit „hello“ endet, oder FALSE, wenn die Eingabe mit „goodbye“ beginnt oder endet. \n\n> [!NOTE]\n> Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Der andere Teil eines Vorgangs zum *Suchen und Ersetzen* besteht darin, nach einem Text in einer Zeichenfolge zu suchen. Für die Suche können Sie die <xref:System.String.Contains%2A>-Methode verwenden. Diese gibt an, ob eine Zeichenfolge eine Teilzeichenfolge enthält. Verwenden Sie zum Experimentieren mit <xref:System.String.Contains%2A> den folgenden Code:
+
+
+    ```csharp
+
+    string songLyrics = "You say goodbye, and I say hello";
+
+    Console.WriteLine(songLyrics.Contains("goodbye"));
+
+    Console.WriteLine(songLyrics.Contains("greetings"));
+
+    ```
+
+
+    Die <xref:System.String.Contains%2A>-Methode gibt einen Wert vom Typ **boolean** zurück, der angibt, ob die Zeichenfolge, nach der Sie gesucht haben, gefunden wurde. Ein **boolean**-Datentyp speichert entweder den Wert `true` oder `false`. In einer späteren Lektion erfahren Sie mehr über **boolean**-Werte.
+
+
+    ***Übung***
+
+
+    Es gibt zwei ähnliche Methoden, <xref:System.String.StartsWith%2A> und <xref:System.String.EndsWith%2A>, die ebenfalls nach Teilzeichenfolgen in einer Zeichenfolge suchen. Diese suchen am Anfang oder am Ende der Zeichenfolge nach einer Teilzeichenfolge. Versuchen Sie, im vorherigen Beispiel <xref:System.String.StartsWith%2A> und <xref:System.String.EndsWith%2A> anstelle von <xref:System.String.Contains%2A> zu verwenden. Suchen Sie am Anfang einer Zeichenfolge nach „You“ oder „goodbye“. Suchen Sie am Ende einer Zeichenfolge nach „hello“ oder „goodbye“.
+
+
+    > [!Note]
+
+    > Achten Sie am Ende der Zeichenfolge auf die Interpunktion, wenn Sie probehalber nach einem Text suchen. Wenn die Zeichenfolge mit einem Punkt endet, müssen Sie nach einer Zeichenfolge suchen, die mit einem Punkt endet.
+
+
+    Sie sollten `true` erhalten, wenn die Eingabe mit „You“ beginnt und mit „hello“ endet, oder FALSE, wenn die Eingabe mit „goodbye“ beginnt oder endet.
+
+
+    > [!NOTE]
+
+    > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
 - title: Übung abgeschlossen
   durationInMinutes: 3
   content: >
@@ -98,4 +295,12 @@ items:
     > [!NOTE]
 
     > Dieses Onlinecodierungstutorial befindet sich im Vorschaumodus. Wenn Probleme auftreten, melden Sie diese [im dotnet/try-Repository](https://github.com/dotnet/try/issues).
-- content: "Sie haben die „Hallo C#“-Einführung in das C#-Tutorial abgeschlossen. Klicken sie unten auf den Link **Zahlen in C#**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Schritt „Weiterlernen“ gelangen Sie wieder zu diesen Tutorials.\n\nWeitere Informationen zum `string`-Typ:\n- [C#-Programmierhandbuch](../../programming-guide/index.md) Thema [Zeichenfolgen](../../programming-guide/strings/index.md) \n- [Tipps zum Arbeiten mit Zeichenfolgen](../../how-to/index.md#working-with-strings)."
+- content: >-
+    Sie haben die „Hallo C#“-Einführung in das C#-Tutorial abgeschlossen. Klicken sie unten auf den Link **Zahlen in C#**, um das nächste interaktive Tutorial zu starten, oder besuchen sie die [.NET-Website](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und weiter zu programmieren. Über den Schritt „Weiterlernen“ gelangen Sie wieder zu diesen Tutorials.
+
+
+    Weitere Informationen zum `string`-Typ:
+
+    - [C#-Programmierhandbuch](../../programming-guide/index.md) Thema [Zeichenfolgen](../../programming-guide/strings/index.md)
+
+    - [Tipps zum Arbeiten mit Zeichenfolgen](../../how-to/index.md#working-with-strings).

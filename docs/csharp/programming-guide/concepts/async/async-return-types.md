@@ -2,12 +2,12 @@
 title: Asynchrone Rückgabetypen (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036239"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774588"
 ---
 # <a name="async-return-types-c"></a>Asynchrone Rückgabetypen (C#)
 Asynchrone Methoden können folgende Rückgabetypen haben:
@@ -33,7 +33,7 @@ Im folgenden Beispiel enthält die asynchrone `GetLeisureHours`-Methode eine `re
 
 Wenn `GetLeisureHours` aus einem „await“-Ausdruck in der Methode `ShowTodaysInfo` aufgerufen wird, ruft der „await“-Ausdruck den ganzzahligen Wert ab (der Wert von `GetLeisureHours`), der in der Aufgabe gespeichert wird, die von der Methode `leisureHours` zurückgegeben wird. Weitere Informationen zu await-Ausdrücken finden Sie unter [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Sie können die Vorgehensweise besser verstehen, wenn Sie den Aufruf von `GetLeisureHours` von der Anwendung von `await` trennen, wie der folgenden Code zeigt. Ein Aufruf der `GetLeisureHours`-Methode, die nicht sofort eine Antwort erwartet, gibt ein `Task<int>` zurück, wie Sie es von der Deklaration der Methode erwarten. Die Aufgabe wird im Beispiel der `infoTask`-Variablen zugewiesen. Da `infoTask` eine <xref:System.Threading.Tasks.Task%601> ist, enthält es eine <xref:System.Threading.Tasks.Task%601.Result>-Eigenschaft des Typs `TResult`. In diesem Fall stellt `TResult` einen Integertyp dar. Wenn `await` auf `infoTask` angewendet wird, wertet der „await“-Ausdruck den Inhalt der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result%2A> von `infoTask` aus. Der Wert wird der `ret`-Variablen zugewiesen.  
+Sie können die Vorgehensweise besser verstehen, wenn Sie den Aufruf von `GetLeisureHours` von der Anwendung von `await` trennen, wie der folgenden Code zeigt. Ein Aufruf der `GetLeisureHours`-Methode, die nicht sofort eine Antwort erwartet, gibt ein `Task<int>` zurück, wie Sie es von der Deklaration der Methode erwarten. Die Aufgabe wird im Beispiel der `integerTask`-Variablen zugewiesen. Da `integerTask` eine <xref:System.Threading.Tasks.Task%601> ist, enthält es eine <xref:System.Threading.Tasks.Task%601.Result>-Eigenschaft des Typs `TResult`. In diesem Fall stellt `TResult` einen Integertyp dar. Wenn `await` auf `integerTask` angewendet wird, wertet der „await“-Ausdruck den Inhalt der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result%2A> von `integerTask` aus. Der Wert wird der `ret`-Variablen zugewiesen.  
   
 > [!IMPORTANT]
 >  Die <xref:System.Threading.Tasks.Task%601.Result%2A>-Eigenschaft ist eine Blocking-Eigenschaft. Wenn Sie darauf zuzugreifen versuchen, bevor seine Aufgabe beendet ist, wird der momentan aktive Thread blockiert, bis die Aufgabe abgeschlossen und der Wert verfügbar ist. In den meisten Fällen sollten Sie auf den Wert zugreifen, indem Sie `await` verwenden, anstatt direkt auf die Eigenschaft zuzugreifen. <br/> Im vorherigen Beispiel wurde der Wert der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result%2A> abgerufen, um den Hauptthread zu blockieren, sodass die Methode `ShowTodaysInfo` die Ausführung beenden konnte, bevor die Anwendung beendet wurde.  
@@ -80,7 +80,7 @@ Da es sich bei <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tas
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>   
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-- [Ablaufsteuerung in asynchronen Programmen](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [Ablaufsteuerung in asynchronen Programmen (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
 - [async](../../../../csharp/language-reference/keywords/async.md)   
 - [await](../../../../csharp/language-reference/keywords/await.md)

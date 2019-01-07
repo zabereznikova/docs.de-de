@@ -1,15 +1,15 @@
 ---
-title: Bereitstellen einer App im Container mit Docker – .NET Core
+title: Bereitstellen einer App im Container mit Docker
 description: Dieses Tutorial zeigt das Erstellen einer einfachen .NET Core-Anwendung und ihr Bereitstellen im Container mit Docker.
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126367"
+ms.locfileid: "53169585"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Bereitstellen einer .NET Core-Anwendung im Container
 
@@ -22,7 +22,7 @@ Im Verlauf dieses Tutorials lernen Sie Folgendes:
 > * das Erstellen einer .NET Core-App
 > * das Bereitstellen Ihrer App in einem Docker-Container
 
-## <a name="net-core-easiest-way-to-get-started"></a>Einfacher Einstieg in .NET Core
+## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: Einfacher Einstieg
 
 Bevor Sie ein Docker-Image erstellen, benötigen Sie eine Anwendung, die containerisiert werden kann. Diese können Sie unter Linux, macOS oder Windows erstellen. Die schnellste und einfachste Methode hierfür ist die Verwendung von .NET Core.
 

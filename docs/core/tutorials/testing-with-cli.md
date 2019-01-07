@@ -2,14 +2,14 @@
 title: Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 description: In diesem Tutorial wird das Organisieren und Testen von .NET Core-Projekten von der Befehlszeile aus erläutert.
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415223"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242708"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 
@@ -103,19 +103,19 @@ Optionale Übung: Sie können einen neuen Tiertyp hinzufügen, z.B. `Bird`, inde
 
 Das `NewTypes`-Projekt ist platziert, und Sie haben es organisiert, indem Sie die auf Haustiere bezogenen Typen in einem Ordner gespeichert haben. Erstellen Sie als Nächstes Ihr Testprojekt und beginnen Sie, Tests mit dem [xUnit](https://xunit.github.io/)-Testframework zu schreiben. Komponententests erlauben Ihnen, das Verhalten dieser Typen automatisch zu testen, um zu überprüfen, ob sie ordnungsgemäß funktionieren.
 
-Erstellen Sie einen *test*-Ordner, der den *NewTypesTests*-Ordner innehat. Führen Sie in einer Eingabeaufforderung vom *NewTypesTests*-Ordner `dotnet new xunit` aus. Dadurch werden zwei Dateien erstellt: *NewTypesTests.csproj* und *UnitTest1.cs*.
+Navigieren Sie zurück zum Ordner *src*, und erstellen Sie einen Ordner *test*, der den Ordner *NewTypesTests* enthält. Führen Sie in einer Eingabeaufforderung vom *NewTypesTests*-Ordner `dotnet new xunit` aus. Dies ergibt zwei Dateien: *NewTypesTests.csproj* und *UnitTest1.cs*.
 
 Das Testprojekt kann derzeit nicht die Typen in `NewTypes` testen und benötigt einen Projektverweis auf das `NewTypes`-Projekt. Um einen Projektverweis hinzuzufügen, verwenden Sie den [`dotnet add reference`](../tools/dotnet-add-reference.md)-Befehl:
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-Sie haben auch die Möglichkeit, den Projektverweis manuell hinzuzufügen, indem Sie der *NewTypesTests.csproj*-Datei einen `<ItemGroup>`-Knoten hinzufügen:
+Alternativ haben Sie auch die Möglichkeit, den Projektverweis manuell hinzuzufügen, indem Sie der *NewTypesTests.csproj*-Datei einen `<ItemGroup>`-Knoten hinzufügen:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 
@@ -159,7 +159,7 @@ public class PetTests
 }
 ```
 
-Optionale Übung: Wenn Sie zuvor einen `Bird`-Typ hinzugefügt haben, der `Tweet!` dem Besitzer zurückgibt, fügen Sie der *PetTests.cs*-Datei eine Testmethode hinzu, `BirdTalkToOwnerReturnsTweet`, um zu überprüfen, dass die `TalkToOwner`-Methode ordnungsgemäß für den `Bird`-Typ funktioniert.
+Optionale Übung: Wenn Sie zuvor einen `Bird`-Typ hinzugefügt haben, der `Tweet!` dem Besitzer zurückgibt, fügen Sie der *PetTests.cs*-Datei eine Testmethode hinzu, `BirdTalkToOwnerReturnsTweet`, um zu überprüfen, ob die `TalkToOwner`-Methode für den `Bird`-Typ ordnungsgemäß funktioniert.
 
 > [!NOTE]
 > Obwohl Sie erwarten, dass die Werte `expected` und `actual` gleich sind, gibt die anfängliche Assertion mit der `Assert.NotEqual`-Überprüfung an, dass sie *nicht gleich* sind. Erstellen Sie zunächst immer einen Test, damit dieser fehlschlagen und die Logik des Tests überprüft werden kann. Nachdem Sie das Fehlschlagen des Tests bestätigt haben, können Sie die Assertion so anpassen, dass der Test erfolgreich verläuft.

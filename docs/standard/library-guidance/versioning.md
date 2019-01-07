@@ -3,13 +3,13 @@ title: Versionsverwaltung und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden für die Versionsverwaltung für .NET-Bibliotheken.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144558"
+ms.locfileid: "53169598"
 ---
 # <a name="versioning"></a>Versionskontrolle
 
@@ -37,9 +37,9 @@ Da die NuGet-Paketversion für Entwickler die sichtbarste Version ist, ist es ei
 
 **✔️ ERWÄGEN** Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
 
-**✔️ DO** Verwenden Sie die NuGet-Paketversion in der öffentlichen Dokumentation, da es die Versionsnummer ist, die den Benutzern häufig angezeigt wird.
+**✔️ VERWENDEN** Sie die NuGet-Paketversion in der öffentlichen Dokumentation, da es die Versionsnummer ist, die den Benutzern häufig angezeigt wird.
 
-**✔️ DO** Fügen Sie ein Suffix der Vorabversion hinzu, wenn Sie ein nicht stabiles Paket freigeben.
+**✔️ FÜGEN** Sie ein Suffix der Vorabversion hinzu, wenn Sie ein nicht stabiles Paket freigeben.
 
 > Benutzer müssen sich dafür entscheiden, Vorabversionspakete zu erhalten, sodass ihnen bewusst ist, dass das Paket nicht vollständig ist.
 
@@ -63,7 +63,7 @@ Ein starker Name in Kombination mit der Assemblyversion ermöglicht das [strikte
 
 > Die Assemblyversion ist in einigen Informationsmeldungen enthalten, die dem Benutzer angezeigt werden, z.B. der Assemblyname und Typnamen mit Assemblyqualifikation in Ausnahmemeldungen. Durch die Beibehaltung einer Beziehung zwischen den Versionen erhalten Entwickler weitere Informationen darüber, welche Version sie verwenden.
 
-**❌ DON‘T** Verwenden Sie keine feste Assemblyversion.
+**❌ VERWENDEN SIE KEINE** feste Assemblyversion.
 
 > Da eine unveränderliche Assemblyversion die Notwendigkeit von Bindungsumleitungen vermeidet, bedeutet dies, dass nur eine einzige Version der Assembly im globalen Assemblycache (GAC) installiert werden kann. Außerdem werden die Anwendungen, die auf die Assembly im GAC verweisen, unterbrochen, wenn eine andere Anwendung die GAC-Assembly mit Änderungen aktualisiert.
 
@@ -77,12 +77,13 @@ Die Assemblydateiversion wird verwendet, um eine Dateiversion unter Windows anzu
 
 ![Windows Explorer](./media/versioning/win-properties.png "Windows Explorer")
 
-> [!NOTE]
-> Es wird eine Warnung bezüglich eines unbedenklichen Builds ausgegeben, wenn diese Version nicht dem Format `Major.Minor.Build.Revision` folgt. Sie können sie ignorieren.
-
 **✔️ ERWÄGEN** Sie, eine fortlaufenden Continuous Integration-Buildnummer als AssemblyFileVersion-Revision hinzuzufügen.
 
 > Wenn Sie beispielsweise Version 1.0.0 Ihres Projekts erstellen, und die Nummer des Continuous Integration-Builds ist 99, lautet Ihre Assemblydateiversion 1.0.0.99.
+
+**✔️ VERWENDEN** Sie das Format `Major.Minor.Build.Revision` für die Dateiversion.
+
+> Obwohl die Dateiversion von .NET nie verwendet wird, [setzt Windows die Dateiversion](/windows/desktop/menurc/versioninfo-resource) im `Major.Minor.Build.Revision`-Format voraus. Es wird eine Warnung ausgelöst, wenn die Version nicht dieses Format aufweist.
 
 ### <a name="assembly-informational-version"></a>Assemblyinformationsversion
 
@@ -91,6 +92,9 @@ Die Assemblyinformationsversion wird verwendet, um zusätzliche Versionsinformat
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> Bei älteren Versionen von Visual Studio wird eine Buildwarnung ausgelöst, wenn diese Version nicht das Format `Major.Minor.Build.Revision` aufweist. Sie können sie ignorieren.
 
 **❌ VERMEIDEN** Sie, die Assemblyinformationsversion selbst festzulegen.
 

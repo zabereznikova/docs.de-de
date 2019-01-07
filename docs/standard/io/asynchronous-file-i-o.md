@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c6e1db7d1edacfd0ce8770b9cc7b7f3f9c8ca2a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7bfa35b8361f154fcbaa2ea7d7f8ddff5321003d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025320"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610430"
 ---
 # <a name="asynchronous-file-io"></a>Asynchrone Datei-E/A
 
@@ -40,7 +40,7 @@ C# und Visual Basic verfügen jeweils über zwei Schlüsselwörter für asynchro
 
 - Der`Await` -Operator (Visual Basic) bzw. `await` -Operator (C#), der auf das Ergebnis einer asynchronen Methode angewendet wird.
 
-Um asynchrone E/A-Vorgänge zu implementieren, verwenden Sie diese Schlüsselwörter in Verbindung mit den asynchronen Methoden, wie in den folgenden Beispielen gezeigt. Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).
+Um asynchrone E/A-Vorgänge zu implementieren, verwenden Sie diese Schlüsselwörter in Verbindung mit den asynchronen Methoden, wie in den folgenden Beispielen gezeigt. Weitere Informationen finden Sie unter [Asynchrone Programmierung mit Async und Await (C#)](../../csharp/programming-guide/concepts/async/index.md) oder [Asynchrone Programmierung mit Async und Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
 
 Das folgende Beispiel zeigt, wie mithilfe von zwei <xref:System.IO.FileStream> -Objekten Dateien asynchron aus einem Verzeichnis in ein anderes kopiert werden. Beachten Sie, dass der <xref:System.Web.UI.WebControls.Button.Click> -Ereignishandler für das <xref:System.Windows.Controls.Button> -Steuerelement mit dem `async` -Modifizierer markiert wird, da er eine asynchrone Methode aufruft.
 
@@ -62,5 +62,6 @@ Im folgenden Beispiel werden die Code-Behind-Datei und die XAML-Datei gezeigt, m
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IO.Stream>
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
-- [Asynchrone Programmierung mit Async und Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+- [Datei- und Stream-E/A](index.md)
+- [Asynchrone Programmierung mit Async und Await (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

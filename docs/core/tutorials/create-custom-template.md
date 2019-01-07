@@ -2,14 +2,14 @@
 title: Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 description: In diesem interessanten Tutorial erfahren Sie, wie Sie eine benutzerdefinierte Vorlage für den dotnet new-Befehl erstellen.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516652"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169729"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 
@@ -64,11 +64,11 @@ Die Vorlage ist fertig. Jetzt haben Sie zwei Optionen zum Verteilen der Vorlage.
 1. Kopieren Sie den Inhalt des Projektordners gemeinsam mit seiner Datei *.template.config/template.json* in den Ordner *content*, den Sie erstellt haben.
 1. Fügen Sie neben dem *content*-Ordner eine [*NUSPEC*-Datei](/nuget/create-packages/creating-a-package) ein. Die NUSPEC-Datei ist eine XML-Manifestdatei, die den Inhalt eines Paktes beschreibt und den Erstellungsprozess des NuGet-Pakets vorantreibt.
 
-   ![Verzeichnisstruktur mit dem Layout des NuGet-Pakets](./media/create-custom-template/nugetdirectorylayout.png)
+   ![Verzeichnisstruktur mit dem Layout des NuGet-Pakets](./media/create-custom-template/nuget-directory-layout.png)
 
 1. Fügen Sie im **\<packageTypes>**-Element einer *NUSPEC*-Datei ein **\<packageType>** mit einem `name`-Attributwert von `Template` ein. Der Ordner *content* und die Datei *NUSPEC* sollten sich im gleichen Verzeichnis befinden. In der Tabelle werden die *NUSPEC*-Dateielemente gezeigt, die mindestens erforderlich sind, um eine Vorlage als NuGet-Paket zu erstellen.
 
-   | Element            | Typ   | Beschreibung  |
+   | Element            | Typ   | Beschreibung |
    | ------------------ | ------ | ----------- |
    | **\<authors>**     | Zeichenfolge | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
    | **\<description>** | Zeichenfolge | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 Wenn Sie die Vorlagen mit `dotnet new -l` auflisten, sehen Sie *NUnit 3-Testprojekt* mit dem Kurznamen *nunit* in der Vorlagenliste. Im nächsten Abschnitt können Sie die Vorlage verwenden.
 
-![Konsolenfenster, das die NUnit-Vorlage mit anderen installierten Vorlagen zeigt](./media/create-custom-template/nunit1.png)
+![Konsolenfenster, das die NUnit-Vorlage mit anderen Vorlagen zeigt](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>Erstellen eines neuen Projekts aus der Vorlage
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 Die Konsole zeigt an, dass das Projekt erstellt wurde und dass die Pakete des Projekts wiederhergestellt wurden. Nachdem der Befehl ausgeführt wurde, ist das Projekt einsatzbereit.
 
-![Konsolenfenster mit der Ausgabe des dotnet new-Befehls, während er das NUnit-Projekt erstellt und die Projektabhängigkeiten wiederherstellt.](./media/create-custom-template/nunit2.png)
+![Konsolenfenster mit der Darstellung der Ausgabe der neuen Dotnet-NUnit, einschließlich Wiederherstellung der Projektabhängigkeiten](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>So deinstallieren Sie eine Vorlage aus einem NuGet-Paket, das auf nuget.org gespeichert ist
 

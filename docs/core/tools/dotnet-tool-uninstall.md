@@ -1,21 +1,19 @@
 ---
-title: '.NET Core-CLI-Befehl: dotnet tool uninstall'
+title: Befehl „dotnet tool uninstall“
 description: Der Befehl „dotnet tool uninstall“ deinstalliert das angegebene globale .NET Core-Tool auf Ihrem Computer.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2ac0046d012fcf4a4be1c9bfa2e942e35b2c7290
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43738174"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168350"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet tool uninstall`: Deinstalliert das angegebene [globale .NET Core-Tool](global-tools.md) auf Ihrem Computer.
 
@@ -27,7 +25,7 @@ dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
 ```
 
-## <a name="description"></a>Beschreibung 
+## <a name="description"></a>Beschreibung
 
 Der `dotnet tool uninstall`-Befehl ermöglicht Ihnen das Deinstallieren von globalen .NET Core-Tools auf Ihrem Computer. Um diesen Befehl verwenden zu können, müssen Sie entweder angeben, dass Sie ein benutzerweites Tool über die `--global`-Option entfernen möchten, oder Sie müssen mit der Option `--tool-path` einen Pfad zu dem Speicherort angeben, an dem das Tool installiert wird.
 

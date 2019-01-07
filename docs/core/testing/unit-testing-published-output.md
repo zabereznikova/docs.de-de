@@ -1,15 +1,16 @@
 ---
 title: Test einer veröffentlichten Ausgabe mit „dotnet vtest“
-description: Erfahren Sie, wie Sie mit dem Befehl „dotnet vstest“ Tests für veröffentlichte Ausgaben ausführen.
+description: Erfahren Sie, wie Sie mit dem Befehl „dotnet vstest“ Tests für veröffentlichte Bibliotheken statt für den Quellcode ausführen.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508132"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239526"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Test einer veröffentlichten Ausgabe mit „dotnet vtest“
 
@@ -21,7 +22,9 @@ dotnet vstest <MyPublishedTests>.dll
 
 `<MyPublishedTests>` ist dabei der Name des veröffentlichten Testprojekts.
 
-## <a name="example-of-running-tests-on-a-published-dll"></a>Beispiel für das Ausführen von Tests für eine veröffentlichte DLL
+## <a name="example"></a>Beispiel
+
+Mit den folgenden Befehlen wird das Ausführen von Tests für eine veröffentlichte DLL demonstriert.
 
 ```
 dotnet new mstest -o MyProject.Tests

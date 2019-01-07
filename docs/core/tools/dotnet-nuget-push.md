@@ -1,20 +1,20 @@
 ---
-title: dotnet nuget push-Befehl – .NET Core-CLI
-description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
+title: Befehl „dotnet nuget push“
+description: Der Befehl „dotnet nuget push“ überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f0d127d8b9f37b1c381d8981f54035a2fc3b0e5
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143060"
+ms.locfileid: "53169351"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet nuget push` – Überträgt ein Paket auf den Server und veröffentlicht es.
 

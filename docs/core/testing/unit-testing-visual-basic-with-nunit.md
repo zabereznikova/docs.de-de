@@ -1,16 +1,17 @@
 ---
-title: Unittests für Visual Basic in .NET Core mithilfe von „dotnet test“ und NUnit
+title: Komponententests für Visual Basic in .NET Core mit „dotnet test“ und NUnit
 description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Visual Basic-Beispielprojektmappe mithilfe von NUnit erstellen.
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: 1cfca0939d4c4055aece69cae066c365cd2a1dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143563"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239151"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Unittests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und NUnit
 

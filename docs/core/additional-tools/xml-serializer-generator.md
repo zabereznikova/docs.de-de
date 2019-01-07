@@ -1,17 +1,16 @@
 ---
-title: Microsoft XML Serializer Generator – .NET Core
+title: Microsoft XML Serializer Generator
 description: Übersicht zum Microsoft XML Serializer Generator. Verwenden Sie den XML Serializer Generator, um eine XML-Serialisierungsassembly für die in Ihrem Projekt enthaltenen Typen zu generieren.
 author: mlacouture
-ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151758"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244777"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Verwenden des Microsoft XML Serializer Generators auf .NET Core
 
@@ -22,7 +21,7 @@ In diesem Tutorial erfahren Sie, wie Sie den Microsoft XML Serializer Generator 
 > * Hinzufügen eines Verweises zum Microsoft.XmlSerializer.Generator-Paket
 > * Bearbeiten Ihrer MyApp.csproj-Datei zum Hinzufügen von Abhängigkeiten
 > * Hinzufügen von „XmlSerializer“ und einer Klasse
-> * Erstellen und Ausführen der Anwendung 
+> * Erstellen und Ausführen der Anwendung
 
 Das [NuGet-Paket „Microsoft.XmlSerializer.Generator“](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator) gilt (wie der [XML Serializer Generator (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md) für .NET Framework) für .NET Core- und .NET Standard-Projekte. Es erstellt eine XML-Serialisierungsassembly für Typen, die in einer Assembly vorhanden sind, um die Startleistung der XML-Serialisierung zu verbessern, wenn Objekte dieser Typen mithilfe von <xref:System.Xml.Serialization.XmlSerializer> serialisiert oder deserialisiert werden.
 
@@ -30,8 +29,8 @@ Das [NuGet-Paket „Microsoft.XmlSerializer.Generator“](https://www.nuget.org/
 
 Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 
-* Installieren Sie [.NET Core 2.1 SDK oder höher](https://www.microsoft.com/net/download).
-* Installieren Sie Ihren bevorzugten Code-Editor, wenn Sie dies nicht bereits erledigt haben.
+* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) oder höher
+* Ihren bevorzugten Code-Editor
 
 > [!TIP]
 > Benötigen Sie einen Code-Editor? Testen Sie [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).
@@ -53,11 +52,11 @@ dotnet new console
 Verwenden Sie den [`dotnet add package`](../tools//dotnet-add-package.md)-Befehl, um den Verweis Ihrem Projekt hinzuzufügen. 
 
 Typ:
- 
- ```console
- dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
- ```
- 
+
+```console
+dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
+```
+
 ### <a name="verify-changes-to-myappcsproj-after-adding-the-package"></a>Überprüfen der Änderungen an der MyApp.csproj-Datei nach dem Hinzufügen des Pakets
 
 Öffnen Sie Ihren Code-Editor, um zu beginnen. Sie arbeiten weiterhin mit dem *MyApp*-Verzeichnis, in dem die App erstellt wurde.
@@ -71,17 +70,17 @@ Wenn Sie den Befehl [`dotnet add package`](../tools//dotnet-add-package.md) ausf
     <PackageReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-another-itemgroup-section-for-net-core-cli-tool-support"></a>Hinzufügen eines weiteren ItemGroup-Abschnitts zur Unterstützung des .NET Core-CLI-Tools
- 
- Fügen Sie nach dem zuvor betrachteten Abschnitt `ItemGroup` die folgenden Zeilen hinzu:
- 
+
+Fügen Sie nach dem zuvor betrachteten Abschnitt `ItemGroup` die folgenden Zeilen hinzu:
+
  ```xml
  <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.XmlSerializer.Generator" Version="1.0.0" />
  </ItemGroup>
  ```
- 
+
 ### <a name="add-a-class-in-the-application"></a>Hinzufügen einer Klasse zu der Anwendung
 
 Öffnen Sie *Program.cs* in Ihrem Text-Editor. Fügen Sie die Klasse mit dem Namen *MyClass* unter *Program.cs* hinzu.
@@ -107,9 +106,10 @@ Führen Sie (immer noch im Ordner *MyApp*) die Anwendung über [`dotnet run`](..
 
 Geben Sie den folgenden Befehl in Ihr Konsolenfenster ein:
 
- ```console
- $ dotnet run
- ```
+```console
+$ dotnet run
+```
+
 > [!NOTE]
 > [`dotnet run`](../tools/dotnet-run.md) ruft [`dotnet build`](../tools/dotnet-build.md) auf, um sicherzustellen, dass die Buildziele erstellt wurden, und ruft anschließend `dotnet <assembly.dll>` auf, um die Zielanwendung auszuführen.
 
@@ -118,18 +118,16 @@ Geben Sie den folgenden Befehl in Ihr Konsolenfenster ein:
 
 Wenn alle Vorgänge erfolgreich ausgeführt werden, wird eine Assembly mit dem Namen *MyApp.XmlSerializers.dll* im Ausgabeordner generiert. 
 
-
-
 Herzlichen Glückwunsch! Sie haben gerade:
 > [!div class="checklist"]
 > * eine lokale .NET Core-App erstellt
 > * einen Verweis zum Microsoft.XmlSerializer.Generator-Paket hinzugefügt
 > * Ihre MyApp.csproj-Datei bearbeitet, um Abhängigkeiten hinzuzufügen
 > * „XmlSerializer“ und eine Klasse hinzugefügt
-> * die Anwendung erstellt und ausgeführt 
+> * die Anwendung erstellt und ausgeführt
 
-## <a name="related-resources"></a>Verwandte Ressourcen
+## <a name="related-resources"></a>Weitere Informationen
 
 * [Einführung in die XML-Serialisierung](../../standard/serialization/introducing-xml-serialization.md)
-* [How to: Serialize Using XmlSerializer (C#) (Vorgehensweise: Serialisieren mit XmlSerializer (C#))](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
-* [How to: Serialize Using XmlSerializer (Visual Basic) (Vorgehensweise: Serialisieren mit „XmlSerializer“ (Visual Basic))](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+* [Vorgehensweise: Serialisieren mit XmlSerializer (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+* [Vorgehensweise: Serialisieren mit XmlSerializer (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

@@ -1,19 +1,19 @@
 ---
-title: dotnet-msbuild-Befehl – .NET Core-CLI
-description: Der Befehl dotnet msbuild ermöglicht den Zugriff auf die MSBuild-Befehlszeile.
+title: Befehl „dotnet msbuild“
+description: Der Befehl „dotnet msbuild“ ermöglicht den Zugriff auf die MSBuild-Befehlszeile.
 ms.date: 12/03/2018
-ms.openlocfilehash: 93471ded9614502ab89d5afb19dd9992f068ef80
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128046"
+ms.locfileid: "53169078"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet msbuild`: Erstellt ein Projekt und alle seine Abhängigkeiten
 

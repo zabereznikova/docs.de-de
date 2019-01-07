@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ec34d6f49a538ac106196c342a7ff0f9dad8b6d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242775"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451208"
 ---
 # <a name="properties-c-programming-guide"></a>Eigenschaften (C#-Programmierhandbuch)
 
@@ -34,7 +34,7 @@ Eine Eigenschaft ist ein Member, das einen flexiblen Mechanismus zum Lesen, Schr
 
 Ein grundlegendes Muster zum Implementieren einer Eigenschaft umfasst ein privates Unterstützungsfeld zum Festlegen und Abrufen des Eigenschaftswerts. Der `get`-Accessor gibt den Wert des privaten Felds zurück, und der `set`-Accessor kann die Validierung einiger Daten ausführen, bevor er dem privaten Feld einen Wert zuweist. Beide Accessoren führen möglicherweise eine Konvertierung oder eine Berechnung der Daten aus, bevor sie gespeichert oder zurückgegeben werden.
 
-Dieses Muster wird anhand des folgenden Beispiels veranschaulicht. In diesem Beispiel stellt die `TimePeriod`-Klasse ein Zeitintervall dar. Intern speichert die Klasse das Zeitintervall in Sekunden in einem privaten Feld mit dem Namen `seconds`. Eine Schreib-Lese-Eigenschaft mit dem Namen `Hours` ermöglicht dem Kunden, das Zeitintervall in Stunden anzugeben. Die `get`- und `set`-Accessoren führen jeweils die notwendige Konvertierung zwischen Stunden und Sekunden durch. Darüber hinaus prüft der `set`-Accessor die Daten, und löst eine <xref:System.ArgumentOutOfRangeException> aus, wenn die Anzahl von Stunden ungültig ist. 
+Dieses Muster wird anhand des folgenden Beispiels veranschaulicht. In diesem Beispiel stellt die `TimePeriod`-Klasse ein Zeitintervall dar. Intern speichert die Klasse das Zeitintervall in Sekunden in einem privaten Feld mit dem Namen `_seconds`. Eine Schreib-Lese-Eigenschaft mit dem Namen `Hours` ermöglicht dem Kunden, das Zeitintervall in Stunden anzugeben. Die `get`- und `set`-Accessoren führen jeweils die notwendige Konvertierung zwischen Stunden und Sekunden durch. Darüber hinaus prüft der `set`-Accessor die Daten, und löst eine <xref:System.ArgumentOutOfRangeException> aus, wenn die Anzahl von Stunden ungültig ist. 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   

@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Grun
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c6316717f78dffb672afdf79e919fd1bd7874b52
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32a0e55b17c51a9aa5b7c1fd70a42456c03c186d
+ms.sourcegitcommit: 5b831a3200f835cb9a69f8aae99129bdda8b2ca1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149574"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786217"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -257,7 +257,7 @@ Die docker-compose.yml-Dateien auf der Lösungsebene sind nicht nur flexibler al
 
 Abschließend können Sie diesen Wert aus Ihrem Code abrufen, indem Sie Configuration\["ConnectionString"\] verwenden, wie es in der ConfigureServices-Methode in einem Codebeispiel weiter oben gezeigt wurde.
 
-Allerdings kann es für Produktionsumgebungen sinnvoll sein, zusätzliche Methoden zu untersuchen, mit denen sich Geheimnisse wie die Verbindungszeichenfolgen speichern lassen. [Azure Key Vault}(https://azure.microsoft.com/services/key-vault/) ist eine hervorragende Möglichkeit zum Verwalten von Anwendungsgeheimnissen.
+Allerdings kann es für Produktionsumgebungen sinnvoll sein, zusätzliche Methoden zu untersuchen, mit denen sich Geheimnisse wie die Verbindungszeichenfolgen speichern lassen. [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) ist eine hervorragende Möglichkeit zum Verwalten von Anwendungsgeheimnissen.
 
 Azure Key Vault dient zum Speichern und Schützen kryptografischer und geheimer Schlüssel, die von Cloudanwendungen und -diensten verwendet werden. Ein Geheimnis ist etwas, das Sie streng überwachen sollten. Es handelt sich dabei z.B. um API-Schlüssel, Verbindungszeichenfolgen, Kennwörter usw. Zu dieser strengen Überwachung gehören <span class="underline">u.a.</span> die Nutzungsprotokollierung, das Festlegen der Ablaufzeit und das Verwalten des Zugriffs.
 

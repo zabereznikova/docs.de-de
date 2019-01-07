@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453390"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656361"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Übersicht über das Modell der attributierten Programmierung (MEF)
 Im Managed Extensibility Framework (MEF) ist ein *Programmiermodell* eine besondere Methode, den Satz der konzeptionellen Objekte zu definieren, mit denen MEF ausgeführt wird. Diese konzeptionellen Objekte umfassen Teile, Importe und Exporte. MEF verwendet diese Objekte, gibt jedoch nicht an, wie sie dargestellt werden sollen. Daher ist eine Vielzahl von Programmiermodellen möglich, einschließlich benutzerdefinierter Programmiermodelle.  
@@ -548,7 +548,7 @@ Public Class User
         logger = Nothing  
   
         For Each Plugin As Lazy(Of IPlugin, IPluginMetadata) In plugins  
-            If (Plugin.Metadata.Name = "Logger") Then  
+            If Plugin.Metadata.Name = "Logger" Then  
                 logger = Plugin.Value  
             End If  
         Next  
@@ -564,13 +564,14 @@ public class User
     [ImportMany]  
     public IEnumerable<Lazy<IPlugin, IPluginMetadata>> plugins;  
   
-    public IPlugin InstantiateLogger ()  
+    public IPlugin InstantiateLogger()  
     {  
         IPlugin logger = null;  
   
         foreach (Lazy<IPlugin, IPluginMetadata> plugin in plugins)  
         {  
-            if (plugin.Metadata.Name = "Logger") logger = plugin.Value;  
+            if (plugin.Metadata.Name == "Logger")
+                logger = plugin.Value;  
         }  
         return logger;  
     }  

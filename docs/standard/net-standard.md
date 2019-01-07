@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50186069"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613595"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -35,7 +35,7 @@ Führen Sie die folgenden Schritte aus, um die höchste Version von .NET Standar
 
 1. Suchen Sie die Zeile, die die .NET-Implementierung angibt, die Sie ausführen möchten.
 2. Suchen Sie in dieser Zeile die Spalte, in der Ihre Version angegeben ist (von rechts nach links).
-3. Die Spaltenüberschrift gibt die .NET Standard-Version an, die Ihr Ziel unterstützt (alle niedrigeren .NET Standard-Versionen werden ebenfalls unterstützt).
+3. Die Spaltenüberschrift gibt die .NET Standard-Version an, die Ihr Ziel unterstützt. Sie können auch eine niedrigere .NET Standard-Version als Ziel verwenden. Auch höhere .NET Standard-Versionen unterstützen die Implementierung.
 4. Wiederholen Sie diesen Vorgang für jede Plattform, die als Ziel verwendet werden soll. Wenn Sie mehrere Zielplattformen verwenden, sollten Sie die kleinste unterstützten Versionen auswählen. Wenn Sie .NET Standard z.B. auf .NET Framework 4.5 und .NET Core 1.0 ausführen möchten, ist die höchste .NET Standard-Version, die Sie verwenden können, .NET Standard 1.1.
 
 ### <a name="which-net-standard-version-to-target"></a>Auswahl der .NET Standard-Zielversion

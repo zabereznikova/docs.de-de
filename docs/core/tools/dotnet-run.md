@@ -1,21 +1,19 @@
 ---
-title: dotnet run-Befehl – .NET Core-CLI
-description: Der dotnet run-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode.
-author: mairaw
-ms.author: mairaw
+title: Befehl „dotnet run“
+description: Der Befehl „dotnet run“ bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode.
 ms.date: 05/29/2018
-ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: effca44db19e512a01f858e7a149e3fc4fe076a2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235493"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170248"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet run`: Führt Quellcode ohne explizite Kompilierungs- oder Startbefehle aus.
 
@@ -40,7 +38,7 @@ dotnet run [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Beschreibung 
+## <a name="description"></a>Beschreibung
 
 Der `dotnet run`-Befehl bietet eine praktische Option zum Ausführen der Anwendung aus dem Quellcode mit einem Befehl. Es empfiehlt sich für eine schnelle iterative Entwicklung aus der Befehlszeile. Der Befehl hängt vom [`dotnet build`](dotnet-build.md)-Befehl ab, um den Code zu erstellen. Alle Anforderungen für den Build, z.B. dass das Projekt zuerst wiederhergestellt werden muss, werden auch auf `dotnet run` angewendet.
 
@@ -70,7 +68,7 @@ Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendun
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -124,7 +122,7 @@ Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendun
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -174,7 +172,7 @@ Grenzt Argumente für `dotnet run` von Argumenten für die ausgeführte Anwendun
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
 `-f|--framework <FRAMEWORK>`
 

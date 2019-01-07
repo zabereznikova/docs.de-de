@@ -1,21 +1,19 @@
 ---
-title: Verweisbefehl „dotnet remove“ – .NET Core-CLI
-description: Der Verweisbefehl „dotnet remove“ bietet eine praktische Option zum Entfernen von Projekt-zu-Projekt-Verweisen.
-author: mairaw
-ms.author: mairaw
+title: Befehl „dotnet remove reference“
+description: Der Befehl „dotnet remove reference“ bietet eine praktische Option zum Entfernen von Projekt-zu-Projekt-Verweisen.
 ms.date: 05/29/2018
-ms.openlocfilehash: b281b255be7f49a99a6b4928c340cd4fb085f085
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: bfac4721743babcf48fd8e86a50c8df136e1bfce
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696230"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170612"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet remove reference`: Entfernt Projekt-zu-Projekt-Verweise.
 
@@ -23,7 +21,7 @@ ms.locfileid: "34696230"
 
 `dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>description
+## <a name="description"></a>Beschreibung
 
 Der `dotnet remove reference`-Befehl bietet eine praktische Option zum Entfernen von Projektverweisen von einem Projekt.
 

@@ -1,21 +1,19 @@
 ---
-title: dotnet publish-Befehl – .NET Core-CLI
-description: Der „dotnet publish“-Befehl veröffentlicht ein .NET Core-Projekt in einem Verzeichnis.
-author: mairaw
-ms.author: mairaw
+title: Befehl „dotnet publish“
+description: Der Befehl „dotnet publish“ veröffentlicht ein .NET Core-Projekt in einem Verzeichnis.
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bacc92eea90072b95b2d42a87cb57e9fa0be67
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43511423"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169780"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet publish`: Packt die Anwendung und ihre Abhängigkeiten in einen Ordner für die Bereitstellung auf einem Hostsystem.
 
@@ -41,7 +39,7 @@ dotnet publish [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Beschreibung 
+## <a name="description"></a>Beschreibung
 
 `dotnet publish` kompiliert die Anwendung, liest ihre Abhängigkeiten, die in der Projektdatei angegeben sind, und veröffentlicht die resultierenden Dateien in einem Verzeichnis. Die Ausgabe umfasst die folgenden Objekte:
 
@@ -66,7 +64,7 @@ Das zu veröffentlichende Projekt. Dies ist entweder der Pfad und der Dateiname 
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -121,7 +119,7 @@ Definiert das Versionssuffix zum Ersetzen des Sternchens (`*`) im Versionsfeld d
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -172,7 +170,7 @@ Definiert das Versionssuffix zum Ersetzen des Sternchens (`*`) im Versionsfeld d
 
 `-c|--configuration {Debug|Release}`
 
-Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`.
+Legt die Buildkonfiguration fest. Der Standardwert ist `Debug`sein.
 
 `-f|--framework <FRAMEWORK>`
 

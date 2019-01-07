@@ -1,15 +1,15 @@
 ---
-title: Pakete, Metapakete und Frameworks
+title: Pakete, Metapakete und Frameworks – .NET Core
 description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: e69e9707d3984f37ebc2c1103f9d89f3cbdf5cbd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195280"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168818"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 

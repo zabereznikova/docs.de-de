@@ -1,19 +1,19 @@
 ---
-title: dotnet clean-Befehl – .NET Core-CLI
+title: Befehl „dotnet clean“
 description: Mit dem Befehl „dotnet clean“ wird das aktuelle Verzeichnis bereinigt.
 ms.date: 12/04/2018
-ms.openlocfilehash: 9930d2905f234e7125f27367cda36aa85ae23b87
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144454"
+ms.locfileid: "53169858"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>Name
 
 `dotnet clean`: Löscht die Ausgabe eines Projekts.
 

@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144701"
+ms.locfileid: "53168831"
 ---
 # <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer Klassenbibliothek mit Visual Basic und dem .NET Core SDK in Visual Studio 2017
 
@@ -31,7 +31,7 @@ Zunächst erstellen Sie eine Projektmappe für Ihre Klassenbibliotheksprojekt un
 
 1. Erweitern Sie im Dialogfeld **Neues Projekt** den Knoten **Andere Projekttypen**, und wählen Sie **Visual Studio-Projektmappen** aus. Nennen Sie die Projektmappe „ClassLibraryProjects“, und wählen Sie die **OK**-Schaltfläche aus.
 
-   ![Dialogfeld "Neues Projekt"](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio-Dialogfeld „Neues Testprojekt erstellen“](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Erstellen des Klassenbibliotheksprojekts
 
@@ -41,15 +41,15 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
 1. Erweitern Sie den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**, klicken Sie dann auf den Knoten **.NET Standard** und anschließend auf die Projektvorlage **Klassenbibliothek (.NET Standard)**. Geben Sie im Textfeld **Name** „StringLibrary“ als Namen des Projekts ein. Wählen Sie **OK**, um das Klassenbibliotheksprojekt zu erstellen.
 
-   ![Dialogfeld „Neues Projekt hinzufügen“](./media/vb-library-with-visual-studio/libproject.png)
+   ![Visual Studio-Dialogfeld „Neues Bibliotheksprojekt hinzufügen“](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    Das Codefenster öffnet sich dann in der Visual Studio-Entwicklungsumgebung. 
  
-   ![Visual Studio-Anwendungsfenster, das die den Standardvorlagencode der Klassenbibliothek zeigt](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![Visual Studio-Anwendungsfenster, das die den Standardvorlagencode der Klassenbibliothek zeigt](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. Stellen Sie sicher, dass die Bibliothek auf die richtige Version von .NET Standard zielt. Klicken Sie mit der rechten Maustaste auf das Bibliotheksprojekt im Fenster des **Projektmappen-Explorer**, und klicken Sie dann auf **Eigenschaften**. Das Textfeld **Zielframework** zeigt dann, dass .NET Standard 2.0 als Ziel verwendet wird.
 
-   ![Projekteigenschaften für die Klassenbibliothek](./media/library-with-visual-studio/properties.png)
+   ![Projekteigenschaften für die Klassenbibliothek](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Löschen Sie im Dialogfeld **Eigenschaften** außerdem den Text im Textfeld **Stammnamespace**. Für jedes Projekt erstellt Visual Basic automatisch einen Namespace, der dem Projektnamen entspricht. Außerdem sind alle Namespaces, die in den Quellcodedateien definiert sind, übergeordnete Elemente dieses Namespace. Wir möchten einen Namespace auf oberster Ebene definieren, indem wir das Schlüsselwort [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) verwenden.
   
@@ -61,7 +61,7 @@ Erstellen Sie Ihr Klassenbibliotheksprojekt:
 
 1. Wählen Sie auf der Menüleiste **Erstellen** > **Projektmappe erstellen** aus. Das Projekt sollte fehlerfrei kompiliert werden.
 
-   ![Ausgabebereich, der zeigt, dass der Buildvorgang erfolgreich war](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Ausgabebereich, der zeigt, dass der Buildvorgang erfolgreich war](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

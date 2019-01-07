@@ -3,12 +3,12 @@ title: Versionierung in C# – Leitfaden für C#
 description: Informationen zur Versionierung in C# und .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0c75e2f1397f43fadf91d145e8b63de1d4d90eb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183229"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243490"
 ---
 # <a name="versioning-in-c"></a>Versionierung in C# #
 
@@ -41,7 +41,7 @@ Folgende Punkte sollten Sie beachten, wenn Sie versuchen die Abwärtskompatibili
 * Virtuelle Methoden: Wenn Sie eine virtuelle Methode in Ihrer neuen Version in eine nicht-virtuelle Methode umwandeln, bedeutet das, dass die Projekte, die diese Methode außer Kraft setzen, aktualisiert werden müssen. Es handelt sich um eine schwere grundlegende Änderung, von der stark abgeraten wird.
 * Methodensignaturen: Wenn Sie beim Aktualisieren des Verhaltens einer Methode ebenfalls deren Signatur ändern müssen, sollten Sie stattdessen eine Überladung erstellen, damit der Code, der diese Methode aufruft, weiterhin funktioniert.
 Sie können die alte Methodensignatur immer so ändern, dass sie die neue Methodensignatur aufruft. Dadurch bleibt die Implementierung konsistent.
-* [Obsolete attribute (Attribut „Obsolete“)](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Sie können dieses Attribut in Ihrem Code verwenden, um Klassen oder Klassenmember anzugeben, die veraltet sind und in zukünftigen Versionen vermutlich gelöscht werden.
+* [Obsolete-Attribut](programming-guide/concepts/attributes/common-attributes.md#Obsolete): Sie können dieses Attribut in Ihrem Code verwenden, um Klassen oder Klassenmember anzugeben, die veraltet sind und in zukünftigen Versionen vermutlich gelöscht werden.
 Dadurch sind Entwickler, die Ihre Bibliothek verwenden, besser auf grundlegende Änderungen vorbereitet.
 * Optionale Methodenargumente: Wenn sie vorher optionale in obligatorische Methodenargumente umwandeln oder ihren Standardwert ändern, muss der gesamte Code, der diese Argumente nicht bereitstellt, aktualisiert werden.
 > [!NOTE]
