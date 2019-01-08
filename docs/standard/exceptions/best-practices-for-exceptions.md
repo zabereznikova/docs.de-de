@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149587"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030424"
 ---
 # <a name="best-practices-for-exceptions"></a>Bewährte Methoden für Ausnahmen
 
@@ -70,7 +70,7 @@ Führen Sie eine neue Ausnahmenklasse nur ein, wenn keine vordefinierte zutrifft
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Enden von Ausnahmeklassen auf das Wort `Exception`
 
-Wenn eine benutzerdefinierte Ausnahme erforderlich ist, benennen Sie diese entsprechend, und leiten Sie sie von der <xref:System.Exception>-Klasse ab. Zum Beispiel:
+Wenn eine benutzerdefinierte Ausnahme erforderlich ist, benennen Sie diese entsprechend, und leiten Sie sie von der <xref:System.Exception>-Klasse ab. Beispiel:
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -86,7 +86,7 @@ Verwenden Sie beim Erstellen eigener Ausnahmeklassen mindestens die drei allgeme
   
 * <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, der eine Zeichenfolgenmeldung und eine interne Ausnahme akzeptiert.  
   
-Ein Beispiel finden Sie unter [Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md).
+Ein Beispiel finden Sie unter [Gewusst wie: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Sicherstellen, dass Ausnahmedaten bei Remoteausführung von Code verfügbar sind
 

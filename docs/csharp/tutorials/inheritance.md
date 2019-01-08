@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502163"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656192"
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-Vererbung gilt nur für Klassen und Schnittstellen. Andere Typkategorien (Strukturen, Delegate und Enumerationen) unterstützen keine Vererbung. Aufgrund dieser Regeln tritt beim Versuch, Codes wie den folgenden zu kompilieren, Compilerfehler CS0527 auf: Typ „ValueType“ in der Schnittstellenliste ist keine Schnittstelle. Die Fehlermeldung gibt an, dass die Vererbung nicht unterstützt wird, obwohl Sie die Schnittstellen definieren können, die eine Struktur implementiert.
+Vererbung gilt nur für Klassen und Schnittstellen. Andere Typkategorien (Strukturen, Delegate und Enumerationen) unterstützen keine Vererbung. Aufgrund dieser Regeln tritt beim Versuch, Codes wie den folgenden zu kompilieren, Compilerfehler CS0527 auf: Der Typ "Werttyp" in der Schnittstellenliste ist keine Schnittstelle. Die Fehlermeldung gibt an, dass die Vererbung nicht unterstützt wird, obwohl Sie die Schnittstellen definieren können, die eine Struktur implementiert.
 
 ```csharp
 using System;
@@ -249,7 +249,7 @@ Zusätzlich zu den Membern, die sie von `Publication` erbt, definiert die `Book`
 
 - Zwei Konstruktoren
 
-  Die beiden `Book`-Konstruktoren nutzen gemeinsam drei allgemeine Parameter. Zwei, *title* und *publisher*, entsprechen den Parametern des `Publication`-Konstruktors. Der dritte ist *author*, der in einem privaten Feld `authorName` gespeichert ist. Ein Konstruktor enthält einen *ISBN*-Parameter, der in der Auto-Eigenschaft `ISBN` gespeichert ist.
+  Die beiden `Book`-Konstruktoren nutzen gemeinsam drei allgemeine Parameter. Zwei, *title* und *publisher*, entsprechen den Parametern des `Publication`-Konstruktors. Der dritte ist *author*, der in einer öffentlichen unveränderlichen `Author`-Eigenschaft gespeichert ist. Ein Konstruktor enthält einen *ISBN*-Parameter, der in der Auto-Eigenschaft `ISBN` gespeichert ist.
 
   Der erste Konstruktor verwendet das [this](../language-reference/keywords/this.md)-Schlüsselwort, um den anderen Konstruktor aufzurufen. Die Konstruktorverkettung ist ein häufiges Muster beim Definieren von Konstruktoren. Konstruktoren mit weniger Parametern stellen beim Aufrufen des Konstruktors mit der größten Anzahl von Parametern Standardwerte zur Verfügung.
 
@@ -257,11 +257,11 @@ Zusätzlich zu den Membern, die sie von `Publication` erbt, definiert die `Book`
 
 - Eine schreibgeschützte Eigenschaft `ISBN`, die die ISBN des `Book`-Objekts zurückgibt, eine eindeutige 10- oder 13-stellige Nummer. Die ISBN wird einem der `Book`-Konstruktoren als Argument übergeben. Die ISBN wird in einem privaten Unterstützungsfeld gespeichert, das automatisch vom Compiler generiert wird.
 
-- Eine schreibgeschützte Eigenschaft `Author`. Der Autorenname wird als Argument beiden `Book`-Konstruktoren übergeben und im privaten Feld `authorName` gespeichert.
+- Eine schreibgeschützte Eigenschaft `Author`. Der Autorenname wird als Argument beiden `Book`-Konstruktoren übergeben und in der Eigenschaft gespeichert.
 
-- Zwei schreibgeschützte preisbezogene Eigenschaften, `Price` und `Currency`. Ihre Werte werden in einem Aufruf der `SetPrice`-Methode als Argumente bereitgestellt. Der Preis wird in einem privaten Feld namens `bookPrice` gespeichert. Die Eigenschaft `Currency` ist das dreistellige ISO-Währungssymbol (z.B. USD für den US-Dollar) und befindet sich im privaten Feld `ISOCurrencySymbol`. ISO-Währungssymbole können aus der Eigenschaft <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> abgerufen werden.
+- Zwei schreibgeschützte preisbezogene Eigenschaften, `Price` und `Currency`. Ihre Werte werden in einem Aufruf der `SetPrice`-Methode als Argumente bereitgestellt. Die Eigenschaft `Currency` ist das dreistellige ISO-Währungssymbol (z. B. USD für den US-Dollar). ISO-Währungssymbole können aus der Eigenschaft <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> abgerufen werden. Diese beiden Eigenschaften sind aus externer Richtung schreibgeschützt, aber beide können durch Code in der `Book`-Klasse festgelegt werden.
 
-- Eine `SetPrice`-Methode, die die Werte der Felder `bookPrice` und `ISOCurrencySymbol` festlegt. Diese Werte werden von den Eigenschaften `Price` und `Currency` zurückgegeben.
+- Eine `SetPrice`-Methode, die die Werte der Eigenschaften `Price` und `Currency` festlegt. Diese Werte werden von diesen selben Eigenschaften zurückgegeben.
 
 - Überschreibt die `ToString`-Methode (geerbt von `Publication`) und die Methoden <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> und <xref:System.Object.GetHashCode%2A> (geerbt von <xref:System.Object>).
 

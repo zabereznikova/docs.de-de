@@ -4,12 +4,12 @@ description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmö
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152642"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030541"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -41,7 +41,7 @@ Wenn zum Erstellen einer einzigen Benutzeroberflächenanzeige mit mehreren Micro
 
 Wenn Sie übergreifende Aspekte wie Sicherheit und Autorisierung in jeden Microservice implementieren, ist unter Umständen ein hohes Maß an Entwicklungsarbeit erforderlich. Dies können Sie vermeiden, indem Sie diese Dienste im Docker-Host oder internen Cluster speichern, um den Direktzugriff von außen einzuschränken und diese übergreifenden Aspekte an zentraler Stelle zu implementieren (z.B. in einem API-Gateway).
 
-- Wie können Client-Apps mit Diensten kommunizieren, die Protokolle verwenden, die nicht für das Internet geeignet sind?*
+- *Wie können Client-Apps mit Diensten kommunizieren, die Protokolle verwenden, die nicht für das Internet geeignet sind?*
 
 Protokolle, die auf Serverseite verwendet werden (wie AMQP oder Binärprotokolle), werden in der Regel in Client-Apps nicht unterstützt. Aus diesem Grund müssen Anforderungen über Protokolle wie HTTP/HTTPS ausgeführt und anschließend in die anderen Protokolle übersetzt werden. In diesem Fall kann der *Man-in-the-Middle*-Ansatz zur Lösung des Problems verwendet werden.
 
@@ -57,9 +57,9 @@ Daher kann es sehr praktisch sein, für microservicebasierte Anwendungen eine Zw
 
 - **Kopplung**: Ohne das API-Gatewaymuster werden die Client-Apps an die internen Microservices gekoppelt. Die Client-Apps müssen wissen, wie die vielen verschiedenen Bereiche der Anwendung in Microservices zerlegt sind. Wenn die internen Microservices weiterentwickelt und umgestaltet werden, kann dies aufgrund der direkten Verweise auf diese Microservices zu Breaking Changes bei den Client-Apps führen. Dies kann sich massiv auf die Wartung auswirken. Client-Apps müssen häufig aktualisiert, wodurch die Entwicklung der Lösung noch schwieriger wird.
 
-- **Zu viele Roundtrips**: Eine einzige Seite in der Client-App erfordert möglicherweise mehrere Aufrufe in mehreren Diensten. Dies kann zu mehreren Netzwerkroundtrips zwischen dem Client und dem Server führen, was eine erheblich höhere Latenz nach sich zieht. Eine Aggregierung auf einer Zwischenebene kann die Leistung und Benutzerfreundlichkeit für die Client-App verbessern.
+- **Zu viele Roundtrips**: Eine einzige Seite in der Client-App erfordert möglicherweise mehrere Aufrufe für mehrere Diensten. Dies kann zu mehreren Netzwerkroundtrips zwischen dem Client und dem Server führen, was eine erheblich höhere Latenz nach sich zieht. Eine Aggregierung auf einer Zwischenebene kann die Leistung und Benutzerfreundlichkeit für die Client-App verbessern.
 
-- **Sicherheitsprobleme**: Ohne Gateway müssen alle Microservices für die „Außenwelt“ verfügbar gemacht werden. Dadurch bieten sie eine größere Angriffsfläche als verborgene interne Microservices, die nicht direkt von den Client-Apps verwendet werden. Je kleiner die Angriffsfläche ist, desto sicherer kann Ihre Anwendung sein.
+- **Sicherheitsprobleme**: Ohne ein Gateway müssen alle Microservices für die „Außenwelt“ verfügbar gemacht werden. Dadurch bieten sie eine größere Angriffsfläche als verborgene interne Microservices, die nicht direkt von den Client-Apps verwendet werden. Je kleiner die Angriffsfläche ist, desto sicherer kann Ihre Anwendung sein.
 
 - **Übergreifende Aspekte**: Für jeden öffentlich verfügbaren Microservice müssen Aspekte wie Autorisierung, SSL usw. berücksichtigt werden. In vielen Situationen können diese Aspekte auf einer einzigen Ebene verarbeitet werden, sodass die internen Microservices vereinfacht werden.
 

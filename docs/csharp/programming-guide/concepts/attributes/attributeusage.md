@@ -1,18 +1,18 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500571"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656348"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
 Bestimmt, wie eine benutzerdefinierte Attributklasse verwendet werden kann. Bei <xref:System.AttributeUsageAttribute> handelt es sich um ein Attribut, das Sie auf benutzerdefinierte Attributdefinitionen anwenden. Mithilfe des `AttributeUsage`-Attribut können Sie Folgendes steuern:
 
-- Auf welche Programmelemente das Attribut angewendet werden kann. Wenn Sie die Verwendung nicht einschränken, kann ein Attribut auf jedes der folgenden Programmelemente angewendet werden:
+- Auf welche Programmelemente das Attribut angewendet werden kann. Wenn Sie dessen Verwendung nicht einschränken, kann ein Attribut auf jedes der folgenden Programmelemente angewendet werden:
   - Assembly
   - module
   - Feld
@@ -49,7 +49,7 @@ Wenn das <xref:System.AttributeUsageAttribute.AllowMultiple>-Argument auf `true`
 
 In diesem Fall kann `MultiUseAttribute` wiederholt angewendet werden, da `AllowMultiple` auf `true` festgelegt wurde. Beide gezeigten Formate für das Anwenden von mehreren Attributen sind gültig.
 
-Wenn <xref:System.AttributeUsageAttribute.Inherited> auf `false` festgelegt wurde, wird das Attribut nicht von Klassen geerbt, die von einer Attributklasse abgeleitet werden. Zum Beispiel:
+Wenn <xref:System.AttributeUsageAttribute.Inherited> auf `false` festgelegt wurde, wird das Attribut nicht von Klassen geerbt, die von einer Attributklasse abgeleitet werden. Beispiel:
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 

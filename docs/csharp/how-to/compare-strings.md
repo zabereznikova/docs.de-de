@@ -5,16 +5,16 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
+ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188572"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334833"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C\#
 
-Durch den Vergleich zweier Zeichenfolgen können Sie entweder feststellen, ob diese gleich sind oder in welche Reihenfolge sie beim Sortieren gebracht werden sollen.
+Durch den Vergleich zweier Zeichenfolgen können Sie entweder feststellen, ob diese gleich sind, oder in welche Reihenfolge sie beim Sortieren gebracht werden sollen.
 
 Beide Vorgänge werden durch folgende Faktoren erschwert:
 
@@ -29,23 +29,27 @@ Wenn Sie Zeichenfolgen vergleichen, definieren Sie für diese eine Reihenfolge. 
 
 ## <a name="default-ordinal-comparisons"></a>Standardordinalvergleich
 
-Für die am häufigsten verwendeten Methoden <xref:System.String.CompareTo%2A?displayProperty=nameWithType>, <xref:System.String.Equals%2A?displayProperty=nameWithType> und <xref:System.String.op_Equality%2A?displayProperty=nameWithType> wird ein Ordinalvergleich, ein Vergleich unter Berücksichtigung der Groß/-Kleinschreibung und die aktuelle Kultur verwendet. Die Ergebnisse der jeweiligen Methoden sind im folgenden Beispiel dargestellt:
+In den am häufigsten verwendeten Methoden, in denen auf Gleichheit getestet wird, <xref:System.String.Equals%2A?displayProperty=nameWithType> und <xref:System.String.op_Equality%2A?displayProperty=nameWithType>, wird ein Ordinalvergleich mit Beachtung der Groß-/Kleinschreibung verwendet. Die Ergebnisse der jeweiligen Methoden sind im folgenden Beispiel dargestellt:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-Bei Ordinalvergleichen werden linguistische Regeln nicht berücksichtigt. Stattdessen wird jedes Zeichen der Zeichenfolge verglichen. Bei anderen Vergleichen wird zwischen der Groß/-Kleinschreibung unterschieden. Da diese Standardmethoden die aktuelle Kultur verwenden, sind die Ergebnisse vom Gebietsschema und den Spracheinstellungen des Computers abhängig, auf dem die Methoden ausgeführt werden. Wenn die Reihenfolge von Zeichenfolgen auf unterschiedlichen Computern oder an unterschiedlichen Orten gleich sein soll, sind diese Vergleiche ungeeignet.
+Bei dem Standardordinalvergleich werden keine linguistischen Regeln berücksichtigt, wenn Zeichenfolgen verglichen werden. In ihm wird der binäre Wert jedes <xref:System.Char>-Objekts in zwei Zeichenfolgen verglichen. Dies bedingt, dass im Standardordinalvergleich ebenfalls die Groß-/Kleinschreibung beachtet wird. 
+
+Beachten Sie, dass der Test auf Gleichheit mit <xref:System.String.Equals%2A?displayProperty=nameWithType> und <xref:System.String.op_Equality%2A?displayProperty=nameWithType> sich von einem Zeichenfolgenvergleich mit den Methoden <xref:System.String.CompareTo%2A?displayProperty=nameWithType> und <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> unterscheidet. Während in den Tests auf Gleichheit ein Ordinalvergleich mit Beachtung der Groß-/Kleinschreibung ausgeführt wird, wird in der Vergleichsmethode ein Vergleich mit Beachtung der Groß-/Kleinschreibung und der aktuellen Kultur ausgeführt. Weil die Standardvergleichsmethoden häufig unterschiedliche Arten von Vergleichen ausführen, sollten Sie die Absicht Ihres Codes immer verdeutlichen, indem Sie eine Überladung aufrufen, in der die Art des auszuführenden Vergleichs explizit angegeben ist.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Ordinalvergleich ohne Beachtung der Groß- und Kleinschreibung
 
-Mit der <xref:System.String.Equals%2A?displayProperty=nameWithType>-Methode können Sie einen <xref:System.StringComparison>-Wert von <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> angeben,
-um einen Vergleich ohne Beachtung der Groß-/Kleinschreibung durchzuführen. Alternativ können Sie die statische Methode <xref:System.String.Compare%2A> verwenden, die denselben Zweck erfüllt und ein boolesches Argument erfordert. Diese Methoden werden im folgenden Codebeispiel verwendet:
+Mit der <xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType>-Methode können Sie einen <xref:System.StringComparison>-Wert von <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> angeben,
+um einen Ordinalvergleich ohne Beachtung der Groß-/Kleinschreibung auszuführen. Es gibt auch eine statische <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType>-Methode, in der ein Ordinalvergleich ohne Beachtung der Groß-/Kleinschreibung ausgeführt wird, wenn Sie den Wert <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> für das <xref:System.StringComparison>-Argument angeben. Diese Methoden werden im folgenden Codebeispiel verwendet:
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
+
+Wenn Sie einen Ordinalvergleich ohne Beachtung der Groß-/Kleinschreibung ausführen, verwenden Sie die Schreibungskonventionen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture).
 
 ## <a name="linguistic-comparisons"></a>Linguistische Vergleiche
 
 Zeichenfolgen können auch mit linguistischen Regeln für die aktuelle Kultur sortiert werden.
-Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen bestimmte Gewichtungen zugewiesen. Beispielsweise wird dem Bindestrich („-“) ggf. eine sehr geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz alphanumerischer Zeichen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, wobei „Straße“ einmal mit „ss“ und einmal mit „ß“ geschrieben wird. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ dem scharfen S („ß“).
+Dies wird manchmal als „Wortsortierreihenfolge“ bezeichnet. Beim Ausführen eines linguistischen Vergleichs werden möglicherweise einigen nicht alphanumerischen Unicode-Zeichen bestimmte Gewichtungen zugewiesen. Beispielsweise wird dem Bindestrich („-“) ggf. eine sehr geringe Gewichtung zugeordnet, sodass „coop“ und „co-op“ in einer Sortierreihenfolge nebeneinander angezeigt werden. Darüber hinaus können einige Unicode-Zeichen einer Sequenz von <xref:System.Char>-Instanzen entsprechen. Im folgenden Beispiel werden die Sätze „Sie tanzen auf der Straße.“ und „Sie tanzen auf der Strasse.“ verwendet, in Deutsch mit „ss“ (U+0073 U+0073) in einer Zeichenfolge und „ß“ (U+00DF) in einer anderen. Unter Windows entspricht in den Kulturen „en-US“ und „de-DE“ die Zeichenfolge „ss“ linguistisch dem scharfen S („ß“).
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -64,8 +68,8 @@ Unter Windows ändert sich die Sortierreihenfolge von „cop“, „coop“ und 
 
 ## <a name="comparisons-using-specific-cultures"></a>Vergleiche unter Berücksichtigung bestimmter Kulturen
 
-Im folgenden Beispiel wird <xref:System.Globalization.CultureInfo> für die aktuelle Kultur gespeichert.
-Die ursprüngliche Kultur kann für das Objekt des aktuellen Threads festgelegt und abgerufen werden. Damit tatsächlich ein kulturabhängiger Vergleich verwendet wird, werden die Vergleiche mit dem <xref:System.StringComparison.CurrentCulture>-Wert ausgeführt.
+In diesem Beispiel werden <xref:System.Globalization.CultureInfo>-Objekte für die Kulturen „en-US“ und „de-DE“ gespeichert.
+Damit tatsächlich ein kulturabhängiger Vergleich verwendet wird, werden die Vergleiche mit einem <xref:System.Globalization.CultureInfo>-Objekt ausgeführt.
 
 Die verwendete Kultur wirkt sich auf linguistische Vergleiche aus. Im folgenden Beispiel werden die beiden deutsche Sätze unter Berücksichtigung der Kulturen „en-US“ und „de-DE“ verglichen und die Ergebnisse angezeigt:
 
@@ -92,7 +96,7 @@ Im nächsten Beispiel wird demonstriert, wie Sie Zeichenfolgen in einem Array un
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
-Nach der Sortierung des Arrays können Sie mit einer Binärsuche nach Einträgen suchen. Bei einer Binärsuche wird als Startposition die Mitte der Collection gewählt, um zu bestimmen, welche Hälfte der Collection die gesuchte Zeichenfolge enthält. Jeder nachfolgende Vergleich unterteilt den verbleibenden Teil der Collection in zwei weitere Teile.  Das Array wird mithilfe von <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType> sortiert. Die lokale Funktion `ShowWhere` gibt Informationen zur Position aus, an der die Zeichenfolge gefunden wurde. Wenn die Zeichenfolge nicht gefunden wurde, gibt der Rückgabewert an, an welcher Stelle sich die Zeichenfolge befände, wenn diese vorhanden wäre.
+Nach der Sortierung des Arrays können Sie mit einer Binärsuche nach Einträgen suchen. Bei einer Binärsuche wird als Startposition die Mitte der Collection gewählt, um zu bestimmen, welche Hälfte der Collection die gesuchte Zeichenfolge enthält. Jeder nachfolgende Vergleich unterteilt den verbleibenden Teil der Collection in zwei weitere Teile.  Das Array wird mit der <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>-Eigenschaft sortiert. Die lokale Funktion `ShowWhere` gibt Informationen zur Position aus, an der die Zeichenfolge gefunden wurde. Wenn die Zeichenfolge nicht gefunden wurde, gibt der Rückgabewert an, an welcher Stelle sich die Zeichenfolge befände, wenn diese vorhanden wäre.
 
 [!code-csharp-interactive[Searching in a sorted array](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#6)]
 
@@ -118,6 +122,8 @@ Bisher wurde für kein Beispiel <xref:System.Object.ReferenceEquals%2A> verwende
 
 > [!NOTE]
 > Wenn Sie Zeichenfolgen auf Gleichheit überprüfen, sollten Sie Methoden verwenden, die explizit angeben, welche Art von Vergleich Sie durchführen möchten. Dadurch kann Ihr Code viel besser verwaltet und gelesen werden. Verwenden Sie dabei die überladenen Methoden der Klassen <xref:System.String?displayProperty=nameWithType> und <xref:System.Array?displayProperty=nameWithType>, die einen <xref:System.StringComparison>-Enumerationsparameter akzeptieren. Dadurch geben Sie die Art des Vergleichs an, der ausgeführt werden soll. Vermeiden Sie die Verwendung der Operatoren `==` und `!=`, wenn Sie Zeichenfolgen auf Gleichheit überprüfen. Die <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Instanzmethoden führen immer einen Ordinalvergleich unter Berücksichtigung der Groß-/Kleinschreibung durch. Sie eignen sich in erster Linie für die Sortierung von Zeichenfolgen in alphabetischer Reihenfolge.
+
+Sie können eine Zeichenfolge in den Internpool schreiben oder auf eine im Internpool vorhandene Zeichenfolge verweisen, indem Sie die <xref:System.String.Intern%2A?displayProperty=nameWithType>-Methode aufrufen. Um zu bestimmen, ob eine Zeichenfolge im Internpool vorhanden ist, rufen Sie die <xref:System.String.IsInterned%2A?displayProperty=nameWithType>-Methode auf.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -7,34 +7,34 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: d651350f46c0ec1947be9f4f586c341514356fd2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2475f63099e47beedc610b8815a8e39e1f7be77e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244153"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611216"
 ---
 # <a name="value-types-table-c-reference"></a>Tabelle der Werttypen (C#-Referenz)
 
-In der folgenden Tabelle werden die Werttypen in C# angegeben.  
-  
-|Werttyp|Kategorie|Typsuffix|  
-|----------------|--------------|-----------------|  
-|[bool](bool.md)|Boolesch||  
-|[byte](byte.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||  
-|[char](char.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||  
-|[decimal](decimal.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|M oder m|  
-|[double](double.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|D oder d|  
-|[enum](enum.md)|Enumeration||  
-|[float](float.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|F oder f|  
-|[int](int.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||  
-|[long](long.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)|L oder l|  
-|[sbyte](sbyte.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||  
-|[short](short.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||  
-|[struct](struct.md)|Eine benutzerdefinierte Struktur||  
-|[uint](uint.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)|U oder u|  
-|[ulong](ulong.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU oder lu|  
-|[ushort](ushort.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||  
+In der folgenden Tabelle sind die Werttypen in C# angegeben:
+
+|Werttyp|Kategorie|Typsuffix|
+|----------------|--------------|-----------------|
+|[bool](bool.md)|Boolesch||
+|[byte](byte.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||
+|[char](char.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||
+|[decimal](decimal.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|M oder m|
+|[double](double.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|D oder d|
+|[enum](enum.md)|Enumeration||
+|[float](float.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|F oder f|
+|[int](int.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||
+|[long](long.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)|L oder l|
+|[sbyte](sbyte.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||
+|[short](short.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||
+|[struct](struct.md)|Eine benutzerdefinierte Struktur||
+|[uint](uint.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)|U oder u|
+|[ulong](ulong.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU oder lu|
+|[ushort](ushort.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||
 
 ## <a name="remarks"></a>Hinweise
 

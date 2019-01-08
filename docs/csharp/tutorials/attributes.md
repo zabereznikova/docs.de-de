@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Attribute in C# funktionieren.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390518"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029826"
 ---
 # <a name="using-attributes-in-c"></a>Verwenden von Attributen in C# #
 
@@ -110,7 +110,7 @@ Attribute fungieren als Metadaten. Ohne Aktivität von außen bewirken sie zunä
 
 Um nach Attributen zu suchen und Aktionen auszuführen, ist im Allgemeinen eine [Reflektion](../programming-guide/concepts/reflection.md) erforderlich. In diesem Tutorial wird nicht ausführlich auf die Reflektion eingegangen. Die Grundidee hierbei ist jedoch folgende: Mithilfe der Reflektion ist es möglich, Code in C# zu schreiben, mit dem anderer Code untersucht wird.
 
-Sie können beispielsweise mithilfe der Reflektion Informationen zu einer Klasse abrufen: 
+Sie können beispielsweise mithilfe der Reflektion Informationen zu einer Klasse abrufen (fügen Sie `using System.Reflection;` im Kopf Ihres Codes hinzu): 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
@@ -134,12 +134,12 @@ Attribute werden in vielen Tools und Frameworks verwendet. NUnit verwendet Attri
 
 Nachfolgend werden einige wichtige Attribute aufgeführt, die in die .NET Core-Basisklassenbibliotheken integriert sind:
 
-* `[Obsolete]` Dieses Attribut wurde in den obigen Beispielen verwendet, es ist im `System`-Namespace enthalten. Es ist nützlich, um eine deklarative Dokumentation für eine sich ändernde Codebasis bereitzustellen. Eine Meldung kann in Form einer Zeichenfolge bereitgestellt werden, und ein weiterer, boolescher Parameter kann für eine Eskalation von einer Compilerwarnung zu einem Compilerfehler verwendet werden.
+* `[Obsolete]`. Dieses Attribut wurde in den obigen Beispielen verwendet, es ist im `System`-Namespace enthalten. Es ist nützlich, um eine deklarative Dokumentation für eine sich ändernde Codebasis bereitzustellen. Eine Meldung kann in Form einer Zeichenfolge bereitgestellt werden, und ein weiterer, boolescher Parameter kann für eine Eskalation von einer Compilerwarnung zu einem Compilerfehler verwendet werden.
 
-* `[Conditional]` Dieses Attribut ist im `System.Diagnostics`-Namespace enthalten. Es kann auf Methoden (oder Attributklassen) angewendet werden. Sie müssen eine Zeichenfolge an den Konstruktor übergeben.
+* `[Conditional]`. Dieses Attribut ist im `System.Diagnostics`-Namespace enthalten. Es kann auf Methoden (oder Attributklassen) angewendet werden. Sie müssen eine Zeichenfolge an den Konstruktor übergeben.
 Wenn diese Zeichenfolge einer `#define`-Direktive entspricht, werden alle Aufrufe an diese Methode (aber nicht die Methode selbst) durch den C#-Compiler entfernt. Dieses Attribut wird typischerweise zum Debuggen (zu Diagnosezwecken) eingesetzt.
 
-* `[CallerMemberName]` Dieses Attribut kann für Parameter verwendet werden und ist im `System.Runtime.CompilerServices`-Namespace enthalten. Es handelt sich um ein Attribut, mit dem der Name der Methode eingeführt wird, die eine andere Methode aufruft. So werden typischerweise „magische Zeichenfolgen“ beim Implementieren von „INotifyPropertyChanged“ in verschiedenen UI-Frameworks beseitigt. Ein Beispiel:
+* `[CallerMemberName]`. Dieses Attribut kann für Parameter verwendet werden und ist im `System.Runtime.CompilerServices`-Namespace enthalten. Es handelt sich um ein Attribut, mit dem der Name der Methode eingeführt wird, die eine andere Methode aufruft. So werden typischerweise „magische Zeichenfolgen“ beim Implementieren von „INotifyPropertyChanged“ in verschiedenen UI-Frameworks beseitigt. Ein Beispiel:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

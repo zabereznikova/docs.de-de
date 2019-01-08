@@ -3,12 +3,12 @@ title: Weitere Informationen zu .NET Core
 description: Erfahren Sie mehr zu .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170404"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058554"
 ---
 # <a name="about-net-core"></a>Weitere Informationen zu .NET Core
 
@@ -95,7 +95,7 @@ Möglicherweise ist es am einfachsten, die Größe und Form von .NET Core durch 
 
 Die Hauptunterschiede zwischen .NET Core und dem .NET Framework:
 
-- **App-Modelle:** .NET Core unterstützt nicht alle .NET Framework-App-Modelle. Das betrifft vor allem ASP.NET-Web Forms und MVC. Es wurde angekündigt, dass [.NET Core 3 WPF und Windows Forms unterstützen wird](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **App-Modelle:** .NET Core unterstützt nicht alle .NET Framework-App-Modelle. Insbesondere unterstützt es weder ASP.NET Web Forms noch ASP.NET MVC, aber es unterstützt ASP.NET Core MVC. Es wurde angekündigt, dass [.NET Core 3 WPF und Windows Forms unterstützen wird](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
 - **APIs:** .NET Core enthält viele .NET Framework-Basisklassenbibliotheken mit unterschiedlicher Verarbeitung (die Assemblynamen unterscheiden sich; in Typen bereitgestellte Members unterscheiden sich in wichtigen Fällen). Diese Unterschiede machen es erforderlich, dass die Quelle in einigen Fällen zu .NET Core portiert wird (weitere Informationen unter [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)). .NET Core implementiert die [.NET-Standard](../standard/net-standard.md)-API-Spezifikation.
 - **Subsysteme**: .NET Core implementiert eine Teilmenge der Subsysteme in .NET Framework, mit dem Ziel einer einfacheren Implementierung und einem einfacheren Programmiermodell. Code Access Security (CAS) wird z.B. nicht unterstützt, während Reflektion unterstützt wird.
 - **Plattformen**: .NET Framework unterstützt Windows und Windows-Server- während .NET Core auch Mac OS und Linux unterstützt.

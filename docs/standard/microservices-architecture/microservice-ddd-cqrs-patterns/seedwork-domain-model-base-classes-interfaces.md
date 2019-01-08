@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwe
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9a7ddbc8a15e4064b4446ff322148720312e7937
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152226"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058541"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 
@@ -17,7 +17,7 @@ Der Projektmappenordner enthält den Ordner *SeedWork*. Dieser Ordner enthält b
 
 In Abbildung 7-12 werden die Klassen gezeigt, die im Microservice für Bestellungen den Stamm des Domänenmodells bilden. Er verfügt über einige benutzerdefinierte Basisklassen wie die „Entity“ (Entität), „Enumeration“ und ValueObject, sowie einige Schnittstellen. Diese Schnittstellen (IRepository und IUnitOfWork) informieren die Infrastrukturebene darüber, was implementiert werden muss. Diese Schnittstellen werden auch über die Abhängigkeitsinjektion von der Anwendungsebene verwendet.
 
-![Detaillierter Überblick über die Inhalte des Ordners „SeedWork“, der Basisklassen und Schnittstellen enthält: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs und ValueObject.cs.](./media/image13.PNG)
+![Der ausführliche Inhalt des Ordners „SeedWork“, der Basisklassen und -schnittstellen enthält: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs und ValueObject.cs](./media/image13.PNG)
 
 **Abbildung 7-12**. Beispiel für die „Seedwork“-Basisklassen und -Schnittstellen eines Domänenmodells
 
@@ -25,7 +25,7 @@ Viele Entwickler verwenden diese Vorgänge zum Kopieren und Einfügen (und kein 
 
 ## <a name="the-custom-entity-base-class"></a>Die benutzerdefinierte Entity-Basisklasse
 
-Der folgende Code ist ein Beispiel für eine Entity-Basisklasse, in der Sie Code platzieren können, der von jeder beliebigen Domänenentität genauso verwendet werden kann, z.B. Entitäts-ID, [Gleichheitsoperatoren](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-comparison-operator) oder eine Liste der Domänenereignisse pro Entität.
+Der folgende Code ist ein Beispiel für eine Entity-Basisklasse, in der Sie Code platzieren können, der von jeder beliebigen Domänenentität genauso verwendet werden kann, z.B. Entitäts-ID, [Gleichheitsoperatoren](~/docs/csharp/language-reference/operators/equality-comparison-operator.md) oder eine Liste der Domänenereignisse pro Entität.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
