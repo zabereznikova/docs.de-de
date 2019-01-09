@@ -2,51 +2,51 @@
 title: '&lt;Routing&gt;'
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 1771d8a2603a8f61af6ba6e2acf6243d2fd073f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 220c18ab8ea6222fcf7d9fb8a93950281c9de796
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747722"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145145"
 ---
 # <a name="ltroutinggt"></a>&lt;Routing&gt;
 
-Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von routingfiltern, die den Typ der Windows Communication Foundation (WCF) zu bestimmen <xref:System.ServiceModel.Dispatcher.MessageFilter> verwendet werden, bei der Auswertung eingehender Nachrichten sowie das routing Tabellen, die die zielendpunkten, definieren Senden von Nachrichten bei filterübereinstimmung.
+Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von routingfiltern, die den Typ der Windows Communication Foundation (WCF) bestimmen <xref:System.ServiceModel.Dispatcher.MessageFilter> verwendet werden, bei der Auswertung eingehender Nachrichten sowie das routing, Tabellen, die die zielendpunkten, definieren Senden von Nachrichten bei filterübereinstimmung.
 
 [**\<system.serviceModel >**](system-servicemodel.md)   
 &nbsp;&nbsp;**\<Routing >**
-
-## <a name="syntax"></a>Syntax
-
-```xml
+  
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <system.serviceModel>
   <routing>
     <filters>
-      <filter customType="String" 
-              filterData="String" 
-              filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath" 
+      <filter customType="String"
+              filterData="String"
+              filterType="Action/Address/AddressPrefix/And/Custom/Endpoint/MatchAll/XPath"
               name="String" />
     </filters>
     <routingTables>
       <table name="String">
         <entries>
-          <add endpoint="String" 
-               filterName="String" 
+          <add endpoint="String"
+               filterName="String"
                priority="Integer" />
         </entries>
       </table>
     </routingTables>
   </routing>
 </system.serviceModel>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
 
 In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
 
-Keiner
+Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 

@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: aeadf23b4ae6b4b0be18755c43585cbfea418567
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756422"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148942"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transport&gt; von &lt;peerTransport&gt;
 Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet werden, die mit dieser Bindung konfiguriert sind.  
@@ -23,9 +23,9 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<security>  
-   <transport credentialType="Certificate/Password" />  
-</security>         
+<security>
+  <transport credentialType="Certificate/Password" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -45,7 +45,7 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 |Kennwort|Zur Authentifizierung des Peerkanaltransports ist ein korrektes Kennwort erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -54,7 +54,7 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiert die Sicherheitseinstellungen für einen Peertransport.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Element wird nur festgelegt, wenn der Mode-Attribut [ \<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) festgelegt ist, um `Transport` oder `TransportWithMessageCredential`.  
+ Dieses Element wird nur festgelegt, wenn das Mode-Attribut des [ \<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) nastaven NA hodnotu `Transport` oder `TransportWithMessageCredential`.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  

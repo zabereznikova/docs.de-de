@@ -2,12 +2,12 @@
 title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 62752ca74c7e5332c025a42d87608bb4c7f725ae
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4b5fca2fbcece8c5a1641d4cea7700f12de11782
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846200"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145834"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.UdpBinding>-Bindung verwendet wird.  
@@ -19,26 +19,28 @@ Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.U
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<udpBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       duplicateMessageHistoryLength="Integer"  
-       maxBufferPoolSize="Integer"  
-       maxBufferSize="Integer"       maxPendingMessagesTotalSize="Integer"  
-       maxReceivedMessageSize="Integer"       maxRetransmitCount="Integer"  
-       multicastInterfaceId="Integer"  
-              name="string"   
-       openTimeout="TimeSpan"   
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan"  
-       textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-       timeToLive="TimeSpan">  
-       <readerQuotas   
-            maxArrayLength="Integer"  
-            maxBytesPerRead="Integer"  
-            maxDepth="Integer"             maxNameTableCharCount="Integer"                maxStringContentLength="Integer" />  
-   </binding>  
-</basicHttpBinding>  
+<udpBinding>
+  <binding closeTimeout="TimeSpan"
+           duplicateMessageHistoryLength="Integer"
+           maxBufferPoolSize="Integer"
+           maxBufferSize="Integer"
+           maxPendingMessagesTotalSize="Integer"
+           maxReceivedMessageSize="Integer"
+           maxRetransmitCount="Integer"
+           multicastInterfaceId="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           timeToLive="TimeSpan">
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</basicHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -60,7 +62,7 @@ Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.U
 |`openTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |`receiveTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:10:00.|  
 |`sendTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|`textEncoding`|Legt die Zeichensatzkodierung fest, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -BigEndianUnicode: Unicode BigEndian-Codierung.<br />– Unicode: 16-Bit-Codierung.<br />– UTF8: 8-Bit-Codierung<br /><br /> Der Standard ist UTF8. Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
+|`textEncoding`|Legt die Zeichensatzkodierung fest, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -BigEndianUnicode: Unicode-BigEndian-Codierung.<br />– Unicode: 16-Bit-Codierung.<br />– UTF8: 8-Bit-Codierung<br /><br /> Der Standard ist UTF8. Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
 |`timeToLive`|Ein Timespan-Wert, der die Gültigkeitsdauer für die Bindung angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -82,23 +84,23 @@ Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.U
  Das folgende Beispiel zeigt, wie <xref:System.ServiceModel.UdpBinding> mithilfe des <`udpBinding`>-Elements konfiguriert wird.  
   
 ```xml  
-<udpBinding>  
-        <binding  closeTimeout="00:10:00"  
-                   duplicateMessageHistoryLength="100"  
-                   maxBufferPoolSize="100"  
-                   maxPendingMessagesTotalSize="100000"  
-                   maxReceivedMessageSize="65536"  
-                    maxRetransmitCount="10"  
-                   multicastInterfaceId="00000"  
-                   name="myUdpBinding"  
-                   openTimeout="00:10:00"  
-                   receiveTimeout="00:10:00"  
-                   sendTimeout="00:10:00"  
-                   textEncoding="utf-8"  
-                   timeToLive="00:10:00"  
-          <readerQuotas/>   
-        </binding>  
-      </udpBinding>  
+<udpBinding>
+  <binding  closeTimeout="00:10:00"
+            duplicateMessageHistoryLength="100"
+            maxBufferPoolSize="100"
+            maxPendingMessagesTotalSize="100000"
+            maxReceivedMessageSize="65536"
+            maxRetransmitCount="10"
+            multicastInterfaceId="00000"
+            name="myUdpBinding"
+            openTimeout="00:10:00"
+            receiveTimeout="00:10:00"
+            sendTimeout="00:10:00"
+            textEncoding="utf-8"
+            timeToLive="00:10:00">
+    <readerQuotas />
+  </binding>
+</udpBinding>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

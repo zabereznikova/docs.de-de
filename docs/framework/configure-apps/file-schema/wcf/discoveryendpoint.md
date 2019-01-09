@@ -1,34 +1,34 @@
 ---
-title: '&lt;discoveryEndpoint&gt;'
+title: '&lt;DiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: 6a352fbfced08001f76dceaff283d6bca25f56f9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747397"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145379"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;discoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
 
 Dieses Konfigurationselement definiert einen Standardendpunkt mit einem festen Ermittlungsvertrag. Wenn es der Dienstkonfiguration hinzugefügt wird, gibt es an, wo die Überwachung auf Ermittlungsnachrichten erfolgen soll. Wenn es der Clientkonfiguration hinzugefügt wird, gibt es an, wohin die Ermittlungsabfragen gesendet werden sollen.  
   
 \<system.serviceModel>  
 \<StandardEndpoints >  
   
-## <a name="syntax"></a>Syntax
-
-```xml
+## <a name="syntax"></a>Syntax  
+  
+```xml  
 <system.serviceModel>
   <standardEndpoints>
     <discoveryEndpoint>
-      <standardEndpoint discoveryMode="Adhoc/Managed" 
-                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
-                        maxResponseDelay="Timespan" 
+      <standardEndpoint discoveryMode="Adhoc/Managed"
+                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxResponseDelay="Timespan"
                         name="String" />
     </discoveryEndpoint>
   </standardEndpoints>
-</system.serviceModel>  
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
@@ -60,27 +60,27 @@ Das folgende Beispiel zeigt einen Dienst, der einen Multicasttransport in einem 
   
 Die Standardendpunktkonfiguration wird pro Dienst definiert und kann nicht dienstübergreifend freigegeben werden. Wenn ein anderer Dienst den gleichen Ermittlungsendpunkt haben soll, muss dem Abschnitt dieses Diensts die gleiche Konfiguration hinzugefügt werden.  
   
-```xml
-<services>  
+```xml  
+<services>
   <service name="CalculatorService"
            behaviorConfiguration="CalculatorServiceBehavior">
-    <endpoint binding="basicHttpBinding" 
-              address="calculator" 
-              contract="ICalculatorService" />  
-    <endpoint name="peerNetDiscovery"  
-              binding="peerTcpBinding"  
-              address="net.p2p://discoveryMesh/multicast"  
-              kind="discoveryEndpoint"  
-              endpointConfiguration="peerTcpDiscoveryEndpointConfiguration"  
-              bindingConfiguration="discoveryPeerTcpBindingConfig" />      
-  </service>  
-</services>  
-<standardEndpoints>  
-  <discoveryEndpoint>  
-    <standardEndpoint name="peerTcpDiscoveryEndpointConfiguration"                         
-                      version="WSDiscoveryApril2005" />  
-  </discoveryEndpoint>  
-</standardEndpoints>  
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService" />
+    <endpoint name="peerNetDiscovery"
+              binding="peerTcpBinding"
+              address="net.p2p://discoveryMesh/multicast"
+              kind="discoveryEndpoint"
+              endpointConfiguration="peerTcpDiscoveryEndpointConfiguration"
+              bindingConfiguration="discoveryPeerTcpBindingConfig" />
+  </service>
+</services>
+<standardEndpoints>
+  <discoveryEndpoint>
+    <standardEndpoint name="peerTcpDiscoveryEndpointConfiguration"
+                      version="WSDiscoveryApril2005" />
+  </discoveryEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>Siehe auch

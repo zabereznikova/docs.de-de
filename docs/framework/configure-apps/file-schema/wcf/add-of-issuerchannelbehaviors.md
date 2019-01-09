@@ -2,18 +2,18 @@
 title: '&lt;add&gt; von &lt;issuerChannelBehaviors&gt;'
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 072e3f4e961f6bf45e7c8b48c64cda36d385cf2b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752454"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149539"
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;add&gt; von &lt;issuerChannelBehaviors&gt;
 Fügt ein zu verwendendes Endpunktverhalten bei der Kommunikation mit einem STS hinzu.  
   
 > [!NOTE]
->  Wenn alle Endpunktverhalten enthält eine [ \<ClientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Element, eine Ausnahme ausgelöst.  
+>  Wenn ein Endpunktverhalten enthält eine [ \<ClientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) -Element, eine Ausnahme ausgelöst.  
   
  \<system.ServiceModel>  
 \<behaviors>  
@@ -27,8 +27,8 @@ EndpointBehaviors-Abschnitt
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<add issuerAddress="string"  
-     behaviorConfiguraton="string" />  
+<add issuerAddress="string"
+     behaviorConfiguraton="string" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -48,10 +48,10 @@ EndpointBehaviors-Abschnitt
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<IssuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Enthält eine Auflistung von Windows Communication Foundation (WCF)-Client-Endpunktverhalten bei der Kommunikation mit den angegebenen Sicherheitstokendiensten verwendet werden.|  
+|[\<IssuerChannelBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Enthält eine Auflistung von Windows Communication Foundation (WCF) Client-Endpunktverhalten, die bei der Kommunikation mit den angegebenen Sicherheitstokendiensten verwendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- `issuerAddress` enthält den URI des Sicherheitstokendiensts, mit dem der Client kommunizieren möchte. `behaviorConfiguration` verweist auf ein Endpunktverhalten, die die Anwendung in Kanäle erstellt vom Windows Communication Foundation (WCF) verwendet werden, um die ausgestellten Token aus den Sicherheitstokendiensten abzurufen.  
+ `issuerAddress` enthält den URI des Sicherheitstokendiensts, mit dem der Client kommunizieren möchte. `behaviorConfiguration` verweist auf ein Endpunktverhalten, die die Anwendung in die Channels, die von Windows Communication Foundation (WCF) verwendet werden, um die ausgestellten Token aus den Sicherheitstokendiensten abzurufen.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  

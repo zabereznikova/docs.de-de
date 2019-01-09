@@ -2,12 +2,12 @@
 title: C#-Tutorials
 description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195124"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084666"
 ---
 # <a name="c-tutorials"></a>C#-Tutorials
 
@@ -47,20 +47,18 @@ Für dieses Tutorial wird vorausgesetzt, dass Sie die oben aufgeführten Lektion
 
 Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind in Ihrer eigenen lokalen Entwicklungsumgebung verfügbar. Am Ende jedes Tutorials entscheiden Sie, ob Sie mit der nächsten Lektion online oder auf Ihrem eigenen Computer fortfahren möchten. Es sind Links verfügbar, die Ihnen helfen, Ihre Umgebung einzurichten und mit dem nächsten Tutorial auf Ihrem Computer fortzufahren.
 
+## <a name="explore-new-features-in-c"></a>Erkunden neuer Features in C# #
+
+Probieren Sie mithilfe dieser [interaktiven Erkundung](exploration/csharp-6.yml) die neuen Features in [C# 6](../whats-new/csharp-6.md) aus.
+
 ## <a name="general-tutorials"></a>Allgemeine Tutorials
 
 Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/index.md) erstellen:
 
 * [Konsolenanwendung](console-teleprompter.md): veranschaulicht die Konsolen-E/A, die Struktur einer Konsolenanwendung und die Grundlagen des taskbasierten asynchronen Programmiermodells.
-
 * [REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.
-
 * [Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.
-
 * [Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.
-
-* [In Docker gehostete Microservices](microservices.md): veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker.
-
 * [Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht die Verwendung von Zeichenfolgeninterpolation zum Erstellen formatierter Zeichenfolgen in C#.
-
 * [Verwenden von Attributen](attributes.md): veranschaulicht das Erstellen und Verwenden von Attributen in C#.
+* [Verweistypen, die NULL-Werte zulassen](nullable-reference-types.md): demonstriert, wie Sie Verweistypen mit Unterstützung von NULL-Werten einsetzen können, um Ihre Entwurfsabsicht auszudrücken.

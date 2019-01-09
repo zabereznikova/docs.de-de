@@ -2,12 +2,12 @@
 title: '&lt;RSA&gt;'
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: dbeb08e6475d4825ad442b0b264e9003bb6fc53d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8005fd67b92cb14d82b525e7c990f9d58aef7b58
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749929"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145340"
 ---
 # <a name="ltrsagt"></a>&lt;RSA&gt;
 Ein sicherer WCF-Client, der mit dieser Identität eine Verbindung zu einem Endpunkt herstellt, stellt sicher, dass die vom Server bereitgestellten Ansprüche einen Anspruch beinhalten, der den zum Erstellen dieser Identität verwendeten öffentlichen RSA-Schlüssel enthält.  
@@ -18,7 +18,7 @@ Ein sicherer WCF-Client, der mit dieser Identität eine Verbindung zu einem Endp
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<rsa value = "String" />  
+<rsa value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -31,7 +31,7 @@ Ein sicherer WCF-Client, der mit dieser Identität eine Verbindung zu einem Endp
 |Wert|Optionale Zeichenfolge. Der Wert des öffentlichen RSA-Schlüssels, der auf dem Client verglichen werden soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -42,15 +42,15 @@ Ein sicherer WCF-Client, der mit dieser Identität eine Verbindung zu einem Endp
 ## <a name="remarks"></a>Hinweise  
  Eine RSA-Prüfung ermöglicht Ihnen, die Authentifizierung speziell auf den RSA-Schlüssel eines einzigen Zertifikats zu beschränken oder einen eigenen RSA-Schlüsselwert zu generieren. Dies ermöglicht eine strengere Authentifizierung eines bestimmten RSA-Schlüssels auf Kosten des Diensts, der nicht mehr mit vorhandenen Clients zusammenarbeitet, wenn sich der RSA-Schlüsselwert ändert.  
   
- Weitere Informationen zur Verwendung von Identität für einen Dienst an einen Client zu überprüfen, finden Sie unter [-Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Weitere Informationen zur Verwendung der Identität ein Diensts gegenüber einem Client zu überprüfen, finden Sie unter [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Konfigurationscode gibt den Wert des öffentlichen Schlüssels eines für die Authentifizierung eines Servers verwendeten X.509-Zertifikats an.  
   
 ```xml  
-<identity>  
-  <rsa value = "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>  
-</identity>  
+<identity>
+  <rsa value="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

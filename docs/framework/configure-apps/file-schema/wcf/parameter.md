@@ -2,18 +2,18 @@
 title: '&lt;parameter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: b9cccfe37e7658afbf2e49555e6c505497598fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82a2f5c46c698508695fe5f13f67059860a50713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754053"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148291"
 ---
 # <a name="ltparametergt"></a>&lt;parameter&gt;
 Gibt den generischen Parameter an, wenn ein deklarierter Typ ein generischer Typ ist.  
   
  \<System.Runtime.Serialization >  
-\<"DataContractSerializer" >  
+\<DataContractSerializer >  
 \<DeclaredTypes >-Element  
 \<Hinzufügen >-Element für \<DeclaredTypes >  
 \<KnownType >-Element  
@@ -22,8 +22,8 @@ Gibt den generischen Parameter an, wenn ein deklarierter Typ ein generischer Typ
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<parameter index="integer"  
-                      type=String" />  
+<parameter index="Integer"
+           type="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -53,14 +53,14 @@ Gibt den generischen Parameter an, wenn ein deklarierter Typ ein generischer Typ
 |[\<KnownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Gibt einen bekannten Typ an, der von einem Feld oder einer Eigenschaft des deklarierten Typs zurückgegeben werden kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) und <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Weitere Informationen zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) und <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Finden Sie unter der [ \<"DataContractSerializer" >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) für ein Beispiel für dieses Element.  
+ Finden Sie unter den [ \<DataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) ein Beispiel für die Verwendung dieses Elements.  
   
  Dieses Konfigurationselement darf nicht über zwei Attribute gleichzeitig verfügen. Falls beide Attribute festgelegt sind, tritt <xref:System.Configuration.ConfigurationErrorsException> auf.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  [Bekannte Typen in Datenverträgen](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<"DataContractSerializer" >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<DataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

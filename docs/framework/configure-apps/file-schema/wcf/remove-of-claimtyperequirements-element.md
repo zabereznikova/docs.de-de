@@ -2,12 +2,12 @@
 title: '&lt;remove&gt; des &lt;claimTypeRequirements&gt;-Elements'
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 5d1f9c963792336f0938113beefbdef770831e9d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7610a8e95996f15133ae58ec33c4afd9e2309cac
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753242"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146211"
 ---
 # <a name="ltremovegt-of-ltclaimtyperequirementsgt-element"></a>&lt;remove&gt; des &lt;claimTypeRequirements&gt;-Elements
 Gibt die Typen von Ansprüchen an, die in den verbundenen Anmeldeinformationen entfernt werden sollen.  
@@ -23,9 +23,9 @@ Gibt die Typen von Ansprüchen an, die in den verbundenen Anmeldeinformationen e
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<claimTypeRequirements>  
-      <remove claimType="URI" />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <remove claimType="URI" />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

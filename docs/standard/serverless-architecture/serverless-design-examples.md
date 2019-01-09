@@ -4,12 +4,12 @@ description: Erfahren Sie, die Vielzahl von Szenarien, die von serverlosen Archi
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146706"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149676"
 ---
 # <a name="serverless-design-examples"></a>Serverloses Design-Beispiele
 
@@ -65,7 +65,7 @@ Serverlose Funktionen können verwendet werden, um eine Data-Pipeline zu ermögl
 
 ## <a name="stream-processing"></a>Stream-Verarbeitung
 
-Geräte und Sensoren generieren häufig in Echtzeit Datenströme, die verarbeitet werden müssen. Es gibt eine Reihe von Technologien, die Nachrichten und Datenströme aus aufzeichnen können [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) und [IoT Hub](https://docs.microsoft.com/azure/iot-hub) zu [Service Bus](/service-bus). Unabhängig vom Transport bedeutet serverlos eine ideale Methode für die Verarbeitung von Nachrichten und den Datenströmen, wie sie eintreffen. Serverless kann schnell skaliert werden, um den Bedarf an großer Datenmengen zu erfüllen. Geschäftslogik zum Analysieren der Daten und der Ausgabe in einem strukturierten Format für die Aktion und Analyse kann die serverlose Code angewendet werden.
+Geräte und Sensoren generieren häufig in Echtzeit Datenströme, die verarbeitet werden müssen. Es gibt eine Reihe von Technologien, die Nachrichten und Datenströme aus aufzeichnen können [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) und [IoT Hub](https://docs.microsoft.com/azure/iot-hub) zu [Service Bus](https://docs.microsoft.com/azure/service-bus). Unabhängig vom Transport bedeutet serverlos eine ideale Methode für die Verarbeitung von Nachrichten und den Datenströmen, wie sie eintreffen. Serverless kann schnell skaliert werden, um den Bedarf an großer Datenmengen zu erfüllen. Geschäftslogik zum Analysieren der Daten und der Ausgabe in einem strukturierten Format für die Aktion und Analyse kann die serverlose Code angewendet werden.
 
 ![Serverlose Streamverarbeitung](./media/serverless-stream-processing.png)
 

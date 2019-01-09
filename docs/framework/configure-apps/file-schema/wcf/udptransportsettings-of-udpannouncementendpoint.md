@@ -2,12 +2,12 @@
 title: '&lt;udpTransportSettings&gt; von &lt;udpAnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 624dbada56a609452310218d26c5c6ff0ca49d64
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ae640f2e2035f89cb33aecf7e5225cf4fbe3fb20
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767075"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147498"
 ---
 # <a name="ltudptransportsettingsgt-of-ltudpannouncementendpointgt"></a>&lt;udpTransportSettings&gt; von &lt;udpAnnouncementEndpoint&gt;
 Dieses Konfigurationselement macht UDP-transporteinstellungen für [ \<UdpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md).  
@@ -19,23 +19,23 @@ Dieses Konfigurationselement macht UDP-transporteinstellungen für [ \<UdpAnnouc
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <udpAnnouncementEndpoint>
       <standardEndpoint>
-        <updTransportSettings duplicateMessageHistoryLength="Integer" 
-                              maxBufferPoolSize="Integer" 
-                              maxMulticastRetransmitCount="Integer" 
-                              maxPendingMessageCount="Integer" 
-                              maxReceivedMessageSize="Integer" 
-                              maxUnicastRetransmitCount="Integer" 
-                              multicastInterfaceId="String" 
-                              socketReceiveBufferSize="Integer" 
+        <updTransportSettings duplicateMessageHistoryLength="Integer"
+                              maxBufferPoolSize="Integer"
+                              maxMulticastRetransmitCount="Integer"
+                              maxPendingMessageCount="Integer"
+                              maxReceivedMessageSize="Integer"
+                              maxUnicastRetransmitCount="Integer"
+                              multicastInterfaceId="String"
+                              socketReceiveBufferSize="Integer"
                               timeToLive="Integer" />
       </standardEndpoint>
     </udpAnnouncementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

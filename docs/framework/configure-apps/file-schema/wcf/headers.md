@@ -2,12 +2,12 @@
 title: '&lt;Header&gt;'
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 7683b07093719cda6b210a4174d47e5785d4644d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 84b9a9437d4b0dfae72a6e625b21f2b830eb28d8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747150"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147862"
 ---
 # <a name="ltheadersgt"></a>&lt;Header&gt;
 Ein Endpunkt kann neben seinem Basis-URI von einem oder mehreren SOAP-Headern adressiert werden. Dies ist beispielsweise in SOAP-Vermittlerszenarien nützlich, in denen ein Endpunkt es erfordert, dass seine Clients SOAP-Header einfügen, die sich an Vermittler richten. Dieses Konfigurationselement kann verwendet werden, um solche benutzerdefinierten Adressheader zu definieren. Einträge in der Endpunktheader-Auflistung sind benutzerdefinierte XML-Elemente. Jedes Element muss ein wohlgeformtes XML-Element sein.  
@@ -19,10 +19,10 @@ Ein Endpunkt kann neben seinem Basis-URI von einem oder mehreren SOAP-Headern ad
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<headers>  
-    <Region xmlns="Uri">"String"</Region>  
-        <Member xmlns="Uri">"String"</Member>  
-</headers>  
+<headers>
+  <region xmlns="Uri">"String"</region>
+  <member xmlns="Uri">"String"</member>
+</headers>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

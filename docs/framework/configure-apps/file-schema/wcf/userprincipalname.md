@@ -2,17 +2,17 @@
 title: '&lt;userPrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff38a6975d1ec73c1a3014b94198ba630c3fec31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358676"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149979"
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Gibt den Benutzerprinzipalnamen (User Principal Name, UPN) eines Diensts an, der vom Client authentifiziert werden muss.  
   
- Weitere Informationen zum Festlegen des UPN finden Sie unter [-Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Weitere Informationen zum Festlegen des UPN finden Sie unter [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 \<identity>  
 \<userPrincipalName>  
@@ -20,7 +20,7 @@ Gibt den Benutzerprinzipalnamen (User Principal Name, UPN) eines Diensts an, der
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<userPrincipalName value="String" />  
+<userPrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -42,15 +42,15 @@ Gibt den Benutzerprinzipalnamen (User Principal Name, UPN) eines Diensts an, der
 |[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine sichere Windows Communication Foundation (WCF)-Client, der an einen Endpunkt mit dieser Identität eine Verbindung herstellt verwendet den UPN SSPI-Authentifizierung mit dem Endpunkt.  
+ Ein sicherer Windows Communication Foundation (WCF)-Client, der Verbindung mit einem Endpunkt mit dieser Identität verwendet den UPN, bei der SSPI-Authentifizierung mit dem Endpunkt.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Konfigurationscode gibt den UPN des Diensts an, der vom Client authentifiziert werden muss.  
   
 ```xml  
-<identity>  
-  <userPrincipalName value="someone@cohowinery.com" />  
-</identity>  
+<identity>
+  <userPrincipalName value="someone@cohowinery.com" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

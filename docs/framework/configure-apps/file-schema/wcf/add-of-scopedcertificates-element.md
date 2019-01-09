@@ -2,12 +2,12 @@
 title: '&lt;add&gt; des &lt;scopedCertificates&gt;-Elements'
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 0eb2f116fc0a2c7d59b90cea71150c7b46ee39fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a173d3b137833abfe8a69aed55b972c9b6469890
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746643"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146094"
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;add&gt; des &lt;scopedCertificates&gt;-Elements
 Fügt ein X.509-Zertifikat zur Auflistung der Zertifikate mit Gültigkeitsbereich hinzu.  
@@ -24,12 +24,11 @@ EndpointBehaviors-Abschnitt
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<add findValue="String"  
-          storeLocation="CurrentUser/LocalMachine"  
-          storeName=" CurrentUser/LocalMachine"  
-          targetUri="string"  
-         x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"   
-/>   
+<add findValue="String"
+     storeLocation="CurrentUser/LocalMachine"
+     storeName=" CurrentUser/LocalMachine"
+     targetUri="string"
+     x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -55,7 +54,7 @@ EndpointBehaviors-Abschnitt
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Zu den gültigen Werten gehören: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeration|Mögliche Werte: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation-Attribut  
   
@@ -67,7 +66,7 @@ EndpointBehaviors-Abschnitt
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Zu den gültigen Werten gehören: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
+|Enumeration|Mögliche Werte: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -83,29 +82,29 @@ EndpointBehaviors-Abschnitt
   
  Wenn eine Bindung ein Zertifikat für den Dienst erfordert und kein bestimmtes Zertifikat für die Dienst-URL in ScopedCertificates gefunden wird, wird das Standardzertifikat verwendet.  
   
- Weitere Informationen finden Sie im Abschnitt "Zertifikate im Bereich" [Vorgehensweise: Erstellen eines Clients Federated](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Weitere Informationen finden Sie im Abschnitt "Zertifikate mit Gültigkeitsbereich" [Vorgehensweise: Erstellen eines Verbundclients](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Auflistung ein X.509-Zertifikat hinzugefügt.  
   
 ```xml  
-<behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <serviceCertificate>  
-     <scopedCertificates>  
-      <add targetUri="http://www.contoso.com"   
-       findValue="www.Contoso.com"   
-       storeLocation="LocalMachine"  
-       storeName="Root"   
-       x509FindType="FindByIssuerName" />  
-     </scopedCertificates>  
-    </serviceCertificate>  
-   </clientCredentials>  
-  </behavior>  
- </endpointBehaviors>  
-</behaviors>  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="MyEndpointBehavior">
+      <clientCredentials>
+        <serviceCertificate>
+          <scopedCertificates>
+            <add targetUri="http://www.contoso.com"
+                 findValue="www.Contoso.com"
+                 storeLocation="LocalMachine"
+                 storeName="Root"
+                 x509FindType="FindByIssuerName" />
+          </scopedCertificates>
+        </serviceCertificate>
+      </clientCredentials>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

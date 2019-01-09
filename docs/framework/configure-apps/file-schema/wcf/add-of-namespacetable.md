@@ -2,12 +2,12 @@
 title: '&lt;add&gt; von &lt;namespaceTable&gt;'
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 5ae672f12a2ef58efc9738624c113855e59e02b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ef4f1c46a0ee3b94e5548b752e4e0a6a759fd45b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748632"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149513"
 ---
 # <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;add&gt; von &lt;namespaceTable&gt;
 Stellt ein Konfigurationselement dar, das eine Namespace-/Präfix-Zuordnung enthält, die zu Routingzwecken in XPath-Filtern verwendet werden kann.  
@@ -20,8 +20,12 @@ Stellt ein Konfigurationselement dar, das eine Namespace-/Präfix-Zuordnung enth
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-   <routing>   <namespaceTable>  
-     <add namespace="String" prefix="String" />    </namespaceTable></routing>  
+<routing>
+  <namespaceTable>
+    <add namespace="String"
+         prefix="String" />
+  </namespaceTable>
+</routing>
 ```  
   
 ```csharp  
