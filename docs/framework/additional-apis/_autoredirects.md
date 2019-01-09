@@ -12,32 +12,32 @@ api_type:
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 84a2a7f572517aec72161817cb719057618de445
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e42cf5747362f2257a2d777de918721181a8280
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753624"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148356"
 ---
-# <a name="httpwebrequestautoredirects-field"></a><span data-ttu-id="55038-102">HttpWebRequest-Anforderung. \_AutoRedirects-Feld</span><span class="sxs-lookup"><span data-stu-id="55038-102">HttpWebRequest.\_AutoRedirects Field</span></span>
+# <a name="httpwebrequestautoredirects-field"></a><span data-ttu-id="68bfe-102">"HttpWebRequest". \_AutoRedirects-Feld</span><span class="sxs-lookup"><span data-stu-id="68bfe-102">HttpWebRequest.\_AutoRedirects Field</span></span>
 
-<span data-ttu-id="55038-103">`HttpWebRequest._AutoRedirects` ist ein <xref:System.Int32> , der die Anzahl von umleitungen, die für diesen vorgenommen wiedergibt <xref:System.Net.HttpWebRequest>.</span><span class="sxs-lookup"><span data-stu-id="55038-103">`HttpWebRequest._AutoRedirects` is an <xref:System.Int32> that reflects the number of redirects made for this <xref:System.Net.HttpWebRequest>.</span></span>
+<span data-ttu-id="68bfe-103">`HttpWebRequest._AutoRedirects` ist ein <xref:System.Int32> , die die Anzahl von umleitungen, die für diese vorgenommen wiedergibt <xref:System.Net.HttpWebRequest>.</span><span class="sxs-lookup"><span data-stu-id="68bfe-103">`HttpWebRequest._AutoRedirects` is an <xref:System.Int32> that reflects the number of redirects made for this <xref:System.Net.HttpWebRequest>.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="55038-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="55038-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="68bfe-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="68bfe-104">Syntax</span></span>  
   
 ```csharp  
 private int _AutoRedirects
 ```
 
 > [!WARNING]
-> <span data-ttu-id="55038-105">Die `HttpWebRequest._AutoRedirects` Feld ist intern und nicht direkt im Code verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="55038-105">The `HttpWebRequest._AutoRedirects` field is internal and not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="68bfe-105">Die `HttpWebRequest._AutoRedirects` Feld ist intern und nicht direkt in Ihrem Code verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="68bfe-105">The `HttpWebRequest._AutoRedirects` field is internal and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="55038-106">Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.</span><span class="sxs-lookup"><span data-stu-id="55038-106">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="68bfe-106">Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.</span><span class="sxs-lookup"><span data-stu-id="68bfe-106">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="55038-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="55038-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="68bfe-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="68bfe-107">Requirements</span></span>
 
-<span data-ttu-id="55038-108">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="55038-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="68bfe-108">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="68bfe-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="55038-109">**Assembly:** System (in "System.dll")</span><span class="sxs-lookup"><span data-stu-id="55038-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="68bfe-109">**Assembly:** System (in "System.dll")</span><span class="sxs-lookup"><span data-stu-id="68bfe-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="55038-110">**.NET Framework-Versionen:** verfügbar seit 2.0.</span><span class="sxs-lookup"><span data-stu-id="55038-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="68bfe-110">**.NET Framework-Versionen:** Verfügbar seit 2.0.</span><span class="sxs-lookup"><span data-stu-id="68bfe-110">**.NET Framework versions:** Available since 2.0.</span></span>

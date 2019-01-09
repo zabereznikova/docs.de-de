@@ -2,79 +2,79 @@
 title: '&lt;security&gt; von &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: fbf9ac87da0d23930d589a40a9335acc34c4e94d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12477c36c2771621e5f8b88ce245746c6f5ec120
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194383"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145405"
 ---
-# <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a><span data-ttu-id="2aa96-102">&lt;security&gt; von &lt;webHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="2aa96-102">&lt;security&gt; of &lt;webHttpBinding&gt;</span></span>
-<span data-ttu-id="2aa96-103">Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die mit einem [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="2aa96-103">Specifies the security requirements for an endpoint configured with a [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
+# <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a><span data-ttu-id="72e6b-102">&lt;security&gt; von &lt;webHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="72e6b-102">&lt;security&gt; of &lt;webHttpBinding&gt;</span></span>
+<span data-ttu-id="72e6b-103">Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die mit einem [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="72e6b-103">Specifies the security requirements for an endpoint configured with a [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).</span></span>  
   
- <span data-ttu-id="2aa96-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="2aa96-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="2aa96-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="2aa96-105">\<bindings></span></span>  
-<span data-ttu-id="2aa96-106">\<webHttpBinding></span><span class="sxs-lookup"><span data-stu-id="2aa96-106">\<webHttpBinding></span></span>  
-<span data-ttu-id="2aa96-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="2aa96-107">\<binding></span></span>  
-<span data-ttu-id="2aa96-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="2aa96-108">\<security></span></span>  
+ <span data-ttu-id="72e6b-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="72e6b-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="72e6b-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="72e6b-105">\<bindings></span></span>  
+<span data-ttu-id="72e6b-106">\<webHttpBinding></span><span class="sxs-lookup"><span data-stu-id="72e6b-106">\<webHttpBinding></span></span>  
+<span data-ttu-id="72e6b-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="72e6b-107">\<binding></span></span>  
+<span data-ttu-id="72e6b-108">\<Sicherheit ></span><span class="sxs-lookup"><span data-stu-id="72e6b-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2aa96-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="2aa96-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72e6b-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="72e6b-109">Syntax</span></span>  
   
 ```xml  
-<system.ServiceModel>  
-    <bindings>  
-        <webHttpBinding>  
-            <binding name = "string">  
-              <security mode="None/Transport/TransportCredentialOnly">  
-                                    <transport clientCredentialType =   
-                                     "Basic/Certificate/Digest/None/Ntlm/Windows"  
-                                     proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-                                     realm="string" />  
-              </security>  
-        </webHttpBinding>  
-    </bindings>  
-</system.ServiceModel>  
+<system.ServiceModel>
+  <bindings>
+    <webHttpBinding>
+      <binding name = "String">
+        <security mode="None/Transport/TransportCredentialOnly">
+          <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                     proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                     realm="String" />
+        </security>
+      </binding>
+    </webHttpBinding>
+  </bindings>
+</system.ServiceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="2aa96-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="2aa96-110">Attributes and Elements</span></span>  
- <span data-ttu-id="2aa96-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="2aa96-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="72e6b-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="72e6b-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="72e6b-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="72e6b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="2aa96-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="2aa96-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="72e6b-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="72e6b-112">Attributes</span></span>  
   
-|<span data-ttu-id="2aa96-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="2aa96-113">Attribute</span></span>|<span data-ttu-id="2aa96-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2aa96-114">Description</span></span>|  
+|<span data-ttu-id="72e6b-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="72e6b-113">Attribute</span></span>|<span data-ttu-id="72e6b-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="72e6b-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="2aa96-115">Modus</span><span class="sxs-lookup"><span data-stu-id="2aa96-115">mode</span></span>|<span data-ttu-id="2aa96-116">Gibt an, ob Sicherheit auf Transportebene oder keine Sicherheitsfunktion von einem Endpunkt verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="2aa96-116">Specifies whether transport-level security or no security is used by an endpoint.</span></span> <span data-ttu-id="2aa96-117">Die Standardeinstellung ist `None`.</span><span class="sxs-lookup"><span data-stu-id="2aa96-117">The default is `None`.</span></span> <span data-ttu-id="2aa96-118">Dieses Attribut ist vom Typ <xref:System.ServiceModel.WebHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="2aa96-118">This attribute is of type <xref:System.ServiceModel.WebHttpSecurityMode>.</span></span>|  
+|<span data-ttu-id="72e6b-115">Modus</span><span class="sxs-lookup"><span data-stu-id="72e6b-115">mode</span></span>|<span data-ttu-id="72e6b-116">Gibt an, ob Sicherheit auf Transportebene oder keine Sicherheitsfunktion von einem Endpunkt verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="72e6b-116">Specifies whether transport-level security or no security is used by an endpoint.</span></span> <span data-ttu-id="72e6b-117">Die Standardeinstellung ist `None`.</span><span class="sxs-lookup"><span data-stu-id="72e6b-117">The default is `None`.</span></span> <span data-ttu-id="72e6b-118">Dieses Attribut ist vom Typ <xref:System.ServiceModel.WebHttpSecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="72e6b-118">This attribute is of type <xref:System.ServiceModel.WebHttpSecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="2aa96-119">Mode-Attribut</span><span class="sxs-lookup"><span data-stu-id="2aa96-119">Mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="72e6b-119">Mode-Attribut</span><span class="sxs-lookup"><span data-stu-id="72e6b-119">Mode Attribute</span></span>  
   
-|<span data-ttu-id="2aa96-120">Wert</span><span class="sxs-lookup"><span data-stu-id="2aa96-120">Value</span></span>|<span data-ttu-id="2aa96-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2aa96-121">Description</span></span>|  
+|<span data-ttu-id="72e6b-120">Wert</span><span class="sxs-lookup"><span data-stu-id="72e6b-120">Value</span></span>|<span data-ttu-id="72e6b-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="72e6b-121">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="2aa96-122">Keine</span><span class="sxs-lookup"><span data-stu-id="2aa96-122">None</span></span>|<span data-ttu-id="2aa96-123">Die Sicherheitsfunktionen sind deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="2aa96-123">Security is disabled.</span></span>|  
-|<span data-ttu-id="2aa96-124">Transport</span><span class="sxs-lookup"><span data-stu-id="2aa96-124">Transport</span></span>|<span data-ttu-id="2aa96-125">Die Sicherheit wird über HTTPS bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="2aa96-125">Security is provided using HTTPS.</span></span> <span data-ttu-id="2aa96-126">Der Dienst muss mit SSL-Zertifikaten konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="2aa96-126">The service needs to be configured with SSL certificates.</span></span> <span data-ttu-id="2aa96-127">Die Nachricht wird vollständig über HTTPS gesichert, und der Dienst wird vom Client über das SSL-Zertifikat des Diensts authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="2aa96-127">The message is entirely secured using HTTPS and the service is authenticated by the client using the service’s SSL certificate.</span></span> <span data-ttu-id="2aa96-128">Die Clientauthentifizierung wird durch die `ClientCredentialType` Attribut der [ \<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="2aa96-128">The client authentication is controlled through the `ClientCredentialType` attribute of the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).</span></span>|  
-|<span data-ttu-id="2aa96-129">TransportCredentialOnly</span><span class="sxs-lookup"><span data-stu-id="2aa96-129">TransportCredentialOnly</span></span>|<span data-ttu-id="2aa96-130">Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit.</span><span class="sxs-lookup"><span data-stu-id="2aa96-130">This mode does not provide message integrity and confidentiality.</span></span> <span data-ttu-id="2aa96-131">Er bietet dagegen HTTP-basierte Clientauthentifizierung.</span><span class="sxs-lookup"><span data-stu-id="2aa96-131">It provides HTTP-based client authentication.</span></span> <span data-ttu-id="2aa96-132">Dieser Modus sollte mit Vorsicht angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="2aa96-132">This mode should be used with caution.</span></span> <span data-ttu-id="2aa96-133">Es sollte verwendet werden in Umgebungen, in denen die transportsicherheit durch andere Mittel (z. B. IPSec) bereitgestellt wird und nur die Clientauthentifizierung wird durch die WCF-Infrastruktur bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="2aa96-133">It should be used in environments where the transport security is being provided by other means (such as IPSec) and only client authentication is provided by the WCF infrastructure.</span></span>|  
+|<span data-ttu-id="72e6b-122">Keine</span><span class="sxs-lookup"><span data-stu-id="72e6b-122">None</span></span>|<span data-ttu-id="72e6b-123">Die Sicherheitsfunktionen sind deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="72e6b-123">Security is disabled.</span></span>|  
+|<span data-ttu-id="72e6b-124">Transport</span><span class="sxs-lookup"><span data-stu-id="72e6b-124">Transport</span></span>|<span data-ttu-id="72e6b-125">Die Sicherheit wird über HTTPS bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="72e6b-125">Security is provided using HTTPS.</span></span> <span data-ttu-id="72e6b-126">Der Dienst muss mit SSL-Zertifikaten konfiguriert werden.</span><span class="sxs-lookup"><span data-stu-id="72e6b-126">The service needs to be configured with SSL certificates.</span></span> <span data-ttu-id="72e6b-127">Die Nachricht wird vollständig über HTTPS gesichert, und der Dienst wird vom Client über das SSL-Zertifikat des Diensts authentifiziert.</span><span class="sxs-lookup"><span data-stu-id="72e6b-127">The message is entirely secured using HTTPS and the service is authenticated by the client using the service’s SSL certificate.</span></span> <span data-ttu-id="72e6b-128">Die Clientauthentifizierung wird durch die `ClientCredentialType` Attribut der [ \<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="72e6b-128">The client authentication is controlled through the `ClientCredentialType` attribute of the [\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).</span></span>|  
+|<span data-ttu-id="72e6b-129">TransportCredentialOnly</span><span class="sxs-lookup"><span data-stu-id="72e6b-129">TransportCredentialOnly</span></span>|<span data-ttu-id="72e6b-130">Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit.</span><span class="sxs-lookup"><span data-stu-id="72e6b-130">This mode does not provide message integrity and confidentiality.</span></span> <span data-ttu-id="72e6b-131">Er bietet dagegen HTTP-basierte Clientauthentifizierung.</span><span class="sxs-lookup"><span data-stu-id="72e6b-131">It provides HTTP-based client authentication.</span></span> <span data-ttu-id="72e6b-132">Dieser Modus sollte mit Vorsicht angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="72e6b-132">This mode should be used with caution.</span></span> <span data-ttu-id="72e6b-133">Es sollte verwendet werden in Umgebungen, in denen die transportsicherheit durch andere Mittel (z. B. IPSec) bereitgestellt wird und nur die Clientauthentifizierung wird durch die WCF-Infrastruktur bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="72e6b-133">It should be used in environments where the transport security is being provided by other means (such as IPSec) and only client authentication is provided by the WCF infrastructure.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="2aa96-134">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2aa96-134">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="72e6b-134">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="72e6b-134">Child Elements</span></span>  
   
-|<span data-ttu-id="2aa96-135">Element</span><span class="sxs-lookup"><span data-stu-id="2aa96-135">Element</span></span>|<span data-ttu-id="2aa96-136">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2aa96-136">Description</span></span>|  
+|<span data-ttu-id="72e6b-135">Element</span><span class="sxs-lookup"><span data-stu-id="72e6b-135">Element</span></span>|<span data-ttu-id="72e6b-136">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="72e6b-136">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2aa96-137">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="2aa96-137">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|<span data-ttu-id="2aa96-138">Definiert die Sicherheitseinstellungen für den Transport.</span><span class="sxs-lookup"><span data-stu-id="2aa96-138">Defines the transport security settings.</span></span> <span data-ttu-id="2aa96-139">Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>-Typ.</span><span class="sxs-lookup"><span data-stu-id="2aa96-139">This element corresponds to the <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> type.</span></span>|  
+|[<span data-ttu-id="72e6b-137">\<Transport ></span><span class="sxs-lookup"><span data-stu-id="72e6b-137">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|<span data-ttu-id="72e6b-138">Definiert die Sicherheitseinstellungen für den Transport.</span><span class="sxs-lookup"><span data-stu-id="72e6b-138">Defines the transport security settings.</span></span> <span data-ttu-id="72e6b-139">Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>-Typ.</span><span class="sxs-lookup"><span data-stu-id="72e6b-139">This element corresponds to the <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> type.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="2aa96-140">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="2aa96-140">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="72e6b-140">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="72e6b-140">Parent Elements</span></span>  
   
-|<span data-ttu-id="2aa96-141">Element</span><span class="sxs-lookup"><span data-stu-id="2aa96-141">Element</span></span>|<span data-ttu-id="2aa96-142">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2aa96-142">Description</span></span>|  
+|<span data-ttu-id="72e6b-141">Element</span><span class="sxs-lookup"><span data-stu-id="72e6b-141">Element</span></span>|<span data-ttu-id="72e6b-142">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="72e6b-142">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="2aa96-143">\<webHttpBinding></span><span class="sxs-lookup"><span data-stu-id="2aa96-143">\<webHttpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|<span data-ttu-id="2aa96-144">Ein Bindungselement, das verwendet wird, zum Konfigurieren von Endpunkten für Windows Communication Foundation (WCF)-, die auf HTTP-Anforderungen und nicht auf SOAP-Nachrichten reagieren Webdienste.</span><span class="sxs-lookup"><span data-stu-id="2aa96-144">A binding element that is used to configure endpoints for Windows Communication Foundation (WCF) Web services that respond to HTTP requests instead of SOAP messages.</span></span>|  
+|[<span data-ttu-id="72e6b-143">\<webHttpBinding></span><span class="sxs-lookup"><span data-stu-id="72e6b-143">\<webHttpBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|<span data-ttu-id="72e6b-144">Ein Bindungselement, das verwendet wird, zum Konfigurieren von Endpunkten für Windows Communication Foundation (WCF)-, die auf HTTP-Anforderungen und nicht auf SOAP-Nachrichten reagieren Webdienste.</span><span class="sxs-lookup"><span data-stu-id="72e6b-144">A binding element that is used to configure endpoints for Windows Communication Foundation (WCF) Web services that respond to HTTP requests instead of SOAP messages.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="2aa96-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2aa96-145">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="72e6b-145">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="72e6b-145">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
  <xref:System.ServiceModel.WebHttpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>  
  <xref:System.ServiceModel.WebHttpSecurity>  
- [<span data-ttu-id="2aa96-146">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="2aa96-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="2aa96-147">Ausählen eines Anmeldeinformationentyps</span><span class="sxs-lookup"><span data-stu-id="2aa96-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [<span data-ttu-id="2aa96-148">Bindungen</span><span class="sxs-lookup"><span data-stu-id="2aa96-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="2aa96-149">Konfigurieren der vom System bereitgestellten Bindungen</span><span class="sxs-lookup"><span data-stu-id="2aa96-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="2aa96-150">Verwenden von Bindungen, um Dienste und Clients zu konfigurieren</span><span class="sxs-lookup"><span data-stu-id="2aa96-150">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [<span data-ttu-id="2aa96-151">\<binding></span><span class="sxs-lookup"><span data-stu-id="2aa96-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
- [<span data-ttu-id="2aa96-152">WCF-Web-HTTP-Programmiermodell</span><span class="sxs-lookup"><span data-stu-id="2aa96-152">WCF Web HTTP Programming Model</span></span>](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [<span data-ttu-id="72e6b-146">Sichern von Diensten und Clients</span><span class="sxs-lookup"><span data-stu-id="72e6b-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="72e6b-147">Ausählen eines Anmeldeinformationentyps</span><span class="sxs-lookup"><span data-stu-id="72e6b-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="72e6b-148">Bindungen</span><span class="sxs-lookup"><span data-stu-id="72e6b-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="72e6b-149">Konfigurieren der vom System bereitgestellten Bindungen</span><span class="sxs-lookup"><span data-stu-id="72e6b-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="72e6b-150">Verwenden von Bindungen, um Dienste und Clients zu konfigurieren</span><span class="sxs-lookup"><span data-stu-id="72e6b-150">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [<span data-ttu-id="72e6b-151">\<binding></span><span class="sxs-lookup"><span data-stu-id="72e6b-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="72e6b-152">WCF-Web-HTTP-Programmiermodell</span><span class="sxs-lookup"><span data-stu-id="72e6b-152">WCF Web HTTP Programming Model</span></span>](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
