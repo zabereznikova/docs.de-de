@@ -2,12 +2,12 @@
 title: '&lt;routing&gt; von &lt;serviceBehavior&gt;'
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 5fb7febe365f73acf09ba74b07215fe9cc659efb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a007eb33063f8f44098a8c63708255b884b5fdc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750751"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146848"
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;routing&gt; von &lt;serviceBehavior&gt;
 Bietet Laufzeitzugriff auf den Routingdienst, um eine dynamische Änderung der Routingkonfiguration zu ermöglichen.  
@@ -24,12 +24,12 @@ Bietet Laufzeitzugriff auf den Routingdienst, um eine dynamische Änderung der R
 <behaviors>
   <serviceBehaviors>
     <behavior name="String">
-      <routing filterTable="String" 
-               routeOnHeadersOnly="Boolean" 
+      <routing filterTable="String"
+               routeOnHeadersOnly="Boolean"
                SoapProcessingEnabled="Boolean" />
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -39,7 +39,7 @@ Bietet Laufzeitzugriff auf den Routingdienst, um eine dynamische Änderung der R
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|filterTable|Eine Zeichenfolge, die den Namen der Routingtabelle angibt, die Filter enthält, die vom Routingdienst ausgewertet werden sollen. Dieser Wert übereinstimmen der `name` Attribut eine [ \<FilterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md) Element in der [ \<FilterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) Abschnitt.|  
+|filterTable|Eine Zeichenfolge, die den Namen der Routingtabelle angibt, die Filter enthält, die vom Routingdienst ausgewertet werden sollen. Dieser Wert muss übereinstimmen der `name` Attribut eine [ \<FilterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md) Element in der [ \<FilterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) Abschnitt.|  
 |routeOnHeaderOnly|Ein boolescher Wert, der angibt, ob der Filter sowohl den Nachrichtentext als auch den Header oder nur den Header prüft. Die Standardeinstellung ist `true`.|  
 |soapProcessingEnabled|Ein boolescher Wert, der angibt, ob SOAP-Verarbeitung erfolgen soll.|  
   

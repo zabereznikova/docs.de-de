@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611854"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150632"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Überwachungsteilnehmer
 Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführung. Die Workflowlaufzeit gibt Überwachungsdatensätze aus, die Ereignisse im Workflow- und Aktivitätslebenszyklus, Lesezeichenwiederaufnahmen und Fehler beschreiben. Diese Überwachungsdatensätze werden von den Überwachungsteilnehmern genutzt. Windows Workflow Foundation (WF) enthält einen standardmäßigen Überwachungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben. In diesem Schritt des Lernprogramms wird beschrieben, wie ein benutzerdefinierter Überwachungsteilnehmer und ein Nachverfolgungsprofil erstellt werden, die die Ausgabe von `WriteLine`-Aktivitäten aufzeichnen, damit sie dem Benutzer angezeigt werden können.  
@@ -92,7 +92,7 @@ Die Workflownachverfolgung gewährt Einblick in den Status der Workflowausführu
     }  
     ```  
   
-     Wenn kein Nachverfolgungsprofil angegeben ist, wird das standardmäßige Nachverfolgungsprofil verwendet. Wenn das standardmäßige Nachverfolgungsprofil verwendet wird, werden Überwachungsdatensätze für alle `ActivityStates` ausgegeben. Da Text während des Lebenszyklus der `WriteLine`-Aktivität nur einmal aufgezeichnet werden muss, extrahieren wir nur den Text des `ActivityStates.Executing`-Zustands. In [erstellen das nachverfolgungsprofil und registrieren den Überwachungsteilnehmer](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), ein Überwachungsprofil erstellt, der angibt, dass nur `WriteLine` `ActivityStates.Executing` Nachverfolgungsdatensätze werden ausgegeben.  
+     Wenn kein Nachverfolgungsprofil angegeben ist, wird das standardmäßige Nachverfolgungsprofil verwendet. Wenn das standardmäßige Nachverfolgungsprofil verwendet wird, werden Überwachungsdatensätze für alle `ActivityStates` ausgegeben. Da Text während des Lebenszyklus der `WriteLine`-Aktivität nur einmal aufgezeichnet werden muss, extrahieren wir nur den Text des `ActivityStates.Executing`-Zustands. In [erstellen das nachverfolgungsprofil und registrieren den Überwachungsteilnehmer](#to-create-the-tracking-profile-and-register-the-tracking-participant), ein Überwachungsprofil erstellt, der angibt, dass nur `WriteLine` `ActivityStates.Executing` Nachverfolgungsdatensätze werden ausgegeben.  
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>So erstellen Sie das Nachverfolgungsprofil und registrieren den Überwachungsteilnehmer  
   

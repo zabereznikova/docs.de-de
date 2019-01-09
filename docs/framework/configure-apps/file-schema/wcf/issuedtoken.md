@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuedToken&gt;'
+title: '&lt;IssuedToken&gt;'
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 9a8d701e0806aae0a17a1c5ff7284606dd080f85
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a06d59c5dfb14e5f3346ff2424339659568a369a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750231"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150187"
 ---
-# <a name="ltissuedtokengt"></a>&lt;issuedToken&gt;
+# <a name="ltissuedtokengt"></a>&lt;IssuedToken&gt;
 Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.  
   
  \<system.ServiceModel>  
@@ -22,14 +22,13 @@ EndpointBehaviors-Abschnitt
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<issuedToken   
-   cacheIssuedTokens="Boolean"  
-   defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"  
-   issuedTokenRenewalThresholdPercentage = "0 to 100"  
-   issuerChannelBehaviors="String"  
-      localIssuerChannelBehaviors="String"  
-   maxIssuedTokenCachingTime="TimeSpan"  
-</issuedToken>  
+<issuedToken cacheIssuedTokens="Boolean"
+             defaultKeyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+             issuedTokenRenewalThresholdPercentage = "0 to 100"
+             issuerChannelBehaviors="String"
+             localIssuerChannelBehaviors="String"
+             maxIssuedTokenCachingTime="TimeSpan">
+</issuedToken>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -44,7 +43,7 @@ EndpointBehaviors-Abschnitt
 |`issuedTokenRenewalThresholdPercentage`|Optionales Ganzzahlattribut, das den Prozentwert eines gültigen Zeitrahmens (geliefert vom Tokenaussteller) angibt, der verstreichen kann, bevor ein Token erneuert wird. Die Werte reichen von 0 bis 100. Die Standardeinstellung ist 60, was 60 % der Zeiten ohne Aktivität entspricht, bevor ein erneuter Versuch durchgeführt wird.|  
 |`issuerChannelBehaviors`|Optionales Attribut, das das für die Kommunikation mit dem Aussteller zu verwendende Kanalverhalten angibt.|  
 |`localIssuerChannelBehaviors`|Optionales Attribut, das das für die Kommunikation mit dem lokalen Aussteller zu verwendende Kanalverhalten angibt.|  
-|`maxIssuedTokenCachingTime`|Optionales Timespan-Attribut, das die Dauer angibt, die ausgestellte Token zwischengespeichert werden, wenn der Tokenaussteller (ein STS) keine Zeit angibt. Die Standardeinstellung ist "10675199.02:48:05.4775807."|  
+|`maxIssuedTokenCachingTime`|Optionales Timespan-Attribut, das die Dauer angibt, die ausgestellte Token zwischengespeichert werden, wenn der Tokenaussteller (ein STS) keine Zeit angibt. Der Standardwert ist "10675199.02:48:05.4775807."|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -62,7 +61,7 @@ EndpointBehaviors-Abschnitt
 ## <a name="remarks"></a>Hinweise  
  Ein ausgestelltes Token ist ein benutzerdefinierter Anmeldeinformationstyp, zum Beispiel für die Authentifizierung mit einem Secure Token Service (STS) in einem Verbundszenario. Standardmäßig ist das Token ein SAML-Token. Weitere Informationen finden Sie unter [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). und [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
- Dieser Abschnitt enthält die Elemente, die zum Konfigurieren eines lokalen Tokenausstellers verwendet werden, bzw. die mit einem Sicherheitstokendienst verwendeten Verhalten. Anweisungen zum Konfigurieren eines Clients für einen lokalen Aussteller verwenden, finden Sie unter [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Dieser Abschnitt enthält die Elemente, die zum Konfigurieren eines lokalen Tokenausstellers verwendet werden, bzw. die mit einem Sicherheitstokendienst verwendeten Verhalten. Anweisungen zum Konfigurieren von einem Client zur Verwendung eines lokalen Ausstellers finden Sie unter [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement>  

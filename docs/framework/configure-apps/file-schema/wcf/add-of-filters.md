@@ -2,12 +2,12 @@
 title: '&lt;add&gt; von &lt;filters&gt;'
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 2a26a94c01fdb04b8a9e2d381a28cc909bbdac8f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fe9ce8bc2a0efb9e20800189cd9f948d5e6a2232
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754609"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150746"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;add&gt; von &lt;filters&gt;
 Ein XPath-Filter, der den zu protokollierenden Nachrichtentyp angibt.  
@@ -21,9 +21,9 @@ Ein XPath-Filter, der den zu protokollierenden Nachrichtentyp angibt.
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<filters>  
-   <add filter="String"/>  
-</filters>  
+<filters>
+  <add filter="String" />
+</filters>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -57,15 +57,17 @@ Ein XPath-Filter, der den zu protokollierenden Nachrichtentyp angibt.
  Im Folgenden finden Sie ein Beispiel für das Konfigurieren eines Filters, der nur Nachrichten aufzeichnet, die über einen SOAP-Headerabschnitt verfügen.  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-     logMalformedMessages="true" logMessagesAtServiceLevel="true"  
-     logMessagesAtTransportLevel="true" maxMessagesToLog="420">  
-     <filters>  
-        <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">  
-                        /soap:Envelope/soap:Headers  
-        </add>  
-     </filters>  
-</messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="420">
+  <filters>
+    <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+      /soap:Envelope/soap:Headers
+    </add>
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

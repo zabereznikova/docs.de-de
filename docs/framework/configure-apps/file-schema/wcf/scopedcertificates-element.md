@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6f2acd1078090f7680f1909d68afbcaa09d080fd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838274"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150720"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt;-Element
 Stellt eine Auflistung von X.509-Zertifikaten dar, die von bestimmten Diensten (mit Gültigkeitsbereich) zur Authentifizierung bereitgestellt werden. Diese Auflistung wird normalerweise verwendet, um die Dienstzertifikate für Sicherheitstokendienste in einem Verbundsszenario anzugeben.  
@@ -24,13 +24,13 @@ EndpointBehaviors-Abschnitt
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<scopedCertificates>  
-      <add findValue="String"  
-                storeLocation="CurrentUser/LocalMachine"  
-                storeName=" CurrentUser/LocalMachine"  
-                targetUri="string"  
-            x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />   
-</scopedCertificates>   
+<scopedCertificates>
+  <add findValue="String"
+       storeLocation="CurrentUser/LocalMachine"
+       storeName=" CurrentUser/LocalMachine"
+       targetUri="string"
+       x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
+</scopedCertificates>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -56,19 +56,21 @@ EndpointBehaviors-Abschnitt
   
  Wenn eine Bindung ein Zertifikat für den Dienst erfordert und kein bestimmtes Zertifikat für die Dienst-URL in ScopedCertificates gefunden wird, wird das Standardzertifikat verwendet.  
   
- Weitere Informationen finden Sie im Abschnitt "Zertifikate mit Gültigkeitsbereich" [Vorgehensweise: Erstellen Sie einen Verbund Client](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Weitere Informationen finden Sie im Abschnitt "Zertifikate mit Gültigkeitsbereich" [Vorgehensweise: Erstellen eines Verbundclients](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Dienstzertifikat für den Client zu verwenden, wenn die Kommunikation mit Endpunkten, deren Domänenname `http://www.contoso.com` über das HTTP-Protokoll.  
   
 ```xml  
-<serviceCertificate>  
-  <scopedCertificates>  
-     <add targetUri="http://www.contoso.com"   
-          findValue="www.contoso.com" storeLocation="LocalMachine"  
-                  storeName="Root" x509FindType="FindByIssuerName" />  
-  </scopedCertificates>  
-</serviceCertificate>  
+<serviceCertificate>
+  <scopedCertificates>
+    <add targetUri="http://www.contoso.com"
+         findValue="www.contoso.com"
+         storeLocation="LocalMachine"
+         storeName="Root"
+         x509FindType="FindByIssuerName" />
+  </scopedCertificates>
+</serviceCertificate>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

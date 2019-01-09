@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837049"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148980"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transport&gt; von &lt;netNamedPipeBinding&gt;
 Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.  
@@ -22,13 +22,13 @@ Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding>  
-      <security mode="None/Transport">  
-            <transport protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -38,10 +38,10 @@ Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|protectionLevel|Definiert die Schutzebene der benannten Pipe. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit. Folgende Werte sind gültig:<br /><br /> – None: Kein Schutz.<br />-Sign: Nachrichten werden signiert.<br />-EncryptAndSign: Nachrichten werden verschlüsselt und signiert.<br /><br /> Der Standardwert ist EncryptAndSign.|  
+|protectionLevel|Definiert die Schutzebene der benannten Pipe. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit. Folgende Werte sind gültig:<br /><br /> – None: Kein Schutz.<br />-Anmeldung: Nachrichten werden signiert.<br />-"EncryptAndSign" fest: Nachrichten werden verschlüsselt und signiert.<br /><br /> Der Standardwert ist EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

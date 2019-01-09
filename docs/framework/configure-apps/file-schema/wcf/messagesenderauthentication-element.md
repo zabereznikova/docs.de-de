@@ -2,12 +2,12 @@
 title: '&lt;messageSenderAuthentication&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: cb727df7b8d7605cbe984a8f6737c89bf1bfb2be
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d543e5ac436e181c76e2954db7a3eaa8e1b8d6a3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216118"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145888"
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a>&lt;messageSenderAuthentication&gt;-Element
 Gibt die Authentifizierungsoptionen für Peer-to-Peer-Nachrichtenabsender an.  
@@ -25,12 +25,10 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Nachrichtenabsender an.
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<messageSenderAuthentication  
-customCertificateValidatorType= "namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
-certificateValidationMode = "ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
-revocationMode="NoCheck/Online/Offline"  
-trustedStoreLocation="CurrentUser/LocalMachine"   
-/>  
+<messageSenderAuthentication customCertificateValidatorType= "namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
+                             certificateValidationMode = "ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
+                             revocationMode="NoCheck/Online/Offline"
+                             trustedStoreLocation="CurrentUser/LocalMachine" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -82,24 +80,24 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  Dieses Element muss konfiguriert werden, wenn die Nachrichtenauthentifizierung ausgewählt wird. Für Ausgabekanäle wird jede Nachricht ist signiert unter Verwendung des Zertifikats von bereitgestellten [ \<Zertifikat >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Alle Nachrichten werden vor dem Zustellen zur Anwendung mithilfe des durch das `customCertificateValidatorType`-Attribut dieses Elements angegebenen Validierungssteuerelements mit den Nachrichtenanmeldeinformationen verglichen. Das Validierungssteuerelement kann die Anmeldeinformationen akzeptieren oder ablehnen.  
   
 ## <a name="example"></a>Beispiel  
- Mit dem folgenden Code wird der Prüfmodus des Nachrichtenabsenders auf `PeerOrChainTrust` festgelegt.  
+ Mit dem folgenden Code wird der Validierungsmodus des Nachrichtenabsenders auf `PeerOrChainTrust` festgelegt.  
   
 ```xml  
-<behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <peer>  
-      <certificate findValue="www.contoso.com"   
-                   storeLocation="LocalMachine"  
-                   x509FindType="FindByIssuerName" />  
-        <messageSenderAuthentication   
-          certificateValidationMode="PeerOrChainTrust" />  
-       <messageSenderAuthentication certificateValidationMode="None" />  
-    </peer>  
-   </clientCredentials>  
-  </behavior>  
- </endpointBehaviors>  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="MyEndpointBehavior">
+      <clientCredentials>
+        <peer>
+          <certificate findValue="www.contoso.com"
+                       storeLocation="LocalMachine"
+                       x509FindType="FindByIssuerName" />
+          <messageSenderAuthentication certificateValidationMode="PeerOrChainTrust" />
+          <messageSenderAuthentication certificateValidationMode="None" />
+        </peer>
+      </clientCredentials>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

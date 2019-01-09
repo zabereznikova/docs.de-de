@@ -2,18 +2,18 @@
 title: '&lt;knownType&gt;'
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: b2445f12f1eaac03b3f3ab66f3d13a5f465a1133
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6156f102573333ec0d5533b8f1a8506d91215f47
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753325"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151929"
 ---
 # <a name="ltknowntypegt"></a>&lt;knownType&gt;
-Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerializer> während der Deserialisierung verwendet werden sollte. Dieses Element gibt einen "bekannten Typ" an, der von einem Feld oder einer Eigenschaft eines "deklarierten Typs" zurückgegeben werden kann. Weitere Informationen finden Sie unter [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerializer> während der Deserialisierung verwendet werden sollte. Dieses Element gibt einen "bekannten Typ" an, der von einem Feld oder einer Eigenschaft eines "deklarierten Typs" zurückgegeben werden kann. Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  \<System.Runtime.Serialization >  
-\<"DataContractSerializer" >  
+\<DataContractSerializer >  
 \<DeclaredTypes >-Element  
 \<Hinzufügen > der \<DeclaredTypes >  
 \<KnownType >-Element  
@@ -21,10 +21,10 @@ Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerial
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<knownType type="String">  
-     <parameter index="Integer"  
-                type="String" />  
-</knownType>  
+<knownType type="String">
+  <parameter index="Integer"
+             type="String" />
+</knownType>
 ```  
   
 ## <a name="type"></a>Typ  
@@ -52,25 +52,25 @@ Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerial
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Fügt der Auflistung deklarierter Typen einen deklarierten Typ hinzu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen über bekannte Typen finden Sie unter [Datenvertragstypen bezeichnet](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) und <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Weitere Informationen zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) und <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Finden Sie unter der [ \<"DataContractSerializer" >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) für ein Beispiel für dieses Element.  
+ Finden Sie unter den [ \<DataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) ein Beispiel für die Verwendung dieses Elements.  
   
 ## <a name="example"></a>Beispiel  
   
 ```xml  
-<add type="MyCompany.Library.Shape,   
-           MyAssembly, Version=2.0.0.0, Culture=neutral,  
-           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
-           <knownType type="MyCompany.Library.Circle,   
-                      MyAssembly, Version=2.0.0.0, Culture=neutral,  
-                      PublicKeyToken=XXXXXX,  
-                      processorArchitecture=MSIL"/>  
-</add>  
+<add type="MyCompany.Library.Shape,
+           MyAssembly, Version=2.0.0.0, Culture=neutral,
+           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">
+  <knownType type="MyCompany.Library.Circle,
+                   MyAssembly, Version=2.0.0.0, Culture=neutral,
+                   PublicKeyToken=XXXXXX,
+                   processorArchitecture=MSIL"/>
+</add>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  [Bekannte Typen in Datenverträgen](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [\<"DataContractSerializer" >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<DataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

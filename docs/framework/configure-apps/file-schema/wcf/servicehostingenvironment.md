@@ -2,12 +2,12 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354319"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150317"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen bestimmten Transport instanziiert wird. Falls dieses Element leer ist, wird der Standardtyp verwendet. Dieses Element kann nur über die Anwendungskonfigurationsdatei bzw. die Computerkonfigurationsdatei verwendet werden.  
@@ -18,19 +18,21 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean" 
-                           minFreeMemoryPercentageToActivateService="Integer" 
+<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean"
+                           minFreeMemoryPercentageToActivateService="Integer"
                            multipleSiteBindingsEnabled="Boolean">
   <baseAddressPrefixFilters>
     <add prefix="string" />
   </baseAddressPrefixFilters>
   <serviceActivations>
-    <add factory="String" service="String" />
+    <add factory="String"
+         service="String" />
   </serviceActivations>
   <transportConfigurationTypes>
-    <add name="String" transportConfigurationType="String" />
+    <add name="String"
+         transportConfigurationType="String" />
   </transportConfigurationTypes>
-</serviceHostingEnvironment>  
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -40,9 +42,9 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Ein boolescher Wert, der angibt, ob der ASP.NET-Kompatibilitätsmodus für die aktuelle Anwendung aktiviert wurde. Die Standardeinstellung ist `false`.<br /><br /> Wenn dieses Attribut festgelegt ist, um `true`, Anforderungen an Windows Communication Foundation (WCF)-Dienste über die ASP.NET HTTP-Pipeline übergeben und Kommunikation über nicht-HTTP-Protokolle ist nicht zulässig. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Eine ganze Zahl, die die Mindestmenge des freien Arbeitsspeichers angibt, die für das System verfügbar sein sollten, bevor ein WCF-Dienst aktiviert werden kann. **Vorsicht:** Festlegen dieses Attributs zusammen mit teilweiser Vertrauenswürdigkeit in der Datei "Web.config" von einem WCF-Dienst führt zu einem <xref:System.Security.SecurityException> Wenn der Dienst ausgeführt wird.|  
-|multipleSiteBindingsEnabled|Ein boolescher Wert, der angibt, ob mehrere IIS-Bindungen pro Website aktiviert sind.<br /><br /> IIS besteht aus Websites, die als Container für virtuelle Anwendungen fungieren, die virtuelle Verzeichnisse enthalten. Auf die Anwendung auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden. IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website. Ein Beispiel für ein Bindungsprotokoll kann HTTP sein, wohingegen Bindungsinformationen eine IP-Adresse, einen Port, einen Hostheader usw. enthalten können.<br /><br /> IIS unterstützt die Angabe mehrerer IIS-Bindungen pro Website, was zu mehreren Basisadressen pro Schema führt. Allerdings kann ein Windows Communication Foundation (WCF)-Dienst unter einer Website gehosteter Bindung zu nur einem BaseAddress-Element pro Schema.<br /><br /> Um mehrere IIS-Bindungen pro Website für einen Windows Communication Foundation (WCF)-Dienst zu aktivieren, legen Sie dieses Attribut auf `true`. Beachten Sie, dass mehrere Bindungen pro Website nur für das HTTP-Protokoll unterstützt werden. Die Adresse der Endpunkte in der Konfigurationsdatei muss ein vollständiger URI sein.|  
+|aspNetCompatibilityEnabled|Ein boolescher Wert, der angibt, ob der ASP.NET-Kompatibilitätsmodus für die aktuelle Anwendung aktiviert wurde. Die Standardeinstellung ist `false`.<br /><br /> Wenn dieses Attribut festgelegt ist, um `true`, Anforderungen an Windows Communication Foundation (WCF)-Dienste über die ASP.NET HTTP-Pipeline zu übertragen und Kommunikation über nicht-HTTP-Protokolle ist nicht zulässig. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Eine ganze Zahl, die die Mindestmenge des freien Speichers gibt an, die auf dem System verfügbar sein sollen, bevor ein WCF-Dienst aktiviert werden kann. **Vorsicht**:  Durch Angeben dieses Attributs zusammen mit teilweiser Vertrauenswürdigkeit in der Datei "Web.config" von einem WCF-Dienst führt zu einem <xref:System.Security.SecurityException> Wenn der Dienst ausgeführt wird.|  
+|multipleSiteBindingsEnabled|Ein boolescher Wert, der angibt, ob mehrere IIS-Bindungen pro Website aktiviert sind.<br /><br /> IIS besteht aus Websites, die als Container für virtuelle Anwendungen fungieren, die virtuelle Verzeichnisse enthalten. Auf die Anwendung auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden. IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll definiert das Schema, das für die Kommunikation verwendet wird, und die Bindungsinformationen dienen dem Zugriff auf die Website. Ein Beispiel für ein Bindungsprotokoll kann HTTP sein, wohingegen Bindungsinformationen eine IP-Adresse, einen Port, einen Hostheader usw. enthalten können.<br /><br /> IIS unterstützt die Angabe mehrerer IIS-Bindungen pro Website, was zu mehreren Basisadressen pro Schema führt. Allerdings kann ein Windows Communication Foundation (WCF)-Dienst unter einer Website gehosteter Bindung an nur einem BaseAddress-Element pro Schema.<br /><br /> Um mehrere IIS-Bindungen pro Website für einen Windows Communication Foundation (WCF)-Dienst zu aktivieren, legen Sie dieses Attribut auf `true`. Beachten Sie, dass mehrere Bindungen pro Website nur für das HTTP-Protokoll unterstützt werden. Die Adresse der Endpunkte in der Konfigurationsdatei muss ein vollständiger URI sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -87,7 +89,7 @@ Dieses Element definiert den Typ, der von der Diensthostingumgebung für einen b
 ## <a name="code"></a>Code  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
+<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

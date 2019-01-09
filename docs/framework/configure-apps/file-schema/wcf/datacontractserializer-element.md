@@ -1,5 +1,5 @@
 ---
-title: '&lt;"DataContractSerializer"&gt;'
+title: '&lt;DataContractSerializer&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dataContractSerializer element
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: 5f2a05fdf2e38923205092b232995a70a87f7e87
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c79c8e8db2a4ea4526000bcbe336d1e664f9c4c2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752766"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150954"
 ---
-# <a name="ltdatacontractserializergt"></a>&lt;"DataContractSerializer"&gt;
+# <a name="ltdatacontractserializergt"></a>&lt;DataContractSerializer&gt;
 Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>. Dieses Element befindet sich in zwei verschiedenen Hierarchien. Eine wird im folgenden Abschnitt "Schemahierarchie" aufgeführt, die andere im Abschnitt "Hinweise".  
   
  \<system.ServiceModel>  
 \<behaviors>  
 \<serviceBehaviors>  
 \<Verhalten >  
-\<"DataContractSerializer" >  
+\<DataContractSerializer >  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<dataContractSerializer ignoreExtensionDataObject="Boolean"  
-   maxItemsInObjectGraph="Integer" />  
+<dataContractSerializer ignoreExtensionDataObject="Boolean"
+                        maxItemsInObjectGraph="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -51,11 +51,11 @@ Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataCon
 |[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceabschnitt dar und enthält Elemente zum Festlegen von <xref:System.Runtime.Serialization.DataContractSerializer>-Optionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wie in der Einführung dieses Themas erwähnt, ist dies die zweite Hierarchie, in denen die \<X509Extension >-Element befindet.  
+ Wie in der Einführung dieses Themas erwähnt, ist dies die zweite Hierarchie, in dem die \<X509Extension >-Element befindet.  
   
  [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
   
- [\<"DataContractSerializer" >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<DataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
   
  Weitere Informationen über bekannte Typen finden Sie unter <xref:System.Runtime.Serialization.DataContractSerializer>.  
   

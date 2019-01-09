@@ -2,12 +2,12 @@
 title: '&lt;security&gt; von &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 4a80a8337a5b98ff30de60afbe4438e0d91b946b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0079cb9e62abed42a36b67fed935f883473ebbb8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185679"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147823"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;security&gt; von &lt;netNamedPipeBinding&gt;
 Definiert die Sicherheitseinstellungen für eine Bindung.  
@@ -21,13 +21,13 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<netNamedPipeBinding>  
-      <binding>  
-            <security mode="None/Transport">  
-                        <transport protectionLevel="None/Sign/EncryptAndSign" />  
-            </security>  
-      </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -37,7 +37,7 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Modus|Gibt den Sicherheitstyp an, der auf diese Bindung angewendet wird. Folgende Werte sind gültig:<br /><br /> – None: Die Sicherheit wird deaktiviert.<br />-Transport: Sicherheit wird über die zugrunde liegende transportsicherheit gewährleistet bereitgestellt. Es ist möglich, den Schutzgrad mit diesem Modus zu steuern.<br />– Der Standardwert ist Transport. Dieses Attribut ist vom Typ <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|Modus|Gibt den Sicherheitstyp an, der auf diese Bindung angewendet wird. Folgende Werte sind gültig:<br /><br /> – None: Dadurch werden die Sicherheitsfunktionen deaktiviert.<br />-Transport: Sicherheit wird bereitgestellt, mit der zugrunde liegende transportsicherheit gewährleistet. Es ist möglich, den Schutzgrad mit diesem Modus zu steuern.<br />– Der Standardwert ist Transport. Dieses Attribut ist vom Typ <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

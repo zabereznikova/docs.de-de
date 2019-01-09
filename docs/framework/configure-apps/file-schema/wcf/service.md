@@ -2,26 +2,26 @@
 title: '&lt;Dienst&gt;'
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 6e83e988920d24c6fe7615e40334919caf21652e
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: ef0ae70440323c1ede5deca60e88f29861760e68
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34059029"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145509"
 ---
 # <a name="ltservicegt"></a>&lt;Dienst&gt;
 Das `service`-Element enthält die Einstellungen für einen Windows Communication Foundation (WCF)-Dienst. Es enthält außerdem Endpunkte, die den Dienst verfügbar machen.  
   
  \<system.ServiceModel>  
-\<Services >  
+\<Dienste >  
 \<Dienst >  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<service behaviorConfiguration=String"  
-        name="String">  
-</service>  
+<service behaviorConfiguration="String"
+         name="String">
+</service>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -58,15 +58,14 @@ Das `service`-Element enthält die Einstellungen für einen Windows Communicatio
  Dies ist ein Beispiel für eine Dienstkonfiguration.  
   
 ```xml  
-<service behaviorConfiguration="testChannelBehavior"   
-     name="HelloWorld">  
-     <endpoint   
-        address="/HelloWorld2/"  
-        name="test"  
-        bindingNamespace="http://www.cohowinery.com/"  
-        binding="basicHttpBinding"  
-        contract="IHelloWorld" />  
-</service>  
+<service behaviorConfiguration="testChannelBehavior"
+         name="HelloWorld">
+  <endpoint address="/HelloWorld2/"
+            name="test"
+            bindingNamespace="http://www.cohowinery.com/"
+            binding="basicHttpBinding"
+            contract="IHelloWorld" />
+</service>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

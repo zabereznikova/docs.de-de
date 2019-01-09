@@ -2,11 +2,12 @@
 title: '&lt;add&gt; des &lt;claimTypeRequirements&gt;-Elements'
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 88e78db824d969c303fc5d494d4884c4d00284e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7f86073d0ecce353c63f31fd28c4bfeffb2411ed
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145548"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;add&gt; des &lt;claimTypeRequirements&gt;-Elements
 Gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbundenen Anmeldeinformationen vorhanden sein sollen. Zum Beispiel geben die Dienste die Anforderungen für eingehende Anmeldeinformationen an, die einen bestimmten Satz von Anspruchstypen verarbeiten müssen.  
@@ -22,10 +23,10 @@ Gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbunden
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<claimTypeRequirements>  
-      <add claimType="URI"  
-        isOptional="Boolean" />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <add claimType="URI"
+       isOptional="Boolean" />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -54,23 +55,21 @@ Gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbunden
  Die folgende Konfiguration fügt einer Sicherheitsbindung zwei Anspruchstypanforderungen hinzu.  
   
 ```xml  
-<bindings>  
-    <wsFederationHttpBinding>  
-      <binding name="myFederatedBinding">  
-        <security mode="Message">  
-          <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">  
-            <claimTypeRequirements>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress"/>  
-              <add claimType=  
-"http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"    
-optional="true" />  
-            </claims>  
-          </message>  
-        </security>  
-      </binding>  
-    </wsFederationHttpBinding>  
-</bindings>  
+<bindings>
+  <wsFederationHttpBinding>
+    <binding name="myFederatedBinding">
+      <security mode="Message">
+        <message issuedTokenType="urn:oasis:names:tc:SAML:1.0:assertion">
+          <claimTypeRequirements>
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/EmailAddress" />
+            <add claimType="http://schemas.microsoft.com/ws/2005/05/identity/claims/UserName"
+                 optional="true" />
+          </claimTypeRequirements>
+        </message>
+      </security>
+    </binding>
+  </wsFederationHttpBinding>
+</bindings>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -2,15 +2,15 @@
 title: '&lt;add&gt; von &lt;baseAddressPrefixFilter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: e4408488036be210e3a8b9cf8b8f8f8c2e669a1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ece3178c48c84c609ab959a5cfc426062de9255f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365188"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145600"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; von &lt;baseAddressPrefixFilter&gt;
-Stellt ein Konfigurationselement, das einen Pass-Through-Filter gibt an, der welche die bietet einen Mechanismus, um die entsprechenden (Internet Information Services, IIS)-Bindungen auszuwählen, wenn Sie eine Windows Communication Foundation (WCF)-Anwendung in IIS hosten.  
+Stellt ein Konfigurationselement, das einen Pass-Through-Filter, der einen Mechanismus angibt, um die entsprechenden (Internet Information Services, IIS)-Bindungen auszuwählen, wenn Sie eine Windows Communication Foundation (WCF)-Anwendung in IIS zu hosten.  
   
  \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
@@ -20,11 +20,11 @@ Stellt ein Konfigurationselement, das einen Pass-Through-Filter gibt an, der wel
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="string"/>  
-     </baseAddressPrefixFilters>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <baseAddressPrefixFilters>
+    <add prefix="String" />
+  </baseAddressPrefixFilters>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -43,14 +43,14 @@ Stellt ein Konfigurationselement, das einen Pass-Through-Filter gibt an, der wel
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<BaseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Eine Auflistung von Konfigurationselementen, die durchlauffilter, die einen Mechanismus angeben, um die entsprechenden IIS-Bindungen auszuwählen, wenn Sie eine Windows Communication Foundation (WCF)-Anwendung in IIS hosten.|  
+|[\<BaseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Eine Auflistung von Konfigurationselementen, die durchlauffilter, die einen Mechanismus angeben, um die entsprechenden IIS-Bindungen auszuwählen, wenn Sie eine Windows Communication Foundation (WCF)-Anwendung in IIS hosten bereitstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein Präfixfilter bietet gemeinsamen Hostanbietern eine Methode, um die vom Dienst zu verwendenden URIs anzugeben. Sie ermöglicht es gemeinsamen Hosts, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
   
  IIS-Websites sind Container für virtuelle Anwendungen, die virtuelle Verzeichnisse enthalten. Auf die Anwendung auf einer Website kann über eine oder mehrere IIS-Bindungen zugegriffen werden. IIS-Bindungen stellen zwei Angaben bereit: ein Bindungsprotokoll und Bindungsinformationen. Das Bindungsprotokoll (z.&#160;B. HTTP) definiert das Schema, über das die Kommunikation erfolgt, und Bindungsinformationen (z.&#160;B. IP-Address, Anschluss, Hostheader) enthalten Daten, die für den Zugriff auf die Website verwendet werden.  
   
- IIS unterstützt die Angabe mehrerer IIS-Bindungen für jede Website, was zu mehreren Basisadressen für jedes Schema führt. Da ein unter einer Website gehosteter WCF-Dienst Bindung an nur eine Basisadresse für jedes Schema ermöglicht, können Sie die Funktion "präfixfilter", um die erforderliche Basisadresse des gehosteten Dienstes auswählen. Die von IIS bereitgestellten eingehenden Basisadressen werden anhand des optionalen Präfixlistenfilters gefiltert.  
+ IIS unterstützt die Angabe mehrerer IIS-Bindungen für jede Website, was zu mehreren Basisadressen für jedes Schema führt. Da ein unter einer Website gehosteter WCF-Dienst-Bindung an nur eine Basisadresse für jedes Schema ermöglicht, können Sie die Funktion "präfixfilter", um die erforderliche Basisadresse des gehosteten Dienstes auswählen. Die von IIS bereitgestellten eingehenden Basisadressen werden anhand des optionalen Präfixlistenfilters gefiltert.  
   
  Ihre Website kann beispielsweise die folgenden Basisadressen enthalten.  
   
@@ -62,14 +62,14 @@ http://test2.fabrikam.com/Service.svc
  Sie können die folgende Konfigurationsdatei verwenden, um einen Präfixfilter auf AppDomain-Ebene anzugeben.  
   
 ```xml  
-<system.serviceModel>  
-  <serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="net.tcp://test1.fabrikam.com:8000"/>  
-        <add prefix="http://test2.fabrikam.com:9000"/>  
-    </baseAddressPrefixFilters>  
-  </serviceHostingEnvironment>  
-</system.serviceModel>  
+<system.serviceModel>
+  <serviceHostingEnvironment>
+    <baseAddressPrefixFilters>
+      <add prefix="net.tcp://test1.fabrikam.com:8000" />
+      <add prefix="http://test2.fabrikam.com:9000" />
+    </baseAddressPrefixFilters>
+  </serviceHostingEnvironment>
+</system.serviceModel>
 ```  
   
  In diesem Beispiel sind `net.tcp://test1.fabrikam.com:8000` und `http://test2.fabrikam.com:9000` die einzigen Basisadressen für die jeweiligen Schemata, die übergeben werden können.  

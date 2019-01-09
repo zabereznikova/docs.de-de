@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# mit Befehlszeilentools
 description: Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekte in F# mit .NET Core-CLI auf einem beliebigen Betriebssystem (Windows, MacOS oder Linux) erstellen.
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673908"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152098"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Erste Schritte in F# mit der .NET Core-CLI
 
@@ -131,7 +131,7 @@ Hinzufügen des `App` Projektes zur `FSNetCore` Projektmappe mithilfe des `dotne
 dotnet sln add src/App/App.fsproj
 ```
 
-Wiederherstellen der NuGet-Abhängigkeiten mit dem Befehl `dotnet restore` ([Siehe Hinweis](#dotnet-restore-note)) und Erstellung des Projektes mit `dotnet build`.
+Wiederherstellen der NuGet-Abhängigkeiten, `dotnet restore` , und führen Sie `dotnet build` zum Erstellen des Projekts.
 
 Wechseln Sie zum Verzeichnis der `src/App` Konsolenanwendung und führen Sie das Projekt mit `Hello World` as Argumente aus:
 

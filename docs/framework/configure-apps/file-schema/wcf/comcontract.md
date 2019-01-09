@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8e0e18c934589e89ff5e10b14ba02f8daee11c66
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839536"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146874"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Gibt einen Dienstvertrag für die COM+-Integration an.  
@@ -18,29 +18,28 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="string"  
-      namespace="string"  
-      name="string"  
-      requireSession="Boolean">  
-      <exposedMethods>  
-         <exposedMethod name="string" />  
-      </exposedMethods>  
-      <userDefinedTypes>  
-         <userDefinedType name="string"  
-            typeLibID="string"  
-            typeLibVersion="string"  
-            typeDefID="string">  
-         </userDefinedType>  
-      </userDefinedTypes>  
-      <persistableTypes>  
-         <persistableType id="string"  
-            name="string">  
-         </persistableType>  
-      </persistableTypes>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="String"
+               namespace="String"
+               name="String"
+               requireSession="Boolean">
+    <exposedMethods>
+      <exposedMethod name="String" />
+    </exposedMethods>
+    <userDefinedTypes>
+      <userDefinedType name="String"
+                       typeLibID="String"
+                       typeLibVersion="String"
+                       typeDefID="String">
+      </userDefinedType>
+    </userDefinedTypes>
+    <persistableTypes>
+      <persistableType id="String"
+                       name="String">
+      </persistableType>
+    </persistableTypes>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -73,19 +72,18 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
  COM+-integrationsdienstverträge sind aktuell auf beschränkt die `http://tempuri.org` -Namespace und Vertragsnamen aus der unterstützenden COM-Schnittstelle abgeleitet wird. Sie können Alternativen aber angeben, indem Sie den `comContracts`-Abschnitt und das `comContract`-Element in der Konfigurationsdatei verwenden. Sie können beispielsweise folgende Konfiguration zum Angeben des Namespaces, des Vertragsnamens, der benutzerdefinierten Typen und anderer Einstellungen für einen Dienstvertrag verwenden.  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
-      namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"  
-      name="_Broker"  
-      requireSession="true">  
-      <exposedMethods>  
-         <exposedMethod name="BuyStock" />  
-         <exposedMethod name="SellStock" />  
-         <exposedMethod name="ExecuteTransaction" />  
-      </exposedMethods>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"
+               namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"
+               name="_Broker"
+               requireSession="true">
+    <exposedMethods>
+      <exposedMethod name="BuyStock" />
+      <exposedMethod name="SellStock" />
+      <exposedMethod name="ExecuteTransaction" />
+    </exposedMethods>
+  </comContract>
+</comContracts>
 ```  
   
  Wenn der Dienst initialisiert wird, werden die angegebenen Namespaces und Vertragsnamen auf die generierten Dienstbeschreibungen angewendet.  

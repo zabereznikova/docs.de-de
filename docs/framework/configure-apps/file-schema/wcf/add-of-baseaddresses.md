@@ -2,12 +2,12 @@
 title: '&lt;add&gt; von &lt;baseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1bd7426f-5f4f-43fc-b8e9-de842219aa32
-ms.openlocfilehash: 3f1b7e8f1f4ab8542270d459ce5020ce4320eea9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ce476c2d40758cf52eada813873d061d0e441bce
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754144"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149084"
 ---
 # <a name="ltaddgt-of-ltbaseaddressesgt"></a>&lt;add&gt; von &lt;baseAddresses&gt;
 Stellt ein Konfigurationselement dar, das die vom Diensthost verwendeten Basisadressen angibt.  
@@ -17,12 +17,12 @@ Stellt ein Konfigurationselement dar, das die vom Diensthost verwendeten Basisad
 \<Endpunkt >  
 \<Host >  
 \<BaseAddresses >  
-\<BaseAddress-Element >  
+\<BaseAddress >  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<add baseAddress="string" />  
+<add baseAddress="string" />
 ```  
   
 ## <a name="type"></a>Typ  

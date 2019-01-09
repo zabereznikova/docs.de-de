@@ -2,15 +2,15 @@
 title: '&lt;contractTypeNames&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: 99547967b65e5d7663ec11be98247e2018aaa34c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 60647e6ec31e7228f09d084ff669a1829770ca14
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752919"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144729"
 ---
 # <a name="ltcontracttypenamesgt"></a>&lt;contractTypeNames&gt;
-Ein Konfigurationsabschnitt, der eine Liste von Vertragstypnamen angibt, bei denen es sich um die Vertragsnamen der gesuchten Dienste handelt, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen. Beachten Sie, dass in der Windows Communication Foundation (WCF) ein Endpunkt nur als einen Vertrag unterstützen kann.  
+Ein Konfigurationsabschnitt, der eine Liste von Vertragstypnamen angibt, bei denen es sich um die Vertragsnamen der gesuchten Dienste handelt, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen. Beachten Sie, dass in Windows Communication Foundation (WCF), ein Endpunkt nur als einen Vertrag unterstützen kann.  
   
  \<system.ServiceModel>  
 \<StandardEndpoints >  
@@ -18,16 +18,17 @@ Ein Konfigurationsabschnitt, der eine Liste von Vertragstypnamen angibt, bei den
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <dynamicEndpoint>
       <standardEndpoint>
         <discoveryClientSettings discoveryEndpoint="String">
-          <findCriteria duration="TimeSpan" 
-                        maxResults="Integer" 
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
                         scopeMatchBy="Uri">
             <contractTypeNames>
-              <add name="String" namespace="String" />
+              <add name="String"
+                   namespace="String" />
             <contractTypeNames>
             <extensions />
             <scopes>
@@ -37,8 +38,8 @@ Ein Konfigurationsabschnitt, der eine Liste von Vertragstypnamen angibt, bei den
         </discoveryClientSettings>
       <standardEndpoint>
     </dynamicEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -57,7 +58,7 @@ Ein Konfigurationsabschnitt, der eine Liste von Vertragstypnamen angibt, bei den
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<FindCriteria >](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Ein Konfigurationselement, das einen Kriteriensatz bereitstellt, der von einer Clientanwendung zum Suchen nach einem Ermittlungsdienst verwendet wird. Kriterien können in Suchkriterien (was Sie suchen Dienste) gruppiert werden und Beendigungskriterien (wie lange soll die Suche dauern).|  
+|[\<FindCriteria >](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Ein Konfigurationselement, das einen Kriteriensatz bereitstellt, der von einer Clientanwendung zum Suchen nach einem Ermittlungsdienst verwendet wird. Kriterien können in Suchkriterien (nach welchen Diensten soll gesucht werden, für die) gruppiert werden und Beendigungskriterien (wie lange soll die Suche dauern).|  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Discovery.FindCriteria>  

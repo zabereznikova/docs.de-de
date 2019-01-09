@@ -2,12 +2,12 @@
 title: '&lt;peerAuthentication&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 4fb8cc4989313afa3ef16c90b54e0feae1ccb71d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 8937df6a2fcab305a519d566f7d666a3d94b4061
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517553"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149715"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt;-Element
 Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.  
@@ -25,12 +25,10 @@ Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<peerAuthentication  
-customCertificateValidatorType = "namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
-certificateValidationMode = "ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
-revocationMode="NoCheck/Online/Offline"  
-trustedStoreLocation="CurrentUser/LocalMachine"   
-/>  
+<peerAuthentication customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
+                    certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
+                    revocationMode="NoCheck/Online/Offline"
+                    trustedStoreLocation="CurrentUser/LocalMachine" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -82,24 +80,24 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  Das `<authentication>`-Element entspricht der <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>-Klasse. Mit diesem Element wird ein Validierungssteuerelement angegeben, das bei Nachbar-zu-Nachbar-Authentifizierung im Mesh aufgerufen wird. Versucht ein neuer Peer, eine Nachbarverbindung herzustellen, übergibt er seine eigenen Anmeldeinformationen an den antwortenden Peer. Das Validierungssteuerelement des antwortenden Peers wird aufgerufen, um die Anmeldeinformationen der Remotepartei zu überprüfen. Bei jeder Herstellung einer Peerverbindung im Mesh werden beide Peers gegenseitig authentifziert, das heißt, die Validierungssteuerelemente werden an beiden Enden aufgerufen.  
   
 ## <a name="example"></a>Beispiel  
- Mit dem folgenden Code wird der Zertifikatprüfmodus auf `PeerOrChainTrust` festgelegt.  
+ Mit dem folgenden Code wird der Zertifikatvalidierungsmodus auf `PeerOrChainTrust` festgelegt.  
   
 ```xml  
-<behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <peer>  
-     <certificate findValue="www.contoso.com"   
-                   storeLocation="LocalMachine"  
-                   x509FindType="FindByIssuerName" />  
-     <peerAuthentication   
-          certificateValidationMode="PeerOrChainTrust" />  
-     <messageSenderAuthentication certificateValidationMode="None" />  
-    </peer>  
-   </clientCredentials>  
-  </behavior>  
-</endpointBehaviors>  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="MyEndpointBehavior">
+      <clientCredentials>
+        <peer>
+          <certificate findValue="www.contoso.com"
+                       storeLocation="LocalMachine"
+                       x509FindType="FindByIssuerName" />
+          <peerAuthentication certificateValidationMode="PeerOrChainTrust" />
+          <messageSenderAuthentication certificateValidationMode="None" />
+        </peer>
+      </clientCredentials>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

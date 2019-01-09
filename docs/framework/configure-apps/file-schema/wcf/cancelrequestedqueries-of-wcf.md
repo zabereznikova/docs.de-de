@@ -2,12 +2,12 @@
 title: '&lt;cancelRequestedQueries&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 40fbcafd641e93be6ba21635f4f6e6428be62c12
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9cf2761bdab36d95b5077e36174565659230b512
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193785"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145444"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>&lt;cancelRequestedQueries&gt; von WCF
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Anforderungen nachzuverfolgen, mit denen die übergeordnete Aktivität den Abbruch einer untergeordneten Aktivität verlangt. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte mit Abbruchanforderungen abonnieren kann.  
@@ -22,21 +22,21 @@ Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwach
   
 ## <a name="syntax"></a>Syntax  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <cancelRequestQueries>
           <cancelRequestQuery activityName="String"
-                              childActivityName="String"/>
+                              childActivityName="String" />
         </cancelRequestQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
 
 In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  

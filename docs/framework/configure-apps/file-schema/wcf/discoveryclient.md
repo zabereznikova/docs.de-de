@@ -1,15 +1,15 @@
 ---
-title: '&lt;discoveryClient&gt;'
+title: '&lt;DiscoveryClient&gt;'
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-ms.openlocfilehash: 8c69104b9eb1097ef5dc94c9aae7352d4949668f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9aef599ebf8068a383fd093b126a6bde1670b291
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753166"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151397"
 ---
-# <a name="ltdiscoveryclientgt"></a>&lt;discoveryClient&gt;
+# <a name="ltdiscoveryclientgt"></a>&lt;DiscoveryClient&gt;
 Ein Konfigurationselement zum Erstellen einer benutzerdefinierten Bindung, mit der eine Clientanwendung automatisch nach einem sichtbaren Workflowdienst suchen und zur Laufzeit dessen Adresse abrufen kann.  
   
 \<system.serviceModel>  
@@ -21,17 +21,20 @@ Ein Konfigurationselement zum Erstellen einer benutzerdefinierten Bindung, mit d
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<discoveryClient discoveryEndpoint="String" >
-  <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+<discoveryClient discoveryEndpoint="String">
+  <findCriteria duration="TimeSpan"
+                maxResults="Integer"
+                scopeMatchBy="Uri">
     <contractTypeNames>
-      <add name="String" namespace="String" />
-    <contractTypeNames>
+      <add name="String"
+           namespace="String" />
+    </contractTypeNames>
     <extensions />
     <scopes>
       <add scope="URI"/>
     </scopes>
   </findCriteria>
-</discoveryClient>  
+</discoveryClient>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -47,7 +50,7 @@ Ein Konfigurationselement zum Erstellen einer benutzerdefinierten Bindung, mit d
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Ein Konfigurationselement, das einen Kriteriensatz bereitstellt, der von einer Clientanwendung zum Suchen nach einem Ermittlungsdienst verwendet wird. Kriterien können in Suchkriterien (was Sie suchen Dienste) gruppiert werden und Beendigungskriterien (wie lange soll die Suche dauern).|  
+|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Ein Konfigurationselement, das einen Kriteriensatz bereitstellt, der von einer Clientanwendung zum Suchen nach einem Ermittlungsdienst verwendet wird. Kriterien können in Suchkriterien (nach welchen Diensten soll gesucht werden, für die) gruppiert werden und Beendigungskriterien (wie lange soll die Suche dauern).|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

@@ -2,12 +2,12 @@
 title: '&lt;endpoint&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749503"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147485"
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt;-Element
 Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt an, der zur Verfügbarmachung von Diensten verwendet wird.  
@@ -19,16 +19,19 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   bindingName="String"  
-   bindingNamespace="String"  
-   contract="String"  
-   endpointConfiguration="String"   isSystemEndpoint="Boolean"   kind="String"   listenUriMode="Explicit/Unique"  
-   listenUri="Uri"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          bindingName="String"
+          bindingNamespace="String"
+          contract="String"
+          endpointConfiguration="String"
+          isSystemEndpoint="Boolean"
+          kind="String"
+          listenUriMode="Explicit/Unique"
+          listenUri="Uri">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -48,7 +51,7 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
 |endpointConfiguration|Eine Zeichenfolge, die den Namen des Standardendpunkts angibt, der mit dem `kind`-Attribut festgelegt wird, das auf die zusätzlichen Konfigurationsinformationen dieses Standardendpunkts verweist. Der gleiche Name muss im Abschnitt `<standardEndpoints>` definiert werden.|  
 |isSystemEndpoint|Ein boolescher Wert, der angibt, ob ein Endpunkt ein Infrastrukturendpunkt ist.|  
 |kind|Eine Zeichenfolge, die den Typ des angewendeten Standardendpunkts angibt. Der Typ muss im Abschnitt `<extensions>` oder in machine.config registriert werden. Wenn kein Wert angegeben wird, wird ein allgemeiner Dienstendpunkt erstellt.|  
-|listenUriMode|Gibt an, wie der Transport die `ListenUri` verarbeitet, die für die Überwachung durch den Dienst bereitgestellt wurde. Folgende Werte sind gültig:<br /><br /> -Explizite<br />-Eindeutig<br /><br /> Der Standardwert ist Explicit.|  
+|listenUriMode|Gibt an, wie der Transport die `ListenUri` verarbeitet, die für die Überwachung durch den Dienst bereitgestellt wurde. Folgende Werte sind gültig:<br /><br /> -Explicit<br />-Eindeutig<br /><br /> Der Standardwert ist Explicit.|  
 |listenUri|Eine Zeichenfolge mit dem URI, an dem der Dienstendpunkt lauscht. Der Standardwert ist eine leere Zeichenfolge.|  
 |Name|Optionales Attribut. Eine Zeichenfolge, die den Namen des Dienstendpunkts angibt. Der Standardwert ist die Verkettung des Bindungsnamen und des Vertragsbeschreibungsnamens. Dienste haben möglicherweise mehrere Endpunkte, sodass das `name`-Attribut des Endpunkts sich vom Namen des Diensts unterscheidet.|  
   
@@ -69,17 +72,16 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
  Dies ist ein Beispiel für eine Dienstendpunkt-Konfiguration.  
   
 ```xml  
-<endpoint   
-    address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    bindingName="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-    <Headers>  
-       <Region xmlns="http://tempuri.org/">EastCoast</Region>  
-       <Member xmlns="http://tempuri.org/">Gold</Member>  
-    </Headers>  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          bindingName="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+  <headers>
+    <region xmlns="http://tempuri.org/">EastCoast</region>
+    <member xmlns="http://tempuri.org/">Gold</member>
+  </headers>
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -87,4 +89,4 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.Description.ServiceEndpoint>  
  [Endpunkte: Adressen, Bindungen und Verträge](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+ [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

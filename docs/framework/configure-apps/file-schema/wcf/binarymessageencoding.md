@@ -2,12 +2,12 @@
 title: '&lt;binaryMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: b3b359c9d3e80186e0296e6fbb0ba5683210f2a6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e29721104400c8a0352ebf5cd292689de0d6b14
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510245"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150124"
 ---
 # <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
 Definiert einen Binärnachrichtenencoder, der die Windows Communication Foundation (WCF)-Nachrichten bei der Übertragung im Binärformat verschlüsselt.  
@@ -21,10 +21,10 @@ Definiert einen Binärnachrichtenencoder, der die Windows Communication Foundati
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<binaryMessageEncoding   
-      maxReadPoolSize="Integer"  
-   maxSessionSize="Integer"   
-   maxWritePoolSize="Integer"   messageVersion="Soap11Addressing10/Soap12Addressing10" />  
+<binaryMessageEncoding maxReadPoolSize="Integer"
+                       maxSessionSize="Integer"
+                       maxWritePoolSize="Integer"
+                       messageVersion="Soap11Addressing10/Soap12Addressing10" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -52,16 +52,16 @@ Definiert einen Binärnachrichtenencoder, der die Windows Communication Foundati
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Codieren wird eine Nachricht in eine Bytefolge transformiert. Beim Decodieren wird dieser Prozess umgekehrt. Windows Communication Foundation (WCF) enthält drei Typen für die Codierung von SOAP-Nachrichten: Text, binär und Message Transmission Optimization Mechanism (MTOM).  
+ Beim Codieren wird eine Nachricht in eine Bytefolge transformiert. Beim Decodieren wird dieser Prozess umgekehrt. Windows Communication Foundation (WCF) enthält drei Typen für die Codierung von SOAP-Nachrichten: Text, Binär und Message Transmission Optimization Mechanism (MTOM).  
   
  Das `binaryMessageEncoding`-Element gibt das .NET Binary-Format für XML an und bietet Optionen zum Festlegen der Zeichencodierung und der zu verwendenden SOAP- und WS-Adressierungsversion. Der Binärnachrichtenencoder verschlüsselt die Windows Communication Foundation (WCF)-Nachrichten bei der Übertragung im Binärformat. Diese Verschlüsselung resultiert zwar in einer schnellen Nachrichtenübertragung, die auf den WS-*-Standards basierende Interoperabilität geht aber verloren.  
   
 ## <a name="example"></a>Beispiel  
   
 ```xml  
-<binaryMessageEncoding maxReadPoolSize="211"  
-   maxWritePoolSize="2132"  
-   maxSessionSize="3141" />  
+<binaryMessageEncoding maxReadPoolSize="211"
+                       maxWritePoolSize="2132"
+                       maxSessionSize="3141" />
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

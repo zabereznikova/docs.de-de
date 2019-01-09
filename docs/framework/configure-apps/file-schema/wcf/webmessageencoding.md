@@ -2,12 +2,12 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: eddda5e805d7e2cc361b6925d34d13eb8fd614f9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e8b45075c7c07efc49f84526382352a5b1a556b1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773630"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148668"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen und unformatierten binären Inhalt, die bei der Verwendung in einer Windows Communication Foundation-Bindung (WCF) gelesen und geschrieben werden sollen.  
@@ -21,11 +21,9 @@ Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<webMessageEncoding   
-      maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-  
-writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<webMessageEncoding maxReadPoolSize="Integer"
+                    maxWritePoolSize="Integer"
+                    writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -37,7 +35,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 |---------------|-----------------|  
 |`maxReadPoolSize`|Die Anzahl von Nachrichten, die gleichzeitig gelesen werden können, ohne neue Reader zuzuordnen. Durch größere Poolgrößen wird das System toleranter gegenüber Aktivitätsspitzen auf Kosten eines umfangreicheren Workingsets. Der Standard ist 64 Reader für jeden der inneren Encoder (Text, JSON und "unformatiert").<br /><br /> Durch das Erhöhen dieser Zahl wird der Speicherverbrauch gesteigert, jedoch wird der Encoder auf einen plötzlichen Anstieg eingehender Nachrichten vorbereitet, da er Reader aus dem Pool verwenden kann, die bereits erstellt wurden, sodass keine neuen Reader erstellt werden.|  
 |`maxWritePoolSize`|Die maximale Anzahl von Nachrichten, die gleichzeitig gesendet werden können, ohne neue Writer zuzuordnen. Durch größere Poolgrößen wird das System toleranter gegenüber Aktivitätsspitzen auf Kosten eines umfangreicheren Workingsets. Der Standard ist 16 Writer für jeden der inneren Encoder (Text, JSON und "unformatiert").<br /><br /> Durch das Erhöhen dieser Zahl wird der Speicherverbrauch gesteigert, jedoch wird der Encoder auf einen plötzlichen Anstieg ausgehender Nachrichten vorbereitet, da er Writer aus dem Pool verwenden kann, die bereits erstellt wurden, sodass keine neuen Writer erstellt werden.|  
-|`writeEncoding`|Gibt die Zeichensatzcodierung an, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Gültige Werte sind:<br /><br /> -UnicodeFffeTextEncoding: Unicode bigEndian-Codierung.<br />-Utf16TextEncoding: Unicode-Codierung.<br />-Utf8TextEncoding: 8-Bit-Codierung.<br /><br /> Der Standardwert ist Utf8TextEncoding. Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
+|`writeEncoding`|Gibt die Zeichensatzcodierung an, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Gültige Werte sind:<br /><br /> -UnicodeFffeTextEncoding: Unicode-bigEndian-Codierung.<br />-Utf16TextEncoding: Unicode-Codierung.<br />-Utf8TextEncoding: 8-Bit-Codierung.<br /><br /> Der Standardwert ist Utf8TextEncoding. Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -67,12 +65,10 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ## <a name="example"></a>Beispiel  
   
 ```xml  
-<webMessageEncoding   
-    maxReadPoolSize="256"  
-    maxWritePoolSize="128"  
-    messageVersion="None"  
-    textEncoding="utf-8"   
-/>  
+<webMessageEncoding maxReadPoolSize="256"
+                    maxWritePoolSize="128"
+                    messageVersion="None"
+                    textEncoding="utf-8" />
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

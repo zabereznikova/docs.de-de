@@ -2,12 +2,12 @@
 title: '&lt;defaultCertificate&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2f6167d7b30da753d093a87753eeef3374fcc0f0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847853"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146991"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt;-Element
 Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein Zertifikat über ein Aushandlungsprotokoll bereitstellt.  
@@ -23,10 +23,10 @@ EndpointBehaviors-Abschnitt
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<defaultCertificate findValue="String"   
-storeLocation=" CurrentUser/LocalMachine"  
-storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"   
-x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialiNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />  
+<defaultCertificate findValue="String"
+                    storeLocation=" CurrentUser/LocalMachine"
+                    storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                    x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialiNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -51,7 +51,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Zu den gültigen Werten gehören: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeration|Mögliche Werte: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation-Attribut  
   
@@ -63,7 +63,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Zu den gültigen Werten gehören: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
+|Enumeration|Mögliche Werte: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -81,19 +81,21 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  Im folgenden Beispiel wird ein Zertifikat für Endpunkte verwenden, deren URI beginnt mit `http://www.contoso.com` und ein Zertifikat für alle anderen Endpunkte, die keine zertifikatsaushandlung durchführen.  
   
 ```xml  
-<serviceCertificate>  
-  <defaultCertificate findValue="www.contoso.com"   
-                      storeLocation="LocalMachine"  
-                      storeName="TrustedPeople"   
-                      x509FindType="FindByIssuerDistinguishedName" />  
-  <scopedCertificates>  
-     <add targetUri="http://www.contoso.com"   
-          findValue="www.contoso.com" storeLocation="LocalMachine"  
-                  storeName="Root" x509FindType="FindByIssuerName" />  
-  </scopedCertificates>  
-  <authentication revocationMode="Online"   
-   trustedStoreLocation="LocalMachine" />  
-</serviceCertificate>  
+<serviceCertificate>
+  <defaultCertificate findValue="www.contoso.com"
+                      storeLocation="LocalMachine"
+                      storeName="TrustedPeople"
+                      x509FindType="FindByIssuerDistinguishedName" />
+  <scopedCertificates>
+    <add targetUri="http://www.contoso.com"
+         findValue="www.contoso.com"
+         storeLocation="LocalMachine"
+         storeName="Root"
+         x509FindType="FindByIssuerName" />
+  </scopedCertificates>
+  <authentication revocationMode="Online"
+                  trustedStoreLocation="LocalMachine" />
+</serviceCertificate>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

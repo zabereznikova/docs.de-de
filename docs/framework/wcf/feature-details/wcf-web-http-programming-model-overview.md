@@ -2,12 +2,12 @@
 title: Überblick über WCF-Web-HTTP-Programmiermodelle
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 03bfa53ac8e2a6cf7b252a8d0ea4683727134e4a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517074"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152085"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
 Das Windows Communication Foundation (WCF)-WEB-HTTP-Programmiermodell bietet die grundlegenden Elemente zum Erstellen von WEB-HTTP-Diensten mit WCF. WCF-WEB-HTTP-Diensten sind die größtmögliche Palette an möglichen Clients, einschließlich Webbrowsern zugegriffen werden soll und haben die folgenden besonderen Anforderungen:  
@@ -26,7 +26,7 @@ Das Windows Communication Foundation (WCF)-WEB-HTTP-Programmiermodell bietet die
 >  Mit dem WCF-WEB-HTTP-Programmiermodell geschriebene Dienste verwenden keine SOAP-Nachrichten. Da SOAP nicht verwendet wird, können nicht den Sicherheitsfeatures von WCF verwendet werden. Sie können jedoch transportbasierte Sicherheit verwenden, indem Sie den Dienst mit HTTPS hosten. Weitere Informationen zu WCF-Sicherheit, finden Sie unter [Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  Die Installation der WebDAV-Erweiterung für IIS kann dazu führen, dass Web-HTTP-Dienste den HTTP-Fehler 405 zurückgeben, da die WebDAV-Erweiterung versucht, alle PUT-Anforderungen zu verarbeiten. Um dieses Problem zu umgehen, können Sie die WebDAV-Erweiterung deinstallieren oder für Ihre Website deaktivieren. Weitere Informationen finden Sie unter [IIS und WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  Die Installation der WebDAV-Erweiterung für IIS kann dazu führen, dass Web-HTTP-Dienste den HTTP-Fehler 405 zurückgeben, da die WebDAV-Erweiterung versucht, alle PUT-Anforderungen zu verarbeiten. Um dieses Problem zu umgehen, können Sie die WebDAV-Erweiterung deinstallieren oder für Ihre Website deaktivieren. Weitere Informationen finden Sie unter [IIS und WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>URI-Verarbeitung mit UriTemplate und UriTemplateTable  
  URI-Vorlagen stellen eine rationelle Syntax zur Angabe großer Sätze strukturell ähnlicher URIs bereit. Beispielsweise wird mit der folgenden Vorlage der Satz aller aus drei Segmenten bestehenden URIs angegeben, die mit "a" beginnen, mit "c" enden und im mittleren Segment einen beliebigen Wert enthalten können: a/{segment}/c  
@@ -96,7 +96,7 @@ interface ICustomer
 }  
 ```  
   
- Ein vollständiges Beispiel eines WCF-Diensts, die das WCF-WEB-HTTP-Programmiermodell verwendet finden Sie unter [Vorgehensweise: Erstellen einer grundlegenden WCF-Web-HTTP-Dienst](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ Ein vollständiges Beispiel eines WCF-Diensts, die das WCF-WEB-HTTP-Programmiermodell verwendet finden Sie unter [Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate-Abfragezeichenfolgenparameter und URLs  
  Webdienste können aus einem Webbrowser heraus aufgerufen werden, indem eine URL eingegeben wird, die mit einem Dienstvorgang verknüpft ist. Diese Dienstvorgänge verarbeiten möglicherweise Abfragezeichenfolgenparameter, die in Form einer Zeichenfolge innerhalb der URL angegeben werden müssen. In der folgenden Tabelle sind die Typen, die innerhalb einer URL übergeben werden können, und das hierfür verwendete Format aufgeführt.  

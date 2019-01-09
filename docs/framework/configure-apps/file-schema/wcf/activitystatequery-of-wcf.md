@@ -2,12 +2,12 @@
 title: '&lt;activityStateQuery&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: a0dae6b90659bd3f53386459513abf92f25b005b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308312"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151788"
 ---
 # <a name="ltactivitystatequerygt-of-wcf"></a>&lt;activityStateQuery&gt; von WCF
 
@@ -31,20 +31,20 @@ Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfo
         <activityStateQueries>
           <activityStateQuery activityName="String">
             <arguments>
-              <argument name="String"/>
+              <argument name="String" />
             </arguments>
             <states>
-              <state name="String"/>
+              <state name="String" />
             </states>
             <variables>
-              <variable name="String"/>
+              <variable name="String" />
             </variables>
           </activityStateQuery>
         </activityStateQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -76,17 +76,17 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 Eine einzigartige Funktion des Elements „ActivityStateQuery“ ist seine Fähigkeit, Daten zu extrahieren, während es die Ausführung eines Workflows nachverfolgt. Dadurch steht zusätzlicher Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. Können Sie die [ \<Argumente >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<Zustände >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) und [ \<Zustände >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) Elementen, die jede beliebige Variable oder ein Argument zu extrahieren. in einer beliebigen Aktivität in einem Workflow. Das folgende Beispiel zeigt eine aktivitätszustandsabfrage, die Variablen und Argumente extrahiert, wenn der Aktivitäts `Closed` Überwachungsdatensatz ausgegeben wird. Variablen und Argumente können nur mit einem ActivityStateRecord extrahiert werden und daher abonniert werden innerhalb eines Überwachungsprofils profilerstellung mithilfe [ \<ActivityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
   
 ```xml  
-<activityStateQuery activityName="SendEmailActivity">  
-  <states>  
-    <state name="Closed"/>  
-  </states>  
-  <variables>  
-    <variable name="FromAddress"/>  
-  </variables>  
-  <arguments>  
-    <argument name="Result"/>  
-  </arguments>  
-</activityStateQuery>  
+<activityStateQuery activityName="SendEmailActivity">
+  <states>
+    <state name="Closed" />
+  </states>
+  <variables>
+    <variable name="FromAddress" />
+  </variables>
+  <arguments>
+    <argument name="Result" />
+  </arguments>
+</activityStateQuery>
 ```  
   
 ## <a name="see-also"></a>Siehe auch

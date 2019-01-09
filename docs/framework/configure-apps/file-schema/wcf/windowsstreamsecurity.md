@@ -2,12 +2,12 @@
 title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: e117c30ba2583158ee21fd11ff4a38b094c18fd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197631"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151123"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Geben Sie Einstellungen für Windows-Streamsicherheit für die benutzerdefinierte Bindung an.  
@@ -21,7 +21,7 @@ Geben Sie Einstellungen für Windows-Streamsicherheit für die benutzerdefiniert
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign"/>  
+<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -31,10 +31,10 @@ Geben Sie Einstellungen für Windows-Streamsicherheit für die benutzerdefiniert
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|protectionLevel|Definiert die Sicherheit auf Nachrichtenebene. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit. Folgende Werte sind gültig:<br /><br /> – None: Kein Schutz.<br />-Sign: Nachrichten werden signiert.<br />-EncryptAndSign: Nachrichten werden signiert und verschlüsselt.<br /><br /> Der Standardwert ist EncryptAndSign.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Net.Security.ProtectionLevel>.|  
+|protectionLevel|Definiert die Sicherheit auf Nachrichtenebene. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit. Folgende Werte sind gültig:<br /><br /> – None: Kein Schutz.<br />-Anmeldung: Nachrichten werden signiert.<br />-"EncryptAndSign" fest: Nachrichten werden signiert und verschlüsselt.<br /><br /> Der Standardwert ist EncryptAndSign.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

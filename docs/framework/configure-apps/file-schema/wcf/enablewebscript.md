@@ -2,12 +2,12 @@
 title: '&lt;enableWebScript&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: b14923c1b9a80bcd1c47db0e4fad6a6224b95329
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34100ce17e67e12574ec0cdd677991949d0b9214
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751895"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150798"
 ---
 # <a name="ltenablewebscriptgt"></a>&lt;enableWebScript&gt;
 Dieses Element aktiviert das Endpunktverhalten, durch das der Dienst über ASP.NET AJAX-Webseiten genutzt werden kann.  
@@ -21,7 +21,7 @@ Dieses Element aktiviert das Endpunktverhalten, durch das der Dienst über ASP.N
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<enableWebScript />  
+<enableWebScript />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -40,7 +40,7 @@ Dieses Element aktiviert das Endpunktverhalten, durch das der Dienst über ASP.N
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt den Satz an Endpunktverhalten an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Verhalten sollte nur verwendet werden, zusammen mit der [ \<WebHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) -standardbindung oder [ \<WebMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) Binding-Element.  Weitere Informationen zu diesem Verhalten finden Sie unter <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
+ Dieses Verhalten sollte nur verwendet werden, in Verbindung mit der [ \<WebHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) -standardbindung oder dem [ \<WebMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) Binding-Element.  Weitere Informationen zu diesem Verhalten finden Sie unter <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>  

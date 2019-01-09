@@ -2,12 +2,12 @@
 title: '&lt;message&gt; von &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3b8b2bae4b28b58a24e32cc1e6927d0ed940af1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: efd2edd96e695216f8c31128b6cf670668cd0da8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873189"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148499"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; von &lt;ws2007HttpBinding&gt;
 Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.  
@@ -22,18 +22,17 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<ws2007HttpBinding>  
- <binding >  
-  <security>  
-   <message clientCredentialType =  
-    "None/Windows/UserName/Certificate/IssuedToken"  
-    establishSecurityContext="Boolean"  
-    negotiateServiceCredential="Boolean"  
-    algorithmSuite= Enumeration. See algorithmSuite Attribute below.  
-    defaultProtectionLevel="None/Sign/EncryptionAndSign" />  
-  </security>  
- </binding>  
-</ws2007HttpBinding>  
+<ws2007HttpBinding>
+  <binding>
+    <security>
+      <message clientCredentialType="None/Windows/UserName/Certificate/IssuedToken"
+               establishSecurityContext="Boolean"
+               negotiateServiceCredential="Boolean"
+               algorithmSuite="Enumeration. See algorithmSuite Attribute below."
+               defaultProtectionLevel="None/Sign/EncryptionAndSign" />
+    </security>
+  </binding>
+</ws2007HttpBinding>
 ```  
   
 ## <a name="type"></a>Typ  
@@ -48,7 +47,7 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws
 |---------------|-----------------|  
 |`algorithmSuite`|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> Der Standardwert ist Basic256.|  
 |`clientCredentialType`|Dies ist optional. Gibt den Typ der Anmeldeinformationen an, die bei der Clientauthentifizierung im `Message`-Sicherheitsmodus oder im `TransportWithMessageCredentials`-Sicherheitsmodus verwendet werden. In der folgenden Tabelle sind die Enumerationswerte aufgeführt. Der Standardwert ist Windows.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.MessageCredentialType>.|  
-|`establishSecurityContext`|Ein Wert, der bestimmt, ob der Sicherheitskanal eine sichere Sitzung aufbaut. In einer sicheren Sitzung wird vor dem Austausch der Anwendungsnachrichten ein Sicherheitskontexttoken erstellt. Wenn das Sicherheitskontexttoken erstellt wurde, stellt der Sicherheitskanal eine <xref:System.ServiceModel.Channels.ISession>-Schnittstelle für die oberen Kanäle bereit. Weitere Informationen zur Verwendung von sicherer Sitzungen finden Sie unter [Vorgehensweise: Erstellen einer Sicherheitssitzung](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Der Standardwert ist `true`.|  
+|`establishSecurityContext`|Ein Wert, der bestimmt, ob der Sicherheitskanal eine sichere Sitzung aufbaut. In einer sicheren Sitzung wird vor dem Austausch der Anwendungsnachrichten ein Sicherheitskontexttoken erstellt. Wenn das Sicherheitskontexttoken erstellt wurde, stellt der Sicherheitskanal eine <xref:System.ServiceModel.Channels.ISession>-Schnittstelle für die oberen Kanäle bereit. Weitere Informationen zur Verwendung von sicherer Sitzungen finden Sie unter [Vorgehensweise: Erstellen einer sicheren Sitzung](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Der Standardwert ist `true`.|  
 |`negotiateServiceCredential`|Dies ist optional. Ein Wert, der angibt, ob die Dienstanmeldeinformationen auf dem Client out-of-band bereitgestellt oder vom Dienst für den Client über einen Aushandlungsvorgang abgerufen werden. Eine solche Verhandlung ist Vorläufer zum üblichen Nachrichtenaustausch.<br /><br /> Wenn die `clientCredentialType` -Attribut None, Username oder Certificate lautet, wenn dieses Attribut auf `false` impliziert, dass das Dienstzertifikat auf dem Client Out-of-Band-verfügbar ist und der Client das Dienstzertifikat (unter Verwendung der angebenmuss[ \<ServiceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) in der [ \<ServiceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) -Dienstverhalten. Dieser Modus ist mit SOAP-Stapeln interoperabel, die WS-Trust und WS-SecureConversation implementieren.<br /><br /> Wenn das `ClientCredentialType`-Attribut `Windows` lautet, wird durch Festlegen dieses Attributs auf `false` die Kerberos-basierte Authentifizierung angegeben. Dies bedeutet, dass Client und Dienst Teil der gleichen Kerberos-Domäne sein müssen. Dieser Modus ist mit SOAP-Stapeln interoperabel, die das Kerberos-Tokenprofil (gemäß der Definition in OASIS WSS TC) sowie WS-Trust und WS-SecureConversation implementieren.<br /><br /> Wenn dieses Attribut `true` lautet, wird eine .NET SOAP-Aushandlung verursacht, die den <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A>-Austausch über SOAP-Nachrichten tunnelt.<br /><br /> Die Standardeinstellung ist `true`.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite-Attribut  
@@ -83,7 +82,7 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws
 |`Windows`|Dies ermöglicht den SOAP-Austausch im Rahmen des authentifizierten Kontexts von `Windows`-Anmeldeinformationen. Wenn das `negotiateServiceCredential`-Attribut auf `true` festgelegt ist, wird entweder eine SSPI-Verhandlung oder Kerberos (ein interoperabler Standard) ausgeführt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

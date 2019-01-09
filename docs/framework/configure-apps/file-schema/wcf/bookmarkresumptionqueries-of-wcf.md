@@ -2,15 +2,15 @@
 title: '&lt;bookmarkResumptionQueries&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147645"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146081"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; von WCF
-
+  
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um die Wiederaufnahme eines Lesezeichens innerhalb einer Workflowinstanz nachzuverfolgen. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensätze mit Lesezeichenwiederaufnahmen abonnieren kann.  
   
 Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
@@ -25,7 +25,7 @@ Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfo
   
 ## <a name="syntax"></a>Syntax  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,15 +36,15 @@ Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfo
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
-## <a name="attributes-and-elements"></a>Attribute und Elemente
-
+</tracking>
+```  
+  
+## <a name="attributes-and-elements"></a>Attribute und Elemente  
+  
 In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute
-
+### <a name="attributes"></a>Attribute  
+  
 Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  

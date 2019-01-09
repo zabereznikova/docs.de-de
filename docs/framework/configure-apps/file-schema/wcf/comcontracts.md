@@ -2,12 +2,12 @@
 title: '&lt;comContracts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 297a28181de8ce6ed658afad950f25cced9f9cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 26f17a331d69c38d720fcafe65c76f50c67def09
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402788"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150785"
 ---
 # <a name="ltcomcontractsgt"></a>&lt;comContracts&gt;
 Der `comContracts`-Konfigurationsabschnitt enthält Elemente, mit denen Sie verschiedene Eigenschaften eines COM+-Integrationsdienstvertrags angeben können.  
@@ -18,14 +18,13 @@ Der `comContracts`-Konfigurationsabschnitt enthält Elemente, mit denen Sie vers
  Sie können z.&#160;B. folgende Konfiguration zum Angeben des Namespaces und Namens des Dienstvertrags sowie als Option zum Erzwingen sitzungsbasierter Bindungen verwenden.  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
-      namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"  
-      name="_Broker"  
-      requireSession="true">  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"
+               namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"
+               name="_Broker"
+               requireSession="true">
+  </comContract>
+</comContracts>
 ```  
   
  Wenn der Dienst initialisiert wird, werden die angegebenen Namespaces und Vertragsnamen auf die generierten Dienstbeschreibungen angewendet.  

@@ -2,12 +2,12 @@
 title: '&lt;issuerMetadata&gt; von &lt;issuedTokenParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 82c04fe71ec67b2c539dae9c41eb35350c72d923
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76956c54739219bbde78f378a12d59563ab785c4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746513"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148746"
 ---
 # <a name="ltissuermetadatagt-of-ltissuedtokenparametersgt"></a>&lt;issuerMetadata&gt; von &lt;issuedTokenParameters&gt;
 \<system.serviceModel>  
@@ -16,12 +16,12 @@ ms.locfileid: "32746513"
 \<binding>  
 \<Sicherheit >  
 \<IssuedTokenParameters >  
-\<IssuerMetadata >  
+\<"issuermetadata" >  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<issuerMetaData address=String"/>  
+<issuerMetaData address="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

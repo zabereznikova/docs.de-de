@@ -2,12 +2,12 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f0874d38c3432f066d1bec5cc84f53e1f3730180
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747979"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150148"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver verwendet werden soll. Dieses Element ist optional, da das PNRP der Standardresolver ist.  
@@ -21,7 +21,7 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<pnrpResolver resolverType="String" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -34,7 +34,7 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
 |resolverType|Eine Zeichenfolge, die den zu verwendenden Resolver angibt. Dieses Attribut ist optional. Wenn es nicht festgelegt wurde oder eine leere Zeichenfolge angegeben wurde, wird das PNRP verwendet.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -45,7 +45,7 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
 ## <a name="example"></a>Beispiel  
   
 ```xml  
-<pnrpResolver resolverType="" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -2,12 +2,12 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 0dde8150632c5d8a7bcea3dbeffe70b380d3a322
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183840"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150915"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.  
@@ -32,7 +32,7 @@ Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. s
       </endpointDiscovery>
     </behavior>
   </endpointBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -68,40 +68,40 @@ Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. s
  Im folgenden Konfigurationsbeispiel werden Filterbereiche und Erweiterungsmetadaten angegeben, die für einen Endpunkt veröffentlicht werden sollen.  
   
 ```xml  
-<services>  
-  <service name="CalculatorService"  
-           behaviorConfiguration="CalculatorServiceBehavior">  
-     <endpoint binding="basicHttpBinding"  
-              address="calculator"  
-              contract="ICalculatorService"  
-              behaviorConfiguration="calculatorEndpointBehavior" />  
-  </service>  
-</services>  
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name="CalculatorServiceBehavior">  
-      <serviceDiscovery />  
-    </behavior>  
-  </serviceBehaviors>  
-  <endpointBehaviors>  
-    <behavior name="calculatorEndpointBehavior">  
-      <endpointDiscovery enabled="true">  
-        <scopes>  
-          <add scope="http://contoso/test1"/>  
-          <add scope="http://contoso/test2"/>  
-        </scopes>  
-        <extensions>  
-          <e:Publisher xmlns:e="http://example.org">  
-            <e:Name>The Example Organization</e:Name>  
-            <e:Address>One Example Way, ExampleTown, EX 12345</e:Address>  
-            <e:Contact>support@example.org</e:Contact>  
-          </e:Publisher>  
-          <AnotherCustomMetadata>Custom Metadata</AnotherCustomMetadata>  
-        </extensions>  
-      </endpointDiscovery>  
-    </behavior>  
-  </endpointBehaviors>  
-</behaviors>  
+<services>
+  <service name="CalculatorService"
+           behaviorConfiguration="CalculatorServiceBehavior">
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService"
+              behaviorConfiguration="calculatorEndpointBehavior" />
+  </service>
+</services>
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="CalculatorServiceBehavior">
+      <serviceDiscovery />
+    </behavior>
+  </serviceBehaviors>
+  <endpointBehaviors>
+    <behavior name="calculatorEndpointBehavior">
+      <endpointDiscovery enabled="true">
+        <scopes>
+          <add scope="http://contoso/test1" />
+          <add scope="http://contoso/test2" />
+        </scopes>
+        <extensions>
+          <e:Publisher xmlns:e="http://example.org">
+            <e:Name>The Example Organization</e:Name>
+            <e:Address>One Example Way, ExampleTown, EX 12345</e:Address>
+            <e:Contact>support@example.org</e:Contact>
+          </e:Publisher>
+          <AnotherCustomMetadata>Custom Metadata</AnotherCustomMetadata>
+        </extensions>
+      </endpointDiscovery>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

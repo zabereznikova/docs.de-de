@@ -1,31 +1,31 @@
 ---
-title: '&lt;wsdllImporter&gt;'
+title: '&lt;wsdlImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 33c2b0e4286ce746f745e4aebe10fd4bbd96810f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 43c1a50c740cd9c75ee641e4ac4d0fa8ea3ca36b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754901"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144989"
 ---
-# <a name="ltwsdlimportergt"></a>&lt;wsdllImporter&gt;
+# <a name="ltwsdlimportergt"></a>&lt;wsdlImporter&gt;
 Gibt alle WSDL-Importer an, mit denen Web Services Description Language (WSDL) 1.1-Metadaten mit WS-Richtlinienanhängen importiert werden.  
   
 \<system.ServiceModel>  
 \<Client >  
 \<Metadaten >  
 \<WsdlImporters >  
-\<wsdllImporter >  
+\<WsdlImporter >  
   
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<metadata>  
-  <wsdlImporters>  
-    <wsdlImporter type="string" />  
-  </wsdlImporters>  
-</metadata>  
+<metadata>
+  <wsdlImporters>
+    <wsdlImporter type="string" />
+  </wsdlImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

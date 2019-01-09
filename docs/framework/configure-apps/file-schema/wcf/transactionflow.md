@@ -1,15 +1,15 @@
 ---
-title: '&lt;TransactionFlow-Protokolls&gt;'
+title: '&lt;transactionFlow&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: c708098676e5634281e29c17639304a1a9cf5afe
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6f0660ce94fdfbe1ab636aa4197ef31526c21348
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748710"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145795"
 ---
-# <a name="lttransactionflowgt"></a>&lt;TransactionFlow-Protokolls&gt;
+# <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
 Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.  
   
  \<system.serviceModel>  
@@ -21,7 +21,7 @@ Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"/>  
+<transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

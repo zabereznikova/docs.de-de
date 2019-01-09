@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: c63b9a25c1830f142002e9854e9ce275f55ef54b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 929197d8e8f9ab031e72e7d332422b388a22ea95
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154818"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146055"
 ---
 # <a name="uinteger-data-type"></a>UInteger-Datentyp
 
@@ -68,7 +68,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Negative Zahlen.** Da `UInteger` ein Typ ohne Vorzeichen, kann er eine negative Zahl ist keine darstellen. Bei Verwendung der unäres minus (`-`) Operator auf ein Ausdruck, der ausgewertet wird, um geben `UInteger`, konvertiert den Ausdruck, der Visual Basic `Long` erste.  
   
--   **CLS-Kompatibilität.** Die `UInteger` Datentyp ist nicht Teil der [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.
+-   **CLS-Kompatibilität.** Die `UInteger` Datentyp ist nicht Teil der [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.
   
 -   **Interop-Überlegungen.** Wenn Sie anbinden, Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen müssen bedenken, die Typen wie `uint` haben eine andere Datenbreite (16 Bits) in anderen Umgebungen. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `UShort` anstelle von `UInteger` in verwaltetem Visual Basic-Code.  
   
@@ -83,5 +83,5 @@ Dim number = &H_0FAC_14D7ui
  [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
  [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [So wird es gemacht: Rufen Sie eine Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

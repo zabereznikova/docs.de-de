@@ -3,12 +3,12 @@ title: Erste Schritte mit Azure Table Storage mit F#
 description: Store strukturierte Daten in der Cloud mit Azure Table Storage oder Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519534"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152072"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit F# # 
 
@@ -30,7 +30,7 @@ Weitere Informationen finden Sie unter [Einführung in die Table-API von Azure C
 
 ## <a name="about-this-tutorial"></a>Informationen zu diesem Lernprogramm
 
-In diesem Tutorial veranschaulicht, wie F#-Code dazu durchführen allgemeinen Aufgaben mit Azure Table Storage oder Azure Cosmos DB Table API, einschließlich erstellen und Löschen einer Tabelle und einfügen, aktualisieren, löschen und Abfragen von Tabellendaten zu schreiben.
+In diesem Tutorial wird gezeigt, wie zum Schreiben F# Code zum Durchführen allgemeinen Aufgaben mit Azure Table Storage oder Azure Cosmos DB Table API, einschließlich erstellen und Löschen einer Tabelle und einfügen, aktualisieren, löschen und Abfragen von Tabellendaten zu tun.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
@@ -39,7 +39,7 @@ Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein A
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
-In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `tables.fsx`, in der F#-Entwicklungsumgebung.
+In die Beispielen in diesem Artikel verwendet werden können, entweder in eine F# Anwendung oder ein F# Skript. Zum Erstellen einer F# Skript, erstellen Sie eine Datei mit der `.fsx` Erweiterung, z. B. `tables.fsx`in Ihre F# Entwicklungsumgebung.
 
 Verwenden Sie als Nächstes eine [-Paket-Manager](package-management.md) wie z. B. [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) oder [NuGet](https://www.nuget.org/) zum Installieren der `WindowsAzure.Storage` Paket und Verweis `WindowsAzure.Storage.dll` in Ihrem Skript mithilfe einer `#r`Richtlinie. Führen Sie es noch mal `Microsoft.WindowsAzure.ConfigurationManager` um den Microsoft.Azure-Namespace zu erhalten.
 
@@ -196,7 +196,7 @@ Nun, da Sie die Grundlagen von Table Storage vertraut gemacht haben, führen Sie
 
 - [Einführung in Azure Cosmos DB-Tabellen-API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [Storage-Clientbibliothek für .NET-Referenz](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Azure-Speicher-Typanbieter](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure-Speicher-Typanbieter](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Azure Storage-Teamblog](https://blogs.msdn.com/b/windowsazurestorage/)
 - [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Erste Schritte mit Azure Table Storage in .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

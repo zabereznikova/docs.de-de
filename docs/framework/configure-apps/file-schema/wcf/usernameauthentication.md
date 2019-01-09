@@ -1,15 +1,15 @@
 ---
-title: '&lt;userNameAuthentication&gt;'
+title: '&lt;UserNameAuthentication&gt;'
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: d81bf3441f4999683b9dc9ab956fff517c20e80e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ade257a81e218fa123a08624123af614df84956
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754862"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150044"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
+# <a name="ltusernameauthenticationgt"></a>&lt;UserNameAuthentication&gt;
 Gibt die Anmeldeinformationen eines Diensts basierend auf Benutzername und Kennwort an.  
   
  \<system.ServiceModel>  
@@ -22,14 +22,13 @@ Gibt die Anmeldeinformationen eines Diensts basierend auf Benutzername und Kennw
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<userNameAuthentication  
-   cacheLogonTokenLifetime="TimeSpan"  
-   cacheLogonTokens="Boolean"   
-   customUserNamePasswordValidatorType="String"  
-   includeWindowsGroups="Boolean"   
-   maxCacheLogonTokens="Integer"  
-   membershipProviderName="String"  
-   userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />  
+<userNameAuthentication cacheLogonTokenLifetime="TimeSpan"
+                        cacheLogonTokens="Boolean"
+                        customUserNamePasswordValidatorType="String"
+                        includeWindowsGroups="Boolean"
+                        maxCacheLogonTokens="Integer"
+                        membershipProviderName="String"
+                        userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -45,7 +44,7 @@ Gibt die Anmeldeinformationen eines Diensts basierend auf Benutzername und Kennw
 |`includeWindowsGroups`|Ein boolescher Wert, der angibt, ob Windows-Gruppen im Sicherheitskontext enthalten sind. Die Standardeinstellung ist `true`.<br /><br /> Wird dieses Attribut auf `true` festgelegt, hat dies Auswirkungen auf die Leistung, da dabei eine vollständige Gruppenerweiterung durchgeführt wird. Legen Sie diese Eigenschaft auf `false` fest, wenn Sie die Liste der Gruppen, zu denen ein Benutzer gehört, nicht einrichten müssen.|  
 |`maxCacheLogonTokens`|Eine ganze Zahl, die die maximale Anzahl an Anmeldetoken angibt, die zwischengespeichert werden können. Dieser Wert muss größer als null sein. Der Standard ist 128.|  
 |`membershipProviderName`|Wenn das `clientCredentialType`-Attribut einer Bindung auf `username` festgelegt ist, wird der Benutzername Windows-Konten zugewiesen. Sie können dieses Verhalten mit diesem Attribut überschreiben. Bei dem Attribut handelt es sich um eine Zeichenfolge mit dem Namen des <xref:System.Web.Security.MembershipProvider>-Werts, der den relevanten Mechanismus zur Kennwortprüfung bereitstellt.|  
-|`userNamePasswordValidationMode`|Gibt die Art und Weise an, in der der Benutzername und das Kennwort überprüft werden. Gültige Werte sind:<br /><br /> -Windows<br />-MembershipProvider<br />-Custom<br /><br /> Der Standardwert ist Windows. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
+|`userNamePasswordValidationMode`|Gibt die Art und Weise an, in der der Benutzername und das Kennwort überprüft werden. Gültige Werte sind:<br /><br /> – Windows<br />-MembershipProvider<br />-Custom<br /><br /> Der Standardwert ist Windows. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

@@ -2,12 +2,12 @@
 title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d16807d9faae427d8c22aafc1e1f4f04e5cb13b7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207978"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149461"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 Stellt eine Auflistung von Parametern dar, die global in mehreren Diensten verwendet werden. Diese Auflistung schließt in der Regel die Datenbankverbindungszeichenfolge ein, die ggf. von permanenten Diensten gemeinsam genutzt wird.  
@@ -22,11 +22,12 @@ Stellt eine Auflistung von Parametern dar, die global in mehreren Diensten verwe
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<workflowRuntime>  
-   <commonParameters>  
-      <add name="String" value="String" />  
-   </commonParameters>  
-</workflowRuntime>  
+<workflowRuntime>
+  <commonParameters>
+    <add name="String"
+         value="String" />
+  </commonParameters>
+</workflowRuntime>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -62,15 +63,20 @@ Stellt eine Auflistung von Parametern dar, die global in mehreren Diensten verwe
  Dienste, die Commits für Arbeitsbatches in Persistenzspeichern ausführen, z. B. <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> und <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, können mit dem `EnableRetries`-Parameter so konfiguriert werden, dass sie ihre Transaktion wiederholen, wie im folgenden Beispiel veranschaulicht.  
   
 ```xml  
-<WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
-    <commonParameters>  
-        <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />  
-        <add name="EnableRetries" value="True" />  
-    </commonParameters>  
-    <Services>  
-        <add type="System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" EnableRetries="False" />   
-     </Services>  
-</WorkflowRuntime>  
+<workflowRuntime name="SampleApplication"
+                 unloadOnIdle="false">
+  <commonParameters>
+    <add name="ConnectionString"
+         value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />
+    <add name="EnableRetries"
+         value="True" />
+  </commonParameters>
+  <services>
+    <add type="System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime,
+               Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+         enableRetries="False" />
+  </services>
+</workflowRuntime>
 ```  
   
  Beachten Sie, dass die `EnableRetries` Parameter kann festgelegt werden, entweder auf globaler Ebene (siehe die *CommonParameters* Abschnitt) oder für einzelne Dienste, die unterstützen `EnableRetries` (siehe die *Services*Abschnitt).  
@@ -90,10 +96,12 @@ config.Save();
 ## <a name="example"></a>Beispiel  
   
 ```xml  
-<commonParameters>  
-   <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;"/>  
-   <add name="EnableRetries" value="true"/>  
-</commonParameters>  
+<commonParameters>
+   <add name="ConnectionString"
+        value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />
+   <add name="EnableRetries"
+        value="true" />
+</commonParameters>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

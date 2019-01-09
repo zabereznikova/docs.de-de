@@ -4,16 +4,16 @@ description: Azure Event Grid ist ein serverlosen Lösung für die zuverlässige
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143661"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145881"
 ---
 # <a name="event-grid"></a>Event Grid
 
-[Azure Event Grid](/azure-event-grid/overview) bietet serverlose-Infrastruktur für Ereignis-basierte Anwendungen. Sie können aus beliebigen Quellen Event Grid veröffentlichen und nutzen Nachrichten von einer beliebigen Plattform. Event Grid bietet auch integrierten Unterstützung für die Ereignisse aus Azure-Ressourcen für die Integration in Ihre Anwendungen zu optimieren. Beispielsweise können Sie abonnieren, um Blob-Storage-Ereignissen an Ihre app zu benachrichtigen, wenn eine Datei hochgeladen wird. Ihre Anwendung können Sie eine Meldung eines benutzerdefinierten Raster veröffentlichen, das von anderen Cloud verwendet oder lokale Anwendungen. Event Grid wurde erstellt, um zuverlässig sehr großem Umfang zu verarbeiten. Sie erhalten die Vorteile von veröffentlichen und Abonnieren von Nachrichten ohne den Aufwand für die notwendige Infrastruktur einrichten.
+[Azure Event Grid](/azure/event-grid/overview) bietet serverlose-Infrastruktur für Ereignis-basierte Anwendungen. Sie können aus beliebigen Quellen Event Grid veröffentlichen und nutzen Nachrichten von einer beliebigen Plattform. Event Grid bietet auch integrierten Unterstützung für die Ereignisse aus Azure-Ressourcen für die Integration in Ihre Anwendungen zu optimieren. Beispielsweise können Sie abonnieren, um Blob-Storage-Ereignissen an Ihre app zu benachrichtigen, wenn eine Datei hochgeladen wird. Ihre Anwendung können Sie eine Meldung eines benutzerdefinierten Raster veröffentlichen, das von anderen Cloud verwendet oder lokale Anwendungen. Event Grid wurde erstellt, um zuverlässig sehr großem Umfang zu verarbeiten. Sie erhalten die Vorteile von veröffentlichen und Abonnieren von Nachrichten ohne den Aufwand für die notwendige Infrastruktur einrichten.
 
 ![Event Grid-logo](./media/event-grid-logo.png)
 

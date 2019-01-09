@@ -2,15 +2,15 @@
 title: '&lt;filterTable&gt;'
 ms.date: 03/30/2017
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-ms.openlocfilehash: 7bdc76ba7a8e2927b93fa0207f48cc569279482f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f790e294b832f43a595d0636c60a8a67da5ad56a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747410"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147888"
 ---
 # <a name="ltfiltertablegt"></a>&lt;filterTable&gt;
-Stellt eine Routingtabelle, die enthält eine Liste der Filter für Nachrichten und zum Weiterleiten von Nachrichten an den Clientendpunkt zu ermitteln, ob der Filter auf "true" ausgewertet wird.  
+Stellt eine Routingtabelle, die enthält eine Liste der Filter Nachrichten und Weiterleiten von Nachrichten an den Clientendpunkt zu ermitteln, ob der Filter auf "true" ausgewertet wird.  
   
  \<system.serviceModel>  
 \<Routing >  
@@ -19,10 +19,21 @@ Stellt eine Routingtabelle, die enthält eine Liste der Filter für Nachrichten 
   
 ## <a name="syntax"></a>Syntax  
   
-```xml
-   <routing>      <filterTables>        <filterTable name="String">          <entries>            <add backupList="String"                 endpointName="String"                  filterName="String"                  priority="Integer" />          </entries>        </table>      </routingTables></routing>  
-```
-
+```xml  
+<routing>
+  <filterTables>
+    <filterTable name="String">
+      <entries>
+        <add backupList="String"
+             endpointName="String"
+             filterName="String"
+             priority="Integer" />
+      </entries>
+    </filterTable>
+  </filterTables>
+</routing>
+```  
+  
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   

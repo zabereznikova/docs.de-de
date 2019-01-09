@@ -2,15 +2,15 @@
 title: '&lt;add&gt; von &lt;contractTypeNames&gt;'
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 159ab5a40a69c075b648a0c161babe604d13377b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 79972eaea6918b3fe923c963b6a219fd8f972516
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750192"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145613"
 ---
 # <a name="ltaddgt-of-ltcontracttypenamesgt"></a>&lt;add&gt; von &lt;contractTypeNames&gt;
-Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen gesucht wird, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen. Beachten Sie, dass in der Windows Communication Foundation (WCF) ein Endpunkt nur als einen Vertrag unterstützen kann.  
+Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen gesucht wird, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen. Beachten Sie, dass in Windows Communication Foundation (WCF), ein Endpunkt nur als einen Vertrag unterstützen kann.  
   
  \<system.ServiceModel>  
 \<StandardEndpoints >  
@@ -18,9 +18,27 @@ Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen 
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<system.serviceModel>  
-    <standardEndpoints>       <dynamicEndpoint>           <standardEndpoint>             <discoveryClientSettings discoveryEndpoint="String" >               <findCriteria duration="TimeSpan"                  maxResults="Integer"                   scopeMatchBy="Uri" >                  <contractTypeNames>                     <add name="String" namespace="String" />                  <contractTypeNames>                  <extensions />                  <scopes>                    <add scope="URI"/>                  </scopes>               </findCriteria>             </discoveryClientSettings>          <standardEndpoint>       </dynamicEndpoint>            </standardEndpoints>  
-</system.serviceModel>  
+<system.serviceModel>
+  <standardEndpoints>
+    <dynamicEndpoint>
+      <standardEndpoint>
+        <discoveryClientSettings discoveryEndpoint="String">
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
+                        scopeMatchBy="Uri">
+            <contractTypeNames>
+              <add name="String" namespace="String" />
+            <contractTypeNames>
+            <extensions />
+            <scopes>
+              <add scope="URI"/>
+            </scopes>
+          </findCriteria>
+        </discoveryClientSettings>
+      <standardEndpoint>
+    </dynamicEndpoint>
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -34,7 +52,7 @@ Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen 
 |namespace|Eine Zeichenfolge, die den Namespace des Vertragstyps angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

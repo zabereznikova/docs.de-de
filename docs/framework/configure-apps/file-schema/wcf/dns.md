@@ -2,12 +2,12 @@
 title: '&lt;DNS&gt;'
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 2f5b9d5e1bc57230adbb32664e9ae15d3c71d46f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 10fe4c63b08459914a16b2c736c1a454c6914a0b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862477"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145301"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.509-Zertifikat-Authentifizierungsmodus gültig, wenn das Serverzertifikat eine DNS mit dem gleichen Wert enthält. Sie ist auch für den Windows-Authentifizierungsmodus gültig, wenn der SPN den gleichen Wert hat.  
@@ -20,7 +20,7 @@ Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.50
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<dns value = "String" />  
+<dns value = "String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -45,9 +45,9 @@ Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.50
  Der folgende Konfigurationscode gibt den DNS eines X.509-Zertifikats an, das für die Authentifizierung eines Servers verwendet wird.  
   
 ```xml  
-<identity>  
-  <dns value = "www.cohowinery.com" />  
-</identity>  
+<identity>
+  <dns value = "www.cohowinery.com" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

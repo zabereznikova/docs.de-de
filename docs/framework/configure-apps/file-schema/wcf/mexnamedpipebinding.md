@@ -2,12 +2,12 @@
 title: '&lt;mexNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: 85b92fc193d66a97c75eae096117f32a36d413a9
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a5dac6c5b4409f71e8360c174061d4d12ffac5d2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837572"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151513"
 ---
 # <a name="ltmexnamedpipebindinggt"></a>&lt;mexNamedPipeBinding&gt;
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über eine benannte Pipe verwendet wird.  
@@ -19,15 +19,14 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<mexNamedPipeBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       name="string"   
-       openTimeout="TimeSpan"   
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan">  
-   </binding>  
-</mexNamedPipeBinding>  
+<mexNamedPipeBinding>
+  <binding closeTimeout="TimeSpan"
+           name="string"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan">
+  </binding>
+</mexNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

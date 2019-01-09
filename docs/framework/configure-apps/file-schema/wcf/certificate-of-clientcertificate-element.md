@@ -2,12 +2,12 @@
 title: '&lt;certificate&gt;-Element des &lt;clientCertificate&gt;-Elements'
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 07885f8f1a575ef5b6ccb8d5f91f38a561261183
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 784fd818c7225a0f1d87ccde72e04471b92b5308
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147147"
 ---
 # <a name="ltcertificategt-of-ltclientcertificategt-element"></a>&lt;certificate&gt;-Element des &lt;clientCertificate&gt;-Elements
 Gibt ein X.509-Zertifikat an, das verwendet wird, um Nachrichten zu signieren und zu verschlüsseln.  
@@ -23,11 +23,10 @@ Gibt ein X.509-Zertifikat an, das verwendet wird, um Nachrichten zu signieren un
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<certificate findValue = "String"   
-storeLocation = "CurrentUser/LocalMachine"  
-storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"  
-/>  
+<certificate findValue="String"
+             storeLocation = "CurrentUser/LocalMachine"
+             storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+             X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -39,7 +38,7 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |---------------|-----------------|  
 |`findValue`|Eine Zeichenfolge, die den Wert angibt, nach dem im X.509-Zertifikatspeicher gesucht werden soll. Der im Attribut enthaltene Typ muss die Anforderungen in X509FindType erfüllen. Der Standardwert ist eine leere Zeichenfolge.|  
 |`storeLocation`|Gibt den Speicherort des X.509-Zertifikatspeichers an, den der Client zum Prüfen des Serverzertifikats verwendet. Folgende Werte sind gültig:<br /><br /> -LocalMachine: der auf dem lokalen Computer zugewiesene Zertifikatspeicher.<br />-CurrentUser: der für den aktuellen Benutzer zugewiesene Zertifikatspeicher.<br /><br /> Die Standardeinstellung ist LocalMachine.|  
-|`storeName`|Gibt den Namen des X.509-Zertifikatsspeichers an, der geöffnet werden soll. Folgende Werte sind gültig:<br /><br /> -AddressBook: Zertifikatspeicher für andere Benutzer.<br />-AuthRoot: Der Zertifikatspeicher für Drittanbieter-Zertifizierungsstellen (CAs).<br />-CertificationAuthority: Der Zertifikatspeicher für Zwischenzertifizierungsstellen-Zertifikate (CAs).<br />-Disallowed: Der Zertifikatspeicher für gesperrte Zertifikate.<br />-My: Der Zertifikatspeicher für persönliche Zertifikate.<br />-Root: Der Zertifikatspeicher für vertrauenswürdige Stamm-Zertifizierungsstellen (CAs).<br />-TrustedPeople: Der Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.<br />-TrustedPublisher: Der Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.<br /><br /> Der Standardwert ist My.|  
+|`storeName`|Gibt den Namen des X.509-Zertifikatsspeichers an, der geöffnet werden soll. Folgende Werte sind gültig:<br /><br /> -AddressBook: Der Zertifikatspeicher für andere Benutzer.<br />-AuthRoot: Der Zertifikatspeicher für Drittanbieter-Zertifizierungsstellen (CAs).<br />-CertificationAuthority: Der Zertifikatspeicher für Zwischenzertifizierungsstellen-Zertifikate (CAs).<br />– Nicht zulässig: Der Zertifikatspeicher für widerrufene Zertifikate.<br />-Meine: Der Zertifikatspeicher für persönliche Zertifikate.<br />-Stammverzeichnis: Der Zertifikatspeicher für vertrauenswürdige Stamm-Zertifizierungsstellen (CAs).<br />– TrustedPeople: Der Zertifikatspeicher für direkt vertrauenswürdige Personen und Ressourcen.<br />-TrustedPublisher: Der Zertifikatspeicher für direkt vertrauenswürdige Herausgeber.<br /><br /> Der Standardwert ist My.|  
 |`X509FindType`|Definiert den Typ der X.509-Suche, die ausgeführt werden soll. Folgende Werte sind gültig:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Der im `findValue`-Attribut enthaltene Typ muss die Anforderungen in X509FindType erfüllen.<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -58,22 +57,21 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  Der folgende Code gibt an, wie Sie ein geeignetes X.509-Zertifikat und einen benutzerdefinierten Validierungstyp im `<authentication>`-Element suchen.  
   
 ```xml  
-<serviceBehaviors>  
- <behavior name="myServiceBehavior">  
-  <clientCertificate>  
-   <certificate   
-         findValue="www.cohowinery.com"   
-         storeLocation="CurrentUser"   
-         storeName="TrustedPeople"  
-         x509FindType="FindByIssuerName" />  
-   <authentication customCertificateValidatorType="MyTypes.Coho"  
-    certificateValidationMode="Custom"   
-    revocationMode="Offline"  
-    includeWindowsGroups="false"   
-    mapClientCertificateToWindowsAccount="true" />  
-  </clientCertificate>  
- </behavior>  
-</serviceBehaviors>  
+<serviceBehaviors>
+  <behavior name="myServiceBehavior">
+    <clientCertificate>
+      <certificate findValue="www.cohowinery.com"
+                   storeLocation="CurrentUser"
+                   storeName="TrustedPeople"
+                   x509FindType="FindByIssuerName" />
+      <authentication customCertificateValidatorType="MyTypes.Coho"
+                      certificateValidationMode="Custom"
+                      revocationMode="Offline"
+                      includeWindowsGroups="false"
+                      mapClientCertificateToWindowsAccount="true" />
+    </clientCertificate>
+  </behavior>
+</serviceBehaviors>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
@@ -81,5 +79,5 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>  
  <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>  
  [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Vorgehensweise: Erstellen eines Diensts, der ein benutzerdefiniertes Zertifikatvalidierungssteuerelement verwendet](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
+ [Vorgehensweise: Erstellen Sie einen Dienst, der ein benutzerdefiniertes Zertifikatvalidierungssteuerelement verwendet](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
  [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

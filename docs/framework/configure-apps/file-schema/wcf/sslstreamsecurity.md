@@ -2,12 +2,12 @@
 title: '&lt;sslStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: ecc67c2b3972ccb5bc8a1fe9ae9b400292642d53
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b081a577280f4f2a52ef3b5ece76f519f9701faa
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184490"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145106"
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
 Stellt ein benutzerdefiniertes binding-Element dar, das die Kanalsicherheit unter Verwendung eines SSL-Datenstroms unterstützt.  
@@ -21,7 +21,8 @@ Stellt ein benutzerdefiniertes binding-Element dar, das die Kanalsicherheit unte
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<sslStreamSecurity requireClientCertificate="Boolean"      sslProtocols="Ssl3|Tls|Tls11|Tls12" />  
+<sslStreamSecurity requireClientCertificate="Boolean"
+                   sslProtocols="Ssl3|Tls|Tls11|Tls12" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  

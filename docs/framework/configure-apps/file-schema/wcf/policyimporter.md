@@ -2,12 +2,12 @@
 title: '&lt;policyImporter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 7483a95accef0a4bc956d919087379363b4762ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 22d90ff9d0cd5325300cf42437836f075cbf8c31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753026"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148486"
 ---
 # <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
 Gibt einen Richtlinienimporter an, der den Import von benutzerdefinierten Richtlinienerklärungen über Bindungen steuert.  
@@ -21,11 +21,11 @@ Gibt einen Richtlinienimporter an, der den Import von benutzerdefinierten Richtl
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<metadata>  
-   <policyImporters>  
-      <policyImporter type="string" />  
-   </policyImporters>  
-</metadata>  
+<metadata>
+  <policyImporters>
+    <policyImporter type="String" />
+  </policyImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -38,7 +38,7 @@ Gibt einen Richtlinienimporter an, der den Import von benutzerdefinierten Richtl
 |`type`|Der Typ dieses Elements.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

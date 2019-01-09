@@ -2,12 +2,12 @@
 title: Einführung in F#
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143740"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145522"
 ---
 # <a name="tour-of-f"></a>Einführung in F# #
 
@@ -17,7 +17,7 @@ Es gibt zwei primäre Konzepte in F#: Funktionen und Typen.   In dieser Tour wer
 
 ## <a name="executing-the-code-online"></a>Ausführen des Codes online
 
-Wenn Ihnen keine F# auf Ihrem Computer installiert ist, können Sie ausführen, alle Beispiele online mit den [Fable REPL](http://fable.io/repl/). Fable ist ein Dialekt von F# , die direkt in Ihrem Browser ausgeführt wird. Sehen Sie sich zum Anzeigen der Beispiele, in denen führen Sie in der REPL **Beispiele > erfahren Sie mehr > Überblick F#**  in der linken Menüleiste, der die Fable eine Repl
+Wenn Ihnen keine F# auf Ihrem Computer installiert ist, können Sie ausführen, alle Beispiele online mit den [Fable REPL](https://fable.io/repl/). Fable ist ein Dialekt von F# , die direkt in Ihrem Browser ausgeführt wird. Sehen Sie sich zum Anzeigen der Beispiele, in denen führen Sie in der REPL **Beispiele > erfahren Sie mehr > Überblick F#**  in der linken Menüleiste, der die Fable eine Repl
 
 ## <a name="functions-and-modules"></a>Funktionen und Module
 

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 898da3136bef51d0f8541da3829e55598b16781c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145705"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor-Klasse
 
@@ -32,7 +32,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> Die `DataMemberFieldEditor` -Klasse ist intern und nicht direkt in Ihrem Code verwendet werden sollen.
+> Die `DataMemberFieldEditor` -Klasse ist intern und nicht direkt in Ihrem Code verwendet werden soll.
 > 
 > Microsoft unterstützt nicht die Verwendung dieser Klasse in einer produktionsanwendung unter keinen Umständen.
 
@@ -42,7 +42,7 @@ internal class DataMemberFieldEditor : UITypeEditor
   
 **Assembly:** "System.Design" (in "System.Design.dll")  
   
-**.NET Framework-Versionen:** verfügbar seit 2.0.  
+**.NET Framework-Versionen:** Verfügbar seit 2.0.  
   
 ## <a name="see-also"></a>Siehe auch
 

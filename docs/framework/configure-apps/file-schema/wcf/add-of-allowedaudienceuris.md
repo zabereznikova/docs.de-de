@@ -2,12 +2,12 @@
 title: '&lt;add&gt; von &lt;allowedAudienceUris&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: cfd18d6af5248e680b9520069fb34c412ee12b3f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5428b41cadebbb38716789fa0e275c244fe74311
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746627"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146234"
 ---
 # <a name="ltaddgt-of-ltallowedaudienceurisgt"></a>&lt;add&gt; von &lt;allowedAudienceUris&gt;
 Fügt einen Ziel-URI hinzu, für den das <xref:System.IdentityModel.Tokens.SamlSecurityToken>-Sicherheitstoken verwendet werden kann, sodass dieser von einer <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>-Instanz als gültig eingestuft wird.  
@@ -24,9 +24,9 @@ Fügt einen Ziel-URI hinzu, für den das <xref:System.IdentityModel.Tokens.SamlS
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<allowedAudienceUris>   
-   <add allowedAudienceUri="String"/>  
-</allowedAudienceUris>  
+<allowedAudienceUris>
+  <add allowedAudienceUri="String" />
+</allowedAudienceUris>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -56,7 +56,7 @@ Fügt einen Ziel-URI hinzu, für den das <xref:System.IdentityModel.Tokens.SamlS
   
  Weitere Informationen finden Sie unter <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- Weitere Informationen zur Verwendung dieses Konfigurationselements finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Weitere Informationen zur Verwendung dieses Konfigurationselements finden Sie unter [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
-ms.openlocfilehash: f0d7234007c3899220cbca99bd7fe8ea4e75abae
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 05eb8d43e137c8dfc78dc3d7c0b145ce7a4e95ef
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316245"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150941"
 ---
 # <a name="ltwshttpbindinggt"></a>&lt;wsHttpBinding&gt;
-Definiert eine sichere, zuverlässige und interoperable Bindung für Nicht-Duplexdienstverträge dar. Die Bindung implementiert die folgenden Spezifikationen: WS-Reliable Messaging für Zuverlässigkeit und WS-Security für Nachrichtensicherheit und Authentifizierung. Für den Transport wird HTTP verwendet und für die Nachrichtencodierung Text/XML-Codierung.  
+Definiert eine sichere, zuverlässige und interoperable Bindung für Nicht-Duplexdienstverträge dar. Die Bindung werden die folgenden Spezifikationen implementiert: WS-Reliable Messaging für Zuverlässigkeit und WS-Security für nachrichtensicherheit und Authentifizierung. Für den Transport wird HTTP verwendet und für die Nachrichtencodierung Text/XML-Codierung.  
   
  \<system.ServiceModel>  
 \<bindings>  
@@ -21,39 +21,41 @@ Definiert eine sichere, zuverlässige und interoperable Bindung für Nicht-Duple
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<wsHttpBinding>  
-    <binding   
-        allowCookies="Boolean"  
-        bypassProxyOnLocal="Boolean"  
-        closeTimeout="TimeSpan"  
-        hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-        maxBufferPoolSize="integer"  
-        maxReceivedMessageSize="Integer"  
-        messageEncoding="Text/Mtom"   
-                name="string"  
-        openTimeout="TimeSpan"   
-        proxyAddress="URI"  
-        receiveTimeout="TimeSpan"  
-        sendTimeout="TimeSpan"  
-                textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-        transactionFlow="Boolean"  
-        useDefaultWebProxy="Boolean">  
-        <reliableSession ordered="Boolean"  
-           inactivityTimeout="TimeSpan"  
-           enabled="Boolean" />  
-        <security mode="Message/None/Transport/TransportWithCredential">  
-           <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
-                proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-                realm="string" />  
-          <message   
-             algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-                          clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
-             establishSecurityContext="Boolean"  
-             negotiateServiceCredential="Boolean" />  
-        </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />  
-    </binding>  
-</wsHttpBinding>  
+<wsHttpBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="integer"
+           maxReceivedMessageSize="Integer"
+           messageEncoding="Text/Mtom"
+           name="string"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           transactionFlow="Boolean"
+           useDefaultWebProxy="Boolean">
+    <reliableSession ordered="Boolean"
+                     inactivityTimeout="TimeSpan"
+                     enabled="Boolean" />
+    <security mode="Message/None/Transport/TransportWithCredential">
+      <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                 proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                 realm="string" />
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"
+               establishSecurityContext="Boolean"
+               negotiateServiceCredential="Boolean" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</wsHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -69,13 +71,13 @@ Definiert eine sichere, zuverlässige und interoperable Bindung für Nicht-Duple
 |hostnameComparisonMode|Gibt den HTTP-Hostnamen-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HostNameComparisonMode> und gibt an, ob beim Abgleich des URI der Hostname zum Erreichen des Dienstes verwendet wird. Der Standardwert lautet <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, wodurch der Hostname beim Abgleich ignoriert wird.|  
 |maxBufferPoolSize|Eine ganze Zahl, die die maximale Pufferpoolgröße für diese Bindung angibt. Der Standardwert ist 524.288 Byte (512 * 1024). Viele Teile von Windows Communication Foundation (WCF) verwenden Puffer. Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer. Bei Pufferpools können Sie einen zu verwendenden Puffer aus dem Pool nehmen und ihn nach der Verwendung wieder dem Pool zuführen. So wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden.|  
 |maxReceivedMessageSize|Eine positive ganze Zahl, die die maximale Nachrichtengröße in Bytes einschließlich Header angibt, die in einem für diese Bindung konfigurierten Kanal beim Nachrichtenempfang zulässig ist. Der Absender einer Nachricht, die diese Grenze überschreitet, erhält einen SOAP-Fehler. Der Empfänger verwirft die Nachricht und erstellt einen Eintrag des Ereignisses im Ablaufverfolgungsprotokoll. Der Standard ist 65536.|  
-|messageEncoding|Definiert den Encoder, der verwendet wird, um die SOAP-Nachricht zu codieren. Folgende Werte sind gültig:<br /><br /> -Text: Verwenden Sie einen textnachrichtenencoder.<br />-Mtom: Verwenden eines Encoders Message Transmission Organisation Mechanism 1.0 (MTOM).<br />– Der Standardwert ist Text.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSMessageEncoding>.|  
+|messageEncoding|Definiert den Encoder, der verwendet wird, um die SOAP-Nachricht zu codieren. Folgende Werte sind gültig:<br /><br /> -Text: Verwenden Sie einen textnachrichtenencoder.<br />-Mtom: Verwenden Sie einen Encoder Message Transmission Organisation Mechanism 1.0 (MTOM).<br />– Der Standardwert ist Text.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSMessageEncoding>.|  
 |Name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |proxyAddress|Ein URI, der die Adresse des HTTP-Proxys angibt. Wenn `useSystemWebProxy` `true` ist, muss diese Einstellung `null` lauten. Die Standardeinstellung ist `null`.|  
 |receiveTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |sendTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|textEncoding|Gibt die Zeichensatzcodierung an, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -UnicodeFffeTextEncoding: Unicode BigEndian-Codierung.<br />-Utf16TextEncoding: 16-Bit-Codierung.<br />-Utf8TextEncoding: 8-Bit-Codierung.<br /><br /> Der Standardwert ist Utf8TextEncoding.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
+|textEncoding|Gibt die Zeichensatzcodierung an, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -UnicodeFffeTextEncoding: Unicode-BigEndian-Codierung.<br />-Utf16TextEncoding: 16-Bit-Codierung.<br />-Utf8TextEncoding: 8-Bit-Codierung.<br /><br /> Der Standardwert ist Utf8TextEncoding.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
 |transactionFlow|Ein boolescher Wert, der angibt, ob die Bindung geleitete WS-Transaktionen unterstützt. Die Standardeinstellung ist `false`.|  
 |useDefaultWebProxy|Ein boolescher Wert, der angibt, ob der automatisch konfigurierte HTTP-Proxy des Systems verwendet wird. Die Standardeinstellung ist `true`.|  
   
@@ -99,40 +101,39 @@ Definiert eine sichere, zuverlässige und interoperable Bindung für Nicht-Duple
 ## <a name="example"></a>Beispiel  
   
 ```xml  
-<configuration>  
-    <system.ServiceModel>  
-        <bindings>  
-            <wsHttpBinding>  
-                <binding   
-                    closeTimeout="00:00:10"  
-                    openTimeout="00:00:20"   
-                    receiveTimeout="00:00:30"  
-                    sendTimeout="00:00:40"  
-                    bypassProxyOnLocal="false"  
-                    transactionFlow="false"   
-                    hostNameComparisonMode="WeakWildcard"  
-                    maxReceivedMessageSize="1000"  
-                    messageEncoding="Mtom"   
-                    proxyAddress="http://foo/bar"  
-                    textEncoding="utf-16"  
-                    useDefaultWebProxy="false">  
-                    <reliableSession ordered="false"  
-                         inactivityTimeout="00:02:00"  
-                         enabled="true" />  
-                    <security mode="Transport">  
-                         <transport clientCredentialType="Digest"  
-                            proxyCredentialType="None"  
-                            realm="someRealm" />  
-                         <message clientCredentialType="Windows"  
-                            negotiateServiceCredential="false"  
-                            algorithmSuite="Aes128"   
-                            defaultProtectionLevel="None" />  
-                    </security>  
-                </binding>  
-           </wsHttpBinding>  
-        </bindings>  
-    </system.ServiceModel>  
-</configuration>  
+<configuration>
+  <system.ServiceModel>
+    <bindings>
+      <wsHttpBinding>
+        <binding closeTimeout="00:00:10"
+                 openTimeout="00:00:20"
+                 receiveTimeout="00:00:30"
+                 sendTimeout="00:00:40"
+                 bypassProxyOnLocal="false"
+                 transactionFlow="false"
+                 hostNameComparisonMode="WeakWildcard"
+                 maxReceivedMessageSize="1000"
+                 messageEncoding="Mtom"
+                 proxyAddress="http://foo/bar"
+                 textEncoding="utf-16"
+                 useDefaultWebProxy="false">
+          <reliableSession ordered="false"
+                           inactivityTimeout="00:02:00"
+                           enabled="true" />
+          <security mode="Transport">
+            <transport clientCredentialType="Digest"
+                       proxyCredentialType="None"
+                       realm="someRealm" />
+            <message clientCredentialType="Windows"
+                     negotiateServiceCredential="false"
+                     algorithmSuite="Aes128"
+                     defaultProtectionLevel="None" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+  </system.ServiceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

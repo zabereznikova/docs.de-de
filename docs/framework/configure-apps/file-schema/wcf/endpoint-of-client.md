@@ -2,12 +2,12 @@
 title: '&lt;endpoint&gt; von &lt;client&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748060"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147004"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; von &lt;client&gt;
 Gibt die Vertrags-, Bindungs- und Adresseigenschaften für den Kanalendpunkt an, mit dem Clients eine Verbindung zu Dienstendpunkten auf dem Server herstellen.  
@@ -19,13 +19,15 @@ Gibt die Vertrags-, Bindungs- und Adresseigenschaften für den Kanalendpunkt an,
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   contract="String"   endpointConfiguration="String"   kind="String"  
-   name="String"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          contract="String"
+          endpointConfiguration="String"
+          kind="String"
+          name="String">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -61,12 +63,12 @@ Gibt die Vertrags-, Bindungs- und Adresseigenschaften für den Kanalendpunkt an,
  Dies ist ein Beispiel für eine Kanalendpunkt-Konfiguration.  
   
 ```xml  
-<endpoint address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    name="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          name="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>Siehe auch  

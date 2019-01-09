@@ -2,12 +2,12 @@
 title: '&lt;exposedMethod&gt;'
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 2a26ca90f6a66592c246cc9e5aef50cfa53b4bdd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c63689224e3bba69816f5904599425a235a51bae
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747381"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145236"
 ---
 # <a name="ltexposedmethodgt"></a>&lt;exposedMethod&gt;
 Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstelle für eine COM+-Komponente als Webdienst bereitgestellt wird.  
@@ -20,13 +20,13 @@ Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstell
 ## <a name="syntax"></a>Syntax  
   
 ```xml  
-<comContracts>  
-  <comContract>  
-      <exposedMethods>  
-         <exposedMethod name="string" />  
-      </exposedMethods>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract>
+    <exposedMethods>
+      <exposedMethod name="String" />
+    </exposedMethods>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
@@ -54,17 +54,19 @@ Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstell
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- Wenn Sie auch die ComSvcConfig.exe ausführen, wird die folgende Dienstvertrag mit den zuvor erwähnten Methoden als [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Elemente.  
+ Wenn Sie auch die ComSvcConfig.exe ausführen, wird die folgende Dienstvertrag mit den bereits erwähnten Methoden als [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Elemente.  
   
 ```xml  
-<comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}" name="IFinances" namespace="http://contoso.com/services/financial">  
-    <exposedMethod name="TransferFunds"/>  
-    <exposedMethod name="AddFunds"/>  
-    <exposedMethod name="RemoveFunds"/>  
-</comContract>  
+<comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
+             name="IFinances"
+             namespace="http://contoso.com/services/financial">
+  <exposedMethod name="TransferFunds"/>
+  <exposedMethod name="AddFunds"/>
+  <exposedMethod name="RemoveFunds"/>
+</comContract>
 ```  
   
- Bei Initialisierung des Diensts wird der Laufzeit versucht, einen Dienstvertrag zu generieren, durch Reflektieren über und nur die in der Liste der enthaltenen Methoden hinzufügen [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Elemente. Eine Ablaufverfolgung wird für jede Schnittstellenmethode erzeugt, die nicht im Dienstvertrag enthalten ist.  
+ Zum Zeitpunkt der dienstinitialisierung, versucht die Runtime, die einen Dienstvertrag zu erzeugen, durch Reflektieren über und nur die Methoden in der Liste der enthaltenen [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) Elemente. Eine Ablaufverfolgung wird für jede Schnittstellenmethode erzeugt, die nicht im Dienstvertrag enthalten ist.  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.ServiceModel.Configuration.ComMethodElementCollection>  
