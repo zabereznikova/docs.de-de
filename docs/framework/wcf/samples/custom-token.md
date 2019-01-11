@@ -2,12 +2,12 @@
 title: Benutzerdefiniertes Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6e743be961de2c6d7b09805e6f91d7710efe227e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243048"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223090"
 ---
 # <a name="custom-token"></a>Benutzerdefiniertes Token
 In diesem Beispiel wird veranschaulicht, wie Sie einer benutzerdefinierten tokenimplementierung in eine Windows Communication Foundation (WCF)-Anwendung. Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben. Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt. Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen. In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.
@@ -609,7 +609,7 @@ string GetCallerCreditCardNumber()
   
 2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Vergessen Sie nicht, die Datei CreditCardFile.txt zu kopieren. Andernfalls kann der Kreditkartenauthentifikator die vom Client gesendeten Kreditkartendaten nicht überprüfen. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird. Beachten Sie, dass die Datei Setup.bat an einer Visual Studio-Eingabeaufforderung mit Administratorrechten ausgeführt werden muss.  
+3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird. Beachten Sie, dass die Datei "Setup.bat" im Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet ausgeführt werden muss.  
   
 4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser-TrustedPeople auf dem Client. Sie müssen dies nur tun, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
   

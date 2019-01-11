@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)'
+title: 'Vorgehensweise: Aufrufen des Befehlszeilencompilers (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932153"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221842"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Gewusst wie: Aufrufen des Befehlszeilencompilers (Visual Basic)
-Sie können den Befehlszeilencompiler aufrufen, geben Sie den Namen seiner ausführbaren Datei in die Befehlszeile, auch bekannt als die MS-DOS-Eingabeaufforderung. Wenn Sie von der Standard-Windows-Eingabeaufforderung kompilieren, müssen Sie den vollqualifizierten Pfad zur ausführbaren Datei eingeben. Um dieses Standardverhalten zu überschreiben, können Sie entweder die Visual Studio-Eingabeaufforderung verwenden, oder Ändern der PATH-Umgebungsvariablen. Beide können Sie aus dem Verzeichnis zu kompilieren, indem Sie einfach den Compilernamen.  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Vorgehensweise: Aufrufen des Befehlszeilencompilers (Visual Basic)
+Sie können den Befehlszeilencompiler aufrufen, geben Sie den Namen seiner ausführbaren Datei in die Befehlszeile, auch bekannt als die MS-DOS-Eingabeaufforderung. Wenn Sie von der Standard-Windows-Eingabeaufforderung kompilieren, müssen Sie den vollqualifizierten Pfad zur ausführbaren Datei eingeben. Um dieses Standardverhalten zu überschreiben, können Sie entweder verwenden die Developer-Eingabeaufforderung für Visual Studio, oder Ändern der Umgebungsvariablen PATH enthalten. Beide können Sie aus dem Verzeichnis zu kompilieren, indem Sie einfach den Compilernamen.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>Zum Aufrufen des Compilers mit dem Visual Studio-Eingabeaufforderung  
+### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Zum Aufrufen des Compilers, die mit der Developer-Eingabeaufforderung für Visual Studio  
   
 1.  Der Programmordner des Visual Studio-Tools in der Programmgruppe Microsoft Visual Studio zu öffnen.  
   
-2.  Sie können die Visual Studio-Eingabeaufforderung verwenden, den Compiler aus dem Verzeichnis auf Ihrem Computer, den Zugriff auf, wenn Visual Studio installiert ist.  
+2.  Sie können ein Developer-Eingabeaufforderung für Visual Studio verwenden, den Compiler aus dem Verzeichnis auf Ihrem Computer, den Zugriff auf, wenn Visual Studio installiert ist.  
   
-3.  Rufen Sie die Visual Studio-Eingabeaufforderung.  
+3.  Rufen Sie die Developer-Eingabeaufforderung für Visual Studio.  
   
 4.  Geben Sie an der Befehlszeile `vbc.exe` *"sourceFileName"* und drücken Sie dann die EINGABETASTE.  
   

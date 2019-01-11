@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6b7db8182b5764e3df65ccbdef3b54330c1ee64a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402697"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223005"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Exemplarische Vorgehensweise: Lokalisieren einer Hybridanwendung
 
@@ -32,7 +32,7 @@ Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehen
 
 Am Ende werden Sie eine lokalisierte Hybridanwendung haben.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
@@ -48,7 +48,7 @@ Der erste Schritt ist die Erstellung der [!INCLUDE[TLA#tla_winforms](../../../..
 
 2.  Hinzufügen einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> Element namens `SimpleControl` zum Projekt.
 
-3.  Verwenden der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement platzieren einer `SimpleControl` Element auf dem Formular. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten einer zusammengesetzten 3D-WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3.  Verwenden der <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement platzieren einer `SimpleControl` Element auf dem Formular. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten 3D-WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Hinzufügen von lokalisierbarem Inhalt
 
@@ -118,7 +118,7 @@ Sie können mithilfe von Ressourcenbezeichnern eine Zuordnung von lokalisierbare
 
 ### <a name="to-assign-resource-identifiers"></a>So weisen Sie Ressourcenbezeichner zu
 
-1.  Öffnen Sie im Startmenü der Visual Studio-Eingabeaufforderung ein.
+1.  Öffnen Sie die Developer-Eingabeaufforderung für Visual Studio, über das Startmenü.
 
 2.  Verwenden Sie den folgenden Befehl, um ihrem lokalisierbaren Inhalt Ressourcenbezeichner zuzuweisen.
 

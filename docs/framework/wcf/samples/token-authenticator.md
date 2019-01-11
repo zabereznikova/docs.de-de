@@ -2,12 +2,12 @@
 title: Tokenauthentifizierer
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d9eeee3e69d053fba9afb03e4e938cbe02c7a303
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582644"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222895"
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein tokenauthentifizierers in Windows Communication Foundation (WCF) wird zum Überprüfen des Tokens verwendet wird, mit der Meldung, überprüfen, dass es in sich selbst konsistent, und Authentifizieren der Identität mit dem Token zugeordnet.
@@ -30,7 +30,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tok
 
  Dieses Beispiel zeigt außerdem an, wie die Identität des Aufrufers nach dem benutzerdefinierten tokenauthentifizierungsprozess zugegriffen werden kann, von WCF ist.
 
- Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der App.conf-Konfigurationsdatei definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard-`wsHttpBinding` konfiguriert, wobei der Sicherheitsmodus auf "Nachricht" festgelegt ist. Dies ist der Standardmodus von `wsHttpBinding`. In diesem Beispiel wird das Standard-`wsHttpBinding` auf die Verwendung der Clientbenutzernamenauthentifizierung festgelegt. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `securityCredentials`-Verhalten können Sie ein Dienstzertifikat angeben. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird, wie im folgenden Setup beschrieben.
+ Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der App.conf-Konfigurationsdatei definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einem Standard-`wsHttpBinding` konfiguriert, wobei der Sicherheitsmodus auf „Nachricht“ festgelegt ist. Dies ist der Standardmodus von `wsHttpBinding`. In diesem Beispiel wird das Standard-`wsHttpBinding` auf die Verwendung der Clientbenutzernamenauthentifizierung festgelegt. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `securityCredentials`-Verhalten können Sie ein Dienstzertifikat angeben. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird, wie im folgenden Setup beschrieben.
 
 ```xml
 <system.serviceModel>
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Die Datei App.config des Diensts muss so aktualisiert werden, dass sie diesem neuen Zertifikatnamen entspricht. Erstellen Sie sie mithilfe der Datei Setup.bat, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Hostnamen des Computers festlegen, auf dem der Dienst ausgeführt werden soll. Beachten Sie, dass die Datei setup.bat an einer Visual Studio-Eingabeaufforderung mit Administratorrechten ausgeführt werden muss.  
+3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Die Datei App.config des Diensts muss so aktualisiert werden, dass sie diesem neuen Zertifikatnamen entspricht. Erstellen Sie sie mithilfe der Datei Setup.bat, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Hostnamen des Computers festlegen, auf dem der Dienst ausgeführt werden soll. Beachten Sie, dass die Datei "Setup.bat" für Visual Studio mit Administratorrechten geöffnet einer Developer-Eingabeaufforderung ausgeführt werden muss.  
   
 4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser – TrustedPeople des Clients. Sie müssen diesen Schritt nur dann ausführen, wenn das Serverzertifikat von einem Aussteller stammt, der vom Client als vertrauenswürdig eingestuft wurde.  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung.  
   
-10. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   

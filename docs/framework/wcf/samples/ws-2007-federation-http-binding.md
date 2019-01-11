@@ -2,12 +2,12 @@
 title: WS 2007 Federation-HTTP-Bindung
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7dffe56cf5593f1cd59cccd7ea9b6b0e173e0c2c
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513061"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221283"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 Federation-HTTP-Bindung
 In diesem Beispiel wird die Verwendung von <xref:System.ServiceModel.WS2007FederationHttpBinding> veranschaulicht. Dabei handelt es sich um eine Standardbindung, mit der Sie verbundene Szenarien erstellen können, die die Version 1.3 der WS-Trust-Spezifikation unterstützen.  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Öffnen Sie eine Visual Studio-Eingabeaufforderung mit Administratorrechten, und führen Sie die Datei Setup.bat aus, um die erforderlichen Zertifikate zu erstellen.  
+2.  Öffnen Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und führen Sie die Datei "Setup.bat", um die erforderlichen Zertifikate zu erstellen.  
   
  Diese Batchdatei verwendet Certmgr.exe und Makecert.exe, die mit dem Windows SDK verteilt werden. Sie müssen Setup.bat an einer Visual Studio-Eingabeaufforderung ausführen, sodass das Skript diese Tools finden kann.  
   

@@ -2,12 +2,12 @@
 title: Beispiel für Ermittlungssicherheit
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9435afa7324ad9e0f2bf994b2f3ed5e54e5e2e7e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129349"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223103"
 ---
 # <a name="discovery-security-sample"></a>Beispiel für Ermittlungssicherheit
 Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang beteiligt sind, sicher sein müssen. Die Erweiterung der Sicherheit von Suchmeldungen mindert das Risiko für verschiedene Angriffe (Meldungsänderung, Denial of Service, Wiederholung, Spoofing). In diesem Beispiel werden benutzerdefinierte Kanäle implementiert, die Meldungssignaturen mit dem kompakten Signaturformat berechnen und verifizieren. (Dies wird in Abschnitt 8.2 der WS-Discovery-Spezifikation beschrieben.) Das Beispiel unterstützt die [Discovery-Spezifikation von 2005](https://go.microsoft.com/fwlink/?LinkId=177912) und [Version 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -49,7 +49,7 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
   
 -   **DiscoverySecurityChannels**: Eine Bibliothek, die die sichere Bindung verfügbar macht. Die Bibliothek berechnet und überprüft die kompakte Signatur für ausgehende/eingehende Meldungen.  
   
--   **Dienst**: Ein Dienst verfügbar machen ICalculatorService-Vertrag kann selbst gehostet. Der Dienst wird als erkennbar markiert. Der Benutzer gibt die Details des Zertifikats an, mit dem Meldungen signiert werden. Dazu werden Speicherort, Name und Antragsstellername oder andere eindeutige Bezeichner für das Zertifikat sowie der Speicher, in dem sich die Clientzertifikate befinden, angegeben. (Clientzertifikate sind Zertifikate, mit denen die Signatur auf eingehende Meldungen überprüft werden.) Auf Grundlage dieser Details wird ein UdpDiscoveryEndpoint mit zusätzlicher Sicherheit erstellt und verwendet.  
+-   **Dienst:** Ein Dienst verfügbar machen ICalculatorService-Vertrag kann selbst gehostet. Der Dienst wird als erkennbar markiert. Der Benutzer gibt die Details des Zertifikats an, mit dem Meldungen signiert werden. Dazu werden Speicherort, Name und Antragsstellername oder andere eindeutige Bezeichner für das Zertifikat sowie der Speicher, in dem sich die Clientzertifikate befinden, angegeben. (Clientzertifikate sind Zertifikate, mit denen die Signatur auf eingehende Meldungen überprüft werden.) Auf Grundlage dieser Details wird ein UdpDiscoveryEndpoint mit zusätzlicher Sicherheit erstellt und verwendet.  
   
 -   **Client**: Diese Klasse versucht, einen ICalculatorService zu ermitteln und Aufrufen von Methoden für den Dienst. Es wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> mit erweiterter Sicherheit erstellt, mit dem die Meldungen signiert und überprüft werden.  
   
@@ -60,7 +60,7 @@ Die Discovery-Spezifikation erfordert nicht, dass Endpunkte, die am Suchvorgang 
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Führen Sie das Skript Setup.bat über eine Visual Studio-Eingabeaufforderung aus. Im diesem Beispiel werden Zertifikate verwendet, um Meldungen zu signieren und zu überprüfen. Das Skript erstellt die Zertifikate mit Makecert.exe und installiert sie dann mit Certmgr.exe. Das Skript muss mit Administratorberechtigungen ausgeführt werden.  
+1.  Führen Sie das Skript Setup.bat an einer Developer-Eingabeaufforderung für Visual Studio. Im diesem Beispiel werden Zertifikate verwendet, um Meldungen zu signieren und zu überprüfen. Das Skript erstellt die Zertifikate mit Makecert.exe und installiert sie dann mit Certmgr.exe. Das Skript muss mit Administratorberechtigungen ausgeführt werden.  
   
 2.  Klicken Sie zum Erstellen und Ausführen des Beispiels, öffnen Sie die Datei Security.sln in Visual Studio, und wählen Sie **Rebuild All**. Aktualisieren Sie die Projektmappeneigenschaften, um mehrere Projekte zu starten: Wählen Sie **starten** für alle Projekte außer DiscoverySecureChannels. Führen Sie die Projektmappe wie gewohnt aus.  
   

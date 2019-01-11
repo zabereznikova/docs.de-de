@@ -2,12 +2,12 @@
 title: Sicherheit mit benutzerdefinierten Bindungen
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 56c3ed4be894a265635c747373e0b79599ce129d
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192888"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221699"
 ---
 # <a name="custom-binding-security"></a>Sicherheit mit benutzerdefinierten Bindungen
 In diesem Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer benutzerdefinierten Bindung konfiguriert wird. Es zeigt, wie Sicherheit auf Nachrichtenebene und ein sicherer Transport mithilfe einer benutzerdefinierten Bindung aktiviert wird. Dies ist hilfreich, wenn ein sicherer Transport zum Übertragen von Nachrichten zwischen Client und Dienst erforderlich ist und daher die Nachrichten auf Nachrichtenebene gesichert werden müssen. Diese Konfiguration wird nicht von Bindungen unterstützt, die vom System bereitgestellt werden.
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
-1.  Öffnen Sie ein Visual Studio-Eingabeaufforderungsfenster mit Administratorrechten, und führen Sie die Datei Setup.bat aus dem Beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
+1.  Öffnen Sie eine Developer-Eingabeaufforderung für Visual Studio-Fenster mit Administratorrechten, und führen Sie Setup.bat aus dem beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!NOTE]
     >  Die Batchdatei "Setup.bat" wird aus einer Visual Studio 2012-Eingabeaufforderung ausgeführt werden soll. Die PATH-Umgebungsvariable festgelegt in der Visual Studio 2012-Eingabeaufforderung verweist auf das Verzeichnis mit ausführbaren Dateien, die durch das Skript Setup.bat erforderlich sind.  
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  Kopieren Sie die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-    4.  Führen Sie der folgende Befehl an einer Visual Studio-Eingabeaufforderung mit Administratorrechten geöffnet: `Setup.bat service`. Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.  
+    4.  Führen den folgenden Befehl in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet: `Setup.bat service`. Hiermit wird das Dienstzertifikat erstellt, dessen Antragstellername mit dem Namen des Computers übereinstimmt, auf dem die Batchdatei ausgeführt wurde.  
   
         > [!NOTE]
         >  Die Batchdatei Setup.bat ist darauf ausgelegt, an einer Visual Studio-Eingabeaufforderung (2010) ausgeführt zu werden. Die PATH-Umgebungsvariable muss auf das Verzeichnis zeigen, in dem das SDK installiert ist. Diese Umgebungsvariable ist innerhalb einer Visual Studio-Eingabeaufforderung (2010) automatisch festgelegt.
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  Führen Sie Cleanup.bat aus, um alte Zertifikate aus vorherigen Beispielen zu entfernen.
 
-    3.  Exportieren Sie das Dienstzertifikat, indem Sie eine Visual Studio-Eingabeaufforderung mit Administratorrechten öffnen und den folgenden Befehl auf dem Dienstcomputer ausführen (ersetzen Sie `%SERVER_NAME%` durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird):
+    3.  Exportieren Sie das Zertifikat des Diensts, indem Sie die Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem dienstcomputer ausführen (ersetzen Sie `%SERVER_NAME%` mit dem vollqualifizierten Namen des Computers, in denen der Dienst ausgeführt wird):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  Kopieren Sie %SERVER_NAME%.cer auf den Clientcomputer (ersetzen Sie %SERVER_NAME% durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird).
 
-    5.  Importieren Sie das Dienstzertifikat, indem Sie eine Visual Studio-Eingabeaufforderung mit Administratorrechten öffnen und den folgenden Befehl auf dem Clientcomputer ausführen (ersetzen Sie %SERVER_NAME% durch den vollqualifizierten Namen des Computers, auf dem der Dienst ausgeführt wird):
+    5.  Importieren Sie das Zertifikat des Diensts, indem Sie die Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten öffnen und den folgenden Befehl auf dem Clientcomputer ausführen (ersetzen Sie %server_name% durch den vollqualifizierten Namen des Computers, in dem die Dienst wird ausgeführt):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople

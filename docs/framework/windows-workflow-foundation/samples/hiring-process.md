@@ -2,12 +2,12 @@
 title: Einstellungsprozess
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520637"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223220"
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
 In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messagingaktivitäten sowie zwei als Workflowdienste gehostete Workflows implementiert werden. Diese Workflows sind Teil der IT-Infrastruktur des fiktionalen Unternehmens Contoso, Inc.  
@@ -131,13 +131,13 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 ## <a name="data-storage"></a>Datenspeicher  
  Die Daten werden in einer SQL Server-Datenbank mit dem Namen `ContosoHR` gespeichert. (Das Skript zum Erstellen der Datenbank befindet sich im Ordner `DbSetup`.) Workflowinstanzen werden in einer SQL Server-Datenbank mit dem Namen `InstanceStore` gespeichert. (Die Skripts zum Erstellen des Instanzspeichers sind Teil von [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].)  
   
- Beide Datenbanken werden durch Ausführen des Skripts Setup.cmd an einer Eingabeaufforderung von Visual Studio erstellt.  
+ Beide Datenbanken werden durch Ausführen des Skripts Setup.cmd an einer Developer-Eingabeaufforderung für Visual Studio erstellt.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
   
 #### <a name="to-create-the-databases"></a>So erstellen Sie die Datenbanken  
   
-1.  Öffnen Sie eine Visual Studio-Eingabeaufforderung.  
+1.  Öffnen Sie eine Developer-Eingabeaufforderung für Visual Studio.  
   
 2.  Navigieren Sie zum Beispielordner.  
   
