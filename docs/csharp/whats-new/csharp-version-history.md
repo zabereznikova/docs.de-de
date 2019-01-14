@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: ad05e803000393800764a4b3aa1bf6288f765fd4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245599"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186227"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C# #
 
@@ -28,7 +28,7 @@ Die C#-Buildtools berücksichtigen die neueste Hauptversion der Standardsprachve
 
 ## <a name="c-version-10"></a>C# Version 1.0
 
-Wenn Sie sich einmal die Version 1.0 von C# ansehen, werden Sie viele Gemeinsamkeiten mit Java feststellen. Als [Teil der vorgegebenen Entwurfsziele für ECMA](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html) sollte sie eine „einfache, moderne, objektorientierte Universalsprache sein“.  Zu diesem Zeitpunkt bedeuteten die Ähnlichkeiten mit Java, dass die frühen Entwurfsziele erreicht wurden.
+Wenn Sie sich einmal die Version 1.0 von C# ansehen, werden Sie viele Gemeinsamkeiten mit Java feststellen. Als [Teil der vorgegebenen Entwurfsziele für ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html) sollte sie eine „einfache, moderne, objektorientierte Universalsprache sein“.  Zu diesem Zeitpunkt bedeuteten die Ähnlichkeiten mit Java, dass die frühen Entwurfsziele erreicht wurden.
 
 Wenn Sie sich C# 1.0 jedoch heute ansehen, wird Ihnen schwindlig. Es fehlten die integrierten Async-Funktionen und einige der cleveren Funktionen bezüglich Generika, die heute als selbstverständlich betrachtet werden. In der Tat fehlten Generika vollständig.  Und was ist mit [LINQ](../linq/index.md)? War noch nicht verfügbar. Bis zum Erscheinen dieser Erweiterungen dauerte es noch einige Jahre.
 
@@ -142,7 +142,7 @@ Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objekt
 - [Nullpropagator](./csharp-6.md#null-conditional-operators)
 - [Zeichenfolgeninterpolation](./csharp-6.md#string-interpolation)
 - [nameof-Operator](./csharp-6.md#the-nameof-expression)
-- [Indexinitialisierer](csharp-6.md#index-initializers)
+- [Indexinitialisierer](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Zu weiteren neuen Features gehören:
 
@@ -168,7 +168,6 @@ Weitere Features umfassten:
 
 - [Verwerfen](./csharp-7.md#discards)
 - [Binäre Literale und Zahlentrennzeichen](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Ref-Rückgaben und lokale Variablen](./csharp-7.md#ref-locals-and-returns)
 - [Throw expressions (Throw-Ausdrücke)](./csharp-7.md#throw-expressions)
 
 Alle diese Features bieten tolle neue Möglichkeiten für Entwickler und erlauben es, einen noch saubereren Code als je zuvor zu schreiben. Ein Highlight ist das Verdichten der Variablendeklaration zur Verwendung mit dem `out`-Schlüsselwort und indem die Rückgabe mehrerer Werte über Tupel erlaubt wird.

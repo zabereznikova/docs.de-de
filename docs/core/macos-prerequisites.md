@@ -4,12 +4,12 @@ description: Unterstützte Versionen von macOS-Versionen und .NET Core-Abhängig
 author: guardrex
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: bc6e0b20c61c474c7069b757528dbc1ea38354e3
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: e895306164b93cb94dab2161971f99eae3138be9
+ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656309"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54186175"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Erforderliche Komponenten für .NET Core unter macOS
 
@@ -87,8 +87,7 @@ Sie können dieses Limit erhöhen, indem Sie diese Schritte befolgen:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-        "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
     <key>Label</key>

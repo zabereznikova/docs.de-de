@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525350"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249150"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML
 Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine animierte Schaltfläche für die Verwendung in einer Windows Presentation Foundation (WPF)-Anwendung zu erstellen. In dieser exemplarischen Vorgehensweise verwendet und eine Vorlage zum Erstellen einer benutzerdefinierten Schaltflächenressource, die Wiederverwendung von Code und die Trennung von aus der Schaltflächendeklaration ermöglicht. In dieser exemplarischen Vorgehensweise wird ausschließlich in geschrieben [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -28,9 +28,9 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
 1.  Starten Sie Visual Studio.  
   
-2.  **Erstellen eines neuen WPF-Projekts:** auf die **Datei** Startmenü **neu**, und klicken Sie dann auf **Projekt**. Suchen der **Windows-Anwendung (WPF)** Vorlage und geben Sie dem Projekt "den Namen AnimatedButton". Dadurch wird das Gerüst für die Anwendung erstellt.  
+2.  **Erstellen Sie ein neues WPF-Projekt:** Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**. Suchen der **Windows-Anwendung (WPF)** Vorlage und geben Sie dem Projekt "den Namen AnimatedButton". Dadurch wird das Gerüst für die Anwendung erstellt.  
   
-3.  **Hinzufügen von Standardschaltflächen für basic,:** werden alle Dateien, die in dieser exemplarischen Vorgehensweise Sie müssen von der Vorlage bereitgestellt. Öffnen Sie die Datei "Window1.xaml", indem Sie auf die sie im Projektmappen-Explorer doppelklicken. Es wird standardmäßig ein <xref:System.Windows.Controls.Grid> Element in der Datei Window1.xaml. Entfernen der <xref:System.Windows.Controls.Grid> Element, und fügen einige Schaltflächen auf der [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite eingeben oder kopieren und Einfügen von den folgenden hervorgehobenen Code in die Datei Window1.xaml:  
+3.  **Fügen Sie die grundlegende Standardschaltflächen hinzu:** Alle Dateien für diese exemplarische Vorgehensweise benötigen Sie werden von der Vorlage bereitgestellt. Öffnen Sie die Datei "Window1.xaml", indem Sie auf die sie im Projektmappen-Explorer doppelklicken. Es wird standardmäßig ein <xref:System.Windows.Controls.Grid> Element in der Datei Window1.xaml. Entfernen der <xref:System.Windows.Controls.Grid> Element, und fügen einige Schaltflächen auf der [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite eingeben oder kopieren und Einfügen von den folgenden hervorgehobenen Code in die Datei Window1.xaml:  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -58,7 +58,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Um Stile zu verwenden, um grundlegende Eigenschaften für die Schaltflächen festlegen  
   
-1.  **Definieren Sie einen Block Application.Resources:** "App.xaml" zu öffnen und die folgende hervorgehobene Markup hinzufügen, wenn sie nicht bereits vorhanden ist:  
+1.  **Definieren Sie einen Application.Resources-Block:** Öffnen Sie "App.xaml", und fügen Sie das folgende hervorgehobene Markup hinzu, wenn sie nicht bereits vorhanden ist:  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -74,7 +74,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      Ressourcenbereich wird durch Sie die Ressource definieren bestimmt. Definieren von Ressourcen in `Application.Resources` in app.xaml-Datei kann die Ressource aus an einer beliebigen Stelle in der Anwendung verwendet werden. Weitere Informationen zum Definieren des Bereichs Ihrer Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-2.  **Eine Formatvorlage erstellen und grundlegende Eigenschaftswerte mit definieren:** fügen Sie das folgende Markup, das `Application.Resources` Block. Dieses Markup erstellt eine <xref:System.Windows.Style> , die für alle Schaltflächen in der Anwendung, die Einstellung gilt die <xref:System.Windows.FrameworkElement.Width%2A> der Schaltflächen auf 90 und die <xref:System.Windows.FrameworkElement.Margin%2A> auf 10:  
+2.  **Erstellen eines Stils und grundlegende Eigenschaftswerte mit definieren:** Fügen Sie das folgende Markup, das `Application.Resources` Block. Dieses Markup erstellt eine <xref:System.Windows.Style> , die für alle Schaltflächen in der Anwendung, die Einstellung gilt die <xref:System.Windows.FrameworkElement.Width%2A> der Schaltflächen auf 90 und die <xref:System.Windows.FrameworkElement.Margin%2A> auf 10:  
   
     ```xaml  
     <Application.Resources>  
@@ -91,7 +91,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      Es gibt viele weitere Möglichkeiten mit Stilen, einschließlich eine Vielzahl von Möglichkeiten zum Optimieren, welche Objekte gelten, komplexe Eigenschaftswerte angeben und auch mithilfe von Stilen als Eingabe für andere Stile. Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
-3.  **Legen Sie einen Stil-Eigenschaftswert auf eine Ressource:** Ressourcen ermöglichen eine einfache Möglichkeit, Wiederverwenden von häufig definierten Objekten und Werte. Er ist besonders nützlich, um mit Ressourcen, um den Code etwas modularer gestalten komplexe Werte zu definieren. Fügen Sie die folgende hervorgehobene Markup, um "App.xaml".  
+3.  **Legen Sie einen Stil-Eigenschaftswert auf eine Ressource:** Ressourcen können eine einfache Möglichkeit, Wiederverwenden von häufig definierten Objekten und Werte. Er ist besonders nützlich, um mit Ressourcen, um den Code etwas modularer gestalten komplexe Werte zu definieren. Fügen Sie die folgende hervorgehobene Markup, um "App.xaml".  
   
     ```xaml  
     <Application.Resources>  
@@ -121,7 +121,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Die Vorlage zu verwenden, um das Aussehen der Schaltfläche zu definieren.  
   
-1.  **Richten Sie die Vorlage:** da Steuerelemente wie <xref:System.Windows.Controls.Button> haben eine <xref:System.Windows.Controls.Control.Template%2A> -Eigenschaft, können Sie den Wert der Vorlage genau wie die anderen haben wir auf Eigenschaftswerte definieren eine <xref:System.Windows.Style> mithilfe einer <xref:System.Windows.Setter>. Fügen Sie die folgende hervorgehobene Markup, um die Schaltflächen-Formatvorlage.  
+1.  **Richten Sie die Vorlage aus:** Da Steuerelemente wie <xref:System.Windows.Controls.Button> haben eine <xref:System.Windows.Controls.Control.Template%2A> -Eigenschaft, können Sie den Wert der Vorlage genau wie die anderen haben wir auf Eigenschaftswerte definieren eine <xref:System.Windows.Style> mithilfe einer <xref:System.Windows.Setter>. Fügen Sie die folgende hervorgehobene Markup, um die Schaltflächen-Formatvorlage.  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
     </Application.Resources>  
     ```  
   
-2.  **Ändern der Darstellung der Schaltfläche:** an diesem Punkt müssen Sie die Vorlage zu definieren. Fügen Sie das folgende hervorgehobene Markup hinzu. Dieses Markup gibt zwei <xref:System.Windows.Shapes.Rectangle> Elemente mit abgerundeten Ecken an, gefolgt von einem <xref:System.Windows.Controls.DockPanel>. Die <xref:System.Windows.Controls.DockPanel> wird verwendet, auf dem Host die <xref:System.Windows.Controls.ContentPresenter> der Schaltfläche. Ein <xref:System.Windows.Controls.ContentPresenter> zeigt den Inhalt der Schaltfläche. In dieser exemplarischen Vorgehensweise wird der Inhalt Text ("Schaltfläche" 1","Button 2","Button 3"). Alle von den Komponenten der Dienstvorlage (Rechtecke und die <xref:System.Windows.Controls.DockPanel>) angeordnet sind, in der ein <xref:System.Windows.Controls.Grid>.  
+2.  **Ändern Sie die Darstellung der Schaltfläche:** An diesem Punkt müssen Sie die Vorlage zu definieren. Fügen Sie das folgende hervorgehobene Markup hinzu. Dieses Markup gibt zwei <xref:System.Windows.Shapes.Rectangle> Elemente mit abgerundeten Ecken an, gefolgt von einem <xref:System.Windows.Controls.DockPanel>. Die <xref:System.Windows.Controls.DockPanel> wird verwendet, auf dem Host die <xref:System.Windows.Controls.ContentPresenter> der Schaltfläche. Ein <xref:System.Windows.Controls.ContentPresenter> zeigt den Inhalt der Schaltfläche. In dieser exemplarischen Vorgehensweise wird der Inhalt Text ("Schaltfläche" 1","Button 2","Button 3"). Alle von den Komponenten der Dienstvorlage (Rechtecke und die <xref:System.Windows.Controls.DockPanel>) angeordnet sind, in der ein <xref:System.Windows.Controls.Grid>.  
   
     ```xaml  
     <Setter.Value>  
@@ -167,7 +167,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **Fügen Sie einen Glaseffekt auf die Vorlage:** als Nächstes fügen Sie das Glas. Erstellen Sie zunächst einige Ressourcen, die einen Glaseffekt für den Farbverlauf zu erstellen. Fügen Sie diesen Farbverlauf Ressourcen an einer beliebigen Stelle innerhalb der `Application.Resources` blockieren:  
+3.  **Fügen Sie einen Glaseffekt auf die Vorlage ein:** Als Nächstes fügen Sie das Glas. Erstellen Sie zunächst einige Ressourcen, die einen Glaseffekt für den Farbverlauf zu erstellen. Fügen Sie diesen Farbverlauf Ressourcen an einer beliebigen Stelle innerhalb der `Application.Resources` blockieren:  
   
     ```xaml  
     <Application.Resources>  
@@ -187,7 +187,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      Diese Ressourcen dienen dazu, wie die <xref:System.Windows.Shapes.Shape.Fill%2A> für ein Rechteck, das wir in einfügen die <xref:System.Windows.Controls.Grid> der Schaltflächenvorlage. Fügen Sie das folgende hervorgehobene Markup der Vorlage hinzu.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"  
@@ -249,13 +249,13 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
 ## <a name="create-button-interactivity"></a>Gestalten, Schaltfläche  
  In diesem Abschnitt erstellen Sie Eigenschaftstrigger und Ereignistrigger Eigenschaftswerte ändern und Ausführen von Animationen als Reaktion auf Benutzeraktionen wie klicken und den Mauszeiger über der Schaltfläche.  
   
- Eine einfache Möglichkeit zum Hinzufügen von Interaktivität (Mouseover-MouseLeave-, klicken Sie auf und So weiter) werden in der Vorlage oder Stil festlegen. Zum Erstellen einer <xref:System.Windows.Trigger>, definieren Sie z. B. eine Eigenschaft "Condition": die Schaltfläche mit den <xref:System.Windows.UIElement.IsMouseOver%2A> Eigenschaftswert ist gleich `true`. Anschließend definieren Sie die Setter (Aktionen), die stattfinden, wenn die auslöserbedingung erfüllt ist.  
+ Eine einfache Möglichkeit zum Hinzufügen von Interaktivität (Mouseover-MouseLeave-, klicken Sie auf und So weiter) werden in der Vorlage oder Stil festlegen. Zum Erstellen einer <xref:System.Windows.Trigger>, definieren Sie z. B. eine Eigenschaft "Condition": Die Schaltfläche mit den <xref:System.Windows.UIElement.IsMouseOver%2A> Eigenschaftswert ist gleich `true`. Anschließend definieren Sie die Setter (Aktionen), die stattfinden, wenn die auslöserbedingung erfüllt ist.  
   
 #### <a name="to-create-button-interactivity"></a>Schaltfläche Interaktivität  
   
-1.  **Hinzufügen von Vorlagentriggern:** fügen Sie das hervorgehobene Markup der Vorlage.  
+1.  **Fügen Sie Trigger hinzu:** Fügen Sie das hervorgehobene Markup der Vorlage ein.  
   
-    ```  
+    ```xaml
     <Setter.Value>  
       <ControlTemplate TargetType="{x:Type Button}">  
         <Grid Width="{TemplateBinding Width}"   
@@ -318,9 +318,9 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
     </Setter.Value>  
     ```  
   
-2.  **Eigenschaftsauslöser hinzufügen:** fügen Sie das hervorgehobene Markup, das `ControlTemplate.Triggers` blockieren:  
+2.  **Fügen Sie Eigenschaftstrigger hinzu:** Fügen Sie das hervorgehobene Markup, das `ControlTemplate.Triggers` blockieren:  
   
-    ```  
+    ```xaml
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>  
@@ -330,9 +330,9 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      Drücken Sie F5, um die Anwendung auszuführen und die Auswirkung dieser feststellen, wie Sie den Mauszeiger über die Schaltflächen ausführen.  
   
-3.  **Hinzufügen eines Triggers Fokus:** als Nächstes fügen wir einige ähnliche Setter, um Fälle zu behandeln, wenn die Schaltfläche den Fokus (z. B. hat, wenn der Benutzer darauf klickt).  
+3.  **Fügen Sie einen Schwerpunkt Trigger hinzu:** Als Nächstes fügen wir einige ähnliche Setter, um Fälle zu behandeln, wenn die Schaltfläche den Fokus (z. B. hat, wenn der Benutzer darauf klickt).  
   
-    ```  
+    ```xaml  
     <ControlTemplate.Triggers>  
   
       <!-- Set properties when mouse pointer is over the button. -->  
@@ -361,9 +361,9 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      Drücken Sie F5, um die Anwendung auszuführen, und klicken auf eine der Schaltflächen. Beachten Sie, dass die Schaltfläche mit der hervorgehobenen bleibt, wenn Sie darauf klicken, da es immer noch den Fokus besitzt. Wenn Sie eine andere Schaltfläche klicken, erhält die neue Schaltfläche den Fokus, während die verliert.  
   
-4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:** als Nächstes fügen wir einige Animationen für die Trigger hinzu. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
+4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:  ** Als Nächstes fügen wir einige Animationen für die Trigger hinzu. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
   
-    ```  
+    ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
     <EventTrigger RoutedEvent="Mouse.MouseEnter">  
       <EventTrigger.Actions>  
@@ -398,9 +398,9 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      Der zweite Ereignistrigger (<xref:System.Windows.UIElement.MouseLeave>) einfach beendet das erste Abonnement. Wenn Sie beenden eine <xref:System.Windows.Media.Animation.Storyboard>, alle animierten Eigenschaften auf ihre Standardwerte zurück. Aus diesem Grund, wenn der Benutzer den Zeiger der Schaltfläche weg bewegt, wird die Schaltfläche zurück auf die Art und Weise, die vor der Mauszeiger über die Schaltfläche bewegt. Weitere Informationen zu Animationen finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
-5.  **Fügen Sie eine Animation für, wenn die Schaltfläche geklickt wird:** der letzte Schritt ist zum Hinzufügen eines Triggers für, wenn der Benutzer die Schaltfläche klickt. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` blockieren:  
+5.  **Fügen Sie eine Animation für, wenn die Schaltfläche geklickt wird:** Der letzte Schritt ist, einen Trigger zum Hinzufügen, wenn der Benutzer die Schaltfläche klickt. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` blockieren:  
   
-    ```  
+    ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  
     <EventTrigger RoutedEvent="Button.Click">  
       <EventTrigger.Actions>  

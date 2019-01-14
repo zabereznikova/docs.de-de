@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240722"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151526"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -18,7 +18,7 @@ Komponententests bringen zahlreiche Vorteile mit sich: Sie helfen bei der Regres
 
 In diesem Leitfaden lernen Sie die bewährten Methoden beim Schreiben von Komponententests kennen, mit denen Sie Ihre Tests resilient und leicht verständlich gestalten können.
 
-Von [John Reese](http://reesespieces.io) mit besonderem Dank an [Roy Osherove](http://osherove.com/)
+Von [John Reese](https://reesespieces.io) mit besonderem Dank an [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Weshalb sollte ich Komponententests durchführen?
 

@@ -27,7 +27,7 @@ Sie benötigen Grundkenntnisse von [Git und GitHub.com](https://guides.github.co
 **Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten. Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
 Der Inhalt im Ordner **docs** ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
 
-- oder - 
+- oder -
 
 Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Beiträge willkommen sind. Unter [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Projekte für .NET-Community-Mitwirkende) sind viele der Arbeitsaufgaben aufgelistet, die für Community-Mitwirkende verfügbar sind. Je nach Interesse und Engagement können Sie Tickets in den folgenden Kategorien auswählen:
 
@@ -140,7 +140,7 @@ Die folgende Liste enthält einige grundlegende Regeln, die Sie beachten sollten
 
 ## <a name="contributor-license-agreement"></a>Lizenzvereinbarung für Mitwirkende
 
-Sie müssen das [.NET Foundation Contribution License Agreement (CLA)](https://cla.dotnetfoundation.org) unterzeichnen, bevor Ihr Pull Request zusammengeführt wird. Dies ist eine einmalige Anforderung für .NET Foundation-Projekte. Auf Wikipedia erfahren Sie mehr über [Contributor License Agreements (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement).
+Sie müssen das [.NET Foundation Contribution License Agreement (CLA)](https://cla.dotnetfoundation.org) unterzeichnen, bevor Ihr Pull Request zusammengeführt wird. Dies ist eine einmalige Anforderung für .NET Foundation-Projekte. Auf Wikipedia erfahren Sie mehr über [Contributor License Agreements (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement).
 
 Die Vereinbarung finden Sie in der Datei [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 

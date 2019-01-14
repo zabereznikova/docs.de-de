@@ -10,7 +10,7 @@ Issues und Aufgaben für diese drei Repositorys werden hier verfolgt. Diese Ress
 
 Wir freuen uns immer über Beiträge, die die .NET-Dokumentation verbessern und vervollständigen. Wenn Sie einen Beitrag leisten möchten, sehen Sie sich [Projects for .NET Community Contributors (Projekte für .NET-Communitymitwirkende)](https://github.com/dotnet/docs/projects/35) an, um sich inspirieren zu lassen. Im [Leitfaden für Mitwirkende](CONTRIBUTING.md) finden Sie Anweisungen zu bewährten Vorgehensweisen. Sehen Sie sich alternativ die [Liste der Issues](https://github.com/dotnet/docs/issues) an, um für Sie interessante Aufgaben zu finden.
 
-Wahrscheinlich wird diese Dokumentation auch für [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) und [Unity](http://docs.unity3d.com/Manual/index.html) verwendet.
+Wahrscheinlich wird diese Dokumentation auch für [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) und [Unity](https://docs.unity3d.com/Manual/index.html) verwendet.
 
 Dieses Projekt verwendet die Verhaltensregeln der Mitwirkendenvereinbarung, in denen das gewünschte Verhalten in der Community festgehalten wird.
 Weitere Informationen finden Sie unter [.NET Foundation Code of Conduct (.NET Foundation-Verhaltensregeln)](https://dotnetfoundation.org/code-of-conduct).

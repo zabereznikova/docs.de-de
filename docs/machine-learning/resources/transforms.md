@@ -4,12 +4,12 @@ description: Untersuchen Sie die in ML.NET unterstützten herausragenden technis
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451091"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249124"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Datentransformationen für maschinelles Lernen – ML.NET
 
@@ -103,7 +103,6 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Entfernt fehlende Werte aus Spalten. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Erstellt eine boolesche Ausgabespalte, in der sich genauso viele Slots wie in der Eingabespalte befinden. Der Ausgabewert ist TRUE, falls der Wert in der Eingabespalte fehlt. |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Ersetzt fehlende Werte durch den Standardwert oder durch den Mittel-, Mindest- oder Höchstwert (nur im Fall von Nicht-Text-Spalten). |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Erstellt eine boolesche Ausgabespalte, in der sich genauso viele Slots wie in der Eingabespalte befinden. Der Ausgabewert ist TRUE, falls der Wert in der Eingabespalte fehlt. |
 
 ## <a name="normalization"></a>Normalisierung
 
