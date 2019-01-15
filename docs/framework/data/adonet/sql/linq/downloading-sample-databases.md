@@ -1,14 +1,14 @@
 ---
 title: Rufen Sie die SQL Server-Beispieldatenbanken für ADO.NET-Codebeispiele
 description: Laden Sie die SQL Server-Beispieldatenbanken, die in den Codebeispielen in der Dokumentation zu ADO.NET sowie SQL Server und Verwaltungstools verwendet
-ms.date: 10/18/2018
+ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 8ab65f992c9cf2b65271a237fa06eb96e358ae6a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5580f06f3d28ed6d70f75b619498ac8de7bc3326
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153487"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307291"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>Rufen Sie die Beispieldatenbanken für ADO.NET-Codebeispiele
 
@@ -25,30 +25,7 @@ Bevor Sie die Northwind-Datenbank verwenden können, müssen Sie führen Sie die
 > [!TIP]
 > Wenn Sie für die Datenbank Northwind für Microsoft Access suchen, finden Sie unter [installieren die Beispieldatenbank Northwind für Microsoft Access](#northwind_access).
 
-## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>Abrufen der AdventureWorks-Beispieldatenbank für SQL Server
-
-Laden Sie die AdventureWorks-Beispieldatenbank für SQL Server aus dem folgenden GitHub-Repository herunter:
-
-[AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-
-Nachdem Sie eine der Sicherungskopie der Datenbank herunterladen (\*. bak) Dateien wiederherstellen die Sicherung mit einer Instanz von SQL Server mithilfe von SQL Server Management Studio (SSMS). Finden Sie unter [erhalten SQL Server Management Studio](#get_ssms).
-
-## <a name="get_sql"></a> Erwerben von SQLServer Express
-
-SQL Server Express ist eine kostenlose, professionelles Edition von SQL Server, die Sie mit Anwendungen verteilen können. SQL Server Express auf der folgenden Seite herunterladen:
-  
-[SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
-
-Bei Verwendung von [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB ist in der kostenlosen communityedition von Visual Studio als auch die Editionen Professional und höheren enthalten.  
-
-## <a name="get_ssms"></a> Abrufen von SQL Server Management Studio
-Wenn Sie möchten anzeigen oder Ändern einer Datenbank, die Sie heruntergeladen haben, können Sie SQL Server Management Studio (SSMS). Herunterladen von SSMS auf der folgenden Seite:
-
-[SQL Server Management Studio (SSMS) herunterladen](/sql/ssms/download-sql-server-management-studio-ssms) 
-
-Sie können auch anzeigen und Verwalten von Datenbanken in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), Verbinden mit der Datenbank aus **Objekt-Explorer von SQL Server**, oder erstellen Sie eine Datenverbindung mit der Datenbank in **Server-Explorer**. Öffnen Sie diese Explorer-Bereiche aus der **Ansicht** Menü.
-
-## <a name="northwind_access"></a> Installieren der Beispieldatenbank Northwind für Microsoft Access
+## <a name="northwind_access"></a> Abrufen der Northwind-Beispieldatenbank für Microsoft Access
 
 Die Northwind-Beispieldatenbank für Microsoft Access ist nicht im Microsoft Download Center verfügbar. Um Northwind direkt von innerhalb von Access zu installieren, gehen Sie folgendermaßen vor:
 
@@ -63,6 +40,29 @@ Die Northwind-Beispieldatenbank für Microsoft Access ist nicht im Microsoft Dow
 1. Wählen Sie **Erstellen** aus. Der Zugriff die Northwind-Datenbank-downloads und bereitet Sie vor.
 
 1. Wenn dieser Prozess abgeschlossen ist, öffnet sich die Datenbank mit der eine Willkommensseite angezeigt.
+
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>Abrufen der AdventureWorks-Beispieldatenbank für SQL Server
+
+Laden Sie die AdventureWorks-Beispieldatenbank für SQL Server aus dem folgenden GitHub-Repository herunter:
+
+[AdventureWorks-Beispieldatenbanken](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+
+Nachdem Sie eine der Sicherungskopie der Datenbank herunterladen (\*. bak) Dateien wiederherstellen die Sicherung mit einer Instanz von SQL Server mithilfe von SQL Server Management Studio (SSMS). Finden Sie unter [erhalten SQL Server Management Studio](#get_ssms).
+
+## <a name="get_ssms"></a> Get SQL Server Management Studio
+Wenn Sie möchten anzeigen oder Ändern einer Datenbank, die Sie heruntergeladen haben, können Sie SQL Server Management Studio (SSMS). Herunterladen von SSMS auf der folgenden Seite:
+
+[SQL Server Management Studio (SSMS) herunterladen](/sql/ssms/download-sql-server-management-studio-ssms) 
+
+Sie können auch anzeigen und Verwalten von Datenbanken in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. In [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), Verbinden mit der Datenbank aus **Objekt-Explorer von SQL Server**, oder erstellen Sie eine Datenverbindung mit der Datenbank in **Server-Explorer**. Öffnen Sie diese Explorer-Bereiche aus der **Ansicht** Menü.
+
+## <a name="get_sql"></a> Erwerben von SQLServer Express
+
+SQL Server Express ist eine kostenlose, professionelles Edition von SQL Server, die Sie mit Anwendungen verteilen können. SQL Server Express auf der folgenden Seite herunterladen:
+  
+[SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
+
+Bei Verwendung von [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB ist in der kostenlosen communityedition von Visual Studio als auch die Editionen Professional und höheren enthalten.  
 
 ## <a name="see-also"></a>Siehe auch
 

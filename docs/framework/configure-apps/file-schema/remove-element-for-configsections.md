@@ -1,5 +1,5 @@
 ---
-title: '&lt;Entfernen Sie&gt; -Element für &lt;"configSections"&gt;'
+title: '&lt;Entfernen Sie&gt; -Element für &lt;ConfigSections&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 11a930120c375616d73faae68a6d6807c2f633cb
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752415"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307226"
 ---
 # <a name="remove-element-for-configsections"></a>\<Entfernen Sie >-Element für \<ConfigSections >
 
 Entfernt einen vordefinierten Abschnitt oder Abschnittsgruppe.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<ConfigSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Entfernen >**
+&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,25 +34,25 @@ Entfernt einen vordefinierten Abschnitt oder Abschnittsgruppe.
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **name**  | Erforderliches Attribut.<br><br>Gibt den Namen des Abschnitts oder Abschnittsgruppe zu entfernen. |
+| **name**  | Erforderliches Attribut.<br><br>Gibt den Namen des Abschnitts oder des zu entfernenden Abschnittsgruppe. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<ConfigSections >** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Enthält die Konfiguration im Abschnitt und Namespacedeklarationen. |
+| [**\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Enthält die Konfiguration im Abschnitt und Namespacedeklarationen. |
 
-# <a name="child-elements"></a>Untergeordnete Elemente
+## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="remarks"></a>Hinweise
 
-Können Sie die  **\<entfernen >** Element Abschnitte und Abschnittsgruppen aus der Anwendung, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden entfernt.
+Können Sie die  **\<entfernen >** Elements, Abschnitte und Abschnittsgruppen aus Ihrer Anwendung, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden entfernt.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die  **\<entfernen >** Element in einer Anwendungskonfigurationsdatei zum Entfernen eines Bereichs, die zuvor in der Computerkonfigurationsdatei definiert.
+Das folgende Beispiel zeigt, wie Sie mit der  **\<entfernen >** Element in einer Anwendungskonfigurationsdatei auf einen Abschnitt, der zuvor in der Computerkonfigurationsdatei definiert zu entfernen.
 
 Der folgende Konfigurationscode Datei Computer deklariert Abschnitt  **\<SampleSection >**:
 
@@ -69,7 +69,7 @@ Der folgende Konfigurationscode Datei Computer deklariert Abschnitt  **\<SampleS
 </configuration>
 ```
 
-Der folgende Code für eine Anwendungskonfigurationsdatei entfernt die  **\<SampleSection >** Abschnitt. Nach dem entfernen die Anwendung kann nicht die Einstellungen in abrufen  **\<SampleSection >**.
+Der folgende Code für eine Anwendungskonfigurationsdatei entfernt die  **\<SampleSection >** Abschnitt. Nach dem entfernen kann nicht die Anwendung rufen Sie die Einstellungen in  **\<SampleSection >**.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,7 +82,7 @@ Der folgende Code für eine Anwendungskonfigurationsdatei entfernt die  **\<Samp
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei Computerkonfigurationsdatei verwendet werden (*"Machine.config"*), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden (*"Machine.config"*), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
 
 ## <a name="see-also"></a>Siehe auch
 
