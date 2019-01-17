@@ -37,11 +37,11 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
   
 |Muster|Beschreibung |  
 |-------------|-----------------|  
-|`(@)`|Das "@"-Zeichen wird als Übereinstimmung verwendet. Dies ist die erste Erfassungsgruppe.|  
+|`(@)`|Das @ Zeichen wird als Übereinstimmung verwendet. Dies ist die erste Erfassungsgruppe.|  
 |`(.+)`|Ein- oder mehrmalige Übereinstimmung mit beliebigem Zeichen. Dies ist die zweite Erfassungsgruppe.|  
 |`$`|Beendet die Suche am Ende der Zeichenfolge.|  
   
- Der Domänenname wird zusammen mit dem @-Zeichen der `DomainMapper` -Methode übergeben, die die <xref:System.Globalization.IdnMapping> -Klasse verwendet, um Unicode-Zeichen in ihre Punycode-Entsprechungen zu übersetzen, die außerhalb des 7-Bit-ASCII-Zeichenbereichs liegen. Darüber hinaus wird die Methode auch das `invalid`-Flag auf `True` fest, wenn die <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType>-Methode ein unzulässiges Zeichen im Domänennamen erkennt. Diese Methode gibt den Punycode-Domänennamen, der dem @-Zeichen vorangestellt ist, an die `IsValidEmail` -Methode zurück.  
+ Der Domänenname wird zusammen mit dem @ Zeichen der `DomainMapper` -Methode übergeben, die die <xref:System.Globalization.IdnMapping> -Klasse verwendet, um Unicode-Zeichen in ihre Punycode-Entsprechungen zu übersetzen, die außerhalb des 7-Bit-ASCII-Zeichenbereichs liegen. Darüber hinaus wird die Methode auch das `invalid`-Flag auf `True` fest, wenn die <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType>-Methode ein unzulässiges Zeichen im Domänennamen erkennt. Diese Methode gibt den Punycode-Domänennamen, der dem @ Zeichen vorangestellt ist, an die `IsValidEmail` -Methode zurück.  
   
  Die `IsValidEmail`-Methode ruft dann die <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType>-Methode auf, um zu überprüfen, ob die Adresse dem Muster eines regulären Ausdrucks entspricht.  
   
@@ -56,13 +56,13 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
 |-------------|-----------------|  
 |`^`|Starten Sie den Vergleich am Beginn der Zeichenfolge.|  
 |`(?(")`|Ermittelt, ob es sich beim ersten Zeichen um ein Anführungszeichen handelt. `(?(")` ist der Anfang eines Alternierungskonstrukts.|  
-|`(?("")("".+?(?<!\\)""@)`|Wenn es sich beim ersten Zeichen um ein Anführungszeichen handelt, wird ein öffnendes Anführungszeichen als Übereinstimmung verwendet, dem mindestens ein beliebiges Zeichen und ein schließendes Anführungszeichen folgen. Dem schließenden Anführungszeichen darf kein umgekehrter Schrägstrich (\\) vorangestellt sein. `(?<!` ist der Anfang einer negativen Lookbehindassertion mit einer Breite von Null. Die Zeichenfolge muss mit einem "@"-Zeichen enden.|  
+|`(?("")("".+?(?<!\\)""@)`|Wenn es sich beim ersten Zeichen um ein Anführungszeichen handelt, wird ein öffnendes Anführungszeichen als Übereinstimmung verwendet, dem mindestens ein beliebiges Zeichen und ein schließendes Anführungszeichen folgen. Dem schließenden Anführungszeichen darf kein umgekehrter Schrägstrich (\\) vorangestellt sein. `(?<!` ist der Anfang einer negativen Lookbehindassertion mit einer Breite von Null. Die Zeichenfolge muss mit einem @-Zeichen enden.|  
 |<code>&#124;(([0-9a-z]</code>|Wenn es sich beim ersten Zeichen um kein Anführungszeichen handelt, wird ein beliebiges Buchstabenzeichen von a bis z oder A bis Z (die Groß-/Kleinschreibung wird nicht beachtet) oder ein beliebiges numerisches Zeichen von 0 bis 9 als Übereinstimmung verwendet.|  
 |`(\.(?!\.))`|Wenn es sich beim nächsten Zeichen um einen Punkt handelt, wird dieser als Übereinstimmung verwendet. Wenn es sich um keinen Punkt handelt, wird bis zum nächsten Zeichen weitergesucht und der Vergleich fortsetzt. `(?!\.)` ist eine negative Lookaheadassertion mit einer Breite von 0 (Null), die verhindert, dass im lokalen Teil einer E-Mail-Adresse zwei aufeinander folgende Punkte enthalten sind.|  
 |<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Wenn es sich beim nächsten Zeichen nicht um einen Punkt handelt, wird ein beliebiges Wortzeichen oder eines der folgenden Zeichen als Übereinstimmung verwendet: -!#$%'*+=?^\`{}&#124;~.|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|0 oder mehr Vorkommen des Alternierungsmusters werden als Übereinstimmung verwendet (ein Punkt, dem ein anderes Zeichen als ein Punkt oder eines aus einer Reihe von Zeichen folgt).|  
-|`@`|Das "@"-Zeichen wird als Übereinstimmung verwendet.|  
-|`(?<=[0-9a-z])`|Die Suche wird fortgesetzt, wenn es sich bei dem Zeichen, das dem @-Zeichen vorausgeht, ist, um eines der Zeichen A bis Z, a bis z oder 0 bis 9 handelt. Das `(?<=[0-9a-z])` -Konstrukt definiert eine positive Lookbehindassertion mit einer Breite von 0 (Null).|  
+|`@`|Das @ Zeichen wird als Übereinstimmung verwendet.|  
+|`(?<=[0-9a-z])`|Die Suche wird fortgesetzt, wenn es sich bei dem Zeichen, das dem @ Zeichen vorausgeht, ist, um eines der Zeichen A bis Z, a bis z oder 0 bis 9 handelt. Das `(?<=[0-9a-z])` -Konstrukt definiert eine positive Lookbehindassertion mit einer Breite von 0 (Null).|  
 |`(?(\[)`|Überprüfen Sie, ob es sich bei dem Zeichen, das @ folgt, um eine eckige Klammer links handelt.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|Wenn es sich um eine eckige Klammer links handelt, wird die eckige Klammer links als Übereinstimmung verwendet, der eine IP-Adresse (vier Gruppen aus einer bis drei Ziffern, jeweils durch einen Punkt getrennt) und eine eckige Klammer rechts folgen.|  
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Wenn es sich bei dem Zeichen, das @ folgt, um keine öffnende eckige Klammer handelt, wird ein alphanumerisches Zeichen mit einem Wert von A-Z, a-z oder 0-9 als Übereinstimmung verwendet, dem null oder mehr Vorkommen eines Bindestrichs und kein oder ein alphanumerisches Zeichen mit einem Wert von A-Z, a-z oder 0-9 sowie ein Punkt folgen. Dieses Muster kann ein- oder mehrmals wiederholt werden und der Domänenname der obersten Ebene muss darauf folgen.|  
