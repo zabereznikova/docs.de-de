@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 6f1fb6fa7702d36aa7ddf4c12fe4a370f4e66e23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99875de320d6728fdacb55c153064c5c1267efdf
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528791"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362924"
 ---
 # <a name="popup-placement-behavior"></a>Verhalten beim Platzieren von Popups
 Ein <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement zeigt Inhalt in einem separaten Fenster, die über einer Anwendung schwebt. Sie können angeben, der die Position des ein <xref:System.Windows.Controls.Primitives.Popup> relativ zu einem Steuerelement, die Maus oder den Bildschirm mit der <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> Eigenschaften.  Diese Eigenschaften arbeiten zusammen, um die Flexibilität bei der die Position der Angabe der <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -36,7 +36,7 @@ Bild mit vier Popups
  Dieses einfache Beispiel zeigt, wie Sie festlegen der <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> und <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaften, jedoch mithilfe von der <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> Eigenschaften, Sie haben noch mehr Kontrolle über Where der <xref:System.Windows.Controls.Primitives.Popup> positioniert ist.  
   
 <a name="Definitions"></a>   
-## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Begriffsdefinition: der Aufbau eines Popups  
+## <a name="definitions-of-terms-the-anatomy-of-a-popup"></a>Definitionen von Begriffen: Der Aufbau eines Popups  
  Die folgenden Begriffe sind hilfreich, zu verstehen, wie die <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> Eigenschaften aufeinander beziehen und die <xref:System.Windows.Controls.Primitives.Popup>:  
   
 -   Das Zielobjekt  
@@ -228,4 +228,4 @@ Die Platzierung ist „Mouse“, und das Popup stößt auf den unteren Rand des 
  Sie können die Ausrichtungspunkt für das Ziel Zielursprung und den popupausrichtungspunkt anpassen, indem Sie die Einstellung der <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaft <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Definieren Sie dann eine <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> Delegat, der einen Satz von möglichen Platzierungspunkten und Primärachsen (sortiert nach Präferenz) für zurückgibt der <xref:System.Windows.Controls.Primitives.Popup>. Der Punkt, der den größten Teil zeigt die <xref:System.Windows.Controls.Primitives.Popup> ausgewählt ist.  Die Position der <xref:System.Windows.Controls.Primitives.Popup> automatisch angepasst wird, wenn die <xref:System.Windows.Controls.Primitives.Popup> wird ausgeblendet, indem Sie den Rand des Bildschirms. Ein Beispiel finden Sie unter [Angeben einer benutzerdefinierten Popupposition](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Beispiel für das Platzieren eines Popups](https://go.microsoft.com/fwlink/?LinkID=160032)
+ [Beispiel für das Platzieren eines Popups](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
