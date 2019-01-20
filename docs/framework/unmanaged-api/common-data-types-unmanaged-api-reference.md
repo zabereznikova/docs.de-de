@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 561a6a5a8e778ab59a0d0f1f7f5327104ead2c79
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e0d3a9039c6dc5d72ca740d6eaaf8a4d565e2647
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185533"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415272"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Allgemeine Datentypen (Referenz zur nicht verwalteten API)
 In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs für .NET Framework verwenden und die über `typedef`-Argumente aus C/C++ definiert sind. Diese Datentypen sind meist Aliase für primitive Datentypen aus C/C++. Die Werte dieser Datentypen sind meist nicht transparent. Das bedeutet, sie werden von einer bestimmten Funktion oder Methode zurückgegeben, sodass sie ohne Änderungen an andere Funktionen oder Methoden übergeben werden können.  
@@ -18,14 +18,15 @@ In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs f�
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Der Bezeichner einer Anwendungsdomäne.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Der Bezeichner einer Assembly.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Der Bezeichner einer verwalteten Klasse.|  
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Der Bezeichner einer verwalteten Klasse.|
+|CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Nicht verfügbar|Eine 64-Bit-Speicheradresse.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Die Verbindungs-ID eines Threads ist mit einer Instanz von Microsoft SQL Server verbunden.|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|Der Bezeichner des Kontexts, der mit einem bestimmten verwalteten Thread verknüpft ist.|  
 |COR_PRF_ELT_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|Ein nicht transparenter Handle, der Informationen über einen bestimmten Stapelrahmen repräsentiert.|  
 |COR_PRF_FRAME_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|Ein nicht transparenter Handle, der auf einen Stapelrahmen zeigt. Er ist nur gültig während des Rückrufs, an den er übergeben wird.|  
 |CORDB_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|Eine Adresse im Speicher.|  
 |CORDB_CONTINUE_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|Der Status der Fortsetzung.|  
-|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Der Wert eines CPU-Registers.|  
+|CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Der Wert eines CPU-Registers.|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Der Bezeichner einer Funktion oder Methode.|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Ein Garbage Collection-Handle.|  
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|Ein Metadatentoken (eine Zeile in einer Metadatentabelle).|  

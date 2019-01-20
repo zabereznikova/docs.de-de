@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502150"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415246"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Vorgehensweise: Erstellen eines Flussdiagrammworkflows
-Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt durch Erstellen eines Workflows, der integrierten Aktivitäten wie z. B. verwendet die <xref:System.Activities.Statements.Flowchart> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
+Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt durch Erstellen eines Workflows, der integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.Flowchart> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
   
 > [!NOTE]
 >  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema abzuschließen, müssen Sie zuerst abschließen [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Informationen zum Herunterladen einer abgeschlossenen Version des Lernprogramms finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.  
   
 ### <a name="to-create-the-workflow"></a>So erstellen Sie den Workflow  
   
@@ -67,7 +67,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 1.  Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** im Abschnitt der **Toolbox** und zeigen sie die **starten** Knoten, am oberen Rand der Flussdiagramm. Wenn die **zuweisen** Aktivität ist, über die **starten** Knoten drei Dreiecke um die **starten** Knoten. Löschen der **weisen** Aktivitäten auf dem Dreieck ab, direkt unterhalb der **starten** Knoten. Dadurch werden die beiden Elemente miteinander verknüpft, und bezieht sich auf die **weisen** Aktivität als erste Aktivität im Flussdiagramm.  
   
     > [!NOTE]
-    >  Aktivitäten können auch als Startaktivität im Workflow angegeben werden, indem Sie die Aktivität manuell mit dem Startknoten verknüpfen. Zu diesem Zweck zeigen Sie auf den die **starten** Knoten, klicken Sie auf eines der Rechtecke, die angezeigt werden, wenn der Mauszeiger befindet der **starten** Knoten, und ziehen Sie das Herstellen einer Verbindung, auf die gewünschte Aktivität Zeile, und legen Sie es auf einem der die Rechtecke, die angezeigt werden. Sie können auch festlegen, und die Aktivitäten, die als Startaktivität indem mit der rechten Maustaste in It und **als Startknoten festlegen**.  
+    >  Aktivitäten können auch als Startaktivität im Workflow angegeben werden, indem Sie die Aktivität manuell mit dem Startknoten verknüpfen. Zu diesem Zweck zeigen Sie auf den die **starten** Knoten, klicken Sie auf eines der Rechtecke, die angezeigt werden, wenn der Mauszeiger befindet der **starten** Knoten, und ziehen Sie das Herstellen einer Verbindung, auf die gewünschte Aktivität Zeile, und legen Sie es auf einem der die Rechtecke, die angezeigt werden. Sie können eine Aktivität auch als Startaktivität festlegen, indem mit der rechten Maustaste in It und **als Startknoten festlegen**.  
   
 2.  Typ `Target` in die **zu** Feld und den folgenden Ausdruck in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.  
   
@@ -148,7 +148,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 1.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-     Informationen zum Ausführen des Workflows finden Sie im nächste Thema, [wie: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Wenn Sie bereits abgeschlossen haben die [wie: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) Schritt mit einer anderen workflowart und ihn mit dem flussdiagrammworkflow aus diesem Schritt ausführen möchten, fahren Sie mit der [erstellen und Ausführen der Anwendung](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)Abschnitt [wie: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Informationen zum Ausführen des Workflows finden Sie im nächste Thema, [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Wenn Sie bereits abgeschlossen haben die [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) Schritt mit einer anderen workflowart und ihn mit dem flussdiagrammworkflow aus diesem Schritt ausführen möchten, fahren Sie mit der [erstellen und Ausführen der Anwendungs](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) Abschnitt [Vorgehensweise: Ausführen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  <xref:System.Activities.Statements.Flowchart>  

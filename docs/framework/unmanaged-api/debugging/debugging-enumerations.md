@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410467"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415948"
 ---
 # <a name="debugging-enumerations"></a>Debugenumerationen
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die die Debug-API verwendet.  
@@ -44,13 +44,13 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Stellt zusätzliche Debuggingoptionen, die in einem Aufruf verwendet werden, können die [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) Methode.  
   
  [CorDebugDebugEventKind-Aufzählung](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- Gibt den Typ des Ereignisses, dessen Informationen mit der [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) Methode.  
+ Gibt den Typ des Ereignisses, dessen Informationen decodiert wird, die [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) Methode.  
   
  [CorDebugDecodeEventFlagsWindows-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Weitere Informationen zu Debug-Ereignissen auf der Windows-Plattform.  
   
  CorDebugExceptionCallbackType  
- Gibt den Typ des Rückrufs an, die aus wird ein [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) Ereignis.  
+ Gibt den Typ der Rückruf, der von erfolgt eine [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) Ereignis.  
   
  [CorDebugExceptionFlags-Enumeration](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  Stellt zusätzliche Informationen über eine Ausnahme bereit.  
@@ -134,11 +134,13 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Gibt den Vorgang an, der für einen Debug-/Ablaufverfolgungsschalter ausgeführt wurde.  
   
  [VariableLocationType-Enumeration](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)  
- Gibt den systemeigenen Typ einer Variablen an.  
+ Gibt den nativen Speicherort-Typ einer Variablen.  
   
  [WriteableMetadataUpdateMode-Enumeration](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- Stellt Werte bereit, die angeben, ob speicherinterne Aktualisierungen von Metadaten für einen Debugger sichtbar sind.  
-  
+ Stellt Werte bereit, die angeben, ob speicherinterne Aktualisierungen von Metadaten für einen Debugger sichtbar sind. 
+
+ [ClrDataSourceType Enumeration](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) enthält Werte, die von der Struktur CLRDATA_IL_ADDRESS_MAP verwendet werden.
+
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Debuggen von Co-Klassen](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

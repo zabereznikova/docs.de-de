@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream'
+title: 'Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582372"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415090"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Gewusst wie: Angeben eines alternativen Elementnamens für einen XML-Stream
-[Code Example (Codebeispiel)](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream
   
- Mit [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) können Sie mehr als einen XML-Stream mit der gleichen Gruppe von Klassen generieren. Dies ist beispielsweise dann sinnvoll, wenn zwei verschiedene XML-Webdienste die gleichen grundlegenden Informationen benötigen, die sich nur in wenigen Details unterscheiden. Stellen Sie sich beispielsweise vor, zwei XML-Webdienste, die Buchbestellungen verarbeiten, erfordern die Angabe von ISBN-Nummern. Ein Dienst verwendet das Tag \<ISBN>, während der zweite das Tag \<BookID> verwendet. Sie verfügen über eine Klasse mit dem Namen von `Book`, die ein Feld namens `ISBN` enthält. In der Standardeinstellung wird beim Serialisieren einer Instanz der `Book`-Klasse der Membername (ISBN) als Name des XML-Elements verwendet. Für den ersten XML-Webdienst entspricht dies dem erwarteten Verhalten. Wenn der XML-Stream jedoch an den zweiten XML-Webdienst gesendet werden soll, muss die Serialisierung überschrieben werden, damit der Elementname des Tags `BookID` lautet.  
+Mit [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) können Sie mehr als einen XML-Stream mit der gleichen Gruppe von Klassen generieren. Dies ist beispielsweise dann sinnvoll, wenn zwei verschiedene XML-Webdienste die gleichen grundlegenden Informationen benötigen, die sich nur in wenigen Details unterscheiden. Stellen Sie sich beispielsweise vor, zwei XML-Webdienste, die Buchbestellungen verarbeiten, erfordern die Angabe von ISBN-Nummern. Ein Dienst verwendet das Tag \<ISBN>, während der zweite das Tag \<BookID> verwendet. Sie verfügen über eine Klasse mit dem Namen von `Book`, die ein Feld namens `ISBN` enthält. In der Standardeinstellung wird beim Serialisieren einer Instanz der `Book`-Klasse der Membername (ISBN) als Name des XML-Elements verwendet. Für den ersten XML-Webdienst entspricht dies dem erwarteten Verhalten. Wenn der XML-Stream jedoch an den zweiten XML-Webdienst gesendet werden soll, muss die Serialisierung überschrieben werden, damit der Elementname des Tags `BookID` lautet.  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>So erstellen Sie einen XML-Stream mit einem alternativen Elementnamen  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>So erstellen Sie einen XML-Stream mit einem alternativen Elementnamen  
   
 1.  Erstellen Sie eine Instanz der <xref:System.Xml.Serialization.XmlElementAttribute>-Klasse.  
   
@@ -98,7 +97,7 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributes>  
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>  
 - [XML- und SOAP-Serialisierung](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [XmlSerializer-Element](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
 - [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
 - [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
 - [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
