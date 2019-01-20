@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144714"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415688"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
@@ -94,16 +94,11 @@ Es gibt auch einige Nachteile:
 
 ## <a name="step-by-step-examples"></a>Beispiele mit Schrittanleitungen
 
-Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Bereitstellen von .NET Core-Apps mit Visual Studio). Jeder Artikel enthält Beispiele zu den folgenden Bereitstellungen:
-
-- Framework-abhängige Bereitstellung
-- Framework-abhängige Bereitstellung mit Drittanbieterabhängigkeiten
-- Eigenständige Bereitstellung
-- Eigenständige Bereitstellung mit Drittanbieterabhängigkeiten
+Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Befehlszeilenschnittstellentools finden Sie unter [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools). Beispiele mit Schrittanleitungen für die Bereitstellung von .NET Core-Apps mit Visual Studio finden Sie unter [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Bereitstellen von .NET Core-Apps mit Visual Studio). 
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Bereitstellen von .NET Core-Apps mit CLI-Tools](deploy-with-cli.md)
-* [Bereitstellen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md)
+* [Deploying .NET Core Apps with CLI Tools (Bereitstellen von .NET Core-Apps mit Befehlszeilenschnittstellentools)](deploy-with-cli.md)
+* [Deploying .NET Core Apps with Visual Studio (Bereitstellen von .NET Core-Apps mit Visual Studio)](deploy-with-vs.md)
 * [Pakete, Metapakete und Frameworks](../packages.md)
-* [.NET Core-RID-Katalog](../rid-catalog.md)
+* [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
