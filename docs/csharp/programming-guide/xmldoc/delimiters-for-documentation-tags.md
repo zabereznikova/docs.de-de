@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c14b0470f7ea488fcb813b68174b5d1cb0d95786
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235292"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415584"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Trennzeichen für Dokumentationstags (C#-Programmierhandbuch)
 Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compiler angeben, wo ein Dokumentationskommentar beginnt und endet. Sie können die folgenden Arten von Trennzeichen mit den XML-Dokumentationstags verwenden:  
@@ -38,7 +38,7 @@ Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compi
   
 -   Der einzige Teil des folgenden Kommentars, der verarbeitet wird, ist die Zeile, die mit `<summary>` beginnt. Die drei Tag-Formate ergeben identische Kommentare.  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -52,7 +52,7 @@ Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compi
   
 -   Der Compiler identifiziert ein gemeinsames Muster von „*“ am Anfang der zweiten und dritten Zeile. Das Muster ist nicht in der Ausgabe enthalten.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -60,7 +60,7 @@ Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compi
   
 -   Der Compiler findet kein gemeinsames Muster im folgenden Kommentar, da das zweite Zeichen in der dritten Zeile kein Sternchen ist. Daher wird der gesamte Text in der zweiten und dritten Zeile als Teil des Kommentars verarbeitet.  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -69,7 +69,7 @@ Die Verwendung von XML-Dokumentkommentaren erfordert Trennzeichen, die dem Compi
   
 -   Der Compiler findet aus zwei Gründen kein Muster im folgenden Kommentar. Erstens ist die Anzahl von Leerzeichen vor dem Sternchen nicht konsistent. Zweitens beginnt die fünfte Zeile mit einem Tab, der mit Leerzeichen nicht übereinstimmt. Daher wird aller Text von Zeile zwei bis fünf als Teil des Kommentars verarbeitet.  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   

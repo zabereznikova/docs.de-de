@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe'
+title: 'Vorgehensweise: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 234a8de8ed9f4e403d932c01728ab9ffbc72ad14
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7506a57e29b7942bd06141baa2d2b048ed998214
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214848"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221530"
 ---
-# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Gewusst wie: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe
+# <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Vorgehensweise: Verhindern des Anfügens einer untergeordneten Aufgabe an die übergeordnete Aufgabe
 Dieses Dokument veranschaulicht, wie das Anfügen einer untergeordneten Aufgabe an die übergeordnete Aufgabe verhindert wird. Sie sollten verhindern, dass eine untergeordnete Aufgabe an ihre übergeordnete Aufgabe angefügt wird, wenn Sie eine Komponente aufrufen, die von einem Drittanbieter geschrieben wurde und auch Aufgaben verwendet. So kann z.B. eine Drittanbieterkomponente bei Verwendung der <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>-Option zum Erstellen eines <xref:System.Threading.Tasks.Task>- oder <xref:System.Threading.Tasks.Task%601>-Objekts Probleme im Code verursachen, wenn sie lange ausgeführt wird oder eine unbehandelte Ausnahme auslöst.  
   
 ## <a name="example"></a>Beispiel  
@@ -29,7 +29,7 @@ Dieses Dokument veranschaulicht, wie das Anfügen einer untergeordneten Aufgabe 
  Da eine übergeordnete Aufgabe nicht beendet wird, ehe alle untergeordneten Aufgaben abgeschlossen sind, kann eine untergeordnete Aufgabe mit langer Laufzeit zu einer Verschlechterung der Leistung der gesamten Anwendung führen. Wenn die Anwendung in diesem Beispiel die Standardoptionen verwendet, um die übergeordnete Aufgabe zu erstellen, muss die untergeordnete Aufgabe vor der übergeordneten Aufgabe beendet werden. Wenn die Anwendung die <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>-Option verwendet, wird das untergeordnete Element nicht dem übergeordneten angefügt. Aus diesem Grund kann die Anwendung zusätzliche Aufgaben ausführen, nachdem die übergeordnete Aufgabe abgeschlossen ist, und vorher muss sie auf das Beenden der untergeordneten Aufgabe warten.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei namens `DenyChildAttach.cs` (`DenyChildAttach.vb` für Visual Basic) ein, und führen Sie dann den folgenden Befehl in einem Eingabeaufforderungsfenster von Visual Studio aus:  
+ Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei namens `DenyChildAttach.cs` ein (`DenyChildAttach.vb` für Visual Basic), und führen Sie dann den folgenden Befehl in einer Developer-Eingabeaufforderung für Visual Studio aus.  
   
  Visual C#  
   
