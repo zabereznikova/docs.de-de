@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201017"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54416026"
 ---
 # Neues in .NET Framework <a name="introduction"></a>
 
@@ -108,7 +108,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-Mit den <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType>- und <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType>-Methoden können Sie neue <xref:System.Security.Cryptography.DSA>- oder <xref:System.Security.Cryptography.RSA>-Schlüssel mit einer bestimmten Schlüsselgröße generieren. Zum Beispiel:
+Mit den <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType>- und <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType>-Methoden können Sie neue <xref:System.Security.Cryptography.DSA>- oder <xref:System.Security.Cryptography.RSA>-Schlüssel mit einer bestimmten Schlüsselgröße generieren. Beispiel:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -242,9 +242,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 [Abhängigkeitsinjektion (Dependency Injection, DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) entkoppelt Objekte und ihre Abhängigkeiten, sodass der Code eines Objekts nicht mehr geändert werden muss, nur weil sich eine Abhängigkeit geändert hat. Beim Entwickeln von ASP.NET-Anwendungen für .NET Framework 4.7.2 können Sie Folgendes nutzen:
 
-- Verwenden von setterbasierter, schnittstellenbasierter und konstruktorbasierter Injektion in [Handler und Module](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) von ASP.NET-Webanwendungsprojekten.
+- Verwenden von setterbasierter, schnittstellenbasierter und konstruktorbasierter Injektion in [Handler und Module](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) von ASP.NET-Webanwendungsprojekten.
 
-- Verwenden von setterbasierter und schnittstellenbasierter Injektion in [Handler und Module](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) von ASP.NET-Websiteprojekten.
+- Verwenden von setterbasierter und schnittstellenbasierter Injektion in [Handler und Module](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [Seiteninstanzen](xref:System.Web.UI.Page) und [Benutzersteuerelemente](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) von ASP.NET-Websiteprojekten.
 
 - Einbinden verschiedener Abhängigkeitsinjektionsframeworks.
 
@@ -317,7 +317,7 @@ NET Framework 4.7.2 fügt Unterstützung für Enclave-basiertes Always Encrypted
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>: Stellt die Nachweisparameter bereit, die von SQL Server zum Abrufen von Informationen verwendet werden, die zum Ausführen eines bestimmten Protokolls erforderlich sind.
 
-Die Anwendungskonfigurationsdatei gibt dann eine konkrete Implementierung der abstrakten <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType>-Klasse an, die die Funktionalität für den Enclave-Anbieter bereitstellt. Zum Beispiel:
+Die Anwendungskonfigurationsdatei gibt dann eine konkrete Implementierung der abstrakten <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType>-Klasse an, die die Funktionalität für den Enclave-Anbieter bereitstellt. Beispiel:
 
 ```xml
 <configuration>
@@ -490,7 +490,7 @@ ASP.NET verarbeitet Anforderungen in einer vordefinierten Pipeline, die 23 Ereig
 
 **SHA-2-Hashoptionen für Anmeldeinformationen für formularbasierte Authentifizierung von ASP.NET**
 
-In .NET Framework 4.7 und früheren Versionen erlaubte ASP.NET Entwicklern, Benutzeranmeldeinformationen mit Kennwörtern mit Hashes in Konfigurationsdateien unter Verwendung von MD5 oder SHA1 zu speichern. Ab .NET Framework 4.7.1 unterstützt ASP.NET auch die neuen, sicheren SHA-2-Hashoptionen wie etwa SHA256, SHA384 und SHA512. SHA1 bleibt die Standardeinstellung, und ein nicht standardmäßiger Hashalgorithmus kann in der Webkonfigurationsdatei definiert werden. Zum Beispiel:
+In .NET Framework 4.7 und früheren Versionen erlaubte ASP.NET Entwicklern, Benutzeranmeldeinformationen mit Kennwörtern mit Hashes in Konfigurationsdateien unter Verwendung von MD5 oder SHA1 zu speichern. Ab .NET Framework 4.7.1 unterstützt ASP.NET auch die neuen, sicheren SHA-2-Hashoptionen wie etwa SHA256, SHA384 und SHA512. SHA1 bleibt die Standardeinstellung, und ein nicht standardmäßiger Hashalgorithmus kann in der Webkonfigurationsdatei definiert werden. Beispiel:
 
 ```xml
 <system.web>
@@ -787,7 +787,7 @@ End Function
 
  Um darauf in [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] zu reagieren, wurden die folgenden drei Methoden zur <xref:System.Security.Cryptography.ECDiffieHellman>-Basisklasse hinzugefügt, um diese KDF-Routinen und deren Eingaben eindeutiger darzustellen:
 
-|Die ECDiffieHellman-Methode|Beschreibung |
+|Die ECDiffieHellman-Methode|Beschreibung|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Leitet Schlüsselmaterial mithilfe der Formel ab<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> wobei *x* das berechnete Ergebnis des EC Diffie-Hellman-Algorithmus ist.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Leitet Schlüsselmaterial mithilfe der Formel ab<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> wobei *x* das berechnete Ergebnis des EC Diffie-Hellman-Algorithmus ist.|
@@ -797,7 +797,7 @@ End Function
 
  Die Windows-Kryptografiebibliothek (Cryptography API: Next Generation; CNG) hat Unterstützung für die Speicherung persistenter symmetrischer Schlüssel und für die Verwendung von in der Hardware gespeicherter symmetrischer Schlüssel bereitgestellt. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ermöglicht Entwicklern, diese Funktion zu verwenden.  Da das Konzept des Schlüsselnamens und des Schlüsselanbieters implementierungsspezifisch ist, erfordert die Nutzung dieser Funktion die Verwendung des Konstruktors der konkreten Implementierungstypen anstatt der bevorzugten Herangehensweise des Unternehmens (z.B. durch aufrufen von `Aes.Create`).
 
- Die Unterstützung der symmetrischen Verschlüsselung persistenter Schlüssel ist für die Algorithmen AES (<xref:System.Security.Cryptography.AesCng>) und 3DES (<xref:System.Security.Cryptography.TripleDESCng>) verfügbar. Zum Beispiel:
+ Die Unterstützung der symmetrischen Verschlüsselung persistenter Schlüssel ist für die Algorithmen AES (<xref:System.Security.Cryptography.AesCng>) und 3DES (<xref:System.Security.Cryptography.TripleDESCng>) verfügbar. Beispiel:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1096,7 +1096,7 @@ Weitere Informationen zu [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 
 
 <a name="Crypto" />
 
-### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Kryptografie: Unterstützung für X509-Zertifikate mit ECDSA
+### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Kryptografie: Unterstützung für X 509-Zertifikate mit ECDSA
  RSACng-Unterstützung für X509-Zertifikate in .NET Framework 4.6. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] fügt Unterstützung für ECDSA (Elliptic Curve Digital Signature Algorithm) X509-Zertifikate hinzu.
 
  ECDSA bietet eine bessere Leistung und einen sichereren Kryptografiealgorithmus als RSA. Somit ist die Lösung eine hervorragende Wahl, wenn es um TLS (Transport Layer Security)-Leistung und Skalierbarkeit geht. Die .NET Framework-Implementierung schließt Aufrufe in die vorhandene Windows-Funktionalität ein.
@@ -1507,7 +1507,7 @@ Die nicht verwaltete Profilerstellungs-API wurde wie folgt erweitert:
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
     ```
 
-     Der Standardwert ist `false`.
+     Der Standardwert ist `false`sein.
 
 - **Netzwerk**
 
@@ -1641,7 +1641,7 @@ Die nicht verwaltete Profilerstellungs-API wurde wie folgt erweitert:
 
     - Sie können die Windows-Runtime APIs in portablen Bibliotheken einsetzen, die Windows 8.1, Windows Phone 8.1 und Windows Phone Silverlight 8.1 als Ziel verwenden.
 
-    - Sie können XAML (Windows.UI.XAML-Typen) in portablen Bibliotheken einsetzen, wenn Sie Windows 8.1 oder Windows Phone 8.1 als Ziel verwenden. Die folgenden XAML-Vorlagen werden unterstützt: Leere Seite, Ressourcenverzeichnis, Steuerelement mit Vorlagen und Benutzersteuerelement.
+    - Sie können XAML (Windows.UI.XAML-Typen) in portablen Bibliotheken einsetzen, wenn Sie Windows 8.1 oder Windows Phone 8.1 als Ziel verwenden. Die folgenden XAML-Vorlagen werden unterstützt:  Leere Seite, Ressourcenverzeichnis, Steuerelement mit Vorlagen und Benutzersteuerelement.
 
     - Sie können eine portable Komponente für Windows-Runtime (.winmd-Datei) für den Einsatz in Store-Apps erstellen, die Windows 8.1 und Windows Phone 8.1 als Ziel verwenden.
 
@@ -1655,7 +1655,7 @@ Die nicht verwaltete Profilerstellungs-API wurde wie folgt erweitert:
 
  .NET Framework 4.5.1 enthält die folgenden neuen Kernfunktionen und -optimierungen:
 
-- Automatische Bindungsumleitung für Assemblys. Ab Visual Studio 2013 können beim Kompilieren einer App für [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] Bindungsumleitungen zur App-Konfigurationsdatei hinzugefügt werden, wenn die App oder ihre Komponenten sich auf mehrere Versionen derselben Assembly beziehen. Sie können diese Funktion auch für Projekte aktivieren, die frühere Versionen von .NET Framework als Ziel haben. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Automatische Bindungsumleitung für Assemblys. Ab Visual Studio 2013 können beim Kompilieren einer App für [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] Bindungsumleitungen zur App-Konfigurationsdatei hinzugefügt werden, wenn die App oder ihre Komponenten sich auf mehrere Versionen derselben Assembly beziehen. Sie können diese Funktion auch für Projekte aktivieren, die frühere Versionen von .NET Framework als Ziel haben. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Fähigkeit, Diagnoseninformationen zu erfassen, um Entwicklern zu helfen, die Leistung von Server- und Cloud-Anwendungen zu verbessern. Weitere Informationen finden Sie unter den <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A>- und <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A>-Methoden in der <xref:System.Diagnostics.Tracing.EventSource>-Klasse.
 
