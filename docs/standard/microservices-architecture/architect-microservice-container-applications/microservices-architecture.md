@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: dc96c5570ea829802c94c817ebd4910a090632ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cac40c0a6e5f31087296416616c8a8b9e54b528
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145737"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145254"
 ---
 # <a name="microservices-architecture"></a>Microservicearchitektur
 
@@ -45,14 +45,14 @@ In diesem Leitfaden werden nur die ersten drei abgedeckt oder eingeführt. Die l
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Mark Russinovich. Microservices: Die von der Cloud unterstützte Anwendungsrevolution** \
+- **Mark Russinovich. Microservices: An application revolution powered by the cloud (Microservices: Revolution der App-Entwicklung in der Cloud)** \
   [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
 - **Martin Fowler. Microservices** \
-  [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
+  [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
 
 - **Martin Fowler. Microservice Prerequisites (Voraussetzungen für Microservices)** \
-  [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
 - **Jimmy Nilsson. Chunk Cloud Computing (Einteilen von Cloud Computing)** \
   [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)

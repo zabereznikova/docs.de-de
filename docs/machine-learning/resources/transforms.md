@@ -3,13 +3,13 @@ title: Datentransformationen für maschinelles Lernen – ML.NET
 description: Untersuchen Sie die in ML.NET unterstützten herausragenden technischen Komponenten.
 author: JRAlexander
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.date: 01/14/2019
+ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249124"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415350"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Datentransformationen für maschinelles Lernen – ML.NET
 
@@ -23,11 +23,6 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | Transformation | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Gruppiert Werte einer Skalarspalte auf Grundlage einer ID einer zusammenhängenden Gruppe und überführt diese in einen Vektor. |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Kombiniert alle Features und überführt diese in eine Featurespalte. |
-| <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | Kombiniert eine Sequenz von TransformModel-Eigenschaften und eine PredictorModel-Eigenschaft und überführt diese in eine einzelne PredictorModel-Eigenschaft. |
-| <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | Kombiniert eine Sequenz von TransformModel-Eigenschaften und überführt diese in ein einzelnes Modell. |
-| <xref:Microsoft.ML.Legacy.Transforms.Segregator> | Hebt die Gruppierung für Vektorspalten auf und überführt diese in Zeilensequenzen; Umkehrvorgang zur Gruppentransformation. |
-| <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | Kombiniert eine TransformModel- und PredictorModel-Eigenschaft und überführt diese in eine einzelne PredictorModel-Eigenschaft. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Hebt die Gruppierung für Vektorspalten auf und überführt diese in Zeilensequenzen; Umkehrvorgang zur Gruppentransformation. |
 
 ## <a name="conversions"></a>Konvertierungen 
@@ -35,7 +30,6 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | Transformation | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Bildet Hashwerte entweder aus Spalten mit Einzelwerten oder aus Vektorspalten. Bei Vektorspalten wird für jeden Slot ein separater Hashwert gebildet. Hashwerte können wahlweise aus Textwerten oder aus Schlüsselwerten gebildet werden. |
-| <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | Konvertiert die Spaltenwerte in Hashwerte. Für diese Transformation werden sowohl Texteingaben als auch numerische Eingaben akzeptiert. Es kann sich sowohl um Spalten mit Einzel- als auch mit Vektorwerten handeln. |
 | <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | Konvertiert mehrere Spaltenwerte in Hashwerte. Für diese Transformation werden sowohl Texteingaben als auch numerische Eingaben akzeptiert. Es kann sich sowohl um Spalten mit Einzel- als auch mit Vektorwerten handeln. |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | Konvertiert einen Schlüssel in eine binäre Vektorspalte. |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | Nutzt KeyValues-Metadaten, um die Schlüsselindizes den entsprechenden Werten in den KeyValues-Metadaten zuzuordnen. |
@@ -56,10 +50,10 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | Transformation | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Entfernt eine angegebene Liste von Stoppwörtern durch Vergleich einzelner Token (ohne Berücksichtigung der Groß-/Kleinschreibung) mit den Stoppwörtern.| 
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Graustufendarstellung des gleichen Bilds.|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | Nimmt eine oder mehrere ReadOnlyMemory-Spalten an und lädt sie als einen ImageType. |
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Vektordarstellung.|
-| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | Nimmt eine oder mehrere ImageType-Spalten an und ändert ihre Größe auf die angegebene Höhe und Breite.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Graustufendarstellung des gleichen Bilds.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Nimmt eine oder mehrere ReadOnlyMemory-Spalten an und lädt sie als einen ImageType. |
+| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Vektordarstellung.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Nimmt eine oder mehrere ImageType-Spalten an und ändert ihre Größe auf die angegebene Höhe und Breite.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implementiert LightLDA, eine Implementierung der Latent Dirichlet Allocation auf dem neuesten Stand.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Lädt bestimmte Transformationen aus der angegebenen Modelldatei. Ermöglicht die gezielte Auswahl von Transformationen aus einer serialisierten Kette oder die Anwendung einer vortrainierten Transformation auf eine andere (aber trotzdem kompatible) Datenansicht. |
 | <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Erstellt eine Sammlung mit der Anzahl der N-Gramme (Sequenzen aufeinander folgender Werte der Länge 1–n) in einem angegebenen Schlüsselvektor. Dabei wird ein Wörterbuch mit N-Grammen erstellt, und die ID im Wörterbuch wird als Index in der Sammlung verwendet. | 
@@ -70,7 +64,6 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Berechnet die Projektion des Featurevektors auf einen niederrangigen Teilraum. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Verwendet ein vortrainiertes Stimmungsmodell, um Eingabezeichenfolgen zu bewerten. |
 | <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Entfernt eine sprachspezifische Liste von Stoppwörtern (häufigsten Wörtern) durch Vergleich einzelner Token (ohne Berücksichtigung der Groß-/Kleinschreibung) mit den Stoppwörtern. |
-| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | Ordnet Spalten mit Textwerten mithilfe eines Zuordnungsdatasets, das durch seine Argumente bereitgestellt wird, neuen Spalten zu. |
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Erzeugt eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter) in einem bestimmten Text. Dabei wird ein Wörterbuch mit N-Grammen erstellt, und die ID im Wörterbuch wird als Index in der Sammlung verwendet. |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Erzeugt eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter der Länge 1–n) in einem bestimmten Text. Dazu wird ein Hashwert jedes N-Gramms erstellt, der dann als Index in der Sammlung verwendet wird. |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Teilt den Text mithilfe der Trennzeichen in Wörter auf. |
@@ -89,12 +82,8 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | Konvertiert Eingabewerte (Wörter, Zahlen usw.) für eine Wörterbuchindizierung. |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | Transformiert die Bezeichnung entweder in einen Schlüssel oder einen booleschen Wert (falls erforderlich), damit diese zur Klassifizierung verwendet werden kann. |
 | <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  Konvertiert Bezeichnungen. |
 | <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | Ordnet mehrklassige Bezeichnungen binären WAHR-, FALSCH-Bezeichnungen neu zu, hauptsächlich für die Verwendung mit OVA.|
-| <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | Transformiert die Bezeichnung in einen Gleitkommawert, damit diese für die Regression verwendet werden kann. |
-| <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | Transformiert eine Spalte mit vorhergesagten Bezeichnungen in ihre Originalwerte. Gilt nicht für boolesche Spalten. |
 
 ## <a name="missing-values"></a>Fehlende Werte
 
@@ -112,7 +101,6 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Berechnet Mittelwert und Abweichung für eine Spalte mit Vektorwerten. Verfolgt den aktuellen Mittelwert und den M2 (Summe der zum Quadrat erhobenen Differenzen der Werte des Mittelwerts), die Anzahl der NaNs und die Anzahl der Elemente ungleich Null nach. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Berechnet Mittelwert und Abweichung für eine Spalte mit Vektorwerten. Verfolgt den aktuellen Mittelwert und den M2 (Summe der zum Quadrat erhobenen Differenzen der Werte des Mittelwerts), die Anzahl der NaNs und die Anzahl der Elemente ungleich Null nach. |
 | <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Verfolgt die Minimal- und Maximalanzahl der Werte nicht geringer Dichte (vCount) und die Anzahl der ProcessValue()-Aufrufe (trainCount) für eine Spalte mit Vektorwerten. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | Verfolgt die Minimal- und Maximalanzahl der Werte nicht geringer Dichte (vCount) und die Anzahl der ProcessValue()-Aufrufe (trainCount) für eine Spalte mit Vektorwerten. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Standardisiert Featurebereiche. |
 | <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Standardisiert Featurebereiche. |
 
@@ -147,7 +135,6 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Dupliziert die Spalten aus dem Dataset.|
 | <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Wählt einen Satz von Spalten aus, die in einer bestimmten Eingabe gelöscht oder beibehalten werden sollen. |
 | <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | Löscht Slots aus Spalten.|
-| <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform nutzt KeyValues-Metadaten, um die Schlüsselindizes den entsprechenden Werten in den KeyValues-Metadaten zuzuordnen. |
 | <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | Erstellt eine neue Spalte vom angegebenen Typ mit Standardwerten. |
 | <xref:Microsoft.ML.Transforms.RangeFilter> | Filtert eine Datensicht nach einer Spalte des Typs „Single“, „Double“ oder nach ihrem Schlüssel (zusammenhängende Gruppe). Behält die Werte bei, die im Bereich zwischen angegebenem Minimum und Maximum liegen. Fehlende Werte werden stets herausgefiltert. Wenn die Eingabe ein Schlüssel ist, werden die minimalen/maximalen Werte als Prozentsätze der Anzahl der Werte betrachtet. |
 
@@ -168,15 +155,15 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | Akzeptiert einen gewichteten Mittelwert der Werte: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | Implementiert die Transformation der Änderungspunkterkennung für eine u.i.v. Sequenz (Zufallsstichprobe) basierend auf der Schätzung der adaptiven Kerneldichte und Martingalen. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | Implementiert die Transformation der Spitzenerkennung für eine u.i.v. Sequenz (Zufallsstichprobe) basierend auf der Schätzung der adaptiven Kerneldichte. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | Stellt einen gewichteten Durchschnitt der Werte des gleitenden Fensters bereit. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | Entscheidet, ob der aktuelle Wert der Zeitreihe zum Perzentil der höchsten Werte des gleitenden Fensters gehört. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | Berechnet den empirischen p-Wert des aktuellen Werts der Reihe auf der Grundlage der anderen Werte im gleitenden Fenster. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | Gibt ein gleitendes Fenster über eine Zeitreihe vom Typ Single aus. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | Implementiert die Transformation der Änderungspunkterkennung auf der Grundlage der Einzelspektrum-Modellierung der Zeitreihe. |
-| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | Implementiert die Transformation der Spitzenerkennung auf der Grundlage der Einzelspektrum-Modellierung der Zeitreihe. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Akzeptiert einen gewichteten Mittelwert der Werte: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | Implementiert die Transformation der Änderungspunkterkennung für eine u.i.v. Sequenz (Zufallsstichprobe) basierend auf der Schätzung der adaptiven Kerneldichte und Martingalen. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | Implementiert die Transformation der Spitzenerkennung für eine u.i.v. Sequenz (Zufallsstichprobe) basierend auf der Schätzung der adaptiven Kerneldichte. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | Stellt einen gewichteten Durchschnitt der Werte des gleitenden Fensters bereit. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | Entscheidet, ob der aktuelle Wert der Zeitreihe zum Perzentil der höchsten Werte des gleitenden Fensters gehört. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | Berechnet den empirischen p-Wert des aktuellen Werts der Reihe auf der Grundlage der anderen Werte im gleitenden Fenster. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Gibt ein gleitendes Fenster über eine Zeitreihe vom Typ Single aus. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | Implementiert die Transformation der Änderungspunkterkennung auf der Grundlage der Einzelspektrum-Modellierung der Zeitreihe. |
+| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | Implementiert die Transformation der Spitzenerkennung auf der Grundlage der Einzelspektrum-Modellierung der Zeitreihe. |
 
 ## <a name="miscellaneous"></a>Verschiedenes
 
@@ -187,4 +174,3 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Fügt eine Spalte mit einer generierten Zahlensequenz hinzu. |
 | <xref:Microsoft.ML.Transforms.ProduceIdTransform> | Erzeugt eine Spalte mit der ID des Cursors als Spalte. |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Generiert eine zufällige Zahl. |
-| <xref:Microsoft.ML.Transforms.ScoringTransformer> | Kombiniert Informationen aus mehreren Vorhersagemodellen, um ein neues Modell in der Pipeline zu erstellen. Dazu werden die Bewertungen aus einem bereits trainierten Modell verwendet. |

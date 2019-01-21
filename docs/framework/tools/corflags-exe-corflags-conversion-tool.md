@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4a5b6d490387f2da441ad95bdf369f700cf2e9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21b9881f1275c6a9343421131af478e11b826073
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400028"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222726"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Konvertierungstool CorFlags)
 Das Konvertierungstool „CorFlags“ ermöglicht das Konfigurieren des CorFlags-Abschnitts eines Headers eines portierbaren ausführbaren Images.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -30,24 +30,24 @@ CorFlags.exe assembly [options]
   
 #### <a name="parameters"></a>Parameter  
   
-|Erforderlicher Parameter|description|  
+|Erforderlicher Parameter|Beschreibung|  
 |------------------------|-----------------|  
 |`assembly`|Der Name der Assembly, für die CorFlags konfiguriert werden soll.|  
   
-|Option|description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**/32BIT[REQ]+**|Legt das 32BITREQUIRED-Flag fest.|  
 |**/32BIT[REQ]-**|Löscht das 32BITREQUIRED-Flag.|  
 |**/32BITPREF+**|Legt das 32BITPREFERRED-Flag fest. Die App wird als 32-Bit-Prozess sogar auf 64-Bit-Plattformen ausgeführt. Legen Sie dieses Flag nur auf EXE-Dateien fest. Wenn das Flag auf eine DLL-Datei festgelegt ist, kann die DLL in 64-Bit-Prozessen nicht geladen werden und eine <xref:System.BadImageFormatException>-Ausnahme ausgelöst. Eine EXE-Datei mit diesem Flag kann in einem 64-Bit-Prozess geladen werden.<br /><br /> Neu im [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/32BITPREF-**|Löscht das 32BITPREFERRED-Flag.<br /><br /> Neu im [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/Force**|Erzwingt ein Update, auch wenn es sich um eine Assembly mit starkem Namen handelt. **Wichtig**: Nach dem Aktualisieren einer Assembly mit starkem Namen muss diese erneut signiert werden, bevor ihr Code ausgeführt wird.|  
+|**/Force**|Erzwingt ein Update, auch wenn es sich um eine Assembly mit starkem Namen handelt. **Wichtig:**  Nach dem Aktualisieren einer Assembly mit starkem Namen muss diese erneut signiert werden, bevor ihr Code ausgeführt wird.|  
 |**/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |**/ILONLY+**|Legt das ILONLY-Flag fest.|  
 |**/ILONLY-**|Löscht das ILONLY-Flag.|  
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/RevertCLRHeader**|Setzt die CLR-Headerversion auf 2.0 zurück.|  
-|**/UpgradeCLRHeader**|Aktualisiert die CLR-Headerversion auf 2.5. **Wichtig**: Assemblys können nur als nativer Code ausgeführt werden, wenn sie mindestens über die CLR-Headerversion 2.5 verfügen.|  
+|**/UpgradeCLRHeader**|Aktualisiert die CLR-Headerversion auf 2.5. **Hinweis**:  Assemblys können nur als systemeigener Code ausgeführt werden, wenn sie mindestens über die CLR-Headerversion 2.5 verfügen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn keine Optionen angegeben sind, zeigt das Konvertierungstool CorFlags die Flags für die angegebene Assembly an.  

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 57b1bebb95c1b3f24e550d554fe369d931d6f6b4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4f5d82e0ccdffcb694e3030aabe58b8da687a5e1
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241800"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084796"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Zugreifen auf ein Arrayelement mit einem Zeiger (C#-Programmierhandbuch)
 
@@ -24,7 +24,7 @@ for (int i = 65; i < 123; i++)
 }
 ```
 
-Der Ausdruck in eckigen Klammern muss implizit in `int`, `uint`, `long` oder `ulong` konvertierbar sein. Der Vorgang p[e] entspricht \*(p+e). Wie in C und C++ überprüft der Zeigerelementzugriff keine Fehler außerhalb des gültigen Bereichs.
+Der Ausdruck in eckigen Klammern muss implizit in `int`, `uint`, `long` oder `ulong` konvertierbar sein. Der Vorgang `p[e]` entspricht `*(p+e)`. Wie in C und C++ überprüft der Zeigerelementzugriff keine Fehler außerhalb des gültigen Bereichs.
 
 ## <a name="example"></a>Beispiel
 

@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151186"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152111"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -19,7 +19,7 @@ Wie bereits erwähnt, kann die Anwendungsschicht als Teil des Artefakts (der Ass
 
 Der Anwendungsschichtcode des Microservices für Bestellungen ist beispielsweise direkt als Teil des **Ordering.API**-Projekts (ein ASP.NET Core-Web-API-Projekt) implementiert (s. Abbildung 7-23).
 
-![Ansicht im Projektmappen-Explorer: Microservice Ordering.API mit den Unterordnern des Ordners „Anwendung“: Verhalten, Befehle, DomainEventHandlers, IntegrationEvents, Modelle, Abfragen und Prüfungen](./media/image20.png)
+![Der Projektmappen-Explorer des Microservice „Ordering.API“, der die Unterordner von „Anwendung“ anzeigt: Verhalten, Befehle, DomainEventHandlers, IntegrationEvents, Modelle, Abfragen und Prüfungen.](./media/image20.png)
 
 **Abbildung 7-23**. Die Anwendungsschicht im Projekt Ordering.API-Projekt (ASP.NET Core-Web-API-Projekt)
 
@@ -114,7 +114,7 @@ Bei Verwendung der DI in .NET Core empfiehlt es sich, eine Assembly zu überprü
 - **Matthew King. Registering services with Scrutor (Registrieren von Diensten mit Scrutor)** \
   [*https://www.mking.net/blog/registering-services-with-scrutor*](https://www.mking.net/blog/registering-services-with-scrutor)
 
-- **Kristian Hellang. Scrutor.** GitHub repo (Scrutor. GitHub-Reporitory). \
+- **Kristian Hellang. Scrutor.** GitHub-Repository. \
   [*https://github.com/khellang/Scrutor*](https://github.com/khellang/Scrutor)
 
 #### <a name="use-autofac-as-an-ioc-container"></a>Verwenden von Autofac als IoC-Container
@@ -397,7 +397,7 @@ Hierbei handelt es sich um zusätzliche Schritte, die ein Befehlshandler ausfüh
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented (An den Grenzen sind Anwendungen nicht objektorientiert)** \
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Commands and events (Befehle und Ereignisse)** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
@@ -806,7 +806,7 @@ Auf ähnliche Weise könnten Sie andere Verhaltensweisen für zusätzliche Aspek
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
-- **MediatR.** GitHub repo (Scrutor. GitHub-Reporitory). \
+- **MediatR.** GitHub-Repository. \
   [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
 - **CQRS with MediatR and AutoMapper (CQRS mit MediatR und AutoMapper)** \
@@ -832,7 +832,7 @@ Auf ähnliche Weise könnten Sie andere Verhaltensweisen für zusätzliche Aspek
 
 ##### <a name="fluent-validation"></a>Fluent-Überprüfung
 
-- **Jeremy Skinner. FluentValidation.** GitHub repo (Scrutor. GitHub-Reporitory). \
+- **Jeremy Skinner. FluentValidation.** GitHub-Repository. \
   [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
 >[!div class="step-by-step"]

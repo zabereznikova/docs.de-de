@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409788"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221756"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
 Der IL-Assembler generiert eine portierbare ausführbare Datei (Portable Executable, PE) aus der Zwischensprache (Intermediate Language, IL). Weitere Informationen über die Zwischensprache finden Sie unter [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md). Die erstellte ausführbare Datei, die IL und die erforderlichen Metadaten enthält, können Sie ausführen, um zu überprüfen, ob die IL wie erwartet funktioniert.
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
@@ -36,18 +36,18 @@ ilasm [options] filename [[options]filename...]
 
 #### <a name="parameters"></a>Parameter
 
-| Argument | description |
+| Argument | Beschreibung |
 | -------- | ----------- |
-|`filename`|Der Name der IL-Quelldatei. Diese Datei besteht aus Direktiven für die Deklaration von Metadaten und symbolischen IL-Anweisungen. Zum Erstellen einer einzelnen PE-Datei mithilfe von *Ilasm.exe* können mehrere Quelldateiargumente angegeben werden. **Hinweis:** Vergewissern Sie sich, dass die letzte Codezeile in der IL-Quelldatei entweder ein nachgestelltes Leerzeichen oder ein Zeilenendezeichen besitzt.|
+|`filename`|Der Name der IL-Quelldatei. Diese Datei besteht aus Direktiven für die Deklaration von Metadaten und symbolischen IL-Anweisungen. Zum Erstellen einer einzelnen PE-Datei mithilfe von *Ilasm.exe* können mehrere Quelldateiargumente angegeben werden. **Hinweis**: Vergewissern Sie sich, dass die letzte Codezeile in der IL-Quelldatei entweder ein nachgestelltes Leerzeichen oder ein Zeilenendezeichen besitzt.|
 
-| Option | description |
+| Option | Beschreibung |
 | ------ | ----------- |
 |**/32bitpreferred**|Erstellt ein Abbild im PE32-Format (vorzugweise 32 Bit).|
 |**/alignment:** `integer`|Legt FileAlignment auf den Wert fest, der im NT Optional-Header per `integer` angegeben ist. Wenn die .alignment-IL-Direktive in der Datei angegeben ist, wird sie durch diese Option überschrieben.|
 |**/appcontainer**|Erstellt als Ausgabe eine *DLL*- oder *EXE*-Datei, die im Windows-App-Container ausgeführt wird.|
 |**/arm**|Gibt die ARM (Advanced RISC Machine) als Zielprozessor an.<br /><br /> Wenn keine Bitanzahl für das Abbild angegeben wird, lautet der Standardwert **/32bitpreferred**.|
 |**/base:** `integer`|Legt ImageBase auf den Wert fest, der im NT Optional-Header per `integer` angegeben ist. Wenn die .imagebase-IL-Direktive in der Datei angegeben ist, wird sie durch diese Option überschrieben.|
-|**/clock**|Erfasst und berichtet die folgenden Kompilierungszeiten (in Millisekunden) für die angegebene IL-Quelldatei:<br /><br /> **Gesamtausführungszeit (Total Run)**: Die gesamte Zeitdauer für die Durchführung aller nachfolgenden spezifischen Operationen.<br /><br /> **Start (Startup)**: Laden und Öffnen der Datei.<br /><br /> **Metadatenausgabe (Emitting MD)**: Ausgeben von Metadaten.<br /><br /> **Auflösen von Verweisen auf Definitionen (Ref to Def Resolution)**: Auflösen von Verweisen auf Definitionen in der Datei.<br /><br /> **Erstellen der CEE-Datei (CEE File Generation)**: Generieren des Dateiabbilds im Arbeitsspeicher.<br /><br /> **Schreiben in PE-Datei (PE File Writing)**: Schreiben des Abbilds in eine PE-Datei.|
+|**/clock**|Erfasst und berichtet die folgenden Kompilierungszeiten (in Millisekunden) für die angegebene IL-Quelldatei:<br /><br /> **Total Run:** Die gesamte für die Ausführung aller nachfolgenden spezifischen Vorgänge benötigte Zeit.<br /><br /> **Startup:** Laden und Öffnen der Datei.<br /><br /> **Emitting MD:** Ausgabe von Metadaten.<br /><br /> **Ref to Def Resolution:** Auflösen von Verweisen auf Definitionen in der Datei.<br /><br /> **CEE File Generation:** Generieren des Dateiimages im Arbeitsspeicher.<br /><br /> **PE File Writing:** Schreiben des Images in eine PE-Datei.|
 |**/debug**[:**IMPL**&#124;**OPT**]|Schließt Debuginformationen (Namen lokaler Variablen und Argumente sowie Zeilennummern) ein. Erstellt eine PDB-Datei.<br /><br /> **/debug** ohne zusätzlichen Wert deaktiviert die JIT-Optimierung und verwendet Sequenzpunkte aus der PDB-Datei.<br /><br /> **IMPL** deaktiviert die JIT-Optimierung und verwendet implizite Sequenzpunkte.<br /><br /> **OPT** aktiviert die JIT-Optimierung und verwendet implizite Sequenzpunkte.|
 |**/dll**|Erzeugt eine *DLL*-Datei als Ausgabe.|
 |**/enc:** `file`|Erstellt Edit-and-Continue-Deltas aus der angegebenen Quelldatei.<br /><br /> Die Verwendung dieses Arguments ist nur zu akademischen Zwecken vorgesehen. Ein Einsatz zu kommerziellen Zwecken wird nicht unterstützt.|
@@ -65,7 +65,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Deaktiviert die Standardvererbung von <xref:System.Object> , wenn keine Basisklasse angegeben ist.|
 |**/nocorstub**|Unterdrückt die Generierung des CORExeMain-Stubs.|
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|
-|**/output:** `file.ext`|Gibt den Namen und die Erweiterung der Ausgabedatei an. In der Standardeinstellung ist der Name der Ausgabedatei mit dem der ersten Quelldatei identisch. Die Standarderweiterung ist *.exe*. Wenn Sie die Option **/dll** angeben, lautet die Standarderweiterung *.dll*. **Hinweis:** Durch Angabe von „**/output**:myfile.dll“ wird die Option **/dll** nicht festgelegt. Wenn Sie **/dll** nicht angeben, wird eine ausführbare Datei mit dem Namen *myfile.dll* erstellt.|
+|**/output:** `file.ext`|Gibt den Namen und die Erweiterung der Ausgabedatei an. In der Standardeinstellung ist der Name der Ausgabedatei mit dem der ersten Quelldatei identisch. Die Standarderweiterung ist *.exe*. Wenn Sie die Option **/dll** angeben, lautet die Standarderweiterung *.dll*. **Hinweis**: Durch Angabe von „**/output**:myfile.dll“ wird die Option **/dll** nicht festgelegt. Wenn Sie **/dll** nicht angeben, wird eine ausführbare Datei mit dem Namen *myfile.dll* erstellt.|
 |**/optimize**|Optimiert lange Anweisungen in kurze Anweisungen. Beispiel: `br` wird zu `br.s`.|
 |**/pe64**|Erstellt ein 64-Bit-Abbild (PE32+).<br /><br /> Wenn kein Zielprozessor angegeben wird, lautet der Standardwert `/itanium`.|
 |**/pdb**|Erstellt eine PDB-Datei, ohne das Nachverfolgen von Debuginformationen zu aktivieren.|

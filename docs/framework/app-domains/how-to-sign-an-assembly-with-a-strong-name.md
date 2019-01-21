@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Signieren einer Assembly mit einem starken Namen'
+title: 'Vorgehensweise: Signieren einer Assembly mit einem starken Namen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191063"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221257"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Gewusst wie: Signieren einer Assembly mit einem starken Namen
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Vorgehensweise: Signieren einer Assembly mit einem starken Namen
 Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signieren:  
   
 -   Mithilfe der Registerkarte **Signierung** im Dialogfeld **Eigenschaften** eines Projekts in Visual Studio. Dies ist die einfachste und bequemste Methode, eine Assembly mit einem starken Namen zu signieren.  
@@ -31,7 +31,7 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
   
 -   Mithilfe von Compileroptionen.  
   
- Sie benötigen ein kryptografisches Schlüsselpaar, um eine Assembly mit einem starken Namen zu signieren. Weitere Informationen zum Erstellen eines Schlüsselpaars finden Sie unter [Gewusst wie: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Sie benötigen ein kryptografisches Schlüsselpaar, um eine Assembly mit einem starken Namen zu signieren. Weitere Informationen zum Erstellen eines Schlüsselpaars finden Sie unter [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>So erstellen und signieren Sie eine Assembly mit einem starken Namen mithilfe von Visual Studio  
   
@@ -45,7 +45,7 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>So erstellen und signieren Sie eine Assembly mit einem starken Namen unter Verwendung des Assemblylinkers  
   
--   Geben Sie an der [Visual Studio-Eingabeaufforderung](../../../docs/framework/tools/developer-command-prompt-for-vs.md) den folgenden Befehl ein:  
+-   Geben Sie an der [Developer-Eingabeaufforderung für Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md) den folgenden Befehl ein:  
   
      **al** **/out:**\<*Assemblyname*> *\<Modulname>* **/keyfile:**\<*Schlüsseldateiname*>  
   

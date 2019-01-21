@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verknüpfungen für Datenflussblöcke aufheben'
+title: 'Vorgehensweise: Aufheben der Verknüpfungen von Datenflussblöcken'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0f266169a2d82bb76355febd58b2268907fe97
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93705653169b5efce3e3a062b7490abc4ea39c30
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540605"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223116"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Gewusst wie: Verknüpfungen für Datenflussblöcke aufheben
+# <a name="how-to-unlink-dataflow-blocks"></a>Vorgehensweise: Aufheben der Verknüpfungen von Datenflussblöcken
 In diesem Dokument erfahren Sie, wie Sie eine Verknüpfung zwischen einen Zieldatenflussblock und der zugehörigen Quelle auflösen.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -35,7 +35,7 @@ In diesem Dokument erfahren Sie, wie Sie eine Verknüpfung zwischen einen Zielda
  Damit die verbleibenden Aufrufe von `TrySolution` beendet werden, sobald einer einen Wert zurückgegeben hat, übernimmt die `TrySolution`-Methode ein <xref:System.Threading.CancellationToken>-Objekt, das abgebrochen wird, nachdem der Aufruf von `ReceiveFromAny(T)` zurückgegeben wurde. Die <xref:System.Threading.SpinWait.SpinUntil%2A>-Methode gibt zurück, wann dieses <xref:System.Threading.CancellationToken>-Objekt abgebrochen wird.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei namens `DataflowReceiveAny.cs` (`DataflowReceiveAny.vb` für Visual Basic) ein, und führen Sie dann den folgenden Befehl in einem Eingabeaufforderungsfenster von Visual Studio aus:  
+ Kopieren Sie den Beispielcode, und fügen Sie ihn in ein Visual Studio-Projekt ein, oder fügen Sie ihn in eine Datei namens `DataflowReceiveAny.cs` ein (`DataflowReceiveAny.vb` für Visual Basic), und führen Sie dann den folgenden Befehl in einer Developer-Eingabeaufforderung für Visual Studio aus.  
   
  Visual C#  
   

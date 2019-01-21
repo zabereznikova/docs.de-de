@@ -1,13 +1,13 @@
 ---
 title: Dotnet-Installationsskripts
 description: Informationen zu Dotnet-Installationsskripts zur Installation von .NET Core CLI-Tools und freigegebener Laufzeit.
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148321"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362830"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -55,7 +55,7 @@ Installieren Sie eine bestimmte Version mithilfe des Arguments `--version`. Die 
   * Zweiteilige Version im X.Y-Format, das eine bestimmte Version darstellt (z.B. `2.0` oder `1.0`).
   * Branchname. Zum Beispiel `release/2.0.0`, `release/2.0.0-preview2` or `master` (für nächtliche Releases).
 
-  Der Standardwert ist `LTS`. Weitere Informationen zu .NET-Supportkanälen finden Sie auf der Seite [.NET-Supportrichtlinie](https://www.microsoft.com/net/platform/support-policy#dotnet-core).
+  Der Standardwert ist `LTS`sein. Weitere Informationen zu .NET-Supportkanälen finden Sie auf der Seite [.NET-Supportrichtlinie](https://www.microsoft.com/net/platform/support-policy#dotnet-core).
 
 * **`-Version <VERSION>`**
 
@@ -73,7 +73,7 @@ Installieren Sie eine bestimmte Version mithilfe des Arguments `--version`. Die 
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  Architektur der zu installierenden .NET Core-Binärdateien. Mögliche Werte sind `auto`, `x64` und `x86`. Der Standardwert ist `auto`, was die derzeit ausgeführte Betriebssystemarchitektur darstellt.
+  Architektur der zu installierenden .NET Core-Binärdateien. Mögliche Werte sind `<auto>`, `amd64`, `x64`, `x86`, `arm64` und `arm`. Der Standardwert ist `<auto>`, was die derzeit ausgeführte Betriebssystemarchitektur darstellt.
 
 * **`-SharedRuntime`**
 

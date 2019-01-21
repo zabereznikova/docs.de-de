@@ -3,12 +3,12 @@ title: Machine Learning-Glossar – ML.NET
 description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53760392"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415376"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -17,8 +17,6 @@ Die folgende Liste ist eine Zusammenstellung wichtiger Begriffe aus dem Machine 
 ## <a name="accuracy"></a>Genauigkeit
 
 Bei der [Klassifizierung](#classification) ist die Genauigkeit die Anzahl der korrekt klassifizierten Elemente dividiert durch die Gesamtzahl der Elemente in der Testgruppe. Sie reicht von 0 (ungenau) bis 1 (am genauesten). Die Genauigkeit ist eine der Auswertungsmetriken für die Leistung Ihres Modells. Betrachten Sie sie in Verbindung mit [Präzision](#precision), [Wiedererkennung](#recall) und [F-Wertung](#f-score).
-
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>.
 
 ## <a name="area-under-the-curve-auc"></a>Fläche unter der Kurve (Area under the curve, AUC)
 
@@ -87,8 +85,6 @@ Alle Vorgänge, die zur Anpassung eines Modells an einen Datensatz erforderlich 
 ## <a name="precision"></a>Genauigkeit
 
 Bei der [Klassifizierung](#classification) steht die Genauigkeit für eine Klasse für die Anzahl der Elemente, die korrekt als zu dieser Klasse gehörend vorhergesagt werden, geteilt durch die Gesamtzahl der Elemente, die als zu dieser Klasse gehörend vorhergesagt werden.
-
-Verwandte ML.NET-API: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>.
 
 ## <a name="recall"></a>Wiedererkennung
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f0827634278f248089b105844dadf8959f953595
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196461"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221595"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Signaturtool)
 Beim Signierungstool handelt es sich um ein Befehlszeilentool, das Dateien digital signiert, Signaturen in Dateien überprüft und Dateien Zeitstempel hinzufügt.  
   
- Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
@@ -29,7 +29,7 @@ signtool [command] [options] [file_name | ...]
   
 #### <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung |  
+|Argument|Beschreibung|  
 |--------------|-----------------|  
 |`command`|Einer von vier Befehlen (`catdb`, `sign`, `Timestamp` oder `Verify`), der einen für eine Datei auszuführenden Vorgang angibt. In der folgenden Tabelle finden Sie eine Beschreibung der einzelnen Befehle.|  
 |`options`|Eine Option, die einen Befehl ändert. Neben der globalen `/q`-Option und `/v`-Option wird von jedem Befehl ein eindeutiger Satz von Optionen unterstützt.|  
@@ -37,7 +37,7 @@ signtool [command] [options] [file_name | ...]
   
  Vom Signierungstool werden die folgenden Befehle unterstützt. Jeder Befehl wird mit einem unterschiedlichem Satz von Optionen verwendet, die in den jeweiligen Abschnitten aufgeführt sind.  
   
-|Befehl|Beschreibung |  
+|Befehl|Beschreibung|  
 |-------------|-----------------|  
 |`catdb`|Fügt einer Katalogdatenbank eine Katalogdatei hinzu oder entfernt sie daraus. Katalogdatenbanken werden für die automatische Suche von Katalogdateien verwendet und mit einer GUID gekennzeichnet. Eine Liste der vom `catdb`-Befehl unterstützten Optionen finden Sie unter [catdb-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#catdb).|  
 |`sign`|Signiert Dateien digital. Digitale Signaturen schützen Dateien vor Manipulationen und ermöglichen es Benutzern, den Signaturgeber anhand eines Signaturzertifikats zu überprüfen. Eine Liste der vom `sign`-Befehl unterstützten Optionen finden Sie unter [sign-Befehlsoptionen](../../../docs/framework/tools/signtool-exe.md#sign).|  
@@ -46,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  Die folgenden Optionen gelten für alle Signierungstoolbefehle.  
   
-|Globale Option|Beschreibung |  
+|Globale Option|Beschreibung|  
 |-------------------|-----------------|  
 |**/q**|Bei erfolgreicher Ausführung des Befehls erfolgt keine Ausgabe, bei einen Fehler werden minimale Daten ausgegeben|  
 |**/v**|Zeigt unabhängig von der erfolgreichen Ausführung des Befehls eine ausführliche Ausgabe und Warnmeldungen an.|  
@@ -56,7 +56,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>catdb-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `catdb`-Befehl verwendet werden können.  
   
-|Catdb-Option|Beschreibung |  
+|Catdb-Option|Beschreibung|  
 |------------------|-----------------|  
 |`/d`|Gibt an, dass die Standardkatalogdatenbank aktualisiert wird. Wenn weder die `/d`-Option noch die `/g`-Option verwendet wird, führt das Signierungstool ein Update der Systemkomponenten- und Treiberdatenbank aus.|  
 |`/g` *GUID*|Gibt an, dass die durch die *GUID* (Globally Unique Identifier) bezeichnete Katalogdatenbank aktualisiert wird.|  
@@ -67,7 +67,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>sign-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `sign`-Befehl verwendet werden können.  
   
-|Sign-Befehlsoption|Beschreibung |  
+|Sign-Befehlsoption|Beschreibung|  
 |-------------------------|-----------------|  
 |`/a`|Wählt automatisch das beste Signaturzertifikat aus. Das Signierungstool findet alle gültigen Zertifikate, die sämtliche angegebenen Bedingungen erfüllen, und wählt das Zertifikat mit der längsten Gültigkeitsdauer aus. Wenn diese Option nicht vorhanden ist, wird vom Signierungstool nur ein bestehendes gültiges Signaturzertifikat erwartet.|  
 |`/ac` *datei*|Fügt dem Signaturblock ein zusätzliches Zertifikat aus *file* hinzu.|  
@@ -103,7 +103,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>TimeStamp-Befehlsoptionen  
  In der folgenden Tabelle werden die Optionen aufgeführt, die mit dem `TimeStamp`-Befehl verwendet werden können.  
   
-|TimeStamp-Option|Beschreibung |  
+|TimeStamp-Option|Beschreibung|  
 |----------------------|-----------------|  
 |`/p7`|Fügt PKCS #7-Dateien Zeitstempel hinzu.|  
 |`/t` *URL*|Gibt die URL des Zeitstempelservers an. Vor dem Hinzufügen eines Zeitstempels muss die jeweilige Datei signiert werden. Entweder die `/t`-Option oder die `/tr`-Option ist erforderlich.|  
@@ -116,7 +116,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>"Verify"-Befehlsoptionen  
   
-|"Verify"-Option|Beschreibung |  
+|"Verify"-Option|Beschreibung|  
 |-------------------|-----------------|  
 |`/a`|Gibt an, dass alle Methoden zum Überprüfen der Datei verwendet werden können. Zuerst werden die Katalogdatenbanken durchsucht, um zu ermitteln, ob die Datei in einem Katalog signiert ist. Wenn die Datei nicht in einem Katalog signiert ist, versucht das Signierungstool, die eingebettete Signatur der Datei zu überprüfen. Diese Option wird zum Überprüfen von Dateien empfohlen, die möglicherweise, jedoch nicht unbedingt in einem Katalog signiert sind. Beispiele für diese Dateien sind Windows-Dateien oder Treiber.|  
 |`/ad`|Sucht den Katalog in der Standardkatalogdatenbank.|  
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Gibt einen optionalen Hashalgorithmus zum Suchen einer Datei in einem Katalog an.|  
 |`/kp`|Gibt an, dass die Überprüfung mit der Signierungsrichtlinie für Kernelmodustreiber ausgeführt werden soll.|  
 |`/ms`|Verwendet mehrere Überprüfungssemantiken. Hierbei handelt es sich um das Standardverhalten eines [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust)-Aufrufs unter [!INCLUDE[win8](../../../includes/win8-md.md)] und höher.|  
-|`/o` *Version*|Überprüft die Datei anhand der Betriebssystemversion. *Version* hat folgende Form: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* stellt den zugrundeliegenden Wert eines <xref:System.PlatformID>-Enumerationsmembers dar. **Wichtig**: Die Verwendung des `/o`-Schalters wird empfohlen. Ohne Angabe von `/o` werden von SignTool.exe möglicherweise unerwartete Ergebnisse zurückgegeben. Beispiel: Wenn Sie den `/o`-Schalter nicht einbeziehen, werden unter älteren Betriebssystemen erfolgreich überprüfte Systemkataloge bei einem neueren Betriebssystem möglicherweise nicht ordnungsgemäß überprüft.|  
+|`/o` *Version*|Überprüft die Datei anhand der Betriebssystemversion. *Version* hat das folgende Format: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* stellt den zugrundeliegenden Wert eines <xref:System.PlatformID>-Enumerationsmembers dar. **Wichtig:**  Die Verwendung des `/o`-Schalters wird empfohlen. Ohne Angabe von `/o` werden von SignTool.exe möglicherweise unerwartete Ergebnisse zurückgegeben. Beispiel: Wenn Sie den `/o`-Schalter nicht einbeziehen, werden unter älteren Betriebssystemen erfolgreich überprüfte Systemkataloge bei einem neueren Betriebssystem möglicherweise nicht ordnungsgemäß überprüft.|  
 |`/p7`|Überprüft PKCS #7-Dateien. Bei der PKCS #7-Überprüfung werden keine vorhandenen Richtlinien verwendet. Die Signatur wird überprüft, und für das Signaturzertifikat wird eine Kette erstellt.|  
 |`/pa`|Gibt an, dass die standardmäßige Authenticode-Überprüfungsrichtlinie verwendet werden soll. Ohne Angabe der `/pa`-Option wird vom Signierungstool die Windows-Treiberüberprüfungsrichtlinie verwendet. Diese Option kann nicht mit den `catdb`-Optionen verwendet werden.|  
 |`/pg` *PolicyGUID*|Gibt eine Überprüfungsrichtlinie nach GUID an. Die *PolicyGUID* entspricht der „ActionID“ der Überprüfungsrichtlinie. Diese Option kann nicht mit den `catdb`-Optionen verwendet werden.|  
@@ -142,7 +142,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>Rückgabewert  
  Beim Beenden wird vom Signierungstool einer der folgenden Exitcodes zurückgegeben.  
   
-|Exitcode|Beschreibung |  
+|Exitcode|Beschreibung|  
 |---------------|-----------------|  
 |0|Ausführung war erfolgreich.|  
 |1|Ausführung ist fehlgeschlagen.|  

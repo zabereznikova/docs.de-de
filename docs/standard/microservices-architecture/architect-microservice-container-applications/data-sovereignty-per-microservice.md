@@ -4,12 +4,12 @@ description: Datensouveränität pro Microservice gehört zu den Eckpfeilern von
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 136f8d173042ab235e5fa3c8478f4aa5659a9787
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126847"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144901"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice
 
@@ -27,7 +27,7 @@ Andererseits verfügt der herkömmliche (monolithische Daten-)Ansatz, der in vie
 
 Dieser zentralisierte Datenbankansatz sieht anfänglich einfacher aus und scheint die Wiederverwendung von Entitäten in verschiedenen Subsystemen zu ermöglichen, um Konsistenz zu gewährleisten. Doch in Wirklichkeit haben Sie es mit riesigen Tabellen zu tun, die Anforderungen vieler verschiedener Subsysteme erfüllen und Attribute und Spalten enthalten, die in den meisten Fällen nicht nötig sind. Das ist wie der Versuch, dieselbe Karte für eine kurze Wanderung, einen Tagesausflug mit dem Auto und das Erlernen von Topografie zu nutzen.
 
-Eine monolithische Anwendung mit einer einzelnen relationalen Datenbank hat in der Regel zwei wichtige Vorteile: [ACID-Transaktionen](https://en.wikipedia.org/wiki/ACID) und die SQL-Sprache. Beide arbeiten in allen Tabellen und Daten im Zusammenhang mit Ihrer Anwendung. Dieser Ansatz bietet eine Möglichkeit zum einfachen Schreiben einer Abfrage, die Daten aus mehreren Tabellen kombiniert.
+Eine monolithische Anwendung, typischerweise mit einer relationalen Datenbank, hat die folgenden wichtigen Vorteile: [ACID-Transaktionen](https://en.wikipedia.org/wiki/ACID) und SQL, die für alle Tabellen und Daten Ihrer Anwendung funktionieren. Dieser Ansatz bietet eine Möglichkeit zum einfachen Schreiben einer Abfrage, die Daten aus mehreren Tabellen kombiniert.
 
 Der Datenzugriff wird jedoch beim Wechsel zu einer Microservicesarchitektur wesentlich komplexer. Aber selbst wenn ACID-Transaktionen innerhalb eines Microservices oder eines begrenzten Kontexts verwendet werden können oder sollen, sind die Daten im Besitz jedes Microservices für diesen Microservice privat und es kann nur über seine Microservice-API auf sie zugegriffen werden. Kapseln von Daten stellt sicher, dass die Microservices locker gekoppelt sind und sich unabhängig voneinander weiterentwickeln können. Wenn mehrere Dienste auf die gleichen Daten zugreifen, benötigen Schemaupdates koordinierte Updates für alle Dienste. Dadurch würde die Autonomie des Lebenszyklus der Microservices unterbrochen. Allerdings bedeuten verteilte Datenstrukturen, dass Sie keine einzelne ACID-Transaktion über Microservices vornehmen können. Dies bedeutet wiederum, dass Sie die letztliche Konsistenz verwenden müssen, wenn ein Geschäftsprozess mehrere Microservices umfasst. Dies ist viel schwieriger zu implementieren als einfache SQL-Joins, da Sie weder Integritätseinschränkungen erstellen noch verteilte Transaktionen zwischen verschiedenen Datenbanken verwenden können, wie später erläutert wird. Ebenso sind viele andere Funktionen der relationalen Datenbank nicht für mehrere Microservices verfügbar.
 
@@ -37,7 +37,7 @@ Eine partitionierte, polyglotte, persistente Architektur für die Datenspeicheru
 
 ## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Die Beziehung zwischen Microservices und dem BC-Muster
 
-Das Konzept der Microservice leitet sich vom [BC-Muster (Begrenzter Kontext)](http://martinfowler.com/bliki/BoundedContext.html) in [domänengesteuertem Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) ab. DDD arbeitet mit großen Modellen, unterteilt diese in mehrere BCs und definiert explizite Umrisslinien. Jeder BC benötigt sein eigenes Modell und seine eigene Datenbank. Ebenso besitzt jeder Microservice seine verwandten Daten. Darüber hinaus verfügt jede BC in der Regel über eine eigene [ubiquitäre Sprache](http://martinfowler.com/bliki/UbiquitousLanguage.html) zur vereinfachten Kommunikation zwischen Softwareentwickler und Domänenexperten.
+Das Konzept der Microservice leitet sich vom [BC-Muster (Begrenzter Kontext)](https://martinfowler.com/bliki/BoundedContext.html) in [domänengesteuertem Design (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design) ab. DDD arbeitet mit großen Modellen, unterteilt diese in mehrere BCs und definiert explizite Umrisslinien. Jeder BC benötigt sein eigenes Modell und seine eigene Datenbank. Ebenso besitzt jeder Microservice seine verwandten Daten. Darüber hinaus verfügt jede BC in der Regel über eine eigene [ubiquitäre Sprache](https://martinfowler.com/bliki/UbiquitousLanguage.html) zur vereinfachten Kommunikation zwischen Softwareentwickler und Domänenexperten.
 
 Diese Benennungen (v.a. Domänenentitäten) in der ubiquitären Sprache können unterschiedliche Namen in unterschiedlichen begrenzten Kontexten haben, selbst wenn die verschiedenen Domänenentitäten über die gleiche Identität verfügen (d.h. die eindeutige ID, die zum Lesen der Entität aus dem Speicher verwendet wird). In einem begrenzten Kontext in einem Benutzerprofil verfügt die Entität „User domain“ beispielsweise über die gleiche Identität wie die Entität „Buyer domain“ im begrenzten Bestellkontext.
 

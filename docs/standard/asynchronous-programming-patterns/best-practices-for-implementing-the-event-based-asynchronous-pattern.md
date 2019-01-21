@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 37575ff080fca1514e4fd6e4e22243227c529dd2
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836958"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084952"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um asynchrones Verhalten in Klassen mit einer vertrauten Ereignis- und Delegatsemantik verfügbar zu machen. Für eine Implementierung des ereignisbasierten asynchronen Musters müssen Sie einige spezielle Verhaltensanforderungen befolgen. In den folgenden Abschnitten sind Anforderungen und Richtlinien beschrieben, die Sie bei der Implementierung einer Klasse berücksichtigen sollten, die dem ereignisbasierten asynchronen Muster folgt.  
@@ -28,7 +28,7 @@ Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um a
  Wenn Sie das ereignisbasierte asynchrone Muster implementieren, müssen Sie eine Reihe von Garantien bereitstellen, um sicherzustellen, dass sich Ihre Klasse ordnungsgemäß verhält und die Clients Ihrer Klasse sich auf dieses Verhalten verlassen können.  
   
 ### <a name="completion"></a>Abschluss  
- Rufen Sie immer den Ereignishandler <em>MethodName</em>**Completed** auf, wenn ein erfolgreicher Abschluss, ein Fehler oder ein Abbruch vorliegt. Anwendungen sollten niemals auf eine Situation treffen, in der sie im Leerlauf bleiben und ein Abschluss niemals erfolgt. Eine Ausnahme zu dieser Regel ist, wenn der asynchrone Vorgang an sich so entwickelt wurde, dass er nie abgeschlossen wird.  
+ Rufen Sie immer den Ereignishandler <em>MethodName</em>**Completed** auf, wenn ein erfolgreicher Abschluss, ein Fehler oder ein Abbruch vorliegt. Anwendungen sollten niemals auf eine Situation treffen, in der sie im Leerlauf bleiben und ein Abschluss niemals erfolgt. Eine Ausnahme dieser Regel ist, wenn der asynchrone Vorgang an sich so entwickelt wurde, dass er nie abgeschlossen wird.  
   
 ### <a name="completed-event-and-eventargs"></a>Abgeschlossenes Event und EventArgs  
  Wenden Sie für jede separate <em>MethodName</em>**Async**-Methode die folgenden Entwurfsanforderungen an:  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Wenn Ihre Klasse mehrere gleichzeitige Aufrufe unterstützt, ermöglichen Sie dem Entwickler, jeden Aufruf separat nachzuverfolgen. Hierzu definieren Sie die <em>MethodName</em>**Async**-Überladung, die einen State-Parameter mit Objektwert oder eine Task-ID namens `userSuppliedState` akzeptiert. Dieser Parameter sollte immer der letzte Parameter in der Signatur der <em>MethodName</em>**Async**-Methode sein.  
   
--   Wenn Ihre Klasse die <em>MethodName</em>**Async**-Überladung definiert, die einen State-Parameter mit Objektwert oder eine Task-ID akzeptiert, stellen Sie sicher, dass Sie die Lebensdauer des Vorgangs mit dieser Task-ID nachverfolgen und eine Rückgabe an den Abschlusshandler erfolgt. Es sind Hilfsklassen zur Unterstützung verfügbar. Weitere Informationen zur Parallelitätsverwaltung finden Sie unter [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Wenn Ihre Klasse die <em>MethodName</em>**Async**-Überladung definiert, die einen State-Parameter mit Objektwert oder eine Task-ID akzeptiert, stellen Sie sicher, dass Sie die Lebensdauer des Vorgangs mit dieser Task-ID nachverfolgen und eine Rückgabe an den Abschlusshandler erfolgt. Es sind Hilfsklassen zur Unterstützung verfügbar. Weitere Informationen zur Parallelitätsverwaltung finden Sie unter [Vorgehensweise: Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 -   Wenn Ihre Klasse die <em>MethodName</em>**Async**-Methode ohne den State-Parameter definiert und nicht mehrere gleichzeitige Aufrufe unterstützt, stellen Sie sicher, dass jeder Versuch, <em>MethodName</em>**Async** aufzurufen, bevor der vorherige <em>MethodName</em>**Async**-Aufruf abgeschlossen wurde, eine <xref:System.InvalidOperationException> auslöst.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 >  Sie können diese Regeln umgehen, wenn Sie explizit gegen die Richtlinie des Anwendungsmodell vorgehen möchten, aber dennoch von den anderen Vorteilen der Verwendung des ereignisbasierten asynchronen Musters profitieren. Möglicherweise möchten Sie zum Beispiel, dass eine in Windows Forms betriebene Klasse eine Freethread-Klasse ist. Sie können eine Freethread-Klasse erstellen, solange Entwickler die implizierten Einschränkungen verstehen. Konsolenanwendungen führen keine Synchronisierung von <xref:System.ComponentModel.AsyncOperation.Post%2A>-Aufrufen durch. Das kann dazu führen, dass `ProgressChanged`-Ereignisse nicht in der richtigen Reihenfolge ausgelöst werden. Wenn Sie eine serialisierte Ausführung von <xref:System.ComponentModel.AsyncOperation.Post%2A>-Aufrufen wünschen, implementieren und installieren Sie eine <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>-Klasse.  
   
- Weitere Informationen zur Verwendung von <xref:System.ComponentModel.AsyncOperation> und <xref:System.ComponentModel.AsyncOperationManager> für Ihre asynchronen Vorgänge finden Sie unter [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Weitere Informationen zur Verwendung von <xref:System.ComponentModel.AsyncOperation> und <xref:System.ComponentModel.AsyncOperationManager> zur Aktivierung Ihrer asynchronen Vorgänge finden Sie unter [Vorgehensweise: Übersicht über ereignisbasierte asynchrone Muster](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Richtlinien  
   
@@ -154,5 +154,5 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - [Ereignisbasiertes asynchrones Muster (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
 - [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
 - [Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
-- [How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
-- [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Vorgehensweise: How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+- [Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: d1a0ee772618b89d3b8cf6efc9400e3dcf4804da
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396876"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223181"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen
 
@@ -197,7 +197,7 @@ Benutzer können mehrere Versionen von .NET Framework auf einem Computer instal
 
 - Verwenden Sie das CLR-Versions-Tool (Clrver.exe), um zu bestimmen, welche Versionen der Common Language Runtime auf einem Computer installiert sind.
 
-     Geben Sie an der Visual Studio-Eingabeaufforderung `clrver` ein. Dieser Befehl erzeugt eine Ausgabe ähnlich der folgenden:
+     Geben Sie in einer Developer-Eingabeaufforderung für Visual Studio `clrver` ein. Dieser Befehl erzeugt eine Ausgabe ähnlich der folgenden:
 
     ```
     Versions installed on the machine:

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b69544b2d8041a3aa4cb566867b6c14b29f0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ee829893d251b536448ba2ee78ea13e0d22ae41
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409109"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221738"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
 Der IL-Disassembler ist ein ergänzendes Tool zum IL-Assembler (*Ilasm.exe*). *Ildasm.exe* erfasst eine portierbare ausführbare Datei (Portable Executable, PE) mit IL-Code (Intermediate Language) und erstellt eine Textdatei, die in *Ilasm.exe* eingegeben werden kann.
 
-Dieses Tool wird automatisch mit Visual Studio installiert. Zum Ausführen des Tools verwenden Sie die Developer-Eingabeaufforderung (oder die Visual Studio-Eingabeaufforderung in Windows 7). Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
+Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
 Geben Sie an der Eingabeaufforderung Folgendes ein:
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 Für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* stehen die folgenden Optionen zur Verfügung.
 
-| Option | description |
+| Option | Beschreibung |
 | ------ | ----------- |
 |**/out=** `filename`|Erstellt eine Ausgabedatei mit dem angegebenen `filename`, anstatt die Ergebnisse in einer grafischen Benutzeroberfläche anzuzeigen.|
 |**/rtf**|Erzeugt die Ausgabe im RTF-Format. Ungültig mit der Option **/text**.|
@@ -46,7 +46,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* s
 
 Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgenden zusätzlichen Optionen zur Verfügung.
 
-| Option | description |
+| Option | Beschreibung |
 | ------ | ----------- |
 |**/bytes**|Zeigt die Bytes selbst im Hexadezimalformat als Kommentare zu Anweisungen an.|
 |**/caverbal**|Erzeugt BLOBs des benutzerdefinierten Attributs im verbalen Format. Der Standard entspricht dem binären Format.|
@@ -63,7 +63,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgen
 
 Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* bei der Ausgabe in einer Datei oder der Konsole.
 
-| Option | description |
+| Option | Beschreibung |
 | ------ | ----------- |
 |**/all**|Gibt eine Kombination der Optionen **/header**, **/bytes**, **/stats**, **/classlist** und **/tokens** an.|
 |**/classlist**|Umfasst eine Liste der im Modul definierten Klassen.|
@@ -78,13 +78,13 @@ Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.d
 
 Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* bei der Ausgabe in einer Datei oder der Konsole.
 
-| Option | description |
+| Option | Beschreibung |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Zeigt Metadaten an. Dabei entspricht `specifier` Folgendem:<br /><br /> **MDHEADER**: Zeigt die Headerinformationen und -größen der Metadaten an.<br /><br /> **HEX**: Zeigt Informationen im Hexadezimalformat sowie in Wörtern an.<br /><br /> **CSV**: Zeigt die Anzahl von Datensätzen und die Heapgrößen an.<br /><br /> **UNREX**: Zeigt nicht aufgelöste Externe an.<br /><br /> **SCHEMA**: Zeigt den Metadatenheader und Schemainformationen an.<br /><br /> **RAW**: Zeigt die nicht formatierten Metadatentabellen an.<br /><br /> **HEAPS**: zeigt die unformatierten Heaps an.<br /><br /> **VALIDATE**: Überprüft die Konsistenz der Metadaten.<br /><br /> Sie können **/metadata** mehrmals angeben und unterschiedliche Werte für `specifier` verwenden.|
 
 Die folgenden Optionen gelten nur für *LIB*-Dateien bei der Ausgabe in eine Datei oder auf der Konsole.
 
-| Option | description |
+| Option | Beschreibung |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Zeigt die Metadaten einer einzelnen Objektdatei in der angegebenen Bibliothek an.|
 
