@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 468ad1acf55c4d1b4fc2b53730f16ee8630cf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c27669c8473bd52d3b82a14d570340ac38d1e07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523245"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention-Enumeration
 Enthält Werte, die die Typen der Aufrufkonventionen beschreiben, die in verwaltetem Code durchgeführt werden.  
@@ -54,26 +54,26 @@ typedef enum CorCallingConvention
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Gibt eine Standardaufrufkonvention an.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Gibt den Standardwert, die Aufrufkonvention an.|  
 |`IMAGE_CEE_CS_CALLCONV_VARARG`|Gibt an, dass die Methode eine Variable Anzahl von Parametern akzeptiert.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Gibt an, dass ein Feld aufgerufen wird.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Gibt an, dass eine lokale Methode aufgerufen wird.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Gibt an, dass eine Eigenschaft aufgerufen wird.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Gibt an, dass der Aufruf an ein Feld.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Gibt an, dass es sich bei einer lokalen Methode aufgerufen wird.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Gibt an, dass der Aufruf an eine Eigenschaft.|  
 |`IMAGE_CEE_CS_CALLCONV_UNMGD`|Gibt an, dass der Aufruf nicht verwaltet ist.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Gibt die Instanziierung einer generischen Methode an.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Gibt einen 64-Bit-PInvoke-Aufrufs an eine Methode, die eine Variable von Parametern Anzahl an.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Gibt an, eine 64-Bit-PInvoke-Aufrufs an eine Methode, die eine Variable Anzahl von Parametern akzeptiert.|  
 |`IMAGE_CEE_CS_CALLCONV_MAX`|Beschreibt einen ungültigen 4-Bit-Wert.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Gibt an, dass die Aufrufkonvention durch die unteren vier Bits beschrieben wird.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Gibt an, dass die Aufrufkonvention, die durch die unteren vier Bits beschrieben wird.|  
 |`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Gibt an, dass das oberste Bit beschreibt eine `this` Parameter.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Gibt an, dass eine `this` Parameter ist in der Signatur explizit beschrieben.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Gibt die Signatur einer generischen Methode mit einer expliziten Anzahl von Typargumenten an. Dies ist eine normale Parameteranzahl vorangestellt.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Gibt an, dass eine `this` Parameter explizit in der Signatur beschrieben ist.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Gibt die Signatur einer generischen Methode mit einer expliziten Anzahl der Argumente des Typs an. Dies steht vor einer gewöhnlichen Parameteranzahl.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

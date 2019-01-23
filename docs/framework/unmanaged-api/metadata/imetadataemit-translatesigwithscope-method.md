@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516186"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope-Methode
-Importiert eine Assembly in den aktuellen Bereich und ruft eine neue Metadatensignatur für den zusammengeführten Bereich ab.  
+Importiert eine Assembly in den aktuellen Bereich und ruft eine neue Metadatensignatur für den zusammengeführten Bereich.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ HRESULT TranslateSigWithScope (
   
 #### <a name="parameters"></a>Parameter  
  `pAssemImport`  
- [in] Die Schnittstelle für den Importassembly (wobei die Signatur definiert wird).  
+ [in] Die Schnittstelle für den Importassembly (in dem die Signatur definiert ist).  
   
  `pbHashValue`  
  [in] Der Hash-Blob für die Assembly.  
@@ -62,35 +62,35 @@ HRESULT TranslateSigWithScope (
  [in] Die Signatur, die importiert werden.  
   
  `cbSigBlob`  
- [in] Die Größe in Bytes, der `pbSigBlob`.  
+ [in] Die Größe in Bytes, des `pbSigBlob`.  
   
  `pAssemEmit`  
- [in] Die Schnittstelle für die Assembly exportieren.  
+ [in] Die Schnittstelle für den Exportassembly.  
   
  `emit`  
  [in] Die Schnittstelle für den Exportmetadatenbereich.  
   
  `pvTranslatedSig`  
- [out] Der Puffer, die übersetzte Signatur-Blob zu speichern.  
+ [out] Der Puffer, die den übersetzten Signatur-Blob zu speichern.  
   
  `cbTranslatedSigMax`  
- [in] Die Kapazität in Bytes, der `pvTranslatedSig`.  
+ [in] Die Kapazität in Bytes, des `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
  [out] Die Anzahl der tatsächlichen Bytes in der übersetzten Signatur.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

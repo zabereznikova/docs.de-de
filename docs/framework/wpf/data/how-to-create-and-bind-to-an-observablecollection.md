@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen und Binden an ObservableCollection'
+title: 'Vorgehensweise: Erstellen und Binden an ObservableCollection'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 5e04aa1a1d209074dbdadcb1df089e31efa84ded
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9f714878cd1b0b179dc1ced44e3dcfe7c2f9bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517590"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Gewusst wie: Erstellen und Binden an ObservableCollection
-In diesem Beispiel wird gezeigt, wie zum Erstellen und Binden an eine Auflistung, die von abgeleitet ist die <xref:System.Collections.ObjectModel.ObservableCollection%601> Klasse, die eine Auflistungsklasse, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden.  
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Vorgehensweise: Erstellen und Binden an ObservableCollection
+Dieses Beispiel zeigt das Erstellen und Binden an eine Auflistung, die von abgeleitet ist die <xref:System.Collections.ObjectModel.ObservableCollection%601> Klasse, die eine Auflistungsklasse, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird die Implementierung einer `NameList`-Auflistung veranschaulicht:  
@@ -136,13 +136,13 @@ End Class
  Die Definition von `NameItemTemplate` wird hier nicht gezeigt.  
   
 > [!NOTE]
->  Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](../../../../docs/framework/wpf/data/binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Insbesondere bei Verwendung von <xref:System.Windows.Data.BindingMode.OneWay> oder <xref:System.Windows.Data.BindingMode.TwoWay> (angenommen, Sie möchten Ihre [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aktualisieren, wenn die Eigenschaften dynamisch ändern), müssen Sie einen Benachrichtigungsmechanismus geeignete Eigenschaft geändert wurde, z. B. die implementieren<xref:System.ComponentModel.INotifyPropertyChanged>Schnittstelle.  
+>  Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](../../../../docs/framework/wpf/data/binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Vor allem bei Verwendung von <xref:System.Windows.Data.BindingMode.OneWay> oder <xref:System.Windows.Data.BindingMode.TwoWay> (angenommen, Sie möchten Ihre [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aktualisieren, wenn die Eigenschaften der dynamisch zu ändern), müssen Sie einen geeigneten Benachrichtigungsmechanismus, wie z. B. die implementieren<xref:System.ComponentModel.INotifyPropertyChanged>Schnittstelle.  
   
  Weitere Informationen finden Sie in der [Übersicht über die Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md) unter „Binden an Auflistungen“.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sortieren von Daten in einer Ansicht](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [Filtern von Daten in einer Ansicht](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- [Sortieren von Daten in einer Ansicht](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)
+- [Filtern von Daten in einer Ansicht](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)
+- [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

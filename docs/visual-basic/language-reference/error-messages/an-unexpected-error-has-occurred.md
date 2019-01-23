@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: 313128d5511ddd0f3b75c58e2c10a74eb967d130
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d7f5d570e187393b76f4af6301a81dbb350f2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518526"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Unerwarteter Fehler. Eine Betriebssystemressource, die für den Start einer einzelnen Instanz benötigt wird, ist nicht verfügbar.
 Die Anwendung konnte eine erforderliche Betriebssystemressource nicht abrufen. Mögliche Ursachen für dieses Problem:  
@@ -30,7 +30,7 @@ Die Anwendung konnte eine erforderliche Betriebssystemressource nicht abrufen. M
   
 4.  Notieren Sie sich die Umstände, unter denen der Fehler aufgetreten ist, und wenden Sie sich an den Produktsupport von Microsoft.  
   
-## <a name="see-also"></a>Siehe auch  
- [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
- [Debugger – Grundlagen](/visualstudio/debugger/debugger-basics)  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Siehe auch
+- [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Debugger – Grundlagen](/visualstudio/debugger/debugger-basics)
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

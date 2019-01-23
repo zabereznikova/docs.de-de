@@ -1,28 +1,28 @@
 ---
-title: Pfad-Dateizugriffsfehler
+title: Pfad / Dateizugriffsfehler
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 83ce8615b173a6f5835347ebc561a793655ec8f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53f021faa9e4ae69a71d825ca823e1180421afc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522478"
 ---
 # <a name="pathfile-access-error"></a>Pfad-/Dateizugriffsfehler
-Während eines Datei- oder Datenträgerzugriffs womöglich des Betriebssystems eine Verbindung zwischen den Pfad und den Dateinamen nicht.  
+Während eines Datei- oder Datenträgerzugriffs könnte das Betriebssystem keine Verbindung zwischen dem Pfad und den Dateinamen herstellen.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Stellen Sie sicher, dass die Dateispezifikation korrekt formatiert sind. Ein Dateiname darf einen vollqualifizierten (absoluten) oder einen relativen Pfad. Ein vollständig qualifizierter Pfad beginnt mit dem Namen des Laufwerks (falls der Pfad auf einem anderen Laufwerk ist) und den expliziten Pfad vom Stamm der Datei aufgelistet. Alle nicht vollqualifiziert ist Pfad ist relativ zum aktuellen Laufwerks und des Verzeichnisses.  
+1.  Stellen Sie sicher, dass die Dateispezifikation richtig formatiert ist. Ein Dateiname darf eine vollqualifizierte (absolut) oder einen Pfad relativ Pfad. Ein vollqualifizierter Pfad beginnt mit den Namen des Laufwerks (wenn der Pfad auf einem anderen Laufwerk) und den expliziten Pfad vom Stamm zu der Datei aufgelistet. Alle, die nicht den vollqualifizierten Pfad ist relativ zu das aktuelle Laufwerk und Verzeichnis.  
   
-2.  Stellen Sie sicher, dass Sie nicht versuchen, eine Datei zu speichern, die eine vorhandene schreibgeschützte Datei ersetzen würde. Wenn dies der Fall ist, ändern Sie das Attribut "schreibgeschützt" der Zieldatei oder speichern Sie die Datei mit einem anderen Dateinamen.  
+2.  Stellen Sie sicher, dass Sie nicht versucht haben, zum Speichern einer Datei, die eine vorhandene schreibgeschützte Datei ersetzen. Wenn dies der Fall ist, ändern Sie das Attribut "schreibgeschützt" der Zieldatei oder speichern Sie die Datei mit einem anderen Dateinamen.  
   
-3.  Stellen Sie sicher, dass Sie nicht versucht haben, öffnen Sie eine schreibgeschützte Datei in sequenziellen `Output` oder `Append` Modus. Wenn dies der Fall ist, öffnen Sie die Datei im `Input` Modus, oder ändern Sie das Schreibschutzattribut der Datei.  
+3.  Stellen Sie sicher, dass Sie nicht versucht haben, öffnen Sie eine schreibgeschützte Datei in sequenziellen `Output` oder `Append` Modus. Wenn dies der Fall ist, öffnen Sie die Datei im `Input` Modus oder ändern Sie das Attribut "schreibgeschützt" der Datei.  
   
-4.  Stellen Sie sicher, dass Sie nicht versuchen, ein Visual Basic-Projekt in einer Datenbank oder das Dokument zu ändern.  
+4.  Stellen Sie sicher, dass Sie nicht versucht haben, um ein Visual Basic-Projekt in einer Datenbank oder das Dokument zu ändern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>Siehe auch
+- [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -2,12 +2,12 @@
 title: Was&#39;Neues in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cfb1546ccddc6a4f6f3668210832db3d7a88f632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501594"
 ---
 # <a name="what39s-new-in-adonet"></a>Was&#39;Neues in ADO.NET
 Die folgenden Funktionen sind neu in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -48,11 +48,11 @@ Die folgenden Funktionen sind neu in [!INCLUDE[vstecado](../../../../includes/vs
 -   Für die Microsoft.SqlServer.Types.dll-Assembly, die die räumlichen Datentypen enthält, wurde ein Upgrade von Version 10.0 auf Version 11.0 vorgenommen. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- Durch [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] werden APIs hinzugefügt, die bei Verwendung von Entity Framework 5.0 neue Szenarien ermöglichen. Weitere Informationen zu Verbesserungen und Funktionen, die Entity Framework 5.0 hinzugefügt wurden, finden Sie unter den folgenden Themen: [neues](https://go.microsoft.com/fwlink/?LinkID=251106) und [Entity Framework-Versionen und Versionsverwaltung](https://go.microsoft.com/fwlink/?LinkId=234899).  
+ Durch [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] werden APIs hinzugefügt, die bei Verwendung von Entity Framework 5.0 neue Szenarien ermöglichen. Weitere Informationen zu Verbesserungen und Funktionen, die Entity Framework 5.0 hinzugefügt wurden, finden Sie unter den folgenden Themen: [Neues](https://go.microsoft.com/fwlink/?LinkID=251106) und [Entity Framework-Versionen und Versionsverwaltung](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Neues in WCF Data Services](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
+- [Neues in WCF Data Services](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

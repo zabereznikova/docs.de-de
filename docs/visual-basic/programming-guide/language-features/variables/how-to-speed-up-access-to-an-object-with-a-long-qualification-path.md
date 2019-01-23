@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad (Visual Basic)'
+title: 'Vorgehensweise: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], accessing
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: d52d13feb0f85065c0623b5937f558b841c036dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 827d7d1574e85a30ec2724f7739f6c3a08dbd975
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519722"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Gewusst wie: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad (Visual Basic)
-Wenn Sie häufig auf ein Objekt, die einen Qualifizierungspfad mehrere Methoden und Eigenschaften erforderlich sind zugreifen, können Sie den Code durch die Wiederholung nicht des Qualifizierungspfads beschleunigen.  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Vorgehensweise: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad (Visual Basic)
+Wenn Sie häufig ein Objekt, die einen Qualifizierungspfad, der mehrere Methoden und Eigenschaften erforderlich sind zugreifen, können Sie Ihren Code beschleunigen, indem nicht wiederholt den Qualifizierungspfad.  
   
- Es gibt zwei Möglichkeiten, die Sie wiederholt den Qualifizierungspfad vermeiden können. Sie können das Objekt einer Variablen zuweisen oder können Sie ihn in ein `With`... `End With` Block.  
+ Es gibt zwei Möglichkeiten, die Sie vermeiden können, wiederholen den Qualifizierungspfad. Sie können das Objekt einer Variablen zuweisen oder können Sie sie in einem `With`... `End With` Block.  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Einrichten des Zugriffs an ein stark qualifiziertes Objekt beschleunigen, indem Sie einer Variablen zuweisen  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Um den Zugriff auf ein stark qualifiziertes Objekt beschleunigen durch eine Variable zuweisen  
   
 1.  Deklarieren Sie eine Variable des Typs des Objekts, das Sie häufig zugreifen. Geben Sie den Qualifizierungspfad im Initialisierungsteil der Deklaration.  
   
@@ -36,15 +36,15 @@ Wenn Sie häufig auf ein Objekt, die einen Qualifizierungspfad mehrere Methoden 
     ctrlActv.Show()  
     ```  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Zugriff auf ein Objekt Qualifizierungspfad beschleunigen mithilfe ein With... End With-block  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Um den Zugriff auf ein stark qualifiziertes Objekt beschleunigen mithilfe einer With... End-With-block  
   
-1.  Geben Sie den Qualifizierungspfad einer `With` Anweisung.  
+1.  Fügen Sie den Qualifizierungspfad in einem `With` Anweisung.  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Zugriff auf Member des Objekts innerhalb der `With` -Block vor der `End With` Anweisung.  
+2.  Zugriff auf die Member des Objekts in der `With` blockieren, bevor die `End With` Anweisung.  
   
     ```  
         .Text = "Test"  
@@ -53,6 +53,6 @@ Wenn Sie häufig auf ein Objekt, die einen Qualifizierungspfad mehrere Methoden 
     End With  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [With...End With-Anweisung](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [With...End With-Anweisung](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

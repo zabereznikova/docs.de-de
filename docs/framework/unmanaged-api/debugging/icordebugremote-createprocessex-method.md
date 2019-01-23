@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06bdc3605d981acad68a97901627f361da4061c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521776"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx-Methode
 Startet einen Prozess auf einem Remotecomputer unter dem Debugger.  
@@ -48,43 +49,43 @@ HRESULT CreateProcessEx (
   
 #### <a name="parameters"></a>Parameter  
  `pRemoteTarget`  
- [in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Verwendet, um den Remotecomputer zu bestimmen, auf dem der Prozess gestartet wird.  
+ [in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Wird verwendet, um den Remotecomputer zu ermitteln, auf dem der Prozess gestartet wird.  
   
  `lpApplicationName`  
- [in] Ein Zeiger auf eine auf Null endende Zeichenfolge, die angibt, das Modul der gestartete Prozess ausgeführt werden soll. Das Modul wird im Sicherheitskontext des aufrufenden Prozesses ausgeführt.  
+ [in] Zeiger auf eine auf Null endende Zeichenfolge, die angibt, das Modul der gestartete Prozess ausgeführt werden soll. Das Modul wird im Kontext des aufrufenden Prozesses ausgeführt.  
   
  `lpCommandLine`  
- [in] Ein Zeiger auf eine auf Null endende Zeichenfolge, die angibt, die Befehlszeile der gestartete Prozess ausgeführt werden soll.  
+ [in] Zeiger auf eine auf Null endende Zeichenfolge, die angibt, die Befehlszeile der gestartete Prozess ausgeführt werden soll.  
   
  `lpProcessAttributes`  
- [in] Für das Remotedebuggen wird nicht verwendet werden.  
+ [in] Wenn Sie nicht für das Remotedebuggen verwendet.  
   
  `lpThreadAttributes`  
- [in] Für das Remotedebuggen wird nicht verwendet werden.  
+ [in] Wenn Sie nicht für das Remotedebuggen verwendet.  
   
  `bInheritHandles`  
- [in] Für das Remotedebuggen wird nicht verwendet werden.  
+ [in] Wenn Sie nicht für das Remotedebuggen verwendet.  
   
  `dwCreationFlags`  
- [in] Für das Remotedebuggen wird nicht verwendet werden.  
+ [in] Wenn Sie nicht für das Remotedebuggen verwendet.  
   
  `lpEnvironment`  
- [in] Ein Zeiger auf einen Umgebungsblock für den neuen Prozess.  
+ [in] Zeiger auf eine Umgebungsblock für den neuen Prozess.  
   
  `lpCurrentDirectory`  
- [in] Ein Zeiger auf eine auf Null endende Zeichenfolge, die den vollständigen Pfad zum aktuellen Verzeichnis für den Prozess angibt. Wenn dieser Parameter null ist, müssen der neue Prozess die gleichen aktuelle Laufwerk und Verzeichnis als der aufrufende Prozess.  
+ [in] Zeiger auf eine auf Null endende Zeichenfolge, die den vollständigen Pfad zum aktuellen Verzeichnis für den Prozess angibt. Wenn dieser Parameter null ist, wird der neue Prozess das gleiche aktuelle Laufwerk und Verzeichnis wie der aufrufende Prozess haben.  
   
  `lpStartupInfo`  
- [in] Für das Remotedebuggen wird nicht verwendet werden.  
+ [in] Wenn Sie nicht für das Remotedebuggen verwendet.  
   
  `lpProcessInformation`  
- [in] Für das Remotedebuggen wird nicht verwendet werden.  
+ [in] Wenn Sie nicht für das Remotedebuggen verwendet.  
   
  `debuggingFlags`  
- [in] Für das Remotedebuggen wird nicht verwendet werden.  
+ [in] Wenn Sie nicht für das Remotedebuggen verwendet.  
   
  `ppProcess`  
- [out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugProcess-Schnittstelle", das den Prozess darstellt.  
+ [out] Ein Zeiger auf die Adresse ein "ICorDebugProcess-Schnittstelle"-Objekt, das den Prozess darstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
@@ -94,10 +95,10 @@ HRESULT CreateProcessEx (
  Starten Sie den Prozess auf dem Remotecomputer und Zurückgeben von "ICorDebugProcess-Schnittstelle" für das Debuggen nicht möglich.  
   
 ## <a name="remarks"></a>Hinweise  
- Debuggen im gemischten Modus ist in Silverlight nicht unterstützt.  
+ Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl  
   
@@ -105,8 +106,8 @@ HRESULT CreateProcessEx (
   
  **.NET Framework-Versionen:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugRemote-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugRemote-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

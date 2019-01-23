@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 326f970f53293b74bbf8c5e77830f3f6ce1b73ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519683"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap-Methode
-Ruft ein benutzerdefiniertes Attribut anhand seines Namens ab. Im Gegensatz zu benutzerdefinierten Metadatenattributen werden diese Attribute im Symbolspeicher gespeichert.  
+Ruft ein benutzerdefiniertes Attribut anhand seines Namens ab. Im Gegensatz zu benutzerdefinierten Metadatenattribute werden diese Attribute im Symbolspeicher gespeichert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ HRESULT GetSymAttributePreRemap(
  [in] Ein `ULONG32` , der angibt, dass der Größe des der `buffer` Array.  
   
  `pcBuffer`  
- [out] Ein Zeiger auf eine `ULONG32` , die die Größe des Puffers erforderlich, um die Attributdaten empfängt.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Attribut-Bytes enthalten.  
   
  `buffer`  
  [out] Ein Zeiger auf den Puffer, der die Attributdaten empfängt.  
@@ -61,5 +61,5 @@ HRESULT GetSymAttributePreRemap(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReader2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReader2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

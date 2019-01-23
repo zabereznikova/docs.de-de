@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: ced65795c66ab7c3b7eb6c25b225ec551c3969ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00e983c907c0376b45d2342f393569d045cbf98b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517733"
 ---
 # <a name="documents-in-wpf"></a>Dokumente in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine große Auswahl an Dokumentfunktionen zum Erstellen von Inhalten mit hoher Wiedergabetreue, auf die im Vergleich zu früheren Generationen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] leichter zugegriffen werden kann und die auch leichter zu lesen sind. Neben erweiterten Funktionen und verbesserter Qualität bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auch integrierte Dienste für Dokumentanzeige, Packen und Sicherheit. Dieses Thema enthält eine Einführung zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Dokumenttypen und dem Packen von Dokumenten.  
@@ -31,34 +31,34 @@ ms.locfileid: "33548432"
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>Dokumentsteuerelemente und Textlayout  
- .NET Framework bietet eine Reihe von vorgefertigten Steuerelementen, die mithilfe von fixierter Dokumente, Flow-Dokumente und allgemeiner Text innerhalb der Anwendung vereinfachen.  Die Anzeige von festen Dokumentinhalt wird unterstützt, mit der <xref:System.Windows.Controls.DocumentViewer> Steuerelement.  Anzeige des Dokumentinhalts Ablauf wird von drei verschiedene Steuerelemente unterstützt: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, und <xref:System.Windows.Controls.FlowDocumentScrollViewer> dem zuordnen anderer Benutzer-Szenarien (siehe unten).  Weitere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente bieten ein vereinfachtes Layout zur Unterstützung von allgemeinem Text (siehe hierzu [Text in der Benutzeroberfläche](#text_in_the_user_interface) weiter unten).  
+ .NET Framework bietet eine Reihe von vorgefertigten Steuerelementen, die mithilfe von fixierten Dokumenten, Flussdokumenten und allgemeinen Text in Ihrer Anwendung zu vereinfachen.  Das Anzeigen des Inhalts von fixierten Dokuments wird unterstützt, mit der <xref:System.Windows.Controls.DocumentViewer> Steuerelement.  Anzeigen von Flussdokumentinhalten wird von drei unterschiedlichen Steuerelementen unterstützt: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, und <xref:System.Windows.Controls.FlowDocumentScrollViewer> zugeordnet sind verschiedene Szenarien (siehe unten).  Weitere [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente bieten ein vereinfachtes Layout zur Unterstützung von allgemeinem Text (siehe hierzu [Text in der Benutzeroberfläche](#text_in_the_user_interface) weiter unten).  
   
 ### <a name="fixed-document-control---documentviewer"></a>Steuerelement für fixierte Dokumente – DocumentViewer  
- Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement entwurfsbedingt an <xref:System.Windows.Documents.FixedDocument> Inhalt. Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement stellt eine intuitive Benutzeroberfläche, die integrierte Unterstützung ermöglicht eine für allgemeine Vorgänge, einschließlich Druckausgabe, kopieren, Zwischenablage, Zoom und Funktionen der Volltextsuche. Das Steuerelement ermöglicht den Zugriff auf Seiteninhalte über einen vertrauten Bildlaufmechanismus. Wie alle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente <xref:System.Windows.Controls.DocumentViewer> unterstützt vollständigen oder partiellen Zuweisen neuer Stile, wodurch das Steuerelement visuell in praktisch jeder Anwendung oder Umgebung integriert werden.  
+ Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement dient zur Anzeige <xref:System.Windows.Documents.FixedDocument> Inhalt. Die <xref:System.Windows.Controls.DocumentViewer> Steuerelement bietet eine intuitive Benutzeroberfläche, die integrierten Unterstützung allgemeiner Vorgänge, einschließlich der Druckausgabe, kopieren Sie in die Zwischenablage, Zoom und textsuchfunktionen bereitstellt. Das Steuerelement ermöglicht den Zugriff auf Seiteninhalte über einen vertrauten Bildlaufmechanismus. Wie alle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente <xref:System.Windows.Controls.DocumentViewer> unterstützt vollständige oder teilweise Umformatierung, wodurch das Steuerelement visuell in nahezu jede Anwendung oder Umgebung integriert werden.  
   
- <xref:System.Windows.Controls.DocumentViewer> Dient zum Anzeigen von Inhalt in einem schreibgeschützten Modus. Bearbeitung oder Änderung des Inhalts ist nicht verfügbar und wird nicht unterstützt.  
+ <xref:System.Windows.Controls.DocumentViewer> Dient zum Inhalt in einem schreibgeschützten Modus anzuzeigen. Bearbeiten und Ändern von Inhalt ist nicht verfügbar und wird nicht unterstützt.  
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>Steuerelemente für Flussdokumente  
- **Hinweis:** Ausführlichere Informationen zu den Funktionen von Flussdokumenten und ihrer Erstellung finden Sie unter [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ **Hinweis**: Ausführlichere Informationen zu den Features von und zu deren Erstellung finden Sie unter [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
- Anzeige des Dokumentinhalts Ablauf wird von drei Steuerelemente unterstützt: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, und <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+ Anzeige von Flussdokumentinhalten wird von drei Steuerelemente unterstützt: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, und <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> enthält Funktionen, mit die den Benutzer dynamisch auswählen verschiedener Anzeigemodi, einschließlich eines Einzelseiten (Seite-an-a-Time)-Anzeigemodus, eine zwei-Seite-an-a-Time (Buchformat lesen) anzeigen, Modus und einem fortlaufenden Bildlaufmodus (Unbeschränkte) anzeigen können.  Weitere Informationen zu diesen Anzeigemodi, finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Wenn Sie nicht benötigen, können dynamisch Wechseln zwischen unterschiedlichen Anzeigemodi <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> bieten helleren fortlaufenden Inhalt-Viewer, die in einem bestimmten Anzeigemodus behoben werden.  
+ <xref:System.Windows.Controls.FlowDocumentReader> enthält Features, mit die den Benutzer dynamisch zwischen verschiedenen Anzeigemodi, einschließlich einen Single-Page (Seite-an-a-Time)-Anzeigemodus, eine zwei-Seite-an-a-Time (Buch lesen Format) anzeigen, Modus und einen fortlaufenden Bildlaufmodus anzeigen (buchleseformat) von auswählen können.  Weitere Informationen zu diesen Anzeigemodi finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Wenn Sie nicht die Fähigkeit zum dynamischen Wechsel zwischen verschiedenen Anzeigemodi benötigen <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> bieten schlankere Flow Content-Viewer, die in einem bestimmten Anzeigemodus behoben werden.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer und FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer> Zeigt den Inhalt im Seite-an-Time Anzeigemodus, while <xref:System.Windows.Controls.FlowDocumentScrollViewer> zeigt den Inhalt im fortlaufenden Modus aus durchführen eines Bildlaufs.  Beide <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> werden so repariert, einen bestimmten Anzeigemodus. Im Vergleich mit <xref:System.Windows.Controls.FlowDocumentReader>, inklusive der Funktionen, die dem Benutzer ermöglichen, die dynamisch zwischen verschiedenen Anzeigemodi auswählen (gemäß der <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> Enumeration), aber weitere ressourcenintensiv als <xref:System.Windows.Controls.FlowDocumentPageViewer> oder <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> Zeigt den Inhalt im Seite-an-a-Time Anzeigemodus, while <xref:System.Windows.Controls.FlowDocumentScrollViewer> zeigt den Inhalt im fortlaufenden Bildlaufmodus.  Beide <xref:System.Windows.Controls.FlowDocumentPageViewer> und <xref:System.Windows.Controls.FlowDocumentScrollViewer> wurden korrigiert, um einen bestimmten Anzeigemodus festgelegt. Vergleichen mit <xref:System.Windows.Controls.FlowDocumentReader>, darunter Features, die der Benutzer dynamisch zwischen verschiedenen Anzeigemodi wählen können (gemäß der <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> Enumeration), dabei jedoch weitere ressourcenintensiv als <xref:System.Windows.Controls.FlowDocumentPageViewer> oder <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
- Eine vertikale Scrollleiste wird standardmäßig immer angezeigt, eine horizontale Scrollleiste nur nach Bedarf. Die Standardeinstellung [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für <xref:System.Windows.Controls.FlowDocumentScrollViewer> enthält keine Symbolleiste, aber die <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> Eigenschaft kann verwendet werden, um eine integrierte Symbolleiste aktivieren.  
+ Eine vertikale Scrollleiste wird standardmäßig immer angezeigt, eine horizontale Scrollleiste nur nach Bedarf. Der Standardwert [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für <xref:System.Windows.Controls.FlowDocumentScrollViewer> enthält keine Symbolleiste, aber die <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> Eigenschaft kann verwendet werden, um eine integrierte Symbolleiste aktiviert.  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Text in der Benutzeroberfläche  
- Text kann nicht nur Dokumenten hinzugefügt werden, sondern wird auch in Benutzeroberflächen von Anwendungen, wie z.B. Formularen, verwendet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente zum Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> -Element sollte verwendet werden, wenn begrenzte-Text-Unterstützung erforderlich sind, z. B. eine kurze Satzes im wird eine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn wenig Text-Unterstützung erforderlich ist. Weitere Informationen finden Sie unter [Übersicht über TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md).  
+ Text kann nicht nur Dokumenten hinzugefügt werden, sondern wird auch in Benutzeroberflächen von Anwendungen, wie z.B. Formularen, verwendet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente zum Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> Element sollte verwendet werden, wenn nur eingeschränkte Textelemente-Unterstützung erforderlich ist, z. B. einem kurzen Satz in einem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Übersicht über TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Packen von Dokumenten  
- Die <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bieten eine effiziente Möglichkeit zum Organisieren von Anwendungsdaten, Inhalt des Dokuments und zugehörige Ressourcen in einem einzelnen Container, die einfach zugegriffen, portable und leicht zu verteilen ist. Eine ZIP-Datei ist ein Beispiel für eine <xref:System.IO.Packaging.Package> Typ, der mehrere Objekte als einzelne Einheit enthalten kann. Die Verpackung [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bieten eine standardmäßige <xref:System.IO.Packaging.ZipPackage> Implementierung, die einen Open Packaging Conventions-Standard mit XML und ZIP-Datei-Architektur verwendet. Mit den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zum Packen von Dokumenten lassen sich leicht Pakete erstellen, in denen Objekte gespeichert werden und wieder leicht darauf zugegriffen werden kann. Ein Objekt in einem <xref:System.IO.Packaging.Package> wird als bezeichnet eine <xref:System.IO.Packaging.PackagePart> ("Teil"). Pakete können auch signierte digitale Zertifikate enthalten, mit denen der Ersteller eines Parts identifiziert und der Inhalt eines Pakets auf Änderungen überprüft werden kann.  Pakete enthalten außerdem eine <xref:System.IO.Packaging.PackageRelationship> -Funktion, die zusätzliche Informationen zu einem Paket hinzugefügt werden oder bestimmte Teile zugeordnet sind, ohne den Inhalt der vorhandenen Teile ändern zu kann.  Paketdienste unterstützen außerdem [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)].  
+ Die <xref:System.IO.Packaging> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bieten eine effiziente Möglichkeit zum Organisieren von Anwendungsdaten, Dokumentinhalten und verwandten Ressourcen in einem einzelnen Container, die einfach zugegriffen werden, portable und leicht zu verteilen ist. Eine ZIP-Datei ist ein Beispiel für eine <xref:System.IO.Packaging.Package> Typ, der mehrere Objekte als einzelne Einheit. Das Verpacken [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bieten den Standardwert <xref:System.IO.Packaging.ZipPackage> -Implementierung zur Verwendung einer Open Packaging Conventions-Standards mit XML- und ZIP-Dateiarchitektur. Mit den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] zum Packen von Dokumenten lassen sich leicht Pakete erstellen, in denen Objekte gespeichert werden und wieder leicht darauf zugegriffen werden kann. Ein Objekt, gespeichert einer <xref:System.IO.Packaging.Package> wird als bezeichnet eine <xref:System.IO.Packaging.PackagePart> ("Part"). Pakete können auch signierte digitale Zertifikate enthalten, mit denen der Ersteller eines Parts identifiziert und der Inhalt eines Pakets auf Änderungen überprüft werden kann.  Pakete enthalten außerdem eine <xref:System.IO.Packaging.PackageRelationship> -Feature, das zusätzliche Informationen zu einem Paket hinzugefügt werden, oder bestimmte Teile zugeordnet sind, ohne den Inhalt vorhandener Parts ändern zu kann.  Paketdienste unterstützen außerdem [!INCLUDE[TLA#tla_rm](../../../../includes/tlasharptla-rm-md.md)].  
   
  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Paketarchitektur dient als Grundlage für eine Vielzahl von wichtigen Technologien:  
   
@@ -68,13 +68,13 @@ ms.locfileid: "33548432"
   
 -   Benutzerdefinierte Speicherformate für eigene Anwendungsentwürfe  
   
- Basierend auf der Verpackung APIs, ein <xref:System.Windows.Xps.Packaging.XpsDocument> ist speziell für das Speichern von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Content Dokumente behoben. Ein <xref:System.Windows.Xps.Packaging.XpsDocument> ist ein eigenständiges Dokument, das in einem Viewer, angezeigt geöffnet werden kann ein <xref:System.Windows.Controls.DocumentViewer> -Steuerelement, an einen Druckerspooler weitergeleitet oder Ausgabe direkt an eine [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-kompatiblen Drucker.  
+ Basierend auf die Paket-APIs, einer <xref:System.Windows.Xps.Packaging.XpsDocument> wurde speziell für die Speicherung von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Content Dokumente behoben. Ein <xref:System.Windows.Xps.Packaging.XpsDocument> ist ein eigenständiges Dokument, die in einem Viewer, angezeigt geöffnet werden, kann eine <xref:System.Windows.Controls.DocumentViewer> -Steuerelement, an einen Druckerspooler weitergeleitet oder Ausgabe direkt an ein [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]--kompatiblen Drucker.  
   
- Die folgenden Abschnitte enthalten zusätzliche Informationen für die <xref:System.IO.Packaging.Package> und <xref:System.Windows.Xps.Packaging.XpsDocument> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] Lieferumfang [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Die folgenden Abschnitte enthalten zusätzliche Informationen für die <xref:System.IO.Packaging.Package> und <xref:System.Windows.Xps.Packaging.XpsDocument> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] mit bereitgestellten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>Paketkomponenten  
- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-APIs zum Packen von Dokumenten ermöglichen die Organisation von Anwendungsdaten und Dokumenten in einer einzigen portablen Einheit. Die ZIP-Datei ist einer der am häufigsten verwendeten Pakettypen und stellt auch den Standardpakettyp in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dar.  <xref:System.IO.Packaging.Package> selbst ist eine abstrakte Klasse, von der <xref:System.IO.Packaging.ZipPackage> mithilfe einer offenen standard XML und ZIP-Dateiarchitektur implementiert wird.  Die <xref:System.IO.Packaging.Package.Open%2A> -Methode verwendet <xref:System.IO.Packaging.ZipPackage> erstellen und Verwenden von ZIP-Dateien standardmäßig. Ein Paket kann drei grundlegende Arten von Elementen enthalten:  
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-APIs zum Packen von Dokumenten ermöglichen die Organisation von Anwendungsdaten und Dokumenten in einer einzigen portablen Einheit. Die ZIP-Datei ist einer der am häufigsten verwendeten Pakettypen und stellt auch den Standardpakettyp in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dar.  <xref:System.IO.Packaging.Package> selbst ist eine abstrakte Klasse, von dem <xref:System.IO.Packaging.ZipPackage> wird mithilfe einer offenen standard XML- und ZIP-Dateiarchitektur implementiert.  Die <xref:System.IO.Packaging.Package.Open%2A> -Methode verwendet <xref:System.IO.Packaging.ZipPackage> erstellen und Verwenden von ZIP-Dateien standardmäßig. Ein Paket kann drei grundlegende Arten von Elementen enthalten:  
   
 |||  
 |-|-|  
@@ -84,11 +84,11 @@ ms.locfileid: "33548432"
   
 <a name="PackageParts"></a>   
 #### <a name="packageparts"></a>PackageParts  
- Ein <xref:System.IO.Packaging.PackagePart> ("Teil") ist eine abstrakte Klasse, die auf ein Objekt in einem <xref:System.IO.Packaging.Package>. In einer ZIP-Datei entsprechen die Parts den einzelnen in der ZIP-Datei gespeicherten Dateien.  <xref:System.IO.Packaging.ZipPackagePart> Stellt die Standardimplementierung für serialisierbare Objekte gespeichert werden, einem <xref:System.IO.Packaging.ZipPackage>.  Wie in einem Dateisystem werden die im Paket enthaltenen Parts als hierarchisches Verzeichnis oder als Ordnerstruktur gespeichert.  Mithilfe der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Verpacken APIs, Anwendungen, speichern, lesen und schreiben können mehrere <xref:System.IO.Packaging.PackagePart> -Objekte mit einem einzelnen Container der ZIP-Datei.  
+ Ein <xref:System.IO.Packaging.PackagePart> ("Part") ist eine abstrakte Klasse, die auf ein in gespeichertes Objekt verweist eine <xref:System.IO.Packaging.Package>. In einer ZIP-Datei entsprechen die Parts den einzelnen in der ZIP-Datei gespeicherten Dateien.  <xref:System.IO.Packaging.ZipPackagePart> Stellt die Standardimplementierung für serialisierbare Objekte, die in gespeicherten eine <xref:System.IO.Packaging.ZipPackage>.  Wie in einem Dateisystem werden die im Paket enthaltenen Parts als hierarchisches Verzeichnis oder als Ordnerstruktur gespeichert.  Mithilfe der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -APIs zum Packen, Anwendungen, zu speichern, lesen und schreiben können mehrere <xref:System.IO.Packaging.PackagePart> -Objekte mit einem einzelnen Container der ZIP-Datei.  
   
 <a name="PackageDigitalSignatures"></a>   
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
- Aus Sicherheitsgründen eine <xref:System.IO.Packaging.PackageDigitalSignature> ("digitale Signatur") kann Teile in einem Paket zugeordnet werden. Ein <xref:System.IO.Packaging.PackageDigitalSignature> [509] enthält, die zwei Funktionen bereitstellt:  
+ Aus Sicherheitsgründen eine <xref:System.IO.Packaging.PackageDigitalSignature> ("digitale Signatur") kann in der Teile in einem Paket zugeordnet werden. Ein <xref:System.IO.Packaging.PackageDigitalSignature> beinhaltet ein [509], die stellt zwei Funktionen bereit:  
   
 1.  Identifizieren und Authentifizieren des Erstellers eines Parts  
   
@@ -98,7 +98,7 @@ ms.locfileid: "33548432"
   
 <a name="PackageRelationships"></a>   
 #### <a name="packagerelationships"></a>PackageRelationships  
- Ein <xref:System.IO.Packaging.PackageRelationship> ("Beziehung") bietet einen Mechanismus zum Zuordnen von zusätzlichen Informationen zum Paket oder ein Teil innerhalb des Pakets. Eine Beziehung ist eine Funktion auf Paketebene, die einem Part zusätzliche Informationen zuordnen kann, ohne den Inhalt des Parts selbst zu ändern. Das direkte Einfügen von neuen Daten in den Inhalt des Parts ist in den meisten Fällen nicht praktisch:  
+ Ein <xref:System.IO.Packaging.PackageRelationship> ("Beziehung") bietet einen Mechanismus zum Zuordnen von zusätzlichen Informationen zum Paket oder ein Teil im Paket. Eine Beziehung ist eine Funktion auf Paketebene, die einem Part zusätzliche Informationen zuordnen kann, ohne den Inhalt des Parts selbst zu ändern. Das direkte Einfügen von neuen Daten in den Inhalt des Parts ist in den meisten Fällen nicht praktisch:  
   
 -   Der tatsächliche Typ des Parts und dessen Inhaltsschema sind nicht bekannt.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "33548432"
   
 2.  Definieren von Informationsbeziehungen, durch die Hinweise oder andere Daten zum Part hinzugefügt werden  
   
- Ein <xref:System.IO.Packaging.PackageRelationship> bietet eine schnelle, sichtbaren Möglichkeit zum Definieren der Abhängigkeiten und andere Informationen, die einen Teil des Pakets oder das Paket als Ganzes zugeordnete hinzufügen.  
+ Ein <xref:System.IO.Packaging.PackageRelationship> bietet eine schnelle und sichtbare Möglichkeit zum Definieren der Abhängigkeiten und Hinzufügen von weiteren Informationen, die einem Part des Pakets oder das Paket als Ganzes.  
   
 <a name="Dependency_Relationships"></a>   
 ##### <a name="dependency-relationships"></a>Abhängigkeitsbeziehungen  
@@ -120,11 +120,11 @@ ms.locfileid: "33548432"
   
 <a name="Information_Relationships"></a>   
 ##### <a name="information-relationships"></a>Informationsbeziehungen  
- Eine Notiz oder eine Anmerkung, ähnlich wie eine <xref:System.IO.Packaging.PackageRelationship> kann auch verwendet werden, um andere Arten von Informationen zu einem Teil zugeordnet werden, ohne tatsächlich den Inhalt des Textteils selbst ändern zu speichern.  
+ Bei einem Hinweis oder die Anmerkung, ähnlich wie eine <xref:System.IO.Packaging.PackageRelationship> kann auch verwendet werden, um andere Arten von Informationen zu einem Teil zugeordnet werden, ohne tatsächlich den Inhalt des Parts selbst ändern zu speichern.  
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS-Dokumente  
- Ein [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dokument ist ein Paket mit einem oder mehreren fixierten Dokumenten sowie allen zum Rendern notwendigen Ressourcen und Informationen.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ist außerdem das native [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]-Druckerspooler-Dateiformat.  Ein <xref:System.Windows.Xps.Packaging.XpsDocument> in standard-ZIP-Dataset gespeichert und kann eine Kombination von XML- und binären Komponenten, z. B. Bild-und Schriftart enthalten. [PackageRelationships](#PackageRelationships) werden zum Definieren der Abhängigkeiten zwischen Inhalt und Ressourcen verwendet, die zum vollständigen Rendern eines Dokuments erforderlich sind.  Die <xref:System.Windows.Xps.Packaging.XpsDocument> Entwurf bietet eine einzelne, hochwertige Dokument-Lösung, die mehrmalige Verwendung unterstützt:  
+ Ein [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dokument ist ein Paket mit einem oder mehreren fixierten Dokumenten sowie allen zum Rendern notwendigen Ressourcen und Informationen.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ist außerdem das native [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]-Druckerspooler-Dateiformat.  Ein <xref:System.Windows.Xps.Packaging.XpsDocument> ist im standard-ZIP-Dataset gespeichert und kann eine Kombination aus XML- und binären Komponenten, z. B. Bild-und Schriftartdateien enthalten. [PackageRelationships](#PackageRelationships) werden zum Definieren der Abhängigkeiten zwischen Inhalt und Ressourcen verwendet, die zum vollständigen Rendern eines Dokuments erforderlich sind.  Die <xref:System.Windows.Xps.Packaging.XpsDocument> Entwurf bietet eine einzelne, High-Fidelity-Document-Projektmappe, die zahlreiche Verwendungen unterstützt:  
   
 -   Lesen, Schreiben und Speichern der Inhalte und Ressourcen von fixierten Dokumenten als eine einzelne, portable und leicht zu verteilende Datei  
   
@@ -134,15 +134,15 @@ ms.locfileid: "33548432"
   
 -   Direktes Weiterleiten von Dokumenten an einen [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-kompatiblen Drucker  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Documents.FixedDocument>  
- <xref:System.Windows.Documents.FlowDocument>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- <xref:System.IO.Packaging.ZipPackage>  
- <xref:System.IO.Packaging.ZipPackagePart>  
- <xref:System.IO.Packaging.PackageRelationship>  
- <xref:System.Windows.Controls.DocumentViewer>  
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Serialisierung und Speicherung von Dokumenten](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Documents.FixedDocument>
+- <xref:System.Windows.Documents.FlowDocument>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- <xref:System.IO.Packaging.ZipPackage>
+- <xref:System.IO.Packaging.ZipPackagePart>
+- <xref:System.IO.Packaging.PackageRelationship>
+- <xref:System.Windows.Controls.DocumentViewer>
+- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Serialisierung und Speicherung von Dokumenten](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)

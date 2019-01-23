@@ -2,12 +2,12 @@
 title: Entity SQL-Referenz
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 75f9c61a24ffdcba890ae04ccc5c656460c13088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522153"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL-Referenz
 
@@ -65,7 +65,7 @@ Logische Operatoren testen den Wahrheitswert einer Bedingung. Der CASE-Ausdruck 
 |--------------|-----------------|
 |[& & (Logisches AND)](and-entity-sql.md)|Logisches AND.|
 |[\! (Logisches NOT)](not-entity-sql.md)|Logisches 'NOT'|
-|[&#124;&#124;(Logisches OR)](or-entity-sql.md)|Logisches OR.|
+|[&#124;&#124; (Logical OR)](or-entity-sql.md)|Logisches OR.|
 |[CASE](case-entity-sql.md)|Wertet eine Reihe von booleschen Ausdrücken aus, um das Ergebnis zu bestimmen.|
 |[THEN](then-entity-sql.md)|Das Ergebnis einer [beim](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) -Klausel, wenn er auf "true" ausgewertet wird.|
 
@@ -122,7 +122,7 @@ Entity SQL stellt Operationen, mit denen der Typ eines Ausdrucks (Werts) erstell
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|Konvertiert einen Ausdruck von einem Datentyp in einen anderen.|
 |[COLLECTION](collection-entity-sql.md)|Verwendet eine [Funktion](function-entity-sql.md) Vorgang um eine Auflistung von Entitätstypen oder komplexen Typen zu deklarieren.|
-|[IST \[NICHT\] OF](isof-entity-sql.md)|Ermittelt, ob der Typ eines Ausdrucks vom angegebenen Typ oder einem seiner Untertypen ist.|
+|[IS \[NOT\] OF](isof-entity-sql.md)|Ermittelt, ob der Typ eines Ausdrucks vom angegebenen Typ oder einem seiner Untertypen ist.|
 |[OFTYPE](oftype-entity-sql.md)|Gibt eine Auflistung der Objekte von einem Abfrageausdruck eines bestimmten Typs zurück.|
 |[Konstruktoren benannter Typen](named-type-constructor-entity-sql.md)|Wird verwendet, um Instanzen von Entitätstypen oder komplexen Typen zu erstellen.|
 |[MULTISET](multiset-entity-sql.md)|Erstellt eine Instanz einer Multimenge aus einer Liste von Werten.|
@@ -136,10 +136,10 @@ Die folgende Tabelle enthält die anderen Entity SQL-Operatoren:
 |Operator|Mit|
 |--------------|---------|
 |[+ (Zeichenfolgenverkettung)](string-concatenation-entity-sql.md)|Zum Verketten von Zeichenfolgen in Entity SQL verwendet.|
-|[ (Memberzugriff)](member-access-entity-sql.md)|Wird verwendet, um auf den Wert einer Eigenschaft oder eines Feld einer Instanz des strukturellen konzeptionellen Modelltyps zuzugreifen.|
+|[. (Memberzugriff)](member-access-entity-sql.md)|Wird verwendet, um auf den Wert einer Eigenschaft oder eines Feld einer Instanz des strukturellen konzeptionellen Modelltyps zuzugreifen.|
 |[-- (Kommentar)](comment-entity-sql.md)|Entity SQL-Kommentare einschließen.|
 |[FUNCTION](function-entity-sql.md)|Definiert eine Inlinefunktion, die in einer Entity SQL-Abfrage ausgeführt werden kann.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Entity SQL Language (Entity SQL-Sprache)](entity-sql-language.md)
+- [Entity SQL Language (Entity SQL-Sprache)](entity-sql-language.md)

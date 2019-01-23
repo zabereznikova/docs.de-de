@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 557e3607443066a863946ff08958197a14662a88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519377"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Visual Basic-Funktionen, die LINQ unterstützen
 Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich auf die Technologie in Visual Basic unterstützt query Syntax und andere Sprachkonstrukte direkt in der Sprache. Mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], Sie müssen nicht zum Abfragen einer externen Datenquelle eine neue Sprache lernen. Sie können für Daten in relationalen Datenbanken, XML-Speicher oder Objekten Abfragen, mit Visual Basic. Diese Integration der Abfragefunktionen in der Sprache ermöglicht die Überprüfung auf Syntaxfehler und typsicherheit. Diese Integration wird sichergestellt, dass Sie bereits die meisten Was müssen wissen Sie wissen, umfangreiche und verschiedene Abfragen in Visual Basic schreiben.  
@@ -44,7 +44,7 @@ Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich au
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
- Weitere Informationen finden Sie unter [Objektinitialisierer: benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+ Weitere Informationen finden Sie unter [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="anonymous-types"></a>Anonyme Typen  
  Anonyme Typen bieten eine bequeme Möglichkeit, einen Satz von Eigenschaften vorübergehend in ein Element zu gruppieren, die in einem Abfrageergebnis enthalten sein sollen. Dadurch können Sie eine beliebige Kombination der verfügbaren Felder in der Abfrage in beliebiger Reihenfolge auswählen, ohne die Definition eines benannten Datentyps für das Element.  
@@ -93,9 +93,9 @@ Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich au
   
  Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

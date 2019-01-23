@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3478364a415b145bed879cda5cc5c41cf22254c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1cb6e12e7badff9bcd00196f50bf1291df630122
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500183"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum-Schnittstelle
-Stellt Methoden für die nacheinander durchlaufen einer Auflistung der fixierten Objekte, die generiert werden, indem Sie die [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+Stellt Methoden für die nacheinander durchlaufen einer Auflistung von fixierten Objekten, die vom generierten der [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[Clone-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-clone-method.md)|Ruft einen Schnittstellenzeiger auf eine Kopie dieser `ICorProfilerObjectEnum`-Schnittstelle ab.|  
-|[GetCount-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-getcount-method.md)|Ruft die Gesamtzahl der fixierten Objekte in der Auflistung ab.|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-next-method.md)|Ruft die angegebene Anzahl zusammenhängender Objekte aus einer sequenziellen Auflistung von Objekten, beginnend bei der aktuellen Position des Enumerators, in der Sequenz ab.|  
+|[GetCount-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-getcount-method.md)|Ruft die Gesamtanzahl von fixierten Objekten in der Auflistung ab.|  
+|[Next-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-next-method.md)|Ruft die angegebene Anzahl zusammenhängender Objekte aus einer sequenziellen Auflistung von Objekten, beginnend ab der Position des Enumerators aktuelle in der Sequenz ab.|  
 |[Reset-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-reset-method.md)|Verschiebt Cursor des Enumerators an die Anfangsposition der Sequenz.|  
-|[Skip-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-skip-method.md)|Setzt den Cursor über dieser Enumerator aus seiner aktuellen Position an, damit, dass die angegebene Anzahl von Elementen übersprungen wird.|  
+|[Skip-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-skip-method.md)|Setzt den Cursor über dieser Enumerator aus seiner aktuellen Position an, damit an, dass die angegebene Anzahl von Elementen übersprungen wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICorProfilerObjectEnum`-Schnittstelle ist ein Enumerator. Hiermit kann der Empfänger eines Arrays mit einer Rate, die für den Empfänger geeignet ist, Elemente vom Absender abrufen. Anders ausgedrückt, ist der Empfänger kann explizit den Fluss der Arrayelemente steuern und Probleme im Zusammenhang mit der Übergabe großer Arrays als Methodenparameter vermeiden.  
+ Die `ICorProfilerObjectEnum`-Schnittstelle ist ein Enumerator. Hiermit kann der Empfänger eines Arrays mit einer Rate, die für den Empfänger geeignet ist, Elemente vom Absender abrufen. Das heißt, kann der Empfänger explizit den Fluss der Arrayelemente steuern und die Probleme im Zusammenhang mit der Übergabe großer Arrays als Methodenparameter vermieden werden.  
   
- Verwendung [ICorProfilerInfo2:: EnumModuleFrozenObjects](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md) um einen Zeiger auf die `ICorProfilerObjectEnum` Schnittstelle.  
+ Verwendung [ICorProfilerInfo2:: EnumModuleFrozenObjects](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md) einen Zeiger zum Abrufen der `ICorProfilerObjectEnum` Schnittstelle.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -50,6 +50,6 @@ Stellt Methoden für die nacheinander durchlaufen einer Auflistung der fixierten
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [EnumModuleFrozenObjects-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [EnumModuleFrozenObjects-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)

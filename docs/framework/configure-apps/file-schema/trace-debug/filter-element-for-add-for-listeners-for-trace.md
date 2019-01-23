@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: be4f3dcce1a746b287e75e0e6d3ba6eaa1d9b57b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 85d81beead84be48730ba3a4469e8efdff1bbb0b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523690"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;Filter&gt; -Element für &lt;hinzufügen&gt; für &lt;Listener&gt; für &lt;Ablaufverfolgung&gt;
 Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablaufverfolgung.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<Ablaufverfolgung >  
-\<Listener >  
+\<system.diagnostics>  
+\<trace>  
+\<listeners>  
 \<add>  
-\<Filter >  
+\<filter>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,9 +83,9 @@ Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablau
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.TraceFilter>  
- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.TraceFilter>
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

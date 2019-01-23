@@ -3,19 +3,19 @@ title: '&lt;wsFederation&gt;'
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 66596bbc7171a33318b835a552b7fb364d6833f7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: fced46560263a030430c04bd550c9ad66f2e1972
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521896"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
   
-\<system.identityModel.services >  
-\<FederationConfiguration >  
-\<WsFederation >  
+\<system.identityModel.services>  
+\<federationConfiguration>  
+\<wsFederation>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.WSFed
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |authenticationType|Ein URI, der den Authentifizierungstyp angibt. Legt den Wauth-Parameters von WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge und gibt an, dass es sich bei der Wauth-Parameter nicht in der Anforderung enthalten ist.|  
-|Aktualität|Der gewünschte Höchstalter für authentifizierungsanforderungen in Minuten. Legt den Wfresh-Parameter in WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist 0. Dies ist optional. **Warnung:** In der nächsten Version von .NET Framework 4.5, den `freshness` Attributs werden vom Typ `xs:string` und seinen Standardwert `null`.|  
+|Aktualität|Der gewünschte Höchstalter für authentifizierungsanforderungen in Minuten. Legt den Wfresh-Parameter in WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist 0. Dies ist optional. **Warnung:**  In der nächsten Version von .NET Framework 4.5 den `freshness` Attributs werden vom Typ `xs:string` und seinen Standardwert `null`.|  
 |homeRealm|Den Startbereich des Identitätsanbieters (IP) für die Authentifizierung verwenden. Legt den Whr-Parameter in WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge und gibt an, dass es sich bei der Whr-Parameter nicht in der Anforderung enthalten ist.|  
 |issuer|Der URI des den beabsichtigten Aussteller des Tokens. Legt das base URL des WS-Verbund-anmeldeanforderungen und abmeldeanforderungen erforderlich sind.|  
 |persistentCookiesOnPassiveRedirects|Gibt an, ob permanente Cookies auf Authentifizierung ausgegeben werden. Dies ist optional. Der Standardwert ist "false", Cookies werden nicht ausgegeben.|  
@@ -63,12 +63,12 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.WSFed
 |requestPtr|Eine URL, der den Speicherort der tokenausstellungsanforderungen angibt. Legt den Wreqptr-Parameter fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge und gibt an, dass es sich bei der Wreqptr-Parameter nicht in der Anforderung enthalten ist. Einschließlich nicht den Wreq oder den Wreqptr-Parameter in der Anforderung impliziert, dass der STS weiß, welche Art von Token ausstellen.|  
 |requireHttps|Gibt an, ob die Kommunikation mit dem Sicherheitstokendienst (STS), HTTPS-Protokoll verwenden muss. Dies ist optional. Der Standardwert ist "true", muss HTTPS verwendet werden.|  
 |Ressource|Ein URI, der die Ressource zugegriffen wird, wird die vertrauende Seite (RP) identifiziert, zu der an den Sicherheitstokendienst (STS). Dies ist optional. Legt den Wres-Parameter in WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge und gibt an, dass es sich bei der Wres-Parameter nicht in der Anforderung enthalten ist. **Hinweis:** Wres ist ein legacy-Parameter. Geben Sie die `realm` Attribut zu verwenden. den Wtrealm-Parameter.|  
-|signInQueryString|Bietet einen Erweiterungspunkt darstellen, um anwendungsdefinierte Abfrageparameter in der URL des WS-Verbund-anmeldungsanforderung anzugeben. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in der Anforderung enthalten sein soll. Die Parameter werden als ein Fragment einer Abfrage im folgenden Format angegeben: `"param1=value1&param2=value2&param3=value3"` und so weiter. **Hinweis:** In einer Konfigurationsdatei das "&" Zeichen in der Abfragezeichenfolge muss angegeben werden, mithilfe der Entitätsverweis `&`.|  
-|signOutQueryString|Bietet einen Erweiterungspunkt darstellen, um anwendungsdefinierte Abfrageparameter in der URL des WS-Verbund-anmeldungsanforderung anzugeben. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in der Anforderung enthalten sein soll. Die Parameter werden als ein Fragment einer Abfrage im folgenden Format angegeben: `"param1=value1&param2=value2&param3=value3"` und so weiter. **Hinweis:** In einer Konfigurationsdatei das "&" Zeichen in der Abfragezeichenfolge muss angegeben werden, mithilfe der Entitätsverweis `&`.|  
+|signInQueryString|Bietet einen Erweiterungspunkt darstellen, um anwendungsdefinierte Abfrageparameter in der URL des WS-Verbund-anmeldungsanforderung anzugeben. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in der Anforderung enthalten sein soll. Die Parameter werden als ein Fragment einer Abfrage im folgenden Format angegeben: `"param1=value1&param2=value2&param3=value3"` und so weiter. **Hinweis**:  In einer Konfigurationsdatei das "&" Zeichen in der Abfragezeichenfolge muss angegeben werden, mithilfe der Entitätsverweis `&`.|  
+|signOutQueryString|Bietet einen Erweiterungspunkt darstellen, um anwendungsdefinierte Abfrageparameter in der URL des WS-Verbund-anmeldungsanforderung anzugeben. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in der Anforderung enthalten sein soll. Die Parameter werden als ein Fragment einer Abfrage im folgenden Format angegeben: `"param1=value1&param2=value2&param3=value3"` und so weiter. **Hinweis**:  In einer Konfigurationsdatei das "&" Zeichen in der Abfragezeichenfolge muss angegeben werden, mithilfe der Entitätsverweis `&`.|  
 |signOutReply|Gibt Sie die URL, an dem der Client vom Sicherheitstokendienst (STS) umgeleitet werden soll, während der passiven Abmeldung durch das WS-Verbund-Protokoll. Legt den Wreply-Parameter für eine WS-Verbund-abmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in der Anforderung enthalten sein soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -98,6 +98,6 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.WSFed
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

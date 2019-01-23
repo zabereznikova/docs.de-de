@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fe5710f1be0bfa4e651668e2469c3551ad79261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515325"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason-Enumeration
 Gibt den Vorgang an, der für einen Debug-/Ablaufverfolgungsschalter ausgeführt wurde.  
@@ -40,12 +40,12 @@ typedef enum LogSwitchCallReason {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|Ein Debug-/Ablaufverfolgungsschalter wurde erstellt.|  
-|`SWITCH_MODIFY`|Ein Debug-/Ablaufverfolgungsschalter wurde geändert.|  
-|`SWITCH_DELETE`|Ein Debug-/Ablaufverfolgungsschalter wurde gelöscht.|  
+|`SWITCH_CREATE`|Eine Debug-/Ablaufverfolgungsschalter wurde erstellt.|  
+|`SWITCH_MODIFY`|Eine Debug-/Ablaufverfolgungsschalter wurde geändert.|  
+|`SWITCH_DELETE`|Eine Debug-/Ablaufverfolgungsschalter wurde gelöscht.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -53,5 +53,5 @@ typedef enum LogSwitchCallReason {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

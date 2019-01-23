@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43a00d687c6a9ec42cb8573e70d181b4dc2c7d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ce0a543b44bad4e3ae615d06e38c04cd0fb1207
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433216"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523661"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString-Methode
 Übersetzt einen HRESULT-Wert in eine entsprechende Fehlermeldung für die angegebene Kultur.  
@@ -45,13 +45,13 @@ HRESULT LoadErrorString(
   
 #### <a name="parameters"></a>Parameter  
  `iResourceID`  
- [in] Das zu übersetzende HRESULT.  
+ [in] Das HRESULT, um zu übersetzen.  
   
  `pwzBuffer`  
  [out] Die Meldungszeichenfolge, die dem angegebenen HRESULT zugeordnet.  
   
  `pcchBuffer`  
- [in, out] Die Größe des `pwzbuffer` um Pufferüberläufe zu vermeiden. Wenn `pwzbuffer` ist null, `pcchBuffer` bietet die erwartete Größe von `pwzbuffer` um die Vorabbelegung zu ermöglichen.  
+ [in, out] Die Größe des `pwzbuffer` um Pufferüberläufe zu vermeiden. Wenn `pwzbuffer` null ist, `pcchBuffer` bietet die geforderte Größe des `pwzbuffer` um die Vorabbelegung zu ermöglichen.  
   
  `iLocaleID`  
  [in] Der Kulturbezeichner. Um die Standardkultur verwenden zu können, müssen Sie-1 angeben.  
@@ -66,15 +66,15 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` ist NULL.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

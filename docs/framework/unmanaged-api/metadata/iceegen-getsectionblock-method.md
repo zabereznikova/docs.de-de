@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5da2936a46dcf3d8f69acc3367db64712165b0cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb1268d9fd892a4400491aca7966d81a3e23f9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515351"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock-Methode
-Ruft einen Abschnittsblock der CodeBase ab.  
+Ruft einen Abschnittsblock im des Codes ab.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
@@ -42,7 +42,7 @@ HRESULT GetSectionBlock (
   
 #### <a name="parameters"></a>Parameter  
  `section`  
- [in] Dem Abschnitt von dem einen Speicherblock, der die CodeBase abgerufen werden soll.  
+ [in] Der Abschnitt aus dem Sie einen Block, der CodeBase abrufen.  
   
  `len`  
  [in] Die Länge des Blocks abgerufen werden sollen.  
@@ -54,16 +54,16 @@ HRESULT GetSectionBlock (
  [out] Ein Zeiger auf einen Speicherort, der die Adresse des abgerufenen Blocks empfängt.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie `GetSectionBlock` nur bei besonderen Anforderungen, die nicht von anderen Methoden behandelt werden.  
+ Rufen Sie `GetSectionBlock` nur dann, wenn Sie Anforderungen an die speziellen Bereich verfügen, die nicht von anderen Methoden behandelt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: a90f6928d68eddd29762e6206769dd7f07704e4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a065573abb5a230d2a51f1767bd8d2e829bccd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521269"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Escapesequenz / Markuperweiterung
-Stellt die Verwendung von XAML-Escapesequenz für Attributwerte bereit. Die-Escapesequenz kann nachfolgende Werte im Attribut als Literal interpretiert werden soll.  
+Stellt die XAML-Escapesequenz für Attributwerte bereit. Die-Escapesequenz kann nachfolgende Werte im Attribut als Literal interpretiert werden soll.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
@@ -41,23 +41,23 @@ Stellt die Verwendung von XAML-Escapesequenz für Attributwerte bereit. Die-Esca
   
 |||  
 |-|-|  
-|*LiteralValue*|Das Zeichenfolgenliteral, das die-Escapesequenz folgt. Diese Zeichenfolge enthält in der Regel eine öffnende oder schließende Klammer ({oder}).|  
+|*literalValue*|Das Zeichenfolgenliteral, das die Escape-Sequenz folgt. Diese Zeichenfolge enthält in der Regel eine öffnende oder schließende Klammer ({oder}).|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Escapesequenz ({}) wird verwendet, damit eine öffnende geschweifte Klammer ({}) als Literalzeichen in XAML verwendet werden kann.  
+ Die Escape-Sequenz ({}) wird verwendet, damit eine öffnende geschweifte Klammer ({}) als Literalzeichen in XAML verwendet werden kann.  
   
- XAML-Readern in der Regel verwenden die öffnende geschweifte Klammer ({}), um den Einstiegspunkt einer Markuperweiterung zu kennzeichnen; allerdings überprüfen sie zunächst das nächste Zeichen aus, um festzustellen, ob es sich um eine schließende geschweifte Klammer (}) ist. Nur wenn die beiden geschweifte Klammern ({}) sind von angrenzenden, werden sie als eine Escapesequenz betrachtet.  
+ XAML-Reader in der Regel verwenden die öffnende geschweifte Klammer ({}), um anzugeben, den Einstiegspunkt einer Markuperweiterung; allerdings überprüfen sie zuerst das nächste Zeichen aus, um festzustellen, ob es sich um eine schließende geschweifte Klammer (}) ist. Nur wenn die beiden geschweiften Klammern ({}) angrenzende sind, werden sie als eine Escapesequenz betrachtet.  
   
- Wenn die-Escapesequenz gefunden wird, sollte der XAML-Reader die restliche Zeichenfolge als Zeichenfolge verarbeiten. Jedoch wenn Escape-Zeichenfolge auf ein Element angewendet wird, einen Typkonverter hat, kann die Zeichenfolge Konvertierung vom Typ unterzogen werden, wenn er von einem XAML-Writer interpretiert wird.  
+ Wenn die Escape-Sequenz auftritt, sollte der XAML-Reader der Rest der Zeichenfolge als Zeichenfolge verarbeiten. Allerdings, wenn die Escape-Sequenz auf einen Member, die über einen Typkonverter verfügt angewendet wird, kann die Zeichenfolge Typ umgewandelt werden, wenn er von einem XAML-Writer interpretiert wird.  
   
- Die-Escapesequenz ist eine Markuperweiterung und nicht durch eine Klasse unterstützt wird. Es ist jedoch eine Konvention, die XAML-Reader (einschließlich benutzerdefinierter XAML-Reader) berücksichtigen sollten.  
+ Die-Escapesequenz ist es sich nicht um eine Markuperweiterung und nicht durch eine Klasse gesichert. Es ist jedoch eine Konvention, die XAML-Reader (einschließlich benutzerdefinierte XAML-Reader) berücksichtigen sollten.  
   
- Ein Anführungszeichen (") kann nicht als Escapesequenz auf diese Weise verwendet werden. Wenn Sie ein Anführungszeichen als einen Eigenschaftswert für eine Eigenschaft des Eigenschaftenelements festlegen müssen, verwenden Sie Eigenschaftenelementsyntax und platzieren Sie die Anführungszeichen als Zeichenfolge innerhalb der Property-Element, oder eine XML-Zeichen-Entität. Für einen Content-Eigenschaft kann das Anführungszeichen der gesamte Inhalt sein.  
+ Ein Anführungszeichen (") kann nicht als eine Escapesequenz, die auf diese Weise verwendet werden. Wenn Sie ein Anführungszeichen als Eigenschaftswert für eine Eigenschaft des Eigenschaftenelements festlegen müssen, verwenden Sie die Syntax und platzieren Sie die Anführungszeichen als Zeichenfolge innerhalb der Property-Element, oder Verwenden einer XML-Zeichen-Entität. Für eine Inhaltseigenschaft kann das Anführungszeichen der gesamte Inhalt sein.  
   
- Die Escapesequenz ({}) ist häufig erforderlich, wenn Sie einen XML-Datentyp angeben, die einen Namespacequalifizierer an einem Ort einschließen muss, in denen möglicherweise eine XAML-Markuperweiterung angezeigt. Dies schließt den Beginn des XAML-Attributwert und in eine Markuperweiterung, sofort nach einem Gleichheitszeichen (=). Das folgende Beispiel zeigt die Escapesequenzen für einen XML-Namespace, der am Anfang des XAML-Attributwert angezeigt wird.  
+ Die Escape-Sequenz ({}) ist häufig erforderlich, wenn einen XML-Datentyp angeben, die an einem Ort Namespacequalifizierer einschließen muss, wo eine XAML-Markuperweiterung angezeigt werden kann. Dies schließt den Start einen XAML-Attributwert, und klicken Sie in einer Markuperweiterung, sofort nach einem Gleichheitszeichen (=). Das folgende Beispiel zeigt die Escapesequenzen für einen XML-Namespace, der am Anfang einer XAML-Attributwert angezeigt wird.  
   
  [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [XML-Zeichenentitäten und XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+## <a name="see-also"></a>Siehe auch
+- [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [XML-Zeichenentitäten und XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)

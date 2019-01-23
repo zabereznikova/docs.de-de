@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: bestimmen, ob eine Datei eine Assembly (Visual Basic) ist.'
+title: 'Vorgehensweise: Bestimmen Sie, ob eine Datei eine Assembly (Visual Basic) ist.'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: ced41279e7e192d6d5bed53dbce7378395b32e6d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520088"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Vorgehensweise: bestimmen, ob eine Datei eine Assembly (Visual Basic) ist.
+# <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Vorgehensweise: Bestimmen Sie, ob eine Datei eine Assembly (Visual Basic) ist.
 Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assemblyeintrag in ihren Metadaten enthält. Weitere Informationen über Assemblys und Metadaten finden Sie im Thema [Assemblymanifest](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>So bestimmen Sie manuell, ob eine Datei eine Assembly ist  
@@ -18,7 +18,7 @@ Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assembl
   
 2.  Laden Sie die Datei, die Sie testen möchten.  
   
-3.  Wenn **ILDASM** meldet, dass die Datei keine portierbare ausführbare Datei (PE, portable executable) ist, ist es keine Assembly. Weitere Informationen finden Sie im Thema [Vorgehensweise: Ansichtsassemblyinhalt](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Wenn **ILDASM** meldet, dass die Datei keine portierbare ausführbare Datei (PE, portable executable) ist, ist es keine Assembly. Weitere Informationen finden Sie im Thema [Vorgehensweise: View Assembly Contents (Vorgehensweise: Anzeigen von Assemblyinhalt)](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>So bestimmen Sie programmgesteuert, ob eine Datei eine Assembly ist  
   
@@ -54,6 +54,6 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Reflection.AssemblyName>  
-- [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)
 - [Assemblys und der globale Assemblycache (Visual Basic)](index.md)

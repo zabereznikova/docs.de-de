@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb1ae367c30bb038bfe25961e91f02f172f486c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ffca8e076fe6fe966a9a07ed915a7e76ea06f37c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518071"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO-Struktur
 Liefert allgemeine Informationen zum Garbage Collection-Heap, auch zu dessen Aufzählbarkeit.  
@@ -42,19 +42,19 @@ typedef struct _COR_HEAPINFO {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` Wenn die Garbage Collection-Strukturen gültig sind und der Heap aufgelistet werden kann; andernfalls `false`.|  
-|`pointerSize`|Die Größe in Bytes von Zeigern auf der Zielarchitektur.|  
-|`numHeaps`|Die Anzahl der logischen Garbagecollection heaps im Prozess.|  
-|`concurrent`|`TRUE` Wenn die gleichzeitige Garbagecollection (im Hintergrund) aktiviert ist; andernfalls `FALSE`.|  
-|`gcType`|Ein Mitglied der [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) -Enumeration, der angibt, ob die Garbage Collection auf einer Arbeitsstation oder einem Server ausgeführt wird.|  
+|`areGCStructuresValid`|`true` Wenn der Garbage Collection-Strukturen sind gültig und der Heap aufgelistet werden kann; andernfalls `false`.|  
+|`pointerSize`|Die Größe in Byte von Zeigern auf der Zielarchitektur.|  
+|`numHeaps`|Die Anzahl der logischen speicherbereinigung heaps im Prozess.|  
+|`concurrent`|`TRUE` Wenn die gleichzeitige Garbagecollection (Hintergrund) aktiviert ist. andernfalls `FALSE`.|  
+|`gcType`|Ein Mitglied der [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md) Enumeration, der angibt, ob der Garbage Collection auf einer Arbeitsstation oder einem Server ausgeführt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  Eine Instanz von der `COR_HEAPINFO` Struktur wird zurückgegeben, indem die [icordebugprocess5:: Getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) Methode.  
   
- Sie müssen immer überprüfen Sie vor dem Auflisten von Objekten auf dem Garbage Collection-Heap aus, die `areGCStructuresValid` Feld, um sicherzustellen, dass der Heap in einen enumerable-Zustand ist. Weitere Informationen finden Sie unter der [icordebugprocess5:: Getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) Methode.  
+ Sie müssen immer überprüfen, vor der Enumeration von Objekten auf dem Garbage Collection-Heap, der `areGCStructuresValid` Feld, um sicherzustellen, dass der Heap aufzählbar ist. Weitere Informationen finden Sie unter den [icordebugprocess5:: Getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md) Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -62,6 +62,6 @@ typedef struct _COR_HEAPINFO {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd8f1adee6bbcb3b57b87a2d6c85c01c624da9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc664d308d4db3e97597d785eda159e32255fa54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520372"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2-Schnittstelle
 Stellt Methoden bereit, die auf Beziehungen zwischen untergeordneten und übergeordneten Frames überprüfen.  
@@ -30,7 +30,7 @@ Stellt Methoden bereit, die auf Beziehungen zwischen untergeordneten und überge
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[IsChild-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Bestimmt, ob der aktuelle Rahmen ist ein untergeordneter Frame ist.|  
+|[IsChild-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Bestimmt, ob der aktuelle Frame einer Child-Rahmen.|  
 |[IsMatchingParentFrame-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Bestimmt, ob der angegebene Rahmen um das übergeordnete Element des aktuellen Frames ist.|  
 |[GetStackParameterSize-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Gibt die kumulierte Größe der Parameter auf dem Stapel von Betriebssystemen X86 zurück.|  
   
@@ -41,7 +41,7 @@ Stellt Methoden bereit, die auf Beziehungen zwischen untergeordneten und überge
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -49,7 +49,7 @@ Stellt Methoden bereit, die auf Beziehungen zwischen untergeordneten und überge
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-    
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

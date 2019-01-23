@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 305a8d7b5a800c46ed814b1e654947859dc9bd03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349f6922c18a7745c8eff05b1786dc649f8bb70a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520983"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor-Funktion
 `CoUninitializeCor` ist veraltet.  
@@ -33,7 +33,7 @@ STDAPI_(void) CoUninitializeCor(void);
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die common Language Runtime kann nicht aus einem Prozess entladen werden. Die Laufzeit von einem laufenden Prozess entfernen möchten, müssen Sie diesen Prozess herunterfahren.  
+ Die common Language Runtime kann nicht von einem Prozess entladen werden. Um die Laufzeit von einem laufenden Prozess vollständig zu entfernen, müssen Sie diesen Prozess beenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

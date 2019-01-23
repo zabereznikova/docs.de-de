@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0017cff43f7a1b1bdd90806f50abb374a96dadf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48d43d9107d010b12167b977acd2e500437c039f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501711"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished-Methode
-Benachrichtigt den Profiler, dass eine Anwendungsdomäne erstellt wurde.  
+Benachrichtigt den Profiler an, dass eine Anwendungsdomäne erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,18 +37,18 @@ HRESULT AppDomainCreationFinished(
   
 #### <a name="parameters"></a>Parameter  
  `appDomainId`  
- [in] Identifiziert die Domäne, die erstellt wurde.  
+ [in] Gibt die Domäne, die erstellt wurde.  
   
  `hrStatus`  
- [in] Ein HRESULT, das angibt, ob die Erstellung der Anwendungsdomäne erfolgreich abgeschlossen.  
+ [in] Ein HRESULT, der angibt, ob die Erstellung der Anwendungsdomäne erfolgreich abgeschlossen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Anwendungs-ID ist ungültig für jede Anforderung Informationen, bis die `AppDomainCreationFinished` -Methode aufgerufen wird.  
+ Die Anwendungs-ID ist ungültig für jede informationsanforderung, bis die `AppDomainCreationFinished` Methode wird aufgerufen.  
   
- Einige Teile die Anwendungsdomäne laden möglicherweise weiterhin nach dem `AppDomainCreationFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings ein Erfolgs-HRESULT in `hrStatus` bedeutet nur, dass der erste Teil des Erstellens der Anwendungsdomäne erfolgreich war.  
+ Laden Sie die Anwendungsdomäne möglicherweise weiterhin nach den `AppDomainCreationFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings einen HRESULT-Erfolg in `hrStatus` gibt nur an, dass der erste Teil der Erstellung der Anwendungsdomäne erfolgreich war.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT AppDomainCreationFinished(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

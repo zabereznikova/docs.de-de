@@ -2,15 +2,15 @@
 title: Fehlerhafte Aufrufe pro Sekunde
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: ccb5908e9036650e3f21a9496649c8090c2e47b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bad37e0124698209955603c1b7d8a1aec4b87418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521048"
 ---
 # <a name="calls-failed-per-second"></a>Fehlerhafte Aufrufe pro Sekunde
-Zählername: Fehlerhafte Aufrufe pro Sekunde  
+Indikatorname: Fehlerhafte Aufrufe pro Sekunde  
   
 ## <a name="description"></a>Beschreibung  
  Anzahl von Aufrufen mit nicht behandelten Ausnahmen in diesem Vorgang innerhalb einer Sekunde.  
@@ -21,5 +21,5 @@ Zählername: Fehlerhafte Aufrufe pro Sekunde
   
  Der Wert dieses Zählers erhöht sich, sobald in diesem Vorgang eine nicht behandelte Ausnahme auftritt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

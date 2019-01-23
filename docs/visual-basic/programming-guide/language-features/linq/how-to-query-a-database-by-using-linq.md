@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Abfragen einer Datenbank mit LINQ (Visual Basic)'
+title: 'Vorgehensweise: Abfragen einer Datenbank mithilfe von LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query samples [LINQ]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: 75f3d71e76c81a016a4e2c6fac754b91db31873e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a76eb5a010c8c5f750336935f0044e8dcc4322f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514854"
 ---
-# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Gewusst wie: Abfragen einer Datenbank mit LINQ (Visual Basic)
+# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Vorgehensweise: Abfragen einer Datenbank mithilfe von LINQ (Visual Basic)
 Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und Ausführen von Abfragen.  
   
  Das folgende Beispiel zeigt, wie Sie eine neue Anwendung zu erstellen, die Abfragen für eine SQL Server-Datenbank ausführt.  
@@ -76,8 +76,8 @@ Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und A
      [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
     [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Siehe auch
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

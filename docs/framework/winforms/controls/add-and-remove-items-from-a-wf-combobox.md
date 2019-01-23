@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms'
+title: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500219"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
-Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Listenfeld oder Listenfeld eine Vielzahl von Möglichkeiten, nicht überprüft, da diese Steuerelemente an eine Vielzahl von Datenquellen gebunden werden können. Allerdings wird in diesem Thema zeigt die einfachste Methode, und erfordert keine Datenbindung. Die angezeigten Elemente sind in der Regel Zeichenfolgen. Allerdings kann jedes Objekt verwendet werden. Der im Steuerelement angezeigte Text ist der Wert, der von dem Objekt zurückgegebenen `ToString` Methode.  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement
+Elemente können ein Windows Forms-Kombinationsfeld, Listenfeld hinzugefügt werden oder Listenfeld in einer Vielzahl von Möglichkeiten, nicht überprüft, da diese Steuerelemente an eine Vielzahl von Datenquellen gebunden werden können. Allerdings wird in diesem Thema zeigt die einfachste Methode, und erfordert keine Datenbindung. Die angezeigten Elemente sind im Allgemeinen Zeichenfolgen. Allerdings kann ein Objekt verwendet werden. Der Text, der im Steuerelement angezeigt wird, wird den Rückgabewert von des Objekts `ToString` Methode.  
   
 ### <a name="to-add-items"></a>Hinzufügen von Elementen  
   
-1.  Fügen Sie der Zeichenfolge oder ein Objekt der Liste mithilfe der `Add` Methode der `ObjectCollection` Klasse. Die Auflistung verwiesen wird, mithilfe der `Items` Eigenschaft:  
+1.  Fügen Sie der Zeichenfolge oder ein Objekt zur Liste mit den `Add` Methode der `ObjectCollection` Klasse. Die Auflistung enthält einen Verweis auf die `Items` Eigenschaft:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Lis
   
      - ODER  
   
-2.  Fügen Sie die Zeichenfolge oder das Objekt an der gewünschten Stelle in der Liste mit den `Insert` Methode:  
+2.  Fügen Sie der Zeichenfolge oder das Objekt an der gewünschten Stelle in der Liste mit den `Insert` Methode:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Lis
   
      - ODER  
   
-3.  Ein Array für die gesamte auf dem `Items` Auflistung:  
+3.  Weisen Sie ein gesamtes Array, das die `Items` Auflistung:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -91,7 +91,7 @@ Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Lis
   
 1.  Rufen Sie die `Remove` oder `RemoveAt` Methode, um Elemente zu löschen.  
   
-     `Remove` hat ein Argument, das das zu entfernende Element angibt.`RemoveAt` Entfernt das Element mit dem angegebenen Index zurück.  
+     `Remove` hat ein Argument, der angibt, der zu entfernenden Elements.`RemoveAt` Entfernt das Element mit der angegebenen Indexnummer.  
   
     ```vb  
     ' To remove item with index 0:  
@@ -136,10 +136,10 @@ Elemente können hinzugefügt werden, um ein Windows Forms-Kombinationsfeld, Lis
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Gewusst wie: Sortieren des Inhalts eines ComboBox-, ListBox- oder CheckedListBox-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- [Wann ist ein Kombinationsfeld von Windows Forms dem Listenfeld vorzuziehen?](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Vorgehensweise: Sortieren des Inhalts einer Windows Forms-ComboBox-, ListBox- oder CheckedListBox-Steuerelement](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Wann ist ein Kombinationsfeld von Windows Forms dem Listenfeld vorzuziehen?](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

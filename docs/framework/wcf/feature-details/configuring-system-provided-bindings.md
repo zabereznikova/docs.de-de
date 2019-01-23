@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517694"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurieren der vom System bereitgestellten Bindungen
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Bindungen bestehen aus Elementen, die definieren, wie die Windows Communication Foundation (WCF)-Kanäle Sie Ebenen auf, die erforderlichen Kommunikationsfunktionen bereitzustellen. Eine Bindung enthält drei Arten von Elementen:  
@@ -40,7 +40,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Eine sichere und vollständig kompatible Bindung, die Unterstützung für die entsprechenden Versionen der Bindungselemente <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> und <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> bereitstellt.|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Eine sichere und vollständig kompatible Bindung, die für Duplexdienstverträge oder für die Kommunikation über SOAP-Vermittler geeignet ist.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Eine sichere und vollständig kompatible Bindung, die das WS-Federationprotokoll unterstützt, und es damit einem Verbund angehörenden Organisationen ermöglicht, Benutzer effizient zu authentifizieren und zu autorisieren.|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Eine sichere und vollständig kompatible Bindung, die von <xref:System.ServiceModel.WS2007HttpBinding> abgeleitet ist und Verbundsicherheit unterstützt.|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Eine sichere und vollständig kompatible Bindung, die von <xref:System.ServiceModel.WS2007HttpBinding> abgeleitet ist und Verbundsicherheit unterstützt.|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Eine sichere und optimierte Bindung, die sich für die computerübergreifende Kommunikation zwischen WCF-Anwendungen eignet.|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Eine sichere, zuverlässige und optimierte Bindung, die sich für die Kommunikation zwischen WCF-Anwendungen auf einem Computer eignet.|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Eine der Warteschlange hinzugefügte Bindung, die sich für eine computerübergreifende Kommunikation zwischen WCF-Anwendungen eignet.|  
@@ -63,7 +63,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Keine<br /><br /> (Transport)|Keine, (Transport)|(Keine), Ja|Ja|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Keine, Nachricht, (Transport), Beide|(Keine)|(Keine), Ja|Nein|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|Keine, Nachricht, (Transport), Gemischt|(Keine)|(Keine)|Ja|  
-|<xref:System.ServiceModel.WebHttpBinding>|.NET|Keine, Transport, TransportCredentialOnly|(Keine)|(Keine)|n/v|  
+|<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|(Keine)|(Keine)|n/v|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Keine, (Transport)|(Keine)|(Keine), Ja|n/v|  
   
  Die in der vorstehenden Tabelle aufgeführten Funktionen werden in der folgenden Tabelle erläutert.  
@@ -71,13 +71,13 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |Feature|Beschreibung|  
 |-------------|-----------------|  
 |Interoperabilitätstyp|Benennt das Protokoll oder die Technologie, mit dem bzw. der in der Bindung die Zusammenarbeit sichergestellt wird.|  
-|Sicherheit|Gibt an, wie der Kanal geschützt wird.<br /><br /> – None: Die SOAP-Nachricht nicht gesichert, und der Client ist nicht authentifiziert.<br />-Transport: Die sicherheitsanforderungen werden auf der Transportebene erfüllt.<br />-Nachricht: Die sicherheitsanforderungen werden auf der Nachrichtenebene erfüllt.<br />-Gemischt: Dieser Sicherheitsmodus wird bezeichnet als `TransportWithMessageCredentials`. Die Anmeldeinformationen werden auf der Nachrichtenebene übermittelt, und die Anforderungen an Integrität und Vertraulichkeit werden auf der Transportebene erfüllt.<br />– Beide: Sowohl und auf Transportebene Sicherheit auf Nachrichtenebene werden verwendet. Über diese Fähigkeit verfügt nur die <xref:System.ServiceModel.NetMsmqBinding>-Bindung.|  
+|Sicherheit|Gibt an, wie der Kanal geschützt wird.<br /><br /> – None: Die SOAP-Nachricht nicht gesichert, und der Client ist nicht authentifiziert.<br />-Transport: Sicherheitsanforderungen werden auf der Transportebene erfüllt.<br />-Meldung: Sicherheitsanforderungen werden auf der Nachrichtenebene erfüllt.<br />-Gemischt: Wurde dieser Sicherheitsmodus wird als bezeichnet `TransportWithMessageCredentials`. Die Anmeldeinformationen werden auf der Nachrichtenebene übermittelt, und die Anforderungen an Integrität und Vertraulichkeit werden auf der Transportebene erfüllt.<br />– Beides: Es werden sowohl und auf Transportebene Sicherheit auf Nachrichtenebene verwendet. Über diese Fähigkeit verfügt nur die <xref:System.ServiceModel.NetMsmqBinding>-Bindung.|  
 |Sitzung|Gibt an, ob die betreffende Bindung Sitzungsverträge unterstützt.|  
 |Transaktionen|Gibt an, ob Transaktionen ermöglicht werden.|  
 |Duplex|Gibt an, ob Duplexverträge unterstützt werden. Beachten Sie, dass diese Funktion Bindungsunterstützung für Sitzungen erfordert.|  
 |Streaming|Gibt an, ob das Nachrichtenstreaming unterstützt wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)

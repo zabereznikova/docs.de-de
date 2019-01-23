@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Drucken mit einem WebBrowser-Steuerelement'
+title: 'Vorgehensweise: Drucken Sie mit einem WebBrowser-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: 2ddb362100d5678d678a71707d8959a3be25853c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee84576c99b7088be72c2bdaf72d25f954d23ee2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499721"
 ---
-# <a name="how-to-print-with-a-webbrowser-control"></a>Gewusst wie: Drucken mit einem WebBrowser-Steuerelement
-Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.WebBrowser> Steuerelement auf eine Webseite zu drucken, ohne diese anzuzeigen.  
+# <a name="how-to-print-with-a-webbrowser-control"></a>Vorgehensweise: Drucken Sie mit einem WebBrowser-Steuerelement
+Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.WebBrowser> Steuerelement auf eine Webseite zu drucken, ohne es anzuzeigen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[WebBrowserMisc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
@@ -32,12 +32,12 @@ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.For
   
 -   Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.WebBrowser>  
- <xref:System.Windows.Forms.WebBrowser.Print%2A>  
- <xref:System.Windows.Forms.WebBrowser.Url%2A>  
- [Gewusst wie: Navigieren zu einer URL mit dem WebBrowser-Steuerelement](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [Gewusst wie: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms-Anwendung](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- [Gewusst wie: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- [Übersicht über das WebBrowser-Steuerelement](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- [WebBrowser-Sicherheit](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.WebBrowser>
+- <xref:System.Windows.Forms.WebBrowser.Print%2A>
+- <xref:System.Windows.Forms.WebBrowser.Url%2A>
+- [Vorgehensweise: Navigieren Sie zu einer URL mit dem WebBrowser-Steuerelement](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Vorgehensweise: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms-Anwendung](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Vorgehensweise: Erstellen Sie eine HTML-Dokumentviewers in einer Windows Forms-Anwendung](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Übersicht über das WebBrowser-Steuerelement](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)
+- [WebBrowser-Sicherheit](../../../../docs/framework/winforms/controls/webbrowser-security.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 024ab8254f566e5386198fa1735af4c6b1972ca1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 997e43e6a8be1ac2859e7338751272f3074be11d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523129"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps-Methode
-Legt die Funktionen, die in den Metadaten für eine Eigenschaft, die definiert, die durch einen vorherigen Aufruf von gespeicherten [DefineProperty-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Legt die Funktionen, die in den Metadaten für eine Eigenschaft, die definiert, die von einem vorherigen Aufruf von gespeicherten [DefineProperty-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,32 +50,32 @@ HRESULT SetPropertyProps (
  [in] Die Eigenschaftenflags.  
   
  `dwCPlusTypeFlag`  
- [in] Der Typ des Standardwerts für die Eigenschaft.  
+ [in] Der Typ der Standardwert der Eigenschaft.  
   
  `pValue`  
  [in] Der Standardwert für die Eigenschaft.  
   
  `cchValue`  
- [in] Die Anzahl von (Unicode-) Zeichen `pValue`.  
+ [in] Die Anzahl von (Unicode-) Zeichen in `pValue`.  
   
  `mdSetter`  
  [in] Die Methode, die den Wert der Eigenschaft festlegt.  
   
  `mdGetter`  
- [in] Die Methode, die den Eigenschaftswert abruft.  
+ [in] Die Methode, die den Wert der Eigenschaft abruft.  
   
  `rmdOtherMethods[]`  
- [in] Ein Array von anderen Methoden, die der Eigenschaft zugeordnet werden soll. Beenden Sie dieses Array mit einem `mdTokenNil` token.  
+ [in] Ein Array von anderen Methoden der Eigenschaft zugeordnet. Beenden Sie dieses Array mit einem `mdTokenNil` token.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520177"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments-Anweisung
 Einschränken von übergibt Typargumente eines generischen an den Konstruktor des generischen Typs.  
@@ -50,13 +50,13 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
 ```  
   
-### <a name="liststring"></a>Liste\<Zeichenfolge >  
+### <a name="liststring"></a>List\<String>  
  `<scg:List x:TypeArguments="sys:String" ...>` instanziiert ein neues <xref:System.Collections.Generic.List%601> mit einem <xref:System.String> Typargument.  
   
-### <a name="dictionarystringstring"></a>Wörterbuch\<Zeichenfolge, Zeichenfolge >  
+### <a name="dictionarystringstring"></a>Dictionary\<String,String>  
  `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` instanziiert ein neues <xref:System.Collections.Generic.Dictionary%602> mit zwei <xref:System.String> Typargumente.  
   
-### <a name="queuekeyvaluepairstringstring"></a>Warteschlange < KeyValuePair\<String, String >>  
+### <a name="queuekeyvaluepairstringstring"></a>Queue<KeyValuePair\<String,String>>  
  `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` instanziiert ein neues <xref:System.Collections.Generic.Queue%601> enthält, die die Einschränkung der <xref:System.Collections.Generic.KeyValuePair%602> mit die Typargumente für die interne Einschränkung <xref:System.String> und <xref:System.String>.  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Generische XAML-Verwendungen von XAML 2006 und WPF  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  In WPF und Zielgruppenadressierung [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments` jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht. Wenn Sie in Markup der XAML kompilieren müssen, müssen Sie unter den Einschränkungen, die im Abschnitt "XAML 2006 und WPF-generische XAML-Verwendungen" erwähnt ausgeführt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [x:Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type-Markuperweiterung](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Integrierte Typen für häufige XAML-Sprachprimitive](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [Generika in XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>Siehe auch
+- [x:Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md)
+- [x:Type-Markuperweiterung](../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Integrierte Typen für häufige XAML-Sprachprimitive](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+- [Generika in XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

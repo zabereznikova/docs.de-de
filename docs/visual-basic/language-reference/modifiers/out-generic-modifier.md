@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 7ba774bfcd629a7518602d4b971e86a690b2dd83
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522758"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (generischer Modifizierer) (Visual Basic)
 Für generische Typparameter der `Out` -Schlüsselwort Gibt an, dass der Typ kovariant ist.  
@@ -34,11 +34,11 @@ Für generische Typparameter der `Out` -Schlüsselwort Gibt an, dass der Typ kov
   
 -   Der Typparameter wird nicht als generische Einschränkung für die Schnittstellenmethoden verwendet.  
   
- In einem generischen Delegaten kann ein Typparameter kovariant deklariert werden, wenn er nicht für Methodenargumente verwendet und nur als Rückgabetyp für eine Methode verwendet wird.  
+ In einem generischen Delegaten kann ein Typparameter kovariant deklariert werden, wenn sie nur als Methodenrückgabetyp verwendet und nicht für Methodenargumente verwendet wird.  
   
  Kovarianz und Kontravarianz werden für Verweistypen unterstützt, aber nicht für Werttypen.  
   
- In Visual Basic kann Ereignisse in kovarianten Schnittstellen nicht deklariert werden, ohne Angabe des Delegattyps. Darüber hinaus werden kovariante Schnittstellen keine geschachtelten Klassen, Enumerationen und Strukturen, aber geschachtelte Schnittstellen.  
+ In Visual Basic können Sie Ereignisse in Schnittstellen mit kovarianten deklarieren, ohne Typ des Delegaten angeben. Darüber hinaus werden kovariante Schnittstellen keine geschachtelten Klassen, Enumerationen und Strukturen, aber geschachtelte Schnittstellen.  
   
 ## <a name="behavior"></a>Verhalten  
  Die Methoden einer Schnittstelle, die einen kovarianten Typparameter hat, können mehr abgeleitete Typen als durch den Typparameter angegeben zurückgeben. Da z.B. in .NET Framework 4 Typ T in <xref:System.Collections.Generic.IEnumerable%601> kovariant ist, können Sie ein Objekt des `IEnumerabe(Of String)`-Typs an ein Objekt des `IEnumerable(Of Object)`-Typs zuweisen, ohne besondere Konvertierungsmethoden zu verwenden.  
@@ -51,10 +51,10 @@ Für generische Typparameter der `Out` -Schlüsselwort Gibt an, dass der Typ kov
  [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie einen kovarianten generischen Delegaten deklarieren, instanziieren und aufrufen. Es wird gezeigt, wie Sie die implizite Konvertierung für Delegattypen verwenden können.  
+ Das folgende Beispiel zeigt, wie Sie einen kovarianten generischen Delegaten deklarieren, instanziieren und aufrufen. Es wird auch gezeigt, wie Sie die implizite Konvertierung für Delegattypen verwenden können.  
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a>Siehe auch
+- [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

@@ -2,12 +2,12 @@
 title: Auswählen eines Filters
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196123"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514192"
 ---
 # <a name="choosing-a-filter"></a>Auswählen eines Filters
 Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter auszuwählen und so zu konfigurieren, dass Sie genaue Übereinstimmungen mit den Nachrichten erzielen können, die Sie empfangen. Falls die ausgewählten Filter in Bezug auf die Übereinstimmungen zu ungenau oder falsch konfiguriert sind, werden die Nachrichten nicht korrekt weitergeleitet. Wenn die Filter zu restriktiv sind, kann es sein, dass für einige Nachrichten keine gültigen Weiterleitungsrouten verfügbar sind.  
@@ -135,6 +135,6 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Weitere Informationen zum Entwerfen von XPath-Abfragen finden Sie unter [XPath-Syntax](https://go.microsoft.com/fwlink/?LinkId=164592).  
   
-## <a name="see-also"></a>Siehe auch  
- [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md)  
- [Vorgehensweise: Verwenden von Filtern](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+## <a name="see-also"></a>Siehe auch
+- [Nachrichtenfilter](../../../../docs/framework/wcf/feature-details/message-filters.md)
+- [How To: Verwenden von Filtern](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd0d9851f62381a16f628607c326c6690492628b
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 002addf0f020365f87e239b7b8707f3a6031003f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519449"
 ---
 # <a name="ltgenericparametergt-element-net-native"></a>&lt;GenericParameter&gt; Element (.NET Native)
 Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer generischen Methode an.  
@@ -21,7 +21,7 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
                   Activate="policy_type"  
                   Browse="policy_type"  
                   Dynamic="policy_type"  
-                  Serialize="policy_type" />  
+                  Serialize="policy_type"  
                   DataContractSerializer="policy_type"  
                   DataContractJsonSerializer="policy_type"  
                   XmlSerializer="policy_type"  
@@ -86,9 +86,9 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [\<Method> Element (Element <Method>)](../../../docs/framework/net-native/method-element-net-native.md)  
- [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)  
- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Siehe auch
+- [\<Method> Element (Element <Method>)](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)

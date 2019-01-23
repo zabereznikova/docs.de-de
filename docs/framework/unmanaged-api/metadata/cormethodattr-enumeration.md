@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f144426996583d5058f70daed99d8a37cfb6bfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a69ca889e226168adb1b84ab64dc0f882c27606
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520531"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr-Enumeration
-Enthält Werte, die die Funktionen einer Methode beschreiben.  
+Enthält Werte, die die Funktionen einer Methode zu beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,36 +69,36 @@ typedef enum CorMethodAttr {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|Gibt den Memberzugriff.|  
-|`mdPrivateScope`|Gibt an, dass das Element verwiesen werden kann.|  
-|`mdPrivate`|Gibt an, dass der Member nur von dem übergeordneten Typ zugegriffen werden kann.|  
-|`mdFamANDAssem`|Gibt an, dass das Element Untertypen nur in dieser Assembly zugreifen können.|  
-|`mdAssem`|Gibt an, dass das Element Zugriff von jedem Benutzer in der Assembly.|  
-|`mdFamily`|Gibt an, dass der Member nur von Typ und Untertypen zugegriffen werden kann.|  
-|`mdFamORAssem`|Gibt an, dass der Member von abgeleiteten Klassen und anderen Typen in seiner Assembly zugegriffen wird.|  
-|`mdPublic`|Gibt an, dass das Element alle Typen mit Zugriff auf den Bereich zugänglich ist.|  
-|`mdStatic`|Gibt an, dass der Member als Teil des Typs statt als Mitglied einer Instanz definiert ist.|  
+|`mdPrivateScope`|Gibt an, dass der Member nicht verwiesen werden kann.|  
+|`mdPrivate`|Gibt an, dass der Member nur von den übergeordneten Typ zugegriffen werden kann.|  
+|`mdFamANDAssem`|Gibt an, dass der Member von Untertypen in dieser Assembly nur zugegriffen werden kann.|  
+|`mdAssem`|Gibt an, dass der Member Zugriff von jedem Benutzer in der Assembly.|  
+|`mdFamily`|Gibt an, dass der Member nur von Typen und Untertypen zugegriffen werden kann.|  
+|`mdFamORAssem`|Gibt an, dass der Member von abgeleiteten Klassen und andere Typen in der Assembly verfügbar ist.|  
+|`mdPublic`|Gibt an, dass der Member von allen Typen mit Zugriff auf den Bereich zugegriffen werden kann.|  
+|`mdStatic`|Gibt an, dass der Member nicht als Mitglied einer Instanz, sondern als Teil des Typs definiert ist.|  
 |`mdFinal`|Gibt an, dass die Methode nicht überschrieben werden kann.|  
 |`mdVirtual`|Gibt an, dass die Methode überschrieben werden kann.|  
-|`mdHideBySig`|Gibt an, dass die Methode, durch den Namen und derselben Signatur statt nur über den Namen ausgeblendet.|  
+|`mdHideBySig`|Gibt an, dass die Methode durch den Namen und derselben Signatur und nicht nur durch den Namen verbirgt.|  
 |`mdVtableLayoutMask`|Gibt die virtuellen Tabellenlayout.|  
-|`mdReuseSlot`|Gibt an, dass es sich bei der Slot für diese Methode in der virtuellen Tabelle verwendete wiederverwendet werden. Dies ist die Standardeinstellung.|  
-|`mdNewSlot`|Gibt an, dass die Methode immer einen neuen Slot in der virtuellen Tabelle erhält.|  
-|`mdCheckAccessOnOverride`|Gibt an, dass die Methode von den gleichen Typen überschrieben werden kann, zu dem er angezeigt wird.|  
+|`mdReuseSlot`|Gibt an, dass der Slot für diese Methode in der virtuellen Tabelle verwendete wiederverwendet werden. Dies ist die Standardeinstellung.|  
+|`mdNewSlot`|Gibt an, dass die Methode immer einen neuen Slot in der virtuellen Tabelle abruft.|  
+|`mdCheckAccessOnOverride`|Gibt an, dass die Methode von den Typen überschrieben werden kann, zu dem es angezeigt wird.|  
 |`mdAbstract`|Gibt an, dass die Methode nicht implementiert wird.|  
-|`mdSpecialName`|Gibt an, dass die Methode spezielle ist und seinen Namen wird beschrieben, wie.|  
-|`mdPinvokeImpl`|Gibt an, dass die Implementierung der Methode mit PInvoke weitergeleitet wird.|  
-|`mdUnmanagedExport`|Gibt an, dass die Methode einer verwalteten Methode in nicht verwaltetem Code exportiert.|  
-|`mdReservedMask`|Reserviert für interne Verwendung durch die common Language Runtime.|  
+|`mdSpecialName`|Gibt an, dass besondere Methode handelt und der Name wird beschrieben, wie.|  
+|`mdPinvokeImpl`|Gibt an, dass die methodenimplementierung mit PInvoke weitergeleitet wird.|  
+|`mdUnmanagedExport`|Gibt an, dass die Methode eine verwaltete Methode, die in nicht verwaltetem Code exportiert.|  
+|`mdReservedMask`|Durch die common Language Runtime können Sie für die interne Verwendung reserviert.|  
 |`mdRTSpecialName`|Gibt an, dass die common Language Runtime die Codierung des Methodennamens überprüfen soll.|  
-|`mdHasSecurity`|Gibt an, dass die Methode Sicherheit zugeordnet.|  
+|`mdHasSecurity`|Gibt an, dass die Methode Sicherheitsfunktionen zugeordnet.|  
 |`mdRequireSecObject`|Gibt an, dass die Methode, eine andere Methode aufruft, die Sicherheitscode enthält.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

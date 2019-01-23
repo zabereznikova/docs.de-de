@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 608b4a7d147124ede60e9d81f91600dfdaad0a65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f205615db29878bcfe936e88cab26c3d5a8e3562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514525"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents-Methode
 Zählt Ereignisdefinitionstoken für das angegebene TypeDef-Token auf.  
@@ -47,30 +47,30 @@ HRESULT EnumEvents (
  [in] Die TypeDef-Token, dessen Ereignisdefinitionen sind, aufgelistet werden sollen.  
   
  `rEvents`  
- [out] Das Array der zurückgegebenen Ereignisse.  
+ [out] Das Array der zurückgegebenen Ereignisse an.  
   
  `cMax`  
  [in] Die maximale Größe des `rEvents`-Arrays.  
   
  `pcEvents`  
- [out] Die tatsächliche Anzahl der Ereignisse, die im zurückgegebenen `rEvents`.  
+ [out] Die tatsächliche Anzahl der Ereignisse, die in zurückgegebenen `rEvents`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumEvents` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine Ereignisse aufgelistet werden. In diesem Fall `pcEvents` 0 (null).|  
+|`S_FALSE`|Es gibt keine Ereignisse aufgelistet werden. In diesem Fall `pcEvents` ist 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

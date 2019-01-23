@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Freigeben einer Systemressource (Visual Basic)'
+title: 'Vorgehensweise: Freigeben einer Systemressource (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Using statement [Visual Basic], disposing of system resources
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: cbb66934833da2bd6f0b797944dbb9c4df267cfc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523219"
 ---
-# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Gewusst wie: Freigeben einer Systemressource (Visual Basic)
-Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressource freigibt, wenn der Code den Block verlässt. Dies ist hilfreich, wenn Sie eine Systemressource, die eine große Menge an Arbeitsspeicher beansprucht oder andere Komponenten auch verwenden möchten.  
+# <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Vorgehensweise: Freigeben einer Systemressource (Visual Basic)
+Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressource freigibt, wenn der Code den Block beendet. Dies ist hilfreich, wenn Sie eine Systemressource, die eine große Menge an Arbeitsspeicher beansprucht oder andere Komponenten auch verwenden möchten.  
   
-### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Um eine Verbindung mit Datenbank freigeben, wenn der Code beendet wurde  
+### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Um eine Verbindung mit Datenbank freigeben, wenn Ihr Code beendet wurde  
   
-1.  Stellen Sie sicher, dass Sie die entsprechende [Imports-Anweisung (.NET Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für eine Verbindung mit der Datenbank am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlClient>).  
+1.  Stellen Sie sicher, Sie fügen Sie die entsprechenden [Imports-Anweisung (.NET-Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für eine Verbindung mit der Datenbank am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlClient>).  
   
-2.  Erstellen einer `Using` -block mit der `Using` und `End Using` Anweisungen. Platzieren Sie den Code, der Verbindung mit der Datenbank behandelt, innerhalb des Blocks.  
+2.  Erstellen Sie eine `Using` -block mit der `Using` und `End Using` Anweisungen. Platzieren Sie den Code, der mit der datenbankverbindung behandelt, innerhalb des Blocks.  
   
-3.  Deklarieren Sie die Verbindung, und erstellen Sie eine Instanz als Teil der `Using` Anweisung.  
+3.  Deklarieren Sie die Verbindung, und erstellen Sie eine Instanz davon als Teil der `Using` Anweisung.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  
@@ -38,17 +38,17 @@ Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressour
     End Sub  
     ```  
   
-     Das System, verwirft der Ressource unabhängig davon, wie Sie den Block, einschließlich der Groß-/Kleinschreibung eine nicht behandelte Ausnahme beenden.  
+     Das System löscht der Ressource unabhängig davon, wie Sie den Block, einschließlich den Fall einer nicht behandelten Ausnahme beenden.  
   
-     Beachten Sie, die Sie nicht zugreifen können `sqc` von außerhalb der `Using` blockiert werden, da der Gültigkeitsbereich auf den Block beschränkt ist.  
+     Beachten Sie, die Sie nicht zugreifen können `sqc` von außerhalb der `Using` blockieren, da der Gültigkeitsbereich auf den Block beschränkt ist.  
   
-     Sie können auf die gleiche Weise auf eine Systemressource, z. B. ein Dateihandle oder einen COM-Wrapper verwenden. Sie verwenden eine `Using` blockieren, wenn Sie möchten sicherstellen, dass die Ressource für andere Komponenten lassen, nachdem Sie geschlossen haben die `Using` Block.  
+     Sie können auf die gleiche Weise auf eine Systemressource, z. B. ein Dateihandle oder einen COM-Wrapper verwenden. Sie verwenden eine `Using` blockieren, wenn Sie sicher sein wollen, dass die Ressource, die für andere Komponenten verfügbar, nachdem Sie beendet haben die `Using` Block.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Data.SqlClient.SqlConnection>  
- [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Using-Anweisung](../../../../visual-basic/language-reference/statements/using-statement.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Data.SqlClient.SqlConnection>
+- [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Using-Anweisung](../../../../visual-basic/language-reference/statements/using-statement.md)

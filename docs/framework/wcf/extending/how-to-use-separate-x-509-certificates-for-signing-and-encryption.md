@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von separaten X.509-Zertifikaten für Signieren und Verschlüsselung'
+title: 'Vorgehensweise: Verwenden von separaten x. 509-Zertifikate für die Signierung und Verschlüsselung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500485"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten X.509-Zertifikaten für Signieren und Verschlüsselung
-In diesem Thema wird gezeigt, wie zum Konfigurieren der Windows Communication Foundation (WCF), um verschiedene Zertifikate für die nachrichtensignierung und-Verschlüsselung auf dem Client und der Dienst verwendet wird.  
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten x. 509-Zertifikate für die Signierung und Verschlüsselung
+In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation (WCF), um verschiedene Zertifikate für die nachrichtensignierung und-Verschlüsselung auf dem Client und dem Dienst verwendet wird.  
   
- Damit können verschiedene Zertifikate für Signierung und Verschlüsselung verwendet werden, müssen eine benutzerdefinierte Client oder Dienst Anmeldeinformationen (oder beides) erstellt werden, da WCF keine API zum Festlegen mehrerer Client- oder Dienstzertifikate bietet. Außerdem muss ein Sicherheitstokenmanager zur Verfügung gestellt werden, um die Informationen der Zertifikate zu nutzen und einen entsprechenden Sicherheitstokenanbieter für die angegebene Schlüsselverwendung und Nachrichtenrichtung zu erstellen.  
+ Damit können verschiedene Zertifikate für Signierung und Verschlüsselung verwendet werden, müssen bei einem benutzerdefinierten Client oder Dienst Anmeldeinformationen (oder beides) erstellt werden, da WCF nicht über eine API zum Festlegen von mehreren Client- oder Dienstzertifikate bietet. Außerdem muss ein Sicherheitstokenmanager zur Verfügung gestellt werden, um die Informationen der Zertifikate zu nutzen und einen entsprechenden Sicherheitstokenanbieter für die angegebene Schlüsselverwendung und Nachrichtenrichtung zu erstellen.  
   
  Das folgende Diagramm enthält die wichtigsten verwendeten Klassen, die Klassen, von denen geerbt wird (gekennzeichnet durch einen Aufwärtspfeil), sowie die Rückgabetypen bestimmter Methoden und Eigenschaften.  
   
@@ -33,7 +33,7 @@ In diesem Thema wird gezeigt, wie zum Konfigurieren der Windows Communication Fo
   
     -   Von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode wird eine Instanz von <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> zurückgegeben.  
   
- ![Das Diagramm zeigt, wie von Clientanmeldeinformationen](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
+ ![Diagramm mit der Verwendung von Clientanmeldeinformationen](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
  Weitere Informationen zu benutzerdefinierten Anmeldeinformationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
@@ -41,9 +41,9 @@ In diesem Thema wird gezeigt, wie zum Konfigurieren der Windows Communication Fo
   
  Das folgende Diagramm gibt Aufschluss über die Klassen für die benutzerdefinierte Bindung sowie über die Verknüpfung der Prüfung der benutzerdefinierten Identität. An diesem Prozess sind mehrere Bindungselemente beteiligt, die alle von <xref:System.ServiceModel.Channels.BindingElement> erben. Das <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> besitzt die <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>-Eigenschaft, die eine Instanz von <xref:System.ServiceModel.Security.IdentityVerifier> zurückgibt, von der aus `MyIdentityVerifier` angepasst wird.  
   
- ![Das Diagramm zeigt ein benutzerdefiniertes Bindungselement](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
+ ![Diagramm mit der ein benutzerdefiniertes Bindungselement](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
   
- Weitere Informationen zum Erstellen einer benutzerdefinierten identitätsüberprüfung finden Sie unter Vorgehensweise: [Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
+ Weitere Informationen zum Erstellen einer benutzerdefinierten identitätsüberprüfung finden Sie unter Vorgehensweise: [Vorgehensweise: Erstellen eine benutzerdefinierten Clientidentitätsüberprüfung](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).  
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>So verwenden Sie separate Zertifikate für Signieren und Verschlüsselung  
   
@@ -89,10 +89,10 @@ In diesem Thema wird gezeigt, wie zum Konfigurieren der Windows Communication Fo
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 1eddf3ad52bab6ef4665d7c3691353fa9c54574c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513723"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn die Daten erneut zugegriffen werden, erhalten Anwendungen die Daten aus dem Cache stattdessen aus der ursprünglichen Quelle abrufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
@@ -71,7 +71,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 5.  In der **Namen** Text Geben Sie einen Namen für Ihr Projekt. Sie können z. B. eingeben **"WPFCaching"**.
 
-6.  Wählen Sie die **Projektmappenverzeichnis erstellen** Kontrollkästchen.
+6.  Aktivieren Sie das Kontrollkästchen **Verzeichnis für Projektmappe erstellen**.
 
 7.  Klicken Sie auf **OK**.
 

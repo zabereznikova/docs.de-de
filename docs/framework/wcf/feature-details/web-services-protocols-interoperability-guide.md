@@ -2,12 +2,12 @@
 title: Handbuch für die Interoperabilität von Webdienstprotokollen
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 96fdf00b5d64f1ed588907fc2717388b30ae1d92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154345"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521386"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Handbuch für die Interoperabilität von Webdienstprotokollen
 Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen implementiert. Viele dieser Protokolle verfügen über eine Reihe von Optionen und Erweiterungspunkten, deren Konfiguration im Ermessen der Implementierung liegt. Dieses Thema enthält eine Liste von Webdienstprotokollen, die von die WCF implementiert. In den weiteren Themen dieses Abschnitts finden Sie ausführlichere Informationen zur Implementierung der einzelnen unterstützten Protokolle.  
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen i
 |WSS: SOAP-Nachrichtensicherheit 1.1|[Webdienstesicherheit: SOAP-Nachrichtensicherheit 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |WSS: Username Token Profile 1.1|[Web Services Security-Tokenprofil 1.1](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Implementieren Sie keine kennwortbasierte Schlüsselableitung;<br /><br /> erfordern Password/@Type= PasswordText zugewiesen (Standard)|  
 |WSS: X509 token Profile 1,1|[Web Services Security x. 509-Zertifikatstokenprofil 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
-|WSS: Kerberos-Tokenprofil 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
+|WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
 |WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML Token Profile 1,1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure Conversation|[Webdienste sichere Konversationssprache](https://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4 (möglicherweise in englischer Sprache)|[Webdienste: Trust-Sprache](https://go.microsoft.com/fwlink/?LinkId=169514)|  
@@ -82,13 +82,13 @@ Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen i
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS-Richtlinie 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [WS-Policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS-Richtlinie 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+-   [WS-Policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
 -   [WS-PolicyAttachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange-1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
 -   [WS-Transfer Get zum Abrufen von Metadaten](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
@@ -100,13 +100,13 @@ Windows Communication Foundation (WCF) wird eine Zahl von Webdienstprotokollen i
   
 -   [Basic Security Profile 1.0 arbeiten Entwurf](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>Siehe auch  
- [Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
- [Messagingprotokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
- [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [WSDL und Richtlinie](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
- [Sicherheitsprotokolle](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
- [Protokoll für zuverlässiges Messaging, Version 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
- [Protokoll für zuverlässiges Messaging, Version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
- [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
- [Kontextaustauschprotokoll](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a>Siehe auch
+- [Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [Messagingprotokolle](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)
+- [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [WSDL und Richtlinie](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Sicherheitsprotokolle](../../../../docs/framework/wcf/feature-details/security-protocols.md)
+- [Protokoll für zuverlässiges Messaging, Version 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)
+- [Protokoll für zuverlässiges Messaging, Version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)
+- [Transaktionsprotokolle](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)
+- [Kontextaustauschprotokoll](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

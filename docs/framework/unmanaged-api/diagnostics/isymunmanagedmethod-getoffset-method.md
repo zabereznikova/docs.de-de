@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6485688c2964d477f0c5f68a3da714f084fa308f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515302"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset-Methode
-Gibt den Offset innerhalb dieser Methode, die entspricht einer bestimmten Position in einem Dokument.  
+Gibt den Offset innerhalb dieser Methode entspricht, die an einer bestimmten Position in einem Dokument zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +39,7 @@ HRESULT GetOffset(
   
 #### <a name="parameters"></a>Parameter  
  `document`  
- [in] Ein Zeiger auf das Dokument, für das der Offset angefordert wird.  
+ [in] Ein Zeiger auf das Dokument, das für das der Offset angefordert wird.  
   
  `line`  
  [in] Die Dokumentzeile, für die der Offset angefordert wird.  
@@ -55,5 +56,5 @@ HRESULT GetOffset(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

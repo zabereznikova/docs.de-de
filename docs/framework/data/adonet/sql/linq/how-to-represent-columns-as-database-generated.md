@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Darstellen von Spalten als datenbankgeneriert'
+title: 'Vorgehensweise: Darstellen von Spalten als datenbankgeneriert'
 ms.date: 03/30/2017
 ms.assetid: 6524b8a6-e5d2-4a3b-8e08-beafc4a84fd2
-ms.openlocfilehash: f6b127208ae359b43f273f54d7b5c72933c2eba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 572da93c216694b496dc5220af66bc00229ccd00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518344"
 ---
-# <a name="how-to-represent-columns-as-database-generated"></a>Gewusst wie: Darstellen von Spalten als datenbankgeneriert
-Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> Eigenschaft auf die <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut so kennzeichnen Sie ein Feld oder eine Eigenschaft Darstellung einer datenbankgenerierten Spalte.  
+# <a name="how-to-represent-columns-as-database-generated"></a>Vorgehensweise: Darstellen von Spalten als datenbankgeneriert
+Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> Eigenschaft für die <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut, um ein Feld oder eine Eigenschaft als Darstellung einer datenbankgenerierten Spalte zu bestimmen.  
   
  Codebeispiele finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.  
   
@@ -20,6 +20,6 @@ Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
   
 2.  Legen Sie den Wert der Eigenschaft auf `true` fest.  
   
-## <a name="see-also"></a>Siehe auch  
- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>Siehe auch
+- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

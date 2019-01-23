@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a89c706ece0949ffa3c182d53b57221acf81b18d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515068"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange-Methode
 Gibt den angegebenen Bereich der eingebetteten Quelle in den angegebenen Puffer zurück. Der Puffer muss groß genug für die Quelle sein.  
@@ -57,7 +58,7 @@ HRESULT GetSourceRange(
  [in] Die Größe der Quelle, in Bytes.  
   
  `pcSourceBytes`  
- [out] Ein Zeiger auf eine Variable, die Größe der Quelle empfängt.  
+ [out] Ein Zeiger auf eine Variable, die Größe der Datenquelle empfängt.  
   
  `source`  
  [out] Die Größe und die Länge des angegebenen Bereichs des Quelldokuments, in Bytes.  
@@ -65,5 +66,5 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedDocument-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedDocument-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

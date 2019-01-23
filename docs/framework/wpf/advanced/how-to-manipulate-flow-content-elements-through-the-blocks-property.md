@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Bearbeiten von fortlaufenden Inhaltselementen mit der Blocks-Eigenschaft'
+title: 'Vorgehensweise: Bearbeiten von fortlaufenden Inhaltselementen mit der Blocks-Eigenschaft'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: 74710c4a6dd58cf2836cd7671a3e39401a5ea774
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea664409073fc342d5f988f9d2af0df9b6b0af16
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521945"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Gewusst wie: Bearbeiten von fortlaufenden Inhaltselementen mit der Blocks-Eigenschaft
-Diese Beispiele zeigen einige der häufigeren Vorgänge, die für Inhaltselemente über ausgeführt werden, können die **Blöcke** Eigenschaft. Diese Eigenschaft dient zum Hinzufügen und Entfernen von Elementen aus <xref:System.Windows.Documents.BlockCollection>. Fortlaufenden Inhaltselemente mit einem **Blöcke** -Eigenschaft enthalten:  
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Vorgehensweise: Bearbeiten von fortlaufenden Inhaltselementen mit der Blocks-Eigenschaft
+Diese Beispiele veranschaulichen einige der häufigsten Vorgänge, die für fortlaufenden Inhaltselementen mit ausgeführt werden können die **Blöcke** Eigenschaft. Diese Eigenschaft wird verwendet, um das Hinzufügen und Entfernen von Elementen <xref:System.Windows.Documents.BlockCollection>. Fortlaufende Inhaltselemente, eine **Blöcke** -Eigenschaft enthalten:  
   
 -   <xref:System.Windows.Documents.Figure>  
   
@@ -30,7 +30,7 @@ Diese Beispiele zeigen einige der häufigeren Vorgänge, die für Inhaltselement
   
 -   <xref:System.Windows.Documents.TableCell>  
   
- Diese Beispiele verwenden geschehen <xref:System.Windows.Documents.Section> abfrageausführungsprozess, während die Content-Element, aber diese Verfahren beziehen sich auf alle Elemente, die eine Auflistung der Datenfluss Inhaltselement hosten.  
+ In diesen Beispielen auftreten, verwenden Sie <xref:System.Windows.Documents.Section> wie der Flow Content-Element, aber diese Verfahren gelten für alle Elemente, die eine Auflistung der Flow-Element für Inhalt zu hosten.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt ein neues <xref:System.Windows.Documents.Section> und verwendet dann die **hinzufügen** Methode, um einen neuen Absatz zum Hinzufügen der **Abschnitt** Inhalt.  
@@ -51,22 +51,22 @@ Diese Beispiele zeigen einige der häufigeren Vorgänge, die für Inhaltselement
  [!code-vb[FlowDocumentSnippets#_SectionBlocksCount](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblockscount)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel löscht die letzte <xref:System.Windows.Documents.Block> Element in der <xref:System.Windows.Documents.Section>.  
+ Das folgende Beispiel löscht das letzte <xref:System.Windows.Documents.Block> Element in der <xref:System.Windows.Documents.Section>.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksremovelast)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksremovelast)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel löscht den Inhalt (<xref:System.Windows.Documents.Block> Elemente) aus dem <xref:System.Windows.Documents.Section>.  
+ Das folgende Beispiel löscht den Inhalt (<xref:System.Windows.Documents.Block> Elemente) aus der <xref:System.Windows.Documents.Section>.  
   
  [!code-csharp[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentSnippets/CSharp/Window1.xaml.cs#_sectionblocksclear)]
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Documents.BlockCollection>  
- <xref:System.Windows.Documents.InlineCollection>  
- <xref:System.Windows.Documents.ListItemCollection>  
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Bearbeiten der Spalten einer Tabelle mit der Columns-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Documents.BlockCollection>
+- <xref:System.Windows.Documents.InlineCollection>
+- <xref:System.Windows.Documents.ListItemCollection>
+- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [Bearbeiten der Spalten einer Tabelle mit der Columns-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)
+- [Bearbeiten der Zeilengruppen einer Tabelle mit der RowGroups-Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
