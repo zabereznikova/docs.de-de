@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Füllen einer XML-Struktur aus dem Dateisystem (Visual Basic)'
+title: 'Vorgehensweise: Auffüllen einer XML-Struktur aus dem Dateisystem (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: 158a6c5c6734f0aa11e22b5cbea35c960c7a1c40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babb8f835e8320b637f131bdc2e242c460c0548c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559787"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Vorgehensweise: Füllen einer XML-Struktur aus dem Dateisystem (Visual Basic)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>Vorgehensweise: Auffüllen einer XML-Struktur aus dem Dateisystem (Visual Basic)
 Eine häufige und sinnvolle Anwendung von XML-Strukturen besteht in deren Verwendung als hierarchischer Name/Wert-Datenspeicher. Sie können eine XML-Struktur mit hierarchischen Daten auffüllen und die Struktur dann abfragen, transformieren und bei Bedarf serialisieren. In diesem Verwendungsszenario ist ein großer Teil der XML-spezifischen Semantik, wie das Namespace- und Leerraumverhalten, ohne Bedeutung. Die XML-Struktur wird stattdessen als kleine hierarchische Datenbank für einen einzelnen Benutzer verwendet, die im Arbeitsspeicher gespeichert ist.  
   
 ## <a name="example"></a>Beispiel  
@@ -114,5 +114,5 @@ End Module
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

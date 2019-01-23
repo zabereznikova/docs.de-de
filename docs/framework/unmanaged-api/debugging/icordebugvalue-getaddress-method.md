@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c0fa19841580c7cfe8902577c3f756712a35893
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559840"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress-Methode
-Ruft die Adresse des Objekts "ICorDebugValue", das gerade gedebuggt wird.  
+Ruft die Adresse des Objekts "ICorDebugValue", der gerade gedebuggt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +37,13 @@ HRESULT GetAddress (
   
 #### <a name="parameters"></a>Parameter  
  `pAddress`  
- [out] Zeiger auf ein `CORDB_ADDRESS` Objekt, das die Adresse dieses Objekts Wert angibt.  
+ [out] Zeiger auf eine `CORDB_ADDRESS` Objekt, das die Adresse des Wertobjekts angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert nicht verfügbar ist, wird 0 (null) zurückgegeben. Dies kann passieren, wenn der Wert zumindest teilweise in Registern ist oder in einem Garbage Collector-Handle gespeichert (`GCHandle`).  
+ Wenn der Wert nicht verfügbar ist, wird 0 (null) zurückgegeben. Dies kann passieren, wenn der Wert, zumindest teilweise in Registern ist oder in einem Garbage Collector-Handle (`GCHandle`).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -51,5 +51,5 @@ HRESULT GetAddress (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

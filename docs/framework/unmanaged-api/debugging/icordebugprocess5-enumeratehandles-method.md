@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b8c3f102405c9b9fa9af2597658b728e618cabb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559371"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles-Methode
 Ruft einen Enumerator für die Objekt-Handles in einem Prozess ab.  
@@ -39,21 +39,21 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  [in] Eine bitweise Kombination von [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Werte, der angibt, den Typ des Handles in die Auflistung eingeschlossen werden sollen.  
   
  `ppENum`  
- [out] Ein Zeiger auf die Adresse des ein [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) also einen Enumerator für die Objekte, die Garbage Collection übergeben werden.  
+ [out] Ein Zeiger auf die Adresse einer [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) , einen Enumerator für die Objekte, das speicherbereinigt werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- `EnumerateHandles` ist eine Hilfsfunktion, die Überprüfung der Handletabelle unterstützt. Ähnelt der [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) -Methode, außer dass anstatt Auffüllen einer [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) Auflistung mit allen Objekten, die Garbage Collection übergeben, werden sie enthält nur Objekte, die Handles aus der Handletabelle verfügen.  
+ `EnumerateHandles` ist eine Hilfsfunktion, die Überprüfung der Handletabelle unterstützt. Es ähnelt der [icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) -Methode, außer dass statt Auffüllen einer [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) Auflistung mit allen Objekten, das speicherbereinigt werden soll es enthält nur Objekte, die Handles aus der Handletabelle verfügen.  
   
- Die `types` Parameter gibt die Handletypen in die Auflistung eingeschlossen werden sollen. `types` kann eine der folgenden drei Elemente von der [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Enumeration:  
+ Die `types` Parameter gibt die Typen von Handles in die Auflistung eingeschlossen werden sollen. `types` die folgenden drei Elemente von möglich die [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Enumeration:  
   
--   `CorHandleStrongOnly` (Handles zum starken Verweise nur).  
+-   `CorHandleStrongOnly` (Handles auf zuverlässige Verweise nur).  
   
 -   `CorHandleWeakOnly` (um nur schwache Verweise Handles).  
   
 -   `CorHandleAll` (alle Handles).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -61,6 +61,6 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

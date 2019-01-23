@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Programmgesteuertes Drucken von XPS-Dateien'
+title: 'Vorgehensweise: Programmgesteuertes Drucken von XPS-Dateien'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: a42f9b2101266857e56dee6836f4c3b27b3c6f96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fbef6aef11917a4e8f0a098c523ec2b542664681
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556612"
 ---
-# <a name="how-to-programmatically-print-xps-files"></a>Gewusst wie: Programmgesteuertes Drucken von XPS-Dateien
+# <a name="how-to-programmatically-print-xps-files"></a>Vorgehensweise: Programmgesteuertes Drucken von XPS-Dateien
 Können Sie eine Überladung von der <xref:System.Printing.PrintQueue.AddJob%2A> Methode zum Drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dateien ohne Öffnen eine <xref:System.Windows.Controls.PrintDialog> oder, im Prinzip alle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] überhaupt.  
   
  Sie können auch drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] von Dateien mit vielen <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden der <xref:System.Windows.Xps.XpsDocumentWriter>. Weitere Informationen dazu finden Sie unter [Drucken eines XPS-Dokuments](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)).  
@@ -58,14 +58,14 @@ Können Sie eine Überladung von der <xref:System.Printing.PrintQueue.AddJob%2A>
   
  **Beachten Sie** der Einfachheit halber das obige Beispiel verwendet das Vorhandensein einer \*.xps Erweiterung als Beleg dafür, die eine Datei ist [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateien müssen diese Erweiterung jedoch nicht haben. [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) ist eine Möglichkeit, eine Datei auf [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Gültigkeit zu testen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.AddJob%2A>  
- <xref:System.Threading.ApartmentState>  
- <xref:System.STAThreadAttribute>  
- [XPS](https://www.microsoft.com/xps)  
- [Drucken eines XPS-Dokuments](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))  
- [Verwaltete und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))  
- [Dokumente in WPF](documents-in-wpf.md)  
- [Übersicht über das Drucken](printing-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.AddJob%2A>
+- <xref:System.Threading.ApartmentState>
+- <xref:System.STAThreadAttribute>
+- [XPS](https://www.microsoft.com/xps)
+- [Drucken eines XPS-Dokuments](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
+- [Verwaltete und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- [Dokumente in WPF](documents-in-wpf.md)
+- [Übersicht über das Drucken](printing-overview.md)

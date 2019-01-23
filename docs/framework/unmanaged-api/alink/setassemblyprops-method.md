@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aed553a3a8d54b5229a122e76b61e3e58d4af3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65d6e929a0a6fb5e1933a6c9216dfc5b56342113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560645"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps-Methode
 Weist Eigenschaften auf Assemblyebene.  
@@ -42,21 +42,21 @@ HRESULT SetAssemblyProps(
  Die ID der Assembly.  
   
  `FileToken`  
- Datei, die die Eigenschaft definiert. Kann NULL sein, wenn `AssemblyID` einen ungebundenen NETMODULE-Datei nicht an.  
+ Datei, die Eigenschaft definiert. Kann NULL sein, wenn `AssemblyID` gibt nicht an eine nicht gebundene NETMODULE-Datei.  
   
  `Option`  
- Gibt an, die Möglichkeit zum Ändern.  
+ Gibt an, die Möglichkeit, zu ändern.  
   
  `Value`  
- Neuer Wert der Option.  
+ Neue Wert der Option.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h.  
+ Erfordert alink.h an.  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

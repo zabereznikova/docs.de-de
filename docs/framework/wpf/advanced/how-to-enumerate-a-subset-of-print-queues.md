@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen'
+title: 'Vorgehensweise: Auflisten einer Teilmenge von Druckwarteschlangen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbd9e7332a5e021e1cf9fba75f6d21ae01582b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558565"
 ---
-# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Gewusst wie: Auflisten einer Teilmenge von Druckwarteschlangen
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Vorgehensweise: Auflisten einer Teilmenge von Druckwarteschlangen
 Eine gängige Situation gegenüberstehen (IT) Experten, die Verwaltung einer unternehmensweiten Gruppe der Drucker ist zum Generieren einer Liste der Drucker mit bestimmten Eigenschaften. Diese Funktionalität wird bereitgestellt, indem die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode eine <xref:System.Printing.PrintServer> Objekt und die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration.  
   
 ## <a name="example"></a>Beispiel  
@@ -34,13 +34,13 @@ Eine gängige Situation gegenüberstehen (IT) Experten, die Verwaltung einer unt
   
  Sie könnten dieses Beispiel erweitern, indem Sie die `foreach` Schleife, die jeder Druckwarteschlange werden die Schritte weiter sicherheitsüberprüfungen unterzogen. Angenommen, Sie könnten blenden Sie Drucker, die nicht doppelseitiger Druck unterstützen, indem Sie den Aufruf der Schleife jeder Druckwarteschlange <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> -Methode und Testen Sie den zurückgegebenen Wert, auf das Vorhandensein von Duplexdruck.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.LocalPrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS-Dokument-Generator](https://go.microsoft.com/fwlink/?LinkId=147319)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.LocalPrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Microsoft XPS-Dokument-Generator](https://go.microsoft.com/fwlink/?LinkId=147319)

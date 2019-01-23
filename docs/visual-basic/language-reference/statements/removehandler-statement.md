@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: c1e6ffec64bc01936955a2e94aa9c110b317109f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 27cdd2753507c6fc4d5c5041607e2ccb425b81b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560619"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler-Anweisung
 Entfernt die Zuordnung zwischen einem Ereignis und einen Ereignishandler.  
@@ -41,8 +41,8 @@ RemoveHandler event, AddressOf eventhandler
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Siehe auch
+- [AddHandler-Anweisung](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)

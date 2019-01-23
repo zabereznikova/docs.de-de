@@ -1,16 +1,16 @@
 ---
-title: 'Dienst: Fehlerhafte Anrufe pro Sekunde'
+title: 'Dienst: Fehlerhafte Aufrufe pro Sekunde'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: 9cd649788e1304c68caa1bbf4b5fd27e6fc9d508
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a043cf30fa67707aca3edf50cf23372ade5e5a42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559891"
 ---
-# <a name="service-calls-failed-per-second"></a>Dienst: Fehlerhafte Anrufe pro Sekunde
-Indikatorname: Calls Failed Per Second  
+# <a name="service-calls-failed-per-second"></a>Dienst: Fehlerhafte Aufrufe pro Sekunde
+Indikatorname: Fehlerhafte Aufrufe pro Sekunde.  
   
 ## <a name="description"></a>Beschreibung  
  Die Anzahl von Aufrufen, die nicht behandelte Ausnahmen aufweisen und von diesem Dienst in einer Sekunde empfangen werden.  
@@ -25,5 +25,5 @@ Indikatorname: Calls Failed Per Second
   
  Der Wert dieses Indikators erhöht sich jedes Mal, wenn in diesem Dienst eine nicht behandelte Ausnahme auftritt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

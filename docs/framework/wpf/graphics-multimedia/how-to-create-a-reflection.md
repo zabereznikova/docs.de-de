@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer Reflektion'
+title: 'Vorgehensweise: Erstellen einer Reflektion'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], creating reflections
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
-ms.openlocfilehash: 716adff5c5c41e6601e384b6669516cb6ba1041d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0fae98966481003c7906f5cbb34afaea666d583d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559033"
 ---
-# <a name="how-to-create-a-reflection"></a>Gewusst wie: Erstellen einer Reflektion
+# <a name="how-to-create-a-reflection"></a>Vorgehensweise: Erstellen einer Reflektion
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.VisualBrush> eine Reflektion erstellt. Da eine <xref:System.Windows.Media.VisualBrush> können vorhandene visuelle anzeigen, Sie können diese Funktion verwenden, um interessante visuelle Effekte, z.B. Reflexionen und vergrößerungen zu erzeugen.  
   
 ## <a name="example"></a>Beispiel  
@@ -31,6 +31,6 @@ Ein reflektiertes Visual-Objekt
   
  Das vollständige Beispiel, das Beispiele enthält, die zeigen, wie Sie Teile des Bildschirms zu vergrößern und Reflektionen erstellt werden, finden Sie unter [Beispiel zu VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.VisualBrush>  
- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.VisualBrush>
+- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

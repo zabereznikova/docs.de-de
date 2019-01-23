@@ -2,12 +2,12 @@
 title: Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 7fab84b830917c22d684a06dfbfb2dd540703845
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559930"
 ---
 # <a name="transport-security"></a>Transportsicherheit
 Die transportsicherheit in Windows Communication Foundation (WCF), abhängig von der ausgewählten Bindung ab. Der Transport, den die Bindung implementiert, bestimmt das tatsächliche Sicherheitsverfahren. In den Themen in diesem Abschnitt werden die implementierten Mechanismen und deren Optionen erläutert.  
@@ -25,7 +25,7 @@ Die transportsicherheit in Windows Communication Foundation (WCF), abhängig von
  [Verwenden von Identitätswechsel mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  Erläutert die fünf Identitätswechselebenen, die mit dem Transportsicherheitsmodus möglich sind.  
   
- [Vorgehensweise: Konfigurieren eines Ports mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  Stellt exemplarisch die Grundlagen der Konfiguration eines Anschlusses auf einem Computer mit einem X.509-Zertifikat für SSL-(Transport-)Sicherheit vor.  
   
 ## <a name="reference"></a>Referenz  
@@ -38,5 +38,5 @@ Die transportsicherheit in Windows Communication Foundation (WCF), abhängig von
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

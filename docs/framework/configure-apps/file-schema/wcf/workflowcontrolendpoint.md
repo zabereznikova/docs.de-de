@@ -2,18 +2,18 @@
 title: '&lt;workflowControlEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: 178ccc8ac35b0ac76d74c818dce43dcffc5c0835
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9c641d4081d88b059e1d778f6383f85c064af7f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558669"
 ---
 # <a name="ltworkflowcontrolendpointgt"></a>&lt;workflowControlEndpoint&gt;
 Dieses Konfigurationselement definiert einen Standardendpunkt zur Steuerung der Ausführung von Workflowinstanzen (create, run, suspend, terminate usw.).  
   
 \<system.ServiceModel>  
-\<StandardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ Dieses Konfigurationselement definiert einen Standardendpunkt zur Steuerung der 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>

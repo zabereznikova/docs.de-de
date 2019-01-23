@@ -2,16 +2,17 @@
 title: Entitätenmenge
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 5a8b4bdac2d0cb2065438bb390c002fcb690b1f6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3cd212c0bf5eefb73a87aa01c9403d6f2304d506
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557119"
 ---
 # <a name="entity-set"></a>Entitätenmenge
-Ein *Entitätenmenge* ist ein logischer Container für Instanzen von einem [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) und Instanzen eines beliebigen Typs abgeleitet aus diesem Entitätstyp. (Informationen über abgeleitete Typen finden Sie unter [Entity Data Model: Vererbung](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Die Beziehung zwischen einem Entitätstyp und einer Entitätenmenge entspricht der Beziehung zwischen einer Zeile und einer Tabelle in einer relationalen Datenbank: Wie eine Zeile beschreibt ein Entitätstyp Datenstruktur, und eine Entitätenmenge enthält wie eine Tabelle Instanzen einer bestimmten Struktur. Eine Entitätenmenge ist keine Datenmodellkonstruktion, sie beschreibt keine Datenstruktur. Vielmehr stellt eine Entitätenmenge eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Entitätstypinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
+Ein *Entitätenmenge* ist ein logischer Container für Instanzen von einem [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) und Instanzen eines beliebigen Typs, der von diesem Entitätstyp abgeleitet. (Weitere Informationen zu abgeleiteten Typen finden Sie unter [Entity Data Model: Vererbung](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Die Beziehung zwischen einem Entitätstyp und einer Entitätenmenge ist analog zur Beziehung zwischen einer Zeile und eine Tabelle in einer relationalen Datenbank: Wie eine Zeile beschreibt ein Entitätstyp Datenstruktur, und wie eine Tabelle enthält ein Entitätssatz Instanzen einer bestimmten Struktur. Eine Entitätenmenge ist keine Datenmodellkonstruktion, sie beschreibt keine Datenstruktur. Vielmehr stellt eine Entitätenmenge eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Entitätstypinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
   
- Eine Entitätenmenge wird definiert, in eine [Entitätscontainer](../../../../docs/framework/data/adonet/entity-container.md), dies ist eine logische Gruppierung von Entitätenmengen und [Zuordnungssätze](../../../../docs/framework/data/adonet/association-set.md).  
+ Eine Entitätenmenge wird definiert, innerhalb einer [Entitätscontainer](../../../../docs/framework/data/adonet/entity-container.md), dies ist eine logische Gruppierung von Entitätenmengen und [Zuordnungssätze](../../../../docs/framework/data/adonet/association-set.md).  
   
  Die folgenden Voraussetzungen müssen erfüllt sein, damit eine Entitätstypinstanz in einer Entitätenmenge existiert:  
   
@@ -31,11 +32,11 @@ Ein *Entitätenmenge* ist ein logischer Container für Instanzen von einem [Enti
   
  ![Beispielmodell](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   
- Die folgende Abbildung zeigt zwei Entitätenmengen (`Books` und `Publishers`) und einen Zuordnungssatz (`PublishedBy`) auf Grundlage des oben gezeigten konzeptionellen Modells. BI in der `Books` Entitätenmenge stellt eine Instanz der dem `Book` Entitätstyp zur Laufzeit. Auf ähnliche Weise Pj darstellen einer `Publisher` Instanz die `Publishers` Entitätenmenge. BiPj stellt eine Instanz der dem `PublishedBy` Zuordnung in der `PublishedBy` Zuordnungssatz.  
+ Die folgende Abbildung zeigt zwei Entitätenmengen (`Books` und `Publishers`) und einen Zuordnungssatz (`PublishedBy`) auf Grundlage des oben gezeigten konzeptionellen Modells. BI in der `Books` Entitätenmenge stellt eine Instanz von der `Book` Entitätstyp zur Laufzeit. Auf ähnliche Weise darstellen von Pj eine `Publisher` -Instanz der `Publishers` Entitätenmenge. BiPj stellt eine Instanz von der `PublishedBy` Zuordnung in der `PublishedBy` Zuordnungssatz.  
   
- ![Beispiel](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![Wird in Beispiel](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
   
- Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) um konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen Entitätscontainer mit einer Entitätenmenge für jeden Entitätstyp im oben gezeigten konzeptionellen Modell. Beachten Sie, dass der Name und der Entitätstyp für jede Entitätenmenge mit XML-Attributen definiert werden.  
+ Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)), konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen Entitätscontainer mit einer Entitätenmenge für jeden Entitätstyp im oben gezeigten konzeptionellen Modell. Beachten Sie, dass der Name und der Entitätstyp für jede Entitätenmenge mit XML-Attributen definiert werden.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
@@ -43,6 +44,6 @@ Ein *Entitätenmenge* ist ein logischer Container für Instanzen von einem [Enti
   
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Siehe auch
+- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

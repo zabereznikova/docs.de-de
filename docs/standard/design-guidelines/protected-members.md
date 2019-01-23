@@ -11,12 +11,12 @@ helpviewer_keywords:
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
-ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559339"
 ---
 # <a name="protected-members"></a>Geschützte Member
 Geschützte Member selbst bieten keine Erweiterungen, jedoch können sie Erweiterbarkeit durch Unterklassen leistungsfähiger machen. Sie können verwendet werden, um erweiterte Anpassungsoptionen verfügbar zu machen, ohne unnötig verkompliziert die wichtigsten öffentliche Schnittstelle.  
@@ -35,5 +35,5 @@ Geschützte Member selbst bieten keine Erweiterungen, jedoch können sie Erweite
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

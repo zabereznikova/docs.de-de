@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c37a9af6a1532d03fa04ca151605cef7ab5244e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27c16cb5d85ddffc1646bee893c5644682812025
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560580"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>CertFreeAuthenticodeTimestamperInfo-Funktion
-Macht Ressourcen frei der [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) Struktur.  
+Gibt zugeordnete Ressourcen frei, die [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) Struktur.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,10 +30,10 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
   
 #### <a name="parameters"></a>Parameter  
  `pTimestamperInfo`  
- [in, out] Informationen über den Ersteller des Zeitstempels, die veröffentlicht werden sollen. Finden Sie unter der [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) Struktur.  
+ [in, out] Informationen über den Ersteller des Zeitstempels, die veröffentlicht werden sollen. Finden Sie unter den [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) Struktur.  
   
 ## <a name="return-value"></a>Rückgabewert  
  `S_OK`, wenn die Funktion erfolgreich ausgeführt wird. Andernfalls wird ein Fehlercode zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

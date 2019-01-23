@@ -3,21 +3,21 @@ title: '&lt;issuerTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9f88d3cec5e1cb95ce5e12b203e32b706d407a2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556625"
 ---
 # <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
 Registriert die Aussteller-tokenresolver, der von Handlern in die Auflistung der Tokenhandler verwendet wird. Die Aussteller-tokenresolver wird zum Auflösen des Signaturtokens auf eingehende Tokens und Nachrichten.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<SecurityTokenHandlers >  
-\<SecurityTokenHandlerConfiguration >  
-\<IssuerTokenResolver >  
+\<securityTokenHandlers>  
+\<securityTokenHandlerConfiguration>  
+\<issuerTokenResolver>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,13 +44,13 @@ Registriert die Aussteller-tokenresolver, der von Handlern in die Auflistung der
 |Typ|Gibt den Typ der Aussteller-tokenresolvers. Muss entweder die <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Klasse oder ein Typ, der von abgeleitet ist die <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Klasse. Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung der Tokenhandler.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung der Tokenhandler.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Aussteller-tokenresolver wird zum Auflösen des Signaturtokens auf eingehende Tokens und Nachrichten. Es wird verwendet, um das kryptografische Material abzurufen, das für die Überprüfung der Signatur verwendet wird. Sie müssen angeben, die `type` Attribut. Der angegebene Typ kann es sich entweder <xref:System.IdentityModel.Tokens.IssuerTokenResolver> oder einen benutzerdefinierten Typ abgeleitet, die die <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Klasse.  
@@ -87,5 +87,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

@@ -2,25 +2,25 @@
 title: 'Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 9bfce22e9de1d6115cb88daddcd2dca355b6bae8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558422"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche
 In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche und fügen sie dem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Referenz zu der Code, der in der Datei "MainWindow.Xaml.cs" werden sollen, nach Abschluss von drei Aufgaben in der [erneutes Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) Reihe von Themen am Ende dieses Themas bereitgestellt wird.  
+ Referenz zu der Code, der in der Datei "MainWindow.Xaml.cs" werden sollen, nach Abschluss der drei Aufgaben, in der [erneutes Hosten von Workflow-Designer](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) Reihe von Themen am Ende dieses Themas bereitgestellt wird.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>So erstellen Sie die Toolbox und fügen sie dem Raster hinzu.  
   
-1.  Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, mithilfe des folgenden Verfahrens in beschriebenen [Aufgabe 2: Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, gemäß das Verfahren in [Aufgabe 2: Hosten des Workflowdesigners](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
   
-2.  In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Code anzeigen**.  
+2.  In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
   
-3.  Hinzufügen einer `GetToolboxControl` Methode, um die `MainWindow` -Klasse, die erstellt eine <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, fügt eine neue **Toolbox** Kategorie, um die **Toolbox**, und weist die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitätstypen für diese Kategorie.  
+3.  Hinzufügen einer `GetToolboxControl` Methode, um die `MainWindow` Klasse, die erstellt eine <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, fügt ein neues **Toolbox** Kategorie, um die **Toolbox**, und weist die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitätstypen für die auf diese Kategorie.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-4.  Hinzufügen eine privaten `AddToolbox` Methode, um die `MainWindow` -Klasse, die platziert die **Toolbox** in der linken Spalte des Rasters einzufügen.  
+4.  Hinzufügen eine privaten `AddToolbox` Methode, um die `MainWindow` -Klasse, die platziert die **Toolbox** in der linken Spalte des Rasters.  
   
     ```csharp  
     private void AddToolBox()  
@@ -77,9 +77,9 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
   
 ### <a name="to-create-the-propertygrid"></a>So erstellen Sie den PropertyGrid  
   
-1.  In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Code anzeigen**.  
+1.  In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
   
-2.  Hinzufügen der `AddPropertyInspector` Methode, um die `MainWindow` Klasse platziert die **PropertyGrid** Bereich in der äußersten rechten Spalte des Rasters einzufügen.  
+2.  Hinzufügen der `AddPropertyInspector` Methode, um die `MainWindow` -Klasse die **PropertyGrid** Bereich in der äußersten rechten Spalte des Rasters.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -103,7 +103,7 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-4.  Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen. Die **Toolbox**, entwurfszeichnungsbereich des Workflows und **PropertyGrid** sollte alle Bereiche angezeigt werden, und Sie ziehen, wenn ein <xref:System.Activities.Statements.Assign> Aktivität oder eine <xref:System.Activities.Statements.Sequence> -Aktivität auf den entwurfszeichnungsbereich der Eigenschaftenraster sollten je nach markierter Aktivität aktualisiert.  
+4.  Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen. Die **Toolbox**, entwurfszeichnungsbereich des Workflows und **PropertyGrid** sollte alle Bereiche angezeigt werden, und Sie ziehen, wenn ein <xref:System.Activities.Statements.Assign> Aktivität oder eine <xref:System.Activities.Statements.Sequence> Aktivität auf der Entwurfs-Canvas die Eigenschaftenraster sollte je nach markierter Aktivität aktualisiert werden.  
   
 ## <a name="example"></a>Beispiel  
  Die Datei "MainWindow.xaml.cs" sollte jetzt den folgenden Code enthalten.  
@@ -212,7 +212,7 @@ namespace HostingApplication
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erneutes Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
- [Aufgabe 2: Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+## <a name="see-also"></a>Siehe auch
+- [Erneutes Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
+- [Task 2: Hosten des Workflowdesigners](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

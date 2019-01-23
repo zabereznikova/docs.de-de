@@ -11,12 +11,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: KrzysztofCwalina
-ms.openlocfilehash: 7e5fe66106ad34e88bbf435794a08a159c045b02
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559540"
 ---
 # <a name="nested-types"></a>Geschachtelte Typen
 Ein geschachtelter Typ ist ein Typ, der innerhalb des Bereichs eines anderen Typs, der den einschließenden Typ aufgerufen wird, definiert. Ein geschachtelter Typ hat Zugriff auf alle Member des einschließenden Typs. Beispielsweise hat er Zugriff auf private Felder definiert, in den einschließenden Typ und geschützte Felder, die in alle vorausgehenden Elemente des einschließenden Typs definiert.  
@@ -47,5 +47,5 @@ Ein geschachtelter Typ ist ein Typ, der innerhalb des Bereichs eines anderen Typ
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
+- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

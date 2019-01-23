@@ -2,12 +2,6 @@
 title: Übersicht über Attribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: e6d11daeac2f2392e1080eca8503c9b2c420ab35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644484"
 ---
 # <a name="attributes-overview-visual-basic"></a>Übersicht über Attribute (Visual Basic)
 Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Informationen Code (Assemblys, Typen, Methoden, Eigenschaften usw.) zuzuordnen. Nach dem Zuordnen eines Attributs zu einer Programmentität kann das Attribut zur Laufzeit mit einer Technik namens *Reflektion* abgefragt werden. Weitere Informationen finden Sie unter [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -136,13 +130,13 @@ Module: CLSCompliant(True)>
   
 -   [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))  
   
--   [How to: Create a C/C++ Union by Using Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md) (Gewusst wie: Erstellen einer Union in C/C++ mit Attributen (Visual Basic))  
+-   [Vorgehensweise: Erstellen einer C/C++-Union mit Attributen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
 -   [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Gemeinsame Attribute (Visual Basic))  
   
--   [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md) (Aufruferinformationen (Visual Basic))  
+-   [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)  
- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Attribute](../../../../standard/attributes/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
+- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Attribute](../../../../standard/attributes/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2122c06c6e4f1137173f02e37fb0982864e7ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d660deb69e694a70a140b6d00c355442e3c5094
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558904"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs-Methode
-Ruft einen Enumerator für ein Array von MethodSpec-Token mit der angegebenen MethodDef oder MemberRef token.  
+Ruft einen Enumerator für ein Array von MethodSpec-Token mit dem angegebenen MethodDef oder MemberRef verknüpften token.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,13 +44,13 @@ HRESULT EnumMethodSpecs (
  [in, out] Ein Zeiger auf den Enumerator für `rMethodSpecs`.  
   
  `tk`  
- [in] Das MemberRef oder MethodDef-Token, das die Methode darstellt, deren MethodSpec-Token aufgelistet werden sollen. Wenn der Wert der `tk` ist 0 (null), werden alle MethodSpec-Token im Bereich aufgezählt werden.  
+ [in] Das MemberRef oder MethodDef-Token, das die Methode darstellt, deren MethodSpec-Token sind, aufgelistet werden sollen. Wenn der Wert des `tk` ist 0 (null), alle MethodSpec-Token im Bereich, werden aufgezählt.  
   
  `rMethodSpecs`  
  [out] Das Array von aufzulistenden MethodSpec-Token.  
   
  `cMax`  
- [in] Die angeforderte maximale Anzahl von Token zu versehen `rMethodSpecs`.  
+ [in] Die angeforderte maximale Anzahl von Token in platzieren `rMethodSpecs`.  
   
  `pcMethodSpecs`  
  [out] Die zurückgegebene Anzahl von Token in platziert `rMethodSpecs`.  
@@ -60,17 +60,17 @@ HRESULT EnumMethodSpecs (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodSpecs` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|`phEnum` verfügt über keine Memberelemente. In diesem Fall `pcMethodSpecs` auf 0 (null) festgelegt ist.|  
+|`S_FALSE`|`phEnum` enthält keine Memberelemente. In diesem Fall `pcMethodSpecs` auf 0 (null) festgelegt ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -5,35 +5,35 @@ helpviewer_keywords:
 - data grids [Windows Forms], customization
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
-ms.openlocfilehash: 92bbace4d0869aca67025f1e4ac8c451fe073219
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 901b221f74fa76221ed3f19e9eb4c5f17c6534fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559553"
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>Anpassen des DataGridView-Steuerelements von Windows Forms
-Die `DataGridView` Steuerelement bietet mehrere Eigenschaften, die Sie zum Anpassen der Darstellung und das grundlegende Verhalten (Aussehen und Verhalten) Zellen, Zeilen und Spalten verwenden können. Wenn Sie besondere Anforderungen verfügen, die hinausgehen, das die Funktionen des die <xref:System.Windows.Forms.DataGridViewCellStyle> -Klasse, allerdings können Sie auch Ownerdrawing für das Steuerelement implementieren oder erweitern die Funktionen durch das Erstellen von benutzerdefinierten Zellen, Spalten und Zeilen.  
+Die `DataGridView` -Steuerelement umfasst mehrere Eigenschaften, die Sie verwenden können, um die Darstellung und das grundlegende Verhalten (Aussehen und Verhalten), der die Zellen, Zeilen und Spalten anzupassen. Wenn Sie besondere Anforderungen verfügen, die über die Funktionen von hinausgehen der <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse, allerdings können Sie auch Ownerdrawing für das Steuerelement implementieren oder Erweitern Sie die Funktionen, durch das Erstellen von benutzerdefinierten Zellen, Spalten und Zeilen.  
   
- Um Zeilen und Zellen selbst zeichnen, können Sie verschiedene behandeln `DataGridView` zeichnen-Ereignisse. Um vorhandene Funktionen zu ändern oder neue Funktionen bereitzustellen, können Sie Ihre eigenen Typen abgeleitet werden, aus der vorhandenen erstellen `DataGridViewCell`, `DataGridViewColumn`, und `DataGridViewRow` Typen. Sie können auch neue Bearbeitungsfunktionen bereitstellen, durch das Erstellen von abgeleiteter Typen, die Anzeigen eines Steuerelements Ihrer Wahl an, wenn eine Zelle im Bearbeitungsmodus befindet.  
+ Um Zeilen und Zellen selbst zeichnen, können Sie verschiedene behandeln `DataGridView` zeichnen-Ereignisse. Um vorhandene Funktionalität ändern oder neue Funktionen bereitzustellen, können Sie Ihre eigenen Typen abgeleitet, die vorhandene erstellen `DataGridViewCell`, `DataGridViewColumn`, und `DataGridViewRow` Typen. Sie können auch neue Funktionen bereitstellen, durch das Erstellen von abgeleiteten Typen, die Anzeigen eines Steuerelements Ihrer Wahl an, wenn eine Zelle im Bearbeitungsmodus befindet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Anpassen der Darstellung von Zellen im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
- Beschreibt das Behandeln der <xref:System.Windows.Forms.DataGridView.CellPainting> Ereignis um zeichnen Zellen manuell.  
+ [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+ Beschreibt, wie Sie behandelt die <xref:System.Windows.Forms.DataGridView.CellPainting> Ereignis, um zeichnen Zellen manuell.  
   
- [Gewusst wie: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
- Beschreibt das Behandeln der <xref:System.Windows.Forms.DataGridView.RowPrePaint> und <xref:System.Windows.Forms.DataGridView.RowPostPaint> Ereignisse, um Zeilen mit einem benutzerdefinierten, Farbverlauf Hintergrund zeichnen, und Inhalte, die mehrere Spalten umfasst.  
+ [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+ Beschreibt, wie Sie behandelt die <xref:System.Windows.Forms.DataGridView.RowPrePaint> und <xref:System.Windows.Forms.DataGridView.RowPostPaint> Ereignisse, um Zeilen mit einem benutzerdefinierten, Farbverlauf als Hintergrund zeichnen und den Inhalt, der mehrere Spalten umfasst.  
   
- [Gewusst wie: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
- Enthält Informationen zum Erstellen von benutzerdefinierter Typen abgeleitet `DataGridViewCell` und `DataGridViewColumn` um Zellen hervorgehoben, wenn der Mauszeiger darauf verbleibt.  
+ [Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern Aussehens und Verhaltens](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ Beschreibt das Erstellen von benutzerdefinierter Typen, die von abgeleiteten `DataGridViewCell` und `DataGridViewColumn` um Zellen zu markieren, wenn der Mauszeiger darauf zeigt.  
   
- [Gewusst wie: Deaktivieren von Schaltflächen in einer Schaltflächenspalte im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
- Enthält Informationen zum Erstellen von benutzerdefinierter Typen abgeleitet <xref:System.Windows.Forms.DataGridViewButtonCell> und <xref:System.Windows.Forms.DataGridViewButtonColumn> um deaktivierte Schaltflächen in einer Schaltflächenspalte anzuzeigen.  
+ [Vorgehensweise: Deaktivieren von Schaltflächen in einer Schaltflächenspalte im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ Beschreibt das Erstellen von benutzerdefinierter Typen, die von abgeleiteten <xref:System.Windows.Forms.DataGridViewButtonCell> und <xref:System.Windows.Forms.DataGridViewButtonColumn> um deaktivierte Schaltflächen in einer Schaltflächenspalte anzuzeigen.  
   
- [Gewusst wie: Hosten von Steuerelementen in DataGridView-Zellen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
- Beschreibt das Implementieren der `IDataGridViewEditingControl` Schnittstelle, und erstellen Sie benutzerdefinierte Typen abgeleitet `DataGridViewCell` und `DataGridViewColumn` um anzeigen eine <xref:System.Windows.Forms.DateTimePicker> steuern, wenn eine Zelle im Bearbeitungsmodus befindet.  
+ [Vorgehensweise: Hoststeuerelementen in Windows Forms-DataGridView-Zellen](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ Beschreibt das Implementieren der `IDataGridViewEditingControl` Schnittstelle, und erstellen Sie benutzerdefinierte Typen, die von abgeleiteten `DataGridViewCell` und `DataGridViewColumn` zum Anzeigen einer <xref:System.Windows.Forms.DateTimePicker> steuern, wenn eine Zelle im Bearbeitungsmodus befindet.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
@@ -53,6 +53,6 @@ Die `DataGridView` Steuerelement bietet mehrere Eigenschaften, die Sie zum Anpas
  [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Enthält Themen, in denen erörtert wird, wie die grundlegende Darstellung des Steuerelements sowie das Anzeigeformat von Zelldaten geändert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Spaltentypen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch
+- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Spaltentypen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

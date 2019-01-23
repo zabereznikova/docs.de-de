@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValueBreakpoint Schnittstelle1
+title: ICorDebugValueBreakpoint-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValueBreakpoint
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbb0479ee9d14b534e419c74560f4da527884246
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58e6807b0546eadc4baacc276fa1ba7bda4e3aba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557759"
 ---
-# <a name="icordebugvaluebreakpoint-interface1"></a>ICorDebugValueBreakpoint Schnittstelle1
-Erweitert die ICorDebugBreakpoint-Schnittstelle, um Zugriff auf bestimmte Werte zu ermöglichen.  
+# <a name="icordebugvaluebreakpoint-interface1"></a>ICorDebugValueBreakpoint-Schnittstelle1
+Erweitert die ICorDebugBreakpoint-Schnittstelle für den Zugriff auf bestimmte Werte.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetValue-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Ruft einen Schnittstellenzeiger auf ein ICorDebugValue-Objekt, das den Wert des Objekts darstellt, auf denen der Breakpoint festgelegt wurde.|  
+|[GetValue-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Ruft einen Schnittstellenzeiger auf ein ICorDebugValue-Objekt, das den Wert des Objekts darstellt, auf denen der Haltepunkt gesetzt ist.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -38,7 +38,7 @@ Erweitert die ICorDebugBreakpoint-Schnittstelle, um Zugriff auf bestimmte Werte 
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Erweitert die ICorDebugBreakpoint-Schnittstelle, um Zugriff auf bestimmte Werte 
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

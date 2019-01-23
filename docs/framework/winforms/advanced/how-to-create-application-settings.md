@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen von Anwendungseinstellungen'
+title: 'Vorgehensweise: Erstellen von Anwendungseinstellungen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558955"
 ---
-# <a name="how-to-create-application-settings"></a>Gewusst wie: Erstellen von Anwendungseinstellungen
+# <a name="how-to-create-application-settings"></a>Vorgehensweise: Erstellen von Anwendungseinstellungen
 Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen und diese an Eigenschaften für Ihr Formular oder die Steuerelemente Ihres Formulars binden, damit diese Einstellungen zur Laufzeit automatisch geladen und gespeichert werden.  
   
  Im folgenden Verfahren erstellen Sie manuell eine Wrapperklasse, die von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet ist. Dieser Klasse fügen Sie für jede Anwendungseinstellung, die Sie verfügbar machen möchten, eine Eigenschaft hinzu, auf die öffentlich zugegriffen werden kann.  
   
- Sie können dieses Verfahren auch mit minimalem Programmieraufwand in Visual Studio-Designer ausführen.  Siehe auch [Vorgehensweise: Erstellen von Anwendungseinstellungen mithilfe der Designer](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Sie können dieses Verfahren auch mit minimalem Programmieraufwand in Visual Studio-Designer ausführen.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Erstellen von Anwendungseinstellungen mithilfe des Designers](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>So erstellen Sie programmgesteuert neue Anwendungseinstellungen  
   
@@ -46,8 +46,8 @@ Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Der Standardeinstellungsanbieter (<xref:System.Configuration.LocalFileSettingsProvider>) speichert Informationen in Konfigurationsdateien als Nur-Text persistent. Auf diese Weise wird die Sicherheit für die Dateizugriffssicherheit eingeschränkt, die vom Betriebssystem für den aktuellen Benutzer bereitgestellt wird. Aus diesem Grund müssen die Informationen, die in Konfigurationsdateien gespeichert werden, sorgfältig ausgewählt werden. Häufig werden z. B. Anwendungseinstellungen zum Speichern von Verbindungszeichenfolgen verwendet, die auf den Datenspeicher der Anwendung zeigen. Allerdings sollten diese Zeichenfolgen aus Sicherheitsgründen keine Kennwörter enthalten. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter <xref:System.Configuration.SpecialSetting>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Configuration.SpecialSettingAttribute>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Gewusst wie: Überprüfen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Configuration.SpecialSettingAttribute>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Vorgehensweise: Überprüfen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
