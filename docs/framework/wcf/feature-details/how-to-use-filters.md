@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von Filtern'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530988"
 ---
 # <a name="how-to-use-filters"></a>Vorgehensweise: Verwenden von Filtern
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit mehreren Filtern zu erstellen. In diesem Beispiel werden Nachrichten an zwei Implementierungen eines Rechnerdiensts weitergeleitet: regularCalc und roundingCalc. Beide Implementierungen unterstützen die gleichen Vorgänge. Ein Dienst rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob die Rundungsversion des Diensts verwendet werden soll. Falls kein bevorzugter Dienst angegeben wird, wird für die Nachricht ein Lastenausgleich zwischen beiden Diensten durchgeführt. Beide Dienste machen die folgenden Vorgänge verfügbar:  
@@ -325,5 +325,5 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)

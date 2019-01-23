@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f44d50f6736e0698fd876eedab78dbf41434af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5767b60fa992b49fdc2a60feb243a26c0e2ea1ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534548"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback-Methode
-Ermöglicht es dem Benutzer zu implementieren, oder geben Sie entweder über Rückruf eine `IID_IDiaReadExeAtRVACallback` oder `IID_IDiaReadExeAtOffsetCallback` die Debuginformationen für das Verzeichnis aus dem Arbeitsspeicher abrufen.  
+Ermöglicht dem Benutzer zu implementieren, oder geben Sie entweder über den Rückruf ein `IID_IDiaReadExeAtRVACallback` oder `IID_IDiaReadExeAtOffsetCallback` die Debuginformationen für das Verzeichnis aus dem Arbeitsspeicher abrufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ HRESULT GetReaderFromCallback(
  [in] Ein Zeiger auf die Metadatenimport-Schnittstelle.  
   
  `fileName`  
- [in] Ein Zeiger auf den Dateinamen an.  
+ [in] Ein Zeiger auf den Dateinamen.  
   
  `searchPath`  
  [in] Ein Zeiger auf den Suchpfad.  
@@ -53,10 +53,10 @@ HRESULT GetReaderFromCallback(
  [in] Der Wert der [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) Enumeration, die die Richtlinie verwendet werden, wenn eine Suche für einen Symbolreader angibt.  
   
  `callback`  
- [in] Ein Zeiger auf die Rückruffunktion.  
+ [in] Ein Zeiger auf die Callback-Funktion.  
   
  `pRetVal`  
- [out] Ein Zeiger, der festgelegt wird, wird auf das zurückgegebene [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) Schnittstelle.  
+ [out] Ein Zeiger, der festgelegt ist auf das zurückgegebene [ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md) Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -64,5 +64,5 @@ HRESULT GetReaderFromCallback(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedBinder3-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedBinder3-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

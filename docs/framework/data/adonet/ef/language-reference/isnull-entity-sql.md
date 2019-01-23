@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 70ec49fd4643c67c6ad08fdda9166eeb8a64d254
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1b728e170968e2fbeb67eef3f8f940c64816ff0d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528731"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Ermittelt, ob ein Abfrageausdruck den Wert NULL hat.  
@@ -59,11 +59,11 @@ select c from LOB.Customer as c where c.DOB is not null
 ## <a name="example"></a>Beispiel  
  Die folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage verwendet den IS NOT NULL-Operator, um festzustellen, ob ein Abfrageausdruck den Wert nicht null ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Verwenden Sie das Verfahren unter [Gewusst wie: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Siehe auch
+- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

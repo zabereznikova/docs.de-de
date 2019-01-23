@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
-ms.openlocfilehash: e0e5a112b7444872dd74cb70bb044ae233334d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e465193d6a91848a27c2832dda454c6c45837e92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530024"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 Diese Schnittstelle listet die Geräte für die unformatierte Eingabe auf und wird nur von "PresentationHost.exe" verwendet.  
@@ -26,5 +26,5 @@ Diese Schnittstelle listet die Geräte für die unformatierte Eingabe auf und wi
 |[IEnumRAWINPUTDEVIC:Reset](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-reset.md)|Setzt die Enumerationsfolge auf den Anfang zurück.|  
 |[IEnumRAWINPUTDEVIC:Clone](../../../../docs/framework/wpf/app-development/ienumrawinputdevic-clone.md)|Erstellt einen weiteren Enumerator für Geräte für die unformatierte Eingabe, der denselben Zustand wie der aktuelle Enumerator aufweist und dieselbe Liste durchlaufen soll.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Informationen zur unformatierten Eingabe](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/aboutrawinput.asp)
+## <a name="see-also"></a>Siehe auch
+- [Informationen zur unformatierten Eingabe](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/aboutrawinput.asp)

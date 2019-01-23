@@ -2,12 +2,12 @@
 title: Behandeln von Setup-Problemen
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532551"
 ---
 # <a name="troubleshooting-setup-issues"></a>Behandeln von Setup-Problemen
 In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) richten Sie Probleme behandeln werden.  
@@ -38,15 +38,15 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) ric
   
 4.  Eine Ausnahme wie die folgende kann im Ereignisprotokoll oder in der Setup-Ablaufverfolgungsprotokolldatei aufgelistet sein:  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: Unerwartetes Ergebnis 3 beim Ausführen von E:\WINDOWS\system32\wbem\mofcomp.exe mit "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
+     ServiceModelReg [11:09:59:046]: System.ApplicationException: Unerwartetes Ergebnis 3 Ausführen von E:\WINDOWS\system32\wbem\mofcomp.exe mit "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication foundation\servicemodel. MOF"  
   
      oder:  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Der Typeninitialisierer für 'System.Management.ManagementPath' hat eine Ausnahme ausgelöst. ---> System.Runtime.InteropServices.COMException (0x80040154): Die COM-Klassenfactory für die Komponente mit CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} konnte aufgrund des folgenden Fehlers nicht abgerufen werden: 80040154.  
+     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: Die typeninitialisierung für 'System.Management.ManagementPath' hat eine Ausnahme ausgelöst. ---> System.Runtime.InteropServices.COMException (0 x 80040154): Abrufen der COM-Klassenfactory für die Komponente mit CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} konnte aufgrund des folgenden Fehlers: 80040154.  
   
      oder:  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Die Datei oder Assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' oder eine Abhängigkeit davon wurde nicht gefunden. Die angegebene Datei wurde nicht gefunden.“  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Datei oder Assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' oder eine ihrer Abhängigkeiten konnte nicht geladen werden. Die angegebene Datei wurde nicht gefunden.“  
   
      Dateiname: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
@@ -73,5 +73,5 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) ric
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Setupanweisungen](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>Siehe auch
+- [Setupanweisungen](../../../docs/framework/wcf/samples/set-up-instructions.md)

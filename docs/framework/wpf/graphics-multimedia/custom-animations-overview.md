@@ -8,18 +8,18 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: a18898f340c68b7890c56b586c87870c50fd4686
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527639"
 ---
 # <a name="custom-animations-overview"></a>Übersicht über benutzerdefinierte Animationen
 In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationssystem durch Erstellen benutzerdefinierter Keyframes oder Animationsklassen erweitert oder durch Pro-Frame-Rückrufe umgangen wird.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Um dieses Thema zu verstehen, sollten Sie mit den verschiedenen Arten von Animationen vertraut sein, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden. Weitere Informationen finden Sie unter Übersicht über die From/To/By-Animationen, [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) und [Übersicht über Pfadanimationen](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
   
  Da die Animationsklassen erben die <xref:System.Windows.Freezable> -Klasse, Sie sollten mit vertraut sein <xref:System.Windows.Freezable> Objekte "und" Gewusst wie: erben von <xref:System.Windows.Freezable>. Weitere Informationen finden Sie unter der [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
@@ -123,13 +123,13 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
   
  Weitere Informationen finden Sie unter den <xref:System.Windows.Media.CompositionTarget.Rendering> Seite.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Animation.AnimationTimeline>  
- <xref:System.Windows.Media.Animation.IKeyFrame>  
- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Übersicht über Pfadanimationen](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über das Animations- und Zeitsteuerungssystem](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Benutzerdefiniertes Animationsbeispiel](https://go.microsoft.com/fwlink/?LinkID=159981)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Animation.AnimationTimeline>
+- <xref:System.Windows.Media.Animation.IKeyFrame>
+- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Übersicht über Pfadanimationen](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über das Animations- und Zeitsteuerungssystem](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Benutzerdefiniertes Animationsbeispiel](https://go.microsoft.com/fwlink/?LinkID=159981)

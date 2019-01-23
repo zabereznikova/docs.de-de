@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente'
+title: 'Vorgehensweise: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 8f7b5c44a5cb20b5da10df5fd630b371cc959fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532161"
 ---
-# <a name="how-to-expose-properties-of-constituent-controls"></a>Gewusst wie: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente
-Die Steuerelemente, die ein zusammengesetztes Steuerelement bilden heißen *konstituierende Steuerelemente*. Diese Steuerelemente werden normalerweise als privat deklariert und kann daher nicht von der Entwickler zugegriffen werden. Wenn Sie die Eigenschaften dieser Steuerelemente zukünftigen Benutzern zur Verfügung stellen möchten, müssen Sie für den Benutzer verfügbar machen. Eine Eigenschaft eines konstituierenden Steuerelements wird verfügbar gemacht, durch eine Eigenschaft im Benutzersteuerelement erstellen und Verwenden der `get` und `set` Accessoren der Eigenschaft, um die Auswirkungen auf der Änderung in der privaten Eigenschaft des konstituierenden Steuerelements.  
+# <a name="how-to-expose-properties-of-constituent-controls"></a>Vorgehensweise: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente
+Die Steuerelemente, die ein zusammengesetztes Steuerelement zu bilden, heißen *konstituierende Steuerelemente*. Diese Steuerelemente werden normalerweise als privat deklariert, und daher können nicht vom Entwickler zugegriffen werden kann. Wenn Sie die Eigenschaften dieser Steuerelemente zukünftigen Benutzern zur Verfügung stellen möchten, müssen Sie für den Benutzer verfügbar machen. Eine Eigenschaft des konstituierenden Steuerelements wird verfügbar gemacht, indem Sie eine Eigenschaft im Benutzersteuerelement erstellt und die `get` und `set` Accessoren der Eigenschaft, die Auswirkungen der Änderung in der privaten Eigenschaft des konstituierenden Steuerelements.  
   
- Betrachten Sie ein hypothetisches Benutzersteuerelement mit einer konstituierenden Schaltfläche mit dem Namen `MyButton`. In diesem Beispiel, wenn der Benutzer fordert die `ConstituentButtonBackColor` -Eigenschaft, die in gespeicherten Wert der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft `MyButton` übermittelt wird. Wenn der Benutzer diese Eigenschaft einen Wert zuweist, wird dieser Wert automatisch zum Übergeben der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft des `MyButton` und die `set` Code wird ausgeführt, ändern die Farbe des `MyButton`.  
+ Betrachten Sie ein hypothetisches Benutzersteuerelement mit der zugehörigen Schaltfläche `MyButton`. In diesem Beispiel, wenn der Benutzer fordert die `ConstituentButtonBackColor` -Eigenschaft, die in gespeicherten Wert der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft `MyButton` wird übermittelt. Wenn der Benutzer diese Eigenschaft einen Wert zuweist, ist dieser Wert automatisch zum Übergeben der <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft `MyButton` und die `set` Code wird ausgeführt, ändern die Farbe des `MyButton`.  
   
- Im folgende Beispiel wird gezeigt, wie verfügbar machen die <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft der konstituierenden Schaltfläche:  
+ Das folgende Beispiel zeigt, wie Sie verfügbar machen die <xref:System.Windows.Forms.Control.BackColor%2A> -Eigenschaft der zugehörigen Schaltfläche:  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -49,15 +49,15 @@ public Color ButtonColor
 }  
 ```  
   
-### <a name="to-expose-a-property-of-a-constituent-control"></a>Eine Eigenschaft eines konstituierenden Steuerelements verfügbar machen.  
+### <a name="to-expose-a-property-of-a-constituent-control"></a>Eine Eigenschaft des konstituierenden Steuerelements verfügbar machen.  
   
-1.  Erstellen Sie eine öffentliche Eigenschaft für das Benutzersteuerelement.  
+1.  Erstellen Sie eine öffentliche Eigenschaft für das Steuerelement.  
   
-2.  In der `get` Abschnitt der Eigenschaft, Schreiben Sie Code, der den Wert der Eigenschaft abruft, Sie verfügbar machen möchten.  
+2.  In der `get` Abschnitt der Eigenschaft, Code schreiben, der den Wert der Eigenschaft abruft, verfügbar machen möchten.  
   
-3.  In der `set` Abschnitt der Eigenschaft, Schreiben Sie Code, der den Wert der Eigenschaft an die verfügbar gemachte Eigenschaft des konstituierenden Steuerelements übergibt.  
+3.  In der `set` Abschnitt der Eigenschaft, Code schreiben, der den Wert der Eigenschaft an die verfügbar gemachten Eigenschaft des konstituierenden Steuerelements übergibt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.UserControl>  
- [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.UserControl>
+- [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

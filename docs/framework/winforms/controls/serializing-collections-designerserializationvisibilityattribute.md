@@ -11,22 +11,22 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 54859b3065e8e9bb9680d8b6bf7946b393f73b9f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533545"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute
 Ihre benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eigenschaft verfügbar machen. In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie mit der <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> Klasse, um zu steuern, wie eine Auflistung zur Entwurfszeit serialisiert wird. Anwenden der <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> Wert, der die Auflistungseigenschaft wird sichergestellt, dass die Eigenschaft serialisiert wird.  
   
- Um den Code in diesem Thema als einzelne Auflistung kopieren möchten, finden Sie unter [Vorgehensweise: Serialisieren von Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
+ Um den Code in diesem Thema als einzelne Auflistung kopieren möchten, finden Sie unter [Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
   
 > [!NOTE]
 >  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
 -   Berechtigt sind, können zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
@@ -38,7 +38,7 @@ Ihre benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eige
   
 1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt namens `SerializationDemoControlLib`. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
-2.  Benennen Sie `UserControl1` zu `SerializationDemoControl`. Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Benennen Sie `UserControl1` zu `SerializationDemoControl`. Weitere Informationen finden Sie unter [Vorgehensweise: Benennen Sie Bezeichner](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
   
 3.  In der **Eigenschaften** legen den Wert des der <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> Eigenschaft `10`.  
   
@@ -50,7 +50,7 @@ Ihre benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eige
     |--------------|---------------|  
     |**Multiline**|`true`|  
     |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**Scrollleisten**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  In der **Code-Editor**, deklarieren Sie einen Zeichenfolgen-Arrayfeld mit dem Namen `stringsValue` in `SerializationDemoControl`.  
@@ -135,10 +135,10 @@ Ihre benutzerdefinierten Steuerelemente werden manchmal eine Auflistung als Eige
   
 -   [Übersicht über die Designerserialisierung](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktion nutzt](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
- [Übersicht über die Designerserialisierung](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
- [Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
+- [Übersicht über die Designerserialisierung](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
+- [Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

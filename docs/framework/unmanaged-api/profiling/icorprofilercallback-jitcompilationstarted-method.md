@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fa1081afc77c8116d8858c187401555409b4dcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 88362d33c05c25e7a86e474adf37f2ccd0474ff4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530757"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted-Methode
-Benachrichtigt den Profiler, dass der Just-in-Time (JIT)-Compiler zum Kompilieren einer funktionsrückgabewerts gestartet wurde.  
+Benachrichtigt den Profiler, dass der just-in-Time-Compiler (JIT) gestartet wurde, mit der Kompilierung einer Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,17 +40,17 @@ HRESULT JITCompilationStarted(
  [in] Die ID der Funktion für die die Kompilierung gestartet wird.  
   
  `fIsSafeToBlock`  
- [in] Ein Wert, der angibt, an den Profiler an, ob blockierende wird die Funktion der Laufzeit beeinflussen. Der Wert ist `true` Wenn blockiert die Common Language Runtime von diesem Rückruf; Zurückgeben der aufrufende Thread warten führen kann, andernfalls `false`.  
+ [in] Ein Wert, der angibt, an den Profiler an, ob blockierende wirkt sich auf den Vorgang der Runtime. Der Wert ist `true` Wenn Blockierungen der Laufzeit von diesem Rückruf; Zurückgeben der aufrufende Thread warten führen kann, andernfalls `false`.  
   
- Obwohl ein Wert von `true` wird nicht auf die Common Language Runtime Schaden anrichten, sie können die Profilerstellungsergebnisse verzerren.  
+ Obwohl ein Wert von `true` wird die Runtime nicht beschädigen, können sie die Ergebnisse der profilerstellung verzerren.  
   
 ## <a name="remarks"></a>Hinweise  
- Es ist möglich, mehr als ein Spaltenpaar empfangen `JITCompilationStarted` und [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) Ruft für jede Funktion aufgrund der Art und Weise die Laufzeit Klassenkonstruktoren Handles. Z. B. die Common Language Runtime beginnt JIT-kompiliert Methode A, aber den Konstruktor der Klasse für die Klasse B ausgeführt werden muss. Aus diesem Grund die Laufzeit-JIT-kompiliert der Konstruktor für die Klasse B und wird ausgeführt. Während der Konstruktor ausgeführt wird, wird einen Aufruf der Methode ein, wodurch ein JIT-kompilierte erneut werden-Methode wird vereinfacht. In diesem Szenario wird die erste JIT-Kompilierung der Methode A angehalten. Allerdings werden beide Versuche einer JIT-Kompilierung Methode A mit JIT-Kompilierung Ereignisse gemeldet. Wenn der Profiler mit der Microsoft intermediate Language (MSIL)-Code für die Methode A Ersetzen Sie durch Aufrufen der [ICorProfilerInfo:: SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) -Methode, sie müssen dazu für beide `JITCompilationStarted` Ereignisse, aber sie können die gleichen MSIL-Block für beide.  
+ Es ist möglich, erhalten mehr als ein Spaltenpaar `JITCompilationStarted` und [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) Ruft für jede Funktion aufgrund der Art und Weise die Laufzeit behandelt-Klasse, Konstruktoren. Z. B. die Laufzeit startet JIT-Kompilieren-Methode ein, aber der Klassenkonstruktor für Klasse B ausgeführt werden muss. Aus diesem Grund die Laufzeit-JIT-kompiliert wird der Konstruktor für die Klasse B und wird ausgeführt. Während der Konstruktor ausgeführt wird, ist es einen Aufruf der Methode A, die Methode ein JIT-kompilierten erneut werden kann. In diesem Szenario wird die erste JIT-Kompilierung der Methode ein angehalten. Allerdings werden beide versucht, ein JIT-Kompilieren-Methode mit JIT-Kompilierung Ereignisse gemeldet. Wenn der Profiler Microsoft intermediate Language (MSIL)-Code für die Methode A durch den Aufruf zu ersetzen ist die [ICorProfilerInfo:: SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) -Methode, sie müssen dies für beide `JITCompilationStarted` Ereignisse, aber sie können den gleichen MSIL-Block für beides an.  
   
- Profiler müssen die Sequenz von JIT-Rückrufen in Fällen unterstützen, in denen zwei Threads gleichzeitig Rückrufe durchführen. Beispielsweise ruft Thread A `JITCompilationStarted`. Jedoch vor dem Thread A ruft `JITCompilationFinished`, Thread B ruft [ICorProfilerCallback:: ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) mit dem Funktions-ID von Thread A `JITCompilationStarted` Rückruf. Es scheint, dass die Funktions-ID noch nicht gültig ist da einen Aufruf von `JITCompilationFinished` wurde noch nicht empfangen vom Profiler. In einem Fall wie diesem ist jedoch die Funktions-ID gültig.  
+ Profiler müssen die Abfolge der JIT-Rückrufe in Fällen unterstützen, in denen zwei Threads gleichzeitig Rückrufe durchführen. Thread A ruft z. B. `JITCompilationStarted`. Jedoch vor dem Thread A ruft `JITCompilationFinished`, Thread B ruft [ICorProfilerCallback:: ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) mit der Funktions-ID von Thread A `JITCompilationStarted` Rückruf. Sie scheinen, dass die Funktions-ID noch nicht gültig ist da einen Aufruf von `JITCompilationFinished` hatte noch nicht empfangen durch den Profiler. In einem Fall wie diesem ist jedoch die Funktions-ID gültig.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -58,6 +58,6 @@ HRESULT JITCompilationStarted(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [JITCompilationFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [JITCompilationFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)

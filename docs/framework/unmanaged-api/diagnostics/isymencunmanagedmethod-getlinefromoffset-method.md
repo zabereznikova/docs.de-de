@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29990ad6a94f063577236bdbc84d02d4d2b4b2f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 98015af4a79a9fca4945708e6d0baeb61e46876f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531225"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset-Methode
-Ruft die Zeileninformationen ein Offset zugeordnet. Wenn der Offset-Parameter (`dwOffset`) ein Sequenzpunkt ist diese Methode ruft die Zeileninformationen vorherigen Offset zugeordnet.  
+Ruft die Zeileninformationen, die ein Offset zugeordnet. Wenn der Offsetparameter (`dwOffset`) ein Sequenzpunkt ist diese Methode ruft die Zeileninformationen ab dem Offset des vorherigen zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,13 +50,13 @@ HRESULT GetLineFromOffset(
  [out] Ein Zeiger auf eine `ULONG32` , empfängt die Spalte.  
   
  `pendLine`  
- [out] Ein Zeiger auf eine `ULONG32` , die die Endzeile empfängt.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Zeile.  
   
  `pendColumn`  
- [out] Ein Zeiger auf eine `ULONG32` , die die Endspalte empfängt.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Spalte.  
   
  `pdwStartOffset`  
- [out] Ein Zeiger auf eine `ULONG32` , die den zugeordneten Sequenzpunkt empfängt.  
+ [out] Ein Zeiger auf eine `ULONG32` , das den zugeordneten Sequenzpunkt empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -64,5 +64,5 @@ HRESULT GetLineFromOffset(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

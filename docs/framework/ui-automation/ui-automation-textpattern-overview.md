@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 7455ce7f0c1dbc71bed6e7656663d3cd67325447
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c905dfbb0fffcf37c8b196e883003ea70e509b2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534315"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In dieser Übersicht wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verwendet wird, um den Textinhalt (einschließlich Format- und Stilattributen) von Textsteuerelementen auf Plattformen mit [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Unterstützung verfügbar zu machen. Diese Steuerelemente enthalten, jedoch sind nicht darauf beschränkt, die Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox> sowie deren [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] Entsprechungen.  
   
  Das Verfügbarmachen des Textinhalt eines Steuerelements wird erreicht, indem das <xref:System.Windows.Automation.TextPattern> -Steuerelementmuster verwendet wird, das den Inhalt eines Textcontainer als Textstream darstellt. Zusätzlich erfordert <xref:System.Windows.Automation.TextPattern> , dass die <xref:System.Windows.Automation.Text.TextPatternRange> -Klasse unterstützt wird, um Format-und Stilattribute verfügbar zu machen. <xref:System.Windows.Automation.Text.TextPatternRange> unterstützt <xref:System.Windows.Automation.TextPattern> dadurch, dass es zusammenhängende oder mehrere unzusammenhängende Textabschnitte in einem Textcontainer mit einer Auflistung von <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> - und <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Endpunkten darstellt. <xref:System.Windows.Automation.Text.TextPatternRange> unterstützt Funktionen wie Auswahl, Vergleich, Abruf und Durchlauf.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Automation.TextPattern> -Klassen bieten keine Möglichkeit zum Einfügen oder Bearbeiten von Text. Je nach Steuerelement kann dies aber durch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> -Klasse oder durch direkte Tastatureingabe erreicht werden. Finden Sie unter den [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) verdeutlicht.  
+>  Die <xref:System.Windows.Automation.TextPattern> -Klassen bieten keine Möglichkeit zum Einfügen oder Bearbeiten von Text. Je nach Steuerelement kann dies aber durch die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> -Klasse oder durch direkte Tastatureingabe erreicht werden. Ein Beispiel finden Sie im [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) .  
   
  Die in dieser Übersicht beschriebene Funktionalität ist entscheidend für Hilfstechnologieanbieter und deren Endbenutzer. In Hilfstechnologien kann [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] verwendet werden, um vollständige Textformatierungsinformationen für den Benutzer zu erfassen und programmgesteuerte Navigation sowie Textauswahl gemäß <xref:System.Windows.Automation.Text.TextUnit> (Zeichen, Wort, Zeile oder Absatz) zu verwenden.  
   
@@ -129,11 +129,11 @@ Die folgende Abbildung veranschaulicht einen Start- und einen Endpunkt.
  <xref:System.Windows.Automation.Text.TextUnit>  
  Eine vordefinierte Texteinheit (Zeichen, Wort, Zeile oder Absatz), die zum Navigieren durch logische Segmente eines Textbereichs verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Textdienstframework](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+## <a name="see-also"></a>Siehe auch
+- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
+- [Textdienstframework](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

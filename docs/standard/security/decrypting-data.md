@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e48d5a088fc6cff3dbdaaa77e6fa561c33f400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7f41a61fe929bb3eaf691deb75749777c0880aea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530687"
 ---
 # <a name="decrypting-data"></a>Entschlüsseln von Daten
 Entschlüsselung ist die Umkehrung einer Verschlüsselung. Bei einer Entschlüsselung mit geheimem Schlüssel müssen sowohl der Schlüssel als auch der Initialisierungsvektor (IV) bekannt sein, die zum Verschlüsseln der Daten verwendet wurden. Bei einer Entschlüsselung mit öffentlichem Schlüssel muss entweder der öffentliche Schlüssel (wenn die Daten mit dem privaten Schlüssel verschlüsselt wurden) oder der private Schlüssel (wenn die Daten mit dem öffentlichen Schlüssel verschlüsselt wurden) bekannt sein.  
@@ -174,7 +174,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>Asymmetrische Entschlüsselung  
  In der Regel generiert ein Teilnehmer (Teilnehmer A) sowohl einen öffentlichen als auch einen privaten Schlüssel und speichert diese entweder im Arbeitsspeicher oder in einem kryptografischen Schlüsselcontainer.  Teilnehmer A sendet dann den öffentlichen Schlüssel an einen anderen Teilnehmer (Teilnehmer B).  Mit dem öffentlichen Schlüssel verschlüsselt Teilnehmer B Daten und sendet diese Daten an Teilnehmer A. Nachdem Teilnehmer A die Daten empfangen hat, entschlüsselt er diese mit dem entsprechenden privaten Schlüssel.  Die Entschlüsselung kann nur dann erfolgreich sein, wenn Teilnehmer A den privaten Schlüssel verwendet, der dem öffentlichen Schlüssel entspricht, den Teilnehmer B zum Verschlüsseln der Daten verwendet hat.  
   
- Informationen dazu, wie Sie einen asymmetrischen Schlüssel in einem sicheren Container für kryptografische Schlüssel speichern und später diesen asymmetrischen Schlüssel abrufen, finden Sie unter [Gewusst wie: Speichern von asymmetrischen Schlüsseln in einem Schlüsselcontainer](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
+ Informationen zum Speichern ein asymmetrisches Schlüssels in sicheren Container für kryptografische Schlüssel und später diesen asymmetrischen Schlüssel abrufen finden Sie unter [Vorgehensweise: Asymmetrische Schlüssel in einem Schlüsselcontainer Store](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).  
   
  Das folgende Beispiel veranschaulicht die Entschlüsselung von zwei Bytearrays, die einen symmetrischen Schlüssel und einen IV darstellen.  Informationen dazu, wie der asymmetrische öffentliche Schlüssel aus dem <xref:System.Security.Cryptography.RSACryptoServiceProvider> -Objekt in ein Format extrahiert wird, das auf einfache Weise an andere Beteiligte gesendet werden kann, finden Sie unter [Encrypting Data](../../../docs/standard/security/encrypting-data.md)initialisiert.  
   
@@ -204,6 +204,6 @@ SymmetricIV = RSA.Decrypt( EncryptedSymmetricIV , false);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [Verschlüsseln von Daten](../../../docs/standard/security/encrypting-data.md)  
+- [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [Verschlüsseln von Daten](../../../docs/standard/security/encrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

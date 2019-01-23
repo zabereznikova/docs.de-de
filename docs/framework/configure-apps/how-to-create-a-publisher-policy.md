@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer Herausgeberrichtlinie'
+title: 'Vorgehensweise: Erstellen einer Herausgeberrichtlinie'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3969f066c0a17424d2c4527d2b4661b30f5bb6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530524"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>Gewusst wie: Erstellen einer Herausgeberrichtlinie
+# <a name="how-to-create-a-publisher-policy"></a>Vorgehensweise: Erstellen einer Herausgeberrichtlinie
 Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version einer Assembly verwenden sollen, dazu eine Herausgeberrichtlinien-Datei mit der aktualisierten Assembly ist. Die Herausgeberrichtliniendatei gibt Assemblyumleitungen und Code-Basis-Einstellungen, und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei. Die Herausgeberrichtliniendatei ist in eine Assembly kompiliert und im globalen Assemblycache platziert.  
   
  Es gibt drei Schritte zum Erstellen einer Herausgeberrichtlinie:  
@@ -102,11 +102,11 @@ Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version
     > [!IMPORTANT]
     >  Die Herausgeberrichtlinienassembly kann nicht im globalen Assemblycache hinzugefügt werden, es sei denn, die ursprüngliche Herausgeberrichtlinien-Datei im gleichen Verzeichnis wie die Assembly befindet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)  
- [Konfigurieren von .NET Framework-Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)
+- [Konfigurieren von .NET Framework-Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Schema für Laufzeiteinstellungen](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)
+- [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

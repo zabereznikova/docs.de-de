@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7b935b8f59e434c9da364be1986dbed654a1efd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52b59a4e52d3e0cda7353ec1b39c5307bd7b218e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532265"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags-Enumeration
-Enthält Flagwerte, die für die Registrierung verwendet wird, wenn Sie ein Modul oder einen zusammengesetzten Abbilds installieren.  
+Enthält Flagwerte, die für die Registrierung verwendet werden, wenn Sie ein Modul oder ein zusammengesetztes Bild zu installieren.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,17 +42,17 @@ typedef enum
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`regNoCopy`|Gibt an, dass Dateien nicht in das Ziel kopiert werden sollen.|  
-|`regConfig`|Gibt an, dass das Modul oder eines zusammengesetzten Moduls eine Konfiguration.|  
-|`regHasRefs`|Gibt an, dass die Moduls oder eines zusammengesetzten Klasse verweisen.|  
+|`regConfig`|Gibt an, dass das Modul oder die Zusammensetzung einer Konfiguration.|  
+|`regHasRefs`|Gibt an, dass das Modul oder die zusammengesetzten Klasse verweisen.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

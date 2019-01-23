@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 637ff0fca74dc123a3f7a47dcc3fdeded8d884ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 92ee0570a1a9bcc48cea744d5cc707750742d51a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534081"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion-Funktion
-Ruft die erforderlich common Language Runtime (CLR)-Versionsnummer ab.  
+Ruft ab, die erforderlich common Language Runtime (CLR)-Versionsnummer.  
   
  Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
   
@@ -40,7 +40,7 @@ HRESULT GetCORRequiredVersion (
   
 #### <a name="parameters"></a>Parameter  
  `pbuffer`  
- [out] Ein Puffer mit einer Zeichenfolge, die die Versionsnummer angibt.  
+ [out] Ein Puffer mit der eine Zeichenfolge, die Versionsnummer angibt.  
   
  `cchBuffer`  
  [in] Die Größe des Puffers in Bytes.  
@@ -49,13 +49,13 @@ HRESULT GetCORRequiredVersion (
  [out] Die Anzahl der Bytes im Puffer zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

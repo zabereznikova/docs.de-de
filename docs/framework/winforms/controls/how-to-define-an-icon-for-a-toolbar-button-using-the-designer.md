@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche mithilfe des Designers'
+title: 'Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: f26e21d824420fc4ff0480de21f260309c5c2e11
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bfd84913015eaf45674b3cd0c7a3d53a202874c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527067"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Gewusst wie: Definieren eines Symbols für eine Symbolleisten-Schaltfläche mithilfe des Designers
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche mithilfe des Designers
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "43856607"
   
 6.  In der **Eigenschaften** im Bereich auf der rechten Seite des angezeigten Fenster die **ToolBarButton Auflistungs-Editor**legen die <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Eigenschaft jedes Symbolleisten-Schaltfläche, um einen der Werte in der Liste der gezeichnet wird, von den Images, die Sie hinzugefügt, um haben die <xref:System.Windows.Forms.ImageList> Komponente.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolBar>  
- [Gewusst wie: Auslösen von Menüereignissen für Symbolleistenschaltflächen](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolBar>
+- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Steuern von Animationen mit From, To und By'
+title: 'Vorgehensweise: Steuern von Animationen mit From, To und By'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], From/to/by
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dda8cdb6159cc6d8e6da5b7d430ebf76aaa100b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530310"
 ---
-# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Gewusst wie: Steuern von Animationen mit From, To und By
+# <a name="how-to-control-an-animation-using-from-to-and-by"></a>Vorgehensweise: Steuern von Animationen mit From, To und By
 "From/To/By" oder "grundlegende Animation" erstellt einen Übergang zwischen zwei Zielwerten (finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) eine Einführung in die verschiedenen Arten von Animationen). Verwenden Sie zum Festlegen der Zielwerte einer grundlegenden Animation die <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, und <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Eigenschaften.  Die folgende Tabelle enthält die <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, und <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Eigenschaften können zusammen verwendet werden oder separat um die Zielwerte einer Animation zu bestimmen.  
   
 |Angegebene Eigenschaften|Resultierendes Verhalten|  
@@ -37,7 +37,7 @@ ms.locfileid: "43858804"
 ## <a name="example"></a>Beispiel  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [From, To, and By Animation Target Values Sample (Beispiel für From-, To- und By-Animationszielwerte)](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [From, To, and By Animation Target Values Sample (Beispiel für From-, To- und By-Animationszielwerte)](https://go.microsoft.com/fwlink/?LinkID=159988)

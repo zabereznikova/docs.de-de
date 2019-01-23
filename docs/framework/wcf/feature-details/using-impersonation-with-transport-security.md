@@ -2,12 +2,12 @@
 title: Identitätswechsel und Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 41670f36d459af49359cfc4add57cb59a49940d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532707"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Identitätswechsel und Transportsicherheit
 *Identitätswechsel* ist die Fähigkeit einer Serveranwendung, die Identität des Clients anzunehmen. Dienste greifen bei der Validierung des Zugriffs auf Ressourcen häufig auf den Identitätswechsel zurück. Die Serveranwendung wird unter einem Dienstkonto ausgeführt. Wenn der Server eine Clientverbindung akzeptiert, nimmt er die Identität des Clients an, das heißt, Zugriffsvalidierungen werden mit den Anmeldeinformationen des Clients durchgeführt. Bei der Transportsicherheit handelt es sich um einen Mechanismus, mit dem Anmeldeinformationen übergeben und die Kommunikation mit diesen Anmeldeinformationen gesichert werden können. Dieses Thema beschreibt, mit der Identitätswechselfunktion Transport Security in Windows Communication Foundation (WCF) verwenden. Weitere Informationen zum Identitätswechsel unter Verwendung der nachrichtensicherheit finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -17,7 +17,7 @@ ms.locfileid: "50187909"
   
 |Ebene des Identitätswechsels|Beschreibung|  
 |-------------------------|-----------------|  
-|Keiner|Die Serveranwendung versucht nicht, die Identität des Clients anzunehmen.|  
+|Keine|Die Serveranwendung versucht nicht, die Identität des Clients anzunehmen.|  
 |Anonym|Die Serveranwendung kann mit den Anmeldeinformationen des Clients Zugriffsüberprüfungen durchführen, erhält jedoch keine Informationen über die Identität des Clients. Diese Ebene des Identitätswechsels ist nur sinnvoll bei einer computerinternen Kommunikation, z.&#160;B. bei Named Pipes (benannten Pipes). Die Verwendung von `Anonymous` mit einer Remoteverbindung erhöht die Ebene des Identitätswechsels auf Identifizieren.|  
 |Identifizieren (Identify)|Die Serveranwendung kennt die Identität des Clients und kann mit den Anmeldeinformationen des Clients Zugriffsvalidierungen durchführen, sie kann jedoch nicht die Identität des Clients annehmen. Identifizieren ist die Standard-Identitätswechselebene, die mit SSPI-Anmeldeinformationen in WCF verwendet werden, es sei denn, der Sicherheitstoken-Anbieter eine andere Identitätswechselebene enthält.|  
 |Identitätswechsel|Die Serveranwendung kann Zugriffsüberprüfungen durchführen und auf dem Servercomputer als Client auf Ressourcen zugreifen. Die Serveranwendung kann jedoch nicht mit der Identität des Clients auf Ressourcen auf Remotecomputern zugreifen, da das Identitätswechsel-Token über keine Anmeldeinformationen für das Netzwerk verfügt.|  
@@ -54,8 +54,8 @@ ms.locfileid: "50187909"
   
  Weitere Informationen zu den HTTP-Transport, finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Vorgehensweise: Annahme der Clientidentität durch einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Grundlagen der HTTP-Authentifizierung](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+## <a name="see-also"></a>Siehe auch
+- [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Vorgehensweise: Annehmen der Clientidentität für einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Grundlagen der HTTP-Authentifizierung](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

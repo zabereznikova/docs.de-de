@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9abbfa14777c5a5f5a77fa91db0fbafee095ba9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6323b7d94ca32646d3aa63af6d3efc4de95e67fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534520"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName-Methode
-Ruft den Namen der Variablen ab.  
+Ruft den Namen dieser Variablen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,13 +39,13 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>Parameter  
  `cchName`  
- [in] Die Länge des Puffers, der `pcchName` -Parameter zeigt.  
+ [in] Die Länge des Puffers, der die `pcchName` -Parameter zeigt.  
   
  `pcchName`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe Puffers in Zeichen, die erforderlich sind, um den Namen, einschließlich der null-Terminierung aufzunehmen.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe in Zeichen des Puffers erforderlich, um den Namen und die null-Terminierung enthalten.  
   
  `szName`  
- [out] Der Puffer, der den Namen speichert.  
+ [out] Der Puffer, der Namen speichert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -53,5 +53,5 @@ HRESULT GetName(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

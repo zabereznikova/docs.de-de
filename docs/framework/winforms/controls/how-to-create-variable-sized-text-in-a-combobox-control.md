@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement'
+title: 'Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: a76e1d78cd9fade550fa846488e8bf4a93a21c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a9f6e8a1c96c2a9bf9e56c1c6acefc4181a18dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526989"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Gewusst wie: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement
-In diesem Beispiel veranschaulicht das benutzerdefinierte Zeichnen von Text in einem <xref:System.Windows.Forms.ComboBox> Steuerelement. Wenn ein Element eine bestimmte Kriterien erfüllt, ist es in einer größeren Schrift gezeichnet und Rot.  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement
+In diesem Beispiel wird veranschaulicht, benutzerdefinierte Zeichnungen von Text in einem <xref:System.Windows.Forms.ComboBox> Steuerelement. Wenn ein Element eine bestimmte Kriterien erfüllt, dabei handelt es sich in einer größeren Schrift gezeichnet roten aktiviert.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -58,19 +58,19 @@ End Sub
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein Windows Form.  
+-   Ein Windows-Formular.  
   
--   Ein <xref:System.Windows.Forms.ComboBox> Steuerelement namens `ListBox1` mit drei Elementen in der <xref:System.Windows.Forms.ComboBox.Items%2A> Eigenschaft. In diesem Beispiel werden die drei Elemente mit Namen `"One", Two", and Three"`. Die <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Eigenschaft `ComboBox1` muss festgelegt werden, um <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
+-   Ein <xref:System.Windows.Forms.ComboBox> Steuerelement mit dem Namen `ListBox1` mit drei Elementen in der <xref:System.Windows.Forms.ComboBox.Items%2A> Eigenschaft. In diesem Beispiel werden die drei Elemente benannt `"One", Two", and Three"`. Die <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Eigenschaft `ComboBox1` muss festgelegt werden, um <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
   
     > [!NOTE]
     >  Dieses Verfahren gilt auch für die <xref:System.Windows.Forms.ListBox> Steuerelement – können Sie auch eine <xref:System.Windows.Forms.ListBox> für die <xref:System.Windows.Forms.ComboBox>.  
   
 -   Verweise auf die Namespaces <xref:System.Windows.Forms?displayProperty=nameWithType> und <xref:System.Drawing?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ComboBox.DrawItem>  
- <xref:System.Windows.Forms.DrawItemEventArgs>  
- <xref:System.Windows.Forms.ComboBox.MeasureItem>  
- [Steuerelemente mit integrierter Ownerdrawing-Unterstützung](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- [ListBox-Steuerelement](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ComboBox.DrawItem>
+- <xref:System.Windows.Forms.DrawItemEventArgs>
+- <xref:System.Windows.Forms.ComboBox.MeasureItem>
+- [Steuerelemente mit integrierter Ownerdrawing-Unterstützung](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
+- [ListBox-Steuerelement](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)
+- [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

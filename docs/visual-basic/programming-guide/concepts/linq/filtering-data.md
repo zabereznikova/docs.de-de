@@ -2,12 +2,12 @@
 title: Filtern von Daten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: d3f44d0b6478103a10fb731988aeebc005cde82e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d65b9941ceffa7ea23c4ead192ec6b97b7b4ead8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527834"
 ---
 # <a name="filtering-data-visual-basic"></a>Filtern von Daten (Visual Basic)
 Mit Filtern wird die Einschränkung des Resultsets auf Elemente bezeichnet, die eine bestimmte Bedingung erfüllen. Es ist auch bekannt als Auswahl.  
@@ -26,7 +26,7 @@ Mit Filtern wird die Einschränkung des Resultsets auf Elemente bezeichnet, die 
 |Where|Wählt Werte aus, die auf einer Prädikatfunktion basieren.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
- Im folgenden Beispiel wird die `Where` diese Zeichenfolgen aus einem Array zu filtern, die eine bestimmte Länge aufweisen.  
+ Im folgenden Beispiel wird die `Where` diese Zeichenfolgen aus einem Array filtern, die eine bestimmte Länge aufweisen.  
   
 ```vb  
 Dim words() As String = {"the", "quick", "brown", "fox", "jumps"}  
@@ -49,11 +49,11 @@ MsgBox(sb.ToString())
 ' fox  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq>  
- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Where-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [Gewusst wie: Filtern von Abfrageergebnissen](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)  
- [Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)  
- [Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)  
- [Vorgehensweise: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Linq>
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Where-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Vorgehensweise: Filtern von Abfrageergebnissen](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Vorgehensweise: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

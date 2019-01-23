@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 9f33ae085bef2b611d1ce95bed1b26f9101a10b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6aaaa126a0b19300abc2c10b88b0e4ff39a3ad66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505241"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530431"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>"DataTable" und "DataColumn"-Zuordnungen mit "DataAdapter"
 Ein **DataAdapter** enthält eine Auflistung von NULL oder mehr <xref:System.Data.Common.DataTableMapping> Objekte in der **TableMappings** Eigenschaft. Ein **DataTableMapping** stellt eine masterzuordnung zwischen den Daten, die von einer Abfrage für eine Datenquelle zurückgegeben und ein <xref:System.Data.DataTable>. Die **DataTableMapping** Namen übergeben werden kann, anstelle von der **DataTable** -Namens an die **füllen** -Methode der der **DataAdapter**. Das folgende Beispiel erstellt eine **DataTableMapping** mit dem Namen **AuthorsMapping** für die **Autoren** Tabelle.  
@@ -97,7 +97,7 @@ adapter.TableMappings.Add("Customers1", "Orders")
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: 2f563b5de9b80dab2af00290e8a6b3b309410a9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 489a31474b8ae3e56ba69e59f6d613ecf892a93c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531290"
 ---
-# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Gewusst wie: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms
-Windows Forms <xref:System.Windows.Forms.DateTimePicker> Steuerelement bietet Ihnen die Flexibilität beim Formatieren der Anzeige von Datums- und Uhrzeitangaben im Steuerelement. Die <xref:System.Windows.Forms.DateTimePicker.Format%2A> -Eigenschaft können Sie in aufgeführten vordefinierten Formate aus der <xref:System.Windows.Forms.DateTimePickerFormat>. Wenn keiner dieser für Ihre Zwecke angemessen ist, können Sie eigene Formatstil Formatieren von Zeichen in aufgeführt erstellen <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
+# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Vorgehensweise: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms
+Die Windows-Formulare <xref:System.Windows.Forms.DateTimePicker> Control bietet Ihnen die Flexibilität bei der Formatierung der Anzeige von Datumsangaben und Uhrzeiten in das Steuerelement. Die <xref:System.Windows.Forms.DateTimePicker.Format%2A> Eigenschaft ermöglicht Ihnen die Auswahl aus vordefinierten Formaten, aufgeführt der <xref:System.Windows.Forms.DateTimePickerFormat>. Wenn keines dieser für Ihre Zwecke angemessen ist, können Sie erstellen Ihre eigenen Formatstil Formatzeichen in <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
   
 ### <a name="to-display-a-custom-format"></a>Um ein benutzerdefiniertes Format anzuzeigen.  
   
-1.  Legen Sie die <xref:System.Windows.Forms.DateTimePicker.Format%2A>-Eigenschaft auf `DateTimePickerFormat.Custom` fest.  
+1.  Legen Sie die <xref:System.Windows.Forms.DateTimePicker.Format%2A> -Eigenschaft auf `DateTimePickerFormat.Custom`fest.  
   
-2.  Legen Sie die <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> Eigenschaft auf eine Formatzeichenfolge.  
+2.  Legen Sie die <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> Eigenschaft an eine Formatzeichenfolge.  
   
     ```vb  
     DateTimePicker1.Format = DateTimePickerFormat.Custom  
@@ -44,9 +44,9 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> Steuerelement bietet Ih
     dateTimePicker1->CustomFormat = "ddd dd MMM yyyy";  
     ```  
   
-### <a name="to-add-text-to-the-formatted-value"></a>Der formatierte Wert Text hinzu  
+### <a name="to-add-text-to-the-formatted-value"></a>Hinzufügen von Text zu den formatierten Wert  
   
-1.  Verwenden Sie einfache Anführungszeichen zum Einschließen von einem beliebigen Zeichen, die nicht Formatzeichen wie "M" oder ein Trennzeichen wie ist ":". Die Formatzeichenfolge unten zeigt z. B. das aktuelle Datum im Format "heutzutage: 05:30:31 Freitag 02 März 2012" in der englischen (USA) Kultur.  
+1.  Einfache Anführungszeichen verwenden, um alle Zeichen, die nicht Formatzeichen wie "M" oder Trennzeichen wie ist ":". Die Formatzeichenfolge unten zeigt z. B. das aktuelle Datum im Format "heute ist: 05:30:31 Freitag März 02, 2012" in der Kultur Englisch (USA).  
   
     ```vb  
     DateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy"  
@@ -61,8 +61,8 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> Steuerelement bietet Ih
        "'Today is:' hh:mm:ss dddd MMMM dd, yyyy";  
     ```  
   
-     Abhängig von der kultureinstellung darf keine Zeichen, die nicht in einfache Anführungszeichen eingeschlossen geändert werden. Die Formatzeichenfolge, die oben genannten zeigt z. B. das aktuelle Datum im Format "heutzutage: 05:30:31 Freitag 02 März 2012" in der englischen (USA) Kultur. Beachten Sie, dass es sich bei der erste Doppelpunkt in einfache Anführungszeichen eingeschlossen ist, da sie nicht dazu gedacht ist ein Trennzeichen ist, wie diese in "hh" sind. In einer anderen Kultur könnte das Format als angezeigt werden "heutzutage: 05.30.31 Freitag 02 März 2012".  
+     Abhängig von der kultureinstellung, darf keine Zeichen, die nicht in einfache Anführungszeichen eingeschlossen geändert werden. Die Formatzeichenfolge, die oben genannten zeigt z. B. das aktuelle Datum im Format "heute ist: 05:30:31 Freitag März 02, 2012" in der Kultur Englisch (USA). Beachten Sie, dass es sich bei der erste Doppelpunkt in einfache Anführungszeichen eingeschlossen ist, da sie ein Trennzeichen sein, wie es in "hh: mm:" ist nicht vorgesehen ist. In einer anderen Kultur, scheinen sich das Format als "aktuell sind: 05.30.31 Freitag März 02, 2012".  
   
-## <a name="see-also"></a>Siehe auch  
- [DateTimePicker-Steuerelement](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- [Gewusst wie: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+## <a name="see-also"></a>Siehe auch
+- [DateTimePicker-Steuerelement](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
+- [Vorgehensweise: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

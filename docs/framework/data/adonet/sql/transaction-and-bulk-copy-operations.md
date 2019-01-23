@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b05ff42fc79a8fc39b7ebe4969875dbadf0dab7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527730"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transaktionen und Massenkopiervorgänge
 Massenkopiervorgänge können als isolierte Vorgänge oder als Teil einer mehrstufigen Transaktion ausgeführt werden. Die Ausführung als Teil einer mehrstufigen Transaktion ermöglicht es Ihnen, innerhalb ein und derselben Transaktion mehr als einen Massenkopiervorgang sowie andere Datenbankoperationen (z. B. Einfüge-, Update- und Löschvorgänge) auszuführen, ohne dabei auf die Möglichkeit verzichten zu müssen, einen Commit oder einen Rollback für die gesamte Transaktion durchführen zu können.  
@@ -38,7 +38,7 @@ Massenkopiervorgänge können als isolierte Vorgänge oder als Teil einer mehrst
 > [!NOTE]
 >  Da verschiedene Batches in unterschiedlichen Transaktionen ausgeführt werden, wird für alle Zeilen im aktuellen Batch ein Rollback ausgeführt, wenn beim Ausführen des Massenkopiervorgangs ein Fehler auftritt. Zeilen aus früheren Batches verbleiben jedoch in der Datenbank.  
   
- Die folgende Konsolenanwendung ähnelt der im vorherigen Beispiel, jedoch mit einem Unterschied: In diesem Beispiel werden die Transaktionen des Massenkopiervorgangs von diesem selbst verwaltet. Für alle bis zum Zeitpunkt des Fehlers kopierten Batches wird ein Commit ausgeführt. Für den Batch mit dem doppelten Schlüssel wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor der Verarbeitung weiterer Batches angehalten.  
+ Die folgende Konsolenanwendung ähnelt mit einer Ausnahme dem vorherigen Beispiel: In diesem Beispiel verwaltet der Massenkopiervorgang eine eigene Transaktion. Für alle bis zum Zeitpunkt des Fehlers kopierten Batches wird ein Commit ausgeführt. Für den Batch mit dem doppelten Schlüssel wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor der Verarbeitung weiterer Batches angehalten.  
   
 > [!IMPORTANT]
 >  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in der gleichen SQL Server-Instanz befinden, es ist einfacher und schneller eine [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
@@ -59,6 +59,6 @@ Massenkopiervorgänge können als isolierte Vorgänge oder als Teil einer mehrst
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopiervorgänge in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Massenkopiervorgänge in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

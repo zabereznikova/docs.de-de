@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b61c0359b8b18cb5082b1739defc65371476af25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865269"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529920"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin-Funktion
 Bestimmt die Klasse, in der eine Eigenschaft deklariert wird.
@@ -59,9 +59,9 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
+|`WBEM_E_FAILED` | 0x80041001 | Es wurde ein allgemeiner Fehler. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Eigenschaft wurde nicht gefunden. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
@@ -74,11 +74,11 @@ Da eine Klasse Eigenschaften aus einem oder mehreren Basisklassen erben kann, m�
 Die `pstrClassName` Parameter muss nicht auf einen gültigen zeigen `BSTR` , bevor die Funktion aufgerufen wird, da es sich handelt ein `out` Parameter; diese Zeiger wird nicht aufgehoben werden, nachdem die Funktion.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

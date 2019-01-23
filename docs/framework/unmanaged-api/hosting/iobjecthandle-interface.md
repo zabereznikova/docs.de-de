@@ -16,30 +16,30 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa16b67f11e5d4f44ef88daf27e0014ae8690769
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b9f6bf0dc0fb92d8b5bb7e3f4d017eed85d85338
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531203"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle-Schnittstelle
-Stellt eine Methode zum Entpacken Marshal-by-Value-Objekten aus Dereferenzierung.  
+Stellt eine Methode für das Entpacken Marshal-by-Value-Objekte aus der Dereferenzierung.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Unwrap-Methode](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Eine Marshal-by-Value-Objekt aus der Dereferenzierung entpackt.|  
+|[Unwrap-Methode](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Eine Marshal-by-Value-Objekt, aus der Dereferenzierung entpackt.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

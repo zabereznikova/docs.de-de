@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527106"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes-Methode
-Zählt benutzerdefinierte Attributdefinition-Token, die den angegebenen Typ oder Member zugeordnet.  
+Listet die benutzerdefinierten Attribut-Definition-Token, die den angegebenen Typ oder Member zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ HRESULT EnumCustomAttributes (
   
 #### <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den zurückgegebenen Enumerator.  
+ [in, out] Ein Zeiger auf die zurückgegebene Enumerator.  
   
  `tk`  
  [in] Ein Token für den Bereich der Enumeration oder 0 (null) für alle benutzerdefinierten Attribute.  
@@ -51,30 +51,30 @@ HRESULT EnumCustomAttributes (
  [in] Ein Token für den Konstruktor des Typs der Attribute aufgelistet werden sollen, oder `null` für alle Typen.  
   
  `rCustomAttributes`  
- [out] Ein Array von benutzerdefinierten Attributtoken.  
+ [out] Ein Array von benutzerdefinierten Attribut-Token.  
   
  `cMax`  
  [in] Die maximale Größe des `rCustomAttributes`-Arrays.  
   
  `pcCustomAttributes`  
- [out, optional] Die tatsächliche Anzahl von Tokenwerten im zurückgegebenen `rCustomAttributes`.  
+ [Out, optional] Die tatsächliche Anzahl der token in zurückgegebenen Werte `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumCustomAttributes` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine benutzerdefinierten Attribute aufgelistet werden. In diesem Fall `pcCustomAttributes` 0 (null).|  
+|`S_FALSE`|Es gibt keine benutzerdefinierten Attribute aufgelistet. In diesem Fall `pcCustomAttributes` ist 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

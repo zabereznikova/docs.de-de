@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 1d9a6d0a556613576a14c600aa72d3f4524cdc3e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 2152398cecccdf1f949baf30217b7f5ac19ae22f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527132"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration
 In diesem Beispiel wird ein `ICalculator`-Vertrag für einen grundlegenden Rechnerdienst definiert. Der Dienst wird in die `CalculatorService`-Klasse implementiert. Anschließend wird der Endpunkt in der Datei "Web.config" konfiguriert, in der angegeben wird, dass der Dienst die <xref:System.ServiceModel.BasicHttpBinding> verwendet. Eine Beschreibung des Dienstes mithilfe von Code anstelle einer Konfigurations zu konfigurieren, finden Sie unter [Vorgehensweise: Angeben einer Dienstbindung im Code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
@@ -92,6 +92,6 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen grundlegenden Rechn
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Angeben einer Endpunktadresse](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

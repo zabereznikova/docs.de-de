@@ -2,23 +2,23 @@
 title: 'Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eefb6ccfabdb7897874ae4e5a8abc8c2d9cc8e35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534773"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)
 Eine Assembly oder eine dynamisch gebundene Programmbibliothek (DLL) wird zur Laufzeit mit dem Programm verknüpft. Betrachten Sie das folgende Szenario, das die Erstellung und Verwendung einer DLL zeigt:  
   
--   `MathLibrary.DLL`: Die Bibliotheksdatei enthält die Methoden, die zur Laufzeit aufgerufen werden sollen. In diesem Beispiel enthält die DLL zwei Methoden: `Add` und `Multiply`.  
+-   `MathLibrary.DLL`: Die Bibliotheksdatei, die enthält die Methoden, die zur Laufzeit aufgerufen werden. In diesem Beispiel enthält die DLL zwei Methoden: `Add` und `Multiply`.  
   
--   `Add`: Die Quelldatei, die die Methode `Add` enthält. Sie gibt die Summe ihrer Parameter zurück. Die Klasse `AddClass`, die die Methode `Add` enthält, gehört zum Namespace `UtilityMethods`.  
+-   `Add`: Die Quelldatei mit der Methode `Add`. Sie gibt die Summe ihrer Parameter zurück. Die Klasse `AddClass`, die die Methode `Add` enthält, gehört zum Namespace `UtilityMethods`.  
   
--   `Mult`: Der Quellcode, der die Methode `Multiply` enthält. Er gibt die Summe seiner Parameter zurück. Die Klasse `MultiplyClass`, die die Methode `Multiply` enthält, gehört auch zum Namespace `UtilityMethods`.  
+-   `Mult`: Den Quellcode mit der Methode `Multiply`. Er gibt die Summe seiner Parameter zurück. Die Klasse `MultiplyClass`, die die Methode `Multiply` enthält, gehört auch zum Namespace `UtilityMethods`.  
   
--   `TestCode`: Die Datei, die die Methode `Main` enthält. Sie verwendet in die DLL-Datei Methoden, um die Summe und das Produkt der Laufzeitargumente zu berechnen.  
+-   `TestCode`: Die Datei mit den `Main` Methode. Sie verwendet in die DLL-Datei Methoden, um die Summe und das Produkt der Laufzeitargumente zu berechnen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -117,7 +117,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
   
  Weitere Informationen zum Erstellen von Builds über die Befehlszeile finden Sie unter und [erstellen über die Befehlszeile](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Assemblys und der globale Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmierkonzepte](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Assemblys und der globale Assemblycache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

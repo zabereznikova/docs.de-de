@@ -2,12 +2,12 @@
 title: Abfragen in LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: b6dc38951107b0d3833e1060c23962a43936bf4d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aef82fffda1177d87b7f811ef75f37872c8c3799
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528654"
 ---
 # <a name="queries-in-linq-to-entities"></a>Abfragen in LINQ to Entities
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. Language-Integrated Query (LINQ) bietet ein einfacheres, konsistenteres Modell zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer LINQ-Abfrage arbeiten Sie immer mit Programmierobjekten.  
@@ -26,11 +26,11 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
   
 -   [Beispiele für die Abfrageausdruckssyntax: Projektion](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
   
--   [Beispiele für die Abfrageausdruckssyntax: Filtern](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
+-   [Beispiele für die Abfrageausdruckssyntax: Filtering](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [Beispiele für die Abfrageausdruckssyntax: Sortieren](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+-   [Beispiele für die Abfrageausdruckssyntax: Reihenfolge](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
--   [Beispiele für die Abfrageausdruckssyntax: Aggregierungsoperatoren](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+-   [Beispiele für die Abfrageausdruckssyntax: Aggregate-Operatoren](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
 -   [Beispiele für die Abfrageausdruckssyntax: Partitionierung](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
   
@@ -38,7 +38,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
   
 -   [Beispiele für die Abfrageausdruckssyntax: Elementoperatoren](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
   
--   [Beispiele für die Abfrageausdruckssyntax: Gruppieren](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
+-   [Beispiele für die Abfrageausdruckssyntax: Gruppierung](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
 -   [Beispiele für die Abfrageausdruckssyntax: Navigieren in Beziehungen](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
@@ -47,26 +47,26 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
   
 -   [Beispiele für die methodenbasierte Abfragesyntax: Projektion](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
   
--   [Beispiele für die methodenbasierte Abfragesyntax: Filtern](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+-   [Beispiele für die methodenbasierte Abfragesyntax: Filtering](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [Beispiele für die methodenbasierte Abfragesyntax: Sortieren](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [Beispiele für die methodenbasierte Abfragesyntax: Reihenfolge](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
--   [Beispiele für die methodenbasierte Abfragesyntax: Aggregatoperatoren](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [Beispiele für die methodenbasierte Abfragesyntax: Aggregate-Operatoren](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
 -   [Beispiele für die methodenbasierte Abfragesyntax: Partitionierung](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
   
--   [Beispiele für die methodenbasierte Abfragesyntax: Konvertierung](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+-   [Beispiele für die methodenbasierte Abfragesyntax: Conversion](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
   
 -   [Beispiele für die methodenbasierte Abfragesyntax: Joinoperatoren](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
   
 -   [Beispiele für die methodenbasierte Abfragesyntax: Elementoperatoren](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
   
--   [Beispiele für die methodenbasierte Abfragesyntax: Gruppieren](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+-   [Beispiele für die methodenbasierte Abfragesyntax: Gruppierung](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
 -   [Beispiele für die methodenbasierte Abfragesyntax: Navigieren in Beziehungen](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
- [Erste Schritte mit LINQ in C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591)
+## <a name="see-also"></a>Siehe auch
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [Erste Schritte mit LINQ in C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591)

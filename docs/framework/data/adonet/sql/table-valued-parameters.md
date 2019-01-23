@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 130b5338b14bc7c1f36feb620d549295867ef64e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527769"
 ---
 # <a name="table-valued-parameters"></a>Tabellenwertparameter
 Tabellenwertparameter bieten eine gute Möglichkeit, mehrere Datenzeilen aus einer Clientanwendung nach SQL Server zu marshallen, ohne dass mehrere Roundtrips oder eine besondere serverseitige Logik für die Verarbeitung der Daten notwendig ist. Sie können Tabellenwertparameter verwenden, um Datenzeilen in einer Clientanwendung zu kapseln und diese Daten in einem einzelnen parametrisierten Befehl an den Server zu senden. Die eingehenden Datenzeilen werden in einer Tabellenvariablen gespeichert, die anschließend mit [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] bearbeitet werden kann.  
@@ -272,9 +272,9 @@ tvpParam.SqlDbType = SqlDbType.Structured
 insertCommand.ExecuteNonQuery()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [Befehle und Parameter](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [Befehle und Parameter](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 92fd068ef0ff892c8b76396edbf1d532a36e338c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 35519be6ddaed64b3e5e2129efb611e0a812ebc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535177"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Gibt den Namen der Assembly an, zu der dieses Modul gehört.  
@@ -42,13 +42,13 @@ Gibt den Namen der Assembly an, zu der dieses Modul gehört.
 > [!NOTE]
 >  Die `-moduleassemblyname` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie an einer Eingabeaufforderung kompilieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen einer Mehrfachdateiassembly](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
+- [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)

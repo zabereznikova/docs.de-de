@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erfassen von Benutzereingaben in einem "PrintDialog" zur Laufzeit'
+title: 'Vorgehensweise: Erfassen von Benutzereingaben in einem "PrintDialog" zur Laufzeit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: 554c3c43f8ac4d41ddfc8651472d0b7fbed960bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a15563560615f5b857220c0b548fc57f31ee4e09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527665"
 ---
-# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Gewusst wie: Erfassen von Benutzereingaben in einem "PrintDialog" zur Laufzeit
-Druckoptionen zur Entwurfszeit festgelegt werden kann, sollten Sie manchmal zur Laufzeit, wahrscheinlich aufgrund der vom Benutzer ausgewählten Optionen diese Optionen ändern. Sie können Erfassen von Benutzereingaben zum Drucken von einem Dokument mithilfe der <xref:System.Windows.Forms.PrintDialog> und die <xref:System.Drawing.Printing.PrintDocument> Komponenten.  
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>Vorgehensweise: Erfassen von Benutzereingaben in einem "PrintDialog" zur Laufzeit
+Während Sie die Optionen in Bezug auf Drucken zur Entwurfszeit festlegen können, möchten Sie auch diese Optionen zur Laufzeit, wahrscheinlich aufgrund einer vom Benutzer vorgenommene Auswahl zu ändern. Sie können Erfassen von Benutzereingaben zum Drucken von einem Dokument mithilfe der <xref:System.Windows.Forms.PrintDialog> und <xref:System.Drawing.Printing.PrintDocument> Komponenten.  
   
 ### <a name="to-change-print-options-programmatically"></a>So ändern Sie die Druckoptionen programmgesteuert  
   
-1.  Hinzufügen einer <xref:System.Windows.Forms.PrintDialog> und ein <xref:System.Drawing.Printing.PrintDocument> -Komponente in Ihr Formular.  
+1.  Hinzufügen einer <xref:System.Windows.Forms.PrintDialog> und <xref:System.Drawing.Printing.PrintDocument> Ihrem Formular.  
   
-2.  Festlegen der <xref:System.Windows.Forms.PrintDialog.Document%2A> Eigenschaft von der <xref:System.Windows.Forms.PrintDialog> auf der <xref:System.Drawing.Printing.PrintDocument> dem Formular hinzugefügt.  
+2.  Festlegen der <xref:System.Windows.Forms.PrintDialog.Document%2A> Eigenschaft der <xref:System.Windows.Forms.PrintDialog> auf die <xref:System.Drawing.Printing.PrintDocument> zum Formular hinzugefügt.  
   
     ```vb  
     PrintDialog1.Document = PrintDocument1  
@@ -39,7 +39,7 @@ Druckoptionen zur Entwurfszeit festgelegt werden kann, sollten Sie manchmal zur 
     printDialog1->Document = PrintDocument1;  
     ```  
   
-3.  Anzeigen der <xref:System.Windows.Forms.PrintDialog> Komponente, indem die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode.  
+3.  Anzeigen der <xref:System.Windows.Forms.PrintDialog> -Komponente mithilfe der <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode.  
   
     ```vb  
     PrintDialog1.ShowDialog()  
@@ -53,8 +53,8 @@ Druckoptionen zur Entwurfszeit festgelegt werden kann, sollten Sie manchmal zur 
     printDialog1->ShowDialog();  
     ```  
   
-4.  Des Benutzers, die im Dialogfeld ausgewählten Druckoptionen kopiert werden die <xref:System.Drawing.Printing.PrinterSettings> Eigenschaft von der <xref:System.Drawing.Printing.PrintDocument> Komponente.  
+4.  Der Benutzer, die aus dem Dialogfeld ausgewählten Druckoptionen kopiert werden die <xref:System.Drawing.Printing.PrinterSettings> Eigenschaft der <xref:System.Drawing.Printing.PrintDocument> Komponente.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

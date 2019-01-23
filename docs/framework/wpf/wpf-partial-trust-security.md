@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 27934f782d6c1efde69794c73d653b57b287341f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec3c7a15627cf423d27221b870286009a8f7606f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566469"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534789"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
-<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] und clientseitige Skriptsprachen sind nicht auf kritische Systemressourcen zugreifen. Da Windows Presentation Foundation (WPF) im Browser gehostete Anwendungen über den Browser gestartet werden können, sollten sie eine ähnliche Reihe von Einschränkungen entsprechen. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] basiert auf beide [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] und [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Wird standardmäßig im Browser gehostete Anwendungen anfordern die Internetzone [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Satz von Berechtigungen, unabhängig davon, ob sie aus dem Internet, dem lokalen Intranet oder dem lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
+<a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. In der Standardeinstellung [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] und clientseitige Skriptsprachen nicht auf wichtige Systemressourcen zugreifen. Da Windows Presentation Foundation (WPF)-Browser-gehostete Anwendungen aus dem Browser gestartet werden können, müssen sie eine ähnliche Reihe von Einschränkungen entsprechen. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sowohl [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] und [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Standardmäßig fordern im Browser gehostete Anwendungen die Internetzone [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Satz von Berechtigungen, unabhängig davon, ob sie über das Internet, lokales Intranet oder dem lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Stellt eine Vielzahl von Support, um sicherzustellen, dass viele Funktionen wie möglich sicher kann und zusammen mit teilweiser Vertrauenswürdigkeit verwendet werden [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], bietet zusätzliche Unterstützung für die Programmierung mit teilweiser Vertrauenswürdigkeit.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Stellt eine Vielzahl von Support, um sicherzustellen, dass möglichst so viel Funktionalität sicher verwendet werden kann bei teilweiser Vertrauenswürdigkeit und zusammen mit [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], bietet zusätzliche Unterstützung für die Programmierung mit teilweiser Vertrauenswürdigkeit.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -37,9 +37,9 @@ ms.locfileid: "33566469"
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>WPF-Funktionen für die Unterstützung von teilweiser Vertrauenswürdigkeit  
- Die folgende Tabelle enthält die allgemeinen Funktionen von Windows Presentation Foundation (WPF), die sicher innerhalb der Grenzen des Berechtigungssatzes der Internetzone verwendet werden.  
+ Die folgende Tabelle enthält die allgemeinen Funktionen von Windows Presentation Foundation (WPF), die sicher innerhalb der Grenzen des Berechtigungssatzes für die Zone verwendet werden.  
   
- Tabelle 1: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit sicher sind  
+ Tabelle 1: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit sicher sind.  
   
 |Bereich „Funktionen“|Feature|  
 |------------------|-------------|  
@@ -50,15 +50,15 @@ ms.locfileid: "33566469"
 |Bearbeiten|Rechtschreibprüfung<br /><br /> RichTextBox<br /><br /> Unterstützung der Zwischenablage bei Nur-Text und Freihand<br /><br /> Vom Benutzer initiiertes Einfügen<br /><br /> Kopieren von markiertem Inhalt|  
 |Steuerelemente|Allgemeine Steuerelemente|  
   
- Diese Tabelle enthält die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Funktionen auf hoher Ebene. Detaillierte Informationen, die [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] dokumentiert die Berechtigungen, die jedes Element im erforderlichen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
+ Diese Tabelle enthält die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Funktionen auf hoher Ebene. Ausführlichere Informationen, die [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] dokumentiert die Berechtigungen, die jedes Element im erforderlichen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (siehe [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (finden Sie unter [XAML Overview (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)).  
   
 -   Popups (siehe <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
   
--   Drag & Drop (siehe [Drag- and -Drop Overview](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)).  
+-   Drag & Drop (finden Sie unter [Drag- and -Drop Overview](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)).  
   
--   Zwischenablage (siehe <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+-   Zwischenablage (finden Sie unter <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
   
 -   Imaging (siehe <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
   
@@ -66,9 +66,9 @@ ms.locfileid: "33566469"
   
 -   Das Dialogfeld Datei öffnen (siehe <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Funktionen, nicht für die Ausführung innerhalb der Grenzen des Internets sichere zone Berechtigungssatz.  
+ Der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Zone Features, die nicht sicher innerhalb der Grenzen des Internets ausgeführt werden.  
   
- Tabelle 2: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit nicht sicher sind  
+ Tabelle 2: WPF-Funktionen, die bei teilweiser Vertrauenswürdigkeit nicht sicher sind.  
   
 |Bereich „Funktionen“|Feature|  
 |------------------|-------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "33566469"
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programmieren für teilweise Vertrauenswürdigkeit  
- Für [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] Anwendungen, Code, der den Standardberechtigungssatz überschreitet wird weisen ein anderes Verhalten abhängig von der Sicherheitszone. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
+ Für [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] Anwendungen, Code, der den Standardberechtigungssatz hinausgeht verfügen über unterschiedliche Verhalten abhängig von der Sicherheitszone. In einigen Fällen erhält der Benutzer bei der Installation eine Warnung. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll. In der folgenden Tabelle werden das Verhalten der Anwendung für jede Sicherheitszone und die erforderlichen Schritte für die volle Vertrauenswürdigkeit der Anwendung beschrieben.  
   
 |Sicherheitszone|Verhalten|Erhalten der vollen Vertrauenswürdigkeit|  
 |-------------------|--------------|------------------------|  
@@ -89,18 +89,18 @@ ms.locfileid: "33566469"
 > [!NOTE]
 >  Das in der vorherigen Tabelle beschriebene Verhalten gilt für vollständig vertrauenswürdige XBAPs, die nicht dem ClickOnce-Modell für vertrauenswürdige Bereitstellung entsprechen.  
   
- Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] und [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bieten mehrere Verfahren zum Verwalten von diesem Szenario.  
+ Bei Code, der die zulässigen Berechtigungen überschreitet, handelt es sich normalerweise um gemeinsamen Code, der von eigenständigen und im Browser gehosteten Anwendungen gemeinsam verwendet wird. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] und [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] bieten mehrere Verfahren für die Verwaltung dieses Szenarios.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Erkennen von Berechtigungen mit CAS  
- In einigen Situationen ist es möglich, für freigegebenen Code in Assemblys von sowohl eigenständige Anwendungen verwendet werden und [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. In diesen Fällen werden im Code möglicherweise Funktionen ausgeführt, die mehr Berechtigungen erfordern, als der Berechtigungssatz zulässt, der der Anwendung zugewiesen ist. Die Anwendung kann erkennen, und zwar unabhängig davon, ob es sich um eine bestimmte Berechtigung verfügt, mithilfe von Microsoft .NET Framework-Sicherheit. Insbesondere können testen, ob es eine bestimmte Berechtigung, durch Aufrufen verfügt der <xref:System.Security.CodeAccessPermission.Demand%2A> -Methode für die Instanz der gewünschten Berechtigung. Dies wird im folgenden Beispiel gezeigt, das Code enthält, der überprüft, ob er eine Datei auf dem lokalen Datenträger speichern darf:  
+ In einigen Situationen ist es möglich, freigegebener Code in Bibliothekassemblys sowohl von eigenständigen Anwendungen unbefriedigend erwiesen und [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. In diesen Fällen werden im Code möglicherweise Funktionen ausgeführt, die mehr Berechtigungen erfordern, als der Berechtigungssatz zulässt, der der Anwendung zugewiesen ist. Ihre Anwendung kann erkennen, ob sie eine bestimmte Berechtigung hat, mithilfe von Microsoft .NET Framework-Sicherheit. Insbesondere können sie prüfen, ob sie eine spezifische Berechtigung durch Aufrufen von hat das <xref:System.Security.CodeAccessPermission.Demand%2A> Methode für die Instanz der gewünschten Berechtigung. Dies wird im folgenden Beispiel gezeigt, das Code enthält, der überprüft, ob er eine Datei auf dem lokalen Datenträger speichern darf:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Wenn eine Anwendung keinen die gewünschte Berechtigung, den Aufruf von <xref:System.Security.CodeAccessPermission.Demand%2A> wird eine Sicherheitsausnahme ausgelöst. Andernfalls wurde die Berechtigung erteilt. `IsPermissionGranted` Dieses Verhalten kapselt und gibt `true` oder `false` je nach Bedarf.  
+ Wenn eine Anwendung keinen die gewünschte Berechtigung, den Aufruf von <xref:System.Security.CodeAccessPermission.Demand%2A> wird eine Sicherheitsausnahme ausgelöst. Andernfalls wurde die Berechtigung erteilt. `IsPermissionGranted` kapselt dieses Verhalten und gibt `true` oder `false` je nach Bedarf.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>Sinnvolle Herabstufung der Funktionalität  
@@ -113,25 +113,25 @@ ms.locfileid: "33566469"
   
  In vielen Fällen sollte es Ihnen möglich sein, eine Alternative zu teilweiser Vertrauenswürdigkeit zu finden.  
   
- In einer kontrollierten Umgebung, z. B. ein Intranet, benutzerdefinierte verwaltete Frameworks installiert werden können, über die Client-Basis in der [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Diese Bibliotheken kann Code, der erfordert volle Vertrauenswürdigkeit ausgeführt werden, und von Anwendungen, die nur teilweise Vertrauenswürdigkeit mit dürfen verwiesen werden <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (Weitere Informationen finden Sie unter [Sicherheit](../../../docs/framework/wpf/security-wpf.md) und [WPF-Sicherheit Strategie - Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).  
+ In einer kontrollierten Umgebung, beispielsweise einem Intranet, können benutzerdefinierte verwaltete Frameworks über die Clientbasis installiert werden die [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Diese Bibliotheken können Code, der volle Vertrauenswürdigkeit erfordert "ausführen", und von Anwendungen, die teilweise Vertrauenswürdigkeit mit nur zulässig sind, verwiesen werden <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (Weitere Informationen finden Sie unter [Sicherheit](../../../docs/framework/wpf/security-wpf.md) und [WPF-Sicherheit Strategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Browserhosterkennung  
- Mithilfe von [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zum Überprüfen von Berechtigungen ist ein geeignetes Verfahren, wenn Sie auf der Basis eines pro-Berechtigung überprüfen müssen. Allerdings ist für dieses Verfahren das Abfangen von Ausnahmen als Teil der normalen Verarbeitung erforderlich, was grundsätzlich nicht empfehlenswert ist und Leistungsprobleme verursachen kann. Stattdessen, wenn Ihre [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] nur ausgeführt wird, in der Sandbox der Internetzone, können Sie die <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> Eigenschaft, die für "true" zurückgibt [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+ Mithilfe von [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zum Überprüfen von Berechtigungen ist ein geeignetes Verfahren, wenn Sie eine Berechtigungsbasis prüfen müssen. Allerdings ist für dieses Verfahren das Abfangen von Ausnahmen als Teil der normalen Verarbeitung erforderlich, was grundsätzlich nicht empfehlenswert ist und Leistungsprobleme verursachen kann. Stattdessen, wenn Ihre [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] in den Sicherheitssandkasten der Internetzone wird nur ausgeführt, können Sie die <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> -Eigenschaft, die für "true" zurückgibt [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> unterscheidet sich nur, ob eine Anwendung in einem Browser ausgeführt wird, nicht die Gruppe von Berechtigungen einer Anwendung mit ausgeführt wird.  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> nur unterscheidet, ob eine Anwendung in einem Browser ausgeführt wird, nicht die Gruppe von Berechtigungen einer Anwendung mit ausgeführt wird.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Verwalten von Berechtigungen  
- Standardmäßig [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] mit teilweiser Vertrauenswürdigkeit (Standardberechtigungssatz für die Zone) ausgeführt. Je nach Anforderungen der Anwendung ist es jedoch möglich, den Standardberechtigungssatz durch einen anderen Berechtigungssatz zu ersetzen. Z. B. wenn ein [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] gestartet wird aus einem lokalen Intranet sie profitieren von einem erweiterten Berechtigungssatz, der in der folgenden Tabelle angezeigt wird.  
+ In der Standardeinstellung [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] mit teilweiser Vertrauenswürdigkeit (Standardberechtigungssatz für die Zone) ausgeführt. Je nach Anforderungen der Anwendung ist es jedoch möglich, den Standardberechtigungssatz durch einen anderen Berechtigungssatz zu ersetzen. Z. B. wenn ein [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] gestartet wird aus einem lokalen Intranet, sie nutzen ein erweiterter Berechtigungssatz, der in der folgenden Tabelle angezeigt wird.  
   
  Tabelle 3: LocalIntranet- und Internetberechtigungen  
   
 |Berechtigung|Attribut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Zugriff auf DNS-Server|Ja|Nein|  
-|Umgebungsvariablen|Lesen|Ja|Nein|  
+|Umgebungsvariablen|Thema|Ja|Nein|  
 |Dateidialogfelder|Öffnen|Ja|Ja|  
 |Dateidialogfelder|Uneingeschränkt|Ja|Nein|  
 |Isolierte Speicherung|Assemblyisolation durch Benutzer|Ja|Nein|  
@@ -159,11 +159,11 @@ ms.locfileid: "33566469"
   
 -   [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications)  
   
- Wenn Ihre [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] volle Vertrauenswürdigkeit erfordert, können Sie den gleichen Tools um die angeforderten Berechtigungen zu erhöhen. Obwohl eine [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] volle Vertrauenswürdigkeit nur empfangen, wenn er installiert ist und gestartet wird, auf dem lokalen Computer, im Intranet oder von einer URL, die in des Browsers von vertrauenswürdigen oder Standorten zulässig aufgeführt ist. Wird die Anwendung aus dem Intranet oder einer vertrauenswürdigen Website installiert, wird der Benutzer durch die Standard-ClickOnce-Eingabeaufforderung über die erhöhten Berechtigungen informiert. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll.  
+ Wenn Ihre [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] volle Vertrauenswürdigkeit erfordert, Sie können den gleichen Tools verwenden, um die erforderlichen Berechtigungen zu erhöhen. Obwohl eine [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] erhalten nur volle Vertrauenswürdigkeit, wenn er installiert ist und aus dem lokalen Computer und dem Intranet oder über eine URL, die in des Browsers aufgelistet ist, vertrauenswürdigen oder zugelassenen Websites gestartet werden. Wird die Anwendung aus dem Intranet oder einer vertrauenswürdigen Website installiert, wird der Benutzer durch die Standard-ClickOnce-Eingabeaufforderung über die erhöhten Berechtigungen informiert. Der Benutzer kann auswählen, ob die Installation fortgesetzt oder abgebrochen werden soll.  
   
  Alternativ können Sie das ClickOnce-Modell für vertrauenswürdige Bereitstellung für eine Bereitstellung mit voller Vertrauenswürdigkeit aus einer beliebigen Sicherheitszone verwenden. Weitere Informationen finden Sie unter [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) und [Sicherheit](../../../docs/framework/wpf/security-wpf.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheit](../../../docs/framework/wpf/security-wpf.md)  
- [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+## <a name="see-also"></a>Siehe auch
+- [Sicherheit](../../../docs/framework/wpf/security-wpf.md)
+- [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

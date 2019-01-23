@@ -2,12 +2,12 @@
 title: Permanenter Instanzkontext
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: f5c066ae06e44f6cac4b9a7b98487aa6226b969f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527489"
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 Dieses Beispiel veranschaulicht das Anpassen die Windows Communication Foundation (WCF)-Runtime, um permanente instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
@@ -358,7 +358,7 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
 ```  
   
- Die Anweisung erstellt eine Instanz des `OperationInvoker`-Typs und weist sie zur `Invoker`-Eigenschaft des erstellten `DispatchOperation` zu. Die `OperationInvoker`-Klasse ist ein Wrapper des Standardvorgangaufrufers, der für `DispatchOperation` erstellt wurde. Diese Klasse implementiert die `IOperationInvoker`-Schnittstelle. In der `Invoke`-Methodenimplementierung wird der tatsächliche Methodenaufruf an den internen Vorgangsaufrufer delegiert. Bevor die Ergebnisse jedoch zurückgegeben werden, wird mit dem Speicher-Manager in `InstanceContext` die Dienstinstanz gespeichert.  
+ Die Anweisung erstellt eine Instanz des `OperationInvoker`-Typs und weist sie zur `Invoker`-Eigenschaft des erstellten `DispatchOperation` zu. Die `OperationInvoker`-Klasse ist ein Wrapper des Standardvorgangaufrufers, der für `DispatchOperation` erstellt wurde. Diese Klasse implementiert die `IOperationInvoker` -Schnittstelle. In der `Invoke`-Methodenimplementierung wird der tatsächliche Methodenaufruf an den internen Vorgangsaufrufer delegiert. Bevor die Ergebnisse jedoch zurückgegeben werden, wird mit dem Speicher-Manager in `InstanceContext` die Dienstinstanz gespeichert.  
   
 ```  
 object result = innerOperationInvoker.Invoke(instance,  

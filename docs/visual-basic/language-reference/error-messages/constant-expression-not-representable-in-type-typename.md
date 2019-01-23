@@ -1,5 +1,5 @@
 ---
-title: Konstanter Ausdruck ist nicht im Typ darstellbar &#39; &lt;Typname&gt;&#39;
+title: Konstanter Ausdruck nicht im Typ darstellbar &#39; &lt;Typename&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - bc30439
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: 0556697612439cf8216f6bd2a74c88a0ebb4daf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0acfb26ce75e88c5967233fb5496306deec7029
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529075"
 ---
-# <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Konstanter Ausdruck ist nicht im Typ darstellbar &#39; &lt;Typname&gt;&#39;
-Sie versuchen, eine Konstante auswerten, die nicht in den Zieltyp passen in der Regel verwendet werden, da sie den Bereich überläuft.  
+# <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Konstanter Ausdruck nicht im Typ darstellbar &#39; &lt;Typename&gt;&#39;
+Sie versuchen, eine Konstante ausgewertet werden, die nicht in den Zieltyp passen in der Regel verwendet werden, da es den Bereich überläuft.  
   
  **Fehler-ID:** BC30439  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Ändern Sie den Zieltyp in einen, der die Konstante verarbeiten kann.  
+1.  Ändern Sie den Typ, die die Konstante behandeln kann.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Konstanten](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Konstanten und Enumerationen](../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Konstanten](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Konstanten und Enumerationen](../../../visual-basic/language-reference/constants-and-enumerations.md)

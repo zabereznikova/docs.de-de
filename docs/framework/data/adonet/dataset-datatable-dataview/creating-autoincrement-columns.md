@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
-ms.openlocfilehash: 9c6b5393e1928828bca001ba1d2336f09e64c22c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b4beffb3c5072e9eaa398e7433b363babadbb9eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54528640"
 ---
 # <a name="creating-autoincrement-columns"></a>Erstellen von AutoIncrement-Spalten
 Um sicherzustellen, dass die Werte in einer Spalte eindeutig sind, können Sie festlegen, dass die Spaltenwerte automatisch erhöht werden, wenn der Tabelle neue Zeilen hinzugefügt werden. Zum Erstellen einer automatisch inkrementierten <xref:System.Data.DataColumn>legen die <xref:System.Data.DataColumn.AutoIncrement%2A> Eigenschaft der Spalte, die **"true"**. Die <xref:System.Data.DataColumn> startet dann mit dem Wert im definierten die <xref:System.Data.DataColumn.AutoIncrementSeed%2A> -Eigenschaft, und mit jeder hinzugefügten Zeile den Wert des der **AutoIncrement** Spalte erhöht wird, um den Wert, der definiert, der <xref:System.Data.DataColumn.AutoIncrementStep%2A> -Eigenschaft der Spalte.  
@@ -35,8 +35,8 @@ workColumn.AutoIncrementSeed = 200;
 workColumn.AutoIncrementStep = 3;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Data.DataColumn>  
- [DataTable-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Data.DataColumn>
+- [DataTable-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

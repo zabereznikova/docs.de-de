@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: f88020c7407fb9c91e06bc2ee177773171e344fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527041"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
-Gibt an, dass ein Prozedurarguments ausgelassen werden kann, wenn die Prozedur aufgerufen wird.  
+Gibt an, dass ein Prozedurargument beim Aufrufen der Prozedur ausgelassen werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- Für jeden optionalen Parameter müssen Sie einen konstanten Ausdruck als der Standardwert dieses Parameters angeben. Wenn der ausgewertete Ausdruck [nichts](../../../visual-basic/language-reference/nothing.md), der Standardwert des Datentyps Wert als der Standardwert des Parameters verwendet wird.  
+ Für jeden optionalen Parameter verwenden müssen Sie einen konstanten Ausdruck als Standardwert dieses Parameters angeben. Wenn der Ausdruck ergibt [nichts](../../../visual-basic/language-reference/nothing.md), wird der Standardwert des Datentyps Wert als den Standardwert des Parameters verwendet.  
   
  Wenn die Parameterliste einen optionalen Parameter enthält, muss jeder Parameter, die darauf folgt ebenfalls optional sein.  
   
@@ -34,10 +34,10 @@ Gibt an, dass ein Prozedurarguments ausgelassen werden kann, wenn die Prozedur a
 -   [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  Wenn eine Prozedur mit oder ohne optionale Parameter aufgerufen wird, können Sie Argumente anhand der Position oder anhand des Namens übergeben. Weitere Informationen finden Sie unter [übergeben von Argumenten nach Position und Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
+>  Beim Aufrufen einer Prozedur mit oder ohne optionale Parameter können Sie die Argumente nach Position oder anhand des Namens übergeben. Weitere Informationen finden Sie unter [übergeben von Argumenten nach Position und Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  
   
 > [!NOTE]
->  Sie können auch eine Prozedur mit optionalen Parametern definieren, indem Sie mithilfe des Überladens. Wenn Sie einen optionalen Parameter verfügen, können Sie zwei überladene Versionen der Prozedur, eine, die der Parameter akzeptiert und eine, die nicht definieren. Weitere Informationen finden Sie unter [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+>  Sie können auch eine Prozedur mit optionalen Parametern definieren, indem mithilfe der Überladung. Wenn Sie einen optionalen Parameter verfügen, können Sie zwei überladene Versionen der Prozedur, eines, das der Parameter akzeptiert und eine, die nicht definieren. Weitere Informationen finden Sie unter [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel definiert eine Prozedur mit einem optionalen Parameter.  
@@ -62,11 +62,11 @@ End Function
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie eine Prozedur mit nach Position übergebenen Argumente und nach Namen übergebenen Argumenten aufgerufen wird. Die Prozedur besitzt zwei optionale Parameter.  
+ Im folgenden Beispiel wird veranschaulicht, wie eine Prozedur mit Argumenten, die mit Ihrer Position übergeben und nach Namen übergebenen Argumenten aufgerufen wird. Die Prozedur besitzt zwei optionale Parameter.  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

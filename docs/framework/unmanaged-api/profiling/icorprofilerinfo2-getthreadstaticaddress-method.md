@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a38c8323157cee866ac0ecab97532b9b72a932b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3574d7e889481931f40dbfb3158ad523c7e5637e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534994"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress-Methode
-Ruft die Adresse des angegebenen threadstatischen Felds, die im Bereich des angegebenen Threads ist.  
+Ruft die Adresse des angegebenen threadstatischen Felds, das in den Bereich des angegebenen Threads ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,25 +42,25 @@ HRESULT GetThreadStaticAddress(
  [in] Die ID der Klasse, die das angeforderte threadstatische Feld enthält.  
   
  `fieldToken`  
- [in] Das Metadatentoken für die angeforderte threadstatische Feld.  
+ [in] Das Metadatentoken für das angeforderte threadstatischen Feld.  
   
  `threadId`  
- [in] Die ID des Threads, die den Bereich für die angeforderten statischen Felds ist.  
+ [in] Die ID des Threads, der den Bereich für den angeforderten statischen Feld ist.  
   
  `ppAddress`  
- [out] Ein Zeiger auf die Adresse des statischen Felds, das innerhalb des angegebenen Threads ist.  
+ [out] Ein Zeiger auf die Adresse eines statischen Felds, das in den angegebenen Thread ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetThreadStaticAddress` Methode kann einen der folgenden zurück:  
+ Die `GetThreadStaticAddress` Methode gibt möglicherweise einen der folgenden zurück:  
   
--   Ein CORPROF_E_DATAINCOMPLETE-HRESULT, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.  
+-   Ein HRESULT CORPROF_E_DATAINCOMPLETE, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.  
   
--   Die Adressen von Objekten, die möglicherweise im Garbage Collection-Heap. Diese Adressen möglicherweise ungültig, nach der Garbagecollection, sodass nach dem Garbage Collection Profiler nicht annehmen sollten, dass sie gültig sind.  
+-   Die Adressen von Objekten, die möglicherweise in die Garbage Collection-Heap. Diese Adressen möglicherweise ungültig, nach der Garbagecollection, sodass nach dem Garbage Collection-Profiler nicht annehmen sollten, dass sie gültig sind.  
   
- Vor dem Abschluss einer Klasse Klassenkonstruktor `GetThreadStaticAddress` wird CORPROF_E_DATAINCOMPLETE für alle seine statischen Felder zurück, obwohl einige statische Felder möglicherweise bereits initialisiert und rooting Garbage Collection-Objekten.  
+ Vor dem Abschluss einer Klasse Klassenkonstruktor `GetThreadStaticAddress` CORPROF_E_DATAINCOMPLETE zurück für alle seine statische Felder, obwohl einige der statischen Felder bereits initialisiert werden kann und rooting-Garbage Collection-Objekten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -68,6 +68,6 @@ HRESULT GetThreadStaticAddress(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

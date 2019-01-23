@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3fc25f76ef0f848fc29ffbed12b653d1c59c1f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b57a8bcc584ffd209def5a84a99b15daa7480ee6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534942"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged-Methode
-Ruft einen Wert, der angibt, ob dies der Prozess verweist [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) wird durch verwalteten Code bezeichnet.  
+Ruft einen Wert, der angibt, ob von dieser vom Prozess verwiesen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) ist bekannt, dass verwalteter Code haben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +37,13 @@ HRESULT IsManaged (
   
 #### <a name="parameters"></a>Parameter  
  `pbManaged`  
- [out] Ein Zeiger auf einen booleschen Wert, der angibt, ob der Prozess verwalteten Code hat. Der Wert ist `true` weist der Prozess durch Code enthalten ist verwalteten, andernfalls `false`.  
+ [out] Ein Zeiger auf einen booleschen Wert, der angibt, ob der Prozess über verwalteten Code hat. Der Wert ist `true` Wenn der Prozess über verwalteten Code; aufweist, andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Da die aktuelle Version des `ICorPublishProcess` ermöglicht den Zugriff nur für Prozesse, die durch Code verwalteten, `IsManaged` gibt immer `true`.  
+ Da die aktuelle Version der `ICorPublishProcess` ermöglicht den Zugriff nur für Prozesse, die von Code verwaltetem, `IsManaged` gibt immer `true`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorPub.idl, CorPub.h  
   
@@ -51,5 +51,5 @@ HRESULT IsManaged (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorPublishProcess-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorPublishProcess-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)

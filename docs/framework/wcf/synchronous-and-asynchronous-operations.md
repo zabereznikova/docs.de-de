@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: a35f4543543aa9023fd43de1757975c7ada87da9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529121"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Synchrone und asynchrone Vorgänge
 In diesem Thema werden das Implementieren und das Aufrufen asynchroner Dienstvorgänge erörtert.  
@@ -110,11 +110,11 @@ public class AsyncExample
  Weitere Informationen über das ereignisbasierte asynchrone Muster finden Sie unter [Übersicht über ereignisbasierte asynchrone Muster](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Das asynchrone IAsyncResult-Muster  
- Ein Dienstvorgang kann asynchron mit dem asynchronen [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Programmierungsmuster implementiert werden, wobei die `<Begin>`-Methode mit der auf <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> festgelegten `true`-Eigenschaft markiert wird. In diesem Fall wird der asynchrone Vorgang in Metadaten in der gleichen Form wie ein synchroner Vorgang verfügbar gemacht: Er wird als einzelner Vorgang mit einer Anforderungsnachricht und einer korrelierten Antwortnachricht verfügbar gemacht. Clientprogrammierungsmodelle haben dann eine Wahl. Sie können dieses Muster als synchronen oder als asynchronen Vorgang darstellen, solange beim Aufrufen des Diensts ein Anforderung-Antwort-Nachrichtenaustausch stattfindet.  
+ Ein Dienstvorgang kann asynchron mit dem asynchronen [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Programmierungsmuster implementiert werden, wobei die `<Begin>`-Methode mit der auf <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> festgelegten `true`-Eigenschaft markiert wird. In diesem Fall wird der asynchrone Vorgang in Metadaten in die gleiche Form wie ein synchroner Vorgang verfügbar gemacht: Es wird als einzelner Vorgang mit einer Anforderungsnachricht und einer korrelierten Antwortnachricht verfügbar gemacht. Clientprogrammierungsmodelle haben dann eine Wahl. Sie können dieses Muster als synchronen oder als asynchronen Vorgang darstellen, solange beim Aufrufen des Diensts ein Anforderung-Antwort-Nachrichtenaustausch stattfindet.  
   
  Aufgrund der asynchronen Natur der Systeme sollte i. A. eine Abhängigkeit von den Threads vermieden werden.  Die verlässlichste Möglichkeit, Daten an verschiedene Stufen der Vorgangsverteilungsverarbeitung zu übergeben, ist die Verwendung von Erweiterungen.  
   
- Ein Beispiel finden Sie unter [Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).  
+ Ein Beispiel finden Sie unter [Gewusst wie: Implementieren ein asynchronen Dienstvorgangs](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md).  
   
  So definieren Sie ein Vertragsvorgang `X`, der unabhängig von der Art des Aufrufs in der Clientanwendung asynchron ausgeführt wird:  
   
@@ -180,7 +180,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- Dadurch wird ein Dienstvertrag generiert, in dem jeder Vorgang als eine `<Begin>`-Methode mit der auf <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> festgelegten `true`-Eigenschaft und einer entsprechenden `<End>`-Methode modelliert wird. Ein vollständiges Beispiel unter Verwendung einer <xref:System.ServiceModel.ChannelFactory%601> finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Vorgängen mit einer Kanalfactory](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+ Dadurch wird ein Dienstvertrag generiert, in dem jeder Vorgang als eine `<Begin>`-Methode mit der auf <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> festgelegten `true`-Eigenschaft und einer entsprechenden `<End>`-Methode modelliert wird. Für ein vollständiges Beispiel mit einem <xref:System.ServiceModel.ChannelFactory%601>, finden Sie unter [Vorgehensweise: Aufrufen von Vorgängen, die asynchron mit einer Kanalfactory](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
  In jedem Fall können Anwendungen einen Vorgang asynchron aufrufen, auch wenn der Dienst synchron implementiert wurde, ebenso wie eine Anwendung mit dem gleichen Muster eine lokale synchrone Methode asynchron aufrufen kann. Wie der Vorgang implementiert wird, ist für den Client nicht von Bedeutung; wenn die Antwortnachricht eintrifft, wird ihr Inhalt an die asynchrone <`End`>-Methode des Clients gesendet, und der Client ruft die Informationen ab.  
   
@@ -192,6 +192,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  Wenn das Nachrichtenobjekt in der `Result`-Eigenschaft und die Rückgabewerte als Eigenschaften dieses Objekts übermittelt werden sollen, verwenden Sie die **/messageContract**-Befehlsoption. Damit wird eine Signatur generiert, bei der die Antwortnachricht in der `Result`-Eigenschaft des <xref:System.EventArgs>-Objekts zurückgegeben wird. Alle internen Rückgabewerte sind dann Eigenschaften des Antwortnachrichtenobjekts.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

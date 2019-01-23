@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529803"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next-Methode
-Ruft die angegebene Anzahl von Instanzen von "ICorDebugCode" aus der Enumeration, beginnend mit der aktuellen Position ab.  
+Ruft die angegebene Anzahl von Instanzen von "ICorDebugCode" aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +43,13 @@ HRESULT Next (
  [in] Die Anzahl der `ICorDebugCode` Instanzen abgerufen werden sollen.  
   
  `values`  
- [out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugCode` Objekt.  
+ [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugCode` Objekt.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der `ICorDebugCode` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Ein Zeiger auf die Anzahl der `ICorDebugCode` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -57,6 +57,6 @@ HRESULT Next (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-    
- 
+## <a name="see-also"></a>Siehe auch
+
+

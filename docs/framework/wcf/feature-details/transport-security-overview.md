@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 44f0763aa09b2a9d036d13c9995d7ea978908d4c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529160"
 ---
 # <a name="transport-security-overview"></a>Übersicht über die Transportsicherheit
 Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt davon ab, die Bindung und den Transport verwendet wird. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. Dieses Thema beschreibt die wichtigsten Sicherheitsmechanismen, die in den WCF-System bereitgestellten Bindungen verwendet.  
@@ -47,7 +47,7 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt
  In den folgenden Abschnitten werden andere Client-Anmeldeinformationstypen erläutert.  
   
 #### <a name="basic"></a>Standard  
- Dies entspricht der Authentifizierungsmethode Standard in IIS. Wenn Sie diesen Modus verwenden, muss der IIS-Server mit Windows-Benutzerkonten und den entsprechenden NTFS-Dateisystemberechtigungen konfiguriert sein. Weitere Informationen zu [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Aktivieren der Standardauthentifizierung und Konfigurieren des Bereichsnamens](https://go.microsoft.com/fwlink/?LinkId=88592). Weitere Informationen zu [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Configure Basic Authentication](https://go.microsoft.com/fwlink/?LinkId=88593).  
+ Dies entspricht der Authentifizierungsmethode Standard in IIS. Wenn Sie diesen Modus verwenden, muss der IIS-Server mit Windows-Benutzerkonten und den entsprechenden NTFS-Dateisystemberechtigungen konfiguriert sein. Weitere Informationen zu [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Aktivieren der Standardauthentifizierung und Konfigurieren des Bereichsnamens](https://go.microsoft.com/fwlink/?LinkId=88592). Weitere Informationen zu [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren der Standardauthentifizierung](https://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Zertifikat  
  IIS verfügt über eine Option, mit der sich die Clients mit einem Zertifikat anmelden müssen. Mit dieser Funktion können die Internetinformationsdienste auch einem Windows-Konto ein Clientzertifikat zuordnen. Weitere Informationen zu [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Aktivieren von Clientzertifikaten in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Weitere Informationen zu [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren von Serverzertifikaten in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
@@ -120,5 +120,5 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding und NetMsmqBinding  
  Eine vollständige Erläuterung der transportsicherheit mit Message Queuing (früher als MSMQ bezeichnet), finden Sie unter [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

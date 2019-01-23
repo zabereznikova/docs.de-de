@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3b2081cee307e80396a9af4b9cfdbdea001113e6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e609c2b1a24ba01bf23226187b6d87e56395ff99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530401"
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
-Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: Erste Schritte“. Hierin wird beschrieben, wie Sie einen Workflowhost erstellen und den im vorherigen Thema [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) definierten Workflow ausführen.
+In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schritte-Tutorial, und beschreibt, wie Sie einen Workflowhost erstellen und Ausführen des Workflows, die definiert, in der vorherigen [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) Thema.
 
 > [!NOTE]
->  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema verwenden zu können, müssen Sie zuerst [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) und [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)durcharbeiten und abschließen.
+>  Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. In diesem Thema ausführen, müssen Sie zuerst abschließen [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) und [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
 
 > [!NOTE]
->  Informationen zum Herunterladen einer abgeschlossenen Version des Lernprogramms finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.  
   
 ### <a name="to-create-the-workflow-host-project"></a>So erstellen Sie das Workflowhostprojekt  
   
@@ -77,7 +77,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
      Ersetzen Sie die Codezeilen, in denen <xref:System.Activities.WorkflowInvoker> mit dem folgenden grundlegenden <xref:System.Activities.WorkflowApplication> -Hostingcode verwendet wird. In diesem Beispielhostingcode werden die grundlegenden Schritte zum Hosten und das Aufrufen eines Workflows veranschaulicht, das Beispiel enthält jedoch noch nicht die Funktionalität zum erfolgreichen Ausführen des Workflows aus diesem Thema. In den folgenden Schritten wird der grundlegende Code geändert, und es werden zusätzliche Funktionen hinzugefügt, bis die Anwendung abgeschlossen wurde.
 
     > [!NOTE]
-    >  Ersetzen Sie `Workflow1` in diesen Beispielen durch `FlowchartNumberGuessWorkflow`, und wählen Sie `SequentialNumberGuessWorkflow`oder `StateMachineNumberGuessWorkflow`, je nachdem, welchen Workflow Sie im vorherigen Schritt [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) abgeschlossen haben. Wenn Sie `Workflow1` nicht ersetzen, erhalten Sie Buildfehler, wenn Sie versuchen, den Workflow zu erstellen oder auszuführen.
+    >  Ersetzen Sie `Workflow1` in diesen Beispielen durch `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, oder `StateMachineNumberGuessWorkflow`, je nachdem, auf welchen Workflow Sie im vorherigen abgeschlossen [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) Schritt. Wenn Sie `Workflow1` nicht ersetzen, erhalten Sie Buildfehler, wenn Sie versuchen, den Workflow zu erstellen oder auszuführen.
 
      [!code-csharp[CFX_WF_GettingStarted#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/extrasnippets.cs#4)]
      [!code-vb[CFX_WF_GettingStarted#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/extrasnippets.vb#4)]
@@ -94,7 +94,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
 2.  Ersetzen Sie die Codezeile, die das neue <xref:System.Activities.WorkflowApplication> -Element erstellt, durch den folgenden Code, der ein Wörterbuch mit Parametern erstellt und dieses nach seiner Erstellung an den Workflow übergibt.
 
     > [!NOTE]
-    >  Ersetzen Sie `Workflow1` in diesen Beispielen durch `FlowchartNumberGuessWorkflow`, und wählen Sie `SequentialNumberGuessWorkflow`oder `StateMachineNumberGuessWorkflow`, je nachdem, welchen Workflow Sie im vorherigen Schritt [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) abgeschlossen haben. Wenn Sie `Workflow1` nicht ersetzen, erhalten Sie Buildfehler, wenn Sie versuchen, den Workflow zu erstellen oder auszuführen.
+    >  Ersetzen Sie `Workflow1` in diesen Beispielen durch `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, oder `StateMachineNumberGuessWorkflow`, je nachdem, auf welchen Workflow Sie im vorherigen abgeschlossen [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) Schritt. Wenn Sie `Workflow1` nicht ersetzen, erhalten Sie Buildfehler, wenn Sie versuchen, den Workflow zu erstellen oder auszuführen.
 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
@@ -148,13 +148,13 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
      [!code-csharp[CFX_WF_GettingStarted#6](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     Eine Anleitung dazu, wie Sie einer Workflowanwendung Persistenz hinzufügen, finden Sie im nächsten Thema: [Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).
+     Anweisungen dazu, wie Sie einer workflowanwendung Persistenz hinzufügen, finden Sie weiter, [Vorgehensweise: Erstellen und führen Sie ein langer Ausführung Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md).
 
 ## <a name="example"></a>Beispiel
  Das folgende Beispiel ist die vollständige Codeauflistung für die `Main` -Methode.
 
 > [!NOTE]
->  Ersetzen Sie `Workflow1` in diesen Beispielen durch `FlowchartNumberGuessWorkflow`, und wählen Sie `SequentialNumberGuessWorkflow`oder `StateMachineNumberGuessWorkflow`, je nachdem, welchen Workflow Sie im vorherigen Schritt [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) abgeschlossen haben. Wenn Sie `Workflow1` nicht ersetzen, erhalten Sie Buildfehler, wenn Sie versuchen, den Workflow zu erstellen oder auszuführen.
+>  Ersetzen Sie `Workflow1` in diesen Beispielen durch `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, oder `StateMachineNumberGuessWorkflow`, je nachdem, auf welchen Workflow Sie im vorherigen abgeschlossen [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) Schritt. Wenn Sie `Workflow1` nicht ersetzen, erhalten Sie Buildfehler, wenn Sie versuchen, den Workflow zu erstellen oder auszuführen.
 
  [!code-csharp[CFX_WF_GettingStarted#12](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
@@ -165,7 +165,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation-Programmierung](../../../docs/framework/windows-workflow-foundation/programming.md)
 - [Tutorial mit ersten Schritten](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Vorgehensweise: Erstellen eines Workfows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
+- [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
+- [Vorgehensweise: Erstellen und Ausführen einer langen Workflow ausgeführt wird](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)
 - [Warten auf Eingabe in einem Workflow](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)
 - [Hosten von Workflows](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)

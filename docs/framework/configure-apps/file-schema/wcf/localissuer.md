@@ -2,12 +2,12 @@
 title: '&lt;localIssuer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 7a48cbb3a1e17ac1fc9fa9f43301ef153cdb866c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 893ac2cb0e6c54beae68e2607c31564baafd95fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527548"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 Gibt die Adresse und Bindung des lokalen Ausstellers zum Abrufen eines Sicherheitstokens an.  
@@ -15,10 +15,10 @@ Gibt die Adresse und Bindung des lokalen Ausstellers zum Abrufen eines Sicherhei
  \<system.ServiceModel>  
 \<behaviors>  
 EndpointBehaviors-Abschnitt  
-\<Verhalten >  
+\<behavior>  
 \<clientCredentials>  
-\<IssuedToken >  
-\<LocalIssuer >  
+\<issuedToken>  
+\<localIssuer>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ EndpointBehaviors-Abschnitt
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<IssuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.|  
+|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  Beim Abrufen eines von einem Sicherheitstokendienst (Security Token Service, STS) ausgestellten Tokens muss die Clientanwendung mit der zu verwendenden Adresse und Bindung konfiguriert sein, um mit dem STS kommunizieren zu können. Wenn die <xref:System.ServiceModel.WSFederationHttpBinding> stellt keine URL für den Sicherheitstokendienst, oder wenn die Ausstelleradresse einer verbundbindung `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` oder `null`, Windows Communication Foundation (WCF)-Clientchannel verwendet die angegebenen Werte von `address`und `binding` für die Kommunikation mit dem STS, um das ausgestellte Token abgerufen. Weitere Informationen zum Konfigurieren eines lokalen Ausstellers finden Sie unter [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
@@ -77,16 +77,16 @@ EndpointBehaviors-Abschnitt
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>  
- <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>  
- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
- [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)  
- [Vorgehensweise: Erstellen eines Verbundclients](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.LocalIssuer%2A>
+- <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>
+- <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
+- [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
+- [Vorgehensweise: Erstellen eines Verbundclients](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Verbund und ausgestellte Token](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

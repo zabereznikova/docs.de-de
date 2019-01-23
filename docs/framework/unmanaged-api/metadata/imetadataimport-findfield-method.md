@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527600"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField-Methode
-Ruft einen Zeiger auf das FieldDef token für das Feld, das eingeschlossen ist durch das angegebene <xref:System.Type> und den angegebenen Namen und Metadaten aufweist.  
+Ruft einen Zeiger auf das FieldDef token für das Feld, das eingeschlossen wird durch das angegebene <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ HRESULT FindField (
   
 #### <a name="parameters"></a>Parameter  
  `td`  
- [in] Das TypeDef-Token für die Klasse oder Schnittstelle, die Suche nach Feld einschließt. Wenn dieser Wert ist `mdTokenNil`, erfolgt die Suche für eine globale Variable.  
+ [in] Die TypeDef-Token für die Klasse oder Schnittstelle, die zu suchenden Felds einschließt. Wenn dieser Wert ist `mdTokenNil`, wird die Suche für eine globale Variable durchgeführt.  
   
  `szName`  
  [in] Der Name des zu suchenden Felds.  
@@ -50,27 +50,27 @@ HRESULT FindField (
  [in] Ein Zeiger auf die binäre Metadatensignatur des Felds.  
   
  `cbSigBlob`  
- [in] Die Größe in Bytes des `pvSigBlob`.  
+ [in] Die Größe in Bytes der `pvSigBlob`.  
   
  `pmb`  
- [out] Ein Zeiger auf das übereinstimmende FieldDef-Token.  
+ [out] Ein Zeiger auf das entsprechende FieldDef-Token.  
   
 ## <a name="remarks"></a>Hinweise  
  Geben Sie das Feld mit der einschließenden Klasse oder Schnittstelle (`td`), seinen Namen (`szName`), und optional die Signatur (`pvSigBlob`).  
   
- Die Signatur zu übergeben, um `FindField` muss wurden im aktuellen Bereich generiert wurde, da Signaturen an einen bestimmten Bereich gebunden sind. Eine Signatur kann ein Token einbetten, die die einschließende Klasse oder der angegebene Werttyp identifiziert. (Das Token ist ein Index in die lokale TypeDef-Tabelle). Sie können keine Laufzeit-Signatur im Kontext des aktuellen Gültigkeitsbereichs erstellen und verwenden Sie diese Signatur als Eingabe für `FindField`.  
+ Die Signatur, die an `FindField` müssen wurden generiert im aktuellen Bereich, da die Signaturen für einen bestimmten Bereich gebunden sind. Eine Signatur kann es sich um ein Token einbetten, die die einschließende Klasse oder eines Werttyps identifiziert. (Das Token ist ein Index in die lokale TypeDef-Tabelle). Sie können keine Signatur zur Laufzeit im Kontext des aktuellen Bereichs und diese Signatur als Eingabe für `FindField`.  
   
- `FindField` Sucht nur Felder, die direkt in der Klasse oder Schnittstelle definiert wurden. Es werden geerbte Felder nicht gefunden.  
+ `FindField` Sucht nur die Felder, die direkt in der Klasse oder Schnittstelle definiert wurden. Es findet keine geerbte Felder.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

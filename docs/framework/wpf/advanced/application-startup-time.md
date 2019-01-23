@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527327"
 ---
 # <a name="application-startup-time"></a>Startzeit der Anwendung
 Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheblich variieren. Dieses Thema beschreibt verschiedene Verfahren zur Reduzierung der wahrgenommenen und tatsächlichen Startzeit für eine WPF-Anwendung (Windows Presentation Foundation).  
@@ -24,9 +24,9 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
  Warmstarts treten auf, wenn die meisten Seiten für die Hauptkomponenten der Common Language Runtime (CLR) bereits im Arbeitsspeicher geladen sind. Dies spart wertvolle Festplattenzugriffszeit. Dadurch startet eine verwaltete Anwendung schneller, wenn sie ein zweites Mal ausgeführt wird.  
   
 ## <a name="implement-a-splash-screen"></a>Implementieren eines Begrüßungsbildschirms  
- In Fällen, in denen eine erhebliche unvermeidliche Verzögerung zwischen dem Starten einer Anwendung und dem Anzeigen der ersten Benutzeroberfläche besteht, können Sie die wahrgenommene Startzeit optimieren, indem Sie einen *Begrüßungsbildschirm* verwenden. Dieser Ansatz zeigt ein Bild fast unmittelbar nachdem der Benutzer die Anwendung startet. Wenn die Anwendung zum Anzeigen der ersten Benutzeroberfläche bereit ist, wird der Begrüßungsbildschirm ausgeblendet. Ab der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], können Sie die <xref:System.Windows.SplashScreen> Klasse, um einen Begrüßungsbildschirm implementieren. Weitere Informationen finden Sie unter [Add a Splash Screen to a WPF Application (Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung)](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ In Fällen, in denen eine erhebliche unvermeidliche Verzögerung zwischen dem Starten einer Anwendung und dem Anzeigen der ersten Benutzeroberfläche besteht, können Sie die wahrgenommene Startzeit optimieren, indem Sie einen *Begrüßungsbildschirm* verwenden. Dieser Ansatz zeigt ein Bild fast unmittelbar nachdem der Benutzer die Anwendung startet. Wenn die Anwendung zum Anzeigen der ersten Benutzeroberfläche bereit ist, wird der Begrüßungsbildschirm ausgeblendet. Ab der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], können Sie die <xref:System.Windows.SplashScreen> Klasse zum Implementieren eines Begrüßungsbildschirms. Weitere Informationen finden Sie unter [Add a Splash Screen to a WPF Application (Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung)](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Sie können auch einen eigenen Begrüßungsbildschirm mit nativen Win32-Grafiken implementieren. Zeigen Sie die Implementierung vor der <xref:System.Windows.Application.Run%2A> -Methode aufgerufen wird.  
+ Sie können auch einen eigenen Begrüßungsbildschirm mit nativen Win32-Grafiken implementieren. Zeigen Sie die Implementierung vor der <xref:System.Windows.Application.Run%2A> Methode wird aufgerufen.  
   
 ## <a name="analyze-the-startup-code"></a>Analysieren des Startcodes  
  Bestimmen Sie die Ursache für einen langsamen Kaltstart. Datenträger-E/A kann dafür verantwortlich sein, dies ist aber nicht immer der Fall. Im Allgemeinen sollten Sie die Verwendung externer Ressourcen, z.B. Netzwerk, Webdienste oder Datenträger minimieren.  
@@ -60,7 +60,7 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
   
  Sie sollten „Ngen.exe“ immer für Ihre Anwendung verwenden, um die Warmstartzeit zu verbessern, da dadurch die CPU-Kosten der JIT-Kompilierung des Anwendungscodes vermieden werden.  
   
- In einigen Szenarien Kaltstart kann mithilfe von Ngen.exe auch hilfreich sein. Dies ist, weil der JIT-Compiler (mscorjit.dll) nicht geladen werden.  
+ In einigen Kaltstartszenarios kann mithilfe von Ngen.exe auch hilfreich sein. Dies ist, weil der JIT-Compiler (mscorjit.dll) nicht geladen werden.  
   
  Es kann schlimme Auswirkungen haben, gleichzeitig über NGen- und JIT-Module zu verfügen. Der Grund hierfür ist, dass „mscorjit.dll“ geladen werden muss. Wenn der JIT-Compiler auf Ihren Code ausgeführt wird, muss auf viele Seiten in den NGen-Images zugegriffen werden, wenn der JIT-Compiler die Metadaten der Assembly liest.  
   
@@ -104,12 +104,12 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
  Erzwingen Sie für die beste Leistung effiziente domänenübergreifende Kommunikation durch Reduzierung von domänenübergreifenden Aufrufen. Verwenden Sie nach Möglichkeit Aufrufe ohne Argumente oder mit primitiven Typargumenten.  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>Verwenden des NeutralResourcesLanguage-Attributs  
- Verwenden der <xref:System.Resources.NeutralResourcesLanguageAttribute> an die neutrale Kultur für die <xref:System.Resources.ResourceManager>. Dadurch werden nicht erfolgreiche Assembly-Suchvorgänge vermieden.  
+ Verwenden der <xref:System.Resources.NeutralResourcesLanguageAttribute> angeben die neutrale Kultur für die <xref:System.Resources.ResourceManager>. Dadurch werden nicht erfolgreiche Assembly-Suchvorgänge vermieden.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Verwenden der BinaryFormatter-Klasse für die Serialisierung  
- Wenn Sie Serialisierung verwenden müssen, verwenden Sie die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> -Klasse statt der <xref:System.Xml.Serialization.XmlSerializer> Klasse. Die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> -Klasse in der Basisklassenbibliothek (BCL) in der Datei "mscorlib.dll"-Assembly implementiert ist. Die <xref:System.Xml.Serialization.XmlSerializer> wird in der System.Xml.dll-Assembly, die möglicherweise eine zusätzliche Laden der DLL implementiert.  
+ Wenn Sie die Serialisierung verwenden müssen, verwenden Sie die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> -Klasse anstelle der <xref:System.Xml.Serialization.XmlSerializer> Klasse. Die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> -Klasse wird in der Basisklassenbibliothek (BCL) in der Datei "mscorlib.dll"-Assembly implementiert. Die <xref:System.Xml.Serialization.XmlSerializer> wird in der System.Xml.dll-Assembly, die möglicherweise eine zusätzliche DLL zum Laden von implementiert.  
   
- Wenn Sie verwenden, müssen die <xref:System.Xml.Serialization.XmlSerializer> -Klasse, Sie können eine bessere Leistung erzielen, wenn Sie zuvor die Serialisierungsassembly generieren.  
+ Wenn Sie verwenden, müssen die <xref:System.Xml.Serialization.XmlSerializer> -Klasse, können Sie eine bessere Leistung erzielen, wenn Sie die Serialisierungsassembly vorab generiert.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Konfigurieren von ClickOnce zum Suchen nach Updates nach dem Start  
  Vermeiden Sie Netzwerkzugriff beim Start, wenn Ihre Anwendung [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] verwendet, indem Sie [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] konfigurieren, nach dem Start der Anwendung die Seite der Bereitstellung nach Updates zu durchsuchen.  
@@ -120,13 +120,13 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
  Die erste WPF-Anwendung, die nach einem Neustart ausgeführt wird, ist der PresentationFontCache-Dienst. Der Dienst speichert die Systemschriftarten zwischen, verbessert den Zugriff auf Schriftarten und verbessert die allgemeine Leistung. Es besteht ein Mehraufwand beim Starten des Dienstes. In manchen gesteuerten Umgebungen sollten Sie den Dienst so konfigurieren, dass er automatisch bei Neustart des Systems startet.  
   
 ## <a name="set-data-binding-programmatically"></a>Festlegen von programmgesteuerter Datenbindung  
- Anstelle der Verwendung von XAML zum Festlegen der <xref:System.Windows.FrameworkElement.DataContext%2A> deklarativ das Hauptfenster empfiehlt es programmgesteuert in die <xref:System.Windows.Application.OnActivated%2A> Methode.  
+ Anstelle der Verwendung von XAML zum Festlegen der <xref:System.Windows.FrameworkElement.DataContext%2A> deklarativ für das Hauptfenster, können Sie es auch programmgesteuert in die <xref:System.Windows.Application.OnActivated%2A> Methode.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.SplashScreen>  
- <xref:System.AppDomain>  
- <xref:System.Resources.NeutralResourcesLanguageAttribute>  
- <xref:System.Resources.ResourceManager>  
- [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.SplashScreen>
+- <xref:System.AppDomain>
+- <xref:System.Resources.NeutralResourcesLanguageAttribute>
+- <xref:System.Resources.ResourceManager>
+- [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

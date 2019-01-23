@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms'
+title: 'Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 816850fa61de97b5f4c251571a74da7e0a70cba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b516a88b4830c5ed1bccfc5ecb76ebc97c6e3b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530288"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Gewusst wie: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms
-Sie können die Darstellung von Windows Forms konfigurieren <xref:System.Windows.Forms.ColorDialog> Komponente mit dem eine Reihe von seiner Eigenschaften. Das Dialogfeld enthält zwei Abschnitte – eines, das anzeigt, Grundfarben und eine, die dem Benutzer ermöglicht, benutzerdefinierte Farben definieren.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms
+Sie können konfigurieren, das Erscheinungsbild der Windows-Formulare <xref:System.Windows.Forms.ColorDialog> Komponente mit dem eine Reihe von dessen Eigenschaften. Das Dialogfeld verfügt über zwei Abschnitte: einen, der anzeigt, Grundfarben und eine, die dem Benutzer ermöglicht, benutzerdefinierte Farben definieren.  
   
- Die meisten Eigenschaften einschränken, welche Farben im Dialogfeld die Benutzer auswählen kann. Wenn die <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> -Eigenschaftensatz auf `true`, den der Benutzer benutzerdefinierte Farben definieren. Die <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Eigenschaft `true` verwenden, wenn das Dialogfeld, zum Definieren benutzerdefinierter Farben erweitert wird; andernfalls der Benutzer muss klicken Sie auf eine Schaltfläche "Benutzerdefinierte Farben definieren". Wenn die <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> -Eigenschaftensatz auf `true`, das Dialogfeld zeigt alle verfügbare Farben in der Menge der Grundfarben. Wenn die <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> -Eigenschaftensatz auf `true`, der Benutzer kann nicht Dithering Farben auswählen; nur Volltonfarben stehen zur Auswahl.  
+ Die meisten Eigenschaften einschränken, welche Farben im Dialogfeld der Benutzer auswählen kann. Wenn die <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> -Eigenschaftensatz auf `true`, können Benutzer benutzerdefinierte Farben definieren. Die <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Eigenschaft `true` Wenn das Dialogfeld wird erweitert, damit benutzerdefinierte Farben definiert werden andernfalls der Benutzer muss klicken Sie auf eine Schaltfläche "Benutzerdefinierte Farben". Wenn die <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> -Eigenschaftensatz auf `true`, im Dialogfeld werden alle verfügbare Farben angezeigt, in der Menge der Grundfarben. Wenn die <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> -Eigenschaftensatz auf `true`, der Benutzer kann nicht mit Dithering Farben auswählen, stehen nur Volltonfarben auswählen.  
   
- Wenn die <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> -Eigenschaftensatz auf `true`, eine Schaltfläche "Hilfe" im Dialogfeld angezeigt wird. Wenn der Benutzer die Schaltfläche "Hilfe" klickt der <xref:System.Windows.Forms.ColorDialog> Komponente <xref:System.Windows.Forms.CommonDialog.HelpRequest> Ereignis wird ausgelöst.  
+ Wenn die <xref:System.Windows.Forms.ColorDialog.ShowHelp%2A> -Eigenschaftensatz auf `true`, eine Schaltfläche "Hilfe", die im Dialogfeld wird angezeigt. Wenn der Benutzer die Schaltfläche "Hilfe" klickt der <xref:System.Windows.Forms.ColorDialog> Komponente <xref:System.Windows.Forms.CommonDialog.HelpRequest> Ereignis wird ausgelöst.  
   
 ### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>So konfigurieren Sie die Darstellung im Dialogfeld "Farbe"  
   
@@ -49,7 +49,7 @@ Sie können die Darstellung von Windows Forms konfigurieren <xref:System.Windows
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ColorDialog>  
- [ColorDialog-Komponente](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- [Übersicht über die ColorDialog-Komponente](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ColorDialog>
+- [ColorDialog-Komponente](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
+- [Übersicht über die ColorDialog-Komponente](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
