@@ -1,28 +1,28 @@
 ---
-title: 'Gewusst wie: Horizontales Teilen eines Fensters mithilfe des Designers'
+title: 'Vorgehensweise: Teilen eines Fensters horizontal mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], horizontal splitting
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: c2b605a08ea29d1d0a1e92cb2b7e4dc1f2059c26
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3fab2eab07d9c632d10ceb06fbffcfeacfc10df1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535553"
 ---
-# <a name="how-to-split-a-window-horizontally-using-the-designer"></a><span data-ttu-id="bdea7-102">Gewusst wie: Horizontales Teilen eines Fensters mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="bdea7-102">How to: Split a Window Horizontally Using the Designer</span></span>
-<span data-ttu-id="bdea7-103">In diesem Beispiel wird der Splitter generiert, die den teilt die <xref:System.Windows.Forms.SplitContainer> Steuerelement Horizontal.</span><span class="sxs-lookup"><span data-stu-id="bdea7-103">This example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
+# <a name="how-to-split-a-window-horizontally-using-the-designer"></a><span data-ttu-id="c310b-102">Vorgehensweise: Teilen eines Fensters horizontal mithilfe des Designers</span><span class="sxs-lookup"><span data-stu-id="c310b-102">How to: Split a Window Horizontally Using the Designer</span></span>
+<span data-ttu-id="c310b-103">In diesem Beispiel wird der Splitter generiert, die den teilt die <xref:System.Windows.Forms.SplitContainer> Steuerelement Horizontal.</span><span class="sxs-lookup"><span data-stu-id="c310b-103">This example makes the splitter that divides the <xref:System.Windows.Forms.SplitContainer> control horizontal.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="bdea7-104">Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft der <xref:System.Windows.Forms.SplitContainer> Steuerelement bestimmt die Richtung des Splitters, nicht des Steuerelements selbst.</span><span class="sxs-lookup"><span data-stu-id="bdea7-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span> <span data-ttu-id="bdea7-105">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="bdea7-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="bdea7-106">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="bdea7-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="bdea7-107">Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="bdea7-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="c310b-104">Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft der <xref:System.Windows.Forms.SplitContainer> Steuerelement bestimmt die Richtung des Splitters, nicht des Steuerelements selbst.</span><span class="sxs-lookup"><span data-stu-id="c310b-104">The <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control determines the direction of the splitter, not of the control itself.</span></span> <span data-ttu-id="c310b-105">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="c310b-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="c310b-106">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="c310b-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="c310b-107">Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="c310b-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="bdea7-108">Um ein Fenster horizontal teilen</span><span class="sxs-lookup"><span data-stu-id="bdea7-108">To split a window horizontally</span></span>  
+### <a name="to-split-a-window-horizontally"></a><span data-ttu-id="c310b-108">Um ein Fenster horizontal teilen</span><span class="sxs-lookup"><span data-stu-id="c310b-108">To split a window horizontally</span></span>  
   
-1.  <span data-ttu-id="bdea7-109">In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft der <xref:System.Windows.Forms.SplitContainer> die Steuerung an <xref:System.Windows.Forms.Orientation.Horizontal>.</span><span class="sxs-lookup"><span data-stu-id="bdea7-109">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
+1.  <span data-ttu-id="c310b-109">In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft der <xref:System.Windows.Forms.SplitContainer> die Steuerung an <xref:System.Windows.Forms.Orientation.Horizontal>.</span><span class="sxs-lookup"><span data-stu-id="c310b-109">In the **Properties** window, set the <xref:System.Windows.Forms.SplitContainer.Orientation%2A> property of the <xref:System.Windows.Forms.SplitContainer> control to <xref:System.Windows.Forms.Orientation.Horizontal>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdea7-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bdea7-110">See Also</span></span>  
- <xref:System.Windows.Forms.SplitContainer>  
- [<span data-ttu-id="bdea7-111">SplitContainer-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="bdea7-111">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="c310b-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c310b-110">See also</span></span>
+- <xref:System.Windows.Forms.SplitContainer>
+- [<span data-ttu-id="c310b-111">SplitContainer-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="c310b-111">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
