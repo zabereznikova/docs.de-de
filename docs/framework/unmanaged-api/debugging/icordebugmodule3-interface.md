@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1d504e694810bfa1b9f3258f75e307bfb60d4ad7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196812"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496805"
 ---
-# <a name="icordebugmodule3-interface"></a><span data-ttu-id="ceca9-102">ICorDebugModule3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ceca9-102">ICorDebugModule3 Interface</span></span>
-<span data-ttu-id="ceca9-103">Erstellt einen Symbolreader für ein dynamisches Modul.</span><span class="sxs-lookup"><span data-stu-id="ceca9-103">Creates a symbol reader for a dynamic module.</span></span>  
+# <a name="icordebugmodule3-interface"></a><span data-ttu-id="149b2-102">ICorDebugModule3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="149b2-102">ICorDebugModule3 Interface</span></span>
+<span data-ttu-id="149b2-103">Erstellt einen Symbolreader für ein dynamisches Modul.</span><span class="sxs-lookup"><span data-stu-id="149b2-103">Creates a symbol reader for a dynamic module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ceca9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ceca9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="149b2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="149b2-104">Syntax</span></span>  
   
 ```  
 interface ICorDebugModule3 : IUnknown  
@@ -39,29 +39,29 @@ interface ICorDebugModule3 : IUnknown
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="ceca9-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="ceca9-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="149b2-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="149b2-105">Methods</span></span>  
   
-|<span data-ttu-id="ceca9-106">Methode</span><span class="sxs-lookup"><span data-stu-id="ceca9-106">Method</span></span>|<span data-ttu-id="ceca9-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ceca9-107">Description</span></span>|  
+|<span data-ttu-id="149b2-106">Methode</span><span class="sxs-lookup"><span data-stu-id="149b2-106">Method</span></span>|<span data-ttu-id="149b2-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="149b2-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ceca9-108">ICorDebugModule3::CreateReaderForInMemorySymbols-Methode</span><span class="sxs-lookup"><span data-stu-id="ceca9-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="ceca9-109">Erstellt einen Symbolreader (in der Regel [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) für ein dynamisches Modul.</span><span class="sxs-lookup"><span data-stu-id="ceca9-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
+|[<span data-ttu-id="149b2-108">ICorDebugModule3::CreateReaderForInMemorySymbols-Methode</span><span class="sxs-lookup"><span data-stu-id="149b2-108">ICorDebugModule3::CreateReaderForInMemorySymbols Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|<span data-ttu-id="149b2-109">Erstellt einen Symbolreader (in der Regel [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) für ein dynamisches Modul.</span><span class="sxs-lookup"><span data-stu-id="149b2-109">Creates a symbol reader (typically [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) for a dynamic module.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ceca9-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ceca9-110">Remarks</span></span>  
- <span data-ttu-id="ceca9-111">Diese Schnittstelle erweitert logisch die Schnittstellen "ICorDebugModule" und "ICorDebugModule2".</span><span class="sxs-lookup"><span data-stu-id="ceca9-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="149b2-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="149b2-110">Remarks</span></span>  
+ <span data-ttu-id="149b2-111">Diese Schnittstelle erweitert logisch die Schnittstellen "ICorDebugModule" und "ICorDebugModule2".</span><span class="sxs-lookup"><span data-stu-id="149b2-111">This interface logically extends the "ICorDebugModule" and "ICorDebugModule2" interfaces.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ceca9-112">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="ceca9-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="149b2-112">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="149b2-112">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ceca9-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ceca9-113">Requirements</span></span>  
- <span data-ttu-id="ceca9-114">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ceca9-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="149b2-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="149b2-113">Requirements</span></span>  
+ <span data-ttu-id="149b2-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="149b2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ceca9-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ceca9-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="149b2-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="149b2-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ceca9-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ceca9-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="149b2-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="149b2-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ceca9-117">**.NET Framework-Versionen:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="ceca9-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>
+ <span data-ttu-id="149b2-117">**.NET Framework-Versionen:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="149b2-117">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="ceca9-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ceca9-118">See Also</span></span>  
- [<span data-ttu-id="ceca9-119">ICorDebugRemoteTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ceca9-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [<span data-ttu-id="ceca9-120">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ceca9-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [<span data-ttu-id="ceca9-121">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="ceca9-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="149b2-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="149b2-118">See also</span></span>
+- [<span data-ttu-id="149b2-119">ICorDebugRemoteTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="149b2-119">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="149b2-120">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="149b2-120">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [<span data-ttu-id="149b2-121">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="149b2-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
