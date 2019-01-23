@@ -8,128 +8,128 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6aa3685fc4aa6b51dc45b82f315f13a23b1c332
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562530"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonyme Typen (Visual Basic)
-Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erstellen, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen, erbt direkt von <xref:System.Object>, und enthält die Eigenschaften, die Sie in der Deklaration des Objekts angeben. Da der Name des Datentyps nicht angegeben ist, wird bezeichnet als ein *anonymen Typ*.  
+Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erstellen, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen, erbt direkt von <xref:System.Object>, und enthält die Eigenschaften, die Sie in der Deklaration des Objekts angeben. Da der Name des Datentyps nicht angegeben ist, wird bezeichnet als ein *anonymen Typs*.  
   
  Im folgende Beispiel Variable deklariert und erstellt `product` als eine Instanz eines anonymen Typs, das zwei Eigenschaften `Name` und `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_1.vb)]  
   
- Ein *-Abfrageausdruck* anonyme Typen verwendet, um Spalten mit Daten ausgewählt, die von einer Abfrage zu kombinieren. Den Typ des Ergebnisses kann nicht im Voraus definiert werden, da die Spalten jedoch nicht vorhersehbar ist, die eine bestimmte Abfrage auswählen kann. Anonyme Typen können Sie eine Abfrage schreiben, die eine beliebige Anzahl von Spalten, in beliebiger Reihenfolge auswählt. Der Compiler erstellt einen Datentyp, der die angegebenen Eigenschaften und der angegebenen Reihenfolge entspricht.  
+ Ein *Abfrageausdruck* anonyme Typen zum Kombinieren von Spalten der Daten von einer Abfrage verwendet. Den Typ des Ergebnisses kann nicht im Voraus definiert werden, da Sie die Spalten nicht vorhersehen können, die eine bestimmte Abfrage auswählen kann. Anonyme Typen können Sie eine Abfrage schreiben, die eine beliebige Anzahl von Spalten in einer beliebigen Reihenfolge auswählt. Der Compiler erstellt einen Datentyp, der die angegebenen Eigenschaften und der angegebenen Reihenfolge entspricht.  
   
- In den folgenden Beispielen `products` ist eine Liste von Product-Objekte, von denen jedes über viele Eigenschaften verfügt. Variable `namePriceQuery` enthält die Definition einer Abfrage, die bei der Ausführung, eine Auflistung von Instanzen eines anonymen Typs zurückgibt, das zwei Eigenschaften `Name` und `Price`.  
+ In den folgenden Beispielen `products` ist eine Liste der Product-Objekten, von denen jede verfügt über zahlreiche Eigenschaften. Variable `namePriceQuery` enthält die Definition einer Abfrage, die bei der Ausführung, gibt eine Auflistung von Instanzen eines anonymen Typs zurück, das zwei Eigenschaften `Name` und `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#2](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_2.vb)]  
   
- Variable `nameQuantityQuery` enthält die Definition einer Abfrage, die bei der Ausführung, eine Auflistung von Instanzen eines anonymen Typs zurückgibt, das zwei Eigenschaften `Name` und `OnHand`.  
+ Variable `nameQuantityQuery` enthält die Definition einer Abfrage, die bei der Ausführung, gibt eine Auflistung von Instanzen eines anonymen Typs zurück, das zwei Eigenschaften `Name` und `OnHand`.  
   
  [!code-vb[VbVbalrAnonymousTypes#3](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_3.vb)]  
   
  Weitere Informationen zu den Code, der vom Compiler für einen anonymen Typ erstellt wird, finden Sie unter [anonymen Typdefinition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
 > [!CAUTION]
->  Der Name des anonymen Typs ist Compiler generiert und kann von Kompilierungen variieren. Der Code sollte nicht verwenden oder basieren auf den Namen eines anonymen Typs, da Sie der Namen ändern kann, wenn ein Projekt erneut kompiliert wird.  
+>  Der Name des anonymen Typs ist Compiler generiert und kann von Kompilierungen variieren. Ihr Code sollte nicht verwenden oder basieren auf den Namen eines anonymen Typs, da der Name ändern kann, wenn ein Projekt erneut kompiliert wird.  
   
 ## <a name="declaring-an-anonymous-type"></a>Deklaration eines anonymen Typs  
- Die Deklaration einer Instanz eines anonymen Typs wird mit einer Initialisiererliste die Eigenschaften des Typs angegeben. Sie können nur Eigenschaften angeben, wenn Sie einen anonymen Typ, der keine anderen Klassenelemente wie Methoden oder Ereignisse deklarieren. Im folgenden Beispiel `product1` ist eine Instanz eines anonymen Typs, die über zwei Eigenschaften verfügt: `Name` und `Price`.  
+ Die Deklaration einer Instanz eines anonymen Typs mithilfe eine Initialisiererliste, an die Eigenschaften des Typs. Sie können nur Eigenschaften angeben, wenn Sie eines anonymen Typs, die keine andere Klassenelemente wie Methoden oder Ereignisse deklarieren. Im folgenden Beispiel `product1` ist eine Instanz eines anonymen Typs, die über zwei Eigenschaften verfügt: `Name` und `Price`.  
   
  [!code-vb[VbVbalrAnonymousTypes#4](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_4.vb)]  
   
- Wenn Sie Eigenschaften als Schlüsseleigenschaften festlegen, können sie Sie zwei anonymen Typs-Instanzen auf Gleichheit verglichen werden soll. Allerdings können die Werte der Eigenschaften geändert werden. Siehe Abschnitt Schlüsseleigenschaften weiter unten in diesem Thema für Weitere Informationen.  
+ Wenn Sie Eigenschaften als Eigenschaften festlegen, können sie Sie zwei Instanzen von anonymen Typen auf Gleichheit verglichen werden soll. Allerdings können die Werte der Eigenschaften geändert werden. Finden Sie im Abschnitt "Eigenschaften" weiter unten in diesem Thema enthält weitere Informationen.  
   
  Beachten Sie, dass eine Instanz eines anonymen Typs deklarieren z. B. eine Instanz eines benannten Typs mithilfe eines Objektinitialisierers deklarieren:  
   
  [!code-vb[VbVbalrAnonymousTypes#5](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_5.vb)]  
   
- Weitere Informationen zu anderen Möglichkeiten zum Angeben von Eigenschaften des anonymen Typs, finden Sie unter [wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+ Weitere Informationen zu anderen Möglichkeiten zum anonymen Typeigenschaften angeben, finden Sie unter [Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="key-properties"></a>Wichtige Eigenschaften  
  Wichtige Eigenschaften unterscheiden sich einige grundlegende Arten von nicht schlüsselbezogene Eigenschaften:  
   
--   Um zu bestimmen, ob zwei Instanzen gleich sind, werden nur die Werte von Schlüsseleigenschaften verglichen.  
+-   Nur die Werte der Haupteigenschaften werden verglichen, um festzustellen, ob die beiden Instanzen gleich sind.  
   
 -   Die Werte der Eigenschaften sind schreibgeschützt und können nicht geändert werden.  
   
--   Eigenschaftenwerte sind nur in der vom Compiler generierte Code Hashalgorithmus für einen anonymen Typ enthalten.  
+-   Eigenschaftenwerte sind nur im vom Compiler generierter Code Hashalgorithmus für einen anonymen Typ enthalten.  
   
 ### <a name="equality"></a>Gleichheit  
- Instanzen von anonymen Typen können nur dann, wenn sie Instanzen desselben anonymen Typs sind gleich sein. Der Compiler behandelt zwei Instanzen als Instanzen desselben Typs, wenn sie die folgenden Bedingungen erfüllen:  
+ Instanzen von anonymen Typen können nur dann, wenn sie Instanzen desselben anonymen Typs sind gleich sein. Der Compiler behandelt zwei Instanzen als Instanzen des gleichen Typs, wenn sie die folgenden Bedingungen erfüllen:  
   
--   In der gleichen Assembly deklariert werden.  
+-   Sie werden in der gleichen Assembly deklariert.  
   
--   Ihre Eigenschaften haben die gleichen Namen, die gleichen hergeleiteten Typen, und in der gleichen Reihenfolge deklariert werden. Vergleichen des wird die Groß-und Kleinschreibung nicht berücksichtigt.  
+-   Ihre Eigenschaften haben die gleichen Namen, denselben abgeleiteten Typ verwenden, und in der gleichen Reihenfolge deklariert werden. Beim Vergleichen wird nicht beachtet werden.  
   
--   Die gleichen Eigenschaften in den einzelnen sind als Schlüsseleigenschaften gekennzeichnet.  
+-   Die gleichen Eigenschaften in den einzelnen werden als Schlüsseleigenschaften gekennzeichnet.  
   
 -   Mindestens eine Eigenschaft in jeder Deklaration ist eine Schlüsseleigenschaft.  
   
- Eine Instanz eines anonymen Typs, die keine Schlüsseleigenschaften verfügt ist ungleich sich selbst.  
+ Eine Instanz eines anonymen Typs, die keine Schlüsseleigenschaften entspricht nur sich selbst zur Verfügung.  
   
  [!code-vb[VbVbalrAnonymousTypes#6](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_6.vb)]  
   
- Zwei Instanzen desselben anonymen Typs sind gleich, wenn die Werte ihrer Schlüssel Eigenschaften gleich sind. Die folgenden Beispiele veranschaulichen, wie auf Gleichheit getestet wird.  
+ Zwei Instanzen desselben anonymen Typs sind gleich, wenn die Werte der Eigenschaften, die ihren Schlüssel gleich sind. Die folgenden Beispiele veranschaulichen, wie auf Gleichheit getestet wird.  
   
  [!code-vb[VbVbalrAnonymousTypes#7](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_7.vb)]  
   
 ### <a name="read-only-values"></a>Schreibgeschützte Werte  
- Die Werte von Schlüsseleigenschaften können nicht geändert werden. Beispielsweise ist in `prod8` im vorherigen Beispiel der `Name` und `Price` Felder sind `read-only`, aber `OnHand` kann geändert werden.  
+ Die Werte der Eigenschaften können nicht geändert werden. Z. B. in `prod8` im vorherigen Beispiel die `Name` und `Price` Felder sind `read-only`, aber `OnHand` kann geändert werden.  
   
  [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
   
-## <a name="anonymous-types-from-query-expressions"></a>Anonyme Typen von Abfrageausdrücken  
- Abfrageausdrücke müssen nicht immer die Erstellung von anonymen Typen aufweisen. Wenn möglich, verwenden sie einen vorhandenen Typ zum Speichern der Spaltendaten an. Dies tritt auf, wenn die Abfrage entweder ganze Datensätze aus der Datenquelle oder nur ein Feld aus jedem Datensatz zurückgibt. In den folgenden Codebeispielen `customers` ist eine Auflistung von Objekten von einem `Customer` Klasse. Die Klasse verfügt über zahlreiche Eigenschaften, und Sie können eine oder mehrere dieser Servertypen im Abfrageergebnis in beliebiger Reihenfolge enthalten. In den ersten beiden Beispielen werden keine anonymen Typen erforderlich, da die Abfragen Elemente von benannten Typen auswählen:  
+## <a name="anonymous-types-from-query-expressions"></a>Anonyme Typen in Abfrageausdrücken  
+ Abfrageausdrücke muss nicht immer die Erstellung von anonymen Typen. Wenn möglich, verwenden sie einen vorhandenen Typ zum Speichern der Spaltendaten an. Dies tritt auf, wenn die Abfrage entweder ganze Datensätze aus der Datenquelle oder nur ein Feld aus jedem Datensatz zurückgibt. In den folgenden Codebeispielen `customers` ist eine Auflistung von Objekten von einem `Customer` Klasse. Die Klasse verfügt über zahlreiche Eigenschaften, und Sie können eine oder mehrere von ihnen in das Abfrageergebnis in einer beliebigen Reihenfolge einschließen. In den ersten beiden Beispielen sind keine anonymen Typen erforderlich, da die Abfragen Elemente der benannten Typen auswählen:  
   
 -   `custs1` enthält eine Auflistung von Zeichenfolgen, da `cust.Name` ist eine Zeichenfolge.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2` enthält eine Auflistung von `Customer` Objekten, da jedes Element der `customers` ist ein `Customer` Objekt und das ganze Element von der Abfrage ausgewählt ist.  
+-   `custs2` enthält eine Auflistung von `Customer` Objekte um, da jedes Element der `customers` ist eine `Customer` Objekt und das ganze Element von der Abfrage ausgewählt ist.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   
- Entsprechende benannte Typen sind jedoch nicht immer verfügbar. Möglicherweise möchten Kundennamen und Adressen für einen bestimmten Zweck, Kunden-ID-Nummern und Speicherorte für eine andere und Kundennamen, Adressen und Reihenfolge Verlaufseinträge für eine dritte auswählen. Anonyme Typen können Sie jede beliebige Kombination von Eigenschaften dar, in beliebiger Reihenfolge zu aktivieren, ohne zuerst deklariert einen neuen benannten Typ, um das Ergebnis aufzunehmen. Stattdessen erstellt der Compiler einen anonymen Typ für jede Zusammenstellung von Eigenschaften. Die folgende Abfrage wählt nur die Customer Name und ID-Nummer aus allen `Customer` -Objekt in `customers`. Aus diesem Grund erstellt der Compiler einen anonymen Typ, der nur diese zwei Eigenschaften enthält.  
+ Entsprechende benannte Typen sind jedoch nicht immer verfügbar. Sie möchten den Kundennamen und Adressen für einen bestimmten Zweck, Kunden-ID-Nummern und Speicherorte für einen anderen und Kundennamen, Adressen und Order-Verlaufseinträge für eine dritte auswählen. Anonyme Typen können Sie eine beliebige Kombination von Eigenschaften in beliebiger Reihenfolge auswählen, ohne dass die Deklaration eines neuen benannten Typs, um das Ergebnis aufzunehmen. Stattdessen erstellt der Compiler einen anonymen Typ für jede Zusammenstellung von Eigenschaften. Die folgende Abfrage wählt nur die den Namen und Kunden-ID-Nummer aus jedem `Customer` im-Objekt `customers`. Aus diesem Grund erstellt der Compiler einen anonymen Typ, der nur diese zwei Eigenschaften enthält.  
   
  [!code-vb[VbVbalrAnonymousTYpes#32](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_11.vb)]  
   
- Die Namen und die Datentypen der Eigenschaften des anonymen Typs stammen aus den Argumenten um `Select`, `cust.Name` und `cust.ID`. Die Eigenschaften in einem anonymen Typ, der von einer Abfrage erstellt wird, sind immer Schlüsseleigenschaften. Wenn `custs3` ausgeführt wird, in der folgenden `For Each` Schleife, das Ergebnis ist eine Auflistung von Instanzen eines anonymen Typs mit zwei Schlüsseleigenschaften `Name` und `ID`.  
+ Sowohl die Namen und die Datentypen der Eigenschaften im anonymen Typ stammen aus den Argumenten um `Select`, `cust.Name` und `cust.ID`. Die Eigenschaften in einem anonymen Typ, der von einer Abfrage erstellt wird, sind immer Schlüsseleigenschaften. Wenn `custs3` ausgeführt wird, in der folgenden `For Each` Schleife, die das Ergebnis ist eine Auflistung von Instanzen eines anonymen Typs mit zwei wichtige Eigenschaften, `Name` und `ID`.  
   
  [!code-vb[VbVbalrAnonymousTypes#33](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_12.vb)]  
   
- Die Elemente in der Auflistung dargestellte `custs3` sind stark typisiert, und Sie können IntelliSense verwenden, zum Navigieren durch die verfügbaren Eigenschaften und ihre Typen zu überprüfen.  
+ Die Elemente in der Auflistung, dargestellt durch `custs3` sind stark typisiert, und Sie können IntelliSense verwenden, zum Navigieren durch die verfügbaren Eigenschaften und ihre Typen zu überprüfen.  
   
  Weitere Informationen finden Sie unter [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-## <a name="deciding-whether-to-use-anonymous-types"></a>Die Entscheidung, ob anonyme Typen verwenden.  
- Bevor Sie ein Objekt als eine Instanz einer anonymen Klasse erstellen, erwägen Sie, ob dies die beste Option ist. Wenn verknüpfte Daten enthalten ein temporäres Objekt erstellt werden soll, und Sie benötigen keine weiteren Felder und Methoden, die möglicherweise eine vollständige Klasse enthalten, ist ein anonymer Typ eine gute Lösung. Anonyme Typen stellen auch praktisch, wenn Sie eine andere Auswahl von Eigenschaften für jede Deklaration möchten oder wenn Sie die Reihenfolge der Eigenschaften ändern möchten. Jedoch, wenn Ihr Projekt mehrere Objekte, die die gleichen Eigenschaften in einer festen Reihenfolge aufweisen enthält, können Sie sie leichter deklarieren mithilfe eines benannten Typs mit einem Klassenkonstruktor. Z. B. mit einem geeigneten Konstruktor, es ist einfacher, mehrere Instanzen von Deklarieren einer `Product` Klasse als es ist, mehrere Instanzen eines anonymen Typs deklarieren.  
+## <a name="deciding-whether-to-use-anonymous-types"></a>Entscheiden, ob anonymer Typen  
+ Bevor Sie ein Objekt als eine Instanz einer anonymen Klasse erstellen, erwägen Sie, ob dies die beste Option ist. Wenn Sie zum Erstellen eines temporären Objekts verknüpfte Daten enthalten, und Sie müssen sich nicht für andere Felder und Methoden, die eine vollständige Klasse enthalten kann, ist ein anonymer Typ eine gute Lösung. Anonyme Typen sind ebenfalls praktisch, wenn Sie eine andere Auswahl von Eigenschaften für jede Deklaration möchten oder wenn Sie die Reihenfolge der Eigenschaften ändern möchten. Jedoch, wenn das Projekt mehrere Objekte, die die gleichen Eigenschaften in einer festen Reihenfolge aufweisen enthält, können Sie sie leichter Deklarieren eines Klassenkonstruktors eines benannten Typs mit. Z. B. mit einem geeigneten Konstruktor, es ist einfacher, mehrere Instanzen von deklarieren eine `Product` Klasse statt mehrere Instanzen eines anonymen Typs deklarieren.  
   
  [!code-vb[VbVbalrAnonymousTypes#9](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_13.vb)]  
   
- Ein weiterer Vorteil von benannten Typen ist, dass der Compiler eine versehentliche Tippfehler neben einem Eigenschaftennamen erfasst werden kann. In den vorherigen Beispielen `firstProd2`, `secondProd2`, und `thirdProd2` sollten Instanzen desselben anonymen Typs verwendet werden. Wenn Sie unbeabsichtigt jedoch deklarieren `thirdProd2` in einem der folgenden Methoden, dessen Typ wären unterschiedlich aus, die von `firstProd2` und `secondProd2`.  
+ Ein weiterer Vorteil von benannten Typen ist, dass der Compiler eine versehentliche falsche Schreibweise eines Eigenschaftennamens abfangen kann. In den vorherigen Beispielen `firstProd2`, `secondProd2`, und `thirdProd2` Instanzen desselben anonymen Typs sein sollen. Allerdings deklarieren, wenn Sie unbeabsichtigt `thirdProd2` in eine der folgenden Möglichkeiten, der Typ wäre sich `firstProd2` und `secondProd2`.  
   
  [!code-vb[VbVbalrAnonymousTypes#10](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_14.vb)]  
   
- Es gibt vor allem Einschränkungen bei der Verwendung von anonymen Typen, die auf Instanzen von benannten Typen nicht anwendbar sind. `firstProd2`, `secondProd2`, und `thirdProd2` Instanzen desselben anonymen Typs sind. Allerdings wird der Name für den freigegebenen anonymen Typ ist nicht verfügbar und kann nicht verwendet werden, wo ein Typname in Ihrem Code erwartet wird. Z. B. kann kein anonymes Typs verwendet werden, definieren Sie die Signatur einer Methode um eine andere Variable Felds oder in der Typdeklaration einer deklarieren. Daher sind anonyme Typen nicht geeignet, wenn Sie die Freigabe von Informationen über Methoden verfügen.  
+ Noch wichtiger: Es gibt Einschränkungen bei der Verwendung von anonymen Typen, die für Instanzen von benannten Typen nicht gelten. `firstProd2`, `secondProd2`, und `thirdProd2` Instanzen desselben anonymen Typs sind. Allerdings wird der Name für den freigegebenen anonymen Typ ist nicht verfügbar und kann nicht verwendet werden, wo ein Typname erwartet wird, in Ihrem Code. Z. B. kann kein anonymer Typ verwendet werden, zum Definieren einer Methodensignatur, um einen anderen Variablen Felds oder in der Deklaration Typen deklarieren. Daher sind anonyme Typen nicht geeignet, wenn Sie die Freigabe von Informationen über Methoden verfügen.  
   
-## <a name="an-anonymous-type-definition"></a>Eine Definition von anonymen Typen  
+## <a name="an-anonymous-type-definition"></a>Definition eines anonymen Typs  
  Als Antwort auf die Deklaration einer Instanz eines anonymen Typs erstellt der Compiler eine neue Klassendefinition, die die angegebenen Eigenschaften enthält.  
   
- Wenn der anonyme Typ mindestens eine Schlüsseleigenschaft enthält, überschreibt die Definition drei von geerbte Member <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, und <xref:System.Object.ToString%2A>. Der Code erzeugt zum Testen der Übereinstimmung und ermittelt, auf der Hashcodewert nur die Schlüsseleigenschaften betrachtet. Wenn des anonymen Typs nur keine Schlüsseleigenschaften enthält <xref:System.Object.ToString%2A> überschrieben wird. Explizit benannte Eigenschaften eines anonymen Typs können nicht mit diesen generierten Methoden in Konflikt stehen. D. h., Sie können keine `.Equals`, `.GetHashCode`, oder `.ToString` um eine Eigenschaft zu benennen.  
+ Wenn der anonyme Typ mindestens eine Schlüsseleigenschaft enthält, überschreibt die Definition von geerbte drei Member <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, und <xref:System.Object.ToString%2A>. Der Code erzeugt, für das Testen auf Gleichheit und bestimmen, dass der Hashcode-Wert nur die wichtigsten Eigenschaften betrachtet. Wenn der anonyme Typ nur keine Schlüsseleigenschaften enthält <xref:System.Object.ToString%2A> überschrieben wird. Explizit benannte Eigenschaften eines anonymen Typs können nicht in Konflikt mit diesen generierten Methoden stehen. D. h. Sie können keine `.Equals`, `.GetHashCode`, oder `.ToString` um eine Eigenschaft zu nennen.  
   
- Anonyme Typdefinitionen, bei denen mindestens einer Schlüsseleigenschaft auch implementieren die <xref:System.IEquatable%601?displayProperty=nameWithType> -Schnittstelle, in denen `T` ist der Typ des anonymen Typs.  
+ Definitionen von anonymen Typen, die mindestens eine Schlüsseleigenschaft auch implementieren die <xref:System.IEquatable%601?displayProperty=nameWithType> -Schnittstelle, in denen `T` ist der Typ des anonymen Typs.  
   
- Weitere Informationen zu den Code durch den Compiler und die Funktionalität der überschriebenen Methoden erstellt wird, finden Sie unter [anonymen Typdefinition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
+ Weitere Informationen zu den Code, der vom Compiler und die Funktionalität der überschriebenen Methoden erstellt, finden Sie unter [anonymen Typdefinition](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
- [Definition von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)  
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+## <a name="see-also"></a>Siehe auch
+- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Definition von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
+- [Key](../../../../visual-basic/language-reference/modifiers/key.md)

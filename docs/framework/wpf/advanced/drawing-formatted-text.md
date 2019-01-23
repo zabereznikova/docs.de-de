@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 4cbf2a9ec9b742af3895f7c30b1a4dbbdbf5a635
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a476b62e62b812b01da8deeb0c605e35ae6624ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562777"
 ---
 # <a name="drawing-formatted-text"></a>Zeichnen von formatiertem Text
 Dieses Thema enthält eine Übersicht über die Funktionen von der <xref:System.Windows.Media.FormattedText> Objekt. Dieses Objekt bietet die Steuerung auf niedriger Ebene für das Zeichnen von Text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen.  
@@ -85,7 +85,7 @@ Beispiel für die Anwendung eines Bildpinsels auf den Strich und die Hervorhebun
  ![Kugel, die der Pfadgeometrie des Textes folgt](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Kugel, die der Pfadgeometrie des Textes folgt  
   
- Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer PathGeometry-Animation für Text](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eine PathGeometry-Animation für Text](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  Sie können weitere interessanten Verwendungsmöglichkeiten für formatierten Text erstellen, sobald er in konvertiert wurde eine <xref:System.Windows.Media.PathGeometry> Objekt. So können Sie beispielsweise ein zugeschnittenes Video darin anzeigen.  
   
@@ -101,31 +101,31 @@ Video, das in der Pfadgeometrie von Text angezeigt wird
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.Height%2A> -Eigenschaft zur Berechnung einer entsprechenden [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText-y-Position.|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.Height%2A> und <xref:System.Windows.Media.FormattedText.Width%2A> Eigenschaften des ausgaberechtecks.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.TextAlignment%2A> Eigenschaft mit dem der Wert festgelegt, <xref:System.Windows.TextAlignment.Center>.|  
-|DT_EDITCONTROL|Keiner|Nicht erforderlich Rendern von Abstandsbreite und letzter Zeile sind identisch mit dem Edit-Steuerelement für Framework.|  
+|DT_EDITCONTROL|Keine|Nicht erforderlich Rendern von Abstandsbreite und letzter Zeile sind identisch mit dem Edit-Steuerelement für Framework.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.Trimming%2A> Eigenschaft mit dem Wert <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Verwenden <xref:System.Windows.TextTrimming.WordEllipsis> abzurufenden [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DT_END_ELLIPSIS mit DT_WORD_ELIPSIS-Endellipse — in diesem Fall zeichenellipse nur auf Wörtern, die nicht in einer einzelnen Zeile auftritt.|  
-|DT_EXPAND_TABS|Keiner|Nicht erforderlich Registerkarten werden automatisch auf Zwischenstopps nach jeweils 4 em erweitert. Dies entspricht etwa der Breite von 8 sprachunabhängigen Zeichen.|  
-|DT_EXTERNALLEADING|Keiner|Nicht erforderlich Der externe Abstand ist immer im Zeilenabstand enthalten. Verwenden der <xref:System.Windows.Media.FormattedText.LineHeight%2A> Eigenschaft, um eine benutzerdefinierte Zeilenabstand zu erstellen.|  
-|DT_HIDEPREFIX|Keiner|Wird nicht unterstützt. Entfernen Sie die '&' aus der Zeichenfolge vor der Erstellung der <xref:System.Windows.Media.FormattedText> Objekt.|  
+|DT_EXPAND_TABS|Keine|Nicht erforderlich Registerkarten werden automatisch auf Zwischenstopps nach jeweils 4 em erweitert. Dies entspricht etwa der Breite von 8 sprachunabhängigen Zeichen.|  
+|DT_EXTERNALLEADING|Keine|Nicht erforderlich Der externe Abstand ist immer im Zeilenabstand enthalten. Verwenden der <xref:System.Windows.Media.FormattedText.LineHeight%2A> Eigenschaft, um eine benutzerdefinierte Zeilenabstand zu erstellen.|  
+|DT_HIDEPREFIX|Keine|Wird nicht unterstützt. Entfernen Sie die '&' aus der Zeichenfolge vor der Erstellung der <xref:System.Windows.Media.FormattedText> Objekt.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Dies ist die standardmäßige Textausrichtung. Verwenden der <xref:System.Windows.Media.FormattedText.TextAlignment%2A> Eigenschaft mit dem der Wert festgelegt, <xref:System.Windows.TextAlignment.Left>. (nur für WPF)|  
-|DT_MODIFYSTRING|Keiner|Wird nicht unterstützt.|  
+|DT_MODIFYSTRING|Keine|Wird nicht unterstützt.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Clipping geschieht nicht automatisch. Wenn Sie Beschneiden von Text möchten, verwenden Sie die <xref:System.Windows.Media.Visual.VisualClip%2A> Eigenschaft.|  
-|DT_NOFULLWIDTHCHARBREAK|Keiner|Wird nicht unterstützt.|  
-|DT_NOPREFIX|Keiner|Nicht erforderlich Das &-Zeichen innerhalb der Zeichenfolgen wird immer als normales Zeichen behandelt.|  
-|DT_PATHELLIPSIS|Keiner|Verwenden der <xref:System.Windows.Media.FormattedText.Trimming%2A> Eigenschaft mit dem Wert <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|Keiner|Wird nicht unterstützt. Wenn Unterstriche für Text, z. B. eine Zugriffstaste oder Link verwendet werden sollen. verwenden Sie die <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> Methode.|  
-|DT_PREFIXONLY|Keiner|Wird nicht unterstützt.|  
+|DT_NOFULLWIDTHCHARBREAK|Keine|Wird nicht unterstützt.|  
+|DT_NOPREFIX|Keine|Nicht erforderlich Das &-Zeichen innerhalb der Zeichenfolgen wird immer als normales Zeichen behandelt.|  
+|DT_PATHELLIPSIS|Keine|Verwenden der <xref:System.Windows.Media.FormattedText.Trimming%2A> Eigenschaft mit dem Wert <xref:System.Windows.TextTrimming.WordEllipsis>.|  
+|DT_PREFIX|Keine|Wird nicht unterstützt. Wenn Unterstriche für Text, z. B. eine Zugriffstaste oder Link verwendet werden sollen. verwenden Sie die <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> Methode.|  
+|DT_PREFIXONLY|Keine|Wird nicht unterstützt.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.TextAlignment%2A> Eigenschaft mit dem der Wert festgelegt, <xref:System.Windows.TextAlignment.Right>. (nur für WPF)|  
-|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Legen Sie die <xref:System.Windows.Media.FormattedText.FlowDirection%2A>-Eigenschaft auf <xref:System.Windows.FlowDirection.RightToLeft> fest.|  
-|DT_SINGLELINE|Keiner|Nicht erforderlich <xref:System.Windows.Media.FormattedText> Objekte verhalten sich als einzelne Zeile-Steuerelement, es sei denn, entweder die <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Eigenschaft festgelegt ist, oder den Text enthält, einen Wagenrücklauf/Zeilenvorschub (CR/LF).|  
-|DT_TABSTOP|Keiner|Keine Unterstützung für benutzerdefinierte Tabstopppositionen.|  
+|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Legen Sie die <xref:System.Windows.Media.FormattedText.FlowDirection%2A> -Eigenschaft auf <xref:System.Windows.FlowDirection.RightToLeft>fest.|  
+|DT_SINGLELINE|Keine|Nicht erforderlich <xref:System.Windows.Media.FormattedText> Objekte verhalten sich als einzelne Zeile-Steuerelement, es sei denn, entweder die <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Eigenschaft festgelegt ist, oder den Text enthält, einen Wagenrücklauf/Zeilenvorschub (CR/LF).|  
+|DT_TABSTOP|Keine|Keine Unterstützung für benutzerdefinierte Tabstopppositionen.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Nicht erforderlich Obere Ausrichtung ist die Standardeinstellung. Andere vertikale Positionierungswerte können definiert werden, indem die <xref:System.Windows.Media.FormattedText.Height%2A> -Eigenschaft zur Berechnung einer entsprechenden [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText-y-Position.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.Height%2A> -Eigenschaft zur Berechnung einer entsprechenden [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText-y-Position.|  
-|DT_WORDBREAK|Keiner|Nicht erforderlich Die wörtertrennung geschieht automatisch mit <xref:System.Windows.Media.FormattedText> Objekte. Sie kann nicht deaktiviert werden.|  
+|DT_WORDBREAK|Keine|Nicht erforderlich Die wörtertrennung geschieht automatisch mit <xref:System.Windows.Media.FormattedText> Objekte. Sie kann nicht deaktiviert werden.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Verwenden der <xref:System.Windows.Media.FormattedText.Trimming%2A> Eigenschaft mit dem Wert <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.FormattedText>  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Erstellen von Text mit Kontur](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Vorgehensweise: Erstellen einer PathGeometry-Animation für Text](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.FormattedText>
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Erstellen von Text mit Kontur](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [Vorgehensweise: Erstellen einer PathGeometry-Animation für Text](https://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

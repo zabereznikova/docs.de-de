@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42330296defe90980dd431ce39765a549057b82a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4e7b62b7eb038d553b28fbd6422175d511df88d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540545"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess-Methode
-Benachrichtigt den Debugger, dass ein Prozess beendet wurde.  
+Benachrichtigt den Debugger an, dass ein Prozess beendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,14 +40,14 @@ HRESULT ExitProcess (
  [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können nicht fortgesetzt werden, aus einer `ExitProcess` Ereignis. Dieses Ereignis kann asynchron mit anderen Ereignissen ausgelöst werden, während der Prozess wird beendet werden soll. Dies kann auftreten, wenn der Prozess beendet wird, während angehalten, in der Regel aufgrund von einigen externen erzwingen.  
+ Sie können nicht fortgesetzt werden, von einem `ExitProcess` Ereignis. Dieses Ereignis kann asynchron mit anderen Ereignissen ausgelöst werden, während der Prozess angezeigt wird, beendet werden soll. Dies kann auftreten, wenn der Prozess beendet wird, während angehalten, in der Regel aufgrund von einigen externen erzwingen.  
   
  Wenn die common Language Runtime (CLR) bereits einen verwalteten Rückruf sendet, wird dieses Ereignis bis verzögert werden, nachdem dieser Rückruf zurückgegeben wurde.  
   
- Die `ExitProcess` Ereignis ist das einzige Beenden/Unload-Ereignis, der beim Herunterfahren aufgerufen wird.  
+ Die `ExitProcess` Ereignis ist das einzige Beenden/Entladen-Ereignis, die mit Sicherheit beim Herunterfahren aufgerufen wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -55,5 +55,5 @@ HRESULT ExitProcess (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

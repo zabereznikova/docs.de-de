@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 654c397918f564bbba9ce91ebd8135b14dd7abb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561451"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
-Die `Async` Modifizierer gibt an, dass die Methode oder [Lambda-Ausdruck](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) ändert asynchron ist. Solche Methoden werden als bezeichnet *Async-Methoden*.  
+Die `Async` Modifizierer gibt an, dass die Methode oder [Lambda-Ausdruck](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) asynchron ist, dass er ändert. Solche Methoden werden als bezeichnet *Async-Methoden*.  
   
  Mit einer Async-Methode können Aufgaben mit potenziell langer Laufzeit auf einfache Weise ausgeführt werden, ohne den Thread des Aufrufers zu blockieren. Der Aufrufer einer Async-Methode kann seine Arbeit fortsetzen, ohne auf die Fertigstellung der Async-Methode zu warten.  
   
@@ -42,21 +42,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Eine Methode in der Regel wird geändert, indem die `Async` Schlüsselwort enthält mindestens ein ["await"](../../../visual-basic/language-reference/modifiers/async.md) Ausdruck oder Anweisung. Die Methode wird bis zum ersten `Await`-Ausdruck synchron ausgeführt. Dann wird die Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. In der Zwischenzeit wird die Steuerung zum Aufrufer der Methode zurückgegeben. Wenn die Methode keinen `Await`-Ausdruck oder keine Await-Anweisung enthält, wird die Methode nicht angehalten und wie eine synchrone Methode ausgeführt. Mit einer Compilerwarnung werden Sie auf alle Async-Methoden hingewiesen, die kein `Await` enthalten, da dies möglicherweise auf einen Fehler hindeutet. Weitere Informationen finden Sie unter der [Compilerfehler](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ Eine Methode in der Regel geändert, indem die `Async` Schlüsselwort enthält mindestens ein ["await"](../../../visual-basic/language-reference/modifiers/async.md) Ausdruck oder Anweisung. Die Methode wird bis zum ersten `Await`-Ausdruck synchron ausgeführt. Dann wird die Methode angehalten, bis die erwartete Aufgabe abgeschlossen ist. In der Zwischenzeit wird die Steuerung zum Aufrufer der Methode zurückgegeben. Wenn die Methode keinen `Await`-Ausdruck oder keine Await-Anweisung enthält, wird die Methode nicht angehalten und wie eine synchrone Methode ausgeführt. Mit einer Compilerwarnung werden Sie auf alle Async-Methoden hingewiesen, die kein `Await` enthalten, da dies möglicherweise auf einen Fehler hindeutet. Weitere Informationen finden Sie unter den [Compilerfehler](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
   
  Das Schlüsselwort `Async` ist ein nicht reserviertes Schlüsselwort. Es ist ein Schlüsselwort, wenn eine Methode oder ein Lambda-Ausdruck geändert wird. In allen anderen Kontexten wird es als Bezeichner interpretiert.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- Eine asynchrone Methode ist entweder ein [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) Prozedur oder eine [Funktion](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) Prozedur, die einen Rückgabetyp <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601>. Die Methode kann nicht deklariert werden alle [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) Parameter.  
+ Eine asynchrone Methode ist entweder ein [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) Verfahren oder ein [Funktion](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) Prozedur, die einen Rückgabetyp hat <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601>. Die Methode kann nicht deklariert keine [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) Parameter.  
   
- Geben Sie `Task(Of TResult)` für den Rückgabetyp einer Async-Methode Wenn die [zurückgeben](../../../visual-basic/language-reference/statements/return-statement.md) -Anweisung der Methode wurde einen Operand vom Typ TResult enthält. `Task` wird verwendet, falls kein sinnvoller Wert zurückgegeben wird, wenn die Methode abgeschlossen ist. Das bedeutet, dass ein Aufruf der Methode eine `Task` zurückgibt, aber wenn die `Task` abgeschlossen ist, erzeugt eine `Await`-Anweisung, die `Task` erwartet, keinen Ergebniswert.  
+ Sie geben `Task(Of TResult)` für den Rückgabetyp einer asynchronen Methode Wenn die [zurückgeben](../../../visual-basic/language-reference/statements/return-statement.md) -Anweisung der Methode wurde einen Operand vom Typ TResult. `Task` wird verwendet, falls kein sinnvoller Wert zurückgegeben wird, wenn die Methode abgeschlossen ist. Das bedeutet, dass ein Aufruf der Methode eine `Task` zurückgibt, aber wenn die `Task` abgeschlossen ist, erzeugt eine `Await`-Anweisung, die `Task` erwartet, keinen Ergebniswert.  
   
  Asynchrone Unterroutinen werden hauptsächlich verwendet, um Ereignishandler zu definieren, in denen eine `Sub` Prozedur erforderlich ist. Der Aufrufer einer Async-Unterroutine kann diese nicht erwarten und keine Ausnahmen auffangen, die von der Methode ausgelöst werden.  
   
  Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Beispiel  
- In den folgenden Beispielen werden ein asynchroner Ereignishandler, ein asynchroner Lambdaausdruck und eine asynchrone Methode dargestellt. Ein vollständiges Beispiel, die diese Elemente verwendet werden, finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf das Web durch Verwenden von Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Sie können den Code der exemplarischen Vorgehensweise unter [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) herunterladen.  
+ In den folgenden Beispielen werden ein asynchroner Ereignishandler, ein asynchroner Lambdaausdruck und eine asynchrone Methode dargestellt. Ein vollständiges Beispiel, das diese Elemente verwendet wird, finden Sie unter [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Sie können den Code der exemplarischen Vorgehensweise unter [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) herunterladen.  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
@@ -103,8 +103,8 @@ Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())
 End Function  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
- [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
+- [Await-Operator](../../../visual-basic/language-reference/operators/await-operator.md)
+- [Asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

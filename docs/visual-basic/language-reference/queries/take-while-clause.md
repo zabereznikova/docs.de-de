@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Take While clause [Visual Basic]
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
-ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3dfb70066d88683e60f3bf4199441ab3024ef36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54565110"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While-Klausel (Visual Basic)
 Gibt Elemente in einer Auflistung zurück, solange eine angegebene Bedingung `true` ist, und überspringt dann die übrigen Elemente.  
@@ -40,11 +40,11 @@ Take While expression
   
  [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Abfragen](../../../visual-basic/language-reference/queries/index.md)  
- [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Take-Klausel](../../../visual-basic/language-reference/queries/take-clause.md)  
- [Skip While-Klausel](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Abfragen](../../../visual-basic/language-reference/queries/index.md)
+- [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Take-Klausel](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Skip While-Klausel](../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561399"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum-Methode
 Ruft die Prüfsumme ab.  
@@ -37,7 +38,7 @@ HRESULT GetCheckSum(
   
 #### <a name="parameters"></a>Parameter  
  `cData`  
- [in] Die Länge des Puffers gebotenen der `data` Parameter  
+ [in] Die Länge des Puffers bereitgestellt. durch die `data` Parameter  
   
  `pcData`  
  [out] Die Größe und die Länge der Prüfsumme in Bytes.  
@@ -48,5 +49,5 @@ HRESULT GetCheckSum(
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls ein Fehlercode.  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedDocument-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedDocument-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

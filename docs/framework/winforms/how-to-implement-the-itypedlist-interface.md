@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Implementieren der ITypedList-Schnittstelle'
+title: 'Vorgehensweise: Implementieren der ITypedList-Schnittstelle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: 181879d3e41e0dd140c79a4c63d52e6999acf86d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d12c0b82d9475981d0c72f082665b11135d8bb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562167"
 ---
-# <a name="how-to-implement-the-itypedlist-interface"></a>Gewusst wie: Implementieren der ITypedList-Schnittstelle
-Implementieren der <xref:System.ComponentModel.ITypedList> -Schnittstelle zum Aktivieren der Ermittlung des Schemas für eine bindbare Liste.  
+# <a name="how-to-implement-the-itypedlist-interface"></a>Vorgehensweise: Implementieren der ITypedList-Schnittstelle
+Implementieren der <xref:System.ComponentModel.ITypedList> Schnittstelle, um die Ermittlung des Schemas für eine bindbare Liste aktivieren.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel veranschaulicht das Implementieren der <xref:System.ComponentModel.ITypedList> Schnittstelle. Ein generischer Typ mit dem Namen `SortableBindingList` leitet sich von der <xref:System.ComponentModel.BindingList%601> -Klasse und implementiert die <xref:System.ComponentModel.ITypedList> Schnittstelle. Eine einfache Klasse mit dem Namen `Customer` enthält Daten, d. h., die dem Header der gebunden ist ein <xref:System.Windows.Forms.DataGridView> Steuerelement.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie zum Implementieren der <xref:System.ComponentModel.ITypedList> Schnittstelle. Ein generischer Typ mit dem Namen `SortableBindingList` leitet sich von der <xref:System.ComponentModel.BindingList%601> -Klasse und implementiert die <xref:System.ComponentModel.ITypedList> Schnittstelle. Eine einfache Klasse, die mit dem Namen `Customer` stellt Daten bereit, die für den Header des gebunden ist eine <xref:System.Windows.Forms.DataGridView> Steuerelement.  
   
  [!code-csharp[System.ComponentModel.ITypedList#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.ITypedList/CS/SortableBindingList.cs#1)]
  [!code-vb[System.ComponentModel.ITypedList#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.ITypedList/VB/SortableBindingList.vb#1)]  
@@ -37,8 +37,8 @@ Implementieren der <xref:System.ComponentModel.ITypedList> -Schnittstelle zum Ak
   
 -   Verweise auf die Assemblys ""System.Drawing" und "System.Windows.Forms".  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ComponentModel.ITypedList>  
- <xref:System.ComponentModel.BindingList%601>  
- <xref:System.ComponentModel.IBindingList>  
- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ComponentModel.ITypedList>
+- <xref:System.ComponentModel.BindingList%601>
+- <xref:System.ComponentModel.IBindingList>
+- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

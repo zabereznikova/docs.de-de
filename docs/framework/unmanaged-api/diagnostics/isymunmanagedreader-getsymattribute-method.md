@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9f22f23835f01022d5d62596b2cf63425759193
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d43467a0f3ff94eb7903b808e192230e6c0ff1e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561067"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute-Methode
-Ruft ein benutzerdefiniertes Attribut anhand seines Namens ab. Diese benutzerdefinierten Attribute sind im Gegensatz zu benutzerdefinierten Metadatenattributen im Symbolspeicher gespeichert.  
+Ruft ein benutzerdefiniertes Attribut anhand seines Namens ab. Im Gegensatz zu benutzerdefinierten Metadatenattributen befinden sich diese benutzerdefinierten Attribute im Symbolspeicher.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,10 +41,10 @@ HRESULT GetSymAttribute (
   
 #### <a name="parameters"></a>Parameter  
  `parent`  
- [in] Das Metadatentoken für das Objekt, für das das Attribut angefordert werden.  
+ [in] Das Metadatentoken für das Objekt, das für das das Attribut angefordert wird.  
   
  `name`  
- [in] Ein Zeiger auf die Variable, die die abzurufenden Attributs angibt.  
+ [in] Ein Zeiger auf die Variable, die das abzurufende Attribut angibt.  
   
  `cBuffer`  
  [in] Die Größe des `buffer`-Arrays.  
@@ -61,5 +61,5 @@ HRESULT GetSymAttribute (
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

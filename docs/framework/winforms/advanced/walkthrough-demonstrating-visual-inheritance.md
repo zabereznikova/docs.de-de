@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564330"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
@@ -70,7 +70,7 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 #### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a>So fügen Sie eine Schaltfläche hinzu, die von Erben des Basisformulars geändert werden kann  
   
-1.  Open **Form1** im Designer.  
+1.  Öffnen Sie **Form1** im Designer.  
   
 2.  Auf der **alle Windows Forms** Registerkarte die **Toolbox**, doppelklicken Sie auf **Schaltfläche** auf dem Formular eine Schaltfläche hinzuzufügen. Verwenden Sie die Maus, um die Position und Größe der Schaltfläche anzupassen.  
   
@@ -161,9 +161,9 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
 12. Drücken Sie F5, um die Anwendung auszuführen, und beobachten Sie das Verhalten des geerbten Formulars.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die Vererbung bei Benutzersteuerelementen funktioniert größtenteils auf die gleiche Weise. Öffnen Sie ein neues Klassenbibliotheksprojekt, und fügen Sie ein Benutzersteuerelement hinzu. Platzieren Sie konstituierende Steuerelemente darauf, und kompilieren Sie das Projekt. Öffnen Sie ein weiteres, neues Klassenbibliotheksprojekt, und fügen Sie einen Verweis auf die kompilierte Klassenbibliothek hinzu. Auch versuchen, ein geerbtes Steuerelement hinzuzufügen (über die **neue Elemente hinzufügen** Dialogfeld) für das Projekt und die **Vererbungsauswahl**. Fügen Sie ein Benutzersteuerelement hinzu, und Ändern der `Inherits` (`:` in Visual c#)-Anweisung. Weitere Informationen finden Sie unter [Vorgehensweise: erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ Die Vererbung bei Benutzersteuerelementen funktioniert größtenteils auf die gleiche Weise. Öffnen Sie ein neues Klassenbibliotheksprojekt, und fügen Sie ein Benutzersteuerelement hinzu. Platzieren Sie konstituierende Steuerelemente darauf, und kompilieren Sie das Projekt. Öffnen Sie ein weiteres, neues Klassenbibliotheksprojekt, und fügen Sie einen Verweis auf die kompilierte Klassenbibliothek hinzu. Auch versuchen, ein geerbtes Steuerelement hinzuzufügen (über die **neue Elemente hinzufügen** Dialogfeld) für das Projekt und die **Vererbungsauswahl**. Fügen Sie ein Benutzersteuerelement hinzu, und Ändern der `Inherits` (`:` in Visual c#)-Anweisung. Weitere Informationen finden Sie unter [Vorgehensweise: Erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Visuelle Vererbung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Windows Forms](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erben von Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Visuelle Vererbung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Windows Forms](../../../../docs/framework/winforms/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1d61c8aeaf458d8cbbd2976fa83aaa0eeb0f834
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d38b174a7e959647a9c1f5287b8acbbcdaf5ca7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564278"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit-Methode
-Legt die maximale Größe des virtuellen Arbeitsspeichers der Laufzeit fest.  
+Legt die maximale Größe des virtuellen Arbeitsspeichers von der Laufzeit fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT SetVirtualMemLimit (
   
 #### <a name="parameters"></a>Parameter  
  `sztMaxVirtualMemMB`  
- [in] Die maximale Größe des virtuellen Arbeitsspeichers der Laufzeit in Megabyte.  
+ [in] Die maximale Größe in Megabyte an virtuellem Arbeitsspeicher von der Runtime.  
   
 ## <a name="remarks"></a>Hinweise  
- Die maximale Größe des virtuellen Arbeitsspeichers der Laufzeit kann dynamisch geändert werden.  
+ Die maximale Größe des virtuellen Arbeitsspeichers von der Runtime kann dynamisch geändert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** GCHost.idl, GCHost.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IGCHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IGCHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

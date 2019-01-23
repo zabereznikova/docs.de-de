@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564080"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr-Enumeration
 Enthält Werte, die die Beziehung zwischen einer Methode und einer zugeordneten Eigenschaft oder einem zugeordneten Ereignis beschreiben.  
@@ -45,19 +45,19 @@ typedef enum CorMethodSemanticsAttr {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`msSetter`|Gibt an, dass die Methode ist ein `set` -Accessor für eine Eigenschaft.|  
-|`msGetter`|Gibt an, dass die Methode ist ein `get` -Accessor für eine Eigenschaft.|  
-|`msOther`|Gibt an, dass die Methode eine Beziehung zu einer Eigenschaft oder ein Ereignis als diejenigen, die hier definiert.|  
-|`msAddOn`|Gibt an, dass die Methode Handlermethoden für ein Ereignis hinzufügt.|  
+|`msSetter`|Gibt an, dass die Methode ist eine `set` Accessor für eine Eigenschaft.|  
+|`msGetter`|Gibt an, dass die Methode ist eine `get` Accessor für eine Eigenschaft.|  
+|`msOther`|Gibt an, dass die Methode eine Beziehung auf eine Eigenschaft oder ein Ereignis als die hier definiert.|  
+|`msAddOn`|Gibt an, dass die Methode Handlermethoden für ein Ereignis hinzugefügt.|  
 |`msRemoveOn`|Gibt an, dass die Methode Handlermethoden für ein Ereignis entfernt.|  
 |`msFire`|Gibt an, dass die Methode löst ein Ereignis aus.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

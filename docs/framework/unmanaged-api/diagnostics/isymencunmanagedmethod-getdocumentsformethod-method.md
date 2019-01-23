@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8efcd62f39a7de397ef93231fd125a17c7e513e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562673"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod-Methode
-Ruft die Dokumente, die diese Methode in Zeilen umfasst.  
+Ruft ab, die Dokumente, die diese Methode in Zeilen umfasst.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ HRESULT GetDocumentsForMethod(
  [in] Die Länge des Puffers verweist `pcDocs`.  
   
  `pcDocs`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für die Dokumente enthalten alle erforderlichen Puffers in Zeichen.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für die Dokumente enthalten die erforderlichen Puffers in Zeichen.  
   
  `documents`  
  [in] Der Puffer, der die Dokumente enthält.  
@@ -52,5 +52,5 @@ HRESULT GetDocumentsForMethod(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

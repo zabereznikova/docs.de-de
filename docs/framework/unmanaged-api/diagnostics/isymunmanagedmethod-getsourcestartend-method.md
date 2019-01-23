@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e15bab136540c73f8e1cff0e6bb52ec1d6c0063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561867"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd-Methode
-Ruft die Anfangs- und Enddatum Dokumentpositionen für die Quelle dieser Methode ab. Die Arrayposition des erste dient als Startpunkt für, und die zweite Arrayposition wird am Ende.  
+Ruft die Dokumentpositionen für Start- und Endzeit für die Quelle dieser Methode ab. Die Arrayposition des erste ist der Anfang und die zweite Arrayposition ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ HRESULT GetSourceStartEnd(
  [in] Die Anfangs- und Endspalten in den entsprechenden Quelldokumenten.  
   
  `pRetVal`  
- [out] `true` wenn Positionen definiert; andernfalls wurden, `false`.  
+ [out] `true` wäre Positionen definiert ist, andernfalls `false`.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -56,5 +56,5 @@ HRESULT GetSourceStartEnd(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

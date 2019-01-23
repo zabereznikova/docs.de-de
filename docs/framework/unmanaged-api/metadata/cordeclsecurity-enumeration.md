@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564004"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity-Enumeration
 Gibt die Sicherheitsaktionen an, die mit deklarativer Sicherheit ausgeführt werden können.  
@@ -65,11 +65,11 @@ typedef enum CorDeclSecurity {
 |`dclRequest`|Reserviert.|  
 |`dclDemand`|Allen Aufrufern einer höheren Ebene in der Aufrufliste muss die vom aktuellen Berechtigungsobjekt angegebene Berechtigung erteilt worden sein.|  
 |`dclAssert`|Der aufrufende Code kann die durch das aktuelle Berechtigungsobjekt identifizierte Ressource zugreifen, selbst wenn Aufrufern einer höheren Ebene im Stapel nicht die Berechtigung zum Zugriff auf die Ressource erteilt wurde|  
-|`dclDeny`|Die Möglichkeit, Zugriff auf die Ressource, die vom aktuellen Berechtigungsobjekt angegebene wird Aufrufern verweigert, selbst wenn ihnen eine Berechtigung für den Zugriff erteilt wurde.|  
+|`dclDeny`|Auch wenn diese Berechtigung für den Zugriff erteilt wurde, wird Aufrufern, der Zugriff auf die durch das aktuelle Berechtigungsobjekt angegebene Ressource verweigert.|  
 |`dclPermitOnly`|Nur auf die durch dieses Berechtigungsobjekt angegebenen Ressourcen kann zugegriffen werden, selbst wenn dem Code die Berechtigung für den Zugriff auf andere Ressourcen gewährt wurde.|  
-|`dclLinktimeCheck`|Der unmittelbaren Aufrufer muss die angegebene Berechtigung für einen bestimmten Zeitraum erteilt worden sein.|  
-|`dclInheritanceCheck`|Die abgeleitete Klasse erbt von einer anderen Klasse oder eine Methode überschreibt ist erforderlich, die angegebene Berechtigung erteilt worden sein.|  
-|`dclRequestMinimum`|Der Aufrufer kann für die Mindestberechtigungen zum Ausführen des Codes erforderlich sind anfordern. Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.|  
+|`dclLinktimeCheck`|Der direkte Aufrufer muss die angegebene Berechtigung für einen bestimmten Zeitraum erteilt worden sein.|  
+|`dclInheritanceCheck`|Die abgeleitete Klasse erbt von einer anderen Klasse oder eine Methode überschreibt muss die angegebene Berechtigung erteilt worden sein.|  
+|`dclRequestMinimum`|Der Aufrufer kann für die minimalen Berechtigungen für den auszuführenden Code anfordern. Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.|  
 |`dclRequestOptional`|Der Aufrufer kann für zusätzliche Berechtigungen anfordern, die optional sind (zur Ausführung nicht erforderlich). Diese Anforderung lehnt implizit alle anderen nicht speziell angeforderten Berechtigungen ab. Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.|  
 |`dclRequestRefuse`|Die Anforderung des Aufrufers für Berechtigungen, die missbraucht werden könnten, wird nicht gewährt werden. Diese Aktion kann nur innerhalb des Gültigkeitsbereichs der Assembly verwendet werden.|  
 |`dclPrejitGrant`|Reserviert.|  
@@ -83,11 +83,11 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Reserviert.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

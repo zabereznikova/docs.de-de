@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562592"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Fokusstile in Steuerelementen und FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt zwei parallele Mechanismen zum Ändern der Darstellung eines Steuerelements bereit, wenn es den Tastaturfokus erhält. Der erste Mechanismus besteht im Eigenschaften-Settern für Eigenschaften verwenden, z. B. <xref:System.Windows.UIElement.IsKeyboardFocused%2A> innerhalb der Stil oder Vorlage, die auf das Steuerelement angewendet wird. Der zweite Mechanismus besteht in der Bereitstellung eines gesonderten Stils als Wert für die <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> Eigenschaft der "visuelle Fokusstil" erstellt Sie eine separate visuelle Struktur für einen Adorner, auf das Steuerelement, anstatt die visuelle Struktur des Steuerelements oder eine andere Benutzeroberfläche zu ändern Element, indem Sie ersetzt wird. In diesem Thema werden die Szenarios erläutert, für die sich die jeweiligen Mechanismen eignen.  
@@ -76,8 +76,8 @@ ms.locfileid: "43744984"
 ### <a name="other-focus-properties"></a>Andere Fokuseigenschaften  
  Wenn Sie möchten, dass alle mögliche Ursachen der Änderung des Fokus auf das visuelle Verhalten zu erstellen, sollten Sie Basis für einen Setter oder trigger für die <xref:System.Windows.UIElement.IsFocused%2A> Abhängigkeitseigenschaft fest, oder Sie können auch auf die <xref:System.Windows.UIElement.GotFocus> oder <xref:System.Windows.UIElement.LostFocus> Ereignissen für ein <xref:System.Windows.EventSetter>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Fokus - Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Fokus - Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
