@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0f67b1be58da82c2096c355ba5334b3bfd73611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c39797c720cdfcab58d64caf05e65c6b623325d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561152"
 ---
-# <a name="inotifyconnection2-interface"></a><span data-ttu-id="8045c-102">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8045c-102">INotifyConnection2 Interface</span></span>
-<span data-ttu-id="8045c-103">Deklariert Methoden zum Registrieren und Aufheben der Registrierung einer Notification Verbindungsquelle.</span><span class="sxs-lookup"><span data-stu-id="8045c-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
+# <a name="inotifyconnection2-interface"></a><span data-ttu-id="f1016-102">INotifyConnection2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f1016-102">INotifyConnection2 Interface</span></span>
+<span data-ttu-id="f1016-103">Deklariert Methoden, die für das Registrieren und Aufheben der Registrierung eine Benachrichtigung Verbindungsquelle.</span><span class="sxs-lookup"><span data-stu-id="f1016-103">Declares methods for registering and unregistering a connection notification source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8045c-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="8045c-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f1016-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="f1016-104">Methods</span></span>  
   
-|<span data-ttu-id="8045c-105">Methode</span><span class="sxs-lookup"><span data-stu-id="8045c-105">Method</span></span>|<span data-ttu-id="8045c-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8045c-106">Description</span></span>|  
+|<span data-ttu-id="f1016-105">Methode</span><span class="sxs-lookup"><span data-stu-id="f1016-105">Method</span></span>|<span data-ttu-id="f1016-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f1016-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8045c-107">RegisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="8045c-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="8045c-108">Installiert eine angegebene Benachrichtigung-Quellobjekt.</span><span class="sxs-lookup"><span data-stu-id="8045c-108">Installs a specified notification source object.</span></span>|  
-|[<span data-ttu-id="8045c-109">UnregisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="8045c-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="8045c-110">Entfernt eine angegebene Benachrichtigung Quellobjekt, das von der Verbindung an.</span><span class="sxs-lookup"><span data-stu-id="8045c-110">Removes a specified notification source object from the connection.</span></span>|  
+|[<span data-ttu-id="f1016-107">RegisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="f1016-107">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|<span data-ttu-id="f1016-108">Installiert ein Quellobjekt angegebene Benachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="f1016-108">Installs a specified notification source object.</span></span>|  
+|[<span data-ttu-id="f1016-109">UnregisterNotifySource-Methode</span><span class="sxs-lookup"><span data-stu-id="f1016-109">UnregisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|<span data-ttu-id="f1016-110">Entfernt eine angegebene Benachrichtigung-Quellobjekt aus der Verbindung an.</span><span class="sxs-lookup"><span data-stu-id="f1016-110">Removes a specified notification source object from the connection.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8045c-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8045c-111">Requirements</span></span>  
- <span data-ttu-id="8045c-112">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="8045c-112">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1016-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f1016-111">Requirements</span></span>  
+ <span data-ttu-id="f1016-112">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="f1016-112">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8045c-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8045c-113">See Also</span></span>  
- [<span data-ttu-id="8045c-114">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8045c-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [<span data-ttu-id="8045c-115">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8045c-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [<span data-ttu-id="8045c-116">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="8045c-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f1016-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f1016-113">See also</span></span>
+- [<span data-ttu-id="f1016-114">INotifySink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f1016-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="f1016-115">INotifySource2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f1016-115">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="f1016-116">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="f1016-116">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
