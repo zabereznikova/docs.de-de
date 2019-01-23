@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Umgang mit dem ToolStrip-Überlauf in Windows Forms'
+title: 'Vorgehensweise: Verwalten von ToolStrip-Überlauf in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-ms.openlocfilehash: 32bbc06320f0dc7f096a4b9021bebfbefedaf8f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f26217c92aef1d568349aefb87dd5a882a0cf28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541156"
 ---
-# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Gewusst wie: Umgang mit dem ToolStrip-Überlauf in Windows Forms
-Wenn alle Elemente in einer <xref:System.Windows.Forms.ToolStrip> Steuerelement in den zugewiesenen Speicherplatz nicht passen, können Sie Überlauffunktion aktivieren, auf die <xref:System.Windows.Forms.ToolStrip> und bestimmen das Überlaufverhalten bei bestimmten <xref:System.Windows.Forms.ToolStripItem>s.  
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Vorgehensweise: Verwalten von ToolStrip-Überlauf in Windows Forms
+Wenn alle Elemente in einer <xref:System.Windows.Forms.ToolStrip> Steuerelement nicht in den zugewiesenen Raum passen, können Sie Überlauffunktion aktivieren, auf die <xref:System.Windows.Forms.ToolStrip> und bestimmen das Überlaufverhalten von bestimmten <xref:System.Windows.Forms.ToolStripItem>s.  
   
- Beim Hinzufügen von <xref:System.Windows.Forms.ToolStripItem>s, die mehr Platz benötigen, als zu erfordern die <xref:System.Windows.Forms.ToolStrip> aktuelle Größe des Formulars, ein <xref:System.Windows.Forms.ToolStripOverflowButton> automatisch angezeigt, auf die <xref:System.Windows.Forms.ToolStrip>. Die <xref:System.Windows.Forms.ToolStripOverflowButton> angezeigt wird, und die Overflow-fähige Elemente in der Dropdown-Überlaufmenü verschoben werden. Dadurch können Sie anpassen und priorisieren wie Ihre <xref:System.Windows.Forms.ToolStrip> Elemente ordnungsgemäß angepasst werden, um unterschiedliche Formulargrößen. Sie können auch die Darstellung der Elemente ändern, wenn sie in der Überlaufspalte mithilfe fallen die <xref:System.Windows.Forms.ToolStripItem.Placement%2A> und <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> Eigenschaften und die <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> Ereignis. Wenn Sie das Formular zur Entwurfszeit oder zur Laufzeit mehr vergrößern, <xref:System.Windows.Forms.ToolStripItem>s angezeigt werden kann, klicken Sie im hauptblatt <xref:System.Windows.Forms.ToolStrip> und die <xref:System.Windows.Forms.ToolStripOverflowButton> möglicherweise ausgeblendet, bis Sie die Größe des Formulars zu verringern.  
+ Beim Hinzufügen von <xref:System.Windows.Forms.ToolStripItem>s, die mehr Platz benötigen, als zu erfordern die <xref:System.Windows.Forms.ToolStrip> erhalten die aktuelle Größe des Formulars eine <xref:System.Windows.Forms.ToolStripOverflowButton> automatisch angezeigt wird, auf die <xref:System.Windows.Forms.ToolStrip>. Die <xref:System.Windows.Forms.ToolStripOverflowButton> angezeigt wird, und der Überlauf-aktivierten Elemente in der Dropdown-Überlauf verschoben werden. Dadurch können Sie anpassen und priorisieren wie Ihre <xref:System.Windows.Forms.ToolStrip> Elemente ordnungsgemäß anpassen, um verschiedene Größen. Sie können auch die Darstellung der Elemente ändern, wenn sie in der Überlauf geraten, mit der <xref:System.Windows.Forms.ToolStripItem.Placement%2A> und <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> Eigenschaften und die <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> Ereignis. Wenn das Formular zur Entwurfszeit oder zur Laufzeit mehr Sie vergrößern <xref:System.Windows.Forms.ToolStripItem>s angezeigt werden kann, auf dem hauptblatt <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripOverflowButton> möglicherweise ausgeblendet, bis Sie die Größe des Formulars zu reduzieren.  
   
-### <a name="to-enable-overflow-on-a-toolstrip-control"></a>So aktivieren Sie einen Überlauf in einem ToolStrip-Steuerelement  
+### <a name="to-enable-overflow-on-a-toolstrip-control"></a>Überlauf bei eines ToolStrip-Steuerelements aktivieren  
   
--   Sicherstellen, dass die <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> Eigenschaft nicht festgelegt ist, um `false` für die <xref:System.Windows.Forms.ToolStrip>. Die Standardeinstellung ist `True`.  
+-   Sicherstellen, dass die <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> Eigenschaft ist nicht festgelegt, um `false` für die <xref:System.Windows.Forms.ToolStrip>. Die Standardeinstellung ist `True`.  
   
-     Beim <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> ist `True` (Standard), eine <xref:System.Windows.Forms.ToolStripItem> wird gesendet, um die Dropdownliste Überlaufmenü bei den Inhalt des der <xref:System.Windows.Forms.ToolStripItem> überschreitet die Breite einer horizontalen <xref:System.Windows.Forms.ToolStrip> oder die Höhe eines vertikalen <xref:System.Windows.Forms.ToolStrip>.  
+     Wenn <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> ist `True` (Standardeinstellung), eine <xref:System.Windows.Forms.ToolStripItem> wird gesendet, um das Überlaufmenü den Dropdown-bei den Inhalt des der <xref:System.Windows.Forms.ToolStripItem> überschreitet die Breite einer horizontalen <xref:System.Windows.Forms.ToolStrip> oder die Höhe eines vertikalen <xref:System.Windows.Forms.ToolStrip>.  
   
-### <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Überlaufverhalten eines bestimmten ToolStripItem angeben  
+### <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Angeben von Überlaufverhalten von einem bestimmten ToolStripItem  
   
--   Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolStripItem> auf den gewünschten Wert. Mögliche Werte sind `Always`, `Never`, und `AsNeeded`. Die Defaultis `AsNeeded`.  
+-   Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> Eigenschaft der <xref:System.Windows.Forms.ToolStripItem> auf den gewünschten Wert. Mögliche Werte sind `Always`, `Never`, und `AsNeeded`. Die Defaultis `AsNeeded`.  
   
     ```vb  
     toolStripTextBox1.Overflow = _  
@@ -42,11 +42,11 @@ Wenn alle Elemente in einer <xref:System.Windows.Forms.ToolStrip> Steuerelement 
     System.Windows.Forms.ToolStripItemOverflow.Never;  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.ToolStripOverflowButton>  
- <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>  
- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>  
- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [Zusammenfassung der ToolStrip-Technologie](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.ToolStripOverflowButton>
+- <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>
+- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
+- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [Zusammenfassung der ToolStrip-Technologie](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

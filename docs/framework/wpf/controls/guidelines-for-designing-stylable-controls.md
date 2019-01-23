@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545029"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Richtlinien zum Entwerfen formatierbarer Steuerelemente
 Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksichtigen sind, wenn Sie ein Steuerelement erstellen, das einfach zu formatieren ist und damit bequem Vorlagen damit erstellt werden können. Wir kamen durch Experimentieren zu dieser Reihe bewährter Methoden, während wir an Steuerelementstilen für Designs für die integrierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente gearbeitet haben. Wir haben gelernt, dass die erfolgreiche Formatierung genau so eine Funktion eines gut strukturierten Objektmodells ist wie für den Stil selbst. Die Zielgruppe für dieses Dokument sind die Autoren des Steuerelements und nicht der Autoren der Stile.  
@@ -30,10 +30,10 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
  Eine Einführung zum Beispiel zu Stilen und Vorlagen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
-## <a name="before-you-start-understanding-your-control"></a>Vor dem Start: Verstehen des Steuerelements  
+## <a name="before-you-start-understanding-your-control"></a>Bevor Sie beginnen: Verstehen des Steuerelements  
  Bevor Sie zu diesen Richtlinien springen, ist es wichtig, dass Sie die häufigste Verwendung Ihres Steuerelements verstehen und definiert haben. Stil stellt eine häufig unübersichtliche Palette von Möglichkeiten dar. Steuerelemente, die geschrieben werden, um in großen Umfang verwendet zu werden (in vielen Anwendungen von vielen Entwicklern), stehen vor der Herausforderung, dass Stil verwendet werden kann, um umfangreiche Änderungen an der visuellen Darstellung des Steuerelements vorzunehmen. Tatsächlich sieht das formatierte Steuerelement möglicherweise den Absichten des Autors des Steuerelements nicht ähnlich. Da die Flexibilität von Stilen grenzenlosen ist, können Sie das Konzept der häufigen Verwendung nutzen, um Ihren Entscheidungsspielraum zu vergrößern.  
   
- Um die häufige Verwendung des Steuerelements zu verstehen, denken Sie am besten an den Wertbeitrag des Steuerelements. Was bringt das Steuerelement der Tabelle, was kein anderes Steuerelement sonst bieten kann? Die häufige Verwendung impliziert eine bestimme visuelle Darstellen, sondern eher die Philosophie des Steuerelements und eine beachtliche Reihe von Erwartungen gegenüber seinem Gebrauch. Mit diesem Verständnis können Sie einige Annahmen über das Kompositionsmodell und die durch den Stil definierten häufigen Verhalten des Steuerelements durchführen. Im Fall von <xref:System.Windows.Controls.ComboBox>, z. B. Grundlegendes zur gemeinsame Nutzung wird nicht erkennen, Sie alle zu, ob ein bestimmtes <xref:System.Windows.Controls.ComboBox> abgerundete Ecken hat, aber sie bieten Ihnen einen Einblick in die Tatsache, die die <xref:System.Windows.Controls.ComboBox> wahrscheinlich benötigt ein Popup-Fenster und eine Möglichkeit zum umschalten, ob er geöffnet ist.  
+ Um die häufige Verwendung des Steuerelements zu verstehen, denken Sie am besten an den Wertbeitrag des Steuerelements. Was bringt das Steuerelement der Tabelle, was kein anderes Steuerelement sonst bieten kann? Die häufige Verwendung impliziert eine bestimme visuelle Darstellen, sondern eher die Philosophie des Steuerelements und eine beachtliche Reihe von Erwartungen gegenüber seinem Gebrauch. Mit diesem Verständnis können Sie einige Annahmen über das Kompositionsmodell und die durch den Stil definierten häufigen Verhalten des Steuerelements durchführen. Im Fall von <xref:System.Windows.Controls.ComboBox>, z. B. Verständnis der häufigen Verwendung wird nicht erhalten Sie keinerlei Informationen darüber zu, ob ein bestimmtes <xref:System.Windows.Controls.ComboBox> abgerundete Ecken hat, aber es gibt Ihnen einen Einblick in die Tatsache, die die <xref:System.Windows.Controls.ComboBox> wahrscheinlich benötigt ein Popup-Fenster und eine Möglichkeit umschalten, ob es geöffnet ist.  
   
 <a name="General_Guidelines"></a>   
 ## <a name="general-guidelines"></a>Allgemeine Richtlinien  
@@ -73,7 +73,7 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
   
     -   Benannte Hilfselemente sollten vom übergeordneten Element angegeben werden, und das übergeordnete Element sollte alle erforderlichen Einstellungen für das Hilfselement herstellen.  
   
-    -   Typbasierte Hilfselemente sollten alle erforderlichen Einstellungen für sich selbst festlegen. Dazu muss das Hilfselement möglicherweise eine Abfrage durchführen, um Informationen über den Kontext zu erhalten, in dem es verwendet wird, einschließlich dessen `TemplatedParent` (der Steuerelementtyp der Vorlage, indem es verwendet wird). Z. B. <xref:System.Windows.Controls.ContentPresenter> automatisch bindet die `Content` Eigenschaft des seine `TemplatedParent` auf seine <xref:System.Windows.Controls.ContentPresenter.Content%2A> Eigenschaft bei Verwendung in einer <xref:System.Windows.Controls.ContentControl> abgeleiteter Typ.  
+    -   Typbasierte Hilfselemente sollten alle erforderlichen Einstellungen für sich selbst festlegen. Dazu muss das Hilfselement möglicherweise eine Abfrage durchführen, um Informationen über den Kontext zu erhalten, in dem es verwendet wird, einschließlich dessen `TemplatedParent` (der Steuerelementtyp der Vorlage, indem es verwendet wird). Z. B. <xref:System.Windows.Controls.ContentPresenter> bindet automatisch die `Content` Eigenschaft der `TemplatedParent` auf seine <xref:System.Windows.Controls.ContentPresenter.Content%2A> Eigenschaft bei der Verwendung in eine <xref:System.Windows.Controls.ContentControl> abgeleiteten Typ.  
   
     -   Eigenständige Hilfselemente können nicht auf diese Weise optimiert werden, da per Definition weder das Hilfselement noch das übergeordnete Element der anderen kennt.  
   
@@ -83,7 +83,7 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
   
     1.  Eigenschaftenbindung Beispiel: Bindung zwischen <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> und <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
-    2.  Hat Eigenschaftsänderungen oder -animationen ausgelöst. Beispiel: der Hoverzustand eine <xref:System.Windows.Controls.Button>.  
+    2.  Hat Eigenschaftsänderungen oder -animationen ausgelöst. Beispiel: den Hoverzustand des eine <xref:System.Windows.Controls.Button>.  
   
     3.  Befehl. Beispiel: <xref:System.Windows.Controls.Primitives.ScrollBar.LineUpCommand>  /  <xref:System.Windows.Controls.Primitives.ScrollBar.LineDownCommand> in <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
@@ -99,7 +99,7 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
   
 -   **Verwenden Sie die Formattrigger (im Gegensatz zu Vorlagentrigger) sparsam**. Trigger, die Eigenschaften für Elemente in der Vorlage beeinflussen, müssen in der Vorlage deklariert werden. Trigger, die Eigenschaften des Steuerelements beeinflussen (keine `TargetName`) können im Stil deklariert werden, es sei denn, Sie wissen, dass eine Änderung der Vorlage auch den Trigger zerstören wird.  
   
--   **Seien Sie mit vorhandenen Formatierungsmustern konsistent.** Oft gibt es mehrere Methoden zur Lösung eines Problems. Beachten Sie, und – wenn möglich – seien Sie konsistent vorhandenen Stilentwürfen des Steuerelements. Dies ist besonders wichtig für Steuerelemente, die vom gleichen Basistyp abgeleitet werden (z. B. <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>usw.).  
+-   **Seien Sie mit vorhandenen Formatierungsmustern konsistent.** Oft gibt es mehrere Methoden zur Lösung eines Problems. Beachten Sie, und – wenn möglich – seien Sie konsistent vorhandenen Stilentwürfen des Steuerelements. Dies ist besonders wichtig für Steuerelemente, die von demselben Basistyp abgeleitet werden (z. B. <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>und so weiter).  
   
 -   **Machen Sie Eigenschaften verfügbar, um allgemeine Anpassungszenarios ohne neue Vorlagen zuzulassen**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt keine austauschbaren/anpassbaren Teile,also bleibt ein Benutzer des Steuerelements mit nur zwei Methoden der Anpassung zurück: direktes Festlegen von Eigenschaften oder Festlegen von Eigenschaften mit Formatvorlagen. Wenn Sie das bedenken, können Sie eine begrenzte Anzahl an Eigenschaften für sehr häufige Anpassungsszenarios mit hoher Priorität darzustellen, die andernfalls eine neue Vorlage erfordern. Hier sind die bewährten Methoden dargestellt, wenn und wie Anpassungsszenarios aktiviert werden:  
   
@@ -112,12 +112,12 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
 <a name="Theme_Considerations"></a>   
 ## <a name="theme-considerations"></a>Überlegungen zum Design  
   
--   **Designstile sollten versuchen, über konsistente Eigenschaftensemantik auf allen Designs zu verfügen, aber es gibt keine Garantie dafür**. Als Teil der Dokumentation sollte das Steuerelement über ein Dokument zur Beschreibung der Eigenschaftensemantik des Steuerelements verfügen, also die „Bedeutung“ einer Eigenschaft für ein Steuerelement. Z. B. die <xref:System.Windows.Controls.ComboBox> Steuerelement sollte die Bedeutung der definieren die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft innerhalb <xref:System.Windows.Controls.ComboBox>. Die Standardstile für das Steuerelement sollten versuchen, die für alle Designs in diesem Dokument definierte Semantik zu befolgen. Benutzer des Steuerelements sollten sich jedoch auch bewusst sein, dass die Eigenschaftensemantik von Design zu Design verschieden sein kann. In bestimmten Fällen kann eine bestimmte Eigenschaft unter den visuellen Einschränkungen, die von einem bestimmten Design benötigt werden, nicht ausgedrückt werden. (Das Classic-Design verfügt z.B. über keine einzelne Grenze für die `Thickness` für viele Steuerelemente angewendet werden kann.)  
+-   **Designstile sollten versuchen, über konsistente Eigenschaftensemantik auf allen Designs zu verfügen, aber es gibt keine Garantie dafür**. Als Teil der Dokumentation sollte das Steuerelement über ein Dokument zur Beschreibung der Eigenschaftensemantik des Steuerelements verfügen, also die „Bedeutung“ einer Eigenschaft für ein Steuerelement. Z. B. die <xref:System.Windows.Controls.ComboBox> Steuerelement fest, die Bedeutung des das <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft innerhalb <xref:System.Windows.Controls.ComboBox>. Die Standardstile für das Steuerelement sollten versuchen, die für alle Designs in diesem Dokument definierte Semantik zu befolgen. Benutzer des Steuerelements sollten sich jedoch auch bewusst sein, dass die Eigenschaftensemantik von Design zu Design verschieden sein kann. In bestimmten Fällen kann eine bestimmte Eigenschaft unter den visuellen Einschränkungen, die von einem bestimmten Design benötigt werden, nicht ausgedrückt werden. (Das Classic-Design verfügt z.B. über keine einzelne Grenze für die `Thickness` für viele Steuerelemente angewendet werden kann.)  
   
 -   **Designstile müssen nicht über konsistente Triggersemantik zwischen allen Designs verfügen**. Das Verhalten, das von einem Steuerelementstil durch Trigger oder Animationen verfügbar gemacht wird, kann je nach Design variieren. Benutzer sollten bedenken, dass ein Steuerelement nicht zwangsläufig denselben Mechanismus nutzt, um alle ein bestimmtes Verhalten für alle Designs zu erzielen. Ein Design kann z.B. eine Animation verwenden, um das Hover-Verhalten zu verdeutlichen, während ein anderes Design einen Trigger verwendet. Dies kann zu Inkonsistenzen bei der Beibehaltung des Verhaltens in benutzerdefinierten Steuerelementen führen. (Das Ändern von beispielsweise der Hintergrundeigenschaft kann den Hoverzustand des Steuerelements womöglich nicht beeinflussen, wenn dieser Zustand mithilfe eines Triggers ausgelöst wird. Wenn der Hoverzustand allerdings mithilfe einer Animation implementiert wurde, kann das Wechseln zum Hintergrund zu einer irreparablen Zerstörung der Animation und somit auch des Zustandsübergangs führen.)  
   
 -   **Designstile müssen nicht über konsistente „Layoutsemantik“ über allen Designs verfügen**. Das Standardformat muss z.B: nicht garantieren, dass ein Steuerelement die gleiche Größe in allen Designs übernimmt oder dass ein Steuerelement über dieselben Ränder/Abstände des Inhalts in allen Designs verfügt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

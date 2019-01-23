@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: e3ce8ff7da647120e5fd9e3b4cd44cc603eb797d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547091"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate-Klausel (Visual Basic)
 Wendet eine oder mehrere Aggregatfunktionen auf eine Auflistung an.  
@@ -120,9 +120,9 @@ Das folgende Beispiel zeigt, wie Sie mit der `Aggregate` -Klausel, um Aggregatfu
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [Abfragen](../../../visual-basic/language-reference/queries/index.md)  
-- [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
-- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
-- [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)  
+- [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Abfragen](../../../visual-basic/language-reference/queries/index.md)
+- [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where-Klausel](../../../visual-basic/language-reference/queries/where-clause.md)
 - [Group By-Klausel](../../../visual-basic/language-reference/queries/group-by-clause.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543577"
 ---
 # <a name="typography-how-to-topics"></a>Gewusst-wie-Themen zur Typografie
-Die Themen in diesem Abschnitt wird beschrieben, wie mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] für umfassende Darstellung von Text in Ihren Anwendungen zu unterstützen.  
+Die Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] für umfassende Darstellung von Text in Ihren Anwendungen zu unterstützen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer Textdekoration](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
@@ -27,7 +27,7 @@ Die Themen in diesem Abschnitt wird beschrieben, wie mit [!INCLUDE[TLA#tla_wincl
  [Zeichnen von Text in grafischen Elementen](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
  [Verwenden von Sonderzeichen in XAML](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Documents.Typography>  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Features für OpenType-Schriftarten](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Documents.Typography>
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Features für OpenType-Schriftarten](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

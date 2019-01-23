@@ -2,12 +2,12 @@
 title: Peerkanalsicherheit
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: e66c532b253c8aa53ae508a72633fa255615e80f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09979cee48522355631c79e0bdf4c0fba6be782e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541754"
 ---
 # <a name="peer-channel-security"></a>Peerkanalsicherheit
 Der Peerkanal ermöglicht die Verwendung einer Vielzahl von verteilten Anwendungstypen, die von Mehrparteienmessaging abhängen. Beispielsweise gehört hierzu eine Inhaltsverteilung auf Internetebene, wobei eine vertrauenswürdige Quelle Inhalte (wie beispielsweise Medien- oder Softwareupdates) verteilt, eine Gruppe von Freunden Musik oder Fotos austauscht oder ein Team von Kollegen zusammen ein Dokument bearbeitet. Jedes dieser Szenarien erfordert ein individuelles Sicherheitsmodell. Das Peerkanal-Sicherheitsmodell ist auf die Adressierung dieser Szenarien ausgelegt und bietet ein umfangreiches Sicherheitsmodell für die entsprechenden Anforderungen an unterschiedliche Identitäten, Authentifizierung und Autorisierungsmodelle.  
@@ -33,7 +33,7 @@ Der Peerkanal ermöglicht die Verwendung einer Vielzahl von verteilten Anwendung
   
  Der Peerkanal erfordert kein spezifisches Identifikationsmodell, solange die Anwendung einen der unterstützten Tokentypen auswählt. Anwendungen besitzen den Lebenszyklus dieser Identitäten und die Authentifizierungsenscheidungen vollständig.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von Peerkanalanwendungen](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [Peerkanalbegriffe](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von Peerkanalanwendungen](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Peerkanalbegriffe](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

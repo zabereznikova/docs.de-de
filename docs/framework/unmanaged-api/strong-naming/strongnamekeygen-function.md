@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 30610311d2c48f15ebd85910557892784c0cfe85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542495"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen-Funktion
-Erstellt ein neues öffentliches/privates Schlüsselpaar für starke Namen verwenden.  
+Erstellt ein neues öffentliches/privates Schlüsselpaar für die Verwendung starker Namen.  
   
- Diese Funktion ist veraltet. Verwenden der [ICLRStrongName:: StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) Methode stattdessen.  
+ Diese Funktion wurde als veraltet markiert. Verwenden der [ICLRStrongName:: StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) Methode stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,36 +44,36 @@ BOOLEAN StrongNameKeyGen (
  [in] Der angeforderte Schlüsselcontainer-Name. `wszKeyContainer` muss eine nicht leere Zeichenfolge sein, oder null, um einen temporären Namen zu generieren.  
   
  `dwFlags`  
- [in] Gibt an, ob der Schlüssel registriert verlassen. Die folgenden Werte werden unterstützt:  
+ [in] Gibt an, ob den Schlüssel registriert bleiben soll. Die folgenden Werte werden unterstützt:  
   
--   0 x 00000000 – wird verwendet, wenn `wszKeyContainer` ist null, um einen temporären Schlüsselcontainernamen zu generieren.  
+-   0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
   
 -   0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
   
  `ppbKeyBlob`  
- [out] Das zurückgegebene öffentlichen/privaten Schlüsselpaar.  
+ [out] Das zurückgegebene öffentliches/privates Schlüsselpaar.  
   
  `pcbKeyBlob`  
- [out] Die Größe in Bytes, der `ppbKeyBlob`.  
+ [out] Die Größe in Bytes, des `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Rückgabewert  
  `true` Bei erfolgreichem Abschluss; andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `StrongNameKeyGen` Funktion erstellt einen Schlüssel mit 1024 Bit. Nachdem der Schlüssel abgerufen wurden, sollten Sie Aufrufen der [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) Funktion, um den belegten Speicher freizugeben.  
+ Die `StrongNameKeyGen` Funktion wird ein 1024-Bit-Schlüssel erstellt. Nachdem der Schlüssel abgerufen werden, sollten Sie Aufrufen der [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) Funktion, um den belegten Arbeitsspeicher freizugeben.  
   
- Wenn die `StrongNameKeyGen` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.  
+ Wenn die `StrongNameKeyGen` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** StrongName.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [StrongNameKeyGen-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
- [StrongNameKeyGenEx-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  
- [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [StrongNameKeyGen-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
+- [StrongNameKeyGenEx-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

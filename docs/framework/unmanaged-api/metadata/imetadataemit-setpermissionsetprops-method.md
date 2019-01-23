@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d80e3206f74c3c50c8436563b0e39d1229a963b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c8a4d3b7014d0da88e83b507c39c039d39ba93d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542677"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps-Methode
-Legt fest oder aktualisiert Sie Features der Metadatensignatur der einen Berechtigungssatz, der durch einen vorherigen Aufruf definierten [DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Legt fest oder aktualisiert die Metadatensignatur der einen Berechtigungssatz auf, die von einem vorherigen Aufruf von definierten Funktionen [DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,29 +41,29 @@ HRESULT SetPermissionSetProps (
   
 #### <a name="parameters"></a>Parameter  
  `tk`  
- [in] Ein Metadatentoken, das das Objekt, das ausgestattet sein darstellt.  
+ [in] Ein Metadatentoken, das das Objekt, das Attribut versehen werden darstellt.  
   
  `dwAction`  
- [in] Ein [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) Wert, der den Typ des zu verwendenden deklarative Sicherheit angibt.  
+ [in] Ein [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) Wert, der angibt, den Typ der deklarativen Sicherheit verwendet werden.  
   
  `pvPermission`  
  [in] Die BLOB-Berechtigung.  
   
  `cbPermission`  
- [in] Die Größe in Bytes, der `pvPermission`.  
+ [in] Die Größe in Bytes, des `pvPermission`.  
   
  `ppm`  
  [out] Ein `mdPermission` Metadatentoken, das die aktualisierten Berechtigungen darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 62e2d05ec724b633de42c4b8e7183676d411791d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c11fe4176ee770e39abcab612e26e496aa2a1457
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543512"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Aufrufen von Dienstvorgängen (WCF Data Services)
 Der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert Dienstvorgänge für einen Datendienst. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, solche Vorgänge als Methoden im Datendienst zu definieren. Wie andere Datendienstressourcen werden diese Dienstvorgänge durch URIs adressiert. Ein Dienstvorgang kann Auflistungen von Entitätstypen, einzelnen Entitätstypinstanzen und primitiven Typen zurückgeben, z. B. ganze Zahl und Zeichenfolge. Ein Dienstvorgang kann auch `null` (`Nothing` in Visual Basic) zurückgeben. Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek kann verwendet werden, um auf Dienstvorgänge zuzugreifen, die HTTP-GET-Anforderungen unterstützen. Diese Arten von Dienstvorgängen werden als Methoden definiert, die über das <xref:System.ServiceModel.Web.WebGetAttribute> verfügen. Weitere Informationen finden Sie unter [Dienstvorgänge](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -124,5 +124,5 @@ Der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert Di
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## <a name="see-also"></a>Siehe auch  
- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>Siehe auch
+- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

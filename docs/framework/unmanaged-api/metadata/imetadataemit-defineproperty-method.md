@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543080"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty-Methode
-Erstellt eine Eigenschaftsdefinition für den angegebenen Typ mit dem angegebenen `get` und `set` Methodenaccessoren und ruft ein Token auf, Eigenschaftsdefinition ab.  
+Erstellt eine Eigenschaftsdefinition für den angegebenen Typ, mit dem angegebenen `get` und `set` Methodenaccessoren, und ruft ein Token auf diese Eigenschaftsdefinition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,41 +57,41 @@ HRESULT DefineProperty (
  [in] Die Eigenschaftenflags.  
   
  `pvSig`  
- [in] Die Signatur der Eigenschaft.  
+ [in] Die Eigenschaftensignatur.  
   
  `cbSig`  
  [in] Die Anzahl der Bytes im `pvSig`.  
   
  `dwCPlusTypeFlag`  
- [in] Der Typ des Standardwerts für die Eigenschaft.  
+ [in] Der Typ der Standardwert der Eigenschaft.  
   
  `pValue`  
  [in] Der Standardwert für die Eigenschaft.  
   
  `cchValue`  
- [in] Die Anzahl von (Unicode-) Zeichen `pValue`.  
+ [in] Die Anzahl von (Unicode-) Zeichen in `pValue`.  
   
  `mdSetter`  
  [in] Die Methode, die den Wert der Eigenschaft festlegt.  
   
  `mdGetter`  
- [in] Die Methode, die den Eigenschaftswert abruft.  
+ [in] Die Methode, die den Wert der Eigenschaft abruft.  
   
  `rmdOtherMethods[]`  
- [in] Ein Array von anderen Methoden, die der Eigenschaft zugeordnet werden soll. Beenden Sie das Array mit einem `mdTokenNil`.  
+ [in] Ein Array von anderen Methoden der Eigenschaft zugeordnet. Beenden Sie das Array mit einem `mdTokenNil`.  
   
  `pmdProp`  
- [out] Die `mdProperty` Token zugewiesen.  
+ [out] Die `mdProperty` zugewiesene Token.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

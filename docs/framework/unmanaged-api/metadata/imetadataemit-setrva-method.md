@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 371eed84883e2816892c0a6a212a4a89a287cc58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89475ebc5ef04c8693adb7a83bd1dd07f5774fb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544692"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA-Methode
-Legt die relative virtuelle Adresse der angegebenen Methode fest.  
+Legt fest, die relative virtuelle Adresse der angegebenen Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,17 +41,17 @@ HRESULT SetRVA (
  [in] Das Token für die Zielmethode oder die Implementierung der Methode.  
   
  `ulRVA`  
- [in] Die Adresse des Bereichs Code- oder Datenmenge.  
+ [in] Die Adresse des Bereichs, Code oder Daten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

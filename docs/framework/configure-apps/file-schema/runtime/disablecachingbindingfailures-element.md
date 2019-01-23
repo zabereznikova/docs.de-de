@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78ca269dacc33fb441310ad00ba2548826f5403e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 20cc7e37b2ea66cae9f28367f97b69ed43f1a13e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543866"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;DisableCachingBindingFailures&gt; Element
 Gibt an, ob das Zwischenspeichern von Bindungsfehlern, die auftreten, da die Assembly nicht, durch die Überprüfung gefunden wurde zu deaktivieren.  
   
  \<Configuration >-Element  
 \<Common Language Runtime >-Element  
-\<DisableCachingBindingFailures >  
+\<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,7 +80,7 @@ Gibt an, ob das Zwischenspeichern von Bindungsfehlern, die auftreten, da die Ass
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Siehe auch
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

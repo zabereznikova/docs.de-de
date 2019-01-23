@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a0d796b9c507665ff3ba67153df4691f078e5c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543840"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish-Co-Klasse
 Stellt Schnittstellen für die Veröffentlichung von Informationen über Anwendungsdomänen und Prozesse bereit.  
@@ -42,17 +42,17 @@ coclass CorpubPublish {
   
 |Interface|Beschreibung|  
 |---------------|-----------------|  
-|[ICorPublish-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Stellt Methoden für die Veröffentlichung von Informationen über Prozesse und die Anwendungsdomänen in diesen Prozessen bereit.|  
+|[ICorPublish-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Stellt Methoden für die Veröffentlichung von Informationen zu Prozessen und Anwendungsdomänen in diesen Prozessen bereit.|  
 |[ICorPublishAppDomain-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Stellt dar, und enthält Informationen zu einer Anwendungsdomäne in einem Prozess.|  
-|[ICorPublishAppDomainEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|Enthält Methoden, die eine Auflistung von Anwendungsdomänen durchlaufen, die derzeit innerhalb eines Prozesses vorhanden sind.|  
-|[ICorPublishProcess-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|Entspricht einem Prozess, der auf einem Computer ausgeführt wird.|  
-|[ICorPublishProcessEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|Enthält Methoden, die eine Auflistung von Prozessen durchlaufen, die auf einem Computer ausgeführt werden.|  
+|[ICorPublishAppDomainEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|Bietet Methoden, die eine Auflistung von Anwendungsdomänen durchlaufen, die zurzeit innerhalb eines Prozesses vorhanden sind.|  
+|[ICorPublishProcess-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|Stellt einen Prozess, der auf einem Computer ausgeführt wird.|  
+|[ICorPublishProcessEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|Bietet Methoden, die eine Auflistung der Prozesse durchlaufen, die auf einem Computer ausgeführt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein typisches Szenario für die publishing umfasst einen Entwickler möchte, Debuggen Sie verwalteten Code, der auf einem Computer in einer Anwendungsdomäne ausgeführt wird. Die hostumgebung möglicherweise mehr als eine Anwendungsdomäne innerhalb eines Prozesses ausgeführt. Der Entwickler möchte eine grafische Benutzeroberfläche oder andere Weise verwenden, um alle Prozesse aufzulisten, die auf dem Computer ausgeführt werden, und wählen Sie einen bestimmten Prozess. Die Auflistung sollte alle Anwendungsdomänen innerhalb von Prozessen enthalten, die verwalteten Code ausgeführt werden. Klicken Sie dann kann den bestimmten Anwendungsdomäne zu identifizieren und Anfügen eines Debuggers an, dass diese Domäne.  
+ Ein typisches Szenario für die Veröffentlichung umfasst einen Entwickler möchte, verwalteten Code Debuggen, die auf einem Computer innerhalb einer Anwendungsdomäne ausgeführt wird. Die hostumgebung möglicherweise mehr als eine Anwendungsdomäne innerhalb eines Prozesses ausgeführt. Der Entwickler möchte eine grafische Benutzeroberfläche oder eine andere Möglichkeit zum Auflisten aller Prozesse, die auf dem Computer ausgeführt werden, und wählen Sie einen bestimmten Prozess. Die Liste sollte alle Anwendungsdomänen innerhalb von Prozessen enthalten, die verwalteten Code ausgeführt werden. Der Entwickler kann dann identifizieren die spezifischen Anwendungsdomäne und Anfügen eines Debuggers an der Domäne.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorPub.idl  
   
@@ -60,5 +60,5 @@ coclass CorpubPublish {
   
  **.NET Framework-Versionen:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

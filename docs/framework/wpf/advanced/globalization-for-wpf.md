@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d2bb4c9a00f31cb87ad8890591aa190fac6384f9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d7b544fcb308960ff86b83655d60cb1453b6571a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543814"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme, die Sie beim Schreiben von bewusst sein sollten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen für den globalen Markt. Programmierelemente der Globalisierung werden in definiert [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.
@@ -181,4 +181,4 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 ```
 
 ## <a name="see-also"></a>Siehe auch
- [Übersicht über WPF-Globalisierung und -Lokalisierung](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+- [Übersicht über WPF-Globalisierung und -Lokalisierung](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)

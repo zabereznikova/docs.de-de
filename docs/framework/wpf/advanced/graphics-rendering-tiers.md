@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9fb24e13ab684170baf5ac3001d3a2d4bcd6df7e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543853"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -126,13 +126,13 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Beim Ausführen des [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Diagnosetools enthält das Hauptfenster eine Reihe von Registerkarten, mit denen Sie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-bezogene Informationen anzeigen und diagnostizieren können. Die **System**-Registerkarte enthält z.B. Systeminformationen über Ihren Computer und gibt die Version von [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] an, die auf Ihrem Computer installiert ist.  
   
- ![Bildschirmabbildung: DirectX-Diagnosetool](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Screenhot: DirectX-Diagnosetool](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Hauptfenster des DirectX-Diagnosetools  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.RenderCapability>  
- <xref:System.Windows.Media.RenderOptions>  
- [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
- [Registrierungseinstellungen für das Rendern von Grafiken](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Tipps und Tricks zu Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.RenderCapability>
+- <xref:System.Windows.Media.RenderOptions>
+- [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [Registrierungseinstellungen für das Rendern von Grafiken](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Tipps und Tricks zu Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

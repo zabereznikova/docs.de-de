@@ -2,12 +2,12 @@
 title: In WCF verwendete Sicherheitsbegriffe
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 9fe27f3f63f8c7fad1a4bbb0975a5255d5a16654
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541793"
 ---
 # <a name="security-concepts-used-in-wcf"></a>In WCF verwendete Sicherheitsbegriffe
 Windows Communication Foundation (WCF)-Sicherheit wird baut auf Begriffen bereits und in diversen Sicherheitsinfrastrukturen bereitgestellt.  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF)-Sicherheit wird baut auf Begriffen bereit
  WCF unterstützt einige jener Infrastrukturen, z. B. Secure Sockets Layer (SSL) über HTTP (HTTPS). Hingegen wird über SOAP-codierten Nachrichten WCF vorhandene Sicherheitsinfrastrukturen zu unterstützen, durch die Implementierung der neuere interoperable Sicherheitsstandards (z. B. WS-Security) ein. Die zugrunde liegenden Sicherheitskonzepte sind identisch, unabhängig davon, ob Sie bestehende Mechanismen verwenden oder neue interoperable Standards. Das Verständnis der Konzepte, auf denen die bestehenden Infrastrukturen und neueren Standards beruhen, ist entscheidend für die Implementierung des besten Sicherheitsmodells für eine Anwendung.  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>Einführung in die Sicherheit für WCF Web Services  
- Der Microsoft Patterns and Practices-Gruppe eine detaillierte Whitepaper schrieb, auf WCF-sicherheitsempfehlungen, die zum Download verfügbar ist: [WCF-Sicherheitshandbuch](https://go.microsoft.com/fwlink/?LinkId=210210). In diesem Whitepaper werden die grundlegenden Sicherheitskonzepte in Zusammenhang mit Webdiensten, die wichtigsten WCF-Sicherheitskonzepte, Szenarien für Intranetanwendungen und Szenarien für Internetanwendungen beschrieben.  
+ Der Microsoft Patterns and Practices-Gruppe habe eine detaillierte Whitepaper auf WCF-Sicherheitsleitfaden handelt es sich hier herunterladen: [WCF-Sicherheitshandbuch](https://go.microsoft.com/fwlink/?LinkId=210210). In diesem Whitepaper werden die grundlegenden Sicherheitskonzepte in Zusammenhang mit Webdiensten, die wichtigsten WCF-Sicherheitskonzepte, Szenarien für Intranetanwendungen und Szenarien für Internetanwendungen beschrieben.  
   
 ## <a name="industry-wide-security-specifications"></a>Branchenweite Sicherheitsspezifikationen  
   
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF)-Sicherheit wird baut auf Begriffen bereit
  Bei X.509-Zertifikaten handelt es sich um ein primäres Anmeldeinformationsformular, das in Sicherheitsanwendungen verwendetet wird. Weitere Informationen zu x. 509-Zertifikaten, finden Sie unter [x. 509-Zertifikate mit öffentlichem Schlüssel](https://go.microsoft.com/fwlink/?LinkId=210213). X.509-Zertifikate werden in einem Zertifikatspeicher gespeichert. Ein Computer mit Windows-Betriebssystem verfügt über diverse Zertifikatspeicher, die unterschiedliche Zwecke erfüllen. Weitere Informationen zu den verschiedenen speichern finden Sie unter [Zertifikatspeicher](https://go.microsoft.com/fwlink/?LinkID=87787).  
   
 ## <a name="web-services-security-specifications"></a>Sicherheitsspezifikationen für Webdienste  
- Die vom System definierten Bindungen unterstützen viele allgemein übliche Sicherheitsspezifikationen für Webdienste. Diese Unterstützung für eine vollständige Liste der vom System bereitgestellten Bindungen und Webdienstspezifikationen finden Sie unter: [vom System-provided Interoperabilitätsbindungen unterstützte Web Services-Protokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ Die vom System definierten Bindungen unterstützen viele allgemein übliche Sicherheitsspezifikationen für Webdienste. Eine vollständige Liste der vom System bereitgestellten Bindungen und Webdienstspezifikationen support finden Sie unter: [Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Zugriffssteuerungsmechanismen  
  WCF bietet mehrere Möglichkeiten zum Steuern des Zugriffs auf einen Dienst oder Vorgang. Dazu zählen:  
@@ -46,6 +46,6 @@ Windows Communication Foundation (WCF)-Sicherheit wird baut auf Begriffen bereit
   
  Weitere Informationen zu diesen Themen finden Sie unter [Mechanismen der Zugriffssteuerung](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

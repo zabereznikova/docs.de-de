@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 26f57b039b8e2fb3c56af926eeb63dc3c4c33b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542404"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Entwurfszeitfehler im Windows Forms-Designer
 In diesem Thema wird die Bedeutung und der Verwendungszweck der Entwurfszeitfehlerliste erläutert, die in Microsoft Visual Studio angezeigt wird, wenn der Windows Forms-Designer nicht geladen werden kann. Wenn diese Fehlerliste angezeigt wird, sollten Sie sie nicht als Fehler im Designer, sondern als Hilfe beim Beheben von Fehlern in Ihrem Code interpretieren.  
@@ -52,8 +52,8 @@ In diesem Thema wird die Bedeutung und der Verwendungszweck der Entwurfszeitfehl
 ### <a name="ignore-and-continue"></a>Ignorieren und fortfahren  
  Sie können die Fehlerbedingung ignorieren und mit dem Laden des Designers fortfahren. Die Auswahl dieser Aktion kann zu unerwartetem Verhalten führen. Beispielsweise werden Steuerelemente möglicherweise nicht auf der Entwurfsoberfläche angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Problembehandlung bei der Entwurfszeitentwicklung](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [Problembehandlung beim Erstellen von Komponenten und Steuerelementen](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Fehlermeldungen im Windows Forms-Designer](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+## <a name="see-also"></a>Siehe auch
+- [Problembehandlung bei der Entwurfszeitentwicklung](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)
+- [Problembehandlung beim Erstellen von Komponenten und Steuerelementen](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)
+- [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Fehlermeldungen im Windows Forms-Designer](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

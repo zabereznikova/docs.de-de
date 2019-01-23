@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c76e46c75680d9fc0ad70e94da288f0c6b5e5ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544639"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps-Methode
-Ruft den Satz von Eigenschaften des exportierten Typs mit der angegebenen Metadatensignatur ab.  
+Ruft den Satz von Eigenschaften des exportierten Typs mit der angegebenen Metadaten-Signatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,28 +49,28 @@ HRESULT GetExportedTypeProps (
  [out] Der Name des exportierten Typs.  
   
  `cchName`  
- [in] Die Größe in Breitzeichen von `szName`.  
+ [in] Die Größe in Breitzeichen, der `szName`.  
   
  `pchName`  
- [out] Die Anzahl der tatsächlich zurückgegebenen Breitzeichen `szName`  
+ [out] Die Anzahl der Breitzeichen, die tatsächlich zurückgegeben. `szName`  
   
  `ptkImplementation`  
- [out] Ein `mdFile`, `mdAssemblyRef`, oder `mdExportedType` Metadatentoken, die oder ermöglicht den Zugriff auf die Eigenschaften des exportierten Typ enthält.  
+ [out] Ein `mdFile`, `mdAssemblyRef`, oder `mdExportedType` Metadatentoken, das enthält oder erlaubt den Zugriff auf die Eigenschaften des exportierten Typs.  
   
  `ptkTypeDef`  
  [out] Ein Zeiger auf ein `mdTypeDef` Token, das einen Typ in der Datei darstellt.  
   
  `pdwExportedTypeFlags`  
- [out] Ein Zeiger auf die Flags, die in den exportierten Typ angewendete Metadaten beschreiben. Der Wert des Flags kann eine oder mehrere [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) Werte.  
+ [out] Ein Zeiger auf die Flags, die in den exportierten Typ angewendete Metadaten beschreiben. Der Wert des Flags kann sein, eine oder mehrere [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) Werte.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46532592057f4fa6d9883d46dcef2f8f9e5f7228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9fc894cdd12e58689fb6b010820bb24d14a9541
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543746"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual-Methode
-Wird von der common Language Runtime (CLR) Datenzugriffsdiensten der belegen von Speicher im Adressraum dieses Zielprozesses aufgerufen.  
+Wird aufgerufen, durch die common Language Runtime (CLR) Datenzugriffsdiensten der Speicher im Adressraum dieses Prozesses Ziel reserviert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,27 +41,27 @@ HRESULT AllocVirtual(
   
 #### <a name="parameters"></a>Parameter  
  `addr`  
- [in] Ein `CLRDATA_ADDRESS` Wert, der angibt, die angeforderte Startadresse des Arbeitsspeichers zugeordnet werden soll.  
+ [in] Ein `CLRDATA_ADDRESS` Wert, der angibt, der die angeforderte Startadresse des Arbeitsspeichers, die zugeordnet werden.  
   
  `size`  
- [in] Die Größe in Bytes, des Arbeitsspeichers zugeordnet werden soll.  
+ [in] Die Größe in Bytes, des Arbeitsspeichers, die zugeordnet werden.  
   
  `typeFlags`  
- [in] Flags, die die Belegung von Speicher zu steuern. Finden Sie unter Win32 `VirtualAlloc` Funktion.  
+ [in] Flags, die die Zuordnung von Arbeitsspeicher zu steuern. Finden Sie unter Win32 `VirtualAlloc` Funktion.  
   
  `protectFlags`  
- [in] Die Schutzattribute für den reservierten Arbeitsspeicher. Finden Sie unter Win32 `VirtualAlloc` Funktion.  
+ [in] Die Schutzattribute für den zugeordneten Speicher. Finden Sie unter Win32 `VirtualAlloc` Funktion.  
   
  `virt`  
- [out] Ein Zeiger auf eine `CLRDATA_ADDRESS` -Wert, der die eigentliche Startadresse des belegten angibt.  
+ [out] Ein Zeiger auf eine `CLRDATA_ADDRESS` -Wert, der die eigentliche Startadresse des zugeordneten Speichers angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `AllocVirtual` Methode dient als logischer Wrapper für die Win32- `VirtualAlloc` Funktion.  
+ Die `AllocVirtual` Methode dient als ein logischer Wrapper für die Win32- `VirtualAlloc` Funktion.  
   
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -69,6 +69,6 @@ HRESULT AllocVirtual(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [FreeVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [FreeVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)

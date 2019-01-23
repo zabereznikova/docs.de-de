@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543447"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
 Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um zeichenfolgenkonvertierungen und vergleichen zu können.  
@@ -36,7 +36,7 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
  Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Conversion.Str%2A> und <xref:Microsoft.VisualBasic.Conversion.Val%2A>.  
   
 ## <a name="using-a-specific-culture"></a>Eine bestimmte Kultur  
- Stellen Sie sich, dass Sie eine Anwendung, die ein Datum entwickeln (als Zeichenfolge formatiert) an einen Webdienst sendet. In diesem Fall muss die Anwendung eine bestimmte Kultur für die zeichenfolgenkonvertierung verwenden. Um daher zu veranschaulichen, betrachten Sie in das Ergebnis unter Verwendung des Datums des <xref:System.DateTime.ToString> Methode: Wenn Ihre Anwendung diese Methode verwendet, so formatieren Sie das Datum 4. Juli 2005, gibt "7/4/2005 12:00:00 Uhr" bei der Ausführung mit der Kultur Englisch für USA (En-US), gibt jedoch eine " 04.07.2005 00:00:00 "bei der Ausführung mit die Kultur für Deutsch (de-DE).  
+ Stellen Sie sich, dass Sie eine Anwendung, die ein Datum entwickeln (als Zeichenfolge formatiert) an einen Webdienst sendet. In diesem Fall muss die Anwendung eine bestimmte Kultur für die zeichenfolgenkonvertierung verwenden. Um daher zu veranschaulichen, betrachten Sie in das Ergebnis unter Verwendung des Datums des <xref:System.DateTime.ToString> Methode: Wenn Ihre Anwendung diese Methode verwendet, so formatieren Sie das Datum 4. Juli 2005, gibt "7/4/2005 12:00:00 Uhr" bei der Ausführung mit der Kultur Englisch für USA (En-US), gibt jedoch eine "04.07.2005 00:00:00" bei der Ausführung mit die Kultur für Deutsch (de-DE).  
   
  Wenn Sie eine zeichenfolgenkonvertierung in eine bestimmte Kulturformat ausführen müssen, sollten Sie verwenden die `CultureInfo` -Klasse, die in integrierten der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Sie können ein neues erstellen `CultureInfo` Objekt für eine bestimmte Kultur durch Übergabe von den Namen der Kultur, die <xref:System.Globalization.CultureInfo.%23ctor%2A> Konstruktor. Die unterstützte Kulturnamen finden Sie in der <xref:System.Globalization.CultureInfo> Hilfeseite für die Klasse.  
   
@@ -78,7 +78,7 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
 ### <a name="security-considerations"></a>Sicherheitsüberlegungen  
  Wenn die Anwendung die Sicherheitsfragen die richtigen Entscheidungen basierend auf dem Ergebnis eines Vergleichs oder einer Änderung der Groß-/Kleinschreibung verwendet, und dann den Vorgang verwenden, sollten die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode, und übergeben Sie `Ordinal` oder `OrdinalIgnoreCase` für die `comparisonType` Argument.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Globalization.CultureInfo>  
- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Globalization.CultureInfo>
+- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

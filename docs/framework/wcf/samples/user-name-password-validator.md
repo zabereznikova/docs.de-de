@@ -2,12 +2,12 @@
 title: Benutzernamen- und Kennwort-Validierungssteuerelement
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 44292315e5cd3790b2ba9505747f3e8258106f0a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 08ecebb98df5d4a5d6dcda3e974d6e1a4c104fa5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544009"
 ---
 # <a name="user-name-password-validator"></a>Benutzernamen- und Kennwort-Validierungssteuerelement
 Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Validierungssteuerelement implementiert wird. Dies ist nützlich, wenn keines der integrierten UserNamePassword-Validierungsmodi den Anforderungen der Anwendung entspricht (z. B. wenn Benutzername/Kennwort-Paare in externen Speichern wie einer Datenbank gespeichert werden). In diesem Beispiel wird ein Dienst gezeigt, der ein benutzerdefiniertes Validierungssteuerelement enthält, das auf zwei bestimmte Benutzername/Kennwort-Paare überprüft. Der Client verwendet solch ein Benutzername/Kennwort-Paar, um sich beim Dienst zu authentifizieren.
@@ -293,7 +293,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 3.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-machines"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -315,7 +315,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.  
   
-10. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   

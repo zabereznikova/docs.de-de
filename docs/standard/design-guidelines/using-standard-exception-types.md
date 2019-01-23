@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: KrzysztofCwalina
-ms.openlocfilehash: dbf54f602fbe4ace01b60bb57e1106d3f19ba7df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144220"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543905"
 ---
 # <a name="using-standard-exception-types"></a>Verwenden von Standardausnahmetypen
 Dieser Abschnitt beschreibt die Standardausnahmen, die durch das Framework sowie Details zu ihrer Verwendung bereitgestellt. Die Liste ist keineswegs vollständig. Finden Sie in der .NET Framework-Referenzdokumentation für die Verwendung mit anderen Framework-Ausnahmetypen.  
@@ -65,5 +65,5 @@ Dieser Abschnitt beschreibt die Standardausnahmen, die durch das Framework sowie
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts (Visual Basic)'
+title: 'Vorgehensweise: Verweisen Sie auf die aktuelle Instanz eines Objekts (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], object
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: c1b79f1b6a9768941d6fe966c5b5886ea742f808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d166ce62a2bb0522d1ca7011aeff7afe076c2d8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542196"
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts (Visual Basic)
-Die *aktuelle Instanz* eines Objekts ist die Instanz, in der der Code derzeit ausgeführt wird.  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Vorgehensweise: Verweisen Sie auf die aktuelle Instanz eines Objekts (Visual Basic)
+Die *kurveninstanz* eines Objekts ist die Instanz, die in der der Code derzeit ausgeführt wird.  
   
- Sie verwenden die `Me` Schlüsselwort zum Verweisen auf die aktuelle Instanz.  
+ Sie verwenden die `Me` -Schlüsselwort auf die aktuelle Instanz verweisen.  
   
 ### <a name="to-refer-to-the-current-instance"></a>Zum Verweisen auf die aktuelle Instanz  
   
@@ -31,7 +31,7 @@ Die *aktuelle Instanz* eines Objekts ist die Instanz, in der der Code derzeit au
   
      Obwohl `Me` verhält sich wie ein Objekt Variablen, Sie können nicht deklariert oder nichts zuweisen. `Me` bezieht sich immer auf die aktuelle Instanz.  
   
-## <a name="see-also"></a>Siehe auch  
- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
- [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Siehe auch
+- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

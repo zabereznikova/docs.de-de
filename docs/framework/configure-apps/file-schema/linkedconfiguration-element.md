@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e5c8449e72414775c40ced2c344e12d5137ac03f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200957"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546412"
 ---
 # <a name="linkedconfiguration-element"></a>\<LinkedConfiguration >-Element
 
 Gibt eine einzuschließende Konfigurationsdatei an.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<AssemblyBinding >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<LinkedConfiguration >**
+&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,11 +44,11 @@ Gibt eine einzuschließende Konfigurationsdatei an.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<AssemblyBinding >** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
+| [**\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="remarks"></a>Hinweise
 
@@ -85,5 +85,5 @@ Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei aus der lokalen Fes
 
 ## <a name="see-also"></a>Siehe auch
 
-[**\<AssemblyBinding >** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [**\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

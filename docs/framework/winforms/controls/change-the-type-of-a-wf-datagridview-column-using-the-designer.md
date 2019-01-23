@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers'
+title: 'Vorgehensweise: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: 41ab0b36c5f3632ff4458d1289295ab2c9efe7c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 12e6e15dd3b4e7941be198a526e8145ceb126e8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544613"
 ---
-# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Gewusst wie: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers
+# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Vorgehensweise: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers
 In einigen Fällen wird der Datentyp einer Spalte ändern möchten, die bereits zu einem Windows Forms hinzugefügt wurde <xref:System.Windows.Forms.DataGridView> Steuerelement. Beispielsweise empfiehlt es sich um die Typen von einigen Spalten zu ändern, die automatisch generiert werden, wenn Sie das Steuerelement an eine Datenquelle binden. Dies ist nützlich, wenn die Tabelle, die Sie anzeigen, Spalten, die Fremdschlüssel für Zeilen in einer verknüpften Tabelle verfügt. In diesem Fall empfiehlt es sich um die Textspalten für das Feld zu ersetzen, die diese Fremdschlüssel Spalten mit Kombinationsfeldern an, die mehr sinnvolle Werte aus der verknüpften Tabelle anzuzeigen.  
   
  Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit eine <xref:System.Windows.Forms.DataGridView> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
@@ -33,8 +33,8 @@ In einigen Fällen wird der Datentyp einer Spalte ändern möchten, die bereits 
     > [!NOTE]
     >  Die `ColumnType` Eigenschaft ist eine Design-Time-only-Eigenschaft, die die Klasse, die den Spaltentyp darstellt. Es ist keiner vorhandenen Eigenschaft, die in einer Spaltenklasse definiert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewColumn>  
- [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewColumn>
+- [Vorgehensweise: Create a New Windows Forms Application Project (Vorgehensweise: Erstellen Sie ein Windows-Anwendungsprojekt)](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

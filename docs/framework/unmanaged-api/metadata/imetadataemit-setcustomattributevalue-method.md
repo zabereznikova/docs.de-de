@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b699539df52bda9206191dd89c0f95de69140a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca5bd8716121148fa45cc9c66cdb19de79a06f47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546542"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>IMetaDataEmit::SetCustomAttributeValue-Methode
-Legt fest oder aktualisiert den Wert eines benutzerdefinierten Attributs definiert, die durch einen vorherigen Aufruf von [DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+Legt fest oder aktualisiert den Wert eines benutzerdefinierten Attributs definiert, die von einem vorherigen Aufruf von [DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,23 +39,23 @@ HRESULT SetCustomAttributeValue (
   
 #### <a name="parameters"></a>Parameter  
  `pcv`  
- [in] Das Token des benutzerdefinierten Zielattributs.  
+ [in] Das Token des Ziel-Attributs.  
   
  `pCustomAttribute`  
  [in] Ein Zeiger auf das Array, das das benutzerdefinierte Attribut enthält.  
   
  `cbCustomAttribute`  
- [in] Die Größe in Bytes, des benutzerdefinierten Attributs.  
+ [in] Die Größe in Bytes des benutzerdefinierten Attributs.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

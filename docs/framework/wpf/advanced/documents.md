@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 145c28a2f36b2d53487004af214f3c6048f0687e
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6dba276e88f4c3dd475e3d79de43a9fca7a35206
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546974"
 ---
 # <a name="documents"></a>Dokumente
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine vielseitige Reihe von Komponenten, mit denen Entwickler Anwendungen mit erweiterten Dokumentfunktionen und verbessertem Lesefluss erstellen können. Zusätzlich zu den verbesserten Funktionen und der Qualität bietet [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] auch vereinfachte Verwaltungsdienste für das Packen von Dokumenten, Sicherheit und Speicher.  
@@ -24,8 +24,8 @@ ms.locfileid: "49415203"
  [Typografie](typography.md)  
  [Druck- und Drucksystemverwaltung](printing-and-print-system-management.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.DocumentViewer>  
- <xref:System.Windows.Documents.FlowDocument>  
- <xref:System.Windows.Xps>  
- [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.DocumentViewer>
+- <xref:System.Windows.Documents.FlowDocument>
+- <xref:System.Windows.Xps>
+- [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

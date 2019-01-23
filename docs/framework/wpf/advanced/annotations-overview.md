@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: 690ec5f2bca7c10aba291cdde6e8bc455e7fd43a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543473"
 ---
 # <a name="annotations-overview"></a>Übersicht über Anmerkungen
 Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten. Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren. Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.  
@@ -64,15 +64,15 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
   
  Ein weiteres Beispielszenario umfasst Anwendungen, die den Austausch von Anmerkungen und Kurznotizen zwischen Lesern von Dokument per e-Mail ermöglichen. Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  
- <xref:System.Windows.Controls.DocumentViewer>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Annotations.IAnchorInfo>  
- [Annotations-Schema](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
- [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [How to: Add a Command to a MenuItem (Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem)](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
+- <xref:System.Windows.Controls.DocumentViewer>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Annotations.IAnchorInfo>
+- [Annotations-Schema](../../../../docs/framework/wpf/advanced/annotations-schema.md)
+- [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)

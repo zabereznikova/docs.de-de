@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e67a71c25c0ae8ee7c54fae2e38d1116a5d92eff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f8d230d5396c5a088fa76a7ca145b4a22d1e1d07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543356"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope-Methode
-Ruft den Bereich eines bestimmten Typs ab.  
+Ruft den Bereich des angegebenen Typs ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,18 +45,18 @@ HRESULT GetResolutionScope(
  Datei, die ein Verweis erforderlich ist.  
   
  `TargetFile`  
- Token der Datei dieses Typs definiert ist, in der Regel mit abgerufen [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+ Token der Datei dieses Typs ist definiert in "," in der Regel mit abgerufen [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
   
  `pScope`  
- Erhält die Assembly oder Modulverweis.  
+ Erhält die Assembly oder den Modulverweis.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h.  
+ Erfordert alink.h an.  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

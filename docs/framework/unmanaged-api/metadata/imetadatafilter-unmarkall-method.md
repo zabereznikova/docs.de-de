@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45e45abd531c779b77c1f0a4b3946420037ee02b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f5ec72380493a88dc5b411ef195484cdb1c58c62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543395"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll-Methode
 Entfernt die Markierungen für die Verarbeitung von allen Token im aktuellen Metadatenbereich.  
@@ -34,16 +34,16 @@ HRESULT UnmarkAll ();
 ```  
   
 #### <a name="parameters"></a>Parameter  
- `UnmarkAll` nimmt keine Parameter an.  
+ `UnmarkAll` nimmt keine Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataFilter-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataFilter-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
