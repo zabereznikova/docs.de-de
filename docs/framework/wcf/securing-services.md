@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 39b8a44629af42e358d550e0dd7eb6a8895de0ed
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524883"
 ---
 # <a name="securing-services"></a>Sichern von Diensten
 Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus zwei primären Anforderungen: übertragungssicherheit und Autorisierung. (Eine dritte Anforderung, Überwachung von Sicherheitsereignissen, finden Sie im [Überwachung](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In Kürze: Übertragungssicherheit umfasst Authentifizierung (Überprüfen der Identität sowohl des Diensts als auch des Clients), Vertraulichkeit (Nachrichtenverschlüsselung) und Integrität (digitales Signieren zur Manipulationserkennung). Autorisierung ist die Steuerung des Ressourcenzugriffs, beispielsweise wird nur Benutzern mit entsprechenden Berechtigungen das Lesen einer Datei ermöglicht. Verwenden die Funktionen von WCF, die beiden primären Anforderungen problemlos implementieren.  
@@ -44,7 +44,7 @@ Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus 
  Muss der Zugriff auf die Ressourcen auf einem Computer beschränkt werden, besteht die einfachste Möglichkeit in der Verwendung der <xref:System.Security.Permissions.PrincipalPermissionAttribute> -Klasse. Mit diesem Attribut können Aufrufe von Dienstvorgängen eingeschränkt werden, indem gefordert wird, dass sich der Benutzer in einer angegebenen Windows-Gruppe oder -Rolle befinden oder ein bestimmter Benutzer sein muss. Weitere Informationen finden Sie unter [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
   
 ### <a name="impersonation"></a>Identitätswechsel  
- Der Identitätswechsel ist ein weiterer Mechanismus, mit dem Sie den Zugriff auf Ressourcen steuern können. Standardmäßig wird ein von IIS gehosteter Dienst unter der Identität des ASPNET-Kontos ausgeführt. Das ASPNET-Konto kann nur auf die Ressourcen zugreifen, für die es eine entsprechende Berechtigung besitzt. Allerdings kann die Zugriffssteuerungsliste für einen Ordner so festgelegt werden, dass das ASPNET-Dienstkonto ausgeschlossen wird, bestimmten anderen Identitäten jedoch der Zugriff auf den Ordner gewährt wird. Die Frage ist nun, wie diesen Benutzer Zugriff auf den Ordner gewährt wird, falls das ASPNET-Konto nicht dazu berechtigt ist. Dies wird durch den Identitätswechsel ermöglicht, bei dem der Dienst die Anmeldeinformationen des Clients für den Zugriff auf eine bestimmte Ressource verwenden darf. Ein weiteres Beispiel ist der Zugriff auf eine SQL Server-Datenbank, auf die nur bestimmte Benutzer zugreifen dürfen. Weitere Informationen zur Verwendung des Identitätswechsels finden Sie unter [Vorgehensweise: annehmen der Clientidentität für einen Dienst](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) und [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Der Identitätswechsel ist ein weiterer Mechanismus, mit dem Sie den Zugriff auf Ressourcen steuern können. Standardmäßig wird ein von IIS gehosteter Dienst unter der Identität des ASPNET-Kontos ausgeführt. Das ASPNET-Konto kann nur auf die Ressourcen zugreifen, für die es eine entsprechende Berechtigung besitzt. Allerdings kann die Zugriffssteuerungsliste für einen Ordner so festgelegt werden, dass das ASPNET-Dienstkonto ausgeschlossen wird, bestimmten anderen Identitäten jedoch der Zugriff auf den Ordner gewährt wird. Die Frage ist nun, wie diesen Benutzer Zugriff auf den Ordner gewährt wird, falls das ASPNET-Konto nicht dazu berechtigt ist. Dies wird durch den Identitätswechsel ermöglicht, bei dem der Dienst die Anmeldeinformationen des Clients für den Zugriff auf eine bestimmte Ressource verwenden darf. Ein weiteres Beispiel ist der Zugriff auf eine SQL Server-Datenbank, auf die nur bestimmte Benutzer zugreifen dürfen. Weitere Informationen zur Verwendung des Identitätswechsels finden Sie unter [Vorgehensweise: Annehmen der Clientidentität für einen Dienst](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md) und [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="security-on-the-internet"></a>Sicherheit im Internet  
  Bei der Sicherheit im Internet gelten dieselben Anforderungen wie bei der Sicherheit in einem Intranet. Ein Dienst muss zum Nachweis seiner Authentizität seine Anmeldeinformationen angeben, und Clients müssen dem Dienst ihre Identität nachweisen. Wurde die Identität eines Clients nachgewiesen, kann der Umfang des Ressourcenzugriffs für den Client vom Dienst gesteuert werden. Aufgrund des heterogenen Charakters des Internets unterscheiden sich die angegebenen Anmeldeinformationen von denen, die in einer Windows-Domäne verwendet werden. Während ein Kerberos-Controller die Authentifizierung von Benutzern in einer Domäne mit Tickets für Anmeldeinformationen verarbeitet, nutzen Dienste und Clients im Internet eine der mehreren verschiedenen Möglichkeiten zur Angabe von Anmeldeinformationen. Das Ziel dieses Themas ist jedoch weit verbreitet zu präsentieren, die es Ihnen die ermöglicht Erstellung ein WCF-Diensts, das über das Internet zugänglich ist.  
@@ -85,7 +85,7 @@ Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus 
   
  Wird ein Dienst erstellt, der eine Authentifizierung des Clients erfordert, hängt die Wahl eines Clientanmeldeinformationstypen vom ausgewählten Transport und Modus ab. Bei Verwendung des HTTP-Transports und bei Auswahl des Transportmodus stehen Ihnen mehrere Möglichkeiten zur Verfügung, wie zum Beispiel Basic, Digest usw. (Weitere Informationen zu diesen Anmeldeinformationstypen, finden Sie unter [Understanding HTTP Authentication](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md).)  
   
- Wird ein Dienst in einer Windows-Domäne erstellt, der nur anderen Benutzern des Netzwerks zur Verfügung steht, empfiehlt sich die Verwendung des Windows-Clientanmeldeinformationstyps. Allerdings muss für den Dienst ggf. auch ein Zertifikat erworben werden. Dieser Vorgang wird in [How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)beschrieben.  
+ Wird ein Dienst in einer Windows-Domäne erstellt, der nur anderen Benutzern des Netzwerks zur Verfügung steht, empfiehlt sich die Verwendung des Windows-Clientanmeldeinformationstyps. Allerdings muss für den Dienst ggf. auch ein Zertifikat erworben werden. Dies wird im verdeutlicht [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 #### <a name="credential-values"></a>Anmeldeinformationswerte  
  Bei einem *Anmeldeinformationswert* handelt es sich um die tatsächlichen Anmeldeinformationen, die vom Dienst verwendet werden. Nach Angabe eines Anmeldeinformationstyps muss der Dienst unter Umständen auch mit den tatsächlichen Anmeldeinformationen konfiguriert werden. Wurde Windows ausgewählt (und wird der Dienst in einer Windows-Domäne ausgeführt), wird kein tatsächlicher Anmeldeinformationswert angegeben.  
@@ -96,23 +96,23 @@ Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus 
  Im Gegensatz dazu wird mit der Identität der Dienst geprüft. Zur Entwurfszeit kann ein Cliententwickler festgelegt die [ \<Identität >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md) -Element auf einen Wert, der vom Dienst abgerufen. Während der Laufzeit gleicht der Client den Wert des Elements mit der tatsächlichen Identität des Diensts ab. Bei fehlerhafter Prüfung wird die Kommunikation vom Client beendet. Der Wert kann ein Benutzerprinzipalname sein (UPN), falls der Dienst unter einer bestimmten Benutzeridentität ausgeführt wird oder ein Dienstprinzipalname (SPN), falls der Dienst unter einem Computerkonto ausgeführt wird. Weitere Informationen finden Sie unter [Dienstidentität und Authentifizierung](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md). Die Anmeldeinformationen können auch ein Zertifikat oder ein Feld auf einem Zertifikat sein, mit dem das Zertifikat identifiziert wird.  
   
 ## <a name="protection-levels"></a>Schutzebenen  
- Die `ProtectionLevel` -Eigenschaft tritt auf mehreren Attributklassen (zum Beispiel der <xref:System.ServiceModel.ServiceContractAttribute> -Klasse und der <xref:System.ServiceModel.OperationContractAttribute> -Klasse) auf. Die Schutzebene ist ein Wert, der angibt, ob die Meldungen (oder Meldungsteile), die einen Dienst unterstützen, signiert, signiert und verschlüsselt oder ohne Signaturen und Verschlüsselung gesendet werden. Weitere Informationen zur Eigenschaft finden Sie unter [Verständnis Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md), Programmierbeispiele finden Sie unter [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Weitere Informationen zum Entwerfen eines Dienstvertrags mit dem `ProtectionLevel` im Kontext finden Sie unter [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
+ Die `ProtectionLevel` -Eigenschaft tritt auf mehreren Attributklassen (zum Beispiel der <xref:System.ServiceModel.ServiceContractAttribute> -Klasse und der <xref:System.ServiceModel.OperationContractAttribute> -Klasse) auf. Die Schutzebene ist ein Wert, der angibt, ob die Meldungen (oder Meldungsteile), die einen Dienst unterstützen, signiert, signiert und verschlüsselt oder ohne Signaturen und Verschlüsselung gesendet werden. Weitere Informationen zur Eigenschaft finden Sie unter [Verständnis Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md), Programmierbeispiele finden Sie unter [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Weitere Informationen zum Entwerfen eines Dienstvertrags mit dem `ProtectionLevel` im Kontext finden Sie unter [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Dienstidentität und Authentifizierung](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Grundlagen der Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)  
- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Vorgehensweise: Annahme der Clientidentität durch einen Dienst](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Vorgehensweise: Prüfen des Sicherheitskontexts](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Dienstidentität und Authentifizierung](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Grundlagen der Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)
+- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Vorgehensweise: Annehmen der Clientidentität für einen Dienst](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Vorgehensweise: Prüfen des Sicherheitskontexts](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

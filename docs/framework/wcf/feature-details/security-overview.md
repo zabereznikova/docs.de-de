@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: c8918bce1d0e19e8f70be4ddbda892924a944e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525260"
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende verteilte Programmierplattform, und Sichern von Nachrichten zwischen Clients und Diensten ist wichtig, um Daten zu schützen. WCF bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende vert
 ### <a name="standards-and-interoperability"></a>Standards und Interoperabilität  
  In einer Welt mit umfangreichen vorhandenen Bereitstellungen ist Homogenität selten. Zwischen verteilten Berechnungs-/Kommunikationsplattformen und den Technologien anderer Anbieter müssen Interaktionen möglich sein. Ebenso muss auch Sicherheit interoperabel sein.  
   
- Um interoperable Sicherheitssysteme verwenden zu können, haben Unternehmen aus der Webdienstbranche verschiedene Standards entwickelt. Insbesondere im Hinblick auf Sicherheitsfragen wurden einige wichtige Standards eingeführt: WS-Sicherheit: SOAP-Nachrichtensicherheit (akzeptiert vom OASIS-Standardausschuss, früher als WS-Sicherheit bezeichnet), WS-Trust, WS-SecureConversation und WS-SecurityPolicy.  
+ Um interoperable Sicherheitssysteme verwenden zu können, haben Unternehmen aus der Webdienstbranche verschiedene Standards entwickelt. Insbesondere im Hinblick auf Sicherheit müssen einige wichtige Standards vorgeschlagen werden: WS-Security: SOAP-Nachrichtensicherheit (von der Standardisierungsorganisation OASIS akzeptiert und früher als WS-Sicherheit), WS-Trust, WS-SecureConversation und WS-SecurityPolicy.  
   
  WCF unterstützt eine Vielzahl von Interoperabilitätsszenarien von Bedeutung. Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse bezieht sich auf das Basic Security Profile (BSP), und die <xref:System.ServiceModel.WSHttpBinding>-Klasse bezieht sich auf die aktuellen Sicherheitsstandards (zum Beispiel WS-Security 1.1 und WS-SecureConversation). Durch diese Standards einhalten, kann WCF-Sicherheit zusammenarbeiten und integrieren in Web Services, die von Betriebssystemen und Plattformen als Microsoft Windows gehostet werden.  
   
@@ -97,19 +97,19 @@ Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende vert
 ### <a name="auditing"></a>Überwachung  
  *Überwachung* ist die Protokollierung von Sicherheitsereignissen in das Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Ausführliche Informationen zur Programmierung, finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)  
- [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
+- [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20f65218928ee07d67ea742154469ac3cbea9241
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 163704bf9a71ceda04bdfd73f9ca676c19d8a62c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526639"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome::GetArgumentIndex-Methode
 Ruft den Index ein Funktionsargument ab.  
@@ -40,18 +40,18 @@ HRESULT GetArgumentIndex(
  [out] Ein Zeiger auf den Argumentindex.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Methode gibt die folgenden Werte zurück.  
+ Die Methode gibt die folgenden Werte an.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`S_OK`|Der Methodenaufruf zurückgegebene einen gültiges Argumentindex.|  
-|`E_FAIL`|Die aktuelle [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) Instanz darstellt, eine lokale Variable.|  
+|`S_OK`|Aufruf der Methode wurde einen gültiges Argument-Index.|  
+|`E_FAIL`|Die aktuelle [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) Instanz stellt eine lokale Variable dar.|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Argumentindex kann zum Abrufen von Metadaten für dieses Argument verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -59,5 +59,5 @@ HRESULT GetArgumentIndex(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugVariableHome-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugVariableHome-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

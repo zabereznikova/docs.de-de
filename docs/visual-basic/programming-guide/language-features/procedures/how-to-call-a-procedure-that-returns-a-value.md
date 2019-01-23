@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Aufrufen einer Prozedur, die einen Wert zurückgibt (Visual Basic)'
+title: 'Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -7,47 +7,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 35f757609b6d0b36652db3b14e62ecd299a063ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525455"
 ---
-# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Gewusst wie: Aufrufen einer Prozedur, die einen Wert zurückgibt (Visual Basic)
-Ein `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück. Rufen Sie sie einschließlich Name und Argumente entweder auf der rechten Seite einer zuweisungsanweisung oder in einem Ausdruck.  
+# <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt (Visual Basic)
+Ein `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück. Rufen Sie sie einschließlich der Namen und die Argumente entweder auf der rechten Seite einer zuweisungsanweisung oder in einem Ausdruck.  
   
-### <a name="to-call-a-function-procedure-within-an-expression"></a>Aufrufen eine Funktionsprozedur innerhalb eines Ausdrucks  
+### <a name="to-call-a-function-procedure-within-an-expression"></a>Um eine Funktion innerhalb eines Ausdrucks aufzurufen  
   
-1.  Verwenden Sie die `Function` Prozedur benennen Sie die gleiche Weise verwenden Sie eine Variable. Sie können eine `Function` Prozeduraufruf anywhere können Sie eine Variable oder Konstante in einem Ausdruck verwenden.  
+1.  Verwenden Sie die `Function` Prozedur benennen Sie die gleiche Weise verwenden Sie eine Variable. Sie können eine `Function` Prozedur aufrufen anywhere können Sie eine Variable oder Konstante in einem Ausdruck.  
   
-2.  Führen Sie den Namen der Prozedur mit Klammern einschließen, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen. Allerdings besser mit den Klammern Code lesen.  
+2.  Führen Sie den Namen der Prozedur mit Klammern, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen. Allerdings wird bei der Klammern verwenden die Ihr Code einfacher zu lesen.  
   
-3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Achten Sie darauf geben Sie die Argumente in der gleichen Reihenfolge, die die `Function` Prozedur definiert, die entsprechenden Parameter.  
+3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Werden Sie sicher, dass Sie die Argumente in der gleichen Reihenfolge angeben, die die `Function` Prozedur definiert, die entsprechenden Parameter.  
   
-     Alternativ können Sie anhand des Namens ein oder mehrere Argumente übergeben. Weitere Informationen finden Sie unter [übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md).  
+     Alternativ können Sie ein oder mehrere Argumente anhand des Namens übergeben. Weitere Informationen finden Sie unter [übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md).  
   
-4.  Von der Prozedur zurückgegebene Wert ist Teil des Ausdrucks wie den Wert einer Variablen oder Konstante.  
+4.  Der von der Prozedur zurückgegebene Wert ist Teil des Ausdrucks ebenso wie der Wert einer Variablen oder Konstanten würde.  
   
-### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Aufrufen einer Funktion in einer zuweisungsanweisung  
+### <a name="to-call-a-function-procedure-in-an-assignment-statement"></a>Um eine Funktion in einer zuweisungsanweisung aufzurufen  
   
-1.  Verwenden der `Function` Prozedurnamen nach dem Gleichheitszeichen (`=`) die zuweisungsanweisung anmelden.  
+1.  Verwenden der `Function` Prozedurnamen folgen den Gleichheitsoperator (`=`) melden Sie sich die zuweisungsanweisung.  
   
-2.  Führen Sie den Namen der Prozedur mit Klammern einschließen, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen. Allerdings besser mit den Klammern Code lesen.  
+2.  Führen Sie den Namen der Prozedur mit Klammern, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen. Allerdings wird bei der Klammern verwenden die Ihr Code einfacher zu lesen.  
   
-3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Achten Sie darauf geben Sie die Argumente in der gleichen Reihenfolge, die die `Function` Prozedur die entsprechenden Parameter definiert, es sei denn, Sie werden anhand des Namens übergeben.  
+3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Werden Sie sicher, dass Sie die Argumente in der gleichen Reihenfolge angeben, die die `Function` Prozedur definiert die entsprechenden Parameter, es sei denn, Sie über den Namen übergeben werden.  
   
 4.  Der von der Prozedur zurückgegebene Wert ist in der Variablen oder Eigenschaft auf der linken Seite der Zuweisung gespeichert.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird das Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> zum Abrufen des Werts einer Betriebssystem-Umgebungsvariablen. Die erste Zeile ruft `Environ` innerhalb eines Ausdrucks und die zweite Zeile ruft er in einer zuweisungsanweisung. `Environ` akzeptiert den Variablennamen als einziges Argument. Es gibt den Wert der Variablen an den aufrufenden Code zurück.  
+ Im folgenden Beispiel wird die Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> zum Abrufen des Werts einer Betriebssystem-Umgebungsvariablen. Die erste Zeile ruft `Environ` in einen Ausdruck ein, und die zweite Zeile ruft es in einer zuweisungsanweisung. `Environ` akzeptiert den Namen den Variablen als einziges Argument. Der Wert der Variablen zurückgegeben an den aufrufenden Code.  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Function-Prozeduren](./function-procedures.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Gewusst wie: Erstellen einer Prozedur, die einen Wert zurückgibt](./how-to-create-a-procedure-that-returns-a-value.md)  
- [Gewusst wie: Abrufen eines Werts aus einer Prozedur](./how-to-return-a-value-from-a-procedure.md)  
- [Gewusst wie: Aufrufen einer Prozedur, die keinen Wert zurückgibt](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+## <a name="see-also"></a>Siehe auch
+- [Function-Prozeduren](./function-procedures.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Vorgehensweise: Erstellen Sie eine Prozedur, die einen Wert zurückgibt.](./how-to-create-a-procedure-that-returns-a-value.md)
+- [Vorgehensweise: Zurückgeben eines Werts aus einer Prozedur](./how-to-return-a-value-from-a-procedure.md)
+- [Vorgehensweise: Aufrufen einer Prozedur, die keinen Wert zurückgibt](./how-to-call-a-procedure-that-does-not-return-a-value.md)

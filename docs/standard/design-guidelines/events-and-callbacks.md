@@ -9,12 +9,12 @@ helpviewer_keywords:
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: KrzysztofCwalina
-ms.openlocfilehash: c9ed52c5a313676baeba66f5cb79c7a56927babb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3609d6ac4847cb081740fd698869df4976f83f8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525481"
 ---
 # <a name="events-and-callbacks"></a>Ereignisse und Rückrufe
 Rückrufe sind Erweiterungspunkte, die ein Framework Rückruf in Benutzercode durch einen Delegaten zu ermöglichen. Diese Delegaten werden in der Regel für das Framework über einen Parameter einer Methode übergeben.  
@@ -45,5 +45,5 @@ Rückrufe sind Erweiterungspunkte, die ein Framework Rückruf in Benutzercode du
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)

@@ -1,15 +1,15 @@
 ---
-title: Übersicht über das Standardabfrageoperator-Operatoren (Visual Basic)
+title: Standard Query Operators Overview (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526495"
 ---
-# <a name="standard-query-operators-overview-visual-basic"></a>Übersicht über das Standardabfrageoperator-Operatoren (Visual Basic)
+# <a name="standard-query-operators-overview-visual-basic"></a>Standard Query Operators Overview (Visual Basic)
 Die *Standardabfrageoperatoren* sind die Methoden, die das LINQ-Muster bilden. Die meisten dieser Methoden bearbeiten Sequenzen. Eine Sequenz ist hier ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und weitere bereit.  
   
  Es gibt zwei Gruppen von LINQ-Standardabfrageoperatoren: Eine Gruppe funktioniert auf Grundlage von Objekten vom Typ <xref:System.Collections.Generic.IEnumerable%601>, die andere auf Grundlage von Objekten vom Typ <xref:System.Linq.IQueryable%601>. Die Methoden, die eine Gruppe bilden, sind statische Member der Klassen <xref:System.Linq.Enumerable> und <xref:System.Linq.Queryable>. Sie werden als *Erweiterungsmethoden* des Typs, auf dessen Grundlage sie funktionieren, definiert. Das bedeutet, dass Sie entweder mit der Syntax für statische Methoden oder für Instanzmethoden aufgerufen werden.  
@@ -64,7 +64,7 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
- Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C# und Visual Basic-Sprache, wodurch sie als Teil eines *query*-*Ausdrucks* aufgerufen werden können. Weitere Informationen zu den Standardabfrageoperatoren, die Schlüsselwörter und deren entsprechende Syntax reserviert haben, finden Sie unter [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
+ Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C# und Visual Basic-Sprache, wodurch sie als Teil eines *query*-*Ausdrucks* aufgerufen werden können. Weitere Informationen zu den Standardabfrageoperatoren, die über dedizierte Schlüsselwörter und deren entsprechende Syntax verfügen, finden Sie unter [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Erweitern der Standardabfrageoperatoren  
  Sie können die Gruppe von Standardabfrageoperatoren durch Erstellen von domänenspezifischen Methoden erweitern, die für Ihre Zieldomäne oder -technologie geeignet sind. Sie können die Standardabfrageoperatoren auch mit ihren eigenen Implementierungen ersetzen, die zusätzliche Dienste bieten, z.B. Remote-Auswertung, Abfrageübersetzung und Optimierung. Ein Beispiel finden Sie unter <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
@@ -84,13 +84,13 @@ MsgBox(output.ToString())
   
  [Partitionieren von Daten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [JOIN-Operationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [Verknüpfungsvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
  [Gruppieren von Daten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
  [Generierungsvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)  
   
- [Gleichheitsoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
+ [Gleichheitsvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)  
   
  [Elementvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
   
@@ -100,10 +100,10 @@ MsgBox(output.ToString())
   
  [Aggregationsvorgänge (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [Introduction to LINQ (Visual Basic) (Einführung in LINQ (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Erweiterungsmethoden](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Introduction to LINQ (Visual Basic) (Einführung in LINQ (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Erweiterungsmethoden](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

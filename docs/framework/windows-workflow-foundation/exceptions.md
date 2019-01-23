@@ -2,15 +2,15 @@
 title: Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: cfeefcd29dc05ed5e325950194d9f0775b1fa9fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50e1afa9b1d264a4577bcfe62e939ee669f8ba0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523973"
 ---
 # <a name="exceptions"></a>Ausnahmen
-Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung von Ausnahmen verwendet werden, die während der Ausführung eines Workflows ausgelöst werden. Diese Ausnahmen können behandelt oder mit der <xref:System.Activities.Statements.Rethrow>-Aktivität erneut ausgelöst werden. Aktivitäten im Abschnitt <xref:System.Activities.Statements.TryCatch.Finally%2A> werden nach Abschluss des Abschnitts <xref:System.Activities.Statements.TryCatch.Try%2A> oder des Abschnitts <xref:System.Activities.Statements.TryCatch.Catches%2A> ausgeführt. Gehostete Workflows durch eine <xref:System.Activities.WorkflowApplication> Instanz können Sie auch die <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Ereignishandler behandeln von Ausnahmen, die nicht vom behandelt werden eine <xref:System.Activities.Statements.TryCatch> Aktivität.  
+Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung von Ausnahmen verwendet werden, die während der Ausführung eines Workflows ausgelöst werden. Diese Ausnahmen können behandelt oder mit der <xref:System.Activities.Statements.Rethrow>-Aktivität erneut ausgelöst werden. Aktivitäten im Abschnitt <xref:System.Activities.Statements.TryCatch.Finally%2A> werden nach Abschluss des Abschnitts <xref:System.Activities.Statements.TryCatch.Try%2A> oder des Abschnitts <xref:System.Activities.Statements.TryCatch.Catches%2A> ausgeführt. Gehostete Workflows, indem eine <xref:System.Activities.WorkflowApplication> Instanz können Sie auch die <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Ereignishandler zur Behandlung von Ausnahmen, die nicht vom behandelt werden eine <xref:System.Activities.Statements.TryCatch> Aktivität.  
   
 ## <a name="causes-of-exceptions"></a>Ursachen von Ausnahmen  
  In einem Workflow können Ausnahmen auf die folgenden Weisen generiert werden:  
@@ -26,11 +26,11 @@ Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung 
 ## <a name="handling-exceptions"></a>Behandeln von Ausnahmen  
  Wenn eine Ausnahme von einer Aktivität ausgelöst und nicht behandelt wird, ist das Beenden der Workflowinstanz das Standardverhalten. Wenn ein benutzerdefinierter <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler vorhanden ist, kann dieser das Standardverhalten überschreiben. Mit diesem Handler kann der Autor des Workflowhosts die angemessene Behandlung bereitstellen, z. B. benutzerdefinierte Protokollierung, Abbruch des Workflows oder Beenden des Workflows.  Wenn ein Workflow eine nicht behandelte Ausnahme auslöst, wird der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler aufgerufen. Es gibt drei mögliche Aktionen, die von <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> zurückgegeben werden und das endgültige Ergebnis des Workflows bestimmen.  
   
--   **"Abbrechen"** -eine abgebrochene Workflowinstanz entspricht dem ordnungsgemäßen Beenden der Ausführung eines Branches. Sie können das Abbruchverhalten anpassen (z. B. durch Verwendung einer CancellationScope-Aktivität). Der Completed-Handler wird aufgerufen, wenn der Abbruchprozess abgeschlossen wird. Ein abgebrochener Workflow befindet sich im Cancelled-Zustand.  
+-   **Abbrechen** -eine abgebrochene Workflowinstanz entspricht dem ordnungsgemäßen Beenden der Ausführung einer Verzweigung. Sie können das Abbruchverhalten anpassen (z. B. durch Verwendung einer CancellationScope-Aktivität). Der Completed-Handler wird aufgerufen, wenn der Abbruchprozess abgeschlossen wird. Ein abgebrochener Workflow befindet sich im Cancelled-Zustand.  
   
--   **Beenden** -eine beendete Workflowinstanz kann nicht fortgesetzt oder neu gestartet werden.  Dadurch wird das Completed-Ereignis ausgelöst, in dem Sie eine Ausnahme als Grund für die Beendigung bereitstellen können. Der Terminated-Handler wird aufgerufen, wenn der Beendigungsprozess abgeschlossen wird. Ein beendeter Workflow befindet sich im Faulted-Zustand.  
+-   **Beenden Sie** -eine beendete Workflowinstanz kann nicht fortgesetzt oder neu gestartet werden.  Dadurch wird das Completed-Ereignis ausgelöst, in dem Sie eine Ausnahme als Grund für die Beendigung bereitstellen können. Der Terminated-Handler wird aufgerufen, wenn der Beendigungsprozess abgeschlossen wird. Ein beendeter Workflow befindet sich im Faulted-Zustand.  
   
--   **Abort** -eine abgebrochene Workflowinstanz können fortgesetzt werden, nur dann, wenn er konfiguriert wurde, um persistent sein.  Ohne Persistenz kann ein Workflow nicht fortgesetzt werden.  An dem Punkt, an dem ein Workflow abgebrochen wird, gehen alle seit dem letzten Persistenzpunkt verarbeiteten Daten (im Arbeitsspeicher) verloren. Für einen abgebrochenen Workflow wird der Aborted-Handler unter Verwendung der Ausnahme als Grund ausgelöst, wenn der Abbruchprozess beendet wird. Im Gegensatz zum Cancelled- und Terminated-Handler wird der Completed-Handler jedoch nicht aufgerufen. Ein abgebrochener Workflow befindet sich in einem Aborted-Zustand.  
+-   **Abbrechen** -eine abgebrochene Workflowinstanz können fortgesetzt werden, nur dann, wenn sie Persistenz konfiguriert wurde.  Ohne Persistenz kann ein Workflow nicht fortgesetzt werden.  An dem Punkt, an dem ein Workflow abgebrochen wird, gehen alle seit dem letzten Persistenzpunkt verarbeiteten Daten (im Arbeitsspeicher) verloren. Für einen abgebrochenen Workflow wird der Aborted-Handler unter Verwendung der Ausnahme als Grund ausgelöst, wenn der Abbruchprozess beendet wird. Im Gegensatz zum Cancelled- und Terminated-Handler wird der Completed-Handler jedoch nicht aufgerufen. Ein abgebrochener Workflow befindet sich in einem Aborted-Zustand.  
   
  Im folgenden Beispiel wird ein Workflow aufgerufen, der eine Ausnahme auslöst. Die Ausnahme wird vom Workflow nicht behandelt, und der <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>-Handler wird aufgerufen. Die <xref:System.Activities.WorkflowApplicationUnhandledExceptionEventArgs> werden überprüft, um Informationen zur Ausnahme bereitzustellen, und der Workflow wird beendet.  
   
@@ -50,7 +50,7 @@ Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung 
 ## <a name="exception-handling-versus-compensation"></a>Ausnahmebehandlung und Kompensierung  
  Der Unterschied zwischen Ausnahmebehandlung und Kompensierung besteht darin, dass die Ausnahmebehandlung während der Ausführung einer Aktivität erfolgt. Die Kompensierung erfolgt, nachdem eine Aktivität erfolgreich abgeschlossen wurde. Die Ausnahmebehandlung bietet eine Möglichkeit, nach dem Auslösen der Ausnahme durch die Aktivität eine Bereinigung durchzuführen. Die Kompensierung dagegen stellt einen Mechanismus bereit, mit dem die erfolgreich abgeschlossene Arbeit einer zuvor abgeschlossenen Aktivität rückgängig gemacht werden kann. Weitere Informationen finden Sie unter [Kompensierung](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Activities.Statements.TryCatch>  
- <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>  
- <xref:System.Activities.Statements.CompensableActivity>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Activities.Statements.TryCatch>
+- <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
+- <xref:System.Activities.Statements.CompensableActivity>

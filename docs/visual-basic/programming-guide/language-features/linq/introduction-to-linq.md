@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 0b163ac4af4e487ccab4c18b7907eba5a31e5779
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0642a67a6550109ffe1068e6c6ce4605b14c25af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524052"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Einführung in LINQ in Visual Basic
 Language Integrated Query (LINQ) bietet Abfragefunktionen in Visual Basic sowie einfache und leistungsstarke Funktionen bei der Arbeit mit allen Arten von Daten. Anstatt senden eine Abfrage an eine Datenbank verarbeitet werden, oder Arbeiten mit unterschiedlichen Abfragesyntaxarten für jeden Typ von Daten, die Sie suchen, werden von LINQ Abfragen als Teil der Visual Basic-Sprache eingeführt. LINQ verwendet eine einheitliche Syntax, die unabhängig von der Art der Daten ist.  
@@ -96,7 +96,7 @@ Dies ist optional. Ein [ `Where` Klausel](../../../../visual-basic/language-refe
 
 ### <a name="order-by-clause"></a>Order By-Klausel]
 
-| Optional. Ein [ `Order By` Klausel](../../../../visual-basic/language-reference/queries/order-by-clause.md) gibt die Sortierreihenfolge für Spalten in einer Abfrage. Zum Beispiel:
+|Optional. Ein [ `Order By` Klausel](../../../../visual-basic/language-reference/queries/order-by-clause.md) gibt die Sortierreihenfolge für Spalten in einer Abfrage. Zum Beispiel:
 
 [!code-vb[VbVbalrIntroToLINQ#10](codesnippet/VisualBasic/introduction-to-linq_11.vb)]
 
@@ -224,21 +224,21 @@ Sie können weitere LINQ-Abfragefunktionen verwenden, indem Sie die von LINQ ber
 |[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Enthält allgemeine Informationen, Programmieranleitungen und Beispiele zu LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Wie Sie Themen und exemplarische Vorgehensweisen
- [Gewusst wie: Abfragen einer Datenbank](how-to-query-a-database-by-using-linq.md)  
+ [Vorgehensweise: Abfragen einer Datenbank](how-to-query-a-database-by-using-linq.md)  
   
- [Gewusst wie: Aufrufen einer gespeicherten Prozedur](how-to-call-a-stored-procedure-by-using-linq.md)  
+ [Vorgehensweise: Aufrufen einer gespeicherten Prozedur](how-to-call-a-stored-procedure-by-using-linq.md)  
   
- [Gewusst wie: Ändern von Daten in einer Datenbank](how-to-modify-data-in-a-database-by-using-linq.md)  
+ [Vorgehensweise: Ändern von Daten in einer Datenbank](how-to-modify-data-in-a-database-by-using-linq.md)  
   
- [Kombinieren von Daten mithilfe von Joins](how-to-combine-data-with-linq-by-using-joins.md)  
+ [Vorgehensweise: Kombinieren von Daten mithilfe von Joins](how-to-combine-data-with-linq-by-using-joins.md)  
   
- [Gewusst wie: Sortieren von Abfrageergebnissen](how-to-sort-query-results-by-using-linq.md)  
+ [Vorgehensweise: Sortieren von Abfrageergebnissen](how-to-sort-query-results-by-using-linq.md)  
   
- [Gewusst wie: Filtern von Abfrageergebnissen](how-to-filter-query-results-by-using-linq.md)  
+ [Vorgehensweise: Filtern von Abfrageergebnissen](how-to-filter-query-results-by-using-linq.md)  
   
- [Gewusst wie: Bestimmen von Zahlen, Summen oder Durchschnittswerten von Daten](how-to-count-sum-or-average-data-by-using-linq.md)  
+ [Vorgehensweise: Anzahl, Summen oder Durchschnittswerten von Daten](how-to-count-sum-or-average-data-by-using-linq.md)  
   
- [Gewusst wie: Suchen des minimalen oder maximalen Werts in einem Abfrageergebnis](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
+ [Vorgehensweise: Suchen des minimalen oder maximalen Werts in einem Abfrageergebnis](how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
   
  [Vorgehensweise: Zuweisen von gespeicherten Prozeduren zum Durchführen von Aktionen zum Aktualisieren, Einfügen und Löschen (O/R-Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
@@ -247,9 +247,9 @@ Sie können weitere LINQ-Abfragefunktionen verwenden, indem Sie die von LINQ ber
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ (Language Integrated Query)](../../concepts/linq/index.md)  
-- [Übersicht über LINQ to XML in Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)  
-- [Übersicht über LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)  
-- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)  
-- [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+- [LINQ (Language Integrated Query)](../../concepts/linq/index.md)
+- [Übersicht über LINQ to XML in Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
+- [Übersicht über LINQ to DataSet](~/docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [LINQ to SQL](~/docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

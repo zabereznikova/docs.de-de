@@ -2,12 +2,12 @@
 title: '&lt;serviceDebug&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: e4f929e5c847c1f8db3a3ab5a8e72ec198c7d223
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 26a84f035246c02898deacfb8fcb2c2101fddf7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524272"
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
 Gibt Debugging- und hilfeinformationsfunktionen für einen Windows Communication Foundation (WCF)-Dienst.  
@@ -15,8 +15,8 @@ Gibt Debugging- und hilfeinformationsfunktionen für einen Windows Communication
  \<system.ServiceModel>  
 \<behaviors>  
 \<serviceBehaviors>  
-\<Verhalten >  
-\<ServiceDebug >  
+\<behavior>  
+\<serviceDebug>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,9 +70,9 @@ Gibt Debugging- und hilfeinformationsfunktionen für einen Windows Communication
   
  Mithilfe des optionalen `httpHelpPageBinding`-Attributs und `httpHelpPageBinding`-Attributs können Sie die für den Zugriff auf die Diensthilfeseite verwendeten Bindungen konfigurieren. Wenn sie nicht festgelegt sind, werden die Standardbindungen (`HttpTransportBindingElement` für HTTP und `HttpsTransportBindingElement` für HTTPS) entsprechend für den Zugriff auf die Diensthilfeseite verwendet. Beachten Sie, dass Sie diese Attribute nicht mit den integrierten WCF-Bindungen verwenden können. Nur Bindungen mit inneren Bindungselementen, die xref:System.ServiceModel.Channels.IReplyChannel unterstützen > wird unterstützt. Darüber hinaus muss die <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>-Eigenschaft der Bindung <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType> lauten.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Behandeln von Ausnahmen und Fehlern](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [Debugverhalten von Diensten](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.ServiceDebugElement>
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Behandeln von Ausnahmen und Fehlern](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [Debugverhalten von Diensten](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

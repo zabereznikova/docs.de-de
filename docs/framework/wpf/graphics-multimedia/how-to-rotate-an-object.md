@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Drehen eines Objekts'
+title: 'Vorgehensweise: Drehen eines Objekts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: b5a954158388e8b85589042e9d1f3b82c1747e30
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b44ce71f91962806704eb05a9cbec53638856b3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525429"
 ---
-# <a name="how-to-rotate-an-object"></a>Gewusst wie: Drehen eines Objekts
+# <a name="how-to-rotate-an-object"></a>Vorgehensweise: Drehen eines Objekts
 Dieses Beispiel zeigt, wie ein Objekt gedreht wird. Das Beispiel erstellt zuerst eine <xref:System.Windows.Media.RotateTransform> und gibt dann die <xref:System.Windows.Media.RotateTransform.Angle%2A> in Grad.  
   
  Im folgende Beispiel wird eine <xref:System.Windows.Shapes.Polyline> -Objekt um 45 Grad um seine linke obere Ecke.  
@@ -44,7 +44,7 @@ Zwei Objekte, die um unterschiedliche Drehpunkte um 45 Grad gedreht werden
   
  Das vollständige Beispiel finden Sie im [Beispiel einer 2D-Transformation](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Transform>  
- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Transform>
+- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

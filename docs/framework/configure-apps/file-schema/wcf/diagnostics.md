@@ -1,19 +1,19 @@
 ---
-title: '&lt;Diagnose&gt;'
+title: '&lt;diagnostics&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: de11145620e8fdf96785908df85ab5ecdfd2e25e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524591"
 ---
-# <a name="ltdiagnosticsgt"></a>&lt;Diagnose&gt;
+# <a name="ltdiagnosticsgt"></a>&lt;diagnostics&gt;
 Das `diagnostics`-Element definiert Einstellungen, die von einem Administrator zur Laufzeitüberprüfung und -steuerung verwendet werden können.  
   
  \<system.ServiceModel>  
-\<Diagnose >  
+\<diagnostics>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,8 +54,8 @@ Das `diagnostics`-Element definiert Einstellungen, die von einem Administrator z
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<EndToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Ein Konfigurationselement, das Ihnen ermöglicht, unterschiedliche Aspekte der End-to-End-Ablaufverfolgung während der Ausführung einer Dienstanwendung zu aktivieren bzw. zu deaktivieren.|  
-|[\<MessageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Beschreibt die Einstellungen für die WCF-Nachrichtenprotokollierung.|  
+|[\<endToEndTracing>](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Ein Konfigurationselement, das Ihnen ermöglicht, unterschiedliche Aspekte der End-to-End-Ablaufverfolgung während der Ausführung einer Dienstanwendung zu aktivieren bzw. zu deaktivieren.|  
+|[\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|Beschreibt die Einstellungen für die WCF-Nachrichtenprotokollierung.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -84,6 +84,6 @@ Das `diagnostics`-Element definiert Einstellungen, die von einem Administrator z
 </diagnostics>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
