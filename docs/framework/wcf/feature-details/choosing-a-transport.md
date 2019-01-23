@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494443"
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
-In diesem Thema wird erläutert, Kriterien für die Auswahl einer der drei Transportarten, die in Windows Communication Foundation (WCF) enthalten sind: HTTP, TCP und named Pipes. WCF enthält außerdem einen Message queuing (auch bekannt als MSMQ)-transport, aber in diesem Dokument wird das Message queuing nicht behandelt.  
+In diesem Thema erläutert die Kriterien für die Auswahl einer der drei Transportarten, die in Windows Communication Foundation (WCF) enthalten sind: HTTP, TCP und named Pipes. WCF enthält außerdem einen Message queuing (auch bekannt als MSMQ)-transport, aber in diesem Dokument wird das Message queuing nicht behandelt.  
   
  Der WCF-Programmiermodell trennt Endpunktvorgänge (wie in einem Dienstvertrag angegeben), von dem Transportmechanismus, der zwei Endpunkte verbindet. Dies gibt Ihnen Flexibilität bei der Entscheidung, wie Sie Ihre Dienste im Netzwerk offenlegen möchten.  
   
@@ -45,14 +45,14 @@ In diesem Thema wird erläutert, Kriterien für die Auswahl einer der drei Trans
  Wenn die Kommunikation zwischen den verschiedenen WCF-Anwendungen auf einem einzelnen Computer erforderlich ist, und Sie jegliche Kommunikation von einem anderen Computer verhindern möchten, klicken Sie dann verwenden Sie den Transport über named Pipes. Eine weitere Einschränkung besteht darin, dass Prozesse, die über Windows-Remotedesktop ausgeführt werden, ggf. auf die Windows-Remotedesktopsitzung beschränkt sind, wenn sie nicht über erweiterte Berechtigungen verfügen.  
   
 > [!WARNING]
->  Der folgende Fehler kann auftreten, bei der Verwendung der named Pipe-Transport mit einer WeakWildcard-URL-Reservierung auf mehrere Websites in IIS gehostet: Fehler in der Aktivierungsdienst 'NetPipeActivator' des Protokolls 'net.pipe' beim Versuch, die für die Site '2', überwachen Daher wird das Protokoll für die Site vorübergehend deaktiviert. Finden Sie weitere Details der Ausnahmemeldung an. URL: WeakWildcard:net.pipe:/\<Computername > / Status: ConflictingRegistration Ausnahme: Prozessname: SMSvcHost Prozess-ID: 1076\  
+>  Der folgende Fehler kann auftreten, bei der Verwendung der named Pipe-Transport mit einer WeakWildcard-URL-Reservierung auf mehrere Websites in IIS gehostet wird: Fehler in der Aktivierungsdienst 'NetPipeActivator' des Protokolls 'net.pipe' beim Versuch, die für die Site '2' zu lauschen, daher das Protokoll ist für die Website temporär deaktiviert. Finden Sie weitere Details der Ausnahmemeldung an. URL: WeakWildcard:net.pipe:/\<Computername > / Status: ConflictingRegistration Ausnahme:  Prozessname: SMSvcHost Process ID: 1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Entscheidungspunkte für die Auswahl eines Transports  
  In der folgenden Tabelle werden allgemeine Punkte beschrieben, die für die Auswahl eines Transports von Bedeutung sind. Sie sollten alle zusätzlichen Attribute und Transporte berücksichtigen, die für Ihre Anwendung gelten. Wählen Sie die Attribute aus, die für die Anwendung wichtig sind, wählen Sie die Transporte, die sich für die Attribute eignen, und wählen Sie anschließend die Transporte aus, die am besten mit Ihrem Attributsatz funktionieren.  
   
 |Attribut|Beschreibung|Häufig verwendete Transporte|  
 |---------------|-----------------|------------------------|  
-|Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. WCF umfasst jedoch keine Diagnosetools zum Untersuchen von Netzwerkproblemen.|Keiner|  
+|Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. WCF umfasst jedoch keine Diagnosetools zum Untersuchen von Netzwerkproblemen.|Keine|  
 |Hosting|Alle WCF-Endpunkte müssen innerhalb einer Anwendung gehostet werden. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und ältere Versionen unterstützen nur Hostanwendungen, die den HTTP-Transport verwenden. Auf [!INCLUDE[wv](../../../../includes/wv-md.md)], Unterstützung hinzugefügt, für das Hosten von allen WCF-Transporte, die auch von TCP und named Pipes verwenden. Weitere Informationen finden Sie unter [Hosting in Internetinformationsdiensten](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) und [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspektion|Die Inspektion ist die Fähigkeit, während der Übertragung Informationen aus Nachrichten zu extrahieren und zu verarbeiten. Das HTTP-Protokoll trennt Routing- und Steuerungsinformationen von den Daten, um das Erstellen von Tools zu vereinfachen, die Nachrichten untersuchen und analysieren. Transporte, die leicht zu überprüfen sind, erfordern ggf. auch weniger Verarbeitungsleistung in Netzwerkeinrichtungen. Die verwendete Sicherheitsebene wirkt sich darauf aus, ob Nachrichten überprüft werden können.|HTTP|  
 |Wartezeit|Die Wartezeit ist die Mindestmenge an Zeit, die erforderlich ist, um einen Austausch von Nachrichten durchzuführen. Alle Netzwerkvorgänge weisen je nach gewähltem Transport mehr oder weniger Wartezeit (Latenz) auf. Das Verwenden der Duplexkommunikation oder unidirektionalen Kommunikation mit einem Transport, der das systemeigene Nachrichtenaustauschmuster Anforderung/Antwort verwendet, zum Beispiel HTTP, kann zu einer längeren Wartezeit führen, da die Korrelation von Nachrichten erforderlich ist. Erwägen Sie in dieser Situation, einen Transport zu verwenden, der als systemeigenes Nachrichtenaustauschmuster Duplex verwendet, zum Beispiel TCP.|TCP, Named<br /><br /> Pipe|  
@@ -61,16 +61,16 @@ In diesem Thema wird erläutert, Kriterien für die Auswahl einer der drei Trans
 |Durchsatz|Der Durchsatz misst die Datenmenge, die in einem bestimmten Zeitraum übertragen und verarbeitet werden kann. Wie die Wartezeit auch, kann der gewählte Transport sich auf den Durchsatz für Dienstvorgänge auswirken. Die Maximierung des Durchsatzes für einen Transport erfordert sowohl die Minimierung des Mehraufwands für die Übertragung von Inhalten als auch die Reduzierung des Wartezeitraums für den Abschluss des Nachrichtenaustauschs. Sowohl der TCP-Transport als auch der Transport mittels benannter Pipes fügen dem Nachrichtentext wenig Mehraufwand hinzu und unterstützen eine systemeigene Duplexform, die die Wartezeit auf Antworten für Nachrichten reduziert.|TCP, benannte Pipe|  
 |Tools|Die Tools umfassen die Unterstützung für Drittanbieteranwendungen für ein Protokoll, mit dem die Entwicklung, die Diagnose, das Hosten und andere Aktivitäten durchgeführt werden können. Entwicklungstools und Softwareanwendungen, die in Verbindung mit dem HTTP-Protokoll verwendet werden können, stellen eine besonders hohe Investition dar.|HTTP|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

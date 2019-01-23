@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 0dc0ddaa1f64b75c0b4ccc1f5e73638576ea3da2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d7f5bfc1532775d092fbee1ef9cdc3c7ed5efc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496656"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Weitere Überlegungen zur Sicherheit in Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Sicherheitseinstellungen können möglicherweise dazu führen, dass Ihre Anwendung anders als in einer teilweise vertrauenswürdigen Umgebung als auf dem lokalen Computer ausgeführt wird. Der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] beschränkt den Zugriff auf wichtige lokale Ressourcen, beispielsweise unter anderem das Dateisystem, Netzwerk und nicht verwaltete APIs. Die Sicherheitseinstellungen haben Auswirkung auf die Möglichkeit zum Aufruf der Win32-API von Microsoft oder andere APIs, die nicht vom Sicherheitssystem überprüft werden können. Sicherheit wirkt sich auch auf andere Aspekte der Anwendung aus, einschließlich des Datei-und Datenzugriffs und des Druckens. Weitere Informationen zum Zugriff auf Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Weitere Informationen zum Drucken in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -86,11 +86,11 @@ ms.locfileid: "43523481"
   
  Wenn Ihre Anwendung keine Berechtigung zum nicht verwalteten Code aufrufen, muss Ihre Anwendung anfordern <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Berechtigung, oder Sie müssen alternative Methoden zum Implementieren von Features berücksichtigen, die in vielen Fällen stellt Windows Forms eine verwaltete Alternative zu Win32-API -Funktionen. Wenn keine Alternativen vorhanden sind und die Anwendung auf einen nicht verwalteten Code zugreifen muss, müssen Sie die Berechtigungen für die Anwendung erhöhen.  
   
- Mit der Berechtigung zum Aufrufen eines nicht verwalteten Codes kann eine Anwendung nahezu jede Aktion ausführen. Aus diesem Grund sollte die Berechtigung zum Aufrufen eines nicht verwalteten Codes nur für Anwendungen erteilt werden, die aus einer vertrauenswürdigen Quelle stammen. Alternativ, abhängig von der Anwendung, könnte der Teil der Anwendungsfunktionalität, über den der nicht verwaltete Code aufgerufen wird, optional sein oder nur in einer vollständig vertrauenswürdigen Umgebung aktiviert werden. Weitere Informationen zu problematischen Berechtigungen finden Sie unter [Problematische Berechtigungen und Richtlinienverwaltung](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Weitere Informationen zum Erhöhen von Berechtigungen finden Sie unter [NIB: Allgemeine Verwaltung der Sicherheitsrichtlinien](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
+ Mit der Berechtigung zum Aufrufen eines nicht verwalteten Codes kann eine Anwendung nahezu jede Aktion ausführen. Aus diesem Grund sollte die Berechtigung zum Aufrufen eines nicht verwalteten Codes nur für Anwendungen erteilt werden, die aus einer vertrauenswürdigen Quelle stammen. Alternativ, abhängig von der Anwendung, könnte der Teil der Anwendungsfunktionalität, über den der nicht verwaltete Code aufgerufen wird, optional sein oder nur in einer vollständig vertrauenswürdigen Umgebung aktiviert werden. Weitere Informationen zu problematischen Berechtigungen finden Sie unter [Problematische Berechtigungen und Richtlinienverwaltung](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Weitere Informationen zum Erhöhen von Berechtigungen finden Sie unter [NIB: Verwaltung der Sicherheitsrichtlinien für allgemeine](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
   
-## <a name="see-also"></a>Siehe auch  
- [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Sicherheit in Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
- [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications)
+## <a name="see-also"></a>Siehe auch
+- [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
+- [Mehr Sicherheit beim Drucken in Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
+- [Übersicht über die Sicherheit in Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
+- [Sicherheit in Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)
+- [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications)

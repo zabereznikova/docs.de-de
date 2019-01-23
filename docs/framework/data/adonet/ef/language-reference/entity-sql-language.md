@@ -2,12 +2,12 @@
 title: Entity SQL-Sprache
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: f12a20f85a0449778614d3098f69d3da90902c95
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 0c698f04c3b95ffb204a20d41e91ef3f6210c5d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494096"
 ---
 # <a name="entity-sql-language"></a>Entity SQL-Sprache
 Entity SQL ist eine speicherunabhängige Abfragesprache, die SQL ähnlich ist. Mit Entity SQL können Sie Entitätsdaten als Objekte oder in einem Tabellenformular abfragen. In den folgenden Fällen empfiehlt sich die Verwendung von Entity SQL:  
@@ -52,7 +52,7 @@ Entity SQL ist eine speicherunabhängige Abfragesprache, die SQL ähnlich ist. M
   
  [Vorgehensweise: Ausführen einer parametrisierten Abfrage](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
   
- [Vorgehensweise: Navigieren in Beziehungen mithilfe von Navigationseigenschaften](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
+ [Vorgehensweise: Navigieren Sie in Beziehungen mithilfe von Navigationseigenschaften](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
   
  [Vorgehensweise: Aufrufen einer benutzerdefinierten Funktion](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
   
@@ -68,17 +68,17 @@ Entity SQL ist eine speicherunabhängige Abfragesprache, die SQL ähnlich ist. M
   
  [Vorgehensweise: Ausführen einer Abfrage, die eine Auflistung von primitiven Typen zurückgibt](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
   
- [Vorgehensweise: Abfragen verbundener Objekte in einer "EntityCollection"](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
+ [Vorgehensweise: Fragen Sie verbundener Objekte in einer "EntityCollection ab"](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
   
- [Vorgehensweise: Sortieren die Union von zwei Abfragen](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
+ [Vorgehensweise: Reihenfolge der Union von zwei Abfragen](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
   
- [Vorgehensweise: seitenweise durch Abfrageresultate navigieren](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [Vorgehensweise: Seitenweise Abfrageresultate durch Navigieren](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
   
  [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [Sprachreferenz](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [Sprachreferenz](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

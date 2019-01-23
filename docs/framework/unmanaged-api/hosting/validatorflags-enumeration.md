@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ce52108c1024ad3e07051b226aa65612580e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492221"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags-Enumeration
-Enthält Werte, die den Typ der Überprüfung angeben, die in einem Aufruf ausgeführt werden, sollten die [ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) Methode.  
+Enthält Werte, die den Typ der Überprüfung angeben, die in einem Aufruf ausgeführt werden, sollte die [ICLRValidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,18 +45,18 @@ enum ValidatorFlags {
 |`VALIDATOR_CHECK_ILONLY`|Gibt an, dass nur die Microsoft intermediate Language (MSIL) in der ausführbaren Datei überprüft werden sollen.|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|Gibt an, dass nur das Format der ausführbaren Datei überprüft werden sollen.|  
 |`VALIDATOR_EXTRA_VERBOSE`|Gibt an, dass alle Typen der Überprüfung ausgeführt und auf gemeldet werden soll.|  
-|`VALIDATOR_NOCHECK_PEFORMAT`|Gibt an, dass das Format der ausführbaren Datei nicht überprüft werden sollen.|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|Gibt an, dass es sich bei Überprüfungsfehlermeldungen die Quellcodezeilen enthalten soll, die Validierungsfehler auslösen. Der Wert dieses Felds ist ungültig in .NET Framework, Version 2.0.|  
+|`VALIDATOR_NOCHECK_PEFORMAT`|Gibt an, dass das Format der ausführbaren Datei nicht überprüft werden soll.|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|Gibt an, dass Meldungen für Validierungsfehler auf die Zeilen des Quellcodes enthalten soll, die Validierungsfehler auslösen. Der Wert dieses Felds ist ungültig in .NET Framework, Version 2.0.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** IValidator.idl, IValidator.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRErrorReportingManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRErrorReportingManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

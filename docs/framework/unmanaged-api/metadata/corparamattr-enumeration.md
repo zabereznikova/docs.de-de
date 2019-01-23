@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491466"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr-Enumeration
 Enthält Werte, die die Metadaten eines Methodenparameters beschreiben.  
@@ -48,20 +48,20 @@ typedef enum CorParamAttr {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`pdIn`|Gibt an, dass der Parameter in dem Aufruf der Methode übergeben wird.|  
+|`pdIn`|Gibt an, dass der Parameter in den Aufruf der Methode übergeben wird.|  
 |`pdOut`|Gibt an, dass der Parameter der Methode zurück übergeben wird.|  
 |`pdOptional`|Gibt an, dass der Parameter optional ist.|  
-|`pdReservedMask`|Reserviert für interne Verwendung durch die common Language Runtime.|  
-|`pdHasDefault`|Gibt an, dass der Parameter einen Standardwert besitzt.|  
-|`pdHasFieldMarshal`|Gibt an, dass der Parameter Marshallinginformationen.|  
+|`pdReservedMask`|Durch die common Language Runtime können Sie für die interne Verwendung reserviert.|  
+|`pdHasDefault`|Gibt an, dass der Parameter einen Standardwert verfügt.|  
+|`pdHasFieldMarshal`|Gibt an, dass der Parameter über Marshallinginformationen verfügt.|  
 |`pdUnused`|Nicht verwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

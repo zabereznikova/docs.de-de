@@ -2,12 +2,12 @@
 title: '&lt;bookmarkResumptionQueries&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 80d1c1e4bc61972d44c27bcbdd0eba14d97c2d6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146081"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493949"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; von WCF
   
@@ -16,12 +16,12 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um die Wiederaufn
 Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
-\<Nachverfolgen von >  
-\<Profile >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
-\<Workflow >  
-\<BookmarkResumptionQueries >  
-\<BookmarkResumptionQuery >  
+\<workflow>  
+\<bookmarkResumptionQueries>  
+\<bookmarkResumptionQuery>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ Keine
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<BookmarkResumptionQuery >](bookmarkresumptionquery-of-wcf.md)|Eine Abfrage, die verwendet wird, um die Wiederaufnahme eines Lesezeichens innerhalb einer Workflowinstanz nachzuverfolgen. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensätze mit Lesezeichenwiederaufnahmen abonnieren kann.|  
+|[\<bookmarkResumptionQuery>](bookmarkresumptionquery-of-wcf.md)|Eine Abfrage, die verwendet wird, um die Wiederaufnahme eines Lesezeichens innerhalb einer Workflowinstanz nachzuverfolgen. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensätze mit Lesezeichenwiederaufnahmen abonnieren kann.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -61,7 +61,7 @@ Keine
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType> 
-- <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>       
-- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 1ede51ed9119051a647fd27d8d02cd2c93e61bbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d3c20fa4394b09e9ceec332d430ed638166bed8e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491662"
 ---
 # <a name="creating-a-datareader"></a>Erstellen eines "DataReader"
 Die <xref:System.Data.DataTable>-Klasse und die <xref:System.Data.DataSet>-Klasse verfügen über eine <xref:System.Data.DataTable.CreateDataReader%2A>-Methode, die den Inhalt der <xref:System.Data.DataTable> oder den Inhalt der <xref:System.Data.DataSet>-Auflistung des <xref:System.Data.DataSet.Tables%2A>-Objekts als ein oder mehrere schreibgeschützte vorwärtsgerichtete Resultsets zurückgibt.  
@@ -30,8 +30,8 @@ Die <xref:System.Data.DataTable>-Klasse und die <xref:System.Data.DataSet>-Klass
 4 Russ  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Data.DataTable.CreateDataReader%2A>  
- <xref:System.Data.DataSet.CreateDataReader%2A>  
- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Data.DataTable.CreateDataReader%2A>
+- <xref:System.Data.DataSet.CreateDataReader%2A>
+- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

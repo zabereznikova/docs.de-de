@@ -7,18 +7,18 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 9c06f61bce1e17770fa0a9b9ed7a0e20625a79ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496912"
 ---
 # <a name="inline-styles-and-templates"></a>Inlinestile und -vorlagen
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet <xref:System.Windows.Style> Objekte und die Vorlagenobjekte (<xref:System.Windows.FrameworkTemplate> Unterklassen) als eine Möglichkeit, um die visuelle Darstellung eines Elements in den Ressourcen zu definieren, sodass sie verwendet werden können mehrere Male auf. Aus diesem Grund Attribute im [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , die anhand von den Typen <xref:System.Windows.Style> und <xref:System.Windows.FrameworkTemplate> fast immer Ressourcenverweise auf vorhandene Stile und Vorlagen, anstatt neue zu definieren.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet <xref:System.Windows.Style> Objekte und die Vorlagenobjekte (<xref:System.Windows.FrameworkTemplate> Unterklassen) als eine Möglichkeit, um die visuelle Darstellung eines Elements in den Ressourcen zu definieren, sodass sie verwendet werden können mehrmals. Aus diesem Grund Attribute [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , die die Typen nehmen <xref:System.Windows.Style> und <xref:System.Windows.FrameworkTemplate> fast immer Verweise auf vorhandene Stile und Vorlagen, anstatt neue zu definieren.  
   
-## <a name="limitations-of-inline-styles-and-templates"></a>Einschränkungen von Inlinestile und Vorlagen  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Stil- und Eigenschaften können auf zwei Arten technisch festgelegt werden. Können Sie auf um einen Stil zu verweisen, die in einer Ressource, z. B. definiert wurde Attributsyntax `<` *Objekt*`Style="{StaticResource`*MyResourceKey*`}" .../>`. Oder Sie können Eigenschaftenelementsyntax verwenden, um einen Inlinestil für die Instanz zu definieren:  
+## <a name="limitations-of-inline-styles-and-templates"></a>Einschränkungen von Inlinestile und-Vorlagen  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Stil- und Vorlageneigenschaften können technisch auf zwei Arten festgelegt werden. Sie können die Attributsyntax verwenden, auf einen Stil verweisen, die in eine Ressource, z. B. definiert wurde `<` *Objekt*`Style="{StaticResource`*MyResourceKey*`}" .../>`. Oder Sie können Eigenschaftenelement-Syntax verwenden, z. B. einen Inlinestil zu definieren:  
   
  `<` *Objekt* `>`  
   
@@ -30,11 +30,11 @@ ms.locfileid: "33545882"
   
  `</` *Objekt* `>`  
   
- Für die Attributverwendung ist sehr viel häufiger. Ein Format, das Inline definiert und nicht in Ressourcen definiert ist unbedingt auf das enthaltende Element nur begrenzt, und kann nicht erneut verwendet werden genauso einfach, da sie keine Ressourcenschlüssel besitzt. Im Allgemeinen ein Stil Ressource definiert vielseitiger und hilfreich ist, und wird in Übereinstimmung mit den allgemeinen weitere [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Programmierung Prinzip Programmlogik im Code vom Entwurf in Markup zu trennen.  
+ Die Verwendung von Attributen ist sehr viel häufiger. Ein Format, das Inline definiert und nicht in Ressourcen definiert ist unbedingt auf das enthaltende Element ausgerichtet ist, und kann nicht erneut verwendet werden so einfach, da sie keine Ressourcenschlüssel besitzt. Im Allgemeinen ein definierten Stil vielseitiger und nützlicher und weitere in Übereinstimmung mit den allgemeinen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Prinzip der Trennung von Programmlogik in Code vom Entwurf im Markup-Programmierung.  
   
- In der Regel besteht kein Grund eine Inline Stil oder eine Vorlage festlegen, auch wenn Sie nur an diesem Speicherort Stil oder die Vorlage verwenden möchten. Die meisten Elemente, die einen Stil oder eine Vorlage übernehmen können unterstützen auch ein Content-Eigenschaft und einem Inhaltsmodell. Wenn Sie nur die logische Struktur verwenden Sie erstellen durch formatieren oder Datenvorlagen einmal, wäre es noch einfacher, Content-Eigenschaft nur mit den entsprechenden untergeordneten Elementen im direkten Markup zu füllen. Dies würde die Mechanismen Stil- und vollständig umgehen.  
+ In der Regel besteht kein Grund eine Inline Stil oder Vorlage festlegen, auch wenn Sie nur an diesem Speicherort Stil oder die Vorlage verwenden möchten. Die meisten Elemente, die einen Stil oder Vorlage können unterstützen auch eine Content-Eigenschaft und einem Inhaltsmodell. Wenn Sie nur den logischen Struktur verwenden, werden Sie über Stile oder Vorlagen einmal erstellen, wäre es sogar noch einfacher zu Inhaltseigenschaft nur mit der entsprechenden untergeordneten Elemente in direkten Markup zu füllen. Dies würde die Stil- und Vorlagenressourcen Mechanismen vollständig umgehen.  
   
- Andere Syntax aktiviert, die für Markuperweiterungen, die ein Objekt zurückgeben, sind auch für Stile und Vorlagen möglich. Zwei diese Erweiterungen, die über mögliche Szenarien umfassen [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) und <xref:System.Windows.Data.Binding>.  
+ Andere Syntax aktiviert, indem Markuperweiterungen, die ein Objekt zurückzugeben sind auch möglich, dass die Stile und Vorlagen. Zwei für diese Szenarien, in denen Erweiterungen umfassen [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) und <xref:System.Windows.Data.Binding>.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)

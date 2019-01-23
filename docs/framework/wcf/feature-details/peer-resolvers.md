@@ -2,12 +2,12 @@
 title: Peerresolver
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b16358d05b9e457b4542e41297908e225885dad9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496844"
 ---
 # <a name="peer-resolvers"></a>Peerresolver
 Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-Adressen anderer Knoten. IP-Adressen werden bezogen, indem eine Verbindung zu einem Auflösungsdienst hergestellt wird, der die Netz-ID annimmt und eine Liste von Adressen zurückgibt, die mit dieser bestimmten Netz-ID registrierten Knoten entsprechen. Der Resolver behält eine Liste registrierter Adressen bei, die durch Registrierung jedes Knotens im Mesh mit dem Dienst erstellt wird.  
@@ -15,7 +15,7 @@ Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-
  Mithilfe der `Resolver`-Eigenschaft der <xref:System.ServiceModel.NetPeerTcpBinding> können Sie den zu verwendenden PeerResolver-Dienst angeben.  
   
 ## <a name="supported-peer-resolvers"></a>Unterstützte Peerresolver  
- Peerkanal unterstützt zwei Arten von Resolvern: Peer Name Resolution-Protokoll (PNRP)-Resolverdienste und benutzerdefinierte Resolverdienste.  
+ Peerkanal unterstützt zwei Arten von Resolvern: Peer Name Resolution-Protokoll (PNRP), und benutzerdefinierte Resolver-Dienste.  
   
  Standardmäßig verwendet Peerkanal den PNRP-Peerresolverdienst, um Peers und Nachbarn im Netz zu ermitteln. Für Situationen/Plattformen, in denen PNRP nicht verfügbar oder möglich ist, Windows Communication Foundation (WCF) einen alternativen, serverbasierten Ermittlungsdienst - enthält die <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Sie können auch explizit einen benutzerdefinierten Resolverdienst definieren. Schreiben Sie hierzu eine Klasse, die die <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>-Schnittstelle implementiert.  
   
@@ -35,9 +35,9 @@ Um eine Verbindung mit einem Mesh herzustellen, erfordert ein Peerknoten die IP-
  Eine Demonstration, wie einen benutzerdefinierten Resolver implementiert wird, finden Sie unter [Peer Channel benutzerdefinierten PeerResolver](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einblicke in den CustomPeerResolverService: Clientregistrierungen](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [In den CustomPeerResolverService: Client-Registrierungen](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Peerkanalbegriffe](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)  
- [Peerkanalsicherheit](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)  
- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Siehe auch
+- [Peerkanalbegriffe](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Peerkanalsicherheit](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
+- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

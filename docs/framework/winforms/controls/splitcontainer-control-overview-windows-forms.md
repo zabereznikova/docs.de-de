@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497285"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Übersicht über das SplitContainer-Steuerelement (Windows Forms)
 Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement in Windows Forms kann als zusammengesetztes Steuerelement betrachtet werden. Es setzt sich aus zwei Bereichen zusammen, die durch eine verschiebbare Leiste getrennt sind. Wenn sich der Mauszeiger über der Leiste befindet, ändert sich seine Form und zeigt an, dass die Leiste verschiebbar ist.  
@@ -40,16 +40,16 @@ Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement in Windows Forms ka
   
 |name|Beschreibung|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>-Eigenschaft|Bestimmt, welchen Bereich unverändert bleiben nach der Größe der <xref:System.Windows.Forms.SplitContainer> ist die Größe des Steuerelements geändert.|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>-Eigenschaft|Bestimmt, ob der Splitter mit der Tastatur oder Maus verschoben werden kann.|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A>-Eigenschaft|Bestimmt, ob der Splitter vertikal oder horizontal angeordnet ist.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>-Eigenschaft|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>-Eigenschaft|Bestimmt die minimale Entfernung in Pixeln, des Splitters vom Benutzer verschoben werden kann.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>-Eigenschaft|Bestimmt die Breite des Splitters in Pixel an.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>-Ereignis|Tritt auf, wenn der Splitter verschoben werden.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>-Ereignis|Tritt auf, wenn der Splitter verschoben wurde.|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> -Eigenschaft|Bestimmt, welchen Bereich unverändert bleiben nach der Größe der <xref:System.Windows.Forms.SplitContainer> ist die Größe des Steuerelements geändert.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> -Eigenschaft|Bestimmt, ob der Splitter mit der Tastatur oder Maus verschoben werden kann.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> -Eigenschaft|Bestimmt, ob der Splitter vertikal oder horizontal angeordnet ist.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> -Eigenschaft|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft|Bestimmt die minimale Entfernung in Pixeln, des Splitters vom Benutzer verschoben werden kann.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> -Eigenschaft|Bestimmt die Breite des Splitters in Pixel an.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> -Ereignis|Tritt auf, wenn der Splitter verschoben werden.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> -Ereignis|Tritt auf, wenn der Splitter verschoben wurde.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [SplitContainer-Steuerelement-Beispiel](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer-Steuerelement-Beispiel](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

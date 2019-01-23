@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d141d23f02b2abc92e3d4455aebe1a4057b6bb85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494755"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize-Methode
-Initialisiert den Symbolreader mit der Schnittstelle für die Metadaten, der dieser Reader zugeordnet wird, zusammen mit den Dateinamen des Moduls werden soll.  
+Initialisiert den Symbolreader mit der Metadaten-Importer-Tool-Schnittstelle, der dieser Reader zugeordnet wird, zusammen mit den Dateinamen des Moduls werden soll.  
   
 > [!NOTE]
->  Diese Methode kann nur einmal aufgerufen werden und muss vor anderen Reader-Methoden aufgerufen werden.  
+>  Diese Methode kann nur einmal aufgerufen werden und muss vor alle anderen Reader-Methoden aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,16 +51,16 @@ HRESULT Initialize (
  [in] Der Pfad zu suchen. Dieser Parameter ist optional.  
   
  `pIStream`  
- [in] Die Dateidatenstrom, der als Alternative zum Filename-Parameter verwendet wird.  
+ [in] Der Dateistream, der als Alternative zu den Filename-Parameter verwendet.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
   
 ## <a name="remarks"></a>Hinweise  
- Müssen Sie nur einen angeben der `filename` oder `pIStream` Parameter, nicht beides. Der Parameter `searchPath` ist optional.  
+ Sie müssen nur eine der angeben der `filename` oder die `pIStream` nicht beide Parameter. Der Parameter `searchPath` ist optional.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

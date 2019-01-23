@@ -9,18 +9,18 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: d6b33df8574d9c25380d6d9319480d3c9df28660
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa0143aac4253b6a7648da589e01ac8abf9d4341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492684"
 ---
 # <a name="storyboards-overview"></a>Übersicht über Storyboards
 In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.Storyboard> Objekte zu organisieren und Anwenden von Animationen. Es wird beschrieben, wie interaktiv bearbeitet <xref:System.Windows.Media.Animation.Storyboard> Objekte und beschreibt die indirekte eigenschaftszielsyntax.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Als Voraussetzung für dieses Thema sollten Sie mit den unterschiedlichen Animationstypen und ihren grundlegenden Funktionen vertraut sein. Eine Einführung zu Animationen finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Sie sollten auch wissen, wie angefügte Eigenschaften verwendet werden. Weitere Informationen zu angefügten Eigenschaften finden Sie in der [Übersicht über angefügte Eigenschaften](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
   
 <a name="whatisatimeline"></a>   
@@ -63,7 +63,7 @@ In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.S
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.EventTrigger>|Ja|Ja|Ja|Ja|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und eine Eigenschaft <xref:System.Windows.Trigger>|Nein|Ja|Ja|Ja|[Auslösen einer Animation, wenn sich eine Eigenschaft ändert](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.DataTrigger>|Nein|Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung eines Eigenschaftswerts](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.DataTrigger>|Nein|Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung von Daten](https://msdn.microsoft.com/library/a736bb3a-2ae5-479a-a33a-75a27055d863)|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>-Methode|Ja|Nein|Nein|Nein|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.Storyboard> zum Animieren der <xref:System.Windows.FrameworkElement.Width%2A> von eine <xref:System.Windows.Shapes.Rectangle> Element und die <xref:System.Windows.Media.SolidColorBrush.Color%2A> von eine <xref:System.Windows.Media.SolidColorBrush> gezeichnet werden soll, die zum <xref:System.Windows.Shapes.Rectangle>.  
@@ -227,11 +227,11 @@ In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.S
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>: Hält das Storyboard an.  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Es setzt ein angehaltenes Storyboard fort.  
+-   <xref:System.Windows.Media.Animation.ResumeStoryboard>: Setzt ein angehaltenes Storyboard fort.  
   
 -   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>: Ändert die Geschwindigkeit des Storyboards.  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Verschiebt ein Storyboard an das Ende seines Füllbereichs, sofern vorhanden.  
+-   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>: Setzt ein Storyboard an das Ende seines Füllbereichs, sofern vorhanden.  
   
 -   <xref:System.Windows.Media.Animation.StopStoryboard>: Hält das Storyboard an.  
   
@@ -261,7 +261,7 @@ In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.S
   
  Der Vorteil bei der Verwendung dieser Methoden ist, dass Sie nicht erstellen müssen <xref:System.Windows.Trigger> oder <xref:System.Windows.TriggerAction> Objekte; Sie lediglich einen Verweis auf die steuerbar <xref:System.Windows.Media.Animation.Storyboard> Sie bearbeiten möchten.  
   
- **Hinweis:** alle interaktiven Aktionen auf, eine <xref:System.Windows.Media.Animation.Clock>, und daher auch auf eine <xref:System.Windows.Media.Animation.Storyboard> treten auf dem nächsten Teilstrich der zeitsteuerungs-Engine kurz vor dem nächsten Rendering erfolgt. Angenommen, Sie verwenden die <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> Methode springen zu einem anderen Punkt in einer Animation, die den Wert der Eigenschaft nicht sofort geändert, sondern der Wert ändert, beim nächsten Teilstrich der zeitsteuerungs-Engine.  
+ **Hinweis**: Alle interaktiven Aktionen auf, eine <xref:System.Windows.Media.Animation.Clock>, und daher auch auf eine <xref:System.Windows.Media.Animation.Storyboard> treten auf dem nächsten Teilstrich der zeitsteuerungs-Engine kurz vor dem nächsten Rendering erfolgt. Angenommen, Sie verwenden die <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> Methode springen zu einem anderen Punkt in einer Animation, die den Wert der Eigenschaft nicht sofort geändert, sondern der Wert ändert, beim nächsten Teilstrich der zeitsteuerungs-Engine.  
   
  Das folgende Beispiel zeigt, wie angewendet und Steuern von Animationen mit interaktiven Methoden der der <xref:System.Windows.Media.Animation.Storyboard> Klasse.  
   
@@ -302,7 +302,7 @@ In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.S
   
  Eigenschaft angewendete Animationen <xref:System.Windows.Trigger> Objekte verhalten sich komplexer als <xref:System.Windows.EventTrigger> Animationen oder Animationen Einstieg <xref:System.Windows.Media.Animation.Storyboard> Methoden.  Sie "übergeben" mit Animationen definiert, die von anderen <xref:System.Windows.Trigger> Objekte, aber verfassen mit <xref:System.Windows.EventTrigger> und Methoden ausgelösten Animationen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)

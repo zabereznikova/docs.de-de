@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 349604404487501a692b9a2472ed32878c62d879
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494807"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion-Funktion
-Ruft ab, der zur common Language Runtime (CLR) Version der angegebenen Datei unter Verwendung des angegebenen Puffers.  
+Ruft die common Language Runtime (CLR) Versionsinformationen von der angegebenen Datei, die mithilfe des angegebenen Puffers ab.  
   
  Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
   
@@ -44,20 +44,20 @@ HRESULT GetFileVersion (
  [in] Der Pfad der Datei, die untersucht werden.  
   
  `szBuffer`  
- [in, out] Pufferspeicher für die Versionsinformationen, die zurückgegeben wird.  
+ [in, out] Der Puffer zugeordnet werden, für die Versionsinformationen, die zurückgegeben wird.  
   
  `cchBuffer`  
- [in] Die Größe in Breitzeichen von `szBuffer`.  
+ [in] Die Größe in Breitzeichen, der `szBuffer`.  
   
  `dwLength`  
- [out] Die Größe in Bytes, der zurückgegebenen `szBuffer`.  
+ [out] Die Größe in Bytes, des zurückgegebenen `szBuffer`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

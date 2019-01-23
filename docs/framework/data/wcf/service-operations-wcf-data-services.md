@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: da8d482fbf506749f9805edcbbaad3c893ad56b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497117"
 ---
 # <a name="service-operations-wcf-data-services"></a>Dienstvorgänge (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Z. B. die folgenden Vorgang URI des Diensts (basierend auf den [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Datendienst) übergibt den Wert `London` auf die `city` Parameter:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Z. B. die folgenden Dienstvorgang-URI (basierend auf der [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Datendiensts) übergibt den Wert `London` auf die `city` Parameter:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -27,7 +27,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
  [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
  [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
- Sie können mit der <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> des <xref:System.Data.Services.DataService%601> direkt auf die Datenquelle zugreifen, die der Datendienst verwendet. Weitere Informationen finden Sie unter [wie: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ Sie können mit der <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> des <xref:System.Data.Services.DataService%601> direkt auf die Datenquelle zugreifen, die der Datendienst verwendet. Weitere Informationen finden Sie unter [Vorgehensweise: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
  Informationen zum Aufrufen eines Dienstvorgangs aus einer .NET Framework-Clientanwendung finden Sie unter [Aufrufen von Dienstvorgängen](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md).  
   
@@ -96,7 +96,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 >  Wenn ein Dienstvorgang einen Rückgabetyp aufweist, der durch das Beschränken des Zugriff auf die zugrunde liegenden Entitätenmengen ausgeblendet wurde, dann steht der Dienstvorgang Clientanwendungen nicht zur Verfügung.  
   
- Weitere Informationen finden Sie unter [wie: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md).  
   
 ## <a name="raising-exceptions"></a>Auslösen von Ausnahmen  
  Es empfiehlt sich, dass Sie die <xref:System.Data.Services.DataServiceException>-Klasse immer dann verwenden, wenn Sie eine Ausnahme in der Datendienstausführung auslösen. Das liegt daran, dass die Datendienstlaufzeit weiß, wie der HTTP-Antwortnachricht Eigenschaften dieses Ausnahmeobjekts ordnungsgemäß zugeordnet werden. Wenn Sie in einem Dienstvorgang eine <xref:System.Data.Services.DataServiceException> auslösen, wird die zurückgegebene Ausnahme in eine <xref:System.Reflection.TargetInvocationException> eingeschlossen. Um die Basis-<xref:System.Data.Services.DataServiceException> ohne die einschließende <xref:System.Reflection.TargetInvocationException> zurückzugeben, müssen Sie die <xref:System.Data.Services.DataService%601.HandleException%2A>-Methode im <xref:System.Data.Services.DataService%601> überschreiben und die <xref:System.Data.Services.DataServiceException> aus der <xref:System.Reflection.TargetInvocationException> extrahieren und als Fehler der obersten Ebene zurückgeben, wie im folgenden Beispiel gezeigt:  
@@ -104,5 +104,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#handleexceptions)]
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497432"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
-`ShouldSerialize` und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Eine der folgenden Mechanismen können im Designer die folgenden Funktionen:  
+`ShouldSerialize` und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Einen dieser Mechanismen können im Designer die folgenden Funktionen:  
   
--   Die Eigenschaft enthält visuellen Hinweis im Eigenschaftenbrowser an, wenn sie ihren Standardwert geändert wurde.  
+-   Die Eigenschaft enthält visuelle Anzeige im Eigenschaftenbrowser an, wenn er von seinem Standardwert geändert wurde.  
   
 -   Der Benutzer kann mit der rechten Maustaste auf die Eigenschaft, und wählen Sie **zurücksetzen** die Eigenschaft auf den Standardwert wiederherzustellen.  
   
 -   Der Designer generiert effizienteren Code.  
   
     > [!NOTE]
-    >  Übernehmen Sie entweder die <xref:System.ComponentModel.DefaultValueAttribute> , oder geben Sie `Reset` *PropertyName* und `ShouldSerialize` *PropertyName* Methoden. Verwenden Sie nicht beide.  
+    >  Eine erfüllt die <xref:System.ComponentModel.DefaultValueAttribute> , oder geben Sie `Reset` *PropertyName* und `ShouldSerialize` *PropertyName* Methoden. Verwenden Sie nicht beide.  
   
  Die `Reset` *PropertyName* Methode legt eine Eigenschaft auf den Standardwert fest, wie im folgenden Codefragment dargestellt.  
   
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Verfügt eine Eigenschaft keine `Reset` -Methode ist nicht mit gekennzeichnet eine <xref:System.ComponentModel.DefaultValueAttribute>, und verfügt nicht über einen Standardwert in der Deklaration der `Reset` -Option für diese Eigenschaft, klicken Sie im Kontextmenü des deaktiviert ist der **Eigenschaften** Fenster von Windows Forms-Designer in Visual Studio.  
+>  Wenn eine Eigenschaft keine `Reset` -Methode ist nicht mit gekennzeichnet eine <xref:System.ComponentModel.DefaultValueAttribute>, und verfügt nicht über einen Standardwert, der in der Deklaration angegeben die `Reset` option für diese Eigenschaft, im Kontextmenü des deaktiviert ist der **Eigenschaften** Fenster der Windows Forms-Designer in Visual Studio.  
   
- Designer wie Visual Studio verwendet die `ShouldSerialize` *PropertyName* Methode zum Überprüfen, ob eine Eigenschaft ihren Standardwert geändert hat und Schreiben von Code in das Formular nur, wenn eine Eigenschaft geändert wird, sodass für eine effizientere Code die Generierung. Zum Beispiel:  
+ Verwenden Sie die Designer wie Visual Studio die `ShouldSerialize` *PropertyName* Methode, um zu überprüfen, ob eine Eigenschaft von seinem Standardwert geändert hat und Code schreiben, in das Formular nur, wenn eine Eigenschaft geändert wird, sodass für eine effizientere Code die Generierung. Zum Beispiel:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -141,9 +141,9 @@ public class MyControl : Control {
 }  
 ```  
   
- In diesem Fall, selbst wenn der Wert der privaten Variablen zugreifen der `MyFont` Eigenschaft ist `null`, Eigenschaftenbrowser zeigt keine `null`; stattdessen zeigt der <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft des übergeordneten Elements, wenn er nicht ist `null`, Der Standardwert <xref:System.Windows.Forms.Control.Font%2A> Wert im definierten <xref:System.Windows.Forms.Control>. Daher ist der Standardwert für `MyFont` kann nicht einfach festgelegt werden, und ein <xref:System.ComponentModel.DefaultValueAttribute> kann nicht auf diese Eigenschaft angewendet werden. Stattdessen die `ShouldSerialize` und `Reset` -Methode müssen implementiert werden, für die `MyFont` Eigenschaft.  
+ In diesem Fall, auch wenn der Wert der privaten Variablen zugreifen der `MyFont` -Eigenschaft ist `null`, der Eigenschaftenbrowser zeigt keine `null`; stattdessen wird die <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft des übergeordneten Elements, wenn er nicht ist `null`, Der Standardwert <xref:System.Windows.Forms.Control.Font%2A> in definierten <xref:System.Windows.Forms.Control>. Daher ist der Standardwert für `MyFont` kann nicht einfach festgelegt werden, und ein <xref:System.ComponentModel.DefaultValueAttribute> nicht auf diese Eigenschaft angewendet werden. Stattdessen die `ShouldSerialize` und `Reset` -Methode müssen implementiert werden, für die `MyFont` Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Definieren einer Eigenschaft](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a>Siehe auch
+- [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
+- [Definieren einer Eigenschaft](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
+- [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)

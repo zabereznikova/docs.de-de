@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2462d1de9f1b5f94f2581c1a06ca2987712fd7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c4d4f5d85fb076748b3f8aae498f024804fb0b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492363"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2-Schnittstelle
-Erweitert die "ICorDebugValue"-Schnittstelle, um "ICorDebugType"-Objekte unterstützen.  
+Erweitert die Schnittstelle "ICorDebugValue", um Unterstützung für "ICorDebugType"-Objekte bereitzustellen.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetExactType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Ruft einen Schnittstellenzeiger auf eine `ICorDebugType` -Objekt, das stellt die <xref:System.Type> dieses Werts.|  
+|[GetExactType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Ruft einen Schnittstellenzeiger auf ein `ICorDebugType` -Objekt, das stellt die <xref:System.Type> dieses Werts.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -38,7 +38,7 @@ Erweitert die "ICorDebugValue"-Schnittstelle, um "ICorDebugType"-Objekte unterst
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -46,7 +46,7 @@ Erweitert die "ICorDebugValue"-Schnittstelle, um "ICorDebugType"-Objekte unterst
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
-    
- [ICorDebugValue3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugValue3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)

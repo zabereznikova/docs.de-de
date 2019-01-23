@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491284"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl-Enumeration
 Enthält Werte, die Funktionen zur Implementierung von Methoden beschreiben.  
@@ -59,28 +59,28 @@ typedef enum CorMethodImpl {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Flags, die Codetyp beschreiben.|  
-|`miIL`|Gibt an, dass die Implementierung der Methode Microsoft intermediate Language (MSIL).|  
+|`miIL`|Gibt an, dass die methodenimplementierung Microsoft intermediate Language (MSIL).|  
 |`miNative`|Gibt an, dass die Methodenimplementierung nativ ist.|  
-|`miOPTIL`|Gibt an, dass die Implementierung der Methode OPTIL.|  
-|`miRuntime`|Gibt an, dass die Implementierung der Methode durch die common Language Runtime bereitgestellt werden.|  
-|`miManagedMask`|Flags, die angeben, ob der Code verwaltet oder nicht verwaltet wird.|  
-|`miUnmanaged`|Gibt an, dass die Implementierung der Methode nicht verwalteter.|  
-|`miManaged`|Gibt an, dass die Implementierung der Methode verwaltet wird.|  
-|`miForwardRef`|Gibt an, dass die Methode definiert ist. Dieses Flag wird in erster Linie hinsichtlich der Merge-Szenarien verwendet.|  
-|`miPreserveSig`|Gibt an, dass die Methodensignatur für die ein HRESULT-Konvertierung nicht geändert werden kann.|  
-|`miInternalCall`|Reserviert für interne Verwendung durch die common Language Runtime.|  
-|`miSynchronized`|Gibt an, dass die Methode Singlethread-Methodentext ist.|  
+|`miOPTIL`|Gibt an, dass die methodenimplementierung OPTIL.|  
+|`miRuntime`|Gibt an, dass die methodenimplementierung von der common Language Runtime bereitgestellt wird.|  
+|`miManagedMask`|Flags, die angibt, ob der Code verwaltet oder nicht verwaltet wird.|  
+|`miUnmanaged`|Gibt an, dass die methodenimplementierung nicht verwaltet ist.|  
+|`miManaged`|Gibt an, dass die methodenimplementierung verwaltet wird.|  
+|`miForwardRef`|Gibt an, dass die Methode definiert ist. Dieses Flag wird in erster Linie in der Merge-Szenarien verwendet.|  
+|`miPreserveSig`|Gibt an, dass die Signatur der Methode für eine Konvertierung von HRESULT nicht geändert werden kann.|  
+|`miInternalCall`|Durch die common Language Runtime können Sie für die interne Verwendung reserviert.|  
+|`miSynchronized`|Gibt an, dass die Methode mit Textkörpers Single-Thread.|  
 |`miNoInlining`|Gibt an, dass die Methode nicht intern sein kann.|  
-|`miAggressiveInlining`|Gibt an, dass die Methode möglichst inline gesetzt werden soll.|  
+|`miAggressiveInlining`|Gibt an, dass die Methode nach Möglichkeit intern sein sollte.|  
 |`miNoOptimization`|Gibt an, dass die Methode nicht optimiert werden soll.|  
 |`miMaxMethodImplVal`|Der gültige Höchstwert für eine `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f2738d6e3a5fc75ab2f5714dc6644267e4fa1e29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495837"
 ---
 # <a name="extensible-objects"></a>Erweiterbare Objekte
 Das erweiterbare Objektmuster wird verwendet, um entweder vorhandene Laufzeitklassen um neue Funktionen zu erweitern oder um einem Objekt neue Zustandsfunktionen hinzuzufügen. Erweiterungen, die einem der erweiterbaren Objekte zugeordnet sind, ermöglichen es Verhalten in verschiedenen Phasen der Verarbeitung, auf gemeinsam verwendete Zustände und Funktionen zuzugreifen, die an ein zugängliches und allgemeines erweiterbares Objekt angefügt sind.  
@@ -40,7 +40,7 @@ where T : IExtensibleObject<T>
   
  Für das Objekt, das an <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> oder <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> übergeben wird, muss nicht <xref:System.ServiceModel.IExtension%601> gelten (beispielsweise können Sie jedes Objekt übergeben), aber bei der zurückgegebenen Erweiterung handelt es sich um <xref:System.ServiceModel.IExtension%601>.  
   
- Wenn keine Erweiterung in der Auflistung ein <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> gibt null zurück, und <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> eine leere Auflistung zurück. Wenn mehrere Erweiterungen <xref:System.ServiceModel.IExtension%601> implementieren, gibt <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> eine davon zurück. Der von <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> zurückgegebene Wert ist eine Momentaufnahme.
+ Wenn keine Erweiterung in der Auflistung eine <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> null zurück, und <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> eine leere Auflistung zurück. Wenn mehrere Erweiterungen <xref:System.ServiceModel.IExtension%601> implementieren, gibt <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> eine davon zurück. Der von <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> zurückgegebene Wert ist eine Momentaufnahme.
   
  Es gibt zwei Hauptszenarios. Beim ersten Szenario wird die <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A>-Eigenschaft als typbasiertes Wörterbuch verwendet, um den Zustand für ein Objekt einzufügen und auf diese Weise eine andere Komponente in die Lage zu versetzen, anhand des Typs danach zu suchen.  
   
@@ -57,7 +57,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> – Diese Klasse stellt die Vorgangsinformationen dar, die die Laufzeit für jeden Vorgang aufzeichnet.  Dazu gehören auch Informationen wie Header von eingehenden Nachrichten, Eigenschaften von eingehenden Nachrichten, die eingehende Sicherheitsidentität und andere Informationen.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.OperationContext> erweitern oder den Zustand für jeden Vorgang einzeln speichern.  
   
--   <xref:System.ServiceModel.IContextChannel> – Diese Schnittstelle ermöglicht die Untersuchung der einzelnen Zustände für die Kanäle und Proxys, die von der WCF-Laufzeit erstellt.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.IClientChannel> erweitern oder das Verhalten verwenden, um den Zustand für jeden Kanal einzeln zu speichern.  
+-   <xref:System.ServiceModel.IContextChannel> – Diese Schnittstelle ermöglicht die Untersuchung der jeweiligen Zustand für die Kanäle und Proxys, die von den WCF-Laufzeit erstellt.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.IClientChannel> erweitern oder das Verhalten verwenden, um den Zustand für jeden Kanal einzeln zu speichern.  
   
 -  
   
@@ -65,7 +65,7 @@ where T : IExtensibleObject<T>
   
  [!code-csharp[IInstanceContextInitializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/iinstancecontextinitializer/cs/initializer.cs#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.IExtensibleObject%601>  
- <xref:System.ServiceModel.IExtension%601>  
- <xref:System.ServiceModel.IExtensionCollection%601>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.IExtensibleObject%601>
+- <xref:System.ServiceModel.IExtension%601>
+- <xref:System.ServiceModel.IExtensionCollection%601>

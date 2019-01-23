@@ -16,17 +16,17 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6b320d21c33fa798ca2fd3ef5a04363d141f99f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b56644cdf44ac5bd9c755d1ee7ba7013c0245293
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492311"
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces in Visual Basic
 Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys können mehrere Namespaces enthalten, die wiederum andere Namespaces enthalten können. Namespaces vermeiden Mehrdeutigkeit und vereinfachen Verweise, wenn Sie große Gruppen von Objekten verwenden, zum Beispiel Klassenbibliotheken.  
   
- Zum Beispiel definiert [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] die <xref:System.Windows.Forms.ListBox>-Klasse im <xref:System.Windows.Forms?displayProperty=nameWithType>-Namespace. Das folgende Codefragment zeigt, wie eine Variable mit dem vollqualifizierten Namen für diese Klasse deklariert wird:  
+ Zum Beispiel definiert [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] die <xref:System.Windows.Forms.ListBox> -Klasse im <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace. Das folgende Codefragment zeigt, wie eine Variable mit dem vollqualifizierten Namen für diese Klasse deklariert wird:  
   
  [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
@@ -66,7 +66,7 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
  Innerhalb eines Namespace können Sie Elemente wie Module, Schnittstellen, Klassen, Delegaten, Enumerationen, Strukturen und andere Namespaces definieren. Sie können keine Elemente wie Eigenschaften, Prozeduren, Variablen und Ereignisse auf Namespaceebene definieren. Diese Elemente müssen in Containern, beispielsweise in Modulen, Strukturen oder Klassen deklariert werden.  
   
 ## <a name="global-keyword-in-fully-qualified-names"></a>Das Schlüsselwort „global“ in vollqualifizierten Namen  
- Wenn Sie eine geschachtelte Hierarchie aus Namespaces definiert haben, kann der Zugriff auf den <xref:System?displayProperty=nameWithType>-Namespace von .NET Framework für Code innerhalb dieser Hierarchie blockiert sein. Das folgende Beispiel veranschaulicht eine Hierarchie, in der der `SpecialSpace.System`-Namespace den Zugriff auf <xref:System?displayProperty=nameWithType> blockiert.  
+ Wenn Sie eine geschachtelte Hierarchie aus Namespaces definiert haben, kann der Zugriff auf den <xref:System?displayProperty=nameWithType> -Namespace von .NET Framework für Code innerhalb dieser Hierarchie blockiert sein. Das folgende Beispiel veranschaulicht eine Hierarchie, in der der `SpecialSpace.System` -Namespace den Zugriff auf <xref:System?displayProperty=nameWithType>blockiert.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -81,7 +81,7 @@ Namespace SpecialSpace
 End Namespace  
 ```  
   
- Der Visual Basic-Compiler kann daher den Verweis auf <xref:System.Int32?displayProperty=nameWithType> nicht auflösen, da `SpecialSpace.System` kein `Int32` definiert. Sie können das Schlüsselwort `Global` verwenden, um die Qualifikationskette in der äußersten Ebene der .NET Framework-Klassenbibliothek zu beginnen. Dadurch können Sie den <xref:System?displayProperty=nameWithType>-Namespace oder irgendeinen anderen Namespace in der Klassenbibliothek angeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Der Visual Basic-Compiler kann daher den Verweis auf <xref:System.Int32?displayProperty=nameWithType>nicht auflösen, da `SpecialSpace.System` kein `Int32`definiert. Sie können das Schlüsselwort `Global` verwenden, um die Qualifikationskette in der äußersten Ebene der .NET Framework-Klassenbibliothek zu beginnen. Dadurch können Sie den <xref:System?displayProperty=nameWithType> -Namespace oder irgendeinen anderen Namespace in der Klassenbibliothek angeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Namespace SpecialSpace  
@@ -109,7 +109,7 @@ End Namespace
   
  In einer Namespace-Deklaration kann `Global` nicht in einem anderen Namespace geschachtelt sein.  
   
- Sie können die [Anwendungsseite, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) anzeigen und Ändern der **Stamm-Namespace** des Projekts.  Bei neuen Projekten erhält der **Stammnamespace** standardmäßig den Namen des Projekts. Damit `Global` der Namespace der obersten Ebene ist, können Sie den **Stammnamespace** -Eintrag löschen, so dass das Feld leer ist. Löschen des **Stammnamespace** beseitigt die Notwendigkeit des Schlüsselworts `Global` in Namespacedeklarationen.  
+ Sie können [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic) zum Anzeigen und Ändern des **Stammnamespace** des Projekts verwenden.  Bei neuen Projekten erhält der **Stammnamespace** standardmäßig den Namen des Projekts. Damit `Global` der Namespace der obersten Ebene ist, können Sie den **Stammnamespace** -Eintrag löschen, so dass das Feld leer ist. Löschen des **Stammnamespace** beseitigt die Notwendigkeit des Schlüsselworts `Global` in Namespacedeklarationen.  
   
  Wenn eine `Namespace` -Anweisung einen Namen deklariert, der auch ein Namespace in .NET Framework ist, ist der .NET Framework-Namespace nicht mehr verfügbar, wenn das Schlüsselwort `Global` nicht in einem vollständig qualifizierten Namen verwendet wird. Um den Zugriff auf diesen .NET Framework-Namespace ohne die Verwendung des Schlüsselworts `Global` zu aktivieren, können Sie das Schlüsselwort `Global` in die `Namespace` -Anweisung aufnehmen.  
   
@@ -121,10 +121,10 @@ End Namespace
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Windows.Forms.ListBox>  
-- <xref:System.Windows.Forms?displayProperty=nameWithType>  
-- [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
-- [Gewusst wie: Erstellen und Verwenden von Assemblys über die Befehlszeile](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)  
-- [Verweise und die Imports-Anweisung](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
-- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
-- [Schreiben von Code in Office-Projektmappen](/visualstudio/vsto/writing-code-in-office-solutions)
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms?displayProperty=nameWithType>
+- [Assemblys und der globale Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile](../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Verweise und die Imports-Anweisung](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Writing Code in Office Solutions](/visualstudio/vsto/writing-code-in-office-solutions)

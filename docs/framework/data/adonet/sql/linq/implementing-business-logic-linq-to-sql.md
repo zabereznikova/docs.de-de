@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496087"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementieren von Geschäftslogik (LINQ to SQL)
 Der Begriff „Geschäftslogik“ bezieht sich in diesem Thema auf benutzerdefinierte Regeln oder Validierungstests, die auf Daten angewendet werden, bevor diese eingefügt, aktualisiert oder aus der Datenbank gelöscht werden. Der Begriff Geschäftslogik wird zeitweise synonym mit "Geschäftsregeln" oder "Domänenlogik" verwendet. In N-Tier-Anwendungen wird Geschäftslogik normalerweise als logische Ebene bezeichnet, die somit unabhängig von der Präsentationsebene oder Datenzugriffsebene geändert werden kann. Die Geschäftslogik kann von der Datenzugriffsebene aufgerufen werden, bevor oder nachdem Daten in der Datenbank aktualisiert, eingefügt oder gelöscht werden.  
@@ -177,14 +177,14 @@ partial class Customer
   
  Weitere Informationen darüber, wie Sie Ihrer Anwendung mithilfe von partiellen Methoden Geschäftslogik hinzufügen, finden Sie in den folgenden Themen:  
   
- [Gewusst wie: Hinzufügen von Validierungen zu Entitätsklassen](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
+ [Vorgehensweise: Hinzufügen von Validierungen zu Entitätsklassen](/visualstudio/data-tools/how-to-add-validation-to-entity-classes)  
   
  [Exemplarische Vorgehensweise: Anpassen des Einfüge-, Update- und Löschverhaltens in Entitätsklassen](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Exemplarische Vorgehensweise: Hinzufügen einer Validierung zu Entitätsklassen](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [Exemplarische Vorgehensweise: Hinzufügen von Validierungen zu Entitätsklassen](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## <a name="see-also"></a>Siehe auch  
- [Partielle Klassen und Methoden](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
- [Partielle Methoden](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
- [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+## <a name="see-also"></a>Siehe auch
+- [Partielle Klassen und Methoden](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Partielle Methoden](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+- [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
+- [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

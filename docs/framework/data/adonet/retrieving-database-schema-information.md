@@ -2,12 +2,12 @@
 title: Abrufen von Datenbankschemainformationen
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8a076ca792ee1b4b2194b778c51fefbd0bb19bd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494027"
 ---
 # <a name="retrieving-database-schema-information"></a>Abrufen von Datenbankschemainformationen
 Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abgerufen. Schemasuche können Anwendungen anfordern, dass verwaltete Anbieter suchen und Zurückgeben von Informationen über das Datenbankschema, auch bekannt als *Metadaten*, einer bestimmten Datenbank. Verschiedene Schemaelemente von Datenbanken (z. B. Tabellen, Spalten und gespeicherte Prozeduren) werden über Schemaauflistungen verfügbar gemacht. Jede Schemaauflistung enthält eine Vielzahl von Schemainformationen, die für den verwendeten Anbieter spezifisch sind.  
@@ -71,6 +71,6 @@ Die Schemainformationen aus einer Datenbank werden mithilfe der Schemasuche abge
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
  Beschreibt die **GetSchemaTable** Methode der <xref:System.Data.SqlClient.SqlDataReader> Klasse.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Vereinfachte Konfiguration
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f6998b17747b5d250827066a41373d81c243773c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498358"
 ---
 # <a name="simplified-configuration"></a>Vereinfachte Konfiguration
 Konfigurieren von Windows Communication Foundation (WCF)-Diensten kann eine komplexe Aufgabe sein. Es gibt viele verschiedene Optionen, und es ist nicht immer einfach zu bestimmen, welche Einstellungen erforderlich sind. Konfigurationsdateien erhöhen, zwar die Flexibilität von WCF-Diensten sind sie auch die Quelle für viele schwierig, Probleme zu finden. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] behandelt diese Probleme und gibt Benutzern die Möglichkeit, den Umfang und die Komplexität der Dienstkonfiguration zu reduzieren.  
@@ -113,10 +113,10 @@ Konfigurieren von Windows Communication Foundation (WCF)-Diensten kann eine komp
 > [!IMPORTANT]
 >  Diese Funktion ist nur für die WCF-Dienstkonfiguration, nicht für die Clientkonfiguration relevant. WCF-Clientkonfigurationen werden meistens von einem Tool, z. B. svcutil.exe, oder durch Hinzufügen eines Dienstverweises aus Visual Studio generiert. Wenn Sie einen WCF-Client manuell konfigurieren müssen Sie Hinzufügen einer \<Client >-Element an der Konfiguration, und geben Sie alle Endpunkte, die Sie aufrufen möchten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md)  
- [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [Konfigurieren von WCF-Diensten in Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+## <a name="see-also"></a>Siehe auch
+- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Konfigurieren von Bindungen für Dienste](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md)
+- [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [Konfigurieren von WCF-Diensten in Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen in ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497458"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Verbindungszeichenfolgen in ADO.NET Entity Framework
 Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Parameter von einem Datenanbieter an eine Datenquelle übergeben werden. Die Syntax ist abhängig vom Datenanbieter, und die Verbindungszeichenfolge wird beim Versuch analysiert, eine Verbindung herzustellen. Von Entity Framework verwendete Verbindungszeichenfolgen enthalten Informationen zum Herstellen einer Verbindung mit dem zugrunde liegenden ADO.NET-Datenanbieter, der Entity Framework unterstützt. Sie enthalten auch Informationen zu den erforderlichen Modell- und Zuordnungsdateien.  
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Option|Beschreibung|  
 |-|-|  
-|`assemblyFullName`|Der vollständige Name einer Assembly mit der eingebetteten Ressource. Der Name besteht wie folgt aus dem einfachen Namen, dem Versionsnamen, der unterstützten Kultur und dem öffentlichen Schlüssel:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Ressourcen können in jede Assembly eingebettet werden, auf die von der Anwendung zugegriffen werden kann.<br /><br /> Wenn Sie ein Platzhalterzeichen angeben (\*) für `assemblyFullName`, die Entity Framework-Laufzeit wird nach Ressourcen in den folgenden Speicherorten und in der folgenden Reihenfolge gesucht:<br /><br /> 1.  Die aufrufende Assembly.<br />2.  Die Assemblys, auf die verwiesen wird.<br />3.  Die Assemblys im BIN-Verzeichnis einer Anwendung.<br /><br /> Wenn sich die Dateien nicht in einem dieser Speicherorte befinden, wird eine Ausnahme ausgelöst. **Hinweis:** bei Verwendung von Platzhalterzeichen (*) hat das Entity Framework, allen Assemblys für Ressourcen, mit dem richtigen Namen zu suchen. Wenn anstelle des Platzhalters der Assemblyname eingegeben wird, verbessert sich die Suchleistung.|  
+|`assemblyFullName`|Der vollständige Name einer Assembly mit der eingebetteten Ressource. Der Name besteht wie folgt aus dem einfachen Namen, dem Versionsnamen, der unterstützten Kultur und dem öffentlichen Schlüssel:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Ressourcen können in jede Assembly eingebettet werden, auf die von der Anwendung zugegriffen werden kann.<br /><br /> Wenn Sie ein Platzhalterzeichen angeben (\*) für `assemblyFullName`, die Entity Framework-Laufzeit wird nach Ressourcen in den folgenden Speicherorten und in der folgenden Reihenfolge gesucht:<br /><br /> 1.  Die aufrufende Assembly.<br />2.  Die Assemblys, auf die verwiesen wird.<br />3.  Die Assemblys im BIN-Verzeichnis einer Anwendung.<br /><br /> Wenn sich die Dateien nicht in einem dieser Speicherorte befinden, wird eine Ausnahme ausgelöst. **Hinweis**:  Wenn Sie Platzhalter verwenden (*), sucht Entity Framework in allen Assemblys nach Ressourcen mit entsprechendem Namen. Wenn anstelle des Platzhalters der Assemblyname eingegeben wird, verbessert sich die Suchleistung.|  
 |`resourceName`|Der Name der enthaltenen Ressource, z. B. AdvendtureWorksModel.csdl. Die Metadatendienste suchen nur nach Dateien oder Ressourcen mit folgenden Erweiterungen: CSDL, SSDL oder MSL. Wenn `resourceName` nicht angegeben wurde, werden alle Metadatenressourcen geladen. Die Ressourcen sollten innerhalb einer Assembly eindeutige Namen haben. Wenn in der Assembly mehrere Dateien mit gleichem Namen in verschiedenen Verzeichnissen definiert sind, muss für den `resourceName` die Ordnerstruktur vor dem Ressourcennamen angegeben werden, z. B. Ordnername.Dateiname.csdl.<br /><br /> `resourceName` ist nicht erforderlich, wenn für `assemblyFullName` ein Platzhalter (*) angegeben wird.|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  Die Auflösung der `DataDirectory`-Ersatzzeichenfolge und des ~-Operators ist nicht rekursiv. Wenn `DataDirectory` z. B. das `~`-Zeichen enthält, tritt eine Ausnahme auf. Dies verhindert eine unendliche Rekursion.  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Datenanbietern](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Verwalten von Verbindungen und Transaktionen](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>Siehe auch
+- [Arbeiten mit Datenanbietern](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Verwalten von Verbindungen und Transaktionen](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/connection-strings.md)

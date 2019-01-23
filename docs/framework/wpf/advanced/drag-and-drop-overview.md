@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 06c74548ebe9d01a15cea72f409eaa6df9c8d6de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492572"
 ---
 # <a name="drag-and-drop-overview"></a>Übersicht über Drag & Drop
 Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen. Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus (oder eines anderen Zeigegeräts) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet.  
@@ -31,7 +31,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Die Aktionen, die im Einzelnen im Rahmen von Drag & Drop-Vorgängen ausgeführt werden, sind anwendungsspezifisch und werden oft durch den Kontext festgelegt.  Beispielsweise bewirkt das Ziehen einer Auswahl von Dateien von einem Ordner auf einen anderen auf dem gleichen Speichergerät standardmäßig ein Verschieben der Dateien, während die Dateien beim Ziehen von einer [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)]-Freigabe auf einen lokalen Ordner standardmäßig kopiert werden.  
   
- Die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zur Verfügung gestellten Drag & Drop-Möglichkeiten sind äußerst flexibel und anpassbar, um eine große Bandbreite von Drag & Drop-Szenarien zu unterstützen.  Drag-and-Drop unterstützt das Bearbeiten von Objekten innerhalb einer einzelnen Anwendung oder zwischen verschiedenen Anwendungen. Drag & Drop zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen und anderen Windows ist ebenfalls vollständig unterstützt.  
+ Die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zur Verfügung gestellten Drag & Drop-Möglichkeiten sind äußerst flexibel und anpassbar, um eine große Bandbreite von Drag & Drop-Szenarien zu unterstützen.  Drag-and-Drop unterstützt das Bearbeiten von Objekten innerhalb einer einzelnen Anwendung oder zwischen verschiedenen Anwendungen. Ziehen und Ablegen zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und anderen Windows-Anwendungen wird ebenfalls vollständig unterstützt.  
   
  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können beliebige <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> an Drag & Drop-Vorgängen beteiligt sein. Die für Drag & Drop-Vorgänge erforderlichen Ereignisse und Methoden sind in der <xref:System.Windows.DragDrop>-Klasse definiert. Die Klassen <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> enthalten Aliase für die angefügten <xref:System.Windows.DragDrop>-Ereignisse, sodass ein geerbtes <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> in der Liste der Klassenelemente als Basiselement aufgeführt wird. Die an diese Ereignisse angefügten Ereignishandler werden an das zugrundeliegende angefügte <xref:System.Windows.DragDrop>-Ereignis angefügt und empfangen die gleiche Instanz der Ereignisdaten. Weitere Informationen finden Sie beim <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>-Ereignis.  
   
@@ -123,7 +123,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Drag & Drop-Beispiel  
- In diesem Abschnitt wird die Implementierung von Drag & Drop für ein <xref:System.Windows.Shapes.Ellipse>-Element beschrieben. Die <xref:System.Windows.Shapes.Ellipse> stellt sowohl eine Ziehquelle als auch ein Ablageziel dar. Die übertragenen Daten sind die Zeichenfolgendarstellung der <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft der Ellipse. Der folgende XAML-Code zeigt das <xref:System.Windows.Shapes.Ellipse>-Element und die mit Drag & Drop zusammenhängenden Ereignisse, die es verarbeitet. Eine ausführliche Anleitung zum Implementieren der Drag & Drop-Funktion finden Sie unter [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ In diesem Abschnitt wird die Implementierung von Drag & Drop für ein <xref:System.Windows.Shapes.Ellipse>-Element beschrieben. Die <xref:System.Windows.Shapes.Ellipse> stellt sowohl eine Ziehquelle als auch ein Ablageziel dar. Die übertragenen Daten sind die Zeichenfolgendarstellung der <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft der Ellipse. Der folgende XAML-Code zeigt das <xref:System.Windows.Shapes.Ellipse>-Element und die mit Drag & Drop zusammenhängenden Ereignisse, die es verarbeitet. Führen Sie die Schritte zum Implementieren von Drag & Drop, finden Sie unter [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
  [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
@@ -216,8 +216,8 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
  [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Clipboard>  
- [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
- [Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Clipboard>
+- [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
+- [Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop.md)

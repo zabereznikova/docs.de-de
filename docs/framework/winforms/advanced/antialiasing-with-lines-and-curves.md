@@ -9,42 +9,42 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 364dffe3b4b63e3a369f87dd851ab54a975f881a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496243"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Antialiasing bei Linien und Kurven
-Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie zeichnen, Sie geben Sie den Startpunkt und den Endpunkt der Linie, aber Sie müssen keine keine Informationen zu den einzelnen Pixel in der Zeile bereit. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile auf die jeweiligen Ausgabegeräts angezeigt.  
+Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie zu zeichnen, Sie geben Sie den Startpunkt und Endpunkt der Linie, aber Sie müssen keine Informationen zu den einzelnen Pixel in der Zeile zu bieten. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile in der jeweiligen Ausgabegeräts angezeigt.  
   
 ## <a name="aliasing"></a>Aliasing  
- Betrachten Sie die gerade rote Linie, die an dem Punkt (4, 2) auf den Punkt (16, 10) geht. Angenommen Sie, das Koordinatensystem seinen Ursprung in der oberen linken Ecke hat und dass die Maßeinheit Pixel ist. Darüber hinaus vorausgesetzt, dass die x-Achse nach rechts und die y-Achse Punkte nach unten. Die folgende Abbildung zeigt eine vergrößerte Ansicht der die rote Linie, die auf einem mehrfarbigen Hintergrund gezeichnet wird.  
+ Erwägen Sie die gerade rote Linie, die ab dem Punkt ("4", "2") gesendet wird, zu dem Punkt ("16", "10"). Angenommen Sie das Koordinatensystem seinen Ursprung in der oberen linken Ecke hat und die Maßeinheit ist Pixel. Darüber hinaus vorausgesetzt, dass die x-Achse nach rechts und die Punkte für die y-Achse nach unten zeigt. Die folgende Abbildung zeigt eine vergrößerte Ansicht der roten Linie vor einem Hintergrund mehrfarbige.  
   
- ![Befehlszeile, ohne Antialiasing](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.gif "AboutGdip02_Art33")  
+ ![Zeile, die ohne Antialiasing](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.gif "AboutGdip02_Art33")  
   
- Die roten Pixel, die zum Rendern der Zeile verwendeten sind nicht transparent. Es gibt keine teilweise transparenten Pixel in der Zeile ein. Diese Art der Darstellung der Linie gibt der Zeile einer gezackten Darstellung und sieht sich ähnlich wie eine Treppe. Dieses Verfahren, um eine Zeile mit einer Treppe darzustellen Aliasing aufgerufen wird. Treppe ist ein Alias für die theoretische Linie.  
+ Die roten Pixel verwendet, um die Linie zu rendern sind nicht transparent. Es gibt keine teilweise transparente Pixel in der Zeile. Diese Art der Darstellung der Linie gibt der Zeile einer gezackten Darstellung, und die Zeile ähnelt einer Treppe. Dieses Verfahren für die Darstellung einer Linie mit einer Treppe wird Aliasing bezeichnet. der Treppe ist ein Alias für der theoretischen Linie.  
   
-## <a name="antialiasing"></a>Antialiasing (Antialiasing)  
- Eine komplexere Technik zum Rendern einer Zeile wird teilweise transparente Pixel zusammen mit nicht transparenten Pixel. Reines Rot Pixel festgelegt werden oder eine Mischung aus Rot und die Farbe des Hintergrunds, je nachdem, wie weit sie sind in der Zeile. Diese Art des Renderings Antialiasing aufgerufen wird und führt zu einer Zeile, die als glatter Tabellenlayout wahrgenommen. Die folgende Abbildung zeigt, wie bestimmte Pixel mit Hintergrund aus, um eine Zeile mit Antialiasing erzeugen gemischt werden.  
+## <a name="antialiasing"></a>Antialiasing  
+ Eine anspruchsvollere Technik für das Rendern einer Zeile umfasst die teilweise transparente Pixel zusammen mit nicht transparenten Pixel. Pixel auf reine Rot festgelegt, oder eine Mischung aus Red Team und die Farbe des Hintergrunds, je nachdem, wie weit sie sind in der Zeile. Dieser Typ, der Rendering Antialiasing wird aufgerufen, und führt eine Linie, die das menschliche Auge als glatter wahrgenommen. Die folgende Abbildung zeigt, wie bestimmte Pixel vermischt werden, mit dem Hintergrund, um eine Zeile mit Antialiasing zu erzeugen.  
   
  ![Antialiasing bei einer Linie](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art34.gif "AboutGdip02_Art34")  
   
- Antialiasing (Antialiasing), das auch als Glättung kann auch auf Kurven angewendet werden. Die folgende Abbildung zeigt eine vergrößerte Ansicht einer geglätteten Ellipse.  
+ Antialiasing, das auch als Glättung kann auch auf Kurven angewendet werden. Die folgende Abbildung zeigt eine vergrößerte Ansicht einer geglätteten Ellipse.  
   
  ![Antialiasing bei Kurven](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art35.gif "AboutGdip02_Art35")  
   
- Die folgende Abbildung zeigt die gleiche Ellipse in der Originalgröße an, ohne Antialiasing (Antialiasing) und einmal mit Antialiasing (Antialiasing).  
+ Die folgende Abbildung zeigt die gleiche Ellipse in die tatsächliche Größe ohne Antialiasing und einmal mit Antialiasing.  
   
  ![Antialiasingbeispiel](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02_Art36")  
   
- Zum Zeichnen von Linien und Kurven mit Antialiasing, erstellen Sie eine Instanz von der <xref:System.Drawing.Graphics> Klasse, und legen seine <xref:System.Drawing.Graphics.SmoothingMode%2A> Eigenschaft <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> oder <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>. Dann rufen Sie eine der Zeichnung Methoden, die gleichen <xref:System.Drawing.Graphics> Klasse.  
+ Um Linien und Kurven mit Antialiasing zu zeichnen, erstellen Sie eine Instanz des der <xref:System.Drawing.Graphics> Klasse und legen Sie dessen <xref:System.Drawing.Graphics.SmoothingMode%2A> Eigenschaft <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> oder <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>. Dann rufen Sie eine der Zeichenmethoden der, die gleichen <xref:System.Drawing.Graphics> Klasse.  
   
  [!code-csharp[LinesCurvesAndShapes#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#81)]
  [!code-vb[LinesCurvesAndShapes#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Gewusst wie: Verwenden der Bildkantenglättung mit Text](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
+- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
+- [Vorgehensweise: Verwenden der Bildkantenglättung mit Text](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

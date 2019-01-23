@@ -2,12 +2,12 @@
 title: '&lt;security&gt; von &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: a7bb6816c5b34e608b5010aba308ccd9d870d398
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6a07fb258a0a7c01293eddaf1eab4f82c4f632cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145896"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493754"
 ---
 # <a name="ltsecuritygt-of-ltws2007httpbindinggt"></a>&lt;security&gt; von &lt;ws2007HttpBinding&gt;
 Stellt die Sicherheitseinstellungen der Verwendung der [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.  
@@ -16,7 +16,7 @@ Stellt die Sicherheitseinstellungen der Verwendung der [ \<ws2007HttpBinding >](
 \<bindings>  
 \<ws2007HttpBinding>  
 \<binding>  
-\<Sicherheit >  
+\<security>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ Stellt die Sicherheitseinstellungen der Verwendung der [ \<ws2007HttpBinding >](
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`mode`|– Optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
+|`mode`|-   Optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
@@ -59,7 +59,7 @@ Stellt die Sicherheitseinstellungen der Verwendung der [ \<ws2007HttpBinding >](
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md)|Definiert die Sicherheitseinstellungen für den Transport. Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>-Typ. Diese Einstellungen werden nur übernommen, wenn der Modus auf Transport festgelegt ist.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md)|Definiert die Sicherheitseinstellungen für den Transport. Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>-Typ. Diese Einstellungen werden nur übernommen, wenn der Modus auf Transport festgelegt ist.|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-ws2007httpbinding.md)|Definiert die Sicherheitseinstellungen für die Nachricht. Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>-Typ. Diese Einstellungen werden nicht übernommen, wenn der Modus auf Transport festgelegt ist.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -71,14 +71,14 @@ Stellt die Sicherheitseinstellungen der Verwendung der [ \<ws2007HttpBinding >](
 ## <a name="remarks"></a>Hinweise  
  Diese Element ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.WSHttpSecurity>  
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- <xref:System.ServiceModel.BasicHttpSecurity>  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.WSHttpSecurity>
+- <xref:System.ServiceModel.WSHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- <xref:System.ServiceModel.BasicHttpSecurity>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

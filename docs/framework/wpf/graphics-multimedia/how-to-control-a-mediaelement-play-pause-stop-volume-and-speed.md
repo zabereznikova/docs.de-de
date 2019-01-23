@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)'
+title: 'Vorgehensweise: Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: beeddc658f16d8b52142a8a79f9c61e4f7070b01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9939c2d3d740bfe9296c23e47ef8ea09d837e01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498920"
 ---
-# <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Gewusst wie: Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)
-Im folgende Beispiel wird gezeigt, wie zum Steuern der Wiedergabe von Medien mit einem <xref:System.Windows.Controls.MediaElement>. Im Beispiel wird einen einfacher Media-Player, mit dem Sie wiedergeben, anhalten, beenden, und überspringen hin-und in den Medien sowie passen Sie das Volume und Geschwindigkeit Verhältnis erstellt.  
+# <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Vorgehensweise: Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)
+Das folgende Beispiel zeigt, wie Sie steuern die Wiedergabe von Medien mit einer <xref:System.Windows.Controls.MediaElement>. Das Beispiel erstellt einen einfachen MediaPlayer, mit dem Sie wiedergeben, anhalten, beenden, und überspringen hin und her, auf dem Medium als auch das Verhältnis Lautstärke und Geschwindigkeit anpassen.  
   
 ## <a name="example"></a>Beispiel  
- Im nachstehenden Code wird die Benutzeroberfläche.  
+ Der folgende Code erstellt die Benutzeroberfläche.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Eigenschaft <xref:System.Windows.Controls.MediaElement> muss festgelegt werden, um `Manual` damit interaktiv zu beenden, Anhalten und Wiedergeben der Medien.  
+>  Die <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> Eigenschaft <xref:System.Windows.Controls.MediaElement> muss festgelegt werden, um `Manual` um interaktiv zu beenden, Anhalten und Wiedergeben der Medien.  
   
  [!code-xaml[MediaGallery_snip#MediaElementExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml#mediaelementexamplewholepage)]  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code implementiert die Funktionalität der Beispiel-UI-Steuerelemente. Die <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, und <xref:System.Windows.Controls.MediaElement.Stop%2A> Methoden bzw. wiedergeben, Anhalten und beenden die Medien verwendet werden. Ändern der <xref:System.Windows.Controls.MediaElement.Position%2A> Eigenschaft von der <xref:System.Windows.Controls.MediaElement> können Sie in den Medien zu überspringen, um. Schließlich die <xref:System.Windows.Controls.MediaElement.Volume%2A> und <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> Eigenschaften werden verwendet, um die Geschwindigkeit Volume und die Wiedergabe des Mediums anpassen.  
+ Der folgende Code implementiert die Funktionalität von der Beispiel-UI-Steuerelemente. Die <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, und <xref:System.Windows.Controls.MediaElement.Stop%2A> Methoden zum jeweils wiedergeben, Anhalten und beenden die Medien. Ändern der <xref:System.Windows.Controls.MediaElement.Position%2A> Eigenschaft der <xref:System.Windows.Controls.MediaElement> können Sie in den Medien zu überspringen, um. Zum Schluss die <xref:System.Windows.Controls.MediaElement.Volume%2A> und <xref:System.Windows.Controls.MediaElement.SpeedRatio%2A> Eigenschaften verwendet, um die Geschwindigkeit Volume und Wiedergabe des Mediums anzupassen.  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaElementExample.xaml.cs#codebehindmediaelementexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Steuern eines MediaElement mit einem Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)
+## <a name="see-also"></a>Siehe auch
+- [Steuern eines MediaElement mit einem Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)

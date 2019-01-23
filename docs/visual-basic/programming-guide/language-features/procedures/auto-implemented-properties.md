@@ -9,15 +9,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: bc83163a024bd50d3e256b4eb49861669f8c02c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495460"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Automatisch implementierte Eigenschaften (Visual Basic)
-*Automatisch implementierte Eigenschaften* ermöglichen es Ihnen, schnell eine Eigenschaft einer Klasse festlegen, ohne Code schreiben zu müssen `Get` und `Set` der Eigenschaft. Wenn Sie Code für eine automatisch implementierte Eigenschaft schreiben, erstellt der Visual Basic-Compiler automatisch ein privates Feld zum Speichern der Eigenschaftsvariablen zusätzlich zum Erstellen der zugeordneten `Get` und `Set` Prozeduren.  
+*Automatisch implementierte Eigenschaften* ermöglichen es Ihnen, schnell eine Eigenschaft einer Klasse festlegen, ohne Code schreiben, um `Get` und `Set` die-Eigenschaft. Wenn Sie Code für eine automatisch implementierte Eigenschaft schreiben, erstellt der Visual Basic-Compiler automatisch ein privates Feld zum Speichern der Eigenschaftsvariablen zusätzlich zum Erstellen der zugeordneten `Get` und `Set` Prozeduren.  
   
  Mit automatisch implementierten Eigenschaften kann eine Eigenschaft, einschließlich eines Standardwerts, in einer einzelnen Zeile deklariert werden. Im folgenden Beispiel werden drei Eigenschaftendeklarationen gezeigt.  
   
@@ -48,7 +48,7 @@ End Class
  Sie können die Eigenschaft mit Initialisierungsausdrücken zuweisen, wie im Beispiel gezeigt, oder Sie können die Eigenschaften im Konstruktor des enthaltenden Typs zuweisen.  Sie können jederzeit auf die dahinter liegenden Felder der Readonly-Eigenschaften zuweisen.  
   
 ## <a name="backing-field"></a>Dahinter liegendes Feld  
- Wenn Sie eine automatisch implementierte Eigenschaft deklarieren, erstellt Visual Basic automatisch ein ausgeblendetes privates Feld namens der *dahinter liegende Feld* auf den Eigenschaftswert enthält. Der dahinter liegende Feldname ist die automatisch implementierte Eigenschaft mit einem vorangestellten Unterstrich (_). Angenommen, Sie deklarieren eine automatisch implementierte Eigenschaft mit dem Namen `ID`, dann heißt das dahinter liegende Feld `_ID`. Wenn Sie ein Member der Klasse mit einschließen, das ebenfalls den Namen `_ID` trägt, erzeugen Sie einen Namenskonflikt und Visual Basic meldet einen Compilerfehler.  
+ Wenn Sie eine automatisch implementierte Eigenschaft deklarieren, erstellt Visual Basic automatisch ein ausgeblendetes privates Feld namens das *dahinter liegende Feld* den Wert der Eigenschaft enthält. Der dahinter liegende Feldname ist die automatisch implementierte Eigenschaft mit einem vorangestellten Unterstrich (_). Angenommen, Sie deklarieren eine automatisch implementierte Eigenschaft mit dem Namen `ID`, dann heißt das dahinter liegende Feld `_ID`. Wenn Sie ein Member der Klasse mit einschließen, das ebenfalls den Namen `_ID` trägt, erzeugen Sie einen Namenskonflikt und Visual Basic meldet einen Compilerfehler.  
   
  Das dahinter liegende Feld verfügt ebenfalls über die folgenden Eigenschaften:  
   
@@ -74,7 +74,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Eigenschaftendefinitionen, die Standardsyntax erfordern  
- Automatisch implementierte Eigenschaften sind praktisch und unterstützen viele Programmierszenarien. Es gibt jedoch Situationen, in dem Sie keine automatisch implementierte Eigenschaft verwenden und müssen stattdessen-Standard verwenden, oder *erweitert*, Eigenschaftensyntax.  
+ Automatisch implementierte Eigenschaften sind praktisch und unterstützen viele Programmierszenarien. Es gibt jedoch Situationen, in dem Sie eine automatisch implementierte Eigenschaft kann nicht verwendet und müssen stattdessen Standard verwenden, oder *erweitert*, Eigenschaftensyntax.  
   
  In diesem Fall müssen Sie eine erweiterte Eigenschaftsdefinition-Syntax verwenden, wenn Sie eine der folgenden durchführen möchten:  
   
@@ -93,10 +93,10 @@ End Class
 ## <a name="expanding-an-auto-implemented-property"></a>So erweitern Sie eine automatisch implementierte Eigenschaft  
  Wenn Sie eine automatisch implementierte Eigenschaft zu einer erweiterten Eigenschaft konvertieren müssen, die eine `Get` oder `Set` Prozedur enthält, dann kann der Visual Basic-Code-Editor automatisch die `Get` und `Set` Prozeduren und `End Property` -Anweisung für die Eigenschaft generieren. Der Code wird generiert, wenn Sie den Cursor auf einer leeren Zeile nach der `Property` -Anweisung, geben Sie einen `G` (für `Get`) oder ein `S` (für `Set`), und drücken Sie die EINGABETASTE. Der Visual Basic-Code-Editor generiert automatisch `Get` oder `Set` für schreibgeschützte und lesegeschützte Eigenschaften beim Drücken der EINGABETASTE am Ende der Prozedur eine `Property` Anweisung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Gewusst wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Vorgehensweise: Deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

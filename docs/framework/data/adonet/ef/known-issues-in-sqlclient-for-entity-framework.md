@@ -2,12 +2,12 @@
 title: Bekannte Probleme in SqlClient für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497247"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Bekannte Probleme in SqlClient für Entity Framework
 In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framework-Datenanbieter für SQL Server (SqlClient) beschrieben.  
@@ -36,7 +36,7 @@ In diesem Abschnitt werden bekannte Probleme im Zusammenhang mit dem .NET Framew
 -   Eine Abfrage, die über ein DEREF-Konstrukt über einem REF-Konstrukt verfügt.  
   
 ## <a name="skip-operator"></a>SKIP-Operator  
- Bei Verwendung von [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], Verwendung von SKIP mit ORDER BY auf Nichtschlüsselspalten möglicherweise falsche Ergebnisse zurück. Es kann vorkommen, dass mehr als die angegebene Anzahl von Zeilen übersprungen wird, wenn die Nichtschlüsselspalte Daten doppelt enthält. Der Grund dafür ist die Übersetzung von SKIP[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] für . Z. B. in der folgenden Abfrage ist mehr als fünf Zeilen übersprungen werden Wenn `E.NonKeyColumn` Werte doppelt enthält:  
+ Bei Verwendung von [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], Verwendung von SKIP mit ORDER BY auf Nichtschlüsselspalten möglicherweise falsche Ergebnisse zurück. Es kann vorkommen, dass mehr als die angegebene Anzahl von Zeilen übersprungen wird, wenn die Nichtschlüsselspalte Daten doppelt enthält. Der Grund dafür ist die Übersetzung von SKIP für [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Z. B. in der folgenden Abfrage ist mehr als fünf Zeilen übersprungen werden Wenn `E.NonKeyColumn` Werte doppelt enthält:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
@@ -59,6 +59,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ## <a name="server-generated-guid-identity-values"></a>Servergenerierte GUID-Identitätswerte  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] unterstützt servergenerierte GUID-Typidentitätswerte, aber der Anbieter muss die Rückgabe von servergenerierten Identitätswerten nach dem Einfügen einer Zeile unterstützen. Ab SQL Server 2005, können Sie den servergenerierten GUID-Typ in einer SQL Server-Datenbank durch Zurückgeben der [OUTPUT-Klausel](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
-## <a name="see-also"></a>Siehe auch  
- [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+## <a name="see-also"></a>Siehe auch
+- [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

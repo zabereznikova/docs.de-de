@@ -2,12 +2,12 @@
 title: Transaktionen und Parallelität
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494053"
 ---
 # <a name="transactions-and-concurrency"></a>Transaktionen und Parallelität
 Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehlen, die als Paket ausgeführt werden. Mit Transaktionen können Sie mehrere Operationen in einem Arbeitsschritt zusammenfassen. Wenn an einer Stelle in der Transaktion ein Fehler auftritt, kann für alle Updates ein Rollback zum Zustand vor der Transaktion ausgeführt werden.  
@@ -34,10 +34,10 @@ Eine Transaktion besteht aus einem einzelnen Befehl oder einer Gruppe von Befehl
  [Vollständige Parallelität](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Beschreibt die vollständige und die eingeschränkte Parallelität und wie Sie auf Parallelitätsverletzungen testen können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transaktionsgrundlagen](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Transaktionsgrundlagen](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
+- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

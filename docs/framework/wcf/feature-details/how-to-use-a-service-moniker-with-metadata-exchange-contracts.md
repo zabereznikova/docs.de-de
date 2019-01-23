@@ -2,22 +2,22 @@
 title: 'Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen'
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: 6265860c2e1efb2f74a0243157a223a33889629a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7c05bb43b7811d4716a225142dd880886586783
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495095"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen
-Nach dem Entwickeln einige neue WCF-Dienste, können Sie entscheiden, dass diese Dienste aus einem Skript oder einer Visual Basic 6.0-Anwendung aufrufen soll. Eine Methode wäre, generieren eine WCF-Clientassembly, die Assembly bei COM registriert, die Assembly im GAC installieren, und verweisen dann die COM-Typen aus dem Visual Basic-Code. Wenn Sie die Anwendung verteilen, müssen Sie auch die WCF-Client-Assembly zu verteilen. Der Benutzer muss dann die WCF-Clientassembly bei COM registrieren und im GAC platzieren. WCF-COM-Interop ermöglicht Ihnen die gleichen Dienstaufrufe ohne Rückgriff auf einen WCF-Clientassembly. Der WCF-Monikers können Sie WCF-Dienst aus einer beliebigen COM-kompatiblen Sprache (Visual Basic, VBScript, Visual Basic for Applications (VBA) usw.) aufrufen, durch Angabe von einem Metadatenaustausch (Mex)-Endpunkt URI, der der Dienstmoniker zum Extrahieren von Typ verwendet Informationen zum Dienst. Dieses Thema beschreibt, wie das erste Schritte mit WCF-Beispiel, das mit einem WCF-Moniker, der einen Mex-Endpunkt angibt.  
+Nach dem Entwickeln von einigen neuen WCF-Diensten, können Sie entscheiden, dass diese Dienste aus einem Skript oder eine Visual Basic 6.0-Anwendung aufrufen kann verwendet werden soll. Eine Methode wäre, eine WCF-Client-Assembly generieren, die Assembly bei COM registriert werden, die Assembly im GAC zu installieren und dann auf die COM-Typen von Visual Basic-Code verweisen. Wenn Sie die Anwendung verteilen, müssen Sie auch die WCF-Client-Assembly zu verteilen. Der Benutzer muss dann die WCF-Clientassembly bei COM registrieren und im GAC platzieren. WCF-COM-Interop können Sie auf die gleichen Dienstaufrufe ohne Rückgriff auf eine WCF-Clientassembly. Der WCF-Monikers können Sie jeden WCF-Dienst alle COM-kompatiblen Sprache (Visual Basic, VBScript, Visual Basic für Applikationen (VBA) usw.) rufen Sie dazu einen Metadatenaustausch (Mex)-Endpunkt URI, der der Dienstmoniker verwendet, um Typ zu extrahieren Informationen zum Dienst. Dieses Thema beschreibt, wie das erste-Schritte-WCF-Beispiel verwenden einen WCF-Monikers, der angibt, einen Mex-Endpunkt aufgerufen wird.  
   
 > [!NOTE]
 >  Durch die WCF-Clientassembly definierten Typen werden nie tatsächlich instanziiert. Die Assembly wird nur für Metadaten verwendet.  
   
 ### <a name="using-the-service-moniker-with-a-mex-address"></a>Verwenden des Dienstmonikers mit einer MEX-Adresse  
   
-1.  Erstellen Sie das Beispiel Einstieg und Verwenden von Internet Explorer, um die URL zu suchen (http://localhost/ServiceModelSamples/Service.svc) um sicherzustellen, dass der Dienst funktioniert.  
+1.  Die Getting Started-Beispiel zu erstellen und verwenden Sie Internet Explorer, um die URL zu suchen (http://localhost/ServiceModelSamples/Service.svc) um sicherzustellen, dass der Dienst funktioniert.  
   
 2.  Erstellen Sie ein Visual Basic-Skript oder eine Visual Basic-Anwendung, die den folgenden Code enthält:  
   
@@ -39,6 +39,6 @@ Nach dem Entwickeln einige neue WCF-Dienste, können Sie entscheiden, dass diese
     > [!NOTE]
     >  Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`-Aufruf ein Syntaxfehler zurückgegeben.  Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
- [Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

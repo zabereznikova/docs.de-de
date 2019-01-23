@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd7a67237d89864915f8b4f1f7361d1f113d1e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5d1d767de88b239c96cb98130b6ff006e3f75b09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495031"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator-Schnittstelle
-Von der Datenzugriffsdienstebene Metadaten von Assemblys in einem Zielprozess Suche verwendet.  
+Wird von der Datenzugriffsdienstebene zum Suchen von Metadaten von Assemblys in einem Zielprozess.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -33,10 +33,10 @@ Von der Datenzugriffsdienstebene Metadaten von Assemblys in einem Zielprozess Su
 |[GetMetaData-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Ruft die Metadaten eines Bilds aus dem Zielprozess ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der API-Client (d. h. der Debugger) muss diese Schnittstelle in einer für den jeweiligen Zielprozess geeigneten Form implementieren. Beispielsweise würde die Implementierung für ein Liveprozess aus einem Speicherabbild unterscheiden.  
+ Der API-Client (d. h. der Debugger) muss diese Schnittstelle in einer für den jeweiligen Zielprozess geeigneten Form implementieren. Beispielsweise würde die Implementierung für einen aktiven Prozess von der ein Speicherabbild unterscheiden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -44,5 +44,5 @@ Von der Datenzugriffsdienstebene Metadaten von Assemblys in einem Zielprozess Su
   
  **.** **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

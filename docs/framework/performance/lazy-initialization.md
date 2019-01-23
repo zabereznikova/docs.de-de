@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492948"
 ---
 # <a name="lazy-initialization"></a>Verzögerte Initialisierung
 *Verzögerte Initialisierung* eines Objekts bedeutet, dass seine Erstellung bis zur ersten Verwendung verzögert wird. (In diesem Thema werden die Begriffe *verzögerte Initialisierung* und *verzögerte Instanziierung* synonym gebraucht.) Die verzögerte Initialisierung wird vorwiegend verwendet, um die Leistung zu verbessern, aufwendige Berechnungen zu vermeiden und die Speicheranforderungen des Programms zu reduzieren. Die folgenden Szenarios sind die häufigsten:  
@@ -87,7 +87,7 @@ ms.locfileid: "37073215"
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>Ausnahmen bei verzögerten Objekten  
- Wie weiter oben erwähnt gibt ein <xref:System.Lazy%601>-Objekt immer das gleiche Objekt oder den gleichen Wert zurück, mit dem es initialisiert wurde. Daher verfügt die <xref:System.Lazy%601.Value%2A>-Eigenschaft nur über einen Lesezugriff. Wird das Zwischenspeichern von Ausnahmen aktiviert, wird diese Unveränderlichkeit auch auf das Ausnahmeverhalten erweitert. Wenn ein Objekt verzögert initialisierte Ausnahme Zwischenspeichern aktiviert wurde, und eine Ausnahme aus der Initialisierungsmethode löst bei der <xref:System.Lazy%601.Value%2A> -Eigenschaft zugegriffen wird, die diese Ausnahme wird ebenso ausgelöst auf jeder nachfolgenden versuchten Zugriff auf die <xref:System.Lazy%601.Value%2A> Eigenschaft . Anders ausgedrückt wird der Konstruktor des umschlossenen Typs selbst in Multithreadszenarios niemals erneut aufgerufen. Aus diesem Grund kann das <xref:System.Lazy%601>-Objekt nicht bei einem Zugriff eine Ausnahme auslösen und bei einem nachfolgenden Zugriff einen Wert zurückgeben.  
+ Wie weiter oben erwähnt gibt ein <xref:System.Lazy%601>-Objekt immer das gleiche Objekt oder den gleichen Wert zurück, mit dem es initialisiert wurde. Daher verfügt die <xref:System.Lazy%601.Value%2A>-Eigenschaft nur über einen Lesezugriff. Wird das Zwischenspeichern von Ausnahmen aktiviert, wird diese Unveränderlichkeit auch auf das Ausnahmeverhalten erweitert. Wenn ein Objekt mit verzögerter Initialisierung das Zwischenspeichern von Ausnahmen aktiviert und löst eine Ausnahme durch die Initialisierungsmethode aus bei der <xref:System.Lazy%601.Value%2A> -Eigenschaft erstmals zugegriffen, die gleiche Ausnahme wird ausgelöst, bei jedem nachfolgenden Versuch, den Zugriff auf die <xref:System.Lazy%601.Value%2A> Eigenschaft . Anders ausgedrückt wird der Konstruktor des umschlossenen Typs selbst in Multithreadszenarios niemals erneut aufgerufen. Aus diesem Grund kann das <xref:System.Lazy%601>-Objekt nicht bei einem Zugriff eine Ausnahme auslösen und bei einem nachfolgenden Zugriff einen Wert zurückgeben.  
   
  Das Zwischenspeichern von Ausnahmen wird bei der Verwendung eines beliebigen <xref:System.Lazy%601?displayProperty=nameWithType>-Konstruktors aktiviert, der eine Initialisierungsmethode erfordert (`valueFactory`-Parameter). So wird es beispielsweise aktiviert, wenn Sie den `Lazy(T)(Func(T))`-Konstruktor verwenden. Erfordert der Konstruktor auch einen <xref:System.Threading.LazyThreadSafetyMode>-Wert (`mode`-Parameter), geben Sie <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> oder <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> an. Durch die Angabe einer Initialisierungsmethode wird das Zwischenspeichern von Ausnahmen für diese beiden Modi aktiviert. Die Initialisierungsmethode kann sehr einfach sein. Sie kann z.B. den Standardkonstruktor für `T` aufrufen: `new Lazy<Contents>(() => new Contents(), mode)` in C# bzw. `New Lazy(Of Contents)(Function() New Contents())` in Visual Basic. Wenn Sie einen <xref:System.Lazy%601?displayProperty=nameWithType>-Konstruktor verwenden, der keine Initialisierungsmethode angibt, werden Ausnahmen nicht zwischengespeichert, die vom Standardkonstruktor für `T` ausgelöst werden. Weitere Informationen finden Sie unter der <xref:System.Threading.LazyThreadSafetyMode>-Enumeration.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "37073215"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Threadlokale Variablen in Parallel.For und ForEach  
- Beim parallelen Durchlaufen von Datenquellen mit den Methoden <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> können Sie Überladungen mit integrierter Unterstützung für threadlokale Daten verwenden. Bei diesen Methoden wird die Threadlokalität mithilfe von lokalen Delegaten erzielt, um die Daten zu erstellen, auf sie zuzugreifen und sie zu bereinigen. Weitere Informationen finden Sie unter [wie: Schreiben einer Parallel.For-Schleife mit Thread-lokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) und [wie: Schreiben einer Parallel.ForEach-Schleife mit Partition-lokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Beim parallelen Durchlaufen von Datenquellen mit den Methoden <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> können Sie Überladungen mit integrierter Unterstützung für threadlokale Daten verwenden. Bei diesen Methoden wird die Threadlokalität mithilfe von lokalen Delegaten erzielt, um die Daten zu erstellen, auf sie zuzugreifen und sie zu bereinigen. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben einer Parallel.For-Schleife mit Thread-lokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) und [Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit Partition-lokalen Variablen](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Verwenden der verzögerten Initialisierung für Szenarios mit geringem Mehraufwand  
  In Szenarios mit einer großen Anzahl von Objekten, die verzögert initialisiert werden sollen, würde das Umschließen jedes einzelnen Objekts mit einem <xref:System.Lazy%601> möglicherweise zu viel Arbeitsspeicher oder zu viele Computerressourcen erfordern. Möglicherweise bestehen auch strenge Anforderungen an die Art, wie die verzögerte Initialisierung verfügbar gemacht wird. In diesen Fällen können Sie die `static`-Methoden (`Shared` in Visual Basic) der <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>-Klasse zur Initialisierung jedes Objekts verwenden, ohne es mit einer Instanz von <xref:System.Lazy%601> zu umschließen.  
@@ -152,8 +152,8 @@ ms.locfileid: "37073215"
   
  Beachten Sie, dass in diesem Beispiel die Initialisierungsprozedur bei jeder Iteration der Schleife aufgerufen wird. In Multithreadszenarios ist der erste Thread, der die Initialisierungsprozedur aufruft, derjenige, dessen Wert für alle Threads sichtbar ist. Zwar rufen auch spätere Threads die Initialisierungsprozedur auf, doch werden ihre Ergebnisse nicht verwendet. Ist diese Art von potenzieller Racebedingung nicht akzeptabel, verwenden Sie die Überladung von <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType>, die ein boolesches Argument und ein Synchronisierungsobjekt erfordert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)  
- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)  
- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [How to: Perform Lazy Initialization of Objects (Vorgehensweise: Verzögerte Initialisierung von Objekten)](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+## <a name="see-also"></a>Siehe auch
+- [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)
+- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)
+- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Vorgehensweise: Führen Sie die verzögerte Initialisierung von Objekten](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: e6e7d9fe6764120e3d676b9d2cbd248e7491e504
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d67da4cedc4bd9bad468197db4a2ad60d054894a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152629"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492597"
 ---
 # <a name="wcf-client-overview"></a>Übersicht über den WCF-Client
 Dieser Abschnitt beschreibt das vorgehen, Client-Anwendungen, wie Sie konfigurieren, erstellen und verwenden Sie einen Windows Communication Foundation (WCF)-Client und Client-Anwendungen zu sichern.  
@@ -171,6 +171,6 @@ End Interface
 ## <a name="calling-services-using-wcf-client-channels"></a>Aufrufen von Diensten mithilfe der WCF-Clientkanäle.  
  WCF-Clienttypen erweitern <xref:System.ServiceModel.ClientBase%601>, die wiederum leitet sich von <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> Schnittstelle, um das zugrunde liegende kanalsystem verfügbar zu machen. Sie können Dienste aufrufen, indem Sie den Zieldienstvertrag mit der <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>-Klasse verwenden. Weitere Informationen finden Sie unter [WCF-Clientarchitektur](../../../docs/framework/wcf/feature-details/client-architecture.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>

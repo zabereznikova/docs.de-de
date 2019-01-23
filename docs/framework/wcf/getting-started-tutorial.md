@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 5947e70b0dc4ef5838322722f2ee2a55034bae96
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582173"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491362"
 ---
 # <a name="getting-started-tutorial"></a>Lernprogramm 'Erste Schritte'
 In diesem Abschnitt enthaltenen Themen sollen Sie schnelle Offenlegung auf der Windows Communication Foundation (WCF) Programmierung erteilen. Die Liste am Ende dieses Themas gibt Aufschluss über die Reihenfolge, in der die Aufgaben ausgeführt werden müssen. Für dieses Tutorial vermittelt Ihnen Grundkenntnisse zu der die erforderlichen Schritte zum WCF-Dienst und Client-Anwendungen erstellen. Ein Dienst macht einen oder mehrere Endpunkte verfügbar, von denen jeder wiederum einen oder mehrere Dienstvorgänge zur Verfügung stellt. Die *Endpunkt* eines Diensts gibt eine Adresse, in dem der Dienst gefunden werden kann, eine Bindung, die Informationen, die beschreibt enthält, wie ein Client kommunizieren muss, mit dem Dienst und einen Vertrag, der die Funktionen definiert sind, vom Dienst für seine Clients bereitgestellt werden.
 
- Nachdem Sie die Themenfolge dieses Lernprogramms durchgearbeitet haben, verfügen Sie über einen funktionierenden Dienst und über einen Client, der den Dienst aufrufen kann. Die ersten drei Themen beschreiben, wie ein Dienstvertrag definiert und implementiert und wie der Dienst gehostet wird. Der erstellte Dienst ist innerhalb einer Konsolenanwendung selbst gehostet. Dienste können auch unter IIS (Internetinformationsdienste) gehostet werden. Weitere Informationen hierzu finden Sie unter [Vorgehensweise: Hosten eines WCF-Diensts in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Der Dienst wird im Code konfiguriert. Dienste können jedoch auch in einer Konfigurationsdatei konfiguriert werden. Weitere Informationen zur Verwendung einer Konfigurationsdatei finden Sie unter [Konfigurieren von Diensten mithilfe von Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).
+ Nachdem Sie die Themenfolge dieses Lernprogramms durchgearbeitet haben, verfügen Sie über einen funktionierenden Dienst und über einen Client, der den Dienst aufrufen kann. Die ersten drei Themen beschreiben, wie ein Dienstvertrag definiert und implementiert und wie der Dienst gehostet wird. Der erstellte Dienst ist innerhalb einer Konsolenanwendung selbst gehostet. Dienste können auch unter IIS (Internetinformationsdienste) gehostet werden. Weitere Informationen hierzu finden Sie unter [Vorgehensweise: Hosten ein WCF-Diensts in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Der Dienst wird im Code konfiguriert. Dienste können jedoch auch in einer Konfigurationsdatei konfiguriert werden. Weitere Informationen zur Verwendung einer Konfigurationsdatei finden Sie unter [Konfigurieren von Diensten mithilfe von Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).
 
  In den nächsten drei Themen wird beschrieben, wie ein Clientproxy erstellt, die Clientanwendung konfiguriert und der Clientproxy verwendet wird, um einen Dienstvorgang aufzurufen, der vom Dienst verfügbar gemacht wird. Dienste veröffentlichen Metadaten, die die Informationen definieren, über die eine Clientanwendung mit dem Dienst kommuniziert. Visual Studio 2012 automatisiert den Zugriff auf diese Metadaten und zum Erstellen und konfigurieren Sie die Clientanwendung für den Dienst verwendet. Wenn Sie nicht Visual Studio 2012 verwenden, können Sie mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) erstellen und konfigurieren die Clientanwendung für den Dienst.
 
@@ -31,7 +31,7 @@ Ausführlichere Informationen zum Erstellen von Diensten und Clients finden Sie 
 
  Beschreibt die Erstellung ein WCF-Dienstvertrags mithilfe einer benutzerdefinierten Schnittstelle. Der Vertrag definiert die Funktionalität, die vom Dienst verfügbar gemacht wird.
 
- [Vorgehensweise: Implementieren eines WCF-Dienstvertrags](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+ [Vorgehensweise: Implementieren eines Dienstvertrags](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
  Beschreibt das Implementieren eines Dienstvertrags. Sobald ein Vertrag definiert ist, müssen Sie ihn mit einer Dienstklasse implementieren.
 
@@ -39,7 +39,7 @@ Ausführlichere Informationen zum Erstellen von Diensten und Clients finden Sie 
 
  Beschreibt, wie im Code ein Endpunkt für den Dienst konfiguriert wird und wie der Dienst innerhalb einer Konsolenanwendung gehostet wird. Zur Aktivierung muss der Dienst in einer Laufzeitumgebung konfiguriert und gehostet werden. Diese Umgebung erstellt den Dienst, und steuert seinen Kontext sowie seine Lebensdauer.
 
- [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+ [Vorgehensweise: Erstellen Sie einen Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
  Beschreibt, wie zum Abrufen von Metadaten verwendet, um einen WCF-Clientproxy mit einem WCF-Dienst zu erstellen. Dieser Prozess verwendet die Funktionalität Hinzufügen eines Dienstverweises in Visual Studio.
 
@@ -47,7 +47,7 @@ Ausführlichere Informationen zum Erstellen von Diensten und Clients finden Sie 
 
  Beschreibt, wie ein WCF-Client konfiguriert wird. Für die Konfiguration des Clients muss der Endpunkt angegeben werden, den der Client verwendet, um auf den Dienst zuzugreifen.
 
- [Vorgehensweise: Verwenden eines Clients](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+ [Vorgehensweise: Verwenden Sie einen Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
 
  Beschreibt, wie den WCF-Clientproxy verwendet wird, um Dienstvorgänge aufzurufen.
 

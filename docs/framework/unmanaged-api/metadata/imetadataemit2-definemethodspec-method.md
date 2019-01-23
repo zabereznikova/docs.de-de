@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d56209e030939f53e3f72fe0c8a10db2160dd19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492519"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec-Methode
-Erstellt eine generische Instanz einer Methode und ruft ein Token für die Definition.  
+Erstellt eine generische Instanz einer Methode und ruft ein Token an der Definition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,26 +40,26 @@ HRESULT DefineMethodSpec (
   
 #### <a name="parameters"></a>Parameter  
  `tkParent`  
- [in] Ein Token für die Methode, von denen die generischen Instanz zu erstellen. Das Token muss vom Typ `mdMethodDef` oder `mdMemberRef`.  
+ [in] Ein Token für die Methode, von dem die generische Instanz erstellt werden soll. Das Token muss vom Typ `mdMethodDef` oder `mdMemberRef`.  
   
  `pvSigBlob`  
  [in] Ein Zeiger auf die binäre COM+-Signatur der Methode.  
   
  `cbSibBlob`  
- [in] Die Größe in Bytes, der `pvSigBlob`.  
+ [in] Die Größe in Bytes, des `pvSigBlob`.  
   
  `pmi`  
  [out] Ein Token für die Metadatendefinition für die Signatur der Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

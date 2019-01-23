@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3736d604b7e77028a2b99d462d88ae207df926c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 057dd7c25821aedddeee57a31200cf35c6df1273
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498514"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef-Methode
-Ruft ein Zeiger auf das MemberRef-Token für das Element verweisen, d. h. durch das angegebene eingeschlossen <xref:System.Type> und den angegebenen Namen und Metadaten aufweist.  
+Ruft ein Zeiger auf das MemberRef-Token für das Element verweisen, eingeschlossen durch das angegebene <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,36 +41,36 @@ HRESULT FindMemberRef (
   
 #### <a name="parameters"></a>Parameter  
  `td`  
- [in] Das TypeRef-Token für die Klasse oder Schnittstelle, die den Parameterverweis zu suchende einschließt. Wenn dieser Wert ist `mdTokenNil`, die Suche für eine globale Variable oder eine globale Funktion Verweis erfolgt.  
+ [in] Die TypeRef-Token für die Klasse oder Schnittstelle, die den Parameterverweis zu suchende eingeschlossen werden soll. Wenn dieser Wert ist `mdTokenNil`, die Suche für eine globale Variable oder einen Verweis für die globale Funktion durchgeführt wird.  
   
  `szName`  
- [in] Der Name des zu suchenden den Parameterverweis.  
+ [in] Der Name des Verweises zu suchende Element.  
   
  `pvSigBlob`  
  [in] Ein Zeiger auf die binäre Metadatensignatur der den Parameterverweis.  
   
  `cbSigBlob`  
- [in] Die Größe in Bytes des `pvSigBlob`.  
+ [in] Die Größe in Bytes der `pvSigBlob`.  
   
  `pmr`  
- [out] Ein Zeiger auf das übereinstimmende MemberRef-Token.  
+ [out] Ein Zeiger auf das entsprechende MemberRef-Token.  
   
 ## <a name="remarks"></a>Hinweise  
- Geben Sie die Member, die mit der einschließenden Klasse oder Schnittstelle (`td`), seinen Namen (`szName`), und optional die Signatur (`pvSigBlob`).  
+ Geben Sie den Member, die mit der einschließenden Klasse oder Schnittstelle (`td`), seinen Namen (`szName`), und optional die Signatur (`pvSigBlob`).  
   
- Die Signatur zu übergeben, um `FindMemberRef` muss wurden im aktuellen Bereich generiert wurde, da Signaturen an einen bestimmten Bereich gebunden sind. Eine Signatur kann ein Token einbetten, die die einschließende Klasse oder der angegebene Werttyp identifiziert. Das Token ist ein Index in die lokale TypeDef-Tabelle. Sie können keine Laufzeit-Signatur im Kontext des aktuellen Gültigkeitsbereichs erstellen und verwenden Sie diese Signatur als Eingabe für `FindMemberRef`.  
+ Die Signatur, die an `FindMemberRef` müssen wurden generiert im aktuellen Bereich, da die Signaturen für einen bestimmten Bereich gebunden sind. Eine Signatur kann es sich um ein Token einbetten, die die einschließende Klasse oder eines Werttyps identifiziert. Das Token ist ein Index in die lokale TypeDef-Tabelle. Sie können keine Signatur zur Laufzeit im Kontext des aktuellen Bereichs und diese Signatur als Eingabe für `FindMemberRef`.  
   
- `FindMemberRef` Sucht nur Elementverweise, die direkt in der Klasse oder Schnittstelle definiert wurden. Es findet keine geerbten Member verweisen.  
+ `FindMemberRef` Sucht nur Memberverweise, die direkt in der Klasse oder Schnittstelle definiert wurden. Es findet keine geerbte memberverweisen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

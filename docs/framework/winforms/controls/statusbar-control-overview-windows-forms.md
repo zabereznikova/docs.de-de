@@ -7,25 +7,25 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 6dd5b45b38ec4fb04d9a53a1648cfe6e5a5b9f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3e52a91a31eb898d0176bc35a97cda7de9a8368
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491349"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>Übersicht über das StatusBar-Steuerelement (Windows Forms)
 > [!IMPORTANT]
->  Die <xref:System.Windows.Forms.StatusStrip> und <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelemente ersetzen und Funktionen hinzufügen der <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> steuert; allerdings die <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> Steuerelemente werden für die Abwärtskompatibilität und für zukünftige Verwendung beibehalten, wenn Sie Wählen Sie aus.  
+>  Die <xref:System.Windows.Forms.StatusStrip> und <xref:System.Windows.Forms.ToolStripStatusLabel> Steuerelemente ersetzen und Hinzufügen von Funktionen, die <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> -Steuerelemente jedoch die <xref:System.Windows.Forms.StatusBar> und <xref:System.Windows.Forms.StatusBarPanel> Steuerelemente werden für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, wenn Sie Wählen Sie aus.  
   
- Windows Forms [StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) wird auf Formularen als Bereich, in der Regel am unteren Rand eines Fensters, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann angezeigt verwendet. <xref:System.Windows.Forms.StatusBar> Steuerelemente können Status Statusleistenbereiche mit Text enthalten, Text oder Symbole, um anzugeben, Status oder eine Reihe von Symbolen in einer Animation, die darauf hinweisen, dass ein Prozess ausgeführt wird. z. B. [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] , der angibt, das das Dokument gespeichert wird.  
+ Die Windows-Formulare [StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) wird in Formularen verwendet ein Bereich, in der Regel angezeigt wird, am unteren Rand eines Fensters, in denen eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann. <xref:System.Windows.Forms.StatusBar> -Steuerelemente können Status Statusleistenbereiche mit Text enthalten, die Text oder Symbolen, um anzugeben, Status oder eine Reihe von Symbolen in einer Animation, die angeben, dass ein Prozess ausgeführt wird. z. B. [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] , der angibt, das das Dokument gespeichert wird.  
   
 ## <a name="using-the-statusbar-control"></a>Verwenden das StatusBar-Steuerelement  
- Internet Explorer verwendet eine Statusleiste, um die URL einer Seite anzugeben, wenn die Maus über den Link wird ein; [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] erhalten Sie Informationen zu Seite Speicherort, den Abschnitt Speicherort und Bearbeitungsmodi, z. B. Überschreibmodus und revisionsnachverfolgung; und Visual Studio die Statusleiste verwendet, um kontextbezogene Informationen, z. B. mitteilen, wie andockbare Fenster zu gewähren angedockt oder unverankert.  
+ Internet Explorer verwendet eine Statusleiste, um die URL einer Seite anzugeben, wenn die Maus über den Hyperlink wird; [!INCLUDE[ofprword](../../../../includes/ofprword-md.md)] ermöglicht es Ihnen Informationen auf der Seite Speicherort, Abschnitt Speicherort und Modi bearbeiten, wie z. B. überschreiben und revisionsnachverfolgung; und Visual Studio wird verwendet, die Statusleiste, wie Sie darüber informiert wie andockbare Fenster gedockt angedockt oder unverankert.  
   
- Sie können eine einzelne Nachricht auf der Statusleiste anzeigen, indem Sie die Einstellung der <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft, um `false` (Standard) und die Einstellung der <xref:System.Windows.Forms.StatusBar.Text%2A> Eigenschaft der Statusleiste auf den Text in der Statusleiste angezeigt werden sollen. Bereiche zum Anzeigen von mehr als eine Art von Informationen durch Festlegen die Statusleiste unterteilen der <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft `true` und mithilfe der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> Methode <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+ Sie können eine einzelne Nachricht in der Statusleiste anzeigen, indem Sie die Einstellung der <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft `false` (Standard) und die <xref:System.Windows.Forms.StatusBar.Text%2A> Eigenschaft der Statusleiste auf den Text in der Statusleiste angezeigt werden sollen. Sie können die Statusleiste in Bereichen zum Anzeigen von mehr als eine Art von Informationen durch Festlegen von unterteilen der <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> Eigenschaft `true` und Verwenden der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> -Methode der <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [Vorgehensweise: Bestimmen Sie, welchen Bereich im StatusBar-Steuerelement von Windows Forms geklickt wurde](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)

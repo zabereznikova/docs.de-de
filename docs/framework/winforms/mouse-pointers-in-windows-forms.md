@@ -9,28 +9,28 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: ed6312cb386d1557d4217a330318664b4e87c330
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491778"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Mauszeiger in Windows Forms
-Die Maus *Zeiger*, die manchmal als des Cursors bezeichnet ist eine Bitmap, die einen Fokuspunkt gibt an, auf dem Bildschirm für Benutzereingaben mit der Maus. Dieses Thema bietet einen Überblick über der Mauszeiger in Windows Forms und beschreibt einige der Methoden zum Ändern und Steuern der Mauszeiger die Form.  
+Die Maus *Zeiger*, der als der Cursor, bezeichnet wird eine Bitmap, die auf dem Bildschirm für die Benutzereingabe mit der Maus einen Fokuspunkt festlegt wird. Dieses Thema bietet einen Überblick über der Mauszeiger in Windows Forms und beschreibt einige der Möglichkeiten, ändern und steuern den Mauszeiger auf.  
   
 ## <a name="accessing-the-mouse-pointer"></a>Zugreifen auf den Mauszeiger  
- Der Mauszeiger die Form dargestellte der <xref:System.Windows.Forms.Cursor> -Klasse, und jedes <xref:System.Windows.Forms.Control> verfügt über eine <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> Eigenschaft, die den Zeiger für das Steuerelement angibt. Die <xref:System.Windows.Forms.Cursor> Klasse enthält Eigenschaften, die den Zeiger wird, wie z. B. beschrieben die <xref:System.Windows.Forms.Cursor.Position%2A> und <xref:System.Windows.Forms.Cursor.HotSpot%2A> Eigenschaften und Methoden, wie z. B. die Darstellung des Zeigers ändern können, die <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, und <xref:System.Windows.Forms.Cursor.DrawStretched%2A> Methoden.  
+ Der Mauszeiger wird dargestellt, durch die <xref:System.Windows.Forms.Cursor> -Klasse, und jedes <xref:System.Windows.Forms.Control> verfügt über eine <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> Eigenschaft, die den Zeiger für das Steuerelement angibt. Die <xref:System.Windows.Forms.Cursor> Klasse enthält Eigenschaften, die beschreiben, die Zeiger ist, z. B. die <xref:System.Windows.Forms.Cursor.Position%2A> und <xref:System.Windows.Forms.Cursor.HotSpot%2A> Eigenschaften und Methoden, die die Darstellung des Zeigers ändern können, wie z.B. die <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, und <xref:System.Windows.Forms.Cursor.DrawStretched%2A> -Methoden.  
   
 ## <a name="controlling-the-mouse-pointer"></a>Steuern des Mauszeigers  
- In einigen Fällen empfiehlt es sich um den Bereich, in dem der Mauszeiger die Form kann verwendet werden, oder Ändern der Position der Maus, zu beschränken. Sie können abrufen oder festlegen die aktuelle Position der Maus mithilfe der <xref:System.Windows.Forms.Cursor.Position%2A> Eigenschaft der <xref:System.Windows.Forms.Cursor>. Darüber hinaus können Sie den Bereich der Mauszeiger die Form genutzt werden beschränken Einstellung werden die <xref:System.Windows.Forms.Cursor.Clip%2A> Eigenschaft. Clipbereich, wird standardmäßig ist den gesamten Bildschirm.  
+ In einigen Fällen empfiehlt es sich um den Bereich, in dem der Mauszeiger kann verwendet werden, oder Ändern der Position der Maus, zu beschränken. Können Sie abrufen oder festlegen die aktuelle Position der Maus mithilfe der <xref:System.Windows.Forms.Cursor.Position%2A> Eigenschaft der <xref:System.Windows.Forms.Cursor>. Darüber hinaus können Sie einschränken, den Bereich der Mauszeiger verwendet werden kann Einstellung werden die <xref:System.Windows.Forms.Cursor.Clip%2A> Eigenschaft. Der Clipbereich, in der Standardeinstellung ist der gesamte Bildschirm.  
   
 ## <a name="changing-the-mouse-pointer"></a>Ändern des Mauszeigers  
- Ändern des Mauszeigers ist eine wichtige Möglichkeit zum Bereitstellen von Feedback für den Benutzer. Beispielsweise kann der Mauszeiger die Form geändert werden, in die Handler die <xref:System.Windows.Forms.Control.MouseEnter> und <xref:System.Windows.Forms.Control.MouseLeave> Ereignisse, die dem Benutzer zu informieren, dass Berechnungen ausgeführt werden und eine Benutzerinteraktion in das Steuerelement zu begrenzen. In einigen Fällen ändert sich der Mauszeiger aufgrund Systemereignisse, z. B. wenn die Anwendung in einem Drag & Drop-Vorgang einbezogen ist.  
+ Ändern des Mauszeigers ist eine wichtige Möglichkeit zum Senden von Feedback an den Benutzer. Beispielsweise kann der Mauszeiger geändert werden, in der Handler für die <xref:System.Windows.Forms.Control.MouseEnter> und <xref:System.Windows.Forms.Control.MouseLeave> Ereignisse, die dem Benutzer mitzuteilen, dass Berechnungen durchgeführt werden und eine Benutzerinteraktion in das Steuerelement zu beschränken. In einigen Fällen ändert sich der Mauszeiger aufgrund von Systemereignissen, z. B. wenn die Anwendung in einem Drag & Drop-Vorgang beteiligt ist.  
   
- Die primäre Methode zum Ändern des Mauszeigers wird durch Festlegen der <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.DefaultCursor%2A> Eigenschaft eines Steuerelements zu einer neuen <xref:System.Windows.Forms.Cursor>. Beispiele für Ändern des Mauszeigers finden Sie im Codebeispiel in die <xref:System.Windows.Forms.Cursor> Klasse. Darüber hinaus die <xref:System.Windows.Forms.Cursors> Klasse macht eine Reihe von <xref:System.Windows.Forms.Cursor> Objekte für viele verschiedene Arten von Zeigern, z. B. ein Zeiger, der einer Hand ähnelt. Um den Wartevorgang Zeiger anzuzeigen, die eine Sanduhr angezeigt, ähnelt, wenn der Mauszeiger auf dem Steuerelement befindet, verwenden die <xref:System.Windows.Forms.Control.UseWaitCursor%2A> Eigenschaft von der <xref:System.Windows.Forms.Control> Klasse.  
+ Der einfachste Weg zum Ändern des Mauszeigers wird durch Festlegen der <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.DefaultCursor%2A> Eigenschaft eines Steuerelements zu einem neuen <xref:System.Windows.Forms.Cursor>. Beispiele für Ändern des Mauszeigers, finden Sie im Codebeispiel in die <xref:System.Windows.Forms.Cursor> Klasse. Darüber hinaus die <xref:System.Windows.Forms.Cursors> Klasse macht eine Reihe von <xref:System.Windows.Forms.Cursor> Objekte für viele verschiedene Arten von Zeigern, z. B. ein Zeiger, der einer Hand ähnelt. Um die Wait-Zeiger ist, anzuzeigen, der eine Sanduhr angezeigt, wie es aussieht, wenn der Mauszeiger auf dem Steuerelement befindet, verwenden Sie die <xref:System.Windows.Forms.Control.UseWaitCursor%2A> Eigenschaft der <xref:System.Windows.Forms.Control> Klasse.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Cursor>  
- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
- [Drag & Drop-Funktionen in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Cursor>
+- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Drag & Drop-Funktionen in Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
