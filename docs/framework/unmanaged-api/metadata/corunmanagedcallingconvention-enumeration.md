@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b249d26335a66b55d0643f3e75bfd90554f731e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555556"
 ---
-# <a name="corunmanagedcallingconvention-enumeration"></a><span data-ttu-id="f7d71-102">CorUnmanagedCallingConvention-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f7d71-102">CorUnmanagedCallingConvention Enumeration</span></span>
-<span data-ttu-id="f7d71-103">Gibt die Aufrufkonventionen für nicht verwalteten Code an.</span><span class="sxs-lookup"><span data-stu-id="f7d71-103">Specifies the calling conventions for unmanaged code.</span></span>  
+# <a name="corunmanagedcallingconvention-enumeration"></a><span data-ttu-id="a288f-102">CorUnmanagedCallingConvention-Enumeration</span><span class="sxs-lookup"><span data-stu-id="a288f-102">CorUnmanagedCallingConvention Enumeration</span></span>
+<span data-ttu-id="a288f-103">Gibt an, die Aufrufkonventionen für nicht verwalteten Code.</span><span class="sxs-lookup"><span data-stu-id="a288f-103">Specifies the calling conventions for unmanaged code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7d71-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f7d71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a288f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a288f-104">Syntax</span></span>  
   
 ```  
 typedef enum CorUnmanagedCallingConvention {  
@@ -44,28 +44,28 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f7d71-105">Member</span><span class="sxs-lookup"><span data-stu-id="f7d71-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a288f-105">Member</span><span class="sxs-lookup"><span data-stu-id="a288f-105">Members</span></span>  
   
-|<span data-ttu-id="f7d71-106">Member</span><span class="sxs-lookup"><span data-stu-id="f7d71-106">Member</span></span>|<span data-ttu-id="f7d71-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7d71-107">Description</span></span>|  
+|<span data-ttu-id="a288f-106">Member</span><span class="sxs-lookup"><span data-stu-id="a288f-106">Member</span></span>|<span data-ttu-id="a288f-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a288f-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|<span data-ttu-id="f7d71-108">C-Sprache-Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="f7d71-108">The C language calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|<span data-ttu-id="f7d71-109">Die herkömmliche Aufrufkonventionen.</span><span class="sxs-lookup"><span data-stu-id="f7d71-109">The standard calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|<span data-ttu-id="f7d71-110">Die "this" Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="f7d71-110">The "this" calling convention.</span></span>|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|<span data-ttu-id="f7d71-111">Die "schnelle" Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="f7d71-111">The "fast" calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_C`|<span data-ttu-id="f7d71-112">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="f7d71-112">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_STDCALL`|<span data-ttu-id="f7d71-113">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="f7d71-113">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_THISCALL`|<span data-ttu-id="f7d71-114">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="f7d71-114">Not used.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|<span data-ttu-id="f7d71-115">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="f7d71-115">Not used.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|<span data-ttu-id="a288f-108">Die C-Sprache-Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="a288f-108">The C language calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|<span data-ttu-id="a288f-109">Die herkömmliche Aufrufkonventionen.</span><span class="sxs-lookup"><span data-stu-id="a288f-109">The standard calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|<span data-ttu-id="a288f-110">Die "this" Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="a288f-110">The "this" calling convention.</span></span>|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|<span data-ttu-id="a288f-111">Die "schnellen" Aufrufkonvention.</span><span class="sxs-lookup"><span data-stu-id="a288f-111">The "fast" calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_C`|<span data-ttu-id="a288f-112">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="a288f-112">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_STDCALL`|<span data-ttu-id="a288f-113">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="a288f-113">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_THISCALL`|<span data-ttu-id="a288f-114">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="a288f-114">Not used.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FASTCALL`|<span data-ttu-id="a288f-115">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="a288f-115">Not used.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f7d71-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f7d71-116">Remarks</span></span>  
- <span data-ttu-id="f7d71-117">Die CLR unterstützt nicht die "schnelle" Aufrufkonvention in .NET Framework, Version 1.0.</span><span class="sxs-lookup"><span data-stu-id="f7d71-117">The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a288f-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a288f-116">Remarks</span></span>  
+ <span data-ttu-id="a288f-117">Die "schnelle" Aufrufkonvention in .NET Framework, Version 1.0 wird von der CLR nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="a288f-117">The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f7d71-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f7d71-118">Requirements</span></span>  
- <span data-ttu-id="f7d71-119">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7d71-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a288f-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a288f-118">Requirements</span></span>  
+ <span data-ttu-id="a288f-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a288f-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f7d71-120">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f7d71-120">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="a288f-120">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a288f-120">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="f7d71-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7d71-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a288f-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a288f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f7d71-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f7d71-122">See Also</span></span>  
- [<span data-ttu-id="f7d71-123">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="f7d71-123">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="a288f-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a288f-122">See also</span></span>
+- [<span data-ttu-id="a288f-123">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="a288f-123">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

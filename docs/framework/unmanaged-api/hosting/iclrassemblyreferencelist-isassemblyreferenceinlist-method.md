@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b7eeadd532e5a53c693cc1cde59150777d7edc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d52f38412366880389e963b5ec6af63dcf5d768f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433866"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555049"
 ---
-# <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a><span data-ttu-id="10090-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList-Methode</span><span class="sxs-lookup"><span data-stu-id="10090-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList Method</span></span>
-<span data-ttu-id="10090-103">Ruft einen Wert, der angibt, ob der angegebene Zeiger auf eine Assembly in der Liste verweist.</span><span class="sxs-lookup"><span data-stu-id="10090-103">Gets a value that indicates whether the supplied pointer refers to an assembly in the list.</span></span>  
+# <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a><span data-ttu-id="42f3c-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList-Methode</span><span class="sxs-lookup"><span data-stu-id="42f3c-102">ICLRAssemblyReferenceList::IsAssemblyReferenceInList Method</span></span>
+<span data-ttu-id="42f3c-103">Ruft einen Wert, der angibt, ob der angegebene Zeiger auf eine Assembly in der Liste verweist.</span><span class="sxs-lookup"><span data-stu-id="42f3c-103">Gets a value that indicates whether the supplied pointer refers to an assembly in the list.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10090-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="10090-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42f3c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="42f3c-104">Syntax</span></span>  
   
 ```  
 HRESULT IsAssemblyReferenceInList (  
@@ -35,29 +35,29 @@ HRESULT IsAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="10090-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="10090-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="42f3c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="42f3c-105">Parameters</span></span>  
  `pName`  
- <span data-ttu-id="10090-106">[in] Ein Schnittstellenzeiger auf die Assembly nach dem gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="10090-106">[in] An interface pointer to the assembly for which to search.</span></span> <span data-ttu-id="10090-107">Gültige Werte sind vom Typ `IAssemblyName` oder `IReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="10090-107">Valid values are of type `IAssemblyName` or `IReferenceIdentity`.</span></span>  
+ <span data-ttu-id="42f3c-106">[in] Ein Schnittstellenzeiger auf die Assembly nach dem gesucht werden soll.</span><span class="sxs-lookup"><span data-stu-id="42f3c-106">[in] An interface pointer to the assembly for which to search.</span></span> <span data-ttu-id="42f3c-107">Gültige Werte sind vom Typ `IAssemblyName` oder `IReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="42f3c-107">Valid values are of type `IAssemblyName` or `IReferenceIdentity`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="10090-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="10090-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="42f3c-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="42f3c-108">Return Value</span></span>  
   
-|<span data-ttu-id="10090-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="10090-109">HRESULT</span></span>|<span data-ttu-id="10090-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="10090-110">Description</span></span>|  
+|<span data-ttu-id="42f3c-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="42f3c-109">HRESULT</span></span>|<span data-ttu-id="42f3c-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42f3c-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="10090-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="10090-111">S_OK</span></span>|<span data-ttu-id="10090-112">Die Zeichenfolge, die in der Liste angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="10090-112">The string appears in the list.</span></span>|  
-|<span data-ttu-id="10090-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="10090-113">S_FALSE</span></span>|<span data-ttu-id="10090-114">Die Zeichenfolge wird in der Liste nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="10090-114">The string does not appear in the list.</span></span>|  
-|<span data-ttu-id="10090-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="10090-115">E_FAIL</span></span>|<span data-ttu-id="10090-116">Ein Unbekannter Schwerwiegender Fehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="10090-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="10090-117">Nachdem eine Methode E_FAIL zurückgegeben hat, ist die common Language Runtime nicht mehr verwendbar innerhalb des Prozesses.</span><span class="sxs-lookup"><span data-stu-id="10090-117">After a method returns E_FAIL, the common language runtime is no longer usable within the process.</span></span> <span data-ttu-id="10090-118">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="10090-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="42f3c-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="42f3c-111">S_OK</span></span>|<span data-ttu-id="42f3c-112">Die Zeichenfolge, die in der Liste angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="42f3c-112">The string appears in the list.</span></span>|  
+|<span data-ttu-id="42f3c-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="42f3c-113">S_FALSE</span></span>|<span data-ttu-id="42f3c-114">Die Zeichenfolge wird in der Liste nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="42f3c-114">The string does not appear in the list.</span></span>|  
+|<span data-ttu-id="42f3c-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="42f3c-115">E_FAIL</span></span>|<span data-ttu-id="42f3c-116">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="42f3c-116">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="42f3c-117">Wenn eine Methode E_FAIL zurückgegeben, kann die common Language Runtime nicht mehr innerhalb des Prozesses verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="42f3c-117">After a method returns E_FAIL, the common language runtime is no longer usable within the process.</span></span> <span data-ttu-id="42f3c-118">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="42f3c-118">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="10090-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="10090-119">Requirements</span></span>  
- <span data-ttu-id="10090-120">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10090-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42f3c-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="42f3c-119">Requirements</span></span>  
+ <span data-ttu-id="42f3c-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="42f3c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10090-121">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="10090-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="42f3c-121">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="42f3c-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="10090-122">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="10090-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="42f3c-122">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="42f3c-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="10090-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10090-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="42f3c-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42f3c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10090-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="10090-124">See Also</span></span>  
- [<span data-ttu-id="10090-125">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="10090-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [<span data-ttu-id="10090-126">ICLRAssemblyReferenceList-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="10090-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
- [<span data-ttu-id="10090-127">IHostAssemblyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="10090-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
- [<span data-ttu-id="10090-128">IHostAssemblyStore-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="10090-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+## <a name="see-also"></a><span data-ttu-id="42f3c-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="42f3c-124">See also</span></span>
+- [<span data-ttu-id="42f3c-125">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="42f3c-125">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="42f3c-126">ICLRAssemblyReferenceList-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="42f3c-126">ICLRAssemblyReferenceList Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [<span data-ttu-id="42f3c-127">IHostAssemblyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="42f3c-127">IHostAssemblyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+- [<span data-ttu-id="42f3c-128">IHostAssemblyStore-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="42f3c-128">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
