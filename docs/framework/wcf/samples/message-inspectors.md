@@ -2,12 +2,12 @@
 title: Nachrichteninspektoren
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 99886ef112a74bb86346208c5c24b09349ba4027
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552852"
 ---
 # <a name="message-inspectors"></a>Nachrichteninspektoren
 In diesem Beispiel wird veranschaulicht, wie Client- und Dienstnachrichteninspektoren implementiert und konfiguriert werden.  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Jeder Dienstnachrichteninspektor (Dienstverteilernachrichteninspektor) muss die beiden <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>-Methoden <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> und <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> implementieren.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> wird vom Verteiler aufgerufen, wenn eine Nachricht empfangen, durch den Kanalstapel verarbeitet und einem Dienst zugeordnet wurde, jedoch bevor sie deserialisiert und an einen Vorgang verteilt wurde. Wenn die eingehende Nachricht verschlüsselt war, ist die Nachricht bereits entschlüsselt, wenn sie den Nachrichteninspektor erreicht. Die Methode ruft die `request`-Nachricht ab, die als Verweisparameter übergeben wurde. Dadurch kann die Nachricht nach Bedarf überprüft, bearbeitet oder ersetzt werden. Der Rückgabewert kann jedes Objekt sein und wird als Korrelationsstatusobjekt verwendet, dass an <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> übergeben wird, wenn der Dienst eine Antwort auf eine aktuelle Nachricht zurückgibt. In diesem Beispiel delegiert <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> die Inspektion (Überprüfung) der Nachricht an eine private, lokale Methode `ValidateMessageBody` und gibt kein Korrelationsstatusobjekt zurück. Diese Methode stellt sicher, dass keine ungültigen Nachrichten an den Dienst übergeben werden.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> wird vom Verteiler aufgerufen, wenn eine Nachricht empfangen, durch den Kanalstapel verarbeitet und einem Dienst zugeordnet wurde, jedoch bevor sie deserialisiert und an einen Vorgang verteilt wurde. Wenn die eingehende Nachricht verschlüsselt war, ist die Nachricht bereits entschlüsselt, wenn sie den Nachrichteninspektor erreicht. Die Methode ruft die `request`-Nachricht ab, die als Verweisparameter übergeben wurde. Dadurch kann die Nachricht nach Bedarf überprüft, bearbeitet oder ersetzt werden. Der Rückgabewert kann jedes Objekt sein und wird als Korrelationsstatusobjekt verwendet, dass an <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> übergeben wird, wenn der Dienst eine Antwort auf eine aktuelle Nachricht zurückgibt. In diesem Beispiel delegiert <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> die Inspektion (Validierung) der Nachricht an eine private, lokale Methode `ValidateMessageBody` und gibt kein Korrelationsstatusobjekt zurück. Diese Methode stellt sicher, dass keine ungültigen Nachrichten an den Dienst übergeben werden.  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> wird immer dann aufgerufen, wenn eine Antwort zum Versenden zurück an einen Client bereit ist, oder bei unidirektionalen Nachrichten, wenn die eingehende Nachricht verarbeitet wurde. Dadurch können sich Erweiterungen darauf verlassen, unabhängig von MEP symmetrisch aufgerufen zu werden. Wie bei <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> wird die Nachricht als Verweisparameter übergeben und kann überprüft, bearbeitet oder ersetzt werden. Die in diesem Beispiel durchgeführte Überprüfung der Nachricht wird ebenfalls an die `ValidMessageBody`-Methode delegiert, die Behandlung der Validierungsfehler erfolgt in diesem Fall jedoch etwas anders.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> wird immer dann aufgerufen, wenn eine Antwort zum Versenden zurück an einen Client bereit ist, oder bei unidirektionalen Nachrichten, wenn die eingehende Nachricht verarbeitet wurde. Dadurch können sich Erweiterungen darauf verlassen, unabhängig von MEP symmetrisch aufgerufen zu werden. Wie bei <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> wird die Nachricht als Verweisparameter übergeben und kann überprüft, bearbeitet oder ersetzt werden. Die in diesem Beispiel durchgeführte Validierung der Nachricht wird ebenfalls an die `ValidMessageBody`-Methode delegiert, die Behandlung der Validierungsfehler erfolgt in diesem Fall jedoch etwas anders.  
   
  Wenn ein Validierungsfehler beim Dienst auftritt, löst die `ValidateMessageBody`-Methode von <xref:System.ServiceModel.FaultException> abgeleitete Ausnahmen aus. In der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>-Methode können diese Ausnahmen in der Infrastruktur des Dienstmodells abgelegt werden, wo sie automatisch in SOAP-Fehler umgewandelt und an den Client weitergeleitet werden. In der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>-Methode dürfen <xref:System.ServiceModel.FaultException>-Ausnahmen nicht in der Infrastruktur abgelegt werden, da die Transformation der vom Dienst ausgelösten Fehlerausnahmen vor dem Aufrufen des Nachrichteninspektors erfolgt. Die folgende Implementierung erfasst deshalb die bekannte `ReplyValidationFault`-Ausnahme und ersetzt die Antwortnachricht durch eine explizite Fehlermeldung. Diese Methode stellt sicher, dass keine ungültigen Nachrichten von der Dienstimplementierung zurückgegeben werden.  
   

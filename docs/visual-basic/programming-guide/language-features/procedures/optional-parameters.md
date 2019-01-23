@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f7f7910b5e19c3e1a22598c1a987aa2b02e256e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552228"
 ---
 # <a name="optional-parameters-visual-basic"></a>Optionale Parameter (Visual Basic)
-Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* Warnschwellenwerts durch die `Optional` Schlüsselwort in der Prozedurdefinition ab. Dabei gelten folgende Regeln:  
+Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* sind gekennzeichnet durch die `Optional` Schlüsselwort in der Prozedurdefinition. Dabei gelten folgende Regeln:  
   
 -   Für jeden optionalen Parameter in der Prozedurdefinition muss ein Standardwert angegeben werden.  
   
@@ -50,7 +50,7 @@ Sub name(argument 1, , , argument 4)
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>Bestimmen, ob ein optionales Argument vorhanden ist  
- Prozeduren können zur Laufzeit nicht feststellen, ob ein bestimmtes Argument ausgelassen oder der Standardwert durch den Aufrufcode explizit bereitgestellt wurde. Wenn diese Unterscheidung wichtig ist, sollten Sie einen unwahrscheinlichen Standardwert festlegen. Die folgende Prozedur definiert den optionalen Parameter `office`, und Tests auf den Standardwert `QJZ`, um festzustellen, ob er im Aufruf ausgelassen wurde:  
+ Prozeduren können zur Laufzeit nicht feststellen, ob ein bestimmtes Argument ausgelassen oder der Standardwert durch den Aufrufcode explizit bereitgestellt wurde. Wenn diese Unterscheidung wichtig ist, sollten Sie einen unwahrscheinlichen Standardwert festlegen. Die folgende Prozedur definiert den optionalen Parameter `office`, und dessen Standardwert `QJZ`, um festzustellen, ob er im Aufruf ausgelassen wurde:  
   
  [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
@@ -59,12 +59,12 @@ Sub name(argument 1, , , argument 4)
 ## <a name="optional-parameters-and-overloading"></a>Optionale Parameter und Überladen  
  Eine weitere Möglichkeit, eine Prozedur mit optionalen Parametern zu definieren, ist das Überladen. Wenn ein optionaler Parameter vorhanden ist, können Sie zwei überladene Versionen der Prozedur definieren, eine mit und eine ohne Parameter. Mit steigender Anzahl an optionalen Parametern wird dieses Konzept jedoch komplizierter. Allerdings hat es den Vorteil, dass Sie immer genau wissen, ob das aufrufende Programm jedes optionale Argument bereitgestellt hat.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)  
- [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)  
- [Parameterarrays](./parameter-arrays.md)  
- [Prozedurüberladung](./procedure-overloading.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>Siehe auch
+- [Verfahren](./index.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
+- [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)
+- [Parameterarrays](./parameter-arrays.md)
+- [Prozedurüberladung](./procedure-overloading.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

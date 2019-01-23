@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61014e067b2afb8b7e4be0488ed6a3c7f1bd6fc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553191"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex-Methode
 Ruft den verwalteten slotindex einer lokalen Variablen ab.  
@@ -40,18 +40,18 @@ HRESULT GetSlotIndex(
  [out] Ein Zeiger auf den slotindex einer lokalen Variablen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Methode gibt die folgenden Werte zurück.  
+ Die Methode gibt die folgenden Werte an.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`S_OK`|Der Methodenaufruf zurückgegebene Slot Indexwert in `pSlotIndex`.|  
-|`E_FAIL`|Die aktuelle [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) Instanz steht ein Funktionsargument.|  
+|`S_OK`|Aufruf der Methode wurde in einen Slot-Indexwert `pSlotIndex`.|  
+|`E_FAIL`|Die aktuelle [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) Instanz darstellt, ein Funktionsargument.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der slotindex kann verwendet werden, um die Metadaten für diese lokalen Variablen abzurufen.  
+ Die Slot-Index kann zum Abrufen der Metadaten für diese lokale Variable verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -59,5 +59,5 @@ HRESULT GetSlotIndex(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugVariableHome-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugVariableHome-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

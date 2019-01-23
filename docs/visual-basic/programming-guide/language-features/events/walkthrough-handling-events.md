@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2af8fe5557e452db1ef3a72de35582b18117cc30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553736"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereignissen zu arbeiten. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie behandeln Ereignisse aus, wenn sie auftreten.  
@@ -116,6 +116,6 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
 > [!NOTE]
 >  Sie können beliebig viele deklarieren `WithEvents` Variablen benötigen, aber Arrays von `WithEvents` Variablen werden nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
- [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [Ereignisse](../../../../visual-basic/programming-guide/language-features/events/index.md)

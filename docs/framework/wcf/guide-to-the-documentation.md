@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520973"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552621"
 ---
 # <a name="guide-to-the-documentation"></a>Anleitung zur Dokumentation
 Der angegebene hier Anleitungen für die Windows Communication Foundation (WCF)-Dokumentation. Die verknüpften Dokumente sind empfohlene Startpunkte, die nach Sachgebiet und Niveau gruppiert sind.  
@@ -44,7 +44,7 @@ Der angegebene hier Anleitungen für die Windows Communication Foundation (WCF)-
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>Verwenden von Windows Communication Foundation mit anderen Technologien  
   
--   Zum Erstellen eines Diensts, kommuniziert mit ASP.NET-Clients finden Sie unter [Vorgehensweise: Konfigurieren von WCF-Dienst zur Interoperation mit ASP.NET Webdienstclients](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
+-   Zum Erstellen eines Diensts, kommuniziert mit ASP.NET-Clients finden Sie unter [Vorgehensweise: Konfigurieren von WCF-Dienst für die Zusammenarbeit mit ASP.NET-Webdienstclients](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md).  
   
 -   Integration mit [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Remoting wird beschrieben in [.NET Remoting-Anwendungen zu WCF migrieren](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md).  
   
@@ -52,17 +52,17 @@ Der angegebene hier Anleitungen für die Windows Communication Foundation (WCF)-
   
 -   Um eine vorhandene COM-Anwendung mit einem WCF-Dienst oder Client zu integrieren, finden Sie unter [Integrieren von COM-Anwendungen](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md).  
   
--   Um einer vorhandenen MSMQ-Anwendung mit einem WCF-Dienst oder Client zu integrieren, finden Sie unter [Vorgehensweise: Nachrichten von Exchange in der Warteschlange mit wcd-Endpunkten](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) und [Vorgehensweise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+-   Um einer vorhandenen MSMQ-Anwendung mit einem WCF-Dienst oder Client zu integrieren, finden Sie unter [Vorgehensweise: Exchange in der Warteschlange Nachrichten mit wcd-Endpunkten](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md) und [Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 -   Internetinformationsdienste (Internet Information Services, IIS) zum Hosten eines Diensts finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).  
   
--   WCF zum Verarbeiten eines Web Services Extensions (WSE) 3.0-Diensts finden Sie unter [Vorgehensweise: Zugreifen auf einen WSE 3.0-Dienst](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
+-   WCF zum Verarbeiten eines Web Services Extensions (WSE) 3.0-Diensts finden Sie unter [Vorgehensweise: Zugriff auf einen WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md).  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Von Windows Communication Foundation unterstützte WS-*Protokolle  
  Eine Liste der Protokolle, die in den vom System bereitgestellten Bindungen unterstützt, finden Sie unter [unterstützte Webdienstprotokolle vom System-provided Interoperabilitätsbindungen](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Die Liste der vom System bereitgestellten Bindungen finden Sie unter [System-provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Communication Foundation-Beispiele](../../../docs/framework/wcf/samples/index.md)  
- [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)  
- [Richtlinien und empfohlene Vorgehensweisen](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>Siehe auch
+- [Windows Communication Foundation-Beispiele](../../../docs/framework/wcf/samples/index.md)
+- [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)
+- [Richtlinien und empfohlene Vorgehensweisen](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)

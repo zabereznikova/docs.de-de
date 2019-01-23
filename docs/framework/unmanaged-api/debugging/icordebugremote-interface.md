@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab8ed5c4fa3dc0ed77c1948aa6c1b940ecc25c14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553476"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote-Schnittstelle
 Bietet die Möglichkeit, einen verwalteten Debugger an einen Remotezielprozess anzufügen oder dort zu starten.  
@@ -62,14 +62,14 @@ interface ICorDebugRemote : IUnknown
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[ICorDebugRemote::CreateProcessEx-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Erstellt einen Prozess auf einem Remotecomputer an, für das Debuggen von verwaltetem.|  
+|[ICorDebugRemote::CreateProcessEx-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-createprocessex-method.md)|Erstellt einen Prozess auf einem Remotecomputer an, für das verwaltete Debuggen.|  
 |[ICorDebugRemote::DebugActiveProcessEx-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-debugactiveprocessex-method.md)|Startet einen Prozess auf einem Remotecomputer unter dem Debugger.|  
   
 ## <a name="remarks"></a>Hinweise  
- Derzeit wird diese Funktion unterstützt, nur für das Debuggen einer Silverlight-basierten Anwendung-Ziel, das auf einem Macintosh-Remotecomputer ausgeführt wird.  
+ Derzeit wird diese Funktion unterstützt, nur für das Debuggen ein Silverlight-Anwendung-Ziel, das auf einem Macintosh-Remotecomputer ausgeführt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -77,8 +77,8 @@ interface ICorDebugRemote : IUnknown
   
  **.NET Framework-Versionen:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

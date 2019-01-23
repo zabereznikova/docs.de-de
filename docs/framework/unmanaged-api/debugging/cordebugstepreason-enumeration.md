@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552241"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason-Enumeration
 Gibt das Ergebnis eines einzelnen Schritts an.  
@@ -44,16 +44,16 @@ typedef enum CorDebugStepReason {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Ausführen in Einzelschritten werden normalerweise innerhalb der gleichen Funktion abgeschlossen.|  
-|`STEP_RETURN`|Ausführen in Einzelschritten Fortsetzung normalerweise, nachdem die Funktion zurückgegeben.|  
-|`STEP_CALL`|Ausführen in Einzelschritten wurde am Anfang einer neu aufgerufenen Funktion normal fortgesetzt.|  
-|`STEP_EXCEPTION_FILTER`|Eine Ausnahme wurde generiert und die Kontrolle an einen Ausnahmefilter übergeben wurde.|  
-|`STEP_EXCEPTION_HANDLER`|Eine Ausnahme wurde generiert und die Kontrolle zu einem Ausnahmehandler übergeben wurde.|  
+|`STEP_NORMAL`|Schrittweises durchlaufen werden normalerweise innerhalb der gleichen Funktion abgeschlossen.|  
+|`STEP_RETURN`|Schrittweise ausführen werden normalerweise nach der Rückgabe der Funktion fortgesetzt.|  
+|`STEP_CALL`|Stepping weiterhin in der Regel am Anfang einer neu aufgerufenen Funktion.|  
+|`STEP_EXCEPTION_FILTER`|Eine Ausnahme wurde generiert, und Kontrolle an einen Ausnahmefilter übergeben wurde.|  
+|`STEP_EXCEPTION_HANDLER`|Eine Ausnahme wurde generiert, und Steuerelement zu einem Ausnahmehandler übergeben wurde.|  
 |`STEP_INTERCEPT`|Steuerelement wurde an einen Interceptor übergeben.|  
-|`STEP_EXIT`|Der Thread wurde beendet, bevor der Schritt abgeschlossen wurde.|  
+|`STEP_EXIT`|Der Thread beendet wurde, bevor der Schritt abgeschlossen wurde.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -61,6 +61,6 @@ typedef enum CorDebugStepReason {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [StepComplete-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [StepComplete-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: Der Ausdruck ruft rekursiv den enthaltende Eigenschaft &#39; &lt;Propertyname&gt;&#39;
+title: Der Ausdruck ruft rekursiv die enthaltende Eigenschaft &#39; &lt;Propertyname&gt;&#39;
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553073"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Der Ausdruck ruft rekursiv den enthaltende Eigenschaft &#39; &lt;Propertyname&gt;&#39;
-Eine Anweisung in der `Set` Prozedur mit einer Eigenschaftendefinition speichert einen Wert in den Namen der Eigenschaft.  
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Der Ausdruck ruft rekursiv die enthaltende Eigenschaft &#39; &lt;Propertyname&gt;&#39;
+Eine Anweisung in der `Set` Definition einer Prozedur speichert einen Wert in den Namen der Eigenschaft.  
   
- Die empfohlene Vorgehensweise zum Speichern des Werts einer Eigenschaft besteht darin zu definieren eine `Private` -Variable im Container der Eigenschaft und deren Verwendung in sowohl die `Get` und `Set` Prozeduren. Die `Set` Prozedur muss dann den eingehenden Wert in dieser speichern `Private` Variable.  
+ Der empfohlene Ansatz zum Speichern des Werts einer Eigenschaft wird zum definieren eine `Private` -Variable im Container der Eigenschaft und verwenden in beiden die `Get` und `Set` Verfahren. Die `Set` Prozedur muss dann den eingehenden Wert in dieser speichern `Private` Variable.  
   
- Die `Get` Prozedur verhält sich wie ein `Function` Prozedur, damit weisen Sie einen Wert des Eigenschaftennamens und Steuerung von auftreten zurückgegeben werden kann die `End Get` Anweisung. Die empfohlene Vorgehensweise ist jedoch enthalten die `Private` -Variable als Wert in einer [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).  
+ Die `Get` Prozedur verhält sich wie ein `Function` Prozedur, damit Namen der Eigenschaft einen Wert zuzuweisen und die Steuerung, durch die auftreten zurück können die `End Get` Anweisung. Allerdings wird empfohlen, sollen die `Private` -Variable als den Wert in eine [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md).  
   
- Die `Set` Prozedur verhält sich wie ein `Sub` -Prozedur, die keinen Wert zurückgibt. Daher den Namen der Prozedur oder Eigenschaft hat keine besondere Bedeutung innerhalb einer `Set` Prozedur, und Sie keinen Wert darin gespeichert.  
+ Die `Set` Prozedur verhält sich wie ein `Sub` -Prozedur, die keinen Wert zurückgibt. Aus diesem Grund hat der Prozedur oder Eigenschaft Name keine besondere Bedeutung innerhalb einer `Set` Prozedur, und Sie können keinen Wert darin speichern.  
   
- Das folgende Beispiel veranschaulicht die Vorgehensweise, die diesen Fehler, gefolgt von den empfohlenen Ansatz verursachen kann.  
+ Das folgende Beispiel veranschaulicht den Ansatz, der diesen Fehler, gefolgt von der empfohlene Ansatz verursachen kann.  
   
 ```  
 Public Class illustrateProperties  
@@ -55,15 +55,15 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Fehler-ID:** BC42026  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Schreiben Sie die Eigenschaftsdefinition, um die empfohlene Vorgehensweise verwenden, wie im vorherigen Beispiel dargestellt.  
+-   Schreiben Sie die Eigenschaftsdefinition, um die empfohlene Vorgehensweise verwenden, wie im vorherigen Beispiel gezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaftenprozeduren](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)  
- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Set-Anweisung](../../../visual-basic/language-reference/statements/set-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Eigenschaftenprozeduren](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Set-Anweisung](../../../visual-basic/language-reference/statements/set-statement.md)

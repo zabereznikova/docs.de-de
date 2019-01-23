@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bba40acf7bfd20897ece4de285fe7a9175be83e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: defe69e8d205a0c66f806e4ffacb09d5a9f63309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552111"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory-Funktion
-Ruft den Pfad des Verzeichnisses Verlauf Anwendung ab.  
+Ruft den Pfad des Anwendungsverzeichnisses Verlauf.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +37,13 @@ HRESULT GetHistoryFileDirectory (
   
 #### <a name="parameters"></a>Parameter  
  `wzDir`  
- [out] Ein Puffer, der den Pfad im Anwendungsverzeichnis-Verlauf aufzunehmen.  
+ [out] Ein Puffer, die den Pfad zum Anwendungsverzeichnis Verlauf enthalten soll.  
   
  `pdwSize`  
  [in, out] Die Länge des Puffers.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt COM-Standardfehlercodes zurück, wie in der Datei "WinError.h" zusätzlich zu den folgenden Werten definiert.  
+ Diese Methode gibt die standard-COM-Fehlercodes, zurück, wie in der Datei "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
@@ -50,10 +51,10 @@ HRESULT GetHistoryFileDirectory (
 |E_INVALIDARG|`wzDir` oder `pdwSize` ist Null, oder die Version Zeichenfolge ist falsch.|  
   
 ## <a name="remarks"></a>Hinweise  
- Bei erfolgreichem Abschluss der `pdwSize` -Argument auf die Länge der Zeichenfolge für den Pfad festgelegt ist.  
+ Bei erfolgreichem Abschluss der `pdwSize` Argument auf die Länge der Zeichenfolge für den Pfad festgelegt ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
@@ -61,7 +62,7 @@ HRESULT GetHistoryFileDirectory (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [CreateHistoryReader-Funktion](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
- [NukeDownloadedCache-Funktion](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [CreateHistoryReader-Funktion](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
+- [NukeDownloadedCache-Funktion](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

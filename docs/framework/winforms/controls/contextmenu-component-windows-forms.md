@@ -10,24 +10,24 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 35806d14701169206b1ce29ea8b0b6e5993ba3c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f24bfceaf4e2e21916624da6d970dd90a0fdbd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552813"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu-Komponente (Windows Forms)
 > [!NOTE]
->  Obwohl `MenuStrip` und `ContextMenuStrip` ersetzt und funktionell die <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> Steuerelemente von früheren Versionen <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> für Abwärtskompatibilität und für zukünftige Verwendung beibehalten werden, falls gewünscht.  
+>  Obwohl `MenuStrip` und `ContextMenuStrip` ersetzen und Erweitern der Funktionalität für die <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> Steuerelemente aus früheren Versionen, <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> werden für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, wenn Sie auswählen.  
   
- Windows Forms `ContextMenu` Komponente verwendet wird, um Benutzern mit einem leicht zugänglichen Kontextmenü mit häufig verwendeten Befehlen ermöglichen, die dem ausgewählten Objekt zugeordnet sind. Die Elemente in einem Kontextmenü sind häufig eine Teilmenge der Elemente aus den Hauptmenüs, die an anderer Stelle in der Anwendung angezeigt werden. Kontextmenüs sind mit der rechten Maustaste den Mauszeiger in der Regel verfügbar. In Windows Forms sind sie andere Steuerelemente zugeordnet.  
+ Die Windows-Formulare `ContextMenu` Komponente wird verwendet, um Benutzern ein leicht zugängliches Kontextmenü mit häufig verwendeten Befehlen bereitzustellen, die dem ausgewählten Objekt zugeordnet sind. Die Elemente in einem Kontextmenü sind häufig eine Teilmenge der Elemente aus den Hauptmenüs, die an anderer Stelle in der Anwendung angezeigt werden. Kontextmenüs sind mit der rechten Maustaste in der Maustaste in der Regel zur Verfügung. In Windows Forms sind sie mit anderen Steuerelementen verknüpft.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die ContextMenu-Komponente](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte von der `ContextMenu` -Komponente, die Benutzern ermöglicht, Erstellen von Menüs mit häufig verwendeten Befehlen, die einem ausgewählten Objekt zugeordnet.  
+ Stellt die allgemeinen Konzepte des der `ContextMenu` -Komponente, die Benutzern ermöglicht, das Erstellen von Menüs mit häufig verwendeten Befehlen, die einem ausgewählten Objekt zugeordnet.  
   
- [Gewusst wie: Hinzufügen und Entfernen von Menüelementen mit der ContextMenu-Komponente von Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Vorgehensweise: Hinzufügen und Entfernen von Menüelementen mit der ContextMenu-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Erläutert das Hinzufügen und Entfernen von Tastenkombinations-Menüelemente in Windows Forms.  
   
 ## <a name="reference"></a>Referenz  
@@ -38,6 +38,6 @@ ms.locfileid: "33526157"
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ContextMenuStrip>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ContextMenuStrip>

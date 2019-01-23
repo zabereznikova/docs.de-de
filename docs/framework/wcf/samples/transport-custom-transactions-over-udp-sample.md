@@ -1,15 +1,15 @@
 ---
-title: 'Transport: Beispiel für benutzerdefinierte Transaktionen über UDP'
+title: 'Transport: Benutzerdefinierte Transaktionen über UDP-Beispiel'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: b3a105194ceef9d9091dfbc9521fd47978517f89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552206"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Beispiel für benutzerdefinierte Transaktionen über UDP
+# <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Benutzerdefinierte Transaktionen über UDP-Beispiel
 Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel in der Windows Communication Foundation (WCF)[Transporterweiterbarkeit](../../../../docs/framework/wcf/samples/transport-extensibility.md). Es erweitert das Beispiel für den UDP-Transport, um einen benutzerdefinierten Transaktionsfluss zu unterstützen, und veranschaulicht die Verwendung der <xref:System.ServiceModel.Channels.TransactionMessageProperty>-Eigenschaft.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Codeänderungen im Beispiel für den UDP-Transport  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- Die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel UDP-Pakete verwendet, um Nachrichten zwischen einem Client und einem Dienst zu übergeben. Die [Transport: benutzerdefinierte Transportbeispiel](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) verwendet den gleichen Mechanismus zur Übertragung von Nachrichten, aber wenn eine Transaktion übergeben wird, wird es in UDP-Paket zusammen mit der codierten Nachricht eingefügt.  
+ Die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel UDP-Pakete verwendet, um Nachrichten zwischen einem Client und einem Dienst zu übergeben. Die [Transport: Beispiel für die benutzerdefinierte Transport](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md) verwendet den gleichen Mechanismus zur Übertragung von Nachrichten, aber wenn eine Transaktion übergeben wird, wird es in UDP-Paket zusammen mit der codierten Nachricht eingefügt.  
   
 ```  
 byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -262,5 +262,5 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a>Siehe auch  
- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Siehe auch
+- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
