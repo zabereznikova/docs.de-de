@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 886bb706be30481c082012bf057a001f37903b16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ff79f6e439f2bafd598d9d416cc6f7404f4c231d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547331"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody-Methode
-Ersetzt den Text der angegebenen Funktion im angegebenen Modul.  
+Ersetzt den Text der angegebenen Funktion im angegebenen Modul an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +41,20 @@ HRESULT SetILFunctionBody(
  [in] Die ID des Moduls, in dem die Funktion befindet.  
   
  `methodid`  
- [in] Das Token der Funktion, für die den Text ersetzt werden soll.  
+ [in] Das Token der Funktion für den Text ersetzt werden soll.  
   
  `pbNewILMethodHeader`  
  [in] Der neue Header für die Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `SetILFunctionBody` -Methode ersetzt die relative virtuelle Adresse der Funktion in den Metadaten, sodass er auf den Hauptteil der neuen Funktion verweist und alle internen Datenstrukturen nach Bedarf passt.  
+ Die `SetILFunctionBody` Methode ersetzt die relative virtuelle Adresse der Funktion in den Metadaten, sodass er auf den Hauptteil der neuen Funktion verweist, und alle internen Datenstrukturen nach Bedarf angepasst.  
   
- Die `SetILFunctionBody` Methode kann aufgerufen werden, nur für Funktionen, die nie von einem Just-in-Time (JIT)-Compiler kompiliert wurden.  
+ Die `SetILFunctionBody` Methode kann aufgerufen werden, nur für Funktionen, die nie von einem just-in-Time (JIT)-Compiler kompiliert wurden.  
   
- Verwenden der [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) Methode, um Speicherplatz für die neue Methode, um sicherzustellen, dass der Puffer kompatibel ist.  
+ Verwenden der [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) Methode zum Zuweisen von Speicherplatz für die neue Methode, um sicherzustellen, dass der Puffer kompatibel ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -62,5 +62,5 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

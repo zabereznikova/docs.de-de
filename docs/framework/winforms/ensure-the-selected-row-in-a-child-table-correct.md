@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Sicherstellen, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt'
+title: 'Vorgehensweise: Stellen Sie sicher, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: e1fdb007451c157e60a1ad723b5d2d06bc85ecdf
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef2c72fb941aa40eff85af4a83f6c76843dc2d6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547630"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Gewusst wie: Sicherstellen, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Vorgehensweise: Stellen Sie sicher, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt
 Wenn Sie mit Datenbindungen in Windows Forms arbeiten, zeigen Sie diese Daten häufig in einer so genannten hierarchischen oder Master-/Detail-Ansicht an. Diese Bezeichnung bezieht sich auf ein Datenbindungsszenario, bei dem Daten aus der gleichen Quelle in zwei Steuerelementen angezeigt werden. Wird die Auswahl in einem Steuerelement geändert, ändern sich die Daten, die im zweiten Steuerelement angezeigt werden. So enthält das erste Steuerelement möglicherweise eine Kundenliste, und im zweiten Steuerelement wird eine Liste der Bestellungen angezeigt, die der im ersten Steuerelement ausgewählte Kunde getätigt hat.  
   
  Beginnend mit .NET Framework, Version 2.0, müssen Sie beim Anzeigen von Daten in einer hierarchischen Ansicht möglicherweise zusätzliche Schritte unternehmen, um sicherzustellen, dass die aktuell in der untergeordneten Tabelle ausgewählte Zeile nicht auf die erste Zeile der Tabelle zurückgesetzt wird. Hierfür müssen Sie die Position in der untergeordneten Tabelle zwischenspeichern und zurücksetzen, nachdem die übergeordnete Tabelle geändert wurde. Normalerweise erfolgt das Zurücksetzen der untergeordneten Tabelle zum ersten Mal, wenn ein Feld in einer Zeile der übergeordneten Tabelle geändert wird.  
@@ -81,9 +81,9 @@ Wenn Sie mit Datenbindungen in Windows Forms arbeiten, zeigen Sie diese Daten h�
   
 -   Verweise auf die Assemblys "System", "System.Data", "System.Drawing", "System.Windows.Forms" und "System.XML".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual C#-, finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual C#-, finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Kompilieren und Ausführen einer vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [BindingSource-Komponente](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
+- [BindingSource-Komponente](../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

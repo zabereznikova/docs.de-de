@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden der ScrollViewer-Bildlaufmethoden'
+title: 'Vorgehensweise: Verwenden der ScrollViewer-Bildlaufmethoden'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - scrolling methods [WPF]
 - ScrollViewer control [WPF], scrolling methods
 ms.assetid: 4708cc65-6510-45f8-82e6-30b0d3e30045
-ms.openlocfilehash: b4da666934be7dd182838d870e54e496b2646901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f2ed1c0ac0d29a47ab98e0329ff161fd54daba6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552765"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547039"
 ---
-# <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Gewusst wie: Verwenden der ScrollViewer-Bildlaufmethoden
-In diesem Beispiel wird gezeigt, wie das Durchführen eines Bildlaufs Methoden der der <xref:System.Windows.Controls.ScrollViewer> Element. Diese Methoden bieten inkrementelle Durchführen eines Bildlaufs von Inhalten, die entweder nach Zeile oder Seite, in einem <xref:System.Windows.Controls.ScrollViewer>.  
+# <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Vorgehensweise: Verwenden der ScrollViewer-Bildlaufmethoden
+Dieses Beispiel zeigt, wie Sie mit der Bildlaufmethoden des der <xref:System.Windows.Controls.ScrollViewer> Element. Diese Methoden bieten inkrementellen Bildlauf in Inhalten, indem Zeile oder Seite einem <xref:System.Windows.Controls.ScrollViewer>.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ScrollViewer> mit dem Namen `sv1`, das ein untergeordnetes Element hostet <xref:System.Windows.Controls.TextBlock> Element. Da die <xref:System.Windows.Controls.TextBlock> ist größer als das übergeordnete Element <xref:System.Windows.Controls.ScrollViewer>, Bildlaufleisten angezeigt werden, um einen Bildlauf zu aktivieren. <xref:System.Windows.Controls.Button> Elemente, die die verschiedenen Durchführen eines Bildlaufs Methoden darstellen, die auf der linken Seite in einer separaten angedockt sind <xref:System.Windows.Controls.StackPanel>. Jede <xref:System.Windows.Controls.Button> in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei eine verwandte benutzerdefinierte Methode aufruft, die in Scrollverhalten steuert <xref:System.Windows.Controls.ScrollViewer>.  
+ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ScrollViewer> mit dem Namen `sv1`, das ein untergeordnetes Element hostet <xref:System.Windows.Controls.TextBlock> Element. Da die <xref:System.Windows.Controls.TextBlock> ist größer als das übergeordnete Element <xref:System.Windows.Controls.ScrollViewer>, Bildlaufleisten angezeigt werden, um einen Bildlauf zu aktivieren. <xref:System.Windows.Controls.Button> Elemente, die die verschiedenen Bildlaufmethoden darstellen, die auf der linken Seite in einem separaten angedockt sind <xref:System.Windows.Controls.StackPanel>. Jede <xref:System.Windows.Controls.Button> in die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei ruft eine zugeordnete benutzerdefinierte Methode, die in Scrollverhalten steuert <xref:System.Windows.Controls.ScrollViewer>.  
   
  [!code-xaml[ScrollViewerMethods#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewerMethods/CSharp/Window1.xaml#1)]  
   
@@ -29,6 +29,6 @@ In diesem Beispiel wird gezeigt, wie das Durchführen eines Bildlaufs Methoden d
  [!code-csharp[ScrollViewerMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewerMethods/CSharp/Window1.xaml.cs#2)]
  [!code-vb[ScrollViewerMethods#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewerMethods/VisualBasic/Window1.xaml.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.ScrollViewer>  
- <xref:System.Windows.Controls.StackPanel>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.ScrollViewer>
+- <xref:System.Windows.Controls.StackPanel>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121466"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547292"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
 <a name="introduction"></a> Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie erhalten ein neues <xref:System.Windows.Controls.ControlTemplate>. Bei der Erstellung einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung eines vorhandenen Steuerelements, ohne seine Funktionalität zu ändern. Angenommen, Sie können festlegen, dass die Schaltflächen in Ihrer Anwendung rund und nicht standardmäßig quadratisch, die Schaltfläche wird jedoch trotzdem ausgelöst der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
@@ -261,5 +261,5 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;DisableFusionUpdatesFromADManager&gt; Element'
+title: '&lt;disableFusionUpdatesFromADManager&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4189efbab9bfc85b6a992934604d5071a767163
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4ceaf0b51677a17a2f2a8c0d9d9316cb5b9b34cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547240"
 ---
-# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;DisableFusionUpdatesFromADManager&gt; Element
+# <a name="ltdisablefusionupdatesfromadmanagergt-element"></a>&lt;disableFusionUpdatesFromADManager&gt; Element
 Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.  
   
  \<Configuration >-Element  
 \<Common Language Runtime >-Element  
-\<DisableFusionUpdatesFromADManager >  
+\<disableFusionUpdatesFromADManager>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -75,7 +75,7 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Siehe auch
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
