@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60825cb82097e6ec9c202efebe04a50b0f5a3771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508611"
 ---
-# <a name="strongnamesignaturegenerationex-function"></a><span data-ttu-id="7d406-102">StrongNameSignatureGenerationEx-Funktion</span><span class="sxs-lookup"><span data-stu-id="7d406-102">StrongNameSignatureGenerationEx Function</span></span>
-<span data-ttu-id="7d406-103">Generiert eine starke Namenssignatur für die angegebene Assembly gemäß den angegebenen Flags.</span><span class="sxs-lookup"><span data-stu-id="7d406-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
+# <a name="strongnamesignaturegenerationex-function"></a><span data-ttu-id="7c30e-102">StrongNameSignatureGenerationEx-Funktion</span><span class="sxs-lookup"><span data-stu-id="7c30e-102">StrongNameSignatureGenerationEx Function</span></span>
+<span data-ttu-id="7c30e-103">Generiert eine Signatur mit starkem Namen für die angegebene Assembly gemäß den angegebenen Flags.</span><span class="sxs-lookup"><span data-stu-id="7c30e-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  
   
- <span data-ttu-id="7d406-104">Diese Funktion ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="7d406-104">This function has been deprecated.</span></span> <span data-ttu-id="7d406-105">Verwenden der [ICLRStrongName:: StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="7d406-105">Use the [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) method instead.</span></span>  
+ <span data-ttu-id="7c30e-104">Diese Funktion wurde als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="7c30e-104">This function has been deprecated.</span></span> <span data-ttu-id="7c30e-105">Verwenden der [ICLRStrongName:: StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="7c30e-105">Use the [ICLRStrongName::StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d406-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="7d406-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c30e-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="7c30e-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureGenerationEx (  
@@ -42,62 +42,62 @@ BOOLEAN StrongNameSignatureGenerationEx (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7d406-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="7d406-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7c30e-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="7c30e-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="7d406-108">[in] Der Pfad zur Datei, die das Manifest der Assembly enthält, für die Signatur des starken Namens generiert wird.</span><span class="sxs-lookup"><span data-stu-id="7d406-108">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
+ <span data-ttu-id="7c30e-108">[in] Der Pfad zur Datei, die das Manifest der Assembly enthält, für die Signatur mit starkem Namen generiert wird.</span><span class="sxs-lookup"><span data-stu-id="7c30e-108">[in] The path to the file that contains the manifest of the assembly for which the strong name signature will be generated.</span></span>  
   
  `wszKeyContainer`  
- <span data-ttu-id="7d406-109">[in] Der Name des Schlüsselcontainers an, die das öffentlich/privat-Schlüsselpaar enthält.</span><span class="sxs-lookup"><span data-stu-id="7d406-109">[in] The name of the key container that contains the public/private key pair.</span></span>  
+ <span data-ttu-id="7c30e-109">[in] Der Name des Schlüsselcontainers, die das öffentlich/privat-Schlüsselpaar enthält.</span><span class="sxs-lookup"><span data-stu-id="7c30e-109">[in] The name of the key container that contains the public/private key pair.</span></span>  
   
- <span data-ttu-id="7d406-110">Wenn `pbKeyBlob` ist null, `wszKeyContainer` müssen einen gültigen Container innerhalb der Kryptografiedienstanbieter (CSP) angeben.</span><span class="sxs-lookup"><span data-stu-id="7d406-110">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="7d406-111">In diesem Fall wird das Schlüsselpaar in dem Container gespeichert verwendet, um die Datei zu signieren.</span><span class="sxs-lookup"><span data-stu-id="7d406-111">In this case, the key pair stored in the container is used to sign the file.</span></span>  
+ <span data-ttu-id="7c30e-110">Wenn `pbKeyBlob` null ist, `wszKeyContainer` müssen einen gültigen Container innerhalb der Kryptografiedienstanbieter (CSP) angeben.</span><span class="sxs-lookup"><span data-stu-id="7c30e-110">If `pbKeyBlob` is null, `wszKeyContainer` must specify a valid container within the cryptographic service provider (CSP).</span></span> <span data-ttu-id="7c30e-111">In diesem Fall dient das Schlüsselpaar im Container gespeicherten zum Signieren der Datei.</span><span class="sxs-lookup"><span data-stu-id="7c30e-111">In this case, the key pair stored in the container is used to sign the file.</span></span>  
   
- <span data-ttu-id="7d406-112">Wenn `pbKeyBlob` ist ungleich null, das Schlüsselpaar wird davon ausgegangen, dass im Schlüssel binary large Object (BLOB) enthalten sein soll.</span><span class="sxs-lookup"><span data-stu-id="7d406-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
+ <span data-ttu-id="7c30e-112">Wenn `pbKeyBlob` ist nicht null ist, das Schlüsselpaar wird davon ausgegangen, dass im Schlüssel binary large Object (BLOB) enthalten sein soll.</span><span class="sxs-lookup"><span data-stu-id="7c30e-112">If `pbKeyBlob` is not null, the key pair is assumed to be contained in the key binary large object (BLOB).</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="7d406-113">[in] Ein Zeiger auf das öffentlich/privat-Schlüsselpaar.</span><span class="sxs-lookup"><span data-stu-id="7d406-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="7d406-114">Dieses Paar weist das Format, das erstellt wird, durch die Win32- `CryptExportKey` Funktion.</span><span class="sxs-lookup"><span data-stu-id="7d406-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="7d406-115">Wenn `pbKeyBlob` null ist, die vom angegebenen Schlüsselcontainer `wszKeyContainer` wird davon ausgegangen, dass das Schlüsselpaar enthält.</span><span class="sxs-lookup"><span data-stu-id="7d406-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
+ <span data-ttu-id="7c30e-113">[in] Ein Zeiger auf das öffentlich/privat-Schlüsselpaar.</span><span class="sxs-lookup"><span data-stu-id="7c30e-113">[in] A pointer to the public/private key pair.</span></span> <span data-ttu-id="7c30e-114">Dieses Paar hat das Format, das erstellt wird, durch die Win32- `CryptExportKey` Funktion.</span><span class="sxs-lookup"><span data-stu-id="7c30e-114">This pair is in the format created by the Win32 `CryptExportKey` function.</span></span> <span data-ttu-id="7c30e-115">Wenn `pbKeyBlob` null festgelegt ist, die mit angegebenen Container `wszKeyContainer` wird davon ausgegangen, dass das Schlüsselpaar enthält.</span><span class="sxs-lookup"><span data-stu-id="7c30e-115">If `pbKeyBlob` is null, the key container specified by `wszKeyContainer` is assumed to contain the key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="7d406-116">[in] Die Größe in Bytes, der `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="7d406-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="7c30e-116">[in] Die Größe in Bytes, des `pbKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="7c30e-116">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
  `ppbSignatureBlob`  
- <span data-ttu-id="7d406-117">[out] Ein Zeiger auf den Speicherort, an dem die common Language Runtime die Signatur zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="7d406-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="7d406-118">Wenn `ppbSignatureBlob` ist null, die Common Language Runtime speichert-Signatur in der Datei gemäß `wszFilePath`.</span><span class="sxs-lookup"><span data-stu-id="7d406-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
+ <span data-ttu-id="7c30e-117">[out] Ein Zeiger auf den Speicherort, an dem die common Language Runtime die Signatur zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="7c30e-117">[out] A pointer to the location to which the common language runtime returns the signature.</span></span> <span data-ttu-id="7c30e-118">Wenn `ppbSignatureBlob` ist null, die Laufzeit speichert-die Signatur in der Datei, die anhand des `wszFilePath`.</span><span class="sxs-lookup"><span data-stu-id="7c30e-118">If `ppbSignatureBlob` is null, the runtime stores the signature in the file specified by `wszFilePath`.</span></span>  
   
- <span data-ttu-id="7d406-119">Wenn `ppbSignatureBlob` ist ungleich null, die common Language Runtime reserviert Speicherplatz in dem die Signatur zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="7d406-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="7d406-120">Der Aufrufer muss diesen Speicherplatz mit Freigeben der [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="7d406-120">The caller must free this space using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
+ <span data-ttu-id="7c30e-119">Wenn `ppbSignatureBlob` ist nicht null ist, belegt die common Language Runtime Speicherplatz in dem die Signatur zurück.</span><span class="sxs-lookup"><span data-stu-id="7c30e-119">If `ppbSignatureBlob` is not null, the common language runtime allocates space in which to return the signature.</span></span> <span data-ttu-id="7c30e-120">Der Aufrufer muss diesen Speicherplatz mit Freigeben der [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="7c30e-120">The caller must free this space using the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function.</span></span>  
   
  `pcbSignatureBlob`  
- <span data-ttu-id="7d406-121">[out] Die Größe in Bytes, der zurückgegebenen Signatur.</span><span class="sxs-lookup"><span data-stu-id="7d406-121">[out] The size, in bytes, of the returned signature.</span></span>  
+ <span data-ttu-id="7c30e-121">[out] Die Größe in Bytes der zurückgegebenen Signatur.</span><span class="sxs-lookup"><span data-stu-id="7c30e-121">[out] The size, in bytes, of the returned signature.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="7d406-122">[in] Eine oder mehrere der folgenden Werte:</span><span class="sxs-lookup"><span data-stu-id="7d406-122">[in] One or more of the following values:</span></span>  
+ <span data-ttu-id="7c30e-122">[in] Eine oder mehrere der folgenden Werte:</span><span class="sxs-lookup"><span data-stu-id="7c30e-122">[in] One or more of the following values:</span></span>  
   
--   <span data-ttu-id="7d406-123">`SN_SIGN_ALL_FILES` (0 x 00000001) – alle Hashes für verknüpfte Module neu.</span><span class="sxs-lookup"><span data-stu-id="7d406-123">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
+-   <span data-ttu-id="7c30e-123">`SN_SIGN_ALL_FILES` (0 x 00000001) – alle Hashes für verknüpfte Module neu.</span><span class="sxs-lookup"><span data-stu-id="7c30e-123">`SN_SIGN_ALL_FILES` (0x00000001) - Recompute all hashes for linked modules.</span></span>  
   
--   <span data-ttu-id="7d406-124">`SN_TEST_SIGN` (0 x 00000002) - Test Signierung der Assembly.</span><span class="sxs-lookup"><span data-stu-id="7d406-124">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
+-   <span data-ttu-id="7c30e-124">`SN_TEST_SIGN` (0 x 00000002) - Test Signierung der Assembly.</span><span class="sxs-lookup"><span data-stu-id="7c30e-124">`SN_TEST_SIGN` (0x00000002) - Test-sign the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7d406-125">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7d406-125">Return Value</span></span>  
- <span data-ttu-id="7d406-126">`true` Bei erfolgreichem Abschluss; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="7d406-126">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7c30e-125">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7c30e-125">Return Value</span></span>  
+ <span data-ttu-id="7c30e-126">`true` Bei erfolgreichem Abschluss; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="7c30e-126">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7d406-127">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7d406-127">Remarks</span></span>  
- <span data-ttu-id="7d406-128">Geben Sie null für `wszFilePath` auf die Größe der Signatur zu berechnen, ohne die Signatur zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="7d406-128">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7c30e-127">Hinweise</span><span class="sxs-lookup"><span data-stu-id="7c30e-127">Remarks</span></span>  
+ <span data-ttu-id="7c30e-128">Geben Sie null für `wszFilePath` um die Größe der Signatur zu berechnen, ohne die Signatur zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="7c30e-128">Specify null for `wszFilePath` to calculate the size of the signature without creating the signature.</span></span>  
   
- <span data-ttu-id="7d406-129">Die Signatur kann werden entweder direkt in der Datei gespeichert oder an den Aufrufer zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="7d406-129">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
+ <span data-ttu-id="7c30e-129">Die Signatur kann werden entweder direkt in der Datei gespeichert oder an den Aufrufer zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="7c30e-129">The signature can be either stored directly in the file, or returned to the caller.</span></span>  
   
- <span data-ttu-id="7d406-130">Wenn `SN_SIGN_ALL_FILES` angegeben ist, aber ein öffentlicher Schlüssel nicht enthalten ist (beide `pbKeyBlob` und `wszFilePath` sind null), werden Hashes für verknüpfte Module neu berechnet, aber die Assembly wird nicht erneut signiert.</span><span class="sxs-lookup"><span data-stu-id="7d406-130">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
+ <span data-ttu-id="7c30e-130">Wenn `SN_SIGN_ALL_FILES` angegeben ist, aber ein öffentlicher Schlüssel nicht enthalten ist. (beide `pbKeyBlob` und `wszFilePath` null sind), werden Hashes für verknüpfte Module neu berechnet, aber die Assembly wird nicht erneut signiert.</span><span class="sxs-lookup"><span data-stu-id="7c30e-130">If `SN_SIGN_ALL_FILES` is specified but a public key is not included (both `pbKeyBlob` and `wszFilePath` are null), hashes for linked modules are recomputed, but the assembly is not re-signed.</span></span>  
   
- <span data-ttu-id="7d406-131">Wenn `SN_TEST_SIGN` angegeben ist, wird die common Language Runtime-Header wird nicht geändert, um anzugeben, dass die Assembly mit einem starken Namen signiert ist.</span><span class="sxs-lookup"><span data-stu-id="7d406-131">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
+ <span data-ttu-id="7c30e-131">Wenn `SN_TEST_SIGN` angegeben ist, wird die common Language Runtime-Header wird nicht geändert, um anzugeben, dass die Assembly mit einem starken Namen signiert ist.</span><span class="sxs-lookup"><span data-stu-id="7c30e-131">If `SN_TEST_SIGN` is specified, the common language runtime header is not modified to indicate that the assembly is signed with a strong name.</span></span>  
   
- <span data-ttu-id="7d406-132">Wenn die `StrongNameSignatureGenerationEx` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.</span><span class="sxs-lookup"><span data-stu-id="7d406-132">If the `StrongNameSignatureGenerationEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="7c30e-132">Wenn die `StrongNameSignatureGenerationEx` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.</span><span class="sxs-lookup"><span data-stu-id="7c30e-132">If the `StrongNameSignatureGenerationEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7d406-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7d406-133">Requirements</span></span>  
- <span data-ttu-id="7d406-134">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d406-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c30e-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7c30e-133">Requirements</span></span>  
+ <span data-ttu-id="7c30e-134">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c30e-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7d406-135">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="7d406-135">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="7c30e-135">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="7c30e-135">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="7d406-136">**Bibliothek:** als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="7d406-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7c30e-136">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="7c30e-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7d406-137">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7d406-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7c30e-137">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c30e-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d406-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7d406-138">See Also</span></span>  
- [<span data-ttu-id="7d406-139">StrongNameSignatureGenerationEx-Methode</span><span class="sxs-lookup"><span data-stu-id="7d406-139">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  
- [<span data-ttu-id="7d406-140">StrongNameSignatureGeneration-Methode</span><span class="sxs-lookup"><span data-stu-id="7d406-140">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  
- [<span data-ttu-id="7d406-141">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7d406-141">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7c30e-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7c30e-138">See also</span></span>
+- [<span data-ttu-id="7c30e-139">StrongNameSignatureGenerationEx-Methode</span><span class="sxs-lookup"><span data-stu-id="7c30e-139">StrongNameSignatureGenerationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [<span data-ttu-id="7c30e-140">StrongNameSignatureGeneration-Methode</span><span class="sxs-lookup"><span data-stu-id="7c30e-140">StrongNameSignatureGeneration Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [<span data-ttu-id="7c30e-141">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7c30e-141">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

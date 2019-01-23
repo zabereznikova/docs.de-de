@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5492d4e1245c6c0ce5c1eb98d25168c5d69d123b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a6f8f73eab1ee6e28a75263e06523a2b04ce62d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510558"
 ---
-# <a name="icorpublishprocessenumappdomains-method"></a><span data-ttu-id="f770d-102">ICorPublishProcess::EnumAppDomains-Methode</span><span class="sxs-lookup"><span data-stu-id="f770d-102">ICorPublishProcess::EnumAppDomains Method</span></span>
-<span data-ttu-id="f770d-103">Ruft einen Enumerator für die Anwendungsdomänen im Prozess, der von diesem verwiesen wird [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span><span class="sxs-lookup"><span data-stu-id="f770d-103">Gets an enumerator for the application domains in the process that is referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
+# <a name="icorpublishprocessenumappdomains-method"></a><span data-ttu-id="ef29d-102">ICorPublishProcess::EnumAppDomains-Methode</span><span class="sxs-lookup"><span data-stu-id="ef29d-102">ICorPublishProcess::EnumAppDomains Method</span></span>
+<span data-ttu-id="ef29d-103">Ruft einen Enumerator für die Anwendungsdomänen im Prozess, der von diesem verwiesen wird [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span><span class="sxs-lookup"><span data-stu-id="ef29d-103">Gets an enumerator for the application domains in the process that is referenced by this [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f770d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f770d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef29d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ef29d-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumAppDomains (  
@@ -35,23 +35,23 @@ HRESULT EnumAppDomains (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f770d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f770d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ef29d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ef29d-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="f770d-106">[out] Ein Zeiger auf die Adresse des ein [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) -Instanz, die Iteration durch die Auflistung der Anwendungsdomänen in diesem Prozess ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="f770d-106">[out] A pointer to the address of an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that allows iteration through the collection of application domains in this process.</span></span>  
+ <span data-ttu-id="ef29d-106">[out] Ein Zeiger auf die Adresse einer [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) -Instanz, die Iteration durch die Auflistung von Anwendungsdomänen in diesem Prozess ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="ef29d-106">[out] A pointer to the address of an [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md) instance that allows iteration through the collection of application domains in this process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f770d-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f770d-107">Remarks</span></span>  
- <span data-ttu-id="f770d-108">Die Liste der Anwendungsdomänen basiert auf einer Momentaufnahme der Anwendungsdomänen, die vorhanden sind bei der `EnumAppDomains` -Methode aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="f770d-108">The list of application domains is based on a snapshot of the application domains that exist when the `EnumAppDomains` method is called.</span></span> <span data-ttu-id="f770d-109">Diese Methode kann mehrmals aufgerufen werden, zum Erstellen einer neuen auf dem neuesten Stand Liste.</span><span class="sxs-lookup"><span data-stu-id="f770d-109">This method may be called more than once to create a new up-to-date list.</span></span> <span data-ttu-id="f770d-110">Vorhandene Listen, werden nachfolgende Aufrufe dieser Methode nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="f770d-110">Existing lists will not be affected by subsequent calls of this method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ef29d-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ef29d-107">Remarks</span></span>  
+ <span data-ttu-id="ef29d-108">Die Liste der Anwendungsdomänen basiert darauf, dass eine Momentaufnahme der Anwendungsdomänen, die vorhanden sind bei der `EnumAppDomains` Methode wird aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="ef29d-108">The list of application domains is based on a snapshot of the application domains that exist when the `EnumAppDomains` method is called.</span></span> <span data-ttu-id="ef29d-109">Diese Methode kann mehr als einmal aufgerufen werden, um eine neue auf dem neuesten Stand Liste zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="ef29d-109">This method may be called more than once to create a new up-to-date list.</span></span> <span data-ttu-id="ef29d-110">Vorhandene Listen werden durch nachfolgende Aufrufe dieser Methode nicht betroffen.</span><span class="sxs-lookup"><span data-stu-id="ef29d-110">Existing lists will not be affected by subsequent calls of this method.</span></span>  
   
- <span data-ttu-id="f770d-111">Wenn der Prozess beendet wurde, `EnumAppDomains` mit HRESULT-Wert CORDBG_E_PROCESS_TERMINATED fehl.</span><span class="sxs-lookup"><span data-stu-id="f770d-111">If the process has been terminated, `EnumAppDomains` will fail with an HRESULT value of CORDBG_E_PROCESS_TERMINATED.</span></span>  
+ <span data-ttu-id="ef29d-111">Wenn der Prozess beendet wurde, `EnumAppDomains` mit HRESULT-Wert CORDBG_E_PROCESS_TERMINATED fehl.</span><span class="sxs-lookup"><span data-stu-id="ef29d-111">If the process has been terminated, `EnumAppDomains` will fail with an HRESULT value of CORDBG_E_PROCESS_TERMINATED.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f770d-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f770d-112">Requirements</span></span>  
- <span data-ttu-id="f770d-113">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f770d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef29d-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ef29d-112">Requirements</span></span>  
+ <span data-ttu-id="ef29d-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef29d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f770d-114">**Header:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="f770d-114">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="ef29d-114">**Header:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="ef29d-114">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="f770d-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f770d-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ef29d-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ef29d-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f770d-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f770d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ef29d-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef29d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f770d-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f770d-117">See Also</span></span>  
- [<span data-ttu-id="f770d-118">ICorPublishProcess-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f770d-118">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ef29d-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ef29d-117">See also</span></span>
+- [<span data-ttu-id="ef29d-118">ICorPublishProcess-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ef29d-118">ICorPublishProcess Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
