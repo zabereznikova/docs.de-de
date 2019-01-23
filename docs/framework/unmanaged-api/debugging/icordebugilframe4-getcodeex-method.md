@@ -14,19 +14,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24be4507e8ad6cde1e9c50582e352f0fc9b12ed3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5574b457925506f3178af7c636a834fad4fdd15e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47110969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502455"
 ---
-# <a name="icordebugilframe4getcodeex-method"></a><span data-ttu-id="19603-102">ICorDebugILFrame4::GetCodeEx-Methode</span><span class="sxs-lookup"><span data-stu-id="19603-102">ICorDebugILFrame4::GetCodeEx Method</span></span>
-<span data-ttu-id="19603-103">[Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]</span><span class="sxs-lookup"><span data-stu-id="19603-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilframe4getcodeex-method"></a><span data-ttu-id="58f50-102">ICorDebugILFrame4::GetCodeEx-Methode</span><span class="sxs-lookup"><span data-stu-id="58f50-102">ICorDebugILFrame4::GetCodeEx Method</span></span>
+<span data-ttu-id="58f50-103">[Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]</span><span class="sxs-lookup"><span data-stu-id="58f50-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="19603-104">Ruft einen Zeiger auf den Code ab, der vom Stapelrahmen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="19603-104">Gets a pointer to the code that this stack frame is executing.</span></span>  
+ <span data-ttu-id="58f50-104">Ruft einen Zeiger auf den Code ab, der vom Stapelrahmen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="58f50-104">Gets a pointer to the code that this stack frame is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="19603-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="19603-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58f50-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="58f50-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetCodeEx(  
@@ -35,26 +35,26 @@ HRESULT GetCodeEx(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="19603-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="19603-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="58f50-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="58f50-106">Parameters</span></span>  
  `flags`  
- <span data-ttu-id="19603-107">[in] Ein [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) -Enumerationsmember, der angibt, ob die intermediate Language (IL), die von der Profiler ReJIT-Anfrage definiert, die im Rahmen enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="19603-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether the intermediate language (IL) defined by the profiler's ReJIT request is included in the frame.</span></span>  
+ <span data-ttu-id="58f50-107">[in] Ein [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) -Enumerationsmember, der angibt, ob die intermediate Language (IL), die von der Profiler ReJIT-Anfrage definiert, die im Rahmen enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="58f50-107">[in] An [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) enumeration member that specifies whether the intermediate language (IL) defined by the profiler's ReJIT request is included in the frame.</span></span>  
   
  `ppCode`  
- <span data-ttu-id="19603-108">[out] Ein Zeiger auf die Adresse ein "ICorDebugCode"-Objekt, das den Code darstellt, den diesen Stapelrahmen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="19603-108">[out] A pointer to the address of an "ICorDebugCode" object that represents the code that this stack frame is executing.</span></span>  
+ <span data-ttu-id="58f50-108">[out] Ein Zeiger auf die Adresse ein "ICorDebugCode"-Objekt, das den Code darstellt, den diesen Stapelrahmen ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="58f50-108">[out] A pointer to the address of an "ICorDebugCode" object that represents the code that this stack frame is executing.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="19603-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="19603-109">Remarks</span></span>  
- <span data-ttu-id="19603-110">Diese Methode ähnelt der [ICorDebugFrame:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) -Methode, mit dem Unterschied, dass sie optional auf Code von der Profiler ReJIT-Anfrage definiert zugreift.</span><span class="sxs-lookup"><span data-stu-id="19603-110">This method is similar to the [ICorDebugFrame::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) method, except that it optionally accesses code defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="19603-111">Beim Aufruf dieser Methode eine `flags` Wert `ILCODE_ORIGINAL_IL` entspricht dem Aufruf [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); Wenn die Methode instrumentiert ist, die IL nicht zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="19603-111">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); if the method is instrumented, its IL will not be accessible.</span></span> <span data-ttu-id="19603-112">`ILCODE_REJIT_IL` ermöglicht dem Debugger auf den IL-Code durch der Profiler ReJIT-Anfrage definiert.</span><span class="sxs-lookup"><span data-stu-id="19603-112">`ILCODE_REJIT_IL` allows the debugger to access the IL defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="19603-113">Wenn die IL nicht instrumentiert wurde, `ppCode` ist **null**, und die Methode gibt `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="19603-113">If the IL is not instrumented, `ppCode` is **null**, and the method returns `S_OK`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58f50-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="58f50-109">Remarks</span></span>  
+ <span data-ttu-id="58f50-110">Diese Methode ähnelt der [ICorDebugFrame:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) -Methode, mit dem Unterschied, dass sie optional auf Code von der Profiler ReJIT-Anfrage definiert zugreift.</span><span class="sxs-lookup"><span data-stu-id="58f50-110">This method is similar to the [ICorDebugFrame::GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md) method, except that it optionally accesses code defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="58f50-111">Beim Aufruf dieser Methode eine `flags` Wert `ILCODE_ORIGINAL_IL` entspricht dem Aufruf [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); Wenn die Methode instrumentiert ist, die IL nicht zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="58f50-111">Calling this method with a `flags` value of `ILCODE_ORIGINAL_IL` is equivalent to calling [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md); if the method is instrumented, its IL will not be accessible.</span></span> <span data-ttu-id="58f50-112">`ILCODE_REJIT_IL` ermöglicht dem Debugger auf den IL-Code durch der Profiler ReJIT-Anfrage definiert.</span><span class="sxs-lookup"><span data-stu-id="58f50-112">`ILCODE_REJIT_IL` allows the debugger to access the IL defined by the profiler's ReJIT request.</span></span> <span data-ttu-id="58f50-113">Wenn die IL nicht instrumentiert wurde, `ppCode` ist **null**, und die Methode gibt `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="58f50-113">If the IL is not instrumented, `ppCode` is **null**, and the method returns `S_OK`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="19603-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="19603-114">Requirements</span></span>  
- <span data-ttu-id="19603-115">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19603-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58f50-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="58f50-114">Requirements</span></span>  
+ <span data-ttu-id="58f50-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58f50-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19603-116">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="19603-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="58f50-116">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58f50-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="19603-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="19603-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="58f50-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58f50-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="19603-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19603-118">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="58f50-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58f50-118">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19603-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="19603-119">See Also</span></span>  
- [<span data-ttu-id="19603-120">ICorDebugILFrame4-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="19603-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- [<span data-ttu-id="19603-121">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="19603-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="19603-122">ReJIT: Anleitung</span><span class="sxs-lookup"><span data-stu-id="19603-122">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="58f50-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="58f50-119">See also</span></span>
+- [<span data-ttu-id="58f50-120">ICorDebugILFrame4-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="58f50-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
+- [<span data-ttu-id="58f50-121">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="58f50-121">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="58f50-122">ReJIT: Einen Leitfaden zur Vorgehensweise</span><span class="sxs-lookup"><span data-stu-id="58f50-122">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

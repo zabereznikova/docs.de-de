@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51c103fb38dd97ec076096037932925e31280f02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d2a8818ef180b3522a53e29fa84453ea9033a2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522400"
 ---
-# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="0cc6f-102">ICLRTaskManager::GetCurrentTaskType-Methode</span><span class="sxs-lookup"><span data-stu-id="0cc6f-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
-<span data-ttu-id="0cc6f-103">Ruft den Typ der Aufgabe, die gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0cc6f-103">Gets the type of the task that is currently executing.</span></span>  
+# <a name="iclrtaskmanagergetcurrenttasktype-method"></a><span data-ttu-id="da75e-102">ICLRTaskManager::GetCurrentTaskType-Methode</span><span class="sxs-lookup"><span data-stu-id="da75e-102">ICLRTaskManager::GetCurrentTaskType Method</span></span>
+<span data-ttu-id="da75e-103">Ruft den Typ der Aufgabe, die gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="da75e-103">Gets the type of the task that is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cc6f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0cc6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da75e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="da75e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentTaskType(  
@@ -35,18 +35,18 @@ HRESULT GetCurrentTaskType(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0cc6f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0cc6f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="da75e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="da75e-105">Parameters</span></span>  
  `pTaskType`  
- <span data-ttu-id="0cc6f-106">[out] Ein Zeiger auf den Wert der [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) -Enumeration, der den Typ der Aufgabe gibt an, die gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="0cc6f-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
+ <span data-ttu-id="da75e-106">[out] Ein Zeiger auf den Wert der [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) -Enumeration, der den Typ der Aufgabe gibt an, die gerade ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="da75e-106">[out] A pointer to a value of the [ETaskType](../../../../docs/framework/unmanaged-api/hosting/etasktype-enumeration.md) enumeration that indicates the type of task that is currently executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0cc6f-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0cc6f-107">Requirements</span></span>  
- <span data-ttu-id="0cc6f-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0cc6f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da75e-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="da75e-107">Requirements</span></span>  
+ <span data-ttu-id="da75e-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da75e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0cc6f-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0cc6f-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="da75e-109">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="da75e-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0cc6f-110">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="0cc6f-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="da75e-110">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="da75e-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0cc6f-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0cc6f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="da75e-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da75e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0cc6f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0cc6f-112">See Also</span></span>  
- [<span data-ttu-id="0cc6f-113">ICLRTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0cc6f-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="da75e-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da75e-112">See also</span></span>
+- [<span data-ttu-id="da75e-113">ICLRTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="da75e-113">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
